@@ -1,6 +1,6 @@
 # The video-making handbook
 
-Generated from catalog.py. Owner preferences, observed scars and engineering starting points are distinguished inside each card. This handbook is private.
+Generated from catalog.py. Owner preferences, observed scars and engineering starting points are distinguished inside each card. It is a rendered snapshot of catalog.py.
 
 Current GPU requirement: every video team uses suitable GPU stages, with concurrent work targeting 80 percent utilization and actual responsiveness/memory safeguards. The old exclusive-job convention is retired. CUDA availability is repaired; sustained driver stability remains under observation.
 
