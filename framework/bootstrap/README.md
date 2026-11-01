@@ -1,7 +1,9 @@
 # Standing up a fresh brain
 
-1. Clone this repository somewhere permanent (the launchers assume
-   `%USERPROFILE%\brain-framework`; adjust them if you clone elsewhere).
+1. Clone this repository somewhere permanent and run the commands below from its
+   `framework/` folder. The installer copies the governor, mesh, workspace and tools into
+   `%USERPROFILE%\brain-framework`, and the launchers point at that installed copy, so the
+   clone can live anywhere. Keep it, though: the network builders in step 6 run from it.
 
 2. Dry-run the installer, read what it plans, then apply:
 
