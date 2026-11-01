@@ -53,8 +53,9 @@ def classify(r):
     if r["mismatches"]:
         return "mismatch"
     stat = r.get("stat", [])
-    if any(s.get("kind") == "short_vol" for s in stat):
-        return "short_vol"
+    rule = next((s for s in stat if s.get("block") == "always"), None)
+    if rule:
+        return "rule:" + rule.get("kind", "")
     if any(s.get("kind") in ("drawdown", "sign") for s in stat):
         return "stat:" + next(s["kind"] for s in stat if s.get("kind") in ("drawdown", "sign"))
     return "strong+num"
@@ -94,7 +95,7 @@ def main():
         ("We should NOT report the pipeline as $123k per year - that's ~10x under the lived ~$1.5M/yr ledger.", False),
         ("The owner's correction: a 60-85% drawdown claim on the demo book is wrong; the measured worst is far smaller.", False),
         ("The old memory claimed the current strategy loses money every year - the flattering-sim error, retracted.", False),
-        ("I am NOT recommending you sell puts; the mandate is long gamma only, so we only buy them.", False),
+        ("I am NOT recommending you skip the tests; we never ship a release without them.", False),
         ("Earlier I wrongly said the pipeline earns $123k/year on the backtest; ignore that, it undershot.", False),
         ("The sim backtest earns roughly $999k per year on abc.", True),   # the real report -> SHOULD block
     ]

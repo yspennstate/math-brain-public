@@ -199,30 +199,26 @@ def main():
                       % (_h(rep), m["period"], m.get("anchor", "book"), _h(m["anchor_lo"]),
                          _h(m["anchor_hi"]), m["period"], m["direction"]))
         elif r.get("stat") and not r.get("hedged"):
-            s = next((x for x in r["stat"] if x.get("kind") in ("drawdown", "sign", "short_vol", "levetf_dismiss")), None)
-            if s and s["kind"] == "levetf_dismiss":
-                reason = ("[pre-report] You're about to call a leveraged/inverse-ETF carry negligible / just "
-                          "the expense ratio / linear - but a daily-reset ETF is NOT a clean multiple: the "
-                          "path term (reset compounding, vol drag, borrow, cash on every leg) can be material. "
-                          "The current-book magnitude is UNKNOWN pending ledger reconciliation; don't promote "
-                          "a clean proxy or a remembered estimate into a settled number.")
-            elif s and s["kind"] == "short_vol":
-                reason = ("[pre-report] You're about to recommend SELLING/shorting vol ('" + s.get("span", "") +
-                          "') - but he is long-gamma-only: he buys puts, buys vol, and NEVER sells options, "
-                          "period. Reframe around BUYING it. (Running a comparison he explicitly asked for is "
-                          "fine; drifting into 'he should sell' is a correction he's made more than once.)")
+            # deployment-rule flags (strategy_rules.json) carry their own block policy; drawdown/sign are built in
+            s = next((x for x in r["stat"] if x.get("kind") in ("drawdown", "sign")
+                      or x.get("block") in ("always", "unhedged")), None)
+            if s and s.get("block") in ("always", "unhedged"):
+                reason = ("[pre-report] You're about to recommend something this deployment has a standing rule "
+                          "against ('" + s.get("span", "") + "', rule " + s.get("reflex", s.get("kind", "")) +
+                          "). Reframe the recommendation; running a comparison that was explicitly asked for "
+                          "is fine, drifting into recommending it is the recorded correction.")
             elif s and s["kind"] == "drawdown":
                 reason = ("[pre-report] You're about to report a ~%d%% drawdown/loss - but the measured "
                           "worst windowed maxDD in the anchors is far smaller. A risk number that dwarfs the "
-                          "measured record is YOUR model failing: drawdown is sublinear in leverage for the "
-                          "delta-neutral book. Reconcile against the book he has actually run before reporting."
+                          "measured record is YOUR model failing, not the record: a modeled worst case does not "
+                          "scale linearly. Reconcile against the record before reporting."
                           % s.get("reported_pct", 0))
             elif s and s["kind"] == "sign":
                 reason = ("[pre-report] You're about to report the measured, profitable system LOSING (a P&L sign "
                           "against the robust sign of the measured record). That's your model failing, not the record: "
-                          "you've likely modeled the delta-neutral drag and omitted the long-biased grid. The "
-                          "old account3/walk-forward MAGNITUDES are contaminated and must not be quoted; rebuild "
-                          "on the reconciling harness and verify the current magnitude from source.")
+                          "you've likely modeled a cost and left out a component the real system has. Don't quote "
+                          "magnitudes from a harness that never reconciled to the record; rebuild on one that does "
+                          "and verify the current magnitude from source.")
         elif (not observed) and any(f.get("via") == "completion_claim" for f in r.get("graph_fires", [])) \
                 and not r.get("hedged"):
             reason = ("[pre-report] You're ending on a completion claim (finalized / populated / removed) "

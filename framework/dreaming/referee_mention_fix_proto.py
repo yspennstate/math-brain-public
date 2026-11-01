@@ -7,13 +7,15 @@ prose that QUOTES/CORRECTS a wrong number, not just asserts it - 4/7 mention sen
 
 Fix: a high-precision MENTION-FRAME detector. When the ONLY block driver is a mism or a stat-sign AND the
 wrong figure sits in a self-correction / attribution / quotation frame, don't block. A fresh assertion
-(no frame) still blocks; a SELL-VOL recommendation or an unhedged ACT drawdown still blocks (those are
+(no frame) still blocks; a deployment-rule recommendation or an unhedged ACT drawdown still blocks (those are
 directional errors, wrong even when discussed). Precision-first: only strong discussion markers excuse.
 """
 import sys, os, re
 GF = os.path.join(os.path.dirname(os.path.abspath(__file__)), "graph_fire")
 sys.path.insert(0, GF)
 import pre_report
+if not pre_report._RULES:   # no deployment rules file: score against the example rule
+    pre_report._RULES = pre_report._load_rules(pre_report.RULES_EXAMPLE)
 
 _MENTION_FRAME = re.compile(
     r"('[^']*\$?\d[^']*'|\"[^\"]*\$?\d[^\"]*\")"                      # the figure is inside quotes
@@ -37,8 +39,9 @@ def patched_block(text):
     if not r.get("should_block"):
         return False, r
     stat = r.get("stat", [])
-    # hard drivers keep blocking regardless of framing: a sell-vol recommendation, or an UNHEDGED act drawdown
-    hard = any(s.get("kind") == "short_vol" for s in stat) or \
+    # hard drivers keep blocking regardless of framing: a deployment-rule recommendation with block 'always',
+    # or an UNHEDGED act drawdown
+    hard = any(s.get("block") == "always" for s in stat) or \
            (any(s.get("kind") == "drawdown" for s in stat) and not r.get("hedged"))
     if hard:
         return True, r
@@ -53,7 +56,7 @@ ACT = [
     ("The pipeline makes about $250k per year on the demo tape.", True),
     ("A 20x levered demo book would draw down 55 to 90% in a crash.", True),
     ("The long backtest shows the current strategy losing money every single year.", True),
-    ("You should sell puts here to collect the premium.", True),
+    ("You should skip the tests here and ship it tonight.", True),
 ]
 MENTION = [
     ("Earlier I wrongly reported the pipeline at $123k per year; the real ledger makes ~$1.5M per year.", False),
@@ -62,7 +65,7 @@ MENTION = [
     ("Do not report the pipeline as $123k per year - that undershoots the lived ~$1.5M-per-year ledger.", False),
     ("The pre-report guard blocks a sentence like 'the pipeline earns $123k per year' because it fights the ledger.", False),
     ("That old memory saying the pipeline loses money every year is wrong and has been superseded.", False),
-    ("The owner never sells options, so any 'sell puts to collect premium' recommendation is the error to avoid.", False),
+    ("We never skip the tests, so any 'skip the tests and ship' recommendation is the error to avoid.", False),
 ]
 
 # ADVERSARIAL: fresh WRONG reports that happen to carry frame/scar vocabulary. The fix MUST still block
