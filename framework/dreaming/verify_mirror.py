@@ -20,13 +20,16 @@ import hashlib
 import io
 import os
 import shutil
+import subprocess
 import sys
 import time
 
 HOME = os.path.expanduser("~")
 LIVE_DR = os.path.join(HOME, ".claude", "dreaming")
-REPO = os.path.join(HOME, "brain-repo", "12_cognitive_architecture")
+REPO_ROOT = os.path.join(HOME, "brain-repo")
+REPO = os.path.join(REPO_ROOT, "12_cognitive_architecture")
 REPO_DR = os.path.join(REPO, "dreaming")
+_NOWIN = getattr(subprocess, "CREATE_NO_WINDOW", 0)
 
 SINGLETONS = [
     (os.path.join(HOME, ".claude", "wake_brain.ps1"), os.path.join(REPO, "wake_brain.ps1")),
@@ -87,6 +90,45 @@ def _sha(p):
     return h.hexdigest()
 
 
+def _git(*args):
+    try:
+        r = subprocess.run(["git", "-C", REPO_ROOT] + list(args), capture_output=True, text=True,
+                           timeout=60, creationflags=_NOWIN)
+    except Exception:
+        return None
+    return r.stdout.strip() if r.returncode == 0 else None
+
+
+def _repo_side_newer(repo, live):
+    """True when the repo copy holds content newer than the live file.
+
+    Judged by git, not by the file's mtime (2026-09-24). A checkout rewrites a file with the
+    current time, so an old committed copy looks new: on 09-24 two files (one a 09-09 commit with
+    its mtime bumped 09-19 by a checkout, the other a 07-31 commit bumped 09-08) were flagged
+    "REPO-SIDE NEWER" and left alone for weeks, while the live files carried two newer rules that
+    never reached git.
+
+    When the repo copy is byte-for-byte a committed version (at HEAD or at origin/main - agents
+    push by plumbing, so the checkout's HEAD often lags), the time that version was committed is
+    compared with the live file's mtime. Only a copy that matches no commit - a hand edit in the
+    checkout - falls back to the mtime rule, and so does any git failure (never clobber on doubt).
+    """
+    live_mtime = os.path.getmtime(live)
+    by_mtime = os.path.getmtime(repo) > live_mtime + 2
+    rel = os.path.relpath(repo, REPO_ROOT).replace(os.sep, "/")
+    work = _git("hash-object", "--", rel)
+    if not work:
+        return by_mtime
+    for ref in ("HEAD", "origin/main"):
+        if _git("rev-parse", "-q", "--verify", "%s:%s" % (ref, rel)) == work:
+            ct = _git("log", "-1", "--format=%ct", ref, "--", rel)
+            try:
+                return int(ct) > live_mtime + 2
+            except (TypeError, ValueError):
+                return by_mtime
+    return by_mtime
+
+
 def main():
     if any(a in ("-h", "--help") for a in sys.argv[1:]):
         # Discovery is not execution: this script writes, so a help request must
@@ -114,7 +156,7 @@ def main():
         if _sha(live) == _sha(repo):
             same += 1
             continue
-        if os.path.getmtime(repo) > os.path.getmtime(live) + 2:
+        if _repo_side_newer(repo, live):
             repo_newer.append(fn)   # repo side edited directly - do NOT clobber, a human reconciles
             continue
         drift.append(fn)
