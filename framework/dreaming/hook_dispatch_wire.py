@@ -20,9 +20,9 @@ if any(a in ("-h", "--help") for a in sys.argv[1:]):
     raise SystemExit(0)
 
 
-SETTINGS = os.path.expanduser(r"~\.claude\settings.json")
-LIST = os.path.expanduser(r"~\.claude\dreaming\hook_dispatch_list.json")
-ENABLED = os.path.expanduser(r"~\.claude\dreaming\HOOK_DISPATCH_ENABLED")
+SETTINGS = os.path.expanduser(r"~/.claude/settings.json")
+LIST = os.path.expanduser(r"~/.claude/dreaming/hook_dispatch_list.json")
+ENABLED = os.path.expanduser(r"~/.claude/dreaming/HOOK_DISPATCH_ENABLED")
 DISPATCH_CMD = "python -s ~/.claude/dreaming/hook_dispatch.py"
 
 

@@ -32,7 +32,7 @@ the deliberate mode. Read-only. Usage: python eval_deliberate_recall.py [--folds
 """
 import io, os, random, re, sys
 from collections import defaultdict
-sys.path.insert(0, os.path.expanduser(r"~\.claude\dreaming"))
+sys.path.insert(0, os.path.expanduser(r"~/.claude/dreaming"))
 import spread_recall as sr
 import brain as B
 import eval_fusion_weights as E

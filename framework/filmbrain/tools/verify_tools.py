@@ -9,7 +9,7 @@ from a memory of an install log.
 """
 import glob, json, os, subprocess, sys, time
 
-sys.path.insert(0, os.path.expanduser(r"~\filmbrain"))
+sys.path.insert(0, os.path.expanduser(r"~/filmbrain"))
 from fb_store import Store
 
 CNW = 0x08000000
@@ -47,8 +47,8 @@ TOOLS = [
                                          LOCAL + r"\losslesscut\LosslessCut.exe",
                                          os.path.expandvars(r"%LOCALAPPDATA%\**\LosslessCut.exe")], None),
     ("tool.lmms", "LMMS", [PF + r"\LMMS\lmms.exe"], None),
-    ("tool.comfyui", "ComfyUI", [os.path.expanduser(r"~\ComfyUI_portable\ComfyUI_windows_portable\python_embeded\python.exe")], None),
-    ("tool.manim", "Manim", [os.path.expanduser(r"~\lecture\venv\Scripts\python.exe")], None),
+    ("tool.comfyui", "ComfyUI", [os.path.expanduser(r"~/ComfyUI_portable/ComfyUI_windows_portable/python_embeded/python.exe")], None),
+    ("tool.manim", "Manim", [os.path.expanduser(r"~/lecture/venv/Scripts/python.exe")], None),
     ("tool.davinci_resolve", "DaVinci Resolve", [PF + r"\Blackmagic Design\DaVinci Resolve\Resolve.exe"], None),
     ("tool.natron", "Natron", [PF + r"\INRIA\Natron*\bin\Natron.exe"], None),
 ]
@@ -106,7 +106,7 @@ def main():
         print("NOT FOUND ({}): {}".format(len(missing), ", ".join(missing)))
     json.dump({"found": [{"name": n, "path": p, "version": v} for n, p, v in found],
                "missing": missing, "checked": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime())},
-              open(os.path.expanduser(r"~\filmbrain\tools\INVENTORY.json"), "w", encoding="utf-8"), indent=2)
+              open(os.path.expanduser(r"~/filmbrain/tools/INVENTORY.json"), "w", encoding="utf-8"), indent=2)
 
 
 if __name__ == "__main__":

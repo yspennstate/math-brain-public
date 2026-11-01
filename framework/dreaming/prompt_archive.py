@@ -26,7 +26,7 @@ file (the ledgers-polluted-by-own-gate scar).
 """
 import sys, os, io, json, re, time
 
-MEM_DEFAULT = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM_DEFAULT = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 ARCHIVE_DIR = os.environ.get("PROMPT_ARCHIVE_DIR", os.path.join(MEM_DEFAULT, "prompts"))
 LEDGER = os.path.join(ARCHIVE_DIR, "PROMPTS.jsonl")
 

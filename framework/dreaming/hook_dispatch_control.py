@@ -35,7 +35,7 @@ EVENTS = [("PreToolUse", "Bash"), ("PostToolUse", "Bash"), ("UserPromptSubmit", 
 
 def payload(event, tool, sid):
     d = {"session_id": sid, "hook_event_name": event, "cwd": os.path.expanduser("~"),
-         "transcript_path": os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\%s.jsonl") % sid}
+         "transcript_path": os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/%s.jsonl") % sid}
     if tool:
         d["tool_name"] = tool
         d["tool_input"] = {"command": "echo hi"} if tool in ("Bash", "PowerShell") else {"file_path": r"C:\tmp\x.txt", "old_string": "a", "new_string": "b"}

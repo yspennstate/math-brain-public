@@ -19,7 +19,7 @@ recommend a direction, do not auto-retune (the gate fires every session). Usage:
 """
 import io, os, re, time
 from collections import defaultdict
-DR = os.path.expanduser(r"~\.claude\dreaming")
+DR = os.path.expanduser(r"~/.claude/dreaming")
 SHADOW = os.path.join(DR, "shadow_fires.tsv")
 TRACE = os.path.join(DR, "retrievals.tsv")
 

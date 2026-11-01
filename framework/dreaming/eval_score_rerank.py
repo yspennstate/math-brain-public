@@ -77,7 +77,7 @@ Usage: python eval_score_rerank.py [--sample 120] [--folds 5]
 import os, random, sys
 from collections import defaultdict
 
-sys.path.insert(0, os.path.expanduser(r"~\.claude\dreaming"))
+sys.path.insert(0, os.path.expanduser(r"~/.claude/dreaming"))
 import numpy as np
 import spread_recall as sr
 import brain as B

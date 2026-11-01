@@ -52,7 +52,7 @@ def _brain_slug_resolve():
 # value at import time.
 _BRAIN_SLUG = _brain_slug_resolve()
 MEM_DEFAULT = os.path.join(os.path.expanduser("~"), ".claude", "projects", _BRAIN_SLUG, "memory")
-BRAIN_DEFAULT = os.path.expanduser(r"~\brain-repo\01_ai_consciousness\brain")
+BRAIN_DEFAULT = os.path.expanduser(r"~/brain-repo/01_ai_consciousness/brain")
 DREAMING = os.path.dirname(os.path.abspath(__file__))
 
 LINE = re.compile(r"^- \[( |x)\]\s*(.+)$")

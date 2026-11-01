@@ -25,10 +25,10 @@ import os, io, sys, json, re, time, py_compile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 MEMDIR = os.path.expanduser("~/.claude/projects/{{BRAIN_SLUG}}/memory")
-SETTINGS = os.path.expanduser(r"~\.claude\settings.json")
-CODEX_HOOKS = os.path.expanduser(r"~\.codex\hooks.json")
-CODEX_CONFIG = os.path.expanduser(r"~\.codex\config.toml")
-CODEX_SESSIONS = os.path.expanduser(r"~\.codex\sessions")
+SETTINGS = os.path.expanduser(r"~/.claude/settings.json")
+CODEX_HOOKS = os.path.expanduser(r"~/.codex/hooks.json")
+CODEX_CONFIG = os.path.expanduser(r"~/.codex/config.toml")
+CODEX_SESSIONS = os.path.expanduser(r"~/.codex/sessions")
 
 
 def _codex_sessions_in_window(window_s, root=None):

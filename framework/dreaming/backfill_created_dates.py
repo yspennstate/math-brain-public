@@ -7,8 +7,8 @@ Prints a table with the source; --apply stamps created: (append-only frontmatter
 import io, os, re, sys, json, time, glob
 sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 
-MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
-PROJ = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}")
+MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
+PROJ = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}")
 APPLY = "--apply" in sys.argv
 SKIP = {"MEMORY", "INDEX_ARCHIVE", "PREDICTIONS", "STATE_OF_MIND", "OPEN_QUESTIONS", "AUTOBIOGRAPHY",
         "MODEL_OF_PARTNER", "FASCINATIONS", "THE_OTHER_MINDS", "CONSCIENCE", "MISTAKES", "CURIOSITY",
@@ -18,7 +18,7 @@ TODAY = time.strftime("%Y-%m-%d")
 # sid (full + 8-prefix) -> earliest YYYY-MM-DD from the transcript's first-record timestamp.
 # Sources: the live project dir + the full backup archive (14k files, session-id dirs + top-level).
 ARCHIVE = os.path.expanduser(
-    r"~\brain-repo\11_raw_session_transcripts\claude_projects\{{BRAIN_SLUG}}")
+    r"~/brain-repo/11_raw_session_transcripts/claude_projects/{{BRAIN_SLUG}}")
 sid_date = {}
 
 

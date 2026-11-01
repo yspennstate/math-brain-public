@@ -11,7 +11,7 @@ Usage: python eval_pre_report_overfire.py [n_transcripts]
 """
 import os, io, json, glob, sys
 
-GF = os.path.expanduser(r"~\.claude\dreaming\graph_fire")
+GF = os.path.expanduser(r"~/.claude/dreaming/graph_fire")
 sys.path.insert(0, GF)
 import pre_report  # noqa: E402
 

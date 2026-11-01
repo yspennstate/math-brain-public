@@ -25,7 +25,7 @@ reweight + my judgment on this exact topic was just wrong once (the tradeoff ass
 session re-run this eval, confirm, and implement + verify with a live recall check. Read-only. Usage: python
 eval_bm25first.py"""
 import os, sys, random
-sys.path.insert(0, os.path.expanduser(r"~\.claude\dreaming"))
+sys.path.insert(0, os.path.expanduser(r"~/.claude/dreaming"))
 import spread_recall as sr
 import brain as B
 import eval_deliberate_recall as ED

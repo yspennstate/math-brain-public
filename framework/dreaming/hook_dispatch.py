@@ -62,10 +62,10 @@ def _format_exc(path=None):
 
 # Once wired, settings.json holds only the dispatcher, so the real hook list lives here (written by hook_dispatch_wire.py,
 # and the same file --off restores from). Before wiring, this file does not exist and settings.json is the list.
-LIST = os.path.expanduser(r"~\.claude\dreaming\hook_dispatch_list.json")
-SETTINGS = os.path.expanduser(r"~\.claude\settings.json")
-ENABLED = os.path.expanduser(r"~\.claude\dreaming\HOOK_DISPATCH_ENABLED")
-LOG = os.path.expanduser(r"~\.claude\compute\hook_dispatch.log")
+LIST = os.path.expanduser(r"~/.claude/dreaming/hook_dispatch_list.json")
+SETTINGS = os.path.expanduser(r"~/.claude/settings.json")
+ENABLED = os.path.expanduser(r"~/.claude/dreaming/HOOK_DISPATCH_ENABLED")
+LOG = os.path.expanduser(r"~/.claude/compute/hook_dispatch.log")
 SELF = os.path.basename(__file__).lower()
 CREATE_NO_WINDOW = 0x08000000
 PER_HOOK_BUDGET_S = 120.0
@@ -169,7 +169,7 @@ def _stdin_for(path, payload):
 # equivalent. hook_dispatch_control.py writes this file after a passing run, listing the hooks whose in-process
 # output matched their own subprocess exactly. An unknown hook, a new hook, or a hook edited since the last control
 # run is simply not in the list, and runs the way it always did.
-ALLOW = os.path.expanduser(r"~\.claude\dreaming\hook_dispatch_allow.json")
+ALLOW = os.path.expanduser(r"~/.claude/dreaming/hook_dispatch_allow.json")
 
 
 _ALLOW_STALE = [False]          # set by _allowlist(), read once per dispatch so the log says it ONCE
@@ -586,7 +586,7 @@ RANK = {"allow": 0, "ask": 1, "deny": 2}
 # ones are cut to that share at a line boundary, the whole untrimmed text goes to a file named in the first line, and
 # the log says so (FIT). INLINE_CAP sits under the harness number because it counts UTF-16 units and we count code points.
 INLINE_CAP = 9800
-OVERFLOW_DIR = os.path.expanduser(r"~\.claude\compute\hook_overflow")
+OVERFLOW_DIR = os.path.expanduser(r"~/.claude/compute/hook_overflow")
 OVERFLOW_KEEP_S = 48 * 3600
 _LAST_FIT = [None]        # (total_chars, n_hooks, n_cut, path) of the last merge that had to cut, for the dispatch log
 
@@ -1063,8 +1063,8 @@ def _flag_file_absent(args):
 # payload, a hook's text or a prompt. With the flag absent the cost is one os.stat per event; nothing is written past
 # PROFILE_MAX_BYTES; nothing here raises. On: create the flag (an empty file). It lapses three hours after its mtime.
 # Read the lines with primary_directive/improve_1012/fronts/R30/analyse_r30.py.
-PROFILE_FLAG = os.path.expanduser(r"~\.claude\compute\hook_profile.on")
-PROFILE_LOG = os.path.expanduser(r"~\.claude\compute\hook_profile.jsonl")
+PROFILE_FLAG = os.path.expanduser(r"~/.claude/compute/hook_profile.on")
+PROFILE_LOG = os.path.expanduser(r"~/.claude/compute/hook_profile.jsonl")
 PROFILE_MAX_AGE_S = 3 * 3600
 PROFILE_MAX_BYTES = 64 * 1024 * 1024
 PROFILE_RATE_256 = 64                # sampled when os.urandom(1)[0] < this: 64 of 256, one dispatch in four

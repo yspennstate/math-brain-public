@@ -16,8 +16,8 @@ if any(a in ("-h", "--help") for a in sys.argv[1:]):
 
 
 PY = sys.executable
-D = os.path.expanduser(r"~\.claude\dreaming")
-MESH = os.path.expanduser(r"~\brain-repo\12_cognitive_architecture\agent_mesh\mesh_hook.py")
+D = os.path.expanduser(r"~/.claude/dreaming")
+MESH = os.path.expanduser(r"~/brain-repo/12_cognitive_architecture/agent_mesh/mesh_hook.py")
 
 # (label, argv) for each wired Stop hook (from settings.json)
 HOOKS = [

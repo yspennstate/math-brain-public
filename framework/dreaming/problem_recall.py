@@ -43,8 +43,8 @@ import sys
 import time
 
 HOME = os.path.expanduser("~")
-MOP = os.environ.get("PROBLEM_RECALL_MOP", os.path.expanduser(r"~\open-problems-repo"))
-BRAIN = os.environ.get("PROBLEM_RECALL_BRAIN", os.path.expanduser(r"~\brain-repo"))
+MOP = os.environ.get("PROBLEM_RECALL_MOP", os.path.expanduser(r"~/open-problems-repo"))
+BRAIN = os.environ.get("PROBLEM_RECALL_BRAIN", os.path.expanduser(r"~/brain-repo"))
 MATHDIR = "06_math_research"
 MEMDIR = os.environ.get("PROBLEM_RECALL_MEMDIR", os.path.join(HOME, ".claude", "projects", "{{BRAIN_SLUG}}", "memory"))
 STORE = os.environ.get("MATHBRAIN_STORE", "")

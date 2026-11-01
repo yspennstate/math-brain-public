@@ -44,7 +44,7 @@ import io, json, os, sys
 
 DR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, DR)
-MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 LEDGER = os.path.join(MEM, "prompts", "PROMPTS.jsonl")
 
 import spread_recall as sr

@@ -14,8 +14,8 @@ if any(a in ("-h", "--help") for a in sys.argv[1:]):
     raise SystemExit(0)
 
 
-STATE = os.environ.get("SLOW_SENSE_STATE") or os.path.expanduser(r"~\.claude\compute\slow_state.json")   # env override = the test seam
-MARKS = os.environ.get("SLOW_SENSE_MARKS") or os.path.expanduser(r"~\.claude\compute\slow_sense_marks")
+STATE = os.environ.get("SLOW_SENSE_STATE") or os.path.expanduser(r"~/.claude/compute/slow_state.json")   # env override = the test seam
+MARKS = os.environ.get("SLOW_SENSE_MARKS") or os.path.expanduser(r"~/.claude/compute/slow_sense_marks")
 STALE_S = 35 * 60          # the probe runs every 10 min; older than this means the probe itself is down
 REPEAT_S = 30 * 60         # once per session per half hour (the brain fires less on purpose, owner 2026-09-02)
 # FULL ONCE, THEN THE FIRST SENTENCE (2026-09-23). The advisories run to 1-6.6 KB each and most of their length is history

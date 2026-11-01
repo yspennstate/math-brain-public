@@ -8,7 +8,7 @@ and colour properties all become nodes; options hang off their filter.
 """
 import os, re, subprocess, sys
 
-sys.path.insert(0, os.path.expanduser(r"~\filmbrain"))
+sys.path.insert(0, os.path.expanduser(r"~/filmbrain"))
 from fb_store import Store, slug
 
 FF = "ffmpeg"

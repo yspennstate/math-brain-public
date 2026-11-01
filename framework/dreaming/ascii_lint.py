@@ -20,7 +20,7 @@ incomplete or invoked incorrectly. Usage: python ascii_lint.py
 """
 import os, io, sys, json, re, hashlib
 
-ROOT = os.path.expanduser(r"~\.claude")
+ROOT = os.path.expanduser(r"~/.claude")
 EXTS = (".ps1", ".vbs")
 SKIP_DIRS = re.compile(r"crash_recovery|__pycache__|node_modules|\.git", re.I)
 MAX_CODES_PER_LINE = 12

@@ -31,7 +31,7 @@ import os
 import subprocess
 import sys
 
-SCANNER = os.path.expanduser(r"~\.claude\dreaming\scan_secrets.py")
+SCANNER = os.path.expanduser(r"~/.claude/dreaming/scan_secrets.py")
 
 # Unattended/agent use: never let fetch or push block on an interactive credential
 # prompt (the same GIT_TERMINAL_PROMPT-alone-is-insufficient hang found and fixed

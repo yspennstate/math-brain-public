@@ -13,7 +13,7 @@ current vs graph-dominant vs lexical-dominant on the REAL graph and the REWIRED 
 Light: 3 blends x 2 graphs x 3 splits. Read-only. Usage: python control_random_graph.py [--swaps 10]
 """
 import os, random, sys
-sys.path.insert(0, os.path.expanduser(r"~\.claude\dreaming"))
+sys.path.insert(0, os.path.expanduser(r"~/.claude/dreaming"))
 import spread_recall as sr
 import brain as B
 import eval_fusion_weights as E

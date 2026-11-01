@@ -17,7 +17,7 @@ if any(a in ("-h", "--help") for a in sys.argv[1:]):
     raise SystemExit(0)
 
 
-MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 IDX = os.path.join(MEM, "MEMORY.md")
 ARC = os.path.join(MEM, "INDEX_ARCHIVE.md")
 APPLY = len(sys.argv) > 1 and sys.argv[1] == "apply"

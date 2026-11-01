@@ -32,7 +32,7 @@ score MRR/hit@k, and compare to the hand blend on the SAME candidates. Features 
 """
 import io, os, re, sys, math
 from collections import defaultdict
-sys.path.insert(0, os.path.expanduser(r"~\.claude\dreaming"))
+sys.path.insert(0, os.path.expanduser(r"~/.claude/dreaming"))
 import spread_recall as sr
 import brain as B
 import eval_deliberate_recall as ED

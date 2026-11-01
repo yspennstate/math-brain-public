@@ -27,7 +27,7 @@ import json
 import os, re, io, sys, time
 
 DREAMING = os.path.dirname(os.path.abspath(__file__))
-MEM_DEFAULT = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM_DEFAULT = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 SAL = os.path.join(DREAMING, "salience.tsv")
 COMPILE_RECEIPT = os.path.join(DREAMING, "instincts_compile_receipt.json")
 

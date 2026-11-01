@@ -25,10 +25,10 @@ from collections import defaultdict
 DR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, DR)
 INST = os.path.join(DR, "instincts.tsv")
-MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 LEDGER = os.path.join(MEM, "prompts", "PROMPTS.jsonl")
 ARCHIVE = os.path.expanduser(
-    r"~\brain-repo\11_raw_session_transcripts\claude_projects\{{BRAIN_SLUG}}")
+    r"~/brain-repo/11_raw_session_transcripts/claude_projects/{{BRAIN_SLUG}}")
 
 # read-only / audit command shapes (mirrors instinct_prime._READONLY): quoting vocabulary, not acting
 READONLY = re.compile(r"^\s*(grep|rg|cat|less|head|tail|ls|find|wc|diff|sed -n|awk|"

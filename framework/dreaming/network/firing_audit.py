@@ -75,7 +75,7 @@ def main(argv=None):
     if args and args[0] == "--selftest":
         return _selftest()
     path = (args or [os.path.expanduser(
-        r"~\.claude\dreaming\graph_fire\gf_shadow_fires.tsv")])[0]
+        r"~/.claude/dreaming/graph_fire/gf_shadow_fires.tsv")])[0]
     if not os.path.exists(path):
         print(f"no shadow log at {path}")
         return 1

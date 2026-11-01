@@ -28,7 +28,7 @@ import time
 HERE = os.path.dirname(os.path.abspath(__file__))
 STATE = os.path.join(HERE, "state")
 PY = sys.executable
-MESH = os.path.expanduser(r"~\brain-repo\12_cognitive_architecture\agent_mesh\agent_mesh.py")
+MESH = os.path.expanduser(r"~/brain-repo/12_cognitive_architecture/agent_mesh/agent_mesh.py")
 
 # floors (fresh bank of 2026-09-03, through the hook): 74.2 / 91.0 served, 14.6 / 4.5 silent on 09-11
 THRESH = {
@@ -325,7 +325,7 @@ def _main_locked():
         # 2026-09-13: the owner-voice probability bank through the hook (state/bank_ownvoice_prob.json, keys are node
         # NAMES not answers), then the rotated-key negative control on the same recorded run. ~1 min.
         _ov_out = os.path.join(HERE, "state", "ownvoice_%s.jsonl" % time.strftime("%Y%m%d_%H%M%S"))
-        _store = os.path.expanduser(r"~\math-brain-build\local\population\brain.sqlite3")
+        _store = os.path.expanduser(r"~/math-brain-build/local/population/brain.sqlite3")
         rc, out, err, dt = run([PY, os.path.join(HERE, "eval_ownvoice.py"), "--store", _store, "--out", _ov_out, "--tag", "gate"], 900)
         inst = {"rc": rc, "seconds": dt, "rows": _ov_out}
         mo = re.search(r"OWNVOICE\[gate\] n=(\d+) served (\d+) hit_result (\d+) hit_any (\d+)", out or "")
@@ -354,8 +354,8 @@ def _main_locked():
     try:
         import glob as _glob
         import sqlite3 as _sqlite3
-        _led = os.path.expanduser(r"~\math-brain-build\local\population\integration_ledger.jsonl")
-        _inbox = os.path.expanduser(r"~\math-brain-inbox")
+        _led = os.path.expanduser(r"~/math-brain-build/local/population/integration_ledger.jsonl")
+        _inbox = os.path.expanduser(r"~/math-brain-inbox")
         _seen = {json.loads(l).get("draft") for l in io.open(_led, encoding="utf-8") if l.strip()} if os.path.exists(_led) else set()
         _bundles = _glob.glob(os.path.join(_inbox, "*", "bundle_*.json"))
         _never = [p for p in _bundles if os.path.relpath(p, _inbox).replace("\\", "/") not in _seen]

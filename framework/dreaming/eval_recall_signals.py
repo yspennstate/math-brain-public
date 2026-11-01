@@ -27,7 +27,7 @@ DR = os.path.dirname(os.path.abspath(__file__))
 TRACE = os.path.join(DR, "retrievals.tsv")
 EMB = os.path.join(DR, "memory_embeddings.npz")                       # live sidecar (box), if present
 EMB_AUTHORITY = os.path.join(DR, ".embedding_current.json")
-MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 MAXSESS = 25          # skip giant survey sessions - their C(n,2) pairs are co-read noise, not association
 
 

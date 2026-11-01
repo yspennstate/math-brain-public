@@ -13,7 +13,7 @@ wrong edge in a reference is worse than a missing one.
 import os
 import sys
 
-sys.path.insert(0, os.path.expanduser(r"~\filmbrain"))
+sys.path.insert(0, os.path.expanduser(r"~/filmbrain"))
 from fb_store import Store
 
 # craft concept -> the things on this machine that actually do it.

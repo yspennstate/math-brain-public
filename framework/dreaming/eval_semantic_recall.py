@@ -34,7 +34,7 @@ import embedding_artifact
 DR = os.path.dirname(os.path.abspath(__file__))
 EMB = os.path.join(DR, "memory_embeddings.npz")
 AUTHORITY = os.path.join(DR, ".embedding_current.json")
-MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 MODEL = "BAAI/bge-small-en-v1.5"
 
 

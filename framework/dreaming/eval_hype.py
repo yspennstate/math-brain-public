@@ -26,7 +26,7 @@ DR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, DR)
 from bm25 import BM25, tokens, read_docs, SKIP_FILES
 
-MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 TRACE = os.path.join(DR, "retrievals.tsv")
 LEDGER = os.path.join(MEM, "prompts", "PROMPTS.jsonl")
 QUESTIONS = os.path.join(DR, "hype_questions.jsonl")

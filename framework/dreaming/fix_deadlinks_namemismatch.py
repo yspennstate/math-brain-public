@@ -6,7 +6,7 @@ the safe fix. Norm-aware (matches any hyphen/underscore/case variant); newline-s
 Dry-run by default; pass --apply to write. See OPEN_QUESTIONS.md (07-11 dead-link audit)."""
 import os, io, re, sys
 
-MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 DATE = re.compile(r"_\d{4}_\d{2}_\d{2}$")
 LINK = re.compile(r"\[\[([^\]]+?)\]\]")
 # never rewrite substrate pages: OPEN_QUESTIONS holds this fix's own old->new mapping (rewriting it would

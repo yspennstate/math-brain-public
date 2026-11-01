@@ -56,7 +56,7 @@ GF = os.path.join(D, "graph_fire")
 # value at import time.
 _BRAIN_SLUG = _brain_slug_resolve()
 MEM = os.path.join(os.path.expanduser("~"), ".claude", "projects", _BRAIN_SLUG, "memory")
-OUT_DIR = os.path.expanduser(r"~\Downloads")
+OUT_DIR = os.path.expanduser(r"~/Downloads")
 WINDOW_S = 7 * 86400
 
 

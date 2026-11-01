@@ -631,7 +631,7 @@ with io.open(OUT, "w", encoding="utf-8") as f:
     # Fully guarded - a failure here must never break agenda generation.
     try:
         import subprocess as _sp
-        _deldir = os.path.expanduser(r"~\brain-repo\12_cognitive_architecture\delegation")
+        _deldir = os.path.expanduser(r"~/brain-repo/12_cognitive_architecture/delegation")
         _sp.run(["python", os.path.join(_deldir, "dream_delegation_review.py")], capture_output=True, timeout=60)
         _dagenda = read(os.path.join(_deldir, "DELEGATION_AGENDA.md"))
         if _dagenda.strip():

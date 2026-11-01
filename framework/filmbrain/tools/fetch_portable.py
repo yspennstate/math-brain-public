@@ -11,7 +11,7 @@ Everything here is the project's own official download URL.
 """
 import os, subprocess, sys, urllib.request, zipfile, shutil
 
-DEST = os.path.expanduser(r"~\filmtools")
+DEST = os.path.expanduser(r"~/filmtools")
 CNW = 0x08000000
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) filmbrain-setup/1.0"}
 

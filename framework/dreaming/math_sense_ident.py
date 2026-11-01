@@ -32,9 +32,9 @@ import unicodedata   # 2026-09-13: two helpers here fold accents; without this t
 # swallowed except, which silently skipped the WHOLE on-topic gate - a behaviour change that reads as a result.
 
 HOME = os.path.expanduser("~")
-BUILD_SRC = os.path.expanduser(r"~\math-brain-build\src")
+BUILD_SRC = os.path.expanduser(r"~/math-brain-build/src")
 STORE_PATH = os.environ.get(
-    "MATHBRAIN_STORE", os.path.expanduser(r"~\math-brain-build\local\population\brain.sqlite3")
+    "MATHBRAIN_STORE", os.path.expanduser(r"~/math-brain-build/local/population/brain.sqlite3")
 )
 # 2026-09-11: 1400 held THREE clipped cards until 2026-09-08, when cards started going out whole (the 560-char clip
 # was a Codex finding); a whole card is ~600 chars and the hint header ~560, so 1400 held ONE card - measured on the

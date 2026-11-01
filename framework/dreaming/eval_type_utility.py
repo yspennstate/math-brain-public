@@ -19,7 +19,7 @@ import os, io, re, time, math
 from collections import defaultdict
 
 DR = os.path.dirname(os.path.abspath(__file__))
-MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 TRACE = os.path.join(DR, "retrievals.tsv")
 TRACE_START = "2026-06-25"   # the trace-coverage era; memories older than this predate observation
 

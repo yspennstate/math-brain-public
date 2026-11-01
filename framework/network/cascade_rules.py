@@ -184,7 +184,7 @@ def main(argv=None):
         save_to = args[i + 1]
         args = args[:i] + args[i + 2:]
     path = (args or [os.path.expanduser(
-        r"~\.claude\dreaming\graph_fire\gf_shadow_fires.tsv")])[0]
+        r"~/.claude/dreaming/graph_fire/gf_shadow_fires.tsv")])[0]
     if not os.path.exists(path):
         print(f"no shadow log at {path}")
         return 1

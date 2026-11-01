@@ -26,7 +26,7 @@ import os, io, re, csv, json
 
 DR = os.path.dirname(os.path.abspath(__file__))
 INST = os.path.join(DR, "instincts.tsv")
-MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 LEDGER = os.path.join(MEM, "prompts", "PROMPTS.jsonl")
 OUTCOMES = os.path.join(DR, "outcomes.jsonl")
 

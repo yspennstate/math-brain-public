@@ -29,7 +29,7 @@ from collections import defaultdict
 
 import build_memory_embeddings as builder
 
-MEM_DEFAULT = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM_DEFAULT = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 DR = os.path.dirname(os.path.abspath(__file__))
 LIVE_OUT = os.path.join(DR, "memory_embeddings.npz")
 OUT_DEFAULT = os.path.join(DR, "memory_embeddings.local.next.npz")

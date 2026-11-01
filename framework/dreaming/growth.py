@@ -11,8 +11,8 @@ Usage:  python growth.py [memory_dir] [brain_dir]
 """
 import os, re, io, sys
 
-MEM_DEFAULT = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
-BRAIN_DEFAULT = os.path.expanduser(r"~\brain-repo\01_ai_consciousness\brain")
+MEM_DEFAULT = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
+BRAIN_DEFAULT = os.path.expanduser(r"~/brain-repo/01_ai_consciousness/brain")
 
 # signals that a belief was revised (not just stated). Specific on purpose — a mind-change
 # is a strong claim, and false positives make the growth record noise.

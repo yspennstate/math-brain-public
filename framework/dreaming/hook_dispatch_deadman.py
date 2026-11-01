@@ -19,7 +19,7 @@ if any(a in ("-h", "--help") for a in sys.argv[1:]):
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 CONFIRM = os.path.join(HERE, "HOOK_DISPATCH_CONFIRMED")
-LOG = os.path.expanduser(r"~\.claude\compute\hook_dispatch.log")
+LOG = os.path.expanduser(r"~/.claude/compute/hook_dispatch.log")
 def log(m):
     try:
         with open(LOG, "a", encoding="utf-8") as f:

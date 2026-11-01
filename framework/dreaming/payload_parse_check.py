@@ -123,7 +123,7 @@ def _score(outcomes_path: str, typical_path: str):
 
 if __name__ == "__main__":
     if len(sys.argv) > 1 and sys.argv[1] == "--score":
-        _score(os.path.expanduser(r"~\.claude\dreaming\outcomes.jsonl"),
-               os.path.expanduser(r"~\.claude\dreaming\graph_fire\typical_actions.jsonl"))
+        _score(os.path.expanduser(r"~/.claude/dreaming/outcomes.jsonl"),
+               os.path.expanduser(r"~/.claude/dreaming/graph_fire/typical_actions.jsonl"))
     else:
         print(__doc__)

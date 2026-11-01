@@ -17,11 +17,11 @@ Idempotent: add_node updates in place; edges are INSERT OR REPLACE. Nothing is d
 """
 import os, sys, json, glob, re, time, hashlib
 
-sys.path.insert(0, os.path.expanduser(r"~\filmbrain"))
-sys.path.insert(0, os.path.expanduser(r"~\videoquality_20260906\tools"))
+sys.path.insert(0, os.path.expanduser(r"~/filmbrain"))
+sys.path.insert(0, os.path.expanduser(r"~/videoquality_20260906/tools"))
 from fb_store import Store, slug
 
-VQ = os.path.expanduser(r"~\videoquality_20260906")
+VQ = os.path.expanduser(r"~/videoquality_20260906")
 SESSION = "claude-videoquality-0906"
 DRY = "--dry" in sys.argv
 COUNTS = {"nodes": 0, "edges": 0, "obs": 0, "lessons": 0}
@@ -274,7 +274,7 @@ def ingest_measured(st):
 # ------------------------------------------------------------------ survey + downloads
 def ingest_survey(st):
     import vq_authored as A
-    man = jload(os.path.expanduser(r"~\tools\videoquality\MANIFEST.json")) or {"files": {}, "repos": {}, "snapshots": {}}
+    man = jload(os.path.expanduser(r"~/tools/videoquality/MANIFEST.json")) or {"files": {}, "repos": {}, "snapshots": {}}
     for t in A.SURVEY:
         nid = t["id"]
         st.node(nid, t.get("kind", "tool"), t["name"], title=t["name"], body=t["body"], source="survey:2026-09-06", tags=t.get("tags", []) + ["survey"],

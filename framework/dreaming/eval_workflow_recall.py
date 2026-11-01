@@ -23,7 +23,7 @@ import sys
 sys.path.insert(0, DR)
 from bm25 import BM25, tokens, SKIP_FILES
 
-MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 TRACE = os.path.join(DR, "retrievals.tsv")
 LEDGER = os.path.join(MEM, "prompts", "PROMPTS.jsonl")
 MAXSESS = 25

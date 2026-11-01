@@ -31,7 +31,7 @@ if any(a in ("-h", "--help") for a in sys.argv[1:]):
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import prompt_origin as po
 
-LED = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory\prompts\PROMPTS.jsonl")
+LED = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory/prompts/PROMPTS.jsonl")
 APPLY = "--apply" in sys.argv
 
 

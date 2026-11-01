@@ -26,7 +26,7 @@ import os
 import re
 import sys
 
-LOG = os.path.expanduser(r"~\.claude\compute\clock_stamp_hook.log")
+LOG = os.path.expanduser(r"~/.claude/compute/clock_stamp_hook.log")
 
 SLACK_MIN = 5
 HORIZON_MIN = 180          # a stamp dated today

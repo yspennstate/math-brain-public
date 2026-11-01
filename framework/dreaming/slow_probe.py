@@ -22,12 +22,12 @@ if any(a in ("-h", "--help") for a in sys.argv[1:]):
     raise SystemExit(0)
 
 
-OUT = os.path.expanduser(r"~\.claude\compute\slow_state.json")
+OUT = os.path.expanduser(r"~/.claude/compute/slow_state.json")
 STATE_DIR = os.path.dirname(OUT)
 SCANNED_TREE = r"C:\Windows\WinSxS"
-CONTRACT_CACHE = os.path.expanduser(r"~\.brain-framework\state\project_memory\hot-contract-cache.json")
-EXCLUDED_TREE = os.path.expanduser(r"~\brain-repo")
-SCRATCH = os.path.join(os.environ.get("LOCALAPPDATA", os.path.expanduser(r"~\AppData\Local")), "Temp", "claude")
+CONTRACT_CACHE = os.path.expanduser(r"~/.brain-framework/state/project_memory/hot-contract-cache.json")
+EXCLUDED_TREE = os.path.expanduser(r"~/brain-repo")
+SCRATCH = os.path.join(os.environ.get("LOCALAPPDATA", os.path.expanduser(r"~/AppData/Local")), "Temp", "claude")
 CREATE_NO_WINDOW = 0x08000000
 FRAGMENTS = {"sleep.exe", "grep.exe", "sed.exe", "head.exe", "tail.exe", "wc.exe", "find.exe", "cat.exe", "sort.exe", "uniq.exe"}
 
@@ -537,7 +537,7 @@ def dispatcher_health(here=None, settings=None):
     entries for each wired event, and settings.json really points those events at the dispatcher."""
     import py_compile
     here = here or os.path.dirname(os.path.abspath(__file__))          # overridable so the control can test a scratch copy
-    settings = settings or os.path.expanduser(r"~\.claude\settings.json")     # rather than break the live wiring to prove a branch
+    settings = settings or os.path.expanduser(r"~/.claude/settings.json")     # rather than break the live wiring to prove a branch
     out = {"wired": [], "ok": True, "why": []}
     enabled = os.path.exists(os.path.join(here, "HOOK_DISPATCH_ENABLED"))
     disp = os.path.join(here, "hook_dispatch.py")

@@ -57,9 +57,9 @@ sys.path.insert(0, HERE)
 import green_act_guard as G
 from ern_labels import _SECRETISH
 
-LIVE = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}")
+LIVE = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}")
 ARCH = os.path.expanduser(
-    r"~\brain-repo\11_raw_session_transcripts\claude_projects\{{BRAIN_SLUG}}")
+    r"~/brain-repo/11_raw_session_transcripts/claude_projects/{{BRAIN_SLUG}}")
 BASELINE = os.path.join(HERE, "green_claim_corpus.jsonl")   # frozen K=1 - never written here
 WIDE_OUT = os.path.join(HERE, "green_claim_corpus_wideK.jsonl")
 

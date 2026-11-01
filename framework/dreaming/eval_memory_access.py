@@ -18,7 +18,7 @@ CLAUDE_SESSION = "11111111-1111-4111-8111-111111111111"
 CODEX_SESSION = "22222222-2222-4222-8222-222222222222"
 TS = "2026-07-09T12:00:00Z"
 EPOCH = 1783598400.0
-MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 
 
 def _dump(path, rows):

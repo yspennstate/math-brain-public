@@ -18,7 +18,7 @@ HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 from fbplan import KINDS, classify
 
-FILMS = os.path.expanduser(r"~\films")
+FILMS = os.path.expanduser(r"~/films")
 
 BUILD = '''#!/usr/bin/env python
 """
@@ -40,8 +40,8 @@ sys.path.insert(0, os.path.join(FB, "pipeline"))
 from beatfilm import Film
 import visuals as V
 
-NL = os.path.expanduser(r"~\\narration_lab")
-AB_PY = os.path.expanduser(r"~\\audiobook\\venv\\Scripts\\python.exe")
+NL = os.path.expanduser(r"~//narration_lab")
+AB_PY = os.path.expanduser(r"~//audiobook//venv//Scripts//python.exe")
 NL_PY = os.path.join(NL, "venv", "Scripts", "python.exe")
 HERE = os.path.dirname(os.path.abspath(__file__))
 CNW = 0x08000000

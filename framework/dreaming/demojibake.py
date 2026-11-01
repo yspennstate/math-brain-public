@@ -10,7 +10,7 @@ if any(a in ("-h", "--help") for a in sys.argv[1:]):
     print(__doc__ or os.path.basename(__file__))
     raise SystemExit(0)
 
-MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 APPLY = len(sys.argv) > 1 and sys.argv[1] == "apply"
 MARK = re.compile(r"â€|Ã¢|Ã©|Ã¨|Ã¼|Ã¶|Ã¤|ðŸ|âš |Â[°·§ ]|Ã—|â‰|â†|â‡")
 

@@ -41,7 +41,7 @@ import sys
 from collections import Counter, defaultdict
 
 
-DR = os.path.expanduser(r"~\.claude\dreaming")
+DR = os.path.expanduser(r"~/.claude/dreaming")
 TRACE = sys.argv[1] if len(sys.argv) > 1 else os.path.join(DR, "retrievals.tsv")
 MAX_SESSION_MEMORIES = 25
 HORIZON = 4

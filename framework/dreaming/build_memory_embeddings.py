@@ -47,7 +47,7 @@ import time
 from datetime import datetime, timezone
 
 
-MEM_DEFAULT = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM_DEFAULT = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 DR = os.path.dirname(os.path.abspath(__file__))
 OUT = os.path.join(DR, "memory_embeddings.npz")
 STAGED_OUT = os.path.join(DR, "memory_embeddings.next.npz")

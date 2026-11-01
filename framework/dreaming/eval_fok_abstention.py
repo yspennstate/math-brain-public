@@ -24,7 +24,7 @@ Usage: python eval_fok_abstention.py
 import os, io, re, random
 
 DR = os.path.dirname(os.path.abspath(__file__))
-MEM = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
+MEM = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
 MIN_CLUSTER = 3   # must match fok_probe.MIN_CLUSTER
 STOP = set(("the a an and or of to in for on with is are was were be this that it its as at by from into "
             "over per not no new one two use used using via etc when then than but our we you your i me my "

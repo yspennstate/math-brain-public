@@ -35,9 +35,9 @@ import os
 import sys
 
 LIVE = os.path.expanduser(
-    r"~\.claude\projects\{{BRAIN_SLUG}}\memory\prompts\PROMPTS.jsonl")
+    r"~/.claude/projects/{{BRAIN_SLUG}}/memory/prompts/PROMPTS.jsonl")
 REPO_PROMPTS = os.path.expanduser(
-    r"~\brain-repo\01_ai_consciousness\claude\memory\prompts")
+    r"~/brain-repo/01_ai_consciousness/claude/memory/prompts")
 ARCHIVE = os.path.join(REPO_PROMPTS, "archive")
 UNDATED = "UNDATED"
 

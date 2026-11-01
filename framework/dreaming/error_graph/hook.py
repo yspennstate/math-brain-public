@@ -26,7 +26,7 @@ except ImportError:
     from store import GraphStore, MemoryStore
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-RUNTIME_DIR = os.environ.get("ERROR_GRAPH_RUNTIME_DIR", os.path.expanduser(r"~\.claude\dreaming\error_graph_runtime"))
+RUNTIME_DIR = os.environ.get("ERROR_GRAPH_RUNTIME_DIR", os.path.expanduser(r"~/.claude/dreaming/error_graph_runtime"))
 METRICS_PATH = os.environ.get("ERROR_GRAPH_METRICS_PATH", os.path.join(RUNTIME_DIR, "hook_health.sqlite3"))
 # The host accepts a much larger JSON envelope so structured metadata survives,
 # but regex/AST extraction sees only a bounded textual projection.  A 32,768
@@ -251,8 +251,8 @@ def _safe_transcript_path(path: str, allowed_roots: Optional[Sequence[str]] = No
     if not path or path.startswith(("\\\\", "\\\\?\\", "\\\\.\\")):
         return ""
     roots = tuple((
-        os.path.expanduser(r"~\.claude\projects"),
-        os.path.expanduser(r"~\.codex\sessions"),
+        os.path.expanduser(r"~/.claude/projects"),
+        os.path.expanduser(r"~/.codex/sessions"),
     ) if allowed_roots is None else allowed_roots)
     try:
         resolved = os.path.realpath(os.path.abspath(os.path.expanduser(path)))

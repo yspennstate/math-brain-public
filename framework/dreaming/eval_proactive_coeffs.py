@@ -25,7 +25,7 @@ topical neighbours), proving the full-slug keying is correct and the sweep is re
 """
 import io, os, re, sys, itertools
 from collections import defaultdict
-sys.path.insert(0, os.path.expanduser(r"~\.claude\dreaming"))
+sys.path.insert(0, os.path.expanduser(r"~/.claude/dreaming"))
 import spread_recall as sr
 import brain as B
 import eval_deliberate_recall as ED

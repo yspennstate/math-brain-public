@@ -26,8 +26,8 @@ Import: import salience; scores = salience.score_corpus(memory_dir)   # {fname: 
 import os, re, io, math, sys, time
 from supersession import active_supersessions
 
-MEM_DEFAULT = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
-BRAIN_DEFAULT = os.path.expanduser(r"~\brain-repo\01_ai_consciousness\brain")
+MEM_DEFAULT = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
+BRAIN_DEFAULT = os.path.expanduser(r"~/brain-repo/01_ai_consciousness/brain")
 
 # Two-scale recency (2026-07-23; RECENCY_KERNEL.md, measured by eval_recency_kernel.py on 1,391
 # deliberate-recall reads): retrieval need decays with tau ~1.3 DAYS (episodic head), then sits on

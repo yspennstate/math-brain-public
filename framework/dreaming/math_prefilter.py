@@ -129,7 +129,7 @@ def _index_file_signature(path):
 
 
 def build(store_path):
-    sys.path.insert(0, os.path.expanduser(r"~\math-brain-build\src"))
+    sys.path.insert(0, os.path.expanduser(r"~/math-brain-build/src"))
     from math_brain.store import ResearchStore
     from math_brain.models import EdgeKind
     t0 = time.time()

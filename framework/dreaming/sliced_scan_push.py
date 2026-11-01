@@ -15,8 +15,8 @@ if any(a in ("-h", "--help") for a in sys.argv[1:]):
     raise SystemExit(0)
 
 
-REPO = os.path.expanduser(r"~\brain-repo")
-SCANNER = os.path.expanduser(r"~\.claude\dreaming\scan_secrets.py")
+REPO = os.path.expanduser(r"~/brain-repo")
+SCANNER = os.path.expanduser(r"~/.claude/dreaming/scan_secrets.py")
 os.environ["GIT_TERMINAL_PROMPT"] = "0"
 os.environ["GCM_INTERACTIVE"] = "never"
 os.chdir(REPO)

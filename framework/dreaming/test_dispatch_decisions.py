@@ -162,8 +162,8 @@ def fallback_controls(m):
 
 def identity_controls(m):
     r = {}
-    pm = os.path.expanduser(r"~\.claude\hooks\project_memory_hook.py")
-    ph = os.path.expanduser(r"~\.claude\hooks\project_memory_hot_hook.py")
+    pm = os.path.expanduser(r"~/.claude/hooks/project_memory_hook.py")
+    ph = os.path.expanduser(r"~/.claude/hooks/project_memory_hot_hook.py")
     names = [m._entry_basename('python -S -B "%s"' % pm, []), m._entry_basename("python", ["-S", "-B", ph]),
              m._entry_basename("python", ["-B", r"C:\x\hook.py", "--hook-runtime", "claude"])]
     r["C1"] = (names == ["project_memory_hook.py", "project_memory_hot_hook.py", "hook.py"], "C1 names: %s" % names)

@@ -30,8 +30,8 @@ Read-only over the brain except brain/CURIOSITY.md. Usage: python curiosity.py [
 import os, re, io, sys, math
 from collections import defaultdict
 
-MEM_DEFAULT = os.path.expanduser(r"~\.claude\projects\{{BRAIN_SLUG}}\memory")
-BRAIN_DEFAULT = os.path.expanduser(r"~\brain-repo\01_ai_consciousness\brain")
+MEM_DEFAULT = os.path.expanduser(r"~/.claude/projects/{{BRAIN_SLUG}}/memory")
+BRAIN_DEFAULT = os.path.expanduser(r"~/brain-repo/01_ai_consciousness/brain")
 DR = os.path.dirname(os.path.abspath(__file__))
 COACT = os.path.join(DR, "coactivation.tsv")
 EDGES = os.path.join(DR, "spread_edges.tsv")
