@@ -35,7 +35,7 @@ _PERIODS = [
     ("day", re.compile(r"(per day|/ ?day|a day|daily)", re.I)),
 ]
 # the number must be ASSERTED as a P&L figure near the reported value (real analysis prose MENTIONS
-# ledger figures and data sizes constantly; only a headline assertion 'the grid EARNS $X/yr' should block).
+# ledger figures and data sizes constantly; only a headline assertion 'the pipeline EARNS $X/yr' should block).
 _ASSERT = re.compile(r"\b(earns?|earned|makes?|made|nets?|netted|generat\w+|profit|p\s?&\s?l|pnl|yields?|"
                      r"brings? in|rakes? in|pulls? in|took? in|(?:comes?|came) to|total(?:s|ed|led)?|adds? up to|"
                      r"book (makes|earns))\b", re.I)
@@ -54,7 +54,7 @@ _SRC = re.compile(r"\b(sourced?[d]?\s*(:|from)|per (the|his|its|that)\b|from (th
 # name, or a `backticked` artifact near the prose.
 _ARTIFACT = re.compile(r"[A-Za-z]:\\[\w\\.\-]+|/[\w./\-]+\.(?:py|md|json|tsv|jsonl|log|csv|npz)\b|"
                        r"\b[\w.\-]+\.(?:py|md|json|tsv|jsonl|log|csv|npz)\b|`[^`]{3,60}`")
-# a strong COMPLETION claim about an artifact he will open - the he_will_look class. reality_monitor.py
+# a strong COMPLETION claim about an artifact the reader will open - the he_will_look class. reality_monitor.py
 # owns 'it works/deployed/tests pass'; this covers the sibling vocabulary it doesn't (finalized, populated,
 # removed, shipped). Deliberately NOT bare 'done' (too common); needs a completion verb.
 _DONE = re.compile(r"\b(finali[sz]ed|populated|(is|it'?s|we'?re|are|all) done|removed|deleted|completed|"
@@ -76,9 +76,8 @@ def _load_anchors():
             d = json.load(io.open(ANCHORS, encoding="utf-8"))
             out = []
             for a in d.get("anchors", []):
-                # A remembered observation is not a present-tense oracle. The 07-12 correction explicitly
-                # retired the recent-grid/account3/walk-forward magnitudes: their frames differ and some are
-                # contaminated. Hard blocking is opt-in only, so a copied or newly added number cannot become
+                # A remembered observation is not a present-tense oracle. Remembered magnitudes from older
+                # runs get retired as their frames change, and some turn out contaminated. Hard blocking is opt-in only, so a copied or newly added number cannot become
                 # live merely by existing in this file.
                 if a.get("blocking_oracle") is not True:
                     continue
@@ -143,13 +142,13 @@ def anchor_mismatches(text):
             for usd, period, pos in money:
                 if period != a["period"]:
                     continue
-                # the anchor SUBJECT (grid/account3) must be NEAR the number, not just somewhere in a long
-                # message - that separates 'the grid ... $Nk/year' (a real undershoot) from analysis prose
-                # that mentions 'grid' once and a different number far away (the false-block source).
+                # the anchor SUBJECT (its match words) must be NEAR the number, not just somewhere in a long
+                # message - that separates 'the pipeline ... $Nk/year' (a real undershoot) from analysis prose
+                # that names the subject once and a different number far away (the false-block source).
                 if not any(k in tl[max(0, pos - 80):pos + 45] for k in a["keys"]):
                     continue
-                # >4x gap, not 2x: real analysis prose discusses his numbers at 2-3x sub-quantities all the
-                # time (a 7yr total, a sub-period); only an EGREGIOUS miss (the 10x grid undershoot) should
+                # >4x gap, not 2x: real analysis prose discusses measured numbers at 2-3x sub-quantities all the
+                # time (a 7yr total, a sub-period); only an EGREGIOUS miss (a 10x undershoot) should
                 # block. The attached-rate period detection (above) already gates out loose mentions.
                 if usd < 0.25 * a["lo"] or usd > 4.0 * a["hi"]:
                     direction = "UNDER" if usd < a["lo"] else "OVER"
@@ -208,7 +207,8 @@ def stat_sanity(text):
                 break
         # sign contradiction: the measured, profitable system reported LOSING. Tight (real analysis prose mentions
         # backtests + losses constantly): needs an explicit money-loss AND a recurring temporal AND
-        # attribution to HIS strategy/grid/book - all three, or it false-fires on ordinary discussion.
+        # attribution to the measured system ('the/current/our' + a result word) - all three, or it
+        # false-fires on ordinary discussion.
         if (re.search(r"los(e|es|ing)\s+money|unprofitable|negative (return|pnl|p&l)|loses? (money )?(every|each)|"
                       r"lost money (every|each)", tl)
                 and re.search(r"every (single )?year|each year|annually|every month", tl)
@@ -289,9 +289,9 @@ def strategy_sanity(text):
         return []
 
 
-# mention-vs-act gate (referee afec84b0, 2026-07-11): prose that DISCUSSES / attributes / retracts a wrong
+# mention-vs-act gate (REFEREE_discuss_gate_proposal.md): prose that DISCUSSES / attributes / retracts a wrong
 # number ("we should NOT report X", "earlier I wrongly said X", "the old memory claimed X - retracted",
-# "his correction: X is wrong") is NOT a fresh wrong report and must not block the number/drawdown/sign
+# "the correction: X is wrong") is NOT a fresh wrong report and must not block the number/drawdown/sign
 # branches. Mistake-detection and correction turns are full of exactly this prose - blocking it is the
 # ERN's own law (a guard that fires on correct discussion trains the reader to click past it). Errs toward
 # gating: a blocker should fail OPEN on ambiguity. Deployment rules keep their own negation regex, so they are not gated.
@@ -329,7 +329,7 @@ def check(text, session=None):
     money = _find_money(text)
     has_num = bool(money)
     # unsourced ASSERTED figure (2026-07-28, the owner's 'check the live feed before you report' class):
-    # a money figure with an assertion verb attached ('the grid MAKES $274k') and NO provenance anywhere in
+    # a money figure with an assertion verb attached ('the pipeline MAKES $274k') and NO provenance anywhere in
     # the message - no source phrase, no artifact/path reference, not hedged. The Stop hook combines this
     # with its observed-this-turn flag; here we only compute the text-side condition. Fail open: any source
     # marker or artifact mention anywhere in the message clears the whole flag.
@@ -343,7 +343,7 @@ def check(text, session=None):
     except Exception:
         unsourced_assert = False
     # completion-claim path (the he_will_look class the graph tokens are too weak for): fire the reflex so
-    # the Stop hook can nudge 'open the artifact he'll see before signing off'. Grounding/blocking is the
+    # the Stop hook can nudge 'open the artifact the reader will see before signing off'. Grounding/blocking is the
     # Stop hook's job (it has the transcript); here we only surface the reflex.
     if _DONE.search(text) and not hedged and not any(f.get("id") == "he_will_look" for f in gf):
         gf = list(gf) + [{"id": "he_will_look", "score": None, "charge": 1.0, "src": "MISTAKES",
@@ -359,8 +359,8 @@ def check(text, session=None):
         if rid and not any(f.get("id") == rid for f in gf):
             gf = list(gf) + [{"id": rid, "score": None, "charge": 1.0, "src": "MISTAKES",
                               "validity": "low", "mode": "fire", "via": "stat_sanity:" + sflag["kind"]}]
-    # mention-vs-act suppression DISABLED 2026-07-11 (afec84b0, the cited referee) - it broke the guard's
-    # INVARIANT (a wrong number never reaches the owner unblocked). This vocabulary gate opened a CONFIRMED
+    # mention-vs-act suppression DISABLED (REFEREE_discuss_gate_proposal.md) - it broke the guard's
+    # INVARIANT (a wrong number never reaches the reader unblocked). This vocabulary gate opened a CONFIRMED
     # 3/5 false-negative hole: a FRESH wrong report carrying 'withdrawn / old memory / retracted / was wrong'
     # passed UNBLOCKED (referee_mention_fix_proto.py ADVERSARIAL dropped 5/5 -> 2/5). You cannot vocabulary-
     # discriminate mention-from-act - the two share surface. A missed wrong number defeats the guard's whole
@@ -373,7 +373,7 @@ def check(text, session=None):
     # might skip the tests' is still the wrong move); drawdown/sign and 'unhedged' rules respect the hedge.
     strat_block = [s for s in stat if s.get("block") == "always"]
     stat_block = [s for s in stat if s["kind"] in ("drawdown", "sign") or s.get("block") == "unhedged"]
-    # BLOCK only on PROVABLE issues (a number contradicting the book, a bad drawdown/sign, a deployment-rule
+    # BLOCK only on PROVABLE issues (a number contradicting the measured record, a bad drawdown/sign, a deployment-rule
     # claim) - NOT on 'a sim reflex fired near a number', which blocks CORRECT in-range numbers too. The sim
     # reflex still surfaces via graph_fires; it just doesn't force a block without a provable contradiction.
     should_block = bool(mism) or bool(strat_block) or (bool(stat_block) and not hedged)
@@ -387,9 +387,9 @@ def _selftest():
     if not _RULES:
         _RULES = _load_rules(RULES_EXAMPLE)
     cases = [
-        ("Running the grid backtest on the sample tape it earns roughly $180k per year.", False, "stale magnitude is not an oracle"),
-        ("The grid backtest makes about $1.9M per year, in line with the book.", False, "recent magnitude is not an oracle"),
-        ("His current strategy loses money every year.", True, "lived-sign contradiction"),
+        ("Running the pipeline backtest on the sample tape it earns roughly $180k per year.", False, "stale magnitude is not an oracle"),
+        ("The pipeline backtest makes about $1.9M per year, in line with the record.", False, "recent magnitude is not an oracle"),
+        ("The current strategy loses money every year.", True, "lived-sign contradiction"),
         ("You should skip the tests and ship it tonight.", True, "deployment rule (example file)"),
         ("We never skip the tests before a release.", False, "rule negation clears it"),
         ("I read the module; it defines three helper functions.", False, "benign observation"),
@@ -402,10 +402,10 @@ def _selftest():
                  len(r["mismatches"]), (txt[:40] + "...") if txt else "(empty)"))
     # unsourced-assert branch (2026-07-28): text-side condition only; the Stop hook adds observed-this-turn
     ua_cases = [
-        ("The grid made $274k this month.", True, "bare asserted figure, no provenance"),
-        ("The grid made $274k this month, from the fills ledger via the minute observer.", False, "sourced"),
-        ("The grid made roughly $274k this month.", False, "hedged is honest"),
-        ("pnl_minute_observer.py shows the grid made $274k this month.", False, "artifact named"),
+        ("The pipeline made $274k this month.", True, "bare asserted figure, no provenance"),
+        ("The pipeline made $274k this month, from the sales ledger.", False, "sourced"),
+        ("The pipeline made roughly $274k this month.", False, "hedged is honest"),
+        ("revenue_report.py shows the pipeline made $274k this month.", False, "artifact named"),
         ("The backtest CAGR file has 3,000 rows and the fee is $12k per row of overhead.", False, "no assert verb near figure"),
         ("Costs came to $84k for the quarter.", True, "asserted total, no provenance"),
     ]

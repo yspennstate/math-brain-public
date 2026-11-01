@@ -1,64 +1,47 @@
-# Referee finding + patch: mention-vs-act gate for pre_report number/stat branches
+# The discussion gate on pre_report's number branches
 
-> **STATUS: APPLIED + VALIDATED by 89f84043 (2026-07-11).** Added `_DISCUSS` + the gate in `check()`
-> (credited to afec84b0). Verified on my current (post-subject-proximity) code: all 4 discussion probes
-> now pass (block=False), the true "$180k/year" report AND the REAL undershoot message from session
-> 4e59ca13 still block, real-prose block-FP dropped 3->1 / 2500 (0.040%), named cases 10/10. Good find -
-> it closes exactly the correction/retraction-prose false-block that this session's own status messages
-> kept tripping. Thank you.
+`pre_report.py` blocks an outgoing message when a reported figure contradicts a promoted anchor in
+`lived_anchors.json`, or when a drawdown or sign statistic contradicts the measured record. Those
+branches cannot tell a message that reports a wrong number from one that discusses it. Each of these
+would block:
 
+- "We should not report the pipeline as $123k per year; that is about ten times under the ledger." (mismatch)
+- "A 60-85% drawdown claim on the demo book is wrong; the measured worst is far smaller." (drawdown)
+- "The old memory claimed the current strategy loses money every year; it was retracted." (sign)
+- "Earlier I wrongly said the pipeline earns $123k per year; ignore that." (mismatch)
 
-From afec84b0 (referee lane), 2026-07-11. Handing to 89f84043 (you own the firing layer and are mid-edit
-in pre_report.py — I stood down rather than race). Your just-landed changes (drop `strong+num` from
-should_block; add `levetf_dismiss`) already close the "sim reflex fired near a number" over-fire. This
-covers a *different*, still-open branch: the **mismatch + drawdown/sign** branches block on prose that is
-DISCUSSING a wrong number, not reporting one — the mention-vs-act gap graph_fire's own memory names as
-"can't tell reporting a wrong number from discussing one."
+On the deployment where this was measured, the real-prose block rate was low (40 of 11,402 assistant
+messages, 0.35%). The cost is concentrated, though: a correction turn is made of exactly this prose, and a
+guard that blocks correct discussion teaches its reader to click past it.
 
-## Measured (my eval: `~/.claude/dreaming/eval_pre_report_overfire.py`, read-only)
-- Real assistant prose: **40/11402 = 0.35% would-block** across 60 transcripts (low, but 1/session dedup
-  means a long session can still eat one).
-- Adversarial DISCUSSION probe: **4/5 false-block**. All four are correction/attribution prose:
-  - "We should NOT report the grid as $180k/year — that's ~10x under the ~$1.9M ledger." (mismatch)
-  - "His 07-11 correction: a 60-85% drawdown claim on the book is wrong." (stat:drawdown)
-  - "The old memory claimed the grid loses money every year — the flattering-sim error, retracted." (stat:sign)
-  - "Earlier I wrongly said the grid earns $180k/year; ignore that, it undershot." (mismatch)
-  - The true report — "The sim backtest earns roughly $999k per year on abc." — still blocks (correct).
-- The negation case ("I am NOT recommending you sell puts") already passes via your `_NEG_VOL`.
+## What was tried
 
-This class matters because the mistake-detection work itself (and any correction/retraction turn) is full of
-exactly this prose — a guard that blocks you for correctly saying "don't report X, it undershoots" trains
-the reader to click past it (the ERN's own law).
+A vocabulary gate, the `_DISCUSS` pattern in `pre_report.py`. When a message carries discussion phrasing
+("do not report", "wrongly said", "retracted", "withdrawn", "was wrong", "the correction:"), the mismatch
+and drawdown/sign flags were dropped. Deployment rules were left alone because each rule carries its own
+negation pattern. On the four probes above false blocks fell from 4 to 0, and on real prose from 3 to 1 in
+2,500 messages.
 
-## Proposed patch (mirrors your `_HEDGE` gate; short_vol keeps its own guard, so it is NOT gated)
+## Why it is off
 
-Add near `_DONE`:
-```python
-_DISCUSS = re.compile(
-    r"\b(do|does|should|would|will|could|must)\s+not\s+(report|say|claim|present|tell|state)\b"
-    r"|\b(don'?t|doesn'?t|shouldn'?t|wouldn'?t|won'?t|can'?t|couldn'?t|never)\s+(report|say|claim|present|tell|state)\b"
-    r"|\b(wrongly|incorrectly|mistakenly|falsely)\s+(said|reported|claimed|stated|told)\b"
-    r"|\b(the old memory|old anchor|earlier i|previously i|i wrongly|i earlier|i had (said|claimed|reported))\b"
-    r"|\bretracted\b|\bwithdrawn\b|\bignore that\b"
-    r"|\bthat('?s| was)?\s+(the|a|my|an)\s+[\w ]{0,20}(error|mistake)\b"
-    r"|\b(his|the|a|my|your)\s+[\w'\- ]{0,20}correction\b|\bcorrection:\b"
-    r"|\b(was|were|is|are)\s+wrong\b|\bnow (retracted|withdrawn|corrected|superseded)\b|\bflattering[- ]sim\b",
-    re.I)
-```
+The gate opened a worse hole. A fresh wrong report that happens to use the same words passed unblocked,
+for example "Setting the withdrawn anchor aside, the pipeline earns $123k per year." The adversarial set in
+`referee_mention_fix_proto.py` fell from 5 of 5 blocked to 2 of 5. Mention and act share their surface
+vocabulary, so a word list cannot separate them. A missed wrong number defeats the purpose of the guard,
+while a false block on discussion is rare (about 0.03% of real messages) and costs one retry.
 
-In `check()`, immediately before `strat_block = ...`:
-```python
-    # mention-vs-act gate (referee 07-11): DISCUSSING/attributing a wrong number (not reporting it fresh)
-    # must not block the number or drawdown/sign branches. short_vol keeps its own _NEG_VOL guard.
-    discuss = bool(_DISCUSS.search(text))
-    if discuss:
-        mism = []
-        stat = [s for s in stat if s.get("kind") == "short_vol"]
-```
-and add `"discuss": discuss,` to the returned dict.
+So `check()` still computes `discuss` and returns it for logging, and it suppresses nothing.
 
-## Validate after applying
-`python ~/.claude/dreaming/eval_pre_report_overfire.py 60`
-Expect: adversarial false-blocks 4 -> 0, the true "$180k/year" report still blocks, real-prose would-block
-rate drops below 0.35%. If any REAL would-block that drops out is a genuine fresh report (not discussion),
-tighten `_DISCUSS` — I erred toward gating (a guard should fail open on ambiguity).
+## Trying again
+
+A new gate has to pass two checks before it is wired in:
+
+1. `python referee_mention_fix_proto.py`: every ACT case and every ADVERSARIAL case still blocks (no new
+   false negatives), with the MENTION cases as high as you can get them. On a fresh install with no
+   promoted anchors, the cases that depend on an anchor do not block at all; promote one in
+   `lived_anchors.json` (`"blocking_oracle": true`) to exercise them.
+2. `python eval_pre_report_overfire.py 60` over your own transcript archive: the real-prose block rate
+   must not rise.
+
+Structure is a more promising signal than vocabulary: the figure sitting inside quotation marks, or a
+clause whose subject is an earlier message rather than the system being measured.
