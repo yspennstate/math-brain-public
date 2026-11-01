@@ -22,7 +22,7 @@ The commands here are written `python3`. On Windows type `py -3` or `python` ins
 | `ledger.py` | read and write the request ledger: list the open requests, record one, link a record that answers it, drop it; `list --repeats` shows what the owner keeps asking, `list --unseen` and `seen` are the owner's reading queue |
 | `claims.py` | let several agents share the store: claim a record or a piece of work before changing it, release it after; a second agent is refused and told who holds it |
 | `agents_test.py` | starts eight agent processes at the same moment and checks that one claim has one winner, an expired claim is taken over, and eight records written at once keep all eight index lines |
-| `check_store.py` | check that every record is indexed and every `[[link]]` and `superseded_by:` names a record that exists; run it after editing records by hand |
+| `check_store.py` | check that every record is indexed and every `[[link]]` and `superseded_by:` names a record that exists; run it after editing records by hand. On the twenty example records it reports four orphans: that is on purpose, since linking them is the dream's work (`dream/README.md`) |
 | `questions.json` | ten questions with graded answer phrases; one has no answer in the store |
 | `three_arm.py` | the same questions asked three ways: with recall, with every record pasted in, with nothing |
 | `new_field.py` | make an empty brain for another field from this folder in one step: every script, no studio records |
