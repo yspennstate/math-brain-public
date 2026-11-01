@@ -62,12 +62,11 @@ machine-specific constants parameterized and worked examples kept synthetic.
   and evaluation system (typed claims with evidence-specific verification states, graph
   retrieval that abstains when weak, mistake-pattern triggers, Lean routing, paired
   blinded evaluations). Deny-by-default ingestion; its own docs and tests. Under
-  `examples/`: a research-bank generator (`b12_generate.py` with its family modules -
-  thousands of graduate-level arguments, each planted fault carrying a computed
-  certificate, keys kept outside every retrieval corpus), three notes builders that rank
-  store nodes for an item (token overlap, BM25, sentence-embedding cosine), and
-  `b12_notes_relevance.py`, which says what share of a sample the served notes can even
-  speak to - a number to quote beside any brain-vs-none grade.
+  `examples/`: `generate_benchmark_sample.py` prints a small deterministic benchmark sample
+  with its manifest, `materialize_benchmark.py` writes a certified synthetic bank into
+  ignored local storage, and `run_challenge_study.py` runs the sealed holdout study from a
+  clean, exact revision. The research-bank generator and the notes builders used in the
+  reference tests are not shipped, so that no test item or answer key is published.
 - `filmbrain/` — the film-making brain: the same shape as `mathbrain/`, in a domain where the
   facts are craft rather than theorems. An authored ontology of about six hundred nodes (camera,
   light and colour, editing, sound, narration, animation, story, VFX, pipeline, delivery,
