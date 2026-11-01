@@ -138,6 +138,18 @@ In all: 3,113 sessions, 198 session-hours, 107 million input tokens, 5.7 million
 
 What this says: when an agent has the repositories and enough time, it finds what the brain holds; the brain gets there faster and at a fraction of the reading. The items the brain arm lost to the repositories fail differently by model: with Claude most of them (9 of 13) ran out of time, three were wrong values and one an abstention; with Codex sixteen of 19 were abstentions, four of them without a single search, and three ran out of time. [AGENTS_GUIDE.md](AGENTS_GUIDE.md) turns these results into a setup for agents.
 
+## The same 1,000 items, Codex agents with and without the brain (28 and 29 October 2026)
+
+A fleet of Codex agents on a second machine answered the 1,000-item bank of 12 September twice, once with the recall tool and once with nothing, and the answers were graded on 29 October with the bank's own grader. Every item was answered in both arms, so all 1,000 pairs count.
+
+| | Items | Without the brain | With the brain | Helped | Harmed |
+|---|---|---|---|---|---|
+| All | 1,000 | 374 | 998 | 624 | 0 |
+| Lookups over the store | 923 | 300 | 923 | 623 | 0 |
+| Proof audits | 77 | 74 | 75 | 1 | 0 |
+
+The brain helped on 624 items and harmed none (exact McNemar test, p = 2.9e-188). The whole gap is in the four lookup families whose values live only in store cards: without the brain every one of those 623 answers was "unknown", and with it every one was right, each citing the card it came from. The three families of self-avoiding-walk combinations, which an agent can compute for itself, were right in both arms. So the run measures whether recall reaches the right card, not reasoning gained. A plain string match on the same rows gives the same counts. The keys were kept on a different machine from the one the agents ran on, but the grade does not prove that the agents' machine held no copy.
+
 ## Recall of results held in the store, 100 questions (11 October 2026)
 
 Every question asks for a fact held in the store. Sixty were reworded so they share no words with their card; forty are plain. Codex agents (gpt-6.1-sol, high reasoning) took one question per session.
