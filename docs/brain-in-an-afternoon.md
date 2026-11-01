@@ -271,6 +271,15 @@ wrote a dated check into one of them and left both dates alone. Read the log the
 schedule; if a change is wrong, the record as it was is in `dream/backups/`. `--stage connect` does the open
 questions and the records still unlinked, and fits on another night.
 
+The connecting night on the same store took about eleven minutes. The last unlinked record, a rule that dates are
+written as absolute dates, was linked both ways to a delivery deadline, with the reason in one line: the deadline
+came from a letter, and the rule exists because a deadline once slipped a week on "next Friday". The one open
+question (festival first or online first) was read against the three newer records, none of which answers it, so it
+stayed open, marked as the director's decision. Two records changed, no new record was written, and the store ended
+with no orphans. The agent may report that it could not run `check_store.py` itself (with `acceptEdits` it can edit
+files but not run commands); `run_dream.py` runs the check after the agent finishes and puts the result in the log,
+so read that section rather than the agent's reply.
+
 ## When more than one agent writes
 
 If several agents share the store from the first day, two of them will sooner or later change the same thing.
