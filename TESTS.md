@@ -93,6 +93,8 @@ The medians are from one machine and move with its load.
 | Superseded check in recall | 3.86 s | 1.25 s | same answers |
 | A recall bank at depth 0, quiet machine, mixed with the fixes above | 28.2 s | 8.4 s | accuracy held |
 
+Where the time goes (30 and 31 October). One recall call spent 2.2 seconds starting Python and 4.4 seconds importing, then read and hashed the 182 MB vector file four times, 9.1 seconds in all; it now reads that file once a question. On a heavily loaded machine a resident server saved little (22.0 against 24.0 seconds median), because the time went to waiting for the processor, not to computing: on 31 October the same 30-item bank took a median of 549 seconds wall time a question at 6.2 seconds of processor time, and answered 10 of 30, against 11 on a quiet machine.
+
 ## The brain, the repositories, and the model alone, 1,000 items (23 and 24 October 2026)
 
 Three arms, one item a session, the same instructions in each. With the brain, the agent has the recall tool and the prompt hooks and no file tools. With the repositories, it has no brain, no hooks and no recall tool, but it can read, list and search the research repositories, which include the exported store, the campaign records and the open-problem files; the brain's own folders, the keys and every test folder are closed to it. The model alone has no tools. Claude Sonnet agents (high reasoning) had 600 seconds an item and no shell in any arm. Codex agents (gpt-6.1-sol, high reasoning) had 900 seconds; their brain arm had the recall tool and no shell, their repository arm a read-only shell. A timeout counts as wrong. A session that never reached the model (a refused account or a session limit, seen as an empty event stream) was rerun, not graded.
