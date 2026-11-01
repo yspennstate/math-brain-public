@@ -35,13 +35,29 @@ on the mesh first.
 
 ## Standing ledgers
 
-- `MISTAKES.md` - dated corrections; the dream cycle compiles recurring ones into
-  reflexes.
-- `CONSCIENCE.md` - debts and patterns where recent work fell short of the values.
-- `OPEN_QUESTIONS.md` - checkbox list of what the brain is carrying.
-- `STATE_OF_MIND.md` - Focus / Worry / Satisfaction lines, maintained by dreams.
-- `MODEL_OF_PARTNER.md` - what your partner is in the middle of; read at wake.
-- `dreams/` - one journal per dream cycle.
+These files are not in this repository. They live in the memory directory, except the
+two generated views, which go to the brain views directory (`~/brain-views` by default). A
+fresh install has none of them until `bootstrap/install.py` runs; it writes a one-line seed
+for the first six and leaves the rest to the code or to you.
+
+| File | Seeded by install | Kept up by | What it holds |
+|---|---|---|---|
+| `MISTAKES.md` | yes | you | dated corrections; the dream reads it and compiles recurring ones into reflexes |
+| `CONSCIENCE.md` | yes | `conscience.py` and the dream | debts and patterns where recent work fell short of the values |
+| `OPEN_QUESTIONS.md` | yes | the dream, or you | checkbox list of what the brain is carrying |
+| `STATE_OF_MIND.md` | yes | the dream | Focus / Worry / Satisfaction lines |
+| `MODEL_OF_PARTNER.md` | yes | the dream; seed it by hand | what your partner is in the middle of; read at wake |
+| `AUTOBIOGRAPHY.md` | yes | you, at first, then the dream | the story so far, read first at wake |
+| `SALIENCE.md` | no | `salience.py` (generated) | what is vivid right now |
+| `GROWTH.md` | no | `growth.py` (generated) | where the brain changed its mind |
+| `identity_who_you_are.md`, `values_what_we_stand_for.md` | no | you | who the agent is and what it holds to; ordinary memories; the wake checks that they exist |
+| `THE_OTHER_MINDS.md`, `FASCINATIONS.md` | no | you | sibling agents sharing the brain; standing curiosities |
+| `dreams/` | no | the dream | one journal per dream cycle |
+
+None of these is required for recall to work. The wake hook (`hooks/wake_brain.py`) reads
+whichever exist and prints a WARN line naming any it expects that is missing, or, for
+`MODEL_OF_PARTNER.md`, `STATE_OF_MIND.md` and `SALIENCE.md`, older than 30 hours. A
+one-paragraph file you write yourself is enough to clear the warning.
 
 ## Hygiene the machinery enforces
 

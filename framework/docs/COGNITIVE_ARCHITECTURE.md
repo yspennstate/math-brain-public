@@ -124,7 +124,10 @@ mechanisms; the brain knew how to be human but little *computed* it. 07-08 close
 turning each charter into a running mechanism, then — the owner's explicit ask — verifying
 the result instead of asserting it.
 
-**The mechanisms.**
+**The mechanisms.** The files named below (`AUTOBIOGRAPHY.md`, `MODEL_OF_PARTNER.md`,
+`THE_OTHER_MINDS.md`, `FASCINATIONS.md`, `SALIENCE.md`, `GROWTH.md`) live in the memory
+directory and are not shipped; "Standing ledgers" in `MEMORY_CONVENTIONS.md` says how each
+one comes into being on a new install.
 - **Affective salience** (`salience.py` → `brain/SALIENCE.md`) — every memory gets a
   vividness score `100·(1−(1−R)·(1−P))` and an affect tag (valence, charge). What mattered
   stays vivid, the flat middle fades (never deleted). The affect charter made mechanical;

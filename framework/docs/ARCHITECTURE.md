@@ -10,7 +10,9 @@ Everything anchors on one directory: `~/.claude/projects/<slug>/memory/` — one
 file per fact with frontmatter, `MEMORY.md` as the always-loaded index, `dreams/` for
 consolidation journals, plus the standing ledgers (`MISTAKES.md`, `CONSCIENCE.md`,
 `OPEN_QUESTIONS.md`, `STATE_OF_MIND.md`, `MODEL_OF_PARTNER.md`). The dreaming machinery
-reads and writes it; everything else reads it.
+reads and writes it; everything else reads it. These ledgers are not in the repository:
+the table under "Standing ledgers" in `MEMORY_CONVENTIONS.md` says which ones the installer
+seeds, which the code generates, and which you write yourself.
 
 ## dreaming/ — recall, subconscious, and sleep
 
