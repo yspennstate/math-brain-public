@@ -742,9 +742,9 @@ The supplement records the evidence used for this paper at the following reposit
 <div class="tabularx">
 
 p0.43Y Repository under `yspennstate/` & Frozen commit  
-`math-research-brain` & `a4c99b43a044c127787c``26997ed942f41591aac6`  
+`private-brain-repository` & `a4c99b43a044c127787c``26997ed942f41591aac6`  
 `<private-repo>` & `bcff9346b68959f4cf33``0fdf9ca0e64a21c77d3e`  
-`math-open-problems` & `b4745ece98fa3839cf7a``fe35d829d08384c815b4`  
+`private-source-repository` & `b4745ece98fa3839cf7a``fe35d829d08384c815b4`  
 
 </div>
 
@@ -796,7 +796,7 @@ Aldous, David, and James Fill. 2002. “Reversible Markov Chains and Random Walk
 
 <div id="ref-CaseFlowDiameter2026" class="csl-entry">
 
-“Aldous–Fill 4.49(ii) Ramanujan-Cone Counterexample Package.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-13/paper_af449_ramanujan_cone_refutation/README.md>.
+“Aldous–Fill 4.49(ii) Ramanujan-Cone Counterexample Package.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaigns/PROB20_replenishment_2026-09-14/PROB20-13/paper_af449_ramanujan_cone_refutation/README.md>.
 
 </div>
 
@@ -814,19 +814,19 @@ Anthropic. 2026. “<span class="nocase">Prompt caching: tracking cache performa
 
 <div id="ref-CaseArcTransitive2026" class="csl-entry">
 
-“Arc-Transitive Aldous–Fill Counterexample Research Package.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaign_2026_09/paper_arc_transitive_2026_09_15/README.md>.
+“Arc-Transitive Aldous–Fill Counterexample Research Package.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaign_2026_09/paper_arc_transitive_2026_09_15/README.md>.
 
 </div>
 
 <div id="ref-CaseBassQuillen2026" class="csl-entry">
 
-“Bass–Quillen P02 All-Exponent Desaturation Report.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/P02-bass-quillen/runs/2026-09-16/2026-09-16_14-20-31__run-report.md>.
+“Bass–Quillen P02 All-Exponent Desaturation Report.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/P02-bass-quillen/runs/2026-09-16/2026-09-16_14-20-31__run-report.md>.
 
 </div>
 
 <div id="ref-CaseBaumConnes2026" class="csl-entry">
 
-“Baum–Connes P01 Terminal Handoff: Fixed Target Saturated.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/P01-baum-connes/runs/2026-09-18/2026-09-18T01-11-22Z__run-report.md>.
+“Baum–Connes P01 Terminal Handoff: Fixed Target Saturated.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/P01-baum-connes/runs/2026-09-18/2026-09-18T01-11-22Z__run-report.md>.
 
 </div>
 
@@ -838,7 +838,7 @@ Benjamini, Itai, and Oded Schramm. 1996. “Percolation Beyond $\mathbb{Z}^d$, M
 
 <div id="ref-CaseQFORMRelease2026" class="csl-entry">
 
-“Bounded Densities of Quadratic Forms: Scoped Research Release, 23 September 2026.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/README.md>.
+“Bounded Densities of Quadratic Forms: Scoped Research Release, 23 September 2026.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/README.md>.
 
 </div>
 
@@ -970,7 +970,7 @@ Brain project archive. 2026a. “<span class="nocase">Affective salience: implem
 
 <div id="ref-CaseCerny2026" class="csl-entry">
 
-“Cerny P16 Exact-Enumeration Run, 16 September 2026.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/P16-cerny/runs/2026-09-16/2026-09-16_18-40-14__run-report.md>.
+“Cerny P16 Exact-Enumeration Run, 16 September 2026.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/P16-cerny/runs/2026-09-16/2026-09-16_18-40-14__run-report.md>.
 
 </div>
 
@@ -1000,7 +1000,7 @@ Cognitive Architecture repository. 2026. “Proof-Sense Audit Hook.” <https://
 
 <div id="ref-CaseThevenin2026" class="csl-entry">
 
-“Degree-Count Counterexample Research Package.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaign_2026_09/paper_thevenin_2026_09_15/README.md>.
+“Degree-Count Counterexample Research Package.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaign_2026_09/paper_thevenin_2026_09_15/README.md>.
 
 </div>
 
@@ -1024,25 +1024,25 @@ Exoo, Geoffrey, and Dan Ismailescu. 2018. “The Chromatic Number of the Plane I
 
 <div id="ref-CaseFEICurrent2026" class="csl-entry">
 
-“FEI Current Shared Research and Correction State.” 2026. <https://github.com/yspennstate/math-research-brain/blob/a4c99b43a044c127787c26997ed942f41591aac6/scheduled_tasks/work/shared/fei-all-team-2026-09-22/CURRENT_RESEARCH.md>.
+“FEI Current Shared Research and Correction State.” 2026. <https://github.com/private-brain-repository/blob/a4c99b43a044c127787c26997ed942f41591aac6/scheduled_tasks/work/shared/fei-all-team-2026-09-22/CURRENT_RESEARCH.md>.
 
 </div>
 
 <div id="ref-CaseFEIReadOnce2026" class="csl-entry">
 
-“FEI Read-Once Interval Certificate.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/P03-fei/continuations/2026-09-21-readonce-certificate/README.md>.
+“FEI Read-Once Interval Certificate.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/P03-fei/continuations/2026-09-21-readonce-certificate/README.md>.
 
 </div>
 
 <div id="ref-CaseBrainUsageG0013" class="csl-entry">
 
-“G0013 Mathematical Brain Usage Trace.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_1000_attempts_H_20260912/BRAIN_USAGE.jsonl>.
+“G0013 Mathematical Brain Usage Trace.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_1000_attempts_H_20260912/BRAIN_USAGE.jsonl>.
 
 </div>
 
 <div id="ref-CaseBrainUsageG0013Q2" class="csl-entry">
 
-“G0013 Second Mathematical Brain Usage Trace.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_1000_attempts_H_20260912/BRAIN_USAGE_q2.jsonl>.
+“G0013 Second Mathematical Brain Usage Trace.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_1000_attempts_H_20260912/BRAIN_USAGE_q2.jsonl>.
 
 </div>
 
@@ -1054,7 +1054,7 @@ Garban, Christophe, Gábor Pete, and Oded Schramm. 2010. “The Fourier Spectrum
 
 <div id="ref-CaseQFORMGaussian2026" class="csl-entry">
 
-“Gaussian Mixtures with Controlled Average Component Peaks.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/gaussian_mixture.tex>.
+“Gaussian Mixtures with Controlled Average Component Peaks.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/gaussian_mixture.tex>.
 
 </div>
 
@@ -1066,13 +1066,13 @@ Grimmett, Geoffrey, and Peter Winkler. 2003. “Negative Association in Uniform 
 
 <div id="ref-CaseHadamard2026" class="csl-entry">
 
-“Hadamard P15 Exact-Construction Run, 16 September 2026.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/P15-hadamard/runs/2026-09-16/2026-09-16_19-23-52__run-report.md>.
+“Hadamard P15 Exact-Construction Run, 16 September 2026.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/P15-hadamard/runs/2026-09-16/2026-09-16_19-23-52__run-report.md>.
 
 </div>
 
 <div id="ref-CaseHadwigerNelson2026" class="csl-entry">
 
-“Hadwiger–Nelson P19 Exact Gadget Exhaustion, 16 September 2026.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/P19-hadwiger-nelson/runs/2026-09-16/2026-09-16_18-58-33__run-report.md>.
+“Hadwiger–Nelson P19 Exact Gadget Exhaustion, 16 September 2026.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/P19-hadwiger-nelson/runs/2026-09-16/2026-09-16_18-58-33__run-report.md>.
 
 </div>
 
@@ -1120,7 +1120,7 @@ Liu, Nelson F., Kevin Lin, John Hewitt, Ashwin Paranjape, Michele Bevilacqua, Fa
 
 <div id="ref-CaseLyons2026" class="csl-entry">
 
-“Lyons Entropy Continuation and Certificate Scope.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/lyons-entropy/continuation-2026-09-17/README.md>.
+“Lyons Entropy Continuation and Certificate Scope.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/lyons-entropy/continuation-2026-09-17/README.md>.
 
 </div>
 
@@ -1144,49 +1144,49 @@ Lyons, Russell. 2002. “Determinantal Probability Measures.” <https://arxiv.o
 
 <div id="ref-leannatural" class="csl-entry">
 
-Math Brain project archive. 2026a. “Basic Natural-Number Formal Controls.” <https://github.com/yspennstate/math-research-brain/blob/a4c99b43a044c127787c26997ed942f41591aac6/formal/MathBrain/Basic.lean>.
+Math Brain project archive. 2026a. “Basic Natural-Number Formal Controls.” <https://github.com/private-brain-repository/blob/a4c99b43a044c127787c26997ed942f41591aac6/formal/MathBrain/Basic.lean>.
 
 </div>
 
 <div id="ref-mathretrieval" class="csl-entry">
 
-———. 2026b. “<span class="nocase">Deterministic lexical, formula, semantic, and signed-graph retrieval</span>.” Versioned repository source. <https://github.com/yspennstate/math-research-brain/blob/a4c99b43a044c127787c26997ed942f41591aac6/src/math_brain/retrieval.py>.
+———. 2026b. “<span class="nocase">Deterministic lexical, formula, semantic, and signed-graph retrieval</span>.” Versioned repository source. <https://github.com/private-brain-repository/blob/a4c99b43a044c127787c26997ed942f41591aac6/src/math_brain/retrieval.py>.
 
 </div>
 
 <div id="ref-matharchitecture" class="csl-entry">
 
-———. 2026c. “<span class="nocase">Math Brain architecture: structured records, typed graphs, verification, and consolidation</span>.” Versioned repository source. <https://github.com/yspennstate/math-research-brain/blob/a4c99b43a044c127787c26997ed942f41591aac6/docs/architecture.md>.
+———. 2026c. “<span class="nocase">Math Brain architecture: structured records, typed graphs, verification, and consolidation</span>.” Versioned repository source. <https://github.com/private-brain-repository/blob/a4c99b43a044c127787c26997ed942f41591aac6/docs/architecture.md>.
 
 </div>
 
 <div id="ref-mathreadme" class="csl-entry">
 
-———. 2026d. “<span class="nocase">Mathematical Research Brain: repository scope and current deployment status</span>.” Versioned repository source. <https://github.com/yspennstate/math-research-brain/blob/a4c99b43a044c127787c26997ed942f41591aac6/README.md>.
+———. 2026d. “<span class="nocase">Mathematical Research Brain: repository scope and current deployment status</span>.” Versioned repository source. <https://github.com/private-brain-repository/blob/a4c99b43a044c127787c26997ed942f41591aac6/README.md>.
 
 </div>
 
 <div id="ref-triggers" class="csl-entry">
 
-———. 2026e. “<span class="nocase">Mathematical review triggers</span>.” Versioned repository source. <https://github.com/yspennstate/math-research-brain/blob/a4c99b43a044c127787c26997ed942f41591aac6/config/triggers.toml>.
+———. 2026e. “<span class="nocase">Mathematical review triggers</span>.” Versioned repository source. <https://github.com/private-brain-repository/blob/a4c99b43a044c127787c26997ed942f41591aac6/config/triggers.toml>.
 
 </div>
 
 <div id="ref-consolidation" class="csl-entry">
 
-———. 2026f. “<span class="nocase">Quarantined mathematical replay and association proposals</span>.” Versioned repository source. <https://github.com/yspennstate/math-research-brain/blob/a4c99b43a044c127787c26997ed942f41591aac6/src/math_brain/consolidation.py>.
+———. 2026f. “<span class="nocase">Quarantined mathematical replay and association proposals</span>.” Versioned repository source. <https://github.com/private-brain-repository/blob/a4c99b43a044c127787c26997ed942f41591aac6/src/math_brain/consolidation.py>.
 
 </div>
 
 <div id="ref-semantic" class="csl-entry">
 
-———. 2026g. “<span class="nocase">Semantic retrieval channel for the Math Brain</span>.” Versioned repository source. <https://github.com/yspennstate/math-research-brain/blob/a4c99b43a044c127787c26997ed942f41591aac6/src/math_brain/semantic.py>.
+———. 2026g. “<span class="nocase">Semantic retrieval channel for the Math Brain</span>.” Versioned repository source. <https://github.com/private-brain-repository/blob/a4c99b43a044c127787c26997ed942f41591aac6/src/math_brain/semantic.py>.
 
 </div>
 
 <div id="ref-mistakes" class="csl-entry">
 
-———. 2026h. “<span class="nocase">Structured mathematical mistakes and executable review reflexes</span>.” Versioned repository source. <https://github.com/yspennstate/math-research-brain/blob/a4c99b43a044c127787c26997ed942f41591aac6/src/math_brain/mistakes.py>.
+———. 2026h. “<span class="nocase">Structured mathematical mistakes and executable review reflexes</span>.” Versioned repository source. <https://github.com/private-brain-repository/blob/a4c99b43a044c127787c26997ed942f41591aac6/src/math_brain/mistakes.py>.
 
 </div>
 
@@ -1468,43 +1468,43 @@ Math Brain project contributors. 2026a. “AB30: README.md.” Private repositor
 
 <div id="ref-leanblocked" class="csl-entry">
 
-Math Brain repository. 2026a. “Account 04 B14 Formal Backend Acceptance Record.” <https://github.com/yspennstate/math-research-brain/blob/a4c99b43a044c127787c26997ed942f41591aac6/scheduled_tasks/runs/fleet04/B14/B14-20260921T081150Z-r11/formal_backend_acceptance.json>.
+Math Brain repository. 2026a. “Account 04 B14 Formal Backend Acceptance Record.” <https://github.com/private-brain-repository/blob/a4c99b43a044c127787c26997ed942f41591aac6/scheduled_tasks/runs/fleet04/B14/B14-20260921T081150Z-r11/formal_backend_acceptance.json>.
 
 </div>
 
 <div id="ref-leanarchitecture" class="csl-entry">
 
-———. 2026b. “Formal Verification: Local Authority and Statement Fidelity.” <https://github.com/yspennstate/math-research-brain/blob/a4c99b43a044c127787c26997ed942f41591aac6/docs/formal-verification.md>.
+———. 2026b. “Formal Verification: Local Authority and Statement Fidelity.” <https://github.com/private-brain-repository/blob/a4c99b43a044c127787c26997ed942f41591aac6/docs/formal-verification.md>.
 
 </div>
 
 <div id="ref-leancontrols" class="csl-entry">
 
-———. 2026c. “Lean Authority and Formalization-Fidelity Regression Tests.” <https://github.com/yspennstate/math-research-brain/blob/a4c99b43a044c127787c26997ed942f41591aac6/tests/test_lean.py>.
+———. 2026c. “Lean Authority and Formalization-Fidelity Regression Tests.” <https://github.com/private-brain-repository/blob/a4c99b43a044c127787c26997ed942f41591aac6/tests/test_lean.py>.
 
 </div>
 
 <div id="ref-leanimplementation" class="csl-entry">
 
-———. 2026d. “Local Lean Verification and Evidence Authority Implementation.” <https://github.com/yspennstate/math-research-brain/blob/a4c99b43a044c127787c26997ed942f41591aac6/src/math_brain/lean.py>.
+———. 2026d. “Local Lean Verification and Evidence Authority Implementation.” <https://github.com/private-brain-repository/blob/a4c99b43a044c127787c26997ed942f41591aac6/src/math_brain/lean.py>.
 
 </div>
 
 <div id="ref-arclean" class="csl-entry">
 
-Mathematical Research repository. 2026a. “Arc-Transitive Graphs: Arithmetic Build and Axiom Reports.” <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaign_2026_09/paper_arc_transitive_2026_09_15/build_and_axioms.log>.
+Mathematical Research repository. 2026a. “Arc-Transitive Graphs: Arithmetic Build and Axiom Reports.” <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaign_2026_09/paper_arc_transitive_2026_09_15/build_and_axioms.log>.
 
 </div>
 
 <div id="ref-degreelean" class="csl-entry">
 
-———. 2026b. “Degree Counts in Conditioned Trees: Arithmetic Build and Axiom Reports.” <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaign_2026_09/paper_thevenin_2026_09_15/build_and_axioms.log>.
+———. 2026b. “Degree Counts in Conditioned Trees: Arithmetic Build and Axiom Reports.” <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaign_2026_09/paper_thevenin_2026_09_15/build_and_axioms.log>.
 
 </div>
 
 <div id="ref-freelean" class="csl-entry">
 
-———. 2026c. “Free Unimodality: Named Lean Axiom Reports.” <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaign_2026_09/paper_free_unimodality_2026_09_14/build3.log>.
+———. 2026c. “Free Unimodality: Named Lean Axiom Reports.” <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaign_2026_09/paper_free_unimodality_2026_09_14/build3.log>.
 
 </div>
 
@@ -1552,25 +1552,25 @@ Pemantle, Robin. 2000. “Towards a Theory of Negative Dependence.” <https://a
 
 <div id="ref-CaseCampaignIndex2026" class="csl-entry">
 
-“Probability Campaign Index and Scope Ledger.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaign_2026_09/INDEX.md>.
+“Probability Campaign Index and Scope Ledger.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaign_2026_09/INDEX.md>.
 
 </div>
 
 <div id="ref-CaseProofnetManifest2026" class="csl-entry">
 
-“ProofNet Archival Manifest.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/MANIFEST.md>.
+“ProofNet Archival Manifest.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/MANIFEST.md>.
 
 </div>
 
 <div id="ref-CaseQFORMScope2026" class="csl-entry">
 
-“Quadratic-Form Manuscript Source Scope and Correction Policy.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/README.md>.
+“Quadratic-Form Manuscript Source Scope and Correction Policy.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/README.md>.
 
 </div>
 
 <div id="ref-CaseSidorenko2026" class="csl-entry">
 
-“Quantitative Sidorenko Inequality for Equal Three-Block Regular Hosts.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/C30-sidorenko/contributions/2026-09-17_three-block-stability/README.md>.
+“Quantitative Sidorenko Inequality for Equal Three-Block Regular Hosts.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/C30-sidorenko/contributions/2026-09-17_three-block-stability/README.md>.
 
 </div>
 
@@ -1582,7 +1582,7 @@ Pemantle, Robin. 2000. “Towards a Theory of Negative Dependence.” <https://a
 
 <div id="ref-CaseQFORMSemidefinite2026" class="csl-entry">
 
-“Semidefinite Quadratic Forms and Spectral Spread.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/semidefinite.tex>.
+“Semidefinite Quadratic Forms and Spectral Spread.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/semidefinite.tex>.
 
 </div>
 
@@ -1600,13 +1600,13 @@ Shanahan, Murray, and Bernard Baars. 2005. “Applying Global Workspace Theory t
 
 <div id="ref-CaseFreeUnimodality2026" class="csl-entry">
 
-“Sharp Free Brownian Unimodality Research Package.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaign_2026_09/paper_free_unimodality_2026_09_14/README.md>.
+“Sharp Free Brownian Unimodality Research Package.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_campaign_2026_09/paper_free_unimodality_2026_09_14/README.md>.
 
 </div>
 
 <div id="ref-CaseRademacherMemory2026" class="csl-entry">
 
-“Sharp Rademacher Singularity Campaign: Typed Mathematical Memory.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_1000/sharp_rademacher_campaign_2026_08_18/mathbrain/README.md>.
+“Sharp Rademacher Singularity Campaign: Typed Mathematical Memory.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/probability_1000/sharp_rademacher_campaign_2026_08_18/mathbrain/README.md>.
 
 </div>
 
@@ -1624,13 +1624,13 @@ Sidorenko, A. F. 1991. “Inequalities for Functionals Generated by Bipartite Gr
 
 <div id="ref-CaseComputeStrategy2026" class="csl-entry">
 
-“Ten-Track Mathematical Compute Strategy, 20 September 2026.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/operations/COMPUTE_STRATEGY_2026-09-20.md>.
+“Ten-Track Mathematical Compute Strategy, 20 September 2026.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/operations/COMPUTE_STRATEGY_2026-09-20.md>.
 
 </div>
 
 <div id="ref-CaseProgress2026" class="csl-entry">
 
-“Ten-Track Mathematical Progress Register, 20 September 2026.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/operations/PROGRESS20_2026-09-20.md>.
+“Ten-Track Mathematical Progress Register, 20 September 2026.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/operations/PROGRESS20_2026-09-20.md>.
 
 </div>
 
@@ -1648,7 +1648,7 @@ Thévenin, Paul. 2018. “Vertices with Fixed Outdegrees in Large Galton–Watso
 
 <div id="ref-CaseJanson2026" class="csl-entry">
 
-“Uniform Condensation Windows for Zero-Radius Random Allocations.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/paper_zero_radius_condensation_2026_09_17/main.tex>.
+“Uniform Condensation Windows for Zero-Radius Random Allocations.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/paper_zero_radius_condensation_2026_09_17/main.tex>.
 
 </div>
 
@@ -1660,7 +1660,7 @@ Yang, Kaiyu, Aidan M. Swope, Alex Gu, Rahul Chalamala, Peiyang Song, Shixing Yu,
 
 <div id="ref-CaseJansonAudit2026" class="csl-entry">
 
-“Zero-Radius Condensation Audit Summary.” 2026. <https://github.com/yspennstate/math-open-problems/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/paper_zero_radius_condensation_2026_09_17/audits/SUMMARY.md>.
+“Zero-Radius Condensation Audit Summary.” 2026. <https://github.com/private-source-repository/blob/b4745ece98fa3839cf7afe35d829d08384c815b4/paper_zero_radius_condensation_2026_09_17/audits/SUMMARY.md>.
 
 </div>
 

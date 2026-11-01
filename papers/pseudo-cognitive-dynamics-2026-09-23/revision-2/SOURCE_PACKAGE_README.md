@@ -49,13 +49,13 @@ The architecture update covers explicit pins, post-coverage policy precedence, o
 
 ## Source windows and planned publication
 
-The new broad-source window is pinned to [9c754d786b3a0ea4943da0585d1490c13cd9ef99](https://github.com/<private-repo>/tree/9c754d786b3a0ea4943da0585d1490c13cd9ef99), and the research refresh to [24597f0dcc3cc32d81fd8f22b13903f636460396](https://github.com/yspennstate/math-open-problems/tree/24597f0dcc3cc32d81fd8f22b13903f636460396). Historical snapshots, including the original Math Brain catalogue, remain identified in [supplement/README.md](supplement/README.md). Source publication time is distinct from experiment event time.
+The new broad-source window is pinned to [9c754d786b3a0ea4943da0585d1490c13cd9ef99](https://github.com/<private-repo>/tree/9c754d786b3a0ea4943da0585d1490c13cd9ef99), and the research refresh to [24597f0dcc3cc32d81fd8f22b13903f636460396](https://github.com/private-source-repository/tree/24597f0dcc3cc32d81fd8f22b13903f636460396). Historical snapshots, including the original Math Brain catalogue, remain identified in [supplement/README.md](supplement/README.md). Source publication time is distinct from experiment event time.
 
 Revision 2 is prepared for these additive destinations below the prior publication folders:
 
 | Repository | Revision 2 folder |
 |---|---|
-| `yspennstate/math-research-brain` | `papers/pseudo-cognitive-dynamics-2026-09-23/revision-2/` |
+| `private-brain-repository` | `papers/pseudo-cognitive-dynamics-2026-09-23/revision-2/` |
 | `<private-repo>` | `12_cognitive_architecture/agent_mesh/proposed/pseudo-cognitive-dynamics-2026-09-23/revision-2/` |
 
 These are intended destinations, not push or receiver receipts. The proposal does not change live campaign files, schedules or worker ownership.

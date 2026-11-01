@@ -7,8 +7,8 @@
 | Repository | Historical snapshot | Revision 2 source window |
 |---|---|---|
 | `<private-repo>` | `bcff9346b68959f4cf330fdf9ca0e64a21c77d3e` | [9c754d786b3a0ea4943da0585d1490c13cd9ef99](https://github.com/<private-repo>/tree/9c754d786b3a0ea4943da0585d1490c13cd9ef99) |
-| `yspennstate/math-open-problems` | `b4745ece98fa3839cf7afe35d829d08384c815b4` | [24597f0dcc3cc32d81fd8f22b13903f636460396](https://github.com/yspennstate/math-open-problems/tree/24597f0dcc3cc32d81fd8f22b13903f636460396) |
-| `yspennstate/math-research-brain` | `a4c99b43a044c127787c26997ed942f41591aac6` | Historical source/catalogue retained; publication destination is separate from the evidence snapshot. |
+| `private-source-repository` | `b4745ece98fa3839cf7afe35d829d08384c815b4` | [24597f0dcc3cc32d81fd8f22b13903f636460396](https://github.com/private-source-repository/tree/24597f0dcc3cc32d81fd8f22b13903f636460396) |
+| `private-brain-repository` | `a4c99b43a044c127787c26997ed942f41591aac6` | Historical source/catalogue retained; publication destination is separate from the evidence snapshot. |
 
 The broad refresh contains 11 intervening commits. The research comparison contains 271 additional commits and 269 changed paths within QFORM; its intake queues are unchanged. Historical event dates are not replaced by later commit dates. File-level locators and scope are in the [update manifests](supplement/update_20260923/README.md).
 
@@ -63,7 +63,7 @@ All-time, construction-only, cross-provider token and monetary costs remain unid
 
 | Repository | New additive folder |
 |---|---|
-| `yspennstate/math-research-brain` | `papers/pseudo-cognitive-dynamics-2026-09-23/revision-2/` |
+| `private-brain-repository` | `papers/pseudo-cognitive-dynamics-2026-09-23/revision-2/` |
 | `<private-repo>` | `12_cognitive_architecture/agent_mesh/proposed/pseudo-cognitive-dynamics-2026-09-23/revision-2/` |
 
 These planned paths preserve the first publication. This changelog does not assert that a revision-two push has happened. No native acknowledgment or adoption was observed. Held-out keys and private model transcripts are excluded.

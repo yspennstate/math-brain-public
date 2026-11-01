@@ -66,6 +66,6 @@ Accessible, untruncated GitHub root trees showed no `.github` entry at either in
 | Repository | Inspected commit | Observation |
 |---|---|---|
 | `<private-repo>` | `9c754d786b3a0ea4943da0585d1490c13cd9ef99` | No repository-root workflow directory |
-| `yspennstate/math-research-brain` | `37515b15222a23911b8953f4b0f70ceeebb7ed22` | No repository-root workflow directory |
+| `private-brain-repository` | `37515b15222a23911b8953f4b0f70ceeebb7ed22` | No repository-root workflow directory |
 
 The contents requests for `.github/workflows` returned 404, corroborated by those accessible root trees. This is a narrow source-existence check, not an account-billing guarantee. Before the actual update, reread the destination ref/tree, retain one batched publication per destination, verify only authorized paper/report/proposal paths change, and confirm the published commit. No CI override is needed on the inspected paper-only descendant trees. Detailed owner billing history is intentionally excluded from the manuscript fragment and curated bibliography.

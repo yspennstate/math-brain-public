@@ -2,7 +2,7 @@
 
 ## Snapshot and scope
 
-The refreshed `yspennstate/math-open-problems` snapshot is **24597f0dcc3cc32d81fd8f22b13903f636460396**, committed at **2026-09-23 20:04:37 UTC**. The default branch is `master`. Comparing with the previous paper's source `b4745ece98fa3839cf7afe35d829d08384c815b4` reports 271 additional commits and 269 changed paths, all below `proofnet24/QFORM-density/`. The eight intake queues and the prior catalogue counts (1,391 rows, 1,168 distinct identifiers, 87 top-level ProofNet directories) did not change in this comparison. This is a focused review, not a full audit of all 269 changed files.
+The refreshed `private-source-repository` snapshot is **24597f0dcc3cc32d81fd8f22b13903f636460396**, committed at **2026-09-23 20:04:37 UTC**. The default branch is `master`. Comparing with the previous paper's source `b4745ece98fa3839cf7afe35d829d08384c815b4` reports 271 additional commits and 269 changed paths, all below `proofnet24/QFORM-density/`. The eight intake queues and the prior catalogue counts (1,391 rows, 1,168 distinct identifiers, 87 top-level ProofNet directories) did not change in this comparison. This is a focused review, not a full audit of all 269 changed files.
 
 The broad-memory review uses `<private-repo>@9c754d786b3a0ea4943da0585d1490c13cd9ef99` (19:52:16 UTC). Its cards are claim summaries; the underlying source paper, theorem statements, and proof interfaces were read where material. The separate Math Brain snapshot supplied by the parent is `96705ab32952783ed63bc4d3f9ea3ff9ed5bf222`. No schedules, live repositories, or existing paper files were changed by this review.
 
@@ -78,7 +78,7 @@ Cite `CaseQFORMHubPartner2026` if this case is used.
 
 ## 4. FEI: substantive previously omitted claims, new memory, and source mismatch
 
-The changed broad read-k FEI card adds an evening paragraph explicitly headed “numerics and partial proofs, NO new theorem.” The separate new near-dictator card is a provisional summary of the mechanism used in an earlier theorem claim. The math-open-problems compare contains no new FEI paths. These are memory publication/continuation changes, not evidence that a new FEI theorem appeared after the old frozen mathematical source.
+The changed broad read-k FEI card adds an evening paragraph explicitly headed “numerics and partial proofs, NO new theorem.” The separate new near-dictator card is a provisional summary of the mechanism used in an earlier theorem claim. The private-source-repository compare contains no new FEI paths. These are memory publication/continuation changes, not evidence that a new FEI theorem appeared after the old frozen mathematical source.
 
 The underlying `proofnet24/P03-fei/continuations/2026-09-23-readk-dnf/paper/fei_readk_regular.tex` does contain substantial claims that the earlier Pseudo-Cognitive Dynamics research section did not summarize:
 
@@ -95,7 +95,7 @@ The Lean source `lean/FEISubadd.lean` proves the scalar inequality for φ_s(x)=x
 φ_s((a+b)²)≤2φ_s(a²)+2φ_s(b²)+2a²+2b²,
 under s>0, a²≤s, b²≤s. It is an algebraic analytic helper used in the near-dictator case, not a formalization of the full FEI theorem. Source inspection found the explicit assumptions and no sorry/admit. The current card reports successful Lean 4.33.1/Mathlib compilation and only standard axioms; this update did not replay the build.
 
-**Source mismatch to preserve:** the broad card cites a Section 29 with further slice-regime constants and a proposed smaller bound. At the pinned math-open-problems head, the underlying REPORT ends at Section 28 and the committed paper does not contain those later Section 29 statements. Do not promote those card-only constants (7.04, 7.35, 15.6 bits) into paper theorem claims. The new near-dictator card also says its Lean compile was pending, while the later changed read-k card reports it succeeded: this is a concrete example of memory-version order mattering.
+**Source mismatch to preserve:** the broad card cites a Section 29 with further slice-regime constants and a proposed smaller bound. At the pinned private-source-repository head, the underlying REPORT ends at Section 28 and the committed paper does not contain those later Section 29 statements. Do not promote those card-only constants (7.04, 7.35, 15.6 bits) into paper theorem claims. The new near-dictator card also says its Lean compile was pending, while the later changed read-k card reports it succeeded: this is a concrete example of memory-version order mattering.
 
 Cite `CaseFEIReadKManuscript2026`, `CaseFEIReadKReport2026`, `CaseFEISubadd2026`, and `CaseFEINearDictatorCard2026`.
 

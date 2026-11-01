@@ -4,7 +4,7 @@ This directory accompanies **Mathematics of Pseudo-Cognitive Dynamics**, revisio
 
 ## Source references
 
-The broad source is pinned to [9c754d786b3a0ea4943da0585d1490c13cd9ef99](https://github.com/<private-repo>/tree/9c754d786b3a0ea4943da0585d1490c13cd9ef99), committed at 19:52:16 UTC on September 23. The research source is pinned to [24597f0dcc3cc32d81fd8f22b13903f636460396](https://github.com/yspennstate/math-open-problems/tree/24597f0dcc3cc32d81fd8f22b13903f636460396), committed at 20:04:37 UTC. Historical Math Brain/catalogue and usage sources retain the versions listed in [the parent supplement README](../README.md). Private source URLs require appropriate access. A later commit does not imply a later experiment event.
+The broad source is pinned to [9c754d786b3a0ea4943da0585d1490c13cd9ef99](https://github.com/<private-repo>/tree/9c754d786b3a0ea4943da0585d1490c13cd9ef99), committed at 19:52:16 UTC on September 23. The research source is pinned to [24597f0dcc3cc32d81fd8f22b13903f636460396](https://github.com/private-source-repository/tree/24597f0dcc3cc32d81fd8f22b13903f636460396), committed at 20:04:37 UTC. Historical Math Brain/catalogue and usage sources retain the versions listed in [the parent supplement README](../README.md). Private source URLs require appropriate access. A later commit does not imply a later experiment event.
 
 ## File index
 
