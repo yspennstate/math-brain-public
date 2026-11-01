@@ -39,7 +39,7 @@
 
 ## The Azure box (<box-host>)
 
-- Sequestered AI work on the box is governed by `/srv/aiwork/AI_BOX_RULES.md` (work only under
+- Sequestered AI work on the box is governed by a rules file kept on the box itself (work only under
   `/srv/aiwork/<session>/`, capped worker slices, no sudo, no production-stack contact, no low
   ports). Read it before working there; this doctrine adds the cross-machine priority and
   alerting layer on top, it does not replace those rules.
