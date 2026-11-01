@@ -108,9 +108,9 @@ try:
             f"SEMANTIC DEGRADED - {missing} memories have no vector and the "
             f"sidecar is {age_h:.0f}h old. Recent nodes are reachable by "
             f"keyword and graph but NOT by paraphrase.\n"
-            f"    Fix belongs ON THE AZURE BOX (build_memory_embeddings.py: "
-            f"the model 'belongs on the Azure box, not on the crash-prone "
-            f"laptop'), published via publish_memory_embeddings.py.\n"
+            f"    Fix: rebuild the sidecar with build_memory_embeddings.py on a machine "
+            f"where the model fits in memory, then publish it with "
+            f"publish_memory_embeddings.py.\n"
             f"    Laptop-safe check only: build_memory_embeddings.py --plan-only")
 except Exception as exc:
     problems.append(f"SEMANTIC UNREADABLE - {status_path}: {exc}")

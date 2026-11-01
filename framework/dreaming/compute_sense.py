@@ -3,7 +3,7 @@
 
 Registered on UserPromptSubmit and PreToolUse (Bash|PowerShell). Reads the state file the
 compute governor publishes every ~20s (~/.claude/compute/compute_state.json) and,
-when the machine (this PC or the Azure box) is in distress, injects the compute contract as
+when the machine (this PC or the remote compute box) is in distress, injects the compute contract as
 context - so every working Claude session "just knows" and switches to fixing it before its
 task. Silent when all is well. Doctrine: 12_cognitive_architecture/compute_governor/COMPUTE_DOCTRINE.md.
 
@@ -28,7 +28,7 @@ DEDUP_STALE = 14400      # governor-down nag: once per session per 4h
 
 LOCAL_GPU_DENY_REASON = (
     "BLOCKED (local GPU safety): local CUDA/diffusers execution can crash this laptop. "
-    "Run this workload through SSH on the Azure research box/research.slice. "
+    "Run this workload over SSH on a remote compute box. "
     "Read-only GPU diagnostics remain allowed."
 )
 GPU_SOURCE_LIMIT = 512 * 1024
@@ -799,7 +799,7 @@ def _protected_alert_context(st):
     if "protected_telemetry_stale" in alerts:
         stale_note = " Protected-unit telemetry is stale; no last-known unit state is current."
     context = (
-        "[protected-health] OBSERVATION on the Azure box: %s.%s This alert alone is not "
+        "[protected-health] OBSERVATION on the remote box: %s.%s This alert alone is not "
         "compute distress and does not authorize pausing or shedding research load; it "
         "never weakens any simultaneous compute-pressure instruction. Preserve the alert "
         "for the owner/operator; never touch, restart, renice, or signal a protected unit "
@@ -832,7 +832,7 @@ def _warn_notch(st, reasons):
         or "azure_unreachable" in reasons
     ):
         return (
-            " Azure telemetry is degraded: take parallelism down a notch until direct "
+            " Remote-box telemetry is degraded: take parallelism down a notch until direct "
             "pressure measurements recover."
         )
     if "saturation_throttle" in reasons:
@@ -853,12 +853,12 @@ def _warn_guidance(st, reasons):
         guidance.append(memory_guidance)
     if azure.get("telemetry_degraded") or "azure_unreachable" in reasons:
         guidance.append(
-            "Keep existing Azure work low-parallelism and do not start anything heavy "
+            "Keep existing remote-box work low-parallelism and do not start anything heavy "
             "there until direct telemetry recovers (COMPUTE_DOCTRINE.md)."
         )
     elif not guidance:
         guidance.append(
-            "Prefer lighter parallelism, BelowNormal priority, and the Azure research slice "
+            "Prefer lighter parallelism, BelowNormal priority, and the remote compute box "
             "for anything heavy (COMPUTE_DOCTRINE.md)."
         )
     return " ".join(guidance)
@@ -949,13 +949,13 @@ def main():
                             _t = time.strptime(str(az.get("ts")), "%Y-%m-%d %H:%M:%S")
                             _age = time.time() - calendar.timegm(_t)
                             if _age >= 900:
-                                age_txt = (" This Azure reading is %dm old - VERIFY LIVE"
+                                age_txt = (" This remote-box reading is %dm old - VERIFY LIVE"
                                            " before acting on it." % int(_age // 60))
                             elif _age >= 0:
-                                age_txt = " Azure reading %dm old." % int(_age // 60)
+                                age_txt = " Remote-box reading %dm old." % int(_age // 60)
                         except Exception:
-                            age_txt = " Azure reading age unknown."
-                        az_line = (" Azure box: status=%s psi_cpu60=%s load1=%s.%s%s" %
+                            age_txt = " Remote-box reading age unknown."
+                        az_line = (" Remote box: status=%s psi_cpu60=%s load1=%s.%s%s" %
                                    (az.get("status"), az.get("psi_cpu_some_avg60"),
                                     az.get("load1"), age_txt,
                                     _load_is_io_not_cpu(az)))
