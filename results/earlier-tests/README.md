@@ -377,3 +377,7 @@ Ten probes of the two recall paths on the benchmark's development questions, eac
 ## hook-and-index-speed-2026-10-13: index and hook speed work
 
 The round after the October recall probes: the lexical index publish (a refresh 20.3 to 6.0 s median, the parsed cache moved in with the index), the hook dispatcher (a Bash pre-call 0.748 to 0.457 s end to end, nine hooks and the compaction hook in process) and the reflex triggers (a quadratic trigger 8.43 s to 0.0009 s on a 16 KB text; a prefilter that skips 416 s of a day's matching). Each change was checked for unchanged output. Counts only.
+
+## three-arm-reruns-2026-10-29: the timed-out questions asked again
+
+One Claude shard of 323 questions with every 600 s timeout asked again at 1,200 s: brain 307 right against documents 278 and bare 50 (33 wins to 4, p 1.1e-6), USD 0.074 against 0.153 per right answer. Three Codex reruns of the brain arm's 17 losses: 15 answered right in at least one, every miss a timeout or an unknown, none wrong. Counts only.
