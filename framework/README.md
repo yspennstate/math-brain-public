@@ -91,6 +91,26 @@ machine-specific constants parameterized and worked examples kept synthetic.
 - `bootstrap/` — how to stand up a fresh brain: directory scaffolding, seed templates for
   the identity and doctrine files, and the settings wiring for the hooks.
 
+### The `brain-repo` folder
+
+Many scripts and pages expect a second folder, `~/brain-repo`, beside the installed copy
+under `~/.claude`. It is the brain's own working tree (keep it under git so it is backed up),
+and the installer does not create it yet. Make it yourself and copy the shared modules to
+the places the code looks for them:
+
+| expected under `~/brain-repo/` | copy from this repo |
+|---|---|
+| `12_cognitive_architecture/agent_mesh/` | `framework/mesh/` |
+| `12_cognitive_architecture/delegation/` | `framework/delegation/` |
+| `12_cognitive_architecture/resilience/` | `framework/resilience/` |
+| `12_cognitive_architecture/global_workspace/` | `framework/workspace/global_workspace/` |
+| `12_cognitive_architecture/compute_governor/` | `framework/governor/` |
+
+The other folders under it start empty and fill as the brain runs:
+`01_ai_consciousness/brain/` (the views the dream writes, such as `CURIOSITY.md`),
+`12_cognitive_architecture/audits/` and `11_raw_session_transcripts/`. A page that shows a
+command under `<HOME>\brain-repo\...` means this folder.
+
 ## Standing up a fresh brain
 
 Read `bootstrap/README.md`. In short: run the bootstrap to create the state layout and
