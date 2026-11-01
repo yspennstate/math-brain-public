@@ -66,6 +66,40 @@ def _in_window(ln, lo_s, hi_s):
 
 
 _SCAN_CACHE = {}
+SEEK_BACKOFF = 30 * 60      # the seek aims this far before a window's start, so a line stamped slightly out of order
+                            # near the boundary is still read (the per-line stamp check then filters as before)
+
+
+def _case_window(ts):
+    """What one case uses: the record within 3 s of the fire and up to 20 min after it (the 'at' and 'after' lists).
+    28 Sep: the builders scanned one window per session spanning every candidate fire of the day - for a busy session
+    the whole day - and the target stratum scanned whole transcripts with no window; the builder took 178 s against the
+    dream's 120 s budget and the judge section was skipped every night since 27 Sep."""
+    return (ts - 120, ts + 21 * 60)
+
+
+def _seek(fb, lo_s, size):
+    """Byte offset at or before the first line stamped >= lo_s, by binary search over the file (lines are chronological,
+    as the scan already assumes). Stops refining under 256 KB; a region with no stamp is treated as earlier."""
+    lo, hi = 0, size
+    while hi - lo > 262144:
+        mid = (lo + hi) // 2
+        fb.seek(mid)
+        fb.readline()                                   # the rest of the line the seek landed in
+        stamp = None
+        for _ in range(200):
+            ln = fb.readline()
+            if not ln:
+                break
+            m = _TS_RE.search(ln.decode("utf-8", "replace"))
+            if m:
+                stamp = m.group(1)
+                break
+        if stamp is None or stamp < lo_s:
+            lo = mid
+        else:
+            hi = mid
+    return lo
 
 
 def _session_scan(sid, window=None):
@@ -86,10 +120,18 @@ def _session_scan(sid, window=None):
     if window:
         lo_s, hi_s = _iso(window[0]), _iso(window[1])
     try:
-        with io.open(hits[0], encoding="utf-8", errors="replace") as f:
-            for ln in f:
+        with io.open(hits[0], "rb") as fb:
+            if lo_s is not None:
+                fb.seek(_seek(fb, _iso(window[0] - SEEK_BACKOFF), os.path.getsize(hits[0])))
+                if fb.tell():
+                    fb.readline()                       # start on a whole line
+            for raw in fb:
+                ln = raw.decode("utf-8", "replace")
                 is_user = '"type":"user"' in ln or '"type": "user"' in ln
-                if not is_user and '"tool_use"' not in ln and '"text"' not in ln:
+                # prompts typed while the agent works are queued_command attachments, never user records (27 Sep:
+                # a quarter of the prompts, a third of the corrections - often the reaction to what a fire preceded)
+                is_queued = 'queued_command' in ln
+                if not is_user and not is_queued and '"tool_use"' not in ln and '"text"' not in ln:
                     continue
                 if lo_s is not None:
                     m = _TS_RE.search(ln)
@@ -124,6 +166,11 @@ def _session_scan(sid, window=None):
                 elif r.get("type") == "user" and not r.get("isMeta"):
                     c = (r.get("message") or {}).get("content")
                     if isinstance(c, str) and c.strip() and not c.lstrip().startswith("<"):
+                        prompts.append((ep, "user_prompt", c[:700]))
+                elif r.get("type") == "attachment" and (r.get("attachment") or {}).get("type") == "queued_command":
+                    c = (r.get("attachment") or {}).get("prompt")
+                    if isinstance(c, str) and c.strip() and not c.lstrip().startswith("<") \
+                            and not any(abs(ep - p[0]) <= 1800 and p[2] == c[:700] for p in prompts[-20:]):
                         prompts.append((ep, "user_prompt", c[:700]))
     except Exception:
         pass
@@ -196,17 +243,14 @@ def firehose_cases(n=FIREHOSE_N, days=1, seed=None, since=None):
                 if by_proxy.get(k):
                     order.append(by_proxy[k].pop())
         guts = _gut()
-        _span = _spans(order)
-        cases, seen, cache_t, cache_p = [], set(), {}, {}
+        cases, seen = [], set()
         for ts, rid, sid, proxy, path in order:
             if len(cases) >= n:
                 break
             if (sid, rid) in seen:
                 continue
-            if sid not in cache_t:
-                cache_t[sid] = _session_tools(sid, _span.get(sid))
-                cache_p[sid] = _session_prompts(sid, _span.get(sid))
-            tools, prompts = cache_t[sid], cache_p[sid]
+            win = _case_window(ts)
+            tools, prompts = _session_tools(sid, win), _session_prompts(sid, win)
             if proxy == "prompt":
                 at = [t for t in prompts if abs(t[0] - ts) <= 3][:1]
             else:
@@ -304,17 +348,14 @@ def suppressed_cases(n=SUPPRESSED_N, days=1, seed=None):
         for _, rid, _, _, reason in rows:
             counts[(rid, reason)] = counts.get((rid, reason), 0) + 1
         guts = _gut()
-        _span = _spans(order)
-        cases, seen, cache_t, cache_p = [], set(), {}, {}
+        cases, seen = [], set()
         for ts, rid, sid, proxy, reason in order:
             if len(cases) >= n:
                 break
             if (sid, rid, reason) in seen:
                 continue
-            if sid not in cache_t:
-                cache_t[sid] = _session_tools(sid, _span.get(sid))
-                cache_p[sid] = _session_prompts(sid, _span.get(sid))
-            tools, prompts = cache_t[sid], cache_p[sid]
+            win = _case_window(ts)
+            tools, prompts = _session_tools(sid, win), _session_prompts(sid, win)
             if proxy == "prompt":
                 at = [t for t in prompts if abs(t[0] - ts) <= 3][:1]
             else:
@@ -395,7 +436,7 @@ def agenda_section():
                 break
             if sid in seen_sessions:
                 continue
-            tools = _session_tools(sid)
+            tools = _session_tools(sid, _case_window(ts))
             if not tools:
                 continue
             at = [t for t in tools if abs(t[0] - ts) <= 3][:1]
