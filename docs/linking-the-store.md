@@ -171,6 +171,7 @@ with 79 edges, each picked and read by hand.
 | 80 | 91,127 | 90,952 | 85,353 | 93.7% |
 | 83 | 91,138 | 90,963 | 85,625 | 94.0% |
 | 90 | 91,157 | 90,980 | 85,849 | 94.2% |
+| 147 | 91,275 | 91,096 | 86,558 | 94.8% |
 
 The store had 127,881 edges after round 42. The work continues one island at a time; after round 42 no island
 other than the main one had more than 35 nodes.
@@ -180,6 +181,9 @@ and 83), and the 5,513 nodes outside the main component sat in islands of at mos
 
 After round 90 the main component held 85,849 of 91,157 nodes. Only 177 nodes touched no edge, and the 5,308
 outside the main component sat in islands of at most 58 nodes.
+
+After round 147 the store had 129,153 edges and the main component held 86,558 of 91,275 nodes. 179 nodes touched
+no edge, and the 4,717 outside the main component still sat in islands of at most 58 nodes.
 
 ## What carries over to another field
 
