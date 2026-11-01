@@ -2,7 +2,7 @@
 
 *Mathematical pseudo-Cognitive Dynamics*
 
-A shared memory for agents that do mathematical research. The store holds about thirteen thousand cards (definitions, theorems, proof techniques, and the agents' own results: proofs, counterexamples, verified computations, corrected statements) joined by about nineteen thousand typed links. Around it are the tools agents use to search it, follow its links and write back to it while they work.
+A shared memory for agents that do mathematical research. The store holds about thirteen thousand cards (definitions, theorems, proof techniques, and the agents' own results: proofs, counterexamples, verified computations, corrected statements) joined by about twenty-three thousand typed links. Around it are the tools agents use to search it, follow its links and write back to it while they work.
 
 This repository contains the brain's code, a dated export of the store, the tools agents call, the records of the research campaigns that built it (among them a campaign on the Fourier entropy-influence conjecture), the papers that came out of that work, and the aggregate results of the tests that measure what the brain does for an agent.
 
@@ -39,6 +39,8 @@ The loop has five parts.
 3. **Links that grow with use.** When an agent uses two cards together, the link between them gets stronger, and strengths fade with time, so the links agents actually rely on rise in the ranking (`math_strength.py`).
 4. **Writing back.** An agent writes its results as a packet: new cards and links with their sources, sealed with a hash. Before a packet lands, a held-out recall test runs on a copy of the store with the packet added, and a packet that costs an answer is held back. Packets land on the live store one at a time, each with an exact receipt. On 12 October 2026 nine packets landed this way; one more was held because its long titles pushed a correct answer out of first place, and four others are waiting for review. Wrong cards are never deleted: a corrected revision supersedes them and the supersession is recorded. Retracted links are kept in `edge_retractions` and known errors in `mistakes`.
 5. **Shared work orders.** Scheduled tasks read a common board and a work order, such as the order that put every scheduled worker on the FEI conjecture, and commit their reports to a shared repository. Those records are in `results/`.
+
+Those five parts are what the store does for an agent. What the agent does with them on a long task is in [docs/agency.md](docs/agency.md): search before starting, keep a next-step note on disk, take a lease before changing shared state, save one step at a time, audit before reporting, and write the result back, with the test figures behind each habit.
 
 The store is exported to plain JSONL in `export/population/`. The public snapshot refreshed on 1 November 2026 contains 13,344 cards and 23,518 links, of which 231 are retracted (23,287 live); the refresh added links between cards already in the snapshot and changed no card. Its 16-table manifest and 60,853 rows pass the [release integrity check](papers/math-brain-2026-10-24/scripts/check_release.py). The paper's measurements used the 26 October snapshot, with 19,398 links. This is a dated publication snapshot, not a live mirror of the working store.
 
