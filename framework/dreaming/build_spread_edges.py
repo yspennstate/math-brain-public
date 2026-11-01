@@ -161,5 +161,66 @@ def main():
           f"+ {orphan_n} orphan + {series_n} series + {keyword_n} keyword edges over {len(real)} nodes -> {OUT}")
 
 
+FRESH = os.path.join(DR, "spread_edges_fresh.tsv")
+
+
+def fresh():
+    """The wiki-links of memories written after spread_edges.tsv was built, into spread_edges_fresh.tsv.
+
+    Only the nightly dream rebuilds spread_edges.tsv, so a memory written in the morning had no graph edge in
+    recall until the next night (in the reference install, 13 of 95 memories written over two days were isolated,
+    every one of them written after the last nightly build). This reads only the newer files and skips any pair
+    the nightly file already holds, so an edited old memory does not count its links twice. spread_recall merges
+    the file while it is newer than spread_edges.tsv; the next nightly build makes it moot. Links INTO a new
+    memory from a file older than the build are not seen here (that file was read before the target existed).
+    bm25.py refresh calls this whenever it indexes a new memory, so the links are live within one refresh."""
+    try:
+        cut = os.path.getmtime(OUT)
+    except OSError:
+        return
+    real, newer = {}, []
+    with os.scandir(MEM) as it:
+        for de in it:
+            if de.name.endswith(".md") and de.name[:-3] not in SKIP:
+                real[norm(de.name)] = de.name[:-3]
+                try:
+                    if de.stat().st_mtime > cut:
+                        newer.append(de.name)
+                except OSError:
+                    pass
+    have = set()
+    with io.open(OUT, encoding="utf-8", errors="replace") as f:
+        next(f, None)
+        for ln in f:
+            p = ln.split("\t", 2)
+            if len(p) >= 2:
+                a, b = norm(p[0]), norm(p[1])
+                have.add((a, b) if a < b else (b, a))
+    edges = defaultdict(float)
+    for fn in newer:
+        src = norm(fn)
+        try:
+            text = io.open(os.path.join(MEM, fn), encoding="utf-8", errors="replace").read()
+        except Exception:
+            continue
+        for m in set(LINK_RE.findall(text)):
+            b = norm(m)
+            if b == src or b not in real:
+                continue
+            key = (src, b) if src < b else (b, src)
+            if key not in have:
+                edges[key] = W_WIKI
+    tmp = FRESH + ".tmp"
+    with io.open(tmp, "w", encoding="utf-8") as f:
+        f.write("a\tb\tweight\n")
+        for (a, b), w in sorted(edges.items()):
+            f.write(f"{real[a]}\t{real[b]}\t{w:.3f}\n")
+    os.replace(tmp, FRESH)
+    print(f"spread_edges_fresh: {len(edges)} edges from {len(newer)} memories newer than the nightly build -> {FRESH}")
+
+
 if __name__ == "__main__":
-    main()
+    if "--fresh" in sys.argv[1:]:
+        fresh()
+    else:
+        main()

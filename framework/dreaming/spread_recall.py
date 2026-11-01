@@ -73,6 +73,8 @@ _BRAIN_SLUG = _brain_slug_resolve()
 MEM = os.path.join(HOME, ".claude", "projects", _BRAIN_SLUG, "memory")
 DR = os.path.dirname(os.path.abspath(__file__))
 EDGES = os.path.join(DR, "spread_edges.tsv")
+# Links of memories written since the nightly build (build_spread_edges.py --fresh); merged while newer.
+EDGES_FRESH = os.path.join(DR, "spread_edges_fresh.tsv")
 SAL = os.path.join(DR, "salience.tsv")
 STATE = os.path.join(DR, ".spread_fired.json")
 EMB = os.path.join(DR, "memory_embeddings.npz")   # optional semantic sidecar (build_memory_embeddings.py, box)
@@ -316,7 +318,13 @@ def _load_graph(with_keywords=False, include_base=False):
     # got (baseline choice preserved unless the richer graph only ADDS), which costs a second
     # spread per event and deserves its own measured pass, not a late-night constant tweak.
     # Create graph_fire/KEYWORD_GRAPH_ENABLED to switch it on.
-    for path in (EDGES,):
+    paths = [EDGES]
+    try:
+        if os.path.getmtime(EDGES_FRESH) > os.path.getmtime(EDGES):
+            paths.append(EDGES_FRESH)
+    except OSError:
+        pass
+    for path in paths:
         try:
             with io.open(path, encoding="utf-8", errors="replace") as f:
                 next(f, None)

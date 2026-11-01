@@ -2422,6 +2422,14 @@ def main():
         st = maybe_build_postings(quiet=True)
         if st not in ("current", "rate-limited"):
             print("%s bm25 postings: %s" % (_stamp(), st))
+        # New memories get their wiki-link edges in the association graph now, not at the next nightly
+        # spread_edges.tsv build (build_spread_edges.py --fresh, a few seconds).
+        if added:
+            try:
+                import build_spread_edges
+                build_spread_edges.fresh()
+            except Exception as e:
+                print("%s spread_edges_fresh: FAILED %s" % (_stamp(), str(e)[:200]))
     elif sys.argv[1:2] == ["query"] and len(sys.argv) > 2:
         for slug, s in BM25().score(" ".join(sys.argv[2:]), 10):
             print("%7.2f  %s" % (s, slug))
