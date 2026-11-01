@@ -96,7 +96,7 @@ A26's report records its actual current-snapshot result as 234 PASS, 0 FAIL, fiv
 
 `campaign/admin/CHECKPOINT_SAVE_RECEIPTS.json` records 22 successful content-equal readbacks: 11 files in each of two private repositories. I independently recomputed every listed local Git blob hash; all 22 match the receipt pins. This validates the local side of those already recorded checkpoints. I did not independently query the remote repositories, and the receipt is not evidence that later files have already been saved.
 
-The checkpoint commits recorded are `b1a7e387f165713e54e2a731822332fd7af479d4` in `yspennstate/math-research-brain` and `71f784f91377d5c57995cdb3c13f2c102b26e094` in `<private-repo>`. The checkpoint notice explicitly says that the full report, remaining agents, source/check manifest, and final verification are to follow. Native graph ingestion is explicitly `NOT_RUN_NOT_CLAIMED`.
+The checkpoint commits recorded are `b1a7e387f165713e54e2a731822332fd7af479d4` in `private-brain-repository` and `71f784f91377d5c57995cdb3c13f2c102b26e094` in `<private-repo>`. The checkpoint notice explicitly says that the full report, remaining agents, source/check manifest, and final verification are to follow. Native graph ingestion is explicitly `NOT_RUN_NOT_CLAIMED`.
 
 Accordingly, the mathematical and corrected claim-scope conclusions are accepted, while **“the final campaign package is saved in both Brain and Math Brain”** still requires the coordinator's final package and readback evidence. This distinction is an outstanding delivery step, not a defect in the theorem.
 

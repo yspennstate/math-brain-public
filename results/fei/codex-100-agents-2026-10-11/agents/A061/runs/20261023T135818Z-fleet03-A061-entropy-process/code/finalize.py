@@ -66,7 +66,7 @@ sourcepaths=[P,ROOT/'BOARD.md',ROOT/'claude/B13/STREAM_NOTES.md',source/'PROOF.m
  HOME/'runs/20261023T113614Z-fleet03-A061-entropy-process/code/arith.py',
  HOME/'runs/20261023T113614Z-fleet03-A061-entropy-process/code/independent_oracle.py']
 dump(R/'out/SOURCE_RECEIPTS.json',[{'path':str(p),'sha256':sha(p)} for p in sourcepaths])
-dump(R/'out/CONTROL_READ_RECEIPT.json',{'private_order_url':'https://github.com/yspennstate/math-research-brain/blob/main/scheduled_tasks/work/shared/full-fei-only-2026-10-12/ORDER.md','focus_revision':'2026-10-14.1 / GU-LASER-20261014','focus_assignment':'B13 explicit nonnegative correction, physical rule, drift/terminal U and dimension-independent bound; new scoped certificate and false necessity bridge in PROOF.md','universal_H_from_U_reduction_used':False,'note':'No reliance on the unread original universal H/U reduction; GU validity here and the source-family H bound are proved directly.'})
+dump(R/'out/CONTROL_READ_RECEIPT.json',{'private_order_url':'private-brain-repository','focus_revision':'2026-10-14.1 / GU-LASER-20261014','focus_assignment':'B13 explicit nonnegative correction, physical rule, drift/terminal U and dimension-independent bound; new scoped certificate and false necessity bridge in PROOF.md','universal_H_from_U_reduction_used':False,'note':'No reliance on the unread original universal H/U reduction; GU validity here and the source-family H bound are proved directly.'})
 report=f'''# A061 stage21: a GU-valid physical process does not fund every product reset
 
 ## exact target, quantifiers, hypotheses and units

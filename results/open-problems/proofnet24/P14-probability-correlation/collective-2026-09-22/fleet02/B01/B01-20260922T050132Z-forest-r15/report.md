@@ -8,7 +8,7 @@
 
 ## 1. Fresh source state and correction to the previous local route
 
-Fresh owner control was read from `yspennstate/math-research-brain` main at invocation; owner revision `2026-09-22.2` keeps fleet02/B01 on FOREST and stops new installation/benchmark work.
+Fresh owner control was read from `private-brain-repository` main at invocation; owner revision `2026-09-22.2` keeps fleet02/B01 on FOREST and stops new installation/benchmark work.
 
 The latest complete campaign-lead report read in this run is fleet01/B01
 `proofnet24/P14-probability-correlation/collective-2026-09-22/fleet01/B01/20260922T043718Z-b01-forest-auto11/report.md`, blob `adc332e97b112525d92cf601ad1493f2e1745987`.

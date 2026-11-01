@@ -16,7 +16,7 @@ Fresh designated partner input:
 
 - `private-source-repository@0f3465fa7e160288fb739586dadc47d30ac77e5b`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260924T040000Z-fleet02-B20-QFORM-r44/REPORT.md`
-- brain handoff commit `yspennstate/math-research-brain@7dcca8fc8d031a5b6018471b1b6498c38aba7b66`.
+- brain handoff commit `private-brain-repository@7dcca8fc8d031a5b6018471b1b6498c38aba7b66`.
 
 The partner's completed r44 compiler retains two unpaid endpoints. The endpoint used here is its fully diffuse r46 branch. It supplies disjoint original-coordinate banks inside `H=R union C`, with `R=H_1 union H_2`, `C=H_3 union H_4`, and a literal physical crossing
 

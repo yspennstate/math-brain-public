@@ -11,7 +11,7 @@ Provider reasoning usage: null / not exposed.
 
 ## 0. Fresh control and scientific source
 
-Authenticated fleet control was resolved from `yspennstate/math-research-brain` main at
+Authenticated fleet control was resolved from `private-brain-repository` main at
 `14c6dfefb9a567d99dea06c7cd48dbb38e7a56c9`. Its SHA-256 is
 `e2cf6cf6cb8c4941b55a12284a4e69ac75747e3198e0bb34df42ec9f30520aa6`.
 Those two SHA-256 values retain prior exact-byte provenance for the unchanged immutable README blob; they are not relabelled as fresh hashes of connector-rendered JSON.

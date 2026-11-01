@@ -10,7 +10,7 @@
 
 The later owner control supersedes the stale FEI prompt. The sole target is the quadratic-form density conjecture: for independent real `X_i` with densities `0<=f_i<=1` and real symmetric `A` with at least three eigenvalues of absolute value at least one, prove a universal finite bound on the density of `Q=X^TAX`, or give a valid counterexample.
 
-Fresh control/corrections were read from `yspennstate/math-research-brain` on main during this run; owner revision remained `2026-09-22.5`. The correction inbox includes the failures of pointwise law-uniform Fresnel decay, single-cross-minor closure, conditional-cap-as-independence, absolute-value Holder/ambiguity, and bounded-diameter localization. None is used below.
+Fresh control/corrections were read from `private-brain-repository` on main during this run; owner revision remained `2026-09-22.5`. The correction inbox includes the failures of pointwise law-uniform Fresnel decay, single-cross-minor closure, conditional-cap-as-independence, absolute-value Holder/ambiguity, and bounded-diameter localization. None is used below.
 
 Named partner consumed substantively:
 

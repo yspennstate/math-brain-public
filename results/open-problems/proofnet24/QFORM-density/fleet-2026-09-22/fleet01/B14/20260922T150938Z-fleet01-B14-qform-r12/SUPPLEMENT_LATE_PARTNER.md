@@ -76,4 +76,4 @@ The newer partner theorem makes the correct hierarchy explicit:
 
 Thus the next B14 attack should first try to derive a deterministic-outside shell estimate retaining genuine pair-gap factors on the selected active triple; only the residual outside fragment dependencies should be sent through the SCC compiler.
 
-Source control after the fresh partner handoff was observed at `yspennstate/math-research-brain@090907b3fe12ce98d06b18961665f6074c7ddd12`. No new correction in the live inbox contradicts either compiler.
+Source control after the fresh partner handoff was observed at `private-brain-repository@090907b3fe12ce98d06b18961665f6074c7ddd12`. No new correction in the live inbox contradicts either compiler.

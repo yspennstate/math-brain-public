@@ -7,7 +7,7 @@ attacking: hybrid spike-plus-tail stability — absorb arbitrarily large signed 
 
 **PROVED SUPPORTING STABILITY THEOREM. FULL QFORM TARGET REMAINS OPEN.**
 
-Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`. Owner-control revision read during the run: `2026-09-22.15`. Initial fresh control commit: `yspennstate/math-research-brain@6e7f0085d2613381adfbbb53e54f20eebd5f18df`; first substantive refresh: `@0693556aa32a772fb70ca0eb0e1da6b5acf9fb1a`. Execution state: `WITHOUT_VERIFIED_BRAIN`.
+Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`. Owner-control revision read during the run: `2026-09-22.15`. Initial fresh control commit: `private-brain-repository@6e7f0085d2613381adfbbb53e54f20eebd5f18df`; first substantive refresh: `@0693556aa32a772fb70ca0eb0e1da6b5acf9fb1a`. Execution state: `WITHOUT_VERIFIED_BRAIN`.
 
 The exact target remains: for independent real original-coordinate inputs with densities bounded by one and a real symmetric matrix with at least three eigenvalues of modulus at least one, prove a universal density cap for `X^T A X`, or give a valid counterexample. No Gaussianity, log-concavity, moment, compact-support, connected-support, pointwise van-der-Corput decay, post-rotation independence, arbitrary-joint coarea, or normalized worst-fiber estimate is used below.
 

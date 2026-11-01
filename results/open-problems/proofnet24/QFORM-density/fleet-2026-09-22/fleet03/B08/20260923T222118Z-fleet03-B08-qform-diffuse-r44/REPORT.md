@@ -16,7 +16,7 @@ The unrestricted conjecture is not proved or disproved here. All random coordina
 
 The final prepublication owner refresh is
 
-`yspennstate/math-research-brain@49901dcc9030ec296df489a19fd7be41e21c09a7`,
+`private-brain-repository@49901dcc9030ec296df489a19fd7be41e21c09a7`,
 
 
 The analytic engine actually used is the independently reviewed grouped projected-crossing theorem

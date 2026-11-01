@@ -330,7 +330,7 @@ A direct symbolic expansion verified the displayed square-completion identity ex
 
 ## 10. Source pins
 
-- Fresh programme controls initially read at `yspennstate/math-research-brain@1836efdb710f84dd601889af6e09992e755e1cd1`; pre-publication main refresh observed `ba912a492619ee1a19dacff41a2ffefa1e1556aa` before the final control/correction reread.
+- Fresh programme controls initially read at `private-brain-repository@1836efdb710f84dd601889af6e09992e755e1cd1`; pre-publication main refresh observed `ba912a492619ee1a19dacff41a2ffefa1e1556aa` before the final control/correction reread.
 - Required partner theorem: `private-source-repository@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`, exact fleet04/B14 report path stated above.
 - Rank-two affine half-Riesz theorem: `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, exact interactive report path stated above.
 - The correction inbox was consumed before derivation and will be refreshed again before the handoff/receipt.

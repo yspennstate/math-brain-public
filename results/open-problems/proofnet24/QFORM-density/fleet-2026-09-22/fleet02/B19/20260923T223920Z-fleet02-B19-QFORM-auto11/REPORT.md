@@ -11,7 +11,7 @@ attacking: the principal-minimal base-subcritical rank-six carrier — test whet
 
 ## 1. Fresh source boundary and current proof graph
 
-Owner control was refreshed from `math-research-brain` and remained revision `2026-09-22.15`, QFORM-only. The current exact target remains: arbitrary independent real coordinates with one-dimensional densities bounded by one, arbitrary symmetric coefficient matrix with at least three eigenvalues of modulus at least one, and a universal essential density bound for the quadratic form. No moment, support, iid, log-concavity, diagonal-basis, post-rotation-independence, or small-random-perturbation assumption is introduced.
+Owner control was refreshed from `private-brain` and remained revision `2026-09-22.15`, QFORM-only. The current exact target remains: arbitrary independent real coordinates with one-dimensional densities bounded by one, arbitrary symmetric coefficient matrix with at least three eigenvalues of modulus at least one, and a universal essential density bound for the quadratic form. No moment, support, iid, log-concavity, diagonal-basis, post-rotation-independence, or small-random-perturbation assumption is introduced.
 
 The completed designated partner input is fleet03/B19 r43,
 

@@ -186,7 +186,7 @@ Status of this run: **ESSENTIAL_STEP_APPLIED**.
 
 ## Sources actually used
 
-- Current control/research/corrections in `yspennstate/math-research-brain`, owner revision 2026-09-22.15.
+- Current control/research/corrections in `private-brain-repository`, owner revision 2026-09-22.15.
 - Rudelson--Vershynin, arXiv:1402.4492v2, Theorem 1.2, Theorem 1.5, Remark 1.7.
 - fleet02/B01 r25: `bf4ba08b75ab774aef671c62ba4898a371059c0d`, report path above.
 - fleet02/B01 r26: `bda6ef89066f27778833b0f725b011d4ff64d8c8`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T180441Z-fleet02-B01-qform-r26/REPORT.md`.

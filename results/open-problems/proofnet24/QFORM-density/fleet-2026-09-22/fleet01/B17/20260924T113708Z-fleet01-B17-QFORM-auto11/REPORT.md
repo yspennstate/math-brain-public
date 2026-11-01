@@ -6,7 +6,7 @@ Status: `NEW SUPPORTING SHARPNESS THEOREM / EXACT DENSE ROTATED WITNESS / PARTNE
 
 The unrestricted quadratic-form bounded-density conjecture remains **OPEN / NOT PROVED / NOT DISPROVED**. Unrestricted continuity remains a separate conclusion. The result below strengthens the source-valid lower obstruction `C_univ >= 3 sqrt(2)` by showing that the obstruction persists for cap-one inputs having increasingly fine disconnected support and **no independent uniform convolution factor of any fixed positive width**. Thus the newest fleet02/B17 growing-direction theorem is sharp in constant but its unit-uniform-carrier hypothesis cannot be made a necessary structural feature of near-extremizers.
 
-Fresh controls used before mathematics: `yspennstate/math-research-brain@da1a3f0d4cc949f847bd31f0dd4148dc59b08130`, with AGENTS blob `af9b5936c3eed3bb1cced26eddef5fd3eea941ce`; the same AGENTS blob was re-read at later main `ae6b3cb2eae261a1268816b5510070c918e400b1`. Owner control revision remains `2026-09-22.15`; no B17 stop was observed. Execution context is `WITHOUT_VERIFIED_BRAIN`.
+Fresh controls used before mathematics: `private-brain-repository@da1a3f0d4cc949f847bd31f0dd4148dc59b08130`, with AGENTS blob `af9b5936c3eed3bb1cced26eddef5fd3eea941ce`; the same AGENTS blob was re-read at later main `ae6b3cb2eae261a1268816b5510070c918e400b1`. Owner control revision remains `2026-09-22.15`; no B17 stop was observed. Execution context is `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. A micro-comb cap-one law with exact variance
 

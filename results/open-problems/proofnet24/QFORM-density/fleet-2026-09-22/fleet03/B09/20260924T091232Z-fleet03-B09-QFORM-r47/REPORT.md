@@ -457,6 +457,6 @@ Full unrestricted QFORM remains **OPEN**.  Full-target continuity remains **OPEN
 
 ## 13. Integrity / privacy / scope
 
-Changed-file allowlist for this run is restricted to this B09 run directory in private-source and this worker's own handoff/memory/status paths in math-research-brain.  Manual fallback privacy review found only mathematical formulas, public repository commit identifiers, logical account/slot labels and nonsecret run metadata; no credentials, scheduler IDs, signed URLs, machine paths, private personal data, trading/company/client material, or unrelated source excerpts are included.
+Changed-file allowlist for this run is restricted to this B09 run directory in private-source and this worker's own handoff/memory/status paths in private-brain.  Manual fallback privacy review found only mathematical formulas, public repository commit identifiers, logical account/slot labels and nonsecret run metadata; no credentials, scheduler IDs, signed URLs, machine paths, private personal data, trading/company/client material, or unrelated source excerpts are included.
 
 No task identity, cadence, enabled/paused state, notification setting, email setting, permission, public visibility, cross-account authentication, paid API/model/Codex call, or remote workflow was changed.

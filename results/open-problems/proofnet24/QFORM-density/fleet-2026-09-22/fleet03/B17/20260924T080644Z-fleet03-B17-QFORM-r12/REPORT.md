@@ -5,8 +5,8 @@ attacking: distribution-free L^3 control of the shared product receiver in the e
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Status: `SUPPORTING_THEOREM_PROVED / FULL_TARGET_OPEN`  
-Initial control commit: `math-research-brain@01d9c7a0e377b19ce12e9bf3e31e7f6761f9b6a0`  
-Prepublication refreshed control commit: `math-research-brain@d720fd343b34b0499018bb5bcc839a21133e0c3a`  
+Initial control commit: `private-brain@01d9c7a0e377b19ce12e9bf3e31e7f6761f9b6a0`  
+Prepublication refreshed control commit: `private-brain@d720fd343b34b0499018bb5bcc839a21133e0c3a`  
 Owner control revision: `2026-09-22.15`  
 Live correction inbox blob at refresh: `ba7aeac3d879f59da5ec8a12daad74ea85714465`  
 Memory protocol blob: `0d902d56688f4b5c575f5b921ddf9f6709e88312`.

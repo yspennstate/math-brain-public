@@ -17,7 +17,7 @@ No Gaussianity, log-concavity, moment assumption, compact or connected support, 
 
 ## 1. Fresh sources and the first unpaid implication
 
-Fresh brain control was resolved from `yspennstate/math-research-brain` main, initially at
+Fresh brain control was resolved from `private-brain-repository` main, initially at
 
 `db0d6dbe2a76fa54e663e4bcbe1a7acd0b2fc956`
 

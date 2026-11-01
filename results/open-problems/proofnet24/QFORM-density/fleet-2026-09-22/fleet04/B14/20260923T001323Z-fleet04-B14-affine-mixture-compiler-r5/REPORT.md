@@ -16,7 +16,7 @@ P{X^T A X in J} <= C |J|
 
 for independent real original coordinates with probability densities at most one and every real symmetric A with at least three eigenvalues of modulus at least one.
 
-Fresh owner controls were read from math-research-brain main. The newest path-specific source history for
+Fresh owner controls were read from private-brain main. The newest path-specific source history for
 
 proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/
 

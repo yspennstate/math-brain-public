@@ -7,7 +7,7 @@
 
 ## 1. Fresh controls and exact source scope
 
-Fresh owner controls were resolved from `yspennstate/math-research-brain` main and reread before this report at commit `ebb0abd3bed054a5000f49a0d532a5f779b0d82c`. Owner control revision is `2026-09-22.2`, directive `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`. The later collective order supersedes the stale installation language retained in historical `AGENTS.md`: fleet02/B01 remains FOREST research, and new installation/benchmark work is stopped. No fleet02/B01 pause or stop was present.
+Fresh owner controls were resolved from `private-brain-repository` main and reread before this report at commit `ebb0abd3bed054a5000f49a0d532a5f779b0d82c`. Owner control revision is `2026-09-22.2`, directive `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`. The later collective order supersedes the stale installation language retained in historical `AGENTS.md`: fleet02/B01 remains FOREST research, and new installation/benchmark work is stopped. No fleet02/B01 pause or stop was present.
 
 The target remains the exact unit law on **all** unrooted acyclic edge subsets of every finite simple graph, including disconnected forests and all sizes. For distinct edges `e,f`, prove `Z_e Z_f-Z Z_ef >= 0`. No rooted, fixed-size, spanning-tree or arbitrary-weight law is substituted.
 

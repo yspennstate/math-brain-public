@@ -12,7 +12,7 @@ Continuity: not claimed in the six-mode branch used below.
 
 The unrestricted conjecture remains open. The result below does not derive a bounded physical carrier from the bare condition \(s_3(A)\ge1\); it proves that once a physical square carrier exists, two qualitatively different classes of hostile spectral changes may coexist without destroying it.
 
-Fresh controls were read from math-research-brain main: AGENTS.md blob af9b5936c3eed3bb1cced26eddef5fd3eea941ce, scheduled_tasks/README.md blob 14046b5138615be52bb1c49a998122a7c84e200e, correction inbox blob 6bdbd9987a4eefeba79d53915cfe7e232263f8ec, memory protocol blob 0d902d56688f4b5c575f5b921ddf9f6709e88312, assignment blob eefbe5aa60685c7bfc6cc1a2abc1eb856d7de454, and current request blob 352f1ea2d70f3c0c48379933bb31bdcff1ef5e0. The current Fisher-information continuation is retained only at its additional-regularity scope.
+Fresh controls were read from private-brain main: AGENTS.md blob af9b5936c3eed3bb1cced26eddef5fd3eea941ce, scheduled_tasks/README.md blob 14046b5138615be52bb1c49a998122a7c84e200e, correction inbox blob 6bdbd9987a4eefeba79d53915cfe7e232263f8ec, memory protocol blob 0d902d56688f4b5c575f5b921ddf9f6709e88312, assignment blob eefbe5aa60685c7bfc6cc1a2abc1eb856d7de454, and current request blob 352f1ea2d70f3c0c48379933bb31bdcff1ef5e0. The current Fisher-information continuation is retained only at its additional-regularity scope.
 
 Mathematical inputs:
 

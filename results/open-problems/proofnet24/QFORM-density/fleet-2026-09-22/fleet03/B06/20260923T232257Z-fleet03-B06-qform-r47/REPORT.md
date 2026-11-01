@@ -13,7 +13,7 @@ The unrestricted owner conjecture remains OPEN. No Gaussian, log-concavity, mome
 
 ## 1. Fresh source boundary and immediate predecessor
 
-Fresh `math-research-brain/main` at startup was
+Fresh `private-brain/main` at startup was
 
 `4f02efd0c35bb09e6fc4a2faa82db9e5d58df285`,
 

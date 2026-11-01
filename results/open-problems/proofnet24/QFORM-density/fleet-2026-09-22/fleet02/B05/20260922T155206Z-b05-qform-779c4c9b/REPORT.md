@@ -183,7 +183,7 @@ Full QFORM remains OPEN. No continuity claim is made here.
 
 ## 6. Source ledger
 
-- Fresh brain control at start: `yspennstate/math-research-brain@49f0dab3727d1d6cf4b3e77c494fb3b92a6bea8f`, owner revision `2026-09-22.5`; later pre-write control remained the same programme/revision.
+- Fresh brain control at start: `private-brain-repository@49f0dab3727d1d6cf4b3e77c494fb3b92a6bea8f`, owner revision `2026-09-22.5`; later pre-write control remained the same programme/revision.
 - Assigned partner actually applied: fleet03/B05, `QFORM-PAIR-SECTIONAL-COAREA-v1`, `private-source-repository@332f29e335274f2b3f81ccf92d62443b928c66cd`.
 - Partner's universal rank-two half-Riesz theorem used as background boundary, not as a premise of Sections 2--4: `private-source-repository@bf7bff5c9b11cf495ccbcb09ef48549fd9c0d409`.
 - Aggregate Pluecker collar used to interpret the residual structure: fleet03/B07, `private-source-repository@c3b0a3023962496543da62be43f07bff5ca0865b`.

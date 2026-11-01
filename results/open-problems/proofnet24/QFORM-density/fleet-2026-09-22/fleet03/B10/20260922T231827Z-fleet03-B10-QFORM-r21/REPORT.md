@@ -5,7 +5,7 @@ attacking: exact-rank-three hybrid/near-null physical direction; consume the rul
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Rank-three coupled case  
-**Pre-publication refresh:** `yspennstate/math-research-brain@fca399c04de1ea2962bb05063894b810b1201803`, same owner revision  
+**Pre-publication refresh:** `private-brain-repository@fca399c04de1ea2962bb05063894b810b1201803`, same owner revision  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** supporting target-level branch proved; full QFORM remains `OPEN / NOT PROVED`.
 

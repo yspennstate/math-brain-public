@@ -1,6 +1,6 @@
 # Post-publication correction check — fleet01/B06 `20260922T130334Z-qform-r11`
 
-A later fresh correction snapshot at `yspennstate/math-research-brain@9aa2469bab6499771c82a286203526fc1c042401` added two relevant warnings after the main report was committed.
+A later fresh correction snapshot at `private-brain-repository@9aa2469bab6499771c82a286203526fc1c042401` added two relevant warnings after the main report was committed.
 
 1. `QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS` refutes a **quadratic-phase/difference-variable** route that takes absolute values and then applies coordinatewise Hausdorff--Young/Hölder. It does not affect `QFORM-WEIGHTED-2D-PROJECTION-v1`: the latter applies sharp Hausdorff--Young only to the characteristic functions of the original one-dimensional inputs inside the exact **linear projection** factorization `hat mu(xi)=prod_i hat f_i(u_i dot xi)`, followed by geometric Brascamp--Lieb. No quadratic-phase ambiguity or difference-density majorant is introduced.
 

@@ -9,7 +9,7 @@ attacking: mixed-order minor Fourier synthesis: combine heavy 3-volume with comp
 
 The exact owner target remains open. This report does not assert the unrestricted three-large-eigenvalue theorem and does not assert a universal continuity theorem. The new theorem below gives an L1 characteristic-function bound, hence a bounded continuous density, in its stated cross-block scope. It preserves the known phase-aligned fragmented-support counterexample to every law-uniform pointwise scalar quadratic-phase decay estimate.
 
-Fresh control source before the run: `yspennstate/math-research-brain`, owner revision `2026-09-22.15`, QFORM-only. Source analytic premise: `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, whose fixed-order volume-sampling Brascamp--Lieb theorem is extended below. Assigned partner used: fleet02/B01 r31, canonical report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T233020Z-fleet02-B01-qform-r31/REPORT.md`.
+Fresh control source before the run: `private-brain-repository`, owner revision `2026-09-22.15`, QFORM-only. Source analytic premise: `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, whose fixed-order volume-sampling Brascamp--Lieb theorem is extended below. Assigned partner used: fleet02/B01 r31, canonical report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T233020Z-fleet02-B01-qform-r31/REPORT.md`.
 
 ## 1. Mixed-order minor Fourier theorem
 

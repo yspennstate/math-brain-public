@@ -15,7 +15,7 @@ Target: prove that every finite loopless digraph with at most one arc per ordere
 Fresh public status check: Bessy--Muis--Sereni--Steiner--Wiederrecht, *A relaxation of the Bermond--Thomassen conjecture*, arXiv:2608.12948 (13 August 2026), explicitly states that the genuine conjecture remains unresolved for all `k>=4`; its result permits each selected cycle to become directed after reversing at most one arc and therefore is not substituted for BT4.
 
 Latest complete team-lead mathematics source-read in this run:
-- fleet02/B04, `BT4-PRIMITIVE-TRACE-MIXED-PACKING-ONE-v1`, report blob `b768e00ab1e7f22e0cfd56d6f95ffbc36b3a1c60`, path `proofnet24/collective-BT4/fleet02/B04/fleet02-B04-20260922T094740Z-bt4-r11/REPORT.md` in `yspennstate/math-research-brain`.
+- fleet02/B04, `BT4-PRIMITIVE-TRACE-MIXED-PACKING-ONE-v1`, report blob `b768e00ab1e7f22e0cfd56d6f95ffbc36b3a1c60`, path `proofnet24/collective-BT4/fleet02/B04/fleet02-B04-20260922T094740Z-bt4-r11/REPORT.md` in `private-brain-repository`.
 - Essential predecessor handoff: fleet02/B04 `BT4-CLEAN-FOUR-PORT-WITNESS-LIFT-v1`, commit `3d1cdc39d7512ad857e134f23740c027ef879764`, handoff blob `b0c1c37b1d36fd7cf855946f20eb382a61cd346d`.
 
 Named OTHER-account partner result consumed and applied:

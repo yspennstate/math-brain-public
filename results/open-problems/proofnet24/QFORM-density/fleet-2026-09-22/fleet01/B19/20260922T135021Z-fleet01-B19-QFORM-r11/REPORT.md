@@ -231,7 +231,7 @@ Other completed mathematics actually applied:
 - fleet03/B19 critical rank-two `L^3` / localized residual theorem, canonical `private-source-repository@f600d39b2e88b14acf5af050076e1062cc33f1f6`, used in the conditional assembly status but not re-proved here;
 - fleet03/B13 finite projective-bank theorem, canonical handoff records report commit `5c37d1ea814c481c8a6c0230a871f6d59b448cda`.
 
-Fresh control at run start: `yspennstate/math-research-brain@0c0c57ad0f1454ca3ba708eaa2f8a42743d94608`; before publication main advanced through unrelated QFORM worker records, with owner revision still `2026-09-22.5` and the same exclusive target.
+Fresh control at run start: `private-brain-repository@0c0c57ad0f1454ca3ba708eaa2f8a42743d94608`; before publication main advanced through unrelated QFORM worker records, with owner revision still `2026-09-22.5` and the same exclusive target.
 
 **Proved this run:** spectral-square domination (2.1); balanced-cut block inequalities (3.2)--(3.7); threshold rank budget (3.8); selected-frame MSS corollary; target-level peer applications (5.2)--(5.6); exact six-dimensional mixed-profile obstruction; affine-tilt weak-closure lemma.
 

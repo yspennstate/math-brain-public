@@ -5,7 +5,7 @@ Run: `20261013T101721Z-fleet01-B12-cylinder-hierarchy-nogo`
 - Canonical repository: `private-source-repository`
 - Canonical core commit: `ce8c4585d1ede5c0b8797e86424cce265667b906`
 - Canonical path: `reports/fei-2026-10-11/runs/B12/20261013T101721Z-fleet01-B12-cylinder-hierarchy-nogo/`
-- Brain repository: `yspennstate/math-research-brain`
+- Brain repository: `private-brain-repository`
 - Brain core commit: `850ef24f9fc94a86eba2069eb1f768ef546f7734`
 - Brain path: `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B12/20261013T101721Z-fleet01-B12-cylinder-hierarchy-nogo/`
 - Core files uploaded: 11 in each repository.

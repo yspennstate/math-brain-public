@@ -7,7 +7,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`
 Assignment: coordinate minor selection / GEOMETRY  
 Method: complementary constructions and source-valid counterexamples  
 Run: `20260923T163223Z-fleet02-B07-QFORM-auto11`  
-Initial control: `yspennstate/math-research-brain@45afbd9740350eae52908f0d5cc1ceb97cd91ea7`  
+Initial control: `private-brain-repository@45afbd9740350eae52908f0d5cc1ceb97cd91ea7`  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Status: **NEW BOUNDED-SUPPORT E2 PHYSICAL-CORE RECEIVER / PINNED-e5 FRACTIONAL RESULT APPLIED / EXACT SUPPORT-DIFFUSE TARGET STRESS / FULL QFORM OPEN**.
 

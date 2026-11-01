@@ -23,22 +23,22 @@ from typing import Any, Iterable, Mapping, Sequence
 from .benchmark import SolverView
 
 
-CONFIG_SCHEMA = "org.math-research-brain/challenge-bank-config"
+CONFIG_SCHEMA = "org.private-brain/challenge-bank-config"
 CONFIG_SCHEMA_VERSION = 1
-CASE_SCHEMA = "org.math-research-brain/challenge-case"
+CASE_SCHEMA = "org.private-brain/challenge-case"
 CASE_SCHEMA_VERSION = 1
-CARD_SCHEMA = "org.math-research-brain/reference-card"
+CARD_SCHEMA = "org.private-brain/reference-card"
 CARD_SCHEMA_VERSION = 1
-MANIFEST_SCHEMA = "org.math-research-brain/challenge-manifest"
+MANIFEST_SCHEMA = "org.private-brain/challenge-manifest"
 MANIFEST_SCHEMA_VERSION = 1
-SEAL_SCHEMA = "org.math-research-brain/challenge-split-seal"
+SEAL_SCHEMA = "org.private-brain/challenge-split-seal"
 SEAL_SCHEMA_VERSION = 1
-BANK_SEAL_SCHEMA = "org.math-research-brain/challenge-bank-seal"
+BANK_SEAL_SCHEMA = "org.private-brain/challenge-bank-seal"
 BANK_SEAL_SCHEMA_VERSION = 1
-RETRIEVAL_RECORD_SCHEMA = "org.math-research-brain/retrieval-audit-digests"
+RETRIEVAL_RECORD_SCHEMA = "org.private-brain/retrieval-audit-digests"
 RETRIEVAL_RECORD_SCHEMA_VERSION = 1
 GENERATOR_VERSION = "sealed-challenge-v1"
-HOLDOUT_PAYLOAD_SCHEMA = "org.math-research-brain/challenge-holdout-payload"
+HOLDOUT_PAYLOAD_SCHEMA = "org.private-brain/challenge-holdout-payload"
 HOLDOUT_PAYLOAD_SCHEMA_VERSION = 1
 MERKLE_ALGORITHM = "rfc6962-sha256"
 

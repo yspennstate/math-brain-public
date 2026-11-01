@@ -5,7 +5,7 @@ attacking: exact separation of qualitative absolute continuity, fixed-instance C
 
 Status: `TARGET_C0_LEDGER_CLOSED / BEST-CONSTANT-SMOOTH-ROUGH-EQUIVALENCE / PARTNER_APPLIED / FULL_QFORM_OPEN`.
 
-Programme: `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`; owner control revision `2026-09-22.15` read at `math-research-brain@33056a258ac41cf4c874419503b9ff920f5dfbb8`. Execution remains `WITHOUT_VERIFIED_BRAIN`.
+Programme: `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`; owner control revision `2026-09-22.15` read at `private-brain@33056a258ac41cf4c874419503b9ff920f5dfbb8`. Execution remains `WITHOUT_VERIFIED_BRAIN`.
 
 The unrestricted owner theorem is **not proved**. The new point is a precise regularity closure: for the owner target, existence of a canonical continuous density is already a fixed-instance theorem, and the optimal universal height constant is exactly the same whether one works with arbitrary rough cap-one product marginals or only smooth compactly supported cap-one marginals. Thus continuity can be removed completely from the central universal-height proof obligation.
 

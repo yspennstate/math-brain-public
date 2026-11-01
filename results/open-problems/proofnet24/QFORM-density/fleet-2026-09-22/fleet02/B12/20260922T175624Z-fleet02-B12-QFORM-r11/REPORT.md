@@ -16,7 +16,7 @@ Fresh owner control is revision `2026-09-22.9`. The latest designated partner re
 
 with source-bound handoff
 
-`yspennstate/math-research-brain@0be00f14d246c917032f588cc70e6a1a718456a7`.
+`private-brain-repository@0be00f14d246c917032f588cc70e6a1a718456a7`.
 
 It proves that the owner-message spectral-complement bridge
 

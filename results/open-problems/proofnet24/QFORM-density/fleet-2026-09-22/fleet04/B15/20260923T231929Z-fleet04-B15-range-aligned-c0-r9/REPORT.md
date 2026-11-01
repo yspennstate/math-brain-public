@@ -38,7 +38,7 @@ This arbitrary-dimensional family shows that dense, unbounded cross coupling is 
 
 ## 2. Sources and corrections
 
-Fresh controls were read at math-research-brain main commit a05302d52d58e6fa6d55dee11dc356c85c477dab, with owner-control revision 2026-09-22.15.
+Fresh controls were read at private-brain main commit a05302d52d58e6fa6d55dee11dc356c85c477dab, with owner-control revision 2026-09-22.15.
 
 The completed fleet01/B15 input is private-source@fc9d06c78e03b4e1ad924f49fb9ab0f03018d2cd, run 20260923T220552Z-fleet01-B15-QFORM-auto11. Its exact interval theorem is applied below.
 

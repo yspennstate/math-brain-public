@@ -1,7 +1,7 @@
 """FEI100 sync: finished run directories and the agents' rolling files to GitHub.
 
 private-source master: reports/fei-2026-10-11/runs/<stream>/<RUN_ID>/ (Codex and Claude runs),
-reports/fei-2026-10-11/fleet05/ (rolling files, board, token ledger). math-research-brain main: the same under
+reports/fei-2026-10-11/fleet05/ (rolling files, board, token ledger). private-brain main: the same under
 research_pushes/2026-10-11-full-fei-campaign/handoffs/{fleet05,claude}/. Brain-repo ingestion belongs to
 claude-51330238 (agreed 11 Oct 23:5x), so this script does not push there.
 Commits are built in a temporary index (read-tree origin/<branch>, hash-object, update-index, commit-tree) and
@@ -16,7 +16,7 @@ NOWIN = 0x08000000
 MAXF = 20 * 2**20
 REPOS = {
     "mop": (pathlib.Path(r"~/private-source"), "master"),
-    "mrb": (pathlib.Path(r"~/math-research-brain"), "main"),
+    "mrb": (pathlib.Path(r"~/private-brain"), "main"),
 }
 k32 = ctypes.WinDLL("kernel32", use_last_error=True)
 k32.CreateMutexW.restype = wt.HANDLE
@@ -99,7 +99,7 @@ def push_part(name, files, msg):
     idx = ROOT / "sync" / f"idx_{name}"
     env = dict(os.environ, GIT_INDEX_FILE=str(idx))
     # A private tracking ref, and --refmap= so the clone's configured refspec does not also update
-    # refs/remotes/origin/<br> in the same fetch (math-research-brain refused that double update, 12 Oct).
+    # refs/remotes/origin/<br> in the same fetch (private-brain refused that double update, 12 Oct).
     track = f"refs/fei100/{name}-{br}"
     # one git process for every file: a process per file took ~5 s each on this machine (11-12 Oct: 20% of
     # 3,857 files in 70 minutes). Blobs do not depend on the base, so they are hashed once.

@@ -15,7 +15,7 @@ No random variable is rotated. No moment, support, Gaussian, log-concavity, poin
 
 ## 1. Fresh control and source boundary
 
-Immediately before publication, `math-research-brain` main was refreshed to commit
+Immediately before publication, `private-brain` main was refreshed to commit
 
 `acdaa8bd7856ada64a4d250502177789b4c8fc52`.
 

@@ -10,7 +10,7 @@ Continuity: **not claimed**.
 
 The target remains: independent real \(X_i\) with densities at most one, arbitrary symmetric \(A\), and \(s_3(A)\ge1\).
 
-Fresh control was read from \`yspennstate/math-research-brain\` main, observed immediately before publication at \`f89c6ddf42332d9cd8fc47501cb1061716ee9071a\`. The live correction inbox was retained. The newest Claude-source directory was checked through its later continuation commit \`7ffd1ed79398611eb06752f622be0ce33dcacb5a\`.
+Fresh control was read from \`private-brain-repository\` main, observed immediately before publication at \`f89c6ddf42332d9cd8fc47501cb1061716ee9071a\`. The live correction inbox was retained. The newest Claude-source directory was checked through its later continuation commit \`7ffd1ed79398611eb06752f622be0ce33dcacb5a\`.
 
 The completed fleet01/B07 theorem actually applied below is the rank-two-tube Plücker compiler at
 

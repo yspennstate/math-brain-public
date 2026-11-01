@@ -8,7 +8,7 @@ TASK: B15 ACCOUNT: fleet02 RUN: 2026-09-21T17:03:01.165703Z — FEI spectral rem
 
 ## 0. Fresh control, scientific frontier, and what moved
 
-Authenticated fleet control was resolved at `yspennstate/math-research-brain` main commit
+Authenticated fleet control was resolved at `private-brain-repository` main commit
 `BRAIN-BENCHMARK-FEI-2026-09-21-01`; no fleet02/B15 pause or stop was present. The protected README Git blob was
 `14c6dfefb9a567d99dea06c7cd48dbb38e7a56c9`.
 

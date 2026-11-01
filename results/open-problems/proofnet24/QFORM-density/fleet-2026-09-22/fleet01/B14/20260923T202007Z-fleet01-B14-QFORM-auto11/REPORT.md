@@ -289,7 +289,7 @@ The range part of every conditioning-generated translation is fully solved by Th
 Fresh owner control read in this run: QFORM only, owner-control revision `2026-09-22.15`, no B14 pause/stop observed.  Consumed live corrections include: false law-uniform pointwise quadratic Fourier decay; no independence after spectral rotation; spectral-fiber dimension loss; bounded-diameter localization failure; no universal fixed fragment-count reduction; and the local-cross-rank-three dichotomy failure.  None is used as a premise.
 
 Sources actually used:
-1. `math-research-brain` fresh control files and current QFORM state.
+1. `private-brain` fresh control files and current QFORM state.
 2. `private-source@b2d5f5354dfe179e18e366cf49c485e5326e9288`, fleet02/B14 Fisher translation-mixture localization and scale barrier.
 3. `private-source@4a65677d185d35154dc3dfae320c5df9f939b8a2`, projected Fisher-information theorem.
 4. `private-source@51058178f17c27df3f70279291a667a5c9e8cbb7`, requested B02 review, PASS on the Fisher analytic core.

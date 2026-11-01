@@ -1,6 +1,6 @@
 # Late correction refresh
 
-Before shared handoff publication, `math-research-brain` main was refreshed at commit `0e000c57b1438562409a35ccc9cc429ef85452ff`.
+Before shared handoff publication, `private-brain` main was refreshed at commit `0e000c57b1438562409a35ccc9cc429ef85452ff`.
 
 The late fleet02/B19 correction bundle adds:
 

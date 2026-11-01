@@ -26,9 +26,9 @@ for match in matches:
     print(json.dumps({'line':match['line'], 'fields':list(row), 'row_excerpt':json.dumps(row,ensure_ascii=False)[:1800]}, ensure_ascii=False))
 
 for candidate in (
-    '~/math-research-brain/local/population/brain.sqlite3',
-    '~/math-research-brain/local/brain.sqlite3',
-    '~/math-research-brain/local/math_brain.sqlite3',
+    '~/private-brain/local/population/brain.sqlite3',
+    '~/private-brain/local/brain.sqlite3',
+    '~/private-brain/local/math_brain.sqlite3',
     '~/math-brain-build/local/population/brain.sqlite3',
 ):
     path = Path(candidate)
@@ -49,7 +49,7 @@ for candidate in (
                 if found:
                     print('TARGET_CARD', json.dumps({'id':found[0],'title':found[1],'body':found[2]},ensure_ascii=False))
 
-canonical_root=Path('~/math-research-brain')
+canonical_root=Path('~/private-brain')
 for directory in (canonical_root, canonical_root/'local'):
     for extension in ('*.sqlite3','*.sqlite','*.db'):
         paths=[p for p in directory.glob(extension) if not any(t in p.name.lower() for t in ('test','blind','answer','eval'))]

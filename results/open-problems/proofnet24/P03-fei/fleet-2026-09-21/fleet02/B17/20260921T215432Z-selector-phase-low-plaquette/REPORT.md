@@ -10,7 +10,7 @@ NOVELTY: NOT CLAIMED
 
 ## 0. Controls, scope, and last-three comparison
 
-Fresh owner controls were resolved from `yspennstate/math-research-brain` main at
+Fresh owner controls were resolved from `private-brain-repository` main at
 on FEI under `FEI-JOINT-FOUR-ACCOUNTS-2026-09-21-192650Z`, superseding the
 older all-installation-only allocation for this slot. No B17/fleet02 pause or
 stop was present. A later pre-write main recheck reached

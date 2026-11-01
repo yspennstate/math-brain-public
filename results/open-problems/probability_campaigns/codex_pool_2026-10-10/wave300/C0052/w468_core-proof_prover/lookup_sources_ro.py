@@ -5,7 +5,7 @@ import time
 
 root = Path(__file__).resolve().parent
 paths = [Path("~/math-brain-build/local/population/brain.sqlite3")]
-base = Path("~/math-research-brain/local")
+base = Path("~/private-brain/local")
 frontier = [base] if base.is_dir() else []
 for depth in range(3):
     next_level = []

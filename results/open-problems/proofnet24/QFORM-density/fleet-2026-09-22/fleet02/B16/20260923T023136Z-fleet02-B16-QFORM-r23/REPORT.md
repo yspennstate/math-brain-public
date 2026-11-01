@@ -231,7 +231,7 @@ A useful next statement would be a grouped overlap transducer that keeps the com
 
 ## 9. Source pins and review status
 
-Control source at invocation start: `yspennstate/math-research-brain@1e5d04862685b227e6e7cae93d22347672011a70`, owner revision `2026-09-22.15`.
+Control source at invocation start: `private-brain-repository@1e5d04862685b227e6e7cae93d22347672011a70`, owner revision `2026-09-22.15`.
 
 Required Claude baseline actually used: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, files `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md` under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 

@@ -157,4 +157,4 @@ A failure of `A_II=0` cannot be treated perturbatively under the arbitrary cap-o
 - Livshyts--Paouris--Pivovarov, arXiv:1507.07949, Theorem 1.1: product marginal density cap `2^(k/2)`.
 - Herry--Malicet--Poly, arXiv:2303.09488: quadratic-form regularity under iid / smooth Gaussian-field-representation hypotheses; scope comparison only.
 - Partner: `private-source-repository@84fa5922df082f90064dea4d22a600a60e799803`, exact report path above.
-- Control refresh: `yspennstate/math-research-brain@e54bb99afabe21870e4be39fac48783b9556cc56`.
+- Control refresh: `private-brain-repository@e54bb99afabe21870e4be39fac48783b9556cc56`.

@@ -2,7 +2,7 @@
 
 **Run:** `20260922T163820Z-fleet03-B05-QFORM-r13`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Owner control observed:** revision `2026-09-22.6` at `yspennstate/math-research-brain@144f57f486c0d7caf6356876dbc4ea62686e44cf`  
+**Owner control observed:** revision `2026-09-22.6` at `private-brain-repository@144f57f486c0d7caf6356876dbc4ea62686e44cf`  
 **Assignment:** Quadratic coarea bound  
 **Classification:** `ESSENTIAL_STEP_APPLIED / NEW ENDPOINT CLASSIFICATION + TWO COAREA CLOSURES / FULL TARGET OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.

@@ -269,7 +269,7 @@ Full QFORM remains **OPEN / NOT PROVED / NOT DISPROVED**. No moments, compact su
 
 ## Source pins
 
-Current controls were read fresh from `yspennstate/math-research-brain` at the run start and refreshed before this report; the programme revision is `2026-09-22.5`, owner control `2026-09-22.15`, and the current owner continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
+Current controls were read fresh from `private-brain-repository` at the run start and refreshed before this report; the programme revision is `2026-09-22.5`, owner control `2026-09-22.15`, and the current owner continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 
 Required old-Claude source actually applied: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md` Theorem H; `FOURIER_ROUTE_REPORT.md` and `COUNTEREXAMPLE_SEARCH.md` were also read at their pinned revision.
 

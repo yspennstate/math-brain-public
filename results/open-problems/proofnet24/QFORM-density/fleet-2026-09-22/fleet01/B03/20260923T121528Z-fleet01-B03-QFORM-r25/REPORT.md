@@ -14,7 +14,7 @@ The unrestricted owner target remains OPEN and the unrestricted continuity concl
 
 Fresh prepublication control was resolved at
 
-`yspennstate/math-research-brain@763726107461c2d17900102bcd9b35026da01eb3`,
+`private-brain-repository@763726107461c2d17900102bcd9b35026da01eb3`,
 
 
 ### 1.1 Required newest Claude/e5 input

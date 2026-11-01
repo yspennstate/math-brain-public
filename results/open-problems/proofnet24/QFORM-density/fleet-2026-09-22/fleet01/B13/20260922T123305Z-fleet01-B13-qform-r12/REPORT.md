@@ -3,7 +3,7 @@
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Run: `20260922T123305Z-fleet01-B13-qform-r12`  
 Status: **AUXILIARY STRUCTURAL OBSTRUCTION / full QFORM OPEN**  
-Control read: `yspennstate/math-research-brain@780aaad88dacb14ffb70eded3d052d52f39925f8`, owner revision `2026-09-22.5`.
+Control read: `private-brain-repository@780aaad88dacb14ffb70eded3d052d52f39925f8`, owner revision `2026-09-22.5`.
 
 ## 1. Exact target context
 

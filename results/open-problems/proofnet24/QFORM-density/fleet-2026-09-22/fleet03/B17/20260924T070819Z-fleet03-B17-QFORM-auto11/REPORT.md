@@ -309,7 +309,7 @@ For the Gaussian class above, the centered rank-three comparator has a continuou
 
 ## 6. Source/correction status
 
-Control source read before the run: `yspennstate/math-research-brain@7c60b94f729b89142196f07dd26608c25f454723`; fresh prepublication main was later re-resolved and corrections refreshed. Required live corrections consumed include the failures of law-uniform pointwise quadratic-phase decay, unrestricted-joint coarea, conditional projection-cap moments, naive fiber-sup integration, post-rotation independence, and fixed fragment-count reductions. None is used here.
+Control source read before the run: `private-brain-repository@7c60b94f729b89142196f07dd26608c25f454723`; fresh prepublication main was later re-resolved and corrections refreshed. Required live corrections consumed include the failures of law-uniform pointwise quadratic-phase decay, unrestricted-joint coarea, conditional projection-cap moments, naive fiber-sup integration, post-rotation independence, and fixed fragment-count reductions. None is used here.
 
 Execution status: `WITHOUT_VERIFIED_BRAIN`. Repository retrieval is genuine; no authenticated native learned-memory receiver-use event occurred.
 

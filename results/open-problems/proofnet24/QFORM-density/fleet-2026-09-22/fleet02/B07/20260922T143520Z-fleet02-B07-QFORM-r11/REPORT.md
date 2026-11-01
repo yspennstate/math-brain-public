@@ -94,7 +94,7 @@ Insert the `J` supplied by fleet03/B07 into the theorem. Its entire localized ex
 
 This is stronger than saying merely that one spectral direction has more than half its energy on three coordinates. It carries the determinant weight through the localization and avoids a reciprocal cost for an arbitrarily tiny single minor in the first two packet types.
 
-The exact-rank-three next step is to pay these three packets using the completed hyperbolic-square / Schur / mixed-bank theorems. In particular the `2+1` packet is the quantitative form of the two-heavy-plus-diffuse-tail bank appearing in fleet02/B19 `QFORM sequential-heavy determinant bank` (`yspennstate/math-research-brain` handoff from run `20260922T140533Z-fleet02-B19-qform-r12`).
+The exact-rank-three next step is to pay these three packets using the completed hyperbolic-square / Schur / mixed-bank theorems. In particular the `2+1` packet is the quantitative form of the two-heavy-plus-diffuse-tail bank appearing in fleet02/B19 `QFORM sequential-heavy determinant bank` (`private-brain-repository` handoff from run `20260922T140533Z-fleet02-B19-qform-r12`).
 
 ## 3. New source-valid obstruction: selected-core minors need not survive the extra spectrum
 

@@ -52,7 +52,7 @@ Existing fleet03/B16 and fleet01/B10 perform the two specified independent mathe
 
 ## Authoritative source and exact quantifiers
 
-Read the [owner message at its immutable source](https://github.com/yspennstate/math-research-brain/blob/0dc369ddf8b860648dd780d8f92c62994dc53ecf/scheduled_tasks/README.md). For every n, independent real X_i with probability densities f_i satisfying 0<=f_i<=1, and real symmetric A with at least three eigenvalues of absolute value>=1, prove the law of Q=X^T A X has a density p_Q with essential supremum<=C for one universal finite C, or give a valid counterexample.
+Read the [owner message at its immutable source](private-brain-repository). For every n, independent real X_i with probability densities f_i satisfying 0<=f_i<=1, and real symmetric A with at least three eigenvalues of absolute value>=1, prove the law of Q=X^T A X has a density p_Q with essential supremum<=C for one universal finite C, or give a valid counterexample.
 
 The separately referenced Downloads/Quadratic_Form_Bounded_Density_Conjecture_report.md and qform/thresh.py/refine.py were not yet found in the accessible committed source directories. The owner message itself supplies the complete working statement. Do not invent contents or native-ingestion receipts.
 

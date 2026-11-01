@@ -339,8 +339,8 @@ No full solution is claimed here, and no existence theorem for the required acti
 
 ## 13. Source pins and correction status
 
-- initial control snapshot: `yspennstate/math-research-brain@14e37c18dc0be3144252be6506896224997ee3d3`;
-- fresh pre-write control/correction snapshot: `yspennstate/math-research-brain@949e6ab6b5a141d41667fa08551b256b40401003`;
+- initial control snapshot: `private-brain-repository@14e37c18dc0be3144252be6506896224997ee3d3`;
+- fresh pre-write control/correction snapshot: `private-brain-repository@949e6ab6b5a141d41667fa08551b256b40401003`;
 - owner programme/control: `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`;
 - completed partner law-level convex-mixture localization actually applied: `private-source-repository@871a2d4c9f1ea58d89748ab1abab05021b4408de`;
 - preceding fleet02/B14 three-point inverse-gap theorem: `private-source-repository@3f241388d9bcacf1379ef8ef640b35d7d14aad91`;

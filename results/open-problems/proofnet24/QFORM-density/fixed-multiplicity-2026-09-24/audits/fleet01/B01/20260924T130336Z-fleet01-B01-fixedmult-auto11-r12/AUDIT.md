@@ -7,7 +7,7 @@ Audited repository snapshot: `private-source-repository@b7eb3da660dfbe32fef8c4d9
 Canonical manuscript initial commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Canonical manuscript blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
 Declared manuscript SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`  
-Fresh brain control read before publication: `yspennstate/math-research-brain@6aaf4cdf3f5f7f68b84a7063ca11dd5cf8ab47ed`.
+Fresh brain control read before publication: `private-brain-repository@6aaf4cdf3f5f7f68b84a7063ca11dd5cf8ab47ed`.
 
 ## Executive verdict
 

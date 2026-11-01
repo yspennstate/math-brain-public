@@ -320,7 +320,7 @@ For the sharper indefinite constant `(6.9)`, the coefficient in `(7.6)` improves
 
 ## 8. Designated partner fleet02/B03 applied to an actual inequality
 
-The latest completed designated-partner handoff consumed in this run is fleet02/B03's `QFORM-DISJOINT-EXTERIOR-MASS-EXIT-v1`, committed in `math-research-brain@c2cf502ba91445ad3119cfb9991131ec7d32d725`, with canonical mathematics `private-source@5e5366b98337d13ba24bf666f4e42155553de7c2`.
+The latest completed designated-partner handoff consumed in this run is fleet02/B03's `QFORM-DISJOINT-EXTERIOR-MASS-EXIT-v1`, committed in `private-brain@c2cf502ba91445ad3119cfb9991131ec7d32d725`, with canonical mathematics `private-source@5e5366b98337d13ba24bf666f4e42155553de7c2`.
 
 For the global overlap decomposition
 

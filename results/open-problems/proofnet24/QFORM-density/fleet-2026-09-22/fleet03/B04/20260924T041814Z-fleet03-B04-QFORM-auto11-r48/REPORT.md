@@ -12,7 +12,7 @@ The unrestricted owner target is not proved here. This run sharpens the earlier 
 
 ## 1. Fresh controls and exact dependencies
 
-Fresh owner control was resolved from `yspennstate/math-research-brain/main`; the prepublication refresh used commit
+Fresh owner control was resolved from `private-brain-repository/main`; the prepublication refresh used commit
 
 `ceea86b4db08435ab86f553e346d3d2d6168c4a0`,
 

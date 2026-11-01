@@ -11,7 +11,7 @@
 
 The invocation initially carried the superseded FEI prompt. Fresh protected-control resolution moved the sole research target to the quadratic-form bounded-density conjecture. The coherent current control used for this report is:
 
-- `yspennstate/math-research-brain@0c91685885872548af61fc232c561c0685c1f5f9`;
+- `private-brain-repository@0c91685885872548af61fc232c561c0685c1f5f9`;
 - `scheduled_tasks/README.md`, owner control revision `2026-09-22.5`;
 
 Required corrections used:

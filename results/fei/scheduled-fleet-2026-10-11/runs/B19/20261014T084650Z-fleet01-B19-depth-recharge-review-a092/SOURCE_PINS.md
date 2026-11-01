@@ -1,6 +1,6 @@
 # Source pins
 
-- GU laser focus: `yspennstate/math-research-brain`, commit `ac5a014bac41dbc40da170ef5ec6ccb541510357`, `scheduled_tasks/work/shared/full-fei-only-2026-10-12/GU_LASER_FOCUS_20261014.md`, blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
+- GU laser focus: `private-brain-repository`, commit `ac5a014bac41dbc40da170ef5ec6ccb541510357`, `scheduled_tasks/work/shared/full-fei-only-2026-10-12/GU_LASER_FOCUS_20261014.md`, blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
 - B19 assignment: `private-source-repository`, `reports/fei-2026-10-11/assignments/B19.json`, read from `master`.
 - Execution protocol: `private-source-repository`, `reports/fei-2026-10-11/EXECUTION_PROTOCOL.json`, blob `457358ff62cbf1141a72096bcabdf95bf18c1be2`.
 - Previous independent overlap review: commit `394bd89025715fdef73ffe1728a3902bba285b4f`, run `20261014T075040Z-fleet01-B19-changing-overlap-review-a092`, report blob `3cacddbd3735b85925d135ea2f196b8dd0ebe651`.

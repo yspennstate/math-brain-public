@@ -313,7 +313,7 @@ Any next receiver must keep arbitrary same-bank `G(Z)` and original-coordinate p
 ## 11. Source pins
 
 Owner source message:
-`https://github.com/yspennstate/math-research-brain/blob/0dc369ddf8b860648dd780d8f92c62994dc53ecf/scheduled_tasks/README.md`
+`private-brain-repository`
 
 Current B06 predecessor consumed:
 `private-source-repository@3a6a071259b600b9abd468d55a6e220d5d621e85:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T083427Z-fleet01-B06-QFORM-r51/REPORT.md`

@@ -4,8 +4,8 @@ attacking: indefinite Schur-lightcone external smoother via a disjoint-bank bili
 # fleet02/B09 QFORM r11 — diffuse external square bank pays a rank-two lightcone core
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`.
-Owner control at start: `yspennstate/math-research-brain@8f4fc3081c4197ab549d4aa2b3bde859a10de324`, revision `2026-09-22.15`.
-Prewrite control refresh: `yspennstate/math-research-brain@fc7d770c6dede6b96ed629920b388b47be831cb4`, same revision.
+Owner control at start: `private-brain-repository@8f4fc3081c4197ab549d4aa2b3bde859a10de324`, revision `2026-09-22.15`.
+Prewrite control refresh: `private-brain-repository@fc7d770c6dede6b96ed629920b388b47be831cb4`, same revision.
 Worker: `fleet02/B09` (`Bilinear block mechanism`).
 Status: **ESSENTIAL_STEP_APPLIED / LOCAL STRENGTHENING REFUTED / FULL QFORM OPEN**.
 Execution label: **WITHOUT_VERIFIED_BRAIN**.

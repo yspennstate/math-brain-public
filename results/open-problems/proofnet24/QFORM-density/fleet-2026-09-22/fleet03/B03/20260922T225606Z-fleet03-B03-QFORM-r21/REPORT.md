@@ -225,6 +225,6 @@ The checker is finite verification only; the analytic proof above is the mathema
 
 ## 10. Source/control record
 
-Start control read: `yspennstate/math-research-brain@0de937a66fc7877561f4a9946f6272e0dc8d0e24`, owner revision `2026-09-22.15`. Pre-publication main refresh observed `38c01bd0633aa4ae280f6f8461ba65a5a8f1bf25`, still QFORM-only. Live corrections consumed include `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-UV-CONDITIONAL-CAP-FALSE`, `QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE`, `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`, the arbitrary-joint coarea correction, and the conditional projection positive-moment correction.
+Start control read: `private-brain-repository@0de937a66fc7877561f4a9946f6272e0dc8d0e24`, owner revision `2026-09-22.15`. Pre-publication main refresh observed `38c01bd0633aa4ae280f6f8461ba65a5a8f1bf25`, still QFORM-only. Live corrections consumed include `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-UV-CONDITIONAL-CAP-FALSE`, `QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE`, `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`, the arbitrary-joint coarea correction, and the conditional projection positive-moment correction.
 
 Repository transport was authenticated, but no separate native learned-memory receiver was verified; status remains `WITHOUT_VERIFIED_BRAIN`.

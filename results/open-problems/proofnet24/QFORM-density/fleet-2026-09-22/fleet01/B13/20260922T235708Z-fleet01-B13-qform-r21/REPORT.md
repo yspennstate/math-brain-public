@@ -15,7 +15,7 @@ No arbitrary-joint coarea inequality, conditional projection-density moment, poi
 
 ## 1. Source-pinned state actually used
 
-Fresh protected control was read from `yspennstate/math-research-brain` main; the owner control remains revision `2026-09-22.15`, QFORM only. The live correction inbox was reread before this write.
+Fresh protected control was read from `private-brain-repository` main; the owner control remains revision `2026-09-22.15`, QFORM only. The live correction inbox was reread before this write.
 
 The designated partner `fleet02/B13` is used in two places.
 

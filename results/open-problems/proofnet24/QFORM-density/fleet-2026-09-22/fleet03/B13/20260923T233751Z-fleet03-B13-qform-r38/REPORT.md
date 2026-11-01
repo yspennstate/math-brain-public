@@ -15,7 +15,7 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, post-rot
 
 Final prepublication owner refresh used
 
-`yspennstate/math-research-brain@f828b8110e4a4752425ade69bda5e8da4cd54082`,
+`private-brain-repository@f828b8110e4a4752425ade69bda5e8da4cd54082`,
 
 
 The designated partner actually applied is fleet04/B13:

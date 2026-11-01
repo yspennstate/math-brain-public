@@ -13,7 +13,7 @@ The unrestricted QFORM conjecture is **not proved** here. The new theorem proves
 
 ## 1. Fresh controls, corrections and the first attempted implication
 
-Fresh owner control is `math-research-brain@72038b4bc2ab4c369014cff17eeb8efc17973188`, continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, revision `2026-09-22.15`: QFORM remains the sole target. The current claim ledger still marks the full density theorem and full-target continuity OPEN.
+Fresh owner control is `private-brain@72038b4bc2ab4c369014cff17eeb8efc17973188`, continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, revision `2026-09-22.15`: QFORM remains the sole target. The current claim ledger still marks the full density theorem and full-target continuity OPEN.
 
 The current Claude continuation actually read is
 

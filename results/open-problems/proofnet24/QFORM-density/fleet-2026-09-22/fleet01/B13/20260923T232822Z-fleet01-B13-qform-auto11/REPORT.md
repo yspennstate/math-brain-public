@@ -7,7 +7,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Owner control revision: `2026-09-22.15
 
 Status: **ESSENTIAL STEP APPLIED / NEW SUPPORTING STRUCTURAL THEOREM. The unrestricted QFORM conjecture remains OPEN / NOT PROVED / NOT DISPROVED. Unrestricted continuity remains separately OPEN.**
 
-Fresh source refresh before this write: `yspennstate/math-research-brain@eb02983a8a6dabc4cfc31eea56667692545ea766`; fresh `private-source/master` head observed as `c4610f778836a217009f7d1c773b5e7cd3788f50`. The current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` remains in force; no B13 stop was found.
+Fresh source refresh before this write: `private-brain-repository@eb02983a8a6dabc4cfc31eea56667692545ea766`; fresh `private-source/master` head observed as `c4610f778836a217009f7d1c773b5e7cd3788f50`. The current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` remains in force; no B13 stop was found.
 
 No random-coordinate rotation is used. No law-uniform pointwise quadratic oscillatory decay, arbitrary-joint coarea bound, projection-density-only shortcut, interval extremality, bounded support diameter, bounded fragment count, or deletion of a small coefficient tail is used.
 

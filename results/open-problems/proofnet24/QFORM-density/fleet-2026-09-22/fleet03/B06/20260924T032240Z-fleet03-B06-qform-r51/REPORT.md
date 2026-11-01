@@ -5,8 +5,8 @@ attacking: QFORM-SMALLPAIR-SHEARVOLUME-HEAVYCORE-COMPILER-v1 by spending the com
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Assignment: curved fiber integration / quantitative inequalities and rigorous computations  
-Startup control commit: `yspennstate/math-research-brain@d5fea91584899bb4ce292dfcc49410064c552ac9`  
-Publication control refresh observed: `yspennstate/math-research-brain@5eae7feafe693618083d0e2342554d2c4af06ee4`  
+Startup control commit: `private-brain-repository@d5fea91584899bb4ce292dfcc49410064c552ac9`  
+Publication control refresh observed: `private-brain-repository@5eae7feafe693618083d0e2342554d2c4af06ee4`  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Status: `NEW WEIGHTED RANK-THREE CROSSING THEOREM + LOW-DISJOINTNESS THREE-HUB CERTIFICATE + DESIGNATED PARTNER APPLIED / FULL QFORM OPEN`
 

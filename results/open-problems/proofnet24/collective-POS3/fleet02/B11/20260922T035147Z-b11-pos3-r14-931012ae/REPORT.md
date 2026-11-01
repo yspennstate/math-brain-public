@@ -7,7 +7,7 @@
 
 ## 1. Fresh control and source-bound state
 
-Fresh control was resolved from `yspennstate/math-research-brain` main at
+Fresh control was resolved from `private-brain-repository` main at
 revision `2026-09-22.2`; `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`
 remains active; the later stop on new installation and benchmark work remains
 in force. This run did POS3 mathematics only.

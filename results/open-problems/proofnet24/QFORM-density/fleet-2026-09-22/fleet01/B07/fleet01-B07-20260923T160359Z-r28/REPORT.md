@@ -14,7 +14,7 @@ The unrestricted theorem is not claimed. All probabilistic conditioning remains 
 
 ## 1. Sources actually consumed
 
-Fresh `math-research-brain` main was resolved and the owner/control files, programme manifest, current research, claims, live correction inbox, memory protocol, and `fleet01/B07` assignment were read. The full conjecture and the global continuity conclusion remain OPEN.
+Fresh `private-brain` main was resolved and the owner/control files, programme manifest, current research, claims, live correction inbox, memory protocol, and `fleet01/B07` assignment were read. The full conjecture and the global continuity conclusion remain OPEN.
 
 The immediately preceding B07 state is `private-source-repository@f03bb7505dc80819aae237e34f516c801e15c6d8`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T150507Z-r27/REPORT.md`.
 

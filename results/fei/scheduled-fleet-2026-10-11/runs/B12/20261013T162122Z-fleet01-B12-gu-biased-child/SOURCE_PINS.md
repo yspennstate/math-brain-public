@@ -1,6 +1,6 @@
 # Source pins
 
-- Owner GU amendment: `yspennstate/math-research-brain@29c2c61935109bc3f1d35382dbf0e92c5c6cfb67`.
+- Owner GU amendment: `private-brain-repository@29c2c61935109bc3f1d35382dbf0e92c5c6cfb67`.
 - `ORDER.md` blob: `7c5e21945adef435e6b587909603dd96794a1ebe`.
 - `CASE_TARGETS.json` blob: `97e41262ebb4f09eec53630a918acae09efc9a48`.
 - GU route notes blob: `3b0636c653c7818368eeb204011c3e1ff21c234e`.

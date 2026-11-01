@@ -15,7 +15,7 @@ is equivalent to
 
 `P(e,f in F) <= P(e in F)P(f in F)`.
 
-Fresh owner controls were read coherently from `yspennstate/math-research-brain` main at `cb211d35ef70b804af6a329a2c689172098f6fe4`, owner-control revision `2026-09-22.2`, programme `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`. New brain installation and benchmark work remain stopped.
+Fresh owner controls were read coherently from `private-brain-repository` main at `cb211d35ef70b804af6a329a2c689172098f6fe4`, owner-control revision `2026-09-22.2`, programme `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`. New brain installation and benchmark work remain stopped.
 
 The newest complete campaign-lead report consumed is fleet01/B01 run `20260922T080733Z-b01-forest-auto11`, commit `ff5c762464c33fb496946541d46a81ef0e2a71d5`, candidate `FOREST-CERTIFIED-CONTRACTION-STAR2-v2`. Its first unpaid step is the triangle-edge contraction case: after contracting a triangle edge in a simple graph, parallel pairs push forward to a simple graph with activities `2` on one star and `1` elsewhere. The lead calls a third edge certified when the conditional covariance after contraction is already known nonpositive.
 

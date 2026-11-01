@@ -4,7 +4,7 @@ import json
 for agent in ('w562', 'w563'):
     p = Path('~/brain_workers') / agent / 'STATUS.md'
     print(agent, p.read_text(encoding='utf-8')[:2000] if p.exists() else 'NO_STATUS')
-p = Path('~/math-research-brain')
+p = Path('~/private-brain')
 print('CANONICAL_ROOT_NAMES', [x.name for x in p.iterdir() if x.name.lower() not in ('tests','.git','.venv')][:35])
 for filename in ('README.md','pyproject.toml'):
     file = p / filename

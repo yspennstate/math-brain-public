@@ -14,7 +14,7 @@ The unrestricted quadratic-form bounded-density conjecture remains **OPEN**. The
 
 Fresh prepublication control was resolved at
 
-`yspennstate/math-research-brain@091792e12e2fea4f0deeed6d8d6111e5617b0e55`,
+`private-brain-repository@091792e12e2fea4f0deeed6d8d6111e5617b0e55`,
 
 
 The one-dimensional integrated Fourier input actually used is the completed e5/Claude package

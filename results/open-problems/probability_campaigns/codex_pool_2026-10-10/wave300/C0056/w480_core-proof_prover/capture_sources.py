@@ -70,7 +70,7 @@ status.update({
     'current_openness':'UNKNOWN',
     'prior_attempts':[r['record']['attempt_id'] for r in records['attempts.jsonl']],
     'owner_solved_retired_check':'Exact C0056 intake and export cards were inspected; both retain unverified/attempted-unsolved status. No exhaustive owner-archive certification or current solved-status certification is claimed.',
-    'canonical_store_check':'Exact export cards checked; canonical live math-research-brain store has not yet been queried.',
+    'canonical_store_check':'Exact export cards checked; canonical live private-brain store has not yet been queried.',
     'receipts_path':str(SOURCE / 'SOURCE_RECEIPTS.json'),
     'review_state':'packet_preparing; independent verdict pending',
     'bundle_state':{'prepared':True,'submitted':False,'reviewed':False,'ingested':False,'retrievable':False},

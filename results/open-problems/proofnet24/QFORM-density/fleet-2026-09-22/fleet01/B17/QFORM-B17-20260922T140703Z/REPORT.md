@@ -226,7 +226,7 @@ No refuted intermediate claim is used.
 
 ## 9. Source pins and next step
 
-Run-start coherent control source: `yspennstate/math-research-brain@61c55c4006501a0cd6e55f43fb92e88d451dc779`; control revision `2026-09-22.5`. Fresh pre-publication control/correction recheck reached `a9acf04a55c16e2ab843047c8ca4f73ce4254491`; no later stop or contradictory correction was present.
+Run-start coherent control source: `private-brain-repository@61c55c4006501a0cd6e55f43fb92e88d451dc779`; control revision `2026-09-22.5`. Fresh pre-publication control/correction recheck reached `a9acf04a55c16e2ab843047c8ca4f73ce4254491`; no later stop or contradictory correction was present.
 
 Prior ruled-sheet theorem explicitly consumed: fleet01/B16 handoff `qform-20260922T114042Z-fleet01-B16-r11.md`, canonical report creation commit `8004481452c19f103fd5dd24c2cb4d787860b56a`.
 

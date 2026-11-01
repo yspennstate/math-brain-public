@@ -62,7 +62,7 @@ def main():
             'Old original Codex worktree path referenced by C-intake README is absent.',
             'C-intake schema uses C-prefixed ids; recovered P0104 through two id-filtered export rows and exact live-node reads.',
             'Owner Big Open problem directory README was checked for the named probability scope; no exhaustive solved/retired-work check is claimed.',
-            'The separate math-research-brain checkout was inspected only for its store locator; a separate canonical-store content search is not certified.',
+            'The separate private-brain checkout was inspected only for its store locator; a separate canonical-store content search is not certified.',
         ],
         'source_identity_checks': {
             'live_and_export_digests_agree_for_two_selected_nodes': True,

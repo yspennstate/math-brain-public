@@ -25,7 +25,7 @@ The explicit Fourier-frame construction in Section 5 proves the last sentence qu
 
 ## 2. Source-pinned inputs and corrections
 
-Fresh control before publication: `yspennstate/math-research-brain@556bbb0ae467b4f586505010af4da4cd99c5921e`, owner revision `2026-09-22.5`; owner README blob `433b2d57345823967480245b59a7c47d51019c37`; live correction-inbox blob `752bf867375ef2a2ddbd0cf8570e8370c4b38e79`.
+Fresh control before publication: `private-brain-repository@556bbb0ae467b4f586505010af4da4cd99c5921e`, owner revision `2026-09-22.5`; owner README blob `433b2d57345823967480245b59a7c47d51019c37`; live correction-inbox blob `752bf867375ef2a2ddbd0cf8570e8370c4b38e79`.
 
 The calculation respects all live corrections, in particular the false law-uniform one-dimensional pointwise oscillatory-decay claim, the fiber-sup dimension loss, the lack of independence after spectral rotation, the single-Schur-extraction failure, the conditional-cap failure, and the new local-cross/rank-three dichotomy counterexample. No refuted premise is used.
 

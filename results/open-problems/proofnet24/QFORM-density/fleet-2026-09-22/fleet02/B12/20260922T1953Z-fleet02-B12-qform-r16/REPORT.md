@@ -4,7 +4,7 @@ attacking: exact stability and failure modes of scalar Schur elimination when on
 # fleet02/B12 — exact spectral-spike Schur law and certificate switching
 
 **Programme:** QFORM-DENSITY-3EIG-20260922.  
-**Owner control read:** math-research-brain control revision 2026-09-22.15, fresh main read through commit `22ca56c8fd5979d70bd01f5a96ff801da084bc2c` before scientific publication.  
+**Owner control read:** private-brain control revision 2026-09-22.15, fresh main read through commit `22ca56c8fd5979d70bd01f5a96ff801da084bc2c` before scientific publication.  
 **Assignment:** Additional eigenvalue control.  
 **Classification:** `PROVED_SUPPORTING_STABILITY_THEOREM + EXACT_TARGET_CLASS_MECHANISM_BARRIER / FULL_TARGET_OPEN`.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.

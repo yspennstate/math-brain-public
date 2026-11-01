@@ -13,7 +13,7 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`
 
 The owner target remains the unrestricted product-law conjecture: the coordinates are independent real random variables with arbitrary densities bounded by one; `A` is an arbitrary real symmetric matrix having at least three eigenvalues of absolute value at least one. No Gaussianity, log-concavity, moments, compact/connected support, iid law, eigen-coordinate independence, or convolution treatment of a quadratic remainder is used.
 
-Fresh source controls and the live correction inbox were read from `yspennstate/math-research-brain/main`. In particular, this report does not use the refuted uniform pointwise quadratic van-der-Corput claim, arbitrary-joint coarea gate, conditional-density cap/moment gates, naive fiber-supremum argument, or any assertion that a small coefficient remainder is an independent random error.
+Fresh source controls and the live correction inbox were read from `private-brain-repository/main`. In particular, this report does not use the refuted uniform pointwise quadratic van-der-Corput claim, arbitrary-joint coarea gate, conditional-density cap/moment gates, naive fiber-supremum argument, or any assertion that a small coefficient remainder is an independent random error.
 
 The completed designated partner actually used is fleet04/B12 r8:
 

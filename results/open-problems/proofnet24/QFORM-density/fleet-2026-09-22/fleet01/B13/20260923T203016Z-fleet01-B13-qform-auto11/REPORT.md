@@ -8,7 +8,7 @@ attacking: convert fleet02/B13's single-bi-star obstruction into a quantitative 
 
 ## 1. Fresh scope and dependencies
 
-Fresh `math-research-brain` main at run start was `f5b1fb16df62f83d216afcdd918156d44ea30d37`. I re-read the current owner control, MANIFEST, CURRENT_RESEARCH, CLAIMS, live CORRECTION_INBOX, MEMORY_PROTOCOL, `scheduled_tasks/PROTOCOL.md`, and the fleet01/B13 assignment. In particular, none of the following is used: uniform pointwise quadratic oscillatory decay, independence after rotation, arbitrary-joint coarea, projection-density-only pushforward, bounded support diameter, bounded fragment count, or centered/single-interval extremality.
+Fresh `private-brain` main at run start was `f5b1fb16df62f83d216afcdd918156d44ea30d37`. I re-read the current owner control, MANIFEST, CURRENT_RESEARCH, CLAIMS, live CORRECTION_INBOX, MEMORY_PROTOCOL, `scheduled_tasks/PROTOCOL.md`, and the fleet01/B13 assignment. In particular, none of the following is used: uniform pointwise quadratic oscillatory decay, independence after rotation, arbitrary-joint coarea, projection-density-only pushforward, bounded support diameter, bounded fragment count, or centered/single-interval extremality.
 
 The completed designated partner result used here is fleet02/B13, source-pinned at
 

@@ -277,6 +277,6 @@ A concrete successor is `QFORM-CURVED-PRODUCT-FIBER-TRACE-v1`: prove a dimension
 - New negative result: the source-valid target family (4.1)-(4.15) refutes a universal conditional-slice-sup closure and identifies the precise missing mixed factor.
 - Assigned partner actually applied: fleet02/B05 `QFORM-2D-PARSEVAL-PROJECTION-CAP-v1`, canonical commit `e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`.
 - Sectional engine: fleet03/B05 `QFORM-PAIR-SECTIONAL-COAREA-v1`, canonical commit `332f29e335274f2b3f81ccf92d62443b928c66cd`.
-- Fresh owner control immediately before publication: `yspennstate/math-research-brain@5cd9bf4e0e52d0177b7e132df4c09ca57b2a0196`, revision `2026-09-22.7`. The target remains unchanged and exclusive.
+- Fresh owner control immediately before publication: `private-brain-repository@5cd9bf4e0e52d0177b7e132df4c09ca57b2a0196`, revision `2026-09-22.7`. The target remains unchanged and exclusive.
 
 Changed-file privacy review: this report contains only mathematical statements, public-style theorem references already present in the authorized private research repositories, and nonsecret source commit/path identifiers. No credentials, scheduler identifiers, machine paths, unrelated private data, email, Drive material, benchmark gold, or public-release action are included.

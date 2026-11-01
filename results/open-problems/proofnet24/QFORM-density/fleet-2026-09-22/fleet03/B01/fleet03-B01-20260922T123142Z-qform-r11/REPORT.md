@@ -159,7 +159,7 @@ This report does **not** infer that the finite-heavy reduction itself closes the
 
 ## 9. Source pins and integrity
 
-Fresh owner/control source before publication: `yspennstate/math-research-brain` owner revision `2026-09-22.5`.
+Fresh owner/control source before publication: `private-brain-repository` owner revision `2026-09-22.5`.
 
 Corrections consumed: baseline no-law-uniform-pointwise-decay, no-post-rotation-independence, fiber-sup dimension loss; plus `QFORM-CROSSMINOR-ALONE-FALSE`, `QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH`, and `QFORM-TWOSHEET-XRAY-ONLY-FALSE`.
 

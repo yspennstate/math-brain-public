@@ -6,7 +6,7 @@ Execution context: `WITHOUT_VERIFIED_BRAIN`
 
 ## Inputs consumed
 
-Fresh owner controls: `yspennstate/math-research-brain` main `e83003429e1e47ebd24f1d4c2f50b72b4aeeaa06`, owner revision `2026-09-22.2`, collective campaign `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`.
+Fresh owner controls: `private-brain-repository` main `e83003429e1e47ebd24f1d4c2f50b72b4aeeaa06`, owner revision `2026-09-22.2`, collective campaign `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`.
 
 Latest complete lead snapshot consumed: fleet01/B01 handoff blob `4cee205cb7d254caf785692838111988a0b8a155`, candidate `FOREST-TRIANGLEFREE-SIMPSON-BUDGET-v1`. It rejects the old fixed-graph Cocks globalization and identifies a `{1,2}` STAR-2 contraction comparison as the first triangle-conditioning debt.
 

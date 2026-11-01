@@ -19,7 +19,7 @@ I use fleet03/B16 run `20260922T195823Z-fleet03-B16-QFORM-r15`, canonical report
 
 `private-source-repository@c6601cc34ac9ca1f485f8c20dc4a28c909580817:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T195823Z-fleet03-B16-QFORM-r15/REPORT.md`,
 
-with correction event `QFORM-SYMMETRIC-THREE-AMBIGUITY-BL-FAIL-v1` at `yspennstate/math-research-brain@255dc04085fefae8cfd62c607f10dbc40db9994d`.
+with correction event `QFORM-SYMMETRIC-THREE-AMBIGUITY-BL-FAIL-v1` at `private-brain-repository@255dc04085fefae8cfd62c607f10dbc40db9994d`.
 
 For every cap-one probability density `f`, define
 

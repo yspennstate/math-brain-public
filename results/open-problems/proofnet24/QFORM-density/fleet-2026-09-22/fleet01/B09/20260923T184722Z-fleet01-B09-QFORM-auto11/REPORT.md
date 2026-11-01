@@ -12,7 +12,7 @@ The unrestricted QFORM conjecture remains OPEN and full-target continuity remain
 
 ## 1. Sources and corrections actually used
 
-Fresh `math-research-brain/main` was read before the proof: `AGENTS.md`, `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/fleet01/B09.json`. The current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was consumed.
+Fresh `private-brain/main` was read before the proof: `AGENTS.md`, `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/fleet01/B09.json`. The current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was consumed.
 
 The designated partner result applied below is fleet02/B09 r20, theorem `QFORM-DUALZERO-DIFFUSE-CARRIER-RECEIVER-v1`, canonical source
 

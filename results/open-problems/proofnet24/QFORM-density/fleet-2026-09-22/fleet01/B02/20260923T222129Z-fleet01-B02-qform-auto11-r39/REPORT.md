@@ -11,7 +11,7 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates with 
 
 ## 1. Fresh control and dependency actually used
 
-Fresh `math-research-brain/main` was resolved at run start. Owner control remains revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, QFORM-only. The live correction package was consumed: no law-uniform scalar pointwise Fresnel decay, no post-rotation independence, no arbitrary-joint coarea cap, no worst conditional-density cap, no one-minor shortcut.
+Fresh `private-brain/main` was resolved at run start. Owner control remains revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`, QFORM-only. The live correction package was consumed: no law-uniform scalar pointwise Fresnel decay, no post-rotation independence, no arbitrary-joint coarea cap, no worst conditional-density cap, no one-minor shortcut.
 
 Designated partner result used at equation level:
 

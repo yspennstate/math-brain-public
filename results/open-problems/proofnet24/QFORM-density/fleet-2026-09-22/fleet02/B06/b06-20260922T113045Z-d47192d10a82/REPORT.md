@@ -10,7 +10,7 @@
 
 The later owner order supersedes the earlier FEI assignment. The target is: for independent real `X_i` with densities `f_i<=1` and real symmetric `A` having at least three eigenvalues of magnitude at least `1`, prove that `Q=X^TAX` has an essentially bounded density with one universal dimension-free constant.
 
-Fresh control before final publication was `yspennstate/math-research-brain@60757c672067bfb966846b7fabfab6d34b80e60c`, with B06 assignment blob `2232129fa7f54afbd24ee9798bb7fa25187cb9db`. I consumed the current required corrections:
+Fresh control before final publication was `private-brain-repository@60757c672067bfb966846b7fabfab6d34b80e60c`, with B06 assignment blob `2232129fa7f54afbd24ee9798bb7fa25187cb9db`. I consumed the current required corrections:
 
 - `QFORM-POINTWISE-DECAY-FALSE`: no law-uniform pointwise Fresnel power decay over arbitrary densities `<=1`;
 - `QFORM-FIBER-SUP-DIMENSION-LOSS`: integrating an unrestricted spectral-fiber supremum can lose a factor growing with dimension;

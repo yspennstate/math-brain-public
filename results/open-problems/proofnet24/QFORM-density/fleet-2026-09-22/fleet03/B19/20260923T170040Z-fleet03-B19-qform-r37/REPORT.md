@@ -13,7 +13,7 @@ Continuity: proved on the new D3-paid branch only; not asserted on the surviving
 
 The fresh control branch was re-resolved immediately before publication at
 
-`yspennstate/math-research-brain@5f2ff5c256f100ecd0291fcdbd84fc1f52b2be39`.
+`private-brain-repository@5f2ff5c256f100ecd0291fcdbd84fc1f52b2be39`.
 
 
 The immediate B19 premise is the completed preceding report, read from

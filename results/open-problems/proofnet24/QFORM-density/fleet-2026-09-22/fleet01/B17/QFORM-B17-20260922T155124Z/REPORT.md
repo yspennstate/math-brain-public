@@ -12,7 +12,7 @@ Classification: **AUXILIARY_ONLY / ROTATED_INFINITESIMAL_LIMIT_NO_ESCAPE**. The 
    
    with independent inputs of density at most one, the Levy--Khintchine Gaussian variance of every weak limit is at least `1/12`.
 2. `QFORM-GAUSSIAN-FULL-NONCENTRAL-C3SQRT2-v1`, source `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T120821Z-fleet01-B17-qform-sharp-constant-v1/ADDENDUM_NONCENTRAL_GAUSSIAN.md`: if `G~N(m,Sigma)`, `Sigma >= sigma^2 I`, and the symmetric quadratic matrix has at least three eigenvalues of magnitude at least one, then the quadratic-form density is bounded and continuous with norm at most `1/(2 sqrt(2) sigma^2)`.
-3. Live correction inbox through control snapshot `math-research-brain@fc1ce39df9220d4c90d43d68cf668e7f3f28f4f5` was checked. No pointwise oscillatory-decay, post-rotation independence, single-minor, conditional-cap, fixed-fragment-count, fiberwise-trace, or phase-Wiener premise is used.
+3. Live correction inbox through control snapshot `private-brain@fc1ce39df9220d4c90d43d68cf668e7f3f28f4f5` was checked. No pointwise oscillatory-decay, post-rotation independence, single-minor, conditional-cap, fixed-fragment-count, fiberwise-trace, or phase-Wiener premise is used.
 
 ## Theorem: multivariate rotated infinitesimal frames inherit the `1/12` Gaussian floor
 

@@ -19,7 +19,7 @@ report=report.replace('Brain submission: the six cards remain','Brain submission
 source=json.loads((ROOT/'SOURCE_STATUS.json').read_text(encoding='utf-8'))
 source['auxiliary_audit_status']={'H1_H4':'scoped KEEP by w544 and w545','receipt':'AUDIT_RECEIPTS.json','different_login_provenance':'UNVERIFIED','not_a_P0321_solution':True}
 source['population_read_only_query']={'receipt':'population_store_p0321.json','matched_nodes':2,'query_only':True}
-source['canonical_lookup_limit']='The named math-research-brain checkout had no live-store locator in the bounded README/store/local reads; no separate current P0321 solution record was recovered. This does not certify absence of an owner solution.'
+source['canonical_lookup_limit']='The named private-brain checkout had no live-store locator in the bounded README/store/local reads; no separate current P0321 solution record was recovered. This does not certify absence of an owner solution.'
 (ROOT/'SOURCE_STATUS.json').write_text(json.dumps(source,indent=2),encoding='utf-8')
 previous=(ROOT/'STATUS.md').read_text(encoding='utf-8').splitlines()
 log='\n'.join(line for line in previous[2:] if not line.startswith('NEXT:')).strip()

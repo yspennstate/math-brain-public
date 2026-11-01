@@ -280,4 +280,4 @@ The new disjoint-compound branch proves a universal L1 estimate on one full spec
 
 ## 7. Write/readback and integrity note
 
-Changed-file allowlist for this run is restricted to this B02 run directory in `private-source`, this run's B02 handoff/memory files in `math-research-brain`, and the matching B02 finish record. No unrelated repository files, permissions, task definitions, notifications, or scheduler state are changed. No dedicated privacy scanner is exposed in this runtime; a limited manual content review found only mathematical/source metadata and no unrelated private data.
+Changed-file allowlist for this run is restricted to this B02 run directory in `private-source`, this run's B02 handoff/memory files in `private-brain`, and the matching B02 finish record. No unrelated repository files, permissions, task definitions, notifications, or scheduler state are changed. No dedicated privacy scanner is exposed in this runtime; a limited manual content review found only mathematical/source metadata and no unrelated private data.

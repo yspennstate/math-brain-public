@@ -22,7 +22,7 @@ or else isolate the genuine remaining curved-bank operator and prove a product-p
 
 ## 2. Source-pinned dependencies and corrections
 
-Fresh programme state and corrections were read from `yspennstate/math-research-brain@2010e67fe8c43f12a3925927ab6d4a8145c18731`, including `CURRENT_RESEARCH.md`, `CLAIMS.json`, `DELTAS.json`, `CORRECTION_INBOX.json`, `PATHWAYS.md`, `MEMORY_PROTOCOL.md`, and the exact fleet02/B09 assignment card.
+Fresh programme state and corrections were read from `private-brain-repository@2010e67fe8c43f12a3925927ab6d4a8145c18731`, including `CURRENT_RESEARCH.md`, `CLAIMS.json`, `DELTAS.json`, `CORRECTION_INBOX.json`, `PATHWAYS.md`, `MEMORY_PROTOCOL.md`, and the exact fleet02/B09 assignment card.
 
 The mathematical inputs used positively are:
 

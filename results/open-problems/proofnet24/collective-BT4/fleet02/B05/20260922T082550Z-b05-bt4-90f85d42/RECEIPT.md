@@ -9,9 +9,9 @@ Test artifacts at the same readback commit:
 - `checker_output.json` Git blob `c3fcd03873f96f1e38444c5a73231937270e3165`.
 - `FINISH.md` Git blob `1d2d0cb76ac2d112ae5442b810531a64cc7473bd`.
 
-Shared source-bound handoff in `math-research-brain`: commit `e5eae08407ed309bb1ce6126c31d24140af6d988`, Git blob `4433e632d4564693743c88d58f5a0ecaf87997d1`.
+Shared source-bound handoff in `private-brain`: commit `e5eae08407ed309bb1ce6126c31d24140af6d988`, Git blob `4433e632d4564693743c88d58f5a0ecaf87997d1`.
 
-Final fresh owner-control observation reached `math-research-brain` main `eff401231e2f57f0b81e7a4c82067e13344264ff`; README/OWNER-control blob remained `3d4a9372c87802ab734141a3374d04c8823372e3`, revision `2026-09-22.2`, with no later B05 stop.
+Final fresh owner-control observation reached `private-brain` main `eff401231e2f57f0b81e7a4c82067e13344264ff`; README/OWNER-control blob remained `3d4a9372c87802ab734141a3374d04c8823372e3`, revision `2026-09-22.2`, with no later B05 stop.
 
 
 Privacy/secret readback: no credentials, scheduler identifiers, machine paths, raw private transcripts, benchmark gold, or unrelated private data are present in the scoped artifacts.

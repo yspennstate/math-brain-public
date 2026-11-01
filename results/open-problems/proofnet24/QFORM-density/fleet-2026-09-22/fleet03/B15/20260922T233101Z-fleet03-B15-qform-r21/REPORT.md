@@ -386,7 +386,7 @@ class-preserving Gaussian padding, as required after repeated regularization wor
 
 ## 10. Source pins
 
-- Control source at run start: `yspennstate/math-research-brain@0978e6fe90234d8b545ec790fef99764d301dce4`.
+- Control source at run start: `private-brain-repository@0978e6fe90234d8b545ec790fef99764d301dce4`.
 - Ruled source checked at the current private-source master as well as source commit `e5f71d79eff325201dd0274053d20268ce65b837`; its file blob remained `d11ace6dbf5ecdf6ce5921f80f727e92e95bf8fc` at the pre-publication check.
 - Product-marginal theorem transfer checked in fleet03/B18's literature report and the Claude source: every two-dimensional orthogonal projection of a cap-one product law has density at most `2`.
 - Partner fleet04/B15 heat theorem: `ad7e5daa036cc8330b1432285ad40fec611d37dd`.

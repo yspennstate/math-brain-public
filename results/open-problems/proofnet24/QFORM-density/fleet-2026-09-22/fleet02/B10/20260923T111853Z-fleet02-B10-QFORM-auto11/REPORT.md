@@ -14,7 +14,7 @@ The unrestricted target remains OPEN: arbitrary independent original-coordinate 
 
 ## 1. Source boundary and first unpaid implication
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` main at start commit
+Fresh owner control was resolved from `private-brain-repository` main at start commit
 
 `d8ae9f823b044ecb1756fa6bca4c2bf9f66155c9`,
 

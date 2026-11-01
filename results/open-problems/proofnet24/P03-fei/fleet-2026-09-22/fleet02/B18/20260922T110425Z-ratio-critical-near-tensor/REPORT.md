@@ -9,7 +9,7 @@
 
 ## 0. Control, corrections, and target
 
-The run started from `yspennstate/math-research-brain/main` commit
+The run started from `private-brain-repository/main` commit
 `e439a01a24aad34b23270e844ef0dd74bd8296ec` and, immediately before publication,
 rechecked the live head at `b94a61bc0d016f72fa1d129c4c77c6dfc0b3821c`.
 The canonical FEI state remained `FEI-20260922T1000Z-v1`; the correction inbox was empty.

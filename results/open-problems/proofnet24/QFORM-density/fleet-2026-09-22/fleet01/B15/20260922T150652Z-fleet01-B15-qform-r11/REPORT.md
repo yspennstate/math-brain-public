@@ -14,7 +14,7 @@ The full target remains: for every dimension `n`, independent real coordinates w
 
 for every interval `I`. Equivalently, the output law has an essentially bounded density with norm at most `C`. Continuity of that density is a separate stronger conclusion.
 
-Fresh brain control was read at `yspennstate/math-research-brain@c39a945842cffdeeca468cc63f0a22a777886d84`, then refreshed before publication to `0c6a36586f49ba81b805bb5d850149b8e6848c29`; the owner revision stayed `2026-09-22.5`. The live correction inbox was re-read at the refreshed commit. In particular this report does not use a law-uniform pointwise quadratic Fourier decay, independence after rotation, a projection-only shortcut, conditional-density caps after a rotated change of variables, or a local-principal-block/rank-three-cross-cut dichotomy.
+Fresh brain control was read at `private-brain-repository@c39a945842cffdeeca468cc63f0a22a777886d84`, then refreshed before publication to `0c6a36586f49ba81b805bb5d850149b8e6848c29`; the owner revision stayed `2026-09-22.5`. The live correction inbox was re-read at the refreshed commit. In particular this report does not use a law-uniform pointwise quadratic Fourier decay, independence after rotation, a projection-only shortcut, conditional-density caps after a rotated change of variables, or a local-principal-block/rank-three-cross-cut dichotomy.
 
 The assigned partner result actually used is fleet02/B15:
 

@@ -22,7 +22,7 @@ The important new ingredient is an explicit `L^1`-input to `L^infinity`-output m
 
 ## 2. Source-corrected premises actually used
 
-I re-read the live state and corrections at `math-research-brain@f9c9de562645a66900820391f4959519d09842d0`. In particular I do **not** use the refuted arbitrary-joint rank-three coarea estimate, the refuted conditional positive-moment estimate, pointwise law-uniform van der Corput decay, independence after spectral rotation, or fiber-supremum dimension-free claims.
+I re-read the live state and corrections at `private-brain@f9c9de562645a66900820391f4959519d09842d0`. In particular I do **not** use the refuted arbitrary-joint rank-three coarea estimate, the refuted conditional positive-moment estimate, pointwise law-uniform van der Corput decay, independence after spectral rotation, or fiber-supremum dimension-free claims.
 
 Assigned partner actually applied:
 

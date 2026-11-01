@@ -14,7 +14,7 @@ The first unpaid implication **after** this run is not local continuity of the n
 
 Fresh protected controls were reread before this write at
 
-`yspennstate/math-research-brain@757247132f122cc18bfb84412588f66cd8676212`,
+`private-brain-repository@757247132f122cc18bfb84412588f66cd8676212`,
 
 
 Mathematical sources actually used:

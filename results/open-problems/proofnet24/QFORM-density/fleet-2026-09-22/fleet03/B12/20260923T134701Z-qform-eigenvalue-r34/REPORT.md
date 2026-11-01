@@ -44,7 +44,7 @@ No general rotation of the random variables is used. No quadratic remainder is t
 
 ## 2. Source pins and corrections
 
-Fresh control before the derivation was read on `yspennstate/math-research-brain` main at observed commit
+Fresh control before the derivation was read on `private-brain-repository` main at observed commit
 
 `987c70c9433591c2c1376a5db452d580aec9e78e`,
 

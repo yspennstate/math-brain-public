@@ -3,7 +3,7 @@ attacking: exact witnesswise product-indicator purification, then aggregate the 
 
 # fleet01/B13 — exact purification and aggregate disjoint-pair-volume reduction
 
-Programme: `QFORM-DENSITY-3EIG-20260922`. Owner control consumed at publication refresh: revision `2026-09-22.15`, `math-research-brain` main `c83713f8ce6b6093b7842d41095b10e137525e00`. Execution: `WITHOUT_VERIFIED_BRAIN`.
+Programme: `QFORM-DENSITY-3EIG-20260922`. Owner control consumed at publication refresh: revision `2026-09-22.15`, `private-brain` main `c83713f8ce6b6093b7842d41095b10e137525e00`. Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 Status: **PROVED SUPPORTING TARGET-LEVEL REDUCTION / FULL QFORM OPEN / CONTINUITY OPEN**.
 

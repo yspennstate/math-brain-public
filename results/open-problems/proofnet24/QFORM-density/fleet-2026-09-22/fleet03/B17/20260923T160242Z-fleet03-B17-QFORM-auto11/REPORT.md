@@ -275,7 +275,7 @@ No refuted law-uniform pointwise oscillatory decay, post-rotation independence, 
 
 Dependencies consumed:
 
-- fresh owner/control programme state from `yspennstate/math-research-brain`, revision `2026-09-22.15`;
+- fresh owner/control programme state from `private-brain-repository`, revision `2026-09-22.15`;
 - fleet04/B17 weighted local Edgeworth and exact lower-obstruction witness: `private-source@2156b76156ad5956c214a881fcfd6d977d6f3b9f`;
 - fleet01/B17 cone-tip closure for the complementary one-heavy/two-diffuse N3 family: `private-source@9ba7adec3f1f7907e3e05cfce6acabb3beedb441`.
 

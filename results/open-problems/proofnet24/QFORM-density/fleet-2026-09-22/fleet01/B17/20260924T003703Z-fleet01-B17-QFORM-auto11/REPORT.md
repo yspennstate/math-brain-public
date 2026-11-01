@@ -4,7 +4,7 @@ Status: **new supporting sharp-witness theorem. The unrestricted QFORM target re
 
 Worker: `fleet01/B17`, run `20260924T003703Z-fleet01-B17-QFORM-auto11`.
 
-Fresh control source at start: `yspennstate/math-research-brain@bdc146bfbc18be1c90e7a1570b857e970ebc5d86`, owner revision `2026-09-22.15`. Execution status: `WITHOUT_VERIFIED_BRAIN`.
+Fresh control source at start: `private-brain-repository@bdc146bfbc18be1c90e7a1570b857e970ebc5d86`, owner revision `2026-09-22.15`. Execution status: `WITHOUT_VERIFIED_BRAIN`.
 
 The designated partner result actually used below is the completed fleet02/B17 theorem
 

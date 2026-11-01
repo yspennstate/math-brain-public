@@ -10,7 +10,7 @@ The full conjecture remains **OPEN**. This report proves the exact reduction req
 
 ## 1. Source state and corrections
 
-Fresh control before the mathematical write was `yspennstate/math-research-brain@98dcc2e9e09e141ebd9907cb82dba67cb4721460`, owner revision `2026-09-22.5`. The live correction inbox includes the refutation `QFORM-CROSSMINOR-ALONE-FALSE`; no argument below uses a cross-minor-alone implication. The standing corrections `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBER-SUP-DIMENSION-LOSS`, and `QFORM-NO-INDEPENDENCE-AFTER-ROTATION` are also respected.
+Fresh control before the mathematical write was `private-brain-repository@98dcc2e9e09e141ebd9907cb82dba67cb4721460`, owner revision `2026-09-22.5`. The live correction inbox includes the refutation `QFORM-CROSSMINOR-ALONE-FALSE`; no argument below uses a cross-minor-alone implication. The standing corrections `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBER-SUP-DIMENSION-LOSS`, and `QFORM-NO-INDEPENDENCE-AFTER-ROTATION` are also respected.
 
 The assigned partner is `fleet03/B13`. No completed current-QFORM handoff from that slot existed at the fresh read, so no stale FEI result was imported. A named completed **other-account** result was consumed instead:
 

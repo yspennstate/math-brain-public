@@ -6,7 +6,7 @@ Brain state: `WITHOUT_VERIFIED_BRAIN`.
 
 ## Live control and dependency pins
 
-The direct FEI assignment was superseded before mathematical work by the later OWNER MESSAGE in `yspennstate/math-research-brain`, `scheduled_tasks/README.md`, read at commit `4993c401590483face10ae80b9711f09c53d584e` and re-resolved later on main. The active target is therefore the universal bounded-density conjecture for quadratic forms, not FEI.
+The direct FEI assignment was superseded before mathematical work by the later OWNER MESSAGE in `private-brain-repository`, `scheduled_tasks/README.md`, read at commit `4993c401590483face10ae80b9711f09c53d584e` and re-resolved later on main. The active target is therefore the universal bounded-density conjecture for quadratic forms, not FEI.
 
 Named OTHER-account result consumed and used: fleet03/B17, `Qform B17 diagonal pi theorem handoff`, brain commit `5a060b9340b64e27474a5d95d7b4782cfb894382`, path `scheduled_tasks/work/shared/qform-bounded-density-2026-09-22/handoffs/fleet03/B17/fleet03-B17-20260922T112131Z.md`. B17 proves the coordinate-diagonal same-sign-pair bound `pi` and gives a correct resonance counterexample to law-uniform pointwise one-dimensional quadratic Fourier decay.
 

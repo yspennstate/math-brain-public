@@ -10,7 +10,7 @@ The full conjecture remains open. This report proves two correction-safe support
 
 ## 1. Sources and corrections consumed
 
-Fresh owner/control state was read from `yspennstate/math-research-brain` main. The target is: independent real coordinates with one-dimensional densities at most one; real symmetric `A`; at least three eigenvalues of modulus at least one; prove one universal essential density bound for `X^TAX` or a valid counterexample. No moments, connected support, definite signature, diagonal-basis independence or post-rotation independence are assumed.
+Fresh owner/control state was read from `private-brain-repository` main. The target is: independent real coordinates with one-dimensional densities at most one; real symmetric `A`; at least three eigenvalues of modulus at least one; prove one universal essential density bound for `X^TAX` or a valid counterexample. No moments, connected support, definite signature, diagonal-basis independence or post-rotation independence are assumed.
 
 Corrections consumed before publication include `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBER-SUP-DIMENSION-LOSS`, `QFORM-NO-INDEPENDENCE-AFTER-ROTATION`, `QFORM-UV-CONDITIONAL-CAP-FALSE`, `QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE`, `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`, and the newer `QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1`. None of their challenged premises is used below.
 

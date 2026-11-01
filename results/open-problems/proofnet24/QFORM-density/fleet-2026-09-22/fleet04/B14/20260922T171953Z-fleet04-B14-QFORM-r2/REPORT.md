@@ -2,7 +2,7 @@
 
 **Programme:** \`QFORM-DENSITY-3EIG-20260922\`  
 **Control revision:** \`2026-09-22.8\` (programme revision \`2026-09-22.5\`)  
-**Startup control:** \`yspennstate/math-research-brain@4af7ebffc7f51910f4025d443dd4417addd04e1c\`  
+**Startup control:** \`private-brain-repository@4af7ebffc7f51910f4025d443dd4417addd04e1c\`  
 **Run:** \`20260922T171953Z-fleet04-B14-QFORM-r2\`  
 **Assignment:** translations and localization  
 **Classification:** \`ESSENTIAL_STEP_APPLIED / SUPPORTING_LOCALIZATION_THEOREM / FULL_QFORM_OPEN\`  

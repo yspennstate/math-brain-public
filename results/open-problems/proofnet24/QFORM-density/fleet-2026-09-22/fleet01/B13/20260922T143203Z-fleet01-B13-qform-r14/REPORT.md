@@ -10,7 +10,7 @@ The full conjecture remains **OPEN / NOT PROVED**. Everything below concerns the
 
 ## 1. Fresh source state and corrections
 
-Initial coherent control was read at `yspennstate/math-research-brain@c767fb2477f733e6d828bd37431e2fb420620eea`; immediately before publication the control was refreshed through `94161ed90fc36af81e2c403a7a45490f08b64e79`. The owner programme remained `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`, and the full target remained OPEN.
+Initial coherent control was read at `private-brain-repository@c767fb2477f733e6d828bd37431e2fb420620eea`; immediately before publication the control was refreshed through `94161ed90fc36af81e2c403a7a45490f08b64e79`. The owner programme remained `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`, and the full target remained OPEN.
 
 The live correction set was re-read. In particular this report does **not** use law-uniform pointwise quadratic oscillatory decay, post-rotation independence, a fiber-supremum trace bound, one cross minor, one Schur rank-two extraction, conditional density caps as a substitute for independence, or an absolute phase-Wiener integral.
 

@@ -2,7 +2,7 @@
 
 Programme: `QFORM-DENSITY-3EIG-20260922`. Run: `20260923T061511Z-fleet02-B02-QFORM-auto11`.
 
-Fresh owner control at start: `yspennstate/math-research-brain@d9fd8e166d53646e798760180259479cc10764d2`, revision `2026-09-22.15`. Execution context: `WITHOUT_VERIFIED_BRAIN`.
+Fresh owner control at start: `private-brain-repository@d9fd8e166d53646e798760180259479cc10764d2`, revision `2026-09-22.15`. Execution context: `WITHOUT_VERIFIED_BRAIN`.
 
 ## First unpaid implication attacked
 

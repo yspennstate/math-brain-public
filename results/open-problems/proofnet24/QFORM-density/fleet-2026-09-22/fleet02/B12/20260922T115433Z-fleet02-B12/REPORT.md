@@ -342,7 +342,7 @@ then every four-coordinate principal block has the required decomposition, so fo
 
 ## 8. Source pins and correction status
 
-* fresh live control before write: `yspennstate/math-research-brain@0a3aca1999f48e33c318c809477ade8feac096ae`, owner revision `2026-09-22.5`;
+* fresh live control before write: `private-brain-repository@0a3aca1999f48e33c318c809477ade8feac096ae`, owner revision `2026-09-22.5`;
 * consumed partner: `private-source-repository@08f387da860f00c13f30de170286a82eb13108e1:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/fleet03-B12-20260922T114435Z-349dfcff7c/REPORT.md`;
 * underlying pair/triple source: `private-source-repository@289810e1f075755898f573ee5b863ad3fa9af5b8:qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`;
 * correction inbox at the source-bound control read: empty.

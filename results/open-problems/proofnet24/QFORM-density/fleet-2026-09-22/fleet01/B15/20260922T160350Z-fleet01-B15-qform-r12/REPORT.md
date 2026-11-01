@@ -14,7 +14,7 @@ The full target is unchanged: for every dimension `n`, every independent real co
 
 for every interval `I`, equivalently `||p_{X^TAX}||_infinity<=C`.
 
-Fresh controls and corrections were read from `yspennstate/math-research-brain` at coherent source commit `1f2dc7684a305ea574bb81d6f0d991cc0dbf085c`, then refreshed immediately before publication at `9f6b5b5888a78296b602605434a363864cf6f5ac`; owner revision remained `2026-09-22.5`. This argument uses none of the refuted uniform pointwise Fourier decay, rotated-independence, fiber-supremum, conditional-cap, or local-principal-block/cross-rank dichotomies.
+Fresh controls and corrections were read from `private-brain-repository` at coherent source commit `1f2dc7684a305ea574bb81d6f0d991cc0dbf085c`, then refreshed immediately before publication at `9f6b5b5888a78296b602605434a363864cf6f5ac`; owner revision remained `2026-09-22.5`. This argument uses none of the refuted uniform pointwise Fourier decay, rotated-independence, fiber-supremum, conditional-cap, or local-principal-block/cross-rank dichotomies.
 
 Two proved dependencies are used.
 

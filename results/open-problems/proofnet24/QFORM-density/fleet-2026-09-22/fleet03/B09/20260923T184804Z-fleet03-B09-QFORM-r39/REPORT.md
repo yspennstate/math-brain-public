@@ -15,7 +15,7 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh source-pinned premises
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` main at source commit
+Fresh owner control was resolved from `private-brain-repository` main at source commit
 
 `40024d459ee9559e24841ef53535df834761c6d9`.
 

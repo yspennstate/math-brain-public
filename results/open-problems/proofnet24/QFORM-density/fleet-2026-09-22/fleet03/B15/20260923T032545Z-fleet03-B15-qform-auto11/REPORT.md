@@ -253,4 +253,4 @@ This report uses none of the refuted intermediate claims. In particular it does 
 
 The theorem is one-dimensional at the pushforward-law level and exact for every probability measure. Its application to QFORM is therefore safe with respect to signs, rotations, extra eigenvalues, and input irregularity. It establishes an exact bounded-density criterion; continuity remains a separate qualitative conclusion and is not inferred from the annular inequality alone.
 
-Control refreshed before publication: live owner control revision `2026-09-22.15`; latest observed math-research-brain main at derivation time `cc53a86507772063a9c55a2f7c3d19e6eadaaa44`. Full QFORM status remains OPEN.
+Control refreshed before publication: live owner control revision `2026-09-22.15`; latest observed private-brain main at derivation time `cc53a86507772063a9c55a2f7c3d19e6eadaaa44`. Full QFORM status remains OPEN.

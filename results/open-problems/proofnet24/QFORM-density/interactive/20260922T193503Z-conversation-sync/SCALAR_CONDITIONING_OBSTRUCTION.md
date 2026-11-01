@@ -6,7 +6,7 @@ Status: an explicit counterexample to an intermediate proposed proof criterion, 
 
 ## 1. The statement being tested
 
-The shared owner-side outline at yspennstate/math-research-brain commit 8b508713b9edf3ae1c92824be781da39a8c0d948, scheduled_tasks/README.md, blob 959f0834db9124c916fecaa37092d3123f338092, control revision 2026-09-22.13, suggests conditioning on the SCALAR remaining quadratic contribution Q' rather than the entire remaining spectral vector. Its proposed sufficient gate is an essential supremum over b of the conditional density norm of the three-large-direction component Q3 given Q'=b.
+The shared owner-side outline at private-brain-repository commit 8b508713b9edf3ae1c92824be781da39a8c0d948, scheduled_tasks/README.md, blob 959f0834db9124c916fecaa37092d3123f338092, control revision 2026-09-22.13, suggests conditioning on the SCALAR remaining quadratic contribution Q' rather than the entire remaining spectral vector. Its proposed sufficient gate is an essential supremum over b of the conditional density norm of the three-large-direction component Q3 given Q'=b.
 
 A uniform conditional density bound would indeed be sufficient for the full output. However, the gate itself is false, even for bounded independent uniform coordinates, a full-rank matrix, and flat large eigenvectors. This note tests the displayed uniform conditional supremum, not every possible scalar-conditioning method or an appropriately weighted integral retaining the target level.
 

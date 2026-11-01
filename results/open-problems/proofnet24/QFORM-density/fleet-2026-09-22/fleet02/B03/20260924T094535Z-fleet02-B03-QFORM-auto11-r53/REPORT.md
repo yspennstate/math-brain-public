@@ -230,4 +230,4 @@ The first unpaid implication is therefore to derive, from the three-large-eigenv
 
 This does NOT solve the unrestricted conjecture, does NOT assert a universal good bounded physical localizer, and does NOT claim unrestricted continuity.
 
-Sources consumed and checked: fresh math-research-brain main owner/control and corrections; required pinned e5f71d79eff325201dd0274053d20268ce65b837 RESULTS.md / FOURIER_ROUTE_REPORT.md / COUNTEREXAMPLE_SEARCH.md; current same-directory continuation; latest compatible fleet03/B03 r51 report; live conditional-moment correction source. Execution context remains WITHOUT_VERIFIED_BRAIN.
+Sources consumed and checked: fresh private-brain main owner/control and corrections; required pinned e5f71d79eff325201dd0274053d20268ce65b837 RESULTS.md / FOURIER_ROUTE_REPORT.md / COUNTEREXAMPLE_SEARCH.md; current same-directory continuation; latest compatible fleet03/B03 r51 report; live conditional-moment correction source. Execution context remains WITHOUT_VERIFIED_BRAIN.

@@ -2,7 +2,7 @@
 
 ## Current owner request: full delivery and real audit work
 
-Read [DELIVERY_STATUS.md](DELIVERY_STATUS.md) on every actual invocation along with the fresh current objective in yspennstate/math-research-brain at scheduled_tasks/CURRENT_OBJECTIVE.md. The owner has renewed the instruction: audit this FULL manuscript, every definition, source line, equation, lemma and proof, then lower the multiplicity as far as rigorously possible. Acknowledge only your own real run and publish substantive mathematics. Keep configured assignments, actual outputs and mathematical validation separate.
+Read [DELIVERY_STATUS.md](DELIVERY_STATUS.md) on every actual invocation along with the fresh current objective in private-brain-repository at scheduled_tasks/CURRENT_OBJECTIVE.md. The owner has renewed the instruction: audit this FULL manuscript, every definition, source line, equation, lemma and proof, then lower the multiplicity as far as rigorously possible. Acknowledge only your own real run and publish substantive mathematics. Keep configured assignments, actual outputs and mathematical validation separate.
 
 ## Current candidate
 

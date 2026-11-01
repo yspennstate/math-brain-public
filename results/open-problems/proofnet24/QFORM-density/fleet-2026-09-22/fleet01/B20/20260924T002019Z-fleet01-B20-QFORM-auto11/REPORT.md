@@ -25,7 +25,7 @@ The unrestricted theorem remains **OPEN / NOT PROVED / NOT DISPROVED**.
 
 The newest completed `fleet02/B20` result available when this argument was developed is
 
-- brain handoff `yspennstate/math-research-brain@33af02414c8947e04dd33bfc365f9e52b7f86165`;
+- brain handoff `private-brain-repository@33af02414c8947e04dd33bfc365f9e52b7f86165`;
 - canonical mathematics `private-source-repository@8273681c09ca73542cc27a74fdeec554000cfc28`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T233041Z-fleet02-B20-QFORM-auto11/REPORT.md`.
 

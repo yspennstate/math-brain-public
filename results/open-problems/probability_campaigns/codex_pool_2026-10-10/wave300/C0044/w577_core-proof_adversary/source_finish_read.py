@@ -47,7 +47,7 @@ if store.exists():
         receipt['store_error']=str(exc)
 else: receipt['store']={'path':str(store),'state':'exact named path absent'}
 
-canonical=Path('~/math-research-brain')
+canonical=Path('~/private-brain')
 receipt['canonical_named_root']={'path':str(canonical),'exists':canonical.exists(),'note':'No canonical-store path guessed or promoted.'}
 export=Path('~/math-brain-build/export/population')
 receipt['export_metadata']={'path':str(export),'matching_filenames':[p.name for p in export.glob('*direction*')]+[p.name for p in export.glob('*C0044*')], 'whole_export_read':False}

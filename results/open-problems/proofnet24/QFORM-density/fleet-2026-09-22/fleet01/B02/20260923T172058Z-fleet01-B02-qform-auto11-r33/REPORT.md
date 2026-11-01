@@ -15,7 +15,7 @@ No Gaussianity, log-concavity, moments, compact support, connected support, iden
 
 The canonical login for this actual hour already existed before this report and was not overwritten:
 
-`math-research-brain:scheduled_tasks/status/fleet01/logins/2026-09-23T17Z/B02.json`, run id `20260923T172058Z-fleet01-B02-qform-auto11-r33`.
+`private-brain:scheduled_tasks/status/fleet01/logins/2026-09-23T17Z/B02.json`, run id `20260923T172058Z-fleet01-B02-qform-auto11-r33`.
 
 
 ### 1.1 Designated partner actually applied

@@ -5,7 +5,7 @@ attacking: additional-eigenvalue control by affine closure, principal-compressio
 
 Status: **PROVED_SUPPORTING_THEOREM; FULL TARGET OPEN.**
 
-Control source at start: `yspennstate/math-research-brain@9bcab90c6a6c42bf73e8e4cb60bc3ecdb006ddb2`, owner-control revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`. Fresh corrections consumed before publication include the no-independence-after-rotation rule, the false arbitrary-joint coarea gate, the false normalized conditional-fiber gate, the false local-cross-rank-three dichotomy, and the fixed-Schur-pivot failure mechanisms. No such premise is used below.
+Control source at start: `private-brain-repository@9bcab90c6a6c42bf73e8e4cb60bc3ecdb006ddb2`, owner-control revision `2026-09-22.15`, programme `QFORM-DENSITY-3EIG-20260922`. Fresh corrections consumed before publication include the no-independence-after-rotation rule, the false arbitrary-joint coarea gate, the false normalized conditional-fiber gate, the false local-cross-rank-three dichotomy, and the fixed-Schur-pivot failure mechanisms. No such premise is used below.
 
 The target is: for independent real coordinates with densities at most one and symmetric `A` with at least three eigenvalues of modulus at least one, prove a universal `L^infinity` density bound. The arguments here preserve original-coordinate independence and prove only supporting reductions, not the full target.
 

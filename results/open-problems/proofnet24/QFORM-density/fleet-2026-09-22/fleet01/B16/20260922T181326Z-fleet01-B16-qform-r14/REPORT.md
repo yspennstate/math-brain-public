@@ -2,7 +2,7 @@
 
 **Run:** `20260922T181326Z-fleet01-B16-qform-r14`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Control source:** `yspennstate/math-research-brain@1f592e9d683afe480b7b004ec26caa38c262501c` (owner-control revision `2026-09-22.11`; later source revalidation observed `a2a38404d3cefcaf4530aa41a2725887a9373d29`)  
+**Control source:** `private-brain-repository@1f592e9d683afe480b7b004ec26caa38c262501c` (owner-control revision `2026-09-22.11`; later source revalidation observed `a2a38404d3cefcaf4530aa41a2725887a9373d29`)  
 **Assignment:** Projection-product interaction  
 **Classification:** `ESSENTIAL_STEP_APPLIED / SOURCE-VALID REFUTATION OF CONDITIONAL-MOMENT ROUTE / FULL TARGET OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`

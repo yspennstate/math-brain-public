@@ -17,7 +17,7 @@ No Gaussian, moment, compact-support, connected-support, log-concavity, iid, or 
 
 Immediately before publication the control branch was refreshed at
 
-`yspennstate/math-research-brain@241a2237302d7069aa9b25660a73075266f866c6`,
+`private-brain-repository@241a2237302d7069aa9b25660a73075266f866c6`,
 
 
 The full conjecture remains OPEN.

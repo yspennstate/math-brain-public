@@ -11,7 +11,7 @@ The exact target remains the unrestricted one: independent ORIGINAL real coordin
 
 ## 1. Fresh source/control state actually used
 
-Fresh `yspennstate/math-research-brain/main` was resolved at invocation start. Owner control remained revision `2026-09-22.15`, QFORM-only. The current exclusive-signin continuation, programme memory protocol, live correction inbox, assignment card, preceding B02 receiver memory, and current `fleet03/B02` receiver state were read. Authenticated repository retrieval and actual receiver-memory use occurred; native learned-memory ingestion was not verified.
+Fresh `private-brain-repository/main` was resolved at invocation start. Owner control remained revision `2026-09-22.15`, QFORM-only. The current exclusive-signin continuation, programme memory protocol, live correction inbox, assignment card, preceding B02 receiver memory, and current `fleet03/B02` receiver state were read. Authenticated repository retrieval and actual receiver-memory use occurred; native learned-memory ingestion was not verified.
 
 The owner-pinned source package was read at
 

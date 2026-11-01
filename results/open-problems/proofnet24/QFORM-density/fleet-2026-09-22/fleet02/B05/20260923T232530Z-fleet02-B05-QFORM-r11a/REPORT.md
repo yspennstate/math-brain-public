@@ -4,7 +4,7 @@ attacking: QFORM-HUB-TWOBANK-AGGREGATE-WEDGE-v1 — use the fresh fleet03/B05 sc
 # fleet02/B05 r11a — scalar-heavy cofactor compiler for the ratio packet
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Owner control at startup: `yspennstate/math-research-brain@2d1283ce51c85471974e907e0289a5e6cee1dfa3`, revision `2026-09-22.15`  
+Owner control at startup: `private-brain-repository@2d1283ce51c85471974e907e0289a5e6cee1dfa3`, revision `2026-09-22.15`  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Status: **PROVED SUPPORTING THEOREM / HEAVY-SCALAR NONNULL-PIVOT COLLAR PAID / FULL QFORM OPEN**  
 Continuity: not claimed by the new pivot payment; continuity remains separate.

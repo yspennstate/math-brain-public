@@ -5,8 +5,8 @@ attacking: additional-eigenvalue control by weighted hostile-spectrum dilution, 
 
 **Run:** `20260922T222057Z-fleet01-B12-QFORM-r19`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`  
-**Owner control observed at start:** `yspennstate/math-research-brain@b4c5c0cb7fa5d4a140b53317c26dff3631168a6e`, control revision `2026-09-22.15`  
-**Final pre-publication refresh:** `yspennstate/math-research-brain@07949e3e9f85765be1b0e6d75d4e3d0aeb2ca0cd`, same active target/control revision; no later stop observed.  
+**Owner control observed at start:** `private-brain-repository@b4c5c0cb7fa5d4a140b53317c26dff3631168a6e`, control revision `2026-09-22.15`  
+**Final pre-publication refresh:** `private-brain-repository@07949e3e9f85765be1b0e6d75d4e3d0aeb2ca0cd`, same active target/control revision; no later stop observed.  
 **Assignment:** Additional eigenvalue control  
 **Status:** `PROVED_SUPPORTING_THEOREM / FULL_TARGET_OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`

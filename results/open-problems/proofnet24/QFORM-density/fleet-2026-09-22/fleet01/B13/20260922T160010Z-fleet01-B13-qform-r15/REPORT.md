@@ -10,7 +10,7 @@ The full owner conjecture remains **OPEN / NOT PROVED**. Everything proved below
 
 ## 1. Exact sources used
 
-Fresh control was read from `yspennstate/math-research-brain`; the owner programme remained `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`. The live corrections used here exclude law-uniform pointwise quadratic oscillatory decay, post-rotation independence, single-cross-minor closure, bounded-diameter/fixed-fragment localization, and conditional-cap substitutes for independence.
+Fresh control was read from `private-brain-repository`; the owner programme remained `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`. The live corrections used here exclude law-uniform pointwise quadratic oscillatory decay, post-rotation independence, single-cross-minor closure, bounded-diameter/fixed-fragment localization, and conditional-cap substitutes for independence.
 
 The assigned partner result actually consumed is:
 

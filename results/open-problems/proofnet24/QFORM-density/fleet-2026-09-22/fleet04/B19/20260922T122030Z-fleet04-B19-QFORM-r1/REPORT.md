@@ -144,7 +144,7 @@ The finite-union core sharpens this obligation: no tail truncation, smooth appro
 
 ## 7. Source pins
 
-- Owner control: `yspennstate/math-research-brain`, revision `2026-09-22.5`, README blob `433b2d57345823967480245b59a7c47d51019c37`.
+- Owner control: `private-brain-repository`, revision `2026-09-22.5`, README blob `433b2d57345823967480245b59a7c47d51019c37`.
 - fleet01/B18 product-set reduction: `private-source-repository@a195041a2ae61f69a67c8dae86d56675b4b1374f`.
 - fleet03/B06 elliptic-energy compression: `private-source-repository@18e6593354456a8d90385eafe61f205a9a9b956b`.
 - fleet03/B19 localized spectral--Schur assembly: `private-source-repository@5a84b253fe14acc142ebdd26717d2e267dd95ebc`.

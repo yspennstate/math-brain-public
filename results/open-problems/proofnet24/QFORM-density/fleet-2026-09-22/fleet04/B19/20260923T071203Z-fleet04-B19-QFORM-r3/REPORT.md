@@ -11,7 +11,7 @@ The full conjecture is not proved or disproved. This report assembles the curren
 
 ## 1. Source boundary
 
-Fresh control was read from `math-research-brain` main at
+Fresh control was read from `private-brain` main at
 2026-09-22.15. The correction inbox remains at
 `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 

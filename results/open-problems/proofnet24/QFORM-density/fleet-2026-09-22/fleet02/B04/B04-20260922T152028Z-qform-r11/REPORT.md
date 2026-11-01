@@ -20,7 +20,7 @@ This report pays the analytic part of that implication. The remaining obstructio
 
 ## 2. Source-pinned dependencies and corrections
 
-Fresh owner control before publication: `yspennstate/math-research-brain@9c0ba5941ed05ec989c00bd4e4d9d50eeadbc672`, owner revision `2026-09-22.5`; protected README Git blob `433b2d57345823967480245b59a7c47d51019c37`.
+Fresh owner control before publication: `private-brain-repository@9c0ba5941ed05ec989c00bd4e4d9d50eeadbc672`, owner revision `2026-09-22.5`; protected README Git blob `433b2d57345823967480245b59a7c47d51019c37`.
 
 Required corrections consumed: law-uniform scalar pointwise quadratic-phase decay is false; fiber-sup arguments can lose dimension; spectral rotation does not preserve coordinate independence; one good local cross minor is not exhaustive; one scalar pivot with rank-two Schur extraction is not forced; generic conditional-cap substitutions are invalid; a uniformly good small principal block/rank-three cut is not forced; and a single physical triple can have divergent reciprocal rank-two aggregate cost. None of those claims is used positively.
 

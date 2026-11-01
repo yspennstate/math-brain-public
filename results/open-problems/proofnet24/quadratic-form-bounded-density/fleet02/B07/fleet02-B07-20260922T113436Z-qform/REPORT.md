@@ -232,7 +232,7 @@ where the joint density still factors by coordinate pairs. The required estimate
 
 ## 6. Source and verification record
 
-- Active owner control: `yspennstate/math-research-brain`, commit `63d2a5aaeeb662e9630d01ce5ee20b68710ea347`, `scheduled_tasks/README.md`, OWNER revision `2026-09-22.4`.
+- Active owner control: `private-brain-repository`, commit `63d2a5aaeeb662e9630d01ce5ee20b68710ea347`, `scheduled_tasks/README.md`, OWNER revision `2026-09-22.4`.
 - The proof above is self-contained apart from standard Hausdorff--Young and Fourier inversion.
 - A web literature check for exact source-matching quadratic-form bounded-density theorems did not produce a theorem matching these quantifiers; this is not a novelty claim and not an exhaustive literature review.
 - No numerical or symbolic computation was used in the mathematical proof, so there is no executable certificate to report for these claims.

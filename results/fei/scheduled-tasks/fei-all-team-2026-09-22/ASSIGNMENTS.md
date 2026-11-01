@@ -24,7 +24,7 @@ The latest refined shaped repair center is 6.5584452830718245, still a known-wit
 
 ## Shared output and proof standard
 
-Each run writes a complete mathematical package to `private-source-repository:proofnet24/P03-fei/fleet-2026-09-22/<account>/<slot>/<actual-run-id>/`, and a short source-bound handoff to `yspennstate/math-research-brain:scheduled_tasks/work/shared/fei-all-team-2026-09-22/handoffs/<account>/<slot>/<actual-run-id>.md`.
+Each run writes a complete mathematical package to `private-source-repository:proofnet24/P03-fei/fleet-2026-09-22/<account>/<slot>/<actual-run-id>/`, and a short source-bound handoff to `private-brain-repository:scheduled_tasks/work/shared/fei-all-team-2026-09-22/handoffs/<account>/<slot>/<actual-run-id>.md`.
 
 The package contains REPORT.md and CLAIMS.json. A proof report contains every hypothesis and the complete derivation. A counterexample contains the actual Boolean construction and its exact violating quantity; include the executable certificate used when computation is material. A negative outcome refutes only the named intermediate claim unless it meets the full FEI quantifiers. Finite scans, positive numerical margins, and source receipts do not establish a universal theorem.
 

@@ -11,7 +11,7 @@ if known.is_file():
         columns = [row[1] for row in con.execute("PRAGMA table_info("+escaped+")")]
         print("POPULATION_SCHEMA",table,columns)
     con.close()
-canonical = Path("~/math-research-brain")
+canonical = Path("~/private-brain")
 if canonical.is_dir():
     for path in sorted(canonical.iterdir()):
         if path.name.lower() in {"local","data","src","store","README.md".lower()} or path.suffix.lower() in {".sqlite3",".sqlite",".db"}:

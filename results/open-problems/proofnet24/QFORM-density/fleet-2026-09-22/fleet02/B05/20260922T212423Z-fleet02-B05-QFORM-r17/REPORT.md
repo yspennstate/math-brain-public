@@ -8,7 +8,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`
 Classification: **ESSENTIAL_STEP_APPLIED / SUPPORTING TARGET-VALID FAMILY CLOSED / FULL QFORM OPEN**
 Execution: `WITHOUT_VERIFIED_BRAIN`
 
-Fresh protected controls were read from `yspennstate/math-research-brain` main. The live owner revision is `2026-09-22.15`; QFORM remains the sole target. The latest correction `QFORM-TRIBANK-CROSS-CORE-LEAKAGE-CLOSURE-FALSE-v1` is explicitly respected below: the theorem does **not** claim that a good normalized aggregate core controls arbitrary within-bank quadratic phases.
+Fresh protected controls were read from `private-brain-repository` main. The live owner revision is `2026-09-22.15`; QFORM remains the sole target. The latest correction `QFORM-TRIBANK-CROSS-CORE-LEAKAGE-CLOSURE-FALSE-v1` is explicitly respected below: the theorem does **not** claim that a good normalized aggregate core controls arbitrary within-bank quadratic phases.
 
 ## 1. Sources actually applied
 

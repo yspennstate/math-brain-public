@@ -7,7 +7,7 @@ Status: NEW SUPPORTING TARGET-LEVEL SPLICE; FULL QFORM OPEN. Continuity is not c
 
 ## Sources and exact scope
 
-Fresh brain control/sign-in: math-research-brain@af96c54d7db58dc749ab024547c305a41327881a.
+Fresh brain control/sign-in: private-brain@af96c54d7db58dc749ab024547c305a41327881a.
 
 Applied predecessor: fleet01/B18 QFORM-NULLHUB-HEAVY-ANCHOR-PAIRLOG-v1, read at private-source@8d6e85d072cd7a4c0fa9a37abe995a64109079e0, path:
 

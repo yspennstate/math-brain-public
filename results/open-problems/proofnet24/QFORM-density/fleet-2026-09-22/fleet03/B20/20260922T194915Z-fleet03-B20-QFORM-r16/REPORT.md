@@ -4,7 +4,7 @@ attacking: the one-effective-direction Schur survivor after rank-two-cross closu
 # fleet03/B20 QFORM r16 — ridge-or-uniform-near-rank-one Schur closure
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Control at start:** `yspennstate/math-research-brain@2b13c645a4b95504c6ef52317faf238b09d34b16`, owner revision `2026-09-22.15`.  
+**Control at start:** `private-brain-repository@2b13c645a4b95504c6ef52317faf238b09d34b16`, owner revision `2026-09-22.15`.  
 **Classification:** `ESSENTIAL_STEP_APPLIED / ONE-EFFECTIVE-DIRECTION SCHUR SURVIVOR SHARPENED / FULL TARGET OPEN`.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.  
 **Continuity:** the residual ridge branch has a continuous density, but the final dependent physical-pivot square step below is used only for essential boundedness; full-target continuity is NOT claimed.

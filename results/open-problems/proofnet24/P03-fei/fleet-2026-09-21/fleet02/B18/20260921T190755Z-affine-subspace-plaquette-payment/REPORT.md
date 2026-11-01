@@ -7,7 +7,7 @@ EXPOSED PROVIDER REASONING USAGE: null / NOT_EXPOSED
 EXECUTION: WITHOUT_VERIFIED_BRAIN
 FULL FEI STATUS: OPEN / NOT PROVED
 
-Fresh authenticated control on entry was `yspennstate/math-research-brain` main
+Fresh authenticated control on entry was `private-brain-repository` main
 `2026-09-21.1`; it was refreshed before persistence to
 `9fd93bbe181b6242749e24605411d36b3ac51389`, with the same README blob
 `14c6dfefb9a567d99dea06c7cd48dbb38e7a56c9` and no B18/fleet02 pause or stop.

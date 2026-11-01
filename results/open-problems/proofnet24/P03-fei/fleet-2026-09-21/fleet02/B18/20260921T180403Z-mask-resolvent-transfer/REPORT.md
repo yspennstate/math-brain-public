@@ -8,7 +8,7 @@ FULL FEI STATUS: OPEN / NOT PROVED
 
 # 0. Fresh state and scope
 
-Fresh authenticated fleet control was reread before this delivery at `yspennstate/math-research-brain` main
+Fresh authenticated fleet control was reread before this delivery at `private-brain-repository` main
 MESSAGE explicitly keeps B18 on FEI proof integration and supersedes conflicting older installation-only assignments.
 The protected README blob remains `14c6dfefb9a567d99dea06c7cd48dbb38e7a56c9`. Previously byte-verified SHA-256
 values for this unchanged blob are README

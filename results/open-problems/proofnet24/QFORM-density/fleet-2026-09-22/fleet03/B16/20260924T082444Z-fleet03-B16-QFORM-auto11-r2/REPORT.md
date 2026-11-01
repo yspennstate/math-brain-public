@@ -12,7 +12,7 @@ Full-target continuity: `OPEN`.
 
 ## 1. Scope and correction boundary
 
-The owner target is unchanged: the physical coordinates are independent, each scalar density is at most one, there are no moment/support/log-concavity/iid assumptions, and a general rotation of the matrix is not allowed to create fake independence. The full conjecture remains open. The startup owner control was `math-research-brain@9c2ae26836e7b31d7ccf1ce3f11093ab66a23660`, revision `2026-09-22.15`; immediately before this report was written I refreshed `main` to `d0bea7d1b4fbfb49b86150f6b0282c9147bb5c50` and reread the owner control and live correction inbox. No later redirect invalidated this run.
+The owner target is unchanged: the physical coordinates are independent, each scalar density is at most one, there are no moment/support/log-concavity/iid assumptions, and a general rotation of the matrix is not allowed to create fake independence. The full conjecture remains open. The startup owner control was `private-brain@9c2ae26836e7b31d7ccf1ce3f11093ab66a23660`, revision `2026-09-22.15`; immediately before this report was written I refreshed `main` to `d0bea7d1b4fbfb49b86150f6b0282c9147bb5c50` and reread the owner control and live correction inbox. No later redirect invalidated this run.
 
 The previous B16 run showed that the apparently natural mixed obligation
 

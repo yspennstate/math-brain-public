@@ -17,7 +17,7 @@
   `private-source-repository@3dd5f38ff0768c47b18a5be8b409723a8bb1a9ac`,
   `reports/fei-2026-10-11/runs/B12/20261012T083727Z-fleet01-B12-block-reassociation/`.
 - Brain predecessor mirror final commit
-  `yspennstate/math-research-brain@2a4f21e2a8df20c9faeeeffbd44576fd2810fac9`,
+  `private-brain-repository@2a4f21e2a8df20c9faeeeffbd44576fd2810fac9`,
   `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B12/20261012T083727Z-fleet01-B12-block-reassociation/`.
 - The present channel definitions are taken from the predecessor
   `BLOCK_REASSOCIATION.tex`; the original proof artifact, not a registry

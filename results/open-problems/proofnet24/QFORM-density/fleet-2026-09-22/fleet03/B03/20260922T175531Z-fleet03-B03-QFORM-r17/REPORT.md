@@ -17,7 +17,7 @@ Second, replacing that supremum by an integrated half-Riesz quantity, I derive a
 
 ## 1. Sources and live corrections used
 
-Fresh control was read from `yspennstate/math-research-brain` main. The run started under commit `0be00f14d246c917032f588cc70e6a1a718456a7`; before publication the owner control had advanced to revision `2026-09-22.11` at fresh main commit `8a5cf52d43d9433e5e144b323fec2620ab8b59f4`. There was no later stop in that refresh. Revision 2026-09-22.11 explicitly warns that a global `L^1` characteristic-function target is false for edge/uniform laws and proposes scalar `Q_rest` conditioning as the new highest-value bridge. The construction below tests that bridge directly.
+Fresh control was read from `private-brain-repository` main. The run started under commit `0be00f14d246c917032f588cc70e6a1a718456a7`; before publication the owner control had advanced to revision `2026-09-22.11` at fresh main commit `8a5cf52d43d9433e5e144b323fec2620ab8b59f4`. There was no later stop in that refresh. Revision 2026-09-22.11 explicitly warns that a global `L^1` characteristic-function target is false for edge/uniform laws and proposes scalar `Q_rest` conditioning as the new highest-value bridge. The construction below tests that bridge directly.
 
 Completed mathematical inputs used:
 

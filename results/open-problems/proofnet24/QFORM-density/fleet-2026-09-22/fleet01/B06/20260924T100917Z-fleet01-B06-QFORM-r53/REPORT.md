@@ -273,9 +273,9 @@ A separate global assembly issue remains: repeated lower-dimensional deletions c
 
 ## 11. Source pins
 
-- Owner source message: `https://github.com/yspennstate/math-research-brain/blob/0dc369ddf8b860648dd780d8f92c62994dc53ecf/scheduled_tasks/README.md`.
-- Prepublication refresh read: `yspennstate/math-research-brain@b0b17be8ce16b8baaccfeec0230015dd1e66ec46`.
+- Owner source message: `private-brain-repository`.
+- Prepublication refresh read: `private-brain-repository@b0b17be8ce16b8baaccfeec0230015dd1e66ec46`.
 - Predecessor r52: `private-source-repository@6c9adce6b8378fa430fc731b4969ae9e2f2f0659:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T093818Z-fleet01-B06-QFORM-r52/REPORT.md`.
 - Designated partner result actually applied: `private-source-repository@006892a091e8f58edf21e071244a2c7e2a340ec0:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260924T092809Z-auto11-a9c3/REPORT.md`, theorem `QFORM-SPARSE-KERNEL-PRODUCT-DELETION-v1`.
 - Three-dimensional affine base theorem: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, Theorem A.
-- Live shear-interface correction consumed: `yspennstate/math-research-brain@b944bf36baa222e9f7e778a91a3ef8a06ae70a64`, event `QFORM-DENSITY-PRESERVING-SHEAR-FACTORISATION-GAP-v1`.
+- Live shear-interface correction consumed: `private-brain-repository@b944bf36baa222e9f7e778a91a3ef8a06ae70a64`, event `QFORM-DENSITY-PRESERVING-SHEAR-FACTORISATION-GAP-v1`.

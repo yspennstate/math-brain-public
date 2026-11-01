@@ -367,4 +367,4 @@ For the partner's `Delta>0` branch, its retained max-norm twist remains a genuin
 
 ## 11. Operational note
 
-An early immutable checkpoint was successfully written to this run folder. The required actual-hour login write to the math-research-brain status path was attempted at the beginning of the run but the connector blocked that specific write before any commit; no login success is claimed. Repository transport is not native brain ingestion, so execution remains `WITHOUT_VERIFIED_BRAIN`. No scheduler mutation, new task, email/push, public release, paid call, cross-account authentication, or permission expansion was performed.
+An early immutable checkpoint was successfully written to this run folder. The required actual-hour login write to the private-brain status path was attempted at the beginning of the run but the connector blocked that specific write before any commit; no login success is claimed. Repository transport is not native brain ingestion, so execution remains `WITHOUT_VERIFIED_BRAIN`. No scheduler mutation, new task, email/push, public release, paid call, cross-account authentication, or permission expansion was performed.

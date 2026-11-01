@@ -9,7 +9,7 @@ now=datetime.now(timezone.utc).isoformat()
 source_path=root/'SOURCE_STATUS.json'
 source=json.loads(source_path.read_text(encoding='utf-8'))
 source['canonical_research_store']={
-    'repository':'~/math-research-brain',
+    'repository':'~/private-brain',
     'status':'Not verified: no current P0297 card or primary live-store database located by the narrow discovery searches.',
     'scope':'Exact P0297 logical-id search in named JSON/markdown formats; test, bank, blind, harness and audit paths excluded. Store-database discovery found only audit snapshots, which were not opened.',
     'limitation':'Current owner-retirement status remains unconfirmed. No exhaustive corpus, benchmark artifact, or audit-snapshot inspection is used as mathematical evidence.'}

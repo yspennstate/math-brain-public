@@ -248,7 +248,7 @@ Arbitrary additional nonseparable spectrum remains a separate bridge to the full
 
 ## 7. Source pins and scope
 
-Fresh control before publication: `yspennstate/math-research-brain@f5b1fb16df62f83d216afcdd918156d44ea30d37`; owner control remains revision `2026-09-22.15` and full QFORM remains open.
+Fresh control before publication: `private-brain-repository@f5b1fb16df62f83d216afcdd918156d44ea30d37`; owner control remains revision `2026-09-22.15` and full QFORM remains open.
 
 Fresh math source before publication: `private-source-repository@c6096975fb4c91c3aa529230462fecf5d539a2e2`.
 

@@ -10,7 +10,7 @@
 
 The exact owner target is unchanged: for every `n`, independent real variables `X_i` with densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues satisfying `|lambda_j(A)|>=1`, prove that `Q=X^T A X` has a density with one universal `L^infinity` bound, or produce a target-valid counterexample. No moment, centering, compact-support, log-concavity, sign, diagonal-basis independence, or connected-support hypothesis is available. The requested continuous-density conclusion is tracked separately from essential boundedness.
 
-Fresh controls were read from `yspennstate/math-research-brain` main, first at commit `68bb005560fedbe04bce4a19dde09ea0fb52c800` and refreshed before this write at commit `23a6dfbb212fb16db5743cae733ae25295710dfb`. The owner revision remained `2026-09-22.5`.
+Fresh controls were read from `private-brain-repository` main, first at commit `68bb005560fedbe04bce4a19dde09ea0fb52c800` and refreshed before this write at commit `23a6dfbb212fb16db5743cae733ae25295710dfb`. The owner revision remained `2026-09-22.5`.
 
 Corrections consumed and preserved:
 

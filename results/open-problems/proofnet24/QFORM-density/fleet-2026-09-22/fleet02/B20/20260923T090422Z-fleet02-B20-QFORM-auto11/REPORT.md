@@ -12,7 +12,7 @@ The unrestricted conjecture remains OPEN. No Gaussian/log-concavity, moment, sup
 
 ## 1. Sources consumed and corrections preserved
 
-Fresh protected brain source was read from `yspennstate/math-research-brain` main, including `AGENTS.md`, owner README/control, `fleet.json`, `roles.json`, `PROTOCOL.md`, the QFORM manifest/current research/claims/deltas/correction inbox/pathways/memory protocol, proof-first request, newest-Claude request, and the exact fleet02/B20 assignment. The publication refresh used brain main commit `63f10ac0853a06df9a3861a46f1a8b328e8137d2`; owner control still reports revision `2026-09-22.15`.
+Fresh protected brain source was read from `private-brain-repository` main, including `AGENTS.md`, owner README/control, `fleet.json`, `roles.json`, `PROTOCOL.md`, the QFORM manifest/current research/claims/deltas/correction inbox/pathways/memory protocol, proof-first request, newest-Claude request, and the exact fleet02/B20 assignment. The publication refresh used brain main commit `63f10ac0853a06df9a3861a46f1a8b328e8137d2`; owner control still reports revision `2026-09-22.15`.
 
 The required pinned interactive source was read at `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. In particular, Theorem F is used below at its exact formula. The pointwise-decay, unrestricted-fiber-supremum, and post-rotation-independence corrections are retained throughout.
 

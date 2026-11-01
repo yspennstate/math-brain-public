@@ -5,7 +5,7 @@ Run: `20261013T092029Z-fleet01-B12-parallel-triple-local`
 - Canonical repository: `private-source-repository`
 - Canonical core commit: `06091e2de7530db3f3d5d5ec5c1419d9bcd7081b`
 - Canonical path: `reports/fei-2026-10-11/runs/B12/20261013T092029Z-fleet01-B12-parallel-triple-local/`
-- Brain repository: `yspennstate/math-research-brain`
+- Brain repository: `private-brain-repository`
 - Brain core commit: `6c9902bc8b1c0051b2423479e039292c42cdbb58`
 - Brain path: `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B12/20261013T092029Z-fleet01-B12-parallel-triple-local/`
 - Core files uploaded: 11 in each repository.

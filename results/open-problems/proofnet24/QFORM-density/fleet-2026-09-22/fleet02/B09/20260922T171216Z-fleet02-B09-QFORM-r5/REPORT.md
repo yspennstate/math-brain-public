@@ -19,7 +19,7 @@ The sharpened unpaid implication after this run is:
 
 ## 2. Source-pinned dependencies and corrections
 
-Fresh controls and programme state were read from `yspennstate/math-research-brain@5f30a16adc2545f6e86487708600b235d571d270`, then reread before publication at `de226dc67ba68b7aca9507746c55f636a4347e4d`. The current owner continuation is `QFORM-PROOF-FIRST-20260922T161801Z`.
+Fresh controls and programme state were read from `private-brain-repository@5f30a16adc2545f6e86487708600b235d571d270`, then reread before publication at `de226dc67ba68b7aca9507746c55f636a4347e4d`. The current owner continuation is `QFORM-PROOF-FIRST-20260922T161801Z`.
 
 Consumed corrections include the failure of law-uniform pointwise quadratic Fourier decay, loss from naive fiber suprema, loss of independence after spectral rotation, failure of a universal single rank-two Schur extraction, failure of a local rank-three-cross-cut dichotomy, failure of conditional-cap-as-independence substitutions, and the preceding B09 correction `QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1`. None is used as a positive premise.
 

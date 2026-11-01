@@ -12,7 +12,7 @@ Target: for every complex normal `4 x 4` pair `A,B` with spectra `a_i,b_i`, prov
 
 including singular and repeated spectra. This report concerns only the `n=4` target.
 
-At invocation start I resolved `yspennstate/math-research-brain` main at
+At invocation start I resolved `private-brain-repository` main at
 `155e49dfac91e21183ba89e61cf4321780a0a47f` and read `AGENTS.md`, the complete
 revision `2026-09-22.2`; B09 remains assigned to MOC4 and older installation/benchmark
 work remains stopped.

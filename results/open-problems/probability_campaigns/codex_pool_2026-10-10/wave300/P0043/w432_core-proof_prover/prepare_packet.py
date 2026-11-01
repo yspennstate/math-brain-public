@@ -38,7 +38,7 @@ save('SOURCE_STATUS.json', {
     'owner_status_check': {'scope': 'Named P0043/C0084 intake rows and prior attempts; Big Open project README identifies a different p_c<p_2-to-2 target; cited solved register targeted grep.',
                            'complete_worldwide_or_owner_search': False},
     'canonical_store_check': {'population': 'Read-only selected P0043/C0084 cards in INPUT_RECEIPT.json',
-                              'math_research_brain_path': '~/math-research-brain',
+                              'math_research_brain_path': '~/private-brain',
                               'additional_store_receipt': 'CANONICAL_RECEIPT.json if present; no whole-store export read'},
     'independent_review': {'w433': 'Statement-first msg-35afdcf200 delivered; independent analysis predated proof exchange. Peer reports L02-L06 survive as scoped claims and supplies tightening 12 in place of 27; w432 independently rederived it as L08.',
                            'w434': 'Pending packet review'},

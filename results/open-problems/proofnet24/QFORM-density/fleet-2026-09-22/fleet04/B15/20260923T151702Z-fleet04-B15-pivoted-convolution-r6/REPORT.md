@@ -10,7 +10,7 @@ Execution: \`WITHOUT_VERIFIED_BRAIN\`.
 
 ## 1. Scope and sources
 
-Fresh control was read from \`yspennstate/math-research-brain@b2319f995a345e05be5da359e598f2329017f627\`. The correction inbox forbids post-rotation independence, pointwise quadratic Fourier decay, arbitrary-joint coarea, and treating a small matrix coefficient as a small random error for unbounded inputs. None is used.
+Fresh control was read from \`private-brain-repository@b2319f995a345e05be5da359e598f2329017f627\`. The correction inbox forbids post-rotation independence, pointwise quadratic Fourier decay, arbitrary-joint coarea, and treating a small matrix coefficient as a small random error for unbounded inputs. None is used.
 
 The completed fleet01/B15 tent-scale regularity theorem is used at an actual inequality from
 \`private-source-repository@92df77d33efcd04deeac76ec140f17608ad9d9d5\`,

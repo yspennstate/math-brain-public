@@ -6,8 +6,8 @@ attacking: the stable rank-four two-sided >3/4 fourth-volume survivor — double
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Assignment: coordinate minor selection / GEOMETRY  
 Run: `20260923T130749Z-fleet03-B07-qform-r30`  
-Initial control commit: `yspennstate/math-research-brain@59383df8077cb277b6ba91f56b93a642872bdb3e`  
-Pre-publication main observed: `yspennstate/math-research-brain@9c69e96e9ef6095c411efe2801498cabdbd7bb16`  
+Initial control commit: `private-brain-repository@59383df8077cb277b6ba91f56b93a642872bdb3e`  
+Pre-publication main observed: `private-brain-repository@9c69e96e9ef6095c411efe2801498cabdbd7bb16`  
 Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 Status: **NEW SUPPORTING AGGREGATE-MINOR COMPILER / DESIGNATED PARTNER APPLIED / ONE SUBBRANCH ESSENTIALLY BOUNDED / FULL QFORM OPEN / FULL CONTINUITY OPEN**.
 

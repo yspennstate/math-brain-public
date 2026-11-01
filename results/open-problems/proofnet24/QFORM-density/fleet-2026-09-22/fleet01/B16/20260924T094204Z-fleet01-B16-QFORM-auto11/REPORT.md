@@ -10,7 +10,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source-pinned dependencies and correction boundary
 
-Fresh owner/control source at start: `math-research-brain@0f67fb8650eb867f39967849c26ce0ae8e657e07`; owner control revision `2026-09-22.15`, programme revision `2026-09-22.5`.
+Fresh owner/control source at start: `private-brain@0f67fb8650eb867f39967849c26ce0ae8e657e07`; owner control revision `2026-09-22.15`, programme revision `2026-09-22.5`.
 
 The completed designated partner consumed here is fleet02/B16:
 

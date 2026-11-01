@@ -12,7 +12,7 @@ Continuity: **not claimed; the compiler used below gives essential boundedness.*
 
 The target remains the unrestricted product-law statement: the coordinates are independent real variables with arbitrary probability densities bounded by one; the coefficient matrix is arbitrary symmetric and has at least three singular values at least one. No moment, support, iid, log-concavity, Gaussian, or post-rotation independence hypothesis is added.
 
-Fresh owner control, current request, assignment, correction inbox, and memory protocol were read from `yspennstate/math-research-brain/main`. The source corrections excluding arbitrary-joint coarea, conditional-cap independence, a universally good fixed minor, and treating a small matrix as a small random quadratic error are retained.
+Fresh owner control, current request, assignment, correction inbox, and memory protocol were read from `private-brain-repository/main`. The source corrections excluding arbitrary-joint coarea, conditional-cap independence, a universally good fixed minor, and treating a small matrix as a small random quadratic error are retained.
 
 The completed designated partner actually applied is fleet01/B12:
 

@@ -121,7 +121,7 @@ source_status = {
         "Team O board: related C0084 held by w344; w433 avoids that worker's general ten-problem source packet",
         "Named owner percolation project selected nonuniqueness p_c<p_u on nonamenable graphs, not this criticality theorem; no solved/retired certificate for P0043 inferred",
         "Named math-brain population nodes: C0084 open-problem card at line 1737 and author-unreviewed attempt mechanism at line 260",
-        "Canonical math-research-brain README and targeted named-store location probe; store result recorded separately if located"
+        "Canonical private-brain README and targeted named-store location probe; store result recorded separately if located"
     ],
     "brain_scars_used": ["prob1000_proofs_directory_audit_what_is_spent_and_what_is_live_2026_09_08", "perceptron_proof_open_gaps_fleet_2026_07_12", "proof_steps_need_derived_joint_structure_2026_09_09"],
     "note": "Source matching and visible theorem declarations do not certify a mathematical or formal proof. No current open/solved classification is asserted."

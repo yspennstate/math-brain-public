@@ -14,7 +14,7 @@ No post-rotation independence is used. The projected coordinates may be dependen
 
 ## 1. Fresh controls and source-pinned dependencies
 
-Fresh control was read from `yspennstate/math-research-brain` main at commit
+Fresh control was read from `private-brain-repository` main at commit
 
 `c393c6af9218e1c22871c899ce8a3823556b6ee9`.
 

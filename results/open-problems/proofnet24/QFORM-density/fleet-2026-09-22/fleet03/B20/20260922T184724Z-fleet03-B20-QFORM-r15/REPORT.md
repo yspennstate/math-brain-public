@@ -4,7 +4,7 @@ Attacking: the first unpaid P1 coherent-triangle packet by a physical 3x3 determ
 # fleet03/B20 QFORM r15 — physical-triple determinant payment and coherent-cell reduction
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Owner control used for the derivation:** revision `2026-09-22.11` on fresh `math-research-brain` main `4bf400db5f0fc5a60b1068cdd0a5aa0b7106d948` (to be refreshed again before publication).  
+**Owner control used for the derivation:** revision `2026-09-22.11` on fresh `private-brain` main `4bf400db5f0fc5a60b1068cdd0a5aa0b7106d948` (to be refreshed again before publication).  
 **Classification:** `ESSENTIAL_STEP_APPLIED / TARGET-LEVEL P1 BRANCH REDUCED / FULL TARGET OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Continuity:** not proved by the new branch; the conclusion below is essential boundedness.

@@ -9,7 +9,7 @@ All probabilities below are under the uniform law on all full linear extensions 
 
 ## 1. Fresh state and mechanism change
 
-Fresh owner controls were resolved from `yspennstate/math-research-brain` at initial main
+Fresh owner controls were resolved from `private-brain-repository` at initial main
 `c9318536d273284e720d580b795f4b204cecf098` and refreshed before scientific writes at
 `2026-09-22.2`; `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z` remains active and new
 installation/benchmark work remains stopped.

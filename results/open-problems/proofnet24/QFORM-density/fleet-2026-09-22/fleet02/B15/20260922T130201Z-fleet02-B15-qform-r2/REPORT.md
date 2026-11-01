@@ -340,7 +340,7 @@ No law-uniform modulus should be sought: Theorem 3.1 rules it out.
 
 ## 7. Source pins and integrity
 
-- Owner/control source at publication recheck: `yspennstate/math-research-brain@e68cdd37eb60e13d31ec1b6a5d2fa599053a89c9`; protected control blobs remained on revision `2026-09-22.5`.
+- Owner/control source at publication recheck: `private-brain-repository@e68cdd37eb60e13d31ec1b6a5d2fa599053a89c9`; protected control blobs remained on revision `2026-09-22.5`.
 - Assigned partner report: `private-source-repository@40946450aa2bfb06068a2c688d4407be10470c22`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T122718Z-fleet03-B15-qform-r11/REPORT.md`.
 - Previous fleet02/B15 fixed-matrix regularity report: `private-source-repository@60e7f51716e67553ce759519f9801ff3674dcce9`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T120155Z-fleet02-B15-qform-r1/REPORT.md`.
 - Compatible convex-hull source underlying the partner reduction: `fleet01/B13`, `private-source-repository@f5c63b29011eb394cd621ecc887fe3331aa485af`.

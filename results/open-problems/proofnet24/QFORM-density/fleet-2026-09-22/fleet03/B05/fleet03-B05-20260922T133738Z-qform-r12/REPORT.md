@@ -292,7 +292,7 @@ The full conjecture remains `OPEN / NOT PROVED`.
 
 ## 7. Source pins
 
-Fresh controls immediately before publication: `yspennstate/math-research-brain@026692a030fc864d59bccb110245e7f5491482c3`, owner revision `2026-09-22.5`; live correction inbox blob `b9bf5f3faf9e9725becf7fbbdad56ee5ba9c0d50`.
+Fresh controls immediately before publication: `private-brain-repository@026692a030fc864d59bccb110245e7f5491482c3`, owner revision `2026-09-22.5`; live correction inbox blob `b9bf5f3faf9e9725becf7fbbdad56ee5ba9c0d50`.
 
 Mathematical dependencies were retrieved from `private-source-repository` on `master` at commit `e58461e07b19315b290cb4b397929090ec6f48b9`:
 

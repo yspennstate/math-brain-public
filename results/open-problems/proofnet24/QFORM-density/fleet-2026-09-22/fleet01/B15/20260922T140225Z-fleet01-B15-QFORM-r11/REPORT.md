@@ -20,7 +20,7 @@ A continuous representative is a separate stronger conclusion.
 
 Fresh control source at the start of the run:
 
-- `yspennstate/math-research-brain@da63bbaba29461947597c208482f78df70fb4e59`, later refreshed through `1c72889ff03a7a863e29de9f16ec267b83ac2590` before the scientific write;
+- `private-brain-repository@da63bbaba29461947597c208482f78df70fb4e59`, later refreshed through `1c72889ff03a7a863e29de9f16ec267b83ac2590` before the scientific write;
 - owner-control revision `2026-09-22.5`;
 - live corrections include failure of law-uniform pointwise quadratic Fourier decay, naive fiber-supremum dimension-free bounds, conditional-cap substitutes for independence, and the local-good-block/rank-three-cross-cut dichotomy. None of those false statements is used below.
 

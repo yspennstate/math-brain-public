@@ -2,7 +2,7 @@
 
 **Run:** `fleet01-B16-20260922T1705Z-r11`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Fresh pre-publication control:** `yspennstate/math-research-brain@b434387d05c04e23238e8fc27efa4eb395f75bba`; owner control revision `2026-09-22.8`  
+**Fresh pre-publication control:** `private-brain-repository@b434387d05c04e23238e8fc27efa4eb395f75bba`; owner control revision `2026-09-22.8`  
 **Assignment:** Projection-product interaction  
 **Classification:** `ESSENTIAL_STEP_APPLIED / PROVED SUPPORTING THEOREM`; full QFORM target remains **OPEN / NOT PROVED**  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`

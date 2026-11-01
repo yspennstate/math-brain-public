@@ -1,6 +1,6 @@
 # Source pins
 
-- Current GU focus: `yspennstate/math-research-brain`,
+- Current GU focus: `private-brain-repository`,
   `scheduled_tasks/work/shared/full-fei-only-2026-10-12/GU_LASER_FOCUS_20261014.md`,
   blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
 - Current order: same repository and directory, `ORDER.md`, fetched

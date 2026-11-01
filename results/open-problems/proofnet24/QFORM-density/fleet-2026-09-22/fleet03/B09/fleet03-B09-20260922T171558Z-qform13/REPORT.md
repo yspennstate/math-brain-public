@@ -27,7 +27,7 @@ This establishes an `O(|L|)` interval estimate directly. It proves essential bou
 
 ## 2. Source-pinned dependencies and corrections
 
-Fresh control and state were read from `yspennstate/math-research-brain@b5ddc3ce7894270ed6dcf4648cb96baea7dbc251`, including `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, the QFORM manifest/current research/claims/correction inbox/memory protocol, and `assignments/fleet03/B09.json`.
+Fresh control and state were read from `private-brain-repository@b5ddc3ce7894270ed6dcf4648cb96baea7dbc251`, including `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, the QFORM manifest/current research/claims/correction inbox/memory protocol, and `assignments/fleet03/B09.json`.
 
 The only mathematical dependency used below is the weak-`L^2` logarithmic ridge estimate proved in
 

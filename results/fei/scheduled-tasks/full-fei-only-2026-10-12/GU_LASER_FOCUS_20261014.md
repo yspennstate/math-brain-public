@@ -70,7 +70,7 @@ Read applicable original reports through research_pushes/2026-10-14-fei-gap-audi
 Every substantive natural run, including failed proofs and blocked saves, keeps its complete work. Use unique immutable run folders and the existing schema: REPORT.md, CLAIMS.json, PROGRESS.json, compatible PACKET_DELTA.json, plus full proof/code/certificate/output artifacts.
 
 Canonical fleet01 destination: private-source-repository, master, reports/fei-2026-10-11/runs/Bnn/<UTC_RUN_ID>/.
-Math Brain mirror: yspennstate/math-research-brain, main, research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/Bnn/<UTC_RUN_ID>/.
+Math Brain mirror: private-brain-repository, main, research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/Bnn/<UTC_RUN_ID>/.
 
 Verify nonempty full readback at the actual returned commit. Original producer identity must survive every mirror. If a save is blocked, preserve the full available work in the natural run response and state the exact failure; a short summary is not complete persistence and no denied operation may be bypassed. Distinguish configured, invoked, researched, saved, mirrored, independently reviewed and native-ingested states.
 

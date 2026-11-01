@@ -2,7 +2,7 @@ from pathlib import Path
 import json,hashlib,subprocess
 R=Path(__file__).resolve().parents[1]
 prefix='research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet04/B17/'+R.name
-resource='topic:repo/yspennstate/math-research-brain/'+prefix
+resource='topic:repo/private-brain-repository/'+prefix
 mesh=subprocess.run(['python','-X','utf8',r'~/<private-repo>/12_cognitive_architecture/agent_mesh/agent_mesh.py','assert','--agent','codex-01a17a7a','--resource',resource],capture_output=True,text=True,encoding='utf-8',timeout=60)
 if mesh.returncode:print(mesh.stdout+mesh.stderr);raise SystemExit(mesh.returncode)
 files=[p for p in sorted(R.rglob('*')) if p.is_file() and '__pycache__' not in str(p) and p.suffix in ['.py','.json','.md','.lean','.txt'] and p.name not in ['PUBLICATION.json','API_PAYLOAD.json']]

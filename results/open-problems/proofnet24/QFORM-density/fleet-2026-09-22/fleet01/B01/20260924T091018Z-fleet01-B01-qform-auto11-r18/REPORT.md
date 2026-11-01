@@ -296,7 +296,7 @@ The present theorems establish averaged Fourier control and scoped essential-bou
 
 Fresh control source at run start:
 
-`yspennstate/math-research-brain@508e080ef479f541bb183c9f8c63237933127dea`.
+`private-brain-repository@508e080ef479f541bb183c9f8c63237933127dea`.
 
 Relevant current projected-crossing package consumed for scope comparison:
 

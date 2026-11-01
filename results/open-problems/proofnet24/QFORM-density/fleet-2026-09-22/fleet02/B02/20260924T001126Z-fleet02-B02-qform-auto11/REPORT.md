@@ -11,7 +11,7 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates with 
 
 ## 1. Fresh control and source pins actually used
 
-Fresh owner control was resolved on `yspennstate/math-research-brain@f29ba9864622bd4e4eeedf5c5243e95787c710d6`; owner revision remains `2026-09-22.15`, QFORM-only. The required `AGENTS.md`, root/scheduled README owner message, `fleet.json`, `roles.json`, `PROTOCOL.md`, QFORM `MANIFEST/CURRENT_RESEARCH/CLAIMS/DELTAS/CORRECTION_INBOX/PATHWAYS/MEMORY_PROTOCOL`, the proof-first/Claude-latest requests, and this slot's assignment were read before the mathematics below. The previous B02 receiver-memory snapshot was also retrieved and used.
+Fresh owner control was resolved on `private-brain-repository@f29ba9864622bd4e4eeedf5c5243e95787c710d6`; owner revision remains `2026-09-22.15`, QFORM-only. The required `AGENTS.md`, root/scheduled README owner message, `fleet.json`, `roles.json`, `PROTOCOL.md`, QFORM `MANIFEST/CURRENT_RESEARCH/CLAIMS/DELTAS/CORRECTION_INBOX/PATHWAYS/MEMORY_PROTOCOL`, the proof-first/Claude-latest requests, and this slot's assignment were read before the mathematics below. The previous B02 receiver-memory snapshot was also retrieved and used.
 
 Required base source package:
 

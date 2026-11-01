@@ -5,7 +5,7 @@ attacking: zero-pivot/finite-heavy coordinate-minor payment; replace reciprocal 
 
 **Run:** `20260922T180412Z-b07-afd8d7`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Fresh owner control before publication:** revision `2026-09-22.11` at `yspennstate/math-research-brain@224b1e0e76c1a2647a98008384abeaaf230f2791`  
+**Fresh owner control before publication:** revision `2026-09-22.11` at `private-brain-repository@224b1e0e76c1a2647a98008384abeaaf230f2791`  
 **Assignment:** Coordinate minor selection  
 **Classification:** `ESSENTIAL_STEP_APPLIED / FULL TARGET OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`

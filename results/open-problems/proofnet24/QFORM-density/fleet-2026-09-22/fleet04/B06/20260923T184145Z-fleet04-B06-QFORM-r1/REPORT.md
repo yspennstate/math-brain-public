@@ -11,7 +11,7 @@ Status: `ESSENTIAL_STEP_APPLIED / SUPPORTING THEOREM PROVED / FULL TARGET OPEN /
 
 The target remains the unrestricted bounded-density conjecture: independent real original coordinates with probability densities at most one, arbitrary dimension, and an arbitrary real symmetric matrix with at least three singular values at least one. No support, moment, iid, sign, or post-rotation independence assumption is introduced.
 
-Fresh brain main was `math-research-brain@bbce6f338d76cf687cebce3528e48f4613bd24bf`. The newest checked Claude directory source is `private-source@b0cbc2233369b6a3f366cf569d425f485f123e1c`; it retains the correction that an arbitrary bounded joint density does not support a three-dimensional coarea bound.
+Fresh brain main was `private-brain@bbce6f338d76cf687cebce3528e48f4613bd24bf`. The newest checked Claude directory source is `private-source@b0cbc2233369b6a3f366cf569d425f485f123e1c`; it retains the correction that an arbitrary bounded joint density does not support a three-dimensional coarea bound.
 
 Two completed results are used at displayed inequalities.
 

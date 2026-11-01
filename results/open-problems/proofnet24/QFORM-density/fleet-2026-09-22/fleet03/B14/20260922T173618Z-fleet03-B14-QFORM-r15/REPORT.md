@@ -3,7 +3,7 @@
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Run:** `20260922T173618Z-fleet03-B14-QFORM-r15`  
 **Assignment:** translations and localization  
-**Startup control:** `yspennstate/math-research-brain@fd93875d01be9ddf7534ea5402828bf422c19eb0`; refreshed before publication to `3c8e4fe6942ee985c3aa07f9f9f8c801f30fb56b`  
+**Startup control:** `private-brain-repository@fd93875d01be9ddf7534ea5402828bf422c19eb0`; refreshed before publication to `3c8e4fe6942ee985c3aa07f9f9f8c801f30fb56b`  
 **Owner control at refresh:** `2026-09-22.9`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** supporting target-level theorem; full QFORM remains OPEN.

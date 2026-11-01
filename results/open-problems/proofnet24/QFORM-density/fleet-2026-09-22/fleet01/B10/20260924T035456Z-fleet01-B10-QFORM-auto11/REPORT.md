@@ -10,7 +10,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source and correction boundary
 
-Fresh owner control was read from `yspennstate/math-research-brain` and refreshed before publication at commit
+Fresh owner control was read from `private-brain-repository` and refreshed before publication at commit
 
 `56c207cafad78da449e2bd084dd9a746b5e03d4c`,
 

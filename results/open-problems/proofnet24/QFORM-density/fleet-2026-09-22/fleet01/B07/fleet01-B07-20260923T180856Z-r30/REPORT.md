@@ -14,7 +14,7 @@ The full theorem is not claimed. All random variables remain in original indepen
 
 ## 1. Sources actually consumed
 
-1. Current control/corrections and owner continuation from `yspennstate/math-research-brain` main. The current request explicitly keeps the full unrestricted QFORM theorem open and the conditional-adaptation proposal `(SP)` open.
+1. Current control/corrections and owner continuation from `private-brain-repository` main. The current request explicitly keeps the full unrestricted QFORM theorem open and the conditional-adaptation proposal `(SP)` open.
 2. Current Claude continuation at `private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`, `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md` and `single_hub_core/REPORT.md`. Those results do not supply the structural implication proved here.
 3. Own coarse role-coloring theorem `QFORM-COARSE-ROLE-COLORING-v1`: `private-source-repository@d98ec05905698cdb01f334c7da741ed7bb7aef37`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T070624Z-r19/REPORT.md`.
 4. Own determinant-packet Fourier theorem `QFORM-MIXED-32-FRACTIONAL-COMPOUND-BL-v1`: `private-source-repository@7bf5a0bd8a8d2fa12a5c2370811ecfe5d2cf7444`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T090322Z-r20/REPORT.md`.

@@ -6,7 +6,7 @@ Status: **NEW SUPPORTING LOCALIZATION THEOREM + TARGET-VALID PARTNER APPLICATION
 
 ## 1. Scope and source pins
 
-Owner programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`. Fresh brain control was resolved before publication; the last observed control head before this report was `yspennstate/math-research-brain@8c00034eafd094929df68cbad69dea27f987db44`, whose `AGENTS.md` still keeps all slots on the unrestricted rough-law QFORM target and keeps the rough single-hub `(SP)` route OPEN rather than proved.
+Owner programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`. Fresh brain control was resolved before publication; the last observed control head before this report was `private-brain-repository@8c00034eafd094929df68cbad69dea27f987db44`, whose `AGENTS.md` still keeps all slots on the unrestricted rough-law QFORM target and keeps the rough single-hub `(SP)` route OPEN rather than proved.
 
 Designated partner result actually used below:
 

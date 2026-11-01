@@ -13,7 +13,7 @@ attacking: literature-to-proof transfer for the two-physical-hub / projected-pla
 
 ## 1. Fresh source and correction boundary
 
-Fresh controls were read from `math-research-brain`; owner control remains revision `2026-09-22.15`, programme revision `2026-09-22.5`, and the full theorem remains OPEN.
+Fresh controls were read from `private-brain`; owner control remains revision `2026-09-22.15`, programme revision `2026-09-22.5`, and the full theorem remains OPEN.
 
 The corrections used here are essential:
 

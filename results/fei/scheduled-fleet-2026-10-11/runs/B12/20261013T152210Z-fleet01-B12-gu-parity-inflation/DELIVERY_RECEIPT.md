@@ -4,7 +4,7 @@ The complete twelve-file package was written and read back nonempty and
 byte-equal at:
 
 - canonical `private-source-repository@f69a44d9d1f12676e4bd79da83884205907db231`, path `reports/fei-2026-10-11/runs/B12/20261013T152210Z-fleet01-B12-gu-parity-inflation/`;
-- Brain mirror `yspennstate/math-research-brain@66c21f6fe97507adb5f12a4e14f353337c6e9095`, path `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B12/20261013T152210Z-fleet01-B12-gu-parity-inflation/`.
+- Brain mirror `private-brain-repository@66c21f6fe97507adb5f12a4e14f353337c6e9095`, path `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B12/20261013T152210Z-fleet01-B12-gu-parity-inflation/`.
 
 Both repositories returned identical blob SHAs for every file:
 

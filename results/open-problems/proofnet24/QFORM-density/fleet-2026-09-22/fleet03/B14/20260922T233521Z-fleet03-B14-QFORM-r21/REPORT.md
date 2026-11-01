@@ -453,7 +453,7 @@ Therefore full QFORM remains `OPEN / NOT PROVED`.
 
 ## 11. Source pins
 
-* Fresh control source used at start: `yspennstate/math-research-brain@cb13f8ef744550c0e1a1136dbaf95d617e95d638`.
+* Fresh control source used at start: `private-brain-repository@cb13f8ef744550c0e1a1136dbaf95d617e95d638`.
 * Newest Claude source required by the owner: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md`, Theorem C.
 * Designated partner theorem actually applied: `private-source-repository@1250c776b3840b8494ace461b27541f8e156e9bf`, fleet04/B14 centered-affine localization report.
 * Current correction discipline retained: pointwise quadratic-phase decay, arbitrary-joint coarea, worst conditional-density moments, universal single-minor/cross-rank-three gates, and fixed fragment-count/diameter localization remain unavailable.

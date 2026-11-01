@@ -11,7 +11,7 @@
 
 The current owner order supersedes FEI and every earlier research assignment. The target is the universal bounded-density conjecture for `Q=X^TAX` with independent coordinate densities `0<=f_i<=1` and at least three eigenvalues of `A` of magnitude at least one.
 
-Current source control used before publication: `yspennstate/math-research-brain@fdd695485b7ac3ec1371ae2f9111f2821dee39eb`, owner revision `2026-09-22.5`. The current corrections are respected: law-uniform pointwise one-dimensional Fresnel decay is false; a two-dimensional spectral-fiber supremum can lose dimension; and diagonalizing `A` does not preserve independence.
+Current source control used before publication: `private-brain-repository@fdd695485b7ac3ec1371ae2f9111f2821dee39eb`, owner revision `2026-09-22.5`. The current corrections are respected: law-uniform pointwise one-dimensional Fresnel decay is false; a two-dimensional spectral-fiber supremum can lose dimension; and diagonalizing `A` does not preserve independence.
 
 Named partner result actually consumed and extended: fleet02/B08, `QFORM-DIFFUSE-RANK3-BL-v1`, canonical report `private-source-repository@0b5925a458d36c1ec1cf8ab344c9676260a97c8a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T113624Z-qform11/REPORT.md`. That report proves the exact-rank diffuse theorem with constant `3e` using sharp Hausdorff–Young, geometric rank-one Brascamp–Lieb, and Fresnel inversion.
 

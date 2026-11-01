@@ -428,7 +428,7 @@ Deterministic checker in this run verifies: the weighted-threshold constants, th
 
 Primary source pins:
 
-- fresh programme control/corrections: `yspennstate/math-research-brain@5a71ebdcdcfdd94ff5f68a96ec6df52b5dc4dc82`;
+- fresh programme control/corrections: `private-brain-repository@5a71ebdcdcfdd94ff5f68a96ec6df52b5dc4dc82`;
 - completed `fleet02/B17` general-Gram infinitesimal covariance floor: `private-source-repository@907d4092f2d22b6c02146cb8165efa0b7416ffa5`, `.../fleet02/B17/20260922T171829Z-fleet02-B17-QFORM-r11/REPORT.md`;
 - newest `fleet02/B17` diffuse-Lindeberg global theorem: `private-source-repository@1d2dd52680ec729f28b7289e74a6f3752a379127`, `.../fleet02/B17/fleet02-B17-20260923T1142Z-r11/REPORT.md`;
 - arbitrary-mean Gaussian ceiling: `private-source-repository@dcf8885d5153370cacfa246ad1e29fb06d971769`, `.../fleet03/B17/20260923T070310Z-fleet03-B17-QFORM-r25/REPORT.md`;

@@ -32,7 +32,7 @@ ss = json.loads(source_status_path.read_text(encoding='utf-8'))
 ss['bundle_state'] = {'prepared':True,'submitted':True,'reviewed':False,'ingested':False,'retrievable':False}
 ss['review_state'] = 'submitted_to_named_referee; independent verdict pending'
 if (ROOT / 'sources' / 'canonical_store_c0056.json').exists():
-    ss['canonical_store_check'] = 'Read-only exact C0056 IDs queried in the explicitly assigned active population DB; receipt in sources/canonical_store_c0056.json. A separate canonical path under math-research-brain/local was not located in targeted pilot directories. No writes or solved-status certification.'
+    ss['canonical_store_check'] = 'Read-only exact C0056 IDs queried in the explicitly assigned active population DB; receipt in sources/canonical_store_c0056.json. A separate canonical path under private-brain/local was not located in targeted pilot directories. No writes or solved-status certification.'
 source_status_path.write_text(json.dumps(ss,indent=2)+'\n',encoding='utf-8')
 
 names = ['ATTEMPT.md','STATEMENT_FOR_ADVERSARY.md','SOURCE_STATUS.json','CLAIMS.jsonl','REVIEW_PACKET.md','REPORT.md','SCALAR_CHECK_RESULTS.json','check_scalar.py','bundle_001.json','RELATION_SUPPORT.jsonl','BUNDLE_VALIDATION.json','HOOK_PROPOSAL.jsonl','patches/01_log_cavity_hook.diff','sources/SOURCE_RECEIPTS.json']

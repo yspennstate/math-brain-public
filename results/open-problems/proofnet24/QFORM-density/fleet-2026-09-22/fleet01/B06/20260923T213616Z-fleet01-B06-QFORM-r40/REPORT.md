@@ -13,7 +13,7 @@ The unrestricted conjecture remains OPEN. This report proves a dimension-free ha
 
 ## 1. Fresh source boundary
 
-Fresh `math-research-brain` control at the prepublication refresh is commit
+Fresh `private-brain` control at the prepublication refresh is commit
 
 `58a0cc3c21033d8b1d445194421ff978111020db`,
 

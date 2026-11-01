@@ -4,7 +4,7 @@ attacking: replace local six-row Hellinger extraction by a global compatibility-
 # fleet01/B04 — global compatibility-Hellinger compiler; local six-row extraction is false
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Control refreshed before publication:** `yspennstate/math-research-brain@ed4752c378fd8daea62429a34678122eb0e87c65`; revision still `2026-09-22.15`, QFORM only.  
+**Control refreshed before publication:** `private-brain-repository@ed4752c378fd8daea62429a34678122eb0e87c65`; revision still `2026-09-22.15`, QFORM only.  
 **Outcome:** `ESSENTIAL_MISSING_IMPLICATION_REFUTED_AND_REPLACED / SUPPORTING_THEOREM_PROVED / PARTNER_APPLIED / FULL_TARGET_OPEN`.  
 **Continuity:** proved in the new Fourier theorem below; full-target continuity remains open.  
 **Execution memory:** `WITHOUT_VERIFIED_BRAIN`.

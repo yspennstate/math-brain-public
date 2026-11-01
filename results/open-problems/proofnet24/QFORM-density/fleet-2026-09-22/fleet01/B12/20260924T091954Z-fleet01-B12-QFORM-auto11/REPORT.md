@@ -307,7 +307,7 @@ The live correction set rules out replacing that step by a universal single good
 ## 9. Sources
 
 Fresh control source before publication:
-`yspennstate/math-research-brain@05c16f25613411cb0ffbdec941273528d45e8116`, including `scheduled_tasks/README.md` and the live `CORRECTION_INBOX.json`.
+`private-brain-repository@05c16f25613411cb0ffbdec941273528d45e8116`, including `scheduled_tasks/README.md` and the live `CORRECTION_INBOX.json`.
 
 Newest designated partner theorem actually applied:
 `private-source-repository@4cc6fbf96ef099a1492e043882219496509e94ba`,

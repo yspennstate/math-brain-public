@@ -9,7 +9,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The full conjecture remains open: for independent real coordinates with densities at most one and symmetric `A` with at least three eigenvalues of modulus at least one, prove a universal bound on the density of `X^T A X`, or produce a valid counterexample.
 
-Fresh control was resolved before this run at `yspennstate/math-research-brain@6860364d5ff95a7f28120482fb6ac6044ad2b189`; immediately before the main mathematical write it had advanced, by ordinary fleet handoffs rather than a later owner stop, to `fb50f1793e7ff245df2dffbd1857f88dcae884df`. The active owner continuation remains `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` and the unrestricted rough-law endpoint remains OPEN.
+Fresh control was resolved before this run at `private-brain-repository@6860364d5ff95a7f28120482fb6ac6044ad2b189`; immediately before the main mathematical write it had advanced, by ordinary fleet handoffs rather than a later owner stop, to `fb50f1793e7ff245df2dffbd1857f88dcae884df`. The active owner continuation remains `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` and the unrestricted rough-law endpoint remains OPEN.
 
 Fresh mathematical master before work was `private-source-repository@810eb1d6e50d68ab2ee70591edb690051823c163`.
 

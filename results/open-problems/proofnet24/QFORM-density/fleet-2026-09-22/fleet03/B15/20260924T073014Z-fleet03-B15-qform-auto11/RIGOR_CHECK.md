@@ -133,4 +133,4 @@ Hence REPORT (6.2) is exact.
 
 ## F. Publication/privacy check
 
-Changed-file allowlist for this run is restricted to this worker-owned immutable directory in `private-source` plus the prescribed fleet03/B15 handoff/memory/status paths in `math-research-brain`. No credentials, tokens, personal archives, scheduler IDs, machine paths, financial/company/client material, or public-release action is present. A repository-native secret-scanner command is not exposed through the available connector, so this is a narrow manual content review rather than a claim of a full repository scan.
+Changed-file allowlist for this run is restricted to this worker-owned immutable directory in `private-source` plus the prescribed fleet03/B15 handoff/memory/status paths in `private-brain`. No credentials, tokens, personal archives, scheduler IDs, machine paths, financial/company/client material, or public-release action is present. A repository-native secret-scanner command is not exposed through the available connector, so this is a narrow manual content review rather than a claim of a full repository scan.

@@ -58,6 +58,6 @@ The JSON supplies a separate growth probe, stress probe and independent audit pr
 
 All theorem/proof/check work remains in existing canonical FEI locations and archives. This shared package contains a priority overlay and pointers, not a second mathematics store.
 
-Suggested control package: `scheduled_tasks/work/shared/full-fei-only-2026-10-12/ in math-research-brain`
+Suggested control package: `scheduled_tasks/work/shared/full-fei-only-2026-10-12/ in private-brain`
 
 The JSON contains pinned current source paths and critical primary-source readings. Pin any newer revision actually used. This overlay is enacted through the current owner-control package. Native adoption and peer responses are evidenced separately in receipts.

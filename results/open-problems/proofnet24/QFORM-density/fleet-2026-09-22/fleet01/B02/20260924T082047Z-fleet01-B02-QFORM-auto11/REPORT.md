@@ -13,7 +13,7 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates with 
 
 ## 1. Fresh source boundary and designated partner
 
-Fresh `math-research-brain/main` was resolved at startup. The effective owner control remains revision `2026-09-22.15`, QFORM-only. `AGENTS.md`, the full `scheduled_tasks/README.md`, programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/fleet01/B02.json` were read. The live corrections against law-uniform pointwise quadratic decay, arbitrary-joint coarea, conditional projection caps/moments, post-rotation independence, and absolute-value-before-cancellation shortcuts are retained.
+Fresh `private-brain/main` was resolved at startup. The effective owner control remains revision `2026-09-22.15`, QFORM-only. `AGENTS.md`, the full `scheduled_tasks/README.md`, programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/fleet01/B02.json` were read. The live corrections against law-uniform pointwise quadratic decay, arbitrary-joint coarea, conditional projection caps/moments, post-rotation independence, and absolute-value-before-cancellation shortcuts are retained.
 
 The immediate B02 predecessor is
 

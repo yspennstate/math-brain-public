@@ -18,7 +18,7 @@ This run consumed all live route corrections before publication:
 - `QFORM-CROSSMINOR-ALONE-FALSE`: a nonsingular `2x2` cross block alone does not force bounded density; the rank-two Fourier tail is only `|t|^{-1}`.
 - `QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH`: the global constant cannot be `pi`; the current analytic lower bound is `C>=3 sqrt(2)`. The same correction supplied `QFORM-CROSSBLOCK-RANK-r-FOURIER-v1`, giving `2r/(r-2) Delta^{-1/r}` for an arbitrary rank-`r>2` original-coordinate cross block, where `Delta` is the product of its nonzero singular values. Canonical correction report: `private-source-repository@8624982153e5a2154e4ae8922d2fe4dc77080efc`, blob `d0546b3190cb35a070fabd86162f4b4874975f62`.
 
-The assigned partner `fleet03/B02` had a current QFORM start record (`math-research-brain@d85ce8bcca55a068b70ab443f8edb4063ed479c8`) but no completed QFORM handoff at the final pre-write partner check. I therefore did not wait or fabricate a partner premise.
+The assigned partner `fleet03/B02` had a current QFORM start record (`private-brain@d85ce8bcca55a068b70ab443f8edb4063ed479c8`) but no completed QFORM handoff at the final pre-write partner check. I therefore did not wait or fabricate a partner premise.
 
 Two completed same-programme dependencies were actually used for compatibility, not as closure claims:
 

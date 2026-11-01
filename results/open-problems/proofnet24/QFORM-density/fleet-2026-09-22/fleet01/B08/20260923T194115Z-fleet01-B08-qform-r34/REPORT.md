@@ -254,7 +254,7 @@ Two other branches remain separate: `d<1/2` (near alignment), and leakage above 
 
 ## 8. Corrections and finite check
 
-Before publication I reread the live correction inbox on fresh `math-research-brain/main`. None of the refuted interfaces is used. In particular this proof does not use law-uniform pointwise van der Corput decay, arbitrary-joint coarea, a fiberwise conditional cap, independence after rotation, or the false implication that a small coefficient-matrix perturbation is a small random quadratic perturbation.
+Before publication I reread the live correction inbox on fresh `private-brain/main`. None of the refuted interfaces is used. In particular this proof does not use law-uniform pointwise van der Corput decay, arbitrary-joint coarea, a fiberwise conditional cap, independence after rotation, or the false implication that a small coefficient-matrix perturbation is a small random quadratic perturbation.
 
 `check.py` is a deterministic-seed sanity check of the sharp row inequality for 5000 random three-frames with `d in [1/2,1]`; `CHECK_OUTPUT.txt` records zero violations and ends `QFORM_B08_R34_ROW_CURRENCY_CHECK_PASS`. It also prints the exact numerical constants in (4.3)-(5.5). This finite check is not part of the proof.
 

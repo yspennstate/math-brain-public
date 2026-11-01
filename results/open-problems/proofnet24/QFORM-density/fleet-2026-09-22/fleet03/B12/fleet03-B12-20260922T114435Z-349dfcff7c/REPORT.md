@@ -242,7 +242,7 @@ Thus this run proves a concrete **additional-eigenvalue stability theorem**: in 
 
 ## 9. Source pins
 
-* live control read before delivery: `yspennstate/math-research-brain@83f34aa729ecda8c9332539d5e91d054d9ffafae`, revision `2026-09-22.5`;
+* live control read before delivery: `private-brain-repository@83f34aa729ecda8c9332539d5e91d054d9ffafae`, revision `2026-09-22.5`;
 * consumed peer theorem: `private-source-repository@289810e1f075755898f573ee5b863ad3fa9af5b8:qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`;
 * partner `fleet04/B12`: no current QFORM-compatible completed artifact was observed before this delivery; older FEI B12 artifacts were not reused after the owner target switch.
 

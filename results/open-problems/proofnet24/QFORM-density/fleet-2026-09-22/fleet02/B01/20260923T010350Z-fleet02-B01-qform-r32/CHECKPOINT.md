@@ -4,7 +4,7 @@ Status: partial proved corollary plus exact N3 stress families; full QFORM remai
 
 Source inputs actually used:
 - newest-Claude Theorem H (mixed hub/Fresnel–Brascamp–Lieb), `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`;
-- assigned partner fleet03/B01 r21 handoff `yspennstate/math-research-brain@8b3939cff4def148fd1a005b506c99e684176053`, whose canonical report is `private-source-repository@6a63d945b3e2409e5ff5799d2d13c3654bdd27e6:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T002425Z-r21/REPORT.md`.
+- assigned partner fleet03/B01 r21 handoff `private-brain-repository@8b3939cff4def148fd1a005b506c99e684176053`, whose canonical report is `private-source-repository@6a63d945b3e2409e5ff5799d2d13c3654bdd27e6:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T002425Z-r21/REPORT.md`.
 
 ## Mixed rank-two bank + one hub corollary
 

@@ -13,7 +13,7 @@ The unrestricted QFORM conjecture remains **OPEN / NOT PROVED / NOT DISPROVED**.
 
 ## 1. Fresh controls and exact dependencies
 
-At prepublication refresh, `yspennstate/math-research-brain` main was observed at commit
+At prepublication refresh, `private-brain-repository` main was observed at commit
 
 `2379f69200ac1a510020a5924d743adbc28cc42b`,
 

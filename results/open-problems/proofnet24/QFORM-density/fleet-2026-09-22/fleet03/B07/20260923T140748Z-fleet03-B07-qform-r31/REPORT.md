@@ -6,8 +6,8 @@ attacking: the r30 residual third-volume branch — spend the whole E3 packet by
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Assignment: coordinate minor selection / GEOMETRY  
 Run: `20260923T140748Z-fleet03-B07-qform-r31`  
-Start control: `yspennstate/math-research-brain@7177e995892ee54069095ac6de4ad5e4b9b36ad2`  
-Pre-publication control observed: `yspennstate/math-research-brain@2a6ae78e23344d148126c1b7f3d09228f2cf9601`  
+Start control: `private-brain-repository@7177e995892ee54069095ac6de4ad5e4b9b36ad2`  
+Pre-publication control observed: `private-brain-repository@2a6ae78e23344d148126c1b7f3d09228f2cf9601`  
 Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 Status: **NEW SUPPORTING AGGREGATE-MINOR DESCENT / DESIGNATED PARTNER APPLIED / TWO SUBBRANCHES PAID / FULL QFORM OPEN / FULL CONTINUITY OPEN**.
 

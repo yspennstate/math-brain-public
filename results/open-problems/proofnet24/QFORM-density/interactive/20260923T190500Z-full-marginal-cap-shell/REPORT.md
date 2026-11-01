@@ -111,7 +111,7 @@ For \(k=3\), the pointwise bound after (4) is less than one, hence less than \(2
 
 The previous fleet01/B06 source proved X-ray-only insufficiency:
 private-source commit cfb4137e221cd87aeb4f669389d14fa65e3251e7,
-path proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T120617Z-a01-b06-qform-r11/REPORT.md. Its event is in the current math-research-brain CORRECTION_INBOX. The present calculation proves the stronger information-loss claim (1)--(2). It also shows why fleet01/B05's new Borel square-root slice estimate, which follows from a projected joint-density cap, cannot alone provide the missing two-base hub integration theorem: some genuinely product-preserving operation is still needed.
+path proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T120617Z-a01-b06-qform-r11/REPORT.md. Its event is in the current private-brain CORRECTION_INBOX. The present calculation proves the stronger information-loss claim (1)--(2). It also shows why fleet01/B05's new Borel square-root slice estimate, which follows from a projected joint-density cap, cannot alone provide the missing two-base hub integration theorem: some genuinely product-preserving operation is still needed.
 
 No admissible independent-coordinate counterexample was found. In particular, nothing here verifies that \(g_\delta\) has an original-coordinate product representation after projection. Further work must retain the product convolution/Pluecker structure through the curved trace and through additional spectral terms.
 

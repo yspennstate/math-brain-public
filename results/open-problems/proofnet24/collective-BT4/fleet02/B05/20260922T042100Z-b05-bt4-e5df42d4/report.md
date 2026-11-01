@@ -12,7 +12,7 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`
 
 Target: prove that every finite loopless digraph with at most one arc per ordered pair of distinct vertices and minimum outdegree at least seven contains four pairwise vertex-disjoint genuinely directed cycles. Opposite arcs are allowed in the source problem and a directed digon counts as a cycle. The oriented exact-outdegree-seven model below is only the inherited minimum-counterexample normal form after the valid digon reduction.
 
-Fresh owner controls were read from `yspennstate/math-research-brain` at main commit `852dfd0f4852bbcbb5201185b2ac2982bd6030e3`, and rechecked before this write at main `c4713fdd5dfff0f0f7eadf256fe059fdb2a6c10a`. The active README/OWNER-control Git blob remained `3d4a9372c87802ab734141a3374d04c8823372e3`, revision `2026-09-22.2`, with `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z` active and no fleet02/B05 stop. Whole-file/OWNER-message SHA-256 values are `UNVERIFIED_CURRENT_RUN`; immutable Git identities are recorded rather than inventing hashes not independently materialized as exact native bytes.
+Fresh owner controls were read from `private-brain-repository` at main commit `852dfd0f4852bbcbb5201185b2ac2982bd6030e3`, and rechecked before this write at main `c4713fdd5dfff0f0f7eadf256fe059fdb2a6c10a`. The active README/OWNER-control Git blob remained `3d4a9372c87802ab734141a3374d04c8823372e3`, revision `2026-09-22.2`, with `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z` active and no fleet02/B05 stop. Whole-file/OWNER-message SHA-256 values are `UNVERIFIED_CURRENT_RUN`; immutable Git identities are recorded rather than inventing hashes not independently materialized as exact native bytes.
 
 Control/source Git blobs used at the fresh startup point:
 

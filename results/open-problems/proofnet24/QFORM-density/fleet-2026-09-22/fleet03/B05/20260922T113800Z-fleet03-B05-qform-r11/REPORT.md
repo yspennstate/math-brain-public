@@ -14,9 +14,9 @@ The current target is: for independent real `X_i` with densities `0<=f_i<=1`, an
 
 This run does **not** use the refuted law-uniform pointwise one-dimensional Fresnel decay. It also does not rotate and then retain only a joint `L^infinity` density bound, and it does not take a fiberwise supremum. Those mechanisms are known to lose the product structure or dimension.
 
-The directly relevant peer result is fleet02/B05 (`math-research-brain` commit `e88f1fe38a73b03361ebd00825ab2d4367b73b6f`): naive two-dimensional spectral-plane coarea with fiber supremum loses a factor `n/2` on an explicit cube projection, while its exact pair-kernel identity shows why product averaging must be retained. The current assigned partner is fleet04/B05; at the fresh source read no completed current-qform artifact from that slot was visible, so no stale BT4 artifact is substituted for partner mathematics.
+The directly relevant peer result is fleet02/B05 (`private-brain` commit `e88f1fe38a73b03361ebd00825ab2d4367b73b6f`): naive two-dimensional spectral-plane coarea with fiber supremum loses a factor `n/2` on an explicit cube projection, while its exact pair-kernel identity shows why product averaging must be retained. The current assigned partner is fleet04/B05; at the fresh source read no completed current-qform artifact from that slot was visible, so no stale BT4 artifact is substituted for partner mathematics.
 
-A second exact stress source is fleet02/B07 (`math-research-brain` handoff `fleet02-B07-20260922T113436Z.md`): rank-three Walsh projections have spectrum `(1,1,1,0,...)` while every fixed-size original-coordinate principal block tends to zero. Thus any useful positive result should survive a genuinely delocalized rank-three form.
+A second exact stress source is fleet02/B07 (`private-brain` handoff `fleet02-B07-20260922T113436Z.md`): rank-three Walsh projections have spectrum `(1,1,1,0,...)` while every fixed-size original-coordinate principal block tends to zero. Thus any useful positive result should survive a genuinely delocalized rank-three form.
 
 ## 2. External ingredient: the small-leverage Fourier–Brascamp–Lieb estimate
 

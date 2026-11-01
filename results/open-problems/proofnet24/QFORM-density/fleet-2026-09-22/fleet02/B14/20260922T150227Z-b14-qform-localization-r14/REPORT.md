@@ -217,7 +217,7 @@ This is the first unpaid connection. No claim of full solution is made.
 
 ## 9. Source pins and correction status
 
-- fresh control snapshot before scientific write: `yspennstate/math-research-brain@da8225a364f8b6ff706a10485f1f5ff7f1bf5729`;
+- fresh control snapshot before scientific write: `private-brain-repository@da8225a364f8b6ff706a10485f1f5ff7f1bf5729`;
 - owner programme/control: `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`;
 - completed partner localization theorem actually applied: `private-source-repository@2208c3f666582999f1fbc7e55921a4530cbe2789`, fleet03/B14 select-before-localize;
 - completed partner obstruction actually applied: `private-source-repository@54f2d04e936d0dfefe345d17ee18a46b35039d7e`, fleet03/B14 no-fixed-fragment-count theorem;

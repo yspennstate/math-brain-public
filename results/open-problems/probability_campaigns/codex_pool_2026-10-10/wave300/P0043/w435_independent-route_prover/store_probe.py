@@ -7,7 +7,7 @@ import time
 
 ROOT = Path(__file__).resolve().parent
 canonical = len(sys.argv)>1 and sys.argv[1] == "canonical"
-store = "~/math-research-brain/local/population/brain.sqlite3" if canonical else "~/math-brain-build/local/population/brain.sqlite3"
+store = "~/private-brain/local/population/brain.sqlite3" if canonical else "~/math-brain-build/local/population/brain.sqlite3"
 con = sqlite3.connect("file:"+store+"?mode=ro", uri=True, timeout=5)
 start = time.monotonic()
 con.set_progress_handler(lambda: int(time.monotonic()-start > 5), 10000)

@@ -7,7 +7,7 @@
 
 ## 0. Source state and first missing implication
 
-Startup control head was `yspennstate/math-research-brain@44927cd22ee7400eac02d182a370cc21db27f283`, owner revision `2026-09-22.3`; the prepublication refresh reached `01a20e14899387e8d0029d2b5ad90d65b0152ba3` with the same owner revision and an empty correction inbox. The all-team state keeps full uniform-cube FEI open and retires the fixed-potential, raw-U4, unweighted-L2 and fixed-depth-KL shortcuts at their stated scopes.
+Startup control head was `private-brain-repository@44927cd22ee7400eac02d182a370cc21db27f283`, owner revision `2026-09-22.3`; the prepublication refresh reached `01a20e14899387e8d0029d2b5ad90d65b0152ba3` with the same owner revision and an empty correction inbox. The all-team state keeps full uniform-cube FEI open and retires the fixed-potential, raw-U4, unweighted-L2 and fixed-depth-KL shortcuts at their stated scopes.
 
 The exact assignment asks for the biased multiplication equations to survive a genuine physical selector restriction with all conditional signs intact, and for a quantitative consequence that does not pay the global selector operator norm. The first missing implication was therefore:
 

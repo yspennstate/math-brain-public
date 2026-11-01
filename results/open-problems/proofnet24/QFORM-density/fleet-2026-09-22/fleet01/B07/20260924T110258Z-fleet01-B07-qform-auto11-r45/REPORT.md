@@ -307,7 +307,7 @@ This is a supporting coordinate-selection theorem, not a proof of the full conje
 
 ## 7. Source/status summary
 
-- Owner control: `yspennstate/math-research-brain`, revision `2026-09-22.15`, QFORM-only.
+- Owner control: `private-brain-repository`, revision `2026-09-22.15`, QFORM-only.
 - Predecessor: `private-source-repository@e192b40cf28c79aeb0dd3c7abcbf96f69a8f764f`, r44 report path above.
 - Designated partner actually applied: `private-source-repository@0489be649867dd226d4b6cea9ded74c973f19d46`, fleet02/B07 r51 report path above.
 - Actual marginal-free E3 receiver used through the partner source refresh: `private-source-repository@df738b7f0821d9af56dfd992cab10ecc6704e3fb`, fleet02/B03 `20260923T184716Z-fleet02-B03-QFORM-auto11/REPORT.md`.

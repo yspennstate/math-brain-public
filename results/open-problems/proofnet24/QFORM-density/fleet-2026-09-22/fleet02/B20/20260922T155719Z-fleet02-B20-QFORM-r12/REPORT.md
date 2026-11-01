@@ -108,7 +108,7 @@ This is a target-level reduction, not a full proof.
 
 Full QFORM remains `OPEN / NOT PROVED / NOT DISPROVED`; continuity is inherited only in the partner diffuse branch.
 
-Fresh protected control/correction snapshot: `yspennstate/math-research-brain@348305755fd2e9d68e27742f39da70d249a6a60b`, owner revision `2026-09-22.5`.
+Fresh protected control/correction snapshot: `private-brain-repository@348305755fd2e9d68e27742f39da70d249a6a60b`, owner revision `2026-09-22.5`.
 Newest completed partner used: fleet03/B20 `@eb7976d14c75a2a5945e03c6b947774e26fdebcb`.
 Schur-window splice: fleet01/B20 `@42db8aea74161970fec7b53664e087875026c6cf`.
 Previous B20 three-pivot theorem: `@2979c262e6ba9c4cef66314aabd714431f5e9c95`.

@@ -559,7 +559,7 @@ The proof never assumes independence after a general spectral rotation. It does 
 
 Dependencies actually used:
 
-- fresh owner control and QFORM-only assignment from `yspennstate/math-research-brain` main;
+- fresh owner control and QFORM-only assignment from `private-brain-repository` main;
 - live QFORM correction inbox refreshed immediately before publication;
 - fleet03/B17 local-CLT bank argument: `private-source-repository@7a64594fceb49b99698431a4d57b6658b49ebc28`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260924T053018Z-fleet03-B17-QFORM-auto11/REPORT.md`;
 - completed designated partner theorem: `private-source-repository@4be63022324b82f254f1d7a4353a3e883f08d10a`, exact path given in Section 7.

@@ -1,6 +1,6 @@
 # Source pins
 
-- Owner GU order: `yspennstate/math-research-brain`, blob
+- Owner GU order: `private-brain-repository`, blob
   `7c5e21945adef435e6b587909603dd96794a1ebe`.
 - B12 case target: blob `97e41262ebb4f09eec53630a918acae09efc9a48`.
 - B12 compact assignment: `private-source-repository`, blob
@@ -15,7 +15,7 @@
   `a12cb4f9554bc3473b037f83b78a9f3ff85d62f2`.
 - Latest repository heads inspected before research:
   `private-source@29cf70f6086cbd6b5ea1b29c1bec90a8f4ec3e5b` and
-  `math-research-brain@e16795095fb00d1e0b2a5c54b86906887fd3ff51`.
+  `private-brain@e16795095fb00d1e0b2a5c54b86906887fd3ff51`.
 - Concurrent relevant B01 result inspected before delivery:
   `private-source@bdd18f98e73739debb566afac8a55356af5ff370`.
   It proves a different fixed-bias depth-uniform GU' tower and leaves

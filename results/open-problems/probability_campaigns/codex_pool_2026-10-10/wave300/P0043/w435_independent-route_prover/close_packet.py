@@ -18,8 +18,8 @@ assert delivery["inserted"] == 1 and delivery["to"] == "w437"
 source_file = ROOT / "SOURCE_STATUS.json"
 source = json.loads(source_file.read_text(encoding="utf-8"))
 source["canonical_store_limit"] = {
-    "repository": "~/math-research-brain",
-    "population_default": "~/math-research-brain/local/population/brain.sqlite3",
+    "repository": "~/private-brain",
+    "population_default": "~/private-brain/local/population/brain.sqlite3",
     "population_default_present": False,
     "stuck": "STUCK: repository-relative population default is absent. A targeted local SQLite filename search found only two audit snapshots; these were not opened. Use the explicitly provided read-only active population store for historical cards, and do not certify current canonical status.",
     "provided_population_read": "~/math-brain-build/local/population/brain.sqlite3",

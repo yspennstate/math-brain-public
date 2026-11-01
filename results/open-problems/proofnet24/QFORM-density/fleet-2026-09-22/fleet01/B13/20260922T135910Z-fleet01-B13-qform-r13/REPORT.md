@@ -10,7 +10,7 @@ The full conjecture remains **OPEN / NOT PROVED**. The theorem below is for rank
 
 ## 1. Source state and corrections consumed
 
-Fresh control was read at `yspennstate/math-research-brain@ee4045cd9a6f3e3fcb0b3d4aa31bc18dcf0c8104` and refreshed before publication at `725d4c34bff9dfe74c2a494655fc432b3499b50d`. The live owner programme remained `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`.
+Fresh control was read at `private-brain-repository@ee4045cd9a6f3e3fcb0b3d4aa31bc18dcf0c8104` and refreshed before publication at `725d4c34bff9dfe74c2a494655fc432b3499b50d`. The live owner programme remained `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`.
 
 Corrections explicitly respected: law-uniform pointwise quadratic oscillatory decay is false; rotation does not preserve independence; fiber-supremum/X-ray-only arguments are insufficient; a single cross minor or Schur pivot need not close the rank-three problem; conditional cap does not replace independence; absolute phase-Wiener payment is not universal. The present argument keeps the original-coordinate product structure and performs aggregation before absolute Fourier payment.
 

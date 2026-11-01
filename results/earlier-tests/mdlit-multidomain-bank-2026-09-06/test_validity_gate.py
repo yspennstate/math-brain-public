@@ -155,7 +155,7 @@ class ValidityGateTests(unittest.TestCase):
             self.assertFalse((self.run / "results").exists())
 
     def test_current_pinned_real_sample_is_rejected(self):
-        pinned = Path.home() / "ai-memories-and-functionality/12_cognitive_architecture/audits/evidence/last200_20260906/private/mdlit_validity_before"
+        pinned = Path.home() / "private-memory/12_cognitive_architecture/audits/evidence/last200_20260906/private/mdlit_validity_before"
         if not pinned.exists():
             self.skipTest("private incident evidence is intentionally not distributed")
         sample = json.loads((pinned / "run_md/SAMPLE.json").read_text(encoding="utf-8"))

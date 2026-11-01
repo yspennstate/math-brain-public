@@ -42,7 +42,7 @@ source_status={
    {'artifact':'target_nodes.json','result':'Owner FPP campaign correction retains an unavailable uniform engine/transport implication and explicitly leaves chi=1/3 unmoved; no owner solution inferred.'},
    {'paths':['probability_1000_attempts_H_20260912','probability_1000_attempts_I_20260914','prob1000_lean_20260908'],
     'result':'Targeted P0104 scans found no new matched proof in H/I; Lean annotated ranking repeats attempted_un. This is a limited search, not a complete retirement audit.'},
-   {'path':'~/math-research-brain/local/population','result':'Expected canonical store location absent; used the explicitly named live population store read-only instead.'}],
+   {'path':'~/private-brain/local/population','result':'Expected canonical store location absent; used the explicitly named live population store read-only instead.'}],
  'literature_check':'Targeted public primary searches and the 2026 Riemannian paper establish no solution for the fixed lattice target. Current global openness remains UNKNOWN.',
  'formal_check':{'executed':False,'theorem':None,'assumptions':None,'trusted_axioms':None,'admitted_placeholders_counted':False},
  'brain_scar':'perceptron_proof_open_gaps_fleet_2026_07_12',

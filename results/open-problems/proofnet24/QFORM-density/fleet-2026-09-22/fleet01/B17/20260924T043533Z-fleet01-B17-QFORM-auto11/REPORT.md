@@ -382,4 +382,4 @@ Mathematical scope:
 - full arbitrary-law/full-dimension QFORM remains open;
 - unrestricted continuity remains separate.
 
-Control refreshed during the run to `yspennstate/math-research-brain@aa2367e22ada13d982748057e4a0788e0e61adfe`; no later B17 stop or target change was present. Schedule, enabled/quiet state, email/push state, identity, permissions, visibility, and public-release state were not changed.
+Control refreshed during the run to `private-brain-repository@aa2367e22ada13d982748057e4a0788e0e61adfe`; no later B17 stop or target change was present. Schedule, enabled/quiet state, email/push state, identity, permissions, visibility, and public-release state were not changed.

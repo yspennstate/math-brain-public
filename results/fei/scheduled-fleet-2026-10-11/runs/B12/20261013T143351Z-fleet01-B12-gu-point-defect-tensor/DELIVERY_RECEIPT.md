@@ -4,7 +4,7 @@ The complete eleven-file substantive package was written and read back
 nonempty and byte-equal at:
 
 - canonical `private-source-repository@ee10317463a61547a8ddad26c2cf08717989735a`, path `reports/fei-2026-10-11/runs/B12/20261013T143351Z-fleet01-B12-gu-point-defect-tensor/`;
-- Brain mirror `yspennstate/math-research-brain@d91124dfacfe4b96248a1d08d3c1906028b624d9`, path `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B12/20261013T143351Z-fleet01-B12-gu-point-defect-tensor/`.
+- Brain mirror `private-brain-repository@d91124dfacfe4b96248a1d08d3c1906028b624d9`, path `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B12/20261013T143351Z-fleet01-B12-gu-point-defect-tensor/`.
 
 The two repositories returned identical blob SHAs for every file:
 

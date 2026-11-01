@@ -10,7 +10,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`; no native learned-memory receiver was used.
 
 ## 1. Source pins and live assignment
 
-Fresh owner controls were read from `yspennstate/math-research-brain` main commit `00bd16396410aae9a7bc394e03e733be30a801a6`, control revision `2026-09-22.5`. This later owner order supersedes the stale FEI text attached to the scheduler: all workers are on the quadratic-form bounded-density conjecture.
+Fresh owner controls were read from `private-brain-repository` main commit `00bd16396410aae9a7bc394e03e733be30a801a6`, control revision `2026-09-22.5`. This later owner order supersedes the stale FEI text attached to the scheduler: all workers are on the quadratic-form bounded-density conjecture.
 
 
 The scientific source repository was resolved at `private-source-repository` master commit `92717ee3ab720389cb84a8941c62810b5a2fd605` before the derivation.

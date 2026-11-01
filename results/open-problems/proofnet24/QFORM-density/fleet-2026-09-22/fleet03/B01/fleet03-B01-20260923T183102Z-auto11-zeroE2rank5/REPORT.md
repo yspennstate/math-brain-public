@@ -13,7 +13,7 @@ The target remains the unrestricted product-law problem: independent original re
 
 ## 1. Sources actually used
 
-Fresh control was read from `yspennstate/math-research-brain` on main under owner control revision `2026-09-22.15`; the current owner continuation remains `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` and the full theorem remains open.
+Fresh control was read from `private-brain-repository` on main under owner control revision `2026-09-22.15`; the current owner continuation remains `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` and the full theorem remains open.
 
 The analytic positive-volume receiver is the completed arbitrary-rank projected-crossing theorem
 

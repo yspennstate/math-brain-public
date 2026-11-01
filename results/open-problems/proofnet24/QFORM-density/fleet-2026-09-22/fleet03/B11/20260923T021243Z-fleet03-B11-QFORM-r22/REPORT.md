@@ -12,7 +12,7 @@ The full owner target is **not** proved here. The new result pays two concrete i
 
 ## 1. Fresh sources actually used
 
-Fresh `math-research-brain` main at startup was
+Fresh `private-brain` main at startup was
 
 `e83382e04b0966b933d698cdf95e0388dbc97312`,
 

@@ -6,7 +6,7 @@ attacking: convert the r30 E2→E3 spectral lift into a marginal-free overlap fu
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Role: coordinate minor selection / GEOMETRY  
 Run: `fleet01-B07-20260923T191801Z-r31`  
-Fresh pre-publication brain main: `yspennstate/math-research-brain@1b1bf2e3692b259a1ede789e752302345a56bb6a`  
+Fresh pre-publication brain main: `private-brain-repository@1b1bf2e3692b259a1ede789e752302345a56bb6a`  
 Owner continuation: `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`  
 Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 Status: **NEW MARGINAL-FREE E2-LIFT OVERLAP FUNNEL / NEW H1 AND H2 INVERSE-FREE CURRENCY COMPILERS / DESIGNATED PARTNER APPLIED / FULL QFORM OPEN / GLOBAL CONTINUITY OPEN**.

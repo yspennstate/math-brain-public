@@ -8,7 +8,7 @@ attacking: the double-diffuse invertible second-anchor collar by coupling its an
 **Status:** `ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN`  
 **Target-wide universal Fourier-L1:** `OPEN_NOT_REFUTED`  
 **Continuity:** proved on the new L1 branch below; full-target continuity remains open.  
-**Control at start:** `yspennstate/math-research-brain@5fd590abde30cd76ce2a47304fadb884415b025d`, owner revision `2026-09-22.15`.
+**Control at start:** `private-brain-repository@5fd590abde30cd76ce2a47304fadb884415b025d`, owner revision `2026-09-22.15`.
 
 The exact target is unchanged: independent ORIGINAL real coordinates with one-dimensional densities bounded by one, and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one. No moment, support, iid, Gaussian, log-concavity, diagonal-basis independence, or post-rotation independence assumption is inserted.
 

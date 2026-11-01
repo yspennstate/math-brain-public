@@ -1,6 +1,6 @@
 # Source pins
 
-- Owner order: `yspennstate/math-research-brain@40210272c19f43fed84f6a67653f9a04b0e11e28`, `scheduled_tasks/work/shared/full-fei-only-2026-10-12/ORDER.md`, blob `81b6d6f988aee4489512c6e62543253900620453`.
+- Owner order: `private-brain-repository@40210272c19f43fed84f6a67653f9a04b0e11e28`, `scheduled_tasks/work/shared/full-fei-only-2026-10-12/ORDER.md`, blob `81b6d6f988aee4489512c6e62543253900620453`.
 - Current owner overlay: `CASE_TARGETS.json`, blob `97e41262ebb4f09eec53630a918acae09efc9a48`; B12 row retains A056–A060 and the complete biased coherent hierarchy target.
 - Current B12 compact contract: `private-source-repository`, `reports/fei-2026-10-11/assignments/B12.json`, blob `40935ac651643a17815d0addf664ec4c1c0313cc`.
 - Current status read: blob `c416d4b4a83fc67965cb95d06a0cc80c5c29a520` at canonical head `65227cd35837edcef10d41b04f9340df628fa1a2`.

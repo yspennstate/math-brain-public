@@ -1,6 +1,6 @@
 # Source pins
 
-- GU laser focus: `yspennstate/math-research-brain`,
+- GU laser focus: `private-brain-repository`,
   `scheduled_tasks/work/shared/full-fei-only-2026-10-12/GU_LASER_FOCUS_20261014.md`,
   blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
 - B19 compact contract: `private-source-repository`,
@@ -8,7 +8,7 @@
   `ee688080aba90acd2daed1b26e809e38285dcb85`.
 - Stream index blob: `58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704`.
 - Execution protocol blob: `457358ff62cbf1141a72096bcabdf95bf18c1be2`.
-- U-universal notes and Theorem G: `yspennstate/math-research-brain`,
+- U-universal notes and Theorem G: `private-brain-repository`,
   `scheduled_tasks/work/shared/full-fei-only-2026-10-12/gu/U-universal/NOTES.md`,
   blob `3b0636c653c7818368eeb204011c3e1ff21c234e`.
 - Reviewed producer bundle: `private-source-repository` commit

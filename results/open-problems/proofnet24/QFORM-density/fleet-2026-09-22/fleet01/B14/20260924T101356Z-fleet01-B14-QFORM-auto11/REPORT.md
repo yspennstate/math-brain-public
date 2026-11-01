@@ -232,7 +232,7 @@ This is strictly a structural/analytic gap. Unbounded support and lack of moment
 
 ## Source discipline
 
-Fresh control was resolved on `yspennstate/math-research-brain` main, including control revision `2026-09-22.15`; no later owner/platform stop was observed before this write. The live correction inbox was re-read immediately before publication.
+Fresh control was resolved on `private-brain-repository` main, including control revision `2026-09-22.15`; no later owner/platform stop was observed before this write. The live correction inbox was re-read immediately before publication.
 
 Designated partner actually consumed and applied: fleet02/B14 run `20260924T095839Z-fleet02-B14-QFORM-auto11`, canonical math commit `72f8e6c6b826f7e849a879534a7835aaa8b9f2a4`, result `QFORM-ENVIRONMENT-COUPLED-BATHTUB-LOCALIZATION-v1`.
 

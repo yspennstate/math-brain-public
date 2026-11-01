@@ -6,7 +6,7 @@ attacking: the r39 overlap-1/2/3 survivor — compile every remaining third-comp
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Assignment: coordinate minor selection / GEOMETRY  
 Run: `20260923T224121Z-fleet03-B07-qform-r40`  
-Fresh control before publication: `yspennstate/math-research-brain@64e8fdd82617742f1b4b84ee257bda4f71d4506f`  
+Fresh control before publication: `private-brain-repository@64e8fdd82617742f1b4b84ee257bda4f71d4506f`  
 Execution: `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`.  
 Status: **NEW EXHAUSTIVE STRUCTURAL COMPILER FOR THE r39 OVERLAP-1/2/3 DEBT / FULL QFORM OPEN / FULL-TARGET CONTINUITY OPEN**.
 

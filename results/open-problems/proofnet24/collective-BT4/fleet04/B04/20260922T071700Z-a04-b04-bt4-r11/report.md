@@ -10,7 +10,7 @@
 
 ## 1. Source boundary and exact dependencies
 
-Fresh control was resolved on `yspennstate/math-research-brain` before work. Active control revision was `2026-09-22.2`, directive `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`; B04 remained assigned to BT4 structural case splitting and no B04 stop/pause was present.
+Fresh control was resolved on `private-brain-repository` before work. Active control revision was `2026-09-22.2`, directive `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`; B04 remained assigned to BT4 structural case splitting and no B04 stop/pause was present.
 
 The controlling complete team-lead source read in this run was:
 

@@ -9,7 +9,7 @@
 
 ## 0. Control state, conditional argument, and first missing implication
 
-This invocation resolved `yspennstate/math-research-brain/main` at
+This invocation resolved `private-brain-repository/main` at
 
 `20b81fa5409d4d847452cebe452f2b00689cf044`
 

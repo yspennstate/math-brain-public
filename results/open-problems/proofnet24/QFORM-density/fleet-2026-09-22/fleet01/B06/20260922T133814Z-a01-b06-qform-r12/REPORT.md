@@ -10,7 +10,7 @@
 
 The full target remains: for every finite `n`, independent real `X_i` with probability densities `0<=f_i<=1`, and every real symmetric `A` having at least three eigenvalues of absolute value at least one, prove that `Q=X^TAX` has an essentially bounded density with one universal finite constant, or give a valid counterexample. Continuity is a separate requested strengthening.
 
-Fresh control was read from `yspennstate/math-research-brain` main at the start of this run and refreshed before publication; owner revision remained `2026-09-22.5`, with QFORM as the sole research target and no later stop for B06.
+Fresh control was read from `private-brain-repository` main at the start of this run and refreshed before publication; owner revision remained `2026-09-22.5`, with QFORM as the sole research target and no later stop for B06.
 
 Corrections consumed include the standing failures of law-uniform pointwise quadratic-phase decay, unrestricted fiber-sup integration, independence after spectral rotation, conditional-cap replacement, single-Schur extraction, local cross-rank-three dichotomies, and the later `QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1`. A still newer event, `QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1`, was also checked before publication. The argument below uses none of these refuted interfaces: product aggregation is performed on original independent coordinate banks before any curved or cross-block conclusion.
 
@@ -281,6 +281,6 @@ This does not refute the QFORM target. It rules out a tempting perturbative shor
 
 ## 9. Publication-time correction check
 
-Before publication, fresh `math-research-brain` main had advanced to `026692a030fc864d59bccb110245e7f5491482c3`; owner control was still revision `2026-09-22.5`, QFORM-only, with no B06 stop. The live correction set included `QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1`, and the head itself added `QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1`. Neither challenges the present argument: this proof performs original-coordinate bank aggregation before curved/cross-block estimates and does not invoke an absolute spectral-Wiener norm.
+Before publication, fresh `private-brain` main had advanced to `026692a030fc864d59bccb110245e7f5491482c3`; owner control was still revision `2026-09-22.5`, QFORM-only, with no B06 stop. The live correction set included `QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1`, and the head itself added `QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1`. Neither challenges the present argument: this proof performs original-coordinate bank aggregation before curved/cross-block estimates and does not invoke an absolute spectral-Wiener norm.
 
 **Privacy/provenance check:** changed-file content was manually restricted to the mathematical statements, source pins, run identifier, and nonsecret operational status. No credentials, scheduler identifiers, machine paths, private unrelated data, email, Drive data, paid API use, remote workflow, or public-release action is present. An automated repository secret scanner was not exposed through the connector in this run.

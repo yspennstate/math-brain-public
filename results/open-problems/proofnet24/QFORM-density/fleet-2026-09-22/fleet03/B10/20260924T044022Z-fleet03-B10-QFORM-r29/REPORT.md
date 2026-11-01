@@ -10,7 +10,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary and predecessor
 
-Fresh owner control was read from `yspennstate/math-research-brain@4978ca2b8b7729b53bb9b40eb3208d469b895865`; the active owner revision is `2026-09-22.15`, QFORM-only. `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, the live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/fleet03/B10.json` were reread. The unrestricted conjecture and unrestricted continuity claim remain open.
+Fresh owner control was read from `private-brain-repository@4978ca2b8b7729b53bb9b40eb3208d469b895865`; the active owner revision is `2026-09-22.15`, QFORM-only. `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, the live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/fleet03/B10.json` were reread. The unrestricted conjecture and unrestricted continuity claim remain open.
 
 The mathematical predecessor is fleet03/B10 r28,
 

@@ -6,7 +6,7 @@ attacking: the first unpaid nonzero-pivot O0 near-coloop implication, by replaci
 **Run:** `20260922T200337Z-fleet03-B19-QFORM-r18`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Universal proof assembly  
-**Start control:** `yspennstate/math-research-brain@36c473d75525e102cafb6436d918b798cab5e002`, owner revision `2026-09-22.15`  
+**Start control:** `private-brain-repository@36c473d75525e102cafb6436d918b798cab5e002`, owner revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Outcome:** `ESSENTIAL_STEP_APPLIED / NONZERO-PIVOT TRANSVERSE NEAR-COLOOP DEBT REMOVED / FULL QFORM OPEN`.
 

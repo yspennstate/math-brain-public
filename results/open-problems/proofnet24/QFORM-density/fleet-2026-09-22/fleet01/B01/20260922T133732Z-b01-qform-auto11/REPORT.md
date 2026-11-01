@@ -2,7 +2,7 @@
 
 Run: `20260922T133732Z-b01-qform-auto11`  
 Programme: `QFORM-DENSITY-3EIG-20260922`, control revision `2026-09-22.5`  
-Control read: `yspennstate/math-research-brain@a061e3c35962dd58137107493fe491a17a8714cb`, refreshed before publication at `ba4d529d2fc96add303b46fe7846045aef311f54`  
+Control read: `private-brain-repository@a061e3c35962dd58137107493fe491a17a8714cb`, refreshed before publication at `ba4d529d2fc96add303b46fe7846045aef311f54`  
 Status: `ESSENTIAL_STEP_APPLIED`; full conjecture remains `OPEN`; execution label `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Exact target and preserved correction

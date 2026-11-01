@@ -19,7 +19,7 @@ The designated completed partner is fleet02/B20 run
 
 `20260923T142651Z-fleet02-B20-QFORM-auto11`,
 
-with source-pinned handoff in `yspennstate/math-research-brain` and canonical mathematics refreshed through
+with source-pinned handoff in `private-brain-repository` and canonical mathematics refreshed through
 
 `private-source-repository@a996362199678ee069db30c5ab31a44b2d3d29d6`.
 

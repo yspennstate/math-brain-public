@@ -37,7 +37,7 @@ with (root / "CLAIMS.jsonl").open("a", encoding="utf-8") as stream:
 
 source_status = json.loads((root / "SOURCE_STATUS.json").read_text(encoding="utf-8"))
 source_status["canonical_math_research_brain_locator"] = {
-    "repository": "~/math-research-brain", "status": "not located within the bounded path/code search",
+    "repository": "~/private-brain", "status": "not located within the bounded path/code search",
     "method": "README store references, store.py constructor, CLI/config path references, and filename-only sqlite/db discovery excluding banks/audits/evaluations",
     "conclusion": "No complete canonical solved/retired check was possible from that locator; current openness remains UNKNOWN. The named population store was checked read-only."
 }

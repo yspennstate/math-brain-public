@@ -15,7 +15,7 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, identica
 
 ## 1. Sources and live corrections actually used
 
-Fresh `math-research-brain/main` was read at run start and again before publication. The owner control remains revision `2026-09-22.15`, QFORM is the sole research target, and there is no later pause/stop. The current state still marks the full conjecture and full continuity conclusion open.
+Fresh `private-brain/main` was read at run start and again before publication. The owner control remains revision `2026-09-22.15`, QFORM is the sole research target, and there is no later pause/stop. The current state still marks the full conjecture and full continuity conclusion open.
 
 The designated completed partner result actually applied is:
 

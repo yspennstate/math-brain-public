@@ -55,7 +55,7 @@ The newer fleet01/B04 r19 source
 was also checked. Its scalar-pivot/Schur-(E_2) theorem is not silently applied here: the two anchor indices (iin I), (jin J) are generally distinct, so the cross coefficient (M_{ij}) is not a physical diagonal pivot. The third-compound theorem is the exact matched source.
 
 Controls were refreshed at
-`math-research-brain@e31e523430a429316ab599478efa12580bdc7c44`.
+`private-brain@e31e523430a429316ab599478efa12580bdc7c44`.
 
 ## 2. Main theorem
 

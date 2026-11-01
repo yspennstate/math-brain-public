@@ -162,7 +162,7 @@ overlap products. Full FEI remains open.
 
 ## 7. Sources and review status
 
-- Owner control: `math-research-brain` commit
+- Owner control: `private-brain` commit
   `40210272c19f43fed84f6a67653f9a04b0e11e28`, revision 2026-10-12.1.
 - B05 contract blob: `05447e6d999437bb82a266b427bd76a4b37266b6`.
 - Preceding B05 source: canonical commit

@@ -8,7 +8,7 @@
 
 ## 0. Control pivot and source pins
 
-The stale FEI prompt was superseded by the later owner control in `yspennstate/math-research-brain`: all eighty workers now work only on the quadratic-form density conjecture. The live target is:
+The stale FEI prompt was superseded by the later owner control in `private-brain-repository`: all eighty workers now work only on the quadratic-form density conjecture. The live target is:
 
 > For independent real `X_i` with densities `0<=f_i<=1` and real symmetric `A` with at least three eigenvalues of absolute value at least `1`, prove that `Q=X^T A X` has a density with one universal `L^infinity` bound, or give a genuine counterexample.
 

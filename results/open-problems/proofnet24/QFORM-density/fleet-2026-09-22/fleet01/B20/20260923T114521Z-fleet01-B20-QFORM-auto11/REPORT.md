@@ -12,7 +12,7 @@ No Gaussianity, moments, iid assumption, compact support, log-concavity, or inde
 
 Fresh designated partner actually consumed: fleet02/B20, canonical mathematics
 `private-source-repository@19327f690f815425717fcbd07854302df2090970`,
-`proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T112426Z-fleet02-B20-QFORM-auto11/REPORT.md`, source-pinned brain handoff at `yspennstate/math-research-brain@55bf41857b7e4f4d5ec12fb3cc0bdf4aebcf96dd`.
+`proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T112426Z-fleet02-B20-QFORM-auto11/REPORT.md`, source-pinned brain handoff at `private-brain-repository@55bf41857b7e4f4d5ec12fb3cc0bdf4aebcf96dd`.
 
 That partner reduces the current global no-pivot problem to the class `N3(tau)` with `tau=1/64` and, writing
 

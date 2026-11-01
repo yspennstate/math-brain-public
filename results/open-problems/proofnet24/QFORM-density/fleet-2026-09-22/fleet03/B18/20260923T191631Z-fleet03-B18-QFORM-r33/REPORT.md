@@ -334,7 +334,7 @@ Full-target continuity also remains OPEN. Continuity is proved here only at the 
 
 ## 10. Source and execution record
 
-Fresh control immediately before publication: `yspennstate/math-research-brain@12cf271a0a54404d06f9cd54cc0630bc7a0fdc68`, owner control revision `2026-09-22.15`. The live correction inbox at that head had blob `6bdbd9987a4eefeba79d53915cfe7e232263f8ec`.
+Fresh control immediately before publication: `private-brain-repository@12cf271a0a54404d06f9cd54cc0630bc7a0fdc68`, owner control revision `2026-09-22.15`. The live correction inbox at that head had blob `6bdbd9987a4eefeba79d53915cfe7e232263f8ec`.
 
 Fresh math master observed immediately before publication: `private-source-repository@77603276a7d3d218a9db0e60a2700c845b5810dc`.
 

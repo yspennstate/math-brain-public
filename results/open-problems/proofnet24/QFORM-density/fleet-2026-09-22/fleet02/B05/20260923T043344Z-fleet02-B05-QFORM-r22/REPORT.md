@@ -9,7 +9,7 @@ This run does not claim the full arbitrary-dimensional conjecture. It first reco
 
 ## 1. Source pins actually used
 
-Fresh brain control at run start: `yspennstate/math-research-brain@242a09dd205070fbf820b4d950daeb89f1af4b8a`, OWNER revision `2026-09-22.15`. A later fresh-main comparison through `8839f2409b12a2e9183e0e4a30b0599adadfbffd` showed only worker-run/status additions and no owner/control/correction change affecting B05.
+Fresh brain control at run start: `private-brain-repository@242a09dd205070fbf820b4d950daeb89f1af4b8a`, OWNER revision `2026-09-22.15`. A later fresh-main comparison through `8839f2409b12a2e9183e0e4a30b0599adadfbffd` showed only worker-run/status additions and no owner/control/correction change affecting B05.
 
 Required newest Claude/math package:
 

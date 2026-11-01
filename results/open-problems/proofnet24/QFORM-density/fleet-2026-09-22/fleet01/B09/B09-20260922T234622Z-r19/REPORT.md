@@ -13,7 +13,7 @@ Continuity: **not proved by the new pair endpoint; essential boundedness and lin
 
 The target is unchanged: for every finite `n`, every independent real `X_i` with probability densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove one dimension/law/matrix-independent constant `C` such that `X^T A X` has an essentially bounded density `<=C`, or give a valid counterexample. The stronger request for a continuous density is tracked separately.
 
-Fresh control was read on `yspennstate/math-research-brain` main. The prewrite control commit was
+Fresh control was read on `private-brain-repository` main. The prewrite control commit was
 
 `d3cdecfa1c922008cf324d5755de69578cebfa74`,
 

@@ -10,7 +10,7 @@
 
 The target remains unrestricted: for arbitrary dimension, independent real coordinates with probability densities bounded by one, and every real symmetric `A` having at least three eigenvalues of modulus at least one, prove one universal finite essential-supremum bound for the density of `Q=X^T A X`, or give a target-valid counterexample. No moments, bounded support, log-concavity, diagonal-basis reduction, or independence after spectral rotation is assumed.
 
-Fresh control was read from `yspennstate/math-research-brain` under owner revision `2026-09-22.5`; the live correction inbox was refreshed through commit `18e019124ff2bb35b24ab14f34fab8373eef1901` before this report was assembled. In particular I do not use a fixed good coordinate triple, a universal rank-three cross cut, a single Schur-rank-two extraction, post-rotation conditional caps, fiber suprema, or law-uniform pointwise Fresnel decay.
+Fresh control was read from `private-brain-repository` under owner revision `2026-09-22.5`; the live correction inbox was refreshed through commit `18e019124ff2bb35b24ab14f34fab8373eef1901` before this report was assembled. In particular I do not use a fixed good coordinate triple, a universal rank-three cross cut, a single Schur-rank-two extraction, post-rotation conditional caps, fiber suprema, or law-uniform pointwise Fresnel decay.
 
 Source-pinned dependencies actually applied:
 

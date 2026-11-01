@@ -8,7 +8,7 @@ attacking: the anchored mixed-volume receiver at its complementary rank-one/no-l
 
 ## 1. Sources and correction gates
 
-Fresh brain source: `yspennstate/math-research-brain@17b89297d3120baf4efe2e668f654438d64846a7`.
+Fresh brain source: `private-brain-repository@17b89297d3120baf4efe2e668f654438d64846a7`.
 
 The newest fleet01/B20 theorem used here is:
 

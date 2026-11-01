@@ -10,7 +10,7 @@ All probabilities below refer to the original uniform law on all full linear ext
 
 ## 1. Exact state consumed
 
-Fresh control was resolved at invocation start at `yspennstate/math-research-brain` main commit
+Fresh control was resolved at invocation start at `private-brain-repository` main commit
 
 `6f64e5b9989523a52d87669dbf053f8c0a35521f`.
 

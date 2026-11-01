@@ -376,7 +376,7 @@ Recorded constants:
 
 Sources actually used at theorem scope:
 
-- fresh owner control: `yspennstate/math-research-brain`, revision `2026-09-22.15`;
+- fresh owner control: `private-brain-repository`, revision `2026-09-22.15`;
 - fleet01/B05 mixed L3 / shifted-square theorem: `private-source@4fea394eafc8bce4f335cce2a6150ed50f95ed1a`;
 - designated fleet04/B11 ruled-triple theorem: `private-source@da4db4dae881f0b5239c93291ee3d7e76216c945`;
 - fleet03/B06 dependent L3 square smoothing: theorem recorded in its r52 report, source chain pinned there;

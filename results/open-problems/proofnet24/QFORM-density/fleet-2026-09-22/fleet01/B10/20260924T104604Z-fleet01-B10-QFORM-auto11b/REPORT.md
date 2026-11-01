@@ -365,7 +365,7 @@ Full exact rank three remains **OPEN**. Full QFORM remains **OPEN / NOT PROVED /
 
 ## 10. Source dependencies actually used
 
-- Fresh `math-research-brain` QFORM owner control and live correction ledger, revision `2026-09-22.15`.
+- Fresh `private-brain` QFORM owner control and live correction ledger, revision `2026-09-22.15`.
 - Own predecessor leverage-half Wiener--Fresnel proof:
   `private-source-repository@aff6876a6017be77544c50e8904e9baf8dac3bfe`,
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260924T101649Z-fleet01-B10-QFORM-auto11/REPORT.md`.

@@ -10,7 +10,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 
 This report proves a continuum-extension theorem for one fixed finite Boolean gate and one common potential. It does not certify any currently unproved potential for all gates, and hence does not prove FEI.
 
-The coherent owner/control bundle was read at `yspennstate/math-research-brain@a870806cdbbd41bd0bdf4d6926674e4ca4df1b10`, revision `2026-09-22.3`. The live correction inbox had no pending event at that read. The mathematical inputs actually used are:
+The coherent owner/control bundle was read at `private-brain-repository@a870806cdbbd41bd0bdf4d6926674e4ca4df1b10`, revision `2026-09-22.3`. The live correction inbox had no pending event at that read. The mathematical inputs actually used are:
 
 1. Gate defect and composition formulation: `private-source-repository@f5946fb64d336ed7369de279159643944efc47af`, `proofnet24/P03-fei/continuations/2026-09-22-gate-reformulation/REPORT.md`, Section 1.
 2. Exact selector packet and child-defect recursion: `private-source-repository@4ccd51ad517f425a529daa52c3352905b86ea69d`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md`, Sections 2--4. The refuted scalar candidate from its Section 5 is not used.

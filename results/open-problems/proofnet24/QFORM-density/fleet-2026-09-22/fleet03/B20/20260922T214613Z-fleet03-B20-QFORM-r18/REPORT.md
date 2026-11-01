@@ -18,7 +18,7 @@ This run uses only original-coordinate conditioning and exact Schur identities. 
 
 ### 2.1 fleet02/B20 r18: the heavy-edge alternative
 
-Source handoff: `math-research-brain@3bbe882a1095601d04d6ada8a36c3bb9b8e2d0cf`, path
+Source handoff: `private-brain@3bbe882a1095601d04d6ada8a36c3bb9b8e2d0cf`, path
 
 In the retained physical-pivot branch there is an original coordinate `i` with
 
@@ -36,7 +36,7 @@ The purpose of this run is to pay (2.1) completely, without assumptions on the r
 
 ### 2.2 fleet03/B19 r18: sequential two-pivot theorem
 
-Source handoff: `math-research-brain@f27c94cca288145b54f94c7e9cfad15a5cab9efd`; canonical mathematics recorded there as `private-source@4caa949abfce263bcfdcdf7fe175a4a999ae35b5`.
+Source handoff: `private-brain@f27c94cca288145b54f94c7e9cfad15a5cab9efd`; canonical mathematics recorded there as `private-source@4caa949abfce263bcfdcdf7fe175a4a999ae35b5`.
 
 If an original-coordinate principal pair
 

@@ -7,7 +7,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## Source pin and verdict
 
-Fresh owner control was read before selecting work from `yspennstate/math-research-brain/main/AGENTS.md` and `scheduled_tasks/CURRENT_OBJECTIVE.md`; this run explicitly acknowledges `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
+Fresh owner control was read before selecting work from `private-brain-repository/main/AGENTS.md` and `scheduled_tasks/CURRENT_OBJECTIVE.md`; this run explicitly acknowledges `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 
 Pinned baseline source commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`.  
 Fresh `master` observed immediately before publication: `4335ca25ed47bbaf02045553f59b8d52d9322228`.  

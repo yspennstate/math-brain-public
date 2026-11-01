@@ -336,7 +336,7 @@ The next precise B02 mechanism is `QFORM-GROUPED-PLUECKER-KERNELCURVATURE-L1-v1`
 
 ## 8. Source pins and checks
 
-Controls and corrections were refreshed from `yspennstate/math-research-brain/main` before this report. Important mathematical inputs actually used:
+Controls and corrections were refreshed from `private-brain-repository/main` before this report. Important mathematical inputs actually used:
 
 - fleet04/B02 zero-diagonal `L2_t` theorem: `private-source@0b11995430ce407a8852ac3bc5651491f2ee64f7`;
 - fleet04/B02 strong-cut theorem: `private-source@674f13a108a33176aafffe8f9b6d44ec3a89f03a`;

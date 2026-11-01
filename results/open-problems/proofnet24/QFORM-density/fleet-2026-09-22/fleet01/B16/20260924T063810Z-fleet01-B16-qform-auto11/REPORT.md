@@ -12,7 +12,7 @@ Regularity: the new paid branch below has a continuous `C_0` density; the unrest
 
 ## 1. Fresh boundary and correction status
 
-Fresh control was resolved from `yspennstate/math-research-brain` before substantive work. The observed owner control remains revision `2026-09-22.15`; QFORM is still the sole research target and no later fleet01/B16 stop or pause was observed. The unrestricted theorem remains **OPEN / NOT PROVED / NOT DISPROVED**.
+Fresh control was resolved from `private-brain-repository` before substantive work. The observed owner control remains revision `2026-09-22.15`; QFORM is still the sole research target and no later fleet01/B16 stop or pause was observed. The unrestricted theorem remains **OPEN / NOT PROVED / NOT DISPROVED**.
 
 The mandatory correction set is retained throughout:
 
@@ -355,7 +355,7 @@ Arbitrary additional nonseparable spectrum and the full structural reduction fro
 
 ## 8. Source status
 
-Fresh control before this report began from `math-research-brain@d941bde4bd8ec272072cba769d92666d3d467213`; a later control refresh before publication observed `math-research-brain@5f21153900232958c2057daec19ec268d81aa381` with no later stop in the observed update. Initial math-source head was `private-source@30bc224a10a670fd1d50b935ccb3872bbc56965d`.
+Fresh control before this report began from `private-brain@d941bde4bd8ec272072cba769d92666d3d467213`; a later control refresh before publication observed `private-brain@5f21153900232958c2057daec19ec268d81aa381` with no later stop in the observed update. Initial math-source head was `private-source@30bc224a10a670fd1d50b935ccb3872bbc56965d`.
 
 Dependencies actually used:
 

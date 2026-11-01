@@ -33,7 +33,7 @@ The unrestricted universal-height conjecture remains open.
 
 ## 2. Sources and corrections retained
 
-Fresh controls were read from yspennstate/math-research-brain with owner-control revision 2026-09-22.15; the current request continues to mark the full conjecture open.
+Fresh controls were read from private-brain-repository with owner-control revision 2026-09-22.15; the current request continues to mark the full conjecture open.
 
 The source-pinned inputs used here are:
 

@@ -13,7 +13,7 @@ Fresh protected controls moved this invocation away from the superseded FEI prom
 
 > For independent real `X_i` with densities `0<=f_i<=1` and real symmetric `A` having at least three eigenvalues with absolute value at least one, prove that `Q=X^T A X` has density bounded by one universal finite constant.
 
-The coherent source state used for the mathematics was `yspennstate/math-research-brain@b00183d9a30ed16f931f01b4053792092ccccd7d`, revision `2026-09-22.5`; before publication the control branch was re-resolved at `21f8b8cdde140cba387de73334c93ed02a671fda`, with no later owner stop or target change observed in the intervening diff.
+The coherent source state used for the mathematics was `private-brain-repository@b00183d9a30ed16f931f01b4053792092ccccd7d`, revision `2026-09-22.5`; before publication the control branch was re-resolved at `21f8b8cdde140cba387de73334c93ed02a671fda`, with no later owner stop or target change observed in the intervening diff.
 
 Corrections consumed:
 

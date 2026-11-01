@@ -22,7 +22,7 @@ for worker in ['w540','w541','w542','w543','w545','w546','w547','w548','w549','w
     if worker=='w543':
         print('PAIRED_ARTIFACT_NAMES', [(p.name, p.stat().st_size) for p in folder.iterdir() if p.is_file() and p.name in {'ATTEMPT.md','CLAIMS.jsonl','SOURCE_STATUS.json','REPORT.md','REVIEW_PACKET.md'}])
 
-for folder in [BASE/'Big Open problem in probability theory', BASE/'math-brain-build/export/population', BASE/'math-research-brain']:
+for folder in [BASE/'Big Open problem in probability theory', BASE/'math-brain-build/export/population', BASE/'private-brain']:
     if folder.is_dir():
         print('SOURCE_FOLDER_NAMES', folder, [p.name for p in folder.iterdir() if not p.name.lower().endswith(('.pem','.key','.env'))][:80])
     else:

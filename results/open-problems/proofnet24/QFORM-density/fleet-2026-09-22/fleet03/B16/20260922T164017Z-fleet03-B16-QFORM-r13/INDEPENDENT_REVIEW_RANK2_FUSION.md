@@ -2,7 +2,7 @@
 
 **Run:** `20260922T164017Z-fleet03-B16-QFORM-r13`  
 **Reviewed source:** `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, blob `00681629acaba8f2e04edda6c9f6b5c4f0fdafa4`  
-**Review assignment source:** current QFORM state integrated at `yspennstate/math-research-brain@358a219247c902b0d78467a5c40f493741daeb15`  
+**Review assignment source:** current QFORM state integrated at `private-brain-repository@358a219247c902b0d78467a5c40f493741daeb15`  
 **Verdict:** `PASS_SCOPED_INDEPENDENT_REVIEW` for `QFORM-RANK2-AFFINE-HALF-RIESZ-v1` and its stated rank-three Schur consequence. This is not a review or proof of the full QFORM conjecture.
 
 ## 1. Diffuse Fourier branch

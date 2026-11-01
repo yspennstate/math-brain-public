@@ -552,7 +552,7 @@ The full arbitrary exact-rank-three QFORM theorem remains **OPEN**. The owner-le
 
 ## 10. Source ledger
 
-Fresh owner/control sources read from `yspennstate/math-research-brain@e2240492444afb95fb7eddb092c23d3c9d79078d`:
+Fresh owner/control sources read from `private-brain-repository@e2240492444afb95fb7eddb092c23d3c9d79078d`:
 
 - `AGENTS.md`;
 - `fleet.json`, `roles.json`, `PROTOCOL.md` as governed by the owner control;

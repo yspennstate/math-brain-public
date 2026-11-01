@@ -10,7 +10,7 @@ attacking: exact no-tax translation/localization through range-aligned active bl
 **Full QFORM:** `OPEN / NOT PROVED`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-The source control was read first at `yspennstate/math-research-brain@09c86b976b555738450505507b0a2bca107a535c`; immediately before publication it had advanced to owner-control revision `2026-09-22.14`. The sole target remains:
+The source control was read first at `private-brain-repository@09c86b976b555738450505507b0a2bca107a535c`; immediately before publication it had advanced to owner-control revision `2026-09-22.14`. The sole target remains:
 
 > for every dimension, every product law with independent real coordinates of densities at most one, and every real symmetric matrix with at least three eigenvalues of absolute value at least one, prove a universal output-density bound for `X^T A X`, or give a valid counterexample.
 

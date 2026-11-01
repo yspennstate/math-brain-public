@@ -265,6 +265,6 @@ What is still open is the standalone critical three-hub packet when no source-di
 
 ## 7. Correction and source ledger
 
-Fresh owner/control state was read from `yspennstate/math-research-brain` main. The live correction corpus was respected, including the failures of uniform pointwise quadratic-phase decay, conditional projection-density caps, and the universal `L1_t L2_fiber` mixed norm. No Gaussian, log-concavity, moment, support, connected-support, diagonal-basis, rotated-independence, or conditional-density assumption is added.
+Fresh owner/control state was read from `private-brain-repository` main. The live correction corpus was respected, including the failures of uniform pointwise quadratic-phase decay, conditional projection-density caps, and the universal `L1_t L2_fiber` mixed norm. No Gaussian, log-concavity, moment, support, connected-support, diagonal-basis, rotated-independence, or conditional-density assumption is added.
 
 Completed partner source actually used: fleet02/B03 r52 at commit `54243d0668be2be7879ae467ed9cb6b962f24652`, path stated in Section 3.

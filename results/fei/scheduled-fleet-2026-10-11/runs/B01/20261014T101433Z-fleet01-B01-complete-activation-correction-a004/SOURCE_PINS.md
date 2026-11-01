@@ -1,6 +1,6 @@
 # Source pins
 
-- GU focus contract: `yspennstate/math-research-brain`, initial governing commit `ac5a014bac41dbc40da170ef5ec6ccb541510357`, blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
+- GU focus contract: `private-brain-repository`, initial governing commit `ac5a014bac41dbc40da170ef5ec6ccb541510357`, blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
 - Signed-mismatch reduction: B01 run `20261014T042403Z-fleet01-B01-signed-mismatch-refund-a003`, canonical commit `2432393841959b4f8b72d959b001d6aed4536a71`.
 - Iterated-suspension pivot source: B01 run `20261014T090500Z-fleet01-B01-iterated-suspension-a004`, canonical final commit `ae4b951623dcead5bdb9c304676566800946ff6f`.
 - Exact activation recurrence: B05 run `20261014T044000Z-fleet01-B05-activation-signed-mismatch-a023`, proof blob `08fc36890c086e7f1c16729d5c04aa0fdbf3e6f7`.

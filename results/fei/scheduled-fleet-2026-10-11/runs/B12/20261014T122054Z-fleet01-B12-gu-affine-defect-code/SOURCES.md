@@ -1,7 +1,7 @@
 # Source pins
 
 - GU focus directive, blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`:
-  `yspennstate/math-research-brain/main/scheduled_tasks/work/shared/full-fei-only-2026-10-12/GU_LASER_FOCUS_20261014.md`.
+  `private-brain-repository/main/scheduled_tasks/work/shared/full-fei-only-2026-10-12/GU_LASER_FOCUS_20261014.md`.
 - B12 compact contract, blob `40935ac651643a17815d0addf664ec4c1c0313cc`.
 - Execution protocol, blob `457358ff62cbf1141a72096bcabdf95bf18c1be2`.
 - Original sharp point-defect/tensor theorem:

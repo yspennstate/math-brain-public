@@ -261,7 +261,7 @@ Full-target continuous density: **OPEN**.
 
 ## 8. Source / correction ledger
 
-Fresh controls read from `yspennstate/math-research-brain` main with observed control revision `2026-09-22.15`. Required programme state and assignment were reread. Relevant corrections consumed include:
+Fresh controls read from `private-brain-repository` main with observed control revision `2026-09-22.15`. Required programme state and assignment were reread. Relevant corrections consumed include:
 
 - `QFORM-POINTWISE-DECAY-FALSE`;
 - `QFORM-UV-CONDITIONAL-CAP-FALSE`;

@@ -16,7 +16,7 @@ This does not prove that every matrix with three large eigenvalues admits such a
 
 ## 2. Fresh source state and corrections consumed
 
-Control source read coherently from `yspennstate/math-research-brain` at commit `4a73344d16fbb2617a3fd9f87f415e0f31be6d20`; owner revision `2026-09-22.5`. A later refresh at repository head still had the same owner revision and no later stop.
+Control source read coherently from `private-brain-repository` at commit `4a73344d16fbb2617a3fd9f87f415e0f31be6d20`; owner revision `2026-09-22.5`. A later refresh at repository head still had the same owner revision and no later stop.
 
 Current corrections consumed before publication include:
 

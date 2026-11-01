@@ -2,7 +2,7 @@
 
 ## Owner overlay and campaign state read
 
-- `yspennstate/math-research-brain@40210272c19f43fed84f6a67653f9a04b0e11e28`,
+- `private-brain-repository@40210272c19f43fed84f6a67653f9a04b0e11e28`,
   `scheduled_tasks/work/shared/full-fei-only-2026-10-12/ORDER.md`, blob
   `81b6d6f988aee4489512c6e62543253900620453`.
 - `CASE_TARGETS.json`, blob

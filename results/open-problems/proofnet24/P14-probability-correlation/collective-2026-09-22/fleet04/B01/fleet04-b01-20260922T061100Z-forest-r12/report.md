@@ -10,7 +10,7 @@
 
 The source target is the Grimmett--Winkler unit law on **all unrooted forests of every finite simple graph**, with the empty forest, disconnected forests and every forest size retained. No rooted, fixed-size, spanning-tree or arbitrary-weight law is substituted for that statement.
 
-Fresh owner controls were read from `yspennstate/math-research-brain` and remained on revision `2026-09-22.2`, directive `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`; installation/benchmark work remains stopped for B01.
+Fresh owner controls were read from `private-brain-repository` and remained on revision `2026-09-22.2`, directive `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`; installation/benchmark work remains stopped for B01.
 
 Latest complete lead consumed: fleet01/B01 run `20260922T050946Z-b01-forest-auto11`, candidate `FOREST-TRIANGLEFREE-SIMPSON-BUDGET-v1`. Its source-secure inputs used below are:
 

@@ -2,7 +2,7 @@
 
 Status: **supporting theorem proved; full universal QFORM remains OPEN**.
 
-Source control: `yspennstate/math-research-brain@2a07f73272566942e2ffa8620e16ccf734b29ca2`; owner control revision observed `2026-09-22.14`. Assignment: fleet01/B15, absolute continuity and regularity. Execution status: `WITHOUT_VERIFIED_BRAIN`.
+Source control: `private-brain-repository@2a07f73272566942e2ffa8620e16ccf734b29ca2`; owner control revision observed `2026-09-22.14`. Assignment: fleet01/B15, absolute continuity and regularity. Execution status: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Corrections used
 

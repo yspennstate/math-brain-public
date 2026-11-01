@@ -87,7 +87,7 @@ source["independent_review"]="w359 and w358 KEEP L1-L6 at stated scope; no full 
 source["original_record"]["primary_url"]="https://arxiv.org/abs/2603.29571v1"
 source["original_record"]["primary_title_verified"]=True
 source["original_record"]["locator_check"]="Exact historical intake row; the complete target was separately verified in the October primary theorem statements"
-source["canonical_checkout_check"]={"path":"~/math-research-brain", "checked":"README and targeted local SQLite path discovery",
+source["canonical_checkout_check"]={"path":"~/private-brain", "checked":"README and targeted local SQLite path discovery",
     "result":"Only local audit databases were located; none opened because evaluation material is out of scope. No current solved/retired certification obtained from this checkout."}
 write("SOURCE_STATUS.json",source)
 write("BUNDLE_VALIDATION.json",{"spec":"mathbrain-draft-v1", "passed":True,

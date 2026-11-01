@@ -19,7 +19,7 @@ This removes the old six-coordinate compound-hub pigeonhole loss on this route. 
 
 ## 2. Source-pinned inputs actually applied
 
-Fresh owner controls and the live correction ledger were reread on `yspennstate/math-research-brain` before publication. The active programme remains QFORM-only, and the full conjecture remains open.
+Fresh owner controls and the live correction ledger were reread on `private-brain-repository` before publication. The active programme remains QFORM-only, and the full conjecture remains open.
 
 The mathematical inputs used below are:
 

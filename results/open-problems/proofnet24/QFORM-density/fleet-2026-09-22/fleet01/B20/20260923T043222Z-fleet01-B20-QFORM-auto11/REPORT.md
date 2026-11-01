@@ -7,7 +7,7 @@ Status: `ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN / CONTINUITY_OPEN / WITHOUT_V
 
 ## Control and source provenance
 
-Fresh owner control on `yspennstate/math-research-brain/main` is revision `2026-09-22.15`; QFORM remains the sole research target. The full target is still OPEN and the global continuity claim is still OPEN. Live corrections were reread before this argument; in particular this report does not use law-uniform pointwise quadratic oscillatory decay, post-rotation independence, arbitrary-joint coarea, one-good-minor extraction, or a conditional spectral-density cap.
+Fresh owner control on `private-brain-repository/main` is revision `2026-09-22.15`; QFORM remains the sole research target. The full target is still OPEN and the global continuity claim is still OPEN. Live corrections were reread before this argument; in particular this report does not use law-uniform pointwise quadratic oscillatory decay, post-rotation independence, arbitrary-joint coarea, one-good-minor extraction, or a conditional spectral-density cap.
 
 Designated partner actually consumed: completed `fleet02/B20` run `20260923T035847Z-fleet02-B20-QFORM-r24`, canonical mathematics `private-source-repository@0da7f3ef78f89efa33d2014211323fcda3d3214b`. In its physical star block
 

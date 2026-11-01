@@ -254,7 +254,7 @@ The arbitrary-extra-spectrum problem also remains after all exact-rank-three bra
 - Designated partner: fleet02/B18 `fleet02-B18-20260922T170013Z-r11`, canonical commit `7045cf7745ad4f1bb04e5a6e4b3196aeb867a140`.
 - LPP primary source: arXiv:1507.07949 / Israel J. Math. 216 (2016), 877--889.
 - Banks--Garza-Vargas--Kulkarni--Srivastava primary source: arXiv:2005.08930 / Ann. Inst. H. Poincare Probab. Statist. 60 (2024), 2736--2766.
-- Fresh control initially bound at `math-research-brain@b7325a4d01f03ddcd0dabbfbbdbecaec8e647a8d`; immediately before scientific publication main was refreshed to `63b776af052f2dfd524f1474959b8a7d7616380d`. Owner control remains QFORM-only; no later stop was observed.
+- Fresh control initially bound at `private-brain@b7325a4d01f03ddcd0dabbfbbdbecaec8e647a8d`; immediately before scientific publication main was refreshed to `63b776af052f2dfd524f1474959b8a7d7616380d`. Owner control remains QFORM-only; no later stop was observed.
 - Relevant live correction closure re-read at the publication refresh; no correction contradicting Theorem 3.1 was present.
 
 No claim of external novelty is made. Repository synchronization is not native learned-memory ingestion; execution remains `WITHOUT_VERIFIED_BRAIN`.

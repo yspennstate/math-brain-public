@@ -15,7 +15,7 @@ The sole target is the full arbitrary-law statement: for every dimension, indepe
 
 with one universal finite constant, or give a genuine counterexample. A continuous density is a separate stronger conclusion.
 
-This run used fresh `math-research-brain/main` at source commit `921cd237e6a85b633fa86ada50a830f59f1696c4` and consumed the live correction inbox before publication. In particular:
+This run used fresh `private-brain/main` at source commit `921cd237e6a85b633fa86ada50a830f59f1696c4` and consumed the live correction inbox before publication. In particular:
 
 - law-uniform pointwise one-variable quadratic-phase decay is false;
 - rotation to the eigenbasis does not preserve coordinate independence;

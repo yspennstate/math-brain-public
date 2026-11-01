@@ -231,7 +231,7 @@ That is the first genuinely unpaid universal implication after the new descent t
 
 ## 9. Source pins
 
-- brain control snapshot used at run start: `yspennstate/math-research-brain@7975bf56c6cb8fac7a47da6e20ab3fd9a5bfa373`, owner revision `2026-09-22.5`;
+- brain control snapshot used at run start: `private-brain-repository@7975bf56c6cb8fac7a47da6e20ab3fd9a5bfa373`, owner revision `2026-09-22.5`;
 - newest completed assigned partner used: `private-source-repository@7530e8c6ffd7284eb9c8acf1d79f36c335bf4fd6`, fleet03/B20 r11;
 - low-stable-rank assembly: `private-source-repository@6e3c22b4fcc1038ded1aeff8d107be6a76f7df17`, fleet03/B19;
 - two-sided Schur mixed endpoint: `private-source-repository@76cf34fabef3bb9c56f48b5463050cf09f25d0b5`, fleet02/B19;

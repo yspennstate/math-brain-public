@@ -9,7 +9,7 @@
 
 The target remains the unrestricted statement for independent real original-coordinate variables with probability densities at most one and an arbitrary real symmetric matrix having at least three eigenvalues of absolute value at least one. No moment, support, smoothness, sign, or post-rotation independence hypothesis is added. Continuity is tracked separately.
 
-Fresh control was read from `yspennstate/math-research-brain@acaf4b916ac9f26963e4799e6a7fbfdd4e48335e`. The required Claude packet was consumed beginning at `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, including the later review corrections. The scientific base immediately before this write was `private-source-repository@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee`.
+Fresh control was read from `private-brain-repository@acaf4b916ac9f26963e4799e6a7fbfdd4e48335e`. The required Claude packet was consumed beginning at `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, including the later review corrections. The scientific base immediately before this write was `private-source-repository@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee`.
 
 The completed designated result applied below is fleet01/B18 r19, `QFORM-FRESNEL-CAPPED-BASIS-WEIGHTS-v1`, at
 

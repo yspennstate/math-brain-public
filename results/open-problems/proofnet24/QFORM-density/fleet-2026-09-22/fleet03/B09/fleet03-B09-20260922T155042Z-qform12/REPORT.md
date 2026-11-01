@@ -14,7 +14,7 @@ This report proves a new pivot-plus-bilinear-block criterion. It retains arbitra
 
 ## 2. Source-pinned inputs
 
-1. Fresh control source read at start: `yspennstate/math-research-brain@78662a360fecd178e0c343e1107cecde5ea3cc70`, including `AGENTS.md`, `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`, programme manifest/current research/claims/corrections/memory protocol, and `assignments/fleet03/B09.json`.
+1. Fresh control source read at start: `private-brain-repository@78662a360fecd178e0c343e1107cecde5ea3cc70`, including `AGENTS.md`, `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`, programme manifest/current research/claims/corrections/memory protocol, and `assignments/fleet03/B09.json`.
 2. Ridge characteristic-function envelope: `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`, especially (5.4). For a residual cross block `N`, scale `gamma>0`, `1<=q<=2`,
 
    `K=N N^T (gamma^2 I+N N^T)^(-1)`, `theta=tr K`, `D=det(I+N N^T/gamma^2)`,

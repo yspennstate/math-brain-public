@@ -5,7 +5,7 @@ for name in ['measure.py','riesz_scope_guard.py','prepare_packet.py','validate_p
 validation=json.loads((w/'VALIDATION.json').read_text(encoding='utf-8'))
 assert validation['patch_validation']['check_returncode']==0 and validation['patch_validation']['content_matches']
 assert not validation['patch_validation']['apply_stderr']
-locator=pathlib.Path('~/math-research-brain/src/math_brain/build_signal_cache.py')
+locator=pathlib.Path('~/private-brain/src/math_brain/build_signal_cache.py')
 line=next((r for r in locator.read_text(encoding='utf-8').splitlines()[18:29] if r.startswith('STORE =')),None)
 assert line and 'math-brain-build' in line and 'population' in line
 (w/'CANONICAL_STORE_LOCATOR.json').write_text(json.dumps({'canonical_code':str(locator),'line':24,'exact_locator':line,'store_access':'The referenced population SQLite store was opened with mode=ro and PRAGMA query_only=ON; full selected cards are in math_brain_probe.json.','no_separate_store_assumed':True},indent=2),encoding='utf-8')

@@ -3,7 +3,7 @@
 SIGNED IN - auditing the exact fourteen-page five-singular-value proof, account fleet03, slot B11, 2026-09-25T09:14:32Z.
 
 Source: private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, PDF SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
-Control at start: math-research-brain@30dd2c723a64939298b93b421660c9f3a42edf28; revision 2026-09-25.1.
+Control at start: private-brain@30dd2c723a64939298b93b421660c9f3a42edf28; revision 2026-09-25.1.
 Audited in pass 2 this run: short.tex lines 173-371; PDF pages 4-8 rendered at 200 dpi.
 
 ## Verdict

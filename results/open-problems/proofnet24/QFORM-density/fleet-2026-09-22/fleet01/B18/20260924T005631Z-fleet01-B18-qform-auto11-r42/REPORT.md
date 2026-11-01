@@ -11,7 +11,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh source state and correction discipline
 
-Fresh control was read from `yspennstate/math-research-brain` main; the full theorem remains open. The proof below preserves original-coordinate product provenance and uses none of the live-refuted interfaces: no independence after rotation, no arbitrary-joint quadratic coarea bound, no conditional-cap-as-independence substitution, no pointwise law-uniform Fresnel decay, no worst-fiber positive moment, no deletion of a small nonzero quadratic coefficient, and no claim that the spectral hypothesis forces a uniformly good physical minor.
+Fresh control was read from `private-brain-repository` main; the full theorem remains open. The proof below preserves original-coordinate product provenance and uses none of the live-refuted interfaces: no independence after rotation, no arbitrary-joint quadratic coarea bound, no conditional-cap-as-independence substitution, no pointwise law-uniform Fresnel decay, no worst-fiber positive moment, no deletion of a small nonzero quadratic coefficient, and no claim that the spectral hypothesis forces a uniformly good physical minor.
 
 The newest designated partner result used here is fleet02/B18, commit
 

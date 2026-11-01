@@ -5,7 +5,7 @@ attacking: decoupled time integral — interpolate the translated Brascamp--Lieb
 
 Status: new derivation in progress; full QFORM remains open.
 
-Source controls: math-research-brain fresh-main control revision 2026-09-22.15; newest required mathematical input is `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md` (q-dependent BL/Hausdorff--Young mechanism). Exact hub ambiguity identity/source: `private-source-repository@f68817886312b904e2cf86ccbfb14f4f130229f3:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/hub_decoupling/REPORT.md`.
+Source controls: private-brain fresh-main control revision 2026-09-22.15; newest required mathematical input is `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md` (q-dependent BL/Hausdorff--Young mechanism). Exact hub ambiguity identity/source: `private-source-repository@f68817886312b904e2cf86ccbfb14f4f130229f3:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/hub_decoupling/REPORT.md`.
 
 Let `A[I,J_L]=UV^T` have rank r>=1, let `w` be the physical hub row, `P_I=[w_I,U]`, `G_I=P_I^T P_I`, `G_V=V^T V`, `P_J=[V,w_{J_L}]`, `G_J=P_J^T P_J`, and let `h=max_i ell_i` be the maximum row leverage of `P_I`. The exact ambiguity reduction gives, after integrating the `Y=<w_{J_L},W_L>` coordinate in L2,
 

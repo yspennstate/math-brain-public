@@ -1,6 +1,6 @@
 # Source pins
 
-- GU laser focus: `yspennstate/math-research-brain`, `main`,
+- GU laser focus: `private-brain-repository`, `main`,
   `scheduled_tasks/work/shared/full-fei-only-2026-10-12/GU_LASER_FOCUS_20261014.md`,
   blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
 - B12 compact assignment: `private-source-repository`, `master`,

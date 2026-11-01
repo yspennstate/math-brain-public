@@ -45,7 +45,7 @@ Arbitrary same-bank curvature and affine terms are retained.
 
 The designated partner result actually applied below is fleet02/B04 r20:
 
-- handoff commit `math-research-brain@9c5dd9f36f322a2b4e040d25a97e7d07eb61dad3`;
+- handoff commit `private-brain@9c5dd9f36f322a2b4e040d25a97e7d07eb61dad3`;
 - primary report `private-source@db9f71028e300f49dd92b7273472dae6d824e992:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260924T051847Z/REPORT.md`.
 
 Its proved pair-anchored E3 theorem is

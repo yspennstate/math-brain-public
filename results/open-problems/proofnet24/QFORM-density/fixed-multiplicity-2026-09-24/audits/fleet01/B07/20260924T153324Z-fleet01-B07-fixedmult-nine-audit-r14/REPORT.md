@@ -6,7 +6,7 @@ Role lens: ordered disjoint minors, bordered determinant identities, zero/singul
 
 ## 0. Fresh control and source pin
 
-Fresh `yspennstate/math-research-brain/main/AGENTS.md` and `scheduled_tasks/CURRENT_OBJECTIVE.md` were read before substantive work. The current objective supersedes the historical seventeen-eigenvalue baseline as the active source: the complete standalone candidate to audit is the nine-eigenvalue paper.
+Fresh `private-brain-repository/main/AGENTS.md` and `scheduled_tasks/CURRENT_OBJECTIVE.md` were read before substantive work. The current objective supersedes the historical seventeen-eigenvalue baseline as the active source: the complete standalone candidate to audit is the nine-eigenvalue paper.
 
 Pinned source:
 

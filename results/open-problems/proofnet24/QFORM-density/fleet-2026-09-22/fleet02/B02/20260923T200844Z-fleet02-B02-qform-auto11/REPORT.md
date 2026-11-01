@@ -11,7 +11,7 @@ The exact owner target remains unchanged: independent ORIGINAL real coordinates 
 
 ## 1. Fresh controls and source pins actually used
 
-Fresh `math-research-brain/main` was resolved at invocation start and refreshed before publication. Owner control remains revision `2026-09-22.15`, QFORM-only, with the exclusive continuation request `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` active and no later stop/reassignment observed.
+Fresh `private-brain/main` was resolved at invocation start and refreshed before publication. Owner control remains revision `2026-09-22.15`, QFORM-only, with the exclusive continuation request `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` active and no later stop/reassignment observed.
 
 Required source package read at the owner-pinned commit:
 

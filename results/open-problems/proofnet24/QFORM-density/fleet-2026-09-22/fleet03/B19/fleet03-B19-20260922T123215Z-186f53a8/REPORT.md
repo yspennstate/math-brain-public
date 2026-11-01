@@ -227,7 +227,7 @@ The fleet04/B19 finite-union theorem sharpens this further: no noncompact-tail o
 
 ## 7. Source pins
 
-- Live owner control: `yspennstate/math-research-brain`, revision `2026-09-22.5`; initial fresh control commit `054362207d28d2334a5c4eaee62ffbfa4a217ba6`, later prepublication main observed at `01885efdf6c679a379d87d67a5f0c973adc517bd` with unchanged control.
+- Live owner control: `private-brain-repository`, revision `2026-09-22.5`; initial fresh control commit `054362207d28d2334a5c4eaee62ffbfa4a217ba6`, later prepublication main observed at `01885efdf6c679a379d87d67a5f0c973adc517bd` with unchanged control.
 - Designated partner fleet04/B19 finite-union core: `private-source-repository@02171dc794a56c0235afb1ca394b3e614162bff4`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T122030Z-fleet04-B19-QFORM-r1/REPORT.md`, blob `6c1e768322445d808cbf9d85aae456ec3240a663`.
 - fleet03/B08 diffuse Fourier--Brascamp--Lieb theorem: `private-source-repository@9dcddd0bf3fbcb8e0b3396e0a4d883924d3f4ada`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T114830Z-fleet03-B08-qform-diffuse-v1/REPORT.md`, blob `022e24d4e6470665c48d7bfb1a3ad5c7963f664a`.
 - fleet01/B11 binary-indefinite `L^3` and dependent square smoothing: `private-source-repository@2279571f59ade7a9ec478af1e4818f6c117ac224`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`, blob `17a44fbdfb6c987ed46e2e76833c60497b33f025`.

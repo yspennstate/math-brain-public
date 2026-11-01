@@ -9,7 +9,7 @@ Status: **NEW SUPPORTING SHARP-WITNESS THEOREM / FULL QFORM OPEN**
 Continuity: proved only for the scoped family below; unrestricted target continuity remains open.  
 Execution context: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh control at start was `math-research-brain@d63c2daec23cf0b19197617929f7aaf62dbfe34e`; a later prepublication refresh still had QFORM as the only active target and no B17 stop. The live corrections were respected: no arbitrary-joint 3D coarea bound, no post-rotation independence, no conditional-cap moment, no fixed-fragment reduction, no pointwise law-uniform stationary-phase bound, and no universal-good-minor premise is used.
+Fresh control at start was `private-brain@d63c2daec23cf0b19197617929f7aaf62dbfe34e`; a later prepublication refresh still had QFORM as the only active target and no B17 stop. The live corrections were respected: no arbitrary-joint 3D coarea bound, no post-rotation independence, no conditional-cap moment, no fixed-fragment reduction, no pointwise law-uniform stationary-phase bound, and no universal-good-minor premise is used.
 
 ## 1. Statement
 

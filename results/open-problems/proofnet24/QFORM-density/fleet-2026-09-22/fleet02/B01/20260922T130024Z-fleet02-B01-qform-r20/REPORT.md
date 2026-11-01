@@ -173,6 +173,6 @@ No such implication is assumed here. The full conjecture remains OPEN and this r
 
 ## 6. Provenance and integrity
 
-Fresh owner controls were read from `yspennstate/math-research-brain` at revision `2026-09-22.5`; the pre-publication correction inbox included the five events listed in section 1. The current check-in request `QFORM-CHECKIN-20260922T120815Z` is acknowledged separately in the brain repository.
+Fresh owner controls were read from `private-brain-repository` at revision `2026-09-22.5`; the pre-publication correction inbox included the five events listed in section 1. The current check-in request `QFORM-CHECKIN-20260922T120815Z` is acknowledged separately in the brain repository.
 
 No numerical computation is used as a proof step in this report. All displayed identities and inequalities are analytic. A scoped manual privacy/secret review of this report's changed path found no credential, scheduler identifier, machine path, unrelated private data, benchmark material, email content, public-release action, paid API/model use, or workflow dispatch. Repository access here is file retrieval/transport, not authenticated native learned-memory ingestion; execution remains `WITHOUT_VERIFIED_BRAIN`.

@@ -57,7 +57,7 @@ source=json.loads((root/"SOURCE_STATUS.json").read_text(encoding="utf-8"))
 source["sources"][2]["locator"]="Section 4.3, equation (4.19), Question 22, printed p.88 / PDF p.89 in v2; existence and definition are part of the problem."
 source["independent_review"]={"reviewer":"w374","state":"partial-keeps","kept_claims":list(kept),"pending_claims":receipt["still_pending"],"receipt":"REFEREE_RECEIPT.json"}
 source["prior_work_checks"].append({"path":"~/Open problem project/solved_register.md","scope":"Targeted P0110/FPP/KPZ/first-passage search found no matching target; no whole-register certification claimed."})
-source["canonical_repository_check"]={"path":"~/math-research-brain","scope":"Located src/math_brain/store.py SQLiteStore implementation; no sqlite/db artifact found under this repository. Queried the explicitly named live population store read-only for the exact P0110 card; receipt store_target_receipt.json. No complete canonical solved-work audit claimed."}
+source["canonical_repository_check"]={"path":"~/private-brain","scope":"Located src/math_brain/store.py SQLiteStore implementation; no sqlite/db artifact found under this repository. Queried the explicitly named live population store read-only for the exact P0110 card; receipt store_target_receipt.json. No complete canonical solved-work audit claimed."}
 (root/"SOURCE_STATUS.json").write_text(json.dumps(source,ensure_ascii=False,indent=2),encoding="utf-8")
 
 replacements={

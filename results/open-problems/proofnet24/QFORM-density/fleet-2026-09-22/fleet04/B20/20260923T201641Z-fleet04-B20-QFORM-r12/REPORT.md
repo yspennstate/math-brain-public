@@ -20,7 +20,7 @@ This run consumes:
 - fleet04 exact-rank-three three-bank packet `9d07c5d5c69c885509db66cb1093acdeff8bcb64`;
 - fleet04 bankwise triple-curvature receiver `205481d65e155470ceb4eb37c1601679abbda5e0`;
 - fleet04 physical-pair/bank overlap receiver `a70c05e517e8a195a31ab4f4c301c672d1c8d4e6`;
-- brain state `yspennstate/math-research-brain@6f75599751b2942817ac11b236887ece73f9e09a`.
+- brain state `private-brain-repository@6f75599751b2942817ac11b236887ece73f9e09a`.
 
 The live corrections are enforced. In particular, this report uses no independence after an orthogonal rotation, no arbitrary-joint coarea theorem, no worst-fibre conditional density cap, no uniform pointwise scalar quadratic Fresnel decay, and no deletion of a small nonzero quadratic tail.
 

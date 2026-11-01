@@ -268,7 +268,7 @@ falsifiers.
 
 ## 9. Sources and status distinctions
 
-- Owner overlay: `math-research-brain` commit
+- Owner overlay: `private-brain` commit
   `40210272c19f43fed84f6a67653f9a04b0e11e28`,
   `scheduled_tasks/work/shared/full-fei-only-2026-10-12/ORDER.md` and
   `CASE_TARGETS.json`, control revision `2026-10-12.1`.

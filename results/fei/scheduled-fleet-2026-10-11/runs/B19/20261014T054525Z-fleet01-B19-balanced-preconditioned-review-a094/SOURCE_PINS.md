@@ -1,6 +1,6 @@
 # Immutable sources actually used
 
-- GU focus contract: `yspennstate/math-research-brain`,
+- GU focus contract: `private-brain-repository`,
   `scheduled_tasks/work/shared/full-fei-only-2026-10-12/GU_LASER_FOCUS_20261014.md`,
   blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
 - Current order: same repository,
@@ -13,7 +13,7 @@
   `457358ff62cbf1141a72096bcabdf95bf18c1be2`.
 - Stream index blob:
   `58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704`.
-- Original GU-to-U and Theorem G proof: `yspennstate/math-research-brain`,
+- Original GU-to-U and Theorem G proof: `private-brain-repository`,
   `scheduled_tasks/work/shared/full-fei-only-2026-10-12/gu/U-universal/NOTES.md`,
   blob `3b0636c653c7818368eeb204011c3e1ff21c234e`.
 - Previously completed independent reconstruction of the exact activation

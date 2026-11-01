@@ -7,7 +7,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## Source pin and correction to my preceding B08 review
 
-Fresh owner control was read before selecting work from `yspennstate/math-research-brain/main/AGENTS.md` and `scheduled_tasks/CURRENT_OBJECTIVE.md`. I acknowledge the current owner order `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
+Fresh owner control was read before selecting work from `private-brain-repository/main/AGENTS.md` and `scheduled_tasks/CURRENT_OBJECTIVE.md`. I acknowledge the current owner order `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 
 Pinned baseline source commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`.  
 Fresh `master` observed before publication: `afb8a72698c7367670a6cd19dd98a3135ee4835b`.  

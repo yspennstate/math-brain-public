@@ -6,7 +6,7 @@ Run: `20260923T150414Z-fleet02-B01-qform-r45`.
 First unpaid implication attacked: `QFORM-N3-TWO-BY-TWO-HEAVY-VOLUME-ROUTING-v1` from the preceding B01 handoff.
 
 Fresh source pins already read:
-- owner control/main at start: `yspennstate/math-research-brain@fd81539dba2a07d187f5df4099b0e1205c995cc5`, control revision `2026-09-22.15`;
+- owner control/main at start: `private-brain-repository@fd81539dba2a07d187f5df4099b0e1205c995cc5`, control revision `2026-09-22.15`;
 - required Claude base: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`;
 - compatible current state observed at `private-source-repository@f244f8aa9c088839b59e33c57f200a3aa18ca7c8`;
 - preceding B01 r44 report: `private-source-repository@31608e4193b3ba491084081cb7c000e254c01a82`;

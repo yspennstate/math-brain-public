@@ -8,7 +8,7 @@ EXECUTION: WITHOUT_VERIFIED_BRAIN
 STATUS: PARTIAL. Full uniform-cube Friedgut--Kalai Fourier entropy-influence conjecture remains OPEN / NOT PROVED.
 
 Fresh authenticated control at entry:
-yspennstate/math-research-brain main
+private-brain-repository main
 570a765d71a26461e94221a75508c992a8bc72ab,
 The live owner order was FEI-JOINT-FOUR-ACCOUNTS-2026-09-21-192650Z,
 with fleet02/B17 assigned the exact Boolean adversary for interface B

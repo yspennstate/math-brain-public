@@ -2,7 +2,7 @@
 
 **Run:** `20260922T112240Z-b05-qform-9d86c905`  
 **Classification:** `ESSENTIAL_STEP_APPLIED` / full target OPEN.  
-**Control:** the later natural-language OWNER MESSAGE in `math-research-brain/scheduled_tasks/README.md` supersedes the stale FEI card and directs all workers to the quadratic-form bounded-density conjecture.  No FEI mathematics is advanced here.
+**Control:** the later natural-language OWNER MESSAGE in `private-brain/scheduled_tasks/README.md` supersedes the stale FEI card and directs all workers to the quadratic-form bounded-density conjecture.  No FEI mathematics is advanced here.
 
 ## Target
 

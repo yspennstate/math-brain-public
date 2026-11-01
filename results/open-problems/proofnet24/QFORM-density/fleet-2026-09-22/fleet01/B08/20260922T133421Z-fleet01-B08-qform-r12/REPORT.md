@@ -11,7 +11,7 @@
 
 The target is: for independent real `X_i` with densities `0<=f_i<=1` and symmetric `A` having at least three eigenvalues of absolute value at least one, prove a universal `L^infinity` bound for the density of `X^T A X`, with continuity tracked separately.
 
-Fresh source control was read from `yspennstate/math-research-brain` main at commit `b68908e363f0ce9338a1cdf1996653ae5f699876`, owner revision `2026-09-22.5`. The live corrections consumed include the false law-uniform pointwise Fresnel decay, fiber-sup dimension loss, loss of independence after rotation, `QFORM-CROSSMINOR-ALONE-FALSE`, `QFORM-UV-CONDITIONAL-CAP-FALSE`, `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`, and `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`. None is used as a premise.
+Fresh source control was read from `private-brain-repository` main at commit `b68908e363f0ce9338a1cdf1996653ae5f699876`, owner revision `2026-09-22.5`. The live corrections consumed include the false law-uniform pointwise Fresnel decay, fiber-sup dimension loss, loss of independence after rotation, `QFORM-CROSSMINOR-ALONE-FALSE`, `QFORM-UV-CONDITIONAL-CAP-FALSE`, `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`, and `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`. None is used as a premise.
 
 The named partner result actually applied is fleet02/B08 `QFORM-WHITENED-PHYSICAL-BLOCK-v1`, canonical report
 

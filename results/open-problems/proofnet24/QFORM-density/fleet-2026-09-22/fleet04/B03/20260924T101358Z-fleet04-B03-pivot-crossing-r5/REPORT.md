@@ -187,7 +187,7 @@ The next useful splice is therefore a dichotomy between:
 
 ## 6. Source pins
 
-- Owner/control revision read from fresh math-research-brain main: 2026-09-22.15.
+- Owner/control revision read from fresh private-brain main: 2026-09-22.15.
 - Current continuation request: QFORM-CLAUDE-LATEST-20260922T225732Z.
 - Completed partner theorem: fleet01/B03 QFORM-BIPARTITE-MOYAL-CS-v1, private-source commit 6c4698000d4fd206b465a18231ba8c7a8f643f59.
 - Prior fleet04/B03 overlap-two localization: private-source commit 5f93186cf8952b2b8b0255e08a78fd8506c613e4.

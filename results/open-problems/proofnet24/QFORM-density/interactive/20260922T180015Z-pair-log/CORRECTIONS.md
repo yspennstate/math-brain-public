@@ -6,7 +6,7 @@ Status: explicit counterexamples to intermediate statements, not to the independ
 
 ## Source being tested
 
-The owner-message text in `yspennstate/math-research-brain@94e277612994fca8b76e71bcc1ee2b79db95f1d5:scheduled_tasks/README.md`, blob `8eaee588745992a04a6dec7d2f822e392b2d6268`, control revision 2026-09-22.9, proposes:
+The owner-message text in `private-brain-repository@94e277612994fca8b76e71bcc1ee2b79db95f1d5:scheduled_tasks/README.md`, blob `8eaee588745992a04a6dec7d2f822e392b2d6268`, control revision 2026-09-22.9, proposes:
 
 1. A rank-three quadratic pushforward bound `||p_Q||_infinity <= K ||rho||_infinity^(2/3)` for any joint probability density rho, and uses this to label the general exact-rank-three independent-input case proved.
 2. A dimension-free bound on `E ||rho_(Y|W)||_infinity^(2/3)` for a three-dimensional orthogonal projection Y of a product law, conditioned on its orthogonal complement W.

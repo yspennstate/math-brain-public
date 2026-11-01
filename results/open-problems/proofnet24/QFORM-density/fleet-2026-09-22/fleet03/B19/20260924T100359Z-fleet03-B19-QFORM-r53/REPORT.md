@@ -15,7 +15,7 @@ All coordinate sets are literal ORIGINAL-coordinate sets. No random variable is 
 
 ## 1. Fresh source-pinned frontier
 
-Fresh `yspennstate/math-research-brain/main` was resolved before the run. Owner control remains revision `2026-09-22.15`, QFORM-only.
+Fresh `private-brain-repository/main` was resolved before the run. Owner control remains revision `2026-09-22.15`, QFORM-only.
 
 Immediate same-slot source:
 

@@ -253,8 +253,8 @@ The arithmetic checker in this immutable run directory verifies the Walsh-core l
 
 Primary source pins:
 
-- fresh QFORM control at start: `yspennstate/math-research-brain@3244bd53a0a59ae0c6bdf8eb8dc6dfd54834a1cb`, revision `2026-09-22.5`;
-- fresh prewrite control/correction check: `yspennstate/math-research-brain@ddaac68c76b42869262316300669da0b91875562`;
+- fresh QFORM control at start: `private-brain-repository@3244bd53a0a59ae0c6bdf8eb8dc6dfd54834a1cb`, revision `2026-09-22.5`;
+- fresh prewrite control/correction check: `private-brain-repository@ddaac68c76b42869262316300669da0b91875562`;
 - named partner exterior-power theorem: `private-source-repository@733e4b357644bfb6bc6b1ab5b9ca06fac44d711b:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/fleet03-B12-20260922T140131Z-r11-ext3/REPORT.md`;
 - preceding own same-sign physical-block theorem: `private-source-repository@8f66972059845cb23d014fa20efee714b6655b99:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/fleet02-B12-20260922T1251Z-qform-additional-eigenvalue/REPORT.md`.
 

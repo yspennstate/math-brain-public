@@ -10,7 +10,7 @@
 
 The full target remains open: for every dimension, every independent real coordinates `X_i` with probability densities bounded by one, and every real symmetric matrix `A` with at least three eigenvalues of modulus at least one, prove that `Q=X^TAX` has an essentially bounded density with one universal dimension-, law-, and matrix-independent constant. Continuity is a separate desired conclusion and is not proved here.
 
-Fresh control before publication was `yspennstate/math-research-brain@1f2dc7684a305ea574bb81d6f0d991cc0dbf085c`, owner revision `2026-09-22.5`; the live correction inbox at that commit has blob `2ee621225465e603dfd118f6bd86b1ddc853f40e`. In particular this report respects the corrections that generic bounded projection density does not control an indefinite quadratic trace, a single uniformly good physical minor need not exist, conditional density caps do not substitute for original-coordinate independence, and linear averaging of reciprocal local-minor costs can diverge.
+Fresh control before publication was `private-brain-repository@1f2dc7684a305ea574bb81d6f0d991cc0dbf085c`, owner revision `2026-09-22.5`; the live correction inbox at that commit has blob `2ee621225465e603dfd118f6bd86b1ddc853f40e`. In particular this report respects the corrections that generic bounded projection density does not control an indefinite quadratic trace, a single uniformly good physical minor need not exist, conditional density caps do not substitute for original-coordinate independence, and linear averaging of reciprocal local-minor costs can diverge.
 
 The completed assigned-partner result actually applied is fleet02/B16 run `20260922T142906Z-fleet02-B16-QFORM-auto12`, canonical report
 

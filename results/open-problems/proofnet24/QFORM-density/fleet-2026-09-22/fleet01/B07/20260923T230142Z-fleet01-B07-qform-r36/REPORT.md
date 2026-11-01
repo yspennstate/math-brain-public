@@ -7,7 +7,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`
 Role: Coordinate minor selection / GEOMETRY  
 Run: `20260923T230142Z-fleet01-B07-qform-r36`  
 Owner continuation consumed: `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`  
-Fresh brain main used for the substantive calculation: `yspennstate/math-research-brain@68eb8dc1352b5b227a43ff4dcc306a77d3ecf761`  
+Fresh brain main used for the substantive calculation: `private-brain-repository@68eb8dc1352b5b227a43ff4dcc306a77d3ecf761`  
 Live correction-inbox blob before publication work: `47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3`  
 Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 Status: **NEW GLOBAL THIRD-COMPOUND FUNNEL / PRINCIPAL-DIFFUSE H3 BRANCH ELIMINATED / DESIGNATED PARTNER APPLIED / FULL QFORM OPEN / GLOBAL CONTINUITY OPEN**.

@@ -10,7 +10,7 @@ attacking: the span-aligned two-sided rank-two packet left after the exact-rank-
 **Full target:** OPEN / NOT PROVED / NOT DISPROVED  
 **Continuity:** not proved on the new Schur-gap branch; the designated-partner zero-diagonal overlap remains continuous by its own theorem.
 
-This run began under owner revision `2026-09-22.15` and was resumed in the same actual-hour run after its canonical login/start already existed. Fresh control was resolved again immediately before publication at `yspennstate/math-research-brain@272127e579949a171c7a0ebdf0945c9d57f0db8d`; no later stop was observed. The current correction set was reread. In particular I do not use law-uniform pointwise one-variable Fresnel decay, conditional-projection density caps as independence, arbitrary-joint coarea, a uniformly good local minor, or the false two-sided Gabor-line `L^2` trace.
+This run began under owner revision `2026-09-22.15` and was resumed in the same actual-hour run after its canonical login/start already existed. Fresh control was resolved again immediately before publication at `private-brain-repository@272127e579949a171c7a0ebdf0945c9d57f0db8d`; no later stop was observed. The current correction set was reread. In particular I do not use law-uniform pointwise one-variable Fresnel decay, conditional-projection density caps as independence, arbitrary-joint coarea, a uniformly good local minor, or the false two-sided Gabor-line `L^2` trace.
 
 ## 1. Incoming unpaid packet
 
@@ -352,7 +352,7 @@ I did **not** obtain a target-valid counterexample to the owner's stronger globa
 
 ## 7. Sources actually consumed
 
-- Fresh owner/control repository at publication refresh: `yspennstate/math-research-brain@272127e579949a171c7a0ebdf0945c9d57f0db8d`, owner revision `2026-09-22.15`.
+- Fresh owner/control repository at publication refresh: `private-brain-repository@272127e579949a171c7a0ebdf0945c9d57f0db8d`, owner revision `2026-09-22.15`.
 - fleet03/B02 r17 transverse exact-rank-three cross-block theorem: `private-source-repository@484c89f85cda352b2c4318364a6206ebc4154950`.
 - fleet03/B02 banked theorem predecessor: `private-source-repository@1489c81e0a377fd24b1a8372944e4ca63c85b13a`.
 - designated partner fleet04/B02 zero-diagonal triple continuity theorem: `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`.

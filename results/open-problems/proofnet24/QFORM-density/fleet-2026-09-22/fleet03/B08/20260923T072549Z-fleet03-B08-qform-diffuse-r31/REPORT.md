@@ -16,7 +16,7 @@ The full target remains OPEN: for every dimension, independent real ORIGINAL coo
 
 No Gaussian, moment, compact-support, connected-support, log-concavity, post-rotation independence, pointwise law-uniform Fresnel decay, arbitrary-joint coarea bound, positive conditional projection-height moment, worst-fiber supremum, or one-good-minor selector is used below. In particular, the physical-minor banks below are aggregated before any reciprocal operation.
 
-Fresh owner control was read from `yspennstate/math-research-brain` main and remained revision `2026-09-22.15`, QFORM only. The live correction set was refreshed before publication. The argument explicitly respects the hidden-shear correction: the exterior/Dodgson quantities below are deterministic identities for the ACTUAL physical cross block and are not called the true Schur complement of the full quadratic form.
+Fresh owner control was read from `private-brain-repository` main and remained revision `2026-09-22.15`, QFORM only. The live correction set was refreshed before publication. The argument explicitly respects the hidden-shear correction: the exterior/Dodgson quantities below are deterministic identities for the ACTUAL physical cross block and are not called the true Schur complement of the full quadratic form.
 
 Immediate predecessor:
 

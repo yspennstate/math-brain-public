@@ -6,7 +6,7 @@ attacking: the r30/r31 disjoint-bank survivors — convert cancellation of the s
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Assignment: coordinate minor selection / GEOMETRY  
 Run: `20260923T143815Z-fleet03-B07-qform-r32`  
-Fresh main observed during work: `yspennstate/math-research-brain@8562b09b54674f8cafc89f0ee42819e5d3f983f3`  
+Fresh main observed during work: `private-brain-repository@8562b09b54674f8cafc89f0ee42819e5d3f983f3`  
 Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 Status: **NEW DETERMINANT-WEIGHTED FOUR-BANK COMPILER / DESIGNATED PARTNER APPLIED / FULL QFORM OPEN / CONTINUITY OPEN**.
 

@@ -31,7 +31,7 @@ from pathlib import Path
 from typing import Any
 
 
-LEDGER_SCHEMA = "org.math-research-brain/first-attempt-ledger"
+LEDGER_SCHEMA = "org.private-brain/first-attempt-ledger"
 LEDGER_SCHEMA_VERSION = 1
 MAX_PAYLOAD_BYTES = 64 * 1024 * 1024
 MAX_JSON_STRING_BYTES = ((MAX_PAYLOAD_BYTES + 2) // 3) * 4 + 1024

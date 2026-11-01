@@ -13,7 +13,7 @@ The live corrections remain binding. Nothing below uses an arbitrary-joint rank-
 
 ## 1. Fresh sources and the first unpaid implication
 
-Fresh owner control was resolved from `yspennstate/math-research-brain/main` at pre-write head
+Fresh owner control was resolved from `private-brain-repository/main` at pre-write head
 
 `e77cb487f09dc2224415a17c34ca01a3ef271883`,
 

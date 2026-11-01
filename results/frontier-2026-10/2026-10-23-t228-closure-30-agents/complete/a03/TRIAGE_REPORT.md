@@ -11,7 +11,7 @@ Validation: 422 nonempty JSON records, first T001, last T422. The blank final li
 Frontier path: 06_math_research/frontier/rows/TNNN/.
 The explicit rows are primary evidence of portfolio scope; the publication cited by a row is evidence for the external mathematical frontier.
 
-Current math-brain snapshot is main, not release, and its repository pushed_at is 2026-10-13T06:31:25Z. Its open-problems results are therefore not the current T-series registry. math-research-brain AGENTS.md was read; historical scheduled FEI-only assignment is superseded for this interactive task by the owner-authorized instruction, while privacy/holds remain.
+Current math-brain snapshot is main, not release, and its repository pushed_at is 2026-10-13T06:31:25Z. Its open-problems results are therefore not the current T-series registry. private-brain AGENTS.md was read; historical scheduled FEI-only assignment is superseded for this interactive task by the owner-authorized instruction, while privacy/holds remain.
 
 ## T228 scope adjudication — priority recommendation
 

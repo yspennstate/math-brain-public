@@ -5,7 +5,7 @@ attacking: literature-to-proof transfer for the rank-one one-sided Schur branch,
 
 Programme: QFORM-DENSITY-3EIG-20260922.  Full target status: OPEN / NOT PROVED.  Continuity is tracked separately and is not claimed by the theorem below.
 
-Control source at startup: yspennstate/math-research-brain main 9b1ac42c5c80793bb4633c765cbd15c0a135101c, owner control revision 2026-09-22.11. Before publication I refreshed the control branch and consumed the newer corrections QFORM-EXACT-BANK-SEPARATION-NOT-FORCED-v1 and QFORM-SCALAR-LEAKAGE-CONDITIONAL-23-MOMENT-FALSE-v1. Neither is used as a premise; this run makes no structural-exhaustion or scalar-fiber claim.
+Control source at startup: private-brain-repository main 9b1ac42c5c80793bb4633c765cbd15c0a135101c, owner control revision 2026-09-22.11. Before publication I refreshed the control branch and consumed the newer corrections QFORM-EXACT-BANK-SEPARATION-NOT-FORCED-v1 and QFORM-SCALAR-LEAKAGE-CONDITIONAL-23-MOMENT-FALSE-v1. Neither is used as a premise; this run makes no structural-exhaustion or scalar-fiber claim.
 
 Execution context: WITHOUT_VERIFIED_BRAIN. Repository retrieval/coordination is genuine; native learned-memory receiver use was not verified.
 
@@ -164,5 +164,5 @@ Full QFORM remains OPEN / NOT PROVED.
 - Chasapis--Konig--Tkocz, arXiv:2011.12251 / JFA 2021, Theorem 1, p=1/2.
 - fleet02/B18 partner report: private-source@aa0b07137085e1b6e948c00052ff0689343a0cee, path above.
 - fleet02/B18 late correction: private-source@55114f49ab8188c8a90cf998c66d8627d655dec4.
-- fresh structural correction QFORM-EXACT-BANK-SEPARATION-NOT-FORCED-v1: math-research-brain commit 6976b2fad428ef44c76125a6ab34339b5a5d9b44.
-- fresh conditional-moment correction QFORM-SCALAR-LEAKAGE-CONDITIONAL-23-MOMENT-FALSE-v1: math-research-brain commit 594599ea6dbb5baf53bd4090501c89211c66fae7.
+- fresh structural correction QFORM-EXACT-BANK-SEPARATION-NOT-FORCED-v1: private-brain commit 6976b2fad428ef44c76125a6ab34339b5a5d9b44.
+- fresh conditional-moment correction QFORM-SCALAR-LEAKAGE-CONDITIONAL-23-MOMENT-FALSE-v1: private-brain commit 594599ea6dbb5baf53bd4090501c89211c66fae7.

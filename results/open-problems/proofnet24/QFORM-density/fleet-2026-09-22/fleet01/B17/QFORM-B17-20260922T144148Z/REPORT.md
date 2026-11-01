@@ -9,7 +9,7 @@
 
 ## 1. Source pins and corrections
 
-Control was read from `yspennstate/math-research-brain` main; the coherent control state used for the derivation was commit `24015c84e6288c6138b68924f26f41e42c18b320`, with later correction commit `4db9b9207829d324d23e36afcf470b0ffb8b0951` also inspected before publication. No refuted pointwise-Fresnel, fiber-supremum, conditional-cap, single-Schur, local-cross-rank3, phase-Wiener, bounded-diameter, or bounded-fragment-count reduction is used.
+Control was read from `private-brain-repository` main; the coherent control state used for the derivation was commit `24015c84e6288c6138b68924f26f41e42c18b320`, with later correction commit `4db9b9207829d324d23e36afcf470b0ffb8b0951` also inspected before publication. No refuted pointwise-Fresnel, fiber-supremum, conditional-cap, single-Schur, local-cross-rank3, phase-Wiener, bounded-diameter, or bounded-fragment-count reduction is used.
 
 Named partner actually applied: `fleet02/B17`, canonical report `private-source-repository@4ea3583ef79cc28fc933c9dc6870e63475f94ecd`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T141434Z-650545cc/REPORT.md`. Its exact per-bank saddle expectations and first-order coefficients are used below, and are independently rederived here from the Gaussian cone measure.
 

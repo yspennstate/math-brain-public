@@ -6,8 +6,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parent
 CANDIDATES = [
     Path(r"~/math-brain-build/local/population/brain.sqlite3"),
-    Path(r"~/math-research-brain/brain.sqlite3"),
-    Path(r"~/math-research-brain/store.sqlite3"),
+    Path(r"~/private-brain/brain.sqlite3"),
+    Path(r"~/private-brain/store.sqlite3"),
 ]
 output = []
 for path in CANDIDATES:

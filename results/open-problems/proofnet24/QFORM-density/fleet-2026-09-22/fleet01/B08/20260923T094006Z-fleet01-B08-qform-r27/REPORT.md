@@ -14,7 +14,7 @@ The unrestricted conjecture remains OPEN. The additional full-target continuity 
 
 The target is the owner target: independent ORIGINAL real coordinates with marginal probability densities at most one, arbitrary real symmetric `A`, and at least three eigenvalues of modulus at least one. No Gaussianity, moment assumption, log-concavity, compact/connected support, post-rotation independence, arbitrary-joint coarea bound, conditional projection-height moment, law-uniform pointwise Fresnel decay, or random-smallness consequence of a small spectral tail is used.
 
-The current control and live correction ledger were reread on fresh `yspennstate/math-research-brain/main`. The full conjecture and continuity claim remain open there.
+The current control and live correction ledger were reread on fresh `private-brain-repository/main`. The full conjecture and continuity claim remain open there.
 
 The first analytic input is the completed translation-uniform two-cross theorem
 

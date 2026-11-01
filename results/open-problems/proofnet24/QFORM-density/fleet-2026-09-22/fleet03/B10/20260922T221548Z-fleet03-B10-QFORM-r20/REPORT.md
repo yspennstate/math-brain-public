@@ -5,7 +5,7 @@ attacking: the exact-rank-three aggregate principal-triple packet; refine it int
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** rank-three coupled case  
-**Pre-publication control refresh observed:** `yspennstate/math-research-brain@4f39392a513c2c04022f51983ec60bbb00a93717`, same revision  
+**Pre-publication control refresh observed:** `private-brain-repository@4f39392a513c2c04022f51983ec60bbb00a93717`, same revision  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** new supporting theorems proved; full QFORM remains `OPEN / NOT PROVED`.
 

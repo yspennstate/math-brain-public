@@ -244,7 +244,7 @@ The proof does not use:
 - bounded support, moments, log-concavity, or a diagonal basis;
 - an unrestricted curved-fiber supremum.
 
-The fresh correction inbox was re-read at `yspennstate/math-research-brain@ac3ce51d3d8bf01b7e906c0fe41dcb7f5bb94646`, blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`, before publication.
+The fresh correction inbox was re-read at `private-brain-repository@ac3ce51d3d8bf01b7e906c0fe41dcb7f5bb94646`, blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`, before publication.
 
 ## 9. Exact check used
 

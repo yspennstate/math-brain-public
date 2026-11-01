@@ -184,7 +184,7 @@ After exact rank three is closed, arbitrary additional spectral directions remai
 
 ## 8. Source pins
 
-- `yspennstate/math-research-brain` fresh initial control commit `a16f38dc7169693c680b23f1c1a8791baab80242`, owner revision `2026-09-22.5`.
+- `private-brain-repository` fresh initial control commit `a16f38dc7169693c680b23f1c1a8791baab80242`, owner revision `2026-09-22.5`.
 - Assigned partner fleet03/B20: `private-source-repository@e06f8c89c1f99a6a021fc9687af0168b8ad50399`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T131539Z-fleet03-B20-qform-r11/REPORT.md`.
 - fleet02/B11 heavy minority/near-null theorem: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T135203Z-b11-qform-6080e0b3/REPORT.md` on current master snapshot.
 - fleet04/B20 aggregate hyperbolic-square theorem: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T132134Z-fleet04-B20-QFORM-r1/REPORT.md`.

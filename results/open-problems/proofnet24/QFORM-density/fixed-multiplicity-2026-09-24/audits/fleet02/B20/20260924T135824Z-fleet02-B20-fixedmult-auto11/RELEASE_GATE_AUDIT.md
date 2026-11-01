@@ -6,7 +6,7 @@ Role: release gate / independent synthesis / threshold accounting, fleet02 count
 
 ## Source pins and scope
 
-Initial invocation control pin: `yspennstate/math-research-brain@f4759cdc5e22625ce5f12cc02295be60cf13e1a4`.  
+Initial invocation control pin: `private-brain-repository@f4759cdc5e22625ce5f12cc02295be60cf13e1a4`.  
 Invocation-resolved math master: `private-source-repository@fb1c176f3e981f3e59465f58ce0d0c817e54244d`; final prepublication master refresh advanced to `80d86eedac01aafbf61b34446b6eed696ca75dce` through concurrent immutable worker additions.  
 Pinned baseline manuscript source commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`.  
 Pinned manuscript blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`.  

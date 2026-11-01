@@ -25,7 +25,7 @@ from .codex_runner import (
 )
 
 
-PRIVATE_ARTIFACT_SCHEMA = "org.math-research-brain/private-codex-run-result"
+PRIVATE_ARTIFACT_SCHEMA = "org.private-brain/private-codex-run-result"
 PRIVATE_ARTIFACT_SCHEMA_VERSION = 2
 PRIVATE_ARTIFACT_CLASSIFICATION = "private_raw_evaluation_evidence"
 # Keep this independent lower-layer cap aligned with attempt_ledger.MAX_PAYLOAD_BYTES.

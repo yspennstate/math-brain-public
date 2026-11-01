@@ -506,7 +506,7 @@ finite census.
 
 ## 10. Provenance and honest status
 
-Fresh source control before the scientific write: `math-research-brain/main`
+Fresh source control before the scientific write: `private-brain/main`
 `2026-09-22.2`, no fleet02/B13 pause or stop. Fresh scientific source was read
 from `private-source/master`, including the all-gate reformulation, the
 exact fleet04/B17 cocycle, fleet04/B16 joint-character theorem, and the

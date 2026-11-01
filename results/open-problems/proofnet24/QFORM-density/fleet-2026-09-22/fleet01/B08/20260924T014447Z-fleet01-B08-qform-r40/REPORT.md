@@ -12,7 +12,7 @@ The unrestricted QFORM conjecture remains **OPEN**. The unrestricted continuous-
 
 Fresh prepublication control was resolved at
 
-`yspennstate/math-research-brain@67340898014b6d913e553869c3cf306b34b9ceef`,
+`private-brain-repository@67340898014b6d913e553869c3cf306b34b9ceef`,
 
 
 ## 1. Pinned mathematical inputs

@@ -9,7 +9,7 @@ Status: **PROVED SUPPORTING TARGET-LEVEL LEMMAS / FULL QFORM OPEN / CONTINUITY S
 
 ## 1. Sources and scope
 
-Brain controls were refreshed through `yspennstate/math-research-brain@ed014f9bc0fd9de0d17566dde501ac8c934ce257`. The required Claude package and live corrections were retained. In particular, no interval extremality, optimizer attainment on the infinite line, bounded support, moment hypothesis, or independence after rotation is used.
+Brain controls were refreshed through `private-brain-repository@ed014f9bc0fd9de0d17566dde501ac8c934ce257`. The required Claude package and live corrections were retained. In particular, no interval extremality, optimizer attainment on the infinite line, bounded support, moment hypothesis, or independence after rotation is used.
 
 The completed fleet01/B13 input actually used is
 `private-source-repository@6ee8e95ab3f01ae94ff48a163d253a2eb82cd967`.

@@ -8,7 +8,7 @@ EXECUTION: WITHOUT_VERIFIED_BRAIN
 STATUS: PARTIAL. Full uniform-cube Friedgut--Kalai Fourier entropy-influence (FEI) remains OPEN / NOT PROVED.
 
 Fresh authenticated control at entry:
-yspennstate/math-research-brain main
+private-brain-repository main
 ff6423d33daf35a8e4413a30956b6f8d0b26b31c,
 The live directive is FEI-JOINT-FOUR-ACCOUNTS-2026-09-21-192650Z plus the
 FEI-FULL-PROOF-PROGRESS continuation.  Fleet02/B17 is assigned new proof

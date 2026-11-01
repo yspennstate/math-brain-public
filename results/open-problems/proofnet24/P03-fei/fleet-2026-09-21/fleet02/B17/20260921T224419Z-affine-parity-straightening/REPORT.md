@@ -9,7 +9,7 @@ STATUS: PARTIAL. Full uniform-cube Friedgut--Kalai Fourier entropy-influence con
 NOVELTY / PRIORITY: NOT CLAIMED.
 
 Fresh authenticated control at entry:
-`yspennstate/math-research-brain` main
+`private-brain-repository` main
 `9c61c2bffacf3a9f1253aff0300998f19c51a39a`,
 was present.  Live allocation remained 8 brain B01-B06/B19-B20, 5 benchmark
 B07-B11, and 7 FEI B12-B18.

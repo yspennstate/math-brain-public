@@ -5,7 +5,7 @@ attacking: O0 one-/two-heavy coordinate skeletons; convert aggregate third-compo
 
 **Run:** `20260922T180507Z-fleet03-B07-qform-r14`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Fresh owner control before this publication:** revision `2026-09-22.11` at `yspennstate/math-research-brain@08728c79e01efc6499ce917d127ac3b78f51f1e6`  
+**Fresh owner control before this publication:** revision `2026-09-22.11` at `private-brain-repository@08728c79e01efc6499ce917d127ac3b78f51f1e6`  
 **Assignment:** Coordinate minor selection  
 **Classification:** `ESSENTIAL_STEP_APPLIED / NEW FULL-MATRIX PAID SUBBRANCH / FULL TARGET OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`

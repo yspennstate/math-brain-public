@@ -14,7 +14,7 @@ A density conclusion is claimed below only in branches already paid by the compl
 
 ## 1. Fresh source state and theorem consumed
 
-Fresh control at the beginning of the run was `yspennstate/math-research-brain` main commit
+Fresh control at the beginning of the run was `private-brain-repository` main commit
 
 `a4e0f8faabaaf120b5aad73b2446d9080f78f758`,
 

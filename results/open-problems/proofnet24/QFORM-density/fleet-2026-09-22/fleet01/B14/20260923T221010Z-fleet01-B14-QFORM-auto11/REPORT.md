@@ -11,7 +11,7 @@ attacking: hybrid localization across a vanishing square pivot and a diffuse qua
 
 ## 1. Fresh sources and corrections actually used
 
-Fresh control was re-read on `math-research-brain/main`; the owner control remains revision `2026-09-22.15`, QFORM-only, with no later stop for this slot. The live corrections excluding law-uniform pointwise quadratic Fourier decay, post-rotation independence, bounded-diameter/fixed-fragment localization, arbitrary-joint rank-three coarea, and normalized-fiber positive-moment arguments remain in force.
+Fresh control was re-read on `private-brain/main`; the owner control remains revision `2026-09-22.15`, QFORM-only, with no later stop for this slot. The live corrections excluding law-uniform pointwise quadratic Fourier decay, post-rotation independence, bounded-diameter/fixed-fragment localization, arbitrary-joint rank-three coarea, and normalized-fiber positive-moment arguments remain in force.
 
 Two completed `fleet02/B14` sources are used below.
 

@@ -10,7 +10,7 @@
 
 The active assignment is to construct exact adversaries to the current counting/separator route, especially overlapping cycles and induced parallel-edge intermediates, then replace the false intermediate with a correct sufficient statement.
 
-Fresh coordination controls were read from `yspennstate/math-research-brain` main initially at `6f007489092924b3360b74fb5e72e0f7dba09747`; a later refresh before scientific publication saw main `6591b0ef29d2f1f1645ce0f5a2cdbf17cb615402` with the same active owner control `2026-09-22.2`, programme and FOREST allocation. No later applicable stop/pause was present.
+Fresh coordination controls were read from `private-brain-repository` main initially at `6f007489092924b3360b74fb5e72e0f7dba09747`; a later refresh before scientific publication saw main `6591b0ef29d2f1f1645ce0f5a2cdbf17cb615402` with the same active owner control `2026-09-22.2`, programme and FOREST allocation. No later applicable stop/pause was present.
 
 The latest complete campaign-lead handoff consumed was fleet01/B01 run `20260922T010823Z-b01-forest-auto11`, handoff blob `032497949594326305913cb8871c00ab7d0dc528`, candidate `FOREST-KN-COCKS-REDUCTION-v2`. Its compact conditional chain is:
 

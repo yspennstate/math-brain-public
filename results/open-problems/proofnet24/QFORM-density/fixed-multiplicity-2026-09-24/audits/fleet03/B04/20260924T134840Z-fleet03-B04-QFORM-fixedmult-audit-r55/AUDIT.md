@@ -5,7 +5,7 @@ attacking: QFORM-FIXED-MULTIPLICITY-AUDIT-20260924; full 790-line audit with pri
 
 ## Source pin and authority
 
-Current owner objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`, read fresh from `math-research-brain` main during this invocation. It supersedes the older product-Fourier prompt for this run while preserving the same QFORM programme and task identity.
+Current owner objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`, read fresh from `private-brain` main during this invocation. It supersedes the older product-Fourier prompt for this run while preserving the same QFORM programme and task identity.
 
 Pinned mathematical source:
 

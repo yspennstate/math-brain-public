@@ -232,7 +232,7 @@ The full quadratic-form conjecture remains **OPEN / NOT PROVED**.
 
 ## Provenance
 
-- live target/corrections: `yspennstate/math-research-brain`, fresh `main` control revision `2026-09-22.5`;
+- live target/corrections: `private-brain-repository`, fresh `main` control revision `2026-09-22.5`;
 - reviewed lower-bound correction: interactive run `20260922T121109Z-crossblock-and-lower-bounds`, scientific commit `8624982153e5a2154e4ae8922d2fe4dc77080efc`;
 - compatible fleet04 theorem applied: fleet04/B18 run `20260922T113729Z-fleet04-B18-qform-r1`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`;
 - no completed fleet04/B17 QFORM artifact was visible at the final pre-publication partner check.

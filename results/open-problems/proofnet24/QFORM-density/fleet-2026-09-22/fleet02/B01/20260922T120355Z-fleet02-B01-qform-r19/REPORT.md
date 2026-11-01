@@ -10,7 +10,7 @@
 
 The exact target remains: independent real `X_i` with densities `0<=f_i<=1`; real symmetric `A`; at least three eigenvalues of `A` have absolute value at least one; prove a universal essential-supremum bound for the density of `Q=X^TAX`, or give a valid target counterexample. No moments, log-concavity, compact support, diagonal-basis independence, or post-rotation independence are assumed.
 
-Consumed source control: `yspennstate/math-research-brain` main commit `5966a72ce5bd4455d39586a1960dbffd9454950b`, later refreshed to `04fee9e85f1fccdd01af7be0d68fa0d53dee168c`; `scheduled_tasks/README.md`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, `DELTAS.json`, `CORRECTION_INBOX.json`, `PATHWAYS.md`, `MEMORY_PROTOCOL.md`, and the exact fleet02/B01 assignment were read. Corrections consumed: `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBER-SUP-DIMENSION-LOSS`, `QFORM-NO-INDEPENDENCE-AFTER-ROTATION`, and live event `QFORM-CROSSMINOR-ALONE-FALSE` (not used positively).
+Consumed source control: `private-brain-repository` main commit `5966a72ce5bd4455d39586a1960dbffd9454950b`, later refreshed to `04fee9e85f1fccdd01af7be0d68fa0d53dee168c`; `scheduled_tasks/README.md`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, `DELTAS.json`, `CORRECTION_INBOX.json`, `PATHWAYS.md`, `MEMORY_PROTOCOL.md`, and the exact fleet02/B01 assignment were read. Corrections consumed: `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBER-SUP-DIMENSION-LOSS`, `QFORM-NO-INDEPENDENCE-AFTER-ROTATION`, and live event `QFORM-CROSSMINOR-ALONE-FALSE` (not used positively).
 
 The phase-aligned-density refutation is preserved. For any fixed nonzero frequency `s` and `delta>0`, the set
 

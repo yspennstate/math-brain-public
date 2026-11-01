@@ -7,7 +7,7 @@
 ## Source state consumed
 
 
-Fresh `math-research-brain` control was read at main `2e5d66287c96d5111d791b3b30df729667502443`; before the actual-hour write it was re-resolved to `db5ae889a1426463c9d55eccb929093756909a03`, and the intervening 16 commits changed only run/login/handoff artifacts, not protected controls. Exact control Git blobs: AGENTS `94387098453b9f4a9b10179183f6f6ec780fd987`; README `3d4a9372c87802ab734141a3374d04c8823372e3`; fleet `e647d5d2479749f80ce7bb4862bee0f28513c7d9`; roles `ed17ecc94f76720c0345b3e32249b791b20ec611`; PROTOCOL `83a9268bf5287ca203e4be69a79e25382397bca7`; ORDER `a70e03208ae00795ca7c6cdf9b7dbce854347138`; TARGETS `a8cafa98cdb074ed15d0e214f8f54ee514c500df`.
+Fresh `private-brain` control was read at main `2e5d66287c96d5111d791b3b30df729667502443`; before the actual-hour write it was re-resolved to `db5ae889a1426463c9d55eccb929093756909a03`, and the intervening 16 commits changed only run/login/handoff artifacts, not protected controls. Exact control Git blobs: AGENTS `94387098453b9f4a9b10179183f6f6ec780fd987`; README `3d4a9372c87802ab734141a3374d04c8823372e3`; fleet `e647d5d2479749f80ce7bb4862bee0f28513c7d9`; roles `ed17ecc94f76720c0345b3e32249b791b20ec611`; PROTOCOL `83a9268bf5287ca203e4be69a79e25382397bca7`; ORDER `a70e03208ae00795ca7c6cdf9b7dbce854347138`; TARGETS `a8cafa98cdb074ed15d0e214f8f54ee514c500df`.
 
 The named campaign lead `fleet04/B10` had no completed source-bound collective-POS3 report in the bounded fresh search at the start of this run, so no lead theorem is fabricated. I consumed and applied these exact completed OTHER-account results instead:
 

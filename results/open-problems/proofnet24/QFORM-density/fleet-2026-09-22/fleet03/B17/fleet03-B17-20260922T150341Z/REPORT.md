@@ -10,7 +10,7 @@
 
 The full target remains OPEN: for every dimension, every independent real coordinates with probability densities bounded by one, and every real symmetric matrix having at least three eigenvalues of modulus at least one, prove one dimension- and law-independent essential-density bound for `X^T A X`, or produce a valid counterexample. Continuity of the full target density is a separate desired conclusion and is not proved here.
 
-Fresh control before publication: `yspennstate/math-research-brain` main commit `e2b4e19cfbe7aacd855df717036ffe0ab2a3d9b2`, owner revision `2026-09-22.5`. No later pause/stop for this worker was observed.
+Fresh control before publication: `private-brain-repository` main commit `e2b4e19cfbe7aacd855df717036ffe0ab2a3d9b2`, owner revision `2026-09-22.5`. No later pause/stop for this worker was observed.
 
 This derivation uses the live corrections, in particular: law-uniform pointwise quadratic-phase decay is false; rotation does not preserve coordinate independence; a single physical minor is not a universal closure; conditional density caps cannot replace product provenance; and the newest `QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1` correction shows that selecting one physical triple before paying reciprocal aggregate cost can diverge even on a target-admissible rank-three family.
 

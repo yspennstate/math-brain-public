@@ -5,8 +5,8 @@ import sqlite3
 
 ROOT = Path(__file__).resolve().parent
 PATHS = [Path('~/math-brain-build/local/population/brain.sqlite3'),
-         Path('~/math-research-brain/local/brain.sqlite3'),
-         Path('~/math-research-brain/local/math_brain.sqlite3')]
+         Path('~/private-brain/local/brain.sqlite3'),
+         Path('~/private-brain/local/math_brain.sqlite3')]
 TARGETS = ['claim_91f295e6d2a67634c0b90a5ee4130c1feed72dc0fe16086a679021c90c8917cb',
            'claim_07a861a72ebeb008dc23e9db32147327c062427adee7a530bab01f0de67bd002']
 receipts = []

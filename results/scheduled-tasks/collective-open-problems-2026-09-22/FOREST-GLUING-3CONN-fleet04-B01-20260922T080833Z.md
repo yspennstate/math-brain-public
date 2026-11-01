@@ -8,7 +8,7 @@
 
 ## 1. Control and source scope
 
-Entry controls were read at exact `math-research-brain` main commit `0d9b42fe9eca9868300f5e4048924dc150aa5eee`, owner revision `2026-09-22.2`. The active collective order is `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`; new brain installation/benchmark work is stopped for B01. The target remains the unit uniform law on **all** acyclic edge subsets of a finite simple graph.
+Entry controls were read at exact `private-brain` main commit `0d9b42fe9eca9868300f5e4048924dc150aa5eee`, owner revision `2026-09-22.2`. The active collective order is `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`; new brain installation/benchmark work is stopped for B01. The target remains the unit uniform law on **all** acyclic edge subsets of a finite simple graph.
 
 Exact owner-source blobs read at entry include ORDER `a70e03208ae00795ca7c6cdf9b7dbce854347138`, TARGETS `a8cafa98cdb074ed15d0e214f8f54ee514c500df`, and ASSIGNMENTS `fe144a4be3522d57f8cb2dc40b1fc57df7c7f7da`.
 

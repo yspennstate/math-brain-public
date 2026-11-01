@@ -11,7 +11,7 @@ The target is the original Grimmett--Winkler unit law: for every finite simple g
 
 `P(e,f in F) <= P(e in F) P(f in F)`.
 
-Fresh controls were read from `yspennstate/math-research-brain` at commit `5ead403d17d1b7917780a7531af081d06eb4e6df`, owner-control revision `2026-09-22.2`, directive `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`. No new brain-installation or benchmark work is used here.
+Fresh controls were read from `private-brain-repository` at commit `5ead403d17d1b7917780a7531af081d06eb4e6df`, owner-control revision `2026-09-22.2`, directive `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`. No new brain-installation or benchmark work is used here.
 
 Latest complete campaign-lead version consumed: fleet01/B01
 

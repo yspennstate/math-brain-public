@@ -262,7 +262,7 @@ No full-proof claim is made and no numerical census is used as closure evidence.
 
 ## 7. Source pins
 
-- Fresh owner control initially read at `yspennstate/math-research-brain@6140a0528a06cc52e4b8bb8f75bb09160aafb464`, revision `2026-09-22.5`; prepublication main later observed at `f6d2e0022dfeb2760d307a8df432e6ee8b99bf46` with unchanged correction inbox.
+- Fresh owner control initially read at `private-brain-repository@6140a0528a06cc52e4b8bb8f75bb09160aafb464`, revision `2026-09-22.5`; prepublication main later observed at `f6d2e0022dfeb2760d307a8df432e6ee8b99bf46` with unchanged correction inbox.
 - Named partner fleet03/B19 latest handoff blob `7937c8fdd82462a845cae1964524269c1e7c58ff`; canonical package commit `f600d39b2e88b14acf5af050076e1062cc33f1f6`.
 - fleet01/B19 canonical report commit `072cf685a12893b44d555f14e4e610bcf2154037`, report blob `2530c90971b43a49cf9da35be03919868719abb9`.
 - fleet02/B09 canonical report commit `fa592b592c61bd1597aa8cf3270c3c9f58f410bf`, report blob `a2e19e4b00617ac931a3a73036d2e3f2ea28d949`.

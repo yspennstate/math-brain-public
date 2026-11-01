@@ -11,7 +11,7 @@ The full target remains unchanged: independent original real coordinates with pr
 
 ## 1. Fresh source state and mathematical inputs actually used
 
-Initial fresh brain control was `yspennstate/math-research-brain@e78a429fff805dae3712a4ede4d9372a8d723503`; prepublication refresh advanced only operational/concurrent state to `81c0f4f33f79e90672a7c1cb5c2a518b90943d15`, with the same owner continuation and revision `2026-09-22.15`. The current correction ledger was reread before publication.
+Initial fresh brain control was `private-brain-repository@e78a429fff805dae3712a4ede4d9372a8d723503`; prepublication refresh advanced only operational/concurrent state to `81c0f4f33f79e90672a7c1cb5c2a518b90943d15`, with the same owner continuation and revision `2026-09-22.15`. The current correction ledger was reread before publication.
 
 The required Claude-source package was read at `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. I use two completed tools from that package at an actual obstruction below:
 

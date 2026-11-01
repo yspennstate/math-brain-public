@@ -13,7 +13,7 @@ The unrestricted owner target remains OPEN. No Gaussian, log-concavity, moment, 
 
 ## 1. Fresh source boundary
 
-Fresh `math-research-brain/main` was resolved during this run. The live `CLAIMS.json` still marks `QFORM-FULL` and the full continuous-representative claim OPEN. The historical source owner message was also read at the exact owner-supplied commit `0dc369ddf8b860648dd780d8f92c62994dc53ecf`; later control wins and leaves QFORM as the sole target.
+Fresh `private-brain/main` was resolved during this run. The live `CLAIMS.json` still marks `QFORM-FULL` and the full continuous-representative claim OPEN. The historical source owner message was also read at the exact owner-supplied commit `0dc369ddf8b860648dd780d8f92c62994dc53ecf`; later control wins and leaves QFORM as the sole target.
 
 The immediate own predecessor is
 

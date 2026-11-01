@@ -14,7 +14,7 @@ The unrestricted theorem is not claimed. All conditioning is in ORIGINAL indepen
 
 ## 1. Sources actually consumed
 
-1. Current owner/control state in `yspennstate/math-research-brain` main, including `AGENTS.md`, `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/fleet01/B07.json`. The full conjecture and continuous-density upgrade remain OPEN.
+1. Current owner/control state in `private-brain-repository` main, including `AGENTS.md`, `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/fleet01/B07.json`. The full conjecture and continuous-density upgrade remain OPEN.
 2. Own immediately preceding report:
    `private-source-repository@dfb5c8b66cb2f60c1bd3dd202c609902cd5208b2`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T140342Z-r26/REPORT.md`.

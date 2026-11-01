@@ -10,7 +10,7 @@
 
 The full target remains open: for every `n`, independent real coordinates `X_i` having probability densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues satisfying `|lambda_j(A)|>=1`, prove one universal finite bound on the density of `X^T A X`, with continuity tracked separately.
 
-The run began from fresh `yspennstate/math-research-brain` main commit `a061e3c35962dd58137107493fe491a17a8714cb`, owner revision `2026-09-22.5`. Before this write I revalidated the live control at brain commit `4fe2c8b1001d46d88ece1c901066a2edbe97ee43`; there is no later stop and the exclusive QFORM continuation remains in force.
+The run began from fresh `private-brain-repository` main commit `a061e3c35962dd58137107493fe491a17a8714cb`, owner revision `2026-09-22.5`. Before this write I revalidated the live control at brain commit `4fe2c8b1001d46d88ece1c901066a2edbe97ee43`; there is no later stop and the exclusive QFORM continuation remains in force.
 
 Required corrections consumed include `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBER-SUP-DIMENSION-LOSS`, `QFORM-NO-INDEPENDENCE-AFTER-ROTATION`, `QFORM-CROSSMINOR-ALONE-FALSE`, `QFORM-TWOSHEET-XRAY-ONLY-FALSE`, `QFORM-UV-CONDITIONAL-CAP-FALSE`, `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`, and `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`. No pointwise law-uniform Fresnel decay, rotated-coordinate independence, normalized-fiber trace cap, or reciprocal-minor averaging is used.
 

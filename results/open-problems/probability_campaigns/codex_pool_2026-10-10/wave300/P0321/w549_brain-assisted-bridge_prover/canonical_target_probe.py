@@ -5,7 +5,7 @@ import time
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parent
-db = Path("~/math-research-brain/local/audits/jmlr-two-paper-zip-audit-v1/mathbrain_v2.sqlite3")
+db = Path("~/private-brain/local/audits/jmlr-two-paper-zip-audit-v1/mathbrain_v2.sqlite3")
 start = time.monotonic()
 result = {"command": "python -X utf8 canonical_target_probe.py", "database": str(db), "mode": "ro", "scope": "audit snapshot found in canonical repository, not certified current live store", "cards": []}
 con = sqlite3.connect(db.as_uri()+"?mode=ro", uri=True, timeout=5)

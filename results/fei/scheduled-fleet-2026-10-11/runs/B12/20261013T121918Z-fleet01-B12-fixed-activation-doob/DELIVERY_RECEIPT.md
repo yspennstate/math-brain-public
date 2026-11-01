@@ -11,7 +11,7 @@ Run: `20261013T121918Z-fleet01-B12-fixed-activation-doob`
 
 ## Brain handoff
 
-- Repository: `yspennstate/math-research-brain`
+- Repository: `private-brain-repository`
 - Path: `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B12/20261013T121918Z-fleet01-B12-fixed-activation-doob/`
 - Core-package readback ref: `ce61fe6666bc443afa63553b0674ceba1b20e893`
 - Verification: all 11 pre-receipt files fetched at that ref, nonempty, and byte-identical to the local artifacts.

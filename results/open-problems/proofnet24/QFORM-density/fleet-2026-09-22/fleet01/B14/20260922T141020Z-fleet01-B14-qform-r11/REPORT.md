@@ -11,7 +11,7 @@
 
 The full target remains open: for arbitrary independent real coordinates with densities bounded by one, and arbitrary real symmetric `A` with at least three eigenvalues of absolute value at least one, prove a dimension-free bound on the density of `X^T A X`.
 
-Fresh control was read at math-research-brain commit `cc11f162b6476b407e38059370043c8661214cdd`, owner revision `2026-09-22.5`. Relevant live corrections were consumed: no law-uniform pointwise Fresnel decay, no independence after spectral rotation, no naive fiber-supremum closure, no cross-minor-alone closure, no conditional-cap substitute for genuine independence, no bounded-diameter localization, and no single-Schur-rank2 extraction.
+Fresh control was read at private-brain commit `cc11f162b6476b407e38059370043c8661214cdd`, owner revision `2026-09-22.5`. Relevant live corrections were consumed: no law-uniform pointwise Fresnel decay, no independence after spectral rotation, no naive fiber-supremum closure, no cross-minor-alone closure, no conditional-cap substitute for genuine independence, no bounded-diameter localization, and no single-Schur-rank2 extraction.
 
 The named partner actually applied is fleet02/B14, canonical report
 

@@ -20,7 +20,7 @@ This is a genuine strengthening of the previous B04 scalar-pivot bridge. The liv
 
 ## 2. Source-pinned dependencies and corrections
 
-Fresh prepublication control: `yspennstate/math-research-brain@d56596e0c81b1e51a69c6c84cf3fb4fe88efb882`, owner revision `2026-09-22.5`, README blob `433b2d57345823967480245b59a7c47d51019c37`, live correction-inbox blob `337bc9adc6b8ed81d688dd32367c68c4b9b2a636`.
+Fresh prepublication control: `private-brain-repository@d56596e0c81b1e51a69c6c84cf3fb4fe88efb882`, owner revision `2026-09-22.5`, README blob `433b2d57345823967480245b59a7c47d51019c37`, live correction-inbox blob `337bc9adc6b8ed81d688dd32367c68c4b9b2a636`.
 
 Required corrections consumed: the law-uniform scalar pointwise-decay claim is false; fiber-supremum bounds can lose dimension; rotations do not preserve coordinate independence; a good cross minor alone is not exhaustive; a single rank-two Schur extraction is not forced; generic conditional density caps are not independence; and a rank-three original-coordinate cross cut is not forced. None of those refuted statements is used positively.
 

@@ -10,7 +10,7 @@
 
 The target is unchanged: for arbitrary dimension, independent real coordinates with one-dimensional probability densities bounded by one, and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, prove one universal finite essential-density bound for `Q=X^TAX`, or give a target-valid counterexample. Continuity is separate and is **not** proved in the new branches below.
 
-Fresh owner control before publication was `yspennstate/math-research-brain@46f58fad0bc29bc323315357e8d88a7a804f72fa`, revision `2026-09-22.5`. The live correction inbox was re-read. No law-uniform scalar Fresnel decay, post-rotation independence, fiber-supremum closure, generic conditional-cap surrogate, fixed-principal-minor dichotomy, or absolute phase-Wiener claim is used.
+Fresh owner control before publication was `private-brain-repository@46f58fad0bc29bc323315357e8d88a7a804f72fa`, revision `2026-09-22.5`. The live correction inbox was re-read. No law-uniform scalar Fresnel decay, post-rotation independence, fiber-supremum closure, generic conditional-cap surrogate, fixed-principal-minor dichotomy, or absolute phase-Wiener claim is used.
 
 The preceding B19 theorem left every possible counterexample in
 

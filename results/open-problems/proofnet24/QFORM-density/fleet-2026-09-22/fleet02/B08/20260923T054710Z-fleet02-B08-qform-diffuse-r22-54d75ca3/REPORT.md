@@ -12,7 +12,7 @@ The unrestricted conjecture remains open. Inputs throughout are independent ORIG
 
 ## 1. Source pins actually used
 
-Fresh owner control was read from `yspennstate/math-research-brain`, revision `2026-09-22.15`, with QFORM as the sole target and no later stop at the control read.
+Fresh owner control was read from `private-brain-repository`, revision `2026-09-22.15`, with QFORM as the sole target and no later stop at the control read.
 
 The immediate B08 predecessor is
 

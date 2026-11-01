@@ -8,7 +8,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source state and partner result actually applied
 
-Fresh coherent control source was `yspennstate/math-research-brain@f22710549d776d9514d40c0ac84faf51dc0526ad`, revision `2026-09-22.5`. The later live correction snapshot at `fa9dd92ed4d35af5fb5572dbb1b37698806f3562` contains `QFORM-CROSSMINOR-ALONE-FALSE`; nothing below uses the refuted cross-minor-only implication.
+Fresh coherent control source was `private-brain-repository@f22710549d776d9514d40c0ac84faf51dc0526ad`, revision `2026-09-22.5`. The later live correction snapshot at `fa9dd92ed4d35af5fb5572dbb1b37698806f3562` contains `QFORM-CROSSMINOR-ALONE-FALSE`; nothing below uses the refuted cross-minor-only implication.
 
 Named partner fleet02/B17 was consumed at its complete immutable source:
 

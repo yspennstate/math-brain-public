@@ -13,7 +13,7 @@ The unrestricted owner target remains OPEN. No Gaussian, log-concavity, moment, 
 
 ## 1. Fresh source state and first missing implication
 
-Fresh `math-research-brain/main` still has QFORM as the sole target and `CLAIMS.json` still marks both `QFORM-FULL` and the full continuous-representative claim OPEN.
+Fresh `private-brain/main` still has QFORM as the sole target and `CLAIMS.json` still marks both `QFORM-FULL` and the full continuous-representative claim OPEN.
 
 The immediately preceding fleet01/B11 run is
 

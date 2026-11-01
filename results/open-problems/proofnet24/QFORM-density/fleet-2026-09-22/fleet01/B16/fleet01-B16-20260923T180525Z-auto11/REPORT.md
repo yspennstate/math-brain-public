@@ -16,7 +16,7 @@ The target remains the unrestricted statement: independent real original-coordin
 
 This run keeps the live correction that a bounded joint projected density is not enough for an indefinite or curved level-set integral. Independence is used only between disjoint ORIGINAL source banks. No spectral rotation is interpreted as creating independent coordinates. No normalized conditional projection-height bound is inserted.
 
-Fresh control was read from `math-research-brain@89b9e16d28eea26a58af6a17b374846d1f45219f`. Fresh `private-source` master was observed at `8acd119a2b2cbeb7678cfa5ee08b573a2cf0e298` before the mathematical write.
+Fresh control was read from `private-brain@89b9e16d28eea26a58af6a17b374846d1f45219f`. Fresh `private-source` master was observed at `8acd119a2b2cbeb7678cfa5ee08b573a2cf0e298` before the mathematical write.
 
 ## 2. Source-pinned completed inputs used at equations
 

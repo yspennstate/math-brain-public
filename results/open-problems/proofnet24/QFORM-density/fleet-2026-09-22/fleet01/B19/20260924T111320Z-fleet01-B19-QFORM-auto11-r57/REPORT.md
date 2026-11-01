@@ -17,11 +17,11 @@ All coordinates below are literal ORIGINAL coordinates. Orthogonal matrices occu
 
 Fresh protected control was resolved at
 
-`yspennstate/math-research-brain@247191ebdc15533a53c6b44fc99f803525f956a1`
+`private-brain-repository@247191ebdc15533a53c6b44fc99f803525f956a1`
 
 and reread immediately before the mathematical write at current main descendant
 
-`yspennstate/math-research-brain@17d0485914975deb71a305f1241dd20bdc17b6e0`.
+`private-brain-repository@17d0485914975deb71a305f1241dd20bdc17b6e0`.
 
 
 The immediately preceding same-slot frontier is

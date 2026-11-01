@@ -149,7 +149,7 @@ where the extended `a_I^*` has hub component `sqrt(2)`; the other side is symmet
 
 The newest completed assigned partner, fleet03/B01 r21, source-pinned at
 
-`yspennstate/math-research-brain@8b3939cff4def148fd1a005b506c99e684176053`
+`private-brain-repository@8b3939cff4def148fd1a005b506c99e684176053`
 
 with canonical proof
 

@@ -13,7 +13,7 @@ The unrestricted quadratic-form conjecture remains OPEN. This report does not cl
 
 ## 1. Fresh source and exact partner input
 
-Fresh `math-research-brain` main was read before this work at
+Fresh `private-brain` main was read before this work at
 
 `54a02a82ba1de885cf0ddf5ff8911ba5a2e3b73c`.
 

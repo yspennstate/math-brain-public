@@ -13,8 +13,8 @@ def write(name, obj):
 op_id='claim_347e594687b6554f3064529196a1a3a40b60b0076bb44dfa5593974e31ea4f4c'
 at_id='claim_3908da7919a7318bc7b220dc189ceb958a0b62e279555dd907896a7f04d7bf77'
 canonical=[]
-for candidate in [Path('~/math-research-brain/local/population/brain.sqlite3'),
-                  Path('~/math-research-brain/local/brain.sqlite3'),
+for candidate in [Path('~/private-brain/local/population/brain.sqlite3'),
+                  Path('~/private-brain/local/brain.sqlite3'),
                   Path('~/math-brain-build/local/population/brain.sqlite3')]:
     if not candidate.is_file():
         canonical.append({'path':str(candidate),'state':'not found at exact named candidate path'})

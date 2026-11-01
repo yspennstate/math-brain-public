@@ -13,7 +13,7 @@ Run: `20261013T134505Z-fleet01-B19-aligned-width-review-a094`
 
 ## Brain handoff
 
-- Repository: `yspennstate/math-research-brain`
+- Repository: `private-brain-repository`
 - Path: `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B19/20261013T134505Z-fleet01-B19-aligned-width-review-a094/`
 - Core readback commit: `2d655e629821f97aad8a2f3fa73573625ee87851`
 - Verification: all ten pre-receipt files were fetched from that immutable

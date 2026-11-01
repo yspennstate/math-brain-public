@@ -310,7 +310,7 @@ Arbitrary extra spectral components remain a separate interaction debt except in
 
 ## 9. Source pins / integrity
 
-- Owner control at run start: `math-research-brain` revision `2026-09-22.5`, README blob `433b2d57345823967480245b59a7c47d51019c37`.
+- Owner control at run start: `private-brain` revision `2026-09-22.5`, README blob `433b2d57345823967480245b59a7c47d51019c37`.
 - Current correction inbox read before publication, including `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`, `QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE`, and `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`.
 - fleet04/B19 finite-union core: report blob `6c1e768322445d808cbf9d85aae456ec3240a663`.
 - fleet04/B18 dependent-square report: blob `f33758725ac803c6375215b522c86bd6409d2521`.

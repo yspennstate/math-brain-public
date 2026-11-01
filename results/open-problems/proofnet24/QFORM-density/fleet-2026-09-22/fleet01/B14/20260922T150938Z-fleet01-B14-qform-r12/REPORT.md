@@ -305,7 +305,7 @@ This removes the need to insist on a globally triangular elimination order. Mild
 
 ## 9. Source pins and correction closure
 
-- source control immediately before scientific write: `yspennstate/math-research-brain@143158f9cac70bca95f553d1abd9da0bfa496eb1`;
+- source control immediately before scientific write: `private-brain-repository@143158f9cac70bca95f553d1abd9da0bfa496eb1`;
 - programme/control: `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`;
 - named partner actually applied: fleet02/B14, `private-source-repository@d358b89ba78735cee238c01e83c2c3ca9ec66352`, exact report path in Section 2;
 - exact localization compatibility source checked: fleet03/B14, `private-source-repository@2208c3f666582999f1fbc7e55921a4530cbe2789`;

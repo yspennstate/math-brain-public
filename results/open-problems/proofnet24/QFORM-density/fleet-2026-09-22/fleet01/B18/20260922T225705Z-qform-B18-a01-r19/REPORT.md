@@ -279,7 +279,7 @@ No exact prior theorem located in the source audit settles the owner's unrestric
 
 ## 8. Source pins
 
-- Fresh brain control: `yspennstate/math-research-brain@a49099111ed329ca3fb78b9b81f3051e5bce06d0`.
+- Fresh brain control: `private-brain-repository@a49099111ed329ca3fb78b9b81f3051e5bce06d0`.
 - Designated partner fleet02/B18: `private-source-repository@0a28faf7bf87a49a9df787eb276b449aee3d9c47`, exact path in Section 5.
 - Reviewed Fresnel/BL package and sharp-HY refinement: `private-source-repository@9844891a9fbe96a65e37f71122bf0300b53dcc80:proofnet24/QFORM-density/interactive/20260922T220600Z-claude-review/REVIEW.md`.
 - Beckner (1975): DOI `10.2307/1970980`.

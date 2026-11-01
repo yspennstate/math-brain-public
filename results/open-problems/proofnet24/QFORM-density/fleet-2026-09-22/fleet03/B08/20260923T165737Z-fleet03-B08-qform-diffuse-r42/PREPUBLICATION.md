@@ -1,6 +1,6 @@
 # r42 prepublication refresh
 
-Final control/correction refresh observed `math-research-brain` head `7fde8703126f0cb355a7046ab4ee888fc265635d`. Owner control remains `2026-09-22.15`, QFORM remains the sole target, and the full theorem remains OPEN. The live `CORRECTION_INBOX.json` blob at refresh was `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
+Final control/correction refresh observed `private-brain` head `7fde8703126f0cb355a7046ab4ee888fc265635d`. Owner control remains `2026-09-22.15`, QFORM remains the sole target, and the full theorem remains OPEN. The live `CORRECTION_INBOX.json` blob at refresh was `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
 
 The refresh added an important source-status update: the projected-crossing theorem used in `REPORT.md` is now republished in the reviewed interactive bundle at
 

@@ -7,7 +7,7 @@ Starting lens: rough input laws, measurable density versions, conditional kernel
 
 ## Source pin
 
-I read fresh owner control from `math-research-brain/main/AGENTS.md` and `scheduled_tasks/CURRENT_OBJECTIVE.md`, then read the complete canonical package under `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/`: `README.md`, `DELIVERY_STATUS.md`, `manuscript.tex`, `AUDIT.md`, `proof_map.csv`, `SOURCE_MANIFEST.json`, `verify.py`, and `checks.json`.
+I read fresh owner control from `private-brain/main/AGENTS.md` and `scheduled_tasks/CURRENT_OBJECTIVE.md`, then read the complete canonical package under `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/`: `README.md`, `DELIVERY_STATUS.md`, `manuscript.tex`, `AUDIT.md`, `proof_map.csv`, `SOURCE_MANIFEST.json`, `verify.py`, and `checks.json`.
 
 The canonical manuscript is unchanged from the owner baseline:
 

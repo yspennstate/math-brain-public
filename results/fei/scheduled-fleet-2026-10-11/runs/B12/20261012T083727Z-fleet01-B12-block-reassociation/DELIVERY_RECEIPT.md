@@ -4,7 +4,7 @@ The complete ten-file substantive package was written and read back nonempty
 and byte-equal at:
 
 - canonical `private-source-repository@18d5b0dc013098acd424e967cecb65b770c61071`, path `reports/fei-2026-10-11/runs/B12/20261012T083727Z-fleet01-B12-block-reassociation/`;
-- Brain mirror `yspennstate/math-research-brain@0a8fe7769985dffa8ef3c87fa279e34d73efa959`, path `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B12/20261012T083727Z-fleet01-B12-block-reassociation/`.
+- Brain mirror `private-brain-repository@0a8fe7769985dffa8ef3c87fa279e34d73efa959`, path `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B12/20261012T083727Z-fleet01-B12-block-reassociation/`.
 
 Core blob readback:
 

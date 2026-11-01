@@ -49,7 +49,7 @@ for any literal nonzero physical edge `mu`, with arbitrary remaining quadratic/a
 
 The preceding B02 receiver memory actually consumed here is
 
-`math-research-brain@6a6802c4c29df79d7a7c904f53dca268d27e9dc0`,
+`private-brain@6a6802c4c29df79d7a7c904f53dca268d27e9dc0`,
 
 which left the first unpaid implication `QFORM-R47-STRONGHUB-TWOSIDED-CURVATURE-OR-DIFFUSE-E2-L1-v1`.
 

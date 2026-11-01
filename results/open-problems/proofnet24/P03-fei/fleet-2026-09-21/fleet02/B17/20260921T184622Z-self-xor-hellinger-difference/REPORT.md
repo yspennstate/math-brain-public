@@ -7,7 +7,7 @@ EXPOSED REASONING USAGE: null / provider reasoning tokens and thinking time NOT_
 RESEARCH EXECUTION: WITHOUT_VERIFIED_BRAIN
 STATUS: PARTIAL. Full uniform-cube Friedgut–Kalai Fourier entropy-influence conjecture remains OPEN / NOT PROVED.
 
-Fresh authenticated control at entry: yspennstate/math-research-brain main
+Fresh authenticated control at entry: private-brain-repository main
 Fresh scientific source was private-source-repository master
 20ce5fc0246dc96318599f1fbce8170bb6fe2400 and was refreshed during the run to
 a6e765a1cfc60c41405060577ce86097952d55ba before delivery.

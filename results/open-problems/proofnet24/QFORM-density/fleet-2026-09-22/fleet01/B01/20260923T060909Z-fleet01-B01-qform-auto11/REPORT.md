@@ -14,7 +14,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 The unrestricted target remains OPEN: for every dimension, independent real physical coordinates with densities bounded by one, and every real symmetric A with at least three eigenvalues of modulus at least one, prove a universal essential bound for the density of Q=X^TAX, or give a target-valid counterexample. Full continuity remains separately OPEN.
 
 
-Source control state refreshed during the run: `yspennstate/math-research-brain@5e2c719118284e6c535165f6172ec4737f7385a8` (the control file itself still states revision 2026-09-22.15).
+Source control state refreshed during the run: `private-brain-repository@5e2c719118284e6c535165f6172ec4737f7385a8` (the control file itself still states revision 2026-09-22.15).
 
 ## 2. Source-valid dependencies
 

@@ -7,8 +7,8 @@ attacking: the rank-one Schur-residual endpoint by averaging the physical-pair l
 **Run:** `fleet03-B01-20260922T225725Z-r20`  
 **Assignment:** Oscillatory replacement / FOURIER  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
-**Start control:** `yspennstate/math-research-brain@e3e5003a8f11d307b56ece80a3ab42070833a9c1`  
-**Prepublication control:** `yspennstate/math-research-brain@363bb1062638754a59cdd0cd443047efed15a7ad`  
+**Start control:** `private-brain-repository@e3e5003a8f11d307b56ece80a3ab42070833a9c1`  
+**Prepublication control:** `private-brain-repository@363bb1062638754a59cdd0cd443047efed15a7ad`  
 **Status:** `ESSENTIAL_STEP_APPLIED / RANK-ONE-SCHUR ANALYTIC OBSTRUCTION PAID / FULL_TARGET_OPEN`  
 **Continuity:** essential boundedness is proved in the new branch; continuity is not proved by this argument.
 

@@ -5,7 +5,7 @@ attacking: bridge ridge leverage to admissible fractional three-volume weights a
 
 Programme: QFORM-DENSITY-3EIG-20260922. Full target remains OPEN. Execution: WITHOUT_VERIFIED_BRAIN.
 
-Fresh owner control read before this checkpoint: math-research-brain revision 2026-09-22.15. Required corrections consumed: no law-uniform pointwise quadratic-phase decay, no post-rotation independence, no arbitrary-joint rank-three coarea bound, no positive conditional projection-density moment, and no universally good local physical minor/cross-rank-three cut.
+Fresh owner control read before this checkpoint: private-brain revision 2026-09-22.15. Required corrections consumed: no law-uniform pointwise quadratic-phase decay, no post-rotation independence, no arbitrary-joint rank-three coarea bound, no positive conditional projection-density moment, and no universally good local physical minor/cross-rank-three cut.
 
 ## 1. Weighted sharp fractional-volume extension
 

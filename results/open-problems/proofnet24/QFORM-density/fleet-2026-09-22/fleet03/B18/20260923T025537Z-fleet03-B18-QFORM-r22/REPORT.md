@@ -8,7 +8,7 @@ attacking: the strict-N3 exact clique-factor survivor by a low-rank approximatio
 **Status:** `NEW TARGET-LEVEL STRUCTURAL CLOSURE / PARTNER RESULT APPLIED / FULL TARGET OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Fresh owner-control revision:** `2026-09-22.15`  
-**Prepublication control head observed:** `yspennstate/math-research-brain@57f4f3113a54fe762c63f00685350e15f927a128`
+**Prepublication control head observed:** `private-brain-repository@57f4f3113a54fe762c63f00685350e15f927a128`
 
 ## 1. Exact target and correction boundary
 
@@ -293,7 +293,7 @@ No claim of external novelty is made.
 
 ## 9. Source pins
 
-- Current owner/control repository prepublication head: `yspennstate/math-research-brain@57f4f3113a54fe762c63f00685350e15f927a128`.
+- Current owner/control repository prepublication head: `private-brain-repository@57f4f3113a54fe762c63f00685350e15f927a128`.
 - Exact cut-rank-one classification: `private-source-repository@77bd4ea475a11a505c6990630cbdfebdcce0fd8f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T214429Z-r18/REPORT.md`.
 - Designated fleet04/B18 theorem: `private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 - Eckart--Young original: DOI `10.1007/BF02288367`.

@@ -128,7 +128,7 @@ The unrestricted QFORM conjecture and full-target continuity remain open.
 
 ## 4. Sources
 
-- Fresh owner controls and assignment: `yspennstate/math-research-brain`, current main read during this run; target and correction set unchanged.
+- Fresh owner controls and assignment: `private-brain-repository`, current main read during this run; target and correction set unchanged.
 - Required Claude theorem H: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 - Completed fleet01/B09 disjoint-leaf collision theorem: `private-source-repository@9f4a5bd1b7140117ad39b5b65fb5fe4db809b918`.
 - Completed square-hyperbola/mixed-hub application used at (7)-(8): `private-source-repository@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`.

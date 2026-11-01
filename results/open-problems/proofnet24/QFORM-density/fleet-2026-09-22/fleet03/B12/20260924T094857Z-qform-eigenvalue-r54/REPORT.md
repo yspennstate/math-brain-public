@@ -523,7 +523,7 @@ The present theorem does **not** prove that every target matrix admits such a ba
 
 ## 9. Source pins
 
-- Fresh control repository: `yspennstate/math-research-brain`, branch `main`; publication-refresh commit recorded in the run receipt.
+- Fresh control repository: `private-brain-repository`, branch `main`; publication-refresh commit recorded in the run receipt.
 - Designated partner: `private-source-repository@bcb9fd2641440a89d6e4967781d755618e163001`,
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T002154Z-fleet04-B12-multihub-shear-r8/REPORT.md`.
 - Six-mode receiver: `private-source-repository@c635fcdce6aa206c68f1f14e061cf617d72376fb`,

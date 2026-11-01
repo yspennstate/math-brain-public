@@ -3,7 +3,7 @@ requires = ["hatchling>=1.27"]
 build-backend = "hatchling.build"
 
 [project]
-name = "math-research-brain"
+name = "private-brain"
 version = "0.1.0"
 description = "A privacy-isolated research memory and verification system for mathematics"
 readme = "README.md"
@@ -28,7 +28,7 @@ packages = ["src/math_brain"]
 [tool.pytest.ini_options]
 addopts = "-ra --strict-markers"
 testpaths = ["tests"]
-# the build tree first: a site-packages entry puts an old checkout (math-research-brain/src) on the default path, and
+# the build tree first: a site-packages entry puts an old checkout (private-brain/src) on the default path, and
 # plain python -m pytest here tested that one (29 Sep 2026: 11 retrieval tests failed against it while this tree passed)
 pythonpath = ["src"]
 

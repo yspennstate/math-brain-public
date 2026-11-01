@@ -63,7 +63,7 @@ from .evaluation import (
 )
 
 
-STUDY_SCHEMA = "org.math-research-brain/sealed-challenge-study"
+STUDY_SCHEMA = "org.private-brain/sealed-challenge-study"
 STUDY_SCHEMA_VERSION = 1
 PRIVATE_RUN_MAX_TRANSCRIPT_BYTES = 8_000_000
 
@@ -564,7 +564,7 @@ def prepare_holdout_study(
 # deliberately reject empty strings) to legitimate codec fields such as empty
 # stderr bytes before the dedicated codec can apply its own schema and size checks.
 _CODEX_ARTIFACT_MEDIA_TYPE = (
-    "application/vnd.math-research-brain.private-codex-run-result"
+    "application/vnd.private-brain.private-codex-run-result"
 )
 
 

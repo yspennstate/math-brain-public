@@ -10,7 +10,7 @@ Status: **NEW SUPPORTING ANALYTIC THEOREM + STRICT-N3 APPLICATION; FULL QFORM RE
 
 ## 1. Sources and corrections actually used
 
-Owner control was resolved from `yspennstate/math-research-brain` fresh main at the start of the run. The active target is the full bounded-density conjecture, not FEI. The pointwise scalar Fresnel claim is known false by phase-aligned fragmented densities and is not used here. No rotated-coordinate independence is used.
+Owner control was resolved from `private-brain-repository` fresh main at the start of the run. The active target is the full bounded-density conjecture, not FEI. The pointwise scalar Fresnel claim is known false by phase-aligned fragmented densities and is not used here. No rotated-coordinate independence is used.
 
 Required Claude source was read at the owner-pinned commit
 

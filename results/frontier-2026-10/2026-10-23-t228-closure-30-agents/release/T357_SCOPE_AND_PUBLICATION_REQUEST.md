@@ -16,7 +16,7 @@ Open extensions include late training outside the bounded-MLE regime, dimension-
 
 ## Immutable source package
 
-Math Brain: yspennstate/math-research-brain
+Math Brain: private-brain-repository
 - Commit b051fde9637a83edf725cd945e3f90aea3b1536a
 - Prefix research_pushes/2026-10-23-t228-closure-30-agents/fullproof/
 

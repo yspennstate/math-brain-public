@@ -21,7 +21,7 @@ In each direct-closing case the density is continuous and vanishes at infinity. 
 
 Fresh owner control was re-read immediately before publication from
 
-`yspennstate/math-research-brain@618ab66f5561589cb61db7e49c8debdc465d7b97`,
+`private-brain-repository@618ab66f5561589cb61db7e49c8debdc465d7b97`,
 
 
 The required newest mathematical package is

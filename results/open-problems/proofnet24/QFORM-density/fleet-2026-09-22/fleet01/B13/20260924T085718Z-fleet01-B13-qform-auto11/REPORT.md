@@ -661,7 +661,7 @@ No scheduler/task mutation, email/push action, cross-account authentication, pai
 
 ## 9. Source/provenance notes
 
-Fresh source control used: `yspennstate/math-research-brain` main, owner-control revision `2026-09-22.15`; initial fresh-main observation `b888aca01e194c4ab6d4509501444898e75668cd`, with main re-read before publication after concurrent fleet writes. The current programme files `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and assignment `fleet01/B13.json` were read before deriving the results.
+Fresh source control used: `private-brain-repository` main, owner-control revision `2026-09-22.15`; initial fresh-main observation `b888aca01e194c4ab6d4509501444898e75668cd`, with main re-read before publication after concurrent fleet writes. The current programme files `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and assignment `fleet01/B13.json` were read before deriving the results.
 
 Designated partner proof used at source pin:
 

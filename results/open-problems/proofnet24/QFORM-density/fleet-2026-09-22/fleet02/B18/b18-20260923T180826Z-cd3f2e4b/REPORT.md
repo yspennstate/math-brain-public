@@ -292,7 +292,7 @@ This is precisely the use in (3.16): `(L,V)` may be dependent, while the hub `X_
 
 ## 10. Sources read this run
 
-Owner/control: fresh `math-research-brain/main`, including `AGENTS.md`, `scheduled_tasks/README.md`, OWNER continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`, QFORM `MANIFEST/CURRENT_RESEARCH/CLAIMS/DELTAS/CORRECTION_INBOX/PATHWAYS/MEMORY_PROTOCOL`, `QFORM-PROOF-FIRST-20260922T161801Z.md`, `QFORM-CLAUDE-LATEST-20260922T225732Z.md`, and `assignments/fleet02/B18.json`.
+Owner/control: fresh `private-brain/main`, including `AGENTS.md`, `scheduled_tasks/README.md`, OWNER continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`, QFORM `MANIFEST/CURRENT_RESEARCH/CLAIMS/DELTAS/CORRECTION_INBOX/PATHWAYS/MEMORY_PROTOCOL`, `QFORM-PROOF-FIRST-20260922T161801Z.md`, `QFORM-CLAUDE-LATEST-20260922T225732Z.md`, and `assignments/fleet02/B18.json`.
 
 Pinned math snapshot `e5f71d79eff325201dd0274053d20268ce65b837`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`.
 

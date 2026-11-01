@@ -7,7 +7,7 @@
 
 ## 1. Current control and source scope
 
-Fresh owner controls were resolved from `yspennstate/math-research-brain` main at entry (`480fb18e2942d64e2671e904c5f89a726658d62d`) and reread through the current main during the run. Owner revision remains `2026-09-22.2`, directive `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`; fleet02/B01 is FOREST research and new brain-installation / benchmark work remains stopped. The same-hour create-only login already existed and was preserved; this invocation has its own immutable start/finish records. Whole-README and isolated OWNER-MESSAGE SHA-256 are left `null / UNVERIFIED_CURRENT_RUN_BYTE_PIPELINE` rather than inferred from Git SHA-1.
+Fresh owner controls were resolved from `private-brain-repository` main at entry (`480fb18e2942d64e2671e904c5f89a726658d62d`) and reread through the current main during the run. Owner revision remains `2026-09-22.2`, directive `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`; fleet02/B01 is FOREST research and new brain-installation / benchmark work remains stopped. The same-hour create-only login already existed and was preserved; this invocation has its own immutable start/finish records. Whole-README and isolated OWNER-MESSAGE SHA-256 are left `null / UNVERIFIED_CURRENT_RUN_BYTE_PIPELINE` rather than inferred from Git SHA-1.
 
 The source target is unchanged: for a finite simple graph, under the unit uniform law on all acyclic edge subsets, prove pairwise edge negative correlation. Primary source: Grimmett--Winkler, *Negative association in uniform forests and connected graphs*, Random Structures & Algorithms 24 (2004), 444--460, arXiv `math/0302185`, DOI `10.1002/rsa.20012`.
 

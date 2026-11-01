@@ -417,7 +417,7 @@ The hard survivor is when the candidate zero-self side itself acquires nonzero c
 
 ## 12. Source pins / integrity
 
-Fresh control read before this run: `yspennstate/math-research-brain@254f0be44d564f9c4ca360004b2e598dbb579ccd`; a later fresh `AGENTS.md` refresh at `5b7cede1c0953bb2d5c0cfbc7d98fd4d91636bf2` contained no later stop and retained exclusive full-QFORM work.
+Fresh control read before this run: `private-brain-repository@254f0be44d564f9c4ca360004b2e598dbb579ccd`; a later fresh `AGENTS.md` refresh at `5b7cede1c0953bb2d5c0cfbc7d98fd4d91636bf2` contained no later stop and retained exclusive full-QFORM work.
 
 Primary literature:
 

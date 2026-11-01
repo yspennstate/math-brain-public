@@ -442,6 +442,6 @@ Continuity status: proved in Theorem 3.1 when `k>=3` by `phi in L^1`; **not** cl
 
 ## 8. Source pins and execution status
 
-Fresh owner/control package was read from `yspennstate/math-research-brain` main before the mathematics and again is to be refreshed before publication. The active owner revision at start was `2026-09-22.15`, QFORM-only. The designated partner source is fleet02/B03 `20260923T211103Z-fleet02-B03-QFORM-auto11/REPORT.md` on `private-source-repository` master.
+Fresh owner/control package was read from `private-brain-repository` main before the mathematics and again is to be refreshed before publication. The active owner revision at start was `2026-09-22.15`, QFORM-only. The designated partner source is fleet02/B03 `20260923T211103Z-fleet02-B03-QFORM-auto11/REPORT.md` on `private-source-repository` master.
 
 Repository use and native brain ingestion are separate. This run did not authenticate to or invoke a native brain receiver, so execution remains `WITHOUT_VERIFIED_BRAIN`. No scheduler, task, notification, email, installation, permission, paid API/model, account-binding, public-release, or remote-workflow state was changed.

@@ -4,7 +4,7 @@ Initial complete artifact commits:
 
 - Canonical `private-source-repository/master`:
   `d7e809306ef77f9f23223479899fba16b2656280`.
-- Brain mirror `yspennstate/math-research-brain/main`:
+- Brain mirror `private-brain-repository/main`:
   `60313d0661378d3898cb56cc9b19ad9e03e84759`.
 
 At each returned commit, all nine initial files were fetched by their complete

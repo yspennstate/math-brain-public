@@ -4,7 +4,7 @@ attacking: rank-two minor-support obstruction via weighted intersecting-family s
 # fleet01/B04 — weighted star/triangle stability for second exterior volume
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Owner control consumed: revision `2026-09-22.15` on fresh `math-research-brain/main`.  
+Owner control consumed: revision `2026-09-22.15` on fresh `private-brain/main`.  
 Status: **NEW SUPPORTING THEOREM / PARTNER RESULT APPLIED / FULL QFORM OPEN**.  
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 

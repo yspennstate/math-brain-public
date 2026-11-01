@@ -262,7 +262,7 @@ Continuity of the full output density is not proved here; only the localization 
 
 ## 12. Source pins and corrections
 
-Control snapshot refreshed before publication: `yspennstate/math-research-brain@cd8b04e8e1716078b75b969da11b338f9cceb74e`, owner revision `2026-09-22.5`.
+Control snapshot refreshed before publication: `private-brain-repository@cd8b04e8e1716078b75b969da11b338f9cceb74e`, owner revision `2026-09-22.5`.
 
 Completed partner proof applied: `private-source-repository@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`.
 

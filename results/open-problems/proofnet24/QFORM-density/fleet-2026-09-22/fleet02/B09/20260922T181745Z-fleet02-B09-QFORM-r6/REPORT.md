@@ -6,7 +6,7 @@ attacking: rank-two disjoint cross-bank smoothing with an exactly zero internal 
 Run: `20260922T181745Z-fleet02-B09-QFORM-r6`  
 Worker: `fleet02/B09` — Bilinear block mechanism  
 Programme: `QFORM-DENSITY-3EIG-20260922`  
-Fresh prepublication owner control: revision `2026-09-22.11` at `yspennstate/math-research-brain@1dabd8516681f9f2c43318ab858b337d8d6f8cae`  
+Fresh prepublication owner control: revision `2026-09-22.11` at `private-brain-repository@1dabd8516681f9f2c43318ab858b337d8d6f8cae`  
 Classification: **ESSENTIAL_STEP_APPLIED / PROVED SUPPORTING THEOREM / FULL TARGET OPEN**  
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 

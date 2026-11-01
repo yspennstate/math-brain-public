@@ -14,7 +14,7 @@ No Gaussian, moment, iid, compact-support, log-concavity, conditional-cap, rotat
 
 ## 1. Pinned inputs
 
-1. Fresh owner control: `yspennstate/math-research-brain@0aae39e792eb341d930934f748c48cc0325f14a8`, with owner revision `2026-09-22.15`; QFORM remains the sole research target and the full theorem remains open.
+1. Fresh owner control: `private-brain-repository@0aae39e792eb341d930934f748c48cc0325f14a8`, with owner revision `2026-09-22.15`; QFORM remains the sole research target and the full theorem remains open.
 
 2. Designated completed partner: `private-source-repository@3482c3d93d336c0993f6aa85a7a0c78c9a07ffad`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260924T091256Z-fleet02-B20-QFORM-auto11-r50/REPORT.md`.

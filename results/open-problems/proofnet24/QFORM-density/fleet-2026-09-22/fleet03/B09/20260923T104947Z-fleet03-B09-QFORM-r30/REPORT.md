@@ -15,7 +15,7 @@ Execution status: `WITHOUT_VERIFIED_BRAIN`. Repository retrieval and writes were
 
 ## 1. Source pins actually consumed
 
-Fresh control before the run resolved `yspennstate/math-research-brain@96b95ee808d5b5e5600fb45e2ea4de41ac7c111e`, owner control revision `2026-09-22.15`, still exclusively QFORM.
+Fresh control before the run resolved `private-brain-repository@96b95ee808d5b5e5600fb45e2ea4de41ac7c111e`, owner control revision `2026-09-22.15`, still exclusively QFORM.
 
 The designated partner `fleet04/B09` now has a completed current-QFORM theorem:
 

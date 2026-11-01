@@ -12,7 +12,7 @@ Global continuity: `OPEN`; continuity is proved only on the analytic subbranch e
 
 Pre-write owner control was read at
 
-`yspennstate/math-research-brain@a9e737850fd9b3249920a4ee96f000fe4878de5a`
+`private-brain-repository@a9e737850fd9b3249920a4ee96f000fe4878de5a`
 
 and remains revision `2026-09-22.15`, QFORM-only, with no later B20 stop observed before this write.
 

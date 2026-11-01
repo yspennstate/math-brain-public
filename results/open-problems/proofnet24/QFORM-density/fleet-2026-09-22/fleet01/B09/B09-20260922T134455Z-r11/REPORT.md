@@ -30,7 +30,7 @@ The new theorem is a supporting target-level implication, not a full extraction 
 
 ## 2. Exact dependencies and partner result actually applied
 
-Fresh source control was read from `yspennstate/math-research-brain/main`; the control remained revision `2026-09-22.5` on refresh. Relevant corrections consumed include `QFORM-CROSSMINOR-ALONE-FALSE`, `QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE`, `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`, `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`, and the newer fiberwise/phase-Wiener corrections.
+Fresh source control was read from `private-brain-repository/main`; the control remained revision `2026-09-22.5` on refresh. Relevant corrections consumed include `QFORM-CROSSMINOR-ALONE-FALSE`, `QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE`, `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`, `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`, and the newer fiberwise/phase-Wiener corrections.
 
 Named assigned partner result:
 

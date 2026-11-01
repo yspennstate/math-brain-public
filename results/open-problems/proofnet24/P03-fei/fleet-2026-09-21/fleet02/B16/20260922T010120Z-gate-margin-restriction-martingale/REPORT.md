@@ -7,7 +7,7 @@
 
 ## 0. Control change and why this run does not continue the old half-band campaign
 
-Fresh owner control at `yspennstate/math-research-brain` revision `2026-09-22.2` supersedes the older fleet02/B16 half-band Campaign-C prompt mathematically. The live FEI target is the all-gate reformulation
+Fresh owner control at `private-brain-repository` revision `2026-09-22.2` supersedes the older fleet02/B16 half-band Campaign-C prompt mathematically. The live FEI target is the all-gate reformulation
 
 \[
 \Gamma(p_{\rm out})+H_t(G;p)

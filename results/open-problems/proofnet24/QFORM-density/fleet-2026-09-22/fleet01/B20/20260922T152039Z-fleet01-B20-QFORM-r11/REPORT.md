@@ -251,7 +251,7 @@ The next unpaid step is to convert this **two-level physical localization** into
 
 ## 8. Source pins
 
-- fresh brain control/correction snapshot immediately before publication: `yspennstate/math-research-brain@bd43f8ef803327cd07b5e8b07c747bf810a0af3f`, owner revision `2026-09-22.5`;
+- fresh brain control/correction snapshot immediately before publication: `private-brain-repository@bd43f8ef803327cd07b5e8b07c747bf810a0af3f`, owner revision `2026-09-22.5`;
 - newest completed assigned partner fleet02/B20: `private-source-repository@298793085cb203d47861ace564bcc5f74d647368`, report blob `2e2bb4c9b583f94b48fbf5952f1183dbff92e17f`;
 - ridge-window theorem: `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, report blob `1241fa7ba9a36a91bc75f047677f2daac764c2bf`;
 - completed fleet02/B02 square-pivot ridge theorem and analytic ridge review: `private-source-repository@cae1a86397cc15e6999c754c6657576f0d6abebd`, report blob `f459f8c9960baafd28a5878b041c0805c9d2c1af`;

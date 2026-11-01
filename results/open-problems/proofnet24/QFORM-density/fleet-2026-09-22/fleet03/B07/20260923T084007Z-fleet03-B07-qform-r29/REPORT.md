@@ -6,8 +6,8 @@ attacking: the r28 four-hub curvature survivor — turn a large hub-times-far-co
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Role: coordinate minor selection / GEOMETRY  
 Run: `20260923T084007Z-fleet03-B07-qform-r29`  
-Start control: `yspennstate/math-research-brain@a542faeda86360f93013ee1ad4c35389bf2eb4e9`  
-Pre-publication refresh: `yspennstate/math-research-brain@ccd3fbb7b759f2cadf33171e69b4fc48ebfdad88`  
+Start control: `private-brain-repository@a542faeda86360f93013ee1ad4c35389bf2eb4e9`  
+Pre-publication refresh: `private-brain-repository@ccd3fbb7b759f2cadf33171e69b4fc48ebfdad88`  
 Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 Status: `NEW SUPPORTING PHYSICAL-CORE/LOW-TAIL ALTERNATIVE / ONE SUBBRANCH CONTINUOUSLY PAID / FULL QFORM OPEN`.
 

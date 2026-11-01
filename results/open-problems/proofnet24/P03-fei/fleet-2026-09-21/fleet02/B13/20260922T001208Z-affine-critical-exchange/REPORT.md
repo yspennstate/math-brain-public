@@ -8,7 +8,7 @@
 
 ## 0. Fresh scope and source-bound dependency actually used
 
-The applicable owner controls were refreshed from `yspennstate/math-research-brain`; the later collective order preserves B12–B18 on FEI and the execution reset assigns fleet02/B13 to Campaign A critical-core/tensor/gauge quantifiers. Scientific master was refreshed on `private-source-repository/master`.
+The applicable owner controls were refreshed from `private-brain-repository`; the later collective order preserves B12–B18 on FEI and the execution reset assigns fleet02/B13 to Campaign A critical-core/tensor/gauge quantifiers. Scientific master was refreshed on `private-source-repository/master`.
 
 The named completed **other-account** result used materially is
 

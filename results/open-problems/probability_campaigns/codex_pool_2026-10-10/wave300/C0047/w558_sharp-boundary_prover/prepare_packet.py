@@ -69,7 +69,7 @@ status = {
     'scoped_search_limits': ['No matching C0047/Benjamini-Schramm file in the named H/I attempts.',
         'No C0047 row on Team O board; P0041 is a broader neighboring target.',
         'Named Big Open problem in probability theory directory exists; filename-only percolation search returned no match, so no complete solved/retired-file audit is claimed.',
-        'Population store read-only exact C0047 problem and attempt nodes located. No whole export read; separate canonical math-research-brain store not located in this scoped pass.'],
+        'Population store read-only exact C0047 problem and attempt nodes located. No whole export read; separate canonical private-brain store not located in this scoped pass.'],
     'brain_recall': {'outcome': 'timed out after 60 seconds', 'index_term_matches': 0,
         'named_scar_read': 'perceptron_proof_open_gaps_fleet_2026_07_12',
         'lesson_applied': 'Script success and hashes are not proof completion; record the single hardest gap.'},

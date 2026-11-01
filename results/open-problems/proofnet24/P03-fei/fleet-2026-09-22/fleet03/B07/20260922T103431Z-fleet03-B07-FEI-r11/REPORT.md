@@ -9,7 +9,7 @@
 
 ## 0. Fresh authority and correction state
 
-The invocation text still named the historical MOC4 programme, but the fresh owner control in `yspennstate/math-research-brain` is revision `2026-09-22.3`, programme `FEI-ALL-TEAM-20260922T095941Z`, and explicitly redirects every account/slot to FEI. This later owner order was applied. No new MOC4 work was performed.
+The invocation text still named the historical MOC4 programme, but the fresh owner control in `private-brain-repository` is revision `2026-09-22.3`, programme `FEI-ALL-TEAM-20260922T095941Z`, and explicitly redirects every account/slot to FEI. This later owner order was applied. No new MOC4 work was performed.
 
 The compact assignment card for fleet03/B07 asks for a quantitative neighborhood theorem around the exact balanced `K_occ=0` family, with all entropy errors priced and no ambient-alphabet entropy loss. The current correction inbox observed at the start was empty. The recursive-majority low-level barrier is treated as mandatory preflight: no fixed-depth labelled-spectrum truncation or one-tail merge is used below.
 

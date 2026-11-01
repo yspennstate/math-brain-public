@@ -16,7 +16,7 @@ The unrestricted conjecture remains **OPEN**. Continuity is proved only on the e
 
 Fresh control was reread after the 2026-09-23 16:44 UTC owner continuation. The current owner continuation keeps all workers exclusively on QFORM and requires reading the current Claude continuation. I read:
 
-- `yspennstate/math-research-brain@c46b048e944ba806a41456dd1d672170a43c8cfc`, `AGENTS.md`, `scheduled_tasks/README.md`, the live correction inbox and `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z.md`;
+- `private-brain-repository@c46b048e944ba806a41456dd1d672170a43c8cfc`, `AGENTS.md`, `scheduled_tasks/README.md`, the live correction inbox and `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z.md`;
 - Claude continuation `private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`, `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md` and `single_hub_core/REPORT.md`. Its `(SP)` estimate is OPEN, so it is not used as a premise here;
 - the new projected-crossing checkpoint `private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. It is not needed for the identity proved below;
 - this slot's preceding gate `private-source-repository@014df00b32f2360c1b5c835434bb146cf57e1930`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T153626Z-fleet01-B08-qform-r30/REPORT.md`;

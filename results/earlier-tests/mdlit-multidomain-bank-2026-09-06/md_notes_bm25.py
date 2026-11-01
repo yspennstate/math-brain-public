@@ -19,7 +19,7 @@ import sqlite3
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
-BANK10K = os.path.join(os.path.expanduser("~"), "ai-memories-and-functionality", "06_math_research",
+BANK10K = os.path.join(os.path.expanduser("~"), "private-memory", "06_math_research",
                        "probability_open_problem_campaign_2026_08_09", "eval", "bank10k")
 sys.path.insert(0, BANK10K)
 import run_bank10k as rb  # noqa: E402

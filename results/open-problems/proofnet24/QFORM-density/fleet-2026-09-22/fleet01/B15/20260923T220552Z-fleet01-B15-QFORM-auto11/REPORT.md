@@ -20,7 +20,7 @@ The full owner conjecture remains open because the three-large-eigenvalue hypoth
 
 ## 2. Live premises and corrections retained
 
-Fresh control commit at start: `yspennstate/math-research-brain@2469404e0673496b98e61fff8a240f0bcbae258a`; programme revision `2026-09-22.5`, owner control revision `2026-09-22.15`.
+Fresh control commit at start: `private-brain-repository@2469404e0673496b98e61fff8a240f0bcbae258a`; programme revision `2026-09-22.5`, owner control revision `2026-09-22.15`.
 
 The designated partner source is
 

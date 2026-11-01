@@ -115,7 +115,7 @@ from three large eigenvalues. A marginal bound alone, a fiber supremum, or a gen
 
 ## 7. Source pins
 
-- live control before write: `yspennstate/math-research-brain@428ea8b10266994fcacde3ef4075758875004c18`, owner revision `2026-09-22.5`;
+- live control before write: `private-brain-repository@428ea8b10266994fcacde3ef4075758875004c18`, owner revision `2026-09-22.5`;
 - compatible peer consumed: `private-source-repository@39b363886b16b0d29919b0c0f45bedd997c47c44:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T115433Z-fleet02-B12/REPORT.md`;
 - primary theorem: Livshyts--Paouris--Pivovarov, arXiv:1507.07949, Theorem 1.1;
 - scope check: Kosov, arXiv:2511.02679, Theorems 1.6--1.7.

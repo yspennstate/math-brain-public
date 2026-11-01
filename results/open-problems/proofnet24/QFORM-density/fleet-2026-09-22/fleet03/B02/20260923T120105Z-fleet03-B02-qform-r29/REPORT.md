@@ -13,7 +13,7 @@ attacking: the nested dominant-2x2-pivot / near-rank-one Schur collar; control t
 
 ## 1. Source-pinned inputs actually applied
 
-Fresh owner controls were reread on `yspennstate/math-research-brain` before publication. The active proof-first continuation keeps all eighty workers on full QFORM and asks B02 to apply fractional-volume estimates with every marginal gate retained.
+Fresh owner controls were reread on `private-brain-repository` before publication. The active proof-first continuation keeps all eighty workers on full QFORM and asks B02 to apply fractional-volume estimates with every marginal gate retained.
 
 The mathematical inputs used at equations below are:
 

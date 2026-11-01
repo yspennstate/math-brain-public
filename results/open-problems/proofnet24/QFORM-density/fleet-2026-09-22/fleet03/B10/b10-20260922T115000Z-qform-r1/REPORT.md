@@ -8,7 +8,7 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`
 
 ## Control resolution
 
-Fresh `scheduled_tasks/README.md` on `yspennstate/math-research-brain` explicitly supersedes the incoming FEI order and makes QFORM the sole research target for all eighty workers. The current B10 card asks for arbitrary rank-three symmetric forms with all three nonzero eigenvalues of magnitude at least one, independent original-coordinate densities bounded by one, and arbitrary orientation; projected/eigenbasis coordinates must not be treated as independent.
+Fresh `scheduled_tasks/README.md` on `private-brain-repository` explicitly supersedes the incoming FEI order and makes QFORM the sole research target for all eighty workers. The current B10 card asks for arbitrary rank-three symmetric forms with all three nonzero eigenvalues of magnitude at least one, independent original-coordinate densities bounded by one, and arbitrary orientation; projected/eigenbasis coordinates must not be treated as independent.
 
 The named current-programme partner is `fleet04/B10`. No completed current-QFORM handoff from that partner was present at the fresh read, so this run did not infer a result from absence and did not wait. It consumed the completed other-account source `fleet02/B06`, handoff `b06-20260922T113045Z-d47192d10a82`, whose reusable result is the same-sign determinant-mass identity
 
@@ -299,6 +299,6 @@ No claim of the full conjecture is made in this run.
 
 ## Source-bound dependencies
 
-- Fresh owner control and target: `yspennstate/math-research-brain`, `scheduled_tasks/README.md`, revision `2026-09-22.5`.
+- Fresh owner control and target: `private-brain-repository`, `scheduled_tasks/README.md`, revision `2026-09-22.5`.
 - Applied completed other-account result: `fleet02/B06`, canonical report `private-source-repository@6902eb62f21a7c833ca27dcca69f34d50e711a7d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`; brain handoff records report blob `9cced3d58d10574ef548c119c8d5a67276dc870f`.
 - Product-kernel/fiber-sup correction: `fleet02/B05`, canonical report `private-source-repository@63ae1057b5ad8a5bc3c764d733de79e5c917b752`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T112240Z-b05-qform-9d86c905/REPORT.md`.

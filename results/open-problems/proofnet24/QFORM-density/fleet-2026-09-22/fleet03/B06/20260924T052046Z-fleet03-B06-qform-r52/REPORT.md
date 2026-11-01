@@ -5,7 +5,7 @@ attacking: the r51 low-Pluecker-disjoint three-hub survivor by deleting one loca
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Assignment: curved fiber integration / quantitative inequalities and rigorous computations  
-Startup control: `yspennstate/math-research-brain@8fd1deb8137828261d2e21c2f22d7d8f644b5310`  
+Startup control: `private-brain-repository@8fd1deb8137828261d2e21c2f22d7d8f644b5310`  
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Status: `NEW PRODUCT-WEIGHTED SCHUR-DELETION RECEIVERS + TWO-HEAVY CERTIFICATE + DESIGNATED PARTNER APPLIED / FULL QFORM OPEN`
 

@@ -9,7 +9,7 @@ Execution context: `WITHOUT_VERIFIED_BRAIN`
 
 The target is the k=4 Bermond--Thomassen statement in the collective order: every finite loopless simple digraph with minimum outdegree at least seven contains four vertex-disjoint directed cycles. Digons are allowed in the target statement.
 
-Fresh control was read from `yspennstate/math-research-brain` under owner revision `2026-09-22.2`, active programme `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`. The exact fleet03/B06 assignment is constrained/local-configuration search plus symbolic-family testing on BT4, with named partner fleet04/B04. This run used no authenticated brain retrieval, so it remains `WITHOUT_VERIFIED_BRAIN` and makes no brain-readiness claim.
+Fresh control was read from `private-brain-repository` under owner revision `2026-09-22.2`, active programme `COLLECTIVE-OPEN-PROBLEMS-20260921T234023Z`. The exact fleet03/B06 assignment is constrained/local-configuration search plus symbolic-family testing on BT4, with named partner fleet04/B04. This run used no authenticated brain retrieval, so it remains `WITHOUT_VERIFIED_BRAIN` and makes no brain-readiness claim.
 
 ### Named OTHER-account partner actually consumed
 

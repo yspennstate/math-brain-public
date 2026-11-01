@@ -6,7 +6,7 @@ attacking: integrated Fourier estimate; independently check the new q-dependent 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Integrated Fourier estimate / complementary constructions and source-valid counterexamples  
 **Partner:** `fleet03/B02`  
-**Fresh owner control at start:** `math-research-brain@a05b08f84f939248c82f5d2f91d15c2964e7ae95`, owner revision `2026-09-22.15`  
+**Fresh owner control at start:** `private-brain@a05b08f84f939248c82f5d2f91d15c2964e7ae95`, owner revision `2026-09-22.15`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Full target:** OPEN / NOT PROVED / NOT DISPROVED  
 

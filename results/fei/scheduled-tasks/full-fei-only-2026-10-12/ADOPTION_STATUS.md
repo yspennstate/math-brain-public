@@ -17,7 +17,7 @@ Observed 2026-10-12T03:24:40Z. Current owner revision **2026-10-12.1**.
 
 ## Follow-up already assigned
 
-[The exact owner request](https://github.com/yspennstate/math-research-brain/blob/11c976fab343c3d4dc0d357ce2125c20fc2d4c50/scheduled_tasks/handoffs/brain-inbox/messages/REQ-20261012T031958Z-FULL-FEI-OWNER--owner-relay-fei-control--send-r1.json) is addressed to dot:125873D4, dot:1E51C967, dot:D7CB6565, dot:INTERACTIVE_0058Z, claude:4a88bc43 and claude:2d8060eb. Each owner must return native count, binding/deduplication evidence, saved-prompt hashes, unchanged-field checks and original endpoints. A RECEIVED reply or disappearance from unread state does not establish adoption.
+[The exact owner request](private-brain-repository) is addressed to dot:125873D4, dot:1E51C967, dot:D7CB6565, dot:INTERACTIVE_0058Z, claude:4a88bc43 and claude:2d8060eb. Each owner must return native count, binding/deduplication evidence, saved-prompt hashes, unchanged-field checks and original endpoints. A RECEIVED reply or disappearance from unread state does not establish adoption.
 
 The existing B20 synthesis task is instructed to make a bounded source-based follow-up and reconcile actual coverage during normal invocations, alongside its substantive proof-assembly work. MANIFEST.json points to the exact request and receipt chain. No additional tracking schedule was created.
 
@@ -28,7 +28,7 @@ The Brain coordinator must materialize the documented STOP_DOTS_SPEEDUP marker i
 - [Full current order](ORDER.md)
 - [Case targets and complementary probes](CASE_TARGETS.md)
 - [Native 20-slot readback](receipts/FLEET01_NATIVE_ADOPTION_20261012.json)
-- [Delivery receipt](https://github.com/yspennstate/math-research-brain/blob/main/scheduled_tasks/handoffs/brain-inbox/messages/REQ-20261012T031958Z-FULL-FEI-OWNER--relay-live-inbox-<machine>--delivered-20261012T032039Z-0e7429.json)
+- [Delivery receipt](private-brain-repository<machine>--delivered-20261012T032039Z-0e7429.json)
 - [Canonical FEI project entry](private-source-repository)
 
 Every scheduled substantive attempt is directed at a dimension-independent full FEI proof, using larger cases to derive and test the general lemma. Restricted results and useful computation retain their exact scope. Full FEI remains OPEN.

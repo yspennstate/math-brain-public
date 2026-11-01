@@ -7,4 +7,4 @@ Compile Quadratic_Form_Proofs.tex with pdflatex (twice). No external figures or 
 check_algebra.py requires Python 3 and SymPy. It checks the explicit example and scalar algebra only, not the general conjecture. Its executed output is algebra_checks.json.
 
 Canonical new-result report: private-source-repository commit 773b7fb6f0e6a8142066f0bac08d228dfc164fdb, path proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md.
-Shared check-in and proof-review instructions: yspennstate/math-research-brain commit 07cb2fdc0428c156e9dd36a848725fa5a9d83aca, AGENTS.md.
+Shared check-in and proof-review instructions: private-brain-repository commit 07cb2fdc0428c156e9dd36a848725fa5a9d83aca, AGENTS.md.

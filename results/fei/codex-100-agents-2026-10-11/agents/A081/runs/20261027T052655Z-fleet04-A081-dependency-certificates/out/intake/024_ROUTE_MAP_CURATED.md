@@ -2,7 +2,7 @@
 
 **Full FEI remains OPEN.** Curated mathematical excerpt. Original section numbers and mathematical prose are retained; unrelated historical operating instructions and unneeded sections are omitted. This is not a complete archive or a new proof.
 
-Original repository source: [research_pushes/2026-09-30-fei-current-route-map/REPORT.md](https://github.com/yspennstate/math-research-brain/blob/main/research_pushes/2026-09-30-fei-current-route-map/REPORT.md). Immutable Git blob: `216cb662e7b21cfe6d7c2034a6690f3c10b886fa`. See `../SOURCES.json` for exact retained line ranges, original hashes, and the packaged-file hash. Links to unbundled companion files refer to their original repository locations.
+Original repository source: [research_pushes/2026-09-30-fei-current-route-map/REPORT.md](private-brain-repository). Immutable Git blob: `216cb662e7b21cfe6d7c2034a6690f3c10b886fa`. See `../SOURCES.json` for exact retained line ranges, original hashes, and the packaged-file hash. Links to unbundled companion files refer to their original repository locations.
 
 ## 1. Universal target and exact accounting
 
@@ -98,7 +98,7 @@ would imply **full FEI** with constant kappa+2+log e. Full support removes compl
 
 ## 5. Mandatory older corrections and stronger benchmark floors
 
-Read the [current FEI checkpoint](https://github.com/yspennstate/math-research-brain/blob/fc8276da09123d9f7ede195ad8ac27ed5768306f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/CURRENT_RESEARCH.md), [all correction deltas](https://github.com/yspennstate/math-research-brain/blob/fc8276da09123d9f7ede195ad8ac27ed5768306f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/DELTAS.json), and [still-present correction inbox](https://github.com/yspennstate/math-research-brain/blob/fc8276da09123d9f7ede195ad8ac27ed5768306f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/CORRECTION_INBOX.json) before positive reuse. These are scientific sources, not current fleet assignments.
+Read the [current FEI checkpoint](private-brain-repository), [all correction deltas](private-brain-repository), and [still-present correction inbox](private-brain-repository) before positive reuse. These are scientific sources, not current fleet assignments.
 
 **REFUTED exact scopes; retain unaffected identities.**
 - Fixed Gamma-dagger, quadratic repairs 0.337/0.34, and the old smaller shaped scale fail the stronger 18-input prime witness. A later safe direction or known-witness repair is not all-gate positivity
@@ -124,7 +124,7 @@ Hence K=4 aggregate or existential erasure targets are stale, and potential-free
 3. **KL:** pay K_occ>=[-B_inf^Gamma]_+ with actual source signs, bias, normalizations and reference changes retained. On the balanced slice this is already full-FEI-strength. Nonlinear/multiscale payment remains possible; fixed positive reserves and low-level truncations do not supply it
 4. **Critical cores:** make full ratio-criticality yield a realizable nonreusing physical rule, including small/nonrobust rows and entropy cost. Terminality alone and a renamed curvature surplus do not close it
 
-The [checkpoint's three-route outline](https://github.com/yspennstate/math-research-brain/blob/fc8276da09123d9f7ede195ad8ac27ed5768306f/scheduled_tasks/work/shared/fei-all-team-2026-09-22/CURRENT_RESEARCH.md#6-three-source-grounded-research-pathways) supplies the longer dependency links. This map adds no universal proof and no Boolean counterfamily with unbounded H/I.
+The [checkpoint's three-route outline](private-brain-repository) supplies the longer dependency links. This map adds no universal proof and no Boolean counterfamily with unbounded H/I.
 
 ---
 

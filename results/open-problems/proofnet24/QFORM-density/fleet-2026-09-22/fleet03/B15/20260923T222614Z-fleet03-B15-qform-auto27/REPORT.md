@@ -296,7 +296,7 @@ The known no-single-minor and sign/Hadamard counterexamples rule out claiming su
 
 ## 10. Source and integrity ledger
 
-Fresh owner controls were read from `yspennstate/math-research-brain` main; owner-control revision remains `2026-09-22.15` and the full conjecture remains OPEN. Relevant live corrections retained include: no post-rotation independence, no generic arbitrary-joint coarea height theorem, no naive fiber-sup dimension-free argument, no universal fixed fragment count, and no single physical-minor extraction theorem.
+Fresh owner controls were read from `private-brain-repository` main; owner-control revision remains `2026-09-22.15` and the full conjecture remains OPEN. Relevant live corrections retained include: no post-rotation independence, no generic arbitrary-joint coarea height theorem, no naive fiber-sup dimension-free argument, no universal fixed fragment count, and no single physical-minor extraction theorem.
 
 Analytic source used for the conditional indefinite-pair envelope:
 `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,

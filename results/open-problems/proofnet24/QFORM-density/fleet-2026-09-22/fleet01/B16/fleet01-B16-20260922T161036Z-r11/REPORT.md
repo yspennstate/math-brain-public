@@ -10,7 +10,7 @@
 
 The full target remains open: for every dimension, every independent real coordinates `X_i` with densities bounded by one, and every real symmetric matrix `A` having at least three eigenvalues of modulus at least one, prove that `Q=X^TAX` has an essentially bounded density with one universal finite constant. Continuity is a separate desired conclusion and is not proved here.
 
-Fresh controls were read from `yspennstate/math-research-brain`; the initial coherent source commit was `521cf8717db5349bf94ddcf200e4d91f0a742e7d`, and the pre-publication refresh was `3849060b24ff77ba6dc6dcc1c9d4bc1e99cc1aeb`. The latter still carries owner revision `2026-09-22.5`. The fresh correction inbox blob is `7f181e495e359f3ec5037c4e40fa5bd5e6d3a21b`.
+Fresh controls were read from `private-brain-repository`; the initial coherent source commit was `521cf8717db5349bf94ddcf200e4d91f0a742e7d`, and the pre-publication refresh was `3849060b24ff77ba6dc6dcc1c9d4bc1e99cc1aeb`. The latter still carries owner revision `2026-09-22.5`. The fresh correction inbox blob is `7f181e495e359f3ec5037c4e40fa5bd5e6d3a21b`.
 
 The proof below explicitly respects the live corrections: a bounded low-dimensional projection density by itself does not control an indefinite quadratic trace; conditioning after a sum/difference or general projection need not preserve density caps; one uniformly good physical minor need not exist; and the singleton-plus-two-banks family defeats local reciprocal-minor selection. The mechanism here therefore uses an **independent original-coordinate projection bank before the nonlinear trace**, while allowing its translation to depend arbitrarily on the base variables.
 

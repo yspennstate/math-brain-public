@@ -23,7 +23,7 @@ Accordingly:
 
   with no coefficient tail deleted.
 
-Fresh repository search found no pre-existing `R12-OPTAIL` or `cross-five` handoff in `math-research-brain` at this refresh. No literature-wide novelty claim is made.
+Fresh repository search found no pre-existing `R12-OPTAIL` or `cross-five` handoff in `private-brain` at this refresh. No literature-wide novelty claim is made.
 
 The first unpaid B07 implication remains
 

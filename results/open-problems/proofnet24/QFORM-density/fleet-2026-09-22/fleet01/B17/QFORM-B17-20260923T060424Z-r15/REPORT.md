@@ -381,6 +381,6 @@ This is a supporting witness theorem only. It does **not** prove that `3sqrt(2)`
 
 ## 8. Corrections and provenance
 
-Fresh brain control at the start of this run was `yspennstate/math-research-brain@8d98eb1d7fea52498479553c484486558c2ebc60`; the operative owner control is revision `2026-09-22.15`, QFORM-only. The live correction inbox was read before this proof. In particular this argument does not use the refuted arbitrary-joint rank-three coarea inequality, conditional projection-cap moments, post-rotation independence, a universal physical rank-three cross extraction, scalar-remainder worst conditioning, or law-uniform pointwise stationary-phase decay.
+Fresh brain control at the start of this run was `private-brain-repository@8d98eb1d7fea52498479553c484486558c2ebc60`; the operative owner control is revision `2026-09-22.15`, QFORM-only. The live correction inbox was read before this proof. In particular this argument does not use the refuted arbitrary-joint rank-three coarea inequality, conditional projection-cap moments, post-rotation independence, a universal physical rank-three cross extraction, scalar-remainder worst conditioning, or law-uniform pointwise stationary-phase decay.
 
 External source checked this run: Livshyts--Paouris--Pivovarov, arXiv:1507.07949, whose abstract states the sharp `2^{k/2}` marginal-density bound for product densities bounded by one; the `k=1` case is exactly the `sqrt(2)` input used in Section 3.

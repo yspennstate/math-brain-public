@@ -10,7 +10,7 @@ Full uniform-cube FEI remains **OPEN / NOT PROVED**. This report proves a necess
 
 ## 0. Fresh control/correction state and sources actually used
 
-The run started from `yspennstate/math-research-brain` main `64da1689498fe3b5ae05c2ccbd0b5de76e5085cd`, owner-control revision `2026-09-22.3`, and was refreshed before publication at main `f9aaf6ef22e36842073dee46affc726d6d018164`. The active programme is `FEI-ALL-TEAM-20260922T095941Z`; installation, benchmark, FOREST, BT4, MOC4 and POS3 work is suspended for this slot. The canonical state remains `FEI-20260922T1000Z-v1`; all mandatory correction events `FEI-DELTA-20260922-01` through `-14` were consumed and the live correction inbox was empty at the refresh.
+The run started from `private-brain-repository` main `64da1689498fe3b5ae05c2ccbd0b5de76e5085cd`, owner-control revision `2026-09-22.3`, and was refreshed before publication at main `f9aaf6ef22e36842073dee46affc726d6d018164`. The active programme is `FEI-ALL-TEAM-20260922T095941Z`; installation, benchmark, FOREST, BT4, MOC4 and POS3 work is suspended for this slot. The canonical state remains `FEI-20260922T1000Z-v1`; all mandatory correction events `FEI-DELTA-20260922-01` through `-14` were consumed and the live correction inbox was empty at the refresh.
 
 
 The mathematical premises used are source-pinned:

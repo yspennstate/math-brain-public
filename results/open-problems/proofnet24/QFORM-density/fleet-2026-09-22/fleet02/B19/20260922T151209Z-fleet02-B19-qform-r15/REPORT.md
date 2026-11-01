@@ -10,7 +10,7 @@
 
 The target remains: for every dimension, independent real coordinates with probability densities bounded by one, and every real symmetric matrix with at least three eigenvalues of modulus at least one, prove a universal finite essential-supremum bound for the density of `Q=X^TAX`, or give a target-valid counterexample. No moment, support, log-concavity, diagonal-basis, or post-rotation-independence assumption is added.
 
-Fresh control was read from `yspennstate/math-research-brain@46b75c39fb2d557c6550afd43d7bfdc26772177a`. The live correction inbox through that commit was consumed. In particular this report does not use law-uniform pointwise Fresnel decay, conditional-cap-as-independence, a universal good physical triple, a rank-three cross-cut dichotomy, or an absolute phase-Wiener norm.
+Fresh control was read from `private-brain-repository@46b75c39fb2d557c6550afd43d7bfdc26772177a`. The live correction inbox through that commit was consumed. In particular this report does not use law-uniform pointwise Fresnel decay, conditional-cap-as-independence, a universal good physical triple, a rank-three cross-cut dichotomy, or an absolute phase-Wiener norm.
 
 The designated partner result actually applied is fleet03/B19, canonical `private-source-repository@143e97c42cdbccb14fe847efb6abd3f6c3d349dc`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T143049Z-fleet03-B19-QFORM-r11b/REPORT.md`. Its one-effective residual writes
 

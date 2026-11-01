@@ -5,7 +5,7 @@ attacking: dimension-free majority-sheet regularity versus diffuse leverage; sha
 
 Status: `NEW_RULED_LEVERAGE_STABILITY_PROVED / ROUGH_BRIDGE_RECHECKED / SOURCE_RESULT_APPLIED / FULL_QFORM_OPEN`.
 
-Control refresh before publication: `math-research-brain@426c030d3bb9f01efa27556c8a0b6cedb613f798`, owner revision `2026-09-22.15`; no fleet02/B15 stop or pause. Execution remains `WITHOUT_VERIFIED_BRAIN`.
+Control refresh before publication: `private-brain@426c030d3bb9f01efa27556c8a0b6cedb613f798`, owner revision `2026-09-22.15`; no fleet02/B15 stop or pause. Execution remains `WITHOUT_VERIFIED_BRAIN`.
 
 ## First unpaid implication
 
@@ -341,7 +341,7 @@ Qualitative absolute continuity remains a separate coarea fact for a nonconstant
 
 ## Sources consumed
 
-- Fresh owner/control and QFORM state through `math-research-brain@426c030d3bb9f01efa27556c8a0b6cedb613f798`, owner revision `2026-09-22.15`.
+- Fresh owner/control and QFORM state through `private-brain@426c030d3bb9f01efa27556c8a0b6cedb613f798`, owner revision `2026-09-22.15`.
 - Required source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md` in `20260922T211500Z-decoupling-brascamp-lieb/`.
 - Later compatible continuation: `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md`, including the correction that Theorem C's affine term must lie in the quadratic range.
 - Prior fleet02/B15 submass theorem: `private-source@45779cb1dca5f453ac620431b380ad015a052e70`.

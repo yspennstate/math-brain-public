@@ -8,7 +8,7 @@
 
 ## 1. Source pins and corrections actually used
 
-Fresh control was resolved in `yspennstate/math-research-brain`; the start snapshot was `0d962a499ad69876cb875825d50db53590d4be92` and the pre-publication refresh was `25af4c31b7ba0d84440c74308e4490eb76f83f2a`, both under owner revision `2026-09-22.5`. The live target remains the arbitrary independent-density quadratic-form conjecture. The active check-in request `QFORM-CHECKIN-20260922T120815Z` was also read.
+Fresh control was resolved in `private-brain-repository`; the start snapshot was `0d962a499ad69876cb875825d50db53590d4be92` and the pre-publication refresh was `25af4c31b7ba0d84440c74308e4490eb76f83f2a`, both under owner revision `2026-09-22.5`. The live target remains the arbitrary independent-density quadratic-form conjecture. The active check-in request `QFORM-CHECKIN-20260922T120815Z` was also read.
 
 Corrections retained: law-uniform pointwise one-dimensional Fresnel decay is false; rotated spectral coordinates are not independent; fiber-supremum estimates can lose dimension; `QFORM-CROSSMINOR-ALONE-FALSE` forbids promoting a `2 x 2` cross minor to a universal density smoother; the newer `QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH` shows that a universal constant, if it exists, must exceed `pi` and records a rank-three diffuse branch only.
 

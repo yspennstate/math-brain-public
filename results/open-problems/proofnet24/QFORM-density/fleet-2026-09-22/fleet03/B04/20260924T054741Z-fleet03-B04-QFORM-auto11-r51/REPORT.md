@@ -292,7 +292,7 @@ Continuity should continue to be tracked independently: the new determinant-only
 
 ## 8. Source pins
 
-- owner/control read at the start from `yspennstate/math-research-brain@41dd3a35aa3ff248288ba0f08c7614ba11b5fd37`; later prepublication refresh recorded separately.
+- owner/control read at the start from `private-brain-repository@41dd3a35aa3ff248288ba0f08c7614ba11b5fd37`; later prepublication refresh recorded separately.
 - prior physical-triple theorem: `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T130129Z-fleet01-B06-QFORM/ADDENDUM_TRIPLE_DET.md` (read on current master).
 - determinant-only physical-pair envelope: `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260924T041651Z-fleet01-B03-QFORM-r40/REPORT.md`.
 - local overlap-two compiler: fleet01/B03 r41, canonical theorem commit `7dc6d6841e318a88174fb41ddaa1c88e223aacf4` as source-pinned by fleet04/B03.

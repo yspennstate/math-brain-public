@@ -21,7 +21,7 @@ The replacement is frequency-averaged: one ORIGINAL scalar coordinate contribute
 
 Fresh current sources consumed in this run:
 
-* owner/current proof map: math-research-brain main, control revision 2026-09-22.15; newest-Claude continuation and volume-stability handoff;
+* owner/current proof map: private-brain main, control revision 2026-09-22.15; newest-Claude continuation and volume-stability handoff;
 * newest Claude/Fourier package `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md}`;
 * volume-stability package `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/`;
 * designated partner fleet02/B01, bundle tip `private-source-repository@91dbcb0e8b3f6faa4af9629aaaff2f69d385695a`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T100534Z-fleet02-B01-qform/REPORT.md`.

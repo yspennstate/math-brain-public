@@ -3,7 +3,7 @@ attacking: the small-F / two-heavy-star correction packet; extract a new physica
 
 # Substantive checkpoint — star-plane to physical E3
 
-Programme `QFORM-DENSITY-3EIG-20260922`; full target OPEN. Source control observed at this stage: `yspennstate/math-research-brain@3472b73338c7b2861bdfbd103b7081905c4bd05a`, owner revision `2026-09-22.15`. Execution remains `WITHOUT_VERIFIED_BRAIN`.
+Programme `QFORM-DENSITY-3EIG-20260922`; full target OPEN. Source control observed at this stage: `private-brain-repository@3472b73338c7b2861bdfbd103b7081905c4bd05a`, owner revision `2026-09-22.15`. Execution remains `WITHOUT_VERIFIED_BRAIN`.
 
 Use the correction-safe r21 notation. For physical anchors `x,y` and residual original-coordinate banks `U,V`, put
 

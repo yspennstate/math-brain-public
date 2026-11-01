@@ -327,4 +327,4 @@ All random-coordinate independence claims in the proof refer only to literal dis
 
 ## 11. Publication integrity
 
-Prepublication controls and corrections were refreshed after the substantive derivation. Changed-file allowlist for this run is restricted to this fleet01/B10 run directory in `private-source` and the corresponding fleet01/B10 handoff/memory/status files in `math-research-brain`. No task, cadence, enabled/paused state, email/push setting, public repository status, workflow, credential, permission, or unrelated data was changed. Repository use is not native learned-memory ingestion; status remains `WITHOUT_VERIFIED_BRAIN`.
+Prepublication controls and corrections were refreshed after the substantive derivation. Changed-file allowlist for this run is restricted to this fleet01/B10 run directory in `private-source` and the corresponding fleet01/B10 handoff/memory/status files in `private-brain`. No task, cadence, enabled/paused state, email/push setting, public repository status, workflow, credential, permission, or unrelated data was changed. Repository use is not native learned-memory ingestion; status remains `WITHOUT_VERIFIED_BRAIN`.

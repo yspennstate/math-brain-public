@@ -217,7 +217,7 @@ In particular, this theorem is a localization compiler, not a proof of the unres
 
 ## 10. Source integrity
 
-Fresh final owner control: yspennstate/math-research-brain@ccd134e403fd9445f09e4d4a286ecc877128491c, revision 2026-09-22.15.
+Fresh final owner control: private-brain-repository@ccd134e403fd9445f09e4d4a286ecc877128491c, revision 2026-09-22.15.
 Current programme status read: FULL_CONJECTURE_OPEN.
 Current claims read: QFORM-FULL OPEN; QFORM-CONTINUOUS-REPRESENTATIVE OPEN.
 Live correction inbox refreshed before this report; no rational-skeleton or partner finite-mixture correction was found.

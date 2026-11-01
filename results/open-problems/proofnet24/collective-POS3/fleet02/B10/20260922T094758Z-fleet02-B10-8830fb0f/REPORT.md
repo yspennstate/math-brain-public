@@ -10,7 +10,7 @@ All probabilities and counts below refer to the original uniform law on all full
 
 ## 1. Fresh source-bound state consumed
 
-Fresh owner control was resolved from `yspennstate/math-research-brain` at initial main commit `3f0819aa148231b1d88aa8bdaefdfb65a42c2eec`, control revision `2026-09-22.2`. It keeps fleet02/B10 on POS3 and stops the old installation/benchmark duties.
+Fresh owner control was resolved from `private-brain-repository` at initial main commit `3f0819aa148231b1d88aa8bdaefdfb65a42c2eec`, control revision `2026-09-22.2`. It keeps fleet02/B10 on POS3 and stops the old installation/benchmark duties.
 
 The newest complete campaign-lead report read before the derivation is:
 

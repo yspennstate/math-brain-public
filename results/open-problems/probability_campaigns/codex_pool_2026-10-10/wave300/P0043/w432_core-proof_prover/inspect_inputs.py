@@ -48,7 +48,7 @@ for path in (Path('~/math-brain-build/local/population/brain.sqlite3'),):
         record['error'] = str(exc)
     out['stores'].append(record)
 
-for name in ('math-research-brain', 'math_research_brain'):
+for name in ('private-brain', 'math_research_brain'):
     path = Path('~') / name
     out.setdefault('canonical_path_checks', []).append({'path': str(path), 'exists': path.exists()})
 

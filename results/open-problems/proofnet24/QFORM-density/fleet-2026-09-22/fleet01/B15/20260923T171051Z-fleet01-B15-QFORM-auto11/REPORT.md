@@ -21,7 +21,7 @@ These points sharpen the separation requested in B15: continuity is genuinely st
 
 ## 1. Sources and live corrections used
 
-Fresh control was resolved from `yspennstate/math-research-brain/main` under the current QFORM continuation. The full conjecture is still marked OPEN. The following live corrections are preserved throughout:
+Fresh control was resolved from `private-brain-repository/main` under the current QFORM continuation. The full conjecture is still marked OPEN. The following live corrections are preserved throughout:
 
 - no uniform pointwise quadratic Fourier decay;
 - no independence after spectral rotation;

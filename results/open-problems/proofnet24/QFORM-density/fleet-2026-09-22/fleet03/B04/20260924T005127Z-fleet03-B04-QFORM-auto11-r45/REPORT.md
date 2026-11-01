@@ -12,7 +12,7 @@ The unrestricted owner target remains OPEN. This report proves a quantitative br
 
 ## 1. Fresh controls and sources
 
-Fresh `math-research-brain/main` was read in this invocation. The final prepublication control refresh was at brain commit
+Fresh `private-brain/main` was read in this invocation. The final prepublication control refresh was at brain commit
 
 `c33c5449a7fcb686bf59450551ec160693c43ce3`,
 

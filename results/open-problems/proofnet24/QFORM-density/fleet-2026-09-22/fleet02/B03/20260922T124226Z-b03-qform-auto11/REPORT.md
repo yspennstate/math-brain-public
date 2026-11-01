@@ -10,7 +10,7 @@
 
 The owner target is unchanged: for independent real coordinates with densities at most one and a real symmetric matrix with at least three eigenvalues of modulus at least one, prove a universal essential bound on the density of `Q=X^T A X`, or give a genuine counterexample. No moment, support, log-concavity, diagonal-basis, or post-rotation-independence assumption is used here.
 
-Fresh control was read from `yspennstate/math-research-brain`; immediately before publication the observed main commit was `448c32ac4e1d41bc56f5782f6ce44b09b93f606a`, still at owner revision `2026-09-22.5` with no later stop.
+Fresh control was read from `private-brain-repository`; immediately before publication the observed main commit was `448c32ac4e1d41bc56f5782f6ce44b09b93f606a`, still at owner revision `2026-09-22.5` with no later stop.
 
 The named partner result directly audited and applied is fleet03/B03:
 

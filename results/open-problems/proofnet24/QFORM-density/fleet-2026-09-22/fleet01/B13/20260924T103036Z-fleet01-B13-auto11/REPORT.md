@@ -9,7 +9,7 @@ Role: extremal product laws
 Execution: `WITHOUT_VERIFIED_BRAIN`  
 Status: **NEW SUPPORTING LEMMAS / ESSENTIAL STEP APPLIED / FULL QFORM OPEN / FULL-TARGET CONTINUITY OPEN**.
 
-Fresh control was read on `math-research-brain/main`; the current owner control revision is `2026-09-22.15`, superseding the historical `.5` while retaining the same QFORM-only target. The live correction inbox was consumed: no post-rotation independence, no uniform pointwise one-dimensional quadratic oscillatory decay, no arbitrary-joint coarea shortcut, no projection-density-only closure, no bounded-diameter or fixed-fragment-count extremality.
+Fresh control was read on `private-brain/main`; the current owner control revision is `2026-09-22.15`, superseding the historical `.5` while retaining the same QFORM-only target. The live correction inbox was consumed: no post-rotation independence, no uniform pointwise one-dimensional quadratic oscillatory decay, no arbitrary-joint coarea shortcut, no projection-density-only closure, no bounded-diameter or fixed-fragment-count extremality.
 
 The exact cap-one-to-product-indicator purification from the immediately preceding fleet01/B13 run is retained: every individual slab witness transfers with zero loss to measurable unit product sets, for the same matrix and the same interval. No interval or centered-uniform extremality is assumed below.
 

@@ -13,7 +13,7 @@ Execution status: `WITHOUT_VERIFIED_BRAIN`
 - Source length: 790 lines / 47,883 bytes as recorded by the source manifest.
 - Fresh `master` was resolved repeatedly during this run; immediately before this immutable report it was `4335ca25ed47bbaf02045553f59b8d52d9322228`. The manuscript blob remained the pinned baseline blob. Concurrent peer audit/improvement commits were not treated as modifications of the baseline source.
 
-I read fresh `math-research-brain/main/AGENTS.md` and `scheduled_tasks/CURRENT_OBJECTIVE.md`, then read the complete package required by the objective: `README.md`, `DELIVERY_STATUS.md` (required by README), `AUDIT.md`, `proof_map.csv`, `SOURCE_MANIFEST.json`, `verify.py`, `checks.json`, and all 790 lines of `manuscript.tex`.
+I read fresh `private-brain/main/AGENTS.md` and `scheduled_tasks/CURRENT_OBJECTIVE.md`, then read the complete package required by the objective: `README.md`, `DELIVERY_STATUS.md` (required by README), `AUDIT.md`, `proof_map.csv`, `SOURCE_MANIFEST.json`, `verify.py`, `checks.json`, and all 790 lines of `manuscript.tex`.
 
 The theorem audited is exactly the candidate arbitrary-law statement
 

@@ -51,7 +51,7 @@ After projecting away w, C has squared singular values 4,4,3, so Z_2=40 and all 
 
 Sources being extended, not silently assumed as full QFORM closure:
 - private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a, `NEW_PROJECTED_CROSSING.md`;
-- current control math-research-brain@72038b4bc2ab4c369014cff17eeb8efc17973188;
+- current control private-brain@72038b4bc2ab4c369014cff17eeb8efc17973188;
 - current Claude continuation private-source@c4c23b784395630c094ba299a50712209921d1ae (its open SP statement is NOT used as a premise).
 
 Status: supporting analytic theorem in progress; independent review pending; WITHOUT_VERIFIED_BRAIN.

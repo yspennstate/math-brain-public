@@ -11,7 +11,7 @@ The full target remains the unrestricted owner statement: every independent orig
 
 ## 1. Fresh state and source-pinned inputs actually used
 
-Fresh `math-research-brain/main` was resolved at startup and the owner revision remained `2026-09-22.15`. The required control files, correction inbox, assignment, and `MEMORY_PROTOCOL.md` were read. The preceding B02 receiver-memory snapshot was read from the immutable prior run and used: its first unpaid edge was the fixed-scale diagonal/carrier-aligned-hub endpoint, with the instruction not to recycle the exhausted strategy of forcing another transverse `E3` block.
+Fresh `private-brain/main` was resolved at startup and the owner revision remained `2026-09-22.15`. The required control files, correction inbox, assignment, and `MEMORY_PROTOCOL.md` were read. The preceding B02 receiver-memory snapshot was read from the immutable prior run and used: its first unpaid edge was the fixed-scale diagonal/carrier-aligned-hub endpoint, with the instruction not to recycle the exhausted strategy of forcing another transverse `E3` block.
 
 The required Claude-source package was read at
 

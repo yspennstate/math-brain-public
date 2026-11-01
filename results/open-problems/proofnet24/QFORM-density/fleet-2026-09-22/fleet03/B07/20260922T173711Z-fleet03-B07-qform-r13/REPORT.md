@@ -5,7 +5,7 @@ attacking: O0 effective-dimension-three heavy ridge packets; isolate aggregate c
 
 **Run:** `20260922T173711Z-fleet03-B07-qform-r13`  
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Fresh final owner control used:** revision `2026-09-22.10` at `yspennstate/math-research-brain@47b9f97c9260868b87b9c5b7e7d92af0bf5c4fb4`  
+**Fresh final owner control used:** revision `2026-09-22.10` at `private-brain-repository@47b9f97c9260868b87b9c5b7e7d92af0bf5c4fb4`  
 **Assignment:** Coordinate minor selection  
 **Classification:** `ESSENTIAL_STEP_APPLIED / PROVED O0 STRUCTURAL COLLAR + PAID SUBBRANCH / FULL TARGET OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`

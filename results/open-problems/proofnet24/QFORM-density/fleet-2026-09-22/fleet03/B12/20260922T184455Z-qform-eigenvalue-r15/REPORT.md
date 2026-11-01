@@ -12,7 +12,7 @@ attacking: additional-eigenvalue control after scalar-rest conditioning fails; d
 
 ## 1. Fresh state and scope
 
-The run began from `yspennstate/math-research-brain` main commit `8b8965c357c28044bd9450f9c568114c5dc5b849`, owner control revision `2026-09-22.11`, and was refreshed during the run. The full target is unchanged: independent cap-one coordinate densities and a real symmetric matrix with at least three eigenvalues of modulus at least one, with one dimension-free density constant.
+The run began from `private-brain-repository` main commit `8b8965c357c28044bd9450f9c568114c5dc5b849`, owner control revision `2026-09-22.11`, and was refreshed during the run. The full target is unchanged: independent cap-one coordinate densities and a real symmetric matrix with at least three eigenvalues of modulus at least one, with one dimension-free density constant.
 
 The owner message proposed the sufficient scalar-conditioning interface
 

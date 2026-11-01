@@ -24,7 +24,7 @@ quantitatively stabilize that exact classification when `D_2^disj/J_2^2` is smal
 
 ## 1. Source-pinned inputs
 
-Fresh owner control on `math-research-brain/main` remains revision `2026-09-22.15`, QFORM-only, with the live corrections forbidding law-uniform pointwise quadratic-phase decay and post-rotation independence.
+Fresh owner control on `private-brain/main` remains revision `2026-09-22.15`, QFORM-only, with the live corrections forbidding law-uniform pointwise quadratic-phase decay and post-rotation independence.
 
 Required pinned source:
 

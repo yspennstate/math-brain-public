@@ -211,6 +211,6 @@ Sources actually used:
 
 - preceding B05 coarea report: `private-source-repository@d5aecac785f127174d8349c01db0f492035ad341:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260922T195340Z-fleet01-B05-QFORM-r17/REPORT.md`;
 - assigned partner theorem actually applied: `private-source-repository@a31006ef311ca9e937f37c62d602d21ada3b1139:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T202100Z-b05-qform-47d9c1a2/REPORT.md`;
-- current programme controls/corrections from `yspennstate/math-research-brain`, revision `2026-09-22.15`.
+- current programme controls/corrections from `private-brain-repository`, revision `2026-09-22.15`.
 
 Full QFORM: `OPEN_NOT_PROVED`. Continuity: `NOT_PROVED`. No scheduler, task, notification, email, Drive, public-release, paid-model/API, remote-workflow, permission, or installation mutation is made by this report.

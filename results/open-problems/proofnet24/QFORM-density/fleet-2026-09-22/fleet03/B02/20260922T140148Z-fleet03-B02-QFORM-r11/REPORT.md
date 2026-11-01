@@ -265,7 +265,7 @@ The full target remains `OPEN`. No counterexample to the owner conjecture is cla
 
 ## 8. Source pins actually used
 
-- Fresh owner/control state: `yspennstate/math-research-brain`, programme revision `2026-09-22.5`; initial source head `7262469c70ff2e86837f6751eee8006ff0a64681`, refreshed during the run with unchanged owner order.
+- Fresh owner/control state: `private-brain-repository`, programme revision `2026-09-22.5`; initial source head `7262469c70ff2e86837f6751eee8006ff0a64681`, refreshed during the run with unchanged owner order.
 - Compatible completed same-pathway peer: fleet01/B02, `private-source-repository@e58461e07b19315b290cb4b397929090ec6f48b9:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260922T132111Z-qform-a01-b02-r12/REPORT.md`.
 - Diffuse Fourier/Beckner source chain: fleet03/B08, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T114830Z-fleet03-B08-qform-diffuse-v1/REPORT.md`, which source-pins W. Beckner, *Inequalities in Fourier Analysis*, PNAS 72 (1975), 638--641.
 - Current phase-Wiener correction: `QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1`, canonical correction commit `2a6981ee2518d8b92f734b5763e89d5bf26a8048`.

@@ -8,7 +8,7 @@ ROOT = Path(__file__).resolve().parent
 db_path = Path('~/math-brain-build/local/population/brain.sqlite3')
 cards = json.loads((ROOT / 'sources' / 'store_c0056_cards.json').read_text(encoding='utf-8'))
 ids = [r['id'] for r in cards]
-receipt = {'db_path':str(db_path), 'open_mode':'read-only URI mode=ro', 'query_scope':'exact two C0056 IDs previously recovered from the assigned export', 'canonical_designation':'Assigned active population database checked; a separate canonical path under math-research-brain/local was not located in the targeted pilot directories.', 'results':[]}
+receipt = {'db_path':str(db_path), 'open_mode':'read-only URI mode=ro', 'query_scope':'exact two C0056 IDs previously recovered from the assigned export', 'canonical_designation':'Assigned active population database checked; a separate canonical path under private-brain/local was not located in the targeted pilot directories.', 'results':[]}
 start = time.monotonic()
 try:
     con = sqlite3.connect('file:'+db_path.as_posix()+'?mode=ro',uri=True,timeout=3)

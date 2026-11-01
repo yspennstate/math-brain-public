@@ -15,6 +15,6 @@ This run is a new exact finite construction. It uses the following prior results
    Used fact: for unit interval banks `S_a,T_b` and any independent cap-one heavy law, `||p_{X_f^2+S_a^2-T_b^2}||_infinity <= (pi/2)(sqrt(2)+2^(1/4)) < 3sqrt(2)`. This run applies it explicitly to `a=(1,1)/sqrt(2)` and `b=(1,1,1)/sqrt(3)`.
 
 3. **Live correction state consumed before publication.**  
-   Repository: `yspennstate/math-research-brain`  
+   Repository: `private-brain-repository`  
    `CORRECTION_INBOX.json` blob SHA: `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.  
    The present proof avoids law-uniform pointwise stationary-phase decay, independence after a general spectral rotation, the refuted arbitrary-joint coarea inequality, positive conditional-density-moment gates, fixed fragment-count reductions, and uniformly good single-minor/cross-cut assumptions.

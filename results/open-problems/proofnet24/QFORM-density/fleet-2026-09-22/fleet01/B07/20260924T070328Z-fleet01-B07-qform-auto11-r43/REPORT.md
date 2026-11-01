@@ -11,7 +11,7 @@ The unrestricted conjecture remains open. No Gaussianity, log-concavity, moment,
 
 ## 1. Sources and incoming exact-singular branch
 
-Fresh owner control was read from `yspennstate/math-research-brain` main at startup commit
+Fresh owner control was read from `private-brain-repository` main at startup commit
 
 `26c1c354fa0bafe8de3d1c5f73317182121fbbd7`.
 

@@ -9,7 +9,7 @@ STATUS: PARTIAL. Full uniform-cube Friedgut–Kalai Fourier entropy-influence co
 NOVELTY / PRIORITY: NOT CLAIMED.
 
 Fresh authenticated control at entry:
-`yspennstate/math-research-brain` main
+`private-brain-repository` main
 `7bf9a36976d5708320c5d6416a59be71bd627a7f`,
 The later shared execution reset
 was also read and applied. It assigns fleet02/B17 to Campaign B as principal adversary for the

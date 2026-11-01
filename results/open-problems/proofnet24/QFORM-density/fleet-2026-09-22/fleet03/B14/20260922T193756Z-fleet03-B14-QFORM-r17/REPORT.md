@@ -3,7 +3,7 @@
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Run:** `20260922T193756Z-fleet03-B14-QFORM-r17`  
 **Assignment:** translations and localization  
-**Startup control:** `yspennstate/math-research-brain@02127e5ec901c0b4f14f28fe2a6e09722af5e247`  
+**Startup control:** `private-brain-repository@02127e5ec901c0b4f14f28fe2a6e09722af5e247`  
 **Owner control at startup:** `2026-09-22.14`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** proved a target-relevant no-go for a tempting localization compiler and a corrected constant-preserving ordering principle; full QFORM remains OPEN. Continuity is not proved.

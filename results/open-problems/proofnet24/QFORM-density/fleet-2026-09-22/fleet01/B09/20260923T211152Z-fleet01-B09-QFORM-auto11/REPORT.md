@@ -14,7 +14,7 @@ No moment, compact-support, centering, iid, log-concavity, connected-support, di
 
 ## 1. Fresh sources actually consumed
 
-Fresh `math-research-brain/main` was read at observed head
+Fresh `private-brain/main` was read at observed head
 
 `61bc5084156380142ff818045a8b3041e2d098c2`.
 

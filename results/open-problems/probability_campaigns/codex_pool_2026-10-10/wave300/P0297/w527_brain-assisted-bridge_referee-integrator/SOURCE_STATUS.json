@@ -16,7 +16,7 @@
   "prior_attempt_correction": "The D0049-A001 intake equation d_gamma=2Q/xi is false: gamma=sqrt(8/3), Q=5/sqrt(6), xi=1/sqrt(6) would yield 10 rather than the known 4. Correct xi=gamma/d_gamma is in Gwynne-Miller equation (1.5).",
   "math_brain_recall_failure": {
     "command": "python -X utf8 -m math_brain.cli recall ~/math-brain-build/local/population/brain.sqlite3 'Liouville quantum gravity metric KPZ independence theorem Hausdorff dimension d_gamma' --limit 5",
-    "observation": "CLI imported ~/math-research-brain/src/math_brain and raised ValueError: external_reference is not a valid NodeKind; read-only count found 177 external_reference nodes in the newer store.",
+    "observation": "CLI imported ~/private-brain/src/math_brain and raised ValueError: external_reference is not a valid NodeKind; read-only count found 177 external_reference nodes in the newer store.",
     "bounded_repair": "Set the invocation's module path to ~/math-brain-build/src (which defines EXTERNAL_REFERENCE) before evaluating recall; keep the store read-only. Do not change or delete store nodes."
   },
   "matched_math_brain_recall": {

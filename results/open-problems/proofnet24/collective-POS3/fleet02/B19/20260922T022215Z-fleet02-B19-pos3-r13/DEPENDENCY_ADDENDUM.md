@@ -1,6 +1,6 @@
 # B19 POS3 r13 late dependency addendum — exact ideal-block transfer adversary
 
-The initial immutable `REPORT.md` was already written when the newest named-partner handoff arrived on `math-research-brain` main. I did not rewrite that report. This append-only addendum consumes and applies the later dependency.
+The initial immutable `REPORT.md` was already written when the newest named-partner handoff arrived on `private-brain` main. I did not rewrite that report. This append-only addendum consumes and applies the later dependency.
 
 ## Newest named partner actually consumed
 

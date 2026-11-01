@@ -250,6 +250,6 @@ A 1000-case random audit in ambient dimension eight verified the reconstruction 
 
 ## 9. Source pins
 
-- Owner source: `https://github.com/yspennstate/math-research-brain/blob/0dc369ddf8b860648dd780d8f92c62994dc53ecf/scheduled_tasks/README.md`.
+- Owner source: `private-brain-repository`.
 - Predecessor r53: `private-source-repository@16d43afc2381f65dde19296a917ffc436d823850:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T100917Z-fleet01-B06-QFORM-r53/REPORT.md`.
 - Designated partner: `private-source-repository@006892a091e8f58edf21e071244a2c7e2a340ec0:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260924T092809Z-auto11-a9c3/REPORT.md`.

@@ -13,7 +13,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 Fresh source heads at the start of this run were
 
-- `yspennstate/math-research-brain/main@f7b1bd7fb40e7c63dbaa8724b795297e136d44e1`,
+- `private-brain-repository/main@f7b1bd7fb40e7c63dbaa8724b795297e136d44e1`,
 - `private-source-repository/master@0662743d81a3dfcba062f36ecc52815fbaa26012`.
 
 

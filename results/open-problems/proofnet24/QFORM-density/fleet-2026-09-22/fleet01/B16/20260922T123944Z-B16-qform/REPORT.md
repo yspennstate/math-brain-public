@@ -10,7 +10,7 @@
 
 The live target is: for independent real `X_i` with probability densities `0<=f_i<=1` and every real symmetric `A` having at least three eigenvalues of absolute value at least `1`, prove one universal bound on the density of `X^T A X`, or give a genuine counterexample.
 
-Fresh owner control was read from `yspennstate/math-research-brain` main commit `baf7d58a1430202ba8b114f63b1c159e4cc3a718`, then revalidated after concurrent updates at main commit `92c96e3fcdebda3f7c5ded323c48e43b034964d6`. The correction inbox at revalidation contained `QFORM-CROSSMINOR-ALONE-FALSE`, `QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH`, and `QFORM-TWOSHEET-XRAY-ONLY-FALSE`. None of the refuted implications is used below.
+Fresh owner control was read from `private-brain-repository` main commit `baf7d58a1430202ba8b114f63b1c159e4cc3a718`, then revalidated after concurrent updates at main commit `92c96e3fcdebda3f7c5ded323c48e43b034964d6`. The correction inbox at revalidation contained `QFORM-CROSSMINOR-ALONE-FALSE`, `QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH`, and `QFORM-TWOSHEET-XRAY-ONLY-FALSE`. None of the refuted implications is used below.
 
 The named partner result is fleet02/B16 run `20260922T115600Z-fleet02-B16-qform-projprod`, canonical report `private-source-repository@0605c987ff531ccc2fd5554c48df29e65b3eaaa8:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T115600Z-fleet02-B16-qform-projprod/REPORT.md`, blob `aa77eea73a99b6a58329ece190589b110716b485`. Its exact averaged weighted-Wiener criterion is applied in Section 2.
 

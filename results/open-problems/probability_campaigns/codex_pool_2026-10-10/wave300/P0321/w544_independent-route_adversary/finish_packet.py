@@ -38,7 +38,7 @@ source['independent_route_saved_before_paired_proof']=True
 source['route_adjustment']='Independent positive-shear calculation agrees with w543 H1-H2; disjoint extension is the correlated-Gaussian positivity obstruction in INDEPENDENT_OBSTRUCTION.md.'
 source['upstream_ledger_recovery']={'receipt':'ORIGINAL_RECORD.json','problems_file_present':not original.get('problems_missing',False),'attempts_file_present':not original.get('attempts_missing',False),'result':'The old worktree paths cited by the intake builder are absent. Recovered migrated exact target and attempt cards instead; no claim that a missing ledger was checked.'}
 source['bounded_owner_status_check']={'receipt':'BRAIN_TARGET_RECEIPT.json','population_target_cards':2,'result':'The two exact legacy target cards retain unsolved/unverified or unreviewed statuses. This bounded check is not a complete unpublished solved/retired-work audit; novelty and current openness remain UNKNOWN.'}
-source['canonical_checkout_store_present']=(Path('~/math-research-brain/local/population/brain.sqlite3').is_file())
+source['canonical_checkout_store_present']=(Path('~/private-brain/local/population/brain.sqlite3').is_file())
 source['recent_primary_search']={'date':'2026-10-10','queries':['site:arxiv.org Riesz hexatic 2025','site:arxiv.org Riesz hexatic 2026','Riesz gases hexatic rigorous'],'result':'No verified present-day resolution recovered; absence of search hits is not evidence of openness.'}
 (ROOT/'SOURCE_STATUS.json').write_text(json.dumps(source,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 

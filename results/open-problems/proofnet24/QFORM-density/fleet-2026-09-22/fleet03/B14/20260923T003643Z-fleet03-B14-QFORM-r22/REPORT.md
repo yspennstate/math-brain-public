@@ -224,7 +224,7 @@ The full conjecture remains OPEN. No claim here changes that status.
 
 ## 6. Integrity / provenance
 
-Owner control at start: math-research-brain@69eb6bb1a2994e7aaf4831580b96cbeb59fc0832, revision 2026-09-22.15.
+Owner control at start: private-brain@69eb6bb1a2994e7aaf4831580b96cbeb59fc0832, revision 2026-09-22.15.
 Partner actually applied: fleet04/B14, private-source@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee, REPORT.md blob 3af36c47726d1aabb2a9cb0281818d9d3bb3297c.
 Three-dimensional core theorem used: private-source@29e682234ef18500588293f4e947e79ca768a251, GEOMETRIC_ROUTE_REPORT.md.
 Native brain ingestion: NOT VERIFIED.

@@ -11,7 +11,7 @@
 
 ## 1. Fresh authority and source-bound state
 
-At invocation start I resolved `math-research-brain/main` to
+At invocation start I resolved `private-brain/main` to
 `a983b52bc071cc0ec59ca37f06f7b681a66970be` and read all five required
 live control entry files plus the collective ORDER/TARGETS/ASSIGNMENTS.
 fleet02/B07 stop or pause was present.

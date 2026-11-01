@@ -13,7 +13,7 @@ Full-matrix proof commit: 742ac943440e41925fe09db9a8c02a96cbd83dbc
 Pair-envelope proof commit: f7f0fedb2d93b46824f96cac1164af6f8a55626f
 Corrections commit: f305dcc8ae0f602f2b21ab32cf4d8ddcdcb56b92
 Final bundle commit: 91463281b113b3dbb9aa66dcbaa14d2d1645e5ff
-Shared proof-first worker request update: math-research-brain commit 944d5664bcfe9e8fe7e49ec647c578a519f55eee
+Shared proof-first worker request update: private-brain commit 944d5664bcfe9e8fe7e49ec647c578a519f55eee
 
 All three mathematical report Git blob hashes were read back and match these local report bytes. The committed result JSON files contain the same executed data with different whitespace formatting.
 

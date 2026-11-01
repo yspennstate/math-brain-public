@@ -10,7 +10,7 @@ attacking: the two-bank balance cross-or-self receiver in indefinite rank-three 
 
 ## 1. Scope and correction boundary
 
-The full conjecture remains open. Fresh owner control from `yspennstate/math-research-brain` remained revision `2026-09-22.15`, QFORM-only, at prepublication refresh. I re-read the live correction inbox. Nothing below assumes law-uniform pointwise Fresnel decay, post-rotation independence, a dimension-free worst-fiber supremum, an arbitrary-joint indefinite coarea theorem, or a fixed uniformly good physical minor.
+The full conjecture remains open. Fresh owner control from `private-brain-repository` remained revision `2026-09-22.15`, QFORM-only, at prepublication refresh. I re-read the live correction inbox. Nothing below assumes law-uniform pointwise Fresnel decay, post-rotation independence, a dimension-free worst-fiber supremum, an arbitrary-joint indefinite coarea theorem, or a fixed uniformly good physical minor.
 
 The immediate predecessor is fleet03/B11 r28, canonical source `private-source-repository@b7c4cc10e286cbb5c72c7ce5a202670c1b1541d0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T105050Z-fleet03-B11-QFORM-r28/REPORT.md`. It proves that the large disjoint-Pluecker branch contains disjoint ORIGINAL-coordinate banks `S,T` with `sigma_2(R_S),sigma_2(R_T)>=1/32`, but also gives an example where the physical cross block has rank only one and the missing third direction appears as grouped self-curvature.
 

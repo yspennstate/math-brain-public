@@ -13,7 +13,7 @@ The unrestricted conjecture is not proved here. All random variables remain orig
 
 ## 1. Fresh source boundary and first missing implication
 
-Fresh `math-research-brain/main` was resolved at control commit
+Fresh `private-brain/main` was resolved at control commit
 
 `dd5a4025756b11e275f3e344211fab71a7d7ef0c`.
 

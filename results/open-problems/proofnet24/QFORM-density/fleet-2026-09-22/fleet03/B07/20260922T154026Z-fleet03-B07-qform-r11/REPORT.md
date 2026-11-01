@@ -10,7 +10,7 @@
 
 The full target remains open: for every dimension, independent real coordinates `X_i` whose probability densities satisfy `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove that `Q=X^TAX` has a density with one universal finite `L^infinity` bound, or produce a valid counterexample. A continuous representative is a separate stronger conclusion and is not proved here.
 
-Fresh control was resolved from `yspennstate/math-research-brain` main and remained owner revision `2026-09-22.5`. The final pre-write control snapshot was `a1f27a271acad1d784c6bb6022a9f8f4983d822d`; the live correction inbox there had blob `2ee621225465e603dfd118f6bd86b1ddc853f40e`. This report does not use law-uniform pointwise quadratic Fresnel decay, post-rotation independence, a fiberwise supremum, one tiny coordinate minor as a universal certificate, or a reciprocal-minor average.
+Fresh control was resolved from `private-brain-repository` main and remained owner revision `2026-09-22.5`. The final pre-write control snapshot was `a1f27a271acad1d784c6bb6022a9f8f4983d822d`; the live correction inbox there had blob `2ee621225465e603dfd118f6bd86b1ddc853f40e`. This report does not use law-uniform pointwise quadratic Fresnel decay, post-rotation independence, a fiberwise supremum, one tiny coordinate minor as a universal certificate, or a reciprocal-minor average.
 
 The designated partner `fleet04/B07` still had no completed current-QFORM canonical report or shared handoff at the fresh source check. No result is fabricated or attributed to it. The compatible completed fleet04 theorem actually applied below is `fleet04/B18`, `QFORM-SCHUR-PIVOT-SMOOTHING-v1`, canonical source
 

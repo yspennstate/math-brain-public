@@ -15,7 +15,7 @@ This report does **not** prove or refute the full QFORM conjecture. It refutes t
 
 The failure already occurs for four independent cap-one uniforms and a fixed 4x4 symmetric matrix with four distinct eigenvalues. In fact every possible choice of three spectral directions versus the remaining one has an unbounded scalar-conditioned density supremum. At the same time the *unconditional* quadratic form has the explicit law-uniform density bound `2 pi / sqrt(3)`. Thus the obstruction is solely the use of an unweighted conditional supremum; it is not a counterexample to QFORM.
 
-The run also consumes the fresh correction `QFORM-COAREA-AND-CONDITIONAL-MOMENT-CORRECTIONS-v1` from `yspennstate/math-research-brain@938e59f2caed677576b8bb3cd87ee1ffe81ee572`, which already invalidates the unrestricted `K ||rho||_infinity^(2/3)` coarea lemma for arbitrary joint densities and a positive-moment vector-conditioning interface. No such false lemma is used below.
+The run also consumes the fresh correction `QFORM-COAREA-AND-CONDITIONAL-MOMENT-CORRECTIONS-v1` from `private-brain-repository@938e59f2caed677576b8bb3cd87ee1ffe81ee572`, which already invalidates the unrestricted `K ||rho||_infinity^(2/3)` coarea lemma for arbitrary joint densities and a positive-moment vector-conditioning interface. No such false lemma is used below.
 
 The designated partner `fleet04/B04` had no completed QFORM handoff/report visible at the two fresh partner checks in this run, so no partner result is fabricated or attributed.
 

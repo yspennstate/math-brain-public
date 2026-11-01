@@ -10,7 +10,7 @@
 
 The full conjecture remains OPEN: for independent real coordinates with densities bounded by one and a real symmetric matrix having at least three eigenvalues of absolute value at least one, prove one dimension-independent bound on the output density of `X^T A X` (and separately determine whether a continuous representative always exists).
 
-This run used the current source state from `yspennstate/math-research-brain@0f7fa82fc244a9777494310295edbce82f9d5c45`, after an initial coherent read at `38452179b0badfe9fe8774e103bf62bbb5453ad2`. The live correction inbox still contains the pointwise-decay, fiber-supremum, cross-minor, conditional-cap, single-Schur-extraction, absolute-ambiguity/Hölder and bounded-diameter-localization failures. None is used below.
+This run used the current source state from `private-brain-repository@0f7fa82fc244a9777494310295edbce82f9d5c45`, after an initial coherent read at `38452179b0badfe9fe8774e103bf62bbb5453ad2`. The live correction inbox still contains the pointwise-decay, fiber-supremum, cross-minor, conditional-cap, single-Schur-extraction, absolute-ambiguity/Hölder and bounded-diameter-localization failures. None is used below.
 
 Two source theorems are applied exactly:
 

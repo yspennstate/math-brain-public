@@ -13,7 +13,7 @@ Continuity: **not claimed for the compiler as a whole**. The rank-three crossing
 
 The target remains: for independent real original coordinates with scalar probability densities bounded by one and an arbitrary real symmetric matrix `A` with `s_3(A)>=1`, prove a universal density cap for `X^T A X`, or produce a counterexample. No moment, compact-support, connected-support, Gaussian, log-concavity, iid, post-rotation independence, or diagonal-basis assumption is made.
 
-Fresh owner control was read on `math-research-brain/main`: programme `QFORM-DENSITY-3EIG-20260922`, control revision `2026-09-22.15`, no fleet03/B12 stop. The live correction inbox blob before publication is `6bdbd9987a4eefeba79d53915cfe7e232263f8ec`. In particular, this proof does not use law-uniform pointwise quadratic-phase decay, unrestricted joint-density coarea, a uniformly good single physical minor, or independence after rotating to eigen-coordinates.
+Fresh owner control was read on `private-brain/main`: programme `QFORM-DENSITY-3EIG-20260922`, control revision `2026-09-22.15`, no fleet03/B12 stop. The live correction inbox blob before publication is `6bdbd9987a4eefeba79d53915cfe7e232263f8ec`. In particular, this proof does not use law-uniform pointwise quadratic-phase decay, unrestricted joint-density coarea, a uniformly good single physical minor, or independence after rotating to eigen-coordinates.
 
 Analytic inputs, at their proved scopes:
 

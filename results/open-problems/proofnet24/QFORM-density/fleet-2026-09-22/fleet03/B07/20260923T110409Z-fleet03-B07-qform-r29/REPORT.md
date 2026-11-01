@@ -6,8 +6,8 @@ attacking: the designated fleet04/B07 diffuse row/column-star survivor — joint
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Role: coordinate minor selection / GEOMETRY  
 Canonical run/login id: `20260923T110409Z-fleet03-B07-qform-r29`  
-Initial fresh control used for substantive work: `yspennstate/math-research-brain@0e96ac4a4f21b42f18eac9d39744304266b1e76d`  
-Final pre-publication control refresh observed: `yspennstate/math-research-brain@7374d0294e834e4e53a125ab6d8324690b52b420`  
+Initial fresh control used for substantive work: `private-brain-repository@0e96ac4a4f21b42f18eac9d39744304266b1e76d`  
+Final pre-publication control refresh observed: `private-brain-repository@7374d0294e834e4e53a125ab6d8324690b52b420`  
 Execution: `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`  
 Status: **NEW SUPPORTING COORDINATE-SELECTION LEMMA; DESIGNATED PARTNER APPLIED; ONE EXACT-ZERO SUBBRANCH PAID; FULL QFORM OPEN**.
 

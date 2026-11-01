@@ -8,7 +8,7 @@
 
 ## 1. Fresh source state and peer result applied
 
-Fresh owner control was reread from `yspennstate/math-research-brain` main. The active owner revision is `2026-09-22.2`; new installation/benchmark work is stopped and fleet02/B01 remains on FOREST.
+Fresh owner control was reread from `private-brain-repository` main. The active owner revision is `2026-09-22.2`; new installation/benchmark work is stopped and fleet02/B01 remains on FOREST.
 
 The latest complete lead version read was fleet01/B01
 `proofnet24/P14-probability-correlation/collective-2026-09-22/fleet01/B01/20260922T030948Z-b01-forest-auto11/report.md`,

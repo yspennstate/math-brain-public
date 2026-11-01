@@ -11,7 +11,7 @@ attacking: aggregate coordinate-minor payment: convert determinant-weighted thir
 
 ## 1. Sources actually used
 
-1. Current target/corrections and assignment from `yspennstate/math-research-brain` main, including `CURRENT_RESEARCH.md`, `CORRECTION_INBOX.json`, `PATHWAYS.md`, `MEMORY_PROTOCOL.md`, and `assignments/fleet02/B07.json`.
+1. Current target/corrections and assignment from `private-brain-repository` main, including `CURRENT_RESEARCH.md`, `CORRECTION_INBOX.json`, `PATHWAYS.md`, `MEMORY_PROTOCOL.md`, and `assignments/fleet02/B07.json`.
 2. Completed analytic theorem `QFORM-RIDGE-DENSITY-v1`, full proof:
    `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
    Exact scope used below: for an original-coordinate cross block `B=A[I,J]`, with

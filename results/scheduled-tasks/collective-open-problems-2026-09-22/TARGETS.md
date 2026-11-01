@@ -1,6 +1,6 @@
 # Historical four-problem target catalogue
 
-**Inactive for the current scheduled fleet.** FEI-ALL-TEAM-20260922T095941Z assigns all eighty workers to FEI. Use [current research](https://github.com/yspennstate/math-research-brain/blob/main/scheduled_tasks/work/shared/fei-all-team-2026-09-22/CURRENT_RESEARCH.md) and [assignments](https://github.com/yspennstate/math-research-brain/blob/main/scheduled_tasks/work/shared/fei-all-team-2026-09-22/ASSIGNMENTS.json). FOREST, BT4, MOC4 and POS3 results are preserved; their suspension does not change their mathematical status.
+**Inactive for the current scheduled fleet.** FEI-ALL-TEAM-20260922T095941Z assigns all eighty workers to FEI. Use [current research](private-brain-repository) and [assignments](private-brain-repository). FOREST, BT4, MOC4 and POS3 results are preserved; their suspension does not change their mathematical status.
 
 ## Preserved target definitions and source checks
 

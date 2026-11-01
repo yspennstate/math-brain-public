@@ -10,7 +10,7 @@
 
 The full target remains open: for every `n`, independent real `X_i` with probability densities `0<=f_i<=1`, and every real symmetric `A` having at least three eigenvalues of absolute value at least one, prove that `Q=X^T A X` has a density with a universal `L^infinity` bound, or give a valid counterexample. Continuity is tracked separately and is not proved here.
 
-Fresh control was read from `yspennstate/math-research-brain` main and remained owner revision `2026-09-22.5`. The final pre-publication correction refresh was through brain main `51c58a07a652459ee99b08ffa6bad2f11437070f`, correction blob `7a8e97b4c64376d251852264100ffc8502eebea1`. In particular, this report does not use pointwise law-uniform Fresnel decay, receiver-only conditional caps, one tiny minor, bounded fragment count, or post-rotation independence.
+Fresh control was read from `private-brain-repository` main and remained owner revision `2026-09-22.5`. The final pre-publication correction refresh was through brain main `51c58a07a652459ee99b08ffa6bad2f11437070f`, correction blob `7a8e97b4c64376d251852264100ffc8502eebea1`. In particular, this report does not use pointwise law-uniform Fresnel decay, receiver-only conditional caps, one tiny minor, bounded fragment count, or post-rotation independence.
 
 The exact assigned partner `fleet04/B07` still had no completed current-QFORM handoff at the fresh pre-publication source check. No result is fabricated or attributed to it. The compatible completed fleet04/B18 theorem actually applied below is:
 

@@ -283,7 +283,7 @@ by itself is **not** the correct final missing factor: (alpha) can vanish while 
 
 ## 8. Source pins
 
-- Fresh control objective: `math-research-brain/main`, `scheduled_tasks/CURRENT_OBJECTIVE.md`, blob `194c09609c2ce750efaa9634a0849b5a27ff651c`.
+- Fresh control objective: `private-brain/main`, `scheduled_tasks/CURRENT_OBJECTIVE.md`, blob `194c09609c2ce750efaa9634a0849b5a27ff651c`.
 - Fresh correction inbox blob: `ba7aeac3d879f59da5ec8a12daad74ea85714465`.
 - Fresh shared-bank theorem: `private-source@0d25e16cc969a36e96e46976f0990611ad2e80c4`.
 - Previous fleet03/B05 kernel-angle result: `private-source@7ab90cc16db0b0a767b51d1f5a2ad1e1871f511c`.

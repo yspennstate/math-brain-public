@@ -365,7 +365,7 @@ These computations are sanity checks only. The proof is the exact determinant/mi
 
 ## 11. Source/correction ledger
 
-Fresh control source: `yspennstate/math-research-brain@ff61378f690209c9d98542dbb67ab6cff48d981c`.
+Fresh control source: `private-brain-repository@ff61378f690209c9d98542dbb67ab6cff48d981c`.
 
 Consumed live corrections include: pointwise quadratic-phase decay false; no independence after spectral rotation; fiber-sup dimension loss; arbitrary-joint rank-three coarea false; positive conditional projection-density moments false; and `QFORM-BIINDEPENDENT-SPECTRAL-MODES-NOT-CROSS-VOLUME-v1`. None is used as a positive premise.
 

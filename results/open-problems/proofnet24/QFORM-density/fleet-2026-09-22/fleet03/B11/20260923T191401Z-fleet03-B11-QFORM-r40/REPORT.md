@@ -240,7 +240,7 @@ The new structural lemma guarantees that `sigma_1 sigma_2` stays uniformly paid 
 
 ## Sources consumed
 
-- math-research-brain fresh main at startup: `55c2088d34860b89968d086ae247c7428266ebeb` and later refreshes; owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
+- private-brain fresh main at startup: `55c2088d34860b89968d086ae247c7428266ebeb` and later refreshes; owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 - fleet03/B11 r37 exact graph geometry: `60366e6dcbf3a321423e2ff1b0f4ecb9a78776f6`.
 - fleet03/B11 r38/r39 integrated square/bilinear receivers: r38 `430d0746f305abeeea58af4d319efe98be87d563`; r39 `b53315b2f91c6a917f8c5c17f3a5dba07904374b`.
 - interactive projected crossing theorem: `d2f970d33fa7084f8de55412189402ac609e4da6`, `NEW_PROJECTED_CROSSING.md`.

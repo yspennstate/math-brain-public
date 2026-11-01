@@ -6,7 +6,7 @@ Status: `ESSENTIAL_STEP_APPLIED / PROVED_SUPPORTING_THEOREM`; full QFORM conject
 
 ## Control and correction status
 
-The invocation began under a stale FEI task prompt, but fresh owner controls at `yspennstate/math-research-brain@46532ff524f78623e48eb66b2a0d0f2fc2b08fd4` and the later refresh `@a2c4bd773284b766962edde311da0d29382e5e85` put every slot on `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`. FEI work was therefore stopped and no FEI mathematics was continued.
+The invocation began under a stale FEI task prompt, but fresh owner controls at `private-brain-repository@46532ff524f78623e48eb66b2a0d0f2fc2b08fd4` and the later refresh `@a2c4bd773284b766962edde311da0d29382e5e85` put every slot on `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`. FEI work was therefore stopped and no FEI mathematics was continued.
 
 Consumed corrections:
 

@@ -9,7 +9,7 @@ Execution: WITHOUT_VERIFIED_BRAIN
 
 The target is the universal essential density bound for \(X^TAX\) under independent one-dimensional densities \(0\le f_i\le1\), when \(A\) has at least three eigenvalues of modulus at least one. Continuity is separate.
 
-Fresh controls were read from math-research-brain main, including AGENTS.md (blob e2aa9d53924e2d4e015b7c6680b0009241bec619), the owner request (blob ad68bf86f7c0437def9db625408081374700f08f), and the live correction inbox (blob c7000cf3822ae4935a2faf43b89ac92ea65ac0fe).
+Fresh controls were read from private-brain main, including AGENTS.md (blob e2aa9d53924e2d4e015b7c6680b0009241bec619), the owner request (blob ad68bf86f7c0437def9db625408081374700f08f), and the live correction inbox (blob c7000cf3822ae4935a2faf43b89ac92ea65ac0fe).
 
 The geometric input is the Claude package at private-source commit e5f71d79eff325201dd0274053d20268ce65b837, especially the RESULTS and COUNTEREXAMPLE_SEARCH reports in proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/. The completed fleet01/B13 result used below is private-source@680ff828e47704689fde0ca4b1690860a9cbd71f, with handoff at brain commit 02f399acc9a279664063574cd2a7a6e088a428f4. The bang-bang source it applies is private-source@604a08009638981da254a72f09a24dd50e3a3c94.
 

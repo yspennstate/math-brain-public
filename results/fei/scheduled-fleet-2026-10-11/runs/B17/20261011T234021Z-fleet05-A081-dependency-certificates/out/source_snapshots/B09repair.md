@@ -17,7 +17,7 @@ The original natural B09 run is
 - Source directory:
   `reports/fei-2026-10-11/runs/B09/20261011T195500Z-fleet01-B09-biased-restriction-uncertainty/`
 - Brain mirror commit:
-  https://github.com/yspennstate/math-research-brain/commit/bfe8eafa2194feb32cb3881957ef844b8fe30de0
+  private-brain-repository
 - Brain directory:
   `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B09/20261011T195500Z-fleet01-B09-biased-restriction-uncertainty/`
 - Original script: `check_biased_and_counterexample.py`.

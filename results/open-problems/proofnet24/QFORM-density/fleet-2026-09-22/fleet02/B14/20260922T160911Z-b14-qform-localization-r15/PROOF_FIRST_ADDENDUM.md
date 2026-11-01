@@ -176,8 +176,8 @@ No claim is made that fleet01/B06's current `1/|Cu|` kernel has already been con
 
 ## 8. Source pins
 
-- owner continuation: `QFORM-PROOF-FIRST-20260922T161801Z`, source `yspennstate/math-research-brain@10695e7784b41c0a2bf1a5e61a93cbc8cfc66564`;
-- correction snapshot before this write: `yspennstate/math-research-brain@29e91087236ca7ebeaa5d6b64e42adc450cba975`;
+- owner continuation: `QFORM-PROOF-FIRST-20260922T161801Z`, source `private-brain-repository@10695e7784b41c0a2bf1a5e61a93cbc8cfc66564`;
+- correction snapshot before this write: `private-brain-repository@29e91087236ca7ebeaa5d6b64e42adc450cba975`;
 - assigned partner applied: fleet03/B14 `private-source-repository@871a2d4c9f1ea58d89748ab1abab05021b4408de`;
 - compatible arbitrary-offset triangle peer: fleet01/B14 `private-source-repository@2ad67886f215eff6f3daed247871a882a6f0314b`;
 - curved-coarea synthesis peer: fleet01/B06 `private-source-repository@1bc95193312b70572b2765529ac3b6d98e3fe754`;

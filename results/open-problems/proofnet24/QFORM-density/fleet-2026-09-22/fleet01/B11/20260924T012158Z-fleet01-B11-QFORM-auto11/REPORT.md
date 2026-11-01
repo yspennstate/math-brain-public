@@ -13,7 +13,7 @@ The unrestricted owner target remains OPEN. No Gaussian, log-concavity, moment, 
 
 ## 1. Fresh source state
 
-Fresh `math-research-brain/main` control was read at the start and again immediately before publication. The current owner control remains revision `2026-09-22.15`, QFORM-only, and `CLAIMS.json` still marks `QFORM-FULL` and the full continuous-representative claim OPEN.
+Fresh `private-brain/main` control was read at the start and again immediately before publication. The current owner control remains revision `2026-09-22.15`, QFORM-only, and `CLAIMS.json` still marks `QFORM-FULL` and the full continuous-representative claim OPEN.
 
 The immediate predecessor for this slot is:
 

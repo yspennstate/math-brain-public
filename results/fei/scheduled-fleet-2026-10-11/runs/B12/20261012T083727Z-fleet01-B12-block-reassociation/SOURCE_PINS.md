@@ -17,7 +17,7 @@
   `private-source-repository@e5a81561e90069c06ef245e4a2d3ec968713b7c5`,
   `reports/fei-2026-10-11/runs/B12/20261012T074154Z-fleet01-B12-shared-four-channel/`.
 - Brain predecessor mirror final commit
-  `yspennstate/math-research-brain@bc3857b1f66c464c4d204fbe9d7d75fce833a3e0`,
+  `private-brain-repository@bc3857b1f66c464c4d204fbe9d7d75fce833a3e0`,
   `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B12/20261012T074154Z-fleet01-B12-shared-four-channel/`.
 - The present block identity uses the exact definitions and proof in the
   predecessor `SHARED_FOUR_CHANNEL.tex`; no registry label was substituted

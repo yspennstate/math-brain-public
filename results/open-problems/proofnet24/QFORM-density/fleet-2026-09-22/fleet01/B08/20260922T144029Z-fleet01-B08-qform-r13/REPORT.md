@@ -11,7 +11,7 @@
 
 The target remains the full arbitrary-product-law statement: independent real `X_i` with densities `0<=f_i<=1`, real symmetric `A`, and at least three eigenvalues of `A` of modulus at least one. No moments, support regularity, sign restriction, or post-rotation independence is assumed.
 
-Fresh control was read from `yspennstate/math-research-brain` main, initially at `bb31f4fe59319fd29922dbd4ae21528c5bf91bbc`; the prepublication head observed was `8af8b62de2a0d44f7ba57c9f737a5bf787c94ed1`, with unchanged owner revision `2026-09-22.5` and no later stop. Live corrections consumed include the failure of law-uniform pointwise quadratic-phase decay, fiber-supremum dimension loss, loss of independence after rotation, the false one-cross-minor/local-cut dichotomies, and the conditional-density-cap counterexamples. None is used as a premise.
+Fresh control was read from `private-brain-repository` main, initially at `bb31f4fe59319fd29922dbd4ae21528c5bf91bbc`; the prepublication head observed was `8af8b62de2a0d44f7ba57c9f737a5bf787c94ed1`, with unchanged owner revision `2026-09-22.5` and no later stop. Live corrections consumed include the failure of law-uniform pointwise quadratic-phase decay, fiber-supremum dimension loss, loss of independence after rotation, the false one-cross-minor/local-cut dichotomies, and the conditional-density-cap counterexamples. None is used as a premise.
 
 The named completed partner result actually applied is **fleet02/B08** `QFORM-DIFFUSE-RANGE-FRACTIONAL-MSS-v1`, canonical report
 

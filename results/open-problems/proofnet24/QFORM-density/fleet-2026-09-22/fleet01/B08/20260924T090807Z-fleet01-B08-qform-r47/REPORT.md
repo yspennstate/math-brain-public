@@ -12,7 +12,7 @@ The unrestricted conjecture remains OPEN. Full-target continuity remains OPEN. T
 
 ## 1. Fresh premises and designated partner
 
-Fresh owner control was read from `yspennstate/math-research-brain/main`; the live owner revision remains `2026-09-22.15`, QFORM-only. The programme MANIFEST, CURRENT_RESEARCH, CLAIMS, live CORRECTION_INBOX, MEMORY_PROTOCOL and this B08 assignment were reread. Repository transport is not native learned-memory ingestion.
+Fresh owner control was read from `private-brain-repository/main`; the live owner revision remains `2026-09-22.15`, QFORM-only. The programme MANIFEST, CURRENT_RESEARCH, CLAIMS, live CORRECTION_INBOX, MEMORY_PROTOCOL and this B08 assignment were reread. Repository transport is not native learned-memory ingestion.
 
 The immediate own input is r43,
 

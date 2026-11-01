@@ -269,7 +269,7 @@ The new result narrows the additional-eigenvalue issue: once seven physical squa
 
 ## 9. Source pins
 
-- Control source read at start: `yspennstate/math-research-brain@fc919bb6362788e5e61ad24963aa37a118ecc720`.
+- Control source read at start: `private-brain-repository@fc919bb6362788e5e61ad24963aa37a118ecc720`.
 - Designated partner: `private-source-repository@c307f81b3196820aa711a5c47f243feeeeb74781`.
 - Finite-core projected-gradient theorem: `private-source-repository@7f2c9f4c2dfeb6134d9291eb7e83b62a9cb4b3b0`.
 - One-scale ridge theorem: `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`.

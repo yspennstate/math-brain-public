@@ -11,7 +11,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Source boundary and mechanism change
 
-Fresh owner control on `yspennstate/math-research-brain/main` remains revision `2026-09-22.15`, QFORM-only. The unrestricted theorem remains open.
+Fresh owner control on `private-brain-repository/main` remains revision `2026-09-22.15`, QFORM-only. The unrestricted theorem remains open.
 
 I initially tried to prove a zero-self Schur-row random-slope theorem from scratch. A source search found that the analytic mechanism itself is already completed in fleet02/B14 r33:
 

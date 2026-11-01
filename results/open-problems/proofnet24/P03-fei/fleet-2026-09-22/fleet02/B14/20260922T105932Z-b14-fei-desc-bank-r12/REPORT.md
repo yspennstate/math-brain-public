@@ -10,7 +10,7 @@
 
 This report follows owner programme `FEI-ALL-TEAM-20260922T095941Z`, control revision `2026-09-22.3`, and the B14 assignment card at
 
-`yspennstate/math-research-brain`, commit `ef48b20c75f0d87589f8ec1aaffa41e7340591e9`,
+`private-brain-repository`, commit `ef48b20c75f0d87589f8ec1aaffa41e7340591e9`,
 
 The current universal target is still to prove, for one finite dimension-independent constant,
 \[

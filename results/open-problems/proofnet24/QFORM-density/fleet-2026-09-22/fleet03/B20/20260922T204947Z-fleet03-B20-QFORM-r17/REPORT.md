@@ -4,7 +4,7 @@ attacking: the freshest balanced two-arm hub survivor by combining fleet01/B20 d
 # fleet03/B20 QFORM r17 — same-sign hub repivot closure
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
-**Start control source:** `yspennstate/math-research-brain@f24887ffa34adb07615288708fdb4801dfe0f466`, owner revision `2026-09-22.15`.  
+**Start control source:** `private-brain-repository@f24887ffa34adb07615288708fdb4801dfe0f466`, owner revision `2026-09-22.15`.  
 **Classification:** `ESSENTIAL_STEP_APPLIED / FRESH TWO-ARM SUBBRANCH CLOSED / FULL_TARGET_OPEN`.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.  
 **Continuity:** this argument proves an essential density bound on its paid branch; continuity is not asserted.

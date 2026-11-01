@@ -6,7 +6,7 @@ attacking: the designated-partner diffuse two-star curvature survivor — absorb
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** coordinate minor selection / quantitative inequalities and rigorous computations  
 **Run:** `20260923T104247Z-fleet03-B07-qform-r32`  
-**Fresh brain main at final prepublication refresh:** `yspennstate/math-research-brain@44bb344ed07c05bea06b07141a264c0468f9c703`  
+**Fresh brain main at final prepublication refresh:** `private-brain-repository@44bb344ed07c05bea06b07141a264c0468f9c703`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`  
 **Status:** `NEW_SUPPORTING_CURVATURE_COMPILER / DESIGNATED_PARTNER_APPLIED / CONTINUOUS_VOLUME_SUBBRANCH_PAID / CONCENTRATED_PHYSICAL-CORE_SUBBRANCH_PAID / FULL_QFORM_OPEN / FULL_CONTINUITY_OPEN`.
 

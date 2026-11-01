@@ -6,7 +6,7 @@ Source theorem under audit: candidate 17-eigenvalue theorem only; no claim about
 
 ## Source pin and package read
 
-I read fresh `math-research-brain/main/AGENTS.md` and `scheduled_tasks/CURRENT_OBJECTIVE.md` before the mathematics and created only my own actual sign-in.
+I read fresh `private-brain/main/AGENTS.md` and `scheduled_tasks/CURRENT_OBJECTIVE.md` before the mathematics and created only my own actual sign-in.
 
 The audited manuscript is pinned to
 

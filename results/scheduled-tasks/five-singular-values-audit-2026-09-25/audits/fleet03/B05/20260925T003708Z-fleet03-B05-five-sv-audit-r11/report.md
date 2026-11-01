@@ -3,7 +3,7 @@
 ## Source and control
 
 - Objective: `QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925`.
-- Fresh control head at invocation: `yspennstate/math-research-brain@6057334145e5f75c6fe6328524a567f56ad64b46`; OWNER CONTROL revision `2026-09-25.1`.
+- Fresh control head at invocation: `private-brain-repository@6057334145e5f75c6fe6328524a567f56ad64b46`; OWNER CONTROL revision `2026-09-25.1`.
 - Exact immutable source: `private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c`.
 - LaTeX: `proofnet24/QFORM-density/five-eigenvalues-paper-2026-09-25/short/short.tex`, blob `c4f2a997cf336ee974e15409b5bccdd8cca039d8`, 676 physical source lines including trailing blank.
 - PDF: `short/short.pdf`, blob `8be3aae36ecad7a9dc9b7c95978aad09499f32d0`, 484310 bytes, SHA-256 `4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423`, 14 pages.

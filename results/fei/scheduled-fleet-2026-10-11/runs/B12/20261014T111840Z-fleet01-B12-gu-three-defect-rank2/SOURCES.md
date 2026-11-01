@@ -1,7 +1,7 @@
 # Source pins
 
 - GU focus directive:
-  `yspennstate/math-research-brain/main/scheduled_tasks/work/shared/full-fei-only-2026-10-12/GU_LASER_FOCUS_20261014.md`,
+  `private-brain-repository/main/scheduled_tasks/work/shared/full-fei-only-2026-10-12/GU_LASER_FOCUS_20261014.md`,
   blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
 - B12 compact contract:
   `private-source-repository/master/reports/fei-2026-10-11/assignments/B12.json`,

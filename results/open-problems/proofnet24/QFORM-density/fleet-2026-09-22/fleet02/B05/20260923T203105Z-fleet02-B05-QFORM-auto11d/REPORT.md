@@ -13,7 +13,7 @@ The same-hour canonical B05 login already existed and was preserved rather than 
 
 ## 1. Fresh correction and first unpaid implication
 
-The newest control-side correction read before this proof is `math-research-brain@9b2a00d3afd0f89b61178accaabbf20b5b480a23`: the proposed genuine-product twisted Wiener quantity `J(1)` is unbounded even for smooth independent cap-one inputs in a fixed orthonormal frame. That is an interface counterexample, not a QFORM counterexample. In particular the punctured small-coupling problem must not be closed by taking an absolute Fourier/Wiener norm before using the curved geometry.
+The newest control-side correction read before this proof is `private-brain@9b2a00d3afd0f89b61178accaabbf20b5b480a23`: the proposed genuine-product twisted Wiener quantity `J(1)` is unbounded even for smooth independent cap-one inputs in a fixed orthonormal frame. That is an interface counterexample, not a QFORM counterexample. In particular the punctured small-coupling problem must not be closed by taking an absolute Fourier/Wiener norm before using the curved geometry.
 
 The fresh replacement input is the proved two-bank curved-tube theorem
 

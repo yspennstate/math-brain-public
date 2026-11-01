@@ -11,7 +11,7 @@ Continuity: full-target continuity remains OPEN. The new payments below inherit 
 
 ## 1. Fresh source boundary
 
-Fresh brain control at login resolved to `yspennstate/math-research-brain@21c31d31d8f7a2084e5f8a4cfa2f2616e564b2c9`; owner control remains revision `2026-09-22.15`, QFORM-only.
+Fresh brain control at login resolved to `private-brain-repository@21c31d31d8f7a2084e5f8a4cfa2f2616e564b2c9`; owner control remains revision `2026-09-22.15`, QFORM-only.
 
 The immediate assembly input is fleet03/B19 r42:
 

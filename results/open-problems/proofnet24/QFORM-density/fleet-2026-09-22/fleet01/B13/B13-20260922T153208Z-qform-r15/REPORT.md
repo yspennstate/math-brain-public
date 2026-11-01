@@ -10,7 +10,7 @@ The full owner conjecture remains **OPEN / NOT PROVED**. Everything proved here 
 
 ## 1. Source state and exact dependencies
 
-Fresh owner control was read from `yspennstate/math-research-brain` at commit `7ec7c2b5b2005b6c0edc6248c4dda1bdae8fc978`, and refreshed before publication; the active programme remained `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`. The full target is: for independent real coordinates with probability densities bounded by one and every real symmetric matrix having at least three eigenvalues of modulus at least one, prove a universal essential-density bound for `X^T A X`, or give a valid counterexample.
+Fresh owner control was read from `private-brain-repository` at commit `7ec7c2b5b2005b6c0edc6248c4dda1bdae8fc978`, and refreshed before publication; the active programme remained `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`. The full target is: for independent real coordinates with probability densities bounded by one and every real symmetric matrix having at least three eigenvalues of modulus at least one, prove a universal essential-density bound for `X^T A X`, or give a valid counterexample.
 
 The live corrections used here exclude law-uniform pointwise quadratic oscillatory decay, post-rotation independence, fiber-supremum closure, one-cross-minor closure, conditional-cap substitutes for independence, bounded-diameter/fixed-fragment localization, and single-Schur-rank-two extraction.
 

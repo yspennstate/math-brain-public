@@ -6,7 +6,7 @@ attacking: QFORM-O3-TWO-INTERNAL-RANK2-BANKS-ROUTING-v1 — extract a product-pr
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Universal proof assembly  
 **Fresh owner control:** revision `2026-09-22.15`  
-**Control main observed at startup:** `yspennstate/math-research-brain@01cd2bed706607ca647497ead5b4f28ee81a9ef0`  
+**Control main observed at startup:** `private-brain-repository@01cd2bed706607ca647497ead5b4f28ee81a9ef0`  
 **Classification:** `ESSENTIAL_STEP_APPLIED / PROVED TARGET-LEVEL SUBBRANCH AND STRUCTURAL DICHOTOMY / FULL TARGET OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`, `full_brain_connected=false`.
 

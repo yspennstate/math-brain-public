@@ -11,7 +11,7 @@ Execution status: `WITHOUT_VERIFIED_BRAIN`.
 
 Fresh owner-control repository at invocation:
 
-- `yspennstate/math-research-brain@04766c985e54f75e3e0bbac8b14256cd804e6394`.
+- `private-brain-repository@04766c985e54f75e3e0bbac8b14256cd804e6394`.
 - `AGENTS.md` / `CURRENT_OBJECTIVE.md` make the fixed-multiplicity audit/reduction objective later than, and therefore controlling over, the older unstructured three-eigenvalue slot prompt.
 
 Pinned baseline manuscript:

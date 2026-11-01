@@ -13,7 +13,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 
 The full target is unchanged: for every finite `n`, every independent real `X_i` with densities bounded by one, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove that `Q=X^TAX` has a density bounded by one universal constant, or exhibit a valid counterexample. No moment, support, log-concavity, centering, identical-law, or spectral-coordinate independence assumption is available.
 
-Fresh control was read from `yspennstate/math-research-brain/main` at start commit
+Fresh control was read from `private-brain-repository/main` at start commit
 `12cf271a0a54404d06f9cd54cc0630bc7a0fdc68` and refreshed before publication at
 
 The following corrections are retained throughout:

@@ -7,7 +7,7 @@
 
 ## 0. Fresh control, later-owner precedence, and live target
 
-Fresh `math-research-brain` main was resolved at invocation start to
+Fresh `private-brain` main was resolved at invocation start to
 
 The inherited conditional deduction is therefore:
 
