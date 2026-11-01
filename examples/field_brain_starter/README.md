@@ -113,7 +113,9 @@ apply it). If it will not matter, stop."}
 ```
 
 Both runtimes read that as one more step, so the agent files the record before it stops. It asks once a session;
-a second lesson in the same session passes silently. With `BRAIN_WRITE_BACK=queue` it never holds the agent up and
+a second lesson in the same session passes silently. It also stays silent when any record in `memory/` changed in
+the last two hours, taking that as the lesson already filed, so a hand test run just after writing records prints
+nothing (`WINDOW` at the top of the hook sets the two hours). With `BRAIN_WRITE_BACK=queue` it never holds the agent up and
 appends the line to `memory/WRITE_BACK_QUEUE.md` instead:
 
 ```
