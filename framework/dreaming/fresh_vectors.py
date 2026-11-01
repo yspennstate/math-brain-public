@@ -77,6 +77,29 @@ def checked_encoder(emb, mem, builder, reb):
     return enc, "onnx export, checked on 3 sidecar rows (worst cosine %.7f)" % worst
 
 
+class LocalEncoder:
+    """The sidecar builder's own sentence-transformers model, for an install without an ONNX export.
+
+    The faster encoder lives in embedding_refresh/refresh_embeddings_box.py, which is specific to the machine that
+    builds the reference sidecar and is not shipped. Without it this run uses the same model the sidecar was built
+    with (build_memory_embeddings._box_encoder_factory). checked_encoder still requires it to reproduce three
+    sidecar rows to cosine 0.9999 before anything is written, so a different model or version is refused."""
+
+    def __init__(self, builder, model_name):
+        self.builder, self.model_name = builder, model_name
+
+    def _onnx_encoder(self):
+        return self.builder._box_encoder_factory(self.model_name)
+
+
+def pick_encoder_source(builder, model_name):
+    """refresh_embeddings_box when it is installed, else the local sentence-transformers model."""
+    try:
+        return __import__("refresh_embeddings_box")
+    except ImportError:
+        return LocalEncoder(builder, model_name)
+
+
 def main():
     dry = "--dry" in sys.argv
     out = sys.argv[sys.argv.index("--out") + 1] if "--out" in sys.argv else OUT
@@ -128,8 +151,11 @@ def main():
         log("dry: " + msg)
         return 0
     if need:
-        reb = __import__("refresh_embeddings_box")
-        enc, why = checked_encoder(emb, sr.MEM, builder, reb)
+        reb = pick_encoder_source(builder, sr.EXPECTED_EMB_MODEL)
+        try:
+            enc, why = checked_encoder(emb, sr.MEM, builder, reb)
+        except builder.EncoderUnavailable as exc:
+            enc, why = None, str(exc)
         if enc is None:
             log("encoder unusable (%s); overlay left as it is. %s" % (why, msg))
             return 3

@@ -1,8 +1,8 @@
 #!/usr/bin/env python3
 """Build the offline semantic sidecar consumed by ``spread_recall``.
 
-The production model is BAAI/bge-small-en-v1.5 and belongs on the Azure box, not on the
-crash-prone laptop.  The online hook only loads the resulting ~2 MB NPZ and performs dot
+The production model is BAAI/bge-small-en-v1.5. Run the build where the model fits in memory; on a
+small or busy machine, build elsewhere and copy the NPZ.  The online hook only loads the resulting ~2 MB NPZ and performs dot
 products, so no model is needed at recall time.
 
 The model-output staging schema v2 is deliberately self-auditing::
@@ -400,7 +400,8 @@ def _box_encoder_factory(model_name):
         from sentence_transformers import SentenceTransformer
     except Exception as exc:
         raise EncoderUnavailable(
-            "sentence-transformers is not importable here; run the encode step on the Azure box"
+            "sentence-transformers is not importable here; pip install sentence-transformers, or run the "
+            "encode step on a machine that has it and copy the NPZ"
         ) from exc
     model = SentenceTransformer(model_name)
 
