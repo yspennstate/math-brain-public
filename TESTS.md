@@ -66,6 +66,12 @@ Sixty questions asked for exact counts of constrained self-avoiding walks that a
 
 Proof audits with a planted fault, with served notes from the brain against notes matched in kind and size but scrambled: 128 against 117 of 160 (18 to 7, p = 0.043), replicated on a second bank, so what the notes say matters. Whether having served notes beats having none did not show in the same setting: 80.0 against 77.4 percent at 150 items (p = 0.50), and 301 against 299 of 358 in the powered run.
 
+## Corrections, and a plan test (October and November 2026)
+
+Of the 1,137 cards in the math store that supersede an earlier card, 139 correct what a card said for a stated reason. The rest are labels, formula repair, duplicates, re-harvests, re-reads of extracted text, retirements and plain revisions. In a sample of 30 of the 139, 19 plainly changed the meaning.
+
+In a preregistered test with a blind judge, at eight cut-offs on two open problems, a plan written with a digest of what the store held on the problem was preferred 7 of 8 times, on target 10 against 6, with redundant or dead-end steps 8 against 17. It judged plans and not proofs.
+
 ## Silence, fusion and long records (October and November 2026)
 
 - A rule for when to say nothing: on 2,000 questions the store can answer and 60 it cannot, a simple word-score threshold has AUC 0.997 and 6.4 percent false silences. Prototype rules built on the meaning channel did worse, with 27 to 37 percent.
