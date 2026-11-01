@@ -40,6 +40,9 @@ Made from the field brain starter. The store is empty; the scripts are the start
 
 ## First day
 
+The commands here are written `python3`. On Windows type `py -3` or `python` instead: on a new Windows machine
+`python3` usually opens the Microsoft Store rather than running Python.
+
 1. Write the first ten records with `new_record.py`, from what the team has already paid to learn: decisions and
    who made them, the policies agents keep getting wrong, the incidents that cost the most and the check that would
    have caught each, and where the documents that matter live. One fact a record, with its reason.

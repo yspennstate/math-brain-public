@@ -6,6 +6,9 @@ invented documentary studio, a search tool, and a ten-question test that measure
 Copy the folder, replace the records with your own, and you have the beginning of a brain for a company, a film
 production, a lab or a support desk.
 
+The commands here are written `python3`. On Windows type `py -3` or `python` instead: on a new Windows machine
+`python3` usually opens the Microsoft Store rather than running Python.
+
 ## What is here
 
 | file | what it is |
