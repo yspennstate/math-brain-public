@@ -3,7 +3,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is n
 # NM13-05 — P0411 Section-I stuck report: literal-u source diagnosis and recovery choice
 
 Run date: 2026-09-19.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Worker / namespace: `NM13-05` / `proofnet24/NM13-05/`.  
 Category: **CLOSABLE OUTSIDE**.  
 Canonical source / claim ID: `P0411`.  

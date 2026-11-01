@@ -21,7 +21,7 @@ The first genuinely unpaid implication is not existence of analytic currency: it
 
 Use fleet03/B08 `QFORM-E2-LP-DENSITY-v1`, source
 
-`yspennstate/math-open-problems@2cb64b71f8aafa0892547dffebcf6af647ea7c64:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T102108Z-fleet03-B08-qform-diffuse-r32/REPORT.md`.
+`private-source-repository@2cb64b71f8aafa0892547dffebcf6af647ea7c64:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T102108Z-fleet03-B08-qform-diffuse-r32/REPORT.md`.
 
 For any `2<=p<5/2`, put `q=p/(p-1)`, so `5/3<q<=2`. The theorem gives for a literal physical cross block `M`
 

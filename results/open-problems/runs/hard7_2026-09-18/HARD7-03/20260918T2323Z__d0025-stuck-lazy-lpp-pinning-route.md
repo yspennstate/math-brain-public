@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — **no moveme
 
 # HARD7-03 — Section-I stuck recovery 1: the K=2 problem as columnar lazy LPP, why the direct K=1 port fails, and the pinning route that remains
 
-Date: 2026-09-18/19 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-18/19 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / source residual remains OPEN_BY_BOUNDED_SEARCH.** This is the mandatory thinking/stuck run after three consecutive executions with unchanged source metric. It records no new source-level theorem and creates no checker-only artifact. The mathematical work is a route diagnosis and a change of mechanism.
 

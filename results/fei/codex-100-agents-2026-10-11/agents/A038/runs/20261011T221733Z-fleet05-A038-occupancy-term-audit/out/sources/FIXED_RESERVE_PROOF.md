@@ -14,20 +14,20 @@ The current owner control is revision `2026-09-22.3`, programme `FEI-ALL-TEAM-20
 
 The exact sources used are:
 
-1. **Influence I-projection / Boolean-dependence credit:** `yspennstate/math-open-problems@4bd6d05f1eb8325d665f2748f4d74dcee2550a04:proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`, Theorems 2.1 and 3.1 and Section 4. For the nonempty spectral law `P` with occurrence marginals `r`,
+1. **Influence I-projection / Boolean-dependence credit:** `private-source-repository@4bd6d05f1eb8325d665f2748f4d74dcee2550a04:proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`, Theorems 2.1 and 3.1 and Section 4. For the nonempty spectral law `P` with occurrence marginals `r`,
    \[
    K_{\rm occ}=H_{\max}(r)-H(P)\ge0.
    \]
-2. **Preceding B01 signed-transfer identity:** `yspennstate/math-open-problems@374c4874e914c7414abc9109fadf77cfc3947298:proofnet24/P03-fei/fleet-2026-09-22/fleet01/B01/20260922T103250Z-fleet01-B01-fei-r11/REPORT.md`. It defined
+2. **Preceding B01 signed-transfer identity:** `private-source-repository@374c4874e914c7414abc9109fadf77cfc3947298:proofnet24/P03-fei/fleet-2026-09-22/fleet01/B01/20260922T103250Z-fleet01-B01-fei-r11/REPORT.md`. It defined
    \[
    A_{\Gamma,\lambda}=D_\Gamma-\lambda C,\qquad C=vK_{\rm occ},
    \]
    and the exact physical-restriction recursion with signed transfer `Xi_j`.
-3. **Named assigned partner result consumed:** `yspennstate/math-open-problems@ed6d63ec14a43ed8d4e595bb3f9cb6ac2d42db72:proofnet24/P03-fei/fleet-2026-09-22/fleet02/B01/20260922T110344Z-fleet02-B01-fei-r18/REPORT.md`. Its exact two-gate Farkas calculation shows the current singleton-safe shaped family is already squeezed to the center scale `6.55844528...`; in particular the current source candidate center is
+3. **Named assigned partner result consumed:** `private-source-repository@ed6d63ec14a43ed8d4e595bb3f9cb6ac2d42db72:proofnet24/P03-fei/fleet-2026-09-22/fleet02/B01/20260922T110344Z-fleet02-B01-fei-r18/REPORT.md`. Its exact two-gate Farkas calculation shows the current singleton-safe shaped family is already squeezed to the center scale `6.55844528...`; in particular the current source candidate center is
    \[
    C_*=6.5584452830718243825\ldots<7.
    \]
-4. **Boundary desingularization:** `yspennstate/math-open-problems@74e1f1da10b68c92ae3eaf6edf4f5990c8e8f2fc:proofnet24/P03-fei/fleet-2026-09-22/fleet03/B04/20260922T105911Z-boundary-bellman-desingularization/REPORT.md`, Theorem 4.1. It proves that selector-bias faces do not themselves create a `1/s` blow-up after the exact Poincare factor is cancelled.
+4. **Boundary desingularization:** `private-source-repository@74e1f1da10b68c92ae3eaf6edf4f5990c8e8f2fc:proofnet24/P03-fei/fleet-2026-09-22/fleet03/B04/20260922T105911Z-boundary-bellman-desingularization/REPORT.md`, Theorem 4.1. It proves that selector-bias faces do not themselves create a `1/s` blow-up after the exact Poincare factor is cancelled.
 
 The new obstruction below is at **uniform input bias** and therefore is orthogonal to the boundary singularity resolved in item 4.
 

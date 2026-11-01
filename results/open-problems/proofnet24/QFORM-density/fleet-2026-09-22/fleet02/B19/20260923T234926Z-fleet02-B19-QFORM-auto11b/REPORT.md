@@ -15,7 +15,7 @@ The target remains: independent original real coordinates `X_i`, each with a pro
 
 The designated partner actually used is fleet03/B19 r43:
 
-`yspennstate/math-open-problems@39db1d98a37e71ccc28619a59bc53b79d1be8408`
+`private-source-repository@39db1d98a37e71ccc28619a59bc53b79d1be8408`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T220120Z-fleet03-B19-QFORM-r43/REPORT.md`.
 
@@ -27,7 +27,7 @@ The same report proves that a principal-minimal full matrix has exactly three th
 
 The owner-required frozen source was reread at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its proved Theorem F is applied in Section 6 below at a real density inequality.
 

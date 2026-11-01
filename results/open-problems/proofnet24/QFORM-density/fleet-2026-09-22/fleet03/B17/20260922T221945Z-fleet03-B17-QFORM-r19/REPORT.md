@@ -20,7 +20,7 @@ This report does not use the refuted arbitrary-joint rank-three coarea bound, th
 
 The designated partner `fleet04/B17` completed a local Edgeworth/coarea theorem for exact three-bank rotated uniform witnesses:
 
-- repository: `yspennstate/math-open-problems`;
+- repository: `private-source-repository`;
 - full commit: `2156b76156ad5956c214a881fcfd6d977d6f3b9f`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`.
 

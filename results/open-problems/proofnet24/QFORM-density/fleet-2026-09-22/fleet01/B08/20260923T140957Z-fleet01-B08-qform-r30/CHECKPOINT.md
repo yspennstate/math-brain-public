@@ -47,7 +47,7 @@ This is a full-matrix statement: no complementary spectrum is removed, no random
 
 The current completed partner report `fleet02/B08 r27` is canonical at
 
-`yspennstate/math-open-problems@41ee49f6e9c3383e4c3a322bdc52779768a17eb7`,
+`private-source-repository@41ee49f6e9c3383e4c3a322bdc52779768a17eb7`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T130941Z-fleet02-B08-qform-diffuse-r27/REPORT.md`.
 
 On its inherited selected-three `mu<=1/48` k=1 gate,

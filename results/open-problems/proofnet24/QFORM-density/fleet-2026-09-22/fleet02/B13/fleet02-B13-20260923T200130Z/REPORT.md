@@ -20,7 +20,7 @@ No moment, support, log-concavity, centered-law, single-interval, bounded-fragme
 
 The required pinned source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -38,7 +38,7 @@ The pinned counterexample search reports no valid QFORM counterexample in the te
 
 The latest completed fleet03/B13 result consumed here is
 
-`math-open-problems@e9939918a958611972a1ab80c0d9160850fce276`
+`private-source@e9939918a958611972a1ab80c0d9160850fce276`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T193526Z-fleet03-B13-qform-r33/REPORT.md`,
 
@@ -64,7 +64,7 @@ The report explicitly keeps `E` in the form: coefficient-small is not random-var
 
 I also read the underlying fleet04/B13 proof
 
-`math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
+`private-source@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
 
@@ -442,7 +442,7 @@ The conclusion is a half-potential, not yet the desired density bound. That dist
 
 ### Independent-square subbranch closes immediately
 
-The current independently supplied `INDEPENDENT_V_BANK_THEOREM.md` at math-open-problems commit `010bf3c15ec09171b710b9c715077c5dc3805c32` proves the elementary convolution interface
+The current independently supplied `INDEPENDENT_V_BANK_THEOREM.md` at private-source commit `010bf3c15ec09171b710b9c715077c5dc3805c32` proves the elementary convolution interface
 
 `||p_{R+lambda V^2+gamma V+c}||_infinity`
 ` <= C |lambda|^{-1/2} H_{1/2}(R)`                            (5.4)

@@ -12,7 +12,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The initially planned measure-level affine homogenization is already proved, with the exact universal constant and no moment assumption, by fleet03/B14:
 
-`yspennstate/math-open-problems@6d920f5ad706016d41d3072a2dc6e71a64bc0296`
+`private-source-repository@6d920f5ad706016d41d3072a2dc6e71a64bc0296`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T213400Z-fleet03-B14-QFORM-auto11/REPORT.md`.
 
 That theorem proves that a homogeneous target interval bound with constant `C` implies the same affine-quadratic interval bound for `X^TAX+b^TX+c`, using one far-translated independent cap-one coordinate. It explicitly does **not** obtain continuity through that weak-limit passage. Therefore this run does not duplicate that theorem. It closes the next regularity question instead.
@@ -73,7 +73,7 @@ so `|E_k|=0`. Adding the null critical set shows `|q^{-1}(N)|=0`. Therefore ever
 
 The key input is fleet03/B15 auto32:
 
-`yspennstate/math-open-problems@f4dee8a3ff12ab02f8efd52fb80a0d169b7cd708`
+`private-source-repository@f4dee8a3ff12ab02f8efd52fb80a0d169b7cd708`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260924T032517Z-fleet03-B15-qform-auto32/REPORT.md`.
 
 For fixed rank-at-least-three `A` and coordinate `j`, that report constructs `K(A,j)<infinity` such that, with
@@ -150,7 +150,7 @@ Therefore every smooth compact affine instance with rank-at-least-three Hessian 
 
 Use the cap-preserving approximation theorem from fleet01/B15:
 
-`yspennstate/math-open-problems@48d4e5be4428f09a1972d51bede192357fab1675`
+`private-source-repository@48d4e5be4428f09a1972d51bede192357fab1675`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260924T070755Z-fleet01-B15-QFORM-auto11/REPORT.md`.
 
 Choose `f_{j,k} in C_c^infinity`, `0<=f_{j,k}<=1`, `int f_{j,k}=1`, with
@@ -175,12 +175,12 @@ This is stronger than weak-limit continuity: the output densities themselves con
 
 Use fleet04/B15's completed dense range-aligned family:
 
-`yspennstate/math-open-problems@ae87801238cf5756c153d27fed0bb6524d88ee17`
+`private-source-repository@ae87801238cf5756c153d27fed0bb6524d88ee17`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T231929Z-fleet04-B15-range-aligned-c0-r9/REPORT.md`,
 
 and its same-constant compiler at
 
-`yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`.
+`private-source-repository@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`.
 
 For `m>=1`, `a>=1`, arbitrary real `R in R^{2xm}`, set
 

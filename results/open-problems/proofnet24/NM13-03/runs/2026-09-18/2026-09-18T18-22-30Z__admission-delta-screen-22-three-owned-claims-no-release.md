@@ -5,7 +5,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 Date: 2026-09-18 UTC  
 Track / namespace: `NM13-03` / `proofnet24/NM13-03/`  
 Category: **CLOSABLE OUTSIDE**  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Exclusive shard: `int(SHA256(UTF-8 canonical dedup_key).hexdigest(),16) mod 13 = 2`
 
 ## 1. Runtime and scheduler/control-plane truth

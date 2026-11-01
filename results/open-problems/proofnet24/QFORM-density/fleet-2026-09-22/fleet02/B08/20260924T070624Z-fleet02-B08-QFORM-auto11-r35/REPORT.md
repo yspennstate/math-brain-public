@@ -169,7 +169,7 @@ The newest completed compatible `fleet03/B08` theorem is
 
 `QFORM-PUNCTURED-CROSSSTAR-DOUBLEALIGN-ROUTER-v1`,
 
-canonical mathematics `yspennstate/math-open-problems@19c12072f7e67266ce894042034bcabb9c376bea`.
+canonical mathematics `private-source-repository@19c12072f7e67266ce894042034bcabb9c376bea`.
 
 On its inherited one-hub, diffuse-top-two-child aligned-star collar it proves the following product-safe original-coordinate router. If the child puncture `r=s_3(C_child)` satisfies `r>=L/4096`, then either
 
@@ -257,7 +257,7 @@ This family is a proof-mechanism obstruction, not a QFORM counterexample.
 
 The required pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was read in `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The completed generalized rank-`r` Fresnel--Brascamp--Lieb theorem states that for
 

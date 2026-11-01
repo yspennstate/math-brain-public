@@ -8,7 +8,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`.  Role: projection-product interaction 
 
 The latest completed designated-partner result available at the start of this derivation is fleet03/B16 r23, `QFORM-MIXED-PLUECKER-DOMINANT-STAR-v1`, canonical source
 
-`yspennstate/math-open-problems@7e5413dce1b8aeab65d5a7663a3ede11a8e70f82:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T025235Z-fleet03-B16-QFORM-r23/REPORT.md`.
+`private-source-repository@7e5413dce1b8aeab65d5a7663a3ede11a8e70f82:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T025235Z-fleet03-B16-QFORM-r23/REPORT.md`.
 
 Its unpaid exact-rank-three chamber contains a dominant original-coordinate star with leverage
 
@@ -96,7 +96,7 @@ Separately, the standard two-dimensional product-projection theorem applies to t
 
 Use the required pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, Theorem MF.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, Theorem MF.
 
 Take the heavy set `H={0}` and the leaves `L={1,...,m}`.  The leaf quadratic block is exactly the one spread square `Z^2`, so `r=1`, `lambda=1`, and the augmented leaf rows in Theorem MF are
 

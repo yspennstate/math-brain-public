@@ -13,22 +13,22 @@ attacking: the co-heavy two-rank-two aggregate obstruction by an exact generaliz
 
 
 The immediate exact-rank-three source is fleet03/B19 r22,
-`yspennstate/math-open-problems@d0d68512c0e8ddaa3893134fdfc03e2214a751aa`,
+`private-source-repository@d0d68512c0e8ddaa3893134fdfc03e2214a751aa`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T020435Z-fleet03-B19-QFORM-r22/REPORT.md`.
 It reduces a 1+2+2 O3 chamber to one rank-one source bank and two rank-two source banks, and in the failed-grouped-exit chamber gives the exact transverse quantities used below.
 
 The newest complementary co-heavy source is fleet01/B19 r12,
-`yspennstate/math-open-problems@8519812f42a34ba2612f61ff2d4c8fbbfad8c6ee`,
+`private-source-repository@8519812f42a34ba2612f61ff2d4c8fbbfad8c6ee`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260923T025504Z-fleet01-B19-QFORM-r12/REPORT.md`.
 It shows that small individual grouped determinants do not force a single good physical row; instead co-heavy rows concentrate on the common intersection line of the two rank-two source planes.
 
 The designated partner actually used is fleet04/B20 r4,
-`yspennstate/math-open-problems@f97aa31585b7b547a116d4580f898576af4e0842`,
+`private-source-repository@f97aa31585b7b547a116d4580f898576af4e0842`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T011956Z-fleet04-B20-QFORM-r4/REPORT.md`.
 Its cap-sensitive partitioned cross-transverse inequality is applied at an actual numerical scale in Section 5.
 
 The rank-one-bank Schur theorem used for the complementary endpoint is fleet03/B19 r19, immutable at
-`yspennstate/math-open-problems@2492c23f859cfea78eb7b1c74f45ae4c5611de87`,
+`private-source-repository@2492c23f859cfea78eb7b1c74f45ae4c5611de87`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T223200Z-fleet03-B19-QFORM-r19/REPORT.md`.
 
 No post-rotation independence, arbitrary-joint coarea, conditional-cap-as-independence, law-uniform pointwise Fresnel decay, one-good-minor selection, or small-coefficient perturbation is used.

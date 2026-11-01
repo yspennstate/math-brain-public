@@ -32,7 +32,7 @@ Fresh owner control was reread before publication: revision `2026-09-22.15`, QFO
 
 The previous B01 report
 
-`yspennstate/math-open-problems@acabb94da43b40201ac8633cebad6b817ce679e3`
+`private-source-repository@acabb94da43b40201ac8633cebad6b817ce679e3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T040513Z-fleet01-B01-qform-auto11/REPORT.md`
 
@@ -54,7 +54,7 @@ The exponent `-1` is exactly nonintegrable; by itself it yields fractional smoot
 
 The newest completed designated partner at publication refresh is
 
-`yspennstate/math-open-problems@a9cb334579e92753035a96d258fa94cac01cdbfc`
+`private-source-repository@a9cb334579e92753035a96d258fa94cac01cdbfc`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T160109Z-fleet02-B01-qform-r46/REPORT.md`.
 

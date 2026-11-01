@@ -10,7 +10,7 @@ Current objective: QFORM-FIXED-MULTIPLICITY-AUDIT-20260924, owner control revisi
 
 I compared the pair arguments in:
 - standalone paper: proofnet24/QFORM-density/nine-eigenvalues-paper-2026-09-24/paper.tex (blob 823201f05363fcc60c38cce0feb5abb636f081d7);
-- independent interactive synthesis: yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f, proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex (blob 19fb119877426b640b2c0dae19ec2f78a399fe11).
+- independent interactive synthesis: private-source-repository@eeb752c8943536541b34b42b8bf48e924f4d3d2f, proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex (blob 19fb119877426b640b2c0dae19ec2f78a399fe11).
 
 Both give the same deterministic physical-pair statements. A definite pair with joint density cap M has output density <= pi M/sqrt(|det B|). For an indefinite pair, D=|det B|>0,
 [
@@ -19,7 +19,7 @@ p(z)le D^{-1/2}left(6+log_+rac{16sqrt D}{|z-v|}ight)
 a.e. I rechecked the hyperbolic parametrization, Jacobian 1/(2 sqrt D), original-coordinate tail monotonicity, cap-one half-line bathtub step, and AM-GM Lambda>=2/sqrt D. The positive and negative tails may use different original coordinates; neither proof assumes otherwise. The two write-ups agree on this mechanism. Existing Lean checks cover the elementary constants/derivative identities, not the full coarea/change-of-variables theorem.
 
 Partner actually applied below:
-fleet04/B13, yspennstate/math-open-problems@0d1dd8180db0e205cab284c51b178af425e5c7f1, INDEFINITE_PAIR_274.md.
+fleet04/B13, private-source-repository@0d1dd8180db0e205cab284c51b178af425e5c7f1, INDEFINITE_PAIR_274.md.
 
 ## New parameter tuple
 

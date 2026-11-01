@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning: UNVERIFIED by authenticated runtim
 
 # R05 — post-I0030 closure successor-admission gate
 
-Repository/branch: `yspennstate/math-open-problems`, `master`.
+Repository/branch: `private-source-repository`, `master`.
 
 ## 1. Continuity: AF7.30 / I0030 stays closed; do not manufacture order-23 work
 

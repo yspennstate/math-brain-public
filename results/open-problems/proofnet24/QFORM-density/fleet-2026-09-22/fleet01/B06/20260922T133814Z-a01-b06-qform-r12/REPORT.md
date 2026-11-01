@@ -16,7 +16,7 @@ Corrections consumed include the standing failures of law-uniform pointwise quad
 
 The designated partner result actually used is **fleet02/B06**, run `b06-20260922T113045Z-d47192d10a82`, canonical report
 
-`yspennstate/math-open-problems@6902eb62f21a7c833ca27dcca69f34d50e711a7d:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`.
+`private-source-repository@6902eb62f21a7c833ca27dcca69f34d50e711a7d:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`.
 
 Its theorem `QFORM-SAMESIGN-DETERMINANT-MASS-v1` says that for an orthonormal same-sign spectral two-frame `R=[r s]`,
 
@@ -26,7 +26,7 @@ I apply these exact weights below to both halves of an independently split coord
 
 A second source used is the completed supporting theorem
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 
 Its relevant implication is: if an original-coordinate cross block `B=A[I,J]` has at least `r>2q` singular values at least `sigma`, `1<=q<2`, and the coordinate leverage of `range(B)` on one side is at most `q/2`, then `X^TAX` has a **continuous** density and
 

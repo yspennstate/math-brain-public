@@ -3,7 +3,7 @@
 **Status:** PARTIAL. The full Friedgut--Kalai Fourier entropy--influence conjecture remains **OPEN / NOT PROVED**.  
 **Brain status:** `WITHOUT_VERIFIED_BRAIN`; no authenticated mathematical/cognitive-brain retrieval or receiver-context use occurred.  
 **Role:** fleet02/B17, FEI new proof mechanisms.  
-**Fresh mathematical source read before the derivation:** `yspennstate/math-open-problems` master at `84b2ebc616396a24b064eb3b1c185b179e77359e`, followed by a freshness recheck at `a125b4c92bf892c4d985df3665dc612b2d0188b5`.  
+**Fresh mathematical source read before the derivation:** `private-source-repository` master at `84b2ebc616396a24b064eb3b1c185b179e77359e`, followed by a freshness recheck at `a125b4c92bf892c4d985df3665dc612b2d0188b5`.  
 **No novelty claim:** this is a private fleet research artifact. Publication priority for the 2-face lemma below has not been established.
 
 ## 1. Route and the universal obstruction attacked

@@ -16,7 +16,7 @@ The full conjecture is not proved: bare `s_3(A)>=1` does not force the diffuse s
 
 ## 2. Sources consumed
 
-Required source lineage `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory
+Required source lineage `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, directory
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`:
 
 - `RESULTS.md` — current compatible version read;
@@ -39,7 +39,7 @@ for any actual original-coordinate cross block `M=A[I,J]`, with no marginal cond
 \]
 
 The spectral-window receiver used for the new theorem is the completed report
-`math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`:
 if `Pi` is the spectral projection of the **final** matrix onto `|lambda|>=1/64`, the final matrix has at least three eigenvalues of modulus at least one, and
 
@@ -56,7 +56,7 @@ then the full quadratic form has a continuous `C_0` density and
 \]
 
 The latest designated partner fleet03/B12 result consumed is
-`math-open-problems@e25e41c0ef49da042d5969a2949e5c8fc5faf95b`,
+`private-source@e25e41c0ef49da042d5969a2949e5c8fc5faf95b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T114533Z-qform-eigenvalue-r32/REPORT.md`:
 for symmetric `B,R` and `j+r<=m`,
 

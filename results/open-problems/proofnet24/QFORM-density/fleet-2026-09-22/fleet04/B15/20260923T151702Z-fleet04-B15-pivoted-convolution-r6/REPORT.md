@@ -13,14 +13,14 @@ Execution: \`WITHOUT_VERIFIED_BRAIN\`.
 Fresh control was read from \`yspennstate/math-research-brain@b2319f995a345e05be5da359e598f2329017f627\`. The correction inbox forbids post-rotation independence, pointwise quadratic Fourier decay, arbitrary-joint coarea, and treating a small matrix coefficient as a small random error for unbounded inputs. None is used.
 
 The completed fleet01/B15 tent-scale regularity theorem is used at an actual inequality from
-\`yspennstate/math-open-problems@92df77d33efcd04deeac76ec140f17608ad9d9d5\`,
+\`private-source-repository@92df77d33efcd04deeac76ec140f17608ad9d9d5\`,
 \`proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260923T141230Z-fleet01-B15-QFORM-auto11/REPORT.md\`.
 
 The physical-space fractional bathtub and square estimates are taken from the completed fleet01/B14 report at
-\`yspennstate/math-open-problems@fa932fcf67bfc41d6df2175ac7043158aba8c9a9\`,
+\`private-source-repository@fa932fcf67bfc41d6df2175ac7043158aba8c9a9\`,
 \`proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B14/20260923T141444Z-fleet01-B14-QFORM-r38/REPORT.md\`.
 
-The newest-Claude source files remain pinned at \`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837\`, with blobs \`62e20ee976ddeb3f42d3ee5befd6ed49edc917a5\`, \`9da148eed6cd43b1046a6f91d0f9329e12921cb4\`, and \`ee721b237e206f31298b1871979faaab37a1bac2\`.
+The newest-Claude source files remain pinned at \`private-source@e5f71d79eff325201dd0274053d20268ce65b837\`, with blobs \`62e20ee976ddeb3f42d3ee5befd6ed49edc917a5\`, \`9da148eed6cd43b1046a6f91d0f9329e12921cb4\`, and \`ee721b237e206f31298b1871979faaab37a1bac2\`.
 
 ## 2. Pivot-neutral hyperbolic Lp lemma for arbitrary rough laws
 

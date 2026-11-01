@@ -15,13 +15,13 @@ The owner target remains the unrestricted statement for independent ORIGINAL-coo
 
 Completed mathematics actually used:
 
-1. **Cross-three-volume L3 theorem.** `yspennstate/math-open-problems@77bd4ea475a11a505c6990630cbdfebdcce0fd8f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T013555Z-fleet03-B13-qform-r21/REPORT.md`: for an ORIGINAL-coordinate cross block `M` with `Z=e_3(M^T M)>0`, the full quadratic-affine output has
+1. **Cross-three-volume L3 theorem.** `private-source-repository@77bd4ea475a11a505c6990630cbdfebdcce0fd8f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T013555Z-fleet03-B13-qform-r21/REPORT.md`: for an ORIGINAL-coordinate cross block `M` with `Z=e_3(M^T M)>0`, the full quadratic-affine output has
 
    `||p||_3 < 6.787 Z^(-1/9)`,
 
    with arbitrary same-side terms and outside couplings.
 
-2. **Sharp one-sided half-Riesz transducer.** `yspennstate/math-open-problems@aa2dca68a08b39fa15e783403a82bd54e711bfb5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T030125Z-fleet03-B13-qform-r22/FINAL_REPORT.md`: if `p` is a probability density with `||p||_3<=M`, then
+2. **Sharp one-sided half-Riesz transducer.** `private-source-repository@aa2dca68a08b39fa15e783403a82bd54e711bfb5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T030125Z-fleet03-B13-qform-r22/FINAL_REPORT.md`: if `p` is a probability density with `||p||_3<=M`, then
 
    `sup_t int_0^infinity p(t-u)u^(-1/2)du <= C_H M^(3/4)`,
 
@@ -33,13 +33,13 @@ Completed mathematics actually used:
 
    `||p_Q||_infinity <= C_H |a|^(-1/2) M^(3/4)`.
 
-3. **Order-two entropy-or-trihub theorem.** `yspennstate/math-open-problems@95ac7bddb7bb865e223a74ad77df639763194056`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T034405Z-fleet03-B13-qform-r23/REPORT.md`: if an ORIGINAL-coordinate cross block has `E=e_2(M^T M)>0`, then at the specialization `h=3/5`, `L=log 4`, either the ambient residual output has
+3. **Order-two entropy-or-trihub theorem.** `private-source-repository@95ac7bddb7bb865e223a74ad77df639763194056`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T034405Z-fleet03-B13-qform-r23/REPORT.md`: if an ORIGINAL-coordinate cross block has `E=e_2(M^T M)>0`, then at the specialization `h=3/5`, `L=log 4`, either the ambient residual output has
 
    `||p_R||_3 < 7.681 E^(-1/6)`,
 
    or, after applying the theorem in both orientations, there is one physical row-column pair whose joint pair-minor mass exceeds `E/18`; if the pair is reindexed first in `M=[[b,p^T],[q,T]]`, that joint mass is exactly `||bT-q p^T||_F^2`.
 
-4. **Designated partner fleet04/B13 no-attainment purification.** `yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`, Corollary 2.2: for every bounded product kernel, the supremum over arbitrary cap-one marginals equals the supremum over product indicators of bounded finite unions of intervals of measure one. This is an equality of suprema, not an attainment, interval-extremality, bounded-diameter, or fixed-fragment theorem.
+4. **Designated partner fleet04/B13 no-attainment purification.** `private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`, Corollary 2.2: for every bounded product kernel, the supremum over arbitrary cap-one marginals equals the supremum over product indicators of bounded finite unions of intervals of measure one. This is an equality of suprema, not an attainment, interval-extremality, bounded-diameter, or fixed-fragment theorem.
 
 Fresh corrections consumed include `QFORM-INTERPACKET-LOCAL-CURVATURE-CANCELS-v1` and `QFORM-BALANCED-FIXED-PACKET-EXTRACTION-FALSE-v1`. Therefore the trihub survivor obtained below is **not** declared paid merely because it contains a local pair packet; global third-curvature/bank structure must remain present.
 

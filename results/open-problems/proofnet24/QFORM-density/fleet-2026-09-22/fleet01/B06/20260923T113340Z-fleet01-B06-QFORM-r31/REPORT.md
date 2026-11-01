@@ -11,9 +11,9 @@ Continuity: the new collision theorem is deterministic and does not itself prove
 ## 1. Source boundary actually used
 
 
-Immediate predecessor: fleet01/B06 r30, canonical `yspennstate/math-open-problems@c17a14105e7cb453bbca9576ab7df54f504eff67`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T103846Z-fleet01-B06-QFORM-r30/REPORT.md`.  It proved the bordered compound identity and the random-cut estimate, but left high compound collision as an unpaid grouped-hub regime.
+Immediate predecessor: fleet01/B06 r30, canonical `private-source-repository@c17a14105e7cb453bbca9576ab7df54f504eff67`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T103846Z-fleet01-B06-QFORM-r30/REPORT.md`.  It proved the bordered compound identity and the random-cut estimate, but left high compound collision as an unpaid grouped-hub regime.
 
-Designated partner actually applied below: fleet02/B06 `QFORM-191-STAR-HUB-INTERNAL-PAYMENT-v1` and `QFORM-191-ROBUST-LIGHT-ROW-AREA-OR-COMMON-DIRECTION-v1`, canonical `yspennstate/math-open-problems@328a550b1ddde3d2d9b7c2d245678f0b6fd5e7ae`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T105551Z-182f201f81de/REPORT.md`.
+Designated partner actually applied below: fleet02/B06 `QFORM-191-STAR-HUB-INTERNAL-PAYMENT-v1` and `QFORM-191-ROBUST-LIGHT-ROW-AREA-OR-COMMON-DIRECTION-v1`, canonical `private-source-repository@328a550b1ddde3d2d9b7c2d245678f0b6fd5e7ae`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T105551Z-182f201f81de/REPORT.md`.
 
 ## 2. Exact setup
 

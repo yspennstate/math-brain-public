@@ -2,7 +2,7 @@
 
 A newer completed peer report landed after `REPORT.md` was written:
 
-`yspennstate/math-open-problems@585b5a3ca7e887e5cd16f45ea49056d548361dfb`
+`private-source-repository@585b5a3ca7e887e5cd16f45ea49056d548361dfb`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T173320Z-auto11-heavyrowpromotion/REPORT.md`.
 

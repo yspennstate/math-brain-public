@@ -108,7 +108,7 @@ This is an exact analytic counterexample to (1.1). No asymptotic approximation, 
 
 The assigned compatible partner result actually applied is fleet03/B15 run `20260922T162724Z-fleet03-B15-r13`, canonical report
 
-`yspennstate/math-open-problems@4813f09ed4f518a1ee172b77a0f1d315989a84e1:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T162724Z-fleet03-B15-r13/REPORT.md`.
+`private-source-repository@4813f09ed4f518a1ee172b77a0f1d315989a84e1:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T162724Z-fleet03-B15-r13/REPORT.md`.
 
 That report proves, at worker-candidate scope, that for every fixed symmetric matrix of rank at least three and every cap-one independent product input, `X^TAX` has a density in `C_0(R)` with a finite bound depending only on the fixed matrix. Our `A` is fixed and invertible. Consequently one finite `C_A` controls the whole fragmented family:
 

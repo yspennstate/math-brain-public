@@ -43,7 +43,7 @@ Every `U_j` is independent with cap-one density `mu_j=f_j*tilde f_j`.
 
 The latest completed compatible designated-partner result, fleet03/B11 r53, is `QFORM-SCHUR-DIFFERENCE-FLATTENING-v1`, canonical mathematics
 
-`yspennstate/math-open-problems@76badd15bb5b007835da3c731f56430bb7eb19b6`.
+`private-source-repository@76badd15bb5b007835da3c731f56430bb7eb19b6`.
 
 For
 
@@ -180,7 +180,7 @@ and (2.6) makes this statement uniform under the exact spectral determinant curr
 
 The required pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was read at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 

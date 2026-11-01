@@ -23,7 +23,7 @@ The first still-unpaid implication after this run is therefore narrower: route t
 
 I read and apply `fleet02/B04`, theorem `QFORM-ONE-CURVED-LEAF-STAR-BANK-v1`, canonical source
 
-`yspennstate/math-open-problems@2ac6c31f920852005f11947f020bb4642af38d27`,
+`private-source-repository@2ac6c31f920852005f11947f020bb4642af38d27`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T171934Z-r11/REPORT.md`, blob `849ee45bfc7f7b9e38312e190b7c495cbd6e4a74`.
 
@@ -43,7 +43,7 @@ I use the latter target-normalization conclusion below in an actual inequality; 
 
 I also read the complete proof of `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, canonical source
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, blob `00681629acaba8f2e04edda6c9f6b5c4f0fdafa4`.
 

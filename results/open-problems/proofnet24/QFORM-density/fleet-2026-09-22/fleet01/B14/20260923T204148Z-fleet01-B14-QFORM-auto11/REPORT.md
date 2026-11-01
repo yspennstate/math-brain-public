@@ -14,7 +14,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The completed designated-partner theorem actually used below is fleet02/B14 r41, read from the source snapshot
 
-`yspennstate/math-open-problems@71480f46e12acc9037cef4379ae74e07b3e55ea5`,
+`private-source-repository@71480f46e12acc9037cef4379ae74e07b3e55ea5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T173217Z-fleet02-B14-QFORM-r41/REPORT.md`.
 

@@ -4,7 +4,7 @@ Problem: Fyodorov–Mirlin (1991), *Scaling properties of localization in random
 # R04 immutable run report — variable-scale block Minami and exact critical transfer reduction
 
 Run ID: `20260916T150906Z_r04_scaled_block_minami`
-Repository: `yspennstate/math-open-problems`, branch `master`
+Repository: `private-source-repository`, branch `master`
 Overall source-problem status: **OPEN / PARTIAL milestone**.
 Unchanged count after this run: **0**, because the fixed metric record moved.
 

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R14 HARD OUTSIDE — VDH bounded-degree prior-art correction and iid-thinning obstruction
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL / source OPEN / proof-capable follow-up after STUCK-RECOVERY-1/2 / new obstruction, no source-closure claim.**
 

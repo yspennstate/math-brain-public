@@ -16,7 +16,7 @@ The full owner target remains open: for every dimension, independent ORIGINAL re
 
 The immediate predecessor is fleet03/B06 r29, canonical source
 
-`yspennstate/math-open-problems@5368af077ca929e49b8dc8adeb3e0cefad85f827`
+`private-source-repository@5368af077ca929e49b8dc8adeb3e0cefad85f827`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T071947Z-fleet03-B06-qform-r29/REPORT.md`.
 
@@ -162,7 +162,7 @@ The residual vectors are not deleted. Equation (4.2) is only a routing certifica
 
 The exact designated partner `fleet04/B06` still has no completed current-QFORM canonical artifact visible in the fresh repository search, so no partner theorem is fabricated. The compatible completed fleet04 result actually available is fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

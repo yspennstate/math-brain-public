@@ -19,7 +19,7 @@ With Fourier convention `hat h(t)=int e^(ity)h(y)dy`, Hausdorff--Young gives
 
 `|| E exp(it b Z^2) ||_3 <= (2 pi)^(1/3) 5^(2/3) |b|^(-1/3).`  (E1)
 
-The checked arbitrary-internal-function exact-rank crossing theorem at `math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`, `NEW_PROJECTED_CROSSING.md`, gives for the remaining two-bank scalar output `S`
+The checked arbitrary-internal-function exact-rank crossing theorem at `private-source@829192412f2a2d84e72b4bed91115fc5fab68401`, `NEW_PROJECTED_CROSSING.md`, gives for the remaining two-bank scalar output `S`
 
 `|phi_S(t)| <= min(1,K/|t|),`
 `K=pi (M_R M_C)^(1/2) p^(-1/2) <=2 pi p^(-1/2)`,                 (E2)

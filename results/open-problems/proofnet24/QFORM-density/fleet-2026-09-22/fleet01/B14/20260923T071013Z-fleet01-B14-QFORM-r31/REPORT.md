@@ -21,7 +21,7 @@ This run applies the completed designated-partner theorem
 
 canonical source
 
-`yspennstate/math-open-problems@8f29d24c80043bd45bcd1c6e8957760f048c98ff`,
+`private-source-repository@8f29d24c80043bd45bcd1c6e8957760f048c98ff`,
 
 path
 

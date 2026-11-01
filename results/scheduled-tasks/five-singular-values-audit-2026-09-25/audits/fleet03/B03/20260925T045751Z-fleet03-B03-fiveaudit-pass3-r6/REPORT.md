@@ -1,6 +1,6 @@
 # fleet03/B03 pass 3 completion
 
-Source: `yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c`, `short/short.tex` blob `c4f2a997cf336ee974e15409b5bccdd8cca039d8`, exact 14-page PDF SHA-256 `4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423`.
+Source: `private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c`, `short/short.tex` blob `c4f2a997cf336ee974e15409b5bccdd8cca039d8`, exact 14-page PDF SHA-256 `4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423`.
 
 Pass lens: rough-law, measurability and boundary cases. This run independently checked the pass-3 ranges `1-104,139-176,206-270,371-394,511-596,640-675`; the previous same-pass checkpoint checked `105-138,177-205,271-370,395-510,597-639`. Hence pass 3 accounts for all physical TeX lines 1-675. All 14 exact PDF pages were rendered and inspected; no source/render mismatch was found.
 

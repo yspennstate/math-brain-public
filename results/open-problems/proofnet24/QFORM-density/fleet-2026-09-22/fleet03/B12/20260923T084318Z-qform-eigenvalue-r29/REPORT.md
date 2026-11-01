@@ -22,7 +22,7 @@ No Gaussianity, moment, compact-support, log-concavity, connected-support, or po
 
 The completed partner theorem is
 
-`yspennstate/math-open-problems@3948d77b0bde5af1bd37cd7c975d4f540eba901b`
+`private-source-repository@3948d77b0bde5af1bd37cd7c975d4f540eba901b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T081758Z-fleet04-B12-complementary-schur-shield-r4/REPORT.md`.
 
@@ -38,7 +38,7 @@ The result is matrix algebra; no independence in the W,Z coordinates is asserted
 
 The algebra beneath (2.1) was also checked against the fleet01/B12 singular-core source
 
-`yspennstate/math-open-problems@e1c78c69591e4d0cf3107a610ab0f764670d1928`
+`private-source-repository@e1c78c69591e4d0cf3107a610ab0f764670d1928`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B12/20260923T065152Z-fleet01-B12-QFORM-r28/REPORT.md`.
 
@@ -46,7 +46,7 @@ The algebra beneath (2.1) was also checked against the fleet01/B12 singular-core
 
 The required current volume-stability source is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 

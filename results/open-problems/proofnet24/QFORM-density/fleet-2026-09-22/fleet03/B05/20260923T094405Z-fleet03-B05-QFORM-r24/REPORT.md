@@ -343,7 +343,7 @@ This is precisely where naive patching loses dimension.  The theorem above shows
 
 The completed designated-partner result
 
-`yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
+`private-source-repository@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`
 

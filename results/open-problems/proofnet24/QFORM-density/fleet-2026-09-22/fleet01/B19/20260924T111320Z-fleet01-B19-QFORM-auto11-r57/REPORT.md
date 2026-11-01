@@ -56,7 +56,7 @@ Conditioning only outside ORIGINAL coordinates makes (1.4) an ambient receiver.
 
 The designated partner consumed at equation level is fleet02/B19 r14,
 
-`yspennstate/math-open-problems@02a537de4788fa8821d7986ef53fc5ad0a311003`,
+`private-source-repository@02a537de4788fa8821d7986ef53fc5ad0a311003`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260924T083831Z-fleet02-B19-QFORM-auto11-r14/REPORT.md`.
 

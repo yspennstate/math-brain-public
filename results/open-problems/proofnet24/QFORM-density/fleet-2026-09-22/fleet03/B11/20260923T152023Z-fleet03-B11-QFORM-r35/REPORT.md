@@ -18,7 +18,7 @@ Execution status: `WITHOUT_VERIFIED_BRAIN`.
 
 fleet03/B11 r34:
 
-`yspennstate/math-open-problems@074f85e342c4e78fcbab7a43ba01f00252035d5a`
+`private-source-repository@074f85e342c4e78fcbab7a43ba01f00252035d5a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T144943Z-fleet03-B11-QFORM-r34/REPORT.md`.
 
@@ -40,7 +40,7 @@ That branch has a continuous density.
 
 fleet04/B11 r6:
 
-`yspennstate/math-open-problems@30555c1ca97752e10f5089ccd95f8514c704be5a`
+`private-source-repository@30555c1ca97752e10f5089ccd95f8514c704be5a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T131400Z-fleet04-B11-extension-mass-r6/REPORT.md`.
 

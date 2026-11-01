@@ -11,7 +11,7 @@
 
 The assignment asks for a classification of genuine biased Boolean gates whose normalized nonempty spectral law equals its occurrence I-projection. The exact I-projection source used here is:
 
-- `IPROJ`: yspennstate/math-open-problems commit `4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`.
+- `IPROJ`: private-source-repository commit `4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`.
 
 For a nonconstant biased Boolean gate, let `P=w^+` be the normalized nonempty squared Fourier law, let
 \[

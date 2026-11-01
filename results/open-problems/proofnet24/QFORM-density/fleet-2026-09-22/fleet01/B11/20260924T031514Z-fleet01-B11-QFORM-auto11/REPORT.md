@@ -17,7 +17,7 @@ Fresh `math-research-brain/main` still has QFORM as the sole target and `CLAIMS.
 
 The immediately preceding fleet01/B11 run is
 
-- `yspennstate/math-open-problems@22373d23a5a18f91627d8849017beb38a2169f23`,
+- `private-source-repository@22373d23a5a18f91627d8849017beb38a2169f23`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260924T025136Z-fleet01-B11-QFORM-auto11/REPORT.md`.
 
 It pays the exact zero-pivot near-coloop same-bank puncture by preserving a literal hub, and leaves the nonzero physical-pivot double-aligned / punctured collar as the first B11 debt.
@@ -25,7 +25,7 @@ It pays the exact zero-pivot near-coloop same-bank puncture by preserving a lite
 Two completed analytic inputs are used at their exact scopes.
 
 1. `QFORM-SUBCRITICAL-HUB-PLANAR-CORE-v1`, this slot's earlier theorem at
-   `yspennstate/math-open-problems@cedc867395f462e31df64232907480cea07db3d5`,
+   `private-source-repository@cedc867395f462e31df64232907480cea07db3d5`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260923T191247Z-fleet01-B11-QFORM-auto11/REPORT.md`.
    If `H` is a cap-one scalar independent of a planar vector of joint density cap `M`, a `3 x 3` symmetric core `T` has `sigma_min(T)>=sigma`, and `|T_HH|<=r sigma` with `r<1`, then
    
@@ -197,7 +197,7 @@ Arbitrary additional nonseparable spectrum beyond exact rank three remains a sep
 
 The freshest completed designated-partner result is fleet02/B11 r11:
 
-- `yspennstate/math-open-problems@0df11ae7802a2f4cdbb07feaaef3dc443db588bf`,
+- `private-source-repository@0df11ae7802a2f4cdbb07feaaef3dc443db588bf`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260924T031028Z-fleet02-B11-QFORM-r11/REPORT.md`,
 - theorem `QFORM-SHARP-MIXED-FRAME-OPPOSITESIGN-CLOSURE-v1`.
 

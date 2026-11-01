@@ -20,7 +20,7 @@ The current UTC hour already had the canonical fleet03/B19 login `20260923T19003
 
 Source:
 
-`yspennstate/math-open-problems@f09b670173440c4c511985c9a89baf38f97e82c1`
+`private-source-repository@f09b670173440c4c511985c9a89baf38f97e82c1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T183023Z-fleet03-B19-QFORM-r38/REPORT.md`.
 
@@ -53,17 +53,17 @@ This run attacks (2.5), retaining the complete nonzero cross tail.
 Two completed analytic inputs are used at their exact scopes.
 
 1. **Two-sided scalar Schur endpoint.** `QFORM-TWOSIDED-SCHUR-2PLUS1-v1`, contained immutably at
-   `yspennstate/math-open-problems@8d0cfcc9b0b1e88eee6fba2e63187d8607ca2d0c`,
+   `private-source-repository@8d0cfcc9b0b1e88eee6fba2e63187d8607ca2d0c`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T144010Z-fleet02-B19-qform-r13/REPORT.md`.
    Its proof combines a genuine scalar square with a rank-two mixed residual and arbitrary same-side phases.
 
 2. **Dependent overlap-square endpoint.** `QFORM-CROSS2-OVERLAP-SQUARE-L1-v1`, contained immutably at
-   `yspennstate/math-open-problems@8103579cff840cf3e09607ac05841bd156fa8744`,
+   `private-source-repository@8103579cff840cf3e09607ac05841bd156fa8744`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/fleet01-B16-20260923T170732Z-auto11/REPORT.md`.
    For disjoint source banks, a rank-two cross pair plus a square in a third projection of the SAME source bank gives a continuous density; no independence inside that three-dimensional projection is assumed.
 
 The source-valid near-null obstruction in fleet02/B06,
-`yspennstate/math-open-problems@0d6e70139fe0f7d8ee22cc5210efb3b8d00a0bda`,
+`private-source-repository@0d6e70139fe0f7d8ee22cc5210efb3b8d00a0bda`,
 shows explicitly that a nonzero self block cannot be discarded merely because its operator norm is small. The present argument therefore never uses such a perturbative deletion.
 
 ## 3. New theorem: two-sided physical scalar pivot with an arbitrary product receiver bank
@@ -295,7 +295,7 @@ Equation (6.3) was independently checked on 1000 noncommuting random `2 x 7` mat
 
 The designated partner theorem is
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 

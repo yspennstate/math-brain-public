@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-10 — admission delta screen 43: no canonical release or new source row; residue-9 CLOSABLE admission remains unavailable
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-10` / `proofnet24/NM13-10/`  
 Category: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed probability or analysis inequalities admitting an exact sharp constant, explicit counterexample, finite certificate, or complete short restricted-class theorem  

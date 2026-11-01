@@ -15,13 +15,13 @@ No pointwise quadratic-phase decay, arbitrary-joint coarea, conditional projecti
 
 ## 2. Source inputs actually used
 
-1. Claude package `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`: audited Theorem D gives, for a physical cross block `M`,
+1. Claude package `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`: audited Theorem D gives, for a physical cross block `M`,
 
    `||p_Q||_inf <= 6 sqrt(e) Z^(-1/6)`, `Z=e_3(M^T M)`,
 
    when the volume-sampling row marginals are at most `1/2`; arbitrary self blocks, outside couplings and affine terms are retained.
 
-2. Ridge theorem `QFORM-RIDGE-DENSITY-v1`, source `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`: with
+2. Ridge theorem `QFORM-RIDGE-DENSITY-v1`, source `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`: with
 
    `K=M M^T (gamma^2 I+M M^T)^(-1)`, `theta=tr K`, `D=det(I+M M^T/gamma^2)`,
 
@@ -29,7 +29,7 @@ No pointwise quadratic-phase decay, arbitrary-joint coarea, conditional projecti
 
    `||p_Q||_inf <= e/(sqrt(2q) gamma) * theta/(theta-2q) * D^(-1/(2theta))`.
 
-3. Latest volume-stability package `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`: its sharper `q=1` fractional-volume constant is `3e Z^(-1/6)`. The report labels this a complete supporting argument with independent review pending, so below I keep its numerical improvement separate from the already-audited e5 Theorem D bound.
+3. Latest volume-stability package `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`: its sharper `q=1` fractional-volume constant is `3e Z^(-1/6)`. The report labels this a complete supporting argument with independent review pending, so below I keep its numerical improvement separate from the already-audited e5 Theorem D bound.
 
 4. Designated partner fleet03/B04, run `20260923T004843Z-fleet03-B04-qform-auto11`, source commit `48c622953108fd3e77f7b3f5e155e082337804d7`, proves for every invertible physical pair `B`
 

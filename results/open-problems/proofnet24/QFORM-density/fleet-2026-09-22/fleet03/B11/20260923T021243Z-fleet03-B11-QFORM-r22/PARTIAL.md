@@ -44,7 +44,7 @@ satisfies
 \boxed{m_i\ge \frac{c_i}{2Lq_i}.}\tag{1}
 \]
 
-Apply `QFORM-CURVATURE-WEIGHTED-PHYSICAL-FIBER-COVER-v1` from fleet01/B06, source snapshot `yspennstate/math-open-problems@ac50e5d5f2c3030c4bd87d5188117d92ceaf55a1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T233555Z-qform-r19-b06/REPORT.md`. Its cone-only form permits the single weight \(a_i=m_i^{-2}\), and gives
+Apply `QFORM-CURVATURE-WEIGHTED-PHYSICAL-FIBER-COVER-v1` from fleet01/B06, source snapshot `private-source-repository@ac50e5d5f2c3030c4bd87d5188117d92ceaf55a1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T233555Z-qform-r19-b06/REPORT.md`. Its cone-only form permits the single weight \(a_i=m_i^{-2}\), and gives
 \[
 \operatorname*{ess\,sup}_{t<0}p_Q(t)
 \le \frac{2\sqrt\pi}{\sqrt{|\det\Lambda|}}
@@ -69,7 +69,7 @@ For signature \((+,-,-)\), apply this to \(-Q\): the pivot has the sign of the u
 
 ## Designated partner applied at the exact-null boundary
 
-The latest completed fleet04/B11 result is `yspennstate/math-open-problems@4110bbfd21beffa0260a017d468b0a486af56db1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T222040Z-fleet04-B11-cone-envelope-r3/REPORT.md`. For
+The latest completed fleet04/B11 result is `private-source-repository@4110bbfd21beffa0260a017d468b0a486af56db1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T222040Z-fleet04-B11-cone-envelope-r3/REPORT.md`. For
 \[
 H_0=\begin{pmatrix}0&0&1\\0&1&0\\1&0&0\end{pmatrix},\qquad Q=2X_1X_3+X_2^2,
 \]
@@ -81,7 +81,7 @@ This is an actual opposite-sign exact-null case not covered by (3), using genuin
 
 ## Current-source volume exit applied
 
-The owner-required current package `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, path `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`, proves that any ORIGINAL-coordinate cross block \(M=M_0+E\) with \(s_3(M_0)\ge a\), maximum row-range leverage at most \(1/2\), and \(\|E\|_{op}\le a/16\) pays the full ambient form by
+The owner-required current package `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, path `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`, proves that any ORIGINAL-coordinate cross block \(M=M_0+E\) with \(s_3(M_0)\ge a\), maximum row-range leverage at most \(1/2\), and \(\|E\|_{op}\le a/16\) pays the full ambient form by
 \[
 \boxed{\|p_Q\|_\infty<23/a}\tag{6}
 \]

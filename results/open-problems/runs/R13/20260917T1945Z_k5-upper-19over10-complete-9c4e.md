@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — this run
 # R13 — completing the orphan exact `K_5^* <= 19/10` certificate
 
 Run ID: `20260917T1945Z_k5-upper-19over10-complete-9c4e`  
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Continuity and source scope
 

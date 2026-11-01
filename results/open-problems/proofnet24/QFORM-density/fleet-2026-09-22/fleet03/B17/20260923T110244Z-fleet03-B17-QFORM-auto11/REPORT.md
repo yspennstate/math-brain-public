@@ -175,7 +175,7 @@ at every vanishing-leverage scale.
 The weighted Fourier tail argument in the completed designated-partner report
 `fleet04/B17`,
 
-`yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`,
+`private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`,
 

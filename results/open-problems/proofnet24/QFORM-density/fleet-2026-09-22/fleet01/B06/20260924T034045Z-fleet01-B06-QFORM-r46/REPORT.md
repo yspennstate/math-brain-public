@@ -14,7 +14,7 @@ The unrestricted conjecture remains open. This run addresses the heavy-carrier o
 
 Immediate predecessor:
 
-`yspennstate/math-open-problems@3145295734fbc4152341278a804b6b39cd2e9167`
+`private-source-repository@3145295734fbc4152341278a804b6b39cd2e9167`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T023755Z-fleet01-B06-QFORM-r45/REPORT.md`.
 
@@ -26,7 +26,7 @@ and the density is continuous `C_0`. For `k=3` the constant is `3e`.
 
 The designated completed partner input is fleet02/B06:
 
-`yspennstate/math-open-problems@159d52912827d75566d254e155d93a8183ab254f`,
+`private-source-repository@159d52912827d75566d254e155d93a8183ab254f`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/fleet02-B06-20260924T013401Z-1fca9092/REPORT.md`,
 

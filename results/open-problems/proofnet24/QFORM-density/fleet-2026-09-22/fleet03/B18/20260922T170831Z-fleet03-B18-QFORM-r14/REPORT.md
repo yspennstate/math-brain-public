@@ -235,5 +235,5 @@ The full universal QFORM conjecture remains **OPEN / NOT PROVED**. Continuity of
 
 - Livshyts–Paouris–Pivovarov, arXiv:1507.07949v2, Theorem 1.1 / one-dimensional Rogozin–Ball consequence: source-valid linear projection density cap.
 - Banks–Garza Vargas–Kulkarni–Srivastava, arXiv:2005.08930, Section 2, Theorem 2.1: audited but not overextended; scalar non-Gaussian statement requires sufficiently high bilinear rank and Q-dependent singular-value control.
-- fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`: `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, exact path cited above.
+- fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`: `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, exact path cited above.
 - Current orientation-free rank-two affine half-Riesz supporting theorem remains compatible but is not needed for Theorem 5.1; this run deliberately changed mechanism rather than repeating the preceding cross-block proof.

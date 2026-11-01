@@ -25,7 +25,7 @@ The mandatory correction set is retained throughout:
 
 The analytic input used below is the completed twisted-transform / Fresnel--Brascamp--Lieb package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 especially `FOURIER_ROUTE_REPORT.md`, Theorem MF, and the scalar estimate
 
@@ -37,11 +37,11 @@ uniformly in the quadratic twist `s` for every cap-one scalar source.
 
 The immediately preceding fleet01/B16 report
 
-`yspennstate/math-open-problems@4cc097c9bc5e49f71cbb75a85a5a8b54b96ca4d5`
+`private-source-repository@4cc097c9bc5e49f71cbb75a85a5a8b54b96ca4d5`
 
 claimed `QFORM-DENSITY-PRESERVING-SHEAR-MIXED-FRESNEL-v1`. The newest fleet02/B16 report
 
-`yspennstate/math-open-problems@95e4f4427f21a599f0e4fd8f21e9a60e76e88fb3`,
+`private-source-repository@95e4f4427f21a599f0e4fd8f21e9a60e76e88fb3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/B16-20260924T060545Z-auto11/REPORT.md`,
 
@@ -264,7 +264,7 @@ The newest fleet02/B16 run is primarily a correction, not a positive density the
 
 canonical source
 
-`yspennstate/math-open-problems@683c75fe7fda55dab7a003d1423a870df2d747f8`,
+`private-source-repository@683c75fe7fda55dab7a003d1423a870df2d747f8`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/B16-20260924T043047Z-auto11/REPORT.md`.
 
@@ -307,7 +307,7 @@ Fleet02/B16's addendum consumes fleet03/B16 r42,
 
 `QFORM-HUB-STAR-PLANCHEREL-AVERAGE-v1`,
 
-at `yspennstate/math-open-problems@210b93b7a190c6784523e9bf281b0529614b3334`. For
+at `private-source-repository@210b93b7a190c6784523e9bf281b0529614b3334`. For
 
 `Q=aH^2+2H b^T X+R(X)`,                                          (6.1)
 
@@ -355,7 +355,7 @@ Arbitrary additional nonseparable spectrum and the full structural reduction fro
 
 ## 8. Source status
 
-Fresh control before this report began from `math-research-brain@d941bde4bd8ec272072cba769d92666d3d467213`; a later control refresh before publication observed `math-research-brain@5f21153900232958c2057daec19ec268d81aa381` with no later stop in the observed update. Initial math-source head was `math-open-problems@30bc224a10a670fd1d50b935ccb3872bbc56965d`.
+Fresh control before this report began from `math-research-brain@d941bde4bd8ec272072cba769d92666d3d467213`; a later control refresh before publication observed `math-research-brain@5f21153900232958c2057daec19ec268d81aa381` with no later stop in the observed update. Initial math-source head was `private-source@30bc224a10a670fd1d50b935ccb3872bbc56965d`.
 
 Dependencies actually used:
 

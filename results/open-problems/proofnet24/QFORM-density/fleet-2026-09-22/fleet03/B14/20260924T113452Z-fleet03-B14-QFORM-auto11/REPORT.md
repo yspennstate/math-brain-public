@@ -20,7 +20,7 @@ I use the completed fleet01/B14 theorem
 
 at
 
-`yspennstate/math-open-problems@801205dcdefd30acfe1609146aeead485c4a7c71`
+`private-source-repository@801205dcdefd30acfe1609146aeead485c4a7c71`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B14/20260924T101356Z-fleet01-B14-QFORM-auto11/REPORT.md`.
 
@@ -55,7 +55,7 @@ The newest completed compatible fleet04/B14 theorem used at an actual inequality
 
 at
 
-`yspennstate/math-open-problems@a660ad837e01bdaa7459104cfbaa37b9172b3b8e`
+`private-source-repository@a660ad837e01bdaa7459104cfbaa37b9172b3b8e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260924T101606Z-fleet04-B14-anchor-recycling-r12/REPORT.md`.
 

@@ -15,15 +15,15 @@ The exact owner target remains: every finite dimension, independent original-coo
 
 Three completed inputs are used at their exact scopes.
 
-1. **Previous B13 entropic three-volume / six-hub dichotomy:** `yspennstate/math-open-problems@5d38cf0af8ff126d75857cd2011f928d6704b690`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T003350Z-fleet03-B13-qform-r20/REPORT.md`. For any original-coordinate cross block `M`, with `Z=e_3(M^T M)>0` and any `L>0`, either a row-capped determinant law pays an `L^infinity` density bound `6 sqrt(e) exp(L/6) Z^(-1/6)`, or at most six original physical rows `H` can be deleted so that the surviving three-volume is `<exp(-L)Z`.
+1. **Previous B13 entropic three-volume / six-hub dichotomy:** `private-source-repository@5d38cf0af8ff126d75857cd2011f928d6704b690`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T003350Z-fleet03-B13-qform-r20/REPORT.md`. For any original-coordinate cross block `M`, with `Z=e_3(M^T M)>0` and any `L>0`, either a row-capped determinant law pays an `L^infinity` density bound `6 sqrt(e) exp(L/6) Z^(-1/6)`, or at most six original physical rows `H` can be deleted so that the surviving three-volume is `<exp(-L)Z`.
 
-2. **One-row / aggregate-E2 smoothing:** fleet03/B06, read at `yspennstate/math-open-problems@a9eaf559d5a8301180175f27b21d8625039d379e`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T201841Z-fleet03-B06-qform-r18/REPORT.md`. If an original-coordinate cross block has a selected row of Euclidean norm `r>0`, and `E=e_2(N^T N)>0` for the bank `N` obtained after deleting that row, then, with arbitrary same-side quadratic phases, affine terms and outside conditioning,
+2. **One-row / aggregate-E2 smoothing:** fleet03/B06, read at `private-source-repository@a9eaf559d5a8301180175f27b21d8625039d379e`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T201841Z-fleet03-B06-qform-r18/REPORT.md`. If an original-coordinate cross block has a selected row of Euclidean norm `r>0`, and `E=e_2(N^T N)>0` for the bank `N` obtained after deleting that row, then, with arbitrary same-side quadratic phases, affine terms and outside conditioning,
 
 `|phi_Q(t)| <= min{1,
  (pi sqrt(e)/(r|t|))^(1/4)
  [1+16 E t^4/(pi^4 e^4)]^(-1/8)}.`                              (1.1)
 
-3. **Designated partner fleet04/B13 no-attainment purification:** `yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`. Every cap-one mass-one marginal is an `L1` limit of finite convex combinations of indicators of bounded finite unions of intervals of measure one; products expand into finite mixtures and product `L1` error is controlled by the sum of marginal errors. No optimizer, interval extremality, bounded diameter or uniform fragment count is asserted.
+3. **Designated partner fleet04/B13 no-attainment purification:** `private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`. Every cap-one mass-one marginal is an `L1` limit of finite convex combinations of indicators of bounded finite unions of intervals of measure one; products expand into finite mixtures and product `L1` error is controlled by the sum of marginal errors. No optimizer, interval extremality, bounded diameter or uniform fragment count is asserted.
 
 ## 2. New exact exterior-algebra identity
 

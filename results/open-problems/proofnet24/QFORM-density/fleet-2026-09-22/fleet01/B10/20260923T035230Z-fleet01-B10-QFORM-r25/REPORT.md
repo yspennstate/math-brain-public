@@ -15,7 +15,7 @@ The full target remains OPEN. This report proves a product-preserving structural
 
 The designated partner actually applied is fleet02/B10, run `20260923T014801Z-fleet02-B10-QFORM-auto11`, canonical proof
 
-`yspennstate/math-open-problems@e00458111ae6c54afa30331726a6335fc838557f`
+`private-source-repository@e00458111ae6c54afa30331726a6335fc838557f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T014801Z-fleet02-B10-QFORM-auto11/REPORT.md`.
 
@@ -43,9 +43,9 @@ The exact-graph endpoint `rho=0` is therefore already paid for every scalar pivo
 
 The projection-density fact used only for the provenance corollary below is `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, fleet02/B06,
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
 
-which gives `exp(k/2)` as a dimension-free density cap for a normalized `k`-dimensional product projection. The partner's cross-transverse input was also checked at its canonical source `yspennstate/math-open-problems@7140ff63d4ff7c092cdc18ce7ad8a95e4e03e388`.
+which gives `exp(k/2)` as a dimension-free density cap for a normalized `k`-dimensional product projection. The partner's cross-transverse input was also checked at its canonical source `private-source-repository@7140ff63d4ff7c092cdc18ce7ad8a95e4e03e388`.
 
 ## 2. Regression coordinates for one light bank
 

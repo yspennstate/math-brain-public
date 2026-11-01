@@ -18,7 +18,7 @@ No Gaussianity, log-concavity, moments, bounded/connected support, iid hypothesi
 
 The newest compatible completed designated partner is fleet03/B20 r42,
 
-`yspennstate/math-open-problems@eb50a2dc3acc7884f284a1f94847106c89bf5889`,
+`private-source-repository@eb50a2dc3acc7884f284a1f94847106c89bf5889`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T234606Z-fleet03-B20-QFORM-r42/REPORT.md`.
 
 Its third-compound operator funnel proves that, after its already-paid macroscopic diagonal, principal-triple, and disjoint-E3 exits, every unpaid target state has all physical diagonals `<1/64` in magnitude and either a localized physical pair `J_2(S)>=1/144`, or a localized physical anchor j. In the one-anchor branch it produces disjoint literal banks R,C and the exact anchored block
@@ -238,7 +238,7 @@ This is a genuine shrinkage of the live E2 debt: a generic exact-rank-two anchor
 
 The required pinned source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
 was re-read at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. In particular the proved unrestricted fifth-volume theorem D_5 says that for any literal disjoint physical crossing block B,

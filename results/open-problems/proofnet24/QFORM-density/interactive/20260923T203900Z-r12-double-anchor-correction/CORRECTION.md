@@ -5,9 +5,9 @@
 
 ## Source pins
 
-- [fleet04/B20 r12, §§2–5](https://github.com/yspennstate/math-open-problems/blob/95d5c3b6e8a753f5da44f742f8449d51470f4a11/proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T201641Z-fleet04-B20-QFORM-r12/REPORT.md) gives a literal original-coordinate cut \(M=A[I,J]\), physical anchors \(i\in I,j\in J\), and the separated minor sum \(\mathcal J_3^{\rm sep}(i,j)>\delta\).
-- [fleet03/B20 r34, Theorem 2.1](https://github.com/yspennstate/math-open-problems/blob/a23ddf469392d77526db53d0811248a52a84d088/proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T164400Z-fleet03-B20-QFORM-r34/REPORT.md) proves the marginal-free *physical* \(E_3\) receiver for the full ambient quadratic law.
-- [fleet03/B20 r35, §§1–2 and §5](https://github.com/yspennstate/math-open-problems/blob/ab5d7906b6ffc0ca6b07c354d912d7b5b1afccfc/proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T171148Z-fleet03-B20-QFORM-r35/REPORT.md) had already reconciled the fleet01 rank-five diffuse branch with r34 and identified the heavy-carrier survivor. Its fleet01 input is [fleet01/B20 auto11](https://github.com/yspennstate/math-open-problems/blob/bedc345f96a6cc7ee4fcbfc25b117aa0839f22f2/proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T165154Z-fleet01-B20-QFORM-auto11/REPORT.md).
+- [fleet04/B20 r12, §§2–5](private-source-repository) gives a literal original-coordinate cut \(M=A[I,J]\), physical anchors \(i\in I,j\in J\), and the separated minor sum \(\mathcal J_3^{\rm sep}(i,j)>\delta\).
+- [fleet03/B20 r34, Theorem 2.1](private-source-repository) proves the marginal-free *physical* \(E_3\) receiver for the full ambient quadratic law.
+- [fleet03/B20 r35, §§1–2 and §5](private-source-repository) had already reconciled the fleet01 rank-five diffuse branch with r34 and identified the heavy-carrier survivor. Its fleet01 input is [fleet01/B20 auto11](private-source-repository).
 
 ## Direct correction to r12
 

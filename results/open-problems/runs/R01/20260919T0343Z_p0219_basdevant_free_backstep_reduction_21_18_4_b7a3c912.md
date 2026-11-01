@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R01 — P0219: Basdevant--Gouéré--Théret bridge and free-backstep reduction
 
-Repository: private `yspennstate/math-open-problems`, branch `master`.
+Repository: private `private-source-repository`, branch `master`.
 
 ## 1. Frozen R01 source recovered and not reopened
 

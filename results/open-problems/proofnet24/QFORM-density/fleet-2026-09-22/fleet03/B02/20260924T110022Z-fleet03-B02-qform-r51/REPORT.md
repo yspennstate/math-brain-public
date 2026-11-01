@@ -16,7 +16,7 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates with 
 
 Immediate own predecessor:
 
-`yspennstate/math-open-problems@502f6502f0628f959a13e46b8bdce58a3d75be80`,
+`private-source-repository@502f6502f0628f959a13e46b8bdce58a3d75be80`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260924T100402Z-fleet03-B02-qform-r50/REPORT.md`.
 
@@ -48,7 +48,7 @@ has row norm one but infinite half-Riesz potential for centered uniform inputs. 
 Completed inputs actually used below are:
 
 1. fleet01/B02 r48,
-   `yspennstate/math-open-problems@4f9513fc5f561ab1db4ee87ecf55eea90644ecb2`,
+   `private-source-repository@4f9513fc5f561ab1db4ee87ecf55eea90644ecb2`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260924T093207Z-fleet01-B02-qform-auto11-r48/REPORT.md`.
    Its `QFORM-TWOEIG-1OVER19-DIFFUSE-HALFRIESZ-v1` says: if a symmetric coefficient `D` has `s_2(D)>=sigma>0` and
    `P=1_{|D|>=sigma/19}` satisfies `max_i P_ii<=1/72`, then for arbitrary affine terms in the ORIGINAL independent coordinates,
@@ -57,7 +57,7 @@ Completed inputs actually used below are:
    `C_2=23.34314135471538...`.                                  (1.3)
 
 2. fleet02/B01 r50,
-   `yspennstate/math-open-problems@f2bb4e5d3f65c19715e6cbad2e79d7c071d6b174`,
+   `private-source-repository@f2bb4e5d3f65c19715e6cbad2e79d7c071d6b174`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T091804Z-fleet02-B01-qform-auto11/REPORT.md`.
    Its two-level scalar compiler gives, when `s_2(D)>=rho` and `u=D_kk!=0`,
 
@@ -72,7 +72,7 @@ Completed inputs actually used below are:
    with arbitrary remaining curvature and affine terms.
 
 3. fleet03/B11,
-   `yspennstate/math-open-problems@0e0a0ab9b2a27d7a647567690e2c7f79c05341b0`,
+   `private-source-repository@0e0a0ab9b2a27d7a647567690e2c7f79c05341b0`,
    whose earlier binary theorem (source pinned there to commit `860d849b7f2e0198bf7c3531a71b14e59f03e430`) gives, for a literal indefinite physical pair with `Delta=e^2-uf>0`,
 
    `H_(1/2) <=16 Delta^(-1/4)`                                  (1.6)
@@ -80,7 +80,7 @@ Completed inputs actually used below are:
    after conditioning every other ORIGINAL coordinate.
 
 4. designated partner fleet04/B02,
-   `yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+   `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
    On a nonsingular physical principal triple `H_0` with one exact zero diagonal it proves continuity and
 

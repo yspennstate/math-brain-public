@@ -18,14 +18,14 @@ aggregate the collective positive/negative defect of a balanced near-rank-one ph
 
 The designated partner source actually used is fleet03/B11 r26:
 
-- repository/commit: `yspennstate/math-open-problems@c5a085c3995af258cb161d94cb051d58bbd98b24`;
+- repository/commit: `private-source-repository@c5a085c3995af258cb161d94cb051d58bbd98b24`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T093835Z-fleet03-B11-QFORM-r26/REPORT.md`.
 
 That report proves that for its explicit target-valid family every fixed-size physical principal or cross packet loses the second/third direction, even though the full matrix has a large `(+,+,-)` core. Therefore a proof that first fixes `K` physical coordinates and only then pays a minor cannot be universal.
 
 The pinned newest-Claude source actually used at equations below is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 Three proved results from that package are used with their stated scopes:

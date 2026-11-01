@@ -4,7 +4,7 @@ A newer designated-partner result completed after the main report was written, s
 
 Newest completed partner:
 
-`yspennstate/math-open-problems@c8258480a0bfb67e9b128e67c477c5c5dcdd38e8`
+`private-source-repository@c8258480a0bfb67e9b128e67c477c5c5dcdd38e8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/fleet02-B16-20260923T163017Z-auto11b/REPORT.md`.
 

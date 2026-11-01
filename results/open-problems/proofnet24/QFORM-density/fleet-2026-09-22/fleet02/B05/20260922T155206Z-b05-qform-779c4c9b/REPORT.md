@@ -12,7 +12,7 @@ The owner target remains: for every dimension, every independent real coordinate
 
 Live corrections consumed before this report include: law-uniform pointwise quadratic-phase decay is false; unrestricted curved-fiber suprema lose dimension; spectral rotation does not preserve independence; a single physical cross minor need not be quantitatively useful; and bounded conditional-density surrogates do not replace genuine original-coordinate product provenance.
 
-The preceding B05 run left `QFORM-POSTSCHUR-CROSS2-EXTRA-SPECTRUM-BRIDGE-v1`. The assigned partner `fleet03/B05`, in canonical report `yspennstate/math-open-problems@332f29e335274f2b3f81ccf92d62443b928c66cd`, sharpened the local heavy-isotropic coarea interface to `QFORM-PAIR-SECTIONAL-COAREA-v1` and isolated `QFORM-PAIR-PLUCKER-AGGREGATION-v1`: for orthonormal residual coefficient vectors `y,z`, every selected pair pays `|Delta_jk|^(-2/3)` even though `sum Delta_jk^2=1`. The present run attacks exactly whether that reciprocal pair-minor payment can be replaced by an aggregate two-dimensional projection bound.
+The preceding B05 run left `QFORM-POSTSCHUR-CROSS2-EXTRA-SPECTRUM-BRIDGE-v1`. The assigned partner `fleet03/B05`, in canonical report `private-source-repository@332f29e335274f2b3f81ccf92d62443b928c66cd`, sharpened the local heavy-isotropic coarea interface to `QFORM-PAIR-SECTIONAL-COAREA-v1` and isolated `QFORM-PAIR-PLUCKER-AGGREGATION-v1`: for orthonormal residual coefficient vectors `y,z`, every selected pair pays `|Delta_jk|^(-2/3)` even though `sum Delta_jk^2=1`. The present run attacks exactly whether that reciprocal pair-minor payment can be replaced by an aggregate two-dimensional projection bound.
 
 ## 2. A universal two-dimensional product-projection density cap
 
@@ -184,10 +184,10 @@ Full QFORM remains OPEN. No continuity claim is made here.
 ## 6. Source ledger
 
 - Fresh brain control at start: `yspennstate/math-research-brain@49f0dab3727d1d6cf4b3e77c494fb3b92a6bea8f`, owner revision `2026-09-22.5`; later pre-write control remained the same programme/revision.
-- Assigned partner actually applied: fleet03/B05, `QFORM-PAIR-SECTIONAL-COAREA-v1`, `yspennstate/math-open-problems@332f29e335274f2b3f81ccf92d62443b928c66cd`.
-- Partner's universal rank-two half-Riesz theorem used as background boundary, not as a premise of Sections 2--4: `yspennstate/math-open-problems@bf7bff5c9b11cf495ccbcb09ef48549fd9c0d409`.
-- Aggregate Pluecker collar used to interpret the residual structure: fleet03/B07, `yspennstate/math-open-problems@c3b0a3023962496543da62be43f07bff5ca0865b`.
-- Ridge-window theorem read as current global context but not needed for the proof above: `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`.
+- Assigned partner actually applied: fleet03/B05, `QFORM-PAIR-SECTIONAL-COAREA-v1`, `private-source-repository@332f29e335274f2b3f81ccf92d62443b928c66cd`.
+- Partner's universal rank-two half-Riesz theorem used as background boundary, not as a premise of Sections 2--4: `private-source-repository@bf7bff5c9b11cf495ccbcb09ef48549fd9c0d409`.
+- Aggregate Pluecker collar used to interpret the residual structure: fleet03/B07, `private-source-repository@c3b0a3023962496543da62be43f07bff5ca0865b`.
+- Ridge-window theorem read as current global context but not needed for the proof above: `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`.
 
 ## 7. Arithmetic checker
 

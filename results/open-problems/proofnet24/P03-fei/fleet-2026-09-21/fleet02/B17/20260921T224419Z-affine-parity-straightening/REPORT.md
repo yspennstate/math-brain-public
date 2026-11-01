@@ -15,7 +15,7 @@ was present.  Live allocation remained 8 brain B01-B06/B19-B20, 5 benchmark
 B07-B11, and 7 FEI B12-B18.
 
 Fresh scientific master at entry:
-`yspennstate/math-open-problems`
+`private-source-repository`
 `3e44558338d82f9307eaf359fa8820de511fb355`,
 refreshed before persistence to
 `04b23c1d04f73bee258b7b69775d3556e63ff032`.

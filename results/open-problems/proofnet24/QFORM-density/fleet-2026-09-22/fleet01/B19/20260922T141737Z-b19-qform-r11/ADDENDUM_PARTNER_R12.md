@@ -2,7 +2,7 @@
 
 After the main B19 report was committed, the assigned partner `fleet02/B19` completed run `20260922T140533Z-fleet02-B19-qform-r12`. I read its immutable mathematical source at
 
-`yspennstate/math-open-problems@1fcc2e018e3aa8f3d0954e418e74724a813375e1`
+`private-source-repository@1fcc2e018e3aa8f3d0954e418e74724a813375e1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T140533Z-fleet02-B19-qform-r12/REPORT.md`
 

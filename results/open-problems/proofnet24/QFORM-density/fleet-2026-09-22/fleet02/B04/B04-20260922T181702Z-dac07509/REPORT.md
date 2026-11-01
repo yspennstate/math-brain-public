@@ -18,7 +18,7 @@ The exact target remains: independent real physical coordinates with density cap
 The first unpaid implication at start was `QFORM-HYPERBOLIC-PAIR-SELECTION-v1`: in the unresolved high-leverage / near-isotropic branch, select a useful original-product mixed packet or route to an already controlled ridge/grouped branch. The prior B04 run paid the analytic cost of one physical pair only by the crude estimate `|c|^{-1}+4B`. This run strengthens that analytic step to a sharp logarithmic rearrangement, extends it from bounded residual density to a general Hölder small-ball residual, and then lifts a physical pair to a whole rank-one pair of disjoint original-coordinate banks. It also gives a source-valid family showing that any selection rule demanding a single mixed entry of constant size is false.
 
 Named partner actually applied: fleet03/B04, theorem `QFORM-RANK2-SCHUR-NOLEVERAGE-v1`, canonical source
-`yspennstate/math-open-problems@2761bd3896c56a1f929761e69035ba7cb8ebc2bc`,
+`private-source-repository@2761bd3896c56a1f929761e69035ba7cb8ebc2bc`,
 path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T164839Z-r14/REPORT.md`,
 report blob `fe77dd5ab13c1de27d93fc2ba0b8c9f637d4a523`.

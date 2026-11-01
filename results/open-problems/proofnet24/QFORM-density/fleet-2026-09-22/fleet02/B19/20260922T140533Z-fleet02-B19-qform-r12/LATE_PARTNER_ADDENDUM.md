@@ -2,7 +2,7 @@
 
 A newer named-partner result arrived after the main report was written and is incorporated here before finish.
 
-Source: fleet03/B19 run `20260922T140323Z-fleet03-B19-QFORM-r11`, brain handoff blob `71a42797beab63ba1622edb7a846de5b7b392c50`, canonical package `yspennstate/math-open-problems@a22b97b292c1e3d313e0c8c79edff61d5b0d22cb`.
+Source: fleet03/B19 run `20260922T140323Z-fleet03-B19-QFORM-r11`, brain handoff blob `71a42797beab63ba1622edb7a846de5b7b392c50`, canonical package `private-source-repository@a22b97b292c1e3d313e0c8c79edff61d5b0d22cb`.
 
 The partner proves: with `H=A-diag(A)`, either the near-diagonal branch pays, or if `sr(H)>=32` a fair physical cut plus the regularized-determinant theorem yields a continuous density with universal bound `<70`. Therefore every full-target counterexample must lie in the simultaneous residual
 

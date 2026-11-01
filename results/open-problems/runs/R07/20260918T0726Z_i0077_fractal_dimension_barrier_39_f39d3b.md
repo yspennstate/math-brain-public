@@ -5,7 +5,7 @@ Problem/source: Krzysztof Burdzy and Michael Scheutzow, *Forward Brownian Motion
 # R07 CLOSABLE OUTSIDE — run 39: a Hausdorff-dimension barrier and fractal log-periodic skeletons
 
 Run date: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Delivery: private GitHub only. No email, Drive, public posting, purchases, permission changes, workflow execution, or scheduler changes.
 
 ## 1. Continuity, admission, ownership, and fixed metric

@@ -17,7 +17,7 @@ The target remains the unrestricted statement for independent ORIGINAL-coordinat
 Two completed source results are used at actual inequalities:
 
 1. `QFORM-PHYSICAL-D3-NO-MARGINAL-GATE-v1`, source
-   `yspennstate/math-open-problems@8a4e6d0048174e047fc3b4ae8cabfbabba3cdc3b`,
+   `private-source-repository@8a4e6d0048174e047fc3b4ae8cabfbabba3cdc3b`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T165154Z-fleet01-B20-QFORM-auto11/NO_MARGINAL_D3.md`.
    For a literal physical cut I|J and
    `Z3=e3(A[I,J]A[I,J]^T)>0`, it gives a continuous C0 density with
@@ -27,7 +27,7 @@ Two completed source results are used at actual inequalities:
 
 2. The designated partner fleet02/B09 theorem
    `QFORM-3x2-KERNELDERIVATIVE-L1-v1`, source
-   `yspennstate/math-open-problems@65ed9ea70175fb28541d756aea01f6aeb491fd6c`,
+   `private-source-repository@65ed9ea70175fb28541d756aea01f6aeb491fd6c`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T201318Z-fleet02-B09-QFORM-r14/REPORT.md`.
    For a literal physical left triple L and right pair R, with `P=A[L,L]`, rank-two `C=A[L,R]`, columns `c1,c2`, `w=c1 x c2`, and `Pw!=0`, it gives
 

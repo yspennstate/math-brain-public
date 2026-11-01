@@ -10,7 +10,7 @@
 
 The reviewed author bundle is
 
-- repository `yspennstate/math-open-problems`, commit `f8af483622a55611c7933f7d8252fe3c94e4c06e`;
+- repository `private-source-repository`, commit `f8af483622a55611c7933f7d8252fe3c94e4c06e`;
 - path `reports/fei-2026-10-11/runs/B05/20261011T222410Z-fleet01-B05-credit-boundary-a023/`;
 - `REPORT.md` blob `0f097b74548e4be301b39a918774c4465638b2df`;
 - `CLAIMS.json` blob `beb1af6098f1cc56558f840eca3794ac9e8f84f7`;

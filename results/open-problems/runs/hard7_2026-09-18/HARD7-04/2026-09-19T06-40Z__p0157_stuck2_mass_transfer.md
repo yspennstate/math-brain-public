@@ -2,7 +2,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is n
 
 # HARD7-04 bounded research iteration — P0157 STUCK2: from hub skeleton to component mass
 
-Date: 2026-09-19 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-19 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / source OPEN. SECTION-I RECOVERY 2 OF AT MOST 2.** The preceding P0157 run was the third consecutive no-movement checkpoint on the frozen stress-family metric and explicitly required this execution to be a thinking-only STUCK2 report. Accordingly, this run introduces **no new theorem, no checker, and no artifact manufactured for bookkeeping**. The substantive work is to identify the remaining obstruction after the three-hub skeleton theorem, test three genuinely different unused routes against it, and choose exactly one recovery action.
 

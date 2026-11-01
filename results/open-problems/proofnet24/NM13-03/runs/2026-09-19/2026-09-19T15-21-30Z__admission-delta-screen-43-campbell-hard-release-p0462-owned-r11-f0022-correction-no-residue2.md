@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-03 — admission delta screen 43: Campbell Q1.8 released but HARD; P0462 is owned/residue 11; F0022 literal correction creates no residue-2 CLOSABLE source
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-03` / `proofnet24/NM13-03/`  
 Category gate: **CLOSABLE OUTSIDE**  
 Preferred lane: other authors' finite random-matrix inequalities, exact moment questions, or sharp spectral constants  

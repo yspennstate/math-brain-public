@@ -98,7 +98,7 @@ Negating `A_{m,epsilon}` gives the dual `(1,2)` signature with spectrum `{-1,-1,
 
 Required source package:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, Theorem C.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, Theorem C.
 
 That theorem gives, for an exact rank-three `(2,1)` form with spectral coefficients `lambda_1,lambda_2,-mu`, the dimension-free ruled-level-set bound on the one-sheet side `s>=0`.
 
@@ -348,7 +348,7 @@ Therefore
 
 This does **not** contradict fleet03/B11 r21.  Its null-Schur theorem is correct: it states that any already-uniform translation-stable residual bound lifts.  The present family proves that such a residual bound cannot itself remain universal in the near-coloop limit, even though the unconditioned full form remains uniformly bounded.  The lost information is the averaging over the null hub.
 
-This also interfaces directly with the fresh fleet01/B11 r13 structural theorem (`math-open-problems@42a6318c46518baa413d08d31a0b18fbda582860`): small `D0` concentrates a zero-diagonal exact-rank-three frame near at most five null rays.  The present family lies in an exact **three-ray** subcase, has `D0~2epsilon`, and may simultaneously have every physical pair arbitrarily small by choosing large `m`.  Hence a future five-near-ray tangent-bank compiler cannot simply condition away a dominant ray and appeal to a translation-uniform residual theorem; it has to preserve a hub average or replace it with another genuinely aggregated payment.
+This also interfaces directly with the fresh fleet01/B11 r13 structural theorem (`private-source@42a6318c46518baa413d08d31a0b18fbda582860`): small `D0` concentrates a zero-diagonal exact-rank-three frame near at most five null rays.  The present family lies in an exact **three-ray** subcase, has `D0~2epsilon`, and may simultaneously have every physical pair arbitrarily small by choosing large `m`.  Hence a future five-near-ray tangent-bank compiler cannot simply condition away a dominant ray and appeal to a translation-uniform residual theorem; it has to preserve a hub average or replace it with another genuinely aggregated payment.
 
 The construction also blocks the fallback claim that failure of sup-conditioning must expose a constant physical pair: by (1.5), the entire pair matrix can be made arbitrarily small entrywise while (3.7) stays dimension-free.
 
@@ -369,11 +369,11 @@ So the first genuine unpaid implication is `QFORM-FIVE-NEAR-RAY-AVERAGED-HUB-COM
 
 Sources actually used at equations:
 
-* `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, Theorem C -> equation (2.1).
+* `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, Theorem C -> equation (2.1).
 * Same source package, `RESULTS.md`, Rogozin/Ball product-projection input -> equation (3.3).
-* `yspennstate/math-open-problems@807a3ba81ef862c342668396a129851fb694cf06`, fleet03/B11 r21 -> canonical saddle-plus-square estimate (3.6) and null-Schur translation (4.1)-(4.3).
-* `yspennstate/math-open-problems@42a6318c46518baa413d08d31a0b18fbda582860`, fleet01/B11 r13 -> five-near-ray current structural interface used in Section 5.
-* Predecessor B11 disjoint-basis/cut theorem: `yspennstate/math-open-problems@e47740cfec219112c826613bec5785af4b96cf3` -> definition and current role of `D0`.
+* `private-source-repository@807a3ba81ef862c342668396a129851fb694cf06`, fleet03/B11 r21 -> canonical saddle-plus-square estimate (3.6) and null-Schur translation (4.1)-(4.3).
+* `private-source-repository@42a6318c46518baa413d08d31a0b18fbda582860`, fleet01/B11 r13 -> five-near-ray current structural interface used in Section 5.
+* Predecessor B11 disjoint-basis/cut theorem: `private-source-repository@e47740cfec219112c826613bec5785af4b96cf3` -> definition and current role of `D0`.
 
 No post-rotation independence, hidden support/moment/log-concavity assumption, arbitrary-joint coarea estimate, conditional-cap-as-independence step, finite census closure, fixed-local-minor assertion, or perturbative deletion is used.
 

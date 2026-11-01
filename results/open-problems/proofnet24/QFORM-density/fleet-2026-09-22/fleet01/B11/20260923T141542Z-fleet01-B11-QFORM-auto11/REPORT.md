@@ -14,7 +14,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 
 The designated completed partner source actually used below is fleet02/B11 r31,
 
-`yspennstate/math-open-problems@15189fa11c0c752c1d9022c60e253a9e8d457df8`,
+`private-source-repository@15189fa11c0c752c1d9022c60e253a9e8d457df8`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T124731Z-fleet02-B11-QFORM-r31/REPORT.md`.
 
@@ -43,7 +43,7 @@ where `g_{i,t}(x)=f_i(x)e^{itq_i(x)}` and hence `|g_{i,t}|=f_i<=1`, `\int f_i=1`
 
 The previous fleet01/B11 run at
 
-`yspennstate/math-open-problems@0fdef4c0a98afec689f4310872bdac4fc1010579`
+`private-source-repository@0fdef4c0a98afec689f4310872bdac4fc1010579`
 
 proved that, inside that finite-spike chamber, the exact rank-one residual left frame is already paid by `2048/s`. The purpose of the present run is to attack the positive-area transition without assuming a low-leverage planar frame.
 

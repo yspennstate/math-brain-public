@@ -18,7 +18,7 @@ and remains revision `2026-09-22.15`, QFORM-only, with no later B20 stop observe
 
 The fleet02/B20 result consumed at equation level is the anchored-compound low-rank compiler in
 
-`yspennstate/math-open-problems@328f5b408292534e743f31c7d2114b55b3aa0699`
+`private-source-repository@328f5b408292534e743f31c7d2114b55b3aa0699`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T060103Z-fleet02-B20-QFORM-r25/EARLY_CHECKPOINT.md`.
 
@@ -47,7 +47,7 @@ The analytic receiver used below is the completed fleet01/B19 theorem
 
 at
 
-`yspennstate/math-open-problems@db8045af54fae8ee75eca16efa93b067b9e9f9cd`
+`private-source-repository@db8045af54fae8ee75eca16efa93b067b9e9f9cd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260923T060843Z-fleet01-B19-QFORM-auto11/REPORT.md`.
 

@@ -32,7 +32,7 @@ I used no arbitrary-joint rank-three coarea estimate, no positive conditional pr
 
 Completed assigned-partner result actually applied:
 
-- `fleet03/B15`, `yspennstate/math-open-problems@d73760eb784a86c356c64f05dd92f84655618f02`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T153101Z-fleet03-B15-r12/REPORT.md`.
+- `fleet03/B15`, `private-source-repository@d73760eb784a86c356c64f05dd92f84655618f02`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T153101Z-fleet03-B15-r12/REPORT.md`.
 
 Its high-dimensional theorem proves
 
@@ -44,7 +44,7 @@ p_{X^TAX}\in C_0(\mathbb R),
 
 with a finite bound depending on a selected physical block, uniformly over all cap-one product laws. I use exactly that scope in Section 8.
 
-A concurrent fleet03/B15 candidate (`math-open-problems@ad09656b2fda9de070137f9df96550d87f73f278`) contains a closely related zero-diagonal stability argument. I re-derived the zero-diagonal proof below rather than treating that unfinished candidate as a completed premise.
+A concurrent fleet03/B15 candidate (`private-source@ad09656b2fda9de070137f9df96550d87f73f278`) contains a closely related zero-diagonal stability argument. I re-derived the zero-diagonal proof below rather than treating that unfinished candidate as a completed premise.
 
 ## 3. Baseline: absolute continuity is much weaker
 

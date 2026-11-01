@@ -2,7 +2,7 @@
 
 After the main report was written, the fresh partner-directory read exposed a newer compatible fleet03/B06 handoff than r48:
 
-`yspennstate/math-open-problems@ac4d8963e32785d2191e535b0268fe451262a903`,
+`private-source-repository@ac4d8963e32785d2191e535b0268fe451262a903`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T012256Z-fleet03-B06-qform-r49/REPORT.md`,
 with theorem `QFORM-RANK1T-TWOPIVOT-AGGREGATE-v1`.
 

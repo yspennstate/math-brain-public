@@ -29,7 +29,7 @@ For (n\le64), this is (16\sqrt{6\pi}). Thus the actual bounded-dimensional spect
 
 Applied source:
 [
-\texttt{math-open-problems@85fab09c44665e39173f34aa32529199cff0fe27}
+\texttt{private-source@85fab09c44665e39173f34aa32529199cff0fe27}
 ]
 at `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T083305Z-r21/CHECKPOINT.md` (blob `beeada853656d141eab2e87b6abd08e13a164f65`).
 

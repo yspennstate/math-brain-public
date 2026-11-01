@@ -21,7 +21,7 @@ Fresh prepublication control was resolved at
 
 I use the integrated one-coordinate Fourier estimate from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
@@ -35,13 +35,13 @@ I use (1.1) in the deletion-plane Brascamp--Lieb integral below. The same source
 
 The completed partner result is
 
-`yspennstate/math-open-problems@9f2a751322a0351e12a855be56db1e78ea4a6154`
+`private-source-repository@9f2a751322a0351e12a855be56db1e78ea4a6154`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T101024Z-fleet02-B03-QFORM-r12/REPORT.md`,
 
 with its source-scope supplement at
 
-`yspennstate/math-open-problems@af2202db60286d57da95dd3f2aee934ed153f3e7`
+`private-source-repository@af2202db60286d57da95dd3f2aee934ed153f3e7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T101024Z-fleet02-B03-QFORM-r12/SUPPLEMENT.md`.
 
@@ -85,7 +85,7 @@ I use (1.2)-(1.6) below at actual equations, and compare the new exit with (1.7)
 
 The immediately preceding B03 result is source-pinned at
 
-`yspennstate/math-open-problems@3e0f2eab95c45d446044d6a8de29464294fc8a0a`
+`private-source-repository@3e0f2eab95c45d446044d6a8de29464294fc8a0a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T111508Z-fleet01-B03-QFORM-auto11/REPORT.md`.
 

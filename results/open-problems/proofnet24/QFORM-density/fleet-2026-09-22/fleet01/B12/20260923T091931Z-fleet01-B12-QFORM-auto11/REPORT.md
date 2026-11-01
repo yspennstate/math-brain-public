@@ -21,7 +21,7 @@ This still does not extract such a protected core family from the bare global hy
 Three completed inputs are applied at equations.
 
 1. `fleet03/B12` matrix-parameter Schur gap:
-   `yspennstate/math-open-problems@333dd6db61c9d18e88f9b8be5bae55c811d49b42`,
+   `private-source-repository@333dd6db61c9d18e88f9b8be5bae55c811d49b42`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T074544Z-qform-eigenvalue-r28/REPORT.md`.
    For a physical core `j`, its data satisfy
 
@@ -31,12 +31,12 @@ Three completed inputs are applied at equations.
    where `S_j` is an `r x r` orthogonal matrix.
 
 2. Designated partner `fleet02/B12`, `QFORM-ALIGNED-DIAGONAL-RPLUS1-ANCHOR-STABILITY-v1`:
-   `yspennstate/math-open-problems@09d93ccc40876d6dc6dd8bd0dff62769b4a75ea8`,
+   `private-source-repository@09d93ccc40876d6dc6dd8bd0dff62769b4a75ea8`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T085819Z-fleet02-B12-auto11/REPORT.md`.
    Its exact combinatorial step is: for diagonal `Theta=diag(tau_1,...,tau_r)`, if the `r+1` diagonal anchor values are pairwise `Delta`-separated in every column, then each parameter coordinate can make at most one core bad, so one core remains uniformly nonresonant in all `r` coordinates.
 
 3. Newest-Claude localized physical-triple bound:
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
    If an ORIGINAL-coordinate principal `3x3` block has all three eigenvalues of modulus at least `c>0`, then after conditioning on all other original coordinates,
 

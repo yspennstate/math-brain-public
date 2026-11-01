@@ -16,7 +16,7 @@ This report uses no moments, support hypotheses, log-concavity, Gaussianity, pos
 
 The completed designated-partner inputs actually used are:
 
-1. **fleet04/B18 r3**, `QFORM-ISOTROPIC-SHEAR-MIXED-VOLUME-v1`, canonical report `yspennstate/math-open-problems@24a9362bd3f24a3849021093cf98611f95b5ab04:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T001857Z-fleet04-B18-QFORM-r3/REPORT.md`. In the Schur-isotropic shear factorization
+1. **fleet04/B18 r3**, `QFORM-ISOTROPIC-SHEAR-MIXED-VOLUME-v1`, canonical report `private-source-repository@24a9362bd3f24a3849021093cf98611f95b5ab04:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T001857Z-fleet04-B18-QFORM-r3/REPORT.md`. In the Schur-isotropic shear factorization
 
    `Q=(Y+u X_0)^T D (Y+u X_0)`, `Y=V^T X'`, `V^T V=I_3`, `u^T D u=0`,
 
@@ -26,7 +26,7 @@ The completed designated-partner inputs actually used are:
 
    with a continuous density.
 
-2. **fleet04/B18 r2**, canonical report `yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`. If a cap-one scalar `X` is independent of two normalized linear banks `U=<u,X_I>`, `V=<v,X_J>` on disjoint original-coordinate blocks, and `K` is a nonsingular symmetric zero-pivot `3x3` matrix, then
+2. **fleet04/B18 r2**, canonical report `private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`. If a cap-one scalar `X` is independent of two normalized linear banks `U=<u,X_I>`, `V=<v,X_J>` on disjoint original-coordinate blocks, and `K` is a nonsingular symmetric zero-pivot `3x3` matrix, then
 
    `||p_((X,U,V)^T K (X,U,V))||_infinity
       <= 6 [R(u)R(v)]^(2/3) |det K|^(-1/3)`,

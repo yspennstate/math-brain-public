@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-06 — post-P0195 successor admission screen 1
 
 Run date: 2026-09-18 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track / namespace: `proofnet24/NM13-06/`  
 Category: **CLOSABLE OUTSIDE**  
 Exclusive shard: `int(SHA256(UTF-8 canonical_dedup_key).hexdigest(),16) mod 13 = 5`

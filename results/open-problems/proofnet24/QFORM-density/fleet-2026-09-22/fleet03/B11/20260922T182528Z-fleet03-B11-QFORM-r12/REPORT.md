@@ -14,7 +14,7 @@ This note treats an exact-rank-three indefinite branch with a heavy physical row
 
 The completed designated partner result applied here is fleet04/B11, canonical source
 
-`yspennstate/math-open-problems@44e7ab6750fbc3dccd77f1dd9e8bdba0bba2f0f5`
+`private-source-repository@44e7ab6750fbc3dccd77f1dd9e8bdba0bba2f0f5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T161514Z-b11-cone-trace-r1/REPORT.md`.
 

@@ -63,7 +63,7 @@ and contraction of total variation under measurable pushforwards complete the pr
 
 Apply fleet01/B14's range-aligned disjoint-bank theorem, run
 \`20260922T192403Z-fleet01-B14-qform-r18\`, canonical
-\`math-open-problems@fc439d3b6583c19f36900489b54e4f2c7f54cd0f\`,
+\`private-source@fc439d3b6583c19f36900489b54e4f2c7f54cd0f\`,
 componentwise and then use the mixture compiler.
 
 For

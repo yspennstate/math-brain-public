@@ -16,15 +16,15 @@ The full target remains open: for every finite `n`, every independent real input
 
 The designated partner result used at equation level is the still-valid slice-Fourier part of fleet04/B14 r9:
 
-- repository/commit: `yspennstate/math-open-problems@b5f173477a3889ad9432ea7d97767e969c83b279`;
+- repository/commit: `private-source-repository@b5f173477a3889ad9432ea7d97767e969c83b279`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T141430Z-fleet04-B14-affine-slice-fresnel-r9/REPORT.md`;
 - equation (3.6): for the unnormalised frozen `V=l` slices,
 
   `|mu_hat_{l,g}(t)| <= 4 sqrt(pi) |gamma t|^(-1/2)`.
 
-The later correction to r9 concerns the interval-only rough-hub endpoint, not this Fourier slice estimate. The newest partner r10 was also read: `yspennstate/math-open-problems@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`; it gives zero-tax Schur localization once a uniformly invertible physical 3x3 block is already present. The theorem below addresses a different missing interface: an extra independent bank may share the physical hub coordinate with the slice core, so it cannot be appended by ordinary convolution.
+The later correction to r9 concerns the interval-only rough-hub endpoint, not this Fourier slice estimate. The newest partner r10 was also read: `private-source-repository@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`; it gives zero-tax Schur localization once a uniformly invertible physical 3x3 block is already present. The theorem below addresses a different missing interface: an extra independent bank may share the physical hub coordinate with the slice core, so it cannot be appended by ordinary convolution.
 
-I also use the standard product-projection estimate already source-pinned in this slot at `yspennstate/math-open-problems@20e9f45a5d8c8d79034aa09318d8922daae66599`: if `Z_j` are independent cap-one variables and `a != 0`, then
+I also use the standard product-projection estimate already source-pinned in this slot at `private-source-repository@20e9f45a5d8c8d79034aa09318d8922daae66599`: if `Z_j` are independent cap-one variables and `a != 0`, then
 
 `||p_{a^T Z}||_infinity <= sqrt(2)/||a||_2`.
 

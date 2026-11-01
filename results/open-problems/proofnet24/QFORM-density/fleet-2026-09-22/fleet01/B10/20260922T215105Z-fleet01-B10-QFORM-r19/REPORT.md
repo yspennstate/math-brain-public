@@ -59,7 +59,7 @@ Thus the first unpaid implication is no longer the exact degeneracy itself. It i
 
 The completed designated partner is fleet02/B10 r12:
 
-`yspennstate/math-open-problems@2045e39c5eda8d2a94098d79932223c77f2a4db7`
+`private-source-repository@2045e39c5eda8d2a94098d79932223c77f2a4db7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T204729Z-fleet02-B10-QFORM-r12/REPORT.md`.
 
@@ -174,7 +174,7 @@ The nonzero singular values of `C` are those of the invertible `3x3` matrix `R_S
 
 The completed fleet03/B19 theorem `QFORM-EXACT-CROSS-RANK-L2-v1`, canonical source
 
-`yspennstate/math-open-problems@f82fe367b06909082f94eda2b98f4a2fd2a5bb7c`
+`private-source-repository@f82fe367b06909082f94eda2b98f4a2fd2a5bb7c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T172719Z-fleet03-B19-QFORM-r16/REPORT.md`,
 
@@ -241,7 +241,7 @@ By the partner paving bound (2.1),
 
 The scalar `X_0` has density cap `K<=1` and is genuinely independent of `(V,W)`. Apply fleet02/B10 r11, Lemma 2.1 `QFORM` scaled dependence-tolerant hyperbolic-square theorem, canonical source
 
-`yspennstate/math-open-problems@11c9ae19edfd07e3a0bd4053a910667c20e721ab`
+`private-source-repository@11c9ae19edfd07e3a0bd4053a910667c20e721ab`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T130225Z-b10-qform-r11/REPORT.md`.
 

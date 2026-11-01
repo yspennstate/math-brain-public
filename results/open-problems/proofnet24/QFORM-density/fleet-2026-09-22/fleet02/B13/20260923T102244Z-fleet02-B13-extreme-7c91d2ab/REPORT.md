@@ -28,7 +28,7 @@ The new theorem below pays the whole rectangular leaf bank by its aggregate Gram
 
 Source:
 
-`yspennstate/math-open-problems@57d2f3bcf9a2dec39c1761aafff0f3f7f1732c59`
+`private-source-repository@57d2f3bcf9a2dec39c1761aafff0f3f7f1732c59`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T093454Z-fleet03-B13-qform-r23/REPORT.md`.
 
@@ -50,7 +50,7 @@ This run keeps that mechanism but replaces the square `V` bank by an arbitrary-w
 
 Source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
@@ -70,7 +70,7 @@ All same-bank curvature, outside couplings, and affine terms are retained.
 
 Source:
 
-`yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
+`private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
 
@@ -78,7 +78,7 @@ For every bounded measurable product kernel, its supremum over cap-one product d
 
 The preceding fleet02/B13 r24 finite-family purification at
 
-`yspennstate/math-open-problems@cc40e95933db0262eddb6e679211145a84dca081`
+`private-source-repository@cc40e95933db0262eddb6e679211145a84dca081`
 
 allows a finite battery of bounded slab/test kernels to be transferred simultaneously to one common bounded-finite-union product-indicator law. This run only needs the one-slab version for the theorem itself, but the finite-family version remains available for gluing it to structural alternatives.
 

@@ -30,7 +30,7 @@ The result below does more: it gives a quantitative Hamming-radius exclusion for
 
 From `TERMINAL_CORE`:
 
-- repository `yspennstate/math-open-problems`;
+- repository `private-source-repository`;
 - commit `85ffa60db26997421d980b1f86c03d82259504ca`;
 - path `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md`.
 
@@ -68,7 +68,7 @@ All-block terminality is only the weaker consequence obtained by upper-bounding
 
 From `COPAIR_BARRIER`:
 
-- repository `yspennstate/math-open-problems`;
+- repository `private-source-repository`;
 - commit `85ffa60db26997421d980b1f86c03d82259504ca`;
 - path `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md`.
 
@@ -103,7 +103,7 @@ publication cutoff, so it was not treated as completed evidence. The newest
 compatible **completed** partner result consumed is
 
 - fleet03/B18 `RM3-LOWLEVEL-BARRIER-v1`;
-- repository `yspennstate/math-open-problems`;
+- repository `private-source-repository`;
 - immutable read commit `374c4874e914c7414abc9109fadf77cfc3947298`;
 - path `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md`.
 

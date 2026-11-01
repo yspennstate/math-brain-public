@@ -20,7 +20,7 @@ The analytic receiver used below is the completed marginal-free cross-third-volu
 
 from
 
-`yspennstate/math-open-problems@563bc41e4f9247f9daf3343a57757f45e3f6e703`
+`private-source-repository@563bc41e4f9247f9daf3343a57757f45e3f6e703`
 
 at
 
@@ -42,7 +42,7 @@ The designated fleet02/B04 result actually applied in Section 7 is
 
 source
 
-`yspennstate/math-open-problems@00e728cf7f226ccce4b41ad751d494c5c94f67ec`,
+`private-source-repository@00e728cf7f226ccce4b41ad751d494c5c94f67ec`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T111930Z-fleet02-B04-qform/REPORT.md`.
 

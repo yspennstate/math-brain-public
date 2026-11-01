@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R14 HARD OUTSIDE — P0157 dyadic top-band rank-one reduction
 
-Run date: 2026-09-19 UTC. Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Run date: 2026-09-19 UTC. Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL / SOURCE OPEN.** The negative-margin spherical perceptron and H0008 remain terminally handed off and were not reopened. R14 continues the exclusive P0157 assignment recorded in `operations/claims/P0157.md`.
 

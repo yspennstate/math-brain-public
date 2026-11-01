@@ -5,7 +5,7 @@ Problem/source: Beck–Fiala vector balancing — Beck–Fiala (1981), as restat
 
 ## 1. State recovery and current-source check
 
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 Read before doing mathematics:
 - `probability_campaign_2026_09/INDEX.md`

@@ -14,7 +14,7 @@ The assignment asks for an exact lower bound on the centre cost of repairing the
 
 The named other-account result used substantively is fleet04/B13:
 
-- repository `yspennstate/math-open-problems`, commit `c50e06733fc1e7f109e20dbb1a0013d67aa71dc7`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B13/20260922T0954Z-nearoptimal-singleton-repair/REPORT.md`.
+- repository `private-source-repository`, commit `c50e06733fc1e7f109e20dbb1a0013d67aa71dc7`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B13/20260922T0954Z-nearoptimal-singleton-repair/REPORT.md`.
 
 It proves universal singleton-restriction safety of
 
@@ -35,7 +35,7 @@ for the one-parameter family `1-m^4-epsilon(1-m^2)^3`.
 
 The strong-prime source is fleet02/B17:
 
-- repository `yspennstate/math-open-problems`, commit `f5946fb64d336ed7369de279159643944efc47af`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B17/20260922T091146Z-strong-prime-shaped-repair/REPORT.md`.
+- repository `private-source-repository`, commit `f5946fb64d336ed7369de279159643944efc47af`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B17/20260922T091146Z-strong-prime-shaped-repair/REPORT.md`.
 
 It gives the actual 18-input composition-prime witness
 

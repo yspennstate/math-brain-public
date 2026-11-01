@@ -17,7 +17,7 @@ The unrestricted conjecture is not proved here. Every probabilistic conditioning
 The two analytic inputs are:
 
 1. Previous same-slot theorem `QFORM-ENERGY-WEIGHTED-THIRDCOMPOUND-COLLISION-v1`, source
-   `yspennstate/math-open-problems@32b0b659346aab1c840c81d677f75d5aef0654e3`,
+   `private-source-repository@32b0b659346aab1c840c81d677f75d5aef0654e3`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260924T014632Z-fleet01-B04-QFORM-auto11-r26/REPORT.md`.
    For a symmetric physical carrier `T`, with third-compound energy `E_T=e3(T^2)` and energy collision `chi_3(T)`, it proves
 
@@ -26,7 +26,7 @@ The two analytic inputs are:
    and `chi_3(T) <= sum_i ell_i(T)^2`, where `ell_i(T)` are physical range leverages.
 
 2. Completed marginal-free physical cross-third-volume receiver `QFORM-CROSS-E3-OPTIMAL-THRESHOLD-v1`, source
-   `yspennstate/math-open-problems@563bc41e4f9247f9daf3343a57757f45e3f6e703`,
+   `private-source-repository@563bc41e4f9247f9daf3343a57757f45e3f6e703`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T215155Z-fleet03-B04-QFORM-auto11-r42/REPORT.md`.
    For every literal original-coordinate cross block `M`, with arbitrary same-bank quadratic terms and induced affine terms,
 
@@ -37,7 +37,7 @@ The two analytic inputs are:
    and the characteristic function is in `L1`, hence the density has a `C_0` representative.
 
 The designated fleet02/B04 theorem actually applied in Section 6 is `QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1`, pinned at
-`yspennstate/math-open-problems@00e728cf7f226ccce4b41ad751d494c5c94f67ec`,
+`private-source-repository@00e728cf7f226ccce4b41ad751d494c5c94f67ec`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T111930Z-qform/REPORT.md`.
 Its exact-rank-three branch gives `||p_Q||_infinity <=6 E3(M)^(-1/6)` with a continuous `C_0` density, while retaining arbitrary same-bank phases/curvature.
 

@@ -10,7 +10,7 @@ Model self-report: GPT-5.6 Sol. Reasoning effort requested: maximum actually sup
 
 
 
-Fresh `yspennstate/math-open-problems` master was `4d927de8da1be5a61aa9dec10d418660e4686e87`. I read `FLEET_RULES.md`, `proofnet24/P03-fei/README.md`, and the September-21 TASKS/REPORT/APPROACHES continuation. The unrestricted FEI target is not the older Hod/read-once scale: the current recorded certified lower bound is `C_FEI > 6.521845710923046575` from Numaro's 18-variable monotone seed plus amplification. Full FEI still has no known finite universal upper bound.
+Fresh `private-source-repository` master was `4d927de8da1be5a61aa9dec10d418660e4686e87`. I read `FLEET_RULES.md`, `proofnet24/P03-fei/README.md`, and the September-21 TASKS/REPORT/APPROACHES continuation. The unrestricted FEI target is not the older Hod/read-once scale: the current recorded certified lower bound is `C_FEI > 6.521845710923046575` from Numaro's 18-variable monotone seed plus amplification. Full FEI still has no known finite universal upper bound.
 
 This run continues the newest B14 `refunded-selector-proof` artifacts (`f861d76963f528f8446efe64ea60417d03b645b8`, `c2e7696a1a73fdfb62f3afe0c955e10083460f57`) rather than restarting the fixed-seed route. Those artifacts established the raw refunded selector algebra but also preserved the parity-padding failure of a selector based only on unshifted singleton Fourier mass. The new step below removes deterministic parity padding by an influence-nonincreasing character gauge and then compiles the selector back to the ORIGINAL physical restriction recurrence.
 

@@ -19,7 +19,7 @@ This run never rotates the product source and never assumes Gaussianity, moments
 
 ### 2.1 fleet01/B20 r15: the current P1 triangle packet
 
-Source: `yspennstate/math-open-problems@0d364106e0773824b7dad9257b49046e6765a453`, path
+Source: `private-source-repository@0d364106e0773824b7dad9257b49046e6765a453`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T182314Z-fleet01-B20-QFORM-r15/REPORT.md`.
 
 It proves that the P1 physical-pivot branch has pivot magnitude
@@ -38,7 +38,7 @@ This is the previously unpaid coherent same-sign physical triangle packet.
 
 ### 2.2 Translation-uniform rank-two half-Riesz theorem
 
-Source: fleet03/B01, accessible at `yspennstate/math-open-problems@058acb5c8f9186ef199bbaf136b57f4dd9ea3800`, path
+Source: fleet03/B01, accessible at `private-source-repository@058acb5c8f9186ef199bbaf136b57f4dd9ea3800`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T163129Z-r15/REPORT.md`.
 
 For an invertible real symmetric rank-two form with quadratic matrix `H` on independent cap-one coordinates,
@@ -49,7 +49,7 @@ is a safe current archive constant. For a two-physical-coordinate form, arbitrar
 
 ### 2.3 Full-matrix physical indefinite-pair theorem
 
-Source: `yspennstate/math-open-problems@058acb5c8f9186ef199bbaf136b57f4dd9ea3800`, path
+Source: `private-source-repository@058acb5c8f9186ef199bbaf136b57f4dd9ea3800`, path
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 
 If an original-coordinate principal pair `B` is invertible indefinite, `D=|det B|`, `kappa=sigma_min(B)`, and `s_3(A)>=s`, then
@@ -60,7 +60,7 @@ It permits arbitrary remaining spectrum and affine terms.
 
 ### 2.4 Required designated partner fleet04/B20
 
-Source: `yspennstate/math-open-problems@25ad8faaac5064b6814d51ae63d894fe97c1eac4`, path
+Source: `private-source-repository@25ad8faaac5064b6814d51ae63d894fe97c1eac4`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T172057Z-fleet04-B20-QFORM-r3/REPORT.md`.
 
 In its validated diagonal-dominated first-pivot reduction, with `|a|>=tau>=1/4`, if the selected second Schur row `S=[[d,c^T],[c,C]]` satisfies

@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 # R03 run59 — exact corank split repairs the R2 import at source scale; F0001 handoff
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL; source not certified closed; F0001 HANDOFF at end of this report.**
 

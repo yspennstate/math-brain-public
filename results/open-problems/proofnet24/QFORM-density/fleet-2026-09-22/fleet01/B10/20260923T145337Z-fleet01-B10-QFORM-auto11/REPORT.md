@@ -305,7 +305,7 @@ Thus as `h\uparrow1`, essentially all principal three-volume is **bordered by th
 
 The newest completed designated-partner report consumed in this run is
 
-`yspennstate/math-open-problems@f81263344356dd37ef7f6323f863ba48b49f1a34`,
+`private-source-repository@f81263344356dd37ef7f6323f863ba48b49f1a34`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T132259Z-fleet02-B10-QFORM-5d7c/REPORT.md`.
 

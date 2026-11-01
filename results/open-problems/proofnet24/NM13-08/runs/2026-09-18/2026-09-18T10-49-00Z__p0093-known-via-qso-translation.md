@@ -5,7 +5,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 Date: 2026-09-18 UTC  
 Track / namespace: `proofnet24/NM13-08/`  
 Category: `CLOSABLE OUTSIDE`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Canonical source / claim: `P0093`, `operations/claims/P0093.md`  
 Canonical dedup key: `infinitely_many_fixed_points_of_a_finite_color_automaton`  
 Selection shard: `7 mod 13`  

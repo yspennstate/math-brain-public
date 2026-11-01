@@ -6,7 +6,7 @@ Programme: QFORM-DENSITY-3EIG-20260922. Full target remains OPEN.
 
 Close the strict-N3 **global physical star** survivor left by the exact cut-rank-one compiler, while retaining arbitrary cap-one independent inputs and without rotating the product law.
 
-Use the fresh fleet01/B09 theorem `QFORM-TWOHUB-PHYSICAL-STAR-DIFFUSE-v1` from `yspennstate/math-open-problems@344963502d821945c7af02ab8d7272536dab8e5c` (scope clarified at `aa3a9fa9f63baf640ff8707925851928debb73af`): for two original-coordinate hubs `h,s`, diagonal leaf self-block, leaf-to-hub row vectors `rho_i=(A_{ih},A_{is})`, Gram matrix `G=sum_i rho_i rho_i^T`, and row leverages `ell_i=rho_i^T G^{-1}rho_i<=1/2`,
+Use the fresh fleet01/B09 theorem `QFORM-TWOHUB-PHYSICAL-STAR-DIFFUSE-v1` from `private-source-repository@344963502d821945c7af02ab8d7272536dab8e5c` (scope clarified at `aa3a9fa9f63baf640ff8707925851928debb73af`): for two original-coordinate hubs `h,s`, diagonal leaf self-block, leaf-to-hub row vectors `rho_i=(A_{ih},A_{is})`, Gram matrix `G=sum_i rho_i rho_i^T`, and row leverages `ell_i=rho_i^T G^{-1}rho_i<=1/2`,
 
 `||p_Q||_infinity <= 4 det(G)^(-1/4)`
 

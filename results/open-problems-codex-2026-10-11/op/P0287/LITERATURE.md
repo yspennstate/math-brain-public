@@ -57,7 +57,7 @@ All requests below were made on 2026-10-12 using Python urllib, never built-in w
 - math_recall.py: “Liggett half line exclusion stationary measures boundary”; results mostly off topic, not used as premises.
 - math_recall.py --id claim_0b7f0cf3843d83b7cb84de2998e8f8a53197aacc6cf57f7a75d24c2f4d06c4ba: read the earlier attempt whole; independently rechecked both its current and covariance formulas, and extended its interior-density obstruction to a full product classification.
 - rg for P0287 in intake problems.jsonl, attempts.jsonl and sources.jsonl, and codex_pool_2026_10_10: no matching earlier files found in these targeted paths; two intake directories lacked attempts/sources files. An initial broader jsonl search found the 2026-10-10 problem-list record with the supplied statement and caveat.
-- Read-only git ls-tree origin/master filtered for P0287/p0287 in ~/math-open-problems: no matching path. No repository was changed.
+- Read-only git ls-tree origin/master filtered for P0287/p0287 in ~/private-source: no matching path. No repository was changed.
 
 ## Relevant leads, with scope differences
 - B. Derrida, M. R. Evans, V. Hakim, V. Pasquier, “Exact solution of a 1D asymmetric exclusion model using a matrix formulation,” *Journal of Physics A: Mathematical and General* 26 (1993), 1493–1517. Explicitly cited by the workshop source. Finite open ASEP matrix ansatz, not full-line single-site killing; no inference of a printed solution.

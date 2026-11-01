@@ -175,7 +175,7 @@ for every physical residual pair with `Delta_jk!=0`, uniformly in the punctured 
 
 The newest compatible partner report is
 
-`yspennstate/math-open-problems@4f1f31064431e8bb0d0be813ed5540d0b12ab590:`
+`private-source-repository@4f1f31064431e8bb0d0be813ed5540d0b12ab590:`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T214237Z-fleet03-B05-QFORM-r33/REPORT.md`.
 
 Its deterministic core applies to **any** Parseval two-frame. Apply it here to
@@ -266,7 +266,7 @@ I keep the partner's `eta=1/64` as the live compiler because its unresolved Case
 
 The required source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:`
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
 was read through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.

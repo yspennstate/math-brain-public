@@ -17,7 +17,7 @@ The live correction inbox was reread at the pre-publication control head. In par
 
 The immediate B10 source is r20,
 
-`yspennstate/math-open-problems@7acd371ee2ee83a7fae12d7bedb38bc99c051b6d`
+`private-source-repository@7acd371ee2ee83a7fae12d7bedb38bc99c051b6d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T221548Z-fleet03-B10-QFORM-r20/REPORT.md`.
 
@@ -25,7 +25,7 @@ It produced three disjoint original-coordinate banks with tripartite exterior ma
 
 The newest rough geometric result actually consumed in this run is fleet04/B13,
 
-`yspennstate/math-open-problems@574213e45f285d822893bea637ba6a5bc46a22b6`
+`private-source-repository@574213e45f285d822893bea637ba6a5bc46a22b6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
 
@@ -33,7 +33,7 @@ It proves the exact product-purification identity for bounded slab functionals a
 
 A second completed input is fleet01/B13,
 
-`yspennstate/math-open-problems@680ff828e47704689fde0ca4b1690860a9cbd71f`
+`private-source-repository@680ff828e47704689fde0ca4b1690860a9cbd71f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260922T222028Z-fleet01-B13-qform-auto11/REPORT.md`.
 

@@ -7,7 +7,7 @@ Status: full QFORM remains OPEN / NOT PROVED / NOT DISPROVED. Execution is WITHO
 
 ## First unpaid implication
 
-The newest compatible partner is fleet03/B12 r52 (`math-open-problems@3fa0b38081ce4d0c44c074febf188dede6f6f6ae`). Its one-packet theorem says that if `M` has column floor `g` and `c_1>=...>=c_m` are the canonical correlations between `Ran(M)` and `Ran(N)`, then
+The newest compatible partner is fleet03/B12 r52 (`private-source@3fa0b38081ce4d0c44c074febf188dede6f6f6ae`). Its one-packet theorem says that if `M` has column floor `g` and `c_1>=...>=c_m` are the canonical correlations between `Ran(M)` and `Ran(N)`, then
 
 ` s_(m-q)(M+N) >= g sqrt(1-c_(q+1)^2). `
 

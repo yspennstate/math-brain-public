@@ -208,7 +208,7 @@ This is a structural reduction, not yet a full density theorem: the disjoint `Om
 
 Use fleet02/B09 r15, canonical source
 
-`yspennstate/math-open-problems@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`
+`private-source-repository@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`
 
 which proves the square–hyperbola receiver
 

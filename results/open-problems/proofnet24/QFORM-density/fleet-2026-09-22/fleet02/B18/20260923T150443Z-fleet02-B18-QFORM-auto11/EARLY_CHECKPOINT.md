@@ -33,7 +33,7 @@ Choose the spectral basis so `u_i=sqrt(c_i)e_1`. Parseval gives that the two tra
 
 Since `S_i` has rank at most two, the sum of its principal `2x2` minors is its rank-two pseudodeterminant. Therefore `a pdet_2(S_i)=c_i det M`, proving the identity.
 
-Apply the completed orientation-free theorem `QFORM-RANK2-AFFINE-HALF-RIESZ-v1` at `math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, which is valid for arbitrary affine terms and gives
+Apply the completed orientation-free theorem `QFORM-RANK2-AFFINE-HALF-RIESZ-v1` at `private-source@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, which is valid for arbitrary affine terms and gives
 
 `H_(1/2)(S_i)<=128 |pdet_2 S_i|^(-1/4)`.
 

@@ -16,7 +16,7 @@ The live corrections remain binding: no post-rotation independence, no arbitrary
 
 Required fixed source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
 I read `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The completed input used below is Theorem F (Fresnel–Brascamp–Lieb): for
@@ -35,7 +35,7 @@ I also use the completed ruled one-sheet Theorem C from the same source only in 
 
 Latest designated partner actually consumed:
 
-`yspennstate/math-open-problems@b8cb4aa22c840d8f4fc76bcca6d0cb49d4aeb9f9`
+`private-source-repository@b8cb4aa22c840d8f4fc76bcca6d0cb49d4aeb9f9`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260924T092642Z-fleet03-B15-qform-auto11/REPORT.md`.
 
 Its fixed-Hessian theorem says every rank-at-least-three affine quadratic under arbitrary rough cap-one product inputs has a canonical `C_0` density, and its regularity conclusion is downstream of height. I apply that theorem below after an independent interval-height payment for a concrete diffuse-bank family.

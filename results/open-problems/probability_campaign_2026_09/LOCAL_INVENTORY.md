@@ -30,7 +30,7 @@ All paths are on this machine (Windows, user `owner`). Dates below are the write
 | `.../06_math_research/probability_1000_attempts_I_20260914/` (dir) | ~75 files | check/search scripts for every I-series and late F/H/P problem, plus copies of write-ups |
 | `.../06_math_research/prob1000_lean_20260908/` (dir) | - | Lean files + RANKED_LIST annotated, REPORT_*.md copies, NIGHT_REPORT_2026-09-08.md |
 
-`06_math_research` full prefix: `~/<private-repo>/06_math_research/` (also mirrored under `~/math-open-problems-p300/`, apparently a git worktree/copy, as of 2026-09-14).
+`06_math_research` full prefix: `~/<private-repo>/06_math_research/` (also mirrored under `~/private-source-p300/`, apparently a git worktree/copy, as of 2026-09-14).
 
 Full base dir of the Codex 20h run, with proofs/ (25 written arguments), sources/ (~90 fetched papers), qa/ page images, typeset_staging/:
 `~/Downloads/Probability_1000_20h_20260906/`
@@ -186,7 +186,7 @@ already in the literature (no credit claimed). All statuses are the campaign's o
 - `~/Downloads/Critical_Allen_Cahn_paper_and_Lean.zip`, `Bernoulli_two_copy_manuscript_v2.tex/.pdf`, `Bernoulli_two_copy_entropy_refinement.tex/.pdf`, `Scalar_ReLU_*.tex/.pdf` - adjacent one-off papers from the same pipeline/date range in the same Downloads folder; not part of the probability-1000 ledgers, not itemised as "open problems" rows above
 - `~/probability-hard-problems-20260910/` - HARD_FRONTIER.md, HARD_INTAKE.json, P0174_CURVATURE.md, P0276_subpolynomial_degree_extension.tex, check_free_curvature.py, free_brownian_sharp_mode_curvature_2026_09_10_body.md, probability_cayley_owner_generalization_retired_2026_09_10_body.md - the "hard frontier" follow-on push on P0174 (free-Brownian unimodality curvature) and the retirement of the P0276/Cayley line
 - `~/arxiv_mathpr_sources/` - bulk arXiv math.PR harvesting infra behind the campaign: listing.jsonl (19MB), listing_more.jsonl (42MB), download_log.jsonl (3.3MB), harvest.log, harvest_more.py, harvest_more_years.log, plus src/, tex/ subdirs of fetched sources
-- `~/math-open-problems-p300/` - a git-tracked mirror/worktree that as of 2026-09-14 13:12-13:35 picked up copies of prob1000_lean_20260908/, probability_1000_attempts_H_20260912/, probability_1000_attempts_I_20260914/, probability_1000_intake_claude_20260907/, probability_1000_intake_D_20260908/ alongside its own older, unrelated project content (doubling/jamming, Cayley/Toeplitz papers unrelated to probability)
+- `~/private-source-p300/` - a git-tracked mirror/worktree that as of 2026-09-14 13:12-13:35 picked up copies of prob1000_lean_20260908/, probability_1000_attempts_H_20260912/, probability_1000_attempts_I_20260914/, probability_1000_intake_claude_20260907/, probability_1000_intake_D_20260908/ alongside its own older, unrelated project content (doubling/jamming, Cayley/Toeplitz papers unrelated to probability)
 
 ---
 

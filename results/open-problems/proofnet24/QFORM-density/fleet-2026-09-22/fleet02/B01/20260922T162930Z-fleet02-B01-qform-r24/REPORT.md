@@ -33,7 +33,7 @@ The result below keeps an actually independent third physical square and conditi
 
 Canonical source:
 
-`yspennstate/math-open-problems@a80bb254a3a1e2883cbfabdf03b53919d6621990`
+`private-source-repository@a80bb254a3a1e2883cbfabdf03b53919d6621990`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260922T142626Z-fleet03-B01-qform-r12/REPORT.md`.
 
@@ -58,7 +58,7 @@ No independence of `R` and `V` is required in (2.2).
 
 Canonical source:
 
-`yspennstate/math-open-problems@af5fc5be9cdae6d915c5d864c7cd398a2a1b95c5`
+`private-source-repository@af5fc5be9cdae6d915c5d864c7cd398a2a1b95c5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T155128Z-r14/REPORT.md`.
 

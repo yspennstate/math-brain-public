@@ -35,7 +35,7 @@ The secondary entangled carrier is now two powers of `rho` below unit scale; the
 
 The newest completed designated-partner result is fleet03/B13 r48:
 
-`yspennstate/math-open-problems@ba4c0f14cf9ca505e346b284a530662c6522b514`
+`private-source-repository@ba4c0f14cf9ca505e346b284a530662c6522b514`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260924T095803Z-fleet03-B13-qform-r48/REPORT.md`.
 
@@ -72,13 +72,13 @@ is indefinite and satisfies
 
 The owner-pinned source was reread at exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
 Its completed `RESULTS.md` physical-block conclusion states that an invertible indefinite ORIGINAL-coordinate pair with quantitative determinant and least singular value gives an arbitrary-rank density bound once `s_3(A)>=1`; the supporting theorem is source-pinned at
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 

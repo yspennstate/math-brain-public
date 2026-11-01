@@ -19,7 +19,7 @@ The remaining rank-exactly-three obstruction is therefore no longer residual loc
 
 Canonical report:
 
-`yspennstate/math-open-problems@e06922bfa31bbd225cdce6ee6aea563254e62563`
+`private-source-repository@e06922bfa31bbd225cdce6ee6aea563254e62563`
 
 path
 
@@ -39,7 +39,7 @@ I apply (2.2) in Section 7 to the new general rank-two half-Riesz theorem.
 
 The preceding fleet01/B05 report
 
-`yspennstate/math-open-problems@0b0918d419af754cc2a180e8c444747963dd24ff`
+`private-source-repository@0b0918d419af754cc2a180e8c444747963dd24ff`
 
 proved, using the completed fleet03/B05 Fourier--Brascamp--Lieb theorem, that if a rank-two quadratic form `S` has active spectral projector `P` satisfying
 

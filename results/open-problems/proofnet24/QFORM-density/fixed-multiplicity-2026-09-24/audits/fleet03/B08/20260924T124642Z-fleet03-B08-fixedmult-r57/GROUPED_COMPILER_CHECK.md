@@ -1,6 +1,6 @@
 # fleet03/B08 r57 — direct check of the B04 grouped product-Fourier compiler
 
-Source checked: `yspennstate/math-open-problems@8ff490c177d0cd7d6f33130f1431785e312a9d10`, Section 1 of the fleet03/B04 nine-eigenvalue candidate.
+Source checked: `private-source-repository@8ff490c177d0cd7d6f33130f1431785e312a9d10`, Section 1 of the fleet03/B04 nine-eigenvalue candidate.
 
 Status: **PASS for the identities and constants used by the nine-eigenvalue proof.** This note is independent of the alternative reconstruction through older r18/r30 theorem statements in `AUDIT.md`.
 

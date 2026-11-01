@@ -18,7 +18,7 @@ The run does both: it proves an exact weighted coordinate-coarea theorem reducin
 
 The assigned partner `fleet03/B05` completed `QFORM-OUTER-SQUARE-RANK2-CROSSBLOCK-v1` and `QFORM-GENERIC-SCHUR-HLS-v1` in canonical report
 
-`yspennstate/math-open-problems@f528f2fe40b414a4e87f7d2abbcd153c75d52214:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/fleet03-B05-20260922T1237Z-qform-r11/REPORT.md`
+`private-source-repository@f528f2fe40b414a4e87f7d2abbcd153c75d52214:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/fleet03-B05-20260922T1237Z-qform-r11/REPORT.md`
 
 (blob `e98dac2c5fef3dc0abb61bc802930c4c0caf37b1`). In particular, after a genuine physical outer square, a rank-two residual original-coordinate cross block with singular-value product `Delta` gives
 
@@ -26,7 +26,7 @@ The assigned partner `fleet03/B05` completed `QFORM-OUTER-SQUARE-RANK2-CROSSBLOC
 
 and every fixed nonsingular physical `3x3` Schur branch is now quantitatively closed. I use this result to remove the fixed-triple residual from the B05 debt: the remaining coarea question is aggregation, not generic binary Schur geometry.
 
-I also use the current owner-supplied supporting theorem `QFORM-REGULARIZED-DETERMINANT` (canonical proof `math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`) only at its stated scope: if the **entire range** projection has row leverage at most `1/32`, then the full form has a continuous density bounded by `96e/(7sqrt(2))<27`, retaining arbitrarily small extra eigenvalues. This will close the stress family below for large `n`; it is not promoted to the unrestricted theorem.
+I also use the current owner-supplied supporting theorem `QFORM-REGULARIZED-DETERMINANT` (canonical proof `private-source@a302aab3477c64757b511e80d3907f982e04873a`) only at its stated scope: if the **entire range** projection has row leverage at most `1/32`, then the full form has a continuous density bounded by `96e/(7sqrt(2))<27`, retaining arbitrarily small extra eigenvalues. This will close the stress family below for large `n`; it is not promoted to the unrestricted theorem.
 
 ## 3. New dimension-free weighted coordinate-coarea inequality
 

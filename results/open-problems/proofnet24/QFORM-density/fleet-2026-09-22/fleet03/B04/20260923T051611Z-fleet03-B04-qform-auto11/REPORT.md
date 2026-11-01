@@ -30,7 +30,7 @@ The theorem is product-specific: after conditioning on X_{I^c}, the three coordi
 
 1. `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, complete supporting proof at
 
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
    `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -41,7 +41,7 @@ The theorem is product-specific: after conditioning on X_{I^c}, the three coordi
 
 2. `QFORM-RANK3-INDEFINITE-PAIR-PIVOT-v1`, complete supporting proof at
 
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 

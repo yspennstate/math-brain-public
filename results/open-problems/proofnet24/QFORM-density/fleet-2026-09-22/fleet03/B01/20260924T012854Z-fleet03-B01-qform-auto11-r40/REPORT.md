@@ -30,7 +30,7 @@ Hence no law-uniform positive-power pointwise decay of a one-dimensional quadrat
 
 The completed source
 
-`yspennstate/math-open-problems@8d7d0ff65e86e787e8da9cb04afe3bfdf5401a59`
+`private-source-repository@8d7d0ff65e86e787e8da9cb04afe3bfdf5401a59`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T161404Z-fleet01-B01-qform-auto11/REPORT.md`
 
@@ -52,7 +52,7 @@ The key point for the present run is that (2.1) is a statement about the actual 
 
 The newest completed designated partner is
 
-`yspennstate/math-open-problems@f7e82d169badc671968036252d351b8533cdd425`
+`private-source-repository@f7e82d169badc671968036252d351b8533cdd425`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260924T012155Z-fleet04-B01-lr-residual-r1/REPORT.md`.
 

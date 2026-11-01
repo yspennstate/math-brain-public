@@ -316,9 +316,9 @@ Owner source message:
 `https://github.com/yspennstate/math-research-brain/blob/0dc369ddf8b860648dd780d8f92c62994dc53ecf/scheduled_tasks/README.md`
 
 Current B06 predecessor consumed:
-`yspennstate/math-open-problems@3a6a071259b600b9abd468d55a6e220d5d621e85:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T083427Z-fleet01-B06-QFORM-r51/REPORT.md`
+`private-source-repository@3a6a071259b600b9abd468d55a6e220d5d621e85:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T083427Z-fleet01-B06-QFORM-r51/REPORT.md`
 
 Designated partner theorem consumed:
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`, theorem `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`.
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`, theorem `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`.
 
 Numerical checks, if present beside this report, are sanity checks only and are not used as proof.

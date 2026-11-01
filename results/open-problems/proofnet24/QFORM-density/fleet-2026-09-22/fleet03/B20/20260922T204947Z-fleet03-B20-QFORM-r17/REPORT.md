@@ -17,7 +17,7 @@ The parent target remains unrestricted in dimension, signs, repeated spectrum an
 
 The newest compatible proof-closure input is fleet01/B20 run `20260922T202251Z-fleet01-B20-QFORM-r12`, canonical report
 
-`yspennstate/math-open-problems@284fe880939424349a35bd47651953bcdd9a8858`
+`private-source-repository@284fe880939424349a35bd47651953bcdd9a8858`
 
 at
 
@@ -51,7 +51,7 @@ where `lambda=u^T M v`. Arbitrary same-bank self curvature and all outside coupl
 
 The designated fleet04/B20 result is run `20260922T172057Z-fleet04-B20-QFORM-r3`, theorem `QFORM-CROSS-DOMINATED-SECOND-SCHUR-CLOSURE-v1`, canonical source
 
-`yspennstate/math-open-problems@25ad8faaac5064b6814d51ae63d894fe97c1eac4`
+`private-source-repository@25ad8faaac5064b6814d51ae63d894fe97c1eac4`
 
 at
 
@@ -71,7 +71,7 @@ A completed source-valid analytic theorem used below is the physical definite-pa
 
 `||p_Q||_infinity <= pi/sqrt(|det B|)`.                       (2.4)
 
-A full proof is recorded, among other places, in `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+A full proof is recorded, among other places, in `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 ## 3. New theorem — `QFORM-TWOARM-SAMESIGN-HUB-CLOSURE-v1`
 

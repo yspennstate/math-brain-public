@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R01 — exact post-audit-request delta: no second TFIK22 audit and no free READY CLOSABLE successor
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Run date: 2026-09-19.
 
 This run does **not** reopen the proved/audited Aldous–Fill source, does **not** add another owner-side TFIK22 checker, and does **not** manufacture a successor from PENDING queue inventory. The two live gates were checked directly: the required second independent TFIK22 audit has not arrived, and no new owner-clear READY CLOSABLE target has appeared since the preceding R01 report.

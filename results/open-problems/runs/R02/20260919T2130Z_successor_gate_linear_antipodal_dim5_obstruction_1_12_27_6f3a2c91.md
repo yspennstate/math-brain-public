@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this was not 
 # R02 — successor gate plus a complete obstruction to all low-dimensional linear antipodal constructions
 
 Run ID: `20260919T2130Z_successor_gate_linear_antipodal_dim5_obstruction_1_12_27_6f3a2c91`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R02  
 Lane: **CLOSABLE OUTSIDE**
 

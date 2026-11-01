@@ -16,7 +16,7 @@ The unrestricted owner target remains OPEN. Every random variable below is an OR
 
 The immediate B09 predecessor is
 
-`yspennstate/math-open-problems@fd800c8358502f8e947f77f47e06ac3e5fae1742`
+`private-source-repository@fd800c8358502f8e947f77f47e06ac3e5fae1742`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T091232Z-fleet03-B09-QFORM-r47/REPORT.md`.
 
@@ -32,7 +32,7 @@ Two completed inputs are used.
 
 1. Grouped exact-rank crossing characteristic-function estimate:
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -42,7 +42,7 @@ For independent banks with an exact rank-r cross block of nonzero singular value
 
 2. Fractional-potential Fourier representation from the completed rank-two affine report:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -269,7 +269,7 @@ Numerics are only regression checks; target validity and the theorem are proved 
 
 The designated partner report is
 
-`yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`
+`private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
 

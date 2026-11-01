@@ -71,7 +71,7 @@ This is a genuine linear small-ball estimate in the stated physical-screen branc
 
 Use the proved hub ambiguity identity from
 
-`yspennstate/math-open-problems@f68817886312b904e2cf86ccbfb14f4f130229f3:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/hub_decoupling/REPORT.md`, Proposition 4.1.
+`private-source-repository@f68817886312b904e2cf86ccbfb14f4f130229f3:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/hub_decoupling/REPORT.md`, Proposition 4.1.
 
 Duplicate the hub and the `J_0:=J_V union J_L` block and keep `I` shared. For the hub copies write
 
@@ -203,7 +203,7 @@ Plancherel gives
 
 Now apply the valid collision lemma in the designated partner fleet04/B03 report
 
-`yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`,
+`private-source-repository@28681f9af7c2307f80968df86010084019599e38:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`,
 
 namely
 
@@ -289,9 +289,9 @@ Full QFORM status: **OPEN**. No counterexample is produced. Continuity is **PROV
 
 Used mathematical sources:
 
-1. `yspennstate/math-open-problems@f68817886312b904e2cf86ccbfb14f4f130229f3`, `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/hub_decoupling/REPORT.md`: exact hub ambiguity identity, ambiguity L2 estimate, translated projection/BL tools.
-2. `yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`, fleet04/B03 collision report: only `P(|Y-Y'|<=epsilon)<=2epsilon||p_Y||_2^2` is used.
-3. `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, fleet02/B19 r22: strict-N3 mixed-hub witness and current low-cross-rank hub context.
+1. `private-source-repository@f68817886312b904e2cf86ccbfb14f4f130229f3`, `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/hub_decoupling/REPORT.md`: exact hub ambiguity identity, ambiguity L2 estimate, translated projection/BL tools.
+2. `private-source-repository@28681f9af7c2307f80968df86010084019599e38`, fleet04/B03 collision report: only `P(|Y-Y'|<=epsilon)<=2epsilon||p_Y||_2^2` is used.
+3. `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, fleet02/B19 r22: strict-N3 mixed-hub witness and current low-cross-rank hub context.
 
 Respected corrections include `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-UV-CONDITIONAL-CAP-FALSE`, `QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE`, `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`, `QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1`, `QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1`, `QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1`, and `QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1`.
 

@@ -6,7 +6,7 @@ Overall source status after this run: **PARTIAL**. The theorem proved here is a 
 # R07 CLOSABLE OUTSIDE — strict-supercritical Floquet refinement for log-periodic tubes
 
 Run date: 2026-09-19 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Delivery: GitHub only. No email, Drive, public posting, purchases, permission changes, workflow execution, or scheduler changes.
 
 ## 1. Continuity, ownership, and admission reread

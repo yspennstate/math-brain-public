@@ -21,7 +21,7 @@ Fresh controls supersede the older POS3 assignment. The following current correc
 * generic projection/X-ray or fiber-sup information loses essential product provenance;
 * the diagonal `C=pi` result is valid, but `pi` is not a universal constant for the rotated target.
 
-The latest complete synthesis consumed here is fleet04/B19 run `20260922T122030Z-fleet04-B19-QFORM-r1`, report `math-open-problems@02171dc794a56c0235afb1ca394b3e614162bff4`, which proves the finite-union product-indicator testing core and isolates `QFORM-PRODUCT-ELLIPTIC-TRACE-v1` as its first unpaid implication. The principal named external worker result applied below is fleet02/B10 run `20260922T1147Z-qform-rank3-coupled-B10-r1`, report `math-open-problems@1eba911614ef9f6683f8eacb5d6608a0f9a4b833`, which proves the hyperbolic-square smoothing theorem.
+The latest complete synthesis consumed here is fleet04/B19 run `20260922T122030Z-fleet04-B19-QFORM-r1`, report `private-source@02171dc794a56c0235afb1ca394b3e614162bff4`, which proves the finite-union product-indicator testing core and isolates `QFORM-PRODUCT-ELLIPTIC-TRACE-v1` as its first unpaid implication. The principal named external worker result applied below is fleet02/B10 run `20260922T1147Z-qform-rank3-coupled-B10-r1`, report `private-source@1eba911614ef9f6683f8eacb5d6608a0f9a4b833`, which proves the hyperbolic-square smoothing theorem.
 
 ## 2. Compact conditional end-to-end argument
 

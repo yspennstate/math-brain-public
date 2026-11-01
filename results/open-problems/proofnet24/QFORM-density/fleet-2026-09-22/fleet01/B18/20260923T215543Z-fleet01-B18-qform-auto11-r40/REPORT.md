@@ -36,7 +36,7 @@ No iid, moment, support, log-concavity, centering, symmetry, or smoothness assum
 
 The reviewed owner-pinned Fourier report
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 
 proves Theorem D'. For a literal ORIGINAL-coordinate cut `I sqcup J` and cross block `M=A[I,J]`, write
@@ -59,7 +59,7 @@ The proof gives an integrable characteristic-function envelope, hence a continuo
 
 The completed fleet02/B18 report is pinned at
 
-`math-open-problems@5bb8c5faaf65393ba42f440dce575d8ffdaf1f52`,
+`private-source@5bb8c5faaf65393ba42f440dce575d8ffdaf1f52`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T203819Z-fleet02-B18-QFORM-auto11/REPORT.md`.
 
 Its theorem `QFORM-NULLHUB-DIFFUSE-PRIVATE-BANK-v1` treats

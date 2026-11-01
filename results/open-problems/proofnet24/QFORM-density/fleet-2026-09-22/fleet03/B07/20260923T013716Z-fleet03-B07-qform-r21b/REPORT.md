@@ -21,7 +21,7 @@ The direct input is the preceding B07 theorem
 
 from
 
-`yspennstate/math-open-problems@391688138f7f481a2c8688c2d27f9508db7af6af`
+`private-source-repository@391688138f7f481a2c8688c2d27f9508db7af6af`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T000734Z-fleet03-B07-qform-r20/REPORT.md`.
 
@@ -199,7 +199,7 @@ This is a useful repair of the singular-pair branch: singularity is not an analy
 
 The designated `fleet04/B07` still had no completed current-QFORM handoff at the fresh source lookup, so none is fabricated. I apply the compatible completed fleet04/B18 sharp product-projection result, canonical source
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 

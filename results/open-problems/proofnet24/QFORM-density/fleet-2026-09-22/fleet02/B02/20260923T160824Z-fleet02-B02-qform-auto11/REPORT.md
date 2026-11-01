@@ -15,12 +15,12 @@ The target is unchanged: arbitrary independent real input coordinates with proba
 
 Required Claude source actually read and used:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
 Reviewed sharp-Hausdorff--Young continuation actually used:
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 For a physical original-coordinate cross block B put
 
@@ -48,7 +48,7 @@ No marginal hypothesis is needed for (1.2)-(1.4).
 
 The latest completed designated partner result actually consumed is `fleet03/B02` r33, canonical mathematics
 
-`yspennstate/math-open-problems@604b3273a6db312558088b7ed2a9d9735c546e7a:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T150032Z-fleet03-B02-qform-r33/REPORT.md`.
+`private-source-repository@604b3273a6db312558088b7ed2a9d9735c546e7a:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T150032Z-fleet03-B02-qform-r33/REPORT.md`.
 
 Its theorem `QFORM-H2-TO-H3-OR-STRIPS-v1` works on the live heavy-anchor branch and proves
 

@@ -12,7 +12,7 @@ This note shows that the same family is nevertheless harmless once one aggregate
 The proof combines:
 
 1. the source-valid product-density marginal theorem of Livshyts--Paouris--Pivovarov (2015): for a product probability density `F=prod_i f_i` with each `||f_i||_infty<=1`, every one-dimensional orthogonal marginal has density at most `sqrt(2)`; this is the `k=1` case of their bound `2^(k/2)` for `k`-dimensional marginals (`arXiv:1507.07949`);
-2. the conditioning idea used in fleet01/B12's exact non-diagonal block theorem, `math-open-problems@e423d315ae772630a32bc826c5abb58a5ad09c95`, report `qform/fleet-2026-09-22/fleet01/B12/20260922T112049Z-fleet01-B12-qform-r1/REPORT.md`;
+2. the conditioning idea used in fleet01/B12's exact non-diagonal block theorem, `private-source@e423d315ae772630a32bc826c5abb58a5ad09c95`, report `qform/fleet-2026-09-22/fleet01/B12/20260922T112049Z-fleet01-B12-qform-r1/REPORT.md`;
 3. a two-variable positive-definite block lemma proved below.
 
 No rotation of the original independent variables is performed. Aggregation is only across disjoint coordinate groups, so the four aggregate variables remain independent.

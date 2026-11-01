@@ -6,8 +6,8 @@ attacking: robust approximate-isotropic anchor switching for arbitrary multirank
 Full QFORM target remains OPEN. This checkpoint records the first new implication before the final argument.
 
 Sources actually consumed:
-- required newest-Claude source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`;
-- designated partner fleet03/B12: `yspennstate/math-open-problems@c00f2cfff4ac70e053c88b080e8dcfd63cde70aa:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T074544Z-qform-eigenvalue-r28/REPORT.md`.
+- required newest-Claude source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`;
+- designated partner fleet03/B12: `private-source-repository@c00f2cfff4ac70e053c88b080e8dcfd63cde70aa:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T074544Z-qform-eigenvalue-r28/REPORT.md`.
 
 Partner equation (their (2.2)). On a physical core `j`, with the partner's Schur data `(K_j,S_j,F_j,D_j,rho_j)`, every symmetric rank-r parameter `Theta` obeys
 

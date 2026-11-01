@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 Status: **F0095 OPEN / HARD7-06 PARTIAL.** This run does not prove existence of the constant ordinary Erdős--Rényi 3-colourability threshold. It changes language from generic edge hazard to the global frozen-equivalence partition of all legal colourings, proves an exact transport identity showing what makes the hazard rise or fall from one layer to the next, and identifies the precise asymptotic statistic that would feed the exponential sprinkling condition isolated in the preceding run.
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, ownership, exclusions, and source status
 

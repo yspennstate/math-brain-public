@@ -38,7 +38,7 @@ The only unpaid coordinate-minor implication is therefore the product-preserving
 
 `QFORM-EK-EFFECTIVE-DIMENSION-PAYMENT-v1`, complete proof:
 
-`yspennstate/math-open-problems@1ee49306b266915b9806d78498d9861f5a642b4a`
+`private-source-repository@1ee49306b266915b9806d78498d9861f5a642b4a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T203121Z-fleet02-B07-QFORM-4f9c2e/REPORT.md`.
 
@@ -57,7 +57,7 @@ All same-side blocks, outside couplings, affine terms, signs and extra spectrum 
 
 `QFORM-E2-RIDGE-HALFRIESZ-COLLAR-v1` and `QFORM-TWOSIDED-RIDGE-COLOOP-ANCHOR-v1`, complete proof:
 
-`yspennstate/math-open-problems@a20d669ff2c433cc70cb70234f49431da4518fa5`
+`private-source-repository@a20d669ff2c433cc70cb70234f49431da4518fa5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T203738Z-fleet03-B07-qform-r17/REPORT.md`.
 

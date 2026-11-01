@@ -280,7 +280,7 @@ where
 
 Source actually used:
 
-- `yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`
+- `private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`.
 
 Applying the same spectral homogeneity calculation in Section 3 to the partner identity gives the **actual target inequality**
@@ -478,7 +478,7 @@ The new normal form cleanly separates the logical issues.
    \]
    No continuity premise is needed.
 
-2. **Continuity is stronger and does not follow merely from a bounded-density estimate for an arbitrary law.** The shared `CLAIMS.json` still lists the full continuous-representative claim as open. Separately, the completed `fleet02/B15` fixed-matrix report `yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056` gives a source-reported theorem that every fixed rank-`>=3` target output has an instance-dependent bounded `C_0` density, using the earlier fleet03/B15 nonzero-diagonal theorem plus a zero-diagonal triangle/triangle-free proof. This run does not mutate the shared claim status.
+2. **Continuity is stronger and does not follow merely from a bounded-density estimate for an arbitrary law.** The shared `CLAIMS.json` still lists the full continuous-representative claim as open. Separately, the completed `fleet02/B15` fixed-matrix report `private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056` gives a source-reported theorem that every fixed rank-`>=3` target output has an instance-dependent bounded `C_0` density, using the earlier fleet03/B15 nonzero-diagonal theorem plus a zero-diagonal triangle/triangle-free proof. This run does not mutate the shared claim status.
 
 3. **External unit Gaussian smoothing is uniformly regular even before raw continuity is used.** Equation (5.3) shows that the central universal constant can be studied entirely on these analytic unit-smoothed densities; the missing content is their `1/s_3(A)` height decay.
 
@@ -524,7 +524,7 @@ Because `hat K` may be chosen Schwartz, an integrated Fourier proof no longer ne
 - Full unrestricted QFORM universal constant: **OPEN / NOT PROVED**.
 - Valid counterexample to QFORM: **none produced**.
 - New result: exact fixed-kernel/single-scale spectral normal form (1.2), proved for every bounded probability kernel.
-- Assigned partner actually applied: fleet04/B15 Gaussian heat-height theorem at `math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`, yielding the concrete one-scale equality (5.2) and the unit-noise formulation (5.3).
+- Assigned partner actually applied: fleet04/B15 Gaussian heat-height theorem at `private-source@ad7e5daa036cc8330b1432285ad40fec611d37dd`, yielding the concrete one-scale equality (5.2) and the unit-noise formulation (5.3).
 - Exact unit-interval concentration formulation: (4.1)-(4.2).
 - Exact compact tent / absolutely convergent Fourier formulation: (6.3)-(6.6).
 - Exact compact smooth / Schwartz-multiplier formulation: (6.7).

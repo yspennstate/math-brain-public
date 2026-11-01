@@ -30,7 +30,7 @@ The first theorem below uses a small rank-two matrix component only as determini
 
 The newest completed designated-partner report consumed before this write is
 
-`yspennstate/math-open-problems@b65e93930bbbaa8c7ad6a0c5a83d81070bc32bb0`
+`private-source-repository@b65e93930bbbaa8c7ad6a0c5a83d81070bc32bb0`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T003308Z-auto11-latentrank1/REPORT.md`.
 
@@ -87,7 +87,7 @@ Its proof is by two ORIGINAL-coordinate differences, followed by a one-singular-
 
 The preceding B01 theorem `QFORM-SQUARE-FRACTIONAL-UPGRADE-v1`, source-pinned in
 
-`yspennstate/math-open-problems@d827daa3503625fa8ae0c01efacaf41e00cbedcc`
+`private-source-repository@d827daa3503625fa8ae0c01efacaf41e00cbedcc`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T230734Z-fleet01-B01-qform-auto11/REPORT.md`,
 

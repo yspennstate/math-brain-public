@@ -14,13 +14,13 @@ The sole target is the full arbitrary-dimensional conjecture: for independent re
 
 No moment, support, sign, diagonal-basis, or post-rotation-independence assumption is used here. I do not use the refuted law-uniform pointwise Fresnel bound, the false conditional density-cap claim for conjugate sum/difference variables, a fixed-good-minor dichotomy, or receiver-only projected density as a substitute for original product provenance.
 
-The named partner result actually applied is fleet03/B03 `QFORM-FRACTIONAL-PAIRCOLLISION-v1`, canonical source `yspennstate/math-open-problems@57e920edebdcf1da2a046bcf4152dd459925bb8c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T155848Z-fleet03-B03-QFORM-r15/REPORT.md`. I use its exact physical-pivot square transducer
+The named partner result actually applied is fleet03/B03 `QFORM-FRACTIONAL-PAIRCOLLISION-v1`, canonical source `private-source-repository@57e920edebdcf1da2a046bcf4152dd459925bb8c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T155848Z-fleet03-B03-QFORM-r15/REPORT.md`. I use its exact physical-pivot square transducer
 
 `p_Q(y) <= |d|^(-1/2) E |y-R|^(-1/2)`
 
 for `Q=d(Z+h(W))^2+R(W)`, where `Z` is an original coordinate independent of `W` and has density cap one. That theorem explicitly does not require independence between the shift `h(W)` and the residual `R(W)`.
 
-A second source-pinned peer dependency is fleet03/B16, canonical `yspennstate/math-open-problems@aee79a848b8d1a5ee1187ce01056b31de32f9505`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T150329Z-fleet03-B16-qform-r12/REPORT.md`. It closed the exact light-cone Schur case `S=[[0,s],[s,c]]` and explicitly left the arbitrary nondegenerate indefinite binary Schur polynomial (both physical diagonals nonzero) as its next unpaid implication. The theorem below closes that local implication by a direct small-ball estimate rather than by the hoped-for strong `L^3` endpoint.
+A second source-pinned peer dependency is fleet03/B16, canonical `private-source-repository@aee79a848b8d1a5ee1187ce01056b31de32f9505`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T150329Z-fleet03-B16-qform-r12/REPORT.md`. It closed the exact light-cone Schur case `S=[[0,s],[s,c]]` and explicitly left the arbitrary nondegenerate indefinite binary Schur polynomial (both physical diagonals nonzero) as its next unpaid implication. The theorem below closes that local implication by a direct small-ball estimate rather than by the hoped-for strong `L^3` endpoint.
 
 ## 2. Main new theorem: arbitrary indefinite binary quadratic polynomial
 

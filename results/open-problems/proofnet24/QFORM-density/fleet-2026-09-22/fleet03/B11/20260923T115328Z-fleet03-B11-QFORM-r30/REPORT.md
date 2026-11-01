@@ -174,7 +174,7 @@ The newest completed fleet04/B11 result is
 
 `QFORM-DISJOINT-VOLUME-COMPILER`,
 
-canonical source `yspennstate/math-open-problems@50b07997bec888ff7cc6820cd42be8e34d0ffc48`, path
+canonical source `private-source-repository@50b07997bec888ff7cc6820cd42be8e34d0ffc48`, path
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T111608Z-fleet04-B11-disjoint-volume-compiler-r5/REPORT.md`.
 

@@ -13,7 +13,7 @@ The live target is the full arbitrary-dimension statement for independent real c
 
 The assigned partner result actually consumed is
 
-`yspennstate/math-open-problems@08f387da860f00c13f30de170286a82eb13108e1`
+`private-source-repository@08f387da860f00c13f30de170286a82eb13108e1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/fleet03-B12-20260922T114435Z-349dfcff7c/REPORT.md`.
 
@@ -21,7 +21,7 @@ It controls a four-variable block with three equal same-sign eigenvalues and one
 
 The source theorem underlying those two local estimates is
 
-`yspennstate/math-open-problems@289810e1f075755898f573ee5b863ad3fa9af5b8`
+`private-source-repository@289810e1f075755898f573ee5b863ad3fa9af5b8`
 
 `qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`.
 
@@ -183,8 +183,8 @@ None challenges the interlacing, elementary-symmetric-polynomial, definite-pair,
 
 Principal source pins:
 
-- partner: `yspennstate/math-open-problems@08f387da860f00c13f30de170286a82eb13108e1:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/fleet03-B12-20260922T114435Z-349dfcff7c/REPORT.md`;
-- pair/triple source: `yspennstate/math-open-problems@289810e1f075755898f573ee5b863ad3fa9af5b8:qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`;
-- preceding fleet02/B12 theorem: `yspennstate/math-open-problems@ffbe643d91659c040e06f33eb688b2d0ad5f0d50:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T115433Z-fleet02-B12/REPORT.md`.
+- partner: `private-source-repository@08f387da860f00c13f30de170286a82eb13108e1:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/fleet03-B12-20260922T114435Z-349dfcff7c/REPORT.md`;
+- pair/triple source: `private-source-repository@289810e1f075755898f573ee5b863ad3fa9af5b8:qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`;
+- preceding fleet02/B12 theorem: `private-source-repository@ffbe643d91659c040e06f33eb688b2d0ad5f0d50:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T115433Z-fleet02-B12/REPORT.md`.
 
 No novelty or publication-priority claim is made. The theorem is a supporting target-level subclass, not a solution of the full conjecture.

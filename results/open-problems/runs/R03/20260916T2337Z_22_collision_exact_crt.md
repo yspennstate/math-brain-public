@@ -5,7 +5,7 @@ Problem/source: **iid Rademacher square-matrix singularity — Komlós (1967) li
 # R03 run22 — exact collision sequence and CRT/profinite null witnesses
 
 Run ID: `20260916T2337Z_22_collision_exact_crt`  
-Repository/branch: `yspennstate/math-open-problems`, `master`.
+Repository/branch: `private-source-repository`, `master`.
 
 ## 1. Continuity, source, and frozen metric
 

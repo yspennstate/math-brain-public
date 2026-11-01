@@ -12,7 +12,7 @@ Let `U=(X_1,X_2)` be two independent cap-one original coordinates. Let `B` be an
 
 `P=U^T B U+ell^T U+c`.
 
-The completed rank-two affine half-Riesz theorem recorded in fleet03/B11 r24, sourced from `math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, gives
+The completed rank-two affine half-Riesz theorem recorded in fleet03/B11 r24, sourced from `private-source@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, gives
 
 `sup_s E |P-s|^(-1/2) <= 16 sqrt(30) |det B|^(-1/4)`.
 
@@ -38,6 +38,6 @@ If `W=sum_{j=3}^{m+2} b_j X_j` is a normalized linear form on a disjoint bank (`
 
 `||p_Q||inf <=16 sqrt(60)|det B|^(-1/4)|d|^(-1/2)`.              (E.2)
 
-The required Claude source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, is already applicable to the same exact-rank-three subclass on the majority one-sheet side: when the three nonzero eigenvalue magnitudes are at least one, its ruled Theorem C gives `p_Q(t)<=pi sqrt(2)` on the one-sheet side. Thus (E.1)--(E.2) are needed only for the opposite two-sheet side in the sign-specific splice, although they actually bound all target values.
+The required Claude source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, is already applicable to the same exact-rank-three subclass on the majority one-sheet side: when the three nonzero eigenvalue magnitudes are at least one, its ruled Theorem C gives `p_Q(t)<=pi sqrt(2)` on the one-sheet side. Thus (E.1)--(E.2) are needed only for the opposite two-sheet side in the sign-specific splice, although they actually bound all target values.
 
 Next: record the exact near-null/diffuse-third family showing why selecting one third physical coordinate before applying the partner scalar compiler loses a power of the bank size, while (E.2) remains uniform.

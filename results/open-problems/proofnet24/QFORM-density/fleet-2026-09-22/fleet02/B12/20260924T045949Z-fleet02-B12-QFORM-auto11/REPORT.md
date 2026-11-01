@@ -21,7 +21,7 @@ The theorem below proves that the genuinely harmful quantity is instead the **ne
 
 Latest compatible partner result read and used:
 
-- fleet03/B12 r49, `math-open-problems@62da19f9a7ad73a3a65579884463aa3efe93fc2e`,
+- fleet03/B12 r49, `private-source@62da19f9a7ad73a3a65579884463aa3efe93fc2e`,
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T044434Z-qform-eigenvalue-r49/REPORT.md`.
 
 Its one-step Pythagorean theorem says: for a full-column carrier `M`, with `Pi` the projection onto `Ran(M)`, and an arbitrary local addition `N`, writing
@@ -34,7 +34,7 @@ one has
 
 The source-pinned completed result used for the density step is
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 Its proved `D_5` theorem is

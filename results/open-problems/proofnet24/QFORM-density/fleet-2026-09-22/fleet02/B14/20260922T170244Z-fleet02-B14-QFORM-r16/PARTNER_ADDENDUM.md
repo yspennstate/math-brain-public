@@ -1,6 +1,6 @@
 # fleet02/B14 r16 — newer partner addendum
 
-A newer completed assigned-partner result became visible after the immutable main report was written: fleet03/B14 run `20260922T170256Z-fleet03-B14-QFORM-r14`, canonical report `yspennstate/math-open-problems@2ff9848af396e557949eef94059b756eaad74f17`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T170256Z-fleet03-B14-QFORM-r14/REPORT.md`.
+A newer completed assigned-partner result became visible after the immutable main report was written: fleet03/B14 run `20260922T170256Z-fleet03-B14-QFORM-r14`, canonical report `private-source-repository@2ff9848af396e557949eef94059b756eaad74f17`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T170256Z-fleet03-B14-QFORM-r14/REPORT.md`.
 
 Its theorem exactly localizes arbitrary nonnegative measurable payoffs, including unbounded singular kernels, from all cap-one product laws to compact finite-fragment indicator products. In particular for every symmetric `B`, affine vector `c`, and `alpha>0`,
 

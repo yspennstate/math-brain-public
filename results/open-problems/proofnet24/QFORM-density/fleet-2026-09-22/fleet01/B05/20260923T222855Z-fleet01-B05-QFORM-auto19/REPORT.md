@@ -213,8 +213,8 @@ This is the precise missing factor exposed by the present coarea calculation: **
 
 ## Sources consumed
 
-- Immediate B05 predecessor: `yspennstate/math-open-problems@8d747d7492ffa182d10810ea4493a17de687b6c8`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T221248Z-fleet01-B05-QFORM-auto18/REPORT.md`.
-- Designated partner: `yspennstate/math-open-problems@3e2cfd317d73276f347d713292d5cba2ec0f3883`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T213321Z-fleet02-B05-QFORM-auto11e/REPORT.md`.
+- Immediate B05 predecessor: `private-source-repository@8d747d7492ffa182d10810ea4493a17de687b6c8`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T221248Z-fleet01-B05-QFORM-auto18/REPORT.md`.
+- Designated partner: `private-source-repository@3e2cfd317d73276f347d713292d5cba2ec0f3883`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T213321Z-fleet02-B05-QFORM-auto11e/REPORT.md`.
 - Rough conditional-convolution compiler: fleet04/B15 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T211918Z-fleet04-B15-rough-mixture-c0-r7/REPORT.md` on current master.
 - Related physical pair precursor: fleet04/B15 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T151702Z-fleet04-B15-pivoted-convolution-r6/REPORT.md`.
-- Newest continuation source: `yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`.
+- Newest continuation source: `private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`.

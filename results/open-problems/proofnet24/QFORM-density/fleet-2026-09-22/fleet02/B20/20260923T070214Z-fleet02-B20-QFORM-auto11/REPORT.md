@@ -14,7 +14,7 @@ attacking: the designated-partner rank-two-cross near-kernel survivor by convert
 
 The newest **completed** designated-partner result available before this report is fleet03/B20 r27,
 
-`yspennstate/math-open-problems@949ad3211a8db6954311a0b3b8d92d99e4d3462a`,
+`private-source-repository@949ad3211a8db6954311a0b3b8d92d99e4d3462a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T061345Z-fleet03-B20-QFORM-r27/REPORT.md`.
 
@@ -196,7 +196,7 @@ If a physical row on that bank has total leverage `||R_i||^2>1/2`, its component
 
 ## 6. Required newest-Claude application at an exact inequality
 
-The pinned interactive report `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` proves its Fresnel--Brascamp--Lieb Theorem F: for a rank-three form whose physical leverage scores are at most one half,
+The pinned interactive report `private-source@e5f71d79eff325201dd0274053d20268ce65b837` proves its Fresnel--Brascamp--Lieb Theorem F: for a rank-three form whose physical leverage scores are at most one half,
 
 `||p_Q||_infinity <= 12 |lambda_1 lambda_2 lambda_3|^(-1/3)`.      (6.1)
 

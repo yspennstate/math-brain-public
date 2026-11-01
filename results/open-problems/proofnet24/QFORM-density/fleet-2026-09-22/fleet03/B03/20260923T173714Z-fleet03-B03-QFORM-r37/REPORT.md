@@ -11,19 +11,19 @@ attacking: the near-coloop collar by a second heavy physical pivot in the strong
 
 The canonical predecessor is
 
-`yspennstate/math-open-problems@dc887389947d0e4195eb1e28d6736060e718905c`
+`private-source-repository@dc887389947d0e4195eb1e28d6736060e718905c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T162345Z-fleet03-B03-QFORM-r35/REPORT.md`.
 
 That report pays the exact-coloop endpoint and proves the dependence-safe scalar-bilinear half-Riesz lemma and square receiver used below. The earlier angular-stable pair-cap/Fresnel report is
 
-`yspennstate/math-open-problems@47f5fd760f92c306e2105c2de46bf1859d47f56d`
+`private-source-repository@47f5fd760f92c306e2105c2de46bf1859d47f56d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T142318Z-fleet03-B03-QFORM-r35/REPORT.md`.
 
 The designated partner remains fleet04/B03, canonical
 
-`yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`.
+`private-source-repository@28681f9af7c2307f80968df86010084019599e38`.
 
 Only its elementary collision lemma is used in Section 7. Its challenged stronger weighted-L2 compiler is not used.
 

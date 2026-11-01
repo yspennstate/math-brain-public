@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-A — random-circulant theta: primal orthant margin and positive Fourier circuits
 
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured input master:** `9eaf1419bf363815290e83aeb776c7c28872a1b1`  
 **Outside target:** Randomstrasse101, arXiv:2603.29571, Conjecture 18; primary partial-result paper Bandeira–Błasiok–Dmitriev–Faure–Kireeva–Kunisky, *The Lovász number of random circulant graphs*, arXiv:2502.16227.  
 **Exact source endpoint:** in the source dense random circulant model on odd `n`, prove

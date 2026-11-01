@@ -20,7 +20,7 @@ The principal new point is also useful for the full-matrix problem: the capped-b
 
 The completed internal theorem used below is fleet01/B18 `QFORM-FRESNEL-CAPPED-BASIS-WEIGHTS-v1`, canonical source
 
-`yspennstate/math-open-problems@6548356a589d356e4bfa02bfd4f4eb205a72182a`
+`private-source-repository@6548356a589d356e4bfa02bfd4f4eb205a72182a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T225705Z-qform-B18-a01-r19/REPORT.md`.
 
@@ -305,13 +305,13 @@ Thus this run pays a genuinely co-heavy (`max leverage=3/5`) high-cardinality fu
 
 The latest completed designated partner result is fleet04/B18 `QFORM-ISOTROPIC-SHEAR-MIXED-VOLUME-v1`, canonical scientific source
 
-`yspennstate/math-open-problems@24a9362bd3f24a3849021093cf98611f95b5ab04`
+`private-source-repository@24a9362bd3f24a3849021093cf98611f95b5ab04`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T001857Z-fleet04-B18-QFORM-r3/REPORT.md`,
 
 with its later general diffuse-frame strengthening at
 
-`yspennstate/math-open-problems@e9eb90e2a7746482fb3ba75bf449b224cbf507ce`.
+`private-source-repository@e9eb90e2a7746482fb3ba75bf449b224cbf507ce`.
 
 For the partner's Schur-isotropic packet
 

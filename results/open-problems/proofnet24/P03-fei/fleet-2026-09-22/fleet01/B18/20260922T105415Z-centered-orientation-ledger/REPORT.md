@@ -16,7 +16,7 @@ keeping signed covariance and proving which replacement is genuinely nonnegative
 
 The source inputs used here are:
 
-1. **COPAIR_BARRIER**, `yspennstate/math-open-problems`, commit `85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md`. It proves
+1. **COPAIR_BARRIER**, `private-source-repository`, commit `85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md`. It proves
    \[
    \kappa_{ij}=4r_{ij}=p_{ij}+4o_{ij},
    \qquad
@@ -33,8 +33,8 @@ The source inputs used here are:
    \quad
    W_A=\sum_{j\notin A}\mathfrak j'(q_j)c_j(A).
    \]
-3. **CURVATURE**, `yspennstate/math-open-problems`, commit `200e3fd37fe201f78d882ba8809414d201efb829`, `proofnet24/P03-fei/fleet-2026-09-22/fleet04/B18/20260922T091529Z-surplus-hidden-curvature/REPORT.md`. It isolates the remaining hidden bank and proves the crossing-visible part is already paid by `P-DTC` on a true critical core.
-4. **ROBUST_ROW**, `yspennstate/math-open-problems`, commit `fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md`. It converts a realizable robust derivative row into a terminal surplus demand and preserves the warning that the remaining weighted-depth bank is not automatically `O(J)`.
+3. **CURVATURE**, `private-source-repository`, commit `200e3fd37fe201f78d882ba8809414d201efb829`, `proofnet24/P03-fei/fleet-2026-09-22/fleet04/B18/20260922T091529Z-surplus-hidden-curvature/REPORT.md`. It isolates the remaining hidden bank and proves the crossing-visible part is already paid by `P-DTC` on a true critical core.
+4. **ROBUST_ROW**, `private-source-repository`, commit `fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md`. It converts a realizable robust derivative row into a terminal surplus demand and preserves the warning that the remaining weighted-depth bank is not automatically `O(J)`.
 
 The newest compatible completed **partner** result consumed is fleet02/B18, corrected report at commit `1d39bc35fbb7ce60be36242c3bee6ea6bec55445`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B18/20260922T101659Z-c-admission-failure-logweight-redirect/REPORT.md`. Its `LOG-WEIGHT-NECESSITY-v1` theorem proves that every uniformly bounded self-adjoint quadratic compression of the complete Boolean convolution-defect vector is only `O(I)` on the sparse one-point-defect suspension, while the exact KL payment is of order `I log(1/p)`. I use this result below to keep the exact mutual-information/KL quantity as the primary centered currency; the quadratic covariance corollary is recorded only as a secondary consequence and is **not** promoted to a universal entropy replacement.
 

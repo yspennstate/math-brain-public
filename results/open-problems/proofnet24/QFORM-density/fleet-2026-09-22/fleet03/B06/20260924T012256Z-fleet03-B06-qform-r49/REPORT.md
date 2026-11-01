@@ -235,7 +235,7 @@ Hence r49 reduces the singular-`T` difficulty to two explicit alternatives: low 
 
 The freshest completed designated-partner result found at the source refresh is
 
-`yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`
+`private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260924T001014Z-fleet04-B06-QFORM-r3/REPORT.md`
 

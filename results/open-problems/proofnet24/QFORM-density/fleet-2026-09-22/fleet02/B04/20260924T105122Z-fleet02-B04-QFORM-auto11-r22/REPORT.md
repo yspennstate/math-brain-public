@@ -13,7 +13,7 @@ The unrestricted target remains OPEN. Continuity is kept separate. No moment, su
 
 Fresh owner control remained revision `2026-09-22.15`, QFORM-only. The required pinned source was re-read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
@@ -31,7 +31,7 @@ where `G(w)=exp(E_w log det(M_ST)^2+H(w))`. The D' extension allows an I-side ca
 
 The newest compatible designated partner at refresh is fleet03/B04 r55,
 
-`yspennstate/math-open-problems@8943de4ce7adbeef5a110d0bf0fc634b2fce39c5`,
+`private-source-repository@8943de4ce7adbeef5a110d0bf0fc634b2fce39c5`,
 
 whose `QFORM-ONE-HUB-PROJECTED-E2-BALANCED-FALLBACK-v1` says that for a literal hub row `m=A[h,J]`, `s=||m||`, residual crossing `B=A[I,J]`, projection `P=I-mm^T/s^2`, `C=BP`, and `Z=e_2(CC^T)>0`,
 
@@ -337,9 +337,9 @@ The whole QFORM theorem remains OPEN. The unpaid step is to prove the dimension-
 
 ## 10. Source and execution notes
 
-Pinned interactive source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`.
-Newest designated partner used: fleet03/B04 r55 at `math-open-problems@8943de4ce7adbeef5a110d0bf0fc634b2fce39c5`.
-The prior pair Schur-numerator receiver r52 used for the collar comparison is at `math-open-problems@fbc50959f73f2a66b91acacbbacc37cbf2b66720`.
+Pinned interactive source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`.
+Newest designated partner used: fleet03/B04 r55 at `private-source@8943de4ce7adbeef5a110d0bf0fc634b2fce39c5`.
+The prior pair Schur-numerator receiver r52 used for the collar comparison is at `private-source@fbc50959f73f2a66b91acacbbacc37cbf2b66720`.
 
 Model self-report: `GPT-5.6 Sol`.
 Configured reasoning effort: `UNKNOWN`.

@@ -20,7 +20,7 @@ The first unpaid implication attacked here is narrower and source-valid: **if a 
 
 Latest completed partner report used here:
 
-`yspennstate/math-open-problems@cb592aa97e7d74af9b23dbbb32493e5a36f937e1`
+`private-source-repository@cb592aa97e7d74af9b23dbbb32493e5a36f937e1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T151120Z-qform-eigenvalue-r11/REPORT.md`.
 
@@ -34,7 +34,7 @@ That theorem assumed the residual decomposition. Sections 3--5 below derive such
 
 A newer compatible completed theorem is fleet03/B09:
 
-`yspennstate/math-open-problems@62bdcf30669c1037a3c7d87aee1fcb2bdcccd251`
+`private-source-repository@62bdcf30669c1037a3c7d87aee1fcb2bdcccd251`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/fleet03-B09-20260922T155042Z-qform12/REPORT.md`.
 
@@ -48,7 +48,7 @@ This no-leverage endpoint is used in Section 6 to reduce the required residual r
 
 The ridge characteristic-function theorem underlying fleet03/B09 is
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 

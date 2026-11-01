@@ -17,7 +17,7 @@ The target remains the unrestricted owner statement: independent original-coordi
 
 The immediate predecessor is fleet03/B16 r41:
 
-- repository: `yspennstate/math-open-problems`;
+- repository: `private-source-repository`;
 - commit: `41659aaf9ff3d32a60c331cbde54d6c516f75029`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260924T045704Z-fleet03-B16-QFORM-r41/REPORT.md`.
 
@@ -222,7 +222,7 @@ The remaining r41 collar includes a small same-bank transverse leakage `tau P`, 
 
 The newest completed designated partner is fleet04/B16 r4:
 
-- canonical mathematics: `yspennstate/math-open-problems@7f2bb2d330022b09a6af6e39ab09d054caeaa346`;
+- canonical mathematics: `private-source-repository@7f2bb2d330022b09a6af6e39ab09d054caeaa346`;
 - theorem used here: if a disjoint original-coordinate product bank enters only through a two-dimensional orthogonal projection `(U,V)` with joint density cap at most two and a **definite** quadratic matrix `H_2`, while all outside variables contribute arbitrary affine translations and an additive term, then
 
 `||p_Q||_infinity <= 2pi/sqrt(|det H_2|)`.                       (6.1)

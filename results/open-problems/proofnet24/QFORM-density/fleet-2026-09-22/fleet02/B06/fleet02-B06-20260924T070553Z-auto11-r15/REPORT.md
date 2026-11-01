@@ -69,7 +69,7 @@ P_0=4,\qquad P_1=17/2+4\varepsilon^2,
 
 Thus retained layer mass plus diffuse two-/three-frame leverage does **not** force a positive lower bound on `chi`, and large `P_1/P_2` does not force a useful physical pair.
 
-This family is not a QFORM counterexample. Its full matrix has `F` as a principal block, hence by interlacing has two eigenvalues at least `2` and one at most `-1`. Applying the completed pinned `COUNTEREXAMPLE_SEARCH.md` Theorem A from `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` to this literal three-coordinate block, after conditioning on all tail coordinates and retaining all induced affine terms, gives the target-level inequality
+This family is not a QFORM counterexample. Its full matrix has `F` as a principal block, hence by interlacing has two eigenvalues at least `2` and one at most `-1`. Applying the completed pinned `COUNTEREXAMPLE_SEARCH.md` Theorem A from `private-source@e5f71d79eff325201dd0274053d20268ce65b837` to this literal three-coordinate block, after conditioning on all tail coordinates and retaining all induced affine terms, gives the target-level inequality
 
 \[
 \boxed{\|p_{X^TA_\varepsilon X}\|_{\infty,\mathrm{ess}}\le6\sqrt\pi.}
@@ -163,7 +163,7 @@ If the pair branch yields a definite `C`, the two-dimensional physical-pair area
 \tag{3.2}
 \]
 
-If `C` is indefinite, apply the completed arbitrary-rank original-coordinate pair theorem at `math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`. It retains arbitrary outside couplings, arbitrary remaining spectrum and all affine terms. Since
+If `C` is indefinite, apply the completed arbitrary-rank original-coordinate pair theorem at `private-source@742ac943440e41925fe09db9a8c02a96cbd83dbc`. It retains arbitrary outside couplings, arbitrary remaining spectrum and all affine terms. Since
 
 \[
 D_C:=|\det C|\ge\tau^2/36,

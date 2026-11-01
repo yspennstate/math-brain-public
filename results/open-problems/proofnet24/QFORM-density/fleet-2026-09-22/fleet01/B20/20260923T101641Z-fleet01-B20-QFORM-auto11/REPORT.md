@@ -14,7 +14,7 @@ attacking: the newest completed fleet02/B20 exact-rank-three three-packet surviv
 
 The newest completed designated fleet02/B20 result used here is
 
-`yspennstate/math-open-problems@6a4e9c575bcea2bbc12efd5a439bfb94f290d399`,
+`private-source-repository@6a4e9c575bcea2bbc12efd5a439bfb94f290d399`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T090422Z-fleet02-B20-QFORM-auto11/REPORT.md`.
 
@@ -38,7 +38,7 @@ Its remaining three-packet compiler has three explicit cases. This report pays *
 
 The scalar-pivot receiver used below is `QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1`, from
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -50,7 +50,7 @@ for every nonzero physical scalar pivot `A_ii`.
 
 The indefinite-pair receiver is `QFORM-RANK3-INDEFINITE-PAIR-PIVOT-v1`, from
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 

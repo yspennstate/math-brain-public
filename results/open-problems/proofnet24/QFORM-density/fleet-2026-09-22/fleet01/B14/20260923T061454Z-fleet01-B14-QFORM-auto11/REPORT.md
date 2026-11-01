@@ -18,13 +18,13 @@ Relevant corrections consumed before publication include: no law-uniform pointwi
 
 Two completed inputs are used at equations:
 
-1. `fleet02/B14` r26, canonical report `yspennstate/math-open-problems@5704e7da5b6134fc8e3bdde6caedc7358a666f65`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T050751Z-fleet02-B14-QFORM-r26/REPORT.md`, plus correction addendum `@19de5b5fc1dcc88d0bad7ce28f7857ae40a8e545`. In particular, for an original-coordinate product bank and a nonzero coefficient vector `a`,
+1. `fleet02/B14` r26, canonical report `private-source-repository@5704e7da5b6134fc8e3bdde6caedc7358a666f65`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T050751Z-fleet02-B14-QFORM-r26/REPORT.md`, plus correction addendum `@19de5b5fc1dcc88d0bad7ce28f7857ae40a8e545`. In particular, for an original-coordinate product bank and a nonzero coefficient vector `a`,
 
    `||p_(a^T X)||_infinity <= sqrt(2)/||a||_2`.
 
    Its disjoint-multibank theorem, with the canonical cap choice `eta_j=sqrt(2)/||a_j||_2`, gives `C4/min(nu,r_*)`, where `C4=1000(8+log 4)` and `r_j=gamma_j||a_j||_2/sqrt(2)`.
 
-2. The completed physical-pair logarithmic theorem, canonical source `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, path `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`. For an invertible indefinite physical `2x2` pair `C`, with `D=|det C|` and `kappa=sigma_min(C)`, after completing the pair its Schur critical remainder `R` obeys, for every `s>0`,
+2. The completed physical-pair logarithmic theorem, canonical source `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, path `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`. For an invertible indefinite physical `2x2` pair `C`, with `D=|det C|` and `kappa=sigma_min(C)`, after completing the pair its Schur critical remainder `R` obeys, for every `s>0`,
 
    `p_Q(t) <= 2sqrt(2)/s + D^(-1/2) E log_+(2s^2/(kappa |t-R|)).`        (1.1)
 

@@ -5,7 +5,7 @@ Problem/source: **iid Rademacher square-matrix singularity — Komlós (1967) li
 # R03 run23 — reduced-rank barrier and typical modular corank
 
 Run ID: `20260917T0007Z_23_reduced_rank_barrier`  
-Repository/branch: `yspennstate/math-open-problems`, `master`.
+Repository/branch: `private-source-repository`, `master`.
 
 ## 1. Continuity, source, and frozen metric
 

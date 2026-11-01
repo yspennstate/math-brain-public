@@ -15,7 +15,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 Source snapshot containing the completed report:
 
-`yspennstate/math-open-problems@f13d13f2dd1d240c98505a03afebe80f64d4bf10`
+`private-source-repository@f13d13f2dd1d240c98505a03afebe80f64d4bf10`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T082859Z-fleet02-B16-QFORM-r11/REPORT.md`.
 
@@ -42,7 +42,7 @@ The proof uses ruled-hyperboloid line integrals that are two-dimensional margina
 
 The exact designated partner path `fleet04/B06` is still absent from the current QFORM archive at the publication check, so no theorem from that slot is fabricated. The compatible completed fleet04/B18 theorem is
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

@@ -20,7 +20,7 @@ Used corrections: no post-rotation independence; no law-uniform pointwise quadra
 
 Latest fleet02/B12 handoff read before this report:
 
-- canonical mathematics: yspennstate/math-open-problems@0d0b91b9c5b5ca41fbdc3b910bde3c3759195eb3, proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T025914Z-fleet02-B12-qform-r24/REPORT.md.
+- canonical mathematics: private-source-repository@0d0b91b9c5b5ca41fbdc3b910bde3c3759195eb3, proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T025914Z-fleet02-B12-qform-r24/REPORT.md.
 
 Its theorem QFORM-SHIELDED-RANK-RESERVE-TAIL-STABILITY-v1 says the following. For an ORIGINAL-coordinate cut with cross block
 

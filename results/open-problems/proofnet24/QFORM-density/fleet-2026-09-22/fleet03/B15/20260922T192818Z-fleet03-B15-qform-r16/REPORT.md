@@ -26,13 +26,13 @@ I re-read the live state and corrections at `math-research-brain@f9c9de562645a66
 
 Assigned partner actually applied:
 
-- `fleet04/B15`, `yspennstate/math-open-problems@07672b7beb8f867c7a7b973aa3157a42ae506460`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T152333Z-b15-qform-continuous-envelope-r3/REPORT.md`.
+- `fleet04/B15`, `private-source-repository@07672b7beb8f867c7a7b973aa3157a42ae506460`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T152333Z-b15-qform-continuous-envelope-r3/REPORT.md`.
 
 That result proves `C_all=C_C0=C_sm`, and its source chain supplies cap-preserving compactly supported smooth approximants of arbitrary one-dimensional cap-one marginals; every all-smooth target output has a `C_0` density. I apply those approximants to the explicit stability inequalities below.
 
 For the complementary nonzero-physical-diagonal branch I use my completed prior theorem:
 
-- `fleet03/B15`, `yspennstate/math-open-problems@d73760eb784a86c356c64f05dd92f84655618f02`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T153101Z-fleet03-B15-r12/REPORT.md`.
+- `fleet03/B15`, `private-source-repository@d73760eb784a86c356c64f05dd92f84655618f02`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T153101Z-fleet03-B15-r12/REPORT.md`.
 
 It proves `p_Q in C_0(R)` whenever `rank(A)>=3` and some original-coordinate diagonal entry is nonzero. Its proof retains product structure through a Schur kernel and does not use the later-refuted arbitrary-joint coarea gate.
 

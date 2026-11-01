@@ -3,7 +3,7 @@ Problem/source: David Aldous and James Fill, *Reversible Markov Chains and Rando
 
 # C28 — Kozma sharpness kills the frozen spectral-profile two-sided characterization
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Own root: `proofnet24/C28-closure-hypercontractivity`.
 Allocation: CLOSABLE OUTSIDE, **CLAIMED / PENDING_ADMISSION / NOT READY**.
 Run date: 2026-09-16.

@@ -8,7 +8,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 **Publication novelty:** `UNVERIFIED`. The theorems below are new to the repository after the bounded searches recorded here; I do not claim worldwide novelty.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 Run root: `proofnet24/NM13-01/progress-cutoff/runs/2026-09-20/`.
 

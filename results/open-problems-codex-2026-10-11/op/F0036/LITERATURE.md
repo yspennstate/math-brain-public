@@ -48,7 +48,7 @@ The metadata references for all OpenAlex citation candidates are saved in citati
 ## Earlier local research consulted read-only
 
 - Intake ledger probability_1000_intake_F_20260908, F0036-A001: an explicitly unverified inward-extremal identification. Only the earliest-time inequality follows from containment.
-- `git show origin/master:prob1000_lean_20260908/ultracode_20260909/F0036/memo.md` in ~/math-open-problems: a 2026-09-09 partial memo, not an accepted proof. Its claim that same-source witnesses contribute exactly one point also does not follow merely from a lower bound on first meeting time; we do not use it. Its recursive “equivalence” after random meeting times has not been proved and is not accepted here.
+- `git show origin/master:prob1000_lean_20260908/ultracode_20260909/F0036/memo.md` in ~/private-source: a 2026-09-09 partial memo, not an accepted proof. Its claim that same-source witnesses contribute exactly one point also does not follow merely from a lower bound on first meeting time; we do not use it. Its recursive “equivalence” after random meeting times has not been proved and is not accepted here.
 - The same repository's bruteforce_check.py was read as a method hint. We wrote an independent script in this folder with its own initial-time treatment and fresh exact checks.
 - A filtered `git ls-tree` search for F0036 / Brownian-net / PMRCA paths identified the above files. A first unfiltered listing was unnecessarily large; no working-tree changes were made.
 - During the attempt, a second math-store query, “Schertzer Sun Swart Brownian net three connected points”, was issued; any returned cards remain hints requiring source checks.

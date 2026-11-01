@@ -6,7 +6,7 @@ This addendum preserves the immutable r19 coarse-role report and records a secon
 
 The newest available designated-partner checkpoint is
 
-`yspennstate/math-open-problems@b72066231eb52c325a794f45135f9fb090ee9567`,
+`private-source-repository@b72066231eb52c325a794f45135f9fb090ee9567`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/fleet02-B07-20260923T063044Z-r11/CHECKPOINT.md`.
 
@@ -16,13 +16,13 @@ Its current edge/core survivor contains a literal ORIGINAL-coordinate cross bloc
 
 The completed designated-partner theorem applied below is fleet02/B07 `QFORM-CROSS-FIBER-PLANCHEREL-v1`, source
 
-`yspennstate/math-open-problems@5266d24ea98d9bb5902c51a92eca0e3e38112e39`,
+`private-source-repository@5266d24ea98d9bb5902c51a92eca0e3e38112e39`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T193347Z-b07-639234ec/REPORT.md`.
 
 The fifth-volume receiver is the completed `D_5` theorem at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`:
 

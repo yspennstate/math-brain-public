@@ -6,7 +6,7 @@ This addendum is part of the immutable r22 record. It does not rewrite `REPORT.m
 
 After the first r22 report was committed, a fresh source search found the already-completed fleet02/B13 run
 
-`yspennstate/math-open-problems@6fb28b3e367d9cd8bf1dff3a4ca05b500d5d32c8`,
+`private-source-repository@6fb28b3e367d9cd8bf1dff3a4ca05b500d5d32c8`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T025607Z-fleet02-B13-extreme-cf3f0909/REPORT.md`.
 
 That report had already combined the fleet03/B13 r21 cross-three-volume `L3` theorem with a scalar Schur peel and obtained the same qualitative certificate, with constant `20.870`; it also recorded the anchored four-volume identity
@@ -20,7 +20,7 @@ Therefore r22 does **not** claim priority for the qualitative scalar-Schur/cross
 
 A second completed source found in the refresh is fleet03/B06 r24,
 
-`yspennstate/math-open-problems@6fb28b3e367d9cd8bf1dff3a4ca05b500d5d32c8`,
+`private-source-repository@6fb28b3e367d9cd8bf1dff3a4ca05b500d5d32c8`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T011959Z-fleet03-B06-qform-r24/REPORT.md`.
 
 Its Lemma 5.1 already proved a one-sided `L3` half-Riesz transducer with constant `8/3^(3/4)=3.50953...`. The calculation below sharpens that constant; it does not duplicate the lemma unchanged.
@@ -129,7 +129,7 @@ For bounded finite-union unit product indicators, (3.2) gives the slab inequalit
 
 `P(Q in J) <11.327 |a|^(-1/2) Z3^(-1/12)|J|`.
 
-Apply the designated fleet04/B13 no-attainment product purification (`math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`) to the bounded kernel `1_{Q in J}`. The same inequality transfers to every independent cap-one product law with zero constant loss. No optimizer, interval extremality, support-radius bound, or fragment-count bound is assumed.
+Apply the designated fleet04/B13 no-attainment product purification (`private-source@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`) to the bounded kernel `1_{Q in J}`. The same inequality transfers to every independent cap-one product law with zero constant loss. No optimizer, interval extremality, support-radius bound, or fragment-count bound is assumed.
 
 This proves essential boundedness in the stated branch. Continuity is not established by the one-sided square transducer or by the mixture transfer.
 

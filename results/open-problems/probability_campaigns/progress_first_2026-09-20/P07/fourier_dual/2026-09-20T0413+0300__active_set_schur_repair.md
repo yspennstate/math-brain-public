@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-B — coherent-origin obstruction to one-shot clipping, and an exact active-set Schur dual repair
 
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured start master:** `90b83fab0ad3b04f35a7ecd89da137f53d2a32d8`  
 **Fresh pre-write master:** `fa264fc36d323076c71bdf640b3693a0d1b7ccf4`  
 **Previous own report:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T0328+0300__zero_diagonal_exceptional_certificate.md`  

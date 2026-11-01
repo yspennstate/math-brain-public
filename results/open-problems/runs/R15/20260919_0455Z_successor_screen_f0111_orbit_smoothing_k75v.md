@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R15 retained screen — orbit smoothing and a rational mixed-face kernel
 
 Date checked: 2026-09-19 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R15, CLOSABLE OUTSIDE.
 
 All new Talagrand mathematics below is **SELF_CHECK_ONLY**. Nothing here reopens I0076, promotes F0111 from `PENDING / NOT READY`, claims publication novelty, or satisfies the two-independent-auditor closure rule.

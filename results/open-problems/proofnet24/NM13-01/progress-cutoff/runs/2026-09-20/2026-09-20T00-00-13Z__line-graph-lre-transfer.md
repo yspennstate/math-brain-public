@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 **Status: PARTIAL on Salez Problem 2.3, with a new complete special-class theorem and quantitative window.**
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Run namespace: `proofnet24/NM13-01/progress-cutoff/runs/2026-09-20/`.
 Frozen pre-write master observed during the run: `d7b754a117c3353999c8c12e3abb12b5bb27ce0b` (concurrent fleet commits continued afterward).
 

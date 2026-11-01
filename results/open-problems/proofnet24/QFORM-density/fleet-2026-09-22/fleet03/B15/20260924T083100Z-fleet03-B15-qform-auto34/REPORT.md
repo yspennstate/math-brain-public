@@ -13,11 +13,11 @@ Execution: WITHOUT_VERIFIED_BRAIN.
 
 The live corrections are retained: no law-uniform pointwise quadratic-phase decay, no arbitrary-joint 3D coarea height theorem, no post-rotation independence, no naive fiber-sup dimension-free bound, and no bounded-support/fragment-radius assumption.
 
-This run strengthens, but does not replace, the earlier fleet02/B14 coefficient-perturbation barrier at `math-open-problems@84093fddd5e3d3c692449d49c8b01537b28eb8d8`: that source gave a fixed positive TV gap under small operator perturbations. The new theorem below gives TV tending to one **even after arbitrary output translation**, while simultaneously proving an order-one discontinuity of the canonical density height.
+This run strengthens, but does not replace, the earlier fleet02/B14 coefficient-perturbation barrier at `private-source@84093fddd5e3d3c692449d49c8b01537b28eb8d8`: that source gave a fixed positive TV gap under small operator perturbations. The new theorem below gives TV tending to one **even after arbitrary output translation**, while simultaneously proving an order-one discontinuity of the canonical density height.
 
-The current proof-assembly motivation is fleet03/B19 r52 at `math-open-problems@5ec1cc2bf208bc0249ea89d86fd7298b62ac324e`: determinant collapse makes its four-latent carrier operator-close to rank at most three, but that source correctly does not discard the small fourth latent coefficient or the retained physical residual/tail.
+The current proof-assembly motivation is fleet03/B19 r52 at `private-source@5ec1cc2bf208bc0249ea89d86fd7298b62ac324e`: determinant collapse makes its four-latent carrier operator-close to rank at most three, but that source correctly does not discard the small fourth latent coefficient or the retained physical residual/tail.
 
-The designated partner actually applied below is fleet04/B15 r8, `math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`, Theorem 6.1: for any fixed rank-at-least-three target instance, a separately proved interval bound `P(Q in I)<=M|I|` upgrades to a canonical `C_0(R)` density with the identical height `M`.
+The designated partner actually applied below is fleet04/B15 r8, `private-source@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`, Theorem 6.1: for any fixed rank-at-least-three target instance, a separately proved interval bound `P(Q in I)<=M|I|` upgrades to a canonical `C_0(R)` density with the identical height `M`.
 
 ## 2. Main theorem: translation-robust near-rank instability
 

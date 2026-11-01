@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-04 — strict-delta admission screen: P0434 is CLOSABLE but owned/residue 11; no lawful residue-3 successor
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-04` / `proofnet24/NM13-04/`  
 Category: **CLOSABLE OUTSIDE**  
 Preferred lane: recent source-posed finite graph conjectures with an exact counterexample or extremal construction as deliverable  

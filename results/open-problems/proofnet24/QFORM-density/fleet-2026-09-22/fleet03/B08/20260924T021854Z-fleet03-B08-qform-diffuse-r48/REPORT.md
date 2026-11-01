@@ -15,12 +15,12 @@ The unrestricted conjecture remains OPEN. The new point is an exact algebraic re
 
 
 The immediate predecessor is fleet03/B08 r47,
-`yspennstate/math-open-problems@8e77db5a814feaec39c26d72782c66de6ee1d721`,
+`private-source-repository@8e77db5a814feaec39c26d72782c66de6ee1d721`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T012032Z-fleet03-B08-qform-diffuse-r47/`.
 It established the product-safe triangular-shear interface and the exact rank-one carrier receiver.
 
 The analytic receiver used below is fleet03/B08 r37,
-`yspennstate/math-open-problems@58b2a0752f409dd48ae5e39851ac84f13be4470b`,
+`private-source-repository@58b2a0752f409dd48ae5e39851ac84f13be4470b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T122051Z-fleet03-B08-qform-diffuse-r37/REPORT.md`.
 Its one-hub/one-child specialization states that for a physical light block `D+lambda ss^T`, a retained physical hub-light vector `g`, transverse component `h=(I-ss^T)g`, and augmented physical row leverage
 
@@ -33,7 +33,7 @@ the full conditional form has a continuous `C_0` density satisfying
 As in r47, a triangular translation of the hub density by a measurable linear function of the light variables is admissible: after the Jacobian-one change the hub factor remains pointwise at most one, and the source proof uses only that cap in the hub integration while the light variables retain their original product density.
 
 The designated partner theorem actually applied below is fleet04/B08 r2,
-`yspennstate/math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76`,
+`private-source-repository@a5e66e2944c89857a41d5e18c283d53a4307be76`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T212412Z-fleet04-B08-QFORM-r2/REPORT.md`.
 For an ORIGINAL-coordinate deletion child `C`, if `s_3(C)>=m` and the physical spectral projection onto `|lambda(C)|>=m/64` has maximum diagonal at most `1/32`, then the parent output is continuous `C_0` and
 

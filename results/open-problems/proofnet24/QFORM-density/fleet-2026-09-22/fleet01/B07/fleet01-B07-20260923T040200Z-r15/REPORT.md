@@ -15,7 +15,7 @@ The unrestricted conjecture is not proved here. The new result is a deterministi
 The two mathematical inputs actually applied are:
 
 1. **Designated partner fleet02/B07, latest completed run.**  
-   `yspennstate/math-open-problems@67a5863d5e97c6b27499ccf7690d6008965f62c3`,  
+   `private-source-repository@67a5863d5e97c6b27499ccf7690d6008965f62c3`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T033624Z-fleet02-B07-fd9b69f8f3ff/REPORT.md`.  
    In its non-low-tail four-bank branch, for a physical cross block `M`, `F=||M||_F`, and `0<theta<=1/2`,
    
@@ -32,7 +32,7 @@ The two mathematical inputs actually applied are:
    Those are the exact partner inequalities used below. No claim is made that the partner's later physical heavy anchors coincide with the anchors selected here.
 
 2. **Previous own B07 volume-gate reduction.**  
-   `yspennstate/math-open-problems@024b6fce8657363e2999433732e0a3438c7a63c5`,  
+   `private-source-repository@024b6fce8657363e2999433732e0a3438c7a63c5`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T033248Z-r14/REPORT.md`.  
    For the squared `3x3`-minor law of the same actual physical cross block `M`, the completed `q=4/3` fractional-volume theorem pays the form continuously unless there are a physical row anchor `i` and column anchor `j` for which the anchored third-compound mass
    

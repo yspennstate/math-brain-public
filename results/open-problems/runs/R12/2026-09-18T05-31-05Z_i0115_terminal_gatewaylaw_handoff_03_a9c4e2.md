@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R12 / I0115 — exact conditional gateway law inside the published Poisson-road master event; terminal HARD handoff
 
-Repository / branch: `yspennstate/math-open-problems`, `master`.
+Repository / branch: `private-source-repository`, `master`.
 Deployment: `NEW-METHODS-2026-09-16`.
 Status after this run: **OPEN / PARTIAL / TERMINAL_HANDOFF**.
 Canonical active claim at run start: `operations/claims/I0115.md`.

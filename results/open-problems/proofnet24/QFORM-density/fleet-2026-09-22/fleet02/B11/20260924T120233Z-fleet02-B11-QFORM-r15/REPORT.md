@@ -245,7 +245,7 @@ That is exactly the latest partner r56 mechanism. The third source-disjoint bank
 
 ## 5. Required pinned-source inequality on the one-sheet side
 
-The required fixed source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` was read in full for `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
+The required fixed source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` was read in full for `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
 Its completed ruled-level-set Theorem C states that an exact-rank-three `(2,1)` form with all three eigenvalue magnitudes at least `s` satisfies
 

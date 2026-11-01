@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R01 — post-P0219 ownership transition and next-source stress test
 
-Repository: private `yspennstate/math-open-problems`, branch `master`.
+Repository: private `private-source-repository`, branch `master`.
 
 ## 1. Frozen I0024 remains frozen
 

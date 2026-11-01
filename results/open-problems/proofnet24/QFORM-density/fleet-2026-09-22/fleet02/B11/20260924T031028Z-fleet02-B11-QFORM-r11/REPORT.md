@@ -224,7 +224,7 @@ The third direction does not first make `U` independent of `V`; it removes the l
 
 The owner-pinned package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was read at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. A completed result in `COUNTEREXAMPLE_SEARCH.md` says that if an original physical principal `3x3` block has all eigenvalues of modulus at least `sigma`, then after conditioning on the other original coordinates the full quadratic-plus-linear form has density at most
 

@@ -6,7 +6,7 @@ A required prepublication refresh found a concurrent source-matching theorem tha
 
 Fleet01/B09 run `20260923T184722Z-fleet01-B09-QFORM-auto11`, canonical source
 
-`yspennstate/math-open-problems@4c14dc43b9c5f602ac85f25587e30a0fc9ad3c9e`
+`private-source-repository@4c14dc43b9c5f602ac85f25587e30a0fc9ad3c9e`
 
 at
 

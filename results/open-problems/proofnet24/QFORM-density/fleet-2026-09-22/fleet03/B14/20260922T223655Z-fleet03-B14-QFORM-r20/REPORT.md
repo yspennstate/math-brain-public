@@ -19,7 +19,7 @@ The B14 question addressed here is whether the current law-level localization ca
 
 Designated partner fleet04/B14 proved `QFORM-LAW-LEVEL-FINITE-MIXTURE-LOCALIZATION-v1` at
 
-`yspennstate/math-open-problems@321ec7899f4972d125d641408512fe9e5e9dcf4c`
+`private-source-repository@321ec7899f4972d125d641408512fe9e5e9dcf4c`
 
 path
 

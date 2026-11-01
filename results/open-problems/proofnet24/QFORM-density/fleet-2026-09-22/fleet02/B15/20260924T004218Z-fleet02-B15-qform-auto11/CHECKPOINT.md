@@ -15,7 +15,7 @@ Q=(U+D^{-1}(BZ+b_U/2))^T D(U+D^{-1}(BZ+b_U/2))+R(Z),
 
 where the quadratic part of R is the Schur complement S=C-B^T D^{-1}B and the affine part is arbitrary.
 
-Assume rank(S)=2, with nonzero eigenvalues eta_1,eta_2. The completed orientation-free rank-two affine half-Riesz theorem at math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a gives
+Assume rank(S)=2, with nonzero eigenvalues eta_1,eta_2. The completed orientation-free rank-two affine half-Riesz theorem at private-source@e542b1a6ef471b329e4e88a6553e1aacb45acc1a gives
 
 sup_t E |R-t|^{-1/2} <= 128 |eta_1 eta_2|^{-1/4}.
 
@@ -23,7 +23,7 @@ Therefore
 
 sup_t P(|R-t|<rho) <= 128 |eta_1 eta_2|^{-1/4} sqrt(rho).
 
-Feeding H=128|eta_1eta_2|^{-1/4} into the completed physical-pair logarithmic compiler at math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f yields the new collective estimate
+Feeding H=128|eta_1eta_2|^{-1/4} into the completed physical-pair logarithmic compiler at private-source@f7f0fedb2d93b46824f96cac1164af6f8a55626f yields the new collective estimate
 
 ||p_Q||_infinity <= 64 (Delta kappa)^(-1/4) |eta_1 eta_2|^(-1/8).                 (1)
 

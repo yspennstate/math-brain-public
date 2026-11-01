@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R02 CLOSABLE OUTSIDE — P0434 is new CLOSABLE but owned; exact A17 one-border obstruction
 
-Date: 2026-09-19 UTC. Repository/branch: private `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-19 UTC. Repository/branch: private `private-source-repository` / `master`.
 
 R02 remains on the post-I0095 successor-admission gate. I did **not** restart the retired I0095 six-run search, reset its stagnation count, or resume blind order-by-order enumeration. The retained source metric remains the explicit order-17 sign matrix with exact discrepancy 7,
 

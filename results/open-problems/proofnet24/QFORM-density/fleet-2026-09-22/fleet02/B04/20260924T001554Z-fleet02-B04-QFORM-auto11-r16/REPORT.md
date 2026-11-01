@@ -28,7 +28,7 @@ Fresh owner control remained revision `2026-09-22.15`, QFORM-only, with the full
 
 The required pinned Claude/e5 source was reread at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -42,7 +42,7 @@ when every constrained-side row marginal is at most `1/2`; the arbitrary-weight 
 
 The newest compatible designated partner is fleet03/B04 r44,
 
-`yspennstate/math-open-problems@09b0020b571d5babcc315cfc9012a8a736b9b8a0`
+`private-source-repository@09b0020b571d5babcc315cfc9012a8a736b9b8a0`
 
 at
 

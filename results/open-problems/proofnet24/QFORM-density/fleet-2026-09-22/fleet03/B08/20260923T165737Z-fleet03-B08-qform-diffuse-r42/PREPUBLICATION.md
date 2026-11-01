@@ -4,7 +4,7 @@ Final control/correction refresh observed `math-research-brain` head `7fde870312
 
 The refresh added an important source-status update: the projected-crossing theorem used in `REPORT.md` is now republished in the reviewed interactive bundle at
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`,
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`,
 
 and the owner-continuation record says this projected-crossing extension received two independent proof reviews. This strengthens the source status of the analytic input but does not turn r42 or the source theorem into a full-QFORM proof.
 

@@ -17,19 +17,19 @@ This run does **not** use the refuted arbitrary-joint rank-three coarea `2/3` es
 
 Completed inputs used in equations below:
 
-1. **Arbitrary-rank quarter small-ball theorem.** `QFORM-ARBITRARY-RANK-QUARTER-SMALLBALL-v1`, source `yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`, path `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`. For every nonzero symmetric `T`, arbitrary affine terms, and independent cap-one coordinates `Z`,
+1. **Arbitrary-rank quarter small-ball theorem.** `QFORM-ARBITRARY-RANK-QUARTER-SMALLBALL-v1`, source `private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`, path `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`. For every nonzero symmetric `T`, arbitrary affine terms, and independent cap-one coordinates `Z`,
 
    `sup_w P{|Z^T T Z+b^TZ+d-w|<rho} <= min(1,5(rho/||T||)^(1/4)).`       (1.1)
 
-2. **Scalar Schur singular-value inheritance.** fleet01/B09 `QFORM-SCHUR-SINGULAR-INHERITANCE-v1`, source present at `yspennstate/math-open-problems@d511859edaa636cdc00fcd64155ab07506875c3d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T174813Z-r15/REPORT.md`. If a nonzero physical scalar pivot is completed, then `s_{j+1}(S)<=s_j(T)` for the Schur remainder `T`; in particular `s_2(S)>=1` implies `||T||>=1` after any nonzero second scalar pivot.
+2. **Scalar Schur singular-value inheritance.** fleet01/B09 `QFORM-SCHUR-SINGULAR-INHERITANCE-v1`, source present at `private-source-repository@d511859edaa636cdc00fcd64155ab07506875c3d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T174813Z-r15/REPORT.md`. If a nonzero physical scalar pivot is completed, then `s_{j+1}(S)<=s_j(T)` for the Schur remainder `T`; in particular `s_2(S)>=1` implies `||T||>=1` after any nonzero second scalar pivot.
 
 3. **Rank-two original-coordinate cross Fourier endpoint.** The completed cross-block theorem used in fleet03/B09 r12 gives, for a physical cut with cross block `C` and two singular values `sigma_1,sigma_2>0`, while allowing arbitrary within-bank quadratic and affine terms,
 
    `|phi(t)| <= min(1, 2pi (sigma_1 sigma_2)^(-1/2)|t|^(-1)).`           (1.2)
 
-4. **Nested-cut structural reduction.** fleet03/B20 `QFORM-NESTED-CUT-THREE-RESOURCE-v1`, canonical source `yspennstate/math-open-problems@06ef7346c08f41c3fac240e1acdeb1b42dc2995d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T165009Z-fleet03-B20-QFORM-r13/REPORT.md`. Its unresolved heavy-pivot alternative supplies a genuine original coordinate with `|A_ii|>=157/320`.
+4. **Nested-cut structural reduction.** fleet03/B20 `QFORM-NESTED-CUT-THREE-RESOURCE-v1`, canonical source `private-source-repository@06ef7346c08f41c3fac240e1acdeb1b42dc2995d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T165009Z-fleet03-B20-QFORM-r13/REPORT.md`. Its unresolved heavy-pivot alternative supplies a genuine original coordinate with `|A_ii|>=157/320`.
 
-5. **Fresh cross-account same-role result.** fleet02/B09 `QFORM-RANK3-BILINEAR-SCHUR-BANK-v1`, canonical source `yspennstate/math-open-problems@caa2cef304844e9d6f841acaf2e003f0bc1c24b5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T183809Z-fleet02-B09-QFORM-r7/REPORT.md`. It pays an exact-rank-three indefinite physical pair by aggregating its entire rank-one Schur bank before reciprocal minor inversion. In particular, whenever
+5. **Fresh cross-account same-role result.** fleet02/B09 `QFORM-RANK3-BILINEAR-SCHUR-BANK-v1`, canonical source `private-source-repository@caa2cef304844e9d6f841acaf2e003f0bc1c24b5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T183809Z-fleet02-B09-QFORM-r7/REPORT.md`. It pays an exact-rank-three indefinite physical pair by aggregating its entire rank-one Schur bank before reciprocal minor inversion. In particular, whenever
 
    `R_ij:=|A_ij|^2 sum_{k!=i,j}|A_ik A_jk| >= r>0`,
 

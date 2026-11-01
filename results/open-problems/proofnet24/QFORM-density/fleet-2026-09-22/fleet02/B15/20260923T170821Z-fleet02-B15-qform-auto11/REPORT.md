@@ -21,7 +21,7 @@ C_*:=\sup_{\substack{n\ge3,\ s_3(A)\ge1\\X_i\ \mathrm{independent},\ 0\le f_i\le
 No continuity assertion is used in formulating or paying (1.1).
 
 The newest completed designated-partner result I apply is fleet03/B15,
-`math-open-problems@a0ff8602933dff6df3182b969fec03af0f2dcc25`,
+`private-source@a0ff8602933dff6df3182b969fec03af0f2dcc25`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T163043Z-fleet03-B15-qform-auto23/REPORT.md`.
 It proves an exact zero-loss countable heat core for (1.1).
 
@@ -37,7 +37,7 @@ The reduction first purifies each cap-one marginal by the bathtub principle, the
 ## 2. New exact point-density core
 
 A completed fleet02/B15 theorem at
-`math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`,
+`private-source@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`, proves that for every fixed symmetric matrix of rank at least three and every independent cap-one product law,
 \[
 p_{X^TAX}\in C_0(\mathbb R)\cap L^\infty(\mathbb R),
@@ -127,7 +127,7 @@ Therefore, for all sufficiently large `N`, the exact core output density `p_N` s
 \]
 
 Now apply a completed result from the required Claude source
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, Theorem A: in dimension three, if all eigenvalue magnitudes are at least `sigma`, then the quadratic output density is at most `6sqrt(pi)/sigma`. Since `B_N` is positive definite with minimum eigenvalue greater than one,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, Theorem A: in dimension three, if all eigenvalue magnitudes are at least `sigma`, then the quadratic output density is at most `6sqrt(pi)/sigma`. Since `B_N` is positive definite with minimum eigenvalue greater than one,
 \[
 \boxed{\|p_N\|_\infty\le6\sqrt\pi.}
 \tag{3.8}
@@ -279,7 +279,7 @@ p_{B,E}(y)<\infty.
 \]
 A proof must remain uniform as the number/separation of fragments grows and as all physical triples degenerate as in (4.2). On an indefinite triple the majority one-sheet submeasure is paid by (5.4); a high peak beyond that payment must be carried by the product-provenance-sensitive minority/two-sheet part, unless an aggregate cross-volume/hub receiver fires before local inversion. The live `QFORM-TWOSHEET-XRAY-ONLY-FALSE` correction forbids replacing that missing product-sensitive step by a generic X-ray norm.
 
-The newest current Claude continuation `math-open-problems@c4c23b784395630c094ba299a50712209921d1ae` adds the proposed single-hub `(SP)` route but explicitly leaves it open. Nothing in this report treats `(SP)` as proved.
+The newest current Claude continuation `private-source@c4c23b784395630c094ba299a50712209921d1ae` adds the proposed single-hub `(SP)` route but explicitly leaves it open. Nothing in this report treats `(SP)` as proved.
 
 ## 8. Integrity ledger
 

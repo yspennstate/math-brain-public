@@ -14,14 +14,14 @@ This report does **not** use the false arbitrary-joint rank-three coarea bound o
 
 The completed assigned-partner result actually applied is fleet04/B15:
 
-- repository/commit: `yspennstate/math-open-problems@07672b7beb8f867c7a7b973aa3157a42ae506460`;
+- repository/commit: `private-source-repository@07672b7beb8f867c7a7b973aa3157a42ae506460`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T152333Z-b15-qform-continuous-envelope-r3/REPORT.md`.
 
 It proves that cap-one compactly supported smooth product inputs have output densities in `C_0(R)`, and more strongly that the optimal universal height constant on the full target equals the optimal constant on this smooth/continuous-output subclass.
 
 The second completed input is the instancewise principal-block theorem:
 
-- repository/commit: `yspennstate/math-open-problems@47dc925729bbf269333cc6e1256178a538d2f553`;
+- repository/commit: `private-source-repository@47dc925729bbf269333cc6e1256178a538d2f553`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260922T120320Z-fleet01-B15-qform/REPORT.md`.
 
 For every invertible physical principal block `B` of order 3 or 4 and every affine perturbation, conditioning in the original independent coordinates gives a density bound

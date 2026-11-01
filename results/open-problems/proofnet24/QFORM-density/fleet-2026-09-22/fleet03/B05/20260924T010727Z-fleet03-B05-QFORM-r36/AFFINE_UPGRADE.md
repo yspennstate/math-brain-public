@@ -2,7 +2,7 @@
 
 This note strengthens REPORT.md using the rank-one affine small-ball theorem already consumed and proved in the immediately preceding fleet03/B05 run
 
-`yspennstate/math-open-problems@3e6186c2577a073283e59d0d71a8d6ff935c7d90`
+`private-source-repository@3e6186c2577a073283e59d0d71a8d6ff935c7d90`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260924T004011Z-fleet03-B05-QFORM-r36/REPORT.md`.
 

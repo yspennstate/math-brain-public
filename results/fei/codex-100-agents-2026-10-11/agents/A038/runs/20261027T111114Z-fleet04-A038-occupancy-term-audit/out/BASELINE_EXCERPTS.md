@@ -1,14 +1,14 @@
 
-## math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json
+## private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json
 
 
-## math-open-problems/reports\fei-2026-10-11\README.md
+## private-source/reports\fei-2026-10-11\README.md
 
 
-## math-open-problems/reports\fei-2026-10-11\CURRENT_STATUS.md
+## private-source/reports\fei-2026-10-11\CURRENT_STATUS.md
 
 
-## math-open-problems/reports\fei-2026-10-11\CLAIM_REGISTRY.json
+## private-source/reports\fei-2026-10-11\CLAIM_REGISTRY.json
 68:         "B08",
 96:         "Independently check the exact biased physical restriction identity and Maassen-Uffink transform.",
 171:         "B08"
@@ -16,13 +16,13 @@
 214:         "B08",
 307:         "B08",
 
-## math-open-problems/reports\fei-2026-10-11\OBSTRUCTION_REGISTRY.json
+## private-source/reports\fei-2026-10-11\OBSTRUCTION_REGISTRY.json
 39:         "B08",
 146:         "B08",
 167:         "B08",
 245:         "B08",
 
-## math-open-problems/reports\fei-2026-10-11\PACKET_STATUS.json
+## private-source/reports\fei-2026-10-11\PACKET_STATUS.json
 573:       "stream": "B08",
 584:       "design_target_id": "FEI-B08-A036-INITIAL"
 588:       "stream": "B08",
@@ -36,11 +36,11 @@
 633:       "stream": "B08",
 644:       "design_target_id": "FEI-B08-A040-INITIAL"
 
-## math-open-problems/reports\fei-2026-10-11\STREAM_NEXT_ACTIONS.json
+## private-source/reports\fei-2026-10-11\STREAM_NEXT_ACTIONS.json
 167:       "native_stream": "B08",
 172:         "A038",
 
-## math-open-problems/reports\fei-2026-10-11\FEI_100_agent_research_plan.tex
+## private-source/reports\fei-2026-10-11\FEI_100_agent_research_plan.tex
 466: \cite{BrainOverlap}. B08 must retrieve the current exact
 467: occupancy-credit definition and the rejected fixed-positive-reserve
 481: Joint-cost, representation, and nonlocal restriction routes (B01--B03, B06, B08, B13) & 30 \\
@@ -52,22 +52,22 @@
 804: {\small\emph{Execution contract:} baseline intake; P0; initial cap 1 work cycles. Deliverables: \path{FROZEN_POTENTIAL.json}; \path{KNOWN_FALSIFIERS.md}. Independent review: A092, A087. Consumers: A038, A047, A048, A071, A076.}
 1319: \item \textbf{B08:} retain the exact mismatch/KL rebate in one
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\CAMPAIGN.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\CAMPAIGN.md
 36: 2. Pay actual restriction entropy drops with one conserved physical influence budget, retaining the mismatch/KL rebate and the terminal entropy.
 41: The role connections for these obligations are many-to-many. For example, F08's reveal target is relevant to B13 martingales, B08 KL, and B14 analytic; it is not an instruction changing B08 into F08. F19's proof-reconstruction material supports the already installed B18 proof-audit and B19 review streams. F20's synthesis proposal supports B20 and B01 without creating another coordinator.
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\CLAIMS.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\CLAIMS.md
 37: | C005 | PROVED_BASELINE | For actual restrictions f_±, Δ_iH=H(S_i|S_-i)+JS(fhat_+²,fhat_-²); JS≤(2/ln2)min(Inf_i,1−Inf_i); I(f)=Inf_i+(I(f_+)+I(f_-))/2. | F05,F07,F19 | ER §§1–4 |
 55: | C018 | CONDITIONAL | Uniform B≤KI for all Boolean f implies full FEI with C≤K+2/ln2; conversely B≤H makes FEI imply B≤CI. The equivalence is proved; a universal finite K is not. | F07,F20 | C005; ER §4 |
 56: | C019 | CONDITIONAL | A genuine stopping restriction tree with a linearly paid cumulative mismatch/log charge and FEI-certified leaves gives FEI. The same ancestral influence cannot be spent again in descendants. | F05,F06,F20 | C005,C006; LA §5; ISO §3; RM §§2–3 |
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\COUNTEREXAMPLES.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\COUNTEREXAMPLES.md
 23: **Defeats:** B(mixture)≤average B+C·Inf_selector for fixed C. Also defeats restriction stability of P_λ=B+λ(H−B) for every fixed 0≤λ<1: it would require C≥2[(1−λ)m+1+λ]. Does not refute nonlinear potentials or the true entropy restriction identity.
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\SEED_LEMMAS.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\SEED_LEMMAS.md
 
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\NATIVE_MAPPING.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\NATIVE_MAPPING.md
 20: | B08 | KL |
 42: | F03 — Rare-root amortization | B05, B02, B08, B16 | Sparse-root priors, scale costs, KL rebates, and asymptotic failures of local payments. |
 44: | F05 — Restriction charge | B06, B13, B08, B18 | Actual physical restriction trees, conserved influence, entropy/mismatch identities, and independent telescope checks. |
@@ -76,40 +76,40 @@
 48: | F09 — Boolean convolution | B07, B14, B08, B01 | Full signed XOR identities, failures of non-Boolean relaxations, and universal entropy interfaces. |
 72: | B08 | F03, F05, F07, F08, F09 |
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_26_CRITICAL_RARE_MOMENT.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_26_CRITICAL_RARE_MOMENT.md
 
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_44_COMPONENT_ENTROPY_COUNTEREXAMPLE.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_44_COMPONENT_ENTROPY_COUNTEREXAMPLE.md
 
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\BLOCK_RESTRICTION_IDENTITY_2026-09-18.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\BLOCK_RESTRICTION_IDENTITY_2026-09-18.md
 1: # Block restriction identity and its exact surviving term
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_REDUCTION.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_REDUCTION.md
 
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_RIGIDITY.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_RIGIDITY.md
 
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md
 
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\GAMMA_ENDPOINT_LEDGER.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\GAMMA_ENDPOINT_LEDGER.md
 
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ISOSPECTRAL_SPLICING_CURATED.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ISOSPECTRAL_SPLICING_CURATED.md
 
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\LOG_ALLOCATION_CURATED.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\LOG_ALLOCATION_CURATED.md
 
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ONE_BIT_ENDPOINT.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ONE_BIT_ENDPOINT.md
 
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\OVERLAPPING_PRODUCT_NOTE.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\OVERLAPPING_PRODUCT_NOTE.md
 
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ROUTE_MAP_CURATED.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ROUTE_MAP_CURATED.md
 105: - Fixed positive occurrence reserve D_Gamma>=lambda v K_occ for every source fails for every lambda>0 at finite potential center. Lambda=0, nonlinear/state-dependent credit and FEI are not refuted
 124: 3. **KL:** pay K_occ>=[-B_inf^Gamma]_+ with actual source signs, bias, normalizations and reference changes retained. On the balanced slice this is already full-FEI-strength. Nonlinear/multiscale payment remains possible; fixed positive reserves and low-level truncations do not supply it
 

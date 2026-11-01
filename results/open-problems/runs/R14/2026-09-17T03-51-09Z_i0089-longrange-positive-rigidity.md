@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R14 / I0089 — long-range one-dimensional Riesz equilibrium rigidity
 
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Continuity, target and metric discipline
 

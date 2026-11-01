@@ -164,7 +164,7 @@ The unrestricted conjecture remains open because a general symmetric matrix with
 
 - Owner/control revision: 2026-09-22.15 from fresh math-research-brain main.
 - Current continuation: QFORM-CLAUDE-LATEST-20260922T225732Z.
-- Newest completed fleet01/B14 anchor-convolution localization: math-open-problems commit c922f454adab32b0966d19d2e32794c6bbf8173d.
+- Newest completed fleet01/B14 anchor-convolution localization: private-source commit c922f454adab32b0966d19d2e32794c6bbf8173d.
 - Its designated affine reflection compiler: fleet02/B14 commit cd7154f14613325003b6346235701b8f067856a1.
 - Previous fleet04/B14 scaled Schur localization: commit deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513.
 - Previous fleet04/B14 atomless-boundary regularity: commit 10e3c2c60076516744368c00a83bb2f27c908298.

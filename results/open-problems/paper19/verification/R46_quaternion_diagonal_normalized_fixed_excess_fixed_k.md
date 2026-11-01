@@ -72,9 +72,9 @@ summable \(O(m)\)-size row/column unions.
 - `STATE.md`: added row `V.A-rect-kth-diag` and the R46 round log.
 - `PLAN.md`: recorded the quaternion diagonal and normalized consequence under
   V.A.
-- `math-open-problems-fleet/master/chO_phase_retrieval_rmt.tex`: added a compact
+- `private-source-fleet/master/chO_phase_retrieval_rmt.tex`: added a compact
   Lane O sentence inside `laneO:cor:conditioning-variants`.
-- `math-open-problems-fleet/MASTER_STATE.md`: recorded the master-side summary.
+- `private-source-fleet/MASTER_STATE.md`: recorded the master-side summary.
 
 ## Build verification
 

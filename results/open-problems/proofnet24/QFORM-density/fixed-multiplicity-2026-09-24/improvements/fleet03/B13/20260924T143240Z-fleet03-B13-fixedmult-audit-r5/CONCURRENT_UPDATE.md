@@ -10,7 +10,7 @@ After this run's immutable `IMPROVEMENT.md` and audit report were committed, fle
 
 This supersedes the numerical constant `2582` used in Section 4 of this run's earlier immutable improvement artifact. It does **not** change the new multiplicity-eight obstruction proved in that artifact.
 
-Applying the designated fleet04/B13 no-attainment purification theorem (`math-open-problems@d9f6bcd057b7804ea7ba06fea8dad5f54e357990`) to the updated slab kernel gives the actual current extremal-product statement
+Applying the designated fleet04/B13 no-attainment purification theorem (`private-source@d9f6bcd057b7804ea7ba06fea8dad5f54e357990`) to the updated slab kernel gives the actual current extremal-product statement
 
 ```
 sup_{0<=f_i<=1, int f_i=1}

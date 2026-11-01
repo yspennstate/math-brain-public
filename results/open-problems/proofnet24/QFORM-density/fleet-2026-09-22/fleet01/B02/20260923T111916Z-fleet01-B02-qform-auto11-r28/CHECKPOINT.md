@@ -5,7 +5,7 @@ attacking: integrated Fourier estimate — sharpen the incident-(3+2) cross-disj
 
 Programme: `QFORM-DENSITY-3EIG-20260922`. Full target remains OPEN. Execution context `WITHOUT_VERIFIED_BRAIN`.
 
-Source actually used: fleet02/B02 `QFORM-INCIDENT32-CROSSDISJOINT-SHARP-HY-L1-v1`, canonical report `yspennstate/math-open-problems@94189deb89884b0dd57057041ec04f98a85e6764:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T091200Z-fleet02-B02-QFORM-auto11/REPORT.md`. In the live two-sided D' failure it yields `J3>Z3/3`; if its row/column cross-disjoint exits both fail at threshold `1/16`, it supplies a physical residual anchor `(i,j)` with `H=H2^(i,j)(N)>7E2/32`.
+Source actually used: fleet02/B02 `QFORM-INCIDENT32-CROSSDISJOINT-SHARP-HY-L1-v1`, canonical report `private-source-repository@94189deb89884b0dd57057041ec04f98a85e6764:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T091200Z-fleet02-B02-QFORM-auto11/REPORT.md`. In the live two-sided D' failure it yields `J3>Z3/3`; if its row/column cross-disjoint exits both fail at threshold `1/16`, it supplies a physical residual anchor `(i,j)` with `H=H2^(i,j)(N)>7E2/32`.
 
 New combinatorial step. Let `mu` be the incident residual-row-pair law conditioned on avoiding the inner anchor `i`, with mass `Jbar_i=(1-a_i)J3`, and let `u_r=P_mu(r in R)`. Let `v_r` be the anchored-H companion-row law, so `sum_r v_r=1`. The star-disjointness parameter is
 

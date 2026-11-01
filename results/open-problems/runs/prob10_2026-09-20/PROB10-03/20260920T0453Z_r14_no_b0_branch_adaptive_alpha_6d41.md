@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # PROB10-03 — R14 bounded iteration: boundary branch obstruction, adaptive alpha, fixed-latitude cone
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL / SOURCE OPEN / NEW RIGOROUS OBSTRUCTION / NO RIGOROUS ENDPOINT MOVED**.
 

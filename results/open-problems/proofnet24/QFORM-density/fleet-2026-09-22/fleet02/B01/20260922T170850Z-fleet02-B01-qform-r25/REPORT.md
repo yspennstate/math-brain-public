@@ -34,7 +34,7 @@ The theorem is not a full solution because the three-large-eigenvalue hypothesis
 
 The completed compatible partner theorem actually applied is the arbitrary-orientation rank-two/three Schur fusion at
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 Its rank-three consequence states: for an invertible original-coordinate rank-three principal block `B=VMV^T`, a nonzero physical diagonal `a=B_ii`, and spectral row leverage `c_i`, the full ambient form (including arbitrary outside-induced affine terms) satisfies

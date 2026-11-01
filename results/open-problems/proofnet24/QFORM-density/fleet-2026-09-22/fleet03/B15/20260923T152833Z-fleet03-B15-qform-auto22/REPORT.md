@@ -14,7 +14,7 @@ The target remains the unrestricted conjecture for arbitrary independent cap-one
 
 Two completed supporting sources are consumed at equations rather than merely cited.
 
-1. **Partner fleet04/B15**, `yspennstate/math-open-problems@cff8e1368d32302e6d649f776579a5c1951929b1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T151702Z-fleet04-B15-pivoted-convolution-r6/REPORT.md`. For independent cap-one X,Y and b != 0,
+1. **Partner fleet04/B15**, `private-source-repository@cff8e1368d32302e6d649f776579a5c1951929b1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T151702Z-fleet04-B15-pivoted-convolution-r6/REPORT.md`. For independent cap-one X,Y and b != 0,
    
    `T=aX^2+2bXY+2uX+2vY+c`
    
@@ -24,7 +24,7 @@ Two completed supporting sources are consumed at equations rather than merely ci
    
    and an independent square `S=gamma Z^2+2wZ` satisfies `||p_S||_(3/2)<=2|gamma|^(-1/3)`.
 
-2. **Physical-pair logarithmic envelope**, `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, path `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`. For independent cap-one U,V and an arbitrary affine perturbation F of an invertible indefinite symmetric 2x2 physical block B, writing
+2. **Physical-pair logarithmic envelope**, `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, path `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`. For independent cap-one U,V and an arbitrary affine perturbation F of an invertible indefinite symmetric 2x2 physical block B, writing
    
    `D=|det B|`, `kappa=sigma_min(B)`,
    

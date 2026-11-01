@@ -16,7 +16,7 @@ The unrestricted conjecture is not proved or disproved here. No Gaussian, log-co
 
 The planned incoming debt from r38 was `QFORM-MOVING-E2-PLANE-SYNCHRONIZATION-v1`. Before extending that mechanism, I source-searched the repository. This found my own earlier theorem
 
-`yspennstate/math-open-problems@07ce749022db2bb11f390431409b013fe30457cc`
+`private-source-repository@07ce749022db2bb11f390431409b013fe30457cc`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T000734Z-fleet03-B07-qform-r20/REPORT.md`,
 
@@ -28,7 +28,7 @@ and finite-bank random-color selectors for all four overlap types. I therefore d
 
 The analytic dependency is fleet02/B03's completed theorem `QFORM-Z3-CROSSING-MARGINAL-FREE-v1`, available at the fresh master snapshot
 
-`yspennstate/math-open-problems@df4894c85a1e34f832685aaf85ac05bbecc24b7e`
+`private-source-repository@df4894c85a1e34f832685aaf85ac05bbecc24b7e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T184716Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 
@@ -149,7 +149,7 @@ So an attempted counterexample sequence with `rho -> infinity` must drive the en
 
 The completed designated partner fleet04/B07 result is source-pinned at
 
-`yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`
+`private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`.
 
@@ -183,7 +183,7 @@ This is a genuine equation-level use of the designated partner result. It is not
 
 The newer designated partner theorem
 
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`
 

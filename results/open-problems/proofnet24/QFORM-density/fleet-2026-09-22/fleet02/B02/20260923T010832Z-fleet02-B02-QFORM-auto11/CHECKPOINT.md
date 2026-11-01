@@ -2,7 +2,7 @@
 
 Programme: `QFORM-DENSITY-3EIG-20260922`. Full target remains open.
 
-I independently checked the analytic constants and endpoints in `math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
+I independently checked the analytic constants and endpoints in `private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 For an original-coordinate cross block `M=A[I,J]`, let `Z=e_3(M^T M)` and let `alpha_i` be the row third-volume marginals. If `1<=q<3/2` and `max alpha_i<=q/2`, sharp Hausdorff--Young plus the volume-sampling Brascamp--Lieb determinant bound gives
 

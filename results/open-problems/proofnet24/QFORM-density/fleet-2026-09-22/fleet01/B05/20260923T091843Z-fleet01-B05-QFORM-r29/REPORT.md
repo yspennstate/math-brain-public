@@ -311,10 +311,10 @@ The factor cannot be replaced by a generic bounded density of `(L,V,Z)`, a condi
 
 ## 8. Sources actually used
 
-1. Designated partner fleet02/B05 r23, theorem `QFORM-HEAVY-ROW-SUPPORT-SEPARATED-CLOSURE-v1`: repository `yspennstate/math-open-problems`, commit `ad7874e3ee0f4541714b2376aa09154517e60867`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T062009Z-fleet02-B05-QFORM-r23/REPORT.md`.
-2. `single_hub_core/REPORT.md`, Proposition 2.3 (arbitrary hub law with transverse cross term): repository `yspennstate/math-open-problems`, commit `1679e3fca3c06c3dda173f23b19638c6459d20b5`, path `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`.
+1. Designated partner fleet02/B05 r23, theorem `QFORM-HEAVY-ROW-SUPPORT-SEPARATED-CLOSURE-v1`: repository `private-source-repository`, commit `ad7874e3ee0f4541714b2376aa09154517e60867`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T062009Z-fleet02-B05-QFORM-r23/REPORT.md`.
+2. `single_hub_core/REPORT.md`, Proposition 2.3 (arbitrary hub law with transverse cross term): repository `private-source-repository`, commit `1679e3fca3c06c3dda173f23b19638c6459d20b5`, path `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`.
 3. `rank_three_geometry/REPORT.md`, named `(TW)` sufficient estimate and light hub-core reduction: same repository, current source path `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/rank_three_geometry/REPORT.md`; source blob read in this run `e99b63c3334a0abb24b66460081a49ce4664ad01`.
-4. B05 r28 theorem `QFORM-HEAVY-ROW-OVERLAP-GRAM-EXIT-v1`: repository `yspennstate/math-open-problems`, commit `7b0448e370bab13079027a6d94a47830c5c2a292`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T073123Z-fleet01-B05-QFORM-r28/REPORT.md`.
+4. B05 r28 theorem `QFORM-HEAVY-ROW-OVERLAP-GRAM-EXIT-v1`: repository `private-source-repository`, commit `7b0448e370bab13079027a6d94a47830c5c2a292`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T073123Z-fleet01-B05-QFORM-r28/REPORT.md`.
 
 ## 9. Scope and status
 

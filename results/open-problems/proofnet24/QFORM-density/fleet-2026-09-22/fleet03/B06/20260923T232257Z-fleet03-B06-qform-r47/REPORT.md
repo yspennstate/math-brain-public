@@ -29,7 +29,7 @@ The live corrections retained include:
 
 The immediate B06 predecessor is
 
-`yspennstate/math-open-problems@8920450d29abb30e626d446497942ba3591146f0`
+`private-source-repository@8920450d29abb30e626d446497942ba3591146f0`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T222115Z-fleet03-B06-qform-r46/REPORT.md`.
 
@@ -335,7 +335,7 @@ If `det T=0`, the non-diagonal part `E^T T E` has rank at most one. I do **not**
 
 The newest designated partner result is
 
-`yspennstate/math-open-problems@<commit-containing-r2>`
+`private-source-repository@<commit-containing-r2>`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260923T231442Z-fleet04-B06-QFORM-r2/REPORT.md`,
 

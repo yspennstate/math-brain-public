@@ -3,7 +3,7 @@ attacking: partner fleet03/B06 r56 global-null endpoint by product-preserving sp
 
 # Early substantive calculation — sparse kernel deletion
 
-Partner r56 (`math-open-problems@24fd6e4552117b2dd56c62db304883d5360b59f2`) reduces every exact singular localized three-hub face to a density-paid branch or an actual global null vector supported on the three literal hub coordinates. The first unpaid implication is to use that null certificate without replacing the hub triple by a dependent two-dimensional spectral quotient.
+Partner r56 (`private-source@24fd6e4552117b2dd56c62db304883d5360b59f2`) reduces every exact singular localized three-hub face to a density-paid branch or an actual global null vector supported on the three literal hub coordinates. The first unpaid implication is to use that null certificate without replacing the hub triple by a dependent two-dimensional spectral quotient.
 
 Let `A=A^T`, let `K subset ker A` have dimension `d>=1`, and suppose every vector in `K` is supported on one literal coordinate set `H`, `|H|=m<=3`. Choose an orthonormal basis matrix `W` for `K`. By Cauchy--Binet,
 

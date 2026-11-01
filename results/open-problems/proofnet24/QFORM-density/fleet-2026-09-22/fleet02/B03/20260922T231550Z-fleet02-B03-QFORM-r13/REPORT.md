@@ -13,7 +13,7 @@ The full target remains: independent real coordinates with densities at most one
 
 The designated partner result actually applied is fleet03/B03 run `20260922T225606Z-fleet03-B03-QFORM-r21`, canonical mathematics
 
-`yspennstate/math-open-problems@bbf30c1b2b9495570c8ef2a3f0436c94062892a`
+`private-source-repository@bbf30c1b2b9495570c8ef2a3f0436c94062892a`
 
 at
 
@@ -33,7 +33,7 @@ For `k=3`, `C_3=9.84065586492201854...`. Its proof starts from an independent-co
 
 This run also obeys the later proof-first continuation and applies the newest source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 from `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, especially the proved D' extension and Theorem F in `FOURIER_ROUTE_REPORT.md` / `RESULTS.md`.
 

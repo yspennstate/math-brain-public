@@ -15,17 +15,17 @@ The owner target remains: independent real coordinates with probability densitie
 
 Corrections respected here include: no law-uniform pointwise one-dimensional Fresnel decay; no post-rotation independence; no arbitrary-joint rank-three coarea bound; no positive conditional projection-density-moment gate; no fixed-good-minor or universal rank-three cross-cut extraction. The fresh fleet01/B01 rank-one-completion obstruction is also respected: arbitrary within-bank quadratic phases cannot be discarded when only a cross triangle is retained. None of those false interfaces is used below.
 
-The analytic source is the proof-level small-coordinate Fourier part of Mark Rudelson and Roman Vershynin, *Small Ball Probabilities for Linear Images of High-Dimensional Distributions*, IMRN 2015, DOI `10.1093/imrn/rnu243`, arXiv `1402.4492`, specifically their Lemma 3.1 plus Proposition 5.1. The exact source was already pinned and audited in fleet02/B02 report `yspennstate/math-open-problems@2d79dea715c2baa9e8ef6c0ac174eee1712d2888:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T114331Z-fleet02-B02-qform-r12/REPORT.md`, blob `d13acb61e2846ea2e1761acca18d5e4e0f124a34`. I retain its notation `B_RV<infinity`: whenever `V` has orthonormal columns and every row has Euclidean norm at most `1/2`, the projection characteristic function satisfies
+The analytic source is the proof-level small-coordinate Fourier part of Mark Rudelson and Roman Vershynin, *Small Ball Probabilities for Linear Images of High-Dimensional Distributions*, IMRN 2015, DOI `10.1093/imrn/rnu243`, arXiv `1402.4492`, specifically their Lemma 3.1 plus Proposition 5.1. The exact source was already pinned and audited in fleet02/B02 report `private-source-repository@2d79dea715c2baa9e8ef6c0ac174eee1712d2888:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T114331Z-fleet02-B02-qform-r12/REPORT.md`, blob `d13acb61e2846ea2e1761acca18d5e4e0f124a34`. I retain its notation `B_RV<infinity`: whenever `V` has orthonormal columns and every row has Euclidean norm at most `1/2`, the projection characteristic function satisfies
 
 `int_{R^d} |prod_i phi_i(<v_i,xi>)| dxi <= B_RV^d`.
 
 This proof-level Fourier statement, not merely the projection-density theorem, is the external input.
 
-Named partner actually consumed: fleet03/B02 r14, `QFORM-LOCALIZED-PRINCIPAL-3X3-REPAIRED-v1`, canonical proof `yspennstate/math-open-problems@54c9b45ccd6dd4dd686e91ff04e39e2cc5ebbbcf`. It proves that any ORIGINAL-coordinate principal `3x3` block `B` with `sigma_min(B)>=c` yields
+Named partner actually consumed: fleet03/B02 r14, `QFORM-LOCALIZED-PRINCIPAL-3X3-REPAIRED-v1`, canonical proof `private-source-repository@54c9b45ccd6dd4dd686e91ff04e39e2cc5ebbbcf`. It proves that any ORIGINAL-coordinate principal `3x3` block `B` with `sigma_min(B)>=c` yields
 
 `||p_Q||_infinity <=128*2^(1/4)/c`.
 
-I apply this theorem quantitatively below to Pluecker atoms. I also consume the partner's r13 overlap-one theorem at `yspennstate/math-open-problems@1b8f72a4e25ef55ca4fd974007146d3971f49bf8` to identify exactly which part of its near-isotropic residual branch is paid by the new bank theorem.
+I apply this theorem quantitatively below to Pluecker atoms. I also consume the partner's r13 overlap-one theorem at `private-source-repository@1b8f72a4e25ef55ca4fd974007146d3971f49bf8` to identify exactly which part of its near-isotropic residual branch is paid by the new bank theorem.
 
 ## 2. Pluecker notation and the exact conditional leverage identity
 

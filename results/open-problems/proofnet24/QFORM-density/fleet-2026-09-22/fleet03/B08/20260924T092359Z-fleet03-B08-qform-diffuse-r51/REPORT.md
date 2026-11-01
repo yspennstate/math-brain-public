@@ -15,7 +15,7 @@ The unrestricted conjecture remains OPEN. The new crossing-payment branch below 
 
 The immediate same-slot input is
 
-- `yspennstate/math-open-problems@19c12072f7e67266ce894042034bcabb9c376bea`,
+- `private-source-repository@19c12072f7e67266ce894042034bcabb9c376bea`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T061920Z-fleet03-B08-qform-diffuse-r51/REPORT.md`.
 
 It gives, after earlier payments, an original-coordinate hub/child decomposition
@@ -78,7 +78,7 @@ with `p_Q in C_0`, while retaining arbitrary same-bank phases.
 
 The designated fleet04/B08 source actually applied below is
 
-- `yspennstate/math-open-problems@f324267086411b9725aa0733e108ab6efc2e760a`,
+- `private-source-repository@f324267086411b9725aa0733e108ab6efc2e760a`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260924T081435Z-fleet04-B08-QFORM-r3/REPORT.md`.
 
 Its derivative-splitting theorem states that for cap-one `X` independent of `Y`, if `Gamma(Y)` has density cap `K`, then for arbitrary `R(Y)`,

@@ -16,14 +16,14 @@ The completed fleet01/B11 theorem
 QFORM-LDL-FULL-TWOJACOBIAN-NONZERO-v1
 is source-pinned at
 
-- math-open-problems@339d40cb2285b8d51cf07423514354bdd702833f
+- private-source@339d40cb2285b8d51cf07423514354bdd702833f
 - proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260924T064232Z-fleet01-B11-QFORM-auto11/REPORT.md.
 
 The completed fleet01/B05 theorem
 QFORM-RANK2-INDEPENDENT-SQUARE-BRIDGE-v1
 is source-pinned at
 
-- math-open-problems@4971375a7b03b979ca3bb1c6b31e4af71f7a1276
+- private-source@4971375a7b03b979ca3bb1c6b31e4af71f7a1276
 - proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T233435Z-fleet01-B05-QFORM-auto17/REPORT.md.
 
 The first gives the exact full two-Jacobian and puncture compensation. The second converts the rank-two block plus a genuinely independent square into a full-line density bound.

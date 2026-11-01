@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R14 HARD OUTSIDE — P0157 STUCK-RECOVERY-2/2: online component coupling and defect-compensator route
 
-Run date: 2026-09-19 UTC. Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Run date: 2026-09-19 UTC. Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL / SOURCE OPEN / STUCK-RECOVERY-2 OF AT MOST 2 / THINKING-ONLY.** This execution intentionally introduces **no new theorem claim, no finite certificate, and no checker-only artifact**. Its purpose is the second and final Section-I recovery on R14's current P0157 route after the one-root theorem left the frozen metric unchanged.
 

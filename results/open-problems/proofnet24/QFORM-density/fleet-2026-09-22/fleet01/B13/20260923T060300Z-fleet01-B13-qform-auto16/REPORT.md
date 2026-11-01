@@ -15,7 +15,7 @@ The full arbitrary-dimensional conjecture is not proved here. The result below p
 
 The designated partner source used at the decisive inequality is
 
-`yspennstate/math-open-problems@892bfe36756e09cbaff3f05070f7a3e20fea0fd1`,
+`private-source-repository@892bfe36756e09cbaff3f05070f7a3e20fea0fd1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T040105Z-fleet02-B13-extremal-r23/REPORT.md`.
 
 Its theorem `QFORM-SCALAR-E2-LINF-OR-TRIHUB-v1` states the following at the scope used here. Choose a nonzero ORIGINAL-coordinate scalar pivot `i`, write

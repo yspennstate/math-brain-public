@@ -16,7 +16,7 @@ The live target is unchanged: independent ORIGINAL real coordinates with one-dim
 This report consumes the following source-pinned completed mathematical inputs.
 
 1. **Designated partner fleet02/B19 r36**, at
-   `yspennstate/math-open-problems@a12ea856984640d876168e74f6e0a2a3f4780029`,
+   `private-source-repository@a12ea856984640d876168e74f6e0a2a3f4780029`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/B19-20260923T190836Z-r36/REPORT.md` and `COLOOP_ADDENDUM.md`.
    In its exact no-coloop zero-height endpoint, after product-safe conditioning, the remaining quadratic polynomial is
 
@@ -29,7 +29,7 @@ This report consumes the following source-pinned completed mathematical inputs.
    the partner has `S>S0=1/(480 sqrt(7626))` in the live finite-core collar. Its exact classification also identifies the one- and two-coloop alternatives as finite physical star packets rather than diffuse new curvature.
 
 2. **Fresnel--Brascamp--Lieb theorem and fractional potentials**, at
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
    If `R=diagonal + sum_{j=1}^r lambda_j u_j u_j^T` with orthonormal `u_j` and coordinate leverage at most `1/2`, then
 
@@ -41,7 +41,7 @@ This report consumes the following source-pinned completed mathematical inputs.
        <=8 sqrt(2) |lambda_1 lambda_2|^(-1/4)`.                    (1.4)
 
 3. **Physical indefinite-pair logarithmic transducer**, at
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
    For an invertible indefinite physical pair `B`, put
 
@@ -58,7 +58,7 @@ This report consumes the following source-pinned completed mathematical inputs.
    The pair translations may depend arbitrarily on the remainder.
 
 4. **Arbitrary-rank quarter-power small ball**, at
-   `yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
+   `private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
    For every nonzero real symmetric matrix `R0`, arbitrary affine terms, and independent cap-one inputs,
 

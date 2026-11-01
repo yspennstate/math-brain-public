@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-05 / C0146 — exact positive-q refutation and sharp 10-edge witness complexity
 
 Run date: 2026-09-18 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track / namespace: `proofnet24/NM13-05/`  
 Category: **CLOSABLE OUTSIDE**  
 Canonical source / claim: **C0146**, `operations/claims/C0146.md`  

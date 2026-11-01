@@ -166,7 +166,7 @@ Equation (5.1) shows that the universal constant is unchanged. Thus supports may
 
 ## 7. Fixed-Claude theorem applied to the uniformity obstruction
 
-The required source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` was read through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed Theorem A says that when **all** eigenvalues of an `n`-dimensional symmetric matrix have modulus at least `sigma`,
+The required source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` was read through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed Theorem A says that when **all** eigenvalues of an `n`-dimensional symmetric matrix have modulus at least `sigma`,
 
 `||p_Q||_infinity <= (n/sigma)(d/(d-1)) kappa_d^(1/d)`, `d=n-1`,
 

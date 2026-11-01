@@ -11,7 +11,7 @@ Execution status: **WITHOUT_VERIFIED_BRAIN**. Repository controls and mathematic
 
 Fresh owner control redirects all workers to `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`. I reread the complete pinned 790-line manuscript
 
-`yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`
+`private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`
 
 at
 
@@ -278,7 +278,7 @@ The remaining difficulty is precise: the translations in the two bilinear banks 
 
 The completed fleet04/B16 theorem at
 
-`yspennstate/math-open-problems@7f2bb2d330022b09a6af6e39ab09d054caeaa346`
+`private-source-repository@7f2bb2d330022b09a6af6e39ab09d054caeaa346`
 
 proves the dependence-safe projected-plane exit
 

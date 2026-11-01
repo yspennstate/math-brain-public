@@ -119,4 +119,4 @@ No controls, schedules, owner allocations, earlier proofs, or public repositorie
 
 ## Executable source availability
 
-The four executable scripts are proposed in draft PR [#13](https://github.com/yspennstate/math-open-problems/pull/13), pinned at commit 60d3a823b0f55ab46df5916d0cbed87208c187a6. They are not yet merged into master. For replay, obtain those four scripts from that commit and place the candidate JSON files alongside them. Research results and data are archived on master separately.
+The four executable scripts are proposed in draft PR [#13](private-source-repository), pinned at commit 60d3a823b0f55ab46df5916d0cbed87208c187a6. They are not yet merged into master. For replay, obtain those four scripts from that commit and place the candidate JSON files alongside them. Research results and data are archived on master separately.

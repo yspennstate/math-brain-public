@@ -16,7 +16,7 @@ The owner target remains the unrestricted QFORM conjecture: independent original
 
 The immediate live source that motivates the calculation is the interactive two-bank curved-tube theorem
 
-`yspennstate/math-open-problems@5e23223ed8626d8df8343d2d26879c08cf139093`
+`private-source-repository@5e23223ed8626d8df8343d2d26879c08cf139093`
 
 `proofnet24/QFORM-density/interactive/20260923T202245Z-two-bank-curved-tube/REPORT.md`.
 
@@ -24,7 +24,7 @@ It proves useful dyadic tube gains for the same canonical geometry, but records 
 
 I also read the current fleet02/B02 early shared-hub Fourier calculation at
 
-`yspennstate/math-open-problems@ae1263e26df0a8d383fc98d1d2f73af75e157145`
+`private-source-repository@ae1263e26df0a8d383fc98d1d2f73af75e157145`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T200844Z-fleet02-B02-qform-auto11/EARLY.md`.
 
@@ -216,7 +216,7 @@ The theorem is also stable under conditioning on outside ORIGINAL coordinates wh
 
 The completed partner report is
 
-`yspennstate/math-open-problems@a70c05e517e8a195a31ab4f4c301c672d1c8d4e6`
+`private-source-repository@a70c05e517e8a195a31ab4f4c301c672d1c8d4e6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260923T192012Z-fleet04-B16-QFORM-r2/REPORT.md`.
 

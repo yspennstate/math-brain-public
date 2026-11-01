@@ -16,9 +16,9 @@ The target remains the unrestricted conjecture: for every dimension, independent
 
 Actual mathematical dependencies:
 
-1. Own r24 fixed-double-pair report: `yspennstate/math-open-problems@6360df8421f192175027c1e5334028e2f047533b`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T120512Z-r24/REPORT.md`.
-2. Own r20 mixed-order fractional-compound BL theorem: `yspennstate/math-open-problems@7bf5a0bd8a8d2fa12a5c2370811ecfe5d2cf7444`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T090322Z-r20/REPORT.md`.
-3. Latest completed designated partner fleet02/B07: `yspennstate/math-open-problems@646c1395596ed9c4b1f77cecdc9e9506cf793c22`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/fleet02-B07-20260923T123606Z-fa88b2df/REPORT.md`. Its exact anchored-volume marginal identity and mixed E3/E2 transport theorem are applied below at explicit inequalities.
+1. Own r24 fixed-double-pair report: `private-source-repository@6360df8421f192175027c1e5334028e2f047533b`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T120512Z-r24/REPORT.md`.
+2. Own r20 mixed-order fractional-compound BL theorem: `private-source-repository@7bf5a0bd8a8d2fa12a5c2370811ecfe5d2cf7444`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T090322Z-r20/REPORT.md`.
+3. Latest completed designated partner fleet02/B07: `private-source-repository@646c1395596ed9c4b1f77cecdc9e9506cf793c22`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/fleet02-B07-20260923T123606Z-fa88b2df/REPORT.md`. Its exact anchored-volume marginal identity and mixed E3/E2 transport theorem are applied below at explicit inequalities.
 
 Full QFORM and the full-target continuity conclusion remain OPEN.
 

@@ -20,7 +20,7 @@ The following invalid interfaces are not used: law-uniform pointwise quadratic-p
 
 Fleet01/B06 r30, source
 
-`math-open-problems@c17a14105e7cb453bbca9576ab7df54f504eff67`
+`private-source@c17a14105e7cb453bbca9576ab7df54f504eff67`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T103846Z-fleet01-B06-QFORM-r30/REPORT.md`
 
@@ -50,7 +50,7 @@ Latest completed partner handoff consumed:
 
 with canonical mathematics
 
-`math-open-problems@328a550b1ddde3d2d9b7c2d245678f0b6fd5e7ae`.
+`private-source@328a550b1ddde3d2d9b7c2d245678f0b6fd5e7ae`.
 
 Its theorem `QFORM-191-STAR-HUB-INTERNAL-PAYMENT-v1` gives, in the exact-rank-three high-leverage hub survivor with `s=s_3(B)`,
 
@@ -63,7 +63,7 @@ I apply (1.1) below as an actual branch inequality: all branches violating the r
 
 From
 
-`math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md`,
 

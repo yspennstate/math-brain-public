@@ -15,7 +15,7 @@ The unrestricted target remains open: for every dimension, independent ORIGINAL 
 
 The fresh fleet04/B20 theorem actually used below is
 
-`yspennstate/math-open-problems@3671f29afb89083947437ffc4ebbb037aba58a4d`
+`private-source-repository@3671f29afb89083947437ffc4ebbb037aba58a4d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`.
 
@@ -27,7 +27,7 @@ Its later compiler leaves an absolute rank-two cross tube; in particular it neve
 
 The immediate local input is the concurrently completed B06 r37 packet
 
-`yspennstate/math-open-problems@fa9d5dd3cc78a092484480b536872d332e22c90a`
+`private-source-repository@fa9d5dd3cc78a092484480b536872d332e22c90a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T141825Z-fleet03-B06-qform-r37/REPORT.md`.
 
@@ -149,7 +149,7 @@ Again the whole residual cross core is retained; no random quadratic tail is dro
 
 The completed source-pinned D-prime theorem is in
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 

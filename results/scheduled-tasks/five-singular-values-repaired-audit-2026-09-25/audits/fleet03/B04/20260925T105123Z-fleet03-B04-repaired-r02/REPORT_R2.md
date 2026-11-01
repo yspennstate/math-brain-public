@@ -1,6 +1,6 @@
 # fleet03/B04 repaired-source pass 2
 
-Source: math-open-problems@4e530247ec0ef4101a6e5ecf621bd35a969c42aa, paper.tex blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a.
+Source: private-source@4e530247ec0ef4101a6e5ecf621bd35a969c42aa, paper.tex blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a.
 Coverage: all 683 source lines. Objective: QFORM-FIVE-270-REPAIRED-AUDIT-20260925.
 
 Verdict: PASS. No new fatal, major, or local mathematical defect found. Full rough independent-law/signature/affine scope and essential density <=270 K^2/s are preserved; global continuity is not claimed.

@@ -151,6 +151,6 @@ ledger_delta:
 
 ## Access and write scope
 
-All repository reads/writes in this invocation used the authorized GitHub connection on private repository `yspennstate/math-open-problems`, branch `master`. Public literature search was bounded web search, not an exhaustive citation database audit. No email/Gmail, Drive, public posting, paid compute, permission change, workflow execution, peer-file edit, shared-root edit, scheduler creation/modification, or unreviewed external script was used.
+All repository reads/writes in this invocation used the authorized GitHub connection on private repository `private-source-repository`, branch `master`. Public literature search was bounded web search, not an exhaustive citation database audit. No email/Gmail, Drive, public posting, paid compute, permission change, workflow execution, peer-file edit, shared-root edit, scheduler creation/modification, or unreviewed external script was used.
 
 This report is the invocation's sole repository write.

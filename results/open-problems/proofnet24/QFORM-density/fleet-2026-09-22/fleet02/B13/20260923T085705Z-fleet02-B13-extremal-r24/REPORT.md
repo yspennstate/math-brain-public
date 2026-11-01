@@ -27,7 +27,7 @@ The new point is that this remaining class is now simultaneously **low in all hi
 ## 2. Source-valid premises actually used
 
 1. **Designated partner fleet03/B13, cut-free compiler.**  
-   `yspennstate/math-open-problems@dd467574f6ba35d976c5ace6124aabb9575aa3f6`,
+   `private-source-repository@dd467574f6ba35d976c5ace6124aabb9575aa3f6`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T063628Z-fleet03-B13-qform-r22/REPORT.md` and `POSTREFRESH_ADDENDUM.md`.
 
    For a finite matrix `S` on one physical index set, define
@@ -55,7 +55,7 @@ The new point is that this remaining class is now simultaneously **low in all hi
    or a physical pivot-row-column trihub captures more than `1/128` of `B_{3,k}^perp`, with at most two row hubs and two column hubs in the actual cut provenance.
 
 2. **Required pinned Claude/Fourier package.**  
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
    Its proved higher-volume theorem says: for an ORIGINAL-coordinate disjoint cross block `M=A[I,J]`, set
@@ -70,7 +70,7 @@ The new point is that this remaining class is now simultaneously **low in all hi
    All same-side quadratic blocks, outside couplings, and affine terms are retained. In particular, at `r=5` the constant is `5 sqrt(2e)=11.6582199079856...`.
 
 3. **No-attainment product purification.**  
-   `yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`,
+   `private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
 
    Its Corollary 2.2 proves equality of the supremum of one bounded product kernel over arbitrary cap-one marginals with the supremum over unit-measure product indicators of bounded finite unions of intervals. It uses finite mixtures/L1 approximation and asserts neither an optimizer nor interval extremality.

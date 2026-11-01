@@ -15,13 +15,13 @@ The exact target remains: for every finite `n`, independent real coordinates wit
 
 The first route attempted this run was positive-completion tail compactification. A source match ended that duplicate direction: fleet02/B14 had already proved the exact unnormalized truncation-plus-filler theorem at
 
-`yspennstate/math-open-problems@06301dca1c0a81033d960406f0acc5125f63dd0c:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T120110Z-b14-qform-localization-r13/REPORT.md`.
+`private-source-repository@06301dca1c0a81033d960406f0acc5125f63dd0c:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T120110Z-b14-qform-localization-r13/REPORT.md`.
 
 That source already removes arbitrary tails with zero constant loss and reduces bounded small-ball functionals to finite unions. I therefore changed mechanism on the same target. The new issue is the one emphasized by the current proof-first control: **translation-uniform fractional traces**. The kernel `|P-t|^{-alpha}` is unbounded, so ordinary total-variation approximation does not by itself preserve its expectation. The theorem below gives an exact extreme-product localization directly for such singular kernels.
 
 The designated partner result actually applied below is fleet04/B14 r8,
 
-`yspennstate/math-open-problems@e0fd3e5ae1e84a7a7d1eec28949bd962e0ca5bf8:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T061428Z-fleet04-B14-affine-physical-core-r8/REPORT.md`.
+`private-source-repository@e0fd3e5ae1e84a7a7d1eec28949bd962e0ca5bf8:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T061428Z-fleet04-B14-affine-physical-core-r8/REPORT.md`.
 
 I also refreshed the newer partner r9 handoff/report (`63ba8e0f106c3bb405f05eb99778039ff47ed47b`); it proves continuum-perspective rough transfer for a logarithmic physical-pair compiler. It does not supersede the singular fractional-trace statement proved here.
 

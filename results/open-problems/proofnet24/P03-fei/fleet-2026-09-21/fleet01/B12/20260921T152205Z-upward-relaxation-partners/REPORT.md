@@ -6,7 +6,7 @@
 
 **Route:** APPROACHES #1 (spectral-sample compression / sequential prediction), continuing the upward-mass/cancellation work but not the refuted sharp `B_can` constant. The current TASKS handoff was used: the external balanced 18-variable construction forces any universal cancellation constant to be at least `2.32399499026264678602`, so this run does not try to prove the killed `2.227...` target. I also read the newer fleet03/B12 hierarchical-block handoff, which proves that a standalone scalar payment of singleton branch information is FEI-hard and motivates a structural rather than scalar compression step.
 
-Scientific baseline before this write: `math-open-problems` master was observed at `f080552b0e8328c13f865bc6f830e91ee9d5265d` after the required current `TASKS_2026-09-21.md`, `REPORT.md`, and `APPROACHES.md` reads.
+Scientific baseline before this write: `private-source` master was observed at `f080552b0e8328c13f865bc6f830e91ee9d5265d` after the required current `TASKS_2026-09-21.md`, `REPORT.md`, and `APPROACHES.md` reads.
 
 No novelty or publication-priority claim is made. The Fourier autocorrelation identity used below is standard; the point of this note is the particular obstruction/reduction it gives for the live compression route.
 

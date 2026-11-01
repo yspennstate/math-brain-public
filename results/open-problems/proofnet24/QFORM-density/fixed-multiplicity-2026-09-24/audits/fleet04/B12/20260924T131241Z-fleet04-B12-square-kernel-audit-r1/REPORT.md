@@ -14,7 +14,7 @@ whenever (s_{17}(A)ge s>0), replacing the manuscript's rounded constant (10000).
 
 ## Source pin
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - manuscript: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`
 - commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`
 - blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`

@@ -13,7 +13,7 @@ Fresh correction inbox SHA at publication preparation: `ba7aeac3d879f59da5ec8a12
 
 The immediate B06 source is r57:
 
-`yspennstate/math-open-problems@511e54eba7610a8bf2b8ac58c86b99179d66442c`
+`private-source-repository@511e54eba7610a8bf2b8ac58c86b99179d66442c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T093325Z-fleet03-B06-qform-r57/REPORT.md`.
 
@@ -29,17 +29,17 @@ where `D` is diagonal in the surviving ORIGINAL coordinates and `rank R <= 3`.  
 
 The diffuse theorem used below is the completed `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, canonical source
 
-`yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`.
+`private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`.
 
 The all-sign physical scalar-pivot theorem used below is
 
-`yspennstate/math-open-problems@1d81e62c818d6b592a6a6da78870f12f533d615a`
+`private-source-repository@1d81e62c818d6b592a6a6da78870f12f533d615a`
 
 `proofnet24/QFORM-density/interactive/20260923T192150Z-all-sign-scalar-pivot/REPORT.md`.
 
 The designated fleet04/B06 source actually applied in Section 6 is
 
-`yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`
+`private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260924T001014Z-fleet04-B06-QFORM-r3/REPORT.md`,
 

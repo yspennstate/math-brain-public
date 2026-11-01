@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R06 / I0056 — self-improving outer-core bound for the tetrapentagonal vertex constant
 
-Repository: private `yspennstate/math-open-problems`, branch `master`.  
+Repository: private `private-source-repository`, branch `master`.  
 Worker: R06.  
 Outside source: Russell Lyons and Yuval Peres, *Probability on Trees and Networks*, Question 6.20; intake `I0056`.  
 Overall source status after this run: **PARTIAL**.

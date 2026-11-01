@@ -17,7 +17,7 @@ The known source-valid diffuse construction gives the target-level lower obstruc
 
 The designated partner `fleet02/B17` proved `QFORM-ONE-HEAVY-DIFFUSE-NOESCAPE-v1` at
 
-- `yspennstate/math-open-problems@fbf14cd80c31d2100cf849494016bb4703aefdd7`,
+- `private-source-repository@fbf14cd80c31d2100cf849494016bb4703aefdd7`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T181037Z-r11/REPORT.md`.
 
 Its Corollary 3.2 states: if `X` has arbitrary density at most one, `G~N(0,1)` is independent, `ell in [0,1]`, and
@@ -251,5 +251,5 @@ Full QFORM remains open. A witness above `3sqrt(2)`, if one exists, must still b
 
 ## Sources
 
-- `fleet02/B17`, one-heavy square-Laplace theorem: `yspennstate/math-open-problems@fbf14cd80c31d2100cf849494016bb4703aefdd7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T181037Z-r11/REPORT.md`.
+- `fleet02/B17`, one-heavy square-Laplace theorem: `private-source-repository@fbf14cd80c31d2100cf849494016bb4703aefdd7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T181037Z-r11/REPORT.md`.
 - K. Ball, *Cube slicing in R^n*, Proc. Amer. Math. Soc. 97 (1986), 465–473, for the normalized cube-projection density cap used only in the finite local-limit transfer.

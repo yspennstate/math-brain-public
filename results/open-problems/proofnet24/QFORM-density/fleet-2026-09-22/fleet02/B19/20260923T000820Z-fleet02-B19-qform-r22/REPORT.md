@@ -28,7 +28,7 @@ with no volume-marginal hypothesis. All quadratic self blocks, outside couplings
 
 I also apply the current completed designated-partner result fleet03/B19 r19, source
 
-`yspennstate/math-open-problems@39b2d7a6fc503f2abbeee3b50c30ed64886de365`.
+`private-source-repository@39b2d7a6fc503f2abbeee3b50c30ed64886de365`.
 
 Its rank-one-bank Schur theorem says that for an exact-rank-three factorization `A=R M R^T`, a whole original-coordinate bank collinear in spectral row space, of total squared row weight `lambda_bank`, with compressed scalar coefficient `a != 0`, obeys
 

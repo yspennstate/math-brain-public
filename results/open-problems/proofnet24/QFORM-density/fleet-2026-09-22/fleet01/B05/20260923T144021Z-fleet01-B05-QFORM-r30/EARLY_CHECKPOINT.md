@@ -69,12 +69,12 @@ In the residual-diffuse branch `v_j^2+w_j^2<=1/2`, apply fleet02/B05's completed
 ||p_Q0||_(infty,ess) < 55.776/(1-|d|),                 (E4)
 ```
 
-for `|d|<1`; in particular `<111.552` for `|d|<=1/2`.  Source: `yspennstate/math-open-problems@75df8a812c96735205ee8370363808fd734e2d12`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T130427Z-fleet02-B05-QFORM-auto11/REPORT.md`.
+for `|d|<1`; in particular `<111.552` for `|d|<=1/2`.  Source: `private-source-repository@75df8a812c96735205ee8370363808fd734e2d12`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T130427Z-fleet02-B05-QFORM-auto11/REPORT.md`.
 
 Equation (E4) is not a bound for `Q`: the perturbation `dU^2` is dependent on `Q0`, and bounded density is not stable under an arbitrary dependent perturbation.  The exact unpaid implication is therefore an endpoint-stable, product-sensitive estimate for the rank-one square addition in (E2), not a generic perturbation lemma.
 
 ## Newest-Claude input actually used
 
-The partner endpoint proof spends the residual product bank via the proved one-dimensional Fourier estimate `int |fhat|^p <= 4pi/sqrt(p)` for `p>=2` and translation-invariant geometric Brascamp--Lieb.  I checked that source directly at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `.../20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.  In the present reduction the same estimate remains applicable to the nullized companion because dividing `M0` by `1-|d|` changes only deterministic coefficients, not the residual product frame or its leverage condition.  Thus (E4) is a concrete current-run application of that source chain.
+The partner endpoint proof spends the residual product bank via the proved one-dimensional Fourier estimate `int |fhat|^p <= 4pi/sqrt(p)` for `p>=2` and translation-invariant geometric Brascamp--Lieb.  I checked that source directly at `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `.../20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.  In the present reduction the same estimate remains applicable to the nullized companion because dividing `M0` by `1-|d|` changes only deterministic coefficients, not the residual product frame or its leverage condition.  Thus (E4) is a concrete current-run application of that source chain.
 
 Next: determine whether the special correlation `U=sqrt(c)X0+sqrt(rho)T` lets one integrate the extra square jointly with the hub before paying (E1), or prove a sharp obstruction to that interface.

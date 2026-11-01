@@ -1,6 +1,6 @@
 # Sources
 
-- Target source: `yspennstate/math-open-problems`, canonical finalized commit
+- Target source: `private-source-repository`, canonical finalized commit
   `97ee31ccf5dd58017837d3939ffb012af1ed034f`, path
   `reports/fei-2026-10-11/runs/B05/20261013T143235Z-fleet01-B05-dense-nullity-two-tree-a023/`.
 - Control revision: `2026-10-12.1`, commit

@@ -6,7 +6,7 @@ Problem/source: Takahiro Hasebe and Yuki Ueda, *Large time unimodality for class
 
 Run ID: `20260916T1728Z_i0082_halfstable_witness_5e71c3`  
 Date checked: 2026-09-16  
-Repository: `yspennstate/math-open-problems`, branch `master`  
+Repository: `private-source-repository`, branch `master`  
 Source status: **OPEN in the bounded current-status search**  
 Track status: **OPEN**  
 Frozen metric: number of the following obligations proved for one explicit candidate:

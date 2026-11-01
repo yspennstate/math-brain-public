@@ -3,7 +3,7 @@ attacking: dilute a single near-coloop third-volume hub by a residual second-com
 
 # Early substantive checkpoint
 
-I am using the proved finite-family product-Fourier theorem from fleet03/B04 r33 (`math-open-problems@8df80736853803f472ba6662c9c4a07e7801dfdb`) at its exact scope.
+I am using the proved finite-family product-Fourier theorem from fleet03/B04 r33 (`private-source@8df80736853803f472ba6662c9c4a07e7801dfdb`) at its exact scope.
 
 Let `M=A[I,J]` be an original-coordinate cross block and let `h in I` be a physical hub row. Suppose there is an allocated order-3 minor family supported only on row triples containing `h`, with total determinant currency `Z3>0`, whose normalized row marginals satisfy
 

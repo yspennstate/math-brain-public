@@ -16,7 +16,7 @@ The exact assigned partner `fleet04/B04` had no completed current-QFORM report o
 
 ## 2. Source-pinned inputs actually used
 
-1. **Regularized determinant theorem.** `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`. For a physical cut with cross block `B`, if the left range-projection diagonal is at most `q/2`, `1<=q<2`, then
+1. **Regularized determinant theorem.** `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`. For a physical cut with cross block `B`, if the left range-projection diagonal is at most `q/2`, `1<=q<2`, then
 
    `|phi_R(t)| <= det(I + 2 q t^2 B B^T/(pi^2 e^2))^(-1/(4q))`.
 
@@ -30,7 +30,7 @@ The exact assigned partner `fleet04/B04` had no completed current-QFORM report o
 
    `C_HY=(3/2)^(1/3) 3^(-1/6)=3^(1/6)2^(-1/3)`.
 
-3. **Universal half-Riesz conversion.** `yspennstate/math-open-problems@bf7bff5c9b11cf495ccbcb09ef48549fd9c0d409`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/fleet03-B05-20260922T133738Z-qform-r12/REPORT.md`. If a probability density `p` lies in `L^3`, then
+3. **Universal half-Riesz conversion.** `private-source-repository@bf7bff5c9b11cf495ccbcb09ef48549fd9c0d409`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/fleet03-B05-20260922T133738Z-qform-r12/REPORT.md`. If a probability density `p` lies in `L^3`, then
 
    `sup_t int |t-u|^(-1/2) p(u) du <= H_3 ||p||_3^(3/4)`,
 
@@ -42,7 +42,7 @@ The exact assigned partner `fleet04/B04` had no completed current-QFORM report o
 
    for an original independent coordinate `X` of density cap one; the random shift `m(Y)` is allowed.
 
-4. **Compatible fleet04 aggregate theorem.** `yspennstate/math-open-problems@c233995d6abf7574b8b1a876cac244b1b91e3c38`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T132134Z-fleet04-B20-QFORM-r1/REPORT.md`.
+4. **Compatible fleet04 aggregate theorem.** `private-source-repository@c233995d6abf7574b8b1a876cac244b1b91e3c38`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T132134Z-fleet04-B20-QFORM-r1/REPORT.md`.
 
 Fresh corrections consumed include the failure of law-uniform pointwise quadratic-phase decay, fiber-sup dimension loss, no independence after spectral rotation, the single-Schur extraction failure, conditional-cap failure, local-cross/rank-three dichotomy failure, fiberwise trace failure, and the phase-Wiener absolute-value failure. None is used as a premise.
 

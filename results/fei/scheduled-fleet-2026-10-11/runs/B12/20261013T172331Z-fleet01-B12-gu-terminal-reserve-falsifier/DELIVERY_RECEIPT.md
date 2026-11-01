@@ -2,7 +2,7 @@
 
 Substantive package delivery and immutable readback completed.
 
-- Canonical repository: `yspennstate/math-open-problems`, branch `master`.
+- Canonical repository: `private-source-repository`, branch `master`.
 - Canonical substantive commit: `f6b603b6781fef027f16dc14b9c73ecf52081773`.
 - Canonical path: `reports/fei-2026-10-11/runs/B12/20261013T172331Z-fleet01-B12-gu-terminal-reserve-falsifier/`.
 - Brain repository: `yspennstate/math-research-brain`, branch `main`.

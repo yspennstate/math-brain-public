@@ -17,7 +17,7 @@ No Gaussian, moment, compact-support, connected-support, log-concavity, identica
 
 The predecessor fleet03/B09 r25 is
 
-`yspennstate/math-open-problems@195447da931f086720afaa12ac902ed7d33dd32e`
+`private-source-repository@195447da931f086720afaa12ac902ed7d33dd32e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T061516Z-fleet03-B09-QFORM-r25/REPORT.md`.
 
@@ -39,7 +39,7 @@ The completed compatible B09 peer theorem used positively below is fleet02/B09 r
 
 canonical source
 
-`yspennstate/math-open-problems@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`
+`private-source-repository@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T064043Z-fleet02-B09-QFORM-r13/REPORT.md`.
 

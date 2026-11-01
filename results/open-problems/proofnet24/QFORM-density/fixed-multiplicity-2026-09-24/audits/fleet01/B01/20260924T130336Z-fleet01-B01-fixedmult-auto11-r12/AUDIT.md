@@ -3,7 +3,7 @@
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Reviewer: `fleet01/B01`  
 Run: `20260924T130336Z-fleet01-B01-fixedmult-auto11-r12`  
-Audited repository snapshot: `yspennstate/math-open-problems@b7eb3da660dfbe32fef8c4d9295863cb3f2caf28`  
+Audited repository snapshot: `private-source-repository@b7eb3da660dfbe32fef8c4d9295863cb3f2caf28`  
 Canonical manuscript initial commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Canonical manuscript blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
 Declared manuscript SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`  

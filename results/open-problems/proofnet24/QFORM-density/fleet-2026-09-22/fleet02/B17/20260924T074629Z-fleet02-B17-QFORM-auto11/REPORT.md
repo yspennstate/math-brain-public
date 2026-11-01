@@ -46,7 +46,7 @@ In particular, if `v_0=1/12`,
 
 Condition on `M=m`. The latest compatible fleet03/B17 theorem `QFORM-GAUSSIAN-TRANSLATION-MIXTURE-RIGIDITY-v1`, source
 
-`yspennstate/math-open-problems@e6dfe24dd09057f92549593fd763444bc930ab99:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260924T070819Z-fleet03-B17-QFORM-auto11/REPORT.md`,
+`private-source-repository@e6dfe24dd09057f92549593fd763444bc930ab99:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260924T070819Z-fleet03-B17-QFORM-auto11/REPORT.md`,
 
 proves, for every fixed Gaussian mean,
 
@@ -294,7 +294,7 @@ The displacement is not confined to the minority axis; after diagonalizing the d
 
 The required pinned source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 Its completed Fresnel--Brascamp--Lieb Theorem F applies to the **actual finite physical eigenframe**. If `B=O diag(1,1,-1) O^T`, put `V_m=T_mO`. Then
 

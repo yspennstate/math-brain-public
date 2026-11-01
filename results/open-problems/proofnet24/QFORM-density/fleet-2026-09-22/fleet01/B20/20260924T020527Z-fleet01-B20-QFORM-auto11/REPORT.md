@@ -10,7 +10,7 @@ Full-target continuity remains **OPEN**. Execution remains `WITHOUT_VERIFIED_BRA
 
 Fresh owner control remained revision `2026-09-22.15`, QFORM-exclusive. The full target is still OPEN. Live corrections consumed include: no law-uniform pointwise quadratic oscillatory decay; no worst-fibre dimension-free cap; no arbitrary-joint rank-three coarea shortcut; no post-rotation independence; and no deletion of nonzero coefficient tails.
 
-The newest completed designated partner is fleet02/B20 `20260924T011328Z-fleet02-B20-QFORM-auto11`, canonical report commit `math-open-problems@7320b73d2b8e9548653c01a9a97515e337f3cc3d`. Let `M=A[I,J]` be its literal disjoint original-coordinate cross block, with singular values `s1>=s2>=...`, `x_r=s_r^2`, and
+The newest completed designated partner is fleet02/B20 `20260924T011328Z-fleet02-B20-QFORM-auto11`, canonical report commit `private-source@7320b73d2b8e9548653c01a9a97515e337f3cc3d`. Let `M=A[I,J]` be its literal disjoint original-coordinate cross block, with singular values `s1>=s2>=...`, `x_r=s_r^2`, and
 
 `E2(M)>4/9`, `E3(M)<delta:=2^-18`.
 

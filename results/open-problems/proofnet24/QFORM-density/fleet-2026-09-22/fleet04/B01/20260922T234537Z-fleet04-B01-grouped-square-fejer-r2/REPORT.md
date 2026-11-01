@@ -15,11 +15,11 @@ The full target is unchanged. The input coordinates are independent and have arb
 Fresh controls were read at owner revision `2026-09-22.15`. The current correction inbox blob is `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`; the assignment blob is `0aabfb0233abb7f67e46808b03987c0300502329`; and the memory protocol blob is `0d902d56688f4b5c575f5b921ddf9f6709e88312`.
 
 The newest source-directory history ends at
-`math-open-problems@2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926`.
+`private-source@2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926`.
 The relevant current blobs are `RESULTS.md@56edacbd7aa105e7aaabfcfb6f377c268a134817`, `FOURIER_ROUTE_REPORT.md@9da148eed6cd43b1046a6f91d0f9329e12921cb4`, and `COUNTEREXAMPLE_SEARCH.md@d11ace6dbf5ecdf6ce5921f80f727e92e95bf8fc`. The previous Claude-review corrections are retained. In particular, this report neither asserts a law-uniform pointwise Fresnel bound nor an absolute-Wiener bound.
 
 The designated fleet01/B01 input is the completion-defect report
-`math-open-problems@bf06839b97a3af3f800751cd9bd8502bcf8011d0`,
+`private-source@bf06839b97a3af3f800751cd9bd8502bcf8011d0`,
 report blob `aa1343f693b62b27fde3c16fb109b52b0bb00a78`.
 It constructs a target matrix whose two unit completion defects are diffuse grouped squares although every fixed physical coefficient vanishes. That report paid the witness only for Gaussian laws. The theorem below pays the entire witness for every admissible cap-one product law.
 

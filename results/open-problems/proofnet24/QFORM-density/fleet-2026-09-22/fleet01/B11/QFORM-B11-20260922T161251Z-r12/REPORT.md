@@ -29,8 +29,8 @@ Fresh controls advanced during the run from owner revision `2026-09-22.5` to `20
 
 The assigned partner `fleet02/B11` supplied two completed ingredients:
 
-- `yspennstate/math-open-problems@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T135203Z-b11-qform-6080e0b3/REPORT.md`: every normalized linear projection of independent cap-one coordinates has density at most `sqrt(e)`, and every isotropic two-dimensional projection has density at most `e`;
-- latest completed partner report `yspennstate/math-open-problems@d56d97c85ced819f45ddad0987deaa5eb4b53cdc`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T155024Z-b11-qform-87d73745/REPORT.md`: an independent physical saddle pair plus a normalized independent square bank has a universal bound `<10.551`.
+- `private-source-repository@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T135203Z-b11-qform-6080e0b3/REPORT.md`: every normalized linear projection of independent cap-one coordinates has density at most `sqrt(e)`, and every isotropic two-dimensional projection has density at most `e`;
+- latest completed partner report `private-source-repository@d56d97c85ced819f45ddad0987deaa5eb4b53cdc`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T155024Z-b11-qform-87d73745/REPORT.md`: an independent physical saddle pair plus a normalized independent square bank has a universal bound `<10.551`.
 
 The live corrections used here include: no law-uniform pointwise Fresnel decay; no conditional-density-cap substitute for independence; no universal good physical triple; no local rank-three-cut dichotomy; no one-triple aggregate determinant selector. The proof below conditions only on original-coordinate nuisance variables while retaining two genuinely independent innovations.
 

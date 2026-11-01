@@ -5,7 +5,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 **ADMISSION_PENDING / NO MATHEMATICAL MOVEMENT.** No source passed the exact-source, present-literature, ownership/history, shard-9, and honest-CLOSABLE gates in this invocation. No canonical claim was created. No source metric was invented: **UNMEASURED -> UNMEASURED**. The prescribed Section-B moves **2, 11, 30 were not tried**, because screening an inadmissible source is not research on an admitted target.
 
 Date: 2026-09-17 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Own namespace: `proofnet24/NM13-10/`  
 Category: `CLOSABLE OUTSIDE`  
 Selection shard: `int(SHA256(UTF-8 canonical dedup_key).hexdigest(),16) mod 13 = 9`  

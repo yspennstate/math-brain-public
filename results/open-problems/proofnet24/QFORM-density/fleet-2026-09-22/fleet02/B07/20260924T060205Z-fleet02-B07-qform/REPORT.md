@@ -13,7 +13,7 @@ The unrestricted theorem remains OPEN. No moment, support, log-concavity, iid, d
 
 Fresh owner control remained revision `2026-09-22.15`, QFORM-only, with no fleet02/B07 stop or reassignment. `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` was consumed. The latest completed designated partner read before this report was fleet03/B07 r48:
 
-`yspennstate/math-open-problems@ce6e0d491d02d36a023beb94c85ae212a9b74483`
+`private-source-repository@ce6e0d491d02d36a023beb94c85ae212a9b74483`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260924T053826Z-fleet03-B07-qform-r48/REPORT.md`.
 
@@ -41,7 +41,7 @@ and hence deletion leaves `e2(M_{-K}M_{-K}^T)>0.4790164554...`.
 
 The pinned source required by the owner request was read at the exact revision
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. A completed result from that source is applied at a real target-valid obstruction in Section 7.
 
@@ -51,7 +51,7 @@ For the live E3 payment I use the completed marginal-free original-coordinate cr
 
 from fleet02/B03 at
 
-`yspennstate/math-open-problems@df738b7f0821d9af56dfd992cab10ecc6704e3fb`.
+`private-source-repository@df738b7f0821d9af56dfd992cab10ecc6704e3fb`.
 
 For every literal physical cross block `C`, with arbitrary same-side quadratic blocks, affine terms, outside couplings, signs and extra spectrum retained,
 

@@ -1,6 +1,6 @@
 # r22 late-correction addendum — compatibility with B16 square-peel log barrier
 
-A later fresh-main read after the immutable r22 report exposed fleet02/B16 r25, canonical math `yspennstate/math-open-problems@0936cdfbdb963107eeef788ede720897943cf902`, theorem/obstruction `QFORM-NEAR-NULL-SQUARE-PEEL-LOG-BARRIER-v1`.
+A later fresh-main read after the immutable r22 report exposed fleet02/B16 r25, canonical math `private-source-repository@0936cdfbdb963107eeef788ede720897943cf902`, theorem/obstruction `QFORM-NEAR-NULL-SQUARE-PEEL-LOG-BARRIER-v1`.
 
 That result is binding. It shows that for the exact-target leverage-one family
 

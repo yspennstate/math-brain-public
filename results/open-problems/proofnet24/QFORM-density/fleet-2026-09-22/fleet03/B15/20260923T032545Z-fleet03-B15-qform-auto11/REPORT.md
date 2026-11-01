@@ -151,7 +151,7 @@ The exact supremum identity is stronger than this one-scale comparison, but the 
 
 The completed assigned partner result is fleet04/B15 r4:
 
-- repository/commit: `yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`;
+- repository/commit: `private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`.
 
 It proves for every probability law `mu`

@@ -8,7 +8,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — no authentica
 
 **Publication novelty:** `UNVERIFIED`. The class and transfer are new relative to the repository state read in this run. The elementary common-gap contraction used in the proof belongs to the broader literature on time-inhomogeneous reversible chains; bounded searches recovered, for example, Gorokhovsky `arXiv:2405.11435` and work on reversible random walks on dynamic graphs. No publication-priority claim is made for that contraction lemma or for the exact class.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 Prewrite master observed before this run's persistence work: `c99daf654d55c904e55f8d053fd9571e9f7d31b7`; concurrent LIVE20 commits may advance master independently.
 

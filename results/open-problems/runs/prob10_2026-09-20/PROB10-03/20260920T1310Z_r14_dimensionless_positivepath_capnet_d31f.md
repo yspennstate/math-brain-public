@@ -2,7 +2,7 @@ Runtime model: **GPT-5.6 Sol**. Requested GPT-6/maximum is not an authenticated 
 
 # PROB10-03 — R14 bounded substantive iteration: dimensionless third-full compiler, positive paths, and cap-net obstruction
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Status: **OPEN / PARTIAL / SOURCE BRACKET UNCHANGED IN THIS R14 RUN / NEW EXACT THIRD-FULL NORMAL FORM AND DUAL OBSTRUCTION**.
 
 ## 1. Contract, continuity, ownership, and consumed updates

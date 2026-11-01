@@ -15,7 +15,7 @@ Author: main session c53c1d50, 2026-08-19 ~06:0x. Four campaign questions termin
 | 3 | 3 git repos | `git log --all --diff-filter=A` + `ls-files` on the path | NEVER COMMITTED |
 | 4 | <box>..04 | filename + `*.md` content, over `$HOME` and `/srv` | NOT FOUND on any box — **positive control passed** (same command shape finds real files and greps their content) |
 | 5 | All prior Claude transcripts (`.claude/projects`) | content grep | appears ONLY in tonight's session |
-| 6 | `06_math_research` | any pre-existing Rademacher-singularity project | none — the only prior Rademacher work is `math-open-problems/paper21` ch16, **"Rademacher Boundary Separation"**, about the minimum modulus of random *polynomials* on the unit circle. **A different problem.** I read the chapter rather than matching on the word. |
+| 6 | `06_math_research` | any pre-existing Rademacher-singularity project | none — the only prior Rademacher work is `private-source/paper21` ch16, **"Rademacher Boundary Separation"**, about the minimum modulus of random *polynomials* on the unit circle. **A different problem.** I read the chapter rather than matching on the word. |
 | 7 | `.codex` + `.codex-worktrees` | filename scan | only the paper21 ch16 files of row 6 |
 | 8 | `.codex/log`, `.codex/memories` | content grep | NOT FOUND |
 | 9 | **`.codex/sessions` 2026-08-15…08-18** (174 files, 953 MB — the window containing the owner's Rademacher instruction) | content grep for the tree filename **and** for the packet's own source-file names (`global_bridge_report`, `structured_linear_rigidity_report`) | **NOT FOUND** |

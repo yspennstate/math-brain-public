@@ -2,7 +2,7 @@
 
 After the base report was written, the worker-memory guard revealed that the actual latest completed fleet01/B10 predecessor was not r25 but
 
-`yspennstate/math-open-problems@b5cf15b4757c6324e791df352b3758704e4bead6`
+`private-source-repository@b5cf15b4757c6324e791df352b3758704e4bead6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260923T085802Z-fleet01-B10-QFORM-auto11/REPORT.md`.
 

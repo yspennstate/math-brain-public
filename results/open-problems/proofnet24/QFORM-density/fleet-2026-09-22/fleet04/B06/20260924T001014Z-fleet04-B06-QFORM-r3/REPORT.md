@@ -133,7 +133,7 @@ In particular, exact Gram zero is now paid; only positive but small Gram volume 
 
 ## Sources and corrections
 
-- Claude source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`.
-- fleet01/B06 curved-section Fourier/BL theorem: `math-open-problems@3ae4b0c272e0d3c60f956c9f039bea38fc0f9077`.
-- preceding fresh-transverse theorem: `math-open-problems@769800c0ab0851828772adabfb6874aa813e423d`.
+- Claude source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`.
+- fleet01/B06 curved-section Fourier/BL theorem: `private-source@3ae4b0c272e0d3c60f956c9f039bea38fc0f9077`.
+- preceding fresh-transverse theorem: `private-source@769800c0ab0851828772adabfb6874aa813e423d`.
 - Corrections retained: no arbitrary-joint coarea, no worst conditional-density cap, no small-random-perturbation deletion, and no post-rotation independence.

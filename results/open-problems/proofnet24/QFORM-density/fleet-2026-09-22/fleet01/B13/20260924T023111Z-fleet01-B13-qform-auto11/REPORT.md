@@ -37,7 +37,7 @@ For the slab kernel `K=1_{x^T A x in J}`, every actual cap-one product-law witne
 
 The completed designated partner result used here is fleet02/B13 r39:
 
-- canonical mathematics: `yspennstate/math-open-problems@7270e9d36fa20c464994a6f989f32f83565f234e`
+- canonical mathematics: `private-source-repository@7270e9d36fa20c464994a6f989f32f83565f234e`
 - report: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260924T014613Z-fleet02-B13-qform-r39/REPORT.md`
 - theorem: `QFORM-TAUCLEAN-PHYSICAL-STAR-OR-LOWSCORE-E2-v1`.
 

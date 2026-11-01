@@ -95,14 +95,14 @@ The recent finite-moment surface paper and the high-temperature free-energy pape
 - math_recall.py query: “directed polymer KPZ heavy tails universality”; returned general KPZ and tail cards, not a closure theorem.
 - brain.py recall query: “heavy tailed directed polymer mistakes”; node codex_wave_c0120_fluctuation_exponent_directed_polymers_beyond_2026_10_10 read in full. It records no closure of that neighbouring problem and is provisional.
 - `rg` of intake records found F0021-A001 (2026-09-08) in probability_1000_intake_F_20260908/attempts.jsonl. Its order-one cost for visiting the full-cone maximum is refuted in ATTEMPT.md, Lemma 3.
-- `git ls-tree` on origin/master of math-open-problems, filtered by F0021 and C0120, located C0120 campaign files but no F0021 path under probability_campaigns. No working tree was changed.
+- `git ls-tree` on origin/master of private-source, filtered by F0021 and C0120, located C0120 campaign files but no F0021 path under probability_campaigns. No working tree was changed.
 - Brain/store content is used as a hint only. The actual mathematical statements in ATTEMPT.md have independent proofs.
 
 
 ## Additional local searches (2026-10-12)
 All were read-only.
 - `rg -n -m 3 F0021 ~/<private-repo>/06_math_research --glob '*.jsonl' --glob '*.md'` (intake and campaign records).
-- `git -C ~/math-open-problems ls-tree -r --name-only origin/master` (initial tree enumeration, output too large; subsequent queries were filtered).
+- `git -C ~/private-source ls-tree -r --name-only origin/master` (initial tree enumeration, output too large; subsequent queries were filtered).
 - Same tree enumeration piped to `rg 'F0021|C0120'` and limited to first 35 paths.
 - Tree enumeration restricted to probability_campaigns and piped to `rg 'F0021'` (no matching paths).
 - `rg -n 'Assumption 1|Zβ|\[DZ16\]|\[BT19\]|\[GL' source.txt` (source model and reference locations).

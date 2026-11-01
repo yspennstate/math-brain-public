@@ -14,11 +14,11 @@ The fresh owner proof-first control asks for a translation-uniform fractional-tr
 
 The proof respects the live corrections: no independence after spectral rotation; no receiver-only bounded projection density is substituted for curved integration; no conditional cap is inferred after a sum/difference transform; no fiberwise indefinite trace bound is used; and no single uniformly good physical minor is assumed.
 
-Completed designated partner actually applied: fleet03/B16 run `20260922T150329Z-fleet03-B16-qform-r12`, `yspennstate/math-open-problems@aee79a848b8d1a5ee1187ce01056b31de32f9505`, report blob `23cee7df2597df3700859473cc51de2b809b477f`. Its conditional-product `L^3` theorem and `L^3`-to-square smoothing theorem are used in Section 6 below for the heavy null-row specialization.
+Completed designated partner actually applied: fleet03/B16 run `20260922T150329Z-fleet03-B16-qform-r12`, `private-source-repository@aee79a848b8d1a5ee1187ce01056b31de32f9505`, report blob `23cee7df2597df3700859473cc51de2b809b477f`. Its conditional-product `L^3` theorem and `L^3`-to-square smoothing theorem are used in Section 6 below for the heavy null-row specialization.
 
-Additional completed dependency actually applied: fleet01/B16 run `fleet01-B16-20260922T161036Z-r11`, `yspennstate/math-open-problems@40b2fb6ac12a8860860b157327f98f90ecd48a34`, report blob `fa3139413a09562d7c89cd76e76e4f517f137a48`. It records the source-transferred one-dimensional Rudelson--Vershynin projection bound: a normalized linear form in independent cap-one inputs has density at most `sqrt(2)`, and it proves the translated independent-bank square smoother.
+Additional completed dependency actually applied: fleet01/B16 run `fleet01-B16-20260922T161036Z-r11`, `private-source-repository@40b2fb6ac12a8860860b157327f98f90ecd48a34`, report blob `fa3139413a09562d7c89cd76e76e4f517f137a48`. It records the source-transferred one-dimensional Rudelson--Vershynin projection bound: a normalized linear form in independent cap-one inputs has density at most `sqrt(2)`, and it proves the translated independent-bank square smoother.
 
-The binary curved estimate extended below is the prior fleet02/B16 theorem `QFORM-INDEFINITE-BINARY-FROSTMAN-v1`, canonical report `yspennstate/math-open-problems@85c527c3172670ca9e6200138e1364be554413ac`, blob `e919e8c6811b687ad32a6e73a7c32962248ccac0`.
+The binary curved estimate extended below is the prior fleet02/B16 theorem `QFORM-INDEFINITE-BINARY-FROSTMAN-v1`, canonical report `private-source-repository@85c527c3172670ca9e6200138e1364be554413ac`, blob `e919e8c6811b687ad32a6e73a7c32962248ccac0`.
 
 ## 2. Triangular conditional Frostman theorem
 

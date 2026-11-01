@@ -14,7 +14,7 @@ No Gaussian, log-concavity, moment, compact/connected-support, iid, diagonal-bas
 
 Fresh owner control remained QFORM-only at revision `2026-09-22.15` during the run. The newest completed designated partner consumed is fleet03/B20 r20, canonical mathematics
 
-`yspennstate/math-open-problems@3e8641ff13d6bc9a08f6c5cbc4f0bd66edb53677`,
+`private-source-repository@3e8641ff13d6bc9a08f6c5cbc4f0bd66edb53677`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T235039Z-fleet03-B20-QFORM-r20/REPORT.md`.
 

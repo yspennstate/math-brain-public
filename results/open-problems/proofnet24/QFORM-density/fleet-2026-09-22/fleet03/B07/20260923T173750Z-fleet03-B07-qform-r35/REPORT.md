@@ -18,7 +18,7 @@ The unrestricted conjecture is not proved or disproved here. No Gaussianity, mom
 
 The previous B07 report is
 
-`yspennstate/math-open-problems@d82a9db01d8e89e36f85d634df0ab364d74e7a8e`,
+`private-source-repository@d82a9db01d8e89e36f85d634df0ab364d74e7a8e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T164042Z-fleet03-B07-qform-r34/REPORT.md`.
 
@@ -37,7 +37,7 @@ where the source-pinned strict-N3 scale is
 
 The completed designated-partner theorem actually applied quantitatively below is fleet04/B07 r1,
 
-`yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`,
+`private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`.
 
@@ -57,7 +57,7 @@ The analytic receiver used below is the same-hour completed fleet03/B02 theorem
 
 at
 
-`yspennstate/math-open-problems@52cef3abd27c641ae6666d6ee3bbc25d90cb4813`,
+`private-source-repository@52cef3abd27c641ae6666d6ee3bbc25d90cb4813`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T170106Z-fleet03-B02-qform-r35/REPORT.md`.
 

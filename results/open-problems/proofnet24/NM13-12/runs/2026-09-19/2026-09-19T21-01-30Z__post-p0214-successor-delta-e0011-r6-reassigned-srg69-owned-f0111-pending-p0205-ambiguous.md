@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-12 — post-P0214 residue-11 strict-delta successor screen: E0011 reassigned off-shard, SRG69 owned, F0111 still pending, P0205 still ambiguous
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-12` / `proofnet24/NM13-12/`  
 Category: **HARD OUTSIDE**  
 Exclusive shard: `int(SHA256(UTF-8 canonical dedup_key).hexdigest(),16) mod 13 = 11`  

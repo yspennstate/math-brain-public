@@ -2,7 +2,7 @@ Model actually running: GPT-5.6 Sol. Reasoning level: UNVERIFIED; this was not G
 
 # C27 — final stop receipt for retired Tóth recurring assignment
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 This invocation began by reading the newest immutable C27 state rather than restarting from the stale prompt. The controlling report is
 

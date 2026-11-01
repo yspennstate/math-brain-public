@@ -5,7 +5,7 @@ Brain status: WITHOUT_VERIFIED_BRAIN.
 Role: FEI new proof mechanisms.
 Live sprint scope: fleet02/B17, support-deficit transfer and its actual sharp obstruction.
 Control revision adopted: 2026-09-21.1.
-Math source at entry: yspennstate/math-open-problems master e067fbba2c77a956b240a924c833143bc3175ee9; refreshed before delivery.
+Math source at entry: private-source-repository master e067fbba2c77a956b240a924c833143bc3175ee9; refreshed before delivery.
 Normalization: Boolean values ±1, uniform cube, base-2 spectral entropy H(f)=Σ_S p_S log2(1/p_S), p_S=fhat(S)^2, and total influence I(f)=Σ_S |S|p_S.
 
 ## 1. What changed

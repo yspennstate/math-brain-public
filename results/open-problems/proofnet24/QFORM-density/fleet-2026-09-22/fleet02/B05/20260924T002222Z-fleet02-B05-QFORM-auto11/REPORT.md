@@ -27,7 +27,7 @@ Its new theorem `QFORM-SCALAR-HEAVY-PIVOT-CROSSING-v1` proves an asymmetric orig
 
 Required pinned source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
 Two completed facts are applied to the live obstruction:
 

@@ -62,7 +62,7 @@ Now apply the completed orientation-free theorem
 
     QFORM-RANK2-AFFINE-HALF-RIESZ-v1
 
-from `math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`. It is uniform in arbitrary affine terms and gives
+from `private-source@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`. It is uniform in arbitrary affine terms and gives
 
     sup_z E|R-z|^(-1/2)
       <= 128 |det S|^(-1/4).                              (2.5)
@@ -85,7 +85,7 @@ No post-rotation probabilistic independence is used. The only probabilistic sepa
 
 Equation (2.4) is exactly the completed **square peel**, Lemma 4.2 of the required pinned
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`,
 
 with the harmless extra factor `N` for a scalar source of density cap `N`. For `N=1` it is literally the pinned statement

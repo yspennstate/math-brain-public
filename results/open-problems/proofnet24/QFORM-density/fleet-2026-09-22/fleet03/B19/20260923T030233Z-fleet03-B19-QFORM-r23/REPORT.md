@@ -14,13 +14,13 @@ The unrestricted target remains OPEN: for every `n`, every independent real coor
 
 This report uses no post-rotation independence, no law-uniform pointwise Fresnel decay, no arbitrary-joint rank-three coarea lemma, no positive conditional-projection-density moment, no worst-fiber supremum, and no claim that a single physical minor must carry aggregate spectral volume. The live corrections explicitly forbid all of those shortcuts.
 
-The immediate current exact-rank-three collar is supplied by fleet03/B10 r23b, `yspennstate/math-open-problems@91759f77fcdf696a75d8e6c6ef398c03654b025a`: when the Pluecker disjointness mass satisfies `0<d<1/64`, either a scalar pivot already pays the density, or there is an ORIGINAL physical coordinate `i` with
+The immediate current exact-rank-three collar is supplied by fleet03/B10 r23b, `private-source-repository@91759f77fcdf696a75d8e6c6ef398c03654b025a`: when the Pluecker disjointness mass satisfies `0<d<1/64`, either a scalar pivot already pays the density, or there is an ORIGINAL physical coordinate `i` with
 
 `c_i>1/4`, `|A_ii|<1/64`, and `||A_{i,-i}||_2>sqrt(1023)/64`.       (1.1)
 
-The previous zero-hub fractional theorem, fleet01/B03 r21 at `yspennstate/math-open-problems@4abbc0fca2936aa89d1259cceb66e881f01e5563`, proved useful `1/4`-Riesz control only when the hub diagonal was exactly zero and explicitly left the near-zero-diagonal hub bridge open. The first mathematical goal below is to remove that exact-zero restriction without treating the small nonzero coefficient as a perturbation.
+The previous zero-hub fractional theorem, fleet01/B03 r21 at `private-source-repository@4abbc0fca2936aa89d1259cceb66e881f01e5563`, proved useful `1/4`-Riesz control only when the hub diagonal was exactly zero and explicitly left the near-zero-diagonal hub bridge open. The first mathematical goal below is to remove that exact-zero restriction without treating the small nonzero coefficient as a perturbation.
 
-A separate new warning from fleet01/B19 r12, `yspennstate/math-open-problems@8519812f42a34ba2612f61ff2d4c8fbbfad8c6ee`, is also incorporated: co-heavy rank-two banks can spread all grouped determinant mass over arbitrarily many tiny physical atoms, even with every physical diagonal zero. Therefore nothing below tries to recover a single large local minor from aggregate star/bank mass.
+A separate new warning from fleet01/B19 r12, `private-source-repository@8519812f42a34ba2612f61ff2d4c8fbbfad8c6ee`, is also incorporated: co-heavy rank-two banks can spread all grouped determinant mass over arbitrarily many tiny physical atoms, even with every physical diagonal zero. Therefore nothing below tries to recover a single large local minor from aggregate star/bank mass.
 
 ## 2. Linear projection input
 
@@ -238,7 +238,7 @@ This is useful in every proof route that encounters the collar behind a genuine 
 
 The designated partner fleet04/B19 theorem `QFORM-NULL-COLOOP-ADAPTIVE-HY-STABILITY-v1`, canonical source
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`,
 

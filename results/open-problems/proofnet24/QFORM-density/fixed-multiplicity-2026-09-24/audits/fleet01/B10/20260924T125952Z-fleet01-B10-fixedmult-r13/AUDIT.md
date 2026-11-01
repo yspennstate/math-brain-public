@@ -5,7 +5,7 @@ Actual run sign-in: `2026-09-24T12:59:52Z`
 Pinned baseline source commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Pinned manuscript blob read from current `master`: `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
 Owner/source SHA-256 pin: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`  
-Fresh `math-open-problems/master` observed before the audit: `b9a766ebe4c465f200e0052b45d0fc1653f12a55`.
+Fresh `private-source/master` observed before the audit: `b9a766ebe4c465f200e0052b45d0fc1653f12a55`.
 
 ## Verdict first
 

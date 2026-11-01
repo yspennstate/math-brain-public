@@ -93,14 +93,14 @@ upper-set retained-credit theorem. Details are in `LITERATURE_SCOPE.md`.
 ## Evidence and provenance
 
 - Reviewed B05 final bundle:
-  `yspennstate/math-open-problems@748f7eb102bb43b98f8b184729594601beb22c7c`,
+  `private-source-repository@748f7eb102bb43b98f8b184729594601beb22c7c`,
   `reports/fei-2026-10-11/runs/B05/20261013T192810Z-fleet01-B05-biased-tower-retained-credit-a023/`.
 - Reviewed B05 core package commit:
   `8246508874ee972c8761212b12e42931d8f890fc`.
 - Brain mirror core commit:
   `bf70e14e86ef2a63a975f1a9bfa5a73f8082467c`.
 - Previously accepted base review:
-  `yspennstate/math-open-problems@b10d0889f9a326b40fe1028af9d8ebf936967367`,
+  `private-source-repository@b10d0889f9a326b40fe1028af9d8ebf936967367`,
   B19 run `20261013T145232Z-fleet01-B19-dense-nullity-two-review-a094`.
 - Primary literature:
   O'Donnell--Tan arXiv:1304.1347; Potapov arXiv:2609.21563.

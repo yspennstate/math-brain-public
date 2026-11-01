@@ -24,13 +24,13 @@ can be used as an admissible density, giving
 Nothing below asserts a law-uniform pointwise `|s|^{-1/2}` estimate. The new decay is obtained only after a **two-dimensional random slope is averaged first** and a separate curvature direction is Fresnel-linearized jointly with it.
 
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
 and `FOURIER_ROUTE_REPORT.md`, especially the shifted Fresnel–Brascamp–Lieb integral. The later volume-stability report
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
 

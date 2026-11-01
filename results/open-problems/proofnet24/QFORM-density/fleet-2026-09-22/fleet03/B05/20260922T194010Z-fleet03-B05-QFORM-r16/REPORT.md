@@ -24,7 +24,7 @@ The answer is concrete: on the exact stress family that made the scalar half-Rie
 
 Canonical source:
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -51,7 +51,7 @@ followed by layer-cake averaging of the moving logarithmic singularity. The pair
 
 Canonical source:
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 

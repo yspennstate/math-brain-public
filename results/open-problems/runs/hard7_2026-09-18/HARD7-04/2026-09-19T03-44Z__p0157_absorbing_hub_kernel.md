@@ -2,7 +2,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is n
 
 # HARD7-04 bounded research iteration — P0157 absorbing hub kernel
 
-Date: 2026-09-19 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-19 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / source OPEN.** The previous run refuted the over-strong universal one-hub route, not van der Hofstad's source question. This run follows its prescribed new direction: replace the scalar `d_max/delta` route by a marked upper-tail interaction object. The substantive result is an exact rank-one hub kernel in an absorbing branching surrogate together with a graph-level sufficient criterion preventing mergers among a chosen high-degree tail set.
 

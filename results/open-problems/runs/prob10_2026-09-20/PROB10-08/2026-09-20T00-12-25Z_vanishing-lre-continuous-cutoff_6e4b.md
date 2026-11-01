@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not a
 
 # PROB10-08 — bounded substantive iteration: the long-range constant may vanish
 
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 Status: **PARTIAL / SOURCE OPEN / NOT AUDITED**.
 

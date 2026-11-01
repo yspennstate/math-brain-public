@@ -15,7 +15,7 @@ The full universal conjecture is not proved here. The new result attacks the fir
 The analytic input is fleet01/B04's theorem
 \(\texttt{QFORM-ENTROPY-WEIGHTED-THREE-VOLUME-v1}\), pinned at
 
-- \(\texttt{math-open-problems@1d2dd52680ec729f28b7289e74a6f3752a379127}\).
+- \(\texttt{private-source@1d2dd52680ec729f28b7289e74a6f3752a379127}\).
 
 For a literal original-coordinate cross block \(M=A[I,J]\), a probability law \(w\) on supported \(3\times3\) physical minors has row marginals \(\alpha_k\) and entropy currency
 \[

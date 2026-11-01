@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED**—not verifi
 # R13 — Boolean Komlós: five-row reduction at the candidate exact `n=5` threshold
 
 Run ID: `20260917T1438Z_k5-five-row-reduction-6c2a`  
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, source scope, and fixed metric
 

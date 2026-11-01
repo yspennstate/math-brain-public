@@ -2,7 +2,7 @@
 
 Programme: QFORM-DENSITY-3EIG-20260922. Full target remains open.
 
-Source state used: newest completed designated partner fleet03/B20 r33 (`math-open-problems@82fb3ecce909f03acbbe69b2e9d0def93f85194b`). Its unpaid nested packet is an ORIGINAL-coordinate cut `S sqcup T=[n]` with `M=A[S,T]`, `E=||M||_F^2`, `S4>(63/64)E`, `s2(M)<1/64`, and initially `E>1241405/2097152`.
+Source state used: newest completed designated partner fleet03/B20 r33 (`private-source@82fb3ecce909f03acbbe69b2e9d0def93f85194b`). Its unpaid nested packet is an ORIGINAL-coordinate cut `S sqcup T=[n]` with `M=A[S,T]`, `E=||M||_F^2`, `S4>(63/64)E`, `s2(M)<1/64`, and initially `E>1241405/2097152`.
 
 ## New calculation
 

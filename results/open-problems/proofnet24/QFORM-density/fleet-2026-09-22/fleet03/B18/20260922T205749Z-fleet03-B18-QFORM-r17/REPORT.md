@@ -41,7 +41,7 @@ I also rechecked Juškevičius–Lee, *Small ball probabilities, maximum density
 
 The designated completed partner is fleet04/B18:
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 
@@ -191,6 +191,6 @@ Continuity is **proved for Theorem 3.1 and the family (4.1)**. Continuity for th
 
 - LPP primary source: arXiv:1507.07949 / Israel J. Math. 216 (2016), 877–889.
 - Juškevičius–Lee source audit: arXiv:1503.09190.
-- Designated partner: `yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
-- Partner's underlying zero-pivot proof: `yspennstate/math-open-problems@dd94932dae1791af1bca9396c062e17d0e55142a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T175509Z-qform-B18-a01-r15/REPORT.md`.
+- Designated partner: `private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
+- Partner's underlying zero-pivot proof: `private-source-repository@dd94932dae1791af1bca9396c062e17d0e55142a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T175509Z-qform-B18-a01-r15/REPORT.md`.
 - Current B18 execution label: `WITHOUT_VERIFIED_BRAIN`; repository synchronization is not authenticated native learned-memory ingestion.

@@ -40,7 +40,7 @@ For `K=1_{x^T A x in J}`, (1.1) is exactly the geometric sublevel formulation re
 The mathematical inputs are:
 
 1. **Own r48 physical-pair theorem.**  
-   `yspennstate/math-open-problems@ba4c0f14cf9ca505e346b284a530662c6522b514`  
+   `private-source-repository@ba4c0f14cf9ca505e346b284a530662c6522b514`  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260924T095803Z-fleet03-B13-qform-r48/REPORT.md`.
 
    In the exact diffuse rank-two chamber
@@ -67,7 +67,7 @@ The mathematical inputs are:
    \]
 
 2. **Designated partner fleet04/B13.**  
-   `yspennstate/math-open-problems@c30866924d918185e908ae4b3e22e31169366296`  
+   `private-source-repository@c30866924d918185e908ae4b3e22e31169366296`  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260924T061740Z-fleet04-B13-nearnull-star-r3/REPORT.md`.
 
    If `k` maximizes `|d_i|`, then every witness satisfies
@@ -84,7 +84,7 @@ The mathematical inputs are:
    \]
 
 3. **Pair-log smoothing.**  
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`  
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`  
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
    If an original-coordinate invertible indefinite pair has determinant magnitude `D_B` and smallest singular value `kappa_B`, and after completing that pair the remaining scalar random variable `R` obeys
@@ -98,7 +98,7 @@ The mathematical inputs are:
    Arbitrary pair shifts depending on the remaining original coordinates are allowed. This proves essential boundedness in its scope; continuity is not supplied by that argument.
 
 4. **Diffuse separable-phase Fourier calculation.**  
-   `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`  
+   `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`  
    `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
 
    Its proof before the final time integration is valid for rank two as well: if `W^TW=I_2`, every row leverage is at most `1/2`, `L` is invertible symmetric, and `V_i` are arbitrary coordinate-separable measurable phases, then for

@@ -11,7 +11,7 @@ The unrestricted QFORM conjecture and unrestricted continuity conclusion remain 
 ## Source boundary
 
 
-Required pinned package: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`. Its Theorems D/D' and D5 are used only with their stated volume-sampling gates.
+Required pinned package: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`. Its Theorems D/D' and D5 are used only with their stated volume-sampling gates.
 
 Newest designated partner consumed: fleet03/B03 r34, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T125915Z-fleet03-B03-QFORM-r34/REPORT.md` on current master. It proves finite-L^p dependent-coefficient selector Plancherel for separable selector phases, the exact weighted independent-copy integral, and a uniform payment of the near-triangle collar. Outside its near-coloop alternative it gives `||p_Q||_infinity<263/s_3(A)`.
 

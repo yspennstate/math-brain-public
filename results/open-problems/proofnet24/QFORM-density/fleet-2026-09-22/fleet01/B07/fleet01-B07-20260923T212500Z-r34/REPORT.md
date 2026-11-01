@@ -15,7 +15,7 @@ Fresh owner control remains `2026-09-22.15`, with continuation `QFORM-EXCLUSIVE-
 
 The latest completed designated partner available at the substantive source refresh is fleet02/B07:
 
-`yspennstate/math-open-problems@726fef06d05f2d3024bd1565c736df43efb45d62`,
+`private-source-repository@726fef06d05f2d3024bd1565c736df43efb45d62`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T203421Z-fleet02-B07-qform-f6c2a1/REPORT.md`.
 
@@ -43,7 +43,7 @@ so `sum_i mu_i=2`. Its sharpened heavy threshold is
 
 The current fleet03/B07 tail-stable transfer is
 
-`yspennstate/math-open-problems@f822a8dfdb6a2cbc763373954a8b9dadb498568d`,
+`private-source-repository@f822a8dfdb6a2cbc763373954a8b9dadb498568d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T203843Z-fleet03-B07-qform-r38/REPORT.md`.
 
@@ -55,7 +55,7 @@ where `q_i=dist(A[L\{i},{i}],range(P_i))` and `J_i` is exactly the added-column 
 
 The analytic receiver used below is the completed marginal-free physical-E3 theorem
 
-`yspennstate/math-open-problems@52cef3abd27c641ae6666d6ee3bbc25d90cb4813`,
+`private-source-repository@52cef3abd27c641ae6666d6ee3bbc25d90cb4813`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T170106Z-fleet03-B02-qform-r35/REPORT.md`:
 
@@ -73,7 +73,7 @@ Arbitrary same-bank curvature, outside couplings, affine terms and extra spectru
 
 The finite-coordinate diagonal-plus-rank receiver used in Section 5 is the completed fleet04/B07 theorem pinned in the designated-partner report:
 
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`,
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 

@@ -33,7 +33,7 @@ This is a materially different route from the failed one-scale PAC-Bayes and glo
 - Native role: `P09`
 - Native slot: `6aa7b454b5808191bb00d87697d89388`
 - Installed title: `Gaussian Tensor Bounds`
-- Repository / branch: private `yspennstate/math-open-problems`, `master`
+- Repository / branch: private `private-source-repository`, `master`
 - Source: A. S. Bandeira, D. Dmitriev, K. Lucca, P. Nizic-Nikolac, A. Rodder et al., *Randomstrasse101: Open Problems of 2025*, arXiv:2603.29571, Entry 8, Conjecture 16.
 - Primary general comparison: A. S. Bandeira, S. Gopi, H. Jiang, K. Lucca, T. Rothvoss, *A Geometric Perspective on the Injective Norm of Sums of Random Tensors*, arXiv:2411.10633 / STOC 2025.
 - Stronger present general variance-parameter comparison recovered: I. Aden-Ali, *On the Injective Norm of Sums of Random Tensors and the Moments of Gaussian Chaoses*, arXiv:2503.10580.

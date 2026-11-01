@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 at 
 # P13 CLOSABLE OUTSIDE — P0250 directed-cut dualization and exact obstruction screen
 
 UTC report time: 2026-09-19T06:26:18Z  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Own root: `proofnet24/P13-outside-successor/`  
 Native slot: `6aa7b253b37c8191b693d8dc79298d37`  
 Run status: `SUCCESSOR_ADMISSION_HOLD`

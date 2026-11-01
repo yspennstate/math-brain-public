@@ -17,7 +17,7 @@ The exact target remains: independent real coordinates with scalar densities bou
 
 The designated partner actually applied below is fleet02/B12:
 
-`yspennstate/math-open-problems@894dfe1e6cc4817c2b3e0bbe46036e4839f10dbf`
+`private-source-repository@894dfe1e6cc4817c2b3e0bbe46036e4839f10dbf`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T215456Z-fleet02-B12-QFORM-auto11b/REPORT.md`.
 

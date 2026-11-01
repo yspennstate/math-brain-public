@@ -25,7 +25,7 @@ Full QFORM remains OPEN.
 
 Required Claude source consumed at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`:
 `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
@@ -35,7 +35,7 @@ The exact input used is Theorem D's determinant/weighted-AM-GM step: arbitrary p
 
 The designated partner result actually applied is fleet03/B04 r26 at
 
-`yspennstate/math-open-problems@85c3d540cf82ea6a6aca0f22f31811516a8b81aa`
+`private-source-repository@85c3d540cf82ea6a6aca0f22f31811516a8b81aa`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T055256Z-fleet03-B04-qform-auto11-r26/REPORT.md`.
 
 It proves `QFORM-KSAMPLE-MINOR-OVERLAP-ENTROPY-v1` and `QFORM-THREE-MINOR-STAR-DICHOTOMY-v1`. In particular, if the three-sample common-row overlap probability of the canonical squared-2-minor law is zero, every supported row pair contains one physical row, and deleting that row leaves rank at most one; hence the full cross block has rank at most two. The analogous statement holds for columns. For `k>=2`, its quantitative bound is

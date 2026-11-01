@@ -37,7 +37,7 @@ Summing yields P{Q in J} <=[1+(2/t+29)M]delta <(1+32M)delta, since t>0.9998. Thi
 ## Application to the exact rank-three survivor
 
 The companion matroid proof at
-https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T190200Z-rank3-matroid-crosscut/REPORT.md
+private-source-repository
 shows that every exact-rank-three A with s3(A)>=1, no c-pivot, and no physical rank-three cross cut has a physical hub X_h and orthonormal light projections (L,V0) with
 Q=aX_h^2+2tX_h L+beta' L^2+lambda (V0+(u_v/lambda)L)^2,
 |a|<c, t>=sqrt(1-c^2), |lambda|>=1.

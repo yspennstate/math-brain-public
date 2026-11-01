@@ -23,7 +23,7 @@ This run pays item 1 for the exact low-rank-plus-diagonal leaf geometry and give
 
 The completed source is Theorem H of
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`,
 
 with the compatible Fourier audit in `FOURIER_ROUTE_REPORT.md` at the same commit. The theorem works in original coordinates. Split the variables as `H union I union J`; if
 
@@ -189,7 +189,7 @@ The latest completed designated-partner result found and read in full is fleet03
 
 at
 
-`yspennstate/math-open-problems@e8c7ac4f0294a028d4bc883d1e4bf1c805e11085:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T224649Z-fleet03-B09-QFORM-r19/REPORT.md`.
+`private-source-repository@e8c7ac4f0294a028d4bc883d1e4bf1c805e11085:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T224649Z-fleet03-B09-QFORM-r19/REPORT.md`.
 
 For four disjoint original-coordinate unit-projection banks it gives
 

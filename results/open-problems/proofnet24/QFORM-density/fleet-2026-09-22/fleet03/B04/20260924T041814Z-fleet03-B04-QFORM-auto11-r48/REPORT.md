@@ -21,7 +21,7 @@ Fresh owner control was resolved from `yspennstate/math-research-brain/main`; th
 
 The main analytic input is the independently checked grouped projected-crossing theorem at
 
-`yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`
+`private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -51,7 +51,7 @@ The designated-partner input is fleet04/B04 r2,
 
 at
 
-`yspennstate/math-open-problems@4a54666abf2316bb79b939cef3ea940605a0af57`
+`private-source-repository@4a54666abf2316bb79b939cef3ea940605a0af57`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260924T001353Z-fleet04-B04-QFORM-r2/REPORT.md`.
 

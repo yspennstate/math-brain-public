@@ -17,7 +17,7 @@ The full target remains open: for arbitrary dimension, arbitrary independent rea
 
 The designated partner result actually used in an equation is fleet02/B03 run `20260922T150949Z-fleet02-B03-QFORM-r11`, canonical commit
 
-`yspennstate/math-open-problems@f40d5d4f5013b0a6af275a19aa3dc0fa2d76c347`,
+`private-source-repository@f40d5d4f5013b0a6af275a19aa3dc0fa2d76c347`,
 
 path
 
@@ -31,7 +31,7 @@ and, separately, `||p_(UV)||_3 <= 2 sqrt(3)`. The present run uses (1.1) at the 
 
 A second completed source used only in the concrete bank example is fleet02/B04 commit
 
-`yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`,
+`private-source-repository@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`,
 
 path
 

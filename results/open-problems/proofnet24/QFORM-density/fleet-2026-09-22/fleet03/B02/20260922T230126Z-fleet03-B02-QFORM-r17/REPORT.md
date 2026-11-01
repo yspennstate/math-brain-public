@@ -15,7 +15,7 @@ attacking: the first unpaid two-sided square/rank-two Fourier step; isolate and 
 
 The target is unchanged: for every finite `n`, every vector `X=(X_1,...,X_n)` of independent real coordinates with probability densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove one universal finite bound for the density of `Q=X^T A X`, or give a target-valid counterexample. No moment, Gaussian, log-concavity, compact-support, connected-support, or post-rotation-independence assumption is introduced.
 
-The preceding B02 run (`math-open-problems@864e0222357c77d628a7e3389a32e230f30b9321`) proved that a naive Gabor-line `L^2` restriction bridge for the genuinely two-sided square-plus-rank-two packet is false. It also proved a full `q>2` shifted-square Fourier family. The first unpaid step was therefore to remove the one-sided isolation without reusing the false Gabor-line interface.
+The preceding B02 run (`private-source@864e0222357c77d628a7e3389a32e230f30b9321`) proved that a naive Gabor-line `L^2` restriction bridge for the genuinely two-sided square-plus-rank-two packet is false. It also proved a full `q>2` shifted-square Fourier family. The first unpaid step was therefore to remove the one-sided isolation without reusing the false Gabor-line interface.
 
 This run changes mechanism. Rather than tracing one translation/modulation line after rank-two Plancherel, I first identify when the two-sided coupling itself creates an **exact rank-three original-coordinate cross block**. On that branch, a three-dimensional product-marginal theorem plus direct bilinear Plancherel gives the target `|t|^{-3/2}` tail with no leverage hypothesis. The result closes every transverse two-sided coupling and leaves only the precise span-aligned residue.
 
@@ -222,7 +222,7 @@ The designated partner `fleet04/B02` completed
 
 canonical proof
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`
 
 at
 

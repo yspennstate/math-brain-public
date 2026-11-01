@@ -25,13 +25,13 @@ The new point is that the prior vague “global rank-two-cross structure” has 
 
 Current completed partner source:
 
-`yspennstate/math-open-problems@a23ddf469392d77526db53d0811248a52a84d088`
+`private-source-repository@a23ddf469392d77526db53d0811248a52a84d088`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T165827Z-fleet03-B13-qform-r29/REPORT.md`
 
 with the later proof clarification
 
-`yspennstate/math-open-problems@c9a6c9160e063f07856a62fc89a2ba62b857d3cf`
+`private-source-repository@c9a6c9160e063f07856a62fc89a2ba62b857d3cf`
 
 `.../POSTREFRESH_ADDENDUM.md`.
 
@@ -51,7 +51,7 @@ The partner proves this by closing its former third-volume bi-hub alternative wi
 
 I read the current independently checked statement at
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -73,7 +73,7 @@ No post-rotation independence is used in either statement.
 
 I read at the required immutable source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 all of
 
@@ -97,7 +97,7 @@ Second, the counterexample-search report's proved finite-dimensional Theorem A p
 
 I read fleet04/B13
 
-`yspennstate/math-open-problems@82f9b7e9372c2434f27fd1f5a65e7148663516a7`
+`private-source-repository@82f9b7e9372c2434f27fd1f5a65e7148663516a7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T121154Z-fleet04-B13-nonattained-bathtub-r1/REPORT.md`.
 
@@ -107,7 +107,7 @@ Its Theorem 3.1 proves for every nonnegative product kernel that the supremum ov
 
 The current Claude continuation
 
-`yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`
+`private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`
 
 `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/structure/REPORT.md`
 

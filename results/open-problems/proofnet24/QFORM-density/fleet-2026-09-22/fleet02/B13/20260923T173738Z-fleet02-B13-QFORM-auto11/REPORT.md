@@ -27,7 +27,7 @@ The point is that the partner's former vague “large core spread” alternative
 
 Fleet03/B13 r30, canonical source
 
-`yspennstate/math-open-problems@feda06c104c0d8c62661daf01eed33c10f55fa99`,
+`private-source-repository@feda06c104c0d8c62661daf01eed33c10f55fa99`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T173317Z-fleet03-B13-qform-r30/REPORT.md`.
 
@@ -59,7 +59,7 @@ The r30 report states its dependency status precisely: the aggregate-E3/rank-eig
 
 Fleet01/B13,
 
-`yspennstate/math-open-problems@9d9e2369ad137664a48b1b7c6d682ddaed62bcad`,
+`private-source-repository@9d9e2369ad137664a48b1b7c6d682ddaed62bcad`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T125929Z-fleet01-B13-qform-auto23/FRESNEL_RANGE_ADDENDUM.md`.
 
@@ -81,7 +81,7 @@ No transformed random coordinates are declared independent; the deterministic sp
 
 At the exact required immutable source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`,
 
@@ -97,7 +97,7 @@ with no volume-marginal condition. The source's `RESULTS.md` and `COUNTEREXAMPLE
 
 Fleet04/B13,
 
-`yspennstate/math-open-problems@82f9b7e9372c2434f27fd1f5a65e7148663516a7`,
+`private-source-repository@82f9b7e9372c2434f27fd1f5a65e7148663516a7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T121154Z-fleet04-B13-nonattained-bathtub-r1/REPORT.md`,
 

@@ -238,7 +238,7 @@ This combines the partition theorem with the newly supplied regularized graph ar
 
 ## 8. Exact advance relative to the current archive
 
-The existing separable-phase proof is at math-open-problems commit 773b7fb6f0e6a8142066f0bac08d228dfc164fdb, path proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md. Its constant contains |det Lambda|^(-1/r); the present Section 7 does not pay the extra tiny eigenvalues, at the price of the stronger explicit leverage threshold 1/32.
+The existing separable-phase proof is at private-source commit 773b7fb6f0e6a8142066f0bac08d228dfc164fdb, path proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md. Its constant contains |det Lambda|^(-1/r); the present Section 7 does not pay the extra tiny eigenvalues, at the price of the stronger explicit leverage threshold 1/32.
 
 The fleet02/B08 update at commit 84657e690f8411d99602ddc772b622686c3874ed, path proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T124007Z-r11/REPORT.md, supplies whitening and an independent passing review of that earlier separable-phase theorem. It does not establish the current regularized determinant result, which needs its own review.
 

@@ -25,7 +25,7 @@ The designated partner fleet02/B11 result actually used below is
 
 `QFORM-INDEFINITE-SQUARE-INDEPENDENT-SHEAR-v1`,
 
-canonical report `math-open-problems@d618ae04de4d2366b3dc6cd9a67c36dc1bdb9fcf`, which gives the full-line bound `8*2^(1/4)` for `2 X1 X2 + Z^2 + 2 kappa ZW`, uniformly in `kappa`.
+canonical report `private-source@d618ae04de4d2366b3dc6cd9a67c36dc1bdb9fcf`, which gives the full-line bound `8*2^(1/4)` for `2 X1 X2 + Z^2 + 2 kappa ZW`, uniformly in `kappa`.
 
 ## 2. New analytic theorem: the four-region receiver at every subcritical hub ratio
 

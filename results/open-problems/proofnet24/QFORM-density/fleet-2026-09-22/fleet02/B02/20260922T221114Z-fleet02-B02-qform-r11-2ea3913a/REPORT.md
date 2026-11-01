@@ -18,7 +18,7 @@ This run uses no moment hypothesis, no diagonal-basis independence, no law-unifo
 
 The principal analytic input is the completed regularized determinant theorem
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`,
 
 whose Sections 4--6 were independently checked by this slot in an earlier run. For a physical cross block `B=A[I,J]`, it gives, for `1<=q<2`, under the one-side range-leverage condition
@@ -178,7 +178,7 @@ for arbitrary self-curvature and merely nonzero cross Frobenius mass. This refut
 
 The completed fleet01/B19 S0 matching theorem is source-pinned at
 
-`yspennstate/math-open-problems@39451a4c1065252ae9485eb99bdb5bb2c40f97f0`
+`private-source-repository@39451a4c1065252ae9485eb99bdb5bb2c40f97f0`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260922T201657Z-fleet01-B19-QFORM-r11/REPORT.md`.
 
 Inside its already-established matching branch it supplies two physical residual cross banks with
@@ -214,7 +214,7 @@ Therefore the arbitrary-self Frobenius-matching debt is narrowed to the explicit
 The latest completed designated-partner result is fleet03/B02 r15,
 
 `QFORM-ONE-SIDED-SQUARE-RANK2-FOURIER-v1`,
-`yspennstate/math-open-problems@328f301cc05ac55f7dd9e3f2534890e63495470e`
+`private-source-repository@328f301cc05ac55f7dd9e3f2534890e63495470e`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T210429Z-fleet03-B02-qform-r15/REPORT.md`.
 
 In its exact rank-two one-sided-isolation setting it proves, for arbitrary product cap-one banks,

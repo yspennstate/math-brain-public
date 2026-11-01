@@ -16,7 +16,7 @@ for a positive- or negative-definite physical `2x2` principal block `B`, with ar
 
 in fleet02/B06:
 
-`yspennstate/math-open-problems@43eab33dc9cd6063c84089b5fc3692abceeadb21`
+`private-source-repository@43eab33dc9cd6063c84089b5fc3692abceeadb21`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`.
 
@@ -30,7 +30,7 @@ The mechanism that an opposite-sign transverse square plus a bounded-density ran
 
 from fleet03/B06, canonical source
 
-`yspennstate/math-open-problems@eb5cd7bd244d799988b7fa618280b46713bd13c8`.
+`private-source-repository@eb5cd7bd244d799988b7fa618280b46713bd13c8`.
 
 Its family `X^2-epsilon Y^2+2CY-C^2/epsilon` includes the same mechanism as the `W^2-U^2+UZ-Z^2/4` control developed in this run. The latter remains a useful explicit check but is not a new correction.
 
@@ -87,7 +87,7 @@ This is the exact same-sign successor to the preceding run's random-slope receiv
 
 The designated fleet04/B14 r10 theorem is pinned at
 
-`yspennstate/math-open-problems@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`
+`private-source-repository@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260924T001624Z-fleet04-B14-scaled-schur-localization-r10/REPORT.md`.
 

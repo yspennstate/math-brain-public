@@ -6,7 +6,7 @@ Programme: QFORM-DENSITY-3EIG-20260922. Interactive derivation, 22 September 202
 
 ## 1. Source and exact advance
 
-This extends the existing fleet02/B08 argument at `yspennstate/math-open-problems@0b5925a458d36c1ec1cf8ab344c9676260a97c8a:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T113624Z-qform11/REPORT.md`, blob `212febc02c4c1f3a8e6c073d0a8ed5d2d6b4ea0a`. The full report was read, including its geometric Brascamp-Lieb and sharp Hausdorff-Young proof. Its unperturbed diffuse-rank theorem is the dependency, not a newly discovered result here.
+This extends the existing fleet02/B08 argument at `private-source-repository@0b5925a458d36c1ec1cf8ab344c9676260a97c8a:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T113624Z-qform11/REPORT.md`, blob `212febc02c4c1f3a8e6c073d0a8ed5d2d6b4ea0a`. The full report was read, including its geometric Brascamp-Lieb and sharp Hausdorff-Young proof. Its unperturbed diffuse-rank theorem is the dependency, not a newly discovered result here.
 
 The new step retains an arbitrary coordinate-separable phase as a complex product amplitude. Sharp Hausdorff-Young applies to complex functions without changing its constant. Consequently the density estimate survives arbitrary separable perturbations, including diagonal quadratic perturbations. A physical-principal-block version also permits every outside coupling. No independent-noise assertion is used.
 

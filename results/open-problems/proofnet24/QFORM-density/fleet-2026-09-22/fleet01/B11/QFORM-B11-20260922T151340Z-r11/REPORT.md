@@ -28,12 +28,12 @@ No pointwise law-uniform Fresnel decay, post-rotation independence, conditional-
 
 Newest completed assigned partner source read before this report:
 
-`yspennstate/math-open-problems@047e3c1cb33c6ed605bbc4a014371fa63dd84538`, path
+`private-source-repository@047e3c1cb33c6ed605bbc4a014371fa63dd84538`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T145132Z-b11-qform-r18-7f3c1a2d/REPORT.md`.
 
 That report supplies the Walsh-bank null-heavy theorem and cites the preceding self-contained projection estimates. The preceding completed partner source
 
-`yspennstate/math-open-problems@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`, path
+`private-source-repository@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T135203Z-b11-qform-6080e0b3/REPORT.md`
 
 proves the estimate used quantitatively below:

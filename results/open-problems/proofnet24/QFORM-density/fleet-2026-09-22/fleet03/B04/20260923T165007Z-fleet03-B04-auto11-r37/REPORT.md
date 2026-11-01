@@ -15,7 +15,7 @@ The unrestricted conjecture is not proved here. The result below gives a continu
 
 The immediate analytic source is
 
-`yspennstate/math-open-problems@f6f7e407aea4977e9b061d90eefd8e692d3191ed:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`
+`private-source-repository@f6f7e407aea4977e9b061d90eefd8e692d3191ed:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`
 
 (blob `dc7e29c3ee746ebf2856aaa6866b4b16b9a04b9f`). Its weighted-subset Fourier lemma (WS) and grouped-hub theorem (GC) are complete written supporting arguments at their stated scope. The source uses canonical squared-minor weights. This run keeps the exact weighted geometric mean instead of imposing the canonical law.
 
@@ -263,7 +263,7 @@ The designated partner is `fleet04/B04`. Fresh direct repository lookups found i
 
 I did apply the completed fleet03/B16 physical-bank projection calculation from
 
-`yspennstate/math-open-problems@e073f14465e781bf78996438d9c267750d90728c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T162348Z-fleet03-B16-QFORM-r30/REPORT.md`.
+`private-source-repository@e073f14465e781bf78996438d9c267750d90728c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T162348Z-fleet03-B16-QFORM-r30/REPORT.md`.
 
 That report's equation (4.2) states for a two-dimensional coefficient bank with Gram matrix `G_B` that the physical product projection density obeys
 

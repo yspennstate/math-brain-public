@@ -2,7 +2,7 @@
 
 During this invocation the designated partner `fleet03/B17` completed r26:
 
-`yspennstate/math-open-problems@26d2e9105e33b802b359bd01e858d657afc1b266`,
+`private-source-repository@26d2e9105e33b802b359bd01e858d657afc1b266`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T080143Z-fleet03-B17-QFORM-r26/REPORT.md`.
 
 Its theorem says that for arbitrary independent cap-one heavy laws `X,Y` and an independent normalized centered-uniform bank

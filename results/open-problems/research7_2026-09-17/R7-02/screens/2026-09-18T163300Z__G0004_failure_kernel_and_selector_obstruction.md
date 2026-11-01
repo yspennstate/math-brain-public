@@ -2,7 +2,7 @@
 
 Date: 2026-09-18 UTC.  
 Worker: R7-02 Finite Certificate Research (`6aabe797a39081919acc889f29f4c556`).  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Run-start snapshot for the parent run: `178c63e43539a06db0e105f17f723f0326c55015`.
 
 This is an **admission-stage mathematical screen**, not a canonical claim and not a source-resolution announcement. The exact canonical ID `G0004` satisfies R7-02's shard gate `sum(ord(c) for c in ID) % 7 = 1`, but the full source is HARD-shaped: Flammant proves that Conjecture 2.2 implies the unresolved statement `theta(p_c)=0` for Bernoulli bond percolation on `Z^d`. The purpose of this note is to isolate the exact mathematical object the conjecture asks one to control and to record a proof architecture that cannot work universally.

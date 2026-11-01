@@ -242,7 +242,7 @@ Any successful next argument should spend the determinant-one Schur shear before
 
 The completed designated partner result is fleet04/B05 r2:
 
-`yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
+`private-source-repository@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`.
 

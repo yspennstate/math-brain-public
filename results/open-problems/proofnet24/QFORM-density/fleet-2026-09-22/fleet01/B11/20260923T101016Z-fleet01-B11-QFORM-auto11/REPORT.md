@@ -15,7 +15,7 @@ The owner target remains the unrestricted statement for arbitrary independent re
 
 The argument uses two completed inputs at their exact scopes.
 
-1. **Pair-log theorem.** `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, path `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`. If an invertible indefinite original-coordinate pair has `D=|det B|`, `kappa=sigma_min(B)`, and after completing the pair the remainder `R(Z)` obeys
+1. **Pair-log theorem.** `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, path `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`. If an invertible indefinite original-coordinate pair has `D=|det B|`, `kappa=sigma_min(B)`, and after completing the pair the remainder `R(Z)` obeys
 
    `sup_t P(|R-t|<rho) <= H sqrt(rho)`,
 
@@ -25,7 +25,7 @@ The argument uses two completed inputs at their exact scopes.
 
    The proof retains the pair's logarithmic critical-value singularity and averages it by layer cake. It does not replace a conditional density cap by independence.
 
-2. **Designated partner fleet02/B11.** `yspennstate/math-open-problems@f2835c54b9f384f8f83e34c46bef5c40953e32a7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T042112Z-fleet02-B11-QFORM-2f47d35a/REPORT.md`. Its theorem `QFORM-INDEFINITE-PAIR-DIFFUSE-SQUARE-v1` gives, when the square bank is genuinely separated from a fixed pair receiver,
+2. **Designated partner fleet02/B11.** `private-source-repository@f2835c54b9f384f8f83e34c46bef5c40953e32a7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T042112Z-fleet02-B11-QFORM-2f47d35a/REPORT.md`. Its theorem `QFORM-INDEFINITE-PAIR-DIFFUSE-SQUARE-v1` gives, when the square bank is genuinely separated from a fixed pair receiver,
 
    `||p_Q||_infinity <= 16 sqrt(30) L |det B|^(-1/4)|d|^(-1/2)`,
 

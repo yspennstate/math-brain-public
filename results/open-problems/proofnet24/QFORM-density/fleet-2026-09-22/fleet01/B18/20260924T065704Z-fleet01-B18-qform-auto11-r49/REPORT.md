@@ -351,9 +351,9 @@ Continuity is proved only in the packet/families where the private-square theore
 
 ## 10. Source pins
 
-- fleet01/B18 r48 `QFORM-CROSS-MOVING-DIFFUSE-SQUARE-HS-REMAINDER-v1`: `yspennstate/math-open-problems@950cbfd149a2acf0de3c232cf52434c5d7e5e4df`.
-- exact prior fleet03/B18 cross theorem: `yspennstate/math-open-problems@a2cf029c5c935d6eadf4216c073911fc8dc404ac`.
-- latest designated partner fleet02/B18 report: `yspennstate/math-open-problems@fd7c768025320fbb5e54e13a1acd00d329e8f8dd`.
+- fleet01/B18 r48 `QFORM-CROSS-MOVING-DIFFUSE-SQUARE-HS-REMAINDER-v1`: `private-source-repository@950cbfd149a2acf0de3c232cf52434c5d7e5e4df`.
+- exact prior fleet03/B18 cross theorem: `private-source-repository@a2cf029c5c935d6eadf4216c073911fc8dc404ac`.
+- latest designated partner fleet02/B18 report: `private-source-repository@fd7c768025320fbb5e54e13a1acd00d329e8f8dd`.
 - M. Rudelson and R. Vershynin, arXiv:1402.4492, Theorem 1.2.
 - G. Livshyts, G. Paouris and P. Pivovarov, arXiv:1507.07949, Theorem 1.1.
 - J. Banks, J. Garza Vargas, A. Kulkarni and N. Srivastava, arXiv:2005.08930, Theorem 2.1 and Corollary 2.4.

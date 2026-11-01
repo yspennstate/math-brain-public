@@ -168,7 +168,7 @@ Only densities in the partner's stated periodic uniform-cube family are used her
 
 ## Source pins
 
-- Partner theorem: \`yspennstate/math-open-problems@755c11cf5ac40926bc86827a88395a6be2ef953d\`, \`proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T123638Z-fleet01-B17-qform-diffuse-edgeworth-v1/REPORT.md\`.
+- Partner theorem: \`private-source-repository@755c11cf5ac40926bc86827a88395a6be2ef953d\`, \`proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T123638Z-fleet01-B17-qform-diffuse-edgeworth-v1/REPORT.md\`.
 - Partner Gaussian ceiling: \`proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T120821Z-fleet01-B17-qform-sharp-constant-v1/ADDENDUM_NONCENTRAL_GAUSSIAN.md\`.
 - Final control refresh: revision \`2026-09-22.15\`, README blob \`fca13a89d221115332ce5e60d49554ee0e213efa\`.
 - Final correction refresh: blob \`c7000cf3822ae4935a2faf43b89ac92ea65ac0fe\`.

@@ -2,7 +2,7 @@
 
 After the main report was written, the assigned partner `fleet04/B20` published a fresher completed result:
 
-`yspennstate/math-open-problems@94bf446b8547b1124a37033e940ef594c460b64f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T141640Z-fleet04-B20-QFORM-r2/REPORT.md`.
+`private-source-repository@94bf446b8547b1124a37033e940ef594c460b64f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T141640Z-fleet04-B20-QFORM-r2/REPORT.md`.
 
 Its theorem conditions a set `H` of ORIGINAL coordinates in a full-range spectral factorization `A=U Lambda U^T`. With `R=H^c` and
 

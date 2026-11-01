@@ -268,7 +268,7 @@ This does **not** mean an indefinite rank-two Schur remainder is analytically un
 
 I reread `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` at the required source commit
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`.
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`.
 
 Its completed ruled one-sheet theorem says that for a rank-three form of signature `(+,+,-)` with eigenvalue magnitudes `lambda_1,lambda_2,mu`, the majority-side density is bounded by
 

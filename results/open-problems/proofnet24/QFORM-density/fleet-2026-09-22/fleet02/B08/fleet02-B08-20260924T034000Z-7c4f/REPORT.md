@@ -38,7 +38,7 @@ The newest fleet03/B08 deletion-spill router further removes raw third-child spe
 
 The required fixed source was read at exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 including
 
@@ -56,7 +56,7 @@ A later source refresh found the newest compatible designated partner
 
 `fleet03/B08 r49`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T032039Z-fleet03-B08-qform-diffuse-r49/REPORT.md`,
-contained in `math-open-problems@209e9a8756cdab08ef8fb12c49d1d46934742b9c`.
+contained in `private-source@209e9a8756cdab08ef8fb12c49d1d46934742b9c`.
 
 Its immediate predecessor r48 remains the analytic tangent-shear input for the invertible-carrier branch; r49 supersedes r48's raw deletion-child spectral-loss terminal branch.
 

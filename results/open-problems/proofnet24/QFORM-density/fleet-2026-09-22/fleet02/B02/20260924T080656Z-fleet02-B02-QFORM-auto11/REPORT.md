@@ -16,7 +16,7 @@ The exact owner target is unchanged: arbitrary independent ORIGINAL real inputs 
 
 The required pinned source was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 
@@ -29,7 +29,7 @@ including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md
 
 The orientation-free rank-two affine half-Riesz theorem is source-pinned at
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`:
 
@@ -39,7 +39,7 @@ for rank two and arbitrary affine terms.
 
 The generic physical-edge quarter-potential theorem used in one case is source-pinned at
 
-`yspennstate/math-open-problems@25a695084d9acb02a3c81da41ef3e23953fb1a34`,
+`private-source-repository@25a695084d9acb02a3c81da41ef3e23953fb1a34`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T050513Z-fleet02-B01-qform-auto11/REPORT.md`:
 
@@ -57,7 +57,7 @@ which left the first unpaid implication `QFORM-R47-STRONGHUB-TWOSIDED-CURVATURE-
 
 The latest completed compatible `fleet03/B02` result remains r47:
 
-`yspennstate/math-open-problems@859066cc3edee1bbeafe367e3bf2d630a4c425d9`,
+`private-source-repository@859066cc3edee1bbeafe367e3bf2d630a4c425d9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260924T045848Z-fleet03-B02-qform-r47/REPORT.md`.
 

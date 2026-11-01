@@ -3,7 +3,7 @@ attacking: full nonseparable spectral tails at matrix level via the newest three
 
 # Early substantive checkpoint
 
-Let I,J be disjoint ORIGINAL coordinate sets. Let the final physical cross block be M=M0+E, where s3(M0)>=a>0, max_i(P_range(M0))_ii<=1/2, and ||E||op<=a/16. The newest volume-stability theorem (math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba) gives the uniform Fourier envelope, after conditioning arbitrary outside original coordinates Z=z,
+Let I,J be disjoint ORIGINAL coordinate sets. Let the final physical cross block be M=M0+E, where s3(M0)>=a>0, max_i(P_range(M0))_ii<=1/2, and ||E||op<=a/16. The newest volume-stability theorem (private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba) gives the uniform Fourier envelope, after conditioning arbitrary outside original coordinates Z=z,
 
 |phi_z(t)| <= min(1,K |t|^{-9/8}),
 K = [e^3 (4/3)^(-3/2) pi^3 Z3^(-1/2)]^(3/8),

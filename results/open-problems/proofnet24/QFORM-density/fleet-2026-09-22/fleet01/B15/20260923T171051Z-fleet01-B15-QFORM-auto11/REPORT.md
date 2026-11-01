@@ -32,7 +32,7 @@ Fresh control was resolved from `yspennstate/math-research-brain/main` under the
 
 The designated completed partner source actually used is fleet02/B15:
 
-`yspennstate/math-open-problems@46c33d97490f78f8c3de0435f63d573958d81180`
+`private-source-repository@46c33d97490f78f8c3de0435f63d573958d81180`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T130525Z-fleet02-B15-qform-auto11/REPORT.md`.
 

@@ -16,7 +16,7 @@ attacking: the exact-null scalar pivot: prove a weak-L3/2 product-projection rec
 
 The immediately preceding B06 report is
 
-`yspennstate/math-open-problems@ef271858f8c0fccccd81db100e064bf2c807299c`
+`private-source-repository@ef271858f8c0fccccd81db100e064bf2c807299c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T092138Z-fleet03-B06-qform-r31/REPORT.md`.
 
@@ -30,7 +30,7 @@ The completed theorem
 
 is at
 
-`yspennstate/math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
+`private-source-repository@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T232932Z-fleet02-B16-QFORM-auto11/REPORT.md`.
 
@@ -59,7 +59,7 @@ This is a weighted product-fiber inequality. It is not an assertion that `U` and
 
 The exact designated `fleet04/B06` canonical QFORM directory was still absent at the final source checks, so no theorem from that slot is fabricated. I apply the compatible completed fleet04/B18 theorem instead:
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
@@ -73,7 +73,7 @@ Independence between `R` and the translated square is not required.
 
 The regularized-determinant theorem at
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`
 

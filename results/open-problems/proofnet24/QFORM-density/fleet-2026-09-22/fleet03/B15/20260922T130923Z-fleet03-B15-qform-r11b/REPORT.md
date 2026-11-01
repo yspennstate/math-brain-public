@@ -22,19 +22,19 @@ Current corrections are retained: no law-uniform pointwise quadratic Fourier dec
 
 The named compatible assignment partner result is fleet04/B15:
 
-`yspennstate/math-open-problems@1d658cd8ef6386a8f8ef7e6b9aaf26fdafe68de3`.
+`private-source-repository@1d658cd8ef6386a8f8ef7e6b9aaf26fdafe68de3`.
 
 It separates interval domination from continuity and applies the fixed-instance principal-block theorem. The underlying source-valid local estimates are fleet01/B15 at
 
-`yspennstate/math-open-problems@47dc925729bbf269333cc6e1256178a538d2f553`
+`private-source-repository@47dc925729bbf269333cc6e1256178a538d2f553`
 
 and fleet02/B15 at
 
-`yspennstate/math-open-problems@d5392d73398e2811f58b612fb8f191aa79d8ee5e`.
+`private-source-repository@d5392d73398e2811f58b612fb8f191aa79d8ee5e`.
 
 I also apply the completed fleet03/B14 definite-pair theorem at
 
-`yspennstate/math-open-problems@e6a82375d007069e7e515cb682eaf430d8baa914`.
+`private-source-repository@e6a82375d007069e7e515cb682eaf430d8baa914`.
 
 The exact local inputs used here are:
 

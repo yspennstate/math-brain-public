@@ -12,7 +12,7 @@ The full target remains open: for independent real `X_i` with probability densit
 
 This run does **not** use the false law-uniform one-dimensional pointwise Fresnel estimate, does not replace product provenance by a bounded projection density, and does not take a fiberwise supremum of an indefinite trace. The live correction `QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1` shows why that receiver-only route cannot work. Instead, the nonlinear trace is integrated jointly with the original two-coordinate product law.
 
-The exact assigned partner `fleet04/B16` had no completed QFORM handoff visible at the final source refresh, so no result is attributed to it. A compatible completed partner theorem from `fleet04/B18` is applied below: `QFORM-SCHUR-PIVOT-SMOOTHING-v1`, canonical source `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, proves the definite-Schur branch with constant `2 sqrt(pi)(|a det B|)^(-1/4)`. The new work closes its explicitly stated **indefinite-Schur / majority-sign pivot** boundary for every physical scalar pivot.
+The exact assigned partner `fleet04/B16` had no completed QFORM handoff visible at the final source refresh, so no result is attributed to it. A compatible completed partner theorem from `fleet04/B18` is applied below: `QFORM-SCHUR-PIVOT-SMOOTHING-v1`, canonical source `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, proves the definite-Schur branch with constant `2 sqrt(pi)(|a det B|)^(-1/4)`. The new work closes its explicitly stated **indefinite-Schur / majority-sign pivot** boundary for every physical scalar pivot.
 
 ## 2. A one-dimensional bathtub kernel
 

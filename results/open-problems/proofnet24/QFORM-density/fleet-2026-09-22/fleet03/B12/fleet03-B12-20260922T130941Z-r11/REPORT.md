@@ -24,13 +24,13 @@ This run preserves the current corrections. In particular it does **not** use a 
 
 The assigned fleet04/B12 partner had no current QFORM result visible in the authorized archive at the prewrite read, so no stale FEI artifact was reused. Instead I consumed the newest compatible completed B12 result:
 
-`yspennstate/math-open-problems@8f66972059845cb23d014fa20efee714b6655b99`
+`private-source-repository@8f66972059845cb23d014fa20efee714b6655b99`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/fleet02-B12-20260922T1251Z-qform-additional-eigenvalue/REPORT.md`.
 
 That report proves a purely spectral four-dimensional dichotomy and the resulting bound `<24.193/L` whenever a `4 x 4` matrix has three same-sign eigenvalues of magnitude at least `L`, with the fourth eigenvalue arbitrary. I also use the underlying source estimates from
 
-`yspennstate/math-open-problems@289810e1f075755898f573ee5b863ad3fa9af5b8`
+`private-source-repository@289810e1f075755898f573ee5b863ad3fa9af5b8`
 
 `qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`:
 

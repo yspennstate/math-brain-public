@@ -15,7 +15,7 @@ The run started from `yspennstate/math-research-brain` main `64da1689498fe3b5ae0
 
 The mathematical premises used are source-pinned:
 
-1. **STRONG_PRIME.** `yspennstate/math-open-problems@f5946fb64d336ed7369de279159643944efc47af:proofnet24/P03-fei/fleet-2026-09-21/fleet02/B17/20260922T091146Z-strong-prime-shaped-repair/REPORT.md`, Sections 1–4. It supplies the actual 18-input composition-prime witness
+1. **STRONG_PRIME.** `private-source-repository@f5946fb64d336ed7369de279159643944efc47af:proofnet24/P03-fei/fleet-2026-09-21/fleet02/B17/20260922T091146Z-strong-prime-shaped-repair/REPORT.md`, Sections 1–4. It supplies the actual 18-input composition-prime witness
    \[
    p_1=223/456,\quad p_2=\cdots=p_{18}=1/2,\quad p_{out}=1019/2048,
    \]
@@ -29,7 +29,7 @@ The mathematical premises used are source-pinned:
    \tag{0.1}
    \]
 
-2. **SHAPE_FRONTIER.** `yspennstate/math-open-problems@a5f19f05fa03671fb5ffeb435081ed92e9827e6a:proofnet24/P03-fei/fleet-2026-09-21/fleet01/B18/20260922T095300Z-shaped-safe-frontier/REPORT.md`, Sections 2–5. It proves universal singleton-restriction safety for a rational member of the family below and, crucially here, gives the later sharper **genuine two-input AND-line obstruction**
+2. **SHAPE_FRONTIER.** `private-source-repository@a5f19f05fa03671fb5ffeb435081ed92e9827e6a:proofnet24/P03-fei/fleet-2026-09-21/fleet01/B18/20260922T095300Z-shaped-safe-frontier/REPORT.md`, Sections 2–5. It proves universal singleton-restriction safety for a rational member of the family below and, crucially here, gives the later sharper **genuine two-input AND-line obstruction**
    \[
    \varepsilon\le E(r),\qquad r={8004417\over20000000},
    \]
@@ -49,7 +49,7 @@ The mathematical premises used are source-pinned:
    \tag{0.3}
    \]
 
-3. **OTHER-ACCOUNT RESULT APPLIED.** `yspennstate/math-open-problems@374c4874e914c7414abc9109fadf77cfc3947298:proofnet24/P03-fei/fleet-2026-09-22/fleet03/B05/fleet03-B05-20260922T104025Z-fei/REPORT.md`, Sections 1–3. It introduced the exact strong-witness payment functional and proved the prior one-parameter family barrier using the older looser necessary ceiling `epsilon<=10625/468288`, obtaining
+3. **OTHER-ACCOUNT RESULT APPLIED.** `private-source-repository@374c4874e914c7414abc9109fadf77cfc3947298:proofnet24/P03-fei/fleet-2026-09-22/fleet03/B05/fleet03-B05-20260922T104025Z-fei/REPORT.md`, Sections 1–3. It introduced the exact strong-witness payment functional and proved the prior one-parameter family barrier using the older looser necessary ceiling `epsilon<=10625/468288`, obtaining
    \[
    C>6.5584452821060159825\ldots .
    \tag{0.4}
@@ -58,7 +58,7 @@ The mathematical premises used are source-pinned:
 
 The named assignment partner `fleet03/B01` had **no compatible completed FEI run** under `proofnet24/P03-fei/fleet-2026-09-22/fleet03/B01/` at the fresh scientific heads checked during this run. I did not wait and did not import that slot's superseded FOREST work. The compatible completed other-account dual result in item 3 was used instead.
 
-A later scientific master file, `yspennstate/math-open-problems@c7fd21f97c4eb821bc25c370c97f56cae0bbd1d7:proofnet24/P03-fei/fleet-2026-09-22/FLEET_TASKS_2026-09-22.md`, records new measurement targets for a read-once-potential normalization. Those measurements are not used as proof premises here; this report keeps the exact strong-prime/shaped-family normalization fixed and therefore does not transfer margins across candidate versions.
+A later scientific master file, `private-source-repository@c7fd21f97c4eb821bc25c370c97f56cae0bbd1d7:proofnet24/P03-fei/fleet-2026-09-22/FLEET_TASKS_2026-09-22.md`, records new measurement targets for a read-once-potential normalization. Those measurements are not used as proof premises here; this report keeps the exact strong-prime/shaped-family normalization fixed and therefore does not transfer margins across candidate versions.
 
 ## 1. Finite-dimensional family and exact strong-prime payment
 

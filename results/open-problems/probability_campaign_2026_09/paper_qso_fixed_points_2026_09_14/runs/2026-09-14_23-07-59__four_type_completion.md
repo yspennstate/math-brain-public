@@ -1,6 +1,6 @@
 # Four-type completion of the archived QSO question
 
-Companion completion, 14 September2026. The full proof below was developed in the portfolio run and independently audited. Further [global averaging results](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/portfolio-completion/runs/2026-09-14/2026-09-14_20-23-26/checkpoints/2026-09-14_23-07-59/QSO_GLOBAL_051.md) and [exact fixed-point geometry](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/portfolio-completion/runs/2026-09-14/2026-09-14_20-23-26/checkpoints/2026-09-14_23-07-59/QSO_FIXED_POINT_GEOMETRY.md) are preserved with their complete arguments. The original manuscript remains unchanged.
+Companion completion, 14 September2026. The full proof below was developed in the portfolio run and independently audited. Further [global averaging results](private-source-repository) and [exact fixed-point geometry](private-source-repository) are preserved with their complete arguments. The original manuscript remains unchanged.
 
 # Fixed-point uniqueness for four-type strictly non-Volterra quadratic stochastic operators
 
@@ -345,7 +345,7 @@ This extension was derived by the parent, its global bound was developed by agen
 \|T^n x-x^*\|_1\le2\left(\frac{7967}{8192}\right)^{n-3},\qquad n\ge3.
 \]
 
-The complete proof is in [the half-step note](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/portfolio-completion/runs/2026-09-14/2026-09-14_20-23-26/checkpoints/2026-09-14_23-07-59/QSO_HALF_STEP_EXPLICIT.md). Its main extra ingredient is an overlap estimate for every column pair of \(A(m)\) when \(m\) is a midpoint of points in \(T^3(\Delta_3)\). The sharp two-step coordinate cap is \(49/128\). If both tested coordinate masses are at least \(225/8192\), their common parental offspring distribution supplies that much overlap. If one mass is smaller, a preimage in \(T^2(\Delta_3)\) bounds offspring probabilities into that small coordinate and forces overlap on the other two coordinates. The resulting zero-sum norm of \(I/2+A(m)\) is at most \(7967/8192\). Compact invariant-image contraction then proves the theorem. Agent024 independently verified the full argument and its exact constants. This sufficient rate is not claimed optimal.
+The complete proof is in [the half-step note](private-source-repository). Its main extra ingredient is an overlap estimate for every column pair of \(A(m)\) when \(m\) is a midpoint of points in \(T^3(\Delta_3)\). The sharp two-step coordinate cap is \(49/128\). If both tested coordinate masses are at least \(225/8192\), their common parental offspring distribution supplies that much overlap. If one mass is smaller, a preimage in \(T^2(\Delta_3)\) bounds offspring probabilities into that small coordinate and forces overlap on the other two coordinates. The resulting zero-sum norm of \(I/2+A(m)\) is at most \(7967/8192\). Compact invariant-image contraction then proves the theorem. Agent024 independently verified the full argument and its exact constants. This sufficient rate is not claimed optimal.
 
 ## Verification and scope
 

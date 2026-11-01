@@ -16,7 +16,7 @@ The preceding B14 runs closed several compact/finite-fragment and Schur-bank bra
 
 The source-pinned completed partner result used at an actual inequality is fleet04/B14,
 `QFORM-SCALE-COVARIANT-CONJUGATE-SHEAR-v1`,
-`yspennstate/math-open-problems@2ac84e141e8e939506cbd5cd8314589141b714d5`,
+`private-source-repository@2ac84e141e8e939506cbd5cd8314589141b714d5`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T051013Z-fleet04-B14-scale-shear-r7/REPORT.md`.
 It proves, for probability inputs,
 

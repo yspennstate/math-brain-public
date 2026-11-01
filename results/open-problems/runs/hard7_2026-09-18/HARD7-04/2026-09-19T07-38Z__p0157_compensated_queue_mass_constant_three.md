@@ -2,7 +2,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is n
 
 # HARD7-04 bounded research iteration — P0157 compensated queue closes the stress-family mass problem
 
-Date: 2026-09-19 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-19 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / source OPEN. Section-I recovery objective PROVED on the explicit stress family; no source closure claimed.**
 

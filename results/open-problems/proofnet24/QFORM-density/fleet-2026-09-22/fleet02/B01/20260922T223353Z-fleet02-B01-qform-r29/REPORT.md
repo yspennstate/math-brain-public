@@ -14,7 +14,7 @@ The mandatory phase-aligned-density refutation remains in force: for any nonzero
 
 The named partner actually used is fleet03/B01 r18, canonical source
 
-`yspennstate/math-open-problems@7acff3e983f6e6a3ede04ecbaf8405a3ce4ee8e2:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T202731Z-r18/REPORT.md`.
+`private-source-repository@7acff3e983f6e6a3ede04ecbaf8405a3ce4ee8e2:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T202731Z-r18/REPORT.md`.
 
 Its theorem used below is: if `X` is independent of `(U,R)`, `f_X<=1`, and `||p_U||_infinity<=M`, then for every finite `p>1`,
 

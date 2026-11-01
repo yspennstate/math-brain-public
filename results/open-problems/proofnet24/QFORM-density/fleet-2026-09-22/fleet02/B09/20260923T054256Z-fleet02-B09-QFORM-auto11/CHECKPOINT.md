@@ -6,7 +6,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Full target remains OPEN.
 
 The newest designated-partner result actually available is fleet03/B09 r24,
 `QFORM-PLUCKER-SMALLRHO-RANKSPLIT-v1`, source
-`yspennstate/math-open-problems@9fcac412f233f09c6ee5e8a1140207d596cce8a2`,
+`private-source-repository@9fcac412f233f09c6ee5e8a1140207d596cce8a2`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T045157Z-fleet03-B09-QFORM-r24/REPORT.md`.
 Its small-disjointness branch produces, at `eta=1/16`, a literal physical triple carrying either a three-core, a two-core plus an outside line, or a one-core plus an outside plane. The first unpaid B09 implication is to turn those source-coordinate rank splits into a direct linear small-ball bound while allowing arbitrary residual same-bank curvature and without treating a small coefficient matrix as a small random perturbation.
 
@@ -109,7 +109,7 @@ For the leaf `i` selected above, additionally assume the physical two-hub core i
 `A_hh=A_ii=A_hi=0`.
 
 The complete theorem `QFORM-ZERO-HUBPAIR-ARBITRARY-REMAINDER-v1` from
-`yspennstate/math-open-problems@03ec6ccf1de2e2544e850cbda25d460aacae6a1b`,
+`private-source-repository@03ec6ccf1de2e2544e850cbda25d460aacae6a1b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T024331Z-fleet02-B09-QFORM-auto12/REPORT.md`,
 allows the entire complementary quadratic operator to remain arbitrary and gives
 

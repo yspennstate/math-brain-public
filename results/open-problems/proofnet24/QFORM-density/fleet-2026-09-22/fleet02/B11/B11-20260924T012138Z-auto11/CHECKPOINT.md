@@ -111,7 +111,7 @@ This is a genuinely overlap-safe fractional receiver for the whole punctured for
 
 ## Sign-specific one-sheet payment from the required pinned e5 source
 
-The completed ruled-level-set Theorem C in math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 applies to the same exact rank-three matrix. After scaling by s:
+The completed ruled-level-set Theorem C in private-source@e5f71d79eff325201dd0274053d20268ce65b837 applies to the same exact rank-three matrix. After scaling by s:
 
 - signature (+,+,-): p_Q(t) <= pi sqrt(2)/s for t>=0;
 - signature (+,-,-): p_Q(t) <= pi sqrt(2)/s for t<=0.

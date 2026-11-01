@@ -18,9 +18,9 @@ The proof respects the live corrections: it never assumes independence after a s
 
 ## 2. Source-pinned premises actually used
 
-1. **One-dimensional projection cap.** fleet02/B11 run `20260922T135203Z-b11-qform-6080e0b3`, canonical report `yspennstate/math-open-problems@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`, proves that if independent `X_i` have densities at most one and `sum_i a_i^2=1`, then `Y=sum_i a_i X_i` has density bounded by `sqrt(e)`.
+1. **One-dimensional projection cap.** fleet02/B11 run `20260922T135203Z-b11-qform-6080e0b3`, canonical report `private-source-repository@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`, proves that if independent `X_i` have densities at most one and `sum_i a_i^2=1`, then `Y=sum_i a_i X_i` has density bounded by `sqrt(e)`.
 
-2. **Parabolic weak-L^{3/2} smoothing.** fleet02/B11 run `20260922T152031Z-fleet02-B11-qform-r18-a91c`, canonical report `yspennstate/math-open-problems@e32368258f33ea03369d23721742345e6f22447f`, proves: if `Z` is independent of `(V,W)`, `||p_Z||_infinity<=L`, and `(V,W)` has joint density bounded by `M`, then
+2. **Parabolic weak-L^{3/2} smoothing.** fleet02/B11 run `20260922T152031Z-fleet02-B11-qform-r18-a91c`, canonical report `private-source-repository@e32368258f33ea03369d23721742345e6f22447f`, proves: if `Z` is independent of `(V,W)`, `||p_Z||_infinity<=L`, and `(V,W)` has joint density bounded by `M`, then
 
 `T=2ZW+V^2`
 
@@ -30,7 +30,7 @@ has
 
 This theorem keeps the rank-two logarithmic singularity and pays it through the parabolic weak-`L^{3/2}` level-set estimate.
 
-3. **Assigned partner fleet03/B11, latest completed r12.** Canonical proof `yspennstate/math-open-problems@117c1568f8f458706c1123327f893efd750053c5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T150842Z-fleet03-B11-QFORM-r12/REPORT.md`, proves for every invertible symmetric physical `3x3` block `B`, with arbitrary affine term,
+3. **Assigned partner fleet03/B11, latest completed r12.** Canonical proof `private-source-repository@117c1568f8f458706c1123327f893efd750053c5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T150842Z-fleet03-B11-QFORM-r12/REPORT.md`, proves for every invertible symmetric physical `3x3` block `B`, with arbitrary affine term,
 
 `||p||_infinity <= 48*3^(1/4)/sqrt(s_1(B)s_2(B))`,
 

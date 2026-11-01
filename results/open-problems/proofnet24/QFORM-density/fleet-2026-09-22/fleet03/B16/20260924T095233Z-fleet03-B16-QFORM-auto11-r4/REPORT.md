@@ -16,7 +16,7 @@ The unrestricted owner target remains OPEN / NOT PROVED / NOT DISPROVED. No post
 
 The preceding fleet03/B16 run, source
 
-`yspennstate/math-open-problems@fb28047260afcaa64675fef64af6457e2815af2d`,
+`private-source-repository@fb28047260afcaa64675fef64af6457e2815af2d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260924T085813Z-fleet03-B16-QFORM-auto11-r3/REPORT.md`,
 
 closed only rank-one shared overlap and left the state where a square scalar and the transverse hyperbolic scalar are two genuinely dependent projections of the same original product bank. The present run closes the canonical square-hyperbolic normal form of exactly that state.
@@ -24,7 +24,7 @@ closed only rank-one shared overlap and left the state where a square scalar and
 The analytic inputs are source-valid:
 
 1. The actual two-dimensional bounded-density projection theorem, as pinned and applied in fleet04/B16 r4,
-   `yspennstate/math-open-problems@7f2bb2d330022b09a6af6e39ab09d054caeaa346`,
+   `private-source-repository@7f2bb2d330022b09a6af6e39ab09d054caeaa346`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260924T041516Z-fleet04-B16-QFORM-r4/REPORT.md`:
    every orthonormal two-dimensional projection of a cap-one product law has joint density cap at most `2`.
 2. The source-pinned scalar projection bound used in the preceding B16 report:

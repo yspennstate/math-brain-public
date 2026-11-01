@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # NM13-13 — F0013 exact order-6 atlas by signed-permutation quotient
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **F0013 source OPEN / NM13-13 PARTIAL.** This invocation continues the already-admitted exclusive F0013 target under `operations/claims/F0013.md`; it does not reopen intake, create a second claim, or change the frozen metric.
 

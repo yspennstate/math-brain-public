@@ -197,7 +197,7 @@ The designated partner result is
 
 `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`,
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 

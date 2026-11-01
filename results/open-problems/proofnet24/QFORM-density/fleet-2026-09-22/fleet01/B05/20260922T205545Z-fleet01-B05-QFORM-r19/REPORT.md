@@ -158,7 +158,7 @@ Thus this correction does not disprove a uniform bound on the integrated radial 
 
 The assigned partner fleet02/B05 proved `QFORM-THREE-BANK-GENERAL-CORE-v1` in
 
-`yspennstate/math-open-problems@a31006ef311ca9e937f37c62d602d21ada3b1139`,
+`private-source-repository@a31006ef311ca9e937f37c62d602d21ada3b1139`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T202100Z-b05-qform-47d9c1a2/REPORT.md`.
 
@@ -209,8 +209,8 @@ A proof of (6.1), combined with the already-paid balanced sector, would close th
 
 Sources actually used:
 
-- preceding B05 coarea report: `yspennstate/math-open-problems@d5aecac785f127174d8349c01db0f492035ad341:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260922T195340Z-fleet01-B05-QFORM-r17/REPORT.md`;
-- assigned partner theorem actually applied: `yspennstate/math-open-problems@a31006ef311ca9e937f37c62d602d21ada3b1139:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T202100Z-b05-qform-47d9c1a2/REPORT.md`;
+- preceding B05 coarea report: `private-source-repository@d5aecac785f127174d8349c01db0f492035ad341:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260922T195340Z-fleet01-B05-QFORM-r17/REPORT.md`;
+- assigned partner theorem actually applied: `private-source-repository@a31006ef311ca9e937f37c62d602d21ada3b1139:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T202100Z-b05-qform-47d9c1a2/REPORT.md`;
 - current programme controls/corrections from `yspennstate/math-research-brain`, revision `2026-09-22.15`.
 
 Full QFORM: `OPEN_NOT_PROVED`. Continuity: `NOT_PROVED`. No scheduler, task, notification, email, Drive, public-release, paid-model/API, remote-workflow, permission, or installation mutation is made by this report.

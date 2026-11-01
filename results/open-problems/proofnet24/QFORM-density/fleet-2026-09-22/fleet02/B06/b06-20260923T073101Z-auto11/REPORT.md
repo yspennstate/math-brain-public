@@ -19,7 +19,7 @@ The live correction boundary was retained: law-uniform pointwise quadratic-phase
 
 The source-valid inputs actually used below are:
 
-1. **Designated partner fleet03/B06 r28**, canonical mathematics `yspennstate/math-open-problems@36cc5730f42c76c15fdc330dc4b47beec060b8fd`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T061939Z-fleet03-B06-qform-r28/REPORT.md`. For a cross block
+1. **Designated partner fleet03/B06 r28**, canonical mathematics `private-source-repository@36cc5730f42c76c15fdc330dc4b47beec060b8fd`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T061939Z-fleet03-B06-qform-r28/REPORT.md`. For a cross block
 
    `B=[[b,r^T],[c,D]]`,
 
@@ -31,15 +31,15 @@ The source-valid inputs actually used below are:
 
    `Z_(i,a)>127 G^4/800`.
 
-2. **Own weighted affine-fiber Brascamp--Lieb theorem**, canonical source `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. If `R` has orthonormal columns and `Z` has independent cap-one coordinates, then `R^T Z` has density at most `e^(k/2)` in dimension `k`. After an invertible linear map, a one-dimensional linear form `a.Z` has density at most `sqrt(e)/||a||`, while a two-dimensional pair `(a.Z,b.Z)` has density at most
+2. **Own weighted affine-fiber Brascamp--Lieb theorem**, canonical source `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. If `R` has orthonormal columns and `Z` has independent cap-one coordinates, then `R^T Z` has density at most `e^(k/2)` in dimension `k`. After an invertible linear map, a one-dimensional linear form `a.Z` has density at most `sqrt(e)/||a||`, while a two-dimensional pair `(a.Z,b.Z)` has density at most
 
    `e/sqrt(||a||^2||b||^2-(a.b)^2)`.
 
-3. **Required newest-Claude package**, pinned at `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` were read. The completed coordinate-hyperbola peel from `FOURIER_ROUTE_REPORT.md` is applied in Section 5 to a genuine target family, not merely cited.
+3. **Required newest-Claude package**, pinned at `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` were read. The completed coordinate-hyperbola peel from `FOURIER_ROUTE_REPORT.md` is applied in Section 5 to a genuine target family, not merely cited.
 
 4. Immediate own predecessor `b06-20260923T065430Z-3f494f528ca7`, which paid the disjoint-coefficient double-null branch by factorising two one-dimensional negative moments, but left shared coefficient forms unpaid. The present theorem removes that disjoint-support hypothesis whenever the two shared coefficient rows are transverse.
 
-The early mathematical checkpoint was committed first in this run as `EARLY_CHECKPOINT.md` at math-open-problems commit `dc2401f70c4c1f175829b8e0ca542d8d1e940a39`.
+The early mathematical checkpoint was committed first in this run as `EARLY_CHECKPOINT.md` at private-source commit `dc2401f70c4c1f175829b8e0ca542d8d1e940a39`.
 
 ## 1. A two-dimensional weighted negative-moment lemma
 

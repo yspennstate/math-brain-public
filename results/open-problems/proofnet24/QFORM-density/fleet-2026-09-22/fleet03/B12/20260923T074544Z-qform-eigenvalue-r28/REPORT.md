@@ -18,7 +18,7 @@ No Gaussian, moment, compact-support, log-concavity, connected-support, spectral
 
 The completed designated partner result used at an equation is:
 
-`yspennstate/math-open-problems@d460b6cc1d557090dce30e824744c2dd3d335fb1`
+`private-source-repository@d460b6cc1d557090dce30e824744c2dd3d335fb1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T071518Z-fleet04-B12-multirank-resonance-r3/REPORT.md`.
 

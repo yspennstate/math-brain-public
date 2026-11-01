@@ -14,7 +14,7 @@ The unrestricted quadratic-form bounded-density conjecture remains OPEN. This re
 
 The completed interactive theorem
 
-`yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`,
+`private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`,
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_GAUSSIAN_MIXTURE_FULL_THEOREM.md`
 
 proves the full arbitrary-rank/sign/affine QFORM estimate for independent coordinates of the form
@@ -153,7 +153,7 @@ Equivalently, a height-`L` interval law stays the same fixed positive distance f
 
 Completed partner source:
 
-`yspennstate/math-open-problems@cff8e1368d32302e6d649f776579a5c1951929b1`,
+`private-source-repository@cff8e1368d32302e6d649f776579a5c1951929b1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T151702Z-fleet04-B15-pivoted-convolution-r6/REPORT.md`.
 
 It proves that for independent cap-one `X,Y,Z`,

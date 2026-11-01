@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R06 CLOSABLE OUTSIDE — BENJ-2026-FS3 / outer-collar reduction
 
 Run date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Delivery: private GitHub only. No email, Drive, public posting, purchases, permission changes, workflow execution, or scheduler mutation.
 
 ## 1. Continuity, ownership, original R06 source, and frozen metric

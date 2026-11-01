@@ -29,7 +29,7 @@ I retain the current corrections. In particular I do not use law-uniform pointwi
 
 Canonical source:
 
-`yspennstate/math-open-problems@657566d3f5026e672f5cbe6b8c03fe63766bf0`
+`private-source-repository@657566d3f5026e672f5cbe6b8c03fe63766bf0`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T132108Z-b15-qform-separator-regularity-r2/REPORT.md`
 
@@ -42,7 +42,7 @@ I use two exact pieces from it:
 
 Canonical source:
 
-`yspennstate/math-open-problems@2279571f59ade7a9ec478af1e4818f6c117ac224`
+`private-source-repository@2279571f59ade7a9ec478af1e4818f6c117ac224`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`
 
@@ -57,7 +57,7 @@ It proves:
 
 Canonical source:
 
-`yspennstate/math-open-problems@5b82e40a37b4f475866e63f67d48cfd9e3909d0c`
+`private-source-repository@5b82e40a37b4f475866e63f67d48cfd9e3909d0c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T123805Z-fleet03-B14-QFORM-r11/REPORT.md`
 
@@ -69,7 +69,7 @@ For a definite symmetric `2x2` block `S`, every affine quadratic in two independ
 
 Canonical source:
 
-`yspennstate/math-open-problems@47dc925729bbf269333cc6e1256178a538d2f553`
+`private-source-repository@47dc925729bbf269333cc6e1256178a538d2f553`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260922T120320Z-fleet01-B15-qform/REPORT.md`
 

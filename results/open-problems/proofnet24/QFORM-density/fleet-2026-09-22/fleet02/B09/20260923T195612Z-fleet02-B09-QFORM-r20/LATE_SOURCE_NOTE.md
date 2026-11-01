@@ -4,7 +4,7 @@ A fresh designated-partner query after the immutable `REPORT.md` was published e
 
 Latest designated partner source:
 
-`yspennstate/math-open-problems@cbe3ecd6d69640ce5e918b6ce599f0452a437311`
+`private-source-repository@cbe3ecd6d69640ce5e918b6ce599f0452a437311`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T192055Z-fleet03-B09-QFORM-r40/REPORT.md`,
 

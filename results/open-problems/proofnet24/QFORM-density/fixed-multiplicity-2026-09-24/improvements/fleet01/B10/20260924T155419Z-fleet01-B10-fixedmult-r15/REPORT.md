@@ -1,6 +1,6 @@
 # B10 r15 improvement
 
-I checked the fleet03/B13 s8 retune at math-open-problems commit e9a425b9ec3455dfe13b787fb259dec11aa1b176. Exact-constant verdict: PASS in this B10 review, subject to the local hyperbolic negative-tail coordinate repair in the sibling audit. This is not an owner validation flag.
+I checked the fleet03/B13 s8 retune at private-source commit e9a425b9ec3455dfe13b787fb259dec11aa1b176. Exact-constant verdict: PASS in this B10 review, subject to the local hyperbolic negative-tail coordinate repair in the sibling audit. This is not an owner validation flag.
 
 Checked exact margins: inner s5 interpolation 3/500; inner full half potential <105/2; outer collar delta >559973047/4840000000 >23/200; robust pair g>529/80000; two-high leverage exclusion margin 151339/3513840000>0; one-high diagonal-dominance margin 31/440; W_dis>1/12000 and terminal receiver<60; large-V3 branch <2135727/6125<349; outer scalar squared slack 526; pair branches <28 and <138. Thus the candidate s8 bound <349 K^2/s survives this exact audit. Global continuity is not claimed.
 

@@ -120,4 +120,4 @@ The only exact-rank-three true-near-coloop Rayleigh collar left by this calculat
 
 together with the already-recorded B16 ultra-collar structural survivors. The endpoint `a=0` is no longer part of that debt.
 
-Sources actually used: fleet04/B16 `yspennstate/math-open-problems@48d2f4234b05dfa527f1119c2c3dfc4a4b941f5d`; rank-two affine half-Riesz `@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`; zero-pivot conditional trace `@1bbe7c7c194bc92e10fc9c3cb3eb548d65e7043d`; current B16 ultra-collar compiler `@f6f7e407aea4977e9b061d90eefd8e692d3191ed`.
+Sources actually used: fleet04/B16 `private-source-repository@48d2f4234b05dfa527f1119c2c3dfc4a4b941f5d`; rank-two affine half-Riesz `@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`; zero-pivot conditional trace `@1bbe7c7c194bc92e10fc9c3cb3eb548d65e7043d`; current B16 ultra-collar compiler `@f6f7e407aea4977e9b061d90eefd8e692d3191ed`.

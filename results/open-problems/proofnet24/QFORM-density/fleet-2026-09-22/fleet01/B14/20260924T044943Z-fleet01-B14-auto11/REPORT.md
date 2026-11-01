@@ -97,7 +97,7 @@ The measure `nu_u` need not be a product law internally. The theorem is useful e
 Fresh completed partner source:
 
 `fleet02/B14`, canonical proof
-`yspennstate/math-open-problems@24ce9b1a9e5691e12a7d9f02d7cf455cb8850862`
+`private-source-repository@24ce9b1a9e5691e12a7d9f02d7cf455cb8850862`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260924T040328Z-fleet02-B14-QFORM-auto11/REPORT.md`.
 
 Its theorem `QFORM-TRANSVERSE-VERTEX-SUBPROBABILITY-COMPILER-v1` says: if `W,U` are independent probability laws with density caps `K_W,K_U`, `tau` is an independent positive environment measure of mass `m`, and the unnormalized pushforward of `S=S(Z)` has density cap `L_S`, then for arbitrary measurable `Phi(U,Z)`, arbitrary `R(Z)`, and `a!=0`, the output submeasure of
@@ -208,7 +208,7 @@ The standard one-dimensional product-projection theorem for independent cap-one 
 
 `||p_{c^T Z}||_inf <= sqrt(2)/||c||_2 = sqrt(2)/r`.             (6.1)
 
-One source-backed occurrence is `yspennstate/math-open-problems@43eab33dc9cd6063c84089b5fc3692abceeadb21`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260922T200435Z-b01-qform-auto11/REPORT.md`, which cites the Rudelson--Vershynin one-dimensional projection theorem.
+One source-backed occurrence is `private-source-repository@43eab33dc9cd6063c84089b5fc3692abceeadb21`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260922T200435Z-b01-qform-auto11/REPORT.md`, which cites the Rudelson--Vershynin one-dimensional projection theorem.
 
 In (3.1), take
 

@@ -13,14 +13,14 @@ The full target remains open. The results below preserve arbitrary independent o
 ## 1. Sources actually consumed and applied
 
 2. Designated partner `fleet02/B13` r23:
-   `yspennstate/math-open-problems@892bfe36756e09cbaff3f05070f7a3e20fea0fd1`,
+   `private-source-repository@892bfe36756e09cbaff3f05070f7a3e20fea0fd1`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T040105Z-fleet02-B13-extremal-r23/REPORT.md`.
    I apply its exact rank-one Schur `E2`-loss identity in Section 6 to the *actual pair-Schur correction*, producing a quantitative survive/tri-hub/transverse-star trichotomy.
 3. `fleet03/B13` r23:
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T034405Z-fleet03-B13-qform-r23/REPORT.md`.
    Its `QFORM-E2-ENTROPIC-L3-v1` and `QFORM-E2-ENTROPY-OR-TRIHUB-v1` are used in Sections 4-5.
 4. Pair-log theorem:
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
    Its physical-pair logarithmic envelope is optimized in Section 3.
 

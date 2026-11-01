@@ -15,7 +15,7 @@ The unrestricted owner conjecture remains OPEN. Continuity is tracked separately
 
 The designated partner is fleet02/B03. I use its completed r12 report
 
-`yspennstate/math-open-problems@c2bc78fc4f8e642f5d8c85fcc7d53956730b5cb1`
+`private-source-repository@c2bc78fc4f8e642f5d8c85fcc7d53956730b5cb1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T211507Z-fleet02-B03-QFORM-r12/REPORT.md`.
 
@@ -38,7 +38,7 @@ This is the dependence-safe time integral applied below. It never conditions `X-
 
 A second completed dependency is the orientation-free rank-two report
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 

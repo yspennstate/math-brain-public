@@ -152,7 +152,7 @@ Thus multiple orthogonal spectral bands cost the maximum small threshold rather 
 
 The current designated partner is fleet04/B12 r8:
 
-`yspennstate/math-open-problems@bcb9fd2641440a89d6e4967781d755618e163001`
+`private-source-repository@bcb9fd2641440a89d6e4967781d755618e163001`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T002154Z-fleet04-B12-multihub-shear-r8/REPORT.md`.
 
@@ -196,7 +196,7 @@ We may therefore apply the completed fleet02/B12 six-mode theorem
 
 canonical source
 
-`yspennstate/math-open-problems@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`.
+`private-source-repository@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`.
 
 For `m=8`, `N=binom(8,2)=28`, choose its canonical parameters
 

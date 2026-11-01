@@ -14,11 +14,11 @@ This report does **not** prove the full target. It respects the current correcti
 
 The exact assigned partner `fleet04/B17` had no completed QFORM handoff or canonical report visible at the pre-publication check. I therefore do not invent a partner result. I apply two compatible completed inputs instead:
 
-1. `fleet02/B17`, canonical report `yspennstate/math-open-problems@cdd32fd16a694a5f8acc7ba758e0db6596a3e4a1`, proves the sharp centered-Gaussian three-mode envelope
+1. `fleet02/B17`, canonical report `private-source-repository@cdd32fd16a694a5f8acc7ba758e0db6596a3e4a1`, proves the sharp centered-Gaussian three-mode envelope
    `||p||_infinity <= 1/(2 sqrt(2) s)` when three Gaussian quadratic coefficients have magnitude at least `s`, with equality for `s diag(1,1,-1)`.
-2. `fleet04/B18`, canonical report `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, proves the minority-pivot Schur-complement smoothing theorem. I use it below to show that a new exact rotated family lies entirely in its declared unpaid branch.
+2. `fleet04/B18`, canonical report `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, proves the minority-pivot Schur-complement smoothing theorem. I use it below to show that a new exact rotated family lies entirely in its declared unpaid branch.
 
-I also apply the newer regularized-determinant theorem at `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a` to the same stress family, obtaining an explicit dimension-free bound.
+I also apply the newer regularized-determinant theorem at `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a` to the same stress family, obtaining an explicit dimension-free bound.
 
 ## 2. New lemma: noncentral squares are central squares plus independent positive noise after Poisson mixing
 

@@ -68,7 +68,7 @@ The preceding fleet01/B05 r29 paid the whole collar `rho>=1/128` in the normaliz
 
 The newest completed fleet02/B05 report available at refresh is
 
-`yspennstate/math-open-problems`, path
+`private-source-repository`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T092247Z-fleet02-B05-QFORM-r19/REPORT.md`,
 
 theorem `QFORM-EXACTRANK3-LEAVEONEOUT-FRESNEL-v1`.

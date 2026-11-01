@@ -37,7 +37,7 @@ If `H(nu)<infinity`, then `nu<=H(nu) dx`; in particular `nu` has an essentially 
 
 The required source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -399,7 +399,7 @@ Unlike the partner's fixed-matrix theorem, the constant `40` is uniform over all
 
 The newest designated partner fleet03/B15 result is
 
-`yspennstate/math-open-problems@696a0784ba7d270db657c1596d9c2ee940a1745d`
+`private-source-repository@696a0784ba7d270db657c1596d9c2ee940a1745d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260924T032517Z-fleet03-B15-qform-auto32/REPORT.md`.
 

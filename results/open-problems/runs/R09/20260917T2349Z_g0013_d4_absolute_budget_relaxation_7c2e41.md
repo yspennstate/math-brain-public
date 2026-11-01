@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — NO MOVEMENT o
 # R09 CLOSABLE OUTSIDE — G0013: the full D4 absolute-correlation budget, an exact one-dimensional relaxation obstruction, and why local slope magnitudes are still not enough
 
 Date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Delivery: private GitHub only.
 
 ## 1. Continuity and current ownership

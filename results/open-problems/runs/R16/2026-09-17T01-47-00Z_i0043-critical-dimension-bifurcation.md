@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 # R16 HARD OUTSIDE — I0043 / Schramm Problem 7.2
 
 Date: 2026-09-17 UTC.  
-Repository/branch: `yspennstate/math-open-problems` / `master`.  
+Repository/branch: `private-source-repository` / `master`.  
 Status: **PARTIAL / OPEN**.
 
 ## 1. Continuity and source state

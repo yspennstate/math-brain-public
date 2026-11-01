@@ -13,17 +13,17 @@ attacking: aggregate coordinate-minor payment: convert determinant-weighted thir
 
 1. Current target/corrections and assignment from `yspennstate/math-research-brain` main, including `CURRENT_RESEARCH.md`, `CORRECTION_INBOX.json`, `PATHWAYS.md`, `MEMORY_PROTOCOL.md`, and `assignments/fleet02/B07.json`.
 2. Completed analytic theorem `QFORM-RIDGE-DENSITY-v1`, full proof:
-   `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
+   `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
    Exact scope used below: for an original-coordinate cross block `B=A[I,J]`, with
    `K_gamma=BB^T(gamma^2 I+BB^T)^(-1)`, `theta=tr K_gamma`, `D=det(I+BB^T/gamma^2)`, if `1<=q<=2`, `max_i (K_gamma)_ii<=q/2`, and `theta>2q`, then the full quadratic form, retaining arbitrary self blocks, outside couplings, affine terms and extra spectrum, has
    `||p_Q||_infinity <= e/(sqrt(2q) gamma) * theta/(theta-2q) * D^(-1/(2theta))`.
    The theorem may be applied after transposing `B` and therefore either physical side may supply the leverage gate.
 3. Designated partner fleet03/B07 r16, complete report:
-   `yspennstate/math-open-problems@4ee3cfb2d6682d5be670819cf5de173ad859f6cf:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T193812Z-fleet03-B07-qform-r16/REPORT.md`.
+   `private-source-repository@4ee3cfb2d6682d5be670819cf5de173ad859f6cf:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T193812Z-fleet03-B07-qform-r16/REPORT.md`.
    Its `QFORM-COLORED-EXTERIOR-MATCHING-v1` keeps compound mass aggregated over original-coordinate banks and, on the full O0 branch, supplies the exact source-valid resource
    `E_3(B):=e_3(BB^T)>=1/256`.
 4. Previous own completed theorem `QFORM-CROSS-FIBER-PLANCHEREL-v1`, source:
-   `yspennstate/math-open-problems@5266d24ea98d9bb5902c51a92eca0e3e38112e39:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T193347Z-b07-639234ec/REPORT.md`.
+   `private-source-repository@5266d24ea98d9bb5902c51a92eca0e3e38112e39:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T193347Z-b07-639234ec/REPORT.md`.
    In exact cross rank `r>=3` it gives `||p_Q||_infinity <= e r/(r-2) (prod s_j)^(-1/r)` while retaining all self/outside terms.
 
 No arbitrary-joint coarea bound, post-rotation independence, single-minor reciprocal averaging, or law-uniform pointwise quadratic-phase decay is used.

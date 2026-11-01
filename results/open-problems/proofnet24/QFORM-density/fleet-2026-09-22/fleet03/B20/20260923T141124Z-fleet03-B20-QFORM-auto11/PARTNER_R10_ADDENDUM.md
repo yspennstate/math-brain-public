@@ -3,7 +3,7 @@
 During the required prepublication refresh, fleet04/B20 completed a strictly fresher theorem:
 
 - `QFORM-N3-THREE-SINGULAR-CROSSCUT-v1`
-- `yspennstate/math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912`
+- `private-source-repository@c6f29397b3d45a7cf7ab67633a5451767b478912`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`.
 
 It removes the former threshold-transfer debt altogether. In `N3(1/64)` it constructs a literal original-coordinate cut `N=A[J,K]` with
@@ -61,7 +61,7 @@ Therefore
 
 Apply the completed grouped physical cross-rank-three theorem
 
-`yspennstate/math-open-problems@0257b7a08990f303da16797bcbad0d3e6a1e6538`,
+`private-source-repository@0257b7a08990f303da16797bcbad0d3e6a1e6538`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T104947Z-fleet03-B09-QFORM-r30/REPORT.md`,
 
 which retains arbitrary same-bank curvature and all conditioned outside variables and gives

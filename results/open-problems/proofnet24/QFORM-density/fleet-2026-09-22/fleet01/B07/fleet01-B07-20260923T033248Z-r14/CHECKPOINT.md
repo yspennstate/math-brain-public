@@ -16,7 +16,7 @@ Normalize the squared-minor weights to a probability law and let `alpha_i` and `
 
 ## Step 1: apply the current fractional-volume theorem
 
-Source actually used at an equation: `math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`, Theorem (10): if all row marginals are at most `q/2`, `1<=q<3/2`, then
+Source actually used at an equation: `private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`, Theorem (10): if all row marginals are at most `q/2`, `1<=q<3/2`, then
 
 `||p_Q||inf <= 3e/[(3-2q)sqrt(q)] P^(-1/6)`
 
@@ -43,7 +43,7 @@ Because each residual marginal family sums to two, `|R0|,|C0|<=4`. Put
 
 `delta_R=sum_{k notin R0}rho_k`, `delta_C=sum_{l notin C0}sigma_l`.
 
-If `delta_R+delta_C<1/2`, apply the designated partner fleet02/B07 theorem `QFORM-DETERMINANT-MARGINAL-TAIL-CORE-v1`, source `math-open-problems@1f5ab2ddba6e99675fb9177666c5e64e396e54e5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T023322Z-r11/REPORT.md`. Its exact union-bound identity gives
+If `delta_R+delta_C<1/2`, apply the designated partner fleet02/B07 theorem `QFORM-DETERMINANT-MARGINAL-TAIL-CORE-v1`, source `private-source@1f5ab2ddba6e99675fb9177666c5e64e396e54e5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T023322Z-r11/REPORT.md`. Its exact union-bound identity gives
 
 `E3(B[R0,C0]) >= (1-delta_R-delta_C) M_ij > P/6`.
 

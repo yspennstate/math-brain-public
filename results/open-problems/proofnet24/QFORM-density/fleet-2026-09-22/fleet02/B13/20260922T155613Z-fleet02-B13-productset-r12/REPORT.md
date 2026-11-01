@@ -12,7 +12,7 @@ The full quadratic-form conjecture remains **OPEN / NOT PROVED**.
 
 The fresh designated partner result is fleet03/B13
 
-`yspennstate/math-open-problems@6fd070b11f649461fc4e25163e6289d7585232b6`,
+`private-source-repository@6fd070b11f649461fc4e25163e6289d7585232b6`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/fleet03-B13-20260922T153142Z-r11/REPORT.md`.
 
@@ -22,7 +22,7 @@ This run tests the most direct stability mechanism early: compare the slab kerne
 
 The exact bang-bang reduction from this slot remains available at
 
-`yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`:
+`private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`:
 for every slab kernel, the supremum over independent densities `0<=f_i<=1`, `int f_i=1`, equals the supremum over unit-measure product indicators. Hence a product-indicator obstruction is the correct extremal class; no interval extremality is assumed by the reduction.
 
 ## 2. Exact four-direction endpoint
@@ -149,7 +149,7 @@ Finally there are only 109 possible integer unit intervals. For any sequence `th
 
 This is a counterexample to a **mechanism**, not to the target theorem. Each `A_theta` has only five physical rows and hence at most five projective row directions. The completed finite-direction theorem from this slot,
 
-`yspennstate/math-open-problems@8a21bd3d25ce1622121616ce789589e1e073f68d`,
+`private-source-repository@8a21bd3d25ce1622121616ce789589e1e073f68d`,
 
 proves for exact rank three with at most `m` projective directions
 

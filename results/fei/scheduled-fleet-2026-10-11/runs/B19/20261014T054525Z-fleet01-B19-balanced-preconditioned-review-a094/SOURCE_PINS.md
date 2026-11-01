@@ -6,7 +6,7 @@
 - Current order: same repository,
   `scheduled_tasks/work/shared/full-fei-only-2026-10-12/ORDER.md`,
   blob `231e48480d53b8d868ecd85105e19cc3efe5b5ff`.
-- B19 assignment: `yspennstate/math-open-problems`,
+- B19 assignment: `private-source-repository`,
   `reports/fei-2026-10-11/assignments/B19.json`,
   blob `ee688080aba90acd2daed1b26e809e38285dcb85`.
 - Execution protocol blob:

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 # P03 / I0003 run report — adaptive cutset resistance and a recurrent deterministic `M(R)=Theta(log R)` field
 
 Run date: 17 September 2026 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Track: P03 / HARD OUTSIDE.  
 Canonical claim: `operations/claims/I0003.md`.  
 Source: Ahmed Bou-Rabee and Yuval Peres (2026), *The randomly oriented Manhattan lattice in 2D is transient*, arXiv:2609.07621v1, Section 7, Problem 3.  

@@ -15,14 +15,14 @@ The unrestricted target remains OPEN: independent original coordinates with one-
 
 This report uses exactly these source-pinned inputs.
 
-1. The true-near-coloop coordinates and punctured outer estimate from fleet03/B16, `yspennstate/math-open-problems@bdbe6e38a3ee3d586e8e6119e518c573310253fb`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T190206Z-fleet03-B16-QFORM-auto11b/REPORT.md`.
-2. The independently checked grouped-hub projected-crossing theorem, `yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`, Section 3. For one hub and projected crossing order `ell=2`, it gives
+1. The true-near-coloop coordinates and punctured outer estimate from fleet03/B16, `private-source-repository@bdbe6e38a3ee3d586e8e6119e518c573310253fb`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T190206Z-fleet03-B16-QFORM-auto11b/REPORT.md`.
+2. The independently checked grouped-hub projected-crossing theorem, `private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`, Section 3. For one hub and projected crossing order `ell=2`, it gives
 
    `||p_Q||_infinity <= C_GC (S^2 Z_2)^(-1/6)`,
    `C_GC=3*2^(7/6)*exp(1/3)=9.3991318878...`,
 
    provided the two-volume row marginals are at most `1/2`. Internal hub functions, arbitrary within-side light quadratic terms, diagonals and affine terms are allowed.
-3. The designated partner fleet02/B16 r36 theorem `QFORM-FRESH-HUB-DIVISIBLE-TWIST-ABSORPTION-v1`, `yspennstate/math-open-problems@be8062b160868bcc71aff45a77c56ff2d0501a9a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T203140Z-fleet02-B16-QFORM-r36/REPORT.md`.
+3. The designated partner fleet02/B16 r36 theorem `QFORM-FRESH-HUB-DIVISIBLE-TWIST-ABSORPTION-v1`, `private-source-repository@be8062b160868bcc71aff45a77c56ff2d0501a9a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T203140Z-fleet02-B16-QFORM-r36/REPORT.md`.
 
 The live corrections are preserved. In particular this proof never replaces an indefinite curved integral by a bare joint-density cap, never assumes projected coordinates are independent, never uses a conditional projection-height moment, and never discards a small-coefficient random quadratic term without source control. The earlier `QFORM-TWO-BANK-INNOVATION-SLOPE-LOWERBOUND-FALSE-v1` correction is also respected: the theorem below does not divide by a one-bank longitudinal innovation or by a slope separation.
 

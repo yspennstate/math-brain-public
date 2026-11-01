@@ -24,7 +24,7 @@ Fresh owner controls and the live correction ledger were reread on `yspennstate/
 The mathematical inputs used below are:
 
 1. **Fractional third-volume Fourier theorem**, canonical source
-   `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+   `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
    `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
    For an ORIGINAL-coordinate physical cross block `B`, put
    `Z=E3(B)=e3(B^T B)>0`, and let `alpha_i` be its determinant-weighted third-volume row inclusion marginals. If, for `1<=q<3/2`, every `alpha_i<=q/2`, then the full quadratic-plus-affine form, retaining arbitrary same-bank curvature and outside couplings, has a continuous `C_0` density satisfying
@@ -34,7 +34,7 @@ The mathematical inputs used below are:
    The same statement holds after transposing `B`, hence with the column marginals in place of the row marginals. The proof supplies genuine `phi_Q in L1`.
 
 2. **Joint-star block compiler**, fleet02/B02,
-   `yspennstate/math-open-problems@e8d024801adae701d47d58d85c41acb5b8ec4454`,
+   `private-source-repository@e8d024801adae701d47d58d85c41acb5b8ec4454`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T020523Z-fleet02-B02-QFORM-auto11-c1a7e2f4/REPORT.md`.
    If a row anchor `i` and column anchor `j` carry joint incident third-volume `J_ij` and
 
@@ -52,7 +52,7 @@ The mathematical inputs used below are:
 
 3. **Bankwise Schur grouped-L1 theorem**, fleet02/B02,
    immutable containing source
-   `yspennstate/math-open-problems@e28bdce394cdb3d096de191390ea5cca0b3cdef9`,
+   `private-source-repository@e28bdce394cdb3d096de191390ea5cca0b3cdef9`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T110948Z-fleet02-B02-QFORM-r11/REPORT.md`.
    For a physical `k x k` cross pivot `P`, cross Schur residual `S` of rank `r`, and `d=k+r>2`, it gives an integrated Fourier estimate. In the scalar-pivot/exact-rank-two case,
 
@@ -61,7 +61,7 @@ The mathematical inputs used below are:
    with a continuous `C_0` density, where `Delta_2(S)` is the product of the two nonzero singular values.
 
 4. **Designated partner fleet04/B02**, canonical source
-   `yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+   `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
    If a nonsingular physical zero-diagonal principal triple `H0` exists, then
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-A — exact affine positivity barrier and a buffered overcomplete hinge route
 
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured pre-write master:** `2ea173b2d482ead49e63e7ecd303057d2f46d9f4`  
 **Previous own substantive checkpoint:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1511+0300__prime_half_support_hinge_certificate.md`, blob `b30ae17565ae638f2ed7362c6c5613f61488db3b`.  
 **Complementary P07-B checkpoint read:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T1508+0300__selected_quadratic_energy_scale_sharpness.md`, blob `338c47183c62feea3824db3048caa2611691f473`. P07-B owns Fourier-dual / exceptional-frequency interpolation. This report uses only its already-shared empirical Gaussian radial-field input and stays on primal positive-certificate geometry.

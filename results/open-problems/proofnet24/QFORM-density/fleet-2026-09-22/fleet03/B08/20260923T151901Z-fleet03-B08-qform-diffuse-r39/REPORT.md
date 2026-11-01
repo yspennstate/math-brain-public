@@ -16,12 +16,12 @@ The main new point is a product-preserving bridge from a *diffuse low-rank scala
 ## 1. Sources used at equations
 
 1. Immediate B08 predecessor:  
-   `yspennstate/math-open-problems@1a70497363989dfea9fa4ce9e515fa279677df69`  
+   `private-source-repository@1a70497363989dfea9fa4ce9e515fa279677df69`  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T131815Z-fleet03-B08-qform-diffuse-r38/REPORT.md`.  
    It routes scalar-Schur cancellation of an anisotropic physical core into a localized physical triangle and leaves the aligned/high-leverage low-rank receiver as an explicit debt.
 
 2. Aggregate scalar-Schur `E_2` receiver:  
-   `yspennstate/math-open-problems@2cb64b71f8aafa0892547dffebcf6af647ea7c64`  
+   `private-source-repository@2cb64b71f8aafa0892547dffebcf6af647ea7c64`  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T102108Z-fleet03-B08-qform-diffuse-r32/REPORT.md`.  
    If a genuine original scalar pivot has coefficient `a!=0` and its exact Schur residual contains an ORIGINAL-coordinate cross block `M` with `E_2(M)>0`, then
 
@@ -34,7 +34,7 @@ The main new point is a product-preserving bridge from a *diffuse low-rank scala
    Arbitrary residual self-curvature and unused couplings are retained. Continuity is not asserted by this route.
 
 3. Newest required volume-stability result:  
-   `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`  
+   `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`  
    `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.  
    For a literal physical cross block `M=M0+E`, if `s3(M0)>=c`, the row-range projection of `M0` has diagonal at most `1/2`, and `||E||op<=c/16`, then the corresponding quadratic-affine form has a continuous `C_0` density bounded by
 
@@ -43,7 +43,7 @@ The main new point is a product-preserving bridge from a *diffuse low-rank scala
    Arbitrary within-bank phases and outside couplings are retained.
 
 4. Designated partner fleet04/B08:  
-   `yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`  
+   `private-source-repository@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T091414Z-fleet04-B08-QFORM-r1/REPORT.md`.  
    For every `R>=3`, every `L>0`, and every admissible product input,
 

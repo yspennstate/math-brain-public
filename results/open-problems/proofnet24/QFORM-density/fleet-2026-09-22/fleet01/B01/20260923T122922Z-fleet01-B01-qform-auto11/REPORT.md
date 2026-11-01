@@ -21,12 +21,12 @@ The phase-aligned fragmented-support counterexample therefore remains fully pres
 
 The analytic source used below is Theorem MF from the pinned Fourier package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
 The designated partner result actually applied is fleet02/B01 r42,
 
-`yspennstate/math-open-problems@2aa47367766e1b63306bec723c42fcd2899ca6ac`,
+`private-source-repository@2aa47367766e1b63306bec723c42fcd2899ca6ac`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T120442Z-fleet02-B01-qform-r42/REPORT.md`,
 
 whose new exterior-overlap decomposition isolates `W_1` as a genuine remaining channel and computes the exact strict-N3 hub-square model with

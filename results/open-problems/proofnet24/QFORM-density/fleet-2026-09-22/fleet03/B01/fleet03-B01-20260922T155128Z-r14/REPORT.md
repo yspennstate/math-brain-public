@@ -20,7 +20,7 @@ The mechanism here is different from optimizing another fixed local minor. It fi
 
 The completed partner report
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
 
 at
 
@@ -40,7 +40,7 @@ whenever `mu` has a bounded density, while a uniform bound on all `D_T` converse
 
 The completed report
 
-`yspennstate/math-open-problems@508b0985ba8bb658a7f6a935af5138a195cb89de`
+`private-source-repository@508b0985ba8bb658a7f6a935af5138a195cb89de`
 
 at
 
@@ -60,7 +60,7 @@ The same report source-transfers the Rudelson--Vershynin bounded-density project
 
 The previous B01 report
 
-`yspennstate/math-open-problems@a80bb254a3a1e2883cbfabdf03b53919d6621990`
+`private-source-repository@a80bb254a3a1e2883cbfabdf03b53919d6621990`
 
 at
 

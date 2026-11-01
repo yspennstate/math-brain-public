@@ -12,7 +12,7 @@ This report is a focused independent audit, not a second end-to-end validation o
 
 ## Source pin
 
-- Repository: \`yspennstate/math-open-problems\`
+- Repository: \`private-source-repository\`
 - Source: \`proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex\`
 - Commit: \`eeb752c8943536541b34b42b8bf48e924f4d3d2f\`
 - Git blob: \`19fb119877426b640b2c0dae19ec2f78a399fe11\`

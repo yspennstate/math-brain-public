@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R06 — successor-admission release-gate delta after I0056/P0025 rotation
 
 Run date: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Lane: `CLOSABLE OUTSIDE`.
 
 ## 1. Continuity: do not restart retired/handoff mathematics

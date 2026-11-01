@@ -9,7 +9,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## Source boundary
 
-Latest designated completed partner consumed: fleet03/B20 r26, canonical `math-open-problems@766e706f955b5cf514e00be2a14fc856d65c2244`, whose theorem `QFORM-COLLAR-ADJUSTED-DIAGONAL-TO-COMPOUND-v1` routes its adjusted-diagonal debt either to already-paid branches or to an ORIGINAL physical anchor `i` with
+Latest designated completed partner consumed: fleet03/B20 r26, canonical `private-source@766e706f955b5cf514e00be2a14fc856d65c2244`, whose theorem `QFORM-COLLAR-ADJUSTED-DIAGONAL-TO-COMPOUND-v1` routes its adjusted-diagonal debt either to already-paid branches or to an ORIGINAL physical anchor `i` with
 
 `max(P_i,M_i,D_i)>1/192`,
 

@@ -1,6 +1,6 @@
 # fleet03/B17 audit 20260925T041254Z-fleet03-B17-fiveSV-audit-r14
 
-Exact source: yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short/short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, exact 14-page PDF SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423. Fresh prepublication control main: 58a6045510eed6e137edd8dba580d3b86858a724; audit-only revision 2026-09-25.1 unchanged.
+Exact source: private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short/short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, exact 14-page PDF SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423. Fresh prepublication control main: 58a6045510eed6e137edd8dba580d3b86858a724; audit-only revision 2026-09-25.1 unchanged.
 
 This invocation continues P2-adversarial-full and accounts for every physical source line 1-512. Combined with the independently reconstructed Section 6/7 range 513-639 from the preceding invocation, P2 covers 1-639. The next P2 range is 640-676, after which C07 must be challenged again before this second every-clause pass can close.
 

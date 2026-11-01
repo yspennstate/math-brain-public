@@ -16,7 +16,7 @@ The target remains the unrestricted statement: independent real original-coordin
 
 The designated partner mathematics actually used is fleet02/B19 auto11b, canonical source
 
-`yspennstate/math-open-problems@da594097550f0b88ea54c6989b252ae347a2d2f3`,
+`private-source-repository@da594097550f0b88ea54c6989b252ae347a2d2f3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T234926Z-fleet02-B19-QFORM-auto11b/REPORT.md`.
 
@@ -32,7 +32,7 @@ The partner also identifies the first rough unresolved interface as spending thi
 
 The second completed input used at an actual density inequality is the ridge-window theorem, source
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`,
 

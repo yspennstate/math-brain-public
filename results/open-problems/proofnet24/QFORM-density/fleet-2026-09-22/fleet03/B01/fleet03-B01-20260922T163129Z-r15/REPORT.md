@@ -289,7 +289,7 @@ Applying that theorem to (5.3) gives the actual averaged-frequency inequality
 
 Thus the new translation-uniform half-Riesz result pays the exact signed averaged quantity relevant to the target on the nonzero rank-three Schur branch, rather than demanding false pointwise scalar decay or absolute Fourier `L1`.
 
-Canonical partner source: `yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
+Canonical partner source: `private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 
 ## 7. Rigorous finite algebra diagnostics
 
@@ -322,9 +322,9 @@ The next direct mathematical step is therefore the proof-first owner's second pr
 
 Key proved dependencies used at their exact scope:
 
-- diffuse rank-two `L^3` theorem: `yspennstate/math-open-problems@d54e3a5d40a1d9837d39a1e525781fcf44ec0d9d`, prior fleet03/B01 averaged-frequency report;
-- bounded-density projection theorem source transfer and random-slope proof: `yspennstate/math-open-problems@508b0985ba8bb658a7f6a935af5138a195cb89de`, fleet01/B01 report;
-- assigned signed-Fejer partner: `yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`, fleet04/B01 report;
+- diffuse rank-two `L^3` theorem: `private-source-repository@d54e3a5d40a1d9837d39a1e525781fcf44ec0d9d`, prior fleet03/B01 averaged-frequency report;
+- bounded-density projection theorem source transfer and random-slope proof: `private-source-repository@508b0985ba8bb658a7f6a935af5138a195cb89de`, fleet01/B01 report;
+- assigned signed-Fejer partner: `private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`, fleet04/B01 report;
 - exact rank-three spectral-Schur identity: prior QFORM rank-three archive consumed at its proved scope.
 
 Privacy review: changed-file allowlist is this report only at this commit. Manual narrow scan found no credentials, scheduler IDs, machine paths, private personal material, email content, signed URLs, or unrelated data. No public release, paid call, remote workflow, task mutation, or cross-account authentication occurred. Repository use is not native learned-memory ingestion; status remains `WITHOUT_VERIFIED_BRAIN`.

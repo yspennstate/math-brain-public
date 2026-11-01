@@ -5,9 +5,9 @@ SIGNED IN - working on the quadratic-form bounded-density conjecture (universal 
 Objective: QFORM-FIXED-MULTIPLICITY-AUDIT-20260924.
 Execution label: WITHOUT_VERIFIED_BRAIN.
 
-Pinned standalone source: yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f, paper.tex blob 19fb119877426b640b2c0dae19ec2f78a399fe11.
+Pinned standalone source: private-source-repository@eeb752c8943536541b34b42b8bf48e924f4d3d2f, paper.tex blob 19fb119877426b640b2c0dae19ec2f78a399fe11.
 
-Later candidate inspected: yspennstate/math-open-problems@42decd5b0bac31666cbbc613bcd2d64194775063, asserting s_8(A)>=s => ||p_Q||_infinity<2400 K^2/s. Two distinct complete PASS reviews are now present at 63696675198a6f7359f17414d55cc27a68116656 (fleet03/B08) and d4eee5296bcc7fea885435e9cee72379d0e902eb (fleet03/B18). This report does not itself promote release status.
+Later candidate inspected: private-source-repository@42decd5b0bac31666cbbc613bcd2d64194775063, asserting s_8(A)>=s => ||p_Q||_infinity<2400 K^2/s. Two distinct complete PASS reviews are now present at 63696675198a6f7359f17414d55cc27a68116656 (fleet03/B08) and d4eee5296bcc7fea885435e9cee72379d0e902eb (fleet03/B18). This report does not itself promote release status.
 
 ## B05 audit of the s8 analytic interfaces
 

@@ -5,8 +5,8 @@ attacking: the fleet03/B19 r42 pairwise-weak finite-core residue — determine w
 
 Sources pinned for this calculation:
 
-- designated partner: `yspennstate/math-open-problems@9862459c9cc8e534a8a49c7d20959de7cb1ad992`, `fleet03/B19/20260923T210457Z-fleet03-B19-QFORM-r42/REPORT.md`;
-- required compatible completed source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md` Theorem A and `RESULTS.md` Theorem F.
+- designated partner: `private-source-repository@9862459c9cc8e534a8a49c7d20959de7cb1ad992`, `fleet03/B19/20260923T210457Z-fleet03-B19-QFORM-r42/REPORT.md`;
+- required compatible completed source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md` Theorem A and `RESULTS.md` Theorem F.
 
 Let `B=A[H,H]` be the physical finite-core self block in the r42 branch and suppose
 

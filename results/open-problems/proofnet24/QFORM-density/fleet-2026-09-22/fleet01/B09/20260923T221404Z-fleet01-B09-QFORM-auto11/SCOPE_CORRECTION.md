@@ -2,7 +2,7 @@
 
 The initial `REPORT.md` in this run independently rederived the third-compound overlap ledger and the `Omega_0` random-cut payment. A late refresh of the guarded fleet01/B09 memory pointer showed that the immediately preceding same-slot run
 
-`yspennstate/math-open-problems@b08aeb182c7e4448b960e93db1953cb06cbccb9f`
+`private-source-repository@b08aeb182c7e4448b960e93db1953cb06cbccb9f`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T214821Z-fleet01-B09-QFORM-auto11/REPORT.md`
 
 had already proved the stronger named results

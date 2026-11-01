@@ -15,7 +15,7 @@ The owner target remains the full arbitrary-dimensional statement: independent O
 
 Three completed inputs are used at their exact scopes.
 
-1. **Fractional three-volume Fourier theorem and volume marginals.** `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. For an ORIGINAL-coordinate cross block `M=A[I,J]`, put
+1. **Fractional three-volume Fourier theorem and volume marginals.** `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. For an ORIGINAL-coordinate cross block `M=A[I,J]`, put
 
    `Z=e_3(M^T M)>0`.
 
@@ -31,9 +31,9 @@ Three completed inputs are used at their exact scopes.
 
    `sqrt(alpha_i)<=sqrt(P_ii)+sqrt(3)s_3(M)/sqrt(T_2)*sqrt(1-P_ii)`.  (1.3)
 
-2. **Designated partner fleet04/B13 no-attainment purification.** `yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`. Every cap-one mass-one marginal is an `L1` limit of finite convex combinations of indicators of bounded finite unions of intervals of measure one. For every bounded product kernel, the supremum over cap-one product laws equals the supremum over such unit-measure product indicators. No optimizer, threshold attainment, single interval, bounded diameter or fixed fragment count is asserted.
+2. **Designated partner fleet04/B13 no-attainment purification.** `private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`. Every cap-one mass-one marginal is an `L1` limit of finite convex combinations of indicators of bounded finite unions of intervals of measure one. For every bounded product kernel, the supremum over cap-one product laws equals the supremum over such unit-measure product indicators. No optimizer, threshold attainment, single interval, bounded diameter or fixed fragment count is asserted.
 
-3. **Current no-pivot reduction.** `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`. The unrestricted problem is reduced to one strict no-`tau`-pivot density statement `N3(tau,C0)`. `N3` itself is not proved. I use that reduction only to state the relevance of the new structural survivor below, not as a premise for any positive density estimate.
+3. **Current no-pivot reduction.** `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`. The unrestricted problem is reduced to one strict no-`tau`-pivot density statement `N3(tau,C0)`. `N3` itself is not proved. I use that reduction only to state the relevance of the new structural survivor below, not as a premise for any positive density estimate.
 
 The live false interfaces are avoided: no law-uniform pointwise quadratic-phase decay, arbitrary-joint rank-three coarea, positive moment of worst conditional projection density, naive fiber-sup integration, uniformly good single minor, bounded-diameter localization, or finite fragment cap.
 

@@ -5,7 +5,7 @@ Run: `20260924T141954Z-fleet01-B03-fixed-multiplicity-audit-r13`
 
 ## Source pin and scope
 
-Audited mathematical source: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`. Git blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`. Package SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`. Fresh `master` still returned this same manuscript blob in this run.
+Audited mathematical source: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`. Git blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`. Package SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`. Fresh `master` still returned this same manuscript blob in this run.
 
 I read all 790 source lines from the pinned commit, and read the current `README.md`, `DELIVERY_STATUS.md`, `AUDIT.md`, `proof_map.csv`, `SOURCE_MANIFEST.json`, `verify.py`, and `checks.json`. The verdict below is my own mathematical reconstruction, not a transfer of the authoring self-audit or of another worker's PASS label.
 

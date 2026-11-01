@@ -145,7 +145,7 @@ where `sigma^2=1/12` and `H_4(x)=x^4-6x^2+3`. This is exactly the partner theore
 
 Partner source actually used:
 
-`yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`,  
+`private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f`,  
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`.
 
 ## 4. Cone contraction and an actual global-norm inequality

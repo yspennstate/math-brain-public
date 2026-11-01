@@ -20,7 +20,7 @@ This run uses none of the refuted arbitrary-joint coarea, worst conditional-dens
 
 Designated partner `fleet04/B17` has now completed a current-QFORM result:
 
-- repository/commit: `yspennstate/math-open-problems@092be154e735f99a60d80dff46b648ae7bae01b7`;
+- repository/commit: `private-source-repository@092be154e735f99a60d80dff46b648ae7bae01b7`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T201827Z-fleet04-B17-QFORM-r2/REPORT.md`;
 - theorem: for `J=diag(1,1,-1)` and any tight frame with row vectors `v_j`, if
   `s_j=v_{j1}^2+v_{j2}^2`, `t_j=v_{j3}^2`, then the first Edgeworth correction polynomial is

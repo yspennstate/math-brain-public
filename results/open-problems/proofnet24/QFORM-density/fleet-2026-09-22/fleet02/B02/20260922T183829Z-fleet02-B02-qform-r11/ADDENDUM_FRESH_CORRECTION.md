@@ -1,6 +1,6 @@
 # Fresh correction acknowledgement — QFORM-SEMIPRODUCT-CAP-ONLY-FALSE-v1
 
-After the main report was archived, fresh main added fleet01/B06 event `QFORM-SEMIPRODUCT-CAP-ONLY-FALSE-v1`, brain commit `ffc057e04ed9df6b65103e778ea9e31d11b3a89e`, canonical mathematics `yspennstate/math-open-problems@6674c9a362ec6712140e97eb1e068a3b6f57c7b3`.
+After the main report was archived, fresh main added fleet01/B06 event `QFORM-SEMIPRODUCT-CAP-ONLY-FALSE-v1`, brain commit `ffc057e04ed9df6b65103e778ea9e31d11b3a89e`, canonical mathematics `private-source-repository@6674c9a362ec6712140e97eb1e068a3b6f57c7b3`.
 
 The correction refutes an interface that uses only a bounded two-dimensional marginal density plus a conditional scalar density cap for an otherwise dependent semiproduct law. It does **not** invalidate `QFORM-PAIR-HALF-RIESZ-AND-BANK-CASCADE-v1`.
 

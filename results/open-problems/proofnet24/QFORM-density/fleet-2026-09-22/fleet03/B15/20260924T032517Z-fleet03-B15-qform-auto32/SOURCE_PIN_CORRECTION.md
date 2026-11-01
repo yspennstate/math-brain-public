@@ -16,7 +16,7 @@ and blob `00681629acaba8f2e04edda6c9f6b5c4f0fdafa4`.
 
 Its scoped independent review is at
 
-`yspennstate/math-open-problems@3bec1a01afe9cf433d3f4e14a46fe21b5dcbfc64`
+`private-source-repository@3bec1a01afe9cf433d3f4e14a46fe21b5dcbfc64`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T164017Z-fleet03-B16-QFORM-r13/INDEPENDENT_REVIEW_RANK2_FUSION.md`.
 

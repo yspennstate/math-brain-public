@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 # R03 run26 — product-slice dual caps and exact-corank-two slack reclamation
 
 Run ID: `20260917T0306Z_26_disjoint_slice_exact_corank2`  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, source gate, ownership, and frozen metric
 

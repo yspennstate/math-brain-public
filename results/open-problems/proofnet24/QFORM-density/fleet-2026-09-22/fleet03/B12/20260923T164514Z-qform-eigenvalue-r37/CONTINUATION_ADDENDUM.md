@@ -2,7 +2,7 @@
 
 A later owner continuation became visible at the final control refresh (`QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`). This addendum consumes its newly required source rather than publishing under the stale source map. The full target remains OPEN.
 
-Source applied: `yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. Its grouped-crossing theorem allows arbitrary internal hub functions and an arbitrary-rank projected light crossing, provided the exact rank of the hub-to-light block, the singular-product gate, projected crossing volume, and every volume row-marginal gate are retained.
+Source applied: `private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. Its grouped-crossing theorem allows arbitrary internal hub functions and an arbitrary-rank projected light crossing, provided the exact rank of the hub-to-light block, the singular-product gate, projected crossing volume, and every volume row-marginal gate are retained.
 
 We apply it to the ACTUAL original-coordinate balanced cut `I,J` produced in the main r37 report. Recall
 

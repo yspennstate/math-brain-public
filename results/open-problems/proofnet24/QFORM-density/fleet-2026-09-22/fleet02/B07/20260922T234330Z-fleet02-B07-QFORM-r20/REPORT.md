@@ -16,7 +16,7 @@ The exact target remains: arbitrary independent real original coordinates with m
 
 The newest designated partner result actually applied is fleet03/B07 r19:
 
-`yspennstate/math-open-problems@309a7cf35906f05d767ff2fcf1be74367f479d1c`
+`private-source-repository@309a7cf35906f05d767ff2fcf1be74367f479d1c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T224159Z-fleet03-B07-qform-r19/REPORT.md`.
 
@@ -34,14 +34,14 @@ The S0 parent supplies the second-singular-value inheritance
 
 from fleet02/B19 r17:
 
-`yspennstate/math-open-problems@fc8343c379bbddf14be670349f664f7fcb39994a`
+`private-source-repository@fc8343c379bbddf14be670349f664f7fcb39994a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T192830Z-fleet02-B19-qform-r17/REPORT.md`.
 
 For the exact-rank-two endpoint below I use the completed orientation-free theorem
 `QFORM-RANK2-AFFINE-HALF-RIESZ-v1` from
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`:
 for an exact rank-two quadratic part with nonzero spectral determinant `D`, arbitrary affine terms and the original product input law,

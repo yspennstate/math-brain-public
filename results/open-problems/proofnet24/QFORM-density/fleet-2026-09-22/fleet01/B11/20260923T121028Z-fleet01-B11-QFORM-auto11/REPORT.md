@@ -15,7 +15,7 @@ The target remains the unrestricted cap-one product-law conjecture. This report 
 
 The only non-elementary project dependency used in the proof is the completed spectral-window theorem:
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 path
 
@@ -161,7 +161,7 @@ For `alpha=1/2`, the hard branch has fewer than 192 heavy coordinates. This is d
 
 The newest completed `fleet02/B11` result is
 
-`yspennstate/math-open-problems@f4772f0391b0088ff7698500b0d3c0b0e4a9c9c8`,
+`private-source-repository@f4772f0391b0088ff7698500b0d3c0b0e4a9c9c8`,
 
 path
 

@@ -3,7 +3,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 # R7-04 post-P0290 shard-3 Codex-tail / alias screen
 
 Date checked: 2026-09-19 UTC.  
-Repository: private `yspennstate/math-open-problems`, branch `master`.  
+Repository: private `private-source-repository`, branch `master`.  
 Native worker: R7-04 / `6aabe7ea6e1881919a65503f8445a813`.  
 Selection rule: exact case-sensitive candidate ID `sum(ord(c) for c in ID) % 7 == 3`.  
 Worker class: **CLOSABLE OUTSIDE**.  

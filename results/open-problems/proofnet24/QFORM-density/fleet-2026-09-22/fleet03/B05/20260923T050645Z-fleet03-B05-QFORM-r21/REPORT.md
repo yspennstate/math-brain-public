@@ -262,7 +262,7 @@ This is only a structural lemma: for arbitrary unbounded product inputs, a large
 
 The designated partner `fleet04/B05` has the completed theorem at
 
-`yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`.
+`private-source-repository@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`.
 
 Its exact-slope theorem gives
 

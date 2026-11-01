@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-04 strict-delta admission — no source, claim, or residue-3 release
 
 Date: 2026-09-19 UTC  
-Repository/branch: private `yspennstate/math-open-problems` / `master`  
+Repository/branch: private `private-source-repository` / `master`  
 Namespace: `proofnet24/NM13-04/`  
 Category: `CLOSABLE OUTSIDE`  
 Selection shard: `int(SHA256(UTF-8 canonical dedup_key).hexdigest(),16) mod 13 = 3`  

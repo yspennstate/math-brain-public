@@ -15,7 +15,7 @@ This run preserves the live corrections. It uses neither law-uniform pointwise s
 
 The analytic source is the complete one-scale ridge theorem
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 at
 

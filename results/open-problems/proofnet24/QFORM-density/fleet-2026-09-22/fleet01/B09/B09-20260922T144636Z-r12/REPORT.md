@@ -33,7 +33,7 @@ from `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE` must be handled by aggregation ra
 
 The assigned partner is fleet02/B09. Its canonical theorem is:
 
-- repository: `yspennstate/math-open-problems`;
+- repository: `private-source-repository`;
 - commit: `a47c679eb9f7788b5c3c2a900ce516ec11de8d9b`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T124417Z-fleet02-B09-QFORM-r2/REPORT.md`;
 - theorem: `QFORM-RANK2-SCHUR-PIVOT-v1`.

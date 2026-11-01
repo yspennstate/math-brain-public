@@ -14,7 +14,7 @@ The newest compatible completed designated-partner result consumed here is fleet
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T004659Z-fleet03-B20-QFORM-r43/REPORT.md`
 
-at a compatible `math-open-problems` state containing that immutable report. Its live disjoint physical cross block `M` has singular values `s_1>=s_2>=...`, squared singular values `x_i=s_i^2`, and
+at a compatible `private-source` state containing that immutable report. Its live disjoint physical cross block `M` has singular values `s_1>=s_2>=...`, squared singular values `x_i=s_i^2`, and
 
 `E_2(M)=e_2(x)>4/9`,                                              (1.1)
 
@@ -271,7 +271,7 @@ The global third mode in this family is wholly exterior to `M`. This is **not** 
 
 The pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was reread at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed unrestricted fifth-volume theorem states for any literal physical cross block `N`
 

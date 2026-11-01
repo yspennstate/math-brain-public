@@ -25,7 +25,7 @@ A tempting more direct published Fourier-decay source does **not** match the own
 
 Source-pinned scientific report:
 
-`yspennstate/math-open-problems@c0d7e627b3b877fcecc3004a58335658f6541d64`
+`private-source-repository@c0d7e627b3b877fcecc3004a58335658f6541d64`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T114517Z-fleet03-B10-QFORM-r24/REPORT.md`.
 
@@ -49,7 +49,7 @@ The proof is a joint original-product mixed-Fresnel estimate, not the refuted la
 
 Source-pinned scientific addendum:
 
-`yspennstate/math-open-problems@e9eb90e2a7746482fb3ba75bf449b224cbf507ce`
+`private-source-repository@e9eb90e2a7746482fb3ba75bf449b224cbf507ce`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T032213Z-fleet04-B18-QFORM-r2/ADDENDUM_GENERAL_DIFFUSE.md`.
 

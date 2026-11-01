@@ -16,7 +16,7 @@ This report does **not** use law-uniform pointwise Fresnel decay, post-rotation 
 
 The designated partner result actually applied is fleet02/B03 run `20260922T201216Z-fleet02-B03-QFORM-r12`, canonical mathematics
 
-`yspennstate/math-open-problems@d205dc643b8d2439efdbbe986f93ea8b4f2933f5`
+`private-source-repository@d205dc643b8d2439efdbbe986f93ea8b4f2933f5`
 
 at
 

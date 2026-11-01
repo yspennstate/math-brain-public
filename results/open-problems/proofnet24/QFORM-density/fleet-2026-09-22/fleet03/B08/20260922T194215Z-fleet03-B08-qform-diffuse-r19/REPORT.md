@@ -29,7 +29,7 @@ The owner-message mathematical suggestions are treated as research hypotheses un
 
 The preceding B08 run
 
-`yspennstate/math-open-problems@04fb94f2b622e0423272e1aefa1aaf0af59f305f`
+`private-source-repository@04fb94f2b622e0423272e1aefa1aaf0af59f305f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T183452Z-fleet03-B08-qform-diffuse-r17/REPORT.md`
 
@@ -85,7 +85,7 @@ The full target is not reduced to (2.1) in this report; (2.1) is a supporting st
 
 The completed ridge-window report is
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
@@ -442,7 +442,7 @@ The designated `fleet04/B08` current-QFORM handoff and canonical math directory 
 
 A completed compatible fleet04 theorem was nevertheless applied at an actual inequality, as required by the cross-worker protocol. The source is fleet04/B18:
 
-`yspennstate/math-open-problems@0e80922c4f26f72fe3bb2b06728dd7a40da0c765`
+`private-source-repository@0e80922c4f26f72fe3bb2b06728dd7a40da0c765`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

@@ -253,7 +253,7 @@ The matrix in (5.2) itself has algebraic zeros; that causes no claim of a generi
 
 ## 7. Required fixed-source theorem applied to the same stress law
 
-Now use the completed Theorem A from the fixed source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`.
+Now use the completed Theorem A from the fixed source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`.
 
 Put
 

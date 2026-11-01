@@ -7,10 +7,10 @@ Programme: QFORM-DENSITY-3EIG-20260922. Full target remains OPEN. Target-wide un
 
 Sources actually used at equations:
 
-* newest-Claude source `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `FOURIER_ROUTE_REPORT.md` D'/D5/general D_k;
-* reviewed q-dependent sharp-Hausdorff--Young continuation `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`;
-* prior fleet02/B02 original-coordinate physical-anchor Plancherel endpoints `yspennstate/math-open-problems@4029b9b55694ce709e43c62d2729e89108fbdede`;
-* fresh designated partner fleet03/B02 r33 `QFORM-H2-TO-H3-OR-STRIPS-v1`, canonical mathematics `yspennstate/math-open-problems@604b3273a6db312558088b7ed2a9d9735c546e7a`.
+* newest-Claude source `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially `FOURIER_ROUTE_REPORT.md` D'/D5/general D_k;
+* reviewed q-dependent sharp-Hausdorff--Young continuation `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`;
+* prior fleet02/B02 original-coordinate physical-anchor Plancherel endpoints `private-source-repository@4029b9b55694ce709e43c62d2729e89108fbdede`;
+* fresh designated partner fleet03/B02 r33 `QFORM-H2-TO-H3-OR-STRIPS-v1`, canonical mathematics `private-source-repository@604b3273a6db312558088b7ed2a9d9735c546e7a`.
 
 The reviewed degree-k sharp-HY calculation gives for a physical cross block `B`, if its k-volume row marginals obey `alpha_i^(k)<=q/2`,
 

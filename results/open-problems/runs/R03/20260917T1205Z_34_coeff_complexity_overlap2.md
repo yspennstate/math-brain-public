@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 
 # R03 run34 — coefficient complexity of dense cube sections and an overlap-two exact-corank correction
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL; source OPEN.** The run gives one new asymptotic structural theorem and one replay-certified finite improvement. It does not prove the sharp singularity asymptotic.
 

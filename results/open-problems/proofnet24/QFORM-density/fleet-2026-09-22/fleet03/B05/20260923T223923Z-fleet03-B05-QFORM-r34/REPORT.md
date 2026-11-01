@@ -14,25 +14,25 @@ Continuity: proved on the new exact-cross branch; not supplied by the designated
 
 The live ratio-packet normal form is from
 
-`yspennstate/math-open-problems@b0299facc04ea0c03276dddb1a12c027aed5a946`
+`private-source-repository@b0299facc04ea0c03276dddb1a12c027aed5a946`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T033640Z-fleet01-B05-QFORM-r26/REPORT.md`.
 
 The determinant-sensitive exact-rank-three crossing argument used below is the product-preserving theorem proved/refined in
 
-`yspennstate/math-open-problems@95f94696393b5ad8b0def71fa0d93082de92bd85`
+`private-source-repository@95f94696393b5ad8b0def71fa0d93082de92bd85`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T193756Z-fleet03-B05-QFORM-r31/REPORT.md`,
 
 with the underlying exact-cross theorem at
 
-`yspennstate/math-open-problems@51d2edb29d7a4c150e4d47ed3a6685875a8483ae`
+`private-source-repository@51d2edb29d7a4c150e4d47ed3a6685875a8483ae`
 
 `proofnet24/QFORM-density/interactive/20260923T194300Z-exact-cross-rank-fourier/REPORT.md`.
 
 The designated partner result actually applied below is
 
-`yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
+`private-source-repository@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`,
 
@@ -44,7 +44,7 @@ when an exact physical slope class in the first bank has `u`-mass `m_*>0`.
 
 The predecessor r33 is
 
-`yspennstate/math-open-problems@6167097dbe623155ea2f0a7796f7dfb41957a69a`
+`private-source-repository@6167097dbe623155ea2f0a7796f7dfb41957a69a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T214237Z-fleet03-B05-QFORM-r33/REPORT.md`.
 

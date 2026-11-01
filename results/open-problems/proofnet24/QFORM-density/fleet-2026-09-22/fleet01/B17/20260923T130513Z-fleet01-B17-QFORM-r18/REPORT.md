@@ -13,19 +13,19 @@ The construction keeps the original-coordinate product law throughout. It does *
 
 The two analytic inputs actually applied are:
 
-1. **Newest Claude/Fresnel--Brascamp--Lieb Theorem F**, source `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`. For an exact three-mode Parseval physical frame with every row leverage at most `1/2`, it supplies the actual finite-form inequality
+1. **Newest Claude/Fresnel--Brascamp--Lieb Theorem F**, source `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`. For an exact three-mode Parseval physical frame with every row leverage at most `1/2`, it supplies the actual finite-form inequality
    
    `|phi_Q(t)| <= min(1,(4 pi)^(3/2)|t|^(-3/2))`                    (1.1)
    
    when the three spectral magnitudes equal one. Its `L^1` integral is exactly `24 pi`.
 
-2. **Affine Gaussian ceiling**, fleet03/B17, source `yspennstate/math-open-problems@41abd73cd97a7544510aedf03cc62485b6a34b80`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T070310Z-fleet03-B17-QFORM-r25/REPORT.md`: if `G~N(h,Sigma)`, `Sigma >= I/12`, and `s_3(A)>=1`, then
+2. **Affine Gaussian ceiling**, fleet03/B17, source `private-source-repository@41abd73cd97a7544510aedf03cc62485b6a34b80`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T070310Z-fleet03-B17-QFORM-r25/REPORT.md`: if `G~N(h,Sigma)`, `Sigma >= I/12`, and `s_3(A)>=1`, then
    
    `||p_{G^T A G}||_infinity <= 3 sqrt(2)`.                         (1.2)
    
    In the exact rank-three isotropic signature `(2,1)`, every nonzero mean gives a **strictly** smaller global supremum.
 
-The designated partner fleet02/B17 is used twice below. Its completed diffuse-Lindeberg report, source `yspennstate/math-open-problems@60d5d506c96acbf92025f220fc25f3d78c1d9ac6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/fleet02-B17-20260923T1142Z-r11/REPORT.md`, identifies (1.1) as the finite-stage no-spike mechanism. Its newer completed teleporter theorem is source `yspennstate/math-open-problems@867fd7a538d5412db882ad21d65bd4a71e885dd0`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T125417Z-fleet02-B17-QFORM-auto11/`; an actual application to the same rotated frame is given in Section 8.
+The designated partner fleet02/B17 is used twice below. Its completed diffuse-Lindeberg report, source `private-source-repository@60d5d506c96acbf92025f220fc25f3d78c1d9ac6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/fleet02-B17-20260923T1142Z-r11/REPORT.md`, identifies (1.1) as the finite-stage no-spike mechanism. Its newer completed teleporter theorem is source `private-source-repository@867fd7a538d5412db882ad21d65bd4a71e885dd0`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T125417Z-fleet02-B17-QFORM-auto11/`; an actual application to the same rotated frame is given in Section 8.
 
 ## 2. A cap-one finite-intensity remote-fragment law
 

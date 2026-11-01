@@ -27,7 +27,7 @@ The designated `fleet04/B07` current-QFORM handoff directory was checked fresh a
 
 Use this slot's completed r25 report
 
-`yspennstate/math-open-problems@5e2f0ed9c6f5b7621d6344af21b13a05234fdd47`,
+`private-source-repository@5e2f0ed9c6f5b7621d6344af21b13a05234fdd47`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T053905Z-fleet03-B07-qform-r25/REPORT.md`.
 
@@ -57,7 +57,7 @@ Because `|e|<=F` and `||s||<=F`,
 
 Use this slot's completed r26 report
 
-`yspennstate/math-open-problems@86ff1278a9b52d8a2736c340b7f54893c6b8c267`,
+`private-source-repository@86ff1278a9b52d8a2736c340b7f54893c6b8c267`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T060629Z-fleet03-B07-qform-r26/REPORT.md`.
 
@@ -80,7 +80,7 @@ Use the freshly completed fleet02/B02 theorem
 
 canonical source
 
-`yspennstate/math-open-problems@5d35b697d95d20e66fd72c96a5ea2dffa1201958`,
+`private-source-repository@5d35b697d95d20e66fd72c96a5ea2dffa1201958`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/fleet02-B02-20260923T071011Z-3508bbe2/REPORT.md`.
 
@@ -276,7 +276,7 @@ This is not yet asserted to bound the arbitrary curved quadratic pushforward. It
 
 The designated `fleet04/B07` current-QFORM artifact remained absent at the fresh lookup, so no designated-partner result is invented. Use instead the compatible completed fleet04/B18 sharp rearrangement transfer
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 

@@ -18,7 +18,7 @@ This run consumes the current correction boundary: no law-uniform pointwise quad
 
 Two completed sources are applied at equations, not merely cited:
 
-1. **Designated partner fleet04/B14 r6.** `yspennstate/math-open-problems@6442bbe9d4647a730b27b8e0786bc54b2546b7ec`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T011517Z-fleet04-B14-kernel-leakage-core-r6/REPORT.md`. Its fixed physical-core compiler states that an actual four-coordinate symmetric block with at least three eigenvalues of modulus at least `sigma>0` gives, uniformly in arbitrary affine terms and arbitrary cap-one product laws,
+1. **Designated partner fleet04/B14 r6.** `private-source-repository@6442bbe9d4647a730b27b8e0786bc54b2546b7ec`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T011517Z-fleet04-B14-kernel-leakage-core-r6/REPORT.md`. Its fixed physical-core compiler states that an actual four-coordinate symmetric block with at least three eigenvalues of modulus at least `sigma>0` gives, uniformly in arbitrary affine terms and arbitrary cap-one product laws,
 
    `||p||_infinity <= C4/sigma`,
 
@@ -28,7 +28,7 @@ Two completed sources are applied at equations, not merely cited:
 
    Conditioning on all outside **original** coordinates preserves the same constant and allows arbitrary outside quadratic blocks and couplings. Its rough-law transfer permits unbounded and arbitrarily fragmented supports.
 
-2. **Newest volume-stability package.** `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, path `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/`. In particular, if an original-coordinate cross block `M=M0+E` satisfies `s3(M0)>=a`, maximum row leverage of `Range(M0)` at most `1/2`, and `||E||op<=a/16`, then the full ambient quadratic-plus-affine form has a bounded continuous density `<23/a`. Its tail extension permits two substantial singular directions plus a collective tail under the stated volume-marginal gate. These are scoped exits, not the full conjecture.
+2. **Newest volume-stability package.** `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, path `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/`. In particular, if an original-coordinate cross block `M=M0+E` satisfies `s3(M0)>=a`, maximum row leverage of `Range(M0)` at most `1/2`, and `||E||op<=a/16`, then the full ambient quadratic-plus-affine form has a bounded continuous density `<23/a`. Its tail extension permits two substantial singular directions plus a collective tail under the stated volume-marginal gate. These are scoped exits, not the full conjecture.
 
 The preceding fleet03/B14 r25 report is used only as a predecessor: it handled a **pure** collective bank with zero `V` self-block. The present run changes mechanism by allowing a nonzero, arbitrarily large, aligned quadratic curvature on that same diffuse bank.
 

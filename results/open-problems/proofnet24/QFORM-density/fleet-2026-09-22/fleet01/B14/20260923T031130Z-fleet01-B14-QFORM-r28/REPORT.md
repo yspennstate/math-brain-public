@@ -7,7 +7,7 @@ Programme: QFORM-DENSITY-3EIG-20260922. Status: NEW SUPPORTING LOCALIZATION THEO
 
 ## Source pins actually used
 
-2. Completed physical-pair logarithmic envelope: `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+2. Completed physical-pair logarithmic envelope: `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 3. Assigned partner fleet02/B14 r24, current report on master: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T025915Z-fleet02-B14-QFORM-r24/REPORT.md`; its key exact theorem is the overlap-power compiler and its exact fragmented overlap family
    `E_N=union_{j=1}^N [4^j,4^j+1/N]`,
    with

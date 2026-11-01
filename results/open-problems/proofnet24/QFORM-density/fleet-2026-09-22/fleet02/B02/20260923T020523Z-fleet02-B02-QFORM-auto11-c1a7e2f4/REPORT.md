@@ -16,20 +16,20 @@ The target remains: independent real coordinates with probability densities at m
 
 The exact requested Claude-attributed package was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, namely `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. I use its D' three-volume and D5 five-volume integrated-Fourier mechanisms, together with the reviewed sharp Hausdorff--Young refinement.
 
 A later owner continuation additionally points B02 to the volume-stability package
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 I independently checked the **analytic** part of that note (the sharp-HY/BL multiplier, exponent and inversion constants) and record PASS for that scope. I do not claim the separate matrix/tail perturbation review assigned elsewhere.
 
 The newest completed designated-partner result available at fresh control was `fleet03/B02` r17, canonical proof
 
-`yspennstate/math-open-problems@484c89f85cda352b2c4318364a6206ebc4154950`,
+`private-source-repository@484c89f85cda352b2c4318364a6206ebc4154950`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T230126Z-fleet03-B02-QFORM-r17/REPORT.md`.
 
 It proves that if an ORIGINAL-coordinate physical cross block `M` has exact rank three and `Gamma` is the product of its three nonzero singular values, then

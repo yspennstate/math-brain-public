@@ -372,7 +372,7 @@ which remains order one in this diffuse family, but I do **not** claim a theorem
 
 I also applied the completed mixed-hub Theorem H from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 rather than merely citing it.
 

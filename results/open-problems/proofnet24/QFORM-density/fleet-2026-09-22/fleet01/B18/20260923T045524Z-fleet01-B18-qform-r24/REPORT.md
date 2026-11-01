@@ -17,7 +17,7 @@ The live correction ledger was reread immediately before publication. The proof 
 
 The newest relevant designated-partner source actually consumed is fleet02/B18 auto11,
 
-`yspennstate/math-open-problems@826920faef301e7d6880266805e11a0a7350076f`,
+`private-source-repository@826920faef301e7d6880266805e11a0a7350076f`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T040922Z-fleet02-B18-QFORM-auto11/REPORT.md`.
 
@@ -29,7 +29,7 @@ with `X_0` an original coordinate independent of the residual original product v
 
 The second completed theorem used below is fleet01/B19,
 
-`yspennstate/math-open-problems@c8958cdca7989ce69df1805a5ed0ca18557b5d4c`,
+`private-source-repository@c8958cdca7989ce69df1805a5ed0ca18557b5d4c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260923T041858Z-fleet01-B19-qform-r11/REPORT.md`.
 

@@ -14,10 +14,10 @@ This run does not use the now-refuted arbitrary-joint coarea `2/3` estimate or p
 
 The two main proof inputs are:
 
-1. `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, complete source `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`. Its complex-amplitude argument gives, for a rank-`r` quadratic core with row leverage at most `1/2`, the phase-uniform Fourier bound even after multiplying each original-coordinate amplitude by an arbitrary unit-modulus separable phase.
-2. `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, complete source `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`. It supplies the Gaussian representation of the half-Riesz potential, the translated quadratic kernel, and the arbitrary-affine rank-two endpoint.
+1. `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, complete source `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`. Its complex-amplitude argument gives, for a rank-`r` quadratic core with row leverage at most `1/2`, the phase-uniform Fourier bound even after multiplying each original-coordinate amplitude by an arbitrary unit-modulus separable phase.
+2. `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, complete source `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`. It supplies the Gaussian representation of the half-Riesz potential, the translated quadratic kernel, and the arbitrary-affine rank-two endpoint.
 
-The required named partner result is fleet02/B09 `QFORM-PIVOT-OFFDIAG-STABLERANK-v1`, complete source `yspennstate/math-open-problems@77d71ed8bbd7f8a3fd40958e54b5bf658163c27a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T160923Z-fleet02-B09-QFORM-r4/REPORT.md`. It is applied quantitatively in Section 7.
+The required named partner result is fleet02/B09 `QFORM-PIVOT-OFFDIAG-STABLERANK-v1`, complete source `private-source-repository@77d71ed8bbd7f8a3fd40958e54b5bf658163c27a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T160923Z-fleet02-B09-QFORM-r4/REPORT.md`. It is applied quantitatively in Section 7.
 
 ## 2. New rank-one small-ball lemma with arbitrary diagonal curvature
 

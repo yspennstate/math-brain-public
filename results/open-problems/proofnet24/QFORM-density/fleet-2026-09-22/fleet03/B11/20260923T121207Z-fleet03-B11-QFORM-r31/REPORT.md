@@ -32,7 +32,7 @@ The null-sum endpoint is
 
 The rank-two affine half-Riesz theorem used below is the source-pinned result
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`:
 
 for an orthonormal two-dimensional projection and an invertible symmetric `2x2` quadratic matrix `Lambda`, arbitrary original-coordinate affine terms are allowed and
@@ -41,7 +41,7 @@ for an orthonormal two-dimensional projection and an invertible symmetric `2x2` 
 
 The designated fleet04/B11 partner theorem used below is the completed null-scalar theorem in
 
-`yspennstate/math-open-problems@master`,
+`private-source-repository@master`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T222040Z-fleet04-B11-cone-envelope-r3/REPORT.md`.
 
 Its quantitative statement is: if `Z` is independent of a planar pair `(V,W)`, `||p_Z||_infinity<=L`, `||p_(V,W)||_infinity<=K`, and
@@ -230,7 +230,7 @@ This is the product-provenance fact missing from the arbitrary-planar-cap counte
 
 The newest completed fleet04/B11 disjoint-volume compiler is
 
-`yspennstate/math-open-problems@50b07997bec888ff7cc6820cd42be8e34d0ffc48`,
+`private-source-repository@50b07997bec888ff7cc6820cd42be8e34d0ffc48`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T111608Z-fleet04-B11-disjoint-volume-compiler-r5/REPORT.md`.
 
 For two disjoint physical triples `S_0,T_0`, it gives

@@ -18,7 +18,7 @@ This run changes the analytic mechanism from the preceding rank-three `L^1_t` cr
 
 The independently checked source is
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -29,7 +29,7 @@ The only pieces used are:
 
 The same `k=0` specialization was already written out explicitly and checked in fleet01/B03 r29 for `ell=3`:
 
-`yspennstate/math-open-problems@2062e0f60e39c2cb88fb72c4908d95f19676d00e`
+`private-source-repository@2062e0f60e39c2cb88fb72c4908d95f19676d00e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T165124Z-fleet01-B03-QFORM-r29/ADDENDUM_CROSSBLOCK.md`.
 
@@ -39,7 +39,7 @@ No pointwise law-uniform quadratic phase estimate is used.
 
 The completed designated partner result is
 
-`yspennstate/math-open-problems@38920ffa423ec07886112206314249deb7294dd4`
+`private-source-repository@38920ffa423ec07886112206314249deb7294dd4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T171205Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 

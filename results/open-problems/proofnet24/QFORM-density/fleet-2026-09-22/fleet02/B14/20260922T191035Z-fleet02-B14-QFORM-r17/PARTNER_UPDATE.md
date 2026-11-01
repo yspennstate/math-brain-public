@@ -6,7 +6,7 @@ attacking: apply the newest completed fleet03/B14 principal-triple localization 
 After the main r17 report was committed, a newer completed assigned-partner result became available:
 
 `fleet03/B14`, run `20260922T190524Z-fleet03-B14-QFORM-r16`, canonical
-`yspennstate/math-open-problems@5e82f7573bc426a28a01fa25b0a2707ab0b573e2`,
+`private-source-repository@5e82f7573bc426a28a01fa25b0a2707ab0b573e2`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T190524Z-fleet03-B14-QFORM-r16/REPORT.md`.
 
 Its theorem `QFORM-PRINCIPAL-TRIPLE-DETERMINANT-LOCALIZATION-v1` proves, for every nonsingular original-coordinate principal triple `B`, arbitrary independent cap-one inputs, arbitrary outside couplings, and arbitrary affine perturbations,

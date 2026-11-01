@@ -14,7 +14,7 @@ The owner target remains: for arbitrary independent real coordinates with densit
 
 The designated partner `fleet02/B16`, run `20260922T181706Z-fleet02-B16-QFORM-auto11`, canonical mathematics
 
-`yspennstate/math-open-problems@1dd4fc6bb98e57eed6a5a4e77273193cacea77a4`
+`private-source-repository@1dd4fc6bb98e57eed6a5a4e77273193cacea77a4`
 
 at
 
@@ -28,7 +28,7 @@ is false even for a four-dimensional target matrix. Its exact endpoint calculati
 
 A second completed partner result, `fleet02/B16` run `20260922T163840Z-fleet02-B16-qform-r13`, canonical mathematics
 
-`yspennstate/math-open-problems@d2e3dd1587a3fa93707631ea847c48279f3dc6dc`,
+`private-source-repository@d2e3dd1587a3fa93707631ea847c48279f3dc6dc`,
 
 proves the complementary invertible-indefinite projected-pair half-Riesz bridge. The new theorem below treats a determinant-zero rank-one physical pair and does not invert that pair.
 

@@ -6,7 +6,7 @@ Reviewer lens: scalar Fourier powers, convolution and projection constants; flee
 
 ## Exact source pin
 
-- Repository/branch: `yspennstate/math-open-problems` / `master`.
+- Repository/branch: `private-source-repository` / `master`.
 - Fresh master observed before delivery: `15ba818daa54db185ead943765816d1a600cc7ef`.
 - The manuscript blob at that commit is unchanged from the baseline: `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 - Owner/source-manifest SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.

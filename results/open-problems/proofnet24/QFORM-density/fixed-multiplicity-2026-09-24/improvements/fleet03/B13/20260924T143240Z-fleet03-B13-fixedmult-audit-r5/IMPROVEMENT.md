@@ -2,7 +2,7 @@
 
 Run: `20260924T143240Z-fleet03-B13-fixedmult-audit-r5`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Pinned baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.  
+Pinned baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.  
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Current frontier consumed
@@ -144,7 +144,7 @@ A useful secondary lesson is that the exact-zero closure is not uniformly pertur
 
 ## 4. Extremal-product law reduction, with designated fleet04/B13 theorem applied
 
-The completed fleet04/B13 no-attainment purification theorem (`math-open-problems@d9f6bcd057b7804ea7ba06fea8dad5f54e357990`) states for every nonnegative measurable kernel `K` that
+The completed fleet04/B13 no-attainment purification theorem (`private-source@d9f6bcd057b7804ea7ba06fea8dad5f54e357990`) states for every nonnegative measurable kernel `K` that
 
 ```
 sup_{0<=f_i<=1, int f_i=1} int K(x) prod_i f_i(x_i) dx

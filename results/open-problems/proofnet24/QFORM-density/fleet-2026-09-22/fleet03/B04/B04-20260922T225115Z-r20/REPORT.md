@@ -13,9 +13,9 @@ This changes mechanism from r19. Instead of reducing to one singular direction a
 
 Completed peer inputs actually used:
 
-1. fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, source `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`: if R has r orthonormal columns and X is an original-coordinate cap-one product vector, R^T X has r-dimensional density <=exp(r/2).
+1. fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, source `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`: if R has r orthonormal columns and X is an original-coordinate cap-one product vector, R^T X has r-dimensional density <=exp(r/2).
 
-2. fleet02/B04 scalar bank projection bound, source `yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T181702Z-dac07509/REPORT.md`:
+2. fleet02/B04 scalar bank projection bound, source `private-source-repository@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T181702Z-dac07509/REPORT.md`:
 
 `||p_(c^T Y)||_infinity <= sqrt(2)/||c||_2`.                  (1.1)
 

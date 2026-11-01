@@ -102,7 +102,7 @@ By (2.5), the actual projected information obeys
 
 The projected-Fisher theorem at
 
-`yspennstate/math-open-problems@4a65677d185d35154dc3dfae320c5df9f939b8a2`,
+`private-source-repository@4a65677d185d35154dc3dfae320c5df9f939b8a2`,
 `proofnet24/QFORM-density/interactive/20260923T184054Z-fisher-continuation/FISHER_INFORMATION.md`
 
 therefore gives immediately
@@ -202,7 +202,7 @@ So the information certificate grows linearly with fragment refinement, despite 
 
 The required source at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
 was read through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed Theorem A states that in dimension three, if all eigenvalues have modulus at least `sigma`, then arbitrary cap-one independent inputs and arbitrary linear terms satisfy
@@ -222,7 +222,7 @@ Therefore the divergence in (5.8) is a proof-interface obstruction, not a QFORM 
 
 The newest compatible designated partner result is
 
-`yspennstate/math-open-problems@78e87f9d9fe723b40aa38e71426458283366f8a5`,
+`private-source-repository@78e87f9d9fe723b40aa38e71426458283366f8a5`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T183544Z-fleet03-B14-QFORM-auto11/REPORT.md`.
 
 It proves the rough-hub `L^3` core plus disjoint translated-square compiler. In particular, for arbitrary independent cap-one variables,
@@ -267,8 +267,8 @@ Fresh owner control remained revision `2026-09-22.15`, QFORM-only, with no fleet
 
 Mathematical sources actually used:
 
-1. `math-open-problems@4a65677d185d35154dc3dfae320c5df9f939b8a2`: projected Fisher-information theorem and its cap improvement.
-2. `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`: fixed required `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`; completed Theorem A applied in (6.2).
-3. `math-open-problems@78e87f9d9fe723b40aa38e71426458283366f8a5`: designated fleet03/B14 rough-hub `L^3` plus translated-square theorem, applied in (7.1)-(7.4).
+1. `private-source@4a65677d185d35154dc3dfae320c5df9f939b8a2`: projected Fisher-information theorem and its cap improvement.
+2. `private-source@e5f71d79eff325201dd0274053d20268ce65b837`: fixed required `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`; completed Theorem A applied in (6.2).
+3. `private-source@78e87f9d9fe723b40aa38e71426458283366f8a5`: designated fleet03/B14 rough-hub `L^3` plus translated-square theorem, applied in (7.1)-(7.4).
 
 No FEI/install/benchmark work, scheduler mutation, email/notification action, cross-account authentication, paid call, public release, remote workflow or permission change was used.

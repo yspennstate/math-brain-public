@@ -3,7 +3,7 @@ attacking: the fleet03/B20 r29 HC finite-core obstruction by sequential original
 
 # Early substantive checkpoint
 
-Fresh designated partner: fleet03/B20 r29, canonical math-open-problems commit `b1f862a5685a726b0eb2e3c348b22ee9eaf7a782`. In its exact-rank-three rank-two-cross HC chamber, the normalized-heavy original-coordinate core `K0` has `|K0|<=31`. With frame rows `r_i` of `R`, `R^T R=I_3`, coefficient matrix `M=M^T` having `sigma_min(M)>=1`, and
+Fresh designated partner: fleet03/B20 r29, canonical private-source commit `b1f862a5685a726b0eb2e3c348b22ee9eaf7a782`. In its exact-rank-three rank-two-cross HC chamber, the normalized-heavy original-coordinate core `K0` has `|K0|<=31`. With frame rows `r_i` of `R`, `R^T R=I_3`, coefficient matrix `M=M^T` having `sigma_min(M)>=1`, and
 
 `S0=I-sum_{j in K0} r_j r_j^T`, `delta0=lambda_min(S0)`,
 

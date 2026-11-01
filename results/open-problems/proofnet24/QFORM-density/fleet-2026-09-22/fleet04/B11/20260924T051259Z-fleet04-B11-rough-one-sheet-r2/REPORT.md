@@ -152,7 +152,7 @@ Thus the unrestricted conjecture remains open. The next B11 debt is a genuinely 
 
 ## 7. Sources
 
-- Base Claude package: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`.
-- Later two-sheet source: `math-open-problems@2b68faa56c5a562d18c51c788bbeb7ecb6f23bd2`.
-- Completed fleet01/B11 theorem used in (12): `math-open-problems@64a3abbb4fab96d4bc296e7c79dd0e5023530c3d`.
+- Base Claude package: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`.
+- Later two-sheet source: `private-source@2b68faa56c5a562d18c51c788bbeb7ecb6f23bd2`.
+- Completed fleet01/B11 theorem used in (12): `private-source@64a3abbb4fab96d4bc296e7c79dd0e5023530c3d`.
 - Brain control refreshed from current `main`; authenticated login `yspennstate`.

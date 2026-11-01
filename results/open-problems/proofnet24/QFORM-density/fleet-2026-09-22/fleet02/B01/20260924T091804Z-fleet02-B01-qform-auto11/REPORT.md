@@ -17,7 +17,7 @@ The phase-aligned-density obstruction remains in force: no law-uniform pointwise
 
 Required pinned source actually used:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
@@ -38,7 +38,7 @@ The source's scalar Schur-persistence lemma is also used below.
 Freshest designated partner consumed before publication:
 
 `fleet03/B01` r48, canonical mathematics
-`yspennstate/math-open-problems@f98e469792a51ca58a4387cffc0c68561a24621a`,
+`private-source-repository@f98e469792a51ca58a4387cffc0c68561a24621a`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260924T083540Z-fleet03-B01-qform-auto11-r48/`.
 
 Its pivot-free row restriction is applied in Section 6.

@@ -22,19 +22,19 @@ The replacement below is genuinely averaged in frequency: one ORIGINAL scalar co
 
 Source inputs used at equations:
 
-1. Designated partner fleet02/B01 scalar square-phase theorem: `yspennstate/math-open-problems@91dbcb0e8b3f6faa4af9629aaaff2f69d385695a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T100534Z-fleet02-B01-qform/REPORT.md`. For a cap-one scalar density, `c!=0`, and arbitrary affine coefficient `ell`, it proves
+1. Designated partner fleet02/B01 scalar square-phase theorem: `private-source-repository@91dbcb0e8b3f6faa4af9629aaaff2f69d385695a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T100534Z-fleet02-B01-qform/REPORT.md`. For a cap-one scalar density, `c!=0`, and arbitrary affine coefficient `ell`, it proves
 
    `int_R | E exp(it(c Z^2+ell Z)) |^4 dt <= 27 pi/(2|c|).`       (1.1)
 
    The estimate is uniform in `ell`; this uniformity is the essential partner input below.
 
-2. Current projected-crossing theorem: `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. In particular it records the dimension-two product-projection cap used below: if `B` is a rank-two linear map from an independent cap-one product bank, then
+2. Current projected-crossing theorem: `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. In particular it records the dimension-two product-projection cap used below: if `B` is a rank-two linear map from an independent cap-one product bank, then
 
    `||p_(BY)||_infinity <= 2 / sqrt(det(BB^T)).`                   (1.2)
 
    I also check its new weighted-subset row-marginal gate on the stress family in Section 6; that gate fails there because the projected crossing is concentrated on one physical row.
 
-3. Latest completed designated-partner handoff before publication: fleet02/B01 r46, canonical mathematics `yspennstate/math-open-problems@a9cb334579e92753035a96d258fa94cac01cdbfc`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T160109Z-fleet02-B01-qform-r46/REPORT.md`. I apply its pair-Schur theorem at an actual equation in Section 7.
+3. Latest completed designated-partner handoff before publication: fleet02/B01 r46, canonical mathematics `private-source-repository@a9cb334579e92753035a96d258fa94cac01cdbfc`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T160109Z-fleet02-B01-qform-r46/REPORT.md`. I apply its pair-Schur theorem at an actual equation in Section 7.
 
 ## 2. Main theorem
 

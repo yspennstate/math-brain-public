@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R12 HARD OUTSIDE — released H0021 successor found; exclusive-reassignment gate remains
 
-Date: 2026-09-18 UTC. Repository/branch: private `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-18 UTC. Repository/branch: private `private-source-repository` / `master`.
 
 ## 1. Continuity: do not reopen I0102, I0060, I0002, I0115, or H0006
 

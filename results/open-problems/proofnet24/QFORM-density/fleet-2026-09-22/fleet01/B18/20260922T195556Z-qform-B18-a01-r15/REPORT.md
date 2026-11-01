@@ -35,7 +35,7 @@ A targeted literature check did **not** locate an exact prior theorem matching t
 Completed partner result:
 
 `fleet02/B18`, run `20260922T181504Z-fleet02-B18-QFORM-r12`, canonical mathematics
-`yspennstate/math-open-problems@aa0b07137085e1b6e948c00052ff0689343a0cee:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260922T181504Z-fleet02-B18-QFORM-r12/REPORT.md`
+`private-source-repository@aa0b07137085e1b6e948c00052ff0689343a0cee:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260922T181504Z-fleet02-B18-QFORM-r12/REPORT.md`
 with late-correction supplement at commit `55114f49ab8188c8a90cf998c66d8627d655dec4`.
 
 I use two completed ingredients from that run:

@@ -16,7 +16,7 @@ No moment, compact-support, connected-support, Gaussian, log-concavity, identica
 
 The newest completed designated-partner handoff is fleet03/B01 `fleet03-B01-20260922T223030Z-auto12`, with canonical mathematics
 
-`yspennstate/math-open-problems@ae53a672bb855b66e657c33139e63c2077a5c25b`
+`private-source-repository@ae53a672bb855b66e657c33139e63c2077a5c25b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T223030Z-auto12/REPORT.md`.
 
@@ -34,7 +34,7 @@ This run constructs an exact full-target family sitting maximally in that high-a
 
 Fleet03/B07 proves `QFORM-PRODUCT-L2-v1` at
 
-`yspennstate/math-open-problems@816c00139a183545a0f85c5b4a939eb52cabcfac`
+`private-source-repository@816c00139a183545a0f85c5b4a939eb52cabcfac`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T221112Z-fleet03-B07-qform-r18/REPORT.md`.
 
@@ -53,7 +53,7 @@ The proof allows arbitrary fragmented cap-one supports.
 
 The sharp product-projection input used in that report is source-pinned at
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 

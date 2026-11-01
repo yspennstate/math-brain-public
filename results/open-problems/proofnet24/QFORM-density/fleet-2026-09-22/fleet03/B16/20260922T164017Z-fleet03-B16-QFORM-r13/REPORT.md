@@ -14,7 +14,7 @@ This report does **not** rotate the independent physical coordinates, does not u
 
 The completed assigned partner result actually applied is fleet04/B16 run `20260922T161909Z-fleet04-B16-QFORM-r2`, source:
 
-- full proof: `yspennstate/math-open-problems@58c23c624db350cf44f0c836daa3582eb7e2d266`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T161909Z-fleet04-B16-QFORM-r2/REPORT.md`.
+- full proof: `private-source-repository@58c23c624db350cf44f0c836daa3582eb7e2d266`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T161909Z-fleet04-B16-QFORM-r2/REPORT.md`.
 
 It proves in the exact-rank-three nested-heavy geometry that if physical row `i` has leverage `c_0>1/2` and row `j` has residual leverage `h>1/2`, then
 
@@ -26,7 +26,7 @@ where `G_ij=|r_i|^2|r_j|^2-<r_i,r_j>^2`. Combined with the fixed-pair Cauchy–B
 
 Thus, when the three nonzero eigenvalues all have modulus at least one, `P_ij>1/4`. The partner left the diffuse normalized determinant-bank aggregation as the first unpaid implication.
 
-The fixed-pair projection-product theorem used below is fleet01/B16 run `20260922T154258Z-fleet01-B16-QFORM-r12`, source `yspennstate/math-open-problems@47fe1ce92881fa4b6df0fa8a12b706d6a4eb14c5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260922T154258Z-fleet01-B16-QFORM-r12/REPORT.md`. It proves that the normalized fixed-pair determinant weights are squares of coefficients of an original-coordinate normalized linear bank and, by the product-projection theorem, that such a bank has density at most `2`.
+The fixed-pair projection-product theorem used below is fleet01/B16 run `20260922T154258Z-fleet01-B16-QFORM-r12`, source `private-source-repository@47fe1ce92881fa4b6df0fa8a12b706d6a4eb14c5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260922T154258Z-fleet01-B16-QFORM-r12/REPORT.md`. It proves that the normalized fixed-pair determinant weights are squares of coefficients of an original-coordinate normalized linear bank and, by the product-projection theorem, that such a bank has density at most `2`.
 
 ## 2. First implication attacked
 

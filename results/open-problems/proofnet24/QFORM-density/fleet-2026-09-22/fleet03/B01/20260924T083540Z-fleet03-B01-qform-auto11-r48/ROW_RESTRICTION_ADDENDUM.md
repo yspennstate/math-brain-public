@@ -135,4 +135,4 @@ The remaining implication is genuinely multilinear: aggregate several row budget
 
 ## Source used for (A.2)
 
-The Ball--Rogozin linear-form cap is already source-pinned in the QFORM fleet; one explicit source is `yspennstate/math-open-problems@b160cb60264aea801829a91df9c8e9d51350eaff`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B14/20260924T012603Z-fleet01-B14-QFORM-auto11/REPORT.md`, equation (0.2).
+The Ball--Rogozin linear-form cap is already source-pinned in the QFORM fleet; one explicit source is `private-source-repository@b160cb60264aea801829a91df9c8e9d51350eaff`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B14/20260924T012603Z-fleet01-B14-QFORM-auto11/REPORT.md`, equation (0.2).

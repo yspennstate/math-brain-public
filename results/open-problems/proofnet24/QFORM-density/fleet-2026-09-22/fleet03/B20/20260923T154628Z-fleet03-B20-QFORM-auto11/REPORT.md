@@ -14,7 +14,7 @@ The unrestricted conjecture remains open. All random variables stay in the origi
 
 The immediate synthesis input is fleet03/B19 r36:
 
-`yspennstate/math-open-problems@6dfd43d5519df1fc40ea26f7d0bbe300ad32412d`
+`private-source-repository@6dfd43d5519df1fc40ea26f7d0bbe300ad32412d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T145843Z-fleet03-B19-QFORM-r36/REPORT.md`.
 
@@ -48,7 +48,7 @@ The newer fleet02/B19 r35 counterexample is also respected: a target-valid stric
 
 The designated fleet04/B20 theorem actually applied below is r10:
 
-`yspennstate/math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912`,
+`private-source-repository@c6f29397b3d45a7cf7ab67633a5451767b478912`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`.
 
@@ -249,7 +249,7 @@ for a physical diagonal matrix `D`, that `rank(S_0)=3`, and that the physical le
 
 The completed Fresnel--Brascamp--Lieb Theorem F from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 applies directly to the original product source. If `lambda_1,lambda_2,lambda_3` are the nonzero eigenvalues of `S_0`, then
 

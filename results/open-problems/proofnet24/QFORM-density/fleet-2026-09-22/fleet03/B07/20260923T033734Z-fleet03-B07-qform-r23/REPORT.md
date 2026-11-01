@@ -23,7 +23,7 @@ The designated `fleet04/B07` current-QFORM canonical directory and shared handof
 
 The immediate source is this slot's r22 theorem,
 
-`yspennstate/math-open-problems@ac54330d3df42a48098ef7c704ac268382accd7c`,
+`private-source-repository@ac54330d3df42a48098ef7c704ac268382accd7c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T030701Z-fleet03-B07-qform-r22/REPORT.md`.
 
@@ -164,7 +164,7 @@ This is a dimension-free matching-bank statement in literal original coordinates
 
 The completed fleet03/B06 theorem
 
-`yspennstate/math-open-problems@606257652f3c70e90c7b7f80ea7cb76c1abf689b`,
+`private-source-repository@606257652f3c70e90c7b7f80ea7cb76c1abf689b`,
 
 `QFORM-CROSS-E2-FRACTIONAL-L3-v1`, states that if one side of the physical range of `M` has maximum coordinate leverage at most `1/2`, then the full quadratic form has an `L^3` density with
 

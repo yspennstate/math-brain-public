@@ -20,7 +20,7 @@ No moment, support, Gaussian, log-concavity, connectedness, spectral-coordinate 
 
 Canonical source:
 
-`yspennstate/math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76`
+`private-source-repository@a5e66e2944c89857a41d5e18c283d53a4307be76`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T212412Z-fleet04-B08-QFORM-r2/REPORT.md`.
 
@@ -46,7 +46,7 @@ The parent coordinate is merely conditioned; all parent cross coefficients are r
 
 The same reviewed ridge-window source is
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 

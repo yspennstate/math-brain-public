@@ -18,7 +18,7 @@ The target is unchanged: the coordinates are independent ORIGINAL real coordinat
 
 The preceding B04 r52 report, at
 
-`yspennstate/math-open-problems@fbc50959f73f2a66b91acacbbacc37cbf2b66720`
+`private-source-repository@fbc50959f73f2a66b91acacbbacc37cbf2b66720`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260924T064507Z-fleet03-B04-QFORM-auto11-r52/REPORT.md`,
 
@@ -36,7 +36,7 @@ The translation may depend on coordinates conditioned outside the pair; after co
 
 The source report
 
-`yspennstate/math-open-problems@0d074396abdd021a817f0b8dc104b826f2d7154d`
+`private-source-repository@0d074396abdd021a817f0b8dc104b826f2d7154d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T060557Z-fleet02-B01-qform-auto11/REPORT.md`
 
@@ -275,7 +275,7 @@ This numerical spectrum is only a check; (5.10)-(5.11) are the rigorous spectral
 
 The newest completed designated partner remains fleet04/B04 r2:
 
-`yspennstate/math-open-problems@4a54666abf2316bb79b939cef3ea940605a0af57`
+`private-source-repository@4a54666abf2316bb79b939cef3ea940605a0af57`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260924T001353Z-fleet04-B04-QFORM-r2/REPORT.md`.
 
@@ -289,7 +289,7 @@ Apply the completed B04 pair-anchored fourth-volume promotion theorem
 
 from
 
-`yspennstate/math-open-problems@0d074396abdd021a817f0b8dc104b826f2d7154d`
+`private-source-repository@0d074396abdd021a817f0b8dc104b826f2d7154d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260924T041814Z-fleet03-B04-QFORM-auto11-r48/REPORT.md`.
 

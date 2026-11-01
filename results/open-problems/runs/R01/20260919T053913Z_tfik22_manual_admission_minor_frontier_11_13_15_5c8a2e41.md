@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R01 — manual admission of the finite 22-edge triangle-free intrinsic-knotting residue
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Continuity first: I0024 remains frozen and is not reopened
 

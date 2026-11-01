@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R20 / I0100 — exact fractional tiling and a one-sided Chebyshev formulation
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Canonical claim: `operations/claims/I0100.md`.
 Outside source: Afonso S. Bandeira, *Randomstrasse101: Open Problems of 2025*, Conjecture 26; stable compilation arXiv:2603.29571.
 Tracked quantity: largest admissible prime with matching exact primal/dual certificates for the source-normalized one-localization theta quantity, preserving the complete exact-certified prime set.

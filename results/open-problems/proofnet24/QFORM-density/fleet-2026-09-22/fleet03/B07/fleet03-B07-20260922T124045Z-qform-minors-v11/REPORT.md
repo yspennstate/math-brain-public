@@ -231,11 +231,11 @@ Fresh control remained owner revision `2026-09-22.5` before publication. Correct
 
 Applied compatible other-account mathematics:
 
-- fleet04/B18, `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, full source `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
+- fleet04/B18, `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, full source `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
 Additional source-pinned inputs:
 
-- fleet03/B06 spectral-row Schur smoothing, `yspennstate/math-open-problems@6853fe0b03502a11750096e7a21e650bebb4fe6d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T122731Z-fleet03-B06-qform-curved-trace-v2/REPORT.md`;
-- diffuse/separable Fourier mechanism, source report `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, path `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`; only the linear-perturbation specialization needed here is rederived in Section 3.
+- fleet03/B06 spectral-row Schur smoothing, `private-source-repository@6853fe0b03502a11750096e7a21e650bebb4fe6d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T122731Z-fleet03-B06-qform-curved-trace-v2/REPORT.md`;
+- diffuse/separable Fourier mechanism, source report `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, path `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`; only the linear-perturbation specialization needed here is rederived in Section 3.
 
 The designated `fleet04/B07` slot had no completed current-programme handoff at the final prepublication source check. Full QFORM remains `OPEN / NOT PROVED`.

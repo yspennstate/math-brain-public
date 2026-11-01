@@ -214,7 +214,7 @@ This is an exact dimension-free many-small-support consequence of the third-dire
 
 Required partner source actually used:
 
-    yspennstate/math-open-problems
+    private-source-repository
     commit e47740cfec219112c826613bec5785af4b96cf3
     proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/
       20260922T233948Z-fleet02-B11-QFORM-b35bb6c3/REPORT.md
@@ -248,7 +248,7 @@ The one-dimensional Rogozin--Ball/Rudelson--Vershynin projection bound gives
 
 Now use fleet03/B11's completed translation-stable half-potential theorem from
 
-    yspennstate/math-open-problems@633e2442f30ae1848ba02e37eecc735d2f22b12e
+    private-source-repository@633e2442f30ae1848ba02e37eecc735d2f22b12e
     proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/
       20260923T004154Z-fleet03-B11-QFORM-r20/REPORT.md.
 
@@ -278,13 +278,13 @@ This is a genuine uniform estimate as D0 tends to zero. It is not yet an L-infin
 
 The owner-required newest analytic source is the proved D' extension in
 
-    yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837
+    private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837
     proofnet24/QFORM-density/interactive/
       20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md
 
 and the current volume-stability continuation at
 
-    yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba
+    private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba
     proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/.
 
 For a cross block C and rank-three volume-sampling row marginals alpha_i<=h<3/4, D' proves

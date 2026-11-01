@@ -18,7 +18,7 @@ This run consumes the current corrections. In particular it does **not** use law
 
 The designated partner source actually used is fleet03/B08, run `20260922T194215Z-fleet03-B08-qform-diffuse-r19`, canonical report
 
-`yspennstate/math-open-problems@86cbf124545c3457b0037b49151f4f641391fc76`
+`private-source-repository@86cbf124545c3457b0037b49151f4f641391fc76`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T194215Z-fleet03-B08-qform-diffuse-r19/REPORT.md`.
 

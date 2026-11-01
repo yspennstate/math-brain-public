@@ -151,7 +151,7 @@ Edgeworth calculation above supplies the additional local-limit statement
 exact dense rotated finite-dimensional forms.
 
 Partner source:
-`yspennstate/math-open-problems@1b7a876f7577cf99599322926154ce0032a034fd`,
+`private-source-repository@1b7a876f7577cf99599322926154ce0032a034fd`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/QFORM-B17-20260922T155124Z/REPORT.md`.
 
 ## Scope and remaining gap

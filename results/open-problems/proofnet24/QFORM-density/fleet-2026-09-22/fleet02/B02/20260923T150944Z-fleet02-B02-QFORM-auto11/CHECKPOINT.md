@@ -5,7 +5,7 @@ attacking: QFORM-SECONDANCHOR-CRITICAL-STABLERANK-RECEIVER-v1 by combining a phy
 
 Programme: QFORM-DENSITY-3EIG-20260922. Full target remains OPEN.
 
-Source used: reviewed sharp-HY calculation at `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. Its degree-k calculation gives, for a physical cross block M and k-volume row marginals <=q/2,
+Source used: reviewed sharp-HY calculation at `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. Its degree-k calculation gives, for a physical cross block M and k-volume row marginals <=q/2,
 
 `|phi_Q(t)| <= min(1, e^(k/(2q)) q^(-k/(4q)) pi^(k/(2q)) E_k(M)^(-1/(4q)) |t|^(-k/(2q)))`,
 

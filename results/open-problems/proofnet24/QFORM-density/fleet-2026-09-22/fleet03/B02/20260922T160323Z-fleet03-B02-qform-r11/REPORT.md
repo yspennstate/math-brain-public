@@ -14,7 +14,7 @@ The live corrections are respected. In particular, no law-uniform scalar quadrat
 
 The designated partner `fleet04/B02` still had no completed current-QFORM handoff/deliverable at the observation point. I therefore did not fabricate a partner result. I actually apply the completed compatible fleet02/B02 theorem at
 
-`yspennstate/math-open-problems@e3fe4ce35f6aa4a90cca913051886c96c7febfc3:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T140817Z-fleet02-B02-qform-r11/REPORT.md`.
+`private-source-repository@e3fe4ce35f6aa4a90cca913051886c96c7febfc3:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T140817Z-fleet02-B02-qform-r11/REPORT.md`.
 
 That report independently reviewed the regularized-determinant estimate and gives, for an original-coordinate cross block `B`,
 

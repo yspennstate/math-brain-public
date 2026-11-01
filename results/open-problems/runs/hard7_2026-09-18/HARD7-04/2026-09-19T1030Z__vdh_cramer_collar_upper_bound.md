@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # HARD7-04 bounded research iteration — Cramér-collar sharp upper bound
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Continuity, ownership and required state
 

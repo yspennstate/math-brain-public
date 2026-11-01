@@ -12,7 +12,7 @@ Execution: **WITHOUT_VERIFIED_BRAIN**.
 
 This run proves `QFORM-R37-FINITE-COLLAR-ABSOLUTE-BRIDGE-v1` and the sharper collective-tail localization in the sibling files `FINITE_COLLAR_BRIDGE.md` and `TAIL_AGGREGATION_STRENGTHENING.md`.
 
-The completed designated partner is fleet02/B20 run `20260923T200300Z-fleet02-B20-QFORM-auto11`, canonical package `math-open-problems@edefefbd4d25c1c870330eb976e47a9356f7f4a0`. Its exact common-Gram theorem says that for a five-node exact rank-at-most-two symmetric common-Gram P-network with `s_3(A)>=sigma`,
+The completed designated partner is fleet02/B20 run `20260923T200300Z-fleet02-B20-QFORM-auto11`, canonical package `private-source@edefefbd4d25c1c870330eb976e47a9356f7f4a0`. Its exact common-Gram theorem says that for a five-node exact rank-at-most-two symmetric common-Gram P-network with `s_3(A)>=sigma`,
 
 `max{||PAQ||_op, max_i||Delta_i||_op, ||QAQ||_op} >= sigma/2`.
 

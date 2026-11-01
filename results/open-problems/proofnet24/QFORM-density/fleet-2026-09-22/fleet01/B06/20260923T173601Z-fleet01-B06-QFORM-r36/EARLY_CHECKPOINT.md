@@ -59,7 +59,7 @@ with Delta=ae-bd !=0; the restrictions on R may be arbitrary. Put U=<u,X>, V=<v,
 
 Q=U+cV^2+G(X_R)
 
-has, after conditioning X_R, exactly the scalar form above with A=<rho,X_S>, B=<sigma,X_T> and the same determinant Delta. The designated fleet02/B06 theorem QFORM-WEIGHTED-AFFINE-FIBER-BL-v1 (math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5) applies at the actual inequalities
+has, after conditioning X_R, exactly the scalar form above with A=<rho,X_S>, B=<sigma,X_T> and the same determinant Delta. The designated fleet02/B06 theorem QFORM-WEIGHTED-AFFINE-FIBER-BL-v1 (private-source@8dd33c1abd4fd64140f59032feda2b13d4351da5) applies at the actual inequalities
 
 ||p_A||_infinity<=sqrt(e),  ||p_B||_infinity<=sqrt(e).
 

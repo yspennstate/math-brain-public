@@ -16,11 +16,11 @@ Fresh `math-research-brain/main` was read before the proof: `AGENTS.md`, `schedu
 
 The designated partner result applied below is fleet02/B09 r20, theorem `QFORM-DUALZERO-DIFFUSE-CARRIER-RECEIVER-v1`, canonical source
 
-`yspennstate/math-open-problems@4cf129f62a0c34a8b8e6b083d1922b95d8a4272b:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T182746Z-fleet02-B09-QFORM-r20/REPORT.md`.
+`private-source-repository@4cf129f62a0c34a8b8e6b083d1922b95d8a4272b:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T182746Z-fleet02-B09-QFORM-r20/REPORT.md`.
 
 The arbitrary-rank projected-crossing theorem used in the new proof is the checked source
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 Its weighted-subset proof admits the zero-dimensional grouped-hub specialization `k=0`. At `ell=3` it gives a direct integrable `|t|^{-3/2}` envelope and density coefficient
 

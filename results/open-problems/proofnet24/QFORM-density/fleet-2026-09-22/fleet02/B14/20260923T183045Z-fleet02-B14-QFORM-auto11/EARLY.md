@@ -57,4 +57,4 @@ Thus under the mixture-theorem budget \(H\le\sqrt{2\pi}\),
 \]
 So the full Gaussian-mixture theorem cannot be extended to arbitrary rough cap-one laws by a uniform inverse-scale-budget approximation argument: even the compact finite-fragment extreme class is separated from that mixture class by order-one L1 distance as N grows.
 
-This is a proof-interface obstruction, not a QFORM counterexample. A target-valid control will be added in the final report using a completed source theorem from math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837.
+This is a proof-interface obstruction, not a QFORM counterexample. A target-valid control will be added in the final report using a completed source theorem from private-source@e5f71d79eff325201dd0274053d20268ce65b837.

@@ -174,7 +174,7 @@ C_{\rm hom}=C_{\rm ca}=C_{\rm ff},
 
 where `ff` consists of centered compact finite unions of intervals of total measure one and the affine term is range-compatible. Its canonical source is
 
-`yspennstate/math-open-problems@1250c776b3840b8494ace461b27541f8e156e9bf:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T182134Z-fleet04-B14-centered-affine-r3/REPORT.md`.
+`private-source-repository@1250c776b3840b8494ace461b27541f8e156e9bf:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T182134Z-fleet04-B14-centered-affine-r3/REPORT.md`.
 
 Apply that theorem to the actual inequality here. The whole extreme set \(E_i\), however disconnected, is kept as one probability density \(1_{E_i}\). It is translated once by its whole-set barycenter. The identity
 
@@ -224,7 +224,7 @@ This is directly relevant to the current grouped/ridge/aggregate-before-inversio
 Used premises:
 
 - fleet04/B14 `QFORM-CENTERED-AFFINE-LOCALIZATION-EQUIVALENCE-v1` at the source pinned above;
-- fleet03/B14 `QFORM-PRINCIPAL-TRIPLE-DETERMINANT-LOCALIZATION-v1` at `yspennstate/math-open-problems@5e82f7573bc426a28a01fa25b0a2707ab0b573e2`;
+- fleet03/B14 `QFORM-PRINCIPAL-TRIPLE-DETERMINANT-LOCALIZATION-v1` at `private-source-repository@5e82f7573bc426a28a01fa25b0a2707ab0b573e2`;
 - the completed separable density bound \(\pi\) for the witness.
 
 Respected live corrections: no pointwise van-der-Corput bound, no independence after spectral rotation, no arbitrary-joint coarea bound, no positive conditional-projection-density moment, no bounded support diameter, and no universal fragment-count cap.

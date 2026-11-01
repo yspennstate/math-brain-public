@@ -5,7 +5,7 @@ Metric movement: UNMEASURED -> b(n)=c_PP log n for all integers n>=2 after fixin
 # R07 canonical GitHub run — variance lower-bound baseline and exact sensitivity identities
 
 Run date: 2026-09-16.
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Admission, source, exact target, and current status
 

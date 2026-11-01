@@ -19,16 +19,16 @@ The latest fleet04/B19 moving-ridge barrier is treated as a correction boundary:
 Pinned mathematical inputs actually used:
 
 1. fleet03/B19 r38, `QFORM-R2-PHYSICAL-TWOROW-TRANSVERSE-COMPILER-v1`:
-   `yspennstate/math-open-problems@f09b670173440c4c511985c9a89baf38f97e82c1`,
+   `private-source-repository@f09b670173440c4c511985c9a89baf38f97e82c1`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T183023Z-fleet03-B19-QFORM-r38/REPORT.md`.
 2. fleet03/B19 r40, `QFORM-TWOSIDED-SCHUR-2PLUS1-PRODUCTBANK-v1`:
-   `yspennstate/math-open-problems@a314c39c5734ecd0845867d597f10f77189b6575`,
+   `private-source-repository@a314c39c5734ecd0845867d597f10f77189b6575`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T192751Z-fleet03-B19-QFORM-r40/REPORT.md`.
 3. designated partner fleet04/B19 r2, residual-diffuse exact-null-coloop theorem:
-   `yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
+   `private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 4. designated partner fleet04/B19 r4 moving-ridge joint-cap barrier:
-   `yspennstate/math-open-problems@ac55b70485c4108c7073a75365127e00be3bc097`.
+   `private-source-repository@ac55b70485c4108c7073a75365127e00be3bc097`.
 
 ## 2. Inherited finite-core collar, now with a maximal physical pair
 

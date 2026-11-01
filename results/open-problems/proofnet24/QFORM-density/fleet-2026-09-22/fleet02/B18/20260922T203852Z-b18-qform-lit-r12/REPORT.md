@@ -23,7 +23,7 @@ This report proves an exhaustive two-stage reduction. Every still-unpaid target 
 
 Canonical source:
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
@@ -41,7 +41,7 @@ Arbitrarily many smaller nonzero eigenvalues of either sign are allowed. The pro
 
 Canonical source:
 
-`yspennstate/math-open-problems@42c1368934f9c5fdfd1723329382ae2bbb408003`
+`private-source-repository@42c1368934f9c5fdfd1723329382ae2bbb408003`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260922T195803Z-fleet03-B18-QFORM-r16/REPORT.md`.
 

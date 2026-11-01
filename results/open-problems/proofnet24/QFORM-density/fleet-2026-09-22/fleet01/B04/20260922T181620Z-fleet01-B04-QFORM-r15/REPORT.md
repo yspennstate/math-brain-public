@@ -24,7 +24,7 @@ This does not solve the full conjecture. The remaining issue is quantitative coe
 
 The completed fleet02/B04 report is
 
-`yspennstate/math-open-problems@4bea103ece44732c1c7c31368fec4e33b35e1fdd`,
+`private-source-repository@4bea103ece44732c1c7c31368fec4e33b35e1fdd`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T174702Z-r15/REPORT.md`, blob `7c1bf677f5ca43e52f6b165f19c8fe0690a12f51`.
 
@@ -38,7 +38,7 @@ The present report applies (2.1) quantitatively to an L2 rearrangement and later
 
 Fleet02/B04 also proved `QFORM-PURE-CROSS-TRIPLE-v1` at
 
-`yspennstate/math-open-problems@b7168a1b0b52fbf69705170ff9795435efeb849f`,
+`private-source-repository@b7168a1b0b52fbf69705170ff9795435efeb849f`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260922T122057Z-01c809a1/REPORT.md`, blob `fa94d255369a9ad6475ebc66b2f158066e588a8b`.
 
@@ -57,7 +57,7 @@ uniformly under arbitrary affine terms produced by conditioning outside the trip
 
 The preceding run proved `QFORM-AFFINE-STAR-HALF-RIESZ-v1` and its coloring corollary at
 
-`yspennstate/math-open-problems@0c69ee2f962d8fe4e998a69ed41a29c100a742fd`,
+`private-source-repository@0c69ee2f962d8fe4e998a69ed41a29c100a742fd`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260922T174812Z-fleet01-B04-QFORM-r15/REPORT.md`.
 

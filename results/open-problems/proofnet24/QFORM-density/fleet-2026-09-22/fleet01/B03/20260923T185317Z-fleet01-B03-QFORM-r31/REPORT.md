@@ -20,7 +20,7 @@ The full conjecture remains open because the decomposition does not yet force on
 
 The preceding B03 theorem is
 
-`yspennstate/math-open-problems@588fa418bc29d4b889fcbbee2b61370234ceef37`
+`private-source-repository@588fa418bc29d4b889fcbbee2b61370234ceef37`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T175336Z-fleet01-B03-QFORM-r30/REPORT.md`.
 
@@ -48,7 +48,7 @@ The proof retains the whole independent-copy scalar difference and removes the t
 
 The preceding B03 rank-three crossing theorem is at
 
-`yspennstate/math-open-problems@2062e0f60e39c2cb88fb72c4908d95f19676d00e`
+`private-source-repository@2062e0f60e39c2cb88fb72c4908d95f19676d00e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T165124Z-fleet01-B03-QFORM-r29/ADDENDUM_CROSSBLOCK.md`.
 
@@ -67,7 +67,7 @@ and this branch has a continuous `C_0` density because its characteristic functi
 
 The independently checked projected-crossing source used below is
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -77,7 +77,7 @@ Its weighted-subset estimate is used only in the exact `k=0, ell=1` scope in Sec
 
 The current completed designated partner result is
 
-`yspennstate/math-open-problems@38920ffa423ec07886112206314249deb7294dd4`
+`private-source-repository@38920ffa423ec07886112206314249deb7294dd4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T171205Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 
@@ -95,7 +95,7 @@ I apply `(1.6)` to the actual heavy-row subbranch of the one-overlap compiler in
 
 The source-pinned pair theorem is
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 

@@ -206,7 +206,7 @@ Exact scalar collinearity is too strong to assume, and approximate collinearity 
 
 The required completed result is Theorem F from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 It is applied literally at (2.1) and (3.3), not merely cited. The same pinned bundle's counterexample search reports no valid QFORM counterexample; that negative search is **not** used as novelty evidence or as proof of the conjecture.
 
@@ -214,7 +214,7 @@ It is applied literally at (2.1) and (3.3), not merely cited. The same pinned bu
 
 Latest compatible completed fleet03/B18 report observed before this write:
 
-`yspennstate/math-open-problems@c11bba404e9782ff3a919e1f7d352f39a7100eaf:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T225405Z-fleet03-B18-QFORM-auto13/REPORT.md`.
+`private-source-repository@c11bba404e9782ff3a919e1f7d352f39a7100eaf:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T225405Z-fleet03-B18-QFORM-auto13/REPORT.md`.
 
 Its independent deterministic check artifact is at commit `2a053b6a128ce68f93b524fa3177d227f0990dbb`. The report proves `QFORM-FOUR-SOURCE-RANK3-COMPRESSION-v1` with `592/s` and the LPP-based four-disjoint-bank corollary `1184/s`. Equations (2.3), (4.6), and (5.4) are direct applications to the present construction.
 

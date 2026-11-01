@@ -14,7 +14,7 @@ at the current default branch, rooted at the required source commit
 \`e5f71d79eff325201dd0274053d20268ce65b837\`, with the later Claude-review corrections retained.
 
 The completed fleet01/B08 input used at an equation is
-\`yspennstate/math-open-problems@93ac74d786812e147208df894a5cfed31b14b7fb\`.
+\`private-source-repository@93ac74d786812e147208df894a5cfed31b14b7fb\`.
 Its r49 theorem supplies, in the only primitive edge-capped diffuse survivor, one literal crossing
 \[
 D=A[S\setminus\{k\},T]

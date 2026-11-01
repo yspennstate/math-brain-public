@@ -12,7 +12,7 @@ attacking: the fresh affine-shear caveat in the curved two-sheet tube; prove a B
 
 The freshest compatible interactive handoff is the curved-dyadic-product-tube report at
 
-`yspennstate/math-open-problems@728e325d9c432026bd364c676c6b293f13b41256:`
+`private-source-repository@728e325d9c432026bd364c676c6b293f13b41256:`
 `proofnet24/QFORM-density/interactive/20260923T202000Z-curved-dyadic-product-tube/REPORT.md`.
 
 It proves an `O(a r^2)` tube bound for three independent physical axes when the center has no affine-in-`L` shear, but it also gives an explicit independent cap-one saddle showing that after the canonical term `beta L^2+2 epsilon L P` is divided by `2 epsilon L`, the induced affine term `dL` can force tube mass of order
@@ -179,7 +179,7 @@ Substituting the value of `A` in (3.9) gives exactly (3.2)-(3.3). Since the inte
 
 The newest compatible partner report is
 
-`yspennstate/math-open-problems@c4e5d92483b9f6f0992fc3df61dc78d2f6eba272:`
+`private-source-repository@c4e5d92483b9f6f0992fc3df61dc78d2f6eba272:`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T190745Z-fleet03-B05-QFORM-r30/REPORT.md`.
 
 Its exact packet has a first product bank
@@ -228,7 +228,7 @@ This is the substantive partner application: the partner's exact coordinate form
 
 The required source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:`
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
 was read through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.

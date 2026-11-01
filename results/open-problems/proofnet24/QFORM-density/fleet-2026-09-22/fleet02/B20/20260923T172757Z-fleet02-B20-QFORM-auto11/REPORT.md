@@ -29,7 +29,7 @@ All coefficient-plane projectors below are deterministic matrix objects only. Th
 
 The required source directory was reread at the latest compatible state descending from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -67,7 +67,7 @@ Conditioning ORIGINAL coordinates outside a principal block only creates affine 
 
 The newest compatible completed designated-partner result available in this run is
 
-`yspennstate/math-open-problems@ab5d7906b6ffc0ca6b07c354d912d7b5b1afccfc`,
+`private-source-repository@ab5d7906b6ffc0ca6b07c354d912d7b5b1afccfc`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T171148Z-fleet03-B20-QFORM-r35/REPORT.md`.
 

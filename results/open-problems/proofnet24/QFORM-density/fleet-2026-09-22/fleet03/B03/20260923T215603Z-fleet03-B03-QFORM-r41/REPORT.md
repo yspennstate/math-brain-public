@@ -22,7 +22,7 @@ The live corrections retained here include:
 
 The current designated partner result is fleet04/B03:
 
-`yspennstate/math-open-problems@05ff82a8d052b024ae584e60dffb7b198fcd7db4`
+`private-source-repository@05ff82a8d052b024ae584e60dffb7b198fcd7db4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260923T183012Z-fleet04-B03-dependent-riesz-r2/REPORT.md`.
 

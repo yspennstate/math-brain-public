@@ -36,7 +36,7 @@ or equivalently `h > (r_1-5)/4`. This is not a full solution, but it converts th
 
 ## 2. Source-pinned analytic input
 
-The required source is `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory
+The required source is `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 Its proved fifth-volume theorem `D_5` states that for a literal disjoint ORIGINAL-coordinate cross block `C=A[I,J]`,

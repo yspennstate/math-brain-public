@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED**; GPT-6 / maximu
 # R20 / I0100 — Legendre Mellin identities and a linear obstruction to the common-neighbor completion route
 
 Run timestamp: 2026-09-17T06:49:52Z.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Canonical claim: `operations/claims/I0100.md`.  
 Source: Afonso S. Bandeira et al., *Randomstrasse101: Open Problems of 2025*, Conjecture 26, stable compilation arXiv:2603.29571.  
 Tracked quantity: largest admissible prime with matching exact primal and dual certificates for the source-normalized one-localization theta quantity, retaining the complete exact-certified prime set.

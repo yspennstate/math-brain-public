@@ -15,7 +15,7 @@ The target remains the unrestricted original-coordinate problem: independent rea
 
 The immediate source is fleet03/B20 r36, pinned at
 
-`yspennstate/math-open-problems@1fe3d344529b743f64cb37b42a7a12b6a86a9414`,
+`private-source-repository@1fe3d344529b743f64cb37b42a7a12b6a86a9414`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T180245Z-fleet03-B20-QFORM-r36/REPORT.md`.
 
@@ -47,7 +47,7 @@ Hence each `||E_r||_op<epsilon`.
 
 The designated partner used at an actual inequality is fleet04/B20 r11, pinned at
 
-`yspennstate/math-open-problems@1fe3d344529b743f64cb37b42a7a12b6a86a9414`,
+`private-source-repository@1fe3d344529b743f64cb37b42a7a12b6a86a9414`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T181642Z-fleet04-B20-QFORM-r11/REPORT.md`.
 

@@ -18,7 +18,7 @@ All coordinate sets below are literal ORIGINAL-coordinate sets. No random variab
 
 The immediate same-slot source is fleet03/B19 r50:
 
-`yspennstate/math-open-problems@f3a0b13c6d73bb3ec94be4ad5fc293c60ab7da3f`
+`private-source-repository@f3a0b13c6d73bb3ec94be4ad5fc293c60ab7da3f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T050225Z-fleet03-B19-QFORM-r50/REPORT.md`.
 
@@ -38,7 +38,7 @@ such that
 
 The completed analytic receiver used again below is fleet02/B19
 
-`yspennstate/math-open-problems@f4d95bc33caf8db11888cceb817c005484f67d31`,
+`private-source-repository@f4d95bc33caf8db11888cceb817c005484f67d31`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260924T031336Z-fleet02-B19-QFORM-auto11/REPORT.md`,
 
@@ -290,7 +290,7 @@ Thus the new leverage gate is a **product-coordinate analytic interface**, not p
 
 The completed fleet04/B19 exact-null-coloop theorem is
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`,
 
@@ -313,7 +313,7 @@ with continuous density. This is applied only in the partner's exact proved scop
 
 The newer completed partner barrier is fleet04/B19
 
-`yspennstate/math-open-problems@dbadc6024c1dbcafa4269688b2a21cc5c3b25dd0`,
+`private-source-repository@dbadc6024c1dbcafa4269688b2a21cc5c3b25dd0`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260923T151700Z-fleet04-B19-QFORM-r4/REPORT.md`,
 

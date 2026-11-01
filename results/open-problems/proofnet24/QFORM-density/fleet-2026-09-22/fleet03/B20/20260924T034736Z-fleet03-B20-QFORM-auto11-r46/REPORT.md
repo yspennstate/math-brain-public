@@ -12,7 +12,7 @@ The target remains the exact owner target: independent original real coordinates
 
 The immediate predecessor is fleet03/B20 r45,
 
-`yspennstate/math-open-problems@9e25c4e61cfe9aa9700419517b5d73b72a3e1fb1`
+`private-source-repository@9e25c4e61cfe9aa9700419517b5d73b72a3e1fb1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T031641Z-fleet03-B20-QFORM-auto11-r45/REPORT.md`.
 
@@ -30,7 +30,7 @@ The r45 diffuse branch already constructs one internal physical split on each si
 
 The analytic receiver used below is fleet03/B04 r42, source commit
 
-`yspennstate/math-open-problems@563bc41e4f9247f9daf3343a57757f45e3f6e703`.
+`private-source-repository@563bc41e4f9247f9daf3343a57757f45e3f6e703`.
 
 For every literal disjoint original-coordinate cross block M,
 

@@ -15,7 +15,7 @@ The unrestricted owner conjecture remains OPEN. No Gaussian, log-concavity, mome
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems@ac4d8963e32785d2191e535b0268fe451262a903`
+`private-source-repository@ac4d8963e32785d2191e535b0268fe451262a903`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T012256Z-fleet03-B06-qform-r49/REPORT.md`.
 
@@ -407,7 +407,7 @@ If (4.16) fails, the rank-three range projection has trace three, so there are a
 
 The freshest completed designated-partner result read in this run is
 
-`yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`
+`private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260924T001014Z-fleet04-B06-QFORM-r3/REPORT.md`,
 

@@ -21,7 +21,7 @@ This is narrower than the predecessor `QFORM-HUB-TWOBANK-AGGREGATE-WEDGE-v1`: th
 
 Fresh designated partner:
 
-`yspennstate/math-open-problems@18cfc90035b4e40e649f4a260cf6c7b454584d0b`
+`private-source-repository@18cfc90035b4e40e649f4a260cf6c7b454584d0b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T223923Z-fleet03-B05-QFORM-r34/REPORT.md`.
 
@@ -31,7 +31,7 @@ The nonzero physical-pivot analytic receiver is the completed theorem
 
 `QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1`, source
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -41,7 +41,7 @@ For an exact-rank-three physical block `A=VMV^T`, `V^TV=I_3`, a physical coordin
 
 The required pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was reread through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed Theorem F pays every exact-rank-three diffuse spectral frame by `<=12`; its Theorem C pays the ruled one-sheet side of signature `(2,1)` by `<=pi sqrt(2)`. The counterexample search reports no target-valid counterexample.
 

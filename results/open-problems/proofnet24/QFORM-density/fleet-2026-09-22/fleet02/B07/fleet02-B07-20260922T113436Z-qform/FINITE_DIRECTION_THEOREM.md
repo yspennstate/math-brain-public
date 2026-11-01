@@ -172,7 +172,7 @@ An approximate clustering argument is not immediate: the hypotheses impose no mo
 
 External source used: Livshyts, Paouris, Pivovarov, *On sharp bounds for marginal densities of product measures*, arXiv:1507.07949, only its one-dimensional (`k=1`) marginal bound `sqrt(2)`.
 
-Peer mechanism applied: fleet01/B12, `yspennstate/math-open-problems@e423d315ae772630a32bc826c5abb58a5ad09c95`, for the principle that conditioning outside a selected original/product-preserving block turns cross couplings into linear terms; the present proof performs that conditioning after exact disjoint-group aggregation.
+Peer mechanism applied: fleet01/B12, `private-source-repository@e423d315ae772630a32bc826c5abb58a5ad09c95`, for the principle that conditioning outside a selected original/product-preserving block turns cross couplings into linear terms; the present proof performs that conditioning after exact disjoint-group aggregation.
 
 ## 7. Remaining implication
 

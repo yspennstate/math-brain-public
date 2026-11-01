@@ -1,6 +1,6 @@
 # fleet01/B07 repaired-source audit — pass 1 partial
 
-Exact source: `yspennstate/math-open-problems@4e530247ec0ef4101a6e5ecf621bd35a969c42aa`, blob `98e45d53d106db9a205051a4dd4917fc39dc2e3a`, manifest SHA-256 `90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb`.
+Exact source: `private-source-repository@4e530247ec0ef4101a6e5ecf621bd35a969c42aa`, blob `98e45d53d106db9a205051a4dd4917fc39dc2e3a`, manifest SHA-256 `90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb`.
 
 This is a partial new-hash audit, not an inherited old-source pass. Substantive coverage: L140-173, L208-240, L245-399, L452-479, L532-588, L594-646. Other ranges remain UNCHECKED and are listed in coverage.jsonl. Reference-PDF visual comparison is UNCHECKED in this run.
 

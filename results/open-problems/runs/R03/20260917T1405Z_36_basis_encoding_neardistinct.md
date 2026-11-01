@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 
 # R03 run36 — basis-row encoding and the near-distinct-magnitude frontier
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL; source OPEN.** The fixed finite envelope does not move. The substantive progress is a theorem-sized asymptotic reduction that pushes the dense corank-one obstruction from the run35 square-root coefficient-complexity window to normals whose absolute coefficient magnitudes are almost all distinct. No source-closure claim is made.
 

@@ -16,13 +16,13 @@ The rank-two opposite-sign logarithmic singularity is preserved explicitly. The 
 
 ## 2. Source-pinned premises actually applied
 
-1. **Assigned partner fleet02/B11 scalar projection theorem.** The completed partner chain used in fleet02/B11 run `20260922T155024Z-b11-qform-87d73745`, canonical report `yspennstate/math-open-problems@d56d97c85ced819f45ddad0987deaa5eb4b53cdc`, includes the completed fleet02/B11 one-dimensional projection result `20260922T135203Z-b11-qform-6080e0b3`: for independent cap-one coordinates and a unit coefficient vector `d`, the linear projection `L=d.X` has density cap
+1. **Assigned partner fleet02/B11 scalar projection theorem.** The completed partner chain used in fleet02/B11 run `20260922T155024Z-b11-qform-87d73745`, canonical report `private-source-repository@d56d97c85ced819f45ddad0987deaa5eb4b53cdc`, includes the completed fleet02/B11 one-dimensional projection result `20260922T135203Z-b11-qform-6080e0b3`: for independent cap-one coordinates and a unit coefficient vector `d`, the linear projection `L=d.X` has density cap
 
 `||p_L||_infinity <= sqrt(e)`.
 
 This cap is used numerically in Theorem 5.1 below.
 
-2. **Reviewed orientation-free rank-two affine fusion.** `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, with scoped independent review `yspennstate/math-open-problems@3323397511a6c899630825e18d925511e8aee1e9`, proves the exact-rank-three scalar-pivot consequence
+2. **Reviewed orientation-free rank-two affine fusion.** `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, with scoped independent review `private-source-repository@3323397511a6c899630825e18d925511e8aee1e9`, proves the exact-rank-three scalar-pivot consequence
 
 `||p_Q||_infinity <= 128 [c_i |A_ii| |det Lambda|]^(-1/4)`
 

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R14 HARD OUTSIDE — H0008 terminal handoff and successor gate
 
-Run date: 2026-09-19 UTC. Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Run date: 2026-09-19 UTC. Repository / branch: private `private-source-repository` / `master`.
 
 ## 0. Lifecycle discipline: the third H0008 recovery is forbidden
 

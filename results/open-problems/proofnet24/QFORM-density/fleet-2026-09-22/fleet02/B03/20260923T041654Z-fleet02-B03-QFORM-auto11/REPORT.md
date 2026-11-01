@@ -18,7 +18,7 @@ No sum/difference conjugate variables are declared independent. No post-rotation
 
 Required pinned Claude package actually read:
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`;
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`;
 - same commit/directory `FOURIER_ROUTE_REPORT.md`;
 - same commit/directory `COUNTEREXAMPLE_SEARCH.md`.
 
@@ -32,7 +32,7 @@ then, with `D=|det B|` and `kappa=sigma_min(B)`,
 
 The newest designated partner actually consumed is fleet03/B03 r25:
 
-`yspennstate/math-open-problems@f445f3dd7e2b845f96ac58cc4bd96f12ec7a839c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T031216Z-fleet03-B03-QFORM-r25/REPORT.md`.
+`private-source-repository@f445f3dd7e2b845f96ac58cc4bd96f12ec7a839c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T031216Z-fleet03-B03-QFORM-r25/REPORT.md`.
 
 It proves the dependence-safe parabolic-hub small-ball mechanism for `aX^2+LX+S`, and its independent-copy weighted Riesz identity. This report sharpens its universal constant and uses the stronger half-Frostman exponent directly rather than degrading it to a quarter-power small-ball bound.
 

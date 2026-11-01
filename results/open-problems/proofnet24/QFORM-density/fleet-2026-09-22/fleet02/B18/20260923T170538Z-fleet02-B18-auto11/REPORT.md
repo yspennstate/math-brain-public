@@ -225,7 +225,7 @@ This is more than an aligned/source-separated special case.
 
 ### Required pinned e5f result applied to the same family
 
-The pinned record `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, proves its ruled one-sheet theorem: for an exact rank-three signature `(2+,1-)` with all three magnitudes at least one and no out-of-range linear term,
+The pinned record `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, proves its ruled one-sheet theorem: for an exact rank-three signature `(2+,1-)` with all three magnitudes at least one and no out-of-range linear term,
 
 `p_Q(t)<=pi sqrt(2)` on the one-sheet/majority-sign half-line.      (5.7)
 
@@ -285,7 +285,7 @@ Using (6.3), the quadratic becomes
 
 `Q=2SC+2aC^2+2bCD_0+dD_0^2`.                                     (6.9)
 
-Apply the completed fleet02/B18 theorem `QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1`, source `math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`, which states that if a scalar of density cap `K` is genuinely independent of a pair with joint-density cap `M`, then
+Apply the completed fleet02/B18 theorem `QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1`, source `private-source@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`, which states that if a scalar of density cap `K` is genuinely independent of a pair with joint-density cap `M`, then
 
 `2 beta S C+alpha C^2+2 delta C D+gamma_0 D^2`
 
@@ -299,7 +299,7 @@ Exact coefficient alignment `ell in span{g,beta}` is the special case `K=empty`.
 
 ## 7. Completed designated partner applied and live splice
 
-The latest **completed** designated-partner theorem used here is fleet03/B18 r28, `QFORM-SCHUR-NULLHUB-TRANSVERSE-COMPILER-v1`, source `math-open-problems@43b16ba3992035298289170540682e8aa62a9ad4`. It proves that in the exact-rank-three Schur-isotropic null-hub packet, if all transverse leverages obey `q_j<=1/2`, then
+The latest **completed** designated-partner theorem used here is fleet03/B18 r28, `QFORM-SCHUR-NULLHUB-TRANSVERSE-COMPILER-v1`, source `private-source@43b16ba3992035298289170540682e8aa62a9ad4`. It proves that in the exact-rank-three Schur-isotropic null-hub packet, if all transverse leverages obey `q_j<=1/2`, then
 
 `||p_Q||_infinity <=3*2^(4/3)[r^2|det D_schur|]^(-1/3)`,           (7.1)
 

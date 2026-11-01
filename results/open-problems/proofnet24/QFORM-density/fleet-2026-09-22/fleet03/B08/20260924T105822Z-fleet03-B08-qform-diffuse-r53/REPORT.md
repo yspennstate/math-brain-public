@@ -17,7 +17,7 @@ The current-hour canonical fleet03/B08 login already existed from the immediatel
 
 Immediate predecessor used here:
 
-- fleet03/B08 r52, `yspennstate/math-open-problems@fc449241245b5ca5762686d95cedee5acfd2f2e9`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T102327Z-fleet03-B08-qform-diffuse-r52/REPORT.md`.
+- fleet03/B08 r52, `private-source-repository@fc449241245b5ca5762686d95cedee5acfd2f2e9`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T102327Z-fleet03-B08-qform-diffuse-r52/REPORT.md`.
 
 The literal-crossing endpoint used below is the completed marginal-free third-compound receiver already used in the B08 chain: for an original-coordinate crossing matrix `M`, if
 
@@ -27,9 +27,9 @@ then the complete ambient quadratic form has
 
 `||p_Q||_infinity <= 6^(4/3)/Delta_3(M)`,
 
-and `p_Q in C_0(R)`. The receiver retains arbitrary same-side quadratic curvature. A source-pinned B08 application with this exact constant is fleet01/B08 r49, and its source chain points to fleet02/B08 r35, `yspennstate/math-open-problems@087cf5aa5cfcee4eb6ae243facb9e0fcf2391e29`.
+and `p_Q in C_0(R)`. The receiver retains arbitrary same-side quadratic curvature. A source-pinned B08 application with this exact constant is fleet01/B08 r49, and its source chain points to fleet02/B08 r35, `private-source-repository@087cf5aa5cfcee4eb6ae243facb9e0fcf2391e29`.
 
-The designated fleet04/B08 partner input actually applied in Section 6 is `QFORM-DISTRIBUTED-STAR-DERIVATIVE-SPLIT-v1`, `yspennstate/math-open-problems@f324267086411b9725aa0733e108ab6efc2e760a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260924T081435Z-fleet04-B08-QFORM-r3/REPORT.md`.
+The designated fleet04/B08 partner input actually applied in Section 6 is `QFORM-DISTRIBUTED-STAR-DERIVATIVE-SPLIT-v1`, `private-source-repository@f324267086411b9725aa0733e108ab6efc2e760a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260924T081435Z-fleet04-B08-QFORM-r3/REPORT.md`.
 
 The newest correction `QFORM-HUBSTAR-FIBERL2-MIXEDNORM-UNIVERSAL-FALSE-v1` is respected: this report does **not** attempt to upgrade the partner square-root small-ball bound through the refuted universal mixed-norm interface. Instead the new density estimate is obtained directly from a literal physical crossing.
 

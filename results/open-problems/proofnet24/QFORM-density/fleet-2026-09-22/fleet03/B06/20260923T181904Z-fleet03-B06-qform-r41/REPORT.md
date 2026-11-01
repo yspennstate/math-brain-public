@@ -15,13 +15,13 @@ The exact target remains: independent ORIGINAL real coordinates with probability
 
 This run continues the literal ORIGINAL-coordinate r40 packet at
 
-`yspennstate/math-open-problems@a867a320432a932e279f704d60b0c833ff4acbd5`
+`private-source-repository@a867a320432a932e279f704d60b0c833ff4acbd5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T171937Z-fleet03-B06-qform-r40/REPORT.md`.
 
 The completed fleet04 theorem actually applied is
 
-`yspennstate/math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912`
+`private-source-repository@c6f29397b3d45a7cf7ab67633a5451767b478912`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`.
 
@@ -33,7 +33,7 @@ The exact designated `fleet04/B06` canonical QFORM directory was still absent at
 
 The analytic receiver used is fleet03/B01's row-marginal-free one-hub projected-E2 theorem,
 
-`yspennstate/math-open-problems@585b5a3ca7e887e5cd16f45ea49056d548361dfb`
+`private-source-repository@585b5a3ca7e887e5cd16f45ea49056d548361dfb`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T173320Z-auto11-heavyrowpromotion/REPORT.md`.
 
@@ -47,7 +47,7 @@ where
 
 Its underlying arbitrary-rank projected-crossing theorem is independently checked at
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 

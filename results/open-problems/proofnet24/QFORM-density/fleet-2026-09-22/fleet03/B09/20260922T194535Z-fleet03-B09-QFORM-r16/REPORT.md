@@ -21,7 +21,7 @@ The scalar logarithmic triangle theorem is fleet02/B09
 
 source
 
-`yspennstate/math-open-problems@4b179ce358c4a728673ad9a7e3ddc2481fa287d1:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T171216Z-fleet02-B09-QFORM-r5/REPORT.md`.
+`private-source-repository@4b179ce358c4a728673ad9a7e3ddc2481fa287d1:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T171216Z-fleet02-B09-QFORM-r5/REPORT.md`.
 
 For independent scalar `U,V,W` with density caps one, arbitrary affine terms, and nonzero `a,b,c`, it proves
 
@@ -35,7 +35,7 @@ I also apply fleet02/B09
 
 source
 
-`yspennstate/math-open-problems@4b179ce358c4a728673ad9a7e3ddc2481fa287d1:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T181745Z-fleet02-B09-QFORM-r6/REPORT.md`.
+`private-source-repository@4b179ce358c4a728673ad9a7e3ddc2481fa287d1:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T181745Z-fleet02-B09-QFORM-r6/REPORT.md`.
 
 If an original-coordinate bank has zero self block and its cross block has two singular values `s1>=s2>0`, that theorem gives
 

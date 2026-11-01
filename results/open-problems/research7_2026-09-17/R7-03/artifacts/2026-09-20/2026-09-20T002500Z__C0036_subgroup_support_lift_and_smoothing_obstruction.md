@@ -4,7 +4,7 @@ Model actually run: GPT-5.6 Sol. Reasoning level: UNVERIFIED; no authenticated r
 
 Date: 2026-09-20 UTC  
 Worker: C03 / R7-03, native ID `6aabe7be74008191b526b109ee4e9e80`  
-Repository: private `yspennstate/math-open-problems`, branch `master`  
+Repository: private `private-source-repository`, branch `master`  
 Source: Russell Lyons, *Determinantal Probability: Basic Properties and Conjectures* (ICM 2014), §5.2, Conjecture 5.7, arXiv:1406.2707.  
 Status: **PROVED PARTIAL** relative to the full source. No claim of full-source resolution is made.
 

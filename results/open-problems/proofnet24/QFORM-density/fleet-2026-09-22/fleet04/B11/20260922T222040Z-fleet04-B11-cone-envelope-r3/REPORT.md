@@ -209,8 +209,8 @@ The argument above proves an essentially bounded density and the exact interval 
 
 - Owner control revision **2026-09-22.15**, programme QFORM-DENSITY-3EIG-20260922.
 - Live correction inbox blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`.
-- Completed partner: `yspennstate/math-open-problems@1515e474fa8110a0b704a6ff73a25fc554005017`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T211147Z/REPORT.md`.
-- Prior cone-trace obstruction: `yspennstate/math-open-problems@44e7ab6750fbc3dccd77f1dd9e8bdba0bba2f0f5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T161514Z-b11-cone-trace-r1/REPORT.md`.
-- Separate regularity source: `yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`.
+- Completed partner: `private-source-repository@1515e474fa8110a0b704a6ff73a25fc554005017`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T211147Z/REPORT.md`.
+- Prior cone-trace obstruction: `private-source-repository@44e7ab6750fbc3dccd77f1dd9e8bdba0bba2f0f5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T161514Z-b11-cone-trace-r1/REPORT.md`.
+- Separate regularity source: `private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`.
 
 No refuted pointwise oscillatory estimate, projection-only cone trace, conditional-cap-as-independence step, small-coefficient perturbation, or fixed-good-minor implication is used.

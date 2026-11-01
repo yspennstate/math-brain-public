@@ -2,7 +2,7 @@
 
 A final fleet04/B06 directory refresh found a newer completed designated-partner theorem than the r2 source used in the first immutable `REPORT.md` publication:
 
-- `yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`
+- `private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260924T001014Z-fleet04-B06-QFORM-r3/REPORT.md`
 - theorem `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`.
 

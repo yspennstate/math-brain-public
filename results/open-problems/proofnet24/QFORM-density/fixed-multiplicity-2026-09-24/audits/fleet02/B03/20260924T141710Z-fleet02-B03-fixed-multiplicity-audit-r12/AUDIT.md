@@ -6,7 +6,7 @@ Logical role: B03, decoupling / copies / conditional independence / exponent tra
 
 ## Source pin and review scope
 
-I resolved fresh `math-open-problems` master before the review at `e1644f9d140e605f1ec5ab058328dd63d63daced`, and refreshed it before publication at `122a92fbfd1f6cc6d228666fa56d9e7ffea16b65`. At both refs the manuscript has the identical Git blob
+I resolved fresh `private-source` master before the review at `e1644f9d140e605f1ec5ab058328dd63d63daced`, and refreshed it before publication at `122a92fbfd1f6cc6d228666fa56d9e7ffea16b65`. At both refs the manuscript has the identical Git blob
 
 `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 

@@ -18,7 +18,7 @@ Outside source: Bálint Virág (2014), *Operator limits of random matrices*, Pro
 
 ## 2. Captured repository state and continuity
 
-Repository: private `yspennstate/math-open-problems`, branch `master`.
+Repository: private `private-source-repository`, branch `master`.
 
 The branch was recaptured during this invocation after concurrent fleet writes. The final pre-write captured `master` was:
 

@@ -29,7 +29,7 @@ I also checked Juškevičius--Lee, *Small ball probabilities, maximum density an
 
 The nonlinear receiver is the completed theorem `QFORM-ZEROPIVOT-1PLUS2-DENSITY-v1`, source-pinned at
 
-`yspennstate/math-open-problems@dd94932dae1791af1bca9396c062e17d0e55142a`
+`private-source-repository@dd94932dae1791af1bca9396c062e17d0e55142a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T175509Z-qform-B18-a01-r15/REPORT.md`.
 
@@ -43,7 +43,7 @@ is real symmetric and nonsingular, then `(X,Y)^T H (X,Y)` has a continuous densi
 
 Fleet04/B18 independently transferred and applied this receiver in its completed run r2,
 
-`yspennstate/math-open-problems@f852e87a4002c603ac47039f22a1921061b19f2d`,
+`private-source-repository@f852e87a4002c603ac47039f22a1921061b19f2d`,
 
 showing in particular how sharp one-dimensional product-bank rearrangement can be inserted without inventing independence after rotation.
 
@@ -207,7 +207,7 @@ The latest compatible fleet04/B18 theorem is the corrected r4 result
 
 source-pinned at
 
-`yspennstate/math-open-problems@3460488b1a730f54dbac848cddc3e2761d3f348e`,
+`private-source-repository@3460488b1a730f54dbac848cddc3e2761d3f348e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T162049Z-fleet04-B18-QFORM-r4/REPORT.md`.
 

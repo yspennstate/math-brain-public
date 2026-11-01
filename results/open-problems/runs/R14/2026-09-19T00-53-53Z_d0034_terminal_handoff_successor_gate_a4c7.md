@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R14 HARD OUTSIDE — D0034 terminal handoff; HARD successor reassignment gate
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R14  
 Allocation: HARD OUTSIDE
 

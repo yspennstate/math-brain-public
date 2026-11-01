@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 Status: **F0095 OPEN / HARD7-06 PARTIAL.** This run does **not** prove existence of the constant 3-colourability threshold. It gives a source-relevant rigorous upper-bound improvement for the ordinary sparse Erdos--Renyi model and two route-diagnostic results.
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, ownership, exclusions, and what was actually reread
 

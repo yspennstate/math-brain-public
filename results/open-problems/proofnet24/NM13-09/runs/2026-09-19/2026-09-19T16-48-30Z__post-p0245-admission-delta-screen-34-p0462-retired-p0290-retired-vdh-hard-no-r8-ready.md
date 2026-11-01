@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-09 — admission delta screen 34: P0462 retirement history recovered, P0290 reaches six-run retirement, VDH release is exhausted HARD work; no residue-8 CLOSABLE admission
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-09` / `proofnet24/NM13-09/`  
 Category gate: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed stochastic-process existence/counterexample questions admitting an explicit process construction, exact transition law, finite witness, or complete short special-class theorem  

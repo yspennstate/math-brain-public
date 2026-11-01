@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — this was
 # R13 — Boolean Komlós STUCK1: isolate the six-column threshold
 
 Run ID: `20260919T1732Z_stuck1-k6-threshold-c1e8`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R13  
 Lane: **HARD OUTSIDE**
 

@@ -21,7 +21,7 @@ The designated `fleet04/B07` current-QFORM handoff/canonical directory was check
 
 The fresh physical deshearing input is fleet02/B20 r22,
 
-`yspennstate/math-open-problems@1c1f83fe62149caa8b755ac8d39923214c8b6c39`,
+`private-source-repository@1c1f83fe62149caa8b755ac8d39923214c8b6c39`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260922T233033Z-fleet02-B20-QFORM-r22/REPORT.md`.
 
@@ -243,7 +243,7 @@ The latest reviewed fleet01/B20 trichotomy can still be applied unchanged to the
 
 The designated `fleet04/B07` has no completed current-QFORM artifact, so none is invented. I use the compatible completed fleet04/B18 sharp projection/rearrangement input, canonical source
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 

@@ -20,7 +20,7 @@ This run changes mechanism from r18's direct moving-log trace of a pure cross tr
 
 The completed fleet02/B04 report
 
-`yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`
+`private-source-repository@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`
 
 at
 

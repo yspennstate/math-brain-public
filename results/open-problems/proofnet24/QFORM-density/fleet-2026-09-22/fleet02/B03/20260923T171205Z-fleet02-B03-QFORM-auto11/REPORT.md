@@ -16,13 +16,13 @@ This run changes mechanism from the previous selector-density compiler.  The fir
 
 The historical pinned Claude package was reread at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md` and `COUNTEREXAMPLE_SEARCH.md`.  In particular, its Theorem D/D' uses independent-copy differencing without declaring conjugate sums and differences independent, and its fractional-potential/square-peel route is source-valid in its stated scope.  The arbitrary-joint coarea shortcut, law-uniform pointwise quadratic-phase decay, post-rotation independence, and conditional cap for one member of a sum/difference pair remain unavailable.
 
 The new proof actually used at an equation is the independently checked grouped projected-crossing theorem
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -48,7 +48,7 @@ The hub internal function is arbitrary; internal quadratic terms on either light
 
 The newest compatible designated partner result is fleet03/B03 r35,
 
-`yspennstate/math-open-problems@dc887389947d0e4195eb1e28d6736060e718905c`
+`private-source-repository@dc887389947d0e4195eb1e28d6736060e718905c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T162345Z-fleet03-B03-QFORM-r35/REPORT.md`.
 

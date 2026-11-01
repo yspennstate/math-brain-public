@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # P20 successor admission — I0052 programmatic exclusion, I0057/I0058 literature corrections, cursor advanced
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Prior retired research source: D0010, Ruodu Wang Open Problem 10; preserved handoff `proofnet24/P20-closure-log-unimodality/successors/D0010/runs/2026-09-17/2026-09-17T04-12-18Z__sixrun-handoff.md` at creation commit `3ba12c3f38e2f25c66f1ddb2a9d3eea73024ff1a`.
 Former I0081 remains source-refuted / packaged / 2-of-2 OTHER-track audited / retired and is not reopened.
 

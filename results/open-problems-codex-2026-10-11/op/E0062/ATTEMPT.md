@@ -221,7 +221,7 @@ asserted.
 ## 6. Read-only comparison with prior attempts
 
 Read origin/master:prob1000_lean_20260908/ultracode_20260909/E0062/memo.md
-in ~/math-open-problems. It already proved the nonzero-entry
+in ~/private-source. It already proved the nonzero-entry
 case using the same triangle-face obstruction, and computed log-coordinate
 four-cycle orbits. Its statements that a sign-only criterion cannot work
 relied on numerical evidence, not a proof of opposite behaviours. We use

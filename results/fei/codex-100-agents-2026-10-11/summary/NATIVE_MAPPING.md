@@ -1,6 +1,6 @@
 # Mapping supplemental F roles to installed B streams
 
-**This is a many-to-many research crosswalk, not a native reassignment.** The installed plan is [reports/fei-2026-10-11/](https://github.com/yspennstate/math-open-problems/tree/master/reports/fei-2026-10-11/), with installation reference [bc85302284612e979faae67ea51663242d322221](https://github.com/yspennstate/math-open-problems/commit/bc85302284612e979faae67ea51663242d322221). Its twenty native B streams and fixed endpoint **2026-10-21T19:15:57Z** remain authoritative.
+**This is a many-to-many research crosswalk, not a native reassignment.** The installed plan is [reports/fei-2026-10-11/](private-source-repository), with installation reference [bc85302284612e979faae67ea51663242d322221](private-source-repository). Its twenty native B streams and fixed endpoint **2026-10-21T19:15:57Z** remain authoritative.
 
 F01–F20 are the topical role groups in [TEAMS.json](TEAMS.json) and [REPORT.md](REPORT.md): five proposed roles per group, totaling 100 logical roles. This is an alternative decomposition of the same research effort, not another 100 workers or twenty new scheduled jobs. Matching numerical suffixes have no operational meaning.
 

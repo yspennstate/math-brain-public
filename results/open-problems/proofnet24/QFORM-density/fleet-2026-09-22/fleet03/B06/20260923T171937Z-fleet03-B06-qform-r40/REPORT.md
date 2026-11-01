@@ -15,7 +15,7 @@ The full target remains open: for independent ORIGINAL real coordinates with pro
 
 The run starts from the literal ORIGINAL-coordinate cut supplied by the completed fleet04/B20 theorem
 
-`yspennstate/math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912`
+`private-source-repository@c6f29397b3d45a7cf7ab67633a5451767b478912`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`.
 
@@ -45,7 +45,7 @@ and the earlier B06 r37 estimate gives
 
 The determinant-only physical-pair theorem actually used below is the arbitrary-rank Theorem 3.1 in
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`
 
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`:
 if an ORIGINAL physical 2x2 principal block is indefinite with determinant magnitude `D>0` and `s_3(A)>=1`, then

@@ -27,7 +27,7 @@ Earlier criteria paid either piece alone. Here I prove that fewer than five prot
 
 Designated partner source actually used:
 
-`yspennstate/math-open-problems@572fa1f2bc3b1ab29018a426f414d21dce2b5504`
+`private-source-repository@572fa1f2bc3b1ab29018a426f414d21dce2b5504`
 
 (fleet02/B12, theorem `QFORM-RELATIVE-NUMERICAL-RANGE-MODE-SHIELD-v1`). In its notation, for an original-coordinate carrier `M=A_0P`, `g=s_m(M)>0`, addition `N=SP`, and whitened relative action `K`, it proves for every `j`
 
@@ -37,13 +37,13 @@ where `mu_j` is the `j`-th eigenvalue of the symmetric whitened relative action.
 
 Also reread the newer fleet02/B12 antipodal-skew theorem at
 
-`yspennstate/math-open-problems@70aaef45400bbec56a6d6f4b0103c888e014d499`.
+`private-source-repository@70aaef45400bbec56a6d6f4b0103c888e014d499`.
 
 It confirms that the purely longitudinal obstruction is not just `Sym K=-I`: a skew component can rescue modes at exact antipodal symmetric resonance. The present theorem handles the complementary phenomenon where the rescue occurs **transversely to the old carrier range**, and only a few longitudinal plus a few transverse modes are separately available.
 
 Density receiver used below: `D_5` from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 at `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. For any literal disjoint ORIGINAL-coordinate cross block `B=A[I,J]`,
 

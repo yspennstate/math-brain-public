@@ -16,7 +16,7 @@ Fresh control was read from `yspennstate/math-research-brain` under owner revisi
 I read the complete source-bound fleet04/B04 handoff
 
 - `BT4-F3-R3-PIVOT-SWITCH-TRIANGLE-v1`, shared handoff commit `289a6ee8a640dffc9ac197e63abc4723c6a47071`,
-- canonical scientific report commit `d68f471f46e5f1837417574c2e0bec07dd3280d2` in `yspennstate/math-open-problems`.
+- canonical scientific report commit `d68f471f46e5f1837417574c2e0bec07dd3280d2` in `private-source-repository`.
 
 The partner proves that in the defect-one residual-three tight-pivot orbit, a switch between the two light supports followed by one further surviving pivot either exits to SIX/cyclic remainder/exact-R4 compression or forces the repeated light support to be a directed triangle. Thus the residual pivot debt splits into a monochromatic one-support orbit and a mixed orbit with triangular light support.
 

@@ -55,13 +55,13 @@ This is a valid product-projection statement. It is **not** fed into the refuted
 
 Herry--Malicet--Poly, *Regularity of laws via Dirichlet forms -- Application to quadratic forms in independent and identically distributed random variables*, arXiv:2303.09488, studies iid inputs which arise as sufficiently smooth functions of a Gaussian field, and its emblematic strong-density convergence theorem assumes further centering/variance/operator conditions. Those hypotheses are substantially stronger than arbitrary non-iid fragmented cap-one densities. I therefore do not import that result as an exact solution of the owner target.
 
-The Fourier endpoints used below are the already completed source-pinned synthesis in `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, based on Beckner's sharp Hausdorff--Young theorem and Bennett--Carbery--Christ--Tao/Lieb Brascamp--Lieb Gaussian exhaustion. Its conventions explicitly allow arbitrary affine terms.
+The Fourier endpoints used below are the already completed source-pinned synthesis in `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, based on Beckner's sharp Hausdorff--Young theorem and Bennett--Carbery--Christ--Tao/Lieb Brascamp--Lieb Gaussian exhaustion. Its conventions explicitly allow arbitrary affine terms.
 
 ## 3. Incoming designated-partner theorem
 
 The latest completed `fleet02/B18` report is
 
-`yspennstate/math-open-problems@7586eaaa1b31bf811db4a4ab40b0a2ce7c2982c4`,
+`private-source-repository@7586eaaa1b31bf811db4a4ab40b0a2ce7c2982c4`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T154246Z-fleet02-B18-QFORM-auto11b/REPORT.md`.
 

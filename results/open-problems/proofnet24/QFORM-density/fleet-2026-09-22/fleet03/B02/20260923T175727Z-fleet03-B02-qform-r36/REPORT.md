@@ -231,7 +231,7 @@ This does NOT imply that one triple has universal scale in arbitrary dimension; 
 
 The completed fleet04/B02 zero-diagonal physical-triple theorem at
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`
 
 gives, on its stated overlap, the global Fourier `L2` credit
 
@@ -270,7 +270,7 @@ This is an equation-level application of the designated partner theorem. Continu
 
 The newest completed fleet04/B02 strong-cut report is
 
-`yspennstate/math-open-problems@674f13a108a33176aafffe8f9b6d44ec3a89f03a`.
+`private-source-repository@674f13a108a33176aafffe8f9b6d44ec3a89f03a`.
 
 It works with one literal original-coordinate cross block `M` satisfying
 
@@ -338,8 +338,8 @@ The next precise B02 mechanism is `QFORM-GROUPED-PLUECKER-KERNELCURVATURE-L1-v1`
 
 Controls and corrections were refreshed from `yspennstate/math-research-brain/main` before this report. Important mathematical inputs actually used:
 
-- fleet04/B02 zero-diagonal `L2_t` theorem: `math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`;
-- fleet04/B02 strong-cut theorem: `math-open-problems@674f13a108a33176aafffe8f9b6d44ec3a89f03a`;
+- fleet04/B02 zero-diagonal `L2_t` theorem: `private-source@0b11995430ce407a8852ac3bc5651491f2ee64f7`;
+- fleet04/B02 strong-cut theorem: `private-source@674f13a108a33176aafffe8f9b6d44ec3a89f03a`;
 - prior B02 exact-decoupled `2+1` theorem, used only as historical comparison: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T121820Z-fleet03-B02-QFORM-r11/REPORT.md`;
 - fresh correction `QFORM-GSTAR-SCALE-FORCING-FALSE-v1`: math-brain commit `de928600b0aed7e73584f73aefe11eda0c18ef21`.
 

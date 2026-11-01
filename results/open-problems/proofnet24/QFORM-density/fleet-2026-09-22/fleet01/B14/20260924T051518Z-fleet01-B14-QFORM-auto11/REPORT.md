@@ -13,7 +13,7 @@ The unrestricted owner target remains OPEN: independent real coordinates with ar
 
 ## 0. Mechanism change after source matching
 
-I initially tested an exact bang-bang reduction from cap-one marginals to indicators of measure-one sets. Before using it as a new result I source-matched it against the live QFORM corpus. It is already proved in the earlier fleet04/B14 extreme-point localization theorem, as recorded explicitly in fleet03/B14 at `math-open-problems@54f2d04e936d0dfefe345d17ee18a46b35039d7e`. That source also proves that no universal finite fragment-count strengthening is available for the coordinatewise bathtub step.
+I initially tested an exact bang-bang reduction from cap-one marginals to indicators of measure-one sets. Before using it as a new result I source-matched it against the live QFORM corpus. It is already proved in the earlier fleet04/B14 extreme-point localization theorem, as recorded explicitly in fleet03/B14 at `private-source@54f2d04e936d0dfefe345d17ee18a46b35039d7e`. That source also proves that no universal finite fragment-count strengthening is available for the coordinatewise bathtub step.
 
 So this run did **not** relabel the known bang-bang reduction as new. The mechanism was changed to a different quantity before reciprocal payment: the `L2` collision energy of the **aggregate** slope pushforward.
 
@@ -21,7 +21,7 @@ So this run did **not** relabel the known bang-bang reduction as new. The mechan
 
 The newest completed fleet02/B14 mathematical report observed in this run is
 
-- `yspennstate/math-open-problems@b376a5b911fdf54fef212829f376ab301e2561a3`,
+- `private-source-repository@b376a5b911fdf54fef212829f376ab301e2561a3`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260924T025846Z-fleet02-B14-QFORM-auto11/REPORT.md`,
 - theorem `QFORM-PREPLANCHEREL-COHERENT-PARTITION-v1`.
 

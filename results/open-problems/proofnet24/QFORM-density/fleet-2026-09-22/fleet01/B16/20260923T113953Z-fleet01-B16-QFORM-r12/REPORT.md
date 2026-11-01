@@ -13,13 +13,13 @@ attacking: projection-product interaction at the remaining shared-bank/null-Rayl
 
 The analytic source is the completed rank-two affine half-Riesz theorem
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`,
 
 together with the already checked source-preserving translated-square consequence from fleet01/B16
 
-`yspennstate/math-open-problems@ab9eee0f982c189620b67212476538c53db2ea60`
+`private-source-repository@ab9eee0f982c189620b67212476538c53db2ea60`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T094106Z-fleet01-B16-QFORM-projprod/REPORT.md`.
 
@@ -33,11 +33,11 @@ If `d` lies in the row span of `M`, the constant `128 sqrt(2)` in (1.1) is repla
 
 The designated partner actually consumed in this run is fleet02/B16
 
-`yspennstate/math-open-problems@ade5cfe51d454341667779f7d9da714e4de99ed9`
+`private-source-repository@ade5cfe51d454341667779f7d9da714e4de99ed9`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T103259Z-fleet02-B16-078f791ea823/REPORT.md`.
 
-It proves `QFORM-BANK-AGGREGATED-FRESH-SQUARE-N3-v1`, including the target-valid family and the sharp supplied inequality `||p_Q||_infinity<=4` described below. Its pinned receiver is fleet03/B16 `QFORM-DEPENDENT-PAIR-FRESH-SQUARE-SIGNFREE-v1` at `math-open-problems@4388eeb12a94dd167f305554419fd4c986eda04a`; that theorem explicitly permits arbitrary deterministic affine terms in its three aggregate variables.
+It proves `QFORM-BANK-AGGREGATED-FRESH-SQUARE-N3-v1`, including the target-valid family and the sharp supplied inequality `||p_Q||_infinity<=4` described below. Its pinned receiver is fleet03/B16 `QFORM-DEPENDENT-PAIR-FRESH-SQUARE-SIGNFREE-v1` at `private-source@4388eeb12a94dd167f305554419fd4c986eda04a`; that theorem explicitly permits arbitrary deterministic affine terms in its three aggregate variables.
 
 ## 2. A full-ambient conditional-affine closure
 

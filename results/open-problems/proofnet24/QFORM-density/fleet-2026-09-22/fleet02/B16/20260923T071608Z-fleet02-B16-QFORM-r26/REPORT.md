@@ -11,12 +11,12 @@ attacking: near-coloop transition — test whether conditioning on the weak leak
 ## 1. Fresh control and source boundary
 
 
-Required pinned completed source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially
+Required pinned completed source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, especially
 
 - `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, Theorem A (localized three-variable density bound) and Theorem C (ruled one-sheet bound using two-dimensional product marginals), and
 - the matching `RESULTS.md` / `FOURIER_ROUTE_REPORT.md`, which explicitly forbid replacing original-product structure by an arbitrary projected joint density or by post-rotation independence.
 
-Latest designated partner consumed: fleet03/B16 r26, canonical source `math-open-problems@a398a1c2e6e97683e3fe594fa19476929a882be6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T045948Z-fleet03-B16-QFORM-r26/REPORT.md`. Its Corollary `QFORM-R23-ONE-COLOOP-REDUCTION-v1` reduces the exact-rank-three residual, after its paid exits, to a genuine near-coloop `c>63/64`; its stated next debt is a uniform near-coloop transition that retains original-product dependence.
+Latest designated partner consumed: fleet03/B16 r26, canonical source `private-source@a398a1c2e6e97683e3fe594fa19476929a882be6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T045948Z-fleet03-B16-QFORM-r26/REPORT.md`. Its Corollary `QFORM-R23-ONE-COLOOP-REDUCTION-v1` reduces the exact-rank-three residual, after its paid exits, to a genuine near-coloop `c>63/64`; its stated next debt is a uniform near-coloop transition that retains original-product dependence.
 
 ## 2. First unpaid implication, attacked immediately
 

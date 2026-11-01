@@ -2,7 +2,7 @@
 
 The immediately preceding B12 run, `20260923T014701Z-qform-eigenvalue-r22`, was restored from its worker-owned memory after the first r22 bundle was written. Its canonical report is
 
-`yspennstate/math-open-problems@2b9f9ccd93e8df4a7bb6b6f4bd3ec351c286976c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T014701Z-qform-eigenvalue-r22/REPORT.md`.
+`private-source-repository@2b9f9ccd93e8df4a7bb6b6f4bd3ec351c286976c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T014701Z-qform-eigenvalue-r22/REPORT.md`.
 
 That run proved the cofinite one-sided spectrum theorem: if an `n x n` terminal matrix `H` has, for one sign,
 

@@ -4,7 +4,7 @@ Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 
 ## Source pin
 
-Fresh `yspennstate/math-open-problems` master observed at the start of the package audit: `af01fc9240762f709dd21d725c2527c74b6167f7`.
+Fresh `private-source-repository` master observed at the start of the package audit: `af01fc9240762f709dd21d725c2527c74b6167f7`.
 
 The delivered baseline package pins the theorem source at:
 

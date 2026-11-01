@@ -70,7 +70,7 @@ No spectral rotation is used to create independence: the only independent object
 
 The latest compatible `fleet03/B17` result used here is
 
-`yspennstate/math-open-problems@0335944c2b08a13b9094368494320c8780940785`,
+`private-source-repository@0335944c2b08a13b9094368494320c8780940785`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T180123Z-fleet03-B17-QFORM-auto11/REPORT.md`.
 
@@ -339,7 +339,7 @@ This does not cover fragment count growing with `R`, center vectors `d=d_R` tend
 
 This section applies an actual completed result from the required source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
 
@@ -433,4 +433,4 @@ A future density above `3sqrt(2)` in any valid family would refute that **candid
 
 `CHECK.py` verifies exactly `B^2=I`, `tr B=1`, `det B=-1`, the irrational null identity `q(d_0)=0`, the exact vector `Bd_0`, the explicit translated-cube bound at `R=2`, and the partner's exact cone-tip formula/gap.  `CHECK_OUTPUT.txt` records the executed output.  The early gradient calculation was saved before this report as `EARLY_CALC.md`.
 
-Only this worker-owned run directory is changed in math-open-problems.  No unrelated data, credentials, permissions, public release action, account crossing, task creation or scheduler mutation is involved.
+Only this worker-owned run directory is changed in private-source.  No unrelated data, credentials, permissions, public release action, account crossing, task creation or scheduler mutation is involved.

@@ -285,8 +285,8 @@ This run does not use the refuted arbitrary-joint rank-three coarea claim, posit
 
 The completed external results actually used are:
 
-1. designated partner fleet03/B13 r17, canonical `math-open-problems@eac866b378f5c54411a55f7eb49f89336a4701ae`: the near-null bank-energy floor and uniform `|t|^(-1/2)` endpoint;
-2. fleet04/B14 `QFORM-LAW-LEVEL-FINITE-MIXTURE-LOCALIZATION-v1`, canonical `math-open-problems@321ec7899f4972d125d641408512fe9e5e9dcf4c`: total-variation approximation by finite mixtures of finite-fragment product indicators.
+1. designated partner fleet03/B13 r17, canonical `private-source@eac866b378f5c54411a55f7eb49f89336a4701ae`: the near-null bank-energy floor and uniform `|t|^(-1/2)` endpoint;
+2. fleet04/B14 `QFORM-LAW-LEVEL-FINITE-MIXTURE-LOCALIZATION-v1`, canonical `private-source@321ec7899f4972d125d641408512fe9e5e9dcf4c`: total-variation approximation by finite mixtures of finite-fragment product indicators.
 
 The earlier fleet02/B13 zero-loss fixed-functional bang-bang theorem remains the geometric front end. The new Fourier-power theorem is not a restatement of it: it handles the nonlinear convex functional `|phi|^p` and preserves a single common extreme law across all copies.
 

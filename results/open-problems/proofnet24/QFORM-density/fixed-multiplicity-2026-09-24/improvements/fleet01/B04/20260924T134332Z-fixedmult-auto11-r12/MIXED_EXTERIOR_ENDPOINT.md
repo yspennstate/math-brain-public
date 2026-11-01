@@ -8,14 +8,14 @@ Status: **proved supporting theorem and a paid `s_16` sub-branch; NOT a universa
 
 Baseline manuscript:
 
-- `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`
+- `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`
 - `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`
 - blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`
 - SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
 
 Transverse `s_16` carrier theorem consumed here:
 
-- `yspennstate/math-open-problems@15082841edd324c5a29c7fb4d9ceb2f81726f107`
+- `private-source-repository@15082841edd324c5a29c7fb4d9ceb2f81726f107`
 - `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet03/B11/20260924T131227Z-fleet03-B11-fixedmult-r57/TRANSVERSE_S16.md`
 - blob `68cfb76a592b389ac5d7719e8dff0fdd65bdb127`.
 

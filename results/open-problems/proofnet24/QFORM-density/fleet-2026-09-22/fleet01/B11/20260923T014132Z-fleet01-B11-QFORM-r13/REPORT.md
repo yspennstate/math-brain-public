@@ -14,7 +14,7 @@ The full target remains open. This report attacks the exact-rank-three, zero-phy
 
 The designated partner actually used below is fleet02/B11, run `20260922T233948Z-fleet02-B11-QFORM-b35bb6c3`, full report
 
-`yspennstate/math-open-problems@e47740cfec219112c826613bec5785af4b96cf3f`
+`private-source-repository@e47740cfec219112c826613bec5785af4b96cf3f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T233948Z-fleet02-B11-QFORM-b35bb6c3/REPORT.md`.
 
@@ -28,7 +28,7 @@ some ORIGINAL-coordinate cut `S,S^c` has
 
 The newest proof-first continuation is also applied below through the volume-stability theorem
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 

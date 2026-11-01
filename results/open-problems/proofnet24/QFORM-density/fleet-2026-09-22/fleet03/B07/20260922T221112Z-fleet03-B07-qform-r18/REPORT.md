@@ -17,7 +17,7 @@ This run uses no Gaussian, moment, compact-support, log-concavity, post-rotation
 
 The immediate B07 state comes from the preceding run:
 
-`yspennstate/math-open-problems@a20d669ff2c433cc70cb70234f49431da4518fa5`
+`private-source-repository@a20d669ff2c433cc70cb70234f49431da4518fa5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T203738Z-fleet03-B07-qform-r17/REPORT.md`.
 
@@ -35,7 +35,7 @@ For the completed fleet02/B19 S0 source, `E_2(B)>=1/48`, so the second alternati
 
 The designated `fleet04/B07` still has no completed current-QFORM handoff directory at the fresh source check. I therefore do not invent one. The compatible completed fleet04 result actually applied below is fleet04/B18's sharp product-projection transfer, whose source is
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 

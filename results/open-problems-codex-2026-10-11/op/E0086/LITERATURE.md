@@ -61,7 +61,7 @@ Read intake E_20260908 attempts.jsonl, E0086-A001, and problems.jsonl, E0086. Th
 
 During the attempt, a second math-store recall asked “potential kernel planar random walk Green function hitting probability”. It returned general potential-theory cards and unrelated local-time work; no new source-matching theorem was adopted.
 
-Read-only inspection of origin/master in ~/math-open-problems found operations/claims/E0086.md and NM13-12's 2026-09-18 reports. The following were read using git show origin/master:<path>:
+Read-only inspection of origin/master in ~/private-source found operations/claims/E0086.md and NM13-12's 2026-09-18 reports. The following were read using git show origin/master:<path>:
 
 - operations/claims/E0086.md;
 - proofnet24/NM13-12/runs/2026-09-18/2026-09-18T07-51-25Z__e0086-potential-kernel-hazard-upper-bound.md;

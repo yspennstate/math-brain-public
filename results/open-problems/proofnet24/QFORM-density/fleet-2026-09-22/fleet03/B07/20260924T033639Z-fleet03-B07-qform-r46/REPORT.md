@@ -16,7 +16,7 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, iid, dia
 
 The main incoming structural source is my r40 positive overlap compiler:
 
-`yspennstate/math-open-problems@c21a61aa6390c0be6ed68027341207e44c1bbb07`
+`private-source-repository@c21a61aa6390c0be6ed68027341207e44c1bbb07`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T224121Z-fleet03-B07-qform-r40/REPORT.md`.
 
@@ -42,7 +42,7 @@ Previously (1.2) was only structural. This run analytically pays every term whos
 
 The linear-form density input below is the source-valid Rudelson--Vershynin transfer already proved and applied in fleet03/B18:
 
-`yspennstate/math-open-problems@9c6683c03c8b0dbd635314109854871448343055`
+`private-source-repository@9c6683c03c8b0dbd635314109854871448343055`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T235531Z-fleet03-B18-QFORM-auto14/REPORT.md`.
 
@@ -236,7 +236,7 @@ So any unbounded-ratio sequence in this overlap-two chamber must develop quartic
 
 The designated completed partner is
 
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 

@@ -16,11 +16,11 @@ The owner-requested continuity conclusion is tracked separately. The new branche
 
 The only non-elementary analytic input is the already archived regularized-determinant characteristic-function estimate from
 
-- `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`, interactive report `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
+- `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`, interactive report `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 
 Its Sections 3--6 received a completed independent PASS from fleet02/B02 at
 
-- `yspennstate/math-open-problems@e3fe4ce35f6aa4a90cca913051886c96c7febfc3`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T140817Z-fleet02-B02-qform-r11/REPORT.md`.
+- `private-source-repository@e3fe4ce35f6aa4a90cca913051886c96c7febfc3`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T140817Z-fleet02-B02-qform-r11/REPORT.md`.
 
 For disjoint physical coordinate sets `I,J`, `B=A[I,J]`, it gives the endpoint
 

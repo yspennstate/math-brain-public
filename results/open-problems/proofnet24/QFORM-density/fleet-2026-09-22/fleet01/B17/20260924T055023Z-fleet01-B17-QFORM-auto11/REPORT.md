@@ -186,7 +186,7 @@ This does **not** prove \(C_{\mathrm{univ}}=3\sqrt2\). The slack \(1/m\to0\), co
 
 ## 3. Concrete use of the completed fleet02/B17 theorem
 
-Source-pinned peer input: `math-open-problems@96940cec9f8a2d4ca231a77d1324cfb7c59a87ad`, fleet02/B17 report
+Source-pinned peer input: `private-source@96940cec9f8a2d4ca231a77d1324cfb7c59a87ad`, fleet02/B17 report
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T024313Z-fleet02-B17-QFORM-auto11/REPORT.md`.
 
 That report proves, for arbitrary independent one-dimensional densities bounded by one,

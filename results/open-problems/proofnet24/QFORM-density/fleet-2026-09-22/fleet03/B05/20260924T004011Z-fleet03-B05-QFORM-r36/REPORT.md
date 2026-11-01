@@ -39,7 +39,7 @@ That cancellation gives a `c`-free density estimate while the full dependent res
 
 The active ratio packet comes from
 
-`yspennstate/math-open-problems@b0299facc04ea0c03276dddb1a12c027aed5a946`
+`private-source-repository@b0299facc04ea0c03276dddb1a12c027aed5a946`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T033640Z-fleet01-B05-QFORM-r26/REPORT.md`.
 
@@ -64,7 +64,7 @@ and the standard packet can be chosen with `m>=3/20`.
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems@3b26570e5ee8a21471acba644e9b20483cbb2118`
+`private-source-repository@3b26570e5ee8a21471acba644e9b20483cbb2118`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T234035Z-fleet03-B05-QFORM-r35/REPORT.md`.
 
@@ -72,7 +72,7 @@ The immediate predecessor is
 
 Source:
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -87,7 +87,7 @@ Crucially the affine vector need not be parallel to `u`.
 
 The product-density source used below is recorded in
 
-`yspennstate/math-open-problems@103fe9295f04e9fae87c2ef9a88ba46a3b1e7fcc`
+`private-source-repository@103fe9295f04e9fae87c2ef9a88ba46a3b1e7fcc`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260922T124333Z-fleet01-B04-QFORM-r11/REPORT.md`.
 
@@ -101,7 +101,7 @@ This is a density rearrangement statement, not a pointwise oscillatory-decay sta
 
 Canonical source:
 
-`yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
+`private-source-repository@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`.
 

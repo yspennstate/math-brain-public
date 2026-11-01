@@ -6,7 +6,7 @@ After the main report was committed, a fresh control refresh exposed an independ
 
 canonical proof
 
-`yspennstate/math-open-problems@d38137900964a447553bd7ed148a2cfa55637fea:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T181810Z-r11-qform-additional-eig/REPORT.md`.
+`private-source-repository@d38137900964a447553bd7ed148a2cfa55637fea:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T181810Z-r11-qform-additional-eig/REPORT.md`.
 
 It independently derives the same Hadamard/simplex obstruction to
 

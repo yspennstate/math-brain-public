@@ -17,8 +17,8 @@ This run changes mechanism from the preceding unit-mass probability localization
 
 Two completed fleet02/B14 results are used at equations:
 
-1. `QFORM-DK-SUBPROBABILITY-HOMOGENEITY-v1`, fleet02/B14 r27, canonical source `yspennstate/math-open-problems@8f29d24c80043bd45bcd1c6e8957760f048c98ff`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T070336Z-fleet02-B14-QFORM-r27/REPORT.md`.
-2. Newest completed partner result `QFORM-DIAGONAL-TWISTED-SCHUR-BANK-v1`, fleet02/B14 r31, canonical source `yspennstate/math-open-problems@57f120e5d7ea0f9c885bf6286d5227812357a382`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T080010Z-fleet02-B14-QFORM-r31/REPORT.md`.
+1. `QFORM-DK-SUBPROBABILITY-HOMOGENEITY-v1`, fleet02/B14 r27, canonical source `private-source-repository@8f29d24c80043bd45bcd1c6e8957760f048c98ff`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T070336Z-fleet02-B14-QFORM-r27/REPORT.md`.
+2. Newest completed partner result `QFORM-DIAGONAL-TWISTED-SCHUR-BANK-v1`, fleet02/B14 r31, canonical source `private-source-repository@57f120e5d7ea0f9c885bf6286d5227812357a382`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T080010Z-fleet02-B14-QFORM-r31/REPORT.md`.
 
 No uniform pointwise quadratic Fourier decay, arbitrary-joint coarea bound, positive moment of a worst conditional projection cap, bounded-diameter localization, fixed fragment-count localization, or post-rotation independence is used.
 

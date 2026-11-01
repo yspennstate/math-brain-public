@@ -13,7 +13,7 @@ The live correction boundary is preserved: no independence after spectral rotati
 
 The immediate B10 geometric predecessor is
 
-`yspennstate/math-open-problems@4f1f31064431e8bb0d0be813ed5540d0b12ab590`
+`private-source-repository@4f1f31064431e8bb0d0be813ed5540d0b12ab590`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T181522Z-fleet03-B10-QFORM-r26/REPORT.md`.
 
@@ -162,7 +162,7 @@ The required completed partner theorem is
 
 source
 
-`yspennstate/math-open-problems@afdea9634d9e3f5fb09659da436292cf7dbe5b20`
+`private-source-repository@afdea9634d9e3f5fb09659da436292cf7dbe5b20`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B10/20260923T061725Z-fleet04-B10-QFORM-r4/REPORT.md`.
 

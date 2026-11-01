@@ -7,7 +7,7 @@ This immutable addendum records a compatible assigned-partner result that appear
 
 ## 1. Assigned partner result now consumed
 
-Repository `yspennstate/math-open-problems`, commit
+Repository `private-source-repository`, commit
 
 `32e98f96b54e9c0e8bdee8f7ac49cba9aca0fe46`,
 

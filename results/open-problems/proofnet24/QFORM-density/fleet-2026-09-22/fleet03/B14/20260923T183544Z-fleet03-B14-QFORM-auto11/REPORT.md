@@ -136,7 +136,7 @@ This is a genuine translation/localization statement: arbitrary outside shifts, 
 
 Use only fleet04/B14 r9 Theorem 3.1 / equation (3.6), not its now-refuted interval-only rough-hub endpoint. Its immutable source is
 
-`yspennstate/math-open-problems@b5f173477a3889ad9432ea7d97767e969c83b279`,
+`private-source-repository@b5f173477a3889ad9432ea7d97767e969c83b279`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T141430Z-fleet04-B14-affine-slice-fresnel-r9/REPORT.md`.
 
 That theorem proves for the heavy-null residual-diffuse slice, including arbitrary affine leakage,

@@ -14,12 +14,12 @@ Full unrestricted QFORM: **OPEN / NOT PROVED / NOT DISPROVED**.
 
 The ingredients are source-pinned and are not relabelled as individually new:
 
-1. this slot's exact quantile-gauge theorem, `QFORM-QUANTILE-GAUGE-ZERO-LOSS-LOCALIZATION-v1`, at `yspennstate/math-open-problems@7b0507a694df2c6f727f4d293c92d616bb46befb`;
-2. this slot's exact cap-saturation congruence theorem, `QFORM-CAP-SATURATION-CONGRUENCE-LOCALIZATION-v1`, at `yspennstate/math-open-problems@27524c090248516692abfa19911c411adaa62c23`;
-3. this slot's compact/connected-support zero-loss approximation at `yspennstate/math-open-problems@46f817e053914df4ed718042194c1ff39f425e46` and the earlier cap-preserving tail-mass compactification at `a0917bc3d1bea79d37bf8e5e043ec673d3084517`;
-4. fleet01/B15's weak-lower-semicontinuity/generic-core theorem at `yspennstate/math-open-problems@df6d00a11422f16763e8bccccc6bada6e4949a83`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260923T190251Z-fleet01-B15-QFORM-auto11/REPORT.md`;
-5. designated partner fleet04/B14 r10 at `yspennstate/math-open-problems@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260924T001624Z-fleet04-B14-scaled-schur-localization-r10/REPORT.md`;
-6. fleet04/B15's same-constant `C_0` compiler at `yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`.
+1. this slot's exact quantile-gauge theorem, `QFORM-QUANTILE-GAUGE-ZERO-LOSS-LOCALIZATION-v1`, at `private-source-repository@7b0507a694df2c6f727f4d293c92d616bb46befb`;
+2. this slot's exact cap-saturation congruence theorem, `QFORM-CAP-SATURATION-CONGRUENCE-LOCALIZATION-v1`, at `private-source-repository@27524c090248516692abfa19911c411adaa62c23`;
+3. this slot's compact/connected-support zero-loss approximation at `private-source-repository@46f817e053914df4ed718042194c1ff39f425e46` and the earlier cap-preserving tail-mass compactification at `a0917bc3d1bea79d37bf8e5e043ec673d3084517`;
+4. fleet01/B15's weak-lower-semicontinuity/generic-core theorem at `private-source-repository@df6d00a11422f16763e8bccccc6bada6e4949a83`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260923T190251Z-fleet01-B15-QFORM-auto11/REPORT.md`;
+5. designated partner fleet04/B14 r10 at `private-source-repository@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260924T001624Z-fleet04-B14-scaled-schur-localization-r10/REPORT.md`;
+6. fleet04/B15's same-constant `C_0` compiler at `private-source-repository@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`.
 
 A visible-corpus search for the simultaneous combination `median + connected support + exact cap saturation + generic affine core` returned no matching theorem. The new content of this run is the compatibility proof below: all of these gauges can be imposed **at once**, with the exact same optimal universal height constant, despite unbounded original supports and possibly unbounded/oscillating recentering parameters.
 
@@ -241,7 +241,7 @@ so
 `||p_(X^TAX)||_(infinity,ess) <= 6 sqrt(pi)/sigma`.               (5.2)
 
 This is exactly the designated partner result at
-`yspennstate/math-open-problems@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`.
+`private-source-repository@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`.
 
 Apply it to arbitrary deterministic coordinate translations. For every `t in R^n`,
 
@@ -256,7 +256,7 @@ The same physical principal block `B` remains unchanged and r10 is uniform in th
 This is an actual inequality, not merely a formal partner citation. It has zero support/fragment/moment/translation tax.
 
 Now apply the completed fleet04/B15 same-constant regularity compiler at
-`yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`.
+`private-source-repository@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`.
 That theorem says that for any fixed rank-at-least-three product quadratic instance, an already-proved interval domination by `M|I|` has a canonical density in `C_0(R)` with the **same** height `M`. Since an invertible physical triple forces rank at least three, every translated instance in (5.4) has a representative
 
 `p_t in C_0(R),   ||p_t||_infinity <= 6 sqrt(pi)/sigma`.          (5.5)

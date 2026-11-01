@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — NO MOVEMENT o
 # R09 CLOSABLE OUTSIDE — G0013 fourth active run: all circular two-piece shuffles are strictly subextremal
 
 Date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity and controlling state
 

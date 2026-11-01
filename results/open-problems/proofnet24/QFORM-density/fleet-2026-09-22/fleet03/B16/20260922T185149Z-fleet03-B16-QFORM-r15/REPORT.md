@@ -12,7 +12,7 @@ This run deliberately changes mechanism after the preceding B16 pivot/pair runs:
 
 Use the completed ridge theorem from
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 For an original-coordinate cross block B and gamma>0 define
 
@@ -240,11 +240,11 @@ The remaining structural debt is explicit: the bare three-large-eigenvalue hypot
 
 Two completed fleet04/B16 results were read and used:
 
-- `fleet04/B16 r1`, scientific source `yspennstate/math-open-problems@226e8a59044520bf290acfa4ef2d80cdab1b8669`, proves that in exact rank three, if a row i has spectral leverage c_i>0, physical diagonal d_i=A_ii!=0, and every transverse row leverage is <=1/2, then
+- `fleet04/B16 r1`, scientific source `private-source-repository@226e8a59044520bf290acfa4ef2d80cdab1b8669`, proves that in exact rank three, if a row i has spectral leverage c_i>0, physical diagonal d_i=A_ii!=0, and every transverse row leverage is <=1/2, then
 
   ||p_Q||_infinity <=4 sqrt(2e) (c_i |d_i| |det Lambda|)^(-1/4).    (7.1)
 
-- `fleet04/B16 r2`, scientific source `yspennstate/math-open-problems@58c23c624db350cf44f0c836daa3582eb7e2d266`, proves that if c_i>1/2 and some transverse residual leverage h_j>1/2, then the pair Gram area is G_ij=c_i h_j>1/4 and the exact determinant bank has mass |det Lambda|G_ij>|det Lambda|/4. (7.2)
+- `fleet04/B16 r2`, scientific source `private-source-repository@58c23c624db350cf44f0c836daa3582eb7e2d266`, proves that if c_i>1/2 and some transverse residual leverage h_j>1/2, then the pair Gram area is G_ij=c_i h_j>1/4 and the exact determinant bank has mass |det Lambda|G_ij>|det Lambda|/4. (7.2)
 
 Therefore, in exact rank three with |lambda_k|>=1, if there is a physical row i with
 
@@ -258,7 +258,7 @@ then either all transverse leverages are <=1/2, in which case (7.1) gives
 
 or some transverse leverage exceeds 1/2, in which case (7.2) triggers the previously proved B16 nested-heavy pair-pivot closure `QFORM-NESTED-HEAVY-PAIR-PIVOT-CLOSURE-v1` at
 
-`yspennstate/math-open-problems@79f522e69a2d8ea0ce1c294445e6e361acef5c1d`
+`private-source-repository@79f522e69a2d8ea0ce1c294445e6e361acef5c1d`
 
 and gives
 

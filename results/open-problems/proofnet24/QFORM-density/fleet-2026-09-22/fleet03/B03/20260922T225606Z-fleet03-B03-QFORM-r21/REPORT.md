@@ -22,7 +22,7 @@ The proof keeps independence only in the original coordinates. It does not use t
 
 Use the complete regularized-determinant theorem
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 at
 
@@ -179,7 +179,7 @@ This is a genuine independent-copy collision certificate: if `R'` is an independ
 The designated partner handoff is
 
 
-canonical mathematics `yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`.
+canonical mathematics `private-source-repository@28681f9af7c2307f80968df86010084019599e38`.
 
 Its advertised `QFORM-COLLISION-L2-COMPILER-v1` remains false as previously corrected: the stated Cauchy--Schwarz step loses a time weight and the coefficient homogeneity is wrong. That claim is not revived.
 

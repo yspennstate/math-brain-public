@@ -17,7 +17,7 @@ The argument respects the live corrections: it does not use law-uniform pointwis
 
 Use the complete supporting theorem at
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 Let `U,V` be independent cap-one variables and let
 
@@ -165,7 +165,7 @@ This branch allows arbitrary remaining dimension, arbitrary self-quadratic terms
 The designated partner handoff is
 
 
-with canonical mathematics `yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`.
+with canonical mathematics `private-source-repository@28681f9af7c2307f80968df86010084019599e38`.
 
 Its advertised `QFORM-COLLISION-L2-COMPILER-v1` is false as stated: the displayed Cauchy--Schwarz manipulation loses a factor of `|t|^{1/2}` and has incorrect coefficient homogeneity. This was already source-validly corrected in B03 run r19; the false theorem is not used here.
 

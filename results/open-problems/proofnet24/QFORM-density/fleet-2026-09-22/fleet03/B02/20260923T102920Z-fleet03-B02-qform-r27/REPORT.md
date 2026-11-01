@@ -19,7 +19,7 @@ The target remains: independent ORIGINAL real coordinates with scalar densities 
 The analytic input is this slot's completed arbitrary-law mixed-volume theorem from r26:
 
 - `QFORM-WEIGHTED-MIXED32-ARBITRARY-LAWS-v1`,
-- `yspennstate/math-open-problems@774fcefa1d081d578a005e8eb8b6670c9ed34e99`,
+- `private-source-repository@774fcefa1d081d578a005e8eb8b6670c9ed34e99`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T100130Z-fleet03-B02-qform-auto11-r26/REPORT.md`.
 
 At `theta=1/2,q=1`, if the mixed row or mixed column inclusion marginals of an incident-third-minor law `mu3` and a residual-second-minor law `mu2` are all at most `1/2`, it proves
@@ -39,7 +39,7 @@ Here `G(mu)=exp(H(mu)+E_mu log(det^2))`. The proof is product-preserving Weyl di
 The fresh complementary structural source is fleet02/B02:
 
 - `QFORM-INCIDENT32-DISJOINT-TRANSPORT-L1-v1`,
-- `yspennstate/math-open-problems@0029401037d9e0bb0f18c030c959bbc5afd57d52`,
+- `private-source-repository@0029401037d9e0bb0f18c030c959bbc5afd57d52`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T100819Z-fleet02-B02-qform-r11/REPORT.md`.
 
 Its concentrated/concentrated endpoint supplies one literal residual `2x2` minor carrying a definite fraction of residual `E2`; Section 5 below applies the new theorem to that exact inequality.
@@ -47,7 +47,7 @@ Its concentrated/concentrated endpoint supplies one literal residual `2x2` minor
 The designated completed partner is fleet04/B02:
 
 - `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`,
-- `yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+- `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 
 Its genuine `L2` Fourier estimate is applied at an equation in Section 6.

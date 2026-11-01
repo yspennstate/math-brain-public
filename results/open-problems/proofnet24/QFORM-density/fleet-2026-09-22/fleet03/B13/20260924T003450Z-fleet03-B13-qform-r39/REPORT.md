@@ -16,7 +16,7 @@ The owner control read at start was QFORM-only, revision `2026-09-22.15`. Fresh 
 
 The designated partner actually applied below is fleet04/B13:
 
-`yspennstate/math-open-problems@d1764f29884bf14ce505d36668105edfcaf8315e`,
+`private-source-repository@d1764f29884bf14ce505d36668105edfcaf8315e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T201653Z-fleet04-B13-extremal-slab-dichotomy-r1/REPORT.md`.
 
@@ -43,7 +43,7 @@ or, in the branch used below,
 
 The grouped three-leaf input is fleet01/B13:
 
-`yspennstate/math-open-problems@38a8a2ae1cb319211ab4be60f6f8d6f7f03f85f9`,
+`private-source-repository@38a8a2ae1cb319211ab4be60f6f8d6f7f03f85f9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T223205Z-fleet01-B13-qform-auto11/REPORT.md`.
 
@@ -64,7 +64,7 @@ Its completed grouped receiver gives
 
 My preceding sharp DPP theorem, source-pinned at
 
-`yspennstate/math-open-problems@ff2b04c19ca6cf8bebe0cbd03981bc4711d6d3f0`,
+`private-source-repository@ff2b04c19ca6cf8bebe0cbd03981bc4711d6d3f0`,
 
 shows for the leave-one-out pair law
 
@@ -77,7 +77,7 @@ and defines
 
 The newest fleet01/B13 packet-collapse theorem was also read before publication:
 
-`yspennstate/math-open-problems@58915eaf823fce91efdaccb4c0910246705cce9c`,
+`private-source-repository@58915eaf823fce91efdaccb4c0910246705cce9c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260924T002858Z-fleet01-B13-qform-auto11/REPORT.md`.
 

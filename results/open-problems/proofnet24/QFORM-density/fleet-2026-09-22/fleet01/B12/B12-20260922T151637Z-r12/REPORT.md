@@ -15,7 +15,7 @@ No spectral rotation is used to preserve independence. All elimination below is 
 
 ### 2.1 Dependent square smoothing
 
-From `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`:
+From `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`:
 
 If R has density at most M and, conditionally on R=r, V has a density at most one, then for every a != 0,
 
@@ -25,7 +25,7 @@ No independence between R and V is required.
 
 ### 2.2 Required partner fleet02/B12
 
-From `yspennstate/math-open-problems@e962f1e44ab23c8ad3e9a9b6cd58f21ed574930d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T144812Z-qform-extraeig-r11/REPORT.md`:
+From `private-source-repository@e962f1e44ab23c8ad3e9a9b6cd58f21ed574930d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T144812Z-qform-extraeig-r11/REPORT.md`:
 
 If a residual physical cross block has a base certificate
 

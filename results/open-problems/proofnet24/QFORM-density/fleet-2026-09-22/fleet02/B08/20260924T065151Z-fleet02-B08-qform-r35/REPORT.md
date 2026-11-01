@@ -205,7 +205,7 @@ This is therefore a genuine exactly-three-large-eigenvalue obstruction to any pr
 
 The family is **not** a QFORM counterexample. Apply the completed generalized rank-`r` Fresnel--Brascamp--Lieb Theorem F from
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 (`FOURIER_ROUTE_REPORT.md`). It states for
 

@@ -24,7 +24,7 @@ The live corrections are respected, in particular `QFORM-CROSSMINOR-ALONE-FALSE`
 
 Source: fleet03/B07, `QFORM-O0-HEAVY-PACKET-ISOLATION-v1`, canonical report
 
-`yspennstate/math-open-problems@f2d3682e9f9d24d67ea14dc990d9f49bebeb5a6e`
+`private-source-repository@f2d3682e9f9d24d67ea14dc990d9f49bebeb5a6e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T173711Z-fleet03-B07-qform-r13/REPORT.md`.
 
@@ -48,7 +48,7 @@ The key feature is that (2.2) is an aggregate row-Gram determinant. It is the su
 
 Source: fleet03/B19 r16, `QFORM-EXACT-CROSS-RANK-L2-v1`, canonical report
 
-`yspennstate/math-open-problems@9d55d9ca5a7beaed6f693a57bd32b5fc9949b981`
+`private-source-repository@9d55d9ca5a7beaed6f693a57bd32b5fc9949b981`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T172719Z-fleet03-B19-QFORM-r16/REPORT.md`.
 
@@ -131,7 +131,7 @@ The proof never infers a single large `3x3` physical column minor from (2.2). Ca
 
 The designated partner source is fleet04/B19 `QFORM-FINITE-UNION-CORE-v1`, canonical mathematics
 
-`yspennstate/math-open-problems@02171dc794a56c0235afb1ca394b3e614162bff4`
+`private-source-repository@02171dc794a56c0235afb1ca394b3e614162bff4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T122030Z-fleet04-B19-QFORM-r1/REPORT.md`.
 

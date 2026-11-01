@@ -4,7 +4,7 @@ Programme `QFORM-DENSITY-3EIG-20260922`. Full target remains OPEN. Execution `WI
 
 ## First unpaid implication, in exact positive form
 
-Apply the completed assigned-partner result fleet03/B15 auto11 (`math-open-problems@a86bb095aac440bd79e2b2c26b23228ac952d2ab`). For every probability law `mu` on `R`, with `+infinity` if no bounded density exists,
+Apply the completed assigned-partner result fleet03/B15 auto11 (`private-source@a86bb095aac440bd79e2b2c26b23228ac952d2ab`). For every probability law `mu` on `R`, with `+infinity` if no bounded density exists,
 
 `||p_mu||_infinity = sup_{r>0,y} mu({r<|z-y|<2r})/(2r)`.
 
@@ -16,7 +16,7 @@ for all target instances, all `r>0`, and all `y`. No continuity assertion is use
 
 ## Apply the completed ruled one-sheet theorem to a real shell inequality
 
-From the required Claude source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, Theorem C gives, for
+From the required Claude source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, Theorem C gives, for
 
 `q(z)=lambda_1 z_1^2+lambda_2 z_2^2-mu z_3^2`, `lambda_1,lambda_2,mu>=1`,
 

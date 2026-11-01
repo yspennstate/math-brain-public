@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R01 — final `(n4,n3)=(2,12)` profile and completion of the claimed TFIK22 residue
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Continuity and scope recovery
 

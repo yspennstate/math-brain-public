@@ -13,7 +13,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The newest completed designated partner input is fleet02/B10 at
 
-`yspennstate/math-open-problems@f860f87d88af57a9c67d68cb7c247afc7958f841`
+`private-source-repository@f860f87d88af57a9c67d68cb7c247afc7958f841`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260924T053442Z-fleet02-B10-QFORM-auto11/REPORT.md`.
 

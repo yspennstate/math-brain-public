@@ -110,7 +110,7 @@ The added active spectrum is completely unrestricted.
 
 ## Newest-Claude branch to apply in final report
 
-The required newest volume-stability theorem (`math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`) gives a second, continuous-density tail compiler: for disjoint ORIGINAL-coordinate banks with a protected diffuse cross block `M0`, `s3(M0)>=a`, range leverage at most `1/2`, any added matrix whose ACTUAL cross footprint obeys `||R[I,J]||op<=a/16` gives
+The required newest volume-stability theorem (`private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`) gives a second, continuous-density tail compiler: for disjoint ORIGINAL-coordinate banks with a protected diffuse cross block `M0`, `s3(M0)>=a`, range leverage at most `1/2`, any added matrix whose ACTUAL cross footprint obeys `||R[I,J]||op<=a/16` gives
 
 `||p_Q||infinity <= 24 sqrt(3) e/(5a) <23/a`,                 (C.6)
 

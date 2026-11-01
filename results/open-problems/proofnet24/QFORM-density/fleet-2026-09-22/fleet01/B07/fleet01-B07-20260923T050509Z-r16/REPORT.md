@@ -14,7 +14,7 @@ The unrestricted conjecture is not proved or disproved here. The new work is a d
 
 The designated partner result used at equations is the newest completed fleet02/B07 report visible in the mathematical archive:
 
-`yspennstate/math-open-problems@4504338d5ee1d118c318423da067aadad75ade4b`
+`private-source-repository@4504338d5ee1d118c318423da067aadad75ade4b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T043951Z-fleet02-B07-4c9e7a/REPORT.md`.
 
@@ -58,7 +58,7 @@ At `theta=1/16`, `eta_*=1/18999560927969280`.
 
 The second source actually applied is the current volume-stability tail extension
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md`.
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-04 — strict-delta residue-3 admission: H0008 newly claimed by R14, HARD and residue 9; no lawful residue-3 release
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Track / namespace: `NM13-04` / `proofnet24/NM13-04/`  
 Category: `CLOSABLE OUTSIDE`  
 Initial preference: recent source-posed finite graph conjectures with exact counterexample/extremal-construction deliverables  

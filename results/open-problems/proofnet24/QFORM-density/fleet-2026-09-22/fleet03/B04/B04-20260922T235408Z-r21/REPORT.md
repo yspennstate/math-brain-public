@@ -13,13 +13,13 @@ This run changes mechanism from r20. The previous theorem kept at least two cros
 
 Completed peer result actually applied:
 
-- fleet02/B04 scalar bank-projection theorem, `yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T181702Z-dac07509/REPORT.md`:
+- fleet02/B04 scalar bank-projection theorem, `private-source-repository@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T181702Z-dac07509/REPORT.md`:
 
 `||p_(c^T X)||_infinity <= sqrt(2)/||c||_2`                                    (1.1)
 
 for every nonzero coefficient vector `c` and an original-coordinate cap-one product vector.
 
-For comparison, fleet01/B06 `yspennstate/math-open-problems@b74210c7e963a11c1f0532f98f5d705278967cd1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T190509Z-qform-r14-b06/REPORT.md`, proved the exact-zero Schur-row half-Riesz endpoint with constant `4 sqrt(2)e^(1/4)`. Section 5 below sharpens that constant by inserting (1.1).
+For comparison, fleet01/B06 `private-source-repository@b74210c7e963a11c1f0532f98f5d705278967cd1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T190509Z-qform-r14-b06/REPORT.md`, proved the exact-zero Schur-row half-Riesz endpoint with constant `4 sqrt(2)e^(1/4)`. Section 5 below sharpens that constant by inserting (1.1).
 
 The designated fleet04/B04 worker had a current-hour sign-in, but no completed current-QFORM handoff/report was present at the final pre-publication lookup. No designated-partner result is fabricated.
 

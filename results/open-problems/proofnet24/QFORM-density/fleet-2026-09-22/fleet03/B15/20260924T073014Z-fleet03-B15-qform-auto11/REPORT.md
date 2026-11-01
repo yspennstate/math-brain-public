@@ -17,9 +17,9 @@ This report does **not** prove the missing universal height bound. It proves a q
 
 Fresh dependency actually read:
 
-- fleet03/B19 r52, `yspennstate/math-open-problems@5ec1cc2bf208bc0249ea89d86fd7298b62ac324e`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T070220Z-fleet03-B19-QFORM-r52/REPORT.md`.
-- its analytic Theorem H source, `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
-- designated partner fleet04/B15 r8 handoff, whose completed same-constant `C_0` closure uses the fixed-matrix rank>=3 theorem at `yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`.
+- fleet03/B19 r52, `private-source-repository@5ec1cc2bf208bc0249ea89d86fd7298b62ac324e`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T070220Z-fleet03-B19-QFORM-r52/REPORT.md`.
+- its analytic Theorem H source, `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
+- designated partner fleet04/B15 r8 handoff, whose completed same-constant `C_0` closure uses the fixed-matrix rank>=3 theorem at `private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`.
 
 The live corrections prohibiting law-uniform one-dimensional van der Corput decay, naive fiber-supremum integration, independence after spectral rotation, and arbitrary-joint coarea are all respected. The Fourier bounds used below are already joint, product-preserving bounds.
 

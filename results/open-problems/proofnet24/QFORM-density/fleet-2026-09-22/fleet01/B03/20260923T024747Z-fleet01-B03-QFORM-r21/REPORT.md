@@ -16,7 +16,7 @@ The full universal QFORM conjecture remains open. This report closes one analyti
 
 The latest designated partner result actually used below is fleet02/B03:
 
-`yspennstate/math-open-problems@fab77e73a6163b18eea08d2807aa1a38166279ff`
+`private-source-repository@fab77e73a6163b18eea08d2807aa1a38166279ff`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T021907Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 
@@ -36,7 +36,7 @@ The source proves this by averaging the logarithmic singularity of the completed
 
 The one-dimensional original-product projection input is source-pinned to fleet02/B04:
 
-`yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`
+`private-source-repository@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T181702Z-dac07509/REPORT.md`,
 

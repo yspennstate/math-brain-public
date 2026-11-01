@@ -8,7 +8,7 @@ Outcome: **ESSENTIAL_STEP_APPLIED / PROVED_SUPPORTING_THEOREM / FULL TARGET OPEN
 ## 1. Source state and conditional end-to-end map
 
 
-Named assigned partner actually consumed: fleet02/B11 run `20260922T211715Z-fleet02-B11-QFORM-5f4a9c7d`, canonical proof `yspennstate/math-open-problems@08587fcda4f590bb64d655cdaa8b8dd98fa8af45`, theorem `QFORM-DIFFUSE-TRANSVERSE-WEDGE-PARTITION-v1`. Its hypotheses and conclusion used below are exact: in the exact-rank-three heavy-null normalization, if each residual transverse row has squared norm at most `1/16`, it produces disjoint ORIGINAL-coordinate banks `S,T` with
+Named assigned partner actually consumed: fleet02/B11 run `20260922T211715Z-fleet02-B11-QFORM-5f4a9c7d`, canonical proof `private-source-repository@08587fcda4f590bb64d655cdaa8b8dd98fa8af45`, theorem `QFORM-DIFFUSE-TRANSVERSE-WEDGE-PARTITION-v1`. Its hypotheses and conclusion used below are exact: in the exact-rank-three heavy-null normalization, if each residual transverse row has squared norm at most `1/16`, it produces disjoint ORIGINAL-coordinate banks `S,T` with
 
 `(1/4)I_2 <= G_S,G_T <= (3/4)I_2`
 

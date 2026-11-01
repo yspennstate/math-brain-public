@@ -38,10 +38,10 @@ Completed regularity sources checked:
 - fleet02/B15 fixed-matrix theorem, repository state containing
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`;
 - fleet03/B15 nonzero-diagonal proof
-  `yspennstate/math-open-problems@d73760eb784a86c356c64f05dd92f84655618f02`, path
+  `private-source-repository@d73760eb784a86c356c64f05dd92f84655618f02`, path
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T153101Z-fleet03-B15-r12/REPORT.md`;
 - designated partner fleet04/B15 heat theorem
-  `yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`, path
+  `private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`, path
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`.
 
 The live corrections were enforced. In particular, this proof does **not** use the false arbitrary-joint rank-three coarea inequality, positive moments of worst conditional projection caps, law-uniform pointwise van-der-Corput decay, independence after spectral rotation, a dimension-free fiber supremum, or a uniformly good physical minor.

@@ -22,7 +22,7 @@ This run attacks the first unpaid structural implication left by the preceding B
 
 Canonical source:
 
-`yspennstate/math-open-problems@8410ab9d8238baa40c033f83dbae6af44b0b2582`
+`private-source-repository@8410ab9d8238baa40c033f83dbae6af44b0b2582`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260923T131003Z-fleet04-B01-singular-star-routing-r2/REPORT.md`.
 
@@ -48,7 +48,7 @@ Only this exact identity is used below. In particular, this run does **not** use
 
 Source:
 
-`yspennstate/math-open-problems@2cb64b71f8aafa0892547dffebcf6af647ea7c64`
+`private-source-repository@2cb64b71f8aafa0892547dffebcf6af647ea7c64`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T102108Z-fleet03-B08-qform-diffuse-r32/REPORT.md`.
 
@@ -100,7 +100,7 @@ followed by rank-one singular-value interlacing. No probabilistic rotation is in
 
 Source:
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 

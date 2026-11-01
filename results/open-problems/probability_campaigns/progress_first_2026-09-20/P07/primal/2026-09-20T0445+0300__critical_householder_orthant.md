@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-A — the conjectured constant is an exact finite-n orthant point
 
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured pre-write master:** `dfc130cb94764f53a1afa8b1af8983f2673259dd`  
 **Outside target:** Randomstrasse101, arXiv:2603.29571, Conjecture 18; primary partial-result paper *The Lovász number of random circulant graphs*, arXiv:2502.16227.  
 **Exact endpoint:** in the source dense random circulant model,

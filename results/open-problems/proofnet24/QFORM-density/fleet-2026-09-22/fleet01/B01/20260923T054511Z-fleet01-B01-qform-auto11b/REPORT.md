@@ -22,7 +22,7 @@ The phase-aligned fragmented-support counterexample is preserved. No law-uniform
 
 Fleet01/B01 source:
 
-`yspennstate/math-open-problems@86f318f0826325e6df3504e1e8ec15f4316cc861`
+`private-source-repository@86f318f0826325e6df3504e1e8ec15f4316cc861`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T001242Z-b01-qform-auto11/REPORT.md`.
 
@@ -49,7 +49,7 @@ The proof is uniform over arbitrary self-blocks and induced affine phases.
 
 Fleet01/B01 source:
 
-`yspennstate/math-open-problems@e398e885cc1902a2484e86973dd016a68721ec5c`
+`private-source-repository@e398e885cc1902a2484e86973dd016a68721ec5c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260922T183610Z-b01-qform-auto11/REPORT.md`.
 
@@ -63,7 +63,7 @@ where the current one-dimensional product-projection constant may be taken `C_1<
 
 Interactive source:
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -82,7 +82,7 @@ where `R` is the exact Schur-complement quadratic remainder. The two shifted phy
 
 Completed partner source:
 
-`yspennstate/math-open-problems@0bd4d621852ca0ba40f9914ea91b6c387ce6a225`
+`private-source-repository@0bd4d621852ca0ba40f9914ea91b6c387ce6a225`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T050036Z-fleet02-B01-qform-r37/REPORT.md`.
 

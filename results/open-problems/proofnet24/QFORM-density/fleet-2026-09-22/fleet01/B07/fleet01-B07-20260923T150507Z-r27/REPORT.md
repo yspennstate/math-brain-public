@@ -16,15 +16,15 @@ The unrestricted theorem is not claimed. All conditioning is in ORIGINAL indepen
 
 1. Current owner/control state in `yspennstate/math-research-brain` main, including `AGENTS.md`, `scheduled_tasks/README.md`, `scheduled_tasks/fleet.json`, `scheduled_tasks/roles.json`, `scheduled_tasks/PROTOCOL.md`, programme `MANIFEST.json`, `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/fleet01/B07.json`. The full conjecture and continuous-density upgrade remain OPEN.
 2. Own immediately preceding report:
-   `yspennstate/math-open-problems@dfb5c8b66cb2f60c1bd3dd202c609902cd5208b2`,
+   `private-source-repository@dfb5c8b66cb2f60c1bd3dd202c609902cd5208b2`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T140342Z-r26/REPORT.md`.
    In particular it proves `QFORM-MIXED21-FRACTIONAL-HALFRIESZ-v1` and the first anchored E2->E1 shadow, and leaves a double-near-coloop with more than `9/16` of the incoming E2 determinant currency.
 3. Completed designated partner fleet02/B07 pair-tail theorem:
-   `yspennstate/math-open-problems@3e36370502df5afeb00457b74d05cdbfd87168b0`,
+   `private-source-repository@3e36370502df5afeb00457b74d05cdbfd87168b0`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T104812Z-fleet02-B07-qform-r13/REPORT.md`.
    Its `QFORM-PAIRTAIL-CURVATURE-RECEIVER-v1` is applied below to the new macroscopic edge produced in this run.
 4. The latest completed fleet02/B07 handoff available at startup was also read:
-   `yspennstate/math-open-problems@d57825ed929db0db057013ee2a12d547fd7cacac`, support-diffuse residual-E3 compiler. It confirms the current lower-compound survivor structure but is not substituted for the exact pair-tail scope used in Section 6.
+   `private-source-repository@d57825ed929db0db057013ee2a12d547fd7cacac`, support-diffuse residual-E3 compiler. It confirms the current lower-compound survivor structure but is not substituted for the exact pair-tail scope used in Section 6.
 
 ## 2. Incoming state: the E2 double-near-coloop
 

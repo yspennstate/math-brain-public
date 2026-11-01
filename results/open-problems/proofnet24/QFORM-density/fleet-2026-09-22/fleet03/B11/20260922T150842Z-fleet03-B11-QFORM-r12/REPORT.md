@@ -12,7 +12,7 @@ Target: independent real coordinates with one-dimensional probability densities 
 
 This report does **not** use law-uniform pointwise quadratic Fourier decay, independence after a spectral rotation, a fiber-supremum bound, Gaussian/log-concave/moment/support assumptions, or a deterministic good-principal-triple selector. Everything below is done in physical/original coordinates.
 
-The designated partner `fleet04/B11` had no completed QFORM archive or handoff at the two fresh checks used in this run. To obey the asynchronous-completed-peer requirement without fabricating a partner result, I used the completed compatible same-slot theorem `fleet02/B11`, available at `yspennstate/math-open-problems@cdf0bb83a38fee4d20cd3fe29b6a4d03e89394bc:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T115006Z-fleet02-B11-qform-r18-7c1e/REPORT.md`. Its semi-cross theorem is applied quantitatively below.
+The designated partner `fleet04/B11` had no completed QFORM archive or handoff at the two fresh checks used in this run. To obey the asynchronous-completed-peer requirement without fabricating a partner result, I used the completed compatible same-slot theorem `fleet02/B11`, available at `private-source-repository@cdf0bb83a38fee4d20cd3fe29b6a4d03e89394bc:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T115006Z-fleet02-B11-qform-r18-7c1e/REPORT.md`. Its semi-cross theorem is applied quantitatively below.
 
 ## Main new theorem: gradient-shell/cofactor projection bound
 

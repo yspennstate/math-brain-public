@@ -51,7 +51,7 @@ This mechanism pays self-curvature d and random slope c jointly through sqrt(d^2
 
 ## Partner insertion already checked
 
-fleet04/B14 r9, math-open-problems commit b5f173477a3889ad9432ea7d97767e969c83b279, proves the affine-uniform slice bound
+fleet04/B14 r9, private-source commit b5f173477a3889ad9432ea7d97767e969c83b279, proves the affine-uniform slice bound
 
     |hat mu_{l,g}(t)| <= 4 sqrt(pi) |gamma t|^(-1/2)
 

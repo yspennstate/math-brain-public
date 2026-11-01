@@ -3,7 +3,7 @@ attacking: the exact-rank-three near-coloop survivor; test whether the rank-thre
 
 # Early substantive checkpoint
 
-Fresh designated-partner input actually used: fleet03/B10 r25, canonical `yspennstate/math-open-problems@291d344e0c5af27b8b5074dbba22fee22abddbf8`, reduces the unpaid exact-rank-three collar to (among other cases) a near-coloop state `c>7/8`, nonzero small hub diagonal, normalized hub Rayleigh `<1/16`, fixed aggregate star norm, and all residual transverse row leverage `<1/4`.
+Fresh designated-partner input actually used: fleet03/B10 r25, canonical `private-source-repository@291d344e0c5af27b8b5074dbba22fee22abddbf8`, reduces the unpaid exact-rank-three collar to (among other cases) a near-coloop state `c>7/8`, nonzero small hub diagonal, normalized hub Rayleigh `<1/16`, fixed aggregate star norm, and all residual transverse row leverage `<1/4`.
 
 New exact calculation. Write an exact-rank-three form as `A=R Lambda R^T`, `R^T R=I_3`, `D=|det Lambda|`. For disjoint physical row sets `I,J`, put `G_I=R_I^T R_I`, `G_J=R_J^T R_J`, `M=A_IJ=R_I Lambda R_J^T`. Cauchy--Binet gives
 

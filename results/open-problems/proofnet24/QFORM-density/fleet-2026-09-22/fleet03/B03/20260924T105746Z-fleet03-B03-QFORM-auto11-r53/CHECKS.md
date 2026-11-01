@@ -96,7 +96,7 @@ Adding an independent unit-determinant two-bank crossing gives
 
 Partner r5 at
 
-`math-open-problems@fbe1dfba05eea312d8f12f22f2132476758039a8`
+`private-source@fbe1dfba05eea312d8f12f22f2132476758039a8`
 
 gives `H<=4 sqrt(2)` for its explicit `d det M_3=1` block. Whole-copy conversion gives
 

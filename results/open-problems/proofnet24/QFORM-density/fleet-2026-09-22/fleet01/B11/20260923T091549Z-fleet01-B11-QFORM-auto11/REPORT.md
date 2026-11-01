@@ -16,14 +16,14 @@ The owner target is unchanged: independent real original coordinates with probab
 This run uses the following completed results at their exact scopes.
 
 1. **Orientation-free scalar pivot / rank-two half-Riesz**, source  
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,  
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,  
    `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.  
    If an original-coordinate exact-rank-three block is `V M V^T`, `V^T V=I_3`, row `i` has leverage `c_i`, and its physical diagonal is `a!=0`, then the FULL ambient quadratic form, including arbitrary outside blocks/couplings and induced affine terms, satisfies
 
    `||p_Q||_inf <=128 [c_i |a| |det M|]^(-1/4)`.                 (1.1)
 
 2. **Physical indefinite-pair logarithmic smoothing**, source  
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,  
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,  
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.  
    For an invertible indefinite original-coordinate pair `B`, `D=|det B|`, `kappa=sigma_min(B)`, after pair completion a rank-one remainder `lambda(h dot X)^2+affine` has the small-ball constant `H<=10/sqrt(|lambda|)`. Equations (1.3), (4.2) and Section 5 of that source therefore give the more precise pre-simplification
 
@@ -32,19 +32,19 @@ This run uses the following completed results at their exact scopes.
    The source normally replaces `|lambda|` by the global spectral scale; this run keeps the exact `lambda` and proves a cancellation identity for it.
 
 3. **Designated partner `fleet02/B11`**, source  
-   `yspennstate/math-open-problems@f2835c54b9f384f8f83e34c46bef5c40953e32a7`,  
+   `private-source-repository@f2835c54b9f384f8f83e34c46bef5c40953e32a7`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T042112Z-fleet02-B11-QFORM-2f47d35a/REPORT.md`.  
    Its `QFORM-INDEFINITE-PAIR-DIFFUSE-SQUARE-v1` theorem states that an independent cap-one physical pair with invertible matrix `B`, plus an independent scalar `W` of density cap `L` and coefficient `d!=0`, obeys
 
    `||p||_inf <=16 sqrt(30) L |det B|^(-1/4)|d|^(-1/2)`.        (1.3)
 
 4. **Current volume-stability theorem**, source  
-   `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,  
+   `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,  
    `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.  
    For an original-coordinate cross block `C` with `s_3(C)>=a` and row-range leverage at most `1/2`, the specialization `M_0=C,E=0` gives a continuous density `<23/a`, retaining arbitrary self blocks and outside couplings.
 
 5. **Newest Claude ruled one-sheet theorem**, source  
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,  
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,  
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, Theorem C. For exact rank three with signature `(2,1)` and spectral scale at least one, `p_Q(t)<=pi sqrt(2)` on `t>=0`; reflection gives the `(1,2)` statement on `t<=0`. Scaling gives `pi sqrt(2)/s` at spectral scale `s`.
 
 The live corrections are retained: no arbitrary-joint rank-three coarea, no positive moment of worst conditional projection heights, no law-uniform pointwise quadratic-phase decay, no conditional-density-as-independence substitution, and no rotation of the product law.

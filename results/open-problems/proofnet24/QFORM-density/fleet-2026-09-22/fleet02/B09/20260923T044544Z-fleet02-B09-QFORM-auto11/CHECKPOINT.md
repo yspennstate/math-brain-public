@@ -70,7 +70,7 @@ This also disproves the stronger hoped-for implication `small rho => a uniformly
 
 At the endpoint `epsilon=1/2`, every row leverage of `[v,c]` is at most `1/2`. Applying Theorem H from
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`,
 
 with one physical hub and one Fresnel leaf direction gives

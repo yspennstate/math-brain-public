@@ -2,7 +2,7 @@
 
 Pre-publication reconciliation found a fresh completed same-assignment theorem from `fleet01/B03`:
 
-`yspennstate/math-open-problems@3d6fefe9c92674dff38c97ef8a502787ec3426a2`,  
+`private-source-repository@3d6fefe9c92674dff38c97ef8a502787ec3426a2`,  
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/fleet01-B03-20260922T144815Z/REPORT.md`.
 
 That theorem proves, for any quadratic form on independent cap-one original coordinates and any physical cross block `B` of rank `r>=1` with positive singular-value product `Delta_r`, the dependence-safe independent-copy estimate

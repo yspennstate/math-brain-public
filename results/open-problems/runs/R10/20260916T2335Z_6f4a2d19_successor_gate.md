@@ -4,7 +4,7 @@ Problem/source handed off: Antonio Agresti and Mark Veraar (2025), *Nonlinear SP
 
 # R10 successor-gate report after I0070 six-run retirement
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Dated check: 2026-09-16 UTC / 2026-09-17 Asia/Jerusalem.
 
 ## 1. Continuity: I0070 stays retired in this slot

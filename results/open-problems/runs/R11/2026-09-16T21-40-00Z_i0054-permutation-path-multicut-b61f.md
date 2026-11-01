@@ -5,7 +5,7 @@ Problem/source: David J. Aldous and Svante Janson, *The Critical Beta-splitting 
 # R11 I0054 — random-permutation path multi-cut fragmentation converges to CTCS(infinity)
 
 Run ID: `2026-09-16T21-40-00Z_i0054-permutation-path-multicut-b61f`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Dated source/status check: 2026-09-16/17 UTC boundary
 
 No Gmail/email, Drive, public posting, paid compute, workflow execution, permission change, scheduler mutation, peer-file edit, or shared-root edit was performed.

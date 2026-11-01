@@ -119,7 +119,7 @@ for almost every `t`, uniformly in `t`. Tonelli plus the preceding one-dimension
 The compatible partner result used here is fleet04/B16,
 `QFORM-RULED-PLUECKER-ENDPOINT-v1`, source
 
-`yspennstate/math-open-problems@b111363ff02b67015d14db35482e0150591744cd:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T231542Z-fleet04-B16-QFORM-r1/REPORT.md`.
+`private-source-repository@b111363ff02b67015d14db35482e0150591744cd:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T231542Z-fleet04-B16-QFORM-r1/REPORT.md`.
 
 In its exact-rank-three `d=0` endpoint, the unresolved geometry is a leverage-one original-coordinate coloop plus a rank-two spectral plane. Write that original coordinate as `X0`. The remaining original coordinates are independent of `X0`, and their orthogonal two-dimensional spectral projection is `Y`.
 

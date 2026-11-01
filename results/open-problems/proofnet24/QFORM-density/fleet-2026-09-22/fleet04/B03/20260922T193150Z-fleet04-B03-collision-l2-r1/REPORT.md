@@ -28,7 +28,7 @@ All arguments below preserve this dependence; no sum/difference independence is 
 ## 2. Partner input
 
 Fleet01/B03, run `fleet01-B03-20260922T185132Z-r14`, canonical report
-`yspennstate/math-open-problems@cd628bcb117fb633c47261a3fbb9d1504a8b1b1b`, proves the following. If (Z) has density cap (M), (Z') is an independent copy, and
+`private-source-repository@cd628bcb117fb633c47261a3fbb9d1504a8b1b1b`, proves the following. If (Z) has density cap (M), (Z') is an independent copy, and
 [
 psi_a(t)=mathbb E e^{itaZ^2},
 ]

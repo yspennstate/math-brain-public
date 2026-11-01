@@ -16,23 +16,23 @@ The phase-aligned fragmented-support construction is therefore preserved. Nothin
 
 Source-pinned premises actually used:
 
-1. `yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`: for any nonzero symmetric residual matrix `S`, arbitrary affine terms and cap-one independent coordinates,
+1. `private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`: for any nonzero symmetric residual matrix `S`, arbitrary affine terms and cap-one independent coordinates,
 
    `sup_w P(|Z^T S Z + ell^T Z + c - w| < rho) <= min(1,5(rho/||S||)^(1/4))`;
 
    and if a physical 2x2 block is completed, its Schur remainder has operator norm at least `s_3(A)`.
 
-2. `yspennstate/math-open-problems@1297371d82e3b03f014dbbf0d5e22207a763382d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260924T010808Z-fleet01-B01-qform-auto11/REPORT.md`: `QFORM-FROSTMAN-TWOSQUARE-LINF-v1`, upgrading any positive Frostman exponent through two source-disjoint adapted original squares.
+2. `private-source-repository@1297371d82e3b03f014dbbf0d5e22207a763382d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260924T010808Z-fleet01-B01-qform-auto11/REPORT.md`: `QFORM-FROSTMAN-TWOSQUARE-LINF-v1`, upgrading any positive Frostman exponent through two source-disjoint adapted original squares.
 
-3. `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`: `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, namely
+3. `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`: `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, namely
 
    `H_(1/2)((U^T X)^T Lambda(U^T X)+b^T X) <=128 |det Lambda|^(-1/4)`
 
    for arbitrary affine `b` and every invertible symmetric 2x2 `Lambda`.
 
-4. `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`: the proved one-hub mixed-Fresnel theorem and the Fourier-to-half-Riesz / literal square-peel interfaces.
+4. `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`: the proved one-hub mixed-Fresnel theorem and the Fourier-to-half-Riesz / literal square-peel interfaces.
 
-The newest completed designated partner result available during this run is fleet02/B01 at `yspennstate/math-open-problems@47deae65829b8cae5282751e32d7aa0fb07c51c9`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T040416Z-fleet02-B01-qform-auto11-r43/REPORT.md`; it proves `QFORM-STAR-EDGE-TAIL-HALFRIESZ-v1` and leaves an almost-single-edge / rank-one-arrowhead endpoint.
+The newest completed designated partner result available during this run is fleet02/B01 at `private-source-repository@47deae65829b8cae5282751e32d7aa0fb07c51c9`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T040416Z-fleet02-B01-qform-auto11-r43/REPORT.md`; it proves `QFORM-STAR-EDGE-TAIL-HALFRIESZ-v1` and leaves an almost-single-edge / rank-one-arrowhead endpoint.
 
 ## 2. First essential implication: any-sign physical pair via two adapted squares
 
@@ -259,7 +259,7 @@ The point is that arbitrary same-hub curvature `C` is retained. The earlier crit
 
 The newest completed designated partner theorem is `QFORM-STAR-EDGE-TAIL-HALFRIESZ-v1` in
 
-`yspennstate/math-open-problems@47deae65829b8cae5282751e32d7aa0fb07c51c9`
+`private-source-repository@47deae65829b8cae5282751e32d7aa0fb07c51c9`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T040416Z-fleet02-B01-qform-auto11-r43/REPORT.md`.
 

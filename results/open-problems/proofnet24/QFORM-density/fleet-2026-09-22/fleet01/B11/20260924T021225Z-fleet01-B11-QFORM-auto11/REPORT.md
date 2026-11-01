@@ -17,19 +17,19 @@ The exact rank-one compression at a zero physical pivot is **not new** and is no
 `A=[[0,b^T],[b,C]]`, `rank(A)=3`, `b!=0`, and `u=b/||b||`, then the compression of `C` to `u^perp` has rank exactly one. I use that theorem only as an algebraic starting point.
 
 The immediate B11 predecessor is the hub-augmented crossing trichotomy at
-`yspennstate/math-open-problems@950d6622fa0403f1b95a161f6da758c7f814fbfb`,
+`private-source-repository@950d6622fa0403f1b95a161f6da758c7f814fbfb`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260924T012158Z-fleet01-B11-QFORM-auto11/REPORT.md`.
 It reduced the current rank-one-transverse collar to the exact double-aligned endpoint after every nonzero leakage had produced a paid ORIGINAL-source three-dimensional crossing.
 
 The prior analytic receiver used below is this slot's `QFORM-ZEROPIVOT-PLANAR-DENSITY-v1`, recorded at
-`yspennstate/math-open-problems@0ddfb16815f0d27adda888a3f77935e141ae928b`,
+`private-source-repository@0ddfb16815f0d27adda888a3f77935e141ae928b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260923T184428Z-fleet01-B11-QFORM-auto11/REPORT.md`.
 For a cap-one scalar `H` independent of a planar random vector `Y` of joint density cap `M`, every invertible symmetric `3x3` Hessian with zero `H`-pivot has
 
 `||p_Q||_infinity <= 3*2^(2/3) M^(2/3) |det Hess(Q)|^(-1/3)`.
 
 The latest completed designated partner is fleet02/B11's `L^3 x L^(3/2)` third-square compiler, canonical mathematics
-`yspennstate/math-open-problems@02aedcd3be33ace107851fa74e0b9ac846d0aa25`, run root
+`private-source-repository@02aedcd3be33ace107851fa74e0b9ac846d0aa25`, run root
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/B11-20260924T012138Z-auto11/`.
 It is applied quantitatively in Section 5.
 

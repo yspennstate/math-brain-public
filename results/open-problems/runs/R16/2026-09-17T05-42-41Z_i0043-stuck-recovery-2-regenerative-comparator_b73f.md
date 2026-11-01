@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 # R16 HARD OUTSIDE — I0043 / Schramm Problem 7.2 — STUCK_RECOVERY_2
 
 Date: 2026-09-17 UTC.  
-Repository/branch: `yspennstate/math-open-problems` / `master`.  
+Repository/branch: `private-source-repository` / `master`.  
 Status: **PARTIAL / OPEN / STUCK_RECOVERY_2**.  
 Run kind: **thinking-only stuck recovery**. No source-level theorem or metric movement is claimed in this report. The useful outcome is a sharper comparator and a quantitative explanation of why the existing fixed-finite-point SLE technology is too weak at the critical logarithmic scale.
 

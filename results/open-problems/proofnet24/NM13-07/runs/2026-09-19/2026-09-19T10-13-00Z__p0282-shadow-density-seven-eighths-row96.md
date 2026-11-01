@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # NM13-07 — P0282: shadow-density ULC through defect 32, a seven-eighths long-LIS window, and exact row 96
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-07` / `proofnet24/NM13-07/`  
 Category: `CLOSABLE OUTSIDE`  
 Canonical source / claim: `P0282` / `operations/claims/P0282.md`  

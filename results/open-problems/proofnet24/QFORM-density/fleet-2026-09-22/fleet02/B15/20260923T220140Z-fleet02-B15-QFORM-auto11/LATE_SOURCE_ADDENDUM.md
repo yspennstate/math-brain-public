@@ -1,6 +1,6 @@
 # Late-source addendum — newest Claude hub-roughness theorem does not close the rough endpoint
 
-After the main B15 report was committed, fresh `math-open-problems` master advanced to Claude-attributed commit `44568becca495a4cf41f1f2314c6c24c24563266`, adding Proposition 3.18 in `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`.
+After the main B15 report was committed, fresh `private-source` master advanced to Claude-attributed commit `44568becca495a4cf41f1f2314c6c24c24563266`, adding Proposition 3.18 in `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`.
 
 That proposition is a genuine improvement for its single-hub normal form with zero hub diagonal: for arbitrary cross term and light laws, it replaces previous power dependence on hub roughness by logarithmic dependence. In particular, with `|lambda|>=1`, it bounds the output in terms of any of:
 

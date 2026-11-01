@@ -108,7 +108,7 @@ Consequently no correction that uses only the projected two-dimensional density 
 
 The designated fleet02/B02 source
 
-`yspennstate/math-open-problems@612be1591c1aa5edaeb29bb6eceec7963ddbef55`
+`private-source-repository@612be1591c1aa5edaeb29bb6eceec7963ddbef55`
 
 at
 

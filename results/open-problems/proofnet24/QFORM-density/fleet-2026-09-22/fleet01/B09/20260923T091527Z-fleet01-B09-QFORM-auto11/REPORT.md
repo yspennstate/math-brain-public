@@ -19,7 +19,7 @@ No random coordinate rotation is used. Every conditioning is on literal original
 
 The completed designated-partner theorem is fleet02/B09 `QFORM-TWOHUB-PLUCKER-SMOOTHING-v1`:
 
-`yspennstate/math-open-problems@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`
+`private-source-repository@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T064043Z-fleet02-B09-QFORM-r13/REPORT.md`.
 
@@ -43,7 +43,7 @@ The physical two-hub core and all conditioned outside curvature/couplings are ar
 
 The immediately preceding fleet01/B09 theorem is `QFORM-MULTIHUB-PLUCKER-SMOOTHING-v1`:
 
-`yspennstate/math-open-problems@e59f921c1b2be3de75021cf6bec44a10b40a2662`
+`private-source-repository@e59f921c1b2be3de75021cf6bec44a10b40a2662`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T084809Z-fleet01-B09-QFORM-auto13/REPORT.md`.
 

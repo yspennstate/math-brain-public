@@ -1,6 +1,6 @@
 # ProofNet24 P26 immutable health/index fragment — 2026-09-16 09:11:00 +0300
 
-Canonical repository/branch: `yspennstate/math-open-problems` / `master`.
+Canonical repository/branch: `private-source-repository` / `master`.
 
 ## P26 canonical run report
 

@@ -20,7 +20,7 @@ I retain the current corrections: no law-uniform pointwise Fresnel decay for arb
 
 The designated partner result actually applied is fleet02/B18 run `20260922T203852Z-b18-qform-lit-r12`, canonical mathematics
 
-`yspennstate/math-open-problems@6cda809756c61201f08cdee2dd7e07f20e5d5596`
+`private-source-repository@6cda809756c61201f08cdee2dd7e07f20e5d5596`
 
 at
 
@@ -200,6 +200,6 @@ The partner's Alternative 5 occurs *after* one large physical pivot and only gua
 ## 8. Source pins
 
 - Control snapshot used for derivation: `yspennstate/math-research-brain@bf829e58518dfa3920733b1809379ecebeb40226`, owner revision `2026-09-22.15`.
-- Designated partner: `yspennstate/math-open-problems@6cda809756c61201f08cdee2dd7e07f20e5d5596`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260922T203852Z-b18-qform-lit-r12/REPORT.md`.
+- Designated partner: `private-source-repository@6cda809756c61201f08cdee2dd7e07f20e5d5596`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260922T203852Z-b18-qform-lit-r12/REPORT.md`.
 - Primary marginal-density source: Livshyts--Paouris--Pivovarov, arXiv:1507.07949 / Israel J. Math. 216 (2016), 877--889.
 - Recent polynomial-regularity source checked for hypothesis compatibility: Egor Kosov, arXiv:2511.02679 (2025); not transferred to the unrestricted cap-one class because its product-measure regularity hypotheses require extra marginal regularity.

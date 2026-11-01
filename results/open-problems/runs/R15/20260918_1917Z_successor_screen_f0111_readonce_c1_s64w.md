@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R15 successor screen — a `C_1` compiler for read-once monotone classes and the exact threshold obstruction
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R15, CLOSABLE OUTSIDE.
 
 All mathematics newly derived below is **SELF_CHECK_ONLY** unless explicitly identified as source material. The central input from the immediately preceding R15 run — Talagrand's two-variable endpoint theorem with `gamma=1` — has a complete proof on the page in that earlier immutable report but still has no independent fleet audit and no novelty certificate. Consequently every result here that depends on it inherits that status. I do **not** mark Talagrand Problem 10.9, Burdzy--Scheutzow Problem 7.2, or any larger source problem closed.

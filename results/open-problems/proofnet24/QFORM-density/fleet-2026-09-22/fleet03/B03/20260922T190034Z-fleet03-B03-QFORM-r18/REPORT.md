@@ -19,7 +19,7 @@ The theorem does **not** assume the invalid conditional-cap statement for sum/di
 
 I use the completed worker result `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1` from fleet02/B06:
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,  
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,  
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
 Its needed consequence is: if `V` is an `m x k` matrix with orthonormal columns and `Y=V^T X` for independent cap-one coordinates, then
@@ -215,7 +215,7 @@ This is a genuine all-dimensions, arbitrary-fragmented-law branch; it is not a G
 
 The exact signed-Fejer interface from fleet04/B01,
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,  
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,  
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`,
 
 states that for a law with density cap `M`, its Fejer averages satisfy `D_T mu(y)<=M` for every `T,y`, and conversely the supremum of these averages equals the essential density norm. Applying it to (6.2) gives the actual Fourier-side inequality
@@ -224,7 +224,7 @@ states that for a law with density cap `M`, its Fejer averages satisfy `D_T mu(y
 
 for every `T>0,y`. Thus the new direct half-Riesz proof supplies a dimension-free signed-time bound in a branch where the absolute endpoint integral is not the right object.
 
-The designated assignment partner is `fleet04/B03`. At the startup scan there was no `handoffs/fleet04/B03` directory and no canonical current-QFORM artifact at the corresponding math-open-problems path, so no result from that exact slot was fabricated. The completed compatible fleet04/B01 theorem above and fleet02/B06 projection theorem were applied instead. This should be replaced by an actual fleet04/B03 dependency if one appears before a later run publishes a stronger synthesis.
+The designated assignment partner is `fleet04/B03`. At the startup scan there was no `handoffs/fleet04/B03` directory and no canonical current-QFORM artifact at the corresponding private-source path, so no result from that exact slot was fabricated. The completed compatible fleet04/B01 theorem above and fleet02/B06 projection theorem were applied instead. This should be replaced by an actual fleet04/B03 dependency if one appears before a later run publishes a stronger synthesis.
 
 ## 8. Relation to live corrections and full-target debt
 

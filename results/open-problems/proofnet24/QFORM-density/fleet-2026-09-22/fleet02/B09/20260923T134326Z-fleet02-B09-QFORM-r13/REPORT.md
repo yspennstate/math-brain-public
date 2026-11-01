@@ -31,7 +31,7 @@ The theorem below pays the exact compulsory-row branch, including leverage one.
 
 I read `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
@@ -49,7 +49,7 @@ The latest completed partner result is
 
 `QFORM-RANK2-HUBSTAR-AGGREGATE-COMPILER-v1`,
 
-`yspennstate/math-open-problems@56d0211f2f04d74152032fd1914196673eb5c3e6`,
+`private-source-repository@56d0211f2f04d74152032fd1914196673eb5c3e6`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T124906Z-fleet03-B09-QFORM-r32/REPORT.md`.
 

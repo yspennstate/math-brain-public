@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 at 
 # P13 / P0342 — square-root stability barrier for fringe-to-finite CLT transfer
 
 UTC run time: 2026-09-19T12:03:38Z  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Native slot: `6aa7b253b37c8191b693d8dc79298d37`  
 Own root: `proofnet24/P13-outside-successor/`
 

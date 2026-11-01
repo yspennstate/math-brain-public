@@ -1,6 +1,6 @@
 # r26 scope reconciliation — why the logarithmic theorem is not subsumed by r18
 
-After writing `REPORT.md`, I reread the earlier B03 theorem `QFORM-ISOTROPIC-CROSSBANK-HALF-RIESZ-v1` at `yspennstate/math-open-problems@d18302d55f907552185a42994d48b09f39737cbd` and the fresh fleet01/B03 r22 handoff (`yspennstate/math-open-problems@8fd11b9c3d1abd0cc47e0e861907b6bb3305c30b`). This supplement records the exact scope comparison.
+After writing `REPORT.md`, I reread the earlier B03 theorem `QFORM-ISOTROPIC-CROSSBANK-HALF-RIESZ-v1` at `private-source-repository@d18302d55f907552185a42994d48b09f39737cbd` and the fresh fleet01/B03 r22 handoff (`private-source-repository@8fd11b9c3d1abd0cc47e0e861907b6bb3305c30b`). This supplement records the exact scope comparison.
 
 The r18 isotropic theorem assumes
 

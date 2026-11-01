@@ -21,11 +21,11 @@ I also do **not** use the scalar `sup_b ||p_{Q_3|Q'=b}||_infinity` proposal from
 
 The designated partner is fleet02/B20 run `20260922T172846Z-fleet02-B20-QFORM-r14`, canonical main report
 
-`yspennstate/math-open-problems@6f93c551ec92438379a2b1d6a59fb58683064bf9`
+`private-source-repository@6f93c551ec92438379a2b1d6a59fb58683064bf9`
 
 with pivot refinement
 
-`yspennstate/math-open-problems@c03349badbdfce229ca3a1548d3de8615d1028c5`.
+`private-source-repository@c03349badbdfce229ca3a1548d3de8615d1028c5`.
 
 Combining the paid `s_2(A-diag A)<=499/1000` branch with its balanced nested-cut reduction, every unresolved target matrix has one of three source-realizable packets. The P1 packet used here supplies a physical coordinate `i` with
 
@@ -35,7 +35,7 @@ The partner also had an outer cross bank of singular value `>beta=499/4000` and 
 
 A second completed input is fleet01/B19 `QFORM-OPPOSITE-DIAGONAL-PAIR-v1` and its definite physical-pair lemma, source report
 
-`yspennstate/math-open-problems@e0b9c9e351dba6dc8472fb7de2afe373dc46b0cd`
+`private-source-repository@e0b9c9e351dba6dc8472fb7de2afe373dc46b0cd`
 
 at `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260922T165145Z-b19-qform-r11/REPORT.md`.
 

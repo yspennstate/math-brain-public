@@ -18,12 +18,12 @@ The current owner target remains: independent real coordinates with one-dimensio
 The exact completed sources consumed in this run are:
 
 1. **Principal-minimal same-constant descent**, fleet03/B19 r43,
-   `yspennstate/math-open-problems@ef38106705da5fab5a2fb6dbdd64745206580f62`,
+   `private-source-repository@ef38106705da5fab5a2fb6dbdd64745206580f62`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T220120Z-fleet03-B19-QFORM-r43/REPORT.md`.
    It proves that the full affine interval theorem reduces without constant loss to ORIGINAL-coordinate principal-minimal matrices. Such matrices have exactly three threshold-large eigenvalues or four with mixed signs. No coefficient tail is deleted.
 
 2. **Restored physical D2 currency**, fleet02/B20,
-   `yspennstate/math-open-problems@405fc21676782cde5254f7a7b9709f06e188a672`,
+   `private-source-repository@405fc21676782cde5254f7a7b9709f06e188a672`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T225733Z-fleet02-B20-QFORM-auto11/REPORT.md`.
    In the finite-core survivor there is a literal physical hub pair `T` and light bank `L`, with
 
@@ -32,7 +32,7 @@ The exact completed sources consumed in this run are:
    and leverage `ell_j=m_j^T G^(-1)m_j`. Its diffuse D2 branch is `max_j ell_j<=3/4`; the complementary branch is a literal physical volume-coloop.
 
 3. **Designated partner fleet02/B19**, latest completed aggregate-E3/common-plane-rigidity run,
-   `yspennstate/math-open-problems@5633a44f2d0dfefe54240878bc9deb46d315109c`,
+   `private-source-repository@5633a44f2d0dfefe54240878bc9deb46d315109c`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/fleet02-B19-20260923T231057Z-auto11/REPORT.md`.
    It proves the exact local E3 identity and an aggregate random-cut lift. Writing
 
@@ -54,7 +54,7 @@ The exact completed sources consumed in this run are:
    The exact-coloop counterexample in the same report shows why the diffuse assumption is essential.
 
 4. **Arbitrary-rank quarter-power small ball / full-matrix physical-pair theorem**,
-   `yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
+   `private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
    For any nonzero symmetric `R0`, arbitrary affine terms, and independent cap-one coordinates,
 
@@ -62,7 +62,7 @@ The exact completed sources consumed in this run are:
        <=min(1,5(rho/||R0||op)^(1/4))`.                            (1.3)
 
 5. **Physical indefinite-pair logarithmic envelope**,
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
    If a literal independent coordinate pair has invertible indefinite coefficient matrix `B`, with
 

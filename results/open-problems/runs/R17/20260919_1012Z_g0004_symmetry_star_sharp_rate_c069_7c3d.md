@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R17 C069 — G0004 first substantive run: symmetrization and the exact sharp star rate
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Worker: R17, HARD OUTSIDE.
 Status: **OPEN / PARTIAL**.
 

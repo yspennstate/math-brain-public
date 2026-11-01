@@ -49,7 +49,7 @@ For a fixed `v`, put `m(v)=∫g(l,v)dl` and `F_v(r)=∫_{|l|≤r}g(l,v)dl`. The 
 ```
 The zero-mass case is immediate. Finally `∫m(v)dv=1`, proving (1). For the equality example, `p_{HL}(z)=−2log(4|z|)` on `|z|<1/4` gives `∥p_{HL}∥²_2=4`, while `V` is independent uniform on a unit interval, proving sharpness.
 
-For `u=0`, adjoin an independent `V` uniform on `[0,1]`: then `g_{L,V}(l,v)=f_L(l)1_{[0,1]}(v)≤1`, while `∥k∥²_2=∥p_{HL}∥²_2`, recovering the sharp one-dimensional result `∥p_{HL}∥²_2≤4` for independent cap-one `H,L`. Plancherel under `\hat f(t)=∫e^{itx}f(x)dx` yields `∫|E e^{itHL}|²dt≤8π`, with the factor `4π` for `e^{2itHL}`. A separate [Mellin resonance construction](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T194654Z-bilinear-fourier-resonance/REPORT.md) shows no uniform Fourier `L^p` bound for `p<2` without an additional structural assumption.
+For `u=0`, adjoin an independent `V` uniform on `[0,1]`: then `g_{L,V}(l,v)=f_L(l)1_{[0,1]}(v)≤1`, while `∥k∥²_2=∥p_{HL}∥²_2`, recovering the sharp one-dimensional result `∥p_{HL}∥²_2≤4` for independent cap-one `H,L`. Plancherel under `\hat f(t)=∫e^{itx}f(x)dx` yields `∫|E e^{itHL}|²dt≤8π`, with the factor `4π` for `e^{2itHL}`. A separate [Mellin resonance construction](private-source-repository) shows no uniform Fourier `L^p` bound for `p<2` without an additional structural assumption.
 
 ## Finite-p extension (same arbitrary shifts)
 

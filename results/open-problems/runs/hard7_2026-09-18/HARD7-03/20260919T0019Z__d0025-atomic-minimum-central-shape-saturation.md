@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — **no moveme
 
 # HARD7-03 — recovery-route theorem: atomic-minimum central-shape saturation, and the logarithmic fast-run barrier
 
-Date: 2026-09-19 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-19 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / source residual remains OPEN_BY_BOUNDED_SEARCH.** This execution carries out the optimizer-pinning / endpoint-cost route chosen in Section-I recovery 1. It proves a source-relevant zero-tilt theorem for the exact lazy-LPP representation and then attacks the missing linear endpoint-cost statement from the positive-velocity side. It does **not** prove a positive plateau width and does not close Seppäläinen Problem 4.
 

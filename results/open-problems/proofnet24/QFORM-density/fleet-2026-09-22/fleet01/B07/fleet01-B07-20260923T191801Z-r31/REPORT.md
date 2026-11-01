@@ -19,7 +19,7 @@ The unrestricted conjecture is not proved or disproved here. Inputs remain indep
 
 Source:
 
-`yspennstate/math-open-problems@4e714d23f0673acdf71809b29fc99b469b2944aa`
+`private-source-repository@4e714d23f0673acdf71809b29fc99b469b2944aa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T180856Z-r30/REPORT.md`.
 
@@ -37,7 +37,7 @@ If the E2 packet is supported between disjoint physical banks, every extension h
 
 Source:
 
-`yspennstate/math-open-problems@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`
+`private-source-repository@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T170106Z-fleet03-B02-qform-r35/REPORT.md`, theorem `QFORM-CROSS-E3-MARGINALFREE-L1-v1`.
 
@@ -59,7 +59,7 @@ The theorem retains arbitrary same-bank curvature, outside couplings, affine ter
 
 Source:
 
-`yspennstate/math-open-problems@d98ec05905698cdb01f334c7da741ed7bb7aef37`
+`private-source-repository@d98ec05905698cdb01f334c7da741ed7bb7aef37`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T070624Z-r19/REPORT.md`.
 
@@ -71,7 +71,7 @@ Applied linearly to nonnegative fractional determinant weights, the overlap clas
 
 Source:
 
-`yspennstate/math-open-problems@12da18e77ea3c2097023c2da5193c86ef3b6478c`
+`private-source-repository@12da18e77ea3c2097023c2da5193c86ef3b6478c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T183825Z-fleet02-B07-qform-r11/REPORT.md`.
 

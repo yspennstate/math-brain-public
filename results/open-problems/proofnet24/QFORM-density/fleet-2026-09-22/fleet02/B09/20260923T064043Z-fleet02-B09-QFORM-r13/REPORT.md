@@ -20,7 +20,7 @@ The newest completed designated partner result is fleet03/B09 r25,
 
 canonical source
 
-`yspennstate/math-open-problems@b9f0099d9dc82b69a2af9ec252f22e094c193ea5`
+`private-source-repository@b9f0099d9dc82b69a2af9ec252f22e094c193ea5`
 
 at
 
@@ -42,7 +42,7 @@ Sections 2--5 prove the first branch, including a dense same-side rank-one packe
 
 I read the required directory at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
@@ -62,7 +62,7 @@ The second completed input is fleet02/B07
 
 canonical source
 
-`yspennstate/math-open-problems@32c257209b588141fb60af698f478f1d0ad20b8a`
+`private-source-repository@32c257209b588141fb60af698f478f1d0ad20b8a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T123512Z-b07-qform-minors-11/REPORT.md`.
 
@@ -252,7 +252,7 @@ The preceding fleet02/B09 theorem
 
 at canonical source
 
-`yspennstate/math-open-problems@ab1efb0930b7a16dc71c32530e155dd521289ab9`
+`private-source-repository@ab1efb0930b7a16dc71c32530e155dd521289ab9`
 
 produces, in the partner's `k=1` rank-split branch, a physical leaf `i`, the physical hub `h`, and a disjoint outside bank `T` whose two actual cross rows have Gram determinant
 

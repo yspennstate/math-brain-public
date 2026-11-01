@@ -38,7 +38,7 @@ Then the exact physical-coordinate quadratic form is
 Thus every finite member satisfies the original product-source density cap and exact three-large-eigenvalue hypothesis. No spectral rotation, post-rotation independence, moment assumption on `X_m`, support bound or log-concavity assumption on `X_m` is used.
 
 The previous B17 theorem at
-`yspennstate/math-open-problems@06aea167c49a7d7574f1c2f518c756f22413371a`,
+`private-source-repository@06aea167c49a7d7574f1c2f518c756f22413371a`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260923T014533Z-r14-multiscale/REPORT.md`, proved for independent `G_+,G_-~N(0,1/12)` that
 
 \[
@@ -99,7 +99,7 @@ Let `h_m` denote the density of `S_m`, and let
 be the density of `N(0,1/12)`.
 
 The completed designated partner result `fleet03/B17`, canonical report
-`yspennstate/math-open-problems@f593cf73a4e7547eac4183f8e61062fca5176706`,
+`private-source-repository@f593cf73a4e7547eac4183f8e61062fca5176706`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T021034Z-fleet03-B17-QFORM-r22/REPORT.md`, proves in its Section 4.1 that
 
 \[
@@ -378,7 +378,7 @@ This conclusion is uniform even when `f=f_m` changes adversarially with `m`. Thu
 ## 7. Required newest-Claude theorem applied to a finite obstruction
 
 The required source
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, proves Theorem C: for every exact rank-three `(+,+,-)` form with large coefficients `lambda_1,lambda_2,mu>=1`, every source-valid cap-one product law and every `s>=0`,
 
 \[

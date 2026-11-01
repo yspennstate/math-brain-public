@@ -117,7 +117,7 @@ with `U~Uniform[-1/2,1/2]`, `G~N(0,1/12)` independent. Its density is again even
 
 The preceding immutable fleet02/B17 theorem at
 
-`yspennstate/math-open-problems@5bacaa5dde0c746d1173052db0422d5182fcc85a`
+`private-source-repository@5bacaa5dde0c746d1173052db0422d5182fcc85a`
 
 proved, uniformly in spectral orientation, the central expansion
 
@@ -146,7 +146,7 @@ Thus an off-zero finite/mesoscopic overshoot cannot hide in the aligned separate
 
 The required newest source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`
 
@@ -166,7 +166,7 @@ The latest completed designated partner `fleet03/B17` result is
 
 `QFORM-RARE-FRAGMENT-FIRST-ORDER-BARRIER-v1`, scientific source
 
-`yspennstate/math-open-problems@66087bde81ba096d5d65ac5347e94a6322a47215`.
+`private-source-repository@66087bde81ba096d5d65ac5347e94a6322a47215`.
 
 It perturbs the fully rotated diffuse witness by cap-one remote fragments of mass `c/m^2` at distance `Theta(sqrt(m))` and proves
 

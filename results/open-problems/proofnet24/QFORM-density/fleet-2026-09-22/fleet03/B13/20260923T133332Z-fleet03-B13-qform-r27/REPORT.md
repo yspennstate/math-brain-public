@@ -14,7 +14,7 @@ Full continuity: **OPEN**.
 
 The designated partner result actually used is the latest completed `fleet04/B13` report:
 
-`yspennstate/math-open-problems@master`, path
+`private-source-repository@master`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T121154Z-fleet04-B13-nonattained-bathtub-r1/REPORT.md`.
 
 Its Theorem 3.1 proves, for every nonnegative measurable kernel `K`, the exact no-attainment identity

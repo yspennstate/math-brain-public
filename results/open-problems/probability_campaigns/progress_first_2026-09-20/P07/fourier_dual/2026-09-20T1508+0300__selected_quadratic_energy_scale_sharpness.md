@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-B — selected quadratic energy is macroscopically nonzero and the bounded-interpolation target is scale-sharp
 
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Fresh pre-write master:** `cf2499521ccb73ae922a75f79992e1d35a5aca7f`  
 **Previous own substantive report:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T1439+0300__quadratic_chaos_additive_energy_dichotomy.md`.  
 **Complementary P07-A checkpoint used:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1345+0300__density_profile_entropy_barrier.md`. P07-A owns the positive-certificate / information-projection route; this report stays on the Fourier-dual interpolation obstruction.

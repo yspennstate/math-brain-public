@@ -1,7 +1,7 @@
 # ProofNet24 P26 immutable archive-health fragment
 
 **Observed run timestamp:** 2026-09-16 12:04:03 Asia/Jerusalem  
-**Repository / branch:** `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** `private-source-repository` / `master`  
 **Track:** `proofnet24/P26-proof-audit-recovery`  
 **Policy:** GitHub-only preservation; no email/Gmail reconstruction.
 

@@ -21,14 +21,14 @@ The designated partner actually applied is **fleet02/B13**.
 
 1. `QFORM-PRODUCT-BANGBANG-REDUCTION-v1`, canonical source
 
-   `yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`,
+   `private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`.
 
    For every fixed measurable slab kernel, the supremum over all independent one-dimensional densities `0<=f_i<=1`, `integral f_i=1`, equals the supremum over arbitrary product indicators `1_{E_i}` with `|E_i|=1`. The reduction is performed in the original independent coordinates and costs no constant. No single-interval or centered-uniform conclusion is made.
 
 2. `QFORM-RANK3-HEAVY-LIGHT-TRICHOTOMY-v1`, canonical source
 
-   `yspennstate/math-open-problems@d511859edaa636cdc00fcd64155ab07506875c3d`,
+   `private-source-repository@d511859edaa636cdc00fcd64155ab07506875c3d`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T182158Z-fleet02-B13-qform-4ebdd821/REPORT.md`.
 
    For exact rank three
@@ -41,7 +41,7 @@ The designated partner actually applied is **fleet02/B13**.
 
 The immediate predecessor is fleet01/B13 r19,
 
-`yspennstate/math-open-problems@0d8f0844c9d680bf98ab4315c5dbbf17e59fd051`,
+`private-source-repository@0d8f0844c9d680bf98ab4315c5dbbf17e59fd051`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260922T210011Z-fleet01-B13-qform-r19/REPORT.md`.
 
 Inside the mixed branch, after an already-paid transverse-leverage branch, it furnishes a heavy original coordinate `i`, a unit spectral vector `u`, and `c>3/10` such that
@@ -88,7 +88,7 @@ The r19 theorem pays the branch `tau>=c` if every residual term `w_j^2/(c+tau)<=
 
 The analytic local theorem used below is `QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1`, canonical source
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 If an original-coordinate principal block has exact rank three, `A_II=V M V^T`, `V^T V=I_3`, and a physical row `i` has normalized squared norm `d_i`, with nonzero physical pivot `A_ii`, then the full ambient form, with arbitrary outside coefficients and cross couplings, satisfies

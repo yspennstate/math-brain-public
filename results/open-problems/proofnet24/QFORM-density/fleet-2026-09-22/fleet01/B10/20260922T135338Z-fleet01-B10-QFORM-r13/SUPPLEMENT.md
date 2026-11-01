@@ -130,6 +130,6 @@ The designated partner fleet02/B10 completed the independent-leakage heavy-isotr
 
 `||p_Q||_infinity<3*2^(5/3)<9.525`
 
-under genuine leakage/transverse independence (`math-open-problems@11c9ae19edfd07e3a0bd4053a910667c20e721ab`). That inequality is applied as a paid branch before the dependent residual treated here. Its counterexample to replacing independence by only conditional/pair caps is also respected.
+under genuine leakage/transverse independence (`private-source@11c9ae19edfd07e3a0bd4053a910667c20e721ab`). That inequality is applied as a paid branch before the dependent residual treated here. Its counterexample to replacing independence by only conditional/pair caps is also respected.
 
 No post-rotation independence, pointwise quadratic-phase decay, local-minor selection, conditional sum/difference density cap, or generic fiber-trace estimate is used. This supplement proves essential boundedness in its scope; continuity is not claimed.

@@ -25,7 +25,7 @@ The live corrections against scalar pointwise van der Corput, arbitrary-joint co
 
 The completed pair-log report
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`
 
 proves the following. Let two ORIGINAL independent cap-one coordinates form an invertible indefinite principal pair `B`, with
@@ -47,7 +47,7 @@ The shifts `m(Z)` may depend arbitrarily on the remainder. No independence is as
 
 The immediately preceding B06 report
 
-`yspennstate/math-open-problems@606257652f3c70e90c7b7f80ea7cb76c1abf689b`,
+`private-source-repository@606257652f3c70e90c7b7f80ea7cb76c1abf689b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T011959Z-fleet03-B06-qform-r24/REPORT.md`
 
 proved `QFORM-CROSS-E2-FRACTIONAL-L3-v1`. For a true original-coordinate cross block `C` inside a quadratic remainder, put
@@ -69,7 +69,7 @@ This pays the complete Cauchy--Binet `e_2` bank before any reciprocal exponent.
 
 The completed fleet04/B18 theorem
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`
 
 proves that after completing an ORIGINAL independent coordinate with coefficient `a!=0`,

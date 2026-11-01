@@ -27,7 +27,7 @@ plus
 
 source
 
-`yspennstate/math-open-problems@e6d2395b5b13bf75552b015668177a0270d3e89f`
+`private-source-repository@e6d2395b5b13bf75552b015668177a0270d3e89f`
 
 at
 
@@ -62,7 +62,7 @@ Sections 3--6 prove the exact endpoint and a target-valid transverse-curvature e
 
 I read the required source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 

@@ -13,7 +13,7 @@ attacking: QFORM-HIGHLEVERAGE-BALANCED-REGRESSION-CROSSING-v1 — turn the diffu
 
 The immediate same-slot source is
 
-`yspennstate/math-open-problems@461ca4597face7955d318d0540729ca6b809fce2`
+`private-source-repository@461ca4597face7955d318d0540729ca6b809fce2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260924T093516Z-fleet03-B05-QFORM-r44/REPORT.md`.
 
@@ -89,7 +89,7 @@ The point is to spend (1.8) before selecting a tiny physical minor.
 
 My completed theorem `QFORM-PAIR-ANCHORED-DETSTAR-COAREA-v1`, source
 
-`yspennstate/math-open-problems@22d59171a8870dbcdbf7641e990800db2fc9df42`
+`private-source-repository@22d59171a8870dbcdbf7641e990800db2fc9df42`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260924T033744Z-fleet03-B05-QFORM-r39/REPORT.md`,
 
@@ -308,11 +308,11 @@ These identities are exact. They do not approximate the coefficient tails or inf
 
 The determinant-sensitive exact-cross theorem is the product-preserving result at
 
-`yspennstate/math-open-problems@95f94696393b5ad8b0def71fa0d93082de92bd85`
+`private-source-repository@95f94696393b5ad8b0def71fa0d93082de92bd85`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T193756Z-fleet03-B05-QFORM-r31/REPORT.md`, based on the exact-cross Fourier theorem at
 
-`yspennstate/math-open-problems@51d2edb29d7a4c150e4d47ed3a6685875a8483ae`
+`private-source-repository@51d2edb29d7a4c150e4d47ed3a6685875a8483ae`
 
 `proofnet24/QFORM-density/interactive/20260923T194300Z-exact-cross-rank-fourier/REPORT.md`.
 
@@ -461,7 +461,7 @@ There is an additional payment available from the fresh fleet03/B19 theorem
 
 source
 
-`yspennstate/math-open-problems@0c72e9d098b6a02da82ac63c3d856316587d7ea4`
+`private-source-repository@0c72e9d098b6a02da82ac63c3d856316587d7ea4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T100359Z-fleet03-B19-QFORM-r53/REPORT.md`.
 
@@ -555,7 +555,7 @@ The designated partner `fleet04/B05` theorem is
 
 canonical source
 
-`yspennstate/math-open-problems@33cabb3bd5e466a58adc6eac49eba210ef62ef14`
+`private-source-repository@33cabb3bd5e466a58adc6eac49eba210ef62ef14`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260924T011830Z-fleet04-B05-convex-pair-r3/REPORT.md`.
 
@@ -636,12 +636,12 @@ A separate neighboring endpoint is the genuine near-coloop chamber `c>3/4`; the 
 
 ## 10. Source pins
 
-- Immediate own r44: `math-open-problems@461ca4597face7955d318d0540729ca6b809fce2`.
-- Pair-star theorem r39: `math-open-problems@22d59171a8870dbcdbf7641e990800db2fc9df42`.
-- Determinant-sensitive exact crossing r31: `math-open-problems@95f94696393b5ad8b0def71fa0d93082de92bd85`.
-- Underlying exact-cross theorem: `math-open-problems@51d2edb29d7a4c150e4d47ed3a6685875a8483ae`.
-- Fresh diffuse latent endpoint: `math-open-problems@0c72e9d098b6a02da82ac63c3d856316587d7ea4`.
-- Designated fleet04/B05 definite-pair theorem: `math-open-problems@33cabb3bd5e466a58adc6eac49eba210ef62ef14`.
-- Exact-null high-leverage closure: `math-open-problems@1ca1fc77ae8435274325c25657c496fd703c0b51`.
+- Immediate own r44: `private-source@461ca4597face7955d318d0540729ca6b809fce2`.
+- Pair-star theorem r39: `private-source@22d59171a8870dbcdbf7641e990800db2fc9df42`.
+- Determinant-sensitive exact crossing r31: `private-source@95f94696393b5ad8b0def71fa0d93082de92bd85`.
+- Underlying exact-cross theorem: `private-source@51d2edb29d7a4c150e4d47ed3a6685875a8483ae`.
+- Fresh diffuse latent endpoint: `private-source@0c72e9d098b6a02da82ac63c3d856316587d7ea4`.
+- Designated fleet04/B05 definite-pair theorem: `private-source@33cabb3bd5e466a58adc6eac49eba210ef62ef14`.
+- Exact-null high-leverage closure: `private-source@1ca1fc77ae8435274325c25657c496fd703c0b51`.
 
 Repository use is not native brain ingestion; status remains `WITHOUT_VERIFIED_BRAIN`.

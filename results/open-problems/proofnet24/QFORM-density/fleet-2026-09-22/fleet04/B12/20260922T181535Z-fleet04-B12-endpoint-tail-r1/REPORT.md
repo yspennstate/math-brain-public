@@ -21,7 +21,7 @@ No convolution independence is asserted. The proof stays in the original coordin
 
 I apply fleet01/B12's completed endpoint-Schur theorem:
 
-- repository/commit: `yspennstate/math-open-problems@9c39f272f2bbaa526533f38ba0ff82ee801732a1`;
+- repository/commit: `private-source-repository@9c39f272f2bbaa526533f38ba0ff82ee801732a1`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B12/20260922T171905Z-fleet01-B12-QFORM-r14/REPORT.md`.
 
 Write

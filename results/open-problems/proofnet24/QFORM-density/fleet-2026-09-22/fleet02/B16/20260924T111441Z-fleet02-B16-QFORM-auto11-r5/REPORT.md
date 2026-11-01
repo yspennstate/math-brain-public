@@ -5,7 +5,7 @@ attacking: the genuinely indefinite same-bank/nonzero-separated-pivot residue af
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Role: Projection-product interaction  
-Pinned mathematical source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`  
+Pinned mathematical source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`  
 Partner: latest compatible fleet03/B16 r46, `20260924T095233Z-fleet03-B16-QFORM-auto11-r4/REPORT.md`  
 Status: `NEW SUPPORTING THEOREM + CAPS-INTERFACE OBSTRUCTION / FULL QFORM OPEN`  
 Regularity: essential boundedness only in the new theorem; continuity is not asserted.

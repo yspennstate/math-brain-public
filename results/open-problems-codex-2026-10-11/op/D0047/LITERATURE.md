@@ -148,7 +148,7 @@ The returned source-citing titles identify no explicit solution of Question 9. T
 
 Ran math_recall.py "Brownian carousel Sine beta Painleve", brain.py recall "Brownian carousel Painleve", and brain.py recall "Brownian carousel mistakes". The memory recall reported no carousel-specific memory. Math cards covered mostly unrelated results and the 2026 correlation paper.
 
-Searched D0047 in intake directories and codex_pool_2026_10_10. Recovered D0047-A001 and six 2026-09-17 reports from origin/master of ~/math-open-problems using git show, saved locally as prior_*.md. The reports are hints, not independently certified proofs. No repository was changed.
+Searched D0047 in intake directories and codex_pool_2026_10_10. Recovered D0047-A001 and six 2026-09-17 reports from origin/master of ~/private-source using git show, saved locally as prior_*.md. The reports are hints, not independently certified proofs. No repository was changed.
 
 Earlier work reduced a one-pole Lax family to sigma-PV conditional on selecting the physical solution. That selection remains unproved. Its claim that the small-gap intensity alone selects the PV branch is too weak: the exact exponential/linear-sigma branch in ATTEMPT.md has the same slope.
 

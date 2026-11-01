@@ -2,7 +2,7 @@
 
 Outcome: `CANDIDATE_REFUTED` for `FOREST-FULL-RADIUS-TRANSFER-HALL-v1`, and more strongly for any residual injection constrained to preserve both coordinate union and intersection. Parent FOREST target remains `OPEN`.
 
-Canonical report: repository `yspennstate/math-open-problems`, path `proofnet24/P14-probability-correlation/collective-2026-09-22/fleet04/B02/20260922T070653Z-fleet04-B02-forest-exchange-v4/report.md`, Git blob `536a2157ede22dbddcafeb4f1b28b308ac8222ff`.
+Canonical report: repository `private-source-repository`, path `proofnet24/P14-probability-correlation/collective-2026-09-22/fleet04/B02/20260922T070653Z-fleet04-B02-forest-exchange-v4/report.md`, Git blob `536a2157ede22dbddcafeb4f1b28b308ac8222ff`.
 
 Exact checker blob: `6cd5d65b1880ab4015016eee9579dadbaa90e640`. Captured output blob: `6abc63f471bf1e87deed9780e325c77b1e1ca8a4`.
 

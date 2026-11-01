@@ -12,9 +12,9 @@
 Target: for every finite `n`, independent real random variables `X_i` with densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove that `Q=X^TAX` has a density with one universal finite essential-supremum bound, or give a valid counterexample. No rotated-coordinate independence, compact-support, moment, log-concavity, Gaussian, or diagonal-basis assumptions are introduced here. Continuity is kept separate from essential boundedness.
 
 
-Newest completed designated partner actually consumed and applied: fleet03/B20 run `20260922T154341Z-fleet03-B20-QFORM-r12`, canonical mathematics `yspennstate/math-open-problems@eb7976d14c75a2a5945e03c6b947774e26fdebcb`. Its high-window theorem is used quantitatively in Section 5.
+Newest completed designated partner actually consumed and applied: fleet03/B20 run `20260922T154341Z-fleet03-B20-QFORM-r12`, canonical mathematics `private-source-repository@eb7976d14c75a2a5945e03c6b947774e26fdebcb`. Its high-window theorem is used quantitatively in Section 5.
 
-Also consumed: fleet03/B07 run `20260922T163733Z-fleet03-B07-qform-r12`, canonical mathematics `yspennstate/math-open-problems@685929d9daee92a164dbf6ba6f9305d2e6550826`, especially its full-matrix third-compound O0/O1/O2/O3 reduction and O0 ridge calibration.
+Also consumed: fleet03/B07 run `20260922T163733Z-fleet03-B07-qform-r12`, canonical mathematics `private-source-repository@685929d9daee92a164dbf6ba6f9305d2e6550826`, especially its full-matrix third-compound O0/O1/O2/O3 reduction and O0 ridge calibration.
 
 Corrections retained: no law-uniform pointwise quadratic-phase decay; no dimension-free fiber-supremum shortcut; no post-rotation independence; no generic conditional three-dimensional spectral-projection density cap; no single-good-minor inference; no raw operator-norm slab-continuity argument under unrestricted translations; and no same-square absorption of arbitrary same-bank curvature.
 

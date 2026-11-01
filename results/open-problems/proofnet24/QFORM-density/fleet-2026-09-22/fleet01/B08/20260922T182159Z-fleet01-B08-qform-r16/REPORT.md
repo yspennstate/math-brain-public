@@ -12,7 +12,7 @@ The full target is unchanged: for every real symmetric `A` with at least three e
 
 The present B08 route is the diffuse/localized decomposition. A completed designated-partner theorem already pays a perturbatively diffuse branch: fleet02/B08 `QFORM-DIFFUSE-APPROX-BLOCK-STABILITY-v1`, source
 
-`yspennstate/math-open-problems@c1c6ffe8c742cbba7611b5a3f1d73cf71019f47b`.
+`private-source-repository@c1c6ffe8c742cbba7611b5a3f1d73cf71019f47b`.
 
 Concretely, write `A=R Lambda R^T+C` with `R^TR=I_3`, `s_min(Lambda)>=1`, take no preliminary conditioning, and split `C=C0+E` with singleton physical blocks `C0=diag(C)`. Then `eta=0`, `W=R`, and `mu=max_i ||r_i||^2`. Thus the partner's clean corollary applies literally:
 
@@ -29,7 +29,7 @@ The previous fleet01/B08 run treated the complementary large-defect/stable-rank 
 Fleet03/B19 proved `QFORM-HALF-OFFDIAGONAL-BARRIER-v1`, source handoff
 
 
-canonical mathematics `yspennstate/math-open-problems@539d1d9953c616bf0e1ab2dafeef55102f89c2b9`.
+canonical mathematics `private-source-repository@539d1d9953c616bf0e1ab2dafeef55102f89c2b9`.
 
 If `H=A-diag(A)` and `s_2(H)<=t<1/2`, then
 
@@ -41,7 +41,7 @@ No continuity conclusion is asserted in that branch.
 
 Fleet03/B08 proved `QFORM-PIVOT-PLUS-TWO-RIDGE-DIRECTIONS-v1`, canonical mathematics
 
-`yspennstate/math-open-problems@f0a31a05a227ca671ffb22f6d7ed62954ce48c73`.
+`private-source-repository@f0a31a05a227ca671ffb22f6d7ed62954ce48c73`.
 
 For a nonzero original-coordinate scalar pivot `a`, let `S` be its exact Schur residual. If an original-coordinate cross block `B` of `S` has two singular values at least `sigma>0`, and at `gamma=sigma/sqrt(6)` its ridge matrix
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — **NO MOVEME
 # R08 CLOSABLE OUTSIDE — F0083: a quadratic disagreement-capacity law, a square-root path obstruction, and uniqueness of the triple-corner tangent
 
 Date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity and controlling state
 

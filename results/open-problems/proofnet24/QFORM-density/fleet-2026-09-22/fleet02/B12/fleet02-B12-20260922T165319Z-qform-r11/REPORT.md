@@ -19,7 +19,7 @@ where \(M_r\) is the squared \(3\times3\) minor mass over row/column triples wit
 C_*/L,\qquad C_*=24.183038289961516\ldots .
 \]
 
-Source: `yspennstate/math-open-problems@b3c543b40dfaef13468466fa82625303a7719af8`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md`.
+Source: `private-source-repository@b3c543b40dfaef13468466fa82625303a7719af8`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md`.
 
 The remaining question is whether an arbitrary added eigendirection can be absorbed by the already-paid definite-pair / well-conditioned-principal-triple mechanisms, or whether a genuinely mixed overlap channel is forced. The family below answers this exactly: one rank-one spike makes every physical pair indefinite and every principal triple ill-conditioned, while asymptotically all of \(e_3(A^2)\) moves into \(M_2\).
 

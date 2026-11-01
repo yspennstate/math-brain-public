@@ -545,7 +545,7 @@ A complete proof must control the dependent high-degree terms excluded by (5.1),
 
 ## 9. Source ledger, attribution, and delivery
 
-The following repository files were actually read in this continuation, all from `yspennstate/math-open-problems`, branch `master`:
+The following repository files were actually read in this continuation, all from `private-source-repository`, branch `master`:
 
 - `proofnet24/P03-fei/README.md`, blob `1156fab7d6b2e8360bcbaa138855b97345b8def1`: current positive classes, concave restriction update, and superseded targets.
 - `proofnet24/P03-fei/continuations/2026-09-20-affine-fibres/HANDOFF.md`, blob `5f236046ea4cb44c91b74866e7677b83266dbd02`: correct whole-function versus individual-fibre endpoint scope.

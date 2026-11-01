@@ -3,7 +3,7 @@ attacking: derive the exact q-dependent Hausdorff--Young marginal factor in the 
 
 # Early substantive checkpoint
 
-Starting from `math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`, keep the row/column Hausdorff--Young factors in equation (14) instead of replacing them by `e^3`.
+Starting from `private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`, keep the row/column Hausdorff--Young factors in equation (14) instead of replacing them by `e^3`.
 
 For a probability weight `w` on positive physical 3x3 minors, row/column marginals `alpha_i,beta_j`, and determinant/entropy currency
 

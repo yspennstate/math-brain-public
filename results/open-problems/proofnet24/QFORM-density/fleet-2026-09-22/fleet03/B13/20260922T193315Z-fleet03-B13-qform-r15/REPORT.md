@@ -17,13 +17,13 @@ This run uses none of the refuted arbitrary-joint rank-three coarea bound, norma
 
 The designated partner result actually applied is fleet04/B13's exact fixed-volume random-set representation and continuity-transfer theorem:
 
-`yspennstate/math-open-problems@722a87d180720473e3c3e08010d62caedf298484:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T171018Z-b13-fixed-volume-mixture-r4/REPORT.md`.
+`private-source-repository@722a87d180720473e3c3e08010d62caedf298484:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T171018Z-b13-fixed-volume-mixture-r4/REPORT.md`.
 
 It proves that every cap-one one-dimensional density of mass one is an exact barycenter of indicators of arbitrary unit-measure sets, independently across coordinates. Therefore any uniform interval-small-ball inequality proved for all product indicators transfers with exactly the same constant to every admissible product density. No connectedness, bounded diameter, bounded support, or fragment-count hypothesis is introduced.
 
 A compatible completed peer result used for comparison is fleet01/B16's rank-one physical-pair theorem:
 
-`yspennstate/math-open-problems@2010f649637870b226dafc2d54791819c4cb2aaa:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260922T190433Z-fleet01-B16-QFORM-auto11/REPORT.md`.
+`private-source-repository@2010f649637870b226dafc2d54791819c4cb2aaa:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260922T190433Z-fleet01-B16-QFORM-auto11/REPORT.md`.
 
 That theorem gives `18*2^(1/3)(|lambda| eta^2)^(-1/3)` for a rank-one physical pair. The new theorem below is complementary and improves the reciprocal exponent in the broad regime where the nonzero pair eigenvalue is not tiny relative to its transverse cross-bank norm.
 

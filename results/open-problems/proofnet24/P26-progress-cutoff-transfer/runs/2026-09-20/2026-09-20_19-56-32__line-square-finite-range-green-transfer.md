@@ -10,7 +10,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning/effort level: UNVERIFIED** — 
 
 **Publication novelty:** `UNVERIFIED`. A bounded repository search found no prior line-square cutoff theorem in the project, and a bounded public search did not establish a matching published theorem. This is negative evidence only, not a priority claim.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 

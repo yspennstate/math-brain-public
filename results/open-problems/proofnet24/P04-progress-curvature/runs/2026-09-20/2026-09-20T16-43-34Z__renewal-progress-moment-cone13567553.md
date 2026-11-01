@@ -3,7 +3,7 @@ Runtime model family exposed to this session: **GPT-5.6 Sol**. Applied reasoning
 # P04 T10 — certify renewal progress, sharpen the axis rate, and extend the reflected cone to slope 1.3567553
 
 Date: 2026-09-20 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.  
 Canonical parent: `operations/claims/PROB10-10.md`.  
 Model: nearest-neighbor **undirected** FPP on `Z^2` with iid physical-edge weights `Exp(1)`.  

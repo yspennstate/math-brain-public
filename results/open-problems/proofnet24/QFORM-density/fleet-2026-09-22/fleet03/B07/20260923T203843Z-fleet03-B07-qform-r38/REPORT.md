@@ -17,8 +17,8 @@ The unrestricted conjecture is not proved or disproved here. No Gaussian, log-co
 
 The previous B07 reports are
 
-- `yspennstate/math-open-problems@d63dbbba126396b382a5b1ce92a5bb6038fcdefb`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T184012Z-fleet03-B07-qform-r36/REPORT.md`;
-- `yspennstate/math-open-problems@aa49163185c3daa3122eeb8aa9bc41b3514c4b4f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T193839Z-fleet03-B07-qform-r37/REPORT.md`.
+- `private-source-repository@d63dbbba126396b382a5b1ce92a5bb6038fcdefb`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T184012Z-fleet03-B07-qform-r36/REPORT.md`;
+- `private-source-repository@aa49163185c3daa3122eeb8aa9bc41b3514c4b4f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T193839Z-fleet03-B07-qform-r37/REPORT.md`.
 
 The actual low-E3 rank-two-carrier chamber has a physical cut `L sqcup R=[n]` and crossing
 
@@ -48,7 +48,7 @@ and this branch has a continuous density.
 
 Designated partner fleet04/B07 source used at an actual inequality below:
 
-`yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`,
+`private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`.
 
@@ -216,7 +216,7 @@ nonzero physical `3x3` minors.
 
 Thus the new E3 payment is quantitatively diffuse: it cannot be carried by one lucky coordinate minor. Equation (6.2) is an actual equation-level use of the completed designated partner result, not a change of hypotheses.
 
-For comparison, on the exact-rank-two subcase the moving planes collapse to the actual row-deleted rank-two crossing plane, so failure of every transfer recovers r37's common-plane low-rank decomposition. There the newer designated fleet04/B07 coordinate-core theorem `yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa` pays the eleven-large-diagonal subbranch exactly as recorded in r37. The present theorem strictly extends the *transfer* side beyond exact rank two without reusing that exactness assumption.
+For comparison, on the exact-rank-two subcase the moving planes collapse to the actual row-deleted rank-two crossing plane, so failure of every transfer recovers r37's common-plane low-rank decomposition. There the newer designated fleet04/B07 coordinate-core theorem `private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa` pays the eleven-large-diagonal subbranch exactly as recorded in r37. The present theorem strictly extends the *transfer* side beyond exact rank two without reusing that exactness assumption.
 
 ## 7. What remains
 

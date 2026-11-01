@@ -2,7 +2,7 @@
 
 The main report was written against the previous completed fleet03/B19 rank-two-cross theorem. Before handoff, a chronologically newer completed fleet03/B19 run became available:
 
-`yspennstate/math-open-problems@52b3371e7952ca3c00908c7cf07f0b51c8c5d2ac`
+`private-source-repository@52b3371e7952ca3c00908c7cf07f0b51c8c5d2ac`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T060106Z-fleet03-B19-QFORM-r25/REPORT.md`.
 

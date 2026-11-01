@@ -3,7 +3,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 # R7-01 — I0071 full-source scope reconciliation
 
 Date: 2026-09-18 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Slot: `R7-01 Counterexamples and Constants`  
 Native ID: `6aabe777361481919c9e614646464772`  
 State entering screen: `PENDING_ADMISSION`

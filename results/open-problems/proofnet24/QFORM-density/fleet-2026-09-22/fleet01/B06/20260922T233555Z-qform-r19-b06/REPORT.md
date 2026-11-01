@@ -23,7 +23,7 @@ The target remains: for every `n`, independent real coordinates `X_i` with proba
 
 The designated partner result actually applied is fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical proof
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`
 
 at
 

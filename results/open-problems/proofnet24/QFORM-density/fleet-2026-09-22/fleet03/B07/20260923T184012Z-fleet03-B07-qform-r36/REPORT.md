@@ -18,7 +18,7 @@ The unrestricted conjecture is not proved or disproved here. No Gaussian, log-co
 
 The previous B07 report is
 
-`yspennstate/math-open-problems@3a3334245375f0d72687f3cb482b4478d51f3188`,
+`private-source-repository@3a3334245375f0d72687f3cb482b4478d51f3188`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T173750Z-fleet03-B07-qform-r35/REPORT.md`.
 
@@ -56,7 +56,7 @@ the branch `V<h^6` therefore has retained Frobenius tail below
 
 If instead either interface has `V>=h^6`, the completed fleet03/B02 marginal-free E3 theorem at
 
-`yspennstate/math-open-problems@52cef3abd27c641ae6666d6ee3bbc25d90cb4813`,
+`private-source-repository@52cef3abd27c641ae6666d6ee3bbc25d90cb4813`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T170106Z-fleet03-B02-qform-r35/REPORT.md`
 
@@ -66,7 +66,7 @@ already gives the full ambient law a continuous `C_0` density with
 
 The designated partner result used quantitatively below is fleet04/B07 r1,
 
-`yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`,
+`private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`.
 
@@ -78,7 +78,7 @@ on the relevant off-diagonal coefficients. The newer fleet04/B07 coordinate-core
 
 For the analytic lemma in Section 3 I use only the standard orthonormal product-projection bound explicitly recorded in the current projected-crossing proof
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`:
 
@@ -296,7 +296,7 @@ This is an equation-level application of the designated fleet04/B07 result. It s
 
 The same-hour fleet01/B07 report at
 
-`yspennstate/math-open-problems@4e714d23f0673acdf71809b29fc99b469b2944aa`
+`private-source-repository@4e714d23f0673acdf71809b29fc99b469b2944aa`
 
 proves a complementary spectral extension theorem: arbitrary determinant-weighted physical E2 packets lift to fractional E3 currency under `s_3(A)>=1` before any reciprocal minor selection. That theorem does not pay the current low-E3 rank-two-interface curvature branch, and I do not use it as a premise here. It reinforces that aggregate determinant weight, rather than a single selected minor, is the correct currency.
 

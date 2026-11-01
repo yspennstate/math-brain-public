@@ -13,7 +13,7 @@ The live corrections are retained: no independence after spectral rotation, no a
 
 ## 1. The apparent remaining glue from the previous B05 run
 
-The immediate predecessor `math-open-problems@763231817b4bb8114d827c8f428170f3b8e8b701` reduced the B05 heavy-null exact-rank-three survivor to the Witt form
+The immediate predecessor `private-source@763231817b4bb8114d827c8f428170f3b8e8b701` reduced the B05 heavy-null exact-rank-three survivor to the Witt form
 
 \[
 Q=2aV(H+\kappa U)+\alpha V^2+2\gamma VW+\delta W^2,                 \tag{1.1}
@@ -81,7 +81,7 @@ q_j:=y_j^2+z_j^2.                                                     \tag{2.5}
 
 Now apply the source-valid theorem `QFORM-NULL-HUB-TRANSVERSE-LEVERAGE-CLOSURE-v1` from
 
-`math-open-problems@c0d7e627b3b877fcecc3004a58335658f6541d64`,
+`private-source@c0d7e627b3b877fcecc3004a58335658f6541d64`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T114517Z-fleet03-B10-QFORM-r24/REPORT.md`.
 
 In its notation choose `r=e_1`. Since
@@ -231,7 +231,7 @@ This is not a proof of arbitrary exact rank three, because the theorem assumes a
 
 The completed fleet02/B05 source-disjoint Pluecker max-cut theorem from
 
-`math-open-problems@3ca6f8113ff32fc642cc3582b4a338082e8d6d25`
+`private-source@3ca6f8113ff32fc642cc3582b4a338082e8d6d25`
 
 applies directly to the transverse orthonormal two-frame `(y,z)` in (2.4). It gives an ORIGINAL-coordinate partition of the complement
 

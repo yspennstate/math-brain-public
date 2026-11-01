@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 Run UTC: 2026-09-18T05:25:11Z  
 Track: `NM13-04 Graph Counterexamples`, CLOSABLE OUTSIDE  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Canonical source/claim: `P0457`, `operations/claims/P0457.md`
 
 ## 1. Runtime, continuity, ownership, and required reads

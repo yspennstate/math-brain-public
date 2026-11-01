@@ -2,7 +2,7 @@
 
 This supplement adds a global diffuse-eigenvector router to the r34 physical-row result. It uses the completed ridge-window theorem exactly at its proved scope:
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 That source proves: if a symmetric matrix has at least three eigenvalues of modulus at least one and the spectral projection `P` onto `|lambda|>=1/64` has `max_i P_ii<=1/32`, then every cap-one product input gives a continuous `C_0` density with

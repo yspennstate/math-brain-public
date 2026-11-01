@@ -15,7 +15,7 @@ The full target remains the arbitrary-product-law theorem: independent real phys
 This report does not use law-uniform pointwise quadratic stationary phase, the false arbitrary-joint rank-three coarea inequality, positive moments of conditional projection-density suprema, or independence after spectral rotation. It also explicitly consumes the correction `QFORM-TWO-HEAVY-RADIAL-LAPLACE-DOMINATION-FALSE-v1`: the tempting pointwise two-heavy Gaussian radial-Laplace comparison is false. The replacement below works only after retaining the exact output kernel and rearranging that kernel.
 
 The completed designated-partner result actually applied is fleet03/B17 run `20260922T190408Z-fleet03-B17-QFORM-r15`, canonical report
-`yspennstate/math-open-problems@37cd91fd64fa8a508ef9205038d5124a62fc877d:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260922T190408Z-fleet03-B17-QFORM-r15/REPORT.md`.
+`private-source-repository@37cd91fd64fa8a508ef9205038d5124a62fc877d:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260922T190408Z-fleet03-B17-QFORM-r15/REPORT.md`.
 Its theorem says the optimal essential-density constant is unchanged if one restricts to invertible target matrices, and its weak lower-semicontinuity lemma for interval concentration lets singular stress families transfer lower-bound obstructions to invertible perturbations.
 
 ## 2. Exact source-valid stress family

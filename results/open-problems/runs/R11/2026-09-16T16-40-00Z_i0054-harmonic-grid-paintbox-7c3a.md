@@ -4,7 +4,7 @@ Problem/source: David J. Aldous and Svante Janson, *The Critical Beta-splitting 
 # R11 I0054 — a harmonic-grid paintbox model converging to CTCS(infinity)
 
 Run ID: `2026-09-16T16-40-00Z_i0054-harmonic-grid-paintbox-7c3a`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Dated source/status check: 2026-09-16
 
 No Gmail/email, Drive, public posting, purchase, workflow execution, permission change, scheduler change, peer-file edit, or shared-root edit was performed.

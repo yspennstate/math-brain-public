@@ -21,7 +21,7 @@ The preceding fleet01/B05 theorem is
 
 canonical mathematics
 
-`yspennstate/math-open-problems@118a74200ff58a869f7e4f81d93d5da45ecd7d8d`
+`private-source-repository@118a74200ff58a869f7e4f81d93d5da45ecd7d8d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T160511Z-fleet01-B05-QFORM-auto12/REPORT.md`.
 
@@ -29,7 +29,7 @@ It shows that every residual longitudinal coefficient carried on an original coo
 
 The freshest completed designated-partner fleet02/B05 report used here is
 
-`yspennstate/math-open-problems@040cd52d6a6e19c4e00080876babd39aaf07413c`
+`private-source-repository@040cd52d6a6e19c4e00080876babd39aaf07413c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T160925Z-fleet02-B05-QFORM-d5159a85/REPORT.md`.
 
@@ -41,7 +41,7 @@ For the quantitative fiber estimate below I apply fleet02/B05's completed theore
 
 canonical source
 
-`yspennstate/math-open-problems@c661893c05a7fd40d7f1e9b0a0a81a6f08f242a6`
+`private-source-repository@c661893c05a7fd40d7f1e9b0a0a81a6f08f242a6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T035943Z-fleet02-B05-QFORM-r21/REPORT.md`.
 

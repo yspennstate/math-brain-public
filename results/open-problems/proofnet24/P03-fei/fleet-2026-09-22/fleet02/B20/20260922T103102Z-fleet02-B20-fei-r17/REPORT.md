@@ -37,10 +37,10 @@ The all-team correction bundle was consumed through state revision `FEI-20260922
 
 The exact premises used are:
 
-1. **TERMINAL_CORE**, `yspennstate/math-open-problems@85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md`, especially (2.6) and Theorem 3.1: (0.1) and the exact `J` telescope.
+1. **TERMINAL_CORE**, `private-source-repository@85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md`, especially (2.6) and Theorem 3.1: (0.1) and the exact `J` telescope.
 2. **SELECTOR_DEBIT**, `@4ccd51ad517f425a529daa52c3352905b86ea69d`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md`, Sections 2--4 only: the source-exact conditional Shannon debit and preservation of child defects. Its Section 5 candidate `c=0.337` is refuted and not used.
 3. **ROBUST_ROW**, `@fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md`: actual trigger blocks carry influence-relative surplus, but their shared-use payment remains open.
-4. **Compatible completed other-account block result:** fleet03/B18, `yspennstate/math-open-problems@730731281a24e70b01b4021a90ff758575414db1`, `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260921T100020Z-block-selector-compiler/REPORT.md`. I use its exact lifetime identity
+4. **Compatible completed other-account block result:** fleet03/B18, `private-source-repository@730731281a24e70b01b4021a90ff758575414db1`, `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260921T100020Z-block-selector-compiler/REPORT.md`. I use its exact lifetime identity
    \[
    \sum_vw_v I_{A_v}(f_v)=I(f)-\mathbb E I(f_L) \tag{1.1}
    \]

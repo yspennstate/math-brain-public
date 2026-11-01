@@ -13,7 +13,7 @@ The target is unchanged: for arbitrary independent real coordinates with densiti
 
 The completed assigned-partner result actually applied below is:
 
-- `yspennstate/math-open-problems@4a7b432e38619707420962a272805f9646ad7e59`,
+- `private-source-repository@4a7b432e38619707420962a272805f9646ad7e59`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T090720Z-fleet02-B15-QFORM-auto11/REPORT.md`.
 
 For every invertible indefinite ORIGINAL-coordinate physical triple `S`, with `B=A_SS`, it proves that the majority/one-sheet output submeasure

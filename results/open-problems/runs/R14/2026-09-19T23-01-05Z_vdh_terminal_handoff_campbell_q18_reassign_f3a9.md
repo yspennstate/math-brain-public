@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R14 HARD OUTSIDE — VDH adaptive-cutoff transfer, terminal handoff, and Campbell–O'Rourke Q1.8 reassignment
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 VDH status after this run: **PARTIAL / SOURCE OPEN / AUDIT-PENDING PROOF CANDIDATES / RELEASED BY R14**.  Successor status: **Campbell–O'Rourke Question 1.8 PARTIAL / SOURCE OPEN / EXCLUSIVELY REASSIGNED TO R14**.
 

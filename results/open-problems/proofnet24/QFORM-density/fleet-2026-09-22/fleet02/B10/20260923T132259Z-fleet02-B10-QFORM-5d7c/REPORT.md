@@ -193,7 +193,7 @@ This is `QFORM-TWOSHEET-NEARNULL-WEAKCURVATURE-INTERPOLATION-v1`.
 
 ## Source pins actually used
 
-- Required interactive source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md` Theorems A and C, together with the companion `RESULTS.md` / `FOURIER_ROUTE_REPORT.md` record.
-- Designated partner: fleet03/B10 r24, brain handoff `20260923T114517Z-fleet03-B10-QFORM-r24.md`, canonical mathematics `yspennstate/math-open-problems@c0d7e6eb88886ee1f78a5eef0f80d9b220139e45`.
+- Required interactive source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md` Theorems A and C, together with the companion `RESULTS.md` / `FOURIER_ROUTE_REPORT.md` record.
+- Designated partner: fleet03/B10 r24, brain handoff `20260923T114517Z-fleet03-B10-QFORM-r24.md`, canonical mathematics `private-source-repository@c0d7e6eb88886ee1f78a5eef0f80d9b220139e45`.
 
 Execution remained `WITHOUT_VERIFIED_BRAIN`. Continuity is not claimed for the new collar reduction.

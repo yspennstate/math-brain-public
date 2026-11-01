@@ -15,7 +15,7 @@ The target is unchanged: `X_1,...,X_n` are independent ORIGINAL coordinates with
 
 The immediate own predecessor is fleet03/B12 r41,
 
-`yspennstate/math-open-problems@ad8a6c26a38ec733582879b8c5372306268ca95d`,
+`private-source-repository@ad8a6c26a38ec733582879b8c5372306268ca95d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T204505Z-qform-eigenvalue-r41/REPORT.md`.
 
@@ -23,13 +23,13 @@ It proves the three-square-mode pivot-row dichotomy used in Sections 2-3 below.
 
 The analytic receiver is the checked grouped projected-crossing theorem,
 
-`yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`,
+`private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`,
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 The designated partner actually applied in Section 7 is fleet04/B12 r7,
 
-`yspennstate/math-open-problems@3df1475f988c811570dc5c249a7756d24adb51bf`,
+`private-source-repository@3df1475f988c811570dc5c249a7756d24adb51bf`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T191531Z-fleet04-B12-hybrid-square-defect-r7/REPORT.md`.
 

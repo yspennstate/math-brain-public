@@ -23,7 +23,7 @@ This report proves that three tempting physical-coordinate certificates are not 
 
 Required newest-Claude source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 from `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
@@ -35,7 +35,7 @@ This is used only on the one-sheet side; the construction below targets `t<0`.
 
 The designated completed partner is fleet03/B05 `QFORM-ONE-RANK2-TWO-RANK1-BANK-COAREA-v1`, run `20260922T223741Z-fleet03-B05-QFORM-r19`, pinned at
 
-`yspennstate/math-open-problems@70f181cf738aa51ee6fb7043a329ac9e8b22c4ec`
+`private-source-repository@70f181cf738aa51ee6fb7043a329ac9e8b22c4ec`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T223741Z-fleet03-B05-QFORM-r19/REPORT.md`.
 
@@ -53,7 +53,7 @@ with pair translations allowed to depend arbitrarily on the residual environment
 
 Finally, the complete orientation-free rank-two fractional theorem at
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 proves, when the affine term lies in the rank-two range (in particular when it is zero),
 

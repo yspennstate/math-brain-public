@@ -16,7 +16,7 @@ Fresh owner control is revision `2026-09-22.15`; the current owner continuation 
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T171937Z-fleet03-B06-qform-r40/REPORT.md`,
 
-read on current `math-open-problems` master.  In its live low-disjointness / ultra-thin branch it produces ORIGINAL anchors `i in J`, `a in K` and, after writing the complete physical cross block as
+read on current `private-source` master.  In its live low-disjointness / ultra-thin branch it produces ORIGINAL anchors `i in J`, `a in K` and, after writing the complete physical cross block as
 
 `N = [[b, r^T], [c, D]]`,                                               (1.1)
 
@@ -34,7 +34,7 @@ Every entry of `D`, both same-bank blocks, and all extra spectrum remain present
 
 The current completed analytic receiver used below is Proposition 6.6 of
 
-`math-open-problems@c4c23b784395630c094ba299a50712209921d1ae:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`.
+`private-source@c4c23b784395630c094ba299a50712209921d1ae:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`.
 
 For one physical hub `X_h`, light product variables `X'`, partner `L=<w,X'>`, a light split `I,J`, and arbitrary quadratic remainder `R`, put
 
@@ -54,7 +54,7 @@ This is a weighted product-structure statement: the quadratic remainder is arbit
 
 The owner-required pinned package
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was re-read through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.  Its completed localized three-coordinate Theorem A is applied in Section 6 to a genuine target repair of the obstruction found here.
 

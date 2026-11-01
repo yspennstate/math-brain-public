@@ -16,7 +16,7 @@ The proof below keeps arbitrary cap-one product laws, arbitrary support fragment
 
 The optimizer-free reduction proved in the preceding fleet01/B13 report remains the admissible extremal-law interface:
 
-`yspennstate/math-open-problems@0031d0fd7ef023c747e8177b6079742fc0f0c0f8`
+`private-source-repository@0031d0fd7ef023c747e8177b6079742fc0f0c0f8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260924T033304Z-fleet01-B13-QFORM-auto11/REPORT.md`.
 
@@ -34,7 +34,7 @@ For the slab kernel `K=1_{x^T A x in J}`, a witness of ratio `rho` transfers to 
 
 The completed rank-r separable-phase proof is source-pinned at
 
-`yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`
+`private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`
 
 `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
 
@@ -52,7 +52,7 @@ and `c_i` are the row leverages. The same report derives the quadratic Fresnel e
 
 The newest completed compatible designated-partner report read in this run is
 
-`yspennstate/math-open-problems@2af615c6d649e207191127733fc6dd180db14944`
+`private-source-repository@2af615c6d649e207191127733fc6dd180db14944`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260924T025738Z-fleet02-B13-QFORM-auto11/REPORT.md`.
 

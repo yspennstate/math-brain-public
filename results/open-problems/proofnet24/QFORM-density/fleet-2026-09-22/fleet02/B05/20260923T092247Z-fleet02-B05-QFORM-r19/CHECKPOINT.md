@@ -6,7 +6,7 @@ Let `A=R Lambda R^T` have exact rank three, `R^T R=I_3`, and all three nonzero e
 
 `H_i = I_3-r_i r_i^T = sum_{j!=i} r_j r_j^T`.
 
-The completed newest-Claude Theorem F at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` can be applied with the heavy coordinate placed on the conditioned `J` side, not the Brascamp--Lieb `I` side. Therefore, if
+The completed newest-Claude Theorem F at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` can be applied with the heavy coordinate placed on the conditioned `J` side, not the Brascamp--Lieb `I` side. Therefore, if
 
 `r_j^T H_i^{-1} r_j <= 1/2` for every `j!=i`,
 

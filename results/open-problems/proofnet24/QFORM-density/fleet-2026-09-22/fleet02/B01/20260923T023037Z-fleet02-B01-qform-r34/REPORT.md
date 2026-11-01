@@ -14,10 +14,10 @@ This run preserves the source-backed refutation of law-uniform pointwise scalar 
 
 Inputs actually used at equation level:
 
-1. Newest required Claude package, fixed source `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, especially Theorem H (hub coordinates).
-2. Own earlier two-slope distributional theorem, canonical `yspennstate/math-open-problems@c396b6e553f98ca1cd735ae10eb0e6ec24a96cc4`, `.../fleet02/B01/20260922T223353Z-fleet02-B01-qform-r29/REPORT.md`.
-3. Sharp two-dimensional product-marginal transfer used in own r22, canonical `yspennstate/math-open-problems@08e91d2cd50db663646e7c25983c421ccaa78c7c`, `.../fleet02/B01/20260922T150052Z-fleet02-B01-qform-r22/REPORT.md`: for rank-two `T`, `||p_{TX}||_infinity <= 2/sqrt(det(TT^T))`.
-4. Newest completed designated partner fleet03/B01 auto11, canonical mathematics `yspennstate/math-open-problems@f651c96b5c87b1b0df9a5701b9b47293d08dc94c` (main report creation commit `1d5a022d1461c7be5cd26b1bd7a8fc53abc7f458`), which proves the rank-two volume half-Riesz certificate quoted in Section 5 below.
+1. Newest required Claude package, fixed source `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, especially Theorem H (hub coordinates).
+2. Own earlier two-slope distributional theorem, canonical `private-source-repository@c396b6e553f98ca1cd735ae10eb0e6ec24a96cc4`, `.../fleet02/B01/20260922T223353Z-fleet02-B01-qform-r29/REPORT.md`.
+3. Sharp two-dimensional product-marginal transfer used in own r22, canonical `private-source-repository@08e91d2cd50db663646e7c25983c421ccaa78c7c`, `.../fleet02/B01/20260922T150052Z-fleet02-B01-qform-r22/REPORT.md`: for rank-two `T`, `||p_{TX}||_infinity <= 2/sqrt(det(TT^T))`.
+4. Newest completed designated partner fleet03/B01 auto11, canonical mathematics `private-source-repository@f651c96b5c87b1b0df9a5701b9b47293d08dc94c` (main report creation commit `1d5a022d1461c7be5cd26b1bd7a8fc53abc7f458`), which proves the rank-two volume half-Riesz certificate quoted in Section 5 below.
 
 ## 2. New aggregate exact-null two-hub theorem
 

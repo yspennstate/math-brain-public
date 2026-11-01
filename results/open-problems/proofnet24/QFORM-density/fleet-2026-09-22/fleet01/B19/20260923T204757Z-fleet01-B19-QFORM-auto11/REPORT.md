@@ -24,12 +24,12 @@ The proof below respects the live corrections. In particular:
 ### Source-pinned mathematical inputs actually used
 
 1. **Designated partner fleet02/B19 r36**, commit
-   `yspennstate/math-open-problems@85f22101c29c831c4958eef1b2522c78e6966f84`, path
+   `private-source-repository@85f22101c29c831c4958eef1b2522c78e6966f84`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/B19-20260923T190836Z-r36/REPORT.md`.
    Its Theorem `QFORM-TWOHUB-LEAF-TRANSVERSE-COMPILER-v1` supplies the exact deletion/base-height identity used below.
 
 2. **Marginal-free physical third-volume Fourier theorem**, canonical source
-   `yspennstate/math-open-problems@df738b7f0821d9af56dfd992cab10ecc6704e3fb`, theorem
+   `private-source-repository@df738b7f0821d9af56dfd992cab10ecc6704e3fb`, theorem
    `QFORM-Z3-CROSSING-MARGINAL-FREE-v1`.  For every literal original-coordinate cross block `N`, if
    `Z_3=e_3(NN^T)>0`, then
    `||p_Q||_infinity <= C_E3 Z_3^(-1/6)`,

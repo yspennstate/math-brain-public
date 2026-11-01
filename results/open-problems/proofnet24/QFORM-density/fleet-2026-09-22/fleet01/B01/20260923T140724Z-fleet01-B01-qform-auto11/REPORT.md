@@ -22,7 +22,7 @@ The two source-valid analytic inputs used here are:
 
 1. `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, proved at
 
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
    `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`:
 
    for an arbitrary rank-two quadratic form in the original product vector, including an arbitrary affine term,
@@ -33,7 +33,7 @@ The two source-valid analytic inputs used here are:
 
 2. `QFORM-PAIR-LOG-SMALLBALL-SMOOTHING-v1`, proved at
 
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`:
 
    if an invertible indefinite original-coordinate pair has `D=|det B|`, `kappa=sigma_min(B)`, and its exact post-pair remainder satisfies
@@ -224,7 +224,7 @@ The largest normalized discrepancy was below `5e-14`. This is only a sanity chec
 
 The latest completed designated partner report is fleet02/B01 r42:
 
-`yspennstate/math-open-problems@2aa47367766e1b63306bec723c42fcd2899ca6ac`,
+`private-source-repository@2aa47367766e1b63306bec723c42fcd2899ca6ac`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T120442Z-fleet02-B01-qform-r42/REPORT.md`.
 
 It proves the exterior identity

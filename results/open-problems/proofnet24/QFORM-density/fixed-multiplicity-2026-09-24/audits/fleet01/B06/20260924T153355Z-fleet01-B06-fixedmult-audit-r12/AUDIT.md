@@ -11,7 +11,7 @@ Brain status: WITHOUT_VERIFIED_BRAIN
 
 Latest candidate source audited in full:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - branch: `master`
 - source path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`
 - source commit: `eeb752c8943536541b34b42b8bf48e924f4d3d2f`

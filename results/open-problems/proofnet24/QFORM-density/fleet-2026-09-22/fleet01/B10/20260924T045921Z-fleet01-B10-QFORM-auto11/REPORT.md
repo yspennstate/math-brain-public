@@ -14,7 +14,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems@bc162d39d582493dbe8c1b8ef21a0fe3f7d203a0`
+`private-source-repository@bc162d39d582493dbe8c1b8ef21a0fe3f7d203a0`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260924T035456Z-fleet01-B10-QFORM-auto11/REPORT.md`.
 
@@ -26,7 +26,7 @@ can be arbitrarily large even for fixed-dimensional diffuse orthogonal projectio
 
 The newest completed designated partner input actually used is
 
-`yspennstate/math-open-problems@2181d0927de1374b092152c7e6fb51920e5ae40d`
+`private-source-repository@2181d0927de1374b092152c7e6fb51920e5ae40d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/fleet02-B10-20260924T004626Z-auto11/REPORT.md`.
 

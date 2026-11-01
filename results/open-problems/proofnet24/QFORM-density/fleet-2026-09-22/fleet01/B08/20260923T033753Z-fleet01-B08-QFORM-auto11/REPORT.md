@@ -15,9 +15,9 @@ The target is unchanged: independent original coordinates with arbitrary real pr
 
 Completed inputs actually used at equations:
 
-1. Designated partner fleet02/B08, `QFORM-DIFFUSE-HYBRID-VOLUME-TAIL-LADDER-v1`, canonical source `yspennstate/math-open-problems@31212dc0982ef58cdae6fc12c9354599a663fad6`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T020620Z-fleet02-B08-QFORM-auto11/REPORT.md`. At selected-three leverage at most 1/48 it reduces the k=2 branch to a paid branch, a bicolop anchor, a very tight rank-two tube, or a rank-one Frobenius tube. Its rank-one tube contains the exact rank-one endpoint addressed below.
-2. The preceding fleet01/B08 bilateral-curvature theorem, `yspennstate/math-open-problems@9534b12fbf558d1b6c82db1bc55068afd764fcce`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T030529Z-fleet01-B08-QFORM-auto11/REPORT.md`. In the partner rank-one tube it gives two strong actual child eigenvalues on each physical bank.
-3. The sharp fractional three-volume theorem in `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, path `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`: for an original-coordinate cross block M with third-volume row marginals alpha_i <= q/2, 1<=q<3/2,
+1. Designated partner fleet02/B08, `QFORM-DIFFUSE-HYBRID-VOLUME-TAIL-LADDER-v1`, canonical source `private-source-repository@31212dc0982ef58cdae6fc12c9354599a663fad6`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T020620Z-fleet02-B08-QFORM-auto11/REPORT.md`. At selected-three leverage at most 1/48 it reduces the k=2 branch to a paid branch, a bicolop anchor, a very tight rank-two tube, or a rank-one Frobenius tube. Its rank-one tube contains the exact rank-one endpoint addressed below.
+2. The preceding fleet01/B08 bilateral-curvature theorem, `private-source-repository@9534b12fbf558d1b6c82db1bc55068afd764fcce`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T030529Z-fleet01-B08-QFORM-auto11/REPORT.md`. In the partner rank-one tube it gives two strong actual child eigenvalues on each physical bank.
+3. The sharp fractional three-volume theorem in `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, path `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`: for an original-coordinate cross block M with third-volume row marginals alpha_i <= q/2, 1<=q<3/2,
 
    ||p_Q||_infinity <= [3e/((3-2q)sqrt(q))] e_3(M^T M)^(-1/6),
 

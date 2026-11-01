@@ -8,7 +8,7 @@ attacking: sharp centered-Gaussian ceiling under the density-one variance floor,
 This report proves a sharp theorem for **centered Gaussian quadratic forms** with a covariance floor, then connects it to the density-one input class through the sharp variance lower bound `Var(X)>=1/12`. It is a supporting theorem and a sharp-witness constraint. It does **not** prove the full arbitrary-input QFORM conjecture, and it does not establish the requested full-target continuity conclusion.
 
 
-Designated partner result actually applied below: `fleet04/B17`, `yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`.
+Designated partner result actually applied below: `fleet04/B17`, `private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`.
 
 ---
 

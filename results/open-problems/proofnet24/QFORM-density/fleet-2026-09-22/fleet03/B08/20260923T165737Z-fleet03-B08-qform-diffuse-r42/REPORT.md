@@ -17,7 +17,7 @@ The unrestricted conjecture remains OPEN, and global continuity remains OPEN. Th
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems@79c802e2dfff01b1650bdefa4702e1a3abdba5a4`
+`private-source-repository@79c802e2dfff01b1650bdefa4702e1a3abdba5a4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T162341Z-fleet03-B08-qform-diffuse-r41/REPORT.md`.
 
@@ -33,7 +33,7 @@ unless the full form already has a continuous density `<47.067/L`. The remaining
 
 The new interactive input used here is the complete written theorem
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -257,7 +257,7 @@ Thus R1 is reduced to a continuous `<70.28/L` branch, an anchored physical E2 ro
 
 The designated partner source is
 
-`yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
+`private-source-repository@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T091414Z-fleet04-B08-QFORM-r1/REPORT.md`.
 

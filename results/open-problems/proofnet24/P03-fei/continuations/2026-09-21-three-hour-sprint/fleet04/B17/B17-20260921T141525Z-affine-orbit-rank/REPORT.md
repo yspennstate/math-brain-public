@@ -3,7 +3,7 @@
 **Run:** `B17-20260921T141525Z-r29`  
 **Status:** **PARTIAL. Full uniform-cube Fourier entropy–influence remains OPEN / NOT PROVED.**  
 **Brain label:** **WITHOUT_VERIFIED_BRAIN.** No authenticated brain retrieval or receiver-side brain context was used.  
-**Fresh scientific source:** `yspennstate/math-open-problems` master `7cec51d85a5188a99543d70217b08a34a2e43986` at the start of the derivation; master advanced through unrelated FEI work before delivery.  
+**Fresh scientific source:** `private-source-repository` master `7cec51d85a5188a99543d70217b08a34a2e43986` at the start of the derivation; master advanced through unrelated FEI work before delivery.  
 **Active sprint:** `FEI-PROOF-NUMERICS-SPRINT-20260921T120803Z`; fleet04/B17 scope is adversarial non-read-once phase constructions.
 
 ## 1. Named obstruction and change of method

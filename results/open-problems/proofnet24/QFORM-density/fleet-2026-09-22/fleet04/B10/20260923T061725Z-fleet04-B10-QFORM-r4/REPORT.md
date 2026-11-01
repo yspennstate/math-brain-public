@@ -14,7 +14,7 @@ The full conjecture remains open. This report proves a new three-colour product-
 
 The newest completed fleet01/B10 source actually used is
 
-`yspennstate/math-open-problems@6e2925e1a210871b4cfe53f5731578d0a71cb6d4`
+`private-source-repository@6e2925e1a210871b4cfe53f5731578d0a71cb6d4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260923T035230Z-fleet01-B10-QFORM-r25/REPORT.md`.
 
@@ -44,7 +44,7 @@ ge rac13hodet G. 	ag{1.1}
 
 I also use fleet01/B10's mixed source Fresnel theorem from
 
-`yspennstate/math-open-problems@d28d8311f1c84a56c4c74727847322e9a79b8932`.
+`private-source-repository@d28d8311f1c84a56c4c74727847322e9a79b8932`.
 
 In the heavy-null two-bank state it gives
 [

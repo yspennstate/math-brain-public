@@ -300,5 +300,5 @@ No claim of the full conjecture is made in this run.
 ## Source-bound dependencies
 
 - Fresh owner control and target: `yspennstate/math-research-brain`, `scheduled_tasks/README.md`, revision `2026-09-22.5`.
-- Applied completed other-account result: `fleet02/B06`, canonical report `yspennstate/math-open-problems@6902eb62f21a7c833ca27dcca69f34d50e711a7d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`; brain handoff records report blob `9cced3d58d10574ef548c119c8d5a67276dc870f`.
-- Product-kernel/fiber-sup correction: `fleet02/B05`, canonical report `yspennstate/math-open-problems@63ae1057b5ad8a5bc3c764d733de79e5c917b752`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T112240Z-b05-qform-9d86c905/REPORT.md`.
+- Applied completed other-account result: `fleet02/B06`, canonical report `private-source-repository@6902eb62f21a7c833ca27dcca69f34d50e711a7d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`; brain handoff records report blob `9cced3d58d10574ef548c119c8d5a67276dc870f`.
+- Product-kernel/fiber-sup correction: `fleet02/B05`, canonical report `private-source-repository@63ae1057b5ad8a5bc3c764d733de79e5c917b752`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T112240Z-b05-qform-9d86c905/REPORT.md`.

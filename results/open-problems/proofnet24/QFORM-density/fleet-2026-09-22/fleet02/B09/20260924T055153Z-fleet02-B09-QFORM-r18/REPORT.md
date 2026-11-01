@@ -27,7 +27,7 @@ The remaining unpaid implication is structural rather than this analytic endpoin
 
 Use the completed pinned mixed-hub theorem from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
@@ -291,7 +291,7 @@ This is already a linear interval bound and retains the dense same-side square. 
 
 The latest completed fleet03/B09 result is r44,
 
-`yspennstate/math-open-problems@1d81e62c818d6b592a6a6da78870f12f533d615a`,
+`private-source-repository@1d81e62c818d6b592a6a6da78870f12f533d615a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T044555Z-fleet03-B09-QFORM-r44/REPORT.md`.
 

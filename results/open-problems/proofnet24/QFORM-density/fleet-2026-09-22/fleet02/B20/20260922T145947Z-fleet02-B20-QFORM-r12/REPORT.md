@@ -17,7 +17,7 @@ This report never rotates the input law and never infers independence after diag
 
 The newest completed assigned-partner result located before publication is fleet03/B20 run `20260922T141139Z-fleet03-B20-QFORM-r11`, canonical package
 
-`yspennstate/math-open-problems@7530e8c6ffd7284eb9c8acf1d79f36c335bf4fd6`
+`private-source-repository@7530e8c6ffd7284eb9c8acf1d79f36c335bf4fd6`
 
 with main report path
 
@@ -232,9 +232,9 @@ That is the first genuinely unpaid universal implication after the new descent t
 ## 9. Source pins
 
 - brain control snapshot used at run start: `yspennstate/math-research-brain@7975bf56c6cb8fac7a47da6e20ab3fd9a5bfa373`, owner revision `2026-09-22.5`;
-- newest completed assigned partner used: `yspennstate/math-open-problems@7530e8c6ffd7284eb9c8acf1d79f36c335bf4fd6`, fleet03/B20 r11;
-- low-stable-rank assembly: `yspennstate/math-open-problems@6e3c22b4fcc1038ded1aeff8d107be6a76f7df17`, fleet03/B19;
-- two-sided Schur mixed endpoint: `yspennstate/math-open-problems@76cf34fabef3bb9c56f48b5463050cf09f25d0b5`, fleet02/B19;
-- separator-conditioned diffuse theorem: `yspennstate/math-open-problems@537a79d82a9af69b8fd35a1086538db339cc74eb`, fleet02/B08;
-- aggregate hyperbolic-square theorem: `yspennstate/math-open-problems@1f85677029fc5ae27fc69b278620ae89d789efd2`, fleet04/B20;
-- previous fleet02/B20 near-null bank/cap-refund report: `yspennstate/math-open-problems@4106b1e129be9007e16d9b7ba94b2415ba251f86`.
+- newest completed assigned partner used: `private-source-repository@7530e8c6ffd7284eb9c8acf1d79f36c335bf4fd6`, fleet03/B20 r11;
+- low-stable-rank assembly: `private-source-repository@6e3c22b4fcc1038ded1aeff8d107be6a76f7df17`, fleet03/B19;
+- two-sided Schur mixed endpoint: `private-source-repository@76cf34fabef3bb9c56f48b5463050cf09f25d0b5`, fleet02/B19;
+- separator-conditioned diffuse theorem: `private-source-repository@537a79d82a9af69b8fd35a1086538db339cc74eb`, fleet02/B08;
+- aggregate hyperbolic-square theorem: `private-source-repository@1f85677029fc5ae27fc69b278620ae89d789efd2`, fleet04/B20;
+- previous fleet02/B20 near-null bank/cap-refund report: `private-source-repository@4106b1e129be9007e16d9b7ba94b2415ba251f86`.

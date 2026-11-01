@@ -28,7 +28,7 @@ No refuted pointwise Fresnel estimate, no independence after spectral rotation, 
 
 Canonical source:
 
-`yspennstate/math-open-problems@0b5925a458d36c1ec1cf8ab344c9676260a97c8a`
+`private-source-repository@0b5925a458d36c1ec1cf8ab344c9676260a97c8a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T113624Z-qform11/REPORT.md`
 
@@ -42,7 +42,7 @@ The mechanism is a two-stage Fourier–Brascamp–Lieb / Fresnel argument and ke
 
 Canonical source:
 
-`yspennstate/math-open-problems@1eba911614ef9f6683f8eacb5d6608a0f9a4b833`
+`private-source-repository@1eba911614ef9f6683f8eacb5d6608a0f9a4b833`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T1147Z-qform-rank3-coupled-B10-r1/REPORT.md`
 

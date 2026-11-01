@@ -15,7 +15,7 @@ The full conjecture is not proved or disproved here. The new result pays a compl
 
 The designated partner actually applied is the newest `fleet02/B13` theorem:
 
-- `yspennstate/math-open-problems@597eebafb5c9c540ef679226b655f23ea436d4e4`
+- `private-source-repository@597eebafb5c9c540ef679226b655f23ea436d4e4`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T102244Z-fleet02-B13-extreme-7c91d2ab/REPORT.md`.
 
 It proves `QFORM-RECTANGULAR-NULLBANK-AGGREGATE-v1`. For `r>=2`, an `r x m` full-row-rank original-coordinate cross block `B`, and
@@ -39,7 +39,7 @@ whenever an `R^r` probability density is bounded by `M`.
 
 A second completed source is fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`:
 
-- `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`
+- `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
 If `R` is `m x r` with orthonormal columns and `V` has independent cap-one scalar coordinates, then the actual projection `R^T V` has a joint density satisfying
@@ -50,7 +50,7 @@ This is a density estimate for an analyzed projection. It does **not** assert th
 
 Finally, the exact arbitrary-law/product-set compiler used below is the previous B13 result:
 
-- `yspennstate/math-open-problems@4be4c9842b3828e8a862e58d7e6eec894a85317c`
+- `private-source-repository@4be4c9842b3828e8a862e58d7e6eec894a85317c`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T102930Z-fleet01-B13-qform-auto20/REPORT.md`.
 
 Every cap-one scalar probability density is an exact barycenter of indicators of arbitrary measurable sets of Lebesgue measure one; tensoring gives an exact mixture identity for every nonnegative measurable product kernel. No attained optimizer, single interval, centered uniform, bounded diameter, or bounded fragment count is used.

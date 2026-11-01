@@ -33,18 +33,18 @@ Then, for independent cap-one original-coordinate inputs,
 
 `||p_(X^T A X)||_infinity <= 3 e (|det D| Z_w)^(-1/3)`,
 
-and the density is continuous. Canonical proof: `yspennstate/math-open-problems@1f269a8ae64baa9401910aec1f14251128537afd`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T225705Z-qform-B18-a01-r19/REPORT.md`.
+and the density is continuous. Canonical proof: `private-source-repository@1f269a8ae64baa9401910aec1f14251128537afd`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T225705Z-qform-B18-a01-r19/REPORT.md`.
 
 The designated partner fleet04/B18 has two completed applications of that source theorem which are used below:
 
 - diffuse Schur-frame addendum at scientific commit `e9eb90e2a7746482fb3ba75bf449b224cbf507ce`: if `0<r<=1` and every residual row obeys `||v_j||^2<=1/2`, then the exact Schur-isotropic core has a continuous density with `||p_Q||_infinity<=3e`;
-- mixed-volume Schur theorem, canonical report `yspennstate/math-open-problems@87dbe53e75a736bc87f97e02e40ebf2c3c13b095`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T001857Z-fleet04-B18-QFORM-r3/REPORT.md`: with `p_j=||v_j||^2` and `q_j=||(I-nn^T)v_j||^2`, if `p_j+q_j<=1` for every residual coordinate, then
+- mixed-volume Schur theorem, canonical report `private-source-repository@87dbe53e75a736bc87f97e02e40ebf2c3c13b095`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T001857Z-fleet04-B18-QFORM-r3/REPORT.md`: with `p_j=||v_j||^2` and `q_j=||(I-nn^T)v_j||^2`, if `p_j+q_j<=1` for every residual coordinate, then
 
 `||p_Q||_infinity <= 3e ((1+r^2)/(2r))^(1/3)`
 
 under target normalization, with continuity.
 
-The older fleet04/B18 zero-pivot `1+2` theorem used in Section 5 is source-pinned at `yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`. It requires a genuinely independent scalar and two-dimensional vector; I do not weaken that requirement to a conditional density cap.
+The older fleet04/B18 zero-pivot `1+2` theorem used in Section 5 is source-pinned at `private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`. It requires a genuinely independent scalar and two-dimensional vector; I do not weaken that requirement to a conditional density cap.
 
 ## 3. A clean partner splice: all diffuse exact cores up to shear two
 

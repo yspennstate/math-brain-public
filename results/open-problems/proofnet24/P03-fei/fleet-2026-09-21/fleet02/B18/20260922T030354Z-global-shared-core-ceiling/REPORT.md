@@ -7,7 +7,7 @@
 ## 1. Fresh control and why this is the live target
 
 
-Fresh `math-open-problems` master and `proofnet24/P03-fei/README.md` were also read. Full FEI remains open. The exact current all-gate formulation is the gate inequality
+Fresh `private-source` master and `proofnet24/P03-fei/README.md` were also read. Full FEI remains open. The exact current all-gate formulation is the gate inequality
 \[
 \Gamma(p_{\rm out})+\widetilde H_G(p)
 \le

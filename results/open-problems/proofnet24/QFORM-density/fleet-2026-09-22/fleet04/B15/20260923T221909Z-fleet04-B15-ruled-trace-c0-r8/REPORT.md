@@ -37,11 +37,11 @@ Fresh controls were read from yspennstate/math-research-brain with owner-control
 
 The source-pinned inputs used here are:
 
-1. the ruled one-sheet theorem and its exact coarea parametrisation in math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837, especially COUNTEREXAMPLE_SEARCH.md;
-2. the completed fixed-matrix theorem in math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056, proving that every rank-at-least-three quadratic form under cap-one product inputs has an instance-dependent density in $C_0\cap L^\infty$;
-3. the completed fleet01/B15 semidefinite minority-null theorem in math-open-problems@fc9d06c78e03b4e1ad924f49fb9ab0f03018d2cd;
-4. the newest grouped determinant and rough ruled audit in math-open-problems@58b7dd57dc1282bcf84fd0ceb0c314baca3a5abe;
-5. the previous fleet04/B15 rough conditional-convolution theorem in math-open-problems@d734abaae2eedafe9572b4215107c9637807acaa.
+1. the ruled one-sheet theorem and its exact coarea parametrisation in private-source@e5f71d79eff325201dd0274053d20268ce65b837, especially COUNTEREXAMPLE_SEARCH.md;
+2. the completed fixed-matrix theorem in private-source@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056, proving that every rank-at-least-three quadratic form under cap-one product inputs has an instance-dependent density in $C_0\cap L^\infty$;
+3. the completed fleet01/B15 semidefinite minority-null theorem in private-source@fc9d06c78e03b4e1ad924f49fb9ab0f03018d2cd;
+4. the newest grouped determinant and rough ruled audit in private-source@58b7dd57dc1282bcf84fd0ceb0c314baca3a5abe;
+5. the previous fleet04/B15 rough conditional-convolution theorem in private-source@d734abaae2eedafe9572b4215107c9637807acaa.
 
 The proof below uses no arbitrary-joint coarea height theorem, no post-rotation independence, no pointwise evaluation of a rough density trace, no moment or support assumption, and no inference of continuity merely from essential boundedness.
 

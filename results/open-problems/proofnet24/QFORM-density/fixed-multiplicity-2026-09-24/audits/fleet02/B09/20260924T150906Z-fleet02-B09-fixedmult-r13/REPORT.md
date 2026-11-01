@@ -4,7 +4,7 @@ Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 
 ## Pins and scope
 
-Fresh brain-main control used for this invocation: `bcf828c173f6d4aeafa0623cc868b3946efbe504`, refreshed before publication with the same current objective still present. The fixed-multiplicity package was read from `yspennstate/math-open-problems` master as observed at `b2aa8c2d89e668f703b095754abf4a43c93945de`; subsequent peer commits changed only audit/improvement material, not the pinned manuscript source used here.
+Fresh brain-main control used for this invocation: `bcf828c173f6d4aeafa0623cc868b3946efbe504`, refreshed before publication with the same current objective still present. The fixed-multiplicity package was read from `private-source-repository` master as observed at `b2aa8c2d89e668f703b095754abf4a43c93945de`; subsequent peer commits changed only audit/improvement material, not the pinned manuscript source used here.
 
 Pinned baseline mathematical source:
 

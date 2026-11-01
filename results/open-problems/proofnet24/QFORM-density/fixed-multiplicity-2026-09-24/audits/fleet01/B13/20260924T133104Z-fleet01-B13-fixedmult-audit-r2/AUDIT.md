@@ -4,7 +4,7 @@ Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 
 Run: `20260924T133104Z-fleet01-B13-fixedmult-audit-r2`.
 
-Pinned mathematical baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `manuscript.tex` git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, package SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`, 47,883 bytes / 790 lines. I read the complete 790-line baseline source and the current README, DELIVERY_STATUS, historical AUDIT, proof_map, SOURCE_MANIFEST, verify.py and checks.json. The source hash is mutually consistent across the manifest, checker and recorded check result; I did not independently recompute the SHA-256 from raw bytes in this connector run. The git blob and baseline commit were read directly.
+Pinned mathematical baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `manuscript.tex` git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, package SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`, 47,883 bytes / 790 lines. I read the complete 790-line baseline source and the current README, DELIVERY_STATUS, historical AUDIT, proof_map, SOURCE_MANIFEST, verify.py and checks.json. The source hash is mutually consistent across the manifest, checker and recorded check result; I did not independently recompute the SHA-256 from raw bytes in this connector run. The git blob and baseline commit were read directly.
 
 ## Verdict
 

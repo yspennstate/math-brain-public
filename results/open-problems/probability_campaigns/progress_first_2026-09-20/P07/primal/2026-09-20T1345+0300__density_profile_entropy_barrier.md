@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-A — density-profile barrier, entropy-optimal soft tilt, and a new prime flat-support theorem
 
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured pre-write master:** `bef813d47cd06e18e1b465073e016df65027c59d`  
 **Previous own substantive checkpoint:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1245+0300__adjacent_mask_one_harmonic_fourth_collision.md`.  
 **Complementary P07-B checkpoint consulted:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T1311+0300__near_sqrt_support_barrier.md`; the empirical-MGF input below is inherited from P07-B's earlier `2026-09-20T0927+0300__gibbs_radial_exceptional_frequencies.md`. P07-B owns the Fourier-dual / exceptional-frequency attack. The present report stays on primal positive certificates, support geometry and information projection.

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # PROB10-02 / R17 — disagreement flux, formal reset, and an exact coalescence Bellman dual
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Controlling owner directive: `operations/PROB10_2026-09-20.md`.  The later `operations/PROGRESS20_2026-09-20.md` division of work is respected: P02 owns the covering/cone variational refinement, P13 owns the direct boundary-recursion/reset line, while this R17 run attacks the missing **history-coupled controller / temporal dependence** question left by the preceding R17 report.
 

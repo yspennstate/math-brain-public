@@ -15,7 +15,7 @@ The first unpaid implication after the theorem below is:
 
 ## 1. Completed inputs actually used
 
-1. Designated partner fleet03/B11 r55, `QFORM-INDEFINITE-PAIR-L3-v1`, source `yspennstate/math-open-problems@bc05973cb71eb6707de7342cafeef36af6a99230`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T101550Z-fleet03-B11-QFORM-r55/REPORT.md`: for independent physical variables with cap-one densities and every invertible indefinite symmetric 2x2 matrix `P`, including arbitrary affine terms,
+1. Designated partner fleet03/B11 r55, `QFORM-INDEFINITE-PAIR-L3-v1`, source `private-source-repository@bc05973cb71eb6707de7342cafeef36af6a99230`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T101550Z-fleet03-B11-QFORM-r55/REPORT.md`: for independent physical variables with cap-one densities and every invertible indefinite symmetric 2x2 matrix `P`, including arbitrary affine terms,
 
    `||p||_3 <= 22 |det P|^(-1/3)`.
 
@@ -23,7 +23,7 @@ The first unpaid implication after the theorem below is:
 
    `||p_out||_infinity <= 4 |lambda|^(-1/2) M^(3/4)`.
 
-3. Required pinned source `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`: the completed indefinite pair-log receiver says that if an invertible indefinite physical pair `P` has determinant magnitude `D_P`, smallest singular value `sigma`, and its Schur remainder satisfies
+3. Required pinned source `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`: the completed indefinite pair-log receiver says that if an invertible indefinite physical pair `P` has determinant magnitude `D_P`, smallest singular value `sigma`, and its Schur remainder satisfies
 
    `sup_s P(|R-s|<=rho) <= H sqrt(rho)`,
 

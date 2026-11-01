@@ -8,7 +8,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 **Publication novelty:** `UNVERIFIED`. Bounded searches on 20 September 2026 for combinations of `distance-4 bigraph cutoff random walk Cayley`, `halved graph cutoff random walk biregular`, and `distance four Cayley bigraph cutoff` found standard halved/distance-graph terminology but no matching continuous-time cutoff theorem for the arithmetic exact-distance-four class below. This is negative evidence only, not a worldwide priority certificate.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 Run root: `proofnet24/P26-progress-cutoff-transfer/runs/2026-09-20/`.
 

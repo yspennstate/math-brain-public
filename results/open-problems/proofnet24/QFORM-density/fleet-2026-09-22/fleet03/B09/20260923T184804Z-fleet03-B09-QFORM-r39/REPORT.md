@@ -23,19 +23,19 @@ Fresh owner control was resolved from `yspennstate/math-research-brain` main at 
 The relevant mathematical inputs are:
 
 1. **fleet03/B09 r38 dual aggregate collapse.** Canonical source
-   `yspennstate/math-open-problems@b2a0ccad9d4f4d654e0fc84dd0323ce84230ebc4`,
+   `private-source-repository@b2a0ccad9d4f4d654e0fc84dd0323ce84230ebc4`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T175610Z-fleet03-B09-QFORM-r38/REPORT.md`.
    At exact two-sided singleton aggregate zero it gives
    `A=D_0+S`, where `D_0` is diagonal in the original physical coordinates and `rank S<=4`. If `s_3(A)>=1` and `||D_0||op<=tau`, then
    `s_3(S)>=1-tau`.
 
 2. **Independently checked weighted-subset / projected-crossing theorem.** Canonical source
-   `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,
+   `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,
    `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
    I use its weighted-subset Fourier lemma at `k=0, ell=3`; Section 2 below derives this empty-hub specialization explicitly from that source, so no unspoken convention about a zero-dimensional hub is needed.
 
 3. **Designated partner fleet04/B09.** Canonical source
-   `yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`,
+   `private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
    For a literal invertible physical `3x3` cross block `K`, with arbitrary same-side curvature,
    `||p_Q||inf <=3 |det K|^(-1/3)`, with a continuous density.

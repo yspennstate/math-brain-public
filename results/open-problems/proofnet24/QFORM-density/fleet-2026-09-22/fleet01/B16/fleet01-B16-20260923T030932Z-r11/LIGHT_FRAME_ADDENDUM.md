@@ -2,7 +2,7 @@
 
 Status: supporting exact-rank-three implication; full QFORM remains OPEN.
 
-This applies Claude's proved Fresnel–Brascamp–Lieb Theorem F at `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` to the finite-heavy-core compiler of fleet03/B16 r22 at `yspennstate/math-open-problems@980f2e67036908408a0c33b8eb6bf1a7e2f233e6:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T022430Z-fleet03-B16-QFORM-r22/REPORT.md`.
+This applies Claude's proved Fresnel–Brascamp–Lieb Theorem F at `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` to the finite-heavy-core compiler of fleet03/B16 r22 at `private-source-repository@980f2e67036908408a0c33b8eb6bf1a7e2f233e6:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T022430Z-fleet03-B16-QFORM-r22/REPORT.md`.
 
 Let the exact-rank-three matrix be `A=R Lambda R^T`, `R^TR=I_3`, `min |lambda_j(Lambda)|>=1`. Keep r22's heavy/light split
 

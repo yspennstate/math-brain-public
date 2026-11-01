@@ -16,8 +16,8 @@ The canonical fleet03/B20 `20Z` login and the account/hour keeper lease already 
 
 The immediate source is fleet03/B20 r36 and r37:
 
-- `yspennstate/math-open-problems@1fe3d344529b743f64cb37b42a7a12b6a86a9414`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T180245Z-fleet03-B20-QFORM-r36/REPORT.md`;
-- `yspennstate/math-open-problems@598dae792b4a447492bc318bfa830fece803bb6d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T184417Z-fleet03-B20-QFORM-r37/REPORT.md`.
+- `private-source-repository@1fe3d344529b743f64cb37b42a7a12b6a86a9414`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T180245Z-fleet03-B20-QFORM-r36/REPORT.md`;
+- `private-source-repository@598dae792b4a447492bc318bfa830fece803bb6d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T184417Z-fleet03-B20-QFORM-r37/REPORT.md`.
 
 There are three disjoint ORIGINAL-coordinate banks `D_1,D_2,K`. The r36 common-plane skeleton supplies two-dimensional physical coefficient spaces on all three banks. In orthonormal bases of those spaces write
 
@@ -182,7 +182,7 @@ The determinant/rank calculation is exact. It is a deterministic algebraic compi
 
 The completed designated partner is fleet04/B20 r11:
 
-`yspennstate/math-open-problems@9d07c5d5c69c885509db66cb1093acdeff8bcb64`,
+`private-source-repository@9d07c5d5c69c885509db66cb1093acdeff8bcb64`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T181642Z-fleet04-B20-QFORM-r11/REPORT.md`.
 

@@ -19,7 +19,7 @@ The extremal-law reduction proved in the preceding fleet01/B13 report is retaine
 `QFORM-GLOBAL-FINITE-CERTIFICATE-PRODUCT-PURIFICATION-v1`:
 for arbitrary cap-one probability densities and any finite bounded measurable certificate family, there are measurable unit sets in the original coordinates preserving all certificate expectations exactly. In particular every individual slab witness transfers with zero loss, for the same `A` and the same interval `J`, to a unit-measure product-indicator witness. Its canonical source is
 
-`yspennstate/math-open-problems@ceb97940391426cb7914cfa180429566be831379`,
+`private-source-repository@ceb97940391426cb7914cfa180429566be831379`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260924T093120Z-fleet01-B13-qform-auto11/REPORT.md`.
 
 When the shell-defect quantity below is needed, one may approximate a strict measurable unit-product witness in product measure by bounded finite-union unit sets with arbitrarily small loss. No uniform diameter or fragment count is inferred.
@@ -28,9 +28,9 @@ When the shell-defect quantity below is needed, one may approximate a strict mea
 
 The newest completed fleet02/B13 result consumed in this run is its corrected r13 compatible-affine theorem:
 
-- canonical report: `yspennstate/math-open-problems@ade0b364b2afd0a7049b1491e78e2e020ce86810`,
+- canonical report: `private-source-repository@ade0b364b2afd0a7049b1491e78e2e020ce86810`,
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260924T105434Z-fleet02-B13-QFORM-r13/FINAL_REPORT.md`;
-- correction that wins over the initial same-run report: `yspennstate/math-open-problems@53dfa26f9fbe756959fd08ae76a0560b8307390d`, same run `CORRECTION.md`.
+- correction that wins over the initial same-run report: `private-source-repository@53dfa26f9fbe756959fd08ae76a0560b8307390d`, same run `CORRECTION.md`.
 
 It explicitly withdraws the old use of a rank-one grouping theorem for an arbitrary physical affine vector. I do not revive that error.
 
@@ -428,7 +428,7 @@ No reciprocal individual `D_ij` is paid in this routing.
 
 ## 7. Independent pair cap and an effective-packet count
 
-For comparison, the source-pinned theorem `QFORM-RANK1-PAIR-TRANSVERSE-AFFINE-v1` from fleet01/B16 (`math-open-problems@ef871949f7fbaa8e75adc9206b0eba88c7952dd7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260922T190433Z-fleet01-B16-QFORM-auto11/REPORT.md`) gives, after conditioning all coordinates except an outside physical pair `{i,j}`,
+For comparison, the source-pinned theorem `QFORM-RANK1-PAIR-TRANSVERSE-AFFINE-v1` from fleet01/B16 (`private-source@ef871949f7fbaa8e75adc9206b0eba88c7952dd7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260922T190433Z-fleet01-B16-QFORM-auto11/REPORT.md`) gives, after conditioning all coordinates except an outside physical pair `{i,j}`,
 
 `||p_Qaff||infinity
  <=6 |lambda|^(-1/3)|D_ij|^(-2/3).`                            (7.1)

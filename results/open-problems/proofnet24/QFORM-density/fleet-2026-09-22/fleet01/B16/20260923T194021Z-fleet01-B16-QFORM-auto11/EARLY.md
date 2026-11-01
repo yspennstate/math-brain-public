@@ -6,8 +6,8 @@ Run: `20260923T194021Z-fleet01-B16-QFORM-auto11`.
 
 Source pins consumed before this calculation:
 
-- designated partner fleet02/B16 r35: `math-open-problems@44d1b6391e145d4323077bbca0b16f68476df42f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T182948Z-fleet02-B16-QFORM-r35/REPORT.md`;
-- projected-crossing/product projection checkpoint: `math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`;
+- designated partner fleet02/B16 r35: `private-source@44d1b6391e145d4323077bbca0b16f68476df42f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T182948Z-fleet02-B16-QFORM-r35/REPORT.md`;
+- projected-crossing/product projection checkpoint: `private-source@d2f970d33fa7084f8de55412189402ac609e4da6`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`;
 - live corrections in the brain: no independence after rotation; bounded joint projection density alone does not control an arbitrary indefinite curved trace; conditional projection-height shortcuts are invalid.
 
 ## Candidate generalization

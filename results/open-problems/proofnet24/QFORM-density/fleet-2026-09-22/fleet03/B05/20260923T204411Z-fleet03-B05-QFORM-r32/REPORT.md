@@ -12,19 +12,19 @@ Continuity: not proved by the new descent lemma; the r31 exact-cross exits it fe
 ## 1. Exact sources used
 
 1. Ratio-variance packet normal form:
-   `yspennstate/math-open-problems@b0299facc04ea0c03276dddb1a12c027aed5a946:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T033640Z-fleet01-B05-QFORM-r26/REPORT.md`.
+   `private-source-repository@b0299facc04ea0c03276dddb1a12c027aed5a946:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T033640Z-fleet01-B05-QFORM-r26/REPORT.md`.
 2. Designated partner `fleet04/B05` dominant exact-slope theorem:
-   `yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`.
+   `private-source-repository@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`.
    It proves
    \[
    \|p_Q\|_\infty<51.6(\mu m_*)^{-1/3},
    \]
    where `m_*` is the largest exact physical slope-class `u`-mass.
 3. Own predecessor r31, Pluecker aggregate / exact-rank-three crossing:
-   `yspennstate/math-open-problems@95f94696393b5ad8b0def71fa0d93082de92bd85:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T193756Z-fleet03-B05-QFORM-r31/REPORT.md`.
+   `private-source-repository@95f94696393b5ad8b0def71fa0d93082de92bd85:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T193756Z-fleet03-B05-QFORM-r31/REPORT.md`.
    Its diffuse first-bank hypothesis is `q_X=max_i ||g_i||^2<1/2`; the present run attacks the complementary heavy-row gate.
 4. Fresh arbitrary-rank projected-crossing checkpoint was read for compatibility only:
-   `yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
+   `private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 No independence after rotation is used. Every conditioning step below conditions a literal original coordinate.
 

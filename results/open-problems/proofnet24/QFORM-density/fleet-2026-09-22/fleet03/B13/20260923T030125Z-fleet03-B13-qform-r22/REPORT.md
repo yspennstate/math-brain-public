@@ -15,7 +15,7 @@ The owner target remains the full statement for every finite `n`, arbitrary inde
 
 The following completed mathematics is actually used.
 
-1. **Previous fleet03/B13 cross-three-volume L3 theorem.** `yspennstate/math-open-problems@77bd4ea475a11a505c6990630cbdfebdcce0fd8f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T013555Z-fleet03-B13-qform-r21/REPORT.md`. For any disjoint ORIGINAL-coordinate cross block `M` of a quadratic-plus-affine form, with
+1. **Previous fleet03/B13 cross-three-volume L3 theorem.** `private-source-repository@77bd4ea475a11a505c6990630cbdfebdcce0fd8f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T013555Z-fleet03-B13-qform-r21/REPORT.md`. For any disjoint ORIGINAL-coordinate cross block `M` of a quadratic-plus-affine form, with
 
    `Z3=e_3(M^T M)>0`,
 
@@ -39,9 +39,9 @@ The following completed mathematics is actually used.
 
    `C0=2^(-1/2) pi^(3/4) e^(5/8)`.                                  (1.4)
 
-3. **Designated partner fleet04/B13 no-attainment purification.** `yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`. For every bounded measurable product kernel `K`, the supremum over arbitrary cap-one mass-one marginals equals the supremum over indicators of bounded finite unions of intervals of measure one. This is equality of suprema, not an attained bathtub maximizer; there is no uniform support diameter or fragment count.
+3. **Designated partner fleet04/B13 no-attainment purification.** `private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`. For every bounded measurable product kernel `K`, the supremum over arbitrary cap-one mass-one marginals equals the supremum over indicators of bounded finite unions of intervals of measure one. This is equality of suprema, not an attained bathtub maximizer; there is no uniform support diameter or fragment count.
 
-The current volume-stability package `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, path `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`, is compatible context: it pays row-diffuse three-volume directly in `Linfinity`, while the theorem below is useful precisely because it makes no row-volume marginal assumption once one genuine original scalar square is available.
+The current volume-stability package `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, path `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`, is compatible context: it pays row-diffuse three-volume directly in `Linfinity`, while the theorem below is useful precisely because it makes no row-volume marginal assumption once one genuine original scalar square is available.
 
 No refuted pointwise law-uniform quadratic-phase decay, arbitrary-joint coarea bound, positive conditional projection-density moment, fiber-sup estimate, bounded-diameter reduction, or universally good single minor is used.
 

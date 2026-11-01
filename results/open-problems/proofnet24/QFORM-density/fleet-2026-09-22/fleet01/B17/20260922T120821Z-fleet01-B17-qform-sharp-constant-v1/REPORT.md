@@ -12,7 +12,7 @@ Fresh coherent control source was `yspennstate/math-research-brain@f22710549d776
 
 Named partner fleet02/B17 was consumed at its complete immutable source:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `4a3d4af77778f20a95855c6dfbf69540dcfa5fe4`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T114529Z-qform-sharp-witness/REPORT.md`.
 

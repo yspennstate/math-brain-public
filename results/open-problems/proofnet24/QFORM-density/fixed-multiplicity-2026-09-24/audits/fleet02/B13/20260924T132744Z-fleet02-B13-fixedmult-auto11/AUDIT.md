@@ -2,7 +2,7 @@
 
 Run: `20260924T132744Z-fleet02-B13-fixedmult-auto11`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Fresh source pin before this run's writes: `yspennstate/math-open-problems@103319cbdf0724060c86293669e11feb51828ddc`  
+Fresh source pin before this run's writes: `private-source-repository@103319cbdf0724060c86293669e11feb51828ddc`  
 Pinned manuscript blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
 Pinned manuscript SHA-256 recorded by `SOURCE_MANIFEST.json`: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`  
 Baseline owner commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`.

@@ -30,7 +30,7 @@ The result below is therefore phrased in original-coordinate scalar-completion v
 ### 2.1 Designated partner fleet04/B01: singular/near-singular star identity
 
 Source:
-`yspennstate/math-open-problems@8410ab9d8238baa40c033f83dbae6af44b0b2582`,
+`private-source-repository@8410ab9d8238baa40c033f83dbae6af44b0b2582`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260923T131003Z-fleet04-B01-singular-star-routing-r2/REPORT.md`.
 
 For a physical pair
@@ -54,7 +54,7 @@ I use only this source-valid inequality and identity. I do **not** use the previ
 ### 2.2 Designated partner fleet04/B01: signed Fejer equivalence
 
 Source:
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 
 For a law `mu` with characteristic function `phi`, define
@@ -70,7 +70,7 @@ whenever either side is finite, in the measure-theoretic bounded-density sense. 
 ### 2.3 Whole-bank rank-one separable small-ball theorem
 
 Source:
-`yspennstate/math-open-problems@8d0cfcc9b0b1e88eee6fba2e63187d8607ca2d0c`,
+`private-source-repository@8d0cfcc9b0b1e88eee6fba2e63187d8607ca2d0c`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T080010Z-fleet02-B14-QFORM-r31/REPORT.md`.
 
 Let independent cap-one `Z_i`, a unit vector `v`, `c=max_i v_i^2<1`, `lambda!=0`, and arbitrary measurable one-coordinate phases `u_i` be given. For
@@ -95,7 +95,7 @@ The source explicitly allows arbitrary diagonal quadratic and affine twists thro
 ### 2.4 Translated quadratic kernel
 
 Source:
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 Define
@@ -370,7 +370,7 @@ This run closes the **exact** projected-crossing-zero endpoint far more strongly
 
 When `Gamma1>0`, (4.3) pays the state but deteriorates like `Gamma1^(-1/4)`. When `Gamma1=0`, Theorem 7.1 gives a finite `W2`-scale bound independent of `delta`. What is still missing is a robust interpolation as `Gamma1 ->0+` under arbitrary cap-one laws and arbitrary same-bank curvature. One may not simply discard the transverse quadratic matrix as a small random perturbation, because no moments or support bounds are available.
 
-A promising next mechanism is to keep the small transverse piece inside the signed-Fejer or half-Riesz average and prove stability of the aligned receiver at the distribution-function level. The fresh exact-rank physical-crossing theorem at `yspennstate/math-open-problems@51d2edb29d7a4c150e4d47ed3a6685875a8483ae` provides an independent high-cross-rank exit, but it does not by itself control this rank-one/aligned collar.
+A promising next mechanism is to keep the small transverse piece inside the signed-Fejer or half-Riesz average and prove stability of the aligned receiver at the distribution-function level. The fresh exact-rank physical-crossing theorem at `private-source-repository@51d2edb29d7a4c150e4d47ed3a6685875a8483ae` provides an independent high-cross-rank exit, but it does not by itself control this rank-one/aligned collar.
 
 ## 12. Scope and regularity
 

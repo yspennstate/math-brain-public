@@ -9,7 +9,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`.  Outcome: **ESSENTIAL_STEP_APPLIED / F
 
 The target is the unrestricted statement: independent real coordinates with densities bounded by one, arbitrary real symmetric A, and at least three eigenvalues of absolute value at least one imply a universal L-infinity bound for the density of X^T A X. Continuity is separate.
 
-The completed fleet03/B07 theorem `QFORM-THIRD-COMPOUND-OVERLAP-REDUCTION-v1`, canonical `yspennstate/math-open-problems@685929d9daee92a164dbf6ba6f9305d2e6550826`, reduces every target matrix to one of the O0/O1/O2/O3 original-coordinate third-compound overlap packets. O0 has a completed diffuse ridge payment and a finite-heavy residual. The designated partner fleet02/B07 then treated O1 by the exact identity
+The completed fleet03/B07 theorem `QFORM-THIRD-COMPOUND-OVERLAP-REDUCTION-v1`, canonical `private-source-repository@685929d9daee92a164dbf6ba6f9305d2e6550826`, reduces every target matrix to one of the O0/O1/O2/O3 original-coordinate third-compound overlap packets. O0 has a completed diffuse ridge payment and a finite-heavy residual. The designated partner fleet02/B07 then treated O1 by the exact identity
 
 `H_i = a_i C_2(B) - W_(u_i) B iota_(v_i)`
 
@@ -17,7 +17,7 @@ and, for a_i !=0, by the Schur identity
 
 `H_i = a_i C_2(N_i)`,  `N_i=B-u_i v_i^T/a_i`,
 
-with `W_i:=||H_i||_HS^2=a_i^2 E_i`, `E_i=e_2(N_i N_i^T)`.  Its canonical report is `yspennstate/math-open-problems@41ed0a3af4b1aec79c036031a00066b0f49a9a45`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T170237Z-b07-e559ca/REPORT.md`.
+with `W_i:=||H_i||_HS^2=a_i^2 E_i`, `E_i=e_2(N_i N_i^T)`.  Its canonical report is `private-source-repository@41ed0a3af4b1aec79c036031a00066b0f49a9a45`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T170237Z-b07-e559ca/REPORT.md`.
 
 At the partner's calibrated scale gamma_i, the ridge kernel has trace 3/2, and the exact inequalities
 
@@ -34,7 +34,7 @@ A full proof would follow after the remaining O1 singular/near-zero packet and t
 
 The assigned partner result actually used is fleet02/B07 `QFORM-O1-COMPOUND-SCHUR-FACTOR-v1` / `QFORM-O1-PIVOT-RIDGE-PAYMENT-v1`, canonical commit `41ed0a3af4b1aec79c036031a00066b0f49a9a45` at the path above.  In particular, this run uses its exact identities `W_i=a_i^2 E_i`, `gamma_i^4<=2E_i`, and `D_i>=E_i/gamma_i^4` in the final inequalities, not merely as background.
 
-The analytic payment used is fleet03/B09 `QFORM-PIVOT-RIDGE-BILINEAR-v1`, canonical `yspennstate/math-open-problems@62bdcf30669c1037a3c7d87aee1fcb2bdcccd251`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/fleet03-B09-20260922T155042Z-qform12/REPORT.md`.  It permits every 1<=q<=2 and retains arbitrary self blocks, outside couplings, signs, extra spectrum, and the original product law.
+The analytic payment used is fleet03/B09 `QFORM-PIVOT-RIDGE-BILINEAR-v1`, canonical `private-source-repository@62bdcf30669c1037a3c7d87aee1fcb2bdcccd251`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/fleet03-B09-20260922T155042Z-qform12/REPORT.md`.  It permits every 1<=q<=2 and retains arbitrary self blocks, outside couplings, signs, extra spectrum, and the original product law.
 
 No post-rotation independence, uniform pointwise Fresnel decay, conditional spectral-density cap, fiber-supremum estimate, or single-good-minor inference is used.
 

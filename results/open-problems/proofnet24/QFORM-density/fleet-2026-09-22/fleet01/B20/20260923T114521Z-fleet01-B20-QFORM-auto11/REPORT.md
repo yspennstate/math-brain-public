@@ -11,7 +11,7 @@ Target: for arbitrary independent real random variables `X_i` with probability d
 No Gaussianity, moments, iid assumption, compact support, log-concavity, or independence after rotation is used below. The known false uniform pointwise quadratic oscillatory-decay route is not used. No small quadratic term is deleted.
 
 Fresh designated partner actually consumed: fleet02/B20, canonical mathematics
-`yspennstate/math-open-problems@19327f690f815425717fcbd07854302df2090970`,
+`private-source-repository@19327f690f815425717fcbd07854302df2090970`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T112426Z-fleet02-B20-QFORM-auto11/REPORT.md`, source-pinned brain handoff at `yspennstate/math-research-brain@55bf41857b7e4f4d5ec12fb3cc0bdf4aebcf96dd`.
 
 That partner reduces the current global no-pivot problem to the class `N3(tau)` with `tau=1/64` and, writing
@@ -21,7 +21,7 @@ That partner reduces the current global no-pivot problem to the class `N3(tau)` 
 identifies the globally untouched branch `max_i P_ii < 1/2`. It also proves for a high-leverage hub the basic deterministic inequalities from `A^2>=P`, and retains all arbitrary extra spectrum.
 
 Completed Fourier receiver used below: unrestricted fifth-volume theorem `D_5` from
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`:
 for every genuine physical cross block `N`, with `Z_5=e_5(N^TN)`,
 
@@ -30,7 +30,7 @@ for every genuine physical cross block `N`, with `Z_5=e_5(N^TN)`,
 with arbitrary same-side quadratic blocks and outside couplings retained.
 
 Completed ridge receiver used below: the spectral-window/ridge theorem at
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`. I re-run its proof with a larger admissible frame leverage `5/128` below; no new probabilistic input is needed.
 
 ## 2. N3 hypotheses

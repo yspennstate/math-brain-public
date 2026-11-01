@@ -14,7 +14,7 @@ Full continuity: **OPEN**.
 
 ### 1.1 Designated partner fleet04/B13
 
-`yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
+`private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
 
@@ -22,7 +22,7 @@ For every bounded measurable product kernel, and hence for every slab indicator,
 
 ### 1.2 Newest volume theorem required by the owner continuation
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -42,7 +42,7 @@ All same-side self terms, outside couplings and affine terms are arbitrary. At `
 
 The fleet02/B13 three-leaf theorem used in r25 is pinned at
 
-`yspennstate/math-open-problems@04973c0d13c8cbe814f1303b7de8aeffd40791df`.
+`private-source-repository@04973c0d13c8cbe814f1303b7de8aeffd40791df`.
 
 With two physical hubs, three leaves `j,k,l`, `Delta=|det(b_j,b_k)|>0`, and `b_l!=0`, if the three selected centered mutual leaf products are absent, the full ambient form has density cap
 

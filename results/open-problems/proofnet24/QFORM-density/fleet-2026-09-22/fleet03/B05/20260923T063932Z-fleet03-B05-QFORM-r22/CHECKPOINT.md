@@ -8,7 +8,7 @@ Programme: QFORM-DENSITY-3EIG-20260922. Full conjecture remains OPEN. Execution:
 ## First essential implication
 
 Use the ratio-variance packet normal form from
-`yspennstate/math-open-problems@b0299facc04ea0c03276dddb1a12c027aed5a946:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T033640Z-fleet01-B05-QFORM-r26/REPORT.md`.
+`private-source-repository@b0299facc04ea0c03276dddb1a12c027aed5a946:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T033640Z-fleet01-B05-QFORM-r26/REPORT.md`.
 
 After conditioning the complement, one original-coordinate packet G gives orthonormal product projections S,R and two disjoint scalar-bank variables Y,Z. Put
 
@@ -24,7 +24,7 @@ The key observation is that **sigma does not enter the post-completion quadratic
 `R_G = lambda*m*(u_G/sqrt(m) dot X_G)^2 + b_G dot X_G + c`,
 
 with an arbitrary affine vector b_G (which may contain the whole R-direction). Therefore the rank-one affine small-ball lemma from
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`
 applies directly, WITHOUT conditioning on R:
 
 `sup_t P(|R_G-t|<rho) <= min(1,10 sqrt(rho/(|lambda|m))).`
@@ -52,7 +52,7 @@ Using the packet lemma with h=1 gives m>=3/20, hence the concrete branch estimat
 ## Designated partner application
 
 The completed designated partner fleet04/B05 result is
-`yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`.
+`private-source-repository@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`.
 It proves that an exact slope atom of u-mass m_* gives
 
 `||p_Q||_infty < 51.6 (mu*m_*)^(-1/3)`
@@ -68,7 +68,7 @@ Together, the two receivers isolate the remaining two-sheet packet debt as the *
 ## Newest-Claude exit actually applied
 
 The required volume-stability theorem at
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
 says that for an original-coordinate cross block M=M0+E with
 `s3(M0)>=a`, `max diag(P_range(M0))<=1/2`, and `||E||op<=a/16`, the full ambient form has a continuous density `<23/a`.
 

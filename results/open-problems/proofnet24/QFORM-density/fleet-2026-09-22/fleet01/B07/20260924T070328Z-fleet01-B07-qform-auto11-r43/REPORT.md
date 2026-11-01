@@ -18,7 +18,7 @@ Fresh owner control was read from `yspennstate/math-research-brain` main at star
 
 The exact-singular incoming geometry is the completed fleet01/B07 r42 result
 
-`yspennstate/math-open-problems@75c225389c931a99c6fc9004fccc432cbb2d5215`,
+`private-source-repository@75c225389c931a99c6fc9004fccc432cbb2d5215`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/20260924T050626Z-fleet01-B07-qform-auto11-r42/PHYSICAL_SHEAR_ADDENDUM.md`.
 
@@ -176,7 +176,7 @@ This does **not** authorize deletion of a nonzero `T`: arbitrary cap-one laws ha
 
 The latest completed designated fleet02/B07 result used here is
 
-`yspennstate/math-open-problems@014a9c68675c6bc40377244dd28a128fa01d3efb`,
+`private-source-repository@014a9c68675c6bc40377244dd28a128fa01d3efb`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260924T060205Z-fleet02-B07-qform/REPORT.md`.
 

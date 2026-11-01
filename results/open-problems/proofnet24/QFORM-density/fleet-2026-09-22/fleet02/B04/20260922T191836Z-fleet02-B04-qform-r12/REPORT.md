@@ -16,7 +16,7 @@ Fresh owner control was revision `2026-09-22.13`. The live correction ledger was
 
 The previous B04 frontier paid an aligned rank-one pair of disjoint original-coordinate banks. The first missing interface was misaligned/multi-direction cross coupling and quadratic leakage. This run removes the rank-one/alignment restriction completely on one side: an arbitrary-rank physical cross block is paid only through its operator norm, while the conditioned bank may carry arbitrary self-quadratic leakage. The remaining obstruction is two-sided quadratic leakage.
 
-Named partner actually applied: fleet03/B04, `QFORM-SQUARE-L32-v1` and its source-valid one-dimensional product-projection estimate, from `yspennstate/math-open-problems@3fd5603c1e86cc028fb4330392f471c2f450cf39`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T185416Z-r16/REPORT.md`.
+Named partner actually applied: fleet03/B04, `QFORM-SQUARE-L32-v1` and its source-valid one-dimensional product-projection estimate, from `private-source-repository@3fd5603c1e86cc028fb4330392f471c2f450cf39`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T185416Z-r16/REPORT.md`.
 
 ## 2. Rearranged inverse fractional moment
 

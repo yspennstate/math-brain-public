@@ -2,7 +2,7 @@
 
 Programme `QFORM-DENSITY-3EIG-20260922`; full unrestricted target remains OPEN.
 
-Pinned inputs actually used: fleet03/B16 true-near-coloop coordinates `math-open-problems@bdbe6e38a3ee3d586e8e6119e518c573310253fb`; the product-projection bound in `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`; newest completed designated partner fleet02/B16 r37 `math-open-problems@c9c865f02890e5fe7108c49759ee82b84f42ee38`. I also checked fleet02/B16's newer EARLY minority-sign calculation `657894f2d914b3f901cdfcff16ca97ba5c94e38e`; it is not treated as a completed partner result.
+Pinned inputs actually used: fleet03/B16 true-near-coloop coordinates `private-source@bdbe6e38a3ee3d586e8e6119e518c573310253fb`; the product-projection bound in `private-source@e5f71d79eff325201dd0274053d20268ce65b837`; newest completed designated partner fleet02/B16 r37 `private-source@c9c865f02890e5fe7108c49759ee82b84f42ee38`. I also checked fleet02/B16's newer EARLY minority-sign calculation `657894f2d914b3f901cdfcff16ca97ba5c94e38e`; it is not treated as a completed partner result.
 
 ## New dependence-safe extension
 

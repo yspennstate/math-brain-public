@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-B — static Moreau cone projection and supercritical obstruction transversality
 
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured start master:** `a0d19fb1b24c2668c9aced21b0c74444fcb6a62b`  
 **Fresh pre-write master:** `d0f01b30734640999817ea4de2466f5206ccdf43`  
 **Previous own report:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T0610+0300__projected_hinge_directional_margin.md`  

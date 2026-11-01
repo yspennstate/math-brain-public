@@ -5,7 +5,7 @@ attacking: QFORM-FIXED-MULTIPLICITY-AUDIT-20260924 — full 790-line audit, with
 
 ## Source pin and scope
 
-Pinned mathematical source: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, path `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`, 47,883 bytes, 790 lines. The current package was reread from master and the manuscript blob is unchanged.
+Pinned mathematical source: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, path `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`, 47,883 bytes, 790 lines. The current package was reread from master and the manuscript blob is unchanged.
 
 I read `README.md`, `DELIVERY_STATUS.md`, `SOURCE_MANIFEST.json`, all 790 manuscript lines, `AUDIT.md`, `proof_map.csv`, `verify.py`, and `checks.json`. The supplementary files that were absent in an earlier B06 snapshot are now present. `checks.json` is consistent with the current `verify.py`: 534 exact interpolation seeds, 18 exact volume comparisons, 9 strict sampling cases, 240 floating Schur-threshold diagnostics and 30 graph-weight diagnostics, with exact diagonal-dominance slack `297/2800`. I did not treat these finite checks as proof or independently certify their historical execution provenance.
 

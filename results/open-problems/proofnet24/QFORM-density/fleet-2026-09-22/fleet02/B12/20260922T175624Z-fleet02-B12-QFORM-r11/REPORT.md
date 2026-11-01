@@ -12,7 +12,7 @@ The full target is unchanged: for independent real coordinates with one-dimensio
 
 Fresh owner control is revision `2026-09-22.9`. The latest designated partner result actually consumed is fleet03/B12, `QFORM-CONDITIONAL-3D-CAP-MOMENT-FALSE-v1`, canonical proof commit
 
-`yspennstate/math-open-problems@e5aae2b611688b9e0711105cab1878cd9186b6c3`
+`private-source-repository@e5aae2b611688b9e0711105cab1878cd9186b6c3`
 
 with source-bound handoff
 
@@ -26,7 +26,7 @@ is false, even for three block-constant spectral directions of a product cube; t
 
 This report therefore keeps the added spectrum in ORIGINAL coordinates. The positive analytic dependency is fleet03/B09 `QFORM-FULL-BLOCK-BILINEAR-ABSORPTION-v1`, canonical commit
 
-`yspennstate/math-open-problems@446d0a33ef626b11ed5da529f2cec821732e97e9`.
+`private-source-repository@446d0a33ef626b11ed5da529f2cec821732e97e9`.
 
 Its exact statement used below is: if disjoint original-coordinate sets `P,Q` have equal size `m>=3` and the cross block `A[P,Q]` is invertible, then, with arbitrary same-side quadratic terms, arbitrary outside couplings and arbitrary independent cap-one input laws,
 

@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # NM13-04 — admission delta: G0004 released but HARD/residue 2; P0458 reaches second independent PASS; no residue-3 CLOSABLE release
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-04` / `proofnet24/NM13-04/`  
 Category: **CLOSABLE OUTSIDE**  
 Selection shard: `int(SHA256(UTF-8 canonical_dedup_key).hexdigest(),16) mod 13 = 3`  

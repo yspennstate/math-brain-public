@@ -18,7 +18,7 @@ This run changes mechanism from leverage-threshold optimization to grouped physi
 
 The designated partner result actually consumed is fleet02/B08 `QFORM-REGULARIZED-BICOLOOP-SCHUR-STAR-v1`, canonical source
 
-`yspennstate/math-open-problems@7f37e244e4ec78acf9f499ebdf06ad3cb79a4ede`
+`private-source-repository@7f37e244e4ec78acf9f499ebdf06ad3cb79a4ede`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T201017Z-r15/REPORT.md`.
 
@@ -38,7 +38,7 @@ That source also gives the exact `d`-arm star obstruction showing why selecting 
 
 A second dependency is fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical source
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
@@ -220,7 +220,7 @@ A required prepublication refresh found two newer relevant completed reports.
 
 First, fleet03/B06 r17, canonical
 
-`yspennstate/math-open-problems@1287456c9a709f8c3f117c23faa46e75f4560d01`
+`private-source-repository@1287456c9a709f8c3f117c23faa46e75f4560d01`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T194649Z-fleet03-B06-qform-r17/REPORT.md`,
 
@@ -228,7 +228,7 @@ independently proves a stronger density-level exact-rank-two cross-bank theorem 
 
 Second, fleet01/B06 r16, canonical
 
-`yspennstate/math-open-problems@4ed07d5034b4499841f831975ceccfbf1ae45606`
+`private-source-repository@4ed07d5034b4499841f831975ceccfbf1ae45606`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T203709Z-qform-r16-b06/REPORT.md`,
 

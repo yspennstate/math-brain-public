@@ -14,7 +14,7 @@ The unrestricted conjecture remains OPEN. The theorem below closes an exact orig
 ## 1. Sources used at equations
 
 1. fleet01/B08 sharp floating transfer:
-   `yspennstate/math-open-problems@584a2e98e85d49638590c24d2669e6589f2c625d`,
+   `private-source-repository@584a2e98e85d49638590c24d2669e6589f2c625d`,
    theorem `QFORM-FLOATING-SHARP-CURVATURE-LADDER-v1`.
    Its clean diffuse router applies when a selected three-eigenvector frame has leverage `mu<=1/3`, giving actual child scale
    [
@@ -23,11 +23,11 @@ The unrestricted conjecture remains OPEN. The theorem below closes an exact orig
    The model below has selected-three leverage exactly one, so this diffuse exit is genuinely unavailable: it belongs to the localized/hybrid side, not to the diffuse branch.
 
 2. fleet01/B08 same-matrix ridge/volume comparison:
-   `yspennstate/math-open-problems@cce617dcecf1c8677c12fc9d8add83a221281386`,
+   `private-source-repository@cce617dcecf1c8677c12fc9d8add83a221281386`,
    especially the scale-independent ridge obstruction and the warning that canonical volume marginals can be one.
 
 3. fleet01/B08 robust recoloring:
-   `yspennstate/math-open-problems@be091d613a838de2098ba9f266da080f7f4434af`,
+   `private-source-repository@be091d613a838de2098ba9f266da080f7f4434af`,
    theorem `QFORM-RECOLOR-E3-OR-ORIGINAL-E2-v1`. Its surviving currency is
    [
    s_1(B)s_2(B)ge (1-delta)c^2,qquad E_2(B)ge(1-delta)^2c^4.
@@ -39,7 +39,7 @@ The unrestricted conjecture remains OPEN. The theorem below closes an exact orig
 
 4. The exact grouped rank-two receiver quoted and applied in fleet01/B08 r19 is the completed fleet02/B08 theorem
    `QFORM-DOUBLE-INCIDENT-RANK2-GROUPED-L3-v1`,
-   canonical source `yspennstate/math-open-problems@c248abc9be918698c6d5a68108c615ba1c4790b3`.
+   canonical source `private-source-repository@c248abc9be918698c6d5a68108c615ba1c4790b3`.
    With a genuine outer square of coefficient (a) and incident rank-two volume (Delta), it gives
    [
    |p_Q|_inftyle C_{m grp}|a|^{-1/2}Delta^{-1/8},

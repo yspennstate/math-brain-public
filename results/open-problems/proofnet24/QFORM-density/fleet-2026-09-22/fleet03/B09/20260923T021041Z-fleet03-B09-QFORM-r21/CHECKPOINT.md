@@ -41,7 +41,7 @@ Define
 
 `w=[||r_L||_2^2+(r_L^T kappa)^2]^(1/2)`.
 
-Applying the completed affine-fiber/product-projection density theorem (`math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, fleet02/B06) to this actual scalar projection gives density cap `L<=sqrt(e)/w`; the bathtub estimate then yields
+Applying the completed affine-fiber/product-projection density theorem (`private-source@8dd33c1abd4fd64140f59032feda2b13d4351da5`, fleet02/B06) to this actual scalar projection gives density cap `L<=sqrt(e)/w`; the bathtub estimate then yields
 
 `||H||_4 <= 2^(3/4) pi^(1/4) L^(1/4)`.
 
@@ -74,7 +74,7 @@ This strictly extends the preceding B09 five-coordinate `2x2` double-null theore
 
 ## Newest-source splice already identified
 
-The current volume-stability theorem at `math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba` applies directly to the same physical cross block `B`: if its third-volume row marginals satisfy `alpha_i<=2/3`, then (conditioning only the hub scalar) the ambient form has
+The current volume-stability theorem at `private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba` applies directly to the same physical cross block `B`: if its third-volume row marginals satisfy `alpha_i<=2/3`, then (conditioning only the hub scalar) the ambient form has
 
 `||p_Q||infinity <= (9 sqrt(3)e/2) e_3(B^T B)^(-1/6)`.
 

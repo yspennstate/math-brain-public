@@ -14,13 +14,13 @@ Fresh control was resolved from `yspennstate/math-research-brain` main and remai
 
 The designated partner `fleet04/B07` still had no completed current-QFORM canonical report or shared handoff at the fresh source check. No result is fabricated or attributed to it. The compatible completed fleet04 theorem actually applied below is `fleet04/B18`, `QFORM-SCHUR-PIVOT-SMOOTHING-v1`, canonical source
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
 The preceding B07 state is source-pinned at
 
-`yspennstate/math-open-problems@0b3ca7e927cad2a7c7805a7f2ba6b88b12d000fd`,
+`private-source-repository@0b3ca7e927cad2a7c7805a7f2ba6b88b12d000fd`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T143620Z-fleet03-B07-QFORM-r12/REPORT.md`.
 

@@ -5,7 +5,7 @@ attacking: the unresolved multiplicity-eight overlap-one terminal by preserving 
 
 Run: `20260924T141944Z-fleet03-B06-fixedmult-auto12`  
 Current owner objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924` (later than, and therefore controlling over, the older slot prompt).  
-Baseline source: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.  
+Baseline source: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.  
 Execution status: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 0. Current mathematical position
@@ -241,7 +241,7 @@ The current completed designated partner result is fleet04/B06
 
 `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`
 
-at `yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`.
+at `private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`.
 
 It proves that for a diffuse original-product two-frame `(L,V)`, with shared transverse statistic of the exact tangential form
 

@@ -14,7 +14,7 @@ The unrestricted owner theorem is **not** claimed. The theorem below proves a co
 
 The preceding B19 r24 route left `QFORM-COLLAR-SECOND-GRADIENT-OR-RANKONE-ALIGNMENT-v1`: try to force one quantitative pair of physical cross gradients. Fresh fleet02/B19 r26,
 
-`yspennstate/math-open-problems@d294539dec9f048e8da354542b37cc9ac664f020`,
+`private-source-repository@d294539dec9f048e8da354542b37cc9ac664f020`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T041017Z-fleet02-B19-QFORM-r26/REPORT.md`,
 
@@ -26,7 +26,7 @@ Therefore a universal proof cannot insist on one physical second gradient. This 
 
 A second fresh input is fleet01/B19 r11,
 
-`yspennstate/math-open-problems@d037aee47f5f73abf078021e69478a2ebece1700`,
+`private-source-repository@d037aee47f5f73abf078021e69478a2ebece1700`,
 
 which proves the heavy-hub compound-energy identity `W_i>=||m||^2` and, in its exact-rank-three small-diagonal co-heavy branch, produces a full original-coordinate partition whose cross block `C` satisfies
 
@@ -40,7 +40,7 @@ The problem is then exactly to pay a third source without rotating the input law
 
 ## 2. Product-marginal input
 
-I use the source-valid Livshyts--Paouris--Pivovarov product-marginal theorem in the form already recorded by fleet02/B07 (`WALSH_AGGREGATION.md`, source-visible at `yspennstate/math-open-problems@dd04097afb60aca6ff16b7f36d38df1b8b9d2080`): if `X` has independent one-dimensional densities bounded by one and `T` is a rank-`k` real matrix, then the density of `TX` satisfies
+I use the source-valid Livshyts--Paouris--Pivovarov product-marginal theorem in the form already recorded by fleet02/B07 (`WALSH_AGGREGATION.md`, source-visible at `private-source-repository@dd04097afb60aca6ff16b7f36d38df1b8b9d2080`): if `X` has independent one-dimensional densities bounded by one and `T` is a rank-`k` real matrix, then the density of `TX` satisfies
 
 `||p_(TX)||_infinity <= 2^(k/2) / sqrt(det(TT^T)).`                (2.1)
 
@@ -280,7 +280,7 @@ Thus a fixed aggregate `E_2` cross packet plus a genuine transverse bank curvatu
 
 The completed designated-partner theorem is fleet04/B19 r2,
 
-`yspennstate/math-open-problems@1e7af7988c38150c1591910270c44f4f219164b3`,
+`private-source-repository@1e7af7988c38150c1591910270c44f4f219164b3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`,
 

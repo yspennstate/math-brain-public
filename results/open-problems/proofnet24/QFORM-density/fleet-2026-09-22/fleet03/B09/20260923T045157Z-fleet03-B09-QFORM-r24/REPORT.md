@@ -18,7 +18,7 @@ No Gaussianity, moments, compact support, connected support, log-concavity, iden
 
 The completed fleet03/B09 r23 report is
 
-`yspennstate/math-open-problems@13986bc9209e39eb885d7ad9e7bede9e426754aa`
+`private-source-repository@13986bc9209e39eb885d7ad9e7bede9e426754aa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T034845Z-fleet03-B09-QFORM-r23/REPORT.md`.
 
@@ -49,7 +49,7 @@ The same coefficient times interval length bounds every interval, and the branch
 
 The completed fleet02/B09 report is
 
-`yspennstate/math-open-problems@c5a57d1be0dc69e47bcb9fb52d5eaac77f4833c6`
+`private-source-repository@c5a57d1be0dc69e47bcb9fb52d5eaac77f4833c6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T041423Z-fleet02-B09-QFORM-auto11/REPORT.md`.
 

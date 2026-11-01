@@ -35,7 +35,7 @@ This partner statement is applied at equation (6.7), not merely cited.
 
 A newer fleet02/B06 supporting theorem, `QFORM-E2-HALFRIESZ-ROW-GATE-FREE-v1`, is also retained as context: for a literal physical cross block `M`, `H_(1/2) <= 8 e^(1/4) e_2(M^T M)^(-1/8)`. Its own handoff correctly warns that finite half-Riesz credit alone does not imply bounded density. The present run therefore does not use such an upgrade.
 
-The fractional-potential and square-peel lemmas used below are from the checked Fourier-route report `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. In particular:
+The fractional-potential and square-peel lemmas used below are from the checked Fourier-route report `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. In particular:
 
 `D(a(X+shift)^2+S) <= |a|^(-1/2) H_(1/2)(S)`,                     (1.2)
 

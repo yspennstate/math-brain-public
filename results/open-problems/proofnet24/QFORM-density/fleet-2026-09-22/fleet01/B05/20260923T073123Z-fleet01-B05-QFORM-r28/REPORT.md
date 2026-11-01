@@ -16,7 +16,7 @@ The current B05 debt is the two-sheet / convex-side coarea geometry with origina
 
 The designated partner fleet02/B05 has now proved an exact endpoint with that provenance intact.  Its source is
 
-`yspennstate/math-open-problems@ad7874e3ee0f4541714b2376aa09154517e60867`
+`private-source-repository@ad7874e3ee0f4541714b2376aa09154517e60867`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T062009Z-fleet02-B05-QFORM-r23/REPORT.md`.
 
@@ -160,7 +160,7 @@ The constant is uniform in `h`; averaging (3.17) over the conditioned product co
 
 The partner statement is written for the homogeneous form, but (3.15) does not add a new analytic hypothesis.  Its proof uses only: (i) the scalar density cap and scalar-versus-pair independence, (ii) a joint density cap for the transverse pair, and (iii) the active coefficient matrix.  Translating the scalar and pair by deterministic constants preserves (i)--(ii).  In its square-peel branch the residual two-dimensional affine term is exactly the in-range affine term covered by the source rank-two half-Riesz theorem
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`,
 
@@ -215,7 +215,7 @@ Indeed (4.6) can hold while `Omega` is arbitrarily small: distribute order-one t
 
 The required newest source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`
 

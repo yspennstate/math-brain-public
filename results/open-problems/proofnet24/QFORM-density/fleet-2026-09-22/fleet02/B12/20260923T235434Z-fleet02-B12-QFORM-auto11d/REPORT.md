@@ -182,7 +182,7 @@ The first three signed eigenmodes of E may be arbitrarily large.
 
 ## 6. Required pinned e5f result applied at a real inequality
 
-The pinned `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` Fourier route records the fifth-volume extension
+The pinned `private-source@e5f71d79eff325201dd0274053d20268ce65b837` Fourier route records the fifth-volume extension
 
 ||p_Q||_infinity <= 5 sqrt(2e) e_5(B^T B)^(-1/10)              (6.1)
 

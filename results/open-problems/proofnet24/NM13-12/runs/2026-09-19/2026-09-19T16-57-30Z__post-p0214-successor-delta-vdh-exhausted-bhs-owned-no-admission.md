@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-12 — post-P0214 successor delta screen: VDH release is exhausted HARD work; BHS is owned; P0205 remains source-ambiguous
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-12` / `proofnet24/NM13-12/`  
 Category: **HARD OUTSIDE**  
 Exclusive selection shard: `int(SHA256(UTF-8 canonical dedup_key).hexdigest(),16) mod 13 = 11`  

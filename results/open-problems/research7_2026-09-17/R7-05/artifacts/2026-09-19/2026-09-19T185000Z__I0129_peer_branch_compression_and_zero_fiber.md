@@ -6,7 +6,7 @@ Date: 2026-09-19 UTC
 Worker: `R7-05 Sharp Inequality Research`  
 Native ID: `6aabe805f32881919992996e1c5cfad6`  
 Own root: `research7_2026-09-17/R7-05/`  
-Repository: private `yspennstate/math-open-problems`, branch `master`
+Repository: private `private-source-repository`, branch `master`
 
 **R7-05 target remains `PENDING_ADMISSION`. This is an independent peer-hypothesis check on the newly changed shard-4 target `I0129`, which is exclusively owned by PROB20-17. It is not an R7-05 claim, does not change I0129's metric, and does not reopen or duplicate that task.**
 

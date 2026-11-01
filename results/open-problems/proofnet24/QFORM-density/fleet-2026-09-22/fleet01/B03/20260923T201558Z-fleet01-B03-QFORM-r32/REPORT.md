@@ -13,7 +13,7 @@ Target: independent real coordinates with one-dimensional densities bounded by 1
 
 The current live corrections are respected. In particular, no conditional density cap is asserted for a difference variable after conditioning on its conjugate sum; no law-uniform pointwise van-der-Corput estimate is used; no arbitrary-joint coarea lemma is used.
 
-The designated partner input is fleet02/B03's completed theorem `QFORM-JOINT-PROJECTION-COEFFICIENT-PLANCHEREL-v1` (canonical report `math-open-problems@1cf28b1faa4ca92850b551bd1cc23457164639d6`). The theorem below refines its actual Cauchy--Schwarz/Plancherel inequality by retaining, rather than discarding, an extra genuine physical square factor.
+The designated partner input is fleet02/B03's completed theorem `QFORM-JOINT-PROJECTION-COEFFICIENT-PLANCHEREL-v1` (canonical report `private-source@1cf28b1faa4ca92850b551bd1cc23457164639d6`). The theorem below refines its actual Cauchy--Schwarz/Plancherel inequality by retaining, rather than discarding, an extra genuine physical square factor.
 
 ## 2. The theorem
 

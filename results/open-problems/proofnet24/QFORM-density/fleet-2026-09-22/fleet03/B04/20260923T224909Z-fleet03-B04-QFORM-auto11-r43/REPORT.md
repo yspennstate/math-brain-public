@@ -20,7 +20,7 @@ The main analytic dependency is the completed orientation-free rank-two fraction
 
 at
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 It proves, for an orthonormal two-frame `U`, invertible symmetric `2x2` matrix `Lambda`, and arbitrary affine vector `b`,
 
@@ -207,7 +207,7 @@ This family is the intended quantitative gain: a whole diffuse independent bank 
 
 The completed designated-partner report is
 
-`yspennstate/math-open-problems@3224f273e92d97a8bff7424e9b1191c1e49d0611:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260923T214340Z-fleet04-B04-QFORM-r1/REPORT.md`.
+`private-source-repository@3224f273e92d97a8bff7424e9b1191c1e49d0611:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260923T214340Z-fleet04-B04-QFORM-r1/REPORT.md`.
 
 It supplies a literal cross block `M=A[I,J]`, a fixed physical row `i`, a fixed physical column `j`, and
 

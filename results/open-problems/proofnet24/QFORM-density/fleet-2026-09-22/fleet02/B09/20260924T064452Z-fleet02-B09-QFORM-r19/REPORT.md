@@ -28,7 +28,7 @@ Two singular rank-one hub-pair endpoints are paid below. A third calculation sho
 
 Use the proved Theorem H at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 For a literal split `H union I union J`, if

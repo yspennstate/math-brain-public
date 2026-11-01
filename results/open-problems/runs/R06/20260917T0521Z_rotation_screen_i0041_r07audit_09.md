@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 # R06 CLOSABLE OUTSIDE — successor-admission screen: Schramm Problem 5.2 / I0041; R07 T13 audit
 
 Run date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Delivery: private GitHub only. No email/Gmail, Drive, public posting, purchase, permission change, workflow execution, scheduler mutation, shared-root rewrite, peer-track edit, or force-push.
 
 ## 1. Continuity: do not reopen I0056 or I0079

@@ -24,7 +24,7 @@ The completed theorem is
 
 source:
 
-`yspennstate/math-open-problems@80f95e245b7f3418e8da36173ac4eb9d81fb58a7`
+`private-source-repository@80f95e245b7f3418e8da36173ac4eb9d81fb58a7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T003846Z/REPORT.md`.
 
@@ -75,7 +75,7 @@ The exact designated partner `fleet04/B10` still has no completed current-QFORM 
 
 source:
 
-`yspennstate/math-open-problems@b111363ff02b67015d14db35482e0150591744cd`
+`private-source-repository@b111363ff02b67015d14db35482e0150591744cd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T231542Z-fleet04-B16-QFORM-r1/REPORT.md`.
 

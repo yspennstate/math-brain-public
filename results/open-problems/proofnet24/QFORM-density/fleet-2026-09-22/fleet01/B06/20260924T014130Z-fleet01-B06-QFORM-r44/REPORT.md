@@ -14,7 +14,7 @@ The full unrestricted conjecture and the requested global continuity conclusion 
 
 The designated partner input actually used is fleet02/B06:
 
-- `yspennstate/math-open-problems@f3cb7a2b4cd43febe06534df231125fbd13a138d`,
+- `private-source-repository@f3cb7a2b4cd43febe06534df231125fbd13a138d`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260924T003626Z-7f1a9c2d/REPORT.md`,
 - theorem `QFORM-PAIR-RANK1SQUARE-WEIGHTED-v1`.
 
@@ -24,7 +24,7 @@ Its completed theorem pays an invertible indefinite literal physical pair once t
 
 The second analytic dependency is the completed physical-pair logarithmic theorem
 
-- `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+- `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 - `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 If the post-pair remainder `R` satisfies
@@ -37,7 +37,7 @@ for every `rho>0`, then
 
 I also use the completed physical two-original-coordinate affine half-Riesz estimate from
 
-- `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+- `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 - `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`:
 
 `sup_t E |Y^T C Y+2 beta^T Y-t|^(-1/2) <=16 sqrt(30) |det C|^(-1/4)`

@@ -12,14 +12,14 @@ The unrestricted owner target remains OPEN / NOT PROVED / NOT DISPROVED. The res
 
 The latest completed compatible designated-partner result read in full is fleet03/B11 r48:
 
-- canonical mathematics `yspennstate/math-open-problems@1981b7ded0883caf72e23b833f34274a6763a43c`;
+- canonical mathematics `private-source-repository@1981b7ded0883caf72e23b833f34274a6763a43c`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T023910Z-fleet03-B11-QFORM-r48/REPORT.md`.
 
 Its correction `QFORM-SAMEBANK-L3-L32-DEPENDENCE-BARRIER-v1` constructs, for arbitrarily small puncture `eta`, a nonlinear same-bank residual law for which both the hyperbolic `L^3` resource and the square `L^(3/2)` resource are finite while their dependent sum retains the rank-two logarithmic blow-up. It is not a QFORM counterexample because the residual triple is not an orthogonal linear projection of independent originals. Therefore a valid proof must spend original-product projection provenance before replacing the residual law by marginal or joint density caps.
 
-The required pinned source `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` was also consumed. In particular its completed ruled-level-set Theorem C gives the universal one-sheet estimate `pi sqrt(2)/s` for exact rank-three signatures `(2,1)` and `(1,2)` whose nonzero eigenvalue magnitudes are at least `s`. I apply that theorem below to an explicit same-bank target family and do not extend it to the opposite two-sheet side.
+The required pinned source `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837` was also consumed. In particular its completed ruled-level-set Theorem C gives the universal one-sheet estimate `pi sqrt(2)/s` for exact rank-three signatures `(2,1)` and `(1,2)` whose nonzero eigenvalue magnitudes are at least `s`. I apply that theorem below to an explicit same-bank target family and do not extend it to the opposite two-sheet side.
 
-I also use the completed fleet02/B16 null-scalar/dependent-pair receiver (`QFORM-NULL-SCALAR-DEPENDENT-PAIR-v1`, canonical source `yspennstate/math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`) and first record the affine extension needed after conditioning physical coordinates.
+I also use the completed fleet02/B16 null-scalar/dependent-pair receiver (`QFORM-NULL-SCALAR-DEPENDENT-PAIR-v1`, canonical source `private-source-repository@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`) and first record the affine extension needed after conditioning physical coordinates.
 
 ## 2. Affine null-scalar/dependent-pair receiver
 

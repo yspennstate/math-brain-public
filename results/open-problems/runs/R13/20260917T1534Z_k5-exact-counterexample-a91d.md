@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED**—not verifi
 # R13 — Boolean Komlós: exact five-column obstruction above the published `K(5)` value
 
 Run ID: `20260917T1534Z_k5-exact-counterexample-a91d`  
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, source scope, and fixed metric
 

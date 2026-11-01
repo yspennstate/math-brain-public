@@ -20,7 +20,7 @@ Accordingly the proof below is a direct interval/small-ball argument in the orig
 
 ## 2. Sources actually consumed
 
-- `fleet03/B17`, math-open-problems commit `c64fcff680b0a252a3c92002c60eedba02bbb9ec`: exact refutation of law-uniform pointwise Fresnel decay and diagonal `C=pi` theorem.
+- `fleet03/B17`, private-source commit `c64fcff680b0a252a3c92002c60eedba02bbb9ec`: exact refutation of law-uniform pointwise Fresnel decay and diagonal `C=pi` theorem.
 - **OTHER-account result applied:** `fleet03/B01`, shared handoff commit `47dc94f0d2e847cd4d89bf4c8ec45816fb042324`, canonical report commit `c7a1ce265139092705e86c5a577523798291b964`: common product envelope and a three-coordinate non-diagonal block theorem with density `<= C0 |det A_S|^{-1/3}`, `C0<7.90`.
 - `fleet02/B07`, shared handoff commit `a333185e6a76510285063e4db1d20801b904b852`: exterior-power determinant-mass identities and the Walsh delocalization obstruction to fixed coordinate-minor selection.
 - `fleet02/B10`, canonical report commit `1eba911614ef9f6683f8eacb5d6608a0f9a4b833`: hyperbolic-square smoothing and a quantitative Pluecker reciprocal-loss obstruction.

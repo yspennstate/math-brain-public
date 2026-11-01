@@ -16,12 +16,12 @@ The full owner target is unchanged. For arbitrary finite `n`, arbitrary independ
 The completed inputs actually used are:
 
 1. **Designated partner fleet02/B13 r15**, canonical
-   `yspennstate/math-open-problems@d59fc91cdb6c772a0b3c73ba5b90fb62e10e3bf`,
+   `private-source-repository@d59fc91cdb6c772a0b3c73ba5b90fb62e10e3bf`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T000555Z-fleet02-B13-productset-r15-482fba/REPORT.md`.
    Its exact finite-mixture/extreme-product reduction plus full-to-no-pivot reduction imply: if full QFORM is false, then for every fixed no-pivot scale `tau>0` the strict no-`tau` product-indicator slab constant is infinite. Its displayed theorem takes `tau=m^-4` and a particular threshold `C3 m`; below I use the same proved selection with the larger threshold `256m`.
 
 2. **Newest completed designated-partner fleet02/B13 four-hub theorem**, source
-   `yspennstate/math-open-problems@ac50e5d5f2c3030c4bd87d5188117d92ceaf55a1`,
+   `private-source-repository@ac50e5d5f2c3030c4bd87d5188117d92ceaf55a1`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T013927Z-fleet02-B13-fourhub-r12/REPORT.md`.
    Its Theorem 4.1 says that for any disjoint physical cross block `M` with third-volume
    `Z=e_3(M^T M)>0`, either the full ambient form obeys
@@ -30,9 +30,9 @@ The completed inputs actually used are:
    `a^2 e_2(S_* S_*^T)>31 Z/512`, while for `a=0` the corresponding whole cofactor-bank currency exceeds `31 Z/512`.
 
 3. **Conditioned spectral-window branch**, source
-   `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+   `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
    with a later target-level application in
-   `yspennstate/math-open-problems@ac50e5d5f2c3030c4bd87d5188117d92ceaf55a1`,
+   `private-source-repository@ac50e5d5f2c3030c4bd87d5188117d92ceaf55a1`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T154341Z-fleet03-B20-QFORM-r12/REPORT.md`.
    In the special case `H=empty`, if `P=1_{|A|>=1/64}` satisfies `max_i P_ii<=1/32`, then the full target form has a continuous density bounded by
    `96 sqrt(3e/2)<194`.
@@ -40,7 +40,7 @@ The completed inputs actually used are:
 4. **Product projection bound** used in its source-valid original-coordinate form:
    for independent cap-one coordinates and nonzero coefficient vector `v`,
    `||p_(v^T X)||_infinity <= sqrt(2)/||v||_2`.
-   A source-pinned use appears in `yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7` and in the later B03 aggregate-square report. Only disjoint original-coordinate banks are combined here.
+   A source-pinned use appears in `private-source-repository@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7` and in the later B03 aggregate-square report. Only disjoint original-coordinate banks are combined here.
 
 The full theorem remains OPEN. The continuity conclusion remains separately OPEN.
 

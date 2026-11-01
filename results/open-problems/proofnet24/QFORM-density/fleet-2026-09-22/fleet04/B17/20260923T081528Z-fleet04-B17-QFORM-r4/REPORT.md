@@ -143,7 +143,7 @@ For completeness, (1.4) follows from the same ray parametrization applied to the
 
 The completed fleet01/B17 rotational-witness report
 [
-	exttt{math-open-problems@87ad97a024629ad6f7eddb9db55fdbaaea1e0ba8}
+	exttt{private-source@87ad97a024629ad6f7eddb9db55fdbaaea1e0ba8}
 ]
 constructs exact product-provenance matrices (A=RJR^T), with
 (J=operatorname{diag}(1,1,-1)), by taking physical rows from an
@@ -179,7 +179,7 @@ as a counterexample mechanism at the cone tip.
 
 The required Claude counterexample search at
 [
-	exttt{math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837}
+	exttt{private-source@e5f71d79eff325201dd0274053d20268ce65b837}
 ]
 reported only a numerical value (2.53) for the (n=3) family
 (I-2ee^T). Equation (1.3) converts that specific numerical observation
@@ -218,8 +218,8 @@ and no histogram extrapolation.
 Sources:
 
 - Claude counterexample search:
-  `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`.
+  `private-source@e5f71d79eff325201dd0274053d20268ce65b837`.
 - completed fleet01/B17 rotational witness theorem:
-  `math-open-problems@87ad97a024629ad6f7eddb9db55fdbaaea1e0ba8`.
+  `private-source@87ad97a024629ad6f7eddb9db55fdbaaea1e0ba8`.
 - earlier exact diffuse lower-obstruction calculation:
-  `math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`.
+  `private-source@2156b76156ad5956c214a881fcfd6d977d6f3b9f`.

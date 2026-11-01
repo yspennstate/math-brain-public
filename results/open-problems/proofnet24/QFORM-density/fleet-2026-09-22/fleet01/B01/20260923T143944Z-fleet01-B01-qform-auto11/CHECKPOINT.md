@@ -29,7 +29,7 @@ Apply the source-valid orientation-free rank-two affine half-Riesz theorem
 
 `sup_s E |X^T B X + linear -s|^{-1/2} <=128 |det_2(B)|^{-1/4}`
 
-from `math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+from `private-source@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 For a cap-one scalar `X_h`, the conditional density of `a(X_h+t)^2` is bounded by
 

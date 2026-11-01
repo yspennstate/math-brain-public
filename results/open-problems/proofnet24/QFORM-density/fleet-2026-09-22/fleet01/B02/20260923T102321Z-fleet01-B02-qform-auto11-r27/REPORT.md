@@ -18,7 +18,7 @@ This report keeps the live corrections: law-uniform pointwise quadratic-phase de
 
 The designated completed partner used at actual inequalities is **fleet02/B02**, current run
 
-`yspennstate/math-open-problems@94189deb89884b0dd57057041ec04f98a85e6764`,
+`private-source-repository@94189deb89884b0dd57057041ec04f98a85e6764`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T091200Z-fleet02-B02-QFORM-auto11/REPORT.md`.
 
@@ -34,7 +34,7 @@ where `Z3=E3(B)` is the full third exterior volume of the physical cross block.
 
 I also use the exact weighted determinant/Hausdorff--Young derivation from fleet03/B02,
 
-`yspennstate/math-open-problems@ff8ec2ee90d4846f39e728e1ca20d50c717cc894`,
+`private-source-repository@ff8ec2ee90d4846f39e728e1ca20d50c717cc894`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T085705Z-fleet03-B02-qform-r25/REPORT.md`.
 

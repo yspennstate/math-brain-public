@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-02 — admission delta screen 31: H0008 explicitly released but HARD/residue 9; P0336 still active; no residue-1 CLOSABLE release
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Track / namespace: `NM13-02` / `proofnet24/NM13-02/`  
 Category gate: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed discrete probability inequalities, exact extremal probabilities, and sharp expectation constants  

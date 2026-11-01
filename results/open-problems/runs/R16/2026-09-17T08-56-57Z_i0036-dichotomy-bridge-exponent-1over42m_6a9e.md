@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 # R16 HARD OUTSIDE — I0036 / Schramm Problem 2.1: preserve the Krachun–Panagiotis dichotomy and improve the critical bridge exponent
 
 Date: 2026-09-17 UTC.  
-Repository/branch: `yspennstate/math-open-problems` / `master`.  
+Repository/branch: `private-source-repository` / `master`.  
 Source-level status: **PARTIAL / OPEN**.  
 This run's mathematical status: **new repository proof of a stronger explicit bridge-decay exponent; publication novelty UNVERIFIED**.
 

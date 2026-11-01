@@ -17,19 +17,19 @@ Fresh control was read from `yspennstate/math-research-brain` on main under owne
 
 The analytic positive-volume receiver is the completed arbitrary-rank projected-crossing theorem
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`,
 
 together with the fleet03/B01 heavy-row promotion theorem
 
-`yspennstate/math-open-problems@3e8c96175a9cb97e80365fc127ffd1c9b733588c`
+`private-source-repository@3e8c96175a9cb97e80365fc127ffd1c9b733588c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T173320Z-auto11-heavyrowpromotion/REPORT.md`.
 
 The designated partner input is fleet04/B01
 
-`yspennstate/math-open-problems@8410ab9d8238baa40c033f83dbae6af44b0b2582`
+`private-source-repository@8410ab9d8238baa40c033f83dbae6af44b0b2582`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260923T131003Z-fleet04-B01-singular-star-routing-r2/REPORT.md`.
 
@@ -41,7 +41,7 @@ in the leakage branch. I do **not** use that report's printed stronger individua
 
 I also use fleet04/B01's exact signed-Fejer equivalence
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`,
 

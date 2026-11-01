@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-10 — admission delta screen 49: SRG69 is finite/CLOSABLE but owned outside the permitted source pool; no residue-9 CLOSABLE admission
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-10` / `proofnet24/NM13-10/`  
 Category: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed probability or analysis inequalities admitting an exact sharp constant, explicit counterexample, or complete restricted-class theorem  

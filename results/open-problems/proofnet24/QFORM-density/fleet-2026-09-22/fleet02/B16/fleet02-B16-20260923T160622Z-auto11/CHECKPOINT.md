@@ -90,7 +90,7 @@ Thus even in a strict true-near-coloop target family, the operation
 
 loses logarithmically. The obstruction is to that proof interface, not to QFORM.
 
-The true density of the same family is uniformly bounded: regroup the four original sign banks exactly as in the completed fleet02/B16 source-plane/source-line compiler at `math-open-problems@612c5bfc1edc4c288cc52c5097db269910486ebd`. With the same coefficient matrix `P` (`det(P)^2=1/2`) and source-line vector `g=(sqrt(rho),1,-1)/2`,
+The true density of the same family is uniformly bounded: regroup the four original sign banks exactly as in the completed fleet02/B16 source-plane/source-line compiler at `private-source@612c5bfc1edc4c288cc52c5097db269910486ebd`. With the same coefficient matrix `P` (`det(P)^2=1/2`) and source-line vector `g=(sqrt(rho),1,-1)/2`,
 
 `g^T Lambda_eta g=[1+eta rho+2sqrt(rho(1+eta))]/4>=1/4`,
 `|det Lambda_eta|=1+eta>=1`.

@@ -4,7 +4,7 @@ After the canonical report was published, fresh brain main added correction even
 
 `QFORM-HALFRIESZ-PLUS-BARE-SQUARE-NOT-SUFFICIENT-v1`,
 
-source `yspennstate/math-open-problems@a2e3c99bd7c6715ec4260fa3a7918499c4ae8b3d`.
+source `private-source-repository@a2e3c99bd7c6715ec4260fa3a7918499c4ae8b3d`.
 
 It proves that a generic residual law with an `L^2` density and only square-root small-ball / half-Riesz endpoint control can still yield an unbounded density after adding one independent cap-one square. Therefore a black-box `H_(1/2)+square -> L^infinity` interface is invalid without an exponent gain or richer retained structure.
 

@@ -16,7 +16,7 @@ The first unpaid implication entering this run was the overlap-heavy residue lef
 
 The required pinned source was read at exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`:
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`:
 
 - `RESULTS.md` and `FOURIER_ROUTE_REPORT.md`: audited physical-cross decoupling/Fourier framework and the prohibition on post-rotation independence;
 - `COUNTEREXAMPLE_SEARCH.md`: completed Theorem B, which for a form with at least three unit-scale eigenvalues gives
@@ -29,13 +29,13 @@ I apply (1.1) to an actual family in Section 6. I also apply the pinned Theorem-
 
 The newest fleet03/B03 report read in this run is r49,
 
-`yspennstate/math-open-problems@77db4c4d258bc99671c78d54d069830f80e2f752`,
+`private-source-repository@77db4c4d258bc99671c78d54d069830f80e2f752`,
 
 including its later normalization supplement `ce3fecfe02212f5db3f9993cea2a0bea2f9cef3e`. Its near-coloop theorem is used in Section 8 to quantify why a single physical-edge localization has the wrong scale here. The **compatible aggregate receiver for the full stress family** is the earlier completed fleet03/B03 r46 theorem
 
 `QFORM-ONE-LINEAR-BANK-R2-DENSITY-v1`,
 
-`yspennstate/math-open-problems@3e4f3896cfaeeb04f1ae283d35848b55809a5d12`.
+`private-source-repository@3e4f3896cfaeeb04f1ae283d35848b55809a5d12`.
 
 For an exact rank-two physical cross matrix with nonzero singular values `s_1,s_2`, one source bank entering only linearly, and arbitrary same-bank terms on the other source bank, r46 proves
 

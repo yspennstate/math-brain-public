@@ -294,7 +294,7 @@ By contrast, the convex-hull half-width is `R+a`, whose square is order `R^2`. T
 
 ## 6. Required pinned Fourier result: real obstruction and endpoint blindness
 
-The owner-pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` was freshly read in `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed unconditional D5 theorem gives for every disjoint **original-coordinate** physical cross block `B=A[I,J]`
+The owner-pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` was freshly read in `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed unconditional D5 theorem gives for every disjoint **original-coordinate** physical cross block `B=A[I,J]`
 
 \[
 \|p_Q\|_\infty

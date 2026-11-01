@@ -229,7 +229,7 @@ The designated partner is `fleet04/B03`. A fresh scan found no completed current
 
 A compatible completed fleet04 Fourier-pathway theorem **is** available: `fleet04/B01`, `QFORM-SIGNED-FEJER-EXACT-INTERFACE-v1`, canonical source
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 

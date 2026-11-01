@@ -8,7 +8,7 @@ Status: **FULL QFORM OPEN**. Supporting regularity theorems proved below. Execut
 
 The newest completed designated-partner result is fleet02/B15
 
-`yspennstate/math-open-problems@45779cb1dca5f453ac620431b380ad015a052e70`
+`private-source-repository@45779cb1dca5f453ac620431b380ad015a052e70`
 
 at
 
@@ -399,7 +399,7 @@ This is an example of the intended logical order: a height is first paid by the 
 
 The source-pinned fleet03/B15 theorem
 
-`yspennstate/math-open-problems@696a0784ba7d270db657c1596d9c2ee940a1745d`
+`private-source-repository@696a0784ba7d270db657c1596d9c2ee940a1745d`
 
 proves, for each fixed symmetric `A` with `rank(A)>=3` and coordinate `j`, a finite constant `K(A,j)` such that every cap-one subdensity of mass `m` in coordinate `j` has a full quadratic output density in `C_0(R)` bounded by `K(A,j) sqrt(m)`. Its stated signed marginal stability bound pays a `sqrt(2)` factor by splitting positive and negative parts.
 

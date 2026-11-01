@@ -1,6 +1,6 @@
 # Delivery recovery: exact Booleanity package
 
-20 September 2026. The owner asked that all learned material be pushed to the research brain. The complete scientific contents of the previous conversation package are now on `master` in `yspennstate/math-open-problems`.
+20 September 2026. The complete scientific contents of the previous conversation package are now on `master` in `private-source-repository`.
 
 The source was the actual mounted `FEI_Booleanity_Constraints_2026-09-20.zip`, not a reconstructed summary. All seven research files were uploaded unchanged: the complete report, exact checker, actual verification output, two exploratory files, original manifest, and original handoff. Their remote blob hashes were read back and match the source bytes. The original manifest lists all substantive file hashes; its own blob is `ef7c4cf143b184ab4681588d23e132a07fabddcc`.
 

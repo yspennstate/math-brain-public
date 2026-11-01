@@ -19,7 +19,7 @@ This run deliberately changes mechanism after the preceding fixed-order/ridge-se
 
 Canonical mathematics:
 
-`yspennstate/math-open-problems@489b9fea1b2a0ec252021c6905fcbec0b797d18e`
+`private-source-repository@489b9fea1b2a0ec252021c6905fcbec0b797d18e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T234330Z-fleet02-B07-QFORM-r20/REPORT.md`.
 
@@ -51,7 +51,7 @@ This report applies (1.1) to explicit new inequalities below. Thus the designate
 
 fleet03/B03, canonical
 
-`yspennstate/math-open-problems@924b3c4c70f86a64402863fe228f641bf3db60b2`
+`private-source-repository@924b3c4c70f86a64402863fe228f641bf3db60b2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T175531Z-fleet03-B03-QFORM-r17/REPORT.md`.
 
@@ -70,7 +70,7 @@ All same-side curvature, affine terms and additional coordinates are retained.
 
 fleet03/B07 r20, canonical
 
-`yspennstate/math-open-problems@1fcbb0cf28b6ad654bb94777188ded86ac1613d3`
+`private-source-repository@1fcbb0cf28b6ad654bb94777188ded86ac1613d3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T235048Z-fleet03-B07-qform-r20/REPORT.md`.
 
@@ -86,7 +86,7 @@ No independence between the shift `m(Z)` and the residual `H(Z)` is assumed.
 
 Canonical
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -405,7 +405,7 @@ This is not a counterexample to QFORM. The physical pair on the first two coordi
 
 while `s_3(S_d)>=1`. The completed full-matrix physical-pair theorem
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`
 

@@ -172,7 +172,7 @@ Thus every sampled-good terminal seed in the `s_16` chamber forces **two strictl
 
 ## Required legacy-source application to a real localization obstruction
 
-I re-read `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed Theorem A gives, in dimension three with all eigenvalues of modulus at least `sigma` and arbitrary affine terms,
+I re-read `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed Theorem A gives, in dimension three with all eigenvalues of modulus at least `sigma` and arbitrary affine terms,
 
 `||p_Q||_infinity <= 6 sqrt(pi)/sigma`.
 

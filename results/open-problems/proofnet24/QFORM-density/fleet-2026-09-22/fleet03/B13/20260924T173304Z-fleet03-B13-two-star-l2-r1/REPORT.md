@@ -12,7 +12,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The current fixed-multiplicity objective supersedes the older per-slot research wording for this invocation. The pinned complete nine-direction source remains
 
-- repo: `yspennstate/math-open-problems`
+- repo: `private-source-repository`
 - commit: `eeb752c8943536541b34b42b8bf48e924f4d3d2f`
 - path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`
 - blob: `19fb119877426b640b2c0dae19ec2f78a399fe11`.
@@ -20,7 +20,7 @@ The current fixed-multiplicity objective supersedes the older per-slot research 
 This worker already completed a full source audit in the immediately preceding fixed-multiplicity run; the present run therefore spends its substantive effort below the audited threshold.
 
 The first contemplated mechanism was a two-star L2 receiver with arbitrary affine terms and hub self-squares. A fresh source search found that exact analytic scope already paid, in stronger form, by
-`yspennstate/math-open-problems@8f3de08bd3d346800d3092b527faa8b8ece79c67`
+`private-source-repository@8f3de08bd3d346800d3092b527faa8b8ece79c67`
 (`Exhibit fourth-mode heavy cancellation and prove uniform two-star density`), with a related arbitrary-light-tail L2 theorem at
 `553dfd3bdaec63090ed462311eb01b97dc2a68bf`.
 Accordingly I do not duplicate that theorem. I change mechanism on the SAME QFORM target and attack the current s7 overlap-one branch.
@@ -28,7 +28,7 @@ Accordingly I do not duplicate that theorem. I change mechanism on the SAME QFOR
 ## 2. Source-pinned s7 overlap currency
 
 Use the audited overlap theorem in the pinned nine-direction source, with the exact arithmetic recorded at
-`yspennstate/math-open-problems@12d26c266a2be35bf6b5fec9e356736d75da`.
+`private-source-repository@12d26c266a2be35bf6b5fec9e356736d75da`.
 In the normalized no-pivot chamber, put
 [
 kappa=rac4{625}.
@@ -57,7 +57,7 @@ No law assumption enters (2.1)-(2.2).
 ## 3. Compile the s7 overlap into one actual physical three-bank resource
 
 Apply `QFORM-V1-GLOBAL-THREEBANK-COMPILER-v1`,
-`yspennstate/math-open-problems@f12568c185d59fe01dd4f7742f8dc12e6ef3e133`.
+`private-source-repository@f12568c185d59fe01dd4f7742f8dc12e6ef3e133`.
 
 There is a literal original-coordinate partition
 [
@@ -117,7 +117,7 @@ S=sum_hT_h>S_*.
 ]
 Assume also the exact coherent-star rank-one geometry of
 `QFORM-GROUPED-SHAREDHUB-SCHUR-L1-v1`,
-`yspennstate/math-open-problems@96fdf63fbef72c07e56005074c9f9d5703888697`:
+`private-source-repository@96fdf63fbef72c07e56005074c9f9d5703888697`:
 
 - (N=A[L,R]) has rank one;
 - there are fixed coefficient directions (einmathbb R^L), (finmathbb R^R) and scalar coefficient vectors ((s_h),(t_h)) such that
@@ -176,7 +176,7 @@ D_*:=rac8{3125}V_*
 
 Apply the completed marginal-free scalar-anchor receiver
 `QFORM-ONEANCHOR-E3-PIVOT-E2-RIESZ-v1`,
-`yspennstate/math-open-problems@9edffa4c2a3852f42ed7e76374ac33c2ad0ff074`.
+`private-source-repository@9edffa4c2a3852f42ed7e76374ac33c2ad0ff074`.
 For (a_h=A_{hh}
 e0),
 [
@@ -222,7 +222,7 @@ This does not delete the small nonzero pivot. It is retained as the exact remain
 ## 6. Designated fleet04/B13 result applied to an actual geometric inequality
 
 The designated partner theorem is the optimizer-free product-law reduction at
-`yspennstate/math-open-problems@d1764f29884bf14ce505d36668105edfcaf8315e`.
+`private-source-repository@d1764f29884bf14ce505d36668105edfcaf8315e`.
 
 For every nonnegative slab kernel it proves exact equality of suprema between arbitrary cap-one product densities and arbitrary unit-measure product indicators, with strict witnesses approximable by bounded finite unions and with no interval, centered-uniform, bounded-diameter or fixed-fragment conclusion.
 

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R20 — terminal wait: new CLOSABLE P0290 is already owned; the only explicit release is HARD
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Worker: R20.
 Lane: **CLOSABLE OUTSIDE**.
 

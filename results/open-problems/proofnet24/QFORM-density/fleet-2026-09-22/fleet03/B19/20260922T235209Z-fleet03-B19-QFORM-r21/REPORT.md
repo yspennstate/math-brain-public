@@ -15,7 +15,7 @@ The target is unchanged. For arbitrary independent real coordinates `X_i` with p
 
 The newest owner-requested Claude synthesis is the package
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/`.
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/`.
 
 Its relevant global reduction is `N3(tau,C0)`: it is enough to prove the target under one fixed no-pivot threshold `tau>0`, namely
 

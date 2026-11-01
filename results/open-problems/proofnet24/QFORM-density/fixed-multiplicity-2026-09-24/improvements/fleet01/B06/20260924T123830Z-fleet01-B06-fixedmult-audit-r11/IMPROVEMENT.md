@@ -2,7 +2,7 @@
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Run: `20260924T123830Z-fleet01-B06-fixedmult-audit-r11`  
-Pinned manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Pinned manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 Status: **proved analytic improvement, but NOT an unconditional multiplicity reduction.** It identifies a precise route by which the order-four Fourier endpoint becomes integrable when the crossing row geometry is quantitatively diffuse.
 

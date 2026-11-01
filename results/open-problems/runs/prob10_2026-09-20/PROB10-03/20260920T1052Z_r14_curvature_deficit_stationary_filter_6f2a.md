@@ -2,7 +2,7 @@ Runtime model: **GPT-5.6 Sol**. Requested GPT-6/maximum is not a configurable na
 
 # PROB10-03 — R14 bounded substantive iteration: curvature-deficit stationary filter
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Status: **OPEN / PARTIAL / SOURCE BRACKET UNCHANGED / NEW EXACT THIRD-FULL FEASIBILITY FILTER**.
 
 ## 1. Contract, continuity, ownership, and consumed state

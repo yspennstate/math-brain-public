@@ -13,12 +13,12 @@ The target remains: for every dimension, independent real coordinates `X_i` with
 
 The main analytic dependency is the ridge characteristic-function theorem in
 
-- `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
+- `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 
 The named partner result actually used below is fleet02/B03:
 
-- `yspennstate/math-open-problems@33cd6fae4e8adb85cf1ee43a244f628e563f1cbf`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T161346Z-fleet02-B03-QFORM-r12/REPORT.md`.
+- `private-source-repository@33cd6fae4e8adb85cf1ee43a244f628e563f1cbf`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T161346Z-fleet02-B03-QFORM-r12/REPORT.md`.
 
 That partner proves a translation-uniform two-variable indefinite small-ball bound and, in particular, the half-Riesz estimate
 

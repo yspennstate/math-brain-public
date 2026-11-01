@@ -15,7 +15,7 @@ No moment, support, iid, log-concavity, diagonal-basis, post-rotation independen
 
 Latest completed designated partner is fleet03/B07 r46:
 
-`yspennstate/math-open-problems@d9203dc7bed31e59ffcee1db8286dbdb0d8e9c51`
+`private-source-repository@d9203dc7bed31e59ffcee1db8286dbdb0d8e9c51`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260924T033639Z-fleet03-B07-qform-r46/REPORT.md`.
 
@@ -44,7 +44,7 @@ The point of this run is that branch (i) is now closed structurally; only the ov
 
 The upstream source is fleet03/B07 r40:
 
-`yspennstate/math-open-problems@c21a61aa6390c0be6ed68027341207e44c1bbb07`
+`private-source-repository@c21a61aa6390c0be6ed68027341207e44c1bbb07`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T224121Z-fleet03-B07-qform-r40/REPORT.md`.
 
@@ -284,7 +284,7 @@ The construction is therefore excluded from the actual overlap chamber `E0<1/4`:
 
 The pinned completed source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 

@@ -3,7 +3,7 @@ attacking: opposite-sign pair plus an overlapping independent scalar bank: compl
 
 # Early substantive checkpoint
 
-The designated fleet02/B11 theorem at `math-open-problems@f2835c54b9f384f8f83e34c46bef5c40953e32a7` pays the disjoint case
+The designated fleet02/B11 theorem at `private-source@f2835c54b9f384f8f83e34c46bef5c40953e32a7` pays the disjoint case
 
 `U^T B U + affine(U) + dW^2+2rW`,
 

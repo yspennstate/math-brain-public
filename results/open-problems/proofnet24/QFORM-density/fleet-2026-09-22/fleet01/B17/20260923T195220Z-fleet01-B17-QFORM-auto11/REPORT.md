@@ -18,7 +18,7 @@ Fresh brain control used owner revision `2026-09-22.15`; QFORM is the sole resea
 
 Designated partner source consumed in full:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `3d6bfeb739f349e0b01175bf96c773787f6761f4`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T181721Z-fleet02-B17-QFORM-auto11/REPORT.md`
 - checker at the same commit/path, `CHECK.py`.

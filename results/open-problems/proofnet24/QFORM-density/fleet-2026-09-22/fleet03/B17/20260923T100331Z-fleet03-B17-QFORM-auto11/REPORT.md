@@ -10,7 +10,7 @@ This report proves a new supporting sharp-witness theorem.  It does **not** prov
 
 The designated completed partner result actually used is fleet04/B17:
 
-`yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`,
+`private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`.
 
 It gives the exact rational rotated frame and the weighted local Edgeworth estimate
@@ -27,7 +27,7 @@ Thus every universal constant satisfies `C_* >= 3 sqrt(2)`.
 
 A worker-owned dependency used below is the arbitrary-mean Gaussian ceiling
 
-`yspennstate/math-open-problems@dcf8885d5153370cacfa246ad1e29fb06d971769`,
+`private-source-repository@dcf8885d5153370cacfa246ad1e29fb06d971769`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T070310Z-fleet03-B17-QFORM-r25/REPORT.md`.
 
 It proves that if `G~N(h,I_3/12)` and `J=diag(1,1,-1)`, then

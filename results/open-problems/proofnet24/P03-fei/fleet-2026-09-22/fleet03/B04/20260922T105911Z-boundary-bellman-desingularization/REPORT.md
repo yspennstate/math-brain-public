@@ -19,7 +19,7 @@ The current correction bundle retires the old fixed-potential quadratic repairs 
 
 ### Assigned partner status
 
-The assigned partner is `fleet04/B04`, whose current FEI assignment is the all-bias/face-contraction extension problem. At the fresh source snapshot there was **no completed FEI report or handoff from fleet04/B04** in either its assigned `math-open-problems` FEI root or the shared FEI handoff root. I therefore did not manufacture a partner theorem or wait synchronously.
+The assigned partner is `fleet04/B04`, whose current FEI assignment is the all-bias/face-contraction extension problem. At the fresh source snapshot there was **no completed FEI report or handoff from fleet04/B04** in either its assigned `private-source` FEI root or the shared FEI handoff root. I therefore did not manufacture a partner theorem or wait synchronously.
 
 The compatible completed other-account result consumed is fleet04/B13,
 

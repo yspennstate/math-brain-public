@@ -59,4 +59,4 @@ and summing over `i in H` yields
 
 So the two-rank-two gate has a rigorous diffuse whole-bank payment and a rigorous single-transverse-row payment. The remaining obstruction after these two exits is aggregate transverse mass spread over many individually small rows and/or nearly parallel kernel planes, plus the separate arbitrary-extra-spectrum descent.
 
-Primary sources actually used at equations: Claude Theorem F at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`; fleet03/B19 r21 at `4b6025f5928ab6a35f3637965dd4639768c76087`; cross-transverse theorem at `8d262d18e5581cd02b8ea8be5102aa2a6d30ddd7`; rank-two half-Riesz theorem at `e542b1a6ef471b329e4e88a6553e1aacb45acc1a`.
+Primary sources actually used at equations: Claude Theorem F at `private-source@e5f71d79eff325201dd0274053d20268ce65b837`; fleet03/B19 r21 at `4b6025f5928ab6a35f3637965dd4639768c76087`; cross-transverse theorem at `8d262d18e5581cd02b8ea8be5102aa2a6d30ddd7`; rank-two half-Riesz theorem at `e542b1a6ef471b329e4e88a6553e1aacb45acc1a`.

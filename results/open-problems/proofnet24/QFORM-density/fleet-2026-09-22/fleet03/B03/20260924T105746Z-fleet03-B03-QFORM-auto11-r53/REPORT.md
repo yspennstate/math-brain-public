@@ -231,7 +231,7 @@ This example lies outside r52's exact zero-pivot hypothesis; the new time estima
 
 The latest completed designated-partner report is
 
-`yspennstate/math-open-problems@fbe1dfba05eea312d8f12f22f2132476758039a8`
+`private-source-repository@fbe1dfba05eea312d8f12f22f2132476758039a8`
 
 at
 
@@ -269,6 +269,6 @@ The unrestricted three-large-eigenvalue conjecture remains **OPEN**. Full-target
 
 - live corrections reread from the same fresh main;
 - prior r52 zero-pivot report: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260924T095801Z-fleet03-B03-QFORM-auto11-r52/REPORT.md`;
-- completed partner r5: `yspennstate/math-open-problems@fbe1dfba05eea312d8f12f22f2132476758039a8`, path given in Section 7.
+- completed partner r5: `private-source-repository@fbe1dfba05eea312d8f12f22f2132476758039a8`, path given in Section 7.
 
 Repository use is not native learned-memory ingestion. Execution remains `WITHOUT_VERIFIED_BRAIN` unless a separate authenticated receiver use is actually observed.

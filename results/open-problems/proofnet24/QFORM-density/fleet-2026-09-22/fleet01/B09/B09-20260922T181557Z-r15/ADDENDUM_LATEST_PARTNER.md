@@ -4,7 +4,7 @@ After the main r15 report was committed, the newest assigned-partner result beca
 
 - fleet02/B09 run `20260922T181745Z-fleet02-B09-QFORM-r6`;
 - theorem `QFORM-ZEROINTERNAL-BANK-WEDGE-v1`;
-- canonical source `yspennstate/math-open-problems@de2e592f5ba2ee9ed9ff152afa6a8856f3e29e1f`;
+- canonical source `private-source-repository@de2e592f5ba2ee9ed9ff152afa6a8856f3e29e1f`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T181745Z-fleet02-B09-QFORM-r6/REPORT.md`.
 
 The theorem states: for disjoint original-coordinate banks `I,J,K`, if `A[I,I]=0` and `B=A[I,J]` has two nonzero singular values `s1>=s2>0`, then, with arbitrary curvature/couplings on the other banks,

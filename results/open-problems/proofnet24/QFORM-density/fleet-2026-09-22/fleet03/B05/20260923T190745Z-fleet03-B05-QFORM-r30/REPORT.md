@@ -13,17 +13,17 @@ attacking: QFORM-TWISTED-TWOHUB-PARTNER-PLANE-TRACE-v1 — determine exactly whe
 
 The immediate B05 predecessor is
 
-`yspennstate/math-open-problems@d13d6e8e5ee6d13d7dcc36ae1dd3fdb661f64b59:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T173708Z-fleet03-B05-QFORM-r30/REPORT.md`.
+`private-source-repository@d13d6e8e5ee6d13d7dcc36ae1dd3fdb661f64b59:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T173708Z-fleet03-B05-QFORM-r30/REPORT.md`.
 
 It proved the independent product-kernel half-Riesz splice and showed, on a target-valid four-variable stress form, that completing both scalar directions before averaging can erase the third curvature and leave a logarithmically divergent conditional envelope.
 
 The earlier currency calculation is
 
-`yspennstate/math-open-problems@954c8b881c4c60ac643b7c68da6d1ce924e6427f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T172119Z-fleet03-B05-QFORM-r29/REPORT.md`.
+`private-source-repository@954c8b881c4c60ac643b7c68da6d1ce924e6427f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T172119Z-fleet03-B05-QFORM-r29/REPORT.md`.
 
 The current verified interactive continuation used here is
 
-`yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`.
+`private-source-repository@c4c23b784395630c094ba299a50712209921d1ae:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`.
 
 Its Theorems 6.4 and 6.5 are useful as a diagnostic: Theorem 6.4 closes two hubs when the light remainder has a positive-power interval profile on the full two-partner slices, while Theorem 6.5 closes two hubs when some coordinate split leaves a Frobenius amount of remainder curvature transverse to the two partner rows. This report proves that **neither resource can see the r29 transverse currency `U` in the live ratio packet**: after both partner coordinates are exposed, `U` lies entirely inside their own plane and is frozen, not transverse.
 
@@ -254,7 +254,7 @@ If `tau` collapses, this normal form is not the right receiver; that branch retu
 
 The completed designated partner result
 
-`yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
+`private-source-repository@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
 
 proves
 
@@ -280,7 +280,7 @@ The new theorem addresses the complementary genuinely two-partner diffuse branch
 
 As a consistency check, the completed fleet02/B05 localized double-zero theorem at
 
-`yspennstate/math-open-problems@fcb8ba61036bee6535de7b0fb0077bb07d76bea6`
+`private-source-repository@fcb8ba61036bee6535de7b0fb0077bb07d76bea6`
 
 closes the earlier target-valid stress example by a different completion order. That is consistent with this report: the obstruction is to **full two-partner slicing as a universal interface**, not to boundedness of the actual target law.
 

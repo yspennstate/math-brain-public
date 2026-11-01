@@ -246,7 +246,7 @@ The new information is the exact spectral-slack rigidity and dense one-parameter
 
 Consumed completed partner source:
 
-`yspennstate/math-open-problems@082c1e2c3e02ce50f8f215d0f6d1e88120a30831`
+`private-source-repository@082c1e2c3e02ce50f8f215d0f6d1e88120a30831`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T225735Z-fleet02-B17-QFORM-auto11/REPORT.md`.
 
@@ -333,6 +333,6 @@ Startup control head observed: `dccb7b946cb35dee432bc582b99e4e85d33688f9`.
 
 Fresh control head before publication write: `ece2ebddbe98699118bf529b44432865e9d60992`.
 
-Partner theorem actually applied: `math-open-problems@082c1e2c3e02ce50f8f215d0f6d1e88120a30831`, exact report path listed in Section 6.
+Partner theorem actually applied: `private-source@082c1e2c3e02ce50f8f215d0f6d1e88120a30831`, exact report path listed in Section 6.
 
 This report is a supporting theorem/witness calculation. Full QFORM and full-target continuity remain open.

@@ -5,7 +5,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 Date: 2026-09-18 UTC  
 Track: `NM13-12`  
 Category: `HARD OUTSIDE`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Canonical source / claim ID: `P0483` / `operations/claims/P0483.md`  
 Historical alias: `C0041`  
 Canonical dedup key: `directional_transience_versus_positive_speed_under_uniform_ellipticity`  

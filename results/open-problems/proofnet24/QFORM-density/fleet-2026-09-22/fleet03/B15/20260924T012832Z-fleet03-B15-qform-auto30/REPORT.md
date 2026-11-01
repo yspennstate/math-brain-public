@@ -18,8 +18,8 @@ The new estimate is stronger than the previous square-root small-ball averaging 
 
 Dependencies used at their exact scope:
 
-1. the completed physical-pair logarithmic envelope from fleet03/B15 auto27, `yspennstate/math-open-problems@2f36eb6204ac8598eaf63faed15f9fa7fddffd0c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T222614Z-fleet03-B15-qform-auto27/REPORT.md`;
-2. the completed designated-partner same-constant regularity compiler from fleet04/B15 r8, `yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T221909Z-fleet04-B15-ruled-trace-c0-r8/REPORT.md`.
+1. the completed physical-pair logarithmic envelope from fleet03/B15 auto27, `private-source-repository@2f36eb6204ac8598eaf63faed15f9fa7fddffd0c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T222614Z-fleet03-B15-qform-auto27/REPORT.md`;
+2. the completed designated-partner same-constant regularity compiler from fleet04/B15 r8, `private-source-repository@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T221909Z-fleet04-B15-ruled-trace-c0-r8/REPORT.md`.
 
 The current correction set is respected, including the false law-uniform pointwise quadratic decay, the failure of naive fiber-sup integration, loss of independence after spectral rotation, the withdrawn nonzero-square affine-slope rescue from fleet03/B15 auto26, and the warning that a slope innovation does not absorb an arbitrary same-bank quadratic remainder. The theorem below assumes the exact zero-diagonal Schur mixed edge it actually uses; it does not silently replace an arbitrary remainder by one.
 

@@ -334,7 +334,7 @@ This is a structural strengthening of the known lower obstruction, not a proof t
 
 The newest completed designated partner result read and applied in this run is
 
-`yspennstate/math-open-problems@c9a6d151fa7192bfb3bb973de4fd09823e707b55:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T204259Z-fleet02-B17-QFORM-auto11/REPORT.md`,
+`private-source-repository@c9a6d151fa7192bfb3bb973de4fd09823e707b55:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T204259Z-fleet02-B17-QFORM-auto11/REPORT.md`,
 
 `QFORM-DENSE-FRAGMENT-GLOBAL-AGGREGATE-v1`.
 

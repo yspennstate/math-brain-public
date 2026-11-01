@@ -17,7 +17,7 @@ The target remains: for every `n`, independent real original-coordinate variable
 
 The immediate fleet03/B16 predecessor is
 
-`yspennstate/math-open-problems@a398a1c2e6e97683e3fe594fa19476929a882be6`
+`private-source-repository@a398a1c2e6e97683e3fe594fa19476929a882be6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T045948Z-fleet03-B16-QFORM-r26/REPORT.md`.
 
@@ -25,7 +25,7 @@ It closes every branch of the current exact-rank-three dominant-star compiler ex
 
 A second source used below is fleet02/B16's completed semi-aligned source-scalar theorem,
 
-`yspennstate/math-open-problems@2eaaea917e087d7cf276dc37714e02af3a50d64a`
+`private-source-repository@2eaaea917e087d7cf276dc37714e02af3a50d64a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T082859Z-fleet02-B16-QFORM-r11/REPORT.md`.
 
@@ -361,7 +361,7 @@ The committed checker records the exact determinant/Schur identities, the spectr
 
 The designated partner report is
 
-`yspennstate/math-open-problems@b111363ff02b67015d14db35482e0150591744cd`
+`private-source-repository@b111363ff02b67015d14db35482e0150591744cd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T231542Z-fleet04-B16-QFORM-r1/REPORT.md`.
 

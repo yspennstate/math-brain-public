@@ -6,13 +6,13 @@ This addendum preserves the immutable primary `REPORT.md` and adds a sharper sam
 
 ## 1. Sources used at equations
 
-1. Claude/e5 Theorem D: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. For a physical cross block with `Z=e_3(M^T M)` and determinant-squared row marginals at most `1/2`,
+1. Claude/e5 Theorem D: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. For a physical cross block with `Z=e_3(M^T M)` and determinant-squared row marginals at most `1/2`,
 
 `||p_Q||_inf <= 6 sqrt(e) Z^(-1/6)`.
 
 Its arbitrary-weight variant replaces `Z` by `G(w)=exp(E_w log det^2+H(w))`.
 
-2. Fresh designated partner fleet03/B04 r24: `yspennstate/math-open-problems@a11e719b61c4be07fae4e2dcfa4d88d31812d0d9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260923T034739Z-r24/REPORT.md`. It independently checked the completed ridge theorem: with
+2. Fresh designated partner fleet03/B04 r24: `private-source-repository@a11e719b61c4be07fae4e2dcfa4d88d31812d0d9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260923T034739Z-r24/REPORT.md`. It independently checked the completed ridge theorem: with
 
 `K_gamma=BB^T(gamma^2 I+BB^T)^(-1)`, `theta=tr K_gamma`,
 
@@ -22,7 +22,7 @@ if `max diag K_gamma<=1/2` and `theta>2`, then
 
 All self blocks and outside couplings remain unrestricted. Its spectral-window theorem also records that failure of diffuse high-spectrum leverage forces a genuine physical pivot/star.
 
-3. Rank-two product-Fourier exit: `yspennstate/math-open-problems@36263ba314738468f934a5b3245130b6754e940f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T184627Z-r15/REPORT.md`, theorem `QFORM-ONE-SIDED-SEPARABLE-CROSS-DIFFUSE-v1`. For rank two with singular-value product `D_2`, left-frame leverage at most `1/2`, coordinate-separable left-bank phase/curvature and arbitrary right-bank term,
+3. Rank-two product-Fourier exit: `private-source-repository@36263ba314738468f934a5b3245130b6754e940f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T184627Z-r15/REPORT.md`, theorem `QFORM-ONE-SIDED-SEPARABLE-CROSS-DIFFUSE-v1`. For rank two with singular-value product `D_2`, left-frame leverage at most `1/2`, coordinate-separable left-bank phase/curvature and arbitrary right-bank term,
 
 `||p_Q||_inf <= 2 sqrt(2e) D_2^(-1/2)`.                            (1.2)
 

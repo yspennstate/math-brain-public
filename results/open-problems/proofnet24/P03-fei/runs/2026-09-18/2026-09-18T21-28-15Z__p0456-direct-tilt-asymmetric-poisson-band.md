@@ -7,7 +7,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED. This is not GPT-
 Run timestamp: **2026-09-18T21:28:15Z**  
 Track: **P03**  
 Canonical target: **P0456**  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Category: **HARD OUTSIDE**
 
 ---

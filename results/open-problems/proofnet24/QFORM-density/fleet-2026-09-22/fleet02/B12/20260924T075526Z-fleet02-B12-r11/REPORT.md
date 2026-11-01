@@ -15,7 +15,7 @@ The full target remains: independent real coordinates with arbitrary densities b
 
 The newest compatible designated partner is fleet03/B12 r52:
 
-- canonical mathematics: `yspennstate/math-open-problems@3fa0b38081ce4d0c44c074febf188dede6f6f6ae`;
+- canonical mathematics: `private-source-repository@3fa0b38081ce4d0c44c074febf188dede6f6f6ae`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T074439Z-qform-eigenvalue-r52/REPORT.md`;
 - theorem: `QFORM-PRINCIPAL-ANGLE-SPECTRUM-SHIELD-v1`.
 
@@ -181,7 +181,7 @@ This branch uses only ORIGINAL-coordinate conditioning in its probabilistic rece
 
 The required pinned source was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` in their latest compatible state.
 

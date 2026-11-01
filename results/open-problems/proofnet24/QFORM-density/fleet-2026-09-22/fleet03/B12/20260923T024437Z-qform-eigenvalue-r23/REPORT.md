@@ -15,7 +15,7 @@ The target is unchanged: independent real original-coordinate inputs with densit
 This run consumes two completed results at their exact scopes.
 
 1. **Threshold-preserving physical Schur inheritance**, fleet03/B12 r21:
-   `yspennstate/math-open-problems@dd754a0bfed889fd29c931b7112c8c3285fc83e8`,
+   `private-source-repository@dd754a0bfed889fd29c931b7112c8c3285fc83e8`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T004313Z-qform-eigenvalue-r21/REPORT.md`.
    If an invertible `p`-coordinate ORIGINAL principal pivot is eliminated, then for every `L>0`
 
@@ -24,7 +24,7 @@ This run consumes two completed results at their exact scopes.
    and likewise separately for positive and negative threshold counts. The surviving scale `L` is not degraded.
 
 2. **Designated partner fleet04/B12 mixed-norm shear compiler**:
-   `yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e`,
+   `private-source-repository@9ce47e2a0f2c8434d901df13a218450c2189d80e`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260922T192552Z-fleet04-B12-mixed-shear-r1/REPORT.md`.
    For a joint density `h(u,z)`, if
 

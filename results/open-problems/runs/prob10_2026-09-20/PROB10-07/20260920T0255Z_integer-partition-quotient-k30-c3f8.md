@@ -2,7 +2,7 @@ Runtime model/effort: **UNVERIFIED**. GPT-6 maximum was requested, but no authen
 
 # PROB10-07 — symmetry-quotient Rayleigh certificates for `K_{m,n}`, widths 10 through 30
 
-Repository/branch: private `yspennstate/math-open-problems` / `master`  
+Repository/branch: private `private-source-repository` / `master`  
 Parent: Grimmett–Winkler pairwise negative correlation for the uniform measure on **all forests**  
 Status: **PARTIAL / universal conjecture OPEN**  
 Artifact stem: `20260920T0234Z_integer-partition-quotient`

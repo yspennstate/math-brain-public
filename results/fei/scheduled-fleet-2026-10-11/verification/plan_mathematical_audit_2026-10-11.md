@@ -221,12 +221,12 @@ Acceptance must distinguish a new identity, a new restricted theorem, a known id
 
 The recovered reductions files are included in the input hash ledger and should be distributed with their exact theorem labels and supporting checks.
 
-The mismatch/KL source is math-open-problems commit fe94de760ee2b47545419a7447b492816bd16045, path proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+0300__fei-isospectral-splicing-symmetry-quotient.md, Theorems 3.1–5.1, blob 3421c0cbfd22031554befb962ec92cd0c8bb45b9.
+The mismatch/KL source is private-source commit fe94de760ee2b47545419a7447b492816bd16045, path proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+0300__fei-isospectral-splicing-symmetry-quotient.md, Theorems 3.1–5.1, blob 3421c0cbfd22031554befb962ec92cd0c8bb45b9.
 
 The fixed-convolution-order source at the same commit is proofnet24/P03-fei/continuations/2026-09-20-booleanity-order/REPORT.md, Theorem 2.1 and later strengthened variants, blob 721f6c2216fbca989bbe1e9f48fe7cacdf9832a3.
 
 The normalized convolution source at the same commit is research_pushes/2026-09-30-fei-normalized-convolution-0236z/REPORT.md, blob 43f02ba681df60762b28515540a8f851f95286ba. Its later output-enclosure correction is separately identified in the recovered route map; copying an old rounded “interval” is not a rigorous numerical certificate.
 
-The phase-energy addendum points to math-open-problems commit 0c5ada5a0b8ef28902a444fd190644ebd75cb84f, its boolean-phase-padding-energy archive, reviewed REPORT SHA-256 29de09cee7fcc57e95e881ca1cb3b41176bba421f79405ca3062bee10734f3e6. Its conditional-completion scope guard is at commit 456cb7cd81afe54a7830f2255adbbdec96f971e7, CONDITIONAL_SCOPE_ROOT_REVIEW.md, blob 7ebadc2879039707d61328cbc37eaaf82d20e14b.
+The phase-energy addendum points to private-source commit 0c5ada5a0b8ef28902a444fd190644ebd75cb84f, its boolean-phase-padding-energy archive, reviewed REPORT SHA-256 29de09cee7fcc57e95e881ca1cb3b41176bba421f79405ca3062bee10734f3e6. Its conditional-completion scope guard is at commit 456cb7cd81afe54a7830f2255adbbdec96f971e7, CONDITIONAL_SCOPE_ROOT_REVIEW.md, blob 7ebadc2879039707d61328cbc37eaaf82d20e14b.
 
 These are source locators for mathematical work, not an assertion of fresh external retrieval, native Brain ingestion, formal certification, or a solved conjecture.

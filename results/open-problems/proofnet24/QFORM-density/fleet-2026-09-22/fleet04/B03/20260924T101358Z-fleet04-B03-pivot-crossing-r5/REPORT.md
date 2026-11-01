@@ -70,7 +70,7 @@ B=B_0-d^{-1}a_Xa_Y^T.
 \tag{2.3}
 \]
 The completed fleet01/B03 theorem QFORM-BIPARTITE-MOYAL-CS-v1, at
-math-open-problems commit
+private-source commit
 \[
 \texttt{6c4698000d4fd206b465a18231ba8c7a8f643f59},
 \]
@@ -189,8 +189,8 @@ The next useful splice is therefore a dichotomy between:
 
 - Owner/control revision read from fresh math-research-brain main: 2026-09-22.15.
 - Current continuation request: QFORM-CLAUDE-LATEST-20260922T225732Z.
-- Completed partner theorem: fleet01/B03 QFORM-BIPARTITE-MOYAL-CS-v1, math-open-problems commit 6c4698000d4fd206b465a18231ba8c7a8f643f59.
-- Prior fleet04/B03 overlap-two localization: math-open-problems commit 5f93186cf8952b2b8b0255e08a78fd8506c613e4.
-- Prior fleet04/B03 hyperbola four-volume branch: math-open-problems commit 8147f1247043e419eb6762911c4a34fa58494d0f.
+- Completed partner theorem: fleet01/B03 QFORM-BIPARTITE-MOYAL-CS-v1, private-source commit 6c4698000d4fd206b465a18231ba8c7a8f643f59.
+- Prior fleet04/B03 overlap-two localization: private-source commit 5f93186cf8952b2b8b0255e08a78fd8506c613e4.
+- Prior fleet04/B03 hyperbola four-volume branch: private-source commit 8147f1247043e419eb6762911c4a34fa58494d0f.
 
 Repository publication is not native learned-memory ingestion. Unexposed model and thinking metadata remain UNKNOWN.

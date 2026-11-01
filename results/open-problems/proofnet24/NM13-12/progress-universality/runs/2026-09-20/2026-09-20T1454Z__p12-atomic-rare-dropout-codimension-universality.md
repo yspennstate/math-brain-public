@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED.**
 
 # NM13-12 — atomic rare-dropout codimension universality
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: `NM13-12` / `proofnet24/NM13-12/progress-universality`  
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`, current LIVE20 mapping  
 Primary applied parent: **P12 unresolved triangular/universality successor**  

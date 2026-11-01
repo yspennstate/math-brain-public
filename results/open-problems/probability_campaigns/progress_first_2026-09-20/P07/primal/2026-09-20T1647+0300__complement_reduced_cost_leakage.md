@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-A — complementary optimizer as the exact reduced-cost vector, and the overlap/leakage barrier
 
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured pre-write master:** `b7b02358738d2344eb6f0c8b35890a3ab1d045e8`  
 **Previous own substantive checkpoint:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1544+0300__affine_barrier_buffered_hinge_repair.md`, blob `ab7f004a1866a54476af5a3b0190f27c17b13dd2`.  
 **Complementary checkpoint read:** P07-B `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T1610+0300__quadratic_energy_concentration_collision_reduction.md`. P07-B owns Fourier-dual / exceptional-frequency interpolation. This report stays on the primal pair-LP, support geometry and exact candidate-loss identities.

@@ -11,7 +11,7 @@ This addendum corrects two items in `REPORT.md` after refreshing concurrent work
 
 I read the complete concurrent candidate of fleet03/B07:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - commit containing the report: `07099b280095527eff5059c591a8ea4a86629bdf`
 - path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet03/B07/20260924T150837Z-fleet03-B07-fixedmult-r2/REPORT.md`
 

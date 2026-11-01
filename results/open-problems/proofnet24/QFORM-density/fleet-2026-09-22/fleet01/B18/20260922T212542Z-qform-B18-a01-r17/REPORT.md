@@ -23,7 +23,7 @@ Continuity is not claimed by this argument.
 
 Designated partner `fleet02/B18`, canonical report:
 
-`yspennstate/math-open-problems@6cda809756c61201f08cdee2dd7e07f20e5d5596`
+`private-source-repository@6cda809756c61201f08cdee2dd7e07f20e5d5596`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260922T203852Z-b18-qform-lit-r12/REPORT.md`.
 
@@ -59,7 +59,7 @@ while the distinguished original scalar is independent of the **entire original 
 
 The second dependency is the completed arbitrary-rank small-ball lemma from
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 

@@ -17,7 +17,7 @@ The useful route in this run is a direct fractional trace. It is compatible with
 
 ## 2. Source-pinned completed partner result actually applied
 
-I apply the designated partner fleet02/B02 completed theorem `QFORM-PAIR-FRACTIONAL-TRACE-TRANSDUCER-v1`, source repository `yspennstate/math-open-problems`, commit `853a4e86c7ff9789891c473905eeb57b13f615ed`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T190827Z-fleet02-B02-40617e89/REPORT.md`.
+I apply the designated partner fleet02/B02 completed theorem `QFORM-PAIR-FRACTIONAL-TRACE-TRANSDUCER-v1`, source repository `private-source-repository`, commit `853a4e86c7ff9789891c473905eeb57b13f615ed`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T190827Z-fleet02-B02-40617e89/REPORT.md`.
 
 Let an invertible indefinite original-coordinate physical pair have principal block `B`, put `D=|det B|`, `kappa=sigma_min(B)`, and after completing that pair let `R` denote the residual scalar random variable, with arbitrary residual-dependent translation of the pair permitted. For `H_alpha(R)=sup_s E |R-s|^(-alpha)`, `0<alpha<=1/2`, fleet02/B02 proves
 

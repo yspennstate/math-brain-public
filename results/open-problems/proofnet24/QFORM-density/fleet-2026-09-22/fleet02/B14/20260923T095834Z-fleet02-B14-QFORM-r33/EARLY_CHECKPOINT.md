@@ -48,7 +48,7 @@ Partner fleet03/B14 r32 supplies an exact source-valid way to obtain such mass s
 
 Summing arbitrary countably many remote X3 fragments is therefore exact-zero-loss while R may depend arbitrarily on the same shear bank.
 
-Required newest-Claude source applied at an actual inequality: Theorem H in math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 gives, for a one-hub diagonal-leaf star with leaf coefficient vector c satisfying max_i c_i^2/||c||_2^2<=1/2,
+Required newest-Claude source applied at an actual inequality: Theorem H in private-source@e5f71d79eff325201dd0274053d20268ce65b837 gives, for a one-hub diagonal-leaf star with leaf coefficient vector c satisfying max_i c_i^2/||c||_2^2<=1/2,
 
 |phi_Y(t)| <= 2pi/(||c||_2 |t|).
 

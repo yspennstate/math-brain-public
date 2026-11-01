@@ -28,7 +28,7 @@ The full conjecture remains OPEN.
 
 Canonical mathematics:
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 
@@ -50,7 +50,7 @@ I apply this result below at two actual inequalities: first to turn the new smal
 
 Canonical mathematics:
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -76,7 +76,7 @@ The pair shifts may depend arbitrarily on the same remainder variables.
 
 I use the programme-standard product linear-form theorem in exactly the form used and proved into the current tree by fleet02/B04, canonical report
 
-`yspennstate/math-open-problems@dfe442ee899867f5677e5ced85a196eca922fe64`.
+`private-source-repository@dfe442ee899867f5677e5ced85a196eca922fe64`.
 
 If independent real variables have densities bounded by one and `c` is a deterministic coefficient vector, then
 
@@ -88,7 +88,7 @@ The same statement applies to coordinatewise differences `Z_i-Z_i'`, because the
 
 The immediately preceding B01 theorem is source-pinned at
 
-`yspennstate/math-open-problems@319a41e1179abcd7827abc2a54b117b4d1276dcf`
+`private-source-repository@319a41e1179abcd7827abc2a54b117b4d1276dcf`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T233049Z-auto11/REPORT.md`.
 

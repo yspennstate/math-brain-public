@@ -16,7 +16,7 @@ The full target remains open: for every dimension, independent real coordinates 
 
 This run works only in original physical coordinates. It does not rotate the independent input variables, does not invoke law-uniform pointwise quadratic-phase decay, does not take an unrestricted fiber supremum, and does not pay by inverting one tiny coordinate minor.
 
-Owner control revision `.11` proposed a worst-case scalar-`Q_rest` conditional-density bridge. A concurrent completed correction from fleet03/B16, `yspennstate/math-open-problems@850ab3e996732591f8bf32b3f905528079545870`, proves that this worst-condition bridge is itself unbounded even for a diagonal target form whose full density is bounded by `pi`. Thus the identity behind scalar conditioning remains valid, but the universal `sup_b` interface is not available. The present coordinate/ridge mechanism does not use that retired interface.
+Owner control revision `.11` proposed a worst-case scalar-`Q_rest` conditional-density bridge. A concurrent completed correction from fleet03/B16, `private-source-repository@850ab3e996732591f8bf32b3f905528079545870`, proves that this worst-condition bridge is itself unbounded even for a diagonal target form whose full density is bounded by `pi`. Thus the identity behind scalar conditioning remains valid, but the universal `sup_b` interface is not available. The present coordinate/ridge mechanism does not use that retired interface.
 
 The designated partner `fleet04/B07` still had no completed current-QFORM artifact in the fresh canonical/search check. No partner result is fabricated. Two completed compatible peer results are used below at their exact scopes:
 
@@ -27,7 +27,7 @@ The designated partner `fleet04/B07` still had no completed current-QFORM artifa
 
 The newest compatible B07 state before this run is
 
-`yspennstate/math-open-problems@f2d3682e9f9d24d67ea14dc990d9f49bebeb5a6e`,
+`private-source-repository@f2d3682e9f9d24d67ea14dc990d9f49bebeb5a6e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T173711Z-fleet03-B07-qform-r13/REPORT.md`.
 

@@ -29,7 +29,7 @@ Read back your committed acknowledgement and report its actual commit. Preserve 
 
 ## Exact target
 
-Repository: `yspennstate/math-open-problems`
+Repository: `private-source-repository`
 
 Repaired manuscript commit: `4e530247ec0ef4101a6e5ecf621bd35a969c42aa`
 

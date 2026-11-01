@@ -236,7 +236,7 @@ Continuity is **not** claimed by this argument.
 
 The latest completed `fleet02/B17` theorem is source-pinned at
 
-`yspennstate/math-open-problems@189fc052089ae2d3237bc0865b290b01b26a6513`
+`private-source-repository@189fc052089ae2d3237bc0865b290b01b26a6513`
 
 and proves the exact finite extremizer for
 
@@ -269,7 +269,7 @@ This is now inserted into a quantitative inequality rather than merely cited.
 
 For `m>=2`, the residual two-frame behind `S_m^2-T_m^2` has `2m` rows, each of leverage `1/m<=1/2`, and spectral matrix `Gamma=diag(1,-1)`, hence `|det Gamma|=1`. The completed fleet03/B01 sharp dependence-safe square theorem at
 
-`yspennstate/math-open-problems@a80bb254a3a1e2883cbfabdf03b53919d6621990`
+`private-source-repository@a80bb254a3a1e2883cbfabdf03b53919d6621990`
 
 (or its full r12 exposition at `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260922T142626Z-fleet03-B01-qform-r12/REPORT.md`) gives
 
@@ -341,9 +341,9 @@ Neither theorem is the unrestricted QFORM result.
 
 ## 9. Source pins
 
-* Designated partner actually applied: `yspennstate/math-open-problems@189fc052089ae2d3237bc0865b290b01b26a6513`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T031047Z-fleet02-B17-QFORM-r11/REPORT.md`.
-* Partner weighted Edgeworth source note: `yspennstate/math-open-problems@66ff43d64083414ef8e64f5702e3e4f085a9f877`.
-* Sharp dependent-square/diffuse rank-two input: `yspennstate/math-open-problems@a80bb254a3a1e2883cbfabdf03b53919d6621990`; expanded source `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260922T142626Z-fleet03-B01-qform-r12/REPORT.md`.
+* Designated partner actually applied: `private-source-repository@189fc052089ae2d3237bc0865b290b01b26a6513`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T031047Z-fleet02-B17-QFORM-r11/REPORT.md`.
+* Partner weighted Edgeworth source note: `private-source-repository@66ff43d64083414ef8e64f5702e3e4f085a9f877`.
+* Sharp dependent-square/diffuse rank-two input: `private-source-repository@a80bb254a3a1e2883cbfabdf03b53919d6621990`; expanded source `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260922T142626Z-fleet03-B01-qform-r12/REPORT.md`.
 * Older arbitrary invertible physical-three-block theorem: `qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`.
 * Target-level diffuse lower-bound / first-correction source: `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T123638Z-fleet01-B17-qform-diffuse-edgeworth-v1/REPORT.md`.
 

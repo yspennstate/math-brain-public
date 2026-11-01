@@ -18,7 +18,7 @@ No Gaussianity, log-concavity, moment, compact-support, connected-support, iid, 
 
 The completed designated partner actually applied is fleet04/B12 r8:
 
-- repository/commit: `yspennstate/math-open-problems@bcb9fd2641440a89d6e4967781d755618e163001`;
+- repository/commit: `private-source-repository@bcb9fd2641440a89d6e4967781d755618e163001`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T002154Z-fleet04-B12-multihub-shear-r8/REPORT.md`;
 - theorem: `QFORM-MULTIHUB-ALIGNED-SPECTRAL-PACKET-STABILITY-v1`.
 

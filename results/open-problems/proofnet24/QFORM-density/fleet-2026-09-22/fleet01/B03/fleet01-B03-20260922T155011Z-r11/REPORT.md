@@ -35,7 +35,7 @@ The new argument works entirely with genuine integrated `L2` time budgets.
 
 Completed partner report:
 
-`yspennstate/math-open-problems@f40d5d4f5013b0a6af275a19aa3dc0fa2d76c347:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T150949Z-fleet02-B03-QFORM-r11/REPORT.md`.
+`private-source-repository@f40d5d4f5013b0a6af275a19aa3dc0fa2d76c347:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T150949Z-fleet02-B03-QFORM-r11/REPORT.md`.
 
 For independent cap-one real variables `X,Y`, arbitrary deterministic shifts `alpha,beta`, and `c!=0`, the partner proves
 
@@ -55,7 +55,7 @@ This exact partner inequality is used in Theorem 5.1 below.
 
 Previous fleet01/B03 report:
 
-`yspennstate/math-open-problems@3d6fefe9c92674dff38c97ef8a502787ec3426a2:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/fleet01-B03-20260922T144815Z/REPORT.md`.
+`private-source-repository@3d6fefe9c92674dff38c97ef8a502787ec3426a2:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/fleet01-B03-20260922T144815Z/REPORT.md`.
 
 For any quadratic packet on two disjoint original-coordinate banks `U,V`, with arbitrary same-bank quadratic terms and arbitrary linear terms, if the physical cross block `B` has rank two and positive singular-value product
 

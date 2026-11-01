@@ -16,9 +16,9 @@ The target is unchanged: independent original coordinates with scalar probabilit
 
 Mathematical inputs used at their stated scopes:
 
-1. fleet03/B12 r40, scalar physical Schur peel and half-Riesz compiler, `yspennstate/math-open-problems@23fbe7b2134155c764dff7eba9ad8540883befb0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T194742Z-qform-eigenvalue-r40/REPORT.md`.
-2. Projected/grouped crossing theorem, `yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`, path `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
-3. Designated partner fleet04/B12 r7, hybrid two-square-profile stability, `yspennstate/math-open-problems@3df1475f988c811570dc5c249a7756d24adb51bf`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T191531Z-fleet04-B12-hybrid-square-defect-r7/REPORT.md`.
+1. fleet03/B12 r40, scalar physical Schur peel and half-Riesz compiler, `private-source-repository@23fbe7b2134155c764dff7eba9ad8540883befb0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T194742Z-qform-eigenvalue-r40/REPORT.md`.
+2. Projected/grouped crossing theorem, `private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`, path `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
+3. Designated partner fleet04/B12 r7, hybrid two-square-profile stability, `private-source-repository@3df1475f988c811570dc5c249a7756d24adb51bf`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T191531Z-fleet04-B12-hybrid-square-defect-r7/REPORT.md`.
 
 The purpose of this run is to improve the precise r40 obstruction: with only three square-energy modes, a naive scalar peel can lose one of only two cross directions. The new observation is that the loss is quantitative in the norm of the deleted pivot row. Therefore either two directions actually survive and the branch closes, or failure certifies a large physical hub row that can be sent directly to the current grouped-hub theorem.
 

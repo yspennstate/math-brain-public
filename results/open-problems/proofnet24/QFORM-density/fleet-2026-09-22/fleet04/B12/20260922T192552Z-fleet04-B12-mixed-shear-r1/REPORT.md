@@ -106,7 +106,7 @@ The result respects all current corrections: it does not use pointwise van der C
 
 ## Provenance
 
-Partner source: `yspennstate/math-open-problems@75cc1919cc36254668f765d96357f41c4c91bcb6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B12/20260922T182048Z-fleet01-B12-QFORM-r15/REPORT.md`, with correction addendum at `a2e722f65ccc60e5fddc764c7aa429127fee1bf5`.
+Partner source: `private-source-repository@75cc1919cc36254668f765d96357f41c4c91bcb6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B12/20260922T182048Z-fleet01-B12-QFORM-r15/REPORT.md`, with correction addendum at `a2e722f65ccc60e5fddc764c7aa429127fee1bf5`.
 
 
 Repository transport is not native brain ingestion. Status: `WITHOUT_VERIFIED_BRAIN`.

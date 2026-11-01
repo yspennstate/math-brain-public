@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — this is 
 # R13 — Boolean Komlós: exact ceiling for every five-row full-alignment clause template
 
 Run ID: `20260917T1742Z_k5-template-ceiling-recovery2-5f8c`  
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, source scope, and fixed metric
 

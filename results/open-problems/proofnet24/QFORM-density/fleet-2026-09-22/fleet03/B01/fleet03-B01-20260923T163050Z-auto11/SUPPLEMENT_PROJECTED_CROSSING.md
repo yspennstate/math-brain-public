@@ -6,7 +6,7 @@ Status: **PROVED CONDITIONAL EXIT ON THE ACTUAL NEAR-NULL PHYSICAL PARTITION / F
 
 This supplement responds to the later source refresh `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. It applies the new interactive theorem
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`
 
 at the actual physical partition used by fleet04/B01's near-singular overlap-two routing. It does not merely cite the theorem and does not claim that its volume/marginal gates are automatic.

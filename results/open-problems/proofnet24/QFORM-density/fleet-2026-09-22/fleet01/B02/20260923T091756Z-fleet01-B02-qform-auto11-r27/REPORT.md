@@ -18,7 +18,7 @@ The new point is that the latest designated partner `fleet02/B02` result already
 
 Fresh completed source:
 
-`yspennstate/math-open-problems@94189deb89884b0dd57057041ec04f98a85e6764`
+`private-source-repository@94189deb89884b0dd57057041ec04f98a85e6764`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T091200Z-fleet02-B02-QFORM-auto11/REPORT.md`.
 

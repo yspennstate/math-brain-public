@@ -4,10 +4,10 @@ attacking: `QFORM-PAIRPIVOT-GLOBALNULL-TRANSITION-COMPILER-v1`; make the singula
 # fleet03/B06 r55 — pair-pivot transition compiler and product-preserving global-null deletion
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`.  
-Immediate B06 input: `QFORM-HUBSINGULAR-DIFFUSE-PAIRLOG-COMPILER-v1`, `yspennstate/math-open-problems@8bdce354a7ab12c52133f56532d8c7589cc94e98`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T075625Z-fleet03-B06-qform-r54/REPORT.md`.  
-Analytic input actually applied: fleet03/B19 `QFORM-INDEFINITE-PAIR-ARBITRARY-HUB-v1`, source `yspennstate/math-open-problems@68a56e5fdbdc5b2812c544824e4ca584ec014263`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T030233Z-fleet03-B19-QFORM-r23/REPORT.md`.  
-Pair-log input: `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.  
-Designated partner actually applied in Section 8: fleet04/B06 `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, source `yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`.  
+Immediate B06 input: `QFORM-HUBSINGULAR-DIFFUSE-PAIRLOG-COMPILER-v1`, `private-source-repository@8bdce354a7ab12c52133f56532d8c7589cc94e98`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T075625Z-fleet03-B06-qform-r54/REPORT.md`.  
+Analytic input actually applied: fleet03/B19 `QFORM-INDEFINITE-PAIR-ARBITRARY-HUB-v1`, source `private-source-repository@68a56e5fdbdc5b2812c544824e4ca584ec014263`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T030233Z-fleet03-B19-QFORM-r23/REPORT.md`.  
+Pair-log input: `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.  
+Designated partner actually applied in Section 8: fleet04/B06 `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, source `private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`.  
 Execution label: `WITHOUT_VERIFIED_BRAIN`; authenticated repository transport is not native learned-memory ingestion.
 
 The full QFORM conjecture remains OPEN. This run does **not** prove the universal theorem. It supplies an exact, determinant-free transition compiler for a literal indefinite physical pair plus a third physical coordinate. The only zero-currency endpoint is an actual global null vector supported on those three original coordinates; that endpoint can be deleted by conditioning on one original coordinate while preserving the product structure and retaining three spectral directions at a universal scale.
@@ -467,7 +467,7 @@ This is a structural advance, not the full theorem: the remaining global proof m
 
 The freshest completed designated partner result is fleet04/B06 `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, source
 
-`yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`,
+`private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260924T001014Z-fleet04-B06-QFORM-r3/REPORT.md`.
 

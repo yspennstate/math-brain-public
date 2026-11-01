@@ -4,7 +4,7 @@
 
 Objective: `QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925`. Audit only; no lower-threshold or unrelated research.
 
-Exact source: `yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c`.
+Exact source: `private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c`.
 
 - `short.tex`: blob `c4f2a997cf336ee974e15409b5bccdd8cca039d8`, 58,136 bytes, 676 lines, independently recomputed SHA-256 `f4a4f4c6db7f0ad4feffbe04041af3cf1a759fb4cb51f4979b6fd884eba26037`.
 - `short.pdf`: blob `8be3aae36ecad7a9dc9b7c95978aad09499f32d0`, 484,310 bytes, 14 page objects, independently recomputed SHA-256 `4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423`.

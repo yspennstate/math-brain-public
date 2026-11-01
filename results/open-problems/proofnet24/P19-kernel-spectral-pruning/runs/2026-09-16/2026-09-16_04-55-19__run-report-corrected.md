@@ -1,7 +1,7 @@
 # ProofNet24 P19 — Kernel Spectral Pruning — CORRECTED CANONICAL REPORT
 
 **Run timestamp:** 2026-09-16 04:55:19 Asia/Jerusalem  
-**Repository / branch:** `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** `private-source-repository` / `master`  
 **Scope:** singular values/vectors, deterministic spectral/structured pruning, Marchenko–Pastur nulls, neural/random features, kernel/operator-learning prediction risk; **NO number theory**.  
 **Delivery:** GitHub only. No email/Gmail/draft/forward action was used.  
 **Runtime honesty:** the requested GPT-6 / maximum-reasoning selector is not exposed in this runtime. I used the deepest useful reasoning available and do not claim an unexposed model switch, hidden effort override, or independent agents.

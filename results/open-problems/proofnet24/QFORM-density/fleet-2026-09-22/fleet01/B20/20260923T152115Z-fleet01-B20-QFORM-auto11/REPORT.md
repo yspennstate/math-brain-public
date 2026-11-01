@@ -14,7 +14,7 @@ The exact target remains: arbitrary dimension; independent real coordinates with
 
 The fresh completed designated partner actually consumed is fleet02/B20 run `20260923T142651Z-fleet02-B20-QFORM-auto11`, canonical mathematics
 
-`yspennstate/math-open-problems@a996362199678ee069db30c5ab31a44b2d3d29d6`,
+`private-source-repository@a996362199678ee069db30c5ab31a44b2d3d29d6`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T142651Z-fleet02-B20-QFORM-auto11/REPORT.md`.
 

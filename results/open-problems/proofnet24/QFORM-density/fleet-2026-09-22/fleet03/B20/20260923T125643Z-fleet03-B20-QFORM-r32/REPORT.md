@@ -8,7 +8,7 @@
 
 The target is the unrestricted quadratic-form density conjecture for independent original real coordinates with densities bounded by one and a real symmetric matrix with at least three eigenvalues of modulus at least one. No moment, support, log-concavity, Gaussianity, or post-rotation independence assumption is used.
 
-This report starts from the current arbitrary-rank N3 compiler in `yspennstate/math-open-problems@5593a06e6c0d8a346375176fc18181171fdc7ed9`, fleet01/B20 run `20260923T122603Z-fleet01-B20-QFORM-auto11`. In its notation, the unpaid class is
+This report starts from the current arbitrary-rank N3 compiler in `private-source-repository@5593a06e6c0d8a346375176fc18181171fdc7ed9`, fleet01/B20 run `20260923T122603Z-fleet01-B20-QFORM-auto11`. In its notation, the unpaid class is
 
 `N3(1/64): s_3(A)>=1, |A_ii|<1/64, |A_ii A_jj-A_ij^2|<1/64`.
 
@@ -18,7 +18,7 @@ That compiler already pays the fifth-volume and low-leverage `P_16` branches and
 
 where `P_16=1_{|A|>=1/16}` and `P_0=1_{|A|>=1}`.
 
-The unrestricted fifth-volume receiver and its `<201.787` evaluation are used exactly in the scope proved in that source. The ridge receiver used below is the complete supporting theorem at `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`, especially its Sections 5–6.
+The unrestricted fifth-volume receiver and its `<201.787` evaluation are used exactly in the scope proved in that source. The ridge receiver used below is the complete supporting theorem at `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`, especially its Sections 5–6.
 
 ## 2. Annular packet: deterministic conversion to a physical local packet or the existing star4dir packet
 
@@ -218,7 +218,7 @@ A next proof should spend one of those four fixed physical resources with an arb
 
 ## 5. Designated fleet04/B20 result applied at an actual inequality
 
-The freshest completed designated partner handoff consumed here is fleet04/B20 run `20260923T111446Z-fleet04-B20-QFORM-r8`, canonical mathematics `yspennstate/math-open-problems@1d3bcd6c2a19605a6bdcb3fa572b7f85c19369db`.
+The freshest completed designated partner handoff consumed here is fleet04/B20 run `20260923T111446Z-fleet04-B20-QFORM-r8`, canonical mathematics `private-source-repository@1d3bcd6c2a19605a6bdcb3fa572b7f85c19369db`.
 
 On the exact-rank-three overlap where a physical row has spectral leverage
 

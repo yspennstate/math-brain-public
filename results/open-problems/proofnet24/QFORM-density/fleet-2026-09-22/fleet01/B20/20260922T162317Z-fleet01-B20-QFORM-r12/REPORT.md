@@ -14,7 +14,7 @@ No Gaussian, moment, iid, compact-support, log-concavity, post-rotation independ
 
 ## 2. Source-pinned dependencies actually used
 
-1. **Named partner required by the assignment:** fleet02/B20 run `20260922T155719Z-fleet02-B20-QFORM-r12`, canonical mathematics `yspennstate/math-open-problems@527fb9dfef73a5218883c057db14a491992a30d9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260922T155719Z-fleet02-B20-QFORM-r12/REPORT.md`. In the diagonal-dominated heavy-pivot branch it supplies, for
+1. **Named partner required by the assignment:** fleet02/B20 run `20260922T155719Z-fleet02-B20-QFORM-r12`, canonical mathematics `private-source-repository@527fb9dfef73a5218883c057db14a491992a30d9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260922T155719Z-fleet02-B20-QFORM-r12/REPORT.md`. In the diagonal-dominated heavy-pivot branch it supplies, for
    
    `A=[[a,b^T],[b,C]]`, `S=C-bb^T/a`, `tau=(1+||b||/|a|)^(-2)`,
    
@@ -27,14 +27,14 @@ No Gaussian, moment, iid, compact-support, log-concavity, post-rotation independ
    `max_j (P_tau)_{jj}>1/32`.
    
    The same report records the dependence-safe square estimate used below.
-2. fleet01/B20 preceding run `yspennstate/math-open-problems@42db8aea74161970fec7b53664e087875026c6cf`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T152039Z-fleet01-B20-QFORM-r11/REPORT.md`, which first excluded the diffuse Schur-window branch.
-3. `QFORM-REGULARIZED-DETERMINANT-v1`, `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`. For an original-coordinate cross block `B`, if one side's range projection has maximum coordinate leverage at most `1/2`, then with `c=2/(pi^2 e^2)`,
+2. fleet01/B20 preceding run `private-source-repository@42db8aea74161970fec7b53664e087875026c6cf`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T152039Z-fleet01-B20-QFORM-r11/REPORT.md`, which first excluded the diffuse Schur-window branch.
+3. `QFORM-REGULARIZED-DETERMINANT-v1`, `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`. For an original-coordinate cross block `B`, if one side's range projection has maximum coordinate leverage at most `1/2`, then with `c=2/(pi^2 e^2)`,
    
    `|phi(t)| <= det(I+c t^2 BB^T)^(-1/4)`.
-4. fleet01/B03 `QFORM-RANK2-FRACTIONAL-TRACE-v1`, canonical report under `yspennstate/math-open-problems@4dc15077ae03c87d09ca46370af1d8cea76440b5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/fleet01-B03-20260922T141917Z/REPORT.md`, for the Abel/Riesz bridge
+4. fleet01/B03 `QFORM-RANK2-FRACTIONAL-TRACE-v1`, canonical report under `private-source-repository@4dc15077ae03c87d09ca46370af1d8cea76440b5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/fleet01-B03-20260922T141917Z/REPORT.md`, for the Abel/Riesz bridge
    
    `sup_z E|z-R|^(-1/2) <= (2pi)^(-1/2) int |phi_R(t)| |t|^(-1/2) dt`.
-5. fleet01/B11 `QFORM-BINARY-INDEFINITE-L3-v1`, canonical report under `yspennstate/math-open-problems@1bc95193312b70572b2765529ac3b6d98e3fe754`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`, used only for the final `L^3` certificate in the opposite-sign physical-pair subbranch.
+5. fleet01/B11 `QFORM-BINARY-INDEFINITE-L3-v1`, canonical report under `private-source-repository@1bc95193312b70572b2765529ac3b6d98e3fe754`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`, used only for the final `L^3` certificate in the opposite-sign physical-pair subbranch.
 
 The full conjecture is still OPEN in the live claims state.
 

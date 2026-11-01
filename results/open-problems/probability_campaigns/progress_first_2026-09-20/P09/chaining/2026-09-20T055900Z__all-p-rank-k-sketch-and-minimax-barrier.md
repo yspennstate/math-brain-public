@@ -36,7 +36,7 @@ Thus there is no hidden polynomial slack to recover by improving the pointwise s
 - Native role: `P09`
 - Native slot: `6aa7b454b5808191bb00d87697d89388`
 - Installed title: `Gaussian Tensor Bounds`
-- Repository / branch: private `yspennstate/math-open-problems`, `master`
+- Repository / branch: private `private-source-repository`, `master`
 - Source: A. S. Bandeira, D. Dmitriev, K. Lucca, P. Nizic-Nikolac, A. Rodder et al., *Randomstrasse101: Open Problems of 2025*, arXiv:2603.29571, Entry 8, Conjecture 16.
 - Source norm:
 

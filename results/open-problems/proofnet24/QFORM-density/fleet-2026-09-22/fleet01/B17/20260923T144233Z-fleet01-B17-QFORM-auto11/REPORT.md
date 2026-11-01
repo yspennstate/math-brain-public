@@ -211,7 +211,7 @@ This finite stress still stays below the diffuse `3sqrt(2)` obstruction. It supp
 ## 5. Designated partner result applied to an actual inequality
 
 The latest completed fleet02/B17 theorem is source-pinned at
-`yspennstate/math-open-problems@9cd98044087dd0e8bafe8ee2900cf1686552c802`,
+`private-source-repository@9cd98044087dd0e8bafe8ee2900cf1686552c802`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T142532Z-fleet02-B17-QFORM-auto11/REPORT.md`.
 It proves, for arbitrary unit vectors `a,b`, centered unit-interval banks `S_a,T_b`, and every independent heavy law with density `f<=1`,
 

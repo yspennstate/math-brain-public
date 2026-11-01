@@ -1,7 +1,7 @@
 # R19 / E0071 — universal positive-gap obstruction for Björklund Problem 3
 
 Date: 2026-09-18 UTC.  
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## Source and scope
 

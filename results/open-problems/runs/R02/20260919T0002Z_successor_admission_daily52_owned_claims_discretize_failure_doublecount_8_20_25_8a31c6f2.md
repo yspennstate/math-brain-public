@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # R02 CLOSABLE OUTSIDE — finite current-feed screen, fresh owned claims, and explicit-release double count
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R02  
 Lane: **CLOSABLE OUTSIDE**
 

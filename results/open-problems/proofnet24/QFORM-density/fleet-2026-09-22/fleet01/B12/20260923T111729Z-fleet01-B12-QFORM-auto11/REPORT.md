@@ -14,7 +14,7 @@ Continuity: **proved in the scope of the theorem below** via the ridge-density t
 
 The analytic receiver used below is the complete one-scale ridge theorem at
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 
 path `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
@@ -32,7 +32,7 @@ then the full quadratic form (arbitrary self blocks, outside coordinates/couplin
 
 The designated partner result actually applied in Section 6 is fleet02/B12's completed `QFORM-D5-CROSS-RANK-RESERVE-HYBRID-v1` at
 
-`yspennstate/math-open-problems@639e7e151f5d8b83be56a2c6093257fe83deddc3`,
+`private-source-repository@639e7e151f5d8b83be56a2c6093257fe83deddc3`,
 
 path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T093023Z-fleet02-B12-QFORM-auto11/REPORT.md`.
 

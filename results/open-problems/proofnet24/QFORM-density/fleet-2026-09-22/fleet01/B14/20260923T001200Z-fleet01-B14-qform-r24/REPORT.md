@@ -22,7 +22,7 @@ The new mechanism is different from the preceding B14 run. Instead of requiring 
 
 Partner run `20260922T220604Z-fleet02-B14-QFORM-r21`, canonical report
 
-`yspennstate/math-open-problems@2ca523ac73b814a97e846de8d37a932c127eecfb`
+`private-source-repository@2ca523ac73b814a97e846de8d37a932c127eecfb`
 
 at
 
@@ -50,7 +50,7 @@ The proof is translation-uniform and uses only original-coordinate product struc
 
 Partner run `20260922T230003Z-fleet02-B14-QFORM-r22`, canonical report
 
-`yspennstate/math-open-problems@84093fddd5e3d3c692449d49c8b01537b28eb8d8`
+`private-source-repository@84093fddd5e3d3c692449d49c8b01537b28eb8d8`
 
 at
 

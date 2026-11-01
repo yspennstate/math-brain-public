@@ -8,7 +8,7 @@ Status: ESSENTIAL_STEP_APPLIED; SUPPORTING BRANCH CLOSED; FULL QFORM OPEN.
 
 This note uses:
 
-- Claude source baseline math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 and the later correction-safe fleet graph.
+- Claude source baseline private-source@e5f71d79eff325201dd0274053d20268ce65b837 and the later correction-safe fleet graph.
 - fleet01/B20 at c45a270dbf4a4d81742bc934ff54eba97d81f4f3, especially QFORM-HEAVYROW-ANCHORED-MIXED-DISCRIMINANT-v1.
 - fleet01/B18 at b42066397eb5ba83a885c6e700e0417a49a1d8ac, especially QFORM-FRESNEL-CAPPED-BASIS-WEIGHTS-v1.
 - fleet01/B06 at 9838f01d705e379c6ff9b855bf1bb787d94b1c5c.

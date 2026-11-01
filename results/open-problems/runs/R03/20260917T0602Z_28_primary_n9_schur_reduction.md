@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 # R03 run28 — primary order-nine recovery and a collision-deleted Schur-complement reduction
 
 Run ID: `20260917T0602Z_28_primary_n9_schur_reduction`  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, source gate, ownership and fixed metric
 

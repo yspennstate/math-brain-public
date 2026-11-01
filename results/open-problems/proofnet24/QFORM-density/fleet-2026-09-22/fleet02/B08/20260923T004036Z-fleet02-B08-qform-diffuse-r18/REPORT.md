@@ -18,11 +18,11 @@ I consumed the current correction set. In particular I do **not** use the false 
 
 The two source inputs used at equations are:
 
-1. **Designated partner fleet03/B08 r24**, `QFORM-DIFFUSE-CURVATURE-TRANSFER-LADDER-v1`, source `yspennstate/math-open-problems@1bf6f41d81ffddcc6e8ff93b4df165d0ce5bbd05:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T231729Z-fleet03-B08-qform-diffuse-r24/REPORT.md`. It works with three genuine eigenvectors of the full arbitrary matrix and transfers missing ACTUAL principal curvature to singular values of the ACTUAL original-coordinate cross block.
+1. **Designated partner fleet03/B08 r24**, `QFORM-DIFFUSE-CURVATURE-TRANSFER-LADDER-v1`, source `private-source-repository@1bf6f41d81ffddcc6e8ff93b4df165d0ce5bbd05:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T231729Z-fleet03-B08-qform-diffuse-r24/REPORT.md`. It works with three genuine eigenvectors of the full arbitrary matrix and transfers missing ACTUAL principal curvature to singular values of the ACTUAL original-coordinate cross block.
 
-2. **Newest Claude Fourier source**, `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, especially Theorem D' and Theorem F. D' is the relaxed volume-sampling Brascamp--Lieb bound; Theorem F is the exact diagonal-plus-diffuse-low-rank Fresnel--Brascamp--Lieb theorem.
+2. **Newest Claude Fourier source**, `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, especially Theorem D' and Theorem F. D' is the relaxed volume-sampling Brascamp--Lieb bound; Theorem F is the exact diagonal-plus-diffuse-low-rank Fresnel--Brascamp--Lieb theorem.
 
-The no-pivot reduction used only as a structural gate is the current synthesis `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`. I do not assume its still-open N3 statement.
+The no-pivot reduction used only as a structural gate is the current synthesis `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`. I do not assume its still-open N3 statement.
 
 ## 2. The first unpaid implication, stated before the calculation
 

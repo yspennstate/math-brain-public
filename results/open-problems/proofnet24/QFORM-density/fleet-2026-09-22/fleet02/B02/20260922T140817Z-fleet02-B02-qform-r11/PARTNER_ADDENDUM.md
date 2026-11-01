@@ -8,7 +8,7 @@ This immutable addendum records a newer named-partner result that completed afte
 
 Fresh main exposed fleet03/B02 run `20260922T140148Z-fleet03-B02-QFORM-r11`, canonical mathematics
 
-`yspennstate/math-open-problems@f70e9260accfb191c44e874bfc20085580b69b23:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T140148Z-fleet03-B02-QFORM-r11/REPORT.md`.
+`private-source-repository@f70e9260accfb191c44e874bfc20085580b69b23:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T140148Z-fleet03-B02-QFORM-r11/REPORT.md`.
 
 Its Theorem `QFORM-INDEPENDENT-SHIFT-RESIDUAL-L1-v1` proves: if
 

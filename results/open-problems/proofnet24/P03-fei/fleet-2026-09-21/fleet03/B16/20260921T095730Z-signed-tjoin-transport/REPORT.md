@@ -3,7 +3,7 @@
 **Status:** full Fourier Entropy--Influence remains **OPEN / NOT PROVED**.  
 **Run scope:** fleet03 / B16, `FEI signed transport proof`.  
 **Brain status:** **WITHOUT_VERIFIED_BRAIN**. No genuine mathematical/cognitive-brain retrieval was used in this derivation.  
-**Research snapshot recovered:** `yspennstate/math-open-problems` master `95fd9990ddf7a86743471394706c724fa092678a` for the complete pre-fleet P03 state, followed by the live 21 September continuation and concurrent fleet head.  
+**Research snapshot recovered:** `private-source-repository` master `95fd9990ddf7a86743471394706c724fa092678a` for the complete pre-fleet P03 state, followed by the live 21 September continuation and concurrent fleet head.  
 **No novelty claim:** the lemmas below are new derivation/proof-state progress in this repository; publication novelty has not been established.
 
 ## 0. Exact entering state and what is not being repeated

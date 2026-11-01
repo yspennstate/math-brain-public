@@ -12,7 +12,7 @@ Status: `NEW_STRUCTURAL_INTERFACE_COUNTEREXAMPLE / PARTNER_HARD_SQUARE_APPLIED /
 
 The latest compatible fleet03/B10 algebra is the r32 transverse-curvature calculation at
 
-`yspennstate/math-open-problems@c97e404492dc02e28ee6c465c4328df3afe22d70`
+`private-source-repository@c97e404492dc02e28ee6c465c4328df3afe22d70`
 
 with deterministic verifier/check output through `c1b9d3e30df05f6b27df2b0bc0431475448a0a57`. Its exact consequence for
 
@@ -24,7 +24,7 @@ is
 
 hence `|d|>=1`. The newest completed full partner report used here is fleet03/B10 r29,
 
-`yspennstate/math-open-problems@fa694dbcc9a8e70293a5120263fabe67e5f1465b`,
+`private-source-repository@fa694dbcc9a8e70293a5120263fabe67e5f1465b`,
 
 which in the diffuse near-coloop collar additionally supplies disjoint ORIGINAL banks `U,V` with
 
@@ -198,7 +198,7 @@ The even newer r32 hard-curvature identity (1.1) is also spent at the exact fami
 
 At the required source pin
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `COUNTEREXAMPLE_SEARCH.md` proves the dimension-free ruled-level-set theorem for signature `(2,1)`: if the three spectral eigenvalue moduli are at least one, then on the majority-sign one-sheet side
 
@@ -218,7 +218,7 @@ A useful compatible completed input is fleet01/B10's
 
 `QFORM-INDEPENDENT-HYPERBOLIC-LP-ENDPOINT-v1`
 
-at `yspennstate/math-open-problems@aa9a9649b577588afab22b1995f080bbd0478f7f`. It states that if `H` is independent of all nonhub variables, `Y` has density cap `K_Y`, and
+at `private-source-repository@aa9a9649b577588afab22b1995f080bbd0478f7f`. It states that if `H` is independent of all nonhub variables, `Y` has density cap `K_Y`, and
 
 `Q=alpha H Y+S`
 

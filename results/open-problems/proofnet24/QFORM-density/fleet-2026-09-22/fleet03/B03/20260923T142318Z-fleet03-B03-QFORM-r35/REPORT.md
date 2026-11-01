@@ -14,19 +14,19 @@ The full owner target remains open and the full continuity conclusion remains op
 ## 1. Source-valid inputs actually used
 
 1. **Weighted product projection.** `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, fleet02/B06, canonical
-   `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
+   `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
    A unit scalar projection of an original-coordinate cap-one product law has density at most `sqrt(e)`; a two-dimensional orthogonal projection has density at most `e`. This is a weighted physical-fiber theorem, not the refuted unrestricted fiber supremum.
 
 2. **Fresnel linearization.** The damped Fresnel identity and limiting argument from
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    used previously in fleet01/B06 r24. The present proof uses Fresnel only to expose original-coordinate Fourier transforms; no pointwise van-der-Corput estimate is used.
 
 3. **Incoming exact packet.** fleet03/B03 r27 and r34, canonical reports
-   `yspennstate/math-open-problems@b580b09027d8c20c3d3bbea0bea6cf8caa04d541` and
-   `yspennstate/math-open-problems@926549e6ace81816d0533164f35f548a4f84d508`.
+   `private-source-repository@b580b09027d8c20c3d3bbea0bea6cf8caa04d541` and
+   `private-source-repository@926549e6ace81816d0533164f35f548a4f84d508`.
 
 4. **Designated partner fleet04/B03.** Only the valid collision lemma from
-   `yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38` is used:
+   `private-source-repository@28681f9af7c2307f80968df86010084019599e38` is used:
    `P(|Y-Y'|<=eps) <= 2 eps ||p_Y||_2^2`.
    The partner's subsequently challenged weighted-L2 compiler is not used.
 

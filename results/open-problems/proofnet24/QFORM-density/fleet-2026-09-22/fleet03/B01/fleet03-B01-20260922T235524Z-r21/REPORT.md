@@ -17,15 +17,15 @@ The phase-aligned fragmented-support obstruction is preserved: there is no law-u
 
 The run uses three completed source-pinned inputs.
 
-1. `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, fleet02/B06, canonical mathematics `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. If `U` is a `k x m` matrix with `UU^T=I_k` and `Z` has independent cap-one coordinates, then `UZ` has a density bounded by `e^(k/2)`.
+1. `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, fleet02/B06, canonical mathematics `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. If `U` is a `k x m` matrix with `UU^T=I_k` and `Z` has independent cap-one coordinates, then `UZ` has a density bounded by `e^(k/2)`.
 
-2. `QFORM-LOG-FRACTIONAL-RIESZ-COMPILER-v1`, own previous B01 report, canonical `yspennstate/math-open-problems@1155c0d3d79c1d0ecc07e0e8a971fbca0f4e9121`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T213051Z-auto11/REPORT.md`. For an invertible indefinite original-coordinate pair with `D=|det B|`, `kappa=sigma_min(B)`, and Schur remainder `R`, if `H_alpha=sup_s E|R-s|^(-alpha)`, then
+2. `QFORM-LOG-FRACTIONAL-RIESZ-COMPILER-v1`, own previous B01 report, canonical `private-source-repository@1155c0d3d79c1d0ecc07e0e8a971fbca0f4e9121`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T213051Z-auto11/REPORT.md`. For an invertible indefinite original-coordinate pair with `D=|det B|`, `kappa=sigma_min(B)`, and Schur remainder `R`, if `H_alpha=sup_s E|R-s|^(-alpha)`, then
 
 `||p_Q||_infinity <= K_alpha D^(-1/[2(2alpha+1)]) kappa^(-alpha/(2alpha+1)) H_alpha^(1/(2alpha+1))`.
 
 At `alpha=1/4`, the prefactor before `H_(1/4)^(2/3)` is `3*2^(4/3)*e^(-2/3)=3.881190213873266...`.
 
-3. Designated partner fleet04/B01 has completed grouped-square / signed-Fejer report at `yspennstate/math-open-problems@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T234537Z-fleet04-B01-grouped-square-fejer-r2/REPORT.md`. It records both
+3. Designated partner fleet04/B01 has completed grouped-square / signed-Fejer report at `private-source-repository@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T234537Z-fleet04-B01-grouped-square-fejer-r2/REPORT.md`. It records both
 `||p_(a dot Z)||_infinity <= sqrt(2)/||a||_2`
 for original-coordinate product inputs and the exact signed triangular Fejer identity
 `||p_mu||_infinity = sup_(T>0,y) D_T mu(y)`.

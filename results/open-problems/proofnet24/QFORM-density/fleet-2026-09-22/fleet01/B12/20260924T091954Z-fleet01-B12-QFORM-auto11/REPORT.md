@@ -122,7 +122,7 @@ The newest designated partner result read in full is
 
 `QFORM-ORTHOGONAL-TWO-CHANNEL-MODE-STABILITY-v1`,
 
-`yspennstate/math-open-problems@4cc6fbf96ef099a1492e043882219496509e94ba`,
+`private-source-repository@4cc6fbf96ef099a1492e043882219496509e94ba`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260924T085711Z-fleet02-B12-r13/REPORT.md`.
 
@@ -219,7 +219,7 @@ To turn the stability result into an actual law-uniform density bound, apply the
 
 `QFORM-SIX-MODE-SPECTRAL-SQUARE-CARRIER-v1`,
 
-`yspennstate/math-open-problems@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`,
+`private-source-repository@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T145451Z-fleet02-B12-QFORM-r36/REPORT.md`.
 
@@ -310,11 +310,11 @@ Fresh control source before publication:
 `yspennstate/math-research-brain@05c16f25613411cb0ffbdec941273528d45e8116`, including `scheduled_tasks/README.md` and the live `CORRECTION_INBOX.json`.
 
 Newest designated partner theorem actually applied:
-`yspennstate/math-open-problems@4cc6fbf96ef099a1492e043882219496509e94ba`,
+`private-source-repository@4cc6fbf96ef099a1492e043882219496509e94ba`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260924T085711Z-fleet02-B12-r13/REPORT.md`.
 
 Completed six-mode receiver applied to obtain (6.7):
-`yspennstate/math-open-problems@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`,
+`private-source-repository@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T145451Z-fleet02-B12-QFORM-r36/REPORT.md`.
 
 Earlier orthogonal-support precursor distinguished from this theorem:

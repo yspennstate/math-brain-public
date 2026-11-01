@@ -17,7 +17,7 @@ A scoped manual privacy/secret review of the files written in this run found onl
 
 The completed designated partner is fleet02/B20 auto11:
 
-`yspennstate/math-open-problems@34a57f18778ea4be069a3f39a953801296d01864`
+`private-source-repository@34a57f18778ea4be069a3f39a953801296d01864`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T000049Z-fleet02-B20-QFORM-auto11/REPORT.md`.
 
@@ -37,7 +37,7 @@ The partner's high `E5(D)` branch is already paid; the live low-order P2 debt is
 
 The analytic theorem used here is my previous completed source-coordinate fractional mixed-order theorem:
 
-`yspennstate/math-open-problems@7ef1425af0ea2436c1e5221fea5a46be87939180`
+`private-source-repository@7ef1425af0ea2436c1e5221fea5a46be87939180`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T022010Z-fleet01-B20-QFORM-auto11/ADDENDUM_FRACTIONAL_MIXED.md`.
 
@@ -59,7 +59,7 @@ where `K_rho=rho^(-rho)(1-rho)^(-(1-rho))`.
 
 The preceding balanced-anchor cascade is pinned at
 
-`yspennstate/math-open-problems@b81d91f2d8a5d0de6f7dfe468158ef0cd4b858c3`
+`private-source-repository@b81d91f2d8a5d0de6f7dfe468158ef0cd4b858c3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T022010Z-fleet01-B20-QFORM-auto11/ADDENDUM_BALANCED_ANCHORS.md`.
 
@@ -232,7 +232,7 @@ so
 
 Now apply the source-pinned arbitrary-rank physical-pair theorem
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 

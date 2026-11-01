@@ -1,6 +1,6 @@
 # R01–R20 hourly research: GitHub-only continuation protocol
 
-Effective user instruction: 15 September 2026. Continue the existing twenty open-problem assignments, use the strongest available reasoning, and archive substantive results in `yspennstate/math-open-problems` on `master`. Do not send research emails. This document replaces the earlier Gmail/Drive delivery instructions for these twenty workers; it does not replace historical mathematical evidence.
+Effective user instruction: 15 September 2026. Continue the existing twenty open-problem assignments, use the strongest available reasoning, and archive substantive results in `private-source-repository` on `master`. Do not send research emails. This document replaces the earlier Gmail/Drive delivery instructions for these twenty workers; it does not replace historical mathematical evidence.
 
 This is a research and archival protocol, not evidence that a mathematical conjecture is solved or that a future scheduled run has completed. Scheduler activation is recorded separately after actual update confirmations.
 
@@ -20,7 +20,7 @@ PROVED means the written argument has actually been checked under the stated hyp
 
 ## GitHub storage and collision safety
 
-Repository: `yspennstate/math-open-problems`. Existing branch: `master`. Preserve repository privacy and all historical files.
+Repository: `private-source-repository`. Existing branch: `master`. Preserve repository privacy and all historical files.
 
 If the exact target already has an established research folder, resume there and retain its naming. Otherwise use the fallback folder in the assignment table. Worker IDs R01–R20 are not the same numbering system as historical P01–P25 or lemma IDs R16/R32; match the mathematical target, not the number alone.
 

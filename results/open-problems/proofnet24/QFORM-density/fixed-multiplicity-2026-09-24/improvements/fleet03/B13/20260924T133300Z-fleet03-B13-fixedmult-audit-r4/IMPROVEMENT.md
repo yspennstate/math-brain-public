@@ -5,8 +5,8 @@ attacking: audit the fixed-multiplicity candidate and combine the new order-thre
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 Run: `20260924T133300Z-fleet03-B13-fixedmult-audit-r4`.
-Pinned baseline source: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
-Fresh source tree used for this run: `yspennstate/math-open-problems@d2ae3d3878703809e7d7b70cf47f0db7a6740553` before this write.
+Pinned baseline source: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
+Fresh source tree used for this run: `private-source-repository@d2ae3d3878703809e7d7b70cf47f0db7a6740553` before this write.
 
 Status: **proved candidate improvement, not a claim about the unrestricted three-eigenvalue conjecture and not a self-awarded independent-validation certificate.**
 

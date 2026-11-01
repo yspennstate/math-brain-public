@@ -35,7 +35,7 @@ These are ordinary marginal statements. No independence of projected coordinates
 
 The completed B01 theorem at
 
-`yspennstate/math-open-problems@d58130b048c1e7ef8a22cf7a52a0d23b610c5fa7`
+`private-source-repository@d58130b048c1e7ef8a22cf7a52a0d23b610c5fa7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260922T230746Z-b01-qform-auto11/REPORT.md`
 
@@ -49,7 +49,7 @@ The proof is a pushforward density estimate plus Hausdorff--Young; it is not poi
 
 The newest completed fleet02/B01 report read in this run is
 
-`yspennstate/math-open-problems@e7fdc2430ce640363582b98adce7771f8797e686`
+`private-source-repository@e7fdc2430ce640363582b98adce7771f8797e686`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T081654Z-fleet02-B01-qform-auto14/REPORT.md`.
 

@@ -2,7 +2,7 @@
 
 The fresh worker memory pointer was re-read after the main report was written and points to the immediately preceding run
 
-`yspennstate/math-open-problems@b4d4b0d235af8e01864beb4211bbc236b9b97bde:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T165755Z-fleet01-B05-QFORM-auto13/REPORT.md`.
+`private-source-repository@b4d4b0d235af8e01864beb4211bbc236b9b97bde:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T165755Z-fleet01-B05-QFORM-auto13/REPORT.md`.
 
 That run proved the complementary moving-slope fiber determinant identity and the localized estimate
 

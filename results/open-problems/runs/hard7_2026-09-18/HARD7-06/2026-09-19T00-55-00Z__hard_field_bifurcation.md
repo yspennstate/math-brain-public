@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 Status: **PARTIAL / Chang--Kolhe--Sohn k=3 sharpness conjecture remains OPEN under bounded current-literature review.**
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Canonical ownership remains `operations/claims/CKS-2024-RREG-HYPER2COL-K3.md`, owner `HARD7-06`. This run executes the first recovery selected in `2026-09-18T23-55-00Z__stuck1_cluster_port.md`: port the cluster/frozen-configuration architecture rather than repair the raw solution count again. The source metric still does not move, so nothing below is presented as a lower bound on the source probability.
 

@@ -17,7 +17,7 @@ The mathematical sources actually used below are:
 
 1. **Newest Claude physical Fourier/Brascamp--Lieb package**
 
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
@@ -29,7 +29,7 @@ The mathematical sources actually used below are:
 
 2. **Immediate B03 predecessor r35**
 
-   `yspennstate/math-open-problems@47f5fd760f92c306e2105c2de46bf1859d47f56d`
+   `private-source-repository@47f5fd760f92c306e2105c2de46bf1859d47f56d`
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T142318Z-fleet03-B03-QFORM-r35/REPORT.md`.
 
@@ -37,7 +37,7 @@ The mathematical sources actually used below are:
 
 3. **Target-scale exact-cancellation whole-copy theorem r29**
 
-   `yspennstate/math-open-problems@d68b1a4cf96f02c6afa77ed994fab5feab43f084`
+   `private-source-repository@d68b1a4cf96f02c6afa77ed994fab5feab43f084`
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T090012Z-fleet03-B03-QFORM-r29/REPORT.md`.
 
@@ -45,7 +45,7 @@ The mathematical sources actually used below are:
 
 4. **Designated partner fleet04/B03**
 
-   `yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`
+   `private-source-repository@28681f9af7c2307f80968df86010084019599e38`
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`.
 

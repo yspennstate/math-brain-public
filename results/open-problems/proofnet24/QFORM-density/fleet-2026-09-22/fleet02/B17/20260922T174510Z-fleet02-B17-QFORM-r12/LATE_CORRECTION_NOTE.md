@@ -1,6 +1,6 @@
 # Late correction compatibility note
 
-After the primary B17 report was committed, the live repository exposed the new correction event `QFORM-DIFFUSE-FIXED-LOCAL-PRINCIPAL-ONLY-FALSE-v1`, canonical report `yspennstate/math-open-problems@caf8de3c65ae54b8ec8df9bfe977a76bf0a6ab99`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T173452Z-r15/REPORT.md`.
+After the primary B17 report was committed, the live repository exposed the new correction event `QFORM-DIFFUSE-FIXED-LOCAL-PRINCIPAL-ONLY-FALSE-v1`, canonical report `private-source-repository@caf8de3c65ae54b8ec8df9bfe977a76bf0a6ab99`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T173452Z-r15/REPORT.md`.
 
 That correction proves that delocalization of three selected large eigenvectors does not force a uniformly nondegenerate fixed-size physical principal block; a Sylvester-Hadamard target family has every fixed principal block vanishing in operator norm while a global ridge cut remains strong.
 

@@ -5,7 +5,7 @@ Problem/source: David Aldous and James Fill, *Reversible Markov Chains and Rando
 # R04 immutable run report — I0027 / effective-resistance clustering closure proof
 
 Run ID: `20260916T2127Z_i0027_er_cluster_closure`  
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 **Mathematical status after this run:** R04 has a complete proof of
 \[

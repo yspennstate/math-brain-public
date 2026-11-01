@@ -29,7 +29,7 @@ Fresh programme sources consumed include the live correction inbox, the newest-C
 
 The newest-Claude Theorem H in
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
@@ -153,7 +153,7 @@ The newest completed assigned partner, fleet03/B01 r21, source-pinned at
 
 with canonical proof
 
-`yspennstate/math-open-problems@6a63d945b3e2409e5ff5799d2d13c3654bdd27e6:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T002425Z-r21/REPORT.md`,
+`private-source-repository@6a63d945b3e2409e5ff5799d2d13c3654bdd27e6:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T002425Z-r21/REPORT.md`,
 
 proves that for a definite rank-two grouped pair sourced by one original-coordinate bank,
 
@@ -232,7 +232,7 @@ Thus the exact near-parallel Walsh family is paid by a **regroup-before-inversio
 
 The subsequent package
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 proves a continuous-density bound `<23/a` for a cross block that is an operator-norm perturbation of a diffuse block with `s_3>=a`, and a tail extension using two large cross singular values plus substantial collective tail. Those are important exits. Family (5.1), however, has cross rank at most two on every cut, so its `E_3` and `E_5` currencies vanish exactly; it lies on the low-cross-rank/hub side explicitly left open by that package. Equations (5.3)-(5.4) show that an overlapping grouped definite pair can close such a state even when cross-volume methods see nothing.
 

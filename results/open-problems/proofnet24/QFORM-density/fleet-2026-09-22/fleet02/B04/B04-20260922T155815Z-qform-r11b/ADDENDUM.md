@@ -6,7 +6,7 @@ This addendum is later than `REPORT.md` in the same immutable run and controls i
 
 After the primary report was committed, the assigned partner fleet03/B04 completed `QFORM-SPECTRAL-WINDOW-1OVER39-v1`:
 
-- repository/commit: `yspennstate/math-open-problems@093c15486c794a2e8b23978ca7b289feabf999a7`
+- repository/commit: `private-source-repository@093c15486c794a2e8b23978ca7b289feabf999a7`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T154859Z-r13/REPORT.md`
 
 The partner independently checks the ridge-perturbation and MSS/spectral-window passage, while explicitly not claiming a new independent review of the free-regularizer graph/Fourier core. Its proved source-pinned consequence is:

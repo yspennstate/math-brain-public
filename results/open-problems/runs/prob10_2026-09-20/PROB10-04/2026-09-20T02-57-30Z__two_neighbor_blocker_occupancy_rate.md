@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 
 # PROB10-04 run 4 — exact two-neighbor blocker occupancy and the clean-center exponential rate
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **source OPEN / PROB10-04 PARTIAL**.
 

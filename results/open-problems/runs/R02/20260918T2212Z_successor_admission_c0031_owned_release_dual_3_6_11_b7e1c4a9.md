@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R02 CLOSABLE-OUTSIDE successor admission — fresh C0031 consumption, historical READY boundary, and release-dual screen
 
 Run date: 2026-09-18 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Lane: **CLOSABLE OUTSIDE**
 
 ## 1. Continuity and controlling state

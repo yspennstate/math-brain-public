@@ -350,14 +350,14 @@ So the partner's entire remaining scalar sequence is closed in one step. This is
 
 The generic mode-at-zero input used above is the completed fleet02/B17 theorem at
 
-`yspennstate/math-open-problems@84ffc0f291ae192f4d82742ae6909943f6710bc7`,
+`private-source-repository@84ffc0f291ae192f4d82742ae6909943f6710bc7`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T235536Z-r12-symmetric-unimodal/REPORT.md`.
 
 ## 8. Required newest-Claude result applied
 
 The current required Claude package at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`,
 
 proves Theorem C: for exact rank-three signature `(+,+,-)` and every one-sheet output `s>=0`,

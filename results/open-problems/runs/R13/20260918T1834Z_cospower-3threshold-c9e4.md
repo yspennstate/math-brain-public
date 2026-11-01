@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — not auth
 
 # R13 — cosine-power deformation and three-threshold finite-dimensional Komlós bound
 
-Repository/branch: private `yspennstate/math-open-problems` / `master`.
+Repository/branch: private `private-source-repository` / `master`.
 
 R13 remains the HARD OUTSIDE owner of the real Boolean Komlós target E0042. The fixed quantity is the complete rigorously certified pointwise upper envelope `B_R13(n)` for
 

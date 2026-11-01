@@ -20,7 +20,7 @@ All coordinate sets below are ORIGINAL physical coordinates. No random variable 
 
 Source:
 
-`yspennstate/math-open-problems@1ec1fa1d448c7bfcb3f96f487dec06387d85a172`
+`private-source-repository@1ec1fa1d448c7bfcb3f96f487dec06387d85a172`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T220407Z-r35/REPORT.md`.
 
@@ -38,7 +38,7 @@ It uses a scalar-Schur triple receiver when one diagonal pivot is large, and oth
 
 Source:
 
-`yspennstate/math-open-problems@b08aeb182c7e4448b960e93db1953cb06cbccb9f`
+`private-source-repository@b08aeb182c7e4448b960e93db1953cb06cbccb9f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T070624Z-r19/REPORT.md`.
 
@@ -58,7 +58,7 @@ For `h=0` the retained packet is exactly the complete third-compound volume of a
 
 Source:
 
-`yspennstate/math-open-problems@60106507e16f9a5eb4453e276a0642f880eeec9d`
+`private-source-repository@60106507e16f9a5eb4453e276a0642f880eeec9d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T191801Z-r31/REPORT.md`.
 
@@ -99,7 +99,7 @@ holds. No reciprocal pair pivot is used.
 
 Source pinned in r31 to
 
-`yspennstate/math-open-problems@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`
+`private-source-repository@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T170106Z-fleet03-B02-qform-r35/REPORT.md`, theorem `QFORM-CROSS-E3-MARGINALFREE-L1-v1`.
 
@@ -121,7 +121,7 @@ Arbitrary same-bank curvature, outside couplings, affine terms and signs are ret
 
 No newer fleet02/B07 handoff was present after its 21:34 UTC delivery at the final partner refresh used for this calculation. The source is
 
-`yspennstate/math-open-problems@b2d2cccb46aa3fc83162b2cc4fba61a5e040ebd2`
+`private-source-repository@b2d2cccb46aa3fc83162b2cc4fba61a5e040ebd2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T211034Z-fleet02-B07-qform-mixedvolume/REPORT.md`.
 

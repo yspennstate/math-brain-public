@@ -6,7 +6,7 @@ Reviewer lens: B19 independent proof reconstruction and guarded integration; fle
 
 ## Source pin and package state
 
-Baseline theorem source is pinned to `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, file `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`. The package advertises SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`; this connector-only audit pins that advertised SHA and the independently observed git blob, but does not claim a separate raw-byte SHA-256 recomputation. Fresh master snapshot `742ce5bda88b0ffa0680e6bd1ba7feace222d135` still contained the identical manuscript blob.
+Baseline theorem source is pinned to `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, file `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`. The package advertises SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`; this connector-only audit pins that advertised SHA and the independently observed git blob, but does not claim a separate raw-byte SHA-256 recomputation. Fresh master snapshot `742ce5bda88b0ffa0680e6bd1ba7feace222d135` still contained the identical manuscript blob.
 
 **Mathematical verdict: PASS for the complete written 17-eigenvalue candidate.** I read all 790 source lines and reconstructed the proof before consulting peer audit verdicts. I found no fatal mathematical gap in
 

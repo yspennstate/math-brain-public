@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R15 successor screen — Talagrand endpoint `gamma=1` from a concave Bernoulli-KL boundary
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R15, CLOSABLE OUTSIDE.
 
 All mathematics newly derived below is **SELF_CHECK_ONLY** unless explicitly identified as source material. The proof is written in full on the page, but there is no independent fleet audit and no novelty certificate. I do **not** mark the parent F0111 / Problem 10.9 closed.

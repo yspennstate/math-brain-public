@@ -21,7 +21,7 @@ The newest completed compatible designated-partner result is fleet03/B18,
 
 `QFORM-ONE-SIDED-CROSS-NEGATIVE-MOMENT-v1`,
 
-at `yspennstate/math-open-problems@a2cf029c5c935d6eadf4216c073911fc8dc404ac`, with deterministic checks at `e08f224d39db493918d786f25de6046c9cf0202a`.
+at `private-source-repository@a2cf029c5c935d6eadf4216c073911fc8dc404ac`, with deterministic checks at `e08f224d39db493918d786f25de6046c9cf0202a`.
 
 Its ambient quadratic corollary is the exact input used below. Split the ORIGINAL coordinates into disjoint banks `I,J,K`. If
 
@@ -172,7 +172,7 @@ and (3.3) gives
 
 I read the pinned source exactly at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`,
 `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 

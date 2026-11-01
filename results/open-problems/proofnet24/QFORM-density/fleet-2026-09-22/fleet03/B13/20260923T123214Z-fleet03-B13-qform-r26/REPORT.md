@@ -17,7 +17,7 @@ Fresh owner control during this run remained revision `2026-09-22.15`, QFORM onl
 
 Canonical mathematics:
 
-`yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
+`private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
 
@@ -33,7 +33,7 @@ This partner theorem is applied to the new slab inequality in Section 7.
 
 Canonical package:
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -49,7 +49,7 @@ The proof is a positive determinant expansion plus weighted AM-GM, sharp Hausdor
 
 Canonical source:
 
-`yspennstate/math-open-problems@dc7d419453536317f88f75407b6060c50a37b1be`
+`private-source-repository@dc7d419453536317f88f75407b6060c50a37b1be`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T114612Z-fleet03-B09-QFORM-r31/REPORT.md`.
 
@@ -67,7 +67,7 @@ The early checkpoint of this run independently rediscovered (1.2); after reading
 
 The arbitrary-selected-minor Fourier source is
 
-`yspennstate/math-open-problems@66b5ff888a219c7c8e754dd25062fac6aecb2f22`
+`private-source-repository@66b5ff888a219c7c8e754dd25062fac6aecb2f22`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T001242Z-b01-qform-auto11/REPORT.md`.
 
@@ -79,7 +79,7 @@ where `K=exp(H+E log det^2)` is the entropy-determinant currency.
 
 The previous fleet03/B13 entropy-or-six-hub proof is
 
-`yspennstate/math-open-problems@48d2f4234b05dfa527f1119c2c3dfc4a4b941f5d`
+`private-source-repository@48d2f4234b05dfa527f1119c2c3dfc4a4b941f5d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T003350Z-fleet03-B13-qform-r20/REPORT.md`.
 

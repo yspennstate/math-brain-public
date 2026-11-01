@@ -539,7 +539,7 @@ The correct continuation target is a uniform rule for the surviving cores that e
 
 ## 10. Source ledger and delivery status
 
-The following are the actual repository sources used. Paths are relative to `yspennstate/math-open-problems`, branch `master`. A subset of the newest long reports was read where sufficient for the statements used; this is not a claim to have independently audited every historical file in the repository.
+The following are the actual repository sources used. Paths are relative to `private-source-repository`, branch `master`. A subset of the newest long reports was read where sufficient for the statements used; this is not a claim to have independently audited every historical file in the repository.
 
 **Current entrypoint.** `proofnet24/P03-fei/README.md`, blob `9201da45afcf21156ae078cc505d37b57a1ae4b7`. Retains full OPEN status and the retired absolute-overlap, resolvent, pointwise-erasure, and fixed-coefficient affine-drift shortcuts.
 

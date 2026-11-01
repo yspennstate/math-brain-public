@@ -10,21 +10,21 @@ Status: **PROVED SUPPORTING TARGET-LEVEL CERTIFICATE / FULL QFORM OPEN / CONTINU
 
 Three proved inputs are used at their exact scopes.
 
-1. **Designated partner fleet02/B13 exact bang-bang reduction.** `yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`. For every fixed measurable slab kernel, the supremum over all independent cap-one mass-one densities equals the supremum over products of indicators `1_{E_j}`, `|E_j|=1`; the supremum is unchanged if the `E_j` are bounded finite unions of intervals. No single-interval extremality is asserted.
+1. **Designated partner fleet02/B13 exact bang-bang reduction.** `private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`. For every fixed measurable slab kernel, the supremum over all independent cap-one mass-one densities equals the supremum over products of indicators `1_{E_j}`, `|E_j|=1`; the supremum is unchanged if the `E_j` are bounded finite unions of intervals. No single-interval extremality is asserted.
 
-2. **Cross-three-volume L3 theorem.** `yspennstate/math-open-problems@3345697a0e1ea6c84ef3128a22917d49f0b0a826`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T013555Z-fleet03-B13-qform-r21/REPORT.md`. If an original-coordinate disjoint cross block `M` of a quadratic polynomial has `Z=e_3(M^T M)>0`, then the output density satisfies
+2. **Cross-three-volume L3 theorem.** `private-source-repository@3345697a0e1ea6c84ef3128a22917d49f0b0a826`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T013555Z-fleet03-B13-qform-r21/REPORT.md`. If an original-coordinate disjoint cross block `M` of a quadratic polynomial has `Z=e_3(M^T M)>0`, then the output density satisfies
 
 `||p||_3 < 6.787 Z^(-1/9)`.
 
 Arbitrary same-side blocks, outside couplings, affine terms and signs are permitted.
 
-3. **Dependence-safe physical-square smoothing.** Read at `yspennstate/math-open-problems@985cf2e130fcdbf8c49bbe871b5778b207143ce1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T185149Z-fleet03-B16-QFORM-r15/REPORT.md`. If `R` has density `h in L3`, and conditionally on `R=r` a scalar `V` has density at most one, then
+3. **Dependence-safe physical-square smoothing.** Read at `private-source-repository@985cf2e130fcdbf8c49bbe871b5778b207143ce1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T185149Z-fleet03-B16-QFORM-r15/REPORT.md`. If `R` has density `h in L3`, and conditionally on `R=r` a scalar `V` has density at most one, then
 
 `||p_{R+aV^2}||_infinity <= (8/3^(3/4)) |a|^(-1/2) ||h||_3^(3/4)`.
 
 The conditional cap is valid when `V` is an original independent coordinate translated by a function of the remaining original coordinates.
 
-The latest designated-partner normal form is fleet02/B13 r15, `yspennstate/math-open-problems@d59fc91cdb6c772a0b3c73ba5b90fb62e10e3bf`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T000555Z-fleet02-B13-productset-r15-482fba/REPORT.md`; it is applied in Section 5.
+The latest designated-partner normal form is fleet02/B13 r15, `private-source-repository@d59fc91cdb6c772a0b3c73ba5b90fb62e10e3bf`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T000555Z-fleet02-B13-productset-r15-482fba/REPORT.md`; it is applied in Section 5.
 
 ## 2. New aggregate anchored currency
 

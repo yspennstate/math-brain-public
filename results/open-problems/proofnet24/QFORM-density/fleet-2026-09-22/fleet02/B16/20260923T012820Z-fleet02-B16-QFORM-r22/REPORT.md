@@ -22,7 +22,7 @@ Thus any remaining nonzero-pivot/two-sheet branch must retain stronger original-
 
 Required Claude source pinned by the owner:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
 
@@ -36,7 +36,7 @@ for a genuine two-dimensional orthogonal projection `Y` of the original cap-one 
 
 The designated completed partner is fleet03/B16 r20:
 
-`yspennstate/math-open-problems@bf4ea19e3c7e327cd53615128f4daaeee0e53811`
+`private-source-repository@bf4ea19e3c7e327cd53615128f4daaeee0e53811`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T000300Z-fleet03-B16-QFORM-r20/REPORT.md`.
 

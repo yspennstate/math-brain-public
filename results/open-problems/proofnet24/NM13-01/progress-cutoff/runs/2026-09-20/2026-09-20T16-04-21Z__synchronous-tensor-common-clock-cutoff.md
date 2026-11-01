@@ -10,7 +10,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning/effort level: UNVERIFIED** — 
 
 **Publication novelty:** `UNVERIFIED`. A bounded dated search found classical work on Cartesian-product continuous-time walks and the standard Ramanujan cutoff theorem, but no checked theorem matching the categorical/tensor graph-power, common-Poisson-clock cutoff transfer below. This is negative evidence only and is not a priority claim.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 

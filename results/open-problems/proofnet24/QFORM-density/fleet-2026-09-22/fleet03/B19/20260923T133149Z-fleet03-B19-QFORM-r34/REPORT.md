@@ -18,7 +18,7 @@ No Gaussian, log-concave, moment, support, connected-support, iid, diagonal-basi
 
 The newest completed global B19 synthesis used here is fleet02/B19 auto11:
 
-- `yspennstate/math-open-problems@b0628a95c0c4630d063fe8c5649416c804dbceea`
+- `private-source-repository@b0628a95c0c4630d063fe8c5649416c804dbceea`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T130709Z-fleet02-B19-QFORM-auto11/REPORT.md`.
 
 It fixes
@@ -62,7 +62,7 @@ This run attacks the first branch (1.4)-(1.5) without deleting the tail of `N`.
 
 I use the completed volume-stability theorem cited in fleet03/B09 r32 from
 
-- `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+- `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 - `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 For an **actual original-coordinate cross matrix** `M`, put
@@ -81,7 +81,7 @@ The theorem may of course be applied after transposing the physical cross cut, s
 The completed designated-partner theorem is
 
 - `QFORM-NULL-COLOOP-ADAPTIVE-HY-STABILITY-v1`
-- `yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
+- `private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 
 In its residual-diffuse **exact-null-coloop** scope it proves, for `0<D_res<=1`,

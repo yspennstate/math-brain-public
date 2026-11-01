@@ -8,7 +8,7 @@ Status: supporting theorem proved below; full QFORM remains OPEN. This report do
 ## Fresh source state and corrections
 
 
-Completed assigned-partner result actually applied: fleet03/B15 run 20260922T202624Z-fleet03-B15-qform-r17, handoff blob c2461fc4dd2174c1c47003eaf26eb5ff64b34c5a, canonical proof yspennstate/math-open-problems@fd40f8241efcd355b798669de5a0421f8f25e1d0. Its exact spectral normalization says the sharp full constant equals the supremum on s_3(A)=1, and smooth generic boundary instances approximate the sharp constant. I use this only to identify what the present local theorem does and does not eliminate: exact algebraic zeros may be genericized away in an extremizing sequence, whereas uniformly positive physical 2x2 determinant is a quantitative open condition and remains meaningful.
+Completed assigned-partner result actually applied: fleet03/B15 run 20260922T202624Z-fleet03-B15-qform-r17, handoff blob c2461fc4dd2174c1c47003eaf26eb5ff64b34c5a, canonical proof private-source-repository@fd40f8241efcd355b798669de5a0421f8f25e1d0. Its exact spectral normalization says the sharp full constant equals the supremum on s_3(A)=1, and smooth generic boundary instances approximate the sharp constant. I use this only to identify what the present local theorem does and does not eliminate: exact algebraic zeros may be genericized away in an extremizing sequence, whereas uniformly positive physical 2x2 determinant is a quantitative open condition and remains meaningful.
 
 ## First unpaid implication
 

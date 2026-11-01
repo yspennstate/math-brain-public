@@ -30,7 +30,7 @@ The designated partner is `fleet04/B19`. It had no completed artifact in either 
 
 ### 1.1 All-block ratio-critical core
 
-Source: `yspennstate/math-open-problems@85ffa60db26997421d980b1f86c03d82259504ca`,
+Source: `private-source-repository@85ffa60db26997421d980b1f86c03d82259504ca`,
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md`.
 
 In the median-character gauge write
@@ -52,7 +52,7 @@ which is essential, tensor-primitive, character-centered and satisfies the all-b
 
 ### 1.2 Exact two-coordinate support/spectral identity
 
-Source: `yspennstate/math-open-problems@85ffa60db26997421d980b1f86c03d82259504ca`,
+Source: `private-source-repository@85ffa60db26997421d980b1f86c03d82259504ca`,
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md`.
 
 For distinct physical coordinates `i,k`, let
@@ -78,7 +78,7 @@ but this run does **not** attempt to sum the raw hidden-curvature bank.
 
 ### 1.3 Robust-row trigger edge
 
-Source: `yspennstate/math-open-problems@fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113`,
+Source: `private-source-repository@fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113`,
 `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md`.
 
 If derivative row `i` is relative-`eta` close to a coordinate subcube with trigger set `F_i`, then for every `k in F_i`,
@@ -92,7 +92,7 @@ The live robust threshold is `eta=1/16`, where `p_{ik}>=(7/4)q_i`.
 
 ### 1.4 Critical-core small-influence consequence
 
-Source: `yspennstate/math-open-problems@200e3fd37fe201f78d882ba8809414d201efb829`,
+Source: `private-source-repository@200e3fd37fe201f78d882ba8809414d201efb829`,
 `proofnet24/P03-fei/fleet-2026-09-22/fleet04/B18/20260922T091529Z-surplus-hidden-curvature/REPORT.md`.
 
 On a genuine ratio-`rho>4` core, singleton terminality implies
@@ -108,7 +108,7 @@ for every essential coordinate. The same report reduces the robust weighted-dept
 
 Newest compatible completed fleet04 result applied in this run:
 
-`yspennstate/math-open-problems@4724c29ba5e11543763408355504049e05e4e6e3`,
+`private-source-repository@4724c29ba5e11543763408355504049e05e4e6e3`,
 `proofnet24/P03-fei/fleet-2026-09-22/fleet04/B17/20260922T102740Z-b17-fei-r17/REPORT.md`.
 
 For the genuine balanced Boolean suspension `F(y,x)=y g(x)`, if the full spectral law of `g` has empty mass `a`, `v=1-a`, and coordinate occurrence marginals `q_i`, define

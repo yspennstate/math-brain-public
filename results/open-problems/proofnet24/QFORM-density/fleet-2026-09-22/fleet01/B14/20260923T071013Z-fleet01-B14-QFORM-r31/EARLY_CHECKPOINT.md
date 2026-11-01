@@ -7,7 +7,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Full target remains OPEN. Execution: `
 
 ## 1. First unpaid localization issue
 
-Fleet02/B14 r27 (`math-open-problems@ac36d657bbcb7bb560c74e2b7c1cb65c886b85a7`) computed the exact subprobability homogeneity of the Claude D_k volume certificate. If an active marginal is split into small subprobability fragments and the D_k estimate is applied cellwise, the mass exponent is below one on every volume-active coordinate. Equal N-way splitting of all active coordinates therefore creates an N^2 loss, independently of k. This is a proof-order obstruction, not a QFORM counterexample.
+Fleet02/B14 r27 (`private-source@ac36d657bbcb7bb560c74e2b7c1cb65c886b85a7`) computed the exact subprobability homogeneity of the Claude D_k volume certificate. If an active marginal is split into small subprobability fragments and the D_k estimate is applied cellwise, the mass exponent is below one on every volume-active coordinate. Equal N-way splitting of all active coordinates therefore creates an N^2 loss, independently of k. This is a proof-order obstruction, not a QFORM counterexample.
 
 The correct localization object is not a partition into subprobabilities. It is a convex mixture of full probability densities of the extreme form `1_E`, `|E|=1`. The lemma below gives such mixtures constructively in L1 and therefore preserves any affine-uniform small-ball constant exactly.
 

@@ -1,5 +1,5 @@
 
-SOURCE math-open-problems/reports\fei-2026-10-11\FEI_100_agent_research_plan.tex
+SOURCE private-source/reports\fei-2026-10-11\FEI_100_agent_research_plan.tex
 169: \end{align*}
 170: A successful stopping-tree theorem must bound the \emph{entire expected path cost} and the terminal entropy. The recovered threshold and formula classes provide useful terminal classes. The structural theorem guaranteeing cheap access to those terminals remains to be proved.
 171: 

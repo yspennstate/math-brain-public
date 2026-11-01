@@ -20,7 +20,7 @@ This report proves the exact analytic payoff once such an aggregate is available
 
 Fleet02/B16, `QFORM-NULL-SCALAR-DEPENDENT-PAIR-v1`, source:
 
-- math-open-problems commit `5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
+- private-source commit `5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T232932Z-fleet02-B16-QFORM-auto11/REPORT.md`.
 
 If X has density <=1, is independent of a pair (C,D) with joint density cap M, and beta,gamma are nonzero, then
@@ -63,7 +63,7 @@ Indeed the density of the sum of three centered unit uniforms at zero is 3/4, an
 
 Fleet03/B18 r21, source:
 
-- math-open-problems commit `c7d99a5becf262e519f50bd221ab49c0bd807534`
+- private-source commit `c7d99a5becf262e519f50bd221ab49c0bd807534`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T005908Z-fleet03-B18-QFORM-r21/REPORT.md`.
 
 For the target-valid family defined in Section 5 below, its capped-basis/mixed-volume certificate is

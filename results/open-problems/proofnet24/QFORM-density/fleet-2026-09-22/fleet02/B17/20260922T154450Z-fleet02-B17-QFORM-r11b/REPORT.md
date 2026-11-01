@@ -11,7 +11,7 @@
 
 The full target remains: for every dimension, every independent real input family with probability densities bounded by one, and every real symmetric matrix with at least three eigenvalues of absolute value at least one, prove a universal dimension-free essential-density bound for `X^T A X`, or give a valid target-level counterexample.
 
-This run applies the completed designated-partner result fleet03/B17, `QFORM-RARE-FRAGMENT-CP-NOESCAPE-v1`, canonical report `yspennstate/math-open-problems@d6150b6de22e898de442e821e42c2ddc09604a0d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260922T153529Z-fleet03-B17-QFORM-r11/REPORT.md`. That result proves that finite-intensity rare fragments converging to Gaussian plus compound-Poisson shifts cannot raise the limiting density ceiling above `3 sqrt(2)`.
+This run applies the completed designated-partner result fleet03/B17, `QFORM-RARE-FRAGMENT-CP-NOESCAPE-v1`, canonical report `private-source-repository@d6150b6de22e898de442e821e42c2ddc09604a0d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260922T153529Z-fleet03-B17-QFORM-r11/REPORT.md`. That result proves that finite-intensity rare fragments converging to Gaussian plus compound-Poisson shifts cannot raise the limiting density ceiling above `3 sqrt(2)`.
 
 Its Gaussian input is the completed theorem `QFORM-GAUSSIAN-FULL-NONCENTRAL-C3SQRT2-v1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T120821Z-fleet01-B17-qform-sharp-constant-v1/ADDENDUM_NONCENTRAL_GAUSSIAN.md`: if `G~N(m,Sigma)` with `Sigma >= sigma^2 I` and `A` has at least three eigenvalues of modulus at least one, then `||p_{G^T A G}||_infinity <= 1/(2 sqrt(2) sigma^2)`.
 

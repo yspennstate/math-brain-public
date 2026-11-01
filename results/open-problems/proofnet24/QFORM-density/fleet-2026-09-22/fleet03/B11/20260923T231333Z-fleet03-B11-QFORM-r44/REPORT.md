@@ -17,7 +17,7 @@ No Gaussian, log-concave, moment, compact-support, connected-support, finite-fra
 
 The immediate B11 predecessor is
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - commit: `d75835c958b5dcdd28649eb79af0faf3103b5d89`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T221215Z-fleet03-B11-QFORM-r43/REPORT.md`.
 
@@ -52,7 +52,7 @@ The newest fleet02/B11 correction shows that (1.1) alone is not enough: splittin
 
 The analytic source used and strengthened here is fleet02/B02:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - commit: `aeaba9e3351623ead11450857c2d014b43664aef`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T200844Z-fleet02-B02-qform-auto11/REPORT.md`.
 
@@ -60,7 +60,7 @@ Its tensor lemma permits an arbitrary phase in the shared scalar bank. That obse
 
 The designated fleet04/B11 dependency actually applied below is
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - commit: `30555c1ca97752e10f5089ccd95f8514c704be5a`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T131400Z-fleet04-B11-extension-mass-r6/REPORT.md`.
 

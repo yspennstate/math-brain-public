@@ -4,7 +4,7 @@ Problem: planar self-avoiding-walk displacement — Flory (1949) / Nienhuis (198
 # R11 immutable run report — 2026-09-16
 
 Run ID: `2026-09-16T14-40-03Z_saw-quantitative-renewal-trace-b7c2`  
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Required repository continuation
 

@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 
 # R03 run32 — gauge-averaged bias deformation, circuit discretization, and a prior-art correction
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL; source OPEN.** This run does not lower the finite full-domain remainder envelope. It does three things that materially change the route map:
 

@@ -24,7 +24,7 @@ Two current supporting sources are used with their exact scopes.
 
 1. The arbitrary-rank crossing report
 
-`yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`
+`private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`
 
@@ -32,7 +32,7 @@ proves the exact-rank crossing Plancherel estimate with arbitrary internal measu
 
 2. The current physical-leaf theorem
 
-`yspennstate/math-open-problems@634657eab2dee8269481af6aa10369a520153609`
+`private-source-repository@634657eab2dee8269481af6aa10369a520153609`
 
 `proofnet24/QFORM-density/interactive/20260923T222500Z-two-physical-leaf-pair-arbitrary-hub/REPORT.md`
 
@@ -40,7 +40,7 @@ proves, for the canonical original-product quadratic `2HL+beta L^2+V^2+2 epsilon
 
 The designated partner is fleet04/B03:
 
-`yspennstate/math-open-problems@05ff82a8d052b024ae584e60dffb7b198fcd7db4`
+`private-source-repository@05ff82a8d052b024ae584e60dffb7b198fcd7db4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260923T183012Z-fleet04-B03-dependent-riesz-r2/REPORT.md`.
 

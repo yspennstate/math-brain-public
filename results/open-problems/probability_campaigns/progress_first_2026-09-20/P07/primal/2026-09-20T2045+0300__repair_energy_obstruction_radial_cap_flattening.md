@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 
 **Status:** **OPEN / PROVED PARTIAL** on Randomstrasse101 Conjecture 18.  
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`.  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`.  
+**Repository / branch:** private `private-source-repository` / `master`.  
 **Captured pre-write master:** `f47929e435aa5f84820ead0cd37ca477bc07e505`.  
 **Previous own substantive checkpoint:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1945+0300__random_reflection_positive_repair_energy.md`.  
 **Complementary checkpoint consulted:** P07-B `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T2014+0300__cubic_preconditioning_matched_decoupling.md`. P07-B owns Fourier-dual / exceptional-frequency / bounded-interpolation work. The present report stays on the primal orthogonal-core LP and a one-sided cap-flattening construction.

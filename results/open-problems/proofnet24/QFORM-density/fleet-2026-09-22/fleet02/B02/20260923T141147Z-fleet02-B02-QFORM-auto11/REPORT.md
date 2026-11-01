@@ -13,9 +13,9 @@ The full target is unchanged: arbitrary independent real coordinates with probab
 
 ## 1. Sources actually used
 
-Required Claude package: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, files `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`.
+Required Claude package: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, files `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`.
 
-Reviewed sharp-Hausdorff--Young continuation: `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. Its degree-k argument gives, at q=2,
+Reviewed sharp-Hausdorff--Young continuation: `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. Its degree-k argument gives, at q=2,
 
 `|phi_Q(t)| <= min(1, e^(k/4) 2^(-k/8) pi^(k/4) E_k(M)^(-1/8) |t|^(-k/4))`       (1.1)
 
@@ -23,13 +23,13 @@ for every original-coordinate physical cross block M; arbitrary same-bank phases
 
 `||p_Q||inf <= (5e/sqrt(2)) E5(M)^(-1/10)`.                                      (1.2)
 
-Designated partner actually applied: `fleet03/B02` r30, canonical mathematics `yspennstate/math-open-problems@cb55a355bc5c623eb5a98c1db8a0ebaa58ff1027`. For a physical cross block B with `Z=E3(B)>0`, at q=4/3 the partner proves: either D' pays
+Designated partner actually applied: `fleet03/B02` r30, canonical mathematics `private-source-repository@cb55a355bc5c623eb5a98c1db8a0ebaa58ff1027`. For a physical cross block B with `Z=E3(B)>0`, at q=4/3 the partner proves: either D' pays
 
 `||p_Q||inf <= (9sqrt(3)e/2) Z^(-1/6)`,                                         (1.3)
 
 with `phi_Q in L1`, or a physical row/column anchor pair has joint incident third-volume `J_ij>Z/3`.
 
-The immediately preceding fleet02/B02 result `QFORM-HEAVYSTAR-STRIP-TO-DOUBLEANCHOR-v1`, canonical mathematics `yspennstate/math-open-problems@9a5b5b7ee3ec28d8f2fb9eaced2254ac050b5104`, sends the two-sided transport-failure branch to a fixed second physical anchor packet `G>Z/24`. If the second 2x2 anchor P is invertible, with `D=|det P|` and algebraic cross-Schur residual S,
+The immediately preceding fleet02/B02 result `QFORM-HEAVYSTAR-STRIP-TO-DOUBLEANCHOR-v1`, canonical mathematics `private-source-repository@9a5b5b7ee3ec28d8f2fb9eaced2254ac050b5104`, sends the two-sided transport-failure branch to a fixed second physical anchor packet `G>Z/24`. If the second 2x2 anchor P is invertible, with `D=|det P|` and algebraic cross-Schur residual S,
 
 `G=D^2 ||S||_F^2 > Z/24`.                                                         (1.4)
 

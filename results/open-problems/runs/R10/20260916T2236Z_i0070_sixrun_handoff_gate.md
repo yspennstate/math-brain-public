@@ -2,7 +2,7 @@ Model actually running: GPT-5.6 Sol. Reasoning: UNVERIFIED — NO MOVEMENT in th
 
 # R10 — I0070 six-run handoff: critical p=2 Hilbert regularity
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Outside source: Antonio Agresti and Mark Veraar, *Nonlinear SPDEs and Maximal Regularity: An Extended Survey*, arXiv:2501.18561 (historical intake locator v2; current source v5), NoDEA 32 (2025), Article 123, Problem 6.
 Status after this run: **SOURCE OPEN in the current paper; R10 PARTIAL / author-side full-source proof candidate C006 preserved; 0/2 required external closure audits recovered; R10 attack retired after six unchanged metric runs.**
 

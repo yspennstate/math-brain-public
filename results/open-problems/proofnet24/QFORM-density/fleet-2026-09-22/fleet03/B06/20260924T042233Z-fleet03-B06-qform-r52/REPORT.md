@@ -9,7 +9,7 @@ attacking: `QFORM-THREEHUB-9375-LOCALIZED-CURVED-RECEIVER-v1`; convert the r51 l
 - Owner programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`.
 - Fresh owner-control revision read before publication: `2026-09-22.15`.
 - Final brain source refresh: `yspennstate/math-research-brain@0f17ba16607dc0f969459c7daa8cd0594a71692c`.
-- Math source refresh immediately before publication: `yspennstate/math-open-problems@06f04e91cd15df1932974ca5679fd99bbae78359`.
+- Math source refresh immediately before publication: `private-source-repository@06f04e91cd15df1932974ca5679fd99bbae78359`.
 - Predecessor: fleet03/B06 r51, `QFORM-RANK3-PLUCKER-DISJOINT-CROSS-v1` and `QFORM-RANK3-LOWDISJOINT-THREEHUB-CERT-v1`.
 - Designated partner used below: fleet04/B06 r3, `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`.
 - Execution label: `WITHOUT_VERIFIED_BRAIN`; repository access is not native-brain ingestion.

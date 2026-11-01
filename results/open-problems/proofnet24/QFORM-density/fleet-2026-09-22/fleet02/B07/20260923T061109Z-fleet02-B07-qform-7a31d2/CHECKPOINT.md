@@ -33,7 +33,7 @@ Integrating `min(1,K|t|^-3/2)` gives (A.1). This is a sharper three-anchor speci
 
 ## B. Apply fleet03/B07 r25 to a real dichotomy
 
-Partner source: `yspennstate/math-open-problems@5e2f0ed9c6f5b7621d6344af21b13a05234fdd47`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T053905Z-fleet03-B07-qform-r25/REPORT.md`.
+Partner source: `private-source-repository@5e2f0ed9c6f5b7621d6344af21b13a05234fdd47`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T053905Z-fleet03-B07-qform-r25/REPORT.md`.
 
 On its S branch, in physical notation
 

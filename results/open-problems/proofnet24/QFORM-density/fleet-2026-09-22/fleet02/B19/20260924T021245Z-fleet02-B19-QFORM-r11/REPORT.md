@@ -13,7 +13,7 @@ The exact target remains: independent real ORIGINAL coordinates with one-dimensi
 ## 1. Sources actually consumed
 
 
-`yspennstate/math-open-problems@628222e360badf19079bf4e36c2122d894669e57`,
+`private-source-repository@628222e360badf19079bf4e36c2122d894669e57`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T010216Z-fleet03-B19-QFORM-r46/REPORT.md`.
 
 Its theorem `QFORM-TWOSTAR-TO-ALIGNED-R2-OR-E3-v1` starts from disjoint physical banks `R,C`, physical anchors `p,q` outside them (possibly `p=q`),
@@ -28,7 +28,7 @@ For a literal appended-star physical cross block it proves the exact exterior id
 
 The owner-pinned completed source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`
 
 was reread. In particular its marginal-free D5 theorem states, for every literal physical cross block `M`,
@@ -37,7 +37,7 @@ was reread. In particular its marginal-free D5 theorem states, for every literal
 
 with all same-bank curvature, affine terms, outside couplings and extra spectrum retained.
 
-I also use the current fleet02/B20 one-anchor checkpoint (present at math master source refresh `73f5015193de11d14a7c7c1c53a98d7250d47fd0`) and the source-valid `QFORM-E2-HALFRIESZ-ROW-GATE-FREE-v1` in fleet02/B06 (`math-open-problems@434d3ab3168164b38fdba61456e35e747a67bea3`) only to state the remaining graph correctly; no unsupported `H_{1/2}=>L^infinity` promotion is made.
+I also use the current fleet02/B20 one-anchor checkpoint (present at math master source refresh `73f5015193de11d14a7c7c1c53a98d7250d47fd0`) and the source-valid `QFORM-E2-HALFRIESZ-ROW-GATE-FREE-v1` in fleet02/B06 (`private-source@434d3ab3168164b38fdba61456e35e747a67bea3`) only to state the remaining graph correctly; no unsupported `H_{1/2}=>L^infinity` promotion is made.
 
 ## 2. A sharp rank-one-tail inequality
 

@@ -16,7 +16,7 @@ Fresh owner control during this run remained QFORM-only under revision `2026-09-
 
 The latest completed designated partner is fleet02/B10 `20260922T225540Z-fleet02-B10-QFORM-auto11`, canonical
 
-`yspennstate/math-open-problems@9005415f079b7b46c0618c0187bf29b3f8d44167`
+`private-source-repository@9005415f079b7b46c0618c0187bf29b3f8d44167`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T225540Z-fleet02-B10-QFORM-auto11/REPORT.md`.
 
@@ -24,7 +24,7 @@ It proves the tripartite heavy-hub delete-or-isolate lemma. In particular a surv
 
 I also use the immediately preceding completed fleet02/B10 generated-mismatch result,
 
-`yspennstate/math-open-problems@ceae35deb4625f33bb99551dc50e455285d44da0`
+`private-source-repository@ceae35deb4625f33bb99551dc50e455285d44da0`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T214629Z-fleet02-B10-qform/REPORT.md`.
 

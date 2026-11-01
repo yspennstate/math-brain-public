@@ -36,7 +36,7 @@ This theorem repairs the useful localized branch by a product-preserving argumen
 Two completed supporting theorems were read at their immutable sources.
 
 1. `QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1`, source
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
    For an original-coordinate principal block of rank exactly three, `A_II=V M V^T`, and a nonzero physical diagonal entry `a=A_ii`, it gives
 
    `||p_Q||_infinity <= 128 [c_i |a| |det M|]^(-1/4)`,
@@ -44,7 +44,7 @@ Two completed supporting theorems were read at their immutable sources.
    uniformly over arbitrary induced affine terms and arbitrary outside couplings.
 
 2. `QFORM-RANK3-INDEFINITE-PAIR-PIVOT-v1`, source
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
    If a rank-three original-coordinate principal block has nonzero eigenvalue magnitudes at least `s`, and an invertible indefinite physical pair `C` with `D=|det C|` and `kappa=sigma_min(C)`, then
 
    `||p_Q||_infinity <= 8 sqrt(5) (D kappa s)^(-1/4)`,
@@ -150,7 +150,7 @@ whenever the same original `3 x 3` principal block has `sigma_min >= s`.
 
 To apply the designated partner result at an actual inequality, use fleet04/B13's `QFORM` no-attainment purification theorem at
 
-`yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
+`private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
 
 Its product-purification identity says that for the bounded slab kernel `K=1_{x^TAx in J}`, the supremum over arbitrary cap-one mass-one product densities equals the supremum over unit-measure product indicators, unchanged even if the latter are restricted to bounded finite unions of intervals (with no uniform diameter or fragment-count bound). Applying it to (4.1) transfers the same constant with zero loss to all admissible product densities. This is an actual application to the new localized slab inequality, not an interval-extremality assumption.
 

@@ -53,7 +53,7 @@ The generic packet has a nonzero orthogonal residual. It is then a genuine two-d
 
 Canonical source:
 
-`yspennstate/math-open-problems@3e8704eead81b6fef2d305978ec89abb307d899a`
+`private-source-repository@3e8704eead81b6fef2d305978ec89abb307d899a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T025431Z-fleet01-B05-QFORM-r25/REPORT.md`.
 
@@ -71,7 +71,7 @@ The proof is product-preserving and does not use the refuted arbitrary-joint 3D 
 
 Canonical source:
 
-`yspennstate/math-open-problems@e06922bfa31bbd225cdce6ee6aea563254e62563`
+`private-source-repository@e06922bfa31bbd225cdce6ee6aea563254e62563`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T122133Z-b05-qform-5c41e5bb/REPORT.md`.
 
@@ -86,7 +86,7 @@ Section 6 below applies (2.2) to the actual grouped packet, including the densit
 
 The latest completed fleet02/B05 report was also read:
 
-`yspennstate/math-open-problems@b6ded18bee0fe20353530653ce654308cac0631c`
+`private-source-repository@b6ded18bee0fe20353530653ce654308cac0631c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T225232Z-fleet02-B05-QFORM-37473ccc/REPORT.md`.
 
@@ -96,7 +96,7 @@ Its reverse-conditioned bank-leakage theorem and random-slope half-Riesz theorem
 
 Canonical source:
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 

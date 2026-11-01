@@ -13,7 +13,7 @@ The target is the following unrestricted statement. For every finite `n`, every 
 
 The newest completed designated partner result actually consumed is fleet03/B20 run `20260922T165009Z-fleet03-B20-QFORM-r13`, canonical mathematics
 
-`yspennstate/math-open-problems@06ef7346c08f41c3fac240e1acdeb1b42dc2995d`
+`private-source-repository@06ef7346c08f41c3fac240e1acdeb1b42dc2995d`
 
 at
 
@@ -21,7 +21,7 @@ at
 
 Its theorem `QFORM-NESTED-CUT-THREE-RESOURCE-v1` turns a lower bound on `s_2(A-diag A)` into an original-coordinate two-direction cross bank, or a rank-one outer bank plus either a physical pivot or a nested cross bank. I use its exact random-cut/Eckart--Young mechanism below with the newest stronger threshold rather than merely quoting its older constants.
 
-The second current input is fleet03/B19 run `20260922T170047Z-fleet03-B19-QFORM-r15`, canonical mathematics `yspennstate/math-open-problems@539d1d9953c616bf0e1ab2dafeef55102f89c2b9`. It proves, under the full owner quantifiers,
+The second current input is fleet03/B19 run `20260922T170047Z-fleet03-B19-QFORM-r15`, canonical mathematics `private-source-repository@539d1d9953c616bf0e1ab2dafeef55102f89c2b9`. It proves, under the full owner quantifiers,
 
 ` s_2(A-diag A) <= 499/1000  =>  ||p_Q||_infinity < 84. `
 
@@ -29,7 +29,7 @@ Thus every still-unpaid matrix satisfies the strict complementary inequality
 
 ` s_2(A-diag A) > 499/1000. `                                      (1.1)
 
-The current orientation-free rank-two affine half-Riesz theorem at `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a` remains available for later analytic payment, but this report does not extend it to arbitrary higher-rank remainders.
+The current orientation-free rank-two affine half-Riesz theorem at `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a` remains available for later analytic payment, but this report does not extend it to arbitrary higher-rank remainders.
 
 Corrections retained throughout: no law-uniform pointwise quadratic-phase decay; no dimension-free naive fiber supremum; no independence after spectral rotation; no generic conditional-density cap surrogate; no one-good-minor inference; no bare bounded-3D-density/coarea implication for indefinite traces; and no same-square absorption of arbitrary same-bank curvature.
 

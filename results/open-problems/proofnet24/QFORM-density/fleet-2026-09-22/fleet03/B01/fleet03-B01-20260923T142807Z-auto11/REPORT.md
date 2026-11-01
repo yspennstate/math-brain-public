@@ -14,7 +14,7 @@ Fresh owner controls keep all workers on `QFORM-DENSITY-3EIG-20260922`; the full
 I use two completed results at equations.
 
 1. **Designated partner fleet04/B01**, canonical proof
-   `yspennstate/math-open-problems@8410ab9d8238baa40c033f83dbae6af44b0b2582`,
+   `private-source-repository@8410ab9d8238baa40c033f83dbae6af44b0b2582`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260923T131003Z-fleet04-B01-singular-star-routing-r2/REPORT.md`.
    For a physical pair with `a!=0`, its scalar-Schur variables satisfy
 
@@ -33,7 +33,7 @@ I use two completed results at equations.
    `L(ell)=W2/a^2`.
 
 2. **One-hub determinant-balanced integrated Fourier receiver**, fleet02/B09, read at immutable snapshot
-   `yspennstate/math-open-problems@b5f173477a3889ad9432ea7d97767e969c83b279`,
+   `private-source-repository@b5f173477a3889ad9432ea7d97767e969c83b279`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T074200Z-fleet02-B09-QFORM-r13/REPORT.md`.
    If, after conditioning only disjoint original coordinates, a literal hub `h` has leaf block
 
@@ -48,7 +48,7 @@ I use two completed results at equations.
    Its characteristic-function envelope is integrable uniformly over the conditioning variables, so this branch has a continuous `C_0` density.
 
 I also use fleet04/B01's earlier exact signed-Fejer identity at
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`:
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`:
 
 `||p_mu||_infinity = sup_{T>0,y} D_T mu(y)`
 

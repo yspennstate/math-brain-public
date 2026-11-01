@@ -21,7 +21,7 @@ The designated partner actually applied is fleet02/B13. Two completed partner re
 
 1. `QFORM-SLOPE-OFFSET-LINF-v1`, canonical source
 
-   `yspennstate/math-open-problems@fe0f6c26b4439e342a22a86450c8781b7543c9ec`,
+   `private-source-repository@fe0f6c26b4439e342a22a86450c8781b7543c9ec`,
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T222622Z-fleet02-B13-extremal-741150/REPORT.md`.
 
@@ -37,13 +37,13 @@ The designated partner actually applied is fleet02/B13. Two completed partner re
 
 2. `QFORM-PRODUCT-BANGBANG-REDUCTION-v1`, canonical source
 
-   `yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`.
+   `private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`.
 
    For every bounded measurable slab kernel, the supremum over arbitrary independent densities `0<=f_j<=1`, `int f_j=1`, equals the supremum over product indicators `1_{E_j}`, `|E_j|=1`. No single-interval, centered, bounded-diameter, or fixed-fragment conclusion is made.
 
 The exact-rank-three geometric input is fleet03/B13 r17,
 
-`yspennstate/math-open-problems@eac866b378f5c54411a55f7eb49f89336a4701ae`,
+`private-source-repository@eac866b378f5c54411a55f7eb49f89336a4701ae`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260922T213118Z-fleet03-B13-qform-r17/REPORT.md`.
 
@@ -68,7 +68,7 @@ It also uses the exact regression decomposition
 The completed zero-pivot nonlinear input used below is fleet01/B18
 `QFORM-ZEROPIVOT-1PLUS2-DENSITY-v1`, canonical
 
-`yspennstate/math-open-problems@dd94932dae1791af1bca9396c062e17d0e55142a`.
+`private-source-repository@dd94932dae1791af1bca9396c062e17d0e55142a`.
 
 For a cap-one scalar independent of an arbitrary two-dimensional vector with joint density cap `M`, a nonsingular symmetric zero-pivot `3x3` quadratic matrix `H` gives density at most
 

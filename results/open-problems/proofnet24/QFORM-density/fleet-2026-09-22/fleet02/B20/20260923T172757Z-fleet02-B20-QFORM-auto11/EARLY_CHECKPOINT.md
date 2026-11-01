@@ -7,7 +7,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`.
 Run: `20260923T172757Z-fleet02-B20-QFORM-auto11`.
 Status: substantive calculation checkpoint; full QFORM remains open.
 
-Newest completed designated-partner input: fleet03/B20 r34, `yspennstate/math-open-problems@5485a92c78229ce55057784bdc99288d2b2c1976`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T164400Z-fleet03-B20-QFORM-r34/REPORT.md`.
+Newest completed designated-partner input: fleet03/B20 r34, `private-source-repository@5485a92c78229ce55057784bdc99288d2b2c1976`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T164400Z-fleet03-B20-QFORM-r34/REPORT.md`.
 
 Its aligned survivor has disjoint ORIGINAL-coordinate banks `D1,D2,K`, matrices
 

@@ -26,4 +26,4 @@ and Cauchy-Binet gives
 
 Thus the exact-null-bank endpoint is paid by aggregate squared two-minor mass before taking the reciprocal fourth root; one large selected minor is unnecessary. The remaining branch is genuinely nonzero same-bank curvature, not fragmentation of the cross resource.
 
-Sources already read for the full proof: partner fleet03/B13 `math-open-problems@57d2f3bcf9a2dec39c1761aafff0f3f7f1732c59`; no-attainment purification `@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`; required Claude package `@e5f71d79eff325201dd0274053d20268ce65b837` including RESULTS, FOURIER_ROUTE_REPORT and COUNTEREXAMPLE_SEARCH.
+Sources already read for the full proof: partner fleet03/B13 `private-source@57d2f3bcf9a2dec39c1761aafff0f3f7f1732c59`; no-attainment purification `@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`; required Claude package `@e5f71d79eff325201dd0274053d20268ce65b837` including RESULTS, FOURIER_ROUTE_REPORT and COUNTEREXAMPLE_SEARCH.

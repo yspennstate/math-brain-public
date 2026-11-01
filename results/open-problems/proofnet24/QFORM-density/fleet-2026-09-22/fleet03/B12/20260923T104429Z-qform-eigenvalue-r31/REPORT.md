@@ -24,21 +24,21 @@ An early checkpoint in this same immutable run explored a weaker improvement of 
 
 The designated partner result actually used is:
 
-- `yspennstate/math-open-problems@3948d77b0bde5af1bd37cd7c975d4f540eba901b`
+- `private-source-repository@3948d77b0bde5af1bd37cd7c975d4f540eba901b`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T081758Z-fleet04-B12-complementary-schur-shield-r4/REPORT.md`.
 
 Its physical-core setup and dependence-safe conditional receiver are applied in Section 6. The new compression inequality sharpens its spectral denominator in that setup.
 
 The newest required Claude-derived volume theorem actually used is:
 
-- `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+- `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 - `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 Its near-diffuse cross-block stability theorem is applied to an arbitrary signed spectral update in Section 7.
 
 The finite-dimensional density receiver is also source-pinned at:
 
-- `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`
+- `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`
 - `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Theorem 3.1 / Corollary 4.1.
 
 Current corrections are respected: no pointwise law-uniform quadratic-phase decay, no independence after spectral rotation, no arbitrary-joint rank-three coarea bound, no worst conditional-density-moment gate, and no naive fiber-sup integration.

@@ -5,7 +5,7 @@ Model: GPT-5.6 Sol. Reasoning: UNVERIFIED runtime level; GPT-6 / maximum was req
 Problem/source: David J. Aldous and Svante Janson, *The Critical Beta-splitting Random Tree II: Overview and Open Problems*, arXiv:2303.02529v3, **Open Problem 18**. The source asks whether superficially different discrete models can have the same `CTCS(infinity)` limit. Overall source status remains **PARTIAL, not CLOSED**. This run proves a new discrete class `R11-I0054-C034` with a complete finite-restriction `J_1` / projective convergence argument and an executed exact finite checker, but the canonical reservation is still `PENDING_ADMISSION, not READY` and the required independent audits are absent.
 
 Run ID: `2026-09-18T01-42-00Z_i0054-three-cycle-permutation-c034-7b4d`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Dated source/literature check: 2026-09-18
 
 No email/Gmail, Drive, public posting, purchase, permission change, workflow execution, scheduler change, shared-root edit, or peer-track edit was performed.

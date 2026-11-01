@@ -13,7 +13,7 @@ The previous B05 checkpoint already transferred the newest-source ruled one-shee
 
 Required newest Claude package:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md` proves the ruled one-sheet estimate for exact rank-three signature `(+,+,-)`:
 

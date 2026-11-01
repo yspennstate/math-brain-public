@@ -23,7 +23,7 @@ No moment, bounded-diameter, connected-support, Gaussian, log-concave, or post-r
 
 The assigned partner `fleet04/B14` proved at
 
-`yspennstate/math-open-problems@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`
+`private-source-repository@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`
 
@@ -264,13 +264,13 @@ Continuity of the full output density is not proved here; only the localization 
 
 Control snapshot refreshed before publication: `yspennstate/math-research-brain@cd8b04e8e1716078b75b969da11b338f9cceb74e`, owner revision `2026-09-22.5`.
 
-Completed partner proof applied: `yspennstate/math-open-problems@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`.
+Completed partner proof applied: `private-source-repository@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`.
 
-Relevant prior localization obstruction: `yspennstate/math-open-problems@7fa8fffc603f29e26a5a012f8a1c6e0c7ec9d01f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260922T130524Z-fleet03-B13-QFORM-r11/REPORT.md`.
+Relevant prior localization obstruction: `private-source-repository@7fa8fffc603f29e26a5a012f8a1c6e0c7ec9d01f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260922T130524Z-fleet03-B13-QFORM-r11/REPORT.md`.
 
-Relevant positive select-before-localize theorem: `yspennstate/math-open-problems@2208c3f666582999f1fbc7e55921a4530cbe2789:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T133524Z-fleet03-B14-qform-r11/REPORT.md`.
+Relevant positive select-before-localize theorem: `private-source-repository@2208c3f666582999f1fbc7e55921a4530cbe2789:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T133524Z-fleet03-B14-qform-r11/REPORT.md`.
 
-Relevant fragment-count-blind triangular packing theorem: `yspennstate/math-open-problems@eb233d640e2843d0ab7a9adfbd71a31323757bf2:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T140126Z-b14-qform-localization-r13/REPORT.md`.
+Relevant fragment-count-blind triangular packing theorem: `private-source-repository@eb233d640e2843d0ab7a9adfbd71a31323757bf2:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T140126Z-b14-qform-localization-r13/REPORT.md`.
 
 The live correction inbox was reread immediately before publication; no refuted pointwise oscillatory decay, post-rotation independence, naive fiber supremum, bounded-diameter localization, conditional-cap surrogate, or absolute phase-Wiener premise is used.
 

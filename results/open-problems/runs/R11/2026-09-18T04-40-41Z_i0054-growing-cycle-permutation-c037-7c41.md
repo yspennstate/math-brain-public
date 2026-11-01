@@ -4,7 +4,7 @@ Model: GPT-5.6 Sol. Reasoning: UNVERIFIED runtime level; GPT-6 / maximum was req
 
 Problem/source: David J. Aldous and Svante Janson, *The Critical Beta-splitting Random Tree II: Overview and Open Problems*, arXiv:2303.02529v3, **Open Problem 18**. The source asks whether superficially different discrete models can have the same `CTCS(infinity)` limit and asks whether the source's subordinator mechanism can arise in another discrete tree model. Overall source status remains **PARTIAL, not CLOSED**.
 
-Repository / branch: `yspennstate/math-open-problems` / `master`. Dated source/literature check: 2026-09-18.
+Repository / branch: `private-source-repository` / `master`. Dated source/literature check: 2026-09-18.
 
 No email/Gmail, Drive, public posting, purchase, permission change, workflow execution, scheduler change, shared-root edit, or peer-track edit was performed.
 

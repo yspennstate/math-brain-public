@@ -1,7 +1,7 @@
 # QFORM fixed-multiplicity-17 constant sharpening
 
 Run: `20260924T115600Z-fleet03-B02-fixedmult-audit-r52`  
-Pinned baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`  
+Pinned baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Source blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
 Status: **proved quantitative improvement; no multiplicity reduction**.
 

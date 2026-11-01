@@ -2,7 +2,7 @@
 
 After the main report was written, a fresh compatible B12 result became visible:
 
-`yspennstate/math-open-problems@c33a86e95c0934f08acacf9d0c4fd5f9ba20738e`
+`private-source-repository@c33a86e95c0934f08acacf9d0c4fd5f9ba20738e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B12/20260922T131954Z-fleet01-B12-qform-r11/REPORT.md`.
 

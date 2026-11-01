@@ -23,7 +23,7 @@ This run does not use law-uniform scalar van-der-Corput decay, arbitrary-joint 3
 
 Previous fleet01/B08 theorem `QFORM-SELF-DUAL-REDUCING-PROJECTION-LADDER-v1`:
 
-`yspennstate/math-open-problems@5d2f07b086dec22993a28780c0e98fd7aef4c464`
+`private-source-repository@5d2f07b086dec22993a28780c0e98fd7aef4c464`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T053638Z-fleet01-B08-QFORM-auto11/REPORT.md`.
 
@@ -51,7 +51,7 @@ At the basis-invariant high-spectral-projector condition `max_i (P_L)_{ii}<=1/3`
 
 Fleet01/B01 theorem, canonical source
 
-`yspennstate/math-open-problems@1f3af9dc58afb9e902b972466d6da01cece89734`
+`private-source-repository@1f3af9dc58afb9e902b972466d6da01cece89734`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T030821Z-fleet01-B01-qform-auto11/REPORT.md`.
 
@@ -85,7 +85,7 @@ These are fractional-potential estimates, not density bounds.
 
 Newest completed designated-partner result used here:
 
-`yspennstate/math-open-problems@ab1940d32f6f758e7a355c128916a523e5519537`
+`private-source-repository@ab1940d32f6f758e7a355c128916a523e5519537`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T064247Z-fleet02-B08-qform-diffuse-r23/REPORT.md`.
 

@@ -18,7 +18,7 @@ Current owner control remained QFORM-only, owner revision `2026-09-22.15` at sta
 
 The newest designated partner used at an actual inequality is fleet02/B02:
 
-`yspennstate/math-open-problems@4029b9b55694ce709e43c62d2729e89108fbdede`
+`private-source-repository@4029b9b55694ce709e43c62d2729e89108fbdede`
 
 at
 
@@ -40,7 +40,7 @@ where `Z` is the parent third exterior-volume currency. The partner also proves 
 
 My immediately preceding B02 result is
 
-`yspennstate/math-open-problems@1a1e6cb54f557b5b60aa1cef4928634aaccd1ff4`
+`private-source-repository@1a1e6cb54f557b5b60aa1cef4928634aaccd1ff4`
 
 at
 

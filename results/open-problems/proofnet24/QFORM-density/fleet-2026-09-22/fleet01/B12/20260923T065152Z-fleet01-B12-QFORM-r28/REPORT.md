@@ -27,7 +27,7 @@ Runs r26-r27 controlled arbitrary signed spectral changes on an **invertible** p
 
 The completed `fleet02/B12` source is
 
-`yspennstate/math-open-problems@06fbcbb277d5db4f89dfc0c04b14174cc4315cc7`,
+`private-source-repository@06fbcbb277d5db4f89dfc0c04b14174cc4315cc7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T045101Z-fleet02-B12-auto11/REPORT.md`.
 
@@ -51,7 +51,7 @@ I apply (2.1) again at an actual inequality in Section 8.
 
 The terminal density theorem is Theorem A of
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
 

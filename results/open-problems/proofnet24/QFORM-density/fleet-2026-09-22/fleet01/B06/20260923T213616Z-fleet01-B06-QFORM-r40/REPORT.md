@@ -32,13 +32,13 @@ It shows that an indefinite two-hub core plus a robust slope does not absorb an 
 
 Own predecessor:
 
-`yspennstate/math-open-problems@aac76ab560be5a95b892a9668b075b1924d147a7`,
+`private-source-repository@aac76ab560be5a95b892a9668b075b1924d147a7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T203409Z-fleet01-B06-QFORM-r39/REPORT.md`.
 
 The new independently checked crossing theorem used below is
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -51,14 +51,14 @@ For r=2 this is the borderline `1/|t|` estimate: it does not itself imply a boun
 The designated partner is fleet02/B06. I use two of its completed results at actual equations:
 
 1. Latest `QFORM-E2-HALFRIESZ-ROW-GATE-FREE-v1`, canonical mathematics
-   `yspennstate/math-open-problems@b38a9627f059b13d532f5c208c30579ec2d2d362`, gives for a literal disjoint physical cross block `M`
+   `private-source-repository@b38a9627f059b13d532f5c208c30579ec2d2d362`, gives for a literal disjoint physical cross block `M`
 
    `H_(1/2)(S):=sup_a E|S-a|^(-1/2) <= 8 e^(1/4) e_2(M^T M)^(-1/8)`.   (1.2)
 
    No volume-row-marginal gate remains, and arbitrary same-bank quadratic curvature and affine terms are allowed.
 
 2. `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical mathematics
-   `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, gives for any k-dimensional orthonormal projection of a product cap-one law
+   `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, gives for any k-dimensional orthonormal projection of a product cap-one law
 
    `||p_projection||_infinity <= exp(k/2)`.                            (1.3)
 

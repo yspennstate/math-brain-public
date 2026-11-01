@@ -16,7 +16,7 @@ The point is structural. The product-space analytic endpoints below are already 
 
 Newest completed partner source consumed:
 
-`yspennstate/math-open-problems@df4567713c815300e94c25a594206b76ea00a04f`
+`private-source-repository@df4567713c815300e94c25a594206b76ea00a04f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260923T075009Z-r28/REPORT.md`.
 
@@ -182,7 +182,7 @@ So on this same target matrix, support-rich near-coloop concentration is much ch
 
 Use the completed one-scale ridge theorem
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 

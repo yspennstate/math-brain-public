@@ -4,7 +4,7 @@
 **Status:** PARTIAL. Full Friedgut--Kalai Fourier entropy--influence conjecture remains **OPEN / NOT PROVED**.  
 **Research label:** `WITHOUT_VERIFIED_BRAIN`.  
 **Route:** APPROACH 7, with APPROACH 14 coding/entropy bookkeeping.  
-**Fresh source state used:** `yspennstate/math-open-problems` master was refreshed during the run through `c4968a03f04b3f6674d6945e0bc30fe93e165562`.  
+**Fresh source state used:** `private-source-repository` master was refreshed during the run through `c4968a03f04b3f6674d6945e0bc30fe93e165562`.  
 **No audit:** this run does not rerun the read-once certificate or the settled small-n sweeps.
 
 ## 1. Why this is a different mechanism

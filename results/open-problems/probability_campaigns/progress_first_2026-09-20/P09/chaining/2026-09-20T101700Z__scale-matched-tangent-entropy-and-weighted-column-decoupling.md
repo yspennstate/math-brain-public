@@ -19,7 +19,7 @@ This run changes method from the preceding active-Grassmannian/commutator route.
 - Native role: `P09`
 - Native slot: `6aa7b454b5808191bb00d87697d89388`
 - Registered role: `chaining / geometric-probabilistic proof`
-- Repository / branch: private `yspennstate/math-open-problems`, `master`
+- Repository / branch: private `private-source-repository`, `master`
 - Immediate P09 predecessor: `probability_campaigns/progress_first_2026-09-20/P09/chaining/2026-09-20T085800Z__active-frame-truncation-and-commutator-counterexample.md`, creation commit `fc1c4e334ab4a663a36728424f393c71ab9ec8aa`, blob `f81831035b3e38c5da44b7ec6b331d5c0b00310e`.
 - Historical C0035 material, earlier P09 reports, and peer files are preserved. This file is additive and immutable.
 

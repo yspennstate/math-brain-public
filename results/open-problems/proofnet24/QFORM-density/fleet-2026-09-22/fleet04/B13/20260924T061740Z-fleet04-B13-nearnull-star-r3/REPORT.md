@@ -10,9 +10,9 @@ The target remains the full statement: independent real coordinates with probabi
 
 Required base source retained:
 
-- math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}.
-- math-open-problems@7e23bcf74fa1862bfe9054591c946bfd8f3276cb, fleet01/B13 scalar Schur receiver.
-- math-open-problems@635da12cb1c19b27c455c662be800eb1113dd845, fleet04/B13 fifth-diagonal sparsification.
+- private-source@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}.
+- private-source@7e23bcf74fa1862bfe9054591c946bfd8f3276cb, fleet01/B13 scalar Schur receiver.
+- private-source@635da12cb1c19b27c455c662be800eb1113dd845, fleet04/B13 fifth-diagonal sparsification.
 
 The prior corrections are enforced: no post-rotation independence, no arbitrary-joint coarea estimate, no pointwise quadratic characteristic-function decay, no treatment of a small quadratic tail as a small random error, and no continuity inference from essential boundedness alone.
 

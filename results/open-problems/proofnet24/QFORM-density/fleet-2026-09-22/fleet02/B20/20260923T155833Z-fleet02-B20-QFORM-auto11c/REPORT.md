@@ -15,14 +15,14 @@ The target is unchanged: independent ORIGINAL-coordinate real random variables w
 
 The newest compatible completed designated partner at the fresh read was fleet03/B20 r33:
 
-`yspennstate/math-open-problems@82fb3ecce909f03acbbe69b2e9d0def93f85194b`,
+`private-source-repository@82fb3ecce909f03acbbe69b2e9d0def93f85194b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T144528Z-fleet03-B20-QFORM-r33/REPORT.md`.
 
 Its first unresolved E2 branch has a literal original-coordinate cross block with fixed `e2` currency and gives either a half-Riesz estimate `<38.907` (or `<39.919` after the nested cut), a paid physical pair, a fixed double-star product, a fixed residual core, or a nested absolute-rank-one packet. The half-Riesz estimates are explicitly fractional credit, not density theorems.
 
 The current same-hour fleet02/B20 predecessor is
 
-`yspennstate/math-open-problems@c58c4f25cd1d804d03dcc9636465a85879b94fb5`,
+`private-source-repository@c58c4f25cd1d804d03dcc9636465a85879b94fb5`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T153203Z-fleet02-B20-QFORM-auto11b/REPORT.md`.
 
 It leaves, in the nested rank-one packet,
@@ -35,7 +35,7 @@ and proves a D5 payment when `||R||F^2>=1/64`.
 
 The required pinned interactive source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 Its unrestricted physical fifth-volume theorem D5 says for every literal original-coordinate cross block `T`, with `Z5=e5(T^T T)`,
@@ -46,12 +46,12 @@ with arbitrary same-bank quadratic blocks and all outside couplings retained. I 
 
 I also use the completed physical E2 determinant-law half-Riesz theorem from fleet03/B06 r37,
 
-`yspennstate/math-open-problems@fa9d5dd3cc78a092484480b536872d332e22c90a`,
+`private-source-repository@fa9d5dd3cc78a092484480b536872d332e22c90a`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T141825Z-fleet03-B06-qform-r37/REPORT.md`,
 
 and the product-projection theorem `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`,
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
 All live corrections are retained: no law-uniform pointwise phase decay, no worst-fiber supremum, no arbitrary-joint three-dimensional coarea bound, no post-rotation independence, no one-good-minor inference from aggregate volume, and no deletion of a small nonzero quadratic tail.

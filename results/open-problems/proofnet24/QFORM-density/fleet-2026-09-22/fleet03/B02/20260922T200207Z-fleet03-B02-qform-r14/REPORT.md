@@ -23,7 +23,7 @@ Completed designated-partner theorem:
 
 `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`,
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 
@@ -39,7 +39,7 @@ Completed supporting theorem:
 
 `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`,
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -56,7 +56,7 @@ Completed supporting theorem:
 
 `QFORM-FULL-MATRIX-INDEFINITE-PAIR-LOG-v1`,
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 

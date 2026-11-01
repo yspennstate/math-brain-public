@@ -14,19 +14,19 @@ The unrestricted owner conjecture remains OPEN. This report does not claim a ful
 
 The immediate B11 predecessor is fleet03/B11 r44, canonical mathematics
 
-`yspennstate/math-open-problems@388ba1f1ccf6a89dad0ca0a0fdb71d281ad6239b`,
+`private-source-repository@388ba1f1ccf6a89dad0ca0a0fdb71d281ad6239b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T231333Z-fleet03-B11-QFORM-r44/REPORT.md`.
 
 It proves an arbitrary-pivot shared-hub tensor receiver when two source-disjoint star banks have a genuine rank-one transverse crossing. The first unpaid branch there is the non-rank-one or aligned shared-hub collar.
 
 The earlier fleet03/B11 null-heavy normal form is
 
-`yspennstate/math-open-problems@e100de67669c37c8243fe9e389efc909f3179839`,
+`private-source-repository@e100de67669c37c8243fe9e389efc909f3179839`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T182528Z-fleet03-B11-QFORM-r12/REPORT.md`.
 
 The completed designated partner used below is fleet04/B11:
 
-`yspennstate/math-open-problems@4110bbfd21beffa0260a017d468b0a486af56db1`,
+`private-source-repository@4110bbfd21beffa0260a017d468b0a486af56db1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T222040Z-fleet04-B11-cone-envelope-r3/REPORT.md`.
 
 Its partition-stable null-scalar theorem gives, for a cap-`L` scalar independent of an arbitrary pair of joint cap `M`,

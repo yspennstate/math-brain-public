@@ -11,7 +11,7 @@ Status: **new supporting theorem proved; full QFORM OPEN / NOT PROVED / NOT DISP
 ## 1. Source-pinned inputs actually used
 
 1. **Two hubs with arbitrary self-interaction and one transverse square**, complete proof:
-   `yspennstate/math-open-problems@237654c8819536e335afb91380290f5d833e2716`,
+   `private-source-repository@237654c8819536e335afb91380290f5d833e2716`,
    `proofnet24/QFORM-density/interactive/20260923T190527Z-two-hubs-arbitrary-self/REPORT.md`.
    If `H in R^2` is independent of `Z=(Y1,Y2,V)`, the joint hub density is at most one, the joint light density is at most `M`, and
    `Q=R(H)+2 H.Y + lambda V^2 + 2 V G(Y)+F(Y)`, then Q has a continuous C0 density and
@@ -19,7 +19,7 @@ Status: **new supporting theorem proved; full QFORM OPEN / NOT PROVED / NOT DISP
    No independence among `(Y1,Y2,V)` is required.
 
 2. **fleet04/B13 optimizer-free slab transfer and diffuse exact-rank-two dichotomy**, complete proof:
-   `yspennstate/math-open-problems@d1764f29884bf14ce505d36668105edfcaf8315e`,
+   `private-source-repository@d1764f29884bf14ce505d36668105edfcaf8315e`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T201653Z-fleet04-B13-extremal-slab-dichotomy-r1/REPORT.md`.
    In the exact endpoint
    `A=D+U Lambda U^T`, `U^TU=I_2`, `max_i ||u_i||^2 <=1/3`, `s_3(A)>=1`, choose k with `|d_k|>=1`. For slab ratio rho,
@@ -30,7 +30,7 @@ Status: **new supporting theorem proved; full QFORM OPEN / NOT PROVED / NOT DISP
    The same report proves the optimizer-free product-set supremum identity; no interval optimizer is assumed.
 
 3. **Exact witnesswise bathtub purification**, fleet01/B13 handoff source:
-   `yspennstate/math-open-problems@faabe6543fe023941b6965c2d9808c5d9186d8e5`,
+   `private-source-repository@faabe6543fe023941b6965c2d9808c5d9186d8e5`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T213043Z-fleet01-B13-qform-auto11/REPORT.md`.
    For a bounded nonnegative kernel, successive one-coordinate bathtub replacement produces unit-measure indicators without decreasing the objective. I use this only as a product-law interpretation; the main receiver below already works directly for arbitrary cap-one product densities.
 

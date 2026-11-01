@@ -28,22 +28,22 @@ Corrections retained include: no law-uniform pointwise quadratic-phase decay; no
 
 The proof uses the following completed inputs at their exact scopes.
 
-- fleet03/B09 r31, `QFORM-RANK2-NOAUGMENT-AGGREGATE-STABILITY-v1`, `yspennstate/math-open-problems@e8b97d9dcd8dd85cacc8fc73c2be4e86fde4b27a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T114612Z-fleet03-B09-QFORM-r31/REPORT.md`. It identifies the singleton third-volume quantities Gamma_k and proves that their squared aggregate is the correct dimension-free defect from the exact rank-two no-augmentation model.
+- fleet03/B09 r31, `QFORM-RANK2-NOAUGMENT-AGGREGATE-STABILITY-v1`, `private-source-repository@e8b97d9dcd8dd85cacc8fc73c2be4e86fde4b27a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T114612Z-fleet03-B09-QFORM-r31/REPORT.md`. It identifies the singleton third-volume quantities Gamma_k and proves that their squared aggregate is the correct dimension-free defect from the exact rank-two no-augmentation model.
 
-- fleet03/B09 r30, grouped rank-r cross smoothing, `yspennstate/math-open-problems@0257b7a08990f303da16797bcbad0d3e6a1e6538`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T104947Z-fleet03-B09-QFORM-r30/REPORT.md`. At rank three it gives
+- fleet03/B09 r30, grouped rank-r cross smoothing, `private-source-repository@0257b7a08990f303da16797bcbad0d3e6a1e6538`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T104947Z-fleet03-B09-QFORM-r30/REPORT.md`. At rank three it gives
 
       ||p_Q||_infinity <= 3e Gamma^(-1/3)
 
   for an actual original-coordinate cross cut with third singular product Gamma, retaining arbitrary same-side curvature and giving a continuous density.
 
-- newest volume-stability/Fourier theorem, `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, path `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. For an actual cross matrix M, if the normalized three-volume row marginals alpha_i are <=q/2, 1<=q<3/2, then
+- newest volume-stability/Fourier theorem, `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, path `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. For an actual cross matrix M, if the normalized three-volume row marginals alpha_i are <=q/2, 1<=q<3/2, then
 
       ||p_Q||_infinity
        <= 3e / ((3-2q)sqrt(q)) * e_3(M^T M)^(-1/6).
 
   Its proof is by decoupling in original coordinates, determinant-weighted Brascamp--Lieb, sharp Hausdorff--Young, and Fourier inversion.
 
-- designated partner fleet04/B09, `QFORM-PHYSICAL-CROSS-DETERMINANT-SMOOTHING-v1`, `yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`. For a literal physical 3x3 cross block K,
+- designated partner fleet04/B09, `QFORM-PHYSICAL-CROSS-DETERMINANT-SMOOTHING-v1`, `private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`. For a literal physical 3x3 cross block K,
 
       ||p_Q||_infinity <= 3 |det K|^(-1/3),
 

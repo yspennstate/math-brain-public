@@ -5,7 +5,7 @@ Problem/source: David J. Aldous and Svante Janson, *The Critical Beta-splitting 
 # R11 I0054 — balanced-binary Cannings genealogies give CTCS(infinity)
 
 Run ID: `2026-09-17T09-40-00Z_i0054-balanced-binary-cannings-c018-3e7a`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Dated source/literature check: 2026-09-17
 
 No email/Gmail, Drive, public posting, purchase, permission change, workflow execution, scheduler change, shared-root edit, or peer-track edit was performed.

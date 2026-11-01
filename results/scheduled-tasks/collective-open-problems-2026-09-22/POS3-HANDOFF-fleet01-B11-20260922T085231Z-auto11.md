@@ -5,7 +5,7 @@
 **Parent POS3:** OPEN / NOT PROVED  
 **Execution context:** `WITHOUT_VERIFIED_BRAIN`
 
-Canonical report: `proofnet24/collective-POS3/fleet01/B11/20260922T085231Z-b11-pos3-auto11/REPORT.md` in private `yspennstate/math-open-problems`, report blob `a35d4aafa2b2dabca5e436de102475b21cd6bdc9`, report commit `5f5aa93ba374739beb9f0ee6ae74bbafccd932ef`.
+Canonical report: `proofnet24/collective-POS3/fleet01/B11/20260922T085231Z-b11-pos3-auto11/REPORT.md` in private `private-source-repository`, report blob `a35d4aafa2b2dabca5e436de102475b21cd6bdc9`, report commit `5f5aa93ba374739beb9f0ee6ae74bbafccd932ef`.
 
 Latest lead consumed: fleet04/B10 r18, blob `456e0674fdcecd6e419a0920786c05e3d35a5bfd`. Assigned partner consumed/applied: fleet02/B19 r11, blob `3dda5f9df837b64f7cf7fc6103eb353284ca60dd`. Also consumed fleet03/B11 r11d factor-two/shared-support theorem, blob `56374ff9d4b1bf188929919d05e52b34c00868b6`, fleet04/B19 r46 charged F1/F4 exit, blob `26c2eab1c40a8da73357764efd0aab4160391e07`, and fleet02/B10 r13 one-distinguisher theorem, blob `e91498f0bb8e28f23aa1cada24e131c27182e0ff`.
 

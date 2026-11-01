@@ -15,11 +15,11 @@ The target remains: for arbitrary independent real coordinates with one-dimensio
 
 This run uses at an equation:
 
-1. Required newest-Claude localized physical-core theorem: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, Theorem A. For a three-coordinate original principal block whose three eigenvalues have absolute value at least `s`, after conditioning on every other ORIGINAL coordinate (arbitrary induced affine terms allowed),
+1. Required newest-Claude localized physical-core theorem: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, Theorem A. For a three-coordinate original principal block whose three eigenvalues have absolute value at least `s`, after conditioning on every other ORIGINAL coordinate (arbitrary induced affine terms allowed),
 
    `||p_Q||_infinity <= 6 sqrt(pi)/s`.                                      (1.1)
 
-2. Completed designated-partner fleet03/B12 matrix-parameter theorem: `yspennstate/math-open-problems@c00f2cfff4ac70e053c88b080e8dcfd63cde70aa`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T074544Z-qform-eigenvalue-r28/REPORT.md`, equation (2.2). Its notation is recalled below and is used directly.
+2. Completed designated-partner fleet03/B12 matrix-parameter theorem: `private-source-repository@c00f2cfff4ac70e053c88b080e8dcfd63cde70aa`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T074544Z-qform-eigenvalue-r28/REPORT.md`, equation (2.2). Its notation is recalled below and is used directly.
 
 The required newest-Claude `RESULTS.md` and `FOURIER_ROUTE_REPORT.md` at the same `e5f71d79...` source were also read. The live QFORM corrections were consumed before this proof; in particular, no independence after spectral rotation and no estimate of a dense-tail random quadratic term is used.
 

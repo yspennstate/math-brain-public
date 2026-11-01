@@ -13,7 +13,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Role: extremal product laws. All rando
 
 Source:
 
-`yspennstate/math-open-problems@f6ad7b994c1ba509af30fceaf45e8b464db86af8`
+`private-source-repository@f6ad7b994c1ba509af30fceaf45e8b464db86af8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T155736Z-fleet02-B13-rank4star-r30/REPORT.md`.
 
@@ -70,7 +70,7 @@ I rederive the only part used here directly from `Z_ij>Z/3` and `Z>=s_3(B)^6`; n
 
 Source:
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -93,7 +93,7 @@ and the standard three-dimensional projection cap gives `M_Y<=2^(3/2)`, hence
 
 Source:
 
-`yspennstate/math-open-problems@82f9b7e9372c2434f27fd1f5a65e7148663516a7`
+`private-source-repository@82f9b7e9372c2434f27fd1f5a65e7148663516a7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T121154Z-fleet04-B13-nonattained-bathtub-r1/REPORT.md`.
 

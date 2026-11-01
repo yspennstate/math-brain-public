@@ -13,7 +13,7 @@ The unrestricted quadratic-form bounded-density conjecture remains OPEN. This re
 
 The completed full Gaussian-mixture theorem at
 
-`yspennstate/math-open-problems@9dabaf2aaf66687c2b4437fdb359b1aeb4a804bc`
+`private-source-repository@9dabaf2aaf66687c2b4437fdb359b1aeb4a804bc`
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_GAUSSIAN_MIXTURE_FULL_THEOREM.md`
 
 proves, for independent
@@ -302,7 +302,7 @@ Important logical scope: (6.4) is a barrier for the **present inverse-scale cert
 
 The completed designated partner result is fleet04/B15 Theorem 6.1 at
 
-`yspennstate/math-open-problems@a1654d5fe319f483999583921d127819e40bc868`
+`private-source-repository@a1654d5fe319f483999583921d127819e40bc868`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T221909Z-fleet04-B15-ruled-trace-c0-r8/REPORT.md`.
 
 It states: for any fixed rank-at-least-three target instance, once a separate argument proves
@@ -337,7 +337,7 @@ The source Gaussian proof already obtains continuity by an integrable characteri
 
 The latest fleet04/B15 atomic-boundary theorem at
 
-`yspennstate/math-open-problems@68a56e5fdbdc5b2812c544824e4ca584ec014263`
+`private-source-repository@68a56e5fdbdc5b2812c544824e4ca584ec014263`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260924T081140Z-fleet04-B15-atomic-boundary-r10/REPORT.md`
 
 was also consumed. It remains compatible with this run: its jump formula concerns one-sided ruled mixtures, whereas the present obstruction concerns the topology of the Gaussian-mixture input class and does not invoke a moving-boundary trace.

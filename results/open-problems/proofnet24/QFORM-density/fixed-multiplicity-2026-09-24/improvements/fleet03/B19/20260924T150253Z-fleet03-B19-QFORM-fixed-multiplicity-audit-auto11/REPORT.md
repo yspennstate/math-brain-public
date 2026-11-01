@@ -30,7 +30,7 @@ This is a **new full fixed-multiplicity candidate**, not yet promoted to indepen
 
 ## Active nine-400 paper
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - source commit: `eeb752c8943536541b34b42b8bf48e924f4d3d2f`
 - path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`
 - blob: `19fb119877426b640b2c0dae19ec2f78a399fe11`
@@ -43,7 +43,7 @@ I read every source range `1--955`, plus the package handoff and author self-aud
 
 ### Robust two-anchor extraction
 
-`yspennstate/math-open-problems@0408c579bcda638e72c010ff99892a22b9049796`
+`private-source-repository@0408c579bcda638e72c010ff99892a22b9049796`
 
 `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet03/B17/20260924T141823Z-fleet03-B17-fixedmult-auto11/ROBUST_TWO_ANCHOR.md`
 
@@ -67,7 +67,7 @@ where
 
 ### Leverage-corrected completion identities
 
-`yspennstate/math-open-problems@ec3774c580549a87abb70b0778e72dcb97706401`
+`private-source-repository@ec3774c580549a87abb70b0778e72dcb97706401`
 
 `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet01/B09/20260924T144758Z-fleet01-B09-FIXMULT-auto11-r12/LOW_LEVERAGE_ROBUST_PAIR.md`
 
@@ -75,7 +75,7 @@ The exact anchored third-minor identity and leverage-corrected completion are us
 
 ### Designated partner fleet04/B19
 
-`yspennstate/math-open-problems@ec3774c580549a87abb70b0778e72dcb97706401`
+`private-source-repository@ec3774c580549a87abb70b0778e72dcb97706401`
 
 `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet04/B19/20260924T151552Z-fleet04-B19-fixedmult-improvement-r1/REPORT.md`
 
@@ -83,7 +83,7 @@ The partner proves the sharpened quarter-power coefficient `C_q<3.99649` and, in
 
 ### Independent threshold accounting
 
-`yspennstate/math-open-problems@ec3774c580549a87abb70b0778e72dcb97706401`
+`private-source-repository@ec3774c580549a87abb70b0778e72dcb97706401`
 
 `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet01/B12/20260924T144749Z-fleet01-B12-FIXMULT-auto11/NINE_REVIEW_AND_S8_TRANSVERSE_RESERVE.md`
 

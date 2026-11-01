@@ -17,7 +17,7 @@ The point of this run is to remove a genuine obstruction in the two-hub normal f
 
 Source-pinned report:
 
-`yspennstate/math-open-problems@04973c0d13c8cbe814f1303b7de8aeffd40791df`
+`private-source-repository@04973c0d13c8cbe814f1303b7de8aeffd40791df`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T110032Z-fleet02-B13-extremal-r25/REPORT.md`.
 
@@ -41,7 +41,7 @@ The new theorem below recovers (1.2) as the `k=0` member of a larger low-rank-cu
 
 The partner proof uses the pinned Fourier source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 whose required estimate is the following. For every scalar cap-one density `f`, every real quadratic twist `s`, and
 

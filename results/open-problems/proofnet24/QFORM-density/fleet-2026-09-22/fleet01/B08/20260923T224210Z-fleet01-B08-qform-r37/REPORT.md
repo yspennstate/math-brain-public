@@ -34,7 +34,7 @@ This is not a solution of the full conjecture: for `0<s_3(C)<<L`, the child tail
 
 The immediately preceding source is
 
-`yspennstate/math-open-problems@e7518cad31bf0381bdf682478ca472a0c08f77b9`,
+`private-source-repository@e7518cad31bf0381bdf682478ca472a0c08f77b9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T213743Z-fleet01-B08-qform-r36/REPORT.md`.
 
@@ -64,7 +64,7 @@ Both statements retain the complete ambient matrix and follow from the selected 
 
 The completed partner result used at the decisive equation is
 
-`yspennstate/math-open-problems@66582bd87d50634f3525a57c87acffdbde97aea1`,
+`private-source-repository@66582bd87d50634f3525a57c87acffdbde97aea1`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T153836Z-fleet02-B08-qform-r28/REPORT.md`, Lemma 3.1.
 
@@ -83,7 +83,7 @@ This partner result is applied below to the actual frame `[w,U]`; it is not cite
 
 The checked source is
 
-`yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`,
+`private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`,
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`, Section 1.
 
@@ -106,7 +106,7 @@ Its characteristic-function majorant is integrable, hence the produced density i
 The chronologically newest fleet02/B08 handoff checked before this proof is
 
 
-which source-pins `math-open-problems@34c64bff0ddefd088c372ef60e7a1e1266a18a43`.
+which source-pins `private-source@34c64bff0ddefd088c372ef60e7a1e1266a18a43`.
 
 It proves `QFORM-THREEEIG-PHYSICAL-PAIR-619-GATE-v1`: if any invertible ORIGINAL-coordinate `2 x 2` principal block has least singular value at least `L/64`, then the full ambient form has essential density `<619/L` (continuity is not claimed in that branch).  Thus, in the endpoint below, any state with such a pair is already paid by the newest partner result; the new three-volume theorem also pays the complementary all-pairs-near-singular state under its stated diffuse endpoint hypotheses.
 

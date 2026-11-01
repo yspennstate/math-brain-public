@@ -15,7 +15,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The predecessor is
 
-`yspennstate/math-open-problems@9583647ef39bb355508b8f8fb49f05ded8b594f2`
+`private-source-repository@9583647ef39bb355508b8f8fb49f05ded8b594f2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T094916Z-fleet03-B06-qform-r32/REPORT.md`.
 
@@ -33,7 +33,7 @@ Its first unpaid branch was `QFORM-NULLPIVOT-TRANSVERSE-HIGHLEVERAGE-OR-IMBALANC
 
 The completed supporting theorem is
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 
@@ -51,7 +51,7 @@ The coordinate-separable allowance includes the affine terms created by conditio
 
 The completed theorem `QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1` is
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -65,7 +65,7 @@ It permits arbitrary outside couplings through the induced affine term.
 
 The designated `fleet04/B06` QFORM directory is still absent at the fresh repository check, so no theorem from that exact slot is invented. I use the compatible completed fleet04/B18 theorem instead:
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

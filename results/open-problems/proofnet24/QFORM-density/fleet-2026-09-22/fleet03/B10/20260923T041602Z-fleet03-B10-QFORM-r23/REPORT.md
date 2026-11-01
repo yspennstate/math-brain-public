@@ -20,7 +20,7 @@ No spectral rotation is treated as preserving independence. No arbitrary-joint r
 
 The fresh B10 predecessor is
 
-`yspennstate/math-open-problems@2734623e95f9fafea5354620290ee75ad835b7df`
+`private-source-repository@2734623e95f9fafea5354620290ee75ad835b7df`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T034310Z-fleet03-B10-QFORM-r25/REPORT.md`.
 
@@ -314,7 +314,7 @@ hence the exact identity
 
 Now apply the completed `QFORM-FRESNEL-CAPPED-BASIS-WEIGHTS-v1` theorem from fleet01/B18,
 
-`yspennstate/math-open-problems@8c04ccbc1f032d1a82ad505223f08e3c344bde74`,
+`private-source-repository@8c04ccbc1f032d1a82ad505223f08e3c344bde74`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T225705Z-qform-B18-a01-r19/REPORT.md`.
 
@@ -405,7 +405,7 @@ A fresh search again found no completed current-QFORM mathematical artifact for 
 
 I do apply the completed compatible fleet04/B16 fixed-pair theorem,
 
-`yspennstate/math-open-problems@58c23c624db350cf44f0c836daa3582eb7e2d266`,
+`private-source-repository@58c23c624db350cf44f0c836daa3582eb7e2d266`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T161909Z-fleet04-B16-QFORM-r2/REPORT.md`.
 

@@ -15,13 +15,13 @@ The current correction boundary is retained: no independence after spectral rota
 
 I use the already established B10 reduction, in particular the near-coloop state recorded in
 
-`yspennstate/math-open-problems@b364b657106d0ea3dc67404808c6708e20ccac4d`
+`private-source-repository@b364b657106d0ea3dc67404808c6708e20ccac4d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T044329Z-fleet03-B10-QFORM-r24/REPORT.md`
 
 and the positive-leakage checkpoint
 
-`yspennstate/math-open-problems@17509df0fcf11b1522e5f8c199eee51b67d00fde`
+`private-source-repository@17509df0fcf11b1522e5f8c199eee51b67d00fde`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T141808Z-fleet03-B10-QFORM-r25/CHECKPOINT.md`.
 
@@ -127,7 +127,7 @@ Use Lemma 2.1.
 
 If `|A_jj|=|u_j^T M u_j|>=1/128`, then `||u_j||^2>=1/61`. The completed exact-rank-three scalar-pivot consequence of the affine rank-two half-Riesz theorem,
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`,
 
@@ -161,7 +161,7 @@ For this same fixed pair, the exact rank-three determinant-bank identity gives
 
 Apply the completed B10 theorem `QFORM-INDEFINITE-PAIR-SCHUR-BANK-v1`, source
 
-`yspennstate/math-open-problems@11505bc9c70f8dfc4c587dbdb2ebaeee1dd0ca04`
+`private-source-repository@11505bc9c70f8dfc4c587dbdb2ebaeee1dd0ca04`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T204046Z-fleet03-B10-QFORM-r17/REPORT.md`.
 
@@ -185,7 +185,7 @@ No continuity claim is made for Theorem 2.2 because the scalar-pivot and pair-Sc
 
 The fresh independently checked projected-crossing theorem is
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -363,7 +363,7 @@ The completed designated-partner theorem is
 
 source
 
-`yspennstate/math-open-problems@afdea9634d9e3f5fb09659da436292cf7dbe5b20`
+`private-source-repository@afdea9634d9e3f5fb09659da436292cf7dbe5b20`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B10/20260923T061725Z-fleet04-B10-QFORM-r4/REPORT.md`.
 

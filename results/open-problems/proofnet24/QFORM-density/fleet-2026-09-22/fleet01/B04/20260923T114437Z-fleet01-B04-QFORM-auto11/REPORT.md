@@ -14,11 +14,11 @@ attacking: lift translation-uniform hyperbolic-square smoothing to three disjoin
 
 I first checked the existing three-bank literature in the fleet before claiming novelty.
 
-1. fleet03/B04 already proved `QFORM-SQUARE-HYPERBOLIC-THREEBANK-v1` at `yspennstate/math-open-problems@f8c400b6278ed70e1bf3eb9b7d0ccf4920f1cb06`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T215045Z-r19/REPORT.md`. It allows an aggregate square whose center can overlap both hyperbolic variables, but its residual after square completion must be independent of the active hyperbolic banks; it gives essential boundedness through an L6/half-Riesz route and does not claim continuity.
+1. fleet03/B04 already proved `QFORM-SQUARE-HYPERBOLIC-THREEBANK-v1` at `private-source-repository@f8c400b6278ed70e1bf3eb9b7d0ccf4920f1cb06`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T215045Z-r19/REPORT.md`. It allows an aggregate square whose center can overlap both hyperbolic variables, but its residual after square completion must be independent of the active hyperbolic banks; it gives essential boundedness through an L6/half-Riesz route and does not claim continuity.
 
-2. fleet01/B09 already proved the physical-square theorem `QFORM-THREEBANK-SQUARE-HYPERBOLIC-v1` at `yspennstate/math-open-problems@19a5e6e88d2d5756ebd92e85b00122ec0bdec699`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T164451Z-r14/REPORT.md`. Its square variable is one original physical coordinate.
+2. fleet01/B09 already proved the physical-square theorem `QFORM-THREEBANK-SQUARE-HYPERBOLIC-v1` at `private-source-repository@19a5e6e88d2d5756ebd92e85b00122ec0bdec699`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T164451Z-r14/REPORT.md`. Its square variable is one original physical coordinate.
 
-3. fleet02/B10 proved the scalar translation-uniform theorem `QFORM-HYPERBOLIC-SQUARE-v1` at `yspennstate/math-open-problems@1eba911614ef9f6683f8eacb5d6608a0f9a4b833`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T1147Z-qform-rank3-coupled-B10-r1/REPORT.md`: for independent cap-one scalars X,Y,Z,
+3. fleet02/B10 proved the scalar translation-uniform theorem `QFORM-HYPERBOLIC-SQUARE-v1` at `private-source-repository@1eba911614ef9f6683f8eacb5d6608a0f9a4b833`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T1147Z-qform-rank3-coupled-B10-r1/REPORT.md`: for independent cap-one scalars X,Y,Z,
 
 `T=2aXY+H(Y)+b(Z+theta(Y))^2`, `ab!=0`,
 
@@ -28,7 +28,7 @@ one has `||p_T||_infinity <=4/sqrt(|ab|)`.
 
 `int |phi_T(t)|^2 dt <=8 pi/sqrt(|ab|)`
 
-at `yspennstate/math-open-problems@5efc99f63966f32da63506320c424e1ccbe47f81`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T085400Z-fleet01-B04-QFORM-auto11/REPORT.md`.
+at `private-source-repository@5efc99f63966f32da63506320c424e1ccbe47f81`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T085400Z-fleet01-B04-QFORM-auto11/REPORT.md`.
 
 The new scope here is the intersection not covered by those existing three-bank endpoints: **the square itself is a delocalized original-coordinate bank projection, while the post-completion residual may retain arbitrary measurable curvature `H(T)` in one of the hyperbolic aggregate variables.** This one-sided leakage is exactly allowed by the scalar B10 theorem but not by the older overlap-safe aggregate theorem. The proof is an exact density-cap rescaling plus the completed fleet02/B04 projection theorem; no new pointwise oscillatory decay is asserted.
 
@@ -159,7 +159,7 @@ This is the useful ambient form: arbitrary conditioned affine couplings that pre
 
 The completed designated-partner report
 
-`yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`,
+`private-source-repository@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T181702Z-dac07509/REPORT.md`,
 

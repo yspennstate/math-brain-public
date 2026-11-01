@@ -15,7 +15,7 @@ The exact target remains unchanged: for every finite `n`, every family of indepe
 
 The designated partner actually applied is fleet04/B14 r9:
 
-`yspennstate/math-open-problems@63ba8e0f106c3bb405f05eb99778039ff47ed47b:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T101157Z-fleet04-B14-continuum-perspective-rough-transfer-r9/REPORT.md`.
+`private-source-repository@63ba8e0f106c3bb405f05eb99778039ff47ed47b:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T101157Z-fleet04-B14-continuum-perspective-rough-transfer-r9/REPORT.md`.
 
 Its completed physical-pair compiler is the sole external analytic premise below.
 

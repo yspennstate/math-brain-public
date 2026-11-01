@@ -142,7 +142,7 @@ and
 
 Canonical source read for this run:
 
-`yspennstate/math-open-problems@fad298c9bb0e96eae32c5a98861b42b50eec8568:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/hubs.tex`.
+`private-source-repository@fad298c9bb0e96eae32c5a98861b42b50eec8568:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/hubs.tex`.
 
 Its product-projection input is hypothesis-exact for the owner source class: Livshyts--Paouris--Pivovarov, *On sharp bounds for marginal densities of product measures*, Israel J. Math. 216 (2016), arXiv:1507.07949, prove that if `f=prod_j f_j` and every one-dimensional probability density satisfies `||f_j||_infinity<=1`, then every `k`-dimensional orthogonal marginal is bounded by `2^(k/2)`. No Gaussian, log-concavity, moment, bounded-support, connected-support, iid, centering, symmetry, or smoothness assumption is present. The theorem controls a joint projected density; it does not say its coordinates are independent.
 
@@ -230,7 +230,7 @@ The third bank has density cap at most `sqrt(2)` by the primary Livshyts--Paouri
 
 Therefore the already completed fleet03/B18 theorem `QFORM-THREE-DISJOINT-BANKS-ALLPIVOTS-v1`, source
 
-`yspennstate/math-open-problems@602d508c11f3bb5848b65581a750b4497708bd5f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T112422Z-fleet03-B18-QFORM-r27/REPORT.md`,
+`private-source-repository@602d508c11f3bb5848b65581a750b4497708bd5f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T112422Z-fleet03-B18-QFORM-r27/REPORT.md`,
 
 applies. In target normalization it gives
 
@@ -242,7 +242,7 @@ This endpoint is asserted as essential boundedness; continuity is not supplied b
 
 The latest completed designated partner is fleet04/B18 r4:
 
-`yspennstate/math-open-problems@afbdba9c6b0624552a6725568d3eb883b999d1e1:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T162049Z-fleet04-B18-QFORM-r4/REPORT.md`.
+`private-source-repository@afbdba9c6b0624552a6725568d3eb883b999d1e1:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T162049Z-fleet04-B18-QFORM-r4/REPORT.md`.
 
 For every heavy witness `q_i>1/2` with `|g_i|>=1/64`, it proves (1.4).
 

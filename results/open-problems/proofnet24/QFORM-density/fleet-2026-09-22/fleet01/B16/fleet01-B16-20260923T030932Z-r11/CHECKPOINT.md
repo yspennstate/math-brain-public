@@ -65,7 +65,7 @@ For a rank-three M, its row volume marginal is exactly the leverage of its row r
 
 alpha_k^(vol)=r_k^T G_K^{-1} r_k.
 
-Therefore, if max_{k in K} r_k^T G_K^{-1}r_k <=1/2, the q=1 case of the newest fractional-volume theorem at math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba gives a continuous density and
+Therefore, if max_{k in K} r_k^T G_K^{-1}r_k <=1/2, the q=1 case of the newest fractional-volume theorem at private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba gives a continuous density and
 
 ||p_Q||_infty <=3e Z^{-1/6}
  <=3e [alpha(1-alpha) det(G) det(I_2-G)]^{-1/6},
@@ -76,5 +76,5 @@ using |det B|>=1. This is a second, genuinely overlap-sensitive certificate on t
 Neither certificate is uniform if the pure line mass alpha or the least pure-plane Gram eigenvalue tends to zero; the volume certificate also requires a diffuse overlap bank. Thus the genuinely unpaid structural case is pure-bank depletion together with a high-leverage overlap bank. This is narrower than the previous statement that all overlapping leakage is unpaid, but it does not solve exact rank three or the full arbitrary-spectrum theorem.
 
 Sources actually used:
-- fleet02/B16 r23: yspennstate/math-open-problems@7044d3cf479cc067d97a317cf67b41121cc48aab, proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T023136Z-fleet02-B16-QFORM-r23/REPORT.md.
-- newest fractional-volume theorem: yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba, proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md.
+- fleet02/B16 r23: private-source-repository@7044d3cf479cc067d97a317cf67b41121cc48aab, proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T023136Z-fleet02-B16-QFORM-r23/REPORT.md.
+- newest fractional-volume theorem: private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba, proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md.

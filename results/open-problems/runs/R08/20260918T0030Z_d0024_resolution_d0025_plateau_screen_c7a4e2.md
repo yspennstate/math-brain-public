@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — **ROTATION-
 # R08 CLOSABLE OUTSIDE — successor screen through D0024/D0025
 
 Date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity and controlling state
 

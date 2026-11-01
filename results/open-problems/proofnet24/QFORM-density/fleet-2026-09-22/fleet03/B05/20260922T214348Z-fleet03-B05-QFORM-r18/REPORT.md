@@ -17,19 +17,19 @@ Binding corrections retained include the failure of law-uniform pointwise quadra
 
 Three completed inputs are used at their proved scopes.
 
-1. **One-dimensional product marginal cap.** The completed fleet03/B09 report `QFORM-RANK2-BILINEAR-DIRECT-v1`, canonical `yspennstate/math-open-problems@55b475aece02e3bd181935ff66a26b8988100a0c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T114536Z-fleet03-B09-qform-r11/REPORT.md`, records the Livshyts--Paouris--Pivovarov marginal theorem in the form
+1. **One-dimensional product marginal cap.** The completed fleet03/B09 report `QFORM-RANK2-BILINEAR-DIRECT-v1`, canonical `private-source-repository@55b475aece02e3bd181935ff66a26b8988100a0c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T114536Z-fleet03-B09-qform-r11/REPORT.md`, records the Livshyts--Paouris--Pivovarov marginal theorem in the form
 
    `||p_(b dot Y)||_infinity <= sqrt(2)/||b||_2`                         (1.1)
 
    for every nonzero coefficient vector `b` and every original-coordinate product bank `Y` with cap-one marginals.
 
-2. **Dependent square smoothing.** The completed compatible fleet04/B18 theorem `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`, states that if `R` has density cap `M`, `V_R` has conditional density cap one for almost every residual value, and `a!=0`, then
+2. **Dependent square smoothing.** The completed compatible fleet04/B18 theorem `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`, states that if `R` has density cap `M`, `V_R` has conditional density cap one for almost every residual value, and `a!=0`, then
 
    `||p_(R+a V_R^2)||_infinity <= 2 sqrt(M/|a|)`.                       (1.2)
 
    This theorem is applied at an actual displayed inequality in Section 4.
 
-3. **Newest incident-minor tube.** fleet03/B06 r19, canonical `yspennstate/math-open-problems@f82fe367b06909082f94eda2b98f4a2fd2a5bb7c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T212328Z-fleet03-B06-qform-r19/REPORT.md`, reaches a normalized original-coordinate cross block `C` with `||C||_op<1`, a physical row `j`, a physical column `r`, and the intersection-minor matrix
+3. **Newest incident-minor tube.** fleet03/B06 r19, canonical `private-source-repository@f82fe367b06909082f94eda2b98f4a2fd2a5bb7c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T212328Z-fleet03-B06-qform-r19/REPORT.md`, reaches a normalized original-coordinate cross block `C` with `||C||_op<1`, a physical row `j`, a physical column `r`, and the intersection-minor matrix
 
    `N_ks=det C[{j,k},{r,s}]`.
 
@@ -276,7 +276,7 @@ Thus the newest B06 `4.15%` incident-minor tube is converted into a concrete B05
 
 ## 8. Scoped review of the pair-log theorem
 
-The current research state requests an independent mathematical check of the pair-log theorem. I read the complete source `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md` and checked the steps relevant to B05.
+The current research state requests an independent mathematical check of the pair-log theorem. I read the complete source `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md` and checked the steps relevant to B05.
 
 - The far-region inverse-derivative payment gives `2 sqrt(2)/r` after the two original-coordinate choices are summed.
 - In the near region, the orthogonal diagonalization is used only on Lebesgue measure; no rotated independence is claimed. The change `u=z_1+z_2`, `v=z_1-z_2` has Jacobian `1/2` and gives exactly the logarithmic trace `D^(-1/2) log(L^2/|t|)`.

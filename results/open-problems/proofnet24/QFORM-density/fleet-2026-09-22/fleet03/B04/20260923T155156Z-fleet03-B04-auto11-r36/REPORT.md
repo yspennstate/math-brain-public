@@ -15,7 +15,7 @@ Continuity: proved on the theorem branch below (`C_0` density); full-target cont
 The main analytic input is this slot's completed finite-family theorem
 
 - `QFORM-MULTI-COMPOUND-FOURIER-MIXTURE-v1`,
-- `yspennstate/math-open-problems@8df80736853803f472ba6662c9c4a07e7801dfdb`,
+- `private-source-repository@8df80736853803f472ba6662c9c4a07e7801dfdb`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T124716Z-fleet03-B04-auto11-r33/REPORT.md`.
 
 For compound families of orders `k_l`, weights `theta_l`, average order `s=sum theta_l k_l`, allocated determinant currencies `Z_l`, and mixed row marginals at most `q/2` with `1<=q<s/2`, it proves
@@ -29,8 +29,8 @@ with `p_Q in C_0(R)`, while arbitrary same-bank curvature, outside couplings and
 
 Two completed peer results are applied to the same displayed matrix for comparison:
 
-1. fleet01/B04 `QFORM-THIRDVOLUME-GIBBS-DUAL-AND-SOFT-HUB-v1`, source `math-open-problems@da8e2c011cc93a5c776a1de6010f7366da5f2fbf`, which gives `2.853602893356842...` on the `L=32` matrix below at `h=3/5`;
-2. fleet02/B04 `QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1`, source `math-open-problems@febf0c97f0f85e802b6bc2ab4a475c15109de013`, whose exact-rank-three product-Plancherel endpoint gives the conditional bound `3` after conditioning the physical hub on the same matrix.
+1. fleet01/B04 `QFORM-THIRDVOLUME-GIBBS-DUAL-AND-SOFT-HUB-v1`, source `private-source@da8e2c011cc93a5c776a1de6010f7366da5f2fbf`, which gives `2.853602893356842...` on the `L=32` matrix below at `h=3/5`;
+2. fleet02/B04 `QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1`, source `private-source@febf0c97f0f85e802b6bc2ab4a475c15109de013`, whose exact-rank-three product-Plancherel endpoint gives the conditional bound `3` after conditioning the physical hub on the same matrix.
 
 The designated partner `fleet04/B04` still had no completed current-QFORM canonical handoff/report at the final direct lookup, so no designated-partner theorem is invented or waited for.
 

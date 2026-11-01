@@ -23,7 +23,7 @@ Fresh controls and the live correction inbox were reread immediately before publ
 
 Use this slot's completed r29 report
 
-`yspennstate/math-open-problems@0e842117ca7ec8472538faa120677507f16b5c17`,
+`private-source-repository@0e842117ca7ec8472538faa120677507f16b5c17`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T084007Z-fleet03-B07-qform-r29/REPORT.md`.
 
@@ -205,7 +205,7 @@ Apply this slot's completed theorem
 
 source
 
-`yspennstate/math-open-problems@86ff1278a9b52d8a2736c340b7f54893c6b8c267`,
+`private-source-repository@86ff1278a9b52d8a2736c340b7f54893c6b8c267`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T060629Z-fleet03-B07-qform-r26/REPORT.md`,
 
@@ -239,7 +239,7 @@ and every third-volume inclusion marginal on the better-oriented physical side i
 
 Now apply directly the current required volume theorem
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -278,7 +278,7 @@ The designated `fleet04/B07` current-QFORM directory and handoff remain absent a
 
 `fleet04/B18`, `QFORM` r2,
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 

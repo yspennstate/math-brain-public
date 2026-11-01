@@ -17,7 +17,7 @@ Fresh owner control remained revision `2026-09-22.15`, QFORM-only. Binding corre
 
 The named partner result actually used is fleet03/B05 run `20260922T214348Z-fleet03-B05-QFORM-r18`, canonical mathematics
 
-`yspennstate/math-open-problems@1b86f205262fdfdba6fd1f1166fcc9f7ea75828c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T214348Z-fleet03-B05-QFORM-r18/REPORT.md`.
+`private-source-repository@1b86f205262fdfdba6fd1f1166fcc9f7ea75828c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T214348Z-fleet03-B05-QFORM-r18/REPORT.md`.
 
 Its two-arm theorem proves a density cap `2/sqrt(|beta gamma|)` for two independent physical pivots driving two independent arm variables, and its bank corollary uses the product-marginal estimate
 

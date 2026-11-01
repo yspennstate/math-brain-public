@@ -17,7 +17,7 @@ The consolidated current state keeps two corrections binding here:
 
 I use two exact source results.
 
-**IPROJ (fleet02/B15).** Retrieved from `yspennstate/math-open-problems@3b546dc77811cf4c9a5f3fbac36e834b0f236bd6`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`. For the actual nonempty spectral law `P=w^+` with coordinate-occurrence vector `r`, the conditional-product I-projection `Q_r` obeys
+**IPROJ (fleet02/B15).** Retrieved from `private-source-repository@3b546dc77811cf4c9a5f3fbac36e834b0f236bd6`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`. For the actual nonempty spectral law `P=w^+` with coordinate-occurrence vector `r`, the conditional-product I-projection `Q_r` obeys
 
 \[
 K_{\rm occ}=D_{\rm KL,2}(P\Vert Q_r)=H_{\max}(r)-H(P),

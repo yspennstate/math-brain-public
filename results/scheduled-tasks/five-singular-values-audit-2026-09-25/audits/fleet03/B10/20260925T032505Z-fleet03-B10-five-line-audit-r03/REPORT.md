@@ -2,7 +2,7 @@
 
 Run: 20260925T032505Z-fleet03-B10-five-line-audit-r03
 Objective: QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925
-Source: yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short/short.tex and the pinned 14-page short.pdf only.
+Source: private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short/short.tex and the pinned 14-page short.pdf only.
 Control observed before work: math-research-brain@c7211eaee966dec62a3bc96409b4bf102f7ca5e8.
 Execution: WITHOUT_VERIFIED_BRAIN.
 

@@ -229,7 +229,7 @@ Thus the global ceiling is analytically and strictly below `3sqrt(2)`.
 
 The completed designated-partner result is
 
-`yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`,  
+`private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f`,  
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`.
 
 For the density `g_m` of the normalized uniform bank `Z_m`, that report proves the weighted local Edgeworth expansion at variance `v=1/12`,
@@ -323,5 +323,5 @@ The next genuinely different B17 witness mechanism is therefore a **two-heavy / 
 
 Fresh initial brain main: `3eeed8243e52874c0eb47bf7b710c96f65aa8b16`.  
 Fresh prepublication brain main: `359b5871c008e51f8e6ae22ae88c5c3b208e4514`.  
-Designated partner theorem actually used: `math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`, exact path given in Section 6.  
+Designated partner theorem actually used: `private-source@2156b76156ad5956c214a881fcfd6d977d6f3b9f`, exact path given in Section 6.  
 Native learned-memory status: `WITHOUT_VERIFIED_BRAIN`; repository retrieval is not claimed as native receiver ingestion.

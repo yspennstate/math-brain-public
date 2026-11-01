@@ -21,7 +21,7 @@ Execution context: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Completed sources used at equations
 
-1. `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, Theorem H. With a hub bank `H`, leaf bank `I`, and
+1. `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, Theorem H. With a hub bank `H`, leaf bank `I`, and
 
    `A_II = D + sum_{k=1}^r lambda_k v_k v_k^T`,
 
@@ -31,7 +31,7 @@ Execution context: `WITHOUT_VERIFIED_BRAIN`.
 
    with Gram `G` and normalized leverages at most `1/2` give an undecoupled mixed-hub Fresnel/Brascamp--Lieb estimate. Crucially `A_HH`, `A_HJ`, `A_IJ`, `A_JJ` are arbitrary. I use this theorem with two literal physical hubs and integrate its exact Fourier envelope.
 
-2. Designated partner fleet03/B09 r35, `QFORM-LOCALIZED-HUBPAIR-EXACT-CORE-ROUTING-v1`, canonical `math-open-problems@82f6ea83f0e981f756fd18080ffdd11a447b60a8`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T144532Z-fleet03-B09-QFORM-r35/REPORT.md`. In its localized rank-two hub/star branch, a literal physical pair `a,b` retains a pair cross wedge `Delta_T` and a pair-anchored physical third volume
+2. Designated partner fleet03/B09 r35, `QFORM-LOCALIZED-HUBPAIR-EXACT-CORE-ROUTING-v1`, canonical `private-source@82f6ea83f0e981f756fd18080ffdd11a447b60a8`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T144532Z-fleet03-B09-QFORM-r35/REPORT.md`. In its localized rank-two hub/star branch, a literal physical pair `a,b` retains a pair cross wedge `Delta_T` and a pair-anchored physical third volume
 
    `V_ab(S)=sum_{k in S} sum_{J subset T, |J|=3} det A[{a,b,k},J]^2`,
 

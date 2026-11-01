@@ -129,7 +129,7 @@ Letting m->infinity yields
 
 for every finite-fragment product nu in F_n, uniformly in l and c. Note the important order: the radius R may be arbitrarily large and may depend on the particular distant-fragment law, but it appears only in eta_m, which is sent to zero before any universal constant is read off. There is therefore no bounded-support-radius or fragment-separation tax.
 
-Now apply the completed fleet04/B14 affine-family finite-mixture localization theorem (canonical source: yspennstate/math-open-problems@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee, proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T001323Z-fleet04-B14-affine-mixture-compiler-r5/REPORT.md, Theorem 2.1 and its finite-mixture paragraph). That theorem states that a bound uniform in l,c over finite-fragment indicator product laws transfers, with the identical constant, to every cap-one product law in D_n. Applying it to (3.7) gives
+Now apply the completed fleet04/B14 affine-family finite-mixture localization theorem (canonical source: private-source-repository@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee, proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T001323Z-fleet04-B14-affine-mixture-compiler-r5/REPORT.md, Theorem 2.1 and its finite-mixture paragraph). That theorem states that a bound uniform in l,c over finite-fragment indicator product laws transfers, with the identical constant, to every cap-one product law in D_n. Applying it to (3.7) gives
 
     P_mu{P_{A,l,c} in I} <= C_aff_genff |I|                  (3.8)
 

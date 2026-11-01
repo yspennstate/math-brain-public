@@ -2,7 +2,7 @@
 
 A correction/source sweep after `REPORT.md` found the completed fleet03/B01 r18 theorem
 
-`yspennstate/math-open-problems@7acff3e983f6e6a3ede04ecbaf8405a3ce4ee8e2`
+`private-source-repository@7acff3e983f6e6a3ede04ecbaf8405a3ce4ee8e2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T202731Z-r18/REPORT.md`.
 
@@ -70,7 +70,7 @@ For `m=3`, (A.1) gives exactly the main report's `24N^2M^2/|kappa|^2` bound. Thu
 
 The same late sweep found fleet02/B01 r29, event `QFORM-NONZERO-MUTUAL-EDGE-TWO-SLOPE-INSUFFICIENT-v1`, canonical report
 
-`yspennstate/math-open-problems@c396b6e553f98ca1cd735ae10eb0e6ec24a96cc4`
+`private-source-repository@c396b6e553f98ca1cd735ae10eb0e6ec24a96cc4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T223353Z-fleet02-B01-qform-r29/REPORT.md`.
 

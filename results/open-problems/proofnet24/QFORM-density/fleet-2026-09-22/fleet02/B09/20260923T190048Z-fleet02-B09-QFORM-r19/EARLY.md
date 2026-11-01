@@ -23,7 +23,7 @@ Proof. Weyl gives s_3(S)>=s_3(A)-||D_0||_op>=1-tau.  Write the rank-three spectr
 
 ||V^T e_i||^2 <= ||W^T e_i||^2 <= 1/2.
 
-Apply the completed Fresnel--Brascamp--Lieb Theorem F from math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 to A=D_0+S.  Its Gram is I_3 and |lambda_1 lambda_2 lambda_3|>=(1-tau)^3, hence
+Apply the completed Fresnel--Brascamp--Lieb Theorem F from private-source@e5f71d79eff325201dd0274053d20268ce65b837 to A=D_0+S.  Its Gram is I_3 and |lambda_1 lambda_2 lambda_3|>=(1-tau)^3, hence
 
 ||p||_infinity <=12 |lambda_1 lambda_2 lambda_3|^(-1/3) <=12/(1-tau).
 

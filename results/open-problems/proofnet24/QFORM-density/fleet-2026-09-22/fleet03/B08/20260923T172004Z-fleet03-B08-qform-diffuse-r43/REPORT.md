@@ -17,7 +17,7 @@ The unrestricted QFORM conjecture remains **OPEN**. Global continuity remains op
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems@d2d64042e84bba8609cd2a27ae2dada21e215c38`
+`private-source-repository@d2d64042e84bba8609cd2a27ae2dada21e215c38`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T165737Z-fleet03-B08-qform-diffuse-r42/REPORT.md`.
 
@@ -47,13 +47,13 @@ Two newer source-pinned results are used.
 
 1. The reviewed grouped projected-crossing bundle is
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 2. More importantly for this run, fleet03/B02 subsequently removed the third-volume row-marginal gate:
 
-`yspennstate/math-open-problems@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`
+`private-source-repository@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T170106Z-fleet03-B02-qform-r35/REPORT.md`.
 
@@ -399,7 +399,7 @@ This identification is useful because it prevents further work on irrelevant ran
 
 The designated partner source is
 
-`yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
+`private-source-repository@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T091414Z-fleet04-B08-QFORM-r1/REPORT.md`.
 

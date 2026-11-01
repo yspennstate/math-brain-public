@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 
 # R03 run35 — square-root coefficient-complexity cutoff and a new support-(3,5) exact-corank family
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL; source OPEN.** This run proves a stronger asymptotic structural reduction and gives one replay-certified finite improvement. It does not prove the sharp singularity asymptotic.
 

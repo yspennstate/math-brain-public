@@ -22,20 +22,20 @@ The revision-13 owner message contains proposed rank-three/scalar-conditioning d
 
 The following completed results are used at their exact scopes.
 
-1. **Full third-compound O0 reduction.** fleet03/B07, `QFORM-THIRD-COMPOUND-OVERLAP-REDUCTION-v1`, canonical `yspennstate/math-open-problems@987b364e280070b1de6eec307557cc00f489e581`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T163733Z-fleet03-B07-qform-r12/REPORT.md`. In O0 there are disjoint original-coordinate banks `L,R` with `B=A[L,R]` satisfying
+1. **Full third-compound O0 reduction.** fleet03/B07, `QFORM-THIRD-COMPOUND-OVERLAP-REDUCTION-v1`, canonical `private-source-repository@987b364e280070b1de6eec307557cc00f489e581`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T163733Z-fleet03-B07-qform-r12/REPORT.md`. In O0 there are disjoint original-coordinate banks `L,R` with `B=A[L,R]` satisfying
 
 `E_3(B):=e_3(BB^T)>=1/256`.                                      (2.1)
 
-2. **Prior fleet02/B19 raw heavy-overlap factorization.** Canonical `yspennstate/math-open-problems@06913a3636bf0add597d8dcf16eca5cd2ccd92a2`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T183530Z-fleet02-B19-qform-r15/REPORT.md`. For any physical row set `H`, raw third-volume mass splits by the exact heavy pattern `T=S intersect H`, and for a fixed pattern
+2. **Prior fleet02/B19 raw heavy-overlap factorization.** Canonical `private-source-repository@06913a3636bf0add597d8dcf16eca5cd2ccd92a2`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T183530Z-fleet02-B19-qform-r15/REPORT.md`. For any physical row set `H`, raw third-volume mass splits by the exact heavy pattern `T=S intersect H`, and for a fixed pattern
 
 `sum_R det(B_(T union R)B_(T union R)^T)
  =det(B_TB_T^T)e_(3-|T|)(B_C P_T^perp B_C^T)`,                 (2.2)
 
 where `C=L\H` and `P_T^perp` is the orthogonal projection in the right-bank coordinate space onto the complement of the row span of `B_T`.
 
-3. **Current named partner fleet03/B19 r17.** Canonical `yspennstate/math-open-problems@9989e8640c2933ba54cd8de88723ac5c223be3b1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T190100Z-fleet03-B19-QFORM-r17/REPORT.md`. It proves that every O0 state with at least three `3/4`-heavy ridge rows is already paid, with continuous density at most `12 sqrt(e)<19.785`. Together with the completed diffuse-ridge branch, every unpaid O0 state can therefore be reduced to a physical heavy set `H` of size at most two.
+3. **Current named partner fleet03/B19 r17.** Canonical `private-source-repository@9989e8640c2933ba54cd8de88723ac5c223be3b1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T190100Z-fleet03-B19-QFORM-r17/REPORT.md`. It proves that every O0 state with at least three `3/4`-heavy ridge rows is already paid, with continuous density at most `12 sqrt(e)<19.785`. Together with the completed diffuse-ridge branch, every unpaid O0 state can therefore be reduced to a physical heavy set `H` of size at most two.
 
-4. **Determinant-bank half-Riesz theorem.** fleet03/B03 r17, canonical `yspennstate/math-open-problems@924b3c4c70f86a64402863fe228f641bf3db60b2`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T175531Z-fleet03-B03-QFORM-r17/REPORT.md`. If a residual physical cross block `N` obeys `E_3(N)=e_3(NN^T)>0`, then unconditionally
+4. **Determinant-bank half-Riesz theorem.** fleet03/B03 r17, canonical `private-source-repository@924b3c4c70f86a64402863fe228f641bf3db60b2`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T175531Z-fleet03-B03-QFORM-r17/REPORT.md`. If a residual physical cross block `N` obeys `E_3(N)=e_3(NN^T)>0`, then unconditionally
 
 `H_(1/2)(R):=sup_y E|R-y|^(-1/2)
  <=9.840655864922019 E_3(N)^(-1/12)`.                           (2.3)

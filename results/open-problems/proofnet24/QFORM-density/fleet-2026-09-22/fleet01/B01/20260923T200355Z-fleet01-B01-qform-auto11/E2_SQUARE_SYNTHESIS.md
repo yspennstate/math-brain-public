@@ -27,7 +27,7 @@ This is an essential-supremum statement. Continuity is not asserted by this argu
 
 The row-gate-free E2 theorem proved in fleet02/B06, canonical report
 
-`yspennstate/math-open-problems@c2ce876df8b5483a00802170001d4144bb4cdbfa:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T192839Z-auto11/REPORT.md`,
+`private-source-repository@c2ce876df8b5483a00802170001d4144bb4cdbfa:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T192839Z-auto11/REPORT.md`,
 
 gives for the full residual `R`, retaining arbitrary same-bank quadratic curvature, outside couplings and affine terms,
 

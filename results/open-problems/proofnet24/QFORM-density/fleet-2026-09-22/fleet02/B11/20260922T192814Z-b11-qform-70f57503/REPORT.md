@@ -13,7 +13,7 @@ The sole target remains the full arbitrary-dimensional statement: for independen
 
 The latest completed assigned-partner result actually applied is fleet03/B11 run `20260922T182528Z-fleet03-B11-QFORM-r12`, canonical source
 
-`yspennstate/math-open-problems@e100de67669c37c8243fe9e389efc909f3179839`
+`private-source-repository@e100de67669c37c8243fe9e389efc909f3179839`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T182528Z-fleet03-B11-QFORM-r12/REPORT.md`.
 
@@ -33,13 +33,13 @@ The proof uses only these completed scoped results.
 
 2. **One-dimensional product projection cap.** fleet02/B11 canonical report
 
-`yspennstate/math-open-problems@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`
+`private-source-repository@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`
 
 proves that for independent density-cap-one variables and coefficients with squared sum one, the normalized linear form has density at most `sqrt(e)`.
 
 3. **Orientation-free exact-rank-three scalar-pivot theorem.** Interactive rank-two-fusion report
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`
 
@@ -51,7 +51,7 @@ with arbitrary induced affine terms allowed.
 
 4. **Arbitrary-rank physical indefinite-pair theorem.** Interactive full-matrix pair report
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`
 

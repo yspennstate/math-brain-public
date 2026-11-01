@@ -24,7 +24,7 @@ Fresh brain control was resolved from `yspennstate/math-research-brain` main, in
 
 The latest own mathematical predecessor consumed is
 
-- repository `yspennstate/math-open-problems`,
+- repository `private-source-repository`,
 - report-introducing commit `863bdb80ed0e334904d6232a6d6effafdb72f3fc`,
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T023910Z-fleet03-B11-QFORM-r48/REPORT.md`.
 
@@ -34,7 +34,7 @@ A fresh compatible fleet02/B11 theorem further proves that a surviving fixed phy
 
 The completed designated partner used at an actual inequality is fleet04/B11,
 
-- repository `yspennstate/math-open-problems`,
+- repository `private-source-repository`,
 - commit `779d91b45aa70cd12c19ce04d951b306690358ad`,
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260924T051259Z-fleet04-B11-rough-one-sheet-r2/REPORT.md`.
 

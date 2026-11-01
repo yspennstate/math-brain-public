@@ -26,7 +26,7 @@ The full-target debt remains: starting only from `s_3(A)>=1`, force some bounded
 
 Newest compatible designated partner:
 
-`yspennstate/math-open-problems@4918f8df2f6b49747f5795085775393350156630`
+`private-source-repository@4918f8df2f6b49747f5795085775393350156630`
 
 path
 
@@ -40,7 +40,7 @@ and an additional physical coefficient tail of operator norm `delta` subtracts a
 
 Completed density receiver:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 path
 

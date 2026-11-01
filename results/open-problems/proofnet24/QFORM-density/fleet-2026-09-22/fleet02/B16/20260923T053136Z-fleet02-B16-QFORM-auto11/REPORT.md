@@ -18,7 +18,7 @@ Fresh owner control was read at the start of this invocation; QFORM remains the 
 
 The immediate designated-partner input is fleet03/B16 r26,
 
-`yspennstate/math-open-problems@d6730c301e46e6337bc3b32e30eb3d04f07dc90b`
+`private-source-repository@d6730c301e46e6337bc3b32e30eb3d04f07dc90b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T045948Z-fleet03-B16-QFORM-r26/REPORT.md`.
 
@@ -208,7 +208,7 @@ The only independence used here is between the line source bank and the entire p
 
 The required pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 

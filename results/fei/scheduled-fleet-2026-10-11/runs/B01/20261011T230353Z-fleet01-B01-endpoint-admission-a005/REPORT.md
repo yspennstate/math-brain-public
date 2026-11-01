@@ -36,7 +36,7 @@ This is a scope theorem, not a bound on any full-FEI constant.
 
 The audited A002 bundle is:
 
-- repository `yspennstate/math-open-problems`, commit `e42cfede006893c5237743b6261ceba2784c9655`;
+- repository `private-source-repository`, commit `e42cfede006893c5237743b6261ceba2784c9655`;
 - path `reports/fei-2026-10-11/runs/B01/20261011T220423Z-fleet01-B01-hardness-transformations-a002/`;
 - report blob `4515e73e0e666b09613273084928674393375161`;
 - claims blob `8c5912e7e57fd653d403b9148904a0ce0cafd7df`;

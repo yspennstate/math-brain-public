@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # NM13-03 / T03 — closed Gaussian comparison kernel and a two-dimensional `alpha=12.75` Miranda certificate candidate
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: `NM13-03`  
 Owner policy: `operations/PROGRESS20_2026-09-20.md`  
 Companion: `NM13-07`  

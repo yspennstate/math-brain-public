@@ -4,7 +4,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 
 Date checked: 2026-09-18 UTC  
 Slot: `R7-03 Boundary-Case Research`  
-Repository: private `yspennstate/math-open-problems`, branch `master`  
+Repository: private `private-source-repository`, branch `master`  
 Start snapshot for this run: `3eca581996fa3f970f22547c4fbd97e6970f8815`
 
 ## 1. Canonical intake scope

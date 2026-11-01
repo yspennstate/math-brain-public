@@ -15,8 +15,8 @@ Fresh controls still place every worker exclusively on the full quadratic-form d
 
 The mathematical inputs actually used are:
 
-1. the bounded-density projection theorem in the owner-pinned package `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`; in particular an orthonormal two-dimensional projection of a cap-one product law has density at most `2`;
-2. the newest **completed** designated partner fleet02/B16 result, `QFORM-PHASEWEIGHTED-PUNCTURED-TWOBANK-v1`, at `yspennstate/math-open-problems@c9c865f02890e5fe7108c49759ee82b84f42ee38`;
+1. the bounded-density projection theorem in the owner-pinned package `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`; in particular an orthonormal two-dimensional projection of a cap-one product law has density at most `2`;
+2. the newest **completed** designated partner fleet02/B16 result, `QFORM-PHASEWEIGHTED-PUNCTURED-TWOBANK-v1`, at `private-source-repository@c9c865f02890e5fe7108c49759ee82b84f42ee38`;
 3. the preceding fleet02/B16 zero-pivot result `QFORM-FRESH-HUB-DIVISIBLE-TWIST-ABSORPTION-v1` at `@be8062b160868bcc71aff45a77c56ff2d0501a9a`, used only to locate the remaining interface, not as a premise in the proof below;
 4. the preceding fleet01/B16 conditional discriminant theorem at `@407fb7555d24b85565afbce0caea98bdad914c08`, again used only to locate the majority-sign endpoint.
 

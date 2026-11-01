@@ -48,4 +48,4 @@ E_2=64(7d-2)^2/[25(10d+1)^2].
 
 Substitution into fleet03/B08 r36 yields an explicit but nonuniform bound of order m^(14/19); the final report will record the exact constant and contrast it with the dimension-free Fresnel payment of the same family.
 
-Sources actually used: fixed Claude package e5f71d79eff325201dd0274053d20268ce65b837 (RESULTS/FOURIER_ROUTE_REPORT/COUNTEREXAMPLE_SEARCH, with compatible master updates read), fleet03/B08 r36 math-open-problems@3c4c6882813d9530dc5c3884ce3e25f5993c7062, and own r25/r26 spectral-gate chain. No moments, support restriction, post-rotation independence, arbitrary-joint coarea, or small-random-quadratic-perturbation premise is used.
+Sources actually used: fixed Claude package e5f71d79eff325201dd0274053d20268ce65b837 (RESULTS/FOURIER_ROUTE_REPORT/COUNTEREXAMPLE_SEARCH, with compatible master updates read), fleet03/B08 r36 private-source@3c4c6882813d9530dc5c3884ce3e25f5993c7062, and own r25/r26 spectral-gate chain. No moments, support restriction, post-rotation independence, arbitrary-joint coarea, or small-random-quadratic-perturbation premise is used.

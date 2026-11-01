@@ -2,7 +2,7 @@
 
 Programme `QFORM-DENSITY-3EIG-20260922`; full conjecture OPEN. Execution `WITHOUT_VERIFIED_BRAIN`.
 
-Partner fleet03/B06 r33 (`math-open-problems@6e33b73460eb417643369a043ebfe903f78e1bd2`) reduces an exact-rank-three matrix `B=U Lambda U^T`, `s=s_3(B)`, to a paid diffuse branch, a paid heavy scalar pivot, or a hub `H={i:||u_i||^2>1/64}`, `|H|<=191`, in which every heavy row has `|B_ii|<s/(8sqrt(2))` and complete off-diagonal star norm `>s/(8sqrt(2))`.
+Partner fleet03/B06 r33 (`private-source@6e33b73460eb417643369a043ebfe903f78e1bd2`) reduces an exact-rank-three matrix `B=U Lambda U^T`, `s=s_3(B)`, to a paid diffuse branch, a paid heavy scalar pivot, or a hub `H={i:||u_i||^2>1/64}`, `|H|<=191`, in which every heavy row has `|B_ii|<s/(8sqrt(2))` and complete off-diagonal star norm `>s/(8sqrt(2))`.
 
 New calculation: write for heavy `i`
 

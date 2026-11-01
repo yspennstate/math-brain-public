@@ -14,7 +14,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The key completed analytic dependency is fleet02/B14 r34:
 
-- repository/commit: `yspennstate/math-open-problems@ee5472663f2f7934749ac90f2a0305a4cbda37b0`;
+- repository/commit: `private-source-repository@ee5472663f2f7934749ac90f2a0305a4cbda37b0`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T112750Z-fleet02-B14-QFORM-r34/REPORT.md`;
 - theorem: `QFORM-ARBITRARY-SELF-RANDOM-SLOPE-MASS-v1`.
 
@@ -22,7 +22,7 @@ That theorem removes the exact-zero self restriction by copy-differencing one ge
 
 The designated fleet02/B04 partner result actually applied below is r22:
 
-- repository/commit: `yspennstate/math-open-problems@2311fa678098f3ac7b96e5eb3795d9def07cc2fd`;
+- repository/commit: `private-source-repository@2311fa678098f3ac7b96e5eb3795d9def07cc2fd`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260924T091038Z-fleet02-B04-QFORM-auto11-r22/REPORT.md`;
 - theorem: `QFORM-ZEROPIVOT-J1-WEIGHTED-MIXED-HUB-v1`.
 

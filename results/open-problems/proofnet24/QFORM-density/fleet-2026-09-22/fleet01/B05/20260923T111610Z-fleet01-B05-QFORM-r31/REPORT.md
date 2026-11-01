@@ -221,7 +221,7 @@ so at most five leaves can violate the strict gate `ell_j^(-*)>1/2`.  Importantl
 
 Use the completed fleet02/B05 theorem `QFORM-EXACTRANK3-LEAVEONEOUT-FRESNEL-v1`, read at source commit
 
-`yspennstate/math-open-problems@7082c8bddc546596fd36fd2afdb08344d38ee230`,
+`private-source-repository@7082c8bddc546596fd36fd2afdb08344d38ee230`,
 
 path
 
@@ -321,7 +321,7 @@ The full QFORM conjecture is still `OPEN / NOT PROVED`.  The theorem above is fo
 This argument does not rotate the independent random coordinates; only the deterministic three-dimensional coefficient space is whitened.  The synthetic scalar `S` is independent of the retained original coordinates because it uses a disjoint coordinate bank, and its cap-one density is proved by the explicit convolution formula (2.6), not assumed after a general projection.  No pointwise van-der-Corput estimate, arbitrary-joint coarea lemma, conditional-density-cap surrogate for independence, moment bound, compact support, connected support, or small-random-perturbation argument is used.
 
 Source dependencies actually used:
-- fleet02/B05 r19 `QFORM-EXACTRANK3-LEAVEONEOUT-FRESNEL-v1`, read at `yspennstate/math-open-problems@7082c8bddc546596fd36fd2afdb08344d38ee230`, exact path above;
+- fleet02/B05 r19 `QFORM-EXACTRANK3-LEAVEONEOUT-FRESNEL-v1`, read at `private-source-repository@7082c8bddc546596fd36fd2afdb08344d38ee230`, exact path above;
 - fleet02/B05 r23 `QFORM-HEAVY-ROW-SUPPORT-SEPARATED-CLOSURE-v1`, prior source pin `ad7874e3ee0f4541714b2376aa09154517e60867`;
 - fleet01/B05 r30 cube-root pruning identity, current repository path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T102839Z-fleet01-B05-QFORM-r30/REPORT.md`.
 

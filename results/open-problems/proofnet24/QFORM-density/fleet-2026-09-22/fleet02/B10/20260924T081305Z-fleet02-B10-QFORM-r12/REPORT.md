@@ -6,7 +6,7 @@ PROVED_SUPPORTING_LEMMA / VALID_COUNTEREXAMPLE_TO_JOINT-CAP-ONLY_CURVED_RECEIVER
 
 First unpaid implication: **QFORM-CURVED-COMPLEX-SECTION-FRESNEL-RECEIVER-v1**. After legal hub conditioning, retain the ORIGINAL-coordinate product-generated complex section through the quadratic V-phase and obtain a uniform two-sheet density bound without support, moments, log-concavity, fiber suprema, post-rotation independence, or pointwise characteristic-function decay.
 
-Control used: owner programme QFORM-DENSITY-3EIG-20260922, owner revision 2026-09-22.15. Required source pin: math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837. Latest completed compatible partner report consumed: fleet03/B10 r29 (20260924T044022Z). Current master also contains the bounded-square curved-marginal result at 0ec096bcf1f9f4a31fdbada3d4af4322f8edf6cc; it is only a bounded-support partial result and is not used as though it covered the target.
+Control used: owner programme QFORM-DENSITY-3EIG-20260922, owner revision 2026-09-22.15. Required source pin: private-source@e5f71d79eff325201dd0274053d20268ce65b837. Latest completed compatible partner report consumed: fleet03/B10 r29 (20260924T044022Z). Current master also contains the bounded-square curved-marginal result at 0ec096bcf1f9f4a31fdbada3d4af4322f8edf6cc; it is only a bounded-support partial result and is not used as though it covered the target.
 
 ## 1. Target-valid exact-null harmonic survivor
 

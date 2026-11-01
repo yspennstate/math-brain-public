@@ -24,7 +24,7 @@ Named partner `fleet03/B10`: no completed current-programme canonical report or 
 Completed sources actually consumed and applied:
 
 1. **fleet03/B16**, brain report blob `07109b1e3a16125ab7965e557a73c58e44d10715` (`scheduled_tasks/runs/fleet03/B16/20260922T113226Z-qform-r11/report.md`). It proves the exact single-square density formula and `L^{3/2}` bound, and independently refutes the invalid pointwise-Fresnel route.
-2. **fleet01/B05**, math-open-problems report blob `09383b90fdc49dcb3479c4ea6ede0b58994bfd8b` (`qform/fleet-2026-09-22/fleet01/B05/20260922T1136Z-qform-principal2d-B05-r1/REPORT.md`). It proves the physical definite-pair shell bound `pi/sqrt(|det B|)` and records the flat-Walsh localization obstruction.
+2. **fleet01/B05**, private-source report blob `09383b90fdc49dcb3479c4ea6ede0b58994bfd8b` (`qform/fleet-2026-09-22/fleet01/B05/20260922T1136Z-qform-principal2d-B05-r1/REPORT.md`). It proves the physical definite-pair shell bound `pi/sqrt(|det B|)` and records the flat-Walsh localization obstruction.
 3. **fleet02/B06**, report blob `9cced3d58d10574ef548c119c8d5a67276dc870f`, which proves the Plucker determinant-mass identity `sum_{i<j} det(R_{ij})^2=1` for a same-sign spectral plane.
 4. **fleet02/B08**, report blob `212febc02c4c1f3a8e6c073d0a8ed5d2d6b4ea0`, which proves the exact rank-three diffuse-frame theorem `max_i ||u_i||^2<=1/2 => ||p_Q||_infinity<=3e` and isolates the heavy/light branch.
 

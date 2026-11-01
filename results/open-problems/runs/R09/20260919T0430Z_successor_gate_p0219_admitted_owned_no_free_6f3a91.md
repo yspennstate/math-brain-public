@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 at 
 # R09 — successor admission delta: P0219 crossed to CLOSABLE but is atomically owned elsewhere
 
 Date: 2026-09-19 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Lane: **CLOSABLE OUTSIDE**.
 
 ## 1. Continuity and exact status of the original Tang target

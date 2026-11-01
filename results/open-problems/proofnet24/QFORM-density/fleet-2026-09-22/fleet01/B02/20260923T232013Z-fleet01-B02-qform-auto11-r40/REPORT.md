@@ -16,7 +16,7 @@ The live correction package was reread. In particular this report does not use: 
 
 Designated partner result used at equation level:
 
-- `yspennstate/math-open-problems@612be1591c1aa5edaeb29bb6eceec7963ddbef55`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T212459Z-fleet02-B02-qform-auto11/EARLY.md`.
+- `private-source-repository@612be1591c1aa5edaeb29bb6eceec7963ddbef55`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T212459Z-fleet02-B02-qform-auto11/EARLY.md`.
 
 The partner derives the exact nonzero-tail operator
 
@@ -294,7 +294,7 @@ No exact-target counterexample to a universal `int |phi_Q|` bound was found. The
 ## 9. Sources
 
 
-Designated partner: `yspennstate/math-open-problems@612be1591c1aa5edaeb29bb6eceec7963ddbef55`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T212459Z-fleet02-B02-qform-auto11/EARLY.md`.
+Designated partner: `private-source-repository@612be1591c1aa5edaeb29bb6eceec7963ddbef55`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T212459Z-fleet02-B02-qform-auto11/EARLY.md`.
 
 Preceding integrated Strichartz source: fleet01/B02 r39, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260923T222129Z-fleet01-B02-qform-auto11-r39/REPORT.md`, read-back blob `72520e4eabbc2b62dc722f630f19b99031c93d34`.
 

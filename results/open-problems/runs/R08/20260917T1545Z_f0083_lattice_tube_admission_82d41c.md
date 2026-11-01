@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — **I0082 rem
 # R08 CLOSABLE OUTSIDE — F0083 admitted via a critical lattice with an expanding transient defect tube
 
 Date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity and controlling state
 

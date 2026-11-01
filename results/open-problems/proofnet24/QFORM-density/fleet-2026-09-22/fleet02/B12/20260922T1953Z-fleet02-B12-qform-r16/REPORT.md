@@ -17,7 +17,7 @@ This report uses only original-coordinate conditioning. It does not rotate the p
 
 The completed named partner result actually applied is fleet03/B12:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `b3c543b40dfaef13468466fa82625303a7719af8`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md`
 - theorem `QFORM-TWO-SAMESIGN-THREEBLOCK-v1`.

@@ -14,9 +14,9 @@ Execution memory: `WITHOUT_VERIFIED_BRAIN`
 The unrestricted target remains open: independent real coordinates with densities at most one, arbitrary dimension, and real symmetric `A` with at least three eigenvalues of modulus at least one. Nothing here inserts moment, support, centering, or post-rotation independence assumptions into that full target.
 
 
-The previous B17 theorem used below only for provenance of the finite stress family is `yspennstate/math-open-problems@3ebad57a9816b238c1f04dc3894971f10066d89b`, same account/slot, run `B17-20260922T214456Z-r11`.
+The previous B17 theorem used below only for provenance of the finite stress family is `private-source-repository@3ebad57a9816b238c1f04dc3894971f10066d89b`, same account/slot, run `B17-20260922T214456Z-r11`.
 
-The designated partner `fleet03/B17` was actually consumed from its immutable proof `yspennstate/math-open-problems@63f692146f592bc250af369056573dc5e3720a8e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260922T221945Z-fleet03-B17-QFORM-r19/REPORT.md`. It proves that fully coupled three-diffuse-bank orientations can approach the `3sqrt(2)` obstruction with no coupling-only first-order gap. The theorem below attacks the complementary maximal-leverage geometry: two saturated opposite-sign-plane rows and one diffuse bank, and now closes its previously unpaid off-zero maximum.
+The designated partner `fleet03/B17` was actually consumed from its immutable proof `private-source-repository@63f692146f592bc250af369056573dc5e3720a8e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260922T221945Z-fleet03-B17-QFORM-r19/REPORT.md`. It proves that fully coupled three-diffuse-bank orientations can approach the `3sqrt(2)` obstruction with no coupling-only first-order gap. The theorem below attacks the complementary maximal-leverage geometry: two saturated opposite-sign-plane rows and one diffuse bank, and now closes its previously unpaid off-zero maximum.
 
 ## 2. Exact source-valid family
 

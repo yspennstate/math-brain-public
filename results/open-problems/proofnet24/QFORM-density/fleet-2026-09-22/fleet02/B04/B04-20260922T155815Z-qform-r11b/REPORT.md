@@ -18,7 +18,7 @@ Thus a genuine original-coordinate square can close ridge-effective dimensions b
 
 ## 2. Source-pinned dependencies and status
 
-1. Fresh free-regularizer/ridge proof: `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, path `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`. Its Sections 4-5 prove that for an original-coordinate cross block `B`, with
+1. Fresh free-regularizer/ridge proof: `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, path `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`. Its Sections 4-5 prove that for an original-coordinate cross block `B`, with
 
    `K_gamma = BB^T (gamma^2 I + BB^T)^(-1)`,
 
@@ -28,7 +28,7 @@ Thus a genuine original-coordinate square can close ridge-effective dimensions b
 
    where `L_q = pi e sqrt(2/q)`. That source supplies a complete proof but, at this run's source read, its new extension was still awaiting the specifically requested independent review. This report does not upgrade that review status.
 
-2. Named partner fleet03/B04: `yspennstate/math-open-problems@f447c650e04ef27d14be3380ac541c1cec60ab0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T145033Z-r12/REPORT.md`. The completed theorem `QFORM-SQUARE-ASSISTED-L32-v1` records the source-valid coarea/Riesz step
+2. Named partner fleet03/B04: `private-source-repository@f447c650e04ef27d14be3380ac541c1cec60ab0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T145033Z-r12/REPORT.md`. The completed theorem `QFORM-SQUARE-ASSISTED-L32-v1` records the source-valid coarea/Riesz step
 
    `||p_[a(X+m(Y))^2+R(Y)]||_inf <= H_3 |a|^(-1/2) ||p_R||_3^(3/4)`,
 

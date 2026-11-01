@@ -18,7 +18,7 @@ Q=\lambda_1\langle r_1,X\rangle^2+\lambda_2\langle r_2,X\rangle^2-\mu\langle r_3
 \]
 
 This is the exact-rank-three indefinite signature `(+,+,-)` case. The newest Claude-attributed source
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, file
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, file
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`,
 states the ruled one-sheet bound
 
@@ -315,7 +315,7 @@ compactly supported, log-concave, connected, centered, or identical.
 
 Completed partner source:
 
-- repository/commit: `yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`;
+- repository/commit: `private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`.
 
 Its exact Gaussian heat-height theorem says, for every probability law `nu`,
@@ -387,7 +387,7 @@ class-preserving Gaussian padding, as required after repeated regularization wor
 ## 10. Source pins
 
 - Control source at run start: `yspennstate/math-research-brain@0978e6fe90234d8b545ec790fef99764d301dce4`.
-- Ruled source checked at the current math-open-problems master as well as source commit `e5f71d79eff325201dd0274053d20268ce65b837`; its file blob remained `d11ace6dbf5ecdf6ce5921f80f727e92e95bf8fc` at the pre-publication check.
+- Ruled source checked at the current private-source master as well as source commit `e5f71d79eff325201dd0274053d20268ce65b837`; its file blob remained `d11ace6dbf5ecdf6ce5921f80f727e92e95bf8fc` at the pre-publication check.
 - Product-marginal theorem transfer checked in fleet03/B18's literature report and the Claude source: every two-dimensional orthogonal projection of a cap-one product law has density at most `2`.
 - Partner fleet04/B15 heat theorem: `ad7e5daa036cc8330b1432285ad40fec611d37dd`.
 

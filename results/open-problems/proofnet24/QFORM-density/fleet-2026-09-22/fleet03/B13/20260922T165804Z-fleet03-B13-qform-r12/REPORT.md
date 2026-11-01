@@ -19,14 +19,14 @@ Fresh control was resolved from `yspennstate/math-research-brain` main and refre
 
 The live corrections consumed include the failures of law-uniform pointwise quadratic phase decay, unrestricted fiber-sup integration, conditional-cap-for-independence substitution, a universal good-small-minor/cross-rank-three dichotomy, bounded-diameter localization, fixed fragment count, and direct Pluecker-weighted reciprocal-pivot averaging. None is used as a positive premise.
 
-The designated `fleet04/B13` current-QFORM artifact remained absent both in the shared handoff tree and at the canonical math-open-problems B13 path at the prepublication check, so no partner result is fabricated or awaited. Compatible completed peer mathematics actually applied is:
+The designated `fleet04/B13` current-QFORM artifact remained absent both in the shared handoff tree and at the canonical private-source B13 path at the prepublication check, so no partner result is fabricated or awaited. Compatible completed peer mathematics actually applied is:
 
 1. **Exact product bang-bang reduction**, fleet02/B13, source snapshot  
-   `yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`  
+   `private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`.  
    For every fixed slab kernel, the supremum over product densities `0<=f_i<=1`, `int f_i=1`, equals the supremum over unit-measure product indicators. This is applied in Section 6.
 
-2. **Weak-L2 logarithmic-ridge theorem**, fleet03/B16, read at math-open-problems snapshot `c301be6b21f382934962aeb4c019b713377eac2f`, path  
+2. **Weak-L2 logarithmic-ridge theorem**, fleet03/B16, read at private-source snapshot `c301be6b21f382934962aeb4c019b713377eac2f`, path  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/B16-20260922T135620Z-r11/REPORT.md`.  
    With
    `Psi(u)=1+log(1/|u|)` for `0<|u|<=1` and `Psi(u)=|u|^(-1/4)` for `|u|>=1`, it proves

@@ -24,7 +24,7 @@ The new theorem is deliberately a **half-Riesz** estimate rather than a direct d
 
 Canonical source:
 
-`yspennstate/math-open-problems@a8d94490f91131df5f18a3fe9e58087077458835`
+`private-source-repository@a8d94490f91131df5f18a3fe9e58087077458835`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T195812Z-fleet02-B19-qform-r18/REPORT.md`.
 
@@ -42,7 +42,7 @@ Thus any product-preserving half-Riesz estimate for an exact Schur residual beco
 
 Canonical source:
 
-`yspennstate/math-open-problems@b8afb539ea7217d2c8d2336e31f53614fb2241ee`.
+`private-source-repository@b8afb539ea7217d2c8d2336e31f53614fb2241ee`.
 
 For every nonzero original-coordinate scalar pivot `a=A_ii`, its exact Schur complement `S` satisfies
 
@@ -58,7 +58,7 @@ At a zero-self row `S_kk=0`, the shared minor is therefore the genuine star prod
 
 Canonical source:
 
-`yspennstate/math-open-problems@4ee3cfb2d6682d5be670819cf5de173ad859f6cf`.
+`private-source-repository@4ee3cfb2d6682d5be670819cf5de173ad859f6cf`.
 
 Applied to the partner S0 resource `e_2(BB^T)>=1/48`, it gives four disjoint original-coordinate banks and two matching cross blocks `B_1,B_2` satisfying
 

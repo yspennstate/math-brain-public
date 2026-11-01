@@ -5,7 +5,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 Run date: 2026-09-18 UTC  
 Track / namespace: `proofnet24/NM13-07/`  
 Category: `CLOSABLE OUTSIDE`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Canonical source / claim: `P0282`, `operations/claims/P0282.md`  
 Canonical dedup key: `chen_log_concavity_conjecture_for_fixed_size_random_permutation_lis`  
 Selection shard: `6 mod 13`  

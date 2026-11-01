@@ -185,7 +185,7 @@ Its density is globally maximized at zero and
 
 ### 2.1 Uniform convergence of the complete finite-stage densities
 
-This witness lies directly inside the completed Fresnel--Brascamp--Lieb theorem (`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, Theorem F).
+This witness lies directly inside the completed Fresnel--Brascamp--Lieb theorem (`private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, Theorem F).
 Indeed
 \[
 A_k^\sigma
@@ -267,7 +267,7 @@ Thus this is not a central-cell perturbation in sample space.
 
 ### 3.1 Exact moments and bank CLT
 
-The latest completed fleet02/B17 variance-tax report (`math-open-problems@7394e198725409756e0775da22e8dd9f0ef5900b`, run `20260924T054220Z-fleet02-B17-QFORM-auto11`) supplies the exact second and third absolute moments for this satellite law. In the present notation,
+The latest completed fleet02/B17 variance-tax report (`private-source@7394e198725409756e0775da22e8dd9f0ef5900b`, run `20260924T054220Z-fleet02-B17-QFORM-auto11`) supplies the exact second and third absolute moments for this satellite law. In the present notation,
 \[
 \boxed{
 v_k:=E X^2
@@ -377,7 +377,7 @@ This packages remote fragmented supports, divergent residual spectral mass, stri
 ## 4. Required concrete use of the completed fleet02/B17 theorem
 
 The designated partner result is the completed and checked theorem `QFORM-SYMMETRIC-SATELLITE-DIFFUSIVE-GLOBAL-BARRIER-v1`, source report
-`math-open-problems@7394e198725409756e0775da22e8dd9f0ef5900b`, with checker PASS at `5a583c1b2926d0ebfceb016de9e26e244c42a78b`.
+`private-source@7394e198725409756e0775da22e8dd9f0ef5900b`, with checker PASS at `5a583c1b2926d0ebfceb016de9e26e244c42a78b`.
 It proves for its exact dense rank-three target family that under isotropic variance tax `tau`,
 \[
 \|p_{Q_m}\|_\infty\longrightarrow\frac{3\sqrt2}{1+12\tau}.

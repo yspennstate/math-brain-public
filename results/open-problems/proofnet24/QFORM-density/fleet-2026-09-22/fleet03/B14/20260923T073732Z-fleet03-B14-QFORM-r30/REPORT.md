@@ -23,7 +23,7 @@ The result is not the full conjecture because the bare condition `s_3(A)>=1` doe
 Two completed mathematical inputs are used at actual inequalities.
 
 1. **Physical-pair logarithmic smoothing theorem**, source-pinned at
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
    If an invertible indefinite physical pair has block `B`, `D=|det B|`, `kappa=sigma_min(B)`, and after completing that pair the scalar remainder `R` obeys
 
@@ -41,7 +41,7 @@ Two completed mathematical inputs are used at actual inequalities.
    ` <= min(1,10 sqrt(rho/|lambda|))`.                         (2.2)
 
 2. **Designated partner fleet04/B14 affine-family localization compiler**, source-pinned at
-   `yspennstate/math-open-problems@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee`,
+   `private-source-repository@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T001323Z-fleet04-B14-affine-mixture-compiler-r5/REPORT.md`.
    Uniform interval estimates for a fixed active physical quadratic block and arbitrary affine parameters transfer from compact finite-fragment indicator product laws to all cap-one product laws with exactly the same constant, while arbitrary outside laws are left untouched. This result is applied in Section 6 to the actual conditional inequality (5.3).
 

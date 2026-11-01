@@ -26,17 +26,17 @@ Fresh owner control was re-read immediately before publication from
 
 The required newest mathematical package is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 Its Section 5 proves the q-dependent Hausdorff--Young/Brascamp--Lieb mechanism: a row exponent `alpha_i` may be paid whenever `alpha_i<=q/2`, because the scalar Fourier exponent `q/alpha_i` is then at least two.  I apply exactly that interpolation principle to the translated augmented screen frame below.
 
 The exact hub ambiguity identity and projection/BL inputs are from
 
-`yspennstate/math-open-problems@f68817886312b904e2cf86ccbfb14f4f130229f3:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/hub_decoupling/REPORT.md`.
+`private-source-repository@f68817886312b904e2cf86ccbfb14f4f130229f3:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/hub_decoupling/REPORT.md`.
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems@9655d21c63995f50f815155ccb013c9224f83910:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T005518Z-fleet03-B03-QFORM-r23/LOWRANK_SUPPLEMENT.md`.
+`private-source-repository@9655d21c63995f50f815155ccb013c9224f83910:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T005518Z-fleet03-B03-QFORM-r23/LOWRANK_SUPPLEMENT.md`.
 
 The live correction inbox was refreshed at the same control snapshot.  In particular I retain the prohibitions on conditional sum/difference density caps, law-uniform scalar pointwise decay, arbitrary-joint rank-three coarea, one-good-minor extraction, and local collision payment before aggregation.  The new `QFORM-N3-LOCAL-COLLISION-BEFORE-AGGREGATION-FALSE-v1` correction is consistent with the present proof: the screen packet is aggregated before the time norm is taken.  The `QFORM-MIXED-SKELETON-DETERMINANT-ONLY-L1-FALSE-v1` correction is also irrelevant to the stated theorem because no arbitrary same-bank curvature is discarded.
 
@@ -396,7 +396,7 @@ The L2 constant in the same branch is
 
 The completed `fleet04/B03` report is
 
-`yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`.
+`private-source-repository@28681f9af7c2307f80968df86010084019599e38:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`.
 
 Its previously advertised weighted-L2 compiler has a known homogeneity/time-weight error and is not used.  Its valid collision lemma is
 

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # PROB10-08 — spectral positivity/cancellation barrier and sharper affine `L1` geometry
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Status: **OPEN / PARTIAL / substantive mechanism movement / no new source-level cutoff class this run / independent validation pending / worldwide novelty UNVERIFIED**.
 

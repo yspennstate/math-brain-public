@@ -43,7 +43,7 @@ The quadratic part of (2) is \(2(u\cdot X_R)(w\cdot X_R)\), so its symmetric Hes
 \]
 The hub \(e_H\perp u,p\) supplies the final \(1\); \(\beta\) cancels from \(D\). In the usual orthonormal \(P,L\) frame, \(D=1+\varepsilon^2\).
 
-Theorem 6.1 in the archived [rank-two affine half-Riesz proof](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md) applies to an exact-rank-two quadratic plus **any original-coordinate affine term**:
+Theorem 6.1 in the archived [rank-two affine half-Riesz proof](private-source-repository) applies to an exact-rank-two quadratic plus **any original-coordinate affine term**:
 \[
  \sup_z\mathbb E|R-z|^{-1/2}\le128D^{-1/4}.                \tag{4}
 \]
@@ -62,7 +62,7 @@ The exact-rank-two formula above ceases to apply to
 \[
  R_a=aH^2+2HL+\beta L^2+2\varepsilon LP+b_R\cdot X_R+c_R
 \]
-when \(a\varepsilon\ne0\): its physical hub/light matrix can have rank three. An unconditional, weaker estimate follows from the **second-level** results in the archived assembled manuscript: [lower_levels.tex](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/lower_levels.tex) and [structure.tex](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/structure.tex). Their statements, with \(c_*=10^{-15}\), are:
+when \(a\varepsilon\ne0\): its physical hub/light matrix can have rank three. An unconditional, weaker estimate follows from the **second-level** results in the archived assembled manuscript: [lower_levels.tex](private-source-repository) and [structure.tex](private-source-repository). Their statements, with \(c_*=10^{-15}\), are:
 
 - If a real symmetric remainder matrix \(M\) has \(s_2(M)\ge1\) and **no** \(c_*\)-pivot, Theorem `lower:two` gives the truncated half-potential
   \(\mathcal H(R)\le10^6\), uniformly in every affine term.

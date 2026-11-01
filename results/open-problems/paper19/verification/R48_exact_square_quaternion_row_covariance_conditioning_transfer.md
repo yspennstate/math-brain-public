@@ -97,9 +97,9 @@ input.  It does not give an a.s. exact law.
 - `STATE.md`: added row `V.A-square-cov` and the R48 round log.
 - `PLAN.md`: recorded square all-column right-factor conditioning and qualified
   selected-column covariance caveats.
-- `math-open-problems-fleet/master/chO_phase_retrieval_rmt.tex`: added the Lane
+- `private-source-fleet/master/chO_phase_retrieval_rmt.tex`: added the Lane
   O compact right-factor transfer paragraph.
-- `math-open-problems-fleet/MASTER_STATE.md`: recorded the master-side summary.
+- `private-source-fleet/MASTER_STATE.md`: recorded the master-side summary.
 
 ## Build verification
 

@@ -1,6 +1,6 @@
 # Two-bank extension: arbitrary within-bank potentials
 
-This extends [the diffuse two-light Fourier receiver](https://github.com/yspennstate/math-open-problems/blob/88488cf951d2c9552608f8d1dd8776f2bcf678d2/proofnet24/QFORM-density/interactive/20260923T205600Z-diffuse-two-light-local-potentials/REPORT.md) by replacing the row-leverage certificate with two independent planar-capped banks. It is a scoped all-target density theorem; an additional quadratic cross term between banks is outside the statement.
+This extends [the diffuse two-light Fourier receiver](private-source-repository) by replacing the row-leverage certificate with two independent planar-capped banks. It is a scoped all-target density theorem; an additional quadratic cross term between banks is outside the statement.
 
 Let H be independent of two independent random vectors X_B,X_C. The scalar H has a probability density at most one. Each bank may internally have arbitrary dependence. Define L=L_B+L_C and V=V_B+V_C, where (L_j,V_j) is a linear projection of X_j whose joint probability density g_j is bounded by M_j, j=B,C. Let tau,lambda be nonzero real numbers, and let R_H(H),R_B(X_B),R_C(X_C) be arbitrary measurable real bank-local functions, finite almost surely. Put
 

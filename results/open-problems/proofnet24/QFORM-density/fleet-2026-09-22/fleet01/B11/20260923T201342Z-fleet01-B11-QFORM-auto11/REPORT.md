@@ -16,7 +16,7 @@ The unrestricted owner target remains OPEN. No Gaussianity, log-concavity, momen
 
 The fresh designated-partner report is fleet02/B11,
 
-`yspennstate/math-open-problems@a79f3268361c2368db54125eeaa3c77f9beb1871`
+`private-source-repository@a79f3268361c2368db54125eeaa3c77f9beb1871`
 
 at
 
@@ -38,7 +38,7 @@ It proves, among other things:
 
 The freshest adjacent B11 source is fleet03/B11 r40,
 
-`yspennstate/math-open-problems@2db0a7f81437b6e67efe800f129abebae0e10b4c`.
+`private-source-repository@2db0a7f81437b6e67efe800f129abebae0e10b4c`.
 
 It proves two facts that are important here:
 
@@ -56,7 +56,7 @@ Thus the remaining instability is not loss of the top two crossing directions. I
 
 The completed source theorem used analytically below is `QFORM-RANK2-AFFINE-HALF-RIESZ-v1` from
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`.
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`.
 
 For an orthonormal two-frame `P`, invertible symmetric `Lambda`, arbitrary original-coordinate affine term, and independent cap-one inputs,
 

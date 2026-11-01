@@ -2,7 +2,7 @@
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Run: `20260924T141954Z-fleet01-B03-fixed-multiplicity-audit-r13`  
-Pinned baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Pinned baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 Status: **proved new dependence-safe analytic/structural identities; no unconditional multiplicity reduction below 17 is claimed.**
 

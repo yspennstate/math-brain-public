@@ -21,7 +21,7 @@ The new lemma below avoids that falsifier by keeping a genuinely independent squ
 
 I use the completed `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1` from fleet02/B06,
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
@@ -126,7 +126,7 @@ The designated fleet02/B10 run
 
 canonical source
 
-`yspennstate/math-open-problems@9005415f079b7b46c0618c0187bf29b3f8d44167`,
+`private-source-repository@9005415f079b7b46c0618c0187bf29b3f8d44167`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T225540Z-fleet02-B10-QFORM-auto11/REPORT.md`,
 
@@ -146,7 +146,7 @@ and fixed-hub exterior packet
 
 `T_h=sum_{j in B_2,k in B_3} det(r_h,r_j,r_k)^2 >=1/512`.           (4.3)
 
-My preceding B10 r23, `math-open-problems@144420aee51d6e70b9bc4daa6cc5cd4f3cc56da6`, showed that at an exact null hub one may orient the transverse basis by `N e_1` so that
+My preceding B10 r23, `private-source@144420aee51d6e70b9bc4daa6cc5cd4f3cc56da6`, showed that at an exact null hub one may orient the transverse basis by `N e_1` so that
 
 `N = [[0,R,0],[R,p,q],[0,q,d]]`,                                    (4.4)
 
@@ -296,7 +296,7 @@ This is an actual application of the completed partner result to a density inequ
 
 The newer partner run `20260923T014801Z-fleet02-B10-QFORM-auto11`, canonical
 
-`yspennstate/math-open-problems@e00458111ae6c54afa30331726a6335fc838557f`,
+`private-source-repository@e00458111ae6c54afa30331726a6335fc838557f`,
 
 proves `QFORM-ONEBANK-EXACTGRAPH-ALLPIVOT-CLOSURE-v1`: if one quantitative two-dimensional light bank has zero longitudinal regression residual, then every heavy scalar pivot is paid by `<2945`.
 

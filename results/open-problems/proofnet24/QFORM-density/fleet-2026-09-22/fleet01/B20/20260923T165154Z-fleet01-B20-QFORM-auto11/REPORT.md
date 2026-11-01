@@ -15,7 +15,7 @@ The target remains exactly the owner target: arbitrary independent real coordina
 
 The designated completed partner actually consumed is fleet02/B20 auto11c:
 
-`yspennstate/math-open-problems@20ec5f8f3ed2028edf27894cd3956d13e4662a9a`
+`private-source-repository@20ec5f8f3ed2028edf27894cd3956d13e4662a9a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T155833Z-fleet02-B20-QFORM-auto11c/REPORT.md`.
 
@@ -31,7 +31,7 @@ The same completed partner run explicitly keeps the full target OPEN and also sh
 
 The analytic receiver used below is the reviewed physical cross-block theorem D' from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 

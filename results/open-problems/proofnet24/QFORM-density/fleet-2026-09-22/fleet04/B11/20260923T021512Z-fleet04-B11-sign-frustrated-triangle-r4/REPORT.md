@@ -14,7 +14,7 @@ The target is the original unrestricted conjecture: independent real coordinates
 
 The newest Claude package was read at the required source pin
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. The files actually used have current blobs `RESULTS.md@62e20ee976ddeb3f42d3ee5befd6ed49edc917a5`, `FOURIER_ROUTE_REPORT.md@9da148eed6cd43b1046a6f91d0f9329e12921cb4`, and `COUNTEREXAMPLE_SEARCH.md@ee721b237e206f31298b1871979faaab37a1bac2`. The relevant new input is the ruled one-sheet estimate: an invertible physical three-dimensional block of inertia `(2,1)`, with smallest singular value `sigma`, has conditional density at most `pi sqrt(2)/sigma` on the one-sheet side after completing its affine term.
 

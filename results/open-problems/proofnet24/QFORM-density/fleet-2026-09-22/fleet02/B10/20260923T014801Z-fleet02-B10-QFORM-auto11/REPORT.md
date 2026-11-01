@@ -13,7 +13,7 @@ The full target remains OPEN: independent original coordinates have arbitrary re
 
 ## 1. Source boundary and the first unpaid implication
 
-The newest required Claude source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, is used at an actual inequality. Its ruled-level-set theorem gives, for an exact-rank-three indefinite form at spectral scale at least one,
+The newest required Claude source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, is used at an actual inequality. Its ruled-level-set theorem gives, for an exact-rank-three indefinite form at spectral scale at least one,
 
 `p_Q(t) <= pi sqrt(2)`
 
@@ -21,7 +21,7 @@ on the one-sheet side for every admissible product law. Therefore this report do
 
 The designated partner actually consumed is fleet03/B10 r21,
 
-`math-open-problems@3136d1f31dd7e723ddef05d06edce6fe769dc384`,
+`private-source@3136d1f31dd7e723ddef05d06edce6fe769dc384`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T231827Z-fleet03-B10-QFORM-r21/REPORT.md`.
 
@@ -33,7 +33,7 @@ This report applies (1.1) quantitatively in Section 5.
 
 A second completed input is fleet01/B16 r12,
 
-`math-open-problems@7140ff63d4ff7c092cdc18ce7ad8a95e4e03e388`,
+`private-source@7140ff63d4ff7c092cdc18ce7ad8a95e4e03e388`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T003846Z/REPORT.md`.
 

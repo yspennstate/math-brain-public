@@ -17,8 +17,8 @@ for every bounded interval `J`, or construct a genuine target-valid counterexamp
 
 The assigned partner `fleet03/B14` has now proved two facts that determine the localization interface:
 
-1. `yspennstate/math-open-problems@2208c3f666582999f1fbc7e55921a4530cbe2789` proves **select-before-localize**: an original-coordinate active block may be left completely unfragmented; if its deterministic-outside estimate is uniform in the outside-induced affine/self terms, then arbitrary outside laws transfer with exactly the same constant.
-2. `yspennstate/math-open-problems@54f2d04e936d0dfefe345d17ee18a46b35039d7e` proves there is **no universal fixed fragment-count cap** for the exact coordinatewise bathtub localization, even for `A=I_3`.
+1. `private-source-repository@2208c3f666582999f1fbc7e55921a4530cbe2789` proves **select-before-localize**: an original-coordinate active block may be left completely unfragmented; if its deterministic-outside estimate is uniform in the outside-induced affine/self terms, then arbitrary outside laws transfer with exactly the same constant.
+2. `private-source-repository@54f2d04e936d0dfefe345d17ee18a46b35039d7e` proves there is **no universal fixed fragment-count cap** for the exact coordinatewise bathtub localization, even for `A=I_3`.
 
 The preceding fleet02/B14 run supplied an acyclic fragment-packing compiler and showed that arbitrary component-dependent cycles can create logarithmic or power losses. The first unpaid implication was therefore to find a stronger mechanism that can keep a genuinely coupled active triple unfragmented while still paying the inverse-gap singularities that a shell/coarea calculation may generate.
 
@@ -219,9 +219,9 @@ This is the first unpaid connection. No claim of full solution is made.
 
 - fresh control snapshot before scientific write: `yspennstate/math-research-brain@da8225a364f8b6ff706a10485f1f5ff7f1bf5729`;
 - owner programme/control: `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`;
-- completed partner localization theorem actually applied: `yspennstate/math-open-problems@2208c3f666582999f1fbc7e55921a4530cbe2789`, fleet03/B14 select-before-localize;
-- completed partner obstruction actually applied: `yspennstate/math-open-problems@54f2d04e936d0dfefe345d17ee18a46b35039d7e`, fleet03/B14 no-fixed-fragment-count theorem;
-- preceding fleet02/B14 acyclic packing theorem: `yspennstate/math-open-problems@d358b89ba78735cee238c01e83c2c3ca9ec66352`.
+- completed partner localization theorem actually applied: `private-source-repository@2208c3f666582999f1fbc7e55921a4530cbe2789`, fleet03/B14 select-before-localize;
+- completed partner obstruction actually applied: `private-source-repository@54f2d04e936d0dfefe345d17ee18a46b35039d7e`, fleet03/B14 no-fixed-fragment-count theorem;
+- preceding fleet02/B14 acyclic packing theorem: `private-source-repository@d358b89ba78735cee238c01e83c2c3ca9ec66352`.
 
 The live correction inbox was reread immediately before publication. This proof uses no law-uniform pointwise Fourier decay, no post-rotation independence, no fiber-supremum argument, no bounded-diameter/fixed-fragment-count reduction, no conditional-density-cap surrogate for independence, and no phase-Wiener absolute-value interface.
 

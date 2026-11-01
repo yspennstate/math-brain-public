@@ -4,11 +4,11 @@ Full FEI remains OPEN. This is an independently audited structural lemma with a 
 
 ## Verified private source
 
-Repository: yspennstate/math-open-problems
+Repository: private-source-repository
 Commit: 48cc86fe95e55750428cc78c24b08ed805a01adf
 Directory: proofnet24/P03-fei/continuations/2026-09-30-critical-odd-modules/
 
-[Complete report](https://github.com/yspennstate/math-open-problems/blob/48cc86fe95e55750428cc78c24b08ed805a01adf/proofnet24/P03-fei/continuations/2026-09-30-critical-odd-modules/REPORT.md)
+[Complete report](private-source-repository)
 
 All five files were fetched at this immutable commit and compared byte-for-byte with the executed/reviewed local artifact: REPORT.md, AUDIT.md, check.py, verification.json, MANIFEST.json.
 

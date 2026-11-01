@@ -2,7 +2,7 @@
 
 **Status:** proved improvement of the numerical constant for the same 17-eigenvalue theorem; **no multiplicity reduction and no `s_3` claim**.
 
-Pinned baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
+Pinned baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
 
 The baseline chose `eta=1/100`, `kappa=1/80^2` for convenient arithmetic and then rounded the final constant to `10000`. The proof has substantial slack. Retuning only those two deterministic thresholds gives the following stronger theorem with every matrix/law/affine hypothesis unchanged.
 

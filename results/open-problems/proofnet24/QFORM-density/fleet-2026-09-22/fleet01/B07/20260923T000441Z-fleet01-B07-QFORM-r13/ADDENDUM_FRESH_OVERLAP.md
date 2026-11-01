@@ -4,7 +4,7 @@ Programme `QFORM-DENSITY-3EIG-20260922`; run `20260923T000441Z-fleet01-B07-QFORM
 
 This addendum was written after the final-control refresh exposed the newer OTHER-account result fleet03/B07 `20260923T000734Z-fleet03-B07-qform-r20`, canonical mathematics
 
-`yspennstate/math-open-problems@391688138f7f481a2c8688c2d27f9508db7af6af`
+`private-source-repository@391688138f7f481a2c8688c2d27f9508db7af6af`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T000734Z-fleet03-B07-qform-r20/REPORT.md`.
 

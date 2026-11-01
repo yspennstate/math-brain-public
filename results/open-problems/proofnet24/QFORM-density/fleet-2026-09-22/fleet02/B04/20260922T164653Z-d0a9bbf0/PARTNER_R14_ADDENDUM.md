@@ -2,7 +2,7 @@
 
 A newer completed named-partner result appeared after the primary report and first correction addendum:
 
-- fleet03/B04 `QFORM-RANK2-SCHUR-NOLEVERAGE-v1`, canonical `yspennstate/math-open-problems@2761bd3896c56a1f929761e69035ba7cb8ebc2bc`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T164839Z-r14/REPORT.md`, blob `fe77dd5ab13c1de27d93fc2ba0b8c9f637d4a523`.
+- fleet03/B04 `QFORM-RANK2-SCHUR-NOLEVERAGE-v1`, canonical `private-source-repository@2761bd3896c56a1f929761e69035ba7cb8ebc2bc`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T164839Z-r14/REPORT.md`, blob `fe77dd5ab13c1de27d93fc2ba0b8c9f637d4a523`.
 
 It proves that for one original-coordinate pivot
 

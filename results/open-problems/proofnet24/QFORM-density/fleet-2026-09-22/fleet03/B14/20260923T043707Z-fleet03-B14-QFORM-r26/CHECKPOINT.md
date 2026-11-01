@@ -34,7 +34,7 @@ Since `det T=-r^2`, one eigenvalue of `T` always has absolute value at least `r`
 
 for every real `theta`.
 
-Applying the completed fleet04/B14 four-coordinate affine-core theorem (`math-open-problems@6442bbe9d4647a730b27b8e0786bc54b2546b7ec`) now gives the candidate exact branch estimate
+Applying the completed fleet04/B14 four-coordinate affine-core theorem (`private-source@6442bbe9d4647a730b27b8e0786bc54b2546b7ec`) now gives the candidate exact branch estimate
 
 `||p_Q||_infinity <= 1000(8+log 4) / min(nu, ||a||_2/sqrt(2))`,
 

@@ -14,7 +14,7 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, post-rot
 
 The designated partner report actually applied is
 
-`yspennstate/math-open-problems@d1764f29884bf14ce505d36668105edfcaf8315e`
+`private-source-repository@d1764f29884bf14ce505d36668105edfcaf8315e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T201653Z-fleet04-B13-extremal-slab-dichotomy-r1/REPORT.md`.
 

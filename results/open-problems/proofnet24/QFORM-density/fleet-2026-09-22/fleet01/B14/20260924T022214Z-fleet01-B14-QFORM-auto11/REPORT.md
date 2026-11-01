@@ -15,7 +15,7 @@ The unrestricted theorem remains OPEN. Nothing below assumes moments, bounded su
 
 The completed fleet02/B14 source used in this report is
 
-- source snapshot: `yspennstate/math-open-problems@0adab5e8aa852db2831d712bc820c9ea347b79ae`;
+- source snapshot: `private-source-repository@0adab5e8aa852db2831d712bc820c9ea347b79ae`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260924T020607Z-fleet02-B14-QFORM-auto11/REPORT.md`;
 - theorem: `QFORM-OVERLAP-SLOPE-SUBPROBABILITY-HOMOGENEITY-v1`.
 

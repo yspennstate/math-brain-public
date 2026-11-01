@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 
 # R03 run33 — unbalanced overlap-one exact corank and a quantitative Schlaefli route
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL; source OPEN.** This run strictly lowers the frozen full-domain finite envelope at `n=11` and resets the stagnation count. It does **not** prove the sharp asymptotic. The asymptotic part of the run identifies a quantitative threshold-arrangement statement whose required error scale is now explicit; the finite part enlarges the exact-corank-two catalog beyond all previously paid overlap-one plane families and produces a replay-certified metric improvement.
 

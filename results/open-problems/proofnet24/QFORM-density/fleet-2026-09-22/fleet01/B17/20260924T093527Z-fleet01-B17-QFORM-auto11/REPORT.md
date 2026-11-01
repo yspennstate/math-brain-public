@@ -226,7 +226,7 @@ all nonzero; the macro-macro block is constantly `-1/4`.
 
 Take all physical coordinates iid `U[-1/2,1/2]`. The latent vector `R_m^TX` converges to the hybrid in Theorem A with `q=1/2`. The completed source-pinned Fresnel--Brascamp--Lieb Theorem F at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
 applies to the actual finite eigenframe: the two macro leverages are `1/4`, every diffuse leverage is at most `3/(4m)<=3/8`, the residual quadratic part is zero, and the three active eigenvalues have product one. It supplies a common integrable `O(|t|^{-3/2})` characteristic-function majorant. Hence the complete output densities converge uniformly to the hybrid density.
 
@@ -299,7 +299,7 @@ M=\frac12n(U_1+U_2).
 
 Apply the completed partner theorem `QFORM-RANDOM-LOCATION-GAUSSIAN-INDEFINITE-BARRIER-v1` from
 
-`yspennstate/math-open-problems@97d91254e56ad2f8c79b121a0ce8bf66472a11d9:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T074629Z-fleet02-B17-QFORM-auto11/REPORT.md`.
+`private-source-repository@97d91254e56ad2f8c79b121a0ce8bf66472a11d9:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T074629Z-fleet02-B17-QFORM-auto11/REPORT.md`.
 
 Its quantitative deterministic-translation estimate gives, with `s=1/12`,
 

@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R02 CLOSABLE OUTSIDE — complex-discrepancy category transfer has the wrong inequality direction; two new finite CLOSABLE admissions are already owned
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R02  
 Lane: **CLOSABLE OUTSIDE**
 

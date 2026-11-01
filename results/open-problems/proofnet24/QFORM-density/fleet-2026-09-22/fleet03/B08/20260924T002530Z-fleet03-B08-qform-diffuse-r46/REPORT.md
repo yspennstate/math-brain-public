@@ -9,9 +9,9 @@ The unrestricted conjecture remains OPEN. This report advances the large-diagona
 
 ## 1. Correction boundary and source theorem
 
-The live corrections were reread in this actual run. In particular the new fleet01/B15 event `QFORM-HALFRIESZ-PLUS-BARE-SQUARE-NOT-SUFFICIENT-v1`, source `yspennstate/math-open-problems@a2e3c99bd7c6715ec4260fa3a7918499c4ae8b3d`, shows that a black-box square-root small-ball certificate plus a bare independent square is endpoint-critical and can fail. The argument below does not use that interface. It uses the stronger completed translation-uniform **half-Riesz expectation** for a rank-two product projection with arbitrary coordinate-separable phases.
+The live corrections were reread in this actual run. In particular the new fleet01/B15 event `QFORM-HALFRIESZ-PLUS-BARE-SQUARE-NOT-SUFFICIENT-v1`, source `private-source-repository@a2e3c99bd7c6715ec4260fa3a7918499c4ae8b3d`, shows that a black-box square-root small-ball certificate plus a bare independent square is endpoint-critical and can fail. The argument below does not use that interface. It uses the stronger completed translation-uniform **half-Riesz expectation** for a rank-two product projection with arbitrary coordinate-separable phases.
 
-The analytic input is fleet01/B14 `QFORM-SCHUR-DIFFUSE-RANK2-PLUS-SEPARABLE-v1`, source `yspennstate/math-open-problems@fe5ac898cc159fa879c94a5bd3c71984d6aab834`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B14/20260922T181432Z-fleet01-B14-QFORM-r15/REPORT.md`. If an original scalar pivot has coefficient `a!=0` and a bank of its exact Schur complement is
+The analytic input is fleet01/B14 `QFORM-SCHUR-DIFFUSE-RANK2-PLUS-SEPARABLE-v1`, source `private-source-repository@fe5ac898cc159fa879c94a5bd3c71984d6aab834`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B14/20260922T181432Z-fleet01-B14-QFORM-r15/REPORT.md`. If an original scalar pivot has coefficient `a!=0` and a bank of its exact Schur complement is
 
 `D+U Lambda U^T`, `U^T U=I_2`, `max row_leverage(U)<=1/2`, `det Lambda!=0`,
 
@@ -224,7 +224,7 @@ Let
 A_0=\begin{pmatrix}B&M\\M^T&M^TRM\end{pmatrix}.               \tag{6.1}
 \]
 
-As in r45, `rank(A_0)<=4`. Fleet01/B19 `QFORM-LOWRANK5-DIFFUSE-PAVING-v1`, source `yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260923T151334Z-fleet01-B19-QFORM-auto11/REPORT.md`, applies directly to `A=A_0+diag(0,0,D)`. If
+As in r45, `rank(A_0)<=4`. Fleet01/B19 `QFORM-LOWRANK5-DIFFUSE-PAVING-v1`, source `private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260923T151334Z-fleet01-B19-QFORM-auto11/REPORT.md`, applies directly to `A=A_0+diag(0,0,D)`. If
 
 \[
 s_3(A_0)\ge\sigma,\qquad
@@ -249,7 +249,7 @@ So the new theorem is needed only when the rank-at-most-four aligned skeleton it
 
 The completed partner theorem `QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1` is at
 
-`yspennstate/math-open-problems@af30108d1fd48a138ef13c683d397a74f8e0228e`,
+`private-source-repository@af30108d1fd48a138ef13c683d397a74f8e0228e`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T212412Z-fleet04-B08-QFORM-r2/REPORT.md`.
 
 For the same selected physical light coordinate `j`, write

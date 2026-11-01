@@ -33,7 +33,7 @@ This run pays the noncollapsed subbranch and identifies those collapse variables
 
 The required pinned source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 folder `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
@@ -51,7 +51,7 @@ The row-gate-free fractional receiver used after (2.1) is the already completed 
 
 `QFORM-E2-HALFRIESZ-ROW-GATE-FREE-v1`,
 
-canonical mathematics `yspennstate/math-open-problems@b38a9627f059b13d532f5c208c30579ec2d2d362`. For any literal original-coordinate cross block `M` of an otherwise arbitrary quadratic polynomial,
+canonical mathematics `private-source-repository@b38a9627f059b13d532f5c208c30579ec2d2d362`. For any literal original-coordinate cross block `M` of an otherwise arbitrary quadratic polynomial,
 
 `H_(1/2)(Q) <= 8 e^(1/4) e_2(M^T M)^(-1/8)`.                       (2.3)
 
@@ -59,7 +59,7 @@ This is a fractional-potential theorem only; the live correction that E2 half-Ri
 
 The designated partner is fleet03/B06 r47, canonical mathematics
 
-`yspennstate/math-open-problems@fcd44d39858e562272e44a586a458f38776fea2e`.
+`private-source-repository@fcd44d39858e562272e44a586a458f38776fea2e`.
 
 ## 3. New general theorem: aggregate anchored 3-minors pay a square pivot
 

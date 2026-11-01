@@ -44,7 +44,7 @@ The threshold `p>2` is genuine for this abstract compiler. There is a probabilit
 ## 2. Every indefinite physical pair has finite L^p density, p>1
 
 Use the completed physical-pair logarithmic envelope from
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 For an invertible indefinite ORIGINAL-coordinate pair `B`, put
 

@@ -13,7 +13,7 @@ The original natural B09 run is
 `20261011T195500Z-fleet01-B09-biased-restriction-uncertainty`.
 
 - Open-problems commit:
-  https://github.com/yspennstate/math-open-problems/commit/adb671ffcda143fa68347806bb96e8c305621a7d
+  private-source-repository
 - Source directory:
   `reports/fei-2026-10-11/runs/B09/20261011T195500Z-fleet01-B09-biased-restriction-uncertainty/`
 - Brain mirror commit:

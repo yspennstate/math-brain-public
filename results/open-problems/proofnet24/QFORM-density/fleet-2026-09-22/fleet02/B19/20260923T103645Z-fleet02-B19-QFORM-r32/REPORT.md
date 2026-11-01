@@ -15,7 +15,7 @@ The target remains: for every finite `n`, every independent real product law who
 
 The newest completed designated-partner material used here is fleet03/B19's STAR compiler and its subsequent TRIANGLE cross-packet result.
 
-The STAR compiler is source-pinned by brain commit `05553a75e2512c6b818a91f7e0edd4bc51e56267`, with canonical mathematics `yspennstate/math-open-problems@571c69f5a360dbdbadc433db25c03d3157d7e699`. After its light-row-excision/ridge exits, every surviving extreme-coloop/small-pivot STAR state contains an ORIGINAL physical row `h` satisfying
+The STAR compiler is source-pinned by brain commit `05553a75e2512c6b818a91f7e0edd4bc51e56267`, with canonical mathematics `private-source-repository@571c69f5a360dbdbadc433db25c03d3157d7e699`. After its light-row-excision/ridge exits, every surviving extreme-coloop/small-pivot STAR state contains an ORIGINAL physical row `h` satisfying
 
 `|A_hh| < 1/64`,
 
@@ -23,7 +23,7 @@ The STAR compiler is source-pinned by brain commit `05553a75e2512c6b818a91f7e0ed
 
 It supplies square-root small-ball and quarter-Riesz currency but explicitly does not obtain `L^infinity`.
 
-The chronologically later fleet03/B19 handoff, brain commit `c9154667dc38107286b8789f0e80c366fe94c86e`, canonical mathematics `yspennstate/math-open-problems@63e569420a83b6a9f073c2158e3b5f46214535d7`, pays the complementary TRIANGLE geometry down to a genuine physical two-gradient cross packet
+The chronologically later fleet03/B19 handoff, brain commit `c9154667dc38107286b8789f0e80c366fe94c86e`, canonical mathematics `private-source-repository@63e569420a83b6a9f073c2158e3b5f46214535d7`, pays the complementary TRIANGLE geometry down to a genuine physical two-gradient cross packet
 
 `Delta_T > 0.05145877388595875`,                                     (1.2)
 
@@ -162,7 +162,7 @@ The quantifiers in (3.2) are the exact debt. A generic bound depending only on t
 
 The required newest-Claude source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 Its proved unrestricted fifth-volume theorem `D5` says that for any genuine physical cross block `N`,
 

@@ -14,7 +14,7 @@ C_*:=\sup_{\substack{n\ge3,\ s_3(A)\ge1\\X_i\ \mathrm{independent},\ 0\le f_i\le
 \]
 The unpaid statement is `C_*<infinity`.
 
-Use the completed fleet03/B15 result at `math-open-problems@a0ff8602933dff6df3182b969fec03af0f2dcc25`: if `R` is the class of finite unions of bounded rational half-open intervals of total length one, and `G_n` is the rational symmetric generic class (simple spectrum, all entries and all principal minors nonzero), then
+Use the completed fleet03/B15 result at `private-source@a0ff8602933dff6df3182b969fec03af0f2dcc25`: if `R` is the class of finite unions of bounded rational half-open intervals of total length one, and `G_n` is the rational symmetric generic class (simple spectrum, all entries and all principal minors nonzero), then
 \[
 C_*=
 \sup_{\substack{n\ge3,\ B\in G_n,\ s_3(B)>1\\E_i\in R,\varepsilon\in\mathbb Q_{>0},\ y\in\mathbb Q}}
@@ -22,7 +22,7 @@ C_*=
 \tag{1}
 \]
 
-The completed fixed-instance fleet02/B15 theorem at `math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056` gives `p_{B,E}\in C_0(R) cap L^infinity(R)` for every core instance, since `rank(B)>=3`. The heat-height identity used by fleet03/B15 therefore gives
+The completed fixed-instance fleet02/B15 theorem at `private-source@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056` gives `p_{B,E}\in C_0(R) cap L^infinity(R)` for every core instance, since `rank(B)>=3`. The heat-height identity used by fleet03/B15 therefore gives
 \[
 \boxed{
 C_*=\sup_{\substack{n\ge3,\ B\in G_n,\ s_3(B)>1\\E_i\in R,\ y\in\mathbb Q}}
@@ -71,7 +71,7 @@ Thus the algebraic-generic reduction cannot be followed by an assertion that gen
 
 ## 3. Apply the completed ruled theorem to the obstruction
 
-The completed ruled one-sheet theorem from the required Claude source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` says that for an invertible indefinite physical `3 x 3` block with eigenvalue magnitudes `lambda_1,lambda_2,mu` and signature `(2,1)`, conditioning on the outside original coordinates and completing the square pays the majority-side submeasure by
+The completed ruled one-sheet theorem from the required Claude source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` says that for an invertible indefinite physical `3 x 3` block with eigenvalue magnitudes `lambda_1,lambda_2,mu` and signature `(2,1)`, conditioning on the outside original coordinates and completing the square pays the majority-side submeasure by
 \[
 \mu_+(I)\le C_S|I|,
 \qquad

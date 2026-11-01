@@ -26,7 +26,7 @@ No Gaussianity, moments, log-concavity, compact support, connected support, diag
 
 From the completed pair-log source
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`,
 
@@ -45,7 +45,7 @@ where `R(Z)` is the exact Schur-remainder quadratic-plus-affine form on the rema
 
 The completed designated-partner result
 
-`yspennstate/math-open-problems@c795e2b4b67e77e819a52c888295ae5def408c55`
+`private-source-repository@c795e2b4b67e77e819a52c888295ae5def408c55`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T081654Z-fleet02-B01-qform-auto14/REPORT.md`
 
@@ -64,7 +64,7 @@ where
 
 This is an averaged-frequency theorem, not scalar pointwise Fresnel decay.
 
-The earlier B01 checkpoint `math-open-problems@c91c80b328cd5131d6f525e8b4de1d3081948d9e` applied (2.2) globally to the small-diagonal class and obtained `h^beta` concentration for every `beta<1/2`. The present run instead spends (2.2) **directly against the pair logarithm**, avoiding a Fejer/small-ball conversion.
+The earlier B01 checkpoint `private-source@c91c80b328cd5131d6f525e8b4de1d3081948d9e` applied (2.2) globally to the small-diagonal class and obtained `h^beta` concentration for every `beta<1/2`. The present run instead spends (2.2) **directly against the pair logarithm**, avoiding a Fejer/small-ball conversion.
 
 ## 3. New Fourier lemma for the logarithmic kernel
 
@@ -290,7 +290,7 @@ The exact singular case `D=0` is not covered by (6.5); the earlier rank-one pair
 
 The latest completed fleet02/B01 result at prepublication refresh is
 
-`yspennstate/math-open-problems@c190a04ed16915a20ed6bbddbfaac4dea10dae18`,
+`private-source-repository@c190a04ed16915a20ed6bbddbfaac4dea10dae18`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T093107Z-fleet02-B01-qform-r39/REPORT.md`.
 

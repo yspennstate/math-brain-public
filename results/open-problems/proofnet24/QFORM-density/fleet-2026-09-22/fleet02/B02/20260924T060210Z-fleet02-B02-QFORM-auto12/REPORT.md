@@ -15,7 +15,7 @@ Fresh `math-research-brain/main` was resolved at startup and the owner revision 
 
 The required Claude-source package was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 
@@ -37,7 +37,7 @@ Both are genuine integrated-Fourier receivers on their stated scopes.
 
 The completed rank-two affine half-Riesz theorem used below is
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -47,7 +47,7 @@ For a two-dimensional product input the affine term lies automatically in the qu
 
 The newest completed designated partner is `fleet03/B02` r47, read at
 
-`yspennstate/math-open-problems@859066cc3edee1bbeafe367e3bf2d630a4c425d9`,
+`private-source-repository@859066cc3edee1bbeafe367e3bf2d630a4c425d9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260924T045848Z-fleet03-B02-qform-r47/REPORT.md`.
 

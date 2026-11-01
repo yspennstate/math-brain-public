@@ -16,7 +16,7 @@ Designated partner: `fleet02/B14`.
 
 Completed partner source used here:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - source commit inspected: `7a0ffb7d9c4c6074cc6e13375db70828740e1bd4`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T220530Z-fleet02-B14-QFORM-auto11/REPORT.md`
 - companion checks: `.../CHECKS.md`

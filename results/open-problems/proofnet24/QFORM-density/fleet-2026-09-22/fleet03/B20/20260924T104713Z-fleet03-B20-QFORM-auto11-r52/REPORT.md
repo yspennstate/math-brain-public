@@ -18,7 +18,7 @@ All coordinate sets below are literal ORIGINAL-coordinate sets. Orthogonal opera
 
 The immediate same-slot structural source is fleet03/B20 r51:
 
-`yspennstate/math-open-problems@ceb973b9c1549a8247baf169db9152844b9decde`
+`private-source-repository@ceb973b9c1549a8247baf169db9152844b9decde`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T091209Z-fleet03-B20-QFORM-auto11-r51/REPORT.md`.
 
@@ -55,7 +55,7 @@ where
 
 The designated partner source is fleet04/B20 r13:
 
-`yspennstate/math-open-problems@d2560a041fd91c05d7fddf50f5b5414ecd2680a2`
+`private-source-repository@d2560a041fd91c05d7fddf50f5b5414ecd2680a2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260924T051424Z-fleet04-B20-QFORM-r13/REPORT.md`.
 
@@ -303,7 +303,7 @@ The first unresolved implication on this branch is consequently
 
 The freshest same-account global synthesis source during this run is fleet03/B19 r53,
 
-`yspennstate/math-open-problems@5545b1e4a69752e335ba5d43c22644ffcb122e02`.
+`private-source-repository@5545b1e4a69752e335ba5d43c22644ffcb122e02`.
 
 It separately narrows the r52 aligned four-latent branch to a rank-two collar or a genuinely punctured rank-three collar coupled to the retained diffuse residual and genuine cross tail. The present theorem does **not** claim that every such r53 state has a rank-six-plus-`3.44e-5` representation; therefore it does not erase the r53 first unresolved implication
 

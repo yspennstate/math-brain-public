@@ -51,7 +51,7 @@ Two completed supporting analytic arguments are used.
 
 Source:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`
 
@@ -75,7 +75,7 @@ where `c_i` is the squared norm of row `i` of `V`. For a physical `3x3` block, `
 
 Source:
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`
 
@@ -231,7 +231,7 @@ No diagonalization of the product law is performed.
 
 The completed fleet04/B15 theorem at
 
-`yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`
+`private-source-repository@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T221909Z-fleet04-B15-ruled-trace-c0-r8/REPORT.md`
 

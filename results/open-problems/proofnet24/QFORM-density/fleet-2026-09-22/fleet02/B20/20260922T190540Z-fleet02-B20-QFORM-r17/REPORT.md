@@ -28,7 +28,7 @@ Newest completed compatible partner run at the start snapshot:
 
 - worker: `fleet03/B20`;
 - run: `20260922T184724Z-fleet03-B20-QFORM-r15`;
-- canonical report: `yspennstate/math-open-problems@c07c544cf5963360e66f9467c24c78f7a5aa53c6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T184724Z-fleet03-B20-QFORM-r15/REPORT.md`.
+- canonical report: `private-source-repository@c07c544cf5963360e66f9467c24c78f7a5aa53c6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T184724Z-fleet03-B20-QFORM-r15/REPORT.md`.
 
 The partner proves the physical-triple half-Riesz payment
 
@@ -78,7 +78,7 @@ This is the same physical-pair mechanism proved in fleet01/B19; no rotated coord
 
 ### 2.4 P1 origin of the triangle
 
-The fleet01/B20 P1 refinement (`yspennstate/math-open-problems@0d364106e0773824b7dad9257b49046e6765a453`) gives, from the global `s_3(A)>=1` hypothesis and the earlier P1 pivot packet, the source-valid alternatives coherent same-sign triangle / strong physical star / strong disjoint cross bank. The present theorem acts only on the coherent-triangle alternative and does not declare the other alternatives paid.
+The fleet01/B20 P1 refinement (`private-source-repository@0d364106e0773824b7dad9257b49046e6765a453`) gives, from the global `s_3(A)>=1` hypothesis and the earlier P1 pivot packet, the source-valid alternatives coherent same-sign triangle / strong physical star / strong disjoint cross bank. The present theorem acts only on the coherent-triangle alternative and does not declare the other alternatives paid.
 
 ## 3. Strongest conditional end-to-end assembly before this run
 

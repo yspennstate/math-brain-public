@@ -19,7 +19,7 @@ No moment, Gaussian, log-concave, compact-support, connected-support, iid, spect
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems@af8d585f3ac8b3cc243045caf6bbe65d8e956f99`,
+`private-source-repository@af8d585f3ac8b3cc243045caf6bbe65d8e956f99`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T052144Z-fleet03-B08-qform-diffuse-r28/REPORT.md`.
 
 Its theorem `QFORM-MIXED-ORDER-JENSEN-COMPILER-v1` will be used exactly at its proved scope. The live co-heavy correction is respected throughout: aggregate determinant currency is not converted into one universal-size physical minor before an aggregate compiler is applied.
@@ -27,11 +27,11 @@ Its theorem `QFORM-MIXED-ORDER-JENSEN-COMPILER-v1` will be used exactly at its p
 Two newly completed neighboring structural sources are also used at theorem level:
 
 1. fleet03/B07 r25, canonical source reported as
-   `yspennstate/math-open-problems@5e2f0ed9c6f5b7621d6344af21b13a05234fdd47`,
+   `private-source-repository@5e2f0ed9c6f5b7621d6344af21b13a05234fdd47`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T053905Z-fleet03-B07-qform-r25/REPORT.md`,
    proving `QFORM-NESTED-THIRDVOLUME-TO-DISJOINT-LINKS-v1`.
 2. fleet03/B07 r26, observed at
-   `yspennstate/math-open-problems@67a8e05e237bc914ad0563e361f6eb035b76e7fe`,
+   `private-source-repository@67a8e05e237bc914ad0563e361f6eb035b76e7fe`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T060629Z-fleet03-B07-qform-r26/REPORT.md`,
    proving `QFORM-NESTED-CORE-R1-E2-VOLUME-OR-BICORE-v1`.
 
@@ -332,7 +332,7 @@ A fresh check found no completed `fleet04/B08` current-QFORM artifact. I therefo
 
 Use instead the compatible completed fleet04/B18 sharp product-projection consequence from
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`:
 for every nonzero coefficient vector `u` supported on an ORIGINAL-coordinate cap-one product bank,
 

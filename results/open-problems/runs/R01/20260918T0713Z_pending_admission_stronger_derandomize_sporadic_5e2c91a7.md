@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R01 — post-I0024 successor admission: stronger statements, derandomization-shaped targets, and sporadic finite targets
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Run date: 2026-09-18 UTC.
 Worker: R01, CLOSABLE OUTSIDE.
 

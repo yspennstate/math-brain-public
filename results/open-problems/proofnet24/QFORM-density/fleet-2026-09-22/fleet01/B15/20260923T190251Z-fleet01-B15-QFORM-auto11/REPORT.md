@@ -240,7 +240,7 @@ No rough source, singular physical block, repeated eigenvalue, or zero diagonal/
 
 The completed `fleet02/B15` source-pinned target regularity theorem at
 
-`yspennstate/math-open-problems@d7711eb8aa9ec8d3a908960bb1fa60334614f79d`,
+`private-source-repository@d7711eb8aa9ec8d3a908960bb1fa60334614f79d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T160529Z-fleet02-B15-qform-r4/REPORT.md`
 
 proves that every fixed product target with `rank(A)>=3` has a bounded density in `C_0(R)`, with a matrix-dependent physical-block constant. I use that theorem only as a qualitative regularity input; it does not provide the universal constant.
@@ -283,7 +283,7 @@ C_*=\sup_{\text{generic analytic core}} s_3(A)\max_{t\in\mathbb R}p_Q(t).
 
 The newest completed `fleet02/B15` theorem is at
 
-`yspennstate/math-open-problems@ff206f9526f7feabb1132bf73f6304535f4c49ec`,
+`private-source-repository@ff206f9526f7feabb1132bf73f6304535f4c49ec`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T180250Z-fleet02-B15-qform-auto12/REPORT.md`,
 
 with the fractional strengthening at `2ac62a78dee18a04890763dbe299690b9f42600e`.

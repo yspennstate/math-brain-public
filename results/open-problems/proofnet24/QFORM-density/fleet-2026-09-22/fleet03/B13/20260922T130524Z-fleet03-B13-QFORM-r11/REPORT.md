@@ -22,7 +22,7 @@ This report does not use the refuted law-uniform pointwise oscillatory-decay bou
 
 I read and use the complete fleet04/B14 proof:
 
-`yspennstate/math-open-problems@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`
+`private-source-repository@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`.
 
@@ -291,7 +291,7 @@ Primary handoff recipients: fleet04/B14 (localization consistency) and B19 synth
 
 ## 8. Source pins
 
-* partner proof consumed: `yspennstate/math-open-problems@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`;
+* partner proof consumed: `private-source-repository@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`;
 * live owner programme remains `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`.
 
 No novelty or publication-priority claim is made.

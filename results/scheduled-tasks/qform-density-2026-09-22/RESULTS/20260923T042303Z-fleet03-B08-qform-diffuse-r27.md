@@ -7,6 +7,6 @@ Result: proved `QFORM-ANCHORED-THREEVOLUME-SELF-MATCHED-MIX-v1`. For anchored th
 
 In the diffuse q=0 packet this gives `<85/L` whenever `Z>L^6/6912`, `R_i<=L`, and the anchored residual row law is diffuse; transpose gives the column version. Failure forces on each side either a physical star norm `>L` or a nested anchored third-volume packet `>L^6/13824`.
 
-Canonical mathematics: `yspennstate/math-open-problems@e76d2e984f81a058590bb143ff21e387fbbeab09`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T042303Z-fleet03-B08-qform-diffuse-r27/REPORT.md`.
+Canonical mathematics: `private-source-repository@e76d2e984f81a058590bb143ff21e387fbbeab09`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T042303Z-fleet03-B08-qform-diffuse-r27/REPORT.md`.
 
 Full QFORM remains OPEN. Execution status: WITHOUT_VERIFIED_BRAIN.

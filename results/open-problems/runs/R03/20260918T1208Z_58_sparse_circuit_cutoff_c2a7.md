@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 # R03 HARD OUTSIDE — F0001: a self-contained sparse-circuit cutoff and the exact R2 literature gap
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL / SOURCE OPEN UNDER THIS AUDIT STANDARD.** The sharp asymptotic is not certified closed here. This run gives a source-scale theorem that removes every minimal row/column circuit whose support misses more than `(2+epsilon)n/log_2 n` coordinates, without using Blinovsky's R1 classification. It also identifies a separate missing reduction in the citation used for Blinovsky v7 equation (18).
 

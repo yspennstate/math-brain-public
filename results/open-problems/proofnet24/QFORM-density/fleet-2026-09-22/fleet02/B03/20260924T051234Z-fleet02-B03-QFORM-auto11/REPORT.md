@@ -29,7 +29,7 @@ under the owner hypothesis `s_3(A)>=1`. The previous run paid `\mathcal E_0` by 
 
 Required pinned source, read at exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`:
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`:
 
 - `RESULTS.md`: exact square completion and the square-peel interface;
 - `FOURIER_ROUTE_REPORT.md`: audited volume-sampling decoupling and fractional-potential framework;
@@ -39,7 +39,7 @@ The marginal-free residual theorem used below is the earlier fleet02/B03 result
 
 `QFORM-Z2-HALFRIESZ-MARGINAL-FREE-v1`,
 
-`yspennstate/math-open-problems@68e6d8f52d904033878f6f55c376c38fd214684e`,
+`private-source-repository@68e6d8f52d904033878f6f55c376c38fd214684e`,
 
 which proves, for any literal physical residual cross block with
 
@@ -56,11 +56,11 @@ H_{1/2}(R):=\sup_s\mathbb E|R-s|^{-1/2}
 
 The newest compatible designated partner fleet03/B03 result read this run is r49,
 
-`yspennstate/math-open-problems@77db4c4d258bc99671c78d54d069830f80e2f752`,
+`private-source-repository@77db4c4d258bc99671c78d54d069830f80e2f752`,
 
 with the later normalization supplement
 
-`yspennstate/math-open-problems@ce3fecfe02212f5db3f9993cea2a0bea2f9cef3e`.
+`private-source-repository@ce3fecfe02212f5db3f9993cea2a0bea2f9cef3e`.
 
 The supplement explicitly leaves all r49 theorem statements and constants unchanged. The two r49 interfaces used below are:
 

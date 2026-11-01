@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R15 — RS-2026-CL-B six-run handoff and successor-admission gate
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Worker/lane: R15 / CLOSABLE OUTSIDE.
 
 ## 1. Continuity and source recovery

@@ -13,7 +13,7 @@ attacking: aggregate a whole original-coordinate off-diagonal row before recipro
 
 For every dimension, arbitrary independent real inputs with one-dimensional probability densities at most one, and every real symmetric matrix with at least three eigenvalues of modulus at least one, the target is one universal essential bound for the density of `Q=X^TAX`, or a valid counterexample.
 
-This run continues the preceding B06 non-null-star checkpoint `math-open-problems@15b22e8dad5d1e86b5f5ab85417ed611c9cd8e44`. That checkpoint obtained a subcritical fractional-potential estimate for a single genuine original-coordinate scalar coupled to a product-derived linear form, but had not yet converted it into a matrix-level aggregate curvature payment or exhibited a target family that forces aggregation.
+This run continues the preceding B06 non-null-star checkpoint `private-source@15b22e8dad5d1e86b5f5ab85417ed611c9cd8e44`. That checkpoint obtained a subcritical fractional-potential estimate for a single genuine original-coordinate scalar coupled to a product-derived linear form, but had not yet converted it into a matrix-level aggregate curvature payment or exhibited a target family that forces aggregation.
 
 The first unpaid implication attacked here is:
 
@@ -25,7 +25,7 @@ The answer is yes for an exact zero-diagonal hyperbolic pair followed by an arbi
 
 ### 2.1 Newest Claude coordinate-hyperbola peel
 
-From `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+From `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, Lemma 4.3:
 
 if a physical pair has `A_ii=A_jj=0`, `A_ij=mu!=0`, then after completing that pair in the ORIGINAL coordinates,
@@ -42,13 +42,13 @@ The required companion `RESULTS.md` and `COUNTEREXAMPLE_SEARCH.md` at the same c
 
 ### 2.2 Weighted product projection, already proved by B06
 
-From `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, this slot's theorem `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1` says that for an orthonormal `k`-frame `R`, the projection `R^T X` of independent cap-one coordinates has density cap at most `exp(k/2)`. For `k=1`, every normalized linear form in original independent coordinates therefore has density cap at most `sqrt(e)`. This is a weighted product-fiber integral, not an unrestricted fiber maximum.
+From `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, this slot's theorem `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1` says that for an orthonormal `k`-frame `R`, the projection `R^T X` of independent cap-one coordinates has density cap at most `exp(k/2)`. For `k=1`, every normalized linear form in original independent coordinates therefore has density cap at most `sqrt(e)`. This is a weighted product-fiber integral, not an unrestricted fiber maximum.
 
 ### 2.3 Designated partner fleet03/B06 r25
 
 The fresh completed partner result is
 
-`yspennstate/math-open-problems@1e7aa194ee0cd3c2981afdeb2ddf66acf53b87fe`,
+`private-source-repository@1e7aa194ee0cd3c2981afdeb2ddf66acf53b87fe`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T041802Z-fleet03-B06-qform-r25/REPORT.md`.
 
 Its `QFORM-THIRD-VOLUME-L3-NOLEVERAGE-v1` proves, for an original-coordinate cross block `B`,
@@ -262,7 +262,7 @@ Classification: `CANDIDATE_REFUTED` for the half-Riesz endpoint, not for the ful
 ## 8. Relation to the exact-null theorem and current proof map
 
 The completed fleet02/B16 theorem at
-`math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
+`private-source@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
 pays an exact null scalar against an arbitrary dependent projected pair by a weak-`L^(3/2)` kernel. The present theorem does something different but complementary: it permits an arbitrary nonzero scalar quadratic coefficient `a`, keeps the scalar genuinely independent, and replaces an arbitrary pair-density hypothesis by a **product-derived one-dimensional projection cap**. Its output is the subcritical `H_(1/4)` currency needed by a physical hyperbolic pair.
 
 The current B06 case map is therefore:

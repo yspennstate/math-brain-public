@@ -17,15 +17,15 @@ Fresh owner control before the mathematical write remained revision `2026-09-22.
 Completed sources actually used:
 
 1. This slot's immediately preceding mixed-order theorem, `QFORM-MIXED-32-FRACTIONAL-COMPOUND-BL-v1`, at
-   `yspennstate/math-open-problems@7bf5a0bd8a8d2fa12a5c2370811ecfe5d2cf7444`,
+   `private-source-repository@7bf5a0bd8a8d2fa12a5c2370811ecfe5d2cf7444`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T090322Z-r20/REPORT.md`.
    The present report first extends its packet definition from 0/1 packet selection to fractional packet coefficients in `[0,1]`, with the same proof.
 2. Designated partner fleet02/B07, `QFORM-CROSS-FIBER-PLANCHEREL-v1`, at
-   `yspennstate/math-open-problems@5266d24ea98d9bb5902c51a92eca0e3e38112e39`,
+   `private-source-repository@5266d24ea98d9bb5902c51a92eca0e3e38112e39`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T193347Z-b07-639234ec/REPORT.md`.
    Its one-sided physical-row-triple estimate is applied below at an actual determinant inequality.
 3. The fresh fleet03/B07 r29 double-anchor branch at
-   `yspennstate/math-open-problems@0e842117ca7ec8472538faa120677507f16b5c17`,
+   `private-source-repository@0e842117ca7ec8472538faa120677507f16b5c17`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T084007Z-fleet03-B07-qform-r29/REPORT.md`.
    On its standard collar it supplies
    `G > F^6/12824703626379264`.

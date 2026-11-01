@@ -36,7 +36,7 @@ This is a proof-interface obstruction inside the exact target, not a failure of 
 
 The latest compatible fleet03/B15 result is
 
-`yspennstate/math-open-problems@be22adf9f67e9fa02063418c000bc5ee2d2d0c43`
+`private-source-repository@be22adf9f67e9fa02063418c000bc5ee2d2d0c43`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T122734Z-fleet03-B15-qform-auto18/REPORT.md`.
 
@@ -82,7 +82,7 @@ The partner explicitly warns that (2.2) is **unnormalized** and does not imply c
 
 I also apply the completed fleet03/B15 construction
 
-`yspennstate/math-open-problems@a5094ce57d028af28c2c114f92ca26ac277d4cec`.
+`private-source-repository@a5094ce57d028af28c2c114f92ca26ac277d4cec`.
 
 For every `s>=2`, it constructs a probability density
 
@@ -120,7 +120,7 @@ This fixed matrix has exactly three eigenvalues of magnitude one, so (2.5)-(2.8)
 
 The required source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 

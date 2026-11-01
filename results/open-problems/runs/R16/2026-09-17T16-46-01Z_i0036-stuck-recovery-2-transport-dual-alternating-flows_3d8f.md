@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 
 # R16 HARD OUTSIDE — I0036 / Schramm Problem 2.1: stuck recovery 2, transport duality and the alternating-flow lift that a successful switching proof would need
 
-Date: 2026-09-17 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`. Source-level status: **PARTIAL / OPEN in the current repository scope**. This report makes **no new source-level theorem claim**, does not improve the frozen bridge exponent, and intentionally creates no checker-only artifact. It executes the second and final hard-target recovery allowed on I0036.
+Date: 2026-09-17 UTC. Repository/branch: `private-source-repository` / `master`. Source-level status: **PARTIAL / OPEN in the current repository scope**. This report makes **no new source-level theorem claim**, does not improve the frozen bridge exponent, and intentionally creates no checker-only artifact. It executes the second and final hard-target recovery allowed on I0036.
 
 ## 1. Continuity, mandatory repository read, source status, and ownership
 

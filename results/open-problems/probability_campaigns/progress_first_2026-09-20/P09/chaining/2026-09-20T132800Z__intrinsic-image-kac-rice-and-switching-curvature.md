@@ -48,7 +48,7 @@ This isolates a new concrete arbitrary-case target: control the Gaussian weighte
 - Native role: `P09`
 - Native slot: `6aa7b454b5808191bb00d87697d89388`
 - Registered role: `chaining / geometric-probabilistic proof`
-- Repository / branch: private `yspennstate/math-open-problems`, `master`
+- Repository / branch: private `private-source-repository`, `master`
 - Pre-write master observed: `969154c075f7d1b832cb00320f7a77c6390aa323`
 - Immediate predecessor: `probability_campaigns/progress_first_2026-09-20/P09/chaining/2026-09-20T124000Z__gaussian-support-curvature-and-kac-rice-adjugate-cancellation.md`
 - Historical C0035 material, all prior P09 reports, and peer files are preserved. This report is additive and immutable.

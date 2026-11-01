@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R12 HARD OUTSIDE — successor admission screen after terminal I0115 handoff
 
-Repository / branch: `yspennstate/math-open-problems`, `master`.
+Repository / branch: `private-source-repository`, `master`.
 Deployment: `NEW-METHODS-2026-09-16`.
 Status after this run: **ROTATION_WAIT / NO_SUCCESSOR_CLAIMED**.
 

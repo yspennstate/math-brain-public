@@ -8,7 +8,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — no sepa
 
 **Publication novelty:** `UNVERIFIED`. A bounded dated search for combinations of `clique-inserted`, `line graph of subdivision`, `Ramanujan`, `random walk`, and `cutoff` found spectral/chemical graph-operation papers but no matching ordinary-SRW cutoff theorem. This is negative evidence only, not a priority certificate.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 Run root: `proofnet24/P26-progress-cutoff-transfer/runs/2026-09-20/`.
 

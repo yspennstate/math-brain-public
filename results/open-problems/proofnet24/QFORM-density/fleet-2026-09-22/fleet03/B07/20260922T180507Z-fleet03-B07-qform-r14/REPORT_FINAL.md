@@ -15,15 +15,15 @@ The full conjecture asks for one universal finite `C` such that, for arbitrary d
 
 No rotation of the independent physical variables is used below. No pointwise law-uniform quadratic-phase decay, unrestricted fiber supremum, worst-case scalar-`Q_rest` conditional bound, or reciprocal selection of one tiny local minor is used.
 
-Owner revision `.11` proposed the scalar worst-condition bridge `sup_b ||p_{Q3|Qrest=b}||_infinity`. A completed concurrent fleet03/B16 correction at `yspennstate/math-open-problems@850ab3e996732591f8bf32b3f905528079545870` gives an exact diagonal counterexample to that bridge while leaving full QFORM intact, so the present route deliberately keeps the shifted product-space aggregation instead.
+Owner revision `.11` proposed the scalar worst-condition bridge `sup_b ||p_{Q3|Qrest=b}||_infinity`. A completed concurrent fleet03/B16 correction at `private-source-repository@850ab3e996732591f8bf32b3f905528079545870` gives an exact diagonal counterexample to that bridge while leaving full QFORM intact, so the present route deliberately keeps the shifted product-space aggregation instead.
 
 The designated fleet04/B07 partner still had no completed current-QFORM report visible in the fresh canonical search. No result is attributed to it. The proof below actually uses:
 
-* fleet01/B07 `QFORM-RIDGE-SET-DELETION-v1`, `yspennstate/math-open-problems@0b704e4e040938a4707d92de6931d449dda725d6`;
-* fleet01/B04 `QFORM-O0-EFFECTIVE3-ADAPTIVE-Q-v1`, `yspennstate/math-open-problems@c03349badbdfce229ca3a1548d3de8615d1028c5`;
-* the underlying full-form ridge theorem at `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`.
+* fleet01/B07 `QFORM-RIDGE-SET-DELETION-v1`, `private-source-repository@0b704e4e040938a4707d92de6931d449dda725d6`;
+* fleet01/B04 `QFORM-O0-EFFECTIVE3-ADAPTIVE-Q-v1`, `private-source-repository@c03349badbdfce229ca3a1548d3de8615d1028c5`;
+* the underlying full-form ridge theorem at `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`.
 
-The newest preceding B07 state is `yspennstate/math-open-problems@f2d3682e9f9d24d67ea14dc990d9f49bebeb5a6e`. In its O0 branch there is a physical cross block `B=A[L,R]` with
+The newest preceding B07 state is `private-source-repository@f2d3682e9f9d24d67ea14dc990d9f49bebeb5a6e`. In its O0 branch there is a physical cross block `B=A[L,R]` with
 
 `E=e_3(s_1(B)^2,s_2(B)^2,...)>=1/256`,                       (1.1)
 

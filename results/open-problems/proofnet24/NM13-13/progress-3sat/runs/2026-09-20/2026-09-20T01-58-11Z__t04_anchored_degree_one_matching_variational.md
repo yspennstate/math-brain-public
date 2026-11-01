@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 # NM13-13 — T04 cluster-aware 3-SAT: anchored degree-one rescue matchings and a strict variational penalty
 
 Date: 2026-09-20  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker root: `proofnet24/NM13-13/progress-3sat/`  
 Parent: **T04 — classical iid random 3-SAT with three distinct variables and uniform independent signs**  
 Status: **OPEN / PARTIAL**

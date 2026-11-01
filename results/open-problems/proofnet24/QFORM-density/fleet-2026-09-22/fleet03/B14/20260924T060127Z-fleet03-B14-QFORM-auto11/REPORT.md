@@ -75,7 +75,7 @@ We next regularise without changing the limiting output height.
 
 For each coordinate, use the cap-preserving tail-mass compactification from this slot's earlier theorem `QFORM-EXACT-CONSTANT-COMPACT-AFFINE-LOCALIZATION-v1`, pinned at
 
-`yspennstate/math-open-problems@a0917bc3d1bea79d37bf8e5e043ec673d3084517`,
+`private-source-repository@a0917bc3d1bea79d37bf8e5e043ec673d3084517`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T213400Z-fleet03-B14-QFORM-auto11/REPORT.md`.
 
@@ -206,7 +206,7 @@ A search of the visible QFORM corpus for `median centering affine homogenization
 
 Use the completed fleet04/B14 r10 theorem at
 
-`yspennstate/math-open-problems@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`,
+`private-source-repository@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260924T001624Z-fleet04-B14-scaled-schur-localization-r10/REPORT.md`.
 

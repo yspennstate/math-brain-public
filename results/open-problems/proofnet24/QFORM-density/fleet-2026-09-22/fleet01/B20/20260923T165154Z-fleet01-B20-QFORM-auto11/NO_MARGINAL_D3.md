@@ -5,17 +5,17 @@ Status: **PROVED SUPPORTING THEOREM / FULL QFORM STILL OPEN**
 
 This note supersedes the provisional “double-anchor survivor” conclusion in `REPORT.md`. It uses the new owner-linked restricted theorem in
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`,
 
 whose complete written proof gives the grouped-hub arbitrary-rank projected-crossing estimate. The unrestricted QFORM conjecture is explicitly still open there. The direct diffuse third-volume receiver used in the first branch remains Theorem D from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`.
 
 The three-hub terminal receiver is Theorem 6.3 in the current continuation
 
-`yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`
+`private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`
 
 `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md` and its cited `single_hub_core/REPORT.md`.
 

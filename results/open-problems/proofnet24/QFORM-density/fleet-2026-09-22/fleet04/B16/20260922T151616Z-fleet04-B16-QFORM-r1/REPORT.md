@@ -46,7 +46,7 @@ Name: QFORM-CONDITIONAL-HEAVY-RAYLEIGH-HALF-v1.
 
 The assigned partner fleet01/B16 proved QFORM-RANK3-HEAVY-RAYLEIGH-HALF-v1 at
 
-yspennstate/math-open-problems@4d35dc77fb399e31aa4f3525c8fed83808a86572
+private-source-repository@4d35dc77fb399e31aa4f3525c8fed83808a86572
 
 path
 

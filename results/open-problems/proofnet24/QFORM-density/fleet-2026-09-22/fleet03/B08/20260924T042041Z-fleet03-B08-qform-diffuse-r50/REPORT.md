@@ -15,7 +15,7 @@ The unrestricted conjecture remains **OPEN**. The result below sharpens the curr
 
 The arbitrary-rank crossing input is the reviewed source
 
-`yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`
+`private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 

@@ -111,7 +111,7 @@ Thus every strict universal-bound violation transfers with arbitrarily small pre
 
 The newest compatible designated-partner report read at source refresh is fleet02/B13 r40:
 
-- `yspennstate/math-open-problems@2af615c6d649e207191127733fc6dd180db14944`
+- `private-source-repository@2af615c6d649e207191127733fc6dd180db14944`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260924T025738Z-fleet02-B13-QFORM-auto11/REPORT.md`.
 
 Two proved pieces are used.

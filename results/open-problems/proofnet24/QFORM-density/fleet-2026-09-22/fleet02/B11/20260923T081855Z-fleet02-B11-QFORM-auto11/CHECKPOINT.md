@@ -9,7 +9,7 @@ First unpaid implication attacked: sharpen the designated partner's balanced sig
 - `u_i=sqrt(A_ii)`, and
 - `F=uu^T-A` is symmetric, hollow, and entrywise nonnegative.
 
-The completed designated-partner result fleet03/B11 r24 (`math-open-problems@879d132f1c4b5f5b45ab890c4121744e6e2573d5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T061800Z-fleet03-B11-QFORM-r24/REPORT.md`) proves a defect-STAR versus disjoint defect-2-volume dichotomy and pays the diffuse pure-star endpoint by mixed Fresnel.  Its first remaining branch is the high-leverage / grouped endpoint.  I isolate the exact zero-disjoint-volume geometry.
+The completed designated-partner result fleet03/B11 r24 (`private-source@879d132f1c4b5f5b45ab890c4121744e6e2573d5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T061800Z-fleet03-B11-QFORM-r24/REPORT.md`) proves a defect-STAR versus disjoint defect-2-volume dichotomy and pays the diffuse pure-star endpoint by mixed Fresnel.  Its first remaining branch is the high-leverage / grouped endpoint.  I isolate the exact zero-disjoint-volume geometry.
 
 ## 1. New zero-disjoint-volume support classification
 
@@ -71,7 +71,7 @@ Scale only the aggregate variable: `Y_0=sqrt(2)Z_0`, so every scalar input now h
 
 and Sylvester inertia preserves the indefinite signature.
 
-Now apply the completed finite-dimensional projected-gradient theorem at `math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Corollary 4.1.  With `m<=6` and `sigma=1/2`,
+Now apply the completed finite-dimensional projected-gradient theorem at `private-source@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Corollary 4.1.  With `m<=6` and `sigma=1/2`,
 
 `||p_Q||_infinity <= 2 sqrt(6 pi m)/(1/2) <= 24 sqrt(pi) < 42.54`. (7)
 
@@ -79,7 +79,7 @@ This proves a universal essential-density bound for the entire exact-rank-three 
 
 ## 3. Required newest-Claude result applied on an actual side of the same branch
 
-Use the required pinned package `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, Theorem C.  It gives the ruled one-sheet bound `pi sqrt(2)` for exact-rank-three `(+,+,-)` forms with all three magnitudes at least one.
+Use the required pinned package `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, Theorem C.  It gives the ruled one-sheet bound `pi sqrt(2)` for exact-rank-three `(+,+,-)` forms with all three magnitudes at least one.
 
 For the cap-one compressed matrix `C'`, (6) gives magnitudes at least `1/2`.  Apply Theorem C to `2C'`.  Since `p_Q(s)=2 p_{2Q}(2s)`, on the majority-sign one-sheet side
 

@@ -16,7 +16,7 @@ The argument below does **not** use any of the known-invalid interfaces: no law-
 
 The designated partner result actually applied is fleet02/B13 r29:
 
-`yspennstate/math-open-problems@6d77eb1e452afcd8c4f779344b5602118223d42a`
+`private-source-repository@6d77eb1e452afcd8c4f779344b5602118223d42a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T145505Z-fleet02-B13-leveragecascade-r29/REPORT.md`.
 

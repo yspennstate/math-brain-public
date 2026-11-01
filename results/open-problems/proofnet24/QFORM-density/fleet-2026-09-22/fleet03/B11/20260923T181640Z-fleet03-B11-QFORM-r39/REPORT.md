@@ -412,8 +412,8 @@ Separately, the full owner target still requires the bridge from exact rank thre
 ## 6. Source pins
 
 - latest owner continuation consumed: `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`;
-- preceding B11 r38 source: `yspennstate/math-open-problems@430d0746f305abeeea58af4d319efe98be87d563`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T175922Z-fleet03-B11-QFORM-r38/`;
-- exact-graph r37 source: `yspennstate/math-open-problems@60366e6dcbf3a321423e2ff1b0f4ecb9a78776f6`;
-- designated partner fleet04/B11 theorem: `yspennstate/math-open-problems@50b07997bec888ff7cc6820cd42be8e34d0ffc48`;
-- projected-crossing/product-projection source used for projection caps: `yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`;
+- preceding B11 r38 source: `private-source-repository@430d0746f305abeeea58af4d319efe98be87d563`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T175922Z-fleet03-B11-QFORM-r38/`;
+- exact-graph r37 source: `private-source-repository@60366e6dcbf3a321423e2ff1b0f4ecb9a78776f6`;
+- designated partner fleet04/B11 theorem: `private-source-repository@50b07997bec888ff7cc6820cd42be8e34d0ffc48`;
+- projected-crossing/product-projection source used for projection caps: `private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`;
 - execution label: `WITHOUT_VERIFIED_BRAIN`.

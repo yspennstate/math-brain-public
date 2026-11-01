@@ -18,7 +18,7 @@ The full owner target remains OPEN.
 
 ## 2. Required pinned source actually spent
 
-Required source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
+Required source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 I use three proved items from `RESULTS.md` / `FOURIER_ROUTE_REPORT.md` at explicit equations below:
 

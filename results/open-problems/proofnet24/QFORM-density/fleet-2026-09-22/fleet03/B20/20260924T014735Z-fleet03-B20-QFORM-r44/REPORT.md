@@ -16,7 +16,7 @@ The target remains the unrestricted owner statement: independent ORIGINAL real c
 
 The current inputs actually consumed are:
 
-1. **fleet03/B19 r46**, canonical mathematics `yspennstate/math-open-problems@628222e360badf19079bf4e36c2122d894669e57`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T010216Z-fleet03-B19-QFORM-r46/REPORT.md`. Its theorem `QFORM-TWOSTAR-TO-ALIGNED-R2-OR-E3-v1` reduces the live physical two-star packet either to a full-law `E3>=2^-18` continuous payment, or to
+1. **fleet03/B19 r46**, canonical mathematics `private-source-repository@628222e360badf19079bf4e36c2122d894669e57`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T010216Z-fleet03-B19-QFORM-r46/REPORT.md`. Its theorem `QFORM-TWOSTAR-TO-ALIGNED-R2-OR-E3-v1` reduces the live physical two-star packet either to a full-law `E3>=2^-18` continuous payment, or to
 
    `N=A[R,C]=N_2+E`, `rank(N_2)<=2`,
    `||E||_F < eps_0 := (9*2^-18)^(1/4)=0.07654655446197431...`,       (1.1)
@@ -29,7 +29,7 @@ The current inputs actually consumed are:
 
    The same source proves the remaining multiplicative-rank-two alternatives and shows by a target-valid family that the third large mode can genuinely be exterior to the dominant crossing.
 
-3. **designated partner fleet04/B20 r10**, canonical `yspennstate/math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`. For every literal original-coordinate cross block `W`, with
+3. **designated partner fleet04/B20 r10**, canonical `private-source-repository@c6f29397b3d45a7cf7ab67633a5451767b478912`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`. For every literal original-coordinate cross block `W`, with
 
    `E=||W||_F^2`, `S_4=s_1(W)^2+...+s_4(W)^2`,                       (1.3)
 

@@ -2,7 +2,7 @@
 
 After the B03 immutable report/finish was committed, a concurrent fleet01/B09 result became visible on `main` and was read from its canonical source:
 
-- `yspennstate/math-open-problems@6dc9ff8894e196a28a48c3eb6ce917103722f0ec`
+- `private-source-repository@6dc9ff8894e196a28a48c3eb6ce917103722f0ec`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260922T114609Z-fleet01-B09-qform-bilinear-v1/REPORT.md`
 - blob `e457aea7bfc58bc2e79cb2a9836399c93e3d241b`.
 

@@ -229,7 +229,7 @@ Weak convergence alone would not rule out a narrow finite-`m` density spike. The
 
 Required source actually used:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`.
 
@@ -303,7 +303,7 @@ This proves (1.8). In particular, there is no hidden off-zero finite-stage spike
 
 The worker-owned completed theorem actually used at the endpoint is
 
-`yspennstate/math-open-problems@dcf8885d5153370cacfa246ad1e29fb06d971769`,
+`private-source-repository@dcf8885d5153370cacfa246ad1e29fb06d971769`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T070310Z-fleet03-B17-QFORM-r25/REPORT.md`.
 
@@ -377,7 +377,7 @@ Thus the constant in (1.7) cannot be improved within the diffuse Lindeberg class
 
 The latest completed `fleet03/B17` result available during this invocation is
 
-`yspennstate/math-open-problems@48e35fac4689f50a415638faba5a6e634b3d0329`,
+`private-source-repository@48e35fac4689f50a415638faba5a6e634b3d0329`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T113026Z-fleet03-B17-QFORM-auto11/REPORT.md`.
 

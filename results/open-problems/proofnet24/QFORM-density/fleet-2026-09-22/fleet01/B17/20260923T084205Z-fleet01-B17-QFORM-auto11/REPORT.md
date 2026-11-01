@@ -285,7 +285,7 @@ Thus the strict inequalities require no floating-point inference.
 
 ## 7. Newest-Claude result applied to an actual inequality
 
-The required newest-Claude package `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, proves for exact rank-three signature `(+,+,-)` the ruled one-sheet estimate
+The required newest-Claude package `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, proves for exact rank-three signature `(+,+,-)` the ruled one-sheet estimate
 
 \[
 p_Q(s)\le\pi\sqrt2,\qquad s\ge0,
@@ -307,7 +307,7 @@ The new contribution is therefore concentrated where the general Claude theorem 
 
 The current completed designated partner result is
 
-`math-open-problems@fefb4cf4f0af17c810341152311c3822c78d5b7f`,
+`private-source@fefb4cf4f0af17c810341152311c3822c78d5b7f`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T082513Z-fleet02-B17-QFORM-r12/UNIFORM_EXTENSION.md`.
 
 Specialize it to the canonical strong core `B=diag(1,1,-1)`. If `P_m` is the three-bank averaging frame and every physical input is an arbitrary independent translation of a unit interval, then for one deterministic `Delta_m->0`,
@@ -334,7 +334,7 @@ For centered translations the same partner theorem gives convergence of the dens
 
 Thus the all-heavy, maximally shared finite Hadamard geometry is strictly less dangerous than the genuinely diffuse sharp mechanism, while the partner theorem simultaneously rules out arbitrary unit-smoothed fragmentation/translation as an asymptotic escape in the comparator. This is an equation-level use of the designated partner result, not a copied citation.
 
-The partner's subsequent same-run comparison `math-open-problems@03a790a998540092501eafef53300a132070115e` further records that replacing two diffuse banks by arbitrary opposite-sign cap-one heavy laws creates a strict cone-tip gap below `3sqrt(2)`. Combined with (1.3), the still-unpaid sharp-witness directions are therefore off-center asymmetric fragmentation, shrinking smoothing scales, growing/nonperiodic shared-coordinate geometry, or coupled full-spectrum tails—not this symmetric four-coordinate core.
+The partner's subsequent same-run comparison `private-source@03a790a998540092501eafef53300a132070115e` further records that replacing two diffuse banks by arbitrary opposite-sign cap-one heavy laws creates a strict cone-tip gap below `3sqrt(2)`. Combined with (1.3), the still-unpaid sharp-witness directions are therefore off-center asymmetric fragmentation, shrinking smoothing scales, growing/nonperiodic shared-coordinate geometry, or coupled full-spectrum tails—not this symmetric four-coordinate core.
 
 ## 9. Correction discipline and remaining scope
 

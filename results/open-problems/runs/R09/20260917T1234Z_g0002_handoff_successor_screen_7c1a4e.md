@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — NO MOVEMENT i
 # R09 CLOSABLE OUTSIDE — G0002 handoff and successor screen beyond I0125
 
 Date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Captured pre-write snapshot: `master @ 1aac5097fd669e57f8f3225abc36b15042fcf35e`.
 
 ## 1. Continuity reads and controlling state

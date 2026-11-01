@@ -10,7 +10,7 @@ This addendum continues the same actual-hour canonical run `20260924T042342Z-fle
 
 Newest completed designated partner now available:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `master` report content pinned in brain handoff at `math-research-brain@10d46f323d41719150b0dde94e63b59bd447324d`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260924T041549Z-fleet02-B02-QFORM-auto11/REPORT.md`.
 

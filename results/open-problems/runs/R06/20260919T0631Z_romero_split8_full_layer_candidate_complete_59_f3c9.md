@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R06 — Romero split reliability: exact completion of the first unresolved n=8 layer, audit gate pending
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Lane: **CLOSABLE OUTSIDE**.
 Active canonical claim: `operations/claims/ROMERO-2025-SPLIT8.md`.
 

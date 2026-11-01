@@ -1,6 +1,6 @@
 # Worker 054 — exact mathematical excerpt from early P13
 
-Source repository: yspennstate/math-open-problems.
+Source repository: private-source-repository.
 
 Baseline commit: 8861ffde776a1dbf842e918590cc1003492ff296.
 

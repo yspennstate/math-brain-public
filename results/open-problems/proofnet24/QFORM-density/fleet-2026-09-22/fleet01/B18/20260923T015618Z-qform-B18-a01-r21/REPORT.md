@@ -41,7 +41,7 @@ No moments, centering, bounded support, connected support, iid assumption, log-c
 
 Newest completed designated-partner result read before this proof:
 
-`yspennstate/math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`
+`private-source-repository@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`.
 
@@ -214,7 +214,7 @@ Primary literature:
 
 Fleet dependencies actually used:
 
-- designated fleet02/B18: `math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`;
+- designated fleet02/B18: `private-source@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`;
 - null-ray packet geometry and continuity: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T231827Z-fleet03-B10-QFORM-r21/REPORT.md` on master, source blob `d34a92896ab80e510e8807c9fb26b84304ad7d5d` as read this run.
 
 

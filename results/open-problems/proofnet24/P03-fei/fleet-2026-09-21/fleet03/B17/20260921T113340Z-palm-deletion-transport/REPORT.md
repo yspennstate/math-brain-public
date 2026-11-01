@@ -4,7 +4,7 @@
 **Date:** 2026-09-21.  
 **Status of full FEI:** **OPEN / NOT PROVED.**  
 **Brain status:** `WITHOUT_VERIFIED_BRAIN` — no genuine authenticated brain retrieval/context was used in this mathematical derivation.  
-**Fresh mathematical source:** `yspennstate/math-open-problems` `master` at `e307ec41bc0fc3532a42ae38acac28adb6d75c94`.  
+**Fresh mathematical source:** `private-source-repository` `master` at `e307ec41bc0fc3532a42ae38acac28adb6d75c94`.  
 **Prior B17 route deliberately not repeated:** `fleet03/B17/2026-09-21-signed-diagonal-comparison/REPORT.md` (signed variable-identification defect transport).
 
 ## Route chosen first

@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R03 — post-F0001 mandatory handoff: HARD successor admission hold
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status after this run: **SUCCESSOR_ADMISSION_HOLD / NO ACTIVE MATHEMATICAL TARGET**.
 

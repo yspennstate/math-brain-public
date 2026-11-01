@@ -44,4 +44,4 @@ Read `brain.py recall "activated random walks critical density"`, `brain.py reca
 
 Searched intake directories and codex_pool_2026_10_10 with rg for D0097. The September intake says the strict-below-one half is resolved and conjectures a truncated-Green-function small-rate bound; that conjecture is not a proved result. The earlier attempt also confuses this problem with an odometer moment question in another entry; those labels must not be used as evidence.
 
-Read-only `git ls-tree -r --name-only origin/master` in ~/math-open-problems found no path containing D0097/d0097; no working-tree writes were made.
+Read-only `git ls-tree -r --name-only origin/master` in ~/private-source found no path containing D0097/d0097; no working-tree writes were made.

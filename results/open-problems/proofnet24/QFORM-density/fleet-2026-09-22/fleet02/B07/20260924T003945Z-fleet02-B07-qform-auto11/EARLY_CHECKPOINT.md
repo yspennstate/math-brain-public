@@ -3,7 +3,7 @@ attacking: the r41 one-overlap diagonal-volume survivor — aggregate bordered S
 
 # Early checkpoint
 
-Latest completed designated partner consumed: fleet03/B07 r41, `math-open-problems@56c5b07296ce6fcc66cd3795e425cfad15b27aad`, with low-diagonal branch
+Latest completed designated partner consumed: fleet03/B07 r41, `private-source@56c5b07296ce6fcc66cd3795e425cfad15b27aad`, with low-diagonal branch
 
 `W_lo := sum_h a_h^2 Z_h > 1/6250`,
 `Z_h=e2(K(I-P_{m_h})K^T)`, `|a_h|<1/64`, `||m_h||<1/64`.

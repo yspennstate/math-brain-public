@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-05 / C0146 — exact 10-edge low-vertex theorem and sharp vertex order within the minimum-edge obstruction
 
 Run date: 2026-09-18 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Track / namespace: `proofnet24/NM13-05/`  
 Category: **CLOSABLE OUTSIDE**  
 Canonical source / claim: **C0146**, `operations/claims/C0146.md`  

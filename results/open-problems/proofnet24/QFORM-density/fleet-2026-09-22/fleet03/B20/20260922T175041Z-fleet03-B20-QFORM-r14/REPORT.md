@@ -19,7 +19,7 @@ The live correction ledger was reread after the derivation. In particular this r
 
 Fleet03/B19 run `20260922T170047Z-fleet03-B19-QFORM-r15`, canonical mathematics
 
-`yspennstate/math-open-problems@539d1d9953c616bf0e1ab2dafeef55102f89c2b9`
+`private-source-repository@539d1d9953c616bf0e1ab2dafeef55102f89c2b9`
 
 proves the following full-target branch. Put
 
@@ -41,7 +41,7 @@ this is `<84`. Therefore every still-unpaid target configuration satisfies
 
 The required partner run is fleet04/B20 `20260922T172057Z-fleet04-B20-QFORM-r3`, canonical mathematics
 
-`yspennstate/math-open-problems@25ad8faaac5064b6814d51ae63d894fe97c1eac4`.
+`private-source-repository@25ad8faaac5064b6814d51ae63d894fe97c1eac4`.
 
 Its theorem `QFORM-CROSS-DOMINATED-SECOND-SCHUR-CLOSURE-v1` says that inside the already-established diagonal-dominated first-pivot chain, with
 

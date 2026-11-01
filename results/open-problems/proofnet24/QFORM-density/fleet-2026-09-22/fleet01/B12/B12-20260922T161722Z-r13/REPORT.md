@@ -23,7 +23,7 @@ No spectral rotation is used to preserve independence. The live corrections excl
 
 The latest completed partner result used here is
 
-`yspennstate/math-open-problems@c1c87a33cb9223e78b3b50398328ff73d7dc85d1`
+`private-source-repository@c1c87a33cb9223e78b3b50398328ff73d7dc85d1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T155613Z-fleet02-B12-qform-add-eigen-r11/REPORT.md`.
 
@@ -42,7 +42,7 @@ These facts are applied recursively below, not merely cited.
 
 From
 
-`yspennstate/math-open-problems@b3c543b40dfaef13468466fa82625303a7719af8`
+`private-source-repository@b3c543b40dfaef13468466fa82625303a7719af8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md`,
 
@@ -60,7 +60,7 @@ The estimate is uniform in the affine tilt produced by outside conditioning. Con
 
 From this worker's preceding report
 
-`yspennstate/math-open-problems@cf8f19fd2ecfcd33387bf8b730c61b511e3d7217`
+`private-source-repository@cf8f19fd2ecfcd33387bf8b730c61b511e3d7217`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B12/B12-20260922T151637Z-r12/REPORT.md`,
 
@@ -78,7 +78,7 @@ and never rotates the random vector.
 
 The completed source-pinned theorem
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`
 

@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 Active source before rotation: Ruodu Wang (2015), *Current Open Questions in Complete Mixability*, *Probability Surveys* 12, Open Problem 10, §2.8 / arXiv:1411.6190.
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Active root: `proofnet24/P20-closure-log-unimodality/successors/D0010/`.
 
 The former Hasebe–Ueda–Wang I0081 / Problem 4.3 assignment remains source-refuted, packaged, posted in the exclusion registry, audited by two distinct OTHER tracks, and retired. It is not reopened here.

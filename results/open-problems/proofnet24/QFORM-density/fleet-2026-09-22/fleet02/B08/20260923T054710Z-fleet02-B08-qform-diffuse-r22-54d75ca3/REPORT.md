@@ -16,7 +16,7 @@ Fresh owner control was read from `yspennstate/math-research-brain`, revision `2
 
 The immediate B08 predecessor is
 
-`yspennstate/math-open-problems@2e8dce7760ed0b7dc1ab1be7b9d82ecc3c7b7df1`,
+`private-source-repository@2e8dce7760ed0b7dc1ab1be7b9d82ecc3c7b7df1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T050537Z-fleet02-B08-qform-diffuse-r21-ead7cd5c/REPORT.md`.
 
 It proves `QFORM-FRACTIONAL-VOLUME-SELF-MATCHED-ROUTER-v1`. If an ORIGINAL-coordinate cross block `B` has
@@ -31,7 +31,7 @@ and the remaining obstruction is an anchor star or a conditional residual-volume
 
 The newest designated partner actually used is fleet03/B08 r27,
 
-`yspennstate/math-open-problems@e76d2e984f81a058590bb143ff21e387fbbeab09`,
+`private-source-repository@e76d2e984f81a058590bb143ff21e387fbbeab09`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T042303Z-fleet03-B08-qform-diffuse-r27/REPORT.md`.
 
 For an anchored packet `Z`, anchor-row norm `R`, and normalized anchored third-minor law with residual row marginals `alpha_k`, it constructs a half order-three / half order-two physical-minor law `Omega` with
@@ -44,11 +44,11 @@ At the old threshold `max alpha_k<=1/2`, the mixed-order Fourier theorem gives
 
 The mixed-order Fourier theorem itself is fleet01/B01 at
 
-`yspennstate/math-open-problems@86f318f0826325e6df3504e1e8ec15f4316cc861`.
+`private-source-repository@86f318f0826325e6df3504e1e8ec15f4316cc861`.
 
 The required newest-Claude source was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
 I use its proved Jensen extension D' as the model for the new variable-order argument, and in Section 6 apply its proved mixed-Fresnel hub theorem to an actual exact-target family.

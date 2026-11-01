@@ -19,7 +19,7 @@ The product-Fourier input is fleet03/B04 r42,
 
 at
 
-`yspennstate/math-open-problems@563bc41e4f9247f9daf3343a57757f45e3f6e703`
+`private-source-repository@563bc41e4f9247f9daf3343a57757f45e3f6e703`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T215155Z-fleet03-B04-QFORM-auto11-r42/REPORT.md`.
 
@@ -43,7 +43,7 @@ The designated partner input is fleet04/B04 r2,
 
 at
 
-`yspennstate/math-open-problems@4a54666abf2316bb79b939cef3ea940605a0af57`
+`private-source-repository@4a54666abf2316bb79b939cef3ea940605a0af57`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260924T001353Z-fleet04-B04-QFORM-r2/REPORT.md`.
 

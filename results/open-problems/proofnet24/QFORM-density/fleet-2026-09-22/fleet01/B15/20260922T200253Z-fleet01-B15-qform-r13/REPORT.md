@@ -17,12 +17,12 @@ This run does **not** use any of the corrected false interfaces: no law-uniform 
 
 The assigned partner `fleet02/B15` result actually applied is:
 
-- `yspennstate/math-open-problems@42920d321a16b9393856cfb0ed78d8557170ad38`,
+- `private-source-repository@42920d321a16b9393856cfb0ed78d8557170ad38`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T170424Z-fleet02-B15-qform-r5/REPORT.md`.
 
 Its Lemma 2.1 proves that for **every nonzero symmetric matrix** `S` and every admissible product source, `Y^T S Y` is absolutely continuous. I use that exact conclusion below to turn the square-root kernels into ordinary `L^1 * L^1` convolutions, so their essential bounds become genuine pointwise `C_0` bounds. I also use the completed `fleet02/B15` target-level `C_0` theorem at
 
-- `yspennstate/math-open-problems@28ddaf28bf6779837fb1212a025d8a8b9d329f8a`,
+- `private-source-repository@28ddaf28bf6779837fb1212a025d8a8b9d329f8a`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T160529Z-fleet02-B15-qform-r4/REPORT.md`,
 
 to upgrade the physical-pivot density certificate in Section 5 from an essential bound to the maximum of the canonical continuous representative, with no constant loss.
@@ -231,7 +231,7 @@ No extra approximation or continuity constant is paid. This is an actual applica
 
 A compatible current worker result, `fleet01/B09` run `B09-20260922T194603Z-r16`, accessible at
 
-`yspennstate/math-open-problems@d002ae7ecff727fcd907c24aa670070577bb318b`,
+`private-source-repository@d002ae7ecff727fcd907c24aa670070577bb318b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T194603Z-r16/REPORT.md`,
 
 proves the source-valid arbitrary-rank theorem

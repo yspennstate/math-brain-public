@@ -31,7 +31,7 @@ Consequently, if `a2>0`, `B>0`, and
 
 `epsilon0+delta <= B/15`,
 
-then the completed volume-tail theorem in `math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `PEER_TAIL_EXTENSION.md`, applies to the ACTUAL final cross block and yields
+then the completed volume-tail theorem in `private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `PEER_TAIL_EXTENSION.md`, applies to the ACTUAL final cross block and yields
 
 `||p_Q||inf <= (9 sqrt(3) e / 2) (a1 a2 B)^(-1/3)`.
 

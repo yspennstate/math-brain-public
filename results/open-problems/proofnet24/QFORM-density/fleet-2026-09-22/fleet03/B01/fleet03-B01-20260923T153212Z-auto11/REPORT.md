@@ -17,7 +17,7 @@ I use two completed worker results, each at an actual equation.
 
 Canonical proof:
 
-`yspennstate/math-open-problems@8410ab9d8238baa40c033f83dbae6af44b0b2582`
+`private-source-repository@8410ab9d8238baa40c033f83dbae6af44b0b2582`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260923T131003Z-fleet04-B01-singular-star-routing-r2/REPORT.md`.
 
@@ -41,7 +41,7 @@ At `det B=0`, hence `delta=0`, this becomes
 
 Canonical proof:
 
-`yspennstate/math-open-problems@195447da931f086720afaa12ac902ed7d33dd32e`
+`private-source-repository@195447da931f086720afaa12ac902ed7d33dd32e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T061516Z-fleet03-B09-QFORM-r25/REPORT.md`.
 
@@ -56,7 +56,7 @@ if the physical `2x2` core has rank exactly one, `a!=0`, and `w=v-(b/a)u!=0`, th
 `C0=4 sqrt(2) exp(1/4)<7.264`.                                  (1.2)
 
 I also use fleet04/B01's exact signed-Fejer identity from
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`:
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`:
 for every law with bounded density,
 
 `||p||_infinity = sup_{T>0,y} D_T mu(y)`.                       (1.3)

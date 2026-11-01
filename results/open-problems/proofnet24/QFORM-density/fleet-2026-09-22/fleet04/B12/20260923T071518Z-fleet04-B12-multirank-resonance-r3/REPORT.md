@@ -17,7 +17,7 @@ The remaining global extraction problem is stated in Section 7.
 ## 2. Sources used
 
 1. Required Claude source:
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
    Its physical three-coordinate theorem gives
 
@@ -30,7 +30,7 @@ The remaining global extraction problem is stated in Section 7.
    `||p_Q||_infinity <= 2 sqrt(6 pi m)/c.`                     (2.1)
 
 3. Completed partner fleet01/B12:
-   `yspennstate/math-open-problems@c63eec6fd03d23bb41493a502670d52bed383d35`,
+   `private-source-repository@c63eec6fd03d23bb41493a502670d52bed383d35`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B12/20260923T065152Z-fleet01-B12-QFORM-r28/REPORT.md`.
    Its exact complementary-Schur factorization and shear estimate are applied below:
 

@@ -10,7 +10,7 @@ First unpaid implication: **QFORM-COLOOP-TO-NEARCOLOOP-THIRD-AGGREGATE-GLUING-v1
 
 to the leakage form with a third same-bank aggregate, without conditioning on that aggregate, without a conditional-density supremum, and without any loss as the leakage tends to zero. The exact-coloop endpoint itself is now paid uniformly before any post-projection independence is asserted.
 
-Control used: owner programme `QFORM-DENSITY-3EIG-20260922`, owner control revision `2026-09-22.15`. Required source pin: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`. Fresh compatible partner handoff read: fleet03/B10 r28, which supplies the endpoint-stable physical hub-partner frame and isolates same-bank transverse contamination as the remaining issue. No refuted conditional-cap/independence premise is used.
+Control used: owner programme `QFORM-DENSITY-3EIG-20260922`, owner control revision `2026-09-22.15`. Required source pin: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`. Fresh compatible partner handoff read: fleet03/B10 r28, which supplies the endpoint-stable physical hub-partner frame and isolates same-bank transverse contamination as the remaining issue. No refuted conditional-cap/independence premise is used.
 
 ## 1. A dependence-safe hyperbolic-square lemma
 

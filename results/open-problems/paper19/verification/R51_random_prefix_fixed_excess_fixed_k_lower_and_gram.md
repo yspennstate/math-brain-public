@@ -80,9 +80,9 @@ so the lower exponent doubles and \(m^{-1}\log(m+r)\to0\).
   `cor:random-prefix-fixed-excess-fixed-k-lower`.
 - `STATE.md`: added row `V.A-rect-kth-rc` and the R51 round log.
 - `PLAN.md`: recorded random-prefix fixed-excess fixed-`k` lower sides in V.A.
-- `math-open-problems-fleet/master/chO_phase_retrieval_rmt.tex`: added the Lane
+- `private-source-fleet/master/chO_phase_retrieval_rmt.tex`: added the Lane
   O compact random-prefix fixed-excess paragraph.
-- `math-open-problems-fleet/MASTER_STATE.md`: recorded the master-side summary.
+- `private-source-fleet/MASTER_STATE.md`: recorded the master-side summary.
 
 ## Supplemental proof-tightening audit
 

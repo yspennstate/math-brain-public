@@ -18,7 +18,7 @@ I use the completed fleet04/B14 result
 
 `fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1`
 
-whose canonical report is `yspennstate/math-open-problems@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`, blob `30ebe93170ba26fb57dc128ee0116762de1d9f26`.
+whose canonical report is `private-source-repository@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`, blob `30ebe93170ba26fb57dc128ee0116762de1d9f26`.
 
 That report proves two target-level reductions with **no loss in the optimal constant**:
 

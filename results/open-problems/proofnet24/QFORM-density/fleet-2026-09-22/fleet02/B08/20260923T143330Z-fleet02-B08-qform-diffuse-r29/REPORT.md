@@ -8,8 +8,8 @@ Status: SUPPORTING THEOREM + TARGET-VALID MECHANISM OBSTRUCTION; full QFORM targ
 
 Source-pinned inputs actually used:
 
-- Fixed source `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, record `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, especially Theorem F.
-- Partner `fleet03/B08` r38: brain handoff `20260923T131815Z-fleet03-B08-qform-diffuse-r38.md`, canonical mathematics `yspennstate/math-open-problems@1a70497363989dfea9fa4ce9e515fa279677df69`, especially the arbitrary-same-bank two-hub estimate `||p_Q||_3 <= 3^(2/3)e^(1/3)[det(CC^T)]^(-1/6)`.
+- Fixed source `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, record `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, especially Theorem F.
+- Partner `fleet03/B08` r38: brain handoff `20260923T131815Z-fleet03-B08-qform-diffuse-r38.md`, canonical mathematics `private-source-repository@1a70497363989dfea9fa4ce9e515fa279677df69`, especially the arbitrary-same-bank two-hub estimate `||p_Q||_3 <= 3^(2/3)e^(1/3)[det(CC^T)]^(-1/6)`.
 
 ## 1. First unpaid implication
 

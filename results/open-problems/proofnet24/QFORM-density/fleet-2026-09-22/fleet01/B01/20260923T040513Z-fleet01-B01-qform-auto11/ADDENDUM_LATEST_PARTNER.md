@@ -2,7 +2,7 @@
 
 After the main report was committed, the designated partner `fleet02/B01` published r36:
 
-`yspennstate/math-open-problems@cc304fa6b1b0862b9ed4a3312cf39bfd3aa9c03d`
+`private-source-repository@cc304fa6b1b0862b9ed4a3312cf39bfd3aa9c03d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T040531Z-fleet02-B01-qform-r36/REPORT.md`.
 

@@ -5,7 +5,7 @@ attacking: current owner objective QFORM-FIXED-MULTIPLICITY-AUDIT-20260924 throu
 
 Run: `20260924T121016Z-fleet03-B11-fixedmult-audit-auto11`  
 Current objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Pinned baseline source: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`  
+Pinned baseline source: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Pinned `manuscript.tex` blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
 Pinned source SHA-256 reported by the manuscript package: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
 

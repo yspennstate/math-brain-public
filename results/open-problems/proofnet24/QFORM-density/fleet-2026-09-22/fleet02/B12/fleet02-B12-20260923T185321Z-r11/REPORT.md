@@ -25,7 +25,7 @@ This run does **not** prove that extraction. It proves the six-mode receiver and
 
 From
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 
@@ -51,7 +51,7 @@ This will be applied below to the actual final physical cross block, not to a ro
 
 The latest compatible fleet03/B12 report read in this run is
 
-`yspennstate/math-open-problems@b4745ece98fa3839cf7afe35d829d08384c815b4`
+`private-source-repository@b4745ece98fa3839cf7afe35d829d08384c815b4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T184647Z-qform-eigenvalue-r39/REPORT.md`.
 
@@ -77,7 +77,7 @@ This is the equation-level use of the designated partner result.
 
 From the completed fleet04/B12 theorem
 
-`yspennstate/math-open-problems@c307f81b3196820aa711a5c47f243feeeeb74781`,
+`private-source-repository@c307f81b3196820aa711a5c47f243feeeeb74781`,
 
 let `A_0,S` be arbitrary symmetric matrices, let `H` be an actual original-coordinate carrier, and put
 
@@ -96,7 +96,7 @@ No rank, sign or norm restriction is imposed on `S`; only its **actual destructi
 
 The finite physical-core projected-gradient theorem at
 
-`yspennstate/math-open-problems@7f2c9f4c2dfeb6134d9291eb7e83b62a9cb4b3b0`
+`private-source-repository@7f2c9f4c2dfeb6134d9291eb7e83b62a9cb4b3b0`
 
 gives, on an `m`-coordinate original block having three eigenvalues of modulus at least `a>0`, after arbitrary affine terms,
 
@@ -104,7 +104,7 @@ gives, on an `m`-coordinate original block having three eigenvalues of modulus a
 
 The arbitrary-rank indefinite physical-pair theorem at
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`
 
 gives, for an invertible indefinite original-coordinate pair `P`, with
 

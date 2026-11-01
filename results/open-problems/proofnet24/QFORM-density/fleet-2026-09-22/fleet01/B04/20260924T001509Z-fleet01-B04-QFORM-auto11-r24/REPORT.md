@@ -21,7 +21,7 @@ Two completed inputs are used exactly at their proved scope.
 
 fleet03/B20 r42, source
 
-`yspennstate/math-open-problems@7e9f6e73f1f1f5304cc30a6204caf7ee0629904a`
+`private-source-repository@7e9f6e73f1f1f5304cc30a6204caf7ee0629904a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T234606Z-fleet03-B20-QFORM-r42/REPORT.md`
 
@@ -44,7 +44,7 @@ This run attacks (1.1)--(1.2).
 
 This worker's preceding r23 theorem, source
 
-`yspennstate/math-open-problems@da10ec9c10ed601095b763a3df3128ab7e400ac5`
+`private-source-repository@da10ec9c10ed601095b763a3df3128ab7e400ac5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T235358Z-fleet01-B04-QFORM-auto11-r23/REPORT.md`
 
@@ -344,7 +344,7 @@ Thus the certificate remains dimension-free while every individual overlap-two d
 
 The latest fleet02/B04 source read in this run is the r43 addendum at
 
-`yspennstate/math-open-problems@75645ea7ff3609b55e7ed231900404ad2188693e`.
+`private-source-repository@75645ea7ff3609b55e7ed231900404ad2188693e`.
 
 It records the completed banked-square theorem
 

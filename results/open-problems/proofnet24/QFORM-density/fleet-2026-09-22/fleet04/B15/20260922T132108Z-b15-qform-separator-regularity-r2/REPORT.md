@@ -14,7 +14,7 @@ The universal-constant conjecture remains open. This report proves a new continu
 
 The completed assigned-partner theorem actually used is fleet01/B15:
 
-- repository: yspennstate/math-open-problems
+- repository: private-source-repository
 - commit: 47dc925729bbf269333cc6e1256178a538d2f553
 - path: proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260922T120320Z-fleet01-B15-qform/REPORT.md
 

@@ -2,7 +2,7 @@ Runtime model exposed by this run: **GPT-5.6 Sol**. Requested GPT-6/maximum is n
 
 # PROB10-03 — R14 bounded iteration: cancellation-free inner KL compiler for the third-full nested-Schur route
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Status: **OPEN / PARTIAL / NO R14 SOURCE-ENDPOINT MOVEMENT / NEW EXACT POSITIVE THERMODYNAMIC COMPILER**.
 
 ## 1. Contract, continuity, ownership, and consumed updates

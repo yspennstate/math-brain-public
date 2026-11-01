@@ -13,7 +13,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The immediate fleet01/B10 predecessor is
 
-`yspennstate/math-open-problems@a267ad08c9b713a974a31759ff8bb4da63c69fd4`
+`private-source-repository@a267ad08c9b713a974a31759ff8bb4da63c69fd4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260923T222440Z-fleet01-B10-QFORM-auto11/REPORT.md`.
 
@@ -25,7 +25,7 @@ when `Z,Y,W` are genuinely independent original-bank aggregates. The current run
 
 The designated partner actually used is fleet02/B10:
 
-`yspennstate/math-open-problems@ca0549ef8c582478415aba1a953bdc6115fe84c6`
+`private-source-repository@ca0549ef8c582478415aba1a953bdc6115fe84c6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T214702Z-fleet02-B10-QFORM-auto11/REPORT.md`.
 
@@ -221,7 +221,7 @@ No independence is asserted between the two transverse spectral coordinates.
 
 The newest completed fleet02/B10 source used here is
 
-`yspennstate/math-open-problems@ca0549ef8c582478415aba1a953bdc6115fe84c6`
+`private-source-repository@ca0549ef8c582478415aba1a953bdc6115fe84c6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T214702Z-fleet02-B10-QFORM-auto11/REPORT.md`.
 
@@ -284,7 +284,7 @@ The new receiver does exactly this when the scalar bank is genuinely source-disj
 
 I independently checked the immutable source
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 

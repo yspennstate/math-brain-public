@@ -15,7 +15,7 @@ The full conjecture is not claimed. Continuity remains open globally. The argume
 
 1. **Designated partner fleet02/B19.** Current completed report:
 
-   `yspennstate/math-open-problems@67a8e05e237bc914ad0563e361f6eb035b76e7fe`
+   `private-source-repository@67a8e05e237bc914ad0563e361f6eb035b76e7fe`
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T060933Z-fleet02-B19-qform-auto11/REPORT.md`.
 
@@ -35,7 +35,7 @@ The full conjecture is not claimed. Continuity remains open globally. The argume
 
 2. **Previous fleet01/B19 theorem.** Canonical report
 
-   `yspennstate/math-open-problems@3ad0018daad3502ce07d28a2a0df9f2de9b3d7d3`
+   `private-source-repository@3ad0018daad3502ce07d28a2a0df9f2de9b3d7d3`
 
    proves uniformly whenever `(lambda,delta)!=(0,0)` that
 
@@ -45,7 +45,7 @@ The full conjecture is not claimed. Continuity remains open globally. The argume
 
 3. **Independent peer double-null mechanism.** fleet03/B02,
 
-   `yspennstate/math-open-problems@dfe1f1eb3f023d4c5d409e859c7072cf4f1afadc`,
+   `private-source-repository@dfe1f1eb3f023d4c5d409e859c7072cf4f1afadc`,
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T020317Z-fleet03-B02-QFORM-r18/REPORT.md`,
 

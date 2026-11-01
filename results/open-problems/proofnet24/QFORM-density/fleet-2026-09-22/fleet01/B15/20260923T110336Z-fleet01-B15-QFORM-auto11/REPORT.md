@@ -16,7 +16,7 @@ The unrestricted QFORM conjecture remains **OPEN**. The new point here is that t
 
 The completed assigned-partner theorem actually applied is fleet02/B15:
 
-`yspennstate/math-open-problems@4a7b432e38619707420962a272805f9646ad7e59`
+`private-source-repository@4a7b432e38619707420962a272805f9646ad7e59`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T090720Z-fleet02-B15-QFORM-auto11/REPORT.md`.
 
@@ -32,7 +32,7 @@ The same partner report proves the stronger random-critical-gap inequality; (1.2
 
 The current newest-Claude/volume source actually applied at an equation is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md`.
 

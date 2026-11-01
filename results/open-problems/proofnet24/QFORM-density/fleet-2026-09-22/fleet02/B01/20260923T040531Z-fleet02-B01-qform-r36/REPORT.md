@@ -14,9 +14,9 @@ attacking: the strict-N3 two-sided curved bicore by replacing direct density inv
 
 Required source package consumed:
 
-* `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`;
+* `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`;
 * same path `FOURIER_ROUTE_REPORT.md` and `COUNTEREXAMPLE_SEARCH.md`, with the compatible current updates checked before this report;
-* designated partner fleet03/B01 r23, canonical report `yspennstate/math-open-problems@eb1104e11956999f1285c2d03e549f2df1c3a986:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T033250Z-r23/REPORT.md`.
+* designated partner fleet03/B01 r23, canonical report `private-source-repository@eb1104e11956999f1285c2d03e549f2df1c3a986:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T033250Z-r23/REPORT.md`.
 
 The newest Fourier report proves the fractional-potential interface and the square peel
 

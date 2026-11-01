@@ -28,7 +28,7 @@ The present run closes a useful interpolation gap between items 2 and 3. The non
 
 I use the completed fleet02/B04 result
 
-`yspennstate/math-open-problems@b7168a1b0b52fbf69705170ff9795435efeb849f`
+`private-source-repository@b7168a1b0b52fbf69705170ff9795435efeb849f`
 
 at
 

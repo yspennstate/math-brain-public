@@ -18,7 +18,7 @@ Fresh account-local keeper inspection found the same twenty fleet02 tasks `B01`-
 
 The required historical source was reread at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -34,7 +34,7 @@ with no fifth-volume marginal condition.
 
 The newest compatible completed designated partner at the final partner refresh remained fleet03/B20 r37,
 
-`yspennstate/math-open-problems@598dae792b4a447492bc318bfa830fece803bb6d`,
+`private-source-repository@598dae792b4a447492bc318bfa830fece803bb6d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T184417Z-fleet03-B20-QFORM-r37/REPORT.md`.
 
@@ -58,7 +58,7 @@ This run consumes the exact expression (2.1) below.
 
 The freshest compatible completed peer refinement is fleet01/B20 at
 
-`yspennstate/math-open-problems@1823cacff7116a3c7c2ebb6c9eb3e2dae297e2db`,
+`private-source-repository@1823cacff7116a3c7c2ebb6c9eb3e2dae297e2db`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T192349Z-fleet01-B20-QFORM-auto11/REPORT.md`.
 

@@ -297,6 +297,6 @@ Continuity should continue to be tracked independently: the new determinant-only
 - determinant-only physical-pair envelope: `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260924T041651Z-fleet01-B03-QFORM-r40/REPORT.md`.
 - local overlap-two compiler: fleet01/B03 r41, canonical theorem commit `7dc6d6841e318a88174fb41ddaa1c88e223aacf4` as source-pinned by fleet04/B03.
 - fresh exact-rank-three Plucker localization: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260924T051411Z-fleet04-B03-plucker-overlap2-r4/REPORT.md`.
-- designated partner: fleet04/B04 r2, `yspennstate/math-open-problems@4a54666abf2316bb79b939cef3ea940605a0af57`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260924T001353Z-fleet04-B04-QFORM-r2/REPORT.md`.
+- designated partner: fleet04/B04 r2, `private-source-repository@4a54666abf2316bb79b939cef3ea940605a0af57`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260924T001353Z-fleet04-B04-QFORM-r2/REPORT.md`.
 
 No schedule, task identity, email/push notification, repository visibility, paid API/model, public-release, or cross-account-authentication state was changed.

@@ -20,7 +20,7 @@ The rank-two fractional input is the completed supporting theorem
 
 at
 
-`math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+`private-source@e542b1a6ef471b329e4e88a6553e1aacb45acc1:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 For an orthonormal two-dimensional product projection `P` and invertible symmetric `B`, it gives, in the row-span affine case,
 
@@ -36,13 +36,13 @@ The latest designated partner fleet02/B16 result is
 
 at
 
-`math-open-problems@ade5cfe51d454341667779f7d9da714e4de99ed9:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T103259Z-fleet02-B16-078f791ea823/REPORT.md`.
+`private-source@ade5cfe51d454341667779f7d9da714e4de99ed9:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T103259Z-fleet02-B16-078f791ea823/REPORT.md`.
 
 For its strict target-valid family it proves `||p_Q||_infinity<=4`; absolute continuity is proved but continuity was not claimed there.
 
 The owner-required newest volume input is
 
-`math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
+`private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 Its stability theorem says that, for an ORIGINAL-coordinate cross block `M=M0+E`, if
 

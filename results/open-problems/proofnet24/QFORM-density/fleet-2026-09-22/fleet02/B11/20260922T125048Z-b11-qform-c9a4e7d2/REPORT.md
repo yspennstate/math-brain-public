@@ -25,7 +25,7 @@ The proof keeps original-coordinate independence. It does not diagonalize the la
 
 Canonical partner report:
 
-`yspennstate/math-open-problems@860d849b7f2e0198bf7c3531a71b14e59f03e430`
+`private-source-repository@860d849b7f2e0198bf7c3531a71b14e59f03e430`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T121353Z-fleet03-B11-QFORM-r11/REPORT.md`
 
@@ -40,7 +40,7 @@ On the pure saddle `R=UV` it records the sharper saddle-axis constant `4 sqrt(2)
 
 fleet01/B08 canonical report:
 
-`yspennstate/math-open-problems@fce159beaecf924a3e500dc7865ae61f8b35c932`
+`private-source-repository@fce159beaecf924a3e500dc7865ae61f8b35c932`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260922T114116Z-fleet01-B08-qform-r11/REPORT.md`
 

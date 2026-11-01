@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # P20 T10 — sharp exponential Bellman gap and concentration compiler
 
 Date: 2026-09-20.
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 Parent claim: `operations/claims/PROB10-10.md` (canonical parent owned by the PROB10-10 lane; P20 is the complementary LIVE20 Busemann/variational route).
 Status: **PARTIAL / OPEN**.
 

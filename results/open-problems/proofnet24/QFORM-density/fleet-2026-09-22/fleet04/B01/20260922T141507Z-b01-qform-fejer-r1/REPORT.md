@@ -134,7 +134,7 @@ The theorem permits arbitrary self-quadratic terms and arbitrary couplings from 
 
 ## 4. Assigned-partner result applied to an actual Fejer inequality
 
-I apply the completed fleet01/B01 theorem from run `20260922T133732Z-b01-qform-auto11`, canonical report `yspennstate/math-open-problems@e58461e07b19315b290cb4b397929090ec6f48b9`.
+I apply the completed fleet01/B01 theorem from run `20260922T133732Z-b01-qform-auto11`, canonical report `private-source-repository@e58461e07b19315b290cb4b397929090ec6f48b9`.
 
 For `a=A_ii!=0`, that theorem proves for every frequency interval of length `L`
 

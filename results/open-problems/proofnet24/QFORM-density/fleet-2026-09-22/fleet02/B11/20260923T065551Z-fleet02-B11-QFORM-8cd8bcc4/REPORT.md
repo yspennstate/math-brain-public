@@ -10,8 +10,8 @@ The first unpaid implication entering this run was the genuinely overlapping thi
 
 Sources actually used at equations:
 
-* Pair logarithmic envelope and moving-centre framework: `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`, especially (3.1) and Section 4.
-* Required pinned Claude package: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, Theorem C (ruled one-sheet estimate). `RESULTS.md` and `FOURIER_ROUTE_REPORT.md` were also read at that snapshot.
+* Pair logarithmic envelope and moving-centre framework: `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`, especially (3.1) and Section 4.
+* Required pinned Claude package: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, Theorem C (ruled one-sheet estimate). `RESULTS.md` and `FOURIER_ROUTE_REPORT.md` were also read at that snapshot.
 * Designated partner, latest compatible fleet03/B11 result read in full from `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T061800Z-fleet03-B11-QFORM-r24/REPORT.md`: balanced defect STAR/CROSS-2VOL dichotomy and pure-star mixed-Fresnel receiver.
 * Standard product-projection input used throughout the current programme: a normalized linear form of independent cap-one coordinates has density at most `sqrt(2)` (Rogozin/Ball product-marginal bound).
 

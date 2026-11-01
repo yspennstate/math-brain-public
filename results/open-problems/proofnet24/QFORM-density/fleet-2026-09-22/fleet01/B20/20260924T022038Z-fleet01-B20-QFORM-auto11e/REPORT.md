@@ -24,7 +24,7 @@ with canonical mathematical report
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260924T020212Z-fleet02-B20-auto11/REPORT.md`.
 
-The source snapshot used for this run is `yspennstate/math-open-problems@ed17668c322cb9ec5b8cc8f588d9dd0bad1b5bea` together with fresh brain main at the run's control read.
+The source snapshot used for this run is `private-source-repository@ed17668c322cb9ec5b8cc8f588d9dd0bad1b5bea` together with fresh brain main at the run's control read.
 
 The physical third-volume receiver used below is the already-written supporting theorem
 

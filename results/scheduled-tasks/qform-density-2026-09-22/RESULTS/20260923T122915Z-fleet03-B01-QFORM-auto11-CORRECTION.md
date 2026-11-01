@@ -6,4 +6,4 @@ Correction: the original result record overclaimed a continuous `C_0` density in
 
 Therefore the full-scope status is: **absolute continuity and essential boundedness proved; continuity not proved**. `C_0` remains valid in the narrower subcase where the pair translation is independent of the square-producing bank.
 
-Additive mathematical correction: `yspennstate/math-open-problems@1d2dd52680ec729f28b7289e74a6f3752a379127`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T122915Z-auto11/CORRECTION_ADDENDUM.md`.
+Additive mathematical correction: `private-source-repository@1d2dd52680ec729f28b7289e74a6f3752a379127`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T122915Z-auto11/CORRECTION_ADDENDUM.md`.

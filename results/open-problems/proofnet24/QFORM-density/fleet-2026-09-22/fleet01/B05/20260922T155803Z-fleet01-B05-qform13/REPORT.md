@@ -26,7 +26,7 @@ A compact conditional route is now:
 
 Canonical report:
 
-`yspennstate/math-open-problems@d88444f6ee8744b72a46448734db26349baabdd7`
+`private-source-repository@d88444f6ee8744b72a46448734db26349baabdd7`
 
 path
 
@@ -42,7 +42,7 @@ where `C_1=7.270461147134126...`. The source allows arbitrary residual self bloc
 
 Canonical source:
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 path
 

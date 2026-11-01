@@ -18,7 +18,7 @@ Fresh owner control remains revision `2026-09-22.15`, with QFORM as the sole res
 
 The analytic grouped-crossing receiver is the checked source
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -26,7 +26,7 @@ The exact subset-entropy refinement used below is the preceding fleet01/B04 resu
 
 `QFORM-GROUPED-CROSSING-EXACT-SUBSET-ENTROPY-v1`,
 
-`yspennstate/math-open-problems@13f0b0b271b4e230cb5493e887ed5ec7dd65f63b`
+`private-source-repository@13f0b0b271b4e230cb5493e887ed5ec7dd65f63b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T181304Z-fleet01-B04-QFORM-auto11-r16/REPORT.md`.
 
@@ -34,7 +34,7 @@ For a two-physical-hub endpoint with an arbitrary one-volume residual, including
 
 `QFORM-R2-PHYSICAL-TWOROW-TRANSVERSE-COMPILER-v1`,
 
-`yspennstate/math-open-problems@f09b670173440c4c511985c9a89baf38f97e82c1`
+`private-source-repository@f09b670173440c4c511985c9a89baf38f97e82c1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T183023Z-fleet03-B19-QFORM-r38/REPORT.md`.
 
@@ -42,7 +42,7 @@ The designated fleet02/B04 result actually applied below is
 
 `QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1`,
 
-`yspennstate/math-open-problems@00e728cf7f226ccce4b41ad751d494c5c94f67ec`
+`private-source-repository@00e728cf7f226ccce4b41ad751d494c5c94f67ec`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T111930Z-qform/REPORT.md`.
 

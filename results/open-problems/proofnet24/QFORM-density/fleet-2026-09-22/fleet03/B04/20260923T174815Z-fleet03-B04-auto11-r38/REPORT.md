@@ -16,7 +16,7 @@ Fresh owner control remains QFORM-only, revision `2026-09-22.15`. The live corre
 
 The immediate source is my preceding completed supporting theorem
 
-`yspennstate/math-open-problems@ea2f45957db06473799ce27affa30162fda98982:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T165007Z-fleet03-B04-auto11-r37/REPORT.md`.
+`private-source-repository@ea2f45957db06473799ce27affa30162fda98982:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T165007Z-fleet03-B04-auto11-r37/REPORT.md`.
 
 Its arbitrary-weight projected-crossing theorem says the following. Let `C` have physical rows `c_i`. For a probability law `w=(w_S)` on positive `ell`-row Gram minors
 
@@ -250,7 +250,7 @@ The designated partner is `fleet04/B04`. Fresh direct repository checks found cu
 
 I did apply the completed same-role peer result `QFORM-Q1-EXACT-MARGINAL-FACTOR-v1` from
 
-`yspennstate/math-open-problems@b1b60d0a4fe67c2e41a60bd38fb88668bbb9b378:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T154425Z-fleet01-B04-QFORM-auto11-r14/REPORT.md`
+`private-source-repository@b1b60d0a4fe67c2e41a60bd38fb88668bbb9b378:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T154425Z-fleet01-B04-QFORM-auto11-r14/REPORT.md`
 
 to the *same* matrix `A_N`.
 

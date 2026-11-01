@@ -285,7 +285,7 @@ This is the literal three-direction removal of the rank-two logarithm: the rank-
 
 The completed ruled-level-set Theorem C in
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 (`COUNTEREXAMPLE_SEARCH.md`) states that for signature `(+,+,-)` the one-sheet side satisfies `p(s)<=pi sqrt(2)`. Apply it to `-R`, whose eigenvalues are `{1,1,-2}`. Since `p_R(t)=p_{-R}(-t)`,
 
@@ -334,7 +334,7 @@ The L2 mechanism above is a complementary spatial proof in the more source-disjo
 
 The latest compatible designated partner is fleet03/B11 r44:
 
-`yspennstate/math-open-problems@388ba1f1ccf6a89dad0ca0a0fdb71d281ad6239b`,
+`private-source-repository@388ba1f1ccf6a89dad0ca0a0fdb71d281ad6239b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T231333Z-fleet03-B11-QFORM-r44/REPORT.md`.
 
 For a physical hub and two disjoint original-coordinate banks, with star vectors `c,r`, interbank block `N`, and

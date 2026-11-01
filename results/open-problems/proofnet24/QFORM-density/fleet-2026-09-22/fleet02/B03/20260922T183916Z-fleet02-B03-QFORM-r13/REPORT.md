@@ -21,7 +21,7 @@ This report does not use post-rotation independence, law-uniform pointwise Fresn
 
 Canonical source:
 
-`yspennstate/math-open-problems@e7ffb0d5d75841126cdfaaebf2a15bb4e0f896f3`
+`private-source-repository@e7ffb0d5d75841126cdfaaebf2a15bb4e0f896f3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T184033Z-fleet03-B05-QFORM-r15/REPORT.md`.
 
@@ -31,7 +31,7 @@ It proves the homogeneous `n=3` theorem from two complete ingredients: a nonzero
 
 Canonical source:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -46,7 +46,7 @@ This arbitrary-affine scope is the exact missing ingredient in the scalar-pivot 
 
 Canonical source:
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 
@@ -58,7 +58,7 @@ If `s_3(A)>=s>0` and an ORIGINAL-coordinate principal pair `B` is invertible ind
 
 Fresh completed partner source:
 
-`yspennstate/math-open-problems@20e34081fe77e8ef03c707ab0ec6d618abd61672`
+`private-source-repository@20e34081fe77e8ef03c707ab0ec6d618abd61672`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T182338Z-fleet03-B03-QFORM-r17/REPORT.md`.
 

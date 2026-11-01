@@ -141,7 +141,7 @@ Full universal boundedness: **OPEN**. Unrestricted continuity: **OPEN**. Continu
 
 ## 7. Source pins
 
-- Negative packet theorem: `yspennstate/math-open-problems@6c4698000d4fd206b465a18231ba8c7a8f643f59`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260924T000609Z-fleet01-B03-QFORM-r36/REPORT.md`.
-- Designated partner actually applied: `yspennstate/math-open-problems@54243d0668be2be7879ae467ed9cb6b962f24652`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260924T081949Z-fleet02-B03-QFORM-auto11-r52/REPORT.md`.
+- Negative packet theorem: `private-source-repository@6c4698000d4fd206b465a18231ba8c7a8f643f59`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260924T000609Z-fleet01-B03-QFORM-r36/REPORT.md`.
+- Designated partner actually applied: `private-source-repository@54243d0668be2be7879ae467ed9cb6b962f24652`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260924T081949Z-fleet02-B03-QFORM-auto11-r52/REPORT.md`.
 
 The live correction inbox was reread immediately before publication. In particular, the proof avoids the refuted conditional copy-sum/difference cap and mixed-fiber interfaces.

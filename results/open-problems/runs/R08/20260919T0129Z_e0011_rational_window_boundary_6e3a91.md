@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R08 CLOSABLE OUTSIDE — rational-window improvement and two structural boundary obstructions
 
 Run date: 2026-09-19 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Active target: **E0011**, Durrett 2009 Problem 5, coexistence in the original two-dimensional no-stirring catalyst/ZGB process.  
 Status after this run: **PARTIAL / OPEN_CURRENT_BOUNDED**.  
 Delivery: private GitHub only. No email, Drive, public posting, purchases, permission changes, workflow execution, or scheduler changes.

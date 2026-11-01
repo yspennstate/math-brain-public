@@ -109,7 +109,7 @@ At the endpoint \(c_i=1\), the complementary spectral frame has rank two and the
 
 Completed designated partner source:
 
-`yspennstate/math-open-problems@4110bbfd21beffa0260a017d468b0a486af56db1`
+`private-source-repository@4110bbfd21beffa0260a017d468b0a486af56db1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T222040Z-fleet04-B11-cone-envelope-r3/REPORT.md`.
 
@@ -275,7 +275,7 @@ Continuity is **not proved by this argument**.  The result established here is t
 
 - `CURRENT_RESEARCH.md`: full target open; arbitrary-joint rank-three coarea and conditional positive-moment gates are false.
 - Live correction inbox, including `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`, `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`, `QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1`, and the standing pointwise-decay/fiber-sup/rotation corrections.
-- Completed designated partner: `yspennstate/math-open-problems@4110bbfd21beffa0260a017d468b0a486af56db1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T222040Z-fleet04-B11-cone-envelope-r3/REPORT.md`.
-- Structural null-ruling source used and independently rederived above: `yspennstate/math-open-problems@e4a8345b649c8340ec34182c25ee7c76c970ed6c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260923T001151Z-fleet01-B11-QFORM-r12/REPORT.md`.
+- Completed designated partner: `private-source-repository@4110bbfd21beffa0260a017d468b0a486af56db1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T222040Z-fleet04-B11-cone-envelope-r3/REPORT.md`.
+- Structural null-ruling source used and independently rederived above: `private-source-repository@e4a8345b649c8340ec34182c25ee7c76c970ed6c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260923T001151Z-fleet01-B11-QFORM-r12/REPORT.md`.
 
 No pointwise van-der-Corput bound, arbitrary-joint coarea bound, diagonal-basis independence, conditional-cap-as-independence step, fiber supremum, or Monte Carlo extremality claim is used.

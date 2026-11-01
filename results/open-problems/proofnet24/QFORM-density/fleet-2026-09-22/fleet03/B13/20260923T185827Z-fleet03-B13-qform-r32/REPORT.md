@@ -26,7 +26,7 @@ The completed fleet04/B13 theorem states that every cap-one mass-one marginal is
 
 with the right side unchanged if each `E_i` is a bounded finite union of intervals. No optimizer, common diameter, or fragment-count bound is asserted.
 
-Source: `yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
+Source: `private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
 
 ### 1.2 Marginal-free physical three-volume crossing
 
@@ -46,7 +46,7 @@ Equivalently every actual slab witness obeys
 
 `Z_3(M) <= (C_3/rho)^6`.                                      (1.1)
 
-Source: `yspennstate/math-open-problems@df738b7f0821d9af56dfd992cab10ecc6704e3fb`, fleet02/B03 marginal-free `Z3` crossing report. The interactive continuation records a second check of the crucial heavy-row promotion cases.
+Source: `private-source-repository@df738b7f0821d9af56dfd992cab10ecc6704e3fb`, fleet02/B03 marginal-free `Z3` crossing report. The interactive continuation records a second check of the crucial heavy-row promotion cases.
 
 ### 1.3 First exterior-volume spectral floor
 
@@ -72,7 +72,7 @@ hence, with
 
 `V_1 >= eta^2/4`.                                              (1.2)
 
-Source: `yspennstate/math-open-problems@d46798d03befd93be417b47527c369fc9d8195bc`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T182826Z-fleet01-B13-qform-auto11/REPORT.md`, Lemma 2.1.
+Source: `private-source-repository@d46798d03befd93be417b47527c369fc9d8195bc`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T182826Z-fleet01-B13-qform-auto11/REPORT.md`, Lemma 2.1.
 
 ### 1.4 Weighted physical-pivot complement completion
 
@@ -86,7 +86,7 @@ where `D` is diagonal, `R` is symmetric of rank at most `2r`, `E` is symmetric z
 
 The result is an exact bordered-determinant/deletion-counting theorem in the original coordinates. No random variable is rotated and no residual is discarded.
 
-Source: `yspennstate/math-open-problems@14ceede15c310637139375332c84f4d8620b5599`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T183034Z-fleet03-B13-qform-r31/REPORT.md`, Theorem 2.1.
+Source: `private-source-repository@14ceede15c310637139375332c84f4d8620b5599`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T183034Z-fleet03-B13-qform-r31/REPORT.md`, Theorem 2.1.
 
 ## 2. New global third-volume estimate with the improved crossing constant
 

@@ -215,8 +215,8 @@ Primary quadratic-form scope check:
 - Herry--Malicet--Poly, arXiv:2303.09488 / Probability Theory and Related Fields.
 
 Completed internal dimension-three receiver:
-- `yspennstate/math-open-problems@602d508c11f3bb5848b65581a750b4497708bd5f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T112422Z-fleet03-B18-QFORM-r27/REPORT.md`.
+- `private-source-repository@602d508c11f3bb5848b65581a750b4497708bd5f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T112422Z-fleet03-B18-QFORM-r27/REPORT.md`.
 
 Designated partner actually applied:
-- `yspennstate/math-open-problems@84fa5922df082f90064dea4d22a600a60e799803:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T221534Z-fleet04-B18-QFORM-r5/REPORT.md`.
+- `private-source-repository@84fa5922df082f90064dea4d22a600a60e799803:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T221534Z-fleet04-B18-QFORM-r5/REPORT.md`.
 

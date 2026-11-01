@@ -16,7 +16,7 @@ Fresh owner control remained revision `2026-09-22.15`, QFORM-only, with the unre
 
 The completed designated partner theorem actually applied below is fleet02/B19
 
-`yspennstate/math-open-problems@f4d95bc33caf8db11888cceb817c005484f67d31`,
+`private-source-repository@f4d95bc33caf8db11888cceb817c005484f67d31`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260924T031336Z-fleet02-B19-QFORM-auto11/REPORT.md`,
 

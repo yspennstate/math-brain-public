@@ -36,7 +36,7 @@ The purpose of this run is to pay (2.1) completely, without assumptions on the r
 
 ### 2.2 fleet03/B19 r18: sequential two-pivot theorem
 
-Source handoff: `math-research-brain@f27c94cca288145b54f94c7e9cfad15a5cab9efd`; canonical mathematics recorded there as `math-open-problems@4caa949abfce263bcfdcdf7fe175a4a999ae35b5`.
+Source handoff: `math-research-brain@f27c94cca288145b54f94c7e9cfad15a5cab9efd`; canonical mathematics recorded there as `private-source@4caa949abfce263bcfdcdf7fe175a4a999ae35b5`.
 
 If an original-coordinate principal pair
 
@@ -55,7 +55,7 @@ The theorem is sign-uniform and retains the complete higher-rank remainder. Here
 
 ### 2.3 fleet03/B20 r15: physical-triple determinant theorem
 
-Canonical source: `math-open-problems@c07c544cf5963360e66f9467c24c78f7a5aa53c6`, path
+Canonical source: `private-source@c07c544cf5963360e66f9467c24c78f7a5aa53c6`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T184724Z-fleet03-B20-QFORM-r15/REPORT.md`.
 
 For any three ORIGINAL coordinates `I={i,p,z}`, if `M=A[I,I]`, `a=M_ii!=0`, and `det M!=0`, then
@@ -66,7 +66,7 @@ This is an analytic payment for a source-valid physical triple; it does not asse
 
 ### 2.4 designated partner fleet04/B20
 
-Canonical source: `math-open-problems@25ad8faaac5064b6814d51ae63d894fe97c1eac4`, path
+Canonical source: `private-source@25ad8faaac5064b6814d51ae63d894fe97c1eac4`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T172057Z-fleet04-B20-QFORM-r3/REPORT.md`.
 
 Inside its validated high-window first-pivot reduction, the selected second Schur row

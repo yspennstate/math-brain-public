@@ -234,7 +234,7 @@ hence
 
 `boxed: ||p_Q||_infinity < 10.174463.`                             (4.2)
 
-This is an equation-level application of the owner-required source `math-open-problems@e5f71d79.../RESULTS.md`, Theorem H. It preserves the original-coordinate product law; the spectral basis in (3.1) is only a deterministic representation of A, not a declaration that rotated random variables are independent.
+This is an equation-level application of the owner-required source `private-source@e5f71d79.../RESULTS.md`, Theorem H. It preserves the original-coordinate product law; the spectral basis in (3.1) is only a deterministic representation of A, not a declaration that rotated random variables are independent.
 
 So the new family proves three things at once:
 

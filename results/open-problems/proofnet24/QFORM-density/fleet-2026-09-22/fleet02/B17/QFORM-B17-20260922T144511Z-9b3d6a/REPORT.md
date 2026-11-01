@@ -10,7 +10,7 @@
 
 The target remains unrestricted: for every dimension, every vector of independent real coordinates with probability densities at most one, and every real symmetric matrix with at least three eigenvalues of absolute value at least one, prove a universal essential-density bound for `X^T A X`, or give a valid counterexample. No moment, support, centering, sign, or post-rotation independence hypothesis is added here.
 
-This run applies the completed partner theorem from `fleet03/B17`, canonical report `yspennstate/math-open-problems@3d0926c161ba4cbea4016bff63d89e34f87cb0e6`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T140220Z-r11/REPORT.md`: if `Y~N(m,Sigma)`, `Sigma >= v I`, and a symmetric quadratic form has at least three eigenvalues in modulus at least one, then its density is continuous and bounded by `1/(2 sqrt(2) v)`. In particular, at `v=1/12` the bound is `3 sqrt(2)` for arbitrary Gaussian mean.
+This run applies the completed partner theorem from `fleet03/B17`, canonical report `private-source-repository@3d0926c161ba4cbea4016bff63d89e34f87cb0e6`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T140220Z-r11/REPORT.md`: if `Y~N(m,Sigma)`, `Sigma >= v I`, and a symmetric quadratic form has at least three eigenvalues in modulus at least one, then its density is continuous and bounded by `1/(2 sqrt(2) v)`. In particular, at `v=1/12` the bound is `3 sqrt(2)` for arbitrary Gaussian mean.
 
 The live correction `QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1` is explicitly respected. The construction below is one source-valid finite-fragment stress class; it is **not** asserted to reduce arbitrary cap-one marginals to a uniformly bounded number of fragments.
 

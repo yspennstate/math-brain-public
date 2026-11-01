@@ -18,7 +18,7 @@ All sets below are literal ORIGINAL-coordinate sets. No random variable is rotat
 
 Immediate same-account frontier:
 
-`yspennstate/math-open-problems@bcb36a7573a7e9f23f1ea78792e0b72bc8bb0d9c`
+`private-source-repository@bcb36a7573a7e9f23f1ea78792e0b72bc8bb0d9c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T060028Z-fleet03-B19-QFORM-r51/REPORT.md`.
 
@@ -41,13 +41,13 @@ The r51 peel used the threshold `2/7` and obtained normalized light-plane levera
 Two completed supporting results are used at their proved scopes.
 
 1. fleet03/B08, `QFORM-TWOFRAME-BERNOULLI-BALANCE-v1`, canonical source
-   `yspennstate/math-open-problems@19c12072f7e67266ce894042034bcabb9c376bea`,
+   `private-source-repository@19c12072f7e67266ce894042034bcabb9c376bea`,
    proves that an orthonormal two-frame `W` with maximum row leverage `mu` has a literal physical bipartition with both restricted Gram matrices at least
 
    `1/2-sqrt(mu/2)` times the identity.                           (1.3)
 
 2. fleet04/B20 r13, canonical source
-   `yspennstate/math-open-problems@d2560a041fd91c05d7fddf50f5b5414ecd2680a2`,
+   `private-source-repository@d2560a041fd91c05d7fddf50f5b5414ecd2680a2`,
    proves the localized child-window pivot/star and exact double-anchor refinement. Its anchor-star threshold is
 
    `beta0=sqrt(3)/(128 sqrt(96))=1/(512 sqrt(2))`
@@ -241,7 +241,7 @@ Equation (3.17) restores the tail before pigeonholing the at-most-62 physical ro
 
 The completed designated partner source is fleet04/B20 r13:
 
-`yspennstate/math-open-problems@d2560a041fd91c05d7fddf50f5b5414ecd2680a2`
+`private-source-repository@d2560a041fd91c05d7fddf50f5b5414ecd2680a2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260924T051424Z-fleet04-B20-QFORM-r13/REPORT.md`.
 

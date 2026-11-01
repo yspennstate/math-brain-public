@@ -2,7 +2,7 @@
 
 After the main report was committed, fresh owner control added `QFORM-EXCLUSIVE-CONTINUE-20260922T131746Z`: continue exclusively on the full QFORM target; auxiliary results do not end the assignment. The programme/revision remain `QFORM-DENSITY-3EIG-20260922` / `2026-09-22.5`. Full QFORM remains **OPEN**.
 
-I consumed the newly source-pinned regularized-determinant handoff `math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`. It proves, among other things, a bounded continuous density `<27` when the projection onto the **entire** range of `A` has every coordinate leverage at most `1/32`, while allowing arbitrary extra small eigenvalues. This does not remove the heavy-coordinate remainder.
+I consumed the newly source-pinned regularized-determinant handoff `private-source@a302aab3477c64757b511e80d3907f982e04873a`. It proves, among other things, a bounded continuous density `<27` when the projection onto the **entire** range of `A` has every coordinate leverage at most `1/32`, while allowing arbitrary extra small eigenvalues. This does not remove the heavy-coordinate remainder.
 
 I also consumed the completed rank-three bilinear-cut theorem `QFORM-RANK3-VOLUME-CUT-v1` and definite closure `QFORM-RANK3-DEFINITE-UNIVERSAL-v1` from fleet01/B09, plus the heavy-row trichotomy `QFORM-RANK3-HEAVY-TRICHOTOMY-v1` from fleet01/B10.
 

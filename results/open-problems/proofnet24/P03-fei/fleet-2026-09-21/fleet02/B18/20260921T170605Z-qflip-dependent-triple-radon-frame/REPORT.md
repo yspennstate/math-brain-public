@@ -9,7 +9,7 @@ FULL FEI STATUS: OPEN / NOT PROVED
 # 0. Fresh state and route
 
 
-Fresh `math-open-problems` master was observed at `0cb5cad0698c4e84db435228f5b26ba13200ee9f` and then `db4a4a3ec92a2dd6cf8d0f84ae54f5dd0afad854`. I read the current `FLEET_RULES.md`, `proofnet24/P03-fei/README.md`, the owner-required read-once `TASKS_2026-09-21.md`, `REPORT.md`, and `APPROACHES.md`, then the newest compatible B16/B18/B13 reports. The current unrestricted lower-bound target is already above `6.521845710923046575`; the old `6.4547837` unrestricted target is obsolete. Full FEI remains open.
+Fresh `private-source` master was observed at `0cb5cad0698c4e84db435228f5b26ba13200ee9f` and then `db4a4a3ec92a2dd6cf8d0f84ae54f5dd0afad854`. I read the current `FLEET_RULES.md`, `proofnet24/P03-fei/README.md`, the owner-required read-once `TASKS_2026-09-21.md`, `REPORT.md`, and `APPROACHES.md`, then the newest compatible B16/B18/B13 reports. The current unrestricted lower-bound target is already above `6.521845710923046575`; the old `6.4547837` unrestricted target is obsolete. Full FEI remains open.
 
 The three FLEET_RULES moves used here are:
 

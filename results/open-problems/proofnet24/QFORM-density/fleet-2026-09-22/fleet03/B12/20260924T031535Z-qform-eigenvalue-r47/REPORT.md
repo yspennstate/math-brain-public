@@ -17,7 +17,7 @@ No Gaussianity, log-concavity, moments, compact or connected support, iid law, d
 
 This run deliberately changed mechanism after the recent spectral-budget sequence. A source search showed that the **marginal-free physical third-volume theorem is already completed** and therefore is not re-claimed here. I use it as an input:
 
-- fleet03/B20 r34, recorded through `yspennstate/math-open-problems@a23ddf469392d77526db53d0811248a52a84d088`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T164400Z-fleet03-B20-QFORM-r34/REPORT.md`; the later r35 restatement at `9330f48315819c3a654652a884496c0c24e9bcbd` records the theorem explicitly. For a literal physical cross block `M=A[I,J]`,
+- fleet03/B20 r34, recorded through `private-source-repository@a23ddf469392d77526db53d0811248a52a84d088`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T164400Z-fleet03-B20-QFORM-r34/REPORT.md`; the later r35 restatement at `9330f48315819c3a654652a884496c0c24e9bcbd` records the theorem explicitly. For a literal physical cross block `M=A[I,J]`,
   `Z_3=e_3(MM^T)>0` implies a continuous `C_0` density with
   `||p_Q||_infinity <= K_3 Z_3^(-1/6)`,
   where
@@ -26,15 +26,15 @@ This run deliberately changed mechanism after the recent spectral-budget sequenc
 
 The second analytic input is the finite physical-core projected-gradient theorem:
 
-- `yspennstate/math-open-problems@51d2edb29d7a4c150e4d47ed3a6685875a8483ae`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`. On an actual `m`-coordinate ORIGINAL block with three singular values at least `a`, after arbitrary affine terms, the density is at most `2 sqrt(6 pi m)/a`.
+- `private-source-repository@51d2edb29d7a4c150e4d47ed3a6685875a8483ae`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`. On an actual `m`-coordinate ORIGINAL block with three singular values at least `a`, after arbitrary affine terms, the density is at most `2 sqrt(6 pi m)/a`.
 
 For continuity I use the separately completed fixed-matrix theorem:
 
-- `yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`: every fixed real symmetric coefficient matrix of rank at least three gives a bounded density in `C_0(R)` for every cap-one product input. This is qualitative/instance-dependent regularity and is not a universal-height theorem.
+- `private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`: every fixed real symmetric coefficient matrix of rank at least three gives a bounded density in `C_0(R)` for every cap-one product input. This is qualitative/instance-dependent regularity and is not a universal-height theorem.
 
 The designated partner theorem actually used at an equation is fleet04/B12 r7:
 
-- `yspennstate/math-open-problems@3df1475f988c811570dc5c249a7756d24adb51bf`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T191531Z-fleet04-B12-hybrid-square-defect-r7/REPORT.md`.
+- `private-source-repository@3df1475f988c811570dc5c249a7756d24adb51bf`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T191531Z-fleet04-B12-hybrid-square-defect-r7/REPORT.md`.
 
 Its hybrid square-defect inequality is recalled in Section 4.
 

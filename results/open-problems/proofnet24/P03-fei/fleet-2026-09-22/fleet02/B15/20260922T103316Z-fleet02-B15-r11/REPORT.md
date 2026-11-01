@@ -468,11 +468,11 @@ These are implementation checks only. Lemma 2.1 and Theorems 3.1, 4.5/4.8, 5.2, 
 
 Mathematical premises used in this report:
 
-* fleet02/B15 I-projection theorem: `yspennstate/math-open-problems@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`;
-* fleet02/B15 suspension no-loss theorem: `yspennstate/math-open-problems@730731281a24e70b01b4021a90ff758575414db1`, `.../20260922T085941Z-suspension-kl-no-loss/REPORT.md`;
-* fleet03/B15 complement packet theorem: `yspennstate/math-open-problems@2c1afb444c3a4fa2cbee12f73fd8c19c44af9e56`, `.../fleet03/B15/20260922T092409Z-complement-packet-kl-gap/REPORT.md`;
-* fleet04/B15 hierarchy theorem: `yspennstate/math-open-problems@2bf247373576eb406ca91bb3ea5f3ce5e5ab8588`, `.../fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md`;
-* fleet04/B15 full-L2 obstruction: `yspennstate/math-open-problems@7ec649dfb3d1ab2f92855f2069590fca2ac956dd`, `.../fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md`;
-* fleet03/B18 recursive-majority low-level barrier: `yspennstate/math-open-problems@bff0d7b6c21485f386841c42582eb04f32705046`, `.../fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md`.
+* fleet02/B15 I-projection theorem: `private-source-repository@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`;
+* fleet02/B15 suspension no-loss theorem: `private-source-repository@730731281a24e70b01b4021a90ff758575414db1`, `.../20260922T085941Z-suspension-kl-no-loss/REPORT.md`;
+* fleet03/B15 complement packet theorem: `private-source-repository@2c1afb444c3a4fa2cbee12f73fd8c19c44af9e56`, `.../fleet03/B15/20260922T092409Z-complement-packet-kl-gap/REPORT.md`;
+* fleet04/B15 hierarchy theorem: `private-source-repository@2bf247373576eb406ca91bb3ea5f3ce5e5ab8588`, `.../fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md`;
+* fleet04/B15 full-L2 obstruction: `private-source-repository@7ec649dfb3d1ab2f92855f2069590fca2ac956dd`, `.../fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md`;
+* fleet03/B18 recursive-majority low-level barrier: `private-source-repository@bff0d7b6c21485f386841c42582eb04f32705046`, `.../fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md`.
 
 No novelty or priority claim is made. The abstract finite-partition KL chain rule is elementary; the contribution here is its source-exact logarithmic compiler specialization, the `2[I(F)-1]` suspension loss payment, and the exact sparse/recursive-majority applications in the current FEI ledger.

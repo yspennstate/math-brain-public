@@ -8,7 +8,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — no separate
 
 **Publication novelty:** `UNVERIFIED`. The transfer/class and the way they are combined are new relative to the repository state read in this run. Coset/Hecke descriptions of transitive graphs are classical, so no priority claim is made for the abstract representation-theoretic language.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 Run root: `proofnet24/NM13-01/progress-cutoff/runs/2026-09-20/`.
 

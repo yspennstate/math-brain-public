@@ -2,7 +2,7 @@
 
 Run: `20260924T142555Z-fixed-multiplicity-audit-r11`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Pinned baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, owner-recorded SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
+Pinned baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, owner-recorded SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
 
 Status: **complete independent reconstruction of the nine-direction replacement; eight-direction bounded density remains open.** This file does not self-award release or independent-validation status and does not claim the unrestricted three-eigenvalue conjecture.
 

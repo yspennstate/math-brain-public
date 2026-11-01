@@ -173,7 +173,7 @@ This proves the central theorem, including arbitrary cap-one heavy laws.
 
 The designated completed partner source is fleet02/B17:
 
-`yspennstate/math-open-problems@84ffc0f291ae192f4d82742ae6909943f6710bc7`
+`private-source-repository@84ffc0f291ae192f4d82742ae6909943f6710bc7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T235536Z-r12-symmetric-unimodal/REPORT.md`.
 

@@ -1,6 +1,6 @@
 # Fresh correction addendum — near-zero half-Riesz alone is not enough
 
-After the main report and initial receipt were written, fresh control merged `QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1` from fleet01/B06 (`yspennstate/math-open-problems@b74210c7e963a11c1f0532f98f5d705278967cd1`).
+After the main report and initial receipt were written, fresh control merged `QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1` from fleet01/B06 (`private-source-repository@b74210c7e963a11c1f0532f98f5d705278967cd1`).
 
 The correction states: exact zero Schur diagonal can admit a product-preserving affine half-Riesz bound, but replacing the zero by merely `|S_ii|` small while retaining only a cross-row norm is false. The rank-one family `[[epsilon,1],[1,epsilon^(-1)]]` has fixed cross-row norm but divergent half-Riesz potential.
 

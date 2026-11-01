@@ -17,7 +17,7 @@ The unrestricted target remains open. This report uses no law-uniform pointwise 
 Two source-valid inputs are used.
 
 1. The physical-pair logarithmic envelope from
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 For independent original-coordinate `U,V` with density caps one and an invertible indefinite symmetric `2 x 2` matrix `B`, writing
 `D=|det B|`, `kappa=sigma_min(B)`, the affine pair has, for every `r>0`, the conditional density envelope
@@ -27,7 +27,7 @@ For independent original-coordinate `U,V` with density caps one and an invertibl
 The pair shifts may depend arbitrarily on the remainder variables.
 
 2. The designated fleet04/B01 signed-Fejer identity and latest overlap-two result. The exact Fejer identity is in
-`yspennstate/math-open-problems@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`,
+`private-source-repository@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T234537Z-fleet04-B01-grouped-square-fejer-r2/REPORT.md`:
 
 `||p_mu||_infinity = sup_(T>0,y) D_T mu(y)`,                         (1.2)
@@ -41,7 +41,7 @@ with both sides infinite when no bounded density exists. The same report gives t
 `||p_(a^T X)||_infinity <= sqrt(2)/||a||_2`.                        (1.3)
 
 The newest completed fleet04/B01 partner result is
-`yspennstate/math-open-problems@27ae9c5fbf53787fac1d61d7f480e0283be8c1c5`,
+`private-source-repository@27ae9c5fbf53787fac1d61d7f480e0283be8c1c5`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260923T121347Z-fleet04-B01-overlap2-explicit-r1/REPORT.md`.
 For an invertible indefinite physical pair `S`, it proves
 

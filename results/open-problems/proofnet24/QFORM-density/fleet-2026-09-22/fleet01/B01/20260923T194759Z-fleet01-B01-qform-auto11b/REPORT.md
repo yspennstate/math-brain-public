@@ -27,14 +27,14 @@ Hence no law-uniform scalar pointwise estimate `|E exp(itX^2)| <= C|t|^{-1/2}` i
 Two source results are used at equations:
 
 1. Designated partner fleet02/B01 scalar square-phase theorem:
-   `yspennstate/math-open-problems@91dbcb0e8b3f6faa4af9629aaaff2f69d385695a`,
+   `private-source-repository@91dbcb0e8b3f6faa4af9629aaaff2f69d385695a`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T100534Z-fleet02-B01-qform/REPORT.md`.
    It proves for every cap-one scalar probability density, `c!=0`, and arbitrary affine coefficient `ell`,
 
    `int_R |E exp(it(cX^2+ell X))|^4 dt <= 27*pi/(2|c|)`.          (1.1)
 
 2. Reviewed two-dimensional product-projection cap from
-   `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,
+   `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,
    `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`:
    a rank-two linear image with Gram matrix `G` of an independent cap-one product bank has density at most
 
@@ -42,7 +42,7 @@ Two source results are used at equations:
 
 The newest completed designated-partner theorem was also refreshed before finalization: fleet02/B01
 `QFORM-ONEHUB-Z1-NOMARGINAL-HALFRIESZ-v1`, canonical report
-`yspennstate/math-open-problems@339c1fdf3bc65a79f5be126e730dd3b251320e66`,
+`private-source-repository@339c1fdf3bc65a79f5be126e730dd3b251320e66`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T180438Z-auto11/REPORT.md`, with deterministic checks at `82a83d6da64145ee7aed98a87f4f1dd03d209d98`. It is applied in Section 7.
 
 ## 2. Cap-K subprobability extension of the partner L4 lemma

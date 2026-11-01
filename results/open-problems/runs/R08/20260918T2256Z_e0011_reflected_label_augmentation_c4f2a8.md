@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R08 CLOSABLE OUTSIDE — E0011 catalyst/ZGB: support-free reflected-label augmentation
 
 Run date: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Active source target: Rick Durrett, *Coexistence in stochastic spatial models*, Ann. Appl. Probab. 19 (2009), Problem 5, original two-dimensional catalyst/ZGB process with `r=infinity`, `q/2=1-p`, without added stirring.
 
 ## 1. Continuity, source status, exclusions, and ownership

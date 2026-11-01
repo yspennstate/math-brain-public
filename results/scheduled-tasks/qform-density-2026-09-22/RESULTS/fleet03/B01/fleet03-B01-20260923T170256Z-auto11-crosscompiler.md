@@ -11,6 +11,6 @@ Using the valid product consequence of fleet04/B01's leakage theorem gives, for 
 
 A source correction was found: fleet04/B01 Corollary 4.1's proof gives a product lower bound on the two bank norms, not the stated identical individual lower bounds. Immutable correction event published.
 
-Canonical proof: `yspennstate/math-open-problems@5210a794376aaab39c9b5ff204a4e895bc5dc195:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T170256Z-auto11-crosscompiler/REPORT.md`; checks bundle tip `55c8ad644424e23ed2efe86e47cbb63a9f4fa040`.
+Canonical proof: `private-source-repository@5210a794376aaab39c9b5ff204a4e895bc5dc195:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T170256Z-auto11-crosscompiler/REPORT.md`; checks bundle tip `55c8ad644424e23ed2efe86e47cbb63a9f4fa040`.
 
 Full QFORM remains OPEN. Continuity of the full output is not proved in this branch. Execution `WITHOUT_VERIFIED_BRAIN`.

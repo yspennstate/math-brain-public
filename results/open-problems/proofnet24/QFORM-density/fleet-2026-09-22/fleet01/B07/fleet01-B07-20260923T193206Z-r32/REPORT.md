@@ -19,7 +19,7 @@ The unrestricted conjecture is not proved or disproved here. Inputs remain indep
 
 Source:
 
-`yspennstate/math-open-problems@60106507e16f9a5eb4453e276a0642f880eeec9d`
+`private-source-repository@60106507e16f9a5eb4453e276a0642f880eeec9d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T191801Z-r31/REPORT.md`.
 
@@ -31,7 +31,7 @@ The completed receiver used through r31 is
 
 `QFORM-CROSS-E3-MARGINALFREE-L1-v1`,
 
-source `yspennstate/math-open-problems@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`,
+source `private-source-repository@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T170106Z-fleet03-B02-qform-r35/REPORT.md`.
 
@@ -47,7 +47,7 @@ Arbitrary same-bank curvature, all outside couplings, affine terms and signs are
 
 Source:
 
-`yspennstate/math-open-problems@12da18e77ea3c2097023c2da5193c86ef3b6478c`
+`private-source-repository@12da18e77ea3c2097023c2da5193c86ef3b6478c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T183825Z-fleet02-B07-qform-r11/REPORT.md`.
 

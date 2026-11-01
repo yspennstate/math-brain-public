@@ -10,7 +10,7 @@ Status: **PROVED SUPPORTING STRUCTURAL THEOREM / FULL-QFORM OPEN / CONTINUITY OP
 
 The designated partner result actually used is `fleet02/B13` r15:
 
-`yspennstate/math-open-problems@d59fc91cdb6c772a0b3c73ba5b90fb62e10e3bf`
+`private-source-repository@d59fc91cdb6c772a0b3c73ba5b90fb62e10e3bf`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T000555Z-fleet02-B13-productset-r15-482fba/REPORT.md`.
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — this is 
 # R13 — Boolean Komlos: an exact six-column rational obstruction at 1.84535465
 
 Run ID: `20260917T1903Z_n6-rational-obstruction-3b7e`  
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, policy, source scope
 

@@ -2,7 +2,7 @@
 
 During final memory readback I resolved the immediately preceding same-slot B02 handoff that had advanced after the startup snapshot:
 
-`yspennstate/math-open-problems@343750e0bd888523ca52f424f46de7a25d070930`
+`private-source-repository@343750e0bd888523ca52f424f46de7a25d070930`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T194347Z-fleet03-B02-qform-r38/REPORT.md`.
 

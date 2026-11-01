@@ -15,7 +15,7 @@ No moment, compact-support, log-concavity, Gaussianity, post-rotation independen
 
 The designated partner is fleet02/B19, source
 
-`yspennstate/math-open-problems@3c7101e52142bfcd34c20325430867e2972c1202`,
+`private-source-repository@3c7101e52142bfcd34c20325430867e2972c1202`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T051116Z-fleet02-B19-QFORM-auto11/REPORT.md`.
 
@@ -27,7 +27,7 @@ in the current compound-energy branch, and uses `delta>=1/64` as the fixed-scale
 
 The complementary fleet03/B19 theorem is source-pinned at
 
-`yspennstate/math-open-problems@82773d6d0339c8867b76c777216b6c564939f2ae`,
+`private-source-repository@82773d6d0339c8867b76c777216b6c564939f2ae`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T043056Z-fleet03-B19-QFORM-r26/REPORT.md`.
 

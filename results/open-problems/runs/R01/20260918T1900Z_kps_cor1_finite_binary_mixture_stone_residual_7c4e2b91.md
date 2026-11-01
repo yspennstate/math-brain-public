@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # R01 — finite binary-mixture no-go and the Stone residual where any counterexample must live
 
 Run date: 2026-09-18 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Lane: **CLOSABLE OUTSIDE**
 
 ## 1. Runtime truth and continuity

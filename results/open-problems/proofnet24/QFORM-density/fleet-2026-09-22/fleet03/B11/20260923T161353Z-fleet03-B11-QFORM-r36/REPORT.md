@@ -15,7 +15,7 @@ The unrestricted owner conjecture remains **OPEN / NOT PROVED / NOT DISPROVED**.
 
 ### Own predecessor r35
 
-`yspennstate/math-open-problems@32a96eb18f2b23de67a15d846a56ccb3d998d889`
+`private-source-repository@32a96eb18f2b23de67a15d846a56ccb3d998d889`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T152023Z-fleet03-B11-QFORM-r35/REPORT.md`.
 
@@ -43,7 +43,7 @@ It also paid `C2<=3/4` by a literal original-coordinate rank-three cross cut and
 
 ### Designated partner fleet04/B11 r6
 
-`yspennstate/math-open-problems@30555c1ca97752e10f5089ccd95f8514c704be5a`
+`private-source-repository@30555c1ca97752e10f5089ccd95f8514c704be5a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T131400Z-fleet04-B11-extension-mass-r6/REPORT.md`.
 
@@ -61,7 +61,7 @@ I apply (1.2) below to identify an exact probability in the determinantal triple
 
 The current non-near-coloop exact-rank-three collar is independently paid by fleet03/B10 at
 
-`yspennstate/math-open-problems@cecdb7eb0dc66a6e379225ed8ecef7417a3668b2`
+`private-source-repository@cecdb7eb0dc66a6e379225ed8ecef7417a3668b2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T041602Z-fleet03-B10-QFORM-r23/REPORT.md`.
 
@@ -69,7 +69,7 @@ That source also identifies the true-near-coloop survivor after its transverse-h
 
 For one-heavy/two-transverse-bank small-ball smoothing I also use the completed fleet03/B13 theorem
 
-`yspennstate/math-open-problems@eac866b378f5c54411a55f7eb49f89336a4701ae`
+`private-source-repository@eac866b378f5c54411a55f7eb49f89336a4701ae`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260922T213118Z-fleet03-B13-qform-r17/REPORT.md`.
 

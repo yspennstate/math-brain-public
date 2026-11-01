@@ -15,7 +15,7 @@ No moment, support, Gaussian, log-concavity, connected-support, post-rotation in
 The newest completed fleet01/B05 theorem is
 QFORM-MIXED-L3-SQUARE-RECEIVER-v1, source
 
-- math-open-problems@4fea394eafc8bce4f335cce2a6150ed50f95ed1a
+- private-source@4fea394eafc8bce4f335cce2a6150ed50f95ed1a
 - proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260924T100503Z-fleet01-B05-QFORM-auto11/REPORT.md.
 
 For mutually independent cap-one \(H,L,W\), arbitrary Borel \(q\), and \(t\lambda\ne0\), it proves
@@ -33,7 +33,7 @@ The proof is rough-input valid: it combines an \(L^3\) density bound for the com
 The completed fleet01/B11 theorem
 QFORM-LDL-FULL-TWOJACOBIAN-NONZERO-v1 is source-pinned at
 
-- math-open-problems@339d40cb2285b8d51cf07423514354bdd702833f
+- private-source@339d40cb2285b8d51cf07423514354bdd702833f
 - proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260924T064232Z-fleet01-B11-QFORM-auto11/REPORT.md.
 
 It supplies the exact punctured-pivot two-Jacobian used in Section 4 below.

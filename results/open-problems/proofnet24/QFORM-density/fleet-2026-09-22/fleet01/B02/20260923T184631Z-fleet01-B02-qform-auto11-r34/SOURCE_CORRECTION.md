@@ -2,7 +2,7 @@
 
 The random-cut identity used in `REPORT.md` is **not new to this run**. After the main derivation I found the earlier fleet01/B02 r20 report:
 
-`yspennstate/math-open-problems@50f8614dbe000baa0778481490440841c3960679`
+`private-source-repository@50f8614dbe000baa0778481490440841c3960679`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260923T022040Z-fleet01-B02-qform-r20/REPORT.md`.
 

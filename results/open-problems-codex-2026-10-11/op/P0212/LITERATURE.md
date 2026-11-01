@@ -25,7 +25,7 @@ The Aldous source is an unnumbered web page with no supplied DOI. The OpenAlex s
 - math_recall.py --id claim_a957a3ebd565ceaf68665829f95158697343dbfcf0342e25a65486418e6a49d5: read the full earlier isolated-pair attempt, rechecked its Green identity, and avoided its unproved Poisson-thinning inference.
 - During the attempt: math_recall.py on "branching coalescing exclusion Bernoulli reversible Hartarsky Martinelli Toninelli".
 - rg over the permitted probability_1000_intake_* directories and codex_pool_2026_10_10 for P0212 and title fragments: found the old ranking entry calling the problem attempted-unsolved, but no matching detailed attempt text. An initial literal Windows glob path failed and was replaced with an enumerated directory list.
-- git ls-tree origin/master in the read-only math-open-problems checkout, filtered for P0212 / coalescing-branch names: no matching named paths. The working tree was not touched.
+- git ls-tree origin/master in the read-only private-source checkout, filtered for P0212 / coalescing-branch names: no matching named paths. The working tree was not touched.
 
 ## Search log (URLs, dates, success/failure and raw responses)
 

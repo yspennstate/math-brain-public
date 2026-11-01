@@ -16,7 +16,7 @@ The full target remains open: for every dimension, every collection of independe
 
 The latest assigned-partner result, fleet02/B03 run `20260922T182232Z-fleet02-B03-QFORM-r12`, canonical mathematics
 
-`yspennstate/math-open-problems@e43c2e6afdf2063d5ce3f517d37f066acbda7b12`
+`private-source-repository@e43c2e6afdf2063d5ce3f517d37f066acbda7b12`
 
 at
 
@@ -236,7 +236,7 @@ A separate current fleet handoff, fleet03/B03 run `20260922T182338Z-fleet03-B03-
 
 The earlier B03 theorem, re-read in full this run from
 
-`yspennstate/math-open-problems@3d6fefe9c92674dff38c97ef8a502787ec3426a2`
+`private-source-repository@3d6fefe9c92674dff38c97ef8a502787ec3426a2`
 
 at
 

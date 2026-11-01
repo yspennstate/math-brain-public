@@ -17,7 +17,7 @@ The live correction that scalar bounded density does not imply a law-uniform poi
 
 The latest completed designated partner result used below is fleet02/B01, canonical mathematics
 
-`yspennstate/math-open-problems@1760a61be07cc456da3f69e703d025e74c3877eb`,
+`private-source-repository@1760a61be07cc456da3f69e703d025e74c3877eb`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T210057Z-fleet02-B01-QFORM-auto11/REPORT.md`.
 

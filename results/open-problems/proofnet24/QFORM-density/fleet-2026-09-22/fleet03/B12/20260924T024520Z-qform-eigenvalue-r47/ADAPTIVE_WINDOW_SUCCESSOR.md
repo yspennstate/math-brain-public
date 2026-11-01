@@ -8,7 +8,7 @@ After the first r47 report was committed, a source search found the exact earlie
 
 in fleet02/B19 r15, source
 
-`yspennstate/math-open-problems@48841f2d72a1faf741d5a75f6569107537221e7e`,
+`private-source-repository@48841f2d72a1faf741d5a75f6569107537221e7e`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T151209Z-fleet02-B19-qform-r15/RIDGE_ADDENDUM.md`.
 
 It already proves that the `|lambda|>=1/64` spectral-window branch is continuously bounded by `<64`, while failure gives
@@ -106,7 +106,7 @@ Therefore the row-side range projection has diagonal
 
 Now use the completed ridge-leverage stability lemma from
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 Set the ridge scale
@@ -243,7 +243,7 @@ If the total high-window leverage remains at most `1/64`, the full completed mat
 
 Retain the fleet04/B12 r8 source
 
-`yspennstate/math-open-problems@bcb9fd2641440a89d6e4967781d755618e163001`.
+`private-source-repository@bcb9fd2641440a89d6e4967781d755618e163001`.
 
 On its concrete carrier it proves
 

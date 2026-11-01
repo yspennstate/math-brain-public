@@ -16,7 +16,7 @@ The unrestricted conjecture is not proved here. All random variables remain orig
 
 This run deliberately changes mechanism after the preceding collision runs. The analytic receiver is Theorem D from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
@@ -34,7 +34,7 @@ The same proof gives an `L^1` characteristic function, hence a `C_0` density. Th
 
 The freshest designated partner fleet02/B04 r18 is
 
-`yspennstate/math-open-problems@0999bcddc0ce4780efe4c4b6cd3792cbe34b3eb3`
+`private-source-repository@0999bcddc0ce4780efe4c4b6cd3792cbe34b3eb3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260924T031958Z-fleet02-B04-QFORM-auto11-r18/REPORT.md`.
 

@@ -23,7 +23,7 @@ The result is sign-independent and hence applies in particular to both B11 signa
 
 From fleet03/B14 r16, canonical source
 
-`yspennstate/math-open-problems@89e6481f4f7ed7d49a77cfcb989ee93572d5d5cd`
+`private-source-repository@89e6481f4f7ed7d49a77cfcb989ee93572d5d5cd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T190524Z-fleet03-B14-QFORM-r16/REPORT.md`,
 
@@ -37,7 +37,7 @@ The same theorem is valid after conditioning all outside original coordinates; t
 
 The source-valid Rogozin--Ball projection consequence used throughout the current QFORM package says that every normalized linear form of independent cap-one variables has density cap at most `sqrt(2)`. One pinned source recording exactly this input is
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -47,7 +47,7 @@ No support, moment, log-concavity, centering or connectedness hypothesis is atta
 
 The newest completed fleet02/B11 report consumed is available at
 
-`yspennstate/math-open-problems@8d6e85d072cd7a4c0fa9a37abe995a64109079e0`
+`private-source-repository@8d6e85d072cd7a4c0fa9a37abe995a64109079e0`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T145222Z-fleet02-B11-QFORM-auto11b/REPORT.md`.
 
@@ -55,7 +55,7 @@ Its theorem `QFORM-NULL-RULING-LIGHT-CROSSCUT-v1` pays the diffuse approximate-n
 
 I also use the immediately preceding completed assigned-partner theorem
 
-`yspennstate/math-open-problems@8ae1a16002c77879645875d1e3b9a9d136365289`
+`private-source-repository@8ae1a16002c77879645875d1e3b9a9d136365289`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T141910Z-fleet02-B11-QFORM-auto11/REPORT.md`.
 

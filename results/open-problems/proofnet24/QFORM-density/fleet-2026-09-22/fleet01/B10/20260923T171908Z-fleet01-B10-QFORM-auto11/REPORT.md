@@ -61,7 +61,7 @@ That packet retains the hub in the third-rank volume. The immediate preceding tw
 
 The newest completed designated fleet02/B10 report used here is
 
-`yspennstate/math-open-problems@144e391e6a0aed00bb8ded766cf5609d88d260b2`,
+`private-source-repository@144e391e6a0aed00bb8ded766cf5609d88d260b2`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T164541Z-fleet02-B10-QFORM-r11/REPORT.md`.
 
@@ -82,7 +82,7 @@ The compatible completed analytic theorem is fleet01/B03
 
 canonical source
 
-`yspennstate/math-open-problems@4b7608c198ea570378ae30b5a22d63ba7d387534`,
+`private-source-repository@4b7608c198ea570378ae30b5a22d63ba7d387534`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T165124Z-fleet01-B03-QFORM-r29/REPORT.md`.
 
@@ -307,22 +307,22 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, diagonal
 Fresh control before publication:
 
 Designated fleet02/B10 result actually applied:
-`yspennstate/math-open-problems@144e391e6a0aed00bb8ded766cf5609d88d260b2`,
+`private-source-repository@144e391e6a0aed00bb8ded766cf5609d88d260b2`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T164541Z-fleet02-B10-QFORM-r11/REPORT.md`.
 
 Row-marginal-free analytic compiler:
-`yspennstate/math-open-problems@4b7608c198ea570378ae30b5a22d63ba7d387534`,
+`private-source-repository@4b7608c198ea570378ae30b5a22d63ba7d387534`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T165124Z-fleet01-B03-QFORM-r29/REPORT.md`.
 
 Immediate B10 predecessors:
-`yspennstate/math-open-problems@79295a936c9f88cf9356c6ed5d52090fa1cedc37`,
+`private-source-repository@79295a936c9f88cf9356c6ed5d52090fa1cedc37`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260923T152129Z-fleet01-B10-QFORM-auto11/REPORT.md`,
 and
-`yspennstate/math-open-problems@591cf390780c8acf7e3dfac2ea7195ba56552276`,
+`private-source-repository@591cf390780c8acf7e3dfac2ea7195ba56552276`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260923T160221Z-fleet01-B10-QFORM-auto11/REPORT.md`.
 
 Newest Claude continuation checked but not used as a proved missing bridge:
-`yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`,
+`private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`,
 `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md` and associated single-hub notes; its `(SP)` remains proposed/open.
 
 Repository transport is not native learned-memory ingestion. This run remains `WITHOUT_VERIFIED_BRAIN`.

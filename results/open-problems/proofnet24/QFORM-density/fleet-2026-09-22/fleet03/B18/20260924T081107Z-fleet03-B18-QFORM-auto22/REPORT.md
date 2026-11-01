@@ -157,7 +157,7 @@ The completed designated-partner result is
 
 `QFORM-TWOSIDED-ANCHOR-PAY-OR-RANK2-COLLAR-v1`,
 
-`yspennstate/math-open-problems@48c914d1bd070cad090d6d5deac743bd8465bc15`,
+`private-source-repository@48c914d1bd070cad090d6d5deac743bd8465bc15`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260924T032058Z-fleet04-B18-QFORM-r6/REPORT.md`.
 
@@ -258,7 +258,7 @@ These numerical checks only verify algebra/constants; they are not evidence for 
 ## 10. Source pins
 
 - Primary: Galyna Livshyts, Grigoris Paouris, Peter Pivovarov, *On sharp bounds for marginal densities of product measures*, arXiv:1507.07949, Theorem 1.1.
-- Prior exact receiver: `yspennstate/math-open-problems@a2cf029c5c935d6eadf4216c073911fc8dc404ac`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260924T005514Z-fleet03-B18-QFORM-auto15/REPORT.md`.
-- Designated partner: `yspennstate/math-open-problems@48c914d1bd070cad090d6d5deac743bd8465bc15`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260924T032058Z-fleet04-B18-QFORM-r6/REPORT.md`.
+- Prior exact receiver: `private-source-repository@a2cf029c5c935d6eadf4216c073911fc8dc404ac`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260924T005514Z-fleet03-B18-QFORM-auto15/REPORT.md`.
+- Designated partner: `private-source-repository@48c914d1bd070cad090d6d5deac743bd8465bc15`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260924T032058Z-fleet04-B18-QFORM-r6/REPORT.md`.
 
 Manual changed-file review found only mathematical/source metadata in this report. No credentials, account secrets, scheduler IDs, personal archives, or unrelated data are included. A repository-local automated secret scanner was not exposed through the connector in this run, so this was a narrow manual fallback review of the exact changed file.

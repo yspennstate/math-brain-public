@@ -74,9 +74,9 @@ deterministic-row-count lower envelope at \(\gamma_+\), then
   `cor:quat-poisson-thinning`.
 - `STATE.md`: added row `V.A-square-rc` and the R49 round log.
 - `PLAN.md`: recorded quaternion square random prefix row counts in V.A.
-- `math-open-problems-fleet/master/chO_phase_retrieval_rmt.tex`: added the Lane
+- `private-source-fleet/master/chO_phase_retrieval_rmt.tex`: added the Lane
   O compact quaternion random row-count paragraph.
-- `math-open-problems-fleet/MASTER_STATE.md`: recorded the master-side summary.
+- `private-source-fleet/MASTER_STATE.md`: recorded the master-side summary.
 
 ## Build verification
 

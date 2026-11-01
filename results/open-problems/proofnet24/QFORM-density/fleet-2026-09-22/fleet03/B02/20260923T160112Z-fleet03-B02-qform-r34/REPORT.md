@@ -15,7 +15,7 @@ attacking: pay the remaining one-sided strip and low-rank double-anchor packets 
 
 The newest completed designated-partner result actually applied in this run is fleet04/B02,
 
-`yspennstate/math-open-problems@782125ea5050ded274e68cae768cde540fbaa3c7`,
+`private-source-repository@782125ea5050ded274e68cae768cde540fbaa3c7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260923T151038Z-fleet04-B02-QFORM-r1/REPORT.md`.
 
@@ -39,7 +39,7 @@ No singular-vector coordinates are declared independent; (1.1)-(1.5) are determi
 
 The integrated-Fourier compiler used next is my completed `QFORM-E3-MARGINAL-OVERLOAD-ANCHOR-COMPILER-v1`,
 
-`yspennstate/math-open-problems@cb55a355bc5c623eb5a98c1db8a0ebaa58ff1027`,
+`private-source-repository@cb55a355bc5c623eb5a98c1db8a0ebaa58ff1027`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T125927Z-fleet03-B02-qform-r30/REPORT.md`.
 
@@ -55,13 +55,13 @@ For a nonzero anchor edge `a`, the exact identity is `J=a^2 E2(S)` for the algeb
 
 For the nonzero-edge rank-at-least-three descent I also use my r32 theorem
 
-`yspennstate/math-open-problems@3cc1145d1fb015deed33085d536db7156d918225`,
+`private-source-repository@3cc1145d1fb015deed33085d536db7156d918225`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T142846Z-fleet03-B02-qform-r32/REPORT.md`,
 
 and the r33 H2-to-H3-or-strips compiler
 
-`yspennstate/math-open-problems@604b3273a6db312558088b7ed2a9d9735c546e7a`,
+`private-source-repository@604b3273a6db312558088b7ed2a9d9735c546e7a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T150032Z-fleet03-B02-qform-r33/REPORT.md`.
 

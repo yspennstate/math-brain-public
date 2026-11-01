@@ -2,7 +2,7 @@
 
 Programme: QFORM-DENSITY-3EIG-20260922. Full QFORM remains OPEN.
 
-Fresh partner input actually used: fleet02/B13 r30, `math-open-problems@f6ad7b994c1ba509af30fceaf45e8b464db86af8`, which gives for any physical cross block `B` and slab ratio `rho` the alternative: either `s3(B)<=C3/rho`, `C3=9 sqrt(3e)`, or there are a physical row `i` and physical column `j` whose squared-third-minor marginals exceed `2/3`; hence their joint anchored third-volume is more than `Z/3`, where `Z=e3(B^T B)`.
+Fresh partner input actually used: fleet02/B13 r30, `private-source@f6ad7b994c1ba509af30fceaf45e8b464db86af8`, which gives for any physical cross block `B` and slab ratio `rho` the alternative: either `s3(B)<=C3/rho`, `C3=9 sqrt(3e)`, or there are a physical row `i` and physical column `j` whose squared-third-minor marginals exceed `2/3`; hence their joint anchored third-volume is more than `Z/3`, where `Z=e3(B^T B)`.
 
 New exact calculation. Reorder the chosen row/column to the first positions and write
 

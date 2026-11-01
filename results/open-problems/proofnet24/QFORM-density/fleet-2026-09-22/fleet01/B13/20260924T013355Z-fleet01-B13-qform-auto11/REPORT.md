@@ -109,7 +109,7 @@ There is no uniform diameter bound and no uniform bound on the number of compone
 The completed designated partner result used in this run is fleet02/B13 r38, canonical source
 
 ```
-yspennstate/math-open-problems@3da714c7dea66b4f81087bf9637a6eac060b5b6a
+private-source-repository@3da714c7dea66b4f81087bf9637a6eac060b5b6a
 proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/
 20260923T235922Z-fleet02-B13-qform-r38/REPORT.md
 ```

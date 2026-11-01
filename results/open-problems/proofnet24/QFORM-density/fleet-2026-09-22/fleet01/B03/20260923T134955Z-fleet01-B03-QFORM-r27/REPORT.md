@@ -32,7 +32,7 @@ The current live correction inbox blob was `c7000cf3822ae4935a2faf43b89ac92ea65a
 
 The completed designated-partner result actually used is:
 
-`yspennstate/math-open-problems@ab591d183afaaeb8c8accbc9a80c06241f433532`
+`private-source-repository@ab591d183afaaeb8c8accbc9a80c06241f433532`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T041654Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 
@@ -51,7 +51,7 @@ The same report applies the completed physical-pair logarithmic theorem.
 
 The logarithmic pair theorem itself was read from:
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 

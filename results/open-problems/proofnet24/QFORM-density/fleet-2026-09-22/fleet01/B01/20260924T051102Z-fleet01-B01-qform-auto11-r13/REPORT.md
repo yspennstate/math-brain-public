@@ -24,7 +24,7 @@ with `alpha>0` is asserted. The argument below uses only joint averaged-frequenc
 Source-pinned premises actually used:
 
 1. **Designated partner, newest completed fleet02/B01 theorem available at the start of this run:** `QFORM-STAR-EDGE-TAIL-HALFRIESZ-v1`,
-   `yspennstate/math-open-problems@c4b014741e90e63a6890920d3f1f8b17747f6797`,
+   `private-source-repository@c4b014741e90e63a6890920d3f1f8b17747f6797`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T040416Z-fleet02-B01-qform-auto11-r43/REPORT.md`.
    Its equation (2.9), applied to an arbitrary nonempty leaf group with slope vector `c_G`, gives
 
@@ -33,7 +33,7 @@ Source-pinned premises actually used:
    The proof retains arbitrary diagonal quadratic phases and affine terms on the leaves.
 
 2. **Orientation-free physical-pair half-Riesz theorem:**
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
    `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`:
 
    `H_{1/2}(Z^T Lambda Z + ell^T Z + c) <= 128 |det Lambda|^{-1/4}`
@@ -41,7 +41,7 @@ Source-pinned premises actually used:
    for every invertible symmetric physical `2 x 2` matrix `Lambda`, arbitrary affine term, and two independent cap-one coordinates.
 
 3. **Previous fleet01/B01 any-sign two-pivot receiver and square peel:**
-   `yspennstate/math-open-problems@5a750c5b1188ea297a92c01b9692de5d87ab7f4c`,
+   `private-source-repository@5a750c5b1188ea297a92c01b9692de5d87ab7f4c`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260924T041020Z-fleet01-B01-qform-auto11-r12/REPORT.md`.
    If `s_3(A)>=s>0` and an ORIGINAL physical pair has first LDL pivot `a!=0` and second pivot `d!=0`, then
 

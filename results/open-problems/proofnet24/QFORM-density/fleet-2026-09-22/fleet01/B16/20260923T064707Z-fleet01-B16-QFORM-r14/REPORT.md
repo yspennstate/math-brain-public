@@ -22,7 +22,7 @@ A same-hour fleet01/B16 login already existed when this invocation began (`20260
 
 The source-valid transfer recorded at
 
-`yspennstate/math-open-problems@85c3d540cf82ea6a6aca0f22f31811516a8b81aa`
+`private-source-repository@85c3d540cf82ea6a6aca0f22f31811516a8b81aa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`
 
@@ -37,7 +37,7 @@ No independence between the two projected coordinates is asserted.
 
 The completed theorem `QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1` is in
 
-`yspennstate/math-open-problems@85c3d540cf82ea6a6aca0f22f31811516a8b81aa`
+`private-source-repository@85c3d540cf82ea6a6aca0f22f31811516a8b81aa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T003846Z/REPORT.md`.
 
@@ -67,7 +67,7 @@ If the scalar has density cap `K` instead of one, rescale `X~=KX`. The transform
 
 The completed `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, source
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`,
 
@@ -80,7 +80,7 @@ gives, for a two-dimensional orthogonal product projection and invertible symmet
 
 Fleet02/B16 proved `QFORM-NULL-SCALAR-DEPENDENT-PAIR-v1` at
 
-`yspennstate/math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
+`private-source-repository@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T232932Z-fleet02-B16-QFORM-auto11/REPORT.md`.
 
@@ -97,7 +97,7 @@ The pair `(C,D)` may be dependent. This theorem is applied below to an actual nu
 
 The newest designated-partner stress family was also read at
 
-`yspennstate/math-open-problems@36cc5730f42c76c15fdc330dc4b47beec060b8fd`
+`private-source-repository@36cc5730f42c76c15fdc330dc4b47beec060b8fd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T053136Z-fleet02-B16-QFORM-auto11/REPORT.md`.
 

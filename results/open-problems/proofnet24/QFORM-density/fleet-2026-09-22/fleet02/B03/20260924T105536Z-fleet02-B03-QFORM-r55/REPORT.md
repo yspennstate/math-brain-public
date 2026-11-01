@@ -139,7 +139,7 @@ Thus a universal negative-half whole-copy time budget can coexist with arbitrari
 
 ## 5. Newest partner fleet03/B03 r52: same spectrum, opposite placement
 
-The latest compatible partner theorem is fleet03/B03 r52, `QFORM-2PLUS1-ZEROPIVOT-DETERMINANT-v1` (canonical report at math-open-problems commit cead39f2714d739dd5d00c7d3a537de4adba4732). For a dependent pair of joint density cap M and an independent scalar of density cap N, an invertible matrix
+The latest compatible partner theorem is fleet03/B03 r52, `QFORM-2PLUS1-ZEROPIVOT-DETERMINANT-v1` (canonical report at private-source commit cead39f2714d739dd5d00c7d3a537de4adba4732). For a dependent pair of joint density cap M and an independent scalar of density cap N, an invertible matrix
 
     B = [[A,c],[c^T,0]]
 
@@ -177,7 +177,7 @@ Now return to genuine original independent cap-one coordinates X_1,X_2,X_3 and k
 
     Q_orig = 2 X_1 X_2 + X_3^2.
 
-All three eigenvalues of B_bad have modulus one. The completed pinned `COUNTEREXAMPLE_SEARCH` Theorem A at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` states that for a three-dimensional quadratic with all eigenvalues of modulus at least sigma, uniformly in affine terms,
+All three eigenvalues of B_bad have modulus one. The completed pinned `COUNTEREXAMPLE_SEARCH` Theorem A at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` states that for a three-dimensional quadratic with all eigenvalues of modulus at least sigma, uniformly in affine terms,
 
     ||p_Q||_infinity <= 6 sqrt(pi)/sigma.
 

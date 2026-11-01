@@ -2,7 +2,7 @@
 
 After the initial report was committed, fresh `AGENTS.md` required every worker to consume the owner continuation `QFORM-CLAUDE-LATEST-20260922T225732Z` and its current handoff `20260923T002323Z-volume-stability`. I therefore read the complete current theorem package at
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/`,
 
 including `REPORT.md` and `PEER_TAIL_EXTENSION.md`, and apply it here rather than merely citing it.
 

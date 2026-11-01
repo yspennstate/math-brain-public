@@ -15,9 +15,9 @@ This run preserves the live corrections: no independence is inferred after rotat
 
 Fresh completed dependencies actually used:
 
-1. **Designated partner fleet02/B16**, run `20260922T163840Z-fleet02-B16-qform-r13`, canonical mathematics `yspennstate/math-open-problems@d2e3dd1587a3fa93707631ea847c48279f3dc6dc`. Its source-valid triangular representation of a two-dimensional orthogonal projection gives, for a physical projection row of leverage `eta=r^2`, a joint projection-density bound `sqrt(2)/r = sqrt(2) eta^(-1/2)` without claiming independence of the two projected coordinates.
-2. **fleet02/B06**, canonical mathematics `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, theorem `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`: every two-dimensional orthogonal projection of a cap-one product law has joint density at most `e`.
-3. **fleet03/B06**, canonical mathematics `yspennstate/math-open-problems@5aec7529c2a065de05a62a95c6462ce90f12c521`, which identified the heavy isotropic exact-rank-three frontier `ell_i>1/2, A_ii=0` as unpaid. Section 5 below closes precisely that frontier.
+1. **Designated partner fleet02/B16**, run `20260922T163840Z-fleet02-B16-qform-r13`, canonical mathematics `private-source-repository@d2e3dd1587a3fa93707631ea847c48279f3dc6dc`. Its source-valid triangular representation of a two-dimensional orthogonal projection gives, for a physical projection row of leverage `eta=r^2`, a joint projection-density bound `sqrt(2)/r = sqrt(2) eta^(-1/2)` without claiming independence of the two projected coordinates.
+2. **fleet02/B06**, canonical mathematics `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, theorem `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`: every two-dimensional orthogonal projection of a cap-one product law has joint density at most `e`.
+3. **fleet03/B06**, canonical mathematics `private-source-repository@5aec7529c2a065de05a62a95c6462ce90f12c521`, which identified the heavy isotropic exact-rank-three frontier `ell_i>1/2, A_ii=0` as unpaid. Section 5 below closes precisely that frontier.
 
 ## 2. One-dimensional quadratic pullback lemma
 

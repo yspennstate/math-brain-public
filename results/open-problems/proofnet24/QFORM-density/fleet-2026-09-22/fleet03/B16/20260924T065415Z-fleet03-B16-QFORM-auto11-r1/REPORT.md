@@ -17,7 +17,7 @@ The owner target remains the unrestricted statement for independent ORIGINAL-coo
 
 The immediate predecessor is fleet03/B16 r42:
 
-`yspennstate/math-open-problems@a7172687ed5ae3bc9154a1cf792c9afa21f2119f`
+`private-source-repository@a7172687ed5ae3bc9154a1cf792c9afa21f2119f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260924T055252Z-fleet03-B16-QFORM-r42/REPORT.md`.
 
@@ -169,7 +169,7 @@ The completed orientation-free rank-two theorem
 
 is source-pinned at
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -200,7 +200,7 @@ Thus
 
 This is also a direct specialization of the already-completed fleet02/B20 theorem `QFORM-HALFRIESZ-PLUS-DISJOINT-SQUARE-v1`, source
 
-`yspennstate/math-open-problems@20ec5f8f3ed2028edf27894cd3956d13e4662a9a`,
+`private-source-repository@20ec5f8f3ed2028edf27894cd3956d13e4662a9a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T155833Z-fleet02-B20-QFORM-auto11c/REPORT.md`.
 
@@ -212,7 +212,7 @@ No new continuity claim is needed for this correction. Global QFORM continuity r
 
 The newest completed designated partner report consumed is fleet04/B16 r4, canonical source
 
-`yspennstate/math-open-problems@7f2bb2d330022b09a6af6e39ab09d054caeaa346`,
+`private-source-repository@7f2bb2d330022b09a6af6e39ab09d054caeaa346`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260924T041516Z-fleet04-B16-QFORM-r4/REPORT.md`.
 

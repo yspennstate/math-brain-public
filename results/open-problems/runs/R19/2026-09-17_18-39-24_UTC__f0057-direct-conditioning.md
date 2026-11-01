@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 # R19 — F0057 direct-conditioning route
 
 Run date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity: preserve I0084 exactly, do not reopen it
 

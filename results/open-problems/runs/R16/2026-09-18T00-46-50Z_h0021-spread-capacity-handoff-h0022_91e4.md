@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 
 # R16 HARD OUTSIDE — spread-capacity obstruction on H0021; mandatory handoff; H0022 admission
 
-Date: 2026-09-18 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-18 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Outgoing active source: H0021 = Asaf Cohen Antonir, Lyuben Lichev, Maksim Zhukovskii, *Universality in random graphs via optimal linking systems: trees and beyond*, arXiv:2608.06358v1 (6 August 2026), Conjecture 1.4.
 

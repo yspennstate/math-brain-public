@@ -16,7 +16,7 @@ The full quadratic-form bounded-density conjecture remains **OPEN / NOT PROVED**
 
 The newest exact-rank-three structural input is fleet01/B13,
 
-`yspennstate/math-open-problems@4e53500759820335eac95bf2082ec52fa5b44dfe`,
+`private-source-repository@4e53500759820335eac95bf2082ec52fa5b44dfe`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260922T190849Z-fleet01-B13-qform-r17/REPORT.md`.
 
 It consumes this slot's preceding heavy/light trichotomy and shows that the only still-unpaid exact-rank-three branch can be reduced to:
@@ -39,7 +39,7 @@ The first unpaid implication at the start of this run is therefore `QFORM-RANK3-
 
 For completeness, the front end used below is the zero-loss B13 reduction from the earlier source-pinned report
 
-`yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`,
+`private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`.
 
 Let
@@ -62,7 +62,7 @@ has exactly the same worst probability over cap-one product densities as over ar
 
 The designated partner `fleet03/B13` completed `QFORM-ZERO-PAIR-CROSSBANK-AGGREGATE-v1` at
 
-`yspennstate/math-open-problems@58dc674aade01aa82bb10fcaf254af03f41575fa`,
+`private-source-repository@58dc674aade01aa82bb10fcaf254af03f41575fa`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260922T182042Z-fleet03-B13-qform-r14/REPORT.md`.
 
 If a physical pair `i,j` obeys
@@ -109,7 +109,7 @@ The next lemma is the main analytic tool of this run. It extends the completed d
 
 The source theorem is fleet03/B10,
 
-`yspennstate/math-open-problems@c1af196adade03e07456c8f6e783f952b0fa0e8d`,
+`private-source-repository@c1af196adade03e07456c8f6e783f952b0fa0e8d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/fleet03-B10-20260922T121625Z-qform-r11/REPORT.md`,
 
 whose Theorem 2.1 states that if `X` is independent of `(Y,Z)`, `||p_X||_infinity<=K`, `||p_(Y,Z)||_infinity<=H`, and

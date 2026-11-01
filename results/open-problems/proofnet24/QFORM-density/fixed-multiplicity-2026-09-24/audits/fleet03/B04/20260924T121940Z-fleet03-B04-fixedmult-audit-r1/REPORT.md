@@ -8,7 +8,7 @@ attacking: QFORM-FIXED-MULTIPLICITY-AUDIT-20260924, with the B04 lens on the geo
 Current owner objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 
 Pinned baseline manuscript:
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - initial source commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`
 - source blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`
 - stated SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`

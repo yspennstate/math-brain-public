@@ -15,7 +15,7 @@ The full target remains OPEN. No projected spectral coordinates are declared ind
 
 The latest completed named partner fleet03/B10 result is `QFORM-NULL-BANK-CAPONE-COMPRESSION-v1`, canonical source
 
-`yspennstate/math-open-problems@a3dd62b198d84dc9b92653b8a9c77494fc6ed2d4`
+`private-source-repository@a3dd62b198d84dc9b92653b8a9c77494fc6ed2d4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T191739Z-fleet03-B10-QFORM-r15/REPORT.md`.
 
@@ -158,13 +158,13 @@ Also `|det B|=a^2>=c_*sigma^2/1024`. QED.
 
 Two completed source theorems are now applied, not re-proved:
 
-* `QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1`, source `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, proves
+* `QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1`, source `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, proves
 
   `||p_Q||inf <=128[c_j |A_jj| |det M|]^(-1/4)`
 
   for a nonzero physical pivot, with arbitrary affine/outside terms.
 
-* `QFORM-RANK3-INDEFINITE-PAIR-PIVOT-v1`, source `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, proves for an invertible indefinite physical pair
+* `QFORM-RANK3-INDEFINITE-PAIR-PIVOT-v1`, source `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, proves for an invertible indefinite physical pair
 
   `||p_Q||inf <=8sqrt(5)(D*kappa*sigma)^(-1/4)`,
 

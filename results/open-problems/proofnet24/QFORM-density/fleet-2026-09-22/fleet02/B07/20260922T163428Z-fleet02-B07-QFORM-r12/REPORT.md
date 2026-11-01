@@ -12,7 +12,7 @@ The full target remains open. For arbitrary dimension, independent real coordina
 
 The incoming fleet02/B07 theorem was `QFORM-EXTERIOR-PACKET-ENERGY-TRANSFER-v1`, source
 
-`yspennstate/math-open-problems@92802adbc9d6fd13ba3be5ab3abea17fa8c49e19`,
+`private-source-repository@92802adbc9d6fd13ba3be5ab3abea17fa8c49e19`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T160205Z-fleet02-B07-QFORM-r11/REPORT.md`.
 
@@ -34,7 +34,7 @@ This run pays the entire **disjoint `q=0` overlap stratum up to a bounded four-c
 
 The analytic input is the complete source `QFORM-RIDGE-DENSITY-v1`,
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
@@ -58,7 +58,7 @@ The completed designated partner theorem actually applied is
 
 `QFORM-NESTED-HEAVY-DISJOINT-BANK-COLLAR-v1`,
 
-`yspennstate/math-open-problems@494c999fc67d230fff7e2079b1867216253b35bc`,
+`private-source-repository@494c999fc67d230fff7e2079b1867216253b35bc`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T154026Z-fleet03-B07-qform-r11/REPORT.md`.
 
@@ -68,7 +68,7 @@ Its nested-heavy exact-rank-three packet has fixed-pair Pluecker mass `ch>1/4`; 
 
 I also re-read the source of fleet02/B06's correction `QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1`,
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # P03 HARD OUTSIDE — I0003 final recovery, terminal handoff, and rotation to Randomstrasse Conjecture 17
 
-Repository: `yspennstate/math-open-problems` / `master`.  
+Repository: `private-source-repository` / `master`.  
 Run date: 2026-09-17 UTC.  
 Predecessor claim: `operations/claims/I0003.md`.  
 Successor claim created this run: `operations/claims/RS-2025-TH17.md`.

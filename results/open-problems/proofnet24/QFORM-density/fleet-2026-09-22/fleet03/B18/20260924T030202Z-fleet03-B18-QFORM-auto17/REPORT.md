@@ -291,7 +291,7 @@ If `|a|,|b|>=1`, this is a literal instance of the owner target, with continuous
 
 The designated partner result is fleet04/B18 r5, `QFORM-4COORD-NULLHUB-WINDOW-EDGE-DICHOTOMY-v1`, canonical report
 
-`yspennstate/math-open-problems@84fa5922df082f90064dea4d22a600a60e799803`
+`private-source-repository@84fa5922df082f90064dea4d22a600a60e799803`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T221534Z-fleet04-B18-QFORM-r5/REPORT.md`.
 

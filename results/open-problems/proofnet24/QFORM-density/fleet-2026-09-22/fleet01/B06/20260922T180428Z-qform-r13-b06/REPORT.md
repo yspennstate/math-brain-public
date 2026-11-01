@@ -12,7 +12,7 @@ The full target remains open: for every finite `n`, independent real `X_i` with 
 
 This report changes mechanism relative to my preceding local-triple run. The previous theorem, canonical source
 
-`yspennstate/math-open-problems@1bc95193312b70572b2765529ac3b6d98e3fe754:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T160048Z-qform-r12-b06/REPORT.md`,
+`private-source-repository@1bc95193312b70572b2765529ac3b6d98e3fe754:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T160048Z-qform-r12-b06/REPORT.md`,
 
 proved the following physical three-coordinate bound. If `M` is an invertible symmetric `3x3` Hessian block and three independent inputs have density cap one, then arbitrary affine perturbations satisfy
 
@@ -30,7 +30,7 @@ That run also proved that applying (0.1) separately to tiny physical triples and
 
 The named designated-partner result actually consumed and applied here is fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical source
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
 For an `N x k` matrix `R` with orthonormal columns and independent cap-one input coordinates, it proves
 

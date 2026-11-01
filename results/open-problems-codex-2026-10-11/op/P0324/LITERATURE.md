@@ -73,7 +73,7 @@ ArXiv searches: the first broad query returned many irrelevant Riesz-operator pa
 
 ## Read-only research brain and earlier work
 Ran math_recall.py on "Riesz gas free energy cumulant analyticity" and "Prekopa convex Hamiltonian temperature variance", and brain.py recall on "Riesz gas analyticity mistakes" and "one-dimensional Riesz free energy". The relevant previous-attempt card is claim_ea8e25cca971c64c25308f9a295caf1098dcf59bc250b52be36b1418748264f7: energy cumulants and a generic nonanalytic-limit example, with no solution. Its claims were treated as hints and proved independently here.
-Read-only rg searched the expanded probability_1000_intake_* directories and codex_pool_2026_10_10 for P0324. The 7 September ranking records an unsolved cumulant obstruction. git ls-tree on origin/master in math-open-problems did not locate a dedicated P0324 path; no working-tree changes were made. No memory or repository was modified.
+Read-only rg searched the expanded probability_1000_intake_* directories and codex_pool_2026_10_10 for P0324. The 7 September ranking records an unsolved cumulant obstruction. git ls-tree on origin/master in private-source did not locate a dedicated P0324 path; no working-tree changes were made. No memory or repository was modified.
 
 ## Second-attempt neighboring theorem search, 2026-10-12
 

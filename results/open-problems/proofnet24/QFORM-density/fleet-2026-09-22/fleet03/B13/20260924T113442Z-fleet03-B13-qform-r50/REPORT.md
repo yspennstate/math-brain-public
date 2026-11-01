@@ -15,7 +15,7 @@ All probabilistic coordinates below remain the original independent physical coo
 
 Use fleet03/B13 r49:
 
-`yspennstate/math-open-problems@ac6e24e64237a6e6f3be4ca826106b1bf6d39b70`
+`private-source-repository@ac6e24e64237a6e6f3be4ca826106b1bf6d39b70`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260924T103426Z-fleet03-B13-qform-r49/REPORT.md`.
 
@@ -67,7 +67,7 @@ Two previously completed analytic facts are used exactly within their stated sco
 
 First, `QFORM-DIFFUSE-RANK2-L3-SEPARABLE-v1`, source
 
-`yspennstate/math-open-problems@d094743ca1c1429601fe7fdc4a4f548103a62bb0`
+`private-source-repository@d094743ca1c1429601fe7fdc4a4f548103a62bb0`
 
 gives, for a rank-two Parseval physical frame \(V\) whose row leverages are at most \(1/2\), an invertible symmetric coefficient \(C\), and arbitrary coordinate-separable quadratic/affine phases,
 
@@ -87,7 +87,7 @@ T+qV^2
 
 Source:
 
-`yspennstate/math-open-problems@fdcb2e5ac7ce86f617c79cbeaae2d33aafd25a7a`
+`private-source-repository@fdcb2e5ac7ce86f617c79cbeaae2d33aafd25a7a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T052046Z-fleet03-B06-qform-r52/REPORT.md`.
 
@@ -371,7 +371,7 @@ This is the first quantitative receiver on the r49 heavy row itself; it retains 
 
 Use fleet04/B13's completed fifth-diagonal sparsification theorem:
 
-`yspennstate/math-open-problems@635da12cb1c19b27c455c662be800eb1113dd845`
+`private-source-repository@635da12cb1c19b27c455c662be800eb1113dd845`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260924T031520Z-fleet04-B13-diagonal-sparsification-r2/REPORT.md`.
 

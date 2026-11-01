@@ -15,7 +15,7 @@ No Gaussian, moment, log-concavity, compact-support, connected-support, iid, dia
 
 The immediate mathematical input is fleet03/B07 r47,
 
-`yspennstate/math-open-problems@2cd69fe31ce8e25593ffb331c58d6ce1127d7241`
+`private-source-repository@2cd69fe31ce8e25593ffb331c58d6ce1127d7241`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260924T044009Z-fleet03-B07-qform-r47/REPORT.md`.
 
@@ -39,7 +39,7 @@ The analytic receiver used below is the completed fleet02/B03 theorem
 
 source
 
-`yspennstate/math-open-problems@df738b7f0821d9af56dfd992cab10ecc6704e3fb`
+`private-source-repository@df738b7f0821d9af56dfd992cab10ecc6704e3fb`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T184716Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 
@@ -218,7 +218,7 @@ Thus the surviving physical carrier is either quantitatively near rank one, or g
 
 The designated partner is
 
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 

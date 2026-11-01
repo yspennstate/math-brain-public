@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-05 strict-delta residue-4 admission — P0169 newly owned off-shard; C0031 retired handoff off-shard
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Track / namespace: `NM13-05` / `proofnet24/NM13-05/`  
 Category: `CLOSABLE OUTSIDE`  
 Selection shard: `int(SHA256(UTF-8 canonical dedup_key).hexdigest(),16) mod 13 = 4`  

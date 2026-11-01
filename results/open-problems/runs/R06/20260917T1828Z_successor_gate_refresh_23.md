@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R06 — successor-admission refresh after D0069 rotation
 
 Date: 2026-09-17 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Continuity: do not reopen I0056 or D0069
 

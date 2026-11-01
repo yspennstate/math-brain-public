@@ -20,7 +20,7 @@ This run deliberately changes mechanism after the preceding row-cap/third-volume
 
 The exact-rank crossing input is
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 Its Section 1 says: if independent physical banks `X_R,X_C` have an exact-rank-two crossing matrix `N` with nonzero singular values `s_1,s_2`, product `P=s_1 s_2`, and the two corresponding orthogonal projections have density caps `M_R,M_C`, then arbitrary measurable same-bank functions are permitted and
@@ -33,7 +33,7 @@ For arbitrary cap-one product banks, `M_R,M_C<=2`. If a bank consists of exactly
 
 The completed designated partner source used below is fleet02/B04 r21,
 
-`yspennstate/math-open-problems@bb6e1a7e2e46a3434649dfd1b6a4afe94d25e7fa`,
+`private-source-repository@bb6e1a7e2e46a3434649dfd1b6a4afe94d25e7fa`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/9a73ca69-5439-45c6-9b34-581521e6e6a2/REPORT.md`.
 
 It supplies the fully dense six-coordinate zero-tetrad clique matrix `A_*`, proves all six eigenvalues have modulus greater than one, and gives the actual full-law bound `||p_{X^T A_* X}||_infinity <= 3 sqrt(pi)` by a physical three-coordinate principal-curvature receiver.

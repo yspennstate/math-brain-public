@@ -25,7 +25,7 @@ where
 
 The partner also proves the ten-center/two-line structural alternatives, but the calculation below uses only the displayed hard-branch inequalities and the diffuse leverage bound.
 
-The required pinned Fourier source is `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`. Its Theorem F plus the half-potential/square-peel Corollary 4.4(i) says: if an ORIGINAL physical scalar pivot `a=A_kk` is nonzero and its Schur complement has the exact form
+The required pinned Fourier source is `private-source@e5f71d79eff325201dd0274053d20268ce65b837`. Its Theorem F plus the half-potential/square-peel Corollary 4.4(i) says: if an ORIGINAL physical scalar pivot `a=A_kk` is nonzero and its Schur complement has the exact form
 
 `S=D'+W N W^T`, `W^T W=I_2`,
 

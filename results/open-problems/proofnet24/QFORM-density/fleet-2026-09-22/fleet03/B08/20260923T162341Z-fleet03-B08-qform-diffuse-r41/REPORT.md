@@ -17,7 +17,7 @@ The unrestricted conjecture remains OPEN. Global continuity remains OPEN. The pa
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems@6b6cd1c3be8a9c23a3424593a38b0450acb61cfa`
+`private-source-repository@6b6cd1c3be8a9c23a3424593a38b0450acb61cfa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T144913Z-fleet03-B08-qform-diffuse-r40/REPORT.md`.
 
@@ -51,7 +51,7 @@ The present run attacks exactly that interface.
 
 The required source is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -77,7 +77,7 @@ A source search found a theorem matching this exact scope, so the early independ
 
 Canonical source snapshot:
 
-`yspennstate/math-open-problems@a9cb334579e92753035a96d258fa94cac01cdbfc`
+`private-source-repository@a9cb334579e92753035a96d258fa94cac01cdbfc`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/B02-20260922T120900Z-qform-r11/REPORT.md`.
 
@@ -195,7 +195,7 @@ Those identities are correct and regression-checked, but this route is no longer
 
 The completed designated partner is
 
-`yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
+`private-source-repository@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T091414Z-fleet04-B08-QFORM-r1/REPORT.md`.
 

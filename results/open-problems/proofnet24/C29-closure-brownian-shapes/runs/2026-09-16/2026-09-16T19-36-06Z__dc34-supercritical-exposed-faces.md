@@ -3,7 +3,7 @@ Problem/source: Chiara Meroni, Randomstrasse 101 (2026), Conjecture 34 on non-se
 
 # C29 — supercritical exposed faces, a face-localization lemma, and the residual 3D obstruction
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Own root: `proofnet24/C29-closure-brownian-shapes`.
 Run date: 2026-09-16.
 Delivery: private GitHub only. No email/Gmail, Drive, public posting, paid compute, permission change, shared-ledger edit, peer-file edit, or new schedule.

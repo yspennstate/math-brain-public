@@ -144,7 +144,7 @@ Z\ge |\det D|^2c_\delta^6(1+r^2).
 }
 \]
 
-Pinned `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, Theorem D states that under the row marginal condition,
+Pinned `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, Theorem D states that under the row marginal condition,
 \[
 \|p_Q\|_\infty\le6\sqrt e\,Z^{-1/6}.
 \]
@@ -220,7 +220,7 @@ The same circular family has no dimension-free exact two-plane bank, so this res
 
 ## Source and correction ledger
 
-- Pinned internal source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, Theorem D, exact constant `6 sqrt(e)` and row volume-marginal threshold `1/2`.
+- Pinned internal source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, Theorem D, exact constant `6 sqrt(e)` and row volume-marginal threshold `1/2`.
 - Pinned companion reports read: `FOURIER_ROUTE_REPORT.md` and `COUNTEREXAMPLE_SEARCH.md`; neither supplies a full counterexample, and both warn that pure cross-volume mechanisms degrade in shear/star-like regimes.
 - Completed partner consumed: fleet03/B18 r25, `QFORM-MSS-VOLUME-STABILITY-1OVER18-v1`.
 - Primary source checked: Marcus–Spielman–Srivastava, Annals of Mathematics 182 (2015), Corollary 1.5, DOI 10.4007/annals.2015.182.1.8.

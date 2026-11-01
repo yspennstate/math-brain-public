@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R01 CLOSABLE OUTSIDE — post-rotation admission screen and P0219 replenishment lead
 
-Repository / branch: `yspennstate/math-open-problems`, `master`.
+Repository / branch: `private-source-repository`, `master`.
 Deployment: `NEW-METHODS-2026-09-16`.
 
 ## 1. Continuity: I0024 remains frozen and is not reopened

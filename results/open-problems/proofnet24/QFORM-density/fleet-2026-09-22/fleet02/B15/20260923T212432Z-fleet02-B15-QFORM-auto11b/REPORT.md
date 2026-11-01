@@ -22,14 +22,14 @@ This run pays a sharper majority-side near-null branch and exhibits an exact tar
 
 The owner-pinned source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 I read its `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The result used below is its completed ruled one-sheet theorem (Theorem C). The current later audit in `20260922T231000Z-semidefinite-and-hub-reduction/README.md` is also consumed: the rank-three ruled theorem requires the affine term to lie in the quadratic range. In the ambient application below the active physical `3x3` block is invertible, so that condition is automatic after conditioning outside and completing the square.
 
 The designated partner result actually applied is fleet03/B15 at
 
-`yspennstate/math-open-problems@4d7b28c4737455388bd14f7bb7abeca5264dffd7`,
+`private-source-repository@4d7b28c4737455388bd14f7bb7abeca5264dffd7`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T202515Z-fleet03-B15-qform-auto11/REPORT.md`.
 
 It corrects the false affine-slope rescue and proves sharply, for cap-one `Z`, `gamma!=0`, `1<q<2`,

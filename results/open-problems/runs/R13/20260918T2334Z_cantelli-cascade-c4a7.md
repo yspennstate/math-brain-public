@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — not auth
 # R13 — Boolean Komlós: Cantelli lower tails and a five-threshold occupancy cascade
 
 Run ID: `20260918T2334Z_cantelli-cascade-c4a7`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Track: **R13 HARD OUTSIDE**  
 Canonical source ID: **E0042**
 

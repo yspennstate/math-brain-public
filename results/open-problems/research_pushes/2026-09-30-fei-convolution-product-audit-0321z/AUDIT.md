@@ -8,9 +8,9 @@ Date: 30 September 2026. Scope: two specific research packages, including the co
 
 Audited source pins:
 
-- [Normalized convolution report](https://github.com/yspennstate/math-open-problems/blob/2fefba564fdaf0232db13ff468a89063ab29bc6c/research_pushes/2026-09-30-fei-normalized-convolution-0236z/REPORT.md), commit `2fefba564fdaf0232db13ff468a89063ab29bc6c`; report blob `43f02ba681df60762b28515540a8f851f95286ba`
-- [Corrected overlapping-product report](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/REPORT.md), commit `e894a01f20ba02694c099f903fbdf26cc39db0b3`; report blob `76734ba5f15292f83784573271517c61d039ffad`
-- [Attribution correction](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/CORRECTION.md), blob `0ba6bbec4662aa78e8a13f2ffc9cc3d4a4821f6e`
+- [Normalized convolution report](private-source-repository), commit `2fefba564fdaf0232db13ff468a89063ab29bc6c`; report blob `43f02ba681df60762b28515540a8f851f95286ba`
+- [Corrected overlapping-product report](private-source-repository), commit `e894a01f20ba02694c099f903fbdf26cc39db0b3`; report blob `76734ba5f15292f83784573271517c61d039ffad`
+- [Attribution correction](private-source-repository), blob `0ba6bbec4662aa78e8a13f2ffc9cc3d4a4821f6e`
 
 All ten fetched package files were checked against their Git blob hashes. Both original verifiers were executed in isolated copies, and their generated results match the committed JSON results. No source-author file was changed during this audit.
 
@@ -132,7 +132,7 @@ All private-coordinate pivotal probabilities remain p. The common coordinate is 
 
 Disjoint tensor amplification of either positive product defect eliminates any dimension-independent additive constant. It leaves the multiplication factors sharing coordinates within each block, so it does not conflict with disjoint-variable entropy additivity.
 
-The attribution correction is verified against the [September 20 directional-compression source, Section 7](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/proofnet24/P03-fei/continuations/2026-09-20-directional-compression/REPORT.md#7-an-explicit-obstruction-to-shared-control-subadditivity). Its control convention is reversed, its k equals the present m-1, and its equation (7.6) explicitly identifies the same product-entropy defect. The eleven-variable example and broad no-go are recovered results, not newly certified progress. The seven-variable point-flip certificate is distinct. Neither this distinction nor this audit establishes publication novelty.
+The attribution correction is verified against the [September 20 directional-compression source, Section 7](private-source-repository). Its control convention is reversed, its k equals the present m-1, and its equation (7.6) explicitly identifies the same product-entropy defect. The eleven-variable example and broad no-go are recovered results, not newly certified progress. The seven-variable point-flip certificate is distinct. Neither this distinction nor this audit establishes publication novelty.
 
 ## 5. Averaged entropy, uncertainty, influence, and +2k
 
@@ -167,7 +167,7 @@ Optional precision improvements, communicated to the source author:
 2. The product claim ledger's first `not_refuted` list broadly names influence-dependent corrections, while a later entry refutes the specific actual-pivotal-overlap correction. Qualify the earlier list as “other/global influence-dependent corrections.” The report itself already makes this distinction.
 3. The source JSON's rounded floating interval endpoints often coincide. The report properly calls them summaries. Serializing rational endpoints, as the independent checker does, makes the saved certificate easier to inspect without rerunning it. This is a reproducibility improvement, not an invalidation of the accepted exact comparisons.
 
-The two wording changes in items 1 and 2 were subsequently applied by the source author in [commit f3726e747609b85bfd7503fff55cc93deae443ef](https://github.com/yspennstate/math-open-problems/commit/f3726e747609b85bfd7503fff55cc93deae443ef). The audit inspected that two-file diff: neither mathematical formulas nor checker code/results changed. The scientific source pins at the beginning of this audit remain the versions actually replayed.
+The two wording changes in items 1 and 2 were subsequently applied by the source author in [commit f3726e747609b85bfd7503fff55cc93deae443ef](private-source-repository). The audit inspected that two-file diff: neither mathematical formulas nor checker code/results changed. The scientific source pins at the beginning of this audit remain the versions actually replayed.
 
 ## 7. Stopping boundary
 

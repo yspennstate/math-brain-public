@@ -3,7 +3,7 @@
 
 The live correction inbox at that control head was reread. This report does **not** use the refuted arbitrary-joint three-dimensional coarea lemma, conditional projection-density moment gate, pointwise van-der-Corput shortcut, naive fiber-supremum interface, or near-zero half-Riesz shortcut. In particular, the new gradient theorem uses only the marginal density cap of `S`, never a cap for `S|R`, and retains the exact small diagonal/pair terms through the Schur shear.
 
-The designated partner directory `fleet04/B05` was refreshed at the same control head. The newest completed current-QFORM partner theorem remains r2 at math-open-problems commit `59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`, and it is applied in the report at the concrete inequality `mu>=1, m_*>=1/4 => ||p_Q||_infinity<81.91`.
+The designated partner directory `fleet04/B05` was refreshed at the same control head. The newest completed current-QFORM partner theorem remains r2 at private-source commit `59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`, and it is applied in the report at the concrete inequality `mu>=1, m_*>=1/4 => ||p_Q||_infinity<81.91`.
 
 Canonical mathematical result in this run: `QFORM-SCHUR-GRADIENT-DENSITY-v1`, together with the kappa-free cubic small-gradient estimate and reciprocal-gradient expectation. These are supporting results only. The full conjecture remains OPEN / NOT PROVED / NOT DISPROVED, and full-target continuity remains OPEN.
 

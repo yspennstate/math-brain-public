@@ -262,7 +262,7 @@ The universal assertion is exactly finiteness of (1.3), via (1.2). The countable
 
 A completed existing-worker theorem, fleet02/B15 at
 
-`yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`,
+`private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`,
 
@@ -290,7 +290,7 @@ The shared `CLAIMS.json` still lists `QFORM-CONTINUOUS-REPRESENTATIVE` as open; 
 
 The newest completed partner result is fleet04/B15 r6:
 
-`yspennstate/math-open-problems@cff8e1368d32302e6d649f776579a5c1951929b1`,
+`private-source-repository@cff8e1368d32302e6d649f776579a5c1951929b1`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T151702Z-fleet04-B15-pivoted-convolution-r6/REPORT.md`.
 

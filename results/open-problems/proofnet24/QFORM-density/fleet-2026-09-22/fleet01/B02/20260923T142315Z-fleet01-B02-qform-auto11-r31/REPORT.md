@@ -18,7 +18,7 @@ Fresh control remained QFORM-only, owner revision `2026-09-22.15`.
 
 The newest designated partner available during this run is fleet02/B02 at
 
-`yspennstate/math-open-problems@4029b9b55694ce709e43c62d2729e89108fbdede`,
+`private-source-repository@4029b9b55694ce709e43c62d2729e89108fbdede`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T141147Z-fleet02-B02-QFORM-auto11/REPORT.md`.
 
@@ -49,7 +49,7 @@ when `sr(S1)>=5`, its degree-six interpolation gives a genuine L1 exit.
 
 I also use the completed exact-rank-three physical-cross-block theorem from
 
-`yspennstate/math-open-problems@484c89f85cda352b2c4318364a6206ebc4154950`,
+`private-source-repository@484c89f85cda352b2c4318364a6206ebc4154950`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T230126Z-fleet03-B02-QFORM-r17/REPORT.md`:
 

@@ -7,7 +7,7 @@ Verdict: **PASS for the audited analytic chain; not an end-to-end certification 
 
 ## Source pin
 
-- Repository: \`yspennstate/math-open-problems\`
+- Repository: \`private-source-repository\`
 - Commit: \`eeb752c8943536541b34b42b8bf48e924f4d3d2f\`
 - Source: \`proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex\`
 - Git blob: \`19fb119877426b640b2c0dae19ec2f78a399fe11\`

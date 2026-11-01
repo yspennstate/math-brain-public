@@ -2,7 +2,7 @@ Model: GPT-5.6 Sol. Reasoning level: UNVERIFIED; this was not GPT-6 at maximum. 
 
 # C28 — sharpness and comparison-instability of the state-anchored dyadic characterization
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Own root: `proofnet24/C28-closure-hypercontractivity`.
 Run date: 2026-09-16.
 Delivery: private GitHub only. No email/Gmail, Drive, public posting, paid compute, permission change, peer-file edit, shared-ledger edit, or new schedule.

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 at 
 # P13 / P0342 — positive-variance transfer counterexample: finite failure proved, fringe reduced to one density law
 
 UTC run time: 2026-09-19T10:04:09Z  
-Repository: private `yspennstate/math-open-problems`, branch `master`  
+Repository: private `private-source-repository`, branch `master`  
 Native slot: `6aa7b253b37c8191b693d8dc79298d37`  
 Own root: `proofnet24/P13-outside-successor/`
 

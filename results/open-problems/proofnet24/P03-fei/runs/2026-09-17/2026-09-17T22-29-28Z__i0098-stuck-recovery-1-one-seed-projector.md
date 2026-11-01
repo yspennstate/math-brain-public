@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED. This is not GPT-
 # P03 / I0098 — d=29 one-seed projector propagation and the exact remaining arithmetic gate
 
 Date: 2026-09-17 UTC.
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 Current exclusive claim: `operations/claims/I0098.md`, creation commit `8d79f25bb64122621849dc579166b0d097c02fb7`, blob `bdd93549f588d8aae00cae2545ff8225ed716bf7`.
 Source: Afonso S. Bandeira, Randomstrasse 101, *Mutually Unbiased Bases, ETFs, and Zauner's Conjecture (problems 22--24)*, posted 2025-12-14, updated 2025-12-18, Conjecture 24.
 Source target: for every dimension `d`, an ETF of `d^2` vectors exists in `C^d`, equivalently a SIC-POVM exists.

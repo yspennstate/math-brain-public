@@ -1101,7 +1101,7 @@ horseshoe maps are dense in C^μ_s then DC1 generic in F^μ (chain: SS + Štefá
 as Problem 5.x with two identified obstructions (modulus saturation; surjectivity-repair budget — both
 discovered and verified during design; full-strength stratum claim was DELIBERATELY rescoped after the
 saturation wall and ramp-budget analysis showed the unconditional version unprovable by implantation).
-GIT: private repo yspennstate/math-open-problems (master + timestamped backup branches). MiKTeX pdflatex
+GIT: private repo private-source-repository (master + timestamped backup branches). MiKTeX pdflatex
 works; PowerShell splice-editing used for large tex surgery (newblock.tex pattern).
 
 ## SUPERSEDED historical note — Problem #5 shipped 2026-06-11 06:12: Downloads\Toeplitz_Stability_Parity_v1.pdf (initial 8pp; current paper5 is 16pp and proves Var=O(m))

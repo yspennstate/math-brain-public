@@ -20,7 +20,7 @@ and proved useful `L^1/L^2/L^infinity` bounds on `g_t`, but those norms alone ca
 
 The newest completed designated partner input consumed is
 
-`yspennstate/math-open-problems@174f2ac95a7e63dc88172bc6fcf5b319e8613d44`
+`private-source-repository@174f2ac95a7e63dc88172bc6fcf5b319e8613d44`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260924T081305Z-fleet02-B10-QFORM-r12/REPORT.md`.
 

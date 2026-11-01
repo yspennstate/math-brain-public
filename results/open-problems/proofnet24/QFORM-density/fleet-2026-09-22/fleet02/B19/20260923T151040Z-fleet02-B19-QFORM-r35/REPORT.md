@@ -14,11 +14,11 @@ Execution: **WITHOUT_VERIFIED_BRAIN**. Repository retrieval is not claimed as na
 ## 1. Source-pinned proof graph entering this run
 
 
-The current fleet02/B19 compiler at `math-open-problems@b0628a95c0c4630d063fe8c5649416c804dbceea` reaches, after the paid spectral-window and D5 exits, a literal physical `STAR4` packet. In its quantitative-rank-two branch the physical cross block `N=A[J,K]` has a fixed positive singular product and the hub has nontrivial star energy into each of the disjoint original-coordinate banks `J,K`.
+The current fleet02/B19 compiler at `private-source@b0628a95c0c4630d063fe8c5649416c804dbceea` reaches, after the paid spectral-window and D5 exits, a literal physical `STAR4` packet. In its quantitative-rank-two branch the physical cross block `N=A[J,K]` has a fixed positive singular product and the hub has nontrivial star energy into each of the disjoint original-coordinate banks `J,K`.
 
-The newest completed designated partner fleet03/B19 result is `math-open-problems@55fbef3fbe63cb7335851d9772449daac0ed67cf`. It proves that the aligned rank-two packet alone is not an L-infinity receiver: a strict-N3 rank-two core can have an unbounded logarithmic output density. Thus a genuine third spectral resource must be spent. Its first unresolved implication is `QFORM-STAR4-THIRD-SPECTRAL-RESOURCE-ROUTING-v1`.
+The newest completed designated partner fleet03/B19 result is `private-source@55fbef3fbe63cb7335851d9772449daac0ed67cf`. It proves that the aligned rank-two packet alone is not an L-infinity receiver: a strict-N3 rank-two core can have an unbounded logarithmic output density. Thus a genuine third spectral resource must be spent. Its first unresolved implication is `QFORM-STAR4-THIRD-SPECTRAL-RESOURCE-ROUTING-v1`.
 
-The owner-required Claude source was read at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`, and its current compatible directory version was checked at master. I use its completed Theorem F below at an actual target-valid inequality.
+The owner-required Claude source was read at `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`, and its current compatible directory version was checked at master. I use its completed Theorem F below at an actual target-valid inequality.
 
 ## 2. New structural correction: source-disjoint or transverse third support is not forced
 
@@ -146,7 +146,7 @@ and
 
 The theorem also gives a continuous `C_0` density on this branch.
 
-This is an equation-level application of a completed result from `math-open-problems@e5f71d79...`; no post-rotation independence is asserted. The orthonormal vectors are used only inside the Fresnel/BL proof, whose factorization remains in the original leaf coordinates.
+This is an equation-level application of a completed result from `private-source@e5f71d79...`; no post-rotation independence is asserted. The orthonormal vectors are used only inside the Fresnel/BL proof, whose factorization remains in the original leaf coordinates.
 
 ## 4. General paid chamber extracted from the calculation
 

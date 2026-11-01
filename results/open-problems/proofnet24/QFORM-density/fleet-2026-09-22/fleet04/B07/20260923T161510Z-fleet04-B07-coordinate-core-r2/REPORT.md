@@ -14,7 +14,7 @@ Fresh control was read from \`yspennstate/math-research-brain\` main, observed i
 
 The completed fleet01/B07 theorem actually applied below is the rank-two-tube Plücker compiler at
 
-\`yspennstate/math-open-problems@45934a636682207f422de4ab3f94c658030ba1ac\`
+\`private-source-repository@45934a636682207f422de4ab3f94c658030ba1ac\`
 
 \`proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T160359Z-r28/REPORT.md\`.
 

@@ -17,7 +17,7 @@ The full owner target remains open. Every random coordinate below is an ORIGINAL
 
 The immediate B08 predecessor is
 
-`yspennstate/math-open-problems@b67617d493939430685adfa2ebf5e943d9094b56`
+`private-source-repository@b67617d493939430685adfa2ebf5e943d9094b56`
 
 at
 
@@ -33,7 +33,7 @@ with
 
 The r43 structural source is
 
-`yspennstate/math-open-problems@87f0f4b7b8a9b5dc4f1050ecef61e527dac7a541`
+`private-source-repository@87f0f4b7b8a9b5dc4f1050ecef61e527dac7a541`
 
 at
 
@@ -51,7 +51,7 @@ The predecessor also has `||T||_F<L/8`, but the main theorem of this run will no
 
 The analytic receiver used below is B08's completed post-Schur aggregate-E2 theorem from
 
-`yspennstate/math-open-problems@3c4c6882813d9530dc5c3884ce3e25f5993c7062`
+`private-source-repository@3c4c6882813d9530dc5c3884ce3e25f5993c7062`
 
 at
 
@@ -309,7 +309,7 @@ The designated partner result is
 
 from
 
-`yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
+`private-source-repository@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T091414Z-fleet04-B08-QFORM-r1/REPORT.md`.
 

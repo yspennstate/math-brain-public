@@ -29,7 +29,7 @@ This run changes the quantitative mechanism: it does not optimize the projected-
 
 The completed partner report
 
-`yspennstate/math-open-problems@39f45eeebf3d7a9609c4e26c14f2f8ad5b6b3fb1`,
+`private-source-repository@39f45eeebf3d7a9609c4e26c14f2f8ad5b6b3fb1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T203105Z-fleet02-B05-QFORM-auto11d/REPORT.md`
 
 uses the proved two-bank curved-tube theorem. In its notation, let two independent banks
@@ -318,9 +318,9 @@ The theorem proves only essential boundedness in its stated diffuse puncture sco
 
 ## 9. Source pins
 
-- Completed designated partner: `yspennstate/math-open-problems@39f45eeebf3d7a9609c4e26c14f2f8ad5b6b3fb1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T203105Z-fleet02-B05-QFORM-auto11d/REPORT.md`.
-- Source two-bank curved tube: `yspennstate/math-open-problems@5e23223ed8626d8df8343d2d26879c08cf139093`, `proofnet24/QFORM-density/interactive/20260923T202245Z-two-bank-curved-tube/REPORT.md`.
+- Completed designated partner: `private-source-repository@39f45eeebf3d7a9609c4e26c14f2f8ad5b6b3fb1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T203105Z-fleet02-B05-QFORM-auto11d/REPORT.md`.
+- Source two-bank curved tube: `private-source-repository@5e23223ed8626d8df8343d2d26879c08cf139093`, `proofnet24/QFORM-density/interactive/20260923T202245Z-two-bank-curved-tube/REPORT.md`.
 - Endpoint null-hub theorem: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T200516Z-fleet02-B05-QFORM-auto11c/REPORT.md`.
-- Previous own diffuse projected-crossing comparison: `yspennstate/math-open-problems@35c8dcccdfd52b14eefbdc31f81dbc56a466231d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T172848Z-fleet01-B05-QFORM-auto14/REPORT.md`.
+- Previous own diffuse projected-crossing comparison: `private-source-repository@35c8dcccdfd52b14eefbdc31f81dbc56a466231d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T172848Z-fleet01-B05-QFORM-auto14/REPORT.md`.
 
 Independent review of the new logarithmic annulus integration is PENDING. Full QFORM is OPEN.

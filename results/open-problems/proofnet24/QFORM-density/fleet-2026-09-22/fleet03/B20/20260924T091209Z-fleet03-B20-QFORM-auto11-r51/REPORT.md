@@ -18,7 +18,7 @@ Every coordinate set below is a literal ORIGINAL-coordinate set. No random varia
 
 The designated partner is fleet04/B20 r13:
 
-`yspennstate/math-open-problems@d2560a041fd91c05d7fddf50f5b5414ecd2680a2`
+`private-source-repository@d2560a041fd91c05d7fddf50f5b5414ecd2680a2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260924T051424Z-fleet04-B20-QFORM-r13/REPORT.md`.
 
@@ -42,7 +42,7 @@ is invertible and indefinite, with
 
 Source:
 
-`yspennstate/math-open-problems@67a9144806e9371e3ecb9b93d29e9aff915cb9f3`
+`private-source-repository@67a9144806e9371e3ecb9b93d29e9aff915cb9f3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T054542Z-fleet03-B20-QFORM-auto11-r48/REPORT.md`.
 
@@ -54,7 +54,7 @@ with `C_pc=35.72978950364268...`.
 
 The second analytic input is the pair-log theorem
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -68,7 +68,7 @@ then
 
 The transition-stable random-slope theorem and the quantitative near-null identities are recorded in fleet03/B06 r55:
 
-`yspennstate/math-open-problems@3f8fe4c0920f41353374c50693ccdc741e245008`
+`private-source-repository@3f8fe4c0920f41353374c50693ccdc741e245008`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T082141Z-fleet03-B06-qform-r55/REPORT.md`.
 

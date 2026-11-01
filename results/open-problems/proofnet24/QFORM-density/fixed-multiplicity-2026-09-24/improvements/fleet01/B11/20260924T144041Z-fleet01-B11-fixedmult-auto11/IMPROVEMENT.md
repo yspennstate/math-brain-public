@@ -2,7 +2,7 @@
 
 Run: `20260924T144041Z-fleet01-B11-fixedmult-auto11`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Pinned baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`  
+Pinned baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Pinned manuscript blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 Status: **complete B11 replacement proof at multiplicity nine; new constant candidate `<2547 K^2/s`; multiplicity eight remains open.** The threshold-nine mechanism already has separate complete reviews in the repository. The new `<2547` constant derived here still needs a genuinely separate end-to-end constant review before being promoted to an independently validated/release constant.

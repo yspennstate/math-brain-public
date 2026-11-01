@@ -70,7 +70,7 @@ not the raw number `2^m` of exposed vertices. This supplies an explicit countere
 - Native role: `P09`
 - Native slot: `6aa7b454b5808191bb00d87697d89388`
 - Registered role: `chaining / geometric-probabilistic proof`
-- Repository / branch: private `yspennstate/math-open-problems`, `master`
+- Repository / branch: private `private-source-repository`, `master`
 - Pre-write master observed: `47f77a4f665bc299f7b292b7674d177bb9b2d7f1`
 - Immediate predecessor: `probability_campaigns/progress_first_2026-09-20/P09/chaining/2026-09-20T132800Z__intrinsic-image-kac-rice-and-switching-curvature.md`, blob `4bb5fd1f37b261362adca988e58a1815fdbd9365`.
 - Historical C0035 material, all prior P09 reports, and peer files are preserved. This report is additive and immutable.

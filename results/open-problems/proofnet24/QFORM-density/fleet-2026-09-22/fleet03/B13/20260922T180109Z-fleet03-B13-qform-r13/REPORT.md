@@ -25,7 +25,7 @@ At startup the current owner control was read from fresh `main`; the active prog
 
 The designated partner fleet04/B13 completed the fixed-volume random-set representation:
 
-`yspennstate/math-open-problems`, path
+`private-source-repository`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T171018Z-b13-fixed-volume-mixture-r4/REPORT.md`.
 
 It proves that every one-dimensional density `0<=f<=1`, `int f=1`, is an exact barycenter of indicators `1_E` with `|E|=1`, and that independent coordinates yield an exact product mixture of arbitrary unit-measure product indicators. Therefore the optimal slab constant over all admissible product densities equals the optimal constant over these extreme product laws; no interval, finite-fragment, bounded-support, or moment reduction is permitted.

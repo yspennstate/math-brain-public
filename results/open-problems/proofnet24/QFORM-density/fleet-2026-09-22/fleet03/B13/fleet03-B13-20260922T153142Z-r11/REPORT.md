@@ -26,7 +26,7 @@ The designated `fleet04/B13` current-QFORM artifact was not present in the fresh
 
 Source:
 
-`yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`
+`private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`
 
 (fleet02/B13 exact bang-bang report).
 
@@ -40,7 +40,7 @@ over `0<=f_i<=1`, `int f_i=1`, equals the supremum over product indicators `f_i=
 
 Source:
 
-`yspennstate/math-open-problems@93bed74b07afe996a4aa08eaeb88f35060653134`
+`private-source-repository@93bed74b07afe996a4aa08eaeb88f35060653134`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T152225Z-fleet02-B13-productset-7f3c9a/REPORT.md`.
 
@@ -50,7 +50,7 @@ This theorem supplies the exact nested-heavy pair weights and incidence identiti
 
 Source:
 
-`yspennstate/math-open-problems@0b5cf04790e5927df0efed8811a2a1295006e141`
+`private-source-repository@0b5cf04790e5927df0efed8811a2a1295006e141`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260922T135910Z-fleet01-B13-qform-r13/REPORT.md`.
 

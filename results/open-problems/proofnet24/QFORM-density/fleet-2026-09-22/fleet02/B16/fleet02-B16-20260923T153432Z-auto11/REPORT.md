@@ -14,7 +14,7 @@ The full target is unchanged: arbitrary independent original-coordinate inputs w
 
 The latest **completed** designated partner actually used here is fleet03/B16 r29,
 
-`yspennstate/math-open-problems@4da4d30d980b1eafd4074401ff0e4727abefc524`
+`private-source-repository@4da4d30d980b1eafd4074401ff0e4727abefc524`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T132339Z-fleet03-B16-QFORM-r29/REPORT.md`.
 
@@ -22,7 +22,7 @@ After its physical-diagonal and physical-pair exits, the exact-rank-three true-n
 
 The required pinned package is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 

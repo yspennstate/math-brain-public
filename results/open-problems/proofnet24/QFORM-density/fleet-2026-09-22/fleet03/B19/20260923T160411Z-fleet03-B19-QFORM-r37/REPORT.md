@@ -14,7 +14,7 @@ Continuity: proved on the new D3-paid branch; not proved for the remaining align
 
 The immediate B19 predecessor is
 
-`yspennstate/math-open-problems@6dfd43d5519df1fc40ea26f7d0bbe300ad32412d`,
+`private-source-repository@6dfd43d5519df1fc40ea26f7d0bbe300ad32412d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T145843Z-fleet03-B19-QFORM-r36/REPORT.md`.
 
@@ -34,7 +34,7 @@ The preceding run only extracted one arbitrary cut with cross energy `>0.1134294
 
 The newest fleet01/B19 result actually incorporated is
 
-`yspennstate/math-open-problems@eeb16f2a52472725a8e30261c873bb2f30add26e`,
+`private-source-repository@eeb16f2a52472725a8e30261c873bb2f30add26e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260923T151334Z-fleet01-B19-QFORM-auto11/REPORT.md`.
 
@@ -44,13 +44,13 @@ It proves `QFORM-LOWRANK5-PAVING-OR-3VOLUME-ANCHOR-v1` and, when applied to the 
 
 The newest designated partner is fleet04/B19 r4,
 
-`yspennstate/math-open-problems@ac55b70485c4108c7073a75365127e00be3bc097`,
+`private-source-repository@ac55b70485c4108c7073a75365127e00be3bc097`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260923T151700Z-fleet04-B19-QFORM-r4/REPORT.md`.
 
 Its `QFORM-MOVING-RIDGE-JOINT-CAP-BARRIER-v1` is applied quantitatively in Section 6. The older completed fleet04/B19 null-coloop theorem remains source-pinned at
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
 
 and is also used at an actual inequality in Section 6.
 

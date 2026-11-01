@@ -30,7 +30,7 @@ Livshyts--Paouris--Pivovarov, *On sharp bounds for marginal densities of product
 
 This exact product-marginal input was also already applied in fleet01/B16's completed `QFORM-GROUPED-L2-FRESNEL-v1`:
 
-`yspennstate/math-open-problems@e4c589aa572f7d140c78a832af2d554eed97fde4`
+`private-source-repository@e4c589aa572f7d140c78a832af2d554eed97fde4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260922T211047Z-fleet01-B16-QFORM-r16/REPORT.md`.
 
@@ -38,7 +38,7 @@ That report's equation (7) gives the three-dimensional instance `||p_Y||_infinit
 
 ### 2.2 Previous B04 compound-hub theorem
 
-`yspennstate/math-open-problems@1c9eda73c97b03bf78aa6750726df00ce3768d21`
+`private-source-repository@1c9eda73c97b03bf78aa6750726df00ce3768d21`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T095028Z-fleet03-B04-qform-auto11-r31/REPORT.md`.
 

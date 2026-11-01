@@ -99,7 +99,7 @@ So the construction remains genuinely remote-fragment dominated at the sample le
 
 The latest compatible designated partner is fleet03/B17 run
 `20260924T053018Z-fleet03-B17-QFORM-auto11`, corrected at
-`math-open-problems@7a64594fceb49b99698431a4d57b6658b49ebc28`, theorem
+`private-source@7a64594fceb49b99698431a4d57b6658b49ebc28`, theorem
 `QFORM-SYMMETRIC-SATELLITE-NEAR-DIFFUSIVE-SHARP-WITNESS-v1`.
 Its exact one-coordinate moment identities apply bank by bank here. For a law (2.2),
 \[
@@ -158,7 +158,7 @@ The partner theorem treated the special zero-tax face `tau_j=0` by a direct loca
 ## 4. Required pinned result applied: Theorem F gives a uniform L1 Fourier envelope
 
 Use the completed Fresnel--Brascamp--Lieb Theorem F from
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 Diagonalize

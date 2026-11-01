@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 # NM13-06 / NM06 — T04 random 3-SAT: exact polarity-refinement theorem and a balanced-cell barrier sign flip
 
 Date: 2026-09-20  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker root: `proofnet24/NM13-06/progress-3sat-construction/`  
 Assignment: **T04 — classical iid random 3-SAT with three distinct variables and independent fair signs**  
 Status: **OPEN / PARTIAL**

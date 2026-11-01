@@ -3,7 +3,7 @@
 This file records one concrete localization consequence of `QFORM-ARBITRARY-SELF-RANDOM-SLOPE-MASS-v1` from this run.
 
 Use the completed fleet03/B14 r32 shear result at
-`yspennstate/math-open-problems@7d56182ff8bd5766d26974c9b02d543ee155654e`,
+`private-source-repository@7d56182ff8bd5766d26974c9b02d543ee155654e`,
 which proves the following unnormalized fact. If
 
 `W=aX3+bX4-beta`, `|b|>=|a|`,

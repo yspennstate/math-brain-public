@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 at 
 
 # R19 — terminal wait: P0219 survives source/current screening but fails the READY gate
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Deployment: `NEW-METHODS-2026-09-16`.
 Controlling predecessor: `runs/R19/2026-09-19_00-43-00_UTC__terminal-wait-p0220-owned-c0021-handoff_q8v3.md` @ `c12e905f7f2fede2b01d4d38f33fb60a25a7e9a0`.
 Prewrite master captured for this run: `fed7dd2fa59acb078a77781f4b16c67e6d549b4f`.

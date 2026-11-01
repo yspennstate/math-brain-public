@@ -13,13 +13,13 @@ This run follows the all-team owner reallocation and does no new POS3, installat
 
 Source-pinned premises actually used:
 
-1. **TERMINAL_CORE** — `yspennstate/math-open-problems@85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md`, blob `68e838a493671ed5c27a29468dfcce7bb621d860`. It supplies the physical all-block terminal compiler, the minimum-dimensional ratio core, tensor heredity of `(U_A,D_A)`, and the co-singleton phase tax.
+1. **TERMINAL_CORE** — `private-source-repository@85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md`, blob `68e838a493671ed5c27a29468dfcce7bb621d860`. It supplies the physical all-block terminal compiler, the minimum-dimensional ratio core, tensor heredity of `(U_A,D_A)`, and the co-singleton phase tax.
 
-2. **ROBUST_ROW** — `yspennstate/math-open-problems@fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md`, blob `d283c7b495316959312155f8ba68fb83569d9633`. It supplies the symbolic-`K` trigger-surplus and weighted-depth theorem.
+2. **ROBUST_ROW** — `private-source-repository@fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md`, blob `d283c7b495316959312155f8ba68fb83569d9633`. It supplies the symbolic-`K` trigger-surplus and weighted-depth theorem.
 
-3. **CURVATURE** — `yspennstate/math-open-problems@200e3fd37fe201f78d882ba8809414d201efb829`, `proofnet24/P03-fei/fleet-2026-09-22/fleet04/B18/20260922T091529Z-surplus-hidden-curvature/REPORT.md`, blob `468c55f8ab3d8c2864a91994b9cc07dbbbbf2be2`. It supplies the exact row law `4d_k=2R_k+Omega_k` and the fixed-cardinality visible-bank payment.
+3. **CURVATURE** — `private-source-repository@200e3fd37fe201f78d882ba8809414d201efb829`, `proofnet24/P03-fei/fleet-2026-09-22/fleet04/B18/20260922T091529Z-surplus-hidden-curvature/REPORT.md`, blob `468c55f8ab3d8c2864a91994b9cc07dbbbbf2be2`. It supplies the exact row law `4d_k=2R_k+Omega_k` and the fixed-cardinality visible-bank payment.
 
-4. **COPAIR_BARRIER** — `yspennstate/math-open-problems@85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md`, blob `000f6250c095d5a40870c6cfc3fabaf8f07c8d0e`. It supplies `omega_{i<-j}=4s_{ij}-2c_{i<-j}` and the exact tensor-orientation warning.
+4. **COPAIR_BARRIER** — `private-source-repository@85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md`, blob `000f6250c095d5a40870c6cfc3fabaf8f07c8d0e`. It supplies `omega_{i<-j}=4s_{ij}-2c_{i<-j}` and the exact tensor-orientation warning.
 
 5. **Named partner actually consumed: fleet03/B19** — bundle commit `144ea823b604785a77b638b03b0c5d7909676d52`, `proofnet24/P03-fei/fleet-2026-09-22/fleet03/B19/20260922T103024Z-b19-fei-r11/REPORT.md`, report blob `c291157149243f0d2dcb73640be652db670ff393`. It proves the nonreused selected-pair I-projection inequality with the correct baseline `b_ij=(c/v)q_i q_j`.
 

@@ -6,7 +6,7 @@ Target: independent real coordinates with densities at most one; real symmetric 
 
 ## Sources actually consumed
 
-Fresh designated partner: fleet02/B20 r24, canonical mathematics `yspennstate/math-open-problems@0da7f3ef78f89efa33d2014211323fcda3d3214b`, theorem `QFORM-STAR-THIRD-RESOURCE-WEDGE-ANCHOR-v1`.
+Fresh designated partner: fleet02/B20 r24, canonical mathematics `private-source-repository@0da7f3ef78f89efa33d2014211323fcda3d3214b`, theorem `QFORM-STAR-THIRD-RESOURCE-WEDGE-ANCHOR-v1`.
 
 In its surviving ORIGINAL-coordinate star block
 

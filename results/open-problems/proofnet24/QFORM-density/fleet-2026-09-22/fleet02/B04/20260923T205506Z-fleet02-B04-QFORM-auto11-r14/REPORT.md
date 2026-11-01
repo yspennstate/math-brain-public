@@ -23,7 +23,7 @@ The analytic `2 x m` zero-pivot endpoint itself is paid below. What remains is s
 
 The pinned Claude/e5 source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
@@ -31,7 +31,7 @@ I used the completed product-projection/Ball-Rogozin fact underlying `COUNTEREXA
 
 The newest completed designated partner result observed before publication is fleet03/B04 r40, source-pinned at
 
-`yspennstate/math-open-problems@d795290dd6280b18d6cd02e29e6f7fe06e4c65c2`
+`private-source-repository@d795290dd6280b18d6cd02e29e6f7fe06e4c65c2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T195244Z-fleet03-B04-auto11-r40/REPORT.md`.
 

@@ -49,7 +49,7 @@ This is only a joint-density cap. It is not an independence statement, and it is
 
 The analytic receiver used below is the completed fleet03/B18 theorem `QFORM-RANK2-CROSS-PLUS-SCALAR-SLOPE-FRESNEL-v1`, source
 
-math-open-problems@792c7b328e6de0e43132b2bf44e904c9ec023abd
+private-source@792c7b328e6de0e43132b2bf44e904c9ec023abd
 proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T125902Z-fleet03-B18-QFORM-r29/REPORT.md.
 
 Its hypotheses are three genuinely independent ORIGINAL source blocks Z,X,Y, arbitrary same-bank measurable potentials F(X),G(Y), a nonzero scalar-to-X slope c, and a rank-two X-Y cross matrix B with singular product Delta. It proves

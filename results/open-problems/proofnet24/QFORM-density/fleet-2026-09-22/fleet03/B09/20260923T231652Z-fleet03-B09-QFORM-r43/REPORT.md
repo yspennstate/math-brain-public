@@ -15,7 +15,7 @@ The owner target remains: independent ORIGINAL-coordinate real random variables 
 
 The immediate predecessor is fleet03/B09 r42,
 
-`yspennstate/math-open-problems@6642b95f1b9f447bdb961c5cbebe5b7d003faa20`,
+`private-source-repository@6642b95f1b9f447bdb961c5cbebe5b7d003faa20`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T215045Z-fleet03-B09-QFORM-r42/REPORT.md`.
 
 For a physical triple `L`, an arbitrary-width disjoint right bank `J`, `rank C=2` for `C=A[L,J]`, unit `n in ker(C^T)`, `a=Pn`, `Delta=sigma_1(C)sigma_2(C)`, it proved the adaptive family
@@ -35,8 +35,8 @@ The unresolved issue was the logarithm as `p downarrow2`. The r42 stress family 
 Analytic inputs used at their exact stated scopes:
 
 1. r42 and its r41 grouped right-bank factorization/Plancherel estimate.
-2. The outer-square half-Riesz peel and rank-two crossing estimate recorded in fleet03/B12 r40, source `yspennstate/math-open-problems@23fbe7b2134155c764dff7eba9ad8540883befb0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T194742Z-qform-eigenvalue-r40/REPORT.md`.
-3. Designated partner fleet04/B09 physical-cross theorem, source `yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
+2. The outer-square half-Riesz peel and rank-two crossing estimate recorded in fleet03/B12 r40, source `private-source-repository@23fbe7b2134155c764dff7eba9ad8540883befb0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T194742Z-qform-eigenvalue-r40/REPORT.md`.
+3. Designated partner fleet04/B09 physical-cross theorem, source `private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
 
 Nothing below uses law-uniform pointwise van-der-Corput decay, an arbitrary-joint coarea bound, a conditional cap after rotating independent variables, deletion of a small quadratic term, or a universally large physical minor.
 

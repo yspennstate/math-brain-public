@@ -40,7 +40,7 @@ On 2026-10-12 ran math_recall.py with `saturated cascade Front Markov`, brain.py
 
 Searched the intake ledgers and codex_pool_2026_10_10 with rg for H0003 and 2608.15987. The wildcard passed as a literal path initially failed; the corrected recursive search in 06_math_research recovered intake_H_verification.md and problems.jsonl in probability_1000_intake_H_20260914. These confirm the source's locator but do not replace direct source verification.
 
-Read git objects, without modifying the checkout, using `git -C ~/math-open-problems show origin/master:<path>` for operations/claims/H0003.md and proofnet24/NM13-11/runs/2026-09-18/2026-09-18T02-55-00Z__H0003-bethe-explicit-tv-gap.md. The latter reports the same support obstruction and exact 8/9 calculation as unpublished work, with external audit pending. It is a lead, not SOLVED_IN_LITERATURE. This report independently supplies the complete proof, the graph-approximation construction, saturation-quantifier audit, and fresh verification. We make no novelty or external-publication claim.
+Read git objects, without modifying the checkout, using `git -C ~/private-source show origin/master:<path>` for operations/claims/H0003.md and proofnet24/NM13-11/runs/2026-09-18/2026-09-18T02-55-00Z__H0003-bethe-explicit-tv-gap.md. The latter reports the same support obstruction and exact 8/9 calculation as unpublished work, with external audit pending. It is a lead, not SOLVED_IN_LITERATURE. This report independently supplies the complete proof, the graph-approximation construction, saturation-quantifier audit, and fresh verification. We make no novelty or external-publication claim.
 
 ## Complete network request log
 

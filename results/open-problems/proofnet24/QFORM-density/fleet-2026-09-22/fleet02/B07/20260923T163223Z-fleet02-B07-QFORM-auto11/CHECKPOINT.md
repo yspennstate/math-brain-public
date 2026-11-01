@@ -3,7 +3,7 @@ attacking: the partner r33 aggregate cross-rectangle E2 branch — prove a bound
 
 # Substantive checkpoint
 
-Current partner: fleet03/B07 r33, canonical math `yspennstate/math-open-problems@316522c99a92f168d0e0dcfe3be3aa032bdf53f9`.
+Current partner: fleet03/B07 r33, canonical math `private-source-repository@316522c99a92f168d0e0dcfe3be3aa032bdf53f9`.
 
 Its aggregate branch supplies, at the current strict-N3 scale
 

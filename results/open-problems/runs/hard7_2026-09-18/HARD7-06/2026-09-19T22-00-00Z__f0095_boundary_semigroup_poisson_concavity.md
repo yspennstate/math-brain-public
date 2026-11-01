@@ -10,7 +10,7 @@ Status: **F0095 OPEN / HARD7-06 PARTIAL.** The source-level constant-location pr
 
 These are theorem-sized analytic statements, not simulation claims. They materially constrain both branches left by the previous finite-support/contact versus distributional-fixed-point analysis. Novelty of the exact formulations is **UNVERIFIED**; cavity fixed-point machinery itself is established prior art and is not claimed as new.
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Continuity, ownership, required reads, and capability honesty
 

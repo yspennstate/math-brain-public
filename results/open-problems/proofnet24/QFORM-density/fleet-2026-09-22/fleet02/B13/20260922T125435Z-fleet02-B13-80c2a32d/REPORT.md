@@ -26,7 +26,7 @@ Corrections consumed before publication include: law-uniform pointwise Fresnel d
 
 I use the source theorem
 
-`yspennstate/math-open-problems@289810e1f075755898f573ee5b863ad3fa9af5b8`
+`private-source-repository@289810e1f075755898f573ee5b863ad3fa9af5b8`
 
 `qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`.
 
@@ -48,7 +48,7 @@ I use the sharp marginal-density theorem of Livshyts--Paouris--Pivovarov, arXiv:
 
 The assigned partner `fleet03/B13` has now completed
 
-`yspennstate/math-open-problems@44e5051b996705fe5fe47fb2f848d1a2ed51024f`
+`private-source-repository@44e5051b996705fe5fe47fb2f848d1a2ed51024f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/fleet03-B13-20260922T123422Z/REPORT.md`.
 

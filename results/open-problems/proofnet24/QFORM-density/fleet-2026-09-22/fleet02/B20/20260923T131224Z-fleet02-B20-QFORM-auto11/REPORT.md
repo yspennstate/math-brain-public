@@ -16,7 +16,7 @@ Fresh owner control: revision `2026-09-22.15`, QFORM-only. Fresh native fleet02 
 
 ## 2. Sources actually consumed
 
-1. **Designated partner fleet03/B20 r31**, canonical `yspennstate/math-open-problems@c6e058c3d4aa36e89ad433c1f4d41b6f82739bf`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T121606Z-fleet03-B20-QFORM-r31/REPORT.md`. Its exact-rank-three compiler gives: either
+1. **Designated partner fleet03/B20 r31**, canonical `private-source-repository@c6e058c3d4aa36e89ad433c1f4d41b6f82739bf`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T121606Z-fleet03-B20-QFORM-r31/REPORT.md`. Its exact-rank-three compiler gives: either
 
    `||p_Q||_infinity <= 192 e < 522`,
 
@@ -30,9 +30,9 @@ Fresh owner control: revision `2026-09-22.15`, QFORM-only. Fresh native fleet02 
 
    with all conditioning on literal original coordinates. I retain this as the exact-rank-three side of the end-to-end proof graph; the new theorem below attacks the arbitrary-extra-spectrum N3 frontier which r31 explicitly leaves open.
 
-2. **Fresh compatible fleet01/B20 compiler**, canonical `yspennstate/math-open-problems@5593a06e6c0d8a346375176fc18181171fdc7ed9`. It proves in `N3(1/64)` that the high-spectrum leverage threshold `P_0=1_{|A|>=1}` at `1/60` either pays by the fifth-volume receiver or leaves a fixed physical star/four-direction packet. It also proves a spectral-window payment at cutoff `1/16`, leverage `1/50`.
+2. **Fresh compatible fleet01/B20 compiler**, canonical `private-source-repository@5593a06e6c0d8a346375176fc18181171fdc7ed9`. It proves in `N3(1/64)` that the high-spectrum leverage threshold `P_0=1_{|A|>=1}` at `1/60` either pays by the fifth-volume receiver or leaves a fixed physical star/four-direction packet. It also proves a spectral-window payment at cutoff `1/16`, leverage `1/50`.
 
-3. **Completed ridge receiver**, canonical `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`. For an original-coordinate cross block `B`, ridge scale `gamma`,
+3. **Completed ridge receiver**, canonical `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`. For an original-coordinate cross block `B`, ridge scale `gamma`,
 
    `K=B B^T (gamma^2 I+B B^T)^(-1)`, `theta=tr K`.
 
@@ -40,7 +40,7 @@ Fresh owner control: revision `2026-09-22.15`, QFORM-only. Fresh native fleet02 
 
    `||p_Q||_infinity <= sqrt(e)/(sqrt(2) gamma) * theta/(theta-2)`.
 
-4. **Pinned interactive source** `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. Its Theorem F pays an exact physical rank-three frame whose row leverages are at most `1/2` by `||p_Q||_infinity<=12` when `|lambda_1 lambda_2 lambda_3|>=1` and the complementary block is diagonal on the selected physical bank. I apply it below to the explicit stress family, proving that family is a route counterexample but not a QFORM counterexample.
+4. **Pinned interactive source** `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. Its Theorem F pays an exact physical rank-three frame whose row leverages are at most `1/2` by `||p_Q||_infinity<=12` when `|lambda_1 lambda_2 lambda_3|>=1` and the complementary block is diagonal on the selected physical bank. I apply it below to the explicit stress family, proving that family is a route counterexample but not a QFORM counterexample.
 
 ## 3. N3 setup
 

@@ -12,7 +12,7 @@ After completing the square in `X_h`, the Schur-complement cross block between `
 
 `M' = M-pq^T/a`.
 
-The pinned proved square peel in `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:.../FOURIER_ROUTE_REPORT.md`, Lemma 4.2, gives
+The pinned proved square peel in `private-source@e5f71d79eff325201dd0274053d20268ce65b837:.../FOURIER_ROUTE_REPORT.md`, Lemma 4.2, gives
 
 `D(Q) <= |a|^(-1/2) H_(1/2)(A/h)`.
 

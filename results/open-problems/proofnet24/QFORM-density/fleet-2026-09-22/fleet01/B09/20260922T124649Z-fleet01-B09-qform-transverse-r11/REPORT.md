@@ -30,7 +30,7 @@ No refuted premise is used below.
 
 The assigned partner `fleet02/B09` has a newer completed report:
 
-- repository `yspennstate/math-open-problems`;
+- repository `private-source-repository`;
 - commit `17dec75dc10459933f8bfde30daa86d1c6d90a6a`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T124417Z-fleet02-B09-QFORM-r2/REPORT.md`.
 

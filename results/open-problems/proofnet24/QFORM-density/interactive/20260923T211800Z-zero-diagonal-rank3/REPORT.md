@@ -48,6 +48,6 @@ Scaling back proves the bound. The same reasoning works after conditioning all o
 ## Source theorem and boundary
 
 The planar-bank theorem used above is proved at
-https://github.com/yspennstate/math-open-problems/blob/d9a9e74e807d3c4687802a347de2006e130b3938/proofnet24/QFORM-density/interactive/20260923T205000Z-conditioned-planar-bank-rw2/REPORT.md
+private-source-repository
 
 This receiver needs a physical three-input principal block with both a zero diagonal and its own third singular value at least sigma. A global condition s_3(A_full)≥sigma does not force one specified principal triple to have this property. Matrices with all physical diagonal entries nonzero remain outside this argument unless another receiver applies.

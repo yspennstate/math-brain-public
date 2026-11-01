@@ -10,7 +10,7 @@ This run uses only original-coordinate conditioning and deterministic coefficien
 
 The designated partner fleet02/B19 exact two-hub/common-plane source is
 
-- `yspennstate/math-open-problems@a12ea856984640d876168e74f6e0a2a3f4780029`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/B19-20260923T190836Z-r36/REPORT.md`.
+- `private-source-repository@a12ea856984640d876168e74f6e0a2a3f4780029`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/B19-20260923T190836Z-r36/REPORT.md`.
 
 Its live finite-core collar has literal hub pair `T={a,b}`, light bank `L`, physical cross matrix `M=A[T,L]` of rank two, and
 
@@ -24,11 +24,11 @@ with `Delta` diagonal in the original light coordinates. The preceding fleet01/B
 
 `K=B^{-1}`, hence `D_L=Delta+M^T B^{-1}M`.
 
-The latest designated partner handoff was also reread at `math-open-problems@e5ec25bafeced3d9060be919b2c37049fd53aea6`. It supplies the principal-minimal near-threshold obstruction and explicitly rules out any proof that demands a fixed base gap or fixed carrier norm; its three-Fresnel exit is retained as a paid branch. The present argument does not invoke a forbidden fixed-gap step.
+The latest designated partner handoff was also reread at `private-source@e5ec25bafeced3d9060be919b2c37049fd53aea6`. It supplies the principal-minimal near-threshold obstruction and explicitly rules out any proof that demands a fixed base gap or fixed carrier norm; its three-Fresnel exit is retained as a paid branch. The present argument does not invoke a forbidden fixed-gap step.
 
 The completed full-matrix physical-pair receiver used below is
 
-- `yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
+- `private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 
 For an original invertible indefinite physical pair `B`, writing `D_B=|det B|`, `kappa=sigma_min(B)`, and assuming `s_3(A)>=s`, it gives
 
@@ -38,7 +38,7 @@ for arbitrary outside curvature/couplings and arbitrary cap-one product laws. Th
 
 The completed orientation-free rank-two half-Riesz theorem is
 
-- `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+- `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 It will also be used in Section 5 to record a universal physical three-coordinate receiver.
 

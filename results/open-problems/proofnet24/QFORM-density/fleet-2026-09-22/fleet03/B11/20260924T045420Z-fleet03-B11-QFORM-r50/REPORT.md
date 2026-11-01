@@ -11,9 +11,9 @@ Continuity: the new receiver gives a continuous `C_0` density in its stated scop
 
 The unrestricted owner conjecture remains **OPEN / NOT PROVED / NOT DISPROVED**. This report does not use Gaussianity, log-concavity, moments, compact or connected support, post-rotation independence, law-uniform pointwise van-der-Corput decay, arbitrary-joint coarea, conditional-cap-as-independence, deletion of a small nonzero coefficient, or a numerical histogram as proof.
 
-The immediate predecessor is fleet03/B11 r49, `yspennstate/math-open-problems@506a01e6b5026fd7f703ad5b7f2e6ad08b9277c3`, which proves that the nonlinear exact-cancellation law from r48 has infinite all-direction X-ray norm and therefore cannot be the orthogonal product projection occurring in the true hard chamber. The present run changes mechanism: rather than trying to promote X-ray control alone, it keeps the original source banks and proves a direct `L^2 -> L^2` Fourier operator estimate.
+The immediate predecessor is fleet03/B11 r49, `private-source-repository@506a01e6b5026fd7f703ad5b7f2e6ad08b9277c3`, which proves that the nonlinear exact-cancellation law from r48 has infinite all-direction X-ray norm and therefore cannot be the orthogonal product projection occurring in the true hard chamber. The present run changes mechanism: rather than trying to promote X-ray control alone, it keeps the original source banks and proves a direct `L^2 -> L^2` Fourier operator estimate.
 
-The newest designated fleet04/B11 input is `QFORM-SPECTRAL-SCHUR-PSEUDODET-v1`, canonical report `yspennstate/math-open-problems@28cbe14c4381d5f1b58145b29bbcc160b4d2ea5c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260924T041708Z-fleet04-B11-schur-pseudodet-r1/REPORT.md`. For exact rank three, a nonzero physical pivot `a=A_hh`, hub leverage `q_h`, and Schur complement `S`, it proves
+The newest designated fleet04/B11 input is `QFORM-SPECTRAL-SCHUR-PSEUDODET-v1`, canonical report `private-source-repository@28cbe14c4381d5f1b58145b29bbcc160b4d2ea5c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260924T041708Z-fleet04-B11-schur-pseudodet-r1/REPORT.md`. For exact rank three, a nonzero physical pivot `a=A_hh`, hub leverage `q_h`, and Schur complement `S`, it proves
 
 `Delta_2(S)=q_h Delta_3(A)/|a|`, hence `|a| Delta_2(S)=q_h Delta_3(A)`.
 
@@ -302,9 +302,9 @@ It also reproduces `g(1/36)=0.23651996182670637...`, `3e/g=34.47846609814707...`
 
 ## 9. Source/status pins
 
-- Immediate B11 predecessor: `yspennstate/math-open-problems@506a01e6b5026fd7f703ad5b7f2e6ad08b9277c3`.
-- Designated fleet04/B11 Schur identity: `yspennstate/math-open-problems@28cbe14c4381d5f1b58145b29bbcc160b4d2ea5c`.
-- Product-projection Brascamp--Lieb cap `e^(k/2)`: `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
+- Immediate B11 predecessor: `private-source-repository@506a01e6b5026fd7f703ad5b7f2e6ad08b9277c3`.
+- Designated fleet04/B11 Schur identity: `private-source-repository@28cbe14c4381d5f1b58145b29bbcc160b4d2ea5c`.
+- Product-projection Brascamp--Lieb cap `e^(k/2)`: `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
 - MSS two-part frame bound: source-matched in the fleet, including fleet01/B08 r27.
 - Live corrections retained: pointwise-decay false; arbitrary-joint coarea false; fiber-sup dimension loss; no independence after rotation; conditional-cap-not-independence; cross-minor-alone false; X-ray-only trace control false.
 

@@ -2,7 +2,7 @@ Model actually running: GPT-5.6 Sol. Reasoning level: UNVERIFIED; this was not G
 
 # C28 — STUCK RECOVERY 1: the matched-hitting route meets a three-state boundary obstruction
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Own root: `proofnet24/C28-closure-hypercontractivity`.
 Run date: 2026-09-16 UTC / 2026-09-17 local campaign date.
 Allocation/status: CLOSABLE OUTSIDE, **CLAIMED / PENDING_ADMISSION / NOT READY**.

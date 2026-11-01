@@ -34,7 +34,7 @@ The newest completed designated-partner theorem used here is
 
 canonical source
 
-`yspennstate/math-open-problems@7dc1a1fb738f263d7fe021dcf3ce5c37223ced4e`,
+`private-source-repository@7dc1a1fb738f263d7fe021dcf3ce5c37223ced4e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T112849Z-fleet02-B16-QFORM-6a31b2a7/REPORT.md`.
 
@@ -52,7 +52,7 @@ The completed theorem
 
 canonical source
 
-`yspennstate/math-open-problems@b94cc7446401c02727c42024274c002e2f4e0cab`,
+`private-source-repository@b94cc7446401c02727c42024274c002e2f4e0cab`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T202347Z-fleet03-B16-QFORM-r15/REPORT.md`,
 
@@ -70,7 +70,7 @@ This is used only after genuine original-source aggregation and normalization.
 
 The pinned ruled theorem package is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
 
@@ -88,7 +88,7 @@ The fresh fleet03/B06 theorem
 
 canonical source
 
-`yspennstate/math-open-problems@71c369d883ef5211a624f1e943e53dcfbcc3dcdd`,
+`private-source-repository@71c369d883ef5211a624f1e943e53dcfbcc3dcdd`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T131910Z-fleet03-B06-qform-r36/REPORT.md`,
 
@@ -373,13 +373,13 @@ No numerical experiment is used as proof.
 ## 11. Source ledger
 
 
-Completed designated partner: `math-open-problems@7dc1a1fb738f263d7fe021dcf3ce5c37223ced4e`.
+Completed designated partner: `private-source@7dc1a1fb738f263d7fe021dcf3ce5c37223ced4e`.
 
-Physical-triple determinant theorem: `math-open-problems@b94cc7446401c02727c42024274c002e2f4e0cab`.
+Physical-triple determinant theorem: `private-source@b94cc7446401c02727c42024274c002e2f4e0cab`.
 
-Product-projection / ruled theorem: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`.
+Product-projection / ruled theorem: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`.
 
-Fresh same-bank discriminant theorem used as context: `math-open-problems@71c369d883ef5211a624f1e943e53dcfbcc3dcdd`.
+Fresh same-bank discriminant theorem used as context: `private-source@71c369d883ef5211a624f1e943e53dcfbcc3dcdd`.
 
 Full QFORM status: `OPEN / NOT PROVED / NOT DISPROVED`.  
 New theorem status: `PROVED SUPPORTING TARGET-VALID FAMILY`.  

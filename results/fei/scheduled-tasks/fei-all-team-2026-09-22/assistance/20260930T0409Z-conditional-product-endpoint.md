@@ -1,8 +1,8 @@
 # Exact conditional-product endpoint and two-address barrier
 
-Full FEI remains OPEN. These additions extend the verified entropy-wringing package in [draft PR12](https://github.com/yspennstate/math-open-problems/pull/12), head 2591d8acb920ca59230530761efa3113bea2167a. All twelve package files at this head were fetched and compared exactly with the tested/reviewed local bytes. Nine additive files remain on the draft branch; they are not merged to master.
+Full FEI remains OPEN. These additions extend the verified entropy-wringing package in [draft PR12](private-source-repository), head 2591d8acb920ca59230530761efa3113bea2167a. All twelve package files at this head were fetched and compared exactly with the tested/reviewed local bytes. Nine additive files remain on the draft branch; they are not merged to master.
 
-[Complete endpoint proof and exact Boolean barrier](https://github.com/yspennstate/math-open-problems/blob/2591d8acb920ca59230530761efa3113bea2167a/proofnet24/P03-fei/continuations/2026-09-30-entropy-wringing/ONE_BIT_ENDPOINT.md)
+[Complete endpoint proof and exact Boolean barrier](private-source-repository)
 
 ## Proved endpoint
 

@@ -75,7 +75,7 @@ Likewise
 
 The product-projection source used here is pinned at
 
-`yspennstate/math-open-problems@18fb381e300dd86514835d27eedcf2507ab09227`,
+`private-source-repository@18fb381e300dd86514835d27eedcf2507ab09227`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T130245Z-fleet03-B02-QFORM-r11/REPORT.md`,
 
@@ -248,7 +248,7 @@ This is an exact rotated-bank stress family, not a diagonal/pi calculation. It i
 
 The latest completed designated partner result was read from the immutable source
 
-`yspennstate/math-open-problems@7cb56c211d314add5639e4f29d0f1058c53deebd`,
+`private-source-repository@7cb56c211d314add5639e4f29d0f1058c53deebd`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/fleet02-B17-20260923T131455Z/REPORT.md`.
 
@@ -285,7 +285,7 @@ The intersection is much larger than the old diagonal control, but neither state
 
 The source-pinned diffuse periodic cube construction at
 
-`yspennstate/math-open-problems@15e9504309108d37a6c5f8bcacebac07eb4fe1ff`,
+`private-source-repository@15e9504309108d37a6c5f8bcacebac07eb4fe1ff`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T123638Z-fleet01-B17-qform-diffuse-edgeworth-v1/REPORT.md`,
 

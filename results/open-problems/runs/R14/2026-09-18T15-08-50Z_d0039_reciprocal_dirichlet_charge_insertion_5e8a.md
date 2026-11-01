@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R14 HARD OUTSIDE — D0039 reciprocal-Dirichlet reduction, root charge insertion, and an explicit CMS-Moran target
 
 Date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / source problem OPEN.** This run preserves the terminal handoffs of the negative-margin spherical perceptron, H0017, and Bradley D0036. The active exclusive R14 hard-outside target remains `operations/claims/D0039.md`: Bálint Virág, *Operator limits of random matrices*, ICM 2014 / arXiv:1804.06953, Section 4, Question 1, asking whether the semi-infinite beta-Hermite spectral measure has the same multifractal spectrum as the Gaussian multiplicative cascade with the same Hausdorff dimension.
 

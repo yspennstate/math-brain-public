@@ -20,7 +20,7 @@ The receiver must retain ORIGINAL-coordinate product provenance. In particular i
 
 At the required source pin
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 I used the completed mixed-Fresnel theorem from
 
@@ -42,7 +42,7 @@ The source theorem uses the ORIGINAL independent coordinates before taking modul
 
 The ruled theorem says that for signature `(2,1)` with all three eigenvalue magnitudes at least one, the majority-sign one-sheet levels satisfy `p_Q(q)<=pi sqrt(2)` after the appropriate sign convention.
 
-I also consume the latest completed compatible fleet03/B10 r28 geometry from brain handoff commit `17a044185c3594ba150fb2ab0df5d2a0ecd3b431`, whose canonical mathematics is `math-open-problems@b2a0240b45c8a0716d803b8413bac31af519ce42`. It supplies an ORIGINAL-leaf orthonormal pair `(r,y)` with
+I also consume the latest completed compatible fleet03/B10 r28 geometry from brain handoff commit `17a044185c3594ba150fb2ab0df5d2a0ecd3b431`, whose canonical mathematics is `private-source@b2a0240b45c8a0716d803b8413bac31af519ce42`. It supplies an ORIGINAL-leaf orthonormal pair `(r,y)` with
 
 `max_i (r_i^2+y_i^2) < 1/54`
 

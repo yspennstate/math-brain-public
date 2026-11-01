@@ -11,7 +11,7 @@ The current owner programme is `FEI-ALL-TEAM-20260922T095941Z`, control revision
 
 This run starts from the preceding fleet01/B15 theorem
 
-- repository `yspennstate/math-open-problems`, commit `b293d016f9bd94819fb11385986608b8acc0b83d`, path `proofnet24/P03-fei/fleet-2026-09-22/fleet01/B15/b15-20260922T103236Z-restriction-iprojection-chain/REPORT.md`,
+- repository `private-source-repository`, commit `b293d016f9bd94819fb11385986608b8acc0b83d`, path `proofnet24/P03-fei/fleet-2026-09-22/fleet01/B15/b15-20260922T103236Z-restriction-iprojection-chain/REPORT.md`,
 
 which proved, for a physical restriction of coordinate `j` at bias `s`,
 \[
@@ -29,7 +29,7 @@ The only negative term is the genuine child-mixture entropy `-JS_s(U,V)`.
 
 The required named compatible OTHER-account result consumed is fleet02/B15
 
-- repository `yspennstate/math-open-problems`, commit `ad83138c850372d14d0dcacaa76a50a2fe79bcaf`, path `proofnet24/P03-fei/fleet-2026-09-22/fleet02/B15/20260922T103316Z-fleet02-B15-r11/REPORT.md`.
+- repository `private-source-repository`, commit `ad83138c850372d14d0dcacaa76a50a2fe79bcaf`, path `proofnet24/P03-fei/fleet-2026-09-22/fleet02/B15/20260922T103316Z-fleet02-B15-r11/REPORT.md`.
 
 Its Lemma 2.1 shows that binning both source and reference log-masses preserves KL up to at most two bits times the discarded source mass, and its Theorem 3.1 applies this to Boolean character suspensions with an `O(I)` loss while retaining the rare-event logarithm. I apply the same principle to the **negative restriction entropy** in (0.1), not merely cite it.
 

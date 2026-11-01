@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R02 CLOSABLE OUTSIDE — successor gate after I0095 retirement
 
-Date: 2026-09-19 UTC. Repository/branch: private `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-19 UTC. Repository/branch: private `private-source-repository` / `master`.
 
 R02 remains on the post-I0095 successor-admission gate. I did not reopen the retired sign-matrix search, did not reset its six-run lifecycle, and did not manufacture another unchanged finite checker. The retained mathematical certificate is still the explicit `17 x 17` sign matrix with exact discrepancy `7`, independently audited over all `2^16 = 65536` projective signings, hence
 

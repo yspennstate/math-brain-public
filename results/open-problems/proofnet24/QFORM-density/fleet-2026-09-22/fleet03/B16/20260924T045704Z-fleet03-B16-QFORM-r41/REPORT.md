@@ -17,15 +17,15 @@ The owner target remains unrestricted: independent original-coordinate real inpu
 
 The immediate B16 predecessor is r40:
 
-- `yspennstate/math-open-problems@0cb21304c563591f2fd01a9f67efb5449a14b6fc`,
+- `private-source-repository@0cb21304c563591f2fd01a9f67efb5449a14b6fc`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260924T042138Z-fleet03-B16-QFORM-r40/REPORT.md`.
 
 It showed that an arbitrary nonzero outer physical square is harmless whenever a second source-separated zero-pivot crossing survives. The remaining exact-rank-three state is therefore the small nonzero physical pivot for which the useful third direction is trapped in the same residual source bank.
 
 Two source inputs used below are:
 
-1. fleet02/B16's exact physical-hub discriminant calculation and its hyperbolic cap barrier, `yspennstate/math-open-problems@390bf6a9ad30195ba4011927c8218245d0e014be`;
-2. the designated partner fleet04/B16 r4, `yspennstate/math-open-problems@7f2bb2d330022b09a6af6e39ab09d054caeaa346`, whose two-dimensional projected-plane theorem gives `2*pi/sqrt(|det H|)` for a definite projected quadratic plane while retaining arbitrary affine translations from disjoint outside sources.
+1. fleet02/B16's exact physical-hub discriminant calculation and its hyperbolic cap barrier, `private-source-repository@390bf6a9ad30195ba4011927c8218245d0e014be`;
+2. the designated partner fleet04/B16 r4, `private-source-repository@7f2bb2d330022b09a6af6e39ab09d054caeaa346`, whose two-dimensional projected-plane theorem gives `2*pi/sqrt(|det H|)` for a definite projected quadratic plane while retaining arbitrary affine translations from disjoint outside sources.
 
 The new point of this run is an exact nonzero-pivot counterpart of the zero-pivot Witt leverage identity: it tells exactly how much determinant, physical-star energy, and hidden same-bank leakage remain after Schur complementation, and it exposes why the positive hub-root majorant loses the dominant near-coloop resource.
 
@@ -265,7 +265,7 @@ This is a legitimate essential-density estimate through arbitrary hidden `P` lea
 
 The newest completed designated-partner theorem is fleet04/B16 r4,
 
-`yspennstate/math-open-problems@7f2bb2d330022b09a6af6e39ab09d054caeaa346`,
+`private-source-repository@7f2bb2d330022b09a6af6e39ab09d054caeaa346`,
 
 which gives
 

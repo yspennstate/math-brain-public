@@ -20,7 +20,7 @@ The proof below explicitly preserves the live corrections:
 
 The main analytic dependency is the completed orientation-free rank-two fractional theorem:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`  
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`  
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`  
 source theorem `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`.
 
@@ -34,7 +34,7 @@ The scalar product-projection input used below is the source-valid Rogozin--Ball
 
 The designated partner result actually consumed is fleet02/B16 r26:
 
-`yspennstate/math-open-problems@df9ef8e92ae2669eb101e2a1b076594af329dc52`  
+`private-source-repository@df9ef8e92ae2669eb101e2a1b076594af329dc52`  
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T071608Z-fleet02-B16-QFORM-r26/REPORT.md`.
 
 It constructs an exact target-valid near-coloop family with a same-bank overlapping pair `(T,U)`, proves the normalized conditional cap `||p_(U|T=t)||_infinity` is unbounded, and nevertheless gives a source-valid grouped-bank bound `<23` for the full family. This report attacks precisely the overlap mechanism exposed there.

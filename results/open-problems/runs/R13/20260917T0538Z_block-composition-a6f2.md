@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED**, not verifie
 # R13 — Boolean Komlos: block-composition theorem and 63-entry envelope improvement
 
 Run ID: `20260917T0538Z_block-composition-a6f2`  
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Continuity and fixed metric
 

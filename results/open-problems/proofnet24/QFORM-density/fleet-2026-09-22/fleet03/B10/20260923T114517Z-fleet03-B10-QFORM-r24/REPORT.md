@@ -13,7 +13,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The immediate B10 predecessor is
 
-`yspennstate/math-open-problems@be74f28001070ca45728f51da989c89335e2803c`
+`private-source-repository@be74f28001070ca45728f51da989c89335e2803c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T101459Z-fleet03-B10-QFORM-r23/REPORT.md`.
 
@@ -31,13 +31,13 @@ while every complementary row satisfies
 
 The analytic input used below is the completed mixed-hub/Fresnel theorem in
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`,
 
 and its exact-null rank-three shear corollary as written out independently in
 
-`yspennstate/math-open-problems@d3e2179df26d8808f17ec506a480fa4ca0e1f099`
+`private-source-repository@d3e2179df26d8808f17ec506a480fa4ca0e1f099`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T000427Z-fleet02-B01-qform-r30/REPORT.md`.
 
@@ -170,7 +170,7 @@ The completed designated partner theorem is
 
 `QFORM-REGRESSION-THREEBANK-CURVATURE-SPLIT-v1`,
 
-`yspennstate/math-open-problems@afdea9634d9e3f5fb09659da436292cf7dbe5b20`,
+`private-source-repository@afdea9634d9e3f5fb09659da436292cf7dbe5b20`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B10/20260923T061725Z-fleet04-B10-QFORM-r4/REPORT.md`.
 
@@ -202,7 +202,7 @@ The next B10 obstruction is the genuinely nonzero near-null/near-coloop collar i
 
 `QFORM-NEARNULL-NONZERO-HUB-HIGHSLOPE-PAYMENT-v1`:
 
-obtain a universal endpoint through the punctured collar `0<|r^TMr|<<1` without paying a negative power of that scalar pivot and without treating the small longitudinal coefficients as a perturbative random error. The newly completed mixed-basis triple-Fresnel theorem of fleet01/B03 (`math-open-problems@3d991ad3ab91593155b0b465007f4938968a14bf`) is directly relevant to that next step, but its disjoint-basis collision parameter is not automatically bounded below in the concentrated high-slope survivor, so no full collar closure is claimed here.
+obtain a universal endpoint through the punctured collar `0<|r^TMr|<<1` without paying a negative power of that scalar pivot and without treating the small longitudinal coefficients as a perturbative random error. The newly completed mixed-basis triple-Fresnel theorem of fleet01/B03 (`private-source@3d991ad3ab91593155b0b465007f4938968a14bf`) is directly relevant to that next step, but its disjoint-basis collision parameter is not automatically bounded below in the concentrated high-slope survivor, so no full collar closure is claimed here.
 
 Full exact-rank-three theorem: OPEN / NOT PROVED.  
 Full owner conjecture: OPEN / NOT PROVED.  

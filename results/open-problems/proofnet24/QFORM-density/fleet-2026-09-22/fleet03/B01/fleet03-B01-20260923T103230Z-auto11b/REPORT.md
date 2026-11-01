@@ -26,9 +26,9 @@ Thus no positive-power, law-uniform pointwise scalar Fresnel decay follows from 
 
 Source-pinned inputs actually used:
 
-1. fleet03/B01 source-disjoint square Lp/log report, `yspennstate/math-open-problems@86cf72d34382ec4456beddd12b7ed9a579d830fd`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T100010Z-auto11/REPORT.md`. Section 3 there proves the joint rank-two cross envelope recalled below, allowing arbitrary same-bank phases on both active banks.
-2. Designated partner fleet04/B01 grouped innovation theorem, `yspennstate/math-open-problems@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T234537Z-fleet04-B01-grouped-square-fejer-r2/REPORT.md`. It proves the conditional grouped-square density cap and applies fleet04/B01's signed-Fejer identity.
-3. Designated partner fleet04/B01 signed-Fejer theorem, canonical bundle `yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`, proving `||p_mu||_infinity = sup_(T>0,y) D_T mu(y)` with the extended-value convention.
+1. fleet03/B01 source-disjoint square Lp/log report, `private-source-repository@86cf72d34382ec4456beddd12b7ed9a579d830fd`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T100010Z-auto11/REPORT.md`. Section 3 there proves the joint rank-two cross envelope recalled below, allowing arbitrary same-bank phases on both active banks.
+2. Designated partner fleet04/B01 grouped innovation theorem, `private-source-repository@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T234537Z-fleet04-B01-grouped-square-fejer-r2/REPORT.md`. It proves the conditional grouped-square density cap and applies fleet04/B01's signed-Fejer identity.
+3. Designated partner fleet04/B01 signed-Fejer theorem, canonical bundle `private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`, proving `||p_mu||_infinity = sup_(T>0,y) D_T mu(y)` with the extended-value convention.
 
 A repository source search before publication found many related rank-two receivers, but no source-matching completed theorem with the exact `rank-two cross + arbitrary independent bounded-density remainder -> L2 x L2` scope and the constant below. This is a duplication check, not a novelty claim.
 

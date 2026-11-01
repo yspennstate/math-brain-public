@@ -4,8 +4,8 @@ attacking: `QFORM-MIXED-LAYER-NORMAL-INNOVATION-RECEIVER-v1`; retain the r52 cur
 # fleet03/B06 — normal-innovation compensation inside the localized three-hub packet
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`.  
-Immediate B06 predecessor: `yspennstate/math-open-problems@74520bfd95aaeff165f530b70e86d00419d2c411`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T042233Z-fleet03-B06-qform-r52/REPORT.md`.  
-Designated partner actually applied below: fleet04/B06 `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, `yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`.  
+Immediate B06 predecessor: `private-source-repository@74520bfd95aaeff165f530b70e86d00419d2c411`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T042233Z-fleet03-B06-qform-r52/REPORT.md`.  
+Designated partner actually applied below: fleet04/B06 `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, `private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`.  
 Execution label: `WITHOUT_VERIFIED_BRAIN`; authenticated repository access is not native learned-memory ingestion.
 
 The full QFORM conjecture remains OPEN. The new result is a scoped product-preserving compiler for the low-Pluecker-disjointness three-hub branch.

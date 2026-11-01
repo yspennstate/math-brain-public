@@ -16,7 +16,7 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, iid, dia
 
 The immediate own source is
 
-`yspennstate/math-open-problems@7315bd0d0feb176ae2a5e82716694a213e722a2f`
+`private-source-repository@7315bd0d0feb176ae2a5e82716694a213e722a2f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T213623Z-fleet03-B07-qform-r39/REPORT.md`.
 

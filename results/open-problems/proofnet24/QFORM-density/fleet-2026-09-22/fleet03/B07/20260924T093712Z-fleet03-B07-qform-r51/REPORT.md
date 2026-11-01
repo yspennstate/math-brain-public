@@ -15,7 +15,7 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, iid, pos
 
 Incoming worker-owned state:
 
-`yspennstate/math-open-problems@4155f9884b4eaa0aee96da4e148c7303e6d6cc6a`
+`private-source-repository@4155f9884b4eaa0aee96da4e148c7303e6d6cc6a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260924T074025Z-fleet03-B07-qform-r50/REPORT.md`.
 
@@ -41,7 +41,7 @@ Two completed dependencies are used in exact scope.
 
 **Physical E3 receiver.** fleet02/B03, `QFORM-Z3-CROSSING-MARGINAL-FREE-v1`:
 
-`yspennstate/math-open-problems@df738b7f0821d9af56dfd992cab10ecc6704e3fb`
+`private-source-repository@df738b7f0821d9af56dfd992cab10ecc6704e3fb`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T184716Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 
@@ -59,7 +59,7 @@ with arbitrary same-side blocks, affine terms, outside coordinates, signs, and a
 
 **Designated partner.** fleet04/B07:
 
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 
@@ -73,7 +73,7 @@ then the full ambient law satisfies
 
 This partner gate establishes essential boundedness; continuity is not claimed there.
 
-The only external deterministic input used below is the two-part MSS frame partition already source-pinned and proved applicable in the completed ridge-window package `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`. If a Parseval frame `sum_i u_i u_i^T=I` has `||u_i||^2<=mu`, there is a physical partition `I union J` for which each partial Gram matrix is at most `(1/sqrt(2)+sqrt(mu))^2 I`; since the two partial sums add to `I`, each is therefore at least
+The only external deterministic input used below is the two-part MSS frame partition already source-pinned and proved applicable in the completed ridge-window package `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`. If a Parseval frame `sum_i u_i u_i^T=I` has `||u_i||^2<=mu`, there is a physical partition `I union J` for which each partial Gram matrix is at most `(1/sqrt(2)+sqrt(mu))^2 I`; since the two partial sums add to `I`, each is therefore at least
 
 `g(mu) I`, `g(mu)=1-(1/sqrt(2)+sqrt(mu))^2`.                    (1.10)
 

@@ -133,7 +133,7 @@ This is materially weaker than controlling `sup_w M(w)`. It does not resurrect t
 
 Completed partner source:
 
-`yspennstate/math-open-problems@cff8e1368d32302e6d649f776579a5c1951929b1`,
+`private-source-repository@cff8e1368d32302e6d649f776579a5c1951929b1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T151702Z-fleet04-B15-pivoted-convolution-r6/REPORT.md`.
 
 It proves for independent cap-one `X,Y`
@@ -175,7 +175,7 @@ Thus the partner branch is recovered through the more general expected-height co
 
 A completed source theorem at
 
-`yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`,
+`private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`
 
 proves, with instance-dependent constants,
@@ -215,6 +215,6 @@ The natural next B15 use is to take a current hub/grouped-bank decomposition who
 
 Consumed corrections include the false uniform pointwise phase decay, no post-rotation independence, dimension-loss from naive fiber suprema, false arbitrary-joint coarea height, false conditional projection-moment gates, no uniformly good single minor/cross cut, and no uniform fragment-count reduction. None is used positively.
 
-The current Claude continuation at `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md` was read from current `math-open-problems` master. Its full conjecture status remains open; its hub and projected-crossing results are supporting inputs, not a completed rough-law universal theorem.
+The current Claude continuation at `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md` was read from current `private-source` master. Its full conjecture status remains open; its hub and projected-crossing results are supporting inputs, not a completed rough-law universal theorem.
 
 No Gaussian, log-concavity, moment, compact-support, connected-support, diagonal-basis, or centered-input hypothesis has been inserted. No schedule/task/notification/email/permission/model/API setting is changed by this mathematical report.

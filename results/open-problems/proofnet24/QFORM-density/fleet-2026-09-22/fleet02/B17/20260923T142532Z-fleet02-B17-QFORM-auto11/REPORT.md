@@ -229,7 +229,7 @@ This proves (1.1).
 
 ## 6. Required application of the pinned Claude result
 
-The required source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` proves, in `COUNTEREXAMPLE_SEARCH.md`, Theorem C: for an exact rank-three `(+, +, -)` form with eigenvalue magnitudes at least one,
+The required source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` proves, in `COUNTEREXAMPLE_SEARCH.md`, Theorem C: for an exact rank-three `(+, +, -)` form with eigenvalue magnitudes at least one,
 \[
 p_Q(s)\le\pi\sqrt2,\qquad s\ge0.
 \tag{6.1}
@@ -247,7 +247,7 @@ The same pinned source also explicitly invokes Ball/Rogozin product-measure proj
 
 The latest fleet03/B17 theorem, source-pinned at
 
-`math-open-problems@f8070e3dd56d0f4f4fb3f4b4734c7bc65f3684fc`,
+`private-source@f8070e3dd56d0f4f4fb3f4b4734c7bc65f3684fc`,
 
 proves for three independent normalized uniform banks of arbitrary unequal sizes `m_j>=3` and arbitrary orthogonal orientation `O` that
 \[

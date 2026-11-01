@@ -1,7 +1,7 @@
 Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — this was not authenticated GPT-6 maximum. **NO MOVEMENT in the fixed upper-envelope metric** `B_R13(n)` (`B_R13(86)=728151/100000=7.28151` remains unchanged; fixed-upper unchanged count `1 -> 2`), but the **explicit finite obstruction at the same source dimension moved** after correcting the literature baseline: `K_86^* >= 1+7 sqrt(2)/8 = 2.237436867... -> K_86^* >= 2259253/10^6 = 2.259253`. Section-B methods actually used: **#11 DUALIZE, #6 DEFORM TO A POINT YOU CAN SOLVE, #25 COUNT THE SAME THING TWICE.**
 
 Run ID: `20260919T0833Z_balanced86-rational-e21c`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Worker: R13 HARD OUTSIDE.
 
 ## 1. Continuity, ownership, source status, and exact metric state

@@ -15,7 +15,7 @@ Fresh owner control remained revision `2026-09-22.15`, QFORM-only, with no appli
 
 Pinned source required by the owner:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -35,7 +35,7 @@ The J-side has no marginal gate. The D' extension permits an I-side cap `h<3/4`,
 
 The freshest compatible designated partner is fleet03/B04 r47,
 
-`yspennstate/math-open-problems@24476f8abf801b3e862fd227748790459d731340`,
+`private-source-repository@24476f8abf801b3e862fd227748790459d731340`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260924T024757Z-fleet03-B04-QFORM-auto11-r47/REPORT.md`.
 

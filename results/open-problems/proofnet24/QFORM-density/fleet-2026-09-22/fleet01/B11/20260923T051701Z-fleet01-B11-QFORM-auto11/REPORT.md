@@ -21,7 +21,7 @@ The designated partner `fleet02/B11` most recently proved the disjoint-bank theo
 
 when `P=U^T B U+ell^T U+c`, `U=(X1,X2)` are two independent cap-one variables, `W` is independent of them with density cap `L`, and `B` is invertible. Source:
 
-`yspennstate/math-open-problems@f2835c54b9f384f8f83e34c46bef5c40953e32a7`
+`private-source-repository@f2835c54b9f384f8f83e34c46bef5c40953e32a7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T042112Z-fleet02-B11-QFORM-2f47d35a/REPORT.md`.
 
@@ -33,13 +33,13 @@ The key analytic dependency is the completed rank-two affine half-Riesz estimate
 
 for two independent cap-one variables and every invertible symmetric `2x2` matrix `S`. It is the two-coordinate specialization of
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 The current pair-log theorem is also used below only at its proved scope:
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -243,7 +243,7 @@ At `a=0`, the pair term is `2X1W_m`. For `m=1` and centered unit uniforms it has
 
 The current required Claude package is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
 

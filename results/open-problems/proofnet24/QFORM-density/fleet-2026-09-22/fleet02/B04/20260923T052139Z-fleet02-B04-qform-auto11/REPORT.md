@@ -23,7 +23,7 @@ Full QFORM remains OPEN. No continuity claim is made for the new square-peel bra
 
 The required Claude source was consumed at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
@@ -34,14 +34,14 @@ The exact completed ingredient used below is Theorem D's arbitrary-minor-weight 
 
 The rank-two fractional time integration is the completed `QFORM-VOLUME-MARGINAL-WEIGHTED-RIESZ-v1` / fractional-volume compiler in
 
-`yspennstate/math-open-problems@da12fa65ddad431624952613e034f1a4d783098b`
+`private-source-repository@da12fa65ddad431624952613e034f1a4d783098b`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T013054Z-auto11/REPORT.md`,
 
 whose proof uses the same determinant datum followed by sharp Hausdorff--Young and a fractional-Riesz kernel. I extend only the determinant input from canonical weights to arbitrary weights; all later constants are unchanged.
 
 The designated partner `fleet03/B04` was read through its latest completed r25 theorem at
 
-`yspennstate/math-open-problems@37ba54a65abfdcb49595a6aa820567ac20da4f41`
+`private-source-repository@37ba54a65abfdcb49595a6aa820567ac20da4f41`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T045000Z-fleet03-B04-qform-r25/REPORT.md`,
 
 and its r24 ridge review at the same repository state, path

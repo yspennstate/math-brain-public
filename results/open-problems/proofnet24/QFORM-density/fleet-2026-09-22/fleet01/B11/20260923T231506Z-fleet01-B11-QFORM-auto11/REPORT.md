@@ -14,7 +14,7 @@ No Gaussianity, log-concavity, moment, compact-support, connected-support, condi
 
 The newest fleet02/B11 run is
 
-`yspennstate/math-open-problems@cc0c9a6b7a942713317894ada2a2003e8fca11c5`
+`private-source-repository@cc0c9a6b7a942713317894ada2a2003e8fca11c5`
 
 at
 
@@ -24,7 +24,7 @@ It proves that merely splitting the leaves of one hub into two disjoint source b
 
 The completed fleet02/B11 theorem actually applied below is `QFORM-3D-PROJECTION-CROSS-L2-v1`, source
 
-`yspennstate/math-open-problems@25c25e15fa0f570e7b0b1a2a9fab0811eda07113`,
+`private-source-repository@25c25e15fa0f570e7b0b1a2a9fab0811eda07113`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T201026Z-fleet02-B11-QFORM-auto11/REPORT.md`.
 
@@ -36,7 +36,7 @@ with a continuous density. The constant uses the dimension-three product-project
 
 The live finite-heavy reduction used for interpretation is fleet03/B11 r43,
 
-`yspennstate/math-open-problems@d75835c958b5dcdd28649eb79af0faf3103b5d89`.
+`private-source-repository@d75835c958b5dcdd28649eb79af0faf3103b5d89`.
 
 It reduces the unpaid exact-rank-three indefinite chamber to one heavy original hub with a robust but diffuse physical self-star, after scalar-pivot, strong-edge, and two-heavy-row exits have fired.
 

@@ -44,7 +44,7 @@ Consumed corrections include: law-uniform pointwise quadratic-phase decay is fal
 `QFORM-TWO-HUB-ANCHOR-CURRENCY-v1` and
 `QFORM-ANCHOR-SCHUR-COFACTOR-IDENTITY-v1`:
 
-`yspennstate/math-open-problems@36cc5730f42c76c15fdc330dc4b47beec060b8fd`
+`private-source-repository@36cc5730f42c76c15fdc330dc4b47beec060b8fd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T061939Z-fleet03-B06-qform-r28/REPORT.md`.
 
@@ -54,7 +54,7 @@ These give (1.1)-(1.2) without selecting one local `2x2` minor.
 
 Fleet02/B06 proved `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1` at
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
@@ -64,7 +64,7 @@ For a `k`-dimensional orthonormal projection of an original product vector with 
 
 Fleet02/B06, at
 
-`yspennstate/math-open-problems@efbbfe33c64d3a5cbdaf1085d9b5df37bd87feaf`
+`private-source-repository@efbbfe33c64d3a5cbdaf1085d9b5df37bd87feaf`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T065430Z-3f494f528ca7/REPORT.md`,
 
@@ -78,7 +78,7 @@ when `W` and `Z` are functions of independent background banks. It explicitly le
 
 The exact designated partner `fleet04/B06` still has no completed current-QFORM canonical artifact in the repository at this run's source check. I therefore do not fabricate one. The compatible completed fleet04 result actually used below is fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`:
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

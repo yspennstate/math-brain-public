@@ -14,7 +14,7 @@ attacking: the strict-N3 STAR grouped-descent gap — combine the partner's two-
 
 The immediately preceding fleet01/B19 result is
 
-`yspennstate/math-open-problems@0add399f3a15e6c846c8fdef7ea85d620788379c`
+`private-source-repository@0add399f3a15e6c846c8fdef7ea85d620788379c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260923T111445Z-fleet01-B19-qform-r31/REPORT.md`.
 
@@ -48,7 +48,7 @@ No tail is deleted in (1.3).
 
 The current partner report was read at the fresh pre-run math snapshot
 
-`yspennstate/math-open-problems@27ae9c5fbf53787fac1d61d7f480e0283be8c1c5`
+`private-source-repository@27ae9c5fbf53787fac1d61d7f480e0283be8c1c5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/fleet02-B19-20260923T111227Z-6af6679d/REPORT.md`.
 
@@ -62,7 +62,7 @@ is uniformly paid by the completed third-square/hyperbolic theorem. Thus a valid
 
 The required current volume package is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md`.
 
@@ -83,7 +83,7 @@ The conclusion retains all self blocks, all outside couplings, affine terms, sig
 
 I also use Claude's completed fractional three-volume theorem D' at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 

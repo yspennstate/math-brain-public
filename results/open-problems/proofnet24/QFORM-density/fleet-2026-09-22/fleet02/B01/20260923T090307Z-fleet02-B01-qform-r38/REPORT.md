@@ -197,7 +197,7 @@ Thus the hyperbolic `L^2` receiver pays an exact strict-N3 diffuse family while 
 
 ## 5. Latest designated partner applied and the near-singular-kernel interface
 
-The newest completed designated-partner result is fleet03/B01 `QFORM-RANK2-CROSS-DEFINITE-KERNEL-L2-v1`, source-pinned in the brain at commit `595bd2c5ac1322b641639f582e55b1cf5737cf98` and in math-open-problems at `dde65d9e08434761ec633e1acc3865fb9ad05941`. It states, for a four-original-coordinate center with rank-two cross matrix of singular product `Delta` and a **definite** two-dimensional cross-kernel curvature `H` of determinant magnitude `d_2`,
+The newest completed designated-partner result is fleet03/B01 `QFORM-RANK2-CROSS-DEFINITE-KERNEL-L2-v1`, source-pinned in the brain at commit `595bd2c5ac1322b641639f582e55b1cf5737cf98` and in private-source at `dde65d9e08434761ec633e1acc3865fb9ad05941`. It states, for a four-original-coordinate center with rank-two cross matrix of singular product `Delta` and a **definite** two-dimensional cross-kernel curvature `H` of determinant magnitude `d_2`,
 
 `||p_Q||_infinity`
 ` <=3(pi/2)^(1/3) Delta^(-1/3)d_2^(-1/6).`                               (5.1)

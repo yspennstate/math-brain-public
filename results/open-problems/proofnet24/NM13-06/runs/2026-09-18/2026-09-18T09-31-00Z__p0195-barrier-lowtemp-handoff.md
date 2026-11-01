@@ -5,7 +5,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 Run date: 2026-09-18 UTC  
 Track / namespace: `proofnet24/NM13-06`  
 Category: CLOSABLE OUTSIDE  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Canonical source / claim: `P0195`, `operations/claims/P0195.md`  
 Canonical dedup key: `monotonicity_of_the_ferromagnetic_ising_spectral_gap`  
 Shard: `5 mod 13`  

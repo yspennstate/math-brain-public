@@ -15,7 +15,7 @@ No Gaussian, log-concavity, moment, bounded-support, connected-support, iid, dia
 
 The immediate source is my r40 report
 
-`yspennstate/math-open-problems@c21a61aa6390c0be6ed68027341207e44c1bbb07`
+`private-source-repository@c21a61aa6390c0be6ed68027341207e44c1bbb07`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T224121Z-fleet03-B07-qform-r40/REPORT.md`.
 
@@ -52,7 +52,7 @@ A completed source is fleet02/B03, `proofnet24/QFORM-density/fleet-2026-09-22/fl
 
 This is `QFORM-SQUARE-PLUS-Z2-MARGINAL-FREE-v1`, source
 
-`yspennstate/math-open-problems@68e6d8f52d904033878f6f55c376c38fd214684e`
+`private-source-repository@68e6d8f52d904033878f6f55c376c38fd214684e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T211103Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 
@@ -193,7 +193,7 @@ and (3.7) pays the full law:
 
 Assume (4.6) and `N:=|B_hi|>=3`. Apply the designated completed partner `fleet04/B07` theorem
 
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 

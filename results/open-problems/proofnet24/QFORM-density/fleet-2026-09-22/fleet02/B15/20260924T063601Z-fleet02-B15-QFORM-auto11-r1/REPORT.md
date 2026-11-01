@@ -44,7 +44,7 @@ All rough-input height passages below are made first at this interval-measure le
 
 The required source was read at exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -94,7 +94,7 @@ The ruling parameter is not arclength: `|e_theta^perp+e_3|=sqrt(2)`. Thus a line
 
 The preceding completed fleet02/B15 result is
 
-`yspennstate/math-open-problems@45779cb1dca5f453ac620431b380ad015a052e70`.
+`private-source-repository@45779cb1dca5f453ac620431b380ad015a052e70`.
 
 It proves the following theorem for the same isotropic ruled form. Replace one ORIGINAL-coordinate probability density by an arbitrary cap-one subdensity `g` of mass `m<=1`, while keeping all other original-coordinate marginals arbitrary cap-one probabilities. Let `nu_g^+` be the positive-sheet output submeasure. Then
 
@@ -338,11 +338,11 @@ No output continuity is used in this rough height passage.
 
 The newest compatible fleet03/B15 report read during this run is
 
-`yspennstate/math-open-problems@4bd938cedd73ec402daa15e56294b754c29ec814`,
+`private-source-repository@4bd938cedd73ec402daa15e56294b754c29ec814`,
 
 with rigor addendum
 
-`yspennstate/math-open-problems@40b108ab5984542e26b8c8ff2cd059e13446bea8`.
+`private-source-repository@40b108ab5984542e26b8c8ff2cd059e13446bea8`.
 
 It proves a product-preserving localized physical-triple theorem. If some ORIGINAL-coordinate principal `3x3` block `B` has all three eigenvalue magnitudes at least `s>0`, then
 
@@ -364,11 +364,11 @@ This repaired theorem uses original-coordinate scalar/pair pivots and does not u
 
 The immediately preceding fleet03/B15 theorem at
 
-`yspennstate/math-open-problems@6ea11aaafcf72491b05cb7b51b93166a91e1ad2d`
+`private-source-repository@6ea11aaafcf72491b05cb7b51b93166a91e1ad2d`
 
 with rigor check
 
-`yspennstate/math-open-problems@8d15f0dd3348e545d9854ae08a914588da315505`
+`private-source-repository@8d15f0dd3348e545d9854ae08a914588da315505`
 
 proved that the exact full universal interval constant equals its restriction to a **countable** rational skeleton:
 
@@ -461,7 +461,7 @@ and it is real analytic and Schwartz. As `sigma downarrow0`, it converges to `1_
 
 The completed fleet03/B15 fixed-matrix density-stability theorem at
 
-`yspennstate/math-open-problems@696a0784ba7d270db657c1596d9c2ee940a1745d`
+`private-source-repository@696a0784ba7d270db657c1596d9c2ee940a1745d`
 
 proves, for every fixed rank-at-least-three matrix, uniform output-density convergence under cap-preserving marginal `L1` approximation. Therefore, for the fixed `A_N`,
 
@@ -565,9 +565,9 @@ The complementary convex/two-sheet contribution and higher-rank diffuse/no-good-
 ## 14. Source discipline
 
 
-Required source actually read: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, all three named files.
+Required source actually read: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, all three named files.
 
-Newest designated partner consumed: fleet03/B15 `math-open-problems@4bd938cedd73ec402daa15e56294b754c29ec814`, rigor addendum `40b108ab5984542e26b8c8ff2cd059e13446bea8`.
+Newest designated partner consumed: fleet03/B15 `private-source@4bd938cedd73ec402daa15e56294b754c29ec814`, rigor addendum `40b108ab5984542e26b8c8ff2cd059e13446bea8`.
 
 Countable-core partner dependency: fleet03/B15 `6ea11aaafcf72491b05cb7b51b93166a91e1ad2d`, rigor addendum `8d15f0dd3348e545d9854ae08a914588da315505`.
 

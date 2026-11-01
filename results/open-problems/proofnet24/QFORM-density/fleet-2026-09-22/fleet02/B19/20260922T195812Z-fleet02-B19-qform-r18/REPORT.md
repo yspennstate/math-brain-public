@@ -18,17 +18,17 @@ This report uses no moment/support/log-concavity hypothesis, no post-rotation in
 
 ## 2. Source-pinned inputs actually used
 
-1. **Incoming fleet02/B19 r17 scalar-Schur reduction.** Canonical report readable at `yspennstate/math-open-problems@fc8343c379bbddf14be670349f664f7fcb39994a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T192830Z-fleet02-B19-qform-r17/REPORT.md`, blob `e99359e8d98f04fc1a1d5388e2f5a6000127fbc4`. It proves that any nonzero physical scalar pivot of a target parent has exact Schur residual `S` with `s_2(S)>=1`, gives the S0/S1/S2 physical-overlap trichotomy, pays diffuse S0, and refutes selecting one principal pair from the S2 aggregate.
+1. **Incoming fleet02/B19 r17 scalar-Schur reduction.** Canonical report readable at `private-source-repository@fc8343c379bbddf14be670349f664f7fcb39994a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T192830Z-fleet02-B19-qform-r17/REPORT.md`, blob `e99359e8d98f04fc1a1d5388e2f5a6000127fbc4`. It proves that any nonzero physical scalar pivot of a target parent has exact Schur residual `S` with `s_2(S)>=1`, gives the S0/S1/S2 physical-overlap trichotomy, pays diffuse S0, and refutes selecting one principal pair from the S2 aggregate.
 
-2. **Current named partner fleet03/B19 r17.** Canonical `yspennstate/math-open-problems@9989e8640c2933ba54cd8de88723ac5c223be3b1`. Its exact three-heavy-row theorem closes every O0 state with at least three `3/4`-heavy rows. Therefore only the at-most-two-heavy O0 branch reaches the incoming B19 scalar-Schur machinery.
+2. **Current named partner fleet03/B19 r17.** Canonical `private-source-repository@9989e8640c2933ba54cd8de88723ac5c223be3b1`. Its exact three-heavy-row theorem closes every O0 state with at least three `3/4`-heavy rows. Therefore only the at-most-two-heavy O0 branch reaches the incoming B19 scalar-Schur machinery.
 
-3. **Orientation-free rank-two affine half-Riesz theorem.** Canonical `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, claim `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`: for independent cap-one inputs and an invertible two-dimensional quadratic coefficient `Lambda`,
+3. **Orientation-free rank-two affine half-Riesz theorem.** Canonical `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, claim `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`: for independent cap-one inputs and an invertible two-dimensional quadratic coefficient `Lambda`,
 
 `sup_t E|Q_2+affine-t|^(-1/2) <=128 |det Lambda|^(-1/4)`.
 
-4. **One-dimensional product projection cap.** The incoming r17 source pins the completed projection theorem at `yspennstate/math-open-problems@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`; a unit linear form in an original-coordinate product bank has density cap at most `sqrt(e)`.
+4. **One-dimensional product projection cap.** The incoming r17 source pins the completed projection theorem at `private-source-repository@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`; a unit linear form in an original-coordinate product bank has density cap at most `sqrt(e)`.
 
-5. **New compatible fleet03/B07 colored-exterior result.** Canonical `yspennstate/math-open-problems@4ee3cfb2d6682d5be670819cf5de173ad859f6cf`. Applied to r17's exact Schur S0 resource `e_2(BB^T)>=1/48`, it extracts four original-coordinate banks with matching-block squared-Frobenius product at least `1/768` and rainbow second-minor mass at least `1/192`. I use this only at that exact structural scope; it is not converted into a fictitious fixed minor.
+5. **New compatible fleet03/B07 colored-exterior result.** Canonical `private-source-repository@4ee3cfb2d6682d5be670819cf5de173ad859f6cf`. Applied to r17's exact Schur S0 resource `e_2(BB^T)>=1/48`, it extracts four original-coordinate banks with matching-block squared-Frobenius product at least `1/768` and rainbow second-minor mass at least `1/192`. I use this only at that exact structural scope; it is not converted into a fictitious fixed minor.
 
 ## 3. First new theorem: affine and singular residuals cost nothing
 

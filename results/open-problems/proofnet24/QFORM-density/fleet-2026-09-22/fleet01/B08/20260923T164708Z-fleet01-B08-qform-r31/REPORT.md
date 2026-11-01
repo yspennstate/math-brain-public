@@ -17,10 +17,10 @@ The unrestricted conjecture remains **OPEN**. Continuity is proved only on the e
 Fresh control was reread after the 2026-09-23 16:44 UTC owner continuation. The current owner continuation keeps all workers exclusively on QFORM and requires reading the current Claude continuation. I read:
 
 - `yspennstate/math-research-brain@c46b048e944ba806a41456dd1d672170a43c8cfc`, `AGENTS.md`, `scheduled_tasks/README.md`, the live correction inbox and `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z.md`;
-- Claude continuation `yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`, `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md` and `single_hub_core/REPORT.md`. Its `(SP)` estimate is OPEN, so it is not used as a premise here;
-- the new projected-crossing checkpoint `yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. It is not needed for the identity proved below;
-- this slot's preceding gate `yspennstate/math-open-problems@014df00b32f2360c1b5c835434bb146cf57e1930`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T153626Z-fleet01-B08-qform-r30/REPORT.md`;
-- completed partner report `yspennstate/math-open-problems@535ec99ca6cc7fd0667dcb3f22dfdca7ec7420ce`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T153836Z-fleet02-B08-qform-r28/REPORT.md`. A newer fleet02/B08 r30 item was only an early checkpoint at source refresh, not a completed theorem.
+- Claude continuation `private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`, `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md` and `single_hub_core/REPORT.md`. Its `(SP)` estimate is OPEN, so it is not used as a premise here;
+- the new projected-crossing checkpoint `private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. It is not needed for the identity proved below;
+- this slot's preceding gate `private-source-repository@014df00b32f2360c1b5c835434bb146cf57e1930`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T153626Z-fleet01-B08-qform-r30/REPORT.md`;
+- completed partner report `private-source-repository@535ec99ca6cc7fd0667dcb3f22dfdca7ec7420ce`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T153836Z-fleet02-B08-qform-r28/REPORT.md`. A newer fleet02/B08 r30 item was only an early checkpoint at source refresh, not a completed theorem.
 
 The live corrections prohibiting law-uniform pointwise quadratic-phase decay, rotated independence, arbitrary-joint coarea caps, and small-random-error inference from a small matrix error are all respected.
 
@@ -142,7 +142,7 @@ one has
 
 `s_3(B)>(eta/2)L =0.11253705053752638... L`.                    (4.5)
 
-Apply the previously completed original-coordinate theorem `QFORM-S3-VOLUME-OR-BILATERAL-STAR-v1` from fleet01/B08 r24 (`yspennstate/math-open-problems@a11ebd02f863b82324e449b4a31d468ec654f080`). At `q=1`, (4.5) implies either the full ambient quadratic form has a continuous `C_0` density with
+Apply the previously completed original-coordinate theorem `QFORM-S3-VOLUME-OR-BILATERAL-STAR-v1` from fleet01/B08 r24 (`private-source-repository@a11ebd02f863b82324e449b4a31d468ec654f080`). At `q=1`, (4.5) implies either the full ambient quadratic form has a continuous `C_0` density with
 
 `boxed: ||p_Q||_infinity < 87.902851345/L`,                     (4.6)
 

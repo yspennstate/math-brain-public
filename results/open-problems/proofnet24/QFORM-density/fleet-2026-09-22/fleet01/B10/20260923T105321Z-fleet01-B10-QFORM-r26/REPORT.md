@@ -13,19 +13,19 @@ The full QFORM target remains OPEN / NOT PROVED / NOT DISPROVED. This report tre
 ## 1. Pinned sources actually used
 
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`,
 
 especially its twisted Hausdorff--Young/Brascamp--Lieb mixed-Fresnel mechanism. I also use the aligned-square implementation derived in fleet01/B16,
 
-`yspennstate/math-open-problems@dd628c373863e2a0296617e74810343a93379813`
+`private-source-repository@dd628c373863e2a0296617e74810343a93379813`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/B16-20260923T013905Z-qform-projection-product/CHECKPOINT.md`.
 
 The designated partner actually applied is fleet02/B10,
 
-`yspennstate/math-open-problems@16ecbcc3f6d34d4195ff6e29066216df155d9530`
+`private-source-repository@16ecbcc3f6d34d4195ff6e29066216df155d9530`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T064541Z-fleet02-B10-QFORM-auto11/REPORT.md`.
 

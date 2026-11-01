@@ -261,7 +261,7 @@ This removes a false strategic fork: there is no need to interpolate between a `
 
 The designated partner result is `QFORM-REGRESSION-THREEBANK-CURVATURE-SPLIT-v1` at
 
-`yspennstate/math-open-problems@afdea9634d9e3f5fb09659da436292cf7dbe5b20`
+`private-source-repository@afdea9634d9e3f5fb09659da436292cf7dbe5b20`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B10/20260923T061725Z-fleet04-B10-QFORM-r4/REPORT.md`.
 

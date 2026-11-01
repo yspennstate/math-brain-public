@@ -14,7 +14,7 @@ No full-target claim is made. All random variables below are original-coordinate
 
 The current owner synthesis leaves the no-pivot class `N3(tau)` open after the scalar/pair exits. The newest-Claude package at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 
@@ -26,7 +26,7 @@ This run applies (1.1) below to an actual quantitative N3 exit.
 
 The designated partner is fleet03/B19 r26, canonical report commit
 
-`yspennstate/math-open-problems@903a525be3cb74e514e5f402b6fcca404bb5bfc5`,
+`private-source-repository@903a525be3cb74e514e5f402b6fcca404bb5bfc5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T043056Z-fleet03-B19-QFORM-r26/REPORT.md`.
 

@@ -2,7 +2,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is n
 
 # HARD7-04 bounded research iteration — collared tree-census lower bound
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL / source-size proof candidate / source still OPEN until closure protocol is met**.
 

@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 
 # R03 run44 — F0097 random k-SAT: low-collision booster simulation and a superlogarithmic replacement obstruction
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **F0097 OPEN / R03 PARTIAL.** The stale native title/prompt still names F0001 / sharp iid Rademacher singularity, but canonical R03 state already handed F0001 off after the third stuck episode in run41 and created exclusive claim `operations/claims/F0097.md`. Under the owner's continuity rule F0001 is not reopened without explicit reassignment.
 

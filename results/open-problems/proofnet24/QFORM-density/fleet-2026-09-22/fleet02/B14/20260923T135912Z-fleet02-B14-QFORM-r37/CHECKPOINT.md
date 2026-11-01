@@ -5,7 +5,7 @@ attacking: normalized-fragment critical-budget barrier — test the partner squa
 
 Full QFORM remains open. The new calculation below is a proof-interface obstruction, not a counterexample to the conjecture.
 
-Use the completed designated-partner theorem fleet03/B14 r35, `QFORM-SQRT-CRITICAL-BUDGET-MIXTURE-v1`, canonical `math-open-problems@29096949260b7ec2e9659c1379bd0a0882a37387`. For an invertible indefinite physical pair with `D=kappa=1`, its optimized critical-tail envelope is
+Use the completed designated-partner theorem fleet03/B14 r35, `QFORM-SQRT-CRITICAL-BUDGET-MIXTURE-v1`, canonical `private-source@29096949260b7ec2e9659c1379bd0a0882a37387`. For an invertible indefinite physical pair with `D=kappa=1`, its optimized critical-tail envelope is
 
 `F(K)=inf_{y>0} [4 sqrt(K/y)+Omega(y)]`,
 

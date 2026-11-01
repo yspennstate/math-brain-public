@@ -17,7 +17,7 @@ All random variables remain literal original independent coordinates with one-di
 
 The direct predecessor is fleet01/B09 r32,
 
-`yspennstate/math-open-problems@dd2f429f6135ce79e5801d58eca341a82d736527`,
+`private-source-repository@dd2f429f6135ce79e5801d58eca341a82d736527`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260924T065224Z-fleet01-B09-QFORM-auto11-r32/REPORT.md`.
 
@@ -31,7 +31,7 @@ A fresh source search found that the first possibility cannot be pursued as a un
 
 `QFORM-ARBITRARY-THRESHOLD-NULL-CASCADE-v1`,
 
-`yspennstate/math-open-problems@6d467b74b34bb3ab34ab2f32cdfd9eab2e75af64`,
+`private-source-repository@6d467b74b34bb3ab34ab2f32cdfd9eab2e75af64`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T234658Z-fleet02-B10-QFORM-auto11/REPORT.md`.
 
@@ -41,7 +41,7 @@ The replacement mechanism is the already-proved weighted two-frame EKR stability
 
 `QFORM-WEIGHTED-EKR-2FRAME-STABILITY-v1`,
 
-`yspennstate/math-open-problems@8b902bf20457a12c8ad394ece3808c9a0130a95b`,
+`private-source-repository@8b902bf20457a12c8ad394ece3808c9a0130a95b`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T091354Z-fleet03-B09-QFORM-r27/REPORT.md`.
 
@@ -236,7 +236,7 @@ The completed designated-partner fleet02/B09 r2 theorem
 
 source
 
-`yspennstate/math-open-problems@b3922fe080467f7f34a7dd248460fa2478bc03d2`,
+`private-source-repository@b3922fe080467f7f34a7dd248460fa2478bc03d2`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T124417Z-fleet02-B09-QFORM-r2/REPORT.md`,
 

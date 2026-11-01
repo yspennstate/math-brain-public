@@ -37,7 +37,7 @@ This run proves an exact Schur-star ledger, shows that `H` can vanish or tend to
 
 The required fixed source was reread at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 
@@ -66,7 +66,7 @@ Crucially, `A_HH,A_HJ,A_IJ,A_JJ` are arbitrary. Thus an entire conditioned sourc
 
 The newest completed designated partner is fleet03/B09 r47,
 
-`yspennstate/math-open-problems@99292d434fe013bcced66702de127ef781852baa`,
+`private-source-repository@99292d434fe013bcced66702de127ef781852baa`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T074738Z-fleet03-B09-QFORM-r47/REPORT.md`.
 

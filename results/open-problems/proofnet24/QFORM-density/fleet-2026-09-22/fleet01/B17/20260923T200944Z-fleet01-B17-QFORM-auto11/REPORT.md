@@ -16,7 +16,7 @@ The full arbitrary-law/arbitrary-matrix target remains **OPEN / NOT PROVED / NOT
 
 The previous B17 Edgeworth theorem is consumed from
 
-`yspennstate/math-open-problems@a1ba664bb0eb87aa086402b959e2503a734c633d:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T123638Z-fleet01-B17-qform-diffuse-edgeworth-v1/REPORT.md`.
+`private-source-repository@a1ba664bb0eb87aa086402b959e2503a734c633d:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T123638Z-fleet01-B17-qform-diffuse-edgeworth-v1/REPORT.md`.
 
 It proves the following source-valid statement. Let `J=diag(1,1,-1)`, let `v_1,...,v_r in R^3` be a fixed Parseval row pattern,
 
@@ -34,7 +34,7 @@ one has
 
 The newest designated partner theorem consumed in full is
 
-`yspennstate/math-open-problems@a1ba664bb0eb87aa086402b959e2503a734c633d:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T195641Z-fleet02-B17-QFORM-auto11/REPORT.md`.
+`private-source-repository@a1ba664bb0eb87aa086402b959e2503a734c633d:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T195641Z-fleet02-B17-QFORM-auto11/REPORT.md`.
 
 It proves a global bound below `3sqrt(2)` for the entire separated architecture `X^2+(a.U)^2-(b.V)^2`, with arbitrary cap-one singleton law and arbitrary unrelated centered-cube leverage profiles.
 

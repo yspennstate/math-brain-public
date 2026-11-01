@@ -37,7 +37,7 @@ No moment, support, log-concavity, smoothness, iid, centering, or symmetry hypot
 
 The other analytic input is already a completed theorem/lemma in the owner-pinned source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`:
 
 for every original cap-one factor and every `p>=2`,
@@ -297,7 +297,7 @@ Consumed fresh owner/control revision `2026-09-22.15`, the current exclusive-QFO
 Consumed pinned e5f source `e5f71d79eff325201dd0274053d20268ce65b837`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`.
 
 Consumed designated partner fleet03/B18 r34:
-`math-open-problems@12cb94062390a52deaf9a0c74b5d81aa41e5a128:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T195443Z-fleet03-B18-QFORM-r34/REPORT.md`.
+`private-source@12cb94062390a52deaf9a0c74b5d81aa41e5a128:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T195443Z-fleet03-B18-QFORM-r34/REPORT.md`.
 
 Primary external source checked: Livshyts--Paouris--Pivovarov, arXiv:1507.07949 / Israel J. Math. 216 (2016), Theorem 1.1.
 

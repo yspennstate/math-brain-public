@@ -76,4 +76,4 @@ The checker has Git blob SHA `e2b3097ddede98334dc8f73da779b9eef30ee95c` and SHA-
 
 ## Public-repository status
 
-The owner requested a separate public, paper-only repository named `maximal-kemeny-constant`. The current GitHub connector supports writes to existing repositories but exposes no repository-creation action. No public repository is claimed to have been created. This copy is in the existing **private** `math-open-problems` repository. The author receives a ready-to-publish source/PDF bundle separately; no ResearchGate, arXiv, website posting or visibility change was made by this delivery.
+The owner requested a separate public, paper-only repository named `maximal-kemeny-constant`. The current GitHub connector supports writes to existing repositories but exposes no repository-creation action. No public repository is claimed to have been created. This copy is in the existing **private** `private-source` repository. The author receives a ready-to-publish source/PDF bundle separately; no ResearchGate, arXiv, website posting or visibility change was made by this delivery.

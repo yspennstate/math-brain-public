@@ -17,7 +17,7 @@ I changed mechanism from the preceding deletion/star/alignment runs r36--r44 to 
 
 A source search found that the structural calculation I initially started to derive is already proved in fleet03/B08 r25, `QFORM-DIFFUSE-PLUECKER-OVERLAP-LEDGER-v1`, at the immutable source snapshot
 
-`yspennstate/math-open-problems@3ca6f8113ff32fc642cc3582b4a338082e8d6d25`
+`private-source-repository@3ca6f8113ff32fc642cc3582b4a338082e8d6d25`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T002108Z-fleet03-B08-qform-diffuse-r25/REPORT.md`.
 
@@ -25,7 +25,7 @@ I therefore stop duplicate work on that exact scope and use it as an input. The 
 
 The designated partner input is fleet02/B08 r34, canonical source
 
-`yspennstate/math-open-problems@3452feca9a3efbb5a716eb7453be7ae0433e463f`
+`private-source-repository@3452feca9a3efbb5a716eb7453be7ae0433e463f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/fleet02-B08-20260924T053906Z-r34/REPORT.md`.
 

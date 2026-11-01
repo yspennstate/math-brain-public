@@ -24,7 +24,7 @@ The decisive receiver is the completed fleet01/B20 theorem
 
 source
 
-`yspennstate/math-open-problems@8a4e6d0048174e047fc3b4ae8cabfbabba3cdc3b`
+`private-source-repository@8a4e6d0048174e047fc3b4ae8cabfbabba3cdc3b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T165154Z-fleet01-B20-QFORM-auto11/NO_MARGINAL_D3.md`.
 
@@ -48,7 +48,7 @@ The newest completed designated partner result actually applied below is fleet02
 
 source
 
-`yspennstate/math-open-problems@8ab6f5a06544fdf25b8fc82b1792049b098a8868`
+`private-source-repository@8ab6f5a06544fdf25b8fc82b1792049b098a8868`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T190048Z-fleet02-B09-QFORM-r19/REPORT.md`.
 

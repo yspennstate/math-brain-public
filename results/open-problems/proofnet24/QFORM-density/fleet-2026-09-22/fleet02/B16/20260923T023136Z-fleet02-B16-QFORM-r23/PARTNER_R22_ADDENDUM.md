@@ -4,7 +4,7 @@ Fresh partner refresh after the main report found the newer completed fleet03/B1
 
 `QFORM-EXACT-R3-FINITE-HEAVY-CORE-v1`,
 
-at `yspennstate/math-open-problems@980f2e67036908408a0c33b8eb6bf1a7e2f233e6:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T022430Z-fleet03-B16-QFORM-r22/REPORT.md`.
+at `private-source-repository@980f2e67036908408a0c33b8eb6bf1a7e2f233e6:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T022430Z-fleet03-B16-QFORM-r22/REPORT.md`.
 
 That theorem compiles every exact-rank-three target into four already-paid exits or a residual chamber `E` with at most 192 heavy original coordinates, indefinite signature, all normalized heavy rows in a fixed near-null Rayleigh neighborhood, and heavy Gram spectrum satisfying either `h_2<1/4` (near-line) or `h_3<1/8` (near-plane). The majority-sign output side in chamber `E` is already paid by `pi sqrt(2)`; only the minority-sign two-sheet side remains.
 

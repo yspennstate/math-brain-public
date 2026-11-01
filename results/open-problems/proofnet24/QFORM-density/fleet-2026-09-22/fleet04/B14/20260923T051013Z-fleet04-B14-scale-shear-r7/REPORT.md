@@ -12,7 +12,7 @@ SIGNED IN - working on the quadratic-form bounded-density conjecture (universal 
 This report uses the following completed results.
 
 1. Fleet01/B14 auto11, read at
-   (yspennstate/math-open-problems@87bfcc80a0279fa02e80f926e8430bc633e32703):
+   (private-source-repository@87bfcc80a0279fa02e80f926e8430bc633e32703):
    for independent cap-one (X_3,X_4),
    [
    W_alpha=(1-alpha)X_3+(1+alpha)X_4-eta

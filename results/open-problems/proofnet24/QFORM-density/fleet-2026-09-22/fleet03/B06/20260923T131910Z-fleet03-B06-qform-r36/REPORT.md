@@ -19,7 +19,7 @@ The exact designated partner directory `fleet04/B06` remained absent in both the
 The source-valid inputs actually used are:
 
 1. `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, canonical source
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
    `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
    If `P` has two orthonormal columns, `Lambda` is invertible symmetric `2 x 2`, `b` is any original-coordinate vector, and the inputs are independent with density caps one, then
 
@@ -29,7 +29,7 @@ The source-valid inputs actually used are:
    When `b` lies in `range(P)`, the constant improves to `16 sqrt(30)`.
 
 2. fleet03/B06 r32, canonical source
-   `yspennstate/math-open-problems@9583647ef39bb355508b8f8fb49f05ded8b594f2`,
+   `private-source-repository@9583647ef39bb355508b8f8fb49f05ded8b594f2`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T094916Z-fleet03-B06-qform-r32/REPORT.md`.
    Its affine null-scalar weak-`L^(3/2)` theorem says: if `X` has density cap `L`, is independent of a possibly dependent pair `(C,D)` of joint density cap `M`, and `b g !=0`, then
 
@@ -44,7 +44,7 @@ The source-valid inputs actually used are:
    `||p_(u.Z,v.Z)||_infinity <=2/sqrt(det Gram(u,v))`.
 
 3. fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical source
-   `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+   `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
    If a base `R` has density cap `M` and, conditionally on the base source, a translated scalar has density cap `L`, then
 

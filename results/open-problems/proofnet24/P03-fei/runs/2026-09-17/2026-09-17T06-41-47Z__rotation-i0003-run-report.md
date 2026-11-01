@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # P03 HARD OUTSIDE — I0111 handoff, I0003 rotation, periodic Manhattan classification transfer
 
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track/root: P03 / `proofnet24/P03-fei`  
 Run date: 2026-09-17 UTC  
 New exclusive claim: `operations/claims/I0003.md`  

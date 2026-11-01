@@ -4,7 +4,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 
 ## Snapshot and continuity
 
-- Repository: `yspennstate/math-open-problems`, branch `master`.
+- Repository: `private-source-repository`, branch `master`.
 - Captured fresh master immediately before this screen: `c3dcdf5927321bfe20d87a303eb7095db5adda4a`.
 - Slot: `R7-04 Constructive Model Research`.
 - Native ID: `6aabe7ea6e1881919a65503f8445a813`.

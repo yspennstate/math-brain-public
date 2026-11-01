@@ -19,7 +19,7 @@ Fresh prepublication control was resolved at
 
 The one-dimensional integrated Fourier input actually used is the completed e5/Claude package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
@@ -29,7 +29,7 @@ For every cap-one probability density, including an arbitrary unit-modulus coord
 
 The designated partner theorem actually applied is fleet02/B03 r12:
 
-`yspennstate/math-open-problems@9f2a751322a0351e12a855be56db1e78ea4a6154`
+`private-source-repository@9f2a751322a0351e12a855be56db1e78ea4a6154`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T101024Z-fleet02-B03-QFORM-r12/REPORT.md`.
 
@@ -62,7 +62,7 @@ Against the common already-paid envelope `128 sqrt(15)/s`, this exits when
 
 The immediately preceding fleet01/B03 r25 theorem kept one left physical coordinate active and improved this threshold by a factor two when that left coefficient is large. It is source-pinned at
 
-`yspennstate/math-open-problems@1db54d1fef9431919f1b8ddc39776b6a9be23679`
+`private-source-repository@1db54d1fef9431919f1b8ddc39776b6a9be23679`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T121528Z-fleet01-B03-QFORM-r25/REPORT.md`.
 

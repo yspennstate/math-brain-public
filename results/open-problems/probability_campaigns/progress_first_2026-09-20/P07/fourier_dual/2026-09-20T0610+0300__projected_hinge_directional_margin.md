@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-B — projected-hinge Fourier descent and a sharp-scale directional margin
 
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured start master:** `a007f81e0620f7ceedaf613152dbcd83d50b43ae`  
 **Fresh pre-write master:** `7116f0f4a3223197c65a9ee87b1dba8a253036d2`  
 **Previous own report:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T0512+0300__damped_schur_threshold_count.md`  

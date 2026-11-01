@@ -15,7 +15,7 @@ The unrestricted theorem and unrestricted continuity conclusion remain open.
 
 ### 1.1 Own immediate predecessor
 
-`yspennstate/math-open-problems@0ef1395ef5636eab3acb9e70130042e4dfcbb644`
+`private-source-repository@0ef1395ef5636eab3acb9e70130042e4dfcbb644`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T105601Z-fleet03-B03-QFORM-r32/REPORT.md`.
 
@@ -27,7 +27,7 @@ in its exact angular-cancellation packet, then proved that `delta->0` forces a n
 
 ### 1.2 Designated partner fleet04/B03
 
-`yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`
+`private-source-repository@28681f9af7c2307f80968df86010084019599e38`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`.
 
@@ -41,7 +41,7 @@ Its stronger historical weighted-`L^2` compiler is not used.
 
 The completed product-projection theorem recorded in
 
-`yspennstate/math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
+`private-source-repository@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T232932Z-fleet02-B16-QFORM-auto11/REPORT.md`
 
@@ -55,7 +55,7 @@ This is used below only as a true JOINT density cap; no independence among the p
 
 The required current Claude package at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 

@@ -16,7 +16,7 @@ The current owner synthesis reduces the global theorem, after completed scalar/p
 
 The required newest-Claude package was used at its exact source pin
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
@@ -28,7 +28,7 @@ Its D/D'/D5 theorems pay quantitative physical cross-volume branches; its Theore
 
 The current designated partner is `fleet03/B19`, canonical mathematics
 
-`yspennstate/math-open-problems@82773d6d0339c8867b76c777216b6c564939f2ae`,
+`private-source-repository@82773d6d0339c8867b76c777216b6c564939f2ae`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T043056Z-fleet03-B19-QFORM-r26/REPORT.md`.
 

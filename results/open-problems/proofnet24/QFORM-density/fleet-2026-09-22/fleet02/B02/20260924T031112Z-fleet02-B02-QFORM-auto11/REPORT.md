@@ -8,7 +8,7 @@ Exact owner target unchanged: independent ORIGINAL real coordinates with densiti
 
 ## Sources actually used
 
-Fresh owner control before publication remained revision `2026-09-22.15`, QFORM-only; live corrections reread. Required pinned base: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`. On any literal physical cross block B, the reviewed sharp-HY machinery supplies
+Fresh owner control before publication remained revision `2026-09-22.15`, QFORM-only; live corrections reread. Required pinned base: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`. On any literal physical cross block B, the reviewed sharp-HY machinery supplies
 
 `D': ||p_Q||inf <= C3 E3(B)^(-1/6), C3=10.345083232147514...`,
 
@@ -18,7 +18,7 @@ with `phi_Q in L1`, and independently
 
 also with `phi_Q in L1`. D5 improves D' whenever `E5(B)>=0.478800937867911 E3(B)^(5/3)`.
 
-Newest completed designated partner: fleet03/B02 r45, canonical math `yspennstate/math-open-problems@969923934518c728e4611e670ab6244ceea30215`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260924T030004Z-fleet03-B02-qform-r45/REPORT.md`. Its live full partition `L union R=[n]`, `N=A[L,R]`, has squared singular values `x1>=x2>=...` with
+Newest completed designated partner: fleet03/B02 r45, canonical math `private-source-repository@969923934518c728e4611e670ab6244ceea30215`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260924T030004Z-fleet03-B02-qform-r45/REPORT.md`. Its live full partition `L union R=[n]`, `N=A[L,R]`, has squared singular values `x1>=x2>=...` with
 
 `x1*x2 > kappa :=247/576`.                                       (1)
 

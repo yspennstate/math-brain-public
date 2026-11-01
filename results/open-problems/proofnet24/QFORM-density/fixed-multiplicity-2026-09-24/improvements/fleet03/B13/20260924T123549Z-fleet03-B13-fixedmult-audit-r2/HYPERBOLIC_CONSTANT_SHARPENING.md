@@ -1,6 +1,6 @@
 # QFORM-FIXEDMULT-B13-CONSTANT-3110-v1
 
-Source: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Source: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 The same seventeen-eigenvalue proof admits the following replacements, with no hypothesis change:
 

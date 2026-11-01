@@ -14,7 +14,7 @@ The live correction inbox was respected. No law-uniform scalar Fresnel decay, in
 
 The previous B19 result, source-pinned at
 
-`yspennstate/math-open-problems@143e97c42cdbccb14fe847efb6abd3f6c3d349dc`
+`private-source-repository@143e97c42cdbccb14fe847efb6abd3f6c3d349dc`
 
 left the one-effective-direction branch with two physical coordinates `p,q` whose diagonal entries have opposite signs and magnitude at least `7/8`, and an outside unit vector `w` with `max_i w_i^2<7/27`, such that the **actual full-matrix compression** to `span(e_p,e_q,w)` has
 
@@ -24,7 +24,7 @@ This run attacks the previously unpaid product-preserving use of (1.1).
 
 The designated partner `fleet04/B19` completed `QFORM-FINITE-UNION-CORE-v1`, canonical
 
-`yspennstate/math-open-problems@02171dc794a56c0235afb1ca394b3e614162bff4`.
+`private-source-repository@02171dc794a56c0235afb1ca394b3e614162bff4`.
 
 It proves that the interval-concentration supremum over all independent cap-one densities equals the supremum over bounded finite-union product indicators of measure one. I use it as an actual final transfer: the interval inequalities proved below may be verified on that finite-union core, and then the same constant holds for the full arbitrary-density class. The derivation in fact works directly for arbitrary cap-one factors as well.
 
@@ -223,7 +223,7 @@ This is strictly stronger information than the previous run had: the one-effecti
 
 The fresh supporting result `QFORM-RIDGE-DENSITY-v1`, source-pinned at
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 
 applies directly to the exact outside quadratic `kappa=Z^T S Z`: for any disjoint original-coordinate cut `I,J`, put `B_S=S[I,J]`, choose `gamma>0`, and define
 
@@ -279,7 +279,7 @@ Thus Section 5 closes this case with `<25`.
 
 Assume instead `|mu|>=delta_0/2`. The already-reviewed diffuse-separable-phase proof at
 
-`yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`
+`private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`
 
 has, before its `r>2` time-integration step, the valid rank-one characteristic estimate for arbitrary coordinate-separable phases:
 

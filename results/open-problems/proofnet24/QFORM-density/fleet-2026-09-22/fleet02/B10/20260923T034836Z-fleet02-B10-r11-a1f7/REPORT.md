@@ -20,7 +20,7 @@ The first unpaid implication at the start of this run came from the latest desig
 
 ## 2. Required source package actually applied
 
-I read the required exact source package `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
+I read the required exact source package `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
 Two completed results from that package are used below at actual inequalities. First, an orthogonal two-dimensional projection of an original cap-one product source has joint density at most `2`; this is the dependence-safe receiver cap used in the new theorem. Second, the ruled one-sheet theorem says an exact rank-three indefinite form with spectral scale at least one has density at most `pi sqrt(2)` on its one-sheet side. In Section 6 it gives the concrete inequality `p_(Q_eps)(0)<=pi sqrt(2)` for the explicit target family that simultaneously makes the raw square-peel envelope diverge.
 
@@ -209,7 +209,7 @@ A deterministic checker accompanies this report. For `eps=1/64,1/256,1/1024` it 
 
 `QFORM-MINORITY-HUB-TRANSVERSE-DISCRIMINANT-v1`: **PROVED** in exact rank three.  
 Designated partner fleet03/B10: **APPLIED** at the actual inequality (4.2), shrinking its minority-sign near-null survivor.  
-Required `math-open-problems@e5f71d...` source: **APPLIED** at the projection cap (3.3) and the concrete ruled inequality (6.15).  
+Required `private-source@e5f71d...` source: **APPLIED** at the projection cap (3.3) and the concrete ruled inequality (6.15).  
 `QFORM-NEARNULL-SQUARE-PEEL-LOG-LOSS-v1`: **PROVED target-valid falsifier of an intermediate proof mechanism**, not a counterexample to QFORM.  
 Full exact-rank-three theorem: **OPEN / NOT PROVED / NOT DISPROVED**.  
 Full owner QFORM target with arbitrary additional spectrum: **OPEN**.  

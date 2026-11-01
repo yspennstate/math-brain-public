@@ -16,7 +16,7 @@ The full owner target is unchanged: for every dimension, independent real origin
 
 The immediate B16 predecessor is
 
-`yspennstate/math-open-problems@c0ba84ebcd6febf0c5a34dc6512e43ea79b957cf`
+`private-source-repository@c0ba84ebcd6febf0c5a34dc6512e43ea79b957cf`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T105237Z-fleet03-B16-QFORM-r28/REPORT.md`.
 
@@ -26,13 +26,13 @@ It closes both duplicated-basis gate outcomes whenever the selected exact-rank-t
 
 The analytic receivers applied below are the already completed orientation-free rank-three scalar-pivot consequence
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`,
 
 and the physical indefinite-pair theorem
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -214,7 +214,7 @@ immediately yields
 
 `boxed: ||p_Q||_infinity <=24.`                                    (7.3)
 
-The superdiffuse-bank compiler is used only after this partner exit and the predecessor B16 exits fail. I also read the newer fleet04/B16 transverse fresh-bank theorem (`math-open-problems@4c11848f5274047472b374f9d64594480a11c2c4`); its physical-heavy fresh-direction gate is a distinct paid branch, while the survivor (6.2) is deliberately routed into the diffuse-bank side rather than silently treating a bounded projection density as independence.
+The superdiffuse-bank compiler is used only after this partner exit and the predecessor B16 exits fail. I also read the newer fleet04/B16 transverse fresh-bank theorem (`private-source@4c11848f5274047472b374f9d64594480a11c2c4`); its physical-heavy fresh-direction gate is a distinct paid branch, while the survivor (6.2) is deliberately routed into the diffuse-bank side rather than silently treating a bounded projection density as independence.
 
 ## 8. What remains
 

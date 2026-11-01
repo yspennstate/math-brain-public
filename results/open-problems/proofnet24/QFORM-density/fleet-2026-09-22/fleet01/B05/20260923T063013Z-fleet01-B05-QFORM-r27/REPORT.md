@@ -213,7 +213,7 @@ or an equivalent interval formulation, **before** replacing the induced curved t
 
 The completed designated-partner theorem `QFORM-NEARNULL-SCALAR-DEPENDENT-PAIR-v1` is in
 
-`yspennstate/math-open-problems@c661893c05a7fd40d7f1e9b0a0a81a6f08f242a6`
+`private-source-repository@c661893c05a7fd40d7f1e9b0a0a81a6f08f242a6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T035943Z-fleet02-B05-QFORM-r21/REPORT.md`,
 
@@ -254,7 +254,7 @@ This is an equation-level use of the assigned partner result.  Comparing (5.3) w
 
 The required newest package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`
 

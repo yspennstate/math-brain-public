@@ -397,5 +397,5 @@ To close the unrestricted rank-three leakage model, an estimate must retain more
 
 1. W. Beckner, “Inequalities in Fourier analysis,” *Annals of Mathematics* **102** (1975), 159–182. [Publisher](https://annals.math.princeton.edu/1975/102-1/p11).
 2. F. Barthe, “On a reverse form of the Brascamp–Lieb inequality,” *Inventiones Mathematicae* **134** (1998), 335–361. [DOI](https://doi.org/10.1007/s002220050267).
-3. *Density Bounds for Quadratic Forms under Product Measures*, section “Quadratic forms with hub coordinates,” especially the frozen-slice, interval-supported-hub, bounded-variation, and spread-linear-hub results. [Paper sources](https://github.com/yspennstate/math-open-problems/tree/33aeb8660cba4fa0c0d8ae7849499daf5cbf5c98/proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper).
-4. *Quadratic forms with fragmented hub densities*, the preceding interval-envelope result. [Proof](https://github.com/yspennstate/math-open-problems/blob/d5094e2e13951a8b77ebf220a51425474fd4b2f1/proofnet24/QFORM-density/interactive/20260923T195310Z-hub-interval-envelopes/RESULT.md).
+3. *Density Bounds for Quadratic Forms under Product Measures*, section “Quadratic forms with hub coordinates,” especially the frozen-slice, interval-supported-hub, bounded-variation, and spread-linear-hub results. [Paper sources](private-source-repository).
+4. *Quadratic forms with fragmented hub densities*, the preceding interval-envelope result. [Proof](private-source-repository).

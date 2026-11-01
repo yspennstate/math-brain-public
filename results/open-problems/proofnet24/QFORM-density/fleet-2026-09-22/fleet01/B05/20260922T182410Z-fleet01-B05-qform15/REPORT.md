@@ -26,13 +26,13 @@ If (1.1) held universally, it would again imply the full density bound. This rep
 
 The construction refines fleet03/B05 `QFORM-SCALAR-CONDITIONED-CORE-SUP-FALSE-v1`, canonical source
 
-`yspennstate/math-open-problems@30ed85cae72f1ddc2d7f3d20de47f82369ec60dd`,
+`private-source-repository@30ed85cae72f1ddc2d7f3d20de47f82369ec60dd`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T181101Z-fleet03-B05-QFORM-r14/REPORT.md`.
 
 The assigned partner fleet02/B05 theorem is applied quantitatively in Section 7; its canonical source is
 
-`yspennstate/math-open-problems@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`,
+`private-source-repository@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T155206Z-b05-qform-779c4c9b/REPORT.md`.
 

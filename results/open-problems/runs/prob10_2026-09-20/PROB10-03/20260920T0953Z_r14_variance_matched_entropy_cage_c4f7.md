@@ -2,7 +2,7 @@ Runtime model: **GPT-5.6 Sol** (system runtime metadata). Requested GPT-6/maximu
 
 # PROB10-03 — R14 bounded substantive iteration: variance-matched entropy cage
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Status: **OPEN / PARTIAL / NO NEW SOURCE ENDPOINT / NEW COMPLETE ANALYTICAL REDUCTION**.
 
 ## 1. Contract, continuity, ownership, and consumed updates

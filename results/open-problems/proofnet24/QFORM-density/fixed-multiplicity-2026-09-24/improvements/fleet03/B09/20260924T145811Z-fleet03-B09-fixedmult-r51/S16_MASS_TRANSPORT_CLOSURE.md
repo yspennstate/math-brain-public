@@ -6,7 +6,7 @@ Status: **complete candidate reduction `17 -> 16`, pending two genuinely separat
 
 Pinned baseline:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - source commit `7c0d6e60946b19423e6400a12d34b473cf0591e2`
 - `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`
 - source blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`

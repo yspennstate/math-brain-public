@@ -110,7 +110,7 @@ We need one elementary lemma that replaces the old equality of the two banks.
 
 This is where the required pinned result is used at a real inequality.  The completed Theorem C in
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`
 
 proves the exact ruling parametrisation of the one-sheet level sets for the `(1,1,-1)` form.  We use its **identity**, not merely its generic `pi sqrt(2)` bound.
 
@@ -315,7 +315,7 @@ The last inequality uses `(140/99)^2<2`.  The deterministic checker records the 
 
 The latest compatible `fleet03/B17` report is
 
-`math-open-problems@0b4294a426049e36163b091b0900a585565099fc:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T190352Z-fleet03-B17-QFORM-auto11/REPORT.md`.
+`private-source@0b4294a426049e36163b091b0900a585565099fc:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T190352Z-fleet03-B17-QFORM-auto11/REPORT.md`.
 
 For its exact dense Householder irrational-null fragmentation family it proves, uniformly in fragment mass `eta`,
 
@@ -374,7 +374,7 @@ No pointwise law-uniform oscillatory decay, no arbitrary-joint three-dimensional
 
 Required source read and actually used:
 
-- `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`: Ball/Rogozin cube-projection input underlying the completed `L^p` lemma.
+- `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`: Ball/Rogozin cube-projection input underlying the completed `L^p` lemma.
 - same commit, `COUNTEREXAMPLE_SEARCH.md`, completed Theorem C: exact ruled one-sheet parametrisation/coarea identity used in (4.1)--(4.6).
 - same commit, `FOURIER_ROUTE_REPORT.md`: correction-compatible scope; its generic absolute Fourier constants are not misused as sharp constants.
 

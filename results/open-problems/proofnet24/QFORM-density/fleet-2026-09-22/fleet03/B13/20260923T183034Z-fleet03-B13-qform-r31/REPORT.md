@@ -15,7 +15,7 @@ Fresh owner control remained QFORM-only, revision `2026-09-22.15`. The current r
 
 The designated partner result is fleet04/B13's nonattained bathtub purification:
 
-`yspennstate/math-open-problems` current source path
+`private-source-repository` current source path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T121154Z-fleet04-B13-nonattained-bathtub-r1/REPORT.md`.
 
 For every nonnegative measurable kernel `K`,

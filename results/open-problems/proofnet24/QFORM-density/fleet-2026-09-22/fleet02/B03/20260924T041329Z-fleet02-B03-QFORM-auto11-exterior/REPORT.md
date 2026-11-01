@@ -21,7 +21,7 @@ by the marginal-free receiver
 
 `C_E3=8.4530212255281768747...`,
 
-and also supplies a continuous `C_0` density on that branch. Its full report is `math-open-problems@3638467084deb8af24d1b01aa01cc300ee85ea8a`.
+and also supplies a continuous `C_0` density on that branch. Its full report is `private-source@3638467084deb8af24d1b01aa01cc300ee85ea8a`.
 
 The unpaid step was therefore not analytic once a good physical E3 crossing exists; it was structural: how much of the three-large-eigenvalue hypothesis is visible to disjoint physical cross minors at all? The theorem below gives an exact answer in terms of overlap classes.
 
@@ -164,7 +164,7 @@ Because the cross block has exact rank three, its volume-sampling row marginals 
 
 Therefore the completed pinned theorem D from
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 applies at equation level and gives
 

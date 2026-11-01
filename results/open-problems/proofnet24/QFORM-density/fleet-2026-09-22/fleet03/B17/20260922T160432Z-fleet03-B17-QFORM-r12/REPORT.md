@@ -130,7 +130,7 @@ so this block geometry is now rigorously trapped between the known lower-bound e
 
 The completed `fleet04/B18` result, canonical report
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 
 proves for a physical `3x3` principal block `B`, a nonzero scalar pivot `a`, and a definite Schur complement,
 
@@ -243,7 +243,7 @@ The full QFORM conjecture remains **OPEN / NOT PROVED**.
 ## 9. Source/status notes
 
 - External projection theorem: G. Livshyts, G. Paouris, P. Pivovarov, *On sharp bounds for marginal densities of product measures*, arXiv:1507.07949; one-dimensional marginal constant `sqrt(2)`.
-- Compatible fleet04 result actually applied: fleet04/B18, `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`.
+- Compatible fleet04 result actually applied: fleet04/B18, `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`.
 - Designated fleet04/B17: no completed QFORM handoff visible at the fresh pre-publication scan.
 - Full solution status: OPEN.
 - Continuous density for the full target: OPEN. Theorem (4.1) only asserts an essentially bounded density.

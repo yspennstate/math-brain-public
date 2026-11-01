@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # PROB10-03 — R14 bounded iteration: second-order stochastic closure and continuum-face reduction
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL / SOURCE OPEN / NO RIGOROUS ENDPOINT MOVED / NEW ANALYTICAL REDUCTIONS**.
 

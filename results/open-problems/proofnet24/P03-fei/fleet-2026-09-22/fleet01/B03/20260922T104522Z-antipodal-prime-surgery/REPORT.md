@@ -90,7 +90,7 @@ For the current source-reported refined candidate center `C*=6.5584452830718245.
 
 The source-bound other-account result used here is fleet02/B17,
 
-`yspennstate/math-open-problems@f5946fb64d336ed7369de279159643944efc47af`,
+`private-source-repository@f5946fb64d336ed7369de279159643944efc47af`,
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B17/20260922T091146Z-strong-prime-shaped-repair/REPORT.md`.
 
 That report gives the exact all-gate normalization
@@ -108,7 +108,7 @@ and exhibits a finite 18-input composition-prime source that strongly refutes th
 The designated current partner is fleet02/B03. At the pre-write snapshot there was no completed `proofnet24/P03-fei/fleet-2026-09-22/fleet02/B03/` artifact yet, so there was no partner theorem to consume without fabrication. Work therefore proceeded asynchronously from the named complete other-account source above, as allowed by the memory protocol.
 
 The all-gate definition itself is pinned at
-`yspennstate/math-open-problems@a898203278af25794901b42c965816e0d9df7e11`,
+`private-source-repository@a898203278af25794901b42c965816e0d9df7e11`,
 `proofnet24/P03-fei/continuations/2026-09-22-gate-reformulation/REPORT.md`.
 
 ## 3. Composition-primality proof

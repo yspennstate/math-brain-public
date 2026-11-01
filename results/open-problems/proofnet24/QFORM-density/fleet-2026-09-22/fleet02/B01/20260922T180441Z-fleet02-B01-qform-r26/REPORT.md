@@ -19,11 +19,11 @@ The result is decisive: the displayed scalar-conditioning supremum is FALSE even
 
 ## 2. Source-pinned dependencies actually used
 
-1. **fleet02/B01 r25 physical triple theorem.** At `yspennstate/math-open-problems@bf4ba08b75ab774aef671c62ba4898a371059c0d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T170850Z-fleet02-B01-qform-r25/REPORT.md`, it proves for every invertible physical symmetric `3 x 3` block `B`, independent cap-one inputs, and arbitrary affine leakage,
+1. **fleet02/B01 r25 physical triple theorem.** At `private-source-repository@bf4ba08b75ab774aef671c62ba4898a371059c0d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T170850Z-fleet02-B01-qform-r25/REPORT.md`, it proves for every invertible physical symmetric `3 x 3` block `B`, independent cap-one inputs, and arbitrary affine leakage,
 
    `||p||_infinity <= 216 |det B|^(-1/3)`.
 
-2. **Named partner fleet03/B01 r15.** At `yspennstate/math-open-problems@76fd4f9ccae2e422498fec6d4156bfd64775c8e4`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T163129Z-r15/REPORT.md`, the arbitrary-orientation rank-two half-Riesz theorem gives the exact-rank-three Schur consequence
+2. **Named partner fleet03/B01 r15.** At `private-source-repository@76fd4f9ccae2e422498fec6d4156bfd64775c8e4`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T163129Z-r15/REPORT.md`, the arbitrary-orientation rank-two half-Riesz theorem gives the exact-rank-three Schur consequence
 
    `||p_Q||_infinity <= C_* (|d| c |det Lambda_3|)^(-1/4)`
 

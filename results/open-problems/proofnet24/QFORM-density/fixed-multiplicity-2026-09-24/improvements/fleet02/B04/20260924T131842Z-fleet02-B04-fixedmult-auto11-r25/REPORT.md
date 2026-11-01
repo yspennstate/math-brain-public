@@ -2,7 +2,7 @@
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 
-Pinned baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Pinned baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 Status: **PROVED SUPPORTING REFINEMENT; DOES NOT LOWER THE MULTIPLICITY BELOW NINE.** The unrestricted three-eigenvalue conjecture remains open.
 

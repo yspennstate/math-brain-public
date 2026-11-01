@@ -26,7 +26,7 @@ This is narrower than the previous `QFORM-REMOTE-SUPPORT-RANK1-4DIAG-RECEIVER-v1
 
 The latest completed designated-partner result at refresh is fleet03/B13 r45:
 
-- `yspennstate/math-open-problems@a1ccc98be0cd4752de1b2b29e4c46f8193854757`,
+- `private-source-repository@a1ccc98be0cd4752de1b2b29e4c46f8193854757`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260924T063322Z-fleet03-B13-qform-r45/REPORT.md`.
 
 Its proved multi-square theorem applies to the exact diffuse rank-two chamber
@@ -63,7 +63,7 @@ Here `E_sep` is the retained diagonal tail and `E_ent` is the retained secondary
 
 The prior fleet02/B13 grouping theorem at
 
-- `yspennstate/math-open-problems@2af615c6d649e207191127733fc6dd180db14944`
+- `private-source-repository@2af615c6d649e207191127733fc6dd180db14944`
 
 proves that a matrix supported by at most `m` latent one-dimensional direction classes plus a diagonal supported on finitely many named physical coordinates can be grouped into finitely many **independent original-coordinate variables**, after which the fixed-dimensional QFORM theorem applies. In particular, if
 
@@ -90,7 +90,7 @@ The affine uniformity is essential below.
 
 Finally the owner-pinned source
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 - `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`
 
 contains the completed unconditional fifth-volume theorem D5. It will be applied in Section 7.
@@ -399,7 +399,7 @@ W_w^2
 
 Thus a diverging counterexample sequence in the partner chamber must develop either quadratic aggregate diameter in the distributed diagonal bank at scale at least `rho^2 |J|`, or projective support width along the secondary carrier at scale at least `rho^(13/6)|J|`. Neither can be produced merely by translating the entire coordinate supports.
 
-A stronger exponent is available if one also imports the previously completed fleet02/B13 lower-bound bootstrap `math-open-problems@21a48883fa1152dac179f3f6ebe1725785793520`, which combines the physical three-coordinate theorem with the two-square receiver to obtain `|lambda_2|=O(rho^-7/3)`. Then (5.10) improves to
+A stronger exponent is available if one also imports the previously completed fleet02/B13 lower-bound bootstrap `private-source@21a48883fa1152dac179f3f6ebe1725785793520`, which combines the physical three-coordinate theorem with the two-square receiver to obtain `|lambda_2|=O(rho^-7/3)`. Then (5.10) improves to
 
 \[
 W_w^2\gtrsim \rho^{10/3}|J|.

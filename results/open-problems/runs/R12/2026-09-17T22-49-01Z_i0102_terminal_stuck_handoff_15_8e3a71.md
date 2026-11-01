@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 # R12 / I0102 — terminal stuck analysis and handoff
 
 Run timestamp: `2026-09-17T22-49-01Z`.
-Repository/branch: `yspennstate/math-open-problems`, `master`.
+Repository/branch: `private-source-repository`, `master`.
 Deployment: `NEW-METHODS-2026-09-16`.
 Status: **PARTIAL / SOURCE OPEN / TERMINAL HANDOFF FOR THIS R12 ASSIGNMENT**.
 

@@ -37,9 +37,9 @@ Entropy is in bits throughout. The refuted raw-`U4=O(J)`, unweighted-`L2`, fixed
 
 The mathematical premises actually consumed are:
 
-1. **TERMINAL_CORE.** `yspennstate/math-open-problems@85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md`, especially `D_A=I_A+C_A`, (0.1), and exact telescoping of `D_A` in `J`.
-2. **SELECTOR_LEDGER, previous fleet02/B20 run.** `yspennstate/math-open-problems@4a1748352ae7e31c4941f91c3f6a81a5a6928421`, `proofnet24/P03-fei/fleet-2026-09-22/fleet02/B20/20260922T103102Z-fleet02-B20-fei-r17/REPORT.md`: if a selector is source-realizable from a latent source `Theta` and decoded history, then the selector entropy is part of the posterior-information decrement and the refunds telescope.
-3. **Newest compatible named-partner result, fleet03/B20.** `yspennstate/math-open-problems@7d31b66c5517b7b491693642c503d29352d8ffb4`, `proofnet24/P03-fei/fleet-2026-09-22/fleet03/B20/20260922T104610Z-terminal-lowJ-diffusion/REPORT.md`. For every centered minimum-dimensional all-block ratio-critical core with `0<J<1`,
+1. **TERMINAL_CORE.** `private-source-repository@85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md`, especially `D_A=I_A+C_A`, (0.1), and exact telescoping of `D_A` in `J`.
+2. **SELECTOR_LEDGER, previous fleet02/B20 run.** `private-source-repository@4a1748352ae7e31c4941f91c3f6a81a5a6928421`, `proofnet24/P03-fei/fleet-2026-09-22/fleet02/B20/20260922T103102Z-fleet02-B20-fei-r17/REPORT.md`: if a selector is source-realizable from a latent source `Theta` and decoded history, then the selector entropy is part of the posterior-information decrement and the refunds telescope.
+3. **Newest compatible named-partner result, fleet03/B20.** `private-source-repository@7d31b66c5517b7b491693642c503d29352d8ffb4`, `proofnet24/P03-fei/fleet-2026-09-22/fleet03/B20/20260922T104610Z-terminal-lowJ-diffusion/REPORT.md`. For every centered minimum-dimensional all-block ratio-critical core with `0<J<1`,
 
 \[
 \boxed{\max_i\frac{q_i}{J}\le \frac{c_0}{\log_2(1/J)},\qquad c_0:=\frac2{\ln2}.}\tag{1.1}

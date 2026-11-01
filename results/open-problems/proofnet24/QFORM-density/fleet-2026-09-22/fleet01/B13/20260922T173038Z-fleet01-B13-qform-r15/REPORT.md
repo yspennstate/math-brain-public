@@ -11,11 +11,11 @@ Full target: for every dimension, every independent real input with coordinate d
 
 This report uses, and re-derives the needed part of, the free-regularizer ridge estimate from
 
-- `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
+- `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 The designated partner result actually applied is fleet02/B13's exact bang-bang purification theorem
 
-- `yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`.
+- `private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`.
 
 It says that for every fixed measurable kernel, in particular every quadratic slab indicator, the supremum over cap-one product densities equals the supremum over products of measure-one indicator sets, with no loss. The finite-union approximation is also exact at the supremum level. I use this at the end to turn the new analytic branch into an exact geometric product-set slab inequality.
 

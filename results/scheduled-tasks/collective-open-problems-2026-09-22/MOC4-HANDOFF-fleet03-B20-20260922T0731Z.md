@@ -44,7 +44,7 @@ In the same normal form, these are exactly the lead's Lyapunov–Schmidt pseudoi
 
 ## Canonical scientific artifact
 
-Repository: `yspennstate/math-open-problems`  
+Repository: `private-source-repository`  
 Root: `proofnet24/collective-MOC4/fleet03/B20/20260922T071802Z-fleet03-B20-MOC4-r12/`  
 Package commit after report/verifier/output writes: `aa7f53ed1fbcd89ae5e9eedd5c80545946ee9dc3`  
 Report blob: `e37d1ae846af5e734e0051aad54aa1d7cb623ed6`  

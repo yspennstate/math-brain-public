@@ -71,5 +71,5 @@ When the Schur residual in (3) has exact rank two, rank_two.tex Theorem rt:half 
 ## Why this does not settle the unrestricted problem
 
 The exact block condition (1) says that all within-bank quadratic dependence is through the one scalar \(W\), and all bank-to-remainder crossing rows are aligned with \(u\). A general dense three-eigenvalue matrix need not have any large independent bank of this form. An explicit exact-rank-three example with \(s_3=1\), all principal pairs nonsingular, and singleton diagonals tending to zero appears in the companion two-bank report:
-https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T200935Z-two-bank-chirp-factorization/REPORT.md .
+private-source-repository .
 That example is covered by a different two-bank receiver, which illustrates that the exact square-bank condition is a sufficient analytic certificate rather than a necessary structure.

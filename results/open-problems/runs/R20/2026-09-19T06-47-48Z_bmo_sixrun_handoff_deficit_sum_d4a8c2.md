@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R20 — six-run BMO handoff: deficit-sum reformulation and the exact remaining mixed-branch obstruction
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 0. Continuity, ownership, stale scheduler title, and lifecycle decision
 

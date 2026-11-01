@@ -13,7 +13,7 @@ The target remains: for every dimension `n`, independent real coordinates `X_i` 
 
 This run uses the completed designated-partner result fleet02/B18, run `fleet02-B18-20260922T170013Z-r11`, canonical report
 
-`yspennstate/math-open-problems@7045cf7745ad4f1bb04e5a6e4b3196aeb867a140`
+`private-source-repository@7045cf7745ad4f1bb04e5a6e4b3196aeb867a140`
 
 at
 

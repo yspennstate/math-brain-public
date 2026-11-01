@@ -19,7 +19,7 @@ The B14 question is narrower: can arbitrary shifts, remote support components an
 
 Designated partner fleet04/B14 proved `QFORM-LAW-LEVEL-FINITE-MIXTURE-LOCALIZATION-v1` at
 
-`yspennstate/math-open-problems@321ec7899f4972d125d641408512fe9e5e9dcf4c`
+`private-source-repository@321ec7899f4972d125d641408512fe9e5e9dcf4c`
 
 path
 
@@ -187,7 +187,7 @@ This is the main new decoupling-ready localization inference of the run.
 
 A compatible completed result from fleet03/B02 is
 
-`yspennstate/math-open-problems@328f301cc05ac55f7dd9e3f2534890e63495470e`,
+`private-source-repository@328f301cc05ac55f7dd9e3f2534890e63495470e`,
 
 path
 

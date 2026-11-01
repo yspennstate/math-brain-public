@@ -23,7 +23,7 @@ The live correction ledger was refreshed. In particular this run does not use la
 
 Source:
 
-`yspennstate/math-open-problems@f7e82d169badc671968036252d351b8533cdd425`
+`private-source-repository@f7e82d169badc671968036252d351b8533cdd425`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260924T012155Z-fleet04-B01-lr-residual-r1/REPORT.md`.
 
@@ -41,7 +41,7 @@ This is applied at an actual inequality in Section 7.
 
 The product linear-form cap used below is the programme theorem used in the completed fleet02/B04 report
 
-`yspennstate/math-open-problems@dfe442ee899867f5677e5ced85a196eca922fe64`,
+`private-source-repository@dfe442ee899867f5677e5ced85a196eca922fe64`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T211520Z-fleet02-B04-qform/REPORT.md`.
 
@@ -55,7 +55,7 @@ The same applies to coordinatewise differences `Z_j-Z_j'`, since their densities
 
 Source:
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 

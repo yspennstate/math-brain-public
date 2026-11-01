@@ -81,7 +81,7 @@ So arbitrary same-side curvature is not itself fatal: a nondegenerate rank-two c
 
 The joint caps ||p_Z||_infinity,||p_W||_infinity<=2 are the same completed two-dimensional product-marginal input used by the ruled theorem in the required pinned package
 
-yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837,
+private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837,
 proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}.
 
 This checkpoint is supporting mathematics, not a full proof and not a counterexample.

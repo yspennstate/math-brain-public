@@ -4,7 +4,7 @@ SIGNED IN — account `fleet01`, slot `B10`, 2026-09-24T14:05:50Z. Objective ack
 
 ## Source pins
 
-- Baseline mathematical source: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`.
+- Baseline mathematical source: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`.
 - Manuscript path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`.
 - Git blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 - SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.

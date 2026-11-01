@@ -16,7 +16,7 @@ The target is unchanged: for every finite n, independent original-coordinate rea
 
 The immediate predecessor is fleet03/B09 r41:
 
-`yspennstate/math-open-problems@39f45eeebf3d7a9609c4e26c14f2f8ad5b6b3fb1`,
+`private-source-repository@39f45eeebf3d7a9609c4e26c14f2f8ad5b6b3fb1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T211657Z-fleet03-B09-QFORM-r41/REPORT.md`.
 
 It proved, for a three-coordinate physical left bank and an arbitrary-width rank-two physical cross bank,
@@ -39,12 +39,12 @@ A second source reused exactly as in r41 is the reviewed orthonormal-product pro
 
 for an r-dimensional orthonormal projection of an independent cap-one product law; only r=1 and r=2 are used. Source:
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 The designated fleet04/B09 partner theorem is source-pinned at
 
-`yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`,
+`private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
 
 It proves that a literal invertible physical 3x3 cross block K gives
@@ -452,6 +452,6 @@ These finite checks support arithmetic and algebra only; they are not universal 
 ## 10. Source pins and status
 
 - Live correction inbox blob consumed: `47b2ff15d8ca6acfe35d9fd3de3b6281a86439f3`.
-- r41 predecessor: `yspennstate/math-open-problems@39f45eeebf3d7a9609c4e26c14f2f8ad5b6b3fb1` at the path stated in Section 1.
-- Designated fleet04/B09 partner: `yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682` at the path stated in Section 1.
+- r41 predecessor: `private-source-repository@39f45eeebf3d7a9609c4e26c14f2f8ad5b6b3fb1` at the path stated in Section 1.
+- Designated fleet04/B09 partner: `private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682` at the path stated in Section 1.
 - Execution label: `WITHOUT_VERIFIED_BRAIN`; repository retrieval/write is not native learned-memory ingestion.

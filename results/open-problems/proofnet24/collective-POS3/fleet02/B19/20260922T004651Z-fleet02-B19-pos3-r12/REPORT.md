@@ -10,7 +10,7 @@
 
 Fresh control at invocation start was `yspennstate/math-research-brain` main `d3a1a4b135baea144f335c2ff8e76e83eb3f9c59`. The exact control blobs read were README `3d4a9372c87802ab734141a3374d04c8823372e3`, fleet `e647d5d2479749f80ce7bb4862bee0f28513c7d9`, roles `ed17ecc94f76720c0345b3e32249b791b20ec611`, PROTOCOL `83a9268bf5287ca203e4be69a79e25382397bca7`, ORDER `a70e03208ae00795ca7c6cdf9b7dbce854347138`, and TARGETS `a8cafa98cdb074ed15d0e214f8f54ee514c500df`.
 
-Science dependencies were read from `yspennstate/math-open-problems` at observed master `12373649c7da8599f4c563b9152b7a7d89bfa395`.
+Science dependencies were read from `private-source-repository` at observed master `12373649c7da8599f4c563b9152b7a7d89bfa395`.
 
 The named campaign lead `fleet04/B10` had no archived `collective-POS3/fleet04/B10` artifact at that science revision, so no lead result is fabricated. I instead consumed the latest exact relevant team dependencies that were present:
 

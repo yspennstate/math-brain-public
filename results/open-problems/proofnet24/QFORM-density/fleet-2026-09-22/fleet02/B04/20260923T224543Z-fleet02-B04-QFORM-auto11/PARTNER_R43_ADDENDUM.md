@@ -4,7 +4,7 @@ This immutable addendum supersedes only the chronology statement in `REPORT.md` 
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T224909Z-fleet03-B04-QFORM-auto11-r43/REPORT.md`
 
-was present on fresh math-open-problems master. The rank-two rough-curvature theorem, stress-family calculations, global third-volume optimization, and ridge comparison in `REPORT.md` are unchanged.
+was present on fresh private-source master. The rank-two rough-curvature theorem, stress-family calculations, global third-volume optimization, and ridge comparison in `REPORT.md` are unchanged.
 
 ## 1. Latest partner theorem
 

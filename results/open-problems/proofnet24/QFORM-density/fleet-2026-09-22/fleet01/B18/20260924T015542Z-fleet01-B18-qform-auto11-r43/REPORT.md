@@ -51,7 +51,7 @@ For literature scope comparison, Herry--Malicet--Poly's quadratic-form regularit
 
 The completed fleet02/B18 report at
 
-`yspennstate/math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`
+`private-source-repository@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`
 
 proves `QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1`, by scaling the source-pinned fleet02/B16 null-scalar kernel.
 

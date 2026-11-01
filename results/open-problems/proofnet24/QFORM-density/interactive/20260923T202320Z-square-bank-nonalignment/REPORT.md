@@ -99,4 +99,4 @@ with \(p\perp w,v\), \(|p|=1\): the perturbation has full operator norm \(|\vare
 ## Scope
 
 This blocks the proposed *matrix structural implication* that \(s_3(A)\ge1\) forces either a fixed-strength separated square bank or an arbitrarily accurate one. It does **not** disprove bounded output density. With the periodic sign vector \(p_j\) used in the companion report, the family \(A_\varepsilon\) has a uniform density cap smaller than \(9\), for all independent cap-one inputs and arbitrary affine terms, via an exact two-bank chirp factorization:
-https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T200935Z-two-bank-chirp-factorization/REPORT.md .
+private-source-repository .

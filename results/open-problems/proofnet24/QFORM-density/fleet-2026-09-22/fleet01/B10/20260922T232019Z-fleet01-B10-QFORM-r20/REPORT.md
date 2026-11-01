@@ -15,7 +15,7 @@ The full owner conjecture remains OPEN. All inputs below are the original indepe
 
 The newest completed designated partner is fleet02/B10,
 
-`yspennstate/math-open-problems@9005415f079b7b46c0618c0187bf29b3f8d44167`
+`private-source-repository@9005415f079b7b46c0618c0187bf29b3f8d44167`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T225540Z-fleet02-B10-QFORM-auto11/REPORT.md`.
 
@@ -25,7 +25,7 @@ It gives the tripartite heavy-hub delete-or-isolate reduction once a disjoint th
 
 The immediately preceding fleet02/B10 generated-mismatch theorem is
 
-`yspennstate/math-open-problems@ceae35deb4625f33bb99551dc50e455285d44da0`
+`private-source-repository@ceae35deb4625f33bb99551dc50e455285d44da0`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T214629Z-fleet02-B10-qform/REPORT.md`.
 
@@ -112,7 +112,7 @@ The important point is that the small orthogonal leakages cannot cancel the gene
 
 A completed compatible result from fleet03/B10 r20 is
 
-`yspennstate/math-open-problems@7acd371ee2ee83a7fae12d7bedb38bc99c051b6d`
+`private-source-repository@7acd371ee2ee83a7fae12d7bedb38bc99c051b6d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T221548Z-fleet03-B10-QFORM-r20/REPORT.md`.
 

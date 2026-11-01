@@ -61,7 +61,7 @@ for every Holder-conjugate pair `q in [2,infinity]`, `p in [1,2]`.
 
 Thus the r43 failure is not an artifact of choosing Cauchy-Schwarz/L2. Any route that first takes absolute values in the star-frequency variable and then applies an ordinary Holder pairing between a hub norm and a residual-fiber norm encounters the same logarithmic endpoint on this strict QFORM family. The missing resource must be phase-sensitive coupling in `z` before absoluteization, or a genuinely source-separated third smoother.
 
-The required pinned ruled theorem at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` applies simultaneously: because the signature is `(+,+,-)` with all three magnitudes at least one,
+The required pinned ruled theorem at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` applies simultaneously: because the signature is `(+,+,-)` with all three magnitudes at least one,
 
 `p_{Q_epsilon}(s) <= pi*sqrt(2)` for a.e. `s>=0`.
 

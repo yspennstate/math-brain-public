@@ -8,7 +8,7 @@ No rotation of the random variables is declared independent. No pointwise law-un
 
 ## 1. Inputs actually used
 
-1. `fleet01/B01`, source-pinned at `yspennstate/math-open-problems@39db1d98a37e71ccc28619a59bc53b79d1be8408`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T083643Z-fleet01-B01-qform-auto11/REPORT.md`, Theorem `QFORM-RANK2-CROSS-3D-RECEIVER-MIXEDTIME-v1`. If an original-coordinate hub bank `I` and receiver bank `J` have exact rank-two cross block with singular product `Delta=s1*s2`, the entire receiver quadratic part is supported in the three-space spanned by the two cross right-singular directions and one transverse vector `w`, and the transverse quadratic coefficient is `a!=0`, then
+1. `fleet01/B01`, source-pinned at `private-source-repository@39db1d98a37e71ccc28619a59bc53b79d1be8408`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T083643Z-fleet01-B01-qform-auto11/REPORT.md`, Theorem `QFORM-RANK2-CROSS-3D-RECEIVER-MIXEDTIME-v1`. If an original-coordinate hub bank `I` and receiver bank `J` have exact rank-two cross block with singular product `Delta=s1*s2`, the entire receiver quadratic part is supported in the three-space spanned by the two cross right-singular directions and one transverse vector `w`, and the transverse quadratic coefficient is `a!=0`, then
 
 `||p_Q||_infinity <= c0 Delta^(-2/5)|a|^(-1/5)`,
 
@@ -18,7 +18,7 @@ where
 
 Arbitrary hub self-curvature and outside couplings are retained; the proof uses an integrated mixed-time estimate, not a pointwise Fresnel envelope.
 
-2. Designated partner `fleet02/B13` r35, canonical mathematics `yspennstate/math-open-problems@bcf2076c00cd23415733cae004e13cc67cdd3daa`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T210358Z-fleet02-B13-robust-schur-twist-r35/REPORT.md`. In particular its proved `QFORM-D5-TRANSVERSE-THREE-MODE-v1` says: for disjoint original banks `I,J,T`, with `M=A[I,J]`, `C=A[I,T]`, `s2(M)>0`, and `t1>=t2>=t3` the singular values of `(I-P2)C` after projecting away the top two left singular vectors of `M`, every slab ratio `rho` obeys
+2. Designated partner `fleet02/B13` r35, canonical mathematics `private-source-repository@bcf2076c00cd23415733cae004e13cc67cdd3daa`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T210358Z-fleet02-B13-robust-schur-twist-r35/REPORT.md`. In particular its proved `QFORM-D5-TRANSVERSE-THREE-MODE-v1` says: for disjoint original banks `I,J,T`, with `M=A[I,J]`, `C=A[I,T]`, `s2(M)>0`, and `t1>=t2>=t3` the singular values of `(I-P2)C` after projecting away the top two left singular vectors of `M`, every slab ratio `rho` obeys
 
 `s1(M)s2(M)t1t2t3 <= (5 sqrt(2e)/rho)^5`.                         (1.1)
 

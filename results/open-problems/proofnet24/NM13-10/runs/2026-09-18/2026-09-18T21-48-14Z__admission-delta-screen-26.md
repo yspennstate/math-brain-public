@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-10 — admission delta screen 26
 
 Date: 2026-09-18 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Track / namespace: `NM13-10` / `proofnet24/NM13-10/`  
 Category: **CLOSABLE OUTSIDE**  
 Exclusive shard: `int(SHA256(UTF-8 canonical dedup_key).hexdigest(),16) mod 13 = 9`  

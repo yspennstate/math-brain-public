@@ -6,7 +6,7 @@ Lens: Schur-complement spectral counts, including singular ambient matrices; ind
 
 ## Pinned source
 
-Repository: `yspennstate/math-open-problems`  
+Repository: `private-source-repository`  
 Baseline source commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`  
 Git blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`  

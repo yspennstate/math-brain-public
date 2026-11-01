@@ -4,8 +4,8 @@ Run `20260924T044522Z-fleet01-B19-QFORM-auto11-r12`.
 
 Source-pinned inputs:
 
-- fleet02/B19 `QFORM-PHYSICAL-R2-FRACTIONAL-SMOOTHING-v1`, `math-open-problems@f4d95bc33caf8db11888cceb817c005484f67d31`;
-- completed physical indefinite-pair logarithmic transducer, `math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`.
+- fleet02/B19 `QFORM-PHYSICAL-R2-FRACTIONAL-SMOOTHING-v1`, `private-source@f4d95bc33caf8db11888cceb817c005484f67d31`;
+- completed physical indefinite-pair logarithmic transducer, `private-source@f7f0fedb2d93b46824f96cac1164af6f8a55626f`.
 
 Let two literal original coordinates form an invertible indefinite principal pair `B`, with
 

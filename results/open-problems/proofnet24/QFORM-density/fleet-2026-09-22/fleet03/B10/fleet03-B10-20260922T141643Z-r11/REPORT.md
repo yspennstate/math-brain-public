@@ -20,9 +20,9 @@ No spectral rotation of the random vector is made. Every conditioning step is in
 
 Dependencies used at proof level:
 
-1. fleet03/B09, `QFORM-SCHUR-RANK2-RECTANGULAR-v1` and its exact-rank-three Pluecker aggregation, `yspennstate/math-open-problems@ad5aac11726332af91f2f2680a10f755e22d08db`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T134741Z-fleet03-B09-QFORM-r12/REPORT.md`.
-2. fleet03/B16, `QFORM-INDEFINITE-PRODUCT-FRACTIONAL-TRACE-v1`, especially its one-dimensional kernel `J_*` and weak-`L^2` ridge bound, `yspennstate/math-open-problems@1defc84f1bfd79994a103a6d683c887d9dead1e7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/B16-20260922T135620Z-r11/REPORT.md`.
-3. compatible fleet04/B18, `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1` and `QFORM-SCHUR-PIVOT-SMOOTHING-v1`, `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
+1. fleet03/B09, `QFORM-SCHUR-RANK2-RECTANGULAR-v1` and its exact-rank-three Pluecker aggregation, `private-source-repository@ad5aac11726332af91f2f2680a10f755e22d08db`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T134741Z-fleet03-B09-QFORM-r12/REPORT.md`.
+2. fleet03/B16, `QFORM-INDEFINITE-PRODUCT-FRACTIONAL-TRACE-v1`, especially its one-dimensional kernel `J_*` and weak-`L^2` ridge bound, `private-source-repository@1defc84f1bfd79994a103a6d683c887d9dead1e7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/B16-20260922T135620Z-r11/REPORT.md`.
+3. compatible fleet04/B18, `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1` and `QFORM-SCHUR-PIVOT-SMOOTHING-v1`, `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 4. The one-dimensional marginal-density theorem of Ball--Rogozin (equivalently the `k=1` case of sharp product marginal bounds): if independent coordinates have densities at most one and `b` is a unit vector, then `sum b_j X_j` has density at most `sqrt(2)`. A source spelling out this exact `sqrt(2)` statement is Rudelson--Vershynin, *Small ball probabilities for linear images of high-dimensional distributions*, Theorem 1.2; the result follows from Rogozin plus Ball's cube-slicing theorem.
 
 The exact designated partner `fleet04/B10` had no completed current-QFORM handoff visible at the pre-publication refresh. No result is attributed to it. In accordance with the asynchronous instruction, the completed compatible fleet04/B18 theorem is applied below to an actual physical-triple inequality.
@@ -338,7 +338,7 @@ The exact assigned partner `fleet04/B10` had no completed QFORM artifact visible
 
 ## 6. Exact-rank-three definite signature is now fully bounded
 
-A useful target-level corollary follows by combining Theorem 4.1 with the completed diffuse-range theorem at `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
+A useful target-level corollary follows by combining Theorem 4.1 with the completed diffuse-range theorem at `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 
 Assume all three nonzero eigenvalues of exact-rank-three `A` have the same sign. If every row leverage satisfies `ell_i<=1/32`, the diffuse-range theorem gives the continuous-density bound
 

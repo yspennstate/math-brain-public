@@ -16,9 +16,9 @@ The owner target is unchanged: for every dimension, independent real original-co
 
 The immediate B16 sources are:
 
-1. `yspennstate/math-open-problems@3185d21d594f9e06450da809ca97fab2132285a4`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T031836Z-fleet03-B16-QFORM-r24/REPORT.md`. In the exact-rank-three hard branch it supplies a hub row `r_0=sqrt(h)e`, `h>63/64`, and after the existing pair exit every residual transverse row `z_i=P_(e^perp)r_i` obeys `||z_i||^2<1/64`; also `sum_i z_i z_i^T=I_2`.
+1. `private-source-repository@3185d21d594f9e06450da809ca97fab2132285a4`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T031836Z-fleet03-B16-QFORM-r24/REPORT.md`. In the exact-rank-three hard branch it supplies a hub row `r_0=sqrt(h)e`, `h>63/64`, and after the existing pair exit every residual transverse row `z_i=P_(e^perp)r_i` obeys `||z_i||^2<1/64`; also `sum_i z_i z_i^T=I_2`.
 
-2. `yspennstate/math-open-problems@321c962d54aaeb625a9417dea9842f0910c13714`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T132339Z-fleet03-B16-QFORM-r29/REPORT.md`. It reduces the true near-coloop chamber to product-preserving diffuse physical-star geometry after already-paid diagonal and local-pair exits.
+2. `private-source-repository@321c962d54aaeb625a9417dea9842f0910c13714`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T132339Z-fleet03-B16-QFORM-r29/REPORT.md`. It reduces the true near-coloop chamber to product-preserving diffuse physical-star geometry after already-paid diagonal and local-pair exits.
 
 3. fleet01/B10, current source `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260923T145337Z-fleet01-B10-QFORM-auto11/REPORT.md`, establishes the exact bordered-pair identity and, on the punctured ultra-collar `|a|D<2^-12`, the aggregate negative hub-pair determinant mass
 
@@ -263,7 +263,7 @@ one obtains the literal target inequality
 
 `boxed: ||p_Q||_infinity<=24.`                                  (6.2)
 
-The new Theorem 3.1 is entered only on the complementary partner branch `d<1/64` after the prior B16 reductions. I also consumed the newer fleet04/B16 transverse-fresh-bank theorem at `yspennstate/math-open-problems@4c11848f5274047472b374f9d64594480a11c2c4`; its heavy-coordinate fresh direction is a distinct paid branch and does not justify treating the diffuse banks in (4.2) as independent coordinates internally.
+The new Theorem 3.1 is entered only on the complementary partner branch `d<1/64` after the prior B16 reductions. I also consumed the newer fleet04/B16 transverse-fresh-bank theorem at `private-source-repository@4c11848f5274047472b374f9d64594480a11c2c4`; its heavy-coordinate fresh direction is a distinct paid branch and does not justify treating the diffuse banks in (4.2) as independent coordinates internally.
 
 ## 7. What changed and the next unpaid implication
 

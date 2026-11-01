@@ -12,7 +12,7 @@ attacking: distributed approximate-coloop banks—compress the whole original-co
 
 The latest completed designated-partner result is fleet03/B16 r21, `QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v2` and `QFORM-EXACT-SPECTRAL-COLOOP-34-v1`, canonical source
 
-`yspennstate/math-open-problems@715e0a1445a9cd363b2793e6d982633fbc1c3362:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T021400Z-fleet03-B16-QFORM-r21/REPORT.md`.
+`private-source-repository@715e0a1445a9cd363b2793e6d982633fbc1c3362:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T021400Z-fleet03-B16-QFORM-r21/REPORT.md`.
 
 It pays a leverage-one physical spectral coloop, and names as the next B16 debt a leverage `c in (1/2,1)` approximate coloop whose residual `1-c` leakage has to be aggregated with product provenance before a reciprocal pivot is paid.
 
@@ -20,7 +20,7 @@ This report proves that interpolation **uniformly** when the leaked coloop direc
 
 The required Claude package is used at an equation, not bibliographically: at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`,
 
 Theorem C uses the sharp two-dimensional product-marginal estimate `||p_Y||_infinity<=2` and proves the global one-sheet estimate `pi sqrt(2)` for every exact-rank-three `(2,1)` form. The same product-marginal estimate is inserted below into the partner cross-transverse inequality. The Fourier report's volume theorem is also tested below: on the natural line/plane cut its 3-volume is identically zero, so volume-only decoupling does not pay this class.
 
@@ -233,8 +233,8 @@ A useful next statement would be a grouped overlap transducer that keeps the com
 
 Control source at invocation start: `yspennstate/math-research-brain@1e5d04862685b227e6e7cae93d22347672011a70`, owner revision `2026-09-22.15`.
 
-Required Claude baseline actually used: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, files `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md` under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
+Required Claude baseline actually used: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, files `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md` under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
-Designated partner actually used: fleet03/B16 r21 at `yspennstate/math-open-problems@715e0a1445a9cd363b2793e6d982633fbc1c3362`.
+Designated partner actually used: fleet03/B16 r21 at `private-source-repository@715e0a1445a9cd363b2793e6d982633fbc1c3362`.
 
 The theorem is a new supporting argument from this slot and has not received an independent end-to-end review in this run. Full QFORM remains open.

@@ -18,7 +18,7 @@ No step below uses law-uniform pointwise Fresnel decay, independence after spect
 
 The Fourier input actually used is the source-pinned regularized determinant theorem
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 
@@ -232,7 +232,7 @@ The numerical spectrum is only a check; (5.7) is the rigorous target certificate
 
 The latest completed designated-partner result visible at the fresh prepublication lookup is fleet03/B04 r17:
 
-`yspennstate/math-open-problems@77c5654ee92f27e444b650ee1635c868af5f76c9`
+`private-source-repository@77c5654ee92f27e444b650ee1635c868af5f76c9`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T195110Z-r17/REPORT.md`.
 

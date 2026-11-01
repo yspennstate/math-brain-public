@@ -9,7 +9,7 @@ Execution context: `WITHOUT_VERIFIED_BRAIN`.
 
 The full owner conjecture remains OPEN. This report proves a new all-order decoupled time-integral lemma for a physical original-coordinate cross block and quantifies a sharp endpoint defect of the current absolute-value decoupling mechanism.
 
-The only external mathematical premise used is the completed regularized cross-block determinant theorem from the interactive QFORM handoff, canonical math-open-problems commit `a302aab3477c64757b511e80d3907f982e04873a`: for disjoint original-coordinate sets I,J, B=A[I,J], and independent coordinate densities bounded by one,
+The only external mathematical premise used is the completed regularized cross-block determinant theorem from the interactive QFORM handoff, canonical private-source commit `a302aab3477c64757b511e80d3907f982e04873a`: for disjoint original-coordinate sets I,J, B=A[I,J], and independent coordinate densities bounded by one,
 
 \[
  |\mathbf E e^{itX^TAX}|\le

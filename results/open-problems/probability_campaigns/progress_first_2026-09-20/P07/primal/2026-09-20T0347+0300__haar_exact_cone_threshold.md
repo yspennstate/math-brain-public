@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-A — exact orthant cone has Haar threshold constant 1
 
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured pre-research master:** `b46fbcb68200e07fbad3932bde31d93f8697d121`  
 **Outside target:** Randomstrasse101, arXiv:2603.29571, Conjecture 18; primary partial-result paper Bandeira–Błasiok–Dmitriev–Faure–Kireeva–Kunisky, *The Lovász number of random circulant graphs*, arXiv:2502.16227.  
 **Exact endpoint:** for the source dense random circulant model on odd `n`, prove

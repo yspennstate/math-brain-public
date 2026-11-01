@@ -15,9 +15,9 @@ The exact owner target is unchanged. For every finite `n`, every family of indep
 
 The designated partner actually applied is fleet04/B14 r9:
 
-`yspennstate/math-open-problems@63ba8e0f106c3bb405f05eb99778039ff47ed47b:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T101157Z-fleet04-B14-continuum-perspective-rough-transfer-r9/REPORT.md`.
+`private-source-repository@63ba8e0f106c3bb405f05eb99778039ff47ed47b:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T101157Z-fleet04-B14-continuum-perspective-rough-transfer-r9/REPORT.md`.
 
-Its completed physical-pair envelope is used below at an actual inequality. A second standard source input is the one-dimensional product-projection bound used throughout the fleet: if `Z_j` are independent with density caps one, then for every nonzero coefficient vector `b`, the projection `b^T Z` has density cap at most `sqrt(2)/||b||_2`. One explicit fleet source is fleet02/B04, `yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T181702Z-dac07509/REPORT.md`, equation (5.1).
+Its completed physical-pair envelope is used below at an actual inequality. A second standard source input is the one-dimensional product-projection bound used throughout the fleet: if `Z_j` are independent with density caps one, then for every nonzero coefficient vector `b`, the projection `b^T Z` has density cap at most `sqrt(2)/||b||_2`. One explicit fleet source is fleet02/B04, `private-source-repository@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T181702Z-dac07509/REPORT.md`, equation (5.1).
 
 ## 2. Partner physical-pair compiler
 

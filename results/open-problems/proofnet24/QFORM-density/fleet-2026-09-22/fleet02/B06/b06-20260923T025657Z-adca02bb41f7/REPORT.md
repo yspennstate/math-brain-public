@@ -22,7 +22,7 @@ This run retains the live corrections: no independence is inferred after spectra
 
 The required package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
@@ -34,7 +34,7 @@ This source is applied below to the fixed matrix `A=3B0`: for independent origin
 
 The designated partner result actually used is
 
-`yspennstate/math-open-problems@606257652f3c70e90c7b7f80ea7cb76c1abf689b`
+`private-source-repository@606257652f3c70e90c7b7f80ea7cb76c1abf689b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T011959Z-fleet03-B06-qform-r24/REPORT.md`.
 
@@ -51,7 +51,7 @@ A real application appears in Section 6; the partner theorem is not merely cited
 
 The exact-null endpoint already paid by fleet02/B16 is
 
-`yspennstate/math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
+`private-source-repository@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T232932Z-fleet02-B16-QFORM-auto11/REPORT.md`.
 

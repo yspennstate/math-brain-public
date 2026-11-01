@@ -16,7 +16,7 @@ The unrestricted rough-input theorem remains open. This run isolates a useful ca
 Completed analytic inputs used at equations:
 
 1. Pinned Claude/e5 Theorem D and its arbitrary-weight form, source
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`.
    For a physical cross block and a supported physical 3-minor law with constrained-side row marginals at most `1/2`, determinant/entropy currency
    
@@ -33,7 +33,7 @@ Completed analytic inputs used at equations:
    and D5 gives `5 sqrt(2e) Z5^(-1/10)` without any marginal gate.
 
 2. Newest designated partner fleet03/B04 r46, source
-   `yspennstate/math-open-problems@171d82178a5f25c3a13692755cdb9c239372c79a`,
+   `private-source-repository@171d82178a5f25c3a13692755cdb9c239372c79a`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260924T014725Z-fleet03-B04-QFORM-auto11-r46/REPORT.md`.
    Its `QFORM-ANCHORED-E4-HUB-FOURIER-v1` keeps a literal carrier coordinate as a Fourier hub. At the concrete matrix below it proves
    
@@ -42,7 +42,7 @@ Completed analytic inputs used at equations:
    with a continuous `C_0` density.
 
 3. The completed ridge-density theorem, source
-   `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+   `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
    `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
    If `K_gamma=BB^T(gamma^2 I+BB^T)^(-1)`, `theta=tr K_gamma`, `D_gamma=det(I+BB^T/gamma^2)`, and for some `1<=q<=2`
    

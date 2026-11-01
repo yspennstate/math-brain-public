@@ -20,7 +20,7 @@ The live correction inbox was reread before this report. In particular, nothing 
 
 The new interactive grouped-projection theorem at
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`,
 
 was also read. It is compatible supporting mathematics but does not by itself close the small-leak/common-plane survivor because its grouped-hub crossing hypothesis must hold exactly; an arbitrary nonzero hub-complement/light coupling cannot be discarded or reclassified as an internal hub phase.
@@ -29,7 +29,7 @@ was also read. It is compatible supporting mathematics but does not by itself cl
 
 The newest completed `fleet02/B19` result is
 
-`yspennstate/math-open-problems@9157730c1b552b81f58b3cb6ef604b687962e548`,
+`private-source-repository@9157730c1b552b81f58b3cb6ef604b687962e548`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T160847Z-fleet02-B19-QFORM-r36/REPORT.md`.
 
 Its theorem `QFORM-OVERLAP-MIXED-EXTERIOR-VOLUME-v1` says: for pairwise disjoint ORIGINAL-coordinate banks I,J,K, with
@@ -52,7 +52,7 @@ This report applies (1.1) and (1.2) to a new literal physical orientation, not m
 
 The quantitative-rank-two STAR4 branch is source-pinned at
 
-`yspennstate/math-open-problems@db5c35db0ea104ee7e38d904c1a759ba46164f49`,
+`private-source-repository@db5c35db0ea104ee7e38d904c1a759ba46164f49`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T130709Z-fleet02-B19-QFORM-auto11/REPORT.md`.
 
 For its physical leaf cross block `N=A[J,K]`,
@@ -70,7 +70,7 @@ so
 
 The newest balanced self-cut compiler is fleet03/B19 r37,
 
-`yspennstate/math-open-problems@fd9966835d05b404551208f2cf6bfbec1bee65dc`,
+`private-source-repository@fd9966835d05b404551208f2cf6bfbec1bee65dc`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T160411Z-fleet03-B19-QFORM-r37/REPORT.md`.
 
 In its diffuse top-two-left-leverage branch it chooses one ORIGINAL-coordinate cut

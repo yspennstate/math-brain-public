@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 # R16 HARD OUTSIDE — mandatory I0043 handoff, I0036 / Schramm Problem 2.1 successor, quantitative bridge-exponent improvement
 
 Date: 2026-09-17 UTC.  
-Repository/branch: `yspennstate/math-open-problems` / `master`.  
+Repository/branch: `private-source-repository` / `master`.  
 Current source status: **PARTIAL / OPEN**.  
 New theorem status: **proved on the page + exact finite constant certificate; publication novelty unverified**.
 

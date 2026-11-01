@@ -23,19 +23,19 @@ The theorem never treats a small matrix as a small random quadratic variable and
 
 Required partner theorem actually used at equations:
 
-- `yspennstate/math-open-problems@3948d77b0bde5af1bd37cd7c975d4f540eba901b`
+- `private-source-repository@3948d77b0bde5af1bd37cd7c975d4f540eba901b`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T081758Z-fleet04-B12-complementary-schur-shield-r4/REPORT.md`
 - in particular its exact complementary-Schur factorization and shear singular-value constant.
 
 Newest required volume source actually used at equations:
 
-- `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+- `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 - `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
 - specifically its fractional three-volume theorem at `q=1`.
 
 Finite-dimensional analytic receiver used only after an ACTUAL original-coordinate block is certified:
 
-- `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`
+- `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`
 - `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Theorem 3.1 / Corollary 4.1.
 
 Current corrections were respected: no uniform pointwise quadratic-phase decay, no independence after spectral rotation, no arbitrary-joint coarea lemma, no worst conditional-density-moment gate, and no naive fiber-sup integration.

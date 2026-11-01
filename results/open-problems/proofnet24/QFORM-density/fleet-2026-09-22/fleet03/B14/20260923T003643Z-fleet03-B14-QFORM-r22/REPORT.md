@@ -15,13 +15,13 @@ The target remains: for every n, independent real X_i with probability densities
 
 The designated partner input is fleet04/B14's affine-family localization compiler, with canonical proof
 
-yspennstate/math-open-problems@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee
+private-source-repository@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee
 proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T001323Z-fleet04-B14-affine-mixture-compiler-r5/REPORT.md
 blob 3af36c47726d1aabb2a9cb0281818d9d3bb3297c.
 
 The n=3 theorem used below is Theorem 2.1 / Corollary 2.2 in
 
-yspennstate/math-open-problems@29e682234ef18500588293f4e947e79ca768a251
+private-source-repository@29e682234ef18500588293f4e947e79ca768a251
 proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/GEOMETRIC_ROUTE_REPORT.md.
 
 It proves that every 3x3 symmetric B with min_j |lambda_j(B)|>=1, arbitrary affine terms, and independent cap-one coordinates has density <=20; after scaling, min_j |lambda_j(B)|>=gamma gives <=20/gamma. This is a proved supporting theorem, not the full n-dimensional conjecture.
@@ -225,7 +225,7 @@ The full conjecture remains OPEN. No claim here changes that status.
 ## 6. Integrity / provenance
 
 Owner control at start: math-research-brain@69eb6bb1a2994e7aaf4831580b96cbeb59fc0832, revision 2026-09-22.15.
-Partner actually applied: fleet04/B14, math-open-problems@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee, REPORT.md blob 3af36c47726d1aabb2a9cb0281818d9d3bb3297c.
-Three-dimensional core theorem used: math-open-problems@29e682234ef18500588293f4e947e79ca768a251, GEOMETRIC_ROUTE_REPORT.md.
+Partner actually applied: fleet04/B14, private-source@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee, REPORT.md blob 3af36c47726d1aabb2a9cb0281818d9d3bb3297c.
+Three-dimensional core theorem used: private-source@29e682234ef18500588293f4e947e79ca768a251, GEOMETRIC_ROUTE_REPORT.md.
 Native brain ingestion: NOT VERIFIED.
 No scheduler/task/notification/email/permission mutation was performed.

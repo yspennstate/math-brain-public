@@ -30,7 +30,7 @@ This is an analytic implication only. The still-unpaid global structural task is
 
 I use the completed theorem `QFORM-SQUARE-WEIGHTED-DETERMINANT-HALFRIESZ-v1` from
 
-`yspennstate/math-open-problems@6155d85896070c87f6523a30646c38ac10be43a9`
+`private-source-repository@6155d85896070c87f6523a30646c38ac10be43a9`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260922T201618Z-fleet02-B04-qform-r13/REPORT.md`.
 
@@ -49,7 +49,7 @@ No leverage hypothesis is present at `q=2`; arbitrary residual self-quadratic te
 
 I also use the current owner-required source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
@@ -68,7 +68,7 @@ The same source explicitly keeps the full conjecture open.
 
 For the ridge comparison I use the earlier B04 theorem `QFORM-O0-EFFECTIVE3-ADAPTIVE-Q-v1`, canonical at
 
-`yspennstate/math-open-problems@ae419b8c9d837cc4c31eb86b3bcf9cfe7be3e721`.
+`private-source-repository@ae419b8c9d837cc4c31eb86b3bcf9cfe7be3e721`.
 
 At the scale where the ridge effective dimension is three, if the maximum physical ridge leverage is `ell_*<3/4`, with `q_*=max(1,2 ell_*)`, it gives the continuous-density estimate
 

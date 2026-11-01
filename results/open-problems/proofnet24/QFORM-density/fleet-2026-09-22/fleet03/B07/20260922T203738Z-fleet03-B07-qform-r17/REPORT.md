@@ -17,7 +17,7 @@ This run uses no Gaussian, moment, compact-support, log-concavity, post-rotation
 
 The designated partner `fleet04/B07` still had no completed current-QFORM canonical directory or current-QFORM handoff at the fresh source check. I therefore do not invent a partner result. The compatible completed other-account theorem actually applied below is fleet02/B19 r17:
 
-`yspennstate/math-open-problems@fc8343c379bbddf14be670349f664f7fcb39994a`
+`private-source-repository@fc8343c379bbddf14be670349f664f7fcb39994a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T192830Z-fleet02-B19-qform-r17/REPORT.md`.
 
@@ -31,7 +31,7 @@ The second completed input actually used is the ridge characteristic-function es
 
 `QFORM-RIDGE-DENSITY-v1`, canonical source
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 

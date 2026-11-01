@@ -17,7 +17,7 @@ The newest control-side correction read before this proof is `math-research-brai
 
 The fresh replacement input is the proved two-bank curved-tube theorem
 
-`math-open-problems@5e23223ed8626d8df8343d2d26879c08cf139093:`
+`private-source@5e23223ed8626d8df8343d2d26879c08cf139093:`
 `proofnet24/QFORM-density/interactive/20260923T202245Z-two-bank-curved-tube/REPORT.md`.
 
 It retains the original two-bank product provenance and proves the required dyadic gain without a moment or support hypothesis.
@@ -216,7 +216,7 @@ is immediate from `r_k=R2^(-k-1)`. Thus away from the quadratic critical value t
 
 The required source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837:`
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
 was read through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
@@ -237,7 +237,7 @@ Hence (3.3)-(7.2) are genuinely complementary to the ruled calculation: they are
 
 The newest compatible partner theorem is
 
-`math-open-problems@561a0d56e540a5fa5a689bcb36862d40d6ae0604:`
+`private-source@561a0d56e540a5fa5a689bcb36862d40d6ae0604:`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T193756Z-fleet03-B05-QFORM-r31/REPORT.md`.
 
 In its live ratio packet, when

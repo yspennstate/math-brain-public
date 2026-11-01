@@ -12,7 +12,7 @@ The live target is: for every `n`, independent real `X_i` with densities `0 <= f
 
 The full conjecture remains **OPEN / NOT PROVED**. This run does not use the refuted law-uniform pointwise Fourier-decay claim, does not rotate and then pretend coordinates remain independent, and does not use a single cross-minor as sufficient. The current correction `QFORM-CROSSMINOR-ALONE-FALSE` was consumed before this write.
 
-The assigned partner `fleet02/B18` had no completed qform artifact at retrieval time. I therefore did not invent a partner result or wait. I substantively used the compatible completed `fleet02/B12` report at `yspennstate/math-open-problems@39b363886b16b0d29919b0c0f45bedd997c47c44:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T115433Z-fleet02-B12/REPORT.md`, in particular its source-valid rule that conditioning outside an original-coordinate block preserves the product law on the remaining coordinates and turns cross terms into linear tilts.
+The assigned partner `fleet02/B18` had no completed qform artifact at retrieval time. I therefore did not invent a partner result or wait. I substantively used the compatible completed `fleet02/B12` report at `private-source-repository@39b363886b16b0d29919b0c0f45bedd997c47c44:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T115433Z-fleet02-B12/REPORT.md`, in particular its source-valid rule that conditioning outside an original-coordinate block preserves the product law on the remaining coordinates and turns cross terms into linear tilts.
 
 ## 2. Exact extremal reduction: arbitrary bounded densities -> unit-measure product sets
 
@@ -116,7 +116,7 @@ from three large eigenvalues. A marginal bound alone, a fiber supremum, or a gen
 ## 7. Source pins
 
 - live control before write: `yspennstate/math-research-brain@428ea8b10266994fcacde3ef4075758875004c18`, owner revision `2026-09-22.5`;
-- compatible peer consumed: `yspennstate/math-open-problems@39b363886b16b0d29919b0c0f45bedd997c47c44:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T115433Z-fleet02-B12/REPORT.md`;
+- compatible peer consumed: `private-source-repository@39b363886b16b0d29919b0c0f45bedd997c47c44:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T115433Z-fleet02-B12/REPORT.md`;
 - primary theorem: Livshyts--Paouris--Pivovarov, arXiv:1507.07949, Theorem 1.1;
 - scope check: Kosov, arXiv:2511.02679, Theorems 1.6--1.7.
 

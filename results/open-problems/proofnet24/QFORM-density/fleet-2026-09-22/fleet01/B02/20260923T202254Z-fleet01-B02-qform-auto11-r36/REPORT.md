@@ -15,7 +15,7 @@ The full target remains: independent real original coordinates with scalar densi
 
 The strong original-coordinate cut is the completed fleet04/B20 theorem
 
-`yspennstate/math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912`,
+`private-source-repository@c6f29397b3d45a7cf7ab67633a5451767b478912`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`.
 
@@ -36,7 +36,7 @@ with genuine Fourier `L1`.
 
 The designated partner actually applied below is the completed fleet02/B02 marginal-free physical-E3 theorem
 
-`yspennstate/math-open-problems@3fccd9b82b456e198758e5839be364b4b0ec5024`,
+`private-source-repository@3fccd9b82b456e198758e5839be364b4b0ec5024`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T170839Z-fleet02-B02-qform-auto11/REPORT.md`.
 
@@ -50,7 +50,7 @@ with a continuous `C_0` density. Arbitrary same-bank quadratic terms, outside co
 
 For one secondary structural splice I use the completed fleet01/B07 near-rank-two Pluecker theorem
 
-`yspennstate/math-open-problems@4a0d5ffbeb2cd078b6f33a4b3a678ae3dd94763f`,
+`private-source-repository@4a0d5ffbeb2cd078b6f33a4b3a678ae3dd94763f`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T170819Z-r29/REPORT.md`,
 

@@ -16,7 +16,7 @@ This report does **not** use post-rotation independence, law-uniform pointwise F
 
 The designated partner result actually applied is fleet03/B03 run `20260922T190034Z-fleet03-B03-QFORM-r18`, canonical report
 
-`yspennstate/math-open-problems@d18302d55f907552185a42994d48b09f39737cbd`
+`private-source-repository@d18302d55f907552185a42994d48b09f39737cbd`
 
 at
 
@@ -28,13 +28,13 @@ Its dependence-safe physical-cross independent-copy consequence is: a rank-`r` o
 
 For rank one this is `<=8 sigma^(-1/2)`. The proof retains the dependence of copy sums and differences; no conditional conjugate-density cap is used.
 
-I also use the completed orientation-free rank-two affine half-Riesz theorem, source-pinned in current research at `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, in the exact form
+I also use the completed orientation-free rank-two affine half-Riesz theorem, source-pinned in current research at `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, in the exact form
 
 `sup_t E|Z^T P Z+ell^T Z+c-t|^(-1/2) <=128 |det P|^(-1/4)`      (1.2)
 
 for every invertible physical `2 x 2` symmetric coefficient `P` and independent cap-one original coordinates `Z`.
 
-Finally, the immediately preceding B03 report at `yspennstate/math-open-problems@d205dc643b8d2439efdbbe986f93ea8b4f2933f5` proves the full-law physical-pivot collision estimate
+Finally, the immediately preceding B03 report at `private-source-repository@d205dc643b8d2439efdbbe986f93ea8b4f2933f5` proves the full-law physical-pivot collision estimate
 
 `E|Q-Q'|^(-1/2) <= C_* |A_ii|^(-1/2)`,
 `C_*=16 sqrt(2)/3^(3/4)=9.9264518304...`.                       (1.3)

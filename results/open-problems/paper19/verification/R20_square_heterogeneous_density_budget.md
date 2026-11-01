@@ -73,7 +73,7 @@ was run twice from `paper19/`; the final standalone PDF is 34 pages /
 569,034 bytes.
 
 `pdflatex -interaction=nonstopmode -halt-on-error master.tex` was run twice
-from `math-open-problems-fleet/master/`; the final master PDF is 853 pages /
+from `private-source-fleet/master/`; the final master PDF is 853 pages /
 7,757,924 bytes and was copied to `~/Downloads/master.pdf`.
 
 Targeted log scans found no LaTeX errors, undefined control sequences,

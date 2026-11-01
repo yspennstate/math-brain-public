@@ -10,7 +10,7 @@ The full owner conjecture remains **OPEN / NOT PROVED**. No moment, bounded-supp
 
 ## 1. Exact reduction already available and first unpaid implication
 
-The earlier fleet02/B13 extreme-product result (brain handoff `20260922T115714Z-fleet02-B13-qform-480ba28b.md`, canonical math-open-problems report commit `604a08009638981da254a72f09a24dd50e3a3c94`) proves with zero loss that for every measurable kernel `0<=K<=1`,
+The earlier fleet02/B13 extreme-product result (brain handoff `20260922T115714Z-fleet02-B13-qform-480ba28b.md`, canonical private-source report commit `604a08009638981da254a72f09a24dd50e3a3c94`) proves with zero loss that for every measurable kernel `0<=K<=1`,
 
 `sup_{0<=f_i<=1, int f_i=1} int K(x) prod_i f_i(x_i) dx`
 
@@ -18,7 +18,7 @@ is the same supremum over product indicators `prod_i 1_{E_i}` with `|E_i|=1`; bo
 
 The live partner result actually consumed here is fleet03/B13
 
-`yspennstate/math-open-problems@dd421029601cf5663685c49f225af55567332fb6`
+`private-source-repository@dd421029601cf5663685c49f225af55567332fb6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/b13-20260922T143428Z-qform11/REPORT.md`.
 

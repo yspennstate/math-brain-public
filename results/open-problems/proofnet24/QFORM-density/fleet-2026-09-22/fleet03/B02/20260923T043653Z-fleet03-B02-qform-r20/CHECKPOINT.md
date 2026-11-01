@@ -59,8 +59,8 @@ so at least 1-delta^(1/3) of that singular-frame direction is carried by only th
 The identities were checked on 30 seeded random rectangular matrices: max relative Cauchy--Binet E3 error 2.68e-15; max |delta_double_sum-delta_residual_average| 3.61e-16. Exact-rank-three residual determinant ratios agreed to 1.78e-15.
 
 Sources actually being extended/applied:
-- math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba, interactive/20260923T002323Z-volume-stability/REPORT.md, q=1 fractional-volume/BL mechanism with row gates retained;
-- math-open-problems@32c257209b588141fb60af698f478f1d0ad20b8a, fleet02/B07 QFORM-PLUCKER-ENTROPY-BL-v1, especially the conditioned-disjoint-basis entropy construction;
+- private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba, interactive/20260923T002323Z-volume-stability/REPORT.md, q=1 fractional-volume/BL mechanism with row gates retained;
+- private-source@32c257209b588141fb60af698f478f1d0ad20b8a, fleet02/B07 QFORM-PLUCKER-ENTROPY-BL-v1, especially the conditioned-disjoint-basis entropy construction;
 - previous fleet03/B02 fixed-three-column packet at f445f3dd7e2b845f96ac58cc4bd96f12ec7a839c.
 
-Designated partner fleet04/B02 will be applied at an actual hybrid inequality in the full report; its completed zero-diagonal-triple L2 Fourier estimate is at math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7.
+Designated partner fleet04/B02 will be applied at an actual hybrid inequality in the full report; its completed zero-diagonal-triple L2 Fourier estimate is at private-source@0b11995430ce407a8852ac3bc5651491f2ee64f7.

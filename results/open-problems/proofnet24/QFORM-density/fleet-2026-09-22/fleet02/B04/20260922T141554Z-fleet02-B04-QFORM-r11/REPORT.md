@@ -26,11 +26,11 @@ Required corrections consumed: the law-uniform scalar pointwise-decay claim is f
 
 Named partner actually applied: `fleet03/B04`, canonical report
 
-`yspennstate/math-open-problems@55e0a30b6ac56934614a5416056cae2e4a6dc77e:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T135303Z-r11/REPORT.md`, blob `77ac63575c79c5ced9f38da81aa450e68973e15d`.
+`private-source-repository@55e0a30b6ac56934614a5416056cae2e4a6dc77e:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T135303Z-r11/REPORT.md`, blob `77ac63575c79c5ced9f38da81aa450e68973e15d`.
 
 That report independently PASSes the regularized product-space determinant estimate and gives its fractional-`q` form. The underlying source is
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 
 For any original-coordinate cut `I,J`, `B=A[I,J]`, and `1<=q<2`, if the diagonal of the projection onto `range(B)` on the `I` side is at most `q/2`, the proved estimate is
 
@@ -40,7 +40,7 @@ It is uniform over all within-block quadratic phases and outside couplings. It t
 
 A second source-valid dependency is fleet01/B11's completed dependent-square lemma,
 
-`yspennstate/math-open-problems@e06922bfa31bbd225cdce6ee6aea563254e62563:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`.
+`private-source-repository@e06922bfa31bbd225cdce6ee6aea563254e62563:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`.
 
 If `R` has a density with `||p_R||_3=M`, and the conditional law of `V` given `R=r` has density at most one a.e., then for `a!=0`,
 

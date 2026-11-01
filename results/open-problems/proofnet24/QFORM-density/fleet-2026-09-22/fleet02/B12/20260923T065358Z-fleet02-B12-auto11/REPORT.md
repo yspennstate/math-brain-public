@@ -15,7 +15,7 @@ The bare hypothesis s_3(A)>=1 still does **not** force a physical cut I|J for wh
 ## 1. Source-pinned completed inputs
 
 1. Required newest-Claude source:
-   yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837,
+   private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837,
    proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md.
    Its proved D_5 theorem says that for an ORIGINAL-coordinate cross block M=A[I,J], with
 
@@ -28,7 +28,7 @@ The bare hypothesis s_3(A)>=1 still does **not** force a physical cut I|J for wh
    with no marginal condition.
 
 2. Designated partner fleet03/B12:
-   yspennstate/math-open-problems@3ea9c184594344f0d82c72c06646ad2c8291a12a,
+   private-source-repository@3ea9c184594344f0d82c72c06646ad2c8291a12a,
    proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T054842Z-qform-eigenvalue-r26/REPORT.md.
    Its proved cross-energy compiler applies to the ACTUAL final cross block M. If
 

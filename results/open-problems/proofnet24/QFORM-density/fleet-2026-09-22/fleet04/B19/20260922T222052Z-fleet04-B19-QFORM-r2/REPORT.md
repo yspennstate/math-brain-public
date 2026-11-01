@@ -25,7 +25,7 @@ The theorem uses arbitrary independent cap-one input densities, no moments or su
 
 Source snapshot for the completed inputs:
 
-`yspennstate/math-open-problems@fd255c96021f6223e61c973a20afcadd5fffde3d`.
+`private-source-repository@fd255c96021f6223e61c973a20afcadd5fffde3d`.
 
 The two principal source reports are:
 

@@ -23,7 +23,7 @@ The completed inputs used below are:
 
 2. **Designated partner fleet02/B13 r25.** Source
 
-   `yspennstate/math-open-problems@04973c0d13c8cbe814f1303b7de8aeffd40791df`
+   `private-source-repository@04973c0d13c8cbe814f1303b7de8aeffd40791df`
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T110032Z-fleet02-B13-extremal-r25/REPORT.md`.
 
@@ -39,7 +39,7 @@ The completed inputs used below are:
 
 3. **Nystrom rigidity from fleet01/B13 auto22.** Source
 
-   `yspennstate/math-open-problems@ac5acc0621d0b45e2942a259747399d983e24c14`
+   `private-source-repository@ac5acc0621d0b45e2942a259747399d983e24c14`
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T113036Z-fleet01-B13-qform-auto22/REPORT.md`.
 
@@ -66,7 +66,7 @@ The completed inputs used below are:
 
 5. **Weighted D3 Brascamp--Lieb Fourier mechanism.** Source
 
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 

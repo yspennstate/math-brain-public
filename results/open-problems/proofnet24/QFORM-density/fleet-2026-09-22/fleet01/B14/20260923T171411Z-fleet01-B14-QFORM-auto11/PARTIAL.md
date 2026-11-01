@@ -43,6 +43,6 @@ with H,G symmetric and arbitrary, R,l1,l2,s arbitrary. Conditioning on Y=y and t
 ||p_Q||inf <=2^(7/6)pi^(2/3)||v||_2^(-1/3).
 If ||v||_2>=1, the active principal block I_2 direct_sum [[H,v],[v^T,a]] has at least three eigenvalues of modulus >=1: I_2 contributes two +1 eigenvalues, and the symmetric second block has operator norm at least ||v||_2. If that large eigenvalue is positive it supplies a third >=1; if negative it supplies one <=-1 in addition to the two +1 values. Hence the family is inside the exact owner target. Arbitrary outside couplings preserve the threshold count by principal-submatrix interlacing.
 
-Dependency actually used: fleet02/B14 r39, canonical report yspennstate/math-open-problems@6b6cd1c3be8a9c23a3424593a38b0450acb61cfa, path proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T155625Z-fleet02-B14-QFORM-r39/REPORT.md.
+Dependency actually used: fleet02/B14 r39, canonical report private-source-repository@6b6cd1c3be8a9c23a3424593a38b0450acb61cfa, path proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T155625Z-fleet02-B14-QFORM-r39/REPORT.md.
 
 Execution: WITHOUT_VERIFIED_BRAIN. No claim of full QFORM closure.

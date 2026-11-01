@@ -15,7 +15,7 @@ The unrestricted conjecture remains open. This report attacks the first remainin
 
 The fresh fleet02/B19 theorem is source-pinned at
 
-`yspennstate/math-open-problems@59bf0ca9f45cc0128973ccc854f5c3697996f0b6`,
+`private-source-repository@59bf0ca9f45cc0128973ccc854f5c3697996f0b6`,
 
 with main report
 
@@ -61,7 +61,7 @@ The designated completed fleet04/B20 theorem is
 
 source-pinned at
 
-`yspennstate/math-open-problems@94bf446b8547b1124a37033e940ef594c460b64f`,
+`private-source-repository@94bf446b8547b1124a37033e940ef594c460b64f`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T141640Z-fleet04-B20-QFORM-r2/REPORT.md`.
 

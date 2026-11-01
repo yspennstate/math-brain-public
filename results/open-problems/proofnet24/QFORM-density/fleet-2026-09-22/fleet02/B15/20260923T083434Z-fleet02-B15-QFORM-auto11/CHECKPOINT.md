@@ -5,13 +5,13 @@ attacking: the first unpaid rough-input implication after the ruled one-sheet th
 
 Programme: `QFORM-DENSITY-3EIG-20260922`. Full target status: **OPEN**. Execution context: `WITHOUT_VERIFIED_BRAIN`.
 
-The completed ruled result at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, gives for an exact rank-three affine-completed signature `(2,1)` block with eigenvalue magnitudes at least `kappa` a majority-side submeasure density cap
+The completed ruled result at `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, gives for an exact rank-three affine-completed signature `(2,1)` block with eigenvalue magnitudes at least `kappa` a majority-side submeasure density cap
 
 \[
 C_+\le \pi\sqrt2/\kappa.
 \]
 
-The newest compatible partner result actually used is fleet03/B15 at `math-open-problems@30e0239b97649cbaa02bd11bd3bd5a5bd514b5f0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T073059Z-fleet03-B15-qform-auto15/REPORT.md`. At every global Gaussian heat mode `y_*`, with posterior residual `U=(Q-y_*)/epsilon`, it proves
+The newest compatible partner result actually used is fleet03/B15 at `private-source@30e0239b97649cbaa02bd11bd3bd5a5bd514b5f0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T073059Z-fleet03-B15-qform-auto15/REPORT.md`. At every global Gaussian heat mode `y_*`, with posterior residual `U=(Q-y_*)/epsilon`, it proves
 
 \[
 E e^{vU}\le e^{v^2/2}\quad(v\in\mathbb R),\qquad EU=0.

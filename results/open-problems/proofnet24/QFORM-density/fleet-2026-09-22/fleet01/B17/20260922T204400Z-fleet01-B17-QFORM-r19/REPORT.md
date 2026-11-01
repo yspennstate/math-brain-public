@@ -13,7 +13,7 @@ Execution memory: `WITHOUT_VERIFIED_BRAIN`.
 
 The designated partner input is fleet02/B17 run `20260922T194544Z-fleet02-B17-QFORM-r18`, complete proof
 
-`yspennstate/math-open-problems@97c8874b48c663a7ae131cb3899dbafdb5a31d1c:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T194544Z-fleet02-B17-QFORM-r18/REPORT.md`.
+`private-source-repository@97c8874b48c663a7ae131cb3899dbafdb5a31d1c:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T194544Z-fleet02-B17-QFORM-r18/REPORT.md`.
 
 For two arbitrary cap-one heavy laws loaded collinearly on the minority-sign direction and two diffuse majority-sign Gaussian banks, it proves the exact global limiting ceiling
 

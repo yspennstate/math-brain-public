@@ -4,7 +4,7 @@ Geoffrey R. Grimmett, *Selected Problems in Probability Theory*, Conjecture 4.2 
 
 # P14 mandatory handoff — Grimmett forest negative correlation
 
-Repository/branch: `yspennstate/math-open-problems` / `master`  
+Repository/branch: `private-source-repository` / `master`  
 Track/root: `P14` / `proofnet24/P14-probability-correlation`  
 Category: **HARD OUTSIDE**  
 Status after this run: **OPEN / PARTIAL / HANDED OFF; successor admission required**  

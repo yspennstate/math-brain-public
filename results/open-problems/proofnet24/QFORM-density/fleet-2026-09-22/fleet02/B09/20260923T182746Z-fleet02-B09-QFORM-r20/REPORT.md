@@ -29,7 +29,7 @@ The small fourth carrier direction may not be discarded as a small random quadra
 
 The owner-required pinned source was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
@@ -57,7 +57,7 @@ The newest compatible designated partner is fleet03/B09 r38,
 
 canonical report
 
-`yspennstate/math-open-problems@b2a0ccad9d4f4d654e0fc84dd0323ce84230ebc4`,
+`private-source-repository@b2a0ccad9d4f4d654e0fc84dd0323ce84230ebc4`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T175610Z-fleet03-B09-QFORM-r38/REPORT.md`.
 
@@ -67,11 +67,11 @@ The grouped mixed-hub theorem used for the uniform rank transition is fleet03/B0
 
 `QFORM-GROUPED-HUB-PLUCKER-SMOOTHING-v1`,
 
-`yspennstate/math-open-problems@ba035d3e65b7687b9ec8c05320f6340caabc34bb`.
+`private-source-repository@ba035d3e65b7687b9ec8c05320f6340caabc34bb`.
 
 I apply it through the already-proved fleet02/B09 r18 source-separated corollary at
 
-`yspennstate/math-open-problems@e7a440cdcf3adb7740b6fbeba60f4f0c75f1936a`.
+`private-source-repository@e7a440cdcf3adb7740b6fbeba60f4f0c75f1936a`.
 
 The pinned counterexample search still reports no valid counterexample to full QFORM; this run found none.
 

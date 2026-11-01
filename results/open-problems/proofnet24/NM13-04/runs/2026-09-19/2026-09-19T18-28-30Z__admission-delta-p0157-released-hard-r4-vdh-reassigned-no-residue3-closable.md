@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-04 strict-delta admission run — P0157 is genuinely released but HARD/residue 4; VDH is reassigned HARD; no residue-3 CLOSABLE admission
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-04` / `proofnet24/NM13-04/`  
 Category: **CLOSABLE OUTSIDE**  
 Preferred lane: recent source-posed finite graph conjectures with an exact counterexample or extremal construction as the deliverable  

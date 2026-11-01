@@ -16,7 +16,7 @@ The unrestricted conjecture is not proved or disproved here. This run closes no 
 The following completed source results are used exactly in their proved scopes.
 
 1. `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, source  
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,  
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,  
    `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`: for a two-dimensional invertible symmetric quadratic coefficient `K`, arbitrary affine term and independent cap-one original coordinates,
 
    `sup_t E |Y^T K Y + linear - t|^(-1/2) <= 128 |det K|^(-1/4)`.          (1.1)
@@ -26,7 +26,7 @@ The following completed source results are used exactly in their proved scopes.
    `128 (|d det P|)^(-1/4)`.                                              (1.2)
 
 2. The physical-pair logarithmic theorem, source  
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,  
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,  
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`: for an invertible indefinite original-coordinate pair `H`, its conditional density envelope can be optimized pointwise. In the zero-diagonal case
 
    `H=[[0,h],[h,0]]`, `h!=0`,
@@ -38,7 +38,7 @@ The following completed source results are used exactly in their proved scopes.
    The same source records that a definite physical pair has density at most `pi/sqrt(|det H|)` after arbitrary affine translation.
 
 3. The designated partner `fleet02/B13` r25 report, source  
-   `yspennstate/math-open-problems@04973c0d13c8cbe814f1303b7de8aeffd40791df`,  
+   `private-source-repository@04973c0d13c8cbe814f1303b7de8aeffd40791df`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T110032Z-fleet02-B13-extremal-r25/REPORT.md`. Its `QFORM-DIAGONAL-LEAF-AGGREGATE-v1` states that, for a two-hub cross bank `B=[b_j]`, `G=BB^T`, leverage numbers `ell_j=b_j^T G^{-1}b_j`, `h=max ell_j<1`, and arbitrary **diagonal** leaf twists,
 
    `||p_Q||inf <= 4/((2-q)sqrt(q)) det(G)^(-1/4)`                         (1.4)
@@ -53,7 +53,7 @@ The following completed source results are used exactly in their proved scopes.
    `sum_{r<s; r,s!=j} det(b_r,b_s)^2 = (1-ell_j)det(G)`.                  (1.6)
 
 4. The previous `fleet01/B13` extremal-product theorem, source  
-   `yspennstate/math-open-problems@4be4c9842b3828e8a862e58d7e6eec894a85317c`, proves the exact/no-loss reduction from arbitrary cap-one product laws to arbitrary measurable unit-measure product indicators for nonnegative kernels, with bounded finite-union indicators sufficient by approximation. There is no single-interval, centered-uniform, bounded-diameter, or fixed-fragment reduction.
+   `private-source-repository@4be4c9842b3828e8a862e58d7e6eec894a85317c`, proves the exact/no-loss reduction from arbitrary cap-one product laws to arbitrary measurable unit-measure product indicators for nonnegative kernels, with bounded finite-union indicators sufficient by approximation. There is no single-interval, centered-uniform, bounded-diameter, or fixed-fragment reduction.
 
 ## 2. Two elementary positive-kernel compilers
 

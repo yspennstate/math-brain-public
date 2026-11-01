@@ -14,14 +14,14 @@ attacking: the mixed-(3+2)-volume heavy-marginal residue by a weighted determina
 ## 1. Sources actually used at equations
 
 1. The reviewed fractional three-volume theorem and its one-sided original-coordinate Weyl/BL/Hausdorff--Young calculation:
-   `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+   `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
    `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 2. This slot's preceding equal-weight mixed theorem `QFORM-MIXED-3PLUS2-FOURIER-L1-v1`:
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T072525Z-fleet03-B02-qform-auto11-r23/REPORT.md`.
 3. The fresh complementary fleet02/B02 cross-disjoint theorem and its four-anchor failure certificate:
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/fleet02-B02-20260923T071011Z-3508bbe2/REPORT.md`.
 4. Designated partner fleet04/B02 theorem `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`:
-   `yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+   `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 5. The fresh fleet03/B07 r29 hub-core transducer at commit `0e842117ca7ec8472538faa120677507f16b5c17`, whose surviving double-anchor third-volume bank is an immediate intended receiver of the theorem below whenever residual `E2` remains.
 

@@ -19,7 +19,7 @@ Fresh `yspennstate/math-research-brain/main` was resolved before the run. Owner 
 
 Immediate same-slot source:
 
-`yspennstate/math-open-problems@5ec1cc2bf208bc0249ea89d86fd7298b62ac324e`
+`private-source-repository@5ec1cc2bf208bc0249ea89d86fd7298b62ac324e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T070220Z-fleet03-B19-QFORM-r52/REPORT.md`.
 
@@ -43,7 +43,7 @@ Those terms are not part of the exact skeleton receiver and are not discarded he
 
 The analytic source used below is Theorem H from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
@@ -215,7 +215,7 @@ The corrected completed partner theorem is
 
 from
 
-`yspennstate/math-open-problems@97c4f5328da327cae4249c40253e466603b2ba5c`.
+`private-source-repository@97c4f5328da327cae4249c40253e466603b2ba5c`.
 
 For a literal original-coordinate packet
 

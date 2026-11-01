@@ -29,7 +29,7 @@ Hence some cut has Z_2>=E_1(h)/(16a^2). Applying the row-marginal-free critical 
 <= 8 sqrt(2)(2e)^(1/4) [a^2 E_1(h)]^-1/8.
 The numerical constant is 17.2757179198. This pays the entire overlap-one aggregate whenever a shared physical diagonal pivot has scale, without selecting any individual 3x3 minor.
 
-The designated partner fleet02/B03 result at math-open-problems@38920ffa423ec07886112206314249deb7294dd4 is compatible with the heavy-row subbranch of the selected Schur cut: if its pair-volume row marginal alpha_i>1/2 and the projected one-volume marginals are diffuse, then its k=1,ell=1 critical crossing plus the same physical square gives
+The designated partner fleet02/B03 result at private-source@38920ffa423ec07886112206314249deb7294dd4 is compatible with the heavy-row subbranch of the selected Schur cut: if its pair-volume row marginal alpha_i>1/2 and the projected one-volume marginals are diffuse, then its k=1,ell=1 critical crossing plus the same physical square gives
 ||p_Q||_infty <=8|a|^-1/2(alpha_i Z_2)^-1/8,
 which after Z_2>=E_1(h)/(16a^2) is strictly below
 8*2^(5/8)[a^2E_1(h)]^-1/8=12.3376866033[a^2E_1(h)]^-1/8.

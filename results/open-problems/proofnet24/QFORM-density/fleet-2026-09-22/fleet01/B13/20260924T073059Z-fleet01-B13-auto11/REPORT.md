@@ -13,7 +13,7 @@ No rotation of the independent variables is used. No pointwise law-uniform quadr
 
 The completed designated-partner input actually used is fleet02/B13 r11:
 
-- `yspennstate/math-open-problems@c8bbb166c448ccd194451b47524b13d5de3eaed5`,
+- `private-source-repository@c8bbb166c448ccd194451b47524b13d5de3eaed5`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260924T065522Z-fleet02-B13-qform-r11/REPORT.md`.
 
 Its theorem `QFORM-TRANSLATION-INVARIANT-DIAMETER-ESCAPE-v1` pays a decomposition `A=M+F` whenever every affine `M`-form has a uniform density cap `C_M`, and shows that coefficient-small `F` cannot be activated merely by translating compact product factors. The same report records, in the current rank-one plus four-diagonal survivor,
@@ -32,7 +32,7 @@ with `E_sep` diagonal off the named center set and `E_ent=lambda_2 ww^T` a retai
 
 The existing nonattained bathtub supremum theorem used below is source-pinned at
 
-- `yspennstate/math-open-problems@df6d00a11422f16763e8bccccc6bada6e4949a83`,
+- `private-source-repository@df6d00a11422f16763e8bccccc6bada6e4949a83`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T121154Z-fleet04-B13-nonattained-bathtub-r1/REPORT.md`.
 
 It proves equality of the one-coordinate fractional and indicator suprema without assuming threshold attainment.
@@ -244,7 +244,7 @@ then the second branch becomes
  >= rho ell/8`.                                                 (3.13)
 
 The stronger fleet02/B13 lower-bound bootstrap is source-pinned at
-`yspennstate/math-open-problems@21a48883fa1152dac179f3f6ebe1725785793520`.
+`private-source-repository@21a48883fa1152dac179f3f6ebe1725785793520`.
 If its `|lambda_2|=O(rho^(-7/3))` estimate is invoked in the same chamber, the exponent in (3.13) improves from `13/6` to `10/3`.
 
 Equations (3.9)-(3.13) are strictly stronger product-geometric currency than the support-width alternative in the partner handoff: the rough bank must be large on a positive amount of the **slab itself**, not merely somewhere in the support.

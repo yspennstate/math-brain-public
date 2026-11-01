@@ -14,12 +14,12 @@ All coordinates that are conditioned or singled out below are literal ORIGINAL p
 ## 1. Fresh source graph actually used
 
 1. **Same-constant principal-minimal descent**, fleet03/B19 r43:
-   `yspennstate/math-open-problems@ef38106705da5fab5a2fb6dbdd64745206580f62`,
+   `private-source-repository@ef38106705da5fab5a2fb6dbdd64745206580f62`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T220120Z-fleet03-B19-QFORM-r43/REPORT.md`.
    It reduces the affine interval theorem, without constant loss, to ORIGINAL-coordinate principal-minimal matrices. Hence every proper physical principal block of an irreducible target has at most two eigenvalues of modulus at least one. A principal-minimal full matrix has exactly three target-large eigenvalues, or four with mixed signs.
 
 2. **Full-cut E2 to finite carrier**, fleet01/B02 r43, available at immutable source
-   `yspennstate/math-open-problems@f423fb15e023ae33ee864e6d2468da782c8afd99`,
+   `private-source-repository@f423fb15e023ae33ee864e6d2468da782c8afd99`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260924T022016Z-fleet01-B02-qform-auto11-r43/REPORT.md`.
    Apart from its paid physical-E3 / coordinate-core branches and the already-tracked giant near-rank-one branch, it produces the exact ORIGINAL-coordinate decomposition
    \[
@@ -36,12 +36,12 @@ All coordinates that are conditioned or singled out below are literal ORIGINAL p
    The tail `E_0` is retained exactly.
 
 3. **Active localized peeling**, fleet02/B20, source containing the completed report
-   `yspennstate/math-open-problems@f423fb15e023ae33ee864e6d2468da782c8afd99`,
+   `private-source-repository@f423fb15e023ae33ee864e6d2468da782c8afd99`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260924T022856Z-fleet02-B20-QFORM-auto11/REPORT.md`.
    Starting from (1.1), it either pays a physical-E3 branch by `||p_Q||_infinity<479.633` with continuous `C_0` density, or after orthogonal low-action peels finds a localized carrier vector with action at least `1/64`. Its published endpoint moves the peeled increments into a larger retained tail. Section 2 below shows that this enlargement is unnecessary for the localization certificate.
 
 4. **Designated partner fleet02/B19 — threshold-normalized carrier**, source pin
-   `yspennstate/math-open-problems@da594097550f0b88ea54c6989b252ae347a2d2f3`,
+   `private-source-repository@da594097550f0b88ea54c6989b252ae347a2d2f3`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T234926Z-fleet02-B19-QFORM-auto11b/REPORT.md`.
    For a physical block decomposition
    \[
@@ -55,7 +55,7 @@ All coordinates that are conditioned or singled out below are literal ORIGINAL p
    where `P_<` is the spectral projection of `sigma D` onto `(-infinity,1)`. Exact threshold eigenvalues, repeated eigenvalues, both signs and singular blocks are included. This is coefficient geometry only.
 
 5. **Newest designated-partner update**, fleet02/B19 r11,
-   `yspennstate/math-open-problems@4ad9d206dba1b22fd917280717c24f4e1dd6ea09`,
+   `private-source-repository@4ad9d206dba1b22fd917280717c24f4e1dd6ea09`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260924T021245Z-fleet02-B19-QFORM-r11/REPORT.md`.
    It introduces no correction to (1.3). It sharpens the parallel two-star branch: after its physical-E3/D5 exits, the bilateral transverse rank-one defects satisfy
    \[

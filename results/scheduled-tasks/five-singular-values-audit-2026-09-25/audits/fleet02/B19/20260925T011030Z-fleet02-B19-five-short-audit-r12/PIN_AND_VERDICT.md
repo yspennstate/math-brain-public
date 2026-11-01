@@ -2,7 +2,7 @@
 
 Objective: QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925. Account fleet02, slot B19. Audit only.
 
-Pinned source: yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c.
+Pinned source: private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c.
 
 short.tex: blob c4f2a997cf336ee974e15409b5bccdd8cca039d8; 58,136 bytes; 676 lines; SHA-256 independently recomputed from exact bytes as f4a4f4c6db7f0ad4feffbe04041af3cf1a759fb4cb51f4979b6fd884eba26037.
 

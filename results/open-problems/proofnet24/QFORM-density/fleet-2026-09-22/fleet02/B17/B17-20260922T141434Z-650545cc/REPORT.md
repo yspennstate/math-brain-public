@@ -11,7 +11,7 @@ The full target remains open: for every dimension, every product law with indepe
 
 This run uses none of the refuted pointwise-Fresnel, fiber-supremum, conditional-density-cap, single-minor, single-Schur, local-cross-rank3, absolute phase-Wiener, or bounded-diameter-localization mechanisms. Product aggregation is kept until the actual three-bank quadratic output is formed.
 
-A fresh partner result arrived during this run. `fleet03/B17`, canonical report `yspennstate/math-open-problems@3d0926c161ba4cbea4016bff63d89e34f87cb0e6`, independently closed the noncentral Gaussian branch by Poisson-mixture contraction, using the preceding `fleet02/B17` centered-Gaussian theorem. I therefore make no novelty claim for that noncentral closure. I apply it below and change the witness mechanism to the partner's next suggested stress: unequal/mixed first-order perturbations of the exact diffuse Boolean-free product source.
+A fresh partner result arrived during this run. `fleet03/B17`, canonical report `private-source-repository@3d0926c161ba4cbea4016bff63d89e34f87cb0e6`, independently closed the noncentral Gaussian branch by Poisson-mixture contraction, using the preceding `fleet02/B17` centered-Gaussian theorem. I therefore make no novelty claim for that noncentral closure. I apply it below and change the witness mechanism to the partner's next suggested stress: unequal/mixed first-order perturbations of the exact diffuse Boolean-free product source.
 
 ## 2. Exact source-valid stress family
 

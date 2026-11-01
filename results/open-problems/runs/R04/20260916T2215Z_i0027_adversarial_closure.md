@@ -5,7 +5,7 @@ Problem/source: **David Aldous and James Fill, *Reversible Markov Chains and Ran
 # R04 immutable run report — adversarial verification of the I0027 closure route
 
 Run ID: `20260916T2215Z_i0027_adversarial_closure`  
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Continuity / repository recovery
 

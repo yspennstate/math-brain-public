@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 maximum
 
 # PROB10-08 — pre-entropic long-range growth suffices for cutoff
 
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 Status: **PARTIAL / SOURCE OPEN / NEW REPOSITORY THEOREM / NOT INDEPENDENTLY AUDITED / WORLDWIDE NOVELTY UNVERIFIED**.
 

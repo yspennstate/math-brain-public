@@ -4,7 +4,7 @@ Source control objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 Execution label: `WITHOUT_VERIFIED_BRAIN`.  
 Verdict: **PASS as one genuinely separate end-to-end mathematical review.** A second separate full review is still required before independent-validation status.
 
-The reviewed candidate is the later multiplicity-eight assembly at `yspennstate/math-open-problems@42decd5b0bac31666cbbc613bcd2d64194775063`, independently reassembled at `50a479407cc45f4fbcc87e70ac1846c049138c9f`. The complete latest nine-eigenvalue source used underneath is `eeb752c8943536541b34b42b8bf48e924f4d3d2f`, path `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`, blob `19fb119877426b640b2c0dae19ec2f78a399fe11`, SHA-256 `bf1caf6ae4b4bc33992f501c169b5dc6c795db757b0f6089eff9991391effdf3`.
+The reviewed candidate is the later multiplicity-eight assembly at `private-source-repository@42decd5b0bac31666cbbc613bcd2d64194775063`, independently reassembled at `50a479407cc45f4fbcc87e70ac1846c049138c9f`. The complete latest nine-eigenvalue source used underneath is `eeb752c8943536541b34b42b8bf48e924f4d3d2f`, path `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`, blob `19fb119877426b640b2c0dae19ec2f78a399fe11`, SHA-256 `bf1caf6ae4b4bc33992f501c169b5dc6c795db757b0f6089eff9991391effdf3`.
 
 ## Reviewed theorem
 

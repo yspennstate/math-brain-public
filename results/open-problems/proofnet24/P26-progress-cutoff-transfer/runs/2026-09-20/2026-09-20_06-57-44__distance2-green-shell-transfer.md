@@ -4,7 +4,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6/m
 
 **Status:** `CANDIDATE_FULL` for the restricted Green/shell transfer theorem and the exact-distance-two application proved below, pending later independent review; **PARTIAL / OPEN** for Salez Problem 2.3. Worldwide publication novelty is **UNVERIFIED**.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.  
+Repository/branch: `private-source-repository` / `master`.  
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.  
 Report root: `proofnet24/P26-progress-cutoff-transfer/runs/2026-09-20/`.
 

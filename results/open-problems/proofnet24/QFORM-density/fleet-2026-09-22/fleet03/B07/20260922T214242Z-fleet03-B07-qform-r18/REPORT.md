@@ -17,7 +17,7 @@ This report uses no Gaussian, moment, support, log-concavity, iid, diagonal-basi
 
 The designated `fleet04/B07` current-QFORM canonical location was still absent at the fresh check, so no partner theorem is fabricated. The completed compatible same-assignment result actually consumed is fleet01/B07:
 
-`yspennstate/math-open-problems@f82fe367b06909082f94eda2b98f4a2fd2a5bb7c`
+`private-source-repository@f82fe367b06909082f94eda2b98f4a2fd2a5bb7c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260922T210652Z-r11/REPORT.md`.
 
@@ -41,7 +41,7 @@ The immediate unpaid implication was to turn this anchored aggregate packet into
 
 The analytic endpoint used below is fleet03/B03:
 
-`yspennstate/math-open-problems@924b3c4c70f86a64402863fe228f641bf3db60b2`
+`private-source-repository@924b3c4c70f86a64402863fe228f641bf3db60b2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T175531Z-fleet03-B03-QFORM-r17/REPORT.md`.
 

@@ -17,7 +17,7 @@ Fresh `math-research-brain/main` control was read at the start and again immedia
 
 The immediate predecessor for this slot is:
 
-- `yspennstate/math-open-problems@375b36740eb56e2f22aa3c0e87e0cd9d10f9eaab`
+- `private-source-repository@375b36740eb56e2f22aa3c0e87e0cd9d10f9eaab`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260924T004226Z-fleet01-B11-QFORM-auto11/REPORT.md`.
 
 It established the **bilateral-leakage** identity in the rank-one transverse branch: if both off-axis leakage vectors are nonzero then the physical pivot vanishes and the original `L x R` crossing has three-dimensional singular volume
@@ -25,7 +25,7 @@ It established the **bilateral-leakage** identity in the rank-one transverse bra
 
 The completed designated-partner theorem used below is fleet02/B11:
 
-- `yspennstate/math-open-problems@25c25e15fa0f570e7b0b1a2a9fab0811eda07113`
+- `private-source-repository@25c25e15fa0f570e7b0b1a2a9fab0811eda07113`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T201026Z-fleet02-B11-QFORM-auto11/REPORT.md`,
 - theorem `QFORM-3D-PROJECTION-CROSS-L2-v1`.
 

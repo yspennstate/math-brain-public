@@ -21,7 +21,7 @@ No counterexample to that theorem is produced here.
 
 The regularity side, however, can now be put at its exact matrix-rank threshold. The completed fixed-matrix theorem at
 
-`yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`,
+`private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`
 
@@ -55,7 +55,7 @@ for every collection of independent one-dimensional cap-one densities. Its proof
 
 The Livshyts--Paouris--Pivovarov marginal theorem was source-pinned in
 
-`yspennstate/math-open-problems@8e91df7441e0ad60997f82c12278b0c669d44344`,
+`private-source-repository@8e91df7441e0ad60997f82c12278b0c669d44344`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260923T015618Z-qform-B18-a01-r21/REPORT.md`.
 
@@ -72,7 +72,7 @@ No independence of the two projected coordinates is asserted.
 
 The completed partner report
 
-`yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`,
+`private-source-repository@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T221909Z-fleet04-B15-ruled-trace-c0-r8/REPORT.md`
 

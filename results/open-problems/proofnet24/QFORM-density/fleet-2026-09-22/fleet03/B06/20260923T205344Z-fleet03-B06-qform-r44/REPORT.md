@@ -16,7 +16,7 @@ The unrestricted owner target remains OPEN. Nothing below assumes Gaussianity, l
 
 The immediate B06 predecessor is
 
-`yspennstate/math-open-problems@461dac093ac693e6d38911e828fd96557ed56fd2`
+`private-source-repository@461dac093ac693e6d38911e828fd96557ed56fd2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T202712Z-fleet03-B06-qform-r43/REPORT.md`.
 
@@ -24,7 +24,7 @@ It proved the exact rank-one hub innovation theorem and showed by an explicit tw
 
 The one-dimensional original-product marginal theorem used below is source-pinned in fleet01/B18 r21:
 
-`yspennstate/math-open-problems@406753a39f5fbaf78396b31075f36ae5682ef3ad`
+`private-source-repository@406753a39f5fbaf78396b31075f36ae5682ef3ad`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260923T015618Z-qform-B18-a01-r21/REPORT.md`.
 
@@ -34,7 +34,7 @@ For any nonzero coefficient vector `gamma` and independent cap-one original coor
 
 The completed designated-partner theorem actually applied in Section 6 is fleet04/B06 r1:
 
-`yspennstate/math-open-problems@f24c8db8946d54f4da2d11898697913af766ad32`
+`private-source-repository@f24c8db8946d54f4da2d11898697913af766ad32`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260923T184145Z-fleet04-B06-QFORM-r1/REPORT.md`.
 

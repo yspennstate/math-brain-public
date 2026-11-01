@@ -247,7 +247,7 @@ This does not take a supremum over a near-coloop conditional slice. That distinc
 
 The completed fleet02/B11 run `20260923T014922Z-fleet02-B11-QFORM-r19` is pinned at
 
-`yspennstate/math-open-problems@184d15a9de851240ee31f0b62668577956c557bd`,
+`private-source-repository@184d15a9de851240ee31f0b62668577956c557bd`,
 
 path
 

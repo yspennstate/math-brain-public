@@ -17,14 +17,14 @@ The owner target remains the unrestricted statement: independent real original c
 
 The completed mathematical inputs actually used are:
 
-1. **Preceding same-slot r38 mixed-volume compiler**, `yspennstate/math-open-problems@892c21d69f78bcf2fdc089addc1695bcf5b67aad`,
+1. **Preceding same-slot r38 mixed-volume compiler**, `private-source-repository@892c21d69f78bcf2fdc089addc1695bcf5b67aad`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260924T012049Z-fleet03-B16-QFORM-r38/REPORT.md`.
    It proves that in the slope-dominant balanced near-coloop packet the normalized pure-bank three-volume can vanish while the two mixed orientations each carry order-one volume; its sharp innovation-free frame has mixed masses exactly `1/2,1/2`.
-2. **Designated partner fleet04/B16**, `yspennstate/math-open-problems@c1bf7fd07ac10b105686d96c96344a1a2274f5d9`,
+2. **Designated partner fleet04/B16**, `private-source-repository@c1bf7fd07ac10b105686d96c96344a1a2274f5d9`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260924T021703Z-fleet04-B16-QFORM-r3/REPORT.md`.
    Its theorem `QFORM-FRESH-OR-TRANSVERSE-PAIRCAP-DICHOTOMY-v1` gives, in the shared-bank transverse branch,
    `||p_Q||_infinity <= 12 [G |gamma^2 kappa|]^(-1/3)` under its stated two-frame leverage gate.
-3. **Phase-weighted punctured two-bank receiver**, fleet02/B16 at `yspennstate/math-open-problems@c9c865f02890e5fe7108c49759ee82b84f42ee38`, whose proof uses the absolute frequency kernel
+3. **Phase-weighted punctured two-bank receiver**, fleet02/B16 at `private-source-repository@c9c865f02890e5fe7108c49759ee82b84f42ee38`, whose proof uses the absolute frequency kernel
    `S_t(zeta)=integral_R2 |Phi_A(xi,nu,zeta) Phi_B(xi,nu,zeta)| dxi dnu`.
    It is valid when each source bank has the required two- and three-dimensional projection energies; the sharp r38 survivor violates the individual three-dimensional bank hypothesis.
 

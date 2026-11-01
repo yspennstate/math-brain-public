@@ -47,7 +47,7 @@ is a mixture of translations of the original density of `Z_j`; consequently its 
 
 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`,
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 
 therefore applies literally at every outer layer and gives the recurrence
 

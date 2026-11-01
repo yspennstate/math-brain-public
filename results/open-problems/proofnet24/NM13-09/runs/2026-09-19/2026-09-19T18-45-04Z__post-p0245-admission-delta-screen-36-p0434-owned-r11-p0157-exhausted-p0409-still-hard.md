@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-09 — admission delta screen 36: P0434 is an excellent stochastic CLOSABLE target but already owned and residue 11; released P0157 is exhausted HARD; P0409 remains HARD-shaped
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-09` / `proofnet24/NM13-09/`  
 Category gate: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed stochastic-process existence/counterexample questions admitting an explicit process construction, exact transition law, finite witness, or complete short special-class theorem  

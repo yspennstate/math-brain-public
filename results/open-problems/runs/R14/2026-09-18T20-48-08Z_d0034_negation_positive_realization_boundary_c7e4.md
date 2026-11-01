@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R14 HARD OUTSIDE — D0034 negation test, positive-realization obstruction, and critical boundary
 
 Date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **D0034 PARTIAL / source OPEN / active exclusive R14 claim.** The negative-margin spherical perceptron, H0017, D0036, and D0039 remain handed off and are not reopened.
 

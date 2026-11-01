@@ -5,7 +5,7 @@ Run: `20260923T162243Z-fleet02-B03-QFORM-auto11`
 Assignment: Decoupled time integral.  
 Status at checkpoint: new supporting calculation proved; full target open.
 
-Fresh control includes owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`; the full conjecture remains open. The newest completed projected-crossing theorem at `math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a` and newest designated-partner fleet03/B03 r36 are being consumed at their exact gates. No independence after a spectral rotation and no conditional density supremum are used.
+Fresh control includes owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`; the full conjecture remains open. The newest completed projected-crossing theorem at `private-source@4f92aeb74083c6f95cb314a11fed1b812eacef9a` and newest designated-partner fleet03/B03 r36 are being consumed at their exact gates. No independence after a spectral rotation and no conditional density supremum are used.
 
 ## New weak-kernel calculation
 

@@ -14,8 +14,8 @@ Fresh control was read from `yspennstate/math-research-brain`; immediately befor
 
 The named partner result directly audited and applied is fleet03/B03:
 
-- latest collision-hierarchy report: `yspennstate/math-open-problems@719c114f8dad72a6780b194cbea124cfa4cf6d44`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T123410Z-fleet03-B03-QFORM-r11b/REPORT.md`, blob `4d1e570b1cc016640845be8a943aeafc69c2cff5`;
-- earlier source-valid square-crosspacket theorem: `yspennstate/math-open-problems@32ac33a81e5b3b17a0016463f67e544adc474280`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T121240Z-fleet03-B03-QFORM-r11/REPORT.md`, blob `928a26acebf976b0c2e024fc702ab2fc5a4b9499`.
+- latest collision-hierarchy report: `private-source-repository@719c114f8dad72a6780b194cbea124cfa4cf6d44`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T123410Z-fleet03-B03-QFORM-r11b/REPORT.md`, blob `4d1e570b1cc016640845be8a943aeafc69c2cff5`;
+- earlier source-valid square-crosspacket theorem: `private-source-repository@32ac33a81e5b3b17a0016463f67e544adc474280`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T121240Z-fleet03-B03-QFORM-r11/REPORT.md`, blob `928a26acebf976b0c2e024fc702ab2fc5a4b9499`.
 
 The preceding fleet02/B03 overlap-collapse report, used below without rederivation, is `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T121352Z-b03-qform-auto11/REPORT.md`, blob `8963fbba2dfcba902a64e1659d5174a3de0643bf` on an accessible source commit `e06922bfa31bbd225cdce6ee6aea563254e62563`.
 

@@ -6,7 +6,7 @@ Role lens: geometric Brascamp--Lieb heat flow, derivative signs, integration by 
 
 ## Source pin
 
-- Repository: `yspennstate/math-open-problems`
+- Repository: `private-source-repository`
 - Branch read: `master`
 - Manuscript path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`
 - Latest commit touching the manuscript: `7c0d6e60946b19423e6400a12d34b473cf0591e2`

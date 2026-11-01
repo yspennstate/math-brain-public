@@ -16,7 +16,7 @@ No Gaussian, moment, support, iid, log-concavity, diagonal-basis, post-rotation-
 
 Immediate predecessor:
 
-`yspennstate/math-open-problems@b028ca514bbb6d42baf6b544d787b55fcac0c24b`
+`private-source-repository@b028ca514bbb6d42baf6b544d787b55fcac0c24b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260924T013915Z-fleet03-B07-qform-r43/REPORT.md`.
 
@@ -34,7 +34,7 @@ Two pinned supporting results are used exactly in scope.
 
 1. **Rank-two tail from the second/third compounds**, fleet02/B07:
 
-`yspennstate/math-open-problems@81d6956476fa400f61d266effb4123a42fe3185c`
+`private-source-repository@81d6956476fa400f61d266effb4123a42fe3185c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260924T003945Z-fleet02-B07-qform-auto11/REPORT.md`.
 
@@ -44,7 +44,7 @@ If `tau_2(K)=dist_F(K,rank<=2)^2`, then
 
 2. **Marginal-free physical third-volume receiver**, fleet02/B03:
 
-`yspennstate/math-open-problems@df738b7f0821d9af56dfd992cab10ecc6704e3fb`
+`private-source-repository@df738b7f0821d9af56dfd992cab10ecc6704e3fb`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T184716Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 
@@ -300,7 +300,7 @@ Thus a putative unbounded-density sequence cannot remain merely a fixed-distance
 
 The designated completed partner is
 
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 

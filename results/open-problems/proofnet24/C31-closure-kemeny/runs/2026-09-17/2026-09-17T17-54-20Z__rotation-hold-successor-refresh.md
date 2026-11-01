@@ -3,7 +3,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; this was not
 # C31 CLOSABLE OUTSIDE — rotation-hold successor refresh
 
 Date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Own root: `proofnet24/C31-closure-kemeny`.
 
 This is an admission/continuity run after the mandatory six-run handoff. It does **not** reopen the retired C31 I0035 research sequence and does not manufacture a seventh unchanged run. No new C31 theorem claim, finite checker, or successor claim file is created.

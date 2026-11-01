@@ -24,13 +24,13 @@ Fresh owner control remained revision `2026-09-22.15`, programme `QFORM-DENSITY-
 
 The required historical source was reread at the exact owner-pinned commit
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The counterexample search still contains no valid counterexample to the full target. I use its completed Theorem H at an actual source-coordinate star in Section 6.
 
 The newest completed designated fleet03/B09 work available at the final source refresh is r39, canonical report
 
-`yspennstate/math-open-problems@4b076c614a1e1b826433acf811adcffc29e8f05d`
+`private-source-repository@4b076c614a1e1b826433acf811adcffc29e8f05d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T184804Z-fleet03-B09-QFORM-r39/REPORT.md`,
 

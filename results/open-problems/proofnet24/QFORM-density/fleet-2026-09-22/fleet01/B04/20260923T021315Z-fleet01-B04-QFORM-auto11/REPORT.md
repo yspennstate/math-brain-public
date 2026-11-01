@@ -13,7 +13,7 @@ The full conjecture is NOT proved here, and full-target continuity is NOT proved
 
 For an original-coordinate cut `I sqcup J`, write `M=A[I,J]`. The sharp three-volume Fourier theorem from
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
 
 states that, with `Z=e_3(M^T M)>0`, if the canonical third-volume row marginals obey `alpha_i<=q/2`, `1<=q<3/2`, then
@@ -287,7 +287,7 @@ I now consume the completed OTHER-account theorem from fleet02/B04:
 
 `QFORM-RANKR-TWOSIDED-CONTAMINATION-FOURIER-v1`,
 
-`yspennstate/math-open-problems@8f8913581643a7e7bcbe7d8c178a2255194dfc3d`,
+`private-source-repository@8f8913581643a7e7bcbe7d8c178a2255194dfc3d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260922T233213Z-fleet02-B04-QFORM-r22/REPORT.md`.
 
 For an exact-rank `r>=3` original-coordinate cross block with nonzero singular values `sigma_1,...,sigma_r`, it retains arbitrary measurable self-contamination on both product banks and gives

@@ -3,8 +3,8 @@
 A later completed designated-partner handoff appeared during this run and supersedes r32 as the current global proof-graph position:
 
 - fleet03/B20 run `20260923T141124Z-fleet03-B20-QFORM-auto11`;
-- canonical report `yspennstate/math-open-problems@118afc3cd9eefcd8ee8282993e78e0e3a841e17a`;
-- publication-refresh addendum `yspennstate/math-open-problems@1194a70fc1a8194b940e6ee1b1ad6193fe5e14ad`.
+- canonical report `private-source-repository@118afc3cd9eefcd8ee8282993e78e0e3a841e17a`;
+- publication-refresh addendum `private-source-repository@1194a70fc1a8194b940e6ee1b1ad6193fe5e14ad`.
 
 Its fresh global input is fleet04/B20 r10. In `N3(1/64)` it produces a literal original-coordinate cross cut `N=A[J,K]` with
 

@@ -115,7 +115,7 @@ Then at every physical coordinate in the selected-three diffuse regime,
 
 Use the completed partner source
 
-`yspennstate/math-open-problems@41ee49f6e9c3383e4c3a322bdc52779768a17eb7`
+`private-source-repository@41ee49f6e9c3383e4c3a322bdc52779768a17eb7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T130941Z-fleet02-B08-qform-diffuse-r27/REPORT.md`.
 
@@ -152,7 +152,7 @@ Let `C=A[-i,-i]` in (A.18), and let
 
 Apply the completed one-scale spectral-window theorem at
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 inside the child coordinates. Its general ridge criterion is ambient and allows arbitrary outside coordinates/couplings, so the original coordinate `i` and its star are retained rather than probabilistically deleted.
 

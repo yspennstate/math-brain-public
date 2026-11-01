@@ -79,7 +79,7 @@ At `m=1024`, the maximum possible currency is at most `0.0001371280095554539`, a
 
 ## Pinned mixed-hub theorem pays the same law before pivot selection
 
-Apply Theorem H from `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` with literal hub `H={U}`, leaf bank `I={Y_i}`, two Fresnel directions `w1,w2`, coefficients `1,2`, and `D=0`. The physical mixed rows are
+Apply Theorem H from `private-source@e5f71d79eff325201dd0274053d20268ce65b837` with literal hub `H={U}`, leaf bank `I={Y_i}`, two Fresnel directions `w1,w2`, coefficients `1,2`, and `D=0`. The physical mixed rows are
 
 `rho_i=(w1_i,w2_i,c_i)`.
 

@@ -1,6 +1,6 @@
 # Current-state addendum — splice with the already-completed same-hour B20 compiler
 
-This addendum supersedes only the proof-graph ordering in `REPORT.md`; all mathematics proved there remains valid. The same-hour canonical B20 run `20260923T150220Z-fleet02-B20-QFORM-auto11` had already completed before this invocation and is newer than the previously consumed local state. Its canonical report is `yspennstate/math-open-problems@f4e997fa4f98146cfe958ca34a1c397b413d5184`. It proves source-coordinate rank-one-tube self-replication at the fixed energy floor
+This addendum supersedes only the proof-graph ordering in `REPORT.md`; all mathematics proved there remains valid. The same-hour canonical B20 run `20260923T150220Z-fleet02-B20-QFORM-auto11` had already completed before this invocation and is newer than the previously consumed local state. Its canonical report is `private-source-repository@f4e997fa4f98146cfe958ca34a1c397b413d5184`. It proves source-coordinate rank-one-tube self-replication at the fixed energy floor
 
 `E_infty = 1919/4160`,
 

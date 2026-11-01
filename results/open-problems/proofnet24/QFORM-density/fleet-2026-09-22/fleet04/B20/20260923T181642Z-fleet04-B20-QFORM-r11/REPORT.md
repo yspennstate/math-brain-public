@@ -11,7 +11,7 @@ Status: ESSENTIAL_STEP_APPLIED / SUPPORTING STRUCTURAL THEOREM PROVED / FULL QFO
 
 The target remains independent real original coordinates with probability densities at most one, arbitrary dimension, and a real symmetric matrix having at least three singular values at least one. No moment, support, iid, sign, exact-rank, or post-rotation independence assumption is added.
 
-The completed fleet01/B20 result actually used in the proof graph is math-open-problems commit f63decefb7148fe0640c66d014a49a4ef1f5621e. For every literal original-coordinate cross block M, with Z5 = e5(M^T M), it gives
+The completed fleet01/B20 result actually used in the proof graph is private-source commit f63decefb7148fe0640c66d014a49a4ef1f5621e. For every literal original-coordinate cross block M, with Z5 = e5(M^T M), it gives
 
     ||p_Q||_infinity <= 5 sqrt(2e) Z5^(-1/10).                 (1.1)
 

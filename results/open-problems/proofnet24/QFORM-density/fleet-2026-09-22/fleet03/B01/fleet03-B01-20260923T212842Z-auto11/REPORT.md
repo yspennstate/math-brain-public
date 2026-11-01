@@ -22,7 +22,7 @@ The phase-aligned fragmented-support obstruction is preserved in Section 8.
 ### 2.1 Designated partner fleet04/B01 — exact overlap-two identity
 
 Source:
-`yspennstate/math-open-problems@8410ab9d8238baa40c033f83dbae6af44b0b2582`,
+`private-source-repository@8410ab9d8238baa40c033f83dbae6af44b0b2582`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260923T131003Z-fleet04-B01-singular-star-routing-r2/REPORT.md`.
 
 For a literal physical pair `(X,Y)` with
@@ -53,7 +53,7 @@ Only this exact identity is used below.
 ### 2.2 Determinant-free W2 quarter-Riesz receiver
 
 Previous fleet03/B01 source:
-`yspennstate/math-open-problems@26f7f13da915bad3b848ea49a91320c01c81cb1c`,
+`private-source-repository@26f7f13da915bad3b848ea49a91320c01c81cb1c`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T203127Z-auto11/REPORT.md`.
 
 For `a!=0`, `delta!=0`, `W2>0`,
@@ -69,7 +69,7 @@ This bound is determinant-free after the exact cancellation in (2.1).
 ### 2.3 Rank-two affine half-Riesz receiver
 
 Source:
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 For a literal two-coordinate quadratic block with determinant `Delta!=0`, arbitrary affine terms, and independent cap-one coordinates,
@@ -81,7 +81,7 @@ The theorem is orientation-free in its proved scope and does not rotate the inpu
 ### 2.4 Fifth-volume and grouped-rank-three cross receivers
 
 Applied through the source-pinned fleet04/B20 compiler
-`yspennstate/math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912`,
+`private-source-repository@c6f29397b3d45a7cf7ab67633a5451767b478912`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`.
 
 For an original-coordinate cross block `N` of a quadratic form on independent cap-one variables, with
@@ -101,7 +101,7 @@ Both retain arbitrary same-bank curvature and affine terms in the cited scope.
 ### 2.5 Designated partner fleet04/B01 — signed Fejer equivalence
 
 Source:
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 
 For a probability law `mu`,

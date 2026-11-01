@@ -8,7 +8,7 @@ Execution/memory status: **WITHOUT_VERIFIED_BRAIN**.
 
 Pinned baseline source:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - baseline commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`
 - path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`
 - source blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`

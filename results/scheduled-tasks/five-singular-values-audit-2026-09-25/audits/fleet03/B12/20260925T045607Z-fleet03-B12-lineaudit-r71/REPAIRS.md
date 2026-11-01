@@ -1,6 +1,6 @@
 # fleet03/B12 r71 repair ledger
 
-Source: yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short/short.tex and short/short.pdf only.
+Source: private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short/short.tex and short/short.pdf only.
 
 ## Candidate B12-C08 - Lemma 5.1 critical-value density version
 

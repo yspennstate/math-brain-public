@@ -19,7 +19,7 @@ After that repair, the first genuinely unpaid exact-rank-three geometric implica
 
 ## 2. Source inputs actually used
 
-1. Required newest-Claude source at `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`. Its Theorem C gives the ruled one-sheet parametrisation and the product-projection line-X-ray cap 2. The same source states that the two-sheet/convex side is the unresolved geometric side.
+1. Required newest-Claude source at `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`. Its Theorem C gives the ruled one-sheet parametrisation and the product-projection line-X-ray cap 2. The same source states that the two-sheet/convex side is the unresolved geometric side.
 
 2. The same pinned package, `RESULTS.md` / `FOURIER_ROUTE_REPORT.md`, proves Theorem F: for an exact rank-three spectral frame with every row leverage <=1/2, all signatures are paid with density <=12. I apply this below to remove the entire diffuse curved-trace class from the two-sheet obligation.
 

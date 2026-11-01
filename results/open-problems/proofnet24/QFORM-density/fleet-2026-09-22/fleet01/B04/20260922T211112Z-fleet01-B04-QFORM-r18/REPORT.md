@@ -23,7 +23,7 @@ This run first checked the apparent scalar-square plus rank-two-cross route and 
 
 Source pinned at
 
-`yspennstate/math-open-problems@287235f6ed9d0e0b876f0301f10a7b636db87ec1`
+`private-source-repository@287235f6ed9d0e0b876f0301f10a7b636db87ec1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T172625Z-fleet02-B13-productset-r13/REPORT.md`.
 
@@ -50,7 +50,7 @@ The function `Psi` is even and decreasing on `(0,infinity)`. The estimate is uni
 
 Latest completed designated-partner source used here:
 
-`yspennstate/math-open-problems@6155d85896070c87f6523a30646c38ac10be43a9`
+`private-source-repository@6155d85896070c87f6523a30646c38ac10be43a9`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260922T201618Z-fleet02-B04-qform-r13/REPORT.md`.
 

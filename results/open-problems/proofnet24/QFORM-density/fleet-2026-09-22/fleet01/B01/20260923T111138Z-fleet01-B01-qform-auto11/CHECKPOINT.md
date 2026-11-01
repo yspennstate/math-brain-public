@@ -11,7 +11,7 @@ Q_w(U,Z,Y)=q_w(U)+2 U^T K Y + a Z^2 + ell_w(U) Z + G_w(Y),
 
 where U=(X_p1,X_p2), Y=X_J, a!=0, rank(K)=2, and there are no Z-J quadratic couplings. The blocks P-P, J-J, P-Z, all W couplings, and all induced affine terms are otherwise arbitrary. Put Delta=sigma_1(K)sigma_2(K).
 
-Designated partner input: fleet02/B01 at math-open-problems commit 8a1e6a8429cc6895c7f06c885bd372a29bb341e0 proves uniformly in the linear term
+Designated partner input: fleet02/B01 at private-source commit 8a1e6a8429cc6895c7f06c885bd372a29bb341e0 proves uniformly in the linear term
 
   integral_R |E exp(it[a Z^2 + ell Z])|^4 dt <= 27 pi/(2|a|).
 

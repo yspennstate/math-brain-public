@@ -2,7 +2,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is n
 
 # HARD7-04 bounded research iteration — P0157 global-tail barrier and Section-I trigger
 
-Date: **2026-09-19 UTC**. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: **2026-09-19 UTC**. Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL; source residual remains OPEN by the current primary source plus bounded current-literature review.** This is the third consecutive P0157 run with no movement in the frozen admission metric. Therefore the Section-I stagnation trigger is now reached: the **next** HARD7-04 invocation must be a STUCK1 thinking/recovery run rather than another incremental lemma/checker run. This report does not relabel source-route progress as movement of the frozen metric.
 

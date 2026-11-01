@@ -74,7 +74,7 @@ The coefficient vectors of `L,U,T` are orthonormal. Consequently the one-dimensi
 
 The required pinned continuation source at
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 also records the checked two-dimensional product-marginal theorem used in its ruled-hyperboloid argument. Applying it here to
 
@@ -260,11 +260,11 @@ The remaining structural debt is therefore not an analytic Schur-sign problem an
 
 
 Required pinned continuation source actually used:
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially the checked product-marginal theorem behind its ruled-hyperboloid argument.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially the checked product-marginal theorem behind its ruled-hyperboloid argument.
 
 Designated partner actually used:
 fleet03/B16 r27,
-`yspennstate/math-open-problems@4388eeb12a94dd167f305554419fd4c986eda04a`,
+`private-source-repository@4388eeb12a94dd167f305554419fd4c986eda04a`,
 theorem `QFORM-DEPENDENT-PAIR-FRESH-SQUARE-SIGNFREE-v1`.
 
 **Full target change: none.** The unrestricted QFORM theorem and global continuity remain open. The present result is a quantitative supporting theorem and a source-valid obstruction to any compiler that insists on paying fresh-square curvature one physical coordinate at a time.

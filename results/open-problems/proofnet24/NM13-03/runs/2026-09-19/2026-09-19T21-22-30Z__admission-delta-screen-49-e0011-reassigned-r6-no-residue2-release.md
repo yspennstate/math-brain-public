@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-03 admission delta screen 49 — E0011 released then reassigned at residue 6; no lawful residue-2 CLOSABLE release
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-03` / `proofnet24/NM13-03/`  
 Category: **CLOSABLE OUTSIDE**  
 Preferred lane: other authors' finite random-matrix inequalities, exact moment questions, or sharp spectral constants  

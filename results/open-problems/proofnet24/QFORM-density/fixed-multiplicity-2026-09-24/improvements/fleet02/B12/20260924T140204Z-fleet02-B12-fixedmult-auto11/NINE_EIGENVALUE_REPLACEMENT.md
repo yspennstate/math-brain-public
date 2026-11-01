@@ -3,7 +3,7 @@ attacking: after a full PASS audit of the pinned 17-eigenvalue manuscript, indep
 
 # fleet02/B12 auto11 — complete nine-eigenvalue replacement
 
-Pinned baseline dependency: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `manuscript.tex` blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
+Pinned baseline dependency: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `manuscript.tex` blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
 
 This proof is an independent reconstruction of the order-three/order-two grouped product-Fourier route. I use only baseline lemmas that passed the sibling end-to-end audit and reprove the new grouped step here with an explicit Gaussian Fourier cutoff, so there is no unproved approximate-identity passage.
 

@@ -12,11 +12,11 @@ Execution: **WITHOUT_VERIFIED_BRAIN**. Repository retrieval is not native authen
 ## 1. Source-pinned proof graph entering this run
 
 
-The owner-required Claude directory was read at the requested baseline `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The same directory has later changes on current master: `FOURIER_ROUTE_REPORT.md` is unchanged at blob `9da148eed6cd43b1046a6f91d0f9329e12921cb4`, while `RESULTS.md` and `COUNTEREXAMPLE_SEARCH.md` were updated. I use the proved D' / fractional three-volume estimate below, at equation level, not merely as a citation.
+The owner-required Claude directory was read at the requested baseline `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The same directory has later changes on current master: `FOURIER_ROUTE_REPORT.md` is unchanged at blob `9da148eed6cd43b1046a6f91d0f9329e12921cb4`, while `RESULTS.md` and `COUNTEREXAMPLE_SEARCH.md` were updated. I use the proved D' / fractional three-volume estimate below, at equation level, not merely as a citation.
 
-The immediate fleet02/B19 predecessor is `math-open-problems@744a54e89abb033ca3ce34db0c51b66a499dba88`, which paid the exact union-leaf rank-three-plus-diagonal diffuse Fresnel chamber and showed that a third source need not be source-disjoint or transverse to the old two singular planes.
+The immediate fleet02/B19 predecessor is `private-source@744a54e89abb033ca3ce34db0c51b66a499dba88`, which paid the exact union-leaf rank-three-plus-diagonal diffuse Fresnel chamber and showed that a third source need not be source-disjoint or transverse to the old two singular planes.
 
-The newest completed designated partner fleet03/B19 is `math-open-problems@6dfd43d5519df1fc40ea26f7d0bbe300ad32412d`, run `20260923T145843Z-fleet03-B19-QFORM-r36`. In the aligned STAR4 survivor it proves the dichotomy:
+The newest completed designated partner fleet03/B19 is `private-source@6dfd43d5519df1fc40ea26f7d0bbe300ad32412d`, run `20260923T145843Z-fleet03-B19-QFORM-r36`. In the aligned STAR4 survivor it proves the dichotomy:
 
 * (I) an aligned skeleton `S` with `rank(S)<=5` and `s_3(S)>=1/4`; or
 * (II) one actual self bank, say `B=A[J,J]`, with

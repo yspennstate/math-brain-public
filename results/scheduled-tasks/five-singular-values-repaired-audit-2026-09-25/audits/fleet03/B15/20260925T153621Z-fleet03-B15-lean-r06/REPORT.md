@@ -1,6 +1,6 @@
 # fleet03/B15 Lean r06
 
-Pinned repaired source: `yspennstate/math-open-problems@4e530247ec0ef4101a6e5ecf621bd35a969c42aa`, blob `98e45d53d106db9a205051a4dd4917fc39dc2e3a`.
+Pinned repaired source: `private-source-repository@4e530247ec0ef4101a6e5ecf621bd35a969c42aa`, blob `98e45d53d106db9a205051a4dd4917fc39dc2e3a`.
 
 Fresh `LEAN_COVERAGE.md` was read at blob `60de5e05f7e30db8f1b9af7f7f26ef0e6ff5940a`.
 

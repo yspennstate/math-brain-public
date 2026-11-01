@@ -58,7 +58,7 @@ and therefore
 
 `det B = -gamma^2 kappa`.                                             (2.7)
 
-Apply the completed `QFORM-ZERO-PIVOT-CONDITIONAL-TRACE-v1` theorem (`math-open-problems@1bbe7c7c194bc92e10fc9c3cb3eb548d65e7043d`): if the first variable has conditional density cap `K`, the remaining pair has joint density cap `M`, and `B_11=0`, then
+Apply the completed `QFORM-ZERO-PIVOT-CONDITIONAL-TRACE-v1` theorem (`private-source@1bbe7c7c194bc92e10fc9c3cb3eb548d65e7043d`): if the first variable has conditional density cap `K`, the remaining pair has joint density cap `M`, and `B_11=0`, then
 
 `||p||_infinity <= 3*2^(2/3)(K M)^(2/3)|det B|^(-1/3)`.
 
@@ -66,7 +66,7 @@ Use `K=1` from (2.4) and (2.7). This proves (2.2). The cited theorem also gives 
 
 ## Fresh application: the current two-bank Fourier receiver loses no logarithm in essential height
 
-A fresh source resolved during this run is `math-open-problems@190455b1b9773b2afb4ef5551cd86885e523a9ee`, `proofnet24/QFORM-density/interactive/20260923T204100Z-two-bank-central-holder/REPORT.md`. It studies
+A fresh source resolved during this run is `private-source@190455b1b9773b2afb4ef5551cd86885e523a9ee`, `proofnet24/QFORM-density/interactive/20260923T204100Z-two-bank-central-holder/REPORT.md`. It studies
 
 `Q_epsilon = 2 H L + beta L^2 + V^2 + 2 epsilon L P`,                 (3.1)
 
@@ -92,7 +92,7 @@ so (3.3) needs neither the 3D bank caps nor the logarithmic all-target loss. Thi
 
 ## Required pinned-result application and an exact target family
 
-The owner-pinned package `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` was read at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed two-dimensional product-projection input says that an orthonormal two-dimensional projection of independent cap-one originals has joint density at most `2`. Insert that actual result into (2.2): for `M<=2`,
+The owner-pinned package `private-source@e5f71d79eff325201dd0274053d20268ce65b837` was read at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed two-dimensional product-projection input says that an orthonormal two-dimensional projection of independent cap-one originals has joint density at most `2`. Insert that actual result into (2.2): for `M<=2`,
 
 `boxed(
  ||p_Q||_infinity
@@ -141,7 +141,7 @@ for almost every `s>=0`. Thus the zero-pivot absorption supplies the uniform glo
 
 ## Designated partner fleet03/B16 applied exactly
 
-The latest completed compatible partner handoff is fleet03/B16 run `20260923T190206Z-fleet03-B16-QFORM-auto11b`, canonical mathematics `math-open-problems@bdbe6e38a3ee3d586e8e6119e518c573310253fb`. In its true-near-coloop coordinates,
+The latest completed compatible partner handoff is fleet03/B16 run `20260923T190206Z-fleet03-B16-QFORM-auto11b`, canonical mathematics `private-source@bdbe6e38a3ee3d586e8e6119e518c573310253fb`. In its true-near-coloop coordinates,
 
 `Q = a(sqrt(c)X_0+S)^2 + 2b(sqrt(c)X_0+S)U
      + uU^2+2vUV+wV^2`,                                             (5.1)

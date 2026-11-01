@@ -22,7 +22,7 @@ with
 `Omega_0+Omega_1+Omega_2+Omega_3=||wedge^3 A||_F^2=e3(A^2)`.
 
 Source:
-`yspennstate/math-open-problems@b08aeb182c7e4448b960e93db1953cb06cbccb9f`,
+`private-source-repository@b08aeb182c7e4448b960e93db1953cb06cbccb9f`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T214821Z-fleet01-B09-QFORM-auto11/REPORT.md`.
 
 The same source also proves the disjoint-sector payment: if `Omega_0>0`, then
@@ -37,7 +37,7 @@ with a continuous `C0` density and the same coefficient multiplying interval len
 A source search also found that the full scope “one quantitatively invertible physical principal triple” was already solved before this run. I therefore do **not** duplicate or re-claim it. The completed theorem is
 
 `QFORM-PHYSICAL-TRIPLE-DET-v1`,
-source `yspennstate/math-open-problems@bf4ba08b75ab774aef671c62ba4898a371059c0d`,
+source `private-source-repository@bf4ba08b75ab774aef671c62ba4898a371059c0d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T170850Z-fleet02-B01-qform-r25/REPORT.md`.
 
 It states: for any literal original-coordinate triple `H` with invertible `B=A[H,H]`, after conditioning every outside original coordinate,
@@ -49,7 +49,7 @@ uniformly over the induced affine term. Continuity is not claimed by that theore
 The newest completed designated partner fleet02/B09 theorem used below is
 
 `QFORM-3x2-KERNELDERIVATIVE-L1-v1`,
-source `yspennstate/math-open-problems@65ed9ea70175fb28541d756aea01f6aeb491fd6c`,
+source `private-source-repository@65ed9ea70175fb28541d756aea01f6aeb491fd6c`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T201318Z-fleet02-B09-QFORM-r14/REPORT.md`.
 
 For literal disjoint banks `|L|=3`, `|R|=2`, with `P=A[L,L]`, rank-two `C=A[L,R]`, columns `c1,c2`, and `w=c1 x c2`, if `Pw!=0`, it proves a continuous density and

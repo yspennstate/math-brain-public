@@ -1,6 +1,6 @@
 # fleet03/B08 r15 — pass 2, lines 336–391
 
-Source: math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, PDF SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423. Pass 2 lens: B09 mollification/measurability/Fubini/DCT/kernel normalization. Prior pass-2 coverage was 323–335; this file covers 336–391.
+Source: private-source@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, PDF SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423. Pass 2 lens: B09 mollification/measurability/Fubini/DCT/kernel normalization. Prior pass-2 coverage was 323–335; this file covers 336–391.
 
 ## Lemma 4.3 Step 3, lines 337–344 — PASS
 For every positive-weight T', i in T' implies alpha_i>=w_T'>0. Dropping zero-marginal factors is valid since |psi_i|<=1. For alpha_i>0, sum_{T' contains i} w_T'/alpha_i=1, so the weighted exponent identity is exact. The positive weights form a finite probability law; kappa_epsilon>=0 and equals the weighted product of its powers. Holder with exponents 1/w_T' is valid, including weight one.

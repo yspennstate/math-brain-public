@@ -5,7 +5,7 @@ Problem/source: David Aldous and James Fill, *Reversible Markov Chains and Rando
 # R04 immutable run report — I0027 / sparse surgery and bridge compactification
 
 Run ID: `20260916T202301Z_i0027_sparse_compression`  
-Repository: `yspennstate/math-open-problems`, branch `master`.  
+Repository: `private-source-repository`, branch `master`.  
 Overall source status after this run: **PARTIAL / OPEN**. The full-class coefficient interval does not move in this invocation, but the previous bottleneck-chain theorem is upgraded to an asymptotically lossless reduction to bridge-chain graphs, and the entire leading contribution of the bridge skeleton is proved to be at most the conjectured `1/54`. The remaining obstruction is now isolated inside the effective-resistance geometry of the bridge blocks themselves.
 
 ## 1. Continuity, ownership, source/status, exclusions

@@ -27,7 +27,7 @@ Fresh owner control was revision `2026-09-22.15`, QFORM-only. The current correc
 
 Sources actually used at equations:
 
-1. My preceding unconditional pair-volume half-Riesz theorem, `yspennstate/math-open-problems@1f3af9dc58afb9e902b972466d6da01cece89734`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T030821Z-fleet01-B01-qform-auto11/REPORT.md`:
+1. My preceding unconditional pair-volume half-Riesz theorem, `private-source-repository@1f3af9dc58afb9e902b972466d6da01cece89734`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T030821Z-fleet01-B01-qform-auto11/REPORT.md`:
 
    `H_{1/2}(R):=sup_s E|R-s|^{-1/2} <= C_E2 E2^{-1/8}`,
 
@@ -35,17 +35,17 @@ Sources actually used at equations:
 
    `C_E2 <= 12*2^(5/6)*exp(5/24)=26.334046180759735...`.
 
-2. The newest-Claude Fourier package, `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, for the exact physical square peel
+2. The newest-Claude Fourier package, `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, for the exact physical square peel
 
    `D(Q)<=|a|^{-1/2} H_{1/2}(R)`
 
    after completing an original-coordinate square.
 
-3. The latest completed designated partner result available at the substantive checkpoint, fleet02/B01 r36, `yspennstate/math-open-problems@cc304fa6b1b0862b9ed4a3312cf39bfd3aa9c03d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T040531Z-fleet02-B01-qform-r36/REPORT.md`. For an exact rank-two physical cross block with nonzero singular values `sigma1,sigma2`, arbitrary self-curvature on both banks is allowed and
+3. The latest completed designated partner result available at the substantive checkpoint, fleet02/B01 r36, `private-source-repository@cc304fa6b1b0862b9ed4a3312cf39bfd3aa9c03d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T040531Z-fleet02-B01-qform-r36/REPORT.md`. For an exact rank-two physical cross block with nonzero singular values `sigma1,sigma2`, arbitrary self-curvature on both banks is allowed and
 
    `H_{1/2}(R)<=8(sigma1 sigma2)^(-1/4)`.
 
-4. Fleet03/B01's just-completed transverse-curvature receiver, `yspennstate/math-open-problems@ca4b2621702ac337d21abb817d19bc629e0eac62`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T042838Z-auto11/REPORT.md`, is the exact predecessor for Section 3. It pays the case in which the cross-kernel direction has nonzero quadratic curvature; Section 3 below pays the complementary **exact-zero curvature but nonzero transverse linear coupling** case by a different integrated-frequency mechanism.
+4. Fleet03/B01's just-completed transverse-curvature receiver, `private-source-repository@ca4b2621702ac337d21abb817d19bc629e0eac62`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T042838Z-auto11/REPORT.md`, is the exact predecessor for Section 3. It pays the case in which the cross-kernel direction has nonzero quadratic curvature; Section 3 below pays the complementary **exact-zero curvature but nonzero transverse linear coupling** case by a different integrated-frequency mechanism.
 
 ## 2. The overlap-one exterior-three star is an exact Schur pair-volume
 

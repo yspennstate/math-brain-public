@@ -346,7 +346,7 @@ This is not a diagonal special case: all six physical diagonal entries vanish.
 
 The newest completed designated-partner run is fleet02/B03 `20260923T223109Z-fleet02-B03-QFORM-auto11`, canonical mathematics
 
-`yspennstate/math-open-problems@4c12c8389b0cd750c8050dff29c6f6438d886dfd:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T223109Z-fleet02-B03-QFORM-auto11/REPORT.md`.
+`private-source-repository@4c12c8389b0cd750c8050dff29c6f6438d886dfd:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T223109Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 
 For
 
@@ -414,6 +414,6 @@ The next structural implication suggested by this run is a BL-dimension-defect r
 
 ## 9. Source integrity
 
-Fresh brain control, current research, claims, live corrections, memory protocol, fleet, roles, protocol and fleet01/B03 assignment were read before this proof. The current owner control is revision `2026-09-22.15`; full QFORM remains OPEN in the shared claims. The exact grouped source used by the partner is `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` (Theorem H).
+Fresh brain control, current research, claims, live corrections, memory protocol, fleet, roles, protocol and fleet01/B03 assignment were read before this proof. The current owner control is revision `2026-09-22.15`; full QFORM remains OPEN in the shared claims. The exact grouped source used by the partner is `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` (Theorem H).
 
 No Gaussianity, moments, log-concavity, compact/connected support, diagonal-basis independence, conditional cap, or uniform one-dimensional pointwise quadratic decay is used. No schedule, task, email, notification, account binding, permission, installation, remote workflow, paid model/API, or public-release change is part of this run.

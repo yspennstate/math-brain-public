@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # PROB10-08 — block persistence of transitive localization and the affine mutual-information bottleneck
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Status: **OPEN / PARTIAL / auxiliary obstruction and reduction theorems proved / no new source-level cutoff class this run / independent validation pending / worldwide novelty UNVERIFIED**.
 

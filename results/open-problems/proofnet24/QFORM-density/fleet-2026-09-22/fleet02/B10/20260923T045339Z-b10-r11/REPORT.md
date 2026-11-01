@@ -14,7 +14,7 @@ The full target is unchanged: arbitrary independent real inputs with one-dimensi
 
 The designated partner result is
 
-`yspennstate/math-open-problems@46df88a3c81ee860e09a67bc8193514c26281555`
+`private-source-repository@46df88a3c81ee860e09a67bc8193514c26281555`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T041602Z-fleet03-B10-QFORM-r23/REPORT.md`.
 
@@ -26,7 +26,7 @@ where `r_0=sqrt(c)e`, `q=e^T M e`, and `h_j=||(I-ee^T)r_j||^2`.
 
 The required newest-Claude source used below is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
 
@@ -38,7 +38,7 @@ Its proved ruled-surface Theorem C states that for an exact rank-three form of s
 
 The exact-null endpoint is already paid by fleet02/B16 at
 
-`yspennstate/math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
+`private-source-repository@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T232932Z-fleet02-B16-QFORM-auto11/REPORT.md`.
 

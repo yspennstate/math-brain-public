@@ -21,7 +21,7 @@ This report proves an exact prefix code for the **marked pivotal physical-block 
 
 The assigned partner `fleet03/B12` completed:
 
-* repository `yspennstate/math-open-problems`;
+* repository `private-source-repository`;
 * introduction commit `c6e0f3df3424a27d4a05aec2460ecc52085ea1e3`;
 * path `proofnet24/P03-fei/fleet-2026-09-22/fleet03/B12/fleet03-B12-20260922T104514Z/REPORT.md`;
 * report blob `5be463a87c8ed06f29aca9f045a912d871e33157`.

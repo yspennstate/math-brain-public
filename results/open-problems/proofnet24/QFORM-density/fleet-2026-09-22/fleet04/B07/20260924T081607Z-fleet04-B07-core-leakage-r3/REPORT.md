@@ -24,7 +24,7 @@ then, retaining arbitrary outside coordinates, couplings, signs, spectra and con
 \tag{1.1}
 \]
 
-The newest completed designated fleet01/B07 result actually consumed is math-open-problems@96e0981a393661b45bcf633615cff640f9d93ba8. It produces literal physical structures, including a physical exact-singular pair and, in the global separator branch, a determinant-stable matched physical pair \(K\) plus four disjoint original-coordinate banks carrying the actual rainbow packet
+The newest completed designated fleet01/B07 result actually consumed is private-source@96e0981a393661b45bcf633615cff640f9d93ba8. It produces literal physical structures, including a physical exact-singular pair and, in the global separator branch, a determinant-stable matched physical pair \(K\) plus four disjoint original-coordinate banks carrying the actual rainbow packet
 \[
 \Omega_K(R,S;C,D)>\frac{p_*^2}{48}
 =0.0299385284640443\ldots .
@@ -245,7 +245,7 @@ The full conjecture remains open. The next B07 task is to force an aggregate rec
 
 ## Source pins and corrections
 
-- Required Claude baseline: math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837.
+- Required Claude baseline: private-source@e5f71d79eff325201dd0274053d20268ce65b837.
 - Latest designated fleet01/B07 theorem consumed: 96e0981a393661b45bcf633615cff640f9d93ba8.
 - Previous fleet04/B07 coordinate-core theorem: dab16464e87c939cc0cf3fd01d070045290192fa.
 - Corrections retained: no universally good principal minor or cross-rank-three cut; no post-rotation independence; no deletion of nonzero coefficient tails; no small-operator-norm-to-small-random-error step.

@@ -24,7 +24,7 @@ This is positive GitHub posting evidence for **Vu Conjecture 9.5 / F0012**. The 
 
 The **ResearchGate snapshot status** of the paper about Gaussian-integer spectra of iid Rademacher matrices, intake **F0012**, remains **NOT_FOUND_IN_USER_SUPPLIED_SNAPSHOT**. No matching candidate is identified among these 50 displayed records. This does not prove absence from the ten undisplayed profile records or from every possible alternate title.
 
-The prior 12 October comparison used this [pinned private manuscript](https://github.com/yspennstate/math-open-problems/blob/9d5dc2fc8e0219924b208f83fd7ee4ee23cc9494/research7_2026-09-17/R7-07/paper_vu_gaussian_integral_spectrum_refutation/main.tex), Git blob `82682fa11f60dedc0ab7e76c3e3400fb284821bd`, against [Vu's source](https://arxiv.org/abs/2005.02797). Publication bookkeeping does not change its mathematical status or historical audit count.
+The prior 12 October comparison used this [pinned private manuscript](private-source-repository), Git blob `82682fa11f60dedc0ab7e76c3e3400fb284821bd`, against [Vu's source](https://arxiv.org/abs/2005.02797). Publication bookkeeping does not change its mathematical status or historical audit count.
 
 ## Snapshot records
 

@@ -290,7 +290,7 @@ Semantic Scholar standard search initially returned HTTP 429; bulk search and ci
 
 ## Read-only research brain and earlier attempts
 
-Ran math_recall.py "integer superharmonic matrices" and brain.py recall "integer superharmonic matrices mistakes" and "sandpile integer superharmonic". Read the C0101 entries in the seven probability_1000_intake directories (matching entries saved in earlier_intake.txt), and the w332/w346 files under codex_pool_2026_10_10. Listed matching origin/master paths in math-open-problems and read the C0101 report through git show. No repository working tree or brain store was edited.
+Ran math_recall.py "integer superharmonic matrices" and brain.py recall "integer superharmonic matrices mistakes" and "sandpile integer superharmonic". Read the C0101 entries in the seven probability_1000_intake directories (matching entries saved in earlier_intake.txt), and the w332/w346 files under codex_pool_2026_10_10. Listed matching origin/master paths in private-source and read the C0101 report through git show. No repository working tree or brain store was edited.
 
 The old bound Δceil(a n²/2)≤a+1 is false (a=1/2, n=0 gives 2>3/2). The old claim of coordinate separation does not prove diagonal classification. The binomial-quadratic identity is valid but needed the closure connection and trace bound proved in ATTEMPT.md before maximality followed. Packing analogies and higher-dimensional Descartes arithmetic provide no Γ correspondence.
 

@@ -14,7 +14,7 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`
 The exact owner target remains open: the ORIGINAL coordinates are independent with arbitrary scalar densities `0<=f_i<=1`; `A=A^T` is arbitrary and has at least three eigenvalues of modulus at least one. No moment, support, iid, log-concavity, Gaussian, diagonal-basis, or post-rotation independence assumption is used.
 
 The newest completed compatible partner is fleet03/B12 r56,
-`yspennstate/math-open-problems@7ef8482d158e56e2e7300a4bc3d132654927ee5b`,
+`private-source-repository@7ef8482d158e56e2e7300a4bc3d132654927ee5b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T115229Z-qform-eigenvalue-r56/REPORT.md`.
 It proves that the target is already closed whenever
 
@@ -28,13 +28,13 @@ The next unpaid implication is therefore sharper than a generic additional-spect
 
 Two completed receivers are used at their exact scopes.
 
-1. The finite physical-core theorem, recalled and source-pinned in fleet03/B12 r47 (`math-open-problems@7fa8e2a00f932cb7ed6e68da9dbd07725c24d0f1`): if a literal ORIGINAL-coordinate principal block `C=A[H,H]`, `m=|H|`, has `s_3(C)>=a>0`, then, after conditioning only on ORIGINAL coordinates outside `H`,
+1. The finite physical-core theorem, recalled and source-pinned in fleet03/B12 r47 (`private-source@7fa8e2a00f932cb7ed6e68da9dbd07725c24d0f1`): if a literal ORIGINAL-coordinate principal block `C=A[H,H]`, `m=|H|`, has `s_3(C)>=a>0`, then, after conditioning only on ORIGINAL coordinates outside `H`,
 
 `||p_(X^TAX)||_(infinity,ess) <= 2 sqrt(6 pi m)/a.`
 
 Outside quadratic terms and cross couplings become arbitrary affine terms in the conditioned block and are retained.
 
-2. The required pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, proves the unrestricted physical fifth-volume theorem `D_5`: for a literal disjoint ORIGINAL-coordinate cross block `B=A[I,J]`,
+2. The required pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, proves the unrestricted physical fifth-volume theorem `D_5`: for a literal disjoint ORIGINAL-coordinate cross block `B=A[I,J]`,
 
 `||p_(X^TAX)||_infinity <= 5 sqrt(2e) e_5(B^T B)^(-1/10),`
 

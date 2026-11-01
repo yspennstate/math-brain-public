@@ -13,13 +13,13 @@ The target is: for independent real coordinates with probability densities `0<=f
 
 The newest owner delivery plan assigns B15 to supply exactly such a rough-law trace justification for new density estimates. The principal source applied below is the volume-stability theorem at
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 The designated fleet04/B15 partner result applied below is the exact Gaussian heat-height theorem at
 
-`yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`
+`private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`.
 
@@ -291,6 +291,6 @@ What this theorem cannot do is manufacture uniformity. If the available constant
 ## 10. Provenance and integrity
 
 
-The explicit changed-file allowlist in `math-open-problems` for this run is only this run directory (`CHECKPOINT.md`, `REPORT.md`, and later receipt/readback files if created). Manual fallback privacy review found only mathematical statements, public bibliographic/source pins, logical account/slot labels, and repository commit/path metadata; no credentials, signed URLs, unrelated personal data, client data, or private nonmathematical material are included.
+The explicit changed-file allowlist in `private-source` for this run is only this run directory (`CHECKPOINT.md`, `REPORT.md`, and later receipt/readback files if created). Manual fallback privacy review found only mathematical statements, public bibliographic/source pins, logical account/slot labels, and repository commit/path metadata; no credentials, signed URLs, unrelated personal data, client data, or private nonmathematical material are included.
 
 Repository retrieval/writes are not native learned-memory ingestion. No authenticated native mathematical receiver was used, so status remains `WITHOUT_VERIFIED_BRAIN`.

@@ -57,7 +57,7 @@ A uniform height bound is closed under weak convergence, but continuity is not. 
 
 have height at most one and converge weakly to the Uniform[0,1] law, whose standard density representative is discontinuous at the endpoints. Thus any argument proving only the height by weak closure must not silently claim continuity.
 
-The completed fleet02/B15 source `yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056` reports the stronger fixed-matrix statement `rank(A)>=3 => p_Q in C_0(R)` with an instance-dependent bound. That is a separate regularity theorem; the universal-height conjecture is not a consequence because its constants can deteriorate with the matrix.
+The completed fleet02/B15 source `private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056` reports the stronger fixed-matrix statement `rank(A)>=3 => p_Q in C_0(R)` with an instance-dependent bound. That is a separate regularity theorem; the universal-height conjecture is not a consequence because its constants can deteriorate with the matrix.
 
 ## 2. Main lemma: density height is weakly lower semicontinuous
 
@@ -188,7 +188,7 @@ This is a zero-loss reduction of the UNIVERSAL HEIGHT problem. It is stronger fo
 
 The latest completed assigned-partner result used here is fleet02/B15
 
-`yspennstate/math-open-problems@beba6425b1130ce83dd870c447fc0e87bcc5bd58`,
+`private-source-repository@beba6425b1130ce83dd870c447fc0e87bcc5bd58`,
 
 which proves the following common-envelope stability inequality. If two product sources `F,G` for the same phase have
 

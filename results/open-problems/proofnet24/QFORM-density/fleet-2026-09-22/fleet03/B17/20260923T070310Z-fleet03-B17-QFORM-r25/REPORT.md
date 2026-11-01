@@ -11,11 +11,11 @@ It does **not** prove the full arbitrary-input QFORM conjecture. The universal d
 
 
 The centered Gaussian theorem used below is worker-owned prior result
-`yspennstate/math-open-problems@9ccec4009fa3289188c7bd7344b299cab3be56ce`,
+`private-source-repository@9ccec4009fa3289188c7bd7344b299cab3be56ce`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T060210Z-fleet03-B17-QFORM-r24/REPORT.md`.
 
 The designated completed partner result actually applied below is
-`fleet04/B17`, `yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`,
+`fleet04/B17`, `private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`.
 
 ---

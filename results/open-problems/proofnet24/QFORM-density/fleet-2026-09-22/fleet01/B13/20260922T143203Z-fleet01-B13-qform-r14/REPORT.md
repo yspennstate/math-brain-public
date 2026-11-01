@@ -22,7 +22,7 @@ The assigned partner `fleet02/B13` supplied two exact ingredients.
 
 Canonical source:
 
-`yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`
+`private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`.
 
@@ -41,7 +41,7 @@ For `K=1_{Q in J}`, the worst small-ball probability over all admissible indepen
 
 Canonical strengthened source:
 
-`yspennstate/math-open-problems@8a21bd3d25ce1622121616ce789589e1e073f68d`
+`private-source-repository@8a21bd3d25ce1622121616ce789589e1e073f68d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T125435Z-fleet02-B13-80c2a32d/FINITE_DIRECTION_ADDENDUM.md`.
 
@@ -63,7 +63,7 @@ Both partner results are used below on the actual geometric residual produced by
 
 The preceding run proved at
 
-`yspennstate/math-open-problems@0b5cf04790e5927df0efed8811a2a1295006e141`
+`private-source-repository@0b5cf04790e5927df0efed8811a2a1295006e141`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260922T135910Z-fleet01-B13-qform-r13/REPORT.md`
 

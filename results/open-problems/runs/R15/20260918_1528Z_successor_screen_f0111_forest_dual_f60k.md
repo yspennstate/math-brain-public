@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R15 successor screen — forest obstruction for `k=2` Talagrand dual witnesses
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R15, CLOSABLE OUTSIDE.
 
 All new mathematical statements below are **SELF_CHECK_ONLY** unless explicitly identified as source material. The proofs are written on the page. No independent fleet audit is claimed, and no novelty claim is made.

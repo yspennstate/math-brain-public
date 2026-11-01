@@ -14,13 +14,13 @@ The unrestricted QFORM conjecture remains OPEN. This report proves an analytic c
 
 Primary completed analytic source:
 
-- `math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
+- `private-source@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
   `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
   I use its grouped-hub projected-crossing theorem (GC), including the exact `k=1, ell=2` and `k=2, ell=1` constants and its allowance of arbitrary internal hub functions and arbitrary internal light curvature.
 
 Designated partner actually applied:
 
-- fleet02/B03, `math-open-problems@c3bba054c20287883c43303711eec7eefc05d46e`,
+- fleet02/B03, `private-source@c3bba054c20287883c43303711eec7eefc05d46e`,
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T131311Z-fleet02-B03-QFORM-r11/REPORT.md`.
   Its theorem `QFORM-JOINT-SELECTOR-PHASE-LP-PLANCHEREL-v1`, at `p=infinity,k=3`, gives for three genuine physical selectors with arbitrary selector self-curvature and full-row-rank cross matrix `M`
 

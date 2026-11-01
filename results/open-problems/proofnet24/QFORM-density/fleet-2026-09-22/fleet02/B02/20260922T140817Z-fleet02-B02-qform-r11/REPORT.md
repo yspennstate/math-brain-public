@@ -12,7 +12,7 @@ The full target remains open: for independent real coordinates with densities bo
 
 The later owner continuation `QFORM-EXCLUSIVE-CONTINUE-20260922T131746Z` assigns fleet02/B02 an independent review of Sections 3--6 of the interactive regularized-determinant proof at
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 
 I reviewed exactly that scope and then continued the B02 integrated-Fourier assignment. The first universal unpaid implication remains structural: starting only from the three-large-eigenvalue hypothesis, produce a product-preserving decomposition to which an integrable Fourier estimate applies. The new result below improves the determinant branch by aggregating all coordinate minors rather than paying one selected tiny minor, but does not prove such a decomposition always exists.
 
@@ -204,7 +204,7 @@ The numerical constants were evaluated only as regressions of the exact beta-fun
 
 I consumed the completed named-partner result fleet03/B02, canonical report
 
-`yspennstate/math-open-problems@2e9ab3bfa05919cd9115fc5f6285ee0683adfb7c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T130245Z-fleet03-B02-QFORM-r11/REPORT.md`.
+`private-source-repository@2e9ab3bfa05919cd9115fc5f6285ee0683adfb7c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T130245Z-fleet03-B02-QFORM-r11/REPORT.md`.
 
 Its theorem `QFORM-AGGREGATED-HYPERBOLIC-SQUARE-v1` says that for disjoint original-coordinate groups,
 

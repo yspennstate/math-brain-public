@@ -2,7 +2,7 @@
 
 Status: **PARTIAL on the parent Grimmett–Winkler conjecture / CANDIDATE_FULL for the restricted theorem below, pending independent review.** The arbitrary-finite-graph source problem remains **OPEN**.
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Runtime request/status: GPT-6 maximum was requested. The authenticated scheduler/tool surface available in this run exposed no writable model/effort selector and no authenticated applied-effort telemetry. The surrounding runtime identifies GPT-5.6 Sol, but reasoning effort is **UNVERIFIED**; no GPT-6-maximum claim is made.
 

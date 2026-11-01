@@ -342,7 +342,7 @@ At no point is a uniform law-independent pointwise estimate for a one-dimensiona
 
 Newest completed designated partner at the start of this run was fleet02/B01 r44:
 
-`yspennstate/math-open-problems@31608e4193b3ba491084081cb7c000e254c01a82`
+`private-source-repository@31608e4193b3ba491084081cb7c000e254c01a82`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T142922Z-fleet02-B01-qform-r44/REPORT.md`.
 
@@ -388,12 +388,12 @@ Neither global implication is proved here; therefore the unrestricted conjecture
 ## 11. Source dependencies
 
 - Orientation-free affine rank-two half-Riesz theorem:
-  `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+  `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 - Physical-pair logarithmic theorem:
-  `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+  `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 - Prior B01 common-hub overlap-one theorem:
-  `yspennstate/math-open-problems@c05b5ac66f666910b1c18a6456fce03188671236:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T122922Z-fleet01-B01-qform-auto11/REPORT.md`.
+  `private-source-repository@c05b5ac66f666910b1c18a6456fce03188671236:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T122922Z-fleet01-B01-qform-auto11/REPORT.md`.
 - Designated partner fleet02/B01 r44:
-  `yspennstate/math-open-problems@31608e4193b3ba491084081cb7c000e254c01a82:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T142922Z-fleet02-B01-qform-r44/REPORT.md`.
+  `private-source-repository@31608e4193b3ba491084081cb7c000e254c01a82:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T142922Z-fleet02-B01-qform-r44/REPORT.md`.
 
 All conclusions here are supporting mathematics pending independent review; no finite checker certifies the universal theorem.

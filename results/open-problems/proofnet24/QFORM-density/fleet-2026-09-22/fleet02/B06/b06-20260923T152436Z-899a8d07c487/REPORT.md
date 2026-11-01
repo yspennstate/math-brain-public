@@ -13,9 +13,9 @@ The exact target remains: arbitrary independent ORIGINAL real coordinates with d
 
 Source pins actually consumed:
 
-- newest-Claude package `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`; its Ball/Livshyts-Paouris-Pivovarov product-projection bounds are used below, and its ruled Theorem C is applied to a real target family in Section 6;
-- designated partner fleet03/B06 r38, canonical `yspennstate/math-open-problems@ba023626f934128aadad51710c9ee8428dfe33c7`, which retains the complete small cross tail in the recursive rank-two tube;
-- its immediate r37 predecessor `yspennstate/math-open-problems@fa9d5dd3cc78a092484480b536872d332e22c90a`, which supplies the literal original-coordinate N3 cross cut and the quantitative second-singular-value floor used in Section 4.
+- newest-Claude package `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`; its Ball/Livshyts-Paouris-Pivovarov product-projection bounds are used below, and its ruled Theorem C is applied to a real target family in Section 6;
+- designated partner fleet03/B06 r38, canonical `private-source-repository@ba023626f934128aadad51710c9ee8428dfe33c7`, which retains the complete small cross tail in the recursive rank-two tube;
+- its immediate r37 predecessor `private-source-repository@fa9d5dd3cc78a092484480b536872d332e22c90a`, which supplies the literal original-coordinate N3 cross cut and the quantitative second-singular-value floor used in Section 4.
 
 ## 1. A weighted reciprocal lemma in two dimensions
 

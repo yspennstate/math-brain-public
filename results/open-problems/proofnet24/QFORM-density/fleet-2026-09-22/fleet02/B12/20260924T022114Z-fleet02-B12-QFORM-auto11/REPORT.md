@@ -130,7 +130,7 @@ No random-variable statement has been made. In particular, (2.13) is **not** the
 
 The newest compatible designated-partner report is fleet03/B12 r46,
 
-`math-open-problems@3575242f2140d442a474d5e32c695dbbfd521115`,
+`private-source@3575242f2140d442a474d5e32c695dbbfd521115`,
 
 which proves for arbitrary rectangular `M,N`
 
@@ -206,7 +206,7 @@ Combining (2.9) and (5.4),
 
 The prior fleet02/B12 seven-mode compiler at
 
-`math-open-problems@b99e8ce078453ccf72ee71f0dbc537f722b16340`
+`private-source@b99e8ce078453ccf72ee71f0dbc537f722b16340`
 
 uses two completed ORIGINAL-coordinate receivers:
 
@@ -246,7 +246,7 @@ All conditioning in (5.6)-(5.7) is on original coordinates. Matrix projections i
 
 The required pinned source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 proves the fifth-volume extension
 
@@ -363,8 +363,8 @@ The unrestricted conjecture therefore remains **OPEN / NOT PROVED / NOT DISPROVE
 
 ## 10. Source pins consumed
 
-- Required pinned Fourier source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`; D5 is used in (6.1)-(6.9).
-- Newest compatible designated partner: fleet03/B12 r46, `math-open-problems@3575242f2140d442a474d5e32c695dbbfd521115`; its rank-plus-tail/interlacing theorem is used in (4.5)-(4.9).
-- Previous fleet02/B12 seven-mode receiver compiler: `math-open-problems@b99e8ce078453ccf72ee71f0dbc537f722b16340`, used only for the already-proved receiver synthesis in Section 5.
+- Required pinned Fourier source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`; D5 is used in (6.1)-(6.9).
+- Newest compatible designated partner: fleet03/B12 r46, `private-source@3575242f2140d442a474d5e32c695dbbfd521115`; its rank-plus-tail/interlacing theorem is used in (4.5)-(4.9).
+- Previous fleet02/B12 seven-mode receiver compiler: `private-source@b99e8ce078453ccf72ee71f0dbc537f722b16340`, used only for the already-proved receiver synthesis in Section 5.
 
 Repository transport was used for source retrieval and durable artifacts; it is not native learned-memory ingestion. Execution remains `WITHOUT_VERIFIED_BRAIN`.

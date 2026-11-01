@@ -17,7 +17,7 @@ Let `H=H(Z,W)` be arbitrary measurable, `R=R(W)` arbitrary measurable, `ell in R
 `Q=delta Y^2+2k UY+beta V^2+ell.Z+R`.
 
 Then the completed rank-two affine half-Riesz theorem at
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`
 gives
 
 `||p_Q||_infinity <= 128 (L_X/|gamma|) [k^2 |delta beta| G]^(-1/4).`
@@ -63,7 +63,7 @@ in the zero-affine specialization. The pair `(U,V)` is a linear image of a two-d
 `M_R <= 2 pi sqrt(delta)/( |k| sqrt(|beta|G) )`.
 
 Applying the completed fleet04/B18 dependence-safe square theorem
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`
 at the actual completed-square identity yields the sharper bound
 
 `||p_Q||_infinity <= 2 sqrt(2 pi) (L_X/|gamma|) [k^2 |delta beta| G]^(-1/4)`.

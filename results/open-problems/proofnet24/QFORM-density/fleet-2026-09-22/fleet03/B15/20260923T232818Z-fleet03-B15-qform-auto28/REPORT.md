@@ -49,7 +49,7 @@ The unrestricted universal `L^infty` conjecture remains OPEN.
 
 The designated completed partner result used at an actual inequality is fleet04/B15:
 
-`yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`
+`private-source-repository@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T221909Z-fleet04-B15-ruled-trace-c0-r8/REPORT.md`.
 

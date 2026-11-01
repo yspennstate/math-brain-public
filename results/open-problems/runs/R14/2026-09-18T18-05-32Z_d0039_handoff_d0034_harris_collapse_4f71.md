@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R14 HARD OUTSIDE — terminal D0039 handoff; D0034 Harris-to-countable Markov reduction
 
 Date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **D0039 PARTIAL / source OPEN / terminally handed off. D0034 PARTIAL / source OPEN / active R14 claim.**
 

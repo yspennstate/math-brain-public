@@ -12,7 +12,7 @@ The unrestricted theorem remains open. No full candidate is asserted, so end-to-
 
 The newest completed fleet01/B20 theorem is
 
-\`yspennstate/math-open-problems@e86f9513af59a0efc602e2a3ea69aa364bc36488\`,
+\`private-source-repository@e86f9513af59a0efc602e2a3ea69aa364bc36488\`,
 
 \`QFORM-R51-MODERATE-DIAGONAL-OR-PHYSICALSTAR-PAYMENT-v1\`. Under \(s_3(A)\ge1\), it proves that a still-unpaid target state must satisfy
 
@@ -27,7 +27,7 @@ Its paid side has \(\|p_Q\|_\infty<9763\). This is a literal original-coordinate
 
 The new fleet04/B10 result is
 
-\`yspennstate/math-open-problems@42498ecbcb68befe182e1958ff49434cc317206a\`,
+\`private-source-repository@42498ecbcb68befe182e1958ff49434cc317206a\`,
 
 \`QFORM-PRODUCT-PROJECTION-SECTIONAL-COUNTEREXAMPLE-v1\` and
 \`QFORM-FRESH-LONGITUDINAL-PARABOLIC-PAYMENT-v1\`.

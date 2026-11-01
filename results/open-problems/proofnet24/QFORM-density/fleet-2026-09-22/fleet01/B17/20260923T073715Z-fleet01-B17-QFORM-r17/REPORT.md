@@ -33,11 +33,11 @@ All calculations below therefore preserve original-coordinate product provenance
 
 The main inputs are the weighted one-dimensional local Edgeworth expansion proved in the exact rotated-witness report
 
-`yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`
+`private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`
 
 and the completed fleet02/B17 finite-bank theorem
 
-`yspennstate/math-open-problems@596288dcf1a153d7ba008dc6fc7d3097d340f37c:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T045156Z-fleet02-B17-QFORM-auto11/REPORT.md`.
+`private-source-repository@596288dcf1a153d7ba008dc6fc7d3097d340f37c:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T045156Z-fleet02-B17-QFORM-auto11/REPORT.md`.
 
 ## 2. Theorem A: arbitrary anisotropic diffuse banks have a positive first-order deficit
 
@@ -293,7 +293,7 @@ This is substantially closer to the obstruction than the diagonal \(\pi\) contro
 
 The completed partner theorem at
 
-`math-open-problems@596288dcf1a153d7ba008dc6fc7d3097d340f37c`
+`private-source@596288dcf1a153d7ba008dc6fc7d3097d340f37c`
 
 handles the aligned one-heavy majority-sign boundary **at every finite bank size and globally in the output level**. In the present notation this is \(O=I\), \((m_1,m_2,m_3)=(1,m,m)\), with an arbitrary cap-one singleton law. It gives
 
@@ -315,7 +315,7 @@ This is not merely cited: (4.1) pays a boundary regime not covered by Theorem A,
 
 The required newest-source chain points to Theorem C in
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
 
 For every exact rank-three signature \((+,+,-)\) target and every \(s\ge0\), it proves
 

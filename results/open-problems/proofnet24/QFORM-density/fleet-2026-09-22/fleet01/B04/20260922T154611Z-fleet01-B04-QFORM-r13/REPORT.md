@@ -28,7 +28,7 @@ No law-uniform scalar pointwise Fresnel decay, post-rotation independence, naive
 
 Named partner actually applied:
 
-`yspennstate/math-open-problems@69c4571401b4376ffb84ad34aff2a748330acf8a`
+`private-source-repository@69c4571401b4376ffb84ad34aff2a748330acf8a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T152028Z-qform-r11/REPORT.md`.
 
@@ -52,7 +52,7 @@ The partner used (2.2) with an additional original-coordinate square. Here I spe
 
 Source:
 
-`yspennstate/math-open-problems@b7168a1b0b52fbf69705170ff9795435efeb849f`
+`private-source-repository@b7168a1b0b52fbf69705170ff9795435efeb849f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260922T122057Z-01c809a1/REPORT.md`.
 
@@ -66,7 +66,7 @@ I apply this directly to the exact zero-diagonal indefinite-face endpoint in Sec
 
 Controlling addendum:
 
-`yspennstate/math-open-problems@ffc6e40587293d6019b29680fff19eb0d9179fb5`
+`private-source-repository@ffc6e40587293d6019b29680fff19eb0d9179fb5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T152028Z-qform-r11/RANK2_RANDOM_CUT_ADDENDUM.md`.
 
@@ -80,7 +80,7 @@ This is inserted into the new unconditional quarter-Riesz splice in Section 6, g
 
 The underlying regularized determinant proof was also read at
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 

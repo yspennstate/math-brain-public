@@ -19,7 +19,7 @@ Write `rho_j in R^3` for the j-th row of R and `a_j=|rho_j|^2`. Then
 0\le a_j\le1,\qquad \sum_j a_j=3.
 \]
 
-The preceding fleet02/B15 submass theorem (`math-open-problems@45779cb1dca5f453ac620431b380ad015a052e70`) gives, when the j-th original-coordinate factor is a cap-one subdensity of mass `m<=1`, the ruling-wise two-dimensional trace estimate
+The preceding fleet02/B15 submass theorem (`private-source@45779cb1dca5f453ac620431b380ad015a052e70`) gives, when the j-th original-coordinate factor is a cap-one subdensity of mass `m<=1`, the ruling-wise two-dimensional trace estimate
 
 \[
 h_\theta\le 2\min\left(1,{m\over\sqrt{d_j(\theta)}}\right),

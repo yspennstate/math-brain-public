@@ -17,7 +17,7 @@ The phase-aligned fragmented-support construction remains decisive: bounded scal
 
 Canonical proof:
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 path
 
@@ -33,7 +33,7 @@ For `q=2` the same estimate holds without a leverage condition. Arbitrary self-b
 
 Canonical proof:
 
-`yspennstate/math-open-problems@08e91d2cd50db663646e7c25983c421ccaa78c7c`
+`private-source-repository@08e91d2cd50db663646e7c25983c421ccaa78c7c`
 
 path
 
@@ -55,7 +55,7 @@ This partner theorem is applied below to an actual new lifted inequality, not ci
 
 Fleet03/B04 `QFORM-SQUARE-ASSISTED-L32-v1`, canonical proof
 
-`yspennstate/math-open-problems@f447c650e04ef27d14be3380ac541c1cec60ab0c`
+`private-source-repository@f447c650e04ef27d14be3380ac541c1cec60ab0c`
 
 path
 

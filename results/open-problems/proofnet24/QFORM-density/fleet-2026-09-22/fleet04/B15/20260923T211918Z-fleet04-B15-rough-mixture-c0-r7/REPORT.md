@@ -15,7 +15,7 @@ Fresh brain control was read in this run. The full target remains: independent o
 
 The completed designated-partner result used below is fleet01/B15 at
 
-`math-open-problems@0bb6eb45c2cb78d3d42ba7911905bf2c7eec3f4a`.
+`private-source@0bb6eb45c2cb78d3d42ba7911905bf2c7eec3f4a`.
 
 It proves that if two product sources `F,G` are both covered by the same law-uniform output-height certificate `M`, then, for every finite `r`,
 
@@ -29,7 +29,7 @@ This gives strong finite-\(L^r\) rough-source stability, but deliberately does n
 
 The completed fleet04/B15 pivoted-fiber theorem, corrected at
 
-`math-open-problems@cff8e1368d32302e6d649f776579a5c1951929b1`,
+`private-source@cff8e1368d32302e6d649f776579a5c1951929b1`,
 
 states that independent cap-one \(X,Y\) give
 

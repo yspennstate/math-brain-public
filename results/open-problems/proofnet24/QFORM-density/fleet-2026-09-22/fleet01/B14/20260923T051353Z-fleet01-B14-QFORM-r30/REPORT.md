@@ -10,7 +10,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Role: translations and localization. S
 
 The assigned partner result actually applied below is `fleet02/B14` r26:
 
-`yspennstate/math-open-problems@5704e7da5b6134fc8e3bdde6caedc7358a666f65`
+`private-source-repository@5704e7da5b6134fc8e3bdde6caedc7358a666f65`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T050751Z-fleet02-B14-QFORM-r26/REPORT.md`.
 
@@ -26,7 +26,7 @@ uniform in arbitrary affine terms, arbitrary bank-square coefficient, arbitrary 
 
 I also use the completed partner r24 whole-law localization principle and its warning against normalizing thin pieces first:
 
-`yspennstate/math-open-problems@8c74cde9c5de560923027d3af8debe2da5c79bc4`,
+`private-source-repository@8c74cde9c5de560923027d3af8debe2da5c79bc4`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T025915Z-fleet02-B14-QFORM-r24/REPORT.md`.
 

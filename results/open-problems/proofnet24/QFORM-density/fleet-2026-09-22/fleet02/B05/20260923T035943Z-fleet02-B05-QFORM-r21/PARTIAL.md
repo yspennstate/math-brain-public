@@ -7,9 +7,9 @@ Status: `ESSENTIAL_STEP_APPLIED` in progress; full QFORM remains open.
 
 ## Source pins actually used
 
-- newest required source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`. The ruled one-sheet calculation and Theorem F are used below.
-- exact-rank-three scalar-pivot dependency: `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
-- designated partner actually read: fleet03/B05 r20, `yspennstate/math-open-problems@929322485c85c8a08367589be2b8e2e73839c65f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T014000Z-fleet03-B05-QFORM-r20/REPORT.md`.
+- newest required source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`. The ruled one-sheet calculation and Theorem F are used below.
+- exact-rank-three scalar-pivot dependency: `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+- designated partner actually read: fleet03/B05 r20, `private-source-repository@929322485c85c8a08367589be2b8e2e73839c65f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T014000Z-fleet03-B05-QFORM-r20/REPORT.md`.
 
 ## 1. Rough-input ruled interval theorem
 

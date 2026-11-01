@@ -16,7 +16,7 @@ The live target is:
 
 I consumed the completed fleet03/B17 report
 
-`yspennstate/math-open-problems@c64fcff680b0a252a3c92002c60eedba02bbb9ec:qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`.
+`private-source-repository@c64fcff680b0a252a3c92002c60eedba02bbb9ec:qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`.
 
 That report proves two important facts used here:
 
@@ -336,7 +336,7 @@ Full conjecture remains **OPEN**.
 ## 6. Source pins and literature context
 
 * Live target/control: owner revision `2026-09-22.4` in `yspennstate/math-research-brain`.
-* Completed fleet input: `yspennstate/math-open-problems@c64fcff680b0a252a3c92002c60eedba02bbb9ec:qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`.
+* Completed fleet input: `private-source-repository@c64fcff680b0a252a3c92002c60eedba02bbb9ec:qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`.
 * Livshyts–Paouris–Pivovarov (2015) prove the dimension-free marginal-density bound `2^{k/2}` for `k`-dimensional marginals of product densities bounded by one; this is relevant to the final paragraph but is not needed in the proofs of Theorems 1.1 or 2.1.
 
 No novelty or publication-priority claim is made. The full arbitrary-eigenvector conjecture is not proved.

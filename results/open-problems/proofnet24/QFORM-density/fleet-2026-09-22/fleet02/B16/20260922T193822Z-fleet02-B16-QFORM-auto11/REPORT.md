@@ -279,7 +279,7 @@ So a direct three-factor Hölder argument applied only after this single decoupl
 
 The newest completed designated-partner result read in full is fleet03/B16 run `20260922T185149Z-fleet03-B16-QFORM-r15`, canonical mathematics
 
-`yspennstate/math-open-problems@3ef9d49fd04c756ea20b5f7c6e1d5c24dd579780`,
+`private-source-repository@3ef9d49fd04c756ea20b5f7c6e1d5c24dd579780`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T185149Z-fleet03-B16-QFORM-r15/REPORT.md`.
 
 Its theorem `QFORM-SCALAR-PIVOT-DIFFUSE-SCHUR-BRIDGE-v1` proves that for an original-coordinate pivot

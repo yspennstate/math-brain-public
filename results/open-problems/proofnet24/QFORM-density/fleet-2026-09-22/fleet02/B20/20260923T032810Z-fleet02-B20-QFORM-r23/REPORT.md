@@ -14,9 +14,9 @@ The unrestricted target remains: for every `n`, independent real `X_i` with prob
 
 This run consumes, at equations rather than by summary, the newest completed designated-partner result:
 
-- fleet03/B20 r22, theorem `QFORM-O3-ROBUST-2PLUS1-DIFFUSE-OR-PHYSICAL-STAR-v1`, canonical mathematics `yspennstate/math-open-problems@5de4e98c424cd036c97126ffa3d6abef6191b0e1`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T004559Z-fleet03-B20-QFORM-r22/REPORT.md`.
+- fleet03/B20 r22, theorem `QFORM-O3-ROBUST-2PLUS1-DIFFUSE-OR-PHYSICAL-STAR-v1`, canonical mathematics `private-source-repository@5de4e98c424cd036c97126ffa3d6abef6191b0e1`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T004559Z-fleet03-B20-QFORM-r22/REPORT.md`.
 
-I also use the compatible completed fleet03/B19 r23 theorem `QFORM-ARBITRARY-HUB-SQRT-SMALLBALL-v1`, canonical mathematics `yspennstate/math-open-problems@80403bc0adff2c5e8278848674c81448e9782e44`, and the new interactive collective-tail certificate `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/`.
+I also use the compatible completed fleet03/B19 r23 theorem `QFORM-ARBITRARY-HUB-SQRT-SMALLBALL-v1`, canonical mathematics `private-source-repository@80403bc0adff2c5e8278848674c81448e9782e44`, and the new interactive collective-tail certificate `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/`.
 
 The pointwise quadratic-phase envelope, worst fiber supremum, conditional-cap-as-independence, arbitrary-joint 3D coarea, and post-rotation independence interfaces remain unavailable.
 

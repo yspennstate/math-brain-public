@@ -9,7 +9,7 @@ Status: substantive checkpoint; full target open.
 A fresh current-source read found a theorem that exactly matches the active B10 subproblem `near-null nonzero coloop interpolation`:
 
 - `QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1` and its exact-coloop corollary,
-- `yspennstate/math-open-problems@3ba3125a5d8dd06d778b7c79849c4c3106da9855`,
+- `private-source-repository@3ba3125a5d8dd06d778b7c79849c4c3106da9855`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T003846Z/REPORT.md`.
 
 Write an exact-rank-three coloop core in an orthonormal spectral basis as

@@ -2,7 +2,7 @@
 
 Run: `20260924T140420Z-fleet01-B06-fixedmult-audit-r12`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Pinned baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.  
+Pinned baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.  
 Fresh repository state inspected before this note included the terminal `s_16` collar results of fleet01/B09 and fleet01/B20 and the earlier exact-rank physical-crossing theorem.
 
 Status: **proved new synthesis / direct receiver; no unconditional 16-eigenvalue theorem claimed.** A source-matching exact-rank crossing theorem already exists, so this run does not duplicate that proof. Instead it applies it to the actual three-bank determinant-transfer geometry forced in the terminal `s_16` chamber.

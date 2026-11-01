@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 at 
 # NM13-09 — post-P0245 admission delta screen 33: P0462 is genuinely CLOSABLE but owned and residue 11; P0409 remains broad
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-09` / `proofnet24/NM13-09/`  
 Category: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed stochastic-process existence/counterexample questions decidable by explicit process construction, exact transition law, exact finite witness, or complete short special-class theorem; do not duplicate P13's Aldous-Janson/CTCS lane or another Brownian-process assignment  

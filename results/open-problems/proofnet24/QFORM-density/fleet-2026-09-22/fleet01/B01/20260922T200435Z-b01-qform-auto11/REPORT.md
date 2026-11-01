@@ -151,7 +151,7 @@ This is not claimed to close the current arbitrary-self near-coloop endpoint; th
 
 I consumed fleet02/B01 r25, canonical source
 
-`yspennstate/math-open-problems@bf4ba08b75ab774aef671c62ba4898a371059c0d`
+`private-source-repository@bf4ba08b75ab774aef671c62ba4898a371059c0d`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T170850Z-fleet02-B01-qform-r25/REPORT.md`.
 
 It proves that any invertible original-coordinate principal triple `T` gives
@@ -191,6 +191,6 @@ Status of this run: **ESSENTIAL_STEP_APPLIED**.
 - fleet02/B01 r25: `bf4ba08b75ab774aef671c62ba4898a371059c0d`, report path above.
 - fleet02/B01 r26: `bda6ef89066f27778833b0f725b011d4ff64d8c8`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T180441Z-fleet02-B01-qform-r26/REPORT.md`.
 - fleet03/B08 r19: `86cbf124545c3457b0037b49151f4f641391fc76`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T194215Z-fleet03-B08-qform-diffuse-r19/REPORT.md`.
-- Current correction proof: `yspennstate/math-open-problems@f305dcc8ae0f602f2b21ab32cf4d8ddcdcb56b92`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/CORRECTIONS.md`.
+- Current correction proof: `private-source-repository@f305dcc8ae0f602f2b21ab32cf4d8ddcdcb56b92`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/CORRECTIONS.md`.
 
 `CHECK.py` and `CHECK_OUTPUT.txt` in this run directory verify (14), the layer-cake multipliers, and the grouped exterior-to-Hilbert--Schmidt arithmetic; the output terminates `STATUS=PASS`. Those finite checks are algebraic regression evidence, not a proof certificate.

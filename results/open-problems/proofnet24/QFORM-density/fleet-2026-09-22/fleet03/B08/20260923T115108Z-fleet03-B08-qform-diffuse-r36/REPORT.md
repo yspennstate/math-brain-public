@@ -20,7 +20,7 @@ The current-hour canonical login path was already occupied by the earlier same-s
 
 The immediate durable B08 source is
 
-`yspennstate/math-open-problems@2cb64b71f8aafa0892547dffebcf6af647ea7c64`
+`private-source-repository@2cb64b71f8aafa0892547dffebcf6af647ea7c64`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T102108Z-fleet03-B08-qform-diffuse-r32/REPORT.md`.
 
@@ -66,7 +66,7 @@ The shifts of the pair coordinates may depend arbitrarily on all remaining coord
 
 The designated partner is now completed at
 
-`yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
+`private-source-repository@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T091414Z-fleet04-B08-QFORM-r1/REPORT.md`.
 

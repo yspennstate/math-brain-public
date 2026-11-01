@@ -21,7 +21,7 @@ The main analytic input is this worker's completed result
 
 at
 
-`yspennstate/math-open-problems@5d4cd3fcb9976deebd0cb409ebcca9cfb29cb9ba`
+`private-source-repository@5d4cd3fcb9976deebd0cb409ebcca9cfb29cb9ba`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T212739Z-fleet01-B04-QFORM-auto11-r20/REPORT.md`.
 
@@ -44,7 +44,7 @@ The designated partner result used below is fleet02/B04's completed
 
 introduced at
 
-`yspennstate/math-open-problems@6efdb84dba8c88442c7d85a5af8bea67ed747eec`
+`private-source-repository@6efdb84dba8c88442c7d85a5af8bea67ed747eec`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T224543Z-fleet02-B04-QFORM-auto11/REPORT.md`.
 

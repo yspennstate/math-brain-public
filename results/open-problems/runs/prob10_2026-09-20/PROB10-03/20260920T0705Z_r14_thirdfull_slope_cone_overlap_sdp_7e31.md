@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 
 # PROB10-03 — R14 bounded substantive iteration: third-full slope cone, overlap cap, SDP no-go
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL / SOURCE OPEN / NO NEW SOURCE ENDPOINT THIS RUN / NEW EXACT THIRD-FULL REDUCTION AND TWO CERTIFIED ROUTE OBSTRUCTIONS**.
 

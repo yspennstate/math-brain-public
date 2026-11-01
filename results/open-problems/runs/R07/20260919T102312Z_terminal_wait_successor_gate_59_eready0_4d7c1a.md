@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R07 CLOSABLE OUTSIDE — terminal successor-admission gate after I0077 retirement
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **I0077 PARTIAL / FULL-THREE-CLAUSE-CANDIDATE / AUDIT-PENDING / R07 RESEARCH RETIRED-HANDOFF; no lawful free READY CLOSABLE successor admitted in this run.**
 

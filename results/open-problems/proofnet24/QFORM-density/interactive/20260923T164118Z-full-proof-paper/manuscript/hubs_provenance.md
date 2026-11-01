@@ -8,7 +8,7 @@
 
 ## Source record
 
-The existing results were consolidated from the snapshot `20c8f358318f0753d3fbe1f59c04b8391c1bcb92` of `yspennstate/math-open-problems`:
+The existing results were consolidated from the snapshot `20c8f358318f0753d3fbe1f59c04b8391c1bcb92` of `private-source-repository`:
 
 - `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`;
 - sibling `counterexample_search/REPORT.md`, `degenerate_hub/REPORT.md`;

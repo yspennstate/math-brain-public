@@ -15,7 +15,7 @@ Fresh `math-research-brain/main` was resolved at run start. Owner control remain
 
 Designated partner result used at equation level:
 
-- `yspennstate/math-open-problems@612be1591c1aa5edaeb29bb6eceec7963ddbef55`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T212459Z-fleet02-B02-qform-auto11/EARLY.md`.
+- `private-source-repository@612be1591c1aa5edaeb29bb6eceec7963ddbef55`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T212459Z-fleet02-B02-qform-auto11/EARLY.md`.
 
 That source derives the exact nonzero-tail operator
 

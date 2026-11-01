@@ -1,6 +1,6 @@
 # Mandatory alpha-log control
 
-The pinned coherent-composition source is `math-open-problems` commit
+The pinned coherent-composition source is `private-source` commit
 `d6538f38b044b6206bc22764bd31859e334ed430`, file
 `coherent-balanced-composition-control/source/PROOF.md`, Git blob
 `37626caf9f1564342f8b6edfff54b3a3491fff35`. Its full prose is preserved in

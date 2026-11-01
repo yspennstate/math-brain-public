@@ -12,7 +12,7 @@ The unrestricted three-large-eigenvalue conjecture remains **OPEN**. Global cont
 
 Fresh control remained `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`. I read the complete latest standalone nine-eigenvalue source
 
-- `yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f`,
+- `private-source-repository@eeb752c8943536541b34b42b8bf48e924f4d3d2f`,
 - `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`,
 - git blob `19fb119877426b640b2c0dae19ec2f78a399fe11`, SHA-256 `bf1caf6ae4b4bc33992f501c169b5dc6c795db757b0f6089eff9991391effdf3`.
 

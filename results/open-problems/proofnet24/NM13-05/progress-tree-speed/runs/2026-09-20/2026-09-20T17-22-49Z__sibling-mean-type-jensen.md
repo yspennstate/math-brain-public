@@ -4,7 +4,7 @@ Actual runtime model: **GPT-5.6 Sol**. Applied reasoning-effort telemetry: **UNV
 
 Status: **PARTIAL / parent OPEN; NEW RESTRICTED-FAMILY THEOREM CANDIDATES pending independent review.**
 
-Repository: private `yspennstate/math-open-problems`, branch `master`.
+Repository: private `private-source-repository`, branch `master`.
 Owner root: `proofnet24/NM13-05/progress-tree-speed`.
 Controlling directive: `operations/PROGRESS20_2026-09-20.md` on `master`.
 

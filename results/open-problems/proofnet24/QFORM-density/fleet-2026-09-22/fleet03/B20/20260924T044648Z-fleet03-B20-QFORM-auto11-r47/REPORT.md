@@ -14,7 +14,7 @@ All coordinates below are literal ORIGINAL coordinates. No random variable is ro
 
 The current assembly source is fleet03/B19 r49:
 
-`yspennstate/math-open-problems@35b71af9bbf9feb9542681486f190155c71ff247`
+`private-source-repository@35b71af9bbf9feb9542681486f190155c71ff247`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T040014Z-fleet03-B19-QFORM-r49/REPORT.md`.
 
@@ -43,7 +43,7 @@ Two source-valid analytic inputs are used below.
 
 1. The physical indefinite-pair envelope from the pair-log report
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -56,7 +56,7 @@ The pair shifts may depend arbitrarily on the remaining ORIGINAL variables.
 
 2. The completed designated partner fleet04/B20 r3 result
 
-`yspennstate/math-open-problems@25ad8faaac5064b6814d51ae63d894fe97c1eac4`
+`private-source-repository@25ad8faaac5064b6814d51ae63d894fe97c1eac4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T172057Z-fleet04-B20-QFORM-r3/REPORT.md`.
 

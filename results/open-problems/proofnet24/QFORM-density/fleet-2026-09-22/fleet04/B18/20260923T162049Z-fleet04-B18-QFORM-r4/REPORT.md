@@ -9,14 +9,14 @@ Status: NEW SUPPORTING TARGET-LEVEL SPLICE; FULL QFORM OPEN. Continuity is not c
 
 Fresh brain control/sign-in: math-research-brain@af96c54d7db58dc749ab024547c305a41327881a.
 
-Applied predecessor: fleet01/B18 QFORM-NULLHUB-HEAVY-ANCHOR-PAIRLOG-v1, read at math-open-problems@8d6e85d072cd7a4c0fa9a37abe995a64109079e0, path:
+Applied predecessor: fleet01/B18 QFORM-NULLHUB-HEAVY-ANCHOR-PAIRLOG-v1, read at private-source@8d6e85d072cd7a4c0fa9a37abe995a64109079e0, path:
 
     proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/
     20260923T145330Z-fleet01-B18-qform-auto11-r34/REPORT.md
 
 Its primary input is Livshyts--Paouris--Pivovarov, "On sharp bounds for marginal densities of product measures," Israel J. Math. 216 (2016), 877--889, arXiv:1507.07949. It is used only for a normalized one-dimensional marginal of the original product source, giving density cap sqrt(2). No rotated independence or conditional-density substitution is used.
 
-The pair-log theorem is source-pinned at math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f and explicitly permits remainder-dependent affine shifts of the two original physical coordinates.
+The pair-log theorem is source-pinned at private-source@f7f0fedb2d93b46824f96cac1164af6f8a55626f and explicitly permits remainder-dependent affine shifts of the two original physical coordinates.
 
 ## Incoming theorem
 

@@ -17,7 +17,7 @@ This run proves a target-valid structural branch that was not covered by the pre
 
 The two completed external inputs actually used are:
 
-1. `QFORM-2D-PARSEVAL-PROJECTION-CAP-v1`, fleet02/B05: every two-dimensional Parseval projection of independent cap-one coordinates has density cap at most `e`. Source read at `yspennstate/math-open-problems@32e921cf63500a7118cf30724f9e67d7997185e0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T155206Z-b05-qform-779c4c9b/REPORT.md`.
+1. `QFORM-2D-PARSEVAL-PROJECTION-CAP-v1`, fleet02/B05: every two-dimensional Parseval projection of independent cap-one coordinates has density cap at most `e`. Source read at `private-source-repository@32e921cf63500a7118cf30724f9e67d7997185e0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T155206Z-b05-qform-779c4c9b/REPORT.md`.
 2. The completed fleet04/B14 physical-pair logarithmic envelope and exact finite-mixture/affine localization compiler, read at the same repository snapshot from r7 and r5. In particular the envelope is
 
 `p_Q(t) <= 2sqrt(2)/r + D^(-1/2) E log_+(2r^2/(kappa |t-R|))`,          (1.1)

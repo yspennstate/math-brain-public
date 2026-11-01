@@ -1,6 +1,6 @@
 # ProofNet24 immutable archive-health fragment — P26 — 2026-09-16 13:00:14 Asia/Jerusalem
 
-Repository: `yspennstate/math-open-problems`  
+Repository: `private-source-repository`  
 Branch: `master`  
 Track: `proofnet24/P26-proof-audit-recovery`
 

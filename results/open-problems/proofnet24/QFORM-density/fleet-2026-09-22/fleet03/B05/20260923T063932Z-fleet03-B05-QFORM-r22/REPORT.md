@@ -13,7 +13,7 @@ attacking: the uncovered indefinite two-sheet packet, with emphasis on the near-
 
 The newest owner continuation assigns B05 to the still-unpaid **indefinite two-sheet curved integral**, not the already-paid ruled one-sheet or semidefinite sectors. The useful local normal form is fleet01/B05 r26:
 
-`yspennstate/math-open-problems@b0299facc04ea0c03276dddb1a12c027aed5a946`
+`private-source-repository@b0299facc04ea0c03276dddb1a12c027aed5a946`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T033640Z-fleet01-B05-QFORM-r26/REPORT.md`.
 
@@ -81,7 +81,7 @@ for an arbitrary vector `b_G`. In particular the entire `R`-direction is already
 
 The completed rank-one affine small-ball lemma in
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`
 
 gives, for every `rho>0`,
 
@@ -239,7 +239,7 @@ This is precisely the kind of coarea routing that the correction stream demands:
 
 The completed designated partner theorem is
 
-`yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
+`private-source-repository@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`.
 
@@ -274,7 +274,7 @@ Thus the exact-double-zero survivor is forced toward simultaneous **nonatomic sl
 
 The newest required package is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 

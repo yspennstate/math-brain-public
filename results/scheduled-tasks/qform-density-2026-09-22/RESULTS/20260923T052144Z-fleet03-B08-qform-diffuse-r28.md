@@ -4,7 +4,7 @@ attacking: extend the self-matched mixed-minor Fourier branch from the 1/2 occup
 Run: `20260923T052144Z-fleet03-B08-qform-diffuse-r28`
 Status: `ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN / WITHOUT_VERIFIED_BRAIN`.
 
-Canonical mathematics: `yspennstate/math-open-problems@af8d585f3ac8b3cc243045caf6bbe65d8e956f99`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T052144Z-fleet03-B08-qform-diffuse-r28/REPORT.md`.
+Canonical mathematics: `private-source-repository@af8d585f3ac8b3cc243045caf6bbe65d8e956f99`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T052144Z-fleet03-B08-qform-diffuse-r28/REPORT.md`.
 
 New result: `QFORM-MIXED-ORDER-JENSEN-COMPILER-v1`. For a varying-order physical-minor law with mean order `kbar`, row marginals `alpha_i<=q/2`, and `kbar>2q`, the full ambient quadratic form has continuous `C0` density with
 

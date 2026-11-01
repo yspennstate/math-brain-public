@@ -75,7 +75,7 @@ Let `Z_1,Z_2,Z_3` be independent real variables with probability densities bound
 The proof uses two already-completed QFORM analytic packets, each at its literal hypotheses:
 
 1. `QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1`, scientific source
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
    `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
    For a three-dimensional original-coordinate block and a nonzero scalar pivot `a=H_ii`, it gives
 
@@ -84,7 +84,7 @@ The proof uses two already-completed QFORM analytic packets, each at its literal
    Arbitrary affine terms are included.
 
 2. `QFORM-RANK3-INDEFINITE-PAIR-PIVOT-v1`, scientific source
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
    If a physical principal pair `B` is invertible indefinite, with
    `D=|det B|`, `kappa=sigma_min(B)`, it gives
@@ -169,7 +169,7 @@ No spectral rotation of random coordinates is used.  The only aggregated variabl
 
 The designated partner result is fleet04/B18's completed sharp zero-pivot `1+2` transfer, scientific source
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 
 It states: if a cap-one scalar is genuinely independent of a two-dimensional vector of joint density cap `M`, and the active symmetric `3x3` matrix has a zero scalar pivot and is nonsingular, then
@@ -251,7 +251,7 @@ Primary published transfer:
 - Livshyts, Paouris, Pivovarov, *On sharp bounds for marginal densities of product measures*, Israel J. Math. 216 (2016), arXiv:1507.07949.
 
 Internal complete analytic dependencies:
-- `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
-- `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
-- designated partner: `yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
+- `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+- `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+- designated partner: `private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 

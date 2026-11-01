@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED.** GPT-6 / maximu
 # P03 HARD OUTSIDE — I0074 exact scope reconciliation, I0126 admission, and first extension-collision attack
 
 Run date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Entry state: `TH17_KNOWN / ROTATION_HOLD_SUCCESSOR_ADMISSION_REQUIRED`.  
 Predecessor report: `proofnet24/P03-fei/runs/2026-09-17/2026-09-17T14-41-51Z__successor-admission-hold-i0074-scope.md`, creation commit `13a765cc98915eae65fd61393457d91577ed50e6`, blob `b907861e6989298aef7b9a95f1ff58e17e5834af`.
 

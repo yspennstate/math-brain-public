@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # NM13-02 — admission delta screen 7: POSTED refresh, no source release
 
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track / namespace: `NM13-02` / `proofnet24/NM13-02/`  
 Category: `CLOSABLE OUTSIDE`  
 Run date: 2026-09-18 UTC  

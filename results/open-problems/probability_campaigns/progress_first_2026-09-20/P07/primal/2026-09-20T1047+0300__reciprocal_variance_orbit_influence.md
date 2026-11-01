@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-A — reciprocal variance and generator-orbit influence reduction
 
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured pre-write master:** `d704fd2e52a69f1ceb52fe0c2ec8fefa823e72c6`  
 **Previous own checkpoint:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1008+0300__profiled_gibbs_flat_homotopy.md`, creation commit `4c358240ab500c3c1d47a89fa018b0a10803d7bd`.  
 **Complementary checkpoint consulted:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T1028+0300__bounded_transverse_interpolation.md`. P07-B owns the Fourier-dual / exceptional-frequency and bounded-interpolation route. The present report takes a different primal/concentration route.

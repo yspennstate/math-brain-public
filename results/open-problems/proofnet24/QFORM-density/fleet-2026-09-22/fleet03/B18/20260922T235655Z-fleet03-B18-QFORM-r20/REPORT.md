@@ -18,7 +18,7 @@ The newest owner synthesis reduces the global structural debt to the strict no-p
 
 The designated completed partner is fleet04/B18 r2,
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 
@@ -201,6 +201,6 @@ The first structural debt is still to force, from arbitrary N3 data, either a di
 - Livshyts–Paouris–Pivovarov, *On sharp bounds for marginal densities of product measures*, arXiv:1507.07949.
 - Banks–Garza-Vargas–Kulkarni–Srivastava, arXiv:2005.08930, Theorem 2.1 / Corollary 2.4 (hypothesis audit only).
 - Meka–Nguyen–Vu, arXiv:1507.00829, Theorem 1.8 (hypothesis audit only).
-- Designated partner: `yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
+- Designated partner: `private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 
 Repository synchronization is not native mathematical-brain ingestion; status remains `WITHOUT_VERIFIED_BRAIN`.

@@ -20,7 +20,7 @@ then
 
 `||p_W||_infinity <= 3*2^(2/3) M_U^(2/3) M_2^(2/3) |a|^(-2/3)|b|^(-1/3)`.  (1.1)
 
-Its selected-coordinate application paid `|Delta_jk|^(-2/3)` even though the total pair-Pluecker mass equals one. Fleet02/B05 then proved `QFORM-2D-PARSEVAL-PROJECTION-CAP-v1`: every two-dimensional orthonormal projection of an arbitrary product law with scalar density caps one has joint density at most `e`, and used (1.1) to close the aggregate **zero-leakage** branch. Source: `yspennstate/math-open-problems@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T155206Z-b05-qform-779c4c9b/REPORT.md`.
+Its selected-coordinate application paid `|Delta_jk|^(-2/3)` even though the total pair-Pluecker mass equals one. Fleet02/B05 then proved `QFORM-2D-PARSEVAL-PROJECTION-CAP-v1`: every two-dimensional orthonormal projection of an arbitrary product law with scalar density caps one has joint density at most `e`, and used (1.1) to close the aggregate **zero-leakage** branch. Source: `private-source-repository@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T155206Z-b05-qform-779c4c9b/REPORT.md`.
 
 The first unpaid coarea implication was therefore to aggregate pair-Pluecker mass while retaining the true hidden leakage. The theorem below does this exactly on every block on which the leakage lies in the span of the two transverse coefficient vectors. It identifies the precise extra obstruction as a **third Pluecker / span-defect mass**.
 
@@ -267,9 +267,9 @@ Arbitrary additional spectral directions remain a separate later interaction/tru
 ## 8. Source ledger and delivery scope
 
 - Fresh control programme/revision at run start: `QFORM-DENSITY-3EIG-20260922`, `2026-09-22.5`.
-- Previous fleet03/B05 pair-sectional theorem: `yspennstate/math-open-problems@332f29e335274f2b3f81ccf92d62443b928c66cd`.
-- Completed fleet02/B05 aggregate two-dimensional projection theorem actually applied in (2.1): `yspennstate/math-open-problems@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`.
+- Previous fleet03/B05 pair-sectional theorem: `private-source-repository@332f29e335274f2b3f81ccf92d62443b928c66cd`.
+- Completed fleet02/B05 aggregate two-dimensional projection theorem actually applied in (2.1): `private-source-repository@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`.
 - Designated `fleet04/B05`: no completed current-QFORM artifact found at the source refresh; no partner result fabricated.
-- Compatible fleet04 comparison source retained from the preceding run: fleet04/B18, `QFORM-SCHUR-PIVOT-SMOOTHING-v1`, `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`.
+- Compatible fleet04 comparison source retained from the preceding run: fleet04/B18, `QFORM-SCHUR-PIVOT-SMOOTHING-v1`, `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`.
 
 Manual allowlist/privacy review of this report found only mathematical statements, public repository coordinates, run identifiers, and nonsecret control hashes. No credentials, signed URLs, private transcripts, personal data, email, Drive, scheduler IDs, or machine paths are included.

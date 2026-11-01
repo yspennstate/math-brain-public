@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # R7-01 admission diagnostic — F0137 exact source correction, clean Dirichlet test ray, and current gate
 
 Date checked: 2026-09-19 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Slot / native id: `R7-01` / `6aabe777361481919c9e614646464772`.  
 Selection shard: `sum(ord(c) for c in canonical_id) mod 7 = 0`.  
 Candidate: `F0137`; exact character sum `70+48+49+51+55 = 273 = 39*7`, hence shard 0.

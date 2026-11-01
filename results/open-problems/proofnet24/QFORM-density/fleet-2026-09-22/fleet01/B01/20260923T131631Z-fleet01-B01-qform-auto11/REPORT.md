@@ -16,7 +16,7 @@ The argument below does **not** use a law-uniform pointwise scalar estimate of t
 
 The prior B01 input actually used is the completed original-coordinate rank-two-cross/kernel-curvature theorem
 
-`yspennstate/math-open-problems@08fb05b46cdab5913d268dc42ca656a16c88a313`,
+`private-source-repository@08fb05b46cdab5913d268dc42ca656a16c88a313`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T111138Z-fleet01-B01-qform-auto11/REPORT.md`.
 
 It states that if a physical triple `H` and disjoint physical bank `J` satisfy `rank A[H,J]=2`, if `n` is a unit left-kernel vector, `V2=e_2(A[H,J]A[J,H])`, and `kappa=|n^T A[H,H] n|>0`, then
@@ -28,7 +28,7 @@ with a continuous `C_0` density. That theorem is itself proved by an averaged-fr
 
 The designated partner source used below is fleet02/B01 r42,
 
-`yspennstate/math-open-problems@2aa47367766e1b63306bec723c42fcd2899ca6ac`,
+`private-source-repository@2aa47367766e1b63306bec723c42fcd2899ca6ac`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T120442Z-fleet02-B01-qform-r42/REPORT.md`.
 
 ## 2. Rank-one-leaf packet and normalized two-frame

@@ -17,7 +17,7 @@ The current owner control read this run is revision `2026-09-22.15`, QFORM-only.
 
 The analytic predecessor actually used is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 Its q-dependent third-volume proof gives the decoupling, determinant Brascamp--Lieb datum, and sharp Hausdorff--Young row estimate. This run does not replace the exact row/column factors by the generic `e^3` relaxation.
 
@@ -27,7 +27,7 @@ The designated partner result actually applied below is
 
 from
 
-`yspennstate/math-open-problems@00e728cf7f226ccce4b41ad751d494c5c94f67ec:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T111930Z-qform/REPORT.md`.
+`private-source-repository@00e728cf7f226ccce4b41ad751d494c5c94f67ec:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T111930Z-qform/REPORT.md`.
 
 The live correction set was refreshed. In particular, no law-uniform pointwise quadratic-phase decay, independence after spectral rotation, arbitrary-joint coarea bound, positive moment of worst conditional projection-density caps, worst-fiber supremum, or uniformly good single physical minor is used.
 

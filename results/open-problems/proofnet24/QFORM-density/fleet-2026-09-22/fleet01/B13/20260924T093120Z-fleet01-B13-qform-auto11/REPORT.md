@@ -258,7 +258,7 @@ This gives a concrete structural target for the geometric inequality: a hypothet
 
 The newest completed designated partner `fleet02/B13` report used here is
 
-`math-open-problems@8645efc6fb96cefa195328f92caae05dbadb168b`
+`private-source@8645efc6fb96cefa195328f92caae05dbadb168b`
 
 at
 

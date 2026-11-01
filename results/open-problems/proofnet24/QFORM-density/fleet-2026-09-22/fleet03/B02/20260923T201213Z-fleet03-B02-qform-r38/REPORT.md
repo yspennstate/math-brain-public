@@ -16,7 +16,7 @@ The full target remains OPEN. Full-target continuity remains OPEN. The stronger 
 
 This run starts from the preceding B02 disjoint-third-compound exit and the fresh fleet02/B02 overlap identities. The previous B02 r37 report is at
 
-`yspennstate/math-open-problems@e22022bcf95596195a701305e6841116815e8b48`
+`private-source-repository@e22022bcf95596195a701305e6841116815e8b48`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T190108Z-fleet03-B02-qform-r37/REPORT.md`.
 
@@ -32,7 +32,7 @@ failure of the paid `V_0>=1/4` branch leaves at least one of `V_1,V_2,V_3` above
 
 The fresh fleet02/B02 report at
 
-`yspennstate/math-open-problems@edbef27e79cf6725a25aad1f9bbcd1e3eaf61583`
+`private-source-repository@edbef27e79cf6725a25aad1f9bbcd1e3eaf61583`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T190518Z-fleet02-B02-qform-auto11/REPORT.md`
 
@@ -210,7 +210,7 @@ and a continuous `C_0` density. This is genuine Fourier L1, not a deduction from
 
 The completed physical-principal-triple determinant theorem
 
-`yspennstate/math-open-problems@bf4ba08b75ab774aef671c62ba4898a371059c0d`
+`private-source-repository@bf4ba08b75ab774aef671c62ba4898a371059c0d`
 
 proves, uniformly in every conditioning-generated affine term,
 
@@ -226,7 +226,7 @@ Continuity and unweighted Fourier L1 are not claimed by that source. This distin
 
 The designated completed partner theorem at
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`
 
 supplies, on its exact zero-diagonal physical-triple overlap,
 
@@ -235,7 +235,7 @@ supplies, on its exact zero-diagonal physical-triple overlap,
 
 I combine it with the fresh two-hub entangled-scalar theorem from fleet01/B01,
 
-`yspennstate/math-open-problems@fc9b4cc87504114b29e17057ac2f9def3ebbabec`.
+`private-source-repository@fc9b4cc87504114b29e17057ac2f9def3ebbabec`.
 
 In that theorem's exact configuration, let
 

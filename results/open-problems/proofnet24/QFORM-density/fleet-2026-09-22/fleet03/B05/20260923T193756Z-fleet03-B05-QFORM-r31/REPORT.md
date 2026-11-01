@@ -10,15 +10,15 @@ attacking: QFORM-TWISTED-MIXED-CUT-CROSSRANK3-v1 — convert the r29/r30 residua
 
 The predecessor is
 
-`yspennstate/math-open-problems@c2141e8758b0241ad18aedc7f9fb77654ff87fde:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T190745Z-fleet03-B05-QFORM-r30/REPORT.md`.
+`private-source-repository@c2141e8758b0241ad18aedc7f9fb77654ff87fde:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T190745Z-fleet03-B05-QFORM-r30/REPORT.md`.
 
 The fresh exact-cross mechanism used and refined here is
 
-`yspennstate/math-open-problems@51d2edb29d7a4c150e4d47ed3a6685875a8483ae:proofnet24/QFORM-density/interactive/20260923T194300Z-exact-cross-rank-fourier/REPORT.md`.
+`private-source-repository@51d2edb29d7a4c150e4d47ed3a6685875a8483ae:proofnet24/QFORM-density/interactive/20260923T194300Z-exact-cross-rank-fourier/REPORT.md`.
 
 The designated partner theorem is
 
-`yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`.
+`private-source-repository@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`.
 
 No rotated eigen-coordinates are declared independent. Every split below is a split of original independent-coordinate banks.
 

@@ -3,7 +3,7 @@
 Status: `AUXILIARY_ONLY / SHARP-WITNESS_EXCLUSION`. The full unrestricted quadratic-form bounded-density conjecture remains OPEN / NOT PROVED. Continuity is separate and is not claimed here.
 
 
-Designated partner actually applied: fleet02/B17, theorem `QFORM-TWO-ORTHOGONAL-SAMESIGN-HEAVY-NOESCAPE-v1`, handoff commit `bfce8a62af9b865ff5ae0fa6a7ed3234707d14a0`, canonical report `yspennstate/math-open-problems@26ab15f7356940c8c4ef5c6eab412a38f5bb9498:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T184751Z-r12/REPORT.md`. The exact input used below is its one-coordinate cap-one square-Laplace inequality
+Designated partner actually applied: fleet02/B17, theorem `QFORM-TWO-ORTHOGONAL-SAMESIGN-HEAVY-NOESCAPE-v1`, handoff commit `bfce8a62af9b865ff5ae0fa6a7ed3234707d14a0`, canonical report `private-source-repository@26ab15f7356940c8c4ef5c6eab412a38f5bb9498:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T184751Z-r12/REPORT.md`. The exact input used below is its one-coordinate cap-one square-Laplace inequality
 
 \[
  \mathbf E\exp\{-a(\sqrt{12\ell}\,X+\sqrt{1-\ell}\,G)^2\}\le (1+2a)^{-1/2},\qquad a\ge0,

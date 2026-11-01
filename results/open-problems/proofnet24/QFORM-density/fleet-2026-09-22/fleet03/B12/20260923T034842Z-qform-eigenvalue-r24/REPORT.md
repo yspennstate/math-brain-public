@@ -21,19 +21,19 @@ The full conjecture, whose hypothesis is only N_abs(A;1)>=3, remains OPEN.
 The run consumes the following completed results at their exact scopes.
 
 1. fleet03/B12 r21, threshold-preserving original-coordinate Schur inheritance:
-   yspennstate/math-open-problems@dd754a0bfed889fd29c931b7112c8c3285fc83e8,
+   private-source-repository@dd754a0bfed889fd29c931b7112c8c3285fc83e8,
    proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T004313Z-qform-eigenvalue-r21/REPORT.md.
    A scalar physical Schur elimination loses at most one eigenvalue beyond L and does not lower the threshold L.
 
 2. fleet03/B12 r23, one-sided scalar-Schur compiler:
-   yspennstate/math-open-problems@4894ced504d555e84620c46029ed08a2af389d9f,
+   private-source-repository@4894ced504d555e84620c46029ed08a2af389d9f,
    proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T024437Z-qform-eigenvalue-r23/REPORT.md.
    If Q=a(X+m(Y))^2+R(Y) and ||p_R||_infinity<=M, then
 
        ||p_Q||_infinity <= 2 sqrt(M/|a|).                           (1.1)
 
 3. fleet04/B12, mixed-norm shear compiler:
-   yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e,
+   private-source-repository@9ce47e2a0f2c8434d901df13a218450c2189d80e,
    proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260922T192552Z-fleet04-B12-mixed-shear-r1/REPORT.md.
    For a joint density h(u,z), M(h)=int esssup_u h(u,z) dz and arbitrary measurable psi,
 
@@ -42,7 +42,7 @@ The run consumes the following completed results at their exact scopes.
    No independence of U and Z is required.
 
 4. fleet03/B04 r24, independently checked spectral-window ridge gate:
-   yspennstate/math-open-problems@a11e719b61c4be07fae4e2dcfa4d88d31812d0d9,
+   private-source-repository@a11e719b61c4be07fae4e2dcfa4d88d31812d0d9,
    proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260923T034739Z-r24/REPORT.md.
    At scale L, if P projects onto eigenspaces |lambda|>=L/256 and max_i P_ii<=1/20, then the form has a continuous C_0 density with
 

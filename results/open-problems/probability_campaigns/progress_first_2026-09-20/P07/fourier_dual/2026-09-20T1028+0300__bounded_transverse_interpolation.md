@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-B — bounded transverse Fourier interpolation replaces the full covariance-tube bottleneck
 
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured start master:** `4c358240ab500c3c1d47a89fa018b0a10803d7bd`  
 **Fresh pre-write master:** `440025cb40571d82048668eabaf795bfb11547a0`  
 **Previous own substantive report:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T0927+0300__gibbs_radial_exceptional_frequencies.md`, creation commit `4cd4938de5aea3a33a808d03c0a01fee220b93eb`.  

@@ -19,14 +19,14 @@ Fresh corrections used throughout include: law-uniform pointwise quadratic-phase
 Two completed inputs are used at their proved scopes.
 
 1. **Regularized determinant / fractional graph estimate.** From
-   `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`,
+   `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`,
    `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`:
    for a full quadratic form with an original-coordinate cross block `B=A[I,J]`, arbitrary self blocks and outside couplings, and `1<=q<2`, if the coordinate leverage of the projection onto `range(B)` on one side is at most `q/2`, then
 
    `|phi_R(t)| <= det(I + 2q t^2 BB^T/(pi^2 e^2))^(-1/(4q)).`       (2.1)
 
    The same source, together with the one-scale refinement at
-   `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+   `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
    gives for any `rho>0`
 
    `K_rho=BB^T(rho^2 I+BB^T)^(-1)`, `theta=tr K_rho`, `D=det(I+BB^T/rho^2)`,
@@ -38,7 +38,7 @@ Two completed inputs are used at their proved scopes.
    where `L_q=pi e sqrt(2/q)`. This pointwise envelope is a consequence of the product-space graph argument, not the refuted one-dimensional law-uniform Fresnel estimate.
 
 2. **Dependence-safe square kernel.** From fleet04/B18,
-   `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+   `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`:
    after completing a square in an ORIGINAL independent coordinate with coefficient `a!=0`,
 

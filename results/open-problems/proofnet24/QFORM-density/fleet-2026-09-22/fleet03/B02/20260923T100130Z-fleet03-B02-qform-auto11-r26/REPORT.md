@@ -20,7 +20,7 @@ The main analytic source is this slot's completed weighted mixed theorem
 
 `QFORM-WEIGHTED-MIXED32-FOURIER-L1-v1`,
 
-`yspennstate/math-open-problems@06f29f974c0e593ff6579199610ee2cc91c60115`,
+`private-source-repository@06f29f974c0e593ff6579199610ee2cc91c60115`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T085705Z-fleet03-B02-qform-r25/REPORT.md`.
 
@@ -28,7 +28,7 @@ The new argument below changes its input from the canonical squared-minor laws t
 
 `QFORM-EDGE-E2-CROSSDISJOINT-SHARP-HY-L1-v1`,
 
-`yspennstate/math-open-problems@3fbf0b3009498afa3985581e320f39df73b085af`,
+`private-source-repository@3fbf0b3009498afa3985581e320f39df73b085af`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/fleet02-B02-20260923T071011Z-3508bbe2/REPORT.md`.
 
@@ -38,7 +38,7 @@ The designated completed partner is fleet04/B02
 
 `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`,
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 

@@ -6,7 +6,7 @@ attacking: the exact-rank-three hybrid/near-null physical direction: consume the
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Role: Rank-three coupled case; complementary constructions/source-valid counterexamples  
 Run id: `20260923T064541Z-fleet02-B10-QFORM-auto11`  
-Math source head observed before publication: `yspennstate/math-open-problems@b39ba2509cda545075ec804aa057457d7ebd4163`.  
+Math source head observed before publication: `private-source-repository@b39ba2509cda545075ec804aa057457d7ebd4163`.  
 Execution: `WITHOUT_VERIFIED_BRAIN`.  
 Classification: `ESSENTIAL_STEP_APPLIED / LOCAL_CORRECTION / PROVED_SUPPORTING_THEOREM / TARGET-VALID TRUE-COLLAR STRESS FAMILY / FULL QFORM OPEN`.
 
@@ -18,7 +18,7 @@ The latest completed designated-partner source is fleet03/B10 r24,
 
 `QFORM-NEARCOLOOP-MIXED-TRANSVERSE-EXCISION-v1`,
 
-`yspennstate/math-open-problems@06f180467d43940acc1f939e216db2e23b7d7c88`,
+`private-source-repository@06f180467d43940acc1f939e216db2e23b7d7c88`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T044329Z-fleet03-B10-QFORM-r24/REPORT.md`.
 
@@ -48,7 +48,7 @@ Thus as the physical Rayleigh pivot `alpha` tends to zero, the mixed bank must c
 
 The required newest-Claude ruled theorem from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`,
 
@@ -72,7 +72,7 @@ while `(1-rho_M)|alpha|<1/32` once `m` is large enough, so r24 actually pays tha
 
 I use the completed physical-triple theorem recorded in fleet02/B16,
 
-`yspennstate/math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`,
+`private-source-repository@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T232932Z-fleet02-B16-QFORM-auto11/REPORT.md`.
 

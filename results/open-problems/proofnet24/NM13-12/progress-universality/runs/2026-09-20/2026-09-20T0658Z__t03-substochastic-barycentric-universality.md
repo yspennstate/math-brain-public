@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 
 # NM13-12 — sub-stochastic barycentric universality for dependent full-rank negative-perceptron constraints
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Owner policy: `operations/PROGRESS20_2026-09-20.md` and current LIVE20 mapping  
 Worker: `NM13-12` / `proofnet24/NM13-12/progress-universality`  
 Applied parent: **T03 negative spherical perceptron, kappa=-1, exact unit sphere**  

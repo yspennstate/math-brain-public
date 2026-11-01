@@ -2,7 +2,7 @@
 
 Status: **PARTIAL on the parent Grimmett–Winkler conjecture / CANDIDATE_FULL for the restricted theorem below, pending independent review.** The arbitrary-finite-graph uniform-all-forests problem remains **OPEN**.
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Runtime request/status: GPT-6 maximum was requested. Authenticated applied model/effort telemetry is **UNVERIFIED**. The surrounding chat runtime identifies GPT-5.6 Sol, but that is not authenticated scheduler telemetry, so no GPT-6/maximum claim is made.
 

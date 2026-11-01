@@ -18,7 +18,7 @@ Fresh control was read on `yspennstate/math-research-brain` main. The prewrite c
 `d3cdecfa1c922008cf324d5755de69578cebfa74`,
 
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`
 
 at
 
@@ -34,7 +34,7 @@ The newest completed `fleet02/B09` result available before publication is run
 
 canonical proof
 
-`yspennstate/math-open-problems@0cb1fed576ea640d3458dce48470f09346c6e216`
+`private-source-repository@0cb1fed576ea640d3458dce48470f09346c6e216`
 
 at
 

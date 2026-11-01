@@ -15,9 +15,9 @@ This report closes the **minority-Rayleigh heavy-coordinate branch away from the
 
 ## Sources and live corrections consumed
 
-1. Assigned partner fleet03/B11, canonical report `yspennstate/math-open-problems@860d849b7f2e0198bf7c3531a71b14e59f03e430`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T121353Z-fleet03-B11-QFORM-r11/REPORT.md`. I use its dependence-safe Abel smoothing principle and retain its warning that the opposite-sign binary law may have logarithmically unbounded density while its one-sided half-potential is bounded.
-2. fleet01/B08 fractional-frame Brascamp--Lieb handoff, canonical report `yspennstate/math-open-problems@ee1aca0375b477075657b02ab0e2096c`, supplying the same sharp Hausdorff--Young / geometric Brascamp--Lieb normalization used below. (The linear-projection lemma is reproved here.)
-3. Regularized-determinant supporting theorem `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`; it closes diffuse entire-range geometry but not the heavy-coordinate bridge.
+1. Assigned partner fleet03/B11, canonical report `private-source-repository@860d849b7f2e0198bf7c3531a71b14e59f03e430`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T121353Z-fleet03-B11-QFORM-r11/REPORT.md`. I use its dependence-safe Abel smoothing principle and retain its warning that the opposite-sign binary law may have logarithmically unbounded density while its one-sided half-potential is bounded.
+2. fleet01/B08 fractional-frame Brascamp--Lieb handoff, canonical report `private-source-repository@ee1aca0375b477075657b02ab0e2096c`, supplying the same sharp Hausdorff--Young / geometric Brascamp--Lieb normalization used below. (The linear-projection lemma is reproved here.)
+3. Regularized-determinant supporting theorem `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`; it closes diffuse entire-range geometry but not the heavy-coordinate bridge.
 4. Live correction inbox at brain control commit `da63bbaba29461947597c208482f78df70fb4e59`, including `QFORM-UV-CONDITIONAL-CAP-FALSE`, `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`, and `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`. No conditional-cap claim for a conjugate rotated pair is used below.
 
 ## 1. A two-dimensional projection-density lemma

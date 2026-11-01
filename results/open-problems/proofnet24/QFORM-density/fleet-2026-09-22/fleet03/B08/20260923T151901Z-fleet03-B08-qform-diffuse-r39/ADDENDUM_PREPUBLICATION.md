@@ -2,7 +2,7 @@
 
 Before publication I discovered and read the chronologically prior completed B08 run
 
-`yspennstate/math-open-problems@b7556cdf6324f77477282920e1905de61003e86a`
+`private-source-repository@b7556cdf6324f77477282920e1905de61003e86a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T144913Z-fleet03-B08-qform-diffuse-r40/REPORT.md`.
 

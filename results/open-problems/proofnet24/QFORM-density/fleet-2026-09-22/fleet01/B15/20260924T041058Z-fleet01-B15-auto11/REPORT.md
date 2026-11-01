@@ -16,7 +16,7 @@ All conditioning and independence statements below refer only to disjoint ORIGIN
 
 The designated partner result used below is source-pinned at
 
-`yspennstate/math-open-problems@dbd7533d035ea02a097cf9ff573e9a5d65038f7a`
+`private-source-repository@dbd7533d035ea02a097cf9ff573e9a5d65038f7a`
 
 path
 

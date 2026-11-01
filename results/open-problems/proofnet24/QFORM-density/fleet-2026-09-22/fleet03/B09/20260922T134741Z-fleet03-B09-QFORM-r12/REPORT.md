@@ -14,8 +14,8 @@ This report uses only original-coordinate conditioning. It does not rotate the r
 
 The designated partner `fleet04/B09` had no completed current-QFORM handoff or research directory at the final pre-publication check, so no partner result is fabricated or awaited. I instead apply two completed compatible proof-level dependencies:
 
-1. `QFORM-CROSSBLOCK-RANK-r-FOURIER-v1`, `yspennstate/math-open-problems@8624982153e5a2154e4ae8922d2fe4dc77080efc`, `proofnet24/QFORM-density/fleet-2026-09-22/interactive/20260922T121109Z-crossblock-and-lower-bounds/REPORT.md`;
-2. fleet03/B02 `QFORM-SCHUR-2PLUS1-POTENTIAL-v1`, `yspennstate/math-open-problems@2e9ab3bfa05919cd9115fc5f6285ee0683adfb7c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T130245Z-fleet03-B02-QFORM-r11/REPORT.md`.
+1. `QFORM-CROSSBLOCK-RANK-r-FOURIER-v1`, `private-source-repository@8624982153e5a2154e4ae8922d2fe4dc77080efc`, `proofnet24/QFORM-density/fleet-2026-09-22/interactive/20260922T121109Z-crossblock-and-lower-bounds/REPORT.md`;
+2. fleet03/B02 `QFORM-SCHUR-2PLUS1-POTENTIAL-v1`, `private-source-repository@2e9ab3bfa05919cd9115fc5f6285ee0683adfb7c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T130245Z-fleet03-B02-QFORM-r11/REPORT.md`.
 
 The first gives the exact rank-two mixed-Fourier endpoint used below. The second supplies the one-dimensional square-potential estimate and shows how a physical pivot can be completed without falsely creating independence.
 

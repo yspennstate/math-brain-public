@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R15 CLOSABLE OUTSIDE — successor admission, Talagrand threshold free-energy bound
 
 Date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity and exclusions
 

@@ -14,7 +14,7 @@ attacking: rough-input regularity bridge on positive annuli; apply the completed
 
 The full theorem is still OPEN. The most economical exact unpaid statement now comes from the completed assigned-partner result fleet03/B15 auto11,
 
-`yspennstate/math-open-problems@a86bb095aac440bd79e2b2c26b23228ac952d2ab`.
+`private-source-repository@a86bb095aac440bd79e2b2c26b23228ac952d2ab`.
 
 For every probability law `mu` on `R`, with value `+infinity` when no bounded density exists,
 
@@ -32,7 +32,7 @@ This is the first unpaid implication. Continuity is not used to infer the height
 
 The required Claude source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 especially `COUNTEREXAMPLE_SEARCH.md`, Theorem C. I checked the geometric constant directly.
 
@@ -156,7 +156,7 @@ Thus the free center `y` can move any bad two-sheet interval into the annulus. T
 
 I now combine the completed fleet03/B15 annular theorem with the completed fleet03/B15 phase-aligned target construction
 
-`yspennstate/math-open-problems@a5094ce57d028af28c2c114f92ca26ac277d4cec`.
+`private-source-repository@a5094ce57d028af28c2c114f92ca26ac277d4cec`.
 
 That source gives, for every large frequency `s`, a smooth compactly supported cap-one density `f_s` on `(1,10)` such that, for three iid coordinates and the fixed target matrix `A=I_3`, the output
 
@@ -258,7 +258,7 @@ No moment, support, log-concavity, identical-law, spectral-coordinate independen
 
 ## Sources actually consumed
 
-- assigned partner annular normal form: `math-open-problems@a86bb095aac440bd79e2b2c26b23228ac952d2ab`;
-- assigned partner phase-aligned regularity obstruction: `math-open-problems@a5094ce57d028af28c2c114f92ca26ac277d4cec`;
-- required Claude source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`;
+- assigned partner annular normal form: `private-source@a86bb095aac440bd79e2b2c26b23228ac952d2ab`;
+- assigned partner phase-aligned regularity obstruction: `private-source@a5094ce57d028af28c2c114f92ca26ac277d4cec`;
+- required Claude source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`;
 - live corrections include `QFORM-TWOSHEET-XRAY-ONLY-FALSE`, `QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1`, conditional-cap/moment failures, no post-rotation independence, no uniform pointwise quadratic-phase decay, and no uniformly good single physical minor.

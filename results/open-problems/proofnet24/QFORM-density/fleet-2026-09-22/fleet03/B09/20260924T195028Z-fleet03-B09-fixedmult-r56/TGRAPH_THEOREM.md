@@ -4,7 +4,7 @@ attacking: rank-one common-heavy near-zero hub and s7 structural closure; audit 
 # QFORM-RANKONE-TGRAPH-L1-v1
 
 Run: 20260924T195028Z-fleet03-B09-fixedmult-r56.
-Source input: yspennstate/math-open-problems@2688a04edbcc2792f33f4069f6582a3c89383846, proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T181608Z-fleet03-B09-fixedmult-r54/S7_TWOSTAR_PROOF.md.
+Source input: private-source-repository@2688a04edbcc2792f33f4069f6582a3c89383846, proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T181608Z-fleet03-B09-fixedmult-r54/S7_TWOSTAR_PROOF.md.
 Status: supporting theorem; s7 and full s3 remain open.
 
 Let the ORIGINAL coordinates split as {h} disjoint union L disjoint union R disjoint union W. Condition on X_W. Suppose A[L,R]=u v^T has exact rank one. Put c=A[L,h], r=A[R,h] and

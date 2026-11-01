@@ -64,7 +64,7 @@ Treat `h_1` as the physical hub, take the active leaf bank `I=I_a union I_c`, an
 
 while the hub-to-leaf column is `k a`; the hub self coefficient `k^-1` is allowed to remain arbitrary by Theorem H. The augmented frame `[c,k a]` has Gram determinant `k^2`, while its whitened rows are `[c,a]`, each of leverage `1/m<=1/2`.
 
-The owner-required Theorem H at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` therefore gives
+The owner-required Theorem H at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` therefore gives
 
 `|phi_(Q_k)(t)| <= 4 pi^(3/2) k^(-1) |t|^(-3/2)`.
 

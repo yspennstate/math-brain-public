@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning: UNVERIFIED — not GPT-6 maximum.*
 # R15 CLOSABLE OUTSIDE — successor admission beyond the two retired targets
 
 Date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity: do not reopen I0076 or CL-B
 

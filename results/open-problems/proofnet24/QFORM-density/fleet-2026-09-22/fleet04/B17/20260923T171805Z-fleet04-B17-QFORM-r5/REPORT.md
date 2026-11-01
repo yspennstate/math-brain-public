@@ -110,7 +110,7 @@ a bounded-fragment reduction.
 ## Actual fleet01/B17 input and what changed
 
 The exact base value and matrix are from
-`yspennstate/math-open-problems@e83d0cc194d791acf31d6c86245204887cfd8171`,
+`private-source-repository@e83d0cc194d791acf31d6c86245204887cfd8171`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260923T144233Z-fleet01-B17-QFORM-auto11/REPORT.md`.
 The later fleet01/B17 classification at commit
 `829192412f2a2d84e72b4bed91115fc5fab68401` identifies fragmented and

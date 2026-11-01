@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-03 — admission delta screen 21: fresh claims are already owned; no residue-2 CLOSABLE release
 
 Run date: 2026-09-18 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Track / namespace: `proofnet24/NM13-03/`  
 Category: `CLOSABLE OUTSIDE`  
 Exclusive shard: `int(SHA256(UTF-8 canonical_dedup_key).hexdigest(),16) mod 13 = 2`

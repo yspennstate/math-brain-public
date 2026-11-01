@@ -20,7 +20,7 @@ This proof does **not** rotate the random variables, does **not** convolve a dep
 
 The newest completed designated partner result was read in full at
 
-`yspennstate/math-open-problems@639e7e151f5d8b83be56a2c6093257fe83deddc3`,
+`private-source-repository@639e7e151f5d8b83be56a2c6093257fe83deddc3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T093023Z-fleet02-B12-QFORM-auto11/REPORT.md`.
 

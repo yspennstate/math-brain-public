@@ -18,7 +18,7 @@ obeys
 
 `F(A)>=s_1(E)^2+s_2(E)^2+s_3(E)^2>=3(1-tau)^2`.                 (C.1)
 
-The completed fleet02/B01 weighted-Fourier theorem (`math-open-problems@ad18e7e072cdbb4b015e8363fe49a7e047533370`) states for every `0<beta<1/2`, every affine term, and arbitrary independent cap-one physical inputs,
+The completed fleet02/B01 weighted-Fourier theorem (`private-source@ad18e7e072cdbb4b015e8363fe49a7e047533370`) states for every `0<beta<1/2`, every affine term, and arbitrary independent cap-one physical inputs,
 
 `W_beta(Q):=integral_R |t|^(beta-1)|phi_Q(t)|dt`
 ` <=K_beta F(A)^(-beta/2)`,

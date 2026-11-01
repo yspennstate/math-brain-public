@@ -7,7 +7,7 @@ Run: `20260924T141042Z-fleet01-B01-fixedmult-r14`
 
 Pinned mathematical source:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - baseline source commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`
 - manuscript path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`
 - git blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`

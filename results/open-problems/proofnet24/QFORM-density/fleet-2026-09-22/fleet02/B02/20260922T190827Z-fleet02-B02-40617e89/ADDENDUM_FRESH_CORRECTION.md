@@ -1,6 +1,6 @@
 # Fresh-correction compatibility addendum
 
-After `REPORT.md` was archived, fresh event `QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1` appeared at brain commit `6f841c38ee2ac5d6456851e23e01f574bb2ba5b8`, with canonical math source `yspennstate/math-open-problems@b74210c7e963a11c1f0532f98f5d705278967cd1`. It shows that a merely small nonzero scalar Schur diagonal plus a fixed cross-row norm does not give a uniform endpoint half-Riesz bound: the rank-one quadratic form
+After `REPORT.md` was archived, fresh event `QFORM-NEAR-ZERO-HALF-RIESZ-ONLY-FALSE-v1` appeared at brain commit `6f841c38ee2ac5d6456851e23e01f574bb2ba5b8`, with canonical math source `private-source-repository@b74210c7e963a11c1f0532f98f5d705278967cd1`. It shows that a merely small nonzero scalar Schur diagonal plus a fixed cross-row norm does not give a uniform endpoint half-Riesz bound: the rank-one quadratic form
 
 `epsilon X^2+2XY+epsilon^(-1)Y^2 = epsilon (X+Y/epsilon)^2`
 

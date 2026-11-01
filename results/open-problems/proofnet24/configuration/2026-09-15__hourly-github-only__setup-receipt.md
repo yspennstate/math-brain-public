@@ -1,7 +1,7 @@
 # Setup receipt: 20 hourly research tasks, GitHub-only delivery
 
 Date: 2026-09-15. User timezone: Asia/Jerusalem.
-Repository: yspennstate/math-open-problems. Branch: master.
+Repository: private-source-repository. Branch: master.
 
 ## Verified changes
 

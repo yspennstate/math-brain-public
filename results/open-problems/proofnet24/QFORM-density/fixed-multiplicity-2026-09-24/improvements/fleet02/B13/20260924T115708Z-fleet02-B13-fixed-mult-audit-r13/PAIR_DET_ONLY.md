@@ -165,7 +165,7 @@ Thus no determinant-only conditional `L^infty` bound can replace the logarithmic
 
 ## Pinned fifth-volume cross-check
 
-The required pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` proves
+The required pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` proves
 
 \[
 \|p_Q\|_\infty\le5\sqrt{2e}\,Z_5^{-1/10}

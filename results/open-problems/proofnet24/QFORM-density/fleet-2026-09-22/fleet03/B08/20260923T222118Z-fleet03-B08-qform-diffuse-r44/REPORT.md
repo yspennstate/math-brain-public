@@ -21,7 +21,7 @@ The final prepublication owner refresh is
 
 The analytic engine actually used is the independently reviewed grouped projected-crossing theorem
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 For `k=2`, `ell=1`, its formula `(GC)` says the following. Let two original hub variables couple through a rank-two arm `M_J` to a selected physical light set `J`; let
@@ -44,12 +44,12 @@ Its characteristic-function majorant is integrable (`|t|^{-3/2}`), so this branc
 
 Two completed neighbour results explain why the present endpoint is the right one to attack.
 
-* `fleet01/B19`, `math-open-problems@80415fc95c0b84bf12c30711f83f22c04bb4900a`, proves a uniform receiver for every **nonzero** common-plane Schur mismatch, including rank-one degeneration. The exact zero-mismatch surface remains.
-* `fleet02/B08`, `math-open-problems@fc3b9a4f04112672734f037b19358256b50c0a08`, constructs a target-valid exact-match stress family in that remaining surface: the hub pair may be arbitrarily ill-conditioned, both arm areas equal one, the post-pair cross block is exactly zero, and the missing third curvature is a diffuse same-bank square.
+* `fleet01/B19`, `private-source@80415fc95c0b84bf12c30711f83f22c04bb4900a`, proves a uniform receiver for every **nonzero** common-plane Schur mismatch, including rank-one degeneration. The exact zero-mismatch surface remains.
+* `fleet02/B08`, `private-source@fc3b9a4f04112672734f037b19358256b50c0a08`, constructs a target-valid exact-match stress family in that remaining surface: the hub pair may be arbitrarily ill-conditioned, both arm areas equal one, the post-pair cross block is exactly zero, and the missing third curvature is a diffuse same-bank square.
 
 The designated partner result consumed below is
 
-`fleet04/B08`, `math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76`,
+`fleet04/B08`, `private-source@a5e66e2944c89857a41d5e18c283d53a4307be76`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T212412Z-fleet04-B08-QFORM-r2/REPORT.md`.
 
 ## 2. First essential implication: common-plane curvature cancels under a physical projection
@@ -400,7 +400,7 @@ The unresolved issue is **simultaneous** selection after projection: one still h
 
 The newest completed designated partner `fleet04/B08` theorem is `QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1` at
 
-`math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76`.
+`private-source@a5e66e2944c89857a41d5e18c283d53a4307be76`.
 
 Apply it to the same current ambient matrix after deleting one ORIGINAL coordinate. If the physical child matrix `C_h` has at least three eigenvalues of modulus at least
 
@@ -424,7 +424,7 @@ Thus a diffuse three-child spectral window is independently paid. Failure of thi
 
 For reference, the older fleet04/B08 anisotropic direct-sum theorem remains valid at
 
-`math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`,
+`private-source@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`,
 
 with `<7.251/L`; it is not generalized beyond its proved scope here.
 

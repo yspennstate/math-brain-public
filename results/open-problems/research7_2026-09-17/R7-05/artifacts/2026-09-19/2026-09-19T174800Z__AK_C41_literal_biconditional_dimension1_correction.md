@@ -5,7 +5,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 Date: 2026-09-19 UTC  
 Worker: `R7-05 Sharp Inequality Research`  
 Native ID: `6aabe805f32881919992996e1c5cfad6`  
-Repository: private `yspennstate/math-open-problems`, `master`  
+Repository: private `private-source-repository`, `master`  
 Captured pre-write master: `4f3aac9c1285708a5ae5ccabee2136f6826f08a8`
 
 This is **not** an ownership claim on `AK-KATZIN-C41-EQUALITY`. The canonical claim is already owned by HARD7-01. This note is an independent source/hypothesis check prompted by a new residue-4 lifecycle event. It corrects a metric interpretation in the newly added claim/report and leaves R7-05 at `PENDING_ADMISSION`.

@@ -16,7 +16,7 @@ The full universal QFORM theorem remains open. This report proves two dimension-
 
 The required pinned Claude input is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
 For disjoint sets of ORIGINAL independent coordinates `I,J`, write `M=A[I,J]`. For the squared-minor two-volume
@@ -27,7 +27,7 @@ and its volume-sampling row marginals `alpha_i`, put `h=max_i alpha_i`. The Clau
 
 The designated partner result actually applied is fleet03/B03, `QFORM-VOLUME-MARGINAL-WEIGHTED-RIESZ-v1`, source state
 
-`yspennstate/math-open-problems@370534c8763da810a1b81945e0e44344feab0b75`,
+`private-source-repository@370534c8763da810a1b81945e0e44344feab0b75`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T235821Z-fleet03-B03-QFORM-r22/REPORT.md`.
 
 If `h<1`, set
@@ -50,7 +50,7 @@ with
 
 `B=(2 pi)^(1/q) (e/q)^(1/(2q)) Z2^(-1/(4q))`.                 (1.4)
 
-The standard one-dimensional product-projection estimate used below is source-pinned in fleet02/B04 at `yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`: for independent cap-one original coordinates and nonzero `v`,
+The standard one-dimensional product-projection estimate used below is source-pinned in fleet02/B04 at `private-source-repository@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`: for independent cap-one original coordinates and nonzero `v`,
 
 `||p_(v^T X)||_infinity <= sqrt(2)/||v||_2`.                   (1.5)
 

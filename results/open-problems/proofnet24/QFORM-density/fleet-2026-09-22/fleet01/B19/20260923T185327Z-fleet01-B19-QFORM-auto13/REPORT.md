@@ -18,7 +18,7 @@ All live route corrections are retained. In particular, nothing here uses indepe
 
 The immediate own predecessor is
 
-`yspennstate/math-open-problems@7090e82b1b4a32ef9c3fb8d1dac4c04eb2304d8b`,
+`private-source-repository@7090e82b1b4a32ef9c3fb8d1dac4c04eb2304d8b`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260923T174847Z-fleet01-B19-QFORM-auto12/REPORT.md`.
 
@@ -40,7 +40,7 @@ It supplies an original-coordinate quarter split whenever each of the three two-
 
 The designated partner source is fleet02/B19 r36,
 
-`yspennstate/math-open-problems@9157730c1b552b81f58b3cb6ef604b687962e548`,
+`private-source-repository@9157730c1b552b81f58b3cb6ef604b687962e548`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T160847Z-fleet02-B19-QFORM-r36/REPORT.md`,
 
@@ -71,7 +71,7 @@ then
 
 The completed marginal-free physical-E3 Fourier theorem, fleet03/B02 r35,
 
-`yspennstate/math-open-problems@52cef3abd27c641ae6666d6ee3bbc25d90cb4813`,
+`private-source-repository@52cef3abd27c641ae6666d6ee3bbc25d90cb4813`,
 
 gives for every literal original-coordinate cross block `M_phys` with
 

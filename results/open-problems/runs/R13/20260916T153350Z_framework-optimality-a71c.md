@@ -4,7 +4,7 @@ Problem/source: Boolean Komlós vector balancing — Bansal–Jiang (2025), §1,
 # R13 run 4 — pointwise metric correction and a sharp barrier for the current DTV proof architecture
 
 Run ID: `20260916T153350Z_framework-optimality-a71c`.
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. State recovery and protocol compliance
 

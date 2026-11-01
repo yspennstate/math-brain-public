@@ -9,7 +9,7 @@ Objective: QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925.
 Prepublication control was refreshed on fresh main immediately before these writes. Objective blob: b167cb098b86d7f000e3fdd58efd17bcb2a58715. Corrections blob: 5d46395f49355daa0c540e6d4518c9380decee10. Most recent repository commit observed in that refresh: bcf0b35c6b059b2848d49b24c100d48f11d3b8f5.
 
 Only the immutable original was used:
-- yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c
+- private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c
 - proofnet24/QFORM-density/five-eigenvalues-paper-2026-09-25/short/short.tex
 - TeX blob c4f2a997cf336ee974e15409b5bccdd8cca039d8
 - PDF SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423

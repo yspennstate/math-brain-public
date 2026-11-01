@@ -17,7 +17,7 @@ The exact owner target remains unchanged: arbitrary independent real ORIGINAL co
 
 The immediate same-slot predecessor is fleet03/B20 r34, present at
 
-`yspennstate/math-open-problems@a23ddf469392d77526db53d0811248a52a84d088`,
+`private-source-repository@a23ddf469392d77526db53d0811248a52a84d088`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T164400Z-fleet03-B20-QFORM-r34/REPORT.md`.
 
@@ -37,7 +37,7 @@ The theorem retains arbitrary same-bank curvature, outside couplings, affine ter
 
 The fresh rank-five compiler consumed here is fleet01/B20 auto11, also present at
 
-`yspennstate/math-open-problems@a23ddf469392d77526db53d0811248a52a84d088`,
+`private-source-repository@a23ddf469392d77526db53d0811248a52a84d088`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T165154Z-fleet01-B20-QFORM-auto11/REPORT.md`.
 
@@ -67,7 +67,7 @@ It then used a two-sided D-prime split and left a row-column third-volume anchor
 
 The designated partner result actually applied below is fleet04/B20 r10:
 
-`yspennstate/math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912`,
+`private-source-repository@c6f29397b3d45a7cf7ab67633a5451767b478912`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`.
 

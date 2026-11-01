@@ -15,7 +15,7 @@ The owner target remains: for every finite `n`, independent real original-coordi
 
 The run began by targeting aggregate disjoint-tetrad half-Riesz currency. Fresh source resolution found that fleet01/B01 had already completed exactly that scope before this proof was written:
 
-`yspennstate/math-open-problems@0d074396abdd021a817f0b8dc104b826f2d7154d`
+`private-source-repository@0d074396abdd021a817f0b8dc104b826f2d7154d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260924T072033Z-fleet01-B01-qform-auto11-r15/REPORT.md`.
 
@@ -36,7 +36,7 @@ It also proves the exact scalar-Schur transfer to rooted overlap-one physical `3
 
 A second input is the preceding fleet03/B01 theorem
 
-`yspennstate/math-open-problems@7b617d334690a672477a5cd834bf27731d262ef4`
+`private-source-repository@7b617d334690a672477a5cd834bf27731d262ef4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260924T063007Z-fleet03-B01-qform-auto11-r46/REPORT.md`.
 
@@ -220,7 +220,7 @@ This still grows with `T`, so it is **not** an `L^infinity` density proof. Its v
 
 The completed fleet04/B01 theorem used here is
 
-`yspennstate/math-open-problems@f7e82d169badc671968036252d351b8533cdd425`
+`private-source-repository@f7e82d169badc671968036252d351b8533cdd425`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260924T012155Z-fleet04-B01-lr-residual-r1/REPORT.md`.
 

@@ -7,7 +7,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Owner control revision: `2026-09-22.15
 
 Status: **ESSENTIAL STEP APPLIED / NEW SUPPORTING STRUCTURAL THEOREM. The unrestricted QFORM conjecture remains OPEN / NOT PROVED / NOT DISPROVED. Unrestricted continuity remains separately OPEN.**
 
-Fresh source refresh before this write: `yspennstate/math-research-brain@eb02983a8a6dabc4cfc31eea56667692545ea766`; fresh `math-open-problems/master` head observed as `c4610f778836a217009f7d1c773b5e7cd3788f50`. The current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` remains in force; no B13 stop was found.
+Fresh source refresh before this write: `yspennstate/math-research-brain@eb02983a8a6dabc4cfc31eea56667692545ea766`; fresh `private-source/master` head observed as `c4610f778836a217009f7d1c773b5e7cd3788f50`. The current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` remains in force; no B13 stop was found.
 
 No random-coordinate rotation is used. No law-uniform pointwise quadratic oscillatory decay, arbitrary-joint coarea bound, projection-density-only shortcut, interval extremality, bounded support diameter, bounded fragment count, or deletion of a small coefficient tail is used.
 
@@ -15,7 +15,7 @@ No random-coordinate rotation is used. No law-uniform pointwise quadratic oscill
 
 1. My preceding grouped-hub theorem, `QFORM-GROUPED-HUB-3LEAF-TRANSVERSE-v1`, is source-pinned at
 
-`yspennstate/math-open-problems@38a8a2ae1cb319211ab4be60f6f8d6f7f03f85f9`
+`private-source-repository@38a8a2ae1cb319211ab4be60f6f8d6f7f03f85f9`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T223205Z-fleet01-B13-qform-auto11/REPORT.md`.
 
@@ -43,13 +43,13 @@ The statement works for arbitrary cap-one product laws and retains the whole com
 
 2. The latest completed designated partner result is fleet02/B13 r37, source-pinned at
 
-`yspennstate/math-open-problems@4a8e12f1956a541cbd8a03961c29de79d1b12592`
+`private-source-repository@4a8e12f1956a541cbd8a03961c29de79d1b12592`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T225517Z-fleet02-B13-qform-r37/REPORT.md`.
 
 It consumes fleet03/B13 r36, source-pinned at
 
-`yspennstate/math-open-problems@a558625206539a6eaee5aa6b2c6d851ccd2f1990`
+`private-source-repository@a558625206539a6eaee5aa6b2c6d851ccd2f1990`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T223116Z-fleet03-B13-qform-r36/REPORT.md`.
 

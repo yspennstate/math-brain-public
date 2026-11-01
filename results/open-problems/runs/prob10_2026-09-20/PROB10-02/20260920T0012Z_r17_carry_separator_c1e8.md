@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # PROB10-02 / R17 — carry-factorized correlated strip process and a spatial Bellman separator
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Controlling owner directive: `operations/PROB10_2026-09-20.md`.
 

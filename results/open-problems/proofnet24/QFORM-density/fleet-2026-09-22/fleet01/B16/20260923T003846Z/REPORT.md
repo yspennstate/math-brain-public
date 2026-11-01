@@ -10,10 +10,10 @@ attacking: projection-product interaction at a nonzero near-null spectral coloop
 The target is: for independent real `X_i` with probability densities at most one and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove one dimension-independent finite constant bounding the density of `X^T A X`. No moment, identical-law, support, sign, or log-concavity assumptions are available.
 
 
-Required newest-Claude source read and used: `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`, with the underlying later Claude route `2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926`. In particular I preserve the determinant-only physical-pair theorem and the reduction to the still-open strict no-pivot problem `N3`; neither is treated as the full solution.
+Required newest-Claude source read and used: `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`, with the underlying later Claude route `2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926`. In particular I preserve the determinant-only physical-pair theorem and the reduction to the still-open strict no-pivot problem `N3`; neither is treated as the full solution.
 
 The fractional estimate used below is the completed `QFORM-RANK2-AFFINE-HALF-RIESZ-v1` at
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`:
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`:
 for an invertible symmetric two-dimensional quadratic coefficient `K`, independent cap-one scalar inputs, and arbitrary affine terms,
 
 `sup_t E |Z^T K Z + linear - t|^(-1/2) <= 16 sqrt(30) |det K|^(-1/4)`
@@ -21,7 +21,7 @@ for an invertible symmetric two-dimensional quadratic coefficient `K`, independe
 when the affine term lies in the two-dimensional range (in particular for an actual two-variable quadratic). The general arbitrary-original-affine version has constant 128, but the sharper constant is valid in the two-variable use below.
 
 The newest completed designated partner result actually consumed is fleet02/B16 run `20260923T003232Z-fleet02-B16-QFORM-r21`, canonical mathematics
-`yspennstate/math-open-problems@45bff099504543528c3c7c78fba03f1b8cafeb16:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T003232Z-fleet02-B16-QFORM-r21/REPORT.md`.
+`private-source-repository@45bff099504543528c3c7c78fba03f1b8cafeb16:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T003232Z-fleet02-B16-QFORM-r21/REPORT.md`.
 It proves, using the newest mixed-Fresnel theorem and full original-leaf product factorization, that the strict-N3 family
 
 `Q_{m,delta}=delta X_0^2 + 2 sqrt(1+|delta|) X_0 Y + Z^2`
@@ -275,7 +275,7 @@ Thus the partner's full-product mixed-Fresnel theorem improves the cap-only cros
 
 ## 6. Interaction with the previous fleet02/B16 Pluecker theorem
 
-The preceding completed fleet02/B16 theorem `QFORM-DISJOINT-PLUECKER-TWO-BANK-v1`, canonical `math-open-problems@229bfc27cc54adbfdc259c822d11f078483cedee`, gives for exact rank three
+The preceding completed fleet02/B16 theorem `QFORM-DISJOINT-PLUECKER-TWO-BANK-v1`, canonical `private-source@229bfc27cc54adbfdc259c822d11f078483cedee`, gives for exact rank three
 
 `||p_Q||_infinity <=6e |det Lambda|^(-1/3) D_disj^(-1/6)`           (6.1)
 

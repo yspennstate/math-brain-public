@@ -46,7 +46,7 @@ This collision integral is recorded as an assignment output, but it is not used 
 
 Use the completed fleet02/B03 theorem `QFORM-JOINT-PROJECTION-COEFFICIENT-PLANCHEREL-v1`, canonical source
 
-`yspennstate/math-open-problems@1cf28b1faa4ca92850b551bd1cc23457164639d6:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/b03-20260923T191657Z-4d3b23/REPORT.md`.
+`private-source-repository@1cf28b1faa4ca92850b551bd1cc23457164639d6:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/b03-20260923T191657Z-4d3b23/REPORT.md`.
 
 For fixed `t`, average first in the genuine physical square coordinate `X`. Set
 

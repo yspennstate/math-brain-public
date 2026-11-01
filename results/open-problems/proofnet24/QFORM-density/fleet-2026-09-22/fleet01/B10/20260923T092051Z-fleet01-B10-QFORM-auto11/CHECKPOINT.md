@@ -11,8 +11,8 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 Required current sources actually used:
 
-* designated partner `fleet02/B10`, run `20260923T064541Z-fleet02-B10-QFORM-auto11`, canonical mathematics `yspennstate/math-open-problems@16ecbcc3f6d34d4195ff6e29066216df155d9530`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T064541Z-fleet02-B10-QFORM-auto11/REPORT.md`;
-* newest-Claude package `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, especially the ruled one-sheet estimate and mixed-Fresnel mechanism.
+* designated partner `fleet02/B10`, run `20260923T064541Z-fleet02-B10-QFORM-auto11`, canonical mathematics `private-source-repository@16ecbcc3f6d34d4195ff6e29066216df155d9530`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T064541Z-fleet02-B10-QFORM-auto11/REPORT.md`;
+* newest-Claude package `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, especially the ruled one-sheet estimate and mixed-Fresnel mechanism.
 
 The partner reduces the genuinely unpaid exact-rank-three indefinite near-coloop state to
 

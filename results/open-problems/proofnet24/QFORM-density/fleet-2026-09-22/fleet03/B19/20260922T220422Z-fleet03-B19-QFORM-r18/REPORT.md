@@ -184,8 +184,8 @@ This is a strict narrowing of the diffuse aggregate principal-triple debt and av
 ## 7. Source pins
 
 - fleet03/B10 near-span aggregate compiler: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T214631Z-fleet03-B10-QFORM-r19/REPORT.md` (current source-pinned copy read this run).
-- fleet03/B14 determinant-localization theorem: `QFORM-PRINCIPAL-TRIPLE-DETERMINANT-LOCALIZATION-v1`, canonical source previously pinned by the fleet at `yspennstate/math-open-problems@89e6481f4f7ed7d49a77cfcb989ee93572d5d5cd`.
+- fleet03/B14 determinant-localization theorem: `QFORM-PRINCIPAL-TRIPLE-DETERMINANT-LOCALIZATION-v1`, canonical source previously pinned by the fleet at `private-source-repository@89e6481f4f7ed7d49a77cfcb989ee93572d5d5cd`.
 - fleet04/B18 Rogozin--Ball product-projection transfer: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
-- designated partner fleet04/B19: `QFORM-FINITE-UNION-CORE-v1`, `yspennstate/math-open-problems@02171dc794a56c0235afb1ca394b3e614162bff4`.
+- designated partner fleet04/B19: `QFORM-FINITE-UNION-CORE-v1`, `private-source-repository@02171dc794a56c0235afb1ca394b3e614162bff4`.
 
 Repository reads/writes are not native learned-memory ingestion; this run remains `WITHOUT_VERIFIED_BRAIN`.

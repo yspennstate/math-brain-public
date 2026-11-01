@@ -61,7 +61,7 @@ finite scale, so the displayed polynomial slack should not be dropped.
   run twice in `paper19`, producing `extremal_hard_edge.pdf` with 32 pages
   and 554,966 bytes.
 - Master: `pdflatex -interaction=nonstopmode -halt-on-error master.tex` run
-  twice in `math-open-problems-fleet/master`, producing `master.pdf` with
+  twice in `private-source-fleet/master`, producing `master.pdf` with
   853 pages and 7,757,237 bytes; copied to `~/Downloads/master.pdf`.
 - Targeted log scan found no LaTeX errors, undefined control sequences,
   undefined references/citations, rerun requests, fatal errors, or emergency

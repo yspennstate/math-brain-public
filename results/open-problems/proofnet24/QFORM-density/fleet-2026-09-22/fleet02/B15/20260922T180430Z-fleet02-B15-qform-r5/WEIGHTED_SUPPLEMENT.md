@@ -1,6 +1,6 @@
 # Post-write peer refresh: the weighted scalar replacement is globally finite on the B15 source
 
-After the immutable main report was written, fresh main exposed the independent concurrent fleet02/B01 run `20260922T180441Z-fleet02-B01-qform-r26`, canonical `yspennstate/math-open-problems@bda6ef89066f27778833b0f725b011d4ff64d8c8`. It independently refutes the same scalar-residual worst-level supremum on a different Hadamard four-cube target and identifies the weighted expectation as the surviving interface. This supplement records the corresponding exact global weighted bound for the B15 simple-spectrum source; no novelty or priority claim is made.
+After the immutable main report was written, fresh main exposed the independent concurrent fleet02/B01 run `20260922T180441Z-fleet02-B01-qform-r26`, canonical `private-source-repository@bda6ef89066f27778833b0f725b011d4ff64d8c8`. It independently refutes the same scalar-residual worst-level supremum on a different Hadamard four-cube target and identifies the weighted expectation as the surviving interface. This supplement records the corresponding exact global weighted bound for the B15 simple-spectrum source; no novelty or priority claim is made.
 
 Keep the B15 source from REPORT.md: iid `Uniform[0,1]`, Hadamard coordinates, eigenvalues `(1,2,-3,1/2)`, `Q'=(1/2)Y4^2`, and `Y4 in [0,2]`. Let `h(y)=p_{Y4}(y)`.
 

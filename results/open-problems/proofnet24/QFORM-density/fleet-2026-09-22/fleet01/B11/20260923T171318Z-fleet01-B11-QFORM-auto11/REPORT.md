@@ -17,12 +17,12 @@ The unrestricted owner conjecture remains OPEN. Nothing below assumes moments, c
 The following mathematical sources were consumed at their exact scopes.
 
 1. **Newest projected-crossing theorem.**  
-   `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,  
+   `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,  
    `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.  
    In particular, one original hub plus two projected crossing directions gives an integrable Fourier envelope when the two-volume row marginals are at most `1/2`; and an exact rank-three physical crossing block is paid with no row-marginal gate.
 
 2. **Completed designated partner fleet02/B11 result.**  
-   `yspennstate/math-open-problems@f5996ecc005a07b4e2f0e2a728ed383f0a8e2555`,  
+   `private-source-repository@f5996ecc005a07b4e2f0e2a728ed383f0a8e2555`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T155550Z-fleet02-B11-QFORM-auto11c/REPORT.md`.  
    In its exact-rank-three near-null-ruling chamber, if every essential projected cluster has all atom weights at most one third of the cluster mass, it constructs an actual original-coordinate cross cut and proves the continuous bound
    
@@ -33,13 +33,13 @@ The following mathematical sources were consumed at their exact scopes.
    `||r_h||^2 > tau/36`.
 
 3. **True-near-coloop two-bank splitter.**  
-   `yspennstate/math-open-problems@b467c28e31b7959bab9b858104f2b4ddcf197888`,  
+   `private-source-repository@b467c28e31b7959bab9b858104f2b4ddcf197888`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T161353Z-fleet03-B11-QFORM-r36/REPORT.md`.  
    After already-paid exits, its exact-rank-three survivor has one original hub of leverage `c>63/64` and a literal partition of the remaining original coordinates into two banks `S,T` whose transverse two-dimensional Grams are uniformly positive definite (`lambda_min>1/32`).
 
 4. **Newest Claude continuation and its correction.**  
    The continuation under `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/` was refreshed through the later commit  
-   `yspennstate/math-open-problems@a1c6c5f8fff337413bd25a14e834327624ed5950`.  
+   `private-source-repository@a1c6c5f8fff337413bd25a14e834327624ed5950`.  
    The newest `single_hub_core/REPORT.md` explicitly shows that the tempting local `(L,P)` hub maximal functional is not uniformly bounded for rough cap-one laws: comb examples make it grow. Hence the remaining rough-hub estimate must use the transverse quadratic curvature as well; a conditional-profile or local-maximal-function bound alone is not a valid completion.
 
 ### Source-matching duplicate that was stopped
@@ -50,7 +50,7 @@ At the start of this run I independently derived the identity
 
 for the one-hub projected cross block. I saved it immediately in `EARLY_CHECKPOINT.md`. A later fresh partner refresh found fleet02/B11's newer actual checkpoint
 
-`yspennstate/math-open-problems@e54396c223673fb01a571fe84048595b684eb874`,
+`private-source-repository@e54396c223673fb01a571fe84048595b684eb874`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T165547Z-fleet02-B11-QFORM-auto11-c69c3de5/CHECKPOINT.md`,
 
 which proves the same identity in its natural hub coordinates and already applies the exact-rank-three crossing theorem. I therefore do **not** claim that identity as new and stopped duplicating it. The partner checkpoint identifies the genuine survivor as the double-graph collar where both longitudinal Schur variances tend to zero. The rest of this report changes mechanism and attacks exactly that survivor.

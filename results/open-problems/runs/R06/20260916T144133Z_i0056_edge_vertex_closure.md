@@ -5,7 +5,7 @@ Metric movement: certified interval width for the frozen pair `H_{5,5}` moved fr
 # R06 immutable run — edge expansion closes the face-degree >=5 vertex constants
 
 Run ID: `20260916T144133Z_i0056_edge_vertex_closure`
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Repository recovery and protocol state
 

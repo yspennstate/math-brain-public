@@ -16,7 +16,7 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 The newest designated-partner report
 
-- `yspennstate/math-open-problems@907d4092f2d22b6c02146cb8165efa0b7416ffa5`
+- `private-source-repository@907d4092f2d22b6c02146cb8165efa0b7416ffa5`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T111930Z-qform/REPORT.md`
 
 proves `QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1`: exact *support infeasibility* for a strict third-volume marginal gate is already paid by exact-rank-three product Plancherel, with at most a factor `4^(1/6)` loss. Thus there is no reason to spend this run on another support classification. The genuinely unpaid B04 issue is quantitative: a strict third-volume weight may exist, but every obvious such weight can have poor determinant/entropy currency.
@@ -29,7 +29,7 @@ The analytic compiler used below is the already-completed theorem from this slot
 
 read from the pinned snapshot
 
-- `yspennstate/math-open-problems@1d2dd52680ec729f28b7289e74a6f3752a379127`
+- `private-source-repository@1d2dd52680ec729f28b7289e74a6f3752a379127`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T021315Z-fleet01-B04-QFORM-auto11/REPORT.md`.
 
 For a physical cross block `M=A[I,J]`, any probability law `w` on supported physical `3 x 3` minors, row marginals `alpha_i`, and determinant/entropy currency
@@ -209,7 +209,7 @@ Now apply the completed designated-partner theorem
 
 `QFORM-RANKR-TWOSIDED-CONTAMINATION-FOURIER-v1`,
 
-- `yspennstate/math-open-problems@8f8913581643a7e7bcbe7d8c178a2255194dfc3d`
+- `private-source-repository@8f8913581643a7e7bcbe7d8c178a2255194dfc3d`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T233213Z-r22/REPORT.md`.
 
 For an exact-rank `r>=3` physical cross block with nonzero singular values `sigma_1,...,sigma_r`, arbitrary measurable same-bank contamination on both product banks is allowed and

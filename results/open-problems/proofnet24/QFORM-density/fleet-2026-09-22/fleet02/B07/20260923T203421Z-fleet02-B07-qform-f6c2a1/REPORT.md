@@ -17,7 +17,7 @@ Fresh owner control remains revision `2026-09-22.15`, with the continuation `QFO
 
 The latest designated partner read in this run is fleet03/B07 r37:
 
-`yspennstate/math-open-problems@65ed9ea70175fb28541d756aea01f6aeb491fd6c`,
+`private-source-repository@65ed9ea70175fb28541d756aea01f6aeb491fd6c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T193839Z-fleet03-B07-qform-r37/REPORT.md`.
 
@@ -49,7 +49,7 @@ so in the actual packet the interface lies within `0.003245045040 h` in Frobeniu
 
 The analytic receiver used after producing real third volume is fleet03/B02 r35,
 
-`yspennstate/math-open-problems@52cef3abd27c641ae6666d6ee3bbc25d90cb4813`,
+`private-source-repository@52cef3abd27c641ae6666d6ee3bbc25d90cb4813`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T170106Z-fleet03-B02-qform-r35/REPORT.md`.
 
@@ -67,7 +67,7 @@ Arbitrary same-bank curvature, outside couplings, affine terms and additional sp
 
 The bounded-dimensional spectral receiver used below is the completed fleet04/B07 theorem
 
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`,
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 
@@ -195,7 +195,7 @@ No extra singular direction can cancel (3.7): all omitted Cauchy-Binet terms are
 
 The mandatory pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`,
 

@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is **n
 # R01 — frozen I0024, successor-admission delta
 
 Date: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Continuity and authoritative state
 

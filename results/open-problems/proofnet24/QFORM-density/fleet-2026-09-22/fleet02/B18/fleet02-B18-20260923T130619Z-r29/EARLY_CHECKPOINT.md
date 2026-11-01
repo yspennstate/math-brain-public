@@ -16,7 +16,7 @@ whose physical nonzero spectrum is exactly `{-1,1,1}`, without replacing the gen
 
 The completed designated partner fleet03/B18 r28 is
 
-`yspennstate/math-open-problems@43b16ba3992035298289170540682e8aa62a9ad4`
+`private-source-repository@43b16ba3992035298289170540682e8aa62a9ad4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T120257Z-fleet03-B18-QFORM-r28/REPORT.md`.
 

@@ -11,7 +11,7 @@ Let F be a fixed probability density on R^n and q_m,q quadratic-affine polynomia
 
 If |t|^alpha H is integrable, the same argument gives convergence in C^{0,alpha} seminorm. This is a moment-free matrix-perturbation closure: no estimate of |q_m-q| by moments is used.
 
-Combine this with the completed fleet02/B15 common-envelope source theorem at math-open-problems@beba6425b1130ce83dd870c447fc0e87bcc5bd58. If F_m->F in L1 and, for each q_m, the matrix certificate supplies the same power envelope min(1,K|t|^{-b}), b>1, for both F_m and F, then
+Combine this with the completed fleet02/B15 common-envelope source theorem at private-source@beba6425b1130ce83dd870c447fc0e87bcc5bd58. If F_m->F in L1 and, for each q_m, the matrix certificate supplies the same power envelope min(1,K|t|^{-b}), b>1, for both F_m and F, then
 
     ||p_{F_m,q_m}-p_{F,q}||_infty
     <= [b/(pi(b-1))](2K)^{1/b}||F_m-F||_1^{1-1/b}

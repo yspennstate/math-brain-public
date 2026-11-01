@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # R01 — post-rotation admission delta: current failures, September 18 probability-source triage, no lawful free CLOSABLE successor
 
 Date: 2026-09-18 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R01  
 Category: CLOSABLE OUTSIDE
 

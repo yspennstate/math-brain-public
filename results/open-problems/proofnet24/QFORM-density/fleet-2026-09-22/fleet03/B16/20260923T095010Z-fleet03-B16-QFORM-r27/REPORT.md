@@ -19,7 +19,7 @@ The immediate predecessor is fleet03/B16 run `20260923T092201Z-fleet03-B16-QFORM
 
 The designated partner input is fleet04/B16 run `20260922T161909Z-fleet04-B16-QFORM-r2`,
 
-`yspennstate/math-open-problems@58c23c624db350cf44f0c836daa3582eb7e2d266`,
+`private-source-repository@58c23c624db350cf44f0c836daa3582eb7e2d266`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T161909Z-fleet04-B16-QFORM-r2/REPORT.md`.
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — NO MOVEMENT o
 # R09 CLOSABLE OUTSIDE — G0013: partial-Legendre saddle coordinates, a rank-one pressure theorem, and the first local geometry that rules out the formal anti-pairing escape
 
 Date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Delivery: private GitHub only.
 
 ## 1. Continuity, ownership, and what is not being reopened

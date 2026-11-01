@@ -5,7 +5,7 @@ Problem/source: Antonio Agresti and Mark Veraar, *Nonlinear SPDEs and Maximal Re
 # R10 closable-outside run — I0070 critical Hilbert time regularity
 
 UTC run stamp: 2026-09-16T16:36Z
-Repository/branch: yspennstate/math-open-problems / master
+Repository/branch: private-source-repository / master
 Canonical ownership: operations/claims/I0070.md, owner R10
 Fixed metric: largest time-regularity exponent theta rigorously established for a fixed source-admissible critical p=2 problem, retaining the source norms/weights/parameter restrictions.
 

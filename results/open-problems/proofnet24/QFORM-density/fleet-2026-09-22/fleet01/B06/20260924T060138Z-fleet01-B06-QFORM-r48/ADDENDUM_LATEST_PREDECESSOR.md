@@ -3,7 +3,7 @@
 After the initial r48 report was drafted, the worker-owned `LATEST.json` showed a newer completed B06 run than the older r47 handoff first consumed. The actual latest predecessor is:
 
 - fleet01/B06 run `20260924T053508Z-fleet01-B06-QFORM-r48`;
-- `yspennstate/math-open-problems@0f6cfec7bda71e411d2296267eb7ff1ab016d46f`;
+- `private-source-repository@0f6cfec7bda71e411d2296267eb7ff1ab016d46f`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T053508Z-fleet01-B06-QFORM-r48/REPORT.md`.
 
 That predecessor proves the exact two-hub normal-direction Schur collapse when both hub twists vanish and leaves `QFORM-TWOHUB-ONE-TWIST-OR-SMALLPAIR-RECEIVER-v1`: remove one zero-twist assumption, or route a small/singular physical pair and the concentrated-normal third-hub certificate through a product-preserving receiver.

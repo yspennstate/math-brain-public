@@ -30,7 +30,7 @@ The first unpaid implication is now `QFORM-DETSTAR-OFFDIAGONAL-GLUE-v1`:
 
 Immutable source read at
 
-`yspennstate/math-open-problems@497b7c154292683b23bbbf8563633d84a29ae12b`
+`private-source-repository@497b7c154292683b23bbbf8563633d84a29ae12b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T103046Z-fleet03-B13-qform-r24/REPORT.md`.
 
@@ -49,7 +49,7 @@ No arbitrary-joint coarea statement is used. In Section 8 below this is applied 
 
 Immutable source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`,
 `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.

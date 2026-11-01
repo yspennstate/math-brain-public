@@ -26,7 +26,7 @@ Fresh control immediately before publication retained owner revision `2026-09-22
 
 Named OTHER-account result actually applied:
 
-- `fleet02/B04`, canonical report `yspennstate/math-open-problems@b7168a1b0b52fbf69705170ff9795435efeb849f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260922T122057Z-01c809a1/REPORT.md`, blob `fa94d255369a9ad6475ebc66b2f158066e588a8b`.
+- `fleet02/B04`, canonical report `private-source-repository@b7168a1b0b52fbf69705170ff9795435efeb849f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260922T122057Z-01c809a1/REPORT.md`, blob `fa94d255369a9ad6475ebc66b2f158066e588a8b`.
 - Its theorem `QFORM-SHIFTED-SQUARE-PRODUCT-REARRANGEMENT-v1` proves, for independent density-`<=1` `U,V,W`, nonzero `a,gamma`, and arbitrary constants `alpha,beta`,
 
   `||p_{a(W-alpha U-beta V)^2-gamma UV}||_infinity <= 4 sqrt(2)/sqrt(|a gamma|)`.

@@ -15,7 +15,7 @@ No Gaussian, moment, log-concavity, compact-support, connected-support, iid, pos
 
 The incoming worker-owned state is fleet03/B07 r49:
 
-`yspennstate/math-open-problems@8faa92df02294280a5ed8315598cc4d605d71515`
+`private-source-repository@8faa92df02294280a5ed8315598cc4d605d71515`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260924T064126Z-fleet03-B07-qform-r49/REPORT.md`.
 
@@ -41,7 +41,7 @@ with
 
 The designated partner result actually applied below is fleet04/B07:
 
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 

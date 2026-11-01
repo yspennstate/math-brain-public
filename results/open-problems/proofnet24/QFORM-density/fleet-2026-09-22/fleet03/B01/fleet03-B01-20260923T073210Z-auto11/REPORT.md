@@ -247,7 +247,7 @@ Numerically the constant is `9.926451830422394...`.
 
 ## 7. Designated fleet04/B01 result applied
 
-The completed fleet04/B01 signed-Fejer theorem (`math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`) states
+The completed fleet04/B01 signed-Fejer theorem (`private-source@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`) states
 
 `||p_mu||_infinity = sup_{T>0,y} D_T mu(y)`
 

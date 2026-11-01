@@ -9,12 +9,12 @@ Full unrestricted QFORM status: `OPEN_NOT_PROVED`.
 ## Inputs
 
 Required Claude package retained from
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 The completed fleet01/B14 theorem actually used is
 `QFORM-SCHUR-COMPLETE-SQUARE-ZERO-TAX-LOCALIZATION-v1` at
-`yspennstate/math-open-problems@be9d93b288079c9261fea04074bac234974da89c`,
+`private-source-repository@be9d93b288079c9261fea04074bac234974da89c`,
 with checks at `d7796450572115ec054f1541b01d41db18a82711`.
 The completed three-dimensional affine theorem used by that source is pinned there to fleet02/B14 at
 `7a0ffb7d9c4c6074cc6e13375db70828740e1bd4`.

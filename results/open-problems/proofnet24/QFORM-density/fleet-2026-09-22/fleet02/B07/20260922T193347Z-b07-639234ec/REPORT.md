@@ -18,15 +18,15 @@ This report keeps the original coordinate product law throughout. It does not us
 
 The latest complete designated-partner result consumed is fleet03/B07 r15, `QFORM-O0-EXCLUSION-PAIR-DICHOTOMY-v1`, canonical source
 
-`yspennstate/math-open-problems@559e4be19d8f032bdae0392e7394bdcdca681a14:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T183653Z-fleet03-B07-qform-r15/REPORT.md`.
+`private-source-repository@559e4be19d8f032bdae0392e7394bdcdca681a14:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T183653Z-fleet03-B07-qform-r15/REPORT.md`.
 
 Its direct O0 dependency r13, `QFORM-O0-HEAVY-PACKET-ISOLATION-v1`, is at
 
-`yspennstate/math-open-problems@f2d3682e9f9d24d67ea14dc990d9f49bebeb5a6e:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T173711Z-fleet03-B07-qform-r13/REPORT.md`.
+`private-source-repository@f2d3682e9f9d24d67ea14dc990d9f49bebeb5a6e:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T173711Z-fleet03-B07-qform-r13/REPORT.md`.
 
 I also use fleet02/B06's completed product-projection theorem `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
 Its needed statement is: if `R` has `k` orthonormal columns and `Y=R^T X` for independent cap-one coordinates, then `Y` has a density with
 

@@ -24,7 +24,7 @@ Therefore the normalized third bank converges to
 
 where `G_3~N(0,1/12)` and `S` is a symmetric compound-Poisson variable with characteristic function `exp(cos t-1)`. The first two banks converge to iid `N(0,1/12)`. The Lindeberg condition genuinely fails: for any fixed delta<1/sqrt(3), the third-bank Lindeberg sum tends to `1/3` rather than zero.
 
-The completed pinned Fresnel-Brascamp-Lieb Theorem F at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` applies to the actual physical frame: every row leverage is `1/m<=1/2`, `G_I=I_3`, and there is no residual quadratic block. Hence
+The completed pinned Fresnel-Brascamp-Lieb Theorem F at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` applies to the actual physical frame: every row leverage is `1/m<=1/2`, `G_I=I_3`, and there is no residual quadratic block. Hence
 
 `|Phi_m(t)| <= min(1,(4 pi)^(3/2)|t|^(-3/2))`,
 

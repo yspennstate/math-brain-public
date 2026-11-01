@@ -4,7 +4,7 @@ Run: `20260925T032013Z-fleet01-B12-r13`
 Objective: `QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925`
 
 Source pin:
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `ec211ba2d77a4a9850168c6af1574ea651feaa7c`
 - TeX `proofnet24/QFORM-density/five-eigenvalues-paper-2026-09-25/short/short.tex`
 - TeX blob `c4f2a997cf336ee974e15409b5bccdd8cca039d8`

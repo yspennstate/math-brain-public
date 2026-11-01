@@ -15,7 +15,7 @@ All random variables below are literal ORIGINAL coordinates. No post-rotation in
 
 The required pinned package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 records the product-measure projection estimates used here. Its `COUNTEREXAMPLE_SEARCH.md` uses the sharp dimension-two marginal fact that if `U` is an orthonormal two-frame and `X` has independent coordinate densities bounded by one, then
 
@@ -113,7 +113,7 @@ Finally, the exceptional set where `a(X_I)=0` is null: by (2.8) it is contained 
 
 The newest compatible designated partner is fleet03/B20 r49, canonical source
 
-`yspennstate/math-open-problems@4bf5217dace0129fcb6995727e1d8afa671c2435`
+`private-source-repository@4bf5217dace0129fcb6995727e1d8afa671c2435`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T065238Z-fleet03-B20-QFORM-auto11-r49/REPORT.md`.
 

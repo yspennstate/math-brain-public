@@ -12,7 +12,7 @@ The target is one universal constant `C<infinity` such that, for every dimension
 
 The live corrections were enforced: no law-uniform pointwise Fresnel decay, no spectral-coordinate independence, no naive fiber-supremum completion, and no reciprocal local-minor averaging. The named fleet04/B10 partner had no completed current-QFORM handoff at both the startup and prepublication reads, so no partner result is invented. I instead apply two completed compatible sources: fleet01/B10's heavy-row Schur theorem and fleet03/B09's source-valid two-dimensional projection-density cap, together with the current interactive cross-block/diffuse state.
 
-The fleet01/B10 source is `math-open-problems@0a73ea76664e609dd164a3e0f397230ae8c17d4f`, which proves, in the residual-diffuse heavy-row branch, an `L^3` density estimate for the rank-two Schur remainder. The fleet03/B09 source is `math-open-problems@41fc39eccdd44a0dcae6619676bf41f5ea21bb3e`; its use of the Livshyts--Paouris--Pivovarov projection theorem gives density at most `2` for any two-dimensional orthogonal projection of the original product law.
+The fleet01/B10 source is `private-source@0a73ea76664e609dd164a3e0f397230ae8c17d4f`, which proves, in the residual-diffuse heavy-row branch, an `L^3` density estimate for the rank-two Schur remainder. The fleet03/B09 source is `private-source@41fc39eccdd44a0dcae6619676bf41f5ea21bb3e`; its use of the Livshyts--Paouris--Pivovarov projection theorem gives density at most `2` for any two-dimensional orthogonal projection of the original product law.
 
 ## 2. A dependence-tolerant hyperbolic-square theorem
 

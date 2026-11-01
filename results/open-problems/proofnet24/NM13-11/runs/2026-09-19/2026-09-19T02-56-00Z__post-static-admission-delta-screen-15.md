@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-11 — post-static residue-10 admission delta screen 15
 
 Date: 2026-09-19 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Worker: `proofnet24/NM13-11`  
 Category: HARD OUTSIDE  
 Selection shard: `int(SHA256(UTF-8 canonical dedup_key),16) mod 13 = 10`  

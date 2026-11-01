@@ -9,7 +9,7 @@ After committing `REPORT.md`, the required duplicate-source check found a strong
 
 `QFORM-FIXED-MATRIX-BOUNDED-v1`, complete analytic source
 
-`yspennstate/math-open-problems@058acb5c8f9186ef199bbaf136b57f4dd9ea3800`
+`private-source-repository@058acb5c8f9186ef199bbaf136b57f4dd9ea3800`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/interactive/20260922T121109Z-crossblock-and-lower-bounds/REPORT.md`.
 

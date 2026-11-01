@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 Date: 2026-09-17 UTC  
 Track: NM13-11 / HARD OUTSIDE  
-Repository: `yspennstate/math-open-problems`, branch `master`  
+Repository: `private-source-repository`, branch `master`  
 Canonical source/claim: H0003 / `operations/claims/H0003.md`  
 Canonical dedup identity: `arxiv_2608_15987::conjecture_11.8`, residue 10 mod 13  
 Overall source status: **OPEN**  

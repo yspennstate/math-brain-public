@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R01 — source-residue aggregation and prior-art stress test after `R_TFIK22=0`
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Run date: 2026-09-19.
 
 ## 1. Continuity: do not reopen I0024

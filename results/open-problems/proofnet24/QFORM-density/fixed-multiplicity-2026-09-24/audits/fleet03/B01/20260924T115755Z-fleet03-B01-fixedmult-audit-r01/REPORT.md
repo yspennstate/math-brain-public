@@ -5,7 +5,7 @@ Run: `20260924T115755Z-fleet03-B01-fixedmult-audit-r01`
 Current objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 
 Audited manuscript source:
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - branch: `master`
 - pinned initial source commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`
 - manuscript blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`

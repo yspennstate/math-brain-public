@@ -17,7 +17,7 @@ for all bounded intervals `J`, with one finite universal `C`, or give a valid co
 
 The current exact localization state already removes arbitrary tails and absolute translations without moments. In particular, fleet03/B14, canonical proof
 
-`yspennstate/math-open-problems@2208c3f666582999f1fbc7e55921a4530cbe2789`
+`private-source-repository@2208c3f666582999f1fbc7e55921a4530cbe2789`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T133524Z-fleet03-B14-qform-r11/REPORT.md`
 
@@ -211,8 +211,8 @@ This is a genuine restriction on admissible localization arguments and an explic
 
 - owner programme/control: `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`;
 - source-control snapshot used before scientific write: `yspennstate/math-research-brain@f131875d619a0186efc7e7aa942257f5247ac01a`;
-- completed partner applied: fleet03/B14, `yspennstate/math-open-problems@2208c3f666582999f1fbc7e55921a4530cbe2789`, path above;
-- prior B14 one-coordinate packing result: `yspennstate/math-open-problems@2e0f363a166b694e6b91a8eb6dc59f1488c5cba8`;
+- completed partner applied: fleet03/B14, `private-source-repository@2208c3f666582999f1fbc7e55921a4530cbe2789`, path above;
+- prior B14 one-coordinate packing result: `private-source-repository@2e0f363a166b694e6b91a8eb6dc59f1488c5cba8`;
 - corrections consumed before write include `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBER-SUP-DIMENSION-LOSS`, `QFORM-NO-INDEPENDENCE-AFTER-ROTATION`, `QFORM-BOUNDED-DIAMETER-LOCALIZATION-FALSE`, `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`, and `QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1`.
 
 No novelty or priority claim is made. Full QFORM remains OPEN.

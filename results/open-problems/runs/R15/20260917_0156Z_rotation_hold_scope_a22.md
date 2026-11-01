@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R15 post-I0076 rotation — I0074 held on source scope, I0055 confirmed literature-resolved, no lawful successor claim
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Run date: 2026-09-17 UTC.
 
 ## 1. I0076 continuity: mandatory retirement remains in force

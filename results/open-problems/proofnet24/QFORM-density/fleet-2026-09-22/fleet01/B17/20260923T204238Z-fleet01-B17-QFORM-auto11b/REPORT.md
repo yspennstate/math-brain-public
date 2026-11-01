@@ -16,7 +16,7 @@ The unrestricted arbitrary-product-law theorem remains OPEN. This report strengt
 
 The preceding B17 periodic Edgeworth theorem is consumed from
 
-`yspennstate/math-open-problems@a1ba664bb0eb87aa086402b959e2503a734c633d:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T123638Z-fleet01-B17-qform-diffuse-edgeworth-v1/REPORT.md`.
+`private-source-repository@a1ba664bb0eb87aa086402b959e2503a734c633d:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T123638Z-fleet01-B17-qform-diffuse-edgeworth-v1/REPORT.md`.
 
 For `J=diag(1,1,-1)`, a fixed Parseval row pattern `v_1,...,v_r in R^3`, repeated `m` times with row scale `m^{-1/2}`, and independent physical `Unif[-1/2,1/2]` variables, it proves
 
@@ -46,7 +46,7 @@ It also established that this lower coefficient is asymptotically sharp over Par
 
 The newest completed designated-partner theorem is consumed from
 
-`yspennstate/math-open-problems@994cf283d0c9b51cd43328c69d68c8fc17a7d481:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T195641Z-fleet02-B17-QFORM-auto11/REPORT.md`.
+`private-source-repository@994cf283d0c9b51cd43328c69d68c8fc17a7d481:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T195641Z-fleet02-B17-QFORM-auto11/REPORT.md`.
 
 Its exact scope is used in Section 6 below.
 

@@ -15,13 +15,13 @@ The unrestricted conjecture remains **OPEN**. Full-target continuity remains **O
 
 The immediate own inputs are:
 
-- r47, `yspennstate/math-open-problems@dad5d50a92be318854c9c0ae4409242e84a7753d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260924T090807Z-fleet01-B08-qform-r47/REPORT.md`;
-- r48, `yspennstate/math-open-problems@6aeabdd6343abdea18945673eafbb3ed9fa42fe5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260924T094957Z-fleet01-B08-qform-r48/REPORT.md`.
+- r47, `private-source-repository@dad5d50a92be318854c9c0ae4409242e84a7753d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260924T090807Z-fleet01-B08-qform-r47/REPORT.md`;
+- r48, `private-source-repository@6aeabdd6343abdea18945673eafbb3ed9fa42fe5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260924T094957Z-fleet01-B08-qform-r48/REPORT.md`.
 
 The completed designated-partner inputs actually used are:
 
-- fleet02/B08 r35, `yspennstate/math-open-problems@087cf5aa5cfcee4eb6ae243facb9e0fcf2391e29`, which supplies the row-aware selected-three deletion crossing scale and the marginal-free physical third-compound receiver;
-- fleet02/B08 r36, `yspennstate/math-open-problems@e54144ba53a8a8039f1d704faf4342d859afb20f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/fleet02-B08-20260924T094502Z-r36/REPORT.md`, which converts a carrier footprint on three disjoint original-coordinate banks into three literal target-scale crossing-energy directions. Its exact arithmetic checks are at `@26422be5c2a10a666dfc7480c9e37a203718c146`.
+- fleet02/B08 r35, `private-source-repository@087cf5aa5cfcee4eb6ae243facb9e0fcf2391e29`, which supplies the row-aware selected-three deletion crossing scale and the marginal-free physical third-compound receiver;
+- fleet02/B08 r36, `private-source-repository@e54144ba53a8a8039f1d704faf4342d859afb20f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/fleet02-B08-20260924T094502Z-r36/REPORT.md`, which converts a carrier footprint on three disjoint original-coordinate banks into three literal target-scale crossing-energy directions. Its exact arithmetic checks are at `@26422be5c2a10a666dfc7480c9e37a203718c146`.
 
 ## 2. Inherited diffuse edge-capped chamber
 

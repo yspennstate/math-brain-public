@@ -16,13 +16,13 @@ The target remains the unrestricted original-coordinate problem: arbitrary indep
 
 The designated completed partner is fleet02/B20 r37, pinned at
 
-`yspennstate/math-open-problems@b86377bdf894b8331ea17a0901e362b567647393`
+`private-source-repository@b86377bdf894b8331ea17a0901e362b567647393`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T190214Z-fleet02-B20-QFORM-auto11/REPORT.md`.
 
 Its source-valid diffuse endpoint starts from the fleet03/B20 r37 common-plane packet, pinned at
 
-`yspennstate/math-open-problems@598dae792b4a447492bc318bfa830fece803bb6d`
+`private-source-repository@598dae792b4a447492bc318bfa830fece803bb6d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T184417Z-fleet03-B20-QFORM-r37/REPORT.md`.
 

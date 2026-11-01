@@ -1,6 +1,6 @@
 # B09 addendum — consume latest B20 nested-cut reduction
 
-After the main B09 report was committed, fleet03/B20 completed `QFORM-NESTED-CUT-THREE-RESOURCE-v1` at `yspennstate/math-open-problems@06ef7346c08f41c3fac240e1acdeb1b42dc2995d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T165009Z-fleet03-B20-QFORM-r13/REPORT.md`.
+After the main B09 report was committed, fleet03/B20 completed `QFORM-NESTED-CUT-THREE-RESOURCE-v1` at `private-source-repository@06ef7346c08f41c3fac240e1acdeb1b42dc2995d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T165009Z-fleet03-B20-QFORM-r13/REPORT.md`.
 
 In the current unresolved target branch, B20 proves a product-preserving original-coordinate cut with one of three quantitative resources:
 

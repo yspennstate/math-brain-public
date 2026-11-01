@@ -13,10 +13,10 @@ The target remains: for every dimension, every product law of independent real c
 
 
 The assigned completed partner actually used is fleet03/B14 r23, canonical
-`yspennstate/math-open-problems@1f87f660ea368893d7f0aae76399af0d904318fd:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T013540Z-fleet03-B14-QFORM-r23/REPORT.md`.
+`private-source-repository@1f87f660ea368893d7f0aae76399af0d904318fd:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T013540Z-fleet03-B14-QFORM-r23/REPORT.md`.
 Its Theorem 3.1 is exact convex-output localization, and its proof records the stronger underlying fact needed here: every cap-one product law is a total-variation limit of finite convex mixtures of compact finite-fragment indicator product laws. I use that mixture approximation below to localize an *entire parameter family of output maps at once*.
 
-The required newest Claude source was read at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The completed D/D' volume-sampling theorem is applied explicitly in Section 6.
+The required newest Claude source was read at `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The completed D/D' volume-sampling theorem is applied explicitly in Section 6.
 
 ## 2. Simultaneous convex-envelope localization
 
@@ -158,7 +158,7 @@ Apply (3.3) with `theta=(b,c)`. We obtain the new exact extremal form
 This is an actual equation-level application of the required newest-Claude package. It says the full affine volume certificate may be proved/searched on compact finite-fragment extreme products with **zero** support-radius, fragment-count, fragment-separation, or translation tax. No affine maximizer has to exist.
 
 The newer volume-stability theorem at
-`math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
+`private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
 sharpens the analytic constant and controls the marginal gate under matrix perturbation. If
 
 `M=M0+E`, `s3(M0)>=a>0`, `max_i(P_Range(M0))_ii<=1/2`, `||E||op<=a/16`,

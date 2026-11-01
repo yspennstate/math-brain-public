@@ -519,7 +519,7 @@ Thus no law-uniform pointwise power decay can hold.  The present theorem instead
 
 The newest completed `fleet02/B01` handoff available before this publication is `QFORM-ONEHUB-Z1-NOMARGINAL-HALFRIESZ-v1`, canonical report
 
-`yspennstate/math-open-problems@339c1fdf3bc65a79f5be126e730dd3b251320e66:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T180438Z-auto11/REPORT.md`.
+`private-source-repository@339c1fdf3bc65a79f5be126e730dd3b251320e66:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T180438Z-auto11/REPORT.md`.
 
 It proves, after an original-coordinate scalar completion,
 

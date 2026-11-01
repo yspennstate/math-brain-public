@@ -10,7 +10,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning/effort level: UNVERIFIED** — 
 
 **Publication novelty:** `UNVERIFIED`. A bounded dated search on 20 September 2026 for combinations of synchronized spherical products, exact-distance products and cutoff did not locate the theorem/application below. This is negative evidence only, not a priority claim. Historical repository product results are explicitly separated below.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 

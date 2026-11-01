@@ -23,7 +23,7 @@ Accordingly, the proof below works in original independent coordinates and retai
 
 ### Named partner `fleet03/B05`
 
-Canonical report: `yspennstate/math-open-problems@c828d2ee2f8acef5eb96892bc8a9a25594db0f51`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T113800Z-fleet03-B05-qform-r11/REPORT.md`.
+Canonical report: `private-source-repository@c828d2ee2f8acef5eb96892bc8a9a25594db0f51`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T113800Z-fleet03-B05-qform-r11/REPORT.md`.
 
 For a rank-`r>=3` form `A=R^T Lambda R` whose active spectral projector `P=R^T R` has `max_j ||P e_j||_2<=1/2`, the partner combines the Rudelson--Vershynin Fourier--Brascamp--Lieb estimate with the exact Fresnel transform to obtain
 
@@ -34,7 +34,7 @@ In particular, when `D>=1`, this is a universal delocalized bound. The remaining
 
 ### `fleet03/B01`
 
-Canonical report: `yspennstate/math-open-problems@c7a1ce265139092705e86c5a577523798291b964`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260922T113140Z-fleet03-B01-qform-r1/REPORT.md`.
+Canonical report: `private-source-repository@c7a1ce265139092705e86c5a577523798291b964`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260922T113140Z-fleet03-B01-qform-r1/REPORT.md`.
 
 It proves a common `L^3` envelope for products and, in particular, the target-level block theorem for
 

@@ -56,7 +56,7 @@ where `D` is diagonal and
 
 has rank at most two. Since `rank A=3`, `rank D=rank(A-L)<=5`; hence at most five diagonal entries of `D` are nonzero. Away from those entries and the hub, all matrix rows are proportional to the same vector `[1,theta m^T]`. Because `A=R Lambda R^T` with invertible `Lambda`, proportional nonzero physical matrix rows are equivalent to proportional spectral rows. Thus all nonzero spectral rows occupy at most seven line directions: one common leaf line, the hub line, and at most five exceptional singleton lines.
 
-Applying the completed finite-line-bank theorem `QFORM-FINITE-LINE-BANK-COMPRESSION-v1` (fleet02/B16, canonical source `yspennstate/math-open-problems@b9e19e2c19ecd6f6ede282cd3c73ad014c449e9f`) with `K<=7` gives the actual target inequality
+Applying the completed finite-line-bank theorem `QFORM-FINITE-LINE-BANK-COMPRESSION-v1` (fleet02/B16, canonical source `private-source-repository@b9e19e2c19ecd6f6ede282cd3c73ad014c449e9f`) with `K<=7` gives the actual target inequality
 
 `||p_Q||_infinity <= 2 C_3 binom(7,3)^(1/3) < 681.801`,
 

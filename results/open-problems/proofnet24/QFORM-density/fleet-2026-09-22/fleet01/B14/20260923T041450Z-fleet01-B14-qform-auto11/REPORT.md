@@ -4,11 +4,11 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Role: translations and localization. S
 
 ## Source pins actually used
 
-2. Completed physical-pair logarithmic envelope: `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`. The only part used below is the exact pair envelope
+2. Completed physical-pair logarithmic envelope: `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`. The only part used below is the exact pair envelope
    
    `p(t) <= 2 sqrt(2)/r + D^(-1/2) E log_+(2r^2/(kappa |t-R|))`.
-3. Assigned partner `fleet02/B14` completed report: `yspennstate/math-open-problems@8c74cde9c5de560923027d3af8debe2da5c79bc4`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T025915Z-fleet02-B14-QFORM-r24/REPORT.md`. I use its exact conjugate-fiber identity `||f_{V|U=u}||_infinity = 1/(2m_N(u))` and exact overlap-power formula.
-4. Previous own B14 mass-proportional logarithmic compiler: `yspennstate/math-open-problems@59f3c6d5c18c5bbd6073f7061d32e54ff7bde23c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B14/20260923T031130Z-fleet01-B14-QFORM-r28/REPORT.md`. Its hypothesis is kept explicit below; the present run shows that an unnormalized cap alone does **not** imply the mass-proportional hypothesis.
+3. Assigned partner `fleet02/B14` completed report: `private-source-repository@8c74cde9c5de560923027d3af8debe2da5c79bc4`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T025915Z-fleet02-B14-QFORM-r24/REPORT.md`. I use its exact conjugate-fiber identity `||f_{V|U=u}||_infinity = 1/(2m_N(u))` and exact overlap-power formula.
+4. Previous own B14 mass-proportional logarithmic compiler: `private-source-repository@59f3c6d5c18c5bbd6073f7061d32e54ff7bde23c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B14/20260923T031130Z-fleet01-B14-QFORM-r28/REPORT.md`. Its hypothesis is kept explicit below; the present run shows that an unnormalized cap alone does **not** imply the mass-proportional hypothesis.
 
 No post-rotation independence, arbitrary-joint coarea, bounded-diameter localization, fixed fragment count, moment assumption, or uniform pointwise quadratic Fourier decay is used.
 

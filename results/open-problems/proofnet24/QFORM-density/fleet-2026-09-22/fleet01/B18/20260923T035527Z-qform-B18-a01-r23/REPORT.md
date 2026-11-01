@@ -15,7 +15,7 @@ The owner target is still the unrestricted statement: for every finite `n`, inde
 
 The fresh fleet03/B16 r24 source is
 
-`yspennstate/math-open-problems@ce49cb36c9f625bff965f488a6a8813d44054d84`
+`private-source-repository@ce49cb36c9f625bff965f488a6a8813d44054d84`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T031836Z-fleet03-B16-QFORM-r24/REPORT.md`.
 
@@ -55,7 +55,7 @@ The analytic payment is the capped-basis Fresnel/Brascamp--Lieb theorem proved i
 
 The resulting source-valid theorem is `QFORM-FRESNEL-CAPPED-BASIS-WEIGHTS-v1`, canonical fleet01/B18 r19 report
 
-`yspennstate/math-open-problems@a9812cdd26a9dd066638b0e6f0dccf3dbdce2ab8`
+`private-source-repository@a9812cdd26a9dd066638b0e6f0dccf3dbdce2ab8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T225705Z-qform-B18-a01-r19/REPORT.md`.
 
@@ -234,7 +234,7 @@ The theorem is not perturbative: no row is deleted, no small coefficient is set 
 
 The completed designated partner report is
 
-`yspennstate/math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`
+`private-source-repository@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`.
 

@@ -19,7 +19,7 @@ Diffuse exact-rank-three examples and the live correction set prohibit simply po
 
 Required newest-Claude source, fixed source commit:
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 - `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 - `FOURIER_ROUTE_REPORT.md`
 - `COUNTEREXAMPLE_SEARCH.md`.
@@ -33,7 +33,7 @@ with **no row-marginal condition**. Its scope allows arbitrary same-bank quadrat
 Designated partner actually consumed:
 
 - fleet03/B12 r31,
-- `yspennstate/math-open-problems@f6d5af0d6f222415ccd5c7d5391fd0de8be32013`,
+- `private-source-repository@f6d5af0d6f222415ccd5c7d5391fd0de8be32013`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T104429Z-qform-eigenvalue-r31/REPORT.md`.
 
 Its proved compression-footprint theorem says that an actual `m`-coordinate physical block carrying a protected Hermitian compression with three threshold eigenvalues `>=mu` in absolute value, perturbed by protected compression norm `eps<mu`, has three actual block eigenvalues of modulus at least `mu-eps`; the dependence-safe finite physical receiver then gives

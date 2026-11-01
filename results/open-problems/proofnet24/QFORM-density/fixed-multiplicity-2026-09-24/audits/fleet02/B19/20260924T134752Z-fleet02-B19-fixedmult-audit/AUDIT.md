@@ -6,7 +6,7 @@ Lens: independent full proof reconstruction, counterexample stress, guarded inte
 
 ## Source pins
 
-Fresh `math-open-problems/master` observed before delivery: `6f66b0489379ff8a5f183465eaf465571c427a66`. The mathematical baseline itself is unchanged and is pinned byte-for-byte by the package as:
+Fresh `private-source/master` observed before delivery: `6f66b0489379ff8a5f183465eaf465571c427a66`. The mathematical baseline itself is unchanged and is pinned byte-for-byte by the package as:
 
 - initial source commit `7c0d6e60946b19423e6400a12d34b473cf0591e2`;
 - manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`;

@@ -19,7 +19,7 @@ where `rho=P{X^TAX in J}/|J|` is the slab ratio and `K_*` is the absolute consta
 
 Required pinned source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, with `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` all read.
 
@@ -37,7 +37,7 @@ with no volume-marginal condition.
 
 Latest designated partner fleet03/B13 r30:
 
-`yspennstate/math-open-problems@feda06c104c0d8c62661daf01eed33c10f55fa99`,
+`private-source-repository@feda06c104c0d8c62661daf01eed33c10f55fa99`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T173317Z-fleet03-B13-qform-r30/REPORT.md`, with exact constants checked at `73399f1d5184095fcfd61bf258789bf0bba2dba6`.
 
@@ -45,7 +45,7 @@ That report obtains a stronger rank-eight Frobenius skeleton from a global third
 
 Deterministic skeleton source:
 
-`yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`,
+`private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`,
 
 `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/structure/REPORT.md`, Corollary 3.2:
 
@@ -63,7 +63,7 @@ The source proves this by a volume-sampled physical skeleton identity; no random
 
 No-attainment transfer source:
 
-`yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`, fleet04/B13. For every bounded nonnegative product kernel, the supremum over cap-one mass-one product densities equals the supremum over products of indicators of unit-measure sets, and every marginal may be approximated in `L^1` by finite convex mixtures of indicators of bounded finite unions of intervals. It asserts no optimizer, interval extremality, diameter bound or fragment-count bound.
+`private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`, fleet04/B13. For every bounded nonnegative product kernel, the supremum over cap-one mass-one product densities equals the supremum over products of indicators of unit-measure sets, and every marginal may be approximated in `L^1` by finite convex mixtures of indicators of bounded finite unions of intervals. It asserts no optimizer, interval extremality, diameter bound or fragment-count bound.
 
 ## 2. Unconditional fifth-volume bound in global physical coordinates
 

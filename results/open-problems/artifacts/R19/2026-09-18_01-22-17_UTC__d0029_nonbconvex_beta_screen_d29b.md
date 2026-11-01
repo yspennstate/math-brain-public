@@ -1,7 +1,7 @@
 # R19 screening artifact — D0029 non-B-convex beta branch
 
 Date: 2026-09-18 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Status: **screening theorem only / no ownership claim / no novelty claim**
 
 ## 1. Source being screened

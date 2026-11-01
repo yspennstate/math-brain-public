@@ -47,6 +47,6 @@ F(1/8)\le 2\sqrt{\frac3\pi}\left[\frac\pi4(1+e^{-3/4})+\operatorname{arcosh}\sqr
 =3.9826334201\ldots<3\sqrt2.
 \]
 
-The required newest-Claude Theorem C at math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 already gives the coarser real obstruction \(p(s)\le\pi\sqrt2\) for every \(s\ge0\) in this (+,+,-) rank-three family. The calculation above is a source-specific refinement designed to close the remaining \(\pi\sqrt2-3\sqrt2\) gap in the one-heavy majority-sign Gaussian-completion branch.
+The required newest-Claude Theorem C at private-source@e5f71d79eff325201dd0274053d20268ce65b837 already gives the coarser real obstruction \(p(s)\le\pi\sqrt2\) for every \(s\ge0\) in this (+,+,-) rank-three family. The calculation above is a source-specific refinement designed to close the remaining \(\pi\sqrt2-3\sqrt2\) gap in the one-heavy majority-sign Gaussian-completion branch.
 
 Designated partner fleet03/B17 r21 (brain handoff commit 4a7cd066fae31f7abec97aa260eecab09f80cb7b) independently closes the complementary one-heavy minority-sign branch, with exact limiting optimum \(\sqrt{6\pi}\,\mathrm{erf}(\sqrt{3/2})=3.9801056750\ldots<3\sqrt2\). Final write-up will combine the two sign placements and state explicitly that finite/mesoscopic overshoot remains unexcluded.

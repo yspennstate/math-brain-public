@@ -17,7 +17,7 @@ The unrestricted quadratic-form bounded-density conjecture remains OPEN. The new
 
 The algebraic input is the completed B08 theorem `QFORM-SHARP-BALANCED-CURVATURE-TRANSFER-v1`, source
 
-`yspennstate/math-open-problems@6723dbae37e95ed017ab4f14415eb0196d54e72a`,
+`private-source-repository@6723dbae37e95ed017ab4f14415eb0196d54e72a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T050942Z-fleet01-B08-QFORM-auto11/REPORT.md`.
 
@@ -49,7 +49,7 @@ The newest completed fleet02/B08 result available on fresh main is
 
 `QFORM-FRACTIONAL-VOLUME-SELF-MATCHED-ROUTER-v1`,
 
-source `yspennstate/math-open-problems@2e8dce7760ed0b7dc1ab1be7b9d82ecc3c7b7df1`,
+source `private-source-repository@2e8dce7760ed0b7dc1ab1be7b9d82ecc3c7b7df1`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T050537Z-fleet02-B08-qform-diffuse-r21-ead7cd5c/REPORT.md`.
 

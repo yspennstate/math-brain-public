@@ -6,7 +6,7 @@ attacking: grouped product projection before the curved quadratic pushforward, w
 Status: `ESSENTIAL_STEP_APPLIED`; full QFORM OPEN / NOT PROVED; continuity open in full generality. Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 
-Designated partner actually consumed: fleet02/B16 `20260922T203148Z-fleet02-B16-QFORM-auto11`, canonical report `yspennstate/math-open-problems@484069f14f49a3303befbe62863d950e67c809e1:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T203148Z-fleet02-B16-QFORM-auto11/REPORT.md`. It proves (i) the mixed ambiguity/section-mass BL sufficient estimate, (ii) the exact barrier `Theta<=4` on `A_m=[1] direct_sum J_m/m direct_sum (-J_m/m)`, and (iii) the source-grouped bound `||p_Qm||_infinity<=pi sqrt(2)`. The present theorem implements its prescribed repair: group original product coordinates before taking an absolute Fourier norm.
+Designated partner actually consumed: fleet02/B16 `20260922T203148Z-fleet02-B16-QFORM-auto11`, canonical report `private-source-repository@484069f14f49a3303befbe62863d950e67c809e1:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T203148Z-fleet02-B16-QFORM-auto11/REPORT.md`. It proves (i) the mixed ambiguity/section-mass BL sufficient estimate, (ii) the exact barrier `Theta<=4` on `A_m=[1] direct_sum J_m/m direct_sum (-J_m/m)`, and (iii) the source-grouped bound `||p_Qm||_infinity<=pi sqrt(2)`. The present theorem implements its prescribed repair: group original product coordinates before taking an absolute Fourier norm.
 
 ## Theorem 1 — QFORM-GROUPED-L2-FRESNEL-v1
 

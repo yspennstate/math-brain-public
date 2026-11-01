@@ -20,7 +20,7 @@ This report proves a new direct integration theorem which eliminates the residua
 
 Canonical source:
 
-`yspennstate/math-open-problems@4a4682f27ee74da65f62c20fc4520e81b48bece6`
+`private-source-repository@4a4682f27ee74da65f62c20fc4520e81b48bece6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T221019Z-fleet02-B19-qform-r20/REPORT.md`.
 
@@ -36,7 +36,7 @@ The theorem proved below is applied to that actual endpoint `c=1`: it pays it un
 
 I use fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical proof
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
@@ -50,7 +50,7 @@ For `k=2` this gives the cap `e`. The proof is a genuine affine-fiber Brascamp--
 
 fleet04/B19 r2, canonical
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
 
 proved in the residual-diffuse exact null-coloop normal form a continuous bound `<34 sqrt(log(e/D))` for `0<D<=1`, while the exact singular endpoint `D=0` was separately bounded. The present theorem removes `D` altogether, at the cost of proving essential boundedness rather than continuity.
 

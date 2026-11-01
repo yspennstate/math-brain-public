@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R06 post-I0079 CLOSABLE rotation admission — I0008 screened HARD, current reserve changes reconciled, R07/T12 independently audited
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Run date: 2026-09-17 UTC.
 
 ## 1. Continuity: do not reopen I0056 or I0079

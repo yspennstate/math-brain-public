@@ -4,7 +4,7 @@
 
 - Objective: `QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925`.
 - Fresh control head before publication: `c3e9d4fd428335aaf59f8630655191ee3f551131`; CURRENT_OBJECTIVE blob `b167cb098b86d7f000e3fdd58efd17bcb2a58715`, unchanged.
-- Source: `yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c`.
+- Source: `private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c`.
 - TeX: `short/short.tex`, blob `c4f2a997cf336ee974e15409b5bccdd8cca039d8`, physical lines 1–675 plus terminal newline.
 - PDF: blob `8be3aae36ecad7a9dc9b7c95978aad09499f32d0`, 484310 bytes, 14 pages, manifest SHA-256 `4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423`.
 - PDF page tree was independently parsed from the pinned bytes through the authenticated repository connector: page objects are 54,112,137,144,155,164,180,197,202,215,229,248,279,289. Named destinations independently place Theorem 1.1 on p.1; Section 2 on p.2; Theorems 2.4–2.6 on p.3; Lemma 2.7 and Section 3 on p.4; Lemmas 3.2–3.3 and Section 4 on p.5; Theorems 4.1–4.3 on p.6; Corollary 4.4 on p.8; Section 5 on p.9; Lemmas 5.4–5.5 on p.10; Lemma 5.6 and Section 6 on p.11; Lemmas/Proposition 6.3–6.4 on p.12; Section 7 and Propositions 7.1–7.2 on p.13; Remarks 7.3–7.4 and bibliography on p.14.

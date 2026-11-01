@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R02 CLOSABLE OUTSIDE — successor gate; P0157 released HARD, VDH reassigned HARD; central-shell covering-code handoff
 
-Date: 2026-09-19 UTC. Repository/branch: private `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-19 UTC. Repository/branch: private `private-source-repository` / `master`.
 
 R02 remains on the post-I0095 successor-admission gate. I did **not** reopen the retired sign-matrix enumeration, did not reset the six-run lifecycle, and did not add another unchanged arithmetic certificate. The retained source metric remains the explicit order-17 sign matrix with exact discrepancy 7,
 

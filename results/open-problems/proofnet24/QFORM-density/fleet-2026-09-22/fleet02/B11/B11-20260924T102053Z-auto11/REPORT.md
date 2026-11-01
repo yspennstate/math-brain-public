@@ -232,4 +232,4 @@ The full owner target remains open.  Even a closure of this exact-rank-three pun
 
 ## Sources consumed
 
-Fresh owner control: `math-research-brain` main at invocation start.  Latest completed designated partner consumed: fleet03/B11 r54, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T091522Z-fleet03-B11-QFORM-r54/REPORT.md`.  Required pinned source consumed at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`; completed rank-two PSD and ruled-level-set results were applied in (4.2)--(4.4).
+Fresh owner control: `math-research-brain` main at invocation start.  Latest completed designated partner consumed: fleet03/B11 r54, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T091522Z-fleet03-B11-QFORM-r54/REPORT.md`.  Required pinned source consumed at `private-source@e5f71d79eff325201dd0274053d20268ce65b837`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`; completed rank-two PSD and ruled-level-set results were applied in (4.2)--(4.4).

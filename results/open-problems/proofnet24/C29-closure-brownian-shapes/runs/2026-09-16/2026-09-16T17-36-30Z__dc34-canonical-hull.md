@@ -3,7 +3,7 @@ Problem/source: Chiara Meroni (2026), Randomstrasse 101, *Directional Convexity 
 
 # C29 — exact functional hull of the four-point irrational-parallelogram lift
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Own root: `proofnet24/C29-closure-brownian-shapes`.
 Old C29 MUB root preserved unchanged in HARD RESERVE: `proofnet24/C29-mub-six`.
 Run date: 2026-09-16.

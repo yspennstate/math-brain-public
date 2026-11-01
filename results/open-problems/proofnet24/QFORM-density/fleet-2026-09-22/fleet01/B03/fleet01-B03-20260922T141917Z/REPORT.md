@@ -14,14 +14,14 @@ This report does **not** use the refuted law-uniform pointwise Fresnel estimate,
 
 Dependencies actually source-read before this proof:
 
-1. `QFORM-REGULARIZED-DETERMINANT-v1`, `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`, `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`. For an original-coordinate cut `B=A[I,J]`, under range leverage at most `1/2` on one side,
+1. `QFORM-REGULARIZED-DETERMINANT-v1`, `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`, `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`. For an original-coordinate cut `B=A[I,J]`, under range leverage at most `1/2` on one side,
    
    `|phi_Q(t)| <= det(I+2 t^2 B B^T/(pi^2 e^2))^(-1/4)`.
    
    The same report states the two-part MSS partition consequence for a tight frame.
-2. `QFORM-INDEFINITE-PRODUCT-FRACTIONAL-TRACE-v1`, `yspennstate/math-open-problems@1defc84f1bfd79994a103a6d683c887d9dead1e7`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/B16-20260922T135620Z-r11/REPORT.md`. Its weak-`L^2` product trace estimate is used in the heavy-row branch.
-3. Sharp one-dimensional product marginal cap from `yspennstate/math-open-problems@1f85677029fc5ae27fc69b278620ae89d789efd2`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T132134Z-fleet04-B20-QFORM-r1/REPORT.md`: every normalized original-coordinate linear aggregate has density cap at most `sqrt(2)`.
-4. Named assignment partner `fleet02/B03`, `yspennstate/math-open-problems@24fc7b37c60f77b399936faa7f280296a7ce8c8c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T131240Z-b03-qform-auto11/REPORT.md`. Its exact coloop-bank family and the failure of every rank-three original-coordinate cut are applied in Section 7.
+2. `QFORM-INDEFINITE-PRODUCT-FRACTIONAL-TRACE-v1`, `private-source-repository@1defc84f1bfd79994a103a6d683c887d9dead1e7`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/B16-20260922T135620Z-r11/REPORT.md`. Its weak-`L^2` product trace estimate is used in the heavy-row branch.
+3. Sharp one-dimensional product marginal cap from `private-source-repository@1f85677029fc5ae27fc69b278620ae89d789efd2`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T132134Z-fleet04-B20-QFORM-r1/REPORT.md`: every normalized original-coordinate linear aggregate has density cap at most `sqrt(2)`.
+4. Named assignment partner `fleet02/B03`, `private-source-repository@24fc7b37c60f77b399936faa7f280296a7ce8c8c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T131240Z-b03-qform-auto11/REPORT.md`. Its exact coloop-bank family and the failure of every rank-three original-coordinate cut are applied in Section 7.
 
 ## 2. Abel/Riesz bridge from time integration to fractional trace
 

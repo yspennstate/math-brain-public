@@ -10,14 +10,14 @@
 
 
 The newest required Claude Fourier input is:
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 The latest path-specific commit for the companion geometric report is
 `2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926`.
 
 I use only the proved volume-sampling decoupling/Brascamp--Lieb estimate from the Fourier report. I do **not** use uniform pointwise one-coordinate oscillatory decay, independence after spectral rotation, a conditional density cap for a sum/difference pair, arbitrary-joint rank-three coarea, or a uniformly good single physical minor. Those interfaces are refuted in the live correction inbox.
 
 The designated partner `fleet04/B03` has one completed current-QFORM handoff:
-`math-open-problems@28681f9af7c2307f80968df86010084019599e38`.
+`private-source@28681f9af7c2307f80968df86010084019599e38`.
 Its advertised L2 compiler contains a previously recorded bad weighted Cauchy--Schwarz step, so I do not use it. I use only its valid general collision lemma
 \[
   \Pr\{|Y-Y'|\le \varepsilon\}\le 2\varepsilon\|p_Y\|_2^2,

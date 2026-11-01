@@ -6,7 +6,7 @@ This addendum narrows the interpretation of `REPORT.md`; it does not alter the s
 
 The preceding B11 result is
 
-`yspennstate/math-open-problems@c157c4b54b2b34fee3a7cc05d337c2fd654a77e7`,
+`private-source-repository@c157c4b54b2b34fee3a7cc05d337c2fd654a77e7`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T061800Z-fleet03-B11-QFORM-r24/REPORT.md`.
 
 In the sign-balanced pair-PSD chamber it writes `F=uu^T-A`, with `u_i=sqrt(A_ii)`, and proves: if `s_3(A)>=s`, then either a defect STAR has `sum_j F_ij^2>=s^2/4`, or a disjoint cut has defect second exterior volume at least `s^4/32`.
@@ -31,7 +31,7 @@ Thus r24's collective STAR certificate sees this family at fixed scale even thou
 
 Use the completed ridge-window theorem
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 It states: if `P` is the spectral projection onto all eigenspaces with `|lambda|>=1/64` and `max_i P_ii<=1/32`, then the full quadratic form has a continuous density with

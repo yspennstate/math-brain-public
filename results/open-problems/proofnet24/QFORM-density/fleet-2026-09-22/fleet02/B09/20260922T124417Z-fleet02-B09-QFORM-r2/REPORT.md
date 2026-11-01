@@ -26,7 +26,7 @@ This run closes that implication at the correct intermediate regularity scale an
 
 Canonical report:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `41fc39eccdd44a0dcae6619676bf41f5ea21bb3e`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T114536Z-fleet03-B09-qform-r11/REPORT.md`
 
@@ -42,7 +42,7 @@ It also proves the exact Pluecker identity for a rank-two spectral component acr
 
 Interactive canonical report:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `8624982153e5a2154e4ae8922d2fe4dc77080efc`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/interactive/20260922T121109Z-crossblock-and-lower-bounds/REPORT.md`
 
@@ -56,7 +56,7 @@ The report used this for `r>2`; at the borderline `r=2` the bound is `O(1/|t|)` 
 
 Canonical fleet01/B11 report:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `2279571f59ade7a9ec478af1e4818f6c117ac224`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`
 

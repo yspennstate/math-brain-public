@@ -16,7 +16,7 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates with 
 
 The immediate fleet01/B02 predecessor is source-pinned at
 
-`yspennstate/math-open-problems@acf321dcae5b20ea42cf55f84ced68433498a9f5`,
+`private-source-repository@acf321dcae5b20ea42cf55f84ced68433498a9f5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260924T052052Z-fleet01-B02-qform-auto11-r45/REPORT.md`.
 
@@ -36,13 +36,13 @@ and, outside the already-paid transverse-E3 / near-coloop branches, a physical h
 
 The completed row-gate-free E2 half-Riesz compiler used and strengthened below is
 
-`yspennstate/math-open-problems@cd0be625c8f7143a46ad14bb936e9c24bfb19a8d`,
+`private-source-repository@cd0be625c8f7143a46ad14bb936e9c24bfb19a8d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T192839Z-auto11/REPORT.md`.
 
 The newest completed designated partner read and applied below is fleet02/B02 auto12,
 
-`yspennstate/math-open-problems@19a3d60ceb5d0989aa527b32d3e76f388b9419f6`,
+`private-source-repository@19a3d60ceb5d0989aa527b32d3e76f388b9419f6`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260924T060210Z-fleet02-B02-QFORM-auto12/REPORT.md`.
 

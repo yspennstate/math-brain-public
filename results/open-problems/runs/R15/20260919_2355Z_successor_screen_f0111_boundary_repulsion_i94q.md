@@ -1,6 +1,6 @@
 Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 maximum. NATIVE I0076 METRIC NO MOVEMENT: `NOT_SCOREABLE_NO_SURVIVING_FROZEN_CANDIDATE -> NOT_SCOREABLE_NO_SURVIVING_FROZEN_CANDIDATE`. RETAINED-SCREEN MOVEMENT: the positive-mass polygon attack on the first `n=30` branch fails for an exact structural reason, but exact value contact plus block symmetrization proves a new boundary-repulsion theorem: no block-constant two-level Hessian-null exact quadratic contact can accumulate at the sharp outer boundary `z downarrow 1`. Methods #6, #14, #24.**
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R15, CLOSABLE OUTSIDE.  
 Native source: Krzysztof Burdzy and Michael Scheutzow, *Forward Brownian Motion*, arXiv:1302.6958 / PTRF 160 (2014), Problem 7.2, intake I0076.  
 Retained screen only: Michel Talagrand, *Are Many Small Sets Explicitly Small?*, STOC 2010, Problem 10.9 / F0111, specialized to the `k=2` hazard. F0111 remains **PENDING / SELF_CHECK_ONLY / NOT CLAIMED / NOT READY**.

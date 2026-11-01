@@ -4,7 +4,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 
 ## Snapshot and scope
 
-Repository / branch: private `yspennstate/math-open-problems` / existing `master`.
+Repository / branch: private `private-source-repository` / existing `master`.
 
 Start-of-run captured master SHA:
 

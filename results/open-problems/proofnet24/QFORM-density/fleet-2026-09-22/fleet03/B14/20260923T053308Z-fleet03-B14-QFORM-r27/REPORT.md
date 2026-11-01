@@ -17,7 +17,7 @@ Corrections consumed include the law-uniform pointwise quadratic-phase counterex
 
 The immediate analytic frontier used here is fleet03/B03 r27,
 
-`yspennstate/math-open-problems@b580b09027d8c20c3d3bbea0bea6cf8caa04d541`,
+`private-source-repository@b580b09027d8c20c3d3bbea0bea6cf8caa04d541`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T045638Z-fleet03-B03-QFORM-r27/REPORT.md`.
 
@@ -53,13 +53,13 @@ Thus the first unpaid state is angular cancellation `|h_r|/rho ->0`, including `
 Two completed supporting results are used at actual inequalities:
 
 1. fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical
-   `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
+   `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
    Its one-dimensional consequence is: if `c` is a coefficient vector and `Y_j` are independent cap-one variables, then the scalar projection `c.Y` has density cap at most
 
    `sqrt(e)/||c||_2`.                                                 (1.7)
 
 2. **Designated partner fleet04/B14**, affine-mixture localization, canonical
-   `yspennstate/math-open-problems@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee`,
+   `private-source-repository@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T001323Z-fleet04-B14-affine-mixture-compiler-r5/REPORT.md`.
    For a fixed original-coordinate quadratic core, any interval estimate uniform in all affine parameters transfers with the identical constant from compact finite-fragment cap-one product inputs to arbitrary cap-one product laws and arbitrary outside tails/couplings. Singular cores are allowed; kernel-affine leakage is retained rather than silently translated away.
 

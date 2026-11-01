@@ -12,7 +12,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The preceding fleet03/B15 run
 
-`yspennstate/math-open-problems@4de22821d4c940eeeea7efe87cbb40252d5ae953`
+`private-source-repository@4de22821d4c940eeeea7efe87cbb40252d5ae953`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T192904Z-fleet03-B15-qform-auto26/REPORT.md`
 
@@ -118,7 +118,7 @@ Thus the correct law-uniform receiver has **no decay in the affine slope `r`** o
 
 The designated partner `fleet04/B15` proved at
 
-`yspennstate/math-open-problems@f8d97d9b706dc383144c98bec09a0af076e762da`,
+`private-source-repository@f8d97d9b706dc383144c98bec09a0af076e762da`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T151702Z-fleet04-B15-pivoted-convolution-r6/REPORT.md`,
 

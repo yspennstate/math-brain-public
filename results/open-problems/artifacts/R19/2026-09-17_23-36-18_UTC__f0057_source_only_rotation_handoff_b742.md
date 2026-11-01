@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R19 / F0057 — source-only proof core and six-run rotation handoff
 
-Date: 2026-09-17 UTC. Repository: `yspennstate/math-open-problems`, branch `master`.
+Date: 2026-09-17 UTC. Repository: `private-source-repository`, branch `master`.
 
 This file has two purposes only:
 

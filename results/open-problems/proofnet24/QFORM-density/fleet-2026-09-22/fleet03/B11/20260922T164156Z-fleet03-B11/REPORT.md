@@ -12,13 +12,13 @@ The target is the bounded-density conjecture for `Q=X^T A X` with independent re
 
 This run consumes the completed designated-partner result `fleet04/B11`, canonical source
 
-`yspennstate/math-open-problems@44e7ab6750fbc3dccd77f1dd9e8bdba0bba2f0f5:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T161514Z-b11-cone-trace-r1/REPORT.md`.
+`private-source-repository@44e7ab6750fbc3dccd77f1dd9e8bdba0bba2f0f5:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T161514Z-b11-cone-trace-r1/REPORT.md`.
 
 That result proves the exact cone-trace identity for `q(u,v,w)=u^2+v^2-w^2` and shows by an explicit unit-volume cone tube that an arbitrary bounded three-dimensional density can have arbitrarily large cone trace. Therefore any positive result must use genuine product-projection provenance.
 
 We also use the preceding fleet03/B11 local physical-triple theorem, source
 
-`yspennstate/math-open-problems@117c1568f8f458706c1123327f893efd750053c5:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T150842Z-fleet03-B11-QFORM-r12/REPORT.md`.
+`private-source-repository@117c1568f8f458706c1123327f893efd750053c5:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T150842Z-fleet03-B11-QFORM-r12/REPORT.md`.
 
 It proves, for every invertible symmetric physical `3 x 3` block `B`, arbitrary affine term, and three independent cap-one coordinates,
 

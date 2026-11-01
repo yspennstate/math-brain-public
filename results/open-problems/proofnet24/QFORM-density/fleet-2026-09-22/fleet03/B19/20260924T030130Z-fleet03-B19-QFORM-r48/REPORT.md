@@ -15,7 +15,7 @@ All random coordinates below are literal ORIGINAL product coordinates. No random
 
 The immediate inherited source is fleet03/B19 r47:
 
-`yspennstate/math-open-problems@1a64d8ce29d893fd99b9af8dac5a63e359a9cc08`
+`private-source-repository@1a64d8ce29d893fd99b9af8dac5a63e359a9cc08`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T020346Z-fleet03-B19-QFORM-r47/REPORT.md`.
 
@@ -40,7 +40,7 @@ The full matrix may have arbitrary within-`R`, within-`C`, and outside curvature
 
 The fresh fleet02/B19 result
 
-`yspennstate/math-open-problems@cddd95e8f2034382419d488197e0eb08cb506543`,
+`private-source-repository@cddd95e8f2034382419d488197e0eb08cb506543`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260924T025057Z-fleet02-B19-QFORM-auto11b/REPORT.md`
 
@@ -56,7 +56,7 @@ hence the r47 scale gives `<51.44981`. It also exhibits a target-valid exact Sch
 
 The analytic receiver used below is fleet03/B04 r42,
 
-`yspennstate/math-open-problems@563bc41e4f9247f9daf3343a57757f45e3f6e703`,
+`private-source-repository@563bc41e4f9247f9daf3343a57757f45e3f6e703`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T215155Z-fleet03-B04-QFORM-auto11-r42/REPORT.md`.
 
@@ -274,7 +274,7 @@ The giant near-rank-one and rank-<=9 carrier frontiers remain separate debts. Th
 
 The designated partner source remains
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`,
 

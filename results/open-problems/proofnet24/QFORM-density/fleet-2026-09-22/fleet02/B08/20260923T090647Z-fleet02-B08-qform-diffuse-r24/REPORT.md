@@ -13,21 +13,21 @@ attacking: choose a legitimate tiny fixed no-pivot gate, apply the newest fleet0
 
 The target remains open: for arbitrary independent ORIGINAL coordinates with probability densities at most one and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, prove a universal essential density bound for `X^TAX`, or give a valid counterexample. No moments, support regularity, log-concavity, post-rotation independence, pointwise law-uniform Fresnel decay, arbitrary-joint coarea, conditional-height moments, or single-good-minor principle is used.
 
-The current full-to-N3 reduction is `math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`, Theorem 5.1. For every fixed `tau in (0,1]`, a universal density theorem for the no-`tau`-pivot class with three target-large eigenvalues implies the full conjecture. Hence one may choose a convenient fixed positive `tau`; making it small only worsens the eventual universal transfer constant, not the logical reduction.
+The current full-to-N3 reduction is `private-source@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`, Theorem 5.1. For every fixed `tau in (0,1]`, a universal density theorem for the no-`tau`-pivot class with three target-large eigenvalues implies the full conjecture. Hence one may choose a convenient fixed positive `tau`; making it small only worsens the eventual universal transfer constant, not the logical reduction.
 
-The newest completed designated partner is fleet03/B08 r33, canonical source `math-open-problems@6f8e99aec5b12f0e3a5f13d60e7da490ce491647`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T090721Z-fleet03-B08-qform-diffuse-r33/REPORT.md`. It inherits from r31 the aligned double-nest certificate containing an ACTUAL physical cross coefficient
+The newest completed designated partner is fleet03/B08 r33, canonical source `private-source@6f8e99aec5b12f0e3a5f13d60e7da490ce491647`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T090721Z-fleet03-B08-qform-diffuse-r33/REPORT.md`. It inherits from r31 the aligned double-nest certificate containing an ACTUAL physical cross coefficient
 
 `|a| > L/(600 sqrt(3))`,                                      (1.1)
 
 where `L>=1` is the selected-large-eigenvalue scale. It further pays one Dodgson child at the half-Riesz / `L^3` level and routes the other to calibrated ridge/coloop geometry. I use its actual coefficient (1.1) below rather than merely citing the branch labels.
 
-The newest-Claude fixed source actually applied to an output inequality is `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, Theorem F. For a diagonal-plus-rank-`r` actual spectral representation whose rank frame has row leverage at most `1/2`, it gives for `r>=3`
+The newest-Claude fixed source actually applied to an output inequality is `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, Theorem F. For a diagonal-plus-rank-`r` actual spectral representation whose rank frame has row leverage at most `1/2`, it gives for `r>=3`
 
 `||p_Q||_infinity <= [4r/(r-2)] (prod |lambda_j|)^(-1/r)`,       (1.2)
 
 with a continuous `C_0` density; arbitrary cap-one product sources and affine terms are allowed.
 
-I also retain the earlier B08 actual spectral gate, `math-open-problems@9fb59f9549a85af6173ade505fd53bc035c611ba`, which for selected-frame leverage at most `1/48` gives
+I also retain the earlier B08 actual spectral gate, `private-source@9fb59f9549a85af6173ade505fd53bc035c611ba`, which for selected-frame leverage at most `1/48` gives
 
 `c_L=(L/2)sqrt(3/5)`, `beta_L=(3L/16)sqrt(3/5)`,               (1.3)
 

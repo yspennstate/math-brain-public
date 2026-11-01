@@ -14,7 +14,7 @@ The unrestricted conjecture remains OPEN. No Gaussian, log-concavity, moment, bo
 
 Completed fleet04/B14 result:
 
-- repository: `yspennstate/math-open-problems`,
+- repository: `private-source-repository`,
 - commit: `deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`,
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260924T001624Z-fleet04-B14-scaled-schur-localization-r10/REPORT.md`.
 
@@ -30,7 +30,7 @@ If three original coordinates are independent cap-one variables and their symmet
 
 The source theorem is uniform in the affine term and imposes no support, fragment, tail or moment condition. Its own conclusion is essential boundedness; continuity is separate.
 
-The latest fleet04/B14 r12 handoff, source `math-open-problems@a660ad837e01bdaa7459104cfbaa37b9172b3b8e`, records the reflection-block special case under a linear translation bank. The theorem below identifies the exact general conditioning principle behind that mechanism and, crucially, its structural limit.
+The latest fleet04/B14 r12 handoff, source `private-source@a660ad837e01bdaa7459104cfbaa37b9172b3b8e`, records the reflection-block special case under a linear translation bank. The theorem below identifies the exact general conditioning principle behind that mechanism and, crucially, its structural limit.
 
 ## 2. Main theorem: arbitrary environment-dependent translation localization
 
@@ -188,7 +188,7 @@ from any physical triple, even after the most general outside-dependent recenter
 
 This deterioration is not a property of the output law. The previously completed disjoint-bank localization theorem for exactly the same `A_m` family, source
 
-`yspennstate/math-open-problems@4366a5648435eb9bfd6dcc40d4aa6fc3b3e67f6c`
+`private-source-repository@4366a5648435eb9bfd6dcc40d4aa6fc3b3e67f6c`
 
 at
 

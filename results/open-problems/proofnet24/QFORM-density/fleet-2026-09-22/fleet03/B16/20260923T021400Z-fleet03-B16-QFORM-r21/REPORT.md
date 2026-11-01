@@ -14,13 +14,13 @@ attacking: sharpen the nonzero/zero spectral-coloop interpolation by retaining t
 
 The source-valid predecessor sharpened here is fleet01/B16 `QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1`, canonical report
 
-`yspennstate/math-open-problems@8d262d18e5581cd02b8ea8be5102aa2a6d30ddd7:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T003846Z/REPORT.md`.
+`private-source-repository@8d262d18e5581cd02b8ea8be5102aa2a6d30ddd7:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T003846Z/REPORT.md`.
 
 Its key geometry is a genuine independent cap-one scalar `X` coupled to a possibly dependent two-dimensional receiver `Y`, together with a nonzero transverse determinant resource `P`; this avoids the live receiver-only counterexample.
 
 The new analytic input is fleet03/B05 `QFORM-RANK2-LOCALIZED-HALF-RIESZ-v1` and `QFORM-RANK2-HALF-RIESZ-UNIVERSAL-v1`, read at
 
-`yspennstate/math-open-problems@4f0070b8741a9d793b10c56313b89057abec3959:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/fleet03-B05-20260922T133738Z-qform-r12/REPORT.md`.
+`private-source-repository@4f0070b8741a9d793b10c56313b89057abec3959:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/fleet03-B05-20260922T133738Z-qform-r12/REPORT.md`.
 
 For an actual two-coordinate quadratic with independent cap-one coordinates, Theorem 3.1 there can be used with row leverage `d=1`, giving
 
@@ -33,7 +33,7 @@ For a general rank-two product quadratic, Theorem 4.1 gives
 
 The completed designated-partner result actually applied below is fleet04/B16 `QFORM-RULED-PLUECKER-ENDPOINT-v1`, canonical source
 
-`yspennstate/math-open-problems@b111363ff02b67015d14db35482e0150591744cd:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T231542Z-fleet04-B16-QFORM-r1/REPORT.md`.
+`private-source-repository@b111363ff02b67015d14db35482e0150591744cd:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T231542Z-fleet04-B16-QFORM-r1/REPORT.md`.
 
 It proves the majority-sign one-sheet bound `pi sqrt(2)` for exact rank three and reduces its `d=0` matroid endpoint to a leverage-one spectral coloop plus a rank-two plane, leaving only the opposite convex/two-sheet side unpaid at that stage.
 

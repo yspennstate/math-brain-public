@@ -27,7 +27,7 @@ Use the preceding own result
 
 `QFORM-MIXED-3PLUS2-FOURIER-L1-v1`,
 
-`yspennstate/math-open-problems@67f92f4e9110620b60f3ce49fd7738f00d285c87`,
+`private-source-repository@67f92f4e9110620b60f3ce49fd7738f00d285c87`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T072525Z-fleet03-B02-qform-auto11-r23/REPORT.md`.
 
@@ -49,7 +49,7 @@ Use fleet01/B01
 
 `QFORM-PAIRVOLUME-HALF-RIESZ-UNCONDITIONAL-v1`,
 
-`yspennstate/math-open-problems@1f3af9dc58afb9e902b972466d6da01cece89734`,
+`private-source-repository@1f3af9dc58afb9e902b972466d6da01cece89734`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T030821Z-fleet01-B01-qform-auto11/REPORT.md`.
 
@@ -74,7 +74,7 @@ The designated completed partner result is
 
 `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`,
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 

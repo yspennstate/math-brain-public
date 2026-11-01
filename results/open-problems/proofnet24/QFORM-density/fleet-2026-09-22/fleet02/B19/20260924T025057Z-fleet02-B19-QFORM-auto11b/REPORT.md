@@ -16,7 +16,7 @@ The exact target remains: arbitrary independent ORIGINAL real coordinates with o
 
 The previous B19 result is
 
-`yspennstate/math-open-problems@373f70551921d40dc74ac9ada67cfce1e491e432`,
+`private-source-repository@373f70551921d40dc74ac9ada67cfce1e491e432`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260924T021245Z-fleet02-B19-QFORM-r11/REPORT.md`.
 
 For distinct physical anchors `p != q`, disjoint physical banks `R,C`,
@@ -39,7 +39,7 @@ with the stronger `<9/1024` at `b=0`. It explicitly left the first branch open b
 
 The newest completed designated partner fleet03/B19 is r47:
 
-`yspennstate/math-open-problems@1a64d8ce29d893fd99b9af8dac5a63e359a9cc08`,
+`private-source-repository@1a64d8ce29d893fd99b9af8dac5a63e359a9cc08`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T020346Z-fleet03-B19-QFORM-r47/REPORT.md`,
 brain handoff commit `d7a71d65d4c65b0fc15e485542bb25090bfbf9a1`.
 
@@ -55,7 +55,7 @@ and another is giant near rank one. Its first synthesis debt is to pay these phy
 
 The owner-pinned source was reread at exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
 The source-valid ingredient used below at equation level is its checked Livshyts--Paouris--Pivovarov projection bound: an orthogonal `k`-dimensional projection of a cap-one product measure has density at most `2^(k/2)` (the sharper finite-dimensional expression is also recorded there). Thus a unit one-dimensional product projection has density cap at most `sqrt(2)`, and an orthogonal two-dimensional product projection has joint density cap at most `2`. This is applied below to a literal physical-bank SVD; the two projected vectors are independent only because their source coordinate banks are disjoint.

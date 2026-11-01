@@ -5,7 +5,7 @@ Problem/source: Héctor Jardón-Sánchez, Sam Mellick, Antoine Poulin, Konrad Wr
 # R06 CLOSABLE OUTSIDE — I0079 run 2: global phase unfolding, close-prior-art correction, and IRE-cylinder hardening
 
 Run date: 2026-09-17 Asia/Jerusalem / 2026-09-16 UTC.
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Delivery: private GitHub only. No email/Gmail, Drive, public posting, purchases, permission changes, workflow execution, or scheduler changes.
 
 ## 1. Repository continuity and why I0056 is not restarted

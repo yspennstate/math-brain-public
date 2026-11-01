@@ -254,7 +254,7 @@ Thus even allowing an arbitrary cap-one heavy law, the one-heavy minority-axis p
 
 The designated partner `fleet04/B17` proved, at
 
-`yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`
+`private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f`
 
 path
 

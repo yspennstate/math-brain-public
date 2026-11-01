@@ -17,7 +17,7 @@ Corrections retained throughout: no law-uniform pointwise quadratic Fourier deca
 
 Completed designated-partner result actually used below:
 
-`fleet02/B15`, `yspennstate/math-open-problems@3aeee281da396345dd8e95eeb9802e3c3b73eea8`,
+`fleet02/B15`, `private-source-repository@3aeee281da396345dd8e95eeb9802e3c3b73eea8`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T170821Z-fleet02-B15-qform-auto11/REPORT.md`.
 
 In particular, for an invertible indefinite original-coordinate triple `S`, its rough-input majority/one-sheet output submeasure satisfies interval domination with exact ruled constant `C_S`; for signature `(2,1)` with eigenvalue magnitudes `lambda_1,lambda_2,mu`,
@@ -27,7 +27,7 @@ In particular, for an invertible indefinite original-coordinate triple `S`, its 
 The same partner report also source-pins the fixed-matrix theorem: every rank-at-least-three target with cap-one product inputs has an individually bounded `C_0(R)` density. This qualitative continuity theorem is not a universal-height theorem.
 
 I also use the completed finite-block theorem from
-`yspennstate/math-open-problems@47dc925729bbf269333cc6e1256178a538d2f553`,
+`private-source-repository@47dc925729bbf269333cc6e1256178a538d2f553`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260922T120320Z-fleet01-B15-qform/REPORT.md`:
 
 - every rank-at-least-three symmetric matrix has an invertible original-coordinate principal block of order `3` or `4`;

@@ -32,7 +32,7 @@ The first essential missing implication is therefore the product-preserving aggr
 
 The required partner is `fleet02/B10`. Its canonical report is
 
-`yspennstate/math-open-problems@11c9ae19edfd07e3a0bd4053a910667c20e721ab`
+`private-source-repository@11c9ae19edfd07e3a0bd4053a910667c20e721ab`
 
 at
 
@@ -139,7 +139,7 @@ This is intentionally **not** promoted to a universal rank-three theorem: the cu
 
 The next lemma uses the complete source-reported `QFORM-DIFFUSE-SEPARABLE-PHASE-v1` theorem at
 
-`yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`,
+`private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`,
 
 `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
 

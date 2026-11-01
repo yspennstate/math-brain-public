@@ -208,7 +208,7 @@ This is scale-correct under `A -> cA`.
 
 The latest completed compatible fleet04/B18 result is corrected run r4:
 
-`yspennstate/math-open-problems@3460488b1a730f54dbac848cddc3e2761d3f348e`
+`private-source-repository@3460488b1a730f54dbac848cddc3e2761d3f348e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T162049Z-fleet04-B18-QFORM-r4/REPORT.md`.
 

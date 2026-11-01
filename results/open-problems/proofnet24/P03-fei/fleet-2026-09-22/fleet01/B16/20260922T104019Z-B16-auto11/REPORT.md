@@ -35,7 +35,7 @@ This does **not** prove FEI. It turns the assignment's requested logarithm-prese
 
 Fleet02/B15, immutable source
 
-`yspennstate/math-open-problems@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`
+`private-source-repository@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`
 
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`
 
@@ -70,7 +70,7 @@ and any fixed fractional loss of `K_occ` cannot be repaired by a dimension-indep
 
 Fleet03/B18, immutable source
 
-`yspennstate/math-open-problems@bff0d7b6c21485f386841c42582eb04f32705046`
+`private-source-repository@bff0d7b6c21485f386841c42582eb04f32705046`
 
 `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md`
 
@@ -84,7 +84,7 @@ r_i=2^{-m},\qquad I(M_m)=(3/2)^m,\qquad H(M_m)=4((3/2)^m-1).
 
 The latest compatible completed fleet02/B16 theorem used here is
 
-`yspennstate/math-open-problems@730731281a24e70b01b4021a90ff758575414db1`
+`private-source-repository@730731281a24e70b01b4021a90ff758575414db1`
 
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B16/20260921T152751Z-qflip-channel-density/REPORT.md`.
 

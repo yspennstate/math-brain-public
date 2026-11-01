@@ -16,7 +16,7 @@ The designated partner `fleet04/B02` had no completed current-QFORM handoff visi
 
 I apply the completed compatible `fleet02/B02` theorem `QFORM-AFFINE-HYPERBOLIC-L2-v1`, source:
 
-- `yspennstate/math-open-problems@81e2e89635a42476da8b2344c61f22d05436b726`
+- `private-source-repository@81e2e89635a42476da8b2344c61f22d05436b726`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T170646Z-fleet02-B02-QFORM-r11/ADDENDUM_FRESH_O1_CORRECTION.md`
 - read-back blob `2e193c242cb5edae6a0ebe59c1ea9c54088f1286`.
 

@@ -22,15 +22,15 @@ is preserved. The estimates below are JOINT two-bank estimates created by a rank
 
 Source inputs used at equations:
 
-1. Exact-rank crossing theorem: `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. For two independent original-coordinate banks, an exact rank-r physical cross block `M=USV^T`, arbitrary same-bank measurable phases, and projected density caps `M_X,M_Y`, it proves
+1. Exact-rank crossing theorem: `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. For two independent original-coordinate banks, an exact rank-r physical cross block `M=USV^T`, arbitrary same-bank measurable phases, and projected density caps `M_X,M_Y`, it proves
 
    `|phi(t)| <= min{1,(pi/|t|)^(r/2)(M_X M_Y)^(1/2)(s_1...s_r)^(-1/2)}`.
 
    In dimension two, the orthogonal product projections have density caps at most 2.
 
-2. Previous B01 scalar-square plus E2 synthesis: `yspennstate/math-open-problems@0bbbd2e99a4d26b7a4380a9827d92596daeaf2a6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T200355Z-fleet01-B01-qform-auto11/E2_SQUARE_SYNTHESIS.md`. It gives `8 e^(1/4)|a|^(-1/2) Z^(-1/8)` using the more general row-gate-free E2 theorem. The exact-rank-two argument below improves the constant to 8 and also gives the full fractional-potential scale `0<beta<1` plus a near-linear concentration bound.
+2. Previous B01 scalar-square plus E2 synthesis: `private-source-repository@0bbbd2e99a4d26b7a4380a9827d92596daeaf2a6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T200355Z-fleet01-B01-qform-auto11/E2_SQUARE_SYNTHESIS.md`. It gives `8 e^(1/4)|a|^(-1/2) Z^(-1/8)` using the more general row-gate-free E2 theorem. The exact-rank-two argument below improves the constant to 8 and also gives the full fractional-potential scale `0<beta<1` plus a near-linear concentration bound.
 
-3. Newest completed designated partner fleet02/B01: `yspennstate/math-open-problems@94f16e48c87819684efd69c01766d5dc11356dd6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T003308Z-auto11-latentrank1/REPORT.md`. Its theorem `QFORM-LATENT-RANK1-GLOBAL-COMPILER-v1` pays every `A=D+R`, `rank R<=1`, `s_3(A)>=1` by `<195.01`; on `A_0=I_3-11^T` its physical-pair branch gives `<22.105`.
+3. Newest completed designated partner fleet02/B01: `private-source-repository@94f16e48c87819684efd69c01766d5dc11356dd6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T003308Z-auto11-latentrank1/REPORT.md`. Its theorem `QFORM-LATENT-RANK1-GLOBAL-COMPILER-v1` pays every `A=D+R`, `rank R<=1`, `s_3(A)>=1` by `<195.01`; on `A_0=I_3-11^T` its physical-pair branch gives `<22.105`.
 
 ## 2. Main theorem: rank-two cross fractional potentials
 

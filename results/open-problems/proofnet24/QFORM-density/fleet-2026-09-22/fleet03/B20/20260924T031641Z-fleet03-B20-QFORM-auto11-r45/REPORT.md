@@ -9,7 +9,7 @@ Status: **SUPPORTING CLOSURE THEOREM PROVED / FULL QFORM OPEN / GLOBAL CONTINUIT
 
 The target is unchanged: independent original real coordinates with densities at most one, arbitrary real symmetric A with at least three eigenvalues of modulus at least one. No moment, support, iid, log-concavity, sign, compactness, or diagonal-basis assumption is made. Orthogonal changes below are deterministic coefficient calculations only; no rotated random variables are declared independent.
 
-Fresh fleet03/B19 r48 (canonical math-open-problems commit `2d483191e9a6edbc28549de90441cbeb631eca71`) reduces one current unpaid chamber to disjoint original-coordinate banks R,C with
+Fresh fleet03/B19 r48 (canonical private-source commit `2d483191e9a6edbc28549de90441cbeb631eca71`) reduces one current unpaid chamber to disjoint original-coordinate banks R,C with
 
     N = A[R,C],
     dist_F(N, rank <= 2) < tau := 2^(-16),

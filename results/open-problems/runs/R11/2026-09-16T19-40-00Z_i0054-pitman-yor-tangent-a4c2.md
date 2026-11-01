@@ -5,7 +5,7 @@ Problem/source: David J. Aldous and Svante Janson, *The Critical Beta-splitting 
 # R11 I0054 — a positive-discount Pitman--Yor hierarchy has CTCS(infinity) as its small-parameter accelerated limit
 
 Run ID: `2026-09-16T19-40-00Z_i0054-pitman-yor-tangent-a4c2`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Dated source/status check: 2026-09-16
 
 No Gmail/email, Drive, public posting, paid compute, workflow execution, permission change, scheduler mutation, peer-file edit, or shared-root edit was performed.

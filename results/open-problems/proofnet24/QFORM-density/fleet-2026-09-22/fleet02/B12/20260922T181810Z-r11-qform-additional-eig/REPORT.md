@@ -31,7 +31,7 @@ The construction is NOT a QFORM counterexample. For the physical principal block
 
 `B_tau=I_3-(1-tau)J_3/4`,
 
-whose eigenvalues are `{1,1,(1+3tau)/4}`. The completed designated-partner fleet03/B12 theorem at `yspennstate/math-open-problems@b3c543b40dfaef13468466fa82625303a7719af8:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md` gives a full-ambient density cap `C_*/L` whenever a physical 3x3 block has two same-sign eigenvalues of magnitude at least L, with arbitrary third eigenvalue. Taking L=1 yields
+whose eigenvalues are `{1,1,(1+3tau)/4}`. The completed designated-partner fleet03/B12 theorem at `private-source-repository@b3c543b40dfaef13468466fa82625303a7719af8:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md` gives a full-ambient density cap `C_*/L` whenever a physical 3x3 block has two same-sign eigenvalues of magnitude at least L, with arbitrary third eigenvalue. Taking L=1 yields
 
 `||p_{X^T A_tau X}||_infinity <= C_*=24.183038289961516...`
 

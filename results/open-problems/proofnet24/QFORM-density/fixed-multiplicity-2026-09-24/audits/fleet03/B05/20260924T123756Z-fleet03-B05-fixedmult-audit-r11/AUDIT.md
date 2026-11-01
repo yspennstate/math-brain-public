@@ -5,7 +5,7 @@ Current objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`
 Pinned baseline manuscript commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Pinned manuscript blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
 Pinned manuscript SHA-256 (owner manifest): `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`  
-Fresh math-open-problems master observed before publication: `abbed9eac2ca191022c2e67ac0fb35998fcd06ae`; the manuscript blob was unchanged in the fresh tree observed earlier in this run.  
+Fresh private-source master observed before publication: `abbed9eac2ca191022c2e67ac0fb35998fcd06ae`; the manuscript blob was unchanged in the fresh tree observed earlier in this run.  
 Execution context: `WITHOUT_VERIFIED_BRAIN`.
 
 ## Scope and verdict

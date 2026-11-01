@@ -15,7 +15,7 @@ The owner target is the unrestricted statement for every dimension, every indepe
 
 This report does not rotate the product law, does not use the refuted law-uniform scalar Fresnel decay, does not condition on `U=X+X'` as if `V=X-X'` retained a density cap, and does not use the refuted arbitrary-joint rank-three coarea or positive conditional-density-moment gates.
 
-A new same-assignment result from fleet02/B03, canonical source `yspennstate/math-open-problems@e43c2e6afdf2063d5ce3f517d37f066acbda7b12`, proves that *every fixed finite-coordinate* closure obtained by moving absolute values through the exact pair-law `u` integral and then combining one-coordinate Plancherel/L-infinity estimates with time Holder has a certificate diverging on an explicit cap-one scale mixture, even for the solved diagonal form `A=I_3`. Its true collision integral stays bounded. Thus the mechanism below deliberately aggregates a full original-coordinate cross bank first, before paying any fractional collision norm.
+A new same-assignment result from fleet02/B03, canonical source `private-source-repository@e43c2e6afdf2063d5ce3f517d37f066acbda7b12`, proves that *every fixed finite-coordinate* closure obtained by moving absolute values through the exact pair-law `u` integral and then combining one-coordinate Plancherel/L-infinity estimates with time Holder has a certificate diverging on an explicit cap-one scale mixture, even for the solved diagonal form `A=I_3`. Its true collision integral stays bounded. Thus the mechanism below deliberately aggregates a full original-coordinate cross bank first, before paying any fractional collision norm.
 
 The designated partner `fleet04/B03` still has no completed current-QFORM handoff or canonical report at the fresh source scan. No result is attributed to that slot. A completed compatible fleet04 Fourier result is applied in Section 6.
 
@@ -45,7 +45,7 @@ This step explicitly uses the independent-copy collision quantity while never de
 
 The complete regularized-determinant theorem at
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`,
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`,
 `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`
 
 proves the following unconditional estimate. For any quadratic-affine polynomial in independent original coordinates with cap-one densities, and any bipartition of those ORIGINAL coordinates whose quadratic cross block is `T`,
@@ -158,7 +158,7 @@ This does **not** finish the owner theorem: the bare hypothesis `s_3(A)>=1` does
 
 The designated `fleet04/B03` has no completed current-QFORM artifact, so no partner result is fabricated. I apply the completed compatible fleet04 Fourier theorem `QFORM-SIGNED-FEJER-EXACT-INTERFACE-v1`, canonical source
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 
 It proves

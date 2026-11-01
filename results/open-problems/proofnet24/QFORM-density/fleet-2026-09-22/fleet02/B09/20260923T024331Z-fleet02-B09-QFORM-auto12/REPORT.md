@@ -26,7 +26,7 @@ The theorem below pays branch (i) while retaining the whole complementary quadra
 
 The required newest compatible Claude package was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
@@ -34,14 +34,14 @@ including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md
 
 For the two-dimensional product marginal used in the new theorem I use the source-pinned LPP statement recorded in the current synthesis
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`
 
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`:
 any orthogonal two-dimensional marginal of a product of cap-one one-dimensional densities has density at most `2`. This is a joint-density statement; it does **not** assert independence of the projected coordinates.
 
 A related but complementary current theorem is fleet01/B09's `QFORM-TWOHUB-PHYSICAL-STAR-DIFFUSE-v1`, source snapshot
 
-`yspennstate/math-open-problems@65e50ba0b12d5aff76bd5b4f3e44db2d01d07d0a`
+`private-source-repository@65e50ba0b12d5aff76bd5b4f3e44db2d01d07d0a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T021354Z-fleet01-B09-QFORM-auto11/REPORT.md`.
 It gives `4 W^{-1/4}` for two hubs when the remaining leaf self-block is diagonal and the mixed rows have leverage at most `1/2`. The theorem below makes the opposite trade: it assumes the physical two-hub core is exactly zero, but then permits a completely arbitrary dense complementary quadratic block and imposes no leverage condition.
@@ -49,7 +49,7 @@ It gives `4 W^{-1/4}` for two hubs when the remaining leaf self-block is diagona
 The latest completed designated partner result actually available was fleet03/B09
 `QFORM-DOUBLE-NULL-TRANSVERSE-RANK3-OR-GLOBAL-KERNEL-v1`, source snapshot
 
-`yspennstate/math-open-problems@b81d91f2d8a5d0de6f7dfe468158ef0cd4b858c3`
+`private-source-repository@b81d91f2d8a5d0de6f7dfe468158ef0cd4b858c3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T014949Z-fleet03-B09-QFORM-auto11/REPORT.md`.
 It is applied to an explicit target family in Section 5.2.

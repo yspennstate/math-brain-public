@@ -18,7 +18,7 @@ Corrections retained include: no law-uniform pointwise quadratic-phase decay; no
 
 The own source being sharpened is r32:
 
-`yspennstate/math-open-problems@c2ce876df8b5483a00802170001d4144bb4cdbfa`,
+`private-source-repository@c2ce876df8b5483a00802170001d4144bb4cdbfa`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T124109Z-fleet01-B06-QFORM-r32/PIVOT_RECEIVER.md`.
 
@@ -28,7 +28,7 @@ The designated partner result actually applied is the newest fleet02/B06 theorem
 
 canonical commit
 
-`yspennstate/math-open-problems@b38a9627f059b13d532f5c208c30579ec2d2d362`,
+`private-source-repository@b38a9627f059b13d532f5c208c30579ec2d2d362`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T192839Z-auto11/REPORT.md`.
 

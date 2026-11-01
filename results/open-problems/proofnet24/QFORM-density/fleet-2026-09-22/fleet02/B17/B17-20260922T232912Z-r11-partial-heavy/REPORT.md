@@ -164,7 +164,7 @@ The remainder in (3.3) is uniform in `u`: orthogonal rotations preserve `|y|`, t
 
 The completed partner `fleet03/B17` theorem is:
 
-`yspennstate/math-open-problems@63f692146f592bc250af369056573dc5e3720a8e`
+`private-source-repository@63f692146f592bc250af369056573dc5e3720a8e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260922T221945Z-fleet03-B17-QFORM-r19/REPORT.md`.
 
@@ -186,7 +186,7 @@ Thus `ell^2` replaces `1/m` at the first non-Gaussian order. I have rederived th
 
 The underlying completed weighted local Edgeworth/coarea theorem used by the partner is:
 
-`yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`
+`private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`.
 

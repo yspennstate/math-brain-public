@@ -1,5 +1,5 @@
 fleet03/B19 P2 reverse-dependency audit r16
-Source: math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, exact 14-page PDF SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
+Source: private-source@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, exact 14-page PDF SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
 Direct coverage this run: L346-L392. P2 direct coverage now L346-L646. Next exact target L286-L345.
 
 Findings: L346-L355 Step 4 PASS locally; orthogonal Gram factor, projection density and p=1/alpha Fourier-power factor all check. L357-L370 Step 5 PASS locally; determinant and alpha products give the stated entropy factor and the hub bound. L372-L378 Theorem 4.1 greedy promotion PASS locally; a_{k+1}/a_k=e^{-1/2}(omega(m-1)/omega(m))^{1/2}<=e^{-1/2}. L380-L391 Corollary 4.4 PASS locally; constants recompute C3=14.81833766...<15 and C2=12.09507257...<12.2, and the ell=1 formula is exact.

@@ -3,7 +3,7 @@ attacking: the singular/near-singular overlap-two star left by fleet04/B01, by c
 
 # Early substantive checkpoint
 
-The newest designated partner result used is fleet04/B01 at `yspennstate/math-open-problems@8410ab9d8238baa40c033f83dbae6af44b0b2582`, which for a physical pair `B=[[a,b],[b,c]]`, `a!=0`, scalar-Schur data
+The newest designated partner result used is fleet04/B01 at `private-source-repository@8410ab9d8238baa40c033f83dbae6af44b0b2582`, which for a physical pair `B=[[a,b],[b,c]]`, `a!=0`, scalar-Schur data
 
 `delta=(ac-b^2)/a`, `ell=v-(b/a)u`, `M=N-a^{-1}uu^T`
 

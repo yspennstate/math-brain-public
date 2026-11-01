@@ -22,7 +22,7 @@ The exact question attacked here is the aggregation debt left by the designated 
 
 The completed rank-two fusion report
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`
 
@@ -40,7 +40,7 @@ This is a theorem about a single physical product projection; no independence be
 
 The newest completed designated-partner theorem read for this run is
 
-`yspennstate/math-open-problems@b94cc7446401c02727c42024274c002e2f4e0cab`
+`private-source-repository@b94cc7446401c02727c42024274c002e2f4e0cab`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T202347Z-fleet03-B16-QFORM-r15/REPORT.md`.
 

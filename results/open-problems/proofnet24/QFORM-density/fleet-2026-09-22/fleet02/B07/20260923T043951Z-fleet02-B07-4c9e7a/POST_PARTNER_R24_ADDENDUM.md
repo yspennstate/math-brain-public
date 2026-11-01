@@ -2,7 +2,7 @@
 
 A newer designated-partner artifact appeared during this run and is consumed here before handoff:
 
-`yspennstate/math-open-problems@41b0325c7328a76eaa36b832b21c5cfbf720625d`,
+`private-source-repository@41b0325c7328a76eaa36b832b21c5cfbf720625d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T044100Z-fleet03-B07-qform-r24/PREPUBLICATION_ADDENDUM.md`.
 

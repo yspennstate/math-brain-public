@@ -10,14 +10,14 @@ The current owner assignment is the all-team FEI programme `FEI-ALL-TEAM-2026092
 
 This report uses the following exact sources.
 
-1. **IPROJ:** `yspennstate/math-open-problems@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`. It proves
+1. **IPROJ:** `private-source-repository@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`. It proves
    \[
    K_{\rm occ}=D_2(P\|Q_r)=H_{\max}(r)-H(P),
    \qquad
    R_\Gamma=B_{\rm inf}^\Gamma+K_{\rm occ},
    \]
    where `P=w^+` is the nonempty biased spectral law and `Q_r` is the maximum-entropy conditional-product law matching all coordinate occurrence marginals.
-2. **SELECTOR_DEBIT:** `yspennstate/math-open-problems@4ccd51ad517f425a529daa52c3352905b86ea69d`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md`. For a physical selector coordinate `i` of bias `s`, restrictions with biased Fourier coefficients `u_T,v_T` give
+2. **SELECTOR_DEBIT:** `private-source-repository@4ccd51ad517f425a529daa52c3352905b86ea69d`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md`. For a physical selector coordinate `i` of bias `s`, restrictions with biased Fourier coefficients `u_T,v_T` give
    \[
    e_T=(1-s)u_T^2+s v_T^2,
    \qquad
@@ -28,8 +28,8 @@ This report uses the following exact sources.
    \qquad V_s=4s(1-s),
    \]
    with `d=Pr[G_0\ne G_1]`.
-3. **HIERARCHY:** `yspennstate/math-open-problems@2bf247373576eb406ca91bb3ea5f3ce5e5ab8588`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md`. It proves the exact nonnegative hierarchy KL under disjoint composition and, in particular, that binary gates can have local `K_occ=0`; therefore no positive lower bound depending only on physical disagreement can be universally valid.
-4. **Named peer result consumed:** `yspennstate/math-open-problems@730731281a24e70b01b4021a90ff758575414db1`, `proofnet24/P03-fei/fleet-2026-09-22/fleet04/B14/20260922T101201Z-information-priced-crossing/REPORT.md`. Its Theorem 1.1 proves that for a Bernoulli variable of mean `p<=1/2` with posterior `U` after observing a physical block and crossing functional `c=E(2U-1)_+`,
+3. **HIERARCHY:** `private-source-repository@2bf247373576eb406ca91bb3ea5f3ce5e5ab8588`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md`. It proves the exact nonnegative hierarchy KL under disjoint composition and, in particular, that binary gates can have local `K_occ=0`; therefore no positive lower bound depending only on physical disagreement can be universally valid.
+4. **Named peer result consumed:** `private-source-repository@730731281a24e70b01b4021a90ff758575414db1`, `proofnet24/P03-fei/fleet-2026-09-22/fleet04/B14/20260922T101201Z-information-priced-crossing/REPORT.md`. Its Theorem 1.1 proves that for a Bernoulli variable of mean `p<=1/2` with posterior `U` after observing a physical block and crossing functional `c=E(2U-1)_+`,
    \[
    I\ge h_2(p)-h_2(p-c),
    \]

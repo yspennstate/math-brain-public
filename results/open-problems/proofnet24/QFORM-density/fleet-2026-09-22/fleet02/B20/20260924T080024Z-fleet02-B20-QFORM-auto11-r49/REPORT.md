@@ -17,7 +17,7 @@ All banks below are literal ORIGINAL-coordinate sets. No random variable is rota
 
 The newest compatible completed designated partner is fleet03/B20 r49:
 
-`yspennstate/math-open-problems@4bf5217dace0129fcb6995727e1d8afa671c2435`
+`private-source-repository@4bf5217dace0129fcb6995727e1d8afa671c2435`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T065238Z-fleet03-B20-QFORM-auto11-r49/REPORT.md`.
 
@@ -50,7 +50,7 @@ Two completed receivers are used below at their exact scopes.
 
 Canonical source:
 
-`yspennstate/math-open-problems@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`
+`private-source-repository@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T170106Z-fleet03-B02-qform-r35/REPORT.md`, theorem `QFORM-CROSS-E3-MARGINALFREE-L1-v1`.
 
@@ -72,7 +72,7 @@ It retains arbitrary same-bank curvature, outside couplings, affine terms, extra
 
 From the required pinned package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, Theorem `D_5` gives, for every literal disjoint physical cross block `K`,
 

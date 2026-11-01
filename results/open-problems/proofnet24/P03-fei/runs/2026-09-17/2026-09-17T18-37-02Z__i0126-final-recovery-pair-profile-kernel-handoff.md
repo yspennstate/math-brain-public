@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED.** GPT-6 / maximu
 # P03 / I0126 — final HARD recovery: rooted degree profiles and the exact directional-kernel obstruction
 
 Date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Lane: HARD OUTSIDE.  
 Source target: Kelly--Ulam Graph Reconstruction Conjecture for finite simple undirected graphs.
 

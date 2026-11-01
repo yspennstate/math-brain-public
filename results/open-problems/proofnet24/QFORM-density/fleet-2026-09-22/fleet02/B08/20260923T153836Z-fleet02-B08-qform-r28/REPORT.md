@@ -31,11 +31,11 @@ The aligned survivor is real, not a weakness of the estimates: Section 6 gives a
 
 The current gate is source-pinned at
 
-`yspennstate/math-open-problems@9fb59f9549a85af6173ade505fd53bc035c611ba`
+`private-source-repository@9fb59f9549a85af6173ade505fd53bc035c611ba`
 
 and later narrowed in
 
-`yspennstate/math-open-problems@41ee49f6e9c3383e4c3a322bdc52779768a17eb7`.
+`private-source-repository@41ee49f6e9c3383e4c3a322bdc52779768a17eb7`.
 
 At scale `L>0`, with
 
@@ -53,7 +53,7 @@ No cancellable rank-three component is substituted for an actual physical princi
 
 The completed supporting theorem used below is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 For a literal ORIGINAL-coordinate cross block
@@ -76,7 +76,7 @@ This is a Fourier/volume statement about the **actual perturbed cross block**. I
 
 At the prepublication partner refresh, the chronologically newest completed fleet03/B08 run is
 
-`yspennstate/math-open-problems@2cd89223b68f32e5c7ad36cf2e3be595c7c76d6b`,
+`private-source-repository@2cd89223b68f32e5c7ad36cf2e3be595c7c76d6b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T151901Z-fleet03-B08-qform-diffuse-r39/REPORT.md`.
 
 Its `QFORM-PLUCKER-HALFCUT-RANK2-SCHUR-v1` states: if an ORIGINAL scalar pivot has coefficient `a!=0`, its exact rank-two Schur residual has `s_2(S)>=L`, and the maximum leverage `mu` of the residual two-frame is below `1/2`, then
@@ -96,7 +96,7 @@ The partner addendum records that its run is chronologically later than the sepa
 
 I reread, at exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 
 all of `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.

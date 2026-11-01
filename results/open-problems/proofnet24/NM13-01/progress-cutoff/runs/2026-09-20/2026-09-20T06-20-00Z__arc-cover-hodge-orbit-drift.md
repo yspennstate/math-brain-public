@@ -8,7 +8,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 **Publication novelty:** `UNVERIFIED`. The oriented-edge/symmetrized-nonbacktracking cutoff theorem and the Hodge-Green total-variation estimate are new to the checked repository state. Fresh bounded searches on 20 September 2026 for combinations of `symmetrized nonbacktracking random walk cutoff`, `oriented edge graph cutoff`, `directed edge graph cutoff expander`, and `arc graph random walk cutoff` did not locate this exact theorem. This is negative evidence only, not a worldwide priority certificate.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.  
+Repository/branch: `private-source-repository` / `master`.  
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.  
 Run root: `proofnet24/NM13-01/progress-cutoff/runs/2026-09-20/`.  
 Pre-write master observed immediately before persistence work: `9befcc945ed8c6961a211c6f79b429aaa21c2652`.

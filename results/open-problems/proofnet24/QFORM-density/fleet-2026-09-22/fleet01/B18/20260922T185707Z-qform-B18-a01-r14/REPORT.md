@@ -59,7 +59,7 @@ This proves (2.1). The uniform-comparator negative-moment constant is sharp in t
 
 Consume the exact completed partner source:
 
-  yspennstate/math-open-problems@aa0b07137085e1b6e948c00052ff0689343a0cee
+  private-source-repository@aa0b07137085e1b6e948c00052ff0689343a0cee
   proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260922T181504Z-fleet02-B18-QFORM-r12/REPORT.md
 
 and its late-correction supplement at commit 55114f49ab8188c8a90cf998c66d8627d655dec4.
@@ -162,7 +162,7 @@ Full QFORM remains OPEN / NOT PROVED.
 
 - Juskevicius--Lee, arXiv:1503.09190, Theorem 1.
 - Chasapis--Konig--Tkocz, arXiv:2011.12251 / JFA 2021, Theorem 1, p=1/2.
-- fleet02/B18 partner report: math-open-problems@aa0b07137085e1b6e948c00052ff0689343a0cee, path above.
-- fleet02/B18 late correction: math-open-problems@55114f49ab8188c8a90cf998c66d8627d655dec4.
+- fleet02/B18 partner report: private-source@aa0b07137085e1b6e948c00052ff0689343a0cee, path above.
+- fleet02/B18 late correction: private-source@55114f49ab8188c8a90cf998c66d8627d655dec4.
 - fresh structural correction QFORM-EXACT-BANK-SEPARATION-NOT-FORCED-v1: math-research-brain commit 6976b2fad428ef44c76125a6ab34339b5a5d9b44.
 - fresh conditional-moment correction QFORM-SCALAR-LEAKAGE-CONDITIONAL-23-MOMENT-FALSE-v1: math-research-brain commit 594599ea6dbb5baf53bd4090501c89211c66fae7.

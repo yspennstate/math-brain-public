@@ -30,7 +30,7 @@ The mathematical inputs actually used at equations are:
 
 1. **New interactive grouped projected-crossing theorem**, immutable source
 
-   `yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
+   `private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
 
    `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`, blob `dc7e29c3ee746ebf2856aaa6866b4b16b9a04b9f`.
 
@@ -44,7 +44,7 @@ The mathematical inputs actually used at equations are:
 
 2. **Latest Claude continuation, three-hub theorem**, source commit
 
-   `yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`,
+   `private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`,
 
    `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`, Theorem 6.3, blob `65d83f93ed68044bab3ff355f6e9603751af0628`.
 
@@ -56,7 +56,7 @@ The mathematical inputs actually used at equations are:
 
 3. **This slot r32 aggregate compiler**, canonical mathematics
 
-   `yspennstate/math-open-problems@640165d39efca44cf3cf7fe2d2e5638a823a335b`,
+   `private-source-repository@640165d39efca44cf3cf7fe2d2e5638a823a335b`,
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T124906Z-fleet03-B09-QFORM-r32/REPORT.md`.
 
@@ -68,7 +68,7 @@ The mathematical inputs actually used at equations are:
 
    `QFORM-PHYSICAL-CROSS-DETERMINANT-SMOOTHING-v1`,
 
-   `yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`,
+   `private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`,
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`, blob `a2292a47ee56cf3d66556e324bd8b234bd2157f1`.
 

@@ -8,9 +8,9 @@ The universal theorem is not claimed. This report records a noncircular proof gr
 
 ## 1. Source pins
 
-The Claude baseline is math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837, with later directory commits 2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926 and 7ffd1ed79398611eb06752f622be0ce33dcacb5a retained as continuation/correction boundaries.
+The Claude baseline is private-source@e5f71d79eff325201dd0274053d20268ce65b837, with later directory commits 2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926 and 7ffd1ed79398611eb06752f622be0ce33dcacb5a retained as continuation/correction boundaries.
 
-The completed fleet01/B20 input is math-open-problems@942f8610e8af1d2d4268f769e0fb2c76d467d02a, theorem QFORM-R46-GLOBAL-FOURSTAR-E3-OR-LATENT8-v1. Its actual surviving carrier satisfies
+The completed fleet01/B20 input is private-source@942f8610e8af1d2d4268f769e0fb2c76d467d02a, theorem QFORM-R46-GLOBAL-FOURSTAR-E3-OR-LATENT8-v1. Its actual surviving carrier satisfies
 
 \[
 s_2(B_8)>0.015572142004163547,
@@ -26,7 +26,7 @@ while the retained tail obeys
 \tag{1.2}
 \]
 
-The B08 structural input is fleet01/B08 r35 at math-open-problems@68f8d8a91987834d73fa06849d9ec8795a3df883. The child-window receiver is fleet04/B08 r2 at math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76.
+The B08 structural input is fleet01/B08 r35 at private-source@68f8d8a91987834d73fa06849d9ec8795a3df883. The child-window receiver is fleet04/B08 r2 at private-source@a5e66e2944c89857a41d5e18c283d53a4307be76.
 
 ## 2. Noncircular proof graph
 

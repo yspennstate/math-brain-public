@@ -18,7 +18,7 @@ Corrections explicitly respected: law-uniform pointwise quadratic oscillatory de
 
 The assigned partner `fleet02/B13` completed the finite-direction aggregation theorem at
 
-`yspennstate/math-open-problems@9bf04fb890e99db8ddd4e9bfd176f654bc5a82cd`
+`private-source-repository@9bf04fb890e99db8ddd4e9bfd176f654bc5a82cd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T125435Z-fleet02-B13-80c2a32d/REPORT.md`.
 

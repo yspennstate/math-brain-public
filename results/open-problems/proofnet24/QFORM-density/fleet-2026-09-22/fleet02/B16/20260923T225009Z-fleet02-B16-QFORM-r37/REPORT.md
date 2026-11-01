@@ -62,7 +62,7 @@ where `Phi_t` is the full Fourier transform of `h_t`. Likewise, if `||g||_infini
 
 No coordinate of `(L,V,P)` is declared independent. The only independence used later is between disjoint original source banks. In particular, adding an arbitrary same-bank phase does not destroy the exact Hilbert energy furnished by the product-projection density bounds.
 
-The required pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` supplies the completed two-dimensional bounded-density projection bound used here. For an orthonormal two-dimensional projection of independent cap-one originals,
+The required pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` supplies the completed two-dimensional bounded-density projection bound used here. For an orthonormal two-dimensional projection of independent cap-one originals,
 
 `||m||_infinity <= 2`,
 
@@ -253,7 +253,7 @@ Thus the density remains uniformly bounded on the one-sheet side even though the
 
 ## 6. Latest designated partner applied
 
-The newest compatible fleet03/B16 handoff read before publication is r34, canonical report `math-open-problems@a76d586c873087ec72d884368b5093eb24fc03c9`. It proves the authentic fragmented obstruction
+The newest compatible fleet03/B16 handoff read before publication is r34, canonical report `private-source@a76d586c873087ec72d884368b5093eb24fc03c9`. It proves the authentic fragmented obstruction
 
 `B(g)=int ||g(.,.,p)||_(L2(dl dv)) dp -> infinity`
 
@@ -267,4 +267,4 @@ Section 5 then removes a second naive route from that bridge: one cannot compare
 
 The unrestricted QFORM conjecture remains **OPEN / NOT PROVED / NOT DISPROVED**. The results here are a supporting punctured theorem and a proof-mechanism obstruction. Arbitrary additional spectrum beyond the exact-rank-three structural packets remains a separate global interface; global continuity remains open.
 
-Required pinned source read and used: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`.
+Required pinned source read and used: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`.

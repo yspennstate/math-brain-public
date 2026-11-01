@@ -17,16 +17,16 @@ The compact assignment card for fleet03/B07 asks for a quantitative neighborhood
 
 The mathematical premises are:
 
-1. **I-projection identity** — `yspennstate/math-open-problems`, commit `4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`, Sections 2–5. For a balanced uniform Boolean source with squared Walsh law `P`, occurrence marginals `r_i`, maximum-entropy nonempty law `Q_r`, and `K_occ=D_2(P||Q_r)`, one has
+1. **I-projection identity** — `private-source-repository`, commit `4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`, Sections 2–5. For a balanced uniform Boolean source with squared Walsh law `P`, occurrence marginals `r_i`, maximum-entropy nonempty law `Q_r`, and `K_occ=D_2(P||Q_r)`, one has
    \[
    K_{\rm occ}=H_{\max}(r)-H(P),\qquad I(f)=\sum_i r_i.
    \]
-2. **Exact equality classification** — `yspennstate/math-open-problems`, commit `84c69136ca6b008badb76f15bf1071d029c927aa`, `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B15/20260922T085625Z-product-equality-rigidity/REPORT.md`, Theorem 1. On the balanced uniform slice, `K_occ=0` iff, after irrelevant coordinates are discarded,
+2. **Exact equality classification** — `private-source-repository`, commit `84c69136ca6b008badb76f15bf1071d029c927aa`, `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B15/20260922T085625Z-product-equality-rigidity/REPORT.md`, Theorem 1. On the balanced uniform slice, `K_occ=0` iff, after irrelevant coordinates are discarded,
    \[
    f=\chi_F b(x_A),
    \]
    where `F` is nonempty, `A` is even, and `b` is bent; equivalently the squared spectrum is uniform on `\{F\cup R:R\subseteq A\}`.
-3. **Named other-account result actually used** — fleet04/B17, `B-BIASED-BOOLEANITY-GAP-v1`, `yspennstate/math-open-problems`, commit `603b35e74227d1c2d8ee34c0c527c439c686e30b`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md`, Sections 1–3. At the balanced uniform point, its arbitrary-bias theorem specializes to
+3. **Named other-account result actually used** — fleet04/B17, `B-BIASED-BOOLEANITY-GAP-v1`, `private-source-repository`, commit `603b35e74227d1c2d8ee34c0c527c439c686e30b`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md`, Sections 1–3. At the balanced uniform point, its arbitrary-bias theorem specializes to
    \[
    K_{\rm occ}\ge \mathcal G(r):={1\over4\ln2}\max_{\varnothing\ne U\subseteq[n]}\mathfrak g_U(Q_r)^2,
    \tag{1.1}

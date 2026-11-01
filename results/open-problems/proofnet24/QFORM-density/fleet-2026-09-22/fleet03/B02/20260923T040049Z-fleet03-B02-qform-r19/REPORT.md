@@ -23,7 +23,7 @@ I still do not have a valid exact-target counterexample to the stronger target-w
 
 The analytic input is fleet02/B07 `QFORM-PLUCKER-ENTROPY-BL-v1`, canonical proof
 
-`yspennstate/math-open-problems@32c257209b588141fb60af698f478f1d0ad20b8a`
+`private-source-repository@32c257209b588141fb60af698f478f1d0ad20b8a`
 
 at
 
@@ -199,7 +199,7 @@ The strict finite-core obstruction is also represented honestly: if all nonzero 
 
 The completed designated partner theorem is fleet04/B02 `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`, canonical proof
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`.
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`.
 
 On any overlap where the full quadratic matrix also contains a nonsingular physical principal `3 x 3` block `P` with a zero diagonal entry, the partner gives the genuine global Fourier inequality
 

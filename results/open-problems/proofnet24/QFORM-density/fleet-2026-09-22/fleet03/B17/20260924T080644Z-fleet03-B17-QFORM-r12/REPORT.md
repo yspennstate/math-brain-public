@@ -17,7 +17,7 @@ The unrestricted conjecture is not proved or disproved here. This report address
 
 The designated partner `fleet04/B17` proved `QFORM-SHARED-FOLD-LOGRECEIVER-UNIFORM-v1` in
 
-`yspennstate/math-open-problems@d2795ffa95ffde81e63da02b677fdc3c0ea950a1`
+`private-source-repository@d2795ffa95ffde81e63da02b677fdc3c0ea950a1`
 
 at
 

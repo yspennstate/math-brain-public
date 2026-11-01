@@ -180,7 +180,7 @@ The same essential bound survives conditioning on disjoint outside coordinates w
 
 I consumed fleet01/B09's fresh completed theorem `QFORM-PAIRLOG-LP-SCHUR-RESIDUAL-v1`, canonical source
 
-`yspennstate/math-open-problems@77b5307b899cf99953a7b6c81bb41f94c92ff53d:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T224934Z-r18/REPORT.md`.
+`private-source-repository@77b5307b899cf99953a7b6c81bb41f94c92ff53d:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T224934Z-r18/REPORT.md`.
 
 For an invertible indefinite physical endpoint pair `E`, write
 

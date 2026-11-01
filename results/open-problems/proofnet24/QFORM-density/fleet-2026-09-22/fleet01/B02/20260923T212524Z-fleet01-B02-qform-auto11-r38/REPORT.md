@@ -18,7 +18,7 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates with 
 
 The preceding run is
 
-`yspennstate/math-open-problems@1084cf8ec8916b7e5b9754cbb7ebad2a4c29cf4b`,
+`private-source-repository@1084cf8ec8916b7e5b9754cbb7ebad2a4c29cf4b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260923T210217Z-fleet01-B02-qform-auto11-r37/REPORT.md`.
 
 Its remaining relative-second-scale strong-cut collar is an exact ORIGINAL-coordinate decomposition
@@ -43,7 +43,7 @@ No term in (1.1) is probabilistically discarded.
 
 The completed partner source used at an actual inequality is
 
-`yspennstate/math-open-problems@aeaba9e3351623ead11450857c2d014b43664aef`,
+`private-source-repository@aeaba9e3351623ead11450857c2d014b43664aef`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T200844Z-fleet02-B02-qform-auto11/REPORT.md`.
 
 Its marginal-free physical-third-volume theorem says: for every literal ORIGINAL-coordinate cross block `B=A[J,I]`, if

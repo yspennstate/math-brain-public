@@ -241,7 +241,7 @@ By (3.5), `C` is an exact-rank-three form with normalized spectral frame `R_0` a
 
 `Delta_C=(1-c)Delta_3`.
 
-The source-pinned Fresnel--Brascamp--Lieb Theorem F (`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`) allows arbitrary affine terms and gives, under (4.1),
+The source-pinned Fresnel--Brascamp--Lieb Theorem F (`private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`) allows arbitrary affine terms and gives, under (4.1),
 
 `||p_{Q|H=h}||_(infinity,ess) <=12 Delta_C^(-1/3)`
 

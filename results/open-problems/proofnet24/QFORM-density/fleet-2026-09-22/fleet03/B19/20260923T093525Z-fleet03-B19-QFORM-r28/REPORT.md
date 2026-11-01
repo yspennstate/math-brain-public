@@ -15,7 +15,7 @@ The unrestricted theorem remains OPEN. This report works only with original-coor
 
 The preceding fleet03/B19 report is
 
-`yspennstate/math-open-problems@4d5181180f8d5e9e14c9b1c5c5e44679c8c212b9`
+`private-source-repository@4d5181180f8d5e9e14c9b1c5c5e44679c8c212b9`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T080333Z-fleet03-B19-QFORM-r28/REPORT.md`.
 
@@ -53,7 +53,7 @@ It paid the triangle whenever the complementary source Gram is not nearly singul
 
 The analytic receiver used below is the completed fleet03/B19 r24 theorem
 
-`yspennstate/math-open-problems@2c88af5e0ac6a4faf8d923a621c7d7006d544ffe`
+`private-source-repository@2c88af5e0ac6a4faf8d923a621c7d7006d544ffe`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T034239Z-fleet03-B19-QFORM-r24/REPORT.md`.
 
@@ -219,7 +219,7 @@ The completed fleet04/B19 theorem
 
 canonical source
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`,
 

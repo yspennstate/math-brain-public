@@ -15,7 +15,7 @@ No Gaussian, moment, log-concavity, compact-support, connected-support, iid, dia
 
 The immediate source is r46, authoritative scope addendum
 
-`yspennstate/math-open-problems@43eab33dc9cd6063c84089b5fc3692abceeadb21`
+`private-source-repository@43eab33dc9cd6063c84089b5fc3692abceeadb21`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260924T033639Z-fleet03-B07-qform-r46/PREPUBLICATION_ADDENDUM.md`.
 
@@ -37,7 +37,7 @@ At slab ratio `rho`, r46 gives the stronger asymptotic version
 
 The analytic third-volume receiver used below is fleet02/B03,
 
-`yspennstate/math-open-problems@df738b7f0821d9af56dfd992cab10ecc6704e3fb`,
+`private-source-repository@df738b7f0821d9af56dfd992cab10ecc6704e3fb`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T184716Z-fleet02-B03-QFORM-auto11/REPORT.md`, theorem `QFORM-Z3-CROSSING-MARGINAL-FREE-v1`. For any literal original-coordinate cross block `C` with
 
@@ -50,7 +50,7 @@ it retains arbitrary same-side quadratic blocks, affine terms and additional spe
 
 The designated partner used below is fleet04/B07,
 
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`,
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 

@@ -5,7 +5,7 @@ Problem/source: **R16 / I0112 — Justin Salez (2025), _Modern aspects of Markov
 # R16 — I0112 second stuck recovery: the regular tree kills uniform long-time subcommutation
 
 Run ID: `2026-09-16T23-44-54Z_i0112-stuck-recovery-2-tree-subcommutation-obstruction`  
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Continuity and mandatory state recovery
 

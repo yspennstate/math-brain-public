@@ -15,9 +15,9 @@ Fresh owner control remained revision 2026-09-22.15. The mathematical correction
 
 Completed sources actually used:
 
-1. `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md` and `RESULTS.md`: Theorem D and extension D' (volume-weighted original-coordinate decoupling), including the arbitrary-minor-weight AM-GM form.
-2. `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`: projected-gradient finite-dimensional theorem, uniform in affine terms and arbitrary outside coefficients after conditioning on original coordinates.
-3. Designated partner fleet03/B07, `yspennstate/math-open-problems@391688138f7f481a2c8688c2d27f9508db7af6af`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T000734Z-fleet03-B07-qform-r20/REPORT.md`: `QFORM-THIRD-COMPOUND-OVERLAP-COLORING-v1`, giving the four finite-bank packet lower bounds P0>=1/5184, P1>=1/3125, P2>=1/512, P3>=1/18.
+1. `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md` and `RESULTS.md`: Theorem D and extension D' (volume-weighted original-coordinate decoupling), including the arbitrary-minor-weight AM-GM form.
+2. `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`: projected-gradient finite-dimensional theorem, uniform in affine terms and arbitrary outside coefficients after conditioning on original coordinates.
+3. Designated partner fleet03/B07, `private-source-repository@391688138f7f481a2c8688c2d27f9508db7af6af`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T000734Z-fleet03-B07-qform-r20/REPORT.md`: `QFORM-THIRD-COMPOUND-OVERLAP-COLORING-v1`, giving the four finite-bank packet lower bounds P0>=1/5184, P1>=1/3125, P2>=1/512, P3>=1/18.
 
 The live no-pivot reduction from `GEOMETRIC_SYNTHESIS.md` is also used only as a reduction of scope: fix tau in (0,1], and consider matrices with |A_ii|<tau and every physical 2x2 principal determinant of magnitude <tau. Proving this N3 class suffices for the full target; N3 itself is open.
 

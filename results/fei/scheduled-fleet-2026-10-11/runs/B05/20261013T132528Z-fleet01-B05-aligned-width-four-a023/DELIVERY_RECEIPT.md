@@ -4,7 +4,7 @@ Run: `20261013T132528Z-fleet01-B05-aligned-width-four-a023`
 
 ## Canonical package
 
-- Repository: `yspennstate/math-open-problems`
+- Repository: `private-source-repository`
 - Path: `reports/fei-2026-10-11/runs/B05/20261013T132528Z-fleet01-B05-aligned-width-four-a023/`
 - Core readback commit: `1ebc8b18cc018613ef7f2f6f185eabbb5e0a8541`
 - Verification: all eight pre-receipt files were fetched at that immutable

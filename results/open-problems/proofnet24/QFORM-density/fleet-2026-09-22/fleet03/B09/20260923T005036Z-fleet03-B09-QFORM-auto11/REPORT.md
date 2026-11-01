@@ -18,7 +18,7 @@ The previous B09 run paid a **one-sided null linear pivot plus rank-two cross bl
 
 with `C_*<7.326`, and symmetrically on the right. Its source is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T144348Z-r11/REPORT.md`.
 
@@ -28,7 +28,7 @@ No post-rotation independence, law-uniform pointwise Fresnel decay, arbitrary-jo
 
 A completed peer theorem is applied below at an actual inequality: fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, source
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 

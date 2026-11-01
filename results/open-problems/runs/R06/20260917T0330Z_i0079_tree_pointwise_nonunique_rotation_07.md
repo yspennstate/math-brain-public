@@ -5,7 +5,7 @@ Problem/source: Héctor Jardón-Sánchez, Sam Mellick, Antoine Poulin, Konrad Wr
 # R06 CLOSABLE OUTSIDE — run 7 on I0079: pointwise tie-breaking is already nonunique on a regular tree; six-run rotation handoff
 
 Run date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Delivery: private GitHub only. No Gmail/email, Drive, public posting, purchases, permission changes, workflow execution, force-push, or scheduler changes.
 
 ## 1. Continuity and why the stale I0056 prompt is not restarted

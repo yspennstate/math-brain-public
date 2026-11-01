@@ -8,12 +8,12 @@ The owner's current direct instruction assigns ALL existing fleet01–fleet04 / 
 
 The uploaded `five_singular_values_full_proof.pdf` is byte-for-byte identified by its Git blob and size with the following existing private research-repository file. This shared-brain entry publishes a pinned link to the exact original, rather than silently substituting the longer paper or copying a different PDF.
 
-- [Original 14-page PDF](https://github.com/yspennstate/math-open-problems/blob/ec211ba2d77a4a9850168c6af1574ea651feaa7c/proofnet24/QFORM-density/five-eigenvalues-paper-2026-09-25/short/short.pdf)
-- [Accompanying LaTeX source](https://github.com/yspennstate/math-open-problems/blob/ec211ba2d77a4a9850168c6af1574ea651feaa7c/proofnet24/QFORM-density/five-eigenvalues-paper-2026-09-25/short/short.tex)
+- [Original 14-page PDF](private-source-repository)
+- [Accompanying LaTeX source](private-source-repository)
 
 Title: *Quadratic forms with five large singular values have bounded densities*.
 Date on paper: 25 September 2026.
-Source repository: `yspennstate/math-open-problems`.
+Source repository: `private-source-repository`.
 Pinned commit: `ec211ba2d77a4a9850168c6af1574ea651feaa7c`.
 PDF Git blob: `8be3aae36ecad7a9dc9b7c95978aad09499f32d0`.
 PDF SHA-256: `4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423`.

@@ -23,7 +23,7 @@ This directly addresses arbitrary shifts and support geometry: the coefficient t
 
 `QFORM-LINEAR-IMAGE-NEGATIVE-MOMENT-v1` is proved at
 
-`yspennstate/math-open-problems@bb8c96bbe6b2eca1ed7aa4aa5554e9863b43238a`,
+`private-source-repository@bb8c96bbe6b2eca1ed7aa4aa5554e9863b43238a`,
 
 path
 
@@ -42,7 +42,7 @@ The proof uses the completed product-safe projection density cap and radial bath
 The newest completed assigned-partner theorem is fleet03/B14 run
 `20260922T213821Z-fleet03-B14-QFORM-r19`, canonical proof
 
-`yspennstate/math-open-problems@ce3ad39f7e4be58b1339ced5fe1f17ca2720fe9d`,
+`private-source-repository@ce3ad39f7e4be58b1339ced5fe1f17ca2720fe9d`,
 
 path
 

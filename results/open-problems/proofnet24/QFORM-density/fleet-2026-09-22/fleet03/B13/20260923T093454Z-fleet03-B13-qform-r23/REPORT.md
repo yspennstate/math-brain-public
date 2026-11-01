@@ -9,7 +9,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 Status: **NEW TARGET-RELEVANT THEOREM PROVED / FULL QFORM OPEN / FULL CONTINUITY OPEN**
 
 
-Designated completed partner actually applied below: fleet04/B13 no-attainment product purification, `yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
+Designated completed partner actually applied below: fleet04/B13 no-attainment product purification, `private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
 
 ## 1. The first missing endpoint attacked
 

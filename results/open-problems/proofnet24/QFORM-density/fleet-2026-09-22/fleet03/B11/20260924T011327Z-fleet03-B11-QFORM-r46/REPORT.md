@@ -16,7 +16,7 @@ No moments, compact support, connected support, Gaussianity, log-concavity, post
 
 Immediate predecessor:
 
-`yspennstate/math-open-problems@12e2174445fbc824279bf1376da1346454d7060a`
+`private-source-repository@12e2174445fbc824279bf1376da1346454d7060a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T002432Z-fleet03-B11-QFORM-r45/REPORT.md`.
 
@@ -40,7 +40,7 @@ A compatible fleet02/B11 follow-up explicitly identified the missing interface a
 
 The designated fleet04/B11 theorem used below is
 
-`yspennstate/math-open-problems@50b07997bec888ff7cc6820cd42be8e34d0ffc48`
+`private-source-repository@50b07997bec888ff7cc6820cd42be8e34d0ffc48`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T111608Z-fleet04-B11-disjoint-volume-compiler-r5/REPORT.md`,
 

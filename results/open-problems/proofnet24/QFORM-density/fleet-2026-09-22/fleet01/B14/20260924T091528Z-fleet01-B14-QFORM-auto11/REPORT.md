@@ -15,7 +15,7 @@ The newest completed designated-partner result used below is fleet02/B14
 `QFORM-REFLECTION-AFFINE-SUBMEASURE-COMPILER-v1`, run
 `20260924T090749Z-fleet02-B14-QFORM-auto11`, canonical report
 
-`yspennstate/math-open-problems@cd7154f14613325003b6346235701b8f067856a1`
+`private-source-repository@cd7154f14613325003b6346235701b8f067856a1`
 
 at
 

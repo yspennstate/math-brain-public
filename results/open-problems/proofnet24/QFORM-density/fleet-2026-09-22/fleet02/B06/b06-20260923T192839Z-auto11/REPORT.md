@@ -17,7 +17,7 @@ Fresh owner control before the substantive write remained revision `2026-09-22.1
 
 The required pinned Claude-era source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 especially `FOURIER_ROUTE_REPORT.md`. Its proved `D_k` estimate says that for a literal original-coordinate cross block `M`, `Z_k=e_k(M^TM)`, natural k-volume row marginals `alpha_i`, and `q>=1` satisfying `alpha_i<=q/2`, the decoupled characteristic function obeys
 
@@ -31,7 +31,7 @@ whenever every natural two-volume row marginal is at most one half. The proof re
 
 The newer checked grouped-projection theorem used in the heavy-row complement is
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -39,7 +39,7 @@ Its `k=1, ell=1` grouped-hub estimate allows an arbitrary hub function and arbit
 
 The designated partner result actually used is fleet03/B06 r41,
 
-`yspennstate/math-open-problems@e16064c2d89e7c30e8876283baf6e58047127263`,
+`private-source-repository@e16064c2d89e7c30e8876283baf6e58047127263`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T181904Z-fleet03-B06-qform-r41/REPORT.md`.
 

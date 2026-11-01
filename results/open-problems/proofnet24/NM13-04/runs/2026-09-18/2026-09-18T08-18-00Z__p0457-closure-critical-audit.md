@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-04 / P0457 — closure-critical source-theorem audit, no new certificate
 
 Run date: 2026-09-18 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track / namespace: `proofnet24/NM13-04/`  
 Category: `CLOSABLE OUTSIDE`  
 Canonical source/claim: `P0457`, `operations/claims/P0457.md`  

@@ -2,7 +2,7 @@
 
 Run 20260924T231717Z-fleet03-B04-QFORM-auto11-r63. Objective QFORM-FIXED-MULTIPLICITY-AUDIT-20260924. Full three-eigenvalue target remains OPEN.
 
-Current five-eigenvalue paper source: yspennstate/math-open-problems@5ba2a4d6b689721601cce7ec7e22ffea9fa98f90, proofnet24/QFORM-density/five-eigenvalues-paper-2026-09-25/paper.tex, blob bbebd6f6c5a27e9f639186a305008ab43a481e70. The Lemma 5.3 correction (separate coordinates i and i' for the two hyperbola tails) passes; the affine Remark 8.2 extension also passes.
+Current five-eigenvalue paper source: private-source-repository@5ba2a4d6b689721601cce7ec7e22ffea9fa98f90, proofnet24/QFORM-density/five-eigenvalues-paper-2026-09-25/paper.tex, blob bbebd6f6c5a27e9f639186a305008ab43a481e70. The Lemma 5.3 correction (separate coordinates i and i' for the two hyperbola tails) passes; the affine Remark 8.2 extension also passes.
 
 Designated partner actually used: fleet04/B04 audit at commit 18d2a5c7f525cb0cdbebd03664eb99fbeb1b2c23. Its product-projection theorem says that for independent coordinate densities <=K and full-row-rank L in R^{m x d},
 ||p_{LZ}||_infinity <= e^{m/2} K^m / sqrt(det(LL^T)).

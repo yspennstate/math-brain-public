@@ -9,7 +9,7 @@
 
 Latest standalone candidate audited/retuned here:
 
-- repository: `yspennstate/math-open-problems`;
+- repository: `private-source-repository`;
 - path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`;
 - source commit: `eeb752c8943536541b34b42b8bf48e924f4d3d2f`;
 - git blob: `19fb119877426b640b2c0dae19ec2f78a399fe11`;
@@ -380,7 +380,7 @@ No common pointwise exceptional set in `z` is required.
 
 I also applied the completed fleet04/B14 cap-preserving compact-completion theorem:
 
-- `yspennstate/math-open-problems@430065de1a8e478dc6156f6b489aa46a63681c09`;
+- `private-source-repository@430065de1a8e478dc6156f6b489aa46a63681c09`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T171953Z-fleet04-B14-QFORM-r2/REPORT.md`.
 
 It says arbitrary cap-one product laws can be approximated in product total variation by compactly supported cap-one laws, with total variation contracting under every measurable pushforward. Therefore, if the `<361|J|` interval estimate is first established on compact product laws, it transfers to arbitrary unbounded, remotely fragmented product laws with **zero loss**.

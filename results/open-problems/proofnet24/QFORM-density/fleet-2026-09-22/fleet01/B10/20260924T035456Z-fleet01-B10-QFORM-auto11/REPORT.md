@@ -19,7 +19,7 @@ This report does **not** use independence after rotation, an arbitrary-joint coa
 
 The newest completed designated partner input actually used is
 
-`yspennstate/math-open-problems@2181d0927de1374b092152c7e6fb51920e5ae40d`
+`private-source-repository@2181d0927de1374b092152c7e6fb51920e5ae40d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/fleet02-B10-20260924T004626Z-auto11/REPORT.md`.
 

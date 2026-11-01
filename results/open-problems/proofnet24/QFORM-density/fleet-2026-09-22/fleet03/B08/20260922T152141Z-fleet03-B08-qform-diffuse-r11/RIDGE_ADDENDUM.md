@@ -3,7 +3,7 @@
 This addendum was created after the mandatory pre-publication control refresh exposed a newer supporting result:
 
 `QFORM-SPECTRAL-WINDOW-DENSITY-v1`, full proof
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 Its stated consequence is: if `A` has at least three eigenvalues of modulus at least one and the spectral projection `P` onto **all** eigenspaces with `|lambda|>=1/64` satisfies
 

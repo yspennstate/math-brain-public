@@ -23,7 +23,7 @@ This is a joint-density statement; the two projected coordinates are not declare
 
 The latest completed compatible `fleet02/B18` result read in this invocation is
 
-`yspennstate/math-open-problems@7045cf7745ad4f1bb04e5a6e4b3196aeb867a140`,
+`private-source-repository@7045cf7745ad4f1bb04e5a6e4b3196aeb867a140`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/fleet02-B18-20260922T170013Z-r11/REPORT.md`.
 
@@ -47,7 +47,7 @@ where `R_E` has orthonormal columns spanning `E`. The original scalar `X_i` is g
 
 The completed fleet01/B16 report visible at source refresh,
 
-`yspennstate/math-open-problems@1bbe7c7c194bc92e10fc9c3cb3eb548d65e7043d`,
+`private-source-repository@1bbe7c7c194bc92e10fc9c3cb3eb548d65e7043d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/fleet01-B16-20260922T1705Z-r11/REPORT.md`,
 

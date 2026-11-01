@@ -10,9 +10,9 @@ The required correction remains in force: for arbitrary densities bounded by one
 
 1. Livshyts--Paouris--Pivovarov: every two-dimensional orthogonal marginal of a product probability density whose one-dimensional factors are bounded by one has density at most `2`. Equivalently, if `G` is a rank-two real matrix with row Gram determinant `D>0`, then the density of `G X` is at most `2/sqrt(D)`.
 
-   This is the same source-valid projection theorem used in fleet01/B01 run `20260922T143759Z-b01-qform-auto11b`, canonical report `yspennstate/math-open-problems@a441556830cbcb4e9a2aad95835dc86d7ffcac99:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260922T143759Z-b01-qform-auto11b/REPORT_FINAL.md`.
+   This is the same source-valid projection theorem used in fleet01/B01 run `20260922T143759Z-b01-qform-auto11b`, canonical report `private-source-repository@a441556830cbcb4e9a2aad95835dc86d7ffcac99:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260922T143759Z-b01-qform-auto11b/REPORT_FINAL.md`.
 
-2. Completed designated partner fleet02/B01 r31, canonical source `yspennstate/math-open-problems@3280d9fab56fe4878189ae89176887e3da29f569:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T233020Z-fleet02-B01-qform-r31/REPORT.md`. For a physical cross block `M`, with
+2. Completed designated partner fleet02/B01 r31, canonical source `private-source-repository@3280d9fab56fe4878189ae89176887e3da29f569:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T233020Z-fleet02-B01-qform-r31/REPORT.md`. For a physical cross block `M`, with
 
    `Z=e_3(M^T M)`
 

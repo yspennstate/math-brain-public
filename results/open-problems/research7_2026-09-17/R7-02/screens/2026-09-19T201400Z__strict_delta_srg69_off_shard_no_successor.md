@@ -4,7 +4,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 
 Date: 2026-09-19 UTC
 
-Repository: private `yspennstate/math-open-problems`, existing `master`.
+Repository: private `private-source-repository`, existing `master`.
 
 Slot: `R7-02 Finite Certificate Research`.
 Native ID: `6aabe797a39081919acc889f29f4c556`.

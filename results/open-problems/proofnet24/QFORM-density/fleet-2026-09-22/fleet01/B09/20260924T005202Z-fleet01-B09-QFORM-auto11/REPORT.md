@@ -19,13 +19,13 @@ The full target and continuity claims are still OPEN in the current `CLAIMS.json
 Two immutable mathematical dependencies were read in full before use:
 
 1. `QFORM-PHYSICAL-TRIPLE-DET-v1`, source
-   `yspennstate/math-open-problems@bf4ba08b75ab774aef671c62ba4898a371059c0d`,
+   `private-source-repository@bf4ba08b75ab774aef671c62ba4898a371059c0d`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T170850Z-fleet02-B01-qform-r25/REPORT.md`.
    For every literal physical triple `T` with `d=|det A[T,T]|>0`, conditioning all outside original coordinates gives
    `||p_Q||_infinity <=216 d^(-1/3)`, uniformly over the induced affine term. Continuity is not claimed.
 
 2. The designated partner fleet02/B09 r15 theorem, source
-   `yspennstate/math-open-problems@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`,
+   `private-source-repository@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T224553Z-fleet02-B09-QFORM-r15/REPORT.md`.
    At an exact rank-one physical pair, its collinear zero-active-leaf star theorem gives
    `||p_Q||_infinity <=6 |tau|^(-1/3)||A[I,H]k||_2^(-2/3)`

@@ -10,7 +10,7 @@ while the ambient matrix has `s_3(A)>=1`.
 
 The completed full-matrix physical indefinite-pair theorem is recorded at
 
-`yspennstate/math-open-problems@1a70497363989dfea9fa4ce9e515fa279677df69`
+`private-source-repository@1a70497363989dfea9fa4ce9e515fa279677df69`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T184724Z-fleet03-B20-QFORM-r15/REPORT.md`, Section 2.3. It states, for arbitrary remaining spectrum and affine terms,
 

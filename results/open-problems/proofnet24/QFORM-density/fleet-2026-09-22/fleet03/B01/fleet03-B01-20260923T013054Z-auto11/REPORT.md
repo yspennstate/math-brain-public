@@ -15,19 +15,19 @@ The unrestricted target is unchanged: for arbitrary independent real inputs with
 
 This run consumes the current sharp volume-sampling/Jensen Fourier calculation
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
 
 and the fractional-potential / square-peel interface in
 
-`yspennstate/math-open-problems@2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926`
+`private-source-repository@2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926`
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
 The law-uniform pointwise one-dimensional Fresnel estimate is false for arbitrary cap-one laws and is not used. The result below is a **joint cross-block** estimate after decoupling, with its volume-marginal gate retained explicitly.
 
 The designated partner result actually applied in Section 6 is fleet04/B01's exact signed-Fejer theorem, in particular its latest grouped-square report at
 
-`yspennstate/math-open-problems@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`
+`private-source-repository@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T234537Z-fleet04-B01-grouped-square-fejer-r2/REPORT.md`
 
 and the underlying signed-Fejer report at `a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`.

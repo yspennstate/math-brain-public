@@ -12,7 +12,7 @@ The target is the full arbitrary-law statement: for independent real `X_i` with 
 
 This run preserves the three mandatory corrections: it does not use law-uniform pointwise Fresnel decay; it does not rotate to the eigenbasis and keep independence; and it does not take a spectral-fiber supremum, which can lose a factor growing with dimension.
 
-The assigned partner is `fleet04/B05`. At the final source refresh there was still no completed current-QFORM report in that slot's canonical math-open-problems or shared-handoff root, so no partner theorem is fabricated. Two completed compatible results are applied directly:
+The assigned partner is `fleet04/B05`. At the final source refresh there was still no completed current-QFORM report in that slot's canonical private-source or shared-handoff root, so no partner theorem is fabricated. Two completed compatible results are applied directly:
 
 1. `fleet02/B05`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T115002Z-b05-qform-9c3a2d7e/REPORT.md`, proves the coarea-to-half-Riesz lemma
 

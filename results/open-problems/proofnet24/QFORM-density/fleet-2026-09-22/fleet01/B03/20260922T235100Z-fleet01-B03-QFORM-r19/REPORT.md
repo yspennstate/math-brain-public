@@ -16,7 +16,7 @@ The current brain state says the unrestricted conjecture is open and records the
 
 The designated partner is **fleet02/B03**, run `20260922T231550Z-fleet02-B03-QFORM-r13`, canonical mathematics
 
-`yspennstate/math-open-problems@e9edee72f4272f7bc84c7a914f3a087f614f9c60`
+`private-source-repository@e9edee72f4272f7bc84c7a914f3a087f614f9c60`
 
 at
 

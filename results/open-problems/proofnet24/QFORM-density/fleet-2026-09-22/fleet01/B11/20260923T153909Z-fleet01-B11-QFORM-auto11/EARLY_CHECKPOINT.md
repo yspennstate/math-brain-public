@@ -37,7 +37,7 @@ hence
 
 ||p_Q||_infty <= 4 sqrt(K/|a|).                     (EC.1)
 
-Actual newest-Claude application: if the Schur remainder R has an ORIGINAL-coordinate cross block satisfying the volume-stability hypotheses of math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba, namely M=M0+E with s3(M0)>=c0, max diag(P_range(M0))<=1/2 and ||E||op<=c0/16, then R has a continuous density with K<23/c0. Equation (EC.1) yields the higher-rank scalar-pivot branch
+Actual newest-Claude application: if the Schur remainder R has an ORIGINAL-coordinate cross block satisfying the volume-stability hypotheses of private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba, namely M=M0+E with s3(M0)>=c0, max diag(P_range(M0))<=1/2 and ||E||op<=c0/16, then R has a continuous density with K<23/c0. Equation (EC.1) yields the higher-rank scalar-pivot branch
 
 ||p_Q||_infty < 4 sqrt(23/(|a| c0)).                 (EC.2)
 

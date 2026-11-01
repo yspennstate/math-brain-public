@@ -15,7 +15,7 @@ The unrestricted conjecture remains OPEN. Full-target continuity remains OPEN. E
 
 The incoming own result is r45:
 
-`yspennstate/math-open-problems@3072b9b3222e7814b77d1293bb62810fbe177c15`
+`private-source-repository@3072b9b3222e7814b77d1293bb62810fbe177c15`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260924T064330Z-fleet01-B08-qform-r45/REPORT.md`.
 
@@ -34,7 +34,7 @@ The q=3 branch was already reduced in the r45 addendum to either a continuous `<
 
 The completed designated-partner result actually applied here is fleet02/B08 r34,
 
-`yspennstate/math-open-problems@3452feca9a3efbb5a716eb7453be7ae0433e463f`,
+`private-source-repository@3452feca9a3efbb5a716eb7453be7ae0433e463f`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/fleet02-B08-20260924T053906Z-r34/REPORT.md`.
 
@@ -46,7 +46,7 @@ whenever the third compound is positive, retaining arbitrary same-side quadratic
 
 The overlap-bank source is fleet03/B07 at
 
-`yspennstate/math-open-problems@391688138f7f481a2c8688c2d27f9508db7af6af`.
+`private-source-repository@391688138f7f481a2c8688c2d27f9508db7af6af`.
 
 All banks below are subsets of the original independent coordinates.
 

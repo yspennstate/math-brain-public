@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # HARD7-03 — general iid `K=2` plateau without a minimum-rate atom, plus a sharper binary width
 
-Date: 2026-09-19 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-19 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL.** The exact source Problem 4 remains open in its full arbitrary-`K` scope. This run proves, on the page and as a self-check pending independent audit/prior-art review, a substantially broader `K=2` theorem: the minimum-rate atom used in the preceding checkpoint is not needed. For every nondegenerate iid site-rate law covered by the source with positive essential infimum, the `K=2` flux has a nontrivial flat segment around density `1`. For the frozen binary law the stable tracked lower bound improves strictly from `1/16` to the exact rational `500000/6578563 = 0.07600444048...`.
 

@@ -19,7 +19,7 @@ The source-pinned premises used here are:
 3. fleet04/B15, `7ec649dfb3d1ab2f92855f2069590fca2ac956dd`, `20260922T093820Z-full-convolution-energy-obstruction/REPORT.md`: on the genuine sparse suspension, the full unweighted convolution-L2 bank is only `Theta(I)` while `K_occ=Theta(mI)`.
 4. fleet03/B18, `bff0d7b6c21485f386841c42582eb04f32705046`, `20260922T100641Z-lowlevel-projection-barrier/REPORT.md`: fixed-depth, and even `d_m <= (1/2-epsilon)m`, individually labelled low-level KL plus one merged tail cannot universally pay the recursive-majority demand.
 
-The assignment names fleet03/B08 as partner. A bounded fresh check of the canonical FEI handoff root and the expected math-open-problems fleet03/B08 roots found no completed partner artifact at this run's source snapshot, so no partner theorem is fabricated. The completed OTHER-account result actually applied below is fleet04/B15's sparse-suspension obstruction, and the fleet03/B18 barrier is used as a mandatory preflight.
+The assignment names fleet03/B08 as partner. A bounded fresh check of the canonical FEI handoff root and the expected private-source fleet03/B08 roots found no completed partner artifact at this run's source snapshot, so no partner theorem is fabricated. The completed OTHER-account result actually applied below is fleet04/B15's sparse-suspension obstruction, and the fleet03/B18 barrier is used as a mandatory preflight.
 
 ## 1. The bounded entropy-variational test we need
 

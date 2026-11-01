@@ -17,7 +17,7 @@ The unrestricted theorem is not claimed. Inputs remain the original independent 
 
 The predecessor is fleet01/B07 r37:
 
-`yspennstate/math-open-problems@652b15abdd4bda9a6143458ca4684a8b8fd51976`
+`private-source-repository@652b15abdd4bda9a6143458ca4684a8b8fd51976`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/20260924T000327Z-fleet01-B07-qform-r37/REPORT.md`.
 
@@ -33,7 +33,7 @@ It also gives the exact family showing that macroscopic Frobenius overlap-two ma
 
 Latest completed designated partner fleet02/B07 at source refresh:
 
-`yspennstate/math-open-problems@81d6956476fa400f61d266effb4123a42fe3185c`
+`private-source-repository@81d6956476fa400f61d266effb4123a42fe3185c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260924T003945Z-fleet02-B07-qform-auto11/REPORT.md`.
 

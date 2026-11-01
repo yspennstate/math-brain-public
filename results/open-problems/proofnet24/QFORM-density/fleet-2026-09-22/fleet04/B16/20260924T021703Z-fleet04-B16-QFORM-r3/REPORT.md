@@ -11,13 +11,13 @@ The unrestricted conjecture remains open. This note closes the zero-pivot shared
 
 ## Pinned inputs
 
-1. Fleet01/B16, \`math-open-problems@693cb2f86df07dc102701767d7eddd09306ab201\`, theorem \`QFORM-TRANSLATED-FRESH-SQUARE-SIGNFREE-v1\`.
-2. Fleet02/B16, \`math-open-problems@be8062b160868bcc71aff45a77c56ff2d0501a9a\`, theorem \`QFORM-FRESH-HUB-DIVISIBLE-TWIST-ABSORPTION-v1\`:
+1. Fleet01/B16, \`private-source@693cb2f86df07dc102701767d7eddd09306ab201\`, theorem \`QFORM-TRANSLATED-FRESH-SQUARE-SIGNFREE-v1\`.
+2. Fleet02/B16, \`private-source@be8062b160868bcc71aff45a77c56ff2d0501a9a\`, theorem \`QFORM-FRESH-HUB-DIVISIBLE-TWIST-ABSORPTION-v1\`:
    \[
    \|p_Q\|_\infty\le
    3\,2^{2/3}M^{2/3}|\gamma^2\kappa|^{-1/3}.
    \]
-3. The product-Fourier two-frame estimate used in fleet01/B06 and pinned at \`math-open-problems@3ae4b0c272e0d3c60f956c9f039bea38fc0f9077\`: a normalized two-frame with physical leverage at most \(1/2\) has joint density cap \(4\).
+3. The product-Fourier two-frame estimate used in fleet01/B06 and pinned at \`private-source@3ae4b0c272e0d3c60f956c9f039bea38fc0f9077\`: a normalized two-frame with physical leverage at most \(1/2\) has joint density cap \(4\).
 
 ## Theorem
 
@@ -163,7 +163,7 @@ The first unpaid B16 case is now sharply localized: the zero-pivot survivor has 
 
 ## Source boundary
 
-Claude baseline: \`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837\`.  
+Claude baseline: \`private-source@e5f71d79eff325201dd0274053d20268ce65b837\`.  
 Fleet01/B16 completed theorem: \`693cb2f86df07dc102701767d7eddd09306ab201\`.  
 Fleet02/B16 zero-pivot receiver: \`be8062b160868bcc71aff45a77c56ff2d0501a9a\`.  
 Product-Fourier two-frame input: \`3ae4b0c272e0d3c60f956c9f039bea38fc0f9077\`.

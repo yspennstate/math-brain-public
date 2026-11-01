@@ -18,7 +18,7 @@ where `Lambda` is diagonal, `|v|=1`, and `lambda != 0`.  For a physical hub coor
 
 `q_h = G^{1/2} p_h`, `theta_h = |v wedge q_h|^2`.
 
-If `theta_h>0` and every whitened leaf leverage `ell_i=|z_i|^2` is at most `1/2`, then the completed mixed-hub Theorem H from `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` applies with the *single literal original coordinate* `h` as the hub, all other hub coordinates moved to the conditioned outside bank, and leaf mixed rows
+If `theta_h>0` and every whitened leaf leverage `ell_i=|z_i|^2` is at most `1/2`, then the completed mixed-hub Theorem H from `private-source@e5f71d79eff325201dd0274053d20268ce65b837` applies with the *single literal original coordinate* `h` as the hub, all other hub coordinates moved to the conditioned outside bank, and leaf mixed rows
 
 `rho_i=((Zv)_i, A_{ih}) = z_i [v, q_h]`.
 

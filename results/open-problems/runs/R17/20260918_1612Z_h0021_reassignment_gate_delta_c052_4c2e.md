@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is not
 
 Run ID: `20260918_1612Z_h0021_reassignment_gate_delta_c052_4c2e`.
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Lifecycle boundary preserved
 

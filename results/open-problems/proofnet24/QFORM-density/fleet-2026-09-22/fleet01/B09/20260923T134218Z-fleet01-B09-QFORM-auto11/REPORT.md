@@ -18,7 +18,7 @@ The exact target remains: independent real original coordinates `X_i` with densi
 
 The completed analytic input used below is fleet03/B01's `QFORM-FRACTIONAL-VOLUME-COMPILER` / critical two-volume half-Riesz endpoint, source
 
-`yspennstate/math-open-problems@edb2b0b98a27c56440959e9a13a9eebaa4dfc6f3`,
+`private-source-repository@edb2b0b98a27c56440959e9a13a9eebaa4dfc6f3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T013054Z-auto11/REPORT.md`.
 
 For disjoint original-coordinate banks and arbitrary same-side measurable phases, let `M` be the physical cross block,
@@ -39,7 +39,7 @@ This proves essential boundedness and the identical `O(|J|)` interval estimate. 
 My immediately preceding B09 compiler is
 
 `QFORM-AGGREGATE-SINGLETON-VOLUME-TO-CUT-v1`,
-`yspennstate/math-open-problems@cb81bf5d552509918b2763d264e290e2de5ad284`,
+`private-source-repository@cb81bf5d552509918b2763d264e290e2de5ad284`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T124408Z-fleet01-B09-QFORM-auto11-r2/REPORT.md`.
 
 It turns aggregate singleton third-volume `S` into one fixed physical cut. At the concrete cutoff `h_0=2/3`, either that cut is paid directly, or one literal row `i` of the fixed cut has anchored selected third-volume `N_i>S/24`. The global candidate set has fewer than 72 rows. The new theorem below continues exactly that second branch.
@@ -240,7 +240,7 @@ The example is only a regression check; stronger rank-three cross smoothing is a
 The newest completed designated-partner result is fleet02/B09 run
 `20260923T130908Z-fleet02-B09-QFORM-auto11`, canonical mathematics
 
-`yspennstate/math-open-problems@57cb337f65c30114d12bc21ee05d2925663dc641`,
+`private-source-repository@57cb337f65c30114d12bc21ee05d2925663dc641`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T130908Z-fleet02-B09-QFORM-auto11/REPORT.md`.
 
 Its `QFORM-FRACTIONAL-SUBVOLUME-BL-q-v1` / rank-two-hub-star compiler pays the physical hub-frame regime `eta<3/4`, including `eta>1/2`, while retaining arbitrary dense within-leaf curvature.

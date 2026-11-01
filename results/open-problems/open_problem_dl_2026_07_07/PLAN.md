@@ -4,7 +4,7 @@
 Find a *famous*, publicly-posed, recognized open problem in the mathematics of deep learning
 (DNNs), one that strong people have genuinely worked on, and solve it COMPLETELY — full rigorous
 proof, no partial credit. Write a standalone paper (house style: amsart, honest framing, human
-voice) and push to math-open-problems.
+voice) and push to private-source.
 
 ## Constraints / principles (carried over from 2026-07-06 program)
 - Optimize (recognized + precisely stated + genuinely open + completely solvable-by-me + important).

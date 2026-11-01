@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — NO MOVEMENT i
 Problem/source: Pengfei Tang, *A note on some critical thresholds of Bernoulli percolation*, arXiv:2012.01135v2 / Electron. J. Probab. 28 (2023), PDF **Question 4.11**: for a transitive graph or a periodic rooted tree, is the Bernoulli bond-percolation probability `theta(p)` concave on `(p_c,1)`?
 
 Run ID: `20260916T213030Z_tang_stuck1_strategy`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Current mathematical status: periodic-tree universal assertion **REFUTED mathematically / closure-audit pending**; transitive-graph-only variant **OPEN**.  
 Frozen metric: greatest rigorous lower bound for `theta''(p)` at a certified admissible parameter in the fixed periodic-tree candidate family.  
 Metric before / after: `UNBOUNDED_ABOVE -> UNBOUNDED_ABOVE`.  

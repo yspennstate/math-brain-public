@@ -1,7 +1,7 @@
 Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — not authenticated GPT-6 maximum. **FIXED METRIC MOVED:** `B_R13(86): 739097/100000 = 7.39097 -> 72991/10000 = 7.29910`, exact decrease `9187/100000 = 0.09187`. Methods actually used: **#3 PROVE SOMETHING STRONGER, #17 LOOK FOR YOUR NUMBERS SOMEWHERE ELSE, #20 FIND WHY THE ALGORITHM FAILS.**
 
 Run ID: `20260919T0136Z_bessel-frobenius-4e7a`  
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, source status, and fixed metric
 

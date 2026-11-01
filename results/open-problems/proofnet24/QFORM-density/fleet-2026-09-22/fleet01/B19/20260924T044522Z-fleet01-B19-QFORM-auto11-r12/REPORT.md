@@ -16,7 +16,7 @@ All random coordinates below are literal ORIGINAL coordinates. No random variabl
 
 The designated partner theorem used at equation level is fleet02/B19
 
-`yspennstate/math-open-problems@f4d95bc33caf8db11888cceb817c005484f67d31`,
+`private-source-repository@f4d95bc33caf8db11888cceb817c005484f67d31`,
 
 `QFORM-PHYSICAL-R2-FRACTIONAL-SMOOTHING-v1`.
 
@@ -34,7 +34,7 @@ where
 
 The completed physical indefinite-pair logarithmic transducer is source-pinned at
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`.
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`.
 
 If two original coordinates have an invertible indefinite principal block `B`, put
 
@@ -49,7 +49,7 @@ The pair shifts may depend arbitrarily on all remainder variables. This is preci
 
 The newest partner stress/correction is fleet02/B19
 
-`yspennstate/math-open-problems@c5347df59a4adcea406d9fa8ca0c88186670d731`.
+`private-source-repository@c5347df59a4adcea406d9fa8ca0c88186670d731`.
 
 It exhibits an exact target family with spectrum `{2,-2,1}` whose curved two-bank partial output has a logarithmically unbounded density, even though the FULL target is paid once the third square is retained jointly. This forbids scalarizing an arbitrary curved rank-two two-bank core before spending the third resource. Section 6 below checks that the new theorem respects this obstruction exactly.
 

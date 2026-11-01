@@ -17,7 +17,7 @@ No Gaussian, moment, iid, compact-support, connected-support, log-concavity, con
 
 The newest completed designated partner is fleet02/B20 r51:
 
-`yspennstate/math-open-problems@212611f51310745be444342dc5b1da66065f31c3`
+`private-source-repository@212611f51310745be444342dc5b1da66065f31c3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260924T093443Z-fleet02-B20-QFORM-auto11-r51/REPORT.md`.
 
@@ -39,7 +39,7 @@ This partner result is consumed below at two explicit inequalities.
 
 The scalar-Schur inputs are fleet01/B19 r55:
 
-`yspennstate/math-open-problems@9de5ec75262ec906bf195c067ea323443b73a159`,
+`private-source-repository@9de5ec75262ec906bf195c067ea323443b73a159`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260924T082048Z-fleet01-B19-QFORM-auto11-r55/REPORT.md`.
 
@@ -63,7 +63,7 @@ one has, whenever `W_2(S)>0`,
 
 The immediately preceding fleet01/B20 frontier is
 
-`yspennstate/math-open-problems@53dfdb0cadf8b6d79f8a85ce0969981e02d93a63`,
+`private-source-repository@53dfdb0cadf8b6d79f8a85ce0969981e02d93a63`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260924T093049Z-fleet01-B20-QFORM-auto11h/REPORT.md`.
 

@@ -20,7 +20,7 @@ a_j=|\rho_j|^2,\qquad 0\le a_j\le1,\qquad \sum_j a_j=3.
 \]
 
 The completed ruled theorem in
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`
 uses the standard-cone ruling after the scaling
 `z=(sqrt(lambda_1)y_1,sqrt(lambda_2)y_2,sqrt(mu)y_3)`.
 Write
@@ -139,7 +139,7 @@ This is dimension-free and anisotropic: the three curvatures may be arbitrary nu
 ## 3. All-leverage isotropic stability
 
 For the isotropic signature `(1,1,-1)`, the preceding fleet02/B15 result
-`math-open-problems@45779cb1dca5f453ac620431b380ad015a052e70`
+`private-source@45779cb1dca5f453ac620431b380ad015a052e70`
 proved the complementary orientation-uniform submass estimate
 
 \[
@@ -249,7 +249,7 @@ Convolution with the independent probability law of `-Y_3^2` cannot increase `L^
 \tag{R19}
 \]
 
-On the other hand, every invertible physical `3x3` principal block of the matrix in (R16) chooses one coordinate from each bank and equals `diag(1/m,1/m,-1/m)` up to ordering. Thus its best physical-triple scale is exactly `1/m`. The latest designated partner fleet03/B15 theorem (`math-open-problems@40b108ab5984542e26b8c8ff2cd059e13446bea8`) would give only
+On the other hand, every invertible physical `3x3` principal block of the matrix in (R16) chooses one coordinate from each bank and equals `diag(1/m,1/m,-1/m)` up to ordering. Thus its best physical-triple scale is exactly `1/m`. The latest designated partner fleet03/B15 theorem (`private-source@40b108ab5984542e26b8c8ff2cd059e13446bea8`) would give only
 
 \[
 \|p_{Q_m}\|_\infty<153m

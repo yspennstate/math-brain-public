@@ -266,9 +266,9 @@ The current global fleet03/B20 frontier has moved to a fixed-hub / two-sided nes
 
 ## 8. Source pins used in this run
 
-- Previous fleet03/B03 r46: `yspennstate/math-open-problems@4da579fc8bcb3169099543b99ef99e1a829b3833`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260924T025916Z-fleet03-B03-QFORM-r46/REPORT.md`.
-- Designated partner fleet04/B03 r3: `yspennstate/math-open-problems@19345adf8bb78f11da95a556d6fdcc47af957b19`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260924T021651Z-fleet04-B03-hyperbola-fourvolume-r3/REPORT.md`; its translated hyperbola half-power theorem is applied quantitatively in (1.8)/(1.11).
+- Previous fleet03/B03 r46: `private-source-repository@4da579fc8bcb3169099543b99ef99e1a829b3833`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260924T025916Z-fleet03-B03-QFORM-r46/REPORT.md`.
+- Designated partner fleet04/B03 r3: `private-source-repository@19345adf8bb78f11da95a556d6fdcc47af957b19`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260924T021651Z-fleet04-B03-hyperbola-fourvolume-r3/REPORT.md`; its translated hyperbola half-power theorem is applied quantitatively in (1.8)/(1.11).
 - Earlier zero-pair fractional-Riesz comparison source: `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260922T155803Z-fleet01-B05-qform13/REPORT.md`, read from repository state `c1d2f72c5206c55f41c229457b6407d9e23c0b20`.
-- Fresh global frontier consumed before writing: fleet03/B20 r45, `yspennstate/math-open-problems@9e25c4e61cfe9aa9700419517b5d73b72a3e1fb1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T031641Z-fleet03-B20-QFORM-auto11-r45/REPORT.md`.
+- Fresh global frontier consumed before writing: fleet03/B20 r45, `private-source-repository@9e25c4e61cfe9aa9700419517b5d73b72a3e1fb1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T031641Z-fleet03-B20-QFORM-auto11-r45/REPORT.md`.
 
 Final controls/corrections are refreshed separately immediately before publication/writeback.

@@ -18,7 +18,7 @@ The owner target is unchanged: the coordinates are independent ORIGINAL real coo
 
 I use the completed fleet01/B07 theorem `QFORM-E2-FRACTIONAL-TRACE-v1`, preserved at
 
-`yspennstate/math-open-problems@3f8fe4c0920f41353374c50693ccdc741e245008`,
+`private-source-repository@3f8fe4c0920f41353374c50693ccdc741e245008`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T130435Z-r25/REPORT.md`.
 
 For a literal disjoint original-coordinate cross block `M`, any positive physical `2x2` minor packet of squared-determinant mass `Z_2`, and one-side inclusion marginals `alpha_i`, if `1<=q<2` and `max alpha_i<=q/2`, the full ambient quadratic-plus-affine polynomial `R` satisfies
@@ -36,7 +36,7 @@ This is a fractional-potential theorem, not a bounded-density theorem for rank t
 
 The source-pinned weighted-subset / grouped-projection proof is preserved at
 
-`yspennstate/math-open-problems@3f8fe4c0920f41353374c50693ccdc741e245008`,
+`private-source-repository@3f8fe4c0920f41353374c50693ccdc741e245008`,
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 I only need its explicitly proved characteristic-function estimate in the borderline `k=1, ell=1` case and its exact-rank-two Plancherel estimate. I re-integrate those estimates below, because `k+ell=2` does not itself give an `L^1` characteristic function but it does give precisely the half-Riesz potential needed here.
@@ -45,7 +45,7 @@ I only need its explicitly proved characteristic-function estimate in the border
 
 The fleet03/B20 third-compound operator funnel is preserved at
 
-`yspennstate/math-open-problems@3f8fe4c0920f41353374c50693ccdc741e245008`,
+`private-source-repository@3f8fe4c0920f41353374c50693ccdc741e245008`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T234606Z-fleet03-B20-QFORM-r42/REPORT.md`.
 
 Under `s_3(A)>=1` it forces at least one of
@@ -283,7 +283,7 @@ so in fact all five eigenvalues have modulus greater than one, with both signs. 
 
 The newest completed designated partner remains fleet04/B04 r2:
 
-`yspennstate/math-open-problems@4a54666abf2316bb79b939cef3ea940605a0af57`,
+`private-source-repository@4a54666abf2316bb79b939cef3ea940605a0af57`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260924T001353Z-fleet04-B04-QFORM-r2/REPORT.md`.
 
 On its high-fourth-volume carrier branch, failure of its anchored entropy gate gives a literal physical pair with canonical fourth-volume inclusion mass

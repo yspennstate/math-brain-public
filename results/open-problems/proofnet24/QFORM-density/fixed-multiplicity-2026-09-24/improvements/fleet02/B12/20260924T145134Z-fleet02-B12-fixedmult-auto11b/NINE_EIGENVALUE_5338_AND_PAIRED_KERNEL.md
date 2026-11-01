@@ -1,6 +1,6 @@
 # fleet02/B12 auto11b — complete nine-eigenvalue replacement, sharpened to 5338, plus paired-kernel endpoint
 
-Pinned baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
+Pinned baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
 
 This is a complete replacement proof for multiplicity nine, preserving the baseline quantifiers. It independently rechecks the grouped product-Fourier argument and sharpens the dominant scalar-pivot arithmetic from `6010` to `<5338`. It does **not** claim multiplicity eight or the unrestricted three-eigenvalue conjecture.
 

@@ -497,7 +497,7 @@ Every finite member of (6.3) satisfies the owner's exact hypotheses. The stateme
 
 The designated partner `fleet04/B17` proved `QFORM-MACROFRAGMENTED-STRICTSLACK-DENSE-WITNESS-v1` at
 
-`yspennstate/math-open-problems@4be63022324b82f254f1d7a4353a3e883f08d10a`,
+`private-source-repository@4be63022324b82f254f1d7a4353a3e883f08d10a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260924T011922Z-fleet04-B17-QFORM-r6/REPORT.md`.
 
@@ -561,7 +561,7 @@ Dependencies actually used:
 
 - fresh owner control and QFORM-only assignment from `yspennstate/math-research-brain` main;
 - live QFORM correction inbox refreshed immediately before publication;
-- fleet03/B17 local-CLT bank argument: `yspennstate/math-open-problems@7a64594fceb49b99698431a4d57b6658b49ebc28`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260924T053018Z-fleet03-B17-QFORM-auto11/REPORT.md`;
-- completed designated partner theorem: `yspennstate/math-open-problems@4be63022324b82f254f1d7a4353a3e883f08d10a`, exact path given in Section 7.
+- fleet03/B17 local-CLT bank argument: `private-source-repository@7a64594fceb49b99698431a4d57b6658b49ebc28`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260924T053018Z-fleet03-B17-QFORM-auto11/REPORT.md`;
+- completed designated partner theorem: `private-source-repository@4be63022324b82f254f1d7a4353a3e883f08d10a`, exact path given in Section 7.
 
 Repository transport is not native learned-memory ingestion. This run remains `WITHOUT_VERIFIED_BRAIN` unless an authenticated native receiver-use event is separately observed.

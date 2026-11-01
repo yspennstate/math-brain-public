@@ -133,4 +133,4 @@ with no restriction at all on the conditioned overlap bank K. Thus the designate
 
 The remaining structural problem is to force such a skeleton with universal `delta`, or else route the failure to a diffuse cross-volume, heavy-pivot, finite-core, or other already-paid exit. The known singleton-plus-two-diffuse-banks and bad-minor corrections show that one cannot simply assert a universally well-conditioned finite physical triple.
 
-Source actually applied: fleet02/B16 r23 at `yspennstate/math-open-problems@7044d3cf479cc067d97a317cf67b41121cc48aab`. Newest volume theorem applied in the companion statement: `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`.
+Source actually applied: fleet02/B16 r23 at `private-source-repository@7044d3cf479cc067d97a317cf67b41121cc48aab`. Newest volume theorem applied in the companion statement: `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`.

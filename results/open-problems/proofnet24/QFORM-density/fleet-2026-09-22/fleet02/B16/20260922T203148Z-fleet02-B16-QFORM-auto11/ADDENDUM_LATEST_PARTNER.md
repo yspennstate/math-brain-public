@@ -1,6 +1,6 @@
 # Addendum — apply the latest completed designated partner theorem
 
-After the main report was committed, designated partner fleet03/B16 completed run `20260922T202347Z-fleet03-B16-QFORM-r15`, canonical mathematics `yspennstate/math-open-problems@b94cc7446401c02727c42024274c002e2f4e0cab`, proving `QFORM-PHYSICAL-TRIPLE-DETERMINANT-v1`:
+After the main report was committed, designated partner fleet03/B16 completed run `20260922T202347Z-fleet03-B16-QFORM-r15`, canonical mathematics `private-source-repository@b94cc7446401c02727c42024274c002e2f4e0cab`, proving `QFORM-PHYSICAL-TRIPLE-DETERMINANT-v1`:
 
 for every invertible symmetric physical `3 x 3` block `B` on three original independent cap-one coordinates, with arbitrary affine term and arbitrary ambient outside couplings after conditioning,
 

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 
 # NM13-12 progress-universality — low-rank arbitrary-row contamination resilience for T03
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: `NM13-12`  
 Progress root: `proofnet24/NM13-12/progress-universality/`  
 Owner policy: `operations/PROGRESS20_2026-09-20.md`  

@@ -49,7 +49,7 @@ Thus for every delta,
 while ||A_delta-A_0||op=delta->0. Therefore there is NO modulus omega(delta)->0 controlling a fixed positive-scale Gaussian heat maximum uniformly over all admissible cap-one product laws, even when the third singular value stays exactly one. This is not a counterexample to QFORM; it refutes only a coefficient-continuity shortcut from exact-null to near-null cases.
 
 ## Current source application
-The newest volume-stability theorem at math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba proves, on its certified cross-block branch,
+The newest volume-stability theorem at private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba proves, on its certified cross-block branch,
 
     ||p_Q||infinity <= 24 sqrt(3) e /(5a).
 

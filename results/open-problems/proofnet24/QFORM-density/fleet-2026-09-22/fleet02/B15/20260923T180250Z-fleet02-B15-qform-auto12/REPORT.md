@@ -28,18 +28,18 @@ This run attacks a very specific rough-input completion proposal suggested by th
 
 The owner-pinned Claude source at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
 was read in all three required files `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.  I use its completed ruled Theorem C below at an actual interval/tent inequality.  I also consumed the current audit/continuation, which records the corrected scope: the one-sheet theorem with an affine term requires that term to lie in the quadratic range.
 
 The designated partner result used in the approximation obstruction is fleet03/B15 auto18,
 
-`yspennstate/math-open-problems@be22adf9f67e9fa02063418c000bc5ee2d2d0c43`,
+`private-source-repository@be22adf9f67e9fa02063418c000bc5ee2d2d0c43`,
 
 which proves uniform convergence of unnormalised interval profiles at atomless weak limits and, in particular, zero-loss passage of a previously proved common estimate `mu_m(I)<=C|I|` to the weak limit.  The newer fleet03/B15 auto24 result,
 
-`yspennstate/math-open-problems@2cf10318752f8dd0def28ab14d799e23f381ba10`,
+`private-source-repository@2cf10318752f8dd0def28ab14d799e23f381ba10`,
 
 proves the exact heat-height functional and the compiler
 
@@ -50,7 +50,7 @@ H(\mathcal L(Y))\le E\,H(\mathcal L(Y\mid W)).
 
 The Gaussian-mixture theorem being stress-tested is
 
-`yspennstate/math-open-problems@9dabaf2aaf66687c2b4437fdb359b1aeb4a804bc`,
+`private-source-repository@9dabaf2aaf66687c2b4437fdb359b1aeb4a804bc`,
 `NEW_GAUSSIAN_MIXTURE_FULL_THEOREM.md`.
 
 It proves the full arbitrary-rank/sign QFORM bound for

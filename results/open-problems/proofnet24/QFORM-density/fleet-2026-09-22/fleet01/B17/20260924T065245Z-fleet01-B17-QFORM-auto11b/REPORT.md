@@ -218,7 +218,7 @@ Y_m\Rightarrow G\sim N(0,V).
 
 For the density upgrade use the source-pinned Fresnel--Brascamp--Lieb Theorem F:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 Diagonalize `B_m=O_m Lambda_m O_m^T`. The physical eigenframe is `T_mO_m`. Every physical row has squared leverage exactly `1/m`, its full Gram matrix is `I_3`, and there is no residual quadratic part. Hence Theorem F applies with all physical coordinates in its set `I` and gives
@@ -265,7 +265,7 @@ s_{\min}(C)\ge v_0.
 
 By Sylvester inertia, `C` has eigenvalues `a,b,-c` with `a,b,c>=v_0`. The completed fleet02/B17 Gaussian global-max argument is source-pinned at
 
-`yspennstate/math-open-problems@cdd0eb22227a505e827a658038a1512897c0ad56`,
+`private-source-repository@cdd0eb22227a505e827a658038a1512897c0ad56`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T054220Z-fleet02-B17-QFORM-auto11/REPORT.md`.
 
 Its monotone-convolution argument gives global maximality at zero, and its cone integral gives

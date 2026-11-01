@@ -182,7 +182,7 @@ I consumed the complete fleet02/B12 theorem
 
 canonical proof
 
-`yspennstate/math-open-problems@262393f45fe00095aa7d64d7ebf894c26279715a:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T175624Z-fleet02-B12-QFORM-r11/REPORT.md`.
+`private-source-repository@262393f45fe00095aa7d64d7ebf894c26279715a:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T175624Z-fleet02-B12-QFORM-r11/REPORT.md`.
 
 Its exact rank-one specialization is the following actual added-eigenvalue inequality. If disjoint ORIGINAL-coordinate sets `I0,J0` of size four satisfy
 

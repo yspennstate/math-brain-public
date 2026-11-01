@@ -165,7 +165,7 @@ The random shift `h(Y)` can be fully dependent on the Schur residual. No post-co
 
 Use the completed fleet04/B18 theorem `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, scientific commit
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 
 report
 

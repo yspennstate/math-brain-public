@@ -16,7 +16,7 @@ The unrestricted target remains OPEN. Inputs are independent ORIGINAL coordinate
 
 This run starts from the newest completed B08 reduction that was already present before this invocation:
 
-- `yspennstate/math-open-problems@744b91ba528e0e93896f9824c90b9c2bdbc79dff`
+- `private-source-repository@744b91ba528e0e93896f9824c90b9c2bdbc79dff`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T093949Z-fleet03-B08-qform-diffuse-r34/REPORT.md`.
 
 That report proves that the aligned Dodgson survivor has one literal physical cross block `B` with
@@ -29,19 +29,19 @@ and, using the completed fleet01/B01 aggregate-E2 Fourier estimates, an `L2` den
 
 The Fourier envelopes actually used below come from:
 
-- `yspennstate/math-open-problems@1f3af9dc58afb9e902b972466d6da01cece89734`
+- `private-source-repository@1f3af9dc58afb9e902b972466d6da01cece89734`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T030821Z-fleet01-B01-qform-auto11/REPORT.md`.
 
 The designated partner has now completed its B08 result:
 
-- `yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
+- `private-source-repository@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T091414Z-fleet04-B08-QFORM-r1/REPORT.md`.
 
 It proves an exact anisotropic direct-sum receiver with uniform bound `<7.251` at unit scale, even when the two cross singular values have ratio tending to infinity.
 
 The square-smoothing idea generalized in Section 4 originates in the completed fleet04/B18 theorem:
 
-- `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+- `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
 That source treated an `L-infinity` base density. Here the base is only `L^p`, `p>2`, which is enough after a new near/far optimization.

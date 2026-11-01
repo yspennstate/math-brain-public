@@ -157,7 +157,7 @@ This is deterministic. It does not treat the `q`-term as a random perturbation a
 
 A prior source-valid optimized planar square-root lemma is pinned at
 
-`math-open-problems@b8cb4aa22c840d8f4fc76bcca6d0cb49d4aeb9f9`
+`private-source@b8cb4aa22c840d8f4fc76bcca6d0cb49d4aeb9f9`
 
 `proofnet24/QFORM-density/interactive/20260923T222500Z-two-physical-leaf-pair-arbitrary-hub/REPORT.md`.
 

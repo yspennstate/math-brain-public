@@ -50,7 +50,7 @@ On 2026-10-11 ran math_recall.py on `disordered zero range convergence equilibri
 
 Searched probability_1000_intake_D_20260908/*.jsonl for D0024 and read the matched problems/attempts entries. They identify arXiv:1804.06148 but had not fetched its theorem, so their status is not a mathematical verdict. Also searched codex_pool_2026_10_10; no match returned. One attempted path probability_1000_intake_2026_10_10 did not exist; the subsequent directory listing located the actual intake paths.
 
-Read via `git show origin/master:runs/R08/20260918T0030Z_d0024_resolution_d0025_plateau_screen_c7a4e2.md` in ~/math-open-problems. That report declares the problem resolved in the "source's intended one-dimensional" scope. The source's Section 2 does not have that restriction; the later theorem does. Therefore the report is reliable as a lead to the nearest-neighbor result but its full-source status declaration is not accepted. No repository working tree was changed.
+Read via `git show origin/master:runs/R08/20260918T0030Z_d0024_resolution_d0025_plateau_screen_c7a4e2.md` in ~/private-source. That report declares the problem resolved in the "source's intended one-dimensional" scope. The source's Section 2 does not have that restriction; the later theorem does. Therefore the report is reliable as a lead to the nearest-neighbor result but its full-source status declaration is not accepted. No repository working tree was changed.
 
 ## Search audit
 

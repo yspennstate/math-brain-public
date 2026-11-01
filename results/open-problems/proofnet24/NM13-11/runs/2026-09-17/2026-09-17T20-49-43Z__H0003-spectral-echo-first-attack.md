@@ -4,7 +4,7 @@ Model: GPT-5.6 Sol. Reasoning: UNVERIFIED. **MOVEMENT (PARTIAL):** on a restrict
 
 Date: 2026-09-17 UTC  
 Track: NM13-11 / HARD OUTSIDE  
-Repository: `yspennstate/math-open-problems`, `master`  
+Repository: `private-source-repository`, `master`  
 Claim: `operations/claims/H0003.md`, creation commit `9da49e832192bc0ce72f545b40589aa9dd91acb8`, read back at that commit, blob `6842b4d7c0367422b8b2be1c9cd61e150b6491fe`.
 
 ## 1. Runtime honesty and repository continuity

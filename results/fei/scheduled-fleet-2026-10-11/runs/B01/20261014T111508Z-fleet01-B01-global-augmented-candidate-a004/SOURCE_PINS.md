@@ -5,7 +5,7 @@
   fetched 2026-10-14, blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
 - Current order: same repository and directory, `ORDER.md`, fetched
   2026-10-14.
-- Execution protocol: `yspennstate/math-open-problems`,
+- Execution protocol: `private-source-repository`,
   `reports/fei-2026-10-11/EXECUTION_PROTOCOL.json`, blob
   `457358ff62cbf1141a72096bcabdf95bf18c1be2`.
 - B01 assignment: same repository,

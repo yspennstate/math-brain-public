@@ -15,7 +15,7 @@ B03's assignment is the decoupled time integral: use independent-copy identities
 
 The designated partner handoff is
 
-`yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`
+`private-source-repository@28681f9af7c2307f80968df86010084019599e38`
 
 at
 

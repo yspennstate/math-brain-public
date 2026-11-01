@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R20 — complete branch-cycle theorem: short-theta pairs are absorbed by four-port correspondence slack
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 0. Continuity, ownership, and stale scheduler title
 

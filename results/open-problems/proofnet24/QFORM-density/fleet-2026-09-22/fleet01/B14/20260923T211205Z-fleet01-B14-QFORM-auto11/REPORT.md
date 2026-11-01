@@ -14,12 +14,12 @@ The target remains: independent real `X_i` with densities `0<=f_i<=1`, symmetric
 
 The designated partner result actually used below is fleet02/B14 run `20260923T193835Z-fleet02-B14-QFORM-auto11`, canonical report
 
-`yspennstate/math-open-problems@b2d5f5354dfe179e18e366cf49c485e5326e9288`,
+`private-source-repository@b2d5f5354dfe179e18e366cf49c485e5326e9288`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T193835Z-fleet02-B14-QFORM-auto11/REPORT.md`.
 
 Its relevant completed statement is the Fisher positive-mixture compiler: Fisher action is mass-homogeneous, convex under positive aggregation, and translation invariant. The underlying projected-Fisher theorem is source-pinned at
 
-`yspennstate/math-open-problems@4a65677d185d35154dc3dfae320c5df9f939b8a2`,
+`private-source-repository@4a65677d185d35154dc3dfae320c5df9f939b8a2`,
 `proofnet24/QFORM-density/interactive/20260923T184054Z-fisher-continuation/FISHER_INFORMATION.md`.
 
 ## 2. Density functional and total-variation closure

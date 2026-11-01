@@ -207,7 +207,7 @@ This is precisely an aggregate-before-selection effect: no uniformly large physi
 
 I read the underlying partner proof at
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
@@ -281,6 +281,6 @@ Galyna Livshyts, Grigoris Paouris, Peter Pivovarov, *On sharp bounds for margina
 
 Designated partner theorem used:
 
-`QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, fleet04/B18, immutable scientific source `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, exact report path given in Section 7.
+`QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, fleet04/B18, immutable scientific source `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, exact report path given in Section 7.
 
 No Gaussian/log-concavity/moment/support/iid assumption, post-rotation independence, arbitrary-joint coarea bound, conditional-cap-as-independence step, fixed-good-minor extraction, or law-uniform pointwise quadratic-phase decay is used.

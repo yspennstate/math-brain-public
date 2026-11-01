@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # HARD7-04 bounded research iteration — sharp dual subcriticality and the postcritical collar barrier
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Canonical target: `operations/claims/BHS-MST-CM-UNIV.md`, owner `HARD7-04`.
 

@@ -4,7 +4,7 @@ Run `20260923T190353Z-fleet02-B15-qform-auto11`. Full unrestricted QFORM remains
 
 A later source commit landed after the main report:
 
-`math-open-problems@9e2909942e0db085b66ce6bcefe663c879d89b44`,
+`private-source@9e2909942e0db085b66ce6bcefe663c879d89b44`,
 `proofnet24/QFORM-density/interactive/20260923T191724Z-physical-three-core/REPORT.md`.
 
 It proves a stronger receiver than the ruled majority-side theorem: if one **original-coordinate** principal `3x3` block `M=A_SS` satisfies `s_3(M)>=sigma>0`, then for arbitrary independent cap-one marginals, arbitrary outside coordinates/couplings, and arbitrary affine terms,
@@ -103,7 +103,7 @@ The source itself correctly notes that `s_3(A)>=1` does not force such a physica
 
 ## 5. Relation to the pinned e5f theorem and this run's Fisher obstruction
 
-The required pinned result `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` remains genuinely applied in the main report. For
+The required pinned result `private-source@e5f71d79eff325201dd0274053d20268ce65b837` remains genuinely applied in the main report. For
 
 `A=[[0,1,0],[1,0,0],[0,0,1]]`, `X_i~Uniform[0,1]`,
 

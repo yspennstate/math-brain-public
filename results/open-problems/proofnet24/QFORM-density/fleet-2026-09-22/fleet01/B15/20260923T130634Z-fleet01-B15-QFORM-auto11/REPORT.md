@@ -21,8 +21,8 @@ in the essential sense for one universal finite `C`, or give a valid target coun
 
 Two completed sources are applied below rather than merely cited.
 
-1. **Assigned partner fleet02/B15, newest completed run:** `yspennstate/math-open-problems@46c33d97490f78f8c3de0435f63d573958d81180`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T130525Z-fleet02-B15-qform-auto11/REPORT.md`. It rechecks the rough original-coordinate ruled one-sheet submeasure bound and proves the weak-trace/normalized-trace separation inside the fixed target `A=I_3`. I use its zero-loss weak interval-trace closure in Section 5 and its ruled one-sheet payment in Section 6.
-2. **Newest owner-required volume/tail result:** `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md`. Under its explicit original-coordinate projection/tail gate it gives
+1. **Assigned partner fleet02/B15, newest completed run:** `private-source-repository@46c33d97490f78f8c3de0435f63d573958d81180`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T130525Z-fleet02-B15-qform-auto11/REPORT.md`. It rechecks the rough original-coordinate ruled one-sheet submeasure bound and proves the weak-trace/normalized-trace separation inside the fixed target `A=I_3`. I use its zero-loss weak interval-trace closure in Section 5 and its ruled one-sheet payment in Section 6.
+2. **Newest owner-required volume/tail result:** `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md`. Under its explicit original-coordinate projection/tail gate it gives
 \[
 \|p_Q\|_\infty\le {9\sqrt3e\over2}
  [s_1(M)^2s_2(M)^2T_2]^{-1/6}.

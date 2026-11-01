@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED.**
 
 # NM13-03 / T03 — Gaussian smoothing curvature, score self-bound, and supported alpha=12.287222221600
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: `NM13-03`  
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`  
 LIVE20 parent: **T03 negative spherical perceptron**  

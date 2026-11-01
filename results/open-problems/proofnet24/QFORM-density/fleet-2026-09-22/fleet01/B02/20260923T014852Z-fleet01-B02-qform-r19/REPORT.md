@@ -22,7 +22,7 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, identica
 
 The required completed partner source is fleet02/B02 r16:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - commit: `49c80441f24d6c697350119fac09426077b7e313`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T231047Z-fleet02-B02-qform-r16-6c4f9a1e/REPORT.md`.
 
@@ -242,7 +242,7 @@ Combining (4.5), (4.8), and (4.9), and simplifying the power of `r`, gives exact
 
 A completed source used by the neighboring Fourier worker is fleet02/B01 r31:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `3280d9fab56fe4878189ae89176887e3da29f569`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T233020Z-fleet02-B01-qform-r31/REPORT.md`.
 

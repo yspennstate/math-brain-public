@@ -17,7 +17,7 @@ Starting only from `s_3(A)>=1`, expose a product-preserving three-bank receiver 
 
 ## 2. Fixed source and designated partner
 
-The pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` was read through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
+The pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` was read through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
 The source results used below are:
 

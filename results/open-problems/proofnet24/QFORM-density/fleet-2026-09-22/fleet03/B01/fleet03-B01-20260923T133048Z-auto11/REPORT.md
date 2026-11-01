@@ -25,7 +25,7 @@ The first analytic implication attempted in this run is the following. After com
 The exact dependencies used are:
 
 1. `QFORM-PHYSICAL-PAIR-LOG-ENVELOPE-v1`, source  
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,  
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,  
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.  
    For an invertible indefinite original-coordinate pair matrix `B`, with
    `D=|det B|` and `kappa=sigma_min(B)`, its translated conditional density satisfies for every `r>0`
@@ -39,7 +39,7 @@ The exact dependencies used are:
    Pair translations may depend arbitrarily on the remainder variables.
 
 2. `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, source  
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,  
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,  
    `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.  
    If `U^T U=I_2`, `Lambda` is invertible symmetric, and `b` is arbitrary, then for independent cap-one original coordinates
 
@@ -47,14 +47,14 @@ The exact dependencies used are:
         <=128 |det Lambda|^(-1/4)`.                               (1.3)
 
 3. Designated partner fleet04/B01, newest completed overlap-two receiver:  
-   `yspennstate/math-open-problems@27ae9c5fbf53787fac1d61d7f480e0283be8c1c5`,  
+   `private-source-repository@27ae9c5fbf53787fac1d61d7f480e0283be8c1c5`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260923T121347Z-fleet04-B01-overlap2-explicit-r1/REPORT.md`.  
    For an invertible indefinite physical pair `S`, it proves
 
    `||p_Q||_infinity <=22.385 (D kappa)^(-1/6) W_2(S)^(-1/12)`.     (1.4)
 
 4. Designated partner fleet04/B01 signed-Fejer identity, source  
-   `yspennstate/math-open-problems@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`,  
+   `private-source-repository@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T234537Z-fleet04-B01-grouped-square-fejer-r2/REPORT.md`. It proves for every probability law `mu`
 
    `||p_mu||_infinity = sup_(T>0,y in R) D_T mu(y)`,                (1.5)

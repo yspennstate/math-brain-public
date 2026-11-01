@@ -15,7 +15,7 @@ No moments, support bounds, log-concavity, diagonal-basis argument, post-rotatio
 
 ## 2. Source-pinned completed inputs actually used
 
-1. Claude/e5 Theorem D, source `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. Its arbitrary-weight remark replaces squared-minor volume by
+1. Claude/e5 Theorem D, source `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. Its arbitrary-weight remark replaces squared-minor volume by
 
    `G(w)=exp(E_w log det(M_ST)^2 + H(w))`
 
@@ -25,7 +25,7 @@ No moments, support bounds, log-concavity, diagonal-basis argument, post-rotatio
 
    Section 5 applies this to the exact KL-optimal admissible weight of the family below.
 
-2. B04 weighted fractional extension `QFORM-WEIGHTED-FRACTIONAL-VOLUME-SHARP-v1`, source `yspennstate/math-open-problems@061327b7e45c28e5b8c898ed3729456fcea6f7d7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T014717Z-fleet02-B04-QFORM-auto11-cont/REPORT.md`. If `1<=q<3/2` and all row marginals obey `alpha_i<=q/2`, then
+2. B04 weighted fractional extension `QFORM-WEIGHTED-FRACTIONAL-VOLUME-SHARP-v1`, source `private-source-repository@061327b7e45c28e5b8c898ed3729456fcea6f7d7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T014717Z-fleet02-B04-QFORM-auto11-cont/REPORT.md`. If `1<=q<3/2` and all row marginals obey `alpha_i<=q/2`, then
 
    `||p_Q||_inf <= C(q) G(w)^(-1/6)`,
 
@@ -37,7 +37,7 @@ No moments, support bounds, log-concavity, diagonal-basis argument, post-rotatio
 
    and closes the branch when `L<=1/2` and `A(L,rho)<3/4`. Section 6 applies it to the same physical block and computes an exact obstruction: `rho=1`, so the gate cannot certify this near-coloop family even though the top-two projection leverage is small.
 
-4. Square-assisted ridge theorem `QFORM-SQUARE-ASSISTED-RIDGE-L32-v1`, source `yspennstate/math-open-problems@b129377880c18fe011dd4513282f2e0b60e412e0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T155815Z-qform-r11b/REPORT.md`. For
+4. Square-assisted ridge theorem `QFORM-SQUARE-ASSISTED-RIDGE-L32-v1`, source `private-source-repository@b129377880c18fe011dd4513282f2e0b60e412e0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T155815Z-qform-r11b/REPORT.md`. For
 
    `Q=a(Z+m(Y))^2+R(Y)`,
 

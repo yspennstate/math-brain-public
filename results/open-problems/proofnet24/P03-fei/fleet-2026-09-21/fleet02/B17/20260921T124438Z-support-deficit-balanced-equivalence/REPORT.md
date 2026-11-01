@@ -4,7 +4,7 @@ Status: PARTIAL. Full Friedgut–Kalai Fourier entropy-influence (FEI) remains O
 Brain status: WITHOUT_VERIFIED_BRAIN.
 Role: FEI new proof mechanisms.
 Live sprint assignment adopted: fleet02/B17, “support-deficit transfer and its actual sharp obstruction”.
-Math source at start: yspennstate/math-open-problems master d48d1cdf71ec1a44ef2eede8222c531eb7c48096, refreshed during the run.
+Math source at start: private-source-repository master d48d1cdf71ec1a44ef2eede8222c531eb7c48096, refreshed during the run.
 Normalization: uniform cube, Boolean values ±1, base-2 spectral entropy
 H(f)=sum_S p_S log2(1/p_S), p_S=fhat(S)^2, and total influence
 I(f)=sum_S |S|p_S.

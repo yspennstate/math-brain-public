@@ -4,7 +4,7 @@ Run: `20261013T121918Z-fleet01-B12-fixed-activation-doob`
 
 ## Canonical package
 
-- Repository: `yspennstate/math-open-problems`
+- Repository: `private-source-repository`
 - Path: `reports/fei-2026-10-11/runs/B12/20261013T121918Z-fleet01-B12-fixed-activation-doob/`
 - Core-package readback ref: `b05581a84e815be073405e063678504f83978254`
 - Verification: all 11 pre-receipt files fetched at that ref, nonempty, and byte-identical to the local artifacts.

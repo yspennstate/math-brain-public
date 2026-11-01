@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED**—not verifi
 # R13 — Boolean Komlos: symbolic balanced four-block theorem
 
 Run ID: `20260917T1033Z_balanced4-symbolic-6a71`  
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Continuity and fixed metric
 

@@ -13,7 +13,7 @@ attacking: the epsilon-uniform two-bank endpoint by testing the fixed-P/Minkowsk
 
 The immediately preceding B16 theorem is
 
-`yspennstate/math-open-problems:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T202349Z-fleet03-B16-QFORM-r30/REPORT.md`.
+`private-source-repository:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T202349Z-fleet03-B16-QFORM-r30/REPORT.md`.
 
 In the canonical two-bank packet it proves, for nonzero `epsilon`,
 
@@ -165,7 +165,7 @@ This is **not a counterexample to QFORM** because the curved triple (5.1) has no
 
 The current completed designated-partner report is
 
-`yspennstate/math-open-problems@a70c05e517e8a195a31ab4f4c301c672d1c8d4e6`
+`private-source-repository@a70c05e517e8a195a31ab4f4c301c672d1c8d4e6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260923T192012Z-fleet04-B16-QFORM-r2/REPORT.md`.
 

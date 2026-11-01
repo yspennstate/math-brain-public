@@ -56,7 +56,7 @@ For one physical hub `X_0` and a leaf bank carrying three orthonormal flat sourc
 
 `F=2X_0<c,X_I> + <v_1,X_I>^2 + <v_2,X_I>^2`
 
-has active spectrum `{1,-1,1,1}`. When each mixed-frame row has leverage at most `1/2`, Theorem H of `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` gives
+has active spectrum `{1,-1,1,1}`. When each mixed-frame row has leverage at most `1/2`, Theorem H of `private-source@e5f71d79eff325201dd0274053d20268ce65b837` gives
 
 `|phi_F(t)| <= 8 pi^2 |t|^(-2)`.
 

@@ -10,7 +10,7 @@ Run: `20260923T124731Z-fleet02-B11-QFORM-r31`
 
 The completed designated partner fleet03/B11 r29, canonical source
 
-`yspennstate/math-open-problems@2d86ea167ae1b16705983d4cf95198e254de6ca6`
+`private-source-repository@2d86ea167ae1b16705983d4cf95198e254de6ca6`
 
 at
 
@@ -43,7 +43,7 @@ with the partner branch satisfying `rho,1-rho >= 1/1024`.
 
 Partner r30, canonical source
 
-`yspennstate/math-open-problems@35b5ef493e41323df07d60d73d77ae84791c5e38`
+`private-source-repository@35b5ef493e41323df07d60d73d77ae84791c5e38`
 
 at
 
@@ -53,7 +53,7 @@ proved `QFORM-TWOPLANAR-JOINTCAP-NULLSUM-FALSE-v1`: bounded planar joint densiti
 
 The required pinned Claude source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. I use two completed pieces at actual inequalities below: its Lemma 1 (`int |hat g|^p <= 4 pi/sqrt(p)` for `p>=2` and `|g|<=f<=1`) in the new proof, and its ruled Theorem C from `COUNTEREXAMPLE_SEARCH.md` to pay the one-sheet sign side.
 
@@ -316,7 +316,7 @@ Suppose (5.1) fails. For an offending row set
 
 If `a_i^2>=1/4`, then the exact-rank-three scalar-pivot theorem from the orientation-free rank-two fusion source
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 pays the entire form by
 

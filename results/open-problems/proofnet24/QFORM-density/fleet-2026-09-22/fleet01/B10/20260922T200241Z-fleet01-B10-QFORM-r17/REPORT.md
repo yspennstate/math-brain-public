@@ -43,7 +43,7 @@ This run proves the angular-escape half exactly. More precisely, in the partner 
 
 Canonical source:
 
-`yspennstate/math-open-problems@9a34dc516006d7eb417687b3d7d409f7dfaf33d9`
+`private-source-repository@9a34dc516006d7eb417687b3d7d409f7dfaf33d9`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T154900Z-fleet02-B10-QFORM-r13/REPORT.md`.
 
@@ -53,7 +53,7 @@ I use its exact original-coordinate conditioning/whitening identities and, cruci
 
 Canonical source:
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 

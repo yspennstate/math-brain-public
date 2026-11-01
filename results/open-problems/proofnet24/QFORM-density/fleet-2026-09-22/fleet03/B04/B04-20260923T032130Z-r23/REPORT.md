@@ -12,13 +12,13 @@ For arbitrary independent real coordinates with probability densities `0<=f_i<=1
 
 The current B04 obligation is to optimize an admissible projection/third-volume certificate on the actual physical cross matrix, after independently checking the new matrix/tail certificate in
 
-`math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
+`private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
 
 and `PEER_TAIL_EXTENSION.md` in the same directory. I checked the matrix identity, the projection-to-marginal inequality, the q-dependent Hausdorff--Young/Brascamp--Lieb step, and the Fourier inversion constants. I found no error in that checked chain. The argument below then improves and extends its fixed `q=4/3` choice.
 
 The scheduled peer result used at equation level is fleet01/B20
 
-`math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T234545Z-fleet01-B20-QFORM-auto11/REPORT.md`,
+`private-source@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T234545Z-fleet01-B20-QFORM-auto11/REPORT.md`,
 
 which proves the exact singular-value inequality
 

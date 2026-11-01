@@ -18,7 +18,7 @@ The full universal-constant conjecture remains open. The current correction inbo
 
 The completed assigned-partner result actually used is:
 
-yspennstate/math-open-problems@47dc925729bbf269333cc6e1256178a538d2f553
+private-source-repository@47dc925729bbf269333cc6e1256178a538d2f553
 
 proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260922T120320Z-fleet01-B15-qform/REPORT.md
 

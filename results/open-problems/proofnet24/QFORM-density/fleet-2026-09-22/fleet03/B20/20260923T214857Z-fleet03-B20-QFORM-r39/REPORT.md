@@ -15,7 +15,7 @@ Fresh brain control at login resolved to `yspennstate/math-research-brain@21c31d
 
 The immediate assembly input is fleet03/B19 r42:
 
-`yspennstate/math-open-problems@dfe442ee899867f5677e5ced85a196eca922fe64`
+`private-source-repository@dfe442ee899867f5677e5ced85a196eca922fe64`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T210457Z-fleet03-B19-QFORM-r42/REPORT.md`.
 
@@ -270,7 +270,7 @@ This does not by itself pay the law, but it identifies the next exact analytic i
 
 The completed designated partner report is
 
-`yspennstate/math-open-problems@9d07c5d5c69c885509db66cb1093acdeff8bcb64`,
+`private-source-repository@9d07c5d5c69c885509db66cb1093acdeff8bcb64`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T181642Z-fleet04-B20-QFORM-r11/REPORT.md`.
 

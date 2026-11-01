@@ -79,7 +79,7 @@ extremal_hard_edge`, and two further `pdflatex` passes were run.  The final
 standalone PDF has 39 pages and is 599,275 bytes.
 
 `pdflatex -interaction=nonstopmode master.tex` was run twice in
-`~/math-open-problems-fleet/master`.  The final master PDF has 853
+`~/private-source-fleet/master`.  The final master PDF has 853
 pages and is 7,759,894 bytes.  It was copied to
 `~/Downloads/master.pdf`.
 

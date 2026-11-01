@@ -19,7 +19,7 @@ This run does not use law-uniform pointwise quadratic Fourier decay, arbitrary-j
 
 The newest compatible synthesis input is fleet01/B20 run `20260922T192841Z-fleet01-B20-QFORM-r11`, canonical report
 
-`yspennstate/math-open-problems@306b0acf13b9e10147cca740baf23c8e27961f97`
+`private-source-repository@306b0acf13b9e10147cca740baf23c8e27961f97`
 
 at
 
@@ -45,7 +45,7 @@ for **every** residual original-coordinate cut.
 
 The same fleet01 proof explicitly preserves arbitrary Schur self blocks and arbitrary remaining couplings, so (A) is a full residual physical-cut restriction, not a two-by-two-minor proxy.
 
-The general one-scale ridge theorem used below is the complete supporting theorem `QFORM-RIDGE-DENSITY-v1`, canonical proof `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`. For an original-coordinate cross block `C`, scale `gamma>0`,
+The general one-scale ridge theorem used below is the complete supporting theorem `QFORM-RIDGE-DENSITY-v1`, canonical proof `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`. For an original-coordinate cross block `C`, scale `gamma>0`,
 
 `K=C C^T (gamma^2 I+C C^T)^(-1)`, `theta=tr K`,
 
@@ -181,7 +181,7 @@ because singular values cannot increase under row/column restriction and `|det B
 
 The designated fleet04/B20 completed result is run `20260922T172057Z-fleet04-B20-QFORM-r3`, canonical proof
 
-`yspennstate/math-open-problems@25ad8faaac5064b6814d51ae63d894fe97c1eac4`
+`private-source-repository@25ad8faaac5064b6814d51ae63d894fe97c1eac4`
 
 at
 

@@ -15,7 +15,7 @@ The full QFORM conjecture remains OPEN. Continuity of the full output density is
 
 The designated partner result actually used is fleet04/B16, run `20260922T191443Z-fleet04-B16-QFORM-r3`, canonical report
 
-`yspennstate/math-open-problems:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T191443Z-fleet04-B16-QFORM-r3/REPORT.md`.
+`private-source-repository:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T191443Z-fleet04-B16-QFORM-r3/REPORT.md`.
 
 For its two diffuse uniform blocks, if `M_m(Z)=||rho_{Y|Z}||_infinity`, then for every `0<alpha<2`
 

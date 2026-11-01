@@ -14,7 +14,7 @@ This run used the current source state from `yspennstate/math-research-brain@0f7
 
 Two source theorems are applied exactly:
 
-1. **Diffuse separable-phase theorem**: `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb:proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`. If `U^T U=I_r`, `r>=3`, every row leverage is at most `1/2`, and `Lambda` is invertible symmetric, then
+1. **Diffuse separable-phase theorem**: `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb:proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`. If `U^T U=I_r`, `r>=3`, every row leverage is at most `1/2`, and `Lambda` is invertible symmetric, then
 
    `T=(U^T X)^T Lambda (U^T X)+sum_i V_i(X_i)`
 
@@ -24,7 +24,7 @@ Two source theorems are applied exactly:
 
    The proof is uniform in arbitrary measurable coordinate-separable phases `V_i`, and its characteristic-function envelope is integrable.
 
-2. **Partner fleet02/B12 codimension-one same-sign theorem**: `yspennstate/math-open-problems@5924039504a3f27bdfa9079c4d054422a26baaf2:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/fleet02-B12-20260922T1251Z-qform-additional-eigenvalue/REPORT.md`. A symmetric `m x m` matrix (`m>=4`) with at least `m-1` eigenvalues all `>=L` or all `<=-L`, the last eigenvalue arbitrary, gives under independent density-`<=1` inputs and arbitrary affine tilt
+2. **Partner fleet02/B12 codimension-one same-sign theorem**: `private-source-repository@5924039504a3f27bdfa9079c4d054422a26baaf2:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/fleet02-B12-20260922T1251Z-qform-additional-eigenvalue/REPORT.md`. A symmetric `m x m` matrix (`m>=4`) with at least `m-1` eigenvalues all `>=L` or all `<=-L`, the last eigenvalue arbitrary, gives under independent density-`<=1` inputs and arbitrary affine tilt
 
    `||p||_infinity <= C_same/L`,
 

@@ -14,7 +14,7 @@ No moment, bounded-support, connected-support, log-concavity, iid, centering, po
 
 ## 1. First missing implication attacked
 
-The previous B08 run `r33` (`math-open-problems@faad78e1fbcbfe0943990210de098df34a96e042`) gave a heavy-row peeling dichotomy for the transverse `k=1` child-plus-two-cross frame. Its unpaid exit said that a genuine three-frame direction can concentrate on a bounded physical core.
+The previous B08 run `r33` (`private-source@faad78e1fbcbfe0943990210de098df34a96e042`) gave a heavy-row peeling dichotomy for the transverse `k=1` child-plus-two-cross frame. Its unpaid exit said that a genuine three-frame direction can concentrate on a bounded physical core.
 
 This run removes the need to carry that abstract finite-core certificate through the **small-leakage transverse chamber**. A single row whose augmented three-frame leverage exceeds the partner threshold already forces a quantitative coefficient in the literal original-coordinate matrix: either a cross-row star, or a child diagonal/off-diagonal row star. If there is no such row, the completed designated partner fleet02/B08 theorem applies directly.
 
@@ -143,7 +143,7 @@ These are coefficients/stars in the literal original-coordinate matrix. There is
 
 The exact squared-energy ledger proved by this slot in r30,
 
-`math-open-problems@014df00b32f2360c1b5c835434bb146cf57e1930`,
+`private-source@014df00b32f2360c1b5c835434bb146cf57e1930`,
 
 upgraded the actual balanced `k=1` cross scale to
 
@@ -172,7 +172,7 @@ Thus the former abstract statement “the augmented three-frame has a heavy phys
 
 The completed designated partner result is fleet02/B08 r28:
 
-`math-open-problems@66582bd87d50634f3525a57c87acffdbde97aea1`,
+`private-source@66582bd87d50634f3525a57c87acffdbde97aea1`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T153836Z-fleet02-B08-qform-r28/REPORT.md`.
 

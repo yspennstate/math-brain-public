@@ -14,7 +14,7 @@ attacking: QFORM-WITT-PURE13-CLOSURE-AND-HIGHLEVERAGE-COMPILER-v1 — retire the
 
 My immediate predecessor r42 is
 
-`yspennstate/math-open-problems@05c329eb1b76b40cefe12e4554b96788382203fa:`
+`private-source-repository@05c329eb1b76b40cefe12e4554b96788382203fa:`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260924T074130Z-fleet03-B05-QFORM-r42/REPORT.md`.
 
 It reduced the exact high-leverage physical-null-pivot Witt packet to
@@ -40,7 +40,7 @@ That debt has since been superseded. The fresh fleet01/B05 theorem
 
 canonical source
 
-`yspennstate/math-open-problems@1ca1fc77ae8435274325c25657c496fd703c0b51:`
+`private-source-repository@1ca1fc77ae8435274325c25657c496fd703c0b51:`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260924T072900Z-fleet01-B05-QFORM-auto11/REPORT.md`,
 
 proves the entire exact-rank-three high-leverage literal-null-pivot branch, without any bank-rank or `pure-13` exception:
@@ -251,7 +251,7 @@ The designated partner theorem is fleet04/B05's
 
 canonical source
 
-`yspennstate/math-open-problems@33cabb3bd5e466a58adc6eac49eba210ef62ef14:`
+`private-source-repository@33cabb3bd5e466a58adc6eac49eba210ef62ef14:`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260924T011830Z-fleet04-B05-convex-pair-r3/REPORT.md`.
 
 For any literal original-coordinate definite principal pair `C`, with arbitrary outside coupling retained,
@@ -435,10 +435,10 @@ The fresh fleet01/B05 stress theorem shows why the scalar-pivot-first half-Riesz
 
 ## 9. Sources actually used
 
-- Own r42: `math-open-problems@05c329eb1b76b40cefe12e4554b96788382203fa`.
-- Fresh zero-pivot high-leverage closure: `math-open-problems@1ca1fc77ae8435274325c25657c496fd703c0b51`.
-- Null-hub mixed-Fresnel theorem: `math-open-problems@c0d7e627b3b877fcecc3004a58335658f6541d64`.
-- Designated fleet04/B05 definite-pair theorem: `math-open-problems@33cabb3bd5e466a58adc6eac49eba210ef62ef14`.
-- Fresh scalar-pivot logarithmic-barrier report: `math-open-problems@1ac275fbdb84feaca340834f7e127ae042ed66d7`.
+- Own r42: `private-source@05c329eb1b76b40cefe12e4554b96788382203fa`.
+- Fresh zero-pivot high-leverage closure: `private-source@1ca1fc77ae8435274325c25657c496fd703c0b51`.
+- Null-hub mixed-Fresnel theorem: `private-source@c0d7e627b3b877fcecc3004a58335658f6541d64`.
+- Designated fleet04/B05 definite-pair theorem: `private-source@33cabb3bd5e466a58adc6eac49eba210ef62ef14`.
+- Fresh scalar-pivot logarithmic-barrier report: `private-source@1ac275fbdb84feaca340834f7e127ae042ed66d7`.
 
 Manual changed-file review: only mathematical content and nonsecret repository/run identifiers are present. No credentials, personal archives, financial/client data, model/API purchases, remote workflows, permissions, or public-release settings are involved.

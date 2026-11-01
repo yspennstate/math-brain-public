@@ -7,7 +7,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`.
 Status: supporting calculation only; full QFORM remains OPEN.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-Incoming partner: fleet03/B07 r26, brain handoff `20260923T060629Z-fleet03-B07-qform-r26.md`, canonical math-open-problems commit `86ff1278a9b52d8a2736c340b7f54893c6b8c267`. In its E2 branch the residual physical cross block N has `E2(N)>=3||N||_F^4/16`, nested inside an edge-star-core packet `|e|||s||||N||_F > theta F^3/(36sqrt(2))`.
+Incoming partner: fleet03/B07 r26, brain handoff `20260923T060629Z-fleet03-B07-qform-r26.md`, canonical private-source commit `86ff1278a9b52d8a2736c340b7f54893c6b8c267`. In its E2 branch the residual physical cross block N has `E2(N)>=3||N||_F^4/16`, nested inside an edge-star-core packet `|e|||s||||N||_F > theta F^3/(36sqrt(2))`.
 
 For an actual physical augmented cross block
 

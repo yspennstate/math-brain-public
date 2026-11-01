@@ -17,7 +17,7 @@ The result below shows that one must keep the fragments as unnormalized subproba
 
 ## 2. Source-pinned completed partner theorem
 
-Consumed completed fleet02/B14 r32: `yspennstate/math-open-problems@bce23e5a745fec8ac0f3b1c5e1eb2d917885c437`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T090605Z-fleet02-B14-QFORM-r32/REPORT.md`.
+Consumed completed fleet02/B14 r32: `private-source-repository@bce23e5a745fec8ac0f3b1c5e1eb2d917885c437`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T090605Z-fleet02-B14-QFORM-r32/REPORT.md`.
 
 Its critical Fourier lemma defines
 

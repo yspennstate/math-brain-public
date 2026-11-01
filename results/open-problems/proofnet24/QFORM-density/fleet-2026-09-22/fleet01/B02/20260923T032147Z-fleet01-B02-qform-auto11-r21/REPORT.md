@@ -16,7 +16,7 @@ Continuity is proved on the final stability branch because that partner theorem 
 
 The designated partner result actually used is fleet02/B02, canonical report
 
-`yspennstate/math-open-problems@f7a221e0f40362a1ccad48cf81812f2143f3cc92`
+`private-source-repository@f7a221e0f40362a1ccad48cf81812f2143f3cc92`
 
 at
 
@@ -42,7 +42,7 @@ The proof is through an integrable characteristic-function envelope, hence also
 
 For the unconditional fifth-volume exit I also retain fleet02/B02 r16,
 
-`yspennstate/math-open-problems@49c80441f24d6c697350119fac09426077b7e313`,
+`private-source-repository@49c80441f24d6c697350119fac09426077b7e313`,
 
 which gives
 

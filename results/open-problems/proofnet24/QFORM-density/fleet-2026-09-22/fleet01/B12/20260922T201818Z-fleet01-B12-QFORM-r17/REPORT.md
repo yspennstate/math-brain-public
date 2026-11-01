@@ -10,13 +10,13 @@ Target retained: for independent real coordinates with densities bounded by one 
 
 Completed dependencies actually used:
 
-1. `fleet02/B12`, `QFORM lossless extra-eigenvalue peeling`, canonical `yspennstate/math-open-problems@4b8eb43e9d001d41de6190b587fefe8fdea2006b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T185427Z-fleet02-B12-QFORM-r11/REPORT.md`. Used at the exact density recurrence
+1. `fleet02/B12`, `QFORM lossless extra-eigenvalue peeling`, canonical `private-source-repository@4b8eb43e9d001d41de6190b587fefe8fdea2006b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T185427Z-fleet02-B12-QFORM-r11/REPORT.md`. Used at the exact density recurrence
    \[
    M_{j-1}\le 2\sqrt{M_j/|a_j|},\qquad
    2\sqrt{M/\eta}\le \max\{M,4/\eta\}.
    \]
-2. `fleet02/B12`, exact one-spike Möbius stress family, canonical `yspennstate/math-open-problems@5295a978b9e3336cc823f0e631bde093c30a8a4d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T1953Z-fleet02-B12-qform-r16/REPORT.md`. The rank-one specialization of the new matrix update below reproduces its Möbius denominator exactly; its complementary-three-coordinate estimate is used as the explicit certificate switch at a pivot pole.
-3. Regularized physical-cross determinant theorem, canonical `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`. Five physical cross singular values at least `sigma` imply a continuous terminal density bounded by `5e/(2 sigma)`, with arbitrary self blocks and outside couplings.
+2. `fleet02/B12`, exact one-spike Möbius stress family, canonical `private-source-repository@5295a978b9e3336cc823f0e631bde093c30a8a4d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T1953Z-fleet02-B12-qform-r16/REPORT.md`. The rank-one specialization of the new matrix update below reproduces its Möbius denominator exactly; its complementary-three-coordinate estimate is used as the explicit certificate switch at a pivot pole.
+3. Regularized physical-cross determinant theorem, canonical `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`. Five physical cross singular values at least `sigma` imply a continuous terminal density bounded by `5e/(2 sigma)`, with arbitrary self blocks and outside couplings.
 
 ## 1. Exact low-rank Schur transport identity
 

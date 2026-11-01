@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 # NM13-13 — T04 cluster-aware random 3-SAT: monotone 1RSB tail tightening gives an explicit 4.392 candidate upper bound
 
 Date: 2026-09-20  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker root: `proofnet24/NM13-13/progress-3sat/`  
 Parent: **T04 — classical iid random 3-SAT with uniform independent signs on three distinct variables**  
 Status: **OPEN / PARTIAL; CANDIDATE_FULL for the explicit fixed-count upper endpoint 4.392, pending later independent review**

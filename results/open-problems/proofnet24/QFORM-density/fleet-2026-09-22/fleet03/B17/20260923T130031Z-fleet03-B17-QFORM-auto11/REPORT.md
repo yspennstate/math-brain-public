@@ -29,7 +29,7 @@ The completed designated-partner report `fleet04/B17` proved the exact cone-tip 
 \]
 for `Q=X^TAX`. Partner source:
 
-`yspennstate/math-open-problems@a227d5dcd268ee481d19d1bd6fcf041f32183806`,
+`private-source-repository@a227d5dcd268ee481d19d1bd6fcf041f32183806`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260923T081528Z-fleet04-B17-QFORM-r4/REPORT.md`.
 
 That report explicitly left the global off-tip/two-sheet maximum open. The present run closes exactly that gap.

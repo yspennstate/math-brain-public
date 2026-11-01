@@ -48,7 +48,7 @@ ExponentCheck.lean formalizes the arithmetic implication k+2m=n and 4k<=n imply 
 
 ## Research brain and previous work
 
-The prescribed topic/mistakes recall and the named cancelation-norm math-store recall returned mostly off-topic cards, not a resolution. A follow-up author query likewise returned off-topic cards. Intake probability_1000_intake_E_20260908 records E0072-A001 (2026-09-08) as attempted_unsolved and discusses a quasimorphism/scl approach. Its assertion that symmetry and subadditivity imply monotonicity of expected norm was not used and is not established there. Its assertion that a general conjugation-invariant norm is a quasimorphism-type object was likewise not used. The present construction avoids any exchange of a supremum with a drift limit. Read-only git ls-tree of origin/master in math-open-problems found no path containing E0072 or five_remarks; no working tree was touched.
+The prescribed topic/mistakes recall and the named cancelation-norm math-store recall returned mostly off-topic cards, not a resolution. A follow-up author query likewise returned off-topic cards. Intake probability_1000_intake_E_20260908 records E0072-A001 (2026-09-08) as attempted_unsolved and discusses a quasimorphism/scl approach. Its assertion that symmetry and subadditivity imply monotonicity of expected norm was not used and is not established there. Its assertion that a general conjugation-invariant norm is a quasimorphism-type object was likewise not used. The present construction avoids any exchange of a supremum with a drift limit. Read-only git ls-tree of origin/master in private-source found no path containing E0072 or five_remarks; no working tree was touched.
 
 ## Remaining gap
 

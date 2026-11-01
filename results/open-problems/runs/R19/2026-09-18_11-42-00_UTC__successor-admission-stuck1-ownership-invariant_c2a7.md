@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 at 
 # R19 CLOSABLE OUTSIDE — post-E0071 successor-admission STUCK1: ownership is the persistent gate, broad scope is the other gate
 
 Run date: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Delivery: private GitHub only.
 
 ## 1. Continuity and frozen I0084 state

@@ -4,7 +4,7 @@ Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`
 Run: `20260924T141506Z-auto11-fleet02-B10`  
 B10 lens: constants, exact arithmetic, adversarial finite examples.
 
-Pinned mathematical baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `manuscript.tex` git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, owner-recorded SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`, 47,883 bytes / 790 lines. Fresh `master` observed during the audit advanced through `6b946fa19d943a8c77e375bfb3e7cc86d098f759`; the baseline manuscript blob remained the pinned byte-identical source.
+Pinned mathematical baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `manuscript.tex` git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, owner-recorded SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`, 47,883 bytes / 790 lines. Fresh `master` observed during the audit advanced through `6b946fa19d943a8c77e375bfb3e7cc86d098f759`; the baseline manuscript blob remained the pinned byte-identical source.
 
 ## Verdict
 

@@ -234,7 +234,7 @@ Thus `||p_R||_3=6^(1/3)`: the logarithmic rank-two obstruction is exactly the ki
 
 The completed fleet01/B05 theorem `QFORM-SHIFTED-SQUARE-L32-v1`, source
 
-`yspennstate/math-open-problems@4fea394eafc8bce4f335cce2a6150ed50f95ed1a`
+`private-source-repository@4fea394eafc8bce4f335cce2a6150ed50f95ed1a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260924T100503Z-fleet01-B05-QFORM-auto11/REPORT.md`
 
@@ -310,7 +310,7 @@ The newest completed designated-partner result is fleet04/B11
 
 source
 
-`yspennstate/math-open-problems@da4db4dae881f0b5239c93291ee3d7e76216c945`
+`private-source-repository@da4db4dae881f0b5239c93291ee3d7e76216c945`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260924T101034Z-fleet04-B11-ruled-triple-l3-r3/REPORT.md`.
 
@@ -377,8 +377,8 @@ Recorded constants:
 Sources actually used at theorem scope:
 
 - fresh owner control: `yspennstate/math-research-brain`, revision `2026-09-22.15`;
-- fleet01/B05 mixed L3 / shifted-square theorem: `math-open-problems@4fea394eafc8bce4f335cce2a6150ed50f95ed1a`;
-- designated fleet04/B11 ruled-triple theorem: `math-open-problems@da4db4dae881f0b5239c93291ee3d7e76216c945`;
+- fleet01/B05 mixed L3 / shifted-square theorem: `private-source@4fea394eafc8bce4f335cce2a6150ed50f95ed1a`;
+- designated fleet04/B11 ruled-triple theorem: `private-source@da4db4dae881f0b5239c93291ee3d7e76216c945`;
 - fleet03/B06 dependent L3 square smoothing: theorem recorded in its r52 report, source chain pinned there;
 - all live corrections in `CORRECTION_INBOX.json` were refreshed before publication.
 

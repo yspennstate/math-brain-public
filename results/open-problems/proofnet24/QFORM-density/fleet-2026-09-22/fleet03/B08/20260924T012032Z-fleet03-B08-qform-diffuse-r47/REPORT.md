@@ -16,7 +16,7 @@ The unrestricted conjecture remains OPEN. This report proves a new end-to-end es
 
 The analytic source actually used is the proved Theorem H (hub coordinates) in
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 For two ORIGINAL hub coordinates and a diagonal light block, if the two-row physical hub-to-light arm `C` has full row rank and every normalized physical row leverage is at most `1/2`, Theorem H gives
@@ -405,7 +405,7 @@ This family is useful because the actual light diagonal at the selected physical
 
 The designated partner result was reread at
 
-`yspennstate/math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76`,
+`private-source-repository@a5e66e2944c89857a41d5e18c283d53a4307be76`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T212412Z-fleet04-B08-QFORM-r2/REPORT.md`,
 Theorem `QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1`.
 

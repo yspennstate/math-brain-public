@@ -3,7 +3,7 @@ Abdi–Ghorbani (2024), Conjecture 5.4 — **six-run CLOSABLE handoff remains re
 
 # P16 — rotation admission screen after I0011 retirement
 
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Continuity and retired state
 

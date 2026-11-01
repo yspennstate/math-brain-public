@@ -12,7 +12,7 @@ The full target remains: for every finite `n`, independent real `X_i` with proba
 
 This report consumes the live corrections `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBER-SUP-DIMENSION-LOSS`, `QFORM-NO-INDEPENDENCE-AFTER-ROTATION`, `QFORM-CROSSMINOR-ALONE-FALSE`, `QFORM-UV-CONDITIONAL-CAP-FALSE`, and `QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE`. The argument below uses none of the refuted statements. It does not condition on a rotated coordinate and does not replace a curved fiber by an unrestricted fiber supremum.
 
-The designated partner result actually used is fleet02/B06, run `b06-20260922T113045Z-d47192d10a82`, canonical report `yspennstate/math-open-problems@6902eb62f21a7c833ca27dcca69f34d50e711a7d:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`. Its theorem `QFORM-SAMESIGN-DETERMINANT-MASS-v1` gives, for an orthonormal two-frame `R=[r s]`, the Plücker weights
+The designated partner result actually used is fleet02/B06, run `b06-20260922T113045Z-d47192d10a82`, canonical report `private-source-repository@6902eb62f21a7c833ca27dcca69f34d50e711a7d:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`. Its theorem `QFORM-SAMESIGN-DETERMINANT-MASS-v1` gives, for an orthonormal two-frame `R=[r s]`, the Plücker weights
 
 `w_ij=(r_i s_j-r_j s_i)^2`,   `sum_{i<j} w_ij=1`.
 

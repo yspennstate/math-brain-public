@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R20 — terminal wait: the only new CLOSABLE claims after the BMO handoff are already owned
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Worker: R20.
 Lane: **CLOSABLE OUTSIDE**.
 

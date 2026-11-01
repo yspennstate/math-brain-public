@@ -15,7 +15,7 @@ Fresh owner control at publication remains revision `2026-09-22.15`, programme r
 
 Immediate predecessor:
 
-`yspennstate/math-open-problems@1277453a076d5c7b711f6e3ca6d6f07aec5ebf0d`,
+`private-source-repository@1277453a076d5c7b711f6e3ca6d6f07aec5ebf0d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T034045Z-fleet01-B06-QFORM-r46/REPORT.md`.
 
@@ -43,7 +43,7 @@ The latter is the branch attacked here.
 
 The designated completed partner input is fleet02/B06,
 
-`yspennstate/math-open-problems@d84423f410ceb77238e5d6446aba6f428d7556d6`.
+`private-source-repository@d84423f410ceb77238e5d6446aba6f428d7556d6`.
 
 Its theorem `QFORM-ANCHORED-3MINOR-SQUARE-E2-v1` says: for a literal physical anchor `h` with scalar pivot `a=A_hh!=0` and disjoint literal banks `I,J` avoiding `h`, define
 

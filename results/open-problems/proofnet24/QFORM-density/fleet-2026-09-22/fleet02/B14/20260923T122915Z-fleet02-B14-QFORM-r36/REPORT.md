@@ -16,12 +16,12 @@ The target is unchanged: for every finite `n`, independent real coordinates with
 Two completed designated-partner results are used at equations below:
 
 1. fleet03/B14 r34, `QFORM-SINGULAR-FUNCTIONAL-EXTREME-LOCALIZATION-v1`, canonical source
-   `yspennstate/math-open-problems@5b60b66568f5be5eb2375597ae1acb866c68f5f8`, which gives exact extreme-product localization for **every nonnegative Borel functional**, including unbounded singular kernels;
+   `private-source-repository@5b60b66568f5be5eb2375597ae1acb866c68f5f8`, which gives exact extreme-product localization for **every nonnegative Borel functional**, including unbounded singular kernels;
 2. newest compatible fleet03/B14 r35, `QFORM-SQRT-CRITICAL-BUDGET-MIXTURE-v1`, canonical source
-   `yspennstate/math-open-problems@29096949260b7ec2e9659c1379bd0a0882a37387`, which turns conditional critical Fourier constants `K(theta)` into the optimized physical-pair bound through `E sqrt(K)`.
+   `private-source-repository@29096949260b7ec2e9659c1379bd0a0882a37387`, which turns conditional critical Fourier constants `K(theta)` into the optimized physical-pair bound through `E sqrt(K)`.
 
 The required Claude source is used from
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. In particular, `COUNTEREXAMPLE_SEARCH.md` proves Theorem A: when **all** eigenvalues of an `n`-dimensional quadratic part have modulus at least `sigma`, with arbitrary linear terms,
 
 `||p_Q||_infinity <= (n/sigma) (d/(d-1)) kappa_d^(1/d)`, `d=n-1`.

@@ -14,7 +14,7 @@ attacking: projection-product interaction in the true near-coloop two-bank endpo
 
 The mathematical inputs pinned for this report are:
 
-1. **Newest completed designated partner fleet02/B16 r36:** `yspennstate/math-open-problems@be8062b160868bcc71aff45a77c56ff2d0501a9a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T203140Z-fleet02-B16-QFORM-r36/REPORT.md`, blob `57cf025ef533e6cfad52761553dfc9013d486ec0`. Its theorem `QFORM-FRESH-HUB-DIVISIBLE-TWIST-ABSORPTION-v1` says that for an untouched independent cap-one physical hub `H`, arbitrary light-source functions `L,V,T`, `||p_(L,V)||_infinity<=M`, and
+1. **Newest completed designated partner fleet02/B16 r36:** `private-source-repository@be8062b160868bcc71aff45a77c56ff2d0501a9a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T203140Z-fleet02-B16-QFORM-r36/REPORT.md`, blob `57cf025ef533e6cfad52761553dfc9013d486ec0`. Its theorem `QFORM-FRESH-HUB-DIVISIBLE-TWIST-ABSORPTION-v1` says that for an untouched independent cap-one physical hub `H`, arbitrary light-source functions `L,V,T`, `||p_(L,V)||_infinity<=M`, and
    
    `Q=2 gamma H L+2LT+alpha L^2+2delta LV+kappa V^2`, `gamma*kappa!=0`,
    
@@ -24,13 +24,13 @@ The mathematical inputs pinned for this report are:
    
    The dependence of `T` on the same leaf sources as `(L,V)` is allowed. The theorem uses the untouched physical source before the curved trace; it does not infer projected independence.
 
-2. **Current two-bank hard-chamber geometry:** fleet03/B16 r30, `yspennstate/math-open-problems@3b18a20df2659c5c26d6853e69ceae081a3abc7e`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T162348Z-fleet03-B16-QFORM-r30/REPORT.md`. In the surviving exact-rank-three near-coloop branch it supplies a hub row `r_0=sqrt(h)e`, `h>63/64`, and a partition of all leaves into disjoint original-coordinate banks `J,K` with
+2. **Current two-bank hard-chamber geometry:** fleet03/B16 r30, `private-source-repository@3b18a20df2659c5c26d6853e69ceae081a3abc7e`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T162348Z-fleet03-B16-QFORM-r30/REPORT.md`. In the surviving exact-rank-three near-coloop branch it supplies a hub row `r_0=sqrt(h)e`, `h>63/64`, and a partition of all leaves into disjoint original-coordinate banks `J,K` with
    
    `(1/4)I_2 <= G_J,G_K <=(3/4)I_2`, `G_J+G_K=I_2`.
 
-3. **Current punctured-hub reduction:** fleet03/B16 `yspennstate/math-open-problems@439aec7deecbf989b3885d5038861959a2e18ddb`, which pays the exact zero pivot and the outer nonzero collar, and proves that conditional scalar cap plus a planar marginal cap do **not** control an arbitrary nonzero-pivot quadratic.
+3. **Current punctured-hub reduction:** fleet03/B16 `private-source-repository@439aec7deecbf989b3885d5038861959a2e18ddb`, which pays the exact zero pivot and the outer nonzero collar, and proves that conditional scalar cap plus a planar marginal cap do **not** control an arbitrary nonzero-pivot quadratic.
 
-4. **Fresh arbitrary-joint warning:** `yspennstate/math-open-problems@696dde471191684734577b129bd9f4cc6074dadc`, `proofnet24/QFORM-density/interactive/20260923T204332Z-arbitrary-joint-central-obstruction/REPORT.md`. Even very strong coordinate marginal caps for an arbitrary dependent joint law do not replace original-product provenance in the nonlinear trace.
+4. **Fresh arbitrary-joint warning:** `private-source-repository@696dde471191684734577b129bd9f4cc6074dadc`, `proofnet24/QFORM-density/interactive/20260923T204332Z-arbitrary-joint-central-obstruction/REPORT.md`. Even very strong coordinate marginal caps for an arbitrary dependent joint law do not replace original-product provenance in the nonlinear trace.
 
 The live corrections are preserved throughout: no independence after spectral rotation, no arbitrary-joint indefinite coarea step, no worst-fiber/conditional-height supremum, no law-uniform pointwise stationary-phase decay, and no deletion of a small coefficient multiplying an unbounded source.
 
@@ -326,7 +326,7 @@ whose eigenvalues are exactly
 
 and whose determinant is `-(1+a)`.
 
-The previously proved fleet01/B16 theorem `QFORM-DISJOINT-BANK-TRANSVERSE-TRIPLE-v1` (`math-open-problems@85f22101c29c831c4958eef1b2522c78e6966f84`) therefore gives
+The previously proved fleet01/B16 theorem `QFORM-DISJOINT-BANK-TRANSVERSE-TRIPLE-v1` (`private-source@85f22101c29c831c4958eef1b2522c78e6966f84`) therefore gives
 
 `||p_(Q_a)||_infinity
  <=C_3*2^(2/3)*(1+a)^(-1/3)

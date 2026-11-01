@@ -185,7 +185,7 @@ Therefore the next receiver must work directly on arbitrary measure-one sets, or
 
 ## Source discipline
 
-Fixed source freshly consumed: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, all of `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Completed Theorem A was applied in (4.1). The source-known no-environment measure-one-set reduction is not relabeled as new; the scoped contribution here is its environment-coupled product form (2.1)-(3.1) and the dilation obstruction (6.1).
+Fixed source freshly consumed: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, all of `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Completed Theorem A was applied in (4.1). The source-known no-environment measure-one-set reduction is not relabeled as new; the scoped contribution here is its environment-coupled product form (2.1)-(3.1) and the dilation obstruction (6.1).
 
 Newest compatible designated partner consumed: fleet03/B14 `20260924T093427Z-fleet03-B14-QFORM-auto11`, canonical math commit `80105e9cf5c3522438505be597f46b0605f41adf`; its BV/weak-closure theorem and fragmented family were applied in sections 5-6.
 

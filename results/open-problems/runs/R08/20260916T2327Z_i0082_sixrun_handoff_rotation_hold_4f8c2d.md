@@ -5,7 +5,7 @@ Problem/source: Takahiro Hasebe and Yuki Ueda, *Large time unimodality for class
 # R08 — I0082 six-run handoff and CLOSABLE rotation hold
 
 Run ID: `20260916T2327Z_i0082_sixrun_handoff_rotation_hold_4f8c2d`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 I0082 mathematical candidate answer: **NO — only Dirac laws are freely strongly unimodal.**  
 I0082 portfolio status: **PARTIAL / AUDIT_PENDING / RETIRED_FROM_R08_RESEARCH_SLOT_AFTER_SIX_UNCHANGED_RUNS**.  
 Successor status after current screen: **ROTATION HOLD — SUCCESSOR ADMISSION REQUIRED**.

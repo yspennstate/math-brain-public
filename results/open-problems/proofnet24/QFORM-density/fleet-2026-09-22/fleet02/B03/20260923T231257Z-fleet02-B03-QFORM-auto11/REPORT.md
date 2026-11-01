@@ -13,7 +13,7 @@ The unrestricted QFORM conjecture remains OPEN. The result below is deliberately
 
 The newest designated partner report is
 
-`yspennstate/math-open-problems@545738ea4ac5730dc20e6ed5f50315dfcf3322f1`
+`private-source-repository@545738ea4ac5730dc20e6ed5f50315dfcf3322f1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T215603Z-fleet03-B03-QFORM-r41/REPORT.md`.
 
@@ -131,7 +131,7 @@ This is exactly where the required pinned source gives a completed receiver.
 
 The required package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was read at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its `COUNTEREXAMPLE_SEARCH.md` Theorem A states, with arbitrary affine terms allowed, that a physical principal `3 x 3` block whose three eigenvalues have modulus at least `c` gives
 
@@ -241,8 +241,8 @@ Continuity is not claimed from the density-to-half-Riesz argument here. The full
 
 ## 10. Sources and scope
 
-- Required pinned mathematical package: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md` Theorem A, with `RESULTS.md` and `FOURIER_ROUTE_REPORT.md` also read.
-- Designated partner theorem actually used for the endpoint comparison: `yspennstate/math-open-problems@545738ea4ac5730dc20e6ed5f50315dfcf3322f1`, fleet03/B03 r41.
+- Required pinned mathematical package: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md` Theorem A, with `RESULTS.md` and `FOURIER_ROUTE_REPORT.md` also read.
+- Designated partner theorem actually used for the endpoint comparison: `private-source-repository@545738ea4ac5730dc20e6ed5f50315dfcf3322f1`, fleet03/B03 r41.
 - Current continuation also confirms that the unrestricted theorem is still OPEN and warns against independence after rotation and small-random-error interpretations of small matrices.
 
 All spectral diagonalizations above are deterministic matrix identities only. All probability estimates stay in genuine original independent coordinates.

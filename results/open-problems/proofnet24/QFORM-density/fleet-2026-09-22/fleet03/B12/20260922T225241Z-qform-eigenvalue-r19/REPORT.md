@@ -13,7 +13,7 @@ Full QFORM remains OPEN / NOT PROVED / NOT DISPROVED. The result proves essentia
 ## Source-valid dependencies actually used
 
 1. **Physical two-same-sign triple theorem**, proved in this B12 line at
-   `yspennstate/math-open-problems@b3c543b40dfaef13468466fa82625303a7719af8`
+   `private-source-repository@b3c543b40dfaef13468466fa82625303a7719af8`
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md`.
 
    If one ORIGINAL-coordinate `3 x 3` principal block has at least two eigenvalues `>=g>0`, or at least two eigenvalues `<=-g`, then after conditioning all outside ORIGINAL coordinates the quadratic-plus-affine three-variable polynomial has density cap
@@ -28,7 +28,7 @@ Full QFORM remains OPEN / NOT PROVED / NOT DISPROVED. The result proves essentia
    The third eigenvalue of the physical triple is arbitrary.
 
 2. **Assigned partner fleet04/B12 mixed-norm shear compiler**, complete supporting theorem at
-   `yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e`
+   `private-source-repository@9ce47e2a0f2c8434d901df13a218450c2189d80e`
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260922T192552Z-fleet04-B12-mixed-shear-r1/REPORT.md`.
 
    If `(U,Z)` has joint density `h(u,z)` and

@@ -5,7 +5,7 @@ Status: **LATEST PARTNER CONSUMED / MAIN REPORT CORRECTION UNCHANGED / FULL QFOR
 
 After the main report was committed, fleet03/B16 published r42:
 
-`yspennstate/math-open-problems@210b93b7a190c6784523e9bf281b0529614b3334`,
+`private-source-repository@210b93b7a190c6784523e9bf281b0529614b3334`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260924T055252Z-fleet03-B16-QFORM-r42/REPORT.md`.
 

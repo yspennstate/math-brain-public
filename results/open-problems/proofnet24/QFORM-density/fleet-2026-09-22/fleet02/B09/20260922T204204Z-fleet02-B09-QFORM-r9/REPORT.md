@@ -26,9 +26,9 @@ Fresh programme state and corrections were read from `yspennstate/math-research-
 
 The mathematical inputs used positively are:
 
-* the complete two-coordinate logarithmic envelope `QFORM-PHYSICAL-PAIR-LOG-ENVELOPE-v1`, full proof `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`;
-* fleet02/B09 `QFORM-ZERODIAG-TRIANGLE-LOGSMOOTH-v1`, specifically its scalar quadratic log-averaging Lemma 4.1, full proof `yspennstate/math-open-problems@1abb65eef22eb44be26d8b21dd5c7174fba4aa1:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T171216Z-fleet02-B09-QFORM-r5/REPORT.md`;
-* named partner fleet03/B09 `QFORM-THREE-BANK-RANKONE-TRIANGLE-v1`, canonical mathematics `yspennstate/math-open-problems@5e92c0aa0681b3d24630451076ab511f92dc718c`.
+* the complete two-coordinate logarithmic envelope `QFORM-PHYSICAL-PAIR-LOG-ENVELOPE-v1`, full proof `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`;
+* fleet02/B09 `QFORM-ZERODIAG-TRIANGLE-LOGSMOOTH-v1`, specifically its scalar quadratic log-averaging Lemma 4.1, full proof `private-source-repository@1abb65eef22eb44be26d8b21dd5c7174fba4aa1:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T171216Z-fleet02-B09-QFORM-r5/REPORT.md`;
+* named partner fleet03/B09 `QFORM-THREE-BANK-RANKONE-TRIANGLE-v1`, canonical mathematics `private-source-repository@5e92c0aa0681b3d24630451076ab511f92dc718c`.
 
 Consumed corrections include failure of law-uniform pointwise quadratic Fourier decay, loss from naive spectral-fiber suprema, loss of independence after rotation, failure of a universal single rank-two Schur extraction, failure of the local rank-three-cross-cut dichotomy, failure of conditional-cap-as-independence substitutions, and B09's same-square heavy-row counterexample. None is used as a positive premise.
 

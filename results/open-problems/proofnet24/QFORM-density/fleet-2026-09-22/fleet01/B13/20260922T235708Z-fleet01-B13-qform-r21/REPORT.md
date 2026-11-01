@@ -21,7 +21,7 @@ The designated partner `fleet02/B13` is used in two places.
 
 1. **Exact bang-bang product reduction**
 
-   `yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`
+   `private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`.
 
@@ -29,7 +29,7 @@ The designated partner `fleet02/B13` is used in two places.
 
 2. **Combined-bank paving theorem**
 
-   `yspennstate/math-open-problems@d61a6ae3f85a8910112b551d56d6636c71b0ea45`
+   `private-source-repository@d61a6ae3f85a8910112b551d56d6636c71b0ea45`
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T225728Z-fleet02-B13-extremal-r19/REPORT.md`.
 
@@ -46,7 +46,7 @@ The designated partner `fleet02/B13` is used in two places.
 
 The exact two-bank geometry itself comes from fleet01/B13 r17,
 
-`yspennstate/math-open-problems@01c524aa389abf1b9b58c852bfa11fc747ec5b59`,
+`private-source-repository@01c524aa389abf1b9b58c852bfa11fc747ec5b59`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260922T190849Z-fleet01-B13-qform-r17/REPORT.md`.
 
@@ -81,7 +81,7 @@ The high-transverse-leverage branch is already paid, so throughout the surviving
 
 The exterior-mass payment used below is fleet01/B13 r13,
 
-`yspennstate/math-open-problems@0b5cf04790e5927df0efed8811a2a1295006e141`,
+`private-source-repository@0b5cf04790e5927df0efed8811a2a1295006e141`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260922T135910Z-fleet01-B13-qform-r13/REPORT.md`.
 

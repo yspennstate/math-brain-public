@@ -15,23 +15,23 @@ The full quadratic-form bounded-density conjecture remains OPEN. This report pro
 
 The designated partner result actually consumed is fleet02/B13 run `20260922T182158Z-fleet02-B13-qform-4ebdd821`, canonical proof
 
-`yspennstate/math-open-problems@d511859edaa636cdc00fcd64155ab07506875c3d`,
+`private-source-repository@d511859edaa636cdc00fcd64155ab07506875c3d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T182158Z-fleet02-B13-qform-4ebdd821/REPORT.md`.
 
 It gives the exact-rank-three heavy/light trichotomy with the only surviving Gram regime `s_3<3/5<s_2`, and its earlier exact bang-bang theorem
 
-`yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`,
+`private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`
 
 identifies the slab supremum over all cap-one product densities with the supremum over arbitrary measure-one product indicators, with zero loss.
 
 The immediate predecessor is fleet01/B13 run `20260922T190849Z-fleet01-B13-qform-r17`,
-`yspennstate/math-open-problems@01c524aa389abf1b9b58c852bfa11fc747ec5b59`, which proves in the surviving mixed regime that one heavy original coordinate `i` can be chosen so that, with `u=r_i/||r_i||`, `c=||r_i||^2>3/10`, and transverse light rows `p_j=P_{u^perp}r_j`,
+`private-source-repository@01c524aa389abf1b9b58c852bfa11fc747ec5b59`, which proves in the surviving mixed regime that one heavy original coordinate `i` can be chosen so that, with `u=r_i/||r_i||`, `c=||r_i||^2>3/10`, and transverse light rows `p_j=P_{u^perp}r_j`,
 
 `G=sum_{j in L} p_j p_j^T` satisfies `det G>=1/25` and `(1/25)I<=G<=I`.
 
 The projection-density input used below is `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, fleet02/B06,
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. For a two-dimensional linear projection with coefficient Gram `G`, it gives the joint density cap `e/sqrt(det G)` without creating independence after a rotation.
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. For a two-dimensional linear projection with coefficient Gram `G`, it gives the joint density cap `e/sqrt(det G)` without creating independence after a rotation.
 
 ## 2. New analytic lemma: one independent scalar plus a capped two-dimensional source
 

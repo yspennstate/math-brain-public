@@ -13,7 +13,7 @@ attacking: optimize the fresh third-volume projection/tail certificate, then tes
 
 The source specifically assigned for independent fleet03/B04 review is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
 
 and its
 
@@ -25,7 +25,7 @@ The latter applies fleet01/B20's completed singular-value identity
 
 source
 
-`yspennstate/math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T234545Z-fleet01-B20-QFORM-auto11/REPORT.md`.
+`private-source-repository@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T234545Z-fleet01-B20-QFORM-auto11/REPORT.md`.
 
 A second completed same-role product-Fourier result is used at an actual inequality in Section 6: fleet01/B04's corrected global compatibility-Hellinger theorem
 
@@ -33,7 +33,7 @@ A second completed same-role product-Fourier result is used at an actual inequal
 
 source
 
-`yspennstate/math-open-problems@77053ce0593dd60c613220d313569cb3f48244bd:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T121357Z-fleet01-B04-QFORM-auto11/REPORT.md`.
+`private-source-repository@77053ce0593dd60c613220d313569cb3f48244bd:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T121357Z-fleet01-B04-QFORM-auto11/REPORT.md`.
 
 I also consumed its correction `QFORM-SIXROW-HELLINGER-UNIVERSAL-EXTRACTION-FALSE-v1`: a single six-row Hellinger packet is not forced at universal scale. Nothing below assumes such an extraction.
 

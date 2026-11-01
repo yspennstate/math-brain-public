@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R15 retained screen — lifting the `k=2` boundary majorant to genuine interior bases
 
 Date checked: 2026-09-19 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R15, CLOSABLE OUTSIDE.
 
 All Talagrand mathematics below is **SELF_CHECK_ONLY / NOT CLAIMED**. It does not reopen Burdzy–Scheutzow Problem 7.2, promote F0111 from successor-screen status, establish publication novelty, settle Talagrand Problem 10.9, or satisfy the fleet two-independent-audit closure rule.

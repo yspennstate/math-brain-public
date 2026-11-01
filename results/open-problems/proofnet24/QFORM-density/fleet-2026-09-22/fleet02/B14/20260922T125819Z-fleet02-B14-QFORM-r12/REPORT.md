@@ -17,7 +17,7 @@ for every bounded interval `I`; or construct a valid target counterexample.
 
 The previous fleet02/B14 run proved an exact same-constant reduction to product indicators of bounded finite unions of intervals of measure one. The assigned partner fleet03/B14 subsequently proved exact equality between pure quadratic and range-compatible affine-quadratic small-ball constants for each fixed symmetric `A`, and identified the component-box weighted-congruence debt. Source used here:
 
-`yspennstate/math-open-problems@e6a82375d007069e7e515cb682eaf430d8baa914:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T123805Z-fleet03-B14-QFORM-r11/REPORT.md`.
+`private-source-repository@e6a82375d007069e7e515cb682eaf430d8baa914:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T123805Z-fleet03-B14-QFORM-r11/REPORT.md`.
 
 The first unpaid localization implication is therefore not tails, rough densities, or absolute support location. It is **relative multiscale separation of fragments after one global translation gauge**, together with the weighted-congruence interaction that remains when the local scaled matrices lose the three-large-eigenvalue hypothesis.
 
@@ -243,7 +243,7 @@ This is distinct from re-running compactification or the earlier bang-bang reduc
 
 - Fresh control programme: `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`.
 - Partner actually applied: fleet03/B14, canonical report commit `e6a82375d007069e7e515cb682eaf430d8baa914`, path stated in Section 1.
-- Previous fleet02/B14 localization report used as inherited scope: `yspennstate/math-open-problems@ea75afa89f7764caf119e6b835f9ba56b8d7874b:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T120110Z-b14-qform-localization-r13/REPORT.md`.
+- Previous fleet02/B14 localization report used as inherited scope: `private-source-repository@ea75afa89f7764caf119e6b835f9ba56b8d7874b:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T120110Z-b14-qform-localization-r13/REPORT.md`.
 - Live corrections consumed through the final pre-write control refresh include the pointwise-decay, fiber-supremum, no-independence-after-rotation, cross-minor, universal-pi/diffuse-branch, two-sheet-X-ray, conditional-UV-cap, and single-Schur-rank2-extraction corrections then present.
 
 Changed-file review: this report contains only mathematical derivations, programme/source pins and nonsecret run metadata; no credentials, native scheduler identifiers, machine paths, email content, unrelated private data, benchmark material, public release, paid call, remote workflow or permission change.

@@ -14,7 +14,7 @@ The unrestricted QFORM theorem is not claimed. The global continuous-density con
 
 ### 1.1 Two-dimensional product-projection density
 
-The completed product-projection input used in fleet01/B16 (`QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1`, canonical source `yspennstate/math-open-problems@80f95e245b7f3418e8da36173ac4eb9d81fb58a7:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T003846Z/REPORT.md`) includes the sharp dimension-two projection fact:
+The completed product-projection input used in fleet01/B16 (`QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1`, canonical source `private-source-repository@80f95e245b7f3418e8da36173ac4eb9d81fb58a7:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T003846Z/REPORT.md`) includes the sharp dimension-two projection fact:
 
 if `Y=(Y_j)` has independent marginal densities bounded by one and `M` is a real `2 x m` matrix of row rank two, then
 
@@ -24,7 +24,7 @@ Indeed normalize `M` by `G=M M^T`: `R=M^T G^(-1/2)` has orthonormal columns; the
 
 ### 1.2 Existing B19 indefinite-pair transducer
 
-The preceding fleet03/B19 r23 bundle, canonical `yspennstate/math-open-problems@80403bc0adff2c5e8278848674c81448e9782e44`, records the completed implication:
+The preceding fleet03/B19 r23 bundle, canonical `private-source-repository@80403bc0adff2c5e8278848674c81448e9782e44`, records the completed implication:
 
 if an invertible **indefinite original-coordinate physical pair** has `D=|det B|`, `kappa=sigma_min(B)`, and its exact Schur residual `R` obeys
 
@@ -222,7 +222,7 @@ This is a strictly narrower structural question than r23's former generic `sqrt 
 
 The completed designated-partner theorem `QFORM-NULL-COLOOP-ADAPTIVE-HY-STABILITY-v1`, canonical source
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`,
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`,
 
 proves in its residual-diffuse exact-null-coloop scope
 

@@ -18,7 +18,7 @@ Let H be an original-coordinate pair and define
 
 J_2(H)=sum_{i ne j, i,j notin H} det A[H union {i},H union {j}]^2.
 
-The completed fleet01/B03 r41 theorem (math-open-problems commit 7dc6d6841e318a88174fb41ddaa1c88e223aacf4, with checks at 1629c2f5ee835709c7dcbef2a0ebe44e36486e3f) proves for every H with J_2(H)>0,
+The completed fleet01/B03 r41 theorem (private-source commit 7dc6d6841e318a88174fb41ddaa1c88e223aacf4, with checks at 1629c2f5ee835709c7dcbef2a0ebe44e36486e3f) proves for every H with J_2(H)>0,
 
 ||p_{X^T A X}||_{infinity,ess}
  <= C_2 J_2(H)^(-1/6),                                      (2.1)
@@ -223,7 +223,7 @@ Continuity is not claimed.
 
 ## 9. Sources
 
-- Claude decoupling/Brascamp-Lieb package rooted at math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837, with the current master blobs RESULTS.md 62e20ee976ddeb3f42d3ee5befd6ed49edc917a5, FOURIER_ROUTE_REPORT.md 9da148eed6cd43b1046a6f91d0f9329e12921cb4, and COUNTEREXAMPLE_SEARCH.md ee721b237e206f31298b1871979faaab37a1bac2.
+- Claude decoupling/Brascamp-Lieb package rooted at private-source@e5f71d79eff325201dd0274053d20268ce65b837, with the current master blobs RESULTS.md 62e20ee976ddeb3f42d3ee5befd6ed49edc917a5, FOURIER_ROUTE_REPORT.md 9da148eed6cd43b1046a6f91d0f9329e12921cb4, and COUNTEREXAMPLE_SEARCH.md ee721b237e206f31298b1871979faaab37a1bac2.
 - fleet01/B03 r41 local overlap-two compiler, 7dc6d6841e318a88174fb41ddaa1c88e223aacf4; deterministic checks 1629c2f5ee835709c7dcbef2a0ebe44e36486e3f.
 - Previous fleet04/B03 dependence-safe Riesz budget, 05ff82a8d052b024ae584e60dffb7b198fcd7db4.
 - Previous fleet04/B03 fourth-volume cancellation branch, 8147f1247043e419eb6762911c4a34fa58494d0f.

@@ -16,7 +16,7 @@ The unrestricted owner target remains OPEN. Every stochastic conditioning below 
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems@1701e5a05a12b35a3c5100ff343d02c75d5c9a84`
+`private-source-repository@1701e5a05a12b35a3c5100ff343d02c75d5c9a84`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T094653Z-fleet03-B09-QFORM-r48/REPORT.md`.
 
@@ -24,7 +24,7 @@ That run proved a scalar-pivot plus exact grouped-rank-two crossing bound but le
 
 The main dependency is the complete supporting proof
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 
@@ -273,7 +273,7 @@ The deterministic checker tested r=2,4,8 and eps=10^-2,10^-8. It verified levera
 
 The designated partner result is
 
-`yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`
+`private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
 

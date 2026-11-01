@@ -16,11 +16,11 @@ This report does not claim the full theorem. It does not use the refuted law-uni
 
 Source pins:
 
-* logarithmic-pair proof: `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`;
-* named partner fleet03/B02 completed theorem: brain handoff `yspennstate/math-research-brain@58beb5929b82638976b9f35e5d9659bac2878af7`, canonical mathematics `yspennstate/math-open-problems@c080587ef3f1458c8d1fecff9083d5a8c0d0f6bb`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T142939Z-fleet03-B02-QFORM-r11b/REPORT.md`;
+* logarithmic-pair proof: `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`;
+* named partner fleet03/B02 completed theorem: brain handoff `yspennstate/math-research-brain@58beb5929b82638976b9f35e5d9659bac2878af7`, canonical mathematics `private-source-repository@c080587ef3f1458c8d1fecff9083d5a8c0d0f6bb`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T142939Z-fleet03-B02-QFORM-r11b/REPORT.md`;
 * one-dimensional normalized-sum density cap used only in the stress-family application: Rudelson--Vershynin, *Small ball probabilities for linear images of high dimensional distributions*, Theorem 1.2: a normalized linear combination of independent densities bounded by `K` has density bounded by `sqrt(2) K`.
 
-A fresh fleet02/B03 correction, `QFORM finite-coordinate TT* Hölder closure is nonuniform` (`yspennstate/math-open-problems@e43c2e6afdf2063d5ce3f517d37f066acbda7b12`), was also read. The proof here does not move absolute values through a decoupled `u`-integral and is not affected by that obstruction.
+A fresh fleet02/B03 correction, `QFORM finite-coordinate TT* Hölder closure is nonuniform` (`private-source-repository@e43c2e6afdf2063d5ce3f517d37f066acbda7b12`), was also read. The proof here does not move absolute values through a decoupled `u`-integral and is not affected by that obstruction.
 
 ## 2. Translation-uniform pair-to-residual theorem
 

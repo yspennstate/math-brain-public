@@ -24,7 +24,7 @@ I use the completed determinant-weighted disjoint-basis theorem
 
 canonical source
 
-`yspennstate/math-open-problems@32c257209b588141fb60af698f478f1d0ad20b8a`,
+`private-source-repository@32c257209b588141fb60af698f478f1d0ad20b8a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T123512Z-b07-qform-minors-11/REPORT.md`.
 
@@ -55,7 +55,7 @@ I also use
 
 canonical source
 
-`yspennstate/math-open-problems@5ce98ee83b2fef75136f10cdd0e89741f017d3e0`,
+`private-source-repository@5ce98ee83b2fef75136f10cdd0e89741f017d3e0`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/fleet03-B10-20260922T141643Z-r11/REPORT.md`.
 

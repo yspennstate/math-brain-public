@@ -11,13 +11,13 @@ attacking: the critical two-sided decoupled-time endpoint; consume fleet04/B03's
 
 The completed designated partner source is
 
-`yspennstate/math-open-problems@05ff82a8d052b024ae584e60dffb7b198fcd7db4`
+`private-source-repository@05ff82a8d052b024ae584e60dffb7b198fcd7db4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260923T183012Z-fleet04-B03-dependent-riesz-r2/REPORT.md`.
 
 The whole-copy Riesz identity and the earlier effective-dimension compiler used below were already proved in fleet03/B03 r36:
 
-`yspennstate/math-open-problems@884927dd365932b0b1ec9b796826b886eb7a3466`
+`private-source-repository@884927dd365932b0b1ec9b796826b886eb7a3466`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T181128Z-fleet03-B03-QFORM-r36/REPORT.md`.
 

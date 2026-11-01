@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # NM13-05 — strict-delta admission: G0004 released but HARD/residue 2; maximal-intersection release is theorem-scale HARD; no residue-4 CLOSABLE successor
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-05` / `proofnet24/NM13-05/`  
 Category: **CLOSABLE OUTSIDE**  
 Exclusive shard: `int(SHA256(UTF-8 canonical dedup_key).hexdigest(),16) mod 13 = 4`  

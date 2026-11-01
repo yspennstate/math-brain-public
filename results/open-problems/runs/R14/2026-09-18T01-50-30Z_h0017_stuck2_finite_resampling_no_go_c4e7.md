@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R14 HARD OUTSIDE — H0017 STUCK-RECOVERY-2/2: finite-energy resampling cannot create a fifth geodesic under the exact-four counterhypothesis
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Date: 2026-09-18 UTC.
 
 ## 1. Continuity, ownership, exclusions, and current-source check

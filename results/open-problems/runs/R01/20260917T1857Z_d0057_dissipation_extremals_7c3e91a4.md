@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6/maxim
 
 # R01 — D0057 recovery 2: an exact dissipation potential and a static extremal obstruction to moment-only anti-dip proofs
 
-Run date: 2026-09-17 UTC. Repository / branch: private `yspennstate/math-open-problems` / `master`. Delivery: private GitHub only.
+Run date: 2026-09-17 UTC. Repository / branch: private `private-source-repository` / `master`. Delivery: private GitHub only.
 
 ## 0. Continuity, ownership, exclusions, and current repository state
 

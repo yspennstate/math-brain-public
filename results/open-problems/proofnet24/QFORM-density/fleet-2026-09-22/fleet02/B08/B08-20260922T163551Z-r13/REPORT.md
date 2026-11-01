@@ -15,7 +15,7 @@ The target is the full arbitrary-product-law statement: independent real coordin
 
 This run starts from the preceding B08 theorem `QFORM-DIFFUSE-APPROX-BLOCK-STABILITY-v1`, source
 
-`yspennstate/math-open-problems@c1c6ffe8c742cbba7611b5a3f1d73cf71019f47b`
+`private-source-repository@c1c6ffe8c742cbba7611b5a3f1d73cf71019f47b`
 
 at
 
@@ -25,7 +25,7 @@ That theorem pays an arbitrary dense remainder perturbation provided, after cond
 
 The latest completed named-partner result actually applied below is fleet03/B08 `QFORM-FRACTIONAL-RIDGE-DIFFUSE-SPECTRAL-GAP-v1`, source
 
-`yspennstate/math-open-problems@cf67f10cc3b6687e6c1bcd1a6f8075adb1057924`
+`private-source-repository@cf67f10cc3b6687e6c1bcd1a6f8075adb1057924`
 
 at
 
@@ -33,7 +33,7 @@ at
 
 For local physical-coordinate payment I use the already completed fleet01/B05 conditional definite-principal-pair theorem, source
 
-`yspennstate/math-open-problems@8b471bfd0ff8df0ce71ed0fcf49bcbd94531b1b5`
+`private-source-repository@8b471bfd0ff8df0ce71ed0fcf49bcbd94531b1b5`
 
 at
 

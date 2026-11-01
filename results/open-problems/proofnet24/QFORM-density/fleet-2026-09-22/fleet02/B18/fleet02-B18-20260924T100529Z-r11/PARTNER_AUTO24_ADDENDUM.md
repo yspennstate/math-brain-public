@@ -3,7 +3,7 @@
 A newer completed designated-partner theorem arrived after the main report was written:
 
 fleet03/B18 `QFORM-COLLINEAR-TWOCOLUMN-TRANSVERSE-L4-v1`, scientific bundle
-`yspennstate/math-open-problems@08274cd0a9c7b71793e75bc71281f66694bfd441`,
+`private-source-repository@08274cd0a9c7b71793e75bc71281f66694bfd441`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260924T095710Z-fleet03-B18-QFORM-auto24/REPORT.md`.
 
 It supersedes auto22 as the latest compatible completed partner result for this invocation. The main report's auto22 application remains valid historical input, but the live partner is auto24 and is applied below.

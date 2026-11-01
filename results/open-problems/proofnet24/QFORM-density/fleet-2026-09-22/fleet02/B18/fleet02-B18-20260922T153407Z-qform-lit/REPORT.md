@@ -46,7 +46,7 @@ This transfer is source-valid because the aggregation occurs within disjoint ori
 
 A fresh completed fleet02/B15 theorem is source-pinned at
 
-`yspennstate/math-open-problems@4b2e6a36bcffeb767998c43d27cee1d8f5eaa07e`
+`private-source-repository@4b2e6a36bcffeb767998c43d27cee1d8f5eaa07e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T150242Z-fleet02-B15-qform-r3/REPORT.md`.
 
@@ -150,7 +150,7 @@ No rotated independence is used anywhere: LPP is applied separately inside each 
 
 The fresh completed designated partner report is fleet03/B18:
 
-`yspennstate/math-open-problems@fed3c111191d2d5cf938405d03acf91ceb7d62ad`
+`private-source-repository@fed3c111191d2d5cf938405d03acf91ceb7d62ad`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/B18-20260922T145749Z-r12/REPORT.md`.
 

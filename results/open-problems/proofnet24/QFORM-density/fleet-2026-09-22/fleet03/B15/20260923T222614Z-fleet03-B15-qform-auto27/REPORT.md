@@ -212,7 +212,7 @@ This does not contradict the known hard sign/Hadamard configurations: a symmetri
 
 The latest completed designated partner result is fleet04/B15,
 
-`yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`,
+`private-source-repository@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T221909Z-fleet04-B15-ruled-trace-c0-r8/REPORT.md`.
 
 Its Theorem 6.1 states: for every fixed target/product instance with `rank(A)>=3`, any separately proved interval domination
@@ -299,11 +299,11 @@ The known no-single-minor and sign/Hadamard counterexamples rule out claiming su
 Fresh owner controls were read from `yspennstate/math-research-brain` main; owner-control revision remains `2026-09-22.15` and the full conjecture remains OPEN. Relevant live corrections retained include: no post-rotation independence, no generic arbitrary-joint coarea height theorem, no naive fiber-sup dimension-free argument, no universal fixed fragment count, and no single physical-minor extraction theorem.
 
 Analytic source used for the conditional indefinite-pair envelope:
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 Designated partner actually applied:
-`yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`,
+`private-source-repository@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T221909Z-fleet04-B15-ruled-trace-c0-r8/REPORT.md`.
 
 No Gaussian, log-concavity, moment, compact-support, connected-support, post-rotation-independence or pointwise oscillatory-decay assumption is used. No Monte Carlo claim is used. The numerical constants in Section 7 are finite algebra/Weyl checks only.

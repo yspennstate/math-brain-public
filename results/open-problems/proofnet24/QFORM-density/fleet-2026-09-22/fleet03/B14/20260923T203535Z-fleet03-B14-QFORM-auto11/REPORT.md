@@ -66,7 +66,7 @@ Thus define the aggregate row cap certificate
 
 Every affine translate of `a^T W` has the same cap. The l2 alternative is crucial when a row is spread over many individually tiny coordinates.
 
-The explicit source used for (2.2) in this slot is the preceding collective-leakage report at `math-open-problems@20e9f45a5d8c8d79034aa09318d8922daae66599`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T103613Z-fleet03-B14-QFORM-r33/REPORT.md`, equation (1.3).
+The explicit source used for (2.2) in this slot is the preceding collective-leakage report at `private-source@20e9f45a5d8c8d79034aa09318d8922daae66599`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T103613Z-fleet03-B14-QFORM-r33/REPORT.md`, equation (1.3).
 
 ## 3. Main theorem — one entire receiver row, not one coefficient
 
@@ -224,7 +224,7 @@ By contrast, selecting one off-diagonal coefficient first gives scale `m^(-1/2)`
 
 The designated partner report is
 
-`yspennstate/math-open-problems@b5f173477a3889ad9432ea7d97767e969c83b279`,
+`private-source-repository@b5f173477a3889ad9432ea7d97767e969c83b279`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T141430Z-fleet04-B14-affine-slice-fresnel-r9/REPORT.md`.
 
 I use only its still-valid slice-Fourier equation (3.6), not its corrected interval-only rough-hub L-infinity inference. In the partner's heavy-null residual-diffuse normal form,

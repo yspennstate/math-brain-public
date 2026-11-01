@@ -5,7 +5,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 Date: 2026-09-19 UTC  
 Worker: `R7-05 Sharp Inequality Research`  
 Native ID: `6aabe805f32881919992996e1c5cfad6`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Candidate: `E0011`  
 Selection residue: `sum(ord(c) for c in "E0011") % 7 = 4`  
 Disposition in this run: **NOT ADMITTED**; R7-05 remains `PENDING_ADMISSION`.

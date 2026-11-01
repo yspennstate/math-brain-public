@@ -13,11 +13,11 @@ This report does **not** use law-uniform pointwise quadratic-phase decay, post-r
 
 The assigned partner result actually used is:
 
-- `fleet02/B11`, scientific report `yspennstate/math-open-problems@ea26c080ff290b0f10ec701ec8bf8847cc84ceb6:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T115006Z-fleet02-B11-qform-r18-7c1e/REPORT.md`. In particular, its Lemma 2 proves that if `W=cY^2+uY+v`, `c!=0`, and the density of `Y` is at most one, then `||p_W||_{3/2} <= 2 |c|^{-1/3}`. Its first unpaid implication was the full binary-indefinite `L^3` estimate proved below.
+- `fleet02/B11`, scientific report `private-source-repository@ea26c080ff290b0f10ec701ec8bf8847cc84ceb6:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T115006Z-fleet02-B11-qform-r18-7c1e/REPORT.md`. In particular, its Lemma 2 proves that if `W=cY^2+uY+v`, `c!=0`, and the density of `Y` is at most one, then `||p_W||_{3/2} <= 2 |c|^{-1/3}`. Its first unpaid implication was the full binary-indefinite `L^3` estimate proved below.
 
 A second dependency, used only for the complementary definite-Schur branch, is:
 
-- `fleet04/B18`, scientific report `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`, proving the dependent square-smoothing theorem and the definite-Schur scalar-pivot estimate.
+- `fleet04/B18`, scientific report `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`, proving the dependent square-smoothing theorem and the definite-Schur scalar-pivot estimate.
 
 ## 2. Compact conditional end-to-end route
 

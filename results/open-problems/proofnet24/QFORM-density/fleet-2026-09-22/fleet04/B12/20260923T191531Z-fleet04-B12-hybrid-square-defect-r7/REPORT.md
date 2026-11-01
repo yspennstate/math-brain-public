@@ -16,7 +16,7 @@ Fresh controls were read from math-research-brain main: AGENTS.md blob af9b5936c
 
 Mathematical inputs:
 
-1. fleet01/B12, commuting square-defect reserve and projected-crossing gauge stability, math-open-problems commit ee689fe26770341f205276b7b167b84f62f8f897.
+1. fleet01/B12, commuting square-defect reserve and projected-crossing gauge stability, private-source commit ee689fe26770341f205276b7b167b84f62f8f897.
 2. fleet04/B12, localized destructive square-Gram stability, commit c307f81b3196820aa711a5c47f243feeeeb74781.
 3. fleet02/B12, six-mode spectral-square carrier compiler, commit e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004.
 4. The designated Claude package beginning at commit e5f71d79eff325201dd0274053d20268ce65b837 and all later live corrections.

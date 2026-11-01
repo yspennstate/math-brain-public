@@ -34,6 +34,6 @@ For `|a|>0`, scalar completion plus the completed rank-two product-projection ha
 
 At the rational split `|a|=4/7`, these are respectively `43.8761...` and `43.7691...`, so both are `<44`. Thus the planned theorem is a uniform `<44` bound for this distributed line-plane bank class, independent of how mass is split inside the scalar bank; in particular it covers leverage `c in (1/2,1)` when the leakage of the heavy direction stays in the same line bank and is source-disjoint from the transverse plane.
 
-The newest Claude source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` is used at a real inequality: its two-dimensional product-marginal theorem gives `||p_Y||_infinity<=2`, and its ruled Theorem C separately sharpens the majority-sign side to `pi sqrt(2)`. No projected independence is inferred.
+The newest Claude source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` is used at a real inequality: its two-dimensional product-marginal theorem gives `||p_Y||_infinity<=2`, and its ruled Theorem C separately sharpens the majority-sign side to `pi sqrt(2)`. No projected independence is inferred.
 
 Remaining gap after this subcase: genuinely OVERLAPPING leakage, where the same original leaf coordinates carry both the heavy spectral direction and the transverse plane. There the scalar-bank / pair independence above is absent; small matrix leakage cannot simply be discarded for unbounded inputs.

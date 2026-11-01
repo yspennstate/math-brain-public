@@ -15,7 +15,7 @@ Fresh owner control on `yspennstate/math-research-brain/main` remains revision `
 
 I initially tried to prove a zero-self Schur-row random-slope theorem from scratch. A source search found that the analytic mechanism itself is already completed in fleet02/B14 r33:
 
-- repository/commit: `yspennstate/math-open-problems@9c77bae76f0d884fc60a2ffee86ad6269b79d690`;
+- repository/commit: `private-source-repository@9c77bae76f0d884fc60a2ffee86ad6269b79d690`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T095834Z-fleet02-B14-QFORM-r33/REPORT.md`;
 - result: `QFORM-RANDOM-SLOPE-MASS-HOMOGENEITY-v1`.
 
@@ -27,7 +27,7 @@ I also use the standard sharp one-dimensional product-projection estimate record
 
 The designated fleet02/B04 partner result actually applied below is r21:
 
-- repository/commit: `yspennstate/math-open-problems@bb6e1a7e2e46a3434649dfd1b6a4afe94d25e7fa`;
+- repository/commit: `private-source-repository@bb6e1a7e2e46a3434649dfd1b6a4afe94d25e7fa`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/9a73ca69-5439-45c6-9b34-581521e6e6a2/REPORT.md`.
 
 That report classifies the exact zero-disjoint-tetrad clique family and proves that every physical crossing has rank at most two; it also demonstrates the localized principal-triple receiver on the same family.

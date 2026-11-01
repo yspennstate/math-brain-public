@@ -392,11 +392,11 @@ No claim here closes the arbitrary rank-three orientation or the full higher-ran
 
 ## 6. Sources actually consumed
 
-1. **Designated OTHER-account partner, fleet02/B10 r12:** `yspennstate/math-open-problems@f767f80b1bd5750d5485e534b10e14dc5f46c0e2`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T151650Z-fleet02-B10-QFORM-r12/REPORT.md`. Applied to (1.1) and the quantitative zero-pivot transverse bound \(r\ge1\).
-2. **fleet02/B10 r13:** `yspennstate/math-open-problems@9a34dc516006d7eb417687b3d7d409f7dfaf33d9`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T154900Z-fleet02-B10-QFORM-r13/REPORT.md`. Its arbitrary-length isotropic cascade is used as the mandatory structural test that rules out bounded-depth peeling.
-3. **Rank-two affine half-Riesz synthesis:** `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
-4. **Pair-log replacement theorem:** `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`; complete supplied analytic proof, independent review pending.
-5. **Current correction bundle:** `yspennstate/math-open-problems@f305dcc8ae0f602f2b21ab32cf4d8ddcdcb56b92`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/CORRECTIONS.md`; in particular the arbitrary-joint coarea and positive conditional-moment gates are not used.
+1. **Designated OTHER-account partner, fleet02/B10 r12:** `private-source-repository@f767f80b1bd5750d5485e534b10e14dc5f46c0e2`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T151650Z-fleet02-B10-QFORM-r12/REPORT.md`. Applied to (1.1) and the quantitative zero-pivot transverse bound \(r\ge1\).
+2. **fleet02/B10 r13:** `private-source-repository@9a34dc516006d7eb417687b3d7d409f7dfaf33d9`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T154900Z-fleet02-B10-QFORM-r13/REPORT.md`. Its arbitrary-length isotropic cascade is used as the mandatory structural test that rules out bounded-depth peeling.
+3. **Rank-two affine half-Riesz synthesis:** `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+4. **Pair-log replacement theorem:** `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`; complete supplied analytic proof, independent review pending.
+5. **Current correction bundle:** `private-source-repository@f305dcc8ae0f602f2b21ab32cf4d8ddcdcb56b92`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/CORRECTIONS.md`; in particular the arbitrary-joint coarea and positive conditional-moment gates are not used.
 
 ## 7. Status
 

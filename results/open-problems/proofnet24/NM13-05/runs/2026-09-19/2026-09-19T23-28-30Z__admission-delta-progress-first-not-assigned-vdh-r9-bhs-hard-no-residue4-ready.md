@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # NM13-05 — admission delta: progress-first registries do not assign this NM13 slot; released VDH/BHS targets remain HARD; no residue-4 CLOSABLE admission
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-05` / `proofnet24/NM13-05/`  
 Category under the currently installed NM13-05 task prompt: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed coupling, dependence, transport, mixability, queueing, or another CLOSABLE OUTSIDE source with an explicit extremizer, finite obstruction, sharp number, finite certificate, or short theorem as the source-level deliverable  

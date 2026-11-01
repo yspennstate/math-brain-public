@@ -17,7 +17,7 @@ A completed marginal-free aggregate-E3 compiler already exists (fleet03/B02 r35)
 
 Pinned source required by the owner:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -27,19 +27,19 @@ with `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` all
 
 The physical grouped-crossing theorem used below is the checked checkpoint
 
-`yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`
+`private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 The exact-cross-rank Plancherel theorem is fleet03/B04 r32,
 
-`yspennstate/math-open-problems@ae6229183a1be7e7a31df596e0710d4702b84649`
+`private-source-repository@ae6229183a1be7e7a31df596e0710d4702b84649`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T105123Z-fleet03-B04-qform-auto11-r32/REPORT.md`.
 
 The newest completed designated-partner result available during this run is fleet03/B04 r48,
 
-`yspennstate/math-open-problems@085560dcfb3b90238f3e84dd2de7d0e09bfa7525`,
+`private-source-repository@085560dcfb3b90238f3e84dd2de7d0e09bfa7525`,
 
 which proves `QFORM-PAIR-ANCHORED-E4-PROMOTION-v1`:
 
@@ -47,7 +47,7 @@ which proves `QFORM-PAIR-ANCHORED-E4-PROMOTION-v1`:
 
 The direct ridge comparison uses the completed ridge-window theorem at
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`.
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`.
 
 ## 2. Pair-anchored E3 is already a complete physical receiver
 

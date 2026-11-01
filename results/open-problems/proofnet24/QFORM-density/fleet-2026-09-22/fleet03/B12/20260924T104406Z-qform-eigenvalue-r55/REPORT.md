@@ -19,7 +19,7 @@ The live correction inbox was reread immediately before publication. In particul
 Three completed analytic/deterministic inputs are used at their exact scopes.
 
 1. **Five-square-mode physical compiler**, fleet03/B12 r47:  
-   `yspennstate/math-open-problems@7fa8e2a00f932cb7ed6e68da9dbd07725c24d0f1`,  
+   `private-source-repository@7fa8e2a00f932cb7ed6e68da9dbd07725c24d0f1`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T031535Z-qform-eigenvalue-r47/REPORT.md`.  
    If a literal ORIGINAL-coordinate set `H`, `m=|H|>=5`, satisfies
    `lambda_5((A^2)[H,H])>=g^2>0`, then the full final quadratic form has a continuous `C_0` density and
@@ -27,7 +27,7 @@ Three completed analytic/deterministic inputs are used at their exact scopes.
    where `K3=3*2^(4/3)*exp(1/3)=10.550168831164775...`.
 
 2. **One-scale ridge theorem**, interactive ridge-window proof:  
-   `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,  
+   `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,  
    `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.  
    For a literal ORIGINAL-coordinate cross block `B=A[I,J]`, `gamma>0`,
    `K=B B^T(gamma^2 I+B B^T)^(-1)`, `theta=tr K`, if `max_i K_ii<=q/2` and `theta>2q`, `1<=q<=2`, then the full form has a continuous `C_0` density with
@@ -36,7 +36,7 @@ Three completed analytic/deterministic inputs are used at their exact scopes.
    `delta I`, `delta=1/2-alpha-sqrt(2 alpha)`.
 
 3. **Square-order physical monotonicity**, fleet03/B12 r54:  
-   `yspennstate/math-open-problems@de50ec1784dcc262198255b7628fb87d02b8f2e2`,  
+   `private-source-repository@de50ec1784dcc262198255b7628fb87d02b8f2e2`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T101039Z-qform-eigenvalue-r54/REPORT.md`.  
    If symmetric `A,B` satisfy `A^2>=B^2`, then on every literal physical carrier `H`, `s_k(AP_H)>=s_k(BP_H)`.
 
@@ -289,7 +289,7 @@ This is why the theorem closes the `r_1>=189` sector. A different compiler with 
 
 Use the completed fleet04/B12 r8 theorem:
 
-`yspennstate/math-open-problems@bcb9fd2641440a89d6e4967781d755618e163001`,  
+`private-source-repository@bcb9fd2641440a89d6e4967781d755618e163001`,  
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T002154Z-fleet04-B12-multihub-shear-r8/REPORT.md`,  
 `QFORM-MULTIHUB-ALIGNED-SPECTRAL-PACKET-STABILITY-v1`.
 

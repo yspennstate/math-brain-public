@@ -11,11 +11,11 @@ The exact owner target is unchanged: independent original-coordinate real variab
 
 ## 1. Sources and live corrections actually used
 
-Required Claude Fourier package: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
+Required Claude Fourier package: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
-Reviewed q-dependent sharp Hausdorff--Young theorem: `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
+Reviewed q-dependent sharp Hausdorff--Young theorem: `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
-Newest projected-Fisher source requested for B02 review: `yspennstate/math-open-problems@4a65677d185d35154dc3dfae320c5df9f939b8a2`, `proofnet24/QFORM-density/interactive/20260923T184054Z-fisher-continuation/FISHER_INFORMATION.md`.
+Newest projected-Fisher source requested for B02 review: `private-source-repository@4a65677d185d35154dc3dfae320c5df9f939b8a2`, `proofnet24/QFORM-density/interactive/20260923T184054Z-fisher-continuation/FISHER_INFORMATION.md`.
 
 Latest completed designated partner `fleet03/B02` results used here:
 - r36 `QFORM-3x2-KERNELCURVATURE-L1-v1`, math commit `c41a5ae669366b253862aa15277c401b932954ad`;
@@ -280,4 +280,4 @@ The new disjoint-compound branch proves a universal L1 estimate on one full spec
 
 ## 7. Write/readback and integrity note
 
-Changed-file allowlist for this run is restricted to this B02 run directory in `math-open-problems`, this run's B02 handoff/memory files in `math-research-brain`, and the matching B02 finish record. No unrelated repository files, permissions, task definitions, notifications, or scheduler state are changed. No dedicated privacy scanner is exposed in this runtime; a limited manual content review found only mathematical/source metadata and no unrelated private data.
+Changed-file allowlist for this run is restricted to this B02 run directory in `private-source`, this run's B02 handoff/memory files in `math-research-brain`, and the matching B02 finish record. No unrelated repository files, permissions, task definitions, notifications, or scheduler state are changed. No dedicated privacy scanner is exposed in this runtime; a limited manual content review found only mathematical/source metadata and no unrelated private data.

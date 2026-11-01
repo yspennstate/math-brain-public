@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-B — zero-diagonal exceptional-frequency dual certificate and a dependence-aware threshold-stability lemma
 
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured pre-research master:** `b4f20a8e3102102a2f774d5fd638e599cfd1d22a`  
 **Outside target:** Afonso S. Bandeira et al., *Randomstrasse101: Open Problems of 2025*, arXiv:2603.29571, Conjecture 18; partial-result paper Afonso S. Bandeira, Jaroslaw Blasiok, Daniil Dmitriev, Ulysse Faure, Anastasia Kireeva and Dmitriy Kunisky, *The Lovasz number of random circulant graphs*, arXiv:2502.16227 / SampTA 2025.  
 **Exact source endpoint:** for the dense random circulant model on odd `n`,

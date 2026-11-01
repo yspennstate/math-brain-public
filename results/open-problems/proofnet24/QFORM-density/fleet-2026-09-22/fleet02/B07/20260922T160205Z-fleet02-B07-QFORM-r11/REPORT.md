@@ -96,7 +96,7 @@ This is the missing cancellation-safe structural transfer. It does not yet pay t
 
 ## 4. Direct application of the designated partner fleet03/B07
 
-I consumed fleet03/B07 `QFORM-NESTED-HEAVY-DISJOINT-BANK-COLLAR-v1`, canonical source `yspennstate/math-open-problems@494c999fc67d230fff7e2079b1867216253b35bc`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T154026Z-fleet03-B07-qform-r11/REPORT.md`.
+I consumed fleet03/B07 `QFORM-NESTED-HEAVY-DISJOINT-BANK-COLLAR-v1`, canonical source `private-source-repository@494c999fc67d230fff7e2079b1867216253b35bc`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T154026Z-fleet03-B07-qform-r11/REPORT.md`.
 
 In its nested-heavy rank-three state, the two selected physical rows `i,j` have leverage parameters `c>1/2`, `h>1/2`. Therefore the fixed-pair Pluecker packet
 
@@ -188,8 +188,8 @@ Fresh brain control during this run remained owner revision `2026-09-22.5` with 
 
 Consumed mathematical sources:
 
-1. fleet02/B07 previous report `yspennstate/math-open-problems@55751ad6d9915a2600d42385d41388c900d29a26`, `.../20260922T143520Z-fleet02-B07-QFORM-r11/REPORT.md`;
-2. designated partner fleet03/B07 `QFORM-NESTED-HEAVY-DISJOINT-BANK-COLLAR-v1`, `yspennstate/math-open-problems@494c999fc67d230fff7e2079b1867216253b35bc`;
-3. live correction event fleet02/B06 `QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1`, canonical report `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
+1. fleet02/B07 previous report `private-source-repository@55751ad6d9915a2600d42385d41388c900d29a26`, `.../20260922T143520Z-fleet02-B07-QFORM-r11/REPORT.md`;
+2. designated partner fleet03/B07 `QFORM-NESTED-HEAVY-DISJOINT-BANK-COLLAR-v1`, `private-source-repository@494c999fc67d230fff7e2079b1867216253b35bc`;
+3. live correction event fleet02/B06 `QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1`, canonical report `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
 
 No scheduler mutation, notification/email action, public release, remote workflow, paid API/model, cross-account authentication, private unrelated data, or benchmark material is used.

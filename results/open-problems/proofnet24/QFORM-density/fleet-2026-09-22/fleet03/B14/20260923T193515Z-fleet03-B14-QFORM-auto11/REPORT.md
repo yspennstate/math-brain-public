@@ -193,7 +193,7 @@ This is the localization point: arbitrary remote fragments and unbounded support
 
 The designated partner's immutable report is
 
-`yspennstate/math-open-problems@b5f173477a3889ad9432ea7d97767e969c83b279`,
+`private-source-repository@b5f173477a3889ad9432ea7d97767e969c83b279`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T141430Z-fleet04-B14-affine-slice-fresnel-r9/REPORT.md`.
 
 I use only its still-valid slice-Fourier inequality (3.6), not its later interval-only rough-hub L-infinity inference. In the partner's heavy-null residual-diffuse normal form, the unnormalised frozen slices satisfy
@@ -347,6 +347,6 @@ Partner result actually applied at an equation:
 - fleet04/B14 r9, commit `b5f173477a3889ad9432ea7d97767e969c83b279`, equation (3.6), slice-Fourier estimate only.
 
 Previous B14 branch used for the target-valid control family:
-- `yspennstate/math-open-problems@78e87f9d9fe723b40aa38e71426458283366f8a5`.
+- `private-source-repository@78e87f9d9fe723b40aa38e71426458283366f8a5`.
 
 No Gaussian, log-concavity, compact support, connected support, moment, post-rotation independence, or Monte Carlo hypothesis is introduced.

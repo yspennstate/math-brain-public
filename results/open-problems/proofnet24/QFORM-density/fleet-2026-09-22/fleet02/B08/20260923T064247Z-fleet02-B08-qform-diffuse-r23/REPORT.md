@@ -25,13 +25,13 @@ This run strengthens that packet using the newest designated partner `fleet03/B0
 
 ## 2. Sources actually applied
 
-1. **Immediate B08 router.** `yspennstate/math-open-problems@2e8dce7760ed0b7dc1ab1be7b9d82ecc3c7b7df1`, fleet02/B08 r21, proves: if an ORIGINAL-coordinate cross block `B` has `Z_3=e_3(B^TB)>=zeta^6`, then either the full ambient form is continuously paid by `<18.218/zeta`, or there is a row/column anchor `(i,a)` whose incident third-volume `W_ia` satisfies
+1. **Immediate B08 router.** `private-source-repository@2e8dce7760ed0b7dc1ab1be7b9d82ecc3c7b7df1`, fleet02/B08 r21, proves: if an ORIGINAL-coordinate cross block `B` has `Z_3=e_3(B^TB)>=zeta^6`, then either the full ambient form is continuously paid by `<18.218/zeta`, or there is a row/column anchor `(i,a)` whose incident third-volume `W_ia` satisfies
 
    `W_ia > (38/125) Z_3`,
 
    with the remaining failure encoded in physical anchor-star / conditional anchored-volume structure.
 
-2. **Newest designated partner.** `yspennstate/math-open-problems@c58aa132fd02c6e739650559cf25a6754fad5435`, fleet03/B08 r29, theorem `QFORM-ANCHORED-VARIABLE-MIXTURE-v1`. For anchored third-volume `W`, anchor-row norm `R`, residual occupancy `h_0`, mixture parameter `theta`, and `q`, if
+2. **Newest designated partner.** `private-source-repository@c58aa132fd02c6e739650559cf25a6754fad5435`, fleet03/B08 r29, theorem `QFORM-ANCHORED-VARIABLE-MIXTURE-v1`. For anchored third-volume `W`, anchor-row norm `R`, residual occupancy `h_0`, mixture parameter `theta`, and `q`, if
 
    `max(theta,h_0)<=q/2`, `q>=1`, `2+theta>2q`,
 
@@ -43,7 +43,7 @@ This run strengthens that packet using the newest designated partner `fleet03/B0
 
    The same holds after transposing the physical cross block. The partner also proves that `2/3` is the exact occupancy barrier of this particular order-3/order-2 self-matched Jensen mechanism.
 
-3. **Physical packet compilers used through the partner proof tree.** Fleet03/B07 r25, `yspennstate/math-open-problems@5e2f0ed9c6f5b7621d6344af21b13a05234fdd47`, converts a fixed one-sided nested third-volume packet `P_1` into either
+3. **Physical packet compilers used through the partner proof tree.** Fleet03/B07 r25, `private-source-repository@5e2f0ed9c6f5b7621d6344af21b13a05234fdd47`, converts a fixed one-sided nested third-volume packet `P_1` into either
 
    `||c|| ||w_1|| ||w_2|| >= sqrt(P_1)/6`                      (2.2)
 
@@ -51,13 +51,13 @@ This run strengthens that packet using the newest designated partner `fleet03/B0
 
    `|e| ||s|| ||N||_F >= sqrt(P_1)/(6sqrt(2)).`                (2.3)
 
-   Fleet03/B07 r26, `yspennstate/math-open-problems@67a8e05e237bc914ad0563e361f6eb035b76e7fe`, sends `G=||N||_F` into the exhaustive R1/E2/VOL/BICORE quadrichotomy. In the VOL case it proves the full-ambient continuous bound
+   Fleet03/B07 r26, `private-source-repository@67a8e05e237bc914ad0563e361f6eb035b76e7fe`, sends `G=||N||_F` into the exhaustive R1/E2/VOL/BICORE quadrichotomy. In the VOL case it proves the full-ambient continuous bound
 
    `||p_Q||_infinity < (27e/2) G^(-1).`                         (2.4)
 
-4. **Required Claude/e5f source applied to an actual target family.** `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, Proposition H: three independent physical blocks can be combined by Holder in frequency; in particular `2(X_1X_2+X_3X_4+X_5X_6)` has density at most `3`. Section 7 below applies this to the rank-one-chain stress family after product-projection normalization, giving `<3*2^(1/3)<3.78`.
+4. **Required Claude/e5f source applied to an actual target family.** `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, Proposition H: three independent physical blocks can be combined by Holder in frequency; in particular `2(X_1X_2+X_3X_4+X_5X_6)` has density at most `3`. Section 7 below applies this to the rank-one-chain stress family after product-projection normalization, giving `<3*2^(1/3)<3.78`.
 
-5. **Product projection currency.** The compatible completed fleet04/B18 consequence at `yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061` gives, on an ORIGINAL-coordinate cap-one product bank,
+5. **Product projection currency.** The compatible completed fleet04/B18 consequence at `private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061` gives, on an ORIGINAL-coordinate cap-one product bank,
 
    `||p_(u^T X)||_infinity <= sqrt(2)/||u||_2`.                (2.5)
 
@@ -230,7 +230,7 @@ The former fixed double-nested packet is therefore no longer itself an unpaid te
 
 ## 5. Feed the router back into the actual spectral gate
 
-Use the B08 actual spectral gate at `yspennstate/math-open-problems@9fb59f9549a85af6173ade505fd53bc035c611ba`, with selected three-eigenvector leverage at most `1/48` and
+Use the B08 actual spectral gate at `private-source-repository@9fb59f9549a85af6173ade505fd53bc035c611ba`, with selected three-eigenvector leverage at most `1/48` and
 
 `beta=(3/16)sqrt(3/5)L=0.145236875482778...L`.                  (5.1)
 

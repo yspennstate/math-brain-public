@@ -23,7 +23,7 @@ The point of the present theorem is different: for a fixed quantitative carrier,
 ## 2. Source-pinned inputs
 
 The newest compatible partner result is fleet03/B12 r54,
-`yspennstate/math-open-problems@fb41bed86e2f0730da84c5559618029bc667db3d`, path
+`private-source-repository@fb41bed86e2f0730da84c5559618029bc667db3d`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T094857Z-qform-eigenvalue-r54/REPORT.md`.
 It proves the exact whitened carrier identity and two-sided resonance-window bounds. In the notation below it gives, among other statements,
 
@@ -34,7 +34,7 @@ s_j(M+N) >= g s_j(I+B),
 and, if `q` eigenvalues of the symmetric relative action lie in the `rho`-window around `-1`, an arbitrary-skew estimate retaining only about half the nonresonant modes, while the full-mode estimate charges the global skew norm.
 
 The required pinned source is
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 Its completed `D_5` theorem states that for an ACTUAL disjoint ORIGINAL-coordinate cross block `C=A[I,J]`,
 

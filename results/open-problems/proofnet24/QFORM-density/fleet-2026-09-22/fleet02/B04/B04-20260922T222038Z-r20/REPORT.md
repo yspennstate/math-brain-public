@@ -21,7 +21,7 @@ This run pays the analytic subbranch in which, after the product-preserving spli
 
 The named partner fleet03/B04 r19 is read from the immutable source
 
-`yspennstate/math-open-problems@c273d6cdcd751214348ab9a4872c2126ea85cdbb`
+`private-source-repository@c273d6cdcd751214348ab9a4872c2126ea85cdbb`
 
 at
 
@@ -38,7 +38,7 @@ Its completed results used here are:
 
 The bank projection input used in that lift is independently source-pinned to this slot's earlier report
 
-`yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`
+`private-source-repository@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`
 
 at
 

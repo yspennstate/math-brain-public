@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-01 admission delta screen 40 — P0434 is CLOSABLE but owned/residue 11; no lawful residue-0 admission
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker namespace: `proofnet24/NM13-01/`  
 Category: `CLOSABLE OUTSIDE`  
 Preferred lane: source-posed finite Markov-chain extremal questions, sharp mixing/hitting-time ratios, or exact counterexamples  

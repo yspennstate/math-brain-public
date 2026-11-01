@@ -1,6 +1,6 @@
 # r13 audit report
 
-Source: yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, PDF SHA256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
+Source: private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, PDF SHA256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
 
 Repeated dependency-inversion source audit found no fatal Theorem 1.1 defect. The repaired proof chain retains the exact rough-law, arbitrary-sign, arbitrary-affine scope and the 270 K^2/s bound. Literal issues remain C01-C05,C07,C08; C06 is grammar only. Continuity is not established in every branch.
 

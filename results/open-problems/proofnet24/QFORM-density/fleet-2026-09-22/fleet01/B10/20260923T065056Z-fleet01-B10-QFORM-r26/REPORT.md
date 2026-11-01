@@ -16,18 +16,18 @@ The unrestricted QFORM conjecture remains OPEN. This report proves a new nonzero
 Current required sources consumed in this run include:
 
 1. Claude's Fresnel--Brascamp--Lieb package
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
    Its twisted one-dimensional Fourier `L^p` bound and geometric BL argument are used below, but in a new **Schur-aligned leaf frame** where the physical hub is deliberately not charged an `L^p` exponent.
 
 2. The newest volume-stability package
-   `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+   `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
    `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
    and `PEER_TAIL_EXTENSION.md`.
    Its baseline `M=M0+E` theorem is applied in Section 7 to the designated partner's explicit target family.
 
 3. Latest completed designated-partner `fleet02/B10` result found at the source refresh:
-   `yspennstate/math-open-problems@328f5b408292534e743f31c7d2114b55b3aa0699`
+   `private-source-repository@328f5b408292534e743f31c7d2114b55b3aa0699`
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T055259Z-fleet02-B10-QFORM-auto11/REPORT.md`.
    It proves a constant hub Pluecker packet in the high-slope near-coloop survivor and supplies a target-valid local-certificate-collapse family with spectrum `{1,1,-1}`. The family is used quantitatively below.
 

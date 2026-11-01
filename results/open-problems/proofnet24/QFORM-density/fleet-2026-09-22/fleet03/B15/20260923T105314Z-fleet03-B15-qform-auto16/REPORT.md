@@ -16,7 +16,7 @@ The unrestricted universal QFORM density bound remains **OPEN**. This run proves
 
 The assigned completed partner result actually applied below is fleet04/B15:
 
-- `yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`;
+- `private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`.
 
 Its exact theorem is: for every probability law `mu` on `R`, if `gamma_eps` is the centered Gaussian density of scale `eps`, then
@@ -29,7 +29,7 @@ equals the essential `L^infinity` density height when a bounded density exists, 
 
 The newest owner-required mathematical source actually applied is the volume-stability theorem
 
-- `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`;
+- `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`;
 - `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 At its exact scope, if an original-coordinate cross block has `M=M0+E`, `s3(M0)>=a`, range leverage at most `1/2`, and `||E||op<=a/16`, then the full ambient quadratic-plus-affine output has a continuous density bounded by

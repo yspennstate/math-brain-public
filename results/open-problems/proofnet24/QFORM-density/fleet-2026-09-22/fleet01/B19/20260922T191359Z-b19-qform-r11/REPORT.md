@@ -24,7 +24,7 @@ The new point is that the existing exact cross-bank `L^2` argument, which was pr
 
 Canonical source:
 
-`yspennstate/math-open-problems@89a0197f2e9ed58383cdd516eedcc2ecd2145407`
+`private-source-repository@89a0197f2e9ed58383cdd516eedcc2ecd2145407`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T190733Z-fleet02-B19-qform-r16/REPORT.md`.
 
@@ -38,7 +38,7 @@ The partner pays (2.1) when `||b_i||^2<=M` and the selected-side range leverage 
 
 Canonical source: fleet03/B19 r16,
 
-`yspennstate/math-open-problems@9d55d9ca5a7beaed6f693a57bd32b5fc9949b981`.
+`private-source-repository@9d55d9ca5a7beaed6f693a57bd32b5fc9949b981`.
 
 For disjoint original-coordinate banks `I,J`, after conditioning outside them the residual has
 
@@ -54,7 +54,7 @@ for general banks. If one active bank consists of exactly `r` original physical 
 
 Canonical source: fleet03/B03 r17,
 
-`yspennstate/math-open-problems@924b3c4c70f86a64402863fe228f641bf3db60b2`.
+`private-source-repository@924b3c4c70f86a64402863fe228f641bf3db60b2`.
 
 For any real random variable `R` with characteristic function `eta`,
 

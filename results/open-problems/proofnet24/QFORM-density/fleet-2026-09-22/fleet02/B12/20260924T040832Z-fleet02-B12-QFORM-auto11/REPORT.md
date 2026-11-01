@@ -6,7 +6,7 @@ Status: **new proved supporting stability theorem; unrestricted QFORM remains OP
 
 ## First unpaid implication
 
-The latest compatible partner report is fleet03/B12 r48, canonical mathematics `math-open-problems@1e1ba593e3832d65ece87d00c7e14cdf48632881`. It repairs a near-resonant low-singular carrier subspace by a transverse Gram term, but its quantitative lower bound can decay to zero when the transverse leakage parameter `c` becomes large. The first unpaid local implication is therefore sharper after this run: from bare `s3(A)>=1`, force a bounded ORIGINAL-coordinate carrier on which either (i) the low right-singular subspace has a universal positive floor `d`, (ii) the genuinely singular `d=0` subspace is repaired by the partner mechanism with usable parameters, or (iii) failure routes into an already proved physical-pair / grouped-hub / projected-crossing / ridge / diffuse-volume / Schur receiver. This report proves that case (i) is completely stable even for arbitrarily large transverse leakage and an arbitrary later dense operator-norm tail.
+The latest compatible partner report is fleet03/B12 r48, canonical mathematics `private-source@1e1ba593e3832d65ece87d00c7e14cdf48632881`. It repairs a near-resonant low-singular carrier subspace by a transverse Gram term, but its quantitative lower bound can decay to zero when the transverse leakage parameter `c` becomes large. The first unpaid local implication is therefore sharper after this run: from bare `s3(A)>=1`, force a bounded ORIGINAL-coordinate carrier on which either (i) the low right-singular subspace has a universal positive floor `d`, (ii) the genuinely singular `d=0` subspace is repaired by the partner mechanism with usable parameters, or (iii) failure routes into an already proved physical-pair / grouped-hub / projected-crossing / ridge / diffuse-volume / Schur receiver. This report proves that case (i) is completely stable even for arbitrarily large transverse leakage and an arbitrary later dense operator-norm tail.
 
 ## Theorem: QFORM-FLOOR-ENHANCED-TRANSVERSE-REPAIR-v1
 
@@ -114,7 +114,7 @@ Then
 
 `s5(M) >= s_m(M) >= [rhohat-delta]_+ =: g`.
 
-The pinned completed source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md` / `FOURIER_ROUTE_REPORT.md`, proves the fifth-volume theorem with no row-marginal condition:
+The pinned completed source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md` / `FOURIER_ROUTE_REPORT.md`, proves the fifth-volume theorem with no row-marginal condition:
 
 `||p_Q||infinity <= 5 sqrt(2e) e5(M^T M)^(-1/10)`.
 

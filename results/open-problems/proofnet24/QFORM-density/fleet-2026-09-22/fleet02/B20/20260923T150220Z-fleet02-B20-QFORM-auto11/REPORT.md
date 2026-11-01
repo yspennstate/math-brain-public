@@ -15,7 +15,7 @@ The target remains unrestricted: for every dimension, independent ORIGINAL real 
 
 The newest completed designated partner actually consumed is fleet03/B20 r33:
 
-`yspennstate/math-open-problems@82fb3ecce909f03acbbe69b2e9d0def93f85194b`,
+`private-source-repository@82fb3ecce909f03acbbe69b2e9d0def93f85194b`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T144528Z-fleet03-B20-QFORM-r33/REPORT.md`.
 
@@ -37,7 +37,7 @@ for any literal ORIGINAL-coordinate cross block `M`, with arbitrary same-bank qu
 
 I also use the newer compatible fleet03/B06 r38 aggregate cofactor theorem
 
-`yspennstate/math-open-problems@e83d0cc194d791acf31d6c86245204887cfd8171`,
+`private-source-repository@e83d0cc194d791acf31d6c86245204887cfd8171`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T144727Z-fleet03-B06-qform-r38/REPORT.md`,
 

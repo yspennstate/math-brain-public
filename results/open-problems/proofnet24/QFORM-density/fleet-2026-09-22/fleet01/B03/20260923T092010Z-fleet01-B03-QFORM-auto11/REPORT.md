@@ -16,7 +16,7 @@ Fresh owner control remained revision `2026-09-22.15`, QFORM-only. The live corr
 
 ### 1.1 Newest Claude/e5 result applied at an equation
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 
@@ -38,7 +38,7 @@ I apply (1.1) to the exact current one-sided packet in Section 3.
 
 Repository search after the early checkpoint found the exact product half-Riesz theorem already proved in
 
-`yspennstate/math-open-problems@19a5e6e88d2d5756ebd92e85b00122ec0bdec699`
+`private-source-repository@19a5e6e88d2d5756ebd92e85b00122ec0bdec699`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T164451Z-r14/REPORT.md`.
 
@@ -56,7 +56,7 @@ when U and V are unit projections of disjoint original-coordinate banks. This re
 
 Newest partner handoff before publication:
 
-`yspennstate/math-open-problems@ba17177f429b7864c9d41ce754c9c8983720cc08`
+`private-source-repository@ba17177f429b7864c9d41ce754c9c8983720cc08`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T061506Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 

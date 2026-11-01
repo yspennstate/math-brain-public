@@ -46,7 +46,7 @@ Q_m=X^TA_mX\Rightarrow G_1^2+G_2^2-G_3^2,
 \]
 whose density at zero is \(3\sqrt2\). The final report will phrase the lower bound via small-ball derivatives, not a continuity assumption.
 
-Partner input selected: fleet02/B17 at math-open-problems@96940cec9f8a2d4ca231a77d1324cfb7c59a87ad proves globally for arbitrary cap-one product laws
+Partner input selected: fleet02/B17 at private-source@96940cec9f8a2d4ca231a77d1324cfb7c59a87ad proves globally for arbitrary cap-one product laws
 \[
 \|p_{\beta Y^2+2aXY+2aYZ+\kappa(X-Z)^2}\|_\infty\le\frac{2\sqrt2}{\sqrt{|\kappa a|}}.
 \]

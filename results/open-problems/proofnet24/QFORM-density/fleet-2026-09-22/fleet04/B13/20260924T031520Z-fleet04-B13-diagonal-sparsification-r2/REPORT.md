@@ -11,16 +11,16 @@ All coordinates are original physical coordinates. There is no post-rotation ind
 
 ## 1. Sources and live scope
 
-\`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837\`,
+\`private-source@e5f71d79eff325201dd0274053d20268ce65b837\`,
 \`proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/\`.
 No valid counterexample is known there, and the full theorem is not claimed.
 
 Fresh compatible inputs:
 
-- fleet01/B13, \`math-open-problems@ac747ce0b42789059a2b1dee4261dc18f6a634a2\`, especially the optimizer-free scope correction and \`QFORM-LOWSCORE-TO-HUBSTRIP-18-v1\`;
-- fleet02/B13, \`math-open-problems@2af615c6d649e207191127733fc6dd180db14944\`, especially \`QFORM-FINITE-DIRECTION-FINITE-DIAGONAL-GROUPING-v1\`;
-- fleet03/B13, \`math-open-problems@37177f7694c9aab73604b36c452e2a92c612aad4\`, the two-line normal form;
-- fleet04/B07, \`math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa\`, the physical coordinate-core theorem.
+- fleet01/B13, \`private-source@ac747ce0b42789059a2b1dee4261dc18f6a634a2\`, especially the optimizer-free scope correction and \`QFORM-LOWSCORE-TO-HUBSTRIP-18-v1\`;
+- fleet02/B13, \`private-source@2af615c6d649e207191127733fc6dd180db14944\`, especially \`QFORM-FINITE-DIRECTION-FINITE-DIAGONAL-GROUPING-v1\`;
+- fleet03/B13, \`private-source@37177f7694c9aab73604b36c452e2a92c612aad4\`, the two-line normal form;
+- fleet04/B07, \`private-source@dab16464e87c939cc0cf3fd01d070045290192fa\`, the physical coordinate-core theorem.
 
 ## 2. Optimizer-free product reduction, with no threshold attainment
 

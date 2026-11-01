@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R14 HARD OUTSIDE — H0017 STUCK-RECOVERY-1/2: the remaining obstruction is uniform iid creation of a new Busemann tail class, and weak factor limits do not purify the endpoint phase coin
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Date: 2026-09-18 UTC.
 
 ## 1. Continuity, ownership, exclusions, and why Section I is triggered now

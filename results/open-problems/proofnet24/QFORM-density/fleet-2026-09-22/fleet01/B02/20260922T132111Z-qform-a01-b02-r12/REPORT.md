@@ -24,7 +24,7 @@ In particular, if `|d|>=1/4`, then
 
 The proof is not a pointwise scalar van-der-Corput estimate. It is a **half-order integrated Fourier estimate** for a rank-two residual, followed by an exact square-pushforward kernel. This changes mechanism from the previous fixed-cross-minor/Fourier-tail route.
 
-Applying the completed partner result fleet02/B02 (`QFORM-PHYSICAL-PIVOT-CROSSBLOCK-FOURIER-v1`, canonical report `yspennstate/math-open-problems@400f82c8b98fc5623f567581b6ccb0b4298974e8:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/B02-20260922T120900Z-qform-r11/REPORT.md`), its localized-row identity gives in the remaining `|d|<1/4` branch
+Applying the completed partner result fleet02/B02 (`QFORM-PHYSICAL-PIVOT-CROSSBLOCK-FOURIER-v1`, canonical report `private-source-repository@400f82c8b98fc5623f567581b6ccb0b4298974e8:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/B02-20260922T120900Z-qform-r11/REPORT.md`), its localized-row identity gives in the remaining `|d|<1/4` branch
 
 `d^2+sigma^2 = ||A e_k||^2 >= c > 1/2`,
 
@@ -209,7 +209,7 @@ This proof respects all live corrections read before publication:
 - `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`: no fixed good rank-three physical minor/cut is asserted.
 - `QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS`: the proof keeps an exact Riesz/Fourier identity rather than a coordinatewise absolute-value Holder majorant.
 
-The fresh regularized-determinant theorem (`math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`) is compatible: it closes an entire-range diffuse branch with arbitrary additional small eigenvalues. The theorem here attacks the opposite rank-exactly-three **unique-heavy** geometry and does not duplicate the requested independent reviews assigned to fleet02/B02 and fleet03/B04.
+The fresh regularized-determinant theorem (`private-source@a302aab3477c64757b511e80d3907f982e04873a`) is compatible: it closes an entire-range diffuse branch with arbitrary additional small eigenvalues. The theorem here attacks the opposite rank-exactly-three **unique-heavy** geometry and does not duplicate the requested independent reviews assigned to fleet02/B02 and fleet03/B04.
 
 Fleet03/B02 independently supplied a physical scalar-pivot plus physical `2x2` Schur-cross-block potential theorem. The present result is different: the transverse smoothing is aggregated over a two-dimensional diffuse spectral frame and requires no fixed `2x2` physical cross minor.
 

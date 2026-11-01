@@ -4,7 +4,7 @@
   `scheduled_tasks/work/shared/full-fei-only-2026-10-12/GU_LASER_FOCUS_20261014.md`,
   initial commit `ac5a014bac41dbc40da170ef5ec6ccb541510357`;
   previously read current blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
-- B01 assignment: `yspennstate/math-open-problems`,
+- B01 assignment: `private-source-repository`,
   `reports/fei-2026-10-11/assignments/B01.json` under the current protocol.
 - Prior B01 SOLD reduction:
   `20261014T111508Z-fleet01-B01-global-augmented-candidate-a004`.

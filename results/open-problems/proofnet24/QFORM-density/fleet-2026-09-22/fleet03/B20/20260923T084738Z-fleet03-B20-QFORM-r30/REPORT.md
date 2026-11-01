@@ -14,7 +14,7 @@ The unrestricted conjecture remains OPEN. No Gaussian, log-concave, moment, supp
 
 The newest compatible closure input is fleet02/B20 r25:
 
-`yspennstate/math-open-problems@1ed18b869e338fb93f2cf0572928ab124d8e34aa`,
+`private-source-repository@1ed18b869e338fb93f2cf0572928ab124d8e34aa`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T082458Z-fleet02-B20-QFORM-r25/REPORT.md`.
 
@@ -242,7 +242,7 @@ Their outer products sum to `I_3`. Packet one carries `1/4` in `e_1`, packet two
 
 The completed fleet04/B20 theorem `QFORM-PARTITIONED-NEAR-NULL-HYBRID-v1`, scientific source
 
-`yspennstate/math-open-problems@f97aa31585b7b547a116d4580f898576af4e0842`,
+`private-source-repository@f97aa31585b7b547a116d4580f898576af4e0842`,
 
 applies to an exact-rank-three Parseval frame containing a physical row
 

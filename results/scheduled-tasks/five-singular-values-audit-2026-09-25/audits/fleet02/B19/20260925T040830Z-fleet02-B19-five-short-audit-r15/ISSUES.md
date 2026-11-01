@@ -1,6 +1,6 @@
 # B19 r15 issue ledger
 
-Exact source: math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c; short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8; short.pdf blob 8be3aae36ecad7a9dc9b7c95978aad09499f32d0, SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
+Exact source: private-source@ec211ba2d77a4a9850168c6af1574ea651feaa7c; short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8; short.pdf blob 8be3aae36ecad7a9dc9b7c95978aad09499f32d0, SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
 
 - **C04 — L41 / PDF p1 — FALSE wording.** Abstract omits the no-pivot condition on the random-sign conversion. Counterexample: A=I_5. Body Proposition 6.4 is correctly qualified.
 - **C07 — L62 / PDF p1 — UNCHECKED.** Present-day literature-status claim only; not a proof dependency.

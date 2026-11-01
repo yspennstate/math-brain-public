@@ -211,7 +211,7 @@ Finally take the supremum over normalized target instances. Hence `H_*>=C_*`, pr
 
 The named compatible completed partner artifact is:
 
-- `yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`;
+- `private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`;
 - result: exact Gaussian heat-height closure, plus the source-pinned reduction through fleet01/B15 to strictly positive analytic-Schwartz cap-one marginals.
 

@@ -19,11 +19,11 @@ No matrix tail is treated as a small random quadratic error.
 
 Fresh mathematical head before this write:
 
-    yspennstate/math-open-problems@5704e7da5b6134fc8e3bdde6caedc7358a666f65
+    private-source-repository@5704e7da5b6134fc8e3bdde6caedc7358a666f65
 
 The completed designated result used below is fleet01/B12 r25:
 
-    math-open-problems@8a6269fae9183252b85ba2ee787aedd905deef2a
+    private-source@8a6269fae9183252b85ba2ee787aedd905deef2a
     proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B12/
     20260923T045406Z-fleet01-B12-QFORM-r25/REPORT.md
 

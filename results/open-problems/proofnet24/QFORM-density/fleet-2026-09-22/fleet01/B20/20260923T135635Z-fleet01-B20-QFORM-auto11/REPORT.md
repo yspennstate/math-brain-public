@@ -14,7 +14,7 @@ The target is unchanged: independent real coordinates with one-dimensional densi
 
 The designated completed partner result actually consumed is fleet02/B20 run `20260923T112426Z-fleet02-B20-QFORM-auto11`, canonical mathematics
 
-`yspennstate/math-open-problems@19327f690f815425717fcbd07854302df2090970`
+`private-source-repository@19327f690f815425717fcbd07854302df2090970`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T112426Z-fleet02-B20-QFORM-auto11/REPORT.md`.
 
@@ -36,7 +36,7 @@ The latter retains arbitrary same-bank quadratic blocks, outside coordinates, af
 
 I also use the already completed collective-tail and fractional third-volume receivers in the exact generic form recorded in fleet01/B19 at
 
-`yspennstate/math-open-problems@c2421f60310808603fb459131584028ec1502d0c`,
+`private-source-repository@c2421f60310808603fb459131584028ec1502d0c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260923T121529Z-fleet01-B19-QFORM-auto11/REPORT.md`.
 

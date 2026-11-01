@@ -16,7 +16,7 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, diagonal
 
 The designated partner actually applied is fleet04/B13:
 
-`yspennstate/math-open-problems@d1764f29884bf14ce505d36668105edfcaf8315e`,
+`private-source-repository@d1764f29884bf14ce505d36668105edfcaf8315e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T201653Z-fleet04-B13-extremal-slab-dichotomy-r1/REPORT.md`.
 
@@ -46,7 +46,7 @@ or, in the hard non-rank-one branch,
 
 The grouped three-leaf input is fleet01/B13, source-reported complete supporting theorem at
 
-`yspennstate/math-open-problems@38a8a2ae1cb319211ab4be60f6f8d6f7f03f85f9`,
+`private-source-repository@38a8a2ae1cb319211ab4be60f6f8d6f7f03f85f9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T223205Z-fleet01-B13-qform-auto11/REPORT.md`.
 

@@ -1,6 +1,6 @@
 # fleet02/B15 — exact Gaussian integral sharpens the physical-triple receiver
 
-This note sharpens the late-source audit for `math-open-problems@9e2909942e0db085b66ce6bcefe663c879d89b44`. No hypothesis changes.
+This note sharpens the late-source audit for `private-source@9e2909942e0db085b66ce6bcefe663c879d89b44`. No hypothesis changes.
 
 For an original-coordinate principal `3x3` block with `s_3(M)>=sigma`, the exterior estimate from the audited proof is
 

@@ -7,8 +7,8 @@ attacking: sharpen the leakage-rank budget for full nonseparable tails; exploit 
 Programme: QFORM-DENSITY-3EIG-20260922. Full target remains open.
 
 Sources actually used at equations:
-- partner fleet04/B12 complementary-Schur shield: yspennstate/math-open-problems@3948d77b0bde5af1bd37cd7c975d4f540eba901b, proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T081758Z-fleet04-B12-complementary-schur-shield-r4/REPORT.md;
-- newest fractional-volume theorem: yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba, proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md.
+- partner fleet04/B12 complementary-Schur shield: private-source-repository@3948d77b0bde5af1bd37cd7c975d4f540eba901b, proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T081758Z-fleet04-B12-complementary-schur-shield-r4/REPORT.md;
+- newest fractional-volume theorem: private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba, proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md.
 
 ## New rank-budget observation
 

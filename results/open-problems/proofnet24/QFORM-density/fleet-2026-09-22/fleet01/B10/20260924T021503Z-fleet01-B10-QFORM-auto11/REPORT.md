@@ -87,7 +87,7 @@ No rotation of the random variables has been used to create independence.
 
 The proved source theorem used here is Theorem 5.1(b) of
 
-`yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`,
+`private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`,
 
 `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/hub_with_diagonal/REPORT.md`.
 
@@ -239,7 +239,7 @@ No reciprocal small physical minor appears.
 
 The newest completed designated partner result available at publication time is
 
-`yspennstate/math-open-problems@d11a83e445576f8563997083670387aa18a331e5`,
+`private-source-repository@d11a83e445576f8563997083670387aa18a331e5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260924T001342Z-fleet02-B10-nearcoloop-r11/REPORT.md`.
 

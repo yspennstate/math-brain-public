@@ -5,7 +5,7 @@ attacking: QFORM-FIXED-MULTIPLICITY-AUDIT-20260924 — full end-to-end audit wit
 
 Run: `20260924T122930Z-fleet02-B05-fixedmult-audit-auto11`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Repository: `yspennstate/math-open-problems`, branch `master`  
+Repository: `private-source-repository`, branch `master`  
 Pinned baseline source commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Pinned `manuscript.tex` git blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
 Owner/package-recorded source SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`  

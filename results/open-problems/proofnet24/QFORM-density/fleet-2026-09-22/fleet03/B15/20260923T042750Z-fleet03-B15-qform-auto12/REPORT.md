@@ -179,7 +179,7 @@ Thus the atomless hypothesis needed for the exact positive scale-mixture identit
 
 The completed assigned-partner theorem is:
 
-`yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`
+`private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`
 
 at
 
@@ -270,8 +270,8 @@ The result is compatible with all live corrections: it does not rotate independe
 ## 10. Sources actually consumed
 
 - `CURRENT_RESEARCH.md`, `CLAIMS.json`, live `CORRECTION_INBOX.json`, `MEMORY_PROTOCOL.md`, and `assignments/fleet03/B15.json`;
-- assigned partner fleet04/B15 heat-height theorem: `yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`;
-- latest fleet02/B15 minority/annular analysis: `yspennstate/math-open-problems@a7306ce944dac158ce39d8f8e224b6ce9d127b45`;
+- assigned partner fleet04/B15 heat-height theorem: `private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`;
+- latest fleet02/B15 minority/annular analysis: `private-source-repository@a7306ce944dac158ce39d8f8e224b6ce9d127b45`;
 - latest fleet03/B20 aggregate-collar handoff, used only to keep the remaining global obstruction aligned with current fleet state.
 
 No source-matching published theorem was located in the limited literature search performed during this run; no novelty claim is made from that search miss.

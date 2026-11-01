@@ -283,7 +283,7 @@ for **every independent cap-one product law** on the three physical coordinates.
 
 The required pinned source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,  
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,  
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
 Its completed Theorem C gives the one-sheet rank-three estimate for signature `(+,+,-)`. Applying that theorem to the **actual physical matrix** `A_*`, whose spectral magnitudes are `(2,1,1)`, gives for `s>=0`

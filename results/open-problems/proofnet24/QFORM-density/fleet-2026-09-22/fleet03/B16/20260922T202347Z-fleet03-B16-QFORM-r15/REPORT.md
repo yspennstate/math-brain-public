@@ -23,7 +23,7 @@ The new result is stronger than the earlier localized theorem in one precise sen
 
 From
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`,
 
@@ -38,7 +38,7 @@ when the affine vector lies in the range of the rank-two frame. In dimension two
 
 From
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`,
 
@@ -68,7 +68,7 @@ This use does not require a lower bound on every eigenvalue of the full `3 x 3` 
 
 The completed partner report
 
-`yspennstate/math-open-problems@0f2d6290352a984c4e4ae0b024f8c27c7a2bb473`
+`private-source-repository@0f2d6290352a984c4e4ae0b024f8c27c7a2bb473`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T191443Z-fleet04-B16-QFORM-r3/REPORT.md`
 

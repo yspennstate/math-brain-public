@@ -11,12 +11,12 @@ Continuity: separate.
 This report uses:
 
 1. the physical-fiber and ruled-surface results in the required Claude package at
-   yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837;
+   private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837;
 2. fleet01/B14 r30 at
-   yspennstate/math-open-problems@fe1b05ba7083f2da708eed681eb13b65236e9209,
+   private-source-repository@fe1b05ba7083f2da708eed681eb13b65236e9209,
    which proves the sharp fragment-mass warning and the coarsen-before-condition one-bank application;
 3. fleet04/B14 r7 at
-   yspennstate/math-open-problems@2ac84e141e8e939506cbd5cd8314589141b714d5,
+   private-source-repository@2ac84e141e8e939506cbd5cd8314589141b714d5,
    which establishes cap-preserving rough-law transfer for a conditioning-generated shear.
 
 No rotated random coordinates are declared independent. No moment, bounded-support, connected-support, tail, or attained interval-extremizer assumption is used.

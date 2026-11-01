@@ -2,7 +2,7 @@
 
 A late read of this slot's immediately preceding run
 
-`yspennstate/math-open-problems@20f5424bcd745844055208675a66bbd270b3fab9`,
+`private-source-repository@20f5424bcd745844055208675a66bbd270b3fab9`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260923T181636Z-fleet01-B11-QFORM-auto11/REPORT.md`
 
 shows that the **one-bank exact-graph QFORM application** in Sections 3--4 of the present `REPORT.md` is already subsumed, with a better constant, by the earlier theorem `QFORM-HIDDEN-PROJECTION-CONDITIONABLE-SPAN-v1`: after conditioning the opposite bank, `tau_S=0` means the retained hidden source row lies in the span of the two transverse rows, and `Delta_R=det(W_S)`. The earlier theorem gives

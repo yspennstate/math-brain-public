@@ -33,7 +33,7 @@ No independence after spectral rotation is asserted or used.
 ## 2. Pinned Fresnel--Brascamp--Lieb estimate applied to the actual form
 
 The required pinned source is
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`.
 Its completed Theorem F applies directly to `A_{m,O}`.
 
@@ -147,7 +147,7 @@ whose negative eigenvector is `(1,1,1)/sqrt(3)` and whose entries are all nontri
 ## 5. Latest fleet03/B17 result applied at the boundary
 
 The latest compatible completed designated-partner theorem is
-`math-open-problems@05d7f088563f665ac7ae3795be5be61728181844`,
+`private-source@05d7f088563f665ac7ae3795be5be61728181844`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T230133Z-fleet03-B17-QFORM-auto11/REPORT.md`.
 For
 \[

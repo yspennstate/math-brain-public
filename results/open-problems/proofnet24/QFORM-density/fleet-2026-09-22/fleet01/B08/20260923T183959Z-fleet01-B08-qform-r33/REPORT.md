@@ -22,7 +22,7 @@ No moment, support, iid, Gaussian, log-concavity, connected-support, or post-rot
 
 I use the completed fleet02/B08 result
 
-`yspennstate/math-open-problems@66582bd87d50634f3525a57c87acffdbde97aea1`
+`private-source-repository@66582bd87d50634f3525a57c87acffdbde97aea1`
 
 at
 

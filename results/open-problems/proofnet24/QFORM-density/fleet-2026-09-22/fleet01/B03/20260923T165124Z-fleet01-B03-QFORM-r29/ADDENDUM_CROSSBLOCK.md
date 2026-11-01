@@ -2,7 +2,7 @@
 
 Status: `NEW SUPPORTING THEOREM / ANALYTIC CROSSBLOCK GATE REMOVED / FULL_QFORM_OPEN`.
 
-This addendum strengthens `REPORT.md`. It uses the weighted-subset Fourier lemma from `math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`, and the row-marginal-free one-hub theorem proved in this run. The partner dependency inside the heavy branch remains fleet02/B03 `math-open-problems@c3bba054c20287883c43303711eec7eefc05d46e`.
+This addendum strengthens `REPORT.md`. It uses the weighted-subset Fourier lemma from `private-source@4f92aeb74083c6f95cb314a11fed1b812eacef9a`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`, and the row-marginal-free one-hub theorem proved in this run. The partner dependency inside the heavy branch remains fleet02/B03 `private-source@c3bba054c20287883c43303711eec7eefc05d46e`.
 
 ## Theorem — `QFORM-ROW-MARGINAL-FREE-3VOLUME-CROSSBLOCK-v1`
 

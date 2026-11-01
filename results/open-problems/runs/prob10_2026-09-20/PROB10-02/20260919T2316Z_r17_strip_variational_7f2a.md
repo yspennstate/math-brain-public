@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # PROB10-02 / R17 — dependence-preserving finite-width LCS process, exact Bellman dual, and rigorous approximation to the full constant
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Controlling owner directive: `operations/PROB10_2026-09-20.md`.
 

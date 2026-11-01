@@ -18,7 +18,7 @@ The full conjecture remains open. This run closes one precise form of the first 
 
 Complete source:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 Its theorem `QFORM-RANK2-AFFINE-HALF-RIESZ-v1` says: if `V^T V=I_2`, `Lambda` is invertible symmetric `2x2`, and `b` is arbitrary in the original independent coordinate space, then
 
@@ -38,7 +38,7 @@ The newest completed designated-partner result available at the fresh control sn
 
 `QFORM-TWO-BANK-DEFINITE-TRANSVERSE-RANK2-v1`, complete source
 
-`yspennstate/math-open-problems@9404859d9039d9eb76286588dc6d38a0fc3393ed:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T214906Z-fleet03-B09-QFORM-r18/REPORT.md`.
+`private-source-repository@9404859d9039d9eb76286588dc6d38a0fc3393ed:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T214906Z-fleet03-B09-QFORM-r18/REPORT.md`.
 
 It proves
 

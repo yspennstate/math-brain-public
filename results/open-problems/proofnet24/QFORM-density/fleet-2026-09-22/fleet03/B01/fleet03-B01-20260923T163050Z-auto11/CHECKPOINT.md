@@ -24,7 +24,7 @@ For L=l dot Z+beta, the product-projection bound gives K0<=sqrt(2)/||l||_2. Henc
 |phi_R(t)| <= min(1, 2^(1/4)sqrt(pi)||l||_2^(-1/2)|t|^(-1/2)),
 P(|R-s|<=rho) <= min(1, 4*2^(1/4)||l||_2^(-1/2)sqrt(rho)).
 
-Now apply the designated fleet04/B01 r2 singular-star routing theorem, source math-open-problems@8410ab9d8238baa40c033f83dbae6af44b0b2582. In its leakage branch,
+Now apply the designated fleet04/B01 r2 singular-star routing theorem, source private-source@8410ab9d8238baa40c033f83dbae6af44b0b2582. In its leakage branch,
 
 sum_(k!=l) l_k^2 l_l^2 >= W2/(4a^2).
 

@@ -16,7 +16,7 @@ The live corrections were reread before publication. In particular this run does
 
 The current synthesis input is fleet03/B19 r45,
 
-`yspennstate/math-open-problems@cb2d1efbcba8c6977376e0ad3d15638a6df8ff58`,
+`private-source-repository@cb2d1efbcba8c6977376e0ad3d15638a6df8ff58`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T000337Z-fleet03-B19-QFORM-r45/REPORT.md`.
 
 After the paid diagonal/principal-triple/disjoint-E3 branches and its overlap-two funnel, every remaining state is routed into one of four literal original-coordinate packets, one of which is a disjoint physical cross block `M` satisfying
@@ -185,7 +185,7 @@ This is the first missing implication proved in this run.
 
 The completed designated partner result used is fleet04/B20 r12,
 
-`yspennstate/math-open-problems@95d5c3b6e8a753f5da44f742f8449d51470f4a11`,
+`private-source-repository@95d5c3b6e8a753f5da44f742f8449d51470f4a11`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T201641Z-fleet04-B20-QFORM-r12/REPORT.md`.
 
 For an anchored literal block

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # PROB10-04 — mean-ball covariance transport compiler for the Díaz outer variational problem
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Status: **OPEN / PARTIAL**  
 Owner route: **cluster-aware weighted counting / overlap-variational certification**, complementary to the constructive and interpolation workers.  
 Source-model metric: **unchanged**.

@@ -14,7 +14,7 @@ The full conjecture remains open. The new square-peel branch below proves absolu
 The completed partner theorem actually used is fleet02/B04's
 `QFORM-ENTROPY-WEIGHTED-RANK2-HALFRIESZ-v1`, read from
 
-- repository `yspennstate/math-open-problems`,
+- repository `private-source-repository`,
 - commit `04297a630381fcfcf429b4c5ec560886bebacb39`,
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T052139Z-fleet02-B04-qform-auto11/REPORT.md`.
 

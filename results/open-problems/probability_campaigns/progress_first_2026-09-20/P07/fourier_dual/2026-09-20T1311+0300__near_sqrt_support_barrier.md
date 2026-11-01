@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-B — a near-square-root support barrier for Fourier-dual obstructions
 
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured start master:** `51da6fd34b983c0372906b48d3f3f73a3c4dc6be`  
 **Fresh pre-write master:** `a99437ebfd07ebb74a7b30caad21fbb3b15220ef`  
 **Previous own substantive report:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T1124+0300__second_order_clipping_sparse_exception_patch.md`, creation commit `9f002a68027bbe06f9b98c962c08bc4db3801673`.  

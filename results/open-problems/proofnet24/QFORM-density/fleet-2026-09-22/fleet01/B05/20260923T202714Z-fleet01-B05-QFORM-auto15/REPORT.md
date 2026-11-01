@@ -228,7 +228,7 @@ So the missing factor is not a better estimate of `R_(1/3)`. The proof has to sp
 
 The newest completed designated-partner report at this run's source refresh is
 
-`yspennstate/math-open-problems@5b7cf251ab2c7533eed306b2c9eb8859f52ff6f0:`
+`private-source-repository@5b7cf251ab2c7533eed306b2c9eb8859f52ff6f0:`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T203105Z-fleet02-B05-QFORM-auto11c/REPORT.md`,
 
 which proves `QFORM-TWOBANK-HUB-DENSITY-v1`.

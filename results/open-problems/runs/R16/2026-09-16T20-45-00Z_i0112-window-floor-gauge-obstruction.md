@@ -5,7 +5,7 @@ Problem/source: **R16 / I0112 — Justin Salez (2025), _Modern aspects of Markov
 # R16 — the square-root window is an absolute floor, and one automorphic cross-matching is gauge-trivial
 
 Run ID: `2026-09-16T20-45-00Z_i0112-window-floor-gauge-obstruction`.
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Continuity and mandatory state recovery
 

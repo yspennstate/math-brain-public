@@ -24,7 +24,7 @@ Two completed source-valid analytic inputs are used at equation level.
 
 Canonical source:
 
-`yspennstate/math-open-problems@a68504400f3679153ba22ad2852b3fe0c4048dc1`
+`private-source-repository@a68504400f3679153ba22ad2852b3fe0c4048dc1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T181118Z-fleet02-B02-QFORM-r11/REPORT.md`.
 
@@ -60,7 +60,7 @@ The crucial point for the present splice is the partner's translation uniformity
 
 Canonical theorem source:
 
-`yspennstate/math-open-problems@d739034105d8beb4bf6ddf90fd8179aef2bac58c`
+`private-source-repository@d739034105d8beb4bf6ddf90fd8179aef2bac58c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T041802Z-fleet03-B06-qform-r25/REPORT.md`.
 
@@ -81,7 +81,7 @@ There is **no row- or column-leverage gate** in (1.4). The proof uses the source
 
 The latest fleet02/B02 nested-coloop theorem was also read at
 
-`yspennstate/math-open-problems@87dbe53e75a736bc87f97e02e40ebf2c3c13b095`,
+`private-source-repository@87dbe53e75a736bc87f97e02e40ebf2c3c13b095`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T033508Z-fleet02-B02-QFORM-auto11/REPORT.md`.
 

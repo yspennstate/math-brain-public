@@ -52,7 +52,7 @@ Existing historical material in the repository should be preserved in place. Do 
 
 ## Current shared destination
 
-Repository: `yspennstate/math-open-problems`
+Repository: `private-source-repository`
 
 Default branch: `master`
 

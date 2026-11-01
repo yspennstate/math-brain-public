@@ -2,7 +2,7 @@
 
 A later completed designated-partner result appeared after this run's `REPORT.md` was written:
 
-`yspennstate/math-open-problems@35b5ef493e41323df07d60d73d77ae84791c5e38`,
+`private-source-repository@35b5ef493e41323df07d60d73d77ae84791c5e38`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T115328Z-fleet03-B11-QFORM-r30/REPORT.md`.
 
 It independently proves `QFORM-TWOPLANAR-JOINTCAP-NULLSUM-FALSE-v1` by determinant-one anisotropic rectangles and obtains the exact blow-up

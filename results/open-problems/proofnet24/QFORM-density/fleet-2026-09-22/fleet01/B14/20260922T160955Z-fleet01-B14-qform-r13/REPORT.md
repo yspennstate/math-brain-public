@@ -14,7 +14,7 @@ The full owner target remains open: for every dimension, every independent real 
 
 This run consumes the completed partner theorem
 
-- `yspennstate/math-open-problems@3f241388d9bcacf1379ef8ef640b35d7d14aad91`,
+- `private-source-repository@3f241388d9bcacf1379ef8ef640b35d7d14aad91`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T150227Z-b14-qform-localization-r14/REPORT.md`.
 
 That theorem proves, for independent cap-one `X_1,X_2,X_3`, cycle-consistent shifted pair gaps and exponents `a,b,c<1`, `a+b+c<2`, a uniform inverse-gap moment bound. In the symmetric square-root case the constant is `61+12*pi < 98.70`. It also proves that total pair-gap exponent `2` is the sharp obstruction for this raw absolute compiler.

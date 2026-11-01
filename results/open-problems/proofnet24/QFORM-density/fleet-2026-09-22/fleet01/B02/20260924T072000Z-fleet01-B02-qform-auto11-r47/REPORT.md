@@ -16,7 +16,7 @@ The target is unchanged: independent ORIGINAL real coordinates with one-dimensio
 
 The live structural source is fleet03/B02 r47,
 
-`yspennstate/math-open-problems@859066cc3edee1bbeafe367e3bf2d630a4c425d9`,
+`private-source-repository@859066cc3edee1bbeafe367e3bf2d630a4c425d9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260924T045848Z-fleet03-B02-qform-r47/REPORT.md`.
 
@@ -38,7 +38,7 @@ Since `E2(N)=e_2(N^T N)>=x1*x2`, this diagonal-hub branch has
 
 The newest completed designated partner is fleet02/B02 auto12,
 
-`yspennstate/math-open-problems@19a3d60ceb5d0989aa527b32d3e76f388b9419f6`,
+`private-source-repository@19a3d60ceb5d0989aa527b32d3e76f388b9419f6`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260924T060210Z-fleet02-B02-QFORM-auto12/REPORT.md`.
 
@@ -50,7 +50,7 @@ It also proves genuine Fourier `L1` for a literal invertible `2x2` crossing unde
 
 The row-gate-free residual `E2` half-Riesz receiver used below is fleet02/B06,
 
-`yspennstate/math-open-problems@cd0be625c8f7143a46ad14bb936e9c24bfb19a8d`,
+`private-source-repository@cd0be625c8f7143a46ad14bb936e9c24bfb19a8d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T192839Z-auto11/REPORT.md`.
 

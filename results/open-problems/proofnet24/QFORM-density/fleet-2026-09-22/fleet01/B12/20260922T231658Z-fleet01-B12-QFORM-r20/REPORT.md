@@ -22,7 +22,7 @@ The combination is not a convolution statement: all conditioning remains in orig
 
 The designated partner `fleet02/B12` proved `QFORM-RANK-RESERVE-PAIR-COMPRESSION-STABILITY-v1` at
 
-`yspennstate/math-open-problems@b873b2b52f4c75c331153c9227d0a7fae0f02979`
+`private-source-repository@b873b2b52f4c75c331153c9227d0a7fae0f02979`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T225440Z-fleet02-B12-QFORM-r19/REPORT.md`.
 

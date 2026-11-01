@@ -10,7 +10,7 @@ The unrestricted quadratic-form conjecture is **not** proved here. The result cl
 
 The preceding fleet01/B17 theorem at
 
-`yspennstate/math-open-problems`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/QFORM-B17-20260922T225652Z/REPORT.md`
+`private-source-repository`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/QFORM-B17-20260922T225652Z/REPORT.md`
 
 proves the following exact global-output reduction. For any finite real vector `a=(a_1,...,a_r)` with
 
@@ -171,7 +171,7 @@ has nonzero spectrum exactly `{1,1,-1}` at every finite `m`. Centered unit inter
 
 The newest Claude source `COUNTEREXAMPLE_SEARCH.md` at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
 proves its Theorem C: for exact rank three of signature `(+,+,-)`, the one-sheet side `s>=0` satisfies a dimension-free bound `p(s)<=pi sqrt(2)`, while it explicitly leaves the two-sheet side `s<0` unpaid in general.
 
@@ -192,7 +192,7 @@ for every limiting member of this source-valid branch. Together with Theorem C's
 
 The completed designated partner fleet02/B17 result
 
-`yspennstate/math-open-problems@50913ed00c5943aaf2772473cbf17ddcb5bed090:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T204449Z-fleet02-B17-QFORM-r19/REPORT.md`
+`private-source-repository@50913ed00c5943aaf2772473cbf17ddcb5bed090:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T204449Z-fleet02-B17-QFORM-r19/REPORT.md`
 
 proves that for `delta>0`
 

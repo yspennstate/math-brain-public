@@ -17,7 +17,7 @@ This argument does not use the refuted law-uniform pointwise Fresnel bound, the 
 
 The immediate predecessor is fleet03/B19 r20,
 
-`yspennstate/math-open-problems@9280165827267931c007f3c9885d3e56dfcd0723`
+`private-source-repository@9280165827267931c007f3c9885d3e56dfcd0723`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T002541Z-fleet03-B19-QFORM-r20/REPORT.md`.
 
@@ -69,7 +69,7 @@ is a genuine two-dimensional orthogonal projection of the original independent c
 
 By fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical mathematics
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`,
 
@@ -194,7 +194,7 @@ By (3.7), `|a|<s/2`, so Lemma 4.1 yields
 
 Now apply fleet01/B16 `QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1`, canonical report
 
-`yspennstate/math-open-problems@8d262d18e5581cd02b8ea8be5102aa2a6d30ddd7`,
+`private-source-repository@8d262d18e5581cd02b8ea8be5102aa2a6d30ddd7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T003846Z/REPORT.md`.
 
@@ -233,7 +233,7 @@ and
 
 The completed orientation-free rank-two affine half-Riesz theorem,
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`,
 
@@ -280,7 +280,7 @@ Fresh search found the completed designated-partner report
 
 `fleet04/B19`, `QFORM-NULL-COLOOP-ADAPTIVE-HY-STABILITY-v1`,
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 

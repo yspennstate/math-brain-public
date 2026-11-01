@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R15 retained screen — projective fourth-order tangent obstruction
 
-Date checked: 2026-09-19 UTC. Repository / branch: private `yspennstate/math-open-problems` / `master`. Everything newly proved below on F0111 is **SELF_CHECK_ONLY / NOT CLAIMED**. It does not reopen I0076, make F0111 READY, establish novelty, solve Talagrand Problem 10.9, or satisfy closure/audit requirements.
+Date checked: 2026-09-19 UTC. Repository / branch: private `private-source-repository` / `master`. Everything newly proved below on F0111 is **SELF_CHECK_ONLY / NOT CLAIMED**. It does not reopen I0076, make F0111 READY, establish novelty, solve Talagrand Problem 10.9, or satisfy closure/audit requirements.
 
 ## 1. Source fidelity, lifecycle and ownership
 

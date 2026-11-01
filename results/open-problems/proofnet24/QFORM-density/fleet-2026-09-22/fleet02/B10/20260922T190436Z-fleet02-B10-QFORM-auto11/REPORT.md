@@ -18,7 +18,7 @@ with independent physical inputs of density at most one. No spectral projection 
 ## 2. Completed sources actually consumed
 
 **Named partner fleet03/B10, r14.** Source present at
-`yspennstate/math-open-problems@c7c704f22b535833a38124fdec8967b87f6b5ba3`,
+`private-source-repository@c7c704f22b535833a38124fdec8967b87f6b5ba3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T181253Z-fleet03-B10-QFORM-r14/REPORT.md`.
 For an exact null-ray bank of mass `L`, residual mass `rho=1-L`, and complement Gram `G=I-L rr^T`, it proves that if every whitened complement leverage is at most one half, then
 
@@ -31,7 +31,7 @@ This result is applied below to the concrete branch `L<=1/2`, giving immediately
 The same partner report fixes the correct original-product whitening and makes clear why the factor `rho^(-1/3)` is unpaid near the endpoint.
 
 **Earlier same-ray compression source.** fleet01/B10 proved `QFORM-COLLINEAR-SPECTRAL-BANK-COMPRESSION-v1` at
-`yspennstate/math-open-problems@5ea885ea03072eabc1e97befc518928a23b4873f`,
+`private-source-repository@5ea885ea03072eabc1e97befc518928a23b4873f`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260922T170231Z-fleet01-B10-QFORM-r14/REPORT.md`.
 It compresses a collinear bank to one independent normalized product-linear scalar and proves the exact full-null-bank endpoint. The new lemma below adds a cap-one rescaling with a quantitative lower bound on the *new rank-three spectral gap*, which is the point needed for re-entry into target-class diffuse theorems.
 

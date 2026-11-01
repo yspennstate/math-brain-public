@@ -6,7 +6,7 @@ This addendum supersedes any wording in `REPORT.md` that suggests `QFORM-CAPPED-
 
 After publication of the first r53 report, I re-read the source-pinned fleet03/B10 theorem at
 
-- `yspennstate/math-open-problems@c1af196adade03e07456c8f6e783f952b0fa0e8d`
+- `private-source-repository@c1af196adade03e07456c8f6e783f952b0fa0e8d`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/fleet03-B10-20260922T121625Z-qform-r11/REPORT.md`
 
 Its Theorem 2.1, `QFORM-DEPENDENT-PAIR-HYPERBOLIC-SQUARE-v1`, already proves the exact core statement:

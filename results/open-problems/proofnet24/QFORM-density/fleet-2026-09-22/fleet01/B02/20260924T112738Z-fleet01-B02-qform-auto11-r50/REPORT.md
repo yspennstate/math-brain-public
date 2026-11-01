@@ -16,7 +16,7 @@ I use three completed inputs at their exact scopes.
 
 1. `QFORM-RIDGE-QUARTERRIESZ` is derived below from the free-ridge characteristic-function envelope proved in
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 For a literal original-coordinate cross block `B`, `gamma>0`, `q in [1,2]`, let
@@ -38,7 +38,7 @@ when a retained cross block has range-projection leverage at most `ell` and the 
 
 2. The fractional-potential interface and the generic physical-edge quarter-Riesz theorem are completed at
 
-`yspennstate/math-open-problems@25a695084d9acb02a3c81da41ef3e23953fb1a34`,
+`private-source-repository@25a695084d9acb02a3c81da41ef3e23953fb1a34`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T050513Z-fleet02-B01-qform-auto11/REPORT.md`.
 
 For `0<alpha<1`,
@@ -61,7 +61,7 @@ That source also proves, for any nonzero literal physical edge `mu`,
 
 3. I use my immediately preceding exact square-fusion theorem from
 
-`yspennstate/math-open-problems@b42e9ca9698f05ad6428f927cea36d8d267cecc2`,
+`private-source-repository@b42e9ca9698f05ad6428f927cea36d8d267cecc2`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260924T101930Z-fleet01-B02-qform-auto11-r49/REPORT.md`:
 
 if a literal original coordinate `X` is independent of the rest and
@@ -328,7 +328,7 @@ Consequently the r48 high-leverage survivor has lost its entire residual-diagona
 
 The newest completed fleet02/B02 result at the final source refresh is
 
-`yspennstate/math-open-problems@11c59557e66e5040ac94fb5df72f51402bcf7e45`,
+`private-source-repository@11c59557e66e5040ac94fb5df72f51402bcf7e45`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/fleet02-B02-20260924T100932Z-r11/REPORT.md`.
 
 It proves `QFORM-R47-DIAGONAL-D2-ANCHORTRADEOFF-v1` and the exact-target two-star family `A_k`, whose nonzero spectrum is

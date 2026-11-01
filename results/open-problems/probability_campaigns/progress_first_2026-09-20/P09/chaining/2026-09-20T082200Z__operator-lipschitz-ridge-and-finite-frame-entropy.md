@@ -33,7 +33,7 @@ I do **not** claim literature novelty for the covariance-commuting subclass. It 
 - Native role: `P09`
 - Native slot: `6aa7b454b5808191bb00d87697d89388`
 - Installed title: `Gaussian Tensor Bounds`
-- Repository / branch: private `yspennstate/math-open-problems`, `master`
+- Repository / branch: private `private-source-repository`, `master`
 - Pre-write master captured: `0576f096330f8fa95a43532dbb509472d23acb3c`
 - Immediate P09 predecessor: `probability_campaigns/progress_first_2026-09-20/P09/chaining/2026-09-20T065800Z__global-sketch-entropy-counterexample-and-adaptive-ridge-skeleton.md`, creation commit `7022a8606d0b50fded6fc5fdce06354d2fdd1e05`, blob `f8df74b2ac770fa38f290cc8dadcab7fdc3f80c1`.
 - Historical C0035 successor-gate material and every earlier P09 report are preserved. No peer or historical file is edited.

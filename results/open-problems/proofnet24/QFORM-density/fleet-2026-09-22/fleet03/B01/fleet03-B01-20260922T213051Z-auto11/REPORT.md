@@ -16,7 +16,7 @@ The full owner target remains open: for arbitrary dimension, independent origina
 This run uses three completed source-pinned inputs.
 
 1. **Physical indefinite-pair logarithmic envelope.**  
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,  
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,  
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.  
    For two independent cap-one physical coordinates with an invertible indefinite `2 x 2` quadratic block `B`, put
    `D=|det B|` and `kappa=sigma_min(B)`. After completing the pair, for every gradient cutoff `r>0` the conditional pair density around its critical value obeys
@@ -26,7 +26,7 @@ This run uses three completed source-pinned inputs.
    The coordinate shifts may depend arbitrarily on the remaining original coordinates.
 
 2. **Aggregate exterior-mass fractional Riesz theorem from the preceding B01 run.**  
-   `yspennstate/math-open-problems@7df1461e33f7ea4e6026a650391822a16e56e987`,  
+   `private-source-repository@7df1461e33f7ea4e6026a650391822a16e56e987`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T205456Z-r19/REPORT.md`.  
    For any quadratic-plus-affine residual `R` in independent cap-one original coordinates and any physical cross block `C`, write `E_k=e_k(CC^T)`. For
    `0<alpha<min(1,k/4)`,
@@ -42,7 +42,7 @@ This run uses three completed source-pinned inputs.
    This keeps arbitrary residual self blocks, affine terms, signs, outside couplings and extra spectrum. It uses the valid regularized-determinant bound, not law-uniform scalar pointwise Fresnel decay.
 
 3. **Designated partner fleet04/B01 signed-Fejer theorem.**  
-   `yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,  
+   `private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.  
    For any probability law `mu`, its triangular signed Fejer averages `D_T mu(y)` satisfy
    

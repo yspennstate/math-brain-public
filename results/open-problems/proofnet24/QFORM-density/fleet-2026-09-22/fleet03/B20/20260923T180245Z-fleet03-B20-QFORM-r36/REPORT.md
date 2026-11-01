@@ -16,7 +16,7 @@ I acknowledge owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. The 
 
 The immediate fresh assembly input is fleet03/B19:
 
-`yspennstate/math-open-problems@afbdba9c6b0624552a6725568d3eb883b999d1e1`,
+`private-source-repository@afbdba9c6b0624552a6725568d3eb883b999d1e1`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T170040Z-fleet03-B19-qform-r37/REPORT.md`.
 
@@ -59,7 +59,7 @@ It proves a D3 payment/anchor/common-plane trichotomy at
 
 The designated fleet04/B20 theorem actually applied in this run is
 
-`yspennstate/math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912`,
+`private-source-repository@c6f29397b3d45a7cf7ab67633a5451767b478912`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`.
 

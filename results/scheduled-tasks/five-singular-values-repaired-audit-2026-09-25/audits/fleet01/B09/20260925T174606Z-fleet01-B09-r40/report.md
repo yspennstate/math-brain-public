@@ -2,7 +2,7 @@
 
 Objective: QFORM-FIVE-270-REPAIRED-AUDIT-20260925.
 
-Pinned source: math-open-problems commit 4e530247ec0ef4101a6e5ecf621bd35a969c42aa, paper.tex blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a, 683 lines.
+Pinned source: private-source commit 4e530247ec0ef4101a6e5ecf621bd35a969c42aa, paper.tex blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a, 683 lines.
 
 Later owner instruction remains active: Lean verification of every paper result only.
 

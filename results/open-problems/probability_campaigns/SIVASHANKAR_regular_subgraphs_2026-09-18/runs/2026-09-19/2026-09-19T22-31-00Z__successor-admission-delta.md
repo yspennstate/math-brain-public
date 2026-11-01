@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 at 
 
 # NEW-METHODS-2026-09-16 — CLOSABLE OUTSIDE successor-admission delta
 
-Repository: `yspennstate/math-open-problems`  
+Repository: `private-source-repository`  
 Branch: `master`  
 Native slot: `6aa7b53b0858819196d923203522c996`  
 Captured input master: `6f0059bbea21c375fd6db23d2ad835fa4c7b5a36`

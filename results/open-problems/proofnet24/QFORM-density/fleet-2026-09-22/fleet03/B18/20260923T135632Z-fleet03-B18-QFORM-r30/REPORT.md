@@ -21,7 +21,7 @@ The fleet already converted that published theorem plus Plancherel into the corr
 
 `QFORM-CROSSBLOCK-RANK-r-FOURIER-v1`,
 
-at `yspennstate/math-open-problems@8624982153e5a2154e4ae8922d2fe4dc77080efc`,
+at `private-source-repository@8624982153e5a2154e4ae8922d2fe4dc77080efc`,
 `proofnet24/QFORM-density/fleet-2026-09-22/interactive/20260922T121109Z-crossblock-and-lower-bounds/REPORT.md`.
 
 I do **not** relabel that theorem as new. Its statement is: if the original coordinates split into independent physical banks `I,J` and the physical cross block `C=A[I,J]` has rank `r>2` with nonzero singular values `s_1,...,s_r`, then arbitrary same-side quadratic and affine terms are allowed and
@@ -165,7 +165,7 @@ Use fleet04/B18's completed
 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`,
 
 scientific commit
-`yspennstate/math-open-problems@4ea84670b15b538f2163d53bf31f81cd1f1eabfa`,
+`private-source-repository@4ea84670b15b538f2163d53bf31f81cd1f1eabfa`,
 path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

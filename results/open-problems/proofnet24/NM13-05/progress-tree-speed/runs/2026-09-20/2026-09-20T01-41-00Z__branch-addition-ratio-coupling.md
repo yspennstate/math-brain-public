@@ -3,7 +3,7 @@ Actual runtime model: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6/maxim
 # NM13-05 T06 — branch-addition coupling and two-sided escape-ratio compression
 
 Date: 2026-09-20.  
-Repository: `yspennstate/math-open-problems`, branch `master`.  
+Repository: `private-source-repository`, branch `master`.  
 Own root: `proofnet24/NM13-05/progress-tree-speed`.  
 Parent target: T06 / intake P0066, Lyons--Pemantle--Peres monotonicity of biased-walk speed on a supercritical Galton--Watson tree without leaves.  
 Status: **PARTIAL / OPEN parent; NEW RESTRICTED THEOREM CANDIDATE pending later independent review.**

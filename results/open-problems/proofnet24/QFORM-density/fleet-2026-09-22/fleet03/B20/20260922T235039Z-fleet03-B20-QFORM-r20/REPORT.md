@@ -17,7 +17,7 @@ No Gaussian, moment, log-concavity, compact-support, connected-support, iid, dia
 
 The immediate input is fleet03/B20 r19,
 
-`yspennstate/math-open-problems@21c78fcc8e4bd9f5c7a872ae3c034b03ca0f88bf`
+`private-source-repository@21c78fcc8e4bd9f5c7a872ae3c034b03ca0f88bf`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T224748Z-fleet03-B20-QFORM-r19/REPORT.md`.
 
@@ -245,7 +245,7 @@ These are exterior-star bank certificates in original coordinates. They retain t
 
 The newest completed designated partner remains fleet04/B20 r3,
 
-`yspennstate/math-open-problems@25ad8faaac5064b6814d51ae63d894fe97c1eac4`,
+`private-source-repository@25ad8faaac5064b6814d51ae63d894fe97c1eac4`,
 
 theorem `QFORM-CROSS-DOMINATED-SECOND-SCHUR-CLOSURE-v1`.
 

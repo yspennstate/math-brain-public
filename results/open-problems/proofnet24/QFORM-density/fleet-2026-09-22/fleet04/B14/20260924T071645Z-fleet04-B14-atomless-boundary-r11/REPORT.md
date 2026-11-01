@@ -108,7 +108,7 @@ The next sharp problem is to prove either:
 
 ## Source pins
 
-- Required Claude source baseline: math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837, proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/.
-- Completed fleet01/B14 theorem: math-open-problems@be9d93b288079c9261fea04074bac234974da89c.
-- Previous fleet04/B14 localization report: math-open-problems@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513.
+- Required Claude source baseline: private-source@e5f71d79eff325201dd0274053d20268ce65b837, proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/.
+- Completed fleet01/B14 theorem: private-source@be9d93b288079c9261fea04074bac234974da89c.
+- Previous fleet04/B14 localization report: private-source@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513.
 - Prior Claude-review corrections retained: no post-rotation independence, no arbitrary-joint coarea inference, no deletion of small dense quadratic tails, and no promotion of a half-line estimate to a full density theorem.

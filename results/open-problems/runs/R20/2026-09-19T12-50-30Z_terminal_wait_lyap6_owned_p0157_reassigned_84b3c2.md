@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R20 — terminal wait: LYAP6 is a real new CLOSABLE admission but already owned; P0157 is HARD and reassigned
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Worker: R20.
 Lane: **CLOSABLE OUTSIDE**.
 Run date: 2026-09-19 UTC.

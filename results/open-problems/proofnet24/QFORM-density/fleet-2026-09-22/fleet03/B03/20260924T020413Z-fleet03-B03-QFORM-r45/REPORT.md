@@ -15,7 +15,7 @@ The unrestricted quadratic-form bounded-density conjecture remains **OPEN**. Ful
 
 The immediate input is fleet03/B03 r44,
 
-`yspennstate/math-open-problems@03013f4567814d42edddfc74ef48c8ee942b17c9`,
+`private-source-repository@03013f4567814d42edddfc74ef48c8ee942b17c9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260924T014218Z-fleet03-B03-QFORM-r44/REPORT.md`.
 
@@ -35,7 +35,7 @@ Its unresolved step was to obtain the missing one-copy quarter power from the li
 
 The fresh fleet03/B20 structural funnel is
 
-`yspennstate/math-open-problems@1e8d908588d359d291adf1d9c926bc9870039041`,
+`private-source-repository@1e8d908588d359d291adf1d9c926bc9870039041`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T004659Z-fleet03-B20-QFORM-r43/REPORT.md`.
 
@@ -361,7 +361,7 @@ The current partner handoff is fleet04/B03 r2, brain commit
 
 with corrected mathematics at
 
-`yspennstate/math-open-problems@05ff82a8d052b024ae584e60dffb7b198fcd7db4`.
+`private-source-repository@05ff82a8d052b024ae584e60dffb7b198fcd7db4`.
 
 Its dependent-sum/difference fractional-budget theorem was reread and is not transplanted to singular-vector coordinates: a rotation of the original product coordinates does not preserve independence.
 

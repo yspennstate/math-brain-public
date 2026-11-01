@@ -28,7 +28,7 @@ Two exact tail-zero endpoints of (ii) are paid below by the pinned e5 Fourier th
 
 The latest completed designated partner consumed in this run is fleet03/B07 r35,
 
-`yspennstate/math-open-problems@3a3334245375f0d72687f3cb482b4478d51f3188`
+`private-source-repository@3a3334245375f0d72687f3cb482b4478d51f3188`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T173750Z-fleet03-B07-qform-r35/REPORT.md`.
 
@@ -77,7 +77,7 @@ The transpose-side projection uses the same selected singular indices. The sibli
 
 The required pinned source was read at exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
@@ -287,7 +287,7 @@ ORIGINAL coordinates with four substantial eigenvalues.
 
 Condition on all original coordinates outside H. Independence and the cap-one laws on H are unchanged, and every outside interaction becomes an arbitrary deterministic affine term. Apply the completed finite-dimensional projected-gradient theorem at
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Corollary 4.1:
 
 on d original coordinates, three actual eigenvalues of modulus at least sigma imply

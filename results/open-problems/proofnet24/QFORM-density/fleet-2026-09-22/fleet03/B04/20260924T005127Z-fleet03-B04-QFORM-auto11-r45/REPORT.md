@@ -21,7 +21,7 @@ The two mathematical inputs used are:
 
 1. **Designated partner fleet04/B04 r2.**  
    `QFORM-HIGH-CARRIER-ANCHORED-DOWNSHIFT-v1`, source-pinned at
-   `yspennstate/math-open-problems@4a54666abf2316bb79b939cef3ea940605a0af57`,
+   `private-source-repository@4a54666abf2316bb79b939cef3ea940605a0af57`,
    path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260924T001353Z-fleet04-B04-QFORM-r2/REPORT.md`.
 
@@ -33,7 +33,7 @@ The two mathematical inputs used are:
 
 2. **Aggregate fixed-pair Fourier theorem.**  
    `QFORM-FIXEDPAIR-AGGREGATE-FOURVOLUME-v1`, source-pinned at
-   `yspennstate/math-open-problems@2a53120a6f9206721f98811b05cd8c80002aab68`,
+   `private-source-repository@2a53120a6f9206721f98811b05cd8c80002aab68`,
    path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T174734Z-fleet01-B09-QFORM-auto11/REPORT.md`.
 

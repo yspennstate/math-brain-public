@@ -4,11 +4,11 @@ Audit date: 2026-09-30 UTC. Classical FEI remains OPEN.
 
 ## Verdict and pinned scope
 
-The analytic conclusions in Theorems 2.1–2.3 and Section 3 of the [audited report](https://github.com/yspennstate/math-open-problems/blob/c4d07e6e2280aa54c767512540d143f930154d3c/research_pushes/2026-09-30-fei-hadamard-rounding-0330z/REPORT.md) are sound under the independent, uniform, disjoint-input hypotheses. This is an independent mathematical review with finite cross-checks, not a formal proof certification, novelty certificate, or proof of full classical FEI.
+The analytic conclusions in Theorems 2.1–2.3 and Section 3 of the [audited report](private-source-repository) are sound under the independent, uniform, disjoint-input hypotheses. This is an independent mathematical review with finite cross-checks, not a formal proof certification, novelty certificate, or proof of full classical FEI.
 
 One concrete defect was found in the pinned verification output: ordinary float conversion of narrow rational intervals does not preserve enclosure. It affects the displayed JSON interval endpoints, not the exact rational acceptance checks or analytic theorems. The author and coordinating researcher were notified; the final repair at `67c4459ae0e8ae85a228c7a5c2629f003910139b` was independently rerun and verified under both binary64 and exact-decimal interpretations (Section 8). This audit preserves the original source files unchanged and reports the pinned defect even if a later commit fixes it.
 
-Audited source commit: `c4d07e6e2280aa54c767512540d143f930154d3c` in `yspennstate/math-open-problems`.
+Audited source commit: `c4d07e6e2280aa54c767512540d143f930154d3c` in `private-source-repository`.
 
 ## 1. Hypotheses and influence convention
 
@@ -123,7 +123,7 @@ A suitable repair is to store numerator/denominator endpoint pairs, or verify th
 
 The intermediate repair `ada352231ccb4f37bf8faa54112a07e2213bd399` correctly enclosed values when JSON numbers were parsed as binary64, but 7 of 20 Hadamard interval pairs still failed as exact decimal literals. For example, the literal upper endpoint `0.04007486224691565` is below the exact rational lower bound for `L=2`, despite its binary64 value being above the exact value. This remaining representation issue was reported immediately.
 
-The final [repair commit](https://github.com/yspennstate/math-open-problems/commit/67c4459ae0e8ae85a228c7a5c2629f003910139b) checks both `Fraction.from_float(endpoint)` and `Fraction(str(endpoint))`, stepping outward until both meanings enclose the rational interval. Its regression cases include exact binary representations of `0.1` and midpoint values between binary and decimal meanings.
+The final [repair commit](private-source-repository) checks both `Fraction.from_float(endpoint)` and `Fraction(str(endpoint))`, stepping outward until both meanings enclose the rational interval. Its regression cases include exact binary representations of `0.1` and midpoint values between binary and decimal meanings.
 
 The final Hadamard checker was fetched from that immutable commit and rerun in isolation. The generated output matched the committed output byte for byte. The independent checker also intercepted all 20 emitted interval pairs and verified exact containment under both meanings. All passed; the regenerated configuration results matched the final output exactly.
 

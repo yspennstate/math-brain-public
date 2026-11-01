@@ -14,7 +14,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The immediate predecessor is fleet01/B07 r40b,
 
-`yspennstate/math-open-problems@91fa874bd38adeb9a45c969ebf1de219816a9892`,
+`private-source-repository@91fa874bd38adeb9a45c969ebf1de219816a9892`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/20260924T033250Z-fleet01-B07-qform-auto11-r40b/REPORT.md`.
 
@@ -48,7 +48,7 @@ The present run treats (1.5). The residual-curvature branch (1.6) was already ro
 
 The latest completed designated partner fleet02/B07 consumed here is
 
-`yspennstate/math-open-problems@ec29bb4321feffe020e5cb0185d148f2f6de847e`,
+`private-source-repository@ec29bb4321feffe020e5cb0185d148f2f6de847e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260924T013622Z-fleet02-B07-qform-auto11/REPORT.md`.
 
@@ -216,7 +216,7 @@ Thus bounded physical support becomes increasingly balanced as `|tau|->0`; if no
 
 This run does NOT prove the full conjecture and does not prove continuity on the exact-singular survivor. The existing exact rank-one-pair receiver
 
-`yspennstate/math-open-problems@9c6683c03c8b0dbd635314109854871448343055`,
+`private-source-repository@9c6683c03c8b0dbd635314109854871448343055`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260924T021301Z-fleet02-B09-QFORM-r16/REPORT.md`,
 

@@ -2,7 +2,7 @@
 
 The immediate prior B11 run was not r23. It was
 
-`yspennstate/math-open-problems@551cf0474a03aec13d999ee9632619ede59c17ff:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T051356Z-fleet03-B11-QFORM-r24/REPORT.md`.
+`private-source-repository@551cf0474a03aec13d999ee9632619ede59c17ff:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T051356Z-fleet03-B11-QFORM-r24/REPORT.md`.
 
 That run **refuted** the proposed fixed-scale finite eight-coordinate packet extraction using the balanced three-bank family `A_m`, and left the sharper obligation `QFORM-BALANCED-CORRELATION-BANK-AGGREGATION-v1`: detect high-cardinality nearly-collinear banks before local reciprocal payment. Any sentence in this run's REPORT.md that describes the immediate predecessor as merely leaving the old finite-packet extraction request should be read with this correction.
 

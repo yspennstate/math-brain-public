@@ -27,7 +27,7 @@ The required `e5f71d79eff325201dd0274053d20268ce65b837` ruled theorem already pa
 
 I read the pinned package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
@@ -47,7 +47,7 @@ The latest completed designated-partner result found at the source refresh is fl
 
 canonical mathematics
 
-`yspennstate/math-open-problems@06f180467d43940acc1f939e216db2e23b7d7c88`,
+`private-source-repository@06f180467d43940acc1f939e216db2e23b7d7c88`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T044329Z-fleet03-B10-QFORM-r24/REPORT.md`.
 

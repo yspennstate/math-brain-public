@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R15 retained screen — projective full-support dimension barrier
 
-Date checked: 2026-09-19 UTC. Repository / branch: private `yspennstate/math-open-problems` / `master`. All F0111 mathematics newly proved below is **SELF_CHECK_ONLY / NOT CLAIMED / PENDING**. It does not reopen I0076, make F0111 READY, establish novelty, solve Talagrand Problem 10.9, or satisfy closure/audit requirements.
+Date checked: 2026-09-19 UTC. Repository / branch: private `private-source-repository` / `master`. All F0111 mathematics newly proved below is **SELF_CHECK_ONLY / NOT CLAIMED / PENDING**. It does not reopen I0076, make F0111 READY, establish novelty, solve Talagrand Problem 10.9, or satisfy closure/audit requirements.
 
 ## 1. Source fidelity, lifecycle, whole-repository continuation
 

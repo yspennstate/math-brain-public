@@ -20,13 +20,13 @@ These failures are consistent with the already-live corrections `QFORM-TWOSHEET-
 
 The designated completed partner used substantively is **fleet02/B16**, run `20260922T153609Z-fleet02-B16-QFORM-auto11`, canonical report
 
-`yspennstate/math-open-problems@85c527c3172670ca9e6200138e1364be554413ac`
+`private-source-repository@85c527c3172670ca9e6200138e1364be554413ac`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T153609Z-fleet02-B16-QFORM-auto11/REPORT.md`.
 
 Its determinant-scaled binary Frostman theorem and inverse-square-root potential bound are used in Section 4. Its earlier product-log envelope from the zero-diagonal triple run, canonical report
 
-`yspennstate/math-open-problems@f1de723dfb00adf76b4a6e73f2336c47676cb6bc`
+`private-source-repository@f1de723dfb00adf76b4a6e73f2336c47676cb6bc`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T142906Z-fleet02-B16-QFORM-auto12/REPORT.md`,
 

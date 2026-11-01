@@ -15,7 +15,7 @@ The bound is uniform in the number of earlier data layers. The proof uses exact 
 
 [Slote, arXiv:2608.01424](https://arxiv.org/html/2608.01424) constructs flat, homogeneous, Hermitian-unitary Pauli expansions and thereby refutes the quantum FEI conjecture. Its anticommuting core cancels cross terms in the operator square. Section 4 uses Hadamard-generated commuting suffixes. Here we examine a specific classical replacement: independent parity controls followed by scalar sign-rounding. Bound (1.1) makes its influence grow exponentially in Slote's degree split. This does not refute classical FEI, nor rule out every conceivable encoding or classicalization.
 
-The earlier project [Booleanity-order report, Section 5](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/proofnet24/P03-fei/continuations/2026-09-20-booleanity-order/REPORT.md) already used a one-layer affine Hadamard construction and the unate-threshold moment argument. That mechanism is credited. The present statement allows an arbitrary input unit vector before the final flat orthogonal/random-sign layer, which makes the influence bound independent of all preceding layers. Novelty outside the project is unverified.
+The earlier project [Booleanity-order report, Section 5](private-source-repository) already used a one-layer affine Hadamard construction and the unate-threshold moment argument. That mechanism is credited. The present statement allows an arbitrary input unit vector before the final flat orthogonal/random-sign layer, which makes the influence bound independent of all preceding layers. Novelty outside the project is unverified.
 
 ## 2. An abstract last-layer theorem
 

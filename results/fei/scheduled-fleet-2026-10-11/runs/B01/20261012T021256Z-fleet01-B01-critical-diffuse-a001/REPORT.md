@@ -189,12 +189,12 @@ and is not counted as evidence.
 
 ## Source pins and literature scope
 
-- A001 critical-prime descent: `yspennstate/math-open-problems` commit
+- A001 critical-prime descent: `private-source-repository` commit
   `c8c6b995401f238e67317ab4d5b44aea6173a845`, run
   `20261012T011119Z-fleet01-B01-quantifier-audit-a001`, REPORT blob
   `662411dfae5b8d91d0b07e449c59274537492500`.
 - A003 exact split and (2/\ln2) Jensen–Shannon cap:
-  `yspennstate/math-open-problems` commit
+  `private-source-repository` commit
   `87f7c6267e56e7a0eb5b8dfd572a6eaaecae6907`, run
   `20261011T210729Z-fleet01-B01-minimal-target-a003`.
 - Owner-approved threshold manuscript: `yspennstate/fourier-entropy-threshold-functions`

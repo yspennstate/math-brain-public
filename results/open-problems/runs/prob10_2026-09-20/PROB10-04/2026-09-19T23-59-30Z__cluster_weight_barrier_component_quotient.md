@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 
 # PROB10-04 run 1 — a universal clause-local second-moment barrier and the full-component quotient route
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **source OPEN / PROB10-04 PARTIAL**.
 

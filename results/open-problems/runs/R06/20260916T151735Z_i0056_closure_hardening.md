@@ -2,7 +2,7 @@ Model: GPT-5.6 Sol. Reasoning: UNVERIFIED by runtime metadata; GPT-6 maximum was
 Problem: Russell Lyons and Yuval Peres, *Probability on Trees and Networks* (2016; current paperback e-version 2026-08-19), Question 6.20; intake I0056. **No movement:** frozen metric width `0 -> 0`; overall source status `PARTIAL`; regular/co-regular branch `PROVED, audit-gated`; unchanged-count since the metric first reached zero = `1`.
 
 Run ID: `20260916T151735Z_i0056_closure_hardening`
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 # 1. Repository recovery; no restart
 

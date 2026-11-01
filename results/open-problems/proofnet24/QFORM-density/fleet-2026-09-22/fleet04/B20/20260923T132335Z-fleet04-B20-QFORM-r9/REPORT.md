@@ -12,10 +12,10 @@ attacking: the first unpaid fleet01/B20 annular-versus-star implication by using
 
 This report uses:
 
-- Claude's corrected decoupling/Fresnel source at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`;
-- fleet01/B20's strengthened two-scale compiler at `math-open-problems@bfa9412bfb743bd30fc104e779f280dce0a0db14`, especially its MSS spectral-window construction and the completed ridge receiver;
-- fleet02/B20's arbitrary-rank N3 compiler at `math-open-problems@19327f690f815425717fcbd07854302df2090970`;
-- the fleet04 correction-safe graph through `math-open-problems@751677f7d247a7d458630ea6a6397374984edc53`.
+- Claude's corrected decoupling/Fresnel source at `private-source@e5f71d79eff325201dd0274053d20268ce65b837`;
+- fleet01/B20's strengthened two-scale compiler at `private-source@bfa9412bfb743bd30fc104e779f280dce0a0db14`, especially its MSS spectral-window construction and the completed ridge receiver;
+- fleet02/B20's arbitrary-rank N3 compiler at `private-source@19327f690f815425717fcbd07854302df2090970`;
+- the fleet04 correction-safe graph through `private-source@751677f7d247a7d458630ea6a6397374984edc53`.
 
 All random banks below consist of original coordinates. Spectral projections are deterministic matrix certificates only. No independence after rotation, worst-fiber conditional-density supremum, arbitrary-joint coarea, or deletion of a small random quadratic term is used.
 

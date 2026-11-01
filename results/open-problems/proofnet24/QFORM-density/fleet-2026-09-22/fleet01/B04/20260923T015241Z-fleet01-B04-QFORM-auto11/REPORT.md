@@ -35,7 +35,7 @@ The full arbitrary-rank target remains open because a higher-rank cross block ca
 
 I use the completed theorem `QFORM-RANKR-TWOSIDED-CONTAMINATION-FOURIER-v1` from
 
-`yspennstate/math-open-problems@8f8913581643a7e7bcbe7d8c178a2255194dfc3d`
+`private-source-repository@8f8913581643a7e7bcbe7d8c178a2255194dfc3d`
 
 at the fleet02/B04 r22 report.
 
@@ -51,7 +51,7 @@ The proof is a joint product-space Fourier/Plancherel estimate, not the refuted 
 
 The newest completed fleet02/B04 comparison, source
 
-`yspennstate/math-open-problems@2f2e25957d3a687bbe89e855661b4a55d477e0cf`,
+`private-source-repository@2f2e25957d3a687bbe89e855661b4a55d477e0cf`,
 
 reinforces the same aggregate-before-inversion principle on a no-pivot Hadamard family: volume and ridge certificates stay uniform while every local pair certificate degenerates. The theorem below implements that principle through a different exact random-cut identity.
 

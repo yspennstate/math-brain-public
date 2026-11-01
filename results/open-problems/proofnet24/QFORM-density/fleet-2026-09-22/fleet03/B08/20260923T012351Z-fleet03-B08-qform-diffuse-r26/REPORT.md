@@ -18,7 +18,7 @@ The live correction ledger was reread. In particular, this report does not use l
 
 The immediate input is own r25,
 
-`yspennstate/math-open-problems@d30dba6db19d1eceabde6222c84a5b57a85506f0`,
+`private-source-repository@d30dba6db19d1eceabde6222c84a5b57a85506f0`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T002108Z-fleet03-B08-qform-diffuse-r25/REPORT.md`.
 
@@ -35,13 +35,13 @@ r25 proves that one of the following **disjoint original-coordinate** packets ex
 
 The bank selection is the completed fleet03/B07 overlap-coloring theorem; an immutable source containing the exact Schur ledger is
 
-`yspennstate/math-open-problems@f27ca4fcb70a4608efe9d4007cf774a7a1fb942d`,
+`private-source-repository@f27ca4fcb70a4608efe9d4007cf774a7a1fb942d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T000734Z-fleet03-B07-qform-r20/REPORT.md`.
 
 A fresh same-assignment result used below is fleet01/B08 `QFORM-RANKR-PHYSICAL-CROSS-L2-v1`, immutable source
 
-`yspennstate/math-open-problems@f97aa31585b7b547a116d4580f898576af4e0842`,
+`private-source-repository@f97aa31585b7b547a116d4580f898576af4e0842`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T004211Z-fleet01-B08-qform-r21/REPORT.md`.
 
@@ -53,7 +53,7 @@ and a continuous `C_0` density.
 
 The designated partner `fleet04/B08` still has no completed current-QFORM handoff at the fresh lookup, so none is fabricated. A compatible completed fleet04 result actually used below is fleet04/B18, source
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 
@@ -283,7 +283,7 @@ Assume the active q=3 triangle has the exact product-preserving form
 `A[H1,H3]=beta u w^T`,
 `A[H2,H3]=gamma v w^T`,                                            (6.1)
 
-on three disjoint original-coordinate banks, with the zero/self-block and aligned-outside hypotheses of fleet03/B09 `QFORM-THREE-BANK-RANKONE-TRIANGLE-v1` (`yspennstate/math-open-problems@f97aa31585b7b547a116d4580f898576af4e0842`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T194535Z-fleet03-B09-QFORM-r16/REPORT.md`).
+on three disjoint original-coordinate banks, with the zero/self-block and aligned-outside hypotheses of fleet03/B09 `QFORM-THREE-BANK-RANKONE-TRIANGLE-v1` (`private-source-repository@f97aa31585b7b547a116d4580f898576af4e0842`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T194535Z-fleet03-B09-QFORM-r16/REPORT.md`).
 
 Let
 

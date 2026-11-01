@@ -13,11 +13,11 @@ The full target remains: for every dimension `n`, every independent real input `
 Fresh owner control remained revision `2026-09-22.15`. The full target is still open. The current correction set rules out, among other things, law-uniform pointwise quadratic Fourier decay, bounded-diameter localization, a universal fixed fragment-count bathtub reduction, and coefficient-perturbation continuity for arbitrary unbounded/remote-fragment laws.
 
 Assigned partner result actually applied: fleet02/B14 r23,
-`yspennstate/math-open-problems@ae5a1d83e5434d0c318a53da7095cebe8ec6f17e:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T015809Z-fleet02-B14-QFORM-r23/REPORT.md`.
+`private-source-repository@ae5a1d83e5434d0c318a53da7095cebe8ec6f17e:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T015809Z-fleet02-B14-QFORM-r23/REPORT.md`.
 Its simultaneous convex-envelope localization theorem is the first step below.
 
 Newest owner-required Claude continuation actually applied: the volume-stability theorem at
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 Its inequality is inserted in Section 8 after the exact reduction.
 
 ## 2. Small-ball functional

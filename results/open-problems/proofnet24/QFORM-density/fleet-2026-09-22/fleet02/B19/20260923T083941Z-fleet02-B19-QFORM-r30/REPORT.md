@@ -17,7 +17,7 @@ The full target is: for every finite n, every product law of independent real X_
 
 The source-correct full reduction is the no-pivot synthesis
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`
 
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`.
 
@@ -31,7 +31,7 @@ The cited Gaussian-padding argument proves that N3(tau,C0) for one fixed tau imp
 
 The newest-Claude package required by the owner was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
@@ -45,7 +45,7 @@ on the one-sheet side. Hence in the exact-rank-three indefinite chamber below th
 
 The current completed designated partner is fleet03/B19 r28:
 
-`yspennstate/math-open-problems@4d5181180f8d5e9e14c9b1c5c5e44679c8c212b9`
+`private-source-repository@4d5181180f8d5e9e14c9b1c5c5e44679c8c212b9`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T080333Z-fleet03-B19-QFORM-r28/REPORT.md`.
 
@@ -214,7 +214,7 @@ The completed fleet01/B19 theorem
 
 at
 
-`yspennstate/math-open-problems@d72be34399b8d0325c715973e7af3a37df7ce227`
+`private-source-repository@d72be34399b8d0325c715973e7af3a37df7ce227`
 
 applies to this exact ORIGINAL-coordinate repartition. Its source self range is three-dimensional, its cross range is two-dimensional, and its transverse row norm is at least `a_0`. With
 

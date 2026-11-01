@@ -14,12 +14,12 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The immediate same-slot predecessor is
 
-`yspennstate/math-open-problems@99841dc027d136e588e06850b969efbd5bce3c32`,
+`private-source-repository@99841dc027d136e588e06850b969efbd5bce3c32`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T011706Z-fleet03-B09-QFORM-r43/REPORT.md`.
 
 It proved the rank-one-star local identity, the dimension-free distance to the aligned model `lambda rr^T + diagonal`, and the Bernoulli disjoint-cross compiler. The analytic receiver used here is the row-marginal-free critical two-volume theorem
 
-`yspennstate/math-open-problems@588fa418bc29d4b889fcbbee2b61370234ceef37`,
+`private-source-repository@588fa418bc29d4b889fcbbee2b61370234ceef37`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T175336Z-fleet01-B03-QFORM-r30/REPORT.md`.
 
 For a residual two-bank form with physical source-coordinate cross matrix `C` and `Z2=e2(CC^T)>0`, that theorem proves
@@ -305,7 +305,7 @@ This is a genuine linear interval bound with arbitrary dense same-leaf curvature
 
 The completed fleet04/B09 theorem is
 
-`yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`,
+`private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
 
 For any literal invertible physical `3x3` cross block `K`, retaining arbitrary dense same-side curvature, it proves

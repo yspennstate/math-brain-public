@@ -16,7 +16,7 @@ I use two source-valid completed results.
 
 1. **Regularized cross-block determinant theorem.** Canonical proof:
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 
 For every original-coordinate cut `I,J`, with `B=A[I,J]`, it proves unconditionally
 
@@ -48,7 +48,7 @@ and the cross-range leverage is at most `1/7`.
 
 2. **Named partner `fleet02/B12`.** Canonical proof:
 
-`yspennstate/math-open-problems@5924039504a3f27bdfa9079c4d054422a26baaf2:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/fleet02-B12-20260922T1251Z-qform-additional-eigenvalue/REPORT.md`.
+`private-source-repository@5924039504a3f27bdfa9079c4d054422a26baaf2:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/fleet02-B12-20260922T1251Z-qform-additional-eigenvalue/REPORT.md`.
 
 If a physical `m x m` symmetric block (`m>=4`) has at least `m-1` eigenvalues all `>=L` or all `<=-L`, while the remaining eigenvalue is arbitrary, then independent density-`<=1` coordinates plus every affine tilt have density
 

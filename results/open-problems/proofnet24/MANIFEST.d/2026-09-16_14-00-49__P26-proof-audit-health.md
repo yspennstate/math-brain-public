@@ -1,7 +1,7 @@
 # ProofNet24 P26 — immutable archive/health fragment
 
 **Run:** `2026-09-16_14-00-49`  
-**Repository / branch:** `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** `private-source-repository` / `master`  
 **Track:** `proofnet24/P26-proof-audit-recovery`  
 **Purpose:** bounded GitHub preservation/health evidence for the selected 20-track registry plus exact delivery receipt for this P26 run.
 

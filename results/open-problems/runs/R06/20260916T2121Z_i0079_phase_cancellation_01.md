@@ -5,7 +5,7 @@ Problem/source: Héctor Jardón-Sánchez, Sam Mellick, Antoine Poulin, Konrad Wr
 # R06 CLOSABLE OUTSIDE — I0079 run 1: exact phase cancellation on products of equal regular trees
 
 Run time: 2026-09-16T21:21Z.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Delivery: private GitHub only.
 
 ## 1. Continuity and why I0056 was not restarted

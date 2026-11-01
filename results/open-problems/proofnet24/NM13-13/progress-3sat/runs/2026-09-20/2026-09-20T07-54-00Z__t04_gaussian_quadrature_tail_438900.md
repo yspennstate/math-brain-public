@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — no authentica
 # NM13-13 — T04 cluster-aware random 3-SAT: Gaussian-quadrature Hausdorff tail gives a 4.38900 candidate upper bound
 
 Date: 2026-09-20  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker root: `proofnet24/NM13-13/progress-3sat/`  
 Parent: **T04 — classical iid random 3-SAT with independent fair signs on three distinct variables per clause**  
 Status: **OPEN / PARTIAL; CANDIDATE_FULL for the explicit fixed-count upper endpoint 4.38900, pending later independent review**

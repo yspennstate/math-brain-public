@@ -21,7 +21,7 @@ The old one-pivot route is intentionally not used: a previously constructed exac
 
 Latest completed designated partner consumed before publication:
 
-`yspennstate/math-open-problems@4f5ee2dc112f258cb5dad4c9be03a9ae3573be6b`
+`private-source-repository@4f5ee2dc112f258cb5dad4c9be03a9ae3573be6b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260924T104017Z-fleet03-B07-qform-r52/REPORT.md`.
 
@@ -48,7 +48,7 @@ For analytic payment I use the completed marginal-free physical-crossing theorem
 
 `QFORM-Z3-CROSSING-MARGINAL-FREE-v1`
 
-from fleet02/B03, source-pinned at `math-open-problems@df738b7f0821d9af56dfd992cab10ecc6704e3fb`: for every literal physical cut `M=A[I,J]` with
+from fleet02/B03, source-pinned at `private-source@df738b7f0821d9af56dfd992cab10ecc6704e3fb`: for every literal physical cut `M=A[I,J]` with
 
 `Z_3=e_3(MM^T)>0`,
 
@@ -59,7 +59,7 @@ all same-side blocks, outside coordinates and affine terms arbitrary,
 
 and the density on that branch is continuous.
 
-The mandatory pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` is used separately in Section 6 at an actual live partner inequality.
+The mandatory pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` is used separately in Section 6 at an actual live partner inequality.
 
 ## 3. Joint rank-four carrier theorem
 
@@ -282,7 +282,7 @@ are genuine aggregate structural currency but cannot, by themselves, be inverted
 
 The exact pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 proves the `D_k` volume argument and the Fourier-to-fractional-potential conversion. Running its `q=2` Jensen form at `k=2` gives, for every actual physical cut with
 

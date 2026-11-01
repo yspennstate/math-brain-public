@@ -3,7 +3,7 @@
 **Run:** `B17-20260921T111115Z-r28`  
 **Status:** PARTIAL; full Fourier entropy–influence (FEI) remains OPEN / NOT PROVED.  
 **Brain label:** WITHOUT_VERIFIED_BRAIN.  
-**Fresh source state read before derivation:** `yspennstate/math-open-problems` master `a0db60b3f18db223bfb0a220241b69132d94139c`.  
+**Fresh source state read before derivation:** `private-source-repository` master `a0db60b3f18db223bfb0a220241b69132d94139c`.  
 **Live role:** FEI new proof mechanisms.  
 **Named universal obstruction attacked:** the product-phase/total-correlation route needs a **KL-scale** dependence payment in the many-rare-coordinate regime; the available phase comparison first produces an unweighted square-root/Hellinger displacement, which loses the rare-event logarithm.  
 **Method:** exact Boolean construction + tensorization + sequential comparison. This is deliberately different from the previous B17 exact-product rigidity proof and from the signed-diagonal route.

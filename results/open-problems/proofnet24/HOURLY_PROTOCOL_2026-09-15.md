@@ -20,7 +20,7 @@ Effective user instruction: 2026-09-15, Asia/Jerusalem. This protocol replaces o
 
 ## Delivery and continuity
 
-- Repository: `yspennstate/math-open-problems`; branch: `master`; preserve private visibility.
+- Repository: `private-source-repository`; branch: `master`; preserve private visibility.
 - Deliver research directly to GitHub. Do not send, draft, or forward email, contact collaborators, or send routine digests. Do not invoke Gmail for routine continuity, coordination, archival, or notification. The workers' task-level email and push-notification flags were already false when inspected; the old prompts nevertheless contained explicit Gmail-send actions, which this protocol replaces.
 - Read the repository's root README, this protocol, the latest complete report and ledger for your exact problem, and two relevant completed peer reports before the main attack. Identify evidence by actual repository path, commit/blob SHA, and claim ID. Read the full proof relevant to an imported lemma, not a status label or summary.
 - Discover existing problem folders and case-sensitive track aliases before choosing a new path. Do not move, delete, or overwrite historical reports. Use read-only original research files when a needed source is not in GitHub and those files are actually accessible. Do not reconstruct inaccessible hypotheses from memory or vague summaries. Mark missing sources and do useful conditional mathematics with explicitly stated hypotheses instead.

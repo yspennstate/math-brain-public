@@ -1,6 +1,6 @@
 # Stronger uniform-all-level product-band receiver
 
-This addendum improves the bounded-target estimate in the companion [REPORT.md](https://github.com/yspennstate/math-open-problems/blob/06480f5486450bc5b4230280ecbd5ae89a687d88/proofnet24/QFORM-density/interactive/20260923T203741Z-independent-v-square-product-band/REPORT.md). The earlier inequalities are true, but the actual physical-H convolution supplies a stronger *conditional* cap and removes the restriction \(|s|\le1\).
+This addendum improves the bounded-target estimate in the companion [REPORT.md](private-source-repository). The earlier inequalities are true, but the actual physical-H convolution supplies a stronger *conditional* cap and removes the restriction \(|s|\le1\).
 
 ## Global band lemma
 

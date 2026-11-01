@@ -26,7 +26,7 @@ Neither theorem below asserts that the bare three-eigenvalue hypothesis automati
 
 At
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`,
 
 the proved fifth-volume theorem D_5 states: for any ORIGINAL-coordinate cross block M=A_IJ,
@@ -47,7 +47,7 @@ The same source proves D': if the three-volume row marginals satisfy alpha_i<=h<
 
 The current volume-tail package at
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md`,
 
 supplies, for `T2(M)=sum_{j>=3}s_j(M)^2` and any row projection P,
@@ -63,7 +63,7 @@ Its sharper terminal coefficient under max P_ii<=1/2 and leakage<=sqrt(T2)/15 is
 
 The completed fleet03/B12 r23 scalar-Schur compiler is
 
-`yspennstate/math-open-problems@4894ced504d555e84620c46029ed08a2af389d9f`,
+`private-source-repository@4894ced504d555e84620c46029ed08a2af389d9f`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T024437Z-qform-eigenvalue-r23/REPORT.md`.
 
 If a terminal Schur form has cap B/L, any preceding chain of ORIGINAL-coordinate scalar pivots with

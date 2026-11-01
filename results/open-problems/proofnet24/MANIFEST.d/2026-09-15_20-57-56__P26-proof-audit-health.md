@@ -1,6 +1,6 @@
 # ProofNet24 P26 health / archive index — 2026-09-15 20:57:56 Asia/Jerusalem
 
-Canonical repository: `yspennstate/math-open-problems`, branch `master`.
+Canonical repository: `private-source-repository`, branch `master`.
 
 No email or Gmail source/action was used. No Library/Drive mirroring was required for delivery.
 

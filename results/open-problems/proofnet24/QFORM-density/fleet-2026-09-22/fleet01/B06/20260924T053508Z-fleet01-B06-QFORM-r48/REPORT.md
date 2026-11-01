@@ -15,7 +15,7 @@ The unrestricted QFORM conjecture remains OPEN. Global continuity remains OPEN. 
 
 Immediate predecessor:
 
-- fleet01/B06 r47, `yspennstate/math-open-problems@f9c285a20c529904887122c7def9ca3a2afb484b`,
+- fleet01/B06 r47, `private-source-repository@f9c285a20c529904887122c7def9ca3a2afb484b`,
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T043511Z-fleet01-B06-QFORM-r47/REPORT.md`.
 
 It reduced one localized endpoint to a literal two-hub carrier-plane certificate
@@ -27,7 +27,7 @@ inside the exact-zero-twist collision branch, without asserting that the physica
 Completed results used here:
 
 1. **Designated partner fleet02/B06.** `QFORM-DIAG-RANK1-SQRT-SMALLBALL-v1`, immutable source containing the completed proof:
-   `yspennstate/math-open-problems@96940cec9f8a2d4ca231a77d1324cfb7c59a87ad`,
+   `private-source-repository@96940cec9f8a2d4ca231a77d1324cfb7c59a87ad`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/fleet02-B06-20260924T013401Z-1fca9092/REPORT.md`.
    For an original-product quadratic remainder with matrix `D+lambda w w^T`, arbitrary affine terms, and `L=||D+lambda w w^T||op>0`, it proves
 
@@ -36,18 +36,18 @@ Completed results used here:
    with `H_*=10.443428396672811...`.
 
 2. **Designated partner fleet02/B06 weighted projection theorem.** `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`,
-   `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+   `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
    In particular, for every unit vector `u` supported on an original-coordinate product bank,
 
    `||p_(u dot X)||infinity <= sqrt(e)`.                            (1.3)
 
 3. Independently checked exact-rank crossing theorem with arbitrary internal functions,
-   `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,
+   `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,
    `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 4. Own determinant-only indefinite-pair quarter-Riesz kernel from r41,
-   `yspennstate/math-open-problems@d5064b38d386be7e6e2e3c6968002d04bc0f0717`,
+   `private-source-repository@d5064b38d386be7e6e2e3c6968002d04bc0f0717`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T230410Z-fleet01-B06-QFORM-r41/REPORT.md`:
    after completing an invertible indefinite literal physical pair `B`, `D_B=|det B|`, its conditional density obeys
 

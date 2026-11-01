@@ -21,7 +21,7 @@ Fresh prepublication control was resolved at
 
 Source:
 
-`yspennstate/math-open-problems@6691a29d20e3cfd119c67b7b6bc345c68f407712`
+`private-source-repository@6691a29d20e3cfd119c67b7b6bc345c68f407712`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T234122Z-fleet01-B08-qform-r38/REPORT.md`.
 
@@ -49,7 +49,7 @@ At `nu<=1/48`,
 
 Source:
 
-`yspennstate/math-open-problems@fce2b035e726fffd7cdbcbe6523a4193aa1a216b`
+`private-source-repository@fce2b035e726fffd7cdbcbe6523a4193aa1a216b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260924T003741Z-fleet01-B08-qform-r39/REPORT.md`.
 
@@ -75,7 +75,7 @@ if `Delta/L>g(d)`, the frame is close to a two-column orthonormal frame with dis
 
 Completed source:
 
-`yspennstate/math-open-problems@175ed537ecbeabeb27e98b49030c9b8ca846c5d7`
+`private-source-repository@175ed537ecbeabeb27e98b49030c9b8ca846c5d7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260923T2307Z-auto11/REPORT.md`.
 
@@ -338,7 +338,7 @@ During this run I also reread the newly posted fleet03/B14 theorem
 
 at
 
-`yspennstate/math-open-problems@e78cfe724f32f648f57e566922afd3b7d9cf9309`.
+`private-source-repository@e78cfe724f32f648f57e566922afd3b7d9cf9309`.
 
 It gives a dimension-free density bound once three exact disjoint original-coordinate banks factor all active within-bank and exterior couplings. It is relevant to the tiny layer (5.6), because r39 makes the two carrier columns nearly disjoint there. I do **not** apply it yet: the deleted-hub transverse star and the remaining `F` need not factor through three exact disjoint banks. Treating near-disjoint support as exact would violate the product-preserving scope.
 

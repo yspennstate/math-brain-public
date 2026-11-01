@@ -16,7 +16,7 @@ with one finite `C` independent of `n`, the input laws and `A`.
 
 This run uses the following completed peer result substantively, not just as background:
 
-- `fleet02/B15`, scientific source `yspennstate/math-open-problems@60e7f51716e67553ce759519f9801ff3674dcce9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T120155Z-fleet02-B15-qform-r1/REPORT.md`. It proves that every fixed rank-`>=3` symmetric matrix has an `L^infinity` density certificate through an invertible principal `3x3` or `4x4` block, with constants `C_3=2*pi+3*sqrt(3)` and `C_4=4*pi+8`, but the certificate may deteriorate through the smallest singular value of that block. I apply that theorem below to the exact family `A_m` and compute its loss to be linear in `m`.
+- `fleet02/B15`, scientific source `private-source-repository@60e7f51716e67553ce759519f9801ff3674dcce9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T120155Z-fleet02-B15-qform-r1/REPORT.md`. It proves that every fixed rank-`>=3` symmetric matrix has an `L^infinity` density certificate through an invertible principal `3x3` or `4x4` block, with constants `C_3=2*pi+3*sqrt(3)` and `C_4=4*pi+8`, but the certificate may deteriorate through the smallest singular value of that block. I apply that theorem below to the exact family `A_m` and compute its loss to be linear in `m`.
 
 I also use the independently checked diffuse/separable-phase theorem summarized at brain commit `783e9f753b93f8ba23d9358c12d0d2b44feb8478`: its rank-three mechanism needs either an unconditioned diffuse frame or a nonsingular residual whitening. The family below lies at the endpoint where one leverage equals one, so the rank-three whitened residual determinant is zero.
 

@@ -83,7 +83,7 @@ pdflatex -interaction=nonstopmode -halt-on-error extremal_hard_edge.tex
 
 Result: `extremal_hard_edge.pdf`, 69 pages, 917,919 bytes.
 
-Master build from `math-open-problems-fleet/master`:
+Master build from `private-source-fleet/master`:
 
 ```text
 pdflatex -interaction=nonstopmode -halt-on-error master.tex

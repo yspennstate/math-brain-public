@@ -18,7 +18,7 @@ The new contribution is narrow but directly addresses the r37 debt. The two-hub 
 
 ### 1.1 Immediate B08 predecessor
 
-`yspennstate/math-open-problems@58b2a0752f409dd48ae5e39851ac84f13be4470b`
+`private-source-repository@58b2a0752f409dd48ae5e39851ac84f13be4470b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T122051Z-fleet03-B08-qform-diffuse-r37/REPORT.md`.
 
@@ -30,7 +30,7 @@ when the light-light block is diagonal and the normalized row leverage is at mos
 
 ### 1.2 Exact rank-two cross-bank theorem with arbitrary self curvature
 
-`yspennstate/math-open-problems@1287456c9a709f8c3f117c23faa46e75f4560d01`
+`private-source-repository@1287456c9a709f8c3f117c23faa46e75f4560d01`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T194649Z-fleet03-B06-qform-r17/REPORT.md`.
 
@@ -53,7 +53,7 @@ Continuity is not asserted by this route.
 
 ### 1.3 Grouped double-incident rank-two theorem
 
-`yspennstate/math-open-problems@c248abc9be918698c6d5a68108c615ba1c4790b3`
+`private-source-repository@c248abc9be918698c6d5a68108c615ba1c4790b3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T204103Z-1dd824/REPORT.md`.
 
@@ -78,7 +78,7 @@ This is important here because it shows that the designated partner's anisotropi
 
 ### 1.4 Arbitrary-rank aggregate E2 theorem
 
-`yspennstate/math-open-problems@2cb64b71f8aafa0892547dffebcf6af647ea7c64`
+`private-source-repository@2cb64b71f8aafa0892547dffebcf6af647ea7c64`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T102108Z-fleet03-B08-qform-diffuse-r32/REPORT.md`.
 
@@ -105,7 +105,7 @@ All same-bank curvature, extra residual cross couplings, and extra spectrum are 
 
 The current newest volume package is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/`.
 
@@ -113,7 +113,7 @@ The part applied below is its perturbative diffuse exit: if an actual physical c
 
 ### 1.6 Designated partner fleet04/B08
 
-`yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
+`private-source-repository@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T091414Z-fleet04-B08-QFORM-r1/REPORT.md`.
 

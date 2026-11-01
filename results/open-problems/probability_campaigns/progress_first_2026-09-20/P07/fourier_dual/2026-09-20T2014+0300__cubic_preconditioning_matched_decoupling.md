@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 
 **Status:** **OPEN / PROVED PARTIAL** on Randomstrasse101 Conjecture 18.  
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`.  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`.  
+**Repository / branch:** private `private-source-repository` / `master`.  
 **Fresh pre-write master:** `fd79845ecc0c83bd1b3ee59dc97011536ffbfc2f`.  
 **Previous own substantive checkpoint:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T1912+0300__gauge_projected_involution_clipping.md`.  
 **Latest complementary P07-A checkpoint read:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1845+0300__orthogonal_core_mass_variance_bridge.md`. P07-A owns the orthogonal-core mass / variance / influence route to the sharp leading constant. This report stays on the Fourier-dual bounded-certificate route.

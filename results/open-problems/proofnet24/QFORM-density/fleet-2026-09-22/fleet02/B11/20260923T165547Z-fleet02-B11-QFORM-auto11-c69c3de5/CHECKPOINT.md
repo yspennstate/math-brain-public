@@ -30,7 +30,7 @@ Now let `D=A_{({0} union S),T}`. The Cauchy--Binet terms containing the hub row 
 
 `(s_1(D)s_2(D)s_3(D))^2=e_3(D D^T)>=||h||^2 e_2(CC^T).`       (2)
 
-Therefore the exact-rank crossing theorem in `math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`, `interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`, applies directly whenever `det(G_T)>0` and gives
+Therefore the exact-rank crossing theorem in `private-source@4f92aeb74083c6f95cb314a11fed1b812eacef9a`, `interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`, applies directly whenever `det(G_T)>0` and gives
 
 `||p_Q||_inf <=6 [det(M)^2 c Delta_S det(G_T)]^(-1/6).`         (3)
 

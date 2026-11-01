@@ -9,7 +9,7 @@
 ## 0. Fresh control and supersession
 
 
-Fresh scientific master and the current P03-FEI entry rules were read from `yspennstate/math-open-problems` master, together with the gate reformulation, read-once candidate source, the latest completed fleet02/B18 lead, the current B18 first-cell checker, and the peer results named below.
+Fresh scientific master and the current P03-FEI entry rules were read from `private-source-repository` master, together with the gate reformulation, read-once candidate source, the latest completed fleet02/B18 lead, the current B18 first-cell checker, and the peer results named below.
 
 The live source-exact candidate is
 

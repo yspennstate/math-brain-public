@@ -19,7 +19,7 @@ This run changes mechanism from the preceding threshold-Schur assembly and uses 
 
 The main fresh structural input is fleet03/B20 r42,
 
-`yspennstate/math-open-problems@eb50a2dc3acc7884f284a1f94847106c89bf5889`,
+`private-source-repository@eb50a2dc3acc7884f284a1f94847106c89bf5889`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T234606Z-fleet03-B20-QFORM-r42/REPORT.md`.
 
 Its theorem `QFORM-C3-LOCAL-OVERLAP-OPERATOR-v1` implies that under `s_3(A)>=1`, after already-paid branches, every unpaid state has all literal diagonals
@@ -40,7 +40,7 @@ The branches discarded before this frontier are full-law payments: a diagonal `>
 
 The second fresh input is fleet01/B09,
 
-`yspennstate/math-open-problems@8b5af512f019ed81b6f3947c20771389856d18f8`,
+`private-source-repository@8b5af512f019ed81b6f3947c20771389856d18f8`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T235245Z-fleet01-B09-QFORM-auto11/REPORT.md`.
 
 For the fixed physical pair `H`, write in original coordinates
@@ -221,7 +221,7 @@ This is the run's main progress: the two-anchor overlap-two sector is reduced to
 
 The designated fleet04/B19 theorem consumed is `QFORM-NULL-COLOOP-ADAPTIVE-HY-STABILITY-v1`, canonical source
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 
 In its exact residual-diffuse rank-three null-coloop scope, for `0<D_res<=1` and `|det M_3|>=1`, it proves a continuous density with

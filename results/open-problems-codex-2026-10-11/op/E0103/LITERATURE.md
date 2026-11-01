@@ -67,7 +67,7 @@ The OpenAlex source-resolution and citation requests all returned HTTP 429, citi
 - math_recall.py "mobile Boolean coverage inertial"; walked claim_581c9552f43e1f4cf92726d32a39b9a4720c921de8094cf33857ac37ef5fce39 with --id.
 - brain.py recall "inertial Boolean coverage mistakes" and "inertial Boolean coverage".
 - rg E0103 in probability_1000_intake_* ledgers and codex_pool_2026_10_10. Initial literal wildcard path failed under PowerShell; directory enumeration followed by rg succeeded. E0103-A001 in intake_E_20260908 had a point-law heuristic, no coverage proof, and an incorrect claim about infinite mean speeds growing superlinearly. The present attempt corrects that issue.
-- git ls-tree of origin/master in the read-only math-open-problems checkout, filtered for E0103, inertial and mobile-Boolean names. It exposed adjacent E0105 reports but no named E0103 result. No repository was modified, and this filename-only scan is not an exhaustive content search.
+- git ls-tree of origin/master in the read-only private-source checkout, filtered for E0103, inertial and mobile-Boolean names. It exposed adjacent E0105 reports but no named E0103 result. No repository was modified, and this filename-only scan is not an exhaustive content search.
 
 Brain cards were treated as hints. In particular their warning that a two-set void reduction is not a coverage solution was observed: ATTEMPT.md supplies the geometric covariance estimate and resulting probability bounds rather than stopping at the reduction.
 

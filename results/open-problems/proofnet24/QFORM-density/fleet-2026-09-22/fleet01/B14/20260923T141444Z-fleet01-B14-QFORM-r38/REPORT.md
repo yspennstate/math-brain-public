@@ -11,7 +11,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 ## 1. Control and correction scope
 
 
-The newest completed designated-partner result consumed is fleet02/B14 r37, canonical `yspennstate/math-open-problems@66d12f0c2a0691601221d8e827736d24c56ca4f0:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T135912Z-fleet02-B14-QFORM-r37/REPORT.md`, read-back blob `8dc939d26c3055ccda1e662ae79c27769dbce2e0`. Its exact active-interval partition identity is applied in Section 6.
+The newest completed designated-partner result consumed is fleet02/B14 r37, canonical `private-source-repository@66d12f0c2a0691601221d8e827736d24c56ca4f0:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T135912Z-fleet02-B14-QFORM-r37/REPORT.md`, read-back blob `8dc939d26c3055ccda1e662ae79c27769dbce2e0`. Its exact active-interval partition identity is applied in Section 6.
 
 ## 2. A sharp fractional bathtub bound
 
@@ -172,4 +172,4 @@ Full QFORM is still OPEN. The new theorem closes the branch in which an original
 - Completed partner fleet02/B14 r37 applied at equations (6.5)-(6.7).
 - No pointwise quadratic Fourier decay, post-rotation independence, support diameter, fragment count, moment, centering or log-concavity assumption is used.
 - Essential boundedness is proved in the stated scopes; continuity is not separately claimed.
-- Changed-file allowlist is this report only in `math-open-problems`; content was manually reviewed for secrets/private nonmathematical material. Repository access used only the authorized GitHub connector. No paid/remote model or workflow call, email, notification, scheduler, visibility or permission mutation was made.
+- Changed-file allowlist is this report only in `private-source`; content was manually reviewed for secrets/private nonmathematical material. Repository access used only the authorized GitHub connector. No paid/remote model or workflow call, email, notification, scheduler, visibility or permission mutation was made.

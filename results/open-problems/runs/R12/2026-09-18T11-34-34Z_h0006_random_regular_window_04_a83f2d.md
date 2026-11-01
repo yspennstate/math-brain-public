@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R12 HARD OUTSIDE — H0006 fourth run: the sparse finite-graph window is `xi ~ N^{1/3}`, not the hard-cap `sqrt(N)` scale
 
-Repository / branch: private `yspennstate/math-open-problems`, `master`.
+Repository / branch: private `private-source-repository`, `master`.
 Deployment: `NEW-METHODS-2026-09-16`.
 Current exclusive claim: `operations/claims/H0006.md`.
 Current source: Achyut Kumar (2026), arXiv:2608.15987, Section 12.3 open problem (4), **“Finite-size scaling on `G_n`.”**

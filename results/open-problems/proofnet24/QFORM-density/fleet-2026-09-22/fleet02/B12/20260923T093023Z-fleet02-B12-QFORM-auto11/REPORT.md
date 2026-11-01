@@ -13,7 +13,7 @@ Continuity: **not claimed by this branch**.
 
 The required pinned Claude package was read at exact commit
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
@@ -33,7 +33,7 @@ The theorem allows arbitrary self blocks and outside couplings and is proved in 
 
 The designated partner fleet03/B12 was read at
 
-`yspennstate/math-open-problems@b46affed774bb2868dcbe52e0d5c0111b1ab904f`,
+`private-source-repository@b46affed774bb2868dcbe52e0d5c0111b1ab904f`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T091613Z-qform-eigenvalue-r29/REPORT.md`.
 

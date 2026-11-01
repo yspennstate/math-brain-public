@@ -18,7 +18,7 @@ The unrestricted owner target remains open.  The theorem below gives a dimension
 
 The completed projected-gradient theorem is source-pinned at
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`
 
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`.
 
@@ -32,7 +32,7 @@ The affine term is unrestricted.  The proof uses only original-coordinate slicin
 
 The designated completed partner result is
 
-`yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e`
+`private-source-repository@9ce47e2a0f2c8434d901df13a218450c2189d80e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260922T192552Z-fleet04-B12-mixed-shear-r1/REPORT.md`.
 

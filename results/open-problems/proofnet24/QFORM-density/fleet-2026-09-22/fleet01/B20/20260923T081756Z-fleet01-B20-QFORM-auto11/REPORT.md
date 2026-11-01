@@ -13,7 +13,7 @@ Continuity: unchanged globally; the unrestricted target continuity statement rem
 
 The completed designated-partner result consumed is:
 
-`yspennstate/math-open-problems@4ef597fe9dea9c5b4a91d8ef5d87cb188fe59086`
+`private-source-repository@4ef597fe9dea9c5b4a91d8ef5d87cb188fe59086`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T070214Z-fleet02-B20-QFORM-auto11/REPORT.md`.
 
@@ -45,10 +45,10 @@ and a preceding fixed-scale near-kernel theorem. The unrestricted QFORM theorem 
 Two reviewed analytic receivers used below are:
 
 * rank-two affine half-Riesz / rank-three physical-pivot consequence:
-  `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+  `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
   `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`;
 * physical indefinite-pair logarithmic smoothing:
-  `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+  `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
   `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 ## 2. New theorem — `QFORM-HIGHLEVERAGE-ROW-STAR-COMPILER-v1`

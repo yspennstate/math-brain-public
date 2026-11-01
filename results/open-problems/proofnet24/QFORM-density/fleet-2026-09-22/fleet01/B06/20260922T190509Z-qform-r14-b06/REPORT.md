@@ -11,7 +11,7 @@
 The sole target remains: for independent real coordinates with densities `0<=f_i<=1` and a real symmetric `A` having at least three eigenvalues of modulus at least one, prove a universal essential bound on the density of `X^T A X`, or give a valid target counterexample. No moment, support, Gaussian, log-concave, post-rotation-independence, or diagonal-basis assumption is introduced.
 
 
-Named partner actually consumed and applied: fleet02/B06 run `b06-20260922T155426Z-9fd56fa68a65`, canonical report `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. I use its proved `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1` in dimension one:
+Named partner actually consumed and applied: fleet02/B06 run `b06-20260922T155426Z-9fd56fa68a65`, canonical report `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. I use its proved `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1` in dimension one:
 
 `||p_{sum_j c_j X_j}||_infinity <= sqrt(e) / ||c||_2`                                  (1.1)
 

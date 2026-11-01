@@ -6,10 +6,10 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. This supplement belongs to run `fleet0
 
 Source pins actually used:
 
-- designated partner fleet02/B16: `yspennstate/math-open-problems@c8258480a0bfb67e9b128e67c477c5c5dcdd38e8`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/fleet02-B16-20260923T163017Z-auto11b/REPORT.md`; in its true-near-coloop exact-rank-three scope with nonzero hub pivot it proves
+- designated partner fleet02/B16: `private-source-repository@c8258480a0bfb67e9b128e67c477c5c5dcdd38e8`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/fleet02-B16-20260923T163017Z-auto11b/REPORT.md`; in its true-near-coloop exact-rank-three scope with nonzero hub pivot it proves
   `||p_Q||_infinity <= 13.0639452949/sqrt(|A_00|)`;
-- actual bounded-density projection theorem: `yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`; a normalized one-dimensional projection of independent cap-one coordinates has density cap at most `sqrt(2)`;
-- nonlinear receiver: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, Theorem A; for three genuinely independent cap-one scalar variables and a symmetric `3 x 3` quadratic matrix whose eigenvalues all have modulus at least `sigma`, arbitrary affine terms included, the output density is at most `6 sqrt(pi)/sigma`.
+- actual bounded-density projection theorem: `private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`; a normalized one-dimensional projection of independent cap-one coordinates has density cap at most `sqrt(2)`;
+- nonlinear receiver: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, Theorem A; for three genuinely independent cap-one scalar variables and a symmetric `3 x 3` quadratic matrix whose eigenvalues all have modulus at least `sigma`, arbitrary affine terms included, the output density is at most `6 sqrt(pi)/sigma`.
 
 ## 1. Three-source-bank conditioning compiler
 

@@ -106,7 +106,7 @@ A finite-support version remains true: if the positivity set of `f*f` has measur
 
 ## 5. Completed fleet04 mathematics applied to an actual linear-small-ball branch
 
-The designated partner `fleet04/B03` had no completed current-QFORM handoff or canonical QFORM run available at the fresh scan, so no partner result is invented. I instead apply the completed compatible fleet04 result from `fleet04/B16`, run `20260922T161909Z-fleet04-B16-QFORM-r2`, canonical mathematics `yspennstate/math-open-problems@58c23c624db350cf44f0c836daa3582eb7e2d266`.
+The designated partner `fleet04/B03` had no completed current-QFORM handoff or canonical QFORM run available at the fresh scan, so no partner result is invented. I instead apply the completed compatible fleet04 result from `fleet04/B16`, run `20260922T161909Z-fleet04-B16-QFORM-r2`, canonical mathematics `private-source-repository@58c23c624db350cf44f0c836daa3582eb7e2d266`.
 
 That theorem concerns an exact-rank-three frame in its nested-heavy branch. If physical row `i` has leverage `c>1/2` and row `j` has residual leverage `h>1/2`, then its fixed-pair determinant-bank mass satisfies
 

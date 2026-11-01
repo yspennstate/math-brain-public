@@ -15,11 +15,11 @@ Fresh `math-research-brain/main` was resolved at invocation start and refreshed 
 
 Required source package read at the owner-pinned commit:
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
 Reviewed sharp Hausdorff--Young `q`-dependent source:
 
-- `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
+- `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 Newest designated partner consumed at equation level:
 
@@ -27,10 +27,10 @@ Newest designated partner consumed at equation level:
 
 Other current sources used:
 
-- grouped projection / exact-rank crossing source `yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`, `NEW_PROJECTED_CROSSING.md`;
-- fleet03/B04 r40 sharp critical `E2` and pivoted `C1` receiver, `yspennstate/math-open-problems@8192c4990fff2ba5dee1ce62fdf92e815b5b89c1`;
-- current Fisher-information continuation `yspennstate/math-open-problems@4a65677d185d35154dc3dfae320c5df9f939b8a2`, `FISHER_INFORMATION.md`;
-- preceding fleet02/B02 overlap-compound report `yspennstate/math-open-problems@edbef27e79cf6725a25aad1f9bbcd1e3eaf61583`.
+- grouped projection / exact-rank crossing source `private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`, `NEW_PROJECTED_CROSSING.md`;
+- fleet03/B04 r40 sharp critical `E2` and pivoted `C1` receiver, `private-source-repository@8192c4990fff2ba5dee1ce62fdf92e815b5b89c1`;
+- current Fisher-information continuation `private-source-repository@4a65677d185d35154dc3dfae320c5df9f939b8a2`, `FISHER_INFORMATION.md`;
+- preceding fleet02/B02 overlap-compound report `private-source-repository@edbef27e79cf6725a25aad1f9bbcd1e3eaf61583`.
 
 The live corrections are respected: no law-uniform scalar pointwise Fresnel decay, no post-rotation or post-Schur independence, no arbitrary-joint coarea cap, no worst conditional-density supremum, no selection of one dimension-degrading minor from aggregate mass, and no deletion of a small nonzero coefficient tail on unbounded product inputs.
 

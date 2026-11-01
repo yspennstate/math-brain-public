@@ -16,7 +16,7 @@ Continuity is proved on every branch where the `L^1_t` conclusion is obtained. I
 
 The designated partner result used first is fleet02/B02:
 
-- `yspennstate/math-open-problems@d6730c301e46e6337bc3b32e30eb3d04f07dc90b`
+- `private-source-repository@d6730c301e46e6337bc3b32e30eb3d04f07dc90b`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T050831Z-fleet02-B02-QFORM-auto11-f98b4bb5/REPORT.md`.
 
 Its two inputs used below are:
@@ -47,7 +47,7 @@ Its two inputs used below are:
 
 I also use the completed exact-rank-three physical-cross-block theorem
 
-- `yspennstate/math-open-problems@484c89f85cda352b2c4318364a6206ebc4154950`
+- `private-source-repository@484c89f85cda352b2c4318364a6206ebc4154950`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T230126Z-fleet03-B02-QFORM-r17/REPORT.md`,
 
 which states that if a physical cross block has exact rank three and the product of its nonzero singular values is `Gamma`, then
@@ -56,7 +56,7 @@ which states that if a physical cross block has exact rank three and the product
 
 Finally, the designated fleet02/B02 perturbative result actually applied in Section 4 is
 
-- `yspennstate/math-open-problems@f7a221e0f40362a1ccad48cf81812f2143f3cc92`
+- `private-source-repository@f7a221e0f40362a1ccad48cf81812f2143f3cc92`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T020523Z-fleet02-B02-QFORM-auto11-c1a7e2f4/REPORT.md`.
 
 Its theorem `QFORM-VOLUME-STABILITY-OPTIMAL-Q-v1` says: if a physical cross block decomposes as `M=M0+E`, with `s3(M0)>=rho>0`, maximum row-range leverage of `M0` at most `1/2`, and `||E||op<=rho/16`, then

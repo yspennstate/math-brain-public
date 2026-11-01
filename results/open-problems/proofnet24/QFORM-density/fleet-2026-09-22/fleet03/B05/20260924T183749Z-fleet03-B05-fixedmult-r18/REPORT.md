@@ -20,13 +20,13 @@ The proof below does **not** use:
 - any moment, support, log-concavity, Gaussian, iid, or connected-support hypothesis.
 
 The fresh input that changes the r17 mechanism is fleet01/B05's shared-bank two-hub receiver at
-`yspennstate/math-open-problems@0d25e16cc969a36e96e46976f0990611ad2e80c4`,
+`private-source-repository@0d25e16cc969a36e96e46976f0990611ad2e80c4`,
 `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/audits/fleet01/B05/20260924T182517Z-fleet01-B05-fixedmult-r13/REVIEW_AND_IMPROVEMENT.md`.
 That report gives the same structural theorem with constant (e\sqrt{2\pi}). Section 3 below sharpens the planar negative-moment step and improves the constant to (e\sqrt\pi).
 
 The designated partner result actually applied is fleet04/B05,
 `QFORM-PHYSICAL-DEFINITE-PAIR-COAREA-v1`,
-`yspennstate/math-open-problems@33cabb3bd5e466a58adc6eac49eba210ef62ef14`,
+`private-source-repository@33cabb3bd5e466a58adc6eac49eba210ef62ef14`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260924T011830Z-fleet04-B05-convex-pair-r3/REPORT.md`.
 
 ## 2. The flat-pair theorem
@@ -285,9 +285,9 @@ by itself is **not** the correct final missing factor: (alpha) can vanish while 
 
 - Fresh control objective: `math-research-brain/main`, `scheduled_tasks/CURRENT_OBJECTIVE.md`, blob `194c09609c2ce750efaa9634a0849b5a27ff651c`.
 - Fresh correction inbox blob: `ba7aeac3d879f59da5ec8a12daad74ea85714465`.
-- Fresh shared-bank theorem: `math-open-problems@0d25e16cc969a36e96e46976f0990611ad2e80c4`.
-- Previous fleet03/B05 kernel-angle result: `math-open-problems@7ab90cc16db0b0a767b51d1f5a2ad1e1871f511c`.
-- Designated fleet04/B05 definite-pair theorem: `math-open-problems@33cabb3bd5e466a58adc6eac49eba210ef62ef14`.
+- Fresh shared-bank theorem: `private-source@0d25e16cc969a36e96e46976f0990611ad2e80c4`.
+- Previous fleet03/B05 kernel-angle result: `private-source@7ab90cc16db0b0a767b51d1f5a2ad1e1871f511c`.
+- Designated fleet04/B05 definite-pair theorem: `private-source@33cabb3bd5e466a58adc6eac49eba210ef62ef14`.
 - Fresh small-indefinite perturbation barrier: fleet03/B16 run `20260924T180743Z-fleet03-B16-QFORM-auto11-r49`, statement commit `cb50c373a8f4638c198fa09b066f59b82003a2a2`.
 
 No scheduler state, task identity, enabled/paused state, notification/email setting, permission, account connection, remote workflow, paid call, or public-release setting was changed.

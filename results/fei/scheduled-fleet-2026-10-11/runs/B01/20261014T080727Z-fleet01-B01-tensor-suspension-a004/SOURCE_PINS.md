@@ -5,7 +5,7 @@
   blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
 - Current order: same repository, `ORDER.md`, blob
   `231e48480d53b8d868ecd85105e19cc3efe5b5ff`.
-- B01 assignment: `yspennstate/math-open-problems`,
+- B01 assignment: `private-source-repository`,
   `reports/fei-2026-10-11/assignments/B01.json`, current default branch.
 - Execution protocol: same repository, blob
   `457358ff62cbf1141a72096bcabdf95bf18c1be2`.

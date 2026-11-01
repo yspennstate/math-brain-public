@@ -22,13 +22,13 @@ No full theorem is claimed here.
 
 I use the following completed inputs at their exact scopes.
 
-1. **Full-matrix third-compound O0 reduction.** fleet03/B07, `QFORM-THIRD-COMPOUND-OVERLAP-REDUCTION-v1`, canonical source `yspennstate/math-open-problems@987b364e280070b1de6eec307557cc00f489e581`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T163733Z-fleet03-B07-qform-r12/REPORT.md`. In its O0 alternative there is a disjoint original-coordinate cut `L disjoint_union R` whose physical cross block `B=A[L,R]` satisfies
+1. **Full-matrix third-compound O0 reduction.** fleet03/B07, `QFORM-THIRD-COMPOUND-OVERLAP-REDUCTION-v1`, canonical source `private-source-repository@987b364e280070b1de6eec307557cc00f489e581`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T163733Z-fleet03-B07-qform-r12/REPORT.md`. In its O0 alternative there is a disjoint original-coordinate cut `L disjoint_union R` whose physical cross block `B=A[L,R]` satisfies
 
 `E_3(B):=e_3(BB^T)=sum_{|S|=|T|=3} det(B[S,T])^2 >=1/256`.       (2.1)
 
-2. **Finite heavy row set.** fleet01/B07, `QFORM-RIDGE-HEAVY-CORE-SCHUR-FACTOR-v1`, canonical source `yspennstate/math-open-problems@0b704e4e040938a4707d92de6931d449dda725d6`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/a01-b07-20260922T170700Z-qform-r13/REPORT.md`. At its calibrated O0 ridge scale there is a physical heavy row set `H subset L` with `|H|<=4`. Its report factors a selected *regularized* determinant occupancy pattern. The argument below instead factors the *raw third-compound mass* by the same finite physical set and is independent of the regularization scale.
+2. **Finite heavy row set.** fleet01/B07, `QFORM-RIDGE-HEAVY-CORE-SCHUR-FACTOR-v1`, canonical source `private-source-repository@0b704e4e040938a4707d92de6931d449dda725d6`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/a01-b07-20260922T170700Z-qform-r13/REPORT.md`. At its calibrated O0 ridge scale there is a physical heavy row set `H subset L` with `|H|<=4`. Its report factors a selected *regularized* determinant occupancy pattern. The argument below instead factors the *raw third-compound mass* by the same finite physical set and is independent of the regularization scale.
 
-3. **Named partner, current completed version.** fleet03/B19 r16, `QFORM-EXACT-CROSS-RANK-L2-v1`, canonical report commit `yspennstate/math-open-problems@9d55d9ca5a7beaed6f693a57bd32b5fc9949b981`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T172719Z-fleet03-B19-QFORM-r16/REPORT.md`. If a disjoint original-coordinate cross block `C` has exact rank `r>=3`, then
+3. **Named partner, current completed version.** fleet03/B19 r16, `QFORM-EXACT-CROSS-RANK-L2-v1`, canonical report commit `private-source-repository@9d55d9ca5a7beaed6f693a57bd32b5fc9949b981`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T172719Z-fleet03-B19-QFORM-r16/REPORT.md`. If a disjoint original-coordinate cross block `C` has exact rank `r>=3`, then
 
 `||p_Q||_infinity <= e r/(r-2) Pi_r(C)^(-1/r)`,                (2.2)
 
@@ -38,9 +38,9 @@ and if one active bank consists of exactly `r` physical coordinates the factor `
 
 Arbitrary self terms, affine shifts, outside couplings, signs and extra spectrum are retained by conditioning outside the two active original-coordinate banks.
 
-4. **Newest compatible O0 structure.** fleet03/B07 r15, source `yspennstate/math-open-problems@77bcf0cdd3ff67910a64a3833c21589408358d6b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T183653Z-fleet03-B07-qform-r15/REPORT.md`, sharpens the one-heavy ridge survivor into either a near-coloop, a replacement pair, or a bounded-cardinality regularized area bank. The theorem below is complementary: it is a scale-free raw-third-compound decomposition and directly pays one heavy-overlap subbranch.
+4. **Newest compatible O0 structure.** fleet03/B07 r15, source `private-source-repository@77bcf0cdd3ff67910a64a3833c21589408358d6b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T183653Z-fleet03-B07-qform-r15/REPORT.md`, sharpens the one-heavy ridge survivor into either a near-coloop, a replacement pair, or a bounded-cardinality regularized area bank. The theorem below is complementary: it is a scale-free raw-third-compound decomposition and directly pays one heavy-overlap subbranch.
 
-A further compatible source, fleet03/B03 r17 at `yspennstate/math-open-problems@924b3c4c70f86a64402863fe228f641bf3db60b2`, gives determinant-bank half-Riesz estimates from aggregate `e_k(BB^T)` resources. I use it only in the updated proof map, not to claim a payment whose Schur/product hypotheses have not been established.
+A further compatible source, fleet03/B03 r17 at `private-source-repository@924b3c4c70f86a64402863fe228f641bf3db60b2`, gives determinant-bank half-Riesz estimates from aggregate `e_k(BB^T)` resources. I use it only in the updated proof map, not to claim a payment whose Schur/product hypotheses have not been established.
 
 ## 3. New theorem: raw third-compound mass factors through a finite heavy pattern
 

@@ -4,7 +4,7 @@
 **Programme:** QFORM-DENSITY-3EIG-20260922  
 **Status of full theorem:** OPEN / NOT PROVED / NOT DISPROVED  
 **Execution context:** WITHOUT_VERIFIED_BRAIN  
-**Pinned source:** `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md`, Theorem C.  
+**Pinned source:** `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md`, Theorem C.  
 **Fresh math master before this bundle:** `755c765f98cdc9d2a2107f2f075273e7b0960e75`.
 
 ## 1. First unpaid implication paid

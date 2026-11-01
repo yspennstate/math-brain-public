@@ -24,7 +24,7 @@ This report proves such a conversion. It **does not** yet prove that the resulti
 
 ### 1.1 Terminal critical core
 
-Source: `yspennstate/math-open-problems@85ffa60db26997421d980b1f86c03d82259504ca`,
+Source: `private-source-repository@85ffa60db26997421d980b1f86c03d82259504ca`,
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md`.
 
 In the character-centered gauge,
@@ -43,7 +43,7 @@ for every nonempty physical block in a ratio-\(\rho\) core and the exact co-sing
 
 ### 1.2 Co-pair/hidden-curvature identity
 
-Source: `yspennstate/math-open-problems@85ffa60db26997421d980b1f86c03d82259504ca`,
+Source: `private-source-repository@85ffa60db26997421d980b1f86c03d82259504ca`,
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md`.
 
 For distinct physical coordinates \(i,j\), in its fixed median-character gauge, let
@@ -66,7 +66,7 @@ It also proves that raw hidden curvature cannot be bounded by \(O(J)\) from all-
 
 ### 1.3 Other-account result consumed: hidden-curvature bank
 
-Source: `yspennstate/math-open-problems@200e3fd37fe201f78d882ba8809414d201efb829`,
+Source: `private-source-repository@200e3fd37fe201f78d882ba8809414d201efb829`,
 `proofnet24/P03-fei/fleet-2026-09-22/fleet04/B18/20260922T091529Z-surplus-hidden-curvature/REPORT.md`.
 
 This is the completed **other-account** result applied here. It defines
@@ -78,7 +78,7 @@ and reduces the robust-row weighted-depth obstruction to the already-paid visibl
 
 ### 1.4 Irreducible occurrence KL
 
-Source: `yspennstate/math-open-problems@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`,
+Source: `private-source-repository@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`,
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`.
 
 For a probability law \(P\) on nonempty subsets with occurrence marginals \(r_i\) and mean size \(\mu=\sum_i r_i\), the source constructs the unique maximum-entropy nonempty law \(Q_r\). If \(\mu>1\), the parameter \(c\in(0,1]\) is the unique positive solution of

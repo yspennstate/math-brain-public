@@ -6,9 +6,9 @@ attacking: a null-hub plus dependent three-dimensional product-projection kernel
 Programme: QFORM-DENSITY-3EIG-20260922. Full conjecture remains OPEN. This checkpoint is a supporting calculation, not a full solution.
 
 
-Newest Claude source actually used: yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md. Its Theorem 5 / definite planar curved geometry is used below in the set-valued form |{y:y^T C y in E}| <= pi |E|/sqrt(det|C|) for definite 2x2 C.
+Newest Claude source actually used: private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md. Its Theorem 5 / definite planar curved geometry is used below in the set-valued form |{y:y^T C y in E}| <= pi |E|/sqrt(det|C|) for definite 2x2 C.
 
-Designated partner source actually used: fleet02/B16, yspennstate/math-open-problems@80f21f0a650baffd62c8b9e4d21babd30ade95f0:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T012820Z-fleet02-B16-QFORM-r22/REPORT.md. Its definite-receiver theorem is the point-level version of the same area identity and confirms that dependence inside a planar projected pair is allowed; no projected-coordinate independence is introduced.
+Designated partner source actually used: fleet02/B16, private-source-repository@80f21f0a650baffd62c8b9e4d21babd30ade95f0:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T012820Z-fleet02-B16-QFORM-r22/REPORT.md. Its definite-receiver theorem is the point-level version of the same area identity and confirms that dependence inside a planar projected pair is allowed; no projected-coordinate independence is introduced.
 
 ## Candidate theorem (proof below)
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R15 CLOSABLE OUTSIDE — successor admission, Schur extremality and tropical tie strata
 
 Date: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Continuity, exact Brownian source, and exclusions
 

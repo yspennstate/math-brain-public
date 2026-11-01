@@ -14,7 +14,7 @@ No moment, support, log-concavity, diagonal-basis, post-rotation-independence, c
 
 ## 1. Fresh sources and exact slices used
 
-1. Pinned source required by the assignment: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, with `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` read. I use its proved Theorem D at an actual equation below:
+1. Pinned source required by the assignment: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, with `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` read. I use its proved Theorem D at an actual equation below:
 
    if `M=A[I,J]`, `Z3=e_3(MM^T)>0`, and the 3-volume row marginals on I are all at most 1/2, then
 
@@ -23,7 +23,7 @@ No moment, support, log-concavity, diagonal-basis, post-rotation-independence, c
 
    Same-side quadratic blocks and affine terms are arbitrary.
 
-2. Fresh checked projected-crossing source: `math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. I use two proved results exactly in their scopes:
+2. Fresh checked projected-crossing source: `private-source@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. I use two proved results exactly in their scopes:
 
    - grouped projected crossing with arbitrary internal hub function, rank-k hub crossing product S, projected ell-volume Z_ell, row marginals <=1/2, effective dimension d=k+ell;
    - exact-rank-r crossing with arbitrary internal functions on both physical sides and joint projection-density caps.
@@ -47,7 +47,7 @@ No moment, support, log-concavity, diagonal-basis, post-rotation-independence, c
 
 No coordinate sum is separated from its conjugate difference in (1.3).
 
-4. Current continuation source `math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`, semidefinite-and-hub-reduction README and the `single_hub_core/REPORT.md`, was read for current hub scope and corrections. The newer arbitrary-rank projected crossing result above is the input that makes the promotion argument below close without an exact-rank-two hypothesis.
+4. Current continuation source `private-source@c4c23b784395630c094ba299a50712209921d1ae`, semidefinite-and-hub-reduction README and the `single_hub_core/REPORT.md`, was read for current hub scope and corrections. The newer arbitrary-rank projected crossing result above is the input that makes the promotion argument below close without an exact-rank-two hypothesis.
 
 ## 2. One-hub/two-volume theorem with **no** row-marginal hypothesis
 

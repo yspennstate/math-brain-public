@@ -15,7 +15,7 @@ with fleet02/B17 assigned the exact Boolean adversary for interface B
 (quantitative joint-derivative stability).
 
 Fresh scientific master at entry:
-yspennstate/math-open-problems
+private-source-repository
 f19e92d5facf03f83458aebaad175100f5f322c5,
 refreshed before the derivation to
 568b3f75eaa51b9049bb776ef799d25eb71fb7aa.

@@ -4,7 +4,7 @@ Problem/source: Héctor Jardón-Sánchez, Sam Mellick, Antoine Poulin, Konrad Wr
 # R06 CLOSABLE OUTSIDE — run 5 on I0079: the global-label case is KNOWN; the source's pointwise-random refinement is phase-nonunique on `F_2 x F_2`
 
 Run date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Delivery: private GitHub only. No email/Gmail, Drive, public posting, purchases, permission changes, workflow execution, or scheduler changes.
 
 ## 1. Continuity and why I0056 was not restarted

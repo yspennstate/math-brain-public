@@ -34,7 +34,7 @@ The designated partner fleet04/B04 r2 proves that in its high-carrier branch rho
 again with continuous C_0 density.
 
 Sources to re-read in the final report:
-- partner: math-open-problems@4a54666abf2316bb79b939cef3ea940605a0af57, fleet04/B04 r2 REPORT.md;
-- fixed-pair theorem: math-open-problems@2a53120a6f9206721f98811b05cd8c80002aab68, fleet01/B09 REPORT.md.
+- partner: private-source@4a54666abf2316bb79b939cef3ea940605a0af57, fleet04/B04 r2 REPORT.md;
+- fixed-pair theorem: private-source@2a53120a6f9206721f98811b05cd8c80002aab68, fleet01/B09 REPORT.md.
 
 Full QFORM remains open: this converts one quantitative cross-block branch to a density estimate but does not force such a high-E4 carrier from the bare three-large-eigenvalue hypothesis.

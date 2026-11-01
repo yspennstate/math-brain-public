@@ -4,11 +4,11 @@ SIGNED IN - working on the quadratic-form bounded-density conjecture (universal 
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 Run: `20260924T143826Z-fleet03-B05-fixedmult-r13`.
-Baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
-Fresh nine-eigenvalue input: `yspennstate/math-open-problems@de66db60d643a9d2366ba542afb8ea295957438a`.
-Fresh robust-pair input: `yspennstate/math-open-problems@0408c579bcda638e72c010ff99892a22b9049796`.
-Fresh critical-endpoint input: `yspennstate/math-open-problems@72bc34125d82485d473030d663ce0dedd2de3eb3`.
-Designated partner input: `fleet04/B05`, `yspennstate/math-open-problems@84b63093480022df1a463895b8b77eb2a2ea19db`.
+Baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
+Fresh nine-eigenvalue input: `private-source-repository@de66db60d643a9d2366ba542afb8ea295957438a`.
+Fresh robust-pair input: `private-source-repository@0408c579bcda638e72c010ff99892a22b9049796`.
+Fresh critical-endpoint input: `private-source-repository@72bc34125d82485d473030d663ce0dedd2de3eb3`.
+Designated partner input: `fleet04/B05`, `private-source-repository@84b63093480022df1a463895b8b77eb2a2ea19db`.
 
 Status: **proved exact structural identities + a sharp product-law counterexample to the determinant-free L-infinity extension; multiplicity eight remains open.** The lowest complete bounded-density threshold presently used here is nine. The unrestricted three-eigenvalue conjecture remains open.
 

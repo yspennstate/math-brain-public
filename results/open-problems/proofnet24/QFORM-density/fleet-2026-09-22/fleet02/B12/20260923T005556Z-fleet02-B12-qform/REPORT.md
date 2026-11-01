@@ -25,7 +25,7 @@ No step below treats a small matrix as a uniformly small random quadratic pertur
 
 Read all three required files at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -45,7 +45,7 @@ for `h>=1/2`, with the `h<=1/2` endpoint `6 sqrt(e) E3^(-1/6)`.  All self blocks
 
 The later source
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 at
 
@@ -61,7 +61,7 @@ when `alpha_i<=q/2`, `1<=q<3/2`.  The proof is supplied there; independent revie
 
 Fresh partner memory resolved to run `20260923T004313Z-qform-eigenvalue-r21`, canonical mathematics
 
-`yspennstate/math-open-problems@dd754a0bfed889fd29c931b7112c8c3285fc83e8`
+`private-source-repository@dd754a0bfed889fd29c931b7112c8c3285fc83e8`
 
 at
 

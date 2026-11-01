@@ -7,11 +7,11 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Full unrestricted QFORM remains OPEN. 
 
 ## Source pins used before this checkpoint
 
-- Required base Fourier package: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
-- Reviewed q-dependent sharp-HY refinement: `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
-- Immediate fleet02/B02 predecessor: `yspennstate/math-open-problems@aeaba9e3351623ead11450857c2d014b43664aef`, exact rank-one shared-hub tensor theorem.
-- Designated partner fleet03/B02 newest handoff/report consumed: `yspennstate/math-open-problems@c5cc2edeeee6426fcbbf73eb00fbd68a176d28cb`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T201213Z-fleet03-B02-qform-r38/REPORT.md`.
-- Fresh small-leakage correction source: `yspennstate/math-open-problems@2ac0c66b922e3742161e9e914ae2190afa1f978e`, `proofnet24/QFORM-density/interactive/20260923T203400Z-negative-target-projection-fake/REPORT.md`.
+- Required base Fourier package: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
+- Reviewed q-dependent sharp-HY refinement: `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
+- Immediate fleet02/B02 predecessor: `private-source-repository@aeaba9e3351623ead11450857c2d014b43664aef`, exact rank-one shared-hub tensor theorem.
+- Designated partner fleet03/B02 newest handoff/report consumed: `private-source-repository@c5cc2edeeee6426fcbbf73eb00fbd68a176d28cb`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T201213Z-fleet03-B02-qform-r38/REPORT.md`.
+- Fresh small-leakage correction source: `private-source-repository@2ac0c66b922e3742161e9e914ae2190afa1f978e`, `proofnet24/QFORM-density/interactive/20260923T203400Z-negative-target-projection-fake/REPORT.md`.
 
 No scalar pointwise Fresnel decay, no deletion of a nonzero tail, no arbitrary conditional density cap, and no post-rotation independence are used below.
 

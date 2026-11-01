@@ -109,7 +109,7 @@ Theorem D is complementary: it requires cross rank at least three and pays the g
 
 Use the completed dependence-safe square smoother from
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`:
 
 if a residual `R` has density cap `M` and the shifted physical scalar pivot has conditional density cap one given `R`, then

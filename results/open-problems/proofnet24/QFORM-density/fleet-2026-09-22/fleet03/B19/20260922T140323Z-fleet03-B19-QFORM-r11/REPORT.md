@@ -14,17 +14,17 @@ No moment, support-shape, Gaussian, log-concave, diagonal-basis, or eigen-coordi
 
 ## 2. Completed sources actually used
 
-1. **Designated partner fleet04/B19.** `QFORM-FINITE-UNION-CORE-v1`, canonical report `yspennstate/math-open-problems@02171dc794a56c0235afb1ca394b3e614162bff4`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T122030Z-fleet04-B19-QFORM-r1/REPORT.md`. It proves that, for every measurable map, interval concentration over arbitrary independent cap-one densities has the same supremum as over product indicators of bounded finite unions of intervals of measure one.
+1. **Designated partner fleet04/B19.** `QFORM-FINITE-UNION-CORE-v1`, canonical report `private-source-repository@02171dc794a56c0235afb1ca394b3e614162bff4`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T122030Z-fleet04-B19-QFORM-r1/REPORT.md`. It proves that, for every measurable map, interval concentration over arbitrary independent cap-one densities has the same supremum as over product indicators of bounded finite unions of intervals of measure one.
 
-2. **Regularized cross-block determinant theorem.** Canonical report `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`. For every disjoint original-coordinate cut `I,J`, with `C=A[I,J]`,
+2. **Regularized cross-block determinant theorem.** Canonical report `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`. For every disjoint original-coordinate cut `I,J`, with `C=A[I,J]`,
 
    `|phi_Q(t)| <= det(I + 4 t^2 C C^T/(pi^2 e^2))^(-1/8)`.
 
    This retains arbitrary self blocks, outside couplings, signs, extra spectrum, and arbitrary independent cap-one input laws.
 
-3. **Independent review of source 2.** fleet03/B04, `yspennstate/math-open-problems@55e0a30b6ac56934614a5416056cae2e4a6dc77e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T135303Z-r11/REPORT.md`, gives `INDEPENDENT_SCOPE_PASS` on the determinant theorem's graph Brascamp--Lieb normalization, decoupling orientation, and full-spectrum passage.
+3. **Independent review of source 2.** fleet03/B04, `private-source-repository@55e0a30b6ac56934614a5416056cae2e4a6dc77e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T135303Z-r11/REPORT.md`, gives `INDEPENDENT_SCOPE_PASS` on the determinant theorem's graph Brascamp--Lieb normalization, decoupling orientation, and full-spectrum passage.
 
-4. **Near-diagonal full-matrix branch.** fleet01/B19, canonical report `yspennstate/math-open-problems@072cf685a12893b44d555f14e4e610bcf2154037`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260922T121338Z-b19-qform-r11/REPORT.md`. If `D=diag(A)` and `delta=||A-D||op < 1/2`, then under the target three-large-eigenvalue hypothesis,
+4. **Near-diagonal full-matrix branch.** fleet01/B19, canonical report `private-source-repository@072cf685a12893b44d555f14e4e610bcf2154037`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260922T121338Z-b19-qform-r11/REPORT.md`. If `D=diag(A)` and `delta=||A-D||op < 1/2`, then under the target three-large-eigenvalue hypothesis,
 
    `||p_Q||inf <= pi/sqrt(1-2 delta)`.
 

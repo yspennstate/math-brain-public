@@ -17,7 +17,7 @@ The unrestricted target remains open. No Gaussian, moment, log-concavity, compac
 
 The completed designated partner result actually used is fleet04/B07:
 
-`yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`
+`private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`.
 
@@ -31,7 +31,7 @@ For the analytic exact-zero-anchor application I use this slot's previously prov
 
 `QFORM-TWO-ANCHOR-COEFFICIENT-PLANE-v1`,
 
-source `yspennstate/math-open-problems@309a7cf35906f05d767ff2fcf1be74367f479d1c`,
+source `private-source-repository@309a7cf35906f05d767ff2fcf1be74367f479d1c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T224159Z-fleet03-B07-qform-r19/REPORT.md`.
 

@@ -5,7 +5,7 @@ Problem/source: David J. Aldous and Svante Janson, *The Critical Beta-splitting 
 # R11 I0054 — a sparse extremal shared-parent pedigree deformation still converges to CTCS(infinity)
 
 Run ID: `2026-09-17T15-40-00Z_i0054-sparse-shared-parent-c024-6a1f`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Dated source/literature check: 2026-09-17
 
 No email/Gmail, Drive, public posting, purchase, permission change, workflow execution, scheduler change, shared-root edit, or peer-track edit was performed.

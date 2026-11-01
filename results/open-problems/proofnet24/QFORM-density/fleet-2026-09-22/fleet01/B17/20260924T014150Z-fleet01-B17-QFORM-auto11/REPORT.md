@@ -9,7 +9,7 @@ Continuity: tracked separately; only the branchwise continuity already proved in
 
 The completed fleet02/B17 theorem at
 
-- repository `yspennstate/math-open-problems`,
+- repository `private-source-repository`,
 - commit `5358d1f4f32d64254b0234463015b42f1d36bc13`,
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T004826Z-fleet02-B17-QFORM-7c2f/REPORT.md`
 
@@ -446,7 +446,7 @@ In particular it is far below the source-valid diffuse obstruction `3sqrt(2)`.
 
 The lower obstruction used for comparison is pinned independently at
 
-- repository `yspennstate/math-open-problems`,
+- repository `private-source-repository`,
 - commit `8624982153e5a2154e4ae8922d2fe4dc77080efc`,
 - path `proofnet24/QFORM-density/fleet-2026-09-22/interactive/20260922T121109Z-crossblock-and-lower-bounds/REPORT.md`, Proposition `QFORM-BLOCK-CLT-LOWER-3SQRT2-v1`.
 

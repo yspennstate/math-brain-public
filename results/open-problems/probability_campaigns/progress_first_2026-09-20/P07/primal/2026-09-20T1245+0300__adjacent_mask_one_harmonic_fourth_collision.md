@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-A — adjacent-mask one-harmonic factorization and a fourth-collision criterion
 
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured pre-write master:** `2dcab07a1887511f981ad79670dcbaa8e8547d43`  
 **Previous own substantive checkpoint:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1047+0300__reciprocal_variance_orbit_influence.md`, creation commit `d5118c589f7a6e1a205a3b79909582af88ea0630`.  
 **Complementary checkpoint consulted:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T1124+0300__second_order_clipping_sparse_exception_patch.md`. P07-B owns the Fourier-dual Gibbs / exceptional-frequency / interpolation route. The present report stays on primal adjacent-mask sensitivity and optimizer self-convolution.

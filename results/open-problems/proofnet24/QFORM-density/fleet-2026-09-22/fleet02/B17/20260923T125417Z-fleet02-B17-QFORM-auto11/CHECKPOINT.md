@@ -10,7 +10,7 @@ The completed fleet03/B17 arbitrary-mean Gaussian theorem then gives, conditiona
 
 `||p_{(G+h)^T J(G+h)}||_inf <= 3 sqrt(2)`.
 
-The genuinely new payment is the finite-row/local-spike gap. The pinned Claude Theorem F at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` applies to the *actual physical form* `A_m=R_m J R_m^T` once `tau_m<=1/2` and gives
+The genuinely new payment is the finite-row/local-spike gap. The pinned Claude Theorem F at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` applies to the *actual physical form* `A_m=R_m J R_m^T` once `tau_m<=1/2` and gives
 
 `|phi_m(t)| <= min(1,(4 pi)^(3/2)|t|^(-3/2))`.
 

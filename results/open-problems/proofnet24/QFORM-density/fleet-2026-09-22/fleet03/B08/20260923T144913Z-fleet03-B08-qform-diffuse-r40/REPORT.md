@@ -18,7 +18,7 @@ The first essential question from r38 was whether its localized Schur-cancellati
 
 ### 1.1 Immediate B08 predecessor
 
-`yspennstate/math-open-problems@1a70497363989dfea9fa4ce9e515fa279677df69`
+`private-source-repository@1a70497363989dfea9fa4ce9e515fa279677df69`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T131815Z-fleet03-B08-qform-diffuse-r38/REPORT.md`.
 
@@ -30,7 +30,7 @@ At `theta=1/2` this gives `|u_i v_i|>L|h_i|/4`. r38 explicitly left the localize
 
 ### 1.2 Orientation-free rank-two half-Riesz theorem
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -42,7 +42,7 @@ This theorem is used below after conditioning only original coordinates, so its 
 
 ### 1.3 Newest required volume-stability theorem
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md` and `PEER_TAIL_EXTENSION.md`.
 
@@ -58,7 +58,7 @@ All self blocks, outside couplings and affine terms are retained. In our applica
 
 ### 1.4 Ridge/spectral-window exit
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
@@ -70,7 +70,7 @@ and the density is continuous. This is used only as the already-proved global di
 
 ### 1.5 Designated partner fleet04/B08
 
-`yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
+`private-source-repository@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T091414Z-fleet04-B08-QFORM-r1/REPORT.md`.
 

@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 # R03 run27 — overlap-one affine evaluation codes and exact-corank-two slack reclamation
 
 Run ID: `20260917T0408Z_27_overlap1_affine_code`  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, source gate, ownership and fixed metric
 

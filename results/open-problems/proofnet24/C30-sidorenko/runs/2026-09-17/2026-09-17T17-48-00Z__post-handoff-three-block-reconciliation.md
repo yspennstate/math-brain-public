@@ -2,7 +2,7 @@ Model actually running: GPT-5.6 Sol. Reasoning level: UNVERIFIED; this was not G
 
 # C30 post-handoff reconciliation — preserve the equal-three-block theorem without reopening the retired same-target run chain
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Own root: `proofnet24/C30-sidorenko`.
 Frozen source graph: `H=K_{5,5}\setminus C_{10}`, ten vertices and fifteen edges.
 Frozen metric: largest host order `n` for which **every** finite simple host on at most `n` vertices is proved to satisfy the source normalization

@@ -143,7 +143,7 @@ for every `m`. Thus the conditional moment in (4.1) diverges linearly while the 
 
 The newest completed designated-partner theorem is fleet02/B01 r25, canonical
 
-`yspennstate/math-open-problems@bf4ba08b75ab774aef671c62ba4898a371059c0d`,
+`private-source-repository@bf4ba08b75ab774aef671c62ba4898a371059c0d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T170850Z-fleet02-B01-qform-r25/REPORT.md`.
 
@@ -167,7 +167,7 @@ Comparison with (4.3) is informative: the local principal-triple theorem is corr
 
 The newest completed fleet03/B07 theorem is canonical
 
-`yspennstate/math-open-problems@f2d3682e9f9d24d67ea14dc990d9f49bebeb5a6e`,
+`private-source-repository@f2d3682e9f9d24d67ea14dc990d9f49bebeb5a6e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T173711Z-fleet03-B07-qform-r13/REPORT.md`.
 
@@ -179,7 +179,7 @@ That report leaves this as an unpaid six-coordinate collar because it conservati
 
 However B01's earlier completed random-slope theorem, canonical
 
-`yspennstate/math-open-problems@508b0985ba8bb658a7f6a935af5138a195cb89de`,
+`private-source-repository@508b0985ba8bb658a7f6a935af5138a195cb89de`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260922T124907Z-b01-qform-auto11/REPORT.md`,
 

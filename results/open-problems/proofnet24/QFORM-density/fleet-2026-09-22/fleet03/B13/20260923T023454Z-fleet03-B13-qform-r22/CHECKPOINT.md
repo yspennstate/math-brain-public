@@ -9,7 +9,7 @@ Z=e_3(M^T M)=sum_{|S|=|T|=3} det(M[S,T])^2>0.
 
 Give (S,T) probability det(M[S,T])^2/Z. Let alpha_i=P(i in S) and beta_j=P(j in T).
 
-The completed fractional-volume theorem at math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba says that if alpha_i<=q/2 for every row and 1<=q<3/2, then, with arbitrary same-side terms/outside couplings/affine terms,
+The completed fractional-volume theorem at private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba says that if alpha_i<=q/2 for every row and 1<=q<3/2, then, with arbitrary same-side terms/outside couplings/affine terms,
 
 ||p_Q||_infinity <= [3e/((3-2q)sqrt(q))] Z^(-1/6),
 

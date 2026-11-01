@@ -22,7 +22,7 @@ C_*=6.558445288811087.
 \tag{1.1}
 \]
 
-Source: `yspennstate/math-open-problems`, commit `c50e06733fc1e7f109e20dbb1a0013d67aa71dc7`,
+Source: `private-source-repository`, commit `c50e06733fc1e7f109e20dbb1a0013d67aa71dc7`,
 `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B13/20260922T0954Z-nearoptimal-singleton-repair/REPORT.md`, Section 4.
 
 The assigned partner is `fleet04/B03`. At both the fresh startup read and the pre-publication partner scan, no compatible completed `fleet04/B03` result existed under the current FEI programme. I therefore did **not** fabricate partner consumption or reuse its older FOREST work. Per the owner order's asynchronous rule, I instead applied the assignment's named compatible other-account input `B-BIASED-BOOLEANITY-GAP-v1` from `fleet04/B17`, commit `603b35e74227d1c2d8ee34c0c527c439c686e30b`, path

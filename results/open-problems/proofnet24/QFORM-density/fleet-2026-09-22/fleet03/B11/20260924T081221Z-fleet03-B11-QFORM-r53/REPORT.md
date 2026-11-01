@@ -127,7 +127,7 @@ QED.
 
 The completed designated-partner theorem is fleet04/B11 `QFORM-SPECTRAL-SCHUR-PSEUDODET-v1`, canonical mathematics
 
-`yspennstate/math-open-problems@28cbe14c4381d5f1b58145b29bbcc160b4d2ea5c`
+`private-source-repository@28cbe14c4381d5f1b58145b29bbcc160b4d2ea5c`
 
 at
 

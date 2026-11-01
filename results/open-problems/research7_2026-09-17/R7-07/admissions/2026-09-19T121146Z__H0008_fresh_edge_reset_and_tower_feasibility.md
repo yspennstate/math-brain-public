@@ -3,7 +3,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 # R7-07 admission-feasibility note: H0008 fresh-edge reset law and Markov-renewal tower
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 R7-07 native ID: `6aabe8413f60819197825dd81ca138ae`  
 Own root: `research7_2026-09-17/R7-07/`  
 Run-start master: `460fb134072f877cfcd90101b98d6666214915d7`  

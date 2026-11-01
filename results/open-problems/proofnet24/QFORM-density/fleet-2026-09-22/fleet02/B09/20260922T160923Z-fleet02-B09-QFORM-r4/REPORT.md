@@ -26,7 +26,7 @@ Combined with the completed `1/39` spectral-window/heavy-coordinate dichotomy, t
 
 The latest complete partner result used here is
 
-- repository/commit: `yspennstate/math-open-problems@62bdcf30669c1037a3c7d87aee1fcb2bdcccd251`;
+- repository/commit: `private-source-repository@62bdcf30669c1037a3c7d87aee1fcb2bdcccd251`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/fleet03-B09-20260922T155042Z-qform12/REPORT.md`;
 - theorem: `QFORM-PIVOT-RIDGE-BILINEAR-v1`.
 
@@ -55,8 +55,8 @@ This is an actual inequality used below, not merely a citation. Its proof comple
 
 I also use the completed source-pinned consequence
 
-- `yspennstate/math-open-problems@9c497213db0174f64450be250a62c5a97deb1ddf`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T155815Z-qform-r11b/ADDENDUM.md`,
-- based on fleet03/B04 `QFORM-SPECTRAL-WINDOW-1OVER39-v1` at `yspennstate/math-open-problems@093c15486c794a2e8b23978ca7b289feabf999a7`.
+- `private-source-repository@9c497213db0174f64450be250a62c5a97deb1ddf`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T155815Z-qform-r11b/ADDENDUM.md`,
+- based on fleet03/B04 `QFORM-SPECTRAL-WINDOW-1OVER39-v1` at `private-source-repository@093c15486c794a2e8b23978ca7b289feabf999a7`.
 
 For every target matrix `A`, either the full quadratic form already has a continuous density with
 

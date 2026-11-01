@@ -17,7 +17,7 @@ This run does **not** use any of the following refuted interfaces: law-uniform s
 
 Two positive inputs are used exactly in their proved scopes.
 
-1. **Separable-phase Brascamp--Lieb/Hausdorff--Young estimate.** Canonical proof: `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`, claim `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`. If `U` is an `m x r` orthonormal-column frame with row leverages `c_i=||u_i||^2<=1/2`, and
+1. **Separable-phase Brascamp--Lieb/Hausdorff--Young estimate.** Canonical proof: `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`, claim `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`. If `U` is an `m x r` orthonormal-column frame with row leverages `c_i=||u_i||^2<=1/2`, and
 
    `h_i(x)=f_i(x) exp(i V_i(x))`,
 

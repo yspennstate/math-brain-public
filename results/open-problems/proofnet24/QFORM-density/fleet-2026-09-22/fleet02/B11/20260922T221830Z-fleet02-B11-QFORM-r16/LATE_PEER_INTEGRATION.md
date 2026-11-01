@@ -4,7 +4,7 @@ This addendum is immutable and does not alter the proofs or constants in `REPORT
 
 After the primary r16 report was committed, fresh main exposed the completed fleet01/B11 run `20260922T221310Z-fleet01-B11-QFORM-r11`. I read its canonical proof at
 
-`yspennstate/math-open-problems@59a472456800fb0a6a40579e996f9c9d8eb5ff48`
+`private-source-repository@59a472456800fb0a6a40579e996f9c9d8eb5ff48`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260922T221310Z-fleet01-B11-QFORM-r11/REPORT.md`.
 

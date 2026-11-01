@@ -44,7 +44,7 @@ This is only a null-set statement. It gives neither a bounded density nor contin
 
 A source-pinned fleet03/B15 theorem at
 
-`yspennstate/math-open-problems@696a0784ba7d270db657c1596d9c2ee940a1745d`
+`private-source-repository@696a0784ba7d270db657c1596d9c2ee940a1745d`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260924T032517Z-fleet03-B15-qform-auto32/REPORT.md`
 
 proves the following fixed-matrix statement:
@@ -156,7 +156,7 @@ The `C_0` representative is unique: two continuous densities representing the sa
 
 This is essentially the correct class-uniform endpoint. The earlier fleet01/B15 phase-aligned construction at
 
-`yspennstate/math-open-problems@a2f4a2724486aef1a765fffe49c1c5bc3943be3e`
+`private-source-repository@a2f4a2724486aef1a765fffe49c1c5bc3943be3e`
 
 already shows that even for fixed `A=I_3`, smooth compactly supported cap-one iid inputs and a common finite output-height bound, the output densities need not have any law-uniform modulus of continuity. Hence the owner theorem should not be burdened with a uniform Holder/Lipschitz conclusion: canonical `C_0` exists instancewise, while the one universal quantitative object still sought is height.
 
@@ -164,7 +164,7 @@ already shows that even for fixed `A=I_3`, smooth compactly supported cap-one ii
 
 The latest completed partner source is
 
-`yspennstate/math-open-problems@847a25a6130a1470eb8f1abbb298ae5e5f1cdc8f`
+`private-source-repository@847a25a6130a1470eb8f1abbb298ae5e5f1cdc8f`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260924T070011Z-fleet02-B15-qform-auto11-r1/REPORT.md`.
 
 Its anisotropic ruled theorem applies to

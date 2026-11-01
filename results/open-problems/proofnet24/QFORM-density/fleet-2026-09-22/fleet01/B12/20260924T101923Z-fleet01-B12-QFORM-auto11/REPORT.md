@@ -186,7 +186,7 @@ First apply the newest completed designated fleet02/B12 result
 
 `QFORM-ORTHOGONAL-TWO-CHANNEL-MODE-STABILITY-v1`,
 
-source `yspennstate/math-open-problems@4cc6fbf96ef099a1492e043882219496509e94ba`,
+source `private-source-repository@4cc6fbf96ef099a1492e043882219496509e94ba`,
 path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260924T085711Z-fleet02-B12-r13/REPORT.md`.
 
 Take the six-mode selected operator as the baseline, `M=C_6 P_H`, and `N=S P_H`. Spectral orthogonality gives
@@ -201,7 +201,7 @@ For density closure, apply the completed fleet02/B12 theorem
 
 `QFORM-SIX-MODE-SPECTRAL-SQUARE-CARRIER-v1`,
 
-source `yspennstate/math-open-problems@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`,
+source `private-source-repository@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`,
 path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T145451Z-fleet02-B12-QFORM-r36/REPORT.md`.
 
 Use `m=6`, `s=1`, `g=1/(2sqrt(2))`, and choose

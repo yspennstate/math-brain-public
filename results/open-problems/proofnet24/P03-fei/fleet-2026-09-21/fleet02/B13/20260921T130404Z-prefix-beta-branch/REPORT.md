@@ -8,7 +8,7 @@ TASK: B13 ACCOUNT: fleet02 RUN: 2026-09-21T13:04:04.868010Z — Beta-semigroup b
 
 **Live role:** FEI approach 2/13 — Boolean block-influence/correlation profiles and two-sided Booleanity constraints.
 
-**Scientific repository baseline read before this work:** `yspennstate/math-open-problems` master `c672ae53b042b10e99ce7c8100f2ac9da1c083aa`, after reading the required read-once `TASKS_2026-09-21.md`, then `REPORT.md`, `APPROACHES.md`, fresh P03 README, `FLEET_RULES.md`, the active sprint, fleet01/B12 cancellation work, fleet01/B13 random-chain profile work, fleet03/B13 block-spectral-channel work and this account's immediately preceding B13 report.
+**Scientific repository baseline read before this work:** `private-source-repository` master `c672ae53b042b10e99ce7c8100f2ac9da1c083aa`, after reading the required read-once `TASKS_2026-09-21.md`, then `REPORT.md`, `APPROACHES.md`, fresh P03 README, `FLEET_RULES.md`, the active sprint, fleet01/B12 cancellation work, fleet01/B13 random-chain profile work, fleet03/B13 block-spectral-channel work and this account's immediately preceding B13 report.
 
 No novelty or publication-priority claim is made.
 

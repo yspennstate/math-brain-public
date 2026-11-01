@@ -22,7 +22,7 @@ The full conjecture remains open because the three-large-eigenvalue hypothesis d
 Three complete source-pinned arguments are used.
 
 1. **Assigned partner fleet03/B14 r15 — zero-diagonal triple.**  
-   `yspennstate/math-open-problems@49f1c21b47979575eaa8c34b90d066c8034140b4`  
+   `private-source-repository@49f1c21b47979575eaa8c34b90d066c8034140b4`  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T173618Z-fleet03-B14-QFORM-r15/REPORT.md`  
    It proves, for the pure off-diagonal physical triple, the sharper bound
    \[
@@ -32,7 +32,7 @@ Three complete source-pinned arguments are used.
    uniformly in arbitrary affine perturbations and arbitrary support geometry. That result suggested the near-zero-diagonal stability problem. The theorem below solves the stability question for **all** diagonal sizes, with a larger universal constant.
 
 2. **Orientation-free rank-two affine half-Riesz theorem.**  
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`  
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`  
    `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`  
    For every invertible symmetric 2x2 matrix `S`, independent cap-one physical variables `Y=(Y1,Y2)`, and arbitrary affine term,
    \[
@@ -42,7 +42,7 @@ Three complete source-pinned arguments are used.
    \]
 
 3. **Physical indefinite-pair logarithmic envelope.**  
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`  
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`  
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`  
    For an invertible indefinite physical pair `P`, with
    \(D=|\det P|\) and \(\kappa=\sigma_{\min}(P)\), after completing the pair and writing the remainder as `R`, one has for every cutoff `r>0`

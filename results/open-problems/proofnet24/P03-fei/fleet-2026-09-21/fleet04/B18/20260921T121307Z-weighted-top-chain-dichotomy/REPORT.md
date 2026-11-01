@@ -8,7 +8,7 @@
 
 ## 0. Fresh source-exact frontier
 
-This run used fresh `math-open-problems` master after the 21 September owner continuation. The compatible proof inputs are:
+This run used fresh `private-source` master after the 21 September owner continuation. The compatible proof inputs are:
 
 1. fleet03/B18, `20260921T120954Z-top-degree-parity-endpoint/REPORT.md`, blob `466cb3e97c438bce515f9d87958656767236f30e`: for a Boolean function of Fourier degree `d`, every nonzero degree-`d` coefficient is an integer multiple of `2^(1-d)`, hence has magnitude at least `2^(1-d)`; this eliminates the exact uniform-activity scalar endpoint but leaves a weighted-stability gap;
 2. fleet04/B14, `2026-09-21T111505Z-js-strong-concavity-selector/REPORT.md`, blob `6e88e3464112a642fb6707f2f22f1eec3779543b`: the singleton recombination profile has the strong-concavity rebate

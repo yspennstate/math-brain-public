@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-A — unique prime optimizer, positive cosine bases, and a centered additive-discrepancy target
 
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured pre-write master:** `3a93df2d3954c4d004e5b036e1bbce7068a6c2d4`  
 **Previous own checkpoint:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T0803+0300__prime_optimal_complementary_circuits.md`  
 **Complementary checkpoint used once:** P07-B `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T0832+0300__reciprocal_convolution_collision_energy.md` plus its equation-(4.11) erratum. P07-B owns collision-energy / exceptional-frequency / dual descent. This report imports only its exact already-shared identity `q*r=1` in Section 5 and develops a different primal structural consequence.

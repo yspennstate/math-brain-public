@@ -5,7 +5,7 @@ attacking: the singular-second-anchor concentrated-E2 / fixed-scale-strip surviv
 
 Programme: QFORM-DENSITY-3EIG-20260922. Full target remains OPEN. Target-wide universal unweighted `int |phi_Q|` remains OPEN / not refuted.
 
-Fresh source actually used: the grouped projected-crossing theorem `GC` at `yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`; latest completed designated partner `fleet03/B02` r34 is `a31a7a4773212dfdd2fd1098fbc6efddc3190b64`. I also independently checked the row-promotion algebra in the fresh fleet01/B03 one-hub compiler `4b7608c198ea570378ae30b5a22d63ba7d387534` before using its stated constant below.
+Fresh source actually used: the grouped projected-crossing theorem `GC` at `private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`; latest completed designated partner `fleet03/B02` r34 is `a31a7a4773212dfdd2fd1098fbc6efddc3190b64`. I also independently checked the row-promotion algebra in the fresh fleet01/B03 one-hub compiler `4b7608c198ea570378ae30b5a22d63ba7d387534` before using its stated constant below.
 
 ## 1. Deterministic lift
 

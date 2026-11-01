@@ -17,7 +17,7 @@ Fresh owner control was revision `2026-09-22.15`; QFORM remains the sole researc
 
 The immediate predecessor is fleet03/B09 `QFORM-DOUBLE-NULL-LINEAR-SHEAR-v1`, canonical mathematics
 
-`yspennstate/math-open-problems@cf838adcab387ff12ba3b7140191433d0b80c357`
+`private-source-repository@cf838adcab387ff12ba3b7140191433d0b80c357`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T005036Z-fleet03-B09-QFORM-auto11/REPORT.md`.
 
@@ -26,13 +26,13 @@ That theorem paid the exact left-shear chamber `a_L=0, r_L!=0` by a mass-sensiti
 Two completed peer results are used at actual inequalities here:
 
 1. fleet02/B07 `QFORM-CROSS-FIBER-PLANCHEREL-v1`, source
-   `yspennstate/math-open-problems@7140ff63d4ff7c092cdc18ce7ad8a95e4e03e388`, path
+   `private-source-repository@7140ff63d4ff7c092cdc18ce7ad8a95e4e03e388`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T193347Z-b07-639234ec/REPORT.md`. For a physical cross block `M=A[L,R]` of rank `r>=3`, with `|L|=r`, it proves
    `||p_Q||_infinity <= sqrt(e) r/(r-2) det(MM^T)^(-1/(2r))`,
    retaining arbitrary self blocks and all signs. In particular for `r=3`,
    `||p_Q||_infinity <= 3 sqrt(e) det(MM^T)^(-1/6)` and the density is continuous.
 2. fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, source
-   `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path
+   `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. An orthogonal `k`-dimensional projection of an original cap-one product source has density cap at most `exp(k/2)`.
 
 The designated partner `fleet04/B09` had no completed current-QFORM handoff, memory snapshot, or QFORM archive at the fresh checks. No partner theorem is fabricated or awaited; work proceeds asynchronously with the compatible completed sources above.

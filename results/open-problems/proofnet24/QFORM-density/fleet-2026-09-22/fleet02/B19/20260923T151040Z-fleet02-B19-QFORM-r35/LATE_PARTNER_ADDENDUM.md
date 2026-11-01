@@ -2,7 +2,7 @@
 
 After the main report was written, the designated partner completed fleet03/B19 r36 at
 
-`yspennstate/math-open-problems@6dfd43d5519df1fc40ea26f7d0bbe300ad32412d`
+`private-source-repository@6dfd43d5519df1fc40ea26f7d0bbe300ad32412d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T145843Z-fleet03-B19-QFORM-r36/REPORT.md`.
 

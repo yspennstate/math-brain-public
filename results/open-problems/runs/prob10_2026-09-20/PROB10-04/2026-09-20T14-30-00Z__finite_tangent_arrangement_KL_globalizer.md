@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — no authentica
 
 # PROB10-04 — finite entropy-tangent arrangement and boundary-uniform KL globalizer
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **OPEN / PARTIAL**.
 

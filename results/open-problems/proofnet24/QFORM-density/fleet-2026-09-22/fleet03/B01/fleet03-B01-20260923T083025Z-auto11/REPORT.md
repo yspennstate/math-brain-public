@@ -25,10 +25,10 @@ Thus there is no law-uniform pointwise `C |s|^{-1/2}` estimate. The theorem belo
 
 Fresh source inputs actually used are:
 
-1. The current Claude volume-stability theorem, `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. Its equation (10) pays admissible rank-at-least-three original-coordinate cross packets, with arbitrary self phases retained. Section 8 explicitly leaves low-cross-rank/hub packets as the next obligation.
+1. The current Claude volume-stability theorem, `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. Its equation (10) pays admissible rank-at-least-three original-coordinate cross packets, with arbitrary self phases retained. Section 8 explicitly leaves low-cross-rank/hub packets as the next obligation.
 2. The two-dimensional product-marginal theorem in the current proof map: if `M` is a rank-two real `2 x m` matrix and `Y` has independent cap-one coordinates, then
    `||p_(MY)||_infinity <= 2/sqrt(det(MM^T))`.
-3. Designated partner fleet04/B01, canonical `yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`, proving the exact signed-Fejer identity
+3. Designated partner fleet04/B01, canonical `private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`, proving the exact signed-Fejer identity
    `||p_mu||_infinity = sup_(T>0,y) D_T mu(y)`
    with `+infinity` on both sides when no bounded density exists.
 

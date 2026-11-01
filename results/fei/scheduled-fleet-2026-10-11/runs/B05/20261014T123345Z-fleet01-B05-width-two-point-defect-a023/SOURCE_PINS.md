@@ -5,7 +5,7 @@
   initial control commit `ac5a014bac41dbc40da170ef5ec6ccb541510357`;
   previously read current blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
 - Current order: same repository and directory, `ORDER.md`, read 2026-10-14.
-- B05 assignment: `yspennstate/math-open-problems`,
+- B05 assignment: `private-source-repository`,
   `reports/fei-2026-10-11/assignments/B05.json`, blob
   `05447e6d999437bb82a266b427bd76a4b37266b6`.
 - Execution protocol: same repository,

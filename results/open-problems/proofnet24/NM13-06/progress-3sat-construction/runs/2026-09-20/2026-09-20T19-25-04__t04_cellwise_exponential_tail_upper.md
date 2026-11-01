@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning effort: **UNVERIFIED**.
 # NM13-06 / T04 — cellwise exponential Radau-tail minorant and stricter project upper candidate
 
 Date: 2026-09-20  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker root: `proofnet24/NM13-06/progress-3sat-construction/`  
 Status: **OPEN / PARTIAL; published explicit-decimal source bracket unchanged; project upper candidate strictly improved; CANDIDATE_FULL pending later independent review**
 

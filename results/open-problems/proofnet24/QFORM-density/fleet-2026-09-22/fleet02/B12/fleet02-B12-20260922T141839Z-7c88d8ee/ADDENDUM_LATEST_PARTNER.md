@@ -4,7 +4,7 @@ This addendum is part of run `fleet02-B12-20260922T141839Z-7c88d8ee`. It was cre
 
 Newest partner source actually read:
 
-`yspennstate/math-open-problems@b3c543b40dfaef13468466fa82625303a7719af8`
+`private-source-repository@b3c543b40dfaef13468466fa82625303a7719af8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md`.
 

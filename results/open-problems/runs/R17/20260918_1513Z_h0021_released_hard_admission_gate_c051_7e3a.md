@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6/maxim
 
 Run ID: `20260918_1513Z_h0021_released_hard_admission_gate_c051_7e3a`.
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Lifecycle boundary: binary LCS remains handed off
 

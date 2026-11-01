@@ -20,21 +20,21 @@ The preceding B16 runs treated the null/nonzero-coloop interpolation. This run c
 The completed inputs actually used are:
 
 1. **Designated partner fleet04/B16**, `QFORM-RULED-PLUECKER-ENDPOINT-v1`, canonical source  
-   `yspennstate/math-open-problems@b111363ff02b67015d14db35482e0150591744cd:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T231542Z-fleet04-B16-QFORM-r1/REPORT.md`.  
+   `private-source-repository@b111363ff02b67015d14db35482e0150591744cd:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T231542Z-fleet04-B16-QFORM-r1/REPORT.md`.  
    For an exact-rank-three indefinite matrix `A=R Lambda R^T`, with Pluecker law `w_S=det(R_S)^2` and `d=P(S cap T=emptyset)`, it proves
    `||p_Q||_infinity <=12 |det Lambda|^(-1/3)d^(-1/6)` when `d>0`, and, independently of `d`, the majority-sign one-sheet side is bounded by `pi sqrt(2)`. The first estimate has a continuous density through its cross-cut Fourier proof.
 
 2. **One-scale ridge/spectral-window theorem**, canonical source  
-   `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.  
+   `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.  
    If a symmetric matrix has at least three eigenvalues of modulus at least one and the projection `P` onto *all* eigenspaces with `|lambda|>=1/64` obeys `max_i P_ii<=1/32`, then the quadratic form, even with arbitrary coordinate-separable real additions, has a continuous density `<64`.
 
 3. **Orientation-free exact-rank-three scalar-pivot estimate**, source  
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.  
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.  
    If `A=R Lambda R^T` has exact rank three, `c_i=||r_i||^2`, and `a=A_ii!=0`, then
    `||p_Q||_infinity <=128 [c_i |a| |det Lambda|]^(-1/4)`.
 
 4. **Physical-triple determinant theorem**, B16 source  
-   `yspennstate/math-open-problems@e8effa5a58b9788063a3f4b4b7829330f000d478:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T202347Z-fleet03-B16-QFORM-r15/REPORT.md`.  
+   `private-source-repository@e8effa5a58b9788063a3f4b4b7829330f000d478:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T202347Z-fleet03-B16-QFORM-r15/REPORT.md`.  
    Every invertible original-coordinate principal triple `B=A[S,S]` gives
    `||p_Q||_infinity <= C3 |det B|^(-1/3)`, where
    `C3=16 sqrt(30) 2^(1/4)=104.216889989...`, with arbitrary outside coordinates/couplings retained.

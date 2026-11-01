@@ -159,7 +159,7 @@ The designated completed partner result is:
 
 at
 
-`yspennstate/math-open-problems@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`
+`private-source-repository@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T145451Z-fleet02-B12-QFORM-r36/REPORT.md`.
 
@@ -305,11 +305,11 @@ So the result here settles a real **additional-eigenvalue bookkeeping problem** 
 
 Designated partner actually applied:
 
-`yspennstate/math-open-problems@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`
+`private-source-repository@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T145451Z-fleet02-B12-QFORM-r36/REPORT.md`.
 
-Early substantive checkpoint for this run was committed before this report at math-open-problems commit `af4c24c90c90a4aecfdc281a92363f3c78b4a2ba`, same run directory.
+Early substantive checkpoint for this run was committed before this report at private-source commit `af4c24c90c90a4aecfdc281a92363f3c78b4a2ba`, same run directory.
 
 Independent end-to-end review of this new theorem: **not supplied by this run**. A full candidate proof would still require two independent complete reviews.
 

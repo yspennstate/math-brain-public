@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R14 HARD OUTSIDE — P0157 growing staircase obstruction
 
-Run date: 2026-09-19 UTC. Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Run date: 2026-09-19 UTC. Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL / SOURCE OPEN.** This run does not reopen the negative-margin spherical perceptron, H0008, or any other terminally handed-off R14 target.
 

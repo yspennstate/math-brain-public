@@ -5,7 +5,7 @@ Model actually run: GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 maxim
 - Worker: `NM13-13`
 - Namespace: `proofnet24/NM13-13/`
 - Category: `HARD OUTSIDE`
-- Repository / branch: `yspennstate/math-open-problems` / `master`
+- Repository / branch: `private-source-repository` / `master`
 - Frozen predecessor state: P0083 is terminally handed off; both permitted HARD recovery episodes were consumed. This run did not reopen P0083.
 - Prior successor cursor: `AFTER_P0488 / LEGACY_CODEX_P_STATIC_RESIDUE12_CORPUS_EXHAUSTED / DELTA_CHECKED_THROUGH_53d506cb0f22ec869630953c5377b5bca00ee7db`.
 - Pre-write master checked through: `2900ab786b3a3787b5e79137c0ba57b2aa6463f2`.

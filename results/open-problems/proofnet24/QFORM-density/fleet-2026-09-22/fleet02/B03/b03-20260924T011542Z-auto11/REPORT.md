@@ -14,7 +14,7 @@ The unrestricted conjecture remains OPEN, and unrestricted continuity remains OP
 
 The newest completed designated partner result at source refresh is fleet03/B03 r43, final scope supplement
 
-`yspennstate/math-open-problems@f3198cfe9b2f5f88659958c714b1ea0f7dfa29c9`
+`private-source-repository@f3198cfe9b2f5f88659958c714b1ea0f7dfa29c9`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T235705Z-fleet03-B03-QFORM-r43/REPORT.md`.
 
@@ -39,7 +39,7 @@ The r43 scope supplement is important: an older partner's advertised unweighted 
 
 The required pinned Claude/Fourier package was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 

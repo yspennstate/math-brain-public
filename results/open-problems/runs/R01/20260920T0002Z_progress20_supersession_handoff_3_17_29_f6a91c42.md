@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R01 supersession / handoff report — 20 September 2026
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Role: R01 historical CLOSABLE OUTSIDE worker.
 
 ## 1. Exact recovered mathematical state

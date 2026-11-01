@@ -14,7 +14,7 @@ attacking: the r25 adjusted-diagonal collar debt by a rank-five finite-exception
 
 The immediate source is fleet03/B20 r25, canonical
 
-`yspennstate/math-open-problems@cc4ea683eab18deb0c991021278760487f176b0a`
+`private-source-repository@cc4ea683eab18deb0c991021278760487f176b0a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T041231Z-fleet03-B20-QFORM-r25/REPORT.md`.
 
@@ -37,7 +37,7 @@ or a fixed aggregate two-gradient packet is present. Its first unpaid implicatio
 
 The designated partner actually used below is fleet04/B20 r2,
 
-`yspennstate/math-open-problems@94bf446b8547b1124a37033e940ef594c460b64f`
+`private-source-repository@94bf446b8547b1124a37033e940ef594c460b64f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T141640Z-fleet04-B20-QFORM-r2/REPORT.md`.
 
@@ -55,7 +55,7 @@ then the full law has a **continuous** density
 
 The other completed theorem used is fleet01/B20's anchored-wedge identity,
 
-`yspennstate/math-open-problems@f64266f079e502403ff19ff5ca9739a79c65ebcc`
+`private-source-repository@f64266f079e502403ff19ff5ca9739a79c65ebcc`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T031910Z-fleet01-B20-QFORM-auto11/ADDENDUM_ANCHORED_WEDGE.md`.
 

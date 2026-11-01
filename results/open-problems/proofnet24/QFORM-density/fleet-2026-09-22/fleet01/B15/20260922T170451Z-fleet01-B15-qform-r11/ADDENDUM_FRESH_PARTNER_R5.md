@@ -2,7 +2,7 @@
 
 After the main report was committed, fresh control exposed the completed `fleet02/B15` run `20260922T170424Z-fleet02-B15-qform-r5`, canonical source
 
-`yspennstate/math-open-problems@42920d321a16b9393856cfb0ed78d8557170ad38`
+`private-source-repository@42920d321a16b9393856cfb0ed78d8557170ad38`
 
 at
 

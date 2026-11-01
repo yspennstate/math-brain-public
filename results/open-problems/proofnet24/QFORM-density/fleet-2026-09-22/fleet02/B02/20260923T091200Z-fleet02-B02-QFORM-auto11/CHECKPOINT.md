@@ -38,7 +38,7 @@ Pigeonholing the four physical pairs `(i,j) in H x L` gives one common-anchor pa
 
 `H2^(i,j)(N) >= (1-2eta)E2/4`.
 
-Now apply the completed designated partner `fleet03/B02` r25 exact identity (`math-open-problems@ff8ec2ee90d4846f39e728e1ca20d50c717cc894`). Writing the residual block around this physical anchor as
+Now apply the completed designated partner `fleet03/B02` r25 exact identity (`private-source@ff8ec2ee90d4846f39e728e1ca20d50c717cc894`). Writing the residual block around this physical anchor as
 
 `N=[[a,r^T],[c,M]]`,
 

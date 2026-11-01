@@ -110,7 +110,7 @@ This proves (2.1), uniformly over the translation `t`. No property of the origin
 
 The designated completed partner result is fleet04/B18 r2, canonical scientific source
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`
 
 at
 
@@ -291,6 +291,6 @@ Primary literature:
 - Banks--Garza-Vargas--Kulkarni--Srivastava, arXiv:2005.08930, Section 2.
 
 Designated partner proof actually applied:
-- `yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
+- `private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 
 Fresh control source for this run:

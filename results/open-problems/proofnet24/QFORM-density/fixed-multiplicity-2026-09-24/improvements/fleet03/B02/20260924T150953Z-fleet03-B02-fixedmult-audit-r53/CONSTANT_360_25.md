@@ -8,7 +8,7 @@ Status: **PROVED CANDIDATE IMPROVEMENT / independent review required before rele
 
 Pinned complete source actually audited in this run:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - source commit: `eeb752c8943536541b34b42b8bf48e924f4d3d2f`
 - path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`
 - git blob: `19fb119877426b640b2c0dae19ec2f78a399fe11`
@@ -367,7 +367,7 @@ This is an essential density bound. The complete nine-direction proof does not e
 
 The completed fleet04/B02 theorem at
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`
 
 proves that if the same quadratic form contains a nonsingular physical principal `3x3` block `B` with a zero diagonal entry, then
 

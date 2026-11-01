@@ -14,7 +14,7 @@ The target remains: independent real coordinates with arbitrary probability dens
 
 This run addresses only coefficient stability under added eigenvalues. Every statement below is deterministic at the matrix level until the already-proved physical six-square-mode density compiler is invoked. In particular, no term `X^T T X` is treated as independent noise or as a convolution factor.
 
-The designated partner actually applied is fleet04/B12, run `20260924T002154Z-fleet04-B12-multihub-shear-r8`, canonical report `yspennstate/math-open-problems@bcb9fd2641440a89d6e4967781d755618e163001:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T002154Z-fleet04-B12-multihub-shear-r8/REPORT.md`. Its theorem gives a lower singular-value gate for a physical row block after arbitrary signed spectral packets aligned with a bounded-dimensional physical hub plane.
+The designated partner actually applied is fleet04/B12, run `20260924T002154Z-fleet04-B12-multihub-shear-r8`, canonical report `private-source-repository@bcb9fd2641440a89d6e4967781d755618e163001:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T002154Z-fleet04-B12-multihub-shear-r8/REPORT.md`. Its theorem gives a lower singular-value gate for a physical row block after arbitrary signed spectral packets aligned with a bounded-dimensional physical hub plane.
 
 The density receiver is the completed fleet02/B12 theorem `QFORM-SIX-SQUARE-MODE-PAIR-COMPILER-v2` at commit `c635fcdce6aa206c68f1f14e061cf617d72376fb`, with
 

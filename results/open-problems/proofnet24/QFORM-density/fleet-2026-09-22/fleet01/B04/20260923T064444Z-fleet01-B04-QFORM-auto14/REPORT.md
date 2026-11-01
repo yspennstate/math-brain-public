@@ -34,7 +34,7 @@ then
 `||p_Q||_infinity
  <= [4 sqrt(2e) q^(-1/4)/(2-q)] |a|^(-1/2) G_2(w)^(-1/8).`      (1.2)
 
-The source is `yspennstate/math-open-problems@10a74bd7d75466fe46f4ff6ecf3362fba6cb2e5d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T052139Z-fleet02-B04-qform-auto11/REPORT.md`. The proof there retains arbitrary same-bank curvature and uses product-space Fourier/BL/Hausdorff--Young machinery, not law-uniform pointwise Fresnel decay.
+The source is `private-source-repository@10a74bd7d75466fe46f4ff6ecf3362fba6cb2e5d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T052139Z-fleet02-B04-qform-auto11/REPORT.md`. The proof there retains arbitrary same-bank curvature and uses product-space Fourier/BL/Hausdorff--Young machinery, not law-uniform pointwise Fresnel decay.
 
 The preceding fleet01/B04 run proved the disjointness entropy repair: if `mu` is the canonical squared-minor row-pair marginal, `Z_2=e_2(M^T M)`, and
 

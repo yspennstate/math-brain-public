@@ -13,7 +13,7 @@ Fresh owner control at the last pre-write refresh was revision `2026-09-22.15`, 
 
 The designated partner result actually consumed is fleet03/B07 r23,
 
-`yspennstate/math-open-problems@e24329a6a315b96a87b3efc608473ef0554f3b8d`,
+`private-source-repository@e24329a6a315b96a87b3efc608473ef0554f3b8d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T033734Z-fleet03-B07-qform-r23/REPORT.md`.
 
@@ -165,7 +165,7 @@ This is stronger structurally than merely knowing a global `E_3`: every determin
 
 The required source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`,
 
@@ -258,7 +258,7 @@ By (3.1) and (5.2),
 
 Now apply this slot's already-completed determinant-marginal-tail physical-core receiver
 
-`yspennstate/math-open-problems@1f5ab2ddba6e99675fb9177666c5e64e396e54e5`.
+`private-source-repository@1f5ab2ddba6e99675fb9177666c5e64e396e54e5`.
 
 With exactly three rows and three columns, it gives for the full ambient quadratic form, after conditioning only outside these original coordinates,
 

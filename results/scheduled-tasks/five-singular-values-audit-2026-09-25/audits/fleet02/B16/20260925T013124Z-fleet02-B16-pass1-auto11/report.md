@@ -1,6 +1,6 @@
 # fleet02/B16 pass 1 — exact fourteen-page proof audit
 
-Source: `yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c`.  
+Source: `private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c`.  
 TeX blob: `c4f2a997cf336ee974e15409b5bccdd8cca039d8` (fetched in full; 676 physical lines including terminal blank).  
 PDF blob: `8be3aae36ecad7a9dc9b7c95978aad09499f32d0`.  
 Manifest PDF SHA-256: `4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423`; 484310 bytes, 14 pages.

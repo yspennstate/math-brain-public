@@ -11,17 +11,17 @@ Full unrestricted QFORM status: `OPEN_NOT_PROVED`.
 
 The newest designated partner report actually used is `fleet02/B15`:
 
-`yspennstate/math-open-problems@81b639f85e91328176f0dcdd52b5f3c95ce71ab9`,
+`private-source-repository@81b639f85e91328176f0dcdd52b5f3c95ce71ab9`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T230534Z-fleet02-B15-qform-auto11/REPORT.md`.
 
 Its completed collective rank-one Schur theorem is used below at an actual output inequality. I also use the completed physical-pair logarithmic envelope
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`,
 
 and the source-pinned fixed-matrix rough-input regularity theorem
 
-`yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`,
+`private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`.
 
 The latter says that for every fixed symmetric `A` with `rank(A)>=3`, arbitrary independent cap-one inputs give an instance-dependent bounded density with a representative in `C_0(R)`. Its constants may deteriorate with the physical matrix; it does **not** solve the universal-height theorem.

@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 
 **Status:** **OPEN / PROVED PARTIAL** on Randomstrasse101 Conjecture 18.  
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`.  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`.  
+**Repository / branch:** private `private-source-repository` / `master`.  
 **Captured pre-write master:** `192814caf3e189d2eff6c348e931380b5a3d0146`.  
 **Previous own substantive checkpoint:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1647+0300__complement_reduced_cost_leakage.md`.  
 **Complementary checkpoint read:** P07-B `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T1714+0300__physical_variance_imbalance_duality.md`. P07-B owns the Fourier-dual / exceptional-frequency interpolation route. This report stays on primal LP bases, complementary minors, volume sampling and selected-basis geometry.

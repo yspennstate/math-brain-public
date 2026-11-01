@@ -5,7 +5,7 @@ attacking: the r52 bounded-heavy captured packet — replace the contaminated bo
 
 Full QFORM remains OPEN. All coordinates below are original physical coordinates; no post-rotation independence, moments, support, log-concavity, or single-good-minor inference is used.
 
-Latest completed designated partner consumed: fleet03/B07 r52, `math-open-problems@4f5ee2dc112f258cb5dad4c9be03a9ae3573be6b`, which gives a bounded physical packet `K`, `|K|<=895`, and, on the captured branch, `a_K=lambda_min(U_K^T U_K)>=1/4`; unless already paid, `s_3(B)<1/64` for `B=A[K,K]`. Its physical boundary is `D=A[K,K^c]`.
+Latest completed designated partner consumed: fleet03/B07 r52, `private-source@4f5ee2dc112f258cb5dad4c9be03a9ae3573be6b`, which gives a bounded physical packet `K`, `|K|<=895`, and, on the captured branch, `a_K=lambda_min(U_K^T U_K)>=1/4`; unless already paid, `s_3(B)<1/64` for `B=A[K,K]`. Its physical boundary is `D=A[K,K^c]`.
 
 ## First unpaid implication attacked
 
@@ -82,7 +82,7 @@ This is a strictly sharper residual than the partner's two separate bordered-com
 
 ## Mandatory pinned e5 result applied to a real live obstruction
 
-From `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, the proved `D_k` + fractional-potential argument with `q=2` gives, for any physical crossing with `Z_2=e_2(MM^T)>0`,
+From `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, the proved `D_k` + fractional-potential argument with `q=2` gives, for any physical crossing with `Z_2=e_2(MM^T)>0`,
 
 `H_(1/4)(Q):=sup_s E|Q-s|^(-1/4) <= 3.929132 Z_2^(-1/16)`
 

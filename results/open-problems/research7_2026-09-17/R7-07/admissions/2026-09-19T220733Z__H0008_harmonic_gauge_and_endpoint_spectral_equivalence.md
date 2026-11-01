@@ -4,7 +4,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is n
 
 Date: 2026-09-19 UTC  
 Worker: `R7-07` / native identity `6aabe8413f60819197825dd81ca138ae`  
-Repository: private `yspennstate/math-open-problems`, branch `master`  
+Repository: private `private-source-repository`, branch `master`  
 Status: **PENDING_ADMISSION**. This artifact does **not** claim H0008.  
 Methods: **B12 LOOK FOR A CONSERVED QUANTITY / B24 ASK WHAT THE EXTREMAL OBJECT WOULD HAVE TO LOOK LIKE / B28 TYPICAL FIRST, EXCEPTIONAL LATER**.
 

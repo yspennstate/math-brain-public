@@ -14,7 +14,7 @@ The full conjecture is not proved. This report closes a three-scalar curved comp
 
 The latest completed named-partner result actually used is fleet03/B09 `QFORM-THREE-BANK-RANKONE-TRIANGLE-v1`, canonical source
 
-`yspennstate/math-open-problems@5e92c0aa0681b3d24630451076ab511f92dc718c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T194535Z-fleet03-B09-QFORM-r16/REPORT.md`.
+`private-source-repository@5e92c0aa0681b3d24630451076ab511f92dc718c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T194535Z-fleet03-B09-QFORM-r16/REPORT.md`.
 
 For three disjoint original-coordinate banks with independent projections `U=<u,X_I>`, `V=<v,X_J>`, `W=<w,X_K>`, zero scalar self terms, rank-one cross links, arbitrary aligned affine terms and independent outside noise, it proves
 
@@ -22,7 +22,7 @@ For three disjoint original-coordinate banks with independent projections `U=<u,
 
 The second completed dependency is `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, source
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 For independent cap-one inputs, every invertible symmetric two-dimensional quadratic form `R` with arbitrary original-coordinate affine term obeys
 
@@ -30,7 +30,7 @@ For independent cap-one inputs, every invertible symmetric two-dimensional quadr
 
 The third dependency is `QFORM-PAIR-LOG-SMALLBALL-SMOOTHING-v1`, source
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 For an exact-rank-three physical block with spectral scale `s`, an invertible indefinite physical pair `B` with `D=|det B|` and `kappa=sigma_min(B)` yields
 

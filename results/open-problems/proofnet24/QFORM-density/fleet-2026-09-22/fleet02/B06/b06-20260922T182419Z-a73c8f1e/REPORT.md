@@ -11,9 +11,9 @@ Run `b06-20260922T182419Z-a73c8f1e`. Programme `QFORM-DENSITY-3EIG-20260922`. Cl
 
 Corrections used as hard constraints: law-uniform pointwise quadratic Fresnel decay is false; rotation does not preserve independence; unrestricted fiber suprema can lose dimension; arbitrary-joint 3D coarea with only an L-infinity density cap is false; fixed positive moments of vector-conditioned projection density can diverge; local good-minor/cross-rank dichotomies and direct Pluecker-pivot averaging can fail. No such statement is used below.
 
-Assigned partner actually consumed: fleet03/B06 run `20260922T172229Z-fleet03-B06-qform-r14`, canonical source `yspennstate/math-open-problems@f0b750686f976524454cb490179785f5d764638a:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T172229Z-fleet03-B06-qform-r14/REPORT.md`, blob `570dac22bf2f5bdc800fb1be8595aeac2c3dd9b2`. Its theorem `QFORM-RANK3-GLOBAL-RANK1-SCHUR-AGGREGATION-v1` is applied quantitatively in Section 5.
+Assigned partner actually consumed: fleet03/B06 run `20260922T172229Z-fleet03-B06-qform-r14`, canonical source `private-source-repository@f0b750686f976524454cb490179785f5d764638a:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T172229Z-fleet03-B06-qform-r14/REPORT.md`, blob `570dac22bf2f5bdc800fb1be8595aeac2c3dd9b2`. Its theorem `QFORM-RANK3-GLOBAL-RANK1-SCHUR-AGGREGATION-v1` is applied quantitatively in Section 5.
 
-A second complete supporting source is the arbitrary-rank physical-pair theorem `yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`, blob `d690b4e1e9f29a458c5ee7d8f2f107b98da64360`. It is pending independent review and is used only in its stated scope.
+A second complete supporting source is the arbitrary-rank physical-pair theorem `private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`, blob `d690b4e1e9f29a458c5ee7d8f2f107b98da64360`. It is pending independent review and is used only in its stated scope.
 
 ## 2. The stronger scalar-conditioning gate is false
 

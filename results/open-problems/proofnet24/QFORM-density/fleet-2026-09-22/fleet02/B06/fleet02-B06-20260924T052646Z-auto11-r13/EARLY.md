@@ -3,7 +3,7 @@ attacking: `QFORM-P1-OR-HUBDEGENERATE-MIXED-LAYER-COMPILER-v1`; aggregate the co
 
 # Early mathematical implication
 
-Use the newest designated partner fleet03/B06 r53, source `yspennstate/math-open-problems@1ae51010a6c1eca20e0897902d67f9c169ad7997`. In its literal three-hub normal form
+Use the newest designated partner fleet03/B06 r53, source `private-source-repository@1ae51010a6c1eca20e0897902d67f9c169ad7997`. In its literal three-hub normal form
 
 `A = [I_3,Z]^T B [I_3,Z] + D`,
 

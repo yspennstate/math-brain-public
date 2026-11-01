@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 # R03 HARD OUTSIDE — F0002: determinant square classes, an exponential pointwise obstruction, and a larger affine-support sieve
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Continuity, source, current literature, and ownership
 

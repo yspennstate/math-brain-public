@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6/maximum
 # P04 T10 — length-8 exact ladder optimization extends the certified FPP strict-triangle cone to slope 907/500
 
 Date: 2026-09-20 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.  
 Parent source: Auffinger–Damron–Hanson, *50 years of first passage percolation*, arXiv:1511.03262, Question 4.  
 Model: nearest-neighbor **undirected** FPP on `Z^2` with iid physical-edge weights `Exp(1)`.  

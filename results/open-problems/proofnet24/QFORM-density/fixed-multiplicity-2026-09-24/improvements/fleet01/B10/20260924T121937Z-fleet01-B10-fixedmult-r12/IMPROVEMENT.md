@@ -2,7 +2,7 @@
 
 Run: `20260924T121937Z-fleet01-B10-fixedmult-r12`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.  
-Pinned manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Pinned manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 Status: **PROVED same-threshold constant improvement; PROVED structural reduction of the attempted 17->16 step; multiplicity 16 itself remains OPEN in this run.** Nothing here is marked independently validated; the new material needs two genuinely separate complete reviews before any validation label.
 

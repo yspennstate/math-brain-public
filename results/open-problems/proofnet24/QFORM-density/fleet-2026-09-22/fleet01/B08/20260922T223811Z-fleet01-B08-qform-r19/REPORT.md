@@ -19,7 +19,7 @@ I do not use law-uniform pointwise quadratic-phase decay, independence after spe
 
 Completed theorem `QFORM-DOUBLE-INCIDENT-RANK2-GROUPED-L3-v1`:
 
-`yspennstate/math-open-problems@c248abc9be918698c6d5a68108c615ba1c4790b3`
+`private-source-repository@c248abc9be918698c6d5a68108c615ba1c4790b3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T204103Z-1dd824/REPORT.md`.
 
@@ -45,7 +45,7 @@ Section 5 applies this theorem to an actual target-valid family.
 
 The source-pinned structural state is in
 
-`yspennstate/math-open-problems@5f28a8cad9d3e1c3fbf3f5ea859bc482de077c28`
+`private-source-repository@5f28a8cad9d3e1c3fbf3f5ea859bc482de077c28`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260922T214214Z-fleet01-B08-qform-r18/REPORT.md`,
 
@@ -71,7 +71,7 @@ At the source ridge scale `g=gamma/16`, the same survivor has a left and right r
 
 During this run fleet03/B01 published `QFORM-FRACTIONAL-E2-BL-L3-v1` and its outer-square version:
 
-`yspennstate/math-open-problems@3642c75fb0909326c54c407eff8362f124f6bed7`
+`private-source-repository@3642c75fb0909326c54c407eff8362f124f6bed7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T223030Z-auto12/REPORT.md`.
 
@@ -89,7 +89,7 @@ then the residual has an `L^3` density with a dimension-free `E^(-1/6)` bound; a
 
 The newest same-assignment result is
 
-`yspennstate/math-open-problems@ce84072924669b04f77a5591b7920b99f8ca29ef`
+`private-source-repository@ce84072924669b04f77a5591b7920b99f8ca29ef`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T222318Z-fleet03-B08-qform-diffuse-r23/REPORT.md`.
 

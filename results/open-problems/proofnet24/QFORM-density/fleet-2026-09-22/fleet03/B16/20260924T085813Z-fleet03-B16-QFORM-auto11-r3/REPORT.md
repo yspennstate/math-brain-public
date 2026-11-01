@@ -16,8 +16,8 @@ The unrestricted conjecture remains OPEN / NOT PROVED / NOT DISPROVED. This run 
 
 Two fresh neighboring results sharpen the exact frontier.
 
-* fleet03/B16 r44, `QFORM-THREEBANK-PROJECTEDSQUARE-HYPERBOLIC-LP-v1`, source `yspennstate/math-open-problems@cb1cffb4f4644bd7cf1bb912f792dd9ce060957a`, handles a projected square and a hyperbolic product when all three nonlinear source scalars come from disjoint banks.
-* fleet01/B16, source `yspennstate/math-open-problems@935a3a200d67fdcd2e853b8f1d87ca6cd308489d`, proves `QFORM-PROJECTEDSQUARE-DEPENDENT-RANK2-LP-v1`: an independent projected square can be convolved against a dependent two-dimensional projected quadratic output in `L^(3/2) x L^3`. Its first unpaid state is the genuinely overlapping projected-square/rank-two packet.
+* fleet03/B16 r44, `QFORM-THREEBANK-PROJECTEDSQUARE-HYPERBOLIC-LP-v1`, source `private-source-repository@cb1cffb4f4644bd7cf1bb912f792dd9ce060957a`, handles a projected square and a hyperbolic product when all three nonlinear source scalars come from disjoint banks.
+* fleet01/B16, source `private-source-repository@935a3a200d67fdcd2e853b8f1d87ca6cd308489d`, proves `QFORM-PROJECTEDSQUARE-DEPENDENT-RANK2-LP-v1`: an independent projected square can be convolved against a dependent two-dimensional projected quadratic output in `L^(3/2) x L^3`. Its first unpaid state is the genuinely overlapping projected-square/rank-two packet.
 
 The present result closes one nontrivial part of that overlap: the square scalar itself may also appear in one hyperbolic factor, provided a transverse innovation survives on a separate product bank.
 
@@ -29,7 +29,7 @@ The only non-elementary mathematical dependency in the main proof is the complet
 
 from
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 For independent cap-one original-coordinate inputs, every orthonormal two-dimensional projection `U`, every invertible symmetric `2 x 2` matrix `Lambda`, and every affine coefficient vector `b` satisfy
@@ -219,7 +219,7 @@ Thus a fully delocalized strict-target chamber remains uniformly bounded even wh
 
 The newest completed designated-partner result used here is fleet04/B16 r4,
 
-`yspennstate/math-open-problems@7f2bb2d330022b09a6af6e39ab09d054caeaa346`,
+`private-source-repository@7f2bb2d330022b09a6af6e39ab09d054caeaa346`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260924T041516Z-fleet04-B16-QFORM-r4/REPORT.md`.
 
 Its source-valid definite projected-plane exit states that if a two-dimensional orthogonal projection `Z` of a cap-one product bank enters, after conditioning on disjoint sources, through a definite quadratic matrix `H`, then

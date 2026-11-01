@@ -27,7 +27,7 @@ The first still-unpaid implication is structural: from the bare hypothesis `s_3(
 
 Source:
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`  
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`  
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 For a protected ORIGINAL-coordinate cross block `M=A[I,J]`, if
@@ -42,7 +42,7 @@ then the entire ambient quadratic-plus-affine form (arbitrary self blocks and ou
 
 Source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`  
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`  
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
 For an ORIGINAL-coordinate cross block `M=A[I,J]`, with
@@ -59,7 +59,7 @@ with no volume-marginal condition.  The proof is by an integrable Fourier envelo
 
 Source:
 
-`yspennstate/math-open-problems@712efebad69058a36784d6459abb18b8977b7aa4`  
+`private-source-repository@712efebad69058a36784d6459abb18b8977b7aa4`  
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T065358Z-fleet02-B12-auto11/REPORT.md`.
 
 For a baseline cross block `M0=A0[I,J]` and an actual perturbation satisfying `||M-M0||op<=epsilon`, define

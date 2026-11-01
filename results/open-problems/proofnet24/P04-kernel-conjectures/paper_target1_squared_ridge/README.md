@@ -1,7 +1,7 @@
 # P04/P21 Target 1 — restricted two-view squared-ridge closure package
 
 Date: 2026-09-16
-Repository: `yspennstate/math-open-problems`, branch `master`
+Repository: `private-source-repository`, branch `master`
 Category: PERSONAL FINISHING (owner's 2026 kernel note / kernel paper 9). This is not an external-source assignment.
 
 ## Exact proved scope

@@ -4,7 +4,7 @@ Problem/source: Russell Lyons and Yuval Peres, *Probability on Trees and Network
 # R06 immutable recovery report — I0056 / tetrapentagonal medial attack
 
 Run ID: `20260916T1820Z_i0056_medial_tetrapentagonal_01`
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 Overall source status: **PARTIAL**.
 
 The frozen regular/co-regular target remains exactly solved mathematically:

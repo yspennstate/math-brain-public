@@ -2,7 +2,7 @@
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Run: `20260924T142019Z-fleet01-B02-fixedmult-audit-r13`  
-Baseline source: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `manuscript.tex` blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
+Baseline source: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `manuscript.tex` blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
 
 This file gives a complete replacement argument lowering the fixed multiplicity from 17 to **9**, while preserving every hypothesis, and sharpens the height constant to **4880**. It uses only baseline lemmas independently audited in the sibling B02 audit plus the new lemmas proved here.
 

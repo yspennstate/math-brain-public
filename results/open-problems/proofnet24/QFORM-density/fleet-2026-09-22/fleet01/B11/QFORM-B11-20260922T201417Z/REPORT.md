@@ -24,7 +24,7 @@ The theorem below is sign-free, hence covers both `(+,+,-)` and `(+,-,-)` exact-
 
 Canonical source:
 
-`yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`
+`private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`
 
 `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
 
@@ -44,7 +44,7 @@ Latest completed assigned-partner result read in this run:
 
 `fleet02/B11`, run `20260922T192814Z-b11-qform-70f57503`, canonical proof
 
-`yspennstate/math-open-problems@2c065b1bb6a45a479bd2ac5d3405cd59e7bafe8f`
+`private-source-repository@2c065b1bb6a45a479bd2ac5d3405cd59e7bafe8f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T192814Z-b11-qform-70f57503/REPORT.md`.
 

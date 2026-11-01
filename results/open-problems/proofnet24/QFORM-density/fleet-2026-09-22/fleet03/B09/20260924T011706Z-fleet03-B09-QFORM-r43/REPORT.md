@@ -14,21 +14,21 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The immediate new source motivating this run is fleet01/B09's exact singular-pair collar report, read at
 
-`yspennstate/math-open-problems@e8b5b25d32c90397bfa90c586eb44564798cf193`,
+`private-source-repository@e8b5b25d32c90397bfa90c586eb44564798cf193`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260924T005202Z-fleet01-B09-QFORM-auto11/REPORT.md`.
 
 It proves that for an exact rank-one physical pair with rank-one pair-to-leaf cross bank, the anchored overlap-two compound matrix is blind to the same-bank leaf block `D`. It also closes the physically concentrated star branch: at overlap scale at least `1/4`, failure of the principal-triple payment forces the normalized star leverage `q<1/16`. Its first remaining implication is exactly the diffuse-star / arbitrary-leaf-curvature exit.
 
 The other source used below is fleet02/B09 r15,
 
-`yspennstate/math-open-problems@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`,
+`private-source-repository@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T224553Z-fleet02-B09-QFORM-r15/REPORT.md`.
 
 That report pays the exact collinear zero-active-leaf star but leaves general curvature on the same leaf bank open.
 
 The designated fleet04/B09 partner theorem is
 
-`yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`,
+`private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
 
 For a literal invertible physical `3 x 3` cross block `K`, it proves

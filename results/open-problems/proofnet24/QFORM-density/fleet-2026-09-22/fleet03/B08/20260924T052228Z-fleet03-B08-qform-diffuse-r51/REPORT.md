@@ -15,7 +15,7 @@ The unrestricted conjecture remains OPEN, and full-target continuity remains OPE
 
 The immediate new predecessor is fleet01/B08 r43:
 
-`yspennstate/math-open-problems@5eceb142f1c4ebaa8c6096d0333a9c1995f39c69`,
+`private-source-repository@5eceb142f1c4ebaa8c6096d0333a9c1995f39c69`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260924T051232Z-fleet01-B08-qform-r43/REPORT.md`.
 
 It consumes every fixed-scale physical diagonal or edge and reduces the genuinely diffuse r50 source branch to a physical deletion
@@ -42,7 +42,7 @@ The designated fleet04/B08 input is
 
 `QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1`,
 
-`yspennstate/math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76`,
+`private-source-repository@a5e66e2944c89857a41d5e18c283d53a4307be76`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T212412Z-fleet04-B08-QFORM-r2/REPORT.md`.
 
 If an ORIGINAL-coordinate deletion child has three eigenvalues of modulus at least `m` and its projection onto `|lambda|>=m/64` has every physical leverage at most `1/32`, then the full parent form has

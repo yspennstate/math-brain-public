@@ -167,7 +167,7 @@ The variable `W` is a genuinely independent original coordinate with density cap
 
 from
 
-`yspennstate/math-open-problems@e4bf40b7376380c069ccee64a530fd2297ef04e3`
+`private-source-repository@e4bf40b7376380c069ccee64a530fd2297ef04e3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T233435Z-fleet01-B05-QFORM-auto17/REPORT.md`.
 
@@ -197,7 +197,7 @@ Use the designated fleet02/B05 theorem
 
 from its canonical source
 
-`yspennstate/math-open-problems@e7a21ed67b943d7aded714ac17ca48bdab4a1349`
+`private-source-repository@e7a21ed67b943d7aded714ac17ca48bdab4a1349`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T200516Z-fleet02-B05-QFORM-auto11c/REPORT.md`.
 
@@ -208,7 +208,7 @@ Here the literal hub `H` has density cap `m=1`, the pair `(V,W)` consists of two
 
 This is not used to claim the punctured family by continuity in the matrix parameter; it is a separately valid endpoint estimate. Together with (4.3), it confirms that the logarithmic divergence in Section 3 belongs to the scalar-peel proof architecture rather than to the target family itself.
 
-For comparison, the newest fleet02/B05 handoff `QFORM-WITT-DISJOINT-PLUCKER-CROSSING-v1` (`math-open-problems@8b902bf20457a12c8ad394ece3808c9a0130a95b`) independently pays a diffuse source-sharing null-hub branch. I do not extend that zero-pivot theorem to nonzero pivots without a separate argument.
+For comparison, the newest fleet02/B05 handoff `QFORM-WITT-DISJOINT-PLUCKER-CROSSING-v1` (`private-source@8b902bf20457a12c8ad394ece3808c9a0130a95b`) independently pays a diffuse source-sharing null-hub branch. I do not extend that zero-pivot theorem to nonzero pivots without a separate argument.
 
 ## 6. Exact missing factor for the punctured coarea programme
 
@@ -249,10 +249,10 @@ The result is therefore a **mechanism obstruction and a precise missing-factor d
 
 ## 8. Source list actually used
 
-2. Previous B05 zero-pivot closure: `yspennstate/math-open-problems@1ca1fc77ae8435274325c25657c496fd703c0b51:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260924T072900Z-fleet01-B05-QFORM-auto11/REPORT.md`.
-3. Rank-two + independent-square bridge: `yspennstate/math-open-problems@e4bf40b7376380c069ccee64a530fd2297ef04e3:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T233435Z-fleet01-B05-QFORM-auto17/REPORT.md`.
-4. Required designated-partner theorem: `yspennstate/math-open-problems@e7a21ed67b943d7aded714ac17ca48bdab4a1349:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T200516Z-fleet02-B05-QFORM-auto11c/REPORT.md`.
-5. Fresh fleet02/B05 state: `yspennstate/math-open-problems@8b902bf20457a12c8ad394ece3808c9a0130a95b:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260924T075515Z-fleet02-B05-QFORM-r12/REPORT.md`.
-6. Endpoint-stable punctured-collar geometry/chirp identity: `yspennstate/math-open-problems@b2a0240b45c8a0716d803b8413bac31af519ce42:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260924T041205Z-fleet03-B10-QFORM-r28/REPORT.md`.
+2. Previous B05 zero-pivot closure: `private-source-repository@1ca1fc77ae8435274325c25657c496fd703c0b51:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260924T072900Z-fleet01-B05-QFORM-auto11/REPORT.md`.
+3. Rank-two + independent-square bridge: `private-source-repository@e4bf40b7376380c069ccee64a530fd2297ef04e3:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T233435Z-fleet01-B05-QFORM-auto17/REPORT.md`.
+4. Required designated-partner theorem: `private-source-repository@e7a21ed67b943d7aded714ac17ca48bdab4a1349:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T200516Z-fleet02-B05-QFORM-auto11c/REPORT.md`.
+5. Fresh fleet02/B05 state: `private-source-repository@8b902bf20457a12c8ad394ece3808c9a0130a95b:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260924T075515Z-fleet02-B05-QFORM-r12/REPORT.md`.
+6. Endpoint-stable punctured-collar geometry/chirp identity: `private-source-repository@b2a0240b45c8a0716d803b8413bac31af519ce42:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260924T041205Z-fleet03-B10-QFORM-r28/REPORT.md`.
 
 Manual changed-file review found only mathematical content, public repository identifiers, and nonsecret run metadata. No credentials, personal archives, financial/client material, or unrelated content were introduced. No external scanner executable or installation was used.

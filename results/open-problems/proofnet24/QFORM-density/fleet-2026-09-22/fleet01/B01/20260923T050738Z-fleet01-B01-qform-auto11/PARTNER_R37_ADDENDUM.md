@@ -2,7 +2,7 @@
 
 After the main report was written, fleet02/B01 completed r37. Canonical source:
 
-`yspennstate/math-open-problems@0bd4d621852ca0ba40f9914ea91b6c387ce6a225`
+`private-source-repository@0bd4d621852ca0ba40f9914ea91b6c387ce6a225`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T050036Z-fleet02-B01-qform-r37/REPORT.md`.
 

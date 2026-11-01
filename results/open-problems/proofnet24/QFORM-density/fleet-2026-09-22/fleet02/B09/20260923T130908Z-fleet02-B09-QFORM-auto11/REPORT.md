@@ -19,7 +19,7 @@ The newest completed designated partner result is fleet03/B09 r32,
 
 canonical source
 
-`yspennstate/math-open-problems@56d0211f2f04d74152032fd1914196673eb5c3e6`
+`private-source-repository@56d0211f2f04d74152032fd1914196673eb5c3e6`
 
 at
 
@@ -57,7 +57,7 @@ This run moves the gate from `1/2` to every value `<3/4`. The remaining B09 debt
 
 I read the required `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
@@ -74,7 +74,7 @@ The required counterexample search reports no valid counterexample to the full Q
 
 I also used the completed sharp-Hausdorff--Young q-dependent theorem at
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 

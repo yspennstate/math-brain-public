@@ -17,13 +17,13 @@ This run changes mechanism from the recent relative-resonance/destructive-projec
 
 Source-valid inputs actually used:
 
-1. fleet04/B12 r8, `yspennstate/math-open-problems@bcb9fd2641440a89d6e4967781d755618e163001`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T002154Z-fleet04-B12-multihub-shear-r8/REPORT.md`. For an ORIGINAL-coordinate carrier `H`, its multidimensional hub shear theorem gives
+1. fleet04/B12 r8, `private-source-repository@bcb9fd2641440a89d6e4967781d755618e163001`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T002154Z-fleet04-B12-multihub-shear-r8/REPORT.md`. For an ORIGINAL-coordinate carrier `H`, its multidimensional hub shear theorem gives
 
    `s_(p+ell)(P_H A_*) >= gamma(||Lambda^(-1)W^T||) min{s_p(Lambda),s_ell(R)}`,
 
    with `gamma(t)=(sqrt(t^2+4)-t)/2`.
 
-2. fleet03/B12 r47, `yspennstate/math-open-problems@7fa8e2a00f932cb7ed6e68da9dbd07725c24d0f1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T031535Z-qform-eigenvalue-r47/REPORT.md`. If an `m>=5` ORIGINAL-coordinate carrier satisfies
+2. fleet03/B12 r47, `private-source-repository@7fa8e2a00f932cb7ed6e68da9dbd07725c24d0f1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T031535Z-qform-eigenvalue-r47/REPORT.md`. If an `m>=5` ORIGINAL-coordinate carrier satisfies
 
    `lambda_5((A^2)[H,H]) >= g^2>0`,
 

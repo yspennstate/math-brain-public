@@ -20,7 +20,7 @@ The latest completed designated-partner result is fleet03/B09 r24,
 
 source
 
-`yspennstate/math-open-problems@9fcac412f233f09c6ee5e8a1140207d596cce8a2`
+`private-source-repository@9fcac412f233f09c6ee5e8a1140207d596cce8a2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T045157Z-fleet03-B09-QFORM-r24/REPORT.md`.
 
@@ -35,7 +35,7 @@ What remains after this run is the small-torsion/invariant-plane endpoint and th
 ## 2. Sources actually used at equations
 
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
@@ -47,7 +47,7 @@ The analytic endpoint used below is this worker's completed
 
 source
 
-`yspennstate/math-open-problems@03ec6ccf1de2e2544e850cbda25d460aacae6a1b`
+`private-source-repository@03ec6ccf1de2e2544e850cbda25d460aacae6a1b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T024331Z-fleet02-B09-QFORM-auto12/REPORT.md`.
 

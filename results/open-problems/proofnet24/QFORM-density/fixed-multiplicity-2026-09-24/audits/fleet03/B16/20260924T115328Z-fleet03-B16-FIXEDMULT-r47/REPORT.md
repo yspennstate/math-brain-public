@@ -3,7 +3,7 @@
 Run: `20260924T115328Z-fleet03-B16-FIXEDMULT-r47`
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`
 Execution status: `WITHOUT_VERIFIED_BRAIN`
-Audited canonical source: `yspennstate/math-open-problems`, `master`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`
+Audited canonical source: `private-source-repository`, `master`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`
 Initial source commit specified by owner: `7c0d6e60946b19423e6400a12d34b473cf0591e2`
 Source git blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`
 Declared source SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`

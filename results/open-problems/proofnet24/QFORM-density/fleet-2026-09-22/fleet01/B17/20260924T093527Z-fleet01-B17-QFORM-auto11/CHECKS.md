@@ -29,7 +29,7 @@ Verified exactly:
 
 External proof dependencies checked at source:
 
-1. Fresnel--Brascamp--Lieb Theorem F: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`. Its actual hypotheses were checked on both finite physical eigenframes; no arbitrary-joint or post-rotation-independence shortcut is used.
-2. Partner fleet02/B17 random-location Gaussian barrier and quantitative noncentral estimate: `yspennstate/math-open-problems@97d91254e56ad2f8c79b121a0ce8bf66472a11d9:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T074629Z-fleet02-B17-QFORM-auto11/REPORT.md`.
+1. Fresnel--Brascamp--Lieb Theorem F: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`. Its actual hypotheses were checked on both finite physical eigenframes; no arbitrary-joint or post-rotation-independence shortcut is used.
+2. Partner fleet02/B17 random-location Gaussian barrier and quantitative noncentral estimate: `private-source-repository@97d91254e56ad2f8c79b121a0ce8bf66472a11d9:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T074629Z-fleet02-B17-QFORM-auto11/REPORT.md`.
 
 Full unrestricted QFORM remains open. Continuity remains separate.

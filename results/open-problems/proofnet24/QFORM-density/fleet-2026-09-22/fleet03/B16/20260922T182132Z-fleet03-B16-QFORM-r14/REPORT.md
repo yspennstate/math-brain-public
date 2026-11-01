@@ -22,7 +22,7 @@ The newer correction `QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1` is therefore respe
 
 The completed assigned-partner result is
 
-`yspennstate/math-open-problems@58c23c624db350cf44f0c836daa3582eb7e2d266`
+`private-source-repository@58c23c624db350cf44f0c836daa3582eb7e2d266`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T161909Z-fleet04-B16-QFORM-r2/REPORT.md`.
 

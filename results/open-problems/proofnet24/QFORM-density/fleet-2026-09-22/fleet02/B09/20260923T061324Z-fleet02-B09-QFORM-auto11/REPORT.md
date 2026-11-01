@@ -20,7 +20,7 @@ The newest completed designated-partner input is fleet03/B09 r24,
 
 canonical source
 
-`yspennstate/math-open-problems@9fcac412f233f09c6ee5e8a1140207d596cce8a2`
+`private-source-repository@9fcac412f233f09c6ee5e8a1140207d596cce8a2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T045157Z-fleet03-B09-QFORM-r24/REPORT.md`.
 
@@ -38,7 +38,7 @@ This report advances that implication and isolates its exact cancellation gate.
 
 I used the owner-required source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 

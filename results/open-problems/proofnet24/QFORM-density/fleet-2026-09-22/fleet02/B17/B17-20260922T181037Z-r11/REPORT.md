@@ -17,7 +17,7 @@ This run attacks a remaining sharp-witness escape left after the designated part
 
 The designated partner `fleet03/B17` completed the source-pinned run
 
-- mathematics: `yspennstate/math-open-problems@0fe842ad60b590ca774ecfd71cf2bb9d15639f90`;
+- mathematics: `private-source-repository@0fe842ad60b590ca774ecfd71cf2bb9d15639f90`;
 - report: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260922T180732Z-fleet03-B17-QFORM-r14/REPORT.md`.
 
 It proves an exact six-variable rotated witness with peak
@@ -26,7 +26,7 @@ It proves an exact six-variable rotated witness with peak
 
 and, by an exact bathtub argument, proves that arbitrary **one-coordinate fragmentation** cannot improve its prior cross witness when the other five laws remain centered unit intervals. Thus a stronger finite witness must coordinate at least two law changes, use a different orientation, or enter a growing/multiscale architecture. I use that conclusion to move to a genuinely different mixed-leverage construction rather than repeat a one-coordinate fragment swap. I also use its exact `4.0630706...` value as the finite benchmark in Section 7.
 
-The preceding partner run `fleet03/B17` at `math-open-problems@3bb57a5517de87855824e393ec1601b8921abc13` proved that every **fixed finite tight-frame pattern repeated diffusely with centered unit intervals** approaches `3 sqrt(2)` from below, with a strictly negative first Edgeworth correction. The present theorem covers a complementary canonical regime in which one row does **not** become diffuse and its physical law is completely arbitrary subject only to the density cap.
+The preceding partner run `fleet03/B17` at `private-source@3bb57a5517de87855824e393ec1601b8921abc13` proved that every **fixed finite tight-frame pattern repeated diffusely with centered unit intervals** approaches `3 sqrt(2)` from below, with a strictly negative first Edgeworth correction. The present theorem covers a complementary canonical regime in which one row does **not** become diffuse and its physical law is completely arbitrary subject only to the density cap.
 
 ## 3. A sharp cap-one square-Laplace inequality
 

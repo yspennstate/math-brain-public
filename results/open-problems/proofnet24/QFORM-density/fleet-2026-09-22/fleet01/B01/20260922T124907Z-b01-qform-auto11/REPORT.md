@@ -26,7 +26,7 @@ The scalar phase-alignment counterexample remains valid and is not weakened here
 
 The assigned partner `fleet02/B01`, run `20260922T120355Z-fleet02-B01-qform-r19`, canonical report
 
-`yspennstate/math-open-problems@fedbec07e3e8b2f9fcd2b1a65b0bb2a0137c212f:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T120355Z-fleet02-B01-qform-r19/REPORT.md`
+`private-source-repository@fedbec07e3e8b2f9fcd2b1a65b0bb2a0137c212f:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T120355Z-fleet02-B01-qform-r19/REPORT.md`
 
 proved that for every nonzero original-coordinate diagonal entry `a=A_ll`, the full coupled characteristic function obeys
 
@@ -36,7 +36,7 @@ with arbitrary outside couplings retained. Section 6 below combines this global 
 
 I also checked the completed fleet02/B09 report at
 
-`yspennstate/math-open-problems@fa592b592c61bd1597aa8cf3270c3c9f58f410bf:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T115241Z-fleet02-B09-QFORM-r1/REPORT.md`.
+`private-source-repository@fa592b592c61bd1597aa8cf3270c3c9f58f410bf:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T115241Z-fleet02-B09-QFORM-r1/REPORT.md`.
 
 Its direct small-ball theorem assumes `A[I,I]=0` and already closes invertible cross packets of size `m>=2`. The present theorem removes `A[I,I]=0` for cross dimension `k>=3`; the price is the sharp Fourier threshold `k>2`.
 

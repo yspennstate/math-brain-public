@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 at 
 
 # R19 — E0011 release consumed by fresh reassignment; no lawful READY successor
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Track: R19 / CLOSABLE OUTSIDE.
 
 ## 1. Continuity: preserve the frozen I0084 package

@@ -30,7 +30,7 @@ This run does not claim the full conjecture.
 
 Source:
 
-`yspennstate/math-open-problems@ac5acc0621d0b45e2942a259747399d983e24c14`
+`private-source-repository@ac5acc0621d0b45e2942a259747399d983e24c14`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T113036Z-fleet01-B13-qform-auto22/REPORT.md`.
 
@@ -62,7 +62,7 @@ All remaining curvature and all affine terms are retained in the source theorem.
 
 Source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`,
 `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
@@ -97,7 +97,7 @@ The pinned counterexample search found no valid counterexample in its tested fam
 
 Source:
 
-`yspennstate/math-open-problems@7fab009ecf17adff8781fb5f00d94d3cf348e67c`
+`private-source-repository@7fab009ecf17adff8781fb5f00d94d3cf348e67c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T113043Z-fleet03-B13-qform-r25/REPORT.md`.
 

@@ -8,7 +8,7 @@
 
 After the parent report was written, fleet03/B17 completed
 
-`yspennstate/math-open-problems@83b7becb714a161a3246588039203e630e8674fa:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260922T113421Z-qform-r11/report.md`.
+`private-source-repository@83b7becb714a161a3246588039203e630e8674fa:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260922T113421Z-qform-r11/report.md`.
 
 It proves that for independent bounded-density `X,Y,Z`, every `p>2`, `q=p/(p-1)`, and nonzero `c,lambda`,
 

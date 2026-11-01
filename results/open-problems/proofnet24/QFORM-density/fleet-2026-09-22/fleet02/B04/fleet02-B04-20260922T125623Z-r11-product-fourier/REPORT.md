@@ -14,9 +14,9 @@ The target remains: for every dimension, every independent real input family wit
 
 for one universal finite `C`, every real `t` and every `h>0`, or give a valid counterexample. No moment, support, log-concavity, diagonal-basis, or post-rotation-independence hypothesis is added.
 
-The most useful current conditional end-to-end route is the product-preserving hard-branch route in fleet01/B19 (`math-open-problems@072cf685a12893b44d555f14e4e610bcf2154037`, report blob `2530c90971b43a49cf9da35be03919868719abb9`). Its near-coordinate-diagonal basin already gives a target-level bound when `||A-diag(A)||_op<1/2`. In the complementary strongly coupled branch it isolates a product-origin elliptic graph trace as the missing global implication; critically, its hard family shows that one cannot insist on one well-conditioned physical triple or a rank-three disjoint cross block.
+The most useful current conditional end-to-end route is the product-preserving hard-branch route in fleet01/B19 (`private-source@072cf685a12893b44d555f14e4e610bcf2154037`, report blob `2530c90971b43a49cf9da35be03919868719abb9`). Its near-coordinate-diagonal basin already gives a target-level bound when `||A-diag(A)||_op<1/2`. In the complementary strongly coupled branch it isolates a product-origin elliptic graph trace as the missing global implication; critically, its hard family shows that one cannot insist on one well-conditioned physical triple or a rank-three disjoint cross block.
 
-My previous B04 run (`math-open-problems@b7168a1b0b52fbf69705170ff9795435efeb849f`, blob `fa94d255369a9ad6475ebc66b2f158066e588a8b`) proposed a more specific next step for exact rank three: exploit the fixed-row wedge budget
+My previous B04 run (`private-source@b7168a1b0b52fbf69705170ff9795435efeb849f`, blob `fa94d255369a9ad6475ebc66b2f158066e588a8b`) proposed a more specific next step for exact rank three: exploit the fixed-row wedge budget
 
 `sum_{j<k, j,k!=i} det[u_i,u_j,u_k]^2 = ||u_i||_2^2`
 
@@ -43,7 +43,7 @@ The last correction is especially relevant: fleet02/B09's event at brain blob `5
 
 The named partner fleet03/B04 canonical report is
 
-- repository `yspennstate/math-open-problems`;
+- repository `private-source-repository`;
 - commit `f824ded997ee16c741468bb49860e1ccaf18d8bd`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/a03-b04-20260922T115126Z-qform-r11/REPORT.md`;
 - blob `2438594f82b064359483972f59f4d061a6814ce0`.

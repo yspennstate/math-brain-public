@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 
 # PROB10-08 — affine high-multiplicity stress test for transitive-expander cutoff
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / OPEN / obstruction proved / cutoff for the stress-test family not proved / independent validation pending**.
 

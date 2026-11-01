@@ -1,6 +1,6 @@
 # fleet03/B08 r29 result
 
-Canonical mathematics: `yspennstate/math-open-problems@c58aa132fd02c6e739650559cf25a6754fad5435`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T062121Z-fleet03-B08-qform-diffuse-r29/REPORT.md`.
+Canonical mathematics: `private-source-repository@c58aa132fd02c6e739650559cf25a6754fad5435`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T062121Z-fleet03-B08-qform-diffuse-r29/REPORT.md`.
 
 New result: the anchored self-matched order-3/order-2 minor law admits an arbitrary mixture weight. This pays every fixed residual-row occupancy `h<2/3` via the completed mixed-order Jensen/Fourier theorem, and `h>=2/3` is an exact barrier for this specific two-order mechanism. At the fixed universal choice `theta=16/25,q=32/25`, the diffuse anchored state `Z>L^6/6912`, `R_i<=L`, `h<=16/25` has a continuous `C0` density with `||p_Q||inf<374/L`. Failure forces a one-sided nested third-volume packet `P>L^6/10800`; two-sided failure on the same anchored law forces double-nested mass `>7L^6/172800`.
 

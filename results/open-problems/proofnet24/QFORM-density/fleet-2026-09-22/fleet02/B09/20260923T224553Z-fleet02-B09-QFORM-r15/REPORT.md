@@ -187,7 +187,7 @@ Thus the exact singular-pair collinear star is not itself an obstruction to line
 
 The required completed Theorem H from
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
 is now applied at an actual target inequality, without any decoupling square root.
@@ -230,7 +230,7 @@ This is the requested mixed-hub smoothing on a literal source-coordinate star: n
 
 The newest completed fleet03/B09 handoff available in this run is r42,
 
-`math-open-problems@6642b95f1b9f447bdb961c5cbebe5b7d003faa20`,
+`private-source@6642b95f1b9f447bdb961c5cbebe5b7d003faa20`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T215045Z-fleet03-B09-QFORM-r42/REPORT.md`.
 
 For a physical three-coordinate bank with rank-two cross block it proves, for every `p>2`,

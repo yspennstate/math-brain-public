@@ -92,7 +92,7 @@ This theorem is deliberately subcritical. At `beta=1/2` the integral in (2.4) is
 
 The preceding fleet01/B01 run proved `QFORM-SQUARE-FRACTIONAL-UPGRADE-v1` at
 
-`yspennstate/math-open-problems@d827daa3503625fa8ae0c01efacaf41e00cbedcc`,
+`private-source-repository@d827daa3503625fa8ae0c01efacaf41e00cbedcc`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T230734Z-fleet01-B01-qform-auto11/REPORT.md`.
 
 I use exactly the following proved interface. If `R` is independent of an original scalar `Z` with density cap `M`, the shift `m` is measurable with respect to the source of `R`, `b!=0`, and `0<beta<1/2`, then for `gamma=beta+1/2`,
@@ -208,7 +208,7 @@ This is a useful replacement for trying to prove three separate pointwise Fresne
 
 The newest completed designated partner available at publication is
 
-`yspennstate/math-open-problems@8a05b72743a9dc1ffa5afd22be6a7fa66d59b8ba`,
+`private-source-repository@8a05b72743a9dc1ffa5afd22be6a7fa66d59b8ba`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T220140Z-fleet02-B01-QFORM-auto11/REPORT.md`.
 
 Its theorem `QFORM-RANK1-LATENT-TRANSVERSE-WEDGE-v1` works inside a diagonal-plus-rank-two Schur state
@@ -240,7 +240,7 @@ The remainder of this report spends (6.1) on the previously unpaid exact cancell
 
 The preceding B01 finite-leak identity, proved at
 
-`yspennstate/math-open-problems@8c52275df2e3a5ff11a694689d1d6c89d86b2269`,
+`private-source-repository@8c52275df2e3a5ff11a694689d1d6c89d86b2269`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T230734Z-fleet01-B01-qform-auto11/FINITE_LEAK_IDENTITY.md`,
 
 uses

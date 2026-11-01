@@ -27,7 +27,7 @@ where the supremum is over all target instances and `|y|>=2`. It also proves tha
 
 The completed assigned-partner result actually applied below is fleet02/B15,
 
-`math-open-problems@00d696f70a758aa3e5c94dc1711f178ff03d9ebb`,
+`private-source@00d696f70a758aa3e5c94dc1711f178ff03d9ebb`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T030440Z-fleet02-B15-QFORM-auto11/REPORT.md`.
 
 Its Theorem 6.1 gives an ambient original-coordinate majority-sheet bound from any invertible indefinite physical `3 x 3` principal block. I apply it in Section 6 to the exact kernel functional, not merely as a citation.

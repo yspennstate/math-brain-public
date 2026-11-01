@@ -12,7 +12,7 @@ The unrestricted owner target remains OPEN / NOT PROVED / NOT DISPROVED. Nothing
 ## 1. Inputs actually used
 
 Latest designated partner actually consumed: fleet03/B11 r46,
-`yspennstate/math-open-problems@559dcad1a7ad077c7e784bd806602b951926fe28`, theorem `QFORM-PRODUCT-BANK-HYPERBOLIC-LM-v1`.
+`private-source-repository@559dcad1a7ad077c7e784bd806602b951926fe28`, theorem `QFORM-PRODUCT-BANK-HYPERBOLIC-LM-v1`.
 
 It says: if `H` is independent of an arbitrary random object `Y`, `||p_H||_infinity<=F`, `U=U(Y)` has marginal density cap `G`, `Psi(Y)` is arbitrary and may depend on the same source as `U`, and
 
@@ -24,7 +24,7 @@ then for every integer `m>=2`,
 
 The full same-bank residual phase is allowed inside `Psi`; only `H` has to be genuinely source-independent.
 
-Required pinned source actually consumed: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. Two completed facts are used at their exact scopes:
+Required pinned source actually consumed: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. Two completed facts are used at their exact scopes:
 
 1. a normalized one-dimensional linear projection of an independent cap-one product source has density cap at most `sqrt(2)` (the projection-density input recorded in `FOURIER_ROUTE_REPORT.md`); and
 2. its ruled-level-set Theorem C gives `p_Q(t)<=pi sqrt(2)/s` on the one-sheet side of an exact rank-three `(2,1)` or `(1,2)` form whose three nonzero eigenvalue magnitudes are at least `s` (`COUNTEREXAMPLE_SEARCH.md`). I do not transfer that ruling bound to the two-sheet side.

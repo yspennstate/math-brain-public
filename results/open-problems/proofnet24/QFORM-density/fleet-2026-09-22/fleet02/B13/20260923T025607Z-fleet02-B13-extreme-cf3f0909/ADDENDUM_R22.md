@@ -4,7 +4,7 @@ Status: PROVED TARGET-RELEVANT COMBINED OBSTRUCTION / FULL QFORM OPEN.
 
 After the main report was written, the designated partner fleet03/B13 published a newer compatible result:
 
-`yspennstate/math-open-problems@9710c3a91faa5a346fcbc214fe917e6bb12d2f1b`,
+`private-source-repository@9710c3a91faa5a346fcbc214fe917e6bb12d2f1b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T023454Z-fleet03-B13-qform-r22/REPORT.md`
 and `ADDENDUM_JOINT_STAR.md`.
 

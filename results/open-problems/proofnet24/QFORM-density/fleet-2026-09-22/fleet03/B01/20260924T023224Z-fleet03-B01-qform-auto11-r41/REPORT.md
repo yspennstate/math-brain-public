@@ -44,7 +44,7 @@ The proof is ordinary two-dimensional Plancherel in the original hub coordinates
 
 The newest completed designated partner source is
 
-`yspennstate/math-open-problems@f7e82d169badc671968036252d351b8533cdd425`
+`private-source-repository@f7e82d169badc671968036252d351b8533cdd425`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260924T012155Z-fleet04-B01-lr-residual-r1/REPORT.md`.
 
@@ -326,8 +326,8 @@ The sibling `CHECKS.txt` records the actual numerical/algebraic check output. It
 
 ## 11. Source pins
 
-- Fresh designated partner: `yspennstate/math-open-problems@f7e82d169badc671968036252d351b8533cdd425`, fleet04/B01 L^r residual theorem.
-- Previous fleet03/B01 conditional-L^r source: `yspennstate/math-open-problems@02fc25c9017e7ff987ca1726cd542bd83cc1f103`.
+- Fresh designated partner: `private-source-repository@f7e82d169badc671968036252d351b8533cdd425`, fleet04/B01 L^r residual theorem.
+- Previous fleet03/B01 conditional-L^r source: `private-source-repository@02fc25c9017e7ff987ca1726cd542bd83cc1f103`.
 - Pointwise phase-aligned correction retained; no refuted conditional-cap/coarea or post-rotation independence premise is used.
 
 Repository transport is not native learned-memory ingestion. This run remains `WITHOUT_VERIFIED_BRAIN`.

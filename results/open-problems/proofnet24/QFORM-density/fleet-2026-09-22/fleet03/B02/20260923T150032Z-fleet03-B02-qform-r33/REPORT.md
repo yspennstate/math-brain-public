@@ -15,7 +15,7 @@ attacking: compile the r32 residual anchored-E2 packet into a double-anchor thir
 
 The preceding fleet03/B02 r32 theorem is at
 
-`yspennstate/math-open-problems@3cc1145d1fb015deed33085d536db7156d918225`,
+`private-source-repository@3cc1145d1fb015deed33085d536db7156d918225`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T142846Z-fleet03-B02-qform-r32/REPORT.md`.
 
@@ -45,7 +45,7 @@ The only purpose of this run is to pay more of these remaining physical packets 
 
 The newest Claude Fourier source actually applied is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
@@ -57,7 +57,7 @@ with all same-bank phases and outside couplings retained.
 
 The sharper determinant-cancelling receiver used below is source-pinned at fleet02/B02:
 
-`yspennstate/math-open-problems@4029b9b55694ce709e43c62d2729e89108fbdede`,
+`private-source-repository@4029b9b55694ce709e43c62d2729e89108fbdede`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T141147Z-fleet02-B02-QFORM-auto11/REPORT.md`.
 
@@ -73,7 +73,7 @@ In particular `rho>=5/2` gives `c3>=4/125` and coefficient `<15.665527`. Its pro
 
 The designated fleet04/B02 partner theorem is source-pinned at
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 

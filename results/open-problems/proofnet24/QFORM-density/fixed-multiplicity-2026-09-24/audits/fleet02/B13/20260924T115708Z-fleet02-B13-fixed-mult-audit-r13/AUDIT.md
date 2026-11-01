@@ -222,7 +222,7 @@ Thus r50's subsequent heavy-Schur analysis, which is entered only for `rho>209.0
 
 ## Required pinned Fourier source applied to a real manuscript inequality
 
-The owner-pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` proves the unconditional fifth-volume receiver
+The owner-pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` proves the unconditional fifth-volume receiver
 
 \[
 \|p_Q\|_\infty\le5\sqrt{2e}\,Z_5^{-1/10}

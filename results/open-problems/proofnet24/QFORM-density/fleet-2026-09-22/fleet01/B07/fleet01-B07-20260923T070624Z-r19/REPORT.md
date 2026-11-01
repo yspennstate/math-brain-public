@@ -16,8 +16,8 @@ This run uses no law-uniform pointwise van-der-Corput decay, no arbitrary-joint 
 
 Sources actually used:
 
-1. Fleet02/B07, `QFORM-DETERMINANT-MARGINAL-TAIL-CORE-v1`, canonical source `yspennstate/math-open-problems@1f5ab2ddba6e99675fb9177666c5e64e396e54e5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T023322Z-r11/REPORT.md`. Its exact structural implication is applied in Section 5 below.
-2. Fleet03/B07, `QFORM-THIRD-COMPOUND-OVERLAP-COLORING-v1`, canonical source `yspennstate/math-open-problems@391688138f7f481a2c8688c2d27f9508db7af6af`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T000734Z-fleet03-B07-qform-r20/REPORT.md`. I use it only as a comparison point: its finer positional coloring is stronger for receivers that need six/five/four/three distinct subbanks, while the new coarse coloring below keeps much more determinant mass when a receiver only needs disjoint structural roles.
+1. Fleet02/B07, `QFORM-DETERMINANT-MARGINAL-TAIL-CORE-v1`, canonical source `private-source-repository@1f5ab2ddba6e99675fb9177666c5e64e396e54e5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T023322Z-r11/REPORT.md`. Its exact structural implication is applied in Section 5 below.
+2. Fleet03/B07, `QFORM-THIRD-COMPOUND-OVERLAP-COLORING-v1`, canonical source `private-source-repository@391688138f7f481a2c8688c2d27f9508db7af6af`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T000734Z-fleet03-B07-qform-r20/REPORT.md`. I use it only as a comparison point: its finer positional coloring is stronger for receivers that need six/five/four/three distinct subbanks, while the new coarse coloring below keeps much more determinant mass when a receiver only needs disjoint structural roles.
 
 ## 2. The full third-compound currency
 

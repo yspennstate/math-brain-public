@@ -13,7 +13,7 @@ The preferred newly assigned partner `fleet02/B01` had no completed compatible F
 
 Source pins used below:
 
-1. **Selector recursion:** `yspennstate/math-open-problems`, commit `4ccd51ad517f425a529daa52c3352905b86ea69d`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md`, Sections 2--4 only. Its historical coefficient `0.337` is refuted and is not used.
+1. **Selector recursion:** `private-source-repository`, commit `4ccd51ad517f425a529daa52c3352905b86ea69d`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md`, Sections 2--4 only. Its historical coefficient `0.337` is refuted and is not used.
 2. **Influence I-projection:** same repository, commit `4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`, Sections 2--4.
 3. **Named OTHER-account result applied:** same repository, commit `2bf247373576eb406ca91bb3ea5f3ce5e5ab8588`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md`, Theorem 2.1 and Sections 3--4. It proves exact superadditivity of `K_occ` under disjoint composition, with the missing hierarchy term retained as an explicit KL credit.
 4. **Fresh denominator geometry:** same repository, commit `35ca31a959e9c40d7a5387f913197b6682b5dda6`, `proofnet24/P03-fei/fleet-2026-09-22/fleet03/B04/20260922T103904Z-nearzero-poincare-trichotomy/REPORT.md`, Sections 2--6.

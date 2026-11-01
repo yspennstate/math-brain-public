@@ -21,7 +21,7 @@ A second conclusion below is negative but useful: the natural one-sided scalar-s
 ## 2. Source boundary and completed inputs actually used
 
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
@@ -34,7 +34,7 @@ Two completed results from that source are used at equations, not merely cited:
 
 The completed designated partner fleet03/B10 r24 is
 
-`yspennstate/math-open-problems@c0d7e627b3b877fcecc3004a58335658f6541d64`
+`private-source-repository@c0d7e627b3b877fcecc3004a58335658f6541d64`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T114517Z-fleet03-B10-QFORM-r24/REPORT.md`.
 
@@ -50,7 +50,7 @@ A newer fleet03/B10 r25 artifact was only an early checkpoint when this report w
 
 The immediate fleet02/B10 predecessor is
 
-`yspennstate/math-open-problems@f81263344356dd37ef7f6323f863ba48b49f1a34`,
+`private-source-repository@f81263344356dd37ef7f6323f863ba48b49f1a34`,
 
 which isolated the near-null weak-curvature collar and proved `det(E^TME)=a det(M)/||Mr||^2` for the compression to `(Mr)^perp`.
 

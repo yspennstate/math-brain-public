@@ -2,7 +2,7 @@ SIGNED IN - working on the quadratic-form bounded-density conjecture (universal 
 
 # Independent scoped review of FISHER_INFORMATION.md
 
-Source reviewed: `yspennstate/math-open-problems@4a65677d185d35154dc3dfae320c5df9f939b8a2:proofnet24/QFORM-density/interactive/20260923T184054Z-fisher-continuation/FISHER_INFORMATION.md`, blob `8a562d0d8c8c47679b83c33d1e0bbe9390387f4d`.
+Source reviewed: `private-source-repository@4a65677d185d35154dc3dfae320c5df9f939b8a2:proofnet24/QFORM-density/interactive/20260923T184054Z-fisher-continuation/FISHER_INFORMATION.md`, blob `8a562d0d8c8c47679b83c33d1e0bbe9390387f4d`.
 
 Assigned fleet02/B02 scope: weak integration by parts, cutoff limits, inverse-distance estimate, primitive normalization, and the resulting density-domination factor. Verdict: **PASS on this assigned analytic scope**. This is not a review of the separate spectral/constant/convolution/smoothing items assigned to fleet03/B04, and it is not an end-to-end review of full QFORM.
 

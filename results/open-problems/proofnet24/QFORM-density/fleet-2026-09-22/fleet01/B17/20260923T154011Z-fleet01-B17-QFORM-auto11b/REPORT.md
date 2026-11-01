@@ -189,7 +189,7 @@ The strongest source-valid universal lower obstruction remains `C_univ>=3sqrt(2)
 
 Newest designated partner source read in this run:
 
-`yspennstate/math-open-problems@2f227775f53ca554a645737b9dbad18e25437d74`
+`private-source-repository@2f227775f53ca554a645737b9dbad18e25437d74`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T151331Z-fleet02-B17-QFORM-auto11/REPORT.md`.
 
@@ -224,5 +224,5 @@ No use is made of any refuted route: no law-uniform stationary-phase decay, no a
 
 Sources pinned for this report:
 
-- fleet03/B17 one-heavy N3 optimizer and endpoint certificate: `math-open-problems@4e3db9a1284f35692c3d8b1c279aedb5dd5cc626`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T150436Z-fleet03-B17-QFORM-auto11/REPORT.md`;
-- designated fleet02/B17 newest unequal-bank global theorem: `math-open-problems@2f227775f53ca554a645737b9dbad18e25437d74`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T151331Z-fleet02-B17-QFORM-auto11/REPORT.md`.
+- fleet03/B17 one-heavy N3 optimizer and endpoint certificate: `private-source@4e3db9a1284f35692c3d8b1c279aedb5dd5cc626`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T150436Z-fleet03-B17-QFORM-auto11/REPORT.md`;
+- designated fleet02/B17 newest unequal-bank global theorem: `private-source@2f227775f53ca554a645737b9dbad18e25437d74`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T151331Z-fleet02-B17-QFORM-auto11/REPORT.md`.

@@ -14,7 +14,7 @@ The unrestricted conjecture remains OPEN. No Gaussian, log-concave, moment, comp
 
 The immediate predecessor is fleet03/B20 r30,
 
-`yspennstate/math-open-problems@2c0131b6830892a77a8faaf3521388d3a51e7514`,
+`private-source-repository@2c0131b6830892a77a8faaf3521388d3a51e7514`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T084738Z-fleet03-B20-QFORM-r30/REPORT.md`.
 
@@ -290,7 +290,7 @@ The designated partner theorem is fleet04/B20
 
 canonical source
 
-`yspennstate/math-open-problems@f97aa31585b7b547a116d4580f898576af4e0842`,
+`private-source-repository@f97aa31585b7b547a116d4580f898576af4e0842`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T011956Z-fleet04-B20-QFORM-r4/REPORT.md`.
 

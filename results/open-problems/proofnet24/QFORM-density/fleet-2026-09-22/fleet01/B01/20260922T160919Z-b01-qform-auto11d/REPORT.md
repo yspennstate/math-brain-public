@@ -15,7 +15,7 @@ The live correction `QFORM-POINTWISE-DECAY-FALSE` is retained. A cap-one scalar 
 ## 2. Source-pinned dependencies actually used
 
 1. **Physical indefinite two-pivot quarter-kernel.** fleet03/B19, canonical report
-   `yspennstate/math-open-problems@0e6d1715955458010d43193cab3dafc293c0e28c`, path
+   `private-source-repository@0e6d1715955458010d43193cab3dafc293c0e28c`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T154500Z-fleet03-B19-QFORM-r13/REPORT.md`.
    For a physical pivot block
    `B0=[[a,c],[c,-b]]`, `a,b>=m>0`, `Delta=ab+c^2`, with exact outside Schur complement `S`, the conditional mixture satisfies
@@ -25,7 +25,7 @@ The live correction `QFORM-POINTWISE-DECAY-FALSE` is retained. A cap-one scalar 
    In its proof-assembly branch one also has `m=7/8`, `Delta>=49/64`, and, if no physical Schur diagonal pays, an original-coordinate cut with `s_1(S[I,J])>27/2240`.
 
 2. **Free-regularizer ridge characteristic envelope.** Interactive report
-   `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, path
+   `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, path
    `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
    For an original-coordinate cross block `R`, ridge scale `gamma>0`, `q in [1,2]`,
 
@@ -38,7 +38,7 @@ The live correction `QFORM-POINTWISE-DECAY-FALSE` is retained. A cap-one scalar 
    where `L_q=pi e sqrt(2/q)`. Importantly this envelope is proved before the report imposes its stronger ordinary-Fourier condition `theta>2q`.
 
 3. **Assigned partner fleet02/B01.** r22 canonical report
-   `yspennstate/math-open-problems@08e91d2cd50db663646e7c25983c421ccaa78c7c`, path
+   `private-source-repository@08e91d2cd50db663646e7c25983c421ccaa78c7c`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T150052Z-fleet02-B01-qform-r22/REPORT.md`.
    Its rank-two cross-bank plus transverse-curvature theorem gives the residual density cap
 

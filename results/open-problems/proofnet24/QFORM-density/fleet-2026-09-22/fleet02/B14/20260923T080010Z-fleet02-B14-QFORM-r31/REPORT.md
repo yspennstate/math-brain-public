@@ -21,7 +21,7 @@ The analytic input is the completed Fresnel–Brascamp–Lieb rank-one mechanism
 
 ### 2.1 Required Claude source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 The relevant proved facts are in `RESULTS.md` and `FOURIER_ROUTE_REPORT.md`:
@@ -39,7 +39,7 @@ The source explicitly keeps affine terms and original-coordinate product structu
 ### 2.2 Designated partner fleet03/B14 r30
 
 Canonical proof:
-`yspennstate/math-open-problems@f762fa44abe357031aa4020eb614478ab47588e3`,
+`private-source-repository@f762fa44abe357031aa4020eb614478ab47588e3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T073732Z-fleet03-B14-QFORM-r30/REPORT.md`.
 
 For an invertible indefinite physical pair block `B`, with

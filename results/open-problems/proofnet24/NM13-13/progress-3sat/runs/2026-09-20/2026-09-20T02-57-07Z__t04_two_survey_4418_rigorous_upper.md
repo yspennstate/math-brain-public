@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-13 — T04 cluster-aware 3-SAT: a two-survey interpolation certificate gives an explicit 4.418 upper bound
 
 Date: 2026-09-20  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker root: `proofnet24/NM13-13/progress-3sat/`  
 Parent: **T04 — classical iid random 3-SAT with uniform independent signs on three distinct variables**  
 Status: **OPEN / PARTIAL; theorem below is CANDIDATE_FULL for the stated explicit upper bound, pending later independent review**

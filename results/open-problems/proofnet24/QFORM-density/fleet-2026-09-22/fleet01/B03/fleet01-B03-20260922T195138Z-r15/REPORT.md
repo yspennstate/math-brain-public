@@ -22,7 +22,7 @@ The new step is a translation-uniform fractional-trace synthesis in original coo
 
 The required partner is fleet02/B03. I consumed its latest complete report at
 
-`yspennstate/math-open-problems@cdd5c5a373f3e5a9d4a38fbde390141d1d2c81d5`
+`private-source-repository@cdd5c5a373f3e5a9d4a38fbde390141d1d2c81d5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T183916Z-fleet02-B03-QFORM-r13/REPORT.md`.
 

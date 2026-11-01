@@ -27,7 +27,7 @@ The theorem below proves that item (ii) is logically necessary: at exact Schur-c
 
 `QFORM-PAIRLOG-SCHUR-CENTER-v1` is proved in
 
-`yspennstate/math-open-problems@004631a217e4c6b716651d7ac551e035a181cc45`
+`private-source-repository@004631a217e4c6b716651d7ac551e035a181cc45`
 
 at
 
@@ -55,7 +55,7 @@ The latest completed named-partner result is fleet03/B09 r18,
 
 `QFORM-TWO-BANK-DEFINITE-TRANSVERSE-RANK2-v1`, canonical mathematics
 
-`yspennstate/math-open-problems@9404859d9039d9eb76286588dc6d38a0fc3393ed`
+`private-source-repository@9404859d9039d9eb76286588dc6d38a0fc3393ed`
 
 at
 
@@ -275,7 +275,7 @@ Thus the current B09 obstruction is no longer an unresolved three-scalar analyti
 
 A useful already-proved endpoint when the external direction is a genuine physical square is supplied by the orientation-free rank-two half-Riesz theorem
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`:
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`:
 
 if the lightcone residual has nonzero eigenvalues `lambda_+,-lambda_-` and a disjoint physical square pivot of coefficient `c` remains after square completion, then
 

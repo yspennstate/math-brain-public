@@ -9,7 +9,7 @@ Execution/memory receiver status: `WITHOUT_VERIFIED_BRAIN`.
 ## Source pin
 
 Pinned baseline source commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`.  
-Fresh `math-open-problems/master` observed at sign-in: `7be6bf95889a7665c9b18182bcaedce473a75131`; fresh master observed immediately before publication: `ac4ae48ed0c94bb984c524e8c73c7fed5bacb5c6`.  
+Fresh `private-source/master` observed at sign-in: `7be6bf95889a7665c9b18182bcaedce473a75131`; fresh master observed immediately before publication: `ac4ae48ed0c94bb984c524e8c73c7fed5bacb5c6`.  
 The manuscript remained byte-identical to the baseline throughout this audit: git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, manifest SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`, 47,883 bytes, 790 lines.
 
 I read all 790 source lines in this invocation and also read the current `README.md`, `AUDIT.md`, `proof_map.csv`, `SOURCE_MANIFEST.json`, `verify.py`, `checks.json`, and `DELIVERY_STATUS.md`. The four support files that had been missing in an earlier repository state are now present. I did not substitute any peer PASS report for the reconstruction below.

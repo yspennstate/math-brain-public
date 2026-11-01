@@ -16,21 +16,21 @@ The full target remains unchanged: for arbitrary finite `n`, independent origina
 
 The immediate source advance is fleet02/B09 `QFORM-3x2-KERNELDERIVATIVE-L1-v1`, source
 
-`yspennstate/math-open-problems@ded875c2199e63eebfc49dd25d3ca4d349723301`,
+`private-source-repository@ded875c2199e63eebfc49dd25d3ca4d349723301`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T201318Z-fleet02-B09-QFORM-r14/REPORT.md`.
 
 For a literal physical `3x2` rank-two crossing with left kernel `n` and `a=Pn`, it proves a continuous-density receiver in terms of `||w||||Pw||`. Its Section 9 gives the key obstruction: a fixed aggregate one-index-overlap mass can be spread over `Theta(m^2)` physical pairs while every individual packet currency tends to zero. This run addresses exactly that right-bank pair diffusion.
 
 A second completed source used quantitatively is the reviewed projection bound in
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`:
 
 an `r`-dimensional orthonormal projection of an independent cap-one product law has density at most `2^(r/2)`. I use only `r=1,2`.
 
 The designated fleet04/B09 partner theorem used in Section 9 is source-pinned at
 
-`yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`,
+`private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
 
 It proves that a literal invertible physical `3x3` cross block `K` gives a continuous density with

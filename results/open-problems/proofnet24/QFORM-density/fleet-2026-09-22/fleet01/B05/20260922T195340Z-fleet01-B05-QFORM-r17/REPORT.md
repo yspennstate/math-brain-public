@@ -66,7 +66,7 @@ In particular `|gamma|<=B/2` and `|kappa|<=B`. These inequalities are exact cons
 
 Assigned partner fleet02/B05 proved `QFORM-2D-PARSEVAL-PROJECTION-CAP-v1` in
 
-`yspennstate/math-open-problems@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`,
+`private-source-repository@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T155206Z-b05-qform-779c4c9b/REPORT.md`.
 
@@ -245,8 +245,8 @@ Full QFORM remains `OPEN_NOT_PROVED`. Continuity remains `NOT_PROVED`.
 
 ## 10. Source ledger
 
-- Previous B05 normal-form/coarea report: `yspennstate/math-open-problems@ff4ac4c0e30ef241b9347aa764965e8f7842450d`, exact path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260922T192559Z-fleet01-B05-QFORM-r16/REPORT.md`.
-- Assigned partner actually applied: fleet02/B05, `QFORM-2D-PARSEVAL-PROJECTION-CAP-v1`, `yspennstate/math-open-problems@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`, exact report path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T155206Z-b05-qform-779c4c9b/REPORT.md`.
+- Previous B05 normal-form/coarea report: `private-source-repository@ff4ac4c0e30ef241b9347aa764965e8f7842450d`, exact path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260922T192559Z-fleet01-B05-QFORM-r16/REPORT.md`.
+- Assigned partner actually applied: fleet02/B05, `QFORM-2D-PARSEVAL-PROJECTION-CAP-v1`, `private-source-repository@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`, exact report path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T155206Z-b05-qform-779c4c9b/REPORT.md`.
 - Relevant corrections retained: arbitrary-joint rank-three coarea false; conditional projection-height positive moments false; scalar-remainder conditional sup false; pointwise phase decay false; X-ray-only curved trace false; hidden-shift pair-cap sufficiency false.
 
 No scheduler, notification, email, Drive, public release, paid model/API, remote workflow, permission, or installation mutation is made by this report.

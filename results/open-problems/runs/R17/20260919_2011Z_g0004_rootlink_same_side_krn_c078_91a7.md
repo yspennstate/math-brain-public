@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R17 C078 — G0004: root-link recursion, a realizable mixture obstruction, and the same-side `K_{r,n+1}` theorem
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R17, HARD OUTSIDE.  
 Status: **OPEN / PARTIAL.** Recovery 2/2 was already consumed in C077. This run gives a new source-valid nonplanar family theorem and an exact recursive inequality, but it does not move the fixed source-wide metric.
 

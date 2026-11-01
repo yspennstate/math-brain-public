@@ -11,7 +11,7 @@
 
 The live correction inbox was reread before publication. This report does **not** use law-uniform pointwise quadratic oscillatory decay, independence after spectral rotation, an unrestricted fiber supremum, a generic X-ray bound, a conditional-density surrogate for independence, or the existence of one uniformly good physical triple. In particular it responds directly to the corrections showing that reciprocal local minors can lose powers of dimension and that product aggregation must occur before or jointly with the curved trace.
 
-The exact assigned partner is `fleet04/B06`. The canonical shared handoff root and canonical math-open-problems root for that slot were both absent at startup and again at the partner refresh, so no exact-partner theorem or PASS is fabricated. Work proceeded asynchronously as instructed.
+The exact assigned partner is `fleet04/B06`. The canonical shared handoff root and canonical private-source root for that slot were both absent at startup and again at the partner refresh, so no exact-partner theorem or PASS is fabricated. Work proceeded asynchronously as instructed.
 
 Two completed compatible results are actually used:
 
@@ -36,7 +36,7 @@ Two completed compatible results are actually used:
    \int g(z)\Psi(a\pm\delta z^2)\,dz\le2\sqrt{15}\,\delta^{-1/4}.     \tag{0.3}
    \]
 
-2. **fleet04/B18**, `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical report `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, is applied below to the explicit distributed-third-direction witness to quantify exactly how a one-triple square-smoothing payment loses `m^{1/4}`. This is a compatible fleet04 result actually used at an inequality. It is not mislabelled as the unavailable assigned `fleet04/B06` result.
+2. **fleet04/B18**, `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical report `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, is applied below to the explicit distributed-third-direction witness to quantify exactly how a one-triple square-smoothing payment loses `m^{1/4}`. This is a compatible fleet04 result actually used at an inequality. It is not mislabelled as the unavailable assigned `fleet04/B06` result.
 
 The standard Rogozin--Ball one-dimensional projection theorem, already source-pinned in the completed rank-two fusion report, is also used: if `w` is a Euclidean unit vector and the coordinates of `X` are independent with densities at most one, then `w.X` has density at most `sqrt(2)`.
 

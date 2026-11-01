@@ -15,7 +15,7 @@ This run consumed the current correction inbox at brain main `a024fc6d01d9af0a05
 
 The named partner result actually used is fleet03/B08 `QFORM-DIFFUSE-BLOCK-REMAINDER-v1`, canonical source
 
-`yspennstate/math-open-problems@55d185b63ba44f172d9342b5d89e0875e850e17a`
+`private-source-repository@55d185b63ba44f172d9342b5d89e0875e850e17a`
 
 at
 
@@ -23,7 +23,7 @@ at
 
 Its exact block-coloring step is applied below, not merely cited as background. The perturbative closure uses the completed one-scale ridge theorem
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 at
 
@@ -246,11 +246,11 @@ The present perturbatively stable certificate nevertheless gives the explicit `<
 
 Checker source was committed first at
 
-`yspennstate/math-open-problems@f19e67dfda23900a1e0f47320fcd7aaaafed0f77`
+`private-source-repository@f19e67dfda23900a1e0f47320fcd7aaaafed0f77`
 
 in this run directory. Its archived output was committed at
 
-`yspennstate/math-open-problems@391c94fdca1f2972938a94ccc573514306b143ed`.
+`private-source-repository@391c94fdca1f2972938a94ccc573514306b143ed`.
 
 The checker verifies the exact Hadamard orthogonality, exact annihilation `(256I-SS^T)S=0`, nonzero off-diagonal remainder entries, all rational constants above, and records the two ridge bounds and density constants. Terminator:
 

@@ -24,7 +24,7 @@ Active check-in request consumed: `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 
 fleet02/B20 r49:
 
-`yspennstate/math-open-problems@b7a664d483bcf443586a217441b6471caaf2c616`
+`private-source-repository@b7a664d483bcf443586a217441b6471caaf2c616`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260924T080024Z-fleet02-B20-QFORM-auto11-r49/REPORT.md`.
 
@@ -38,7 +38,7 @@ Its r49 frontier also retains the four physical cells and the genuine `2^-16` ra
 
 fleet03/B20 r49:
 
-`yspennstate/math-open-problems@4bf5217dace0129fcb6995727e1d8afa671c2435`
+`private-source-repository@4bf5217dace0129fcb6995727e1d8afa671c2435`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T065238Z-fleet03-B20-QFORM-auto11-r49/REPORT.md`.
 
@@ -76,7 +76,7 @@ and after restoring the retained tail every actual cell has the previously recor
 
 The completed marginal-free physical crossing theorem `QFORM-CROSS-E3-MARGINALFREE-L1-v1` is source-pinned at
 
-`yspennstate/math-open-problems@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`
+`private-source-repository@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T170106Z-fleet03-B02-qform-r35/REPORT.md`.
 
@@ -88,7 +88,7 @@ For any literal physical disjoint cut `K=A[I,J]`,
 
 It retains all same-side curvature, all outside coordinates/couplings, affine terms, signs and extra spectrum.
 
-The physical two-frame Bernoulli balance lemma used below is fleet03/B08 `QFORM-TWOFRAME-BERNOULLI-BALANCE-v1`, source `yspennstate/math-open-problems@19c12072f7e67266ce894042034bcabb9c376bea`: an orthonormal two-frame of maximal row leverage `mu` has a physical bipartition whose two restricted Grams are each at least `1/2-sqrt(mu/2)` times `I_2`.
+The physical two-frame Bernoulli balance lemma used below is fleet03/B08 `QFORM-TWOFRAME-BERNOULLI-BALANCE-v1`, source `private-source-repository@19c12072f7e67266ce894042034bcabb9c376bea`: an orthonormal two-frame of maximal row leverage `mu` has a physical bipartition whose two restricted Grams are each at least `1/2-sqrt(mu/2)` times `I_2`.
 
 ## 2. A second physical split inside every r49 node
 

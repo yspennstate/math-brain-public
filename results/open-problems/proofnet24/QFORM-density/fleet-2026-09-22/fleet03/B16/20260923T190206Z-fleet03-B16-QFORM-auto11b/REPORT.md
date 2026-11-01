@@ -46,7 +46,7 @@ No random coordinate has been rotated.
 
 The exact dependencies used below are:
 
-1. fleet04/B16 `QFORM-HEAVY-FRESH-TRANSVERSE-CROSS-LIFT-v1`, `yspennstate/math-open-problems@48d2f4234b05dfa527f1119c2c3dfc4a4b941f5d`, which preserves original-coordinate provenance and permits an arbitrary shift of a genuinely fresh physical square;
+1. fleet04/B16 `QFORM-HEAVY-FRESH-TRANSVERSE-CROSS-LIFT-v1`, `private-source-repository@48d2f4234b05dfa527f1119c2c3dfc4a4b941f5d`, which preserves original-coordinate provenance and permits an arbitrary shift of a genuinely fresh physical square;
 2. `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, `@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`; in its diffuse-frame proof the sharper constant is `4 sqrt(2e)|det H|^(-1/4)`;
 3. `QFORM-ZERO-PIVOT-CONDITIONAL-TRACE-v1`, `@1bbe7c7c194bc92e10fc9c3cb3eb548d65e7043d`;
 4. the two-dimensional Livshyts--Paouris--Pivovarov orthogonal projection density bound `<=2` for cap-one product laws;

@@ -16,7 +16,7 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, identica
 
 The immediate same-slot source is fleet03/B08 r52:
 
-`yspennstate/math-open-problems@52036281c7ee40217ef26829631c5fdd59aebef7`
+`private-source-repository@52036281c7ee40217ef26829631c5fdd59aebef7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T055811Z-fleet03-B08-qform-diffuse-r52/REPORT.md`.
 
@@ -69,7 +69,7 @@ and `p_Q in C_0(R)`. This is `QFORM-THIRDCOMPOUND-CROSS-PROMOTION-v1` from fleet
 
 with `p_Q in C_0(R)`. This is `QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1`, canonical source
 
-`yspennstate/math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76`.
+`private-source-repository@a5e66e2944c89857a41d5e18c283d53a4307be76`.
 
 The first new implication is to spend (1.4) before any rotation of the random inputs and obtain a literal two-bank child crossing with two uniformly large singular values.
 
@@ -372,9 +372,9 @@ A valid proof may not condition on a dependent projected scalar, replace the pro
 
 ## 10. Source ledger
 
-- Same-slot r52: `math-open-problems@52036281c7ee40217ef26829631c5fdd59aebef7`, B08 r52 report.
-- Designated partner fleet04/B08: `math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76`, `QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1`.
-- Marginal-free third-compound crossing: fleet01/B04 `QFORM-THIRDCOMPOUND-CROSS-PROMOTION-v1`, report on the current master ancestry; its receiver is pinned to `math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401` and the canonical compound-promotion theorem at `d5e114f4a9f515344575756615fce3a754195b13`.
+- Same-slot r52: `private-source@52036281c7ee40217ef26829631c5fdd59aebef7`, B08 r52 report.
+- Designated partner fleet04/B08: `private-source@a5e66e2944c89857a41d5e18c283d53a4307be76`, `QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1`.
+- Marginal-free third-compound crossing: fleet01/B04 `QFORM-THIRDCOMPOUND-CROSS-PROMOTION-v1`, report on the current master ancestry; its receiver is pinned to `private-source@829192412f2a2d84e72b4bed91115fc5fab68401` and the canonical compound-promotion theorem at `d5e114f4a9f515344575756615fce3a754195b13`.
 - Owner/control and live corrections are refreshed again immediately before publication and recorded separately in `SOURCE_REFRESH.md`.
 
 Full QFORM remains **OPEN**. This report is a supporting theorem, not a full proof and not a counterexample. Two independent end-to-end reviews required for a full candidate have not occurred.

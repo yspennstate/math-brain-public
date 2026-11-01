@@ -31,7 +31,7 @@ has infinite Lebesgue measure. Choose a finite measurable subset of total measur
 
 Fleet03/B19 r13, canonical source
 
-`yspennstate/math-open-problems@0e6d1715955458010d43193cab3dafc293c0e28c`
+`private-source-repository@0e6d1715955458010d43193cab3dafc293c0e28c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T154500Z-fleet03-B19-QFORM-r13/REPORT.md`
 
@@ -55,7 +55,7 @@ and if no physical Schur diagonal already pays, it forces disjoint original-coor
 
 Fleet01/B01 r16:09, canonical source
 
-`yspennstate/math-open-problems@4bbd127e5bdb15f172f37b9112660b4ead3a9483`
+`private-source-repository@4bbd127e5bdb15f172f37b9112660b4ead3a9483`
 
 proves that for the same outer physical pair, if `C=S[I,J]`, `gamma=sigma/sqrt(3)`, and
 
@@ -77,7 +77,7 @@ This prior result used the exact quarter-Riesz identity
 
 The previous B01 random-slope report
 
-`yspennstate/math-open-problems@508b0985ba8bb658a7f6a935af5138a195cb89de`
+`private-source-repository@508b0985ba8bb658a7f6a935af5138a195cb89de`
 
 records the bounded-density projection theorem used here: if independent coordinates have densities bounded by one, every one-dimensional linear image `c^T X` has density bounded by
 
@@ -91,7 +91,7 @@ The latest partner r26 is a decisive negative correction: its target-valid four-
 
 For the required positive partner application I use the immediately preceding completed fleet02/B01 r25 theorem, source-pinned in r26 at
 
-`yspennstate/math-open-problems@bf4ba08b75ab774aef671c62ba4898a371059c0d`.
+`private-source-repository@bf4ba08b75ab774aef671c62ba4898a371059c0d`.
 
 It proves that for an invertible physical symmetric `3 x 3` principal block `H` of a quadratic form on independent cap-one inputs, with arbitrary affine leakage and arbitrary remaining couplings,
 

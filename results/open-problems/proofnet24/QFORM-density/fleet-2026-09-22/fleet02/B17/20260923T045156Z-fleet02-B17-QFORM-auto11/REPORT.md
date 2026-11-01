@@ -18,7 +18,7 @@ where all `U_i,V_i` are independent `Unif[-1/2,1/2]`. Then
 
 `Q_(m,f)=X_f^2+S_m^2-T_m^2`.
 
-I use the completed predecessor theorem `QFORM-ONE-HEAVY-MAJORITY-EXACT-EXTREMIZER-v1`, `yspennstate/math-open-problems@189fc052089ae2d3237bc0865b290b01b26a6513`, which proves for every finite `m`
+I use the completed predecessor theorem `QFORM-ONE-HEAVY-MAJORITY-EXACT-EXTREMIZER-v1`, `private-source-repository@189fc052089ae2d3237bc0865b290b01b26a6513`, which proves for every finite `m`
 
 `sup_(0<=f<=1, int f=1) ||p_(Q_(m,f))||_infinity = C_m := p_(U^2+S_m^2-T_m^2)(0)`,
 
@@ -94,7 +94,7 @@ Thus the entire exact finite one-heavy majority-sign equal-bank family is exclud
 
 ## 4. Required newest-Claude result applied
 
-At `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md` Theorem C proves the ruled one-sheet estimate
+At `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md` Theorem C proves the ruled one-sheet estimate
 
 `p_Q(s)<=pi sqrt(2), s>=0`,
 
@@ -106,7 +106,7 @@ The new angular/projection argument sharpens that applicable source bound to (3.
 
 ## 5. Designated partner result applied
 
-The latest completed `fleet03/B17` result is `math-open-problems@0a23c8b4c6e8f1ce727bd99d55ed6258ce18ade2`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T033115Z-fleet03-B17-QFORM-r24/REPORT.md`. It proves that an exact fully rotated three-bank family with order-`1/m` remote fragmented mass at distance `Theta(sqrt(m))` has, for `a=c=1`, global limiting ceiling
+The latest completed `fleet03/B17` result is `private-source@0a23c8b4c6e8f1ce727bd99d55ed6258ce18ade2`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T033115Z-fleet03-B17-QFORM-r24/REPORT.md`. It proves that an exact fully rotated three-bank family with order-`1/m` remote fragmented mass at distance `Theta(sqrt(m))` has, for `a=c=1`, global limiting ceiling
 
 `2.4870582495390534... < 3sqrt(2)`.
 

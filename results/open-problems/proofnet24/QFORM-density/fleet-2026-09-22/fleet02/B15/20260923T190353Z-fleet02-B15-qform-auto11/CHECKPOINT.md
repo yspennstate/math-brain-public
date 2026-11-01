@@ -71,7 +71,7 @@ Therefore the projected-Fisher certificate cannot remain uniform along **any** L
 
 ## Completed source result applied to the same rough target
 
-The completed ruled one-sheet theorem in `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` applies to this same matrix. In spectral coordinates it has signature `(1,1,-1)` and one-sheet coefficient
+The completed ruled one-sheet theorem in `private-source@e5f71d79eff325201dd0274053d20268ce65b837` applies to this same matrix. In spectral coordinates it has signature `(1,1,-1)` and one-sheet coefficient
 
 `C_+=int_0^(2pi) dtheta/sqrt(2)=pi sqrt(2)`.
 

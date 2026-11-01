@@ -24,7 +24,7 @@ The full conjecture remains open because the bare hypothesis `s_3(A)>=1` does no
 
 Read the immutable partner report
 
-`yspennstate/math-open-problems@82f8bc73589e3b6f61b4f11d9cb2df1941cd5565`
+`private-source-repository@82f8bc73589e3b6f61b4f11d9cb2df1941cd5565`
 
 at
 
@@ -48,7 +48,7 @@ No norm bound is imposed on the `PBP` block.
 
 Read the immutable report
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 at
 

@@ -3,7 +3,7 @@
 This addendum is later than `REPORT.md` and is normative where it sharpens the partner state. The report's statement that fleet03/B08 r51 was the newest completed partner is superseded by the fresh compatible r52 handoff/canonical report:
 
 - brain handoff: `20260924T102327Z-fleet03-B08-qform-diffuse-r52.md`;
-- canonical mathematics: `yspennstate/math-open-problems@fc449241245b5ca5762686d95cedee5acfd2f2e9`;
+- canonical mathematics: `private-source-repository@fc449241245b5ca5762686d95cedee5acfd2f2e9`;
 - theorem: `QFORM-EXACTTAIL-SPLITMISMATCH-SCHUR-FRESNEL-v1`.
 
 The new partner theorem applies specifically at the exact child-tail endpoint `s_3(C)=0`. With the r51 notation and `eta=2^-20`, it proves that either a literal third-compound crossing pays continuously by `<2368.360/L`, or

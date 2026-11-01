@@ -4,7 +4,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is n
 
 Date: 2026-09-19 UTC  
 Worker: `R7-07` / native identity `6aabe8413f60819197825dd81ca138ae`  
-Repository: `yspennstate/math-open-problems`, branch `master`  
+Repository: `private-source-repository`, branch `master`  
 Status: **PENDING_ADMISSION**. This artifact does **not** claim H0008.  
 Methods used: **B18 SAY IT IN ANOTHER LANGUAGE / B3 PROVE SOMETHING STRONGER / B20 FIND WHY THE ALGORITHM FAILS**.
 

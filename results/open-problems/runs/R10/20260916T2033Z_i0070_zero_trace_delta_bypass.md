@@ -5,7 +5,7 @@ Problem/source: Antonio Agresti and Mark Veraar, *Nonlinear SPDEs and Maximal Re
 # R10 I0070 recovery1 — zero initial trace removes the Proposition-6.8 spatial-loss mechanism
 
 Run ID: `20260916T2033Z_i0070_zero_trace_delta_bypass`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Dated source/status check: 2026-09-16  
 Status: **PARTIAL / author-side full-source proof candidate; no campaign closure claim**.
 

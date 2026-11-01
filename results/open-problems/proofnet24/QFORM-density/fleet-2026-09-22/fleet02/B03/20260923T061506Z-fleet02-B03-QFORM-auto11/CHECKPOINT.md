@@ -17,7 +17,7 @@ For the fixed final frequency `t`, write
 
 `Psi_j(r)=int f_j(z) exp(i t phi_j(z)) exp(i r z) dz`.
 
-The damped Fresnel identity from `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` gives
+The damped Fresnel identity from `private-source@e5f71d79eff325201dd0274053d20268ce65b837` gives
 
 `|phi_T(t)| <= (4 pi |t A|)^(-1/2) (2|t d|)^(-1)
   int_R2 p_U(eta/(2|t d|)) prod_j |Psi_j(s h_j+eta v_j)| ds deta`.    (1)

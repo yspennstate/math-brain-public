@@ -20,7 +20,7 @@ Combining these with the completed physical-pair logarithmic envelope pays **eve
 
 From fleet03/B01:
 
-`yspennstate/math-open-problems@936b0f0bad22de82921c2a743fb0738226270348`
+`private-source-repository@936b0f0bad22de82921c2a743fb0738226270348`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T013054Z-auto11/REPORT.md`.
 
@@ -56,7 +56,7 @@ For `k=1,q=2`, the row condition is automatic because every one-volume marginal 
 
 From
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -375,7 +375,7 @@ The newest completed designated-partner result consumed in full is
 
 at
 
-`yspennstate/math-open-problems@59ccddd0766b466b30abd645926887f907b0bcd7`
+`private-source-repository@59ccddd0766b466b30abd645926887f907b0bcd7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T134326Z-fleet02-B09-QFORM-r13/REPORT.md`.
 

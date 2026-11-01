@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R14 — Bradley Question 8 stuck recovery 2: the missing object is an interlaced Hankel/localization theorem
 
 Date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 0. Continuity, source, and why this is the second and final recovery on D0036
 

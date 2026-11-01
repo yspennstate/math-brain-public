@@ -4,7 +4,7 @@ The weighted local Edgeworth statement used as equation (8.5) of `REPORT.md` is 
 
 Canonical source:
 
-`yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`
+`private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`
 
@@ -19,6 +19,6 @@ by the exact sinc characteristic function, Fourier inversion on an expanding cen
 
 The designated partner `fleet03/B17` r22 source
 
-`yspennstate/math-open-problems@f593cf73a4e7547eac4183f8e61062fca5176706`
+`private-source-repository@f593cf73a4e7547eac4183f8e61062fca5176706`
 
 is still actually applied in the main report: its source-valid bank local limit and explicit outer-tail bound supply the finite-bank/Gaussian compatibility and its separate two-heavy/shared-bank theorem gives the complementary exact obstruction (10.1). The fleet04 lemma is cited here specifically to source-pin the stronger weighted `O(m^{-2})` remainder needed for equations (8.8)--(8.10).

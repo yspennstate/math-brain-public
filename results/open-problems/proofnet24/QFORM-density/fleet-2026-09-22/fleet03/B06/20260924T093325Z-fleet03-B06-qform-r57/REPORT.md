@@ -5,7 +5,7 @@ attacking: the global-null localized packet by deleting one ORIGINAL hub coordin
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`.  
 Immediate B06 inputs: r55 `QFORM-GLOBALNULL-PHYSICAL-DELETION-v1` and `QFORM-APPROXNULL-PRINCIPAL-RETENTION-v1`, current-master path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T082141Z-fleet03-B06-qform-r55/REPORT.md`; r56 kernel-area/global-null certificates, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T090040Z-fleet03-B06-qform-r56/REPORT.md`.  
-Diffuse analytic input: `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.  
+Diffuse analytic input: `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.  
 Designated partner actually applied in Section 7: fleet04/B06 `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, current source path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260924T001014Z-fleet04-B06-QFORM-r3/REPORT.md`.  
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 

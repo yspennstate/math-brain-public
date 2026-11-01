@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — no authentica
 # NM13-06 / NM06 — T04 random 3-SAT: outer boundary-layer survey and certified candidate upper endpoint 4.38885876
 
 Date: 2026-09-20  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker root: `proofnet24/NM13-06/progress-3sat-construction/`  
 Assignment: **T04 — classical iid random 3-SAT with fair independent signs on three distinct variables**  
 Status: **OPEN / PARTIAL; published source bracket unchanged; project upper candidate improved, CANDIDATE_FULL pending later independent review**

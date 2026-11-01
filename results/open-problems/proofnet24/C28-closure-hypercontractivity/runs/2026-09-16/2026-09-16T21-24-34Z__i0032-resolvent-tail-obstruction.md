@@ -2,7 +2,7 @@ Model actually running: GPT-5.6 Sol. Reasoning level: UNVERIFIED; this was not G
 
 # C28 — finite-resolvent tail obstruction for Aldous–Fill Open Problem 8.23
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Own root: `proofnet24/C28-closure-hypercontractivity`.
 Run date (UTC report path): 2026-09-16.
 Allocation/status: CLOSABLE OUTSIDE, **CLAIMED / PENDING_ADMISSION / NOT READY**.

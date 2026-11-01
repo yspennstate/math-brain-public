@@ -58,7 +58,7 @@ The following classical inputs are used with their stated hypotheses:
 
 The source of the elementary logarithmic kernel used below is the completed fleet03/B16 report:
 
-    yspennstate/math-open-problems@1defc84f1bfd79994a103a6d683c887d9dead1e7
+    private-source-repository@1defc84f1bfd79994a103a6d683c887d9dead1e7
     proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/
     B16-20260922T135620Z-r11/REPORT.md
     blob d64c5e5cfc01bf3783cdcdeac2f03dd766bbda3d.
@@ -67,13 +67,13 @@ That source proves a physical two-variable fractional estimate by taking a supre
 
 The diffuse Fourier calculation extends the previously supplied separable-phase argument at
 
-    yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb
+    private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb
     proofnet24/QFORM-density/interactive/
     20260922T120815Z-separable-perturbations/REPORT.md.
 
 The rank-three residual obstruction being addressed is explicitly identified in fleet01/B10's handoff and supplement at
 
-    yspennstate/math-open-problems@2152b0b8c7ddc76247b46d74dd1888d93920b0dd
+    private-source-repository@2152b0b8c7ddc76247b46d74dd1888d93920b0dd
     proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/
     20260922T135338Z-fleet01-B10-QFORM-r13/SUPPLEMENT.md.
 

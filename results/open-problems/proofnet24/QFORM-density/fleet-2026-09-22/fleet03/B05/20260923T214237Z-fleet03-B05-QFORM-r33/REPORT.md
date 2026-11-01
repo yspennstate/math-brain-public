@@ -13,11 +13,11 @@ Continuity: proved only on the exact-cross branch below; not proved by the partn
 ## 1. Sources actually used
 
 1. r32 heavy-row descent (read from its immutable proof):
-   `yspennstate/math-open-problems@0e5ef0d3f80bd0d28c449a6f20b8d780ca894e5d:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T204411Z-fleet03-B05-QFORM-r32/REPORT.md`.
+   `private-source-repository@0e5ef0d3f80bd0d28c449a6f20b8d780ca894e5d:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T204411Z-fleet03-B05-QFORM-r32/REPORT.md`.
 2. r31 determinant-sensitive exact-cross theorem and ratio-packet crossing identity:
-   `yspennstate/math-open-problems@95f94696393b5ad8b0def71fa0d93082de92bd85:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T193756Z-fleet03-B05-QFORM-r31/REPORT.md`.
+   `private-source-repository@95f94696393b5ad8b0def71fa0d93082de92bd85:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T193756Z-fleet03-B05-QFORM-r31/REPORT.md`.
 3. Designated partner fleet04/B05 exact-slope theorem:
-   `yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`, proving
+   `private-source-repository@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`, proving
    `||p_Q||_infinity < 51.6 (mu m_*)^(-1/3)`.
 4. Current corrections were reread before publication. In particular, no arbitrary-joint coarea estimate, conditional density-cap moment, rotated-coordinate independence, pointwise van der Corput estimate, or small-random-tail deletion is used.
 

@@ -236,7 +236,7 @@ p_{Q_e}(0)
 \tag{4.2}
 \]
 Partner source:
-`yspennstate/math-open-problems`,
+`private-source-repository`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260923T081528Z-fleet04-B17-QFORM-r4/REPORT.md`.
 
 Applying (3.2) to that **same exact matrix and same exact product law** pays the partner's previously open off-tip/two-sheet question in one inequality:
@@ -272,7 +272,7 @@ p_{Q_m}(0)
 \tag{5.1}
 \]
 Its pinned source is
-`yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`,
+`private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`.
 Therefore every valid universal constant obeys
 \[

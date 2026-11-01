@@ -1,6 +1,6 @@
 # Two-light coarea receiver with a shear in the square direction
 
-**Status:** proved scoped addendum, independently checked against the [beta-uniform one-hub proof](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T203100Z-beta-uniform-one-hub-square/REPORT.md). It applies when the leakage linear form lies in the span of the two displayed light variables. It excludes a hub self-quadratic term \(aH^2\) and excludes leakage through an independent third light direction \(P\).
+**Status:** proved scoped addendum, independently checked against the [beta-uniform one-hub proof](private-source-repository). It applies when the leakage linear form lies in the span of the two displayed light variables. It excludes a hub self-quadratic term \(aH^2\) and excludes leakage through an independent third light direction \(P\).
 
 ## Lemma
 

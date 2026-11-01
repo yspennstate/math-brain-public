@@ -25,7 +25,7 @@ This run first isolates why the phase-space copy kernel alone does not close the
 
 Completed partner theorem `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`:
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`
 
 at
 
@@ -45,7 +45,7 @@ I apply (2.2) to an actual low-frequency inequality in Section 8.
 
 Fleet01/B03 `QFORM-COPY-RECTANGULAR-CROSS-v1`, canonical source
 
-`yspennstate/math-open-problems@3d6fefe9c92674dff38c97ef8a502787ec3426a2`
+`private-source-repository@3d6fefe9c92674dff38c97ef8a502787ec3426a2`
 
 at
 

@@ -64,7 +64,7 @@ This closes the first unpaid face left by the preceding fleet01/B17 run: **arbit
 
 The newest completed designated-partner theorem is source-pinned at
 
-`yspennstate/math-open-problems@9cd98044087dd0e8bafe8ee2900cf1686552c802`,
+`private-source-repository@9cd98044087dd0e8bafe8ee2900cf1686552c802`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T142532Z-fleet02-B17-QFORM-auto11/REPORT.md`.
 
@@ -326,7 +326,7 @@ For centered unit-interval bank coordinates but an arbitrary fragmented heavy co
 
 The immediately preceding fleet01/B17 source-pinned run
 
-`yspennstate/math-open-problems@e83d0cc194d791acf31d6c86245204887cfd8171`,
+`private-source-repository@e83d0cc194d791acf31d6c86245204887cfd8171`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260923T144233Z-fleet01-B17-QFORM-auto11/REPORT.md`,
 
@@ -353,7 +353,7 @@ The best source-valid universal lower obstruction nevertheless remains the diffu
 \boxed{C_{\rm univ}\ge3\sqrt2=4.242640687119\ldots,}
 \tag{7.3}
 \]
-source-pinned at `yspennstate/math-open-problems@15e9504309108d37a6c5f8bcacebac07eb4fe1ff`, where exact finite cube frames with spectrum `{1,1,-1}` approach `3sqrt(2)` from below.
+source-pinned at `private-source-repository@15e9504309108d37a6c5f8bcacebac07eb4fe1ff`, where exact finite cube frames with spectrum `{1,1,-1}` approach `3sqrt(2)` from below.
 
 ## 8. What remains for B17
 
@@ -372,10 +372,10 @@ No claim is made that `3sqrt(2)` is the unrestricted sharp constant, and no full
 
 Actual dependencies used:
 
-1. fleet02/B17 completed unequal cube-bank envelope theorem: `math-open-problems@9cd98044087dd0e8bafe8ee2900cf1686552c802`, exact report path above.
-2. Product-projection cap `sqrt(2)` and its source attribution to Rudelson--Vershynin/Rogozin--Ball: `math-open-problems@18fb381e300dd86514835d27eedcf2507ab09227`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T130245Z-fleet03-B02-QFORM-r11/REPORT.md`; that report cites Rudelson--Vershynin, IMRN 2015, Theorem 1.2, DOI `10.1093/imrn/rnu243`, arXiv `1402.4492`.
-3. Exact dense six-variable witness: `math-open-problems@e83d0cc194d791acf31d6c86245204887cfd8171`, exact report path in Section 7.
-4. Diffuse `3sqrt(2)` obstruction and negative first periodic Edgeworth correction: `math-open-problems@15e9504309108d37a6c5f8bcacebac07eb4fe1ff`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T123638Z-fleet01-B17-qform-diffuse-edgeworth-v1/REPORT.md`.
+1. fleet02/B17 completed unequal cube-bank envelope theorem: `private-source@9cd98044087dd0e8bafe8ee2900cf1686552c802`, exact report path above.
+2. Product-projection cap `sqrt(2)` and its source attribution to Rudelson--Vershynin/Rogozin--Ball: `private-source@18fb381e300dd86514835d27eedcf2507ab09227`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T130245Z-fleet03-B02-QFORM-r11/REPORT.md`; that report cites Rudelson--Vershynin, IMRN 2015, Theorem 1.2, DOI `10.1093/imrn/rnu243`, arXiv `1402.4492`.
+3. Exact dense six-variable witness: `private-source@e83d0cc194d791acf31d6c86245204887cfd8171`, exact report path in Section 7.
+4. Diffuse `3sqrt(2)` obstruction and negative first periodic Edgeworth correction: `private-source@15e9504309108d37a6c5f8bcacebac07eb4fe1ff`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T123638Z-fleet01-B17-qform-diffuse-edgeworth-v1/REPORT.md`.
 
 Fresh live corrections consumed before this proof include: law-uniform pointwise oscillatory decay is false; arbitrary-joint rank-three coarea is false; post-rotation independence is unavailable; positive conditional projection-density moments can diverge; a uniformly good physical minor/cross-cut need not exist; bounded fragment count is not a valid general reduction. None is used as a premise here.
 

@@ -15,11 +15,11 @@ The unrestricted quadratic-form bounded-density conjecture remains **OPEN**. Ful
 
 The newest fleet03/B20 operator-overlap compiler used here is
 
-`yspennstate/math-open-problems@010ccf4cdc4f0b07d0a443eba99fd147e6feab65`
+`private-source-repository@010ccf4cdc4f0b07d0a443eba99fd147e6feab65`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T234606Z-fleet03-B20-QFORM-r42/REPORT.md`,
 
-plus its late frontier splice at `yspennstate/math-open-problems@eb50a2dc3acc7884f284a1f94847106c89bf5889`.
+plus its late frontier splice at `private-source-repository@eb50a2dc3acc7884f284a1f94847106c89bf5889`.
 
 After the already-paid physical-diagonal, physical-principal-triple and disjoint-`E_3` exits, every remaining target state has small physical diagonals and a localized overlap-two or overlap-one packet. In the overlap-one branch there are one original coordinate `j` and disjoint original-coordinate banks `R,C` such that the anchored block
 
@@ -35,7 +35,7 @@ The corrected fleet04/B20 anchor inequality further gives either `E_2(N)>4/9` or
 
 The current interactive projected-crossing theorem is also consumed below at its exact scope:
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 

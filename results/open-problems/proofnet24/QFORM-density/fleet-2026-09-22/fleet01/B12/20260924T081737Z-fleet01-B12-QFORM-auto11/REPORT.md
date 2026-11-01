@@ -18,7 +18,7 @@ This run uses only deterministic coefficient-matrix inequalities until the final
 The designated partner result actually used below is:
 
 - `QFORM-ADAPTIVE-MULTIPACKET-ANGLE-BUDGET-v1`, fleet02/B12;
-- source: `yspennstate/math-open-problems@3e7c3dea777f9cfbae2d6311372daf447bd01ef0`;
+- source: `private-source-repository@3e7c3dea777f9cfbae2d6311372daf447bd01ef0`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260924T075526Z-fleet02-B12-r11/REPORT.md`.
 
 For a full-column carrier `M_0` and arbitrary successive packets `N_r`, if `q_r` canonical-resonant directions are spent at stage `r`, then
@@ -282,6 +282,6 @@ This run proves an essentially bounded density only through the cited five-squar
 ## 8. Source pins
 
 
-Partner mathematics applied: `yspennstate/math-open-problems@3e7c3dea777f9cfbae2d6311372daf447bd01ef0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260924T075526Z-fleet02-B12-r11/REPORT.md`.
+Partner mathematics applied: `private-source-repository@3e7c3dea777f9cfbae2d6311372daf447bd01ef0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260924T075526Z-fleet02-B12-r11/REPORT.md`.
 
 Full target status: **OPEN / NOT PROVED / NOT DISPROVED**.

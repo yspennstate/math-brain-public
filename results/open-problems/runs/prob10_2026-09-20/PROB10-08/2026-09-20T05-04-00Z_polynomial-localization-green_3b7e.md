@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 
 # PROB10-08 — polynomial localization and a subpolynomial Green criterion
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / OPEN / auxiliary reduction theorem proved / no new source graph class / independent validation pending / worldwide novelty UNVERIFIED**.
 

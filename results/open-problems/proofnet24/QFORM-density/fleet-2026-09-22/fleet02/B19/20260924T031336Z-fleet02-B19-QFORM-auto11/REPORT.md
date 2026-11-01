@@ -12,14 +12,14 @@ The exact owner target remains: independent real coordinates with densities boun
 
 The required pinned mathematical source was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 The specific completed inputs used below are its Theorem-D decoupling/volume-sampling proof, its D' Jensen extension, and Lemma 4.1 converting Fourier decay into fractional potentials. The present theorem is the k=2 version of exactly that argument, with q=2; it is written out so no unproved interpolation is hidden.
 
 Newest completed designated partner consumed before this report was fleet03/B19 r47,
 
-`yspennstate/math-open-problems@1a64d8ce29d893fd99b9af8dac5a63e359a9cc08`,
+`private-source-repository@1a64d8ce29d893fd99b9af8dac5a63e359a9cc08`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T020346Z-fleet03-B19-QFORM-r47/REPORT.md`.
 
 Its large-leaf-curvature endpoint gives either a paid physical E3 exit or an actual literal leaf cut N=A[R,C] lying within Frobenius distance 2^-16 of rank at most two. In the multiplicatively rank-two branch the **actual** N satisfies

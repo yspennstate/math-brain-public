@@ -158,7 +158,7 @@ This closes the high-linear-transverse-coefficient side of `(CS)` in the fully d
 
 ## 4. Designated partner fleet02/B06 applied: exact three-bank endpoint
 
-Use the completed fleet02/B06 theorem `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1` (canonical source `math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`). Suppose now that `w,v,b` are supported on three pairwise disjoint original-coordinate banks `S,T,R`. Then `L,V,B` are independent, and the partner theorem gives at the actual inequalities
+Use the completed fleet02/B06 theorem `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1` (canonical source `private-source@8dd33c1abd4fd64140f59032feda2b13d4351da5`). Suppose now that `w,v,b` are supported on three pairwise disjoint original-coordinate banks `S,T,R`. Then `L,V,B` are independent, and the partner theorem gives at the actual inequalities
 
 `||p_L||_infinity <= sqrt(e),
  ||p_V||_infinity <= sqrt(e),

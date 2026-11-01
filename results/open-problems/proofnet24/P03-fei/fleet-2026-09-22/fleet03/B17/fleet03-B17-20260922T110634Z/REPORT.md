@@ -42,14 +42,14 @@ The retired fixed potentials, the old AND-extremality proposal, the 0.337/0.34 q
 
 ### IPROJ
 
-`yspennstate/math-open-problems@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`,
+`private-source-repository@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`,
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`.
 
 It proves the unique conditional-product I-projection `Q_r`, the formula `K_occ=Hmax-H`, and the exact residual (0.1).
 
 ### HIERARCHY
 
-`yspennstate/math-open-problems@2bf247373576eb406ca91bb3ea5f3ce5e5ab8588`,
+`private-source-repository@2bf247373576eb406ca91bb3ea5f3ce5e5ab8588`,
 `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md`.
 
 For a disjoint Boolean composition `F=G(f_1,...,f_m)` it proves
@@ -63,7 +63,7 @@ with `C_hier` an explicit KL mismatch. It must not be dropped.
 
 ### EQUALITY RIGIDITY
 
-`yspennstate/math-open-problems@84c69136ca6b008badb76f15bf1071d029c927aa`,
+`private-source-repository@84c69136ca6b008badb76f15bf1071d029c927aa`,
 `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B15/20260922T085625Z-product-equality-rigidity/REPORT.md`.
 
 On the balanced uniform slice,
@@ -83,7 +83,7 @@ H(f)=m,
 ### PARTNER fleet04/B17 — exact suspension transport
 
 The latest compatible completed partner result read for this run is
-`yspennstate/math-open-problems@374c4874e914c7414abc9109fadf77cfc3947298`,
+`private-source-repository@374c4874e914c7414abc9109fadf77cfc3947298`,
 `proofnet24/P03-fei/fleet-2026-09-22/fleet04/B17/20260922T102740Z-b17-fei-r17/REPORT.md`.
 
 For the balanced character suspension
@@ -101,7 +101,7 @@ and gives an exact nonnegative decomposition of `K_susp` into constant-mode bran
 
 ### MULTISCALE PREFLIGHT
 
-`yspennstate/math-open-problems@bff0d7b6c21485f386841c42582eb04f32705046`,
+`private-source-repository@bff0d7b6c21485f386841c42582eb04f32705046`,
 `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md`,
 refutes fixed/sub-half-depth labelled KL truncations on recursive ternary majority. A compatible later physical-tree theorem,
 `proofnet24/P03-fei/fleet-2026-09-22/fleet01/B09/fleet01-B09-20260922T104421Z-fei/REPORT.md`,

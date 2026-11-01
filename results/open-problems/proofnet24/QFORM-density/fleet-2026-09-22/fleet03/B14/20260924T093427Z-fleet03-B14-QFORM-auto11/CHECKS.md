@@ -103,4 +103,4 @@ for every independent cap-one choice of the three marginals, including the separ
 - The Gaussian-mixture obstruction concerns only the proposed localization mechanism; it is not a QFORM counterexample.
 - The weak-closure argument uses only distributional BV lower semicontinuity and therefore is compatible with the Portmanteau-style limits used elsewhere in the fleet.
 - Translation of all fragments leaves the inverse-scale moment and total variation unchanged.
-- The partner result used is exactly `math-open-problems@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`.
+- The partner result used is exactly `private-source@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`.

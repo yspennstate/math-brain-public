@@ -14,7 +14,7 @@ The unrestricted target remains open: for every dimension, every independent rea
 
 Fresh owner control remained revision `2026-09-22.15`, QFORM-only. I reread the owner proof-first and Claude-latest requests, the live correction ledger, and the required interactive package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
@@ -217,7 +217,7 @@ with
 `E_3(N)>=z_*/96
        =1.01380721255...*10^-7.`                                    (5.1)
 
-Now apply the **required owner source** D' theorem from `math-open-problems@e5f71d79.../FOURIER_ROUTE_REPORT.md` at an actual inequality. If either canonical three-volume orientation of `N` has maximum row marginal at most `2/3` (transpose if needed), then
+Now apply the **required owner source** D' theorem from `private-source@e5f71d79.../FOURIER_ROUTE_REPORT.md` at an actual inequality. If either canonical three-volume orientation of `N` has maximum row marginal at most `2/3` (transpose if needed), then
 
 `||p_Q||_infinity
  <=9 sqrt(3e) E_3(N)^(-1/6)

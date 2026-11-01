@@ -9,7 +9,7 @@ attacking: compact-kernel obstruction to transferring an exact-null or near-null
 **Status:** `PROVED_SOURCE_VALID_OBSTRUCTION / FULL_TARGET_OPEN`  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`
 
-This supplements this run's `REPORT.md`, which already applies the owner-pinned ruled one-sheet theorem from `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` to the ambient rough majority-side inequality. The result below applies the completed partner fleet03/B15 balanced-tent compiler at `yspennstate/math-open-problems@fccc46ddffe0873ba2fccad767cce028ccef9fb8` to a new source-valid obstruction.
+This supplements this run's `REPORT.md`, which already applies the owner-pinned ruled one-sheet theorem from `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837` to the ambient rough majority-side inequality. The result below applies the completed partner fleet03/B15 balanced-tent compiler at `private-source-repository@fccc46ddffe0873ba2fccad767cce028ccef9fb8` to a new source-valid obstruction.
 
 The unrestricted QFORM conjecture remains OPEN. The point proved here is narrower and negative: neither qualitative output regularity nor compact positive-kernel smoothing gives a **law-uniform modulus in the coefficient matrix** that could interpolate an exact-null/near-null endpoint. This remains false even when both compared matrices are full rank and have normalized third singular value exactly one.
 

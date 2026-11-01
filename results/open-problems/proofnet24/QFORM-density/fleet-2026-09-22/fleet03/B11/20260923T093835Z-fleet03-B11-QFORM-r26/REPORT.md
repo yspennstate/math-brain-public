@@ -100,7 +100,7 @@ The four sign classes `(u_i,v_i)` give four independent original-coordinate bank
 
 Use the completed fleet04/B11 sign-frustrated-triangle theorem at
 
-`yspennstate/math-open-problems@572f6cd066c9cdef7b5a509917b4dcd79cea2fda`,
+`private-source-repository@572f6cd066c9cdef7b5a509917b4dcd79cea2fda`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T021512Z-fleet04-B11-sign-frustrated-triangle-r4/REPORT.md`.
 
 That theorem says: for a physical triple with positive diagonals `a_i`, if normalized off-diagonals are within `eta<1/2` of a sign pattern whose triangle product is `-1`, then `sigma_min >= min_i a_i (1-2eta)` and the full ambient quadratic form has

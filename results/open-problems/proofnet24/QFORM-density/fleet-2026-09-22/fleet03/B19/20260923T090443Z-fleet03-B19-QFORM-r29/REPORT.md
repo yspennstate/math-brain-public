@@ -14,7 +14,7 @@ The unrestricted conjecture remains OPEN / NOT PROVED / NOT DISPROVED. Global co
 
 The immediate B19 predecessor is fleet03/B19 r28,
 
-`yspennstate/math-open-problems@4d5181180f8d5e9e14c9b1c5c5e44679c8c212b9`
+`private-source-repository@4d5181180f8d5e9e14c9b1c5c5e44679c8c212b9`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T080333Z-fleet03-B19-QFORM-r28/REPORT.md`.
 
@@ -35,13 +35,13 @@ Its theorem `QFORM-NORMALIZED-COLOOP-ANGLE-COMPILER-v1` sharpens the r28 residue
 The analytic inputs used below were read at their complete source proofs:
 
 1. `QFORM-SPECTRAL-WINDOW-DENSITY-v1`, canonical source
-   `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+   `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
    `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
    If the spectral projection onto all eigenspaces `|lambda|>=1/64` has every diagonal at most `1/32`, then the quadratic form, even after arbitrary coordinate-separable measurable perturbations, has a continuous `C_0` density with
    `||p||_infinity <=288 sqrt(3e)/13<64`.
 
 2. `QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1`, canonical source
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
    `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
    In exact rank three, for physical row leverage `c_i`, nonzero physical pivot `a=A_ii`, and spectral core `M`,
    `||p_Q||_infinity <=128 [c_i |a| |det M|]^(-1/4)`.

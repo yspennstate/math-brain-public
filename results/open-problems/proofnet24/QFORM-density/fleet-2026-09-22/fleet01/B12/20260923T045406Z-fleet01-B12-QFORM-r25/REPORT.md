@@ -20,7 +20,7 @@ The main new gain over a rank/inertia count is that a perturbation can have huge
 
 The designated partner `fleet02/B12` proved the localized hostile-inertia theorem in
 
-`yspennstate/math-open-problems@36263ba314738468f934a5b3245130b6754e940f`
+`private-source-repository@36263ba314738468f934a5b3245130b6754e940f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T021551Z-fleet02-B12-qform-r23/REPORT.md`.
 
@@ -36,7 +36,7 @@ I apply (2.1) at equation (4.7) below and (2.2) at equation (4.10). Thus the par
 
 For one small edge case I also use the completed physical-three-block endpoint
 
-`yspennstate/math-open-problems@36263ba314738468f934a5b3245130b6754e940f`
+`private-source-repository@36263ba314738468f934a5b3245130b6754e940f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md`, Theorem 6.1: if an actual physical 3 x 3 block has two eigenvalues >=L (or two <=-L), with the third arbitrary, then
 

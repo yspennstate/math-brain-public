@@ -16,21 +16,21 @@ The full owner target remains open: arbitrary independent real coordinates with 
 This run uses three completed inputs at their exact scopes.
 
 1. The preceding fleet01/B11 scalar-Schur theorem, `QFORM-CROSSCOUPLED-SCALAR-SCHUR-HALF-RIESZ-v1`, source
-   `yspennstate/math-open-problems@1d7b9757303be54c58e44e18e6c962c4f1f9b293`,
+   `private-source-repository@1d7b9757303be54c58e44e18e6c962c4f1f9b293`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260923T051701Z-fleet01-B11-QFORM-auto11/REPORT.md`.
    For three independent cap-one variables and a nonzero scalar physical pivot `d`, it gives
    
    `||p_Q||_inf <= 16 sqrt(30) (|d| |det H|)^(-1/4)`.
 
 2. The completed physical-pair logarithmic theorem, source
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
    For an exact-rank-three original-coordinate block whose eigenvalue magnitudes are at least `s`, and an invertible indefinite physical pair `B`, with `D=|det B|` and `kappa=sigma_min(B)`, it gives
    
    `||p_Q||_inf <= 8 sqrt(5) (D*kappa*s)^(-1/4)`.
 
 3. The designated partner fleet02/B11 theorem `QFORM-INDEFINITE-PAIR-DIFFUSE-SQUARE-v1`, source
-   `yspennstate/math-open-problems@f2835c54b9f384f8f83e34c46bef5c40953e32a7`,
+   `private-source-repository@f2835c54b9f384f8f83e34c46bef5c40953e32a7`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T042112Z-fleet02-B11-QFORM-2f47d35a/REPORT.md`.
    If `U=(X1,X2)` are independent cap-one, `B` is invertible symmetric, `W` is independent with density cap `L`, and `d!=0`, then
    

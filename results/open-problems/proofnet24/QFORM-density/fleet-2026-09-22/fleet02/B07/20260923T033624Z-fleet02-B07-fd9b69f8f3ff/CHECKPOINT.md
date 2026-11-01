@@ -33,7 +33,7 @@ This is aggregate compound currency: no coordinate minor is selected.
 
 ## Lemma 2: relative version on the partner non-low-tail branch
 
-The completed fleet03/B07 r22 theorem, source `math-open-problems@ac54330d3df42a48098ef7c704ac268382accd7c`, gives on its non-low-tail branch
+The completed fleet03/B07 r22 theorem, source `private-source@ac54330d3df42a48098ef7c704ac268382accd7c`, gives on its non-low-tail branch
 
 `E_3(M) >= (theta^2/6) S^3`, `0<theta<=1/2`.                 (3)
 
@@ -49,7 +49,7 @@ and hence
 
 `boxed: dist_F(M,rank<=4)/||M||_F <= (120 eta/theta^2)^(1/4).` (5)
 
-Conversely, if `E_5(M)>=eta S^5`, the completed newest-Claude D5 theorem at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` applies to this same physical cross block with no marginal condition and yields
+Conversely, if `E_5(M)>=eta S^5`, the completed newest-Claude D5 theorem at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` applies to this same physical cross block with no marginal condition and yields
 
 `boxed: ||p_Q||_infty <= 5sqrt(2e) eta^(-1/10) ||M||_F^(-1).`  (6)
 

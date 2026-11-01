@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 at 
 # R19 — post-STUCK1 randomized successor-admission screen
 
 Date: 2026-09-18 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Lane: CLOSABLE OUTSIDE
 
 ## 1. Continuity and frozen source state

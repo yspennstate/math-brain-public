@@ -14,7 +14,7 @@ The proof uses original-coordinate product structure through the completed ridge
 
 We use the completed supporting theorem `QFORM-RIDGE-DENSITY-v1` from
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `9c1167db05c7b0f520f060796fde921ed769a4e7`
 - path `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 

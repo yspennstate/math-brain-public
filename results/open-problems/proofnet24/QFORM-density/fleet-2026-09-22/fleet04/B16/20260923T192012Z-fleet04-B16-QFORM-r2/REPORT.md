@@ -15,7 +15,7 @@ The target remains the unrestricted one: independent real original-coordinate in
 
 Three completed mathematical inputs are used at displayed equations.
 
-1. fleet01/B16, report available at math-open-problems@bfb102a2317191969c16cf336b53ed47a8a06c6d,
+1. fleet01/B16, report available at private-source@bfb102a2317191969c16cf336b53ed47a8a06c6d,
    proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/fleet01-B16-20260923T170732Z-auto11/REPORT.md,
    theorem QFORM-CROSS2-OVERLAP-SQUARE-L1-v1. If a three-dimensional projection (Z,T) of one original source bank has joint density cap M, a two-dimensional projection W of a disjoint original source bank has joint density cap N, and
 

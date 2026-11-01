@@ -2,7 +2,7 @@ Model actually running: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — thi
 
 # ProofNet24 P15 — I0066 six-run rotation, source-scale repair, and successor gate
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.  
+Repository/branch: `private-source-repository` / `master`.  
 Track/root: `P15` / `proofnet24/P15-closure-discrepancy`.  
 Category: **CLOSABLE OUTSIDE**.  
 Active source at run start: Antonio Agresti and Mark Veraar (2025), *Nonlinear SPDEs and Maximal Regularity: An Extended Survey*, Problem 1.  

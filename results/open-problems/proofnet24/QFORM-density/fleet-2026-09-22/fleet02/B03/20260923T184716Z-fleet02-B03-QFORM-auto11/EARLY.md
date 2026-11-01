@@ -6,8 +6,8 @@ attacking: remove the row-volume marginal gate from the three-volume crossing ro
 Programme: QFORM-DENSITY-3EIG-20260922. Status: supporting theorem in proof; full unrestricted target remains open.
 
 Fresh sources consumed before this checkpoint:
-- pinned `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, RESULTS / FOURIER_ROUTE_REPORT / COUNTEREXAMPLE_SEARCH;
-- fresh proved arbitrary-rank projected crossing theorem `math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`;
+- pinned `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, RESULTS / FOURIER_ROUTE_REPORT / COUNTEREXAMPLE_SEARCH;
+- fresh proved arbitrary-rank projected crossing theorem `private-source@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`;
 - designated partner fleet03/B03 latest visible completed report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T181128Z-fleet03-B03-QFORM-r36/REPORT.md`, especially its dependence-safe effective-dimension Riesz compiler.
 
 ## Key algebra

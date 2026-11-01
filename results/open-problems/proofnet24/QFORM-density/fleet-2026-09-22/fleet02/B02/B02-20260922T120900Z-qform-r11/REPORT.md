@@ -16,14 +16,14 @@ This run consumed all live route corrections before publication:
 - `QFORM-FIBER-SUP-DIMENSION-LOSS`: naive unrestricted spectral-fiber suprema can lose dimension.
 - `QFORM-NO-INDEPENDENCE-AFTER-ROTATION`: spectral rotation does not preserve coordinate independence.
 - `QFORM-CROSSMINOR-ALONE-FALSE`: a nonsingular `2x2` cross block alone does not force bounded density; the rank-two Fourier tail is only `|t|^{-1}`.
-- `QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH`: the global constant cannot be `pi`; the current analytic lower bound is `C>=3 sqrt(2)`. The same correction supplied `QFORM-CROSSBLOCK-RANK-r-FOURIER-v1`, giving `2r/(r-2) Delta^{-1/r}` for an arbitrary rank-`r>2` original-coordinate cross block, where `Delta` is the product of its nonzero singular values. Canonical correction report: `yspennstate/math-open-problems@8624982153e5a2154e4ae8922d2fe4dc77080efc`, blob `d0546b3190cb35a070fabd86162f4b4874975f62`.
+- `QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH`: the global constant cannot be `pi`; the current analytic lower bound is `C>=3 sqrt(2)`. The same correction supplied `QFORM-CROSSBLOCK-RANK-r-FOURIER-v1`, giving `2r/(r-2) Delta^{-1/r}` for an arbitrary rank-`r>2` original-coordinate cross block, where `Delta` is the product of its nonzero singular values. Canonical correction report: `private-source-repository@8624982153e5a2154e4ae8922d2fe4dc77080efc`, blob `d0546b3190cb35a070fabd86162f4b4874975f62`.
 
 The assigned partner `fleet03/B02` had a current QFORM start record (`math-research-brain@d85ce8bcca55a068b70ab443f8edb4063ed479c8`) but no completed QFORM handoff at the final pre-write partner check. I therefore did not wait or fabricate a partner premise.
 
 Two completed same-programme dependencies were actually used for compatibility, not as closure claims:
 
-1. fleet02/B08, canonical report `math-open-problems@0b5925a458d36c1ec1cf8ab344c9676260a97c8a`, proves a diffuse rank-three Fourier/Brascamp--Lieb branch and identifies leverage-heavy rows as its mechanism boundary.
-2. fleet02/B07, canonical report `math-open-problems@7ba557b8854ea86dcdc22a342d6fdd73d6882c6a`, records exterior-power determinant mass and the fact that fixed-size physical minors can be individually tiny in Walsh/Hadamard stress families.
+1. fleet02/B08, canonical report `private-source@0b5925a458d36c1ec1cf8ab344c9676260a97c8a`, proves a diffuse rank-three Fourier/Brascamp--Lieb branch and identifies leverage-heavy rows as its mechanism boundary.
+2. fleet02/B07, canonical report `private-source@7ba557b8854ea86dcdc22a342d6fdd73d6882c6a`, records exterior-power determinant mass and the fact that fixed-size physical minors can be individually tiny in Walsh/Hadamard stress families.
 
 External source input: Galyna Livshyts, Grigoris Paouris and Peter Pivovarov, *On sharp bounds for marginal densities of product measures*, arXiv:1507.07949v2 / Israel J. Math. 216 (2016), prove that every `r`-dimensional orthogonal marginal of a product density with one-dimensional factors bounded by `1` has density at most `2^{r/2}`. For the one-dimensional aggregate used later I also use Mark Rudelson and Roman Vershynin, *Small Ball Probabilities for Linear Images of High-Dimensional Distributions*, IMRN 2015, Theorem 1.2: a normalized linear combination of independent density-`<=1` variables has density at most `sqrt(2)`.
 

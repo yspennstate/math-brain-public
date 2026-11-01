@@ -20,7 +20,7 @@ Fresh owner control at this run remained revision `2026-09-22.15`, programme `QF
 
 The newest compatible completed designated-partner result at the prepublication refresh was fleet03/B20 r33:
 
-`yspennstate/math-open-problems@82fb3ecce909f03acbbe69b2e9d0def93f85194b`,
+`private-source-repository@82fb3ecce909f03acbbe69b2e9d0def93f85194b`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T144528Z-fleet03-B20-QFORM-r33/REPORT.md`.
 

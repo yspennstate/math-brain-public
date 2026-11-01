@@ -16,7 +16,7 @@ All coordinate sets below are literal ORIGINAL-coordinate sets. No random coordi
 
 Newest compatible completed designated partner: fleet03/B20 r51,
 
-`yspennstate/math-open-problems@ceb973b9c1549a8247baf169db9152844b9decde`,
+`private-source-repository@ceb973b9c1549a8247baf169db9152844b9decde`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T091209Z-fleet03-B20-QFORM-auto11-r51/REPORT.md`.
 
@@ -47,7 +47,7 @@ The preceding fleet02/B20 r50 paid `s_5(E)>=43/20=2.15`, leaving an exact rank-1
 
 The owner-required pinned source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 

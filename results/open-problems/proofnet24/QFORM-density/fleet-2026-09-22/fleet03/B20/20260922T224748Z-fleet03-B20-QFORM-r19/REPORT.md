@@ -12,7 +12,7 @@ The target is unchanged: for every finite `n`, every independent real `X_i` with
 
 No Gaussian, moment, log-concavity, compact-support, connected-support, iid, diagonal-basis, or post-rotation-independence assumption is introduced. The argument below does not use the refuted law-uniform pointwise quadratic-phase decay, arbitrary-joint rank-three coarea, conditional projection-density supremum/moment, unrestricted fiber-supremum, or a bare inference from global spectrum to one good coordinate minor.
 
-The fresh proof frontier consumed here is fleet01/B20 r21, canonical source `yspennstate/math-open-problems@1c48a0b1da1bccc41b5768524d08db8f3d2308dc`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T222136Z-fleet01-B20-QFORM-r21/REPORT.md`. Its fractional volume-sampling Brascamp--Lieb theorem pays the O0 third-compound branch whenever either orientation has maximum third-minor volume marginal at most `2/3`. Therefore every unpaid O0 state admits a physical cross block `B=A[L,R]`, with
+The fresh proof frontier consumed here is fleet01/B20 r21, canonical source `private-source-repository@1c48a0b1da1bccc41b5768524d08db8f3d2308dc`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T222136Z-fleet01-B20-QFORM-r21/REPORT.md`. Its fractional volume-sampling Brascamp--Lieb theorem pays the O0 third-compound branch whenever either orientation has maximum third-minor volume marginal at most `2/3`. Therefore every unpaid O0 state admits a physical cross block `B=A[L,R]`, with
 
 `Z:=E_3(B)=sum_{|S|=|T|=3} det(B[S,T])^2 >=1/256`,
 
@@ -190,7 +190,7 @@ This is **not** the corrected-away claim that global spectral information direct
 
 ## 5. Direct use of designated partner fleet04/B20
 
-The newest completed designated-partner result remains fleet04/B20 r3, canonical source `yspennstate/math-open-problems@25ad8faaac5064b6814d51ae63d894fe97c1eac4`, theorem `QFORM-CROSS-DOMINATED-SECOND-SCHUR-CLOSURE-v1`.
+The newest completed designated-partner result remains fleet04/B20 r3, canonical source `private-source-repository@25ad8faaac5064b6814d51ae63d894fe97c1eac4`, theorem `QFORM-CROSS-DOMINATED-SECOND-SCHUR-CLOSURE-v1`.
 
 Its exact scope is a source-valid physical outer pivot `|a|>=tau>=1/4` followed by an exact second-Schur row `(d,c)` satisfying
 

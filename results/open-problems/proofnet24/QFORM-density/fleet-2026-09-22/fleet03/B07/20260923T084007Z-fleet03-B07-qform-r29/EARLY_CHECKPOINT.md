@@ -4,7 +4,7 @@ attacking: the r28 four-hub curvature survivor — prove that a large hub-times-
 # Early substantive checkpoint — r29
 
 
-Incoming r28 source: `yspennstate/math-open-problems@1ffce50d452b85f4f080ce0b61c68023e8f0d66c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T073755Z-fleet03-B07-qform-r28/REPORT.md`.
+Incoming r28 source: `private-source-repository@1ffce50d452b85f4f080ce0b61c68023e8f0d66c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T073755Z-fleet03-B07-qform-r28/REPORT.md`.
 
 Its four-hub failure branch writes the physical cross block as
 
@@ -39,6 +39,6 @@ There are four hub anchor pairs `(h,l)`, so some physical pair satisfies
 
 This already improves the r28 motif ledger: a large hub-times-core product cannot be lost to determinant cancellation unless the transverse-star motif is itself large. No local determinant is inverted.
 
-Next intended step in this same run: apply the completed anchored-compound tail ladder from `yspennstate/math-open-problems@33b7581b6dc153541b2aa4f6c706192bd8a81eaa:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T050509Z-r16/REPORT.md`, namely `H3 >= (T2(N)/2) H2`, to obtain a rank-two-tube versus anchored-third-volume alternative at this actual four-hub anchor. Then route the third-volume branch through the current volume-stability package while preserving original-coordinate product provenance.
+Next intended step in this same run: apply the completed anchored-compound tail ladder from `private-source-repository@33b7581b6dc153541b2aa4f6c706192bd8a81eaa:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T050509Z-r16/REPORT.md`, namely `H3 >= (T2(N)/2) H2`, to obtain a rank-two-tube versus anchored-third-volume alternative at this actual four-hub anchor. Then route the third-volume branch through the current volume-stability package while preserving original-coordinate product provenance.
 
 Status: supporting calculation proved; full QFORM remains open.

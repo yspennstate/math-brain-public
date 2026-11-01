@@ -15,7 +15,7 @@ The full conjecture remains OPEN. This report proves a new universal paid subbra
 
 The designated partner result actually consumed is fleet02/B13's heavy/light rank-three trichotomy:
 
-`yspennstate/math-open-problems@d511859edaa636cdc00fcd64155ab07506875c3d`,
+`private-source-repository@d511859edaa636cdc00fcd64155ab07506875c3d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T182158Z-fleet02-B13-qform-4ebdd821/REPORT.md`.
 
 For exact rank three
@@ -28,13 +28,13 @@ with heavy set `H={i:||r_i||^2>3/10}`, light set `L=H^c`, and light Gram `S=sum_
 
 I also use the exact fleet02/B13 bang-bang reduction
 
-`yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`,
+`private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`:
 for every measurable slab kernel, the supremum over all independent cap-one densities equals the supremum over arbitrary measure-one product indicators, with zero constant loss. No single-interval or bounded-fragment-count claim is inferred.
 
 The immediately preceding fleet01/B13 reduction is
 
-`yspennstate/math-open-problems@01c524aa389abf1b9b58c852bfa11fc747ec5b59`,
+`private-source-repository@01c524aa389abf1b9b58c852bfa11fc747ec5b59`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260922T190849Z-fleet01-B13-qform-r17/REPORT.md`.
 
 In the MIXED branch it produces one heavy original coordinate `i` with

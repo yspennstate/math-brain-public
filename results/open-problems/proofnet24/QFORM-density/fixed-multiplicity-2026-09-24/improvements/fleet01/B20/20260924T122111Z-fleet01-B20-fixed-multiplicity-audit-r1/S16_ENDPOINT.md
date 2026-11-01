@@ -2,7 +2,7 @@
 
 Run: `20260924T122111Z-fleet01-B20-fixed-multiplicity-audit-r1`
 
-Pinned baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Pinned baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 Status: **new proved supporting lemma; no 16-eigenvalue density theorem claimed.**
 

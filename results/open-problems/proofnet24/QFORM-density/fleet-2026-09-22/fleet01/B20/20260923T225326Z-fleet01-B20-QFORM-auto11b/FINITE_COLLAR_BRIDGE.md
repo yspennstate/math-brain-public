@@ -12,7 +12,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The newest completed designated fleet02/B20 package at the dependency refresh is
 
-`yspennstate/math-open-problems@edefefbd4d25c1c870330eb976e47a9356f7f4a0`,
+`private-source-repository@edefefbd4d25c1c870330eb976e47a9356f7f4a0`,
 run `20260923T200300Z-fleet02-B20-QFORM-auto11`, whose theorem
 `QFORM-R37-EXACT-COMMONGRAM-THIRDMODE-ESCAPE-v1` proves the following scale-sigma statement.
 

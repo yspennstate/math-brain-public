@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R06 — Romero split reliability: first unresolved vertex layer, six exact nonexistence cases
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Lane: **CLOSABLE OUTSIDE**.
 New canonical claim: `operations/claims/ROMERO-2025-SPLIT8.md`.
 Claim creation commit: `b18c5c5cde35f2d3933526f0b57a6f45b11e3091`.

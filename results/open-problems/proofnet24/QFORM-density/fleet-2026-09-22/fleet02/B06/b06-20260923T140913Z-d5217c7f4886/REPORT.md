@@ -6,7 +6,7 @@ Run `b06-20260923T140913Z-d5217c7f4886`. Programme `QFORM-DENSITY-3EIG-20260922`
 
 
 
-Required pinned Claude source read at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`: updated `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
+Required pinned Claude source read at `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`: updated `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
 ## 1. Scalar negative-moment lemma
 

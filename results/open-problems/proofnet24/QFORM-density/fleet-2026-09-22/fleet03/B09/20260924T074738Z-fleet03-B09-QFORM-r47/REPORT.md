@@ -15,7 +15,7 @@ All stochastic variables below are literal ORIGINAL coordinates. No random-varia
 
 The same-slot predecessor is
 
-`yspennstate/math-open-problems@0ec2761c15a4699ff4d7208f59f19b7e025e4305`,
+`private-source-repository@0ec2761c15a4699ff4d7208f59f19b7e025e4305`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T064711Z-fleet03-B09-QFORM-r46/REPORT.md`.
 
@@ -25,7 +25,7 @@ It paid the exact singular physical-pair face by the polynomial star
 
 but left the nonzero near-singular **definite** pair as the next debt. The fresh fleet02/B08 source
 
-`yspennstate/math-open-problems@cdd0eb22227a505e827a658038a1512897c0ad56`,
+`private-source-repository@cdd0eb22227a505e827a658038a1512897c0ad56`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/fleet02-B08-20260924T034000Z-7c4f/REPORT.md`
 
@@ -33,7 +33,7 @@ explicitly warns that the punctured coefficient cannot be deleted. Its exact str
 
 The designated fleet04/B09 source is
 
-`yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`,
+`private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
 
@@ -388,6 +388,6 @@ Full unrestricted QFORM remains **OPEN**. Full-target continuity remains **OPEN*
 
 Startup math-brain main: `fdce34c28d041bb3a7e7efa237522e9e2b403835`.  
 Prepublication control refresh observed: `53dd4d5734bc633ec5088ba95995b8c32c12a4b0`.  
-Pre-write math-open-problems master observed: `1ec2c1d57ce156a13f1cdfa602e5de5e2b5dc43e`.
+Pre-write private-source master observed: `1ec2c1d57ce156a13f1cdfa602e5de5e2b5dc43e`.
 
 Repository retrieval and application are verified. Separate native learned-memory receiver ingestion is not verified; status remains `WITHOUT_VERIFIED_BRAIN`.

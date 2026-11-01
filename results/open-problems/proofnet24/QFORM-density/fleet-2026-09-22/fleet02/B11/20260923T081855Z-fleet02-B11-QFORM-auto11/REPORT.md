@@ -18,15 +18,15 @@ Fresh owner control before publication remained revision `2026-09-22.15`, sole p
 Sources used at equations:
 
 1. **Designated partner fleet03/B11 r24**, available at
-   `yspennstate/math-open-problems@e7fdc2430ce640363582b98adce7771f8797e686`,
+   `private-source-repository@e7fdc2430ce640363582b98adce7771f8797e686`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T061800Z-fleet03-B11-QFORM-r24/REPORT.md`.
    It proves the balanced defect STAR/CROSS-2VOL dichotomy and the diffuse pure-star mixed-Fresnel receiver.
 2. **Required pinned Claude package**
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
    `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` were read.  Theorem C from `COUNTEREXAMPLE_SEARCH.md` is applied below to an actual one-sheet density inequality.
 3. **Finite-dimensional projected-gradient theorem**
-   `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
+   `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
    `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Corollary 4.1.
 4. The preceding fleet02/B11 overlapping-pair theorem at
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T065551Z-fleet02-B11-QFORM-8cd8bcc4/REPORT.md`, retained as the quantitative physical-indefinite-pair exit and the rank-two logarithmic control.
@@ -185,7 +185,7 @@ This is an essential-density statement.  Continuity is not added here beyond wha
 
 ## 5. Required pinned Claude ruled theorem applied at the actual one-sheet inequality
 
-The required source `math-open-problems@e5f71d79.../COUNTEREXAMPLE_SEARCH.md`, Theorem C, proves for exact-rank-three signature `(+,+,-)` with all three eigenvalue magnitudes at least one that on the one-sheet/cone side
+The required source `private-source@e5f71d79.../COUNTEREXAMPLE_SEARCH.md`, Theorem C, proves for exact-rank-three signature `(+,+,-)` with all three eigenvalue magnitudes at least one that on the one-sheet/cone side
 
 `p(s)<=pi sqrt(2)`, `s>=0`.                                       (5.1)
 

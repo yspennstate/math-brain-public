@@ -16,13 +16,13 @@ The target is unchanged: the coordinates are independent ORIGINAL real variables
 
 The required newest-Claude package was read at the pinned commit
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`,
 
 and the owner continuation was read at
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -60,13 +60,13 @@ The newest compatible designated partner `fleet03/B02` is r25,
 
 `QFORM-WEIGHTED-MIXED32-FOURIER-L1-v1`,
 
-at `yspennstate/math-open-problems@ff8ec2ee90d4846f39e728e1ca20d50c717cc894`,
+at `private-source-repository@ff8ec2ee90d4846f39e728e1ca20d50c717cc894`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T085705Z-fleet03-B02-qform-r25/REPORT.md`.
 
 The immediately preceding B02 report is pinned at
 
-`yspennstate/math-open-problems@94189deb89884b0dd57057041ec04f98a85e6764`,
+`private-source-repository@94189deb89884b0dd57057041ec04f98a85e6764`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T091200Z-fleet02-B02-QFORM-auto11/REPORT.md`.
 

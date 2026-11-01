@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — NO MOVEMENT o
 # R09 CLOSABLE OUTSIDE — G0013 six-run handoff: an exact Chatterjee/Spearman bridge, the Ansari–Rockel prior-art collision, and the finite all-permutations reduction
 
 Date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Delivery: private GitHub only.
 
 ## 1. Continuity and controlling state

@@ -102,7 +102,7 @@ Thus the determinant scaling and the coefficient in (2.9) cannot be improved for
 
 The newest designated partner result is fleet03/B15 at
 
-`math-open-problems@07ce749022db2bb11f390431409b013fe30457cc`,
+`private-source@07ce749022db2bb11f390431409b013fe30457cc`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T212617Z-fleet03-B15-qform-auto12/REPORT.md`.
 
 Its Theorem 2.1 says that a measurable mixture of conditional convolutions `a_omega*b_omega`, with `a_omega in L^1 cap L^infinity`, `b_omega in L^1`, and an integrable conditional `L^infinity` bound, has a canonical `C_0` density and preserves the averaged height.
@@ -121,7 +121,7 @@ with no height loss from (2.3). This use is logically one-way: the interval boun
 
 I independently rechecked the owner-pinned completed Theorem C in
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
 
 For an exact rank-three signature `(+,+,-)` form with eigenvalue magnitudes `lambda_1,lambda_2,mu>=1`, its majority one-sheet side satisfies

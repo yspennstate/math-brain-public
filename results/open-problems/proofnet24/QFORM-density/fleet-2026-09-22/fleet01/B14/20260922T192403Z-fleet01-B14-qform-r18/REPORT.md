@@ -20,7 +20,7 @@ The live correction set is respected. In particular this report does not use the
 
 Assigned partner `fleet02/B14`, run `20260922T191035Z-fleet02-B14-QFORM-r17`, canonical proof
 
-`yspennstate/math-open-problems@51c319713bf7b8f8bff3c08e8b6bae462fc5b9fd`,
+`private-source-repository@51c319713bf7b8f8bff3c08e8b6bae462fc5b9fd`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T191035Z-fleet02-B14-QFORM-r17/REPORT.md`.
 

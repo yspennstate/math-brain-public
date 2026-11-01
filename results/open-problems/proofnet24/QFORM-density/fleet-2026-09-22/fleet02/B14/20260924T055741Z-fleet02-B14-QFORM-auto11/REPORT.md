@@ -18,11 +18,11 @@ A translation-uniform cellwise estimate linear in the mass of the third hyperbol
 
 ## Inputs and source matching
 
-The newest designated fleet03/B14 input is `QFORM-OVERLAP-SAME-SIGN-SQUARE-COMPILER-v1` at `math-open-problems@7c982b2537be11bbe3f63123e2870171bfb27717`: for same-sign curvatures it allows the first square center to depend arbitrarily on the transverse coordinate and still gives `pi K_W K_U/sqrt(|ad|)`. Its addendum is authoritative about prior-source matches.
+The newest designated fleet03/B14 input is `QFORM-OVERLAP-SAME-SIGN-SQUARE-COMPILER-v1` at `private-source@7c982b2537be11bbe3f63123e2870171bfb27717`: for same-sign curvatures it allows the first square center to depend arbitrarily on the transverse coordinate and still gives `pi K_W K_U/sqrt(|ad|)`. Its addendum is authoritative about prior-source matches.
 
 The uncoupled mass-sensitive hyperbolic-plus-square optimization is already present in fleet01/B14 at repository snapshot `9c7d5029a308cb0f4903065baab48638203c4206`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B14/20260924T001138Z-fleet01-B14-QFORM-auto11/REPORT.md`. I do not relabel that theorem as new. The new step here is the arbitrary same-bank overlap extension (`UY` and `VY` couplings), its determinant-only corollary, and the exact translated active-submeasure lower barrier.
 
-The fixed required Claude source is `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`; `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` were read. A completed result from that source is applied in Section 6.
+The fixed required Claude source is `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`; `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` were read. A completed result from that source is applied in Section 6.
 
 No moment, support, diameter, fragment-count, connectedness, log-concavity, post-rotation independence or bounded translation hypothesis is used.
 

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # NM13-04 — admission delta: later progress-first registries do not assign this NM13 slot; VDH/BHS are genuinely released but HARD; no residue-3 CLOSABLE admission
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-04` / `proofnet24/NM13-04/`  
 Category: **CLOSABLE OUTSIDE**  
 Preferred lane: recent source-posed finite graph conjectures with an exact counterexample, extremal construction, sharp number, finite certificate, or short theorem as the source-level deliverable  

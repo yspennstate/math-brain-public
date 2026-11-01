@@ -15,7 +15,7 @@ The current owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` and fre
 
 Newest designated partner fleet03/B14:
 
-`yspennstate/math-open-problems@e786ed60fea4db8a672faaffc35531bb06eb9b57`
+`private-source-repository@e786ed60fea4db8a672faaffc35531bb06eb9b57`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T164047Z-fleet03-B14-QFORM-auto11/REPORT.md`.
 
@@ -38,7 +38,7 @@ All shifts and supports are arbitrary.
 
 The required Claude source was freshly read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. In Section 6 below I apply its completed Theorem B to the same exact-target family used for the fragmentation obstruction.
 

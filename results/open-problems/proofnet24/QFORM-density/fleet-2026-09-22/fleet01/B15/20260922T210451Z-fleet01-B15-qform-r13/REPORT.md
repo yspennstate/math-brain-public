@@ -23,7 +23,7 @@ This report does **not** prove that universal estimate. It separates the qualita
 
 I consumed the completed fleet02/B15 report
 
-- repository/commit visible in the current source chain: `yspennstate/math-open-problems`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`;
+- repository/commit visible in the current source chain: `private-source-repository`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`;
 - that report's fresh control pin is `math-research-brain@200ae47caf9830c8810adcf4c513470ba03c8d6d`, revision `2026-09-22.15`.
 
 Its target-level theorem is:

@@ -16,9 +16,9 @@ The target remains exactly the owner statement: independent ORIGINAL real coordi
 
 The two immediate assembly inputs are:
 
-1. fleet03/B20 r39, `yspennstate/math-open-problems@5d9892edb6f33beda5ce5e10c4482fcc5fe994a8`,
+1. fleet03/B20 r39, `private-source-repository@5d9892edb6f33beda5ce5e10c4482fcc5fe994a8`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T214857Z-fleet03-B20-QFORM-r39/REPORT.md`;
-2. fleet03/B19 r43, `yspennstate/math-open-problems@ef38106705da5fab5a2fb6dbdd64745206580f62`,
+2. fleet03/B19 r43, `private-source-repository@ef38106705da5fab5a2fb6dbdd64745206580f62`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T220120Z-fleet03-B19-QFORM-r43/REPORT.md`.
 
 The latter proves the same-constant reduction to the affine **principal-minimal** class. Thus it is enough to treat matrices for which the full matrix has at least three threshold-large eigenvalues but every proper ORIGINAL-coordinate principal submatrix has at most two. It also proves that a principal-minimal target has exactly three threshold-large eigenvalues, or exactly four with mixed signs.
@@ -44,7 +44,7 @@ After the r43 principal-minimal descent, the untouched base satisfies
 
 The missing implication was to use (1.1) without dividing by the distance of the remaining spectrum from `+1` or `-1`. The latest global assembly explicitly warns that a proof demanding a fixed base gap is not valid. The theorem below therefore keeps exact threshold eigenspaces and produces a dichotomy: a genuine near-threshold annulus, or a finite strong threshold carrier.
 
-The earlier fleet03/B12 threshold-preserving Schur theorem (`yspennstate/math-open-problems@dd754a0bfed889fd29c931b7112c8c3285fc83e8`) proves a useful lower bound on threshold counts after an invertible physical pivot. The new theorem here is different: it is an **exact count formula across an arbitrary possibly singular untouched base block**, including exact `+1` and `-1` eigenvalues and their couplings to the finite H-bank.
+The earlier fleet03/B12 threshold-preserving Schur theorem (`private-source-repository@dd754a0bfed889fd29c931b7112c8c3285fc83e8`) proves a useful lower bound on threshold counts after an invertible physical pivot. The new theorem here is different: it is an **exact count formula across an arbitrary possibly singular untouched base block**, including exact `+1` and `-1` eigenvalues and their couplings to the finite H-bank.
 
 ## 2. Singular saddle inertia lemma
 
@@ -342,7 +342,7 @@ Important scope point: `Fbar_sigma` is a deterministic threshold-Schur carrier, 
 
 The completed designated partner source is fleet04/B20 r11,
 
-`yspennstate/math-open-problems@9d07c5d5c69c885509db66cb1093acdeff8bcb64`,
+`private-source-repository@9d07c5d5c69c885509db66cb1093acdeff8bcb64`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T181642Z-fleet04-B20-QFORM-r11/REPORT.md`.
 

@@ -192,7 +192,7 @@ This corollary is not a convolution statement; it is an exact coefficient identi
 
 Dependency actually read and applied:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - commit: `894dfe1e6cc4817c2b3e0bbe46036e4839f10dbf`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T215456Z-fleet02-B12-QFORM-auto11b/REPORT.md`
 - theorem: `QFORM-RANKONE-SELF-CARRIER-RETENTION-v1`.
@@ -378,7 +378,7 @@ All perturbation estimates are deterministic identities or singular-value inequa
 
 **New proved result:** `QFORM-SCHUR-SPECTRAL-PACKET-RESERVE-v1`, equations (2.8)-(2.14), plus the high/low spectral extension (3.9).
 
-**Partner result actually applied:** `QFORM-RANKONE-SELF-CARRIER-RETENTION-v1`, `yspennstate/math-open-problems@894dfe1e6cc4817c2b3e0bbe46036e4839f10dbf`, exact path stated above.
+**Partner result actually applied:** `QFORM-RANKONE-SELF-CARRIER-RETENTION-v1`, `private-source-repository@894dfe1e6cc4817c2b3e0bbe46036e4839f10dbf`, exact path stated above.
 
 **Concrete output:** a target-class family with arbitrarily many unbounded positive/negative complementary eigenvalues, an unbounded rank-two physical cross packet, and an arbitrary full-rank signed small spectral tail of norm `<=0.01`, for which
 

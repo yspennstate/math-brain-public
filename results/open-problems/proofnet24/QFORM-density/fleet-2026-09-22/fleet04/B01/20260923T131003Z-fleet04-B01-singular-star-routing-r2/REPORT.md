@@ -7,7 +7,7 @@ Status: PROVED NEW DETERMINISTIC ROUTING LEMMA AND PAID WELL-CONDITIONED BRANCH 
 ## 1. Completed averaged-frequency input
 
 The completed fleet01/B01 theorem at
-`yspennstate/math-open-problems@cb4a6def5dca661cabbf4a89b52c2e0a3cba6c06`
+`private-source-repository@cb4a6def5dca661cabbf4a89b52c2e0a3cba6c06`
 is used at the following actual inequality.
 
 For an invertible indefinite original-coordinate pair (S={i,j}), put

@@ -22,7 +22,7 @@ The same UTC hour already contained the canonical fleet03/B19 login `20260923T18
 
 The fresh fleet01/B20 compiler is source-pinned at
 
-`yspennstate/math-open-problems@d72f85bd91f01034df4df7f1544aef854771f0a6`
+`private-source-repository@d72f85bd91f01034df4df7f1544aef854771f0a6`
 
 with detailed derivation beginning at commit
 
@@ -50,7 +50,7 @@ The other compiler branches are a strong rank-one tube or a two-light-bank diffu
 
 The checked arbitrary-internal-function theorem is
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 

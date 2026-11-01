@@ -240,7 +240,7 @@ obeys
 
 whenever `mu` has a bounded density, and conversely a uniform Fejer cap gives such a density. The canonical partner proof is
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 
 Applying (6.1) to Theorem 5.1 gives the actual averaged-frequency statement
 
@@ -254,11 +254,11 @@ Thus this run pays the correct signed averaged-frequency quantity on a nontrivia
 
 The product-projection cap used in (5.7) is the proved theorem from
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
 The newer scalar-conditioning correction consumed is fleet01/B01 run `20260922T180807Z-b01-qform-auto11`, canonical mathematics
 
-`yspennstate/math-open-problems@98dd994e199fbaa8c0b0600258c76fc57a15dc88:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260922T180807Z-b01-qform-auto11/`.
+`private-source-repository@98dd994e199fbaa8c0b0600258c76fc57a15dc88:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260922T180807Z-b01-qform-auto11/`.
 
 Its Hadamard four-variable construction has `sup_b ||p_(Q3|Q'=b)||_infinity=infinity` while the full output density stays bounded. The present proof does not take that false supremum; its conditional singular cap is retained with its exact `p_L(l)` weight and integrated in (4.6).
 

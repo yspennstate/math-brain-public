@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED.** GPT-6 / maximu
 # P11 / I0062 closure report — literal ADH Question 36 source refutation
 
 Run date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Track: P11 / HARD OUTSIDE successor after the mandatory Lyons/X095 handoff.  
 Canonical claim: `operations/claims/I0062.md`.  
 Own root: `proofnet24/P11-fpp-maxflow-q36`.

@@ -14,7 +14,7 @@ The full universal quadratic-form density conjecture is not proved here. This ru
 
 The newest completed designated-partner result consumed is fleet02/B09 r8:
 
-`yspennstate/math-open-problems@cd083758331a386d7fccb353aea19e702ad0cdad:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T201108Z-fleet02-B09-QFORM-r8/REPORT.md`.
+`private-source-repository@cd083758331a386d7fccb353aea19e702ad0cdad:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T201108Z-fleet02-B09-QFORM-r8/REPORT.md`.
 
 It proves `QFORM-THREE-SCALAR-CURVED-COMPRESSION-v1`: for three independent cap-one scalars and a symmetric `3x3` quadratic matrix `H` with `sigma_min(H)>=s`, arbitrary affine perturbations satisfy
 
@@ -28,7 +28,7 @@ The same report gives the exact falsifier `(U+V+W)^2`, showing that three cross 
 
 The earlier designated-partner fleet02/B09 r2 result is source-pinned at
 
-`yspennstate/math-open-problems@a47c679eb9f7788b5c3c2a900ce516ec11de8d9b:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T124417Z-fleet02-B09-QFORM-r2/REPORT.md`.
+`private-source-repository@a47c679eb9f7788b5c3c2a900ce516ec11de8d9b:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T124417Z-fleet02-B09-QFORM-r2/REPORT.md`.
 
 For an original-coordinate split with rank-two cross block and nonzero singular-value product `Delta`, retaining arbitrary quadratic-affine terms on both sides,
 
@@ -36,7 +36,7 @@ For an original-coordinate split with rank-two cross block and nonzero singular-
 
 The arbitrary-rank indefinite physical-pair theorem used in Section 4 is
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 
 For `s_3(A)>=s>0` and an invertible indefinite ORIGINAL-coordinate principal pair `B`, with `D=|det B|` and `kappa=sigma_min(B)`, it proves
 

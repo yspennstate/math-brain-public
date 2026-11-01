@@ -19,7 +19,7 @@ The argument stays in original-coordinate product space. It uses no law-uniform 
 The Fourier compiler used here is this slot's completed theorem
 
 - `QFORM-ENTROPY-WEIGHTED-THREE-VOLUME-v1`,
-- `yspennstate/math-open-problems@1d2dd52680ec729f28b7289e74a6f3752a379127`,
+- `private-source-repository@1d2dd52680ec729f28b7289e74a6f3752a379127`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T021315Z-fleet01-B04-QFORM-auto11/REPORT.md`.
 
 For any probability law `w` on supported physical `3 x 3` minors, with constrained-side row marginals `alpha_i`, determinant/entropy currency
@@ -35,7 +35,7 @@ and `p_Q` has a continuous representative in `C_0(R)`. Arbitrary same-bank quadr
 The designated partner result actually applied below is the newest compatible fleet02/B04 theorem
 
 - `QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1`,
-- `yspennstate/math-open-problems@febf0c97f0f85e802b6bc2ab4a475c15109de013`,
+- `private-source-repository@febf0c97f0f85e802b6bc2ab4a475c15109de013`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T111930Z-qform/REPORT.md`.
 
 If `E3(N)>0` and no probability law on the supported physical `3 x 3` minors has every constrained-side row marginal strictly below `3/4`, that theorem gives the ambient form a `C_0` density with

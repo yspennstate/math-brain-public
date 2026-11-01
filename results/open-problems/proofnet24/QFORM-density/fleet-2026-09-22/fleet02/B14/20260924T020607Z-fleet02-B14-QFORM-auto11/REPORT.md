@@ -26,7 +26,7 @@ The point is not support geometry. The issue is the exact mass power carried by 
 
 Source:
 
-- `yspennstate/math-open-problems@389a363c688ac948d056ed4c3cb6615603852b21`
+- `private-source-repository@389a363c688ac948d056ed4c3cb6615603852b21`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260924T010202Z-fleet03-B14-QFORM-auto11/REPORT.md`
 - theorem `QFORM-OVERLAP-HUB-SLOPE-TWO-PLANCHEREL-v1`.
 
@@ -56,7 +56,7 @@ with a continuous `C_0` density. No support or moment assumptions enter.
 
 The latest compatible partner result observed before publication is
 
-- `yspennstate/math-open-problems@4366a5648435eb9bfd6dcc40d4aa6fc3b3e67f6c`
+- `private-source-repository@4366a5648435eb9bfd6dcc40d4aa6fc3b3e67f6c`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260924T013955Z-fleet03-B14-QFORM-auto11/REPORT.md`
 - theorem `QFORM-DISJOINT-BANK-SCHUR-LOCALIZATION-v1`.
 
@@ -70,7 +70,7 @@ Arbitrary outside self-curvature, translations, remote fragments and unbounded s
 
 Freshly consumed at the owner-pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 were `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 

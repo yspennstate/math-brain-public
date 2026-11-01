@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — **metric `L
 
 # HARD7-03 — admission and first attack on Seppäläinen Problem 4
 
-Date: 2026-09-18 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-18 UTC. Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Admission and continuity
 

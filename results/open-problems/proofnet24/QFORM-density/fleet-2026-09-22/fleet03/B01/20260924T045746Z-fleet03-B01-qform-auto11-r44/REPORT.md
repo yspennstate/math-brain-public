@@ -139,7 +139,7 @@ At the minimizer, `K T_*^(-alpha)=2T_*/alpha`, so Fourier inversion yields exact
 
 The designated completed fleet04/B01 result is:
 
-`yspennstate/math-open-problems@f7e82d169badc671968036252d351b8533cdd425`
+`private-source-repository@f7e82d169badc671968036252d351b8533cdd425`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260924T012155Z-fleet04-B01-lr-residual-r1/REPORT.md`.
 
@@ -335,6 +335,6 @@ so (5.2) and (5.5) are also valid averaged-frequency bounds. This is stronger th
 ## 12. Source pins consumed
 
 - Live corrections: pointwise quadratic decay false; arbitrary-joint coarea false; conditional projection moments/caps false; no post-rotation independence; no moment-based small-error disposal.
-- Designated partner actually applied: `yspennstate/math-open-problems@f7e82d169badc671968036252d351b8533cdd425:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260924T012155Z-fleet04-B01-lr-residual-r1/REPORT.md`.
+- Designated partner actually applied: `private-source-repository@f7e82d169badc671968036252d351b8533cdd425:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260924T012155Z-fleet04-B01-lr-residual-r1/REPORT.md`.
 
 No task/schedule, notification, permission, public-release, cross-account-authentication, or paid-model/API state is changed by this run.

@@ -314,7 +314,7 @@ This is a substantial improvement over the determinant-after-hub-conditioning co
 
 The newest completed designated partner result is
 
-`yspennstate/math-open-problems@461ca4597face7955d318d0540729ca6b809fce2`,
+`private-source-repository@461ca4597face7955d318d0540729ca6b809fce2`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260924T094654Z-fleet02-B10-QFORM-r13/REPORT.md`.
 
@@ -367,13 +367,13 @@ Full exact rank three remains **OPEN**. Full QFORM remains **OPEN / NOT PROVED /
 
 - Fresh `math-research-brain` QFORM owner control and live correction ledger, revision `2026-09-22.15`.
 - Own predecessor leverage-half Wiener--Fresnel proof:
-  `yspennstate/math-open-problems@aff6876a6017be77544c50e8904e9baf8dac3bfe`,
+  `private-source-repository@aff6876a6017be77544c50e8904e9baf8dac3bfe`,
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260924T101649Z-fleet01-B10-QFORM-auto11/REPORT.md`.
 - Designated partner endpoint proof:
-  `yspennstate/math-open-problems@461ca4597face7955d318d0540729ca6b809fce2`,
+  `private-source-repository@461ca4597face7955d318d0540729ca6b809fce2`,
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260924T094654Z-fleet02-B10-QFORM-r13/REPORT.md`.
 - Designated partner harmonic source geometry and exact hyperbolic--Fresnel normal form:
-  `yspennstate/math-open-problems@fe4042fe31234cbe45ed47a6b1546fa70f687b68`,
+  `private-source-repository@fe4042fe31234cbe45ed47a6b1546fa70f687b68`,
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260924T064844Z-fleet02-B10-QFORM-r11/REPORT.md`.
 
 No Gaussianity, log-concavity, moments, compact support, connected support, diagonal-basis assumption, post-rotation independence, Monte Carlo extremality claim, or public release is used.

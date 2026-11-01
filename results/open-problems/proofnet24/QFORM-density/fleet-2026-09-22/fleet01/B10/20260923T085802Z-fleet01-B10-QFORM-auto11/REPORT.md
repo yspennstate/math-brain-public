@@ -16,7 +16,7 @@ The unrestricted target remains OPEN: arbitrary finite `n`, independent original
 
 The newest completed designated-partner result actually used is fleet02/B10 auto11:
 
-`yspennstate/math-open-problems@16ecbcc3f6d34d4195ff6e29066216df155d9530`,
+`private-source-repository@16ecbcc3f6d34d4195ff6e29066216df155d9530`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T064541Z-fleet02-B10-QFORM-auto11/REPORT.md`.
 
@@ -60,7 +60,7 @@ I also use my preceding completed B10 result
 
 `QFORM-REGRESSION-RESIDUAL-TRANSVERSE-SPLIT-v1`,
 
-`yspennstate/math-open-problems@6e2925e1a210871b4cfe53f5731578d0a71cb6d4`,
+`private-source-repository@6e2925e1a210871b4cfe53f5731578d0a71cb6d4`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260923T035230Z-fleet01-B10-QFORM-r25/REPORT.md`.
 
@@ -72,7 +72,7 @@ where `rho=sum e_i^2`.
 
 Finally, I apply the required Claude ruled-level-set theorem at its exact scope. At
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, Theorem C proves for an exact rank-three signature `(2,1)` form with eigenvalue magnitudes at least one
 

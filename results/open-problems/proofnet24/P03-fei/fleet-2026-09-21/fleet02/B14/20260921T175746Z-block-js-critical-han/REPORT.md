@@ -10,7 +10,7 @@ TASK: B14 ACCOUNT: fleet02 RUN: 2026-09-21T17:57:46.647392Z — block recombinat
 
 ## 0. Fresh frontier and exact scope
 
-Fresh `yspennstate/math-open-problems` master was recovered during the run, initially at `4faf215f342ddef184d58ef68e4e914ad1d6b5b1` and refreshed before writing to `385fa72dde1a1105c9145c9667232c1adf1c515b`. I read the current `FLEET_RULES.md`, `proofnet24/P03-fei/README.md`, the September-21 FEI task packet, the newest B14 centered-refunded selector, fleet04/B14's strong-concavity recombination rebate, fleet01/B18's centered-tangent/Han integration, fleet02/B18's joint phase packing, and the fresh B13 Boolean phase/Palm work.
+Fresh `private-source-repository` master was recovered during the run, initially at `4faf215f342ddef184d58ef68e4e914ad1d6b5b1` and refreshed before writing to `385fa72dde1a1105c9145c9667232c1adf1c515b`. I read the current `FLEET_RULES.md`, `proofnet24/P03-fei/README.md`, the September-21 FEI task packet, the newest B14 centered-refunded selector, fleet04/B14's strong-concavity recombination rebate, fleet01/B18's centered-tangent/Han integration, fleet02/B18's joint phase packing, and the fresh B13 Boolean phase/Palm work.
 
 The current unrestricted FEI lower-bound scale used only for numerical localization is
 

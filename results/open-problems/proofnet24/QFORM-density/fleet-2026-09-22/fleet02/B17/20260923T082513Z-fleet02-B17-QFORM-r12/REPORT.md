@@ -147,7 +147,7 @@ Conditioning on `Z` converts (1.7) into a quadratic form in the independent phys
 
 Apply the completed Fresnel--Brascamp--Lieb **Theorem F** from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,  
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,  
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
 (and independently audited in `FOURIER_ROUTE_REPORT.md` in the same source directory). The theorem explicitly allows arbitrary linear terms. With `I` equal to all `3m` coordinates and zero residual block, it gives, uniformly in `z`,
@@ -306,7 +306,7 @@ This is the essential strengthening over a weak CLT: the approximation is unifor
 
 The completed designated partner `fleet03/B17` result is
 
-`yspennstate/math-open-problems@dcf8885d5153370cacfa246ad1e29fb06d971769`,  
+`private-source-repository@dcf8885d5153370cacfa246ad1e29fb06d971769`,  
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T070310Z-fleet03-B17-QFORM-r25/REPORT.md`.
 
 It proves that for every Gaussian `Y~N(mu,Sigma)` with `Sigma >= sigma^2 I` and every symmetric `B` with `s_3(B)>=1`,

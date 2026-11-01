@@ -51,6 +51,6 @@ Hence the target-level branch
 
 This is homogeneous of degree `-1` in the quadratic scale. It uses no support/moment/connectedness condition and no independence after rotation. The remaining structural gap is to force a universally positive currency `|a|^6 Z3` in an unpaid no-pivot branch, or route its failure into an already-paid diffuse/null/tube/hub mechanism.
 
-Designated partner use: fleet04/B13 at math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1 proves the no-attainment product purification; after proving the slab inequality for bounded finite-union unit product sets, its Corollary 2.2 transfers it to every arbitrary cap-one product law with zero constant loss.
+Designated partner use: fleet04/B13 at private-source@e1a56859520ae79b7a1f049a9eedf41972ddf1e1 proves the no-attainment product purification; after proving the slab inequality for bounded finite-union unit product sets, its Corollary 2.2 transfers it to every arbitrary cap-one product law with zero constant loss.
 
 Status: supporting theorem candidate with full derivation to follow; full QFORM and full continuity remain OPEN.

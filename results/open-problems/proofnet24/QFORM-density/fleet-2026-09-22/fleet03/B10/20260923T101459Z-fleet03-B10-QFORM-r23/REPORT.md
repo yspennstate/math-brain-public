@@ -17,7 +17,7 @@ No Gaussianity, moment, bounded-support, connected-support, log-concavity, diago
 
 The immediate B10 predecessor is
 
-`yspennstate/math-open-problems@36d17401e6c910bd4ef856fcd4082b95d0f5c23d`
+`private-source-repository@36d17401e6c910bd4ef856fcd4082b95d0f5c23d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T011306Z-fleet03-B10-QFORM-r22/REPORT.md`.
 
@@ -25,7 +25,7 @@ Its surviving exact-rank-three state is recalled in Section 2.
 
 The designated partner is now genuinely available and was read at its canonical proof source:
 
-`yspennstate/math-open-problems@afdea9634d9e3f5fb09659da436292cf7dbe5b20`
+`private-source-repository@afdea9634d9e3f5fb09659da436292cf7dbe5b20`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B10/20260923T061725Z-fleet04-B10-QFORM-r4/REPORT.md`.
 
@@ -33,13 +33,13 @@ Its theorem `QFORM-REGRESSION-THREEBANK-CURVATURE-SPLIT-v1` is applied in Sectio
 
 The product-projection and scalar-star inputs are read from
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`
 
 and
 
-`yspennstate/math-open-problems@e8bd09a6e9c8dbe964b87f52ff9b5b6d13421958`
+`private-source-repository@e8bd09a6e9c8dbe964b87f52ff9b5b6d13421958`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T052643Z-e284cc399d47/REPORT.md`.
 

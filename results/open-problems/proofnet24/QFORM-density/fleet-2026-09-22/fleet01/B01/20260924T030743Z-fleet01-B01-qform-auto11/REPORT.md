@@ -14,14 +14,14 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 Fresh source heads at the start of this run were
 
 - `yspennstate/math-research-brain/main@f7b1bd7fb40e7c63dbaa8724b795297e136d44e1`,
-- `yspennstate/math-open-problems/master@0662743d81a3dfcba062f36ecc52815fbaa26012`.
+- `private-source-repository/master@0662743d81a3dfcba062f36ecc52815fbaa26012`.
 
 
 The phase-aligned fragmented-support counterexample remains binding: for each prescribed nonzero `t` one can choose a cap-one density supported on finitely many intervals on which `t x^2` is nearly phase-aligned, so `|E exp(itX^2)|` can be arbitrarily close to one. Nothing below contradicts that. The new estimates come either from a JOINT rank-two cross block or from a direct distribution-function/fractional-potential calculation for a pure bilinear product.
 
 The newest completed designated partner result used at an equation is fleet02/B01
 
-`yspennstate/math-open-problems@e3ffccc3519c09f566296ee7429303137e5f9fa3`
+`private-source-repository@e3ffccc3519c09f566296ee7429303137e5f9fa3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/fleet02-B01-20260924T015809Z-c0d6ce1e/REPORT.md`.
 
@@ -35,7 +35,7 @@ The analytic receiver used below is the preceding B01 theorem
 
 `QFORM-SCALAR-SQUARE-PLUS-EXACT-RANK2-CROSS-v1`,
 
-committed at `yspennstate/math-open-problems@8540446a888b048f24a052638d39aba443315e31`, which says: if
+committed at `private-source-repository@8540446a888b048f24a052638d39aba443315e31`, which says: if
 
 `Q=a(X_0+h)^2+R`, `a!=0`,
 

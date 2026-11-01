@@ -17,7 +17,7 @@ Continuity is proved on the L1 branches below. It is not asserted for the full t
 
 The designated partner source is fleet02/B02,
 
-- `yspennstate/math-open-problems@f7a221e0f40362a1ccad48cf81812f2143f3cc92`
+- `private-source-repository@f7a221e0f40362a1ccad48cf81812f2143f3cc92`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T020523Z-fleet02-B02-QFORM-auto11-c1a7e2f4/REPORT.md`.
 
 I use two proved ingredients from that report.
@@ -56,7 +56,7 @@ The source optimized the special case `max l_i<=1/2`, `||E||<=s3(M0)/16`. This r
 
 I also use my immediately preceding B02 theorem
 
-- `yspennstate/math-open-problems@bf39ca0cbbb657e697d9b95f14ea17dd4f5118c2`
+- `private-source-repository@bf39ca0cbbb657e697d9b95f14ea17dd4f5118c2`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260923T065505Z-fleet01-B02-qform-auto11-r25/REPORT.md`,
 
 which states that for every physical cross block with `Z=e3(M^TM)>0` and every `0<eps<=1`, either

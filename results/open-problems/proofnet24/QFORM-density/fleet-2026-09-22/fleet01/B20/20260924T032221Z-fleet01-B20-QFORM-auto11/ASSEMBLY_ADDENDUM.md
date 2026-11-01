@@ -4,7 +4,7 @@ After the first B20 report was written, the current fleet01/B19 assembly source 
 
 Source:
 
-`yspennstate/math-open-problems@b4a77ade04e619a10fec5678d52d7c31480d54c5`,
+`private-source-repository@b4a77ade04e619a10fec5678d52d7c31480d54c5`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260924T024923Z-fleet01-B19-QFORM-auto11/REPORT.md`.
 
 B19 proves that the active vector produced by the completed fleet02/B20 orthogonal peel can be pulled back to the **original** rank-42 carrier before the peeled increments were transferred into the residual. Thus the same fleet02/B20 active localization can be retained with the sharper exact decomposition

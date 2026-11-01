@@ -20,7 +20,7 @@ This report proves that the optimal universal \(L^\infty\) constant is already d
 
 The completed fleet01/B15 theorem is used in its exact form:
 
-- repository/commit: `yspennstate/math-open-problems@5e161df12dcfebf0d13eb7efeaef5c478bf09455`;
+- repository/commit: `private-source-repository@5e161df12dcfebf0d13eb7efeaef5c478bf09455`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260922T150652Z-fleet01-B15-qform-r11/REPORT.md`.
 
 It proves that the optimal interval constant for the full class equals the optimal constant after restricting every marginal to \(C_c^\infty(\mathbb R)\), still with \(0\le f_i\le1\) and mass one. Its proof uses fleet02/B15's exact Choquet representation and cap-preserving smooth approximation of measure-one indicator extremes. It also proves that every output in this smooth subclass has a density in \(C_0(\mathbb R)\).

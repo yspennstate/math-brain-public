@@ -15,12 +15,12 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 The analytic inputs used here are already completed source-pinned results:
 
 1. **Separable-phase rank-three Fresnel theorem**, `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, repository/commit
-   `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, path
+   `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, path
    `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
    In particular it proves the complex-amplitude Hausdorff--Young estimate and the Gaussian-cutoff quadratic inversion for coordinate-separable phase twists.
 
 2. **Arbitrary-weight Gaussian Brascamp--Lieb determinant mechanism** from the audited Theorem D route, repository/commit
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, path
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, path
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
    Its Lieb normalization is
    `BL = sup_{lambda_i>0} [prod lambda_i^{c_i}/det(sum c_i lambda_i r_i r_i^T)]^(1/2)`
@@ -28,7 +28,7 @@ The analytic inputs used here are already completed source-pinned results:
 
 3. The designated partner `fleet02/B04` result actually applied in Section 7 is
    `QFORM-ZEROPIVOT-J1-WEIGHTED-MIXED-HUB-v1`, repository/commit
-   `yspennstate/math-open-problems@2311fa678098f3ac7b96e5eb3795d9def07cc2fd`, path
+   `private-source-repository@2311fa678098f3ac7b96e5eb3795d9def07cc2fd`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260924T091038Z-fleet02-B04-QFORM-auto11-r22/REPORT.md`.
 
 No law-uniform pointwise quadratic-phase decay, post-rotation independence, arbitrary-joint coarea, compact support, moments, log-concavity, or connected-support assumption is used.

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6/maximum
 # P04 T10 — extract the certified adaptive-stop margin: axis cap 0.5164474367901855 and a genuinely new reflected cone at slope 1.356756
 
 Date: 2026-09-20 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.  
 Canonical parent: `operations/claims/PROB10-10.md`.  
 Model: nearest-neighbor **undirected** FPP on `Z^2` with iid physical-edge weights `Exp(1)`.  

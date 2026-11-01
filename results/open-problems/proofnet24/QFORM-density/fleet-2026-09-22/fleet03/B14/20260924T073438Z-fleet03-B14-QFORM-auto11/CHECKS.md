@@ -31,7 +31,7 @@ Run: `20260924T073438Z-fleet03-B14-QFORM-auto11`.
 ## Partner application check
 
 Designated partner source:
-`yspennstate/math-open-problems@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`,
+`private-source-repository@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260924T001624Z-fleet04-B14-scaled-schur-localization-r10/REPORT.md`.
 
 It gives `6 sqrt(pi)/sigma` for an invertible physical `3x3` block with `sigma=min |lambda|`, uniformly in affine leakage. Translating coordinates changes only affine terms and constants, so the same estimate applies for every deterministic translation vector.

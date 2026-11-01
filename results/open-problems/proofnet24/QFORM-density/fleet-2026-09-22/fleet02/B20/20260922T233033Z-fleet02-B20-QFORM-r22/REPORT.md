@@ -21,7 +21,7 @@ for every actual physical cross block `M=A[I,J]`, with no volume-marginal restri
 
 The newest completed fleet03/B20 result available at the source refresh is run `20260922T224748Z-fleet03-B20-QFORM-r19`, canonical mathematics
 
-`yspennstate/math-open-problems@21c78fcc8e4bd9f5c7a872ae3c034b03ca0f88bf`,
+`private-source-repository@21c78fcc8e4bd9f5c7a872ae3c034b03ca0f88bf`,
 
 report
 

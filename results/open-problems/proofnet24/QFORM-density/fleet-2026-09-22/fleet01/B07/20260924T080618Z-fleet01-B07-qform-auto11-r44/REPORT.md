@@ -14,7 +14,7 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, iid, pos
 
 The current designated partner is fleet02/B07 r50, canonical report
 
-`yspennstate/math-open-problems@09dc85f76cccfd0668da416f6f0d4ded36e6dcf9`
+`private-source-repository@09dc85f76cccfd0668da416f6f0d4ded36e6dcf9`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260924T073847Z-fleet02-B07-qform-r50/REPORT.md`.
 

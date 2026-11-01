@@ -15,9 +15,9 @@ The new result stays in original independent coordinates and fills the local gap
 
 Source-pinned inputs used at exact scope:
 
-1. fleet03/B15 physical-pair logarithmic density envelope, `math-open-problems@2f36eb6204ac8598eaf63faed15f9fa7fddffd0c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T222614Z-fleet03-B15-qform-auto27/REPORT.md`;
-2. designated partner fleet02/B15 one-null-diagonal Schur theorem, `math-open-problems@1205ce188002747c102b80c97d0493985fa6fe34`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260924T023639Z-fleet02-B15-qform-auto11/REPORT.md`;
-3. fleet04/B15 same-constant `C_0` compiler, `math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T221909Z-fleet04-B15-ruled-trace-c0-r8/REPORT.md`.
+1. fleet03/B15 physical-pair logarithmic density envelope, `private-source@2f36eb6204ac8598eaf63faed15f9fa7fddffd0c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T222614Z-fleet03-B15-qform-auto27/REPORT.md`;
+2. designated partner fleet02/B15 one-null-diagonal Schur theorem, `private-source@1205ce188002747c102b80c97d0493985fa6fe34`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260924T023639Z-fleet02-B15-qform-auto11/REPORT.md`;
+3. fleet04/B15 same-constant `C_0` compiler, `private-source@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T221909Z-fleet04-B15-ruled-trace-c0-r8/REPORT.md`.
 
 ## 2. Qualitative absolute continuity is much easier than height
 

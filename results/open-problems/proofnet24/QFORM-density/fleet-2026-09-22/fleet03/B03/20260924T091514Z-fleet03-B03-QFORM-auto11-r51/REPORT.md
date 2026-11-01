@@ -10,7 +10,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The immediate source target is fleet03/B16's fresh overlap frontier `QFORM-OVERLAPPING-PROJECTEDSQUARE-RANK2-PREABSOLUTE-v2`, canonical source
 
-`yspennstate/math-open-problems@fb28047260afcaa64675fef64af6457e2815af2d`,
+`private-source-repository@fb28047260afcaa64675fef64af6457e2815af2d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260924T085813Z-fleet03-B16-QFORM-auto11-r3/REPORT.md`.
 
@@ -266,7 +266,7 @@ This uses the independent-copy identity only for the whole scalar output; no `X-
 
 The newest completed designated-partner result remains fleet04/B03 r4,
 
-`yspennstate/math-open-problems@5f93186cf8952b2b8b0255e08a78fd8506c613e4`,
+`private-source-repository@5f93186cf8952b2b8b0255e08a78fd8506c613e4`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260924T051411Z-fleet04-B03-plucker-overlap2-r4/REPORT.md`.
 

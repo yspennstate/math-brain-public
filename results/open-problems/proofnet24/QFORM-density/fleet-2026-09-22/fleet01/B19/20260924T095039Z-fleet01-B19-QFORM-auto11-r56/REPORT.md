@@ -28,7 +28,7 @@ hence a rank-12 representation with retained operator tail `<2.1500152587890625`
 
 The earlier structural source actually used below is fleet03/B19 r49,
 
-`yspennstate/math-open-problems@b3922fe080467f7f34a7dd248460fa2478bc03d2`,
+`private-source-repository@b3922fe080467f7f34a7dd248460fa2478bc03d2`,
 
 which starts from disjoint physical banks `R,C` and
 
@@ -68,7 +68,7 @@ The transposed statement applies to `R`.
 
 The analytic terminal below is the completed marginal-free physical-E3 theorem, source-pinned in
 
-`yspennstate/math-open-problems@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`:
+`private-source-repository@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`:
 
 for every literal disjoint physical cross block `K`,
 
@@ -84,7 +84,7 @@ Arbitrary same-bank curvature, outside couplings, affine terms, signs, degenerac
 
 The designated partner result consumed at equation level in Section 5 is fleet02/B19 r14,
 
-`yspennstate/math-open-problems@02a537de4788fa8821d7986ef53fc5ad0a311003`,
+`private-source-repository@02a537de4788fa8821d7986ef53fc5ad0a311003`,
 
 `QFORM-BL-RANKR-LATENT-PSEUDODET-ENDPOINT-v1`.
 

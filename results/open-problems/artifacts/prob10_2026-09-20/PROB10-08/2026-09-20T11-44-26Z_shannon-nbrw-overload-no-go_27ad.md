@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 maximum
 
 Status: **PROVED auxiliary/source-wide mechanism theorem; Salez Problem 2.3 remains OPEN / PARTIAL; no source closure; independent validation pending; worldwide novelty UNVERIFIED.**
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Exact source: Justin Salez, arXiv:2508.21055v1, Problem 2.3, under the rate-one continuous-time simple-random-walk convention
 \[

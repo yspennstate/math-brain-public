@@ -16,7 +16,7 @@ The unrestricted conjecture is not proved or disproved here. No Gaussian, moment
 
 The immediate source is
 
-`yspennstate/math-open-problems@8c451bd5a80de0cee1aefcf6f4cca79766652bcc`,
+`private-source-repository@8c451bd5a80de0cee1aefcf6f4cca79766652bcc`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T140748Z-fleet03-B07-qform-r31/REPORT.md`.
 
@@ -37,7 +37,7 @@ remain present and may be arbitrarily large. The point of this run is to account
 
 The preceding r30 six-bank sibling is
 
-`yspennstate/math-open-problems@0942d044043f3a73e2411cf2676af89bbf3853e6`,
+`private-source-repository@0942d044043f3a73e2411cf2676af89bbf3853e6`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T130749Z-fleet03-B07-qform-r30/REPORT.md`.
 
@@ -205,7 +205,7 @@ This is strictly stronger information than retaining only `B_1B_2`: it identifie
 
 The completed designated partner is
 
-`yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`,
+`private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`.
 
@@ -287,9 +287,9 @@ The r31 star/core and punctured-hub siblings remain separate. A promising interf
 ## 9. Source pins
 
 - fresh research-brain main consumed during the run: `8562b09b54674f8cafc89f0ee42819e5d3f983f3`;
-- prior B07 r31: `math-open-problems@8c451bd5a80de0cee1aefcf6f4cca79766652bcc`;
-- prior B07 r30: `math-open-problems@0942d044043f3a73e2411cf2676af89bbf3853e6`;
-- designated partner fleet04/B07: `math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`;
-- fresh fleet03/B01 global low-rank handoff observed at research-brain main `8562b09b54674f8cafc89f0ee42819e5d3f983f3`, canonical math source `math-open-problems@ed79f4a518a9f683a679d70193d6a2a72fb05ff2`.
+- prior B07 r31: `private-source@8c451bd5a80de0cee1aefcf6f4cca79766652bcc`;
+- prior B07 r30: `private-source@0942d044043f3a73e2411cf2676af89bbf3853e6`;
+- designated partner fleet04/B07: `private-source@842652e93680813d356fde0f15f12ab70b59c3c3`;
+- fresh fleet03/B01 global low-rank handoff observed at research-brain main `8562b09b54674f8cafc89f0ee42819e5d3f983f3`, canonical math source `private-source@ed79f4a518a9f683a679d70193d6a2a72fb05ff2`.
 
 A deterministic checker accompanies this report. It verifies the exact expansion, Cauchy lower bound, weighted-pivot residual inequalities on random finite matrices, and all numerical constants. The checker is regression evidence only; the proof above is algebraic.

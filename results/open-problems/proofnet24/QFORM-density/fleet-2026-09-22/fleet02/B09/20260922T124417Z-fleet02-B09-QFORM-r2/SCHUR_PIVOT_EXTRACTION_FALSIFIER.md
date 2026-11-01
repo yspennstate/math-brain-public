@@ -9,7 +9,7 @@ This note sharpens the first unpaid implication in the main report. The new loca
 
 Consume fleet01/B19's canonical target-family construction:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `072cf685a12893b44d555f14e4e610bcf2154037`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260922T121338Z-b19-qform-r11/REPORT.md`
 

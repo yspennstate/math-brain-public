@@ -28,7 +28,7 @@ This exact sharp one-dimensional projection theorem is the only external theorem
 
 so `sigma_2(B)>=1` closes that target slice. It also gives a one-pivot Schur + rank-two-bipartite + square theorem. Sections 6–7 below apply and sharpen the latter mechanism by smoothing the bilinear term and square jointly, reducing the Schur cross-block requirement from a second singular value to the top singular value.
 
-2. **fleet03/B08**, `QFORM-DIFFUSE-SPECTRAL-FRAME-v1`, math-open-problems commit `9dcddd0bf3fbcb8e0b3396e0a4d883924d3f4ada`. If the selected low-rank spectral frame has all row leverages at most `1/2`, it gives `||p_Q||_infinity<=3e` when the selected eigenvalue determinant is at least 1, even with arbitrary coordinatewise phases. This is complementary to the localized physical-block mechanism below.
+2. **fleet03/B08**, `QFORM-DIFFUSE-SPECTRAL-FRAME-v1`, private-source commit `9dcddd0bf3fbcb8e0b3396e0a4d883924d3f4ada`. If the selected low-rank spectral frame has all row leverages at most `1/2`, it gives `||p_Q||_infinity<=3e` when the selected eigenvalue determinant is at least 1, even with arbitrary coordinatewise phases. This is complementary to the localized physical-block mechanism below.
 
 ## 2. Rearrangement lemmas
 

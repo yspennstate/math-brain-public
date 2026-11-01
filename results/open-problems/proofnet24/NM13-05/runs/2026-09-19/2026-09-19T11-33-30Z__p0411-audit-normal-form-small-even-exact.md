@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # NM13-05 — P0411 post-stuck recovery: audit normal form and exact small-even cross-checks
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-05` / `proofnet24/NM13-05/`  
 Canonical source / claim ID: `P0411`  
 Canonical dedup key: `boundary-hole_monotonicity_and_coefficient_positivity_for_ideal_cells`  

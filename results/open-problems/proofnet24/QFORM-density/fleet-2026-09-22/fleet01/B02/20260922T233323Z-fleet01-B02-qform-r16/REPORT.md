@@ -18,7 +18,7 @@ This report uses no moment, support, Gaussian, log-concavity, or post-rotation i
 
 The named designated partner actually used is **fleet02/B02**, run `20260922T221114Z-fleet02-B02-qform-r11-2ea3913a`, canonical report
 
-`yspennstate/math-open-problems@c726a32fa4d8e1e8ab246d48560b89cf1d4c4857`
+`private-source-repository@c726a32fa4d8e1e8ab246d48560b89cf1d4c4857`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T221114Z-fleet02-B02-qform-r11-2ea3913a/REPORT.md`.
 

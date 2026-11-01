@@ -14,7 +14,7 @@ attacking: apply the new fractional three-volume estimate with every marginal ga
 
 The owner target remains: for every finite `n`, every vector `X=(X_1,...,X_n)` of independent real variables with probability densities `0<=f_i<=1`, and every real symmetric matrix `A` with at least three eigenvalues of absolute value at least one, prove that `Q=X^T A X` has a density with one universal essential-supremum bound, or give a valid target-class counterexample. No moment, Gaussian, log-concavity, compact-support, connected-support, identical-law, or post-rotation-independence hypothesis is introduced.
 
-The preceding B02 run, `math-open-problems@484c89f85cda352b2c4318364a6206ebc4154950`, proved an exact-rank-three physical cross-block Fourier theorem and thereby closed every *transverse* two-sided rank-two packet. Its only packet residue was
+The preceding B02 run, `private-source@484c89f85cda352b2c4318364a6206ebc4154950`, proved an exact-rank-three physical cross-block Fourier theorem and thereby closed every *transverse* two-sided rank-two packet. Its only packet residue was
 
 `alpha in Col(B), beta in Row(B)`
 
@@ -28,7 +28,7 @@ where `rank(B)=2`. This run attacks that residue and also implements the newest 
 
 The required newest source is
 
-- `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+- `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 - `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`,
 - and its `PEER_TAIL_EXTENSION.md`.
 
@@ -287,7 +287,7 @@ The full QFORM theorem does not automatically supply a dimension-free lower boun
 
 The completed designated partner theorem is
 
-- `yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+- `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`,
 - theorem `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`.
 

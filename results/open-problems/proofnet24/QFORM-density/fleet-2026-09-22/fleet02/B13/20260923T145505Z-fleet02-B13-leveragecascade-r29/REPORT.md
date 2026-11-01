@@ -16,7 +16,7 @@ Full continuity: **OPEN**.
 
 Canonical mathematics:
 
-`yspennstate/math-open-problems@980dd55d0202bf513f4dd0d6f72e78c8e74883d7`
+`private-source-repository@980dd55d0202bf513f4dd0d6f72e78c8e74883d7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T140232Z-fleet03-B13-qform-r27/REPORT.md`
 
@@ -30,7 +30,7 @@ The inputs used here are:
 
 ### 1.2 Required pinned Claude/Fourier source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
@@ -55,7 +55,7 @@ The counterexample search still reports no valid counterexample; none of its num
 
 ### 1.3 Bounded five-coordinate receiver
 
-`yspennstate/math-open-problems@472b70df7d1edbb3af23269bc2e4368ae0e371`
+`private-source-repository@472b70df7d1edbb3af23269bc2e4368ae0e371`
 
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Corollary 4.1.
 

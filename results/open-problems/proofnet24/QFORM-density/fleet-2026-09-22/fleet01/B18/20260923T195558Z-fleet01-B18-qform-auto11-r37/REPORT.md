@@ -13,7 +13,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The newest completed fleet02/B18 report used here is
 
-- `yspennstate/math-open-problems@c99a85972a70c210b19dd41128300ad55a9b8cb4`;
+- `private-source-repository@c99a85972a70c210b19dd41128300ad55a9b8cb4`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/b18-20260923T191130Z-20b2aab6/REPORT.md`.
 
 It constructs, for `0<eta<1/64`, an exact-rank-three target matrix with nonzero spectrum `{-1,1,1}` and a null hub, in the rigid form
@@ -42,7 +42,7 @@ where `W` consists of the first three columns of a normalized Hadamard matrix of
 The completed fleet02/B18 analytic receiver used below is the earlier theorem
 `QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1`, source
 
-- `yspennstate/math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`;
+- `private-source-repository@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`.
 
 It states: if a scalar `S` of density cap `K` is genuinely independent of a pair `(C,D)` whose arbitrary joint density has cap `M`, and a symmetric three-variable quadratic matrix has zero `S^2` pivot and nonzero determinant `Delta`, then, after an orthogonal rotation inside the pair,

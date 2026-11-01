@@ -1,6 +1,6 @@
 # Fixed-product exclusion of the independent-hub leakage shell
 
-**Status:** proved local bound for each fixed full-rank product projection; **no dimension-uniform QFORM bound**. This excludes exact realization of the dependent-light shell in [the earlier projection-only falsifier](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T192452Z-independent-hub-all-projections-fake/REPORT.md). It is not a counterexample to the original conjecture.
+**Status:** proved local bound for each fixed full-rank product projection; **no dimension-uniform QFORM bound**. This excludes exact realization of the dependent-light shell in [the earlier projection-only falsifier](private-source-repository). It is not a counterexample to the original conjecture.
 
 ## Statement
 
@@ -120,4 +120,4 @@ Some minor therefore has \(|\det U_S|\ge\binom n3^{-1/2}\). Each singular value 
 \]
 Diffuse frames make every individual physical minor small. Removing this loss requires using aggregate product structure across many coordinates. The present result neither closes that step nor handles an additional \(\beta L^2\) term, other spectral branches, or all output levels. The universal QFORM bounded-density conjecture remains **OPEN**.
 
-The physical-minor area-formula method is related to the benchmark in [the curved dyadic product-tube note](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T202000Z-curved-dyadic-product-tube/REPORT.md). The contribution here is its favorable-sign local density consequence and the direct exclusion of the independent-hub fake shell.
+The physical-minor area-formula method is related to the benchmark in [the curved dyadic product-tube note](private-source-repository). The contribution here is its favorable-sign local density consequence and the direct exclusion of the independent-hub fake shell.

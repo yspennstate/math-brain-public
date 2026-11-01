@@ -20,7 +20,7 @@ The target-wide unweighted criterion `int_R |phi_Q(t)| dt <= C` remains open in 
 
 ### 2.1 Physical-row Lp theorem
 
-Source: `yspennstate/math-open-problems@23b3b82de685705bd40a0d1b0241c212bb879978`, path
+Source: `private-source-repository@23b3b82de685705bd40a0d1b0241c212bb879978`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T201015Z-fleet02-B02-qform-r12/REPORT.md`.
 
 If `X` is independent of a random element `W`, `f_X<=1`, `U=U(W)` has marginal density cap `M`, `R=R(W)` is arbitrary and may depend completely on `U`, and
@@ -35,7 +35,7 @@ In particular the theorem is uniform in the scalar quadratic coefficient `a`, in
 
 ### 2.2 Indefinite-pair fractional-trace transducer
 
-Source: `yspennstate/math-open-problems@853a4e86c7ff9789891c473905eeb57b13f615ed`, path
+Source: `private-source-repository@853a4e86c7ff9789891c473905eeb57b13f615ed`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T190827Z-fleet02-B02-40617e89/REPORT.md`.
 
 Let an invertible indefinite original-coordinate physical pair have symmetric principal block `B`, set
@@ -203,7 +203,7 @@ so equivalently
 
 Thus **a tiny pair determinant by itself is no longer a power-law obstruction**. The remaining cost is the pair's smaller singular value through `(kappa sigma)^(-1/2)` and only a logarithmic residual-row/pair aspect ratio.
 
-For comparison, the fresh fleet02/B02 addendum at `yspennstate/math-open-problems@99f0eb89b7b1ad3ef3f225460fb08d4d22c19a75` gives
+For comparison, the fresh fleet02/B02 addendum at `private-source-repository@99f0eb89b7b1ad3ef3f225460fb08d4d22c19a75` gives
 
 `||p_Q||_infinity <19.210 (D kappa sigma)^(-1/4)`                       (6.6)
 

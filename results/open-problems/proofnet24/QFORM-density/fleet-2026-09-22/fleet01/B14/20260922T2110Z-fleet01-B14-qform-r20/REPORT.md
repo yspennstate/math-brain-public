@@ -11,7 +11,7 @@ attacking: exact small-ball localization at the OPTIMAL CONSTANT level, includin
 ## 1. Source pins and corrections used
 
 
-Assigned partner actually consumed: fleet02/B14 run `20260922T195844Z-fleet02-B14-QFORM-r20`, canonical mathematics `yspennstate/math-open-problems@0e2e038577460d99f7ddc10fbf87fdd5cf76a930:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T195844Z-fleet02-B14-QFORM-r20/REPORT.md`. Its exact theorem used below is the disjoint-bank compression bound
+Assigned partner actually consumed: fleet02/B14 run `20260922T195844Z-fleet02-B14-QFORM-r20`, canonical mathematics `private-source-repository@0e2e038577460d99f7ddc10fbf87fdd5cf76a930:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T195844Z-fleet02-B14-QFORM-r20/REPORT.md`. Its exact theorem used below is the disjoint-bank compression bound
 
 \[
 \|p_Q\|_\infty\le 32e\sqrt{10}\,|\det M|^{-1/3}

@@ -18,8 +18,8 @@ This run deliberately changes mechanism after the recent relative-resonance / su
 
 Two completed inputs are used at equations:
 
-1. **Designated partner fleet04/B12 r9**, `yspennstate/math-open-problems@71b7db02d3bd2f5cb6bf07e800caa6bd13a1a3e5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T021341Z-fleet04-B12-resonance-repair-r9/REPORT.md`. Its exact-resonance physical carrier in Section 4 has six orthogonal columns of norm two.
-2. **Five-square-mode density compiler**, fleet03/B12 r47, `yspennstate/math-open-problems@7fa8e2a00f932cb7ed6e68da9dbd07725c24d0f1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T031535Z-qform-eigenvalue-r47/REPORT.md`. For an ORIGINAL-coordinate carrier `H` of size `m>=5`, if `lambda_5((A^2)[H,H])>=h^2>0`, then
+1. **Designated partner fleet04/B12 r9**, `private-source-repository@71b7db02d3bd2f5cb6bf07e800caa6bd13a1a3e5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T021341Z-fleet04-B12-resonance-repair-r9/REPORT.md`. Its exact-resonance physical carrier in Section 4 has six orthogonal columns of norm two.
+2. **Five-square-mode density compiler**, fleet03/B12 r47, `private-source-repository@7fa8e2a00f932cb7ed6e68da9dbd07725c24d0f1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T031535Z-qform-eigenvalue-r47/REPORT.md`. For an ORIGINAL-coordinate carrier `H` of size `m>=5`, if `lambda_5((A^2)[H,H])>=h^2>0`, then
 
 `||p_(X^TAX)||_infinity <= sqrt(24*pi*m+K_3^2)/h`,  
 `K_3=3*2^(4/3)*exp(1/3)=10.550168831164775...`,
@@ -345,8 +345,8 @@ The full theorem's continuous-density conclusion is not established. Continuity 
 
 ## 9. Source pins and integrity
 
-- Designated partner: `yspennstate/math-open-problems@71b7db02d3bd2f5cb6bf07e800caa6bd13a1a3e5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T021341Z-fleet04-B12-resonance-repair-r9/REPORT.md`.
-- Density receiver: `yspennstate/math-open-problems@7fa8e2a00f932cb7ed6e68da9dbd07725c24d0f1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T031535Z-qform-eigenvalue-r47/REPORT.md`.
-- Latest Claude continuation observed this run: `math-open-problems@8edfa020d8904154efd9488a01828e22e2e7b2d4`, `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/`.
+- Designated partner: `private-source-repository@71b7db02d3bd2f5cb6bf07e800caa6bd13a1a3e5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T021341Z-fleet04-B12-resonance-repair-r9/REPORT.md`.
+- Density receiver: `private-source-repository@7fa8e2a00f932cb7ed6e68da9dbd07725c24d0f1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T031535Z-qform-eigenvalue-r47/REPORT.md`.
+- Latest Claude continuation observed this run: `private-source@8edfa020d8904154efd9488a01828e22e2e7b2d4`, `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/`.
 
 Manual changed-file privacy review: this run contains only mathematical formulas, deterministic test code/results, logical fleet labels, source commits and repository-relative paths. No credentials, tokens, personal archives, client/company/trading data, private machine paths, or public-release action is included. No installation or external workflow was used.

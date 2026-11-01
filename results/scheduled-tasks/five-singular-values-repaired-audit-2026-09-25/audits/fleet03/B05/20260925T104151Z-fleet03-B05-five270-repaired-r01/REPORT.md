@@ -1,6 +1,6 @@
 # fleet03/B05 repaired-source audit
 
-Source: math-open-problems@4e530247ec0ef4101a6e5ecf621bd35a969c42aa, paper.tex blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a.
+Source: private-source@4e530247ec0ef4101a6e5ecf621bd35a969c42aa, paper.tex blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a.
 
 Coverage this run: lines 175-241. Rendered pages: UNCHECKED because the repaired 15-page reference PDF is not available to the screenshot/runtime path; the historical 14-page PDF was not reused.
 

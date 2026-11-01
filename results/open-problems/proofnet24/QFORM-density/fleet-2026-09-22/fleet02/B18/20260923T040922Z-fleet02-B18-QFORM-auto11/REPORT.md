@@ -201,8 +201,8 @@ I did not promote a conditional-cap argument, an arbitrary-joint coarea inequali
 **Mathematical change:** the non-separated Schur-isotropic large-shear survivor is now split sharply into (i) a completely paid one-sheet half-line with universal constant `pi sqrt(2)`, and (ii) a two-sheet-only debt; inside N3 the latter necessarily has a quantitatively diffuse original-coordinate hub star with `||q||_infinity^2<2tau`. The Hadamard family (5.1)--(5.5) shows that this mixed-source N3 geometry actually occurs and is not removed by the partner's source-separation theorem.
 
 Source pins used:
-- required e5f package: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md` Theorem C;
-- completed designated partner: fleet03/B18 `20260923T032156Z-fleet03-B18-QFORM-r22/REPORT.md`, read from current math-open-problems mainline snapshot before this report;
+- required e5f package: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md` Theorem C;
+- completed designated partner: fleet03/B18 `20260923T032156Z-fleet03-B18-QFORM-r22/REPORT.md`, read from current private-source mainline snapshot before this report;
 - primary theorem: Livshyts--Paouris--Pivovarov, arXiv:1507.07949v2, Theorem 1.1, DOI 10.1007/s11856-016-1431-5;
 - live corrections consumed before publication include `QFORM-TWOSHEET-XRAY-ONLY-FALSE`, `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`, `QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE`, and the arbitrary-joint/conditional-moment failures recorded in `CURRENT_RESEARCH.md`.
 

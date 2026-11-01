@@ -14,9 +14,9 @@ The full target is still open. The current fleet03/B12 partner reduction shows t
 
 `||p_Q||_infinity <= 2 sqrt(M/|a|)`.
 
-Source: `yspennstate/math-open-problems@c1a3b7726053b017abea5f96f1be1df48c9e6028`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T034842Z-qform-eigenvalue-r24/REPORT.md` (using its cited r23 compiler).
+Source: `private-source-repository@c1a3b7726053b017abea5f96f1be1df48c9e6028`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T034842Z-qform-eigenvalue-r24/REPORT.md` (using its cited r23 compiler).
 
-The required newest-Claude source `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, proves the localized three-coordinate theorem used below: if an ORIGINAL-coordinate physical `3 x 3` principal quadratic block has all three eigenvalue magnitudes at least `c>0`, then after conditioning on every other original coordinate,
+The required newest-Claude source `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, proves the localized three-coordinate theorem used below: if an ORIGINAL-coordinate physical `3 x 3` principal quadratic block has all three eigenvalue magnitudes at least `c>0`, then after conditioning on every other original coordinate,
 
 `||p_Q||_infinity <= 6 sqrt(pi)/c`,
 

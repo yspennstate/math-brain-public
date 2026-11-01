@@ -38,7 +38,7 @@ The theorem requires no moments, bounded support, log-concavity, iid assumption,
 
 The completed internal analytic kernel used is fleet02/B18 `QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1`, canonical source
 
-`yspennstate/math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`,
+`private-source-repository@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`.
 
 It states: if `S` has density cap `K`, `(C,D)` is independent of `S` and has arbitrary **joint** density cap `M`, then for `beta,gamma!=0`,
@@ -207,7 +207,7 @@ and its nonzero spectrum is `{-1,1,1}`. The spectral-subspace leverage of each `
 
 For `m>=4`, every leverage is at most `1/2`. Therefore pinned Theorem F from
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 applies literally with `B=0`, full active coordinate set `I=I0 union J0`, and Gram matrix `G_I=I_3`. It gives
 

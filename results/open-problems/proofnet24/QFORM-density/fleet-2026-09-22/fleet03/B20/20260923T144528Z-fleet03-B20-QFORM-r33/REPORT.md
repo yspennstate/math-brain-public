@@ -15,7 +15,7 @@ The target remains unrestricted: independent original-coordinate real random var
 
 The designated partner actually applied is fleet04/B20 r10:
 
-`yspennstate/math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912`,
+`private-source-repository@c6f29397b3d45a7cf7ab67633a5451767b478912`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`.
 
@@ -37,7 +37,7 @@ and the full ambient form has a continuous `C_0` density with
 
 The freshest fleet02/B20 publication addendum is
 
-`yspennstate/math-open-problems@a996362199678ee069db30c5ab31a44b2d3d29d6`,
+`private-source-repository@a996362199678ee069db30c5ab31a44b2d3d29d6`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T142651Z-fleet02-B20-QFORM-auto11/LATEST_PARTNER_ADDENDUM.md`.
 
@@ -49,7 +49,7 @@ Thus the current first edge is an absolute rank-two cross tube, not merely a rel
 
 The aggregate two-volume receiver consumed below is fleet03/B06 r37:
 
-`yspennstate/math-open-problems@fa9d5dd3cc78a092484480b536872d332e22c90a`,
+`private-source-repository@fa9d5dd3cc78a092484480b536872d332e22c90a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T141825Z-fleet03-B06-qform-r37/REPORT.md`.
 

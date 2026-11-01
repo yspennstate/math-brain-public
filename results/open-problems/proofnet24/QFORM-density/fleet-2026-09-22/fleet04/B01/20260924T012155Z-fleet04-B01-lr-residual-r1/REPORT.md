@@ -11,7 +11,7 @@ The unrestricted conjecture remains open. No moment, support, Gaussian, log-conc
 
 ## 1. Input from completed fleet01/B01
 
-The completed theorem at \`math-open-problems@8d7d0ff65e86e787e8da9cb04afe3bfdf5401a59\` treats
+The completed theorem at \`private-source@8d7d0ff65e86e787e8da9cb04afe3bfdf5401a59\` treats
 \[
 Q_0=H^TCH+2H^T(BY+d)+R(Y),
 \]
@@ -213,8 +213,8 @@ The full conjecture remains open, and continuity is proved here only for the sta
 ## 6. Source pins and corrections
 
 - Owner/control: fresh \`math-research-brain\` main, revision \`2026-09-22.15\`.
-- Required Claude base: \`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837\`, \`proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/\`.
-- Completed fleet01/B01 input: \`math-open-problems@8d7d0ff65e86e787e8da9cb04afe3bfdf5401a59\`.
+- Required Claude base: \`private-source@e5f71d79eff325201dd0274053d20268ce65b837\`, \`proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/\`.
+- Completed fleet01/B01 input: \`private-source@8d7d0ff65e86e787e8da9cb04afe3bfdf5401a59\`.
 - Deterministic check commit: \`6b4904f58f254ad48a1a70f87aa33305abdf5ad3\`.
 - The phase-aligned fragmented-support counterexample to uniform pointwise quadratic decay is retained.
 - No post-rotation independence, arbitrary conditional projection cap, or small-random-error treatment is used.

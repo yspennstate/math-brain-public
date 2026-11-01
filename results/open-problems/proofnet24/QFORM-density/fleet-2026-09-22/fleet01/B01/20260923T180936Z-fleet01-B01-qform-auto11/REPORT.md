@@ -197,10 +197,10 @@ The unrestricted QFORM conjecture remains OPEN. Full-target continuity remains O
 
 
 Analytic source used for (2.10):
-`yspennstate/math-open-problems`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
+`private-source-repository`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 Designated partner used in Section 5:
-`yspennstate/math-open-problems`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T170428Z-fleet02-B01-QFORM-auto11/REPORT.md`.
+`private-source-repository`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T170428Z-fleet02-B01-QFORM-auto11/REPORT.md`.
 
 This run's canonical report is this file under
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T180936Z-fleet01-B01-qform-auto11/REPORT.md`.

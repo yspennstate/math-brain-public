@@ -332,7 +332,7 @@ This does not conflict with diffuse Gaussianisation: the orientation dependence 
 
 The current completed partner theorem is
 
-`math-open-problems@fefb4cf4f0af17c810341152311c3822c78d5b7f`,
+`private-source@fefb4cf4f0af17c810341152311c3822c78d5b7f`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T082513Z-fleet02-B17-QFORM-r12/UNIFORM_EXTENSION.md`.
 
 It gives one deterministic `Delta_m->0` such that, for every symmetric `3x3` core `C_m` with `s_3(C_m)>=1`, every normalized three-bank interval frame `P_m`, and arbitrary independent translations of all physical unit intervals,
@@ -363,7 +363,7 @@ Thus a 45-degree signature rotation makes the all-heavy four-coordinate core mor
 
 ## 8. Newest-Claude theorem applied to this same matrix
 
-The current newest-Claude package, `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, proves its Theorem C for exact rank-three signature `(+,+,-)`: for arbitrary product inputs and `s>=0`,
+The current newest-Claude package, `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, proves its Theorem C for exact rank-three signature `(+,+,-)`: for arbitrary product inputs and `s>=0`,
 
 \[
 p_Q(s)\le\pi\sqrt2.

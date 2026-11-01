@@ -15,7 +15,7 @@ The unrestricted theorem is not proved or disproved. All cuts and conditionings 
 
 The latest completed designated partner found before the main calculation is fleet03/B07 r38:
 
-`yspennstate/math-open-problems@f822a8dfdb6a2cbc763373954a8b9dadb498568d`
+`private-source-repository@f822a8dfdb6a2cbc763373954a8b9dadb498568d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T203843Z-fleet03-B07-qform-r38/REPORT.md`.
 
@@ -51,7 +51,7 @@ with a continuous density on that branch.
 
 The bounded-dimensional physical-fiber theorem is source-pinned in fleet04/B07:
 
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 
@@ -63,7 +63,7 @@ uniformly over everything conditioned outside that block.
 
 The mandatory pinned source was read at exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its D' theorem and rank-r Fresnel/Brascamp--Lieb theorem are applied below at actual equations.
 

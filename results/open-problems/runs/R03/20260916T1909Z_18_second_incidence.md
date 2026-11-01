@@ -5,7 +5,7 @@ Problem: **iid Rademacher square-matrix singularity — Komlos (1967) lineage; J
 # R03 run 18 — second projective incidence and a collision-conditioned modular sieve
 
 Run ID: `20260916T1909Z_18_second_incidence`  
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Continuity, source, exact target, and fixed metric
 

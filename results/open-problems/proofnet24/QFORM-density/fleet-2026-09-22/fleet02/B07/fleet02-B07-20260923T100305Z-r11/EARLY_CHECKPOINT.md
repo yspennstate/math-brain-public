@@ -10,7 +10,7 @@ Partner fleet03/B07 r30 leaves `QFORM-ANCHOR-H3-LOWERORDER-CURVATURE-RECEIVER-v1
 ## Calculation 1: unconditional fractional-volume currency
 
 The proved D_k argument in
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 can be run with Jensen exponent q=2 for every k, since every k-volume inclusion marginal is <=1=q/2. For disjoint original-coordinate sets I,J and `Z_k=e_k(A[I,J]^T A[I,J])>0`, conditioning all other coordinates and retaining arbitrary self-blocks/affine terms gives
 
 `|phi(t)| <= min(1, B_k |t|^{-k/4})`,

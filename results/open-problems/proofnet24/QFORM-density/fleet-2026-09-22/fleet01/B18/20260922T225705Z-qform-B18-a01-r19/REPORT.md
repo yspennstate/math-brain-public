@@ -32,7 +32,7 @@ Two classical inputs are used at their actual hypotheses.
 
 2. **Gaussian exhaustion for Brascamp--Lieb.** E. Lieb's Gaussian-extremizer theorem, in the formulation/reproof of J. Bennett, A. Carbery, M. Christ, T. Tao, *The Brascamp--Lieb inequalities: finiteness, structure, and extremals*, arXiv:math/0505065. For rank-one maps `B_i z=<ell_i,z>` and exponents `alpha_i`, the BL constant is the supremum of the centered-Gaussian ratio used in Section 3 below.
 
-The Fresnel linearisation and its normalization are the source-checked formula already used in the reviewed QFORM Theorem F package at `yspennstate/math-open-problems@9844891a9fbe96a65e37f71122bf0300b53dcc80:proofnet24/QFORM-density/interactive/20260922T220600Z-claude-review/REVIEW.md`; the present argument changes the BL weights rather than assuming the natural leverage weights.
+The Fresnel linearisation and its normalization are the source-checked formula already used in the reviewed QFORM Theorem F package at `private-source-repository@9844891a9fbe96a65e37f71122bf0300b53dcc80:proofnet24/QFORM-density/interactive/20260922T220600Z-claude-review/REVIEW.md`; the present argument changes the BL weights rather than assuming the natural leverage weights.
 
 ## 3. New transfer theorem: arbitrary capped basis weights
 
@@ -179,7 +179,7 @@ Thus any two disjoint bases carrying a fixed positive fraction of the total dete
 
 The completed designated-partner report is
 
-`yspennstate/math-open-problems@0a28faf7bf87a49a9df787eb276b449aee3d9c47:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260922T221352Z-fleet02-B18-QFORM-r11/REPORT.md`.
+`private-source-repository@0a28faf7bf87a49a9df787eb276b449aee3d9c47:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260922T221352Z-fleet02-B18-QFORM-r11/REPORT.md`.
 
 Its theorem `QFORM-ZEROPIVOT-NONISOTROPIC-CLOSURE-v1` closes two of the three exact-rank-three zero-pivot cases. Its only surviving zero-pivot case is Schur-isotropic. In its notation the surviving quadratic form is exactly
 
@@ -280,8 +280,8 @@ No exact prior theorem located in the source audit settles the owner's unrestric
 ## 8. Source pins
 
 - Fresh brain control: `yspennstate/math-research-brain@a49099111ed329ca3fb78b9b81f3051e5bce06d0`.
-- Designated partner fleet02/B18: `yspennstate/math-open-problems@0a28faf7bf87a49a9df787eb276b449aee3d9c47`, exact path in Section 5.
-- Reviewed Fresnel/BL package and sharp-HY refinement: `yspennstate/math-open-problems@9844891a9fbe96a65e37f71122bf0300b53dcc80:proofnet24/QFORM-density/interactive/20260922T220600Z-claude-review/REVIEW.md`.
+- Designated partner fleet02/B18: `private-source-repository@0a28faf7bf87a49a9df787eb276b449aee3d9c47`, exact path in Section 5.
+- Reviewed Fresnel/BL package and sharp-HY refinement: `private-source-repository@9844891a9fbe96a65e37f71122bf0300b53dcc80:proofnet24/QFORM-density/interactive/20260922T220600Z-claude-review/REVIEW.md`.
 - Beckner (1975): DOI `10.2307/1970980`.
 - Bennett--Carbery--Christ--Tao: arXiv `math/0505065`.
 

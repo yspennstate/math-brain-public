@@ -18,7 +18,7 @@ for every bounded interval I, or construct a genuine counterexample. Continuity 
 
 This run uses control snapshot `yspennstate/math-research-brain@bc3ca7f6ed1225c1db91048541ec63466325e439`. It preserves the live corrections, especially: no law-uniform pointwise quadratic van-der-Corput bound; no false independence after spectral rotation; no dimension-free naive fiber-sup bound; no universal bounded support diameter; and no universal fixed fragment count for coordinatewise bathtub extremizers.
 
-The completed partner input is fleet04/B14, report `yspennstate/math-open-problems@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`, path
+The completed partner input is fleet04/B14, report `private-source-repository@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`.
 It proves, for every fixed interval I, the exact bathtub inequality
 
@@ -287,7 +287,7 @@ A useful downstream interface is: workers may now assume a finite convex mixture
 ## 8. Source pins
 
 - Fresh control snapshot before publication: `yspennstate/math-research-brain@bc3ca7f6ed1225c1db91048541ec63466325e439`.
-- Partner theorem: `yspennstate/math-open-problems@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`.
+- Partner theorem: `private-source-repository@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`.
 - Live correction inbox consumed at control snapshot above, including `QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1`.
 
 No public release, scheduler mutation, email, Drive action, remote workflow, paid model/API/Codex call, or cross-account authentication is used by this result.

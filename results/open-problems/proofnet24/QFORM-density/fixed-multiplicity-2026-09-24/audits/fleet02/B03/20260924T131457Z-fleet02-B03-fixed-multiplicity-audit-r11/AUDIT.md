@@ -4,7 +4,7 @@ Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 
 ## Source pin and verdict
 
-- Repository/branch resolved at audit start: `yspennstate/math-open-problems` / `master` at `126eb0e75770fb9e814092f610e1e67ad0412afe`; final pre-write refresh reached `624d810437d72a71987d64578bfd559e40f93743`.
+- Repository/branch resolved at audit start: `private-source-repository` / `master` at `126eb0e75770fb9e814092f610e1e67ad0412afe`; final pre-write refresh reached `624d810437d72a71987d64578bfd559e40f93743`.
 - Pinned baseline source commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`.
 - `manuscript.tex` git blob at both refreshed master states: `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 - Package-declared SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.

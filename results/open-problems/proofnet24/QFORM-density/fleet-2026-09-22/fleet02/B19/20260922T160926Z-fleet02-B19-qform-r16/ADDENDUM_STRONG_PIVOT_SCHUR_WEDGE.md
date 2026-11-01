@@ -4,7 +4,7 @@ This addendum applies the new B19 wedge/star lemma directly inside a genuine phy
 
 ## Source-pinned input actually applied
 
-`QFORM-PIVOT-RIDGE-BILINEAR-v1`, fleet03/B09, canonical `yspennstate/math-open-problems@62bdcf30669c1037a3c7d87aee1fcb2bdcccd251`, proves: for an original physical pivot `a=A_kk!=0` with scalar Schur complement `S`, a residual physical cross block `N=S[I,J]`, ridge scale `gamma`, `q=1`, `max diag K_gamma<=1/2`, and ridge trace `theta>=3/2`, one has the safe bound
+`QFORM-PIVOT-RIDGE-BILINEAR-v1`, fleet03/B09, canonical `private-source-repository@62bdcf30669c1037a3c7d87aee1fcb2bdcccd251`, proves: for an original physical pivot `a=A_kk!=0` with scalar Schur complement `S`, a residual physical cross block `N=S[I,J]`, ridge scale `gamma`, `q=1`, `max diag K_gamma<=1/2`, and ridge trace `theta>=3/2`, one has the safe bound
 
 `||p_Q||_inf <= 9.2544320556 / sqrt(|a| gamma).`
 

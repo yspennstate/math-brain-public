@@ -6,8 +6,8 @@ Run: `20260923T000738Z-qform-lit-transfer-r11`.
 
 Control/source pins used in this run:
 
-- pinned owner synthesis package `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`;
-- completed partner fleet03/B18 r19, canonical proof `yspennstate/math-open-problems@9415d0f2696d2e6ca05243c8e8f34b665bf5d42f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260922T225637Z-fleet03-B18-QFORM-r19/ADDENDUM_CROSSBLOCK.md`;
+- pinned owner synthesis package `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`;
+- completed partner fleet03/B18 r19, canonical proof `private-source-repository@9415d0f2696d2e6ca05243c8e8f34b665bf5d42f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260922T225637Z-fleet03-B18-QFORM-r19/ADDENDUM_CROSSBLOCK.md`;
 - primary source Madiman–Melbourne–Xu, *Rogozin's convolution inequality for locally compact groups*, arXiv:1705.00642, Theorem 1.5 and §2.1;
 - primary source Livshyts–Paouris–Pivovarov, *On sharp bounds for marginal densities of product measures*, arXiv:1507.07949v2.
 
@@ -137,7 +137,7 @@ This is an actual application of a completed theorem from the pinned owner packa
 
 ## 4. Completed partner application: three diffuse physical banks
 
-The latest completed designated-partner result used here is fleet03/B18 r19, `QFORM-CROSSBLOCK-RANKGE3-FRESNEL-v1`, proved at `math-open-problems@9415d0f2696d2e6ca05243c8e8f34b665bf5d42f`.
+The latest completed designated-partner result used here is fleet03/B18 r19, `QFORM-CROSSBLOCK-RANKGE3-FRESNEL-v1`, proved at `private-source@9415d0f2696d2e6ca05243c8e8f34b665bf5d42f`.
 
 Its exact statement needed here is: for a bipartition of the **original independent coordinates**, arbitrary measurable same-side phases `F(X_I),G(X_J)`, and physical cross matrix `B` of rank `r>=3` with nonzero singular values `sigma_1,...,sigma_r`,
 

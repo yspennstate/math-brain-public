@@ -20,7 +20,7 @@ The designated partner result used at equation level is fleet02/B04's completed
 
 current source report
 
-`yspennstate/math-open-problems@10a74bd7d75466fe46f4ff6ecf3362fba6cb2e5d`
+`private-source-repository@10a74bd7d75466fe46f4ff6ecf3362fba6cb2e5d`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T052139Z-fleet02-B04-qform-auto11/REPORT.md`
 
 (with subsequent arithmetic checks committed separately by that worker).

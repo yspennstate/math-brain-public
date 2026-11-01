@@ -104,7 +104,7 @@ value-dependent selection theorem, or a quaternion statement.
   `extremal_hard_edge.pdf`, 80 pages, 1,000,502 bytes.
 - Master: `pdflatex -interaction=nonstopmode -halt-on-error master.tex` run
   twice.  Final output: `master.pdf`, 861 pages, 7,806,351 bytes.
-- Copied `math-open-problems-fleet/master/master.pdf` to
+- Copied `private-source-fleet/master/master.pdf` to
   `~/Downloads/master.pdf`.
 - Targeted scans of `extremal_hard_edge.log` and `master.log` found no
   undefined references, undefined citations, multiply-defined labels, or rerun

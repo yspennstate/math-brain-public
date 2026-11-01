@@ -8,7 +8,7 @@ Execution label: **WITHOUT_VERIFIED_BRAIN**.
 
 ## 0. Result and review status
 
-Pinned source audited in full: `yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`, blob `19fb119877426b640b2c0dae19ec2f78a399fe11`.
+Pinned source audited in full: `private-source-repository@eeb752c8943536541b34b42b8bf48e924f4d3d2f`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`, blob `19fb119877426b640b2c0dae19ec2f78a399fe11`.
 
 Verdict on that 955-line source: **PASS**. I found no fatal mathematical defect. I checked the theorem/scaling, Fourier/Riesz normalization, heat-flow Brascamp--Lieb proof, product projection, scalar Fourier powers, decoupling, determinant estimate, grouped mollified-`L^2` compiler, entropy step, Schur counts, nonsymmetric interpolation and both rank bounds, scalar/definite/indefinite pivots, full pair half potential, no-pivot spectral-to-volume conversion, final assembly, and overlap-tail theorem.
 

@@ -17,7 +17,7 @@ The unrestricted conjecture remains open. This run proves a new direct `O(interv
 
 I apply fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical proof
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
 For a `k`-dimensional orthogonal projection `R^T X` of a product density with one-dimensional caps one, that theorem gives a joint density cap at most `exp(k/2)`. In particular, if `v,w` are linearly independent vectors in one original-coordinate bank and
 

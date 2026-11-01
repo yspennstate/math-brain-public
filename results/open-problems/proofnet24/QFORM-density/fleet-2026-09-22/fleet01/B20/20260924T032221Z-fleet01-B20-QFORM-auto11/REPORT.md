@@ -19,7 +19,7 @@ The newest completed designated fleet02/B20 handoff available at dependency refr
 
 pointing to
 
-`yspennstate/math-open-problems@f8623c2ad724913062a5c86a21f0714a94bab3c0`,
+`private-source-repository@f8623c2ad724913062a5c86a21f0714a94bab3c0`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260924T022856Z-fleet02-B20-QFORM-auto11/REPORT.md`.
 
 Its fixed-positive-E2 compiler globally rescales by
@@ -51,7 +51,7 @@ The partner report displayed the inherited lower bound `s3(R)>0.04492463415...`;
 
 The current marginal-free physical third-volume receiver is pinned in fleet01/B02 r43 at
 
-`yspennstate/math-open-problems@041bd053495db9b7e7c12d994501de10c059c459`,
+`private-source-repository@041bd053495db9b7e7c12d994501de10c059c459`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260924T022016Z-fleet01-B02-qform-auto11-r43/REPORT.md`.
 
 For every literal original-coordinate cross block `B=A[I,J]`, `I cap J=emptyset`, with `Z3=e3(BB^T)>0`, it gives

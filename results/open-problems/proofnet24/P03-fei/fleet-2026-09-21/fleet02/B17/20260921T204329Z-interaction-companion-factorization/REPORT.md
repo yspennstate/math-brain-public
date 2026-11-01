@@ -16,7 +16,7 @@ mechanisms / exact Boolean adversaries for shared interface B.  No later
 pause or stop was present at entry.
 
 Fresh scientific master at entry:
-yspennstate/math-open-problems
+private-source-repository
 1d89e593ebdfded8b525eb110ee656071a9298cb.
 
 Normalization: f:{0,1}^n->{-1,+1}, normalized Walsh transform,

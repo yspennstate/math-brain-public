@@ -14,7 +14,7 @@ attacking: the first unresolved B19 rank-two-cross near-range branch, by paying 
 
 The immediate proof-assembly source is fleet03/B19 r26:
 
-`yspennstate/math-open-problems@82773d6d0339c8867b76c777216b6c564939f2ae`
+`private-source-repository@82773d6d0339c8867b76c777216b6c564939f2ae`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T043056Z-fleet03-B19-QFORM-r26/REPORT.md`.
 
@@ -32,7 +32,7 @@ This report closes the complementary **off-diagonal transverse-action** subbranc
 
 The designated partner actually applied below is fleet04/B20 r4:
 
-`yspennstate/math-open-problems@f97aa31585b7b547a116d4580f898576af4e0842`
+`private-source-repository@f97aa31585b7b547a116d4580f898576af4e0842`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T011956Z-fleet04-B20-QFORM-r4/REPORT.md`.
 

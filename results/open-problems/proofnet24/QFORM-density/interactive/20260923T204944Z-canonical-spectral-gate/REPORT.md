@@ -51,7 +51,7 @@ The exact leaf eigenframe differs from the orthonormal frame \((\ell,p,v)\) only
 \max_i(\ell_i^2+p_i^2+v_i^2)\le\tfrac12,
 \tag{4}
 \]
-the already proved [Theorem F and its rank-three corollary](https://github.com/yspennstate/math-open-problems/blob/e5f71d79eff325201dd0274053d20268ce65b837/proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md) apply to \(B\) with arbitrary original-coordinate affine term \(2HL\). For every conditioned \(H=h\), its density is bounded by \(12/s_3(B)\). Averaging conditional interval probabilities yields
+the already proved [Theorem F and its rank-three corollary](private-source-repository) apply to \(B\) with arbitrary original-coordinate affine term \(2HL\). For every conditioned \(H=h\), its density is bounded by \(12/s_3(B)\). Averaging conditional interval probabilities yields
 \[
 \boxed{\|p_Q\|_\infty\le\frac{12}{\tau_*}
 =6(\sqrt5+1)<19.42}

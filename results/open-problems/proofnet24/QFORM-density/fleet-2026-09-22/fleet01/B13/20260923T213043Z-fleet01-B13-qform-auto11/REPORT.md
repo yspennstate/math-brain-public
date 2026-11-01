@@ -11,7 +11,7 @@ No counterexample is claimed. The argument below never rotates the independent v
 
 The principal completed partner input actually used is fleet02/B13 `QFORM-D2-HALF-POTENTIAL-v1`, source-pinned at
 
-`yspennstate/math-open-problems@e499a26f35ec939d0fae47bbc5ccf8c0b7683516`
+`private-source-repository@e499a26f35ec939d0fae47bbc5ccf8c0b7683516`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/fleet02-B13-20260923T200130Z/REPORT.md`, Theorem 2.1. Its exact scope is a physical cross block of the full quadratic polynomial, arbitrary self-blocks/outside couplings/affine terms, and independent cap-one input laws.
 

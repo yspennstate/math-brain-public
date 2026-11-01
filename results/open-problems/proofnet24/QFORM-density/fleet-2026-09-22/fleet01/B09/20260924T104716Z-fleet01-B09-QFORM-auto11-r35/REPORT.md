@@ -17,7 +17,7 @@ The proof does **not** use law-uniform pointwise van-der-Corput decay, arbitrary
 
 Analytic dependency used exactly at Section 3: `QFORM-PHYSICAL-PAIR-LOG-ENVELOPE-v1` / `QFORM-PAIR-LOG-SMALLBALL-SMOOTHING-v1`, source
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -282,7 +282,7 @@ This suggests the next bridge should be pair-first rather than scalar-pivot-firs
 
 I applied the completed fleet02/B09 theorem `QFORM-ZERO-HUBPAIR-ARBITRARY-REMAINDER-v1`, canonical source commit
 
-`yspennstate/math-open-problems@03ec6ccf1de2e2544e850cbda25d460aacae6a1b`.
+`private-source-repository@03ec6ccf1de2e2544e850cbda25d460aacae6a1b`.
 
 Let `m>=8`, let `c,d,w1,w2 in R^m` be orthonormal flat Walsh vectors, and let all physical inputs be independent with densities bounded by one. Define
 

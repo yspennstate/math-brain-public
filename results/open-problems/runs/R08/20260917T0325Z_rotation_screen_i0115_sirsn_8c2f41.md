@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 # R08 CLOSABLE OUTSIDE — post-I0082 rotation screen: Aldous SIRSN Open Problem 27 / I0115
 
 Date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Current R08 disposition after this run: **ROTATION HOLD — SUCCESSOR ADMISSION REQUIRED.**
 
 ## 1. Continuity: I0082 remains retired and is not reopened

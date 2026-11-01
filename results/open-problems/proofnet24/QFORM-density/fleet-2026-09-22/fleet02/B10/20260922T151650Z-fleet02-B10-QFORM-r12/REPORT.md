@@ -13,7 +13,7 @@ The exact target remains: for independent real physical coordinates `X_i` with d
 
 Completed named-partner result actually applied:
 
-- fleet03/B10, `QFORM-RANK3-NONISOTROPIC-PIVOT-v1`, canonical report `yspennstate/math-open-problems@5ce98ee83b2fef75136f10cdd0e89741f017d3e0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/fleet03-B10-20260922T141643Z-r11/REPORT.md`. For exact rank three, if physical row `u_i` has leverage `ell_i=||u_i||^2` and nonzero diagonal pivot `d_i=u_i^T Lambda u_i`, then
+- fleet03/B10, `QFORM-RANK3-NONISOTROPIC-PIVOT-v1`, canonical report `private-source-repository@5ce98ee83b2fef75136f10cdd0e89741f017d3e0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/fleet03-B10-20260922T141643Z-r11/REPORT.md`. For exact rank three, if physical row `u_i` has leverage `ell_i=||u_i||^2` and nonzero diagonal pivot `d_i=u_i^T Lambda u_i`, then
 
 `||p_Q||_infinity < 97 [ |d_i| ell_i |det Lambda| ]^(-1/4)`.
 
@@ -21,7 +21,7 @@ The source also records the sharp product-linear marginal bound `||p_{sum b_j X_
 
 Earlier fleet02/B10 theorem actually reused:
 
-- `QFORM-HYPERBOLIC-SQUARE-v1`, canonical report `yspennstate/math-open-problems@1eba911614ef9f6683f8eacb5d6608a0f9a4b833`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T1147Z-qform-rank3-coupled-B10-r1/REPORT.md`. For independent cap-one `X,Y,Z`,
+- `QFORM-HYPERBOLIC-SQUARE-v1`, canonical report `private-source-repository@1eba911614ef9f6683f8eacb5d6608a0f9a4b833`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T1147Z-qform-rank3-coupled-B10-r1/REPORT.md`. For independent cap-one `X,Y,Z`,
 
 `T=2aXY+H(Y)+b(Z+theta(Y))^2`
 

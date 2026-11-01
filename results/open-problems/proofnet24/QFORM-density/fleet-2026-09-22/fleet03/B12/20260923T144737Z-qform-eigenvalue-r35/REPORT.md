@@ -303,7 +303,7 @@ This equation is an actual application of the newest volume-stability package at
 
 The designated completed partner result is
 
-`yspennstate/math-open-problems@3948d77b0bde5af1bd37cd7c975d4f540eba901b`
+`private-source-repository@3948d77b0bde5af1bd37cd7c975d4f540eba901b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T081758Z-fleet04-B12-complementary-schur-shield-r4/REPORT.md`.
 
@@ -396,8 +396,8 @@ Fresh control was resolved before publication at
 
 Primary mathematical dependencies actually used:
 
-- Ridge receiver: `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
-- Fractional three-volume receiver: `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
-- Designated partner: `yspennstate/math-open-problems@3948d77b0bde5af1bd37cd7c975d4f540eba901b:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T081758Z-fleet04-B12-complementary-schur-shield-r4/REPORT.md`.
+- Ridge receiver: `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
+- Fractional three-volume receiver: `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
+- Designated partner: `private-source-repository@3948d77b0bde5af1bd37cd7c975d4f540eba901b:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T081758Z-fleet04-B12-complementary-schur-shield-r4/REPORT.md`.
 
 Repository transport is not native learned-memory ingestion; status remains `WITHOUT_VERIFIED_BRAIN`. Model self-report: `GPT-5.6 Sol`. Configured thinking level and provider reasoning-token/thinking-time counters were not exposed and remain `UNKNOWN`/null.

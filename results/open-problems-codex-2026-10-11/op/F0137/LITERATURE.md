@@ -95,7 +95,7 @@ Exact request URLs, outcomes, timestamps (date), and raw files are in fetch_log.
 
 ## Earlier recorded answers checked read-only
 
-Used `git -C ~/math-open-problems show origin/master:<path>` for:
+Used `git -C ~/private-source show origin/master:<path>` for:
 
 - `runs/R20/2026-09-18T09-05-00Z_successor_admission_f0137_dirichlet_status_81c4e2.md`: status-only screening, no proof; correctly highlights extra (T)/(T′) assumptions in 2024–2025.
 - `research7_2026-09-17/R7-01/admission/2026-09-19T231700Z__F0137_clean_test_ray_and_current_gate.md`: already corrects source prime/condition wording and proposes alpha=(1+δ,1,...,1), 0<δ≤1, as a benchmark. Its A, drift and κ formulas were independently checked and used only as a diagnostic in ATTEMPT.md. It contains no global spatial bound.

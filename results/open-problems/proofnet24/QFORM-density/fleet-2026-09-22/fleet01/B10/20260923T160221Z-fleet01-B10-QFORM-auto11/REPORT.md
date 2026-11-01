@@ -513,7 +513,7 @@ This is the precise obstruction to naively feeding (8.1) into Theorem 6.1. It is
 
 The newest completed designated-partner result available before publication is
 
-`yspennstate/math-open-problems@ebceb50f1e0c2589cb7599f57c4deb4a3ffd0f2b`,
+`private-source-repository@ebceb50f1e0c2589cb7599f57c4deb4a3ffd0f2b`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T141719Z-fleet02-B10-QFORM-r11/REPORT.md`.
 
@@ -567,17 +567,17 @@ No Gaussianity, log-concavity, moments, compact or connected support, iid assump
 
 The complement Brascamp–Lieb estimate (6.3) is the same completed product-frame input used in the preceding B10 Schur–Fresnel proof, source-pinned there to
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 Immediate B10 structural predecessor:
 
-`yspennstate/math-open-problems@79295a936c9f88cf9356c6ed5d52090fa1cedc37`,
+`private-source-repository@79295a936c9f88cf9356c6ed5d52090fa1cedc37`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260923T152129Z-fleet01-B10-QFORM-auto11/REPORT.md`.
 
 Designated partner actually applied:
 
-`yspennstate/math-open-problems@ebceb50f1e0c2589cb7599f57c4deb4a3ffd0f2b`,
+`private-source-repository@ebceb50f1e0c2589cb7599f57c4deb4a3ffd0f2b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T141719Z-fleet02-B10-QFORM-r11/REPORT.md`.
 
 Repository transport is not native learned-memory ingestion; execution remains `WITHOUT_VERIFIED_BRAIN`.

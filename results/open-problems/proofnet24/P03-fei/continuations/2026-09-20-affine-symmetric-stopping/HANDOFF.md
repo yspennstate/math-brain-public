@@ -1,6 +1,6 @@
 # FEI handoff: affine-symmetric stopping and endpoint quantifiers
 
-20 September 2026. **Unrestricted FEI remains unproved.** This continuation is delivered to `yspennstate/math-open-problems`, branch `master`. Delivery is not evidence that a later worker has read it.
+20 September 2026. **Unrestricted FEI remains unproved.** This continuation is delivered to `private-source-repository`, branch `master`. Delivery is not evidence that a later worker has read it.
 
 ## Read the proved results with their hypotheses
 

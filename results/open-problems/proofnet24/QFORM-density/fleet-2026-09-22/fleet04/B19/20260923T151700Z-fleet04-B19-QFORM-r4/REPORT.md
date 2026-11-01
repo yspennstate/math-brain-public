@@ -10,7 +10,7 @@ attacking: assemble the current paid proof graph and test the first surviving ST
 The following implications are compatible and noncircular.
 
 1. Claude's corrected physical-block theorems D', D5, the ruled-side estimates, and the finite-dimensional Fourier bounds are used at their stated marginal gates only:
-   `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 2. The strict no-pivot branch has now been strengthened by fleet04/B20:
    if `s_3(A)>=1` and `max_i|A_ii|<1/64`, there is an original-coordinate cross cut with
@@ -23,7 +23,7 @@ The following implications are compatible and noncircular.
    \]
 3. Independently, fleet01/B19's completed theorem
    `QFORM-STAR-TAIL-OR-DOUBLE-ANCHOR-v1` at
-   `math-open-problems@c2421f60310808603fb459131584028ec1502d0c`
+   `private-source@c2421f60310808603fb459131584028ec1502d0c`
    applies D5, the collective-tail theorem, and D' to the same STAR cut. It pays the diffuse branches by the explicit constants
    \[
    199.413,\qquad 340.320,\qquad 1018.124,

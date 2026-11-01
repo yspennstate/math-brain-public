@@ -19,7 +19,7 @@ The full target remains: independent real original-coordinate inputs with one-di
 - normalized conditional projection caps need not be uniformly bounded;
 - uniform pointwise one-dimensional quadratic-phase decay is false.
 
-Pinned projection input: `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T115514Z-qform-B18-a01/REPORT.md`, Theorem 3.1. If `T` is a full-row-rank `k x n` map applied to a product density with one-dimensional caps one, then
+Pinned projection input: `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T115514Z-qform-B18-a01/REPORT.md`, Theorem 3.1. If `T` is a full-row-rank `k x n` map applied to a product density with one-dimensional caps one, then
 
 `||p_(TX)||_infinity <= 2^(k/2) / sqrt(det(TT^T)).`                 (1.1)
 
@@ -27,7 +27,7 @@ In particular orthonormal 2- and 3-dimensional projections have joint density ca
 
 Newest completed designated partner actually used: fleet02/B16,
 
-`yspennstate/math-open-problems@44bff195ea0a90c3fe24628eb2cf3b405368c37c`,
+`private-source-repository@44bff195ea0a90c3fe24628eb2cf3b405368c37c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/fleet02-B16-20260923T153432Z-auto11/REPORT.md`.
 
@@ -35,7 +35,7 @@ Its `QFORM-CROSS2-ARBITRARY-SELFBLOCK-L32-v1` proves that a genuine rank-two cro
 
 The current interactive projected-crossing theorem at
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`
 

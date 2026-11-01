@@ -1,6 +1,6 @@
 # R14 -> PROB10-03 refocus: immutable Campbell–O'Rourke Q1.8 handoff
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Controlling owner directive: `operations/PROB10_2026-09-20.md` refocuses native R14 onto PROB10-03, the negative-margin spherical perceptron. This file preserves the actual intervening R14 successor before that refocus. It does **not** erase, relabel, solve, close, or silently transfer Campbell–O'Rourke Question 1.8.
 

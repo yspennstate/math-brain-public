@@ -106,7 +106,7 @@ Because `A` is symmetric,
 and (2.12) proves (2.3).
 
 To obtain (2.4), take `G=A^2` in `QFORM-SIX-MODE-SPECTRAL-SQUARE-CARRIER-v1`, proved at
-`yspennstate/math-open-problems@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`.
+`private-source-repository@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`.
 That theorem exhausts the final self-block regimes: a three-mode physical self block is paid directly; an approximate rank-two self block yields an invertible ORIGINAL-coordinate physical pair; and a nearly rank-one self block exports five directions into the actual cross block. The last branch is paid by the pinned D5 theorem. QED.
 
 ## 3. Literal arbitrary eigenvalue replacements
@@ -146,7 +146,7 @@ Since
 The D5 source has no row-volume marginal gate and retains arbitrary self blocks, outside couplings and affine terms. This is an application to the actual final matrix, not a post-rotation product surrogate.
 
 Pinned source consumed at equations (4.3)-(4.5):
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and its `FOURIER_ROUTE_REPORT.md`.
 
 ## 5. Exact target-class stress family and a D5-only obstruction
@@ -254,14 +254,14 @@ so the theorem's marginal gate is met exactly. With `d=k+ell=3` and the `ell=1` 
 This is a genuine complementary receiver: a target matrix can have too few cross directions for D5, yet two grouped hub directions plus one diffuse projected crossing direction provide the third smoothing resource. The theorem permits arbitrary internal hub function and arbitrary same-light-bank quadratic terms at its stated scope; no independence of the two hub projections is assumed by that theorem.
 
 Source consumed at (6.9):
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 ## 7. Designated partner result consumed
 
 The proof of (2.8)-(2.10) is the column-carrier form of the completed fleet03/B12 r37 orthogonal spectral-completion theorem:
 
-`yspennstate/math-open-problems@3d6d9699d94146c3d2cbc475936dacd74109f913`,
+`private-source-repository@3d6d9699d94146c3d2cbc475936dacd74109f913`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T164514Z-qform-eigenvalue-r37/REPORT.md`.
 
 That theorem proves, from `A0R=0`, the exact positive-square mechanism
@@ -271,7 +271,7 @@ That theorem proves, from `A0R=0`, the exact positive-square mechanism
 and the resulting self/cross singular-profile conservation. Here (7.1) first protects the whole physical column carrier, after which the finite-rank packet is spent by singular-value interlacing. This use is stronger than an operator-norm stability statement: the norm of `R` is unrestricted.
 
 Its later projected-crossing addendum at
-`yspennstate/math-open-problems@5606cbf66c810119c1e7c0ca4908abe0eb753f56`
+`private-source-repository@5606cbf66c810119c1e7c0ca4908abe0eb753f56`
 was also read before publication; its q=1 and q=2 obligations are compatible with, but not needed to prove, Theorem 2.1.
 
 ## 8. Corrections retained and precise remaining gap

@@ -20,7 +20,7 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, or diago
 
 Canonical source:
 
-`yspennstate/math-open-problems@c5b2350b76a01283a2503368d013a44beadbbcc6`
+`private-source-repository@c5b2350b76a01283a2503368d013a44beadbbcc6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T215031Z-fleet03-B08-qform-diffuse-r22/REPORT.md`.
 
@@ -52,7 +52,7 @@ and proves `||M_H||_op>(3/4)gamma^2`. More precisely, its exterior-square decomp
 
 Canonical source:
 
-`yspennstate/math-open-problems@c248abc9be918698c6d5a68108c615ba1c4790b3`
+`private-source-repository@c248abc9be918698c6d5a68108c615ba1c4790b3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T204103Z-1dd824/REPORT.md`.
 
@@ -74,7 +74,7 @@ The designated partner `fleet04/B06` has a current QFORM run start but no comple
 
 The compatible completed fleet04 result actually applied is fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical source
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

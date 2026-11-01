@@ -26,7 +26,7 @@ The preceding B06 theorem is
 
 canonical source
 
-`yspennstate/math-open-problems@da1ec290db2acb0c6d155899d242d0a66f624592`
+`private-source-repository@da1ec290db2acb0c6d155899d242d0a66f624592`
 
 at
 
@@ -85,7 +85,7 @@ The source-valid grouped theorem is fleet02/B08
 
 `QFORM-DOUBLE-INCIDENT-RANK2-GROUPED-L3-v1`,
 
-`yspennstate/math-open-problems@c248abc9be918698c6d5a68108c615ba1c4790b3`,
+`private-source-repository@c248abc9be918698c6d5a68108c615ba1c4790b3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T204103Z-1dd824/REPORT.md`.
 
@@ -107,7 +107,7 @@ The compatible completed fleet04 theorem actually applied is fleet04/B18
 
 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`,
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
@@ -311,7 +311,7 @@ No lower bound is asserted for an individual determinant. A star may consist of 
 
 Geometrically, selecting the two-column bank `{r,s}` retains the full left curved rank-two interaction. The entire left determinant star is the exterior area of that physical two-column map; it is not an unrestricted supremum along a spectral fiber. The active coordinate laws remain genuine original-coordinate product laws. Arbitrary left self-quadratic terms, the right two-coordinate self block, affine terms produced by outside conditioning, and the inherited outer-square translation all remain in the valid source theorems.
 
-The fresh B08 third-compound work (`yspennstate/math-open-problems@d30dba6db19d1eceabde6222c84a5b57a85506f0`) independently moves in the same correction-safe direction: its aggregate `e_3` receiver spends summed third-minor curvature before reciprocal payment. The theorem here performs the analogous operation one exterior degree lower inside the live bicolooop chamber.
+The fresh B08 third-compound work (`private-source-repository@d30dba6db19d1eceabde6222c84a5b57a85506f0`) independently moves in the same correction-safe direction: its aggregate `e_3` receiver spends summed third-minor curvature before reciprocal payment. The theorem here performs the analogous operation one exterior degree lower inside the live bicolooop chamber.
 
 ## 6. Tunable squeeze
 

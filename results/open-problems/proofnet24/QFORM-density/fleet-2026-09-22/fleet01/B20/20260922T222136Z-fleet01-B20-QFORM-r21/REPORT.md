@@ -18,14 +18,14 @@ Fresh programme control was read at the start. The owner revision is `2026-09-22
 
 ### 2.1 Newest completed designated partner fleet02/B20 r20
 
-Source: `yspennstate/math-open-problems@2c967d975f242fa53556b8ec132ac668dcf003a0`,
+Source: `private-source-repository@2c967d975f242fa53556b8ec132ac668dcf003a0`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260922T215937Z-fleet02-B20-QFORM-r20/REPORT.md`.
 
 That report proves that the localized high-window state is already fully paid: if a source-valid physical outer pivot has `|a|>=tau>=1/4` and the exact second Schur row has `max{|d|,||c||_2}>tau/9`, then `||p_Q||_infinity<5262`. Consequently the genuine debt moves upstream to structural exhaustion, explicitly including the O0 singleton-plus-five-bank / third-compound branch. I use that logical relocation here: no work is spent on the already-paid downstream two-anchor compatibility state.
 
 ### 2.2 fleet02/B20 r13 O0 full-matrix certificate
 
-Source report: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260922T165822Z-fleet02-B20-QFORM-r13/REPORT.md`; canonical source recorded by the partner handoff as `yspennstate/math-open-problems@ccd703b260df4eca8b539b6614e2cecdad3e7465`.
+Source report: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260922T165822Z-fleet02-B20-QFORM-r13/REPORT.md`; canonical source recorded by the partner handoff as `private-source-repository@ccd703b260df4eca8b539b6614e2cecdad3e7465`.
 
 The O0 structural reduction supplies a physical cross cut `B=A[L,R]` with
 
@@ -35,7 +35,7 @@ This is an actual original-coordinate cross block of the full quadratic form; al
 
 ### 2.3 Reviewed volume-sampling decoupling theorem D and sharp Hausdorff-Young refinement
 
-Reviewed source: `yspennstate/math-open-problems@9844891a9fbe96a65e37f71122bf0300b53dcc80`, `proofnet24/QFORM-density/interactive/20260922T220600Z-claude-review/REVIEW.md`, reviewing the Claude-attributed package `yspennstate/math-open-problems@7359c982f3fa85f61b99e8768b915cce6e596d36`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
+Reviewed source: `private-source-repository@9844891a9fbe96a65e37f71122bf0300b53dcc80`, `proofnet24/QFORM-density/interactive/20260922T220600Z-claude-review/REVIEW.md`, reviewing the Claude-attributed package `private-source-repository@7359c982f3fa85f61b99e8768b915cce6e596d36`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 For volume weights
 

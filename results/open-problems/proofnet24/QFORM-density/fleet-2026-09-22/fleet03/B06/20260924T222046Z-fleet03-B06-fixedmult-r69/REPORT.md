@@ -16,7 +16,7 @@ No projected first-volume row-marginal gate is needed. Diffuse rows use the grou
 
 Four-eigenvalue consequence: in the no-pivot s_4(A)>=1 chamber, the five-eigenvalue paper's sign proposition gives a partition with s_2(A_IJ)>gamma_2=(44-15sqrt(2))/96. If that crossing is exact rank two, Cauchy-Binet provides a secondary literal column bank with singular product >gamma_2^2/2. If its projected self-crossing F>=tau, the theorem gives ||p_Q||_infinity <30.084 tau^(-1/3). The remaining exact-rank-two obstruction is the common-plane/aligned collar F->0. General s4 remains open.
 
-Designated partner fleet04/B06 at math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b is applied on the aligned/tangential face:
+Designated partner fleet04/B06 at private-source@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b is applied on the aligned/tangential face:
 ||p_(L,Y); |V-v_*|>r||_infinity <=4/(|lambda|r),
 hence <=256/|lambda| at r=1/64. This pays the off-fold portion, not the near-fold common-plane remainder.
 

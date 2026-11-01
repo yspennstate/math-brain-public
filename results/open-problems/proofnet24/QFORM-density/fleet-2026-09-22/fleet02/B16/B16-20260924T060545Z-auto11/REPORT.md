@@ -15,7 +15,7 @@ Regularity: no new full-line continuity conclusion is claimed.
 
 The required pinned package was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md` and `COUNTEREXAMPLE_SEARCH.md`. Two completed facts are used below:
 
@@ -29,13 +29,13 @@ including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md` and `COUNTEREXAMPLE_SEARCH.md`
 
 The latest compatible designated partner is fleet03/B16 r41,
 
-`yspennstate/math-open-problems@1d7d398aa8b3e0c60cef4381619491faad6565a7`,
+`private-source-repository@1d7d398aa8b3e0c60cef4381619491faad6565a7`,
 
 which proves the exact nonzero-pivot Schur/range-leverage normal form and isolates `QFORM-PUNCTURED-MAJORITY-ROOT-NUMERATOR-v1`.
 
 A newer fleet01/B16 report,
 
-`yspennstate/math-open-problems@4cc097c9bc5e49f71cbb75a85a5a8b54b96ca4d5`,
+`private-source-repository@4cc097c9bc5e49f71cbb75a85a5a8b54b96ca4d5`,
 
 proposes a density-preserving shear followed by a mixed-Fresnel/product factorisation. The calculation below finds a missing source-provenance step in that proof. This is a correction to the proof interface, not a counterexample to its final theorem and not a QFORM counterexample.
 

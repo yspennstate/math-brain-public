@@ -16,7 +16,7 @@ No Gaussianity, moments, iid hypothesis, compact support, log-concavity, indepen
 
 The completed designated-partner source is fleet02/B20 r47,
 
-`yspennstate/math-open-problems@db6b24a00d61f81b6d419153871c559215357860`
+`private-source-repository@db6b24a00d61f81b6d419153871c559215357860`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260924T055838Z-fleet02-B20-QFORM-auto11-r47/REPORT.md`
 
@@ -87,7 +87,7 @@ For the definite-pair arm I use the already completed source-coordinate theorem
 
 at
 
-`yspennstate/math-open-problems@3b2896d107b17c889b09ce366c957fd901e9a1fc`
+`private-source-repository@3b2896d107b17c889b09ce366c957fd901e9a1fc`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260924T011830Z-fleet04-B05-convex-pair-r3/REPORT.md`.
 
@@ -341,7 +341,7 @@ This does **not** by itself pay the ambient law because the arbitrary `K x K` bl
 
 The completed fleet03/B09 r26 source
 
-`yspennstate/math-open-problems@95e47fef4eaca403d5fe93fbe5b06a772172a424`
+`private-source-repository@95e47fef4eaca403d5fe93fbe5b06a772172a424`
 
 constructs target-valid anisotropic two-hub families in which the aggregate two-row wedge stays of order one while every individual physical coefficient and every physical `2 x 2` determinant tends to zero, and the proposed reciprocal rank-one-core resource tends to zero. Therefore the next implication cannot legitimately be
 

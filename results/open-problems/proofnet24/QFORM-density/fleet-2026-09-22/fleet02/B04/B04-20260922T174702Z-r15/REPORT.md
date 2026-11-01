@@ -16,7 +16,7 @@ This run proves the analytic transfer once such a mixed pair is present. The tra
 
 Fresh owner control advanced during the run to revision `2026-09-22.10`; QFORM remains the sole target. The live corrections consumed include the refutations of uniform pointwise oscillatory decay, conditional-cap-as-independence, one-Schur extraction, local-good-minor/cross-rank-three dichotomies, and fiberwise trace control.
 
-Named partner actually applied: `fleet03/B04`, theorem `QFORM-RANK2-SCHUR-NOLEVERAGE-v1`, canonical source `yspennstate/math-open-problems@2761bd3896c56a1f929761e69035ba7cb8ebc2bc`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T164839Z-r14/REPORT.md`. In its exact explicit heavy-row instance it gives the all-input-law density bound `B_partner=9.8345318556`.
+Named partner actually applied: `fleet03/B04`, theorem `QFORM-RANK2-SCHUR-NOLEVERAGE-v1`, canonical source `private-source-repository@2761bd3896c56a1f929761e69035ba7cb8ebc2bc`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T164839Z-r14/REPORT.md`. In its exact explicit heavy-row instance it gives the all-input-law density bound `B_partner=9.8345318556`.
 
 ## 2. Product-density logarithmic envelope
 

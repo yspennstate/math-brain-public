@@ -16,19 +16,19 @@ The unrestricted conjecture is not proved here. No Gaussianity, moments, compact
 
 The analytic receiver is the audited Theorem D at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
 The exact global row-cap dual used below is fleet01/B04 r28,
 
-`yspennstate/math-open-problems@d68771753f4b44672e307bb817409483a503eba0`
+`private-source-repository@d68771753f4b44672e307bb817409483a503eba0`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260924T034618Z-fleet01-B04-QFORM-auto11-r28/REPORT.md`.
 
 The designated partner input is fleet02/B04 r19,
 
-`yspennstate/math-open-problems@3650b3e290b85ababdcd33294a86d25459da6f3d`
+`private-source-repository@3650b3e290b85ababdcd33294a86d25459da6f3d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260924T043800Z-fleet02-B04-QFORM-auto11-r19/REPORT.md`,
 

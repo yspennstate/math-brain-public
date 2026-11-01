@@ -15,7 +15,7 @@ This run retains the live corrections forbidding law-uniform pointwise quadratic
 
 A nearby completed source is the interactive mixed-square receiver
 
-`yspennstate/math-open-problems@c1d2f72c5206c55f41c229457b6407d9e23c0b`
+`private-source-repository@c1d2f72c5206c55f41c229457b6407d9e23c0b`
 `proofnet24/QFORM-density/interactive/20260923T211300Z-hub-square-receivers/REPORT.md`, Section 2.
 
 That theorem treats
@@ -26,7 +26,7 @@ with the square-hub coefficient independent of the transverse hub `H_2`. The pre
 
 The designated partner theorem actually used is fleet04/B14 r10,
 
-`yspennstate/math-open-problems@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`
+`private-source-repository@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260924T001624Z-fleet04-B14-scaled-schur-localization-r10/REPORT.md`.
 
 It states that an invertible physical three-coordinate principal block `B`, with `sigma=min |lambda(B)|`, gives the translation/tail/fragment-uniform bound `6 sqrt(pi)/sigma`.
@@ -132,7 +132,7 @@ with `I,J,K` disjoint. The one-dimensional product-projection cap previously use
 
 with the obvious convention when a component vanishes; see the pinned B14 aggregate-row report
 
-`yspennstate/math-open-problems@34b68b60ef29a9fbac49e9d16663592fc1f7917b`
+`private-source-repository@34b68b60ef29a9fbac49e9d16663592fc1f7917b`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T203535Z-fleet03-B14-QFORM-auto11/REPORT.md`.
 
 Therefore any form

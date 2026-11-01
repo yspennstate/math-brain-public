@@ -24,7 +24,7 @@ The designated completed partner result is fleet02/B20 run
 
 canonical mathematics
 
-`yspennstate/math-open-problems@e004778aef69cbf704ab9ccfb216a6f9bbba327b`,
+`private-source-repository@e004778aef69cbf704ab9ccfb216a6f9bbba327b`,
 
 path
 
@@ -66,7 +66,7 @@ I use the standard sharp product-marginal consequence recorded and applied elsew
 >
 > `||p_{c^T Y}||_infinity <= C_P/||c||_2`, with `C_P=sqrt(2)`.   (3.1)
 
-A source-pinned programme proof is fleet03/B18, scientific snapshot `yspennstate/math-open-problems@313aaf988145f63be448447eaf661aa399772088`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/B18-20260922T155856Z-r13/REPORT.md`, which cites and applies Livshyts--Paouris--Pivovarov, *On sharp bounds for marginal densities of product measures*, Theorem 1.1. This is a bound on one physical-source linear functional; it does not declare rotated coordinates independent.
+A source-pinned programme proof is fleet03/B18, scientific snapshot `private-source-repository@313aaf988145f63be448447eaf661aa399772088`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/B18-20260922T155856Z-r13/REPORT.md`, which cites and applies Livshyts--Paouris--Pivovarov, *On sharp bounds for marginal densities of product measures*, Theorem 1.1. This is a bound on one physical-source linear functional; it does not declare rotated coordinates independent.
 
 For transparency I carry `C_P` through the proof and only substitute `C_P=sqrt(2)` at the end.
 

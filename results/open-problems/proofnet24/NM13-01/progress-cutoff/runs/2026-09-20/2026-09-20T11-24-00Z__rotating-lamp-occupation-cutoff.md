@@ -8,7 +8,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — no authentica
 
 **Publication novelty:** `UNVERIFIED`. The result is new relative to the repository state read in this run. Bounded external searches found standard wreath-product/lamplighter and semidirect-product random-walk literature, but did not establish either priority or non-priority for the exact fixed-switching expander theorem below.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 Prewrite master observed before this run's writes: `8456dd3899cb5cc4e456da541916e801027a21e3`.
 

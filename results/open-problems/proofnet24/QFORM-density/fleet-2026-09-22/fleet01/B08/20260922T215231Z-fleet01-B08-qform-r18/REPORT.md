@@ -19,7 +19,7 @@ This report does not use any of the following refuted interfaces: law-uniform po
 
 The completed regularized-determinant theorem at
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`,
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`,
 `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`
 
 states the following in the notation needed here. Let I,J be disjoint sets of ORIGINAL coordinates and, after conditioning all other original coordinates, write
@@ -45,7 +45,7 @@ The same statement can be used on the J side after transposing B.
 The completed fleet04/B18 theorem
 
 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, source
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 gives, at its kernel stage, the following dependence-safe implication. If a genuine original-coordinate completion has
 
@@ -149,7 +149,7 @@ Thus any physical cross block with `s_2(B)>=sigma` and one-sided range leverage 
 
 Fleet03/B08 r20, source
 
-`yspennstate/math-open-problems@d5547a484fcc9b62341d80e9ba902cbe2e484284`,
+`private-source-repository@d5547a484fcc9b62341d80e9ba902cbe2e484284`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T201956Z-fleet03-B08-qform-diffuse-r20/REPORT.md`,
 
 proves in the surviving two-sided near-coloop branch that
@@ -176,7 +176,7 @@ This is a genuine arbitrary-higher-rank-tail closure in the diffuse-range subbra
 The current completed `fleet02/B08` result is
 
 `QFORM-DOUBLE-INCIDENT-RANK2-GROUPED-L3-v1`, canonical source
-`yspennstate/math-open-problems@c248abc9be918698c6d5a68108c615ba1c4790b3`,
+`private-source-repository@c248abc9be918698c6d5a68108c615ba1c4790b3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T204103Z-1dd824/REPORT.md`.
 
 For an exact-rank-two physical cross block C and fixed physical row j / column r, it aggregates the complete incident determinant bank

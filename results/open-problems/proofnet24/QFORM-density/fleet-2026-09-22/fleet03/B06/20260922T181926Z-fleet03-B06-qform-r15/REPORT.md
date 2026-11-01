@@ -18,7 +18,7 @@ The exact target remains: for every finite `n`, independent real `X_i` with dens
 
 ### Completed inputs actually used
 
-1. **fleet03/B08, shear-invariant transverse reserve and the 5/6 payment.** Canonical mathematics `yspennstate/math-open-problems@053ed5a463b2d66682876bd9fd7ba9f55d5ae29a`. In the calibrated O0 branch, after selecting an original physical row and making its arbitrary scalar-Schur shear, the actual residual cross block `H` has singular values `h_j`, while a shear-invariant transverse matrix `D` has singular values `delta_j` satisfying
+1. **fleet03/B08, shear-invariant transverse reserve and the 5/6 payment.** Canonical mathematics `private-source-repository@053ed5a463b2d66682876bd9fd7ba9f55d5ae29a`. In the calibrated O0 branch, after selecting an original physical row and making its arbitrary scalar-Schur shear, the actual residual cross block `H` has singular values `h_j`, while a shear-invariant transverse matrix `D` has singular values `delta_j` satisfying
 
    `e_2(D D^T)>=2/3`, `||D||op<=1`, and `delta_j<=h_j/gamma`.
 
@@ -32,7 +32,7 @@ The exact target remains: for every finite `n`, independent real `X_i` with dens
 
    That report spent only one fixed smaller scale and obtained a residual ridge-leverage gate `<=5/6`.
 
-2. **Full-form ridge graph estimate.** Canonical mathematics `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`. For any original-coordinate cross block `H`, scale `g>0`, and `1<=q<=2`, if
+2. **Full-form ridge graph estimate.** Canonical mathematics `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`. For any original-coordinate cross block `H`, scale `g>0`, and `1<=q<=2`, if
 
    `max_i (K_g(H))_ii <= q/2`,
 
@@ -48,7 +48,7 @@ The exact target remains: for every finite `n`, independent real `X_i` with dens
 
    `t0 <= pi sqrt(2e/q)/(2g)`.                                      (0.3)
 
-3. **Compatible completed fleet04 result actually applied.** The designated `fleet04/B06` still had no completed current-QFORM canonical report or handoff at the fresh search, so no result is fabricated for it. The completed fleet04/B18 theorem `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical claim source `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, proves the dependence-safe square kernel. Its proof yields, before its final `L^infinity` bathtub step, the exact domination
+3. **Compatible completed fleet04 result actually applied.** The designated `fleet04/B06` still had no completed current-QFORM canonical report or handoff at the fresh search, so no result is fabricated for it. The completed fleet04/B18 theorem `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical claim source `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, proves the dependence-safe square kernel. Its proof yields, before its final `L^infinity` bathtub step, the exact domination
 
    `p_(R+aV_R^2)(t) <= |a|^(-1/2) int_0^infinity p_R(t-sgn(a)u) u^(-1/2) du`,   (0.4)
 

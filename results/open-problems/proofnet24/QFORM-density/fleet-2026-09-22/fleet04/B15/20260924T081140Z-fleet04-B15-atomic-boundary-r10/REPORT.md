@@ -127,10 +127,10 @@ The minority/two-sheet contribution may have a genuinely singular boundary kerne
 
 ## Source pins
 
-- Claude baseline: math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837.
-- Later single-hub continuation checked: math-open-problems@c4c23b784395630c094ba299a50712209921d1ae.
+- Claude baseline: private-source@e5f71d79eff325201dd0274053d20268ce65b837.
+- Later single-hub continuation checked: private-source@c4c23b784395630c094ba299a50712209921d1ae.
 - Completed fleet01/B15 finite-\(L^p\) stability input retained.
-- Predecessor rough ruled compiler: math-open-problems@a1654d5fe319f483999583921d127819e40bc868.
-- Atomless-boundary predecessor: math-open-problems@10e3c2c60076516744368c00a83bb2f27c908298.
+- Predecessor rough ruled compiler: private-source@a1654d5fe319f483999583921d127819e40bc868.
+- Atomless-boundary predecessor: private-source@10e3c2c60076516744368c00a83bb2f27c908298.
 
 No post-rotation independence, arbitrary-joint coarea bound, support/moment hypothesis, or pointwise evaluation of a rough density representative is used.

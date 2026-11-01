@@ -15,8 +15,8 @@ The full universal height conjecture remains open. This report isolates a new ex
 
 The completed partner results actually used are fleet04/B15:
 
-1. heat-height closure, `yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`;
-2. rough one-sheet trace domination, `yspennstate/math-open-problems@728598f48c29cbf4f15e04312727663abeccb0af`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T232152Z-fleet04-B15-ruled-trace-regularity-r5/REPORT.md`.
+1. heat-height closure, `private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`;
+2. rough one-sheet trace domination, `private-source-repository@728598f48c29cbf4f15e04312727663abeccb0af`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T232152Z-fleet04-B15-ruled-trace-regularity-r5/REPORT.md`.
 
 The second theorem says, for the exact rank-three form
 

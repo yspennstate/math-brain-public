@@ -3,7 +3,7 @@ TASK: B17 ACCOUNT: fleet02 RUN: 2026-09-21T15:15:03.838288Z — central-cone FEI
 Status: PARTIAL. Full Friedgut–Kalai Fourier entropy-influence (FEI) conjecture remains OPEN / NOT PROVED.
 Execution: WITHOUT_VERIFIED_BRAIN. No authentic math_brain retrieval or receiver-context use occurred.
 Live role: FEI new proof mechanisms.
-Scientific source at entry: yspennstate/math-open-problems master 93e230d639665d10a5954f731ee04e4f3c7db33c; freshness was rechecked during the run and newer compatible FEI work was consumed where relevant.
+Scientific source at entry: private-source-repository master 93e230d639665d10a5954f731ee04e4f3c7db33c; freshness was rechecked during the run and newer compatible FEI work was consumed where relevant.
 Normalization: Boolean functions take values in {+1,-1} on the uniform F_2 cube; Walsh coefficients are normalized; all logarithms/entropies below are base 2:
     H(f)=sum_S p_f(S) log2(1/p_f(S)),   p_f(S)=fhat(S)^2,
     I(f)=sum_i Inf_i(f)=sum_S |S| p_f(S).

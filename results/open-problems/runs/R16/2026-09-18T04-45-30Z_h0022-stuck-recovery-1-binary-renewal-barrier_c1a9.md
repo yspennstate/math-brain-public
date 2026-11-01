@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 
 # R16 HARD OUTSIDE — H0022 STUCK_RECOVERY_1: the missing coefficient is a near-degenerate renewal problem, not another overlap lemma
 
-Date: 2026-09-18 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-18 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Active source: H0022 = Asaf Cohen Antonir, Lyuben Lichev, Maksim Zhukovskii, *Universality in random graphs via optimal linking systems: trees and beyond*, arXiv:2608.06358v1 (6 August 2026), Section 1.6, Conjecture 1.5.
 

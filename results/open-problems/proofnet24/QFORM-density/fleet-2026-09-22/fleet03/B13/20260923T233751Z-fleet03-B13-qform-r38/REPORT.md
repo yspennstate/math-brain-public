@@ -20,7 +20,7 @@ Final prepublication owner refresh used
 
 The designated partner actually applied is fleet04/B13:
 
-`yspennstate/math-open-problems@d1764f29884bf14ce505d36668105edfcaf8315e`
+`private-source-repository@d1764f29884bf14ce505d36668105edfcaf8315e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T201653Z-fleet04-B13-extremal-slab-dichotomy-r1/REPORT.md`.
 
@@ -61,7 +61,7 @@ or the non-rank-one branch satisfies
 
 The grouped three-leaf input is fleet01/B13:
 
-`yspennstate/math-open-problems@38a8a2ae1cb319211ab4be60f6f8d6f7f03f85f9`,
+`private-source-repository@38a8a2ae1cb319211ab4be60f6f8d6f7f03f85f9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T223205Z-fleet01-B13-qform-auto11/REPORT.md`.
 
@@ -78,9 +78,9 @@ Its completed supporting theorem gives
 
 My preceding r34/r36 reports are
 
-`math-open-problems@7ebaff80e4d6d1c5c45a561d1ff17a87cfd7a052`
+`private-source@7ebaff80e4d6d1c5c45a561d1ff17a87cfd7a052`
 and
-`math-open-problems@a558625206539a6eaee5aa6b2c6d851ccd2f1990`.
+`private-source@a558625206539a6eaee5aa6b2c6d851ccd2f1990`.
 
 The present report strictly improves r34's crude `1/512` DPP disjointness floor in the actual rank-two Parseval scope and therefore improves r36's `mu_k` normalization and all ensuing cancellation constants. The older inequalities remain true; they are merely nonsharp.
 

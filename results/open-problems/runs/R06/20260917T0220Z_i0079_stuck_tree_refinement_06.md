@@ -4,7 +4,7 @@ Problem/source: Héctor Jardón-Sánchez, Sam Mellick, Antoine Poulin, Konrad Wr
 # R06 CLOSABLE OUTSIDE — run 6 on I0079: stuck/thinking pass; the obstruction is tie-correlation, not product geometry
 
 Run date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Delivery: private GitHub only. No email/Gmail, Drive, public posting, purchases, permission changes, workflow execution, or scheduler changes.
 
 ## 1. Continuity, fixed metric, and why I0056 is not restarted

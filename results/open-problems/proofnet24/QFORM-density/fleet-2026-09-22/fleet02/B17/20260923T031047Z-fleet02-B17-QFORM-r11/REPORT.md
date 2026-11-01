@@ -39,7 +39,7 @@ Q_{m,f}=X_f^2+S_m^2-T_m^2.
 This is a source-valid original-coordinate product family; no spectral rotation is used to manufacture independence.
 
 The preceding same-slot theorem
-`yspennstate/math-open-problems@06aea167c49a7d7574f1c2f518c756f22413371a`
+`private-source-repository@06aea167c49a7d7574f1c2f518c756f22413371a`
 proved only the Gaussian-completion upper bound
 
 \[
@@ -258,7 +258,7 @@ For `0<=s<=1/8`, the same identity holds by (4.3).
 
 The completed same-slot theorem
 
-`yspennstate/math-open-problems@84ffc0f291ae192f4d82742ae6909943f6710bc7`,
+`private-source-repository@84ffc0f291ae192f4d82742ae6909943f6710bc7`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T235536Z-r12-symmetric-unimodal/REPORT.md`,
 
 proves that if independent `Y_1,Y_2,Y_3` have even densities nonincreasing on `[0,infinity)`, then
@@ -321,7 +321,7 @@ so the true branch gap is much larger than the old envelope suggested.
 
 The latest completed designated partner `fleet03/B17` theorem is
 
-`yspennstate/math-open-problems@f593cf73a4e7547eac4183f8e61062fca5176706`,
+`private-source-repository@f593cf73a4e7547eac4183f8e61062fca5176706`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T021034Z-fleet03-B17-QFORM-r22/REPORT.md`.
 
 Its Section 4.1 proves the source-valid uniform local CLT for the normalized centered-uniform bank:
@@ -468,7 +468,7 @@ Equations (8.8)--(8.10) prove (2.3)--(2.4). The sign is analytic; the numerical 
 
 The required source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`,
 
 proves Theorem C: every exact rank-three `(+,+,-)` source-valid form with unit large eigenvalues obeys on the ruled side, including the cone `s=0`,

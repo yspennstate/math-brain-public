@@ -14,7 +14,7 @@ The assignment asks for a certificate that uses **one common Fourier sign assign
 The exact base inputs are:
 
 1. **Biased Booleanity gap:**  
-   `yspennstate/math-open-problems@603b35e74227d1c2d8ee34c0c527c439c686e30b:proofnet24/P03-fei/fleet-2026-09-21/fleet04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md`.  
+   `private-source-repository@603b35e74227d1c2d8ee34c0c527c439c686e30b:proofnet24/P03-fei/fleet-2026-09-21/fleet04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md`.  
    For the actual biased Fourier coefficient vector `a`, every nonempty multiplication equation is
    \[
    a^TM_Ua=0,
@@ -27,7 +27,7 @@ The exact base inputs are:
    \]
 
 2. **Exact influence I-projection:**  
-   `yspennstate/math-open-problems@4bd6d05f1eb8325d665f2748f4d74dcee2550a04:proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`.  
+   `private-source-repository@4bd6d05f1eb8325d665f2748f4d74dcee2550a04:proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`.  
    For every law `R` on nonempty spectral subsets with occurrence marginals `r`,
    \[
    D_2(R\Vert Q_r)=H_{\max}(r)-H(R).
@@ -35,7 +35,7 @@ The exact base inputs are:
    \]
 
 3. **Unweighted-L2 obstruction:**  
-   `yspennstate/math-open-problems@7ec649dfb3d1ab2f92855f2069590fca2ac956dd:proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md`.  
+   `private-source-repository@7ec649dfb3d1ab2f92855f2069590fca2ac956dd:proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md`.  
    On the genuine sparse suspension
    \[
    F_m(y,x)=y\,g_m(x),\qquad
@@ -47,7 +47,7 @@ The exact base inputs are:
 
 The **latest compatible named partner result actually consumed and applied** is fleet02/B13:
 
-`yspennstate/math-open-problems@a1b98a69cf168e8005c06190b71e76b456ad2cc9:proofnet24/P03-fei/fleet-2026-09-22/fleet02/B13/20260922T105348Z-selector-conditional-booleanity/REPORT.md`.
+`private-source-repository@a1b98a69cf168e8005c06190b71e76b456ad2cc9:proofnet24/P03-fei/fleet-2026-09-22/fleet02/B13/20260922T105348Z-selector-conditional-booleanity/REPORT.md`.
 
 For a physical selector `j` of bias `t`, residual equation `U`, and actual children `0,1`, it proves
 \[

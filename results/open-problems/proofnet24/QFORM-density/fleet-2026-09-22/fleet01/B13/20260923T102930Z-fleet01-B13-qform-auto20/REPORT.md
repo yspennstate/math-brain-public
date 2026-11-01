@@ -13,7 +13,7 @@ Fresh owner control before publication remained QFORM-only, revision `2026-09-22
 
 The designated partner result actually applied is `fleet02/B13` r24:
 
-- `yspennstate/math-open-problems@cc40e95933db0262eddb6e679211145a84dca081`
+- `private-source-repository@cc40e95933db0262eddb6e679211145a84dca081`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T085705Z-fleet02-B13-extremal-r24/REPORT.md`.
 
 Its cut-free higher exterior theorem states that, for
@@ -35,7 +35,7 @@ so an actual slab ratio `rho=P(Q in J)/|J|` forces
 
 The rank-three physical-principal-block receiver used below is the orientation-free rank-two/rank-three synthesis:
 
-- `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+- `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 - `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 For an invertible original-coordinate `3 x 3` principal block `M`, and a chosen coordinate in that block with `a=M_ii!=0`, the full ambient quadratic form, with arbitrary outside coefficients and couplings, satisfies

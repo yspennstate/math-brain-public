@@ -253,7 +253,7 @@ What it refutes is the **intermediate inference** from interval-only `1/2`-Holde
 
 The completed partner theorem `QFORM-SCALE-COVARIANT-CONJUGATE-SHEAR-v1` is available in
 
-`yspennstate/math-open-problems@ac574a6ed1858634443bf76098e21c56dd8114c5`,
+`private-source-repository@ac574a6ed1858634443bf76098e21c56dd8114c5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T051013Z-fleet04-B14-scale-shear-r7/REPORT.md`.
 

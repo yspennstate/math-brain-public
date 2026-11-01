@@ -79,7 +79,7 @@ The result below assumes only `M>0` inside this explicit witness class.
 
 The latest completed designated partner result is `fleet03/B17`, report
 
-`yspennstate/math-open-problems@e79bba262d16c5f629722431a39f563c0d8c4094:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T200542Z-fleet03-B17-QFORM-auto11/REPORT.md`
+`private-source-repository@e79bba262d16c5f629722431a39f563c0d8c4094:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T200542Z-fleet03-B17-QFORM-auto11/REPORT.md`
 
 (the mathematical theorem first appeared at `aa3701dba95126ebd65b11e54428db66dfc7f9dc`; later commits record/fix the checker output).
 
@@ -250,7 +250,7 @@ Combining (4.3) and (5.4) proves (3.1).
 
 I read the required source at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
 including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
@@ -276,7 +276,7 @@ This is stronger than merely invoking Theorem C's generic ceiling `pi sqrt(2)`, 
 
 For the two-sheet side `s<0`, I use the completed fleet01/B17 proof
 
-`yspennstate/math-open-problems@9cee470f9b774f59ad36ba4bbcdbc6339de4abe6:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260923T195220Z-fleet01-B17-QFORM-auto11/REPORT.md`.
+`private-source-repository@9cee470f9b774f59ad36ba4bbcdbc6339de4abe6:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260923T195220Z-fleet01-B17-QFORM-auto11/REPORT.md`.
 
 That argument respects the live `QFORM-TWOSHEET-XRAY-ONLY-FALSE` correction: it derives a special polar coarea formula for the triangular product density, proves strict sub-tip control near zero by a deleted-cone-segment versus inward-shift estimate, and handles the far negative side using its cyclic/log-concave envelope. It concludes exactly (3.2). Thus the present proof does not resurrect the refuted generic two-sheet X-ray shortcut.
 

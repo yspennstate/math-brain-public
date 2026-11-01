@@ -13,7 +13,7 @@ The full target remains the arbitrary-dimensional statement for independent orig
 
 Live corrections respected: no law-uniform pointwise quadratic oscillatory decay; no independence after rotations; no substitution of a projection-density cap for an indefinite quadratic pushforward; no arbitrary-joint coarea L-infinity claim; no positive conditional-projection-moment shortcut; and no deletion of small coefficients on translated/fragmented supports.
 
-Completed designated partner actually applied below: `fleet02/B13` r23, canonical mathematics `yspennstate/math-open-problems@892bfe36756e09cbaff3f05070f7a3e20fea0fd1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T040105Z-fleet02-B13-extremal-r23/REPORT.md`. Its theorem `QFORM-SCALAR-E2-LINF-OR-TRIHUB-v1` is inserted at an actual inner-Schur inequality in Section 4.
+Completed designated partner actually applied below: `fleet02/B13` r23, canonical mathematics `private-source-repository@892bfe36756e09cbaff3f05070f7a3e20fea0fd1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T040105Z-fleet02-B13-extremal-r23/REPORT.md`. Its theorem `QFORM-SCALAR-E2-LINF-OR-TRIHUB-v1` is inserted at an actual inner-Schur inequality in Section 4.
 
 ## 1. Exact extremal-product reduction extends to singular positive kernels
 

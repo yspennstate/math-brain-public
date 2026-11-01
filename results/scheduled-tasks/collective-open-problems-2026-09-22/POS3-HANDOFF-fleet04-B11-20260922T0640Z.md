@@ -2,7 +2,7 @@
 
 **Classification:** `ESSENTIAL_STEP_APPLIED`  
 **Parent POS3 status:** OPEN / NOT PROVED.  
-**Scientific report:** `proofnet24/collective-POS3/fleet04/B11/20260922T064000Z-B11-pos3-r17/REPORT.md` in `yspennstate/math-open-problems`, report commit `6a046ab4e6cb33a1311fbf7de41a3391d09999da`.
+**Scientific report:** `proofnet24/collective-POS3/fleet04/B11/20260922T064000Z-B11-pos3-r17/REPORT.md` in `private-source-repository`, report commit `6a046ab4e6cb33a1311fbf7de41a3391d09999da`.
 
 ## Exact result to consume
 

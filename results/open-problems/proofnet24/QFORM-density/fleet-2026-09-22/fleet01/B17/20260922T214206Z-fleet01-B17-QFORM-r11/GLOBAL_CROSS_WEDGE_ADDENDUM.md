@@ -5,7 +5,7 @@ attacking: the off-zero maximum in the saturated noncollinear two-heavy family, 
 
 Status: `SUPPORTING_SHARP-WITNESS_THEOREM / FULL QFORM OPEN`. Full-target continuity remains separately open. Execution memory: `WITHOUT_VERIFIED_BRAIN`.
 
-This addendum preserves the pre-existing immutable run report and adds a distinct theorem derived after consuming the newly completed designated-partner result fleet02/B17 `QFORM-SATURATED-OPPOSITE-HEAVY-ZERO-v1`, canonical proof `yspennstate/math-open-problems@3ebad57a9816b238c1f04dc3894971f10066d89b:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T214456Z-r11/REPORT.md`.
+This addendum preserves the pre-existing immutable run report and adds a distinct theorem derived after consuming the newly completed designated-partner result fleet02/B17 `QFORM-SATURATED-OPPOSITE-HEAVY-ZERO-v1`, canonical proof `private-source-repository@3ebad57a9816b238c1f04dc3894971f10066d89b:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T214456Z-r11/REPORT.md`.
 
 The partner supplies the exact source-valid family, for every angle `theta`, with heavy rows
 

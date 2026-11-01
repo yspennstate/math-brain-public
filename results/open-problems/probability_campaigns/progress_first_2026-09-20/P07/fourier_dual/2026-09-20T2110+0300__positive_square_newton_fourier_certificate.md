@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 
 **Status:** **OPEN / PROVED PARTIAL** on Randomstrasse101 Conjecture 18.  
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`.  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`.  
+**Repository / branch:** private `private-source-repository` / `master`.  
 **Fresh pre-write master:** `b18fa21185c8b647a03409b2ffb45ae916b8192e`.  
 **Previous own substantive checkpoint:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T2014+0300__cubic_preconditioning_matched_decoupling.md`.  
 **Latest complementary checkpoint read:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T2045+0300__repair_energy_obstruction_radial_cap_flattening.md`. P07-A owns the primal orthogonal-core / one-sided cap-flattening route. This report does not duplicate that work; it stays on a Fourier-dual feasible probability certificate.

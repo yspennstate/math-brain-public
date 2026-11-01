@@ -17,7 +17,7 @@ This run does not use law-uniform pointwise quadratic-phase decay, post-rotation
 
 The newest completed assigned-partner result found before publication is fleet02/B20 run `20260922T145947Z-fleet02-B20-QFORM-r12`, canonical source
 
-`yspennstate/math-open-problems@298793085cb203d47861ace564bcc5f74d647368`
+`private-source-repository@298793085cb203d47861ace564bcc5f74d647368`
 
 at
 
@@ -48,7 +48,7 @@ This run uses (2.1) numerically in the final density estimate below; the partner
 
 The ridge-window report
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 at `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`
 proves for any original-coordinate cross block `B` and `gamma>0`
@@ -64,7 +64,7 @@ when `B=B0+F`, `||F||<=eta`, and the ordinary range projection of `B0` has diago
 
 The newest completed fleet02/B02 theorem, run `20260922T153908Z-fleet02-B02-qform-auto11-7613470a`, canonical source
 
-`yspennstate/math-open-problems@cae1a86397cc15e6999c754c6657576f0d6abebd`
+`private-source-repository@cae1a86397cc15e6999c754c6657576f0d6abebd`
 
 at `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T153908Z-fleet02-B02-qform-auto11-7613470a/REPORT.md`, proves the dependence-safe square-pivot ridge theorem. Its concrete `q=1` corollary is:
 
@@ -252,7 +252,7 @@ The next unpaid step is to convert this **two-level physical localization** into
 ## 8. Source pins
 
 - fresh brain control/correction snapshot immediately before publication: `yspennstate/math-research-brain@bd43f8ef803327cd07b5e8b07c747bf810a0af3f`, owner revision `2026-09-22.5`;
-- newest completed assigned partner fleet02/B20: `yspennstate/math-open-problems@298793085cb203d47861ace564bcc5f74d647368`, report blob `2e2bb4c9b583f94b48fbf5952f1183dbff92e17f`;
-- ridge-window theorem: `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, report blob `1241fa7ba9a36a91bc75f047677f2daac764c2bf`;
-- completed fleet02/B02 square-pivot ridge theorem and analytic ridge review: `yspennstate/math-open-problems@cae1a86397cc15e6999c754c6657576f0d6abebd`, report blob `f459f8c9960baafd28a5878b041c0805c9d2c1af`;
-- completed fleet03/B20 scalar-pivot/Schur source used by the partner chain: `yspennstate/math-open-problems@7530e8c6ffd7284eb9c8acf1d79f36c335bf4fd6`.
+- newest completed assigned partner fleet02/B20: `private-source-repository@298793085cb203d47861ace564bcc5f74d647368`, report blob `2e2bb4c9b583f94b48fbf5952f1183dbff92e17f`;
+- ridge-window theorem: `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, report blob `1241fa7ba9a36a91bc75f047677f2daac764c2bf`;
+- completed fleet02/B02 square-pivot ridge theorem and analytic ridge review: `private-source-repository@cae1a86397cc15e6999c754c6657576f0d6abebd`, report blob `f459f8c9960baafd28a5878b041c0805c9d2c1af`;
+- completed fleet03/B20 scalar-pivot/Schur source used by the partner chain: `private-source-repository@7530e8c6ffd7284eb9c8acf1d79f36c335bf4fd6`.

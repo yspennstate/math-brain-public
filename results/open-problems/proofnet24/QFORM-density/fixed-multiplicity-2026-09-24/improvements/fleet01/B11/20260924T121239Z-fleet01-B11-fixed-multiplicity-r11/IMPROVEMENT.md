@@ -1,7 +1,7 @@
 # fleet01/B11 improvement note — constants, nonsymmetric Schur count, terminal r=4 saturation
 
 Run: `20260924T121239Z-fleet01-B11-fixed-multiplicity-r11`  
-Baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 This note records only rigorously proved improvements/obstructions. It does **not** claim a 16-eigenvalue theorem or the unrestricted three-eigenvalue conjecture.
 

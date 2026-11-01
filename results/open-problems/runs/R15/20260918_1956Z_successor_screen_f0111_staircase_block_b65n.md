@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R15 retained screen — exact block-Pascal staircase factorization
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R15, CLOSABLE OUTSIDE.
 
 All mathematics newly derived below is **SELF_CHECK_ONLY** unless explicitly identified as source or previously proved R15 material. I do not mark Talagrand Problem 10.9, Burdzy–Scheutzow Problem 7.2, or any larger source problem solved. No novelty claim is made without independent audit and a fuller citation-graph search.

@@ -16,10 +16,10 @@ The target is unchanged: for every dimension, independent real ORIGINAL-coordina
 
 The principal sources actually used are:
 
-1. Own preceding aggregate theorem: `yspennstate/math-open-problems@bcecea864b0c99b14a47665b87f9c9ea6fde4b41`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T110318Z-r23/REPORT.md`. It proves the fixed-double-pair extension identity and aggregate physical-edge extraction.
-2. Completed designated partner fleet02/B07: `yspennstate/math-open-problems@3e36370502df5afeb00457b74d05cdbfd87168b0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T104812Z-fleet02-B07-qform-r13/REPORT.md`. Its `QFORM-PAIRTAIL-CURVATURE-RECEIVER-v1` is applied below to an actual physical principal-pair inequality.
+1. Own preceding aggregate theorem: `private-source-repository@bcecea864b0c99b14a47665b87f9c9ea6fde4b41`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T110318Z-r23/REPORT.md`. It proves the fixed-double-pair extension identity and aggregate physical-edge extraction.
+2. Completed designated partner fleet02/B07: `private-source-repository@3e36370502df5afeb00457b74d05cdbfd87168b0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T104812Z-fleet02-B07-qform-r13/REPORT.md`. Its `QFORM-PAIRTAIL-CURVATURE-RECEIVER-v1` is applied below to an actual physical principal-pair inequality.
 3. Fleet03/B07 curvature compiler: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T104247Z-fleet03-B07-qform-r32/REPORT.md` on current master. Its deterministic `QFORM-TWOSTAR-CURVATURE-E2-OR-R1-v1` and anchored-H3 lift are applied after this run converts coefficient singular vectors back to actual physical stars.
-4. Completed determinant-volume theorem D5: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, path `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. It gives `||p_Q||_infinity <= 5 sqrt(2e) E_5^{-1/10}` for a physical cross block, with no marginal condition.
+4. Completed determinant-volume theorem D5: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, path `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. It gives `||p_Q||_infinity <= 5 sqrt(2e) E_5^{-1/10}` for a physical cross block, with no marginal condition.
 
 The current fleet02/B07 11:38Z checkpoint independently found the same elementary-symmetric rank-four/fifth-volume ladder used in Section 6 below. It is a live checkpoint, not used as a completed premise; the derivation is reproduced here.
 

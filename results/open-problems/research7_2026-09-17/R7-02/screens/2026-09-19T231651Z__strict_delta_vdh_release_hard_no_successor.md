@@ -4,7 +4,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 
 ## Snapshot / continuity
 
-- Repository: private `yspennstate/math-open-problems`, existing `master`.
+- Repository: private `private-source-repository`, existing `master`.
 - Invocation-start captured master: `e56b07fd70494c80c70e53000a572439110937f6`.
 - Fresh pre-write master: `cd63886a7cece76af26e5913fde73a367f4c9c94`.
 - Previous own immutable report: `research7_2026-09-17/R7-02/runs/2026-09-19/2026-09-19T222500Z__report.md`, creation commit `25416f1311c7ccbe5727e251c09b827a439bb644`.

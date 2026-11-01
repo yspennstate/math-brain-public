@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R06 — P0219 ownership transition and source-exact successor-admission delta
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Lane: **CLOSABLE OUTSIDE**.
 
 ## 1. Frozen Lyons–Peres source remains frozen

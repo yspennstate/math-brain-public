@@ -22,7 +22,7 @@ The live corrections were re-read before this write. In particular this report d
 
 The designated partner result was consumed in full from
 
-`yspennstate/math-open-problems@4b8eb43e9d001d41de6190b587fefe8fdea2006b`,
+`private-source-repository@4b8eb43e9d001d41de6190b587fefe8fdea2006b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T185427Z-fleet02-B12-QFORM-r11/REPORT.md`.
 
 Its exact block theorem is: for an ORIGINAL-coordinate decomposition
@@ -55,7 +55,7 @@ This is valid without declaring the completed square independent of its residual
 
 I also consumed the complete current theorem from
 
-`yspennstate/math-open-problems@1c4f1eba5940275a1e0454581a1a870707944137`,
+`private-source-repository@1c4f1eba5940275a1e0454581a1a870707944137`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T190034Z-fleet03-B03-QFORM-r18/REPORT.md`.
 
 Partition independent ORIGINAL coordinates into disjoint blocks `(U,V,W)`. If `T` has rank `r>=1`, positive singular values `sigma_1,...,sigma_r`,

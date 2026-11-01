@@ -16,11 +16,11 @@ The full conjecture remains OPEN. This run repairs one important branch that had
 
 Completed fleet02/B03 dependencies actually read and applied:
 
-1. `yspennstate/math-open-problems@33cd6fae4e8adb85cf1ee43a244f628e563f1cbf`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T161346Z-fleet02-B03-QFORM-r12/REPORT.md`:
+1. `private-source-repository@33cd6fae4e8adb85cf1ee43a244f628e563f1cbf`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T161346Z-fleet02-B03-QFORM-r12/REPORT.md`:
    for an arbitrary affine perturbation of an invertible indefinite binary quadratic with determinant magnitude `Delta`,
    `sup_t E|t-R|^(-1/2) <=16 sqrt(2) Delta^(-1/4)`.
 
-2. `yspennstate/math-open-problems@ab591d183afaaeb8c8accbc9a80c06241f433532`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T041654Z-fleet02-B03-QFORM-auto11/REPORT.md`:
+2. `private-source-repository@ab591d183afaaeb8c8accbc9a80c06241f433532`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T041654Z-fleet02-B03-QFORM-auto11/REPORT.md`:
    after completing an invertible indefinite original-coordinate pair `P`, if the scalar/bank residual obeys
    `sup_t P(|R-t|<=rho)<=H sqrt(rho)`, then, with `D=|det P|`, `kappa=sigma_min(P)`,
    `||p_Q||_infinity <=4 sqrt(2H)(D kappa)^(-1/4)`.

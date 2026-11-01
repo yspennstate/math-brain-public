@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R15 retained screen — the quadratic contact SDP, a rank-one no-go, and a curvature-sparing replacement
 
 Date checked: 2026-09-19 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R15, CLOSABLE OUTSIDE.
 
 All new mathematics below is **SELF_CHECK_ONLY**. Nothing here reopens Burdzy–Scheutzow Problem 7.2 after its mandatory six-run handoff, promotes F0111 from `PENDING / NOT READY`, claims publication novelty, or satisfies the fleet closure/audit standard.

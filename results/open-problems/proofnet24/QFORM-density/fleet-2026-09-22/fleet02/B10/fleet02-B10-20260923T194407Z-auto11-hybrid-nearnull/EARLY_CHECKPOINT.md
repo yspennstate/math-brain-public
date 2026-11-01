@@ -105,7 +105,7 @@ Some deterministic original-coordinate split attains at least its expectation. Q
 
 The required ruled-level theorem in
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`
 
 is used, not reproved: after choosing the global sign so an indefinite exact-rank-three core has signature `(2+,1-)`, every majority-sign level `s>=0` already satisfies
 
@@ -117,7 +117,7 @@ Thus the punctured near-coloop work may be confined to the minority/two-sheet si
 
 The new complete theorem at
 
-`math-open-problems@51d2edb29d7a4c150e4d47ed3a6685875a8483ae:proofnet24/QFORM-density/interactive/20260923T191000Z-small-hub-square-coarea/GENERAL_3D_CORE.md`
+`private-source@51d2edb29d7a4c150e4d47ed3a6685875a8483ae:proofnet24/QFORM-density/interactive/20260923T191000Z-small-hub-square-coarea/GENERAL_3D_CORE.md`
 
 closes the TRUE spectral-coloop endpoint `rho=0` even when the hub Rayleigh coefficient is nonzero. Indeed, if `c=1`, the leaves lie exactly in `e^perp`; choose an orthonormal transverse basis and let `(L,V)` be the corresponding two orthogonal projections of the original leaf product vector. Their joint density is at most two. The physical hub `X_0` is independent of `(L,V)`. The resulting exact three-variable quadratic core is orthogonally congruent to `M`, hence has smallest singular value at least one, while its hub diagonal is `alpha=A_00` with `|alpha|<1/64`. The cited general three-variable theorem therefore gives
 

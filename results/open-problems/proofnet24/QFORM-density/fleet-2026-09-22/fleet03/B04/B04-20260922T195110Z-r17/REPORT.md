@@ -23,7 +23,7 @@ The proof-first owner request names **translation-uniform fractional-trace synth
 
 Completed source:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`
 
@@ -41,7 +41,7 @@ The present run applies the **sharper in-range constant** after rescaling two in
 
 Completed same-role source:
 
-`yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`
+`private-source-repository@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T181702Z-dac07509/REPORT.md`
 

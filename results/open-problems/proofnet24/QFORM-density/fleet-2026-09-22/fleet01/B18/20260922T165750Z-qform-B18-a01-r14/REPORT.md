@@ -25,7 +25,7 @@ This is applied to a normalized linear form in the **original independent coordi
 
 Latest completed compatible `fleet02/B18` result at source refresh:
 
-`yspennstate/math-open-problems@f985e95ceec640cdc37cffc34fab07bb2687a414`,
+`private-source-repository@f985e95ceec640cdc37cffc34fab07bb2687a414`,
 
 report root `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/`, theorem `QFORM-LPP-FULL-THREE-BANK-v1`.
 

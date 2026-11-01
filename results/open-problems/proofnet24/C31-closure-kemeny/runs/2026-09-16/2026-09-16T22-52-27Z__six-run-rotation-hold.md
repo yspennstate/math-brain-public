@@ -2,7 +2,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; this was not
 
 # C31 immutable run report — six-run rotation hold
 
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 Own root: `proofnet24/C31-closure-kemeny`.
 
 ## 1. Continuity and controlling state

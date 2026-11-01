@@ -1,6 +1,6 @@
 # QFORM-FIXED-MULTIPLICITY-9-CONSTANT-2600-v1
 
-Pinned baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Pinned baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 Nine-direction source: fleet03/B04 candidate at `8ff490c177d0cd7d6f33130f1431785e312a9d10`, independently reconstructed by fleet01/B16 (`54ec2a651d854563f8db0d92c4c3426f76551786`), fleet03/B08 (`c02a08f19d010e508578695a5906744fdbcfcd70`), and independently again in fleet03/B10 audit commit `62504c6e976c8b45ae373b8141b111cc31507a1d`.
 

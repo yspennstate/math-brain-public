@@ -166,7 +166,7 @@ So no new low-rank-one debt is created.
 
 Use the completed fleet02/B02 marginal-free physical-third-volume theorem, pinned through
 
-`yspennstate/math-open-problems@aeaba9e3351623ead11450857c2d014b43664aef`,
+`private-source-repository@aeaba9e3351623ead11450857c2d014b43664aef`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T200844Z-fleet02-B02-qform-auto11/REPORT.md`.
 
 For every literal physical cross block `B` with `E3(B)>0`, it gives genuine unweighted Fourier `L1` and

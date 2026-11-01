@@ -14,7 +14,7 @@ The live owner corrections remain binding: no arbitrary-joint three-dimensional 
 
 The source-pinned package is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 at `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
@@ -26,7 +26,7 @@ for a literal independent cap-one square coordinate (with the usual completed-sq
 
 The newest compatible fleet03/B05 result used here is r40,
 
-`yspennstate/math-open-problems@e7f663c23c3e00b53c51054040ea9b1e54c5e5a8`,
+`private-source-repository@e7f663c23c3e00b53c51054040ea9b1e54c5e5a8`,
 
 which proves the exact cross-star decomposition
 
@@ -38,7 +38,7 @@ I also use the fresh fleet02/B01 theorem
 
 `QFORM-ZERODIAG-EDGE-HALFRIESZ-v1`,
 
-`yspennstate/math-open-problems@6efd5124aa67510aa22fb5aff7acd57463050ba8`,
+`private-source-repository@6efd5124aa67510aa22fb5aff7acd57463050ba8`,
 
 which gives, for a literal zero-diagonal endpoint and literal edge `mu`,
 

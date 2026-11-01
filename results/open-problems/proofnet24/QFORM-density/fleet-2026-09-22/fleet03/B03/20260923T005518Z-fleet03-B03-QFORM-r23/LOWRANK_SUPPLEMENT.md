@@ -72,7 +72,7 @@ Thus the same mechanism becomes stronger, rather than weaker, on a genuinely ran
 
 Use Proposition 4.1 of
 
-`yspennstate/math-open-problems@f68817886312b904e2cf86ccbfb14f4f130229f3:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/hub_decoupling/REPORT.md`.
+`private-source-repository@f68817886312b904e2cf86ccbfb14f4f130229f3:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/hub_decoupling/REPORT.md`.
 
 For the duplicated `J_0=J_V union J_L` coordinates put `W=X-X'`; its coordinates remain independent probability densities bounded by one.  For the hub difference `sigma=X_h-X_h'`, the source ambiguity function satisfies
 
@@ -211,7 +211,7 @@ Apply the valid fleet04/B03 partner lemma
 
 from
 
-`yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`.
+`private-source-repository@28681f9af7c2307f80968df86010084019599e38:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`.
 
 This gives the actual new rank-r collision inequality
 

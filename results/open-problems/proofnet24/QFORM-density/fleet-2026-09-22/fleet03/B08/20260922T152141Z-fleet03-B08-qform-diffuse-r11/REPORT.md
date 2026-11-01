@@ -16,7 +16,7 @@ This is a deliberate mechanism change from the preceding B08 run. The preceding 
 
 The designated assignment partner `fleet04/B08` had no completed current-QFORM handoff at both fresh checks made in this run, so no theorem is attributed to that slot. A compatible completed fleet04 theorem is nevertheless applied mathematically below: fleet04/B18's `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, source report
 
-`yspennstate/math-open-problems@6676b37d6b7c0557bd618f0273f0b58abbec0ca0:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
+`private-source-repository@6676b37d6b7c0557bd618f0273f0b58abbec0ca0:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
 The other completed B08 input used is the earlier rank-three diffuse theorem `QFORM-DIFFUSE-RANK3-BL-v1`, whose relevant consequence is: if `W` has three orthonormal columns, every row leverage is at most `1/2`, and `B` is an invertible real symmetric `3 x 3` coefficient matrix, then for arbitrary independent input coordinates with densities bounded by one,
 

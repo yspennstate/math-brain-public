@@ -2,7 +2,7 @@ Model actually running: GPT-5.6 Sol. Reasoning level: UNVERIFIED; this was not G
 
 # C29 — exact centered two-defect five-point hull
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Own root: `proofnet24/C29-closure-brownian-shapes`.
 Run date: 2026-09-16 UTC / 2026-09-17 local campaign date.
 Delivery: private GitHub only. No email/Gmail, Drive, public posting, paid compute, access change, peer-file edit, shared-ledger edit, or new schedule.

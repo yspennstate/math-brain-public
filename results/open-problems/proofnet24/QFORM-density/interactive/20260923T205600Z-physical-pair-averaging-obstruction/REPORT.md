@@ -35,4 +35,4 @@ The remaining area lies in **cross-pair** minors. A successful convolution or Ro
 
 For context, if the original coordinates are independent identical Gaussians with variance large enough that their densities are at most one, then this very same orthonormal frame yields independent Gaussian \(L,V,P\), and the all-target RW2 estimate follows from the independent-leakage theorem with a universal constant. Thus the frame is an obstruction to a pairwise *proof*, not evidence that RW2 itself fails.
 
-Related: [conditioned planar-bank RW2 theorem](https://github.com/yspennstate/math-open-problems/blob/d9a9e74e807d3c4687802a347de2006e130b3938/proofnet24/QFORM-density/interactive/20260923T205000Z-conditioned-planar-bank-rw2/REPORT.md).
+Related: [conditioned planar-bank RW2 theorem](private-source-repository).

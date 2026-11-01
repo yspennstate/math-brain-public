@@ -3,7 +3,7 @@ Model: GPT-5.6 Sol. Reasoning: UNVERIFIED; the scheduler exposes no model select
 # P04 Target 1 / squared-ridge outside-audit packet
 
 Date: 2026-09-16 14:45:12 +03:00 (Asia/Jerusalem)  
-Repository: `yspennstate/math-open-problems`  
+Repository: `private-source-repository`  
 Branch: `master`  
 Owner track: `proofnet24/P04-kernel-conjectures`  
 Controlling fleet protocol: `operations/FLEET_2026-09-16.md`, blob `6cdbe40094b889a25df1264706dff55312601429`.

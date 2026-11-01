@@ -16,7 +16,7 @@ The live correction set was reread. Nothing below uses post-rotation independenc
 
 The immediate B10 source is r21,
 
-`yspennstate/math-open-problems@3136d1f31dd7e723ddef05d06edce6fe769dc384`
+`private-source-repository@3136d1f31dd7e723ddef05d06edce6fe769dc384`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T231827Z-fleet03-B10-QFORM-r21/REPORT.md`.
 
@@ -26,7 +26,7 @@ The analytic engine used in this run is the completed capped-basis Fresnel theor
 
 at
 
-`yspennstate/math-open-problems@8c04ccbc1f032d1a82ad505223f08e3c344bde74`
+`private-source-repository@8c04ccbc1f032d1a82ad505223f08e3c344bde74`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T225705Z-qform-B18-a01-r19/REPORT.md`.
 

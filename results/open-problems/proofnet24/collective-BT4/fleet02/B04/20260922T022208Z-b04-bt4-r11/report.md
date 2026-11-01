@@ -19,7 +19,7 @@ As in the inherited lead state, a counterexample may be reduced first to an orie
 ## Exact research state consumed
 
 Latest complete campaign-lead version actually read:
-- `yspennstate/math-open-problems`, report `proofnet24/collective-BT4/fleet02/B04/20260922T011943Z-b04-bt4-r11/report.md`;
+- `private-source-repository`, report `proofnet24/collective-BT4/fleet02/B04/20260922T011943Z-b04-bt4-r11/report.md`;
 - immutable commit `ca30763c69284b71c197ba0f49e37962f07e30c3`;
 - report Git blob `ee3294c169f9736cd8f0fdb943b5cefab5906a9e`.
 

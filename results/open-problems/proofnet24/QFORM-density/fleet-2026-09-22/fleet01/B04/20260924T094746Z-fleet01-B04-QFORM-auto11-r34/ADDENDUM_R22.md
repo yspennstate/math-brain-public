@@ -2,7 +2,7 @@
 
 This addendum records the newest designated partner result consumed after the main r34 report was committed.
 
-Partner source: `yspennstate/math-open-problems@2311fa678098f3ac7b96e5eb3795d9def07cc2fd`, fleet02/B04 r22, theorem `QFORM-ZEROPIVOT-J1-WEIGHTED-MIXED-HUB-v1`.
+Partner source: `private-source-repository@2311fa678098f3ac7b96e5eb3795d9def07cc2fd`, fleet02/B04 r22, theorem `QFORM-ZEROPIVOT-J1-WEIGHTED-MIXED-HUB-v1`.
 
 Let `A_J1=[[0,a^T],[a,vv^T]]` be the partner's pure localized-J1 carrier with 144 residual coordinates, `v_i=1/12` for every `i`, and `a_i=+1/12` on 72 coordinates and `a_i=-1/12` on 72 coordinates. Then `||a||_2=||v||_2=1`, `a.v=0`, and the nonzero spectrum is exactly `{1,1,-1}`. The partner's globally optimized disjoint-pair law has `G_*=1`, hence
 

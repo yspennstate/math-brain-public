@@ -18,13 +18,13 @@ Fresh owner control remained QFORM-only, revision `2026-09-22.15`, with the proo
 
 The required Claude source was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
 I use its physical-cross-block D'/D5 route only through source-valid product-coordinate statements. The q-dependent sharp Hausdorff--Young refinement is taken from
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -38,7 +38,7 @@ and the proof gives a genuine unweighted `L1_t` characteristic-function estimate
 
 The newest compatible designated partner is `fleet03/B02` r29,
 
-`yspennstate/math-open-problems@e28bdce394cdb3d096de191390ea5cca0b3cdef9`,
+`private-source-repository@e28bdce394cdb3d096de191390ea5cca0b3cdef9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T120105Z-fleet03-B02-qform-r29/REPORT.md`.
 
@@ -79,7 +79,7 @@ The previous fleet02/B02 transport theorem used below is
 
 canonical report
 
-`yspennstate/math-open-problems@6f408fc6a3726d1dc6ea86f7ef322ca291c85e12`,
+`private-source-repository@6f408fc6a3726d1dc6ea86f7ef322ca291c85e12`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T100819Z-fleet02-B02-qform-r11/REPORT.md`.
 

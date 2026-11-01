@@ -14,7 +14,7 @@ Target: for independent real inputs with densities bounded by one and symmetric 
 
 From fleet02/B12 run `20260922T235544Z-fleet02-B12-qform`, canonical proof
 
-`yspennstate/math-open-problems@3afc8473206ce82f5f6b19b9e88f8c9fa32ff058:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T235544Z-fleet02-B12-qform/REPORT.md`,
+`private-source-repository@3afc8473206ce82f5f6b19b9e88f8c9fa32ff058:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T235544Z-fleet02-B12-qform/REPORT.md`,
 
 if a physical original-coordinate triple S has `sigma_min(B)>=kappa` and the actual perturbation on that triple has operator norm at most Delta<kappa, then after conditioning all outside original coordinates the affine 3D theorem gives a **continuous** density with
 
@@ -26,7 +26,7 @@ The outside quadratic form and cross couplings are arbitrary. This is an origina
 
 From
 
-`yspennstate/math-open-problems@b3c543b40dfaef13468466fa82625303a7719af8:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md`,
+`private-source-repository@b3c543b40dfaef13468466fa82625303a7719af8:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md`,
 
 if a physical 3x3 block has at least two eigenvalues >=L, or at least two <=-L, with its third eigenvalue arbitrary, then the full ambient form has an essentially bounded density with
 

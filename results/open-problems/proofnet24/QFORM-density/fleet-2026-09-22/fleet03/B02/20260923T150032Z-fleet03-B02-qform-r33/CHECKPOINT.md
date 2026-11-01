@@ -1,6 +1,6 @@
 # fleet03/B02 r33 early mathematical checkpoint
 
-Live predecessor: fleet03/B02 r32, `yspennstate/math-open-problems@3cc1145d1fb015deed33085d536db7156d918225`.
+Live predecessor: fleet03/B02 r32, `private-source-repository@3cc1145d1fb015deed33085d536db7156d918225`.
 
 On its residual anchored-second-volume branch, reorder the literal residual block as
 

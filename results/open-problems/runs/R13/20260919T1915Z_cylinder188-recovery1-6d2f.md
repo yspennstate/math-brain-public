@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — this was
 # R13 — Boolean Komlós STUCK1 recovery 1: exact no-go for every six-column full-alignment cover at 47/25
 
 Run ID: `20260919T1915Z_cylinder188-recovery1-6d2f`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R13  
 Lane: **HARD OUTSIDE**
 

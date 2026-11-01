@@ -11,7 +11,7 @@ The unrestricted conjecture is not claimed solved. The full continuity conclusio
 ## 1. Sources actually used
 
 1. Current one-scale ridge theorem and its perturbation estimate:
-   `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+   `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
    `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
    For an original-coordinate cross block `B`, `gamma>0`,
@@ -27,7 +27,7 @@ The unrestricted conjecture is not claimed solved. The full continuity conclusio
    `K_ii <= (sqrt(ell0)+eta/gamma)^2`.
 
 2. Designated partner fleet02/B08 r27:
-   `yspennstate/math-open-problems@41ee49f6e9c3383e4c3a322bdc52779768a17eb7`,
+   `private-source-repository@41ee49f6e9c3383e4c3a322bdc52779768a17eb7`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T130941Z-fleet02-B08-qform-diffuse-r27/REPORT.md`.
 
    In particular its exact diffuse family

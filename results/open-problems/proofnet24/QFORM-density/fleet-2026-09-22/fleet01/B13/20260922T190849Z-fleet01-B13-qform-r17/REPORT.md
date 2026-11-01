@@ -15,7 +15,7 @@ The full QFORM conjecture remains **OPEN / NOT PROVED**. This report attacks the
 
 The designated partner result actually used is fleet02/B13 run `20260922T182158Z-fleet02-B13-qform-4ebdd821`, canonical report
 
-`yspennstate/math-open-problems@d511859edaa636cdc00fcd64155ab07506875c3d`,
+`private-source-repository@d511859edaa636cdc00fcd64155ab07506875c3d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T182158Z-fleet02-B13-qform-4ebdd821/REPORT.md`.
 
 It proves the following exact-rank-three trichotomy. Write
@@ -44,7 +44,7 @@ when `Delta_ij=||r_i wedge r_j||^2>0` and both diagonals have modulus at most `|
 
 I also apply fleet02/B13's exact bang-bang reduction
 
-`yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`,
+`private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`:
 for every fixed measurable slab kernel, the supremum over independent densities `0<=f_i<=1`, `int f_i=1`, equals the supremum over product indicators of arbitrary measurable sets `E_i` with `|E_i|=1`, with zero constant loss.
 

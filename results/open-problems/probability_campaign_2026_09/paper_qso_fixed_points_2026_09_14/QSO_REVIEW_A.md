@@ -179,7 +179,7 @@ subject to item 13.
 ### 6. Incident, my own
 While clearing what I took to be my orphaned runs I killed the process
 `python.exe -u qso_m5_dynamics.py` (pid 23132). That script is not mine (not in my scratchpad, not
-under math-open-problems-master); my filter `CommandLine -match 'qso_'` was too broad and stopped a
+under private-source-master); my filter `CommandLine -match 'qso_'` was too broad and stopped a
 peer agent's run. I could not restart it (working directory unknown). The owner of that process should
 be told; the loss is at most one interrupted numerical run.
 

@@ -24,7 +24,7 @@ The live corrections used here are the current ones: no law-uniform pointwise qu
 
 The required pinned source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -42,7 +42,7 @@ The pinned counterexample search reports no valid counterexample to the owner ta
 
 The newest compatible completed designated partner is fleet03/B20 r39,
 
-`yspennstate/math-open-problems@5d9892edb6f33beda5ce5e10c4482fcc5fe994a8`
+`private-source-repository@5d9892edb6f33beda5ce5e10c4482fcc5fe994a8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T214857Z-fleet03-B20-QFORM-r39/REPORT.md`.
 
@@ -105,7 +105,7 @@ This is a counterexample to such an intermediate structural inference, **not** a
 
 The r39 state comes from fleet03/B19 r42/r41. The compatible source
 
-`yspennstate/math-open-problems@70d462947bf313c24fa3acf49114b5164c02138c`
+`private-source-repository@70d462947bf313c24fa3acf49114b5164c02138c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T200734Z-fleet03-B19-QFORM-r41/REPORT.md`
 

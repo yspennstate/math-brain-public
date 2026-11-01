@@ -12,8 +12,8 @@ This report proves a new **continuous-density branch** of that exact target. It 
 
 The two source inputs are:
 
-1. `QFORM-RIDGE-DENSITY-v1` / `QFORM-SPECTRAL-WINDOW-DENSITY-v1`, interactive report `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, which proves the free-regularizer graph estimate, its ridge criterion, the perturbation lemma, and the MSS spectral-window construction.
-2. Assigned partner `fleet04/B20`, `QFORM conditioned-whitened diffuse extraction`, `yspennstate/math-open-problems@94bf446b8547b1124a37033e940ef594c460b64f`. Its exact conditioning identity and residual-frame whitening are applied below to an actual inequality. Its final theorem uses the entire range; here the same proved whitening step is spliced to the one-scale ridge argument so arbitrary small nonseparable spectrum is retained.
+1. `QFORM-RIDGE-DENSITY-v1` / `QFORM-SPECTRAL-WINDOW-DENSITY-v1`, interactive report `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, which proves the free-regularizer graph estimate, its ridge criterion, the perturbation lemma, and the MSS spectral-window construction.
+2. Assigned partner `fleet04/B20`, `QFORM conditioned-whitened diffuse extraction`, `private-source-repository@94bf446b8547b1124a37033e940ef594c460b64f`. Its exact conditioning identity and residual-frame whitening are applied below to an actual inequality. Its final theorem uses the entire range; here the same proved whitening step is spliced to the one-scale ridge argument so arbitrary small nonseparable spectrum is retained.
 
 ## 2. New theorem: conditioned spectral-window closure
 

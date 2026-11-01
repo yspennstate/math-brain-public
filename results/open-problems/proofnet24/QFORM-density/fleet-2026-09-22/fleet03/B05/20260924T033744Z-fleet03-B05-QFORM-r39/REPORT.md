@@ -14,7 +14,7 @@ Full-target continuity: **OPEN**. The theorem below proves absolute continuity a
 
 The immediate own predecessor is
 
-`yspennstate/math-open-problems@f24ae277a541417edf1ee63edcc002fd290ab6e6`
+`private-source-repository@f24ae277a541417edf1ee63edcc002fd290ab6e6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260924T023738Z-fleet03-B05-QFORM-r38/REPORT.md`.
 
@@ -83,7 +83,7 @@ for a deterministic vector `b` and constant `c_0`.
 
 The remaining coordinates `Z` are still literal independent original coordinates with density caps one. The source-valid rank-one affine small-ball lemma from
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`
 
@@ -195,7 +195,7 @@ This is a uniform-limit argument, not the forbidden claim that a small unbounded
 
 The newest fleet01/B05 structural addendum at
 
-`yspennstate/math-open-problems@b8c42cc3e7d06ba1362b8138887c79de8940348b`
+`private-source-repository@b8c42cc3e7d06ba1362b8138887c79de8940348b`
 
 proves the exact identity, in its heavy-null rank-three coordinates,
 
@@ -230,7 +230,7 @@ The completed designated-partner theorem
 
 is at
 
-`yspennstate/math-open-problems@33cabb3bd5e466a58adc6eac49eba210ef62ef14`
+`private-source-repository@33cabb3bd5e466a58adc6eac49eba210ef62ef14`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260924T011830Z-fleet04-B05-convex-pair-r3/REPORT.md`.
 
@@ -274,9 +274,9 @@ Full QFORM remains **OPEN / NOT PROVED / NOT DISPROVED**. Full-target continuity
 
 ## 6. Source pins
 
-- Own determinant-only pair theorem: `yspennstate/math-open-problems@f24ae277a541417edf1ee63edcc002fd290ab6e6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260924T023738Z-fleet03-B05-QFORM-r38/REPORT.md`.
-- Rank-one affine small-ball source: `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
-- Current heavy-row determinant-star addendum: `yspennstate/math-open-problems@b8c42cc3e7d06ba1362b8138887c79de8940348b`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260924T015848Z-fleet01-B05-QFORM-auto11/STRUCTURAL_ADDENDUM.md`.
-- Designated partner fleet04/B05: `yspennstate/math-open-problems@33cabb3bd5e466a58adc6eac49eba210ef62ef14`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260924T011830Z-fleet04-B05-convex-pair-r3/REPORT.md`.
+- Own determinant-only pair theorem: `private-source-repository@f24ae277a541417edf1ee63edcc002fd290ab6e6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260924T023738Z-fleet03-B05-QFORM-r38/REPORT.md`.
+- Rank-one affine small-ball source: `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+- Current heavy-row determinant-star addendum: `private-source-repository@b8c42cc3e7d06ba1362b8138887c79de8940348b`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260924T015848Z-fleet01-B05-QFORM-auto11/STRUCTURAL_ADDENDUM.md`.
+- Designated partner fleet04/B05: `private-source-repository@33cabb3bd5e466a58adc6eac49eba210ef62ef14`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260924T011830Z-fleet04-B05-convex-pair-r3/REPORT.md`.
 
 Repository retrieval and Git delivery do not establish native learned-memory ingestion. `full_brain_connected=false`; execution remains `WITHOUT_VERIFIED_BRAIN`.

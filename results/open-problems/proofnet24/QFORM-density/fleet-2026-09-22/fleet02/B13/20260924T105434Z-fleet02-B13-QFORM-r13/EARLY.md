@@ -22,7 +22,7 @@ or there is an ORIGINAL-coordinate indefinite principal pair `B=A[{k,j},{k,j}]` 
 `kappa:=s_min(B) >= 13/112`.
 
 Apply the completed arbitrary-rank physical-pair theorem at
-`math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`:
+`private-source@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`:
 for `s_3(A)>=s>0`, every such pair gives
 
 `||p_Q||_infinity <= 3*400^(1/3)*(D^2*kappa*s)^(-1/6)`

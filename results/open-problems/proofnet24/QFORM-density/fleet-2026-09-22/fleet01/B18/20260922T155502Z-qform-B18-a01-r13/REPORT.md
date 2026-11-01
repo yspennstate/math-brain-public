@@ -19,7 +19,7 @@ The full conjecture remains open. The live correction set forbids post-rotation 
 
 The designated partner result actually used is fleet02/B18:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `f985e95ceec640cdc37cffc34fab07bb2687a414`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/fleet02-B18-20260922T153407Z-qform-lit/REPORT.md`
 - theorem `QFORM-LPP-FULL-THREE-BANK-v1`.

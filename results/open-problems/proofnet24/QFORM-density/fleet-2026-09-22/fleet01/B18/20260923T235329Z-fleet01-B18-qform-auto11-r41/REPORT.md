@@ -14,7 +14,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The latest completed designated-partner report used below is fleet02/B18:
 
-- `yspennstate/math-open-problems@3e4aa614ab09df1badb2f169d00141189204134b`
+- `private-source-repository@3e4aa614ab09df1badb2f169d00141189204134b`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/fleet02-B18-20260923T230752Z-r11/REPORT.md`.
 
 It proves/records the exact tetrahedral four-bank target family, the identity `Q=S^T K S` with `K=I_4-(1/4)11^T`, its spectrum `{1,1,1,0}`, and a global continuous-density bound `<=12` from the pinned diffuse theorem. It also records the source-valid LPP transfer for the bank sums.

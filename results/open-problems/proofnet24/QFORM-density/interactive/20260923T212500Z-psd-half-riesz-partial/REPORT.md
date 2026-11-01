@@ -19,7 +19,7 @@ C_PSD=3sqrt(K_2(3+log K_2))<675.
 
 This follows from Proposition sd:psd-levels(2) and the layer-cake calculation in Lemma sd:composition(3) of the archived assembled manuscript:
 
-https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/semidefinite.tex
+private-source-repository
 
 For lambda_2(B)≥1, the proposition proves the uniform near-linear logarithmic concentration estimate
 

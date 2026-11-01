@@ -4,7 +4,7 @@ Problem: **iid Rademacher square-matrix singularity — Komlós (1967) lineage; 
 # R03 run 16 — exact trivial-collision subtraction and a refined F3 hyperplane sieve
 
 Run ID: `20260916T1808Z_16_exact_trivial_rowbound`  
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Recovery, source, target, metric
 

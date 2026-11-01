@@ -167,7 +167,7 @@ This is a source-valid product-law construction: all four original coordinates r
 
 The designated partner result is fleet04/B16 run `20260922T161909Z-fleet04-B16-QFORM-r2`, canonical source
 
-`yspennstate/math-open-problems@58c23c624db350cf44f0c836daa3582eb7e2d266`,
+`private-source-repository@58c23c624db350cf44f0c836daa3582eb7e2d266`,
 
 which proves for an exact-rank-three Parseval frame that a row of leverage `c>1/2` and a second row of residual leverage `h>1/2` have pair Gram area
 

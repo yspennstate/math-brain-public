@@ -16,7 +16,7 @@ The unrestricted QFORM conjecture remains **OPEN / NOT PROVED / NOT DISPROVED**.
 
 The newest volume theorem actually used below is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -52,7 +52,7 @@ it takes `q=4/3`, has `s_3(M)>=15a/16`, and obtains
 
 The assigned partner actually applied below is fleet04/B15,
 
-`yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`
+`private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`.
 

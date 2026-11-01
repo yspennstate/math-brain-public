@@ -2,7 +2,7 @@
 
 After the r36 core proof was written, the worker-owned `LATEST.json` was refreshed and showed a newer same-slot predecessor than r35:
 
-`20260923T155027Z-fleet03-B09-QFORM-auto11`, canonical mathematics `yspennstate/math-open-problems@039a804cf1971a2f5b3922a761e61d2bc44ec3d8`.
+`20260923T155027Z-fleet03-B09-QFORM-auto11`, canonical mathematics `private-source-repository@039a804cf1971a2f5b3922a761e61d2bc44ec3d8`.
 
 That run proved `QFORM-ONEANCHOR-TWOVOLUME-HALFRIESZ-v1` and a nonzero-scalar-pivot interpolation theorem. Its explicit remaining debt was the near-zero / degenerate-residual-anchor case, where one must spend the pair-row wedge `Delta` and anchored third volume `V` before reciprocal scalar/pair payment.
 

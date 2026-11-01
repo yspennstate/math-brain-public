@@ -53,7 +53,7 @@ Fresh control before the derivation was read on `yspennstate/math-research-brain
 
 The analytic receiver is the completed one-scale ridge theorem:
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
@@ -73,7 +73,7 @@ At `q=2`, the leverage condition is automatic because `0<=K_gamma<=I`.
 
 The designated completed partner is fleet04/B12:
 
-`yspennstate/math-open-problems@3948d77b0bde5af1bd37cd7c975d4f540eba901b`
+`private-source-repository@3948d77b0bde5af1bd37cd7c975d4f540eba901b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T081758Z-fleet04-B12-complementary-schur-shield-r4/REPORT.md`.
 

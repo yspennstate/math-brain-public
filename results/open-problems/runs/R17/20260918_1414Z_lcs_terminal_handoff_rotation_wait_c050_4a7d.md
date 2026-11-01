@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6/maxim
 
 Run ID: `20260918_1414Z_lcs_terminal_handoff_rotation_wait_c050_4a7d`.
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Why this run is a handoff, not another LCS attack
 

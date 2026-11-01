@@ -13,9 +13,9 @@ attacking: the near-null two-bank residual by a combined-Gram paving cut, preser
 
 The exact target is unchanged: independent original-coordinate laws with densities at most one, and a real symmetric matrix with at least three eigenvalues of modulus at least one. No moments, bounded support, post-rotation independence, connected-support, interval-extremality, or bounded-fragment assumption is used.
 
-The already-proved fleet02/B13 bang-bang reduction remains the front end: for each fixed slab functional the supremum over cap-one product densities equals the supremum over arbitrary measure-one product indicators, with no loss. The latest designated-partner result fleet03/B13 r18, canonical mathematics `yspennstate/math-open-problems@dbd31282f36494993f2fe8c838116dd8c63538eb`, further makes the full slab supremum countable by rational finite-grid extreme witnesses, but does not provide a uniform slab constant.
+The already-proved fleet02/B13 bang-bang reduction remains the front end: for each fixed slab functional the supremum over cap-one product densities equals the supremum over arbitrary measure-one product indicators, with no loss. The latest designated-partner result fleet03/B13 r18, canonical mathematics `private-source-repository@dbd31282f36494993f2fe8c838116dd8c63538eb`, further makes the full slab supremum countable by rational finite-grid extreme witnesses, but does not provide a uniform slab constant.
 
-The structural input actually used below is designated partner fleet03/B13 r17, canonical mathematics `yspennstate/math-open-problems@eac866b378f5c54411a55f7eb49f89336a4701ae`. In its exact-rank-three near-null residual,
+The structural input actually used below is designated partner fleet03/B13 r17, canonical mathematics `private-source-repository@eac866b378f5c54411a55f7eb49f89336a4701ae`. In its exact-rank-three near-null residual,
 
 `A=R Lambda R^T`, `R^T R=I_3`, `min |lambda(Lambda)|>=1`,
 
@@ -215,7 +215,7 @@ r_j^TS_J^{-1}r_j\le4r_j^TS^{-1}r_j\le1/3.\tag{4.7}
 
 Because `R_K` has full column rank and `Lambda` is invertible, `range(B)=range(R_J)`, so (4.7) is exactly the coordinate leverage of the cross range on that cut side.
 
-Now apply completed fleet03/B10 theorem `QFORM-THREE-CROSS-GEOMEAN-v1`, canonical mathematics `yspennstate/math-open-problems@ed915899a1cc9f7582b8462998fe024d6045805c`. Its `q=1` hypothesis only asks for leverage at most `1/2`, and therefore applies. It gives
+Now apply completed fleet03/B10 theorem `QFORM-THREE-CROSS-GEOMEAN-v1`, canonical mathematics `private-source-repository@ed915899a1cc9f7582b8462998fe024d6045805c`. Its `q=1` hypothesis only asks for leverage at most `1/2`, and therefore applies. It gives
 
 `||p_Q||_inf <= C_1/g`.
 

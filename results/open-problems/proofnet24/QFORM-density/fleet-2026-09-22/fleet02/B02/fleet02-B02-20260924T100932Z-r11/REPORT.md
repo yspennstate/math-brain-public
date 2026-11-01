@@ -16,7 +16,7 @@ The early note in this run re-derived the sharp D2 half-potential constant. A fr
 
 Owner control remains revision `2026-09-22.15`, QFORM-only. I read the required pinned package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
@@ -24,7 +24,7 @@ Its D', D5, fractional-potential and square-peel interfaces are retained at thei
 
 The reviewed sharp Hausdorff--Young volume calculation is source-pinned at
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -42,7 +42,7 @@ The completed general fractional-volume theorem actually used here is
 
 `QFORM-CRITICAL-RANK2-HALFRIESZ` / Theorem 2.1-Section 3 of
 
-`yspennstate/math-open-problems@936b0f0bad22de82921c2a743fb0738226270348`,
+`private-source-repository@936b0f0bad22de82921c2a743fb0738226270348`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T013054Z-auto11/REPORT.md`.
 
@@ -73,13 +73,13 @@ A complementary completed scalar-pair structural theorem is fleet02/B13's
 
 `QFORM-SCALAR-D2-SINGLE-BISTAR-v1`,
 
-`yspennstate/math-open-problems@e499a26f35ec939d0fae47bbc5ccf8c0b7683516`,
+`private-source-repository@e499a26f35ec939d0fae47bbc5ccf8c0b7683516`,
 
 which used the earlier rough-HY D2 constant. Section 3 below gives the sharper fixed-r47 specialization using (1.1).
 
 The newest completed designated partner `fleet03/B02` is r47,
 
-`yspennstate/math-open-problems@859066cc3edee1bbeafe367e3bf2d630a4c425d9`,
+`private-source-repository@859066cc3edee1bbeafe367e3bf2d630a4c425d9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260924T045848Z-fleet03-B02-qform-r47/REPORT.md`.
 

@@ -13,7 +13,7 @@ Execution context: WITHOUT_VERIFIED_BRAIN.
 
 The main analytic dependency used below is the completed two-coordinate logarithmic coarea envelope
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`,
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`,
 
 which for an invertible indefinite physical pair `B` with `D=|det B|` and `kappa=sigma_min(B)` gives, for every cutoff `r>0`,
 
@@ -21,7 +21,7 @@ which for an invertible indefinite physical pair `B` with `D=|det B|` and `kappa
 
 The designated partner `fleet04/B05` now has a completed current-QFORM theorem. I read its full immutable proof at
 
-`yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`.
+`private-source-repository@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`.
 
 Its exact-slope theorem states `||p_Q||_infinity < 51.6 (mu m_*)^(-1/3)` in its stated normal form.
 

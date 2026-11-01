@@ -235,7 +235,7 @@ so its operator norm is `||r_R||||r_S||`. If `x=||r_R||^2/R2` lies in `[1/8,7/8]
 
 The latest completed designated fleet02/B07 result consumed in this run is
 
-`yspennstate/math-open-problems@ec29bb4321feffe020e5cb0185d148f2f6de847e`
+`private-source-repository@ec29bb4321feffe020e5cb0185d148f2f6de847e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260924T013622Z-fleet02-B07-qform-auto11/REPORT.md`.
 

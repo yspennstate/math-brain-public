@@ -21,7 +21,7 @@ The latest compatible correction inbox was reread before publication. In particu
 
 ### 2.1 Newest designated partner fleet03/B01
 
-Read at compatible master state `yspennstate/math-open-problems@8d6e85d072cd7a4c0fa9a37abe995a64109079e0`:
+Read at compatible master state `private-source-repository@8d6e85d072cd7a4c0fa9a37abe995a64109079e0`:
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T153212Z-auto11/REPORT.md`.
 

@@ -16,7 +16,7 @@ The target is unchanged: for independent ORIGINAL real coordinates with arbitrar
 
 The newest completed designated-partner result actually used below is fleet02/B13 r30:
 
-`yspennstate/math-open-problems@f6ad7b994c1ba509af30fceaf45e8b464db86af8`
+`private-source-repository@f6ad7b994c1ba509af30fceaf45e8b464db86af8`
 
 at
 
@@ -42,7 +42,7 @@ In the latter branch the joint event that a sampled third minor contains both `i
 
 The no-attainment product-purification source used below is fleet04/B13:
 
-`yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`,
+`private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
 

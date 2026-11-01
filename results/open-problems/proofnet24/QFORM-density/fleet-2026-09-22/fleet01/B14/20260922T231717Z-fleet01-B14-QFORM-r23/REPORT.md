@@ -25,7 +25,7 @@ This run changes mechanism from the preceding B14 reciprocal/log-star work: it m
 
 ### 2.1 Newest owner-required mathematical source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`
 
@@ -52,7 +52,7 @@ for any original-coordinate cross block `C=A_IJ`, with no volume-marginal condit
 
 The latest completed assigned-partner result used here is
 
-`yspennstate/math-open-problems@2ca523ac73b814a97e846de8d37a932c127eecfb`
+`private-source-repository@2ca523ac73b814a97e846de8d37a932c127eecfb`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T220604Z-fleet02-B14-QFORM-r21/REPORT.md`.
 

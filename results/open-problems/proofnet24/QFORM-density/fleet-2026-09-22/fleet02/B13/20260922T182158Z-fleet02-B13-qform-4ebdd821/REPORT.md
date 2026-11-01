@@ -20,17 +20,17 @@ The live correction inbox was reread before publication. In particular, this rep
 
 Mathematical inputs used at their stated scopes are:
 
-1. **Exact extreme-product reduction**, fleet02/B13, `yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`. For every fixed slab kernel, the supremum over independent densities `0<=f_i<=1`, `int f_i=1`, equals the supremum over product indicators `prod_i 1_{E_i}` with `|E_i|=1`. This is used only as an exact front-end equivalence; no interval extremality is inferred.
+1. **Exact extreme-product reduction**, fleet02/B13, `private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`. For every fixed slab kernel, the supremum over independent densities `0<=f_i<=1`, `int f_i=1`, equals the supremum over product indicators `prod_i 1_{E_i}` with `|E_i|=1`. This is used only as an exact front-end equivalence; no interval extremality is inferred.
 
-2. **Designated partner, fleet03/B13, null-pair product smoothing**, `yspennstate/math-open-problems@a7594ff13b36fbc1819f60ec287e8232bd39974d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260922T165804Z-fleet03-B13-qform-r12/REPORT.md`. Its translation-uniform product envelope is the source mechanism behind the near-null aggregate theorem from this slot's previous run.
+2. **Designated partner, fleet03/B13, null-pair product smoothing**, `private-source-repository@a7594ff13b36fbc1819f60ec287e8232bd39974d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260922T165804Z-fleet03-B13-qform-r12/REPORT.md`. Its translation-uniform product envelope is the source mechanism behind the near-null aggregate theorem from this slot's previous run.
 
-3. **This slot's support-free near-null interpolation**, `yspennstate/math-open-problems@94bb5d8d6a87b78d1cdda3e8db9f00d07c494e5c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T172625Z-fleet02-B13-productset-r13/REPORT.md`. In exact rank three, for spectral rows `r_i,r_j`, wedge mass `Delta=||r_i wedge r_j||^2`, physical coefficients `a=r_i^T Lambda r_i`, `b=r_i^T Lambda r_j`, `c=r_j^T Lambda r_j`, if `b!=0` and `|a|,|c|<=|b|/2`, then
+3. **This slot's support-free near-null interpolation**, `private-source-repository@94bb5d8d6a87b78d1cdda3e8db9f00d07c494e5c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T172625Z-fleet02-B13-productset-r13/REPORT.md`. In exact rank three, for spectral rows `r_i,r_j`, wedge mass `Delta=||r_i wedge r_j||^2`, physical coefficients `a=r_i^T Lambda r_i`, `b=r_i^T Lambda r_j`, `c=r_j^T Lambda r_j`, if `b!=0` and `|a|,|c|<=|b|/2`, then
 
 `||p_Q||_infinity <= C_agg (|b| |det Lambda| Delta)^(-1/4)`,
 
 with `C_agg=43.323633263897`.
 
-4. **Diffuse separable-phase theorem**, `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, path `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`. If `U` has three orthonormal columns and every row leverage is at most `1/2`, then for arbitrary independent cap-one inputs and arbitrary coordinate-separable real measurable perturbations,
+4. **Diffuse separable-phase theorem**, `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, path `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`. If `U` has three orthonormal columns and every row leverage is at most `1/2`, then for arbitrary independent cap-one inputs and arbitrary coordinate-separable real measurable perturbations,
 
 `||(U^T X)^T M(U^T X)+sum_i V_i(X_i)||_density,infinity <= 3e |det M|^(-1/3)`.
 
@@ -40,7 +40,7 @@ with `C_agg=43.323633263897`.
 
 The theorem retains arbitrary outside affine/coupling terms in its stated conditioning scope.
 
-6. **Newest designated-partner result**, fleet03/B13 run `20260922T182042Z-fleet03-B13-qform-r14`, full report `yspennstate/math-open-problems@58dc674aade01aa82bb10fcaf254af03f41575fa:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260922T182042Z-fleet03-B13-qform-r14/REPORT.md`. If a physical pair has `A_ii=A_jj=A_ij=0` and its full `2 x (n-2)` cross bank `C` obeys `D_cross=det(CC^T)>0`, then
+6. **Newest designated-partner result**, fleet03/B13 run `20260922T182042Z-fleet03-B13-qform-r14`, full report `private-source-repository@58dc674aade01aa82bb10fcaf254af03f41575fa:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260922T182042Z-fleet03-B13-qform-r14/REPORT.md`. If a physical pair has `A_ii=A_jj=A_ij=0` and its full `2 x (n-2)` cross bank `C` obeys `D_cross=det(CC^T)>0`, then
 
 `||p_Q||_infinity <= 2 sqrt(e) D_cross^(-1/4)`.
 

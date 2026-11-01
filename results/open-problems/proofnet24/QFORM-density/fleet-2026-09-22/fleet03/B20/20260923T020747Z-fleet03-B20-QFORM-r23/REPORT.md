@@ -209,7 +209,7 @@ The natural mechanisms are a true-independent-scalar cross-transverse estimate t
 
 - fresh proof-assembly input: fleet03/B19 r21, `QFORM-O3-ROBUST-2PLUS1-GROUPED-PAYMENT-v1`, canonical path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T010143Z-fleet03-B19-QFORM-r21/REPORT.md`;
 - O3 aggregate/random-split source: fleet03/B19 r18 plus fleet03/B10 r19;
-- rank-two affine half-Riesz theorem: `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`;
-- designated partner actually applied: fleet04/B20 r4, `yspennstate/math-open-problems@f97aa31585b7b547a116d4580f898576af4e0842`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T011956Z-fleet04-B20-QFORM-r4/REPORT.md`.
+- rank-two affine half-Riesz theorem: `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`;
+- designated partner actually applied: fleet04/B20 r4, `private-source-repository@f97aa31585b7b547a116d4580f898576af4e0842`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T011956Z-fleet04-B20-QFORM-r4/REPORT.md`.
 
 `CHECK.py` and `CHECK_OUTPUT.txt` beside this report are arithmetic/algebra regression only; the proof is Sections 2--6.

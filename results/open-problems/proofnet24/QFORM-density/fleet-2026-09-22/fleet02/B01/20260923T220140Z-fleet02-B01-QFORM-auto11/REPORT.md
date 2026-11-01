@@ -13,20 +13,20 @@ The exact target remains the universal bounded-density conjecture for `X^T A X` 
 ## 2. Source-pinned inputs actually spent
 
 1. Required source package at
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
    I use its proved square peel
    `D(Q) <= |a|^{-1/2} H_{1/2}(R)`
    after a literal original-coordinate completion, and its fractional-potential philosophy. The same source records that the three-/five-volume routes require positive `Z_3`/`Z_5` and explicitly preserves the phase-aligned obstruction to scalar pointwise Fresnel decay.
 
 2. Previous fleet02/B01 state pinned at
-   `yspennstate/math-open-problems@1760a61be07cc456da3f69e703d025e74c3877eb`.
+   `private-source-repository@1760a61be07cc456da3f69e703d025e74c3877eb`.
    The already proved bilateral rank-two projected-Plancherel receiver is used in the form
    `H_{1/2}(R) <= 8 Delta^{-1/4}`
    whenever an original-coordinate physical cross block has rank two and singular-value product `Delta=s_1 s_2>0`; arbitrary same-bank quadratic curvature and affine terms remain present.
 
 3. Newest designated partner fleet03/B01 state available at sign-in:
-   `yspennstate/math-open-problems@b028a41e2e0b653c75740c740351aeef537e313f`,
+   `private-source-repository@b028a41e2e0b653c75740c740351aeef537e313f`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T212842Z-auto11/REPORT.md`.
    Its high-diagonal theorem pays every second scalar-Schur pivot `>=1/64` by `<3444.312`; otherwise it produces a fixed-energy original-coordinate scalar-Schur cross packet `N` with `||N||_F^2>3969/8192`. The preceding fleet02/B01 run showed that exact `W_2=0` forces this `N` to have rank at most two and paid the branch `s_2(N)>=1/256`, leaving the rank-one-dominant endpoint.
 

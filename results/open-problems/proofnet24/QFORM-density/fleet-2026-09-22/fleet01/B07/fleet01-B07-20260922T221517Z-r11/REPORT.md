@@ -40,7 +40,7 @@ The completed fleet03/B07 ridge-collar theorem says that if either side has maxi
 
 The designated partner fleet02/B07 r18 result `QFORM-TWOSTAR-CHECKERBOARD-WEDGE-v1` is source-pinned at
 
-`yspennstate/math-open-problems@d4afa77929c3a9b5322f451c6d470fcfe519f01b`
+`private-source-repository@d4afa77929c3a9b5322f451c6d470fcfe519f01b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T213439Z-fleet02-B07-QFORM-e7b269/REPORT.md`.
 

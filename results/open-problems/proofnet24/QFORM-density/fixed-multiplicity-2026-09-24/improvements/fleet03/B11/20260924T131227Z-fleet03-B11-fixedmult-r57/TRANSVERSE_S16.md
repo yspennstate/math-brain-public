@@ -2,7 +2,7 @@
 
 **Run:** `20260924T131227Z-fleet03-B11-fixedmult-r57`  
 **Status:** proved supporting structural improvement; **no 16-eigenvalue density theorem claimed**.  
-**Pinned baseline:** `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+**Pinned baseline:** `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 This result starts in the normalized no-pivot chamber of the fixed-multiplicity manuscript and sharpens the current `s_16` endpoint. It is self-contained modulo the pinned manuscript's proved `prop:volume`, random-cut identity, and singular-value rank inequality.
 

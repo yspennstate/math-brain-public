@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — this was
 # R13 — Boolean Komlós: an 86-column refinement-forest obstruction from the exact 11-column cover
 
 Run ID: `20260919T1433Z_refinement-forest-86-d4c7`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R13  
 Lane: **HARD OUTSIDE**
 

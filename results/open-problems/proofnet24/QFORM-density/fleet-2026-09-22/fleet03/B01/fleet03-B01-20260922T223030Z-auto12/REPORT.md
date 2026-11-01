@@ -21,7 +21,7 @@ The mechanism is an averaged-frequency one: Weyl differencing removes both same-
 
 The fresh fleet01/B20 report
 
-`yspennstate/math-open-problems@e8dbbf2d994e8a3878110b6eb405cdce0bc3e5e4`
+`private-source-repository@e8dbbf2d994e8a3878110b6eb405cdce0bc3e5e4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T222136Z-fleet01-B20-QFORM-r21/REPORT.md`
 
@@ -39,7 +39,7 @@ The theorem below performs the rank-two version but stops at the correct finite-
 
 The source-valid balanced packet is recorded in fleet01/B20
 
-`yspennstate/math-open-problems@e8dbbf2d994e8a3878110b6eb405cdce0bc3e5e4`
+`private-source-repository@e8dbbf2d994e8a3878110b6eb405cdce0bc3e5e4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T202251Z-fleet01-B20-QFORM-r12/REPORT.md`.
 
@@ -75,7 +75,7 @@ The previous analytic payment used a selected-side **range leverage** gate at `1
 
 The designated partner result is `QFORM-SIGNED-FEJER-EQUIVALENCE-v1`, canonical source
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 

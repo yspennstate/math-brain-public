@@ -53,7 +53,7 @@ Since \(\sum_i p_ip_i^\top=I_2\), one has \(0\preceq K_E\preceq I_2\). Put
 
 The designated partner fleet02/B05 proved `QFORM-2D-PARSEVAL-PROJECTION-CAP-v1` in
 
-`yspennstate/math-open-problems@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f`
+`private-source-repository@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f`
 
 at
 
@@ -68,7 +68,7 @@ If independent cap-one scalar inputs have coefficient vectors \(a_j\in\mathbb R^
 
 The newest fleet02/B05 result `QFORM-RULED-ONESHEET-ROUGH-INTERVAL-v1`, canonical mathematics
 
-`yspennstate/math-open-problems@afe6d696017f5a0eb48a14fa7a1dcb35ce97df3`,
+`private-source-repository@afe6d696017f5a0eb48a14fa7a1dcb35ce97df3`,
 
 also gives in signature \((+,+,-)\)
 

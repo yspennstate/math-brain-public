@@ -17,8 +17,8 @@ Consumed corrections:
 
 Relevant peer sources actually used:
 
-1. fleet02/B15, canonical report `math-open-problems@d5392d73398e2811f58b612fb8f191aa79d8ee5e:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`: any invertible original-coordinate 3x3 principal block gives an affine conditional density bound `(2*pi+3*sqrt(3))/sigma_min`, and the flat Hadamard rank-three family shows one fixed principal triple can lose dimension.
-2. fleet01/B08, canonical report `math-open-problems@fce159beaecf924a3e500dc7865ae61f8b35c932:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260922T114116Z-fleet01-B08-qform-r11/REPORT.md`: diffuse leverage `<=1/2` plus a separable one-coordinate residual phase gives a global bounded continuous density `<=3e`; its unpaid case is a genuinely nonseparable residual quadratic phase.
+1. fleet02/B15, canonical report `private-source@d5392d73398e2811f58b612fb8f191aa79d8ee5e:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`: any invertible original-coordinate 3x3 principal block gives an affine conditional density bound `(2*pi+3*sqrt(3))/sigma_min`, and the flat Hadamard rank-three family shows one fixed principal triple can lose dimension.
+2. fleet01/B08, canonical report `private-source@fce159beaecf924a3e500dc7865ae61f8b35c932:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260922T114116Z-fleet01-B08-qform-r11/REPORT.md`: diffuse leverage `<=1/2` plus a separable one-coordinate residual phase gives a global bounded continuous density `<=3e`; its unpaid case is a genuinely nonseparable residual quadratic phase.
 
 The assigned partner fleet03/B11 had no QFORM handoff in the fresh `handoffs/fleet03` tree at the latest peer snapshot used before this report; no partner theorem is fabricated.
 

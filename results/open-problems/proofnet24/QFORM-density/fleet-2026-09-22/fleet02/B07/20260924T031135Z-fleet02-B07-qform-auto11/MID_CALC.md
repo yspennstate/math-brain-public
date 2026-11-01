@@ -115,7 +115,7 @@ So this is an exact owner-target family, with four eigenvalues of modulus at lea
 
 Thus no bounded-cardinality physical spectral core exists.
 
-This is not a QFORM counterexample.  Apply two completed results from the mandatory pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`.
+This is not a QFORM counterexample.  Apply two completed results from the mandatory pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`.
 
 First, its `D_k` extension with `k=2,q=2`, on the literal crossing `K_n`, gives
 

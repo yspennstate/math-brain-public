@@ -26,7 +26,7 @@ This run proves that compiler with an exact optimized constant, composes it with
 
 The newest completed assigned-partner result consumed is
 
-`yspennstate/math-open-problems@3034661243d00674dd35b8c9f0959e68d9379543`
+`private-source-repository@3034661243d00674dd35b8c9f0959e68d9379543`
 
 at
 
@@ -44,7 +44,7 @@ The present counterexample below already belongs to that extreme class. Thus the
 
 The source-complete supporting pair calculation used below is recorded at
 
-`yspennstate/math-open-problems@b873b2b52f4c75c331153c9227d0a7fae0f02979`
+`private-source-repository@b873b2b52f4c75c331153c9227d0a7fae0f02979`
 
 path
 
@@ -65,7 +65,7 @@ All pair variables remain original-coordinate independent of the outside variabl
 
 A fresh compatible result appearing during this run is fleet02/B05
 
-`yspennstate/math-open-problems@b6ded18bee0fe20353530653ce654308cac0631c`
+`private-source-repository@b6ded18bee0fe20353530653ce654308cac0631c`
 
 path
 

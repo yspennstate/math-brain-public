@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 
 # R16 HARD OUTSIDE — I0036 / Schramm Problem 2.1: randomized switching still fails if it is rank-oblivious; geometry-dependent switching survives
 
-Date: 2026-09-17 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`. Source-level status: **PARTIAL / OPEN**. This report does not improve the frozen bridge exponent and does not claim the SAW scaling limit. It records a new exact finite obstruction to the specific Fomin-style recovery selected in the preceding stuck report, and it narrows the surviving algorithmic route.
+Date: 2026-09-17 UTC. Repository/branch: `private-source-repository` / `master`. Source-level status: **PARTIAL / OPEN**. This report does not improve the frozen bridge exponent and does not claim the SAW scaling limit. It records a new exact finite obstruction to the specific Fomin-style recovery selected in the preceding stuck report, and it narrows the surviving algorithmic route.
 
 ## 1. Continuity, repository state, ownership, and source status
 

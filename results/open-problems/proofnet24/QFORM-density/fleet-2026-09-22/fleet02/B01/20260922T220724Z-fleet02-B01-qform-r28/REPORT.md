@@ -128,7 +128,7 @@ The fresh completed partner handoff `fleet03/B01 r19` proves that a scalar pivot
 
 `||p_Q||_infinity <= 9.841 |a|^(-1/2) E_3^(-1/12)`.
 
-Canonical source: `yspennstate/math-open-problems@7df1461e33f7ea4e6026a650391822a16e56e987`, report blob `9cb96b24ad0e118a42bb74ca9e167b48f1028d79`; source-bound handoff at brain commit `3290f29a3c319f449c346431430151cccd34fb38`.
+Canonical source: `private-source-repository@7df1461e33f7ea4e6026a650391822a16e56e987`, report blob `9cb96b24ad0e118a42bb74ca9e167b48f1028d79`; source-bound handoff at brain commit `3290f29a3c319f449c346431430151cccd34fb38`.
 
 Apply it to the explicit four-bank positive-semidefinite family, for even `m`,
 

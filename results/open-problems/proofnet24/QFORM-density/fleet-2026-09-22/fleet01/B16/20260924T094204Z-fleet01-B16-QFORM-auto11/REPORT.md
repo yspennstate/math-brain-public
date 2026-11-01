@@ -14,7 +14,7 @@ Fresh owner/control source at start: `math-research-brain@0f67fb8650eb867f399678
 
 The completed designated partner consumed here is fleet02/B16:
 
-- repository/commit: `yspennstate/math-open-problems@e242a1718c8fe91f9ea9b2cdfa2a7961f25cd37b`;
+- repository/commit: `private-source-repository@e242a1718c8fe91f9ea9b2cdfa2a7961f25cd37b`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260924T084749Z-fleet02-B16-QFORM-auto11/REPORT.md`;
 - theorem: `QFORM-SHAREDBANK-PROJECTEDSQUARE-HYPERBOLIC-CURVEDCAP-v1`.
 

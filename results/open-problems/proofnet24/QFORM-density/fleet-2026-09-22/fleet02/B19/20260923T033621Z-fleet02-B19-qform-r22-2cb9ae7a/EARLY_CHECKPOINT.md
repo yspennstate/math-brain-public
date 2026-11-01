@@ -16,7 +16,7 @@ where `F,G` are arbitrary measurable real functions finite almost surely, and le
 
 The general `D_k` decoupling/Brascamp--Lieb estimate in Claude's source package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 
 may be run with determinant order `k=2` and Jensen exponent `q=2`. The row-marginal gate is automatic because every order-two inclusion marginal is at most one, exactly `q/2`. The resulting characteristic-function envelope is

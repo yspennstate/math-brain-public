@@ -235,10 +235,10 @@ For the generic near-coloop state, the longitudinal leaf variables also feed tra
 
 ## 8. Source pins consumed
 
-Required interactive source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md` Theorem C, applied in (5.1), together with the requested `RESULTS.md` and `FOURIER_ROUTE_REPORT.md`.
+Required interactive source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md` Theorem C, applied in (5.1), together with the requested `RESULTS.md` and `FOURIER_ROUTE_REPORT.md`.
 
 Partner: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T181522Z-fleet03-B10-QFORM-r26/REPORT.md`, read from a later compatible repository state and applied in (5.2).
 
-Fresh compatible strip result: `yspennstate/math-open-problems@5bb8c5faaf65393ba42f440dce575d8ffdaf1f52`, `proofnet24/QFORM-density/interactive/20260923T214500Z-two-bank-conditional-strip/{REPORT.md,QUASICONCAVE_HUB_ADDENDUM.md,FINITE_VARIATION_HUB_ADDENDUM.md}`, applied in (5.3) and stress-tested by (3.1)-(4.5).
+Fresh compatible strip result: `private-source-repository@5bb8c5faaf65393ba42f440dce575d8ffdaf1f52`, `proofnet24/QFORM-density/interactive/20260923T214500Z-two-bank-conditional-strip/{REPORT.md,QUASICONCAVE_HUB_ADDENDUM.md,FINITE_VARIATION_HUB_ADDENDUM.md}`, applied in (5.3) and stress-tested by (3.1)-(4.5).
 
 Final source refresh before this write observed master `96b7296e7bb30bdddb70522eda0177190e316bc4`; no later partner B10 result than r26 was present there.

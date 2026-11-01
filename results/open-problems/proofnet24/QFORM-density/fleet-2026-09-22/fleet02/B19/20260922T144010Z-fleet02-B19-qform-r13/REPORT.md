@@ -10,15 +10,15 @@
 
 The full target remains open: for arbitrary independent real coordinates with one-dimensional densities bounded by one, and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, prove one universal finite bound for the density of `X^T A X`.
 
-The newest designated partner result actually applied is `fleet03/B19`, canonical package `yspennstate/math-open-problems@a22b97b292c1e3d313e0c8c79edff61d5b0d22cb`. It proves that a counterexample must lie in the residual
+The newest designated partner result actually applied is `fleet03/B19`, canonical package `private-source-repository@a22b97b292c1e3d313e0c8c79edff61d5b0d22cb`. It proves that a counterexample must lie in the residual
 
 `||A-diag(A)||_op > 1/4`, `sr(A-diag(A)) < 32`,
 
 because the near-diagonal branch and the high-stable-rank off-diagonal branch are already paid.
 
-The newest compatible synthesis result actually applied is `fleet01/B19`, canonical package `yspennstate/math-open-problems@1620f286923bde59e02467ff11ed662d2a18514f`. It proves a one-sided `1 self + 2 cross` theorem: a scalar square plus an invertible physical `2x2` mixed block is enough when the scalar coordinate couples to only one side. Its stated first analytic obstruction is the genuinely two-sided case, where the scalar coordinate couples to both mixed blocks.
+The newest compatible synthesis result actually applied is `fleet01/B19`, canonical package `private-source-repository@1620f286923bde59e02467ff11ed662d2a18514f`. It proves a one-sided `1 self + 2 cross` theorem: a scalar square plus an invertible physical `2x2` mixed block is enough when the scalar coordinate couples to only one side. Its stated first analytic obstruction is the genuinely two-sided case, where the scalar coordinate couples to both mixed blocks.
 
-The mixed-Hessian input used below is `fleet03/B09`, canonical package `yspennstate/math-open-problems@446d0a33ef626b11ed5da529f2cec821732e97e9`. For a two-by-two invertible mixed block `C` and arbitrary same-side phases, its Plancherel calculation gives the exact endpoint
+The mixed-Hessian input used below is `fleet03/B09`, canonical package `private-source-repository@446d0a33ef626b11ed5da529f2cec821732e97e9`. For a two-by-two invertible mixed block `C` and arbitrary same-side phases, its Plancherel calculation gives the exact endpoint
 
 `|phi_S(t)| <= min(1, pi |t|^{-1} |det C|^{-1/2})`
 

@@ -6,7 +6,7 @@ Full immutable mathematics is at
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T140152Z-fleet03-B19-QFORM-fixed-multiplicity-audit-auto11/REPORT.md`
 
-and was first committed at `yspennstate/math-open-problems@6ec704f861f58a54d2586b15c5235aae97bc2b22`.
+and was first committed at `private-source-repository@6ec704f861f58a54d2586b15c5235aae97bc2b22`.
 
 Verdict:
 

@@ -17,7 +17,7 @@ The live correction set was consumed before the derivation: no arbitrary-joint c
 
 The immediate state is fleet02/B19 r20, canonical source
 
-`yspennstate/math-open-problems@4a4682f27ee74da65f62c20fc4520e81b48bece6`,
+`private-source-repository@4a4682f27ee74da65f62c20fc4520e81b48bece6`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T221019Z-fleet02-B19-qform-r20/REPORT.md`.
 
@@ -45,7 +45,7 @@ r20 paid the small-leverage region by MSS. The present run replaces that gate by
 
 The **current named partner** is fleet03/B19 r19, canonical source
 
-`yspennstate/math-open-problems@39b2d7a6fc503f2abbeee3b50c30ed64886de365`,
+`private-source-repository@39b2d7a6fc503f2abbeee3b50c30ed64886de365`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T223200Z-fleet03-B19-QFORM-r19/REPORT.md`.
 
@@ -69,7 +69,7 @@ with arbitrary self terms and outside coordinates retained.
 
 Finally I consume the newer compatible fleet01/B19 result
 
-`yspennstate/math-open-problems@09bb706f11ea00995a61f0c7323bf67997c65932`,
+`private-source-repository@09bb706f11ea00995a61f0c7323bf67997c65932`,
 
 `QFORM-INDEPENDENT-LINEAR-SQUARE-SMOOTHING-v1`, which pays the exact null-coloop endpoint `c=1` by
 

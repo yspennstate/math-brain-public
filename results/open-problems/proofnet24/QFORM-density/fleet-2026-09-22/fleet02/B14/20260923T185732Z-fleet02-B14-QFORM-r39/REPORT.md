@@ -132,7 +132,7 @@ Let `X_1,X_2,X_3` be independent with density `f_N` from (4.1), and take
 
 `Q_N=X_1^2+X_2^2+X_3^2`, `A=I_3`.                                      (5.1)
 
-The spectrum is exactly `{1,1,1}`, so (5.1) lies in the owner's full target. The fixed source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, proves Theorem A: in dimension three, when all three eigenvalues have modulus at least `sigma`, arbitrary cap-one product laws and affine terms satisfy
+The spectrum is exactly `{1,1,1}`, so (5.1) lies in the owner's full target. The fixed source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, proves Theorem A: in dimension three, when all three eigenvalues have modulus at least `sigma`, arbitrary cap-one product laws and affine terms satisfy
 
 `||p_Q||_infinity <= 6 sqrt(pi)/sigma`.
 
@@ -244,6 +244,6 @@ The next useful implication is `QFORM-FINAL-CAP-BEFORE-FRACTIONAL-SCALE-v1`: der
 
 ## 9. Sources and correction discipline
 
-Fresh owner control remained revision `2026-09-22.15`, QFORM-only. Required fixed source consumed at exact ref `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`; completed Theorem A was applied at (5.2). Full Gaussian source consumed: `NEW_GAUSSIAN_MIXTURE_FULL_THEOREM.md` at `9dabaf2aaf66687c2b4437fdb359b1aeb4a804bc`. Newest compatible partner consumed: fleet03/B14 `20260923T183544Z`, canonical math `78e87f9d9fe723b40aa38e71426458283366f8a5`.
+Fresh owner control remained revision `2026-09-22.15`, QFORM-only. Required fixed source consumed at exact ref `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`; completed Theorem A was applied at (5.2). Full Gaussian source consumed: `NEW_GAUSSIAN_MIXTURE_FULL_THEOREM.md` at `9dabaf2aaf66687c2b4437fdb359b1aeb4a804bc`. Newest compatible partner consumed: fleet03/B14 `20260923T183544Z`, canonical math `78e87f9d9fe723b40aa38e71426458283366f8a5`.
 
 No bounded support, bounded diameter, fixed fragment count, log-concavity, moments, diagonal-basis assumption for the full target, post-rotation independence, or continuity premise is introduced. The fixed-source theorem is used only on its valid three-dimensional principal/full-matrix scope. Repository retrieval is source transport, not native receiver-memory ingestion; execution remains `WITHOUT_VERIFIED_BRAIN`.

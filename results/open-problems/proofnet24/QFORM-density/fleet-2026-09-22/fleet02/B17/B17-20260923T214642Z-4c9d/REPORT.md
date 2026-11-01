@@ -15,7 +15,7 @@ The first previously unpaid implication in this architecture is paid immediately
 > 
 > Here `p_*` is the centered unit-cube control for the same physical matrix. In particular, all positive-side near-kernel resonant fragmentation is harmless even when the old center-gap parameter tends to zero and the previous derivative estimate becomes unusable.
 
-The proof uses the pinned one-sheet ruling theorem at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` as an exact identity, then performs a six-density Brascamp--Lieb--Luttinger rearrangement **before** any spectral-coordinate independence could be falsely invoked.
+The proof uses the pinned one-sheet ruling theorem at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` as an exact identity, then performs a six-density Brascamp--Lieb--Luttinger rearrangement **before** any spectral-coordinate independence could be falsely invoked.
 
 ## 1. Exact target matrix and physical factorization
 
@@ -260,7 +260,7 @@ This is much stronger than applying the pinned theorem's generic two-dimensional
 
 The latest compatible fleet03/B17 result at
 
-`math-open-problems@e79bba262d16c5f629722431a39f563c0d8c4094`
+`private-source@e79bba262d16c5f629722431a39f563c0d8c4094`
 
 uses the same exact physical matrix and records the proved centered-cube cone-tip value
 
@@ -365,10 +365,10 @@ Failure of this one-sheet rearrangement mechanism to extend to the two-sheet sid
 
 Required pinned source actually used:
 
-- `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, completed Theorem C exact one-sheet ruling/coarea identity. The generic `pi sqrt(2)` ceiling is explicitly **not** sufficient for the sharp certificate; the exact ruling is fed into Lemma 2.1.
+- `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, completed Theorem C exact one-sheet ruling/coarea identity. The generic `pi sqrt(2)` ceiling is explicitly **not** sufficient for the sharp certificate; the exact ruling is fed into Lemma 2.1.
 
 Latest compatible designated partner actually used:
 
-- fleet03/B17, `math-open-problems@e79bba262d16c5f629722431a39f563c0d8c4094`, `QFORM-DENSE-FRAGMENT-KERNEL-AGGREGATE-v1`, supplying the same exact target matrix, the proved endpoint `p_*(0)`, and the near-kernel-resonance frontier that this run closes on the one-sheet side.
+- fleet03/B17, `private-source@e79bba262d16c5f629722431a39f563c0d8c4094`, `QFORM-DENSE-FRAGMENT-KERNEL-AGGREGATE-v1`, supplying the same exact target matrix, the proved endpoint `p_*(0)`, and the near-kernel-resonance frontier that this run closes on the one-sheet side.
 
 Status: `SUPPORTING_SHARP_WITNESS_EXCLUSION`; full QFORM `OPEN / NOT PROVED / NOT DISPROVED`; native brain status `WITHOUT_VERIFIED_BRAIN`.

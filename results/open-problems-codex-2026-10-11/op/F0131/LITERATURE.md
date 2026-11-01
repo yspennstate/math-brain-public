@@ -73,7 +73,7 @@ OpenAlex returned HTTP 429 on title, DOI lookup, and a citing-work filter using 
 - math_recall queries: sandpile Pegden Smart scaling limit background holes; sandpile recurrent forbidden subconfiguration burning density; obstacle problem corner free boundary quadratic growth.
 - brain.py recall queries: sandpile scaling limit; sandpile mistakes. These returned no applicable checked solution.
 - Searched the permitted intake problems.jsonl, attempts.jsonl, sources.jsonl for F0131 and inspected F0131-A001. Its rational-normal premise lacked proof; it explicitly recorded an unsolved attempt.
-- Inspected origin/master filenames in the read-only math-open-problems checkout for F0131/sandpile. No proved F0131 answer was identified; no working-tree changes were made.
+- Inspected origin/master filenames in the read-only private-source checkout for F0131/sandpile. No proved F0131 answer was identified; no working-tree changes were made.
 
 The current counterexample argument, if verified, is our deduction using convergence and finite last-firing bounds; its verdict must therefore be SOLVED, not SOLVED_IN_LITERATURE.
 

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # NM13-05 — strict-delta residue-4 successor admission
 
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Worker namespace: `proofnet24/NM13-05/`  
 Category: `CLOSABLE OUTSIDE`  
 Selection shard: `int(SHA256(UTF-8 canonical_dedup_key),16) mod 13 = 4`.

@@ -27,7 +27,7 @@ Corrections actively enforced include:
 
 The direct predecessor is fleet01/B09 r33:
 
-`yspennstate/math-open-problems@174f2ac95a7e63dc88172bc6fcf5b319e8613d44`
+`private-source-repository@174f2ac95a7e63dc88172bc6fcf5b319e8613d44`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260924T081556Z-fleet01-B09-QFORM-auto11-r33/REPORT.md`.
 
@@ -35,7 +35,7 @@ Its theorem `QFORM-TRIANGLE-CYCLIC-CROSSING-v1` produces, in a rank-one fixed-hu
 
 The completed receiver used here is fleet03/B09 r47:
 
-`yspennstate/math-open-problems@fd800c8358502f8e947f77f47e06ac3e5fae1742`
+`private-source-repository@fd800c8358502f8e947f77f47e06ac3e5fae1742`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T091232Z-fleet03-B09-QFORM-r47/REPORT.md`.
 
@@ -57,7 +57,7 @@ with the same coefficient in the linear interval bound. Interchanging the two or
 
 The designated fleet02/B09 theorem applied in Section 7 is `QFORM-JOINT-HUB-CAP-MIXEDFRAME-v1` from
 
-`yspennstate/math-open-problems@2cce202879f9b0fa629f4fd1b464e271b11895c0`,
+`private-source-repository@2cce202879f9b0fa629f4fd1b464e271b11895c0`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260924T081042Z-fleet02-B09-QFORM/REPORT.md`.
 

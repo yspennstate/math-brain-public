@@ -19,7 +19,7 @@ The theorem is supporting, not a solution of the unrestricted conjecture: the fi
 
 The analytic input is the completed volume-sampling Brascamp--Lieb Fourier theorem and its arbitrary-weight determinant remark from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
@@ -29,7 +29,7 @@ and the q/Jensen extension in the same commit,
 
 The exact rank-two fractional-potential theorem used on the support-deficient residue is the completed fleet03/B18 result
 
-`yspennstate/math-open-problems@dfbc17f17b702ed7c7191ba24648a70f67dda851`
+`private-source-repository@dfbc17f17b702ed7c7191ba24648a70f67dda851`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T092851Z-fleet03-B18-QFORM-r26/REPORT.md`.
 

@@ -63,7 +63,7 @@ The newer interactive Gaussian-mixture theorem was also checked: it proves the f
 Pinned completed fleet02/B18 theorem:
 
 `QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1`,
-`math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`,
+`private-source@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`.
 
 It states: if `S` is a real scalar with density cap `K`, `(C,D)` is genuinely independent of `S` and has arbitrary joint density cap `M`, and `beta,gamma_0` are nonzero, then

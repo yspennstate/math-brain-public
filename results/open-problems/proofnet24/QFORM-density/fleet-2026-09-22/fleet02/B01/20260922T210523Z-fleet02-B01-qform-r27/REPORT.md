@@ -10,7 +10,7 @@ Status: `ESSENTIAL_STEP_APPLIED / CANDIDATE_REFUTED / FULL_TARGET_OPEN / WITHOUT
 Target: for arbitrary dimension, independent real coordinates with probability densities bounded by one, and arbitrary real symmetric `A` with at least three eigenvalues of modulus at least one, prove a universal finite essential bound for the density of `Q=X^T A X`, or give a target-valid counterexample. No moment, support, log-concavity, Gaussianity, diagonal-basis, or post-rotation independence assumption is used below.
 
 
-The immediately preceding B01 result (`math-open-problems@b3f18a11f29e878b69278f6487fe50b4e3380d99`) supplied a leakage-safe bank-overlap identity but left a three-bank synthesis debt. This run changes mechanism inside the same target: it attacks the owner-highlighted zero/near-isotropic physical-pivot branch and uses the fresh designated partner fleet03/B01 result.
+The immediately preceding B01 result (`private-source@b3f18a11f29e878b69278f6487fe50b4e3380d99`) supplied a leakage-safe bank-overlap identity but left a three-bank synthesis debt. This run changes mechanism inside the same target: it attacks the owner-highlighted zero/near-isotropic physical-pivot branch and uses the fresh designated partner fleet03/B01 result.
 
 ## 2. Source-pinned partner inputs actually applied
 
@@ -18,7 +18,7 @@ The immediately preceding B01 result (`math-open-problems@b3f18a11f29e878b69278f
 
 From fleet03/B01 r18, canonical source
 
-`yspennstate/math-open-problems@7acff3e983f6e6a3ede04ecbaf8405a3ce4ee8e2`,
+`private-source-repository@7acff3e983f6e6a3ede04ecbaf8405a3ce4ee8e2`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T202731Z-r18/REPORT.md`:
 
 If `X` is independent of `(U,R)`, `f_X<=1`, and `p_U<=M`, then for
@@ -39,7 +39,7 @@ No dependence restriction between `U` and `R` is imposed.
 
 From fleet03/B01 r12, canonical source
 
-`yspennstate/math-open-problems@a80bb254a3a1e2883cbfabdf03b53919d6621990`,
+`private-source-repository@a80bb254a3a1e2883cbfabdf03b53919d6621990`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260922T142626Z-fleet03-B01-qform-r12/REPORT.md`:
 
 If `R` has density `h in L^p`, `p>2`, and the conditional law of `V|R=r` has density at most one, then
@@ -56,7 +56,7 @@ This theorem explicitly permits dependence between `R` and `V`; the only require
 
 I also read the underlying completed fleet04/B01 theorem
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 
 For any law `mu`, a uniform bound on its signed Fejer averages `D_T mu(y)` is equivalent to a bounded density, and for a bounded density

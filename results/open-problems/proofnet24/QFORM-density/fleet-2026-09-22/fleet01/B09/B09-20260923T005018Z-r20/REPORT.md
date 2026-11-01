@@ -17,7 +17,7 @@ The unrestricted conjecture remains OPEN. This report proves a new rank-one *fra
 
 The main analytic source is my earlier B09 theorem `QFORM-ONE-SIDED-SEPARABLE-CROSS-DIFFUSE-v1`, canonical
 
-`yspennstate/math-open-problems@3e5068e27a41e88ec5a59311b64e9b95ee4babd6`
+`private-source-repository@3e5068e27a41e88ec5a59311b64e9b95ee4babd6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T184627Z-r15/REPORT.md`.
 
@@ -30,7 +30,7 @@ where `D=prod s_l(B)` and `B_U=prod_i(1-c_i)^(-(1-c_i)/2)` for the left singular
 The underlying complex-amplitude Brascamp--Lieb/Hausdorff--Young input is
 
 `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`,
-`yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`,
+`private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`,
 `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
 
 I checked nearby fractional results before claiming a new scope:
@@ -48,7 +48,7 @@ claim `QFORM-ONE-SIDED-CROSS-HALF-RIESZ-v1`.
 
 The newest designated partner fleet02/B09 result was also read in full:
 
-`yspennstate/math-open-problems@74484a59609ced9b80417aab0f22095d307e2174`,
+`private-source-repository@74484a59609ced9b80417aab0f22095d307e2174`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T004108Z-fleet02-B09-QFORM-auto11/REPORT.md`,
 claim `QFORM-ONE-HUB-RANKR-MIXEDFRAME-v1`. It is applied quantitatively in Section 7.
 

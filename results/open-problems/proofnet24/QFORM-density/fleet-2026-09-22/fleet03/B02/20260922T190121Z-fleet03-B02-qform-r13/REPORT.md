@@ -340,16 +340,16 @@ That route uses the curvature forced into off-diagonal couplings when the scalar
 
 Applied analytic dependency:
 
-- fleet03/B01, sharp half-integral / dependence-safe square smoothing, visible at `yspennstate/math-open-problems@559e4be19d8f032bdae0392e7394bdcdca681a14:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260922T142626Z-fleet03-B01-qform-r12/REPORT.md`.
+- fleet03/B01, sharp half-integral / dependence-safe square smoothing, visible at `private-source-repository@559e4be19d8f032bdae0392e7394bdcdca681a14:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260922T142626Z-fleet03-B01-qform-r12/REPORT.md`.
 
 Applied projection-density dependency and aggregate precedent:
 
-- fleet02/B20, two-dimensional linear-image density bound and zero-pivot aggregate mechanism, visible at `yspennstate/math-open-problems@559e4be19d8f032bdae0392e7394bdcdca681a14:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260922T115925Z-fleet02-B20-qform-r11/REPORT.md`.
+- fleet02/B20, two-dimensional linear-image density bound and zero-pivot aggregate mechanism, visible at `private-source-repository@559e4be19d8f032bdae0392e7394bdcdca681a14:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260922T115925Z-fleet02-B20-qform-r11/REPORT.md`.
 
 Comparison results:
 
-- fleet01/B13 disjoint exterior-mass aggregation, visible at `yspennstate/math-open-problems@559e4be19d8f032bdae0392e7394bdcdca681a14:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260922T135910Z-fleet01-B13-qform-r13/REPORT.md`.
-- fleet03/B14 determinant-localization theorem, creation visible in the repository history at `yspennstate/math-open-problems@89e6481f4f7ed7d49a77cfcb989ee93572d5d5cd:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T190524Z-fleet03-B14-QFORM-r16/REPORT.md`.
+- fleet01/B13 disjoint exterior-mass aggregation, visible at `private-source-repository@559e4be19d8f032bdae0392e7394bdcdca681a14:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260922T135910Z-fleet01-B13-qform-r13/REPORT.md`.
+- fleet03/B14 determinant-localization theorem, creation visible in the repository history at `private-source-repository@89e6481f4f7ed7d49a77cfcb989ee93572d5d5cd:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T190524Z-fleet03-B14-QFORM-r16/REPORT.md`.
 
 A numerical regression using 50 random `7 x 3` Parseval frames checked the identities `u_{jk}^{(i)}=w_{ijk}/c_i` and `D_1=sum_i c_i^2d_i`; the maximum floating-point discrepancies were respectively `6.7e-16` and `1.0e-15`. This is only a regression; Sections 2--8 are the proof.
 

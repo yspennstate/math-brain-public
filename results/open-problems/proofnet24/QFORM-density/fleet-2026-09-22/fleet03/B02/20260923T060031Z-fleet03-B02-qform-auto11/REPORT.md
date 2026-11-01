@@ -19,7 +19,7 @@ The live corrections against law-uniform scalar pointwise quadratic-phase decay,
 
 The immediately preceding B02 result is
 
-`yspennstate/math-open-problems@40bf94187444ad5a6008bcf4b06931689b0e7383`
+`private-source-repository@40bf94187444ad5a6008bcf4b06931689b0e7383`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T053047Z-fleet03-B02-qform-auto11/REPORT.md`.
 
@@ -139,7 +139,7 @@ The point is structural and probability-safe: both correction stars generate gen
 
 The completed fleet01/B01 theorem `QFORM-PAIRVOLUME-HALF-RIESZ-UNCONDITIONAL-v1` is at
 
-`yspennstate/math-open-problems@1f3af9dc58afb9e902b972466d6da01cece89734`
+`private-source-repository@1f3af9dc58afb9e902b972466d6da01cece89734`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T030821Z-fleet01-B01-qform-auto11/REPORT.md`.
 
@@ -218,7 +218,7 @@ Thus the next mechanism must use the two stars jointly in the small-`F` / near-l
 
 The designated partner theorem is `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`, canonical source
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 

@@ -4,7 +4,7 @@ Status: supporting implication proved; unrestricted QFORM remains OPEN; continui
 
 Run: `20260923T223228Z-fleet01-B20-QFORM-auto11`.
 
-Completed designated partner consumed: fleet02/B20 `QFORM-R37-EXACT-COMMONGRAM-THIRDMODE-ESCAPE-v1`, canonical package `yspennstate/math-open-problems@edefefbd4d25c1c870330eb976e47a9356f7f4a0`, whose exact common-Gram endpoint gives
+Completed designated partner consumed: fleet02/B20 `QFORM-R37-EXACT-COMMONGRAM-THIRDMODE-ESCAPE-v1`, canonical package `private-source-repository@edefefbd4d25c1c870330eb976e47a9356f7f4a0`, whose exact common-Gram endpoint gives
 
 `max{ ||P A Q||_op, max_i ||Delta_i||_op, ||Q A Q||_op } >= 1/2`.
 

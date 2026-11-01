@@ -10,7 +10,7 @@
 The full target remains open: for every independent real coordinate vector with one-dimensional densities bounded by one, and every real symmetric matrix A with `s_3(A)>=1`, prove a universal bound on the density of `X^T A X`, or give a genuine counterexample. No rotated-coordinate independence, moments, support regularity, or pointwise van-der-Corput estimate is used below.
 
 
-The second source applied is fleet03/B20 r16, `QFORM-SCHUR-RIDGE-OR-UNIFORM-NEARRANK1-v1`, canonical source `yspennstate/math-open-problems@241e781422352daf5ca803898f1e2d20f4dfda8e`, whose unpaid survivor satisfies a quantitative all-cut near-rank-one condition and the approximate tetrads recorded below.
+The second source applied is fleet03/B20 r16, `QFORM-SCHUR-RIDGE-OR-UNIFORM-NEARRANK1-v1`, canonical source `private-source-repository@241e781422352daf5ca803898f1e2d20f4dfda8e`, whose unpaid survivor satisfies a quantitative all-cut near-rank-one condition and the approximate tetrads recorded below.
 
 ---
 

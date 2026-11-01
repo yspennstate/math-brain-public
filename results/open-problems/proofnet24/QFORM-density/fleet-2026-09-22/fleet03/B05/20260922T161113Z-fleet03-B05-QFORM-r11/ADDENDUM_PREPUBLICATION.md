@@ -6,7 +6,7 @@ The same fleet02/B06 report proves `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`: if `R` h
 
 `||p_(y_L.X_L,z_L.X_L)||_infinity <= e D_L^(-1/2)`.
 
-Therefore the late completed worker result independently supplies the same actual inequality used in the main proof. Source: `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
+Therefore the late completed worker result independently supplies the same actual inequality used in the main proof. Source: `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
 The refresh also contains `QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1`. The main theorem does not use the refuted one-heavy-row absorption step; it requires the exact block-span identity `s_L=alpha y_L+beta z_L` and performs a valid two-dimensional output-square completion. Thus its stated scope is unchanged.
 

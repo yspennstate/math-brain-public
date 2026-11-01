@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-B — reciprocal convolution, a critical collision-energy target, and a supercritical spectral-dispersion certificate
 
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured start master:** `5147efc28f27cc5fd46ab16525c4c702ffbdea93`  
 **Fresh pre-write master:** `c2e7130fc60e384cf3d828f85b13a22b861f113c`  
 **Previous own report:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T0725+0300__static_moreau_cone_projection.md`, creation commit `b853587bd507193ad92fe4a090910a3926019b87`.  

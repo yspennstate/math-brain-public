@@ -2,7 +2,7 @@
 
 Run: `20260924T141823Z-fleet03-B17-fixedmult-auto11`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Pinned baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.  
+Pinned baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.  
 Status: **PROVED SUPPORTING REDUCTION + SHARPENED EXACT-ZERO RECEIVER; multiplicity eight remains open.**
 
 This note starts from the proved fleet03/B04 terminal-collar theorem for the no-pivot `s_8(A)>=1` chamber. It removes the previously stated aggregate-to-local obstruction: the two-sided collar actually forces one literal pair of original coordinates to have a dimension-free rank-two outside cross map. It then sharpens the exact-zero two-anchor receiver and closes that exact-zero subcase with a continuous density. Finally it combines the same anchor extraction with the order-two Schur half-potential mechanism to show that, for an invertible anchor, the moving logarithmic singularity is uniformly paid without selecting a tiny local minor. The only remaining local determinant singularity in that route is the nonlogarithmic pair term.

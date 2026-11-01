@@ -31,7 +31,7 @@ The calculation respects all live corrections, in particular the false law-unifo
 
 Named partner actually applied:
 
-- `fleet03/B04`, canonical report `yspennstate/math-open-problems@f82e7bb9a6376c69615e136da4d1fc67343d46ef`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/a03-b04-20260922T125025Z-qform-r12/REPORT.md`, blob `b3504f05f6f75a6537327d5c213a235159cb781f`. Its theorem `QFORM-DIFFUSE-SCHUR-PIVOT-v1` says that for an original-coordinate scalar pivot `a!=0`, rank-two Schur complement with nonzero eigenvalues `mu_1,mu_2`, and Schur-range row leverage at most `1/2`,
+- `fleet03/B04`, canonical report `private-source-repository@f82e7bb9a6376c69615e136da4d1fc67343d46ef`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/a03-b04-20260922T125025Z-qform-r12/REPORT.md`, blob `b3504f05f6f75a6537327d5c213a235159cb781f`. Its theorem `QFORM-DIFFUSE-SCHUR-PIVOT-v1` says that for an original-coordinate scalar pivot `a!=0`, rank-two Schur complement with nonzero eigenvalues `mu_1,mu_2`, and Schur-range row leverage at most `1/2`,
 
   `||p_Q||_infinity <= 4 sqrt(3e) |a|^{-1/2}|mu_1 mu_2|^{-1/4}`.        (2.1)
 
@@ -39,7 +39,7 @@ The partner proof uses product-space Brascamp--Lieb/Hausdorff--Young and a sourc
 
 Compatible diffuse theorem actually applied:
 
-- `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, canonical report `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, path `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`, blob `d08d2488c072386e2b8ad818e30b1a6dec79e63a`. For rank `r>=3`, orthonormal-column frame `U` with row leverages `c_i<=1/2`, arbitrary coordinate-separable phases, and invertible `Lambda`, it gives
+- `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, canonical report `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, path `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`, blob `d08d2488c072386e2b8ad818e30b1a6dec79e63a`. For rank `r>=3`, orthonormal-column frame `U` with row leverages `c_i<=1/2`, arbitrary coordinate-separable phases, and invertible `Lambda`, it gives
 
   `||p||_infinity <= [r/(r-2)] B(U)^{2/r}|det Lambda|^{-1/r}`,
 

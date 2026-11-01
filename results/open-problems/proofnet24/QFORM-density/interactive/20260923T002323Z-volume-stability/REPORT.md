@@ -40,7 +40,7 @@ It applies to complex functions as well. The Brascamp--Lieb input is Lieb's Gaus
 
 Primary references: W. Beckner, Inequalities in Fourier analysis, Annals of Mathematics 102 (1975), 159--182, DOI 10.2307/1970980; J. Bennett, A. Carbery, M. Christ, T. Tao, The Brascamp--Lieb inequalities: finiteness, structure, and extremals, arXiv:math/0505065, final version 2007, GAFA 17 (2008), 1343--1415.
 
-The immediate research source is Claude's FOURIER_ROUTE_REPORT.md Sections 1, 1.1 and 1.2, at math-open-problems commit e5f71d79eff325201dd0274053d20268ce65b837, path proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/. The sharp-HY q=1 refinement was already recorded at 9844891a9fbe96a65e37f71122bf0300b53dcc80 in the 20260922T220600Z-claude-review/REVIEW.md. Here we give the q-dependent calculation and combine it with (3).
+The immediate research source is Claude's FOURIER_ROUTE_REPORT.md Sections 1, 1.1 and 1.2, at private-source commit e5f71d79eff325201dd0274053d20268ce65b837, path proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/. The sharp-HY q=1 refinement was already recorded at 9844891a9fbe96a65e37f71122bf0300b53dcc80 in the 20260922T220600Z-claude-review/REVIEW.md. Here we give the q-dependent calculation and combine it with (3).
 
 ## 3. Exact volume marginals
 

@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED.** Primary metric
 
 Status: **PARTIAL / Chang--Kolhe--Sohn k=3 sharpness conjecture remains OPEN under bounded current-literature review.**
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Canonical ownership remains `operations/claims/CKS-2024-RREG-HYPER2COL-K3.md`, owner `HARD7-06`. I resumed the exact admitted target and the two previous checkpoints. Run 1 proved that the ordinary balanced-coloring second moment is locally unstable at independent overlap when `d=6`; run 2 classified the one-dimensional symmetric raw-count landscape and proved that the correlated saddles are global maxima. This run **does not recompute that landscape**. It changes the counted object.
 

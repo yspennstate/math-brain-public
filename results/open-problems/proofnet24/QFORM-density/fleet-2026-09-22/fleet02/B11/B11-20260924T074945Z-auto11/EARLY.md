@@ -58,6 +58,6 @@ p_{Q_2}(t)=log(1/(2|t|)), 0<|t|<1/2.
 
 Thus the third direction upgrades the adaptive inverse-Jacobian threshold from p<2 to p<3 and, in particular, creates a finite second inverse moment which the logarithmic rank-two saddle cannot possess. This does NOT by itself imply an L-infinity trace bound; it identifies a sharper source-valid currency for the remaining two-sheet compiler.
 
-Required pinned-source application: Theorem C at math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 applies to this exact homogeneous rank-three form. After scaling by s, if c>0 (signature (2,1)) then p_Q(t)<=pi sqrt(2)/s for t>=0; if c<0 (signature (1,2)), applying it to -Q gives the same bound for t<=0. No X-ray estimate is transferred to the opposite two-sheet side.
+Required pinned-source application: Theorem C at private-source@e5f71d79eff325201dd0274053d20268ce65b837 applies to this exact homogeneous rank-three form. After scaling by s, if c>0 (signature (2,1)) then p_Q(t)<=pi sqrt(2)/s for t>=0; if c<0 (signature (1,2)), applying it to -Q gives the same bound for t<=0. No X-ray estimate is transferred to the opposite two-sheet side.
 
 First unpaid implication: QFORM-TWOCHART-L2-PRODUCT-TRACE-COMPILER-v1 — use the finite adaptive second inverse moment together with the ORIGINAL product-projection Fourier/factorization, before any worst-fiber or arbitrary-joint-density replacement, to prove the opposite-two-sheet linear small-ball bound or force an already-paid physical-pair/volume exit.

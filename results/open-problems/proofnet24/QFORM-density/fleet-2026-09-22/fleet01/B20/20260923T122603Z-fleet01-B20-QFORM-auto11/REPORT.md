@@ -10,15 +10,15 @@ Target: for arbitrary independent real `X_i` with probability densities `0<=f_i<
 
 No Gaussianity, moments, iid assumption, compact support, log-concavity, or post-rotation independence is used. The known false uniform pointwise quadratic oscillatory-decay route is not used. Small spectral tails are not deleted from the random quadratic form.
 
-Fresh designated completed partner actually consumed: fleet02/B20, canonical mathematics `yspennstate/math-open-problems@19327f690f815425717fcbd07854302df2090970`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T112426Z-fleet02-B20-QFORM-auto11/REPORT.md`; source-pinned brain handoff was read from its committed fleet02/B20 handoff. Its N3 compiler supplies, in particular, the source-valid inequality
+Fresh designated completed partner actually consumed: fleet02/B20, canonical mathematics `private-source-repository@19327f690f815425717fcbd07854302df2090970`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T112426Z-fleet02-B20-QFORM-auto11/REPORT.md`; source-pinned brain handoff was read from its committed fleet02/B20 handoff. Its N3 compiler supplies, in particular, the source-valid inequality
 
 `(A^2)_hh >= (P_0)_hh`,  where `P_0 = 1_{|A|>=1}`,
 
 and keeps the arbitrary extra spectrum rather than truncating the law. I apply that inequality below at the actual new threshold `1/60`.
 
-Prior own compiler: `yspennstate/math-open-problems@0a22623e8aa296bfdb618b8952fbd186c670c55c`, fleet01/B20 run `20260923T114521Z-fleet01-B20-QFORM-auto11`. It paid the N3 star branch above leverage `1/32` unless a four-direction leaf packet survived, and paid the spectral-window branch at threshold `1/64` under leverage `5/128`.
+Prior own compiler: `private-source-repository@0a22623e8aa296bfdb618b8952fbd186c670c55c`, fleet01/B20 run `20260923T114521Z-fleet01-B20-QFORM-auto11`. It paid the N3 star branch above leverage `1/32` unless a four-direction leaf packet survived, and paid the spectral-window branch at threshold `1/64` under leverage `5/128`.
 
-Completed analytic receiver used here: the ridge-leverage density theorem at `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`. For a physical cross block `B`, ridge scale `gamma`, and `q=1`, if `max_i K_gamma,ii<=1/2` and `theta=tr K_gamma>2`, then the full ambient form has a continuous `C_0` density and
+Completed analytic receiver used here: the ridge-leverage density theorem at `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`. For a physical cross block `B`, ridge scale `gamma`, and `q=1`, if `max_i K_gamma,ii<=1/2` and `theta=tr K_gamma>2`, then the full ambient form has a continuous `C_0` density and
 
 `||p_Q||_infinity <= sqrt(e)/(sqrt(2) gamma) * theta/(theta-2)`.
 

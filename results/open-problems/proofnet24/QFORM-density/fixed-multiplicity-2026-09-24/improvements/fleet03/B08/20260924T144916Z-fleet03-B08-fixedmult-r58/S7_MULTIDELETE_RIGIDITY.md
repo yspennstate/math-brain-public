@@ -5,7 +5,7 @@ attacking: the current fixed-multiplicity frontier by intersecting the new multi
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Status: **PROVED SUPPORTING STRUCTURAL/ANALYTIC ROUTER; NO SEVEN-EIGENVALUE THEOREM CLAIMED**.  
-Baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
+Baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
 
 The pinned 790-line baseline is byte-for-byte unchanged from the B08 end-to-end audits already recorded by this worker. The present run does not promote the baseline or the multiplicity-nine replacement; it uses only previously checked rank perturbation, the current multiplicity-seven overlap theorem, and the designated fleet04/B08 affine-uniform deletion receiver.
 
@@ -62,7 +62,7 @@ This lowers the multi-deletion rigidity statement previously recorded by B08 fro
 
 The designated partner result is fleet04/B08 theorem `QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1`,
 
-`yspennstate/math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76`,
+`private-source-repository@a5e66e2944c89857a41d5e18c283d53a4307be76`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T212412Z-fleet04-B08-QFORM-r2/REPORT.md`.
 

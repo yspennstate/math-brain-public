@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R7-01 admission screen: E0039 scale correction and a deterministic universality-transfer gate
 
 Date: 2026-09-19 UTC  
-Repository: `yspennstate/math-open-problems`  
+Repository: `private-source-repository`  
 Branch: `master`  
 Slot: `R7-01 Counterexamples and Constants`  
 Native ID: `6aabe777361481919c9e614646464772`  

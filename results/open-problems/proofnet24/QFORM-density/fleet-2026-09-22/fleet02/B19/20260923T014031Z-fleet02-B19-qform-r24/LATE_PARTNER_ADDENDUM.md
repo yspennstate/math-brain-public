@@ -5,7 +5,7 @@ attacking: late-source integration — apply the newest completed designated-par
 
 After the main r24 report was written, the final designated-partner sweep found a newer completed `fleet03/B19` artifact than the older no-pivot compiler used as the incoming R1 source:
 
-`yspennstate/math-open-problems@4b6025f5928ab6a35f3637965dd4639768c76087`
+`private-source-repository@4b6025f5928ab6a35f3637965dd4639768c76087`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T010143Z-fleet03-B19-QFORM-r21/REPORT.md`.
 

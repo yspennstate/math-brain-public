@@ -20,19 +20,19 @@ Fresh protected controls were reread before this write at
 Mathematical sources actually used:
 
 1. **Exact product bang-bang reduction**, fleet02/B13:
-   `yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`,
+   `private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`.
    For every fixed slab kernel, the worst cap-one product law is reduced exactly, in supremum, to unit-measure product indicators. No interval or bounded-fragment hypothesis is introduced.
 
 2. **Designated partner result: null-pair product smoothing**, fleet03/B13:
-   `yspennstate/math-open-problems@a7594ff13b36fbc1819f60ec287e8232bd39974d`,
+   `private-source-repository@a7594ff13b36fbc1819f60ec287e8232bd39974d`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260922T165804Z-fleet03-B13-qform-r12/REPORT.md`.
    Its exact endpoint theorem is
    `p_{UV}(z) <= 4 asinh(1/(2 sqrt(|z|))) <= 2 Psi(z)`
    for independent cap-one `U,V`, uniformly after deterministic translations. Its stated next implication is a support-free near-null interpolation allowing small nonzero squares in both hyperbolic variables.
 
 3. **Weak-`L^2` logarithmic ridge**, fleet03/B16:
-   `yspennstate/math-open-problems@c301be6b21f382934962aeb4c019b713377eac2f`,
+   `private-source-repository@c301be6b21f382934962aeb4c019b713377eac2f`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/B16-20260922T135620Z-r11/REPORT.md`.
    With
    `Psi(u)=1+log(1/|u|)` for `0<|u|<=1` and `Psi(u)=|u|^(-1/4)` for `|u|>=1`, it proves uniformly in `a`

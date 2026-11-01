@@ -16,7 +16,7 @@ No Gaussianity, log-concavity, moments, bounded/connected support, diagonal-basi
 
 The immediate inherited B11 theorem is:
 
-`yspennstate/math-open-problems@fc8a0b4bb5856e26723fbbce97474eac66ec8bfb:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260923T234226Z-fleet01-B11-QFORM-auto11/REPORT.md`.
+`private-source-repository@fc8a0b4bb5856e26723fbbce97474eac66ec8bfb:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260923T234226Z-fleet01-B11-QFORM-auto11/REPORT.md`.
 
 For a physical hub `i`, disjoint ORIGINAL-coordinate banks `L,R`,
 
@@ -34,7 +34,7 @@ which, after the scalar-pivot/crossing interpolation, pays that branch continuou
 
 The completed partner theorem actually applied below is fleet02/B11's three-dimensional cross-bank estimate, source-pinned in the preceding B11 report to canonical mathematics
 
-`yspennstate/math-open-problems@25c25e15fa0f570e7b0b1a2a9fab0811eda07113:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T201026Z-fleet02-B11-QFORM-auto11/REPORT.md`.
+`private-source-repository@25c25e15fa0f570e7b0b1a2a9fab0811eda07113:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T201026Z-fleet02-B11-QFORM-auto11/REPORT.md`.
 
 For two source-disjoint ORIGINAL-coordinate product banks, arbitrary within-bank quadratic/affine phases, and a rank-three cross matrix `K`, it yields
 

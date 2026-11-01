@@ -21,13 +21,13 @@ with run id `20260924T010216Z-fleet03-B19-QFORM-r46`; it was preserved rather th
 
 The fresh proof graph consumed here is:
 
-1. **fleet03/B19 r45 local synthesis**: `yspennstate/math-open-problems@73b00e5e496973ec5936c2c31e9d44894d221f2c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T000337Z-fleet03-B19-QFORM-r45/REPORT.md`. After already-paid diagonal/principal-triple/disjoint-E3/strong-shared-edge branches, one residual packet is a literal physical two-star
+1. **fleet03/B19 r45 local synthesis**: `private-source-repository@73b00e5e496973ec5936c2c31e9d44894d221f2c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T000337Z-fleet03-B19-QFORM-r45/REPORT.md`. After already-paid diagonal/principal-triple/disjoint-E3/strong-shared-edge branches, one residual packet is a literal physical two-star
 
    `||A[R,p]||_2 ||A[q,C]||_2 >= 2/9`,                         (1.1)
 
    where `R,C` are disjoint original-coordinate banks, `p,q` lie outside them, and `p=q` is explicitly allowed.
 
-2. **fleet01/B02 physical E3 receiver**, source used by its corrected r41 frontier: `yspennstate/math-open-problems@aeaba9e3351623ead11450857c2d014b43664aef`. For every literal original-coordinate cross block `M`, if
+2. **fleet01/B02 physical E3 receiver**, source used by its corrected r41 frontier: `private-source-repository@aeaba9e3351623ead11450857c2d014b43664aef`. For every literal original-coordinate cross block `M`, if
 
    `E3(M):=e_3(MM^T)>0`,
 
@@ -41,13 +41,13 @@ The fresh proof graph consumed here is:
 
    Arbitrary same-bank curvature, outside coordinates/couplings, signs, and affine terms remain in that theorem.
 
-3. **fleet03/B20 r43 E2 funnel**, `yspennstate/math-open-problems@97af54ab6c7f082493cfa539508780275ebf9a39`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T004659Z-fleet03-B20-QFORM-r43/REPORT.md`. It proves the deterministic inequality
+3. **fleet03/B20 r43 E2 funnel**, `private-source-repository@97af54ab6c7f082493cfa539508780275ebf9a39`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T004659Z-fleet03-B20-QFORM-r43/REPORT.md`. It proves the deterministic inequality
 
    `T_2 E2(M) <=3 E3(M)`,                                         (1.4)
 
    where `T_2=dist_F(M,{rank<=2})^2`, and refines the live `E2>4/9` branch to a continuous E3 payment or an ultra-thin robust-rank-two / giant-rank-one literal crossing.
 
-4. **fleet04/B19 designated partner barrier**, `yspennstate/math-open-problems@ac55b70485c4108c7073a75365127e00be3bc097`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260923T151700Z-fleet04-B19-QFORM-r4/REPORT.md`. Its moving-ridge construction shows that a mere bounded JOINT density after compression cannot replace original-product provenance.
+4. **fleet04/B19 designated partner barrier**, `private-source-repository@ac55b70485c4108c7073a75365127e00be3bc097`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260923T151700Z-fleet04-B19-QFORM-r4/REPORT.md`. Its moving-ridge construction shows that a mere bounded JOINT density after compression cannot replace original-product provenance.
 
 The active corrections are respected: no law-uniform scalar quadratic van-der-Corput estimate, no arbitrary-joint coarea cap, no conditional-projection cap as independence, no fiber supremum, no one-good-minor extraction from aggregate volume, no deletion of a nonzero coefficient tail, and no independence claim after a nontrivial rotation.
 

@@ -2,7 +2,7 @@
 
 Outcome: `CANDIDATE_REFUTED` for the rank-homogeneous strengthening in lead `FOREST-TRIANGLEFREE-SIMPSON-BUDGET-v1`; parent FOREST remains open. Context: `WITHOUT_VERIFIED_BRAIN`.
 
-Canonical report: `yspennstate/math-open-problems`, `proofnet24/P14-probability-correlation/collective-2026-09-22/fleet01/B02/20260922T054825Z-b02-forest-auto11/report.md`, creation commit `4526e04cfaf0f4e752283e9c2003b0fa2f35a238`, report blob `7b500e2bc01d8788d526de9db984f52d6abe5d65`.
+Canonical report: `private-source-repository`, `proofnet24/P14-probability-correlation/collective-2026-09-22/fleet01/B02/20260922T054825Z-b02-forest-auto11/report.md`, creation commit `4526e04cfaf0f4e752283e9c2003b0fa2f35a238`, report blob `7b500e2bc01d8788d526de9db984f52d6abe5d65`.
 
 ## Decisive correction
 

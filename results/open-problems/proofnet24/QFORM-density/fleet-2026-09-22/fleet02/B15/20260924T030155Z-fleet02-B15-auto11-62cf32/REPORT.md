@@ -20,7 +20,7 @@ What remains unpaid is structural: turn the spectral condition into a dimension-
 
 Dependencies used at exact scope:
 
-- owner-pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, in particular the ruled one-sheet theorem and the Schur-complement eigenvalue persistence lemma;
+- owner-pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, in particular the ruled one-sheet theorem and the Schur-complement eigenvalue persistence lemma;
 - fleet03/B15 physical-pair logarithmic envelope at `2f36eb6204ac8598eaf63faed15f9fa7fddffd0c`;
 - orientation-free rank-two affine half-Riesz theorem at `e542b1a6ef471b329e4e88a6553e1aacb45acc1a`;
 - newest compatible fleet03/B15 fixed-matrix closure at `bea3c88b8ba5df9f7fbed3bf0676709971a1e9da`;

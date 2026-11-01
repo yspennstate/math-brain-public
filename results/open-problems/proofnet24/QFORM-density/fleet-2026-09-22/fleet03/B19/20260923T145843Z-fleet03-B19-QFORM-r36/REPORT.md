@@ -16,19 +16,19 @@ The unrestricted theorem is still OPEN. No Gaussian, moment, compact-support, co
 
 The immediate B19 predecessor is
 
-`yspennstate/math-open-problems@55fbef3fbe63cb7335851d9772449daac0ed67cf`,
+`private-source-repository@55fbef3fbe63cb7335851d9772449daac0ed67cf`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T142823Z-fleet03-B19-QFORM-r35/REPORT.md`.
 
 It proved that the aligned null-hub + two-star + rank-two-cross packet alone is not an L-infinity receiver: an exact rank-two product-law family has logarithmically unbounded output density. Thus a genuine third spectral resource must be spent.
 
 The quantitative STAR4 input and selected-volume identity are from fleet01/B19,
 
-`yspennstate/math-open-problems@dc25fccd11312d65d1eae4b8efc947cf4bd475db`,
+`private-source-repository@dc25fccd11312d65d1eae4b8efc947cf4bd475db`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/fleet01-B19-20260923T134858Z-auto11/REPORT.md`.
 
 The designated partner theorem used at an actual inequality in Section 6 is fleet04/B19,
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 
 ## 2. Exact aligned survivor entering this run

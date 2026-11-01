@@ -16,20 +16,20 @@ The live corrections used here exclude law-uniform pointwise quadratic oscillato
 
 The completed assigned-partner result actually consumed is `fleet02/B13`:
 
-`yspennstate/math-open-problems@93bed74b07afe996a4aa08eaeb88f35060653134`
+`private-source-repository@93bed74b07afe996a4aa08eaeb88f35060653134`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T152225Z-fleet02-B13-productset-7f3c9a/REPORT.md`.
 
 It proves exact residual pair-incidence identities in the nested-heavy rank-three branch and the quantitative conclusion used in Section 4 below. Its earlier exact bang-bang theorem is
 
-`yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`:
+`private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`:
 for every measurable `0<=K<=1`, the supremum of `int K prod_i f_i` over `0<=f_i<=1`, `int f_i=1`, equals the supremum over `f_i=1_{E_i}`, `|E_i|=1`; bounded finite interval unions are dense. This will be applied to the actual slab inequality in Section 3.
 
 Two additional proved dependencies are used exactly at their stated scopes:
 
-1. fleet01/B13 disjoint exterior theorem, source `yspennstate/math-open-problems@0b5cf04790e5927df0efed8811a2a1295006e141`: for exact rank three, with ordered disjoint Pluecker mass `D0`,
+1. fleet01/B13 disjoint exterior theorem, source `private-source-repository@0b5cf04790e5927df0efed8811a2a1295006e141`: for exact rank three, with ordered disjoint Pluecker mass `D0`,
    `||p_Q||_infinity <= 12 D0^(-1/6)` under `|lambda_j|>=1`.
-2. fleet03/B05 universal rank-two half-Riesz/Schur theorem, source `yspennstate/math-open-problems@bf7bff5c9b11cf495ccbcb09ef48549fd9c0d409`: for an exact-rank-three frame row of leverage `ell_i=||r_i||^2` and physical pivot `pi_i=A_ii`,
+2. fleet03/B05 universal rank-two half-Riesz/Schur theorem, source `private-source-repository@bf7bff5c9b11cf495ccbcb09ef48549fd9c0d409`: for an exact-rank-three frame row of leverage `ell_i=||r_i||^2` and physical pivot `pi_i=A_ii`,
    `||p_Q||_infinity <= C2 (|pi_i| ell_i |det Lambda|)^(-1/4)` whenever `pi_i!=0`, where `C2=16*2^(3/4)`.
 
 No status in those reports is promoted beyond its proved scope.

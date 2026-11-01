@@ -4,10 +4,10 @@ attacking: the exact rank-one / rank-zero localized three-hub endpoint by aggreg
 # fleet03/B06 r56 — kernel-area compiler for rank-one and rank-zero three-hub faces
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`.  
-Immediate B06 input: fleet03/B06 r54, `yspennstate/math-open-problems@8bdce354a7ab12c52133f56532d8c7589cc94e98`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T075625Z-fleet03-B06-qform-r54/REPORT.md`.  
-Rank-two crossing half-Riesz input: fleet01/B06 `QFORM-RANK2-CROSS-HALFRIESZ-v1`, source snapshot `yspennstate/math-open-problems@cb1cffb4f4644bd7cf1bb912f792dd9ce060957a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T213616Z-fleet01-B06-QFORM-r40/REPORT.md`.  
-Rank-three crossing input: `QFORM-THREE-HUB-JOINT-PLANCHEREL-v1`, `yspennstate/math-open-problems@f98635ec90f47da9c38e40516896462bb423f3c6`.  
-Designated partner actually applied in Section 7: fleet04/B06 `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, `yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260924T001014Z-fleet04-B06-QFORM-r3/REPORT.md`.  
+Immediate B06 input: fleet03/B06 r54, `private-source-repository@8bdce354a7ab12c52133f56532d8c7589cc94e98`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T075625Z-fleet03-B06-qform-r54/REPORT.md`.  
+Rank-two crossing half-Riesz input: fleet01/B06 `QFORM-RANK2-CROSS-HALFRIESZ-v1`, source snapshot `private-source-repository@cb1cffb4f4644bd7cf1bb912f792dd9ce060957a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T213616Z-fleet01-B06-QFORM-r40/REPORT.md`.  
+Rank-three crossing input: `QFORM-THREE-HUB-JOINT-PLANCHEREL-v1`, `private-source-repository@f98635ec90f47da9c38e40516896462bb423f3c6`.  
+Designated partner actually applied in Section 7: fleet04/B06 `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, `private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260924T001014Z-fleet04-B06-QFORM-r3/REPORT.md`.  
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The full QFORM conjecture remains OPEN. This report closes the exact localized three-hub faces `rank F=1` and `rank F=0` except for an explicit **actual global-null certificate**. The bounds proved below depend on kernel-to-tail exterior volume and are therefore supporting theorems, not yet universal consequences of the bare three-large-eigenvalue hypothesis. No post-rotation independence, conditional projection-density cap, unrestricted fiber supremum, or law-uniform pointwise Fresnel estimate is used.
@@ -289,7 +289,7 @@ So the exact rank-one hub face has no mysterious low-area high-dimensional survi
 
 ## 7. Actual designated-partner application
 
-The freshest completed designated partner result available at publication is fleet04/B06 r3, `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, canonical mathematics `math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`.
+The freshest completed designated partner result available at publication is fleet04/B06 r3, `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, canonical mathematics `private-source@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`.
 
 On the present rank-one packet assume `mathcal A>0` and whiten its complete kernel-tail coupling:
 

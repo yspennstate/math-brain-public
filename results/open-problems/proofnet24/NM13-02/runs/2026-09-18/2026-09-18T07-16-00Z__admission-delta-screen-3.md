@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-02 — post-P0037 admission delta screen 3
 
 Run date: 2026-09-18 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track: `NM13-02 Discrete Probability Constants`  
 Category: `CLOSABLE OUTSIDE`  
 Own namespace: `proofnet24/NM13-02/`  

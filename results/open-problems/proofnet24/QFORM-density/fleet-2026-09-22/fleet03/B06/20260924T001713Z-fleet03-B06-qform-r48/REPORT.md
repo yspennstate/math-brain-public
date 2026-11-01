@@ -24,7 +24,7 @@ The unrestricted conjecture remains OPEN. No Gaussian, log-concavity, moment, bo
 
 The immediate B06 predecessor is
 
-`yspennstate/math-open-problems@fcd44d39858e562272e44a586a458f38776fea2e`
+`private-source-repository@fcd44d39858e562272e44a586a458f38776fea2e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T232257Z-fleet03-B06-qform-r47/REPORT.md`.
 
@@ -359,7 +359,7 @@ The designated partner theorem is
 
 `QFORM-FRESH-TRANSVERSE-CURVED-SECTION-v1`,
 
-`yspennstate/math-open-problems@769800c0ab0851828772adabfb6874aa813e423d`,
+`private-source-repository@769800c0ab0851828772adabfb6874aa813e423d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260923T231442Z-fleet04-B06-QFORM-r2/REPORT.md`.
 

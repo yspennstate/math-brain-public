@@ -20,7 +20,7 @@ Because both eigenvalues of `P_T` are at most one and their product is `d_T`, `l
 
 Therefore the conditional active quadratic matrix `B_K=R_KMR_K^T` has exactly three nonzero eigenvalues, all of absolute value at least `d0`. After conditioning the ORIGINAL coordinates in `L`, the induced affine vector lies in `range(R_K)=range(B_K)` and is removed by a deterministic coordinatewise translation, preserving independence and the cap-one marginal densities.
 
-Immediate consequence: if the active rank-three range projection has every physical leverage at most `1/2`, Claude Theorem F at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` applies conditionally and gives
+Immediate consequence: if the active rank-three range projection has every physical leverage at most `1/2`, Claude Theorem F at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` applies conditionally and gives
 
 `||p_Q||_infinity <= 12/d0 < 42.780`,
 

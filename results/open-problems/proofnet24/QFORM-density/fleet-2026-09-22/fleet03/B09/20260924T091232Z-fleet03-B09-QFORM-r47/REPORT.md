@@ -21,12 +21,12 @@ No moment, support, log-concavity, identical-law, diagonal-basis, or post-rotati
 
 The direct predecessor is fleet03/B09 r46:
 
-- `yspennstate/math-open-problems@0ec2761c15a4699ff4d7208f59f19b7e025e4305`
+- `private-source-repository@0ec2761c15a4699ff4d7208f59f19b7e025e4305`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T064711Z-fleet03-B09-QFORM-r46/REPORT.md`.
 
 The exact singular-face theorem used for comparison is fleet02/B08:
 
-- `yspennstate/math-open-problems@cdd0eb22227a505e827a658038a1512897c0ad56`
+- `private-source-repository@cdd0eb22227a505e827a658038a1512897c0ad56`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/fleet02-B08-20260924T034000Z-7c4f/REPORT.md`.
 
 It proves, for a singular physical pair with polynomial star H, the full-ambient bound
@@ -35,7 +35,7 @@ It proves, for a singular physical pair with polynomial star H, the full-ambient
 
 The designated partner result actually applied below is fleet04/B09:
 
-- `yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`
+- `private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
 
 Its completed theorem gives, for a literal disjoint original-coordinate invertible r x r cross block C with r>2,
@@ -457,6 +457,6 @@ Full unrestricted QFORM remains **OPEN**.  Full-target continuity remains **OPEN
 
 ## 13. Integrity / privacy / scope
 
-Changed-file allowlist for this run is restricted to this B09 run directory in math-open-problems and this worker's own handoff/memory/status paths in math-research-brain.  Manual fallback privacy review found only mathematical formulas, public repository commit identifiers, logical account/slot labels and nonsecret run metadata; no credentials, scheduler IDs, signed URLs, machine paths, private personal data, trading/company/client material, or unrelated source excerpts are included.
+Changed-file allowlist for this run is restricted to this B09 run directory in private-source and this worker's own handoff/memory/status paths in math-research-brain.  Manual fallback privacy review found only mathematical formulas, public repository commit identifiers, logical account/slot labels and nonsecret run metadata; no credentials, scheduler IDs, signed URLs, machine paths, private personal data, trading/company/client material, or unrelated source excerpts are included.
 
 No task identity, cadence, enabled/paused state, notification setting, email setting, permission, public visibility, cross-account authentication, paid API/model/Codex call, or remote workflow was changed.

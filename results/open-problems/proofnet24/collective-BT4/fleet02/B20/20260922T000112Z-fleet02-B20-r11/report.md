@@ -14,7 +14,7 @@ Target: every finite loopless digraph with at most one arc per ordered pair and 
 
 This run substantively consumes fleet01/B04's completed source-bound result `BT4-MCR-v1`, canonical report
 `proofnet24/collective-BT4/fleet01/B04/20260921T234516Z-b04-8fd1d4/report.md`,
-math-open-problems commit `8a71d11efa2a3110db78c39684ea4c9cce03a28b`.
+private-source commit `8a71d11efa2a3110db78c39684ea4c9cce03a28b`.
 That report establishes, for a vertex-minimal then arc-maximal counterexample D, that D is oriented and strongly connected; there is a minimum-total three-cycle packing C1,C2,C3 leaving a DAG R of at least three vertices; the packed cycles are chordless; the t=1,2,3 deletion hierarchy forces 3/5/7-fan witnesses; and for x in R, if m_i(x)=|N+(x)∩C_i|, then any C_i-to-x path with all internal vertices in R has length at least m_i(x)-1. In particular m_i(x)>=3 forbids every direct C_i->x arc.
 
 The assigned partner fleet04/B06 had started its first BT4 run during this invocation, but no finalized mathematical result from it was available when this derivation was completed, so no start/check-in is treated as scientific uptake.

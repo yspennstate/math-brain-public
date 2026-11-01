@@ -20,7 +20,7 @@ It proves, for two disjoint original-coordinate product banks, a direct density 
 
 The designated partner consumed in this run is fleet02/B16 r27, canonical source
 
-`yspennstate/math-open-problems@60079077a1035516fb0f88477c4eda71fbad8ca1`,
+`private-source-repository@60079077a1035516fb0f88477c4eda71fbad8ca1`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T073515Z-fleet02-B16-QFORM-r27/REPORT.md`,
 

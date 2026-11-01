@@ -23,7 +23,7 @@ The designated `fleet04/B07` current-QFORM artifact was searched again and remai
 
 The newest fleet03/B02 result is
 
-`yspennstate/math-open-problems@aa76b8c1d3d2e6ef6477500d94220c1d54bff4b8`,
+`private-source-repository@aa76b8c1d3d2e6ef6477500d94220c1d54bff4b8`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T043653Z-fleet03-B02-qform-r20/REPORT.md`.
 
@@ -59,7 +59,7 @@ All same-side curvature, outside couplings and affine terms are retained in (2.4
 
 The newest fleet03/B08 result is
 
-`yspennstate/math-open-problems@e875d54d4a946d399466cb6afa1fc37da12a11d2`,
+`private-source-repository@e875d54d4a946d399466cb6afa1fc37da12a11d2`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T042303Z-fleet03-B08-qform-diffuse-r27/REPORT.md`.
 
@@ -264,7 +264,7 @@ Thus, at this concrete collar, the entire non-large-star high-tail branch is eit
 
 The designated `fleet04/B07` current-QFORM source remains absent. The compatible completed fleet04/B18 source used by r22 is
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 
@@ -304,10 +304,10 @@ The low-tail rank-one tube from r23 remains a separate debt. The new scale-sensi
 
 ## 9. Source pins and execution status
 
-- Own incoming r22 bundle: `yspennstate/math-open-problems@c6ef0024d2d937df235fa0f8c8d7ad5a416dbba0`.
-- Own incoming r23 bundle: `yspennstate/math-open-problems@e24329a6a315b96a87b3efc608473ef0554f3b8d`.
-- Global disjointness theorem: `math-open-problems@aa76b8c1d3d2e6ef6477500d94220c1d54bff4b8`.
-- Anchored mixed-order theorem: `math-open-problems@e875d54d4a946d399466cb6afa1fc37da12a11d2`.
-- Compatible fleet04 product-projection source: `math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`.
+- Own incoming r22 bundle: `private-source-repository@c6ef0024d2d937df235fa0f8c8d7ad5a416dbba0`.
+- Own incoming r23 bundle: `private-source-repository@e24329a6a315b96a87b3efc608473ef0554f3b8d`.
+- Global disjointness theorem: `private-source@aa76b8c1d3d2e6ef6477500d94220c1d54bff4b8`.
+- Anchored mixed-order theorem: `private-source@e875d54d4a946d399466cb6afa1fc37da12a11d2`.
+- Compatible fleet04 product-projection source: `private-source@ce50e74f705c49f66524aa6565d4aa4a9be88061`.
 
 Repository transport is not native learned-memory ingestion. No authenticated native receiver retrieval/use occurred, so this run remains `WITHOUT_VERIFIED_BRAIN` with `full_brain_connected=false`. No task identity, schedule, enabled/paused state, notification setting, email/public workflow, paid model/API/Codex call, or cross-account native state was changed.

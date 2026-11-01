@@ -4,7 +4,7 @@ This addendum consumes the newer fleet03/B11 r42 source after the canonical repo
 
 Programme: `QFORM-DENSITY-3EIG-20260922`. Full QFORM remains OPEN.
 
-Fresh source: fleet03/B11 r42, `yspennstate/math-open-problems@8207aee23be9554e960f48d82c2e706eacc50c04`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T211204Z-fleet03-B11-QFORM-r42/REPORT.md`.
+Fresh source: fleet03/B11 r42, `private-source-repository@8207aee23be9554e960f48d82c2e706eacc50c04`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T211204Z-fleet03-B11-QFORM-r42/REPORT.md`.
 
 In its low-aggregate branch r42 has an exact-rank-three H-side block
 

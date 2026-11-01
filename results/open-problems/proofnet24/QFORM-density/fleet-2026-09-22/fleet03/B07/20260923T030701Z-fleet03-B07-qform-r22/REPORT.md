@@ -40,7 +40,7 @@ The two star coefficient banks and the row/column banks supporting `M` are pairw
 
 The newest source actually consumed is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
 and `PEER_TAIL_EXTENSION.md`.
@@ -260,7 +260,7 @@ This is a genuine dimension-free routing theorem. It does not assert a good loca
 
 The designated `fleet04/B07` still has no completed current-QFORM artifact, so none is invented. The compatible completed fleet04/B18 sharp rearrangement/product-projection source is
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 
@@ -320,6 +320,6 @@ The sibling residual-`E_2(D)>1/48` branch from the preceding O0 split remains se
 
 ## 11. Source status
 
-Fresh pre-publication brain control: `10bffccff59452d117bf5117b4583f54064c125f`, revision `2026-09-22.15`. Current volume-tail package: `math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`. Compatible fleet04 input: `math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`.
+Fresh pre-publication brain control: `10bffccff59452d117bf5117b4583f54064c125f`, revision `2026-09-22.15`. Current volume-tail package: `private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`. Compatible fleet04 input: `private-source@ce50e74f705c49f66524aa6565d4aa4a9be88061`.
 
 Repository access and native learned-memory ingestion are separate. No authenticated native receiver ingestion occurred, so this run remains `WITHOUT_VERIFIED_BRAIN`. No task identity, schedule, enabled/paused state, notification state, email/public workflow, paid API/model/Codex call, or cross-account native setting was changed.

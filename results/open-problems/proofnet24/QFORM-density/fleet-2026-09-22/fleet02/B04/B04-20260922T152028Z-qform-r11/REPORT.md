@@ -26,7 +26,7 @@ Required corrections consumed: law-uniform scalar pointwise quadratic-phase deca
 
 Named partner actually applied: fleet03/B04,
 
-`yspennstate/math-open-problems@a6cdaaf6e0723f54cc591269183029423cd77154:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T145033Z-r12/REPORT.md`,
+`private-source-repository@a6cdaaf6e0723f54cc591269183029423cd77154:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T145033Z-r12/REPORT.md`,
 
 with machine-readable completion at `f447c650e04ef27d14be3380ac541c1cec60ab0c`.
 

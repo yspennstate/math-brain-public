@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 # R16 HARD OUTSIDE — I0043 / Schramm Problem 7.2 — STUCK_RECOVERY_1
 
 Date: 2026-09-17 UTC.  
-Repository/branch: `yspennstate/math-open-problems` / `master`.  
+Repository/branch: `private-source-repository` / `master`.  
 Status: **PARTIAL / OPEN / STUCK_RECOVERY_1**.  
 Run kind: **thinking-only stuck recovery**. No new source-level theorem is claimed in this report; the purpose of the run is to identify the exact obstruction and select one genuinely different recovery mechanism.
 

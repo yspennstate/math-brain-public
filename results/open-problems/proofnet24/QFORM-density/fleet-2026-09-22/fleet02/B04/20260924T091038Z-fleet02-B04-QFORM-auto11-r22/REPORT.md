@@ -15,7 +15,7 @@ The target remains the unrestricted one: independent ORIGINAL real coordinates, 
 
 The newest compatible designated partner is fleet03/B04 r53, canonical mathematics
 
-`yspennstate/math-open-problems@1ec2c1d57ce156a13f1cdfa602e5de5e2b5dc43e`,
+`private-source-repository@1ec2c1d57ce156a13f1cdfa602e5de5e2b5dc43e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260924T074806Z-fleet03-B04-QFORM-auto11-r53/REPORT.md`.
 
@@ -27,7 +27,7 @@ Thus the low-tetrad chamber attacked in B04 r21 is no longer debt: r53 aggregate
 
 Required pinned source was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 

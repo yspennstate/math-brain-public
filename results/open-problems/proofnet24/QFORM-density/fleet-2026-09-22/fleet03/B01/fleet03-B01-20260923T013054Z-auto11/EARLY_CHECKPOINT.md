@@ -12,11 +12,11 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 Fresh owner control is QFORM-only, revision `2026-09-22.15`. This calculation consumes the sharp Jensen/volume-sampling Fourier argument in
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
 
 and the fractional-potential transducer in
 
-`yspennstate/math-open-problems@2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
+`private-source-repository@2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
 The pointwise law-uniform scalar Fresnel estimate remains false and is not used.
 

@@ -30,7 +30,7 @@ Applying the already-proved fleet02/B16 arbitrary-self-curvature rank-two cross 
 
 `|phi_S(t)| <= min(1, (16 pi)/(3 |t|))`
 
-and the pinned fractional-potential lemma from `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` gives
+and the pinned fractional-potential lemma from `private-source@e5f71d79eff325201dd0274053d20268ce65b837` gives
 
 `H_{1/2}(S) <= 8(64/9)^(1/4)=13.0639452948...`.
 

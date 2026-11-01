@@ -2,7 +2,7 @@
 
 Actual finish: 2026-09-24T13:43:35Z.
 
-Pinned manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
+Pinned manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
 
 Substantive result: complete 790-line B18 reconstruction now returns mathematical **PASS** for the 17-eigenvalue theorem, with a nonfatal prior-art/bibliography presentation gap. This run explicitly corrects B18's earlier false-positive Schur GAP: from the invertible regularizations one has `s_m(S_epsilon)>=t-|epsilon|`, and singular-value continuity gives `s_m(S)>=t`; the baseline moving-threshold proof is valid. No repair to the baseline is mathematically required.
 

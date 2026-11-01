@@ -2,7 +2,7 @@
 
 Objective: QFORM-FIXED-MULTIPLICITY-AUDIT-20260924.
 
-Pinned current source: yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f, improvements/interactive/20260924T145418Z-nine-400/paper.tex, blob 19fb119877426b640b2c0dae19ec2f78a399fe11, SHA-256 bf1caf6ae4b4bc33992f501c169b5dc6c795db757b0f6089eff9991391effdf3.
+Pinned current source: private-source-repository@eeb752c8943536541b34b42b8bf48e924f4d3d2f, improvements/interactive/20260924T145418Z-nine-400/paper.tex, blob 19fb119877426b640b2c0dae19ec2f78a399fe11, SHA-256 bf1caf6ae4b4bc33992f501c169b5dc6c795db757b0f6089eff9991391effdf3.
 
 Historical source: commit 7c0d6e60946b19423e6400a12d34b473cf0591e2, manuscript.tex, blob 183ccd294763214e6a707e8d4749ff9a8cf7006d.
 

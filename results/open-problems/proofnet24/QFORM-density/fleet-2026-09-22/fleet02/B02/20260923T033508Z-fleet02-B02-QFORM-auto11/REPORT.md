@@ -15,9 +15,9 @@ The target is unchanged: independent original real coordinates, each with probab
 
 Required Claude-source package actually used at equation level:
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
   `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`;
-- current volume-stability continuation `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, especially its fractional three-volume theorem.
+- current volume-stability continuation `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, especially its fractional three-volume theorem.
 
 The prior B02 run independently checked the sharp-Hausdorff--Young fractional-volume theorem and derived the live compiler
 
@@ -31,11 +31,11 @@ Those are not re-proved here; they are used as exits/branching tests.
 
 The latest compatible designated partner is `fleet03/B02` r18, current report commit
 
-`yspennstate/math-open-problems@7f0da7bc3a8072d96033846b208d43d446bedb8c`,
+`private-source-repository@7f0da7bc3a8072d96033846b208d43d446bedb8c`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T025843Z-fleet03-B02-qform-r18/REPORT.md`.
 
 It retains the predecessor exact-rank-three physical-cross-block theorem at
-`yspennstate/math-open-problems@484c89f85cda352b2c4318364a6206ebc4154950`:
+`private-source-repository@484c89f85cda352b2c4318364a6206ebc4154950`:
 if an original-coordinate cross block has exact rank three and nonzero singular-value product `Gamma`, then
 
 `|phi_Q(t)| <= min(1,(2pi)^(3/2) Gamma^(-1/2)|t|^(-3/2)),`            (1.3)

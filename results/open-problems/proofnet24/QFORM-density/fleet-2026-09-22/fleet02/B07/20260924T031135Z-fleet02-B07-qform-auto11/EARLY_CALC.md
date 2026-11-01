@@ -59,7 +59,7 @@ This is the first unpaid implication for the run.  It does not discard the tail 
 
 ## Mandatory pinned-e5 payment on the same literal K
 
-The completed `D_k` extension at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, with `k=2,q=2`, gives
+The completed `D_k` extension at `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, with `k=2,q=2`, gives
 
 `|phi_Q(t)| <= min(1,(2 e pi^2)^(1/4) Z^(-1/8)|t|^-1/2)`.
 

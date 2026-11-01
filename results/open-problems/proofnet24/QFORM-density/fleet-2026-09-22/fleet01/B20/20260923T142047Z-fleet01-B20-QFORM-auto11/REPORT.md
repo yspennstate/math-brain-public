@@ -16,7 +16,7 @@ Fresh owner control remains revision `2026-09-22.15`, QFORM-only. The live corre
 
 The newest completed designated partner actually consumed is fleet02/B20 run `20260923T135926Z-fleet02-B20-QFORM-auto11`, canonical mathematics
 
-`yspennstate/math-open-problems@a71dd6ede2dbff2508586f8cd3cdef0cf624b592`,
+`private-source-repository@a71dd6ede2dbff2508586f8cd3cdef0cf624b592`,
 
 path
 
@@ -40,7 +40,7 @@ The same partner proves this after first paying the one-anchor diffuse branch by
 
 The analytic transport input is fleet03/B02 r28, canonical mathematics
 
-`yspennstate/math-open-problems@3dc52765d1ebb50341bba6a4fea5ca8d68f97372`,
+`private-source-repository@3dc52765d1ebb50341bba6a4fea5ca8d68f97372`,
 
 path
 

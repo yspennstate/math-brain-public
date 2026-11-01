@@ -25,7 +25,7 @@ The run also separates the regularity levels cleanly:
 
 I consumed the completed `fleet02/B15` report
 
-- `yspennstate/math-open-problems@113aff6eea39e748c1bb6685c7656add2487c03e`,
+- `private-source-repository@113aff6eea39e748c1bb6685c7656add2487c03e`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T000548Z-fleet02-B15-QFORM/REPORT.md`.
 
 For orthonormal `r_1,r_2,r_3`, independent cap-one physical coordinates, and
@@ -79,7 +79,7 @@ Here `p_+` denotes the density of the submeasure `1_{Q>=0} dP_Q`.
 
 I also consumed the independently completed `fleet02/B15` regularity report
 
-- `yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`,
+- `private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`.
 
 It proves that for every fixed real symmetric `A` with `rank(A)>=3` and every cap-one product source, the full output density is bounded with an instance-dependent bound and has a representative in `C_0(R)`. The physical-block constants are not uniform in `A`, so this is a regularity theorem and not the owner conjecture.

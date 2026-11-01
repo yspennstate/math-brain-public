@@ -38,7 +38,7 @@ The main point of this run is that if either raw scalar-bank diagonal `a` or `d`
 
 Canonical source:
 
-`yspennstate/math-open-problems@b0299facc04ea0c03276dddb1a12c027aed5a946`
+`private-source-repository@b0299facc04ea0c03276dddb1a12c027aed5a946`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T033640Z-fleet01-B05-QFORM-r26/REPORT.md`.
 
@@ -48,7 +48,7 @@ It supplies (1.1), the genuine original-coordinate product provenance of `(S,R,Y
 
 Consumed source:
 
-`yspennstate/math-open-problems@552cc02b9161cc94ce42b04200799d1ebd3635f2`
+`private-source-repository@552cc02b9161cc94ce42b04200799d1ebd3635f2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T113953Z-fleet01-B16-QFORM-r12/REPORT.md`.
 
@@ -72,7 +72,7 @@ This theorem is exactly suited to the present obstruction because the whole depe
 
 Canonical source:
 
-`yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
+`private-source-repository@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`.
 

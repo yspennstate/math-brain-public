@@ -20,7 +20,7 @@ The designated partner result actually applied to an equation below is fleet02/B
 
 source:
 
-- repository `yspennstate/math-open-problems`,
+- repository `private-source-repository`,
 - commit `ce94013cd8928e997a42341f11ea53dc58a98545`,
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T081907Z-r11/REPORT.md`.
 

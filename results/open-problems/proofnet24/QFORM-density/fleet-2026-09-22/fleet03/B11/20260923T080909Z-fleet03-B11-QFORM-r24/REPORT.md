@@ -13,13 +13,13 @@ The full target remains open: for arbitrary independent real coordinates with de
 This run preserves the live corrections: no post-rotation independence, no arbitrary-joint rank-three coarea bound, no conditional-density-cap substitute for independence, no law-uniform pointwise van-der-Corput estimate, and no claim that one uniformly good physical minor is forced by the three-large-eigenvalue hypothesis. The result below is instead an **aggregate-before-inversion** statement: it first measures all physical two-row spectral areas and only then decides whether localization is forced.
 
 
-The localized receiver used below is fleet03/B11 `QFORM-LOCALIZED-3BLOCK-REPAIR-v1`, canonical source `yspennstate/math-open-problems@a9f23a3a387c9be219fcaf08ef66079f8c124e0c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T192514Z-fleet03-B11-QFORM-r14/REPORT.md`. It states that an ORIGINAL-coordinate principal `3 x 3` block of smallest singular value at least `s0>0` gives
+The localized receiver used below is fleet03/B11 `QFORM-LOCALIZED-3BLOCK-REPAIR-v1`, canonical source `private-source-repository@a9f23a3a387c9be219fcaf08ef66079f8c124e0c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T192514Z-fleet03-B11-QFORM-r14/REPORT.md`. It states that an ORIGINAL-coordinate principal `3 x 3` block of smallest singular value at least `s0>0` gives
 
 `||p_(X^T A X)||_infinity <= 128*2^(1/4)/s0`,
 
 uniformly over all outside coefficients and couplings.
 
-The designated partner source used below is fleet04/B11, `yspennstate/math-open-problems@4110bbfd21beffa0260a017d468b0a486af56db1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T222040Z-fleet04-B11-cone-envelope-r3/REPORT.md`. Its null-scalar smoothing theorem is recalled in Section 4.
+The designated partner source used below is fleet04/B11, `private-source-repository@4110bbfd21beffa0260a017d468b0a486af56db1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T222040Z-fleet04-B11-cone-envelope-r3/REPORT.md`. Its null-scalar smoothing theorem is recalled in Section 4.
 
 ## 1. A weighted EKR stability lemma for edge measures
 

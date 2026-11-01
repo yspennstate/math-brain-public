@@ -28,9 +28,9 @@ No random coordinate is rotated. No term `X^T E X` is declared independent of th
 
 Source-valid analytic receivers used below:
 
-- finite physical-core projected-gradient theorem: `yspennstate/math-open-problems@51d2edb29d7a4c150e4d47ed3a6685875a8483ae`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`; for an `m`-coordinate quadratic-plus-affine form whose actual coefficient matrix has three singular values at least `sigma`, the density is at most `2 sqrt(6 pi m)/sigma`;
-- fixed-matrix `C_0` regularity: recorded from the independently completed fleet02/B15 result `yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`; rank at least three gives an instance-dependent continuous density vanishing at infinity;
-- designated partner fleet04/B12: `yspennstate/math-open-problems@3df1475f988c811570dc5c249a7756d24adb51bf`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T191531Z-fleet04-B12-hybrid-square-defect-r7/REPORT.md`.
+- finite physical-core projected-gradient theorem: `private-source-repository@51d2edb29d7a4c150e4d47ed3a6685875a8483ae`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`; for an `m`-coordinate quadratic-plus-affine form whose actual coefficient matrix has three singular values at least `sigma`, the density is at most `2 sqrt(6 pi m)/sigma`;
+- fixed-matrix `C_0` regularity: recorded from the independently completed fleet02/B15 result `private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`; rank at least three gives an instance-dependent continuous density vanishing at infinity;
+- designated partner fleet04/B12: `private-source-repository@3df1475f988c811570dc5c249a7756d24adb51bf`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T191531Z-fleet04-B12-hybrid-square-defect-r7/REPORT.md`.
 
 ## 2. Multi-packet singular-budget theorem
 

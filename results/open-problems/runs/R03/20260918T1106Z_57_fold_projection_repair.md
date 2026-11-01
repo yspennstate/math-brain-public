@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 # R03 HARD OUTSIDE — F0001: exact fold averaging and a projection repair of the dense R3 step
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL.** The source-level sharp asymptotic is not certified closed here. This run does not move the finite full-range envelope, but it repairs the concrete pointwise-fold obstruction isolated in run56 at the level actually needed for the dense completion estimate.
 

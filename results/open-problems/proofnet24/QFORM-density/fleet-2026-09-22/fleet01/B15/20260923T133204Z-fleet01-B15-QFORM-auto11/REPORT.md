@@ -25,12 +25,12 @@ Corrections consumed and preserved: no law-uniform pointwise quadratic Fourier d
 
 The newest-Claude package required by the owner was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 The completed designated-partner source actually applied below is
 
-`yspennstate/math-open-problems@46c33d97490f78f8c3de0435f63d573958d81180`,
+`private-source-repository@46c33d97490f78f8c3de0435f63d573958d81180`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T130525Z-fleet02-B15-qform-auto11/REPORT.md`.
 
 That partner report rechecks the newest-Claude ruled one-sheet coarea constant, proves its rough-input transfer in original coordinates, and supplies the interval/tent inequalities used in Section 7.

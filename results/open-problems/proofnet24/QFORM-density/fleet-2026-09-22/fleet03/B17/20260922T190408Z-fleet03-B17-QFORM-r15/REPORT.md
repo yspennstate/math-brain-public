@@ -178,7 +178,7 @@ The designated `fleet04/B17` still has no completed QFORM artifact visible in ei
 
 I apply the compatible completed `fleet04/B14` theorem instead:
 
-- repository: `yspennstate/math-open-problems`;
+- repository: `private-source-repository`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`;
 - theorem used: for each interval small-ball problem, the full cap-one product class has the same sharp constant as product indicator densities `1_{E_i}` with `|E_i|=1`, and compact finite unions of intervals suffice by total-variation approximation.
 

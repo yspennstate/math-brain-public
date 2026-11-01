@@ -17,7 +17,7 @@ The current brain state records the full target as open and retains the correcti
 
 The designated partner result actually used is **fleet02/B03**, run `20260922T150949Z-fleet02-B03-QFORM-r11`, canonical mathematics
 
-`yspennstate/math-open-problems@f40d5d4f5013b0a6af275a19aa3dc0fa2d76c347`
+`private-source-repository@f40d5d4f5013b0a6af275a19aa3dc0fa2d76c347`
 
 at
 
@@ -41,13 +41,13 @@ paired by Young with
 
 The partner explicitly notes the corresponding density-cap scaling for three independent aggregate scalars. I rederive that scaling below so no hidden normalization is used.
 
-A compatible completed bank-projection theorem, recorded in fleet02/B04 at `yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`, states that for independent cap-one original coordinates and a nonzero coefficient vector `u`,
+A compatible completed bank-projection theorem, recorded in fleet02/B04 at `private-source-repository@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`, states that for independent cap-one original coordinates and a nonzero coefficient vector `u`,
 
 `||p_(u^T X)||_infinity <= sqrt(2)/||u||_2`.                    (1.4)
 
 Only disjoint original-coordinate banks are combined below, so independence is genuine.
 
-The latest designated-partner handoff, fleet02/B03 run `20260923T001512Z-fleet02-B03-QFORM-auto11`, canonical mathematics `yspennstate/math-open-problems@90b9e0b5438b950fd2a0ed054833c055fdb92967`, supplies the mixed-hub family and the exact local-collision lower bound used in Section 5.
+The latest designated-partner handoff, fleet02/B03 run `20260923T001512Z-fleet02-B03-QFORM-auto11`, canonical mathematics `private-source-repository@90b9e0b5438b950fd2a0ed054833c055fdb92967`, supplies the mixed-hub family and the exact local-collision lower bound used in Section 5.
 
 ## 2. Density-cap scaling of the partner packet
 

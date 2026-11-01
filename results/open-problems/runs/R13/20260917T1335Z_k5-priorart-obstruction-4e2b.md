@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED**—not verifi
 # R13 — Boolean Komlós: recover and certify the missing five-column lower obstruction
 
 Run ID: `20260917T1335Z_k5-priorart-obstruction-4e2b`  
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Continuity and fixed metric
 

@@ -5,7 +5,7 @@ Problem/source: Héctor Jardón-Sánchez, Sam Mellick, Antoine Poulin, Konrad Wr
 # R06 CLOSABLE OUTSIDE — I0079 run 3: general marked-lattice phase cancellation and a graph criterion for unique refined IBVTs
 
 Run date: 2026-09-17 Asia/Jerusalem / 2026-09-16 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Delivery: private GitHub only. No email/Gmail, Drive, public posting, purchases, permission changes, workflow execution, or scheduler changes.
 
 ## 1. Repository continuity — I0056 remains rotated

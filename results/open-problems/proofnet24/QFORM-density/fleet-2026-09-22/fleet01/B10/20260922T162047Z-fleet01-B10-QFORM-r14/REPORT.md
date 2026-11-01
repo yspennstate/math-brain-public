@@ -33,7 +33,7 @@ No post-rotation independence, scalar pointwise Fresnel decay, generic fiber sup
 
 The newest completed partner report is
 
-`yspennstate/math-open-problems@9a34dc516006d7eb417687b3d7d409f7dfaf33d9`,
+`private-source-repository@9a34dc516006d7eb417687b3d7d409f7dfaf33d9`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T154900Z-fleet02-B10-QFORM-r13/REPORT.md`.
 
 It proves that failure of the currently paid heavy-row branches can force a second whitened physical row of leverage `>1/2`, and it constructs, for every `K`, an exact spectrum `{1,-1,1}` example with `K` successively heavy zero-pivot rows on one isotropic ray. In that example the first `K-1` successive whitened leverages equal `2/3` and the last equals `1`. The same report applies the completed three-disjoint-bank theorem to give the actual density inequality
@@ -45,7 +45,7 @@ for that entire family. I use both the `h>1/2` conclusion and (2.1) below; the f
 The earlier partner theorem
 
 `QFORM-HYPERBOLIC-SQUARE-v1`,
-`yspennstate/math-open-problems@1eba911614ef9f6683f8eacb5d6608a0f9a4b833`,
+`private-source-repository@1eba911614ef9f6683f8eacb5d6608a0f9a4b833`,
 
 also remains a paid disjoint-variable control.
 
@@ -55,7 +55,7 @@ I also use the completed fleet03/B10 theorem
 
 `QFORM-DEPENDENT-PAIR-HYPERBOLIC-SQUARE-v1`
 
-from `yspennstate/math-open-problems@e660a9e78abad2a6718dd0d91dcead5a31a3a56f`, path
+from `private-source-repository@e660a9e78abad2a6718dd0d91dcead5a31a3a56f`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/fleet03-B10-20260922T121625Z-qform-r11/REPORT.md`.
 
 In the notation needed here: if `X` has density cap one, is independent of a pair `(Y,Z)` whose joint density is at most `H`, and

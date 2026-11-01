@@ -18,7 +18,7 @@ The live correction inbox was consumed, including `QFORM-BOUNDED-DIAMETER-LOCALI
 
 The completed partner result is
 
-`yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
+`private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
 
@@ -33,7 +33,7 @@ and the right supremum is unchanged if each `E_i` is a bounded finite union of i
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems@8bf283fe32946ef494410d763e4852d865f225e2`
+`private-source-repository@8bf283fe32946ef494410d763e4852d865f225e2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T185827Z-fleet03-B13-qform-r32/REPORT.md`.
 
@@ -53,7 +53,7 @@ The current marginal-free projected-crossing theorem gives, with
 
 The source is the independently checked projected-crossing package retained at
 
-`yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`
+`private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 

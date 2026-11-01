@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — METRIC MOVEME
 # R09 CLOSABLE OUTSIDE — G0013 first active run: weighted Brenier reduction, outer Kantorovich dual, and a source-valid global bracket
 
 Date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity and controlling state
 

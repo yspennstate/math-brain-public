@@ -16,9 +16,9 @@ The phase-aligned-density correction remains in force. There is no law-uniform s
 
 Fresh inputs used at equations:
 
-* Claude/Fourier source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`. In particular Theorem H is applied in Section 6, and D/D5 are checked on an actual rank-two packet.
-* Current volume-stability source: `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. It explicitly leaves rank-two cross blocks plus an arbitrarily small third direction unpaid.
-* Designated partner fleet03/B01: `yspennstate/math-open-problems@dde65d9e08434761ec633e1acc3865fb9ad05941`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T083025Z-auto11/REPORT.md`. Its theorem pays a rank-two cross packet when the two-dimensional cross-kernel curvature is definite, with constant `3(pi/2)^(1/3) Delta^(-1/3)d2^(-1/6)`.
+* Claude/Fourier source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`. In particular Theorem H is applied in Section 6, and D/D5 are checked on an actual rank-two packet.
+* Current volume-stability source: `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. It explicitly leaves rank-two cross blocks plus an arbitrarily small third direction unpaid.
+* Designated partner fleet03/B01: `private-source-repository@dde65d9e08434761ec633e1acc3865fb9ad05941`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T083025Z-auto11/REPORT.md`. Its theorem pays a rank-two cross packet when the two-dimensional cross-kernel curvature is definite, with constant `3(pi/2)^(1/3) Delta^(-1/3)d2^(-1/6)`.
 
 ## 2. Scalar product-preserving L^4 square-phase lemma
 

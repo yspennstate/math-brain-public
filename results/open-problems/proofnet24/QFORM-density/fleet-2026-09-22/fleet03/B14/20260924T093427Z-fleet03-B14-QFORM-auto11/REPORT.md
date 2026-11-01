@@ -11,7 +11,7 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 The completed interactive theorem
 `NEW_GAUSSIAN_MIXTURE_FULL_THEOREM.md` at
-`yspennstate/math-open-problems@9dabaf2aaf66687c2b4437fdb359b1aeb4a804bc`
+`private-source-repository@9dabaf2aaf66687c2b4437fdb359b1aeb4a804bc`
 proves the full arbitrary-rank/sign QFORM bound for independent coordinates of the form
 
 \[
@@ -305,7 +305,7 @@ This shows that neither remote fragments nor unbounded support can be removed by
 Use the completed fleet04/B14 theorem
 `QFORM scale-covariant three-coordinate Schur localization` at
 
-`yspennstate/math-open-problems@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`,
+`private-source-repository@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260924T001624Z-fleet04-B14-scaled-schur-localization-r10/REPORT.md`.
 

@@ -43,15 +43,15 @@ No condition is imposed on the remaining spectrum: all other eigenvalues may be 
 ## Sources used
 
 1. Pinned self-contained baseline manuscript:
-   `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`,
+   `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`,
    `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
    Needed statements: scalar square profile, principal-Schur spectral count, no-pivot spectral-to-volume proposition at order two, fair coordinate cut, and the pivot half-potential proof.
 2. Marginal-free order-two full half-potential receiver from fleet03/B04:
-   `yspennstate/math-open-problems@8ff490c177d0cd7d6f33130f1431785e312a9d10`,
+   `private-source-repository@8ff490c177d0cd7d6f33130f1431785e312a9d10`,
    `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet03/B04/20260924T121940Z-fleet03-B04-fixedmult-audit-r1/REPORT.md`.
    I checked the order-two promotion tree and its constants in this run. It was also independently reconstructed in fleet02/B09 at commit `51022fbf2819704f220b1dc6d5f1889f979ca77b`.
 3. Designated partner fleet04/B12 scalar-kernel sharpening:
-   `yspennstate/math-open-problems@126eb0e75770fb9e814092f610e1e67ad0412afe`,
+   `private-source-repository@126eb0e75770fb9e814092f610e1e67ad0412afe`,
    `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet04/B12/20260924T131241Z-fleet04-B12-square-kernel-audit-r1/SCALAR_CONSTANT_SHARPENING.md`.
 
 ## Proof

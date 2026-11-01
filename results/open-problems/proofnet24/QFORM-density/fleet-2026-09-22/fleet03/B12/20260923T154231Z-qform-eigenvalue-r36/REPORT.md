@@ -27,7 +27,7 @@ No random quadratic remainder is declared independent or probabilistically small
 
 Canonical latest completed partner result found at publication time:
 
-- repository `yspennstate/math-open-problems`,
+- repository `private-source-repository`,
 - commit `3948d77b0bde5af1bd37cd7c975d4f540eba901b`,
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T081758Z-fleet04-B12-complementary-schur-shield-r4/REPORT.md`.
 

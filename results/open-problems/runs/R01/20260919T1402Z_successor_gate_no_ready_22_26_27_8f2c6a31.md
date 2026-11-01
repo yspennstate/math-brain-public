@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R01 — post-STUCK1 successor-admission gate: no lawful free CLOSABLE target yet
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Run date: 2026-09-19.
 
 This run implements the preceding R01 Section-I decision **MOVE TO NEXT PROBLEM**. It does not reopen Aldous–Fill I0024, does not add owner-side TFIK22 lemmas or checkers, and does not convert a PENDING/HOLD queue row into READY merely to keep the slot occupied. No peer files, shared root ledgers, email, Drive, public posting, purchases, permissions, or scheduler settings are changed.

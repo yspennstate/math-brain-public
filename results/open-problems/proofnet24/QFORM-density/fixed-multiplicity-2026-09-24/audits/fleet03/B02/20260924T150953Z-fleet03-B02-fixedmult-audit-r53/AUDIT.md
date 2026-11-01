@@ -5,7 +5,7 @@ attacking: independent audit of the new nine-eigenvalue grouped-Fourier proof, t
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924` (fresh control supersedes the older per-slot-only Fourier brief while preserving the full three-eigenvalue target).
 
-Pinned baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, path `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Pinned baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, path `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 New dependencies checked in this run:
 

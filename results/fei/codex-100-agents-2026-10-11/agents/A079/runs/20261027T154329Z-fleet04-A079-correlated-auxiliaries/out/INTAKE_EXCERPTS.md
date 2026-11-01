@@ -1,21 +1,21 @@
-math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json
+private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json
 
 
-math-open-problems/reports\fei-2026-10-11\README.md
+private-source/reports\fei-2026-10-11\README.md
 
 
-math-open-problems/reports\fei-2026-10-11\CURRENT_STATUS.md
+private-source/reports\fei-2026-10-11\CURRENT_STATUS.md
 
 
-math-open-problems/reports\fei-2026-10-11\CLAIM_REGISTRY.json
+private-source/reports\fei-2026-10-11\CLAIM_REGISTRY.json
 229:         "B16"
 
-math-open-problems/reports\fei-2026-10-11\OBSTRUCTION_REGISTRY.json
+private-source/reports\fei-2026-10-11\OBSTRUCTION_REGISTRY.json
 228:         "B16"
 247:         "B16"
 287:         "B16"
 
-math-open-problems/reports\fei-2026-10-11\PACKET_STATUS.json
+private-source/reports\fei-2026-10-11\PACKET_STATUS.json
 1173:       "stream": "B16",
 1184:       "design_target_id": "FEI-B16-A076-INITIAL"
 1188:       "stream": "B16",
@@ -27,12 +27,12 @@ math-open-problems/reports\fei-2026-10-11\PACKET_STATUS.json
 1229:       "design_target_id": "FEI-B16-A079-INITIAL"
 1233:       "stream": "B16",
 
-math-open-problems/reports\fei-2026-10-11\STREAM_NEXT_ACTIONS.json
+private-source/reports\fei-2026-10-11\STREAM_NEXT_ACTIONS.json
 160:       "next_action": "Preserve conditional auxiliary entropy while testing one signed Boolean phase bound; for the two-address alternative keep coupled rows and move beyond the refuted constant two.",
 354:       "native_stream": "B16",
 360:         "A079",
 
-math-open-problems/reports\fei-2026-10-11\FEI_100_agent_research_plan.tex
+private-source/reports\fei-2026-10-11\FEI_100_agent_research_plan.tex
 87: For a nonconstant Boolean function represented as a finite union of nonconstant gates with finite ordered covers of their relevant supports, the recovered queue construction generates a subprobability law on Fourier sets through finite successful runs. A partition forest assigns every coordinate of a nonempty set $A$ t
 483: Targeted counterfamilies, extremality, and falsification (B04, B10, B11, B15, B16) & 25 \\
 530: \textbf{A004 --- Constant and unit ledger.} Normalize bits versus natural logarithms, sign functions versus indicators, total versus directional influence, and empty versus nonempty entropy. Check every imported inequality at constant, dictator, parity, and nearly constant endpoints.
@@ -147,59 +147,59 @@ agents\A079\runs\20261026T230307Z-fleet04-A079-correlated-auxiliaries\CLAIMS.jso
 75:       "Complete original controller vacuum, BOTH physical children, all old debits and original unused-account ownership retained",
 80:       "A079"
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\CAMPAIGN.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\CAMPAIGN.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\CLAIMS.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\CLAIMS.md
 39: | C007 | PROVED_BASELINE | Full signed Booleanity is equivalent to sum_S a_S²=1 and sum_S a_S a_(S△U)=0 for every nonempty U. Arbitrary nonnegative spectral laws or truncated identities do not suffice. | F09,F16,F19 | ER §6; RM §3 |
 42: | C010 | PROVED_BASELINE | For a physical selector partition with balanced data leaves whose nonempty Fourier supports are pairwise disjoint: H(F)=H(p)+sum_j p_j[H(q_j)+H(g_j)], I(F)=sum_j p_j d_j+sum_j p_jI(g_j), q_j=ahat_j²/p_j. Data variable sets may overlap; leaf Fourier supports may not. | F11,F14,F19 | P, `prop:s
 61: | C024 | OPEN_TARGET | Pay actual-source entropy/history transfer while retaining history probabilities and full Boolean ancestry. The true integrated cost satisfies H_nat−3I≤C_path≤H_nat+I, so a universal linear payment is FEI-equivalent. | F08,F09,F20 | RM §§11.13–11.16 |
 63: | C026 | CONDITIONAL | Strong selector closure gives H(F)≤max(C_s,C_g,4)(I(F)−1) when each cell satisfies H⁺(h_j)≤C_s(I−Var) and balanced leaves satisfy H(g_j)≤C_g(I−1), with pairwise disjoint nonempty Fourier supports. | F11,F14 | C010; P, `cor:selector-strong` |
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\COUNTEREXAMPLES.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\COUNTEREXAMPLES.md
 39: Use cells a_±(z)=(1±z)/2 and balanced leaves g_+=y, g_−=−y. They share the same nonempty Fourier support {y}. The actual selector is F(z,y)=zy, so H(F)=0 and I(F)=2. If one wrongly applies the disjoint-support formula, p_±=1/2, q_± are uniform on the two control subsets, d_±=1/2, and it predicts H=2 and I=3/2.
 91: **Owners:** F08,F09,F18,F19. **Related:** C023,C024,C032. **Source:** RM §§11.15,11.19–11.20, including `POINT_FLIP_SURPLUS.md` and `ADDRESS_HISTORY_GUARD.md`.
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\SEED_LEMMAS.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\SEED_LEMMAS.md
 147: \(v=P(\mathcal S\ne\varnothing)\). For every index \(j\) in a finite or countable set, let \(Q_j\) be a subprobability law on the nonempty subsets:
 186: When \(v>0\), let \(R(A)=P(A)/v\) be the conditional law given a nonempty set. Gibbs' inequality for a subprobability reference gives
 274: There are \(p^{-1}-1\) nonempty subsets, and their mass together with the empty coefficient sums to one. For each coordinate, exactly \(2^{r-1}\) subsets contain it, giving
 327: If \(0<\alpha<1/2\), the nonempty contribution dominates, so
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\NATIVE_MAPPING.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\NATIVE_MAPPING.md
 28: | B16 | Counterfamily |
 42: | F03 — Rare-root amortization | B05, B02, B08, B16 | Sparse-root priors, scale costs, KL rebates, and asymptotic failures of local payments. |
 54: | F15 — Sparse extremal structure | B05, B11, B16, B01 | Activation-preserving reductions, non-equivalent structural hypotheses, and potential high-ratio families. |
 56: | F17 — Asymptotic stress families | B16, B11, B05, B10 | All-dimensional addressing, bent, parity, sparse and tensor families distinguishing a route failure from a conjecture counterfamily. |
 80: | B16 | F03, F15, F17 |
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_26_CRITICAL_RARE_MOMENT.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_26_CRITICAL_RARE_MOMENT.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_44_COMPONENT_ENTROPY_COUNTEREXAMPLE.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_44_COMPONENT_ENTROPY_COUNTEREXAMPLE.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\BLOCK_RESTRICTION_IDENTITY_2026-09-18.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\BLOCK_RESTRICTION_IDENTITY_2026-09-18.md
 9: Partition the n physical input coordinates into nonempty A and its complement C. For x in {+1,-1}^A and D subset C define
 92: Suppose there is a finite K such that every nonconstant Boolean f admits a nonempty physical block A for which
 102: It follows from Parseval in the same partial expansion, or directly by averaging restriction influences on C and adding the physical influences in A. If every restriction f_x already satisfies H(f_x)<=C I(f_x), then (8)-(10) give H(f)<=C I(f) whenever C>=K+2/ln2. Induction terminates because A is nonempty.
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_REDUCTION.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_REDUCTION.md
 125: For every nonempty U,
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_RIGIDITY.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_RIGIDITY.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\GAMMA_ENDPOINT_LEDGER.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\GAMMA_ENDPOINT_LEDGER.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ISOSPECTRAL_SPLICING_CURATED.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ISOSPECTRAL_SPLICING_CURATED.md
 584: spread uniformly over `N/2-1` nonempty even sets. Hence
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\LOG_ALLOCATION_CURATED.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\LOG_ALLOCATION_CURATED.md
 38: follows by considering beta<=eta or beta>=eta, using the monotonicity of t(1-t) for t<=1/2. Therefore the total mass in nonempty residual packets satisfies
 40:     Q=sum_(T nonempty) q_T=(Var(g)+Var(h))/2
 43: Let E=sum_(T nonempty) e_T<=epsilon. Binary entropy satisfies
@@ -208,17 +208,17 @@ math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\LOG_AL
 96: For every nonempty data index T and every control index U, the child coefficients are p a_T and p(a_T-2delta). The two parent query coefficients are p(a_T-delta) and pdelta. Hence
 104: Consequently q h2(e/q)>=e log2(q/e)>=p^2delta^2(k-2). Summing these nonnegative contributions over 2^r control indices and 2^k-1 nonempty data indices gives
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ONE_BIT_ENDPOINT.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ONE_BIT_ENDPOINT.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\OVERLAPPING_PRODUCT_NOTE.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\OVERLAPPING_PRODUCT_NOTE.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ROUTE_MAP_CURATED.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ROUTE_MAP_CURATED.md
 64: **PROVEN obstruction, recovered September 20.** Exact Booleanity is normalization plus **all** signed convolution identities sum_S a_S a_(S xor U)=0 for U nonempty. Normalization and singleton cancellation alone were already subsumed by a much stronger no-go.
 149:     sum_(U nonempty) (|R_U|-t)_+^2 <= 4t,
-275: Scoped guards at this same draft head remain explicit. The [true-history profile certificate](https://github.com/yspennstate/math-open-problems/blob/9c2692e18b9e1519610467158172540a8d00247d/proofnet24/P03-fei/continuations/2026-09-30-entropy-wringing/scalar-information-remainder/integrated-trajectory/profile-stress/PRO
-398: The [reviewed heterogeneous selector/parity report](https://github.com/yspennstate/math-open-problems/blob/8558b63bfe2127873c4808da8c512814ab13b6b2/proofnet24/P03-fei/continuations/2026-09-30-entropy-wringing/scalar-information-remainder/integrated-trajectory/address-ensemble-profile/REPORT.md) proves the actual fixed-
+275: Scoped guards at this same draft head remain explicit. The [true-history profile certificate](private-source-repository
+398: The [reviewed heterogeneous selector/parity report](private-source-repository) proves the actual fixed-
 
 context\percolation_spectral_pivotal_entropy_30pp.txt
 13:             large spectral sample. Every fixed face density below an explicit threshold has nonempty spectral

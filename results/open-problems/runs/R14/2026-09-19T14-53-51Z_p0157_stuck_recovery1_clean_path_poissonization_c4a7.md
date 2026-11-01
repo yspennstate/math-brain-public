@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R14 HARD OUTSIDE — P0157 STUCK-RECOVERY-1/2: clean-path Poissonization route
 
-Run date: 2026-09-19 UTC. Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Run date: 2026-09-19 UTC. Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL / SOURCE OPEN / STUCK-RECOVERY-1 OF AT MOST 2.** This execution intentionally introduces **no new theorem claim, no new finite certificate, and no checker-only artifact**. The purpose is the mandatory Section-I five-part stuck analysis after three consecutive R14 P0157 runs left the frozen metric unchanged.
 

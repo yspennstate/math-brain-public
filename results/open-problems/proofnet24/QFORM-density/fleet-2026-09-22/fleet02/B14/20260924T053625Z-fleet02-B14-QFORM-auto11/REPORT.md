@@ -18,7 +18,7 @@ The remaining full-target debt is structural: derive one of those safe represent
 
 The newest compatible fleet03/B14 run is
 
-`yspennstate/math-open-problems@7c982b2537be11bbe3f63123e2870171bfb27717`
+`private-source-repository@7c982b2537be11bbe3f63123e2870171bfb27717`
 
 at
 
@@ -247,7 +247,7 @@ This is a proof-interface obstruction, not a lower bound on the actual output de
 
 The fixed required source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was freshly read through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 

@@ -5,7 +5,7 @@ Problem: **iid Rademacher square-matrix singularity — Komlós (1967) lineage; 
 # R03 run 19 — collision-free modular rank obstruction
 
 Run ID: `20260916T2309Z_19_rank_obstruction`
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Continuity, current source, target and fixed metric
 

@@ -15,7 +15,7 @@ The unrestricted conjecture remains OPEN. Continuity for the unrestricted target
 
 The immediate B08 predecessor is
 
-`yspennstate/math-open-problems@5d2f07b086dec22993a28780c0e98fd7aef4c464`,
+`private-source-repository@5d2f07b086dec22993a28780c0e98fd7aef4c464`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T053638Z-fleet01-B08-QFORM-auto11/REPORT.md`.
 
 It proves `QFORM-SELF-DUAL-REDUCING-PROJECTION-LADDER-v1`. In particular, if a 3D reducing spectral subspace has projection leverage at most `1/3` and spectral scale `L`, then there is an ORIGINAL-coordinate cut `I|J` with the self-dual scale
@@ -28,7 +28,7 @@ such that, if one child retains no eigenvalue of modulus at least `d`, the ACTUA
 
 The designated partner actually used is fleet02/B08 r22,
 
-`yspennstate/math-open-problems@2df2c9bc0e4d9a0dcd2cdde85390d3c33ae8c334`,
+`private-source-repository@2df2c9bc0e4d9a0dcd2cdde85390d3c33ae8c334`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T054710Z-fleet02-B08-qform-diffuse-r22-54d75ca3/REPORT.md`.
 
 Its completed theorem `QFORM-MIXED-ORDER-JENSEN-v1` says the following. For a probability law `Omega` on nonzero square physical minors of an ORIGINAL-coordinate cross block, write

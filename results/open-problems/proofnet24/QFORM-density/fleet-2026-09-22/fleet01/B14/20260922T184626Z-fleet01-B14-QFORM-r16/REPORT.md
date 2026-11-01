@@ -9,14 +9,14 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Classification: `ESSENTIAL_STEP_APPLIE
 ## 1. Exact dependencies actually read and applied
 
 1. `QFORM-PHYSICAL-PAIR-LOG-ENVELOPE-v1`, complete proof:
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
    If `U,V` are independent cap-one coordinates and `B` is an invertible indefinite physical `2x2` quadratic block, write
    `D=|det B|`, `kappa=sigma_min(B)`. For every affine perturbation with critical value `t0` and every `r>0`, its density has the a.e. envelope
    
    `p_F(t) <= 2 sqrt(2)/r + D^(-1/2) log_+(2 r^2/(kappa |t-t0|))`.       (1)
 
 2. Named partner fleet02/B14, run `20260922T181403Z-fleet02-B14-QFORM-r17`, complete report:
-   `yspennstate/math-open-problems@aa249c164c1518faa5a9a001baa00e8de3d10346:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T181403Z-fleet02-B14-QFORM-r17/REPORT.md`.
+   `private-source-repository@aa249c164c1518faa5a9a001baa00e8de3d10346:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T181403Z-fleet02-B14-QFORM-r17/REPORT.md`.
    Its mass-linear localization ledger says that if a scalar output measure is decomposed into positive submeasures of masses `w_alpha` and each normalized piece has density cap `C_alpha`, then the unnormalized caps are `D_alpha=w_alpha C_alpha`; in particular the aggregate ordinary density cap is at most `H=sum_alpha w_alpha C_alpha`. The same report proves the more general Riesz ledger. Here I use its ordinary cap consequence inside (1), before any normalization of fragments.
 
 No arbitrary-joint coarea bound, no conditional projection-density positive moment, no scalar-Q_rest conditional supremum, no law-uniform one-dimensional oscillatory decay, no moment bound, and no bounded-support or bounded-fragment assumption is used.

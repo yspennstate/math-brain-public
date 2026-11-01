@@ -318,7 +318,7 @@ This family is a **counterexample to the shortcut** “exact condition-number-on
 
 ## 6. Required pinned result applied to a real inequality
 
-The pinned `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` `COUNTEREXAMPLE_SEARCH.md` proves the ruled one-sheet theorem for exact rank-three signature `(2+,1-)`: if the nonzero eigenvalue moduli are at least one, then on the one-sheet sign
+The pinned `private-source@e5f71d79eff325201dd0274053d20268ce65b837` `COUNTEREXAMPLE_SEARCH.md` proves the ruled one-sheet theorem for exact rank-three signature `(2+,1-)`: if the nonzero eigenvalue moduli are at least one, then on the one-sheet sign
 
 `p_Q(t) <= pi sqrt(2)` a.e.                                   (39)
 

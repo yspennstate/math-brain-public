@@ -70,9 +70,9 @@ The column-Gram corollary is the pathwise identity
 - `PLAN.md`: recorded the quaternion lower-side result and remaining exact-law
   gaps.
 - `extremal_hard_edge.tex`: updated the abstract summary.
-- `math-open-problems-fleet/master/chO_phase_retrieval_rmt.tex`: added the Lane
+- `private-source-fleet/master/chO_phase_retrieval_rmt.tex`: added the Lane
   O compact paragraph `laneO:par:quat-rect-fixed-k-lower`.
-- `math-open-problems-fleet/MASTER_STATE.md`: recorded the master-side summary.
+- `private-source-fleet/MASTER_STATE.md`: recorded the master-side summary.
 
 ## Build verification
 

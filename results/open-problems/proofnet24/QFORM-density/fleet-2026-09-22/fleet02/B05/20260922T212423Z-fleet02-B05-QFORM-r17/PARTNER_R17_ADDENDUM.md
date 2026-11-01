@@ -5,7 +5,7 @@ Status: **ESSENTIAL_STEP_APPLIED; full QFORM OPEN**.
 
 After the immutable main report was written, a fresh path-scoped source check found the newer completed named-partner result fleet03/B05 run `20260922T203915Z-fleet03-B05-QFORM-r17`, canonical mathematics
 
-`yspennstate/math-open-problems@a48f196ab8489a9a83edc4d1c03630f9788c6978`
+`private-source-repository@a48f196ab8489a9a83edc4d1c03630f9788c6978`
 
 at
 

@@ -23,7 +23,7 @@ The live corrections consumed before this derivation include the failures of law
 
 The assigned partner is fleet02/B09. The newest completed handoff read in this run points to
 
-- repository `yspennstate/math-open-problems`;
+- repository `private-source-repository`;
 - commit `cdf0bb83a38fee4d20cd3fe29b6a4d03e89394bc`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T150741Z-fleet02-B09-QFORM-r3/REPORT.md`;
 - result `QFORM-CROSS-SQUARE-COEFFICIENT-SIDE-ABSORPTION-v1`.

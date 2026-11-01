@@ -2,7 +2,7 @@
 
 During the required final worker-memory refresh I found the immediately preceding same-slot run that had completed after the source snapshot used at this invocation's start:
 
-`yspennstate/math-open-problems@9903f914276c729d8d13ca9ec51482f7ddef539c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T174815Z-fleet03-B04-auto11-r38/REPORT.md`.
+`private-source-repository@9903f914276c729d8d13ca9ec51482f7ddef539c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T174815Z-fleet03-B04-auto11-r38/REPORT.md`.
 
 That report already proves an equivalent exact Fenchel dual for the optimized marginal-balanced currency `Gamma_*`. Therefore Section 2 of this run's `REPORT.md` is an independent rederivation/check, **not a new claim of novelty**. Duplicate work on that exact dual stops here.
 

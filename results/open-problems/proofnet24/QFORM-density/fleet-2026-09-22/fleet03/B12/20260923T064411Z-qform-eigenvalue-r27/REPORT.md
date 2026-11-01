@@ -16,7 +16,7 @@ Let X=(X_1,...,X_n) have independent real coordinates with probability densities
 
 The designated partner result actually applied below is:
 
-    yspennstate/math-open-problems@f319b51a1b43b4904c8784348f0a3725954bb7e7
+    private-source-repository@f319b51a1b43b4904c8784348f0a3725954bb7e7
     proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/
     20260923T051424Z-fleet04-B12-spectral-defect-hostile-tail-r2/REPORT.md
 

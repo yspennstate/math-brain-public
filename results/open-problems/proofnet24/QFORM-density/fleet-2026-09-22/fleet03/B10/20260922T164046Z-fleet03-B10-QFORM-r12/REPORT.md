@@ -256,7 +256,7 @@ for every selected pair to which the cascade argument is applied. Thus the survi
 
 The exact assigned partner `fleet04/B10` still had no completed current-QFORM handoff in the fresh repository search for this run, so none is fabricated. A completed compatible result from the same account is fleet04/B18, canonical source
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 
 which proves for a physical `3x3` block `B_3=[[d,b^T],[b,C]]` with `d!=0` and **definite** Schur complement
 

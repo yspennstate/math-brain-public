@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — **metric `L
 
 # HARD7-03 — exact two-slow-site current envelope for D0025
 
-Date: 2026-09-18 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-18 UTC. Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, source status, and why this run changes the route
 

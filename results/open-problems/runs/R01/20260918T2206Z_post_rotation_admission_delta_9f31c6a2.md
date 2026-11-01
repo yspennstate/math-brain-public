@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # R01 — post-rotation successor admission delta: no lawful free CLOSABLE OUTSIDE target
 
 Date: 2026-09-18 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: `R01`  
 Category: `CLOSABLE OUTSIDE`
 

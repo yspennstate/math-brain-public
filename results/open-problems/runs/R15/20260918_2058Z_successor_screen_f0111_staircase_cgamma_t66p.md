@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R15 retained screen — staircase `C_gamma` theorem and the first interior obstruction
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R15, CLOSABLE OUTSIDE.
 
 All mathematics newly derived below is **SELF_CHECK_ONLY** unless explicitly identified as source material or as a previously proved R15 lemma. I do not mark Burdzy–Scheutzow Problem 7.2, Talagrand Problem 10.9, or any larger source problem solved. Novelty is not claimed.

@@ -24,7 +24,7 @@ The quantitative movement is intentionally tiny. The structural movement is larg
 
 # 1. Required repository continuation
 
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 Before new mathematics this run read or queried:
 

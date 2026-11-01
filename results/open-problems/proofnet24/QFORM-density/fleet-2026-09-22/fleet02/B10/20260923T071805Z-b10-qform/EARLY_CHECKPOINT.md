@@ -12,7 +12,7 @@ The sharpened unpaid collar inherited from fleet03/B10 r24 is
 
 `1-eta < 2(1-rho_M)|alpha| <= 2|alpha|`,
 
-where `rho_M=sum_M s_j^2` and `alpha=e^T Lambda e`; the one-sheet side for signature `(2,1)` is already paid by the ruled theorem at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`:
+where `rho_M=sum_M s_j^2` and `alpha=e^T Lambda e`; the one-sheet side for signature `(2,1)` is already paid by the ruled theorem at `private-source@e5f71d79eff325201dd0274053d20268ce65b837`:
 
 `ess sup_(t>=0) p_Q(t) <= pi sqrt(2)`.
 

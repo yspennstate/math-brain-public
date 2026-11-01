@@ -5,7 +5,7 @@ Metric: before `b(n)=c_PP log n` for integers `n>=2`, one fixed non-explicit `c_
 # R07 HARD OUTSIDE — prescribed stuck/thinking report: the missing positive-noise persistence theorem
 
 Run date: 2026-09-16.
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 This is the third consecutive canonical R07 run with no movement in the frozen metric. Per the owner's protocol, this run is a **thinking/stuck run**: I do not add another R07 lemma. I isolate the exact obstruction, catalogue the failed routes, identify the simplest still-unproved special case, compare with the nearest solved literature, and choose exactly one recovery route. The only new mathematical verification performed is an independent audit of neighboring R08-L003, as required by the R-series audit cycle.
 

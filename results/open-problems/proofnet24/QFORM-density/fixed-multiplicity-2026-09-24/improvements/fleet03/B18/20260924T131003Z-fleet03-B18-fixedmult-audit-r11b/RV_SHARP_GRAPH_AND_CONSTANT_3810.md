@@ -2,7 +2,7 @@
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Run: `20260924T131003Z-fleet03-B18-fixedmult-audit-r11b`  
-Pinned manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Pinned manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 Status: **proved same-scope improvement; multiplicity remains 17.** The unrestricted three-eigenvalue conjecture remains open.
 

@@ -13,7 +13,7 @@ The full target remains: for every dimension, every independent real input famil
 
 This run builds on the completed designated-partner theorem fleet02/B17, `QFORM-INFINITESIMAL-BANK-NOESCAPE-v1`, canonical source
 
-`yspennstate/math-open-problems@9ef2d4cbf56e1aa3368eeaa322d09ba4d91f31cf`
+`private-source-repository@9ef2d4cbf56e1aa3368eeaa322d09ba4d91f31cf`
 
 at
 
@@ -23,7 +23,7 @@ That theorem proves that every convergent cap-one infinitesimal disjoint-bank li
 
 I also consumed the newer completed partner report
 
-`yspennstate/math-open-problems@f117a4870969d37706b8d7e62cbcae671cc2d3b0`
+`private-source-repository@f117a4870969d37706b8d7e62cbcae671cc2d3b0`
 
 at
 

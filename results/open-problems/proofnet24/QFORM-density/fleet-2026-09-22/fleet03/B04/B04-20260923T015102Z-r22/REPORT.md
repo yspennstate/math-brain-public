@@ -9,7 +9,7 @@ Programme `QFORM-DENSITY-3EIG-20260922`; assignment `Product Fourier rearrangeme
 
 All inputs are original independent real coordinates with densities bounded by one. No Gaussianity, log-concavity, moment, compact-support, connected-support, post-rotation independence, arbitrary-joint coarea, or law-uniform pointwise oscillatory decay is used.
 
-Completed peer input used at equation level: fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, source `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. In the form needed here: if `R` has `r` orthonormal columns and `X` is an original-coordinate cap-one product vector, then `R^T X` has an `r`-dimensional density bounded by `exp(r/2)`.
+Completed peer input used at equation level: fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, source `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. In the form needed here: if `R` has `r` orthonormal columns and `X` is an original-coordinate cap-one product vector, then `R^T X` has an `r`-dimensional density bounded by `exp(r/2)`.
 
 The designated partner `fleet04/B04` had current QFORM start/login records but no completed QFORM handoff or canonical report visible at the fresh lookup used for this run, so no designated-partner theorem is fabricated.
 

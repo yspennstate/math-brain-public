@@ -16,7 +16,7 @@ Fresh owner control was QFORM-only, revision `2026-09-22.15`, at the source chec
 
 The newest completed fleet02/B20 result available to this run is
 
-`yspennstate/math-open-problems@34a57f18778ea4be069a3f39a953801296d01864`,
+`private-source-repository@34a57f18778ea4be069a3f39a953801296d01864`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T000049Z-fleet02-B20-QFORM-auto11/REPORT.md`.
 
@@ -250,7 +250,7 @@ through a product-preserving grouped random-slope/fractional-potential estimate 
 
 Newest designated partner applied at actual inequalities: fleet02/B20 auto11, canonical commit `34a57f18778ea4be069a3f39a953801296d01864`. Its inputs (2.1)-(2.4), no-pivot entry cap, and target-valid spike/dust obstruction are preserved as stated.
 
-Prior structural dependency for (5.21): fleet01/B20 prior run, canonical `yspennstate/math-open-problems@87249e62ca7c0ac965eb617d35c356f9e06296f2`, which proved `3E_3>=E_2 T` for `T=sum_(r>=3)lambda_r` and explicitly kept the result algebraic rather than probabilistically rotating the source.
+Prior structural dependency for (5.21): fleet01/B20 prior run, canonical `private-source-repository@87249e62ca7c0ac965eb617d35c356f9e06296f2`, which proved `3E_3>=E_2 T` for `T=sum_(r>=3)lambda_r` and explicitly kept the result algebraic rather than probabilistically rotating the source.
 
 No correction-gated forbidden route is used. Exterior/singular coordinates appear only in deterministic norm identities; all probability-facing coordinates remain the original physical product coordinates.
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6/maximum
 # P20 T10 — axis-support Busemann cone exclusion and distinct-policy separation
 
 Date: 2026-09-20 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.  
 Canonical parent claim: `operations/claims/PROB10-10.md`; ownership remains with the native PROB10-10 lane. P20 is the complementary LIVE20 Busemann/variational route and does not overwrite owner files.  
 Model: nearest-neighbor **undirected** FPP on `Z^2` with iid physical-edge weights `Exp(1)`.  

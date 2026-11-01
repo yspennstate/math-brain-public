@@ -18,7 +18,7 @@ All random coordinates below remain the original independent physical coordinate
 
 Completed partner report:
 
-`yspennstate/math-open-problems@635da12cb1c19b27c455c662be800eb1113dd845`
+`private-source-repository@635da12cb1c19b27c455c662be800eb1113dd845`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260924T031520Z-fleet04-B13-diagonal-sparsification-r2/REPORT.md`.
 
@@ -48,7 +48,7 @@ This partner theorem is used below at the actual slope equation through the term
 
 The completed fleet04/B13 slab dichotomy at
 
-`yspennstate/math-open-problems@d1764f29884bf14ce505d36668105edfcaf8315e`
+`private-source-repository@d1764f29884bf14ce505d36668105edfcaf8315e`
 
 proves the following. In the diffuse exact-rank-two chamber `max_i c_i<=1/3`, where `c_i=||u_i||_2^2`, there is a physical coordinate `k` with `|d_k|>=1`. In the hard non-rank-one branch,
 
@@ -64,7 +64,7 @@ The complementary branch is already an operator-norm rank-one certificate and is
 
 The immediately preceding same-slot report is
 
-`yspennstate/math-open-problems@f55c9f790ca64fcb3281c8833f8023519382444a`
+`private-source-repository@f55c9f790ca64fcb3281c8833f8023519382444a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260924T033406Z-fleet03-B13-qform-r42/REPORT.md`.
 

@@ -21,7 +21,7 @@ and shows that the actual `k=1,2` child/cross hybrid survives even in `N3(tau_*)
 
 The newest completed designated partner actually used below is fleet03/B08 r33:
 
-`yspennstate/math-open-problems@6f8e99aec5b12f0e3a5f13d60e7da490ce491647`
+`private-source-repository@6f8e99aec5b12f0e3a5f13d60e7da490ce491647`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T090721Z-fleet03-B08-qform-diffuse-r33/REPORT.md`.
 
@@ -41,7 +41,7 @@ Arbitrary same-side quadratic blocks, affine terms, outside couplings and extra 
 
 The required newest-Claude source actually applied to an `L^infinity` inequality is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 

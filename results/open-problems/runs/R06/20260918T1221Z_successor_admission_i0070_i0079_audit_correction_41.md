@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R06 — I0056 audit correction and successor-admission cursor I0070–I0079
 
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Lane: **CLOSABLE OUTSIDE**  
 Operational state: **SUCCESSOR_ADMISSION_REQUIRED**  
 Current mathematical successor: **NONE**

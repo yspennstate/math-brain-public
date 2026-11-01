@@ -27,7 +27,7 @@ A targeted literature search also checked polynomial Fourier/anti-concentration 
 
 Source:
 
-`yspennstate/math-open-problems@71636c1be698996cc0fe90b91f872efdb6c11860`
+`private-source-repository@71636c1be698996cc0fe90b91f872efdb6c11860`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/fleet02-B18-20260923T120424Z-r28/REPORT.md`.
 
@@ -75,7 +75,7 @@ The source-valid nonlinear theorem applied here is
 
 `QFORM-NULL-HUB-TRANSVERSE-LEVERAGE-CLOSURE-v1`,
 
-`yspennstate/math-open-problems@c0d7e627b3b877fcecc3004a58335658f6541d64`,
+`private-source-repository@c0d7e627b3b877fcecc3004a58335658f6541d64`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T114517Z-fleet03-B10-QFORM-r24/REPORT.md`.
 
@@ -152,7 +152,7 @@ Use the sharp zero-pivot scalar/vector result
 
 `QFORM-ZEROPIVOT-1PLUS2-DENSITY-v1`,
 
-`yspennstate/math-open-problems@dd94932dae1791af1bca9396c062e17d0e55142a`,
+`private-source-repository@dd94932dae1791af1bca9396c062e17d0e55142a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T175509Z-qform-B18-a01-r15/REPORT.md`.
 
@@ -240,12 +240,12 @@ Continuity for the complete circular family in theorem (6.1): **PROVED**.
 ## 9. Source pins
 
 Designated partner consumed at an actual inequality:
-- `yspennstate/math-open-problems@71636c1be698996cc0fe90b91f872efdb6c11860:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/fleet02-B18-20260923T120424Z-r28/REPORT.md`.
+- `private-source-repository@71636c1be698996cc0fe90b91f872efdb6c11860:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/fleet02-B18-20260923T120424Z-r28/REPORT.md`.
 
 Completed nonlinear theorems:
-- `yspennstate/math-open-problems@c0d7e627b3b877fcecc3004a58335658f6541d64:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T114517Z-fleet03-B10-QFORM-r24/REPORT.md`.
-- `yspennstate/math-open-problems@dd94932dae1791af1bca9396c062e17d0e55142a:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T175509Z-qform-B18-a01-r15/REPORT.md`.
-- all-pivot cross-check: `yspennstate/math-open-problems@602d508c11f3bb5848b65581a750b4497708bd5f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T112422Z-fleet03-B18-QFORM-r27/REPORT.md`.
+- `private-source-repository@c0d7e627b3b877fcecc3004a58335658f6541d64:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T114517Z-fleet03-B10-QFORM-r24/REPORT.md`.
+- `private-source-repository@dd94932dae1791af1bca9396c062e17d0e55142a:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T175509Z-qform-B18-a01-r15/REPORT.md`.
+- all-pivot cross-check: `private-source-repository@602d508c11f3bb5848b65581a750b4497708bd5f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T112422Z-fleet03-B18-QFORM-r27/REPORT.md`.
 
 Primary literature:
 - Livshyts--Paouris--Pivovarov, arXiv:1507.07949 / Israel J. Math. 216 (2016).

@@ -2,7 +2,7 @@
 
 After the main REPORT was committed, the designated partner published a newer compatible result:
 
-`yspennstate/math-open-problems@da2e2f58e5f44ea4830b1f6a0311e1382eebd67d:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T160112Z-fleet03-B02-qform-r34/REPORT.md`.
+`private-source-repository@da2e2f58e5f44ea4830b1f6a0311e1382eebd67d:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T160112Z-fleet03-B02-qform-r34/REPORT.md`.
 
 Its theorem `QFORM-STRONGCUT-LOWTAILSTABLERANK-TO-L1-OR-HEAVYANCHOR-v1` treats the strong-cut low-tail-stable-rank branch. On the remaining heavy descent it obtains, among other alternatives, a fixed-scale double-anchor packet
 

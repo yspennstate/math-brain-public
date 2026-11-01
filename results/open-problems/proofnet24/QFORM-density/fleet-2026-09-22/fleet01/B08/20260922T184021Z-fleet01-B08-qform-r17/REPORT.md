@@ -266,7 +266,7 @@ This exactly matches the currency generated in the newest fleet03/B08 near-coloo
 
 The assigned partner result actually used here is fleet02/B08 `QFORM-SCALAR-ORTHOGONAL-CROSSBLOCK-v1`, canonical source
 
-`yspennstate/math-open-problems@caf8de3c65ae54b8ec8df9bfe977a76bf0a6ab99`,
+`private-source-repository@caf8de3c65ae54b8ec8df9bfe977a76bf0a6ab99`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T173452Z-r15/REPORT.md`.
 
@@ -303,7 +303,7 @@ The density is continuous and vanishes at infinity. This is a concrete use of th
 
 The fresh fleet03/B08 result `QFORM-99PCT-NEAR-COLOOP-PAIR-CURRENCY-v1`, canonical
 
-`yspennstate/math-open-problems@04fb94f2b622e0423272e1aefa1aaf0af59f305f`,
+`private-source-repository@04fb94f2b622e0423272e1aefa1aaf0af59f305f`,
 
 proves that its unpaid fine-scale branch carries
 

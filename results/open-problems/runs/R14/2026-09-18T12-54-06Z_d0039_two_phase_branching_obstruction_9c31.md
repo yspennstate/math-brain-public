@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R14 HARD OUTSIDE — D0039 spatial branching law and the missing subordinacy variable
 
 Date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / source problem OPEN.** The preceding R14 run proved the frozen level-2 milestone: a speed-`log N` LDP for the beta-Hermite Christoffel kernel at `beta=4, E=0`. This run does **not** claim level 3. Instead it strengthens the one-energy calculation to a rigorous two-phase tangent CGF, proves the exact logarithmic-overlap summation law needed for a branching-energy argument, and finds a second, deterministic obstruction that was absent from the previous route: a Christoffel-kernel exponent by itself does not determine the spectral local dimension. The missing object is the subordinate/Weyl projective direction at infinity.
 

@@ -12,7 +12,7 @@ Authenticated fleet control was resolved at `yspennstate/math-research-brain` ma
 `BRAIN-BENCHMARK-FEI-2026-09-21-01`; no fleet02/B15 pause or stop was present. The protected README Git blob was
 `14c6dfefb9a567d99dea06c7cd48dbb38e7a56c9`.
 
-The fresh `yspennstate/math-open-problems` scientific master on entry was
+The fresh `private-source-repository` scientific master on entry was
 `4d927de8da1be5a61aa9dec10d418660e4686e87`; it advanced during this run and was refreshed before delivery.
 I read the current repository rules and P03 entry, then the complete current spectral-lattice and centroid/carry handoffs and proofs,
 the concave-restriction handoff, the current owner correction to the unrestricted numerical target, the preceding fleet02/B15

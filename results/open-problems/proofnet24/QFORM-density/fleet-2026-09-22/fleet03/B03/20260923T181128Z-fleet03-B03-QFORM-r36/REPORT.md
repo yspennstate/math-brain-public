@@ -17,7 +17,7 @@ No law-uniform pointwise quadratic van-der-Corput estimate, no post-rotation ind
 
 2. Fresh projected crossing source:
 
-`yspennstate/math-open-problems:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
+`private-source-repository:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 The exact-rank crossing theorem used below allows arbitrary measurable internal functions on both physical sides. If a physical cross block has exact rank `r`, nonzero singular values `s_1,...,s_r`, and the corresponding orthogonal product projections have density caps `M_X,M_Y`, then
 
@@ -42,7 +42,7 @@ but the first theorem below does not need the heavy-row or angular-cancellation 
 
 4. Designated partner `fleet04/B03`, canonical source
 
-`yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`
+`private-source-repository@28681f9af7c2307f80968df86010084019599e38`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`.
 

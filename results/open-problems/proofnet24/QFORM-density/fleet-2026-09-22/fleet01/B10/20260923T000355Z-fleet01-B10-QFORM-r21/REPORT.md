@@ -14,7 +14,7 @@ The full arbitrary exact-rank-three theorem is **not proved** in this report. Th
 
 The designated partner is fleet02/B10 run `20260922T225540Z-fleet02-B10-QFORM-auto11`, canonical source
 
-`yspennstate/math-open-problems@9005415f079b7b46c0618c0187bf29b3f8d44167`
+`private-source-repository@9005415f079b7b46c0618c0187bf29b3f8d44167`
 
 at
 

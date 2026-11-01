@@ -17,11 +17,11 @@ The B14 obligation is to preserve arbitrary translations, distant fragments, and
 Two completed mathematical sources are applied at equations.
 
 1. **Designated partner fleet04/B14 r7**, read at
-   `yspennstate/math-open-problems@ea1c554635a706c9afd727a9263e5b70277ae966`,
+   `private-source-repository@ea1c554635a706c9afd727a9263e5b70277ae966`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T051013Z-fleet04-B14-scale-shear-r7/REPORT.md`.
    Its proof gives the scale-covariant pair-log/square-remainder inequality and optimizes it to the function `H` below. The special two-coordinate shear is used there only to provide a density cap for the scalar square variable.
 2. **Rogozin--Ball one-dimensional product projection bound**, as explicitly used and proved-source-pinned in fleet01/B16, read at
-   `yspennstate/math-open-problems@ea1c554635a706c9afd727a9263e5b70277ae966`,
+   `private-source-repository@ea1c554635a706c9afd727a9263e5b70277ae966`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260922T190433Z-fleet01-B16-QFORM-auto11/REPORT.md`:
    for independent cap-one coordinates `V_j` and any nonzero coefficient vector `a`, the scalar `W=a^T V` has a density satisfying
    `||p_W||_infinity <= sqrt(2)/||a||_2`.

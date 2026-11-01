@@ -1,7 +1,7 @@
 # P26 ledger delta and exact-readback receipt — 2026-09-17 17:58:40 run
 
 Track: P26 independent outside-proof audit recovery.
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## Fixed metric delta
 

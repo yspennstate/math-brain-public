@@ -10,7 +10,7 @@ Report blob:
 `b37d0d16469174ce3aeb9d475aeadf11bf06f157`
 
 Exact-commit readback URL used:
-`https://api.github.com/repos/yspennstate/math-open-problems/contents/proofnet24/P04-closure-local-paley/runs/2026-09-17/2026-09-17T18-46-27Z__run-report.md?ref=6305ca5be46b08bee6f70de8b0d0cd1b20d6b291`
+`private-source-repository`
 
 Readback checks:
 - first line recovered with actual model `GPT-5.6 Sol` and reasoning `UNVERIFIED`;

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-12 — E0086 stuck recovery 2: packetized screened witnesses
 
 Date: 2026-09-18 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Track / namespace: `NM13-12` / `proofnet24/NM13-12/`  
 Category: `HARD OUTSIDE`  
 Canonical source / claim: `E0086`, `favorite_sites::op_2`, `operations/claims/E0086.md`  

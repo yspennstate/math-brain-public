@@ -224,7 +224,7 @@ The completed designated-partner theorem actually used here is
 
 source:
 
-- repository `yspennstate/math-open-problems`;
+- repository `private-source-repository`;
 - commit `4be63022324b82f254f1d7a4353a3e883f08d10a`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260924T011922Z-fleet04-B17-QFORM-r6/REPORT.md`.
 

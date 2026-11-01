@@ -12,10 +12,10 @@ This report proves a continuum-extension theorem for one fixed finite Boolean ga
 
 The coherent owner/control bundle was read at `yspennstate/math-research-brain@a870806cdbbd41bd0bdf4d6926674e4ca4df1b10`, revision `2026-09-22.3`. The live correction inbox had no pending event at that read. The mathematical inputs actually used are:
 
-1. Gate defect and composition formulation: `yspennstate/math-open-problems@f5946fb64d336ed7369de279159643944efc47af`, `proofnet24/P03-fei/continuations/2026-09-22-gate-reformulation/REPORT.md`, Section 1.
-2. Exact selector packet and child-defect recursion: `yspennstate/math-open-problems@4ccd51ad517f425a529daa52c3352905b86ea69d`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md`, Sections 2--4. The refuted scalar candidate from its Section 5 is not used.
-3. Assigned partner fleet01/B04: `yspennstate/math-open-problems@494affa18df748849cbf9e584d71a9ec474fb0dd`, `proofnet24/P03-fei/fleet-2026-09-22/fleet01/B04/20260922T104606Z-fleet01-B04-fei/REPORT.md`, especially Theorem 2.1 and Corollary 3.1. Its signed vanishing-selector functional is applied in Section 6 below.
-4. A universally safe added direction, used only as an example of a potential with an explicit common modulus: `yspennstate/math-open-problems@c50e06733fc1e7f109e20dbb1a0013d67aa71dc7`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B13/20260922T0954Z-nearoptimal-singleton-repair/REPORT.md`, Theorem 2.1. Universality of the repaired base potential remains open.
+1. Gate defect and composition formulation: `private-source-repository@f5946fb64d336ed7369de279159643944efc47af`, `proofnet24/P03-fei/continuations/2026-09-22-gate-reformulation/REPORT.md`, Section 1.
+2. Exact selector packet and child-defect recursion: `private-source-repository@4ccd51ad517f425a529daa52c3352905b86ea69d`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md`, Sections 2--4. The refuted scalar candidate from its Section 5 is not used.
+3. Assigned partner fleet01/B04: `private-source-repository@494affa18df748849cbf9e584d71a9ec474fb0dd`, `proofnet24/P03-fei/fleet-2026-09-22/fleet01/B04/20260922T104606Z-fleet01-B04-fei/REPORT.md`, especially Theorem 2.1 and Corollary 3.1. Its signed vanishing-selector functional is applied in Section 6 below.
+4. A universally safe added direction, used only as an example of a potential with an explicit common modulus: `private-source-repository@c50e06733fc1e7f109e20dbb1a0013d67aa71dc7`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B13/20260922T0954Z-nearoptimal-singleton-repair/REPORT.md`, Theorem 2.1. Universality of the repaired base potential remains open.
 
 The safe-cone floor remains `NEEDS_REVALIDATION`; no child slack is deleted here.
 

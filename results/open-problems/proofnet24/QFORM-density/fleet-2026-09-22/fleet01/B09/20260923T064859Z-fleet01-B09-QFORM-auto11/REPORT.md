@@ -189,7 +189,7 @@ If the nonzero pivot is `d` rather than `a`, swap the pair. The symmetric compan
 
 The newest completed partner is fleet02/B09 run `20260923T061324Z-fleet02-B09-QFORM-auto11`, canonical source
 
-`yspennstate/math-open-problems@c21646b7383471bbdd8f964f798ea4a2b6b67c30`
+`private-source-repository@c21646b7383471bbdd8f964f798ea4a2b6b67c30`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T061324Z-fleet02-B09-QFORM-auto11/REPORT.md`.
 

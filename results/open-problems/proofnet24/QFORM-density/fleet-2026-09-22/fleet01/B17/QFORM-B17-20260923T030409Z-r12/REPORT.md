@@ -240,7 +240,7 @@ Thus two complementary **J-lightlike macroscopic physical rows** cannot create a
 
 The completed designated-partner theorem was read from
 
-`yspennstate/math-open-problems@06aea167c49a7d7574f1c2f518c756f22413371a`
+`private-source-repository@06aea167c49a7d7574f1c2f518c756f22413371a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260923T014533Z-r14-multiscale/REPORT.md`.
 

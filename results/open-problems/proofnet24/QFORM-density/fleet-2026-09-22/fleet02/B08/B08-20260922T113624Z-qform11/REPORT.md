@@ -17,7 +17,7 @@ Control/source pins used in this run:
 - Same commit, assignment card `assignments/fleet02/B08.json`, blob `bd33fcd74bd3b2f9c5ef975df074c30c749dbc8d`.
 - `CORRECTION_INBOX.json` at the publication precursor snapshot contained no additional events.
 - Completed peer source actually consumed: `yspennstate/math-research-brain@2dac8145f316ba9ecced5c98093efc681522a878`, `scheduled_tasks/runs/fleet03/B16/20260922T113226Z-qform-r11/report.md`, blob `07109b1e3a16125ab7965e557a73c58e44d10715`.
-- Complementary localized-coordinate source consumed: `yspennstate/math-open-problems@d5392d73398e2811f58b612fb8f191aa79d8ee5e`, fleet02/B15 report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`, blob `1da4167bbf6b2785659bd50007cab5f04b9c3084`.
+- Complementary localized-coordinate source consumed: `private-source-repository@d5392d73398e2811f58b612fb8f191aa79d8ee5e`, fleet02/B15 report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`, blob `1da4167bbf6b2785659bd50007cab5f04b9c3084`.
 
 The named partner `fleet03/B08` had no completed current-programme handoff or canonical QFORM report at the fresh read, so no partner result is fabricated. The fleet03/B16 result is used explicitly below: it refutes law-uniform pointwise one-dimensional stationary phase and proves a diagonal supporting case. The B15 result supplies the complementary *localized* principal-coordinate theorem; the present report attacks the genuinely diffuse branch requested by the B08 card.
 

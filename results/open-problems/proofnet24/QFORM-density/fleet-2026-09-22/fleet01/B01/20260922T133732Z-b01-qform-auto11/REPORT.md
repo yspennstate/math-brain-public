@@ -19,7 +19,7 @@ has infinite Lebesgue measure. Choosing a measurable subset of total measure one
 
 I use two completed results of the assigned partner `fleet02/B01`.
 
-1. Run `20260922T120355Z-fleet02-B01-qform-r19`, canonical report `yspennstate/math-open-problems@fedbec07e3e8b2f9fcd2b1a65b0bb2a0137c212f`. For any probability density `0<=f<=1`, any `a!=0`, any `b`, and
+1. Run `20260922T120355Z-fleet02-B01-qform-r19`, canonical report `private-source-repository@fedbec07e3e8b2f9fcd2b1a65b0bb2a0137c212f`. For any probability density `0<=f<=1`, any `a!=0`, any `b`, and
 
    `F(t)=int exp(i t(a x^2+b x)) f(x) dx`, 
 
@@ -33,7 +33,7 @@ I use two completed results of the assigned partner `fleet02/B01`.
 
    In particular `S_3=(16 pi)^(1/3)`.
 
-2. Run `20260922T130024Z-fleet02-B01-qform-r20`, canonical report `yspennstate/math-open-problems@3f6eacae4f27ffb171ba0e680f1861ae01b7246d`. For every interval `I` of length `L`, the same scalar gate obeys
+2. Run `20260922T130024Z-fleet02-B01-qform-r20`, canonical report `private-source-repository@3f6eacae4f27ffb171ba0e680f1861ae01b7246d`. For every interval `I` of length `L`, the same scalar gate obeys
 
    `int_I |F(t)|^2 dt <= L` if `|a|L<1`, and
 

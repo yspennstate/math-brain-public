@@ -81,7 +81,7 @@ This is a direct conversion of overlap-two compound mass into a genuinely disjoi
 
 The earlier completed B09 theorem `QFORM-INDEFINITE-PAIR-PLUS-ONECROSS-v1`, source
 
-`yspennstate/math-open-problems@4b3c7fd28ec13d4d0c926affe670109c0738d816`,
+`private-source-repository@4b3c7fd28ec13d4d0c926affe670109c0738d816`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T141440Z-fleet01-B09-QFORM-auto11/REPORT.md`,
 
 states that for an invertible indefinite physical pair `B`, with
@@ -238,7 +238,7 @@ Newest completed fleet02/B09 result consumed in this run:
 
 `QFORM-RANKONE-PHYSICAL-PAIR-COLLINEAR-STAR-v1`,
 canonical mathematics
-`yspennstate/math-open-problems@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`,
+`private-source-repository@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T224553Z-fleet02-B09-QFORM-r15/REPORT.md`.
 
 Its exact-rank-one collinear-star theorem states, in its homogeneous zero-leaf-block scope,

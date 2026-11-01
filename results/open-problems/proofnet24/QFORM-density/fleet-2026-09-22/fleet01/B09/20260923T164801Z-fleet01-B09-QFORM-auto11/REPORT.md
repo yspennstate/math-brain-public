@@ -24,7 +24,7 @@ The source corrections retained throughout include: no law-uniform pointwise qua
 
 The newest required continuation was read at
 
-`yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`,
+`private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`,
 
 `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`.
 
@@ -52,7 +52,7 @@ These exact scopes are essential below: arbitrary same-side curvature is retaine
 
 The latest completed designated-partner result is fleet02/B09 r15,
 
-`yspennstate/math-open-problems@c27ff5b752bf25d2933cbdfac5a870b0dcf71181`,
+`private-source-repository@c27ff5b752bf25d2933cbdfac5a870b0dcf71181`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T154445Z-fleet02-B09-QFORM-r15/REPORT.md`.
 
@@ -64,7 +64,7 @@ and for its explicit target-valid family this equals `1/4`. I do not infer any g
 
 A second structural source used for the consequence in Section 5 is fleet03/B09 r35,
 
-`yspennstate/math-open-problems@82f6ea83f0e981f756fd18080ffdd11a447b60a8`,
+`private-source-repository@82f6ea83f0e981f756fd18080ffdd11a447b60a8`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T144532Z-fleet03-B09-QFORM-r35/REPORT.md`.
 

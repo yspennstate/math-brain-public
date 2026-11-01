@@ -13,13 +13,13 @@ The unrestricted conjecture remains OPEN. This run does not produce a counterexa
 
 The current owner programme is still `QFORM-DENSITY-3EIG-20260922`. The required pinned package is
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. I use its completed Theorem H at an actual matrix below. I also retain its corrections: no arbitrary-joint coarea cap, no law-uniform pointwise quadratic phase decay, and no independence after rotating the product law.
 
 The newest compatible designated partner input read for this run is fleet03/B03 r41,
 
-`math-open-problems@545738ea4ac5730dc20e6ed5f50315dfcf3322f1`,
+`private-source@545738ea4ac5730dc20e6ed5f50315dfcf3322f1`,
 
 which proves the physical two-bank local-phase Plancherel theorem. I apply that theorem below to every possible nondegenerate physical 2+2 crossing in the stress family.
 

@@ -15,13 +15,13 @@ Fresh `yspennstate/math-research-brain/main` was resolved at invocation start. O
 
 The owner-pinned source package was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
 The reviewed sharp-Hausdorff--Young refinement used below is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -43,7 +43,7 @@ also with genuine unweighted Fourier `L1`, with no fifth-volume marginal gate.
 
 The newest completed designated partner consumed at equation level is `fleet03/B02` r44:
 
-`yspennstate/math-open-problems@514300a8c39f8b5e998bcd1ab386df45ee423156`,
+`private-source-repository@514300a8c39f8b5e998bcd1ab386df45ee423156`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260924T021648Z-fleet03-B02-qform-r44/REPORT.md`.
 
@@ -55,7 +55,7 @@ No later completed `fleet03/B02` result was present at the publication refresh u
 
 The live ultra-near-rank-two packet to which the new result is applied is the completed `fleet01/B02` r42 theorem at
 
-`yspennstate/math-open-problems@434d3ab3168164b38fdba61456e35e747a67bea3`,
+`private-source-repository@434d3ab3168164b38fdba61456e35e747a67bea3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260924T012005Z-fleet01-B02-qform-auto11-r42/REPORT.md`.
 

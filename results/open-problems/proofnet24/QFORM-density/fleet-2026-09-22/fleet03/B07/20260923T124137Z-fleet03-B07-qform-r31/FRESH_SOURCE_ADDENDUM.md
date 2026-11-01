@@ -6,7 +6,7 @@ During the mandatory final source refresh, fleet01/B04 completed
 
 canonical source
 
-`yspennstate/math-open-problems@72d2768d509944880036a97581ff5115208bd8f4`
+`private-source-repository@72d2768d509944880036a97581ff5115208bd8f4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T124226Z-fleet01-B04-QFORM-auto11/REPORT.md`.
 

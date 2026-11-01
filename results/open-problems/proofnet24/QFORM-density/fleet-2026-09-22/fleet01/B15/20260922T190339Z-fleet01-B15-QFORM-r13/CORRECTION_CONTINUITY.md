@@ -4,7 +4,7 @@ This file corrects only the regularity-status paragraph of the immutable r13 rep
 
 After the initial r13 report was committed, I read the complete source-pinned fleet02/B15 r3 theorem:
 
-- `yspennstate/math-open-problems@4b2e6a36bcffeb767998c43d27cee1d8f5eaa07e`
+- `private-source-repository@4b2e6a36bcffeb767998c43d27cee1d8f5eaa07e`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T150242Z-fleet02-B15-qform-r3/REPORT.md`.
 
 It proves the following target-level qualitative regularity theorem.

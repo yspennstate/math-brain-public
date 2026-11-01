@@ -15,7 +15,7 @@ Fresh control was read from `yspennstate/math-research-brain` main; the full the
 
 The newest designated partner result used here is fleet02/B18, commit
 
-`yspennstate/math-open-problems@39fec6de415da54a5947972780a6aa76816bdca0`,
+`private-source-repository@39fec6de415da54a5947972780a6aa76816bdca0`,
 
 path
 
@@ -234,7 +234,7 @@ No such exhaustive compiler is proved here.
 
 ## 9. Source pins
 
-- Fresh designated partner: `yspennstate/math-open-problems@39fec6de415da54a5947972780a6aa76816bdca0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260924T000400Z-fleet02-B18-QFORM-auto11/REPORT.md`.
+- Fresh designated partner: `private-source-repository@39fec6de415da54a5947972780a6aa76816bdca0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260924T000400Z-fleet02-B18-QFORM-auto11/REPORT.md`.
 - Livshyts--Paouris--Pivovarov: arXiv:1507.07949, DOI 10.1007/s11856-016-1431-5.
 - Rudelson--Vershynin: arXiv:1402.4492, DOI 10.1093/imrn/rnu243.
 - Herry--Malicet--Poly: arXiv:2303.09488.

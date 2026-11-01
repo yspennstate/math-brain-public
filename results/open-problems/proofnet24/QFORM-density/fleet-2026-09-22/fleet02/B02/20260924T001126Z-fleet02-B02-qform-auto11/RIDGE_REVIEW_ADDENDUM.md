@@ -2,7 +2,7 @@
 
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Run: `20260924T001126Z-fleet02-B02-qform-auto11`  
-Source reviewed: `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
+Source reviewed: `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 **Verdict on the assigned fleet02/B02 scope: PASS.** This is a scoped analytic review of the free-regularizer multiplier, the frequency-dependent regularizer choice, the fractional effective exponent and Fourier inversion. It is not a review of the separate MSS/spectral-perturbation step assigned to fleet03/B04 and is not a full-QFORM proof claim.
 

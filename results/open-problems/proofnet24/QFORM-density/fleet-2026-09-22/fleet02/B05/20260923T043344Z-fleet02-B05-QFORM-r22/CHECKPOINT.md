@@ -2,7 +2,7 @@
 
 Status: substantive checkpoint; full QFORM OPEN.
 
-Control/source pins: brain main observed at `242a09dd205070fbf820b4d950daeb89f1af4b8a`, owner revision `2026-09-22.15`; required Claude/math package `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` (`COUNTEREXAMPLE_SEARCH.md`, Theorem C); designated partner fleet03/B05 r20 handoff pins canonical math `yspennstate/math-open-problems@929322485c85c8a08367589be2b8e2e73839c65f`.
+Control/source pins: brain main observed at `242a09dd205070fbf820b4d950daeb89f1af4b8a`, owner revision `2026-09-22.15`; required Claude/math package `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837` (`COUNTEREXAMPLE_SEARCH.md`, Theorem C); designated partner fleet03/B05 r20 handoff pins canonical math `private-source-repository@929322485c85c8a08367589be2b8e2e73839c65f`.
 
 ## Paid early implication: rough-input one-sheet interval theorem
 

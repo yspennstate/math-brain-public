@@ -347,7 +347,7 @@ As `x->0` these laws converge weakly to `(1/2)V^2`. The density of `V` is contin
 
 I freshly read the fixed source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
 Its completed Theorem B gives, with `P` the orthogonal projection onto the range of the quadratic matrix,

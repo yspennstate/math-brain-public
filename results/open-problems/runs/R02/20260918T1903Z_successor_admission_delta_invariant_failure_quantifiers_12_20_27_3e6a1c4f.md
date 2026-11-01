@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R02 successor-admission delta — new CLOSABLE work exists, but all of it is owned
 
 Run date: 2026-09-18 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Lane: **CLOSABLE OUTSIDE**
 
 ## 1. Continuity and frozen metric

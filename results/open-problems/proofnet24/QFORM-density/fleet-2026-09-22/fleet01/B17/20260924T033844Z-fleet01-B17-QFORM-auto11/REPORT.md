@@ -337,7 +337,7 @@ No claim is made that the symmetric normal `n=(1,1,1)/sqrt(3)` globally maximize
 
 The designated partner dependency was read from
 
-`yspennstate/math-open-problems@65de099fa0faecebc62cf5c10b6e5b1f4aea9c41`,
+`private-source-repository@65de099fa0faecebc62cf5c10b6e5b1f4aea9c41`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T024313Z-fleet02-B17-QFORM-auto11/REPORT.md`.
 
 Its completed theorem states that for arbitrary independent cap-one `X,Y,Z`,

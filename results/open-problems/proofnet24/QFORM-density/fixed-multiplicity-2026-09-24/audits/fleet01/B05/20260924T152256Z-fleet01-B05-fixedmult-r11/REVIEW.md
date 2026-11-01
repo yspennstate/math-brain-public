@@ -8,7 +8,7 @@ Reviewer: `fleet01/B05`
 
 Canonical source audited in full:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - source commit: `eeb752c8943536541b34b42b8bf48e924f4d3d2f`
 - package completion commit used for auxiliary files: `af592913ccfc4a87dfbf7c3a49bf2c5d4bbae359`
 - source path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`

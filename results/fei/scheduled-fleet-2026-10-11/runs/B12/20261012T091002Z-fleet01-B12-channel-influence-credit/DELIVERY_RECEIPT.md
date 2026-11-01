@@ -3,7 +3,7 @@
 The complete ten-file substantive package was written and read back nonempty
 and byte-equal at:
 
-- canonical `yspennstate/math-open-problems@270913622938a8b1ced96f0da91b2d0149ad36e1`, path `reports/fei-2026-10-11/runs/B12/20261012T091002Z-fleet01-B12-channel-influence-credit/`;
+- canonical `private-source-repository@270913622938a8b1ced96f0da91b2d0149ad36e1`, path `reports/fei-2026-10-11/runs/B12/20261012T091002Z-fleet01-B12-channel-influence-credit/`;
 - Brain mirror `yspennstate/math-research-brain@59b6502b42091409b31c2adf01cb3bac36219ed4`, path `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B12/20261012T091002Z-fleet01-B12-channel-influence-credit/`.
 
 Core blob readback:

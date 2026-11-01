@@ -29,7 +29,7 @@ The run materially changes the route from the preceding report.
 - Native role: `P09`
 - Native slot: `6aa7b454b5808191bb00d87697d89388`
 - Installed title: `Gaussian Tensor Bounds`
-- Repository / branch: private `yspennstate/math-open-problems`, `master`
+- Repository / branch: private `private-source-repository`, `master`
 - Pre-write master captured: `7d594b14f30e10214780fbd57fc3521a53c7038e`
 - Immediate P09 predecessor: `probability_campaigns/progress_first_2026-09-20/P09/chaining/2026-09-20T082200Z__operator-lipschitz-ridge-and-finite-frame-entropy.md`, creation commit `9747a1daf144a97c7d13543c81bfe2caeb29fff7`, blob `3f6dd57a2e5ef25a55f7405668563e2099bd25b6`.
 - Historical C0035 material, all earlier P09 reports, and all peer files are preserved.

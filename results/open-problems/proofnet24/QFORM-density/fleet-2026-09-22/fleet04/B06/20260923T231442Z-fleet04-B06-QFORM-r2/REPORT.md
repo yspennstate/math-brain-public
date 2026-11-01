@@ -133,7 +133,7 @@ Arbitrary additional spectrum and the global reduction to this local geometry re
 
 ## Sources
 
-- Claude starting source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
-- Completed fleet01/B06 curved-section theorem and scalar/BL input: `math-open-problems@3ae4b0c272e0d3c60f956c9f039bea38fc0f9077`.
-- Completed fleet02/B06 weighted affine-fiber endpoint: `math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
+- Claude starting source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
+- Completed fleet01/B06 curved-section theorem and scalar/BL input: `private-source@3ae4b0c272e0d3c60f956c9f039bea38fc0f9077`.
+- Completed fleet02/B06 weighted affine-fiber endpoint: `private-source@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
 - Corrections consumed: `QFORM-TWOSHEET-XRAY-ONLY-FALSE`, `QFORM-UV-CONDITIONAL-CAP-FALSE`, `QFORM-FIBERWISE-TRACE-MASS-BOUND-FALSE-v1`, and `QFORM-INDEFINITE-INNOVATION-ARBITRARY-REMAINDER-FALSE-v1`.

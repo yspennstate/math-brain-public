@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R20 successor admission — F0111 reverse-hazard conservation and gap-certificate no-go
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R20, CLOSABLE OUTSIDE.
 
 ## 1. Continuity, ownership, exclusions, and current source
@@ -404,7 +404,7 @@ Next run, if no newly admitted CLOSABLE successor appears first, use a fresh tri
 ledger_delta:
   worker: R20
   allocation: CLOSABLE_OUTSIDE
-  repository: yspennstate/math-open-problems
+  repository: private-source-repository
   branch: master
   original_source:
     id: I0100

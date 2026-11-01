@@ -2,7 +2,7 @@
 
 Outcome: **ESSENTIAL_STEP_APPLIED**. Full MOC4 remains **OPEN / NOT PROVED / NOT DISPROVED**. Execution remains `WITHOUT_VERIFIED_BRAIN`.
 
-Canonical immutable scientific report: `yspennstate/math-open-problems`, `proofnet24/collective-MOC4/fleet01/B07/20260922T090511Z-b07-moc4-r11-29b5bc/REPORT.md`, creation commit `895f70e83701d4237510e7b8eb9a476126df8e51`, report blob `1667b6e83ade4cbc78c67c8a628dd4c8eba32b65`.
+Canonical immutable scientific report: `private-source-repository`, `proofnet24/collective-MOC4/fleet01/B07/20260922T090511Z-b07-moc4-r11-29b5bc/REPORT.md`, creation commit `895f70e83701d4237510e7b8eb9a476126df8e51`, report blob `1667b6e83ade4cbc78c67c8a628dd4c8eba32b65`.
 
 ## Dependencies consumed
 

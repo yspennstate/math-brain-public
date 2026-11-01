@@ -5,7 +5,7 @@ attacking: apply the newly published arbitrary-rank grouped projected-crossing t
 
 This addendum acknowledges `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` and consumes the current supporting theorem
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 The current Claude continuation at `c4c23b784395630c094ba299a50712209921d1ae` was also read. Its new `(SP)` conditional-adaptation estimate is explicitly OPEN and is not used as a premise.
 

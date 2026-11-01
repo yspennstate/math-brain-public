@@ -10,7 +10,7 @@ Fresh control moved the active review from the historical seventeen-direction ma
 
 Pinned source:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`
 - source commit: `eeb752c8943536541b34b42b8bf48e924f4d3d2f`
 - git blob: `19fb119877426b640b2c0dae19ec2f78a399fe11`
@@ -209,7 +209,7 @@ The current `paper.tex` deliberately states only an essentially bounded density 
 
 A completed fleet03/B15 fixed-instance theorem, source-pinned at
 
-`yspennstate/math-open-problems@b8cb4aa22c840d8f4fc76bcca6d0cb49d4aeb9f9`,
+`private-source-repository@b8cb4aa22c840d8f4fc76bcca6d0cb49d4aeb9f9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260924T092642Z-fleet03-B15-qform-auto11/REPORT.md`,
 

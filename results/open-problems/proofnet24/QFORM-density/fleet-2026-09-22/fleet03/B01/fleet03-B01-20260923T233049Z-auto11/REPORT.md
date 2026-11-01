@@ -22,7 +22,7 @@ The full conjecture remains open. This report proves a dimension-free closure of
 
 Canonical source:
 
-`yspennstate/math-open-problems@8410ab9d8238baa40c033f83dbae6af44b0b2582`
+`private-source-repository@8410ab9d8238baa40c033f83dbae6af44b0b2582`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260923T131003Z-fleet04-B01-singular-star-routing-r2/REPORT.md`.
 
@@ -37,7 +37,7 @@ Only this identity is used. In particular, the subsequently corrected individual
 
 Earlier fleet03/B01 source:
 
-`yspennstate/math-open-problems@26f7f13da915bad3b848ea49a91320c01c81cb1c`
+`private-source-repository@26f7f13da915bad3b848ea49a91320c01c81cb1c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T203127Z-auto11/REPORT.md`.
 
@@ -56,7 +56,7 @@ This includes both nonzero and exactly singular second Schur pivots; the singula
 
 Canonical source:
 
-`yspennstate/math-open-problems@2cb64b71f8aafa0892547dffebcf6af647ea7c64`
+`private-source-repository@2cb64b71f8aafa0892547dffebcf6af647ea7c64`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T102108Z-fleet03-B08-qform-diffuse-r32/REPORT.md`.
 
@@ -79,7 +79,7 @@ The source retains arbitrary same-bank curvature and all other residual coupling
 
 Canonical source:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -92,7 +92,7 @@ For any invertible symmetric `2x2` matrix `B`, any two original independent coor
 
 Canonical source:
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 

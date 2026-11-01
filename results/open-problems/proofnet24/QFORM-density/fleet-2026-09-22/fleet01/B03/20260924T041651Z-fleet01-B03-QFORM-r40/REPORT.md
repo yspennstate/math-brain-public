@@ -20,7 +20,7 @@ The new result removes the `sigma_min(B)` loss from the earlier overlap-two comp
 
 Use the proved B03 one-volume half-Frostman theorem from
 
-`yspennstate/math-open-problems@6882d64088e54bc7f979ae8eb4a5ea9d06d1896f`
+`private-source-repository@6882d64088e54bc7f979ae8eb4a5ea9d06d1896f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T185317Z-fleet01-B03-QFORM-r31/REPORT.md`.
 
@@ -320,7 +320,7 @@ For the sharper indefinite constant `(6.9)`, the coefficient in `(7.6)` improves
 
 ## 8. Designated partner fleet02/B03 applied to an actual inequality
 
-The latest completed designated-partner handoff consumed in this run is fleet02/B03's `QFORM-DISJOINT-EXTERIOR-MASS-EXIT-v1`, committed in `math-research-brain@c2cf502ba91445ad3119cfb9991131ec7d32d725`, with canonical mathematics `math-open-problems@5e5366b98337d13ba24bf666f4e42155553de7c2`.
+The latest completed designated-partner handoff consumed in this run is fleet02/B03's `QFORM-DISJOINT-EXTERIOR-MASS-EXIT-v1`, committed in `math-research-brain@c2cf502ba91445ad3119cfb9991131ec7d32d725`, with canonical mathematics `private-source@5e5366b98337d13ba24bf666f4e42155553de7c2`.
 
 For the global overlap decomposition
 

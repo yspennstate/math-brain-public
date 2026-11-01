@@ -4,7 +4,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Full target remains OPEN.
 
 First unpaid implication for this run: `QFORM-HIGHSLOPE-HUBPACKET-BANK-PAYMENT-v1` — in the designated-partner near-coloop survivor, convert a constant **aggregate** hub-transverse Pluecker packet into a two-sheet density estimate without selecting a single physical minor and without replacing original-coordinate product provenance by a rotated conditional-density cap.
 
-Source state actually consumed: fleet03/B10 r24, `yspennstate/math-open-problems@06f180467d43940acc1f939e216db2e23b7d7c88`, reduces the still-unpaid exact-rank-three near-coloop branch to
+Source state actually consumed: fleet03/B10 r24, `private-source-repository@06f180467d43940acc1f939e216db2e23b7d7c88`, reduces the still-unpaid exact-rank-three near-coloop branch to
 
 `r_0=sqrt(c)e`, `c>63/64`, `r_j=s_j e+w_j`, `w_j perpendicular e`,
 

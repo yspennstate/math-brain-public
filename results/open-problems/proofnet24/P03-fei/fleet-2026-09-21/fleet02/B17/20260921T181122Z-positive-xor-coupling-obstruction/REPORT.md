@@ -6,7 +6,7 @@ THINKING USAGE: provider reasoning tokens/time NOT_EXPOSED
 RESEARCH EXECUTION: WITHOUT_VERIFIED_BRAIN
 STATUS: PARTIAL. Full uniform-cube Friedgut–Kalai Fourier entropy-influence conjecture remains OPEN / NOT PROVED.
 
-Fresh scientific source at entry: yspennstate/math-open-problems master 385fa72dde1a1105c9145c9667232c1adf1c515b. During the run master advanced to 04591fd51670eadae81bb0c667b601756049f13f; the latter interactive report was read before finalizing this note. It adds centered restriction/refund identities and scalar-profile obstructions, but does not address the positive shared-product coupling obstruction proved below.
+Fresh scientific source at entry: private-source-repository master 385fa72dde1a1105c9145c9667232c1adf1c515b. During the run master advanced to 04591fd51670eadae81bb0c667b601756049f13f; the latter interactive report was read before finalizing this note. It adds centered restriction/refund identities and scalar-profile obstructions, but does not address the positive shared-product coupling obstruction proved below.
 
 This run is deliberately different from B17's immediately preceding strict-superset receiver flow. It attacks a shared-variable composition mechanism. The three FLEET_RULES moves used are:
 - #2 ATTACK THE NEGATION FIRST: test the strongest possible classical coupling representation before trying to prove an entropy composition inequality from it;

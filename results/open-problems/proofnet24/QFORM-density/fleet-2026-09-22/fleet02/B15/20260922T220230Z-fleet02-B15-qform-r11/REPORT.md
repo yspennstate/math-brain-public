@@ -22,7 +22,7 @@ or give a valid counterexample. The completed fixed-instance regularity chain gi
 
 I apply the completed assigned-partner result fleet03/B15 r18, canonical source
 
-- `yspennstate/math-open-problems@ae1acd1eb774e59dd80eb9ddfb8ea9c7e72b79a1`;
+- `private-source-repository@ae1acd1eb774e59dd80eb9ddfb8ea9c7e72b79a1`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T213701Z-fleet03-B15-qform-r18/REPORT.md`.
 
 Writing `s(A)=s_3(A)`, that result proves the exact identities

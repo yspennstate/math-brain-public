@@ -14,7 +14,7 @@ The unrestricted conjecture remains open. This report proves a new dimension-fre
 
 The designated partner input is the newest fleet02/B06 handoff:
 
-- full proof `yspennstate/math-open-problems@159d52912827d75566d254e155d93a8183ab254f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/fleet02-B06-20260924T013401Z-1fca9092/REPORT.md`;
+- full proof `private-source-repository@159d52912827d75566d254e155d93a8183ab254f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/fleet02-B06-20260924T013401Z-1fca9092/REPORT.md`;
 - theorem `QFORM-DIAG-RANK1-SQRT-SMALLBALL-v1` plus its indefinite-pair upgrade.
 
 For an invertible indefinite literal physical pair `B` and exact Schur residual `S=D+lambda w w^T`, the partner proves

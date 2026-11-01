@@ -44,7 +44,7 @@ Indeed, after dividing by `|b|`, if the squared interval meets zero its preimage
 `sup_s P(|b(Z+c)^2-s| <= rho) <= H_b sqrt(rho),`
 `H_b = 2 sqrt(2/|b|)`.  (2.3)
 
-Now apply the **completed indefinite physical-pair theorem** recorded in the required pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, Section 7.  For the physical pair `(X1,X2)` its quadratic block is
+Now apply the **completed indefinite physical-pair theorem** recorded in the required pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, Section 7.  For the physical pair `(X1,X2)` its quadratic block is
 
 `B = [[0,a],[a,0]],`
 

@@ -9,7 +9,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Full target remains OPEN.
 
 The newest completed designated-partner input is fleet03/B09 r24,
 `QFORM-PLUCKER-SMALLRHO-RANKSPLIT-v1`, canonical source
-`yspennstate/math-open-problems@9fcac412f233f09c6ee5e8a1140207d596cce8a2`,
+`private-source-repository@9fcac412f233f09c6ee5e8a1140207d596cce8a2`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T045157Z-fleet03-B09-QFORM-r24/REPORT.md`.
 Its small-disjointness branch produces a physical triple `S` and one of `k=3,2,1`. The prior B09 run paid a genuine exact-zero endpoint in the `k=1` branch. This run attacks `k=2`: two active directions are physically concentrated on `S`, while the disjoint bank `T=S^c` carries a quantitative outside line.
 
@@ -68,7 +68,7 @@ This is an aggregate-before-inversion statement: the physical pair is selected o
 ## Required newest-Claude result applied to a real target inequality
 
 The required source package
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, in particular `COUNTEREXAMPLE_SEARCH.md`, proves the rank-two positive-semidefinite bound
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, in particular `COUNTEREXAMPLE_SEARCH.md`, proves the rank-two positive-semidefinite bound
 
 `||p_(lambda_1 Y_1^2+lambda_2 Y_2^2)||_infinity
  <=2 pi/sqrt(lambda_1 lambda_2)`

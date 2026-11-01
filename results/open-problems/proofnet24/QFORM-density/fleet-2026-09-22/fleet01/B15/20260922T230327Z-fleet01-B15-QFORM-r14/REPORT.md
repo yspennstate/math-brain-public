@@ -22,7 +22,7 @@ Continuity is a separate stronger conclusion. The fresh control branch remained 
 
 The assigned partner result actually used below is fleet02/B15 r11:
 
-- repository/commit: `yspennstate/math-open-problems@4fc6472947c7e5551592974a34e7bc4bfe78def0`;
+- repository/commit: `private-source-repository@4fc6472947c7e5551592974a34e7bc4bfe78def0`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T220230Z-fleet02-B15-qform-r11/REPORT.md`.
 
 That report constructs, already for the fixed target matrix `A=I_3`, a sequence of iid strictly positive analytic-Schwartz cap-one marginals whose output densities `p_m` satisfy
@@ -193,7 +193,7 @@ So the exact heat reduction must **not** be interpreted as a uniform approximati
 
 The compatible completed fleet03/B15 theorem at
 
-`yspennstate/math-open-problems@ae1acd1eb774e59dd80eb9ddfb8ea9c7e72b79a1:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T213701Z-fleet03-B15-qform-r18/REPORT.md`
+`private-source-repository@ae1acd1eb774e59dd80eb9ddfb8ea9c7e72b79a1:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T213701Z-fleet03-B15-qform-r18/REPORT.md`
 
 proves the exact identity
 

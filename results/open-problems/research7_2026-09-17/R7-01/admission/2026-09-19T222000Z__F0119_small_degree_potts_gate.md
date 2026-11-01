@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # R7-01 admission screen — F0119, exact 3-state Potts reconstruction region
 
 Date checked: **2026-09-19 UTC**.  
-Repository: private `yspennstate/math-open-problems`, branch `master`.  
+Repository: private `private-source-repository`, branch `master`.  
 Worker: `R7-01`; recovered native ID `6aabe777361481919c9e614646464772`.  
 Pre-write master snapshot: `0ff23443b8929e660d775069fa40ab02ddfd4eef`.  
 Previous R7-01 report creation commit: `0f3f5251537523fc9cafc0810cd17adff76e935b`.
@@ -253,7 +253,7 @@ The useful action next run is not to keep re-deriving F0119 bounds. Continue the
 ledger_delta:
   worker: R7-01
   native_id: 6aabe777361481919c9e614646464772
-  repository: yspennstate/math-open-problems
+  repository: private-source-repository
   branch: master
   prior_report_commit: 0f3f5251537523fc9cafc0810cd17adff76e935b
   prewrite_master: 0ff23443b8929e660d775069fa40ab02ddfd4eef

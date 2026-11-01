@@ -16,7 +16,7 @@ The exact owner target remains unchanged: independent ORIGINAL real coordinates 
 
 The first analytic input is my earlier global row-cap theorem at
 
-- `yspennstate/math-open-problems@d68771753f4b44672e307bb817409483a503eba0`
+- `private-source-repository@d68771753f4b44672e307bb817409483a503eba0`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260924T034618Z-fleet01-B04-QFORM-auto11-r28/REPORT.md`.
 
 For a literal original-coordinate cross block `M=A[I,J]`, any supported row-triple law with all row marginals at most `h`, `1/2<=h<3/4`, gives through the owner-pinned D' theorem
@@ -32,7 +32,7 @@ and the proof supplies Fourier `L1`, hence `p_Q in C_0(R)`.
 The second analytic input is the completed marginal-free one-hub projected-E2 theorem
 
 - `QFORM-ONEHUB-E2-MARGINAL-GATE-REMOVAL-v1`
-- `yspennstate/math-open-problems@585b5a3ca7e887e5cd16f45ea49056d548361dfb`
+- `private-source-repository@585b5a3ca7e887e5cd16f45ea49056d548361dfb`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T173320Z-auto11-heavyrowpromotion/REPORT.md`.
 
 In its notation, with one original hub row `m` and projected residual two-volume `Z2>0`, the full ambient quadratic law has a continuous density and
@@ -46,7 +46,7 @@ Arbitrary same-bank curvature and affine terms are retained.
 The designated partner result actually applied below is fleet02/B04 r20:
 
 - handoff commit `math-research-brain@9c5dd9f36f322a2b4e040d25a97e7d07eb61dad3`;
-- primary report `math-open-problems@db9f71028e300f49dd92b7273472dae6d824e992:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260924T051847Z/REPORT.md`.
+- primary report `private-source@db9f71028e300f49dd92b7273472dae6d824e992:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260924T051847Z/REPORT.md`.
 
 Its proved pair-anchored E3 theorem is
 

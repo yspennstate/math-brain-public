@@ -21,8 +21,8 @@ The literal C006 exposition should be edited before submission. Its use of weak 
 
 Repository files read through the GitHub connector, on master:
 
-1. [C005 report](https://github.com/yspennstate/math-open-problems/blob/master/runs/R08/20260916T1928Z_i0082_local_phi_no_fsu_7f3a91.md), blob SHA `5288372d0c7c6cb96c0ae08e888ead839fb25e24`
-2. [C006 branch-hardening report](https://github.com/yspennstate/math-open-problems/blob/master/runs/R08/20260916T2030Z_i0082_branch_hardening_b6d12c.md), blob SHA `b2da40ffb975a89ae5b2b42f47ecf38f98ab10ee`
+1. [C005 report](private-source-repository), blob SHA `5288372d0c7c6cb96c0ae08e888ead839fb25e24`
+2. [C006 branch-hardening report](private-source-repository), blob SHA `b2da40ffb975a89ae5b2b42f47ecf38f98ab10ee`
 
 Primary sources independently inspected:
 

@@ -16,7 +16,7 @@ No Gaussian, log-concave, moment, compact-support, connected-support, post-rotat
 
 The designated fleet02/B11 result actually used below is its completed three-dimensional cross-bank theorem, source-pinned by the handoff commit `23238b312e50d10be9d313e44a514bcbff7217c2`, with canonical mathematics at
 
-`yspennstate/math-open-problems@25c25e15fa0f570e7b0b1a2a9fab0811eda07113:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T201026Z-fleet02-B11-QFORM-auto11/REPORT.md`.
+`private-source-repository@25c25e15fa0f570e7b0b1a2a9fab0811eda07113:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T201026Z-fleet02-B11-QFORM-auto11/REPORT.md`.
 
 For two disjoint ORIGINAL-coordinate product banks, arbitrary within-bank phases, orthogonal three-dimensional projections with density caps `M_X,M_Y`, and invertible cross matrix `C`, it proves
 
@@ -35,7 +35,7 @@ with a continuous `C_0` density. The theorem retains arbitrary self-quadratic an
 
 The scalar-pivot input is the completed orientation-free theorem
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`:
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`:
 for an exact-rank-three form `A=RMR^T`, `R^TR=I_3`, physical pivot `a=A_{ii}\ne0`, and spectral-row leverage `\ell_i=\|r_i\|^2`,
 
 \[
@@ -282,7 +282,7 @@ The scale is correct. Under `A\mapsto sA`, `\alpha,\beta` scale like `s`, `D_2(C
 
 The source-pinned fleet03/B11 r43 report
 
-`yspennstate/math-open-problems@d75835c958b5dcdd28649eb79af0faf3103b5d89:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T221215Z-fleet03-B11-QFORM-r43/REPORT.md`
+`private-source-repository@d75835c958b5dcdd28649eb79af0faf3103b5d89:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T221215Z-fleet03-B11-QFORM-r43/REPORT.md`
 
 reduces its exact-rank-three indefinite hard chamber, after earlier paid exits, to a unique physical hub `i` with
 

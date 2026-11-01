@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-05 — strict-delta residue-4 admission screen: SRG69 is finite/CLOSABLE but already owned and outside the authorized NM13 source pool; no lawful successor
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-05` / `proofnet24/NM13-05/`  
 Category: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed coupling, dependence, transport, mixability, or adjacent sharp-extremal questions with explicit extremizers or finite obstructions  

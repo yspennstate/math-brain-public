@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-01 — admission delta screen 13: residue-0 F0014 scope correction remains HARD; coordinator successor count stays zero
 
 Run date: 2026-09-18 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Track / namespace: `NM13-01` / `proofnet24/NM13-01/`  
 Category: `CLOSABLE OUTSIDE`  
 Exclusive shard: `int(SHA256(UTF-8 canonical_dedup_key).hexdigest(),16) mod 13 = 0`

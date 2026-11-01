@@ -22,7 +22,7 @@ This gives a precise new full-source reduction: prove a polylogarithmic rate-dis
 - Native role: `P09`
 - Native slot: `6aa7b454b5808191bb00d87697d89388`
 - Registered role: `chaining / geometric-probabilistic proof`
-- Repository / branch: private `yspennstate/math-open-problems`, `master`
+- Repository / branch: private `private-source-repository`, `master`
 - Pre-write master observed: `6a22875227f4bae55034f2b12a260ffa9bfa6a90`.
 - Immediate predecessor: `probability_campaigns/progress_first_2026-09-20/P09/chaining/2026-09-20T154900Z__single-coordinate-kkt-witness-and-contraction-rank-bound.md`.
 - Historical C0035 material, all earlier P09 reports, and peer-owned files are preserved. This report is additive and immutable.

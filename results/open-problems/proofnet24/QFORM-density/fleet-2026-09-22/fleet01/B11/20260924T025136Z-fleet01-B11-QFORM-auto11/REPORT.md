@@ -32,7 +32,7 @@ for the three nonzero eigenvalues of the exact-rank-three form. That report paid
 A fresh cross-source check shows that the analytic part of this gap is already covered by fleet02/B16's earlier completed theorem
 
 - theorem `QFORM-FRESH-HUB-DIVISIBLE-TWIST-ABSORPTION-v1`,
-- canonical mathematics `yspennstate/math-open-problems@be8062b160868bcc71aff45a77c56ff2d0501a9a`,
+- canonical mathematics `private-source-repository@be8062b160868bcc71aff45a77c56ff2d0501a9a`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T203140Z-fleet02-B16-QFORM-r36/REPORT.md`.
 
 Its exact statement needed here is: if `H` is a cap-one ORIGINAL scalar independent of a light source `W`, `(L,V)` are functions of `W` with joint density cap `M`, `T=T(W)` is arbitrary, and
@@ -204,7 +204,7 @@ The result is essential boundedness/absolute continuity. The B16 theorem does no
 The latest source-resolved fleet02/B11 theorem used as the designated partner is
 
 - `QFORM-HYPERBOLIC-L3-SQUARE-YOUNG-COMPILER-v1`,
-- `yspennstate/math-open-problems@02aedcd3be33ace107851fa74e0b9ac846d0aa25`,
+- `private-source-repository@02aedcd3be33ace107851fa74e0b9ac846d0aa25`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/B11-20260924T012138Z-auto11/REPORT.md`.
 
 For the genuine source-disjoint-square family

@@ -1,7 +1,7 @@
 # ProofNet24 P26 — immutable archive / health fragment
 
 **Observed cycle checkpoint:** 2026-09-15 19:57:09 Asia/Jerusalem  
-**Repository / branch:** `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** `private-source-repository` / `master`  
 **Source policy:** root `README.md` blob `9d18531dff608e0165fe4434614d8c9121903c4c`; `proofnet24/HOURLY_PROTOCOL_2026-09-15.md` blob `a5773ae98d59ab7d6420f809452c3b20565c3379`.  
 **Email/Gmail:** not used.
 

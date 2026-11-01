@@ -8,7 +8,7 @@
 
 After the first r20 derivation was saved, the worker-owned `LATEST.json` revealed a same-hour r19 addendum that had already proved a **strictly stronger** all-cross-minor theorem:
 
-`yspennstate/math-open-problems@601f3b5a79ffc72be9e2ef68b8d23c679eebdf50`
+`private-source-repository@601f3b5a79ffc72be9e2ef68b8d23c679eebdf50`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T040049Z-fleet03-B02-qform-r19/ADDENDUM_BALANCED_CROSSMINOR.md`.
 
 That earlier result is `QFORM-BALANCED-CROSSMINOR-ENTROPY-L1-v1` and gives
@@ -42,7 +42,7 @@ Thus almost all determinant-weighted three-volume passes through a fixed six-coo
 
 The current independent B02 review/extension is
 
-`yspennstate/math-open-problems@e8d024801adae701d47d58d85c41acb5b8ec4454`
+`private-source-repository@e8d024801adae701d47d58d85c41acb5b8ec4454`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T020523Z-fleet02-B02-QFORM-auto11-c1a7e2f4/REPORT.md`.
 
 Its Lemma `QFORM-JOINT-STAR-BLOCK-COMPILER-v1` says: if a fixed physical row `i` and column `j` carry joint incident three-volume
@@ -181,6 +181,6 @@ The full conjecture and target-wide `int|phi_Q|` criterion therefore remain OPEN
 
 The designated fleet04/B02 zero-diagonal physical-triple theorem remains an actual completed input on its overlap:
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`.
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`.
 
 The initial r20 report already combined its `L2` Fourier credit with the (valid, though non-new) all-volume high-frequency tail. That hybrid inequality remains correct, but it is not the principal new result of r20 after the duplicate was discovered. The principal new result is Theorem 2.1 plus the no-pivot amplification (3.3).

@@ -11,11 +11,11 @@ The live owner order superseded this slot's older MOC4 assignment. The present t
 
 The proof below uses the exact minimum-dimensional all-block critical core and co-singleton phase-support tax from
 
-- `yspennstate/math-open-problems@85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md`.
+- `private-source-repository@85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md`.
 
 For the mechanism calibration in Section 5 it also applies the robust-row trigger-surplus theorem from
 
-- `yspennstate/math-open-problems@fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md`.
+- `private-source-repository@fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md`.
 
 The current correction inbox was empty at the pre-publication sweep. The named partner for this new all-team assignment is `fleet04/B20`; no completed fleet04/B20 FEI artifact under the new all-team order was visible at the compatibility sweep, so no partner theorem is fabricated or attributed here. Its pre-order POS3 outputs are scientifically incompatible with this FEI task and are not consumed.
 

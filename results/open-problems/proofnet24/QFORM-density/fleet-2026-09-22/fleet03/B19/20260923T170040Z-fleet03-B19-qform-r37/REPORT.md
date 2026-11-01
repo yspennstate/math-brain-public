@@ -18,7 +18,7 @@ The fresh control branch was re-resolved immediately before publication at
 
 The immediate B19 premise is the completed preceding report, read from
 
-`yspennstate/math-open-problems@7ec58359c003dec92e28f330eef36423cd7fea8c`,
+`private-source-repository@7ec58359c003dec92e28f330eef36423cd7fea8c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T160411Z-fleet03-B19-QFORM-r37/REPORT.md`.
 
@@ -68,7 +68,7 @@ All same-side quadratic terms, affine terms and outside couplings are retained b
 
 The newest interactive projected-crossing theorem was also read at
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -304,7 +304,7 @@ The unrestricted QFORM theorem therefore remains **OPEN / NOT PROVED / NOT DISPR
 
 The newest fleet04/B19 r4 barrier was reread from
 
-`yspennstate/math-open-problems@ac55b70485c4108c7073a75365127e00be3bc097`,
+`private-source-repository@ac55b70485c4108c7073a75365127e00be3bc097`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260923T151700Z-fleet04-B19-QFORM-r4/REPORT.md`.
 

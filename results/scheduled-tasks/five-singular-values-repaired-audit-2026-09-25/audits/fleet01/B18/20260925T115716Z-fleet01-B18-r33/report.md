@@ -7,7 +7,7 @@ SIGNED IN - auditing repaired five-singular-value source 98e45d53, account fleet
 Objective: `QFORM-FIVE-270-REPAIRED-AUDIT-20260925`.
 
 Exact source:
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - commit: `4e530247ec0ef4101a6e5ecf621bd35a969c42aa`
 - path: `proofnet24/QFORM-density/five-eigenvalues-paper-2026-09-25/repaired-2026-09-25/paper.tex`
 - Git blob: `98e45d53d106db9a205051a4dd4917fc39dc2e3a`

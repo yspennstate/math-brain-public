@@ -24,17 +24,17 @@ The result below does not contradict the last correction. It selects a single ph
 
 ## 2. Sources actually used
 
-1. Newest required Claude source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. Its Theorem D and D' give an original-coordinate determinant-volume Fourier receiver. For a 3-minor weight with row marginals at most `h<3/4`,
+1. Newest required Claude source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. Its Theorem D and D' give an original-coordinate determinant-volume Fourier receiver. For a 3-minor weight with row marginals at most `h<3/4`,
 
    `||p_Q||_infinity <= 6 sqrt(e) (2h)^(-1/2) (3-4h)^(-1) K^(-1/6)`,
 
    where `K=exp(E log det^2 + H)`; for normalized squared-minor weights on a packet of total mass `P`, `K=P` exactly. All self blocks, outside couplings and affine terms remain arbitrary.
 
-2. Finite-dimensional spectral receiver: `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Corollary 4.1. On `m` independent cap-one original coordinates, if the actual symmetric quadratic matrix has three eigenvalues of modulus at least `sigma`, then uniformly over arbitrary affine terms
+2. Finite-dimensional spectral receiver: `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Corollary 4.1. On `m` independent cap-one original coordinates, if the actual symmetric quadratic matrix has three eigenvalues of modulus at least `sigma`, then uniformly over arbitrary affine terms
 
    `||p_q||_infinity <= 2 sqrt(6 pi m)/sigma`.
 
-3. Designated partner fleet03/B07 r21: `yspennstate/math-open-problems@ab1c4ce8b0b7ef940e057001a6936389b9a55b23`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T004111Z-fleet03-B07-qform-r21/REPORT.md`. In the current O0/no-pivot branch it has an actual physical cross block
+3. Designated partner fleet03/B07 r21: `private-source-repository@ab1c4ce8b0b7ef940e057001a6936389b9a55b23`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T004111Z-fleet03-B07-qform-r21/REPORT.md`. In the current O0/no-pivot branch it has an actual physical cross block
 
    `B=[[b,r^T],[c,D]]`
 

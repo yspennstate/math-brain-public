@@ -15,13 +15,13 @@ The unrestricted target remains OPEN: for arbitrary independent ORIGINAL-coordin
 
 The fresh designated partner is fleet03/B06 r38:
 
-`yspennstate/math-open-problems@ba023626f934128aadad51710c9ee8428dfe33c7`
+`private-source-repository@ba023626f934128aadad51710c9ee8428dfe33c7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T144727Z-fleet03-B06-qform-r38/REPORT.md`.
 
 Its recursive debt is to retain the small nonzero tail of an ORIGINAL-coordinate cross block trapped near rank two while also retaining arbitrary same-bank curvature. Its r37 predecessor
 
-`yspennstate/math-open-problems@fa9d5dd3cc78a092484480b536872d332e22c90a`
+`private-source-repository@fa9d5dd3cc78a092484480b536872d332e22c90a`
 
 proves, in the true near-rank-two chamber of the live N3 cross cut `N`, with squared singular values `x_1>=x_2>=...` and `E=||N||_F^2`,
 
@@ -36,7 +36,7 @@ and therefore
 
 The newest-Claude packet actually consumed is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 

@@ -79,4 +79,4 @@ This is not yet the target `L^infinity` conclusion; it converts failure of the c
 
 For the r40 high-leverage branch `gamma=L/16`, (C5) becomes `<926.107/L`, and (C11) becomes `<21.761 L^(-2/3)`.
 
-Sources used: fleet03/B08 r28 at `math-open-problems@af8d585f3ac8b3cc243045caf6bbe65d8e956f99`; exact grouped rank-two theorem at `math-open-problems@c248abc9be918698c6d5a68108c615ba1c4790b3`; current required volume-stability package `math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba` supplies the r40 entry into this high-leverage branch.
+Sources used: fleet03/B08 r28 at `private-source@af8d585f3ac8b3cc243045caf6bbe65d8e956f99`; exact grouped rank-two theorem at `private-source@c248abc9be918698c6d5a68108c615ba1c4790b3`; current required volume-stability package `private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba` supplies the r40 entry into this high-leverage branch.

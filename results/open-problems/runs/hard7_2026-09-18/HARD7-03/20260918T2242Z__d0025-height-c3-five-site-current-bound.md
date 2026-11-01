@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — **metric `L
 
 # HARD7-03 — height recoding, exact three-slow capacity, and a five-site bulk-current certificate
 
-Date: 2026-09-18 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-18 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / source residual remains OPEN under bounded current-status review.**
 

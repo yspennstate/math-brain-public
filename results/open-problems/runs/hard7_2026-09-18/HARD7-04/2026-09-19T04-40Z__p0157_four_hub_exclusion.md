@@ -2,7 +2,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is n
 
 # HARD7-04 bounded research iteration — P0157 four-hub exclusion and exact three-hub witness
 
-Date: 2026-09-19 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-19 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / source OPEN.** This run resumes the exclusive P0157 claim and the latest absorbing-hub-kernel checkpoint. It does not reopen I0049 or restart admission. The main new theorem is an actual-configuration-model four-hub exclusion on the explicit multi-hub stress family; the complementary three-hub route is reduced from a surrogate heuristic to an exact source-model witness count with expectation asymptotic to a positive constant times `m`.
 

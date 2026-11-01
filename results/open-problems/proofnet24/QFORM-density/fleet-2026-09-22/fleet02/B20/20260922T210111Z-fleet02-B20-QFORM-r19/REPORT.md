@@ -20,7 +20,7 @@ The newest completed compatible `fleet03/B20` result is run
 
 `20260922T204947Z-fleet03-B20-QFORM-r17`, canonical mathematics
 
-`yspennstate/math-open-problems@56f7a951d545e6639d4b89fbfa18b0a1158ffe44`
+`private-source-repository@56f7a951d545e6639d4b89fbfa18b0a1158ffe44`
 
 at
 

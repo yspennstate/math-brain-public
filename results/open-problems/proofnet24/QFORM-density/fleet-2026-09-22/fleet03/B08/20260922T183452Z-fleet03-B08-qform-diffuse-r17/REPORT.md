@@ -23,7 +23,7 @@ satisfy
 
 This is the shear-invariant content of `QFORM-TRANSVERSE-5/6-RIDGE-CLOSURE-v1`, canonical source
 
-`yspennstate/math-open-problems@0e80922c4f26f72fe3bb2b06728dd7a40da0c765`
+`private-source-repository@0e80922c4f26f72fe3bb2b06728dd7a40da0c765`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T174745Z-fleet03-B08-qform-diffuse-r15/REPORT.md`.
 
@@ -259,7 +259,7 @@ and identifies the nested-heavy/near-coloop branch as the current O0 obstruction
 
 The designated current-QFORM partner path `fleet04/B08` was absent at the fresh source checks, so no partner theorem is fabricated. A completed compatible fleet04 result is nevertheless applied to the same scalar-pivot geometry: fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical source
 
-`yspennstate/math-open-problems@0e80922c4f26f72fe3bb2b06728dd7a40da0c765`
+`private-source-repository@0e80922c4f26f72fe3bb2b06728dd7a40da0c765`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

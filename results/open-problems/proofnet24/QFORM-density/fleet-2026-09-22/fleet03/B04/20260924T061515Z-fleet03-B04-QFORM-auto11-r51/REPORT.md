@@ -18,7 +18,7 @@ The immediate analytic input from this slot is
 
 `QFORM-PAIR-ANCHORED-E3-PROMOTION-v1`,
 
-`yspennstate/math-open-problems@81a90afb15045c054702e4029d6016b82a16118b`,
+`private-source-repository@81a90afb15045c054702e4029d6016b82a16118b`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260924T051824Z-fleet03-B04-QFORM-auto11-r50/REPORT.md`.
 
@@ -38,7 +38,7 @@ The structural input is fleet01/B07 r38,
 
 `QFORM-C3-OVERLAP-OPERATOR-STAR-FUNNEL-v1`,
 
-`yspennstate/math-open-problems@c897f02e56b6a62bacbed52b4fc3670f15f7b782`,
+`private-source-repository@c897f02e56b6a62bacbed52b4fc3670f15f7b782`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/20260924T011014Z-fleet01-B07-qform-auto11-r38/REPORT.md`.
 
@@ -231,7 +231,7 @@ This is exactly the collar geometry isolated independently by the fleet's singul
 
 The completed designated partner is fleet04/B04 r2,
 
-`yspennstate/math-open-problems@4a54666abf2316bb79b939cef3ea940605a0af57`,
+`private-source-repository@4a54666abf2316bb79b939cef3ea940605a0af57`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260924T001353Z-fleet04-B04-QFORM-r2/REPORT.md`.
 

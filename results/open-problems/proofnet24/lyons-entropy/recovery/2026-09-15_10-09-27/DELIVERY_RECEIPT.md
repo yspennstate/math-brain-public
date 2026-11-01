@@ -1,8 +1,8 @@
 # Recovery delivery receipt
 
-Recovery archive commit: [3f522d7679a76372a44a5540a9477b5b8de1b9e5](https://github.com/yspennstate/math-open-problems/commit/3f522d7679a76372a44a5540a9477b5b8de1b9e5).
+Recovery archive commit: [3f522d7679a76372a44a5540a9477b5b8de1b9e5](private-source-repository).
 
-Repository: `yspennstate/math-open-problems`. Branch: `master`. Source snapshot: approximately 2026-09-15 10:09:27 UTC.
+Repository: `private-source-repository`. Branch: `master`. Source snapshot: approximately 2026-09-15 10:09:27 UTC.
 
 - 82 files were added by the recovery archive commit, totaling 2,946,526 bytes.
 - All 82 committed file paths were read from the committed GitHub tree and matched their expected Git blob hashes.

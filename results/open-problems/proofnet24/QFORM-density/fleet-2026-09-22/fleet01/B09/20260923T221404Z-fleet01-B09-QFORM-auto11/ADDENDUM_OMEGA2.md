@@ -81,7 +81,7 @@ Use the already proved source-coordinate theorem
 
 `QFORM-INDEFINITE-PAIR-PLUS-ONECROSS-v1`,
 source
-`yspennstate/math-open-problems@4b3c7fd28ec13d4d0c926affe670109c0738d816`,
+`private-source-repository@4b3c7fd28ec13d4d0c926affe670109c0738d816`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T141440Z-fleet01-B09-QFORM-auto11/REPORT.md`.
 
 It gives, for the exact Schur residual and any genuine residual cross block C,

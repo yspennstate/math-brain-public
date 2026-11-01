@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # PROB10-08 — trace/nuclear superlevel obstruction and affine conditional-information monovariant
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Status: **OPEN / PARTIAL / substantive obstruction and reduction theorems proved / no new source-level cutoff class this run / independent validation pending / worldwide novelty UNVERIFIED**.
 

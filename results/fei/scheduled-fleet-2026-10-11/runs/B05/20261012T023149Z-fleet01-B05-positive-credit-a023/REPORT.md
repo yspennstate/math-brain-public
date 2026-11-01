@@ -205,7 +205,7 @@ slope whose positive variation is controlled by nonreused physical influence.
 
 ## 7. Source pins and review
 
-- Immediate predecessor: `yspennstate/math-open-problems` commit
+- Immediate predecessor: `private-source-repository` commit
   `f67766966c46eb8c8a3150ce000a2909d378fc32`, run
   `20261012T013755Z-fleet01-B05-multifactor-refund-a023`, REPORT blob
   `bfa81a2f818a0fe5f449aea001b7b00f02371a43`.

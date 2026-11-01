@@ -15,7 +15,7 @@ The full owner target remains OPEN: independent real physical coordinates have a
 
 This report attacks the concrete exact-rank-three residual isolated by fleet01/B13 run `20260922T190849Z-fleet01-B13-qform-r17`, canonical report
 
-`yspennstate/math-open-problems@01c524aa389abf1b9b58c852bfa11fc747ec5b59`
+`private-source-repository@01c524aa389abf1b9b58c852bfa11fc747ec5b59`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260922T190849Z-fleet01-B13-qform-r17/REPORT.md`.
 

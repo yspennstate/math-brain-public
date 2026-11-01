@@ -21,7 +21,7 @@ This is an averaged-frequency argument. It does not resurrect a pointwise statio
 
 Use the completed fleet04/B01 theorem from
 
-`yspennstate/math-open-problems@f7e82d169badc671968036252d351b8533cdd425`,
+`private-source-repository@f7e82d169badc671968036252d351b8533cdd425`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260924T012155Z-fleet04-B01-lr-residual-r1/REPORT.md`.
 

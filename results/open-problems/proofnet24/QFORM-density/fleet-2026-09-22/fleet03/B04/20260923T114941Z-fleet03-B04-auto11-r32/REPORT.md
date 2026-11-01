@@ -13,7 +13,7 @@ attacking: high-leverage rank-three projection by mixed third/second-volume prod
 
 I apply fleet03/B02's completed supporting theorem `QFORM-WEIGHTED-MIXED32-FOURIER-L1-v1`, source
 
-`yspennstate/math-open-problems@ff8ec2ee90d4846f39e728e1ca20d50c717cc894`
+`private-source-repository@ff8ec2ee90d4846f39e728e1ca20d50c717cc894`
 
 at
 

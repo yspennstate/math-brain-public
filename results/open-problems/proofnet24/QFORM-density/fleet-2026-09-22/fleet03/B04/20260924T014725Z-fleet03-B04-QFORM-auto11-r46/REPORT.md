@@ -17,7 +17,7 @@ The full universal conjecture is not proved here. The new point is that a physic
 The analytic inputs are all source-pinned completed supporting results:
 
 1. `QFORM-ARBITRARY-WEIGHT-PROJECTED-CROSSING-v1`, fleet03/B04 r37:
-   `yspennstate/math-open-problems@ea2f45957db06473799ce27affa30162fda98982`,
+   `private-source-repository@ea2f45957db06473799ce27affa30162fda98982`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T165007Z-fleet03-B04-auto11-r37/REPORT.md`.
    In grouped-hub notation, for a feasible `ell`-minor law with row marginals at most `1/2`, determinant/marginal currency `Gamma`, `d=k+ell>2`, hub density cap `M_H`, hub-cross singular product `S`, it gives
    
@@ -26,14 +26,14 @@ The analytic inputs are all source-pinned completed supporting results:
    with `phi_Q in L1` and hence a continuous `C_0` density. Arbitrary same-bank curvature, outside couplings and induced affine terms are retained.
 
 2. `QFORM-FIXED-CARDINALITY-ENTROPY-v1`, fleet03/B04 r39:
-   `yspennstate/math-open-problems@04f0b30d5f729ed26d9f8c2cb1354973c587c3cc`,
+   `private-source-repository@04f0b30d5f729ed26d9f8c2cb1354973c587c3cc`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T185112Z-fleet03-B04-auto11-r39/REPORT.md`.
    For a probability law on `ell`-subsets with inclusion marginals `alpha_i`,
    
    `H(w)+sum_i alpha_i log alpha_i <= log(ell^ell/ell!)`.
 
 3. `QFORM-CANONICAL-E4-PAIR-TO-DENSITY-v1`, fleet03/B04 r45:
-   `yspennstate/math-open-problems@02558c47299849273ed5f8fd6105763fc1e2d618`,
+   `private-source-repository@02558c47299849273ed5f8fd6105763fc1e2d618`,
    same-slot r45 report. For canonical E4 pair mass `eta_ij`,
    
    `||p_Q||inf <= C4 [eta_ij E4(M)]^(-1/8)`,
@@ -42,7 +42,7 @@ The analytic inputs are all source-pinned completed supporting results:
    with continuous `C_0` density.
 
 4. Designated partner fleet04/B04 r2, `QFORM-HIGH-CARRIER-ANCHORED-DOWNSHIFT-v1`:
-   `yspennstate/math-open-problems@4a54666abf2316bb79b939cef3ea940605a0af57`,
+   `private-source-repository@4a54666abf2316bb79b939cef3ea940605a0af57`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260924T001353Z-fleet04-B04-QFORM-r2/REPORT.md`.
    It constructs the exact anchored E4 face law and gives an entropy-payment / double-anchor dichotomy at a high carrier.
 

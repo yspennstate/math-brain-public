@@ -11,7 +11,7 @@ Status: **NEW CONDITIONAL TARGET-LEVEL IMPLICATIONS / FULL QFORM OPEN / FULL CON
 
 ### 1.1 Designated partner: exact no-attainment product purification
 
-`yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
+`private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
 
@@ -21,7 +21,7 @@ For every bounded nonnegative product kernel, the supremum over cap-one mass-one
 
 Fleet02/B13:
 
-`yspennstate/math-open-problems@f6ad7b994c1ba509af30fceaf45e8b464db86af8`
+`private-source-repository@f6ad7b994c1ba509af30fceaf45e8b464db86af8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T155736Z-fleet02-B13-rank4star-r30/REPORT.md`.
 
@@ -37,7 +37,7 @@ where `rho=P{Q in J}/|J|`. The same statement applies to `B^T`, hence to column 
 
 My preceding r29 volume cascade:
 
-`yspennstate/math-open-problems@c9a6c9160e063f07856a62fc89a2ba62b857d3cf`
+`private-source-repository@c9a6c9160e063f07856a62fc89a2ba62b857d3cf`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T165827Z-fleet03-B13-qform-r29/{REPORT.md,POSTREFRESH_ADDENDUM.md}`.
 
@@ -53,7 +53,7 @@ The proof of (1.2) is the r29 original-coordinate 1-hub/2-cross -> 2-hub/1-cross
 
 The still-pending receiver used by that cascade is the complete written supporting theorem at
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -63,7 +63,7 @@ It awaits independent review; therefore every result below that invokes (1.2) re
 
 The deterministic skeleton theorem is in the current Claude continuation
 
-`yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`
+`private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`
 
 `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/structure/REPORT.md`.
 
@@ -81,7 +81,7 @@ if `V_{r+1} <= K V_r`, then
 
 The localized original-coordinate triple theorem is my r24 report
 
-`yspennstate/math-open-problems@b097dc81bae17477b60c3af1a56dc6e434f9998f`
+`private-source-repository@b097dc81bae17477b60c3af1a56dc6e434f9998f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T103046Z-fleet03-B13-qform-r24/REPORT.md`.
 

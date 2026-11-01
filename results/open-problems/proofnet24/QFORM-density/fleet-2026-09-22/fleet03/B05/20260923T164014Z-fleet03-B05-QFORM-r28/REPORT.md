@@ -13,17 +13,17 @@ attacking: QFORM-NEAR-DOUBLEZERO-ESCAPED-CURVATURE-COAREA-v1 — retain the near
 ## 1. Fresh sources and the exact remaining packet
 
 
-`yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md`
+`private-source-repository@c4c23b784395630c094ba299a50712209921d1ae:proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md`
 
 and the small-nonzero-hub-diagonal report beneath `hub_with_diagonal/REPORT.md`. Its tangent-parabola mechanism confirms that a nonzero diagonal cannot in general be discarded as a small random perturbation. The new projected-crossing theorem at
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`
 
 was read as a separate compatible exit; its row-marginal and projected-volume gates are not assumed in the packet below.
 
 The immediate B05 predecessor is
 
-`yspennstate/math-open-problems@a8018aa66b9ac536d0cbdb070a1c6fd8950fbf67:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T150830Z-fleet03-B05-QFORM-r27/REPORT.md`.
+`private-source-repository@a8018aa66b9ac536d0cbdb070a1c6fd8950fbf67:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T150830Z-fleet03-B05-QFORM-r27/REPORT.md`.
 
 Its live grouped packet has variables `(S,R,Y,Z)`. The pair `(S,R)` is an orthonormal two-dimensional projection of one original-coordinate product bank. The normalized scalar projections `Y,Z` use two disjoint original-coordinate banks and are independent of each other and of the first bank. Their density caps are at most `sqrt(2)`. The homogeneous packet matrix is
 
@@ -48,7 +48,7 @@ The previous raw-diagonal theorem paid every branch with a quantitative `max(|a|
 Two completed analytic receivers are consumed at equations below.
 
 1. **Fresh-square / rank-two product-projection receiver.** Source used by r27:
-   `yspennstate/math-open-problems@552cc02b9161cc94ce42b04200799d1ebd3635f2:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T113953Z-fleet01-B16-QFORM-r12/REPORT.md`.
+   `private-source-repository@552cc02b9161cc94ce42b04200799d1ebd3635f2:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T113953Z-fleet01-B16-QFORM-r12/REPORT.md`.
    In the present normalization it implies that if an independent scalar has nonzero quadratic coefficient `gamma` and the remaining two-dimensional product-projection Schur matrix `N` is invertible, then
 
    `||p||inf <=128*sqrt(2)*|gamma|^(-1/2)*|det N|^(-1/4)`.          (1.2)
@@ -56,7 +56,7 @@ Two completed analytic receivers are consumed at equations below.
    Arbitrary affine terms and the same-bank square shift are allowed.
 
 2. **Dependence-safe null-scalar determinant theorem.** Canonical source
-   `yspennstate/math-open-problems@1515e474fa8110a0b704a6ff73a25fc554005017:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T211147Z/REPORT.md`.
+   `private-source-repository@1515e474fa8110a0b704a6ff73a25fc554005017:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T211147Z/REPORT.md`.
    If a scalar of density cap `L0` is independent of a two-dimensional pair with joint density cap `M0`, its square coefficient is exactly zero, and the `3x3` quadratic matrix `G` is invertible, then
 
    `||p||inf <=3*2^(2/3)*(L0*M0)^(2/3)*|det G|^(-1/3)`.             (1.3)
@@ -65,7 +65,7 @@ Two completed analytic receivers are consumed at equations below.
 
 The designated partner result is fleet04/B05
 
-`yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`,
+`private-source-repository@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260923T041255Z-fleet04-B05-dominant-slope-r2/REPORT.md`,
 
 which gives `||p_Q||inf<51.6(mu*m_*)^(-1/3)` for the largest exact-slope mass `m_*`.
 

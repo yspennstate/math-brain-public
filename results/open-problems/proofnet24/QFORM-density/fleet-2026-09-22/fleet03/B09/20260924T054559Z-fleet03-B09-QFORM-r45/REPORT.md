@@ -15,7 +15,7 @@ All coordinates below are literal ORIGINAL coordinates. No spectral rotation is 
 
 The same-slot predecessor is fleet03/B09 r44,
 
-`yspennstate/math-open-problems@1d81e62c818d6b592a6a6da78870f12f533d615a`,
+`private-source-repository@1d81e62c818d6b592a6a6da78870f12f533d615a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T044555Z-fleet03-B09-QFORM-r44/REPORT.md`.
 
@@ -259,7 +259,7 @@ Hence a proof cannot finish by forcing a universal lower bound on the aggregate 
 
 The completed fleet04/B09 physical-cross theorem at
 
-`yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`,
+`private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`,
 

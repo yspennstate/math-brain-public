@@ -2,7 +2,7 @@ Runtime model/effort: **UNVERIFIED**. GPT-6 maximum was requested, but this runt
 
 # PROB10-07 — exact Rayleigh theorem for the complete tripartite family `K_{1,2,n}`
 
-Repository/branch: private `yspennstate/math-open-problems` / `master`  
+Repository/branch: private `private-source-repository` / `master`  
 Parent: Grimmett–Winkler pairwise negative edge correlation for the uniform measure on **all forests**  
 Status: **PARTIAL / universal conjecture OPEN**  
 Artifact stem: `20260920T0340Z_tripartite-k12n-transfer`

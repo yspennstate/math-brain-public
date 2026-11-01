@@ -8,11 +8,11 @@ Run: `B16-20260924T060545Z-auto11`
 Role: Projection-product interaction; designated partner fleet03/B16.  
 Status: full unrestricted QFORM remains OPEN.
 
-The fresh partner r42 (`math-open-problems@a7172687...`) reduces the hard physical-hub collar to the integrated residual-fiber norm
+The fresh partner r42 (`private-source@a7172687...`) reduces the hard physical-hub collar to the integrated residual-fiber norm
 
 `int_{|t|>=1} |t|^(-1/2) ||G_t||_2 dt`,
 
-where the physical-hub Plancherel identity retains the order-one star. A tempting route, used in the recent fleet01/B16 shear report `math-open-problems@4cc097c9...`, is to shear the pushed hub density by a leaf projection and then invoke the original-coordinate product Fresnel/Brascamp--Lieb factorisation. The following calculation shows that this particular passage is invalid under only a density cap, and the cited theorem is false as stated when its advertised arbitrary internal hub phase is allowed.
+where the physical-hub Plancherel identity retains the order-one star. A tempting route, used in the recent fleet01/B16 shear report `private-source@4cc097c9...`, is to shear the pushed hub density by a leaf projection and then invoke the original-coordinate product Fresnel/Brascamp--Lieb factorisation. The following calculation shows that this particular passage is invalid under only a density cap, and the cited theorem is false as stated when its advertised arbitrary internal hub phase is allowed.
 
 ## Explicit theorem-scope counterexample
 

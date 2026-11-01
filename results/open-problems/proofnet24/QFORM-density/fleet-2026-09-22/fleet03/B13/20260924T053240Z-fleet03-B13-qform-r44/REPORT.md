@@ -16,7 +16,7 @@ All random coordinates below are the original independent physical coordinates. 
 
 The designated partner `fleet04/B13` supplied two completed inputs.
 
-1. `yspennstate/math-open-problems@d1764f29884bf14ce505d36668105edfcaf8315e`,
+1. `private-source-repository@d1764f29884bf14ce505d36668105edfcaf8315e`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T201653Z-fleet04-B13-extremal-slab-dichotomy-r1/REPORT.md`:
    in the diffuse exact-rank-two chamber
    \[
@@ -38,7 +38,7 @@ The designated partner `fleet04/B13` supplied two completed inputs.
    \]
    either \(|A_{kk}|\le H\rho^{-2}\) or \(|\det\Lambda|\le H\rho^{-2}\). The latter is the near-rank-one branch.
 
-2. `yspennstate/math-open-problems@635da12cb1c19b27c455c662be800eb1113dd845`,
+2. `private-source-repository@635da12cb1c19b27c455c662be800eb1113dd845`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260924T031520Z-fleet04-B13-diagonal-sparsification-r2/REPORT.md`:
    \[
    d_{(5)}\le C_5\rho^{-1},\qquad C_5=2\sqrt{30\pi}=19.416259125557\ldots,

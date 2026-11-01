@@ -14,7 +14,7 @@ The unrestricted conjecture remains OPEN. Global continuity remains OPEN. The ar
 
 The current exact-rank-three small-Pluecker collar is supplied by fleet03/B10 r23b,
 
-`yspennstate/math-open-problems@91759f77fcdf696a75d8e6c6ef398c03654b025a`
+`private-source-repository@91759f77fcdf696a75d8e6c6ef398c03654b025a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T023946Z-fleet03-B10-QFORM-r23b/REPORT.md`.
 
@@ -33,7 +33,7 @@ one has
 
 The preceding B19 r24 theorem,
 
-`yspennstate/math-open-problems@2c88af5e0ac6a4faf8d923a621c7d7006d544ffe`
+`private-source-repository@2c88af5e0ac6a4faf8d923a621c7d7006d544ffe`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T034239Z-fleet03-B19-QFORM-r24/REPORT.md`,
 
@@ -50,14 +50,14 @@ The failed r25 checkpoint already observed that if every two-gradient area vanis
 The analytic inputs used at actual equations are:
 
 1. `QFORM-RANK3-INDEFINITE-PAIR-PIVOT-v1`, canonical
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`:
    for an invertible indefinite ORIGINAL physical pair `B`, with `D=|det B|`, `kappa=sigma_min(B)`, in an exact-rank-three target with spectral scale at least one,
 
    `||p_Q||_infinity <=8 sqrt(5) (D kappa)^(-1/4)`.                (1.5)
 
 2. `QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1`, canonical
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
    `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`:
    for a physical coordinate `j`, leverage `c_j=||r_j||^2`, and `A_jj!=0`,
 
@@ -78,7 +78,7 @@ The analytic inputs used at actual equations are:
    `||p_Q||_infinity <=2 C_3 binom(K,3)^(1/3)`.                   (1.9)
 
 5. Fresh fleet03/B04 r26, canonical
-   `yspennstate/math-open-problems@053c462960cc0c0068d221ffece8029a662a7ab6`,
+   `private-source-repository@053c462960cc0c0068d221ffece8029a662a7ab6`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T055256Z-fleet03-B04-qform-auto11-r26/REPORT.md`:
    for an ORIGINAL-coordinate cross block with squared two-volume `Z_2` and three-sample overlap parameter `delta_3>0`, its full residual quadratic-plus-affine form `R` satisfies
 
@@ -462,7 +462,7 @@ If `delta_3=0`, fleet03/B04 gives an exact structural alternative: the supported
 The completed designated-partner theorem is fleet04/B19
 `QFORM-NULL-COLOOP-ADAPTIVE-HY-STABILITY-v1`, canonical
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 

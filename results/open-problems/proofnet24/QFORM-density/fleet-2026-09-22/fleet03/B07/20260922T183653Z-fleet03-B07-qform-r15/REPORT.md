@@ -18,7 +18,7 @@ This proof uses only original-coordinate cross blocks and determinant-weighted l
 
 The incoming B07 theorem is `QFORM-O0-ONE-HEAVY-EXCLUSION-COLLAR-v1`, canonical source
 
-`yspennstate/math-open-problems@54e57957ed371362e28d0699ccb9a7b8e55e9238`,
+`private-source-repository@54e57957ed371362e28d0699ccb9a7b8e55e9238`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T180507Z-fleet03-B07-qform-r14/REPORT_FINAL.md`.
 
@@ -42,7 +42,7 @@ The branch `ell>7/8` is already isolated as a one-row near-coloop. The purpose o
 
 The designated `fleet04/B07` still has no completed current-QFORM canonical directory or shared handoff at the fresh source check. No result is fabricated for it. A compatible completed fleet04 result is applied below at its exact scope: fleet04/B16, `QFORM-NESTED-HEAVY-ZERODIAG-ATOM-v1`, source
 
-`yspennstate/math-open-problems@54e57957ed371362e28d0699ccb9a7b8e55e9238`,
+`private-source-repository@54e57957ed371362e28d0699ccb9a7b8e55e9238`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T161909Z-fleet04-B16-QFORM-r2/REPORT.md`.
 

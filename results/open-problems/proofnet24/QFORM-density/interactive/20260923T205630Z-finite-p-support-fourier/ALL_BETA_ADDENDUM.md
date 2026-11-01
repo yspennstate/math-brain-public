@@ -1,6 +1,6 @@
 # All-beta finite-P support density addendum
 
-Date: 2026-09-23. Status: **proved scoped theorem**. This extends the [finite-P Fourier receiver](https://github.com/yspennstate/math-open-problems/blob/44cd716d0814a830c27feeba380a03f62da38c6b/proofnet24/QFORM-density/interactive/20260923T205630Z-finite-p-support-fourier/REPORT.md) from beta zero to arbitrary beta for the pure canonical quadratic law. The unrestricted original-product theorem remains open.
+Date: 2026-09-23. Status: **proved scoped theorem**. This extends the [finite-P Fourier receiver](private-source-repository) from beta zero to arbitrary beta for the pure canonical quadratic law. The unrestricted original-product theorem remains open.
 
 ## Theorem
 
@@ -67,7 +67,7 @@ The one-sided inverse square-root bathtub bound, using only \(0\le f_H\le1\) and
 \int f_H(h)[s-2hl-\beta l^2-2cl]_+^{-1/2}\,dh
 \le\sqrt{2/|l|}.
 \]
-Integrating this over \(|l|\le R\) yields \(4\sqrt2 M\sqrt R\). This is the same calculation as in the [beta-uniform one-hub two-light theorem](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T203100Z-beta-uniform-one-hub-square/REPORT.md), with arbitrary split R and subprobability mass retained. For zero or infinite M the bound follows by limiting arguments; in the present application M(p) is finite almost everywhere.
+Integrating this over \(|l|\le R\) yields \(4\sqrt2 M\sqrt R\). This is the same calculation as in the [beta-uniform one-hub two-light theorem](private-source-repository), with arbitrary split R and subprobability mass retained. For zero or infinite M the bound follows by limiting arguments; in the present application M(p) is finite almost everywhere.
 
 ## Proof of the theorem
 

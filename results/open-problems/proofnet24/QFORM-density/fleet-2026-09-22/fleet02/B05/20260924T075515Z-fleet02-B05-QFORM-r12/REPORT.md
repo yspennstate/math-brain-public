@@ -43,7 +43,7 @@ The previous fleet02/B05 pair-star exit, obtained by applying the completed pair
 \boxed{r_i:=v_i^2+w_i^2<\frac1{64}\quad\text{for every residual original coordinate }i.} \tag{1.5}
 \]
 
-The fresh compatible partner fleet03/B05 result is r42, `QFORM-WITT-RANKTWO-BANK-NULLHUB-v1`, canonical report `yspennstate/math-open-problems@2a89e0bc63f9559b9cde159e03daafdf79e2cca4`. For an exact original-coordinate cut with both three-frame bank volumes zero, it produces the product-preserving currency
+The fresh compatible partner fleet03/B05 result is r42, `QFORM-WITT-RANKTWO-BANK-NULLHUB-v1`, canonical report `private-source-repository@2a89e0bc63f9559b9cde159e03daafdf79e2cca4`. For an exact original-coordinate cut with both three-frame bank volumes zero, it produces the product-preserving currency
 
 \[
 \Gamma=\tau p_{12}^2+(1-\tau)p_{23}^2                               \tag{1.6}

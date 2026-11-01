@@ -12,7 +12,7 @@ The target is still the dimension- and matrix-independent small-ball/density est
 
 `P(X^T A X in I) <= C |I|`
 
-for every independent cap-one product law and every symmetric `A` with at least three eigenvalues of absolute value at least one. The regularity part is not the remaining payment: the completed assigned-partner report `fleet03/B15`, run `20260922T162724Z-fleet03-B15-r13`, canonical source `yspennstate/math-open-problems@4813f09ed4f518a1ee172b77a0f1d315989a84e1`, proves (at worker-result status, with its stated review status) that every fixed symmetric `A` with `rank(A)>=3` gives an individually bounded density in `C_0(R)`. Its constants depend on physical blocks of `A` and therefore do not prove the universal theorem.
+for every independent cap-one product law and every symmetric `A` with at least three eigenvalues of absolute value at least one. The regularity part is not the remaining payment: the completed assigned-partner report `fleet03/B15`, run `20260922T162724Z-fleet03-B15-r13`, canonical source `private-source-repository@4813f09ed4f518a1ee172b77a0f1d315989a84e1`, proves (at worker-result status, with its stated review status) that every fixed symmetric `A` with `rank(A)>=3` gives an individually bounded density in `C_0(R)`. Its constants depend on physical blocks of `A` and therefore do not prove the universal theorem.
 
 This report establishes the exact qualitative threshold around that result and gives a target-valid obstruction to extracting uniform quantitative control merely from the `C_0` conclusion.
 

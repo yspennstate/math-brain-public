@@ -2,7 +2,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is n
 
 # HARD7-04 bounded research iteration — P0157 multi-hub route refutation
 
-Date: 2026-09-19 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-19 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL; source residual OPEN. The over-strong universal one-hub route statement is REFUTED.** This is the substantive continuation of the preceding Section-I STUCK1 recovery. The recovery choice was `REFUTE INSTEAD OF PROVE`; in this run that choice succeeds. I do **not** label the source problem REFUTED, because the source's 2026 prose prediction does not state the universal quantifiers of the route statement attacked here.
 

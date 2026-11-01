@@ -248,7 +248,7 @@ So the source-valid obstruction at `3sqrt(2)` cannot be reproduced, even asympto
 
 Partner source actually applied:
 
-`yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`
+`private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`.
 
@@ -276,7 +276,7 @@ No refuted law-uniform pointwise oscillatory decay, post-rotation independence, 
 Dependencies consumed:
 
 - fresh owner/control programme state from `yspennstate/math-research-brain`, revision `2026-09-22.15`;
-- fleet04/B17 weighted local Edgeworth and exact lower-obstruction witness: `math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`;
-- fleet01/B17 cone-tip closure for the complementary one-heavy/two-diffuse N3 family: `math-open-problems@9ba7adec3f1f7907e3e05cfce6acabb3beedb441`.
+- fleet04/B17 weighted local Edgeworth and exact lower-obstruction witness: `private-source@2156b76156ad5956c214a881fcfd6d977d6f3b9f`;
+- fleet01/B17 cone-tip closure for the complementary one-heavy/two-diffuse N3 family: `private-source@9ba7adec3f1f7907e3e05cfce6acabb3beedb441`.
 
 Checker: `verify_two_heavy_one_diffuse.py`; exact-arithmetic terminal result: `PASS QFORM_TWO_HEAVY_ONE_DIFFUSE_CONE`.

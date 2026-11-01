@@ -83,7 +83,7 @@ Thus the construction below selects only original physical coordinates certified
 
 The required compatible partner result is fleet02/B12,
 
-`yspennstate/math-open-problems@4ccd51ad517f425a529daa52c3352905b86ea69d`,
+`private-source-repository@4ccd51ad517f425a529daa52c3352905b86ea69d`,
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md`, Sections 2--4.
 
 Its candidate-independent selector theorem states, for a genuine physical coordinate with selector bias `s` and disagreement probability `d`,
@@ -323,7 +323,7 @@ This is an analytic arbitrary-dimension theorem at its stated robust-row hypothe
 
 ## Source pins
 
-1. `yspennstate/math-open-problems@85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md` — physical block `F/J` inequality and stopping ledger.
-2. `yspennstate/math-open-problems@fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md` — robust near-subcube rows and trigger boundary lower bound.
-3. `yspennstate/math-open-problems@85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md` — exact co-pair identity and raw-curvature no-go.
-4. `yspennstate/math-open-problems@4ccd51ad517f425a529daa52c3352905b86ea69d`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md`, Sections 2--4 only — conditional Shannon debit forcing a nonlocal rather than pointwise-linear stopping mechanism. Its obsolete Section-5 candidate is not used.
+1. `private-source-repository@85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md` — physical block `F/J` inequality and stopping ledger.
+2. `private-source-repository@fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md` — robust near-subcube rows and trigger boundary lower bound.
+3. `private-source-repository@85ffa60db26997421d980b1f86c03d82259504ca`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md` — exact co-pair identity and raw-curvature no-go.
+4. `private-source-repository@4ccd51ad517f425a529daa52c3352905b86ea69d`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md`, Sections 2--4 only — conditional Shannon debit forcing a nonlocal rather than pointwise-linear stopping mechanism. Its obsolete Section-5 candidate is not used.

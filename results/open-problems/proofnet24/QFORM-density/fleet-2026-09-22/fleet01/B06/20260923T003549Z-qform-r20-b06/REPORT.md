@@ -17,7 +17,7 @@ The target is unchanged: for every dimension, independent real original coordina
 Two completed fleet02/B06 results are used at displayed inequalities.
 
 1. `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical
-   `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+   `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
    For a unit scalar projection `Y=c^T X` of a cap-one product vector,
 
@@ -26,7 +26,7 @@ Two completed fleet02/B06 results are used at displayed inequalities.
     <= sqrt(e)`.                                                     (0.1)
 
 2. `QFORM-THIRD-SQUARE-HYPERBOLIC-ABSORPTION-v1`, canonical
-   `yspennstate/math-open-problems@168ac7725f62401408f20ce18cbf8ff7055e9013`,
+   `private-source-repository@168ac7725f62401408f20ce18cbf8ff7055e9013`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T234200Z-e4c1068b3e5d/REPORT.md`.
    Its general scalar-cap estimate is
 
@@ -35,7 +35,7 @@ Two completed fleet02/B06 results are used at displayed inequalities.
    for a genuine independent square variable plus a product-bank hyperbolic pair. I prove below the exact extension needed here: the square variable may itself be a unit projection of a disjoint original-coordinate bank, and its center may be an arbitrary measurable function of the two hyperbolic banks.
 
 The latest fleet03/B07 overlap-Schur handoff at the source check is
-`yspennstate/math-open-problems@391688138f7f481a2c8688c2d27f9508db7af6af` and supplies the exact pair-Schur ledger. The latest fleet03/B08 diffuse handoff at the source check is `@d30dba6db19d1eceabde6222c84a5b57a85506f0` and supplies aggregate third-compound packets. The results below identify a particularly rigid singular-pair endpoint for those ledgers.
+`private-source-repository@391688138f7f481a2c8688c2d27f9508db7af6af` and supplies the exact pair-Schur ledger. The latest fleet03/B08 diffuse handoff at the source check is `@d30dba6db19d1eceabde6222c84a5b57a85506f0` and supplies aggregate third-compound packets. The results below identify a particularly rigid singular-pair endpoint for those ledgers.
 
 ## 1. The half-Riesz input
 

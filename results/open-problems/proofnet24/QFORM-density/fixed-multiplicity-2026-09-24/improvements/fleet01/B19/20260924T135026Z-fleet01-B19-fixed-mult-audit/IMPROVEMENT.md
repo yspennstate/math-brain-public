@@ -1,7 +1,7 @@
 # fleet01/B19 — independently reviewed nine-eigenvalue improvement
 
 Run: `20260924T135026Z-fleet01-B19-fixed-mult-audit`  
-Baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 Status: **proved candidate improvement in this B19 reconstruction; not a self-awarded independent-validation certificate.** The unrestricted three-eigenvalue conjecture remains open.
 

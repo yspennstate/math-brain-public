@@ -13,16 +13,16 @@ attacking: the two-sided-curvature/rank-two logarithmic obstruction after an out
 
 ## 1. Source-valid inputs
 
-1. **Product projection cap.** fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, proves that a unit scalar projection of an arbitrary cap-one product vector has density at most `sqrt(e)`. This is a weighted physical-space fiber integral, not a spectral fiber supremum.
+1. **Product projection cap.** fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, proves that a unit scalar projection of an arbitrary cap-one product vector has density at most `sqrt(e)`. This is a weighted physical-space fiber integral, not a spectral fiber supremum.
 
-2. **Previous exact obstruction.** fleet02/B06 run `b06-20260922T210504Z-abc2116c80c5`, canonical `yspennstate/math-open-problems@dc9752d372165b011f4c8b1101174a6698ae2c64`, constructed
+2. **Previous exact obstruction.** fleet02/B06 run `b06-20260922T210504Z-abc2116c80c5`, canonical `private-source-repository@dc9752d372165b011f4c8b1101174a6698ae2c64`, constructed
 
 `R_eps = 2 eps^(-2) U1 U2 + 2(U1 V2+U2 V1) + 2 eps^2 V1 V2
        = 2(U1/eps+eps V1)(U2/eps+eps V2)`,
 
 whose cross block has `s_2=1` and whose opposite self-block norm is `eps^2`, yet for independent centered unit uniforms its density diverges logarithmically at zero. Its coefficient matrix has only two nonzero eigenvalues `+/-(eps^(-2)+eps^2)`, so it refutes only the perturbative rank-two intermediate statement, not QFORM.
 
-3. **Named partner fleet03/B06 r21.** canonical `yspennstate/math-open-problems@da1ec290db2acb0c6d155899d242d0a66f624592`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T222149Z-fleet03-B06-qform-r21/REPORT.md`. In the strict-higher-rank bicolooop state, either a wedge-diffuse side survives or an actual physical `2x2` cross minor is forced, and the latter branch is paid by
+3. **Named partner fleet03/B06 r21.** canonical `private-source-repository@da1ec290db2acb0c6d155899d242d0a66f624592`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T222149Z-fleet03-B06-qform-r21/REPORT.md`. In the strict-higher-rank bicolooop state, either a wedge-diffuse side survives or an actual physical `2x2` cross minor is forced, and the latter branch is paid by
 
 `||p_Q||_infinity < 9.25 / sqrt(|a| gamma)`.
 

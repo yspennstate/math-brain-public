@@ -34,17 +34,17 @@ The resulting theorem is correction-safe and, in fact, does not require `rank(S)
 ## 2. Source-pinned inputs actually used
 
 1. **B02 r30 heavy-anchor compiler**, canonical source
-   `yspennstate/math-open-problems@cb55a355bc5c623eb5a98c1db8a0ebaa58ff1027`,
+   `private-source-repository@cb55a355bc5c623eb5a98c1db8a0ebaa58ff1027`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T125927Z-fleet03-B02-qform-r30/REPORT.md`.
    It supplies the live alternative `J>Z/3`, the exact identity (1.2), and the already-paid exact-rank-two branch.
 
 2. **Weighted mixed-(3+2) Fourier theorem**, B02 r25, canonical source
-   `yspennstate/math-open-problems@ff8ec2ee90d4846f39e728e1ca20d50c717cc894`,
+   `private-source-repository@ff8ec2ee90d4846f39e728e1ca20d50c717cc894`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T085705Z-fleet03-B02-qform-r25/REPORT.md`.
    If `J3` is third-volume incident to one physical row/column anchor and `E2` is the residual second volume after deleting those anchors, then at `theta=1/2` and `1<q<5/4`, a mixed marginal gate gives an `L1` characteristic function. Simultaneous row/column gate failure forces a common-anchor packet of relative mass `>q-1` in either the third-volume family or the residual second-volume family.
 
 3. **Designated partner fleet04/B02**, canonical source
-   `yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+   `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
    If a nonsingular physical zero-diagonal principal triple `H0` exists, then
 

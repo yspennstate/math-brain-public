@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — not auth
 # R13 — lower-tail Bernstein correction to the finite-dimensional DTV Komlós bound
 
 Run ID: `20260918T2001Z_lowertail-bernstein-5a7c`  
-Repository/branch: private `yspennstate/math-open-problems` / `master`.
+Repository/branch: private `private-source-repository` / `master`.
 
 R13 remains the HARD OUTSIDE owner of the real Boolean Komlós target `E0042`.  For a real `m x n` matrix `A` with every column of Euclidean norm at most one, write
 

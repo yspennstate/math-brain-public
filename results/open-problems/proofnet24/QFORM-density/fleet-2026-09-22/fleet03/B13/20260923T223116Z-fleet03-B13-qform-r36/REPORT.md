@@ -15,7 +15,7 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, post-rot
 
 The designated partner actually used is fleet04/B13:
 
-`yspennstate/math-open-problems@d1764f29884bf14ce505d36668105edfcaf8315e`
+`private-source-repository@d1764f29884bf14ce505d36668105edfcaf8315e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T201653Z-fleet04-B13-extremal-slab-dichotomy-r1/REPORT.md`.
 
@@ -53,7 +53,7 @@ Thus the following exhaustive split is valid:
 
 During this run, fleet01/B13 independently published the exact grouped-hub / three-leaf theorem I was beginning to derive. Per the owner rule that a source-matching completed theorem ends duplicate work on that exact scope, I did not republish it. I consumed its stronger constant instead:
 
-`yspennstate/math-open-problems@38a8a2ae1cb319211ab4be60f6f8d6f7f03f85f9`
+`private-source-repository@38a8a2ae1cb319211ab4be60f6f8d6f7f03f85f9`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T223205Z-fleet01-B13-qform-auto11/REPORT.md`.
 
@@ -78,7 +78,7 @@ The theorem already works for arbitrary cap-one product laws and aggregates the 
 
 The other prior result used is my r34 pair-volume stability theorem:
 
-`yspennstate/math-open-problems@7ebaff80e4d6d1c5c45a561d1ff17a87cfd7a052`
+`private-source-repository@7ebaff80e4d6d1c5c45a561d1ff17a87cfd7a052`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T203053Z-fleet03-B13-qform-r34/REPORT.md`.
 

@@ -27,7 +27,7 @@ This run proves step 2 in a quantitatively stronger form than the preceding half
 
 I use the completed fleet02/B02 theorem from
 
-`yspennstate/math-open-problems@c726a32fa4d8e1e8ab246d48560b89cf1d4c4857`
+`private-source-repository@c726a32fa4d8e1e8ab246d48560b89cf1d4c4857`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T221114Z-fleet02-B02-qform-r11-2ea3913a/REPORT.md`.
 
 Its underlying independently checked regularized-determinant estimate states that for any quadratic-affine form R in cap-one independent ORIGINAL coordinates and any physical cross block B, with arbitrary self blocks and outside couplings,

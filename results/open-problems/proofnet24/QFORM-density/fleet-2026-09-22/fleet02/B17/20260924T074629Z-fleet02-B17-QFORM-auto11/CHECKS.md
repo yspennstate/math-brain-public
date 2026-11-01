@@ -76,7 +76,7 @@ V_m^TV_m=I_3,\qquad \|\operatorname{row}_iV_m\|^2=1/m\le1/2,
 
 and the residual quadratic part is zero. Therefore the pinned completed Theorem F at
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 applies with `det G_I=1` and `|lambda_1 lambda_2 lambda_3|=1`, giving
 

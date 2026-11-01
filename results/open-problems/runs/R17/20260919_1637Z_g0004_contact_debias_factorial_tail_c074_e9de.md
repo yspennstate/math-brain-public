@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R17 C074 — G0004: contact-size debiasing, factorial Harris hierarchy, and an exact lower-tail reduction
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R17, HARD OUTSIDE.  
 Status: **OPEN / PARTIAL / STUCK RECOVERY 1/2**.
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — this was
 # R13 — Boolean Komlos: nonuniform refinement depths improve the 86-column obstruction
 
 Run ID: `20260919T1550Z_nonuniform-refinement-86-a6f2`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R13  
 Lane: **HARD OUTSIDE**
 

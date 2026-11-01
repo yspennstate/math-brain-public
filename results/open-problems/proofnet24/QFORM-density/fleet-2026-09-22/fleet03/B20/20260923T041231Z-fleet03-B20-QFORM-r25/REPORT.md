@@ -12,7 +12,7 @@ attacking: the current small-Pluecker collar's second-gradient/rank-one-alignmen
 ## 1. Fresh source boundary
 
 
-The immediate collar source is fleet03/B19 r23, canonical `yspennstate/math-open-problems@80403bc0adff2c5e8278848674c81448e9782e44`, path
+The immediate collar source is fleet03/B19 r23, canonical `private-source-repository@80403bc0adff2c5e8278848674c81448e9782e44`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T030233Z-fleet03-B19-QFORM-r23/REPORT.md`.  In the remaining exact-rank-three small-Pluecker collar it supplies an ORIGINAL physical hub `i` such that
 
 `c_i=||u_i||^2>1/4`,
@@ -21,15 +21,15 @@ The immediate collar source is fleet03/B19 r23, canonical `yspennstate/math-open
 
 unless an earlier scalar-pivot branch already pays the density.
 
-The freshest B19 r25 checkpoint, `yspennstate/math-open-problems@0c70646cf7135c489a17d42ad86f46448b36b883`, path
+The freshest B19 r25 checkpoint, `private-source-repository@0c70646cf7135c489a17d42ad86f46448b36b883`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T040358Z-fleet03-B19-QFORM-r25/CHECKPOINT.md`, gives the stable star-row alignment identity used below.  I rederive the quantitative consequence needed here rather than treating its numerical checker as proof.
 
-The analytic volume receiver is the completed three-volume theorem at `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, path
+The analytic volume receiver is the completed three-volume theorem at `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, path
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.  In its q=4/3 form, if an original-coordinate cross block `B` has third-volume `Z=e3(BB^T)>0` and its row third-volume marginals are at most `2/3`, then the whole quadratic-plus-affine law has a bounded continuous density with
 
 `||p_Q||_infinity <= (9 sqrt(3)e/2) Z^(-1/6)`.
 
-The designated partner actually used is fleet04/B20 r2, canonical `yspennstate/math-open-problems@94bf446b8547b1124a37033e940ef594c460b64f`, path
+The designated partner actually used is fleet04/B20 r2, canonical `private-source-repository@94bf446b8547b1124a37033e940ef594c460b64f`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T141640Z-fleet04-B20-QFORM-r2/REPORT.md`.  Its conditioned-whitened theorem gives a continuous density `<27/delta` after conditioning ORIGINAL coordinates whenever the residual selected-frame Gram has spectral floor `delta` and every whitened residual leverage is at most `1/32`.
 
 All arguments below remain in original physical coordinates.  No rotated random coordinates are declared independent; no arbitrary-joint rank-three coarea lemma, worst-fiber supremum, pointwise Fresnel decay, or one-good-minor inference is used.

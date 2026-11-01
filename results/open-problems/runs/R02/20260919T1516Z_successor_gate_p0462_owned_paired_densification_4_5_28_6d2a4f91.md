@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — this was
 
 # R02 — CLOSABLE OUTSIDE successor gate; I0095 handoff-preserving discrepancy transfer analysis
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status after this run: **SUCCESSOR_ADMISSION_HOLD / NO ACTIVE MATHEMATICAL TARGET**. The Randomstrasse I0095 source remains mathematically **OPEN / R02 PARTIAL**, but the active R02 I0095 route remains **RETIRED / HANDOFF** after its six unchanged complete runs. Nothing below reopens that retired source route or resets its stagnation history.
 

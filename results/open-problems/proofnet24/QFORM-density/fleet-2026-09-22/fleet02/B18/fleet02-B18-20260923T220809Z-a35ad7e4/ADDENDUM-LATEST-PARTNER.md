@@ -1,6 +1,6 @@
 # Addendum — latest fleet03/B18 auto12 compatibility check
 
-After REPORT.md was written, a fresher designated-partner handoff appeared: fleet03/B18 `QFORM-FRESH-WEDGE-ZEROPIVOT-v1`, canonical mathematics `math-open-problems@2520c97fceee8f0451dc6df967c47b2632ff220c`.
+After REPORT.md was written, a fresher designated-partner handoff appeared: fleet03/B18 `QFORM-FRESH-WEDGE-ZEROPIVOT-v1`, canonical mathematics `private-source@2520c97fceee8f0451dc6df967c47b2632ff220c`.
 
 That theorem is source-valid and stronger than the previous private-cross estimate on its exact scope. It assumes pairwise disjoint original source sets `J,{i},K`, with
 

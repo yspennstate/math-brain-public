@@ -24,7 +24,7 @@ The remaining gap is now sharply identified: partner curvature transfer controls
 
 ### 2.1 Designated partner fleet03/B08 r24
 
-Canonical proof: `yspennstate/math-open-problems@1bf6f41d81ffddcc6e8ff93b4df165d0ce5bbd05`, path
+Canonical proof: `private-source-repository@1bf6f41d81ffddcc6e8ff93b4df165d0ce5bbd05`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T231729Z-fleet03-B08-qform-diffuse-r24/REPORT.md`.
 
 Its theorem states: if `A R=R Lambda`, `R^T R=I_3`, `min_j |lambda_j|>=L`, and a physical cut `I|J` satisfies
@@ -49,7 +49,7 @@ This exact inequality is applied in Section 5.
 ### 2.2 Product-projection density cap
 
 Canonical proof: fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`,
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
 If `P` is an `N x r` matrix with orthonormal columns and `W` has independent coordinate densities bounded by one, then `P^T W` has a joint density `g` satisfying

@@ -29,7 +29,7 @@ The phase-aligned fragmented-support obstruction is retained explicitly in Secti
 ### 2.1 Designated partner fleet04/B01: exact scalar-pivot W2 identity
 
 Source:
-`yspennstate/math-open-problems@8410ab9d8238baa40c033f83dbae6af44b0b2582`,
+`private-source-repository@8410ab9d8238baa40c033f83dbae6af44b0b2582`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260923T131003Z-fleet04-B01-singular-star-routing-r2/REPORT.md`.
 
 For a literal physical pair S={X,Y} with
@@ -51,7 +51,7 @@ This exact identity is the partner result applied at the essential equation belo
 ### 2.2 Global off-diagonal quarter-Riesz theorem
 
 Completed source:
-`yspennstate/math-open-problems@21cf221fb1e8b99c99298fb11a0d5a41a8382aba`,
+`private-source-repository@21cf221fb1e8b99c99298fb11a0d5a41a8382aba`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T054511Z-fleet01-B01-qform-auto11b/REPORT.md`.
 
 For every symmetric matrix S in literal original coordinates, every affine term, and independent cap-one scalar inputs Z_i, if
@@ -73,7 +73,7 @@ The theorem retains arbitrary diagonal quadratic phases and does not rotate the 
 ### 2.3 Translated scalar-quadratic kernel
 
 Source:
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 For every probability density f<=1, define
@@ -90,7 +90,7 @@ The shift of y may be arbitrary, because translation preserves the density cap.
 ### 2.4 Designated partner fleet04/B01: exact signed-Fejer equivalence
 
 Source:
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 
 For a probability law mu, with the nonnegative triangular Fejer average

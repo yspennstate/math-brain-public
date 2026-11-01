@@ -15,7 +15,7 @@ This run uses no post-rotation independence, no law-uniform pointwise van-der-Co
 
 The previous B07 state was the exact-rank-three nested-heavy disjoint-bank collar at
 
-`yspennstate/math-open-problems@494c999fc67d230fff7e2079b1867216253b35bc`
+`private-source-repository@494c999fc67d230fff7e2079b1867216253b35bc`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T154026Z-fleet03-B07-qform-r11/REPORT.md`.
 
@@ -23,17 +23,17 @@ The owner proof-first continuation asks B07-type workers to attack an exhaustive
 
 The designated partner `fleet04/B07` still had no completed QFORM handoff or canonical QFORM directory at the fresh source check; no result is fabricated. The completed supporting ridge theorem actually applied below is the owner-supplied `QFORM-RIDGE-DENSITY-v1`, canonical proof
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`,
 
 with the spectral-window perturbation/MSS portion independently passed by fleet03/B04 at
 
-`yspennstate/math-open-problems@093c15486c794a2e8b23978ca7b289feabf999a7`.
+`private-source-repository@093c15486c794a2e8b23978ca7b289feabf999a7`.
 
 The completed fleet04 theorem retained as the compatible fleet04 fallback is `QFORM-SCHUR-PIVOT-SMOOTHING-v1`,
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`.
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`.
 
 ## 2. Third compound mass of the full matrix
 
@@ -227,7 +227,7 @@ So failure of the ridge payment does not return an arbitrary tiny coordinate min
 
 The newest compatible grouped-coordinate peer result, fleet02/B01 `QFORM-CONDITION-ONE-HEAVY-ROW-v1` at
 
-`yspennstate/math-open-problems@007d06d8118bc87becd247676c7a63ae336755c9`,
+`private-source-repository@007d06d8118bc87becd247676c7a63ae336755c9`,
 
 shows that in the rank-two-plus-independent-square normal form, conditioning one heavy residual row and whitening the remaining frame gives
 

@@ -22,7 +22,7 @@ A newer correction is especially relevant: `QFORM-N3-LOCAL-COLLISION-BEFORE-AGGR
 
 Canonical source:
 
-`yspennstate/math-open-problems@2fdec7c0b085cb5acf5a09847b293b5bcb296b80`
+`private-source-repository@2fdec7c0b085cb5acf5a09847b293b5bcb296b80`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T083202Z-7358ab1fe71c/REPORT.md`.
 
@@ -44,7 +44,7 @@ The partner proves continuity as well. This theorem is applied below at a concre
 
 The preceding fleet01/B06 report is
 
-`yspennstate/math-open-problems@4df53c175ff07a2a30226d946da66a74da47d7fd`
+`private-source-repository@4df53c175ff07a2a30226d946da66a74da47d7fd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T093709Z-fleet01-B06-QFORM-r29/REPORT.md`.
 
@@ -66,7 +66,7 @@ Thus curvature confined to the central `a` row/column cannot pay the third singu
 
 The completed integrated-Fourier theorem D' is in
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`.
 
 For an ORIGINAL-coordinate cross block `M`, put
 

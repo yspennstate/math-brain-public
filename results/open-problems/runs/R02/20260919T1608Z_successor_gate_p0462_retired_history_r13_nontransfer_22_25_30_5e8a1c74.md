@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # R02 — CLOSABLE successor gate: P0462 retirement-history correction and R13 transfer no-go
 
 Run ID: `20260919T1608Z_successor_gate_p0462_retired_history_r13_nontransfer_22_25_30_5e8a1c74`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R02  
 Lane: **CLOSABLE OUTSIDE**  
 Operational state after this run: **SUCCESSOR_ADMISSION_HOLD / NO ACTIVE MATHEMATICAL TARGET**.

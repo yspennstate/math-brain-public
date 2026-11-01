@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R17 C065 — terminal admission delta; TS12 is a newly claimed CLOSABLE target, no HARD release to R17
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Worker: R17, HARD OUTSIDE.
 Status: **TERMINAL HANDOFF / ADMISSION WAIT**.
 

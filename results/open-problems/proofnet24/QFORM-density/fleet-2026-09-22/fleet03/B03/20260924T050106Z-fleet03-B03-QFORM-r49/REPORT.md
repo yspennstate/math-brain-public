@@ -14,17 +14,17 @@ The unrestricted target remains: independent real coordinates with one-dimension
 
 The live near-coloop debt consumed here is the exact-rank-three null-pivot representation in
 
-`yspennstate/math-open-problems@5117e9ec45221d02dfa74cedf6c4dcee9fae60c7`,
+`private-source-repository@5117e9ec45221d02dfa74cedf6c4dcee9fae60c7`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260924T040707Z-fleet02-B11-QFORM-r12/R49_REFRESH.md`.
 
 The outer indefinite-pair transducer used in Section 7 is the completed pair-log theorem
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 The designated partner result applied in Section 8 is fleet04/B03 r3,
 
-`yspennstate/math-open-problems@8147f1247043e419eb6762911c4a34fa58494d0f`,
+`private-source-repository@8147f1247043e419eb6762911c4a34fa58494d0f`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260924T021651Z-fleet04-B03-hyperbola-fourvolume-r3/REPORT.md`.
 
 ## 2. Elementary cap-to-half-Riesz lemma

@@ -20,7 +20,7 @@ The full conjecture remains OPEN. The results below are supporting stability/red
 Completed inputs actually used:
 
 1. Newest three-volume theorem and its exact volume-marginal matrix inequality:
-   yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba,
+   private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba,
    proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md.
    If M is an ORIGINAL-coordinate cross block, Z=e_3(M^T M), and all natural third-volume row marginals alpha_i satisfy alpha_i<=q/2 for 1<=q<3/2, then the full quadratic-plus-affine form has a continuous C_0 density and
 
@@ -52,7 +52,7 @@ Completed inputs actually used:
    This result already retains arbitrary outside spectrum and cross couplings.
 
 The finite-core endpoint underlying (1.3) was also checked at
-`yspennstate/math-open-problems@8a6269fae9183252b85ba2ee787aedd905deef2a`,
+`private-source-repository@8a6269fae9183252b85ba2ee787aedd905deef2a`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B12/20260923T045406Z-fleet01-B12-QFORM-r25/REPORT.md`.
 
 ## 2. A new intrinsic cross-energy certificate

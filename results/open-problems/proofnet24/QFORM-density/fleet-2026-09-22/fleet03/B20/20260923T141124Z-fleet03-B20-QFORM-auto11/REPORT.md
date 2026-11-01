@@ -23,7 +23,7 @@ Execution status: `WITHOUT_VERIFIED_BRAIN`.
 
 ### 1.1 Full target may be reduced to an arbitrarily small strict no-pivot class
 
-Use `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
+Use `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`, Theorem 5.1.
 
 For any fixed `tau in (0,1]`, it proves that a universal density theorem on the strict class
@@ -45,7 +45,7 @@ Then proving the theorem on `N3(tau0)` is enough for the full bounded-density ta
 
 Use fleet04/B20 r9, `QFORM-N3-ONEWINDOW-RIDGE-OR-PHYSICALSTAR-v1`, canonical mathematics
 
-`yspennstate/math-open-problems@e9b86c6b32c6209586e9f3bc040017300954c205`,
+`private-source-repository@e9b86c6b32c6209586e9f3bc040017300954c205`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T132335Z-fleet04-B20-QFORM-r9/REPORT.md`.
 
 Its hypotheses are the stricter-looking threshold class `N3(1/192)`. Its conclusion is exhaustive:
@@ -75,7 +75,7 @@ Its hypotheses are the stricter-looking threshold class `N3(1/192)`. Its conclus
 
 Use fleet03/B09 r32, `QFORM-FRACTIONAL-SUBVOLUME-BL-v1`, canonical mathematics
 
-`yspennstate/math-open-problems@56d0211f2f04d74152032fd1914196673eb5c3e6`,
+`private-source-repository@56d0211f2f04d74152032fd1914196673eb5c3e6`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T124906Z-fleet03-B09-QFORM-r32/REPORT.md`.
 
 For an actual original-coordinate cross matrix `M`, take any chosen family `Omega` of physical 3x3 minors with total squared determinant mass `Z_Omega>0`. If the normalized selected-minor row inclusion marginals are all at most `1/2`, then the **full** quadratic-plus-affine law, retaining arbitrary same-bank curvature and arbitrary conditioned outside variables, has a continuous density satisfying
@@ -381,9 +381,9 @@ No full-solution status should be inferred from the reduction.
 
 ## 10. Exact source paths consumed
 
-- arbitrary-tau full-target reduction: `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`;
-- designated partner: `yspennstate/math-open-problems@e9b86c6b32c6209586e9f3bc040017300954c205`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T132335Z-fleet04-B20-QFORM-r9/REPORT.md`;
-- selected-subvolume BL theorem: `yspennstate/math-open-problems@56d0211f2f04d74152032fd1914196673eb5c3e6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T124906Z-fleet03-B09-QFORM-r32/REPORT.md`;
-- fresh parallel exterior-volume comparison: `yspennstate/math-open-problems@f63decefb7148fe0640c66d014a49a4ef1f5621e`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/fleet01-B19-20260923T134858Z-auto11/REPORT.md`.
+- arbitrary-tau full-target reduction: `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`;
+- designated partner: `private-source-repository@e9b86c6b32c6209586e9f3bc040017300954c205`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T132335Z-fleet04-B20-QFORM-r9/REPORT.md`;
+- selected-subvolume BL theorem: `private-source-repository@56d0211f2f04d74152032fd1914196673eb5c3e6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T124906Z-fleet03-B09-QFORM-r32/REPORT.md`;
+- fresh parallel exterior-volume comparison: `private-source-repository@f63decefb7148fe0640c66d014a49a4ef1f5621e`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/fleet01-B19-20260923T134858Z-auto11/REPORT.md`.
 
 The last source confirms that the exterior-volume/rank-two split is consistent with the current fleet frontier; the anchor-expansion inequality in Section 7 is the new step of this run.

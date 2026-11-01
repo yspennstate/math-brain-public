@@ -32,7 +32,7 @@ The nonzero eigenvalues of (A_{RR}) are those of (G_R^{1/2}\Lambda G_R^{1/2}), w
 
 If (\lambda_{\min}(G_R)<1/12), choose a unit eigenvector (v) with (v^TG_Rv<1/12). Since (U^TU=I_3), (\sum_{i\in H}(u_i\cdot v)^2=1-v^TG_Rv>11/12). This is the stated alternative.
 
-The diffuse theorem and its complete Plancherel proof are at https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T193700Z-diffuse-rank-three-fourier/REPORT.md . The finite-hub alternative includes near-coloop configurations and remains unresolved by this reduction.
+The diffuse theorem and its complete Plancherel proof are at private-source-repository . The finite-hub alternative includes near-coloop configurations and remains unresolved by this reduction.
 
 
 ## Second finite-hub branch: all three directions on heavy coordinates
@@ -42,7 +42,7 @@ Suppose in addition that $m=|H|\ge3$ and $G_H=U_H^TU_H\succeq c_0 I_3$ for a fix
  \|p_{X^TAX+b^TX+c}\|_\infty
  < \frac{51(m-2)}{c_0\sigma}.
 \]
-Indeed, $W=U_H G_H^{-1/2}$ has three orthonormal columns. The volume-sampled triple identity proved in the [exact-rank-three arbitrary-affine report](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T193238Z-exact-rank-three-affine/REPORT.md) supplies a three-element physical subset $I\subset H$ with
+Indeed, $W=U_H G_H^{-1/2}$ has three orthonormal columns. The volume-sampled triple identity proved in the [exact-rank-three arbitrary-affine report](private-source-repository) supplies a three-element physical subset $I\subset H$ with
 \[
  s_{\min}(W_I)^2\ge\frac1{3(m-2)}.
 \]

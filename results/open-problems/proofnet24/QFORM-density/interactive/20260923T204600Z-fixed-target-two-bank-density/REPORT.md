@@ -1,7 +1,7 @@
 # Fixed nonzero target extension of the two-bank one-hub receiver
 
 This note extends the source-pinned outer-target receiver
-https://github.com/yspennstate/math-open-problems/blob/f0d3e4df297cf45c4f8a0298051cef186faf1de4/proofnet24/QFORM-density/interactive/20260923T203000Z-two-bank-outer-density/REPORT.md .
+private-source-repository .
 It does **not** remove the loss as the negative target approaches zero, and it is not a full proof of the density conjecture.
 
 Let \(H\) have any density \(f_H\leq1\), independent of \(Y=Y_A+Y_B\), where \(Y_A,Y_B\) are independent \((L,V,P)\)-valued banks. Assume each bank's planar \((L,V)\) density is bounded by \(M_A,M_B\). There is no moment or support assumption and no restriction on the dependence of \(P\) on \((L,V)\) within a bank. For

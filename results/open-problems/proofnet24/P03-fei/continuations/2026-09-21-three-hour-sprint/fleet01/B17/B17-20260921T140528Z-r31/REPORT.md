@@ -4,7 +4,7 @@
 **Status:** PARTIAL. Full Friedgut--Kalai Fourier entropy--influence conjecture remains **OPEN / NOT PROVED**.  
 **Research label:** `WITHOUT_VERIFIED_BRAIN`.  
 **Route:** APPROACH 3/7/14 — sensitivity coupling + shared-variable composition + coding entropy.  
-**Fresh scientific base:** `yspennstate/math-open-problems` master `0c4dd6b8aa64f08f8f150a428519982b642b8100`.  
+**Fresh scientific base:** `private-source-repository` master `0c4dd6b8aa64f08f8f150a428519982b642b8100`.  
 **Continuation point:** fleet01/B17 `B17-20260921T124026Z-r30`, the disjoint-branch MUX theorem.  
 **No audit:** no read-once certificate or settled exhaustive sweep was rerun.
 

@@ -14,8 +14,8 @@ No Gaussianity, log-concavity, moment, compact-support, connected-support, diago
 
 The exact named partner `fleet03/B20` had no completed current-QFORM handoff at the fresh startup and subsequent source checks; its newest observed completed B20 run was from the superseded FEI programme. No partner result is fabricated. The present derivation instead consumes two compatible completed QFORM results:
 
-1. fleet03/B10, canonical report `yspennstate/math-open-problems@c1af196adade03e07456c8f6e783f952b0fa0e8d`, proves the exact heavy-isotropic normal form and the boundary case `c=1`, together with the determinant identity `B^2|tau|=|det Lambda|`;
-2. fleet01/B08, canonical report `yspennstate/math-open-problems@cdd32fd16a694a5f8acc7ba758e0db6596a3e4a1`, proves the product-space Fourier--Brascamp--Lieb estimate for a diffuse orthonormal frame and arbitrary coordinate-separable phases. Its proof, without the normalization `|lambda_j|>=1`, gives the determinant-scale rank-three bound `3e |det Gamma|^(-1/3)` for every invertible `3 x 3` spectral matrix `Gamma`.
+1. fleet03/B10, canonical report `private-source-repository@c1af196adade03e07456c8f6e783f952b0fa0e8d`, proves the exact heavy-isotropic normal form and the boundary case `c=1`, together with the determinant identity `B^2|tau|=|det Lambda|`;
+2. fleet01/B08, canonical report `private-source-repository@cdd32fd16a694a5f8acc7ba758e0db6596a3e4a1`, proves the product-space Fourier--Brascamp--Lieb estimate for a diffuse orthonormal frame and arbitrary coordinate-separable phases. Its proof, without the normalization `|lambda_j|>=1`, gives the determinant-scale rank-three bound `3e |det Gamma|^(-1/3)` for every invertible `3 x 3` spectral matrix `Gamma`.
 
 A later compatible source, fleet02/B19, gives singular-spectrum multi-pivot and dependent hyperbolic-square aggregation but explicitly leaves mixed-leverage extraction open. The theorem below supplies a product-preserving reduction inside the exact heavy-isotropic leakage wall rather than invoking a vanishing coordinate minor.
 

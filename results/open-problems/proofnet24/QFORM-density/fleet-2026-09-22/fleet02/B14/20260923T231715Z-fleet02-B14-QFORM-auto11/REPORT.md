@@ -143,7 +143,7 @@ This is a proof-interface obstruction, not a lower bound on the true quadratic-f
 
 Newest compatible designated partner fleet03/B14 proved `QFORM-SMOOTH-CONNECTED-SUPPORT-ZERO-LOSS-v1` at
 
-`math-open-problems@46f817e053914df4ed718042194c1ff39f425e46`
+`private-source@46f817e053914df4ed718042194c1ff39f425e46`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T223632Z-fleet03-B14-QFORM-auto11/REPORT.md`.
 
@@ -171,7 +171,7 @@ Therefore connected support and smoothness do not cure fragment-first positive d
 
 The fixed required Claude source was read at
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 

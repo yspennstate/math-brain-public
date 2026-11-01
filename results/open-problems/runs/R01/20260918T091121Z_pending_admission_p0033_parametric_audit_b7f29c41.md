@@ -299,7 +299,7 @@ Actually enforcing GPT-6 / maximum would require an authorized product/backend/a
 ```yaml
 ledger_delta:
   worker: R01
-  repository: yspennstate/math-open-problems
+  repository: private-source-repository
   branch: master
   source:
     frozen: "Aldous-Fill Open Problem 3.44 / I0024"

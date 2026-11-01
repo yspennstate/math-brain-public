@@ -17,7 +17,7 @@ The live correction ledger was reread. In particular this run does **not** use a
 
 The newest directly relevant coordinate-minor result is fleet02/B07:
 
-`yspennstate/math-open-problems@a0ae0928c71cf3de71d748c416a6dceb012562b2`
+`private-source-repository@a0ae0928c71cf3de71d748c416a6dceb012562b2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T213439Z-fleet02-B07-QFORM-e7b269/REPORT.md`.
 
@@ -48,7 +48,7 @@ The present run first proves a direct anchor-integration theorem that shows why 
 
 The designated `fleet04/B07` still has no completed current-QFORM handoff/canonical report at the fresh source check. I therefore do not fabricate one. The compatible completed fleet04 theorem actually used below is fleet04/B18's sharp one-dimensional product-projection transfer:
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 
@@ -129,7 +129,7 @@ The completed two-dimensional product-projection theorem gives the joint cap
 
 For source pinning, the same product-projection input is recorded and applied in fleet01/B16,
 
-`yspennstate/math-open-problems@e8c7ac4f0294a028d4bc883d1e4bf1c805e11085`
+`private-source-repository@e8c7ac4f0294a028d4bc883d1e4bf1c805e11085`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/qform-b16-20260922T213856Z-r11/REPORT.md`.
 
@@ -251,7 +251,7 @@ There is a second useful splice when this B07 packet sits inside the exact scala
 
 This is the source-pinned scalar-Schur inheritance theorem in
 
-`yspennstate/math-open-problems@fc8343c379bbddf14be670349f664f7fcb39994a`
+`private-source-repository@fc8343c379bbddf14be670349f664f7fcb39994a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T192830Z-fleet02-B19-qform-r17/REPORT.md`.
 
@@ -263,7 +263,7 @@ If `d!=0`, take the further scalar Schur complement `T` after pivoting on `h`. S
 
 Apply the completed discriminant half-Riesz theorem fleet01/B06,
 
-`yspennstate/math-open-problems@c396b6e553f98ca1cd735ae10eb0e6ec24a96cc4`
+`private-source-repository@c396b6e553f98ca1cd735ae10eb0e6ec24a96cc4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T193442Z-qform-r15-b06/REPORT.md`:
 

@@ -4,7 +4,7 @@ Status: `SUPPORTING_STABILITY_COROLLARY / SOURCE_REVIEW_PENDING / FULL_QFORM_OPE
 
 After the main report was written, I applied the current owner-required volume-stability result at
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 That source proves: if an ORIGINAL-coordinate cross block `M=M0+E` has `s3(M0)>=a0`, maximum range leverage of `M0` at most `1/2`, and `||E||op<=a0/16`, then the full ambient quadratic-plus-affine form has a continuous density with

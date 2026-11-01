@@ -14,7 +14,7 @@ Let `X=(X_1,...,X_n)` have independent real coordinates with densities `0<=f_i<=
 
 No rotation of `X` is used. The refuted law-uniform pointwise oscillatory-decay lemma is not used. The current target asks for one universal bound on the essential density of `Y` whenever at least three eigenvalues of `A` have absolute value at least one. Continuity is a separate question.
 
-The designated partner `fleet04/B03` had no completed current-QFORM handoff, memory snapshot, check-in, or canonical math-open-problems deliverable at the scans made in this run, so no partner result is fabricated. A compatible completed other-account theorem, `fleet04/B18` (`math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`), is applied below, together with the completed `fleet03/B11` extension (`math-open-problems@860d849b7f2e0198bf7c3531a71b14e59f03e430`).
+The designated partner `fleet04/B03` had no completed current-QFORM handoff, memory snapshot, check-in, or canonical private-source deliverable at the scans made in this run, so no partner result is fabricated. A compatible completed other-account theorem, `fleet04/B18` (`private-source@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`), is applied below, together with the completed `fleet03/B11` extension (`private-source@860d849b7f2e0198bf7c3531a71b14e59f03e430`).
 
 ## 2. Exact two-copy identity with the dependence retained
 

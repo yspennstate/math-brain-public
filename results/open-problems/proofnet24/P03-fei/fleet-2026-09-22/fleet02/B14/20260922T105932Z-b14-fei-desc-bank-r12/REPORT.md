@@ -405,7 +405,7 @@ The value of (6.4) is conceptual and technical: it turns the vague instruction â
 
 This run consumes the latest compatible completed `fleet03/B14` result available at startup:
 
-`yspennstate/math-open-problems`, commit `dd372aa67dfdb1b5cce6b807c15e02b377d42f9b`,
+`private-source-repository`, commit `dd372aa67dfdb1b5cce6b807c15e02b377d42f9b`,
 `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B14/20260922T094337Z-mux-maxvar-credit/REPORT.md`, Section 2.
 
 Its candidate-independent MUX currency identity is

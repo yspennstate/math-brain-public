@@ -16,12 +16,12 @@ All random-coordinate conditioning below is on ORIGINAL physical coordinates. De
 1. Current owner/control keeps every worker exclusively on full QFORM and keeps the full theorem OPEN.
 2. Live corrections retained: law-uniform pointwise quadratic oscillatory decay is false; rotated coordinates are not independent; arbitrary-joint coarea/projection-density shortcuts do not solve the indefinite pushforward; bounded-diameter or uniformly bounded-fragment extremality is false.
 3. Designated partner fleet02/B13, canonical report
-   `yspennstate/math-open-problems@eeabf558e96ea803514f8e438b49c18fe9ee789a`,
+   `private-source-repository@eeabf558e96ea803514f8e438b49c18fe9ee789a`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T171027Z-fleet02-B13-rank2core/REPORT.md`.
    Its exact zero-disjoint-two-minor endpoint is
    `A=D+R`, `D` diagonal, `rank R<=2`.
 4. Existing fleet01/B14 theorem, source
-   `yspennstate/math-open-problems@0d6e70139fe0f7d8ee22cc5210efb3b8d00a0bda`,
+   `private-source-repository@0d6e70139fe0f7d8ee22cc5210efb3b8d00a0bda`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B14/20260922T181432Z-fleet01-B14-QFORM-r15/REPORT.md`.
    I do **not** rename this prior theorem as new. Its `QFORM-RANK2-DIFFUSE-SEPARABLE-HALF-RIESZ-v1` states: for `W^T W=I_2`, all row leverages at most `1/2`, invertible symmetric `M`, independent cap-one inputs, and arbitrary coordinatewise measurable phases/perturbations,
 

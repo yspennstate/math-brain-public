@@ -11,13 +11,13 @@ The full conjecture remains open: for independent real coordinates with densitie
 
 Fresh control was resolved before this run at `yspennstate/math-research-brain@6860364d5ff95a7f28120482fb6ac6044ad2b189`; immediately before the main mathematical write it had advanced, by ordinary fleet handoffs rather than a later owner stop, to `fb50f1793e7ff245df2dffbd1857f88dcae884df`. The active owner continuation remains `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` and the unrestricted rough-law endpoint remains OPEN.
 
-Fresh mathematical master before work was `yspennstate/math-open-problems@810eb1d6e50d68ab2ee70591edb690051823c163`.
+Fresh mathematical master before work was `private-source-repository@810eb1d6e50d68ab2ee70591edb690051823c163`.
 
 The designated partner result actually used is fleet02/B14 run
 
 `20260923T183045Z-fleet02-B14-QFORM-auto11`,
 
-committed at `yspennstate/math-open-problems@a0ba2bed1c4d0e364c42e7c99103ad7c57d5ac19`, path
+committed at `private-source-repository@a0ba2bed1c4d0e364c42e7c99103ad7c57d5ac19`, path
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T183045Z-fleet02-B14-QFORM-auto11/REPORT.md`.
 

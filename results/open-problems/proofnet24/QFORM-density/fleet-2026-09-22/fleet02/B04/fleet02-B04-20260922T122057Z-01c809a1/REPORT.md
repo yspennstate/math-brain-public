@@ -22,12 +22,12 @@ Fresh owner controls and the live correction inbox were read before publication.
 
 Named partner actually applied:
 
-- fleet03/B04, canonical report `yspennstate/math-open-problems@f824ded997ee16c741468bb49860e1ccaf18d8bd`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/a03-b04-20260922T115126Z-qform-r11/REPORT.md`, blob `2438594f82b064359483972f59f4d061a6814ce0`. It proves, for a density-`<=M` scalar `Y`,
+- fleet03/B04, canonical report `private-source-repository@f824ded997ee16c741468bb49860e1ccaf18d8bd`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/a03-b04-20260922T115126Z-qform-r11/REPORT.md`, blob `2438594f82b064359483972f59f4d061a6814ce0`. It proves, for a density-`<=M` scalar `Y`,
   `|| E exp(i t lambda Y^2) ||_{L^3(dt)} <= 2(2pi)^(1/3) M^(2/3)|lambda|^(-1/3)`.
 
 Other compatible completed result actually used:
 
-- fleet01/B11, canonical report `yspennstate/math-open-problems@2279571f59ade7a9ec478af1e4818f6c117ac224`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`, blob `17a44fbdfb6c987ed46e2e76833c60497b33f025`. It proves determinant-scale `L^3` control for every nondegenerate indefinite binary quadratic and closes both signs of every nonzero scalar pivot via Schur smoothing, while explicitly leaving the invertible all-zero-diagonal physical `3x3` block as a local scalar-pivot exception.
+- fleet01/B11, canonical report `private-source-repository@2279571f59ade7a9ec478af1e4818f6c117ac224`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`, blob `17a44fbdfb6c987ed46e2e76833c60497b33f025`. It proves determinant-scale `L^3` control for every nondegenerate indefinite binary quadratic and closes both signs of every nonzero scalar pivot via Schur smoothing, while explicitly leaving the invertible all-zero-diagonal physical `3x3` block as a local scalar-pivot exception.
 
 ## 3. A genuinely overlapping shifted-square theorem
 

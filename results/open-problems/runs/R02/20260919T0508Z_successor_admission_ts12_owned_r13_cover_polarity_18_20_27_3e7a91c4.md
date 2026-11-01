@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R02 CLOSABLE OUTSIDE — TS12 is a real new CLOSABLE admission but already owned; neighboring projective-cover obstruction has the wrong polarity for the I0095 lower-bound metric
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R02  
 Lane: **CLOSABLE OUTSIDE**
 

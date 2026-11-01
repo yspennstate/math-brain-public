@@ -27,16 +27,16 @@ Two source-valid ingredients are used.
 `||p_S||_infinity <= sqrt(2)/||r||_2`.                                    (1.1)
 
 A source-pinned fleet use is fleet02/B04,
-`yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`,
+`private-source-repository@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T181702Z-dac07509/REPORT.md`.
 This is a marginal density statement, not independence after rotation.
 
 2. A fresh completed fleet03/B17 argument gives a distribution-free `L^3` estimate for a physical hyperbolic product. I reproduce the needed estimate below, so the theorem here is self-contained apart from (1.1). Its source is
-`yspennstate/math-open-problems@fb5c117ab00bebd6a8cc573940b38ce9bd15be13`,
+`private-source-repository@fb5c117ab00bebd6a8cc573940b38ce9bd15be13`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260924T080644Z-fleet03-B17-QFORM-r12/REPORT.md`.
 
 The closest earlier theorem is fleet03/B04's `QFORM-SQUARE-RANK1-BANK-LP-CLOSURE-v1`, source
-`yspennstate/math-open-problems@bef7cbf7ca6be3fdbe3d63a59f834e1dcb112f6a`,
+`private-source-repository@bef7cbf7ca6be3fdbe3d63a59f834e1dcb112f6a`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T185416Z-r16/REPORT.md`.
 That theorem has a *physical singleton* square. The result below replaces that singleton by an arbitrary projected scalar from a third disjoint product bank. Consequently all three nonzero eigendirections in the exact-rank-three witness may be fully delocalized in the physical coordinates.
 
@@ -223,7 +223,7 @@ This extends the earlier B04 family `Z^2+2UV`: the third spectral direction no l
 
 The newest completed designated-partner result consumed is fleet04/B16 r4:
 
-`yspennstate/math-open-problems@7f2bb2d330022b09a6af6e39ab09d054caeaa346`,
+`private-source-repository@7f2bb2d330022b09a6af6e39ab09d054caeaa346`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260924T041516Z-fleet04-B16-QFORM-r4/REPORT.md`.
 

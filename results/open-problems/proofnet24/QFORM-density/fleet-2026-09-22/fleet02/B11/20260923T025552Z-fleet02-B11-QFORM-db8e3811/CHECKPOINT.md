@@ -14,7 +14,7 @@ inertia additivity gives `S>=0`, `rank S=2`. If its two nonzero eigenvalues are 
 
 The identity follows by summing `det A[{i,j,k}]=a det S[{j,k}]` over pairs `j<k`, using Cauchy-Binet and `sum_{J: |J|=2} det(R_{i union J})^2=c` (the rank-three volume-sampling marginal identity).
 
-The completed rank-two PSD theorem in `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:.../COUNTEREXAMPLE_SEARCH.md` gives
+The completed rank-two PSD theorem in `private-source@e5f71d79eff325201dd0274053d20268ce65b837:.../COUNTEREXAMPLE_SEARCH.md` gives
 
 `||p_{X_-^T S X_-}||_inf <= 2 pi / sqrt(s1 s2)`.
 

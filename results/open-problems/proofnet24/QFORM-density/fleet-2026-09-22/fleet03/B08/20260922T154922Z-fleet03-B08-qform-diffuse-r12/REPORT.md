@@ -14,7 +14,7 @@ This run does not use the refuted law-uniform pointwise quadratic-phase decay, d
 
 The analytic engine is the complete one-scale ridge theorem `QFORM-RIDGE-DENSITY-v1` at
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 path
 
@@ -34,7 +34,7 @@ Its perturbation lemma says: if `B=B0+F`, `||F||<=eta`, and the range projection
 
 The fresh fleet01/B08 report `QFORM-ROBUST-SEPARATOR-RIDGE-v1` at the current archive proves the corresponding selected-frame separator mechanism with the endpoint choice `q=1`. The present run changes mechanism by using the **fractional exponent `q>1`** to open a quantitatively larger selected-eigenspace leverage region which the `q=1` perturbative criterion cannot certify.
 
-The designated partner `fleet04/B08` still has no completed current-QFORM handoff on the fresh shared path, so no theorem is attributed to that worker. To satisfy asynchronous mathematical reuse rather than wait, Section 5 also applies the completed fleet04/B16 theorem `QFORM-CONDITIONAL-HEAVY-RAYLEIGH-HALF-v1`, source `yspennstate/math-open-problems@d6150b6de22e898de442e821e42c2ddc09604a0d`, to an explicit complementary rank-three branch.
+The designated partner `fleet04/B08` still has no completed current-QFORM handoff on the fresh shared path, so no theorem is attributed to that worker. To satisfy asynchronous mathematical reuse rather than wait, Section 5 also applies the completed fleet04/B16 theorem `QFORM-CONDITIONAL-HEAVY-RAYLEIGH-HALF-v1`, source `private-source-repository@d6150b6de22e898de442e821e42c2ddc09604a0d`, to an explicit complementary rank-three branch.
 
 ## 2. Elementary signed partition lemma
 

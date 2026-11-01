@@ -56,7 +56,7 @@ E[1_{D_0>0}D_0^(-1/2)]
 
 whenever 2sqrt(eps)<=1. Hence this receiver diverges logarithmically as eps downarrow 0.
 
-This is not a counterexample to QFORM. The required ruled one-sheet theorem from math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 applies to this exact target family and gives at s=0 (indeed on the entire one-sheet side)
+This is not a counterexample to QFORM. The required ruled one-sheet theorem from private-source@e5f71d79eff325201dd0274053d20268ce65b837 applies to this exact target family and gives at s=0 (indeed on the entire one-sheet side)
 
 p_Q(s) <= pi sqrt(2).                                                       (4)
 

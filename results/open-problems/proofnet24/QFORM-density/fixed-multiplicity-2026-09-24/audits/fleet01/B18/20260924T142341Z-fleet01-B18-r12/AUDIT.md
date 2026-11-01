@@ -4,7 +4,7 @@ Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 
 ## Source pin and actual scope
 
-- Baseline mathematical source: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`.
+- Baseline mathematical source: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`.
 - Fresh `master` manuscript blob during this run: `183ccd294763214e6a707e8d4749ff9a8cf7006d`, identical to the pinned baseline blob.
 - Owner/source-manifest SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`; 47,883 bytes; 790 lines.
 - Freshly read end to end in this invocation: `manuscript.tex` lines 1–790, `README.md`, `DELIVERY_STATUS.md`, `AUDIT.md`, `proof_map.csv`, `SOURCE_MANIFEST.json`, `verify.py`, and `checks.json`.

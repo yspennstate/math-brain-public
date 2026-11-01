@@ -20,7 +20,7 @@ The designated partner fleet03/B12 has the completed theorem
 
 at
 
-`yspennstate/math-open-problems@e71ed8023266f157a6f5c7a04ea6f9c53acc59c5`
+`private-source-repository@e71ed8023266f157a6f5c7a04ea6f9c53acc59c5`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T214833Z-qform-eigenvalue-r18/REPORT.md`.
 
 For two disjoint normalized original-coordinate scalar banks `Y_1,Y_2`, an arbitrary additional original-coordinate core `Z`, and arbitrary outside completion, write the reduced core matrix as `H` and its leading bank pair as `B`. If
@@ -45,7 +45,7 @@ I also read the newer fleet03/B12 result
 
 `QFORM-FINITE-SMALL-SPECTRAL-TAIL-ARBITRARY-COMPLETION-v1`
 
-at `yspennstate/math-open-problems@a069e66a087a471e0a4b0a23b909c0d8ba6a1e1f`, path
+at `private-source-repository@a069e66a087a471e0a4b0a23b909c0d8ba6a1e1f`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T225241Z-qform-eigenvalue-r19/REPORT.md`. It controls a fixed finite physical packet when the fourth and later in-packet singular values are small. The theorem below is complementary: it allows an arbitrarily large rank-`r` change by paying `r` extra singular-value reserve directions.
 
 ## 1. Rank-`r` singular-value reserve

@@ -31,11 +31,11 @@ The important new point is that branch 1 needs **no separate lower bound on the 
 The live negative constraints were retained: law-uniform pointwise quadratic-phase decay is false; spectral-fiber suprema can lose dimension; spectral rotations do not preserve independence; the arbitrary-joint 3D coarea bound and positive conditional-projection-density moments are false; one good cross minor or one Schur rank-two extraction is not forced; and overlapping square curvature need not be an external smoother.
 
 
-Related completed square-plus-one-hyperbolic smoothing: `yspennstate/math-open-problems@4098649c3810c9c525c6d357b3d2c5417a333f6b:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T182919Z-fleet03-B02-qform-r12/REPORT.md`. The proof below is self-contained in its narrower pure-Schur-hyperbolic scope and improves the constant there by avoiding an `L^3` interpolation.
+Related completed square-plus-one-hyperbolic smoothing: `private-source-repository@4098649c3810c9c525c6d357b3d2c5417a333f6b:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T182919Z-fleet03-B02-qform-r12/REPORT.md`. The proof below is self-contained in its narrower pure-Schur-hyperbolic scope and improves the constant there by avoiding an `L^3` interpolation.
 
-For bank compression we use the source-audited Livshyts--Paouris--Pivovarov marginal theorem recorded at `yspennstate/math-open-problems@d85479c4a40760a42120c5b0816e809013acf539:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/B18-20260922T155856Z-r13/REPORT.md`: a unit linear form in independent cap-one coordinates has density at most `sqrt(2)`.
+For bank compression we use the source-audited Livshyts--Paouris--Pivovarov marginal theorem recorded at `private-source-repository@d85479c4a40760a42120c5b0816e809013acf539:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/B18-20260922T155856Z-r13/REPORT.md`: a unit linear form in independent cap-one coordinates has density at most `sqrt(2)`.
 
-The designated partner result actually applied below is fleet03/B09 r19, canonical source `yspennstate/math-open-problems@e8c7ac4f0294a028d4bc883d1e4bf1c805e11085:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T224649Z-fleet03-B09-QFORM-r19/REPORT.md`.
+The designated partner result actually applied below is fleet03/B09 r19, canonical source `private-source-repository@e8c7ac4f0294a028d4bc883d1e4bf1c805e11085:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T224649Z-fleet03-B09-QFORM-r19/REPORT.md`.
 
 ## 1. A one-dimensional half-kernel bound
 

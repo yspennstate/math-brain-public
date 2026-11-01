@@ -1,7 +1,7 @@
 Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — this was not authenticated GPT-6 maximum. **NO MOVEMENT in the fixed upper-envelope metric `B_R13(n)`; explicit finite obstruction MOVED:** `K_6^* >= 36907093/20000000 = 1.84535465` -> `K_6^* >= T_6 > 23066933137/12500000000 = 1.84535465096`, so the certified rational floor increases by exactly `3/3125000000 = 9.6e-10`. Methods actually used: **#20 FIND WHY THE ALGORITHM FAILS, #14 FIND THE GROUP ACTING, #24 FIND THE EXTREMAL OBJECT.**
 
 Run ID: `20260919T0648Z_algebraic-n6-template-b91e`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R13 HARD OUTSIDE.
 
 ## 1. Continuity, source status, and the complete fixed metric

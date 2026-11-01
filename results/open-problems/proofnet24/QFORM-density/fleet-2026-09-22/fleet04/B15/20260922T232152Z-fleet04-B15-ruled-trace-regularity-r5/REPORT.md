@@ -18,20 +18,20 @@ when the real coordinates of (X) are independent with probability densities (0le
 Fresh owner control was revision `2026-09-22.15`. The live correction inbox was consumed at blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe`. In particular, this report does not infer a cone trace from an arbitrary bounded projected density, does not rotate independence, and does not call a half-line theorem a full rank-three theorem.
 
 The ruled calculation comes from
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 directory
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 The rough-product approximation used below was proved in fleet04/B13 at
-`yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`,
+`private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`,
 report blob `63f4e0656fe110e0596254283be8e8e1e8b82ac6`.
 
 The completed fleet01/B15 results actually applied are:
 
 1. fixed-instance (C_0) closure and leave-one-out stability,
-   `yspennstate/math-open-problems@2558c67af7e503879ca96d4454f3a1c277bc3eaa`;
+   `private-source-repository@2558c67af7e503879ca96d4454f3a1c277bc3eaa`;
 2. the raw-regularity obstruction and exact heat normal form,
-   `yspennstate/math-open-problems@39c38206fcf34f616112fe9fa6808161e0472c34`.
+   `private-source-repository@39c38206fcf34f616112fe9fa6808161e0472c34`.
 
 ## 2. Smooth ruled trace with its Jacobian
 

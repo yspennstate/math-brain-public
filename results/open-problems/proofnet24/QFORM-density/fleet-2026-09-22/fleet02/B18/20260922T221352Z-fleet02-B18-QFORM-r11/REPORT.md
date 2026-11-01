@@ -41,7 +41,7 @@ This specialization is slightly sharper than treating the physical scalar as a g
 
 ## 3. Previous exact algebra used as premise
 
-Canonical earlier fleet02/B18 report: `yspennstate/math-open-problems@a6fb901fe3ca122be86cfff6d2ce6e6d683255d7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/fleet02-B18-20260922T170013Z-r11/REPORT.md`.
+Canonical earlier fleet02/B18 report: `private-source-repository@a6fb901fe3ca122be86cfff6d2ce6e6d683255d7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/fleet02-B18-20260922T170013Z-r11/REPORT.md`.
 
 Let `A` be real symmetric of exact rank three and choose a physical coordinate `i` with `A_ii=0`. After moving `i` first write
 
@@ -190,8 +190,8 @@ This is exactly the rank-three projected-product core, not the false arbitrary-j
 ## 8. Source pins and correction status
 
 - Fresh control observed for publication work: brain main in the current revision-.15 control epoch; programme revision remains `2026-09-22.5` and full target remains open.
-- Earlier zero-pivot trichotomy/compression: `yspennstate/math-open-problems@a6fb901fe3ca122be86cfff6d2ce6e6d683255d7`, path pinned above.
-- Completed designated partner fleet03/B18 r18: `yspennstate/math-open-problems@aa1419c6f3f8559d7eef2030de7275e2d65e6567`.
+- Earlier zero-pivot trichotomy/compression: `private-source-repository@a6fb901fe3ca122be86cfff6d2ce6e6d683255d7`, path pinned above.
+- Completed designated partner fleet03/B18 r18: `private-source-repository@aa1419c6f3f8559d7eef2030de7275e2d65e6567`.
 - LPP primary source: arXiv:1507.07949.
 - Juškevičius--Lee: arXiv:1503.09190; Chasapis--König--Tkocz: arXiv:2011.12251, used through the partner source audit only where their hypotheses match.
 - Live corrections explicitly respected: arbitrary-joint coarea false; conditional projection positive moments false; no independence after rotation; conditional cap is not independence; fixed-minor/cross-rank dichotomies false.

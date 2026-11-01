@@ -19,7 +19,7 @@ The result is not a proof of the full conjecture: the remaining structural probl
 Positive mathematical inputs:
 
 1. fleet02/B09 `QFORM-PAIRLOG-SCHUR-CENTER-v1`, full proof  
-   `yspennstate/math-open-problems@004631a217e4c6b716651d7ac551e035a181cc45`,  
+   `private-source-repository@004631a217e4c6b716651d7ac551e035a181cc45`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T204204Z-fleet02-B09-QFORM-r9/REPORT.md`.
    For an invertible indefinite original-coordinate endpoint pair `E`, with `D=|det E|` and `kappa=sigma_min(E)`, after completing the pair the conditional density has, for every `r>0`,
 
@@ -28,7 +28,7 @@ Positive mathematical inputs:
    where `R(y)` is the exact moving Schur-center critical value. The bound is uniform in affine shifts and outside conditioning.
 
 2. fleet02/B09 `QFORM-RANK2-CROSS-LP-v1`, full proof  
-   `yspennstate/math-open-problems@17dec75dc10459933f8bfde30daa86d1c6d90a6a`,  
+   `private-source-repository@17dec75dc10459933f8bfde30daa86d1c6d90a6a`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T124417Z-fleet02-B09-QFORM-r2/REPORT.md`.
    For an original-coordinate disjoint split with arbitrary quadratic-affine terms on both sides and rank-two cross block with singular-value product `Theta`,
 

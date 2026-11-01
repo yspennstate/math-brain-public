@@ -15,7 +15,7 @@ The full target remains: for every finite dimension, every independent real inpu
 
 The principal analytic input is the completed regularized-determinant theorem at
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`,
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`,
 `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 
 In the exact scope used here it says: for **any** symmetric quadratic form `R(Y)=Y^T S Y+ell^T Y+c`, independent cap-one original coordinates `Y`, any disjoint original-coordinate sets `I,J`, and physical cross block `B=S[I,J]`,
@@ -26,7 +26,7 @@ There are no restrictions on the two self blocks, signs, outside couplings, extr
 
 The designated partner result actually applied below is fleet04/B01's signed-Fejer theorem at
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 
 For a probability law `mu`, it defines

@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 # R03 run30 — unbalanced relation slices and the basis-weighted section problem
 
 Run ID: `20260917T0834Z_30_unbalanced_sections`  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, source gate, and frozen metric
 

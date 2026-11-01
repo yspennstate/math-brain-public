@@ -224,7 +224,7 @@ The live two-slope correction is respected: (3.7) does **not** claim that the hu
 
 The newest completed designated-partner report available at the start of this run is
 
-`yspennstate/math-open-problems@ebceb50f1e0c2589cb7599f57c4deb4a3ffd0f2b`,
+`private-source-repository@ebceb50f1e0c2589cb7599f57c4deb4a3ffd0f2b`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T141719Z-fleet02-B10-QFORM-r11/REPORT.md`.
 

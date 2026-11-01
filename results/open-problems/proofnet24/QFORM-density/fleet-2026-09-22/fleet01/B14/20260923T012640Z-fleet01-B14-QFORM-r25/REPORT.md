@@ -12,7 +12,7 @@ Assignment: translations/localization. No moment, bounded-support, connected-sup
 
 The completed fleet02/B14 r22 report is
 
-`yspennstate/math-open-problems@84093fddd5e3d3c692449d49c8b01537b28eb8d8`
+`private-source-repository@84093fddd5e3d3c692449d49c8b01537b28eb8d8`
 
 at
 
@@ -20,7 +20,7 @@ at
 
 It proves the exact one-dimensional logarithmic averaging lemma and the optimized `C_log(D,kappa,H)` compiler. It also source-pins the original-coordinate indefinite-pair density envelope to
 
-`yspennstate/math-open-problems@b873b2b52f4c75c331153c9227d0a7fae0f02979`
+`private-source-repository@b873b2b52f4c75c331153c9227d0a7fae0f02979`
 
 at
 

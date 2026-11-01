@@ -14,7 +14,7 @@ The current B05 obligation is the uncovered indefinite convex/two-sheet curved i
 
 Required newest Claude package actually used:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
@@ -26,18 +26,18 @@ The source proves (1.1) by the exact ruled parametrisation and a two-dimensional
 
 Immediate fleet02/B05 predecessors used:
 
-- r21: `yspennstate/math-open-problems@c661893c05a7fd40d7f1e9b0a0a81a6f08f242a6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T035943Z-fleet02-B05-QFORM-r21/REPORT.md`, theorem `QFORM-NEARNULL-SCALAR-DEPENDENT-PAIR-v1`;
+- r21: `private-source-repository@c661893c05a7fd40d7f1e9b0a0a81a6f08f242a6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T035943Z-fleet02-B05-QFORM-r21/REPORT.md`, theorem `QFORM-NEARNULL-SCALAR-DEPENDENT-PAIR-v1`;
 - r22: current source path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T043344Z-fleet02-B05-QFORM-r22/REPORT.md`, whose inverse certificate is rederived below rather than assumed as a black box.
 
 Rank-two fractional receiver:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`. In the zero-affine case, for an orthonormal two-dimensional projection `Y` of a cap-one product law and invertible symmetric `S`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`. In the zero-affine case, for an orthonormal two-dimensional projection `Y` of a cap-one product law and invertible symmetric `S`,
 
 `sup_t E |Y^T S Y-t|^(-1/2) <=16 sqrt(30)|det S|^(-1/4)`.            (1.2)
 
 Latest compatible designated partner actually applied:
 
-`fleet03/B05`, source read from current math archive at `yspennstate/math-open-problems@195447da931f086720afaa12ac902ed7d33dd32e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T050645Z-fleet03-B05-QFORM-r21/REPORT.md`. Its six-coordinate global-curvature gate and escaped-curvature lemma are applied in Section 7.
+`fleet03/B05`, source read from current math archive at `private-source-repository@195447da931f086720afaa12ac902ed7d33dd32e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T050645Z-fleet03-B05-QFORM-r21/REPORT.md`. Its six-coordinate global-curvature gate and escaped-curvature lemma are applied in Section 7.
 
 Live corrections retained throughout: no post-rotation independence, no arbitrary-joint three-dimensional coarea bound, no unrestricted fiber supremum, no conditional-density-cap substitute for independence, and no treatment of a small matrix coefficient as a small random quadratic perturbation.
 

@@ -26,7 +26,7 @@ The proof below preserves the live corrections:
 Source pins actually used:
 
 1. Physical-pair logarithmic envelope, `QFORM-PHYSICAL-PAIR-LOG-ENVELOPE-v1`, full proof at
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 2. Newest completed designated partner fleet02/B16, `QFORM-PHYSICAL-HUB-DEFINITE-DISCRIMINANT-v1`, report commit
    `390bf6a9ad30195ba4011927c8218245d0e014be`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260924T012413Z-fleet02-B16-QFORM-auto11/REPORT.md`.

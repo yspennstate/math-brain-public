@@ -21,7 +21,7 @@ The full theorem remains **OPEN**.
 
 Canonical source used:
 
-`yspennstate/math-open-problems@8f7fc147ba50f1bcdf3a5c83c3722ae18238e9db`
+`private-source-repository@8f7fc147ba50f1bcdf3a5c83c3722ae18238e9db`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260922T200120Z-fleet02-B20-QFORM-r18/REPORT.md`.
 
@@ -50,7 +50,7 @@ Numerically
 
 I also consume the completed fleet03/B06 r18 theorem `QFORM-ONE-ROW-E2-HYBRID-L3-v1`, canonical source
 
-`yspennstate/math-open-problems@897d37adecb8f18c46b456569884b2ee22eeb3ee`
+`private-source-repository@897d37adecb8f18c46b456569884b2ee22eeb3ee`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T201841Z-fleet03-B06-qform-r18/REPORT.md`.
 
@@ -71,7 +71,7 @@ There is no range-leverage assumption, no support/moment hypothesis and no recip
 
 A second compatible completed input used in Section 5 is fleet03/B03 r17, canonical source
 
-`yspennstate/math-open-problems@924b3c4c70f86a64402863fe228f641bf3db60b2`
+`private-source-repository@924b3c4c70f86a64402863fe228f641bf3db60b2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T175531Z-fleet03-B03-QFORM-r17/REPORT.md`.
 

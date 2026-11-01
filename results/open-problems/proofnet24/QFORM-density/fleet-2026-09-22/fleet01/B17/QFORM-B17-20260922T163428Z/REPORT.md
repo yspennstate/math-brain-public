@@ -13,7 +13,7 @@ The full target remains: for every dimension, independent real coordinates with 
 
 This run substantively applies the completed designated-partner theorem fleet02/B17, `QFORM-INFINITESIMAL-BANK-NOESCAPE-v1`, canonical source
 
-`yspennstate/math-open-problems@9ef2d4cbf56e1aa3368eeaa322d09ba4d91f31cf`
+`private-source-repository@9ef2d4cbf56e1aa3368eeaa322d09ba4d91f31cf`
 
 at
 

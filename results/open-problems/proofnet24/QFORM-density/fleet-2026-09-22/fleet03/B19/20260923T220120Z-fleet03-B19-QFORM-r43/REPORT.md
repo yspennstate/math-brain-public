@@ -186,7 +186,7 @@ This does **not** delete arbitrary subthreshold spectrum of `A[L,L]`; eigenvalue
 
 The designated partner source is fleet04/B19 r2,
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 

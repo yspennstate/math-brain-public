@@ -12,7 +12,7 @@ The owner target remains the full arbitrary-dimensional statement: independent r
 
 The previous B05 report
 
-`yspennstate/math-open-problems@332f29e335274f2b3f81ccf92d62443b928c66cd`,
+`private-source-repository@332f29e335274f2b3f81ccf92d62443b928c66cd`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T144946Z-qform-B05-a03-r12/REPORT.md`
 
 proved the local pair-sectional coarea estimate in the exact-rank-three heavy-isotropic branch. If the transverse two-frame has Pluecker coordinate
@@ -30,15 +30,15 @@ The live corrections forbid replacing this by a generic conditional-density cap,
 The exact assigned partner is `fleet04/B05`. Fresh source checks found no completed current-QFORM report or handoff for that slot, so no partner result is fabricated. Compatible completed sources actually used are:
 
 1. fleet01/B06 `QFORM-WEIGHTED-2D-PROJECTION-v1`, canonical mathematics
-   `yspennstate/math-open-problems@0b523077616e4d1a2c959ddca036cfd895067460:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T130334Z-qform-r11/REPORT.md`, especially its diffuse two-dimensional Fourier-Wiener bound;
+   `private-source-repository@0b523077616e4d1a2c959ddca036cfd895067460:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T130334Z-qform-r11/REPORT.md`, especially its diffuse two-dimensional Fourier-Wiener bound;
 2. fleet01/B06 `QFORM-MODULATED-1D-WIENER-BANK-v1`, canonical mathematics
-   `yspennstate/math-open-problems@1c155008146adf84eb705047eea1c46c312b3927:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T140612Z-qform-r12/REPORT.md`;
+   `private-source-repository@1c155008146adf84eb705047eea1c46c312b3927:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T140612Z-qform-r12/REPORT.md`;
 3. fleet01/B10 `QFORM-ZERO-DIAGONAL-TRIPLE-v1`, canonical mathematics
-   `yspennstate/math-open-problems@3be6045911d80a0881d7a1c3631871643f52434c:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260922T131954Z-fleet01-B10-QFORM-r12/REPORT.md`;
+   `private-source-repository@3be6045911d80a0881d7a1c3631871643f52434c:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260922T131954Z-fleet01-B10-QFORM-r12/REPORT.md`;
 4. fleet02/B10 scaled dependent-pair hyperbolic-square theorem,
-   `yspennstate/math-open-problems@11c9ae19edfd07e3a0bd4053a910667c20e721ab:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T130225Z-b10-qform-r11/REPORT.md`;
+   `private-source-repository@11c9ae19edfd07e3a0bd4053a910667c20e721ab:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T130225Z-b10-qform-r11/REPORT.md`;
 5. compatible fleet04 mathematics actually applied in Section 7: fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`,
-   `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
+   `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
 ## 1. The pair-Pluecker graph has an exact collision statistic
 

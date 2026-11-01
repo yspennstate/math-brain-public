@@ -19,7 +19,7 @@ The unrestricted conjecture remains open. No Gaussian, moment, compact-support, 
 
 The completed designated-partner result actually used is
 
-`yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`,
+`private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`.
 
@@ -45,13 +45,13 @@ This partner result is used quantitatively in Sections 5 and 6; it is not merely
 
 The immediately preceding B07 natural-scale compiler is
 
-`yspennstate/math-open-problems@d54c89467491a2dc95da16b392ed1d95b5554e8a`,
+`private-source-repository@d54c89467491a2dc95da16b392ed1d95b5554e8a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T124137Z-fleet03-B07-qform-r31/REPORT.md`,
 
 with the later fourth-volume addendum
 
-`yspennstate/math-open-problems@bfa9412bfb743bd30fc104e779f280dce0a0db14`,
+`private-source-repository@bfa9412bfb743bd30fc104e779f280dce0a0db14`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T124137Z-fleet03-B07-qform-r31/FRESH_SOURCE_ADDENDUM.md`.
 
@@ -77,7 +77,7 @@ The transposed statement holds for columns.
 
 For the physical-pair exit I use the completed arbitrary-rank theorem
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 

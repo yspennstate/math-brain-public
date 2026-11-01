@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R14 HARD OUTSIDE — H0017: finite point-to-halfspace phase histories are completely unconstrained
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Date: 2026-09-17 UTC.
 
 ## 1. Continuity, ownership, exclusions, and source freshness

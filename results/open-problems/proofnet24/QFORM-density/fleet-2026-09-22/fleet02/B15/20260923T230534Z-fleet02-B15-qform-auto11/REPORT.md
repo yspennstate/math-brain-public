@@ -36,7 +36,7 @@ A rank-one Schur remainder is paid below with a dimension-free aggregate coeffic
 
 The latest compatible fleet03/B15 result is
 
-`yspennstate/math-open-problems@2f36eb6204ac8598eaf63faed15f9fa7fddffd0c`
+`private-source-repository@2f36eb6204ac8598eaf63faed15f9fa7fddffd0c`
 
 at
 
@@ -67,7 +67,7 @@ Its completed theorem gives, for arbitrary rough cap-one product inputs,
 
 where `eta(S)` is one nonzero physical Schur coefficient. The proof uses the completed physical-pair logarithmic envelope at
 
-`math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 
 whose general form is the following. If, after completing the pair,
 
@@ -293,7 +293,7 @@ This is a complete universal-in-`m` target-chamber theorem. It uses no moment, s
 
 The owner-pinned source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was reread in all three requested files `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed Theorem A says that for three independent cap-one variables and a three-dimensional quadratic form whose three eigenvalue magnitudes are at least `sigma`,
 
@@ -336,7 +336,7 @@ Equation (4.8) improves that constant, but (4.10) is an independent direct appli
 
 The matrix `A_m` has rank three. Fleet04/B15's completed same-constant compiler at
 
-`math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`
+`private-source@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`
 
 states that, for a fixed rank-at-least-three target/product instance, an already-proved interval domination
 
@@ -745,16 +745,16 @@ Globally, the bare spectral hypothesis still does not guarantee a uniformly cond
 
 Required owner-pinned source read in full scope:
 
-- `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`;
+- `private-source@e5f71d79eff325201dd0274053d20268ce65b837`;
 - `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`;
 - `FOURIER_ROUTE_REPORT.md`;
 - `COUNTEREXAMPLE_SEARCH.md`.
 
 Latest designated partner actually applied:
 
-- fleet03/B15, `math-open-problems@2f36eb6204ac8598eaf63faed15f9fa7fddffd0c`, run `20260923T222614Z-fleet03-B15-qform-auto27`;
-- underlying pair-log compiler `math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`;
-- same-constant rough/C0 compiler checked at fleet04/B15 `math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`.
+- fleet03/B15, `private-source@2f36eb6204ac8598eaf63faed15f9fa7fddffd0c`, run `20260923T222614Z-fleet03-B15-qform-auto27`;
+- underlying pair-log compiler `private-source@f7f0fedb2d93b46824f96cac1164af6f8a55626f`;
+- same-constant rough/C0 compiler checked at fleet04/B15 `private-source@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`.
 
 Live corrections retained include: no arbitrary-joint coarea height theorem, no post-rotation independence, no universal pointwise quadratic-phase decay, no uniform good single physical minor, no generic two-sheet X-ray closure, and the corrected translation-uniform nonzero-square affine estimate.
 

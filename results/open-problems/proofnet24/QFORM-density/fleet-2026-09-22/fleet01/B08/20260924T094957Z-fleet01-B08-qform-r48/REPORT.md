@@ -15,7 +15,7 @@ The unrestricted quadratic-form bounded-density conjecture remains **OPEN**. The
 
 The immediate own source is r47:
 
-`yspennstate/math-open-problems@25986ed3ac4468867fad7663cae00b3843592497`
+`private-source-repository@25986ed3ac4468867fad7663cae00b3843592497`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260924T090807Z-fleet01-B08-qform-r47/REPORT.md`.
 
@@ -33,7 +33,7 @@ The selected frame has physical leverage at most `1/48`. A literal original-coor
 
 The completed designated-partner result actually consumed is fleet02/B08 r35,
 
-`yspennstate/math-open-problems@087cf5aa5cfcee4eb6ae243facb9e0fcf2391e29`,
+`private-source-repository@087cf5aa5cfcee4eb6ae243facb9e0fcf2391e29`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/fleet02-B08-20260924T083643Z-r35/REPORT.md`.
 
@@ -56,7 +56,7 @@ and there are sixteen pairwise-disjoint ORIGINAL-coordinate banks `J_1,...,J_16 
 
 The hereditary dimension-drop theorem used below is fleet01/B12 r18, read at the immutable containing commit
 
-`yspennstate/math-open-problems@25986ed3ac4468867fad7663cae00b3843592497`,
+`private-source-repository@25986ed3ac4468867fad7663cae00b3843592497`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B12/20260922T211917Z-fleet01-B12-QFORM-r18/REPORT.md`.
 

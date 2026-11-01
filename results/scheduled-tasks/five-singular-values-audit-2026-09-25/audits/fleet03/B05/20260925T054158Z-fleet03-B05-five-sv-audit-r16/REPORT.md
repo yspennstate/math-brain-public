@@ -1,6 +1,6 @@
 # fleet03/B05 r16 — five-singular-values audit, pass 2
 
-Source: math-open-problems commit ec211ba2d77a4a9850168c6af1574ea651feaa7c, short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, exact 14-page PDF SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
+Source: private-source commit ec211ba2d77a4a9850168c6af1574ea651feaa7c, short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, exact 14-page PDF SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
 
 Control remained QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925. Initial main head f8ced7c931b094fb7f40db71c1ae65a7d09ae26a; pre-publication head 0952b485b752bfe96dbea5db7d2c060956e1b479. Execution remains WITHOUT_VERIFIED_BRAIN.
 

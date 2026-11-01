@@ -13,7 +13,7 @@ The target is the unrestricted quadratic-form density conjecture: for arbitrary 
 
 This report consumes the completed partner theorem `fleet02/B17`, canonical report
 
-- `yspennstate/math-open-problems@cdd32fd16a694a5f8acc7ba758e0db6596a3e4a1`,
+- `private-source-repository@cdd32fd16a694a5f8acc7ba758e0db6596a3e4a1`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T125054Z-fleet02-B17-QFORM-r11/REPORT.md`.
 
 The partner proves the sharp centered-Gaussian envelope

@@ -14,11 +14,11 @@ Fresh control/corrections were read from `yspennstate/math-research-brain` on ma
 
 Named partner consumed substantively:
 
-- `fleet02/B14`, canonical report `yspennstate/math-open-problems@ea6b7ae2aba8b38748214a4d38f47fa6f790b8e0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T120110Z-b14-qform-localization-r13/REPORT.md`. It proves tail-free compactification and bang-bang localization with no loss of the small-ball constant. Hence a support-independent estimate proved for finite-union indicator inputs automatically extends to arbitrary admissible densities and supports.
+- `fleet02/B14`, canonical report `private-source-repository@ea6b7ae2aba8b38748214a4d38f47fa6f790b8e0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T120110Z-b14-qform-localization-r13/REPORT.md`. It proves tail-free compactification and bang-bang localization with no loss of the small-ball constant. Hence a support-independent estimate proved for finite-union indicator inputs automatically extends to arbitrary admissible densities and supports.
 
 Quantitative predecessor consumed:
 
-- `fleet02/B15`, canonical report `yspennstate/math-open-problems@d5392d73398e2811f58b612fb8f191aa79d8ee5e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`. Its `QFORM-3VAR-AFFINE-PRINCIPAL-v1` gives `||p||_infinity <= (2*pi+3*sqrt(3))/kappa` for an invertible physical principal triple with `kappa=sigma_min(B)`.
+- `fleet02/B15`, canonical report `private-source-repository@d5392d73398e2811f58b612fb8f191aa79d8ee5e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`. Its `QFORM-3VAR-AFFINE-PRINCIPAL-v1` gives `||p||_infinity <= (2*pi+3*sqrt(3))/kappa` for an invertible physical principal triple with `kappa=sigma_min(B)`.
 
 This run improves the matrix dependence from `kappa^{-1}` to `(kappa |det B|)^{-1/4}` while preserving arbitrary affine drift, arbitrary support translations/fragments, and arbitrary outside couplings.
 

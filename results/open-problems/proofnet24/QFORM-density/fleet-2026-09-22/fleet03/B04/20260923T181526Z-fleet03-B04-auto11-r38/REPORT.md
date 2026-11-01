@@ -15,7 +15,7 @@ The unrestricted QFORM conjecture is not proved here. The branch below proves a 
 
 The analytic input from this worker's preceding run is
 
-`yspennstate/math-open-problems@ea2f45957db06473799ce27affa30162fda98982:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T165007Z-fleet03-B04-auto11-r37/REPORT.md`,
+`private-source-repository@ea2f45957db06473799ce27affa30162fda98982:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T165007Z-fleet03-B04-auto11-r37/REPORT.md`,
 
 which proves the arbitrary-weight projected-crossing estimate. In its notation, for a projected crossing matrix `C`, a probability law `w` on positive `ell`-row Gram minors `D_S=det(C_S C_S^T)>0`, and inclusion marginals `alpha_i<=1/2`, define
 

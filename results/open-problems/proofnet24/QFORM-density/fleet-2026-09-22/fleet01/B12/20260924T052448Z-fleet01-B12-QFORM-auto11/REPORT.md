@@ -21,7 +21,7 @@ No orthogonal change of random variables is made. Every whitening operation is d
 
 Completed designated partner result:
 
-`math-open-problems@0c98817ae6b89fe4683a5766c3d6b445988bba94`
+`private-source@0c98817ae6b89fe4683a5766c3d6b445988bba94`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260924T045949Z-fleet02-B12-QFORM-auto11/REPORT.md`
 
@@ -37,7 +37,7 @@ I apply this theorem at an actual matrix inequality in Section 7.
 
 The density receiver used after the new stability step is the proved no-row-marginal D5 theorem in
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 

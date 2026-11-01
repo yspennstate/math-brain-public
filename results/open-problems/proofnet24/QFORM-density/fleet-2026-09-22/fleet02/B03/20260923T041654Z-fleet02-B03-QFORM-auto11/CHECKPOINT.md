@@ -38,7 +38,7 @@ For the product-source specialization `L=2m^T Y+beta`, the completed one-dimensi
 Next step in this run: apply the completed physical-indefinite-pair logarithmic transducer from the pinned Claude package, which consumes exactly a half-power remainder small-ball bound, rather than degrading (5) to a quarter-power bound. This should produce a scale-homogeneous full density certificate proportional to `( |det B| sigma_min(B) ||m||_2 )^(-1/4)` and an improved dependence-safe weighted independent-copy time estimate.
 
 Sources actually used at this checkpoint:
-- fleet03/B03 r25: `yspennstate/math-open-problems@f445f3dd7e2b845f96ac58cc4bd96f12ec7a839c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T031216Z-fleet03-B03-QFORM-r25/REPORT.md`.
-- pinned Claude package: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` (physical indefinite-pair logarithmic smoothing statement).
+- fleet03/B03 r25: `private-source-repository@f445f3dd7e2b845f96ac58cc4bd96f12ec7a839c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T031216Z-fleet03-B03-QFORM-r25/REPORT.md`.
+- pinned Claude package: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` (physical indefinite-pair logarithmic smoothing statement).
 
 No conjugate sum/difference variables are declared independent; no post-rotation independence, moment, support, or pointwise law-uniform stationary-phase premise is used.

@@ -22,7 +22,7 @@ The first unpaid implication attacked here is whether a fixed positive `Omega_J`
 
 ### 2.1 Claude/e5f result actually applied
 
-Source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+Source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`.
 
 Theorem F there is complete at the stated scope: if the quadratic part on genuine original product coordinates is `R Lambda R^T` (plus an arbitrary physical diagonal term), `R` has orthonormal columns, and every row leverage is at most `1/2`, then in rank three
@@ -38,7 +38,7 @@ I also consumed `COUNTEREXAMPLE_SEARCH.md` from the same pinned source. Its rule
 ### 2.2 Completed designated partner result actually applied
 
 Source: fleet03/B18 r25,
-`yspennstate/math-open-problems@5bfbad861ea24cd956f12fd00cb32b1514b64fc8`,
+`private-source-repository@5bfbad861ea24cd956f12fd00cb32b1514b64fc8`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T062246Z-fleet03-B18-QFORM-r25/REPORT.md`.
 
 For the exact-rank-three Schur-isotropic packet

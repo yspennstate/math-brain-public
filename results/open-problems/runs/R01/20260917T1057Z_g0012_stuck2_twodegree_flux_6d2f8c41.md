@@ -2,7 +2,7 @@ Model actually running: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT
 
 # R01 — G0012 Alon–Peres non-backtracking birthday conjecture — stuck recovery 2
 
-Repository/branch: `yspennstate/math-open-problems` / `master`. Private GitHub only.
+Repository/branch: `private-source-repository` / `master`. Private GitHub only.
 
 ## 1. Continuity, exclusions, source and current literature
 

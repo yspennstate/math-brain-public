@@ -12,15 +12,15 @@ The sole target is the full arbitrary-dimension statement: independent real coor
 
 Fresh control at the beginning was `yspennstate/math-research-brain@f18013218feca9ecaf9d62b4c462aa9f490d1bf7`; the pre-publication refresh reached `3675656d1533e3b20ac84be5b7cc71e38c99a0da`. The owner revision remained `2026-09-22.5`, with QFORM as the sole research target and no later applicable B06 stop. Required corrections consumed include `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBER-SUP-DIMENSION-LOSS`, and `QFORM-NO-INDEPENDENCE-AFTER-ROTATION`, together with the live correction inbox through the pre-publication snapshot. In particular, this report does not use unrestricted fiber suprema, post-rotation independence, conditional cap claims created by a change of variables, or a fixed-good-minor assertion.
 
-Own predecessor consumed: fleet02/B06, `yspennstate/math-open-problems@6902eb62f21a7c833ca27dcca69f34d50e711a7d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`. It established the exact same-sign Pluecker determinant mass and an exact Hadamard delocalization obstruction, leaving `QFORM-WEIGHTED-CURVED-FIBER-AGGREGATION-v1` as the first unpaid implication.
+Own predecessor consumed: fleet02/B06, `private-source-repository@6902eb62f21a7c833ca27dcca69f34d50e711a7d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`. It established the exact same-sign Pluecker determinant mass and an exact Hadamard delocalization obstruction, leaving `QFORM-WEIGHTED-CURVED-FIBER-AGGREGATION-v1` as the first unpaid implication.
 
-The designated partner result actually consumed is fleet03/B06, run `20260922T151714Z-fleet03-B06-qform-r12`, canonical mathematics `yspennstate/math-open-problems@8624700dc9342807bbdf427e271fffcc518a0315`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T151714Z-fleet03-B06-qform-r12/REPORT.md`. Its `QFORM-RANK3-TWO-PIVOT-ENDPOINT-v1` gives, for exact rank three and a paid physical pair `(i,k)`,
+The designated partner result actually consumed is fleet03/B06, run `20260922T151714Z-fleet03-B06-qform-r12`, canonical mathematics `private-source-repository@8624700dc9342807bbdf427e271fffcc518a0315`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T151714Z-fleet03-B06-qform-r12/REPORT.md`. Its `QFORM-RANK3-TWO-PIVOT-ENDPOINT-v1` gives, for exact rank three and a paid physical pair `(i,k)`,
 
 `||p_Q||_infinity <= 94.356 [|a| |d|^2 |det Lambda| Delta_ik]^(-1/8)`
 
 with `a=A_ii`, `d=A_ii A_kk-A_ik^2`, and `Delta_ik=||r_i wedge r_k||^2`. More importantly for the new inequality below, that completed report supplies the original-coordinate physical square-completion / one-sided square-kernel framework (source-pinned there to fleet04/B18) without manufacturing independence after rotation.
 
-I also use the standard geometric rank-one Brascamp--Lieb inequality in the exact form already source-recorded in fleet02/B08, `yspennstate/math-open-problems@0b5925a458d36c1ec1cf8ab344c9676260a97c8a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T113624Z-qform11/REPORT.md`.
+I also use the standard geometric rank-one Brascamp--Lieb inequality in the exact form already source-recorded in fleet02/B08, `private-source-repository@0b5925a458d36c1ec1cf8ab344c9676260a97c8a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T113624Z-qform11/REPORT.md`.
 
 ## 1. A weighted product-structure replacement for fiber suprema
 

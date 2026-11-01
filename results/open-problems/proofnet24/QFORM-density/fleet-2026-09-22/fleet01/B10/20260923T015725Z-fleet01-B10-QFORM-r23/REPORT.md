@@ -32,7 +32,7 @@ The designated partner is fleet02/B10 run
 
 canonical source
 
-`yspennstate/math-open-problems@9005415f079b7b46c0618c0187bf29b3f8d44167`,
+`private-source-repository@9005415f079b7b46c0618c0187bf29b3f8d44167`,
 
 path
 

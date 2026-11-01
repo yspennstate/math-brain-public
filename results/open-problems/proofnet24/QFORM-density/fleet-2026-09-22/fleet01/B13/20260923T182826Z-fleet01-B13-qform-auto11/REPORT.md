@@ -13,9 +13,9 @@ Status: **PROVED SUPPORTING TARGET-LEVEL THEOREMS / FULL QFORM OPEN / CONTINUITY
 
 Latest completed handoff/report:
 
-- `yspennstate/math-open-problems@4db7e9f914c201c3162b6213dd63b577755b8a36`
+- `private-source-repository@4db7e9f914c201c3162b6213dd63b577755b8a36`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/fleet02-B13-20260923T1811Z/REPORT.md`
-- skeleton-correction reconciliation: `yspennstate/math-open-problems@9a272828dbb4008db19bf92034bdfdc583909d7b`, same run path `POSTREFRESH_ADDENDUM.md`.
+- skeleton-correction reconciliation: `private-source-repository@9a272828dbb4008db19bf92034bdfdc583909d7b`, same run path `POSTREFRESH_ADDENDUM.md`.
 
 Two completed inequalities from that source are used below.
 
@@ -41,7 +41,7 @@ with arbitrary outside coefficients and affine terms retained.
 
 The current correction, source-pinned at
 
-`yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`,
+`private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`,
 
 changes an earlier volume-sampled *identity* to an upper bound, but preserves the robust corollary used here:
 
@@ -65,7 +65,7 @@ The fleet02/B13 post-refresh addendum explicitly checks that (1.5) survives the 
 
 The exact B13 barycentric purification already proved in
 
-`yspennstate/math-open-problems@82a83d6da64145ee7aed98a87f4f1dd03d209d98:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T102930Z-fleet01-B13-qform-auto20/REPORT.md`
+`private-source-repository@82a83d6da64145ee7aed98a87f4f1dd03d209d98:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T102930Z-fleet01-B13-qform-auto20/REPORT.md`
 
 states that every cap-one mass-one marginal is a probability barycenter of indicators `1_E`, `|E|=1`; tensoring gives the same statement for product laws and every nonnegative measurable kernel. Thus for the slab kernel there is no loss in passing from arbitrary cap-one product densities to arbitrary measurable unit-measure product indicators. Bounded finite unions of intervals give arbitrary strict approximations, but there is no single-interval, centered-uniform, bounded-diameter or bounded-fragment reduction.
 

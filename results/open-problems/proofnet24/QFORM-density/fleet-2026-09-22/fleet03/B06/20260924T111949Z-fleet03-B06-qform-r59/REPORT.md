@@ -8,10 +8,10 @@ Fresh control commit at startup: `729dbb6257ce9c5bd94b7f3bfec5a41171e048be`.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 Status: **new deterministic product-weight compiler + designated-partner quantitative splice; full QFORM remains OPEN**.
 
-Incoming B06 source: `yspennstate/math-open-problems@b5c6217b1d62e7ae0e8989018953050a5c1b69af`,
+Incoming B06 source: `private-source-repository@b5c6217b1d62e7ae0e8989018953050a5c1b69af`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T102213Z-fleet03-B06-qform-r58/REPORT.md`.
 
-Designated partner source actually used below: fleet04/B06 theorem `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, canonical source `yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`,
+Designated partner source actually used below: fleet04/B06 theorem `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, canonical source `private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260924T001014Z-fleet04-B06-QFORM-r3/REPORT.md`.
 
 The live corrections are retained: no law-uniform pointwise quadratic-phase decay, no arbitrary-joint rank-three coarea, no conditional projection-density cap, no post-rotation independence, and no unrestricted spectral-fiber supremum.

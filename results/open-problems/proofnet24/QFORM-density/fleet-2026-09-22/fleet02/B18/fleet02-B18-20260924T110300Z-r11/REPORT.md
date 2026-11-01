@@ -15,7 +15,7 @@ The preceding fleet02/B18 run separated a harmless case from the current near-ra
 
 The latest completed designated-partner theorem is fleet03/B18 `QFORM-COLLINEAR-TWOCOLUMN-TRANSVERSE-L4-v1`, canonical source
 
-`yspennstate/math-open-problems@08274cd0a9c7b71793e75bc71281f66694bfd441`
+`private-source-repository@08274cd0a9c7b71793e75bc71281f66694bfd441`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260924T095710Z-fleet03-B18-QFORM-auto24/REPORT.md`.
 
@@ -129,7 +129,7 @@ Thus even this explicit rank-one-size `eps` cross tail is not a uniformly small 
 
 Use the completed pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`.
 

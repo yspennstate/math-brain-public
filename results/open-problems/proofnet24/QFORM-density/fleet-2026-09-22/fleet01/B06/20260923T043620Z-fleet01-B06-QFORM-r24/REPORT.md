@@ -16,7 +16,7 @@ The exact owner target is unchanged: arbitrary dimension, independent original c
 
 The incoming branch is fleet01/B06 r21, canonical
 
-`yspennstate/math-open-problems@32bffc770e83aa6de4175a2a526e0a0670de1a5b`
+`private-source-repository@32bffc770e83aa6de4175a2a526e0a0670de1a5b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T013242Z-qform-r21-b06/REPORT.md`.
 
@@ -29,14 +29,14 @@ where `y=||w_R||`, and the one-L/two-R Pluecker packet has mass exactly `y^2>1/2
 Two completed inputs are used at displayed inequalities.
 
 1. Designated partner fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical
-   `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+   `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
    For every unit scalar projection `U=u^T X` of a cap-one original product vector,
 
    `||p_U||_infinity <= M(u) <= sqrt(e)`.                            (0.2)
 
 2. The source Fresnel/Brascamp--Lieb package
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
    Its Lemma 1 says that for a probability density `f<=1`, every complex `g` with `|g|<=f`, and `p>=2`,
 

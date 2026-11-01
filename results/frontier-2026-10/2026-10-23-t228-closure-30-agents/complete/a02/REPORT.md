@@ -4,7 +4,7 @@ Status: substantive author proof candidate, not independently audited; T336 is n
 
 ## Exact current sources
 
-Located the T001–T422 frontier in `<private-repo>/06_math_research/frontier/rows/`. This is separate from the P/C/D/etc probability registry in math-open-problems. T336's source is `rows/T336/DOSSIER.md`; its original row is in `06_math_research/top200_probability_2026_10_14/list.jsonl` despite that filename. The fetched registry row is saved in T336_REGISTRY.json.
+Located the T001–T422 frontier in `<private-repo>/06_math_research/frontier/rows/`. This is separate from the P/C/D/etc probability registry in private-source. T336's source is `rows/T336/DOSSIER.md`; its original row is in `06_math_research/top200_probability_2026_10_14/list.jsonl` despite that filename. The fetched registry row is saved in T336_REGISTRY.json.
 
 Observed main commit: 7db35f690af10b1ee850623c8caef38d6721a244. File-level blob pins and exact URLs are in COMPLETE_SOURCE_PINS.json. Existing finite-rank proofs C002, C003, C004, C005_v2 are saved beside this report. The exact worker source is `06_math_research/frontier/worker_submissions/w727/T336/proofs/`.
 

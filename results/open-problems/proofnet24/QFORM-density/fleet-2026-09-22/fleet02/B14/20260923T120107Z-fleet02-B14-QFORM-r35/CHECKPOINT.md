@@ -140,7 +140,7 @@ This is `QFORM-STRICT-SKELETON-TWOSIDED-SLOPE-FRAGMENT-BARRIER-v1`. It is a proo
 
 ## 4. Required Claude result applied to a real inequality
 
-The required source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, proves Theorem A: a three-dimensional quadratic form whose three eigenvalues all have modulus at least `sigma`, with arbitrary linear terms, has density at most `6 sqrt(pi)/sigma`.
+The required source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, proves Theorem A: a three-dimensional quadratic form whose three eigenvalues all have modulus at least `sigma`, with arbitrary linear terms, has density at most `6 sqrt(pi)/sigma`.
 
 Condition on `U_1,U_2` in (3.1). The remaining three-variable block is exactly `B`, whose eigenvalues have moduli at least one. Claude Theorem A therefore gives the independent whole-law check
 

@@ -7,7 +7,7 @@ Run: `20260924T062916Z-fleet01-B15-QFORM-auto11-r1`.
 Status: **NEW TARGET-LEVEL REGULARITY COMPILER / RULED MAJORITY-SHEET C0 PROVED / FULL QFORM OPEN**.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh brain controls were resolved from main before substantive work. The latest designated-partner theorem actually used is fleet02/B15 at `yspennstate/math-open-problems@45779cb1dca5f453ac620431b380ad015a052e70`, path
+Fresh brain controls were resolved from main before substantive work. The latest designated-partner theorem actually used is fleet02/B15 at `private-source-repository@45779cb1dca5f453ac620431b380ad015a052e70`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260924T050354Z-fleet02-B15-QFORM-auto11-r1/REPORT.md`.
 
 The live corrections are preserved: no law-uniform pointwise quadratic Fourier decay, no independence after spectral rotation, no projection-only/X-ray closure, and no use of continuity to manufacture the central density height.

@@ -44,7 +44,7 @@ That is the first unpaid implication after this run:
 
 I read all three required files at the owner-pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -96,7 +96,7 @@ Fleet03/B02 proved
 
 at canonical commit
 
-`yspennstate/math-open-problems@484c89f85cda352b2c4318364a6206ebc4154950`,
+`private-source-repository@484c89f85cda352b2c4318364a6206ebc4154950`,
 
 path
 

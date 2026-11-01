@@ -2,7 +2,7 @@
 
 Run: `20261013T101721Z-fleet01-B12-cylinder-hierarchy-nogo`
 
-- Canonical repository: `yspennstate/math-open-problems`
+- Canonical repository: `private-source-repository`
 - Canonical core commit: `ce8c4585d1ede5c0b8797e86424cce265667b906`
 - Canonical path: `reports/fei-2026-10-11/runs/B12/20261013T101721Z-fleet01-B12-cylinder-hierarchy-nogo/`
 - Brain repository: `yspennstate/math-research-brain`

@@ -17,7 +17,7 @@ The full target remains OPEN: for arbitrary finite dimension, independent real o
 
 This slot's completed zero-loss extremal-product front end remains in force: every fixed quadratic slab has the same supremum over arbitrary cap-one product densities as over arbitrary unit-measure product indicator sets. No interval, centered-uniform, bounded-diameter, or bounded-fragment extremality is assumed.
 
-The immediately preceding B13 run, canonical `yspennstate/math-open-problems@5d5c3da2cf6c16154b7272ae31b960dd0a7b1fa5`, proved a same-extreme Fourier-power reduction and converted the designated partner's endpoint `|phi_Q(t)|=O(|t|^{-1/2})` into a linear four-copy alternating-sum bound. Its first unpaid implication was
+The immediately preceding B13 run, canonical `private-source-repository@5d5c3da2cf6c16154b7272ae31b960dd0a7b1fa5`, proved a same-extreme Fourier-power reduction and converted the designated partner's endpoint `|phi_Q(t)|=O(|t|^{-1/2})` into a linear four-copy alternating-sum bound. Its first unpaid implication was
 
 `QFORM-SAME-EXTREME-DECONVOLUTION-v1`:
 
@@ -29,7 +29,7 @@ This run tests that mechanism first. The answer is negative for any pullback tha
 
 The designated completed partner is fleet03/B13 r17,
 
-`yspennstate/math-open-problems@eac866b378f5c54411a55f7eb49f89336a4701ae`,
+`private-source-repository@eac866b378f5c54411a55f7eb49f89336a4701ae`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260922T213118Z-fleet03-B13-qform-r17/REPORT.md`.
 

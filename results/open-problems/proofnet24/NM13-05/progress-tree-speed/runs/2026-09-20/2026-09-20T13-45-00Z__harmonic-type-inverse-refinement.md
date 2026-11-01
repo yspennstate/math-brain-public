@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning effort: UNVERIFIED.** GPT-6/maximum
 # NM13-05 T06 — harmonic two-type inverse-moment refinement widens the `{3,4}` lambda=3 crossing
 
 Date: 2026-09-20.  
-Repository: private `yspennstate/math-open-problems`, branch `master`.  
+Repository: private `private-source-repository`, branch `master`.  
 Own root: `proofnet24/NM13-05/progress-tree-speed`.  
 Status: **PARTIAL / OPEN parent; NEW RESTRICTED-FAMILY THEOREM CANDIDATES pending later independent review.**
 

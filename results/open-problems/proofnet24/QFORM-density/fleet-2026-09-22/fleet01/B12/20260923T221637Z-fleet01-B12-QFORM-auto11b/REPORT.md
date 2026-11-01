@@ -210,7 +210,7 @@ The newest completed designated partner `fleet02/B12` result is
 
 canonical source
 
-`yspennstate/math-open-problems@894dfe1e6cc4817c2b3e0bbe46036e4839f10dbf`,
+`private-source-repository@894dfe1e6cc4817c2b3e0bbe46036e4839f10dbf`,
 
 path
 

@@ -182,7 +182,7 @@ Equation (5.1) also gives an exact affine reformulation: support translations co
 
 I consumed the complete fleet03/B05 report
 
-`yspennstate/math-open-problems@c828d2ee2f8acef5eb96892bc8a9a25594db0f51`
+`private-source-repository@c828d2ee2f8acef5eb96892bc8a9a25594db0f51`
 
 at
 
@@ -213,6 +213,6 @@ The usable Fourier statement is instead Theorem 3.1: a **uniform integrated** Fo
 Start control main observed: `a1c684c2b92f8206373b93d5b433d2c4376a7aa9`.
 Pre-write control recheck main observed: `21f8b8cdde140cba387de73334c93ed02a671fda`.
 Owner-control revision: `2026-09-22.5`; programme `QFORM-DENSITY-3EIG-20260922`.
-Current-research source read at the start control commit; partner theorem source pinned above to its immutable math-open-problems commit.
+Current-research source read at the start control commit; partner theorem source pinned above to its immutable private-source commit.
 
 Changed-file privacy review for this report: mathematical text and repository source pins only; no credentials, scheduler identifiers, machine paths, email content, private personal data, benchmark material, or unrelated source excerpts. No paid API/model, remote workflow, public posting, or permission mutation was used.

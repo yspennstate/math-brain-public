@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R09 CLOSABLE OUTSIDE — successor gate: Sendov reserve strike and ownership-clean finite-block screen
 
 Date: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Delivery: private GitHub only.
 
 ## 1. Continuity and controlling state

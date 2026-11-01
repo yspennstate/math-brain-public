@@ -262,7 +262,7 @@ This is **not a QFORM counterexample**: P in (5.3) is nonlinearly coupled to `(V
 
 ## 6. Required pinned `e5f71d79...` package applied to the live obstruction
 
-The required source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, was reread through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` on the current compatible descendant.
+The required source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, was reread through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` on the current compatible descendant.
 
 Two completed results are applied to actual branches.
 
@@ -299,7 +299,7 @@ Full QFORM remains **OPEN / NOT PROVED / NOT DISPROVED**. Full-target continuity
 
 ## 8. Source pins
 
-- Required pinned compatible source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`; current compatible descendant at source read: `47deae65829b8cae5282751e32d7aa0fb07c51c9`.
+- Required pinned compatible source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`; current compatible descendant at source read: `47deae65829b8cae5282751e32d7aa0fb07c51c9`.
 - Fresh partner: fleet03/B05 r39, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260924T033744Z-fleet03-B05-QFORM-r39/REPORT.md` at descendant `47deae65829b8cae5282751e32d7aa0fb07c51c9`.
 - Structural Witt source: fleet01/B05 `20260924T015848Z-fleet01-B05-QFORM-auto11/REPORT.md` and `STRUCTURAL_ADDENDUM.md`.
 - Predecessor fleet02/B05 memory: canonical math `4ad9d206dba1b22fd917280717c24f4e1dd6ea09`.

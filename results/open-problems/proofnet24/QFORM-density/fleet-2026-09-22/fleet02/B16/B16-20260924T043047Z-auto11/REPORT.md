@@ -14,7 +14,7 @@ Regularity: essential boundedness and absolute continuity are proved in the stat
 
 The required pinned source was consumed at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 in all of `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. In particular, this run uses the completed mixed-Fresnel theorem MF at an actual Fourier inequality, the sharp product-projection bounds at their marginal/joint scopes, and preserves the ruled one-sheet theorem only as a one-side comparison. No projected independence or uniform conditional projection cap is inferred.
 

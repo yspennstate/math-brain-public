@@ -307,7 +307,7 @@ This supersedes the previous distinction between the near-double-zero collar and
 
 Fresh designated-partner source consumed:
 
-- `yspennstate/math-open-problems@33cabb3bd5e466a58adc6eac49eba210ef62ef14`
+- `private-source-repository@33cabb3bd5e466a58adc6eac49eba210ef62ef14`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260924T011830Z-fleet04-B05-convex-pair-r3/REPORT.md`
 - theorem `QFORM-PHYSICAL-DEFINITE-PAIR-COAREA-v1`.
 

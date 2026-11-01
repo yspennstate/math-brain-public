@@ -16,7 +16,7 @@ All random variables below are the original independent physical coordinates. A 
 
 The previous B13 run is
 
-- `yspennstate/math-open-problems@57ccfc48fbd392d6b1948c288308c9e3db05e69b`,
+- `private-source-repository@57ccfc48fbd392d6b1948c288308c9e3db05e69b`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260924T053240Z-fleet03-B13-qform-r44/REPORT.md`.
 
 It proves the one-physical-square theorem for
@@ -36,7 +36,7 @@ when one original coordinate has `|d_k|>=1`. Its analytic inputs include the ran
 
 The designated partner `fleet04/B13` supplies three completed inputs.
 
-1. Optimizer-free slab dichotomy, `math-open-problems@d1764f29884bf14ce505d36668105edfcaf8315e`: in the diffuse exact-rank-two chamber with `s_3(A)>=1`, there is a physical `k` with `|d_k|>=1`, and every slab ratio `rho` satisfies
+1. Optimizer-free slab dichotomy, `private-source@d1764f29884bf14ce505d36668105edfcaf8315e`: in the diffuse exact-rank-two chamber with `s_3(A)>=1`, there is a physical `k` with `|d_k|>=1`, and every slab ratio `rho` satisfies
 \[
 |A_{kk}\det\Lambda|\le1536e^2\rho^{-4}.
 \tag{1.2}
@@ -48,14 +48,14 @@ H:=\sqrt{1536e^2}=106.534455308869\ldots .
 \tag{1.3}
 \]
 
-2. Fifth-diagonal sparsification, `math-open-problems@635da12cb1c19b27c455c662be800eb1113dd845`:
+2. Fifth-diagonal sparsification, `private-source@635da12cb1c19b27c455c662be800eb1113dd845`:
 \[
 d_{(5)}\le C_5\rho^{-1},\qquad C_5=2\sqrt{30\pi}=19.416259125557\ldots .
 \tag{1.4}
 \]
 The same partner line proves the optimizer-free cap-one-product reduction, with no interval, common-diameter, or fixed-fragment conclusion.
 
-3. Newest partner result, `math-open-problems@8b90908a934588442491cf1a41c7db12ece290bf`,
+3. Newest partner result, `private-source@8b90908a934588442491cf1a41c7db12ece290bf`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260924T061740Z-fleet04-B13-nearnull-star-r3/REPORT.md`: for `k` chosen with `|d_k|=||D||op>=1`, every slab witness obeys
 \[
 \boxed{

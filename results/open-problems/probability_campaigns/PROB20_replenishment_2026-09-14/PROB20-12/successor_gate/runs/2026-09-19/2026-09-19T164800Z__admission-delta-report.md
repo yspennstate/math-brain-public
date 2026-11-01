@@ -5,7 +5,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this was **
 Date: 2026-09-19 UTC  
 Deployment: `NEW-METHODS-2026-09-16`  
 Native slot: `6aa7b454b5808191bb00d87697d89388`  
-Repository: `yspennstate/math-open-problems`, branch `master`
+Repository: `private-source-repository`, branch `master`
 
 ## 1. Continuity and exact Git delta
 

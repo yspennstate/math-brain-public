@@ -10,7 +10,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning/effort level: UNVERIFIED** — 
 
 **Publication novelty:** `UNVERIFIED`. A bounded fresh search for combinations of `symmetrized nonbacktracking`, `Hermitian Hashimoto`, `edge graph`, `biregular Ramanujan`, and `cutoff` found nonbacktracking-spectral papers but no matching ordinary-SRW cutoff theorem for the graph class below. This is negative evidence only, not a priority certificate.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 

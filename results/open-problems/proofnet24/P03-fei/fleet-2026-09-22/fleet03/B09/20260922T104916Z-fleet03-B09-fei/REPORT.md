@@ -23,23 +23,23 @@ No universal FEI conclusion is claimed.
 
 ## 1. Exact sources consumed
 
-1. **Influence I-projection** — `yspennstate/math-open-problems`, commit `4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`. It proves that the maximum-entropy nonempty conditional-product law `Q_r` with the same coordinate-occurrence marginals satisfies
+1. **Influence I-projection** — `private-source-repository`, commit `4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`. It proves that the maximum-entropy nonempty conditional-product law `Q_r` with the same coordinate-occurrence marginals satisfies
    \[
    K_{\rm occ}=D_2(P\Vert Q_r)=H_{\max}(r)-H(P),
    \qquad R_\Gamma=B_{\rm inf}^\Gamma+K_{\rm occ}.
    \]
-2. **Exact hierarchy KL** — `yspennstate/math-open-problems`, commit `2bf247373576eb406ca91bb3ea5f3ce5e5ab8588`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md`. It proves
+2. **Exact hierarchy KL** — `private-source-repository`, commit `2bf247373576eb406ca91bb3ea5f3ce5e5ab8588`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md`. It proves
    \[
    K_{\rm occ}(F)=K_{\rm occ}(G)+\sum_i\alpha_iK_{\rm occ}(f_i)+C_{\rm hier},\qquad C_{\rm hier}\ge0,
    \]
    for disjoint Boolean composition. This is the multiscale credit that must not be discarded.
-3. **Named other-account Booleanity result actually consumed** — `yspennstate/math-open-problems`, commit `603b35e74227d1c2d8ee34c0c527c439c686e30b`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md`. It proves, from every exact signed Booleanity equation,
+3. **Named other-account Booleanity result actually consumed** — `private-source-repository`, commit `603b35e74227d1c2d8ee34c0c527c439c686e30b`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md`. It proves, from every exact signed Booleanity equation,
    \[
    K_{\rm occ}\ge {1\over4v\ln2}\max_{U\ne\varnothing}{\mathfrak g_U^2\over L_U^2}.
    \]
    The same source explains that a single complement equation can be exponentially weak.
-4. **Rare-log quadratic obstruction** — `yspennstate/math-open-problems`, commit `7ec649dfb3d1ab2f92855f2069590fca2ac956dd`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md`. On the sparse Boolean suspensions used below, the full unweighted signed-convolution energy is `4I+o(I)` while `K_occ=Theta(mI)`.
-5. **Mandatory recursive-majority preflight** — `yspennstate/math-open-problems`, commit `bff0d7b6c21485f386841c42582eb04f32705046`, `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md`. Fixed or sub-half-depth labelled low-level KL followed by one merged tail is asymptotically negligible on recursive ternary majority.
+4. **Rare-log quadratic obstruction** — `private-source-repository`, commit `7ec649dfb3d1ab2f92855f2069590fca2ac956dd`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md`. On the sparse Boolean suspensions used below, the full unweighted signed-convolution energy is `4I+o(I)` while `K_occ=Theta(mI)`.
+5. **Mandatory recursive-majority preflight** — `private-source-repository`, commit `bff0d7b6c21485f386841c42582eb04f32705046`, `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md`. Fixed or sub-half-depth labelled low-level KL followed by one merged tail is asymptotically negligible on recursive ternary majority.
 
 The assigned current-programme partner is `fleet04/B09`. No completed `proofnet24/P03-fei/fleet-2026-09-22/fleet04/B09/` artifact was present at the two source checks made before this report. Under the owner order's asynchronous rule, this run did not wait and instead consumed the completed named other-account input in item 3 plus the exact hierarchy result in item 2.
 

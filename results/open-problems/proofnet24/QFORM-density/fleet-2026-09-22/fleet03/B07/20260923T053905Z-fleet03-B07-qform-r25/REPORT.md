@@ -25,7 +25,7 @@ The designated `fleet04/B07` current-QFORM handoff/canonical directory was check
 
 The newest required volume-stability source is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -47,7 +47,7 @@ All same-side quadratic terms, outside couplings and affine terms remain present
 
 Fleet03/B08 r27 is
 
-`yspennstate/math-open-problems@e875d54d4a946d399466cb6afa1fc37da12a11d2`,
+`private-source-repository@e875d54d4a946d399466cb6afa1fc37da12a11d2`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T042303Z-fleet03-B08-qform-diffuse-r27/REPORT.md`.
 
@@ -318,7 +318,7 @@ The global fractional-volume branch similarly has
 
 The designated `fleet04/B07` source remains absent, so no result is invented. Use the compatible completed fleet04/B18 sharp product-projection consequence from
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`:
 

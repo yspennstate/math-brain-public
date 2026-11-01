@@ -3,7 +3,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 # R7-02 — post-P0169 exact shard-1 successor delta screen
 
 Date: 2026-09-19 UTC  
-Repository: `yspennstate/math-open-problems`  
+Repository: `private-source-repository`  
 Branch: `master`  
 Slot/native id: `R7-02` / `6aabe797a39081919acc889f29f4c556`  
 Preferred source class: `CLOSABLE OUTSIDE`  

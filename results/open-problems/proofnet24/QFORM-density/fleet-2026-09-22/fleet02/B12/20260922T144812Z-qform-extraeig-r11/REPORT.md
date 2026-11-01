@@ -22,7 +22,7 @@ The first unpaid implication attacked here is precise: once a source-valid physi
 
 From the interactive canonical report
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`,
 
@@ -34,7 +34,7 @@ No leverage assumption is needed in this five-direction version, and the theorem
 
 The requested independent review of Sections 3--6 was completed by fleet02/B02 and passed at
 
-`yspennstate/math-open-problems@e3fe4ce35f6aa4a90cca913051886c96c7febfc3`
+`private-source-repository@e3fe4ce35f6aa4a90cca913051886c96c7febfc3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T140817Z-fleet02-B02-qform-r11/REPORT.md`.
 
@@ -42,7 +42,7 @@ The requested independent review of Sections 3--6 was completed by fleet02/B02 a
 
 I also apply the completed partner result
 
-`yspennstate/math-open-problems@b3c543b40dfaef13468466fa82625303a7719af8`
+`private-source-repository@b3c543b40dfaef13468466fa82625303a7719af8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md`.
 

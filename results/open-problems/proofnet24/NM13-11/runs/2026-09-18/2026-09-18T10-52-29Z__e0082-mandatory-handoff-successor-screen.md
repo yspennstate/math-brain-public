@@ -5,7 +5,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 Date: 2026-09-18 UTC  
 Track: `NM13-11`  
 Category: `HARD OUTSIDE`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Own namespace: `proofnet24/NM13-11/`  
 Required selection shard: `int(SHA256(UTF-8 canonical dedup_key),16) mod 13 = 10`
 

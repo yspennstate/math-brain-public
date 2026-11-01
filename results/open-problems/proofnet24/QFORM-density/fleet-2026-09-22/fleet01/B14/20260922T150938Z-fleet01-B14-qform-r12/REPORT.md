@@ -21,7 +21,7 @@ This report proves a localization theorem and a sharp fragment-packing compiler.
 
 The named partner result consumed here is fleet02/B14:
 
-`yspennstate/math-open-problems@d358b89ba78735cee238c01e83c2c3ca9ec66352`
+`private-source-repository@d358b89ba78735cee238c01e83c2c3ca9ec66352`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T140126Z-b14-qform-localization-r13/REPORT.md`.
 
@@ -39,7 +39,7 @@ The same partner report proves an acyclic/triangular multi-coordinate compiler a
 
 For compatibility with the existing localization state, I also checked fleet03/B14:
 
-`yspennstate/math-open-problems@2208c3f666582999f1fbc7e55921a4530cbe2789`
+`private-source-repository@2208c3f666582999f1fbc7e55921a4530cbe2789`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T133524Z-fleet03-B14-qform-r11/REPORT.md`.
 
@@ -307,8 +307,8 @@ This removes the need to insist on a globally triangular elimination order. Mild
 
 - source control immediately before scientific write: `yspennstate/math-research-brain@143158f9cac70bca95f553d1abd9da0bfa496eb1`;
 - programme/control: `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22.5`;
-- named partner actually applied: fleet02/B14, `yspennstate/math-open-problems@d358b89ba78735cee238c01e83c2c3ca9ec66352`, exact report path in Section 2;
-- exact localization compatibility source checked: fleet03/B14, `yspennstate/math-open-problems@2208c3f666582999f1fbc7e55921a4530cbe2789`;
+- named partner actually applied: fleet02/B14, `private-source-repository@d358b89ba78735cee238c01e83c2c3ca9ec66352`, exact report path in Section 2;
+- exact localization compatibility source checked: fleet03/B14, `private-source-repository@2208c3f666582999f1fbc7e55921a4530cbe2789`;
 - fresh correction inbox re-read at control commit `143158f9cac70bca95f553d1abd9da0bfa496eb1`, including the newer `QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1`; no challenged premise above depends on that refuted structural implication.
 
 No novelty/priority claim is made. Repository transport is not native memory ingestion. Full QFORM remains open.

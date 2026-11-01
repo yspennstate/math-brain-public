@@ -20,7 +20,7 @@ No law-uniform pointwise quadratic Fourier decay, post-rotation independence, pr
 
 Source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, Theorem F.
 
 Its all-coordinate corollary is the following. Let
@@ -41,7 +41,7 @@ This is a full-law theorem obtained from an integrated Fresnel/Brascamp--Lieb es
 
 Latest designated-partner source consumed in full:
 
-`yspennstate/math-open-problems@bf69cf77d11855ed6a9edcfa10aa200343766b1e`,
+`private-source-repository@bf69cf77d11855ed6a9edcfa10aa200343766b1e`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260924T091516Z-fleet02-B15-QFORM-auto11-r1/REPORT.md`.
 
 For
@@ -62,7 +62,7 @@ Thus bounded-size physical localization loses all three-curvature scale as `m ->
 
 The preceding fleet02/B15 completed regularity source
 
-`yspennstate/math-open-problems@847a25a6130a1470eb8f1abbb298ae5e5f1cdc8f`
+`private-source-repository@847a25a6130a1470eb8f1abbb298ae5e5f1cdc8f`
 
 also gives the majority-sheet rough-law stability `<=2 pi Delta` when the spectral frame has leverage at most `1/2`. The new statements below concern the **full law**.
 
@@ -390,7 +390,7 @@ The logical separation is now particularly clean.
 
 **Fixed-instance boundedness and continuity.** The completed fixed-matrix theorem at
 
-`yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`
+`private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`
 
 proves `C_0 cap L-infinity` for every fixed rank>=3 cap-one product instance, with matrix-dependent constants.
 
@@ -418,8 +418,8 @@ The last item is now explicitly refuted in the stronger `L-infinity` form (5.11)
 
 ## 8. Source pins
 
-- Theorem F: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
-- Fixed-matrix rank>=3 regularity: `math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`.
-- Designated fleet02/B15 diffuse-bank obstruction/full-law bound: `math-open-problems@bf69cf77d11855ed6a9edcfa10aa200343766b1e`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260924T091516Z-fleet02-B15-QFORM-auto11-r1/REPORT.md`.
-- Designated fleet02/B15 leverage-sensitive majority stability: `math-open-problems@847a25a6130a1470eb8f1abbb298ae5e5f1cdc8f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260924T070011Z-fleet02-B15-qform-auto11-r1/REPORT.md`.
+- Theorem F: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
+- Fixed-matrix rank>=3 regularity: `private-source@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`.
+- Designated fleet02/B15 diffuse-bank obstruction/full-law bound: `private-source@bf69cf77d11855ed6a9edcfa10aa200343766b1e`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260924T091516Z-fleet02-B15-QFORM-auto11-r1/REPORT.md`.
+- Designated fleet02/B15 leverage-sensitive majority stability: `private-source@847a25a6130a1470eb8f1abbb298ae5e5f1cdc8f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260924T070011Z-fleet02-B15-qform-auto11-r1/REPORT.md`.
 - Fresh owner/control re-read immediately before publication: `math-research-brain@2509ad32c6aa044df199279ea8f3dd20d4cc6ff9`, owner revision `2026-09-22.15`; no B15 stop/pause.

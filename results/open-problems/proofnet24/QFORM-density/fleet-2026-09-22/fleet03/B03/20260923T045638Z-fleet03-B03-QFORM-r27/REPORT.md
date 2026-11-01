@@ -10,7 +10,7 @@ The full owner target remains open. Nothing below rotates the independent physic
 ## 1. Source-valid inputs actually used
 
 1. **Orientation-free rank-two fractional estimate.** Complete source:
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
    For an exact rank-two quadratic form with nonzero eigenvalue matrix `Lambda` and no affine term,
 
    `sup_t E |W^T K W-t|^(-1/2) <= 16 sqrt(30) |det Lambda|^(-1/4)`.
@@ -18,12 +18,12 @@ The full owner target remains open. Nothing below rotates the independent physic
    The more general arbitrary-affine version has constant `128`; this run uses the sharper no-affine case.
 
 2. **Current one-sided overlap geometry.** Fleet01/B06 r21 and r24:
-   `yspennstate/math-open-problems@32bffc770e83aa6de4175a2a526e0a0670de1a5b:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T013242Z-qform-r21-b06/REPORT.md`, and
-   `yspennstate/math-open-problems@9838f01d705e379c6ff9b855bf1bb787d94b1c5c:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T043620Z-fleet01-B06-QFORM-r24/REPORT.md`.
+   `private-source-repository@32bffc770e83aa6de4175a2a526e0a0670de1a5b:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T013242Z-qform-r21-b06/REPORT.md`, and
+   `private-source-repository@9838f01d705e379c6ff9b855bf1bb787d94b1c5c:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T043620Z-fleet01-B06-QFORM-r24/REPORT.md`.
    They reduce one exact-rank-three zero-Schur-diagonal endpoint to a physical representation described below, with `x^2<1/6`, `y^2>1/2`, and a right-plane row of leverage `eta>1/2` in the still-unpaid heavy branch.
 
 3. **Designated partner fleet04/B03.** Canonical source:
-   `yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`.
+   `private-source-repository@28681f9af7c2307f80968df86010084019599e38:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`.
    Its weighted-L2 compiler is not used: its time-weight step was subsequently refuted. The elementary lemma
 
    `P(|Y-Y'|<=eps) <= 2 eps ||p_Y||_2^2`

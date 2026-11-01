@@ -18,7 +18,7 @@ Required corrections consumed include `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBE
 
 I use the completed fleet02/B16 result twice.
 
-1. Earlier run `20260922T115600Z-fleet02-B16-qform-projprod`, canonical report `yspennstate/math-open-problems@0605c987ff531ccc2fd5554c48df29e65b3eaaa8`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T115600Z-fleet02-B16-qform-projprod/REPORT.md`, blob `aa77eea73a99b6a58329ece190589b110716b485`. Its Theorem 3.1 defines, after selecting three spectral directions,
+1. Earlier run `20260922T115600Z-fleet02-B16-qform-projprod`, canonical report `private-source-repository@0605c987ff531ccc2fd5554c48df29e65b3eaaa8`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T115600Z-fleet02-B16-qform-projprod/REPORT.md`, blob `aa77eea73a99b6a58329ece190589b110716b485`. Its Theorem 3.1 defines, after selecting three spectral directions,
 
 `Psi_t(xi)=E exp(i<xi,RX>+it X^T B X)`,
 

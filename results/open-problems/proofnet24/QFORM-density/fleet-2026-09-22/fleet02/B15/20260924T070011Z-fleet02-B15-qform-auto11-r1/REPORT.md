@@ -134,7 +134,7 @@ This is dimension-free, orientation-free within the rank-three spectral frame, a
 ## 3. Arbitrary leverage in the isotropic chamber
 
 The preceding B15 result at
-`math-open-problems@45779cb1dca5f453ac620431b380ad015a052e70`
+`private-source@45779cb1dca5f453ac620431b380ad015a052e70`
 proved, for the isotropic `(1,1,-1)` majority sheet, the orientation-uniform submass estimate
 
 \[
@@ -192,7 +192,7 @@ but the logical order is crucial: the essential height is proved by the interval
 ## 5. Required completed-source application to a real target family
 
 Apply the completed ruled theorem from
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 to three disjoint banks of size `m>=2`:
 
 \[
@@ -282,7 +282,7 @@ Yet every invertible physical `3x3` principal block chooses one coordinate from 
 \]
 
 Thus the best physical-triple scale is exactly `1/m`. The newest designated partner fleet03/B15 theorem
-`math-open-problems@40b108ab5984542e26b8c8ff2cd059e13446bea8`
+`private-source@40b108ab5984542e26b8c8ff2cd059e13446bea8`
 would give only
 
 \[
@@ -342,9 +342,9 @@ Qualitative absolute continuity remains a separate coarea fact for a nonconstant
 ## Sources consumed
 
 - Fresh owner/control and QFORM state through `math-research-brain@426c030d3bb9f01efa27556c8a0b6cedb613f798`, owner revision `2026-09-22.15`.
-- Required source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md` in `20260922T211500Z-decoupling-brascamp-lieb/`.
+- Required source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md` in `20260922T211500Z-decoupling-brascamp-lieb/`.
 - Later compatible continuation: `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md`, including the correction that Theorem C's affine term must lie in the quadratic range.
-- Prior fleet02/B15 submass theorem: `math-open-problems@45779cb1dca5f453ac620431b380ad015a052e70`.
-- Latest designated partner fleet03/B15 localized physical-triple theorem: `math-open-problems@40b108ab5984542e26b8c8ff2cd059e13446bea8`.
+- Prior fleet02/B15 submass theorem: `private-source@45779cb1dca5f453ac620431b380ad015a052e70`.
+- Latest designated partner fleet03/B15 localized physical-triple theorem: `private-source@40b108ab5984542e26b8c8ff2cd059e13446bea8`.
 
 No full-solution claim is made.

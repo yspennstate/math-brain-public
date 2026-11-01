@@ -21,27 +21,27 @@ This run preserves the source corrections. In particular:
 
 The immediate structural/analytic predecessor is fleet03/B19 r21,
 
-`yspennstate/math-open-problems@207a77337f6b3587233055160a27b317b2491342`
+`private-source-repository@207a77337f6b3587233055160a27b317b2491342`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T010143Z-fleet03-B19-QFORM-r21/REPORT.md`.
 
 The near-null analytic input is fleet01/B16
 `QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1`,
 
-`yspennstate/math-open-problems@8d262d18e5581cd02b8ea8be5102aa2a6d30ddd7`
+`private-source-repository@8d262d18e5581cd02b8ea8be5102aa2a6d30ddd7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T003846Z/REPORT.md`.
 
 The nonzero-pivot fractional input is
 `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`,
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 The designated partner fleet04/B01 signed-Fejer theorem used in Section 6 is
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 

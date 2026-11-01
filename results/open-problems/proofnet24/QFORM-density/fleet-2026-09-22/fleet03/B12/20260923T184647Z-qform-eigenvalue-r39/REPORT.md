@@ -14,20 +14,20 @@ Continuity: the cross-ridge exit below has a continuous `C_0` density. The finit
 ## 1. Source-valid premises actually used
 
 1. **Finite physical-core projected-gradient theorem.** From
-   `yspennstate/math-open-problems@7f2c9f4c2dfeb6134d9291eb7e83b62a9cb4b3b0`,
+   `private-source-repository@7f2c9f4c2dfeb6134d9291eb7e83b62a9cb4b3b0`,
    if an actual `m x m` original-coordinate quadratic block has at least three eigenvalues in absolute value at least `a>0`, then after arbitrary affine terms its output density is bounded by
    `2 sqrt(6 pi m)/a`.
    Conditioning on all outside ORIGINAL coordinates is therefore legitimate and retains independence inside the core.
 
 2. **One-scale ridge theorem.** From
-   `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+   `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
    for an actual original-coordinate cross block `B`, with
    `K=B B^T (gamma^2 I+B B^T)^(-1)`, `theta=tr K`, if `1<=q<=2`, `max_i K_ii<=q/2`, and `theta>2q`, then the full ambient form has a continuous `C_0` density and
    `||p||_infinity <= sqrt(e)/(sqrt(2q) gamma) * theta/(theta-2q)`.
    Arbitrary self blocks and outside couplings are retained.
 
 3. **Designated partner fleet04/B12 destructive square-Gram theorem.** From
-   `yspennstate/math-open-problems@c307f81b3196820aa711a5c47f243feeeeb74781`,
+   `private-source-repository@c307f81b3196820aa711a5c47f243feeeeb74781`,
    for an actual carrier `H`, baseline `A0`, arbitrary symmetric addition `D`,
    `G0=(A0^2)[H,H]`, `G=((A0+D)^2)[H,H]`, and destructive defect
    `N_H(A0,D)=[G0-G]_+` with eigenvalues `nu_1>=nu_2>=...`, one has, for `k+r<=|H|`, and after any further symmetric `T` with `||T||_op<=delta`,
@@ -270,7 +270,7 @@ The new result narrows the additional-eigenvalue issue: once seven physical squa
 ## 9. Source pins
 
 - Control source read at start: `yspennstate/math-research-brain@fc919bb6362788e5e61ad24963aa37a118ecc720`.
-- Designated partner: `yspennstate/math-open-problems@c307f81b3196820aa711a5c47f243feeeeb74781`.
-- Finite-core projected-gradient theorem: `yspennstate/math-open-problems@7f2c9f4c2dfeb6134d9291eb7e83b62a9cb4b3b0`.
-- One-scale ridge theorem: `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`.
+- Designated partner: `private-source-repository@c307f81b3196820aa711a5c47f243feeeeb74781`.
+- Finite-core projected-gradient theorem: `private-source-repository@7f2c9f4c2dfeb6134d9291eb7e83b62a9cb4b3b0`.
+- One-scale ridge theorem: `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`.
 - Execution label: `WITHOUT_VERIFIED_BRAIN`.

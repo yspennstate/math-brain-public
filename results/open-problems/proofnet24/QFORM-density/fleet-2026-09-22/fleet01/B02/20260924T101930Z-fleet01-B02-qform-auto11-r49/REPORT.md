@@ -16,7 +16,7 @@ The exact owner target remains unchanged: independent ORIGINAL real coordinates 
 
 Immediate predecessor:
 
-`yspennstate/math-open-problems@68bcd6197ea7d1232649352406bb8556a31d602b`
+`private-source-repository@68bcd6197ea7d1232649352406bb8556a31d602b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260924T093207Z-fleet01-B02-qform-auto11-r48/REPORT.md`.
 
@@ -40,7 +40,7 @@ The present run attacks the first of those two residual certificates.
 
 The generic physical-edge quarter-Riesz theorem used below is fleet02/B01:
 
-`yspennstate/math-open-problems@25a695084d9acb02a3c81da41ef3e23953fb1a34`
+`private-source-repository@25a695084d9acb02a3c81da41ef3e23953fb1a34`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T050513Z-fleet02-B01-qform-auto11/REPORT.md`.
 
@@ -63,7 +63,7 @@ This theorem is itself obtained from the genuine bilinear `|t|^{-1/2}` Planchere
 
 The translated quadratic kernel is from the completed orientation-free rank-two source
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -76,7 +76,7 @@ that source proves, for every cap-one probability density `f`, every real shift,
 
 The newest completed designated partner fleet02/B02 is
 
-`yspennstate/math-open-problems@6b5539d7c55c495c8b0f410b90dbf704c70c3a50`
+`private-source-repository@6b5539d7c55c495c8b0f410b90dbf704c70c3a50`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260924T080656Z-fleet02-B02-QFORM-auto11/REPORT.md`.
 

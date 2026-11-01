@@ -139,7 +139,7 @@ This is exactly the sort of localization needed in B14: conditioning may induce 
 
 The newest completed `fleet02/B14` report is
 
-`math-open-problems@b2d5f5354dfe179e18e366cf49c485e5326e9288`
+`private-source@b2d5f5354dfe179e18e366cf49c485e5326e9288`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T193835Z-fleet02-B14-QFORM-auto11/REPORT.md`.
 
 Its proved translation-mixture input is:
@@ -153,7 +153,7 @@ Its proved translation-mixture input is:
 
 The projected-Fisher theorem used there is at
 
-`math-open-problems@4a65677d185d35154dc3dfae320c5df9f939b8a2`
+`private-source@4a65677d185d35154dc3dfae320c5df9f939b8a2`
 `proofnet24/QFORM-density/interactive/20260923T184054Z-fisher-continuation/FISHER_INFORMATION.md`.
 
 Its analytic core has subsequently received a PASS in the requested B02 review at commit
@@ -290,9 +290,9 @@ Fresh owner control read in this run: QFORM only, owner-control revision `2026-0
 
 Sources actually used:
 1. `math-research-brain` fresh control files and current QFORM state.
-2. `math-open-problems@b2d5f5354dfe179e18e366cf49c485e5326e9288`, fleet02/B14 Fisher translation-mixture localization and scale barrier.
-3. `math-open-problems@4a65677d185d35154dc3dfae320c5df9f939b8a2`, projected Fisher-information theorem.
-4. `math-open-problems@51058178f17c27df3f70279291a667a5c9e8cbb7`, requested B02 review, PASS on the Fisher analytic core.
+2. `private-source@b2d5f5354dfe179e18e366cf49c485e5326e9288`, fleet02/B14 Fisher translation-mixture localization and scale barrier.
+3. `private-source@4a65677d185d35154dc3dfae320c5df9f939b8a2`, projected Fisher-information theorem.
+4. `private-source@51058178f17c27df3f70279291a667a5c9e8cbb7`, requested B02 review, PASS on the Fisher analytic core.
 
 No pointwise quadratic Fourier decay, post-rotation independence, bounded-support reduction, bounded fragment count, moment assumption or public/remote workflow is used.
 

@@ -29,7 +29,7 @@ The first unpaid implication after this run is stated precisely in Section 8: ex
 
 The newest completed assigned-partner result is `QFORM-FRAGMENTWISE-RECENTERING-TAX-v1`, fleet03/B14 run `20260922T193756Z-fleet03-B14-QFORM-r17`, canonical proof
 
-`yspennstate/math-open-problems@4e1811952f5db1e18ed05abc37a8dfc8c51e641f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T193756Z-fleet03-B14-QFORM-r17/REPORT.md`.
+`private-source-repository@4e1811952f5db1e18ed05abc37a8dfc8c51e641f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T193756Z-fleet03-B14-QFORM-r17/REPORT.md`.
 
 It proves that if a local certificate has inverse diagonal-scaling exponents and one first splits an extreme set into components, normalizes/recenters each component, takes an L-infinity bound, and then averages, one pays an unavoidable fragment tax.  For the determinant-triple certificate the artificial tax is exactly \(N^2\) under equal N-fragment partitions.  Its positive replacement is to keep each whole unit-measure extreme set intact, center once, and aggregate before reciprocal scale payment.
 
@@ -39,7 +39,7 @@ This run applies that ordering literally: there is **no** fragment normalization
 
 `QFORM-PRINCIPAL-TRIPLE-DETERMINANT-LOCALIZATION-v1`, canonical proof
 
-`yspennstate/math-open-problems@89e6481f4f7ed7d49a77cfcb989ee93572d5d5cd:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T190524Z-fleet03-B14-QFORM-r16/REPORT.md`,
+`private-source-repository@89e6481f4f7ed7d49a77cfcb989ee93572d5d5cd:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T190524Z-fleet03-B14-QFORM-r16/REPORT.md`,
 
 states that for three independent cap-one variables and any nonsingular symmetric 3x3 coefficient matrix B, arbitrary affine perturbations included,
 
@@ -54,7 +54,7 @@ The theorem is uniform in support geometry and affine shifts.
 
 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical proof
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`,
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`,
 
 proves that if u is a unit vector and X has independent cap-one coordinates, then the scalar bank variable
 
@@ -75,7 +75,7 @@ This follows from its general k-dimensional projection bound \(e^{k/2}\) at k=1.
 
 The current correction `QFORM-R15-AREA-BANK-SINGLE-PACKET-FALSE-v1`, with canonical proof
 
-`yspennstate/math-open-problems@5266d24ea98d9bb5902c51a92eca0e3e38112e39:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T193347Z-b07-639234ec/REPORT.md`,
+`private-source-repository@5266d24ea98d9bb5902c51a92eca0e3e38112e39:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T193347Z-b07-639234ec/REPORT.md`,
 
 shows that constant aggregate determinant mass cannot in general be collapsed to one uniformly good coordinate packet.  The same report proves a rank-r cross-fiber Plancherel theorem which pays a whole physical cross block at once.  The theorem below is the disjoint-bank analogue on the principal/self-interaction side.
 

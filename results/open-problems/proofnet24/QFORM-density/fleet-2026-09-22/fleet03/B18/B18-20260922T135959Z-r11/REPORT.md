@@ -107,7 +107,7 @@ Likewise, the theorem does not assert that the three-large-eigenvalue hypothesis
 
 The completed partner theorem is fleet04/B18's `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical source:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

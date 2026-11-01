@@ -5,7 +5,7 @@ Problem/source: **iid Rademacher square-matrix singularity — Komlós (1967) li
 # R03 run 20 — balanced sparse null-plane packing
 
 Run ID: `20260916T2114Z_20_balanced_plane_packing`  
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Continuity, source, exact target and frozen metric
 

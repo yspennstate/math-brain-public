@@ -2,7 +2,7 @@
 
 Status: `TARGET_LEVEL_REGULARITY_LEMMA / EXACT_CRITICAL_GAP_NORMAL_FORM`; full QFORM remains **OPEN / NOT PROVED**.
 
-This addendum records a target-wide strengthening noticed during final verification of the run. It uses the completed `fleet02/B15` fixed-instance regularity theorem (`yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`): every fixed target matrix of rank at least three and every cap-one product input have a bounded density with a representative in `C_0(R)`. No universal height is imported from that theorem.
+This addendum records a target-wide strengthening noticed during final verification of the run. It uses the completed `fleet02/B15` fixed-instance regularity theorem (`private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`): every fixed target matrix of rank at least three and every cap-one product input have a bounded density with a representative in `C_0(R)`. No universal height is imported from that theorem.
 
 ## 1. Sharp owner constant and spectral normalization
 

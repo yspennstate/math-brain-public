@@ -29,7 +29,7 @@ All original physical inputs are independent and have scalar densities at most o
 
 The proved rank-two fractional input is source-pinned at
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 For an orthonormal two-frame `U`, invertible symmetric `Lambda`, and arbitrary original-coordinate affine term `b`, it proves
@@ -47,7 +47,7 @@ When the affine term lies in `range(U)`, the same report gives the sharper const
 
 The actual bounded-density projection input is source-pinned at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 For a full-rank two-column coefficient matrix `R` with Gram `G=R^TR`, and a scalar coefficient vector `v`, it gives
@@ -61,12 +61,12 @@ No independence between the two coordinates of `R^TX` is inferred.
 
 The prior definite-discriminant receiver used in the positive-sign branch is source-pinned at
 
-`yspennstate/math-open-problems@407fb7555d24b85565afbce0caea98bdad914c08`,
+`private-source-repository@407fb7555d24b85565afbce0caea98bdad914c08`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/fleet01-B16-20260923T234226Z-auto11/REPORT.md`.
 
 The newest completed designated partner is fleet02/B16 at
 
-`yspennstate/math-open-problems@db3f2d55cd1c6ed9860bc92f6cd4101d8c3daa8d`,
+`private-source-repository@db3f2d55cd1c6ed9860bc92f6cd4101d8c3daa8d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/B16-20260924T093003Z-auto11/REPORT.md`.
 
 Its theorem `QFORM-DEPENDENTPAIR-NULLSCALAR-DETERMINANT-v1` is applied literally in Section 7.

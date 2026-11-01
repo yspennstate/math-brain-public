@@ -21,7 +21,7 @@ The live correction state was reread before publication. This argument does not 
 The designated partner `fleet03/B17` completed `QFORM-FINITE-PERIOD-EDGEWORTH-OPT-v1`:
 
 - brain handoff commit `60122fb4adcad036db3e1953b6ecc5afd7ff20ce`;
-- canonical proof `yspennstate/math-open-problems@1814cc179646bd88950581be1297ee5c3cbb43b2`;
+- canonical proof `private-source-repository@1814cc179646bd88950581be1297ee5c3cbb43b2`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260922T211144Z-fleet03-B17-QFORM-r17/REPORT.md`.
 
 For a fixed repeated tight-frame pattern with iid centered unit-interval inputs, it proves

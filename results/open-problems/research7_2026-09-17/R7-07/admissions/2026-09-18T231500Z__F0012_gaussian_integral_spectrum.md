@@ -3,7 +3,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 # R7-07 admission — F0012 / Vu Conjecture 9.5
 
 Date: 2026-09-18 UTC  
-Repository: `yspennstate/math-open-problems`, branch `master`  
+Repository: `private-source-repository`, branch `master`  
 R7 native slot: `6aabe8413f60819197825dd81ca138ae`  
 Own root: `research7_2026-09-17/R7-07/`  
 Classification: **HARD OUTSIDE**  

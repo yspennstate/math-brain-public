@@ -5,7 +5,7 @@ attacking: intersecting-Pluecker support—classify the zero-disjoint-mass branc
 
 **Programme:** `QFORM-DENSITY-3EIG-20260922`  
 **Assignment:** Projection-product interaction  
-**Math repository head observed before write:** `yspennstate/math-open-problems@3709de1a3f1ed1a498dcadd7d85d8de143331a36`.  
+**Math repository head observed before write:** `private-source-repository@3709de1a3f1ed1a498dcadd7d85d8de143331a36`.  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.  
 **Status:** `NEW SUPPORTING THEOREM + STRUCTURAL REDUCTION / FULL QFORM OPEN`.
 
@@ -23,7 +23,7 @@ The exact branch attacked is the zero-disjoint-Pluecker-mass obstruction left by
 
 Latest completed designated-partner result read for this run:
 
-`yspennstate/math-open-problems@a8103979d7666d4087a23134adf547ab0232c653`
+`private-source-repository@a8103979d7666d4087a23134adf547ab0232c653`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T215409Z-fleet03-B16-QFORM-r18/REPORT.md`.
 
@@ -45,7 +45,7 @@ whenever `D_disj>0`. The partner theorem uses independent ORIGINAL-coordinate gr
 
 From fleet03/B16:
 
-`yspennstate/math-open-problems@b94cc7446401c02727c42024274c002e2f4e0cab`
+`private-source-repository@b94cc7446401c02727c42024274c002e2f4e0cab`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T202347Z-fleet03-B16-QFORM-r15/REPORT.md`,
 
@@ -61,7 +61,7 @@ where
 
 From fleet02/B06:
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`,
 
@@ -79,7 +79,7 @@ This is a weighted Brascamp--Lieb fiber integral of the original product law, no
 
 From
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`,
 
@@ -150,7 +150,7 @@ and `|det Lambda|>=1`, the physical-triple theorem gives
 
 All nonzero rows then occupy at most four spectral line directions. Apply the previously proved B16 theorem `QFORM-FINITE-LINE-BANK-COMPRESSION-v1`, whose canonical report is
 
-`yspennstate/math-open-problems@b9e19e2c19ecd6f6ede282cd3c73ad014c449e9f`
+`private-source-repository@b9e19e2c19ecd6f6ede282cd3c73ad014c449e9f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T220011Z-fleet02-B16-QFORM-auto11/REPORT.md`.
 

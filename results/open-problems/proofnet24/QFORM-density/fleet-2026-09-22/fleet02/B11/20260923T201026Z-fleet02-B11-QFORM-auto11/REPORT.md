@@ -49,7 +49,7 @@ has a bounded continuous density and
 
 `||p_Q||_infinity <= 3 [M_X M_Y / |det C|]^(1/3)`.                (2.1)
 
-For orthogonal projections of independent cap-one scalar inputs, the completed product-projection estimate recorded in the required pinned `math-open-problems@e5f71d79...` Fourier report gives
+For orthogonal projections of independent cap-one scalar inputs, the completed product-projection estimate recorded in the required pinned `private-source@e5f71d79...` Fourier report gives
 
 `M_X,M_Y <= 2^(3/2)`.
 
@@ -175,7 +175,7 @@ The proof may not condition on the dependent same-bank scalar `W`, replace the p
 
 ## Sources actually applied
 
-- Required pinned `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`; the projection-density bound enters (2.2), and Theorem C enters (4.1).
+- Required pinned `private-source@e5f71d79eff325201dd0274053d20268ce65b837`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`; the projection-density bound enters (2.2), and Theorem C enters (4.1).
 - Designated partner fleet03/B11 r40: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T191401Z-fleet03-B11-QFORM-r40/REPORT.md`, report commit `2db0a7f81437b6e67efe800f129abebae0e10b4c`, verifier output `eb6031f9210b71fd099468fb86c94173b8b00c52`.
 - Designated partner fleet03/B11 r39 exact-graph endpoint theorem: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T181640Z-fleet03-B11-QFORM-r39/REPORT.md`.
 

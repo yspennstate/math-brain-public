@@ -3,7 +3,7 @@
 **Status:** **PARTIAL. Full Friedgut--Kalai Fourier entropy--influence (FEI) remains OPEN / NOT PROVED.**  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.  
 **Primary route:** APPROACH 3/7/14 — sensitivity-boundary coupling, larger composition class, and entropy coding.  
-**Scientific source:** entered from `yspennstate/math-open-problems` master `03edf97be0d9e68ef87bdaa33aaad49a0d6a7332`, refreshed before delivery through `a6e765a1cfc60c41405060577ce86097952d55ba`.  
+**Scientific source:** entered from `private-source-repository` master `03edf97be0d9e68ef87bdaa33aaad49a0d6a7332`, refreshed before delivery through `a6e765a1cfc60c41405060577ce86097952d55ba`.  
 **Continuation point:** fleet01/B17 bounded-overlap MUX theorem (`20260921T173715Z-bounded-overlap-mux`).  
 **No audit:** no read-once certificate or settled finite sweep was rerun.
 

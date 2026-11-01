@@ -19,7 +19,7 @@ The previous B11 run proved a `4/sqrt(|bc|)` theorem for the special physical sa
 
 The designated partner is `fleet04/B11`; no completed QFORM handoff from that exact slot was present at the fresh source snapshot, so no result from it is invented. I apply the completed compatible result `fleet04/B18`, scientific source
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 at
 

@@ -16,13 +16,13 @@ The full conjecture remains OPEN.
 
 ## 2. Source-pinned dependencies actually used
 
-1. **Required partner fleet02/B20.** Run `20260922T155719Z-fleet02-B20-QFORM-r12`, canonical report `yspennstate/math-open-problems@527fb9dfef73a5218883c057db14a491992a30d9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260922T155719Z-fleet02-B20-QFORM-r12/REPORT.md`. In the diagonal-dominated first-pivot branch it gives
+1. **Required partner fleet02/B20.** Run `20260922T155719Z-fleet02-B20-QFORM-r12`, canonical report `private-source-repository@527fb9dfef73a5218883c057db14a491992a30d9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260922T155719Z-fleet02-B20-QFORM-r12/REPORT.md`. In the diagonal-dominated first-pivot branch it gives
 
    `|a|>=tau>=1/4`, `s_2(S)>=tau`,
 
    where `S` is the first Schur complement and `tau=(1+||b||/|a|)^(-2)`.
 
-2. **Immediately preceding B20 closure.** `yspennstate/math-open-problems@36765bac9a785445139d5b79db651ca9d51e050f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T162317Z-fleet01-B20-QFORM-r12/REPORT.md`. It proves
+2. **Immediately preceding B20 closure.** `private-source-repository@36765bac9a785445139d5b79db651ca9d51e050f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T162317Z-fleet01-B20-QFORM-r12/REPORT.md`. It proves
 
    `s_3(S)<tau/128`,
 
@@ -32,13 +32,13 @@ The full conjecture remains OPEN.
 
    In the diagonal-dominated second-row branch, writing `d=S_jj`, `c=S_{j,-j}`, it gives `|d|>tau/9`. The same-sign case `ad>0` is already closed with density `<12 pi`; only `ad<0` remained unpaid.
 
-3. **Physical three-pivot endpoint.** fleet02/B20 run `20260922T152608Z-fleet02-B20-QFORM-r12`, canonical source at `yspennstate/math-open-problems@2979c262e6ba9c4cef66314aabd714431f5e9c95`. If a physical ordered triple has successive scalar Schur pivots `p_1,p_2,p_3`, then
+3. **Physical three-pivot endpoint.** fleet02/B20 run `20260922T152608Z-fleet02-B20-QFORM-r12`, canonical source at `private-source-repository@2979c262e6ba9c4cef66314aabd714431f5e9c95`. If a physical ordered triple has successive scalar Schur pivots `p_1,p_2,p_3`, then
 
    `||p_Q||_infinity <= C_3 (|p_1|^4 |p_2|^3 |p_3|)^(-1/8)`,
 
    with `C_3<94.356`. This allows arbitrary outside spectrum and couplings.
 
-4. **Original-coordinate cross-bank quarter moment.** fleet01/B19 run `20260922T155027Z-fleet01-B19-QFORM-r11`, canonical report `yspennstate/math-open-problems@2e5d5cdc3bb7121673bc920497fb11cac9eceb46`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260922T155027Z-fleet01-B19-QFORM-r11/REPORT.md`. For disjoint original-coordinate banks `X,Y`, arbitrary same-bank quadratic terms `F(X),G(Y)`, and cross block `C` with `sigma=s_1(C)>0`,
+4. **Original-coordinate cross-bank quarter moment.** fleet01/B19 run `20260922T155027Z-fleet01-B19-QFORM-r11`, canonical report `private-source-repository@2e5d5cdc3bb7121673bc920497fb11cac9eceb46`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260922T155027Z-fleet01-B19-QFORM-r11/REPORT.md`. For disjoint original-coordinate banks `X,Y`, arbitrary same-bank quadratic terms `F(X),G(Y)`, and cross block `C` with `sigma=s_1(C)>0`,
 
    `K=F(X)+2X^TCY+G(Y)`
 

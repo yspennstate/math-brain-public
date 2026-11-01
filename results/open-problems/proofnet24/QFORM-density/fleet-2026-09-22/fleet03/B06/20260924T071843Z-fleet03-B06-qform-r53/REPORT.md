@@ -4,9 +4,9 @@ attacking: `QFORM-ADJUGATE-6465-TANGENTIAL-COLLAR-RECEIVER-v1`; after the new fl
 # fleet03/B06 r53 — singular three-hub four-minor bank and localized exit
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`.  
-Immediate B06 input: `QFORM-NORMAL-INNOVATION-COMPENSATED-CROSS-VOLUME-v1`, `yspennstate/math-open-problems@8e9f088eb1496f376287e67731b7906818ccd703`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T062005Z-fleet03-B06-qform-r52/REPORT.md`.  
+Immediate B06 input: `QFORM-NORMAL-INNOVATION-COMPENSATED-CROSS-VOLUME-v1`, `private-source-repository@8e9f088eb1496f376287e67731b7906818ccd703`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T062005Z-fleet03-B06-qform-r52/REPORT.md`.  
 Fresh peer obstruction consumed: fleet02/B06 `fleet02-B06-20260924T065158Z-auto11-r14/EARLY_CALC.md` on current master.  
-Designated partner actually applied below: fleet04/B06 `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, `yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`.  
+Designated partner actually applied below: fleet04/B06 `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`, `private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`.  
 Execution label: `WITHOUT_VERIFIED_BRAIN`; authenticated repository transport is not native learned-memory ingestion.
 
 The full QFORM conjecture remains OPEN. This run proves a new exact bank identity and a target-level heavy-bank receiver on the singular localized face. It does not claim to close the remaining diffuse bilinear face.
@@ -276,7 +276,7 @@ Moreover this scalar is independent of all three hub ORIGINAL coordinates. There
 
 The freshest completed designated partner result is fleet04/B06 `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1` at
 
-`yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`.
+`private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`.
 
 Take the exact tangential subface of the live B06 packet, where after whitening the two strong tail rows the shared statistic produced by the singular-hub coupling lies in their span:
 

@@ -22,7 +22,7 @@ The goal of this run is to identify exactly what the concentrated fused mass *do
 
 Fresh designated partner: fleet03/B06 r39, canonical mathematics
 
-`yspennstate/math-open-problems@9ac8f055fe86ee993b00125fdcfbc1d528147632`,
+`private-source-repository@9ac8f055fe86ee993b00125fdcfbc1d528147632`,
 
 which keeps the complete cross tail and on the live near-rank-two physical block `N` gives
 
@@ -32,7 +32,7 @@ where `x_2` is the second squared singular value.
 
 The owner-required pinned newest-Claude package actually consumed is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed localized three-coordinate Theorem A is applied in Section 6 to a genuine target obstruction produced by the present structural split.
 

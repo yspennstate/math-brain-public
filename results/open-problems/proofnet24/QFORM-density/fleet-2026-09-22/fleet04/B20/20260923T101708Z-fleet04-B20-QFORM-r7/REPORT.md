@@ -12,7 +12,7 @@ Fresh brain source: `yspennstate/math-research-brain@17b89297d3120baf4efe2e668f6
 
 The newest fleet01/B20 theorem used here is:
 
-- `yspennstate/math-open-problems@c45a270dbf4a4d81742bc934ff54eba97d81f4f3`;
+- `private-source-repository@c45a270dbf4a4d81742bc934ff54eba97d81f4f3`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T0919Z-fleet01-B20-QFORM-auto11/REPORT.md`.
 
 It proves that in the exact-rank-three heavy-row survivor there is a physical anchor \(h\) and a partition of the remaining original coordinates \(U\sqcup V\) for which the normalized transverse Grams satisfy
@@ -26,7 +26,7 @@ The unresolved implication in that report is an analytic receiver which spends t
 
 The analytic input actually applied below is fleet01/B06's weighted-section theorem:
 
-- `yspennstate/math-open-problems@71e76e50e036242aaa91584f0f2406456963ebb0`;
+- `private-source-repository@71e76e50e036242aaa91584f0f2406456963ebb0`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T035013Z-qform-r22-b06/REPORT.md`.
 
 For \(X\) independent of \((Y,Z)\), with \(X\) density-capped by one, it proves

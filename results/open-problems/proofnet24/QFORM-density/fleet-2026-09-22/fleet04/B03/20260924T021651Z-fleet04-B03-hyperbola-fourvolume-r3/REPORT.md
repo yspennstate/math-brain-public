@@ -12,7 +12,7 @@ The unrestricted conjecture remains open. All coordinates below are original ind
 
 The required Claude directory was checked through its latest directory commit `7ffd1ed79398611eb06752f622be0ce33dcacb5a`; the designated base remains `e5f71d79eff325201dd0274053d20268ce65b837`. Retained corrections: no law-uniform pointwise quadratic decay, no separation of dependent \(X-X'\) and \(X+X'\), no arbitrary-joint coarea height bound, and no assumption of a universally good physical minor.
 
-The completed fleet01/B03 theorem used below is `QFORM-BIPARTITE-MOYAL-CS-v1`, at `math-open-problems@6c4698000d4fd206b465a18231ba8c7a8f643f59`. For a four-coordinate residual
+The completed fleet01/B03 theorem used below is `QFORM-BIPARTITE-MOYAL-CS-v1`, at `private-source@6c4698000d4fd206b465a18231ba8c7a8f643f59`. For a four-coordinate residual
 \[
 R=X^TCX+2X^TBY+Y^TDY+\text{affine},\qquad X,Y\in\mathbb R^2,
 \]
@@ -23,7 +23,7 @@ with literal original-coordinate banks and invertible \(B\), it proves
 \]
 Its proof uses the exact Moyal identity and one global Cauchy--Schwarz inequality, retaining each conjugate sum/difference pair jointly.
 
-For the aggregate branch I use the completed marginal-free theorem `QFORM-Z2-HALFRIESZ-MARGINAL-FREE-v1`, at `math-open-problems@68e6d8f52d904033878f6f55c376c38fd214684e`:
+For the aggregate branch I use the completed marginal-free theorem `QFORM-Z2-HALFRIESZ-MARGINAL-FREE-v1`, at `private-source@68e6d8f52d904033878f6f55c376c38fd214684e`:
 \[
 \sup_s\mathbb E|R-s|^{-1/2}\le8e^{1/4}Z_2^{-1/8},
 \qquad Z_2=e_2(MM^T).

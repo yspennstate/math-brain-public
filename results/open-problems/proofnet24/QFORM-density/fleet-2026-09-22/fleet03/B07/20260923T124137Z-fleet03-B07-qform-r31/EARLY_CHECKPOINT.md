@@ -11,7 +11,7 @@ Status: supporting reduction in progress; full QFORM and full continuity remain 
 
 I use the completed B07 curvature compiler
 
-`yspennstate/math-open-problems@1d2dd52680ec729f28b7289e74a6f3752a379127`
+`private-source-repository@1d2dd52680ec729f28b7289e74a6f3752a379127`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T104247Z-fleet03-B07-qform-r32/REPORT.md`.
 
@@ -25,7 +25,7 @@ and
 
 where `P=||r||_2 ||c||_2` is the genuine two-star product from the designated fleet04/B07 survivor. The designated partner source is
 
-`yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`
+`private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`.
 
@@ -51,7 +51,7 @@ If `T4 >= q`, then
 
 The completed unrestricted fifth-volume theorem D5 from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 

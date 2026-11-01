@@ -4,7 +4,7 @@ SIGNED IN - formalizing the repaired five-singular-value paper in Lean, account 
 
 Fresh brain controls were read before mathematics. The 25 Sep 2026 12:29 owner message remains controlling: formalize and verify every result of the repaired five-singular-value paper in Lean only.
 
-Exact paper: yspennstate/math-open-problems@4e530247ec0ef4101a6e5ecf621bd35a969c42aa, repaired-2026-09-25/paper.tex, blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a, SHA-256 90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb.
+Exact paper: private-source-repository@4e530247ec0ef4101a6e5ecf621bd35a969c42aa, repaired-2026-09-25/paper.tex, blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a, SHA-256 90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb.
 
 Current research main observed at c75954ae33a0d992a99f576e760ac2bff8c25786. Current LEAN_COVERAGE.md blob 76050ca34cfd051811d0d487855ef8bb1d095eb1 still lists Lemma 4.3 as partial: hub_constant, gram_orth_blocks and step5_log_identity are compiled; the Cauchy--Schwarz, Plancherel and generalized-Hölder steps are not formalized. No current repository result matching the B08 Step-3 theorem names was found.
 

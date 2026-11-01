@@ -8,7 +8,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 **Publication novelty:** `UNVERIFIED`. The checked repository contains line-graph, symmetrized nonbacktracking-arc, product, finite-fiber, truncation, exact-distance and spherical-set cutoff transfers, but not the reversal-augmented graph below. Bounded web searches on 20 September 2026 for combinations of `oriented edge graph`, `arc graph`, `reversal matching`, `nonbacktracking successors predecessors`, `random walk cutoff`, and `expander` did not locate this exact cutoff theorem. This is negative evidence only, not a worldwide priority certificate; graph-theoretic arc/dart constructions exist in the literature.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.  
+Repository/branch: `private-source-repository` / `master`.  
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.  
 Run root: `proofnet24/NM13-01/progress-cutoff/runs/2026-09-20/`.  
 Pre-write master observed immediately before persistence work: `265e0acef4a8f3719a23d8327090585f32317807`.

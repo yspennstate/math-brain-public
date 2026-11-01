@@ -17,12 +17,12 @@ The first B11 debt after the preceding minority-Schur run is the near-null one-s
 
 Three completed sources are used at equations below.
 
-1. Required Claude package: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, Theorem C. For an exact-rank-three `(2,1)` form whose three nonzero eigenvalue magnitudes are at least one, it gives the ruled one-sheet estimate `p_Q(t)<=pi sqrt(2)` on the majority-sign side `t>=0`.
-2. Designated partner fleet03/B11 r24: `yspennstate/math-open-problems@31b72d5e536a81344c1242b9c0356e488310f81e`, especially `ADDENDUM_SIGNED_HALF_RIESZ.md`. Equation (A.1), sourced there from the completed rank-two fusion theorem, states for two independent cap-one original coordinates and any invertible symmetric `2x2` matrix `B`, with arbitrary affine term,
+1. Required Claude package: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, Theorem C. For an exact-rank-three `(2,1)` form whose three nonzero eigenvalue magnitudes are at least one, it gives the ruled one-sheet estimate `p_Q(t)<=pi sqrt(2)` on the majority-sign side `t>=0`.
+2. Designated partner fleet03/B11 r24: `private-source-repository@31b72d5e536a81344c1242b9c0356e488310f81e`, especially `ADDENDUM_SIGNED_HALF_RIESZ.md`. Equation (A.1), sourced there from the completed rank-two fusion theorem, states for two independent cap-one original coordinates and any invertible symmetric `2x2` matrix `B`, with arbitrary affine term,
 
    `sup_s E |U^T B U+ell^T U-s|^(-1/2) <=16 sqrt(30)|det B|^(-1/4)`.       (1.1)
 
-3. The sharp product-marginal input of Livshyts--Paouris--Pivovarov, source-pinned in `math-open-problems@1809b7ee5deef19744f1c36bbdd445b9b1992997`, fleet03/B18: if `b` is a unit coefficient vector and the coordinates are independent with density caps one, then `W=sum b_jX_j` has density cap at most `sqrt(2)`.
+3. The sharp product-marginal input of Livshyts--Paouris--Pivovarov, source-pinned in `private-source@1809b7ee5deef19744f1c36bbdd445b9b1992997`, fleet03/B18: if `b` is a unit coefficient vector and the coordinates are independent with density caps one, then `W=sum b_jX_j` has density cap at most `sqrt(2)`.
 
 No result below treats a small matrix coefficient as a small random perturbation. No rotated variables are declared independent.
 

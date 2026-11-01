@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R20 successor admission — F0111 degree-drop no-go and exact gap-insertion reduction
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R20, CLOSABLE OUTSIDE.
 
 ## 1. Continuity, ownership, and source status
@@ -394,7 +394,7 @@ The historical P26 `You cannot modify this task` response remains an authorizati
 ledger_delta:
   worker: R20
   allocation: CLOSABLE_OUTSIDE
-  repository: yspennstate/math-open-problems
+  repository: private-source-repository
   branch: master
   retired_source:
     id: I0100

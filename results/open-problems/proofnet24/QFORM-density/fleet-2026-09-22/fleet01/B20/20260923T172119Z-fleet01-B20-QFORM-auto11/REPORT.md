@@ -19,7 +19,7 @@ The unrestricted conjecture is not claimed proved or disproved. The new paid bra
 Newest completed designated-partner mathematics before this publication:
 
 - brain handoff commit `9410aa30113cc4c2e0e9daf562a5b9e53a007741`;
-- canonical math commit `yspennstate/math-open-problems@20ec5f8f3ed2028edf27894cd3956d13e4662a9a`;
+- canonical math commit `private-source-repository@20ec5f8f3ed2028edf27894cd3956d13e4662a9a`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T155833Z-fleet02-B20-QFORM-auto11c/`;
 - fresh-partner addendum theorem `QFORM-ALIGNED-TRANSVERSE-R2-FROBENIUS-COLLAR-v1`.
 
@@ -54,13 +54,13 @@ with top-two left singular plane `P` and second singular value `n2` satisfying
               =63(1-2^-20)^2/(256*259)
               =0.000950167106616394... .`                        (1.4)
 
-The source is `yspennstate/math-open-problems@6dfd43d5519df1fc40ea26f7d0bbe300ad32412d`, fleet03/B19 report `20260923T145843Z-fleet03-B19-QFORM-r36`, equation (3.2), carried into fleet03/B20 and then fleet02/B20.
+The source is `private-source-repository@6dfd43d5519df1fc40ea26f7d0bbe300ad32412d`, fleet03/B19 report `20260923T145843Z-fleet03-B19-QFORM-r36`, equation (3.2), carried into fleet03/B20 and then fleet02/B20.
 
 ### 1.4 Marginal-free physical E3 receiver
 
 A same-hour completed peer theorem is
 
-- `yspennstate/math-open-problems@52cef3abd27c641ae6666d6ee3bbc25d90cb4813`;
+- `private-source-repository@52cef3abd27c641ae6666d6ee3bbc25d90cb4813`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T170106Z-fleet03-B02-qform-r35/REPORT.md`;
 - theorem `QFORM-CROSS-E3-MARGINALFREE-L1-v1`.
 

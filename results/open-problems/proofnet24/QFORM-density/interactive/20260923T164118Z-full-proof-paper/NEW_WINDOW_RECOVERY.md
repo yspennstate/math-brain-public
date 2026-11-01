@@ -2,7 +2,7 @@
 
 ## Scope and source snapshot
 
-Read-only source review and new derivations use `yspennstate/math-open-problems`, snapshot `20c8f358318f0753d3fbe1f59c04b8391c1bcb92` (2026-09-23 16:39:36 UTC), especially:
+Read-only source review and new derivations use `private-source-repository`, snapshot `20c8f358318f0753d3fbe1f59c04b8391c1bcb92` (2026-09-23 16:39:36 UTC), especially:
 
 - `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`, blob `9ac295d0c2100aafe64cbc9f913385140de68fbd`;
 - that directory's numerical README;

@@ -28,7 +28,7 @@ Cauchy--Binet/Lagrange gives the exact identity
 
 `||m||^2 F^2 = alpha_i Z`.
 
-If every row of `C` has squared norm at most `F^2/2`, the checked grouped-hub theorem at `math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401` with `k=1, ell=1` gives
+If every row of `C` has squared norm at most `F^2/2`, the checked grouped-hub theorem at `private-source@829192412f2a2d84e72b4bed91115fc5fab68401` with `k=1, ell=1` gives
 
 `|phi_Q(t)| <= min(1, 2*pi (||m||F)^(-1/2)|t|^(-1))`,
 

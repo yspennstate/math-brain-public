@@ -16,7 +16,7 @@ No moment, compact-support, log-concavity, connected-support, diagonal-basis, po
 
 The latest completed compatible designated-partner result at the refresh is fleet03/B13 r44:
 
-`math-open-problems@57ccfc48fbd392d6b1948c288308c9e3db05e69b`
+`private-source@57ccfc48fbd392d6b1948c288308c9e3db05e69b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260924T053240Z-fleet03-B13-qform-r44/REPORT.md`.
 
@@ -252,7 +252,7 @@ This is not a counterexample to QFORM. It is a source-valid obstruction to every
 
 The required source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was reread at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Besides the physical-triple Theorem A used in (2.3), its completed unconditional `D_5` theorem gives, for every disjoint physical cross block `M=A[I,J]`,
 

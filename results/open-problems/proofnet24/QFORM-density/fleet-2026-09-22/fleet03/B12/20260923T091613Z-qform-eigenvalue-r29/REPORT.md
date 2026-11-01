@@ -16,7 +16,7 @@ The full target remains: for every dimension, every independent real product law
 
 The designated partner result actually used at an equation is fleet04/B12:
 
-`yspennstate/math-open-problems@3948d77b0bde5af1bd37cd7c975d4f540eba901b`
+`private-source-repository@3948d77b0bde5af1bd37cd7c975d4f540eba901b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T081758Z-fleet04-B12-complementary-schur-shield-r4/REPORT.md`.
 

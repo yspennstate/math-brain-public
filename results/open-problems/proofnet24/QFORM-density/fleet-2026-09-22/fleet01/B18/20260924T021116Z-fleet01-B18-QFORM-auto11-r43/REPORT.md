@@ -54,7 +54,7 @@ A targeted literature/repository audit did not locate an exact published theorem
 
 Newest completed fleet02/B18 source at the time of this report:
 
-- `yspennstate/math-open-problems@54408b41c02166dbb98ac96c14635fd1ba353f27`;
+- `private-source-repository@54408b41c02166dbb98ac96c14635fd1ba353f27`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/fleet02-B18-20260924T020253Z-r11/REPORT.md`.
 
 For an ORIGINAL-coordinate split
@@ -74,7 +74,7 @@ put `s=s_3(A)`, `c=||C||op`, `beta=||B||op`. Among its proved implications:
 
 Canonical source:
 
-- `yspennstate/math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`;
+- `private-source-repository@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`;
 - theorem `QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1`.
 

@@ -14,10 +14,10 @@ Fresh control was read on `yspennstate/math-research-brain` main. The source sna
 
 Completed dependencies actually used:
 
-1. Partner `fleet02/B08`, `QFORM-WHITENED-PHYSICAL-BLOCK-v1`, canonical report `yspennstate/math-open-problems@84657e690f8411d99602ddc772b622686c3874ed`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T124007Z-r11/REPORT.md`.
-2. `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, path `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
+1. Partner `fleet02/B08`, `QFORM-WHITENED-PHYSICAL-BLOCK-v1`, canonical report `private-source-repository@84657e690f8411d99602ddc772b622686c3874ed`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T124007Z-r11/REPORT.md`.
+2. `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, path `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
 3. `fleet02/B10`, `QFORM-HYPERBOLIC-SQUARE-v1`, creation commit `1eba911614ef9f6683f8eacb5d6608a0f9a4b833`, canonical path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T1147Z-qform-rank3-coupled-B10-r1/REPORT.md`.
-4. `fleet04/B20`, `QFORM-AGGREGATE-HYPERBOLIC-SQUARE-v1`, `yspennstate/math-open-problems@1f85677029fc5ae27fc69b278620ae89d789efd2`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T132134Z-fleet04-B20-QFORM-r1/REPORT.md`.
+4. `fleet04/B20`, `QFORM-AGGREGATE-HYPERBOLIC-SQUARE-v1`, `private-source-repository@1f85677029fc5ae27fc69b278620ae89d789efd2`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T132134Z-fleet04-B20-QFORM-r1/REPORT.md`.
 5. The two-dimensional product-projection density bound `<=2` (the `k=2` case of the Livshyts--Paouris--Pivovarov product-marginal theorem), already used in the team's cross-block proof.
 
 The new theorem strictly extends the just-completed aggregate hyperbolic-square mechanism in one direction: the two variables feeding the square channel need not be independent; they may be an arbitrary dependent pair with a bounded joint density. Independence of the hyperbolic scalar from that whole pair remains essential.

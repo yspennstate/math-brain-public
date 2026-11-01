@@ -11,7 +11,7 @@ The unrestricted conjecture remains OPEN, and continuity for the unrestricted ta
 
 The analytic input is the completed supporting ridge theorem
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 For an ORIGINAL-coordinate cross block `B`, `gamma>0`,
@@ -28,7 +28,7 @@ The same source proves the perturbation estimate: if `B=B_0+F`, `||F||<=eta`, an
 
 The designated partner actually applied below is fleet02/B08 r23,
 
-`yspennstate/math-open-problems@ab1940d32f6f758e7a355c128916a523e5519537`,
+`private-source-repository@ab1940d32f6f758e7a355c128916a523e5519537`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T064247Z-fleet02-B08-qform-diffuse-r23/REPORT.md`.
 
 Its theorem `QFORM-DIFFUSE-POST-2/3-CORE-ROUTER-v1` says that `Z_3=e_3(B^T B)>=zeta^6` implies either a continuous `C_0` density `<987/zeta`, a physical star `>zeta`, or one of the explicit S/R1/E2/BICORE product-preserving survivors recorded in Section 4 below.

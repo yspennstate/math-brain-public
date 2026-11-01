@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R12 HARD OUTSIDE — H0006 third run: the finite-graph layer needs a quantitative geometry rate, not merely graph size
 
-Repository / branch: private `yspennstate/math-open-problems`, `master`.
+Repository / branch: private `private-source-repository`, `master`.
 Deployment: `NEW-METHODS-2026-09-16`.
 Current exclusive claim: `operations/claims/H0006.md`.
 Current source: Achyut Kumar (2026), arXiv:2608.15987v1, Section 12.3 open problem (4), **“Finite-size scaling on `G_n`.”**

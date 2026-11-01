@@ -15,7 +15,7 @@ Fresh owner control remained revision `2026-09-22.15`, QFORM-only, with no fleet
 
 The newest compatible completed designated partner remained fleet03/B20 r44:
 
-- `yspennstate/math-open-problems@d579d083dcdd2d2a7757632dabbe94ec15adfa40`;
+- `private-source-repository@d579d083dcdd2d2a7757632dabbe94ec15adfa40`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T014735Z-fleet03-B20-QFORM-r44/REPORT.md`.
 
 Its exact aligned-collar scale is
@@ -41,7 +41,7 @@ and the `P|Q` block remains strong-top-four and in the absolute rank-one tube `s
 
 The fresh integrated-Fourier source used below is fleet01/B02 r43:
 
-- `yspennstate/math-open-problems@041bd053495db9b7e7c12d994501de10c059c459`;
+- `private-source-repository@041bd053495db9b7e7c12d994501de10c059c459`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260924T022016Z-fleet01-B02-qform-auto11-r43/REPORT.md`.
 
 It first completes every partial physical block with `E2>4/9` to a full original-coordinate cut. Apart from an already-tracked giant near-rank-one branch and paid E3/coordinate-core branches, its ultra-rank-two survivor has an exact decomposition
@@ -259,7 +259,7 @@ This changes the mechanism after repeated rank-one reproduction: the final flip 
 
 The owner-pinned source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 Its unrestricted D5 theorem says for every literal physical cross block `N`, with arbitrary same-bank curvature and outside couplings retained,

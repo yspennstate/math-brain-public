@@ -16,7 +16,7 @@ No moment, compact-support, log-concavity, connected-support, diagonal-basis, po
 
 The latest completed compatible designated partner remains fleet03/B13 r48,
 
-`math-open-problems@ba4c0f14cf9ca505e346b284a530662c6522b514:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260924T095803Z-fleet03-B13-qform-r48/REPORT.md`.
+`private-source@ba4c0f14cf9ca505e346b284a530662c6522b514:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260924T095803Z-fleet03-B13-qform-r48/REPORT.md`.
 
 The immediately preceding canonical fleet02/B13 run already combined r48 with the arbitrary-rank physical-pair theorem and proved that every high-density diffuse exact-rank-two survivor is forced into
 
@@ -305,7 +305,7 @@ Thus no hidden affine-uniform theorem is used. The new first unpaid implication 
 
 The required owner-pinned source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was reread in `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed unconditional D5 theorem gives for every disjoint original-coordinate physical cross block `B=A[I,J]`
 

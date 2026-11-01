@@ -16,7 +16,7 @@ The unrestricted theorem is not claimed. All coordinates below are ORIGINAL phys
 
 The latest completed designated partner actually used is fleet03/B07 r30, available at
 
-`yspennstate/math-open-problems@71c369d883ef5211a624f1e943e53dcfbcc3dcdd`,
+`private-source-repository@71c369d883ef5211a624f1e943e53dcfbcc3dcdd`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T130749Z-fleet03-B07-qform-r30/REPORT.md`.
 
@@ -36,7 +36,7 @@ All other r30 alternatives are already routed separately: a paid physical pair o
 
 The required pinned newest-Claude source was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
@@ -49,7 +49,7 @@ At `h=2/3`, this is `9 sqrt(3e) Z^(-1/6)`. The proof uses original-coordinate de
 
 For bounded physical cores I use the completed projected-gradient finite-dimensional receiver
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
 
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`:
 if an `m`-coordinate physical principal block has three actual eigenvalues of modulus at least `sigma`, then, uniformly in arbitrary affine terms,

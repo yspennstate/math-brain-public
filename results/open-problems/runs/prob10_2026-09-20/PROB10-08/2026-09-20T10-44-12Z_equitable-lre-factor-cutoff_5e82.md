@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # PROB10-08 — equitable LRE-factor cutoff beyond graph coverings
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Status: **OPEN / PARTIAL for Salez Problem 2.3; PROVED restricted source-admissible class this run; independent validation pending; worldwide novelty UNVERIFIED.**
 

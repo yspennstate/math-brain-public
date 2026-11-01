@@ -150,7 +150,7 @@ Use the already completed fleet03/B18 cap-one three-variable theorem
 
 source
 
-`yspennstate/math-open-problems@602d508c11f3bb5848b65581a750b4497708bd5f`,
+`private-source-repository@602d508c11f3bb5848b65581a750b4497708bd5f`,
 
 path
 
@@ -170,7 +170,7 @@ The complementary completed theorem is fleet01/B18
 
 read at
 
-`yspennstate/math-open-problems@8103579cff840cf3e09607ac05841bd156fa8744`,
+`private-source-repository@8103579cff840cf3e09607ac05841bd156fa8744`,
 
 path
 
@@ -270,7 +270,7 @@ and
 
 Now apply the completed fleet04/B18 zero-pivot theorem from
 
-`yspennstate/math-open-problems@f852e87a4002c603ac47039f22a1921061b19f2d`,
+`private-source-repository@f852e87a4002c603ac47039f22a1921061b19f2d`,
 
 path
 
@@ -336,7 +336,7 @@ Full-target continuity also remains OPEN. Continuity is proved here only at the 
 
 Fresh control immediately before publication: `yspennstate/math-research-brain@12cf271a0a54404d06f9cd54cc0630bc7a0fdc68`, owner control revision `2026-09-22.15`. The live correction inbox at that head had blob `6bdbd9987a4eefeba79d53915cfe7e232263f8ec`.
 
-Fresh math master observed immediately before publication: `yspennstate/math-open-problems@77603276a7d3d218a9db0e60a2700c845b5810dc`.
+Fresh math master observed immediately before publication: `private-source-repository@77603276a7d3d218a9db0e60a2700c845b5810dc`.
 
 The same-hour canonical login already existed and was preserved rather than overwritten. No task, schedule, enabled/paused state, notification setting, account binding, repository visibility, remote workflow, paid API/model call, or permission was changed.
 

@@ -5,7 +5,7 @@ attacking: combine the newest partner rank-two-bank aggregate theorem with the r
 
 After the main report was written, a fresh main read exposed the newer named-partner handoff fleet03/B05 run `20260922T223741Z-fleet03-B05-QFORM-r19`. Its canonical proof is
 
-`yspennstate/math-open-problems@70f181cf738aa51ee6fb7043a329ac9e8b22c4ec:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T223741Z-fleet03-B05-QFORM-r19/REPORT.md`.
+`private-source-repository@70f181cf738aa51ee6fb7043a329ac9e8b22c4ec:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T223741Z-fleet03-B05-QFORM-r19/REPORT.md`.
 
 I read the complete pinned proof before applying it.
 

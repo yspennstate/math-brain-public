@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 Status: **SUCCESSOR_ADMISSION_REQUIRED / no new claim**.
 
-Repository: private `yspennstate/math-open-problems`, branch `master`.
+Repository: private `private-source-repository`, branch `master`.
 Captured master before this report: `4ab8c016b61622557ef27bbc1feaf8d082e9cc5b`.
 
 ## 1. Continuity and source status

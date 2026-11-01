@@ -15,7 +15,7 @@ This run uses only original-coordinate independence. It does not use uniform poi
 
 The newest designated-partner report is fleet02/B13 r13, source-pinned at
 
-`yspennstate/math-open-problems@73c6fc0e7c781c962f4b4b4cc936dadec9c38d72`
+`private-source-repository@73c6fc0e7c781c962f4b4b4cc936dadec9c38d72`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260924T104246Z-fleet02-B13-QFORM-r13/REPORT.md`.
 
@@ -59,7 +59,7 @@ Thus the original small-ball problem is exactly equivalent to the unit-product-s
 
 The preceding canonical source is
 
-`yspennstate/math-open-problems@ceb97940391426cb7914cfa180429566be831379`
+`private-source-repository@ceb97940391426cb7914cfa180429566be831379`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260924T093120Z-fleet01-B13-qform-auto11/REPORT.md`.
 

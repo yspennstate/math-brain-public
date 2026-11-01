@@ -17,7 +17,7 @@ The unrestricted conjecture is **not proved** here. The new theorem identifies a
 
 The analytic receiver is the independently checked arbitrary-rank projected-crossing theorem
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`,
 
@@ -25,13 +25,13 @@ together with this worker's preceding marginal-removal theorem
 
 `QFORM-CANONICAL-COMPOUND-PROMOTION-v1`,
 
-`yspennstate/math-open-problems@d5e114f4a9f515344575756615fce3a754195b13`
+`private-source-repository@d5e114f4a9f515344575756615fce3a754195b13`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T185132Z-fleet01-B04-QFORM-auto11-r17/REPORT.md`.
 
 The designated fleet02/B04 result applied below is its latest completed heavy-row report
 
-`yspennstate/math-open-problems@beaf7fe9fb87fb81a13a35d5237793eb3b0dde14`
+`private-source-repository@beaf7fe9fb87fb81a13a35d5237793eb3b0dde14`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T182451Z-fleet02-B04-auto11-r12/REPORT.md`.
 

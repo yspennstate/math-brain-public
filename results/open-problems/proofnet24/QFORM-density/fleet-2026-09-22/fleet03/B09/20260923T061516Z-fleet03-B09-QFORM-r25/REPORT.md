@@ -21,7 +21,7 @@ The newest compatible B09 peer theorem actually used is fleet02/B09,
 
 canonical report commit
 
-`yspennstate/math-open-problems@ab1efb0930b7a16dc71c32530e155dd521289ab9`
+`private-source-repository@ab1efb0930b7a16dc71c32530e155dd521289ab9`
 
 at
 
@@ -41,7 +41,7 @@ where `Theta=|det(f,Kf,q)|`. Its report pays the exact-zero physical core by the
 Two analytic inputs are also source-pinned:
 
 1. fleet02/B05 `QFORM-RANDOM-SLOPE-HALF-RIESZ-v1` and its independent-square lift, canonical
-   `yspennstate/math-open-problems@b6ded18bee0fe20353530653ce654308cac0631c`,
+   `private-source-repository@b6ded18bee0fe20353530653ce654308cac0631c`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T225232Z-fleet02-B05-QFORM-37473ccc/REPORT.md`.
    If `X` is independent of an environment `E`, `||p_X||_infinity<=L_X`, the random slope `T(E)` has density cap `L_T`, and `R=K(E)+2XT(E)`, then
 
@@ -52,7 +52,7 @@ Two analytic inputs are also source-pinned:
    `4 sqrt(2 L_X L_T) |a|^(-1/2)`.                             (1.3)
 
 2. fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical
-   `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+   `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
    Its `k=1` consequence is: for an original-coordinate product vector `Z` and nonzero coefficient vector `w`,
 

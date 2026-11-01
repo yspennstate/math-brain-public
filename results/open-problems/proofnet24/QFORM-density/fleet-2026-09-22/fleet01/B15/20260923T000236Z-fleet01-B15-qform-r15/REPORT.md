@@ -28,7 +28,7 @@ whenever `s>=1`.
 
 The newest owner-required synthesis is the no-pivot reduction at
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
 
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`.
 
@@ -53,7 +53,7 @@ Two completed `fleet02/B15` results are used at equations below.
 
 Canonical source:
 
-`yspennstate/math-open-problems@4b2e6a36bcffeb767998c43d27cee1d8f5eaa07e`,
+`private-source-repository@4b2e6a36bcffeb767998c43d27cee1d8f5eaa07e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T150242Z-fleet02-B15-qform-r3/REPORT.md`.
 
@@ -65,7 +65,7 @@ I use this theorem only in the exact limiting identity (4.4) below; it is not us
 
 Canonical source:
 
-`yspennstate/math-open-problems@b1d930ff0fbc625393aebcd4a59f9ba1ead465ed`,
+`private-source-repository@b1d930ff0fbc625393aebcd4a59f9ba1ead465ed`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T130201Z-fleet02-B15-qform-r2/REPORT.md`.
 
@@ -266,7 +266,7 @@ This is now a **one-scale geometric integral problem**: the output window is fix
 
 The completed fleet03/B15 r20 theorem at
 
-`yspennstate/math-open-problems@626e33966e69eda517dd09776028cbd80bd5d372`
+`private-source-repository@626e33966e69eda517dd09776028cbd80bd5d372`
 
 shows for any probability law `mu`
 

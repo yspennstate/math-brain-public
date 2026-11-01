@@ -13,7 +13,7 @@ Execution context: `WITHOUT_VERIFIED_BRAIN`.
 
 This run uses the exact product-provenance tetrahedral projection established in the preceding B17 report
 
-`yspennstate/math-open-problems@4e2b1356186ad8b35a1626dc5bb6c739f7259805`
+`private-source-repository@4e2b1356186ad8b35a1626dc5bb6c739f7259805`
 
 at
 
@@ -48,7 +48,7 @@ C_{\rm univ}\ge 3\sqrt2,
 
 from the diffuse block-CLT construction in
 
-`yspennstate/math-open-problems@8624982153e5a2154e4ae8922d2fe4dc77080efc`.
+`private-source-repository@8624982153e5a2154e4ae8922d2fe4dc77080efc`.
 
 The current live correction inbox was reread before publication. In particular, this proof does not use the refuted arbitrary-joint coarea bound, refuted positive conditional-density moments, post-rotation independence, a fixed fragment-count reduction, or law-uniform pointwise oscillatory decay.
 
@@ -260,7 +260,7 @@ with all three matrices sharing the nonzero spectrum `{1,1,-1}` and the same tet
 
 The completed partner theorem used here is
 
-`yspennstate/math-open-problems@fefb4cf4f0af17c810341152311c3822c78d5b7f`,
+`private-source-repository@fefb4cf4f0af17c810341152311c3822c78d5b7f`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T082513Z-fleet02-B17-QFORM-r12/UNIFORM_EXTENSION.md`.
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — **NO MATHEM
 # NM13-07 — first admission screen for geometric/extremal CLOSABLE OUTSIDE work
 
 UTC report time: 2026-09-17T21:47:00Z  
-Repository: `yspennstate/math-open-problems`, branch `master`  
+Repository: `private-source-repository`, branch `master`  
 Own namespace: `proofnet24/NM13-07/`  
 Captured master before write: `4d1beb3e5b51ccb494117307c1f8b2eaf2859d9e`  
 Category: **CLOSABLE OUTSIDE**  

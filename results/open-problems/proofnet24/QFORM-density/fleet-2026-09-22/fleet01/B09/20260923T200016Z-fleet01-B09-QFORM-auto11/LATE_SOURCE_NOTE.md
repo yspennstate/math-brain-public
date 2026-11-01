@@ -2,7 +2,7 @@
 
 After `REPORT.md` was committed, a fresh listing showed a newer **completed** designated partner result than the r19 report used in Section 7:
 
-`yspennstate/math-open-problems@9e1e4143471b51c63460be8d1f536c3da0b4d8c5`
+`private-source-repository@9e1e4143471b51c63460be8d1f536c3da0b4d8c5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T195612Z-fleet02-B09-QFORM-r20/REPORT.md`,
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-13 — P0083 admission and first research run
 
 Date: 2026-09-19.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Track: `proofnet24/NM13-13/`.  
 Category: HARD OUTSIDE.  
 Overall source status after this run: **PARTIAL**.  

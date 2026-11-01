@@ -19,7 +19,7 @@ for every finite dimension, every product law with one-dimensional densities bou
 
 The newest Claude-attributed source used here is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`,
 
 whose Theorem C gives a dimension-free ruled estimate on the one-sheet side of an exact rank-three form of signature `(+,+,-)`.  I independently check the rough-input bridge completed by the designated partner fleet03/B15, and then apply the ruled estimate to the owner-relevant positive tent functional.  The result isolates the exact remaining obstruction to the two-sheet side.
@@ -37,7 +37,7 @@ Q=\lambda_1Y_1^2+\lambda_2Y_2^2-\mu Y_3^2,
 
 The partner fleet03/B15 report at
 
-`yspennstate/math-open-problems@b4c8edd512776799decc9a16a40a3b37afba45b6`,
+`private-source-repository@b4c8edd512776799decc9a16a40a3b37afba45b6`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T233101Z-fleet03-B15-qform-r21/REPORT.md`
 
 proves, for every interval \(I\subset[0,\infty)\),
@@ -311,6 +311,6 @@ The live correction `QFORM-TWOSHEET-XRAY-ONLY-FALSE` is respected: bounded two-d
 
 ## 7. Sources consumed
 
-- Required newest Claude source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
-- Completed designated partner applied and independently checked: `yspennstate/math-open-problems@b4c8edd512776799decc9a16a40a3b37afba45b6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T233101Z-fleet03-B15-qform-r21/REPORT.md`.
+- Required newest Claude source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
+- Completed designated partner applied and independently checked: `private-source-repository@b4c8edd512776799decc9a16a40a3b37afba45b6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T233101Z-fleet03-B15-qform-r21/REPORT.md`.
 - Corrections consumed include the false arbitrary-joint coarea route, false positive conditional-density moment route, no-independence-after-rotation, and `QFORM-TWOSHEET-XRAY-ONLY-FALSE`.

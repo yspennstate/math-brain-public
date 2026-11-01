@@ -16,10 +16,10 @@ The live corrections were consumed before this derivation. In particular this re
 
 Immediate B19 sources:
 
-1. fleet01/B19 predecessor `QFORM-STAR4-RANK2-SELECTEDVOLUME-OR-ALIGNEDCORE-v1`, canonical `yspennstate/math-open-problems@f63decefb7148fe0640c66d014a49a4ef1f5621e`.
-2. designated partner fleet02/B19 r35, canonical `yspennstate/math-open-problems@744a54e89abb033ca3ce34db0c51b66a499dba88`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T151040Z-fleet02-B19-QFORM-r35/REPORT.md`. It proves by construction that the third target mode may remain completely in the same two in-plane STAR4 singular planes; no transverse/source-disjoint forcing is valid.
-3. fleet03/B19 r36, canonical `yspennstate/math-open-problems@6dfd43d5519df1fc40ea26f7d0bbe300ad32412d`, proving `QFORM-STAR4-THIRD-RESOURCE-CARRIER-DICHOTOMY-v1`.
-4. Fresnel/decoupling Theorem D from `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
+1. fleet01/B19 predecessor `QFORM-STAR4-RANK2-SELECTEDVOLUME-OR-ALIGNEDCORE-v1`, canonical `private-source-repository@f63decefb7148fe0640c66d014a49a4ef1f5621e`.
+2. designated partner fleet02/B19 r35, canonical `private-source-repository@744a54e89abb033ca3ce34db0c51b66a499dba88`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T151040Z-fleet02-B19-QFORM-r35/REPORT.md`. It proves by construction that the third target mode may remain completely in the same two in-plane STAR4 singular planes; no transverse/source-disjoint forcing is valid.
+3. fleet03/B19 r36, canonical `private-source-repository@6dfd43d5519df1fc40ea26f7d0bbe300ad32412d`, proving `QFORM-STAR4-THIRD-RESOURCE-CARRIER-DICHOTOMY-v1`.
+4. Fresnel/decoupling Theorem D from `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 Theorem D is used only on a literal original-coordinate cross block. If `M=A[I,J]`, `I cap J=empty`, `Z=e_3(M^T M)`, and the natural squared-minor row marginals satisfy `alpha_i<=1/2`, then
 

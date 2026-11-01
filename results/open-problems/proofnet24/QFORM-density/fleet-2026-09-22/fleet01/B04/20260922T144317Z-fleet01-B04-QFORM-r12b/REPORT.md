@@ -26,7 +26,7 @@ No law-uniform pointwise Fresnel decay, post-rotation independence, naive fiber 
 
 Source:
 
-`yspennstate/math-open-problems@b7168a1b0b52fbf69705170ff9795435efeb849f`
+`private-source-repository@b7168a1b0b52fbf69705170ff9795435efeb849f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260922T122057Z-01c809a1/REPORT.md`.
 
@@ -40,7 +40,7 @@ The same report proves the all-zero-diagonal physical-triple theorem. The presen
 
 Source:
 
-`yspennstate/math-open-problems@8a6b40dc9b492b6ec05a16d58d68dffd4f590e50`
+`private-source-repository@8a6b40dc9b492b6ec05a16d58d68dffd4f590e50`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260922T141554Z-fleet02-B04-QFORM-r11/REPORT.md`.
 
@@ -307,7 +307,7 @@ This is an explicit rotated indefinite estimate obtained without any post-rotati
 
 I now apply Theorem 5.1 to the completed fleet03/B19 structural reduction
 
-`yspennstate/math-open-problems@143e97c42cdbccb14fe847efb6abd3f6c3d349dc`
+`private-source-repository@143e97c42cdbccb14fe847efb6abd3f6c3d349dc`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T143049Z-fleet03-B19-QFORM-r11b/REPORT.md`.
 

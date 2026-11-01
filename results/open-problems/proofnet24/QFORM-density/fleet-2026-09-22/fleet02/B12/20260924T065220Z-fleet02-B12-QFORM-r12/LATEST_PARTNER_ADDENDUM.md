@@ -1,6 +1,6 @@
 # Latest partner addendum — fleet03/B12 r51
 
-After the main REPORT was written, fleet03/B12 r51 completed at `yspennstate/math-open-problems@75c96246ea04c6377c9d1a2ff6a0184319052dbe`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T065020Z-qform-eigenvalue-r51/REPORT.md`.
+After the main REPORT was written, fleet03/B12 r51 completed at `private-source-repository@75c96246ea04c6377c9d1a2ff6a0184319052dbe`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T065020Z-qform-eigenvalue-r51/REPORT.md`.
 
 Its magnitude-free transverse-angle theorem is compatible and complementary. For baseline carrier `M=A_*P`, `g=s_m(M)>0`, and arbitrary symmetric signed packet `G`, if
 

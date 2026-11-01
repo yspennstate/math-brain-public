@@ -2,7 +2,7 @@
 
 Run: `20260925T143512Z-fleet03-B13-lean-r28`
 
-Target: `yspennstate/math-open-problems@4e530247ec0ef4101a6e5ecf621bd35a969c42aa`, repaired paper blob `98e45d53d106db9a205051a4dd4917fc39dc2e3a`, SHA-256 `90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb`.
+Target: `private-source-repository@4e530247ec0ef4101a6e5ecf621bd35a969c42aa`, repaired paper blob `98e45d53d106db9a205051a4dd4917fc39dc2e3a`, SHA-256 `90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb`.
 
 Fresh controls and the current repaired Lean coverage were read. The 25 Sep 2026 12:29 owner override remains in force: Lean verification only. Current `LEAN_COVERAGE.md` blob is `80491f1e5a8e43a8890034a0bfbd3168f0040ec7`; Lemma 5.2 is still partial, with only `QformFiveB.ellipse_jacobian` and `QformFiveB.definite_const` compiled for this lemma. No newer matching full-Lemma-5.2 compile was found.
 

@@ -22,7 +22,7 @@ The previous B13 run closed rank-exactly-three frames with any fixed finite numb
 
 The designated `fleet04/B13` artifact was not present in the fresh repository snapshot, so the asynchronous instruction forbids waiting or fabricating it. I instead applied the completed adjacent fleet04 structural result:
 
-`yspennstate/math-open-problems@f57b07e7218b4318dd85bfef9ea247c7c647a716`
+`private-source-repository@f57b07e7218b4318dd85bfef9ea247c7c647a716`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`.
 
@@ -36,7 +36,7 @@ over arbitrary independent densities `0<=f_i<=1`, `int f_i=1`, is attained in th
 
 Consumed source:
 
-`yspennstate/math-open-problems@289810e1f075755898f573ee5b863ad3fa9af5b8`
+`private-source-repository@289810e1f075755898f573ee5b863ad3fa9af5b8`
 
 `qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`.
 
@@ -48,7 +48,7 @@ For three independent density-one coordinates and any real symmetric invertible 
 
 Consumed source-pinned peer snapshot:
 
-`yspennstate/math-open-problems@d358b89ba78735cee238c01e83c2c3ca9ec66352`
+`private-source-repository@d358b89ba78735cee238c01e83c2c3ca9ec66352`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260922T135910Z-fleet01-B13-qform-r13/REPORT.md`.
 

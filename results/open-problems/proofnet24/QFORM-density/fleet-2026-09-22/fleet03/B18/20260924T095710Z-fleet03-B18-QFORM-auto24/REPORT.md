@@ -25,7 +25,7 @@ I also rechecked Herry--Malicet--Poly, arXiv:2303.09488. Their quadratic-form re
 
 The designated partner result actually applied in Section 6 is fleet04/B18 r6,
 
-`yspennstate/math-open-problems@b8cb4aa22c840d8f4fc76bcca6d0cb49d4aeb9f9`
+`private-source-repository@b8cb4aa22c840d8f4fc76bcca6d0cb49d4aeb9f9`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260924T032058Z-fleet04-B18-QFORM-r6/REPORT.md`,
 
 which proves the two-sided-anchor transverse-volume payment

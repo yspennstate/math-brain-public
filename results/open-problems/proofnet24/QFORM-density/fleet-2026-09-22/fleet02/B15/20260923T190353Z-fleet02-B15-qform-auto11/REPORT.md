@@ -18,7 +18,7 @@ over all dimensions, all independent cap-one marginals, and all symmetric `A` wi
 
 The new projected-Fisher theorem at
 
-`math-open-problems@4a65677d185d35154dc3dfae320c5df9f939b8a2`,
+`private-source@4a65677d185d35154dc3dfae320c5df9f939b8a2`,
 `proofnet24/QFORM-density/interactive/20260923T184054Z-fisher-continuation/FISHER_INFORMATION.md`
 
 proves, under `sqrt(f_i) in H^1`,
@@ -202,7 +202,7 @@ Thus every Gaussian-mixture approximation of the unit interval must send its inv
 
 The required completed source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`
 
 proves the one-sheet theorem for exact rank-three signature `(+, +, -)`. For eigenvalue magnitudes `lambda_1,lambda_2,mu`, the majority-side density is bounded by
@@ -339,4 +339,4 @@ The regularity/closure routes are now more sharply delimited:
 
 Therefore a full proof cannot be obtained by proving the theorem on either of these regular subclasses and invoking qualitative weak/continuity closure with the regularity budget held fixed. The first unpaid implication in the Fisher route is a **uniform signed-score cancellation estimate** using final cap/product provenance rather than `|S|^2`; in the physical ruled branch the first unpaid local term remains the minority/two-sheet contribution, for which the live `QFORM-TWOSHEET-XRAY-ONLY-FALSE` correction forbids a generic X-ray-only substitute. Globally, a structural exit into the completed volume/hub/grouped-coordinate branches is still required when no uniformly conditioned physical triple exists.
 
-The latest source head resolved before this report was `math-open-problems@810eb1d6e50d68ab2ee70591edb690051823c163`; its new `rho*-M*`/single-hub additions do not supersede the ruled theorem or remove the rough signed-score/two-sheet obligations above. Full unrestricted QFORM remains OPEN.
+The latest source head resolved before this report was `private-source@810eb1d6e50d68ab2ee70591edb690051823c163`; its new `rho*-M*`/single-hub additions do not supersede the ruled theorem or remove the rough signed-score/two-sheet obligations above. Full unrestricted QFORM remains OPEN.

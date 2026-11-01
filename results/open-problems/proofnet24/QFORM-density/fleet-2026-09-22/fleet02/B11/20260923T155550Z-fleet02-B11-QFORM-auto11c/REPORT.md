@@ -40,7 +40,7 @@ Read in full scope before this proof:
 - `FOURIER_ROUTE_REPORT.md`;
 - `COUNTEREXAMPLE_SEARCH.md`
 
-from `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory
+from `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 The result applied below is the proved Jensen extension D' of the three-volume theorem. If `I,J` are disjoint original-coordinate sets, `C=A[I,J]`,
@@ -68,7 +68,7 @@ with reflection giving the majority-sign half-line for `(1,2)`. It also records 
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems@ec304ed03ea21d1ff58ee9e901915610446fb80a`,
+`private-source-repository@ec304ed03ea21d1ff58ee9e901915610446fb80a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T145222Z-fleet02-B11-QFORM-auto11b/REFINEMENT.md`.
 
@@ -125,7 +125,7 @@ The nearest-line displacement of each row in its physical plane is at most the c
 
 Latest completed partner read and applied:
 
-`yspennstate/math-open-problems@32a96eb18f2b23de67a15d846a56ccb3d998d889`,
+`private-source-repository@32a96eb18f2b23de67a15d846a56ccb3d998d889`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T152023Z-fleet03-B11-QFORM-r35/REPORT.md`.
 

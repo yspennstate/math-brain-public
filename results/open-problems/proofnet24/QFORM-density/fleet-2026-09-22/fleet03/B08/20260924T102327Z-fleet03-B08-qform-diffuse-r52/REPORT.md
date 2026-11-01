@@ -18,7 +18,7 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, identica
 
 Immediate same-slot predecessor:
 
-- `yspennstate/math-open-problems@b72d0f5814183fc536c65a4b9dbbbec4ae93d611`,
+- `private-source-repository@b72d0f5814183fc536c65a4b9dbbbec4ae93d611`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T092359Z-fleet03-B08-qform-diffuse-r51/REPORT.md`.
 
 Its surviving geometry has one ORIGINAL physical hub and a child:
@@ -62,7 +62,7 @@ It also proved the tunable literal-crossing payment: with `eta=2^(-20)`, a star 
 
 Analytic input used here for the new branch is the completed rank-three spread Fresnel theorem as source-pinned and re-used in
 
-- `yspennstate/math-open-problems@f9b52864d58b3a80fbc59b48e247af8e9a759a6f`,
+- `private-source-repository@f9b52864d58b3a80fbc59b48e247af8e9a759a6f`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260924T094535Z-fleet02-B03-QFORM-auto11-r53/REPORT.md`.
 
 At its exact scope: if `S=UMU^T`, `U^TU=I_3`, every physical row leverage of `U` is at most `1/2`, and the original inputs are independent with density caps one, then
@@ -325,7 +325,7 @@ The exact aligned point `beta=0` itself was already paid by the earlier exact-al
 
 The designated completed partner remains
 
-- `yspennstate/math-open-problems@f324267086411b9725aa0733e108ab6efc2e760a`,
+- `private-source-repository@f324267086411b9725aa0733e108ab6efc2e760a`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260924T081435Z-fleet04-B08-QFORM-r3/REPORT.md`,
 - theorem `QFORM-DISTRIBUTED-STAR-DERIVATIVE-SPLIT-v1`.
 

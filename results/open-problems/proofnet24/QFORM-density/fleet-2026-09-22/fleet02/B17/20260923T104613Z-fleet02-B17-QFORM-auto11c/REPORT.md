@@ -169,7 +169,7 @@ Thus two genuine macroscopic physical rows can approach the diffuse `3 sqrt(2)` 
 
 The predecessor used here is the completed B17 partial-heavy theorem
 
-`yspennstate/math-open-problems@0feb5b58d53a266b5df517982780448aa9b6daf5`,
+`private-source-repository@0feb5b58d53a266b5df517982780448aa9b6daf5`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T232912Z-r11-partial-heavy/REPORT.md`.
 
 For
@@ -338,7 +338,7 @@ This is the key new implication over the predecessor: **the off-zero loophole is
 
 The required source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`.
 
 Its completed **Theorem F (Fresnel–Brascamp–Lieb)** is used here as an actual finite-matrix inequality, not merely cited. Diagonalize `B_u=O^T diag(1,1,-1)O` and set
@@ -399,12 +399,12 @@ This is the requested application of a completed `e5f...` result to a real obstr
 The latest completed partner result is
 
 `fleet03/B17`,
-`yspennstate/math-open-problems@c1d4b2518211f8a5ea1dc173722a453e02e6a31c`,
+`private-source-repository@c1d4b2518211f8a5ea1dc173722a453e02e6a31c`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T100331Z-fleet03-B17-QFORM-auto11/REPORT.md`.
 
 It proves a weighted local limit for cap-one finite-activity remote fragments: a normalized bank tends to `G+aN`, with `G~N(0,1/12)` and `N` Poisson. Its worker-owned Gaussian input is
 
-`yspennstate/math-open-problems@dcf8885d5153370cacfa246ad1e29fb06d971769`,
+`private-source-repository@dcf8885d5153370cacfa246ad1e29fb06d971769`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T070310Z-fleet03-B17-QFORM-r25/REPORT.md`,
 
 which proves the sharp arbitrary-mean Gaussian ceiling

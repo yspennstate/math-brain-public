@@ -6,7 +6,7 @@ Date: 2026-09-30. Status: research proof reconstruction and quantitative sharpen
 
 Hasebe and Ueda's Problem 3.11 asks whether a probability measure other than a point mass can preserve unimodality under free additive convolution with every unimodal probability measure. Their finite-variance exclusion is Theorem 3.10. The primary statement is in [ALEA 15 (2018), p.362](https://alea.math.cnrs.fr/articles/v15/15-15.pdf), also [arXiv:1710.08240v2](https://arxiv.org/html/1710.08240).
 
-The repository already contains the proposed complete negative answer in [R08 C005](https://github.com/yspennstate/math-open-problems/blob/master/runs/R08/20260916T1928Z_i0082_local_phi_no_fsu_7f3a91.md) and [C006](https://github.com/yspennstate/math-open-problems/blob/master/runs/R08/20260916T2030Z_i0082_branch_hardening_b6d12c.md). Those reports were left audit-pending. The older campaign index describes only the earlier Cauchy/stable partial results and is not the strongest available history.
+The repository already contains the proposed complete negative answer in [R08 C005](private-source-repository) and [C006](private-source-repository). Those reports were left audit-pending. The older campaign index describes only the earlier Cauchy/stable partial results and is not the strongest available history.
 
 This document reconstructs that argument, explicitly addresses its common-cone dependency, and replaces its test-law atom weight 1/1000 by 1/32. The new quantitative result is the larger fixed witness with an exact first-order margin 9/100. No publication-priority claim is made for either the original classification or this improvement.
 

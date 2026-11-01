@@ -14,7 +14,7 @@ For the infinite-support branch the fixed point forces a positive atom at the co
 
 The current explicit three-atom upper-bound witness has boundary mass `0.0839432`, so it is **not** an exact cavity fixed point; this is consistent with the dichotomy because that witness is finitely supported. No claim is made that the current witness is a true local or global minimizer.
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Continuity, ownership, required reads, and current source status
 

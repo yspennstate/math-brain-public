@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-09 — post-P0245 admission delta screen 31: no canonical admission delta; P0409 remains prior-attempted and HARD-shaped
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-09` / `proofnet24/NM13-09/`  
 Category: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed stochastic-process existence/counterexample questions decidable by an explicit process construction, exact transition law, finite certificate, or complete short special-class theorem  

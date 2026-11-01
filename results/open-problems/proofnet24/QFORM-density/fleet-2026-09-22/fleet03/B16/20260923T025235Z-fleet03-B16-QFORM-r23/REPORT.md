@@ -15,7 +15,7 @@ The full owner target remains OPEN: for every dimension, every independent real 
 
 This run works inside the exact-rank-three residual chamber isolated by fleet03/B16 r22, `QFORM-EXACT-R3-FINITE-HEAVY-CORE-v1`, canonical source
 
-`yspennstate/math-open-problems@980f2e67036908408a0c33b8eb6bf1a7e2f233e6:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T022430Z-fleet03-B16-QFORM-r22/REPORT.md`.
+`private-source-repository@980f2e67036908408a0c33b8eb6bf1a7e2f233e6:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T022430Z-fleet03-B16-QFORM-r22/REPORT.md`.
 
 Write
 
@@ -36,7 +36,7 @@ and, because the r22 heavy-pivot exit has failed,
 
 Here `d` is the disjoint-Pluecker probability from the completed designated partner fleet04/B16 theorem `QFORM-RULED-PLUECKER-ENDPOINT-v1`, canonical source
 
-`yspennstate/math-open-problems@b111363ff02b67015d14db35482e0150591744cd:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T231542Z-fleet04-B16-QFORM-r1/REPORT.md`.
+`private-source-repository@b111363ff02b67015d14db35482e0150591744cd:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T231542Z-fleet04-B16-QFORM-r1/REPORT.md`.
 
 That theorem is used at an actual inequality below: its `d>=1/64` branch gives `||p_Q||_infinity<=24`, so the only branch considered here is the complementary `d<1/64` branch. Its majority-sign one-sheet inequality `pi sqrt(2)` also remains available after the structural reduction below.
 

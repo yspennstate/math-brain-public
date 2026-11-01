@@ -1,6 +1,6 @@
 # Independent square bank may be fully shared by V and P
 
-This addendum extends the [all-target conditional-hub square receiver](https://github.com/yspennstate/math-open-problems/blob/1a79f3525d40fef2baf7a1d19d2614f2b786bc49/proofnet24/QFORM-density/interactive/20260923T203741Z-independent-v-square-product-band/GLOBAL_LEVEL_ADDENDUM.md). Its original requirement \(p_T=0\) can be replaced by **collinearity** with \(v_T\).
+This addendum extends the [all-target conditional-hub square receiver](private-source-repository). Its original requirement \(p_T=0\) can be replaced by **collinearity** with \(v_T\).
 
 Let \(H\) be independent physical cap-one, and let \(L=\ell\cdot X\), \(V=v\cdot X\), \(P=p\cdot X\) be orthonormal linear forms of independent cap-one original leaves. Suppose a nonempty literal original-coordinate bank \(T\) has
 \[

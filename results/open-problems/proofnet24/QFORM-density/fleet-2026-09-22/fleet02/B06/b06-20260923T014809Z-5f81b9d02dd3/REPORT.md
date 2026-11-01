@@ -8,17 +8,17 @@ Programme: QFORM-DENSITY-3EIG-20260922. Run: `b06-20260923T014809Z-5f81b9d02dd3`
 ## 1. Sources actually used
 
 
-Designated partner actually applied: fleet03/B06, run `20260923T004812Z-fleet03-B06-qform-r23`, source snapshot `yspennstate/math-open-problems@0c9a2e6a85863dc639c9551c09605ceafb5afb14`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T004812Z-fleet03-B06-qform-r23/REPORT.md`, blob `ec3a6f691bec67f77dbeedaa4a09bbe04742f904`. Its theorem `QFORM-BICOLOOP-STAR-AGGREGATION-SQUEEZE-v1` says that, in the inherited bicolooop chamber, either a determinant star pays the branch or the two exterior top-two singular directions are simultaneously diffuse. At its tau=1/16 collar the inherited nonanchor top-two leverage is <0.099 on both physical sides, while the nonzero higher-rank tail must still be paid.
+Designated partner actually applied: fleet03/B06, run `20260923T004812Z-fleet03-B06-qform-r23`, source snapshot `private-source-repository@0c9a2e6a85863dc639c9551c09605ceafb5afb14`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T004812Z-fleet03-B06-qform-r23/REPORT.md`, blob `ec3a6f691bec67f77dbeedaa4a09bbe04742f904`. Its theorem `QFORM-BICOLOOP-STAR-AGGREGATION-SQUEEZE-v1` says that, in the inherited bicolooop chamber, either a determinant star pays the branch or the two exterior top-two singular directions are simultaneously diffuse. At its tau=1/16 collar the inherited nonanchor top-two leverage is <0.099 on both physical sides, while the nonzero higher-rank tail must still be paid.
 
-Newest-Claude input actually applied: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. In particular, Theorem D uses third-volume sampling row marginals, and the physical-coordinate localized theorem gives `||p_Q||_infinity <= 6 sqrt(pi)/c` when an original 3x3 principal block has all eigenvalues of modulus at least c.
+Newest-Claude input actually applied: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. In particular, Theorem D uses third-volume sampling row marginals, and the physical-coordinate localized theorem gives `||p_Q||_infinity <= 6 sqrt(pi)/c` when an original 3x3 principal block has all eigenvalues of modulus at least c.
 
-Current volume-stability receiver: `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/`. For an original-coordinate cross block M and 1<=q<3/2, if every third-volume row marginal alpha_i<=q/2, then
+Current volume-stability receiver: `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/`. For an original-coordinate cross block M and 1<=q<3/2, if every third-volume row marginal alpha_i<=q/2, then
 
 `||p_Q||_infinity <= [3e/((3-2q)sqrt(q))] E3(M)^(-1/6)`,
 
 with arbitrary self blocks, outside couplings and affine terms retained.
 
-I also consumed the newer exact-coloop interpolation `QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1` at `yspennstate/math-open-problems@80f95e245b7f3418e8da36173ac4eb9d81fb58a7:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T003846Z/REPORT.md`; therefore I do not duplicate the already-paid near-null exact-coloop branch.
+I also consumed the newer exact-coloop interpolation `QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1` at `private-source-repository@80f95e245b7f3418e8da36173ac4eb9d81fb58a7:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T003846Z/REPORT.md`; therefore I do not duplicate the already-paid near-null exact-coloop branch.
 
 ## 2. False splice refuted
 

@@ -22,7 +22,7 @@ Source control state refreshed during the run: `yspennstate/math-research-brain@
 
 The completed fleet01/B01 source
 
-`yspennstate/math-open-problems@e398e885cc1902a2484e86973dd016a68721ec5c`
+`private-source-repository@e398e885cc1902a2484e86973dd016a68721ec5c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260922T183610Z-b01-qform-auto11/REPORT.md`
 
@@ -36,7 +36,7 @@ for every linear image of independent cap-one physical coordinates, and proves t
 
 The completed source
 
-`yspennstate/math-open-problems@21cf221fb1e8b99c99298fb11a0d5a41a8382aba`
+`private-source-repository@21cf221fb1e8b99c99298fb11a0d5a41a8382aba`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T054511Z-fleet01-B01-qform-auto11b/REPORT.md`
 
@@ -46,7 +46,7 @@ proved an aggregate overlap-two compiler when the physical 2x2 pair base is inve
 
 The latest completed designated partner is
 
-`yspennstate/math-open-problems@5a4923fcec8db7b5f5b7a14e5762c3291b02d299`
+`private-source-repository@5a4923fcec8db7b5f5b7a14e5762c3291b02d299`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T060557Z-fleet02-B01-qform-auto11/REPORT.md`.
 
@@ -261,7 +261,7 @@ On the same residual, the latest partner theorem gives from `F(T)>=2m^2`
 
 while the new endpoint theorem gives `H_(1/2)(T)<=2^(11/4)m^(-1/2)`.
 
-As an additional independent control, the joint Fresnel--Brascamp--Lieb Theorem F from `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` applies to (7.1): use eigenvectors u,(v+w)/sqrt(2),(v-w)/sqrt(2), eigenvalues 1,L,-L, and all physical coordinates as the active set. The Gram matrix is I_3 and the row leverages are 1/m on U,V and 1/N on W, all <=1/2. It gives the stronger family-specific estimate
+As an additional independent control, the joint Fresnel--Brascamp--Lieb Theorem F from `private-source@e5f71d79eff325201dd0274053d20268ce65b837` applies to (7.1): use eigenvectors u,(v+w)/sqrt(2),(v-w)/sqrt(2), eigenvalues 1,L,-L, and all physical coordinates as the active set. The Gram matrix is I_3 and the row leverages are 1/m on U,V and 1/N on W, all <=1/2. It gives the stronger family-specific estimate
 
 `||p_Q||_infinity <=12(L^2)^(-1/3)=12/m`.                         (7.9)
 

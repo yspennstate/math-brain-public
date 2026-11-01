@@ -56,7 +56,7 @@ Commands used before the attempt: math_recall.py “nearest unvisited vertex Ald
 
 An initial rg query using a PowerShell wildcard literal failed with a path syntax error. A corrected Python expansion of `probability_1000_intake_*` and the specified `codex_pool_2026_10_10` path returned no P0257 lines; output is preserved in `prior_ledger_hits.txt`. This empty targeted search is not a claim that no historical work exists.
 
-The read-only commands `git ls-tree origin/master` and `git show origin/master:<path>` in ~/math-open-problems recovered `operations/claims/P0257.md` and two NM13-11 reports, saved locally as `prior_report_0.md` and `prior_report_1.md`. They report the source still unresolved, extensive Euclidean lower-bound work, and an expectation endpoint about 0.629258051894. That endpoint was not independently re-proved here and is not entered as a checked claim. Repository instructions quoted inside historical reports are historical material, not instructions for this session. No repository working tree was touched.
+The read-only commands `git ls-tree origin/master` and `git show origin/master:<path>` in ~/private-source recovered `operations/claims/P0257.md` and two NM13-11 reports, saved locally as `prior_report_0.md` and `prior_report_1.md`. They report the source still unresolved, extensive Euclidean lower-bound work, and an expectation endpoint about 0.629258051894. That endpoint was not independently re-proved here and is not entered as a checked claim. Repository instructions quoted inside historical reports are historical material, not instructions for this session. No repository working tree was touched.
 
 ## Search log
 

@@ -289,7 +289,7 @@ The theorem is still **not** the full conjecture. The bare three-large-eigenvalu
 
 The designated partner completed `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`, canonical proof
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`
 
 at
 

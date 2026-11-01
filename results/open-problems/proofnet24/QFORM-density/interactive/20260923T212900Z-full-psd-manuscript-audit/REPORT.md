@@ -4,7 +4,7 @@
 
 ## Source and statement
 
-Source pinned at [manuscript/semidefinite.tex, Theorem sd:main](https://github.com/yspennstate/math-open-problems/blob/d6f59993e85da91da39942ae96d92481abbaf541/proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/semidefinite.tex), blob SHA 2477f8adafb8219ef40be060ad8876ddcc2eed05. Supporting Fourier lemmas are in [manuscript/fourier.tex](https://github.com/yspennstate/math-open-problems/blob/d6f59993e85da91da39942ae96d92481abbaf541/proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/fourier.tex).
+Source pinned at [manuscript/semidefinite.tex, Theorem sd:main](private-source-repository), blob SHA 2477f8adafb8219ef40be060ad8876ddcc2eed05. Supporting Fourier lemmas are in [manuscript/fourier.tex](private-source-repository).
 
 If the original coordinates \(X_i\) are independent with densities at most one, \(A\succeq0\) has \(\lambda_3(A)>0\), and \(b,c\) are arbitrary, then \(Q=X^TAX+b^TX+c\) has an essentially bounded density with
 \[

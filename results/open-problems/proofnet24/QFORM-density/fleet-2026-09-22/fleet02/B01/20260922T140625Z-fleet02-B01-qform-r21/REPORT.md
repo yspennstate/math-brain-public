@@ -7,8 +7,8 @@ Status: ESSENTIAL_STEP_APPLIED / supporting theorem / full target OPEN.
 Programme: QFORM-DENSITY-3EIG-20260922, owner control revision 2026-09-22.5.
 Fresh brain control initially resolved at `20dcc298195e75e8dab67da3c1efcca69490ed73`; pre-publication refresh observed `b1f7c74f88742b541c02dc9bd71a0c335b014382` with no later owner stop found at that point.
 Consumed corrections include `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-NO-INDEPENDENCE-AFTER-ROTATION`, `QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS`, and `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`.
-Own prior dependency: fleet02/B01 r19, math-open-problems commit `fedbec07e3e8b2f9fcd2b1a65b0bb2a0137c212f`, proving the uniform scalar gate `int |F(t)|^3 dt <= 16 pi/|a|` for probability densities bounded by one.
-Named partner consumed: fleet03/B01 run `fleet03-B01-20260922T123142Z-qform-r11`, math-open-problems report commit `d54e3a5d40a1d9837d39a1e525781fcf44ec0d9d`, which identifies the rank-two averaged `L^3` endpoint and the need to couple it to a third curvature direction without post-rotation independence.
+Own prior dependency: fleet02/B01 r19, private-source commit `fedbec07e3e8b2f9fcd2b1a65b0bb2a0137c212f`, proving the uniform scalar gate `int |F(t)|^3 dt <= 16 pi/|a|` for probability densities bounded by one.
+Named partner consumed: fleet03/B01 run `fleet03-B01-20260922T123142Z-qform-r11`, private-source report commit `d54e3a5d40a1d9837d39a1e525781fcf44ec0d9d`, which identifies the rank-two averaged `L^3` endpoint and the need to couple it to a third curvature direction without post-rotation independence.
 
 ## New theorem
 

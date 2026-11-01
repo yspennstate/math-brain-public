@@ -12,7 +12,7 @@ The full target remains open: for every `n`, independent real `X_i` with densiti
 
 This run uses no law-uniform pointwise scalar Fresnel decay, no independence after a spectral rotation, no moment/support/log-concavity assumptions, no fiber supremum, and no conditional-density-cap substitute for genuine independence. It also does not use the refuted single-Schur or local-cross-rank-three extraction claims.
 
-The designated partner `fleet04/B02` still had no completed QFORM handoff at both the startup and prepublication checks. No result is attributed to that worker. A compatible completed same-pathway result is actually applied below: `fleet01/B02`, canonical report `yspennstate/math-open-problems@e58461e07b19315b290cb4b397929090ec6f48b9:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260922T132111Z-qform-a01-b02-r12/REPORT.md`. Its rank-two diffuse residual estimate is inserted into the new Fourier inequality in Section 4.
+The designated partner `fleet04/B02` still had no completed QFORM handoff at both the startup and prepublication checks. No result is attributed to that worker. A compatible completed same-pathway result is actually applied below: `fleet01/B02`, canonical report `private-source-repository@e58461e07b19315b290cb4b397929090ec6f48b9:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260922T132111Z-qform-a01-b02-r12/REPORT.md`. Its rank-two diffuse residual estimate is inserted into the new Fourier inequality in Section 4.
 
 The main mechanism change is to spend a **law-uniform integrated Fourier budget of a physical square**, rather than ask for false pointwise decay.
 
@@ -266,7 +266,7 @@ The full target remains `OPEN`. No counterexample to the owner conjecture is cla
 ## 8. Source pins actually used
 
 - Fresh owner/control state: `yspennstate/math-research-brain`, programme revision `2026-09-22.5`; initial source head `7262469c70ff2e86837f6751eee8006ff0a64681`, refreshed during the run with unchanged owner order.
-- Compatible completed same-pathway peer: fleet01/B02, `yspennstate/math-open-problems@e58461e07b19315b290cb4b397929090ec6f48b9:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260922T132111Z-qform-a01-b02-r12/REPORT.md`.
+- Compatible completed same-pathway peer: fleet01/B02, `private-source-repository@e58461e07b19315b290cb4b397929090ec6f48b9:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260922T132111Z-qform-a01-b02-r12/REPORT.md`.
 - Diffuse Fourier/Beckner source chain: fleet03/B08, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T114830Z-fleet03-B08-qform-diffuse-v1/REPORT.md`, which source-pins W. Beckner, *Inequalities in Fourier Analysis*, PNAS 72 (1975), 638--641.
 - Current phase-Wiener correction: `QFORM-PHASE-WIENER-AVERAGED-UNIVERSAL-FALSE-v1`, canonical correction commit `2a6981ee2518d8b92f734b5763e89d5bf26a8048`.
 - Interactive regularized-determinant handoff: canonical math commit `a302aab3477c64757b511e80d3907f982e04873a`.

@@ -14,7 +14,7 @@ The unrestricted owner target remains open: for arbitrary independent real coord
 
 Fresh brain control at invocation start was revision `2026-09-22.15`, QFORM-only. The live correction boundary includes the failures of arbitrary-joint rank-three coarea, conditional-cap-as-independence, law-uniform scalar quadratic-phase decay, perturbative deletion of small coefficients under unrestricted supports, a universal rank-three physical cross cut, and the more recent failures of extracting a robust `sigma_1 sigma_2` merely from low-order symmetric sums or localizing the N3 mixed-hub residue to one square/pair certificate before aggregation.
 
-The owner-required source package `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` was read at its three files `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`. In particular I use its proved Theorem F exactly, not a stronger surrogate.
+The owner-required source package `private-source@e5f71d79eff325201dd0274053d20268ce65b837` was read at its three files `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`. In particular I use its proved Theorem F exactly, not a stronger surrogate.
 
 The newest completed designated-partner mathematics found during the run is fleet03/B19 r21, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T235209Z-fleet03-B19-QFORM-r21/REPORT.md`. Its source-valid compiler fixes `tau=2^-20`, reduces N3 after a paid diffuse D' branch to three states R1--R3, and explicitly leaves all three open. An earlier completed partner result, fleet03/B19 r20, gives a separate grouped `2+1` exact-rank-three source block with determinant loss `delta>1/6`; Section 3 below pays its normalized-diffuse part by Theorem F.
 

@@ -18,4 +18,4 @@ Proof route: take the rank-r truncated SVD `L_r` of the carrier action `E P`; wr
 
 This strictly softens the previous hard local-footprint theorem: `rank(E P)<=r` makes the charge zero, but full-rank `E P` is still harmless when its `(r+1)`st singular value is small. The mechanism is purely deterministic in original coordinates and uses no independence after rotation.
 
-Designated partner to be applied at an actual inequality: `fleet02/B12` report `yspennstate/math-open-problems@c635fcdce6aa206c68f1f14e061cf617d72376fb`, whose six-square-mode compiler turns `lambda_6((A^2)[H,H])>=g^2` on an ORIGINAL-coordinate carrier into `||p_Q||_infinity<=C_m/g` with explicit `C_m`.
+Designated partner to be applied at an actual inequality: `fleet02/B12` report `private-source-repository@c635fcdce6aa206c68f1f14e061cf617d72376fb`, whose six-square-mode compiler turns `lambda_6((A^2)[H,H])>=g^2` on an ORIGINAL-coordinate carrier into `||p_Q||_infinity<=C_m/g` with explicit `C_m`.

@@ -26,7 +26,7 @@ The mechanism below is instead a distribution-function / averaged-frequency repl
 
 Source:
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -45,7 +45,7 @@ All affine shifts of the endpoint pair are already included in (2.1).
 
 Source:
 
-`yspennstate/math-open-problems@7df1461e33f7ea4e6026a650391822a16e56e987`
+`private-source-repository@7df1461e33f7ea4e6026a650391822a16e56e987`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T205456Z-r19/REPORT.md`.
 
@@ -80,7 +80,7 @@ Thus every **nonzero** original-coordinate cross block, even one of exact rank o
 
 Fresh source:
 
-`yspennstate/math-open-problems@77b5307b899cf99953a7b6c81bb41f94c92ff53d`
+`private-source-repository@77b5307b899cf99953a7b6c81bb41f94c92ff53d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T224934Z-r18/REPORT.md`.
 
@@ -90,7 +90,7 @@ That report proves finite-`L^p` smoothing of an indefinite endpoint pair and clo
 
 Source:
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 

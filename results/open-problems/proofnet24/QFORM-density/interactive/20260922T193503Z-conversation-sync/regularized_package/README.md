@@ -6,7 +6,7 @@ Start with `REPORT.md`. Its Section 7 proves a uniform density bound below 27 wh
 
 The full proof is committed in the private research archive at:
 
-- Repository: `yspennstate/math-open-problems`
+- Repository: `private-source-repository`
 - Report commit: `a302aab3477c64757b511e80d3907f982e04873a`
 - Report path: `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`
 - Check sources/results are present by commit `93e0c195c0755797fab94e19763f8df4175ecbe3`.

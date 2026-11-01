@@ -75,7 +75,7 @@ The second math-store recall returned Michael Aizenman, Harry Kesten, and Charle
 
 Ran math_recall.py with “percolation cluster repulsion Timar heavy clusters” and later “Haggstrom Schonmann connectivity function continuity repulsion”. Ran brain.py recall with “nonunimodular percolation cluster repulsion” and “nonunimodular percolation mistakes”. No relevant checked theorem was identified in the initial results. Read-only rg search for C0159 under 06_math_research located the intake and C0159-A001. That attempt left a tilted-mass-transport gap and suggested upward parallel clusters on the grandparent graph; Propositions 3.1–3.2 and Theorem 6.1 give a checked mathematical response to that lead. The ledger's statement that a counterexample needs contacts in one modular class was not accepted as a theorem. The present superlevel bound shows why summably decreasing weights are instead an unresolved possibility in general.
 
-Ran git ls-tree -r --name-only origin/master with C0159/cluster-repulsion path patterns in ~/math-open-problems; no matching path was returned. No repository working tree was touched. No brain/store write command was invoked.
+Ran git ls-tree -r --name-only origin/master with C0159/cluster-repulsion path patterns in ~/private-source; no matching path was returned. No repository working tree was touched. No brain/store write command was invoked.
 
 ## Conclusion
 

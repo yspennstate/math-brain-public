@@ -16,9 +16,9 @@ At the present structural frontier, the already completed strong-physical-triple
 ## 1. Source pins actually used
 
 
-Required owner-pinned mathematical source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.  Its completed Theorem C is used below in a rough-law majority-side tent inequality.
+Required owner-pinned mathematical source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.  Its completed Theorem C is used below in a rough-law majority-side tent inequality.
 
-Latest compatible designated-partner result actually used: fleet03/B15 handoff `20260923T182510Z-fleet03-B15-qform-auto25.md`, canonical mathematics `yspennstate/math-open-problems@ddcf32d5ae84f2e891a6fd56d8ba0cbdc2853a1e`.  The partner proves that every one-dimensional certified Gaussian mixture
+Latest compatible designated-partner result actually used: fleet03/B15 handoff `20260923T182510Z-fleet03-B15-qform-auto25.md`, canonical mathematics `private-source-repository@ddcf32d5ae84f2e891a6fd56d8ba0cbdc2853a1e`.  The partner proves that every one-dimensional certified Gaussian mixture
 
 \[
 Y=M+\sqrt T\,G,\qquad \mathbb E T^{-1/2}\le\sqrt{2\pi},

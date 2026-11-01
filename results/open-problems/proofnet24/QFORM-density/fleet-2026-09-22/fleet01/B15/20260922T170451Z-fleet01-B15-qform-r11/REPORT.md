@@ -121,7 +121,7 @@ This statement must not be misused after conditioning on a small block whose Hes
 
 I use the completed `fleet02/B15` result exactly as proved at
 
-`yspennstate/math-open-problems@28ddaf28bf6779837fb1212a025d8a8b9d329f8a`
+`private-source-repository@28ddaf28bf6779837fb1212a025d8a8b9d329f8a`
 
 path
 

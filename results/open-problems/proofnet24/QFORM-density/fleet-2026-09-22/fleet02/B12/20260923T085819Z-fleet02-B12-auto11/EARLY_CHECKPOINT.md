@@ -11,7 +11,7 @@ From the bare hypothesis `s_3(A)>=1`, no current argument forces three ORIGINAL-
 
 ## Coordinatewise three-anchor lemma
 
-Let three physical cores `I_0,I_1,I_2` satisfy the matrix-parameter hypotheses of fleet03/B12's completed Schur-gap lemma at `math-open-problems@333dd6db61c9d18e88f9b8be5bae55c811d49b42`, with local orthogonal factors `S_j=I_2`. Write
+Let three physical cores `I_0,I_1,I_2` satisfy the matrix-parameter hypotheses of fleet03/B12's completed Schur-gap lemma at `private-source@333dd6db61c9d18e88f9b8be5bae55c811d49b42`, with local orthogonal factors `S_j=I_2`. Write
 
 `K_j = diag(c_{j1},c_{j2}) + E_j`,  `||E_j||op <= eps`.
 
@@ -31,7 +31,7 @@ gives the uniform physical-core floor
 
 An arbitrary symmetric dense tail `T` with `||T||op<=delta<gamma` changes every principal compression by at most `delta`, so one final core has gap at least `gamma-delta`. This is a deterministic final-matrix statement; no claim that `X^T T X` is small is made.
 
-For triple cores, conditioning on all other ORIGINAL coordinates leaves the retained inputs independent with density caps one. Theorem A in the required newest-Claude counterexample-search source (`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`) therefore gives
+For triple cores, conditioning on all other ORIGINAL coordinates leaves the retained inputs independent with density caps one. Theorem A in the required newest-Claude counterexample-search source (`private-source@e5f71d79eff325201dd0274053d20268ce65b837`) therefore gives
 
 `||p_Q||inf <= 6 sqrt(pi)/(gamma-delta)`.
 

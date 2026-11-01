@@ -15,7 +15,7 @@ The exact named partner is `fleet04/B11`. At the fresh compatibility check no co
 
 The other-account results consumed substantively are:
 
-1. `yspennstate/math-open-problems`, commit `fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113`,  
+1. `private-source-repository`, commit `fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113`,  
    `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md`.  
    It proves that a relative-`1/16` near-subcube derivative row has an influence-relative trigger-surplus tax
    \[
@@ -23,7 +23,7 @@ The other-account results consumed substantively are:
    \]
    Thus the present run attacks the complementary nonrobust rows.
 
-2. `yspennstate/math-open-problems`, commit `40d53b2d7f2c8b388a95d4abd82221321f6fcfcf`,  
+2. `private-source-repository`, commit `40d53b2d7f2c8b388a95d4abd82221321f6fcfcf`,  
    `proofnet24/P03-fei/fleet-2026-09-22/fleet04/B18/20260922T081002Z-visible-hidden-curvature-split/REPORT.md`.  
    For ordered distinct coordinates it proves
    \[
@@ -37,7 +37,7 @@ The other-account results consumed substantively are:
    \tag{0.1}
    \]
 
-3. `yspennstate/math-open-problems`, commit `85ffa60db26997421d980b1f86c03d82259504ca`,  
+3. `private-source-repository`, commit `85ffa60db26997421d980b1f86c03d82259504ca`,  
    `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md`.  
    It proves \(\kappa_{ij}=4\Pr(i,j\in X)\) and warns that raw \(U_4=O(J)\) is false even under all-block terminality plus tensor primitivity. Nothing below assumes that false bound.
 

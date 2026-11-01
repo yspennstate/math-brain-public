@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R20 CLOSABLE OUTSIDE — successor admission: I0083 proof-candidate hold and D0076 hard-scope exclusion
 
 Run date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity and retired I0100 state
 

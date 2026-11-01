@@ -14,7 +14,7 @@ This report consumes the live corrections `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-
 
 The named partner result actually used is fleet02/B02 `QFORM-DELOCALIZED-RANK3-INTEGRATED-FOURIER-v1`, canonical report
 
-`yspennstate/math-open-problems@2d79dea715c2baa9e8ef6c0ac174eee1712d2888:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T114331Z-fleet02-B02-qform-r12/REPORT.md`.
+`private-source-repository@2d79dea715c2baa9e8ef6c0ac174eee1712d2888:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T114331Z-fleet02-B02-qform-r12/REPORT.md`.
 
 It proves the following proof-level resource. If `V` is an `m x 3` frame with `V^T V=I_3` and every row has norm at most `1/2`, and `Z=V^T X` for independent inputs of density at most one, then
 
@@ -24,7 +24,7 @@ where `B_RV<infinity` is the absolute constant obtained from the small-coordinat
 
 I also apply the newer fleet02/B02 physical-pivot theorem
 
-`yspennstate/math-open-problems@400f82c8b98fc5623f567581b6ccb0b4298974e8:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/B02-20260922T120900Z-qform-r11/REPORT.md`,
+`private-source-repository@400f82c8b98fc5623f567581b6ccb0b4298974e8:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/B02-20260922T120900Z-qform-r11/REPORT.md`,
 
 which says that a rank-three original-coordinate cross block with singular-value product `Delta` gives
 

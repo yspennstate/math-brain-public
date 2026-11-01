@@ -18,7 +18,7 @@ The live `CORRECTION_INBOX.json` was reread at the prepublication source. In par
 
 The designated partner result actually applied is **fleet02/B13** run `20260922T182158Z-fleet02-B13-qform-4ebdd821`, canonical report
 
-`yspennstate/math-open-problems@d511859edaa636cdc00fcd64155ab07506875c3d`,
+`private-source-repository@d511859edaa636cdc00fcd64155ab07506875c3d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T182158Z-fleet02-B13-qform-4ebdd821/REPORT.md`.
 
 It proves the exact-rank-three heavy/light trichotomy. For
@@ -31,14 +31,14 @@ put `c_j=||r_j||^2`, `H={j:c_j>3/10}`, `L=H^c`, and let the light Gram have eige
 
 The same slot's earlier exact bang-bang theorem is
 
-`yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`,
+`private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`.
 
 For every fixed quadratic slab it identifies the supremum over all independent cap-one mass-one densities with the supremum over arbitrary unit-measure product indicators, with zero loss. No interval extremality is inferred.
 
 The preceding own geometric reduction is
 
-`yspennstate/math-open-problems@01c524aa389abf1b9b58c852bfa11fc747ec5b59`,
+`private-source-repository@01c524aa389abf1b9b58c852bfa11fc747ec5b59`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260922T190849Z-fleet01-B13-qform-r17/REPORT.md`.
 
 Inside the mixed branch it chooses a heavy original coordinate `i` with
@@ -67,7 +67,7 @@ is at least `1/32`, then the whole form already has a universal density bound `<
 
 The analytic theorem used below is `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, canonical proof
 
-`yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`,
+`private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`,
 `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
 
 If a rank-three product projection has orthonormal columns and every physical-row leverage is at most `1/2`, then for arbitrary cap-one independent inputs, arbitrary coordinate-separable real perturbations, and invertible rank-three quadratic coefficient `M`,

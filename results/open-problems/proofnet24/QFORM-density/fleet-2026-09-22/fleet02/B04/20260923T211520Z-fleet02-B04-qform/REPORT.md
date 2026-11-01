@@ -29,7 +29,7 @@ Fresh owner control remained QFORM-only, revision `2026-09-22.15`, with the full
 
 The required pinned Claude/e5 source was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -44,7 +44,7 @@ The completed results used below are:
 
 The latest compatible fleet03/B04 result observed before publication is
 
-`yspennstate/math-open-problems@f5e2f6935273fd126982d1e66f83b6c5623f430d`
+`private-source-repository@f5e2f6935273fd126982d1e66f83b6c5623f430d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T211945Z-fleet03-B04-QFORM-auto11/REPORT.md`.
 
@@ -56,19 +56,19 @@ for a nonsingular physical principal `3x3` block with a zero diagonal pivot. The
 
 The immediately preceding compatible fleet03/B04 r41 source
 
-`yspennstate/math-open-problems@fc213cf50d21dd7e00a36fbb2ad2c4e7ad55f056`
+`private-source-repository@fc213cf50d21dd7e00a36fbb2ad2c4e7ad55f056`
 
 supplies the exact zero-anchor C1 star factorization used at an equation below. Its later correction addendum `1b06210571e34985efd1a96869ceedaf510d251f` changes only one unrelated comparison decimal and leaves the theorem intact.
 
 For the optional lower-order volume comparison, I also use the already proved B04 theorem `QFORM-ENTROPY-WEIGHTED-RANK2-HALFRIESZ-v1`, source-pinned at
 
-`yspennstate/math-open-problems@10a74bd7d75466fe46f4ff6ecf3362fba6cb2e5d`,
+`private-source-repository@10a74bd7d75466fe46f4ff6ecf3362fba6cb2e5d`,
 
 whose exact arbitrary-weight currency is `G_2(w)=exp(E_w log det^2+H(w))`.
 
 The direct ridge gate compared below is the completed ridge-window criterion source-pinned at
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`:
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`:
 
 for `K_gamma=B B^T(gamma^2 I+B B^T)^(-1)`, an exponent `q>=1` requires
 

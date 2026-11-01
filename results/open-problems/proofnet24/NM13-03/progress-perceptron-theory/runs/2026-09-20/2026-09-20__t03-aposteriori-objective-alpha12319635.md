@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 
 # NM13-03 / T03 — a-posteriori objective localization certifies exact-sphere upper endpoint 12.319635
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: `NM13-03`  
 Owner policy: `operations/PROGRESS20_2026-09-20.md`  
 LIVE20 parent: **T03 negative spherical perceptron**  

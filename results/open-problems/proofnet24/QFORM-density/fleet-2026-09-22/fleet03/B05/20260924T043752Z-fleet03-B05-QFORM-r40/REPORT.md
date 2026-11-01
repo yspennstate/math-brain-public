@@ -317,7 +317,7 @@ No rotation of the original random vector is declared independent. Independence 
 The completed partner theorem
 
 `QFORM-PHYSICAL-DEFINITE-PAIR-COAREA-v1`,  
-`yspennstate/math-open-problems@33cabb3bd5e466a58adc6eac49eba210ef62ef14`,
+`private-source-repository@33cabb3bd5e466a58adc6eac49eba210ef62ef14`,
 
 proves for two genuinely independent scalar inputs of density caps `m_1,m_2` and a definite quadratic pair block `C` that arbitrary extensions satisfy
 

@@ -14,7 +14,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`. Repository retrieval was genuine and source
 
 I use the completed weighted product-projection theorem `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1` from
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
 If `T:R^m->R^k` has full row rank and `X_1,...,X_m` are independent with densities at most one, normalizing `T` to an orthonormal-row map and applying that theorem gives
 
@@ -26,7 +26,7 @@ This is an unconditional original-product projection cap. It is not a conditiona
 
 Fleet01/B16 proved the zero-residual-cross-block case in
 
-`yspennstate/math-open-problems@e4c589aa572f7d140c78a832af2d554eed97fde4:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260922T211047Z-fleet01-B16-QFORM-r16/REPORT.md`.
+`private-source-repository@e4c589aa572f7d140c78a832af2d554eed97fde4:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260922T211047Z-fleet01-B16-QFORM-r16/REPORT.md`.
 
 The missing implication there is a cross-block residual `2 X_I^T C X_J`, which breaks ordinary convolution of the two three-dimensional spectral banks. The new theorem below treats a quantitatively transverse cross block exactly rather than perturbatively.
 
@@ -34,7 +34,7 @@ The missing implication there is a cross-block residual `2 X_I^T C X_J`, which b
 
 Fleet04/B16 r3,
 
-`yspennstate/math-open-problems@0f2d6290352a984c4e4ae0b024f8c27c7a2bb473:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T191443Z-fleet04-B16-QFORM-r3/REPORT.md`,
+`private-source-repository@0f2d6290352a984c4e4ae0b024f8c27c7a2bb473:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T191443Z-fleet04-B16-QFORM-r3/REPORT.md`,
 
 proves for its diffuse-block source that every positive conditional projection-height moment is non-uniform: for `0<alpha<2`,
 

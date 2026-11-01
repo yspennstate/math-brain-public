@@ -20,7 +20,7 @@ We use two completed supporting theorems with their exact scopes.
 
 From
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`,
 
@@ -34,7 +34,7 @@ For a three-coordinate block itself, `V=I_3` and `c_i=1`.
 
 From the proof-first full-matrix pair extension
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`,
 
@@ -52,7 +52,7 @@ This theorem allows arbitrary matrix rank; here we apply it to a conditioned thr
 
 The newest completed `fleet04/B11` result is
 
-`yspennstate/math-open-problems@797dcde430e982a020d7642b54cadc281cbc9bc1`
+`private-source-repository@797dcde430e982a020d7642b54cadc281cbc9bc1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T191727Z-fleet04-B11-nullgraph-obstruction-r2/REPORT.md`.
 

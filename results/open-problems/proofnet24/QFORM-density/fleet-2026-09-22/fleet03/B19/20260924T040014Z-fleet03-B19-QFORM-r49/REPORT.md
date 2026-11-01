@@ -15,7 +15,7 @@ All coordinates below are literal ORIGINAL coordinates. No random variable is ro
 
 The immediate inherited frontier is fleet03/B19 r48:
 
-`yspennstate/math-open-problems@2d483191e9a6edbc28549de90441cbeb631eca71`
+`private-source-repository@2d483191e9a6edbc28549de90441cbeb631eca71`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T030130Z-fleet03-B19-QFORM-r48/REPORT.md`.
 
@@ -47,7 +47,7 @@ The problem left by r48 was that the planes in (1.4) depend on `j`; summing row 
 
 A fresh completed fleet03/B08 result is also used as proof-graph context:
 
-`yspennstate/math-open-problems@ec4f970f5cdd3f31a8e913474fbee5172fd7b603`,
+`private-source-repository@ec4f970f5cdd3f31a8e913474fbee5172fd7b603`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T032039Z-fleet03-B08-qform-diffuse-r49/REPORT.md`.
 
@@ -342,7 +342,7 @@ This is a structural reduction, not yet a density theorem.
 
 The fresh fleet01/B01 r12 theorem at
 
-`yspennstate/math-open-problems@5a750c5b1188ea297a92c01b9692de5d87ab7f4c`
+`private-source-repository@5a750c5b1188ea297a92c01b9692de5d87ab7f4c`
 
 proves a sign-free two-physical-pivot density receiver. If a literal pair
 
@@ -366,7 +366,7 @@ This receiver is therefore available if the finite physical-hub part of (6.6) ex
 
 The completed designated partner theorem is
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`,
 

@@ -574,11 +574,11 @@ No novelty or publication-priority claim is made. Full unrestricted FEI is not p
 
 ## 11. Immutable source pins
 
-* `yspennstate/math-open-problems@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`: `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`.
-* `yspennstate/math-open-problems@2bf247373576eb406ca91bb3ea5f3ce5e5ab8588`: `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md`.
-* `yspennstate/math-open-problems@2c1afb444c3a4fa2cbee12f73fd8c19c44af9e56`: `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B15/20260922T092409Z-complement-packet-kl-gap/REPORT.md`.
-* `yspennstate/math-open-problems@7ec649dfb3d1ab2f92855f2069590fca2ac956dd`: `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md`.
-* `yspennstate/math-open-problems@bff0d7b6c21485f386841c42582eb04f32705046`: `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md`.
-* Immediate predecessor: `yspennstate/math-open-problems@ad83138c850372d14d0dcacaa76a50a2fe79bcaf`: `proofnet24/P03-fei/fleet-2026-09-22/fleet02/B15/20260922T103316Z-fleet02-B15-r11/REPORT.md`.
+* `private-source-repository@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`: `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`.
+* `private-source-repository@2bf247373576eb406ca91bb3ea5f3ce5e5ab8588`: `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md`.
+* `private-source-repository@2c1afb444c3a4fa2cbee12f73fd8c19c44af9e56`: `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B15/20260922T092409Z-complement-packet-kl-gap/REPORT.md`.
+* `private-source-repository@7ec649dfb3d1ab2f92855f2069590fca2ac956dd`: `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md`.
+* `private-source-repository@bff0d7b6c21485f386841c42582eb04f32705046`: `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md`.
+* Immediate predecessor: `private-source-repository@ad83138c850372d14d0dcacaa76a50a2fe79bcaf`: `proofnet24/P03-fei/fleet-2026-09-22/fleet02/B15/20260922T103316Z-fleet02-B15-r11/REPORT.md`.
 
 Fresh scientific master observed before publication: `98dfb2962c57951bfefe163d447c0c5aebc643cf`.

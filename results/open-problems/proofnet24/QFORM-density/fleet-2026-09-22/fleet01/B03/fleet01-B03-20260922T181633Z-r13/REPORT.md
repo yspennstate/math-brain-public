@@ -25,7 +25,7 @@ No refuted statement is used below.
 
 ### 2.1 Ridge envelope already proved by this worker
 
-From `yspennstate/math-open-problems@c301be6b21f382934962aeb4c019b713377eac2f`, path
+From `private-source-repository@c301be6b21f382934962aeb4c019b713377eac2f`, path
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/fleet01-B03-20260922T164925Z-r12/REPORT.md`,
 
@@ -53,7 +53,7 @@ The previous run integrated this only when `beta>1/2` for the half-Riesz kernel.
 
 The completed partner theorem is fleet02/B03 run `20260922T171110Z-fleet02-B03-QFORM-r12`, canonical mathematics
 
-`yspennstate/math-open-problems@18acc1aad6a7d8d9e7538807afbb1a453d7e529b`,
+`private-source-repository@18acc1aad6a7d8d9e7538807afbb1a453d7e529b`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T171110Z-fleet02-B03-QFORM-r12/REPORT.md`.
 

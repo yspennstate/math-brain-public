@@ -10,7 +10,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning/effort level: UNVERIFIED** — 
 
 **Publication novelty:** `UNVERIFIED`. A bounded dated search for combinations of `halved graph`, `Cayley bigraph`, `distance-2 graph`, `random walk cutoff`, and `biregular cutoff` found graph-theoretic halved-graph literature but no matching ordinary-SRW cutoff theorem for the class below. This is only negative evidence, not a priority certificate.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 

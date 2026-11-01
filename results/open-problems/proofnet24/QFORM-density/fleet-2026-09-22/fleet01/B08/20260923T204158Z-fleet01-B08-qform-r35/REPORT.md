@@ -265,8 +265,8 @@ The full universal theorem is not claimed.
 
 ## 6. Source pins consumed
 
-- designated partner half-cut/receiver: `math-open-problems@66582bd87d50634f3525a57c87acffdbde97aea1`, `fleet02/B08/20260923T153836Z-fleet02-B08-qform-r28/REPORT.md`;
-- literal-cross volume stability: `math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `interactive/20260923T002323Z-volume-stability/REPORT.md`;
+- designated partner half-cut/receiver: `private-source@66582bd87d50634f3525a57c87acffdbde97aea1`, `fleet02/B08/20260923T153836Z-fleet02-B08-qform-r28/REPORT.md`;
+- literal-cross volume stability: `private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `interactive/20260923T002323Z-volume-stability/REPORT.md`;
 - all-sign scalar pivot: current `interactive/20260923T192150Z-all-sign-scalar-pivot/REPORT.md`;
 - previous B08 spectral-window/row router: `fleet01/B08/20260923T194115Z-fleet01-B08-qform-r34/REPORT.md`.
 

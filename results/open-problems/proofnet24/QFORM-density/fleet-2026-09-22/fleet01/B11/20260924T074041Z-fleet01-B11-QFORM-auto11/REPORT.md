@@ -17,7 +17,7 @@ The unrestricted owner target remains OPEN / NOT PROVED / NOT DISPROVED. No Gaus
 
 The immediate own predecessor is
 
-- `yspennstate/math-open-problems@0d074396abdd021a817f0b8dc104b826f2d7154d` (same report content already visible at the earlier source pin `df6d00a11422f16763e8bccccc6bada6e4949a83`),
+- `private-source-repository@0d074396abdd021a817f0b8dc104b826f2d7154d` (same report content already visible at the earlier source pin `df6d00a11422f16763e8bccccc6bada6e4949a83`),
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260924T064232Z-fleet01-B11-QFORM-auto11/REPORT.md`,
 - theorem `QFORM-LDL-FULL-TWOJACOBIAN-NONZERO-v1`.
 

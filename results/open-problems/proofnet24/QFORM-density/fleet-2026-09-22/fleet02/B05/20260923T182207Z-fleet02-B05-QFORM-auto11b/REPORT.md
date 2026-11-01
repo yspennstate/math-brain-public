@@ -15,7 +15,7 @@ The predecessor B05 run corrected an invalid interval-to-Borel frozen-slice tran
 
 The required pinned source was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:`
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
 Its Theorem F is applied below to remove the globally diffuse exact-rank-three branch:
@@ -26,7 +26,7 @@ Its product-projection density input is also used in the physical crossing recei
 
 The newer completed crossing theorem used at the main inequality is
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401:`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401:`
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 For independent physical groups with exact-rank-`r` cross block whose nonzero singular values have product `Gamma`, if the two corresponding `r`-dimensional orthogonal projections have density caps `M_L,M_R`, then for `r>2`
@@ -39,7 +39,7 @@ All functions internal to either physical side are arbitrary. For cap-one produc
 
 The latest compatible designated partner is fleet03/B05 r29, source-pinned at
 
-`yspennstate/math-open-problems@9e0a5c32599f8cc180dd905615c9d034a9b51d2c:`
+`private-source-repository@9e0a5c32599f8cc180dd905615c9d034a9b51d2c:`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T172119Z-fleet03-B05-QFORM-r29/REPORT.md`.
 
 Its deterministic currency compensation and exact determinant identities are consumed explicitly below.

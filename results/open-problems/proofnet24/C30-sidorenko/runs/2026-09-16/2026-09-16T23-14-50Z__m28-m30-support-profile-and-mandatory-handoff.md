@@ -2,7 +2,7 @@ Model actually running: GPT-5.6 Sol. Reasoning level: UNVERIFIED; this was not G
 
 # C30 — exact support-profile dual certifies n=11 densities 28, 29, 30; mandatory hard-target handoff
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Own root: `proofnet24/C30-sidorenko`.
 Frozen graph: `H=K_{5,5}\setminus C_{10}`, ten vertices, fifteen edges.
 Frozen metric: largest host order `n` for which **every** finite simple host on at most `n` vertices is verified for the source Sidorenko inequality by complete exact evidence.

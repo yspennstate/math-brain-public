@@ -180,7 +180,7 @@ This is deliberately a diffuse check: the result is paid by two high-cardinality
 
 The completed fleet04/B18 r1 theorem is pinned at
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
 Its proved statement used here is: if `R` has density cap `M` and, conditional on `R=r`, a real variable `V` has density cap one (independence is not required), then for `a!=0`,

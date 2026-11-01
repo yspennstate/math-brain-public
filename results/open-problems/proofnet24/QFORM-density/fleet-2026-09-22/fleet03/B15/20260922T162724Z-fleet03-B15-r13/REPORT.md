@@ -20,7 +20,7 @@ Moreover the proof gives a finite `L^infinity` bound for each fixed matrix `A`. 
 
 The nonzero-physical-diagonal case was proved in the preceding B15 run at
 
-- `yspennstate/math-open-problems@d73760eb784a86c356c64f05dd92f84655618f02`,
+- `private-source-repository@d73760eb784a86c356c64f05dd92f84655618f02`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T153101Z-fleet03-B15-r12/REPORT.md`.
 
 The first unpaid implication was therefore the exceptional class `diag(A)=0`. This report proves that class. No rotation of the independent input vector is used.
@@ -29,7 +29,7 @@ The first unpaid implication was therefore the exceptional class `diag(A)=0`. Th
 
 The assigned partner `fleet04/B15` proved at
 
-- `yspennstate/math-open-problems@07672b7beb8f867c7a7b973aa3157a42ae506460`,
+- `private-source-repository@07672b7beb8f867c7a7b973aa3157a42ae506460`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T152333Z-b15-qform-continuous-envelope-r3/REPORT.md`
 
 that the optimal universal height constants over the full target class, over target outputs in `C_0`, and over compactly supported smooth cap-one marginals are exactly equal:

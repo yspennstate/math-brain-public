@@ -3,7 +3,7 @@
 Date: 2026-09-18  
 Slot: R7-02 Finite Certificate Research  
 Native ID: `6aabe797a39081919acc889f29f4c556`  
-Repository / branch: private `yspennstate/math-open-problems` / existing `master`  
+Repository / branch: private `private-source-repository` / existing `master`  
 Target: `C0134` — Kosygina–Zerner Problem 5.3  
 Classification: **CLOSABLE OUTSIDE**  
 Mathematical status: **candidate source-level complete; operationally PARTIAL pending prior-art reconciliation and two independent audits**

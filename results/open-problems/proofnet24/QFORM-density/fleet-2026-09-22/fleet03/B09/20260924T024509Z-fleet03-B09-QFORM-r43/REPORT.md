@@ -24,7 +24,7 @@ and a logarithmic endpoint in the general nonphysical-kernel case. The physical-
 
 A second completed input is fleet01/B03 `QFORM-ROW-MARGINAL-FREE-2VOLUME-COLLISION-v1`, source
 
-`yspennstate/math-open-problems@588fa418bc29d4b889fcbbee2b61370234ceef37`,
+`private-source-repository@588fa418bc29d4b889fcbbee2b61370234ceef37`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T175336Z-fleet01-B03-QFORM-r30/REPORT.md`.
 
 For an exact two-row physical crossing matrix `M`, let
@@ -314,7 +314,7 @@ Thus the scalar-pivot theorem is not a disguised full solution; its exact comple
 The completed designated partner theorem is
 
 `QFORM-PHYSICAL-CROSS-DETERMINANT-SMOOTHING-v1`,
-source `yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`,
+source `private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`,
 path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
 
 It proves that a literal invertible physical `3x3` cross block `K` gives

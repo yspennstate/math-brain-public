@@ -21,7 +21,7 @@ The analytic input from this worker is the completed one-volume theorem
 
 at
 
-`yspennstate/math-open-problems@6882d64088e54bc7f979ae8eb4a5ea9d06d1896f`
+`private-source-repository@6882d64088e54bc7f979ae8eb4a5ea9d06d1896f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T185317Z-fleet01-B03-QFORM-r31/REPORT.md`.
 
@@ -51,7 +51,7 @@ The exact `A_hh=0` pair endpoint is not paid by the older nonzero scalar-pivot b
 
 The newest completed designated partner fleet02/B03 report used below is
 
-`yspennstate/math-open-problems@1af51417c2d6a42394faa853627b8bb38d5f4d75`.
+`private-source-repository@1af51417c2d6a42394faa853627b8bb38d5f4d75`.
 
 It proves a rank-two anchored-volume identity and, separately, a second-crossing instability example showing that finite whole-copy half-Riesz/time energy alone does not imply a bounded one-copy density. I apply the identity to the actual live overlap-one packet in Section 7 and respect the instability warning throughout.
 

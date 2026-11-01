@@ -3,7 +3,7 @@ Actual runtime model: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not
 # NM13-05 T06 — rare-defect escape-envelope coupling for `{2,3}` offspring
 
 Date: 2026-09-20.  
-Repository: `yspennstate/math-open-problems`, branch `master`.  
+Repository: `private-source-repository`, branch `master`.  
 Own root: `proofnet24/NM13-05/progress-tree-speed`.  
 Parent target: T06 / intake P0066, Lyons--Pemantle--Peres monotonicity of biased-walk speed on a supercritical Galton--Watson tree without leaves.  
 Status: **PARTIAL / OPEN parent; RESTRICTED THEOREM CANDIDATE pending later independent review.**

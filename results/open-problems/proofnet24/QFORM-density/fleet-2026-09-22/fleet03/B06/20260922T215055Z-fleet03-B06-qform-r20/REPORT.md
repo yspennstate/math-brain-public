@@ -18,7 +18,7 @@ The live corrections are retained: no law-uniform pointwise quadratic-phase deca
 
 The current B06 r19 source is
 
-`yspennstate/math-open-problems@f82fe367b06909082f94eda2b98f4a2fd2a5bb7`
+`private-source-repository@f82fe367b06909082f94eda2b98f4a2fd2a5bb7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T212328Z-fleet03-B06-qform-r19/REPORT.md`.
 
@@ -42,7 +42,7 @@ The projection input used below is the completed weighted affine-fiber Brascamp-
 
 The compatible completed fleet04 result actually applied is fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical source
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

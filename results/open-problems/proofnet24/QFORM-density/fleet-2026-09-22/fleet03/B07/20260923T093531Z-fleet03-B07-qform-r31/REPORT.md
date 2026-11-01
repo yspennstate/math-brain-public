@@ -17,7 +17,7 @@ The main new point is structural and exactly matches the B07 assignment: a pair 
 
 For the first time in this slot's current-QFORM sequence, the designated partner has a completed current artifact:
 
-`yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`,
+`private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`.
 
@@ -42,7 +42,7 @@ For the strongly transverse subbranch I also use the completed fleet02/B09 theor
 
 canonical source
 
-`yspennstate/math-open-problems@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`,
+`private-source-repository@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T064043Z-fleet02-B09-QFORM-r13/REPORT.md`.
 

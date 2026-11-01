@@ -204,8 +204,8 @@ Test whether the same renormalized terminal potential is additive for the two-fa
 
 ## 10. Immutable sources
 
-- B05 author boundary report: repository `yspennstate/math-open-problems`, commit `f8af483622a55611c7933f7d8252fe3c94e4c06e`, report blob `0f097b74548e4be301b39a918774c4465638b2df`.
-- B19 full-credit scope repair: repository `yspennstate/math-open-problems`, commit `aa80187df752adcf9ff221823df9815c6b0960b9`, report blob `8281ad83ec178bd98a8a9cbfac192959d7d996bd`, checker blob `f9959307004980bfd57b96d9558532fb841c16ab`.
+- B05 author boundary report: repository `private-source-repository`, commit `f8af483622a55611c7933f7d8252fe3c94e4c06e`, report blob `0f097b74548e4be301b39a918774c4465638b2df`.
+- B19 full-credit scope repair: repository `private-source-repository`, commit `aa80187df752adcf9ff221823df9815c6b0960b9`, report blob `8281ad83ec178bd98a8a9cbfac192959d7d996bd`, checker blob `f9959307004980bfd57b96d9558532fb841c16ab`.
 - B05 stream contract blob `05447e6d999437bb82a266b427bd76a4b37266b6`.
 - Stream index blob `58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704`.
 - Execution protocol blob `457358ff62cbf1141a72096bcabdf95bf18c1be2`.

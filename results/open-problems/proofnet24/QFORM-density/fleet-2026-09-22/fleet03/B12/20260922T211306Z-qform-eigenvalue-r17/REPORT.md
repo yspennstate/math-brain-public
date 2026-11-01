@@ -11,20 +11,20 @@ This run proves a new grouped-coordinate additional-eigenvalue theorem and appli
 ## Source-valid dependencies actually read
 
 1. Assigned partner fleet04/B12, `QFORM mixed-norm shear compiler`, complete proof:
-   `yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e`,
+   `private-source-repository@9ce47e2a0f2c8434d901df13a218450c2189d80e`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260922T192552Z-fleet04-B12-mixed-shear-r1/REPORT.md`.
    If `(U,Z)` has joint density `h` and
    `M(h)=int esssup_u h(u,z) dz`, then for every measurable `psi`,
    `||p_(U+psi(Z))||_infinity <= M(h)`. No independence between `U` and `Z` is required.
 
 2. B12 previous theorem `QFORM-ARBITRARY-COMPLETION-SCHUR-SHEAR-v1`, complete proof:
-   `yspennstate/math-open-problems@b0886a84716141e3757395ba49a657c6acdaa5fa`,
+   `private-source-repository@b0886a84716141e3757395ba49a657c6acdaa5fa`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T201552Z-qform-eigenvalue-r16/REPORT.md`.
    For independent cap-one coordinates and a physical 3x3 principal block `M` with pivot `a!=0`,
    `||p||_infinity <=128 |a det M|^(-1/4)`, uniformly over affine terms and arbitrary outside completion.
 
 3. Full-matrix indefinite-pair theorem, complete supporting proof:
-   `yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
+   `private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
    If `s_3(A)>=s>0` and an original-coordinate 2x2 principal pair `B` is indefinite with `D=|det B|` and `kappa=sigma_min(B)`, then, uniformly over affine terms,
    `||p||_infinity <=3*400^(1/3) (D^2 kappa s)^(-1/6)`.
@@ -32,7 +32,7 @@ This run proves a new grouped-coordinate additional-eigenvalue theorem and appli
 4. Projection density input recorded in fleet02/B18 from Rudelson--Vershynin: if independent cap-one variables are combined as `L=sum u_i X_i`, `sum u_i^2=1`, then `||p_L||_infinity<=sqrt(2)`.
 
 5. For the sharpened stress-family corollary only, fleet01/B16 `QFORM-TRANSLATED-BANK-FROSTMAN-SMOOTHER-v1`, complete proof at
-   `yspennstate/math-open-problems@1b7a876f7577cf99599322926154ce0032a034fd`,
+   `private-source-repository@1b7a876f7577cf99599322926154ce0032a034fd`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/fleet01-B16-20260922T161036Z-r11/REPORT.md`.
 
 All uses below remain in original-coordinate product blocks. No spectral rotation is declared independent.

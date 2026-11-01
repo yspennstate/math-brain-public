@@ -2,7 +2,7 @@
 
 Run: `20260924T153840Z-fleet03-B11-fixedmult-r12`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Pinned nine-eigenvalue source: `yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`, blob `19fb119877426b640b2c0dae19ec2f78a399fe11`.
+Pinned nine-eigenvalue source: `private-source-repository@eeb752c8943536541b34b42b8bf48e924f4d3d2f`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`, blob `19fb119877426b640b2c0dae19ec2f78a399fe11`.
 
 Status: PROVED SUPPORTING TARGET-LEVEL BRANCH. This does not prove the general three-eigenvalue conjecture or the eight-eigenvalue theorem.
 
@@ -147,7 +147,7 @@ Equations (5)--(11) show what removes the singularity in the pivot branch: the i
 
 Use the completed fleet04/B11 sharpness family from
 [
-	exttt{yspennstate/math-open-problems@4a818c0cd169a3a52aac71de48e45ef338cd94fb}
+	exttt{private-source-repository@4a818c0cd169a3a52aac71de48e45ef338cd94fb}
 ]
 at
 [

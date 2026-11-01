@@ -11,7 +11,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN` (repository transport and source retrieval o
 
 The designated partner source is the completed fleet02/B14 report
 
-`math-open-problems@010ccf4cdc4f0b07d0a443eba99fd147e6feab65:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T235641Z-fleet02-B14-QFORM-auto11b/REPORT.md`.
+`private-source@010ccf4cdc4f0b07d0a443eba99fd147e6feab65:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T235641Z-fleet02-B14-QFORM-auto11b/REPORT.md`.
 
 Its proved theorem `QFORM-HYPERBOLIC-LOG-PLUS-SQUARE-CLOSURE-v1` gives, for independent cap-one probability variables U,V,Y and arbitrary affine coefficients,
 

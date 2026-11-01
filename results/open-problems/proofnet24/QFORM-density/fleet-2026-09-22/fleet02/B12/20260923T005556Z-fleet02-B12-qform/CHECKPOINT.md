@@ -18,7 +18,7 @@ while
 
 ||(I-P)M||op <= eps0+rho.
 
-Therefore, if rho<s_2(M0), B_rho>0 and eps0+rho<=B_rho/15, the completed collective-tail marginal theorem at math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba applies to the ACTUAL final matrix.  Its q=4/3 estimate gives
+Therefore, if rho<s_2(M0), B_rho>0 and eps0+rho<=B_rho/15, the completed collective-tail marginal theorem at private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba applies to the ACTUAL final matrix.  Its q=4/3 estimate gives
 
 ||p_Q||inf <= (9 sqrt(3) e/2) [(s_2(M0)-rho)^4 B_rho^2]^(-1/6)
            = (9 sqrt(3) e/2) (s_2(M0)-rho)^(-2/3) B_rho^(-1/3).

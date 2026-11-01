@@ -20,7 +20,7 @@ No spectral rotation is treated as preserving independence. I do not use the ref
 
 The immediate predecessor actually used is B10 r23,
 
-`yspennstate/math-open-problems@46df88a3c81ee860e09a67bc8193514c26281555`
+`private-source-repository@46df88a3c81ee860e09a67bc8193514c26281555`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T041602Z-fleet03-B10-QFORM-r23/REPORT.md`.
 
@@ -58,7 +58,7 @@ The completed compatible fleet04 result actually applied below is fleet04/B20 r4
 
 canonical mathematics
 
-`yspennstate/math-open-problems@f97aa31585b7b547a116d4580f898576af4e0842`
+`private-source-repository@f97aa31585b7b547a116d4580f898576af4e0842`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T011956Z-fleet04-B20-QFORM-r4/REPORT.md`.
 

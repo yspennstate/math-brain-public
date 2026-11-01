@@ -13,21 +13,21 @@ The full target remains: independent original real coordinates with scalar densi
 ## 1. Sources actually consumed
 
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
 I also read the later sharp-Hausdorff--Young review
 
-`yspennstate/math-open-problems@9844891a9fbe96a65e37f71122bf0300b53dcc80:proofnet24/QFORM-density/interactive/20260922T220600Z-claude-review/REVIEW.md`
+`private-source-repository@9844891a9fbe96a65e37f71122bf0300b53dcc80:proofnet24/QFORM-density/interactive/20260922T220600Z-claude-review/REVIEW.md`
 
 and, as explicitly requested by the later owner continuation, the new volume-stability package
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/{REPORT.md,PEER_TAIL_EXTENSION.md}`.
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/{REPORT.md,PEER_TAIL_EXTENSION.md}`.
 
 The latest compatible designated-partner result is `fleet03/B02` r18,
 
-`yspennstate/math-open-problems@99fb7a9461b77e83cc900042eefa33d4f2ef9913:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T000148Z-fleet03-B02-QFORM-r18/REPORT.md`.
+`private-source-repository@99fb7a9461b77e83cc900042eefa33d4f2ef9913:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T000148Z-fleet03-B02-QFORM-r18/REPORT.md`.
 
 I also use its immediately preceding exact-rank-three physical-cross-block theorem at commit
 `484c89f85cda352b2c4318364a6206ebc4154950`.

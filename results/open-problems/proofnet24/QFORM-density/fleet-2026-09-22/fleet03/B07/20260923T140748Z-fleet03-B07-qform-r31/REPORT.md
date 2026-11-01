@@ -19,7 +19,7 @@ The unrestricted conjecture is not proved or disproved here. No Gaussian, moment
 
 The immediately preceding authoritative B07 result is
 
-`yspennstate/math-open-problems@0942d044043f3a73e2411cf2676af89bbf3853e6`,
+`private-source-repository@0942d044043f3a73e2411cf2676af89bbf3853e6`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T130749Z-fleet03-B07-qform-r30/REPORT.md`
 
@@ -53,7 +53,7 @@ Hence
 
 The designated completed partner is
 
-`yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`,
+`private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`.
 
@@ -90,7 +90,7 @@ The theorem retains arbitrary same-bank curvature and outside couplings. Applyin
 
 The pair theorem used below is
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 

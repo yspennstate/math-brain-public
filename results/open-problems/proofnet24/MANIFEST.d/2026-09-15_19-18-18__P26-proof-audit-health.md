@@ -1,7 +1,7 @@
 # ProofNet24 P26 — immutable proof-audit / archive-health fragment
 
 **Timestamp:** 2026-09-15 19:18:18 Asia/Jerusalem  
-**Repository / branch:** `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** `private-source-repository` / `master`  
 **Policy:** GitHub canonical; no email/Gmail source or action.
 
 ## Canonical P26 report receipt

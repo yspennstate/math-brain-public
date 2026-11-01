@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R20 successor admission — F0111 gap conservation, fractional-cover envelopes, and failure of standalone gap certificates
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R20, CLOSABLE OUTSIDE.
 
 ## 1. Continuity, source status, ownership and exclusions
@@ -426,7 +426,7 @@ Do not re-run the standalone all-gap `C_gamma` route; NOGO3 has killed it at `j=
 ledger_delta:
   worker: R20
   allocation: CLOSABLE_OUTSIDE
-  repository: yspennstate/math-open-problems
+  repository: private-source-repository
   branch: master
   model_actual: GPT-5.6_Sol
   reasoning_actual: UNVERIFIED

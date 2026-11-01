@@ -33,7 +33,7 @@ the physical matrix has exact nonzero spectrum `{1,1,-1}` and the exact cone-tip
 p_*(0)=4.06307061680603726012548442259349995675\ldots .\tag{1.1}
 \]
 
-The completed designated-partner result fleet04/B17, `yspennstate/math-open-problems@4e8d5ae06f2657e9e1ac8a89f7bc26c9ff95169e`, path
+The completed designated-partner result fleet04/B17, `private-source-repository@4e8d5ae06f2657e9e1ac8a89f7bc26c9ff95169e`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260923T171805Z-fleet04-B17-QFORM-r5/REPORT.md`, replaces every physical marginal by
 \[
 f_R(x)=\mathbf1_{[-(1-\eta)/2,(1-\eta)/2]}(x)+\mathbf1_{[R,R+\eta]}(x)
@@ -220,4 +220,4 @@ A particularly sharp next experiment is therefore not generic fragmentation, but
 
 `CHECK.py` verifies exactly that all nonzero integer cell-center patterns in `{0,1,2}^3` satisfy `|q(d)|>=1/3`, verifies the explicit `R=50` support-separation margin, and reproduces the decimal values in (3.7)-(3.8). `CHECK_OUTPUT.txt` records the actual run. This is a deterministic arithmetic checker, not a Monte Carlo argument.
 
-Changed-file review: only this worker-owned run directory is written in math-open-problems. No credentials, account identifiers beyond the logical fleet label, private unrelated data, or public-release action are included.
+Changed-file review: only this worker-owned run directory is written in private-source. No credentials, account identifiers beyond the logical fleet label, private unrelated data, or public-release action are included.

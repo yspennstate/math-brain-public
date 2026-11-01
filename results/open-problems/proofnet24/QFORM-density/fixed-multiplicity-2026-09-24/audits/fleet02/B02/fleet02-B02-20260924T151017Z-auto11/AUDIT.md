@@ -2,7 +2,7 @@
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 
-Source snapshot actually read this invocation: `yspennstate/math-open-problems@6241df6fc911c10cc7ee925dc4ca566f8c12cff0`. Canonical manuscript: git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`, 47,883 bytes, 790 lines. I read `README.md`, `DELIVERY_STATUS.md`, `SOURCE_MANIFEST.json`, `manuscript.tex` in full, `AUDIT.md`, `proof_map.csv`, `verify.py`, and `checks.json`. The source manifest and checker both identify the same manuscript hash. The checker reports PASS on 534 exact interpolation seeds, 18 volume-sampling cases, 9 strict-sampling cases, 240 Schur diagnostics, and 30 graph-weight diagnostics; I treat these only as finite diagnostics, not proof.
+Source snapshot actually read this invocation: `private-source-repository@6241df6fc911c10cc7ee925dc4ca566f8c12cff0`. Canonical manuscript: git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`, 47,883 bytes, 790 lines. I read `README.md`, `DELIVERY_STATUS.md`, `SOURCE_MANIFEST.json`, `manuscript.tex` in full, `AUDIT.md`, `proof_map.csv`, `verify.py`, and `checks.json`. The source manifest and checker both identify the same manuscript hash. The checker reports PASS on 534 exact interpolation seeds, 18 volume-sampling cases, 9 strict-sampling cases, 240 Schur diagnostics, and 30 graph-weight diagnostics; I treat these only as finite diagnostics, not proof.
 
 ## Verdict
 

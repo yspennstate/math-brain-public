@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # P20 T10 — Busemann residual metric and a quantitative Exp(1) Bellman gap
 
 Date: 2026-09-20.
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 Parent claim: `operations/claims/PROB10-10.md` (owned by the native PROB10-10/HARD7-03 lane; P20 is a complementary LIVE20 route, not a takeover).
 Status: **PARTIAL / OPEN**.
 

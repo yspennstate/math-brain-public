@@ -5,7 +5,7 @@ Problem/source: David J. Aldous and Svante Janson, *The Critical Beta-splitting 
 # R11 I0054 — a harmonic Pólya-urn peeling hierarchy with full CTCS(infinity) limit
 
 Run ID: `2026-09-17T03-40-00Z_i0054-harmonic-polya-regenerative-c012-b3e1`
-Repository / branch: `yspennstate/math-open-problems` / `master`
+Repository / branch: `private-source-repository` / `master`
 Dated source/literature check: 2026-09-17
 
 No Gmail/email, Drive, public posting, purchase, workflow execution, permission change, scheduler change, shared-root edit, or peer-track edit was performed.

@@ -2,7 +2,7 @@
 
 This run develops complete proofs for specific questions in the research archive and attempts the broader Lyons determinantal entropy-concavity conjecture. The full Lyons conjecture remains unresolved here. The agent execution ledger records actual launches and completions; the requested total is 100 distinct `gpt-6-astra` agents with `reasoning_effort=max`, run in batches under the concurrency limit.
 
-The [original QSO project index](https://github.com/yspennstate/math-open-problems/tree/master/probability_campaign_2026_09/paper_qso_fixed_points_2026_09_14) now links the complete four-type proof from the question it resolves. The original manuscript is preserved, with a separate timestamped completion report.
+The [original QSO project index](private-source-repository) now links the complete four-type proof from the question it resolves. The original manuscript is preserved, with a separate timestamped completion report.
 
 ## Main mathematical deliverables
 
@@ -43,7 +43,7 @@ The [computations](computations/) include exact rational and polynomial certific
 
 No universal theorem is claimed to have been checked by Lean, formally verified by another proof assistant, or externally refereed. Full conjectures remain open wherever the claim ledger says so. Numerical nonfailure and agreement among agents do not prove a universal statement.
 
-Canonical repository: `yspennstate/math-open-problems`, branch `master`, private. Initial source snapshot: [`8861ffde776a1dbf842e918590cc1003492ff296`](https://github.com/yspennstate/math-open-problems/tree/8861ffde776a1dbf842e918590cc1003492ff296). New work is appended under `proofnet24/portfolio-completion/runs/2026-09-14/2026-09-14_20-23-26/`. Timestamped checkpoints preserve intermediate states and later reports preserve corrections; unrelated source correspondence is excluded.
+Canonical repository: `private-source-repository`, branch `master`, private. Initial source snapshot: [`8861ffde776a1dbf842e918590cc1003492ff296`](private-source-repository). New work is appended under `proofnet24/portfolio-completion/runs/2026-09-14/2026-09-14_20-23-26/`. Timestamped checkpoints preserve intermediate states and later reports preserve corrections; unrelated source correspondence is excluded.
 
 Current recovery checkpoint: **98 launched;86 completed;7 interrupted;5 active.** The target is100 completed distinct agents, requiring107 launches after the recorded losses. Read the [execution ledger](execution_ledger.json), [agent index](AGENT_INDEX.md), and [recovery provenance](recovery/INTERRUPTIONS.md). Four completed original reports were not pushed before the workspace disconnected; their retained summaries are labeled, and important claims are being reconstructed. The GitHub proof collection is the durable deliverable; the local draft PDF was not recovered.
 

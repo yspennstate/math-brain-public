@@ -8,7 +8,7 @@ Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924` (later owner objective; it 
 
 Pinned baseline mathematical source:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - baseline source commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`
 - manuscript blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`
 - manuscript SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`

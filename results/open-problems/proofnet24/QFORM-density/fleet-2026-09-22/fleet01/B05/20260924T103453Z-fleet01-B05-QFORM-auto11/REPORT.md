@@ -74,7 +74,7 @@ Let
 
 Use the completed product-preserving physical-pair logarithmic envelope from
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:`
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 For every cutoff `r>0`, after centering at the critical output value `t_0`, it gives almost everywhere

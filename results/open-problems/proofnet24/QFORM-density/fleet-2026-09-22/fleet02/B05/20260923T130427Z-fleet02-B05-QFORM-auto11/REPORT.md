@@ -61,7 +61,7 @@ It gives the heavy-null normal form, proves the finite-Pluecker punctured bridge
 
 I read all three owner-pinned files at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`:
 
@@ -84,7 +84,7 @@ The source's `COUNTEREXAMPLE_SEARCH.md` still records the ruled one-sheet estima
 
 The freshest designated-partner report found before publication is fleet03/B05 r25,
 
-`yspennstate/math-open-problems@02e8b920f91cd9489773d6d895d2117920b2b75a`,
+`private-source-repository@02e8b920f91cd9489773d6d895d2117920b2b75a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T123731Z-fleet03-B05-QFORM-r25/REPORT.md`.
 
@@ -92,7 +92,7 @@ It proves that a bounded ambient reciprocal-gradient budget, even together with 
 
 For the final hub step I apply the completed positive receiver from fleet03/B05 r24,
 
-`yspennstate/math-open-problems@b0e14a08fe8abb97f7aeb518cfa8cf4cef568d36`,
+`private-source-repository@b0e14a08fe8abb97f7aeb518cfa8cf4cef568d36`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T094405Z-fleet03-B05-QFORM-r24/REPORT.md`.
 

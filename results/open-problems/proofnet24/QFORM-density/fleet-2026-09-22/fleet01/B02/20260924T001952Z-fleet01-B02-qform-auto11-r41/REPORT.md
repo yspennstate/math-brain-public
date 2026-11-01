@@ -16,7 +16,7 @@ The owner target is unchanged: independent ORIGINAL real coordinates with one-di
 
 The immediately preceding corrected B02 state is
 
-`yspennstate/math-open-problems@6c6385df4bd4f441e4fb6624be200d3552e92a4a`,
+`private-source-repository@6c6385df4bd4f441e4fb6624be200d3552e92a4a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260923T232013Z-fleet01-B02-qform-auto11-r40/CORRECTION_AND_REDUCTION.md`.
 
@@ -34,7 +34,7 @@ with a universal constant. If true, (1.1) would exactly cancel the small-tail pa
 
 The designated fleet02/B02 source actually used below is
 
-`yspennstate/math-open-problems@aeaba9e3351623ead11450857c2d014b43664aef`,
+`private-source-repository@aeaba9e3351623ead11450857c2d014b43664aef`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T200844Z-fleet02-B02-qform-auto11/REPORT.md`.
 

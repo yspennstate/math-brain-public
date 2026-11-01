@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6/maxim
 
 # R01 — D0057 STUCK-1: isolate the repaired finite-moment problem and port the stable-critical machinery
 
-Run date: 2026-09-17 UTC. Repository / branch: private `yspennstate/math-open-problems` / `master`. Delivery: private GitHub only.
+Run date: 2026-09-17 UTC. Repository / branch: private `private-source-repository` / `master`. Delivery: private GitHub only.
 
 This is the mandatory Section-I thinking run after three consecutive fixed-metric non-movements. **No new theorem-sized mathematical claim is asserted in this report.** The source-level counterexample from the earlier R01 report remains the owner proof; the purpose here is to identify exactly what is still missing, why the existing routes cannot provide it, and what one genuinely different recovery should try next.
 

@@ -2,7 +2,7 @@
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 
-Pinned baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`.
+Pinned baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`.
 
 - source path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`
 - source SHA-256 pinned by the owner/package: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`

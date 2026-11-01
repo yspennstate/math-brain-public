@@ -183,8 +183,8 @@ Therefore a witness with density peak strictly above `3sqrt(2)` cannot arise as 
 The universal arbitrary-law, arbitrary-dimension quadratic-form density conjecture remains open. This report supplies only a sharp witness-side exclusion theorem. It neither proves `C=3sqrt(2)` nor gives an upper bound for general rotated product measures.
 
 Dependencies consumed:
-- fleet02/B17 lower-bound report: `yspennstate/math-open-problems@4a3d4af77778f20a95855c6dfbf69540dcfa5fe4`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T114529Z-qform-sharp-witness/REPORT.md`.
-- fleet01/B17 Gaussian ceiling: `yspennstate/math-open-problems@cd6ae6f74d77c7090e8ba08101e916dfd0d8df15`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T120821Z-fleet01-B17-qform-sharp-constant-v1/ADDENDUM_NONCENTRAL_GAUSSIAN.md`.
+- fleet02/B17 lower-bound report: `private-source-repository@4a3d4af77778f20a95855c6dfbf69540dcfa5fe4`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T114529Z-qform-sharp-witness/REPORT.md`.
+- fleet01/B17 Gaussian ceiling: `private-source-repository@cd6ae6f74d77c7090e8ba08101e916dfd0d8df15`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T120821Z-fleet01-B17-qform-sharp-constant-v1/ADDENDUM_NONCENTRAL_GAUSSIAN.md`.
 - live brain control source at invocation start: `yspennstate/math-research-brain@e4218a319d6a7a51d55098fa961eaee67f5fc19d`, revision `2026-09-22.5`.
 
 External theorem used only for the standard asymptotic justification: a classical multivariate Edgeworth expansion under Cramer/nonlattice conditions for iid bounded vectors. The coefficient and cone integral above are derived explicitly here.

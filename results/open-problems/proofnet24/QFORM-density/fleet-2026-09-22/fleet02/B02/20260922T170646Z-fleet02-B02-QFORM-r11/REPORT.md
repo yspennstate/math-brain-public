@@ -23,7 +23,7 @@ This run attacks the overlap payment through a physical square plus an *integrat
 
 From my independently reviewed report
 
-`yspennstate/math-open-problems@e3fe4ce35f6aa4a90cca913051886c96c7febfc3:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T140817Z-fleet02-B02-qform-r11/REPORT.md`,
+`private-source-repository@e3fe4ce35f6aa4a90cca913051886c96c7febfc3:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T140817Z-fleet02-B02-qform-r11/REPORT.md`,
 
 for an original-coordinate cross block `B` of a quadratic form `R`, for `1<=q<2`, if
 
@@ -51,7 +51,7 @@ where
 
 I consumed fleet03/B02's completed canonical result
 
-`yspennstate/math-open-problems@16c7d95068defd13bad9f9fe86be6037d046a1ef:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T160323Z-fleet03-B02-qform-r11/REPORT.md`.
+`private-source-repository@16c7d95068defd13bad9f9fe86be6037d046a1ef:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T160323Z-fleet03-B02-qform-r11/REPORT.md`.
 
 Its `QFORM-RANK2-BALANCED-CUT-v1` says: if `S=VMV^T` has rank two, `V^T V=I_2`, and `mu=max_i ||v_i||^2`, then whenever
 

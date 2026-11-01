@@ -11,14 +11,14 @@ Fresh owner control revision `2026-09-22.3` supersedes the stale MOC4 prompt: al
 
 The exact source premises used here are:
 
-1. **I-projection identity:** `yspennstate/math-open-problems@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`. It proves
+1. **I-projection identity:** `private-source-repository@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`. It proves
    \[
    K_{\rm occ}=D_{\rm KL,2}(P\Vert Q_r)=H_{\max}(r)-H(P),
    \qquad R_\Gamma=B_{\inf}^\Gamma+K_{\rm occ}.
    \]
-2. **Sparse-suspension obstruction:** `yspennstate/math-open-problems@7ec649dfb3d1ab2f92855f2069590fca2ac956dd`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md`. On the genuine sparse suspension, the full unweighted convolution-L2 bank is only `Theta(I)` while `K_occ=Theta(mI)`; any viable compression must lose at most `O(I)` there.
-3. **Recursive-majority barrier:** `yspennstate/math-open-problems@bff0d7b6c21485f386841c42582eb04f32705046`, `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md`. Fixed/low labelled Fourier levels followed by one merged tail cannot be the universal payment mechanism.
-4. **Named OTHER-account result consumed:** fleet02/B08, `yspennstate/math-open-problems@a83d4009cc98aeb739af4f40b1c2cfa8be7269d0`, `proofnet24/P03-fei/fleet-2026-09-22/fleet02/B08/B08-20260922T103745Z-0f440e/REPORT.md`. It proves one oriented signed-shift event gives a binary-KL certificate and recovers exactly one half of the leading sparse rare-event logarithm.
+2. **Sparse-suspension obstruction:** `private-source-repository@7ec649dfb3d1ab2f92855f2069590fca2ac956dd`, `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md`. On the genuine sparse suspension, the full unweighted convolution-L2 bank is only `Theta(I)` while `K_occ=Theta(mI)`; any viable compression must lose at most `O(I)` there.
+3. **Recursive-majority barrier:** `private-source-repository@bff0d7b6c21485f386841c42582eb04f32705046`, `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md`. Fixed/low labelled Fourier levels followed by one merged tail cannot be the universal payment mechanism.
+4. **Named OTHER-account result consumed:** fleet02/B08, `private-source-repository@a83d4009cc98aeb739af4f40b1c2cfa8be7269d0`, `proofnet24/P03-fei/fleet-2026-09-22/fleet02/B08/B08-20260922T103745Z-0f440e/REPORT.md`. It proves one oriented signed-shift event gives a binary-KL certificate and recovers exactly one half of the leading sparse rare-event logarithm.
 
 The new result below replaces the single binary event by one **multi-cell variational partition fed by many signed shift constraints**. On the same sparse family it recovers `K_occ` up to an additive `O(I)` loss, in fact with exact asymptotic loss `I/ln 2`.
 

@@ -16,7 +16,7 @@ The target remains unrestricted: independent real ORIGINAL coordinates with one-
 
 This run applies the newest required fractional-volume theorem rather than merely citing it. The immutable source is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 For an ORIGINAL-coordinate cross block `B`, put
@@ -31,7 +31,7 @@ All same-side quadratic terms and outside couplings remain present. By transposi
 
 The immediate B08 predecessor is r25,
 
-`yspennstate/math-open-problems@d30dba6db19d1eceabde6222c84a5b57a85506f0`,
+`private-source-repository@d30dba6db19d1eceabde6222c84a5b57a85506f0`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T002108Z-fleet03-B08-qform-diffuse-r25/REPORT.md`.
 
 It proved a one-shot Pluecker transfer for three selected eigenvectors with `|lambda_j|>=L` and maximum selected-frame row leverage at most `1/48`. In its disjoint `q=0` branch there is an actual original-coordinate cross block `B=A[I,J]` satisfying
@@ -90,7 +90,7 @@ Write the actual cross block around the two anchors as
 
 The exact physical-coordinate exterior identity proved in fleet03/B07 r21,
 
-`yspennstate/math-open-problems`,
+`private-source-repository`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T004111Z-fleet03-B07-qform-r21/REPORT.md`,
 
 is
@@ -191,7 +191,7 @@ This is stronger than r25's `range(B)` leverage gate. Even if `B` has full range
 
 The newest completed fleet03/B07 r22 source is
 
-`yspennstate/math-open-problems@ac54330d3df42a48098ef7c704ac268382accd7c`,
+`private-source-repository@ac54330d3df42a48098ef7c704ac268382accd7c`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T030701Z-fleet03-B07-qform-r22/REPORT.md`.
 
 Its proof depends only on a four-bank product lower bound `CRF>kappa`, so repeating its algebra with

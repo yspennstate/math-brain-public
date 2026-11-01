@@ -15,7 +15,7 @@ The unrestricted conjecture remains open.  The result below is an explicit targe
 
 The pinned Claude/e5 source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 I use two completed results from it at actual equations:
 
@@ -28,7 +28,7 @@ The arbitrary-weight fractional extension used for the exact three-volume optimi
 
 `QFORM-ENTROPY-WEIGHTED-DPRIME-v1`
 
-at `yspennstate/math-open-problems@5b241b14339d94c847043e8ab09d711f56ed2dbe`, which gives, for `1/2<=h<3/4`,
+at `private-source-repository@5b241b14339d94c847043e8ab09d711f56ed2dbe`, which gives, for `1/2<=h<3/4`,
 
 `||p_Q||_infinity <= C_F(h) G_h(M)^(-1/6)`,
 
@@ -38,7 +38,7 @@ where `G_h` is the supremum of the determinant-entropy currency over physical 3x
 
 The newest designated-partner input is fleet03/B04 r38 at
 
-`yspennstate/math-open-problems@62656f0fee1b07c9abf0291ea4a1e12ec9bfb856`, with its late overlap note at `519165c7af84594abee493cdb39992b39c66b6d6`.  The genuinely new r38 statement used below is the canonical-disjointness aggregate-volume alternative
+`private-source-repository@62656f0fee1b07c9abf0291ea4a1e12ec9bfb856`, with its late overlap note at `519165c7af84594abee493cdb39992b39c66b6d6`.  The genuinely new r38 statement used below is the canonical-disjointness aggregate-volume alternative
 
 `Gamma_* >= Z exp(-ell) sqrt(delta)`
 

@@ -23,7 +23,7 @@ I use the completed fleet02/B03 theorem
 
 canonical source
 
-`yspennstate/math-open-problems@df738b7f0821d9af56dfd992cab10ecc6704e3fb`,
+`private-source-repository@df738b7f0821d9af56dfd992cab10ecc6704e3fb`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T184716Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 
@@ -68,7 +68,7 @@ The designated completed partner is fleet04/B02
 
 canonical source
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 

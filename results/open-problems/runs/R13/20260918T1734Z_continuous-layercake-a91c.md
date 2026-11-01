@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — not auth
 
 # R13 — continuous layer-cake directional-TV sharpening
 
-Repository/branch: private `yspennstate/math-open-problems` / `master`. R13 remains the exclusive HARD OUTSIDE owner of intake `E0042`, the real Boolean Komlos problem. The target is
+Repository/branch: private `private-source-repository` / `master`. R13 remains the exclusive HARD OUTSIDE owner of intake `E0042`, the real Boolean Komlos problem. The target is
 
 \[
 \operatorname{disc}(A)=\min_{\varepsilon\in\{\pm1\}^n}\|A\varepsilon\|_\infty

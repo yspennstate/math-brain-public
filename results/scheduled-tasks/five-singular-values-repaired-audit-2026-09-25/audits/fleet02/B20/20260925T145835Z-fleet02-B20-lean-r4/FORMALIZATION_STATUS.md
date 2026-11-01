@@ -1,6 +1,6 @@
 # fleet02/B20 Lean proof-closure status
 
-Exact paper pin: `math-open-problems@4e530247ec0ef4101a6e5ecf621bd35a969c42aa`, repaired `paper.tex` blob `98e45d53d106db9a205051a4dd4917fc39dc2e3a`, SHA-256 `90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb`.
+Exact paper pin: `private-source@4e530247ec0ef4101a6e5ecf621bd35a969c42aa`, repaired `paper.tex` blob `98e45d53d106db9a205051a4dd4917fc39dc2e3a`, SHA-256 `90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb`.
 
 Fresh current repaired-source coverage is `LEAN_COVERAGE.md` blob `80244805e310ff1d52820b5e0d7b1cdb99e682c5`. It records 18 repaired-source Lean files and 226 theorem/lemma declarations. This B20 pass independently fetched every one of those 18 source files and its matching axiom log: zero occurrences of `sorry`, `admit`, `sorryAx`, or new `axiom`; all 226 matching `#print axioms` reports list exactly `propext`, `Classical.choice`, and `Quot.sound`; every log records `EXIT 0`.
 

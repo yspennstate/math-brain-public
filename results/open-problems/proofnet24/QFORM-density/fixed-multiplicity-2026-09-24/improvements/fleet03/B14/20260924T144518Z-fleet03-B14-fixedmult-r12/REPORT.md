@@ -31,11 +31,11 @@ The threshold `9` is not new here. The new content is the `2511 -> 2506` constan
 
 ## 2. Sources actually consumed
 
-1. Baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`. I reread the complete proof by its proof-map ranges.
-2. New Fejer source: snapshot `yspennstate/math-open-problems@0aa54bd634644b2922e9faecd003692d7f29e61e`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet01/B10/20260924T140550Z-fleet01-B10-fixedmult-r13/IMPROVEMENT.md`, blob `8ea4eeb1ed6a72d3c15afe1fd697a68a072f3587`.
+1. Baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`. I reread the complete proof by its proof-map ranges.
+2. New Fejer source: snapshot `private-source-repository@0aa54bd634644b2922e9faecd003692d7f29e61e`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet01/B10/20260924T140550Z-fleet01-B10-fixedmult-r13/IMPROVEMENT.md`, blob `8ea4eeb1ed6a72d3c15afe1fd697a68a072f3587`.
 3. Same-height `C_0` nine-direction compiler: same snapshot, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet03/B15/20260924T140459Z-fleet03-B15-fixedmult-continuity-r13/REPORT.md`, blob `8af7e1a48ea703e6c9acf1cf37ed28428ac53aed`.
-4. Underlying affine fixed-instance `C_0` theorem: `yspennstate/math-open-problems@26ef4e7b08ecc3336e8ee7fcfdf0445e868745c5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260924T092642Z-fleet03-B15-qform-auto11/REPORT.md`, blob `c34fa9208db4ed7e771148511e6574cef63d4ebd`.
-5. Designated partner fleet04/B14 compact-completion theorem: snapshot `yspennstate/math-open-problems@0aa54bd634644b2922e9faecd003692d7f29e61e`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T171953Z-fleet04-B14-QFORM-r2/REPORT.md`, blob `bd0013b917741a9202c5462ed4317629ceb0b158`.
+4. Underlying affine fixed-instance `C_0` theorem: `private-source-repository@26ef4e7b08ecc3336e8ee7fcfdf0445e868745c5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260924T092642Z-fleet03-B15-qform-auto11/REPORT.md`, blob `c34fa9208db4ed7e771148511e6574cef63d4ebd`.
+5. Designated partner fleet04/B14 compact-completion theorem: snapshot `private-source-repository@0aa54bd634644b2922e9faecd003692d7f29e61e`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T171953Z-fleet04-B14-QFORM-r2/REPORT.md`, blob `bd0013b917741a9202c5462ed4317629ceb0b158`.
 
 A repository search before publication found the visible current `2511` source but no matching `2506 K^2/s` theorem. This is therefore recorded as a new constant sharpening pending independent review, not owner-level release status.
 

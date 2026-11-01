@@ -24,7 +24,7 @@ The designated partner result actually used below is fleet04/B14 r9,
 
 source
 
-`yspennstate/math-open-problems@b5f173477a3889ad9432ea7d97767e969c83b279`
+`private-source-repository@b5f173477a3889ad9432ea7d97767e969c83b279`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T141430Z-fleet04-B14-affine-slice-fresnel-r9/REPORT.md`.
 

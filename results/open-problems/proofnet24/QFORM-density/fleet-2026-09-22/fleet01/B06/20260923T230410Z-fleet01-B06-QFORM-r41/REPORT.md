@@ -18,13 +18,13 @@ Corrections retained include: no law-uniform pointwise quadratic-phase decay; no
 
 Inputs actually used:
 
-1. Own `QFORM-INDEFINITE-PHYSICAL-PAIR-QUARTER-RIESZ-v1`, `yspennstate/math-open-problems@ababe93762d210413fe9f19389e3b45f5dd150ba`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T130129Z-fleet01-B06-QFORM/REPORT.md`. For two original independent cap-one coordinates with invertible indefinite symmetric physical pair `B`, `D=|det B|`, and arbitrary affine terms,
+1. Own `QFORM-INDEFINITE-PHYSICAL-PAIR-QUARTER-RIESZ-v1`, `private-source-repository@ababe93762d210413fe9f19389e3b45f5dd150ba`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T130129Z-fleet01-B06-QFORM/REPORT.md`. For two original independent cap-one coordinates with invertible indefinite symmetric physical pair `B`, `D=|det B|`, and arbitrary affine terms,
 
    `p_F(t) <= 2 sqrt(3) D^(-3/8) |t-t0|^(-1/4)`.                 (1.1)
 
-2. Independently checked exact-rank crossing theorem, `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. For rank `r`, arbitrary internal functions on the two independent banks are retained.
+2. Independently checked exact-rank crossing theorem, `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. For rank `r`, arbitrary internal functions on the two independent banks are retained.
 
-3. Designated partner fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical source `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`. At the actual equation below it gives, for every unit original-coordinate coefficient vector `v`,
+3. Designated partner fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical source `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`. At the actual equation below it gives, for every unit original-coordinate coefficient vector `v`,
 
    `||p_(v dot Z)||_infinity <= sqrt(e)`.                          (1.2)
 

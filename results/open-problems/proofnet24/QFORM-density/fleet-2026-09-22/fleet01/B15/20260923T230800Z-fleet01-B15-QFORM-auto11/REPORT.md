@@ -8,7 +8,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 Full unrestricted QFORM status: `OPEN_NOT_PROVED`.
 
 The designated completed partner source actually used below is fleet02/B15:
-`yspennstate/math-open-problems@58b7dd57dc1282bcf84fd0ceb0c314baca3a5abe`,
+`private-source-repository@58b7dd57dc1282bcf84fd0ceb0c314baca3a5abe`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T220140Z-fleet02-B15-QFORM-auto11/REPORT.md`.
 Its proved grouped receiver is used only in its stated original-coordinate scope.
 

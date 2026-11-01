@@ -4,7 +4,7 @@ A compatible Path-C result completed after the main B12 report and directly cons
 
 ## 0. New compatible source consumed
 
-Repository `yspennstate/math-open-problems`, commit
+Repository `private-source-repository`, commit
 
 `208a82a980bf13f67181e961815dcee4206dddd6`,
 
@@ -51,7 +51,7 @@ The same source applies the B12 refund identity and records the stronger
 
 When `x` is a maximum-influence coordinate, `I_Z<=rp` is automatic.
 
-A second fresh compatible source is repository `yspennstate/math-open-problems`, commit
+A second fresh compatible source is repository `private-source-repository`, commit
 
 `32e98f96b54e9c0e8bdee8f7ac49cba9aca0fe46`,
 

@@ -347,7 +347,7 @@ Its role is to prevent a subtle but tempting misuse of the preceding connected-s
 
 The completed partner theorem actually used is fleet04/B14 r7:
 
-- repository/commit: `yspennstate/math-open-problems@2ac84e141e8e939506cbd5cd8314589141b714d5`;
+- repository/commit: `private-source-repository@2ac84e141e8e939506cbd5cd8314589141b714d5`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T051013Z-fleet04-B14-scale-shear-r7/REPORT.md`;
 - theorem: `QFORM-SCALE-COVARIANT-CONJUGATE-SHEAR-v1`.
 

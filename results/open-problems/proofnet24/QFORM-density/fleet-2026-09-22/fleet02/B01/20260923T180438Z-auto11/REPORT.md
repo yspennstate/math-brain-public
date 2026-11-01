@@ -14,7 +14,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 
 Required historical Fourier source, read at the owner-pinned commit:
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 - `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 
 The exact completed facts used from that source are Lemma 4.1 and Lemma 4.2:
@@ -27,14 +27,14 @@ and after an original-coordinate scalar completion
 
 The newer reviewed crossing theorem used in the proof is
 
-- `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+- `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 - `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 I use its `k=1, ell=1` grouped projected-crossing estimate and its exact-rank-two crossing estimate with arbitrary internal functions.
 
 Newest designated partner result consumed:
 
-- fleet03/B01, `yspennstate/math-open-problems@585b5a3ca7e887e5cd16f45ea49056d548361dfb`
+- fleet03/B01, `private-source-repository@585b5a3ca7e887e5cd16f45ea49056d548361dfb`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T173320Z-auto11-heavyrowpromotion/REPORT.md`
 - checks at `3e8c96175a9cb97e80365fc127ffd1c9b733588c`.
 

@@ -9,13 +9,13 @@ The unrestricted theorem is not proved here. Continuity is separate and is not c
 ## Source pins and corrected scope
 
 The Claude starting point is
-\`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837\`,
+\`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837\`,
 \`proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/\`,
 including \`RESULTS.md\`, \`FOURIER_ROUTE_REPORT.md\`, and \`COUNTEREXAMPLE_SEARCH.md\`.
 The later Claude-review corrections remain in force: no arbitrary-joint coarea cap, no worst conditional-density substitution, and no claim that the ruled-side estimate covers the convex/two-sheet side.
 
 The completed fleet01/B08 input used at an actual inequality is
-\`yspennstate/math-open-problems@77e8bed81a9bbe79e6443bbb37ae8a1fc84beb8c\`,
+\`private-source-repository@77e8bed81a9bbe79e6443bbb37ae8a1fc84beb8c\`,
 \`proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260924T051232Z-fleet01-B08-qform-r43/REPORT.md\`.
 It supplies, on the diffuse survivor, an original-coordinate deletion
 \[

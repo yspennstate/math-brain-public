@@ -14,7 +14,7 @@ This report does **not** use law-uniform pointwise Fresnel decay, independence a
 
 The immediately preceding B05 theorem, source
 
-`yspennstate/math-open-problems@bf7bff5c9b11cf495ccbcb09ef48549fd9c0d409:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/fleet03-B05-20260922T133738Z-qform-r12/REPORT.md`,
+`private-source-repository@bf7bff5c9b11cf495ccbcb09ef48549fd9c0d409:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/fleet03-B05-20260922T133738Z-qform-r12/REPORT.md`,
 
 proved a universal determinant-scale half-Riesz estimate for every rank-two product quadratic form and reduced the exact-rank-three coarea obstruction to the **first** leverage-heavy, near-isotropic physical pivot. This run changes mechanism: instead of another Schur/half-Riesz cascade, it uses a direct near/far coarea split in the hyperbolic variable while preserving one genuinely independent square-producing original-coordinate bank.
 
@@ -22,7 +22,7 @@ The assigned partner is `fleet04/B05`. A fresh check of both its canonical QFORM
 
 `fleet04/B20`, `QFORM-AGGREGATE-HYPERBOLIC-SQUARE-v1`, source-read at
 
-`yspennstate/math-open-problems@c233995d6abf7574b8b1a876cac244b1b91e3c38:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T132134Z-fleet04-B20-QFORM-r1/REPORT.md`.
+`private-source-repository@c233995d6abf7574b8b1a876cac244b1b91e3c38:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T132134Z-fleet04-B20-QFORM-r1/REPORT.md`.
 
 It gives, for three independent scalar banks of density caps `M_U,M_V,M_Z`,
 
@@ -33,10 +33,10 @@ for a hyperbolic term `2aUV` plus an arbitrary `V`-dependent term and a shifted 
 Two further completed sources are used:
 
 - `fleet02/B04`, `QFORM-LINEAR-FORM-L2-CAP-v1`, source
-  `yspennstate/math-open-problems@f1c1b2dd3a0b2ca4c821505d6ae9100f30383906:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260922T125623Z-r11-product-fourier/REPORT.md`, proving
+  `private-source-repository@f1c1b2dd3a0b2ca4c821505d6ae9100f30383906:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260922T125623Z-r11-product-fourier/REPORT.md`, proving
   `M(sum c_j X_j)<=sqrt(2)/||c||_2` for arbitrary independent density-cap-one coordinates;
 - `fleet02/B10`, source
-  `yspennstate/math-open-problems@11c9ae19edfd07e3a0bd4053a910667c20e721ab:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T130225Z-b10-qform-r11/REPORT.md`, proving the heavy-isotropic independent-leakage branch and the exact counterexample showing that conditional caps do not replace independence.
+  `private-source-repository@11c9ae19edfd07e3a0bd4053a910667c20e721ab:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T130225Z-b10-qform-r11/REPORT.md`, proving the heavy-isotropic independent-leakage branch and the exact counterexample showing that conditional caps do not replace independence.
 
 ## 2. Applying the fleet04 aggregate-bank theorem exposes the remaining anisotropy tax
 

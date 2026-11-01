@@ -37,11 +37,11 @@ The new exact rank-two Hadamard family in Section 6 shows why the phrase “befo
 
 The gate is source-pinned in the preceding B08 work, in particular
 
-`math-open-problems@9fb59f9549a85af6173ade505fd53bc035c611ba`
+`private-source@9fb59f9549a85af6173ade505fd53bc035c611ba`
 
 and the later narrowed report
 
-`math-open-problems@cbd875bb357d1f85b4228e21c67e44b02da92b5e`,
+`private-source@cbd875bb357d1f85b4228e21c67e44b02da92b5e`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T114243Z-fleet02-B08-qform-auto11/REPORT.md`.
 
 The only structural premise imported here is the actual physical statement (1.1) together with an actual `cL`-large child direction.  No rank-three component is subtracted from the full matrix.
@@ -50,7 +50,7 @@ The only structural premise imported here is the actual physical statement (1.1)
 
 The newest volume-stability source actually used at equations is
 
-`math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md`.
 
 For an ORIGINAL-coordinate cross block `M`, let
@@ -74,7 +74,7 @@ All same-side quadratic blocks, outside couplings and affine terms remain arbitr
 
 The required fixed package was reread at exactly
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 
 including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
@@ -89,7 +89,7 @@ with a continuous `C_0` density.  This theorem works in the original product coo
 
 The newest completed fleet03/B08 result at the prepublication partner read is
 
-`math-open-problems@58b2a0752f409dd48ae5e39851ac84f13be4470b`,
+`private-source@58b2a0752f409dd48ae5e39851ac84f13be4470b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T122051Z-fleet03-B08-qform-diffuse-r37/REPORT.md`.
 
 Its theorem `QFORM-MULTIHUB-TRANSVERSE-FRESNEL-v1` is used below.  Split retained ORIGINAL coordinates into physical hubs `H`, `h=|H|`, and a light bank.  If

@@ -14,11 +14,11 @@ The point of this run is to remove the *one physical third coordinate* from the 
 ## Sources actually used
 
 
-Named partner result actually applied: fleet03/B09 `QFORM-INDEFINITE-PAIR-SCHUR-SMOOTHING-v1`, canonical source `yspennstate/math-open-problems@f510cd96f4505202fa369a8ac74b9d016b72ae14`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/fleet03-B09-20260922T171558Z-qform13/REPORT.md`. I use its translation-uniform indefinite-pair density envelope and the source-pinned weak-`L^2` logarithmic-square estimate.
+Named partner result actually applied: fleet03/B09 `QFORM-INDEFINITE-PAIR-SCHUR-SMOOTHING-v1`, canonical source `private-source-repository@f510cd96f4505202fa369a8ac74b9d016b72ae14`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/fleet03-B09-20260922T171558Z-qform13/REPORT.md`. I use its translation-uniform indefinite-pair density envelope and the source-pinned weak-`L^2` logarithmic-square estimate.
 
-Also consumed: fleet03/B09 correction `QFORM-CONDITIONAL-THREEPROJ-2OVER3-MOMENT-FALSE-v1`, canonical source `yspennstate/math-open-problems@60b3f717b1a0e336406bc2acdfc1eaf951906fca`; fleet01/B05 correction `QFORM-WEIGHTED-SCALAR-FIBER-SUP-FALSE-v1`, canonical source `yspennstate/math-open-problems@058acb5c8f9186ef199bbaf136b57f4dd9ea3800`. Neither refuted interface is used here.
+Also consumed: fleet03/B09 correction `QFORM-CONDITIONAL-THREEPROJ-2OVER3-MOMENT-FALSE-v1`, canonical source `private-source-repository@60b3f717b1a0e336406bc2acdfc1eaf951906fca`; fleet01/B05 correction `QFORM-WEIGHTED-SCALAR-FIBER-SUP-FALSE-v1`, canonical source `private-source-repository@058acb5c8f9186ef199bbaf136b57f4dd9ea3800`. Neither refuted interface is used here.
 
-The one-dimensional linear-projection cap `||p_{u^T X}||_infinity<=sqrt(2)` for `||u||_2=1` is the same LPP input already used in this worker's previous theorem `QFORM-ZEROINTERNAL-BANK-WEDGE-v1`, canonical source `yspennstate/math-open-problems@de2e592f5ba2ee9ed9ff152afa6a8856f3e29e1f`.
+The one-dimensional linear-projection cap `||p_{u^T X}||_infinity<=sqrt(2)` for `||u||_2=1` is the same LPP input already used in this worker's previous theorem `QFORM-ZEROINTERNAL-BANK-WEDGE-v1`, canonical source `private-source-repository@de2e592f5ba2ee9ed9ff152afa6a8856f3e29e1f`.
 
 ## Theorem 1 — rank-one Schur bank aggregation
 

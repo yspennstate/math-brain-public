@@ -10,7 +10,7 @@ The unrestricted QFORM conjecture and the requested global continuity conclusion
 ## 1. Incoming completed partner theorem
 
 Use the completed fleet02/B07 theorem from
-`yspennstate/math-open-problems@5ff9d960bffec400a9d6db422401e4c4df98ce6d`,
+`private-source-repository@5ff9d960bffec400a9d6db422401e4c4df98ce6d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T150720Z-fleet02-B07-qform/REPORT.md`.
 
 For a physical cross block
@@ -169,7 +169,7 @@ This is the promised hub deconvolution: the near-rank-two determinant tube is re
 ## 5. Apply the completed fleet01/B07 E2 receiver
 
 Use the completed r32 theorem `QFORM-E2-DIFFUSE-CROSSPAY-OR-FOURHUB-SCHUR-TUBE-v1` from
-`yspennstate/math-open-problems@4c25b2dd7287d7fb03c84c588d34ff058e37f556`,
+`private-source-repository@4c25b2dd7287d7fb03c84c588d34ff058e37f556`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T193206Z-r32/SCHUR_TUBE_ADDENDUM.md`.
 
 By (4.5) its hypotheses hold with `a=b=2/5`. Taking the receiver parameter `epsilon=1/2`, either the full ambient quadratic form has a continuous density with
@@ -204,7 +204,7 @@ No individual small determinant is reciprocated in branches 1 or 2. The pivot in
 ## 6. Actual numerical application to the designated partner scale
 
 The completed fleet02/B07 carrier report
-`yspennstate/math-open-problems@12da18e77ea3c2097023c2da5193c86ef3b6478c`,
+`private-source-repository@12da18e77ea3c2097023c2da5193c86ef3b6478c`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T183825Z-fleet02-B07-qform-r11/REPORT.md`
 records the actual physical lower bound
 

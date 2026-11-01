@@ -15,7 +15,7 @@ The unrestricted theorem remains OPEN. This report proves a new exact-rank-three
 
 The current designated partner is fleet02/B19 r30:
 
-`yspennstate/math-open-problems@6c86c298328a72930d9f61b2cef4e3922155439e`
+`private-source-repository@6c86c298328a72930d9f61b2cef4e3922155439e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T083941Z-fleet02-B19-QFORM-r30/REPORT.md`.
 
@@ -73,7 +73,7 @@ The same partner supplies the exact cross-product identity under any product-pre
 
 The completed product-safe analytic receiver used below is fleet01/B19:
 
-`yspennstate/math-open-problems@d72be34399b8d0325c715973e7af3a37df7ce227`,
+`private-source-repository@d72be34399b8d0325c715973e7af3a37df7ce227`,
 
 `QFORM-RANK2-CROSS-TRANSVERSE-UNIFORM-NEARNULL-v1`. In the exact three-dimensional source / rank-two-cross scope it gives
 

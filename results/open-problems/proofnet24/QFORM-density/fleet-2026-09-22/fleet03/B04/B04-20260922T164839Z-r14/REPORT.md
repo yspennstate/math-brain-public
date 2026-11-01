@@ -12,11 +12,11 @@ The exact target remains: for every dimension, every product law with independen
 
 Fresh owner control at publication is revision `2026-09-22.7`; the proof-first continuation keeps all workers on the full QFORM target. The designated partner `fleet04/B04` had no completed current-QFORM handoff/report visible at the fresh snapshot, so no partner result is fabricated. This run instead applies a completed compatible other-worker theorem to an actual inequality:
 
-- `fleet02/B16`, `QFORM-HEAVY-ROW-PROJECTED-RANK2-HALF-RIESZ-v1`, canonical source `yspennstate/math-open-problems@d2e3dd1587a3fa93707631ea847c48279f3dc6dc`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T163840Z-fleet02-B16-qform-r13/REPORT.md`.
+- `fleet02/B16`, `QFORM-HEAVY-ROW-PROJECTED-RANK2-HALF-RIESZ-v1`, canonical source `private-source-repository@d2e3dd1587a3fa93707631ea847c48279f3dc6dc`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T163840Z-fleet02-B16-qform-r13/REPORT.md`.
 
 It is combined with the earlier B04 product-Fourier theorem:
 
-- `QFORM-DIFFUSE-RANK2-L3-v1` and `QFORM-DIFFUSE-SCHUR-PIVOT-v1`, source `yspennstate/math-open-problems@685929d9daee92a164dbf6ba6f9305d2e6550826`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/a03-b04-20260922T125025Z-qform-r12/REPORT.md`.
+- `QFORM-DIFFUSE-RANK2-L3-v1` and `QFORM-DIFFUSE-SCHUR-PIVOT-v1`, source `private-source-repository@685929d9daee92a164dbf6ba6f9305d2e6550826`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/a03-b04-20260922T125025Z-qform-r12/REPORT.md`.
 
 The live correction ledger was refreshed immediately before publication. In particular this proof does not use uniform one-dimensional pointwise Fresnel decay, independence after spectral rotation, a fixed good principal triple, a single-Schur-extraction implication from the global hypothesis, or fiberwise conditional-density independence.
 

@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 
 # R03 run39 — post-stuck recovery action: bi-nut reformulation and exact row/column completion rigidity
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL; source OPEN.** This is the action selected by run38's first mandatory Section-I stuck report: attack the simplest still-unproved special case in which both corank-one null vectors are full and all absolute coordinate magnitudes are pairwise distinct. The fixed numerical metric did not move, so this does not reset stagnation. The next R03 invocation must therefore be the second Section-I thinking-only recovery if the owner policy is applied literally; it must not manufacture another local lemma merely because C297 below is new.
 

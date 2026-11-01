@@ -4,7 +4,7 @@ Run: 20260924T183756Z-fleet03-B13-fixedmult-r7
 
 Status: proved replacement argument; independent review pending. Full three-eigenvalue problem remains open.
 
-Sources: standalone nine-eigenvalue proof yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f, path proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex. Partner input: fleet04/B13 at commit 0d1dd8180db0e205cab284c51b178af425e5c7f1, path proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet04/B13/20260924T181443Z-fleet04-B13-hyperbolic-envelope-r3/INDEFINITE_PAIR_274.md.
+Sources: standalone nine-eigenvalue proof private-source-repository@eeb752c8943536541b34b42b8bf48e924f4d3d2f, path proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex. Partner input: fleet04/B13 at commit 0d1dd8180db0e205cab284c51b178af425e5c7f1, path proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet04/B13/20260924T181443Z-fleet04-B13-hyperbolic-envelope-r3/INDEFINITE_PAIR_274.md.
 
 ## Claim
 For independent coordinate densities <=K, symmetric A with s_9(A)>=s>0, and arbitrary affine terms,

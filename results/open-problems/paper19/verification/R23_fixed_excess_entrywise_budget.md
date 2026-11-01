@@ -87,7 +87,7 @@ initial cross-reference warning; the final standalone PDF has 38 pages and is
 587,597 bytes.
 
 `pdflatex -interaction=nonstopmode master.tex` was rerun in
-`~/math-open-problems-fleet/master`; the final master PDF has 853
+`~/private-source-fleet/master`; the final master PDF has 853
 pages and is 7,759,351 bytes.  It was copied to
 `~/Downloads/master.pdf`.
 

@@ -4,9 +4,9 @@ attacking: `QFORM-HUBSINGULAR-DIFFUSE-BILINEAR-CURVED-RECEIVER-v1` by keeping a 
 # fleet03/B06 r54 — the diffuse singular-hub bilinear endpoint is density-paid
 
 Programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5`.  
-Immediate B06 input: `QFORM-HUBSINGULAR-FOURMINOR-BANK-v1`, `yspennstate/math-open-problems@5659cc902d288c63efcd6774ca8c9510d10c8a42`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T071843Z-fleet03-B06-qform-r53/REPORT.md`.  
-Analytic input: `QFORM-PHYSICAL-PAIR-LOG-ENVELOPE-v1`, `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.  
-Designated partner actually applied below: fleet04/B06 `QFORM-FRESH-TRANSVERSE-CURVED-SECTION-v1`, `yspennstate/math-open-problems@769800c0ab0851828772adabfb6874aa813e423d`.  
+Immediate B06 input: `QFORM-HUBSINGULAR-FOURMINOR-BANK-v1`, `private-source-repository@5659cc902d288c63efcd6774ca8c9510d10c8a42`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T071843Z-fleet03-B06-qform-r53/REPORT.md`.  
+Analytic input: `QFORM-PHYSICAL-PAIR-LOG-ENVELOPE-v1`, `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.  
+Designated partner actually applied below: fleet04/B06 `QFORM-FRESH-TRANSVERSE-CURVED-SECTION-v1`, `private-source-repository@769800c0ab0851828772adabfb6874aa813e423d`.  
 Execution label: `WITHOUT_VERIFIED_BRAIN`; authenticated repository transport is not native learned-memory ingestion.
 
 The full QFORM conjecture remains OPEN. This run closes the exact rank-two singular three-hub face whenever its hub-null direction is genuinely coupled to the tail (`omega != 0`). It does not close the near-singular transition, the exact `omega=0` global-null branch, `rank F<=1`, or the global compiler.
@@ -429,7 +429,7 @@ This is a stricter reduction than the previous `64/65` tangential collar: the po
 
 ## 8. Actual designated-partner application
 
-The freshest completed designated partner result on the source-pinned tree is fleet04/B06 `QFORM-FRESH-TRANSVERSE-CURVED-SECTION-v1` at `math-open-problems@769800c0ab0851828772adabfb6874aa813e423d`.
+The freshest completed designated partner result on the source-pinned tree is fleet04/B06 `QFORM-FRESH-TRANSVERSE-CURVED-SECTION-v1` at `private-source@769800c0ab0851828772adabfb6874aa813e423d`.
 
 Apply it to the actual post-pair tail remainder whenever a physical tail partition `S sqcup R` exposes
 

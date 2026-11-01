@@ -1,7 +1,7 @@
 # ProofNet24 P26 — immutable archive-health fragment
 
 **Observed run:** 2026-09-16 10:59:25 Asia/Jerusalem  
-**Repository / branch:** `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** `private-source-repository` / `master`  
 **Purpose:** bounded health/index fragment for P26; this does not replace `proofnet24/MANIFEST.md` and does not overwrite any peer ledger.
 
 ## Canonical P26 report written this run

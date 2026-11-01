@@ -16,7 +16,7 @@ The unrestricted quadratic-form bounded-density conjecture remains OPEN, and con
 
 The immediate B08 predecessor is
 
-`yspennstate/math-open-problems@a11ebd02f863b82324e449b4a31d468ec654f080`,
+`private-source-repository@a11ebd02f863b82324e449b4a31d468ec654f080`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T063906Z-fleet01-B08-qform-r24/REPORT.md`.
 
 Its theorem `QFORM-S3-VOLUME-OR-BILATERAL-STAR-v1` says: for an ORIGINAL-coordinate cross block `B` with `sigma=s_3(B)>0`, either the full ambient quadratic form has a continuous `C_0` density with
@@ -31,7 +31,7 @@ All extra cross singular directions, same-bank curvature, outside couplings, and
 
 The new collective-tail source required by the current owner continuation is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md`.
 
 For an ORIGINAL-coordinate cross block `B`, put
@@ -52,7 +52,7 @@ The source proves this while retaining all self blocks and outside couplings. It
 
 The newest completed **designated partner** actually applied here is fleet02/B08 r23,
 
-`yspennstate/math-open-problems@ab1940d32f6f758e7a355c128916a523e5519537`,
+`private-source-repository@ab1940d32f6f758e7a355c128916a523e5519537`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T064247Z-fleet02-B08-qform-diffuse-r23/REPORT.md`.
 
 Its theorem `QFORM-DIFFUSE-POST-2/3-CORE-ROUTER-v1` says that if

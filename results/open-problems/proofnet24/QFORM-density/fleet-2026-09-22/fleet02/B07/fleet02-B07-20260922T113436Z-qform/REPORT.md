@@ -19,8 +19,8 @@ Current canonical state records the full conjecture as open, the proposed law-un
 
 Two complete peer reports were consumed and applied:
 
-1. **fleet03/B17**, `yspennstate/math-open-problems@c64fcff680b0a252a3c92002c60eedba02bbb9ec`, path `qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`. It proves the diagonal branch with `C=pi` and the exact pointwise no-go `sup_f |E exp(isX^2)|=1` for each nonzero `s`.
-2. **fleet01/B12**, `yspennstate/math-open-problems@e423d315ae772630a32bc826c5abb58a5ad09c95`, path `qform/fleet-2026-09-22/fleet01/B12/20260922T112049Z-fleet01-B12-qform-r1/REPORT.md`. It proves a genuinely non-diagonal hyperbolic-pair-plus-square block theorem with conditional density bound `8`, and motivates product-preserving coordinate-block reduction.
+1. **fleet03/B17**, `private-source-repository@c64fcff680b0a252a3c92002c60eedba02bbb9ec`, path `qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`. It proves the diagonal branch with `C=pi` and the exact pointwise no-go `sup_f |E exp(isX^2)|=1` for each nonzero `s`.
+2. **fleet01/B12**, `private-source-repository@e423d315ae772630a32bc826c5abb58a5ad09c95`, path `qform/fleet-2026-09-22/fleet01/B12/20260922T112049Z-fleet01-B12-qform-r1/REPORT.md`. It proves a genuinely non-diagonal hyperbolic-pair-plus-square block theorem with conditional density bound `8`, and motivates product-preserving coordinate-block reduction.
 
 The assigned partner **fleet03/B07** had no completed handoff in the current shared qform handoff directory at the final partner check, so no nonexistent partner theorem is claimed. Work proceeded from the complete compatible peer snapshots above, as authorized by the owner order.
 

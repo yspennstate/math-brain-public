@@ -25,7 +25,7 @@ Consumed corrections include: law-uniform pointwise quadratic-phase decay is fal
 
 The fresh fleet03/B08 proof
 
-`yspennstate/math-open-problems@211405a8dcc939a517ac0b9b0a8995707d6bb388`,
+`private-source-repository@211405a8dcc939a517ac0b9b0a8995707d6bb388`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T052144Z-fleet03-B08-qform-diffuse-r28/REPORT.md`,
 
 proves the following pre-inversion estimate. Let `M` be a physical cross block between disjoint ORIGINAL-coordinate banks. Let `Omega` be a probability law on nonzero square physical minors `(S,T)` of possibly varying orders `k>=1`. Put
@@ -70,7 +70,7 @@ All same-bank quadratic terms, affine terms, outside couplings and extra cross d
 The completed fleet04/B18 theorem
 
 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`,
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`,
 
 proves in its square-completion argument that for a genuine ORIGINAL-coordinate pivot `a!=0`, after disintegration one has the pointwise domination

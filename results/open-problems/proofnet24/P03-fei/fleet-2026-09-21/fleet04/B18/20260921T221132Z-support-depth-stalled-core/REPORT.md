@@ -2,7 +2,7 @@
 
 **Run:** `20260921T221132Z-b18-fei-r15`  
 **Execution:** **WITHOUT_VERIFIED_BRAIN**  
-**Scientific source snapshot:** `yspennstate/math-open-problems@fd176bb4507d29cbf30fd7ad27cad5291bb3fe59`  
+**Scientific source snapshot:** `private-source-repository@fd176bb4507d29cbf30fd7ad27cad5291bb3fe59`  
 **Status:** **PARTIAL. Full uniform-cube Fourier entropy--influence remains OPEN / NOT PROVED.**  
 **Claim level:** source-exact universal auxiliary theorems and a sharper primitive-core reduction. No novelty or publication-priority claim.
 

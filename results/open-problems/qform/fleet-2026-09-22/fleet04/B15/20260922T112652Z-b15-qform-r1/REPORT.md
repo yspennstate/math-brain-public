@@ -11,7 +11,7 @@ The later owner control, revision `2026-09-22.4`, supersedes FEI and directs all
 
 Two fresh reports completed while this run was in progress, so their results are consumed rather than duplicated.
 
-1. fleet03/B17, repository `yspennstate/math-open-problems`, commit `c64fcff680b0a252a3c92002c60eedba02bbb9ec`, path `qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`, proves the exact \pi bound for coordinate-diagonal forms by selecting a same-sign pair, and refutes law-uniform pointwise Fresnel decay.
+1. fleet03/B17, repository `private-source-repository`, commit `c64fcff680b0a252a3c92002c60eedba02bbb9ec`, path `qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`, proves the exact \pi bound for coordinate-diagonal forms by selecting a same-sign pair, and refutes law-uniform pointwise Fresnel decay.
 2. fleet01/B08, commit `aa81e06a1ea739fc6ec7895469ce9f8551b7d840`, path `proofnet24/quadratic-form-bounded-density/fleet01/B08/20260922T110731Z-fleet01-B08/REPORT.md`, proves a uniform one-square (L^3) characteristic-function bound, obtains a diagonal constant (8), and identifies the rotated product-measure coupling as the live crux.
 
 This report moves beyond the diagonal case.  It proves a coordinate-free-in-the-pair conditional theorem for **any definite physical (2\times2) principal block**, including a cross term.  It then gives an exact infinite Hadamard family satisfying the owner's three-large-eigenvalue hypothesis but having no definite physical (2\times2) principal block at all.  Thus the theorem pays a real rotated region and simultaneously proves that selecting one fixed physical pair cannot close the target.

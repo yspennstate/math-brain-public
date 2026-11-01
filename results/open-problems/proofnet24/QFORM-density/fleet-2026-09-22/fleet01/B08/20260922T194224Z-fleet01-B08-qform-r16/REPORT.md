@@ -27,7 +27,7 @@ This run proves Step 1–4 under a strictly weaker leverage hypothesis than the 
 
 ### 2.1 Ridge-window theorem
 
-Canonical source: `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, path `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
+Canonical source: `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, path `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 For an original-coordinate cross block `B`, `gamma>0`, and
 
@@ -56,7 +56,7 @@ The exact source and statement are already pinned in the ridge-window proof abov
 ### 2.3 Assigned partner result actually applied
 
 Assigned partner: fleet02/B08, theorem `QFORM-SCALAR-ORTHOGONAL-CROSSBLOCK-v1`, canonical source
-`yspennstate/math-open-problems@caf8de3c65ae54b8ec8df9bfe977a76bf0a6ab99`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T173452Z-r15/REPORT.md`.
+`private-source-repository@caf8de3c65ae54b8ec8df9bfe977a76bf0a6ab99`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T173452Z-r15/REPORT.md`.
 
 If a square physical cross block satisfies `BB^T=sigma^2 I_m`, `m>4`, then
 

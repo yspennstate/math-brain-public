@@ -224,7 +224,7 @@ The freshest completed fleet02/B01 result read in this run is
 
 source-pinned at
 
-`yspennstate/math-open-problems@dd3593b63057f5a9bd01fac32cf4e1d2ffb4848a`,
+`private-source-repository@dd3593b63057f5a9bd01fac32cf4e1d2ffb4848a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/fleet02-B01-20260924T080657Z-4542a979/REPORT.md`.
 
@@ -300,13 +300,13 @@ Fresh control source at run start:
 
 Relevant current projected-crossing package consumed for scope comparison:
 
-`yspennstate/math-open-problems@43beacb57eba0134d9b4b4cf8b7843a4f119049c`,
+`private-source-repository@43beacb57eba0134d9b4b4cf8b7843a4f119049c`,
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 Designated partner theorem actually applied:
 
-`yspennstate/math-open-problems@dd3593b63057f5a9bd01fac32cf4e1d2ffb4848a`,
+`private-source-repository@dd3593b63057f5a9bd01fac32cf4e1d2ffb4848a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/fleet02-B01-20260924T080657Z-4542a979/REPORT.md`.
 

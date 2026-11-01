@@ -207,7 +207,7 @@ For example, if `D>=1/16`, then under `|det M|>=1`,
 Completed partner result consumed:
 
 `fleet02/B10 r15`, `QFORM-NULL-ROW-NESTED-HEAVY-CLOSURE-v1`, canonical mathematics
-`yspennstate/math-open-problems@b539c58ee7c0f4c09fe8a061b14a48ba279ae4`.
+`private-source-repository@b539c58ee7c0f4c09fe8a061b14a48ba279ae4`.
 
 For a null row of leverage `c=1` and `sigma_min(M)>=1`, if a residual row has leverage `>1/2`, r15 gives
 

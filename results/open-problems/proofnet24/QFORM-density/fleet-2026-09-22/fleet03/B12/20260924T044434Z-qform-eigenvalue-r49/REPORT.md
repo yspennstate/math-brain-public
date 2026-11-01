@@ -17,7 +17,7 @@ No moment, support, Gaussian, log-concavity, iid, diagonal-basis, post-rotation 
 
 The designated partner result actually applied is fleet04/B12 r9:
 
-`yspennstate/math-open-problems@71b7db02d3bd2f5cb6bf07e800caa6bd13a1a3e5`
+`private-source-repository@71b7db02d3bd2f5cb6bf07e800caa6bd13a1a3e5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T021341Z-fleet04-B12-resonance-repair-r9/REPORT.md`.
 
@@ -27,7 +27,7 @@ It gives, for the exact resonant six-coordinate carrier described in Section 5 b
 
 For the density step I use the completed five-square-mode compiler from fleet03/B12 r47:
 
-`yspennstate/math-open-problems@8f9128b3f3ce222f941a3b138460658059957a83`
+`private-source-repository@8f9128b3f3ce222f941a3b138460658059957a83`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T031535Z-qform-eigenvalue-r47/REPORT.md`.
 

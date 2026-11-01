@@ -15,7 +15,7 @@ The unrestricted conjecture remains open. The result below is a deterministic ex
 
 The previous fleet03/B19 theorem at
 
-`yspennstate/math-open-problems@82773d6d0339c8867b76c777216b6c564939f2ae`
+`private-source-repository@82773d6d0339c8867b76c777216b6c564939f2ae`
 
 proves that, for a rank-two original-coordinate cross bank with singular product `rho=s1(C)s2(C)` and a nonzero transverse source curvature `lambda`, one gets a continuous density bound
 
@@ -233,7 +233,7 @@ The designated partner fleet04/B19 theorem
 
 is source-pinned at
 
-`yspennstate/math-open-problems@1e7af7988c38150c1591910270c44f4f219164b3`.
+`private-source-repository@1e7af7988c38150c1591910270c44f4f219164b3`.
 
 In its proved **residual-diffuse exact-null-coloop** scope it gives, for residual determinant `D_res`,
 

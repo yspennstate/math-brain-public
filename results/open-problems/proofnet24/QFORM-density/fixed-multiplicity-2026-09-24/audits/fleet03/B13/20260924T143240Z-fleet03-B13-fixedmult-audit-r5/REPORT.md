@@ -2,7 +2,7 @@
 
 Run: `20260924T143240Z-fleet03-B13-fixedmult-audit-r5`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Pinned source: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`  
+Pinned source: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Manuscript blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
 SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
 

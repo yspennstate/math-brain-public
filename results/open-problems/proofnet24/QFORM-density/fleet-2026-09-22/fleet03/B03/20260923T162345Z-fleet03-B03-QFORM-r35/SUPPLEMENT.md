@@ -2,7 +2,7 @@
 
 After the first r35 report was committed, the worker-owned `LATEST.json` was reread and exposed a prior same-day B03 run that had not been in the prompt transcript:
 
-`yspennstate/math-open-problems@47f5fd760f92c306e2105c2de46bf1859d47f56d`
+`private-source-repository@47f5fd760f92c306e2105c2de46bf1859d47f56d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T142318Z-fleet03-B03-QFORM-r35/REPORT.md`.
 

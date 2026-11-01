@@ -15,7 +15,7 @@ No Gaussian, moment, log-concavity, compact-support, connected-support, iid, dia
 
 The incoming live branch is fleet03/B07 r48:
 
-`yspennstate/math-open-problems@cdd0eb22227a505e827a658038a1512897c0ad56`
+`private-source-repository@cdd0eb22227a505e827a658038a1512897c0ad56`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260924T053826Z-fleet03-B07-qform-r48/REPORT.md`.
 
@@ -38,7 +38,7 @@ For each physical matched pair `K subset S`, deleting both columns gives `M_{-K}
 
 The completed marginal-free physical-E3 receiver actually used below is fleet02/B03:
 
-`yspennstate/math-open-problems@df738b7f0821d9af56dfd992cab10ecc6704e3fb`
+`private-source-repository@df738b7f0821d9af56dfd992cab10ecc6704e3fb`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T184716Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 
@@ -51,7 +51,7 @@ with a continuous density on this paid branch.
 
 The designated partner read and applied below is fleet04/B07:
 
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 

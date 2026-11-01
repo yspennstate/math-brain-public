@@ -18,7 +18,7 @@ The unrestricted theorem is still OPEN. All variables below are ORIGINAL-coordin
 
 The newest completed partner report used here is
 
-`yspennstate/math-open-problems@db5c35db0ea104ee7e38d904c1a759ba46164f49`,
+`private-source-repository@db5c35db0ea104ee7e38d904c1a759ba46164f49`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T130709Z-fleet02-B19-QFORM-auto11/REPORT.md`,
 
@@ -71,7 +71,7 @@ I apply fleet03/B09 r32,
 
 canonical source
 
-`yspennstate/math-open-problems@56d0211f2f04d74152032fd1914196673eb5c3e6`,
+`private-source-repository@56d0211f2f04d74152032fd1914196673eb5c3e6`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T124906Z-fleet03-B09-QFORM-r32/REPORT.md`.
 

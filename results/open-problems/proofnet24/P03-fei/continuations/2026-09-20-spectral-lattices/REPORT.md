@@ -394,7 +394,7 @@ The exploratory folder preserves the initial level-degree enumeration, the test 
 
 ## 9. Sources and provenance
 
-Actually consumed repository sources, on `yspennstate/math-open-problems`, branch `master`:
+Actually consumed repository sources, on `private-source-repository`, branch `master`:
 
 - Current FEI entrypoint, blob `74f4ab003c44ef18e19e0d91adacd93aeb27ab20`, including the centroid update and remaining mass-weighted gap. Its earlier later sections were not all independently re-audited.
 - `continuations/2026-09-20-centroid-and-carries/REPORT.md`, blob `87923382aa41f3fd4cf355750679846d8e45e35d`: the support-pairing proof, bottom-digit argument, plateaued result and higher-digit obstruction. The uniform-spectrum conclusion is retained with its stronger finite-k coefficient; this report does not relabel it as new.

@@ -113,7 +113,7 @@ with
 `C_* = 10*2^(1/5) C_1^(4/5)
      = 26.00795741955...`.                                           (2.7)
 
-This is the requested real use of a completed result from `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`. It is applied after the physical pair has been completed, so the volume currency is genuinely present in the actual Schur remainder. The argument does not reuse a determinant bank that existed only before completion.
+This is the requested real use of a completed result from `private-source@e5f71d79eff325201dd0274053d20268ce65b837`. It is applied after the physical pair has been completed, so the volume currency is genuinely present in the actual Schur remainder. The argument does not reuse a determinant bank that existed only before completion.
 
 ### Scope
 
@@ -265,13 +265,13 @@ The partner's projected star-star-core sibling, rank-one core tube, nested-E2 an
 
 Required pinned source, used in the real inequality (2.1)--(2.7):
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 
 Specifically Extension `D_k` with `k=1,q=2` and Lemma 4.1.
 
 Physical-pair logarithmic envelope:
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`
 
 Latest completed designated partner consumed:
 

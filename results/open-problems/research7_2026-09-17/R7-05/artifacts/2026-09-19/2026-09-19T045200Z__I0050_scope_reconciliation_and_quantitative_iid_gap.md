@@ -5,7 +5,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 Date: 2026-09-19 UTC  
 Worker: R7-05  
 Native ID: `6aabe805f32881919992996e1c5cfad6`  
-Repository: `yspennstate/math-open-problems`, `master`
+Repository: `private-source-repository`, `master`
 
 ## 1. Purpose and status
 

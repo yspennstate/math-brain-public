@@ -29,7 +29,7 @@ for every Boolean function on every finite uniform cube, or give a genuine count
 
 ### 2.1 fleet02/B15 — influence I-projection
 
-Source: `yspennstate/math-open-problems`, commit
+Source: `private-source-repository`, commit
 `4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, path
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`.
 
@@ -59,7 +59,7 @@ R_\Gamma=B_{\rm inf}^{\Gamma}+K_{\rm occ}.
 
 ### 2.2 fleet04/B15 — exact hierarchy KL
 
-Source: `yspennstate/math-open-problems`, commit
+Source: `private-source-repository`, commit
 `2bf247373576eb406ca91bb3ea5f3ce5e5ab8588`, path
 `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md`.
 
@@ -81,7 +81,7 @@ This is the named OTHER-account result applied below: the theorem in Section 4 r
 
 ### 2.3 fleet03/B18 — recursive-majority low-level barrier
 
-Source: `yspennstate/math-open-problems`, commit
+Source: `private-source-repository`, commit
 `bff0d7b6c21485f386841c42582eb04f32705046`, path
 `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md`.
 

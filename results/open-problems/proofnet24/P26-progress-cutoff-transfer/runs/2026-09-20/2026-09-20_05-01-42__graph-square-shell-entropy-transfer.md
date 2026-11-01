@@ -4,7 +4,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6/m
 
 **Status:** `CANDIDATE_FULL` for the restricted transfer theorem and graph-square application proved below, pending later independent review; **PARTIAL / OPEN** for Salez Problem 2.3. Worldwide publication novelty is **UNVERIFIED**.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 Report root: `proofnet24/P26-progress-cutoff-transfer/runs/2026-09-20/`.
 Fresh pre-report master observed after the two sanity-check artifact commits: `5efba4da8f75c59b26aa58b4eeff6f188b8f1dda`.

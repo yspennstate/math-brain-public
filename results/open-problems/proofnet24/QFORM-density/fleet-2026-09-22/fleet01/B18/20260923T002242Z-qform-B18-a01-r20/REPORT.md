@@ -252,7 +252,7 @@ This does **not** solve the quantitative regime `p_disj` small but nonzero. It d
 
 The designated partner report is
 
-`yspennstate/math-open-problems@0a28faf7bf87a49a9df787eb276b449aee3d9c47:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260922T221352Z-fleet02-B18-QFORM-r11/REPORT.md`.
+`private-source-repository@0a28faf7bf87a49a9df787eb276b449aee3d9c47:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260922T221352Z-fleet02-B18-QFORM-r11/REPORT.md`.
 
 It closes two zero-pivot exact-rank-three cases and leaves only the Schur-isotropic case
 
@@ -385,8 +385,8 @@ At `p_disj=0`, Edmonds reduces the vector geometry to the low-complexity cases i
 
 ## 12. Exact source pins
 
-- Designated partner: `yspennstate/math-open-problems@0a28faf7bf87a49a9df787eb276b449aee3d9c47`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260922T221352Z-fleet02-B18-QFORM-r11/REPORT.md`.
-- Prior own capped-basis theorem: `yspennstate/math-open-problems@a9812cdd26a9dd066638b0e6f0dccf3dbdce2ab8`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T225705Z-qform-B18-a01-r19/REPORT.md`.
+- Designated partner: `private-source-repository@0a28faf7bf87a49a9df787eb276b449aee3d9c47`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260922T221352Z-fleet02-B18-QFORM-r11/REPORT.md`.
+- Prior own capped-basis theorem: `private-source-repository@a9812cdd26a9dd066638b0e6f0dccf3dbdce2ab8`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T225705Z-qform-B18-a01-r19/REPORT.md`.
 - LPP primary source: arXiv:1507.07949; Israel J. Math. 216 (2016), 877–889; DOI 10.1007/s11856-016-1431-5.
 - Matroid base packing theorem: Edmonds' finite matroid base-packing theorem, used only for the exact `p_disj=0` structural endpoint; the inequality is written explicitly in (6.1).
 

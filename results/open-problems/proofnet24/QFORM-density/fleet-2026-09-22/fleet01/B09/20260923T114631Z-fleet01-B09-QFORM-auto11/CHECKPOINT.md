@@ -37,7 +37,7 @@ Therefore the product of the three singular values of `B_i` is exactly
 This is the desired bridge from arbitrary within-bank curvature to a product-preserving off-diagonal mechanism: no leaf curvature has been deleted or treated as a small random perturbation.
 
 Apply fleet03/B09's completed grouped-cross theorem, source
-`yspennstate/math-open-problems@0257b7a08990f303da16797bcbad0d3e6a1e6538`, path
+`private-source-repository@0257b7a08990f303da16797bcbad0d3e6a1e6538`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T104947Z-fleet03-B09-QFORM-r30/REPORT.md`.
 It allows arbitrary same-side quadratic blocks and states for any original-coordinate cross block of rank three
 

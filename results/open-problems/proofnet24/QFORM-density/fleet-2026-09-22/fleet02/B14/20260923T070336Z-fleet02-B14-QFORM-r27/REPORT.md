@@ -19,13 +19,13 @@ This report proves the exact homogeneity of the volume certificate on product su
 
 Three completed sources are used at equations.
 
-1. Claude Fourier/volume source `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. Its `FOURIER_ROUTE_REPORT.md` proves the general `D_k` calculation, including `D'` and the no-marginal-gate `D_5` theorem, and its `RESULTS.md` proves the underlying decoupling/Brascamp--Lieb determinant argument.
+1. Claude Fourier/volume source `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. Its `FOURIER_ROUTE_REPORT.md` proves the general `D_k` calculation, including `D'` and the no-marginal-gate `D_5` theorem, and its `RESULTS.md` proves the underlying decoupling/Brascamp--Lieb determinant argument.
 2. The same source proves the cap-one Fourier `L^p` lemma
 
    `int |fhat|^p <= 4 pi / sqrt(p),   p>=2`,
 
    for a probability density `f<=1`.
-3. Designated partner fleet03/B14 r29, `yspennstate/math-open-problems@f79df5706245c49d305aa7cfcf0e4c70f9c6e8de`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T063425Z-fleet03-B14-QFORM-r29/REPORT.md`, proves the whole-bank square theorem
+3. Designated partner fleet03/B14 r29, `private-source-repository@f79df5706245c49d305aa7cfcf0e4c70f9c6e8de`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T063425Z-fleet03-B14-QFORM-r29/REPORT.md`, proves the whole-bank square theorem
 
    `||p_Q||_infinity <= |c|^{-1} H(2|c|/(|d|||a||_2^2))`
 

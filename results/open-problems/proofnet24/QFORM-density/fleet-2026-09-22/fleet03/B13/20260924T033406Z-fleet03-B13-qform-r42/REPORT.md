@@ -18,7 +18,7 @@ All coordinates below are original physical coordinates. No random-variable rota
 
 Fresh completed partner report:
 
-`yspennstate/math-open-problems@13f6435b5e542a496a489cff844110f4834bdec3`
+`private-source-repository@13f6435b5e542a496a489cff844110f4834bdec3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260924T031520Z-fleet04-B13-diagonal-sparsification-r2/REPORT.md`.
 
@@ -46,7 +46,7 @@ The same partner report also proves the optimizer-free bathtub reduction: for ev
 
 From the earlier completed fleet04/B13 slab dichotomy,
 
-`yspennstate/math-open-problems@d1764f29884bf14ce505d36668105edfcaf8315e`,
+`private-source-repository@d1764f29884bf14ce505d36668105edfcaf8315e`,
 
 in the diffuse exact-rank-two chamber
 
@@ -70,7 +70,7 @@ This run works only on the hard branch (1.3), leaving (1.5) untouched.
 
 The completed fleet01/B13 theorem is source-pinned at
 
-`yspennstate/math-open-problems@38a8a2ae1cb319211ab4be60f6f8d6f7f03f85f9`,
+`private-source-repository@38a8a2ae1cb319211ab4be60f6f8d6f7f03f85f9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T223205Z-fleet01-B13-qform-auto11/REPORT.md`.
 

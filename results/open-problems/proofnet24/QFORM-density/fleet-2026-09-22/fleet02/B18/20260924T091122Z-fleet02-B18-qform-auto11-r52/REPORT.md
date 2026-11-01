@@ -148,7 +148,7 @@ At `s=1`, `d>=1`, this is a literal owner-target family with spectrum `{-d,d,1}`
 
 Use the pinned source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 and its proved Theorem H (mixed hub Fresnel--Brascamp--Lieb). For the diffuse family above with `s=1`, choose the literal hub `H={X0}` and `I=Y`. Inside `I`, the quadratic block is the rank-one square `w w^T`. The hub coupling is `d v`.
 

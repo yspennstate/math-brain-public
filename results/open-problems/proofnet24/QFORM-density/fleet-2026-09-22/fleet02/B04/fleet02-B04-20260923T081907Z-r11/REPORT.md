@@ -23,11 +23,11 @@ All variables are original independent real coordinates with densities at most o
 
 Required Claude source consumed and actually applied:
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, especially `RESULTS.md` Theorem D and `FOURIER_ROUTE_REPORT.md`. The arbitrary-weight determinant/entropy form says a supported law on nonzero `3x3` physical minors must satisfy the constrained-side row-marginal gate; the exact stress cut in Section 6 has target-scale `E3` but **no admissible supported weight at any allowed fractional exponent**.
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, especially `RESULTS.md` Theorem D and `FOURIER_ROUTE_REPORT.md`. The arbitrary-weight determinant/entropy form says a supported law on nonzero `3x3` physical minors must satisfy the constrained-side row-marginal gate; the exact stress cut in Section 6 has target-scale `E3` but **no admissible supported weight at any allowed fractional exponent**.
 
 Completed unconditional pair-volume half-Riesz input:
 
-- fleet01/B01 `QFORM-PAIRVOLUME-HALF-RIESZ-UNCONDITIONAL-v1`, `yspennstate/math-open-problems@1f3af9dc58afb9e902b972466d6da01cece89734`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T030821Z-fleet01-B01-qform-auto11/REPORT.md`, Theorem 8.1. If a quadratic residual has a disjoint physical cross block `M` with
+- fleet01/B01 `QFORM-PAIRVOLUME-HALF-RIESZ-UNCONDITIONAL-v1`, `private-source-repository@1f3af9dc58afb9e902b972466d6da01cece89734`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T030821Z-fleet01-B01-qform-auto11/REPORT.md`, Theorem 8.1. If a quadratic residual has a disjoint physical cross block `M` with
   `E2=e2(M^T M)>0`, then
 
   `H_(1/2)(R):=sup_s E|R-s|^(-1/2) <= C_E2 E2^(-1/8)`,
@@ -38,7 +38,7 @@ Completed unconditional pair-volume half-Riesz input:
 
 This theorem explicitly permits arbitrary two-sided quadratic leakage.
 
-Designated partner `fleet03/B04` latest completed handoff r27, canonical report `yspennstate/math-open-problems@62ea4dbfd636b7c4a019fec8b428fc5450f4a5fc`, source-pins the same unconditional pair-volume theorem and its physical-scalar square splice. I apply that physical-scalar comparator to the actual family in Section 8. The partner's own clean-bank row-star theorem is not misapplied: the stress family below has nonzero self curvature on both residual banks.
+Designated partner `fleet03/B04` latest completed handoff r27, canonical report `private-source-repository@62ea4dbfd636b7c4a019fec8b428fc5450f4a5fc`, source-pins the same unconditional pair-volume theorem and its physical-scalar square splice. I apply that physical-scalar comparator to the actual family in Section 8. The partner's own clean-bank row-star theorem is not misapplied: the stress family below has nonzero self curvature on both residual banks.
 
 For a scalar linear projection of a disjoint product bank I use the completed product-projection estimate already source-pinned in fleet03/B04 r20/r27 and fleet02/B04:
 

@@ -9,7 +9,7 @@ This addendum pushes the fleet02/B13 pair-incidence mechanism one step further. 
 
 Use the notation of the completed assigned-partner result
 
-`yspennstate/math-open-problems@93bed74b07afe996a4aa08eaeb88f35060653134`.
+`private-source-repository@93bed74b07afe996a4aa08eaeb88f35060653134`.
 
 Thus `x,y,z` are unit vectors in the residual coordinate space, with
 

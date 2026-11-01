@@ -3,7 +3,7 @@
 The complete twelve-file package was written and read back nonempty and
 byte-equal at:
 
-- canonical `yspennstate/math-open-problems@dc65be33d9f612d81ad8d07db7ad26294891197f`, path `reports/fei-2026-10-11/runs/B12/20261013T162122Z-fleet01-B12-gu-biased-child/`;
+- canonical `private-source-repository@dc65be33d9f612d81ad8d07db7ad26294891197f`, path `reports/fei-2026-10-11/runs/B12/20261013T162122Z-fleet01-B12-gu-biased-child/`;
 - Brain mirror `yspennstate/math-research-brain@d2c5ffc7fb1760fe96f85d081974b8e1cf818c4c`, path `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/B12/20261013T162122Z-fleet01-B12-gu-biased-child/`.
 
 Both repositories returned identical blob SHAs:

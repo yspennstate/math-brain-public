@@ -29,7 +29,7 @@ Accordingly, the theorem below uses only a genuine independent ORIGINAL scalar a
 
 From
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`,
 
@@ -44,7 +44,7 @@ No independence of the two projected coordinates is assumed.
 
 From
 
-`yspennstate/math-open-problems@80f95e245b7f3418e8da36173ac4eb9d81fb58a7`
+`private-source-repository@80f95e245b7f3418e8da36173ac4eb9d81fb58a7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T003846Z/REPORT.md`,
 
@@ -77,7 +77,7 @@ This is used only as source-valid product-projection information, never as a sub
 
 The newest completed designated-partner result used in this run is
 
-`yspennstate/math-open-problems@80f21f0a650baffd62c8b9e4d21babd30ade95f0`
+`private-source-repository@80f21f0a650baffd62c8b9e4d21babd30ade95f0`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T012820Z-fleet02-B16-QFORM-r22/REPORT.md`.
 

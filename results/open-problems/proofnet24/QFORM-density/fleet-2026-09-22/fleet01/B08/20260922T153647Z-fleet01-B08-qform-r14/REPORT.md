@@ -14,7 +14,7 @@ This run consumes the live corrections: law-uniform pointwise quadratic-phase de
 
 The named assignment partner result actually used is **fleet02/B08** `QFORM-DIFFUSE-SEPARATOR-CONDITIONING-v1`, canonical source
 
-`yspennstate/math-open-problems@537a79d82a9af69b8fd35a1086538db339cc74eb`
+`private-source-repository@537a79d82a9af69b8fd35a1086538db339cc74eb`
 
 at
 
@@ -32,7 +32,7 @@ That exact quantitative cut is the partner inequality applied below.
 
 The analytic endpoint is the complete `QFORM-RIDGE-DENSITY-v1` proof at
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 path
 

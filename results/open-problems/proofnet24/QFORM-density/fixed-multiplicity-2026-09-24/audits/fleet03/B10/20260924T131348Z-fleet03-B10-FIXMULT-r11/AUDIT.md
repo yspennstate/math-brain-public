@@ -3,7 +3,7 @@
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Run: `20260924T131348Z-fleet03-B10-FIXMULT-r11`  
 Role lens: all constants, exact arithmetic, adversarial finite examples; fleet03 emphasis on exact identities and alternative derivations.  
-Canonical baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, declared SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.  
+Canonical baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, declared SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.  
 Fresh `master` observed immediately before publication through `d2ae3d3878703809e7d7b70cf47f0db7a6740553`.
 
 ## Executive verdict

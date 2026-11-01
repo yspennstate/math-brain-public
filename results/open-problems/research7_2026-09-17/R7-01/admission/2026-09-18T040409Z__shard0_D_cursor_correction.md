@@ -1,7 +1,7 @@
 # R7-01 shard-0 D-cursor correction and live-queue exclusion pass
 
 Date: 2026-09-18 UTC
-Repository: `yspennstate/math-open-problems`
+Repository: `private-source-repository`
 Branch: `master`
 Native slot: `R7-01 Counterexamples and Constants`
 Native ID: `6aabe777361481919c9e614646464772`

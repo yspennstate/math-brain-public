@@ -9,7 +9,7 @@ Full QFORM remains open. This checkpoint records the first new calculation befor
 
 I use the completed designated partner fleet04/B07 result
 
-`yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`,
+`private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`.
 
 In its unpaid N3 rank-four survivor there is an actual physical row-star vector `r` and an actual physical column-star vector `c` satisfying

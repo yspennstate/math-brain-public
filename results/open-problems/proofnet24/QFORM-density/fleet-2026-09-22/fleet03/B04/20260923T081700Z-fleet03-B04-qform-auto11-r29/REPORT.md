@@ -17,7 +17,7 @@ The designated partner is `fleet04/B04`. A fresh lookup found no completed curre
 
 The completed peer result actually applied is the global third-volume product-Fourier theorem of fleet03/B02 together with the exact KL-halving improvement recorded by fleet01/B04. An immutable source snapshot containing both is:
 
-- repository `yspennstate/math-open-problems`, commit `00c845c9d1dad964da3c22f7e516db277a516db3`;
+- repository `private-source-repository`, commit `00c845c9d1dad964da3c22f7e516db277a516db3`;
 - B02 path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T043653Z-fleet03-B02-qform-r20/REPORT.md`;
 - B04 improvement path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T055035Z-fleet01-B04-QFORM-auto13/REPORT.md`.
 

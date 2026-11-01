@@ -59,14 +59,14 @@ with
 
 The completed full-matrix physical-pair theorem at
 
-`math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`
+`private-source@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`
 
 states that for arbitrary remaining spectrum and couplings, arbitrary affine terms, and `s_3(A)>=s>0`, such a pair gives
 
 `||p_Q||_infinity <= 3*400^(1/3)*(D^2*kappa*s)^(-1/6)`.           (2.4)
 
 The owner-pinned Fourier package at
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md` and `COUNTEREXAMPLE_SEARCH.md`, was also read. Its unconditional D5 theorem is used in Section 6. Its numerical counterexample search is not used as proof.
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md` and `COUNTEREXAMPLE_SEARCH.md`, was also read. Its unconditional D5 theorem is used in Section 6. Its numerical counterexample search is not used as proof.
 
 Finally, I use the preceding fleet02/B13 r12 theorem `QFORM-SLAB-MASS-TRIMMED-AFFINE-DEFECT-v1`, which is a statement directly for arbitrary cap-one product laws and arbitrary fragmented retained coordinate sets.
 

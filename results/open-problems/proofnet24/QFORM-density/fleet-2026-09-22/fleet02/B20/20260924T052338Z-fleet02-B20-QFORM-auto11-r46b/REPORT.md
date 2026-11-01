@@ -18,7 +18,7 @@ All coordinates used below are literal ORIGINAL coordinates. Every same-bank qua
 
 Newest completed designated partner actually consumed:
 
-- fleet03/B20 r47, `yspennstate/math-open-problems@fb3a649f17234d139f1731e78557d2e7b1cdd187`,
+- fleet03/B20 r47, `private-source-repository@fb3a649f17234d139f1731e78557d2e7b1cdd187`,
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T044648Z-fleet03-B20-QFORM-auto11-r47/REPORT.md`.
 
 Its exact physical-pair envelope is, for an invertible indefinite original-coordinate principal pair B, with
@@ -33,7 +33,7 @@ for every `r>0`. The same report pins and applies the completed log-to-quarter t
 
 Curvature-robust rank-two fractional input:
 
-- fleet02/B19, `yspennstate/math-open-problems@f4d95bc33caf8db11888cceb817c005484f67d31`,
+- fleet02/B19, `private-source-repository@f4d95bc33caf8db11888cceb817c005484f67d31`,
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260924T031336Z-fleet02-B19-QFORM-auto11/REPORT.md`.
 
 For any literal disjoint physical cross block `M` of a quadratic-affine form on independent cap-one ORIGINAL coordinates, define
@@ -49,18 +49,18 @@ where
 `C_R2=3.929131770449763...`.                                      (1.3)
 
 The log-to-quarter theorem underneath the partner composition is source-pinned at
-`yspennstate/math-open-problems@25ad8faaac5064b6814d51ae63d894fe97c1eac4`, fleet04/B20 r3. If `H_(1/4)(W)<=L`, then for every `delta>0`,
+`private-source-repository@25ad8faaac5064b6814d51ae63d894fe97c1eac4`, fleet04/B20 r3. If `H_(1/4)(W)<=L`, then for every `delta>0`,
 
 `E Psi((W-s)/delta) <= 6 delta^(1/4) L`,                           (1.4)
 
 uniformly in `s`, with the same `Psi` used in the translated pair/square kernel.
 
 The owner-required pinned Claude source was reread at
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. Its unrestricted D5 receiver is used in Section 5 below at an actual live physical cut.
 
 The freshest compatible assembly input used is fleet03/B19 r50,
-`yspennstate/math-open-problems@f3a0b13c6d73bb3ec94be4ad5fc293c60ab7da3f`, whose robust branch supplies a literal light-light cross block with
+`private-source-repository@f3a0b13c6d73bb3ec94be4ad5fc293c60ab7da3f`, whose robust branch supplies a literal light-light cross block with
 
 `sigma_2(M)>mu := 255/65536`.                                     (1.5)
 

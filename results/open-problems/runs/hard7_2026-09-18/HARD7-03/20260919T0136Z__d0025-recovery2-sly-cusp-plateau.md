@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # HARD7-03 — Section-I recovery 2: repair of the adaptive-coupling obstruction and an explicit K=2 binary-disorder plateau
 
-Date: 2026-09-19 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-19 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / source Problem 4 remains open in its full generality.** This run began as the mandatory second Section-I recovery after the previous frozen metric remained at zero. The new-method review found that the preceding report's B15 diagnosis was wrong: choosing a crossing time after seeing the disordered weights does **not** destroy the Sly coupling bonus, because the maximizing path is measurable with respect to the disordered field while the auxiliary coupling variables remain conditionally independent. Repairing that point yields a source-valid theorem for the frozen `K=2` binary site-disorder case and moves the fixed metric.
 

@@ -25,7 +25,7 @@ This proof explicitly respects the current corrections:
 
 The designated completed partner result actually applied is fleet04/B01's grouped-square/signed-Fejer report
 
-`yspennstate/math-open-problems@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`
+`private-source-repository@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`
 
 at
 

@@ -13,7 +13,7 @@ attacking: remove the partner rank-two diagonal-side leverage gate by a capacita
 
 The actual bounded-density projection and Fourier inputs used below are source-pinned at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
@@ -24,7 +24,7 @@ The two facts used are exactly:
 
 The newest completed designated-partner result consumed is
 
-`yspennstate/math-open-problems@b84dffeb117523831ee7871e8ebee3630c14f372`
+`private-source-repository@b84dffeb117523831ee7871e8ebee3630c14f372`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/fleet02-B16-20260923T142923Z-auto11/REPORT.md`.
 

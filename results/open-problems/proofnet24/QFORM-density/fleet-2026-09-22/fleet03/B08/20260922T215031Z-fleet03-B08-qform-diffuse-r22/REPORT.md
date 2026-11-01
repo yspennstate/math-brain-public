@@ -22,7 +22,7 @@ This run does not use the refuted law-uniform pointwise quadratic-phase decay, u
 
 Canonical source:
 
-`yspennstate/math-open-problems@d5547a484fcc9b62341d80e9ba902cbe2e484284`
+`private-source-repository@d5547a484fcc9b62341d80e9ba902cbe2e484284`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T201956Z-fleet03-B08-qform-diffuse-r20/REPORT.md`.
 
@@ -46,7 +46,7 @@ The same run preserves the full original-coordinate product structure and proves
 
 Immutable snapshot used:
 
-`yspennstate/math-open-problems@55b475aece02e3bd181935ff66a26b8988100a0c`
+`private-source-repository@55b475aece02e3bd181935ff66a26b8988100a0c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T204103Z-1dd824/REPORT.md`.
 
@@ -64,7 +64,7 @@ It also proves the exact-rank-two double-incident grouped `L^3` theorem. I do no
 
 Immutable snapshot used:
 
-`yspennstate/math-open-problems@eac866b378f5c54411a55f7eb49f89336a4701ae`
+`private-source-repository@eac866b378f5c54411a55f7eb49f89336a4701ae`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T212328Z-fleet03-B06-qform-r19/REPORT.md`.
 
@@ -78,7 +78,7 @@ proves `||M_Z||_F^2>1067/2000`, and proves a dichotomy. If `E_2(M_Z)>=1/4096`, g
 
 The designated `fleet04/B08` current-QFORM handoff/report is still absent at the fresh repository check, so no designated-partner theorem is fabricated. The compatible completed fleet04 theorem actually applied here is fleet04/B18:
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
@@ -92,7 +92,7 @@ because after completing the genuine original coordinate, the square variable ha
 
 I also use fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, source snapshot
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 

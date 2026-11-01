@@ -14,7 +14,7 @@ Execution: **WITHOUT_VERIFIED_BRAIN**
 
 The immediate lead synthesis input is fleet03/B19 r37:
 
-`yspennstate/math-open-problems@dc76884a5d77c29274a018470c10e9af55241e75`
+`private-source-repository@dc76884a5d77c29274a018470c10e9af55241e75`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T160411Z-fleet03-B19-QFORM-r37/REPORT.md`.
 
@@ -44,7 +44,7 @@ and `||P1 C P2||_F >= (3/4)||C||_F`. The old r37 graph paid (1.4) only under a t
 
 The designated partner result actually used is fleet04/B20 r10:
 
-`yspennstate/math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912`
+`private-source-repository@c6f29397b3d45a7cf7ab67633a5451767b478912`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`.
 
@@ -56,7 +56,7 @@ Arbitrary same-bank quadratic blocks, affine terms and additional spectrum are r
 
 Finally, I use the new proved restricted grouped-projection theorem from
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 

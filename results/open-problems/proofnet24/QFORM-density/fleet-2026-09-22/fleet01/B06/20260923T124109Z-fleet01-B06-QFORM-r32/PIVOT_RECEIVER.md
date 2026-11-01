@@ -44,7 +44,7 @@ In particular, under the clean marginal gate `max alpha_i<=1/2`,
 
 The proof is the `k=2` fractional-potential specialization of the completed decoupling/Brascamp--Lieb volume argument in
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 

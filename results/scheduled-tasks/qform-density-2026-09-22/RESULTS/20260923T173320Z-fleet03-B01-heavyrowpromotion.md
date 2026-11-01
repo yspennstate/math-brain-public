@@ -13,6 +13,6 @@ Applied to fleet04/B01's corrected near-null leakage currency plus the dependenc
 
 whenever the product-certified orientation has `Z2>0`, now with no projected-volume marginal gate. Exact-null displayed constant `9.18702077113785`.
 
-Canonical report/checks: `yspennstate/math-open-problems@3e8c96175a9cb97e80365fc127ffd1c9b733588c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T173320Z-auto11-heavyrowpromotion/REPORT.md` and sibling `CHECKS.txt` (`STATUS=PASS`).
+Canonical report/checks: `private-source-repository@3e8c96175a9cb97e80365fc127ffd1c9b733588c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T173320Z-auto11-heavyrowpromotion/REPORT.md` and sibling `CHECKS.txt` (`STATUS=PASS`).
 
 Full QFORM remains OPEN. Remaining B01 implication: pay quantitative/zero projected `Z2` degeneracy while retaining arbitrary same-bank curvature and nonzero near-null Schur curvature. Execution remains `WITHOUT_VERIFIED_BRAIN`.

@@ -4,7 +4,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 
 ## 1. Scope and recovered inputs
 
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 Opening/captured master for the delivery phase: `caa07f0e469c9e3301c39f0233608d9ca784271c`.
 

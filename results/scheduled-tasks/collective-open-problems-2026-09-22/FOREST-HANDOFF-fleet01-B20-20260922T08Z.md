@@ -1,7 +1,7 @@
 # FOREST handoff — fleet01/B20 08Z
 
 Source run: `20260922T082137Z-fleet01-B20-forest-r11`.
-Canonical scientific report: `proofnet24/P14-probability-correlation/collective-2026-09-22/fleet01/B20/20260922T082137Z-fleet01-B20-forest-r11/report.md` in private `yspennstate/math-open-problems`.
+Canonical scientific report: `proofnet24/P14-probability-correlation/collective-2026-09-22/fleet01/B20/20260922T082137Z-fleet01-B20-forest-r11/report.md` in private `private-source-repository`.
 Outcome: `ESSENTIAL_STEP_APPLIED`; parent FOREST target remains OPEN.
 
 Exact source-bound inputs: lead fleet01/B01 `20260922T080733Z-b01-forest-auto11` report blob `7eccff21a034648951b1a5886db0330b60c3a5da`; assigned partner fleet04/B03 `20260922T070756Z-B03-forest-r12-34330b0f` report blob `a09681b45ae7e7e2d470fb5a2cdcd23c5c51fa38`; source correction fleet01/B02 `20260922T054825Z-b02-forest-auto11` report blob `7b500e2bc01d8788d526de9db984f52d6abe5d65`; transport fleet04/B02 blobs `70dd12f1c272a763642737810ecf5505b9f9438f` and `536a2157ede22dbddcafeb4f1b28b308ac8222ff`.

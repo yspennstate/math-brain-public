@@ -136,7 +136,7 @@ The newest fleet03/B17 handoff (`20260923T113026Z-fleet03-B17-QFORM-auto11`) rul
 
 Weak convergence alone would not control `||p_m||_infty`: an increasingly narrow finite-stage spike could disappear in the weak limit. This was explicitly the unpaid gap in the earlier fleet02/B17 shared-frame theorem.
 
-Here the completed pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, Theorem F (Fresnel-Brascamp-Lieb), applies directly to the *actual physical form*.
+Here the completed pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, Theorem F (Fresnel-Brascamp-Lieb), applies directly to the *actual physical form*.
 
 Write
 

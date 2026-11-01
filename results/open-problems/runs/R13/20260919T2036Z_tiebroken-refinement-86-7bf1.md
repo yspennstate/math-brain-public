@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — this was
 # R13 — Boolean Komlós: tie-broken shallow refinement of the 11-cylinder cover
 
 Run ID: `20260919T2036Z_tiebroken-refinement-86-7bf1`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R13  
 Lane: **HARD OUTSIDE**
 

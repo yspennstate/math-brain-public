@@ -151,7 +151,7 @@ The theorem also never rotates the random vector. SVD vectors are used only to f
 
 ## 4. Assigned partner fleet04/B20 actually applied
 
-The completed fleet04/B20 theorem at `yspennstate/math-open-problems@94bf446b8547b1124a37033e940ef594c460b64f` gives the exact original-coordinate conditioning/whitening rule. In the high spectral window used in B20 r12, with `P=UU^T`, conditioning a physical set `G` gives
+The completed fleet04/B20 theorem at `private-source-repository@94bf446b8547b1124a37033e940ef594c460b64f` gives the exact original-coordinate conditioning/whitening rule. In the high spectral window used in B20 r12, with `P=UU^T`, conditioning a physical set `G` gives
 
 `S_G=I-U_G^TU_G`,
 
@@ -177,7 +177,7 @@ Thus the new resource extraction is not merely spectral bookkeeping: after the d
 
 ## 5. Fresh compatible cross-account result consumed
 
-Fresh fleet02/B01 r24 (`math-open-problems@007d06d8118bc87becd247676c7a63ae336755c9`) proves that a heavy rank-two residual row can be conditioned when its whitened tail is diffuse, and gives an explicit family where every fixed physical-pair certificate shrinks to zero. The nested-cut theorem above is designed around that falsifier: alternative 3 retains a whole grouped bank rather than choosing a pair.
+Fresh fleet02/B01 r24 (`private-source@007d06d8118bc87becd247676c7a63ae336755c9`) proves that a heavy rank-two residual row can be conditioned when its whitened tail is diffuse, and gives an explicit family where every fixed physical-pair certificate shrinks to zero. The nested-cut theorem above is designed around that falsifier: alternative 3 retains a whole grouped bank rather than choosing a pair.
 
 ## 6. What is and is not proved
 

@@ -11,7 +11,7 @@ Continuity: the new scalar-Schur branch gives essential boundedness; the D5 sibl
 
 ## 1. First unpaid implication
 
-The latest completed designated partner is fleet03/B12 r42, `QFORM-THREE-MODE-HUB-PAIR-OR-R2-TUBE-v1`, canonical bundle `yspennstate/math-open-problems@9f2faf96ddefc42383b5ea509451b4e667798629`. In the three-square-mode nearly-rank-one self chamber it removes the projected-volume marginal obstruction and leaves only a quantitatively nondegenerate rank-two physical common plane with arbitrarily small transverse Frobenius residual.
+The latest completed designated partner is fleet03/B12 r42, `QFORM-THREE-MODE-HUB-PAIR-OR-R2-TUBE-v1`, canonical bundle `private-source-repository@9f2faf96ddefc42383b5ea509451b4e667798629`. In the three-square-mode nearly-rank-one self chamber it removes the projected-volume marginal obstruction and leaves only a quantitatively nondegenerate rank-two physical common plane with arbitrarily small transverse Frobenius residual.
 
 This run closes the **exact rank-one self endpoint of that tube**, and gives a quantitative neighbourhood of it. A simultaneous survivor must now have a nonzero second self singular value and a physical pivot cross-row norm blowing at least like its reciprocal. The remaining implication is therefore narrower:
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R14 HARD OUTSIDE — D0039 stuck recovery 2: Palm fusion threshold and the cross-degree bottleneck
 
 Date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / source problem OPEN.** This is the second and final Section-I recovery permitted on D0039. In accordance with the hard-task rule, this is a thinking/recovery run: no new theorem is promoted, no checker is manufactured, and no narrower auxiliary statement is relabeled as metric movement. The terminal handoffs of the negative-margin spherical perceptron, H0017, and Bradley D0036 remain in force and are not reopened.
 

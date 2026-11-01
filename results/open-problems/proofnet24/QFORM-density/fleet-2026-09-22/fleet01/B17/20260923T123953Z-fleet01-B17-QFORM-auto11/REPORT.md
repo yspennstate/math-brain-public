@@ -21,7 +21,7 @@ C_*\ge 3\sqrt2.
 
 The latest `fleet02/B17` diffuse-Lindeberg theorem gives a source-valid exact-rank-three sequence whose complete density norms tend to `3 sqrt(2)`; its source pin is
 
-`yspennstate/math-open-problems@1d2dd52680ec729f28b7289e74a6f3752a379127`,
+`private-source-repository@1d2dd52680ec729f28b7289e74a6f3752a379127`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/fleet02-B17-20260923T1142Z-r11/REPORT.md`.
 
 The new work below does not increase (0.1). It closes a previously unpaid **one macroscopic row mixing the positive and negative eigenspaces, at all output levels, on the limiting-law side**, and supplies a concrete finite four-variable rotated stress with a uniform bound.
@@ -199,7 +199,7 @@ For `rho<1`, condition also on `X`. The Gaussian covariance obeys
 
 The completed arbitrary-mean Gaussian theorem
 
-`yspennstate/math-open-problems@dcf8885d5153370cacfa246ad1e29fb06d971769`,
+`private-source-repository@dcf8885d5153370cacfa246ad1e29fb06d971769`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T070310Z-fleet03-B17-QFORM-r25/REPORT.md`
 
 gives
@@ -254,7 +254,7 @@ This theorem is global in the output level and includes arbitrary random affine 
 
 A completed partner theorem is source-pinned at
 
-`yspennstate/math-open-problems@907d4092f2d22b6c02146cb8165efa0b7416ffa5`,
+`private-source-repository@907d4092f2d22b6c02146cb8165efa0b7416ffa5`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T171829Z-fleet02-B17-QFORM-r11/REPORT.md`.
 
 It proves the general Gram version of the cap-one infinitesimal covariance floor: if light physical rows `w_{mk}` satisfy
@@ -298,7 +298,7 @@ This closes a branch explicitly left open in the partner report. It is a **weak-
 
 The newest completed `fleet02/B17` theorem,
 
-`yspennstate/math-open-problems@1d2dd52680ec729f28b7289e74a6f3752a379127`,
+`private-source-repository@1d2dd52680ec729f28b7289e74a6f3752a379127`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/fleet02-B17-20260923T1142Z-r11/REPORT.md`,
 
 applies at the fully diffuse endpoint `rho=0`. For centered unit-interval diffuse banks it gives the stronger prelimit statement
@@ -429,9 +429,9 @@ Deterministic checker in this run verifies: the weighted-threshold constants, th
 Primary source pins:
 
 - fresh programme control/corrections: `yspennstate/math-research-brain@5a71ebdcdcfdd94ff5f68a96ec6df52b5dc4dc82`;
-- completed `fleet02/B17` general-Gram infinitesimal covariance floor: `yspennstate/math-open-problems@907d4092f2d22b6c02146cb8165efa0b7416ffa5`, `.../fleet02/B17/20260922T171829Z-fleet02-B17-QFORM-r11/REPORT.md`;
-- newest `fleet02/B17` diffuse-Lindeberg global theorem: `yspennstate/math-open-problems@1d2dd52680ec729f28b7289e74a6f3752a379127`, `.../fleet02/B17/fleet02-B17-20260923T1142Z-r11/REPORT.md`;
-- arbitrary-mean Gaussian ceiling: `yspennstate/math-open-problems@dcf8885d5153370cacfa246ad1e29fb06d971769`, `.../fleet03/B17/20260923T070310Z-fleet03-B17-QFORM-r25/REPORT.md`;
-- prior unweighted equal-magnitude theorem, generalized here: `yspennstate/math-open-problems@2737fd6225e7187ddd396f2bc1e8eadf24c409bd`, `.../fleet01/B17/QFORM-B17-20260923T033912Z-r13/REPORT.md`.
+- completed `fleet02/B17` general-Gram infinitesimal covariance floor: `private-source-repository@907d4092f2d22b6c02146cb8165efa0b7416ffa5`, `.../fleet02/B17/20260922T171829Z-fleet02-B17-QFORM-r11/REPORT.md`;
+- newest `fleet02/B17` diffuse-Lindeberg global theorem: `private-source-repository@1d2dd52680ec729f28b7289e74a6f3752a379127`, `.../fleet02/B17/fleet02-B17-20260923T1142Z-r11/REPORT.md`;
+- arbitrary-mean Gaussian ceiling: `private-source-repository@dcf8885d5153370cacfa246ad1e29fb06d971769`, `.../fleet03/B17/20260923T070310Z-fleet03-B17-QFORM-r25/REPORT.md`;
+- prior unweighted equal-magnitude theorem, generalized here: `private-source-repository@2737fd6225e7187ddd396f2bc1e8eadf24c409bd`, `.../fleet01/B17/QFORM-B17-20260923T033912Z-r13/REPORT.md`.
 
 Status: **supporting theorems proved; full QFORM remains OPEN.**

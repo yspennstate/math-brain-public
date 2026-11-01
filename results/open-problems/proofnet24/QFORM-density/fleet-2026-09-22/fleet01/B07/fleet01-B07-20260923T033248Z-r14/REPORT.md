@@ -13,13 +13,13 @@ The full conjecture is not proved here. The result below is a supporting reducti
 
 The proof uses these completed/scoped inputs.
 
-1. **Newest fractional three-volume theorem.** `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`, Theorem (10): for an original-coordinate cross block `M`, with `Z=E3(M)>0`, if every row volume marginal `alpha_i<=q/2`, `1<=q<3/2`, then the full ambient quadratic-plus-affine form has a continuous `C_0` density satisfying
+1. **Newest fractional three-volume theorem.** `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`, Theorem (10): for an original-coordinate cross block `M`, with `Z=E3(M)>0`, if every row volume marginal `alpha_i<=q/2`, `1<=q<3/2`, then the full ambient quadratic-plus-affine form has a continuous `C_0` density satisfying
 
 `||p_Q||inf <= 3e/[(3-2q)sqrt(q)] Z^(-1/6)`.
 
 All self blocks, outside couplings and affine terms remain arbitrary.
 
-2. **Designated partner fleet02/B07.** `QFORM-DETERMINANT-MARGINAL-TAIL-CORE-v1`, `yspennstate/math-open-problems@1f5ab2ddba6e99675fb9177666c5e64e396e54e5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T023322Z-r11/REPORT.md`. For any determinant-weighted packet of physical `3x3` minors of total squared mass `P0`, supports `R0,C0`, and inclusion-marginal tails `delta_R,delta_C` with `theta=1-delta_R-delta_C>0`,
+2. **Designated partner fleet02/B07.** `QFORM-DETERMINANT-MARGINAL-TAIL-CORE-v1`, `private-source-repository@1f5ab2ddba6e99675fb9177666c5e64e396e54e5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T023322Z-r11/REPORT.md`. For any determinant-weighted packet of physical `3x3` minors of total squared mass `P0`, supports `R0,C0`, and inclusion-marginal tails `delta_R,delta_C` with `theta=1-delta_R-delta_C>0`,
 
 `E3(A[R0,C0]) >= theta P0`.
 
@@ -29,13 +29,13 @@ In the no-pivot class with parameter `tau`, its physical-core receiver gives
 
 where `p=|R0|`, `q=|C0|`, `r=min(p,q)`, `d=|R0 union C0|`.
 
-3. **Finite-dimensional spectral receiver.** `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Corollary 4.1: on `d` original independent cap-one coordinates, three actual eigenvalues of magnitude at least `sigma` imply
+3. **Finite-dimensional spectral receiver.** `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Corollary 4.1: on `d` original independent cap-one coordinates, three actual eigenvalues of magnitude at least `sigma` imply
 
 `||p||inf <= 2 sqrt(6 pi d)/sigma`,
 
 uniformly in affine terms.
 
-4. Existing B07 O0 resource used only for the final numerical specialization: `E3(B)>=1/256`, source `yspennstate/math-open-problems@d3f557ea222c6d353a33291a02d39302556728af`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/a01-b07-20260922T200312Z-qform-minors-r12/REPORT.md`.
+4. Existing B07 O0 resource used only for the final numerical specialization: `E3(B)>=1/256`, source `private-source-repository@d3f557ea222c6d353a33291a02d39302556728af`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/a01-b07-20260922T200312Z-qform-minors-r12/REPORT.md`.
 
 No pointwise stationary-phase bound, arbitrary-joint coarea bound, post-rotation independence, conditional projection-density positive moment, or reciprocal single-minor selection is used.
 

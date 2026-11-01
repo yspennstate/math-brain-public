@@ -14,7 +14,7 @@ attacking: the invertible double-anchor Schur-Frobenius packet via aggregate phy
 ## 1. Sources actually applied
 
 1. Newest-Claude Fourier source, including the unrestricted fifth-volume theorem `D_5`:
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
    It proves for any original-coordinate cross block `B`
 
@@ -23,7 +23,7 @@ attacking: the invertible double-anchor Schur-Frobenius packet via aggregate phy
    where `E5(B)=e5(B^T B)`, with no marginal condition. This is an L1 Fourier theorem and gives a continuous density.
 
 2. The completed unconditional regularized-determinant estimate:
-   `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`,
+   `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`,
    `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`, equation (5.3):
 
    `|phi_Q(t)| <= det(I+4t^2 BB^T/(pi^2 e^2))^(-1/8)`
@@ -31,7 +31,7 @@ attacking: the invertible double-anchor Schur-Frobenius packet via aggregate phy
    for every physical cross block `B`, retaining arbitrary self blocks, affine terms, outside couplings and extra spectrum.
 
 3. This slot's preceding double-anchor compiler, r27:
-   `yspennstate/math-open-problems@ca2a43f342d9c5543457e2754c1c10db0d0300e3`,
+   `private-source-repository@ca2a43f342d9c5543457e2754c1c10db0d0300e3`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T102920Z-fleet03-B02-qform-r27/REPORT.md`.
    Its unresolved packet is, for a physical cross block
 
@@ -42,7 +42,7 @@ attacking: the invertible double-anchor Schur-Frobenius packet via aggregate phy
    with either `G>Z3/24` on the live literal-minor endpoint, or the singular-pair two-star alternative.
 
 4. Designated partner fleet04/B02:
-   `yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+   `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
    On a nonsingular physical zero-diagonal `3x3` block `H0`,
 

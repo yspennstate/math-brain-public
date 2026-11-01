@@ -13,7 +13,7 @@ Execution/memory status: `WITHOUT_VERIFIED_BRAIN`.
 
 The strong-cut source is fleet04/B20,
 
-`yspennstate/math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912`,
+`private-source-repository@c6f29397b3d45a7cf7ab67633a5451767b478912`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`.
 
@@ -41,7 +41,7 @@ The fleet04/B20/fleet04-B02 D5 split says that either the D5 Fourier receiver al
 
 The **designated partner actually applied** in this run is the latest completed fleet02/B02 theorem,
 
-`yspennstate/math-open-problems@3fccd9b82b456e198758e5839be364b4b0ec5024`,
+`private-source-repository@3fccd9b82b456e198758e5839be364b4b0ec5024`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T170839Z-fleet02-B02-qform-auto11/REPORT.md`.
 
@@ -238,7 +238,7 @@ without requiring `x2>=E/64`.
 
 A newer compatible fleet03/B02 theorem, source
 
-`yspennstate/math-open-problems@c2a842f9cd113aa20d792ca1692a358fdc1be356`,
+`private-source-repository@c2a842f9cd113aa20d792ca1692a358fdc1be356`,
 
 shows globally that the disjoint third-compound stratum can be converted by random original-coordinate coloring into a target-scale physical `E3` cut. That result leaves overlap strata `V1,V2,V3`. The present lemma is complementary rather than duplicative: it works inside the established `N3(1/64)` strong-cut chamber and shows that once D5 has forced top-four concentration, **any** tail of size `E/64` already creates enough third exterior mass, independent of whether the second singular value itself crosses `E/64`.
 
@@ -266,10 +266,10 @@ The full QFORM density conjecture and full continuity remain **OPEN**.
 
 Consumed mathematical sources:
 
-- strong physical cut: `math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912`;
-- D5 / optimized strong-cut continuation: `math-open-problems@674f13a108a33176aafffe8f9b6d44ec3a89f03a`;
-- designated fleet02/B02 marginal-free E3 theorem: `math-open-problems@3fccd9b82b456e198758e5839be364b4b0ec5024`;
-- compatible global disjoint-compound theorem: `math-open-problems@c2a842f9cd113aa20d792ca1692a358fdc1be356`.
+- strong physical cut: `private-source@c6f29397b3d45a7cf7ab67633a5451767b478912`;
+- D5 / optimized strong-cut continuation: `private-source@674f13a108a33176aafffe8f9b6d44ec3a89f03a`;
+- designated fleet02/B02 marginal-free E3 theorem: `private-source@3fccd9b82b456e198758e5839be364b4b0ec5024`;
+- compatible global disjoint-compound theorem: `private-source@c2a842f9cd113aa20d792ca1692a358fdc1be356`.
 
 Live correction boundaries honored include `QFORM-CROSSMINOR-ALONE-FALSE`, `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`, `QFORM-UV-CONDITIONAL-CAP-FALSE`, `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`, the arbitrary-joint coarea correction, the fiber-sup dimension-loss correction, and the law-uniform scalar pointwise-decay correction.
 

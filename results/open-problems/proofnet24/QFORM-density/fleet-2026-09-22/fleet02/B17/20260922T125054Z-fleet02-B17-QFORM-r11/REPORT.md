@@ -221,6 +221,6 @@ A plausible global proof should therefore split localized/mixed-leverage structu
 ## 10. Provenance and correction status
 
 - brain control snapshot used before derivation: `16be0cbcda9bb34b64ad7aa47d950b4277d6e9dc`; pre-write control recheck: `330b971e11fe068bfd93d76ce910d28c6e9618cb`; owner control revision unchanged at `2026-09-22.5`;
-- partner dependency: `yspennstate/math-open-problems` commit `cf171c3ee8e2068e3595e103a416cc26befa68f2`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260922T120619Z-fleet03-B17-QFORM-r11/REPORT.md`;
+- partner dependency: `private-source-repository` commit `cf171c3ee8e2068e3595e103a416cc26befa68f2`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260922T120619Z-fleet03-B17-QFORM-r11/REPORT.md`;
 - corrections consumed: `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBER-SUP-DIMENSION-LOSS`, `QFORM-NO-INDEPENDENCE-AFTER-ROTATION`, `QFORM-CROSSMINOR-ALONE-FALSE`, `QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH`, `QFORM-TWOSHEET-XRAY-ONLY-FALSE`;
 - no claim here is a full proof or counterexample to the conjecture.

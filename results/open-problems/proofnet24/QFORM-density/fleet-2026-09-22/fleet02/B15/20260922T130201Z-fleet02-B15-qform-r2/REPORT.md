@@ -13,13 +13,13 @@ The sole target remains: for every dimension `n`, every independent real `X_i` w
 
 The completed assigned-partner result actually used is:
 
-- `fleet03/B15`, canonical source `yspennstate/math-open-problems@40946450aa2bfb06068a2c688d4407be10470c22`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T122718Z-fleet03-B15-qform-r11/REPORT.md`.
+- `fleet03/B15`, canonical source `private-source-repository@40946450aa2bfb06068a2c688d4407be10470c22`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T122718Z-fleet03-B15-qform-r11/REPORT.md`.
 
 That report proves the exact central extremal transfer: with
 
 `M(mu)=sup_I mu(I)/|I|`, one has `M(mu)<infinity` iff `mu=p dx` with `p in L^infinity`, and `M(mu)=||p||_infinity`; moreover `M` is convex and TV-lower-semicontinuous. Combining this with the completed convex-hull/finite-fragment theorem reduces the universal bounded-density target exactly to a uniform interval small-ball bound on product indicators of measure-one sets, even bounded finite unions of intervals. It also gives a sufficient continuity-transfer theorem under a **common modulus of continuity** on all extreme output densities.
 
-The first unpaid regularity implication is therefore not absolute continuity. My preceding B15 report `yspennstate/math-open-problems@60e7f51716e67553ce759519f9801ff3674dcce9` already proves:
+The first unpaid regularity implication is therefore not absolute continuity. My preceding B15 report `private-source-repository@60e7f51716e67553ce759519f9801ff3674dcce9` already proves:
 
 1. `X^TAX` is absolutely continuous for every nonzero symmetric `A` whenever the joint input law is absolutely continuous; no three-eigenvalue hypothesis is needed.
 2. For every fixed symmetric `A` of rank at least three, `X^TAX` has an essentially bounded density, with a finite matrix-dependent principal-pivot certificate.
@@ -341,8 +341,8 @@ No law-uniform modulus should be sought: Theorem 3.1 rules it out.
 ## 7. Source pins and integrity
 
 - Owner/control source at publication recheck: `yspennstate/math-research-brain@e68cdd37eb60e13d31ec1b6a5d2fa599053a89c9`; protected control blobs remained on revision `2026-09-22.5`.
-- Assigned partner report: `yspennstate/math-open-problems@40946450aa2bfb06068a2c688d4407be10470c22`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T122718Z-fleet03-B15-qform-r11/REPORT.md`.
-- Previous fleet02/B15 fixed-matrix regularity report: `yspennstate/math-open-problems@60e7f51716e67553ce759519f9801ff3674dcce9`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T120155Z-fleet02-B15-qform-r1/REPORT.md`.
-- Compatible convex-hull source underlying the partner reduction: `fleet01/B13`, `yspennstate/math-open-problems@f5c63b29011eb394cd621ecc887fe3331aa485af`.
+- Assigned partner report: `private-source-repository@40946450aa2bfb06068a2c688d4407be10470c22`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T122718Z-fleet03-B15-qform-r11/REPORT.md`.
+- Previous fleet02/B15 fixed-matrix regularity report: `private-source-repository@60e7f51716e67553ce759519f9801ff3674dcce9`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T120155Z-fleet02-B15-qform-r1/REPORT.md`.
+- Compatible convex-hull source underlying the partner reduction: `fleet01/B13`, `private-source-repository@f5c63b29011eb394cd621ecc887fe3331aa485af`.
 
 The numerical values in Theorem 3.1 were checked directly from their displayed closed forms; they are not evidence for the analytic proof. No continuity statement is used to infer an `L^infinity` bound. No moment, support, log-concavity, rotation-independence, or centered-interval assumption is introduced. Full QFORM remains **OPEN**.

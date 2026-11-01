@@ -22,7 +22,7 @@ This run closes that qualitative alternative and gives a quantitative product-sp
 
 Fresh completed peer theorem applied at the final inequality:
 
-- `yspennstate/math-open-problems@04297a630381fcfcf429b4c5ec560886bebacb39`
+- `private-source-repository@04297a630381fcfcf429b4c5ec560886bebacb39`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T052139Z-fleet02-B04-qform-auto11/REPORT.md`
 - theorem `QFORM-ENTROPY-WEIGHTED-RANK2-HALFRIESZ-v1`.
 

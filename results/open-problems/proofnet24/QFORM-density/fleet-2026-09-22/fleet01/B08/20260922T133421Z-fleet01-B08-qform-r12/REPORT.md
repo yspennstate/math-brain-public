@@ -15,7 +15,7 @@ Fresh source control was read from `yspennstate/math-research-brain` main at com
 
 The named partner result actually applied is fleet02/B08 `QFORM-WHITENED-PHYSICAL-BLOCK-v1`, canonical report
 
-`yspennstate/math-open-problems@84657e690f8411d99602ddc772b622686c3874ed:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T124007Z-r11/REPORT.md`.
+`private-source-repository@84657e690f8411d99602ddc772b622686c3874ed:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T124007Z-r11/REPORT.md`.
 
 That theorem proves the principal-block estimate when the whitened row leverages themselves are all at most `1/2`. The present argument keeps the same whitening/conditioning mechanism but replaces the canonical leverage weights by a different half-capped isotropic weighting. This strictly enlarges the certified class.
 

@@ -28,7 +28,7 @@ s_q(M+E+T) >= kappa-delta-R_r(E)/sqrt(N-r-q+1).                 (CP.1)
 
 No probabilistic smallness of X^T T X is asserted.
 
-For q=5 and an ACTUAL original-coordinate cross block, if the right side gamma is positive, the pinned newest-Claude D5 theorem at math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 gives
+For q=5 and an ACTUAL original-coordinate cross block, if the right side gamma is positive, the pinned newest-Claude D5 theorem at private-source@e5f71d79eff325201dd0274053d20268ce65b837 gives
 
 ||p_Q||_infinity <= 5 sqrt(2e)/gamma,                              (CP.2)
 

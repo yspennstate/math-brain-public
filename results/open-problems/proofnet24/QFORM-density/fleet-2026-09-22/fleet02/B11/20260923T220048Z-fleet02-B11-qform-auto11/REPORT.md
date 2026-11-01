@@ -49,7 +49,7 @@ Thus fixed star energy in two source-disjoint leaf banks plus arbitrarily small 
 
 This is also the exact endpoint predicted by the completed pinned Fresnel hub theorem in
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`:
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`:
 with one hub and no additional spread square, Theorem H supplies only the borderline `|t|^{-1}` Fourier power.  The phrase “two disjoint stars” in that theorem means two independent hub directions; partitioning the leaves of **one** hub cannot be counted twice.
 
 ### Explicit logarithmic density
@@ -96,7 +96,7 @@ Let
 
 The two columns consisting of the physical hub vector and the normalized star vector `c` are orthonormal in the original coordinate space.  Hence the completed orientation-free rank-two half-Riesz theorem
 
-`math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`
+`private-source@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`
 
 gives, in its homogeneous refined form,
 
@@ -120,7 +120,7 @@ This identifies the third-direction mechanism exactly: the rank-two star density
 
 Apply the completed ruled theorem (Theorem C) from the required pinned
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
 
 For `a>0`, `Q_{m,k}` has signature `(2,1)`, so on the one-sheet side
 

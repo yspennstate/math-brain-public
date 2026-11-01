@@ -3,7 +3,7 @@ attacking: optimize the new volume-marginal Fourier certificate, independently c
 
 # Early substantive checkpoint
 
-Fresh controls keep QFORM as the sole target. This run first independently checked the new volume-stability package at `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, especially `REPORT.md` and `PEER_TAIL_EXTENSION.md`.
+Fresh controls keep QFORM as the sole target. This run first independently checked the new volume-stability package at `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, especially `REPORT.md` and `PEER_TAIL_EXTENSION.md`.
 
 The checked Fourier theorem is: if `Z=e3(M^T M)>0`, `1<=q<3/2`, and every third-volume row inclusion marginal obeys `alpha_i<=q/2`, then
 

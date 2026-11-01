@@ -20,7 +20,7 @@ Fresh control before the run resolved `yspennstate/math-research-brain@96b95ee80
 The designated partner `fleet04/B09` now has a completed current-QFORM theorem:
 
 - `QFORM-PHYSICAL-CROSS-DETERMINANT-SMOOTHING-v1`
-- canonical mathematics: `yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`
+- canonical mathematics: `private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`
 - blob: `a2292a47ee56cf3d66556e324bd8b234bd2157f1`.
 
@@ -35,7 +35,7 @@ with arbitrary same-side quadratic blocks and affine terms, and with continuous 
 
 The projection ingredient used below is fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical proof
 
-- `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`
+- `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
 If `R` has orthonormal columns and row leverages `ell_i`, then for independent cap-one coordinates

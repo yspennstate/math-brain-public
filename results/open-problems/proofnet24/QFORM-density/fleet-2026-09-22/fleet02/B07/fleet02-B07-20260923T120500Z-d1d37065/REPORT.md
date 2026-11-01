@@ -179,7 +179,7 @@ This is a legitimate selection of a **row packet**, not a universally good indiv
 
 The latest compatible completed partner result read in this run is
 
-`yspennstate/math-open-problems@7ad9327f11c39bd465780bd1539d52de9feaacdd`
+`private-source-repository@7ad9327f11c39bd465780bd1539d52de9feaacdd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T110409Z-fleet03-B07-qform-r29/REPORT.md`.
 
@@ -302,7 +302,7 @@ Any valid completion of the partner branch must explicitly spend the third spect
 
 The required source was read at the pinned commit
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 in
 

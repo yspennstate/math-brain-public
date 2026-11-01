@@ -17,7 +17,7 @@ All coordinates below are literal ORIGINAL coordinates. No spectral rotation is 
 
 The newest compatible designated partner actually consumed is fleet03/B20 r48:
 
-`yspennstate/math-open-problems@67a9144806e9371e3ecb9b93d29e9aff915cb9f3`
+`private-source-repository@67a9144806e9371e3ecb9b93d29e9aff915cb9f3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T054542Z-fleet03-B20-QFORM-auto11-r48/REPORT.md`.
 
@@ -41,13 +41,13 @@ Its previous endpoint only paid this leaf when a disjoint post-puncture physical
 
 The required pinned Claude package is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 Its `RESULTS.md` explicitly records the full-matrix physical-pair closure: any invertible indefinite original-coordinate 2x2 principal block with quantitative determinant and smallest singular value is enough, under `s3(A)>=1`, whatever the rest of A. The complete proof is source-pinned at
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`,
 

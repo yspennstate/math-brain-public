@@ -19,7 +19,7 @@ Two completed analytic sources are used at equations:
 
 1. **Designated partner fleet02/B09** `QFORM-TWOHUB-PLUCKER-SMOOTHING-v1`, canonical source
 
-   `yspennstate/math-open-problems@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`,
+   `private-source-repository@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`,
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T064043Z-fleet02-B09-QFORM-r13/REPORT.md`.
 
@@ -31,7 +31,7 @@ Two completed analytic sources are used at equations:
 
 2. **Newest owner-required volume theorem**, canonical source
 
-   `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+   `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
    `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -43,7 +43,7 @@ Two completed analytic sources are used at equations:
 
 The newest fleet03/B09 aggregate-stability theorem
 
-`yspennstate/math-open-problems@e8b97d9dcd8dd85cacc8fc73c2be4e86fde4b27a`
+`private-source-repository@e8b97d9dcd8dd85cacc8fc73c2be4e86fde4b27a`
 
 was also read. Its correction that a small **maximum** singleton augmentation volume does not imply closeness is respected; no such maximum argument appears below.
 

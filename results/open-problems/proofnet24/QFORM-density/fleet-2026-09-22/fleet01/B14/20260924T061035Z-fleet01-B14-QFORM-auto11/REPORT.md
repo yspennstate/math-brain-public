@@ -18,7 +18,7 @@ This is not pointwise quadratic Fourier decay and uses no moments, support diame
 
 Source actually read and used:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - source commit: `bdb2475cb1079bd054f8e502059a851d3ee3dcd3`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260924T053625Z-fleet02-B14-QFORM-auto11/REPORT.md`
 - source blob: `e53dbed28891bd00f8fe6c2da3b9a8c57d8bcdab`

@@ -14,7 +14,7 @@ Regularity: the theorem below has an integrable characteristic-function majorant
 
 The immediate B04 predecessor is
 
-`yspennstate/math-open-problems@8943de4ce7adbeef5a110d0bf0fc634b2fce39c5`,
+`private-source-repository@8943de4ce7adbeef5a110d0bf0fc634b2fce39c5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260924T101932Z-fleet03-B04-QFORM-auto11-r55/REPORT.md`.
 
@@ -22,7 +22,7 @@ It pays an inverse-free one-hub projected-`E_2` packet, including the exact-zero
 
 The mechanism seed for the present run is the completed fleet02/B04 rank-one theorem
 
-`yspennstate/math-open-problems@2311fa678098f3ac7b96e5eb3795d9def07cc2fd`,
+`private-source-repository@2311fa678098f3ac7b96e5eb3795d9def07cc2fd`,
 
 which proves the weighted zero-pivot `J_1` receiver for a diagonal-plus-rank-one residual. The proof below lifts that product-space construction to an arbitrary exact residual rank `r>=1`. For `r=1` the constant and exponent reduce exactly to the completed fleet02/B04 theorem; for `r>=2` the result is genuinely new.
 
@@ -272,7 +272,7 @@ The deterministic checker verifies all anchored minor identities (3.5) on this m
 
 The newest completed designated partner remains fleet04/B04 r2,
 
-`yspennstate/math-open-problems@4a54666abf2316bb79b939cef3ea940605a0af57`,
+`private-source-repository@4a54666abf2316bb79b939cef3ea940605a0af57`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260924T001353Z-fleet04-B04-QFORM-r2/REPORT.md`.
 

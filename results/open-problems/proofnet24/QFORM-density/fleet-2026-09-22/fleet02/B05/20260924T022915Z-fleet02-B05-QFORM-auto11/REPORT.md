@@ -21,7 +21,7 @@ This report also corrects one sentence from the immediately preceding B05 handof
 
 The required pinned source was reread at
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
@@ -39,7 +39,7 @@ The pinned counterexample search still reports no target-valid counterexample.
 
 Fresh designated partner fleet03/B05 is r36,
 
-`math-open-problems@511a1258a94b754b1306f24ac56122696792f6f4`,
+`private-source@511a1258a94b754b1306f24ac56122696792f6f4`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260924T010727Z-fleet03-B05-QFORM-r36/REPORT.md`.
 
 Its theorem `QFORM-RATIOPACKET-NEAR-DOUBLEZERO-AFFINE-v1` closes the immediately preceding B05 exact-double-zero interpolation debt on the fixed indefinite collar: if `B=[[a,c],[c,d]]`, `D=|det B|`, `max(|a|,|d|)<=sqrt(D)/5`, then with all packet affine terms retained it proves

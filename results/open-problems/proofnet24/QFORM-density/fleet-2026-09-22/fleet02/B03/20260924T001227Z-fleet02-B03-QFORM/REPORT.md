@@ -97,7 +97,7 @@ Apply the completed physical-four-coordinate determinant theorem
 
 `QFORM-PHYSICAL-FOUR-DETERMINANT-RECEIVER-v1`,
 
-source `yspennstate/math-open-problems@769800c0ab0851828772adabfb6874aa813e423d`, which gives for four independent cap-one physical coordinates and arbitrary affine terms
+source `private-source-repository@769800c0ab0851828772adabfb6874aa813e423d`, which gives for four independent cap-one physical coordinates and arbitrary affine terms
 
 `||p||_infinity < 93 |det M|^(-1/4)`.                            (2.10)
 
@@ -173,7 +173,7 @@ Substituting `M=93 Delta^-1/2` proves (2.6)-(2.7). At no point is a coordinatewi
 
 The required pinned package is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 especially `FOURIER_ROUTE_REPORT.md`, Lemma 4.3. Its completed coordinate-hyperbola theorem states: if two literal original coordinates satisfy
 
@@ -227,7 +227,7 @@ This is an actual equation-level application of a completed theorem from the req
 
 The newest compatible designated partner report is fleet03/B03 r43,
 
-`yspennstate/math-open-problems@f3198cfe9b2f5f88659958c714b1ea0f7dfa29c9`,
+`private-source-repository@f3198cfe9b2f5f88659958c714b1ea0f7dfa29c9`,
 
 which proves `QFORM-THREE-GROUP-TRIANGLE-PLANCHEREL-v1`. In its notation, for three genuinely independent source groups `Z`, `X_R`, `X_C`, two-dimensional bank projections of density caps `M_R,M_C`, and nonzero triangle coefficients `sigma,alpha,beta`, it gives
 
@@ -373,16 +373,16 @@ No claim is made that the new hyperbola-pair currency is automatically extractab
 
 Required pinned package consumed at exact commit:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 files `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md` in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 Literal four-coordinate determinant receiver consumed from:
 
-`yspennstate/math-open-problems@769800c0ab0851828772adabfb6874aa813e423d`.
+`private-source-repository@769800c0ab0851828772adabfb6874aa813e423d`.
 
 Newest compatible designated partner fleet03/B03 consumed from:
 
-`yspennstate/math-open-problems@f3198cfe9b2f5f88659958c714b1ea0f7dfa29c9`.
+`private-source-repository@f3198cfe9b2f5f88659958c714b1ea0f7dfa29c9`.
 
 The unrestricted conjecture remains **OPEN**. This report is a supporting theorem plus a source-valid obstruction to an overly local structural bridge.

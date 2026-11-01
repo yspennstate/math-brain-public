@@ -9,7 +9,7 @@ T2=sum_{j>=3} s_j(B)^2 = dist_F(B,{rank<=2})^2.
 
 Let P_L and P_R be the orthogonal projections onto the top two left and right singular subspaces. Two exact observations give a clean router.
 
-1. If T2>=d^2/64 and s3<=sqrt(T2)/15, then the volume-tail theorem at math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba applies to B whenever max_i(P_L)ii<=1/2, and to B^T whenever max_j(P_R)jj<=1/2. In either orientation,
+1. If T2>=d^2/64 and s3<=sqrt(T2)/15, then the volume-tail theorem at private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba applies to B whenever max_i(P_L)ii<=1/2, and to B^T whenever max_j(P_R)jj<=1/2. In either orientation,
 
 ||p_Q||_infinity <= (9 sqrt(3)e/2)[s1^2 s2^2 T2]^(-1/6)
                  <= 9 sqrt(3)e / d < 42.374/d,

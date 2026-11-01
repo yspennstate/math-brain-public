@@ -18,7 +18,7 @@ This run uses no post-rotation independence, law-uniform pointwise quadratic-pha
 
 The immediate predecessor is fleet03/B19 r21,
 
-`yspennstate/math-open-problems@207a77337f6b3587233055160a27b317b2491342`
+`private-source-repository@207a77337f6b3587233055160a27b317b2491342`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T010143Z-fleet03-B19-QFORM-r21/REPORT.md`.
 
@@ -42,15 +42,15 @@ I use the following completed results only at their stated scopes.
 
    `||p_Q||_infinity <=103680^(1/3) e^(2/3) (D P)^(-1/6)`.
 
-   Arbitrary affine terms from conditioning outside the active source banks are allowed. Source dependency: fleet01/B16 canonical report `yspennstate/math-open-problems@8d262d18e5581cd02b8ea8be5102aa2a6d30ddd7`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T003846Z/REPORT.md`.
+   Arbitrary affine terms from conditioning outside the active source banks are allowed. Source dependency: fleet01/B16 canonical report `private-source-repository@8d262d18e5581cd02b8ea8be5102aa2a6d30ddd7`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260923T003846Z/REPORT.md`.
 
-3. **Weighted affine-fiber product projection.** A two-dimensional orthogonal projection of independent cap-one physical coordinates has joint density cap at most `e`; a normalized one-dimensional linear form has density cap at most `sqrt(2)`. Canonical source: fleet02/B06 `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
+3. **Weighted affine-fiber product projection.** A two-dimensional orthogonal projection of independent cap-one physical coordinates has joint density cap at most `e`; a normalized one-dimensional linear form has density cap at most `sqrt(2)`. Canonical source: fleet02/B06 `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
 
 4. **Designated partner fleet04/B19.** `QFORM-NULL-COLOOP-ADAPTIVE-HY-STABILITY-v1` gives, in its residual-diffuse exact-null-coloop scope and `0<D_res<=1`,
 
    `||p_Q||_infinity <34 sqrt(log(e/D_res))`,
 
-   with continuous density. Canonical source: `yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
+   with continuous density. Canonical source: `private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 
 No source is enlarged beyond those scopes.
 

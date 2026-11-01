@@ -14,17 +14,17 @@ The full conjecture is not proved. The new result below pays a specific obstruct
 
 The newest owner-directed synthesis used here is
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/`,
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/`,
 
 with the newest Claude path-specific source still
 
-`yspennstate/math-open-problems@2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
+`private-source-repository@2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 The synthesis reduces the full theorem to the no-pivot statement N3 and explicitly leaves N3 open. Its determinant-only physical-pair and logarithmic auxiliary bounds are compatible with the present argument but are not enough to force the product packet used below.
 
 The designated OTHER-account result actually consumed is fleet02/B04 r20:
 
-`yspennstate/math-open-problems@63c72a057b0dfcaa747ba70e287eef8f62305687:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T222038Z-r20/REPORT.md`.
+`private-source-repository@63c72a057b0dfcaa747ba70e287eef8f62305687:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T222038Z-r20/REPORT.md`.
 
 It proves `QFORM-SQUARE-OVERLAP-ONE-SIDED-CONTAMINATION-v1`, and also gives the decisive counterexample `QFORM-HYPERBOLIC-TWOSIDED-HALFRIESZ-UNIFORM-FALSE-v1`: for independent uniform `U,V` on `[-1/2,1/2]`,
 

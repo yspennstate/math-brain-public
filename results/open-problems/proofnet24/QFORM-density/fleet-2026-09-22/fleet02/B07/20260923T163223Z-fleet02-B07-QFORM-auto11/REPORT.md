@@ -17,7 +17,7 @@ The unrestricted theorem is not proved or disproved here. Inputs remain arbitrar
 
 The latest completed designated partner is fleet03/B07 r33:
 
-`yspennstate/math-open-problems@316522c99a92f168d0e0dcfe3be3aa032bdf53f9`
+`private-source-repository@316522c99a92f168d0e0dcfe3be3aa032bdf53f9`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T153842Z-fleet03-B07-qform-r33/REPORT.md`.
 
@@ -172,7 +172,7 @@ At `m=32` the same crude universal estimate changes sign, so this report claims 
 
 Now condition only on all ORIGINAL coordinates outside `H`. The remaining variables preserve independence and density caps, while every outside coupling becomes an arbitrary deterministic affine term. Apply the completed finite-dimensional projected-gradient theorem
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`
 
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Corollary 4.1:
 
@@ -191,7 +191,7 @@ The constant is intentionally unoptimized. It is universal. This closes the boun
 
 The required pinned source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 

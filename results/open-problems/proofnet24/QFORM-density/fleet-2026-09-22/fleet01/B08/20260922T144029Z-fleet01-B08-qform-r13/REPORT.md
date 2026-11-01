@@ -15,7 +15,7 @@ Fresh control was read from `yspennstate/math-research-brain` main, initially at
 
 The named completed partner result actually applied is **fleet02/B08** `QFORM-DIFFUSE-RANGE-FRACTIONAL-MSS-v1`, canonical report
 
-`yspennstate/math-open-problems@4fe4c12495d52c47fa86a2e389ba571e85277e22:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260922T133725Z-fleet02-B08-QFORM-r12/REPORT.md`.
+`private-source-repository@4fe4c12495d52c47fa86a2e389ba571e85277e22:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260922T133725Z-fleet02-B08-QFORM-r12/REPORT.md`.
 
 Its analytic endpoint is the source-dependent regularized-determinant cross-block estimate: if an original-coordinate cross block has three singular values at least `sigma`, and the coordinate leverage of its range on one physical side is at most `q/2` for `1<=q<3/2`, then
 
@@ -25,7 +25,7 @@ with continuity of the density. The partner obtained the needed cut from two-par
 
 The regularized-determinant source used by the partner is
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 
 ## 2. New deterministic-probabilistic paving lemma
 

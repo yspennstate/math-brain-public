@@ -3,7 +3,7 @@
 **Run:** `B17-20260921T101035Z-r27`  
 **Status:** PARTIAL; full Fourier entropy–influence (FEI) remains OPEN.  
 **Brain label:** WITHOUT_VERIFIED_BRAIN.  
-**Fresh source state:** `yspennstate/math-open-problems` master `e7217b10f3760736adfb1fa0542acbfb1f9c85ac`.  
+**Fresh source state:** `private-source-repository` master `e7217b10f3760736adfb1fa0542acbfb1f9c85ac`.  
 **Live role:** FEI new proof mechanisms.  
 **Creative moves used:** FLEET_RULES B2 (attack the negation first), B18 (say it in another language), B24 (find the extremal object).  
 **Route:** APPROACHES #13 (Booleanity constraints on the spectral-sample profile), with a quantitative comparison to the product law.  

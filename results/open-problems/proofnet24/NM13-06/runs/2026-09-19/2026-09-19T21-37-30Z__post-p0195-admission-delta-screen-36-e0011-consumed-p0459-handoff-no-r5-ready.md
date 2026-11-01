@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-06 — post-P0195 admission delta screen 36: E0011 release consumed by reassignment; P0459 handoff is not release; no residue-5 READY CLOSABLE source
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-06` / `proofnet24/NM13-06/`  
 Category: **CLOSABLE OUTSIDE**  
 Exclusive selection shard: `SHA256(canonical dedup_key) mod 13 = 5`  

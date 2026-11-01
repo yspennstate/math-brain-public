@@ -14,7 +14,7 @@ The full target remains OPEN: for independent real coordinates with probability 
 
 for every interval `I`, or produce a target-valid counterexample. Continuity is tracked separately.
 
-Fresh revision `2026-09-22.8` proposed a conditional three-dimensional spectral-projection cap as an open completion step. I do **not** use it: fleet03/B10 has now refuted that intermediate statement in `QFORM-CONDITIONAL-3D-PROJECTION-CAP-FALSE-v1` (`math-open-problems@947a09fdafd7ee8f60562076674ff20689632e21`). For iid uniforms, a conditional projected density blows up at the edge. This does not refute QFORM or rank-three coarea; it means product aggregation must occur before taking that conditional `L^infinity` supremum.
+Fresh revision `2026-09-22.8` proposed a conditional three-dimensional spectral-projection cap as an open completion step. I do **not** use it: fleet03/B10 has now refuted that intermediate statement in `QFORM-CONDITIONAL-3D-PROJECTION-CAP-FALSE-v1` (`private-source@947a09fdafd7ee8f60562076674ff20689632e21`). For iid uniforms, a conditional projected density blows up at the edge. This does not refute QFORM or rank-three coarea; it means product aggregation must occur before taking that conditional `L^infinity` supremum.
 
 The mechanism below instead keeps disjoint original-coordinate banks and pays an exact grouped rank-two Schur quotient before any reciprocal tiny physical minor.
 
@@ -24,7 +24,7 @@ The mechanism below instead keeps disjoint original-coordinate banks and pays an
 
 Latest complete partner report:
 
-- repository/commit: `yspennstate/math-open-problems@77d71ed8bbd7f8a3fd40958e54b5bf658163c27a`;
+- repository/commit: `private-source-repository@77d71ed8bbd7f8a3fd40958e54b5bf658163c27a`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T160923Z-fleet02-B09-QFORM-r4/REPORT.md`;
 - theorem: `QFORM-PIVOT-OFFDIAG-STABLERANK-v1`.
 
@@ -46,7 +46,7 @@ The same partner report supplies the source-valid correction `QFORM-ONE-HEAVY-RO
 
 I also apply the newly completed `QFORM-RANK2-TRANSLATION-HALFRIESZ-v1`:
 
-- `yspennstate/math-open-problems@76fd4f9ccae2e422498fec6d4156bfd64775c8e4`;
+- `private-source-repository@76fd4f9ccae2e422498fec6d4156bfd64775c8e4`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T163129Z-r15/REPORT.md`.
 
 For an exact rank-two real quadratic form `R=Z^T H Z` in independent cap-one physical coordinates, with nonzero eigenvalue product `Delta`, it proves the translation-uniform estimate

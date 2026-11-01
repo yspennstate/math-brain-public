@@ -14,8 +14,8 @@ No uniform pointwise quadratic-phase decay, post-rotation independence, conditio
 
 This run uses two existing compatible inputs at their stated scopes.
 
-1. `QFORM-FINITE-UNION-CORE-v1`, designated partner fleet04/B19, canonical source `yspennstate/math-open-problems@02171dc794a56c0235afb1ca394b3e614162bff4`. It transfers interval-concentration inequalities proved on bounded finite-union product indicators of measure one to all admissible independent cap-one densities with no constant loss.
-2. The characteristic-envelope part of `QFORM-RIDGE-DENSITY-v1`, canonical source `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`. Its source report supplies a complete analytic proof, while independent review of that extension is still pending. For an original-coordinate cross block C, gamma>0, q in [1,2], K=C C^T(gamma^2 I+C C^T)^(-1), theta=tr K, D=det(I+C C^T/gamma^2), and max diag K<=q/2, it gives before any time-integrability assumption
+1. `QFORM-FINITE-UNION-CORE-v1`, designated partner fleet04/B19, canonical source `private-source-repository@02171dc794a56c0235afb1ca394b3e614162bff4`. It transfers interval-concentration inequalities proved on bounded finite-union product indicators of measure one to all admissible independent cap-one densities with no constant loss.
+2. The characteristic-envelope part of `QFORM-RIDGE-DENSITY-v1`, canonical source `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`. Its source report supplies a complete analytic proof, while independent review of that extension is still pending. For an original-coordinate cross block C, gamma>0, q in [1,2], K=C C^T(gamma^2 I+C C^T)^(-1), theta=tr K, D=det(I+C C^T/gamma^2), and max diag K<=q/2, it gives before any time-integrability assumption
 
 `|phi(t)| <= D^(-1/(4q)) [L_q/(2 gamma |t|)]^(theta/(2q))`,
 

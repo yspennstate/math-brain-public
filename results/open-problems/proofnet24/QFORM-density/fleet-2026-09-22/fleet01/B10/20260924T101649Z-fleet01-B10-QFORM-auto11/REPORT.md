@@ -276,7 +276,7 @@ This does not solve the limit `h up to 1`: the right side of (29) is allowed to 
 
 The newest completed designated partner result read in full is:
 
-`yspennstate/math-open-problems@461ca4597face7955d318d0540729ca6b809fce2`
+`private-source-repository@461ca4597face7955d318d0540729ca6b809fce2`
 
 at
 

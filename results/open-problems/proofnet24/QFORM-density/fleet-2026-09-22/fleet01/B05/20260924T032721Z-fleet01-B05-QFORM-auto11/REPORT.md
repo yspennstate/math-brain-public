@@ -13,7 +13,7 @@ attacking: the near-coloop Witt product-projection Borel tube; use original-coor
 
 The preceding immutable B05 report is
 
-`yspennstate/math-open-problems@28238ad9b68d613f205feab35e3048a51fd48179:`  
+`private-source-repository@28238ad9b68d613f205feab35e3048a51fd48179:`  
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260924T024114Z-fleet01-B05-QFORM-auto11/REPORT.md`.
 
 It reduces the high-leverage, exact-rank-three, zero-pivot survivor to the physical Witt form
@@ -293,7 +293,7 @@ Thus the obstruction is not absence of curvature. It is the order of operations:
 
 The completed partner report
 
-`yspennstate/math-open-problems@4ad9d206dba1b22fd917280717c24f4e1dd6ea09:`  
+`private-source-repository@4ad9d206dba1b22fd917280717c24f4e1dd6ea09:`  
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260924T022915Z-fleet02-B05-QFORM-auto11/REPORT.md`
 
 proves the source-disjoint max-cut theorem for exactly this determinant-star plane. In the present notation there is a partition of the residual **original coordinates** into disjoint banks `J,K` such that

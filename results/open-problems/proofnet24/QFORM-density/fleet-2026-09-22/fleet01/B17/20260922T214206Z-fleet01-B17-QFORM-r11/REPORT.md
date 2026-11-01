@@ -13,7 +13,7 @@ Execution memory: `WITHOUT_VERIFIED_BRAIN`
 
 Completed designated partner result actually applied: fleet02/B17 run `20260922T204449Z-fleet02-B17-QFORM-r19`, canonical proof
 
-`yspennstate/math-open-problems@50913ed00c5943aaf2772473cbf17ddcb5bed090:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T204449Z-fleet02-B17-QFORM-r19/REPORT.md`.
+`private-source-repository@50913ed00c5943aaf2772473cbf17ddcb5bed090:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T204449Z-fleet02-B17-QFORM-r19/REPORT.md`.
 
 That result proves that one additional independent minority-sign Gaussian mode of coefficient `delta>0` multiplies the exact Gaussian `(1,1,-1)` peak by `(1+delta)^(-1/2)`. The theorem below shows that *the same exact multiplicative loss* persists for the much more concentrated collinear two-heavy branch, for all symmetric-decreasing cap-one heavy laws; this is a direct application of the partner Laplace factor to a non-Gaussian heavy-core inequality.
 

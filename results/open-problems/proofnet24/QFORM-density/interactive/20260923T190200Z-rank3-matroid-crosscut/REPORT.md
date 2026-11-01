@@ -147,4 +147,4 @@ This refines \(t^2\ge1-a^2\) and may be useful for a receiver that controls the 
 
 This is an exhaustive exact-rank-three classification only for the branch in which every original-coordinate cross cut has rank at most two. It does not give a quantitative lower bound on the third crossing singular value in the complementary branch. It does not handle arbitrary additional spectrum. Even in the classified branch, the nonzero hub-square term \(aX_h^2\), with \(|a|<1/64\), remains to be handled uniformly for rough independent coordinates with unbounded fragmented supports; simply deleting that small coefficient is invalid.
 
-The companion proof is https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T185357Z-one-hub-transverse-compression/REPORT.md . The current manuscript and latest B13/B18/B20 fleet reports checked did not explicitly state this matroid classification.
+The companion proof is private-source-repository . The current manuscript and latest B13/B18/B20 fleet reports checked did not explicitly state this matroid classification.

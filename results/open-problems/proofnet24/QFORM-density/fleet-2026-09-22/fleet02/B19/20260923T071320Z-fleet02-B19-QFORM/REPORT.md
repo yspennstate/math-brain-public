@@ -15,7 +15,7 @@ The unrestricted conjecture remains open. This run proves a product-preserving s
 
 The current designated partner is fleet03/B19 r27:
 
-`yspennstate/math-open-problems@a2c543d935168ec8996535219d8c0c25ae261763`
+`private-source-repository@a2c543d935168ec8996535219d8c0c25ae261763`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T062711Z-fleet03-B19-QFORM-r27/REPORT.md`.
 
@@ -51,7 +51,7 @@ The partner combines (1.4) with fleet01/B19's completed receiver and pays `Theta
 
 The analytic receiver used there is fleet01/B19:
 
-`yspennstate/math-open-problems@d72be34399b8d0325c715973e7af3a37df7ce227`,
+`private-source-repository@d72be34399b8d0325c715973e7af3a37df7ce227`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260923T060843Z-fleet01-B19-QFORM-auto11/REPORT.md`.
 
@@ -63,7 +63,7 @@ with continuous density and
 
 `C_* = 2^(15/4) 3^(-3/8) < 8.912`.                             (1.9)
 
-The required newest-Claude source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` is also used at equation level below. Its proved D5 theorem states that for any genuine physical cross block `N`,
+The required newest-Claude source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` is also used at equation level below. Its proved D5 theorem states that for any genuine physical cross block `N`,
 
 `||p_Q||_infinity <= 5 sqrt(2e) e_5(N^T N)^(-1/10)`             (1.10)
 

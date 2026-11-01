@@ -16,7 +16,7 @@ Control/source snapshot used at the start of the proof:
 
 The named partner result actually consumed and applied is:
 
-- `yspennstate/math-open-problems@b4736d3226c5ffb46bda90b98c1a7b0ac28454b3:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T114427Z-b03-qform-a11/REPORT.md`, blob `363519157d63781d00966b0ff1dd1733d3681a49`.
+- `private-source-repository@b4736d3226c5ffb46bda90b98c1a7b0ac28454b3:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T114427Z-b03-qform-a11/REPORT.md`, blob `363519157d63781d00966b0ff1dd1733d3681a49`.
 
 That report proves two facts used below: (i) the sum/difference variables in the independent-copy identity are dependent and must retain their exact joint density, and (ii) scalar one-copy small-ball symmetrization cannot recover linear scaling. The present proof uses those corrections and replaces the failed scalar route by a block `L^2`/Plancherel decoupling that gives an integrable time tail whenever a `3 x 3` mixed coordinate minor is nonsingular.
 

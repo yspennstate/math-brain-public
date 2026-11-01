@@ -11,7 +11,7 @@ The target remains the full arbitrary-product-law quadratic-form conjecture: ind
 
 This run consumes, at equations rather than by citation only, the current volume-stability theorem
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
 
 and its tail extension in `PEER_TAIL_EXTENSION.md`. In particular, for an ORIGINAL-coordinate cross block `M`, with squared singular values `lambda_j=s_j(M)^2`, write
@@ -34,7 +34,7 @@ At this exact equation I use fleet01/B20's completed identity
 
 source
 
-`yspennstate/math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
+`private-source-repository@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T234545Z-fleet01-B20-QFORM-auto11/REPORT.md`.
 
 Hence
@@ -223,7 +223,7 @@ For `m>=64`, every scalar diagonal of `A_m` is zero and every physical principal
 
 I also checked the fresh fleet03/B02 compiler
 
-`yspennstate/math-open-problems@648ea277fc2cfcc8ce11a7093c61951a9e15baa8`
+`private-source-repository@648ea277fc2cfcc8ce11a7093c61951a9e15baa8`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T043653Z-fleet03-B02-qform-r20/ADDENDUM_COMPOUND_HUB_COMPILER.md`.
 
 Its exact anchored identity `J_ij=a^2 E2(S)` is a genuine aggregate resource, but `S=N-cr^T/a` is a cross-Schur packet obtained by a within-bank shear and is not automatically an ORIGINAL-coordinate cross block. Therefore the present theorem cannot simply be applied to `S`: doing so would silently discard the product provenance required by (1.5). This identifies the remaining incompatibility precisely rather than misusing the new compiler. The outstanding `EDGE-E2-TO-L1` transducer must exploit that Schur resource without treating the sheared coordinates as independent.

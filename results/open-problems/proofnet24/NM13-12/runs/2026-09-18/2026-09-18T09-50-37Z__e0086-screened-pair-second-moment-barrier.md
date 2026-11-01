@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-12 — E0086 screened two-site Green calculation and the exact lower-bound second-moment barrier
 
 Date: 2026-09-18 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track: `NM13-12`  
 Category: `HARD OUTSIDE`  
 Canonical source / claim: `E0086` / `operations/claims/E0086.md`  

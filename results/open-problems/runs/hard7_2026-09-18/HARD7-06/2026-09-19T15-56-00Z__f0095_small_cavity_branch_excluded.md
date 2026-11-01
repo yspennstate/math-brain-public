@@ -12,7 +12,7 @@ p_0:=\Pr\{\alpha=1\}\in(0.0680,0.0681).
 
 This is an exact theorem conditional only on the already-proved cavity fixed-point reduction; it is not finite sampling and it is not a claim of global optimality of the ACG functional.
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Continuity, ownership, exclusions, required reads
 

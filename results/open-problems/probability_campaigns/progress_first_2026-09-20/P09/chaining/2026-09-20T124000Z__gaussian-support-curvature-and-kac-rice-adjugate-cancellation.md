@@ -100,7 +100,7 @@ The main new facts are:
 - Native role: `P09`
 - Native slot: `6aa7b454b5808191bb00d87697d89388`
 - Registered role: `chaining / geometric-probabilistic proof`
-- Repository / branch: private `yspennstate/math-open-problems`, `master`
+- Repository / branch: private `private-source-repository`, `master`
 - Pre-write master observed: `2238107c2708233ef67f54ea9aa6034540f51157`
 - Immediate predecessor: `probability_campaigns/progress_first_2026-09-20/P09/chaining/2026-09-20T115000Z__self_normalized_normal_cones_and_nearcritical_polynomial_entropy.md`, creation commit `a30bf3aa874b3ab08c28c5c30851452fe51eff0d`.
 - Historical C0035 material, all prior P09 reports, and peer files are preserved. This report is additive and immutable.

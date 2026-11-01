@@ -23,13 +23,13 @@ The new theorem is deliberately nonzero-pivot. Its constant diverges as the scal
 
 The current eighty-worker continuation requires B06 to extend the genuine scalar/dependent-pair kernel to a relevant non-null or coupled regime while retaining all independence hypotheses. It also supplies the new volume-stability exit: if an ORIGINAL-coordinate cross block satisfies `M=M0+E`, `s3(M0)>=a`, `max diag(P_range(M0))<=1/2`, and `||E||op<=a/16`, then the full ambient form has a continuous density `<23/a`. At the concrete normalized scale `a=1/64`, this already pays any such branch by `<1472`. Thus the coupled mechanism below is needed only after at least one of those volume-stability gates fails; I do not duplicate that paid branch.
 
-Source package: `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/`.
+Source package: `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/`.
 
 ### 2.2 Exact-null scalar/dependent-pair kernel
 
 Fleet02/B16 proved `QFORM-NULL-SCALAR-DEPENDENT-PAIR-v1` at
 
-`yspennstate/math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
+`private-source-repository@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T232932Z-fleet02-B16-QFORM-auto11/REPORT.md`.
 
@@ -51,7 +51,7 @@ The completed theorem
 
 is at
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -70,7 +70,7 @@ This is exactly the fractional curved-fiber payment needed below.
 
 No completed canonical current-QFORM artifact exists in the designated `fleet04/B06` directory at this run's source refresh. I therefore do not invent a designated-partner result. I apply the compatible completed fleet04/B18 theorem instead:
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

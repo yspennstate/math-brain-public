@@ -30,7 +30,7 @@ Steps 2 and 6 are not yet an exhaustive proof of the full conjecture, so no full
 
 The named partner result actually used is fleet02/B08 `QFORM-DIFFUSE-APPROX-BLOCK-STABILITY-v1`, canonical source
 
-`yspennstate/math-open-problems@c1c6ffe8c742cbba7611b5a3f1d73cf71019f47b`
+`private-source-repository@c1c6ffe8c742cbba7611b5a3f1d73cf71019f47b`
 
 at
 
@@ -58,7 +58,7 @@ This exact inequality is the small-defect branch below. It retains the full arbi
 
 The large-defect branch uses `QFORM-RIDGE-DENSITY-v1`, canonical source
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 at
 
@@ -80,7 +80,7 @@ No post-rotation independence is used.
 
 ### Optional downstream localized resource
 
-For interpretation of the localized alternative, fleet01/B19 `QFORM-SAME-BANK-CONTAMINATION-SPLICE-v1`, canonical source `yspennstate/math-open-problems@2e5d5cdc3bb7121673bc920497fb11cac9eceb46`, proves a quarter-negative-moment estimate from one nontrivial original-coordinate cross singular direction. It is not needed to prove the trichotomy itself, but it makes the localized output directly consumable by existing proof branches.
+For interpretation of the localized alternative, fleet01/B19 `QFORM-SAME-BANK-CONTAMINATION-SPLICE-v1`, canonical source `private-source-repository@2e5d5cdc3bb7121673bc920497fb11cac9eceb46`, proves a quarter-negative-moment estimate from one nontrivial original-coordinate cross singular direction. It is not needed to prove the trichotomy itself, but it makes the localized output directly consumable by existing proof branches.
 
 ## 3. New theorem — `QFORM-DIFFUSE-LARGE-DEFECT-STABLE-RANK-v1`
 

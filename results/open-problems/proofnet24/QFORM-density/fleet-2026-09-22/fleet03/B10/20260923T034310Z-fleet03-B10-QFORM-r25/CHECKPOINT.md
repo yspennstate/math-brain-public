@@ -5,7 +5,7 @@ attacking: the small-Pluecker-mass near-null hub/star collar; pay every genuinel
 
 Programme: `QFORM-DENSITY-3EIG-20260922`. Full target remains OPEN. Execution label remains `WITHOUT_VERIFIED_BRAIN`.
 
-Fresh predecessor actually used: fleet03/B10 r23b, `math-open-problems@91759f77fcdf696a75d8e6c6ef398c03654b025a`, which reduces the exact-rank-three collar `0<d<1/64` to an original physical hub row `r_i=sqrt(c)e` satisfying
+Fresh predecessor actually used: fleet03/B10 r23b, `private-source@91759f77fcdf696a75d8e6c6ef398c03654b025a`, which reduces the exact-rank-three collar `0<d<1/64` to an original physical hub row `r_i=sqrt(c)e` satisfying
 
 `c>1/4`, `|A_ii|<1/64`, hence `|e^T Lambda e|<1/16`, and `||A_{i,-i}||_2>sqrt(1023)/64`,
 

@@ -22,7 +22,7 @@ This report gives the correct replacement. A common integrable Fourier envelope 
 
 Current volume theorem:
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 For an original-coordinate cross block `M=A[I,J]`, if its volume marginals satisfy `alpha_i<=q/2`, `1<=q<3/2`, and `Z=e3(M^T M)>0`, that theorem gives
@@ -41,7 +41,7 @@ The estimate is law-independent over arbitrary cap-one product sources and retai
 
 Completed assigned-partner theorem actually applied:
 
-`yspennstate/math-open-problems@beba6425b1130ce83dd870c447fc0e87bcc5bd58`,
+`private-source-repository@beba6425b1130ce83dd870c447fc0e87bcc5bd58`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T060010Z-fleet02-B15-QFORM/REPORT.md`.
 
 If two sources for the same phase have joint-density `L1` distance `Delta` and both output characteristic functions obey

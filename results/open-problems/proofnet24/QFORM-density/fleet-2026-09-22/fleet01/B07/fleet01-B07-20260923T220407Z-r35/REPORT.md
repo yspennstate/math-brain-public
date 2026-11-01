@@ -18,7 +18,7 @@ All coordinate sets below are ORIGINAL physical coordinates. No random variable 
 
 Own earlier theorem `QFORM-COARSE-ROLE-COLORING-v1` is source-pinned at
 
-`yspennstate/math-open-problems@b08aeb182c7e4448b960e93db1953cb06cbccb9f`,
+`private-source-repository@b08aeb182c7e4448b960e93db1953cb06cbccb9f`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T070624Z-r19/REPORT.md`.
 
@@ -36,7 +36,7 @@ The same source proves the determinant-marginal core/diffuse split after applyin
 
 Completed source:
 
-`yspennstate/math-open-problems@1f5ab2ddba6e99675fb9177666c5e64e396e54e5`,
+`private-source-repository@1f5ab2ddba6e99675fb9177666c5e64e396e54e5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T023322Z-r11/REPORT.md`, theorem `QFORM-DETERMINANT-MARGINAL-TAIL-CORE-v1`.
 
@@ -50,7 +50,7 @@ I apply (1.2) to an actual principal determinant law in Section 4.
 
 The physical-triple scalar-Schur theorem is in
 
-`yspennstate/math-open-problems@96b7296e7bb30bdddb70522eda0177190e316bc4`,
+`private-source-repository@96b7296e7bb30bdddb70522eda0177190e316bc4`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T184724Z-fleet03-B20-QFORM-r15/REPORT.md`, theorem `QFORM-PHYSICAL-TRIPLE-DETERMINANT-PAYMENT-v1`:
 
@@ -60,7 +60,7 @@ if a physical principal `3x3` block `B` has `det B !=0` and one physical diagona
 
 Its full-matrix physical indefinite-pair input is source-pinned at
 
-`yspennstate/math-open-problems@058acb5c8f9186ef199bbaf136b57f4dd9ea3800`,
+`private-source-repository@058acb5c8f9186ef199bbaf136b57f4dd9ea3800`,
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`:
 
@@ -74,7 +74,7 @@ Both statements retain arbitrary outside couplings/affine terms after conditioni
 
 The newest completed fleet02/B07 report visible before publication is
 
-`yspennstate/math-open-problems@b2d2cccb46aa3fc83162b2cc4fba61a5e040ebd2`,
+`private-source-repository@b2d2cccb46aa3fc83162b2cc4fba61a5e040ebd2`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T211034Z-fleet02-B07-qform-mixedvolume/REPORT.md`.
 

@@ -18,7 +18,7 @@ The current control and live correction ledger were reread on fresh `yspennstate
 
 The first analytic input is the completed translation-uniform two-cross theorem
 
-`yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`,
+`private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T184648Z-fleet03-B09-QFORM-r15/REPORT.md`,
 Theorem `QFORM-HALFRIESZ-TWO-CROSS-v1`.
 
@@ -31,7 +31,7 @@ All same-side quadratic blocks, affine terms, outside couplings and extra spectr
 
 The frame-partition calculation is the same one used in my preceding completed r26 report,
 
-`yspennstate/math-open-problems@c9113f2c63b8a57b3a3b6c1c8ad3772258f802fc`,
+`private-source-repository@c9113f2c63b8a57b3a3b6c1c8ad3772258f802fc`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T091119Z-fleet01-B08-qform-r26/REPORT.md`.
 
 For a Parseval frame with row norms squared at most `delta`, the two-part MSS partition supplies physical banks `I,J` whose Gram matrices are both bounded below by
@@ -41,7 +41,7 @@ For a Parseval frame with row norms squared at most `delta`, the two-part MSS pa
 
 The scalar-pivot density lift and large-eigenvalue inheritance are source-pinned in the completed Fresnel/Schur package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 After completing a nonzero original-coordinate scalar pivot `a`, the Schur remainder retains at least two eigenvalues of modulus at least one when the ambient matrix has three; and
@@ -50,7 +50,7 @@ After completing a nonzero original-coordinate scalar pivot `a`, the Schur remai
 
 The designated partner actually applied in Section 5 is the newest completed fleet02/B08 result
 
-`yspennstate/math-open-problems@40f8dac6ff53147322d492a56ffd8f382a5dce83`,
+`private-source-repository@40f8dac6ff53147322d492a56ffd8f382a5dce83`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T090647Z-fleet02-B08-qform-diffuse-r24/REPORT.md`.
 
 Its inherited selected-three diffuse gate uses

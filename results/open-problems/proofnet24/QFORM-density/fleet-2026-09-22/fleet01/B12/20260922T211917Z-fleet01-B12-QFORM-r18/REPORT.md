@@ -109,7 +109,7 @@ Regularity note: the argument proves essential boundedness. Even if the lower-di
 Named partner dependency consumed:
 
 with canonical mathematics at
-`yspennstate/math-open-problems@5295a978b9e3336cc823f0e631bde093c30a8a4d:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T1953Z-fleet02-B12-qform-r16/REPORT.md`.
+`private-source-repository@5295a978b9e3336cc823f0e631bde093c30a8a4d:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T1953Z-fleet02-B12-qform-r16/REPORT.md`.
 
 That completed partner result proves the following for
 

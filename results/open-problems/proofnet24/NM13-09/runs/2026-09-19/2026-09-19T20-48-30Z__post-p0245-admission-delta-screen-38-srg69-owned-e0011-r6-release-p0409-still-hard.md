@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-09 — admission delta screen 38: SRG69 enters already owned; E0011 is explicitly released only on residue 6; P0409 remains residue-8 but HARD-shaped
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-09` / `proofnet24/NM13-09/`  
 Category: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed stochastic-process existence/counterexample questions admitting an explicit process construction, exact transition law, or complete special-class theorem  

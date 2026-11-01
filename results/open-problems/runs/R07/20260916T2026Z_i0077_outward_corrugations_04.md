@@ -4,7 +4,7 @@ Problem/source: Krzysztof Burdzy and Michael Scheutzow, *Forward Brownian Motion
 # R07 CLOSABLE OUTSIDE — run 4: outward asymptotically parabolic corrugations
 
 Run date: 2026-09-16.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Delivery: private GitHub only. No email/Gmail, Drive, public posting, purchases, permission changes, workflow execution, or scheduler changes.
 
 ## 1. Fixed metric and continuity

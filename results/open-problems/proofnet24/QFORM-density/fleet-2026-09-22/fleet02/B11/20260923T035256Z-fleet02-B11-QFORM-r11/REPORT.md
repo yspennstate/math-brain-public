@@ -7,7 +7,7 @@ The target throughout is the universal essential-density bound for `X^T A X` und
 ## 1. Sources actually used
 
 1. Required Claude package, pinned source
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, Theorem F.  I also read its `FOURIER_ROUTE_REPORT.md` and `COUNTEREXAMPLE_SEARCH.md`.  The current compatible `RESULTS.md` still contains the same Theorem F.  The actual inequality used below is
 
    `max_i ||r_i||^2 <=1/2  ==>  ||p_Q||_infinity <=12 |det Lambda|^(-1/3)`
@@ -15,7 +15,7 @@ The target throughout is the universal essential-density bound for `X^T A X` und
    for an exact rank-three spectral frame.  The `COUNTEREXAMPLE_SEARCH.md` ruled theorem is also used to identify the already-paid one-sheet side: for signature `(2,1)`, `p_Q(s)<=pi sqrt(2)` for every `s>=0`.
 
 2. Orientation-free rank-three scalar-pivot theorem,
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
    `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, equation (1.2):
 
    `||p_Q||_infinity <=128 [c_i |A_ii| |det Lambda|]^(-1/4)`
@@ -23,7 +23,7 @@ The target throughout is the universal essential-density bound for `X^T A X` und
    for an original physical row of leverage `c_i` in an exact-rank-three block, with arbitrary outside affine terms/couplings.
 
 3. Determinant-only physical-pair theorem,
-   `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
+   `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
    `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`, Theorem 3.1.  If an ORIGINAL indefinite physical `2x2` block has `D=|det B|` and the ambient `s_3(A)>=s`, then
 
    `||p_Q||_infinity <= D^(-1/2)[9.2+log_+(10000 sqrt(D)/s)]`.
@@ -31,7 +31,7 @@ The target throughout is the universal essential-density bound for `X^T A X` und
    Its proof explicitly retains the logarithmic hyperbolic pair density and uses the third-direction Schur remainder to integrate the logarithm.
 
 4. Designated partner fleet03/B11 r22,
-   `yspennstate/math-open-problems@3a8e3494dac898f3b7180d5b80a8c5eb974a8412`,
+   `private-source-repository@3a8e3494dac898f3b7180d5b80a8c5eb974a8412`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T021243Z-fleet03-B11-QFORM-r22/REPORT.md`.  Its full-matrix opposite-diagonal exit is applied in Section 5 below.
 
 No source above is promoted to a full-QFORM result.

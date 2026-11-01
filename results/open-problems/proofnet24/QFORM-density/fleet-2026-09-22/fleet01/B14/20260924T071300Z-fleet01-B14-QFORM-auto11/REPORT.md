@@ -17,7 +17,7 @@ The live corrections remain in force: law-uniform pointwise quadratic Fourier de
 
 The newest completed designated-partner result consumed is fleet02/B14, run `20260924T065901Z-fleet02-B14-QFORM-auto11`, canonical mathematics
 
-`yspennstate/math-open-problems@a785db1a405eec1874fc553b28b8178f32d416d0`
+`private-source-repository@a785db1a405eec1874fc553b28b8178f32d416d0`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260924T065901Z-fleet02-B14-QFORM-auto11/REPORT.md`.
 
@@ -29,7 +29,7 @@ where `K=diag(k_1,k_2,k_3)`.
 
 The sharper sign-specific input used below is the immediately preceding completed fleet02/B14 overlap theorem
 
-`yspennstate/math-open-problems@0b9ffba8bc766e021ec0f0b6729b43ad9a7ad51d`
+`private-source-repository@0b9ffba8bc766e021ec0f0b6729b43ad9a7ad51d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260924T055741Z-fleet02-B14-QFORM-auto11/REPORT.md`.
 
@@ -52,7 +52,7 @@ The one-dimensional product projection estimate used below is the standard Ball-
 
 `||p_{c^T X}||_infinity <= sqrt(2)/||c||_2`.
 
-A source-pinned occurrence already used by this slot is `math-open-problems@eeb8a099ee584596693a0aee03e270bf7279e909`, fleet01/B14 run `20260924T044943Z-fleet01-B14-auto11`, Section 6.
+A source-pinned occurrence already used by this slot is `private-source@eeb8a099ee584596693a0aee03e270bf7279e909`, fleet01/B14 run `20260924T044943Z-fleet01-B14-auto11`, Section 6.
 
 ## 2. Cap-aware form of the partner hyperbolic theorem
 

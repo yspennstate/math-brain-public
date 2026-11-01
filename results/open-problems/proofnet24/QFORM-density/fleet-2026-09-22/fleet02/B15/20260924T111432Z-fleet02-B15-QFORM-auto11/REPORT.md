@@ -203,7 +203,7 @@ The new simultaneous-subdensity theorem closes a regularity/decomposition interf
 
 - owner brain main resolved at start: 3bc49ca35f334a553ab4f72233284cfe104672c2
 - owner control revision: 2026-09-22.15
-- math-open-problems master resolved during proof: 748e05ad831bd74e439cf1911c20f80d8f44a45c, verified descendant of e5f71d79eff325201dd0274053d20268ce65b837
+- private-source master resolved during proof: 748e05ad831bd74e439cf1911c20f80d8f44a45c, verified descendant of e5f71d79eff325201dd0274053d20268ce65b837
 - required source files read: RESULTS.md, FOURIER_ROUTE_REPORT.md, COUNTEREXAMPLE_SEARCH.md at the decoupling-brascamp-lieb record
 - newest partner handoff read: fleet03/B15 20260924T102515Z plus correction addendum
 

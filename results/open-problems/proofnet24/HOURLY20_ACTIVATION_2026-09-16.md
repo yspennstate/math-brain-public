@@ -1,7 +1,7 @@
 # R01–R20: confirmed hourly schedule updates
 
 Date: **16 September 2026**, Asia/Jerusalem.
-Repository: `yspennstate/math-open-problems`; existing branch: `master`.
+Repository: `private-source-repository`; existing branch: `master`.
 
 ## Confirmed changes
 

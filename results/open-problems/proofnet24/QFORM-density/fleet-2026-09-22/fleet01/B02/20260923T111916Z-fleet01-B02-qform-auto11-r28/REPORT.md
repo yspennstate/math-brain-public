@@ -20,7 +20,7 @@ The newest completed designated partner result I use is fleet02/B02
 
 at
 
-`yspennstate/math-open-problems@<partner-report-readback-current-master>`,
+`private-source-repository@<partner-report-readback-current-master>`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T100819Z-fleet02-B02-qform-r11/REPORT.md`.
 
 Its canonical report blob is `aa85a320ce54c90b1929ab1a5fd5b90d89746bbf`. The preceding fleet02/B02 cross-disjoint run is pinned at commit `94189deb89884b0dd57057041ec04f98a85e6764`.
@@ -190,7 +190,7 @@ Use the completed exact-rank-three physical-cross-block theorem
 
 source
 
-`yspennstate/math-open-problems@484c89f85cda352b2c4318364a6206ebc4154950`,
+`private-source-repository@484c89f85cda352b2c4318364a6206ebc4154950`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T230126Z-fleet03-B02-QFORM-r17/REPORT.md`.
 
 Because `C` has exactly three physical rows and `E3(C)>0`, it has exact rank three and the squared product of its three nonzero singular values equals `E3(C)`. Therefore

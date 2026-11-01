@@ -1,6 +1,6 @@
 # B04 controlling addendum — named-partner integration and constant sharpening
 
-The named partner `fleet03/B04` completed its current-programme handoff during this run, after the primary B04 report had already been written. I consumed it at brain commit `9c946331d5e97e35584005a98d0e496fae7014d0`; canonical partner report `yspennstate/math-open-problems@f824ded997ee16c741468bb49860e1ccaf18d8bd`, blob `2438594f82b064359483972f59f4d061a6814ce0`.
+The named partner `fleet03/B04` completed its current-programme handoff during this run, after the primary B04 report had already been written. I consumed it at brain commit `9c946331d5e97e35584005a98d0e496fae7014d0`; canonical partner report `private-source-repository@f824ded997ee16c741468bb49860e1ccaf18d8bd`, blob `2438594f82b064359483972f59f4d061a6814ce0`.
 
 The partner proves exactly the averaged one-square estimate
 

@@ -508,7 +508,7 @@ finite census.
 
 Fresh source control before the scientific write: `math-research-brain/main`
 `2026-09-22.2`, no fleet02/B13 pause or stop. Fresh scientific source was read
-from `math-open-problems/master`, including the all-gate reformulation, the
+from `private-source/master`, including the all-gate reformulation, the
 exact fleet04/B17 cocycle, fleet04/B16 joint-character theorem, and the
 latest fleet01/B18 critical obstruction report.
 

@@ -5,7 +5,7 @@ Problem/source: David Aldous and James Fill, *Reversible Markov Chains and Rando
 # R04 immutable run report — I0027 / quantitative sharp-constant rate and audit consumption
 
 Run ID: `20260916T2312Z_i0027_quantitative_rate`  
-Repository/branch: `yspennstate/math-open-problems`, `master`.
+Repository/branch: `private-source-repository`, `master`.
 
 **Current mathematical status:** the retained R04 source theorem remains
 \[

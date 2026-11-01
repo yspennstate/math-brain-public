@@ -21,7 +21,7 @@ This report does **not** use any of the known false interfaces: no independence 
 
 Latest completed fleet02/B18 report consumed:
 
-- repository snapshot containing the report: `yspennstate/math-open-problems@5368af077ca929e49b8dc8adeb3e0cefad85f827`;
+- repository snapshot containing the report: `private-source-repository@5368af077ca929e49b8dc8adeb3e0cefad85f827`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T072225Z-fleet02-B18-QFORM-auto11/REPORT.md`.
 
 Its `QFORM-CIRCULAR-FRAME-PLANAR-BANK-BARRIER-v1` uses, for `m>=5`,
@@ -36,7 +36,7 @@ so `V^T V=I_3` and every row has leverage `3/m`. With `n=e_1` and the Schur-isot
 
 Canonical source:
 
-- `yspennstate/math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`;
+- `private-source-repository@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`;
 - theorem `QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1`.
 

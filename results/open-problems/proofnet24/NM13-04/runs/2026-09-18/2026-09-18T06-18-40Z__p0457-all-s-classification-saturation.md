@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-04 / P0457 — all-co-degree deterministic classification and saturation of the frozen finite metric
 
 Run date: 2026-09-18 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track: `NM13-04 Graph Counterexamples`, `CLOSABLE OUTSIDE`  
 Canonical source/claim: `P0457`, `operations/claims/P0457.md`  
 Parent source status after this run: **PROVED-CANDIDATE / AUDIT-PENDING** for the frozen near-logarithmic diameter target; **not repository-closed**  

@@ -28,7 +28,7 @@ The live correction set was reread. In particular this run does **not** use any 
 
 The direct predecessor is fleet03/B09 r26,
 
-`yspennstate/math-open-problems@5368af077ca929e49b8dc8adeb3e0cefad85f827`
+`private-source-repository@5368af077ca929e49b8dc8adeb3e0cefad85f827`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T074252Z-fleet03-B09-qform-nearnull-r26/REPORT.md`.
 
@@ -44,7 +44,7 @@ The completed peer theorem applied below is fleet02/B09
 
 source
 
-`yspennstate/math-open-problems@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`
+`private-source-repository@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T064043Z-fleet02-B09-QFORM-r13/REPORT.md`.
 
@@ -56,7 +56,7 @@ with a continuous density and the same coefficient times interval length. The ph
 
 The scalar/vector projection cap used in Section 3 is the completed fleet02/B06 affine-fiber Brascamp--Lieb theorem,
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
 
 which gives in particular a two-dimensional projection density cap `<=e` for an original-coordinate cap-one product source.
 

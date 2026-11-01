@@ -15,7 +15,7 @@ The owner target is unchanged: independent real original coordinates with probab
 
 Fresh owner control at startup was `QFORM` only, revision `2026-09-22.15`. The current B08 predecessor is
 
-`yspennstate/math-open-problems@87f0f4b7b8a9b5dc4f1050ecef61e527dac7a541`
+`private-source-repository@87f0f4b7b8a9b5dc4f1050ecef61e527dac7a541`
 
 at
 
@@ -27,7 +27,7 @@ Its remaining exact common-plane state has two physical hubs, two disjoint produ
 
 The current projected-density input used below is the orthonormal `r`-projection cap `2^(r/2)` recorded in the owner manuscript checkpoint
 
-`yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`
+`private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`
 
 under `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. In dimension two the cap is `2`.
 
@@ -37,7 +37,7 @@ The designated partner result actually applied is fleet04/B08
 
 source
 
-`yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
+`private-source-repository@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
 
 at
 

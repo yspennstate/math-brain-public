@@ -15,7 +15,7 @@ The unrestricted conjecture remains OPEN. Nothing below assumes Gaussianity, mom
 
 The immediate B06 predecessor is
 
-`yspennstate/math-open-problems@9383edfaa2404770902b844e7ebcddfb7a067136`
+`private-source-repository@9383edfaa2404770902b844e7ebcddfb7a067136`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T032240Z-fleet03-B06-qform-r51/REPORT.md`.
 
@@ -48,7 +48,7 @@ so some literal hub `h` obeys
 
 A concurrent fleet01/B06 result landed after r51:
 
-`yspennstate/math-open-problems@f9c285a20c529904887122c7def9ca3a2afb484b`,
+`private-source-repository@f9c285a20c529904887122c7def9ca3a2afb484b`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T043511Z-fleet01-B06-QFORM-r47/REPORT.md`.
 
@@ -56,10 +56,10 @@ It proves an anchored Pluecker-tensor receiver and, in the zero-diagonal-twist e
 
 Two completed analytic inputs are used within their stated scopes:
 
-1. `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, source `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, path `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`. In rank three, a Parseval product frame with every leverage at most `1/2`, invertible coefficient matrix `C`, and arbitrary coordinate-separable phases has a continuous density bounded by `3e |det C|^(-1/3)`.
-2. `QFORM-DIFFUSE-RANK2-L3-SEPARABLE-v1`, source `yspennstate/math-open-problems@d094743ca1c1429601fe7fdc4a4f548103a62bb0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T125240Z-fleet03-B16-qform-r11/REPORT.md`. In rank two under the same `1/2` leverage gate, the density has `L^3` norm at most `(3e)^(2/3)|det C|^(-1/3)`, again with arbitrary coordinate-separable phases.
+1. `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, source `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, path `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`. In rank three, a Parseval product frame with every leverage at most `1/2`, invertible coefficient matrix `C`, and arbitrary coordinate-separable phases has a continuous density bounded by `3e |det C|^(-1/3)`.
+2. `QFORM-DIFFUSE-RANK2-L3-SEPARABLE-v1`, source `private-source-repository@d094743ca1c1429601fe7fdc4a4f548103a62bb0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T125240Z-fleet03-B16-qform-r11/REPORT.md`. In rank two under the same `1/2` leverage gate, the density has `L^3` norm at most `(3e)^(2/3)|det C|^(-1/3)`, again with arbitrary coordinate-separable phases.
 
-For the final scalar square we use the completed dependent square-smoothing lemma at `yspennstate/math-open-problems@4ea84670b15b538f2163d53bf31f81cd1f1eabfa`: if a base density is bounded by `M` and the conditionally translated physical scalar has density cap one, adding `aV^2` gives density cap `2 sqrt(M/|a|)`. A short `L^3 -> L^infinity` analogue is proved below, so no extra premise is needed for that step.
+For the final scalar square we use the completed dependent square-smoothing lemma at `private-source-repository@4ea84670b15b538f2163d53bf31f81cd1f1eabfa`: if a base density is bounded by `M` and the conditionally translated physical scalar has density cap one, adding `aV^2` gives density cap `2 sqrt(M/|a|)`. A short `L^3 -> L^infinity` analogue is proved below, so no extra premise is needed for that step.
 
 ## 2. One physical deletion: exact determinant currency
 
@@ -473,7 +473,7 @@ Thus failure after two heavy deletions produces a literal third hub and removes 
 
 The freshest completed designated partner result is
 
-`yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`,
+`private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260924T001014Z-fleet04-B06-QFORM-r3/REPORT.md`,
 

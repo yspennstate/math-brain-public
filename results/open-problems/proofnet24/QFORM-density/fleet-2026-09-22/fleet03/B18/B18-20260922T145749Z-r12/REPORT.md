@@ -29,7 +29,7 @@ A singleton bank has the sharper cap `1`.
 
 `fleet01/B18`, canonical report
 
-`yspennstate/math-open-problems@af33ca7715dcdf248d4bb4732ee533a1f47b253b`
+`private-source-repository@af33ca7715dcdf248d4bb4732ee533a1f47b253b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T145319Z-qform-B18-a01-r12/REPORT.md`
 
@@ -43,7 +43,7 @@ The result is obtained in the original product provenance; it does not diagonali
 
 The completed `fleet04/B18` report
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`
 

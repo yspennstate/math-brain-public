@@ -235,7 +235,7 @@ The partner density bound also implies, through the same whole-copy conversion (
     integral |t|^(-1/2)|phi_(Q_*)(t)|^2 dt
       <= 52.88762884254536... .                               (7.2)
 
-Partner source: `yspennstate/math-open-problems@5f93186cf8952b2b8b0255e08a78fd8506c613e4`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260924T051411Z-fleet04-B03-plucker-overlap2-r4/REPORT.md`.
+Partner source: `private-source-repository@5f93186cf8952b2b8b0255e08a78fd8506c613e4`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260924T051411Z-fleet04-B03-plucker-overlap2-r4/REPORT.md`.
 
 ## 8. Boundary and next implication
 

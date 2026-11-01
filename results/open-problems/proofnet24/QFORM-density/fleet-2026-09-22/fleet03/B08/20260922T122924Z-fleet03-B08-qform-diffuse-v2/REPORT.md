@@ -14,7 +14,7 @@ This report consumes the live correction inbox. In particular it does **not** us
 
 The previous B08 theorem, source
 
-`yspennstate/math-open-problems@9dcddd0bf3fbcb8e0b3396e0a4d883924d3f4ada`
+`private-source-repository@9dcddd0bf3fbcb8e0b3396e0a4d883924d3f4ada`
 
 at
 
@@ -25,12 +25,12 @@ proved a dimension-free Fourier–Brascamp–Lieb estimate for a rank-`r` spectr
 Two completed peer results are applied here.
 
 1. **Cross-block Fourier theorem**, interactive canonical source
-   `yspennstate/math-open-problems@8624982153e5a2154e4ae8922d2fe4dc77080efc`, path
+   `private-source-repository@8624982153e5a2154e4ae8922d2fe4dc77080efc`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/interactive/20260922T121109Z-crossblock-and-lower-bounds/REPORT.md`:
    if an original-coordinate cut `I|J` has cross block of rank `r>2` and product `Delta` of nonzero singular values, then
    `||p_Q||_infinity <= (2r/(r-2)) Delta^(-1/r)`, with arbitrary within-side quadratic terms retained.
 2. **Dependent square smoothing**, fleet04/B18 canonical source
-   `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path
+   `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`:
    if `R0` has density at most `M` and, conditional on `R0=r`, `V` has density at most one, then
    `R0+aV^2` has density at most `2 sqrt(M/|a|)`.

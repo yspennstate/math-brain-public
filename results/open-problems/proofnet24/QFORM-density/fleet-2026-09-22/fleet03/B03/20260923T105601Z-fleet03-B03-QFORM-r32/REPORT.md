@@ -37,7 +37,7 @@ I use this only as a true marginal cap; no conditional projection cap is introdu
 
 The designated `fleet04/B03` handoff is source-pinned to
 
-`yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`,
+`private-source-repository@28681f9af7c2307f80968df86010084019599e38`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`.
 

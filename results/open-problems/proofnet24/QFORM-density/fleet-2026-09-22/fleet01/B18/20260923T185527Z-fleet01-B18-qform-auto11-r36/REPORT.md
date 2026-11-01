@@ -11,7 +11,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. Fresh sources and live corrections
 
-Fresh control was read from `yspennstate/math-research-brain` main, initially at `f2a078a553ec43666e2080b751d723eaa5c80760`; before the substantive write main had advanced to `e6f57f046e91b82e284b0489665fbd6768fa0000`, with the same latest owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. Fresh mathematics was read from `yspennstate/math-open-problems` master at `8f2bb69d550ede6f508d421e478cea807a04c192` before the proof work.
+Fresh control was read from `yspennstate/math-research-brain` main, initially at `f2a078a553ec43666e2080b751d723eaa5c80760`; before the substantive write main had advanced to `e6f57f046e91b82e284b0489665fbd6768fa0000`, with the same latest owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`. Fresh mathematics was read from `private-source-repository` master at `8f2bb69d550ede6f508d421e478cea807a04c192` before the proof work.
 
 I consumed the live corrections, in particular: no arbitrary-joint coarea cap; no conditional-cap-as-independence; no independence after spectral rotation; no uniform pointwise quadratic-phase decay; no universal fixed good minor; and no deletion of a small quadratic term for arbitrary rough unbounded-support laws. None is used below.
 

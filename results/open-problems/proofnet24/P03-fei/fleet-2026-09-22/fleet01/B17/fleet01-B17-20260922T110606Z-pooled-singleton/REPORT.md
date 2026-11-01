@@ -38,7 +38,7 @@ This is a nontrivial safe regime, not a universal coercivity theorem and not a p
 
 ### 1.1 Canonical I-projection identity
 
-`yspennstate/math-open-problems@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`
+`private-source-repository@4bd6d05f1eb8325d665f2748f4d74dcee2550a04`
 
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`
 
@@ -46,7 +46,7 @@ This is the source of \(R_\Gamma=B_{\inf}^\Gamma+K_{\rm occ}\).
 
 ### 1.2 New logarithmically weighted packet input
 
-`yspennstate/math-open-problems@e1b73655f3705daf2ca80e72f772e7d44e0c22ac`
+`private-source-repository@e1b73655f3705daf2ca80e72f772e7d44e0c22ac`
 
 `proofnet24/P03-fei/fleet-2026-09-22/fleet01/B08/20260922T103401Z-fleet01-B08-FEI-r11/REPORT.md`
 
@@ -63,7 +63,7 @@ and for any selected Booleanity channels the associated Gram pseudoinverse gives
 
 ### 1.3 Physical marginal danger wedge
 
-`yspennstate/math-open-problems@e1b73655f3705daf2ca80e72f772e7d44e0c22ac`
+`private-source-repository@e1b73655f3705daf2ca80e72f772e7d44e0c22ac`
 
 `proofnet24/P03-fei/fleet-2026-09-22/fleet01/B10/20260922T105609Z-b10-fei-2622b4/REPORT.md`
 
@@ -76,7 +76,7 @@ where \(T_\Gamma\) is the Gibbs threshold and \(\Lambda_{\rm phys}\) is the KL m
 
 ### 1.4 Biased Booleanity equations
 
-`yspennstate/math-open-problems@603b35e74227d1c2d8ee34c0c527c439c686e30b`
+`private-source-repository@603b35e74227d1c2d8ee34c0c527c439c686e30b`
 
 `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md`
 
@@ -90,7 +90,7 @@ a^TM_Ua=0,\qquad
 
 Latest compatible fleet02/B17 report at the consumed scientific snapshot:
 
-`yspennstate/math-open-problems@e1b73655f3705daf2ca80e72f772e7d44e0c22ac`
+`private-source-repository@e1b73655f3705daf2ca80e72f772e7d44e0c22ac`
 
 `proofnet24/P03-fei/fleet-2026-09-22/fleet02/B17/fleet02-B17-20260922T104426Z-eba4746f/REPORT.md`
 
@@ -103,7 +103,7 @@ Therefore the payment below is deliberately **source-dependent** and spends only
 
 ### 1.6 Mandatory recursive-majority preflight
 
-`yspennstate/math-open-problems@bff0d7b6c21485f386841c42582eb04f32705046`
+`private-source-repository@bff0d7b6c21485f386841c42582eb04f32705046`
 
 `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md`
 

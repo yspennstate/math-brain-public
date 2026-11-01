@@ -11,7 +11,7 @@ attacking: third-resource logarithmic receiver closure — keep the entire rank-
 
 ## 1. First unpaid implication
 
-The newest compatible designated partner fleet03/B14 (`math-open-problems@8b915c140db7d5bcecfce69e46eb1b81297af93b`, checks at `571914cc7d3cb368840d3a69a90167d79eff3b3c`) proves that even smooth strict-subcap laws, positive on one connected compact interval, can have a uniformly good frozen-slice half-Frostman profile while the rank-two rough hub
+The newest compatible designated partner fleet03/B14 (`private-source@8b915c140db7d5bcecfce69e46eb1b81297af93b`, checks at `571914cc7d3cb368840d3a69a90167d79eff3b3c`) proves that even smooth strict-subcap laws, positive on one connected compact interval, can have a uniformly good frozen-slice half-Frostman profile while the rank-two rough hub
 
 \[
 T=2L(X-X')
@@ -276,7 +276,7 @@ This identifies the proof-order mechanism: the logarithmic singularity is a rank
 
 The fixed required source was freshly read at
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed Theorem A states that in dimension three, if every eigenvalue has modulus at least `sigma`, arbitrary linear terms are allowed and
 

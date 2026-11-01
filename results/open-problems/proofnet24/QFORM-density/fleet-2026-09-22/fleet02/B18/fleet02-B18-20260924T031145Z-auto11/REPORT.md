@@ -207,7 +207,7 @@ This is the promised analytic splice: the dependent-pair receiver is insensitive
 
 ## 6. Required pinned e5f result applied to the same family
 
-The pinned Claude-compatible record `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` was reread at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
+The pinned Claude-compatible record `private-source@e5f71d79eff325201dd0274053d20268ce65b837` was reread at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
 Theorem F there is proved: for exact rank-three spectral directions with original-coordinate eigenspace leverages at most `1/2`, and eigenvalues `lambda_1,lambda_2,lambda_3`,
 

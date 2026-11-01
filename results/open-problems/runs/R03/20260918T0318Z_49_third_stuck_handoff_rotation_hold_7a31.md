@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 
 # R03 run49 — F0097 terminal handoff: the proposed dual-witness recovery is already Scott–Sorkin below the pure-literal threshold
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **F0097 OPEN / R03 PARTIAL / THIRD STUCK EPISODE / TERMINAL HANDOFF / ROTATION HOLD.**
 

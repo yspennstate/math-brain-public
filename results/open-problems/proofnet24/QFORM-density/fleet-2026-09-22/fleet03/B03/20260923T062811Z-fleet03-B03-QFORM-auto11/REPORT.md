@@ -16,7 +16,7 @@ The unrestricted owner conjecture and the unrestricted continuity claim remain O
 
 The immediate B03 predecessor is
 
-`yspennstate/math-open-problems@b580b09027d8c20c3d3bbea0bea6cf8caa04d541`
+`private-source-repository@b580b09027d8c20c3d3bbea0bea6cf8caa04d541`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T045638Z-fleet03-B03-QFORM-r27/REPORT.md`.
 
@@ -44,7 +44,7 @@ Run r27 pays every `h_r:=beta v_r+m q_r !=0` through a Schur-complement half-Rie
 
 The designated partner `fleet04/B03` has one completed handoff, canonical mathematics
 
-`yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`,
+`private-source-repository@28681f9af7c2307f80968df86010084019599e38`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`.
 
@@ -175,7 +175,7 @@ Thus Theorem 2.1 applies with
 
 The one-dimensional product-projection theorem `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
 
 implies for the unit projection `U=u.X_L`
 

@@ -17,7 +17,7 @@ No step below uses a law-uniform pointwise van-der-Corput estimate, independence
 
 Canonical source:
 
-`yspennstate/math-open-problems@0a2be76b2cba4f4d46b88682e196af8945db9ed1`
+`private-source-repository@0a2be76b2cba4f4d46b88682e196af8945db9ed1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T115729Z-fleet03-B03-QFORM-r33/REPORT.md`.
 
@@ -35,7 +35,7 @@ The dependence among the `C_j` is retained. The present run first extends this e
 
 Canonical source:
 
-`yspennstate/math-open-problems@0ef1395ef5636eab3acb9e70130042e4dfcbb644`
+`private-source-repository@0ef1395ef5636eab3acb9e70130042e4dfcbb644`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T105601Z-fleet03-B03-QFORM-r32/REPORT.md`.
 
@@ -78,7 +78,7 @@ The near-triangle branch (1.7) was not paid uniformly in r32. It is paid below.
 
 Canonical source:
 
-`yspennstate/math-open-problems@b580b09027d8c20c3d3bbea0bea6cf8caa04d541`
+`private-source-repository@b580b09027d8c20c3d3bbea0bea6cf8caa04d541`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T045638Z-fleet03-B03-QFORM-r27/REPORT.md`.
 
@@ -117,7 +117,7 @@ This source was originally motivated by a heavy row, but the algebra (physical c
 
 Canonical source:
 
-`yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`
+`private-source-repository@28681f9af7c2307f80968df86010084019599e38`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`.
 

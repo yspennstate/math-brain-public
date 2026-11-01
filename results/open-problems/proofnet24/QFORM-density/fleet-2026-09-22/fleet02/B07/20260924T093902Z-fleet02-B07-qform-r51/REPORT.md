@@ -20,7 +20,7 @@ while the no-deletion partner description simultaneously retains the physical T|
 
 Latest completed compatible partner at startup/final prepublication refresh: fleet03/B07 r50,
 
-    math-open-problems@4155f9884b4eaa0aee96da4e148c7303e6d6cc6a
+    private-source@4155f9884b4eaa0aee96da4e148c7303e6d6cc6a
     proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260924T074025Z-fleet03-B07-qform-r50/REPORT.md.
 
 It proves the pair-block rank-cancellation core theorem and, on its unpaid branch,
@@ -37,7 +37,7 @@ The complementary fleet02 r50 refinement gives the physical H above and the rank
 
 Mandatory pinned analytic source actually used below:
 
-    math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837
+    private-source@e5f71d79eff325201dd0274053d20268ce65b837
     proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/
     RESULTS.md and FOURIER_ROUTE_REPORT.md.
 

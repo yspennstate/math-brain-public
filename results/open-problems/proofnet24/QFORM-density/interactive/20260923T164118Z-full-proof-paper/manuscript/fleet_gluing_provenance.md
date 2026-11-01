@@ -6,7 +6,7 @@ The chapter makes no claim of literature novelty.
 ## Materialized source records
 
 The initial repository snapshot is
-yspennstate/math-open-problems@36d0dc0c4ac0910e8d84ae64d443136df86242d5.
+private-source-repository@36d0dc0c4ac0910e8d84ae64d443136df86242d5.
 Paths below are relative to proofnet24/QFORM-density.
 
 | Source | Blob SHA | Results used |

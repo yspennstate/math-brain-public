@@ -14,7 +14,7 @@ The live target is: for independent real `X_i` with densities `0<=f_i<=1` and re
 
 The completed fleet source consumed is
 
-`yspennstate/math-open-problems@c64fcff680b0a252a3c92002c60eedba02bbb9ec:qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`.
+`private-source-repository@c64fcff680b0a252a3c92002c60eedba02bbb9ec:qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`.
 
 It proves that the proposed law-uniform pointwise Fresnel decay is false, and proves `||p_Q||_infinity<=pi` for forms diagonal in the original independent coordinates. I use that diagonal theorem below to prove the stronger **continuous-density** conclusion on the diagonal branch, then prove a new arbitrary-sign `3x3` principal-block small-ball theorem.
 
@@ -306,7 +306,7 @@ On regularity: interval domination is enough for absolute continuity and an esse
 
 ## 6. Immutable source pins
 
-* Consumed completed fleet source: `yspennstate/math-open-problems@c64fcff680b0a252a3c92002c60eedba02bbb9ec:qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`.
-* Earlier noncanonical write from the mid-control transition is preserved at `yspennstate/math-open-problems@289810e1f075755898f573ee5b863ad3fa9af5b8:qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`; this canonical report supersedes its location and adds the assignment-specific continuity ledger.
+* Consumed completed fleet source: `private-source-repository@c64fcff680b0a252a3c92002c60eedba02bbb9ec:qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`.
+* Earlier noncanonical write from the mid-control transition is preserved at `private-source-repository@289810e1f075755898f573ee5b863ad3fa9af5b8:qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`; this canonical report supersedes its location and adds the assignment-specific continuity ledger.
 
 No novelty or publication-priority claim is made. Full arbitrary-eigenvector bounded density remains OPEN.

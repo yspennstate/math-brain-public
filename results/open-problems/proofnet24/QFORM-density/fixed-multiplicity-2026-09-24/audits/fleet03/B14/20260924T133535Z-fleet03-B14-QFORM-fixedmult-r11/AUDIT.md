@@ -2,7 +2,7 @@
 
 **Run:** `20260924T133535Z-fleet03-B14-QFORM-fixedmult-r11`  
 **Objective:** `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-**Baseline manuscript:** `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
+**Baseline manuscript:** `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
 **Nine-direction source:** fleet03/B04 at `8ff490c177d0cd7d6f33130f1431785e312a9d10`  
 **Latest constant source consumed:** fleet03/B10 at `636863855ed4c6c976785e35fae8d855f49450ea`  
 **B14 partner localization consumed:** fleet04/B14 cap-preserving compact completion, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T171953Z-fleet04-B14-QFORM-r2/REPORT.md`.

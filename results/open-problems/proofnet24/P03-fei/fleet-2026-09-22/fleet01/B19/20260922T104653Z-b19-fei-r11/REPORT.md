@@ -24,7 +24,7 @@ This run replaces the matching requirement by a different source-valid object: a
 
 ### Current critical-core and co-pair sources
 
-1. **TERMINAL_CORE** — `yspennstate/math-open-problems`, commit `85ffa60db26997421d980b1f86c03d82259504ca`, path
+1. **TERMINAL_CORE** — `private-source-repository`, commit `85ffa60db26997421d980b1f86c03d82259504ca`, path
    `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md`, Sections 3--7.  It supplies the genuine minimum-dimensional `F/J` ratio core and the physical-block inequality. In particular, on a ratio-`rho` core, singleton blocks imply
    \[
    h_2(q_k)\ge \rho q_k.
@@ -39,7 +39,7 @@ This run replaces the matching requirement by a different source-valid object: a
    \]
    where `p_ik` is derivative-support disagreement and `r_ik` is the actual joint spectral occurrence probability.
 
-3. **Same-account pair selector** — `yspennstate/math-open-problems`, immutable snapshot commit `b49be89db2ee2b99563dbd224613e2db66983eed`, path
+3. **Same-account pair selector** — `private-source-repository`, immutable snapshot commit `b49be89db2ee2b99563dbd224613e2db66983eed`, path
    `proofnet24/P03-fei/fleet-2026-09-22/fleet01/B12/20260922T101952Z-fleet01-B12-r11/REPORT.md`, Sections 2--7. It proves the centered pair law, tensor-baseline-safe pair payment, and for every relative-`1/16` robust trigger edge `(i,k)` in a true `rho>4` core the weaker Pinsker tax
    \[
    I(X_i;X_k)>\frac{169}{288\ln2}q_i^2.

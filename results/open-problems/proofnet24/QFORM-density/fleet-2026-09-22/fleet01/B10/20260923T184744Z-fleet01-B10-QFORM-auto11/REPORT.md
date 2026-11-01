@@ -15,7 +15,7 @@ The unrestricted exact-rank-three theorem and the full owner conjecture remain *
 
 The newest Claude continuation actually read was
 
-`yspennstate/math-open-problems@d90d878c081d95b90b874dac2690b790ef71b01b`,
+`private-source-repository@d90d878c081d95b90b874dac2690b790ef71b01b`,
 
 `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`.
 
@@ -55,7 +55,7 @@ The newest completed designated `fleet02/B10` theorem used here is
 
 at full source commit
 
-`yspennstate/math-open-problems@bf1ec1482020bc1da89f7f888057b70269df650d`,
+`private-source-repository@bf1ec1482020bc1da89f7f888057b70269df650d`,
 
 whose canonical report is under the fleet02/B10 fleet path for its `20260923T170933Z` run.
 
@@ -277,13 +277,13 @@ The new geometry sharply separates two facts:
 1. Full-disjoint triple sampling is intrinsically ill-conditioned in the coloop limit by (7.9).
 2. Shared-hub transverse-pair sampling is uniformly well-conditioned: it has leaf marginals at most one half and determinant entropy `Z_sh>4095/8192` by (6.9).
 
-The newest completed mixed-basis triple-Fresnel theorem (`yspennstate/math-open-problems@3d991ad3ab91593155b0b465007f4938968a14bf`) explains the exact remaining analytic issue. Its weighted Brascamp--Lieb step can spend coordinates whose incidence marginals are at most one half, but a hub present in every basis has incidence one and would demand a scalar Fourier `L^1` input, which is false for arbitrary cap-one laws. The live phase-Wiener correction forbids hiding this loss inside an absolute Fourier integral.
+The newest completed mixed-basis triple-Fresnel theorem (`private-source-repository@3d991ad3ab91593155b0b465007f4938968a14bf`) explains the exact remaining analytic issue. Its weighted Brascamp--Lieb step can spend coordinates whose incidence marginals are at most one half, but a hub present in every basis has incidence one and would demand a scalar Fourier `L^1` input, which is false for arbitrary cap-one laws. The live phase-Wiener correction forbids hiding this loss inside an absolute Fourier integral.
 
 At the exact-null boundary, fleet03/B10's completed theorem
 
 `QFORM-NULL-HUB-TRANSVERSE-LEVERAGE-CLOSURE-v1`,
 
-source `yspennstate/math-open-problems@dc9d69f51688728122da9fd35835593beaa694c7`,
+source `private-source-repository@dc9d69f51688728122da9fd35835593beaa694c7`,
 
 shows how special null shear/Fresnel structure overcomes precisely this shared-hub difficulty and gives
 
@@ -327,4 +327,4 @@ All random-coordinate independence claims in the proof refer only to literal dis
 
 ## 11. Publication integrity
 
-Prepublication controls and corrections were refreshed after the substantive derivation. Changed-file allowlist for this run is restricted to this fleet01/B10 run directory in `math-open-problems` and the corresponding fleet01/B10 handoff/memory/status files in `math-research-brain`. No task, cadence, enabled/paused state, email/push setting, public repository status, workflow, credential, permission, or unrelated data was changed. Repository use is not native learned-memory ingestion; status remains `WITHOUT_VERIFIED_BRAIN`.
+Prepublication controls and corrections were refreshed after the substantive derivation. Changed-file allowlist for this run is restricted to this fleet01/B10 run directory in `private-source` and the corresponding fleet01/B10 handoff/memory/status files in `math-research-brain`. No task, cadence, enabled/paused state, email/push setting, public repository status, workflow, credential, permission, or unrelated data was changed. Repository use is not native learned-memory ingestion; status remains `WITHOUT_VERIFIED_BRAIN`.

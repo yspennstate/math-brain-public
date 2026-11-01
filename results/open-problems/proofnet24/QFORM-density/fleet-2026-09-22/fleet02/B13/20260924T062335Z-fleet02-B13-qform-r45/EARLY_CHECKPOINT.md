@@ -72,7 +72,7 @@ This is deliberately **not** a perturbative deletion of `E` for arbitrary cap-on
 
 ## Pinned Fourier obstruction retained
 
-For every disjoint original-coordinate cross block `B=A[I,J]`, the pinned unconditional D5 theorem at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` gives
+For every disjoint original-coordinate cross block `B=A[I,J]`, the pinned unconditional D5 theorem at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` gives
 \[
 e_5(B^TB)\le\left(\frac{5\sqrt{2e}}{\rho}\right)^{10},
 \qquad

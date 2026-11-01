@@ -7,7 +7,7 @@ attacking: full fixed-multiplicity audit with B06 emphasis on graph determinant/
 
 Fresh brain control was resolved before work. Current objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 
-Mathematical repository: `yspennstate/math-open-problems`, branch `master`.
+Mathematical repository: `private-source-repository`, branch `master`.
 Fresh master observed during this run: `ffe7e1f2ae1dfb107196dcd6275fd84d0632e1c9` (the manuscript blob below was unchanged there).
 Pinned baseline source commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`.
 Pinned manuscript blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`.

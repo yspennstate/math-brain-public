@@ -1,6 +1,6 @@
 # B04 addendum — a 1+2 mixed Fourier theorem for the large-leverage rank-three frontier
 
-This addendum is controlling over the narrower frontier discussion in `REPORT.md`. The primary private-block theorem remains valid. After that report was written, I consumed fleet02/B02's complete `QFORM-DELOCALIZED-RANK3-INTEGRATED-FOURIER-v1` at `yspennstate/math-open-problems@2d79dea715c2baa9e8ef6c0ac174eee1712d2888`, blob `d13acb61e2846ea2e1761acca18d5e4e0f124a34`. B02 closes rank-three forms when every spectral-frame row has norm at most `1/2` and identifies the complementary large-row regime as the next rank-three frontier.
+This addendum is controlling over the narrower frontier discussion in `REPORT.md`. The primary private-block theorem remains valid. After that report was written, I consumed fleet02/B02's complete `QFORM-DELOCALIZED-RANK3-INTEGRATED-FOURIER-v1` at `private-source-repository@2d79dea715c2baa9e8ef6c0ac174eee1712d2888`, blob `d13acb61e2846ea2e1761acca18d5e4e0f124a34`. B02 closes rank-three forms when every spectral-frame row has norm at most `1/2` and identifies the complementary large-row regime as the next rank-three frontier.
 
 The following mixed theorem directly enters that frontier and is not contained in the original three-private-block theorem.
 

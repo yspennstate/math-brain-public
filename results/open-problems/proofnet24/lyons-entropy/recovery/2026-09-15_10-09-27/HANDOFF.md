@@ -1,6 +1,6 @@
 # Recovery and continuation handoff — Lyons determinantal entropy concavity
 
-Snapshot: 15 September 2026, approximately 10:09:27 UTC. Canonical destination: `yspennstate/math-open-problems`, private `master` branch. This recovery was requested by the repository owner after a research conversation appeared to freeze. No new proof-search agents were launched by the recovery process.
+Snapshot: 15 September 2026, approximately 10:09:27 UTC. Canonical destination: `private-source-repository`, private `master` branch. This recovery was requested by the repository owner after a research conversation appeared to freeze. No new proof-search agents were launched by the recovery process.
 
 ## What was recovered
 

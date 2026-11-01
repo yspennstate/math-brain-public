@@ -32,7 +32,7 @@ The fresh brain control read for this run was on the QFORM programme; later cont
 
 The designated completed partner result actually used is fleet03/B18 run `B18-20260922T155856Z-r13`, canonical mathematics
 
-`yspennstate/math-open-problems@fb0c75e8f951da2564fe595f09f7e484c37dfd40`
+`private-source-repository@fb0c75e8f951da2564fe595f09f7e484c37dfd40`
 
 at
 
@@ -234,7 +234,7 @@ The next mathematically honest attack is `QFORM-PROJECTION-PROVENANCE-TRACE-v1`:
 - Fresh brain main at substantive publication check: `be314b24f4b6d59aa6754dd17e79f6dcb8a19730`; owner-control revision `2026-09-22.8`; mathematical programme revision remains `2026-09-22.5`.
 - LPP: arXiv:1507.07949, *On sharp bounds for marginal densities of product measures*.
 - Gilula--O'Neill--Xiao: arXiv:1903.12300, *Oscillatory Loomis-Whitney and Projections of Sublevel Sets*.
-- Designated partner fleet03/B18: `math-open-problems@fb0c75e8f951da2564fe595f09f7e484c37dfd40`, report path pinned in Section 2.
+- Designated partner fleet03/B18: `private-source@fb0c75e8f951da2564fe595f09f7e484c37dfd40`, report path pinned in Section 2.
 - Corrections used from live brain: pointwise-decay false; fiber-sup dimension loss; no independence after rotation; conditional-cap-not-independence; single-Schur-rank2-extraction false; local-cross-rank3 dichotomy false; fiberwise-trace-mass bound false.
 
 No claim in this report is a full solution or an independent review of a peer proof.

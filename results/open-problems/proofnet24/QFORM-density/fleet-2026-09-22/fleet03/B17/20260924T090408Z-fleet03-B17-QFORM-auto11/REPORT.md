@@ -266,7 +266,7 @@ Thus every finite `A_m` is source-valid and the active variables Gaussianize to 
 
 The designated completed partner theorem is fleet04/B17 r7, `QFORM-SHARED-FOLD-LOGRECEIVER-UNIFORM-v1`, canonical source
 
-`yspennstate/math-open-problems@d2795ffa95ffde81e63da02b677fdc3c0ea950a1`,
+`private-source-repository@d2795ffa95ffde81e63da02b677fdc3c0ea950a1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260924T061346Z-fleet04-B17-QFORM-r7/REPORT.md`.
 
 For

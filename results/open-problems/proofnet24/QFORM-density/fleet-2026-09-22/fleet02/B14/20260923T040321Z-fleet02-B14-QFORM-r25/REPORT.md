@@ -10,7 +10,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Role: translations and localization / 
 The owner-controlled target is unchanged: independent one-dimensional densities bounded by one, arbitrary real symmetric A with at least three eigenvalues of modulus at least one, and a universal essential bound for the density of X^TAX, or a valid counterexample. No moment, support, log-concavity, connectedness, identical-law, or post-rotation-independence assumption is introduced here.
 
 The required newest-Claude source is
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 I use its proved k=3 volume-sampling theorem D in the exact form
 
 `||p_Q||_infinity <= 6 sqrt(e) Z^(-1/6)`,
@@ -18,7 +18,7 @@ I use its proved k=3 volume-sampling theorem D in the exact form
 for an original-coordinate cross block M with `Z=e_3(M^T M)>0` and row volume marginals at most 1/2; all self blocks and affine terms are allowed.
 
 The assigned completed partner actually used is fleet03/B14 r24,
-`yspennstate/math-open-problems@2fe2734d7fc9a7e9a29edd26cbeda837fee10900:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T023535Z-fleet03-B14-QFORM-r24/REPORT.md`.
+`private-source-repository@2fe2734d7fc9a7e9a29edd26cbeda837fee10900:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T023535Z-fleet03-B14-QFORM-r24/REPORT.md`.
 It proves the exact conjugate-fiber identity: for iid X,X' with density `1_E`, |E|=1,
 
 `U=X-X'`, `V=X+X'`, `m_E(u)=|E intersect (E-u)|`,

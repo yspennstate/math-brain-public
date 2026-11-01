@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-07 — P0282 numerator-polynomial cancellation, diagonal curvature through order 28, a 29/30 growing-defect window, and exact row 101
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-07` / `proofnet24/NM13-07/`  
 Category: **CLOSABLE OUTSIDE**  
 Canonical source / claim: `aim_kpz_followup_2025` / `P0282`, `operations/claims/P0282.md`  

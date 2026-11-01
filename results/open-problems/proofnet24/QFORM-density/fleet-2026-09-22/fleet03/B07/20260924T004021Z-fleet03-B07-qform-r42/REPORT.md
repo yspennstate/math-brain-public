@@ -16,7 +16,7 @@ No Gaussian, log-concavity, moment, bounded-support, connected-support, iid, dia
 
 The immediate mathematical input is my r41 report
 
-`yspennstate/math-open-problems@56c5b07296ce6fcc66cd3795e425cfad15b27aad`
+`private-source-repository@56c5b07296ce6fcc66cd3795e425cfad15b27aad`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T233906Z-fleet03-B07-qform-r41/REPORT.md`.
 
@@ -52,7 +52,7 @@ with
 
 A fresh same-hour source audit found fleet02/B07's compatible r41 handoff and canonical report
 
-`yspennstate/math-open-problems@81d6956476fa400f61d266effb4123a42fe3185c`
+`private-source-repository@81d6956476fa400f61d266effb4123a42fe3185c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260924T003945Z-fleet02-B07-qform-auto11/REPORT.md`.
 
@@ -151,7 +151,7 @@ On this branch
 Apply the designated completed partner theorem
 
 `fleet04/B07`,
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`,
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 
 For three diagonals of magnitude at least `d`, if all three mutual off-diagonals have magnitude at most `d/12`, the partner's `r=0` coordinate-core theorem gives `s3>=3d/4`, hence the full-law essential-density bound recorded in r41. Therefore failure of that paid partner exit produces a graph `G` on `B_hi` such that

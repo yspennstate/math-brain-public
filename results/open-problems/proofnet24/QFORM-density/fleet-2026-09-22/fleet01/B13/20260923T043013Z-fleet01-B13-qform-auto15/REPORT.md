@@ -17,12 +17,12 @@ Fresh owner control remained QFORM-only, revision `2026-09-22.15`. The live corr
 Three completed inputs are used at their exact scopes.
 
 1. **Designated partner fleet02/B13 r23**, canonical report
-   `yspennstate/math-open-problems@892bfe36756e09cbaff3f05070f7a3e20fea0fd1`,
+   `private-source-repository@892bfe36756e09cbaff3f05070f7a3e20fea0fd1`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T040105Z-fleet02-B13-extremal-r23/REPORT.md`.
    It proves the no-attainment extremal-product front end: every cap-one marginal is an `L^1` limit of finite convex mixtures of indicators of bounded finite unions of intervals of measure one, so every fixed slab inequality transfers with zero asymptotic constant loss. It also proves `QFORM-SCALAR-E2-LINF-OR-TRIHUB-v1`: after a nonzero scalar pivot, an aggregate Schur `E_2` bank is either paid or more than half of its natural pair-volume is jointly incident to at most three physical row hubs and at most three physical column hubs.
 
 2. **Curvature-robust zero-self star theorem**, fleet02/B07, canonical report commit
-   `yspennstate/math-open-problems@beafed16f383ac6853be8caa902acb3d12a40702`,
+   `private-source-repository@beafed16f383ac6853be8caa902acb3d12a40702`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T223302Z-fleet02-B07-QFORM-ddc6a5/REPORT.md`.
    If `S=S^T`, `S_ii=0`, and `ell=(S_ij)_{j!=i}` is nonzero, then for the quadratic remainder in independent cap-one original coordinates,
 
@@ -31,7 +31,7 @@ Three completed inputs are used at their exact scopes.
    Arbitrary complementary quadratic curvature is retained.
 
 3. **Sharp one-dimensional product-projection cap**, source-pinned in fleet04/B18 at
-   `yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
+   `private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
    A normalized linear form of independent cap-one variables has density cap at most `sqrt(2)` (the sharp Rogozin/Juskevicius--Lee consequence used by the fleet).
 

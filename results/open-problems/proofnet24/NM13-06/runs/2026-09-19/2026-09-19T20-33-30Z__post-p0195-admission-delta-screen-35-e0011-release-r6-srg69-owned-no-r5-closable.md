@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-06 — post-P0195 admission delta screen 35: E0011 explicitly released but residue 6; SRG69 newly active/owned outside the NM13 pool; no lawful residue-5 CLOSABLE successor
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-06` / `proofnet24/NM13-06/`  
 Category: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed finite discrepancy, signing, design, or adjacent exact finite-certificate questions  

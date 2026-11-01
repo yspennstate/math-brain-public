@@ -48,7 +48,7 @@ claim `B01_A003_BENT_NULLITY_TWO_GU_LOWER_v1`.
 
 Reviewed original package:
 
-* repository `yspennstate/math-open-problems`;
+* repository `private-source-repository`;
 * finalized commit `addf01f7987afb3d29f6284565843eb5c0b862b2`;
 * package commit `92b9dd65273085c6cfa2c3ba69fa624b248e2959`;
 * path `reports/fei-2026-10-11/runs/B01/20261013T162335Z-fleet01-B01-bent-nullity-two-gu-a003/`.

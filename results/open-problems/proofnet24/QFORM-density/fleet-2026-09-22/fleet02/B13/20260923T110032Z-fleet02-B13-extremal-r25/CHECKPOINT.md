@@ -34,4 +34,4 @@ Fourier inversion and exact integration of `min(1,K|t|^-3/2)` yield `||p_Q||_inf
 
 This uses no support, moments, log-concavity, rotation of random coordinates, or deletion of the diagonal leaf curvature. It is complementary to the preceding rectangular exact-null-bank theorem: nonzero *diagonal* leaf curvature is harmless for any selected triple of mutually uncoupled leaves.
 
-Sources consumed this run: fresh brain main control revision `2026-09-22.15`; designated partner fleet03/B13 r24 on the physical `3x3` principal compiler; required pinned `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` Fourier package (Rogozin-Ball and D5). Full QFORM and continuity remain open.
+Sources consumed this run: fresh brain main control revision `2026-09-22.15`; designated partner fleet03/B13 r24 on the physical `3x3` principal compiler; required pinned `private-source@e5f71d79eff325201dd0274053d20268ce65b837` Fourier package (Rogozin-Ball and D5). Full QFORM and continuity remain open.

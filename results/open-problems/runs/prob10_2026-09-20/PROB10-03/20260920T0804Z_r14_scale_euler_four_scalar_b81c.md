@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 
 # PROB10-03 — R14 bounded substantive iteration: scale-Euler identity and four-scalar third-full capacity compiler
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL / SOURCE OPEN / NO NEW RIGOROUS SOURCE ENDPOINT / NEW EXACT THIRD-FULL REDUCTION**.
 

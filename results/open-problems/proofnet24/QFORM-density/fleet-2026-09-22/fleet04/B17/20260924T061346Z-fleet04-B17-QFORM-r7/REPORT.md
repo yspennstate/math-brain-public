@@ -8,7 +8,7 @@ The full universal conjecture is not proved or disproved here. This report chang
 
 ## 1. Source-pinned motivation
 
-The Claude baseline is \`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837\`; the later hub continuation \`c4c23b784395630c094ba299a50712209921d1ae\` is numerical evidence only and is not used as a theorem.
+The Claude baseline is \`private-source@e5f71d79eff325201dd0274053d20268ce65b837\`; the later hub continuation \`c4c23b784395630c094ba299a50712209921d1ae\` is numerical evidence only and is not used as a theorem.
 
 The completed fleet01/B17 theorem is \`QFORM B17 — arbitrary cap-one singleton plus two distinct symmetric-unimodal rank-one banks\`, path
 

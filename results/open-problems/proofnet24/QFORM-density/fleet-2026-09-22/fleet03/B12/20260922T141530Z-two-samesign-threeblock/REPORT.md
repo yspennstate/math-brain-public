@@ -26,7 +26,7 @@ This run advances the mixed overlap mechanism rather than repeating the prior di
 
 From the completed interactive report
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`,
 
@@ -44,7 +44,7 @@ This estimate is uniform over all within-side quadratic phases, outside variable
 
 The assigned partner path `fleet04/B12` still has no current QFORM artifact in either the shared handoff tree or the canonical fleet04 QFORM archive at the source-bound read. I therefore do not fabricate a B12 result. I instead apply the closest compatible completed fleet04 result, fleet04/B18:
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
@@ -58,7 +58,7 @@ I strengthen the analytic interface needed here from `R in L^infinity` to `R in 
 
 From fleet02/B15,
 
-`yspennstate/math-open-problems@d5392d73398e2811f58b612fb8f191aa79d8ee5e`
+`private-source-repository@d5392d73398e2811f58b612fb8f191aa79d8ee5e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`,
 

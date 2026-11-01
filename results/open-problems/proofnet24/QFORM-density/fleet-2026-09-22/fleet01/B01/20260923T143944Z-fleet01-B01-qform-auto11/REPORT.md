@@ -33,7 +33,7 @@ Arbitrary outside ORIGINAL coordinates may be conditioned on. They contribute ar
 
 The source-valid orientation-free rank-two affine half-Riesz theorem used below is
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`:
 
 for an orthonormal two-frame `U`, invertible symmetric `2x2` matrix `Lambda`, and **arbitrary** original-coordinate affine vector,
@@ -43,7 +43,7 @@ for an orthonormal two-frame `U`, invertible symmetric `2x2` matrix `Lambda`, an
 
 The newest completed designated partner actually used in this run is fleet02/B01 r44,
 
-`yspennstate/math-open-problems@31608e4193b3ba491084081cb7c000e254c01a82`,
+`private-source-repository@31608e4193b3ba491084081cb7c000e254c01a82`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T142922Z-fleet02-B01-qform-r44/REPORT.md`.
 
 Its volume-marginal compiler is applied quantitatively in Section 7.
@@ -335,7 +335,7 @@ The stress family in Section 6 lies deliberately outside (7.1)-(7.4): every phys
 
 The owner-supplied volume-stability theorem at
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
 
 states that if an ORIGINAL-coordinate cross block has

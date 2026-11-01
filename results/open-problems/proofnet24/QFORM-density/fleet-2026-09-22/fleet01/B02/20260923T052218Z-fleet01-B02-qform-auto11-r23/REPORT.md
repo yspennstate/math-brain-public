@@ -22,7 +22,7 @@ I apply the completed partner result
 
 from
 
-`yspennstate/math-open-problems@d6730c301e46e6337bc3b32e30eb3d04f07dc90b`,
+`private-source-repository@d6730c301e46e6337bc3b32e30eb3d04f07dc90b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T050831Z-fleet02-B02-QFORM-auto11-f98b4bb5/REPORT.md`.
 
 Let `M=A[I,J]` be an ORIGINAL-coordinate physical cross block, let
@@ -62,7 +62,7 @@ This is an aggregate statement; no individual tiny minor has been inverted.
 
 I also use the completed theorem `QFORM-EXACT-RANK3-CROSSBLOCK-FOURIER-v1` from
 
-`yspennstate/math-open-problems@484c89f85cda352b2c4318364a6206ebc4154950`,
+`private-source-repository@484c89f85cda352b2c4318364a6206ebc4154950`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T230126Z-fleet03-B02-QFORM-r17/REPORT.md`.
 
 If an ORIGINAL-coordinate cross block `C` has exact rank three and the product of its three nonzero singular values is `Gamma`, then, with all same-bank quadratic terms and outside couplings arbitrary,

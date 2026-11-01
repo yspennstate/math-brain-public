@@ -14,7 +14,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 The newest completed designated partner result is fleet02/B18
 `QFORM-NULLHUB-DIFFUSE-PRIVATE-BANK-v1`, canonical source
 
-- `yspennstate/math-open-problems@529be48498963ede3243fd4a2b00a0104442fc05`;
+- `private-source-repository@529be48498963ede3243fd4a2b00a0104442fc05`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T203819Z-fleet02-B18-QFORM-auto11/REPORT.md`.
 
 In the exact null-hub normal form
@@ -43,7 +43,7 @@ Its source-valid Livshyts--Paouris--Pivovarov specialization gives
 I also use the earlier completed fleet02/B18 receiver
 `QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1`, canonical source
 
-- `yspennstate/math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`;
+- `private-source-repository@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`.
 
 If a scalar of density cap `K_0` is genuinely independent of a possibly dependent pair of joint density cap `M`, and the retained symmetric three-variable quadratic matrix has zero scalar pivot and determinant `Delta!=0`, then
@@ -54,7 +54,7 @@ The pair coordinates are not required to be independent.
 
 Finally, the low-hub equal-spectrum geometry is the completed fleet02/B18 source
 
-- `yspennstate/math-open-problems@c99a85972a70c210b19dd41128300ad55a9b8cb4`;
+- `private-source-repository@c99a85972a70c210b19dd41128300ad55a9b8cb4`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/b18-20260923T191130Z-20b2aab6/REPORT.md`.
 
 It gives an exact target family with nonzero spectrum `{-1,1,1}` and the low-hub distinguished row used in Theorem B.

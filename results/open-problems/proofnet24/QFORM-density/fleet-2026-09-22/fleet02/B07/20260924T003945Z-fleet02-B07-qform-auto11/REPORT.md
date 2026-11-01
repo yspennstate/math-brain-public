@@ -17,7 +17,7 @@ The current owner control remains revision `2026-09-22.15`, programme `QFORM-DEN
 
 The latest completed designated partner consumed is fleet03/B07 r41:
 
-`yspennstate/math-open-problems@56c5b07296ce6fcc66cd3795e425cfad15b27aad`
+`private-source-repository@56c5b07296ce6fcc66cd3795e425cfad15b27aad`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T233906Z-fleet03-B07-qform-r41/REPORT.md`.
 
@@ -47,7 +47,7 @@ and r41 proves
 
 The required pinned source was reread at exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 

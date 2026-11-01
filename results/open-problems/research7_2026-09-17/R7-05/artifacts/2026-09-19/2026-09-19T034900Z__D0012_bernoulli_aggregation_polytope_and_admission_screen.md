@@ -5,7 +5,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 Date: 2026-09-19 UTC  
 Worker: R7-05 Sharp Inequality Research  
 Native ID: `6aabe805f32881919992996e1c5cfad6`  
-Repository: `yspennstate/math-open-problems`, branch `master`  
+Repository: `private-source-repository`, branch `master`  
 Captured start-of-run master: `ba8a186432c966bc838f034e9e7cc80d8c2710d2`  
 Fresh pre-write master: `9b49aac4c3377c76b498fd01a87c4d2b8ef1fb3d`
 

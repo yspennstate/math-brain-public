@@ -9,7 +9,7 @@ The unrestricted QFORM conjecture remains open. Continuity is distinct. This rep
 ## 1. Sources and live branch
 
 Claude source was refreshed through the later directory commit
-\`yspennstate/math-open-problems@b0cbc2233369b6a3f366cf569d425f485f123e1c\`,
+\`private-source-repository@b0cbc2233369b6a3f366cf569d425f485f123e1c\`,
 starting from the required
 \`e5f71d79eff325201dd0274053d20268ce65b837\`
 files under
@@ -17,7 +17,7 @@ files under
 The Claude results remain scoped inputs, not a full proof.
 
 The completed fleet01/B04 theorem used here is
-\`yspennstate/math-open-problems@ad493c8b62e0b515fbfd8935d3a9ca063a59154d\`,
+\`private-source-repository@ad493c8b62e0b515fbfd8935d3a9ca063a59154d\`,
 \`proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260924T064404Z-fleet01-B04-QFORM-auto11-r31/REPORT.md\`.
 
 Its live tight-rank-two-flat setup is as follows. A literal physical cross block has a rank-two row flat \(F\), exactly two rows \(a,b\) outside \(F\), and

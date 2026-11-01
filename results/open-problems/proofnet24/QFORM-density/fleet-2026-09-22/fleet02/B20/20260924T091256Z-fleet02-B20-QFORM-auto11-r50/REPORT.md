@@ -16,7 +16,7 @@ All coordinate sets below are literal ORIGINAL-coordinate sets. No random variab
 
 Newest compatible completed designated partner: fleet03/B20 r50,
 
-`yspennstate/math-open-problems@46b6315c1980f6c0d76644cc4bb52a812c611496`,
+`private-source-repository@46b6315c1980f6c0d76644cc4bb52a812c611496`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T081112Z-fleet03-B20-QFORM-auto11-r50/REPORT.md`.
 
@@ -41,7 +41,7 @@ and rank `<=11`, tail `<9/4+2^-16+112*2^-20` on the determinant-collapse subbran
 
 The pinned source required by the owner is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 

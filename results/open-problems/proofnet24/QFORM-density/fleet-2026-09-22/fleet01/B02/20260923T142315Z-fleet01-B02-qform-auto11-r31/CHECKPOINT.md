@@ -6,7 +6,7 @@ Target remains the full QFORM-DENSITY-3EIG-20260922 conjecture. This checkpoint 
 
 ## Input actually used
 
-Designated partner fleet02/B02 r12: `yspennstate/math-open-problems@9a5b5b7ee3ec28d8f2fb9eaced2254ac050b5104`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T133727Z-fleet02-B02-QFORM-r12/REPORT.md`.
+Designated partner fleet02/B02 r12: `private-source-repository@9a5b5b7ee3ec28d8f2fb9eaced2254ac050b5104`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T133727Z-fleet02-B02-QFORM-r12/REPORT.md`.
 
 On its transport-failure branch it produces an ORIGINAL-coordinate invertible `2 x 2` cross anchor `P` with algebraic cross-Schur residual `S` and
 
@@ -14,7 +14,7 @@ On its transport-failure branch it produces an ORIGINAL-coordinate invertible `2
 
 where `Z=E3(B)` is the parent physical cross-block third volume. No independence after the Schur shear is asserted.
 
-I also use the completed exact-rank-three physical-cross-block Fourier theorem from `yspennstate/math-open-problems@484c89f85cda352b2c4318364a6206ebc4154950`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T230126Z-fleet03-B02-QFORM-r17/REPORT.md`: for an ORIGINAL-coordinate exact-rank-three cross block `C`, with `E3(C)=Gamma^2`,
+I also use the completed exact-rank-three physical-cross-block Fourier theorem from `private-source-repository@484c89f85cda352b2c4318364a6206ebc4154950`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T230126Z-fleet03-B02-QFORM-r17/REPORT.md`: for an ORIGINAL-coordinate exact-rank-three cross block `C`, with `E3(C)=Gamma^2`,
 
 `int_R |phi_Q(t)| dt <= 12 pi E3(C)^(-1/6)`,
 `||p_Q||_infty <= 6 E3(C)^(-1/6)`.

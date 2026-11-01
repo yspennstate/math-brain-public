@@ -15,10 +15,10 @@ The owner target remains the universal estimate for `Q=X^T A X` under independen
 
 Two completed fixed-instance regularity inputs are used at their exact scopes.
 
-1. `yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`, path
+1. `private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`, proves that for every fixed symmetric `A` with `rank(A)>=3` and every cap-one product input law, the output has an instance-dependent bounded density `p_Q in C_0(R)`. Its zero-diagonal proof is combined there with the completed nonzero-physical-diagonal theorem from this slot at `d73760eb784a86c356c64f05dd92f84655618f02`.
 
-2. The designated partner `fleet04/B15`, `yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`, path
+2. The designated partner `fleet04/B15`, `private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`, proves for every probability law `mu`
 
    `sup_(epsilon>0,y) (mu*gamma_epsilon)(y)=||p_mu||_infinity`,

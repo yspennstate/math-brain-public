@@ -28,7 +28,7 @@ This is strictly narrower than the previous `QFORM-GSTARZERO-ALIGNED-HUBCORE-INT
 
 The required pinned Claude record was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
@@ -40,7 +40,7 @@ The grouped-hub theorem used in Section 3 is fleet03/B09 r29,
 
 `QFORM-GROUPED-HUB-PLUCKER-SMOOTHING-v1`,
 
-`yspennstate/math-open-problems@ba035d3e65b7687b9ec8c05320f6340caabc34bb`,
+`private-source-repository@ba035d3e65b7687b9ec8c05320f6340caabc34bb`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T101630Z-fleet03-B09-QFORM-r29/REPORT.md`.
 
@@ -48,7 +48,7 @@ The latest compatible designated-partner result read and applied in Section 6 is
 
 `QFORM-LOCALIZED-HUBPAIR-PROJECTED-CROSSING-CLOSURE-v1`,
 
-with canonical mathematics at `yspennstate/math-open-problems@cc52744b60b9a747aec8356a913cd0b0729d5515`.
+with canonical mathematics at `private-source-repository@cc52744b60b9a747aec8356a913cd0b0729d5515`.
 
 The pinned counterexample search reports no valid counterexample to full QFORM, and this run found none.
 

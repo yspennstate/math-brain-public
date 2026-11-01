@@ -20,7 +20,7 @@ This run does not attempt a spectral rotation.  It stays in the original indepen
 
 I read the completed partner report
 
-`yspennstate/math-open-problems@2e72dc67725bab71d3892291c9d28db1996cabbf`
+`private-source-repository@2e72dc67725bab71d3892291c9d28db1996cabbf`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T021551Z-fleet02-B12-qform-r23/REPORT.md`.
 
@@ -40,7 +40,7 @@ The same partner report also records the finite-core theorem: on `m>=3` original
 
 I also use the completed theorem
 
-`yspennstate/math-open-problems@b3c543b40dfaef13468466fa82625303a7719af8`
+`private-source-repository@b3c543b40dfaef13468466fa82625303a7719af8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md`, Theorem 6.1.
 

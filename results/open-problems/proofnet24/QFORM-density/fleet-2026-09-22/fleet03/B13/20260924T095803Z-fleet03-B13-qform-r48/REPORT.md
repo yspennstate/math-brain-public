@@ -70,7 +70,7 @@ The designated partner fleet04/B13 independently proves the same optimizer-free 
 The mathematical inputs actually used are:
 
 1. Own r45, source-pinned at
-   `yspennstate/math-open-problems@a1ccc98be0cd4752de1b2b29e4c46f8193854757`,
+   `private-source-repository@a1ccc98be0cd4752de1b2b29e4c46f8193854757`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260924T063322Z-fleet03-B13-qform-r45/REPORT.md`.
    In the surviving diffuse exact-rank-two chamber
    \[
@@ -94,14 +94,14 @@ The mathematical inputs actually used are:
 
 2. The scalar-Schur receiver of fleet01/B13,
    `QFORM-DIAG-RANK2-DIFFUSE-SCHUR-SEPARABLE-v1`, source-pinned at
-   `yspennstate/math-open-problems@7e23bcf74fa1862bfe9054591c946bfd8f3276cb` (the theorem is also present in the later indexed snapshot `461ca4597face7955d318d0540729ca6b809fce2`). For any original physical `h` with `d_h!=0` and actual scalar pivot `a_h=A_hh!=0`,
+   `private-source-repository@7e23bcf74fa1862bfe9054591c946bfd8f3276cb` (the theorem is also present in the later indexed snapshot `461ca4597face7955d318d0540729ca6b809fce2`). For any original physical `h` with `d_h!=0` and actual scalar pivot `a_h=A_hh!=0`,
    \[
    (1-c_h)|a_h d_h\det\Lambda|\le1024e^2\rho^{-4}.             \tag{2.5}
    \]
    Crucially this receiver retains the entire diagonal residual and arbitrary affine terms.
 
 3. The designated partner fleet04/B13 newest completed theorem,
-   `yspennstate/math-open-problems@8b90908a934588442491cf1a41c7db12ece290bf`,
+   `private-source-repository@8b90908a934588442491cf1a41c7db12ece290bf`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260924T061740Z-fleet04-B13-nearnull-star-r3/REPORT.md`. If `k` maximizes `|d_i|`, then every witness satisfies
    \[
    \boxed{

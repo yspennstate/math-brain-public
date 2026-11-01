@@ -197,7 +197,7 @@ Q\mid Z=z
 
 Now apply the completed fleet02/B14 environment-coupled theorem to the interval event in (6.2), and then apply the new finite-union closure (1.2). It is enough, with exactly the same interval constant, to consider active laws \(1_{F_1},1_{F_2},1_{F_3}\) with \(F_j\in\mathcal F_1\), despite the arbitrary affine field \(2Cz\) and arbitrary outside law.
 
-The verified fixed-source three-dimensional Theorem A at `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` applies to every such active law and arbitrary linear terms. Since every eigenvalue of \(B_*\) has modulus one,
+The verified fixed-source three-dimensional Theorem A at `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837` applies to every such active law and arbitrary linear terms. Since every eigenvalue of \(B_*\) has modulus one,
 
 \[
 \Pr\{Q\in I\}\le 6\sqrt\pi\,|I|
@@ -236,6 +236,6 @@ Fresh control was resolved on `yspennstate/math-research-brain` main, including 
 
 Designated partner actually consumed and applied: fleet02/B14 run `20260924T095839Z-fleet02-B14-QFORM-auto11`, canonical math commit `72f8e6c6b826f7e849a879534a7835aaa8b9f2a4`, result `QFORM-ENVIRONMENT-COUPLED-BATHTUB-LOCALIZATION-v1`.
 
-Fixed-source theorem actually checked: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, Theorem A with arbitrary linear terms and the n=3 constant `6 sqrt(pi)/sigma`.
+Fixed-source theorem actually checked: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, Theorem A with arbitrary linear terms and the n=3 constant `6 sqrt(pi)/sigma`.
 
 Execution remains `WITHOUT_VERIFIED_BRAIN`: authenticated repository retrieval and readback are real, but no genuine native learned-memory receiver use was established. No schedule, enabled/quiet state, identity, notification, email/push, task, cross-account authentication, paid/remote call, public release, or permission change was made.

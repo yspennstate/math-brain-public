@@ -18,7 +18,7 @@ Fresh brain control was read at `yspennstate/math-research-brain@c39a945842cffde
 
 The assigned partner result actually used is fleet02/B15:
 
-`yspennstate/math-open-problems@b1d930ff0fbc625393aebcd4a59f9ba1ead465ed`
+`private-source-repository@b1d930ff0fbc625393aebcd4a59f9ba1ead465ed`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T130201Z-fleet02-B15-qform-r2/REPORT.md`.
 

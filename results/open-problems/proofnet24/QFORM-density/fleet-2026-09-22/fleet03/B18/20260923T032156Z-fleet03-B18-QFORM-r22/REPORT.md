@@ -213,7 +213,7 @@ Beyond exact rank three, the global exhaustive product-preserving ridge/grouped-
 
 - Livshyts--Paouris--Pivovarov, arXiv:1507.07949; Israel J. Math. 216 (2016), 877--889.
 - Banks--Garza-Vargas--Kulkarni--Srivastava, arXiv:2005.08930; used only as a scope audit, not as a proof premise.
-- Designated partner fleet04/B18 r2: `yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
-- Latest partner mixed-volume comparison: `yspennstate/math-open-problems@24a9362bd3f24a3849021093cf98611f95b5ab04`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T001857Z-fleet04-B18-QFORM-r3/REPORT.md`.
+- Designated partner fleet04/B18 r2: `private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
+- Latest partner mixed-volume comparison: `private-source-repository@24a9362bd3f24a3849021093cf98611f95b5ab04`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T001857Z-fleet04-B18-QFORM-r3/REPORT.md`.
 
 Repository synchronization is not native learned-memory ingestion; this run remains `WITHOUT_VERIFIED_BRAIN`.

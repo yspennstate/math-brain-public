@@ -12,7 +12,7 @@ with the single-cut volume theorem intrinsically losing `(1+r^2)^(1/6)`. This ru
 
 ## Source transfer already obtained
 
-Pinned source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, Theorem MF. For one genuine physical hub `H={0}` and a residual decomposition
+Pinned source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, Theorem MF. For one genuine physical hub `H={0}` and a residual decomposition
 
 `A_LL = Delta + S diag(lambda_1,lambda_2) S^T`, `S^T S=I_2`, `Delta` diagonal,
 

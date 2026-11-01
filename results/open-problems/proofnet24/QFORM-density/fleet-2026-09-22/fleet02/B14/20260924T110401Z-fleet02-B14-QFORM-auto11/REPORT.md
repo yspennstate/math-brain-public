@@ -88,7 +88,7 @@ So after one-copy differencing the undecomposed copy acts as a distributed whole
 
 The required fixed source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 proves Theorem D. For disjoint original-coordinate sets `I,J`, with `M=A_IJ`,
 
@@ -254,7 +254,7 @@ It is a proof-interface obstruction, not a QFORM counterexample.
 
 The newest completed compatible fleet03/B14 report is
 
-`yspennstate/math-open-problems@80105e9cf5c3522438505be597f46b0605f41adf`.
+`private-source-repository@80105e9cf5c3522438505be597f46b0605f41adf`.
 
 It proves that a Gaussian location-scale mixture with inverse-half-variance moment `M_G` has
 

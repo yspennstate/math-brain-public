@@ -1,6 +1,6 @@
 # P2 coverage short.tex 491-510
 
-Source: yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, PDF page 10.
+Source: private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, PDF page 10.
 
 491 end proof: NOT_MATHEMATICAL.
 492 blank: NOT_MATHEMATICAL.

@@ -187,7 +187,7 @@ This is now the next structural resource to spend; it is not hidden in an unquan
 
 The newest completed fleet02/B09 handoff found in the source tree is r15, canonical mathematics
 
-`yspennstate/math-open-problems@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`,
+`private-source-repository@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T224553Z-fleet02-B09-QFORM-r15/REPORT.md`.
 

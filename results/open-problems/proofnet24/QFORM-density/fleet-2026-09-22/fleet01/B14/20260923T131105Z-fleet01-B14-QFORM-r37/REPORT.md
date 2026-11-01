@@ -15,7 +15,7 @@ The exact owner target is unchanged: for every finite `n`, every independent rea
 
 The completed designated partner used below is **fleet02/B14 r36**, canonical source
 
-`yspennstate/math-open-problems@d2180eded43f3c299ecff739c67109d342c032b7`,
+`private-source-repository@d2180eded43f3c299ecff739c67109d342c032b7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T122915Z-fleet02-B14-QFORM-r36/REPORT.md`.
 
@@ -32,7 +32,7 @@ and a completed scalar remainder of density cap `H`,
 
 For the multidimensional-bank corollary I also use the completed product-projection estimate source-pinned through fleet03/B14 r26,
 
-`yspennstate/math-open-problems@f89093b26b458e02914d99e7235268aff6ae1e40`,
+`private-source-repository@f89093b26b458e02914d99e7235268aff6ae1e40`,
 
 which gives for independent cap-one coordinates `W=(W_j)` and every nonzero `c`,
 

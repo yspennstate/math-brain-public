@@ -16,7 +16,7 @@ All sets below are literal ORIGINAL-coordinate sets. Orthogonal transformations 
 
 The immediate same-slot input is r51:
 
-- `yspennstate/math-open-problems@bcb36a7573a7e9f23f1ea78792e0b72bc8bb0d9c`
+- `private-source-repository@bcb36a7573a7e9f23f1ea78792e0b72bc8bb0d9c`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T060028Z-fleet03-B19-QFORM-r51/REPORT.md`.
 
 It starts from an ultra-thin actual physical rank-two crossing `N=A[R,C]` with top-two approximation `N_2=U Sigma V^T`,
@@ -65,7 +65,7 @@ Thus arbitrary self blocks, outside couplings, affine terms, signatures and extr
 
 A fresh fleet reduction from fleet03/B12 is also recorded for the global proof tree:
 
-- `yspennstate/math-open-problems@9bcbbbdb12483a06b15d7923ec4324422924d781`.
+- `private-source-repository@9bcbbbdb12483a06b15d7923ec4324422924d781`.
 
 It proves that **189 or more** eigenvalues of absolute value at least one already imply a continuous universal density bound; hence the global target may be reduced to 3--188 target-scale eigenvalues. This is not used in the algebra below, but it removes the unbounded-large-spectrum branch from the final assembly.
 
@@ -279,7 +279,7 @@ The latest completed designated-partner theorem is the corrected
 
 from
 
-`yspennstate/math-open-problems@97c4f5328da327cae4249c40253e466603b2ba5c`,
+`private-source-repository@97c4f5328da327cae4249c40253e466603b2ba5c`,
 
 with the canonical correction addendum in the partner r5 run. For an exact literal packet
 

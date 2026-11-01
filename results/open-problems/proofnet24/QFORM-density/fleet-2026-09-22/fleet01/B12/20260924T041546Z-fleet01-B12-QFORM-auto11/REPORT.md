@@ -125,7 +125,7 @@ For `k=5`, this gives five simultaneously bi-independent large eigenmodes but ze
 
 Consume the completed designated-partner report
 
-`yspennstate/math-open-problems@e922248c12820c303861233f1a626fdf9aae9687`
+`private-source-repository@e922248c12820c303861233f1a626fdf9aae9687`
 
 at
 

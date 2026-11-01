@@ -15,7 +15,7 @@ The full target remains open. This report proves a new dimension-free compositio
 
 The exact partner theorem used below is fleet02/B06 `QFORM-ONE-SIDED-RANK2-CROSS-SMOOTHER-v1`, canonical report
 
-`yspennstate/math-open-problems@dc9752d372165b011f4c8b1101174a6698ae2c64:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T210504Z-abc2116c80c5/REPORT.md`.
+`private-source-repository@dc9752d372165b011f4c8b1101174a6698ae2c64:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T210504Z-abc2116c80c5/REPORT.md`.
 
 It states: if original coordinates are partitioned into product banks `I,J,K`, and after conditioning `K`
 
@@ -27,7 +27,7 @@ with `F` arbitrary measurable, no quadratic self-term on `J`, and `s_2(H)=sigma>
 
 The curved-pair input is the complete logarithmic physical-pair envelope
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 For two independent original coordinates with cap-one densities and an invertible indefinite symmetric `2x2` block `B`, putting
 

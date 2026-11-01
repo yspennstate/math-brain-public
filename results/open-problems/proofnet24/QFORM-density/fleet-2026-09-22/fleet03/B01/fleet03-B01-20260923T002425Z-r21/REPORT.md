@@ -38,7 +38,7 @@ This phase-aligned counterexample remains intact. Nothing below asserts a pointw
 
 I use fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical source
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`
 
 at
 
@@ -50,7 +50,7 @@ For an `m x k` matrix `R` with orthonormal columns and independent cap-one origi
 
 The latest compatible partner report is fleet04/B01 `QFORM-GROUPED-SQUARE-INNOVATIONS-v1`, canonical source
 
-`yspennstate/math-open-problems@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`
+`private-source-repository@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`
 
 at
 
@@ -64,7 +64,7 @@ with continuity. That report explicitly leaves mutually overlapping innovation m
 
 I also use the same partner slot's completed exact signed-Fejer theorem, canonical
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
 
 at
 

@@ -32,7 +32,7 @@ The main report deliberately left the exact-zero point `S_jj=0` inside this surv
 
 Fresh compatible source:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - full commit: `f2bb4e5d3f65c19715e6cbad2e79d7c071d6b174`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T091804Z-fleet02-B01-qform-auto11/REPORT.md`
 - theorem: `QFORM-ZERODIAG-ROW-HALFRIESZ-v1`.

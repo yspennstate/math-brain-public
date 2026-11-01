@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R14 HARD OUTSIDE — D0039 stuck recovery 1: the root-Palm three-zone route
 
 Date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / source problem OPEN.** This is the required first Section-I recovery after three consecutive post-move `2 -> 2` D0039 reports. In accordance with the hard-task rule, this run is a **thinking run**: it does not manufacture another auxiliary theorem, does not add a checker, and does not promote any new route algebra to a proved claim. The terminal handoffs of the negative-margin spherical perceptron, H0017, and Bradley D0036 remain in force.
 

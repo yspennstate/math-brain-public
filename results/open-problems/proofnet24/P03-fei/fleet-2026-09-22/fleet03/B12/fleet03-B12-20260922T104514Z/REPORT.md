@@ -17,7 +17,7 @@ This report proves such an identity for an arbitrary adaptive physical restricti
 
 The main completed peer artifact consumed is:
 
-* repository `yspennstate/math-open-problems`;
+* repository `private-source-repository`;
 * commit `a1b2a93210fe7cc871cd10c5bbbf43b1b983a254`;
 * path `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T094436Z-robust-row-codimension-staircase/REPORT.md`;
 * blob `06a4c1d51bb5d53d0783e567e6176511a68b1167`.

@@ -201,7 +201,7 @@ The theorem also allows an arbitrary scalar receiver diagonal entry `a`. Cross t
 
 The newest compatible designated-partner result used here is fleet03/B14 auto11, canonical report
 
-`yspennstate/math-open-problems@8b9adaf929bab4d0d18a15b81055040f3313629a`
+`private-source-repository@8b9adaf929bab4d0d18a15b81055040f3313629a`
 
 at
 
@@ -316,7 +316,7 @@ uniformly in `a` and in every admissible product law, with no support, moment, c
 
 The required newest-Claude source was read at the pinned directory
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
 through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. A completed result is applied to the same family: Theorem B of `COUNTEREXAMPLE_SEARCH.md` states, under exactly the three-large-eigenvalue hypothesis,
 

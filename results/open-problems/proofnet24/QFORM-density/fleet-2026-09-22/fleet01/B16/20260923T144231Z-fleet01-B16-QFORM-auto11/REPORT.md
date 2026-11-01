@@ -22,7 +22,7 @@ The point of this run is different: when the original product source can be sepa
 
 I use `QFORM-PHYSICAL-TRIPLE-DETERMINANT-v1`, canonical source
 
-`yspennstate/math-open-problems@b94cc7446401c02727c42024274c002e2f4e0cab`,
+`private-source-repository@b94cc7446401c02727c42024274c002e2f4e0cab`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T202347Z-fleet03-B16-QFORM-r15/REPORT.md`.
 
@@ -49,7 +49,7 @@ This is used only on disjoint original-coordinate banks, so independence between
 
 The newest completed designated-partner report consumed is
 
-`yspennstate/math-open-problems@62ae6f87b26f5ed06d8a8f937a8371616511ffa9`,
+`private-source-repository@62ae6f87b26f5ed06d8a8f937a8371616511ffa9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T132911Z-fleet02-B16-QFORM-r11/REPORT.md`.
 

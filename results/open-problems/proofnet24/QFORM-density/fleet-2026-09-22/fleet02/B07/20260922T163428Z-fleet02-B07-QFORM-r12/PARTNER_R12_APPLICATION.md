@@ -2,7 +2,7 @@
 
 After the initial REPORT.md was written, the designated partner fleet03/B07 completed a newer QFORM run. I read the complete immutable source:
 
-`yspennstate/math-open-problems@685929d9daee92a164dbf6ba6f9305d2e6550826`,
+`private-source-repository@685929d9daee92a164dbf6ba6f9305d2e6550826`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T163733Z-fleet03-B07-qform-r12/REPORT.md`.
 

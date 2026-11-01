@@ -21,7 +21,7 @@ all diagonal anchored curvatures may be too small for its new physical-triple de
 
 Latest completed designated partner on this invocation is fleet03/B06 r45,
 
-`yspennstate/math-open-problems@b5d4a62bb80a7ad84db292cb8d886282a95e851b`,
+`private-source-repository@b5d4a62bb80a7ad84db292cb8d886282a95e851b`,
 
 which proves the determinant-only three-physical-coordinate theorem
 
@@ -45,7 +45,7 @@ Every entry `(K_H)_{jk}` is the physical 3x3 minor anchored at the two hubs; if 
 
 The owner-required pinned source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`.
 
 Two completed ingredients from it are used at their proved scopes:
 

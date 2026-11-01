@@ -35,7 +35,7 @@ William Beckner, *Inequalities in Fourier analysis*, Annals of Mathematics 102 (
 I use two completed, source-pinned mathematical inputs.
 
 1. `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, complete supporting proof at
-   `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb:proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
+   `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb:proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
    Its exact theorem is: if `U^T U=I_r`, `r>=3`, every row leverage `c_i=||u_i||^2 <= 1/2`, `Lambda` is real symmetric invertible, and `V_i` are arbitrary real measurable coordinate functions, then
 
    `R=(U^T Y)^T Lambda(U^T Y)+sum_i V_i(Y_i)`
@@ -47,7 +47,7 @@ I use two completed, source-pinned mathematical inputs.
    where `B(U)=prod_{c_i>0}(1-c_i)^(-(1-c_i)/2)`.
 
 2. The required compatible partner result, fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, complete proof at
-   `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
+   `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
    If `R` has density bounded by `M`, and conditional on `R=r` a variable `V_r` has density bounded by one, with no independence assumption between `R` and `V_R`, then
 
    `T=R+a V_R^2`, `a!=0`,

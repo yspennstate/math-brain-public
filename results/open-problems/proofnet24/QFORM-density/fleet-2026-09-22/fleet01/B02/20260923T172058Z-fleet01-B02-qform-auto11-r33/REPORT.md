@@ -22,7 +22,7 @@ The canonical login for this actual hour already existed before this report and 
 
 The newest completed `fleet02/B02` report consumed here is
 
-`yspennstate/math-open-problems@3fccd9b82b456e198758e5839be364b4b0ec5024`,
+`private-source-repository@3fccd9b82b456e198758e5839be364b4b0ec5024`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T170839Z-fleet02-B02-qform-auto11/REPORT.md`.
 
@@ -42,7 +42,7 @@ with a continuous `C0` density. Section 5 below applies this theorem to a concre
 
 The designated-partner degree-4 checkpoint is
 
-`yspennstate/math-open-problems@221e2d8972267cfffbb61e119d118f5011f8a265`,
+`private-source-repository@221e2d8972267cfffbb61e119d118f5011f8a265`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T153854Z-fleet02-B02-qform-fa558934/CHECKPOINT.md`.
 
@@ -65,7 +65,7 @@ All same-bank quadratic phases, outside couplings and affine terms are retained.
 
 The current owner continuation asks workers B01--B04 to apply
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 

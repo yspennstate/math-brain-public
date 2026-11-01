@@ -46,7 +46,7 @@ The slab-conditioned core estimate (1) is immune to this poisoning: a remote fra
 
 ## Apply the newest three-volume theorem at the actual slab inequality
 
-Use `math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. For an original-coordinate cross block `M` with `Z=e3(M^T M)>0` and row volume marginals `alpha_i<=q/2`, `1<=q<3/2`, the exact model has a continuous density cap
+Use `private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. For an original-coordinate cross block `M` with `Z=e3(M^T M)>0` and row volume marginals `alpha_i<=q/2`, `1<=q<3/2`, the exact model has a continuous density cap
 
 `Mvol = 3e/[(3-2q)sqrt(q)] Z^(-1/6)`,
 
@@ -67,7 +67,7 @@ This is a genuine application of the newest volume theorem, not a copied citatio
 
 ## Designated partner use
 
-The fleet04/B13 theorem at `math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1` reduces the supremum of the bounded slab functional over arbitrary cap-one product laws to bounded finite-union unit-product indicators without assuming an attained infinite-line bathtub maximizer. Hence a violation by rough marginals can be transferred, with arbitrarily small loss, to a compact finite-union product witness before applying the slab-core argument above. No single interval, bounded diameter, or fixed fragment count is assumed.
+The fleet04/B13 theorem at `private-source@e1a56859520ae79b7a1f049a9eedf41972ddf1e1` reduces the supremum of the bounded slab functional over arbitrary cap-one product laws to bounded finite-union unit-product indicators without assuming an attained infinite-line bathtub maximizer. Hence a violation by rough marginals can be transferred, with arbitrarily small loss, to a compact finite-union product witness before applying the slab-core argument above. No single interval, bounded diameter, or fixed fragment count is assumed.
 
 ## Next implication
 

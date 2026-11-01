@@ -16,13 +16,13 @@ The designated partner `fleet02/B12` supplied two relevant exact facts. First, i
 
 `A_M = I_4-(M+1)vv^T-(3/2)ww^T`,
 
-with `v=(1,1,1,1)/2`, `w=(1,1,-1,-1)/2`, has spectrum `{1,1,-1/2,-M}` and sends asymptotically all third-compound mass into the overlap-two channel while every physical pair is indefinite and every physical principal triple has smallest singular value of order `1/M`. Source: `yspennstate/math-open-problems@c831c437535fc6dcffe0e2cd8fb40f9f7dbe9810`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/fleet02-B12-20260922T165319Z-qform-r11/REPORT.md`.
+with `v=(1,1,1,1)/2`, `w=(1,1,-1,-1)/2`, has spectrum `{1,1,-1/2,-M}` and sends asymptotically all third-compound mass into the overlap-two channel while every physical pair is indefinite and every physical principal triple has smallest singular value of order `1/M`. Source: `private-source-repository@c831c437535fc6dcffe0e2cd8fb40f9f7dbe9810`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/fleet02-B12-20260922T165319Z-qform-r11/REPORT.md`.
 
 Second, its Schur-tail stability theorem says that, at a nonzero physical pivot `a_0`, a symmetric perturbation `E` with `||E||_op<=delta<|a_0|` moves the Schur complement by at most
 
 `epsilon = delta (1+||b_0||/|a_0|)^2/(1-delta/|a_0|)`,
 
-where `b_0` is the off-diagonal pivot column. Source: `yspennstate/math-open-problems@c1c87a33cb9223e78b3b50398328ff73d7dc85d1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T155613Z-fleet02-B12-qform-add-eigen-r11/REPORT.md`.
+where `b_0` is the off-diagonal pivot column. Source: `private-source-repository@c1c87a33cb9223e78b3b50398328ff73d7dc85d1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T155613Z-fleet02-B12-qform-add-eigen-r11/REPORT.md`.
 
 The new step below produces an exact endpoint Schur identity for a rank-one spectral addition, then applies the partner tail theorem to obtain an explicit mixed large-spike + full-rank-tail density inequality.
 
@@ -81,7 +81,7 @@ Use the completed physical-three-block theorem `QFORM-TWO-SAMESIGN-THREEBLOCK-v1
 
 `C_*/L`,  `C_*=24.183038289961516...`.
 
-Source: `yspennstate/math-open-problems@b3c543b40dfaef13468466fa82625303a7719af8`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md`.
+Source: `private-source-repository@b3c543b40dfaef13468466fa82625303a7719af8`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md`.
 
 ### Theorem 3.1 — `QFORM-SIGN-OPPOSED-RANK1-ABSORBER-v1`
 

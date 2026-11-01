@@ -14,7 +14,7 @@ attacking: anchor-recoalescence localization—combine fleet02/B14 r33 random-sl
 
 The designated partner actually applied below is the newly completed fleet02/B14 r33:
 
-`yspennstate/math-open-problems@9c77bae76f0d884fc60a2ffee86ad6269b79d690`,
+`private-source-repository@9c77bae76f0d884fc60a2ffee86ad6269b79d690`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T095834Z-fleet02-B14-QFORM-r33/REPORT.md`.
 
 Its `QFORM-RANDOM-SLOPE-SUBPROBABILITY-v1` and physical-pair compiler prove the following. If an outer original-coordinate pair has invertible indefinite block `B`,
@@ -37,12 +37,12 @@ No support, fragment, translation, or moment assumption is present.
 
 The second completed source used at an equation is the product-projection estimate recorded and applied in fleet02/B14 r26,
 
-`yspennstate/math-open-problems@5704e7da5b6134fc8e3bdde6caedc7358a666f65`,
+`private-source-repository@5704e7da5b6134fc8e3bdde6caedc7358a666f65`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T050751Z-fleet02-B14-QFORM-r26/REPORT.md`,
 
 with underlying fleet03/B14 r26 source
 
-`yspennstate/math-open-problems@f89093b26b458e02914d99e7235268aff6ae1e40`.
+`private-source-repository@f89093b26b458e02914d99e7235268aff6ae1e40`.
 
 For independent cap-one original coordinates `V=(V_1,...,V_d)` and deterministic `c!=0`, it gives
 

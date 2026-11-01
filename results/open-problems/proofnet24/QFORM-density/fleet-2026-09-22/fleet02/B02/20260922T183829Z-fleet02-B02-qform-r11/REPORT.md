@@ -21,9 +21,9 @@ which fleet03/B03 controls by a `|t|^(-1/2)`-weighted characteristic-function in
 
 Source pins used below:
 
-1. Prior fleet02/B02 translation-uniform pair theorem: `yspennstate/math-open-problems@a68504400f3679153ba22ad2852b3fe0c4048dc1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T181118Z-fleet02-B02-QFORM-r11/REPORT.md`, read-back blob `d7023211a6c9285d2defaf4d7f09fa820a0ccbbe`.
-2. Named partner fleet03/B02: `yspennstate/math-open-problems@056867164c939f4e70988e762258f2542e32fd75`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T182919Z-fleet03-B02-qform-r12/REPORT.md`, read-back blob `1ebddb8061731f94bcdebc702a60b7840e646c28`.
-3. Compatible fleet03/B03 determinant-bank half-Riesz report: `yspennstate/math-open-problems@924b3c4c70f86a64402863fe228f641bf3db60b2`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T175531Z-fleet03-B03-QFORM-r17/REPORT.md`.
+1. Prior fleet02/B02 translation-uniform pair theorem: `private-source-repository@a68504400f3679153ba22ad2852b3fe0c4048dc1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T181118Z-fleet02-B02-QFORM-r11/REPORT.md`, read-back blob `d7023211a6c9285d2defaf4d7f09fa820a0ccbbe`.
+2. Named partner fleet03/B02: `private-source-repository@056867164c939f4e70988e762258f2542e32fd75`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T182919Z-fleet03-B02-qform-r12/REPORT.md`, read-back blob `1ebddb8061731f94bcdebc702a60b7840e646c28`.
+3. Compatible fleet03/B03 determinant-bank half-Riesz report: `private-source-repository@924b3c4c70f86a64402863fe228f641bf3db60b2`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T175531Z-fleet03-B03-QFORM-r17/REPORT.md`.
 4. The normalized one-dimensional bank-density application uses Rudelson--Vershynin, *Small ball probabilities for linear images of high dimensional distributions*, Theorem 1.2: a normalized linear combination of independent one-dimensional densities bounded by one has density bounded by `sqrt(2)`.
 
 ## 2. First new implication: an indefinite physical pair is a half-Riesz transducer

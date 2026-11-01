@@ -118,7 +118,7 @@ QED.
 
 The designated partner result is fleet02/B03 r52:
 
-`yspennstate/math-open-problems@54243d0668be2be7879ae467ed9cb6b962f24652`
+`private-source-repository@54243d0668be2be7879ae467ed9cb6b962f24652`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260924T081949Z-fleet02-B03-QFORM-auto11-r52/REPORT.md`.
 

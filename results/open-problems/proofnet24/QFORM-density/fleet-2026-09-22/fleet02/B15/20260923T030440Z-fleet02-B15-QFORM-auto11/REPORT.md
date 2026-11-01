@@ -31,7 +31,7 @@ Thus the rough limiting step is not an obstacle in the new volume class, and the
 
 The first completed source applied at equations is
 
-- `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+- `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 - `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 Its fractional-volume theorem is stated directly for rough cap-one product laws. For a fixed ORIGINAL-coordinate cross block `M=A[I,J]`, put
@@ -58,7 +58,7 @@ It follows there that
 
 The second completed source actually applied is assigned partner fleet03/B15:
 
-- `yspennstate/math-open-problems@b4c8edd512776799decc9a16a40a3b37afba45b6`,
+- `private-source-repository@b4c8edd512776799decc9a16a40a3b37afba45b6`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T233101Z-fleet03-B15-qform-r21/REPORT.md`.
 
 It proves the rough one-sheet interval domination for exact-rank-three signature `(+,+,-)` and, by sign reversal, `(-,-,+)`.

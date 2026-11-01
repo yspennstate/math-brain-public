@@ -22,16 +22,16 @@ Relevant predecessor results:
 
 1. **r30 grouped cross-rank smoothing**, fleet03/B09: for any original-coordinate cross block of rank `r>2`,
    `||p_Q||_inf <= e r/(r-2) Delta_r(B)^(-1/r)`, with arbitrary same-side curvature and continuous density.
-   Canonical predecessor: `yspennstate/math-open-problems@0257b7a08990f303da16797bcbad0d3e6a1e6538`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T104947Z-fleet03-B09-QFORM-r30/REPORT.md`.
+   Canonical predecessor: `private-source-repository@0257b7a08990f303da16797bcbad0d3e6a1e6538`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T104947Z-fleet03-B09-QFORM-r30/REPORT.md`.
 
 2. **Grouped two-slope/one-Fresnel Pluecker smoothing**, fleet03/B09 r23:
    `||p_Q||_inf <= (5e/3)[|lambda| delta^2 pdet(CC^T) rho]^(-1/5)`.
-   Canonical predecessor: `yspennstate/math-open-problems@0ca2df8a2cfb2702f2498ee6924f3a7cee63166a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T034845Z-fleet03-B09-QFORM-r23/REPORT.md`.
+   Canonical predecessor: `private-source-repository@0ca2df8a2cfb2702f2498ee6924f3a7cee63166a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T034845Z-fleet03-B09-QFORM-r23/REPORT.md`.
 
-3. **Newest volume-stability theorem** from the required Claude continuation, canonical package `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, path `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. For a cross matrix with third-volume `E3` and row volume marginals `alpha_i <= q/2`, `1<=q<3/2`,
+3. **Newest volume-stability theorem** from the required Claude continuation, canonical package `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, path `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. For a cross matrix with third-volume `E3` and row volume marginals `alpha_i <= q/2`, `1<=q<3/2`,
    `||p_Q||_inf <= 3e/[(3-2q)sqrt(q)] E3^(-1/6)`.
 
-4. **Designated partner fleet04/B09** `QFORM-PHYSICAL-CROSS-DETERMINANT-SMOOTHING-v1`, canonical mathematics `yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`. For a literal invertible physical `3x3` cross block `K`,
+4. **Designated partner fleet04/B09** `QFORM-PHYSICAL-CROSS-DETERMINANT-SMOOTHING-v1`, canonical mathematics `private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`. For a literal invertible physical `3x3` cross block `K`,
    `||p_Q||_inf <= 3 |det K|^(-1/3)`.
 
 ## 2. Setup: rank-two hub/slopes and singleton augmentation volumes

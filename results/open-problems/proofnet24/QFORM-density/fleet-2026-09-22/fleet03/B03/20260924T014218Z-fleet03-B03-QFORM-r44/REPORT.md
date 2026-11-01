@@ -29,7 +29,7 @@ or a quantitatively large two-star packet. The exact-rank-one endpoint of (1.2) 
 
 The analytic input used here is the checked exact-rank crossing theorem in
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -41,7 +41,7 @@ No pointwise one-coordinate quadratic-phase estimate occurs in (1.3); it is a jo
 
 The designated fleet04/B03 source actually applied in Section 5 is the valid collision sublemma from
 
-`yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`
+`private-source-repository@28681f9af7c2307f80968df86010084019599e38`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`.
 
@@ -231,7 +231,7 @@ The quarter-potential in (2.12) can recover linear one-copy small-ball scale as 
 
 The checked coordinate-hyperbola peel in
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 

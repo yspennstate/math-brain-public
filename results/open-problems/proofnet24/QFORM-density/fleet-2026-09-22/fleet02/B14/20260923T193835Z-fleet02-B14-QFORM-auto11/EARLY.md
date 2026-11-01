@@ -46,7 +46,7 @@ Taking, for example, `a_j=4^j` retains arbitrarily distant fragments while keepi
 
 where `D_3=6(4pi/3)^(2/3)`.
 
-But the completed fixed-source Theorem A at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, applies to the SAME `A=I_3` law and gives
+But the completed fixed-source Theorem A at `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, applies to the SAME `A=I_3` law and gives
 
 `||p_Q||_inf <= 6 sqrt(pi)`
 

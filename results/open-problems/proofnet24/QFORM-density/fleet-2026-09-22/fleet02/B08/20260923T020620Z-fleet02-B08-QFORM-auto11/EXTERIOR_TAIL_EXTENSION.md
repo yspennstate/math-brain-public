@@ -4,7 +4,7 @@
 **Classification:** `ESSENTIAL_STEP_APPLIED / PROVED SUPPORTING STRUCTURAL THEOREM / FULL TARGET OPEN`  
 **Scope:** continuation of the same fleet02/B08 invocation and the same actual physical cut used in `REPORT.md`.
 
-This addendum sharpens the run's volume-tail ladder. It uses only the completed five-volume theorem D5 from the owner-requested source snapshot `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`. Hence it does not rely on the pending-review collective-tail theorem and it imposes no volume-marginal or leverage hypothesis.
+This addendum sharpens the run's volume-tail ladder. It uses only the completed five-volume theorem D5 from the owner-requested source snapshot `private-source@e5f71d79eff325201dd0274053d20268ce65b837`. Hence it does not rely on the pending-review collective-tail theorem and it imposes no volume-marginal or leverage hypothesis.
 
 ## 1. Source-valid input
 

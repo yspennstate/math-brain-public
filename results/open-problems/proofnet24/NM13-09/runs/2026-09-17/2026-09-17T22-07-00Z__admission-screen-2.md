@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-09 — second admission screen
 
 Date: 2026-09-17 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Own namespace: `proofnet24/NM13-09/`  
 Captured master before delivery: `e3f8790b307b2ee0785f08a5914fbe374a935f1e`
 

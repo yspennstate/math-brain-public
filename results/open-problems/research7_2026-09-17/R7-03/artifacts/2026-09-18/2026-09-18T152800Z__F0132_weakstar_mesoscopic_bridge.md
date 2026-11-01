@@ -5,7 +5,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 Run date: 2026-09-18 UTC  
 Slot: R7-03 Boundary-Case Research  
 Native ID: `6aabe7be74008191b526b109ee4e9e80`  
-Repository: `yspennstate/math-open-problems`, existing `master`  
+Repository: `private-source-repository`, existing `master`  
 Captured start-of-run master: `46f981d6d113f55ec1cc8a1be637bc88f77adef2`  
 Fresh master before this artifact: `67e6a20272695b3e6f3a884fa055d2b150930e4b`
 

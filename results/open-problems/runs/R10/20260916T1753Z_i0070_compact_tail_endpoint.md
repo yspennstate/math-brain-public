@@ -4,7 +4,7 @@ Problem/source: Antonio Agresti and Mark Veraar, *Nonlinear SPDEs and Maximal Re
 # R10 I0070 — compact Hilbert tails turn the critical endpoint into a small linear perturbation
 
 Run ID: `20260916T1753Z_i0070_compact_tail_endpoint`  
-Repository/branch: `yspennstate/math-open-problems` / `master`  
+Repository/branch: `private-source-repository` / `master`  
 Dated source/status check: 2026-09-16
 
 No email/Gmail, Drive, public posting, purchase, permission change, workflow execution, scheduler mutation, peer-file edit, or shared-root edit was performed.

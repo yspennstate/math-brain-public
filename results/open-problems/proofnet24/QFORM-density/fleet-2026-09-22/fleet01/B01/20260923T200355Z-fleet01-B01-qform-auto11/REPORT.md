@@ -22,17 +22,17 @@ Its indicator is an admissible density and has `Re E exp(i s X^2)>=cos(eta)`. No
 
 Two previously proved inputs are used exactly at equations:
 
-1. fleet02/B01 scalar square-phase `L^4(dt)` theorem, canonical source `yspennstate/math-open-problems@91dbcb0e8b3f6faa4af9629aaaff2f69d385695a`, which gives, for every scalar cap-one probability density, every `c!=0`, and every affine coefficient `ell`,
+1. fleet02/B01 scalar square-phase `L^4(dt)` theorem, canonical source `private-source-repository@91dbcb0e8b3f6faa4af9629aaaff2f69d385695a`, which gives, for every scalar cap-one probability density, every `c!=0`, and every affine coefficient `ell`,
 
 `int_R |E exp(it(cX^2+ell X))|^4 dt <= 27*pi/(2|c|)`.
 
-Its cap-`K`, nonnormalized extension proved in the preceding B01 report `yspennstate/math-open-problems@a7345ba08be60f1fd5d02308fc68b23e2016ff51` is
+Its cap-`K`, nonnormalized extension proved in the preceding B01 report `private-source-repository@a7345ba08be60f1fd5d02308fc68b23e2016ff51` is
 
 `int |int g(x)e^{it(c x^2+ell x+c0)}dx|^4 dt <= [27*pi/(2|c|)] K^2 m^2`        (1.1)
 
 for `0<=g<=K`, `m=int g`.
 
-2. The reviewed two-dimensional product-projection cap from `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`: if a rank-two linear image of an independent cap-one product bank has Gram matrix `G>0`, then its two-dimensional density is at most `2/sqrt(det G)`.
+2. The reviewed two-dimensional product-projection cap from `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`: if a rank-two linear image of an independent cap-one product bank has Gram matrix `G>0`, then its two-dimensional density is at most `2/sqrt(det G)`.
 
 ## 2. Main theorem
 
@@ -260,7 +260,7 @@ The preceding B01 theorem required the same matrix to govern both bank self-curv
 
 ## 6. Designated-partner theorem applied to an actual inequality
 
-The newest **completed** fleet02/B01 result available at run start is `QFORM-ONEHUB-Z1-NOMARGINAL-HALFRIESZ-v1`, source-pinned in `yspennstate/math-open-problems@339c1fdf3bc65a79f5be126e730dd3b251320e66`.
+The newest **completed** fleet02/B01 result available at run start is `QFORM-ONEHUB-Z1-NOMARGINAL-HALFRIESZ-v1`, source-pinned in `private-source-repository@339c1fdf3bc65a79f5be126e730dd3b251320e66`.
 
 After a scalar completion `a(X_0+h)^2`, with residual one-hub slope vector `m` and projected crossing `C`, it proves
 

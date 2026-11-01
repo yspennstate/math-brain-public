@@ -2,7 +2,7 @@
 
 Programme: `QFORM-DENSITY-3EIG-20260922`; fleet02/B04. Full target remains OPEN.
 
-First substantive calculation. Let `Z_K` be a disjoint original-coordinate product bank, `c!=0`, and let `R` be a quadratic polynomial in the remaining independent original coordinates. Suppose a disjoint physical cross block `M` of `R` has `E2=e2(M^T M)>0`. Fleet01/B01 `QFORM-PAIRVOLUME-HALF-RIESZ-UNCONDITIONAL-v1`, source `yspennstate/math-open-problems@1f3af9dc58afb9e902b972466d6da01cece89734`, gives
+First substantive calculation. Let `Z_K` be a disjoint original-coordinate product bank, `c!=0`, and let `R` be a quadratic polynomial in the remaining independent original coordinates. Suppose a disjoint physical cross block `M` of `R` has `E2=e2(M^T M)>0`. Fleet01/B01 `QFORM-PAIRVOLUME-HALF-RIESZ-UNCONDITIONAL-v1`, source `private-source-repository@1f3af9dc58afb9e902b972466d6da01cece89734`, gives
 
 `sup_s E|R-s|^(-1/2) <= C_E2 E2^(-1/8)`,
 

@@ -14,7 +14,7 @@ This report uses the live correction state. In particular it does **not** use la
 
 The completed source theorem applied here is the regularized original-coordinate cross-block estimate from
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 at
 

@@ -4,7 +4,7 @@ After the main r35 report was written, I consumed the newer completed fleet01/B0
 
 `QFORM-GIBBS-SOFT-HUB-v1`, source
 
-`yspennstate/math-open-problems@da8e2c011cc93a5c776a1de6010f7366da5f2fbf:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T144427Z-fleet01-B04-QFORM-auto11-r13/REPORT.md`.
+`private-source-repository@da8e2c011cc93a5c776a1de6010f7366da5f2fbf:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T144427Z-fleet01-B04-QFORM-auto11-r13/REPORT.md`.
 
 For row-triple aggregate volumes `a_S`, let `p(S)=a_S/E3(M)`. Fleet01/B04 defines, for a marginal cap `h`,
 

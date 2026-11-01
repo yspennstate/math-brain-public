@@ -24,7 +24,7 @@ This is not the full theorem. It closes an exact rank-three rotated family with 
 
 The completed fleet01/B04 report
 
-`yspennstate/math-open-problems@efe730532ded82011b532f5ac8b443768f04a086`,
+`private-source-repository@efe730532ded82011b532f5ac8b443768f04a086`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260922T181620Z-fleet01-B04-QFORM-r15/REPORT.md`
 
@@ -38,7 +38,7 @@ It then uses probability-mass rearrangement to derive an `L^2` bound. The presen
 
 The completed fleet02/B04 report
 
-`yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`,
+`private-source-repository@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T181702Z-dac07509/REPORT.md`
 

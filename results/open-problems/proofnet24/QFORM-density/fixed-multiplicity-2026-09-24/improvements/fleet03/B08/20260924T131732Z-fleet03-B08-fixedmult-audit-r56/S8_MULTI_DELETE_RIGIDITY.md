@@ -2,7 +2,7 @@
 
 Run: `20260924T131732Z-fleet03-B08-fixedmult-audit-r56`  
 Current owner objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Pinned baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Pinned baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 Status: **new proved structural reduction below the validated nine-eigenvalue candidate; no eight-eigenvalue theorem claimed.**
 

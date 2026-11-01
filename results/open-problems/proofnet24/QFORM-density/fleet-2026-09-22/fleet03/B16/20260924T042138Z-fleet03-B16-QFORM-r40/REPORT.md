@@ -20,7 +20,7 @@ This run deliberately changes mechanism after the preceding mixed-volume/absolut
 The completed inputs used are:
 
 1. `QFORM-FRESH-HUB-DIVISIBLE-TWIST-ABSORPTION-v1`, fleet02/B16,
-   `yspennstate/math-open-problems@be8062b160868bcc71aff45a77c56ff2d0501a9a`,
+   `private-source-repository@be8062b160868bcc71aff45a77c56ff2d0501a9a`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T203140Z-fleet02-B16-QFORM-r36/REPORT.md`.
    If `H` is cap-one and independent of a light object `W`, `(L,V)` are light functions with joint density cap `M`, `T=T(W)` is arbitrary, and
    `Q=2 gamma H L+2LT+alpha L^2+2 delta LV+kappa V^2`, `gamma*kappa!=0`, then
@@ -28,7 +28,7 @@ The completed inputs used are:
    `||p_Q||_infinity <= 3*2^(2/3) M^(2/3)|gamma^2 kappa|^(-1/3)`.
 
 2. The designated partner fleet04/B16 theorem `QFORM-FRESH-OR-TRANSVERSE-PAIRCAP-DICHOTOMY-v1`,
-   `yspennstate/math-open-problems@c1bf7fd07ac10b105686d96c96344a1a2274f5d9`,
+   `private-source-repository@c1bf7fd07ac10b105686d96c96344a1a2274f5d9`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260924T021703Z-fleet04-B16-QFORM-r3/REPORT.md`.
    With the source-valid pair construction in that theorem,
    
@@ -39,11 +39,11 @@ The completed inputs used are:
    `||p_Q||_infinity <=12 [G|gamma^2 kappa|]^(-1/3)`.
 
 3. The immediately preceding B16 r39 report,
-   `yspennstate/math-open-problems@3272887eaefad259aefc2e13a42d7699e74862cb`,
+   `private-source-repository@3272887eaefad259aefc2e13a42d7699e74862cb`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260924T025219Z-fleet03-B16-QFORM-r39/REPORT.md`.
    It exhibited a strict target family with order-one mixed Pluecker mass for which the old *absolute* TT* kernel is infinite. That was a mechanism obstruction, not an output-density counterexample.
 
-A fresh fleet01/B11 result, `yspennstate/math-open-problems@22373d23a5a18f91627d8849017beb38a2169f23`, independently closes the exact-rank-three zero-pivot near-coloop same-bank puncture by a Witt leverage identity. Therefore this run does not duplicate that zero-pivot work; it addresses how a nonzero outer physical square can be made harmless when a second source-separated zero-pivot crossing survives.
+A fresh fleet01/B11 result, `private-source-repository@22373d23a5a18f91627d8849017beb38a2169f23`, independently closes the exact-rank-three zero-pivot near-coloop same-bank puncture by a Witt leverage identity. Therefore this run does not duplicate that zero-pivot work; it addresses how a nonzero outer physical square can be made harmless when a second source-separated zero-pivot crossing survives.
 
 ## 2. New compiler: an arbitrary outer square is free once a second fresh crossing survives
 

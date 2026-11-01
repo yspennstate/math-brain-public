@@ -171,7 +171,7 @@ controls `I_y(t)` uniformly in `t`. Dominated convergence in `y` therefore shows
 
 The designated partner's completed r6 theorem is source-pinned at
 
-- full report: `yspennstate/math-open-problems@48c914d1bd070cad090d6d5deac743bd8465bc15`.
+- full report: `private-source-repository@48c914d1bd070cad090d6d5deac743bd8465bc15`.
 
 For its two-sided-anchor packet, if `c_1,c_2` are the two singular values of the transverse cross block, it proves
 

@@ -20,7 +20,7 @@ The law-uniform scalar pointwise quadratic-phase decay remains false and is not 
 
 The immediately preceding B02 report is
 
-`yspennstate/math-open-problems@61ec1e9c84c7bd41323e0b87bfa84e45a828d81c`,
+`private-source-repository@61ec1e9c84c7bd41323e0b87bfa84e45a828d81c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T050329Z-fleet03-B02-qform-r21/REPORT.md`.
 
@@ -36,7 +36,7 @@ where `Z=E3(B)` is the physical cross-block third volume and `T` is the true res
 
 Fleet01/B01 proved `QFORM-PAIRVOLUME-HALF-RIESZ-UNCONDITIONAL-v1` at
 
-`yspennstate/math-open-problems@1f3af9dc58afb9e902b972466d6da01cece89734`,
+`private-source-repository@1f3af9dc58afb9e902b972466d6da01cece89734`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T030821Z-fleet01-B01-qform-auto11/REPORT.md`.
 
@@ -59,7 +59,7 @@ There is no leverage condition, no E2 minor-marginal condition and no selected-m
 
 The source-valid pair-log theorem is
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -188,7 +188,7 @@ For an invertible definite physical pair, the source pair-log report already rec
 
 The designated partner theorem is `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`, source
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 

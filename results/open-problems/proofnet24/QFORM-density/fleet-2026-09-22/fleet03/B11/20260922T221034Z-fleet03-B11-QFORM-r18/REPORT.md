@@ -19,7 +19,7 @@ No step uses post-rotation independence, arbitrary-joint coarea, a conditional-d
 
 Consumed completed partner result:
 
-`yspennstate/math-open-problems@797dcde430e982a020d7642b54cadc281cbc9bc1`
+`private-source-repository@797dcde430e982a020d7642b54cadc281cbc9bc1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T191727Z-fleet04-B11-nullgraph-obstruction-r2/REPORT.md`.
 
@@ -41,7 +41,7 @@ It also gives a nonlinear dependent construction with bounded transverse density
 
 Consumed completed theorem:
 
-`yspennstate/math-open-problems@091696c4b92a93950f1211593deafd16c0c26235`
+`private-source-repository@091696c4b92a93950f1211593deafd16c0c26235`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T220011Z-fleet02-B16-QFORM-auto11/REPORT.md`.
 

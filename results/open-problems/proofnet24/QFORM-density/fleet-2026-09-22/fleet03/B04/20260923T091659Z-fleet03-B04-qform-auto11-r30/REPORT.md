@@ -17,7 +17,7 @@ Fresh corrections consumed include: no law-uniform pointwise quadratic-phase dec
 
 1. The q-dependent fractional third-volume Fourier theorem and exact volume-marginal matrix W are from
 
-`yspennstate/math-open-problems@96ef944654c4056cc75bba6256e600eb791fb2d1:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
+`private-source-repository@96ef944654c4056cc75bba6256e600eb791fb2d1:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 Its theorem says: if E3(M)>0 and all row third-volume inclusion marginals alpha_i satisfy alpha_i<=q/2 for some 1<=q<3/2, then
 
@@ -27,7 +27,7 @@ with a continuous C0 density, for arbitrary same-bank phases and outside-conditi
 
 2. The scheduled peer identity actually applied here is fleet01/B20
 
-`yspennstate/math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T234545Z-fleet01-B20-QFORM-auto11/REPORT.md`:
+`private-source-repository@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T234545Z-fleet01-B20-QFORM-auto11/REPORT.md`:
 
 `T2 E2 <= 3 E3`, where T2=sum_(j>=3) s_j(M)^2 and Ek=e_k(s_1(M)^2,s_2(M)^2,...).
 

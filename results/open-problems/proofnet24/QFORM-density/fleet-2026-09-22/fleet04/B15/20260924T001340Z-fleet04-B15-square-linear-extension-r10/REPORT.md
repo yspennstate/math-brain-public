@@ -10,11 +10,11 @@ Full unrestricted QFORM status: \`OPEN_NOT_PROVED\`.
 ## Sources and scope
 
 Required Claude package retained from
-\`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837\`,
+\`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837\`,
 \`proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/\`.
 
 The completed partner result actually applied below is fleet01/B15,
-\`yspennstate/math-open-problems@0b451fb08a83f7d58a1f2bfc0eb4ed4cdc9f487c\`,
+\`private-source-repository@0b451fb08a83f7d58a1f2bfc0eb4ed4cdc9f487c\`,
 Theorem 6.1 (\`QFORM-SQUARE-LINEAR-LEAF-C0-v1\`). In original independent coordinates it says that, after conditioning on all remaining coordinates,
 \[
 Q=R_w(P)+dU^2+a_w(P)U+b_w(P)V,\qquad
@@ -114,7 +114,7 @@ This gate is an actual principal-block spectral statement. No matrix-small term 
 ## What is new relative to the preceding fleet04/B15 family
 
 The preceding family at
-\`math-open-problems@ae87801238cf5756c153d27fed0bb6524d88ee17\`
+\`private-source@ae87801238cf5756c153d27fed0bb6524d88ee17\`
 used exact opposite-sign cancellation and range-aligned semidefinite smoothing. The present class:
 
 - is not based on a range-aligned semidefinite three-coordinate block;

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED.** GPT-6 / maximu
 
 # P03 / I0098 — the d=29 ray-class/Zauner cyclic-280 bridge
 
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 Current exclusive claim: `operations/claims/I0098.md`.
 Source: Afonso S. Bandeira, Randomstrasse 101, “Mutually Unbiased Bases, ETFs, and Zauner's Conjecture (problems 22–24)”, posted 2025-12-14, updated 2025-12-18, Conjecture 24.
 Source target: for every dimension `d`, an ETF of `d^2` vectors exists in `C^d` (equivalently a SIC-POVM exists).

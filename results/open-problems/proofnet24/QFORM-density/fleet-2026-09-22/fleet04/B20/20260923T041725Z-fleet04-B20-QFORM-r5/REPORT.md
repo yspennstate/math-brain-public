@@ -13,12 +13,12 @@ All random variables below remain in original coordinates. There is no independe
 
 ## 1. Source-pinned inputs
 
-1. Claude baseline and corrections: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory
+1. Claude baseline and corrections: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
    These are supporting inputs, not a full proof.
 
 2. fleet01/B20 second-stage cascade:
-   `yspennstate/math-open-problems@c71cc4db4e48ee51524175a57e323aba881d37bb`.
+   `private-source-repository@c71cc4db4e48ee51524175a57e323aba881d37bb`.
    Its live P2 order-two survivor in strict (N3(1/128)) is either already paid, or after exposing original row/column anchors has
    [
    |d|<1/32
@@ -30,7 +30,7 @@ All random variables below remain in original coordinates. There is no independe
    ]
 
 3. fleet03/B05 direct two-arm coarea:
-   `yspennstate/math-open-problems@3045ac45b0937065a4d4931b6127dde1f287d701`.
+   `private-source-repository@3045ac45b0937065a4d4931b6127dde1f287d701`.
    If (X,Y,Z,W) are independent cap-one scalars and
    [
    R=H(X,Y)+2eta(X-x_0)[Z+m(X,Y)]
@@ -44,7 +44,7 @@ All random variables below remain in original coordinates. There is no independe
    (|p_{bcdot U}|_inftylesqrt2/|b|_2).
 
 4. fleet01/B20 anchored wedge compiler:
-   `yspennstate/math-open-problems@f64266f079e502403ff19ff5ca9739a79c65ebcc`.
+   `private-source-repository@f64266f079e502403ff19ff5ca9739a79c65ebcc`.
    On the current O3 star branch it gives
    [
    W_i=sum_{j

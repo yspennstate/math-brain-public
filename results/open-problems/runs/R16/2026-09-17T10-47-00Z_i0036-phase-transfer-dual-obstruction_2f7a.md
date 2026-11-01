@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 
 # R16 HARD OUTSIDE — I0036 / Schramm Problem 2.1: phase-resolved transfer operators and a finite obstruction to a parafermion-only positivity proof
 
-Date: 2026-09-17 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`. Source-level status: **PARTIAL / OPEN**. The frozen metric does not move this run. The useful output is a source-relevant transfer-operator route plus an exact finite obstruction showing why the most naive parafermionic dual certificate cannot work.
+Date: 2026-09-17 UTC. Repository/branch: `private-source-repository` / `master`. Source-level status: **PARTIAL / OPEN**. The frozen metric does not move this run. The useful output is a source-relevant transfer-operator route plus an exact finite obstruction showing why the most naive parafermionic dual certificate cannot work.
 
 ## 1. Continuity, ownership, and required repository read
 

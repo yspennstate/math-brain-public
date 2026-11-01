@@ -4,7 +4,7 @@
 **Status:** **CONDITIONAL BRIDGE PROVED; unrestricted FEI remains OPEN / NOT PROVED.**  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.
 
-After the main B18 report was written, `math-open-problems` master advanced to
+After the main B18 report was written, `private-source` master advanced to
 `43dcc832af6944b9c6c733579c9d8dc9a87a1ddf`, adding the fleet01/B16 central-Radon energy theorem. This note integrates that fresh result rather than freezing B18 at the earlier peer frontier.
 
 ## 1. Inputs, at their exact proved scopes

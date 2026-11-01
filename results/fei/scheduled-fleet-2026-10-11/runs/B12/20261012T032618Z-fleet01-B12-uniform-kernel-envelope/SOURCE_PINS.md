@@ -7,7 +7,7 @@
 
 ## Current campaign files
 
-- `yspennstate/math-open-problems`, `reports/fei-2026-10-11/CURRENT_STATUS.md`, blob `c416d4b4a83fc67965cb95d06a0cc80c5c29a520`.
+- `private-source-repository`, `reports/fei-2026-10-11/CURRENT_STATUS.md`, blob `c416d4b4a83fc67965cb95d06a0cc80c5c29a520`.
 - `STREAM_PACKET_INDEX.json`, blob `58e3eb0b1f0e9c03ebf709f83ad496ee8f2df704`.
 - `assignments/B12.json`, blob `40935ac651643a17815d0addf664ec4c1c0313cc`.
 - `EXECUTION_PROTOCOL.json`, blob `457358ff62cbf1141a72096bcabdf95bf18c1be2`.
@@ -17,7 +17,7 @@
 
 ## Exact proof dependencies
 
-- Complete preceding B12 result: `yspennstate/math-open-problems@4fa89c32748c17c91aeca56c55c7a054b760ba6e`, `reports/fei-2026-10-11/runs/B12/20261012T022322Z-fleet01-B12-biased-coherent-hierarchy/`.
+- Complete preceding B12 result: `private-source-repository@4fa89c32748c17c91aeca56c55c7a054b760ba6e`, `reports/fei-2026-10-11/runs/B12/20261012T022322Z-fleet01-B12-biased-coherent-hierarchy/`.
   - `REPORT.md` blob `2c03a3b551b3719797ddeff3269566f98270e93a`.
   - `BIASED_COHERENT_IDENTITY.tex` blob `bdd2a39e8882b66f2917261df28b3b2432ff3ad3`.
   - `ADAPTIVE_LOG_PAYMENT.tex` blob `8aca47d80e7298f510b2f543eaff384e99e70656`.

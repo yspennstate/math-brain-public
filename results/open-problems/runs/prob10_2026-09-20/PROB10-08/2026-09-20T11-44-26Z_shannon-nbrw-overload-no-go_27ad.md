@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 maximum
 
 # PROB10-08 — Shannon NBRW overload obstruction at the actual early mixing threshold
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Status: **OPEN / PARTIAL for Salez Problem 2.3; substantive mechanism movement; no source closure; no new concrete nonbaseline family promoted this run; independent validation pending; worldwide novelty UNVERIFIED.**
 

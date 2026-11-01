@@ -20,7 +20,7 @@ and suppose `G>0` and every normalized leverage satisfies
 
 `rho_i^T G^{-1} rho_i <=1/2`.
 
-The completed mixed-hub Theorem H in `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, allows **arbitrary** `A[{a,b},{a,b}]`, arbitrary outside same-side blocks/couplings after conditioning, and arbitrary affine terms. With two hubs it gives, for `t!=0`,
+The completed mixed-hub Theorem H in `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, allows **arbitrary** `A[{a,b},{a,b}]`, arbitrary outside same-side blocks/couplings after conditioning, and arbitrary affine terms. With two hubs it gives, for `t!=0`,
 
 `|phi_Q(t)| <= K_r |t|^{-(r+4)/2}`,
 

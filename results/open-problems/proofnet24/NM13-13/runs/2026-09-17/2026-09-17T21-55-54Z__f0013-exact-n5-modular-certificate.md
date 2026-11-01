@@ -2,7 +2,7 @@ Model actually run: GPT-5.6 Sol. Reasoning level: UNVERIFIED. Movement: `N_exact
 
 # NM13-13 — F0013 exact order-5 atlas and modular irreducibility certificate
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **F0013 source OPEN / NM13-13 PARTIAL.** This run continues the already-admitted F0013 target under the existing exclusive claim `operations/claims/F0013.md`; it does not reopen intake or change the source metric. The source asymptotic conjecture is not claimed solved.
 

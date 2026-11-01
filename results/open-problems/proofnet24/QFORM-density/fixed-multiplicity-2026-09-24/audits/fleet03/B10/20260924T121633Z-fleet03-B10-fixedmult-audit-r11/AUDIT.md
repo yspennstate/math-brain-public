@@ -6,7 +6,7 @@ Reviewer lens: constants, exact arithmetic, adversarial finite examples; fleet03
 Pinned manuscript source commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Pinned manuscript git blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
 Advertised source SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`  
-Fresh math-open-problems master observed immediately before publication: `1dab25580592c69084c149ebc42e6d9e999acef6`.
+Fresh private-source master observed immediately before publication: `1dab25580592c69084c149ebc42e6d9e999acef6`.
 
 ## Verdict
 

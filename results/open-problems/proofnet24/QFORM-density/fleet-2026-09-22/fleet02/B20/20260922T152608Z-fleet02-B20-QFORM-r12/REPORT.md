@@ -12,7 +12,7 @@ The target remains the full arbitrary-dimensional statement: if the coordinates 
 
 The newest completed assigned-partner package visible at the source refresh used here is fleet03/B20 run `20260922T141139Z-fleet03-B20-QFORM-r11`, canonical source
 
-`yspennstate/math-open-problems@7530e8c6ffd7284eb9c8acf1d79f36c335bf4fd6:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T141139Z-fleet03-B20-QFORM-r11/REPORT.md`.
+`private-source-repository@7530e8c6ffd7284eb9c8acf1d79f36c335bf4fd6:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T141139Z-fleet03-B20-QFORM-r11/REPORT.md`.
 
 Its exact scalar-pivot reserve is the starting expression below: if
 
@@ -26,7 +26,7 @@ with `||L||<=1+K`.
 
 I also use the completed fleet03/B06 two-stage physical-pivot endpoint package
 
-`yspennstate/math-open-problems@8624700dc9342807bbdf427e271fffcc518a0315:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T151714Z-fleet03-B06-qform-r12/REPORT.md`.
+`private-source-repository@8624700dc9342807bbdf427e271fffcc518a0315:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T151714Z-fleet03-B06-qform-r12/REPORT.md`.
 
 Its analytic proof gives, for an exact three-variable nonsingular quadratic matrix with two nonzero successive physical pivots, the endpoint constant `C_3<94.356`. The spectral threshold `|lambda_j|>=1` is used there only after the endpoint formula to replace `|det Lambda|` by one; the kernel proof itself is homogeneous and remains valid for arbitrary nonzero eigenvalues with the determinant factor retained. I rederive the needed conditional form in Section 3 rather than assuming independence after any rotation.
 

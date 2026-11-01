@@ -21,7 +21,7 @@ The analytic three-volume gate itself is no longer the obstruction in every five
 
 Pinned Claude/e5 source, read at the requested commit:
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 - `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 - `.../FOURIER_ROUTE_REPORT.md`
 - `.../COUNTEREXAMPLE_SEARCH.md`.
@@ -32,7 +32,7 @@ Theorem D gives `6 sqrt(e) Z^(-1/6)` under row marginal cap `1/2`; D' permits ca
 
 The sharper completed q-dependent natural-volume theorem used below is
 
-- `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+- `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 - `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`,
 
 which gives, for `1<=q<3/2` and natural row marginals `alpha_i<=q/2`,
@@ -41,7 +41,7 @@ which gives, for `1<=q<3/2` and natural row marginals `alpha_i<=q/2`,
 
 The designated partner result actually applied is fleet03/B04 r31:
 
-- `yspennstate/math-open-problems@1c9eda73c97b03bf78aa6750726df00ce3768d21`
+- `private-source-repository@1c9eda73c97b03bf78aa6750726df00ce3768d21`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T095028Z-fleet03-B04-qform-auto11-r31/REPORT.md`.
 
 Its `QFORM-ENTROPY-WEIGHTED-DPRIME-v1` optimizes

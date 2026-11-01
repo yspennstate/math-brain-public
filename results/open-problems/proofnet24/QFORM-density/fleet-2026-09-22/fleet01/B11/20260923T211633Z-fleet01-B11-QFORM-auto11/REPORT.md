@@ -51,7 +51,7 @@ Then
 
 is the graph-defect variance. The exact-graph endpoint is `q^(B)=0`; the punctured collar has `rho_S,rho_T>0`, possibly arbitrarily small.
 
-The completed fleet02/B11 theorem at `math-open-problems@25c25e15fa0f570e7b0b1a2a9fab0811eda07113`, with its r41 addendum at `c6063d311ba25c0f98dbc4add4090b51607062bb`, proves for a nonzero 3D physical crossing matrix `C_cross`
+The completed fleet02/B11 theorem at `private-source@25c25e15fa0f570e7b0b1a2a9fab0811eda07113`, with its r41 addendum at `c6063d311ba25c0f98dbc4add4090b51607062bb`, proves for a nonzero 3D physical crossing matrix `C_cross`
 
 `||p_Q||_infinity <= 6 |det C_cross|^(-1/3)`,                              (1.4)
 
@@ -66,8 +66,8 @@ The goal of this run is not to treat a small graph defect as a small random erro
 
 Two previously proved fleet01/B11 analytic receivers are used as immutable inputs:
 
-1. `QFORM-SUBCRITICAL-HUB-PLANAR-CORE-v1`, `math-open-problems@cedc867395f462e31df64232907480cea07db3d5`, which for an independent cap-one scalar and an independent planar vector of joint density cap `M` gives `||p_Q||_infinity <= B(r,M)/sigma` when the 3D Hessian has `sigma_min >= sigma` and normalized scalar pivot at most `r<1`.
-2. `QFORM-ROUGH-HUB-FULL3-DISCRIMINANT-v1`, canonical in the preceding fleet01/B11 run `math-open-problems@5aa9163cd7259b345e1ec802e27dbadaed68cbba`, which in the scalar-plus-two-product-forms geometry gives
+1. `QFORM-SUBCRITICAL-HUB-PLANAR-CORE-v1`, `private-source@cedc867395f462e31df64232907480cea07db3d5`, which for an independent cap-one scalar and an independent planar vector of joint density cap `M` gives `||p_Q||_infinity <= B(r,M)/sigma` when the 3D Hessian has `sigma_min >= sigma` and normalized scalar pivot at most `r<1`.
+2. `QFORM-ROUGH-HUB-FULL3-DISCRIMINANT-v1`, canonical in the preceding fleet01/B11 run `private-source@5aa9163cd7259b345e1ec802e27dbadaed68cbba`, which in the scalar-plus-two-product-forms geometry gives
 
 `||p_Q||_infinity <= 128 (|a det H| G)^(-1/4)`                              (1.6)
 
@@ -308,10 +308,10 @@ This is strictly narrower than the previous `same-bank shear` debt: finite one- 
 
 ## Immutable sources consumed
 
-- fleet03/B11 r40 punctured-collar geometry: `yspennstate/math-open-problems@2db0a7f81437b6e67efe800f129abebae0e10b4c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T191401Z-fleet03-B11-QFORM-r40/REPORT.md`.
+- fleet03/B11 r40 punctured-collar geometry: `private-source-repository@2db0a7f81437b6e67efe800f129abebae0e10b4c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T191401Z-fleet03-B11-QFORM-r40/REPORT.md`.
 - fleet03/B11 r41 persistent curvature: brain handoff commit `9a2824966c565fbadaf2e537f6fa20955c404fb6`, canonical math source recorded there.
-- fleet02/B11 fixed-puncture crossing theorem: `yspennstate/math-open-problems@25c25e15fa0f570e7b0b1a2a9fab0811eda07113`; r41 addendum terminal worker-math commit `c6063d311ba25c0f98dbc4add4090b51607062bb`.
-- fleet01/B11 subcritical scalar-planar receiver: `yspennstate/math-open-problems@cedc867395f462e31df64232907480cea07db3d5`.
-- fleet01/B11 arbitrary invertible-core rough-hub discriminant receiver: canonical preceding-run math `yspennstate/math-open-problems@5aa9163cd7259b345e1ec802e27dbadaed68cbba`.
+- fleet02/B11 fixed-puncture crossing theorem: `private-source-repository@25c25e15fa0f570e7b0b1a2a9fab0811eda07113`; r41 addendum terminal worker-math commit `c6063d311ba25c0f98dbc4add4090b51607062bb`.
+- fleet01/B11 subcritical scalar-planar receiver: `private-source-repository@cedc867395f462e31df64232907480cea07db3d5`.
+- fleet01/B11 arbitrary invertible-core rough-hub discriminant receiver: canonical preceding-run math `private-source-repository@5aa9163cd7259b345e1ec802e27dbadaed68cbba`.
 
 No scheduler/task state, cadence, email, push notification, public release, workflow, paid model/API/Codex call, credential, permission, cross-account authentication, or installation setting was changed.

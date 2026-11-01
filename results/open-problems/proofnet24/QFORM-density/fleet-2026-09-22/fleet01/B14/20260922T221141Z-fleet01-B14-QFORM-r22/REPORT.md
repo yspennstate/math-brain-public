@@ -14,7 +14,7 @@ attacking: translation-uniform rank-one log-star smoothing by combining the inde
 
 Assigned partner result actually used: fleet02/B14 r21, `QFORM-RADIAL-LEAKAGE-BATHTUB-v1`, canonical proof
 
-`yspennstate/math-open-problems@2ca523ac73b814a97e846de8d37a932c127eecfb:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T220604Z-fleet02-B14-QFORM-r21/REPORT.md`.
+`private-source-repository@2ca523ac73b814a97e846de8d37a932c127eecfb:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T220604Z-fleet02-B14-QFORM-r21/REPORT.md`.
 
 For independent cap-one coordinates X, rank-d L, G=LL^T, arbitrary a, `Y=G^{-1/2}(LX-a)`, and nonincreasing Borel psi,
 
@@ -22,7 +22,7 @@ For independent cap-one coordinates X, rank-d L, G=LL^T, arbitrary a, `Y=G^{-1/2
 
 Second dependency: the completed physical-pair logarithmic envelope
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 If B is an invertible indefinite physical 2x2 block, `D=|det B|`, `kappa=sigma_min(B)`, and after completing this pair the random critical value is R, then for every r>0,
 

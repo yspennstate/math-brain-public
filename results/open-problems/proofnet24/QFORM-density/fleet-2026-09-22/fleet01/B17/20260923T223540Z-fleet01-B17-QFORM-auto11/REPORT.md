@@ -9,7 +9,7 @@ Status: **PROVED SUPPORTING SHARP-WITNESS THEOREM**. The full unrestricted QFORM
 
 The exact second-order three-bank Edgeworth/coarea formula used below is the completed fleet03/B17 report
 
-`yspennstate/math-open-problems@a7639f687efd2a693ba6ad74e87a94a3aed5cfe2`
+`private-source-repository@a7639f687efd2a693ba6ad74e87a94a3aed5cfe2`
 
 at
 
@@ -27,7 +27,7 @@ The exact polynomials `h4,h6,h8,k44` are those proved there. No post-rotation in
 
 The designated partner result actually applied is fleet02/B17
 
-`yspennstate/math-open-problems@b2deb6e86032549777cc1197407cadf01f8cc6e6`,
+`private-source-repository@b2deb6e86032549777cc1197407cadf01f8cc6e6`,
 
 main report
 

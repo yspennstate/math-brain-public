@@ -3,7 +3,7 @@ attacking: optimize the fresh third-volume projection/tail certificate, then tes
 
 # Early substantive checkpoint
 
-Fresh source reviewed: `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md` and `PEER_TAIL_EXTENSION.md`.
+Fresh source reviewed: `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md` and `PEER_TAIL_EXTENSION.md`.
 
 Independent check so far: the exact third-volume marginal matrix `W` satisfies `0<=W<=I` and, using fleet01/B20's `T2 E2<=3 E3`, also `W <= (3/T2) M M^T`, where `T2=sum_{j>=3}s_j(M)^2`. Therefore for every orthogonal projection `P`, with `l_i=P_ii` and `eps=||(I-P)M||op`,
 

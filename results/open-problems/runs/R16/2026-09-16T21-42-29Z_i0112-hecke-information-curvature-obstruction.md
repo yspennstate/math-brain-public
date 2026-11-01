@@ -5,7 +5,7 @@ Problem/source: **R16 / I0112 — Justin Salez (2025), _Modern aspects of Markov
 # R16 — exact Hecke information lift; negative-curvature obstruction to the naive group/curvature route
 
 Run ID: `2026-09-16T21-42-29Z_i0112-hecke-information-curvature-obstruction`  
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Continuity and mandatory state recovery
 

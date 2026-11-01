@@ -294,8 +294,8 @@ Thus a fixed independent Gaussianized extra minority-sign spectral mode creates 
 
 Partner source pins:
 
-- fleet02/B17 r18 handoff proof source: `yspennstate/math-open-problems@97c8874b48c663a7ae131cb3899dbafdb5a31d1c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T194544Z-fleet02-B17-QFORM-r18/REPORT.md`.
-- fleet02/B17 r19 source: `yspennstate/math-open-problems@50913ed00c5943aaf2772473cbf17ddcb5bed090`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T204449Z-fleet02-B17-QFORM-r19/REPORT.md`.
+- fleet02/B17 r18 handoff proof source: `private-source-repository@97c8874b48c663a7ae131cb3899dbafdb5a31d1c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T194544Z-fleet02-B17-QFORM-r18/REPORT.md`.
+- fleet02/B17 r19 source: `private-source-repository@50913ed00c5943aaf2772473cbf17ddcb5bed090`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T204449Z-fleet02-B17-QFORM-r19/REPORT.md`.
 
 ## 7. What remains unpaid
 

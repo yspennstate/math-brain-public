@@ -19,12 +19,12 @@ The live corrections are retained throughout. In particular, no arbitrary-joint 
 
 The completed mathematical inputs actually used are:
 
-1. **Designated partner fleet04/B16 r3**, `yspennstate/math-open-problems@c47c53d4ef3e255431a6fb13960de1794bf2698f`,
+1. **Designated partner fleet04/B16 r3**, `private-source-repository@c47c53d4ef3e255431a6fb13960de1794bf2698f`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260923T211939Z-fleet04-B16-QFORM-r3/REPORT.md`.
    Its balanced near-coloop packet supplies the exact innovation/slope identity and, on the slope-dominant branch,
    `delta_J^2+delta_K^2<epsilon/2` and `d^T G_JG_K d>epsilon/2`.
-2. **Two-bank exact identity**, fleet01/B16 at `yspennstate/math-open-problems@178419f09a3e2c7629d4e7ccc203b63a433916a5`, which supplies the least-squares coordinates used below.
-3. **Zero-pivot conditional trace theorem**, fleet01/B16 at `yspennstate/math-open-problems@1bbe7c7c194bc92e10fc9c3cb3eb548d65e7043d`, used in Section 7 on the authentic family from the preceding B16 run.
+2. **Two-bank exact identity**, fleet01/B16 at `private-source-repository@178419f09a3e2c7629d4e7ccc203b63a433916a5`, which supplies the least-squares coordinates used below.
+3. **Zero-pivot conditional trace theorem**, fleet01/B16 at `private-source-repository@1bbe7c7c194bc92e10fc9c3cb3eb548d65e7043d`, used in Section 7 on the authentic family from the preceding B16 run.
 4. The preceding same-slot mechanism obstruction, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260924T005411Z-fleet03-B16-QFORM-r38/REPORT.md`, which showed that the hub-first positive scalar-root half-potential diverges logarithmically along an authentic target family. The present run changes mechanism rather than repeating that positive-root trace.
 
 ## 2. Balanced two-bank notation

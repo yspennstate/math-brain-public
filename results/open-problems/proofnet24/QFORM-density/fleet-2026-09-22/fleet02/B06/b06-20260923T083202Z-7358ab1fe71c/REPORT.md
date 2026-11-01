@@ -13,9 +13,9 @@ attacking: near-collinear shared-coefficient zero-anchor branch: use the residua
 
 Completed inputs actually used:
 
-1. fleet02/B06 weighted affine-fiber product-projection theorem, `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`: for two affine forms of an independent cap-one product source with coefficient-row area `Delta`, the joint density is at most `e/Delta`.
-2. designated partner fleet03/B06 r29, canonical mathematics `yspennstate/math-open-problems@83e20dbeb976ade9553a5dbee5344faceb723441`, plus its r28 anchored currency source `yspennstate/math-open-problems@36cc5730f42c76c15fdc330dc4b47beec060b8fd`. In the zero-anchor two-hub chamber the full coefficient rows satisfy `A0 B0 > sqrt(127/800) G^2`; the r29 transverse receiver pays `sin(theta)>=1/4` by `<20.233/G` and leaves the near-collinear tube.
-3. newest-Claude source `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, Theorem MF (mixed Fresnel): one genuine heavy original coordinate coupled to a spread leaf direction plus one spread quadratic direction yields `|t|^{-3/2}` with arbitrary linear tilts and diagonal leaf curvature retained.
+1. fleet02/B06 weighted affine-fiber product-projection theorem, `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`: for two affine forms of an independent cap-one product source with coefficient-row area `Delta`, the joint density is at most `e/Delta`.
+2. designated partner fleet03/B06 r29, canonical mathematics `private-source-repository@83e20dbeb976ade9553a5dbee5344faceb723441`, plus its r28 anchored currency source `private-source-repository@36cc5730f42c76c15fdc330dc4b47beec060b8fd`. In the zero-anchor two-hub chamber the full coefficient rows satisfy `A0 B0 > sqrt(127/800) G^2`; the r29 transverse receiver pays `sin(theta)>=1/4` by `<20.233/G` and leaves the near-collinear tube.
+3. newest-Claude source `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, Theorem MF (mixed Fresnel): one genuine heavy original coordinate coupled to a spread leaf direction plus one spread quadratic direction yields `|t|^{-3/2}` with arbitrary linear tilts and diagonal leaf curvature retained.
 
 ## 2. New theorem: max-reciprocal weighted fiber receiver
 

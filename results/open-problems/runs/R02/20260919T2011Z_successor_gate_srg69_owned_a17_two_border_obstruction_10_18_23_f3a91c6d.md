@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this was not 
 
 # R02 CLOSABLE OUTSIDE — SRG69 enters CLOSABLE but owned; exact A17 two-border obstruction
 
-Date: 2026-09-19 UTC. Repository/branch: private `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-19 UTC. Repository/branch: private `private-source-repository` / `master`.
 
 R02 remains on the post-I0095 successor-admission gate. I did **not** restart the retired six-run I0095 search, reset its stagnation counter, or resume blind enumeration. The fixed source metric remains the explicit order-17 sign matrix with exact discrepancy 7,
 

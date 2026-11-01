@@ -26,21 +26,21 @@ Accordingly, the former `<260/s` closure claim from the first draft is withdrawn
 
 Immediate normal-form predecessor:
 
-- `yspennstate/math-open-problems@12e2174445fbc824279bf1376da1346454d7060a`
+- `private-source-repository@12e2174445fbc824279bf1376da1346454d7060a`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T002432Z-fleet03-B11-QFORM-r45/REPORT.md`.
 
 It gives the exact null-pivot spectral normal form used below.
 
 The r44 shared-hub tensor receiver, whose scope is respected here, is:
 
-- `yspennstate/math-open-problems@388ba1f1ccf6a89dad0ca0a0fdb71d281ad6239b`
+- `private-source-repository@388ba1f1ccf6a89dad0ca0a0fdb71d281ad6239b`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T231333Z-fleet03-B11-QFORM-r44/REPORT.md`.
 
 Its physical application assumes a whole rank-one interbank block and then gives a continuous density with a `T^{-1/6}` bound. This report does not invoke it outside that premise.
 
 The completed designated partner result is fleet04/B11 r6:
 
-- `yspennstate/math-open-problems@30555c1ca97752e10f5089ccd95f8514c704be5a`
+- `private-source-repository@30555c1ca97752e10f5089ccd95f8514c704be5a`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T131400Z-fleet04-B11-extension-mass-r6/REPORT.md`.
 
 For a physical pair `S={i,j}`, with `g_S=||r_i wedge r_j||^2`, it proves

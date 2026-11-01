@@ -106,7 +106,7 @@ alpha_h=1/2,
 
 alpha_i=1/(2m)+2/m=5/(2m),   i in U_L or V_L.
 
-For m>=8, every alpha_i<=1/2. The completed pinned `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` Theorem D therefore applies to this actual original-coordinate cut. It gives
+For m>=8, every alpha_i<=1/2. The completed pinned `private-source@e5f71d79eff325201dd0274053d20268ce65b837` Theorem D therefore applies to this actual original-coordinate cut. It gives
 
 boxed:
 |phi_Q(t)| <= min{1,K |t|^(-3/2)},

@@ -3,7 +3,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 # R7-06 admission — G0008 / axis two-point connectivity monotonicity on the square lattice
 
 Date of source/status review: **2026-09-18**  
-Repository: `yspennstate/math-open-problems`, branch `master`  
+Repository: `private-source-repository`, branch `master`  
 R7-06 native ID: `6aabe827777c8191a43330b4a87d481d`  
 Own root: `research7_2026-09-17/R7-06/`  
 Selection shard: `sum(ord(c) for c in "G0008") % 7 = 5`  

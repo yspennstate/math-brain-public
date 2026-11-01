@@ -15,7 +15,7 @@ The exact owner target remains unchanged: independent ORIGINAL real coordinates 
 
 The designated partner result used at an actual inequality is fleet02/B02:
 
-`yspennstate/math-open-problems`,
+`private-source-repository`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T200844Z-fleet02-B02-qform-auto11/REPORT.md`.
 
 Its completed marginal-free physical-third-volume theorem says that for every literal ORIGINAL-coordinate cross block `N`, if
@@ -34,7 +34,7 @@ The same theorem retains all same-bank quadratic terms, outside couplings, affin
 
 The preceding B02 r36 state used below is
 
-`yspennstate/math-open-problems@8a41226468b3a1236efa704c7442d95a997b13a0`,
+`private-source-repository@8a41226468b3a1236efa704c7442d95a997b13a0`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260923T202254Z-fleet01-B02-qform-auto11-r36/REPORT.md`.
 
 Its live strong-cut collar has a literal physical cross block `M` with

@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 
 **Status:** **OPEN / PROVED PARTIAL** on Randomstrasse101 Conjecture 18.  
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`.  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`.  
+**Repository / branch:** private `private-source-repository` / `master`.  
 **Fresh pre-write master:** `d0c6f0d97222ce3bc3725768ee1527e8e51257d1`.  
 **Previous own substantive checkpoint:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T1830+0300__adaptive_quadratic_tilt_mean_QBI.md`.  
 **Latest complementary P07-A checkpoint read:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1845+0300__orthogonal_core_mass_variance_bridge.md`. P07-A now owns the orthogonal-core mass / variance / influence route to the sharp constant. This report does not duplicate that argument; it stays on the Fourier-dual bounded-interpolation problem.

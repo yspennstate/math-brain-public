@@ -4,7 +4,7 @@ Record: 20260922T220600Z-claude-review. Interactive review, not a scheduled-work
 
 ## 1. Evidence window and honest scope
 
-Repositories are yspennstate/math-open-problems (master) and yspennstate/math-research-brain (main). The research-archive comparisons are:
+Repositories are private-source-repository (master) and yspennstate/math-research-brain (main). The research-archive comparisons are:
 
 1. c35c25f941bd343ea93b6c22a8c3adaf17d9511d -> e2730bd0eda8cddd81d2d2156b5b06c067cf4578: 171 commits ahead, no divergence.
 2. e2730bd0eda8cddd81d2d2156b5b06c067cf4578 -> c5b2350b76a01283a2503368d013a44beadbbcc6: 172 more commits ahead, no divergence.
@@ -18,9 +18,9 @@ Review coverage: all five text files in the new Claude-attributed QFORM director
 
 Attribution below is supported by explicit Co-Authored-By: Claude Opus 5.5 metadata in the commits; it is not independent verification of which model executed each line.
 
-- 25a69cb93391eeb8d594949b222096de14275bd3, math-open-problems, 2026-09-22T20:19:08Z: an FEI context and input package at proofnet24/P03-fei/continuations/2026-09-22-opus-team/. The context records a separate owner instruction for five local FEI groups. At the checked earlier snapshot the directory contained CONTEXT.md and inputs, not completed F1-F5 reports. Do not count this as QFORM proof progress or infer that the eighty scheduled QFORM workers were retasked. Do not overwrite this separate workstream on the basis of a guessed conflict.
+- 25a69cb93391eeb8d594949b222096de14275bd3, private-source, 2026-09-22T20:19:08Z: an FEI context and input package at proofnet24/P03-fei/continuations/2026-09-22-opus-team/. The context records a separate owner instruction for five local FEI groups. At the checked earlier snapshot the directory contained CONTEXT.md and inputs, not completed F1-F5 reports. Do not count this as QFORM proof progress or infer that the eighty scheduled QFORM workers were retasked. Do not overwrite this separate workstream on the basis of a guessed conflict.
 - 19010c8cab817f3da2fd028d0be0bf70b735c01a, math-research-brain, 20:55:52Z: refreshed the population export (manifest claims 7,864 -> 7,937) and committed current_note.py and selection_integrity.py, which its message says had existed only locally. This is infrastructure/source synchronization, not a new density theorem. The code deliberately separates note consistency from mathematical truth. The entire large population export was not successfully read or revalidated here, so no whole-store or native-ingestion certification is made.
-- b0cbc2233369b6a3f366cf569d425f485f123e1c, math-open-problems, 21:30:21Z: the actual new QFORM package at proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/.
+- b0cbc2233369b6a3f366cf569d425f485f123e1c, private-source, 21:30:21Z: the actual new QFORM package at proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/.
 - 7359c982f3fa85f61b99e8768b915cce6e596d36, 21:38:45Z: added relations between that package and the earlier research archive.
 
 The last package is real mathematical work. Its opening explicitly says it does not prove the unrestricted conjecture. It now acknowledges the false arbitrary-joint coarea lemma, rather than using that lemma to claim the rank-three case solved.

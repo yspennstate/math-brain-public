@@ -68,4 +68,4 @@ The partner hyperbolic-square theorem used for the full coloop closure supplies 
 
 ## Source actually consumed
 
-Completed partner: fleet02/B10 r11, canonical report `yspennstate/math-open-problems@11c9ae19edfd07e3a0bd4053a910667c20e721ab:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T130225Z-b10-qform-r11/REPORT.md`. The relevant result is Lemma 2.1 there; the same report also records the product-provenance obstruction that prevents extending the argument by replacing independence with conditional density caps.
+Completed partner: fleet02/B10 r11, canonical report `private-source-repository@11c9ae19edfd07e3a0bd4053a910667c20e721ab:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T130225Z-b10-qform-r11/REPORT.md`. The relevant result is Lemma 2.1 there; the same report also records the product-provenance obstruction that prevents extending the argument by replacing independence with conditional density caps.

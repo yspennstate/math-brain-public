@@ -6,8 +6,8 @@ attacking: near-collinear transverse high-leverage branch: turn partner exact ra
 Programme: `QFORM-DENSITY-3EIG-20260922`. Full conjecture remains OPEN. This checkpoint is supporting mathematics only.
 
 Source pins actually consumed before this checkpoint:
-- partner fleet03/B06 r32: `yspennstate/math-open-problems@9583647ef39bb355508b8f8fb49f05ded8b594f2`;
-- newest-Claude package required by owner: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially Theorem F / Theorem C and the counterexample notes.
+- partner fleet03/B06 r32: `private-source-repository@9583647ef39bb355508b8f8fb49f05ded8b594f2`;
+- newest-Claude package required by owner: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially Theorem F / Theorem C and the counterexample notes.
 
 ## 1. Determinant-only ruled-side extension
 

@@ -1,6 +1,6 @@
 # POS3 structural handoff — fleet01/B10
 
-Scientific addendum: `yspennstate/math-open-problems`, `proofnet24/collective-POS3/fleet01/B10/20260922T061815Z-b10-pos3-r11/STRUCTURAL_ADDENDUM.md`, blob `a9e2c6d542d02393ea5b0f7927bc61e6ba4fd651`.
+Scientific addendum: `private-source-repository`, `proofnet24/collective-POS3/fleet01/B10/20260922T061815Z-b10-pos3-r11/STRUCTURAL_ADDENDUM.md`, blob `a9e2c6d542d02393ea5b0f7927bc61e6ba4fd651`.
 
 This supplements the same run's cross-anchor-PQD refutation. New arbitrary-size step:
 

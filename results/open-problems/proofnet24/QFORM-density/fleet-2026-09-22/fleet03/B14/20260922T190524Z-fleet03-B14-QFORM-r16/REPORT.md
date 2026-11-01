@@ -71,7 +71,7 @@ q_z(x)=x^TBx+\ell(z)^Tx+c(z).
 
 Because `B` is invertible, every affine vector `ell(z)` belongs to `Ran(B)=R^3`. The completed partner theorem fleet04/B14, `QFORM-CENTERED-AFFINE-LOCALIZATION-EQUIVALENCE-v1`, gives exact constant-preserving reduction of this cap-one affine problem to centered compact finite-fragment product inputs, with no support-diameter, fragment-count, separation or tail tax. Its canonical source is
 
-`yspennstate/math-open-problems@1250c776b3840b8494ace461b27541f8e156e9bf:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T182134Z-fleet04-B14-centered-affine-r3/REPORT.md`.
+`private-source-repository@1250c776b3840b8494ace461b27541f8e156e9bf:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T182134Z-fleet04-B14-centered-affine-r3/REPORT.md`.
 
 Consequently it is enough to establish a bound uniform in the affine vector and the localized supports. The proof below in fact works directly for arbitrary cap-one laws, so this partner theorem is applied as an exact no-loss localization/translation transfer rather than as an extra hypothesis.
 
@@ -90,7 +90,7 @@ For independent cap-one coordinates `Y=(Y_1,Y_2)`, every invertible symmetric `2
 
 The sharper constant applies because in two physical dimensions `N` is invertible, hence every affine vector lies in `Ran(N)`. This is the range-compatible case of `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, canonical source
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 ### Input 2: indefinite physical-pair logarithmic smoothing
 
@@ -108,7 +108,7 @@ then
 
 This is equation (1.3) of `QFORM-PAIR-LOG-SMALLBALL-SMOOTHING-v1`, canonical source
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 For a one-dimensional remainder `R=rZ^2+sZ+d` with `Z` cap one, the rank-one affine small-ball lemma in the rank-two-fusion report gives
 

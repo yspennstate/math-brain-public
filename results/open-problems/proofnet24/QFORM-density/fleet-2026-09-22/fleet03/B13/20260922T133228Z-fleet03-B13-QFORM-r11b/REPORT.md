@@ -24,7 +24,7 @@ This run proves a quantitative extension to **every finite number `m` of project
 
 Consumed in full:
 
-`yspennstate/math-open-problems@9bf04fb890e99db8ddd4e9bfd176f654bc5a82cd`
+`private-source-repository@9bf04fb890e99db8ddd4e9bfd176f654bc5a82cd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T125435Z-fleet02-B13-80c2a32d/REPORT.md`.
 
@@ -34,7 +34,7 @@ It proves the exact three-bank factorization and the rank-three density bound `4
 
 Consumed in full:
 
-`yspennstate/math-open-problems@289810e1f075755898f573ee5b863ad3fa9af5b8`
+`private-source-repository@289810e1f075755898f573ee5b863ad3fa9af5b8`
 
 `qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`.
 
@@ -46,7 +46,7 @@ If three independent coordinates have densities at most one and the symmetric `3
 
 Consumed in full:
 
-`yspennstate/math-open-problems@8f66972059845cb23d014fa20efee714b6655b99`
+`private-source-repository@8f66972059845cb23d014fa20efee714b6655b99`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/fleet02-B12-20260922T1251Z-qform-additional-eigenvalue/REPORT.md`.
 

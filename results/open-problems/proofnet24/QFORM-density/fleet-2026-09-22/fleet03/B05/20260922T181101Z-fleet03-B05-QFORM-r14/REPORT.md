@@ -25,7 +25,7 @@ The live corrections against pointwise van der Corput, post-rotation independenc
 
 The designated partner `fleet04/B05` was checked at its canonical QFORM math and handoff roots immediately before this derivation; no completed current-QFORM artifact was present, so no result is fabricated for that slot. A completed compatible fleet04 theorem is applied quantitatively in Section 7: fleet04/B16 `QFORM-NESTED-HEAVY-ZERODIAG-ATOM-v1` / its fixed-pair determinant identity, canonical source
 
-`yspennstate/math-open-problems@58c23c624db350cf44f0c836daa3582eb7e2d266`,
+`private-source-repository@58c23c624db350cf44f0c836daa3582eb7e2d266`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T161909Z-fleet04-B16-QFORM-r2/REPORT.md`.
 

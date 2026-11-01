@@ -25,7 +25,7 @@ No rotation of the independent random coordinates, law-uniform pointwise Fresnel
 
 The complete source
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`,
 
 proves the following pre-inversion inequalities for an ORIGINAL-coordinate cross block `B` between disjoint coordinate banks. Put
@@ -51,7 +51,7 @@ The source explicitly retains arbitrary same-bank measurable phases, affine term
 The completed fleet04/B18 result
 
 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`,
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`,
 
 proves, after completing a square in one ORIGINAL independent coordinate with coefficient `a!=0`, the pointwise domination
@@ -205,7 +205,7 @@ The fresh fleet03/B08 r27 proof begins from the diffuse compiler currency
 
 for an ORIGINAL-coordinate cross block `B`; canonical report:
 
-`yspennstate/math-open-problems@e875d54d4a946d399466cb6afa1fc37da12a11d2`,
+`private-source-repository@e875d54d4a946d399466cb6afa1fc37da12a11d2`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T042303Z-fleet03-B08-qform-diffuse-r27/REPORT.md`.
 
 B08 needs extra routing because it does not assume a separate square pivot. In the **B06 outer-pivot context**, however, Theorem 4.1 consumes that same third-volume packet immediately, without asking whether the normalized third-volume law has diffuse inclusion marginals and without routing through an anchored hub:

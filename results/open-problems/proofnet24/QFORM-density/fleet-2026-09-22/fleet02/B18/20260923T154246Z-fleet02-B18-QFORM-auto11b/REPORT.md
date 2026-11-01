@@ -18,7 +18,7 @@ The incoming B18 state had reduced the exact-rank-three heavy-anchor obstruction
 
 ### 2.1 Pinned e5f scalar square peel
 
-The required source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md` and `FOURIER_ROUTE_REPORT.md`, proves the original-coordinate scalar square peel
+The required source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md` and `FOURIER_ROUTE_REPORT.md`, proves the original-coordinate scalar square peel
 
 `Dens(Q) <= |a|^(-1/2) H_(1/2)(S)`,                            (2.1)
 
@@ -28,7 +28,7 @@ where `a=A_ii!=0`, `S=A/A_ii` is the scalar Schur complement and `H_(1/2)(S)=sup
 
 The completed source
 
-`math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`,
 
 proves, for a rank-two quadratic form in independent cap-one ORIGINAL coordinates with arbitrary affine term,
@@ -54,7 +54,7 @@ This is the first completed e5f implication actually spent below.
 
 The completed pair-log source
 
-`math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`,
 
 states: if an original-coordinate principal block is exact rank three with its three nonzero eigenvalues of modulus at least `s`, and two ORIGINAL coordinates form an invertible indefinite pair `B`, then the full ambient quadratic form satisfies
@@ -208,7 +208,7 @@ The coefficient-space basis `(n,t)` is used only to read the compression of `M`;
 
 The completed designated-partner result fleet03/B18 r28 is
 
-`math-open-problems@43b16ba3992035298289170540682e8aa62a9ad4`,
+`private-source@43b16ba3992035298289170540682e8aa62a9ad4`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T120257Z-fleet03-B18-QFORM-r28/REPORT.md`.
 
 Its `QFORM-SCHUR-NULLHUB-TRANSVERSE-COMPILER-v1` says that for an exact Schur-isotropic null hub, if every residual ORIGINAL physical row has transverse leverage at most `1/2`, then

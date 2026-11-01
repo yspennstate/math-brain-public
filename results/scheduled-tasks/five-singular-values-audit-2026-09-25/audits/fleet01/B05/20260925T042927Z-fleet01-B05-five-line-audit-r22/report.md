@@ -1,6 +1,6 @@
 # B05 r22 audit report
 
-Source: math-open-problems commit ec211ba2d77a4a9850168c6af1574ea651feaa7c, short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, PDF SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
+Source: private-source commit ec211ba2d77a4a9850168c6af1574ea651feaa7c, short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, PDF SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
 
 Reviewed in this run: related-work line 74, section map line 76, bibliography/end matter lines 647-675, and whole-source reference/citation consistency.
 

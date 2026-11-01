@@ -15,15 +15,15 @@ The proof below respects the current corrections: no law-uniform pointwise quadr
 
 ## 2. Sources actually used
 
-1. Required e5 source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. I use its proved Theorem MF exactly at its diagonal-plus-low-rank light-block scope. If `H` is a heavy physical set, `A_LL=D_L+S Lambda S^T`, and the mixed Gram `Gamma` has physical row leverages at most `1/2`, then
+1. Required e5 source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. I use its proved Theorem MF exactly at its diagonal-plus-low-rank light-block scope. If `H` is a heavy physical set, `A_LL=D_L+S Lambda S^T`, and the mixed Gram `Gamma` has physical row leverages at most `1/2`, then
 
 `|phi(t)| <= (4 pi)^(|H|+r/2) 2^(-|H|) |t|^(-|H|-r/2) prod |lambda_k|^(-1/2) det(Gamma)^(-1/2)`.
 
-2. Finite-dimensional spectral receiver: `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Corollary 4.1. On `d` independent cap-one ORIGINAL coordinates, if the actual symmetric quadratic matrix has three eigenvalues of modulus at least `sigma`, uniformly over arbitrary affine terms,
+2. Finite-dimensional spectral receiver: `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`, `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Corollary 4.1. On `d` independent cap-one ORIGINAL coordinates, if the actual symmetric quadratic matrix has three eigenvalues of modulus at least `sigma`, uniformly over arbitrary affine terms,
 
 `||p_q||_infinity <= 2 sqrt(6 pi d)/sigma`.                         (2.1)
 
-3. Designated partner fleet03/B07, latest completed r21b: `yspennstate/math-open-problems@614efa23e499755678e37d2825a10938074a7021`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T013716Z-fleet03-B07-qform-r21b/REPORT.md`. It supplies colored third-compound packet masses
+3. Designated partner fleet03/B07, latest completed r21b: `private-source-repository@614efa23e499755678e37d2825a10938074a7021`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T013716Z-fleet03-B07-qform-r21b/REPORT.md`. It supplies colored third-compound packet masses
 
 `P0>=1/5184, P1>=1/3125, P2>=1/512, P3>=1/18`,                       (2.2)
 

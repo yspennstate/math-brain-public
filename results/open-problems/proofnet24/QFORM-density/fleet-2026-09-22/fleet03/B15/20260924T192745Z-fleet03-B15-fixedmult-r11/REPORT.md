@@ -12,7 +12,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 
 Pinned analytic baseline:
-- `yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f`
+- `private-source-repository@eeb752c8943536541b34b42b8bf48e924f4d3d2f`
 - `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`
 - git blob `19fb119877426b640b2c0dae19ec2f78a399fe11`.
 
@@ -21,7 +21,7 @@ The separately written nine-eigenvalue reconstruction at
 was also compared on the B15 analytic interfaces (Fourier normalization, Gaussian inversion, Riesz half-potential, pair half-potential, and final density/interval interpretation). No disagreement was found on those interfaces.
 
 The multiplicity-eight structural chain and its exact retuning source used here is:
-- `yspennstate/math-open-problems@e9a425b9ec3455dfe13b787fb259dec11aa1b176`
+- `private-source-repository@e9a425b9ec3455dfe13b787fb259dec11aa1b176`
 - `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet03/B13/20260924T153511Z-fleet03-B13-FIXMULT-auto11/REPORT.md`.
 
 Two independent end-to-end reviews of the underlying s8 architecture are preserved at:
@@ -307,7 +307,7 @@ This is a **candidate retuning of the independently reviewed s8 architecture**. 
 
 The completed affine fixed-instance theorem
 [
-	ext{`yspennstate/math-open-problems@b8cb4aa22c840d8f4fc76bcca6d0cb49d4aeb9f9`}
+	ext{`private-source-repository@b8cb4aa22c840d8f4fc76bcca6d0cb49d4aeb9f9`}
 ]
 at
 [
@@ -333,7 +333,7 @@ Pr{X^TAXin I}<291|I|.
 ]
 Fleet04/B15 Theorem 6.1 at
 [
-	ext{`yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`}
+	ext{`private-source-repository@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`}
 ]
 [
 	ext{`proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T221909Z-fleet04-B15-ruled-trace-c0-r8/REPORT.md`}

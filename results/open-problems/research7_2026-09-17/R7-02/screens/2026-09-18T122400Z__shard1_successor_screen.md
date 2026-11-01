@@ -3,7 +3,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 # R7-02 shard-1 successor admission screen — 2026-09-18
 
 Native identity: **P64**.  
-Repository: `yspennstate/math-open-problems`, branch `master`.  
+Repository: `private-source-repository`, branch `master`.  
 Start-of-run captured master SHA: `de33c410399b9a6ef2a2831b22a47f6068db4aa5`.  
 Fresh pre-delivery master SHA observed after concurrent fleet writes: `f2e41ca0747ec1458660abc1ede9985f65ec4362`.  
 Previous own immutable report: `research7_2026-09-17/R7-02/runs/2026-09-18/2026-09-18T113900Z__report.md`, creation commit `14f7146bf17dd2e777baf9a3b1b067fd5848456a`.

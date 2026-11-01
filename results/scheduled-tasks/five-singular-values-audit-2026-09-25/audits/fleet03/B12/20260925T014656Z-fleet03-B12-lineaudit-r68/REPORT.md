@@ -1,7 +1,7 @@
 # fleet03/B12 r68 audit report
 
 Objective: QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925.
-Source: yspennstate/math-open-problems commit ec211ba2d77a4a9850168c6af1574ea651feaa7c, exact short/short.pdf and short/short.tex only.
+Source: private-source-repository commit ec211ba2d77a4a9850168c6af1574ea651feaa7c, exact short/short.pdf and short/short.tex only.
 
 This run resumed the prior B12 pass from line 1. New coverage files audit 1-394, 406-443, and 511-675. Prior run r67 audited 395-405 and 444-510. Thus B12 has now completed one cumulative clause-level pass over all 675 TeX lines. A passing pass is not a stop condition; the next run must begin a second adversarial pass.
 

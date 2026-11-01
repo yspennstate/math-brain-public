@@ -13,9 +13,9 @@ The current correction set is applied. In particular, law-uniform pointwise one-
 
 Source pins actually used:
 
-1. fleet01/B08, `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, `yspennstate/math-open-problems@fce159beaecf924a3e500dc7865ae61f8b35c932`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260922T114116Z-fleet01-B08-qform-r11/REPORT.md`. It proves a `3e` density bound for a `k>=3` diffuse orthonormal frame with row leverage at most `1/2`, even after arbitrary coordinate-separable phases.
-2. fleet03/B05, `yspennstate/math-open-problems@c828d2ee2f8acef5eb96892bc8a9a25594db0f51`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T113800Z-fleet03-B05-qform-r11/REPORT.md`. It independently supplies the small-leverage Fresnel--Brascamp--Lieb mechanism and explicitly uses the previous B07 Walsh stress family.
-3. Previous own B07 result, `yspennstate/math-open-problems@7ba557b8854ea86dcdc22a342d6fdd73d6882c6a`, established the exterior-power determinant-mass identities and the failure of fixed-size principal-block extraction on a rank-three Walsh projection.
+1. fleet01/B08, `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, `private-source-repository@fce159beaecf924a3e500dc7865ae61f8b35c932`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260922T114116Z-fleet01-B08-qform-r11/REPORT.md`. It proves a `3e` density bound for a `k>=3` diffuse orthonormal frame with row leverage at most `1/2`, even after arbitrary coordinate-separable phases.
+2. fleet03/B05, `private-source-repository@c828d2ee2f8acef5eb96892bc8a9a25594db0f51`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T113800Z-fleet03-B05-qform-r11/REPORT.md`. It independently supplies the small-leverage Fresnel--Brascamp--Lieb mechanism and explicitly uses the previous B07 Walsh stress family.
+3. Previous own B07 result, `private-source-repository@7ba557b8854ea86dcdc22a342d6fdd73d6882c6a`, established the exterior-power determinant-mass identities and the failure of fixed-size principal-block extraction on a rank-three Walsh projection.
 
 The assigned partner is `fleet03/B07`. No completed current-programme handoff from that slot was visible at the fresh partner checks, so no partner result is fabricated or awaited.
 

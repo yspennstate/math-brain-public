@@ -4,7 +4,7 @@ Run: `20260922T074718Z-fleet03-B20-MOC4-r11`
 Status: `ESSENTIAL_STEP_APPLIED`; full MOC4 remains **OPEN / NOT PROVED / NOT DISPROVED**.  
 Execution: `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`.
 
-Canonical scientific source: `yspennstate/math-open-problems`, `proofnet24/collective-MOC4/fleet03/B20/20260922T074718Z-fleet03-B20-MOC4-r11/REPORT.md`, written in the scientific lineage ending at commit `bb50e416e732f881c9e29e7cda0855d8ebd4d5aa` after report + exact calibration verifier + output.
+Canonical scientific source: `private-source-repository`, `proofnet24/collective-MOC4/fleet03/B20/20260922T074718Z-fleet03-B20-MOC4-r11/REPORT.md`, written in the scientific lineage ending at commit `bb50e416e732f881c9e29e7cda0855d8ebd4d5aa` after report + exact calibration verifier + output.
 
 Consumed exact lead: fleet03/B07 `20260922T064004Z-fleet03-B07-MOC4-r12`, report blob `ec11bc9937109dc0059b8e2ab78a485a9f646e3e`, `MOC4-KERNEL-QUARTIC-RESERVE-v1`.
 

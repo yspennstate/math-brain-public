@@ -17,7 +17,7 @@ No Gaussian, moment, iid, compact-support, log-concavity, or post-rotation indep
 
 The required partner source is fleet02/B20 run `20260922T165822Z-fleet02-B20-QFORM-r13`, canonical report
 
-`yspennstate/math-open-problems@ccd703b260df4eca8b539b6614e2cecdad3e7465`
+`private-source-repository@ccd703b260df4eca8b539b6614e2cecdad3e7465`
 
 at
 

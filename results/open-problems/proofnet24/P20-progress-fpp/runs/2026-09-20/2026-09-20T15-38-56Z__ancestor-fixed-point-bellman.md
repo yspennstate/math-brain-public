@@ -3,7 +3,7 @@ Runtime model family exposed to this session: **GPT-5.6 Sol**. Applied reasoning
 # P20 T10 — ancestor fixed-point Bellman certificate and subset-only Richardson ancestry recursion
 
 Date: 2026-09-20 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Controlling directive: `operations/PROGRESS20_2026-09-20.md`.  
 Canonical parent: `operations/claims/PROB10-10.md`.  
 Model: nearest-neighbor **undirected** FPP on `Z^2` with iid physical-edge weights `Exp(1)`.  

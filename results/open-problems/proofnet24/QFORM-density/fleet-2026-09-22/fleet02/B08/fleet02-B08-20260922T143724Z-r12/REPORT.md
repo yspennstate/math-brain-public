@@ -14,21 +14,21 @@ The target is unchanged: for arbitrary independent real coordinates with probabi
 
 Completed mathematics actually consumed:
 
-1. **Named partner fleet03/B08, block-remainder theorem.** Canonical report `yspennstate/math-open-problems@55d185b63ba44f172d9342b5d89e0875e850e17`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T122924Z-fleet03-B08-qform-diffuse-v2/REPORT.md`. If `A=R Lambda R^T+C`, `R^TR=I_r`, and `C` is block diagonal in original-coordinate blocks whose selected-frame masses have maximum `mu<1/r`, then
+1. **Named partner fleet03/B08, block-remainder theorem.** Canonical report `private-source-repository@55d185b63ba44f172d9342b5d89e0875e850e17`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T122924Z-fleet03-B08-qform-diffuse-v2/REPORT.md`. If `A=R Lambda R^T+C`, `R^TR=I_r`, and `C` is block diagonal in original-coordinate blocks whose selected-frame masses have maximum `mu<1/r`, then
 
    `||p_Q||_infinity <= [4r/((r-2)(1-sqrt(r mu)))] |det Lambda|^(-1/r)`.
 
    Its proof uses an actual union-of-physical-blocks cut and the original-coordinate cross-block Fourier theorem, so arbitrary within-block phases are retained.
 
-2. **Named partner fleet03/B08, optimized full-range diffuse theorem.** Canonical report `yspennstate/math-open-problems@f6bc73f719d1e9dbcaeb06df49913bb84dd274b6`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T142426Z-fleet03-B08-qform-diffuse-v3/REPORT.md`. This controls matrices whose **entire range projection** has small coordinate leverage, including arbitrary extra small eigenvalues. The present run constructs a source-valid family where that full-range hypothesis fails maximally while a localized-coordinate separator still gives a uniform bound.
+2. **Named partner fleet03/B08, optimized full-range diffuse theorem.** Canonical report `private-source-repository@f6bc73f719d1e9dbcaeb06df49913bb84dd274b6`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T142426Z-fleet03-B08-qform-diffuse-v3/REPORT.md`. This controls matrices whose **entire range projection** has small coordinate leverage, including arbitrary extra small eigenvalues. The present run constructs a source-valid family where that full-range hypothesis fails maximally while a localized-coordinate separator still gives a uniform bound.
 
-3. **Original-coordinate cross-block Fourier theorem.** `yspennstate/math-open-problems@8624982153e5a2154e4ae8922d2fe4dc77080efc`, path `proofnet24/QFORM-density/fleet-2026-09-22/interactive/20260922T121109Z-crossblock-and-lower-bounds/REPORT.md`. For a physical cut with rank-`r>2` cross block and singular-value product `Delta`, it gives
+3. **Original-coordinate cross-block Fourier theorem.** `private-source-repository@8624982153e5a2154e4ae8922d2fe4dc77080efc`, path `proofnet24/QFORM-density/fleet-2026-09-22/interactive/20260922T121109Z-crossblock-and-lower-bounds/REPORT.md`. For a physical cut with rank-`r>2` cross block and singular-value product `Delta`, it gives
 
    `||p_Q||_infinity <= [2r/(r-2)] Delta^(-1/r)`
 
    and explicitly allows arbitrary added linear and constant terms. This matters after conditioning a separator.
 
-4. **This slot's whitened physical-block theorem.** `yspennstate/math-open-problems@84657e690f8411d99602ddc772b622686c3874ed`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T124007Z-r11/REPORT.md`. If a physical principal block is `D+R Lambda R^T` with `D` diagonal, `M=R^TR`, and the whitened rows of `R M^{-1/2}` have leverage at most `1/2`, then
+4. **This slot's whitened physical-block theorem.** `private-source-repository@84657e690f8411d99602ddc772b622686c3874ed`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T124007Z-r11/REPORT.md`. If a physical principal block is `D+R Lambda R^T` with `D` diagonal, `M=R^TR`, and the whitened rows of `R M^{-1/2}` have leverage at most `1/2`, then
 
    `||p_Q||_infinity <= [e r/(r-2)] [det(M)|det Lambda|]^(-1/r)`.
 

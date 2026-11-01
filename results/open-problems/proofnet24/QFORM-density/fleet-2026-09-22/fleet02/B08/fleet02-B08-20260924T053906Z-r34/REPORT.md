@@ -33,7 +33,7 @@ This is strictly narrower than the preceding r33 `rank<=4/rank<=7` tube.
 
 The required pinned source was read exactly at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 

@@ -180,7 +180,7 @@ This statement is structural only: `C^sharp` is not silently reinterpreted as a 
 
 The newest completed designated-partner result is fleet02/B07 r19, `QFORM-RANDOMSHIFT-PRODUCT-L3-v1` / `QFORM-ZEROSELF-RANDOMSHIFT-HALFRIESZ-v1`, canonical source
 
-`yspennstate/math-open-problems@0f77cea1670062086117d6fb9cf9147a3ffe9347`
+`private-source-repository@0f77cea1670062086117d6fb9cf9147a3ffe9347`
 
 at
 

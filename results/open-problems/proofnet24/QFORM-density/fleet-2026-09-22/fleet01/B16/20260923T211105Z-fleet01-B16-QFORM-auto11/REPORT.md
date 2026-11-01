@@ -15,13 +15,13 @@ attacking: projection-product interaction at the punctured fresh-hub endpoint; r
 
 The two mathematical sources actually used are source-pinned:
 
-1. **Designated partner fleet02/B16 r36**, `yspennstate/math-open-problems@be8062b160868bcc71aff45a77c56ff2d0501a9a`, report blob `57cf025ef533e6cfad52761553dfc9013d486ec0`. Its theorem `QFORM-FRESH-HUB-DIVISIBLE-TWIST-ABSORPTION-v1` proves
+1. **Designated partner fleet02/B16 r36**, `private-source-repository@be8062b160868bcc71aff45a77c56ff2d0501a9a`, report blob `57cf025ef533e6cfad52761553dfc9013d486ec0`. Its theorem `QFORM-FRESH-HUB-DIVISIBLE-TWIST-ABSORPTION-v1` proves
    
    `||p_Q||_infinity <= 3*2^(2/3) M^(2/3)|gamma^2 kappa|^(-1/3)`
    
    for `Q=2 gamma H L+2LT+alpha L^2+2delta LV+kappa V^2`, where `H` is one untouched independent cap-one physical source and `(L,V)` has joint density cap `M`. The arbitrary twist `T` may depend on the same light sources as `(L,V)`.
 
-2. **Sign-free dependent-pair/fresh-square transducer**, fleet03/B16 r27, `yspennstate/math-open-problems@4388eeb12a94dd167f305554419fd4c986eda04a`, report blob `d49257cf13a631b4ed9c4e15eeb1b21810678c3e`. It proves the root-collar/Schur estimate when the square coordinate itself is an independent source.
+2. **Sign-free dependent-pair/fresh-square transducer**, fleet03/B16 r27, `private-source-repository@4388eeb12a94dd167f305554419fd4c986eda04a`, report blob `d49257cf13a631b4ed9c4e15eeb1b21810678c3e`. It proves the root-collar/Schur estimate when the square coordinate itself is an independent source.
 
 The live corrections are preserved: no independence is inferred after an orthogonal projection; a bounded joint projection density is not inserted directly into an arbitrary indefinite coarea integral; no normalized conditional projection-height cap is used; and no small coefficient multiplying an unbounded source is dropped.
 

@@ -2,7 +2,7 @@
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 
-Pinned baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`. Current master observed before this run's writes: `0aa54bd634644b2922e9faecd003692d7f29e61e`, carrying the same manuscript blob.
+Pinned baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`. Current master observed before this run's writes: `0aa54bd634644b2922e9faecd003692d7f29e61e`, carrying the same manuscript blob.
 
 Status of this note:
 

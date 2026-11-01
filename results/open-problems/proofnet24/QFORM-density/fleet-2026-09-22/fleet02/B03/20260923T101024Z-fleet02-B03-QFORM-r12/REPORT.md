@@ -14,7 +14,7 @@ The unrestricted owner target remains OPEN and global continuity remains separat
 
 ### 1.1 Required newest Claude/e5 input
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
@@ -30,7 +30,7 @@ This is an actual use of the required package, not a bibliography-only citation.
 
 Latest compatible designated-partner result read before this run:
 
-`yspennstate/math-open-problems@f7c9ef92371b6602f9a432a16555c48c2ed45a51`
+`private-source-repository@f7c9ef92371b6602f9a432a16555c48c2ed45a51`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T090012Z-fleet03-B03-QFORM-r29/REPORT.md`.
 
@@ -50,7 +50,7 @@ where `s=s_3(A)`.  Section 5 below uses (1.2)-(1.4) as the exact-cancellation si
 
 The current strict-collar geometry is source-pinned through the fleet02/B03 augmented-BL report and the fleet01/B03 splice as read at
 
-`yspennstate/math-open-problems@ba000d70d1d4f523a2396155a24d5088d5c94802`
+`private-source-repository@ba000d70d1d4f523a2396155a24d5088d5c94802`
 
 paths
 
@@ -62,13 +62,13 @@ and
 
 The exact-coloop endpoint is already paid by
 
-`yspennstate/math-open-problems@ba66d82dd8e99e4b651a0442ef3a1175a953bf90`
+`private-source-repository@ba66d82dd8e99e4b651a0442ef3a1175a953bf90`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T053308Z-fleet03-B14-QFORM-r27/REPORT.md`.
 
 For a unit original-product projection I use the standard sharp cap `sqrt(2)`, recorded with source in
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 

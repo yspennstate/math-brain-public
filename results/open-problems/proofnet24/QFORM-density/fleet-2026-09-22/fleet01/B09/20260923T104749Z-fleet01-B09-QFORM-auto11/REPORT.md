@@ -42,13 +42,13 @@ The coordinate marginal is exactly the physical-row leverage
 
 Three completed source-pinned inputs are used.
 
-1. **fleet02/B09 two-hub Pluecker smoothing**, canonical proof `yspennstate/math-open-problems@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T064043Z-fleet02-B09-QFORM-r13/REPORT.md`: for this diagonal-leaf packet,
+1. **fleet02/B09 two-hub Pluecker smoothing**, canonical proof `private-source-repository@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T064043Z-fleet02-B09-QFORM-r13/REPORT.md`: for this diagonal-leaf packet,
 
 `||p_Q||_infinity <= 2 sqrt(e) [rho det G]^(-1/4)`             (1.6)
 
 whenever `rho>0`; the density is continuous and the same coefficient multiplies every interval length. The physical hub core is arbitrary.
 
-2. **fleet03/B09 weighted EKR stability and chirp-stable pivot**, canonical proof `yspennstate/math-open-problems@e6d2395b5b13bf75552b015668177a0270d3e89f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T091354Z-fleet03-B09-QFORM-r27/REPORT.md`. If `0<rho<1/4`, with
+2. **fleet03/B09 weighted EKR stability and chirp-stable pivot**, canonical proof `private-source-repository@e6d2395b5b13bf75552b015668177a0270d3e89f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T091354Z-fleet03-B09-QFORM-r27/REPORT.md`. If `0<rho<1/4`, with
 
 `tau=(rho/2)^(1/3)`,                                           (1.7)
 
@@ -75,7 +75,7 @@ where
 
 The pivot self-phase is arbitrary; in particular its physical diagonal coefficient is free. This estimate is continuous and linear in interval length.
 
-3. **fleet02/B09 exact rho-zero classification**, canonical proof `yspennstate/math-open-problems@0feb5b58d53a266b5df517982780448aa9b6daf5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T094400Z-fleet02-B09-QFORM-auto11/REPORT.md`: at `rho=0`, the positive Pluecker edge support is exactly a physical star/coloop or a physical triangle. In the star case the coloop row has leverage exactly one.
+3. **fleet02/B09 exact rho-zero classification**, canonical proof `private-source-repository@0feb5b58d53a266b5df517982780448aa9b6daf5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T094400Z-fleet02-B09-QFORM-auto11/REPORT.md`: at `rho=0`, the positive Pluecker edge support is exactly a physical star/coloop or a physical triangle. In the star case the coloop row has leverage exactly one.
 
 ## 2. New deterministic triangle-to-pivot lemma
 
@@ -242,7 +242,7 @@ This is useful precisely in a determinant-balanced packet: once `det G` has a un
 
 During this run fleet02/B09 completed `QFORM-GROUPED-ONEHUB-DENSE-HUB-CURVATURE-v1`, canonical source
 
-`yspennstate/math-open-problems@46f88948cb35d25a7b146a31c223ec83ca23d65a`,
+`private-source-repository@46f88948cb35d25a7b146a31c223ec83ca23d65a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T103752Z-fleet02-B09-QFORM-auto11/REPORT.md`.
 

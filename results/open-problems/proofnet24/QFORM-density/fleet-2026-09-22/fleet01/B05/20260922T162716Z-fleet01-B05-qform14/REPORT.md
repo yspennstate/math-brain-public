@@ -35,7 +35,7 @@ The first essential question is therefore whether one can condition on the genui
 
 Assigned partner fleet02/B05, canonical source
 
-`yspennstate/math-open-problems@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`,
+`private-source-repository@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`,
 
 path
 
@@ -45,7 +45,7 @@ proved `QFORM-2D-PARSEVAL-PROJECTION-CAP-v1`: if independent cap-one inputs and 
 
 A second completed theorem used as the sectional coarea engine is fleet03/B05 `QFORM-PAIR-SECTIONAL-COAREA-v1`, canonical source
 
-`yspennstate/math-open-problems@332f29e335274f2b3f81ccf92d62443b928c66cd`.
+`private-source-repository@332f29e335274f2b3f81ccf92d62443b928c66cd`.
 
 It states that if `U` is independent of a pair `(V,Z)`, `||p_U||_infinity<=M_U`, `||p_(V,Z)||_infinity<=M_2`, and
 

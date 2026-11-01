@@ -15,7 +15,7 @@ The unrestricted target is unchanged: for every dimension, every family of indep
 
 This report uses no law-uniform pointwise scalar quadratic-phase decay, no post-rotation independence, no arbitrary-joint coarea estimate, no positive moment of a worst conditional projection-density cap, and no uniformly conditioned fixed physical minor. The phase-aligned fragmented-support counterexample remains binding: at any prescribed frequency one can choose an admissible scalar density on a union of phase-aligned intervals so that the one-dimensional quadratic characteristic function is arbitrarily close to one. The new estimate below is instead an L2-in-frequency statement obtained from a difference law and an original-coordinate physical-pair theorem.
 
-Required newest-source files were read both at the owner-pinned baseline `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` and at their current compatible state in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. The completed result used at the decisive inequality is the indefinite physical-pair theorem recorded in `RESULTS.md`: after completing an invertible indefinite original-coordinate pair B, if the Schur remainder R obeys
+Required newest-source files were read both at the owner-pinned baseline `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837` and at their current compatible state in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. The completed result used at the decisive inequality is the indefinite physical-pair theorem recorded in `RESULTS.md`: after completing an invertible indefinite original-coordinate pair B, if the Schur remainder R obeys
 
 `sup_s P(|R-s|<=rho) <= H sqrt(rho)`,
 
@@ -27,7 +27,7 @@ The volume results D, D' and D5 are also checked against the concrete stress fam
 
 The designated partner is fleet03/B01. Its newest completed report used here is
 
-`yspennstate/math-open-problems@b967ff246e7e5b480b098c17f01cd0fc93072991`,
+`private-source-repository@b967ff246e7e5b480b098c17f01cd0fc93072991`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T103230Z-auto11b/REPORT.md`.
 
 For disjoint ORIGINAL-coordinate banks I,J, with an exact rank-two physical cross matrix K whose nonzero singular values have product

@@ -19,7 +19,7 @@ No moment, Gaussian, iid, compact-support, connected-support, log-concavity, pos
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems`,
+`private-source-repository`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T062121Z-fleet03-B08-qform-diffuse-r29/REPORT.md`.
 
 The analytic compiler reused below is B08 r28 `QFORM-MIXED-ORDER-JENSEN-COMPILER-v1` at

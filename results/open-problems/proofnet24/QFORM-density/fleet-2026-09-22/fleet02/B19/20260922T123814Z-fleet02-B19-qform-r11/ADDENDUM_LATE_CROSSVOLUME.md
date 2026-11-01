@@ -1,6 +1,6 @@
 # Late-source addendum: exact rank-three cross-volume / basis localization identity
 
-A later compatible result arrived after the main report was committed: fleet01/B01 `QFORM-RANDOM-SLOPE-CROSSMINOR-v1`, canonical report `yspennstate/math-open-problems@508b0985ba8bb658a7f6a935af5138a195cb89de`, proves that a physical triple `I` with cross-volume
+A later compatible result arrived after the main report was committed: fleet01/B01 `QFORM-RANDOM-SLOPE-CROSSMINOR-v1`, canonical report `private-source-repository@508b0985ba8bb658a7f6a935af5138a195cb89de`, proves that a physical triple `I` with cross-volume
 
 `s_I = sqrt(det(A[I,I^c] A[I,I^c]^T))`
 

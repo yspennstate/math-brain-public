@@ -128,7 +128,7 @@ The radius R appears only multiplied by approximation errors that are sent to ze
 
 The completed fleet04/B14 affine-family localization compiler is:
 
-yspennstate/math-open-problems@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee
+private-source-repository@19d9434e07142e6b9fe19b4a88bbd46ccec8eeee
 proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T001323Z-fleet04-B14-affine-mixture-compiler-r5/REPORT.md
 
 Its finite-mixture statement says every cap-one marginal law is an L1 limit of finite convex combinations of compact finite-union indicator laws of total measure one. Expanding the product gives a finite convex combination of compact finite-fragment PRODUCT laws, and uniform affine interval estimates pass by convexity and total variation.

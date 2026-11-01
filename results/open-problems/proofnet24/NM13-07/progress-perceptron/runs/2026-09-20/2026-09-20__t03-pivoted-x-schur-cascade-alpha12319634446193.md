@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED.**
 
 # NM13-07 / T03 — pivoted x-branch nested-Schur cascade and endpoint 12.319634446193
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: `NM13-07`  
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`  
 LIVE20 parent: **T03 negative spherical perceptron**  

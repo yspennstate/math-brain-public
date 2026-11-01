@@ -13,13 +13,13 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The immediate B10 source is
 
-`yspennstate/math-open-problems@7806acf3878cb15e910906483425a5eda993cceb`
+`private-source-repository@7806acf3878cb15e910906483425a5eda993cceb`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260924T035022Z-fleet03-B10-QFORM-r27/REPORT.md`.
 
 The designated partner source actually applied below is
 
-`yspennstate/math-open-problems@afdea9634d9e3f5fb09659da436292cf7dbe5b20`
+`private-source-repository@afdea9634d9e3f5fb09659da436292cf7dbe5b20`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B10/20260923T061725Z-fleet04-B10-QFORM-r4/REPORT.md`,
 
@@ -27,7 +27,7 @@ which proves `QFORM-REGRESSION-THREEBANK-CURVATURE-SPLIT-v1`.
 
 The current single-hub source boundary was also reread at
 
-`yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`
+`private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`
 
 `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md`
 

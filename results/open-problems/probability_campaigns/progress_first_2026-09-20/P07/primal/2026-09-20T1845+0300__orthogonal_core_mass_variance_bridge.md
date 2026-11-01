@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 
 **Status:** **OPEN / PROVED PARTIAL** on Randomstrasse101 Conjecture 18.  
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`.  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`.  
+**Repository / branch:** private `private-source-repository` / `master`.  
 **Captured pre-write master:** `c0f4845da24011daa587e8108b600a328d8ba169`.  
 **Previous own substantive checkpoint:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1745+0300__bipositive_basis_plucker_volume_balance.md`.  
 **Latest complementary checkpoint read:** P07-B `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T1830+0300__adaptive_quadratic_tilt_mean_QBI.md`. P07-B owns the Fourier-dual / exceptional-frequency / quadratic-interpolation route. This report stays on the primal LP and its exact orthogonal geometry.

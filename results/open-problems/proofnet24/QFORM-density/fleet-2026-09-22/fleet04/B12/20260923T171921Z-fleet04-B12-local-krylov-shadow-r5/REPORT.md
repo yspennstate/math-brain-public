@@ -107,7 +107,7 @@ The full conjecture remains open. The missing structural step is to extract from
 
 ## Source pins
 
-- math-open-problems live head before publication: 175ac74eb73ef3444ec1a6d998b78a02e72104f2.
+- private-source live head before publication: 175ac74eb73ef3444ec1a6d998b78a02e72104f2.
 - fleet01/B12 report blob: 1546765370c2190e877afbe759cfd9148d593642.
 - required Claude baseline: e5f71d79eff325201dd0274053d20268ce65b837.
 - brain control head after sign-in: 040cea5990b92a843de4ef56b19221f4f3b90c72.

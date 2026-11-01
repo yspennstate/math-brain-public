@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 
 # NM13-12 — vanishing-Gaussian near-lattice universality beyond the frozen finite-convolution ceiling
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: `NM13-12` / `proofnet24/NM13-12/progress-universality`  
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`, current LIVE20 mapping  
 Primary applied parent: **P12 unresolved triangular smooth-universality successor**  

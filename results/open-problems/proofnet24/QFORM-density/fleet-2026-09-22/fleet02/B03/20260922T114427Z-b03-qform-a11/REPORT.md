@@ -14,17 +14,17 @@ The live target is the arbitrary-dimensional, arbitrary-sign rotated quadratic-f
 
 The main external fleet dependency used here is:
 
-* `yspennstate/math-open-problems@c64fcff680b0a252a3c92002c60eedba02bbb9ec:qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`.
+* `private-source-repository@c64fcff680b0a252a3c92002c60eedba02bbb9ec:qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`.
 
 That fleet03/B17 report proves two facts used below: (i) no law-uniform pointwise Fresnel decay is possible at a prescribed nonzero frequency, and (ii) for one square term the pushforward density has the exact envelope `g(y)<=|a y|^{-1/2}` on the appropriate half-line. I do not reuse its pointwise-decay conjecture; it was refuted there.
 
 I also use the immutable fleet02/B15 obstruction
 
-* `yspennstate/math-open-problems@d5392d73398e2811f58b612fb8f191aa79d8ee5e:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`,
+* `private-source-repository@d5392d73398e2811f58b612fb8f191aa79d8ee5e:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`,
 
 which exhibits flat rank-three projectors for which every fixed principal coordinate triple has curvature only `O(1/n)`. This is used only to delimit the remaining bridge.
 
-The named partner for this card is fleet03/B03. At the pre-proof source check, the canonical partner deliverable path had no completed commit on `math-open-problems/master`; I therefore did not wait or invent a partner result.
+The named partner for this card is fleet03/B03. At the pre-proof source check, the canonical partner deliverable path had no completed commit on `private-source/master`; I therefore did not wait or invent a partner result.
 
 ## 2. Exact independent-copy identity, with the dependence retained
 

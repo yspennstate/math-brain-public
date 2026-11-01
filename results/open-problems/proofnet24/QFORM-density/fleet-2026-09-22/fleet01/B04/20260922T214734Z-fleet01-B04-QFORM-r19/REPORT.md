@@ -21,7 +21,7 @@ Neither statement asserts that a universally conditioned packet is forced by `s_
 
 The complete source used here is the interactive pair-log theorem
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 Its Section 3 proves the following for independent cap-one `U,V`. If
@@ -230,7 +230,7 @@ The point of (6.1) is that **arbitrary pair-to-pair quadratic contamination `C` 
 
 I consumed the latest completed partner report
 
-`yspennstate/math-open-problems@7fd3ff5ed6af96a18f1d9a6c2c71f7ac5143eee1`
+`private-source-repository@7fd3ff5ed6af96a18f1d9a6c2c71f7ac5143eee1`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T212021Z/REPORT.md`.
 
 Its theorem `QFORM-ORTHOGONAL-LEAKAGE-SEPARATION-v1` proves that an orthogonal scalar leakage `eta` over a transverse two-frame `v_i` admits a disjoint original-coordinate partition `L,T` with
@@ -241,7 +241,7 @@ Thus the current heavy-null bank obstruction is not lack of disjoint independent
 
 For the required equation-level partner application, I also use fleet02/B04's completed `QFORM-HYPERBOLIC-PAIR-DENSITY-TRANSFER-v1`, canonical source
 
-`yspennstate/math-open-problems@f446c546c01b66f22c30828b845b1651d7a8a082`
+`private-source-repository@f446c546c01b66f22c30828b845b1651d7a8a082`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T174702Z-r15/REPORT.md`.
 
 That theorem states that an outer original-coordinate hyperbolic pair of coefficient `c0!=0` over an **effective completed residual** `H` of density cap `B` gives

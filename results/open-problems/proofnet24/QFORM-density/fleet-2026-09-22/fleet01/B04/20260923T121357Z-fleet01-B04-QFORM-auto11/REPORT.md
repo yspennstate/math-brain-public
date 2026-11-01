@@ -29,7 +29,7 @@ The replacement proved here is global rather than local: aggregate many compatib
 
 1. **Sharp arbitrary-weight third-volume Fourier theorem.**  
    `QFORM-WEIGHTED-FRACTIONAL-VOLUME-SHARP-v1`, source
-   `yspennstate/math-open-problems@b967ff246e7e5b480b098c17f01cd0fc93072991`, path
+   `private-source-repository@b967ff246e7e5b480b098c17f01cd0fc93072991`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T014717Z-fleet02-B04-QFORM-auto11-cont/REPORT.md`.
    For a probability weight `w` on nonzero physical `3x3` minors, row marginals `alpha_i<=q/2`, `1<=q<3/2`, and
 
@@ -43,12 +43,12 @@ The replacement proved here is global rather than local: aggregate many compatib
 
 2. **Predecessor six-row compiler.**  
    `QFORM-SIXROW-COMPLEMENT-HELLINGER-VOLUME-v1`, source
-   `yspennstate/math-open-problems@d57e4401409946cb300e16500f1c85906b943a49`, path
+   `private-source-repository@d57e4401409946cb300e16500f1c85906b943a49`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T104329Z-fleet01-B04-QFORM-auto11/REPORT.md`.
 
 3. **Newest designated partner fleet02/B04.**  
    `QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1`, source
-   `yspennstate/math-open-problems@febf0c97f0f85e802b6bc2ab4a475c15109de013`, path
+   `private-source-repository@febf0c97f0f85e802b6bc2ab4a475c15109de013`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T111930Z-qform/REPORT.md`.
    If `Z=E3(M)>0` and no supported minor law has every constrained-side row marginal strictly below `3/4`, it proves
 

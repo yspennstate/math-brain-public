@@ -14,10 +14,10 @@ attacking: the nonzero-hub discriminant on the source-valid minority-sign side; 
 
 Pinned mathematical inputs actually used:
 
-1. Product-projection input: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`. In particular an orthonormal two-dimensional projection of independent cap-one original coordinates has density at most `2`.
-2. True-near-coloop coordinates and the sign-free punctured estimate: fleet03/B16 `yspennstate/math-open-problems@bdbe6e38a3ee3d586e8e6119e518c573310253fb`.
-3. Previous pivot-free projected-cut theorem: fleet01/B16 `yspennstate/math-open-problems@fb5e3eea9171f47b79c2fe8b9c70db4b814d08ef`.
-4. Newest **completed** designated partner fleet02/B16 r37: `yspennstate/math-open-problems@c9c865f02890e5fe7108c49759ee82b84f42ee38`, theorem `QFORM-PHASEWEIGHTED-PUNCTURED-TWOBANK-v1`.
+1. Product-projection input: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`. In particular an orthonormal two-dimensional projection of independent cap-one original coordinates has density at most `2`.
+2. True-near-coloop coordinates and the sign-free punctured estimate: fleet03/B16 `private-source-repository@bdbe6e38a3ee3d586e8e6119e518c573310253fb`.
+3. Previous pivot-free projected-cut theorem: fleet01/B16 `private-source-repository@fb5e3eea9171f47b79c2fe8b9c70db4b814d08ef`.
+4. Newest **completed** designated partner fleet02/B16 r37: `private-source-repository@c9c865f02890e5fe7108c49759ee82b84f42ee38`, theorem `QFORM-PHASEWEIGHTED-PUNCTURED-TWOBANK-v1`.
 5. A newer fleet02/B16 EARLY calculation, `657894f2d914b3f901cdfcff16ca97ba5c94e38e`, discovered the independent-hub minority-sign discriminant estimate. It is source-pinned here but is not treated as the required completed partner result. The theorem below strengthens it from independence to an actual conditional-density interface and then inserts that stronger form into the shared-source near-coloop equation.
 
 Live corrections are preserved. In particular: no independence is inferred after projection; no arbitrary-joint indefinite coarea estimate is used; no conditional density cap is inferred from a marginal density cap. The live correction `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1` is not contradicted: the theorem below uses the **definite** two-dimensional discriminant gate `a det B>0`, while the corrected zero-pivot/hyperbolic interfaces are indefinite. The conditional cap used in Section 3 is proved directly as an average of translates of one untouched original-source density.
@@ -232,7 +232,7 @@ The newest completed designated partner is fleet02/B16 r37, theorem
 
 `QFORM-PHASEWEIGHTED-PUNCTURED-TWOBANK-v1`,
 
-at `math-open-problems@c9c865f02890e5fe7108c49759ee82b84f42ee38`. It proves for mutually independent hub `H` and two source banks `A,B`, with
+at `private-source@c9c865f02890e5fe7108c49759ee82b84f42ee38`. It proves for mutually independent hub `H` and two source banks `A,B`, with
 
 `L=L_A+L_B`, `V=V_A+V_B`, `P=P_A+P_B`,
 

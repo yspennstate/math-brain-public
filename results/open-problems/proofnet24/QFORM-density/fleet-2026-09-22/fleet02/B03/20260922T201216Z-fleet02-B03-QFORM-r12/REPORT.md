@@ -16,7 +16,7 @@ This report does not use law-uniform pointwise scalar Fresnel decay, post-rotati
 
 The newest designated partner result actually consumed is fleet03/B03 run `20260922T190034Z-fleet03-B03-QFORM-r18`, canonical mathematics
 
-`yspennstate/math-open-problems@d18302d55f907552185a42994d48b09f39737cbd`
+`private-source-repository@d18302d55f907552185a42994d48b09f39737cbd`
 
 at
 

@@ -2,7 +2,7 @@
 
 **Full FEI remains OPEN.** Curated mathematical excerpt. Original section numbers and mathematical prose are retained; unrelated historical operating instructions and unneeded sections are omitted. This is not a complete archive or a new proof.
 
-Original repository source: [proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+0300__fei-isospectral-splicing-symmetry-quotient.md](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+0300__fei-isospectral-splicing-symmetry-quotient.md). Immutable Git blob: `3421c0cbfd22031554befb962ec92cd0c8bb45b9`. See `../SOURCES.json` for exact retained line ranges, original hashes, and the packaged-file hash. Links to unbundled companion files refer to their original repository locations.
+Original repository source: [proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+0300__fei-isospectral-splicing-symmetry-quotient.md](private-source-repository). Immutable Git blob: `3421c0cbfd22031554befb962ec92cd0c8bb45b9`. See `../SOURCES.json` for exact retained line ranges, original hashes, and the packaged-file hash. Links to unbundled companion files refer to their original repository locations.
 
 ## 2. Exact one-step child-spectrum representation
 

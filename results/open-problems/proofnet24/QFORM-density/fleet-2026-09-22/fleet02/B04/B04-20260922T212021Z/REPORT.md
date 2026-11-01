@@ -9,7 +9,7 @@ Status: `ESSENTIAL_STEP_APPLIED / CANDIDATE_REFUTED / FULL_TARGET_OPEN`.
 
 Target: independent real coordinates with densities at most one, arbitrary real symmetric A, and at least three eigenvalues of modulus at least one. No moments, support restrictions, diagonal-basis independence, or post-rotation independence are used. The report preserves the live corrections: law-uniform pointwise quadratic-phase decay is false; arbitrary-joint rank-three coarea is false; positive conditional projected-density moments are false; and one fixed good physical minor/cross-rank certificate is not forced by the target hypothesis.
 
-Named partner used: fleet03/B04 r18, `QFORM-ONE-ZERO-TRIPLE-v1`, canonical source `yspennstate/math-open-problems@b49aee1e303aee7191caea8f380bea12bab7641b`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T205156Z-r18/REPORT.md`. It states: if one original-coordinate 3x3 principal block B is invertible and one selected diagonal entry is zero, then arbitrary outside spectrum/couplings are allowed and
+Named partner used: fleet03/B04 r18, `QFORM-ONE-ZERO-TRIPLE-v1`, canonical source `private-source-repository@b49aee1e303aee7191caea8f380bea12bab7641b`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T205156Z-r18/REPORT.md`. It states: if one original-coordinate 3x3 principal block B is invertible and one selected diagonal entry is zero, then arbitrary outside spectrum/couplings are allowed and
 
 `||p_(X^TAX)||_infinity <= 3*2^(2/3) |det B|^(-1/3)`.
 

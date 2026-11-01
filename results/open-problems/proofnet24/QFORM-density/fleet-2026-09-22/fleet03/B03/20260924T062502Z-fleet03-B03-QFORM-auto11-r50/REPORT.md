@@ -24,13 +24,13 @@ The previous B03 r49 report ended by listing the bare **null-pivot** near-coloop
 
 at
 
-`yspennstate/math-open-problems@be8062b160868bcc71aff45a77c56ff2d0501a9a`,
+`private-source-repository@be8062b160868bcc71aff45a77c56ff2d0501a9a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T203140Z-fleet02-B16-QFORM-r36/REPORT.md`.
 
 That theorem retains arbitrary light leakage of the form `2LT` by translating one untouched physical hub source and proves the zero-pivot near-coloop density bound. Thus r49's half-Riesz theorem remains valid, but its listed next debt was stale. The live collar is the **nonzero physical hub square** isolated by fleet03/B16:
 
-`yspennstate/math-open-problems@bdbe6e38a3ee3d586e8e6119e518c573310253fb`.
+`private-source-repository@bdbe6e38a3ee3d586e8e6119e518c573310253fb`.
 
 There the exact-rank-three hard chamber has
 
@@ -256,7 +256,7 @@ Hence the characteristic function is in `L^1`; Fourier inversion gives a bounded
 
 Apply the completed B03 theorem `QFORM-TWO-BANK-LOCAL-PHASE-PLANCHEREL-v1`, canonical source
 
-`yspennstate/math-open-problems@545738ea4ac5730dc20e6ed5f50315dfcf3322f1`,
+`private-source-repository@545738ea4ac5730dc20e6ed5f50315dfcf3322f1`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T215603Z-fleet03-B03-QFORM-r41/REPORT.md`.
 
@@ -308,7 +308,7 @@ brain handoff commit `d0836f4eda662ba6298b9c61658e474da836c232`,
 
 canonical mathematics
 
-`yspennstate/math-open-problems@5f93186cf8952b2b8b0255e08a78fd8506c613e4`,
+`private-source-repository@5f93186cf8952b2b8b0255e08a78fd8506c613e4`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260924T051411Z-fleet04-B03-plucker-overlap2-r4/REPORT.md`.
 

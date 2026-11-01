@@ -20,7 +20,7 @@ Problem/source: Antonio Agresti and Mark Veraar, *Nonlinear SPDEs and Maximal Re
 # R10 I0070 — compact Hilbert tails turn the critical endpoint into a small linear perturbation
 
 Run ID: `20260916T1753Z_i0070_compact_tail_endpoint`  
-Repository/branch: `yspennstate/math-open-problems` / `master`  
+Repository/branch: `private-source-repository` / `master`  
 Dated source/status check: 2026-09-16
 
 No email/Gmail, Drive, public posting, purchase, permission change, workflow execution, scheduler mutation, peer-file edit, or shared-root edit was performed.
@@ -498,7 +498,7 @@ Problem/source: Antonio Agresti and Mark Veraar, *Nonlinear SPDEs and Maximal Re
 # R10 I0070 — deterministic-horizon localization repairs the compact-tail endpoint route
 
 Run ID: `20260916T1833Z_i0070_stopped_perturbation_repair`  
-Repository/branch: `yspennstate/math-open-problems` / `master`  
+Repository/branch: `private-source-repository` / `master`  
 Dated source/status check: 2026-09-16
 
 No email/Gmail, Drive, public posting, purchase, permission change, workflow execution, scheduler mutation, peer-file edit, or shared-root edit was performed.
@@ -903,7 +903,7 @@ Problem/source: Antonio Agresti and Mark Veraar, *Nonlinear SPDEs and Maximal Re
 # R10 I0070 recovery1 — zero initial trace removes the Proposition-6.8 spatial-loss mechanism
 
 Run ID: `20260916T2033Z_i0070_zero_trace_delta_bypass`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Dated source/status check: 2026-09-16  
 Status: **PARTIAL / author-side full-source proof candidate; no campaign closure claim**.
 
@@ -1808,7 +1808,7 @@ Model actually running: GPT-5.6 Sol. Reasoning: UNVERIFIED — NO MOVEMENT in th
 
 # R10 — I0070 six-run handoff: critical p=2 Hilbert regularity
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Outside source: Antonio Agresti and Mark Veraar, *Nonlinear SPDEs and Maximal Regularity: An Extended Survey*, arXiv:2501.18561 (historical intake locator v2; current source v5), NoDEA 32 (2025), Article 123, Problem 6.
 Status after this run: **SOURCE OPEN in the current paper; R10 PARTIAL / author-side full-source proof candidate C006 preserved; 0/2 required external closure audits recovered; R10 attack retired after six unchanged metric runs.**
 

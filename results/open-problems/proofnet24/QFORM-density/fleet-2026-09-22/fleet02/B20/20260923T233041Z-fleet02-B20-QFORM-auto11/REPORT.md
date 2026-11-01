@@ -17,7 +17,7 @@ The corrections used below are the current ones: no law-uniform pointwise quadra
 
 The required pinned source was read at
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
@@ -40,7 +40,7 @@ No counterexample is reported by the pinned search; that observation is not used
 
 The newest compatible completed fleet03/B20 result at final partner discovery is r39:
 
-`math-open-problems@5d9892edb6f33beda5ce5e10c4482fcc5fe994a8`
+`private-source@5d9892edb6f33beda5ce5e10c4482fcc5fe994a8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T214857Z-fleet03-B20-QFORM-r39/REPORT.md`.
 
@@ -171,7 +171,7 @@ Use the completed marginal-free physical-third-volume theorem
 
 from fleet02/B03, canonical source
 
-`math-open-problems@df738b7f0821d9af56dfd992cab10ecc6704e3fb`.
+`private-source@df738b7f0821d9af56dfd992cab10ecc6704e3fb`.
 
 For every literal cross cut `N` with `Z_3(N)>0`, arbitrary same-side quadratic blocks, arbitrary affine terms, and arbitrary additional spectrum are retained, and
 

@@ -14,7 +14,7 @@ No step below rotates the product law. No marginal density cap is promoted to a 
 
 ## 2. Newest assigned-partner result actually consumed
 
-The newest completed compatible `fleet03/B20` package is run `20260922T154341Z-fleet03-B20-QFORM-r12`, canonical source `yspennstate/math-open-problems@eb7976d14c75a2a5945e03c6b947774e26fdebcb`, report blob `9a3ff19dcda874bb067e847b0dff44a9fd53f16a`.
+The newest completed compatible `fleet03/B20` package is run `20260922T154341Z-fleet03-B20-QFORM-r12`, canonical source `private-source-repository@eb7976d14c75a2a5945e03c6b947774e26fdebcb`, report blob `9a3ff19dcda874bb067e847b0dff44a9fd53f16a`.
 
 Put `P = 1_{|A|>=1/64} = U U^T` and `H = { i : P_ii > 1/64 }`. The partner proves that if `||U_H^T U_H||op<=1/2`, then the full target form has a continuous density satisfying `||p_Q||_infinity<194`. Therefore every unresolved counterexample satisfies
 

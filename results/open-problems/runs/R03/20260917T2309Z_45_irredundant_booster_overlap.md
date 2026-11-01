@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 
 # R03 run45 — F0097 random k-SAT: essential clean boosters force mesoscopic two-replica correlation
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **F0097 OPEN / R03 PARTIAL.** The native title/prompt still names F0001 / sharp iid Rademacher singularity, but canonical R03 state handed F0001 off after the third stuck episode in run41 and created exclusive claim `operations/claims/F0097.md`. That claim explicitly says R03 must not return to F0001 without reassignment. I therefore preserve the F0001 handoff and continue F0097.
 

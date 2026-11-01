@@ -46,6 +46,6 @@ To remove an arbitrary affine function `a_HH+a_LL+a_VV+a_0`, first note that the
 
 ## Scope in the exact-rank-three structural split
 
-If a physical hub is independent of a two-dimensional light projection `(L,V)`, this theorem pays the `a=0` core, including arbitrary `βL²` and deterministic affine terms. The [general small-hub-square four-region receiver](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T191000Z-small-hub-square-coarea/GENERAL_3D_CORE.md) separately covers a normalized `|a|<1/64` with `s_3(T)≥1` for **any** active 3-by-3 quadratic core. The present estimate does not require a spectral normalization on `β`; it requires an explicit nonzero hub/light cross coefficient `t` and a nonzero light square `λ`.
+If a physical hub is independent of a two-dimensional light projection `(L,V)`, this theorem pays the `a=0` core, including arbitrary `βL²` and deterministic affine terms. The [general small-hub-square four-region receiver](private-source-repository) separately covers a normalized `|a|<1/64` with `s_3(T)≥1` for **any** active 3-by-3 quadratic core. The present estimate does not require a spectral normalization on `β`; it requires an explicit nonzero hub/light cross coefficient `t` and a nonzero light square `λ`.
 
 Neither theorem establishes density stability under a third light projection `P` that overlaps the originals defining `(L,V)`. This is the genuine near-coloop leakage gap.

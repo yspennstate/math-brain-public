@@ -2,7 +2,7 @@
 
 This run develops complete proofs for specific questions in the research archive and attempts the broader Lyons determinantal entropy-concavity conjecture. The full Lyons conjecture remains unresolved here. The agent execution ledger records actual launches and completions; 100 distinct tasks have completed using requested model `gpt-6-astra` with `reasoning_effort=max`, run in batches under the concurrency limit.
 
-The [original QSO project index](https://github.com/yspennstate/math-open-problems/tree/master/probability_campaign_2026_09/paper_qso_fixed_points_2026_09_14) now links the complete four-type proof from the question it resolves. The original manuscript is preserved, with a separate timestamped completion report.
+The [original QSO project index](private-source-repository) now links the complete four-type proof from the question it resolves. The original manuscript is preserved, with a separate timestamped completion report.
 
 Read the [final research report](FINAL_RESEARCH_REPORT.md) for the completed statements, audit coverage and remaining gaps. The [computation index](COMPUTATIONS_INDEX.md) identifies exact certificates and numerical diagnostics.
 
@@ -45,7 +45,7 @@ The [computations](computations/) include exact rational and polynomial certific
 
 No universal theorem is claimed to have been checked by Lean, formally verified by another proof assistant, or externally refereed. Full conjectures remain open wherever the claim ledger says so. Numerical nonfailure and agreement among agents do not prove a universal statement.
 
-Canonical repository: `yspennstate/math-open-problems`, branch `master`, private. Initial source snapshot: [`8861ffde776a1dbf842e918590cc1003492ff296`](https://github.com/yspennstate/math-open-problems/tree/8861ffde776a1dbf842e918590cc1003492ff296). New work is appended under `proofnet24/portfolio-completion/runs/2026-09-14/2026-09-14_20-23-26/`. Timestamped checkpoints preserve intermediate states and later reports preserve corrections; unrelated source correspondence is excluded.
+Canonical repository: `private-source-repository`, branch `master`, private. Initial source snapshot: [`8861ffde776a1dbf842e918590cc1003492ff296`](private-source-repository). New work is appended under `proofnet24/portfolio-completion/runs/2026-09-14/2026-09-14_20-23-26/`. Timestamped checkpoints preserve intermediate states and later reports preserve corrections; unrelated source correspondence is excluded.
 
 Final execution: **107 launched; 100 completed; 7 interrupted; 0 active.** All 100 requested distinct tasks completed. The archive contains 96 full original completed reports and four clearly labeled recovery records for unavailable originals. Read the [execution ledger](execution_ledger.json), [agent index](AGENT_INDEX.md), and [recovery provenance](recovery/INTERRUPTIONS.md). The GitHub proof collection is the deliverable; the local draft PDF was unavailable after disconnection.
 

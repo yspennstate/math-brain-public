@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — NO MOVEMENT o
 # R09 CLOSABLE OUTSIDE — G0013 STUCK1: exact obstruction ledger and one-interface graph-copula recovery choice
 
 Date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Delivery: private GitHub only.
 
 This is deliberately a **thinking-only stuck report**. It introduces no new theorem claim, no new numerical source bound, and no checker-only artifact.

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning effort: UNVERIFIED.**
 # NM13-13 / T04 — exponential-cell Radau correction and survey-averaged density transfer
 
 Date: 2026-09-20  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker root: `proofnet24/NM13-13/progress-3sat/`  
 Status: **OPEN / PARTIAL; published source bracket unchanged; project upper candidate strictly improved; CANDIDATE_FULL pending later independent review**
 

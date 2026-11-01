@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 
 # PROB10-08 — exact heat-kernel L2 obstruction on a source-admissible affine expander
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / OPEN / auxiliary theorem proved / no TV cutoff theorem / independent validation pending / worldwide novelty UNVERIFIED**.
 

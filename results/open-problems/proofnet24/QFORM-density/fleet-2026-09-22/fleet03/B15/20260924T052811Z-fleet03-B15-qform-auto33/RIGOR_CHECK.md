@@ -56,7 +56,7 @@ The number of cells, hence possible occupied interval components, grows with the
 
 ## 7. Partner application
 
-Fleet04/B15 Theorem 6.1 at `math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e` was read in full. It applies after the transported interval inequality because every owner-target matrix has rank at least three. The resulting `C_0` representative has the identical height constant; no continuity modulus is inferred.
+Fleet04/B15 Theorem 6.1 at `private-source@7b2b0f54db9acbd23a5f69f715178ab666e22d8e` was read in full. It applies after the transported interval inequality because every owner-target matrix has rank at least three. The resulting `C_0` representative has the identical height constant; no continuity modulus is inferred.
 
 ## 8. Status
 

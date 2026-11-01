@@ -1,6 +1,6 @@
 # fleet03/B03 pass4 r7 report
 
-Pinned source: math-open-problems commit ec211ba2d77a4a9850168c6af1574ea651feaa7c, short/short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8.
+Pinned source: private-source commit ec211ba2d77a4a9850168c6af1574ea651feaa7c, short/short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8.
 
 Audited ranges this run: 129-173, 208-241, 245-391. Detailed clause records are in COVERAGE.jsonl; exact checks are in CHECKS.json; the concise source-pinned transfer is HANDOFF.md.
 

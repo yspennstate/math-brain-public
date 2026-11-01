@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R12 / I0115 — explicit Poisson-line fragmentation FDDs and the three-separator regularization
 
-Repository/branch: `yspennstate/math-open-problems`, `master`.  
+Repository/branch: `private-source-repository`, `master`.  
 Deployment: `NEW-METHODS-2026-09-16`.  
 Status: **OPEN / PARTIAL / first I0115 run**.  
 Canonical claim: `operations/claims/I0115.md`, creation commit `8ab961339a728f0b11ee9ec8acd83edec9fbc456`.

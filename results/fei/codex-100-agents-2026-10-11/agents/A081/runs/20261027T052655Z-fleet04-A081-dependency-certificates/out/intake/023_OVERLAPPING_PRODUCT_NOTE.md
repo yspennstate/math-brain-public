@@ -1,6 +1,6 @@
 # FEI overlapping-product route: source-corrected intake
 
-Full FEI remains OPEN. Immutable [complete report](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/REPORT.md), [attribution correction](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/CORRECTION.md), [claim ledger](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/CLAIMS.json), and [executed verification](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/verification.json).
+Full FEI remains OPEN. Immutable [complete report](private-source-repository), [attribution correction](private-source-repository), [claim ledger](private-source-repository), and [executed verification](private-source-repository).
 
 ## Correct attribution first
 
@@ -13,4 +13,4 @@ The all-overlapping Boolean inequality H(fg)<=H(f)+H(g) was already disproved by
 - Under uniform physical translations, E_z H(f g(.+z))<=Hf+Hg remains valid. The exact deficit equals H(S|S xor T)+I(U;Z), with its second term between zero and the first. The corresponding mean influence is If+Ig-2 sum_i Inf_i(f)Inf_i(g). These are retained two-input forms of the archived uncertainty mechanism, not new FEI closure.
 - If the factors overlap in at most k coordinates, the standard restriction ledger gives H(fg)<=Hf+Hg+2k. k is not universally paid by influence.
 
-The corrected scientific commit e894a01f20ba02694c099f903fbdf26cc39db0b3 was verified on math-open-problems master; every modified artifact was read back byte-equal. Its final checker passed. This is analytic mathematics plus exact finite self-checks, not independent audit or formalization. The selected-translation versus average distinction is an explicit remaining obstacle. No scheduled fleet, queue, controls, peer artifacts, or repository visibility is changed.
+The corrected scientific commit e894a01f20ba02694c099f903fbdf26cc39db0b3 was verified on private-source master; every modified artifact was read back byte-equal. Its final checker passed. This is analytic mathematics plus exact finite self-checks, not independent audit or formalization. The selected-translation versus average distinction is an explicit remaining obstacle. No scheduled fleet, queue, controls, peer artifacts, or repository visibility is changed.

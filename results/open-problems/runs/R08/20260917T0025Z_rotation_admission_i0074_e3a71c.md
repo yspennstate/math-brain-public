@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R08 — post-I0082 rotation admission: I0074 ownership cleared, source-status gate remains
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Run date: 2026-09-17.
 Previous active source: Takahiro Hasebe and Yuki Ueda, arXiv:1710.08240v2 / ALEA 15 (2018), Problem 3.11, intake I0082.
 Previous source disposition: **PARTIAL / AUDIT_PENDING / RETIRED_FROM_R08_RESEARCH_SLOT_AFTER_SIX_UNCHANGED_RUNS**.

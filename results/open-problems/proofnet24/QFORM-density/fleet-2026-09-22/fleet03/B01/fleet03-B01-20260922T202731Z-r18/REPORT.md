@@ -18,7 +18,7 @@ A source-matching result appeared before this write, so I did not duplicate it. 
 
 `||p_T||_p <= [2^(p-1)/(2-p)]^(1/p) M^((p-1)/p)`, `1<p<2`,
 
-uniformly in `a`, including `a=0`, and hence a global `L^3` characteristic-function bound at `p=3/2`. Source used here: `yspennstate/math-open-problems@99f0eb89b7b1ad3ef3f225460fb08d4d22c19a75`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T201015Z-fleet02-B02-qform-r12/REPORT.md`.
+uniformly in `a`, including `a=0`, and hence a global `L^3` characteristic-function bound at `p=3/2`. Source used here: `private-source-repository@99f0eb89b7b1ad3ef3f225460fb08d4d22c19a75`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T201015Z-fleet02-B02-qform-r12/REPORT.md`.
 
 The new work below pays the **exact-zero scalar-pivot endpoint more sharply**: all finite density `L^p` exponents, a nearly linear small-ball estimate, a logarithmic signed-Fejer bound, and a sharp obstruction showing why the same improvement cannot be extended to arbitrary nonzero pivots without spending residual curvature.
 
@@ -162,7 +162,7 @@ The designated partner `fleet04/B01` proved the exact signed-Fejer interface. Fo
 
 Its canonical report is
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 
 The partner theorem identifies `D_T mu=p_mu*K_T` when a density exists, where

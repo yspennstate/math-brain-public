@@ -220,10 +220,10 @@ What remains open is quantitative: convert the finite product-projection X-ray/f
 
 ## 7. Sources
 
-- Immediate B11 predecessor: `yspennstate/math-open-problems@1981b7ded0883caf72e23b833f34274a6763a43c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T023910Z-fleet03-B11-QFORM-r48/REPORT.md`.
-- Exact puncture normal form: `yspennstate/math-open-problems@12e2174445fbc824279bf1376da1346454d7060a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T002432Z-fleet03-B11-QFORM-r45/REPORT.md`.
-- Designated fleet04/B11 null-scalar/product-projection source: `yspennstate/math-open-problems@4110bbfd21beffa0260a017d468b0a486af56db1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T222040Z-fleet04-B11-cone-envelope-r3/REPORT.md`.
-- Designated fleet04/B11 pair-area source: `yspennstate/math-open-problems@30555c1ca97752e10f5089ccd95f8514c704be5a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T131400Z-fleet04-B11-extension-mass-r6/REPORT.md`.
-- X-ray-only global barrier: `yspennstate/math-open-problems@cfb4137e221cd87aeb4f669389d14fa65e3251e7`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T120617Z-a01-b06-qform-r11/REPORT.md`.
+- Immediate B11 predecessor: `private-source-repository@1981b7ded0883caf72e23b833f34274a6763a43c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T023910Z-fleet03-B11-QFORM-r48/REPORT.md`.
+- Exact puncture normal form: `private-source-repository@12e2174445fbc824279bf1376da1346454d7060a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T002432Z-fleet03-B11-QFORM-r45/REPORT.md`.
+- Designated fleet04/B11 null-scalar/product-projection source: `private-source-repository@4110bbfd21beffa0260a017d468b0a486af56db1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T222040Z-fleet04-B11-cone-envelope-r3/REPORT.md`.
+- Designated fleet04/B11 pair-area source: `private-source-repository@30555c1ca97752e10f5089ccd95f8514c704be5a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T131400Z-fleet04-B11-extension-mass-r6/REPORT.md`.
+- X-ray-only global barrier: `private-source-repository@cfb4137e221cd87aeb4f669389d14fa65e3251e7`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T120617Z-a01-b06-qform-r11/REPORT.md`.
 
 Full QFORM: **OPEN / NOT PROVED / NOT DISPROVED**. Full-target continuity: **OPEN**.

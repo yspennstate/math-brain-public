@@ -255,7 +255,7 @@ This construction is deliberately compatible with the live fragmented-support co
 
 ## 5. Designated partner fleet02/B03 applied to an actual inequality
 
-Fresh partner source: `yspennstate/math-open-problems@68e6d8f52d904033878f6f55c376c38fd214684e`, fleet02/B03, theorem `QFORM-Z2-HALFRIESZ-MARGINAL-FREE-v1` and its square receiver.
+Fresh partner source: `private-source-repository@68e6d8f52d904033878f6f55c376c38fd214684e`, fleet02/B03, theorem `QFORM-Z2-HALFRIESZ-MARGINAL-FREE-v1` and its square receiver.
 
 Let a genuine original coordinate `X_j` have nonzero physical square coefficient `d=A_jj`, and complete the square without rotating the product law:
 

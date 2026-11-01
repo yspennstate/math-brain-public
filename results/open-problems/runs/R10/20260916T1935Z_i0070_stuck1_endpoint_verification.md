@@ -5,7 +5,7 @@ Problem/source: Antonio Agresti and Mark Veraar, *Nonlinear SPDEs and Maximal Re
 # R10 I0070 STUCK1 — endpoint verification map and one recovery route
 
 Run ID: `20260916T1935Z_i0070_stuck1_endpoint_verification`  
-Repository/branch: `yspennstate/math-open-problems` / `master`  
+Repository/branch: `private-source-repository` / `master`  
 Dated source/status check: 2026-09-16
 
 No email/Gmail, Drive, public posting, paid compute, workflow execution, permission change, scheduler mutation, peer-file edit, or shared-root edit was performed.

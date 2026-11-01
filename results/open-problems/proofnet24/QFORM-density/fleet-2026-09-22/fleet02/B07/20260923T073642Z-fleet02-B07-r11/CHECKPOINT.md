@@ -4,10 +4,10 @@ Programme `QFORM-DENSITY-3EIG-20260922`; full conjecture remains OPEN. This run 
 
 ## Sources already applied at equations
 
-- own completed `QFORM-DETERMINANT-MARGINAL-TAIL-CORE-v1`, `yspennstate/math-open-problems@1f5ab2ddba6e99675fb9177666c5e64e396e54e5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T023322Z-r11/REPORT.md`;
-- fleet01/B07 r19 coarse determinant-role theorem, observed on `math-open-problems` master before this write, giving one packet with `P0>=1/256`, `P1>=4/3125`, `P2>=1/256`, or `P3>=1/4`, and a heavy-support core/diffuse split at marginal threshold `3/5`;
-- designated partner fleet03/B07 r26, canonical source `yspennstate/math-open-problems@86ff1278a9b52d8a2736c340b7f54893c6b8c267`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T060629Z-fleet03-B07-qform-r26/REPORT.md`;
-- required Claude/e5 D' theorem, `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
+- own completed `QFORM-DETERMINANT-MARGINAL-TAIL-CORE-v1`, `private-source-repository@1f5ab2ddba6e99675fb9177666c5e64e396e54e5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T023322Z-r11/REPORT.md`;
+- fleet01/B07 r19 coarse determinant-role theorem, observed on `private-source` master before this write, giving one packet with `P0>=1/256`, `P1>=4/3125`, `P2>=1/256`, or `P3>=1/4`, and a heavy-support core/diffuse split at marginal threshold `3/5`;
+- designated partner fleet03/B07 r26, canonical source `private-source-repository@86ff1278a9b52d8a2736c340b7f54893c6b8c267`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T060629Z-fleet03-B07-qform-r26/REPORT.md`;
+- required Claude/e5 D' theorem, `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
 ## New calculation 1: the actual bounded-dimensional N3 core is completely paid
 

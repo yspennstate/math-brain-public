@@ -254,6 +254,6 @@ The full QFORM conjecture therefore remains **OPEN / NOT PROVED / NOT DISPROVED*
 - pair-log theorem: `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md` (complete source read this run).
 - rank-two affine / rank-one affine small-ball report: `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 - fresh B10 tripartite packet: fleet03/B10 commit `7acd371ee2ee83a7fae12d7bedb38bc99c051b6d`.
-- compatible fleet04 theorem: fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical source `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
+- compatible fleet04 theorem: fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical source `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
 Repository transport is not native learned-memory ingestion. This run remains `WITHOUT_VERIFIED_BRAIN`.

@@ -2,7 +2,7 @@ Model actually running: GPT-5.6 Sol. Reasoning level: UNVERIFIED; this was not G
 
 # C29 rotation hold — I0077 exclusion refresh and independent audit of C30 equal-three-block stability
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Own root: `proofnet24/C29-closure-brownian-shapes`.
 
 ## 1. Continuity and admission state

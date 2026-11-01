@@ -29,7 +29,7 @@ The designated partner is `fleet04/B11`. At both fresh-main checks in this run t
 
 A completed compatible other-account result is applied in the local branch synthesis below:
 
-- `fleet04/B18`, canonical scientific source `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
+- `fleet04/B18`, canonical scientific source `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
 Its proved physical-triple inequality is
 

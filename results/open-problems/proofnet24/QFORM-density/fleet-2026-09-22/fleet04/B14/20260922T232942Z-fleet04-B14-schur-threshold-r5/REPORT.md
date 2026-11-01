@@ -20,9 +20,9 @@ Fresh owner control is revision `2026-09-22.15`; the live correction inbox was c
 The later source proves the full `n=3` theorem with constant 20, including arbitrary linear and constant terms. The older ruled theorem supplies a sharper constant on the one-sheet side. Both results use the original product provenance; neither infers a trace estimate from an arbitrary bounded joint density.
 
 The fleet04/B14 law-level purification theorem used below is at
-`yspennstate/math-open-problems@321ec7899f4972d125d641408512fe9e5e9dcf4c`.
+`private-source-repository@321ec7899f4972d125d641408512fe9e5e9dcf4c`.
 The completed fleet01/B14 result actually applied is at
-`yspennstate/math-open-problems@b111363ff02b67015d14db35482e0150591744cd`,
+`private-source-repository@b111363ff02b67015d14db35482e0150591744cd`,
 path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B14/20260922T221141Z-fleet01-B14-QFORM-r22/REPORT.md`,
 blob `0f94532a63c300534bcc7ef2dd61cfac7df94e14`.

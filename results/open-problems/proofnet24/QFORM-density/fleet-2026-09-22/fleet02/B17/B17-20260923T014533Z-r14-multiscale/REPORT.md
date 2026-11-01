@@ -14,7 +14,7 @@ The designated partner `fleet03/B17` has completed the one-heavy **minority-sign
 =3.9801056750420088\ldots<3\sqrt2.
 \]
 
-Source actually read and used: `yspennstate/math-open-problems@9661cb6a0a2ab0075e8b7f62145a7af3c147c243`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T010156Z-fleet03-B17-QFORM-r21/REPORT.md`.
+Source actually read and used: `private-source-repository@9661cb6a0a2ab0075e8b7f62145a7af3c147c243`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T010156Z-fleet03-B17-QFORM-r21/REPORT.md`.
 
 The complementary one-heavy placement is the majority-sign direction. The exact source-valid finite family is
 
@@ -434,7 +434,7 @@ Combining Sections 4 and 5 proves (5).
 
 ## 6. Required newest-Claude result applied to a real obstruction
 
-The user-required source `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, proves Theorem C: for every source-valid exact rank-three signature `(+,+,-)` form with eigenvalue magnitudes at least one,
+The user-required source `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, proves Theorem C: for every source-valid exact rank-three signature `(+,+,-)` form with eigenvalue magnitudes at least one,
 
 \[
 \boxed{p_Q(s)\le\pi\sqrt2\qquad(s\ge0).}

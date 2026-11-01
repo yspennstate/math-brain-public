@@ -61,7 +61,7 @@ P_0=4,\qquad P_1=17/2+4\varepsilon^2,
 
 Thus neither retained layer mass nor diffuse two-/three-frame leverage forces a positive lower bound on `chi`, and large `P_1/P_2` does not force a useful physical pair.
 
-The family is nevertheless an exact QFORM target: its full matrix has `F` as a principal block, so interlacing supplies two eigenvalues at least `2` and one at most `-1`. Applying the completed pinned `COUNTEREXAMPLE_SEARCH.md` Theorem A from `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` to this literal three-coordinate block, uniformly over all conditioned tail values and induced affine terms, gives the real target inequality
+The family is nevertheless an exact QFORM target: its full matrix has `F` as a principal block, so interlacing supplies two eigenvalues at least `2` and one at most `-1`. Applying the completed pinned `COUNTEREXAMPLE_SEARCH.md` Theorem A from `private-source@e5f71d79eff325201dd0274053d20268ce65b837` to this literal three-coordinate block, uniformly over all conditioned tail values and induced affine terms, gives the real target inequality
 
 \[
 \boxed{\|p_{X^T A_\varepsilon X}\|_{\infty,\mathrm{ess}}\le 6\sqrt\pi.}
@@ -170,7 +170,7 @@ If the pair branch holds and the selected physical pair `C` is definite, the two
 \]
 
 If `C` is indefinite, apply the completed arbitrary-rank physical-pair theorem at
-`math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`. Its hypotheses are exactly the present original-coordinate pair plus `s_3(A)>=1`; all outside couplings and affine terms are retained. Since
+`private-source@742ac943440e41925fe09db9a8c02a96cbd83dbc`. Its hypotheses are exactly the present original-coordinate pair plus `s_3(A)>=1`; all outside couplings and affine terms are retained. Since
 
 \[
 D_C:=|\det C|\ge \tau^2/36,

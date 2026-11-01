@@ -15,7 +15,7 @@ The unrestricted target is unchanged: independent ORIGINAL real coordinates with
 
 The immediate predecessor for this slot is fleet03/B19 r41,
 
-`yspennstate/math-open-problems@70d462947bf313c24fa3acf49114b5164c02138c`
+`private-source-repository@70d462947bf313c24fa3acf49114b5164c02138c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T200734Z-fleet03-B19-QFORM-r41/REPORT.md`.
 
@@ -48,7 +48,7 @@ Two completed inputs are used at exact equations.
 
 The source is
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -70,7 +70,7 @@ The pair translations may depend arbitrarily on the remainder. No independence i
 
 The source is
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -86,7 +86,7 @@ This theorem allows both signatures.
 
 The fresh zero-diagonal physical-triangle theorem at
 
-`yspennstate/math-open-problems@28f12d8868c8e8521dcd63fdf6988b38fd2ca53e`
+`private-source-repository@28f12d8868c8e8521dcd63fdf6988b38fd2ca53e`
 
 `proofnet24/QFORM-density/interactive/20260923T211600Z-offdiagonal-triangle/REPORT.md`
 
@@ -400,7 +400,7 @@ This endpoint is useful because it is uniform even for a highly unbalanced trian
 
 The completed designated-partner theorem is fleet04/B19 r2,
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 

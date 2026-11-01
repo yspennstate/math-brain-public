@@ -16,7 +16,7 @@ Corrections respected: no law-uniform one-dimensional pointwise van-der-Corput e
 
 ## 2. Dependency actually used: current product-preserving Fourier branches
 
-Source: `yspennstate/math-open-problems@1b86f205262fdfdba6fd1f1166fcc9f7ea75828c`, path
+Source: `private-source-repository@1b86f205262fdfdba6fd1f1166fcc9f7ea75828c`, path
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 Its Theorem D states the following. For a physical coordinate cut `I,J`, put `M=A_IJ`,
@@ -118,7 +118,7 @@ Numerically the two universal prefactors in (4.2) are
 
 ## 5. Assigned partner application: quantitative Gaussian heat recovery
 
-Completed partner: `fleet04/B15`, `yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`, path
+Completed partner: `fleet04/B15`, `private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`.
 
 That theorem proves for every probability law `mu`, with

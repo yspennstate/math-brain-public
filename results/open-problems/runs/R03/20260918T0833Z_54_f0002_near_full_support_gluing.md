@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 # R03 HARD OUTSIDE — F0002: pivot-row gluing forces every source-scale affine null vector to be almost fully supported
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Continuity, source gate, and why the stale native title is not reopened
 

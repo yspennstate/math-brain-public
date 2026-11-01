@@ -6,7 +6,7 @@ This supplement records a newer compatible partner result that appeared after th
 
 Fleet02/B14 subsequently completed:
 
-`yspennstate/math-open-problems@3f241388d9bcacf1379ef8ef640b35d7d14aad91`
+`private-source-repository@3f241388d9bcacf1379ef8ef640b35d7d14aad91`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T150227Z-b14-qform-localization-r14/REPORT.md`.
 

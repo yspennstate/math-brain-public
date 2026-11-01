@@ -18,7 +18,7 @@ No step below uses law-uniform pointwise van der Corput decay, post-rotation ind
 
 The structural and analytic predecessor is
 
-`yspennstate/math-open-problems@65e50ba0b12d5aff76bd5b4f3e44db2d01d07d0a`
+`private-source-repository@65e50ba0b12d5aff76bd5b4f3e44db2d01d07d0a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T021354Z-fleet01-B09-QFORM-auto11/REPORT.md`.
 
@@ -33,7 +33,7 @@ The same predecessor already excludes the global triangle branch in strict `N3(1
 
 The designated partner source is fleet02/B09:
 
-`yspennstate/math-open-problems@03ec6ccf1de2e2544e850cbda25d460aacae6a1b`
+`private-source-repository@03ec6ccf1de2e2544e850cbda25d460aacae6a1b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T024331Z-fleet02-B09-QFORM-auto12/REPORT.md`.
 

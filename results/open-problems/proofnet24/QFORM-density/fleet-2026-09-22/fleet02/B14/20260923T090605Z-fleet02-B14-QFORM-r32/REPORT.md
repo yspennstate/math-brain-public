@@ -23,7 +23,7 @@ The answer is yes. The resulting compiler also closes a diffuse part of the kern
 
 The required source family is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 I read `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The completed result used at the decisive inequality is the general-rank form of **Theorem F (Fresnel–Brascamp–Lieb)** from `FOURIER_ROUTE_REPORT.md`:
@@ -48,7 +48,7 @@ The compatible completed partner result is
 
 `QFORM-RANK2-SEMIDEFINITE-SCHUR-BANK-v1`,
 canonical report
-`yspennstate/math-open-problems@1d80c85a03f6d442c7771e0df3313ec80aab8446`,
+`private-source-repository@1d80c85a03f6d442c7771e0df3313ec80aab8446`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T083627Z-fleet03-B14-QFORM-r31/REPORT.md`.
 
 It proves that after an invertible indefinite physical pair B, a rank-two semidefinite Schur bank is paid with zero support/fragment/moment tax when the conditioning-generated bank affine term lies in the range of that bank curvature. It also uses the completed physical-pair logarithmic envelope
@@ -59,7 +59,7 @@ p_Q(t) <= 2 sqrt(2)/r
 where D=|det B| and kappa=sigma_min(B). Partner r31 explicitly records the kernel-affine component as unpaid.
 
 The physical-pair envelope itself is source-pinned in the pair-log line of work, including the arbitrary-rank extension at
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 
 ## 3. New lemma: critical Fourier decay gives uniform logarithmic potential

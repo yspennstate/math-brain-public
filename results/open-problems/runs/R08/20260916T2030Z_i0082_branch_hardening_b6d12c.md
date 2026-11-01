@@ -6,7 +6,7 @@ Problem/source: Takahiro Hasebe and Yuki Ueda, *Large time unimodality for class
 
 Run ID: `20260916T2030Z_i0082_branch_hardening_b6d12c`  
 Date checked: 2026-09-16  
-Repository: `yspennstate/math-open-problems`, branch `master`  
+Repository: `private-source-repository`, branch `master`  
 Canonical claim: `operations/claims/I0082.md`, owner R08, status `ADMITTED_ACTIVE`  
 Portfolio status after this run: **PARTIAL / AUDIT_PENDING**  
 Mathematical source-answer candidate after this run: **NO — only Dirac measures are freely strongly unimodal.**

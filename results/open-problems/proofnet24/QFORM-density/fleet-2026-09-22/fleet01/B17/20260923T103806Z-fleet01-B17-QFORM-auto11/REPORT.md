@@ -148,7 +148,7 @@ while the support diameter is `2D_m+o(1)->infinity`.
 
 The completed designated-partner source actually used is
 
-`yspennstate/math-open-problems@b5377cf0235c71defa44a695048b463a9086d0b4`,
+`private-source-repository@b5377cf0235c71defa44a695048b463a9086d0b4`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T101548Z-fleet02-B17-QFORM-auto11b/REPORT.md`.
 
@@ -272,7 +272,7 @@ Fourier inversion therefore yields the uniform local limit
 
 The required newest-Claude source was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 

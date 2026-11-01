@@ -17,7 +17,7 @@ Fresh owner control is `math-research-brain@72038b4bc2ab4c369014cff17eeb8efc1797
 
 The current Claude continuation actually read is
 
-`yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`
+`private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`
 
 at
 
@@ -29,7 +29,7 @@ The mechanism change in this run stays on the same target: fractionalize the sou
 
 The theorem being extended is the complete written supporting result
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
 
 at
 
@@ -332,7 +332,7 @@ The latest completed designated-partner theorem available at publication refresh
 
 from
 
-`yspennstate/math-open-problems@00e728cf7f226ccce4b41ad751d494c5c94f67ec`
+`private-source-repository@00e728cf7f226ccce4b41ad751d494c5c94f67ec`
 
 at
 

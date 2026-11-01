@@ -6,7 +6,7 @@ Control HEAD immediately before publication: `a52da47f3f7eddb992a85639b25c648e0e
 
 ## Exact immutable source
 
-Repository: `yspennstate/math-open-problems`  
+Repository: `private-source-repository`  
 Pinned commit: `ec211ba2d77a4a9850168c6af1574ea651feaa7c`  
 LaTeX: `proofnet24/QFORM-density/five-eigenvalues-paper-2026-09-25/short/short.tex`  
 TeX blob: `c4f2a997cf336ee974e15409b5bccdd8cca039d8`  

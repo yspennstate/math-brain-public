@@ -256,9 +256,9 @@ Arbitrary additional nonseparable spectrum beyond the exact-rank-three reduction
 
 ## 7. Source ledger
 
-- fleet03/B11 r42 internal-curvature / finite-heavy reduction: `yspennstate/math-open-problems@7a95ce05ae4f99b5953663b28ba0a60ff7f0e36d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T211204Z-fleet03-B11-QFORM-r42/REPORT.md`.
-- preceding fleet01/B11 unique-heavy addendum: `yspennstate/math-open-problems@06c623136e28837dd2a94d716e99d915064ba4f2`.
-- designated fleet02/B11 punctured-collar theorem: `yspennstate/math-open-problems@25c25e15fa0f570e7b0b1a2a9fab0811eda07113`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T201026Z-fleet02-B11-QFORM-auto11/REPORT.md`.
+- fleet03/B11 r42 internal-curvature / finite-heavy reduction: `private-source-repository@7a95ce05ae4f99b5953663b28ba0a60ff7f0e36d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T211204Z-fleet03-B11-QFORM-r42/REPORT.md`.
+- preceding fleet01/B11 unique-heavy addendum: `private-source-repository@06c623136e28837dd2a94d716e99d915064ba4f2`.
+- designated fleet02/B11 punctured-collar theorem: `private-source-repository@25c25e15fa0f570e7b0b1a2a9fab0811eda07113`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T201026Z-fleet02-B11-QFORM-auto11/REPORT.md`.
 - projection-density cap used in (4.4): completed weighted orthogonal-projection theorem recorded in fleet01/B06 r40 and its cited source; no conditional density is used.
 
 Full QFORM: OPEN. Full continuity: OPEN. New theorem and aligned endpoint: continuous `C_0` density proved.

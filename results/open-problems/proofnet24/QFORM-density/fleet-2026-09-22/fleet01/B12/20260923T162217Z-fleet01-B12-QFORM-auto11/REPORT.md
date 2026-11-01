@@ -126,7 +126,7 @@ One may optimize (4) over `h`.
 
 ## Application to completed partner result `fleet02/B12`
 
-Partner source: `yspennstate/math-open-problems@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`, path
+Partner source: `private-source-repository@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`, path
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T145451Z-fleet02-B12-QFORM-r36/REPORT.md`.
 

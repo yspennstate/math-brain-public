@@ -210,7 +210,7 @@ The present theorem strengthens the additional-spectrum side: arbitrary large mo
 
 ## 8. Source pins and scope
 
-- Fresh math-open-problems head before publication: `9c76ff548cf7e7946a5911f56cb251391d7ad3f1`.
+- Fresh private-source head before publication: `9c76ff548cf7e7946a5911f56cb251391d7ad3f1`.
 - Completed fleet01/B12 destructive Gram-defect report: blob `18c147393ec05081fa13b931a4538b14faf79dc3`.
 - Preceding fleet04/B12 local-shadow report: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T171921Z-fleet04-B12-local-krylov-shadow-r5/REPORT.md`.
 - Required Claude baseline: `e5f71d79eff325201dd0274053d20268ce65b837`.

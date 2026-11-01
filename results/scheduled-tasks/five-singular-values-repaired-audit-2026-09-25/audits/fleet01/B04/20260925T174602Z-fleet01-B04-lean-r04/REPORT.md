@@ -1,6 +1,6 @@
 # fleet01/B04 Lean r04
 
-Source: yspennstate/math-open-problems commit 4e530247ec0ef4101a6e5ecf621bd35a969c42aa, paper.tex blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a.
+Source: private-source-repository commit 4e530247ec0ef4101a6e5ecf621bd35a969c42aa, paper.tex blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a.
 
 Target: Theorem 3.1, source lines 177-205.
 

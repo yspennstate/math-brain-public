@@ -15,7 +15,7 @@ The unrestricted QFORM conjecture remains OPEN. The theorem below is a selected-
 
 ### 1.1 B08 finite-dimensional floating half-paving
 
-Canonical source: `yspennstate/math-open-problems@c37badc7438c808fa283f574d22a8cb4db87216e`, B08 run `20260922T144029Z-fleet01-B08-qform-r13`.
+Canonical source: `private-source-repository@c37badc7438c808fa283f574d22a8cb4db87216e`, B08 run `20260922T144029Z-fleet01-B08-qform-r13`.
 
 If `R` is an `n x m` orthonormal-column frame and
 
@@ -43,7 +43,7 @@ so some rounding has `||E||op<=||E||F<=mu sqrt(d)/2=kappa_m mu`.
 
 The conceptual predecessor is fleet03/B08 `QFORM-DIFFUSE-CURVATURE-TRANSFER-LADDER-v1`, canonical source
 
-`yspennstate/math-open-problems@1bf6f41d81ffddcc6e8ff93b4df165d0ce5bbd05`,
+`private-source-repository@1bf6f41d81ffddcc6e8ff93b4df165d0ce5bbd05`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T231729Z-fleet03-B08-qform-diffuse-r24/REPORT.md`.
 
@@ -53,7 +53,7 @@ It used a random-sign cut and recovered cross singular values with factor `alpha
 
 Latest completed designated partner source read for this run:
 
-`yspennstate/math-open-problems@31212dc0982ef58cdae6fc12c9354599a663fad6`,
+`private-source-repository@31212dc0982ef58cdae6fc12c9354599a663fad6`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T020620Z-fleet02-B08-QFORM-auto11/REPORT.md`,
 
@@ -65,7 +65,7 @@ Its generic two-cross and one-cross compilers are independent of the old `1/48` 
 
 For the `k=0` anchored survivor I also use fleet03/B08 `QFORM-ANCHORED-THREEVOLUME-SELF-MATCHED-MIX-v1`, canonical source
 
-`yspennstate/math-open-problems@e76d2e984f81a058590bb143ff21e387fbbeab09`,
+`private-source-repository@e76d2e984f81a058590bb143ff21e387fbbeab09`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T042303Z-fleet03-B08-qform-diffuse-r27/REPORT.md`.
 

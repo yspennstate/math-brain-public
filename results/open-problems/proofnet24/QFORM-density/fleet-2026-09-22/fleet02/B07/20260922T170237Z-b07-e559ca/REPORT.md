@@ -24,7 +24,7 @@ The source-valid family in Section 6 shows why the singular/near-zero part canno
 
 ## 2. Source-pinned completed inputs actually used
 
-1. Designated partner fleet03/B07 r12, `QFORM-THIRD-COMPOUND-OVERLAP-REDUCTION-v1`: `yspennstate/math-open-problems@685929d9daee92a164dbf6ba6f9305d2e6550826`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T163733Z-fleet03-B07-qform-r12/REPORT.md`.
+1. Designated partner fleet03/B07 r12, `QFORM-THIRD-COMPOUND-OVERLAP-REDUCTION-v1`: `private-source-repository@685929d9daee92a164dbf6ba6f9305d2e6550826`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T163733Z-fleet03-B07-qform-r12/REPORT.md`.
 
    In particular, its O1 alternative supplies an original-coordinate three-color partition `C,L,R` with
 
@@ -32,11 +32,11 @@ The source-valid family in Section 6 shows why the singular/near-zero part canno
 
    Its O2 alternative analogously supplies a two-shared-coordinate aggregate at least `1/324`.
 
-2. fleet03/B09 `QFORM-PIVOT-RIDGE-BILINEAR-v1`: `yspennstate/math-open-problems@62bdcf30669c1037a3c7d87aee1fcb2bdcccd251`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/fleet03-B09-20260922T155042Z-qform12/REPORT.md`.
+2. fleet03/B09 `QFORM-PIVOT-RIDGE-BILINEAR-v1`: `private-source-repository@62bdcf30669c1037a3c7d87aee1fcb2bdcccd251`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/fleet03-B09-20260922T155042Z-qform12/REPORT.md`.
 
    If a physical scalar pivot `a!=0` is completed out, a residual original-coordinate cross block `N` with ridge kernel `K=N N^T(gamma^2 I+N N^T)^(-1)`, `theta=tr K`, and `max diag K<=q/2`, `theta>q`, gives an essentially bounded density for the full form. All other self blocks and outside couplings are retained. I apply its exact `q=1`, `theta=3/2`, `r=5/3` formula below.
 
-3. Prior fleet02/B07 state: `yspennstate/math-open-problems@059c2aefcc283898976e9e207fcc01049b85fb97`, same worker path for run `20260922T163428Z-fleet02-B07-QFORM-r12`. It pays the O0 calibrated ridge-diffuse branch or leaves at most four determinant-heavy physical rows. No claim from that run is promoted to O1/O2 without a new derivation here.
+3. Prior fleet02/B07 state: `private-source-repository@059c2aefcc283898976e9e207fcc01049b85fb97`, same worker path for run `20260922T163428Z-fleet02-B07-QFORM-r12`. It pays the O0 calibrated ridge-diffuse branch or leaves at most four determinant-heavy physical rows. No claim from that run is promoted to O1/O2 without a new derivation here.
 
 Corrections respected: no law-uniform pointwise Fresnel decay, no post-rotation independence, no unrestricted fiber supremum, no single-good-minor inference, no single Schur-rank-two extraction, and no normalized conditional spectral-density cap.
 

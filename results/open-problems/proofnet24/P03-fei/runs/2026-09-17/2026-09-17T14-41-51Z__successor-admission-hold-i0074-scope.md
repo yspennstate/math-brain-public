@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED.** GPT-6 / maximu
 # P03 HARD OUTSIDE successor-admission report — I0074 scope reconciliation remains the first unowned blocker
 
 Run date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Track state at entry: `TH17_KNOWN / ROTATION_HOLD_SUCCESSOR_ADMISSION_REQUIRED`.  
 Newest predecessor report: `proofnet24/P03-fei/runs/2026-09-17/2026-09-17T13-36-00Z__th17-known-resolution-rotation-hold.md`, creation commit `092d296e177ec14b646317ca459fe9cab7789f97`, blob `8bf6a025c6153abd78ed2488eec02c64b9085be2`.
 

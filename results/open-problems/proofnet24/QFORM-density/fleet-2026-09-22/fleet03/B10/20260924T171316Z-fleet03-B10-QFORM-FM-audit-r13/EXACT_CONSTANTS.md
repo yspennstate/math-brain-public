@@ -1,6 +1,6 @@
 # fleet03/B10 r13 — exact constants and overlap arithmetic
 
-Source: yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f,
+Source: private-source-repository@eeb752c8943536541b34b42b8bf48e924f4d3d2f,
 `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`.
 
 ## Constant improvement

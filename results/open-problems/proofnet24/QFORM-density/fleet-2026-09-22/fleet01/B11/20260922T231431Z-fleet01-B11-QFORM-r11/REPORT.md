@@ -25,7 +25,7 @@ The full target remains open because an arbitrary exact-rank-three form need not
 
 Completed partner report:
 
-`yspennstate/math-open-problems@a93d62ee254b5d17d8608a39f25aa3a5d87628f4`
+`private-source-repository@a93d62ee254b5d17d8608a39f25aa3a5d87628f4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T221830Z-fleet02-B11-QFORM-r16/REPORT.md`.
 
@@ -43,7 +43,7 @@ The same report proves the full orthogonal hub-square family with zero hub scala
 
 Completed fleet03/B11 r17:
 
-`yspennstate/math-open-problems@c869a82e52e46664d5bf299c3b210de02a02fc50`
+`private-source-repository@c869a82e52e46664d5bf299c3b210de02a02fc50`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T215136Z-fleet03-B11-QFORM-r17/REPORT.md`.
 
@@ -65,7 +65,7 @@ This branch supplies essential boundedness; continuity is not asserted.
 
 Source package:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
 
@@ -79,7 +79,7 @@ The same bound applies after changing the sign of a negative semidefinite rank-t
 
 The completed rank-two-fusion source used by the partner is
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 

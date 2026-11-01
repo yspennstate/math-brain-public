@@ -25,7 +25,7 @@ Consumed corrections include the failure of law-uniform pointwise quadratic Four
 
 Named partner dependency actually applied below:
 
-* fleet03/B09, `QFORM-PIVOT-RIDGE-BILINEAR-v1`, canonical report `yspennstate/math-open-problems@62bdcf30669c1037a3c7d87aee1fcb2bdcccd251`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/fleet03-B09-20260922T155042Z-qform12/REPORT.md`.
+* fleet03/B09, `QFORM-PIVOT-RIDGE-BILINEAR-v1`, canonical report `private-source-repository@62bdcf30669c1037a3c7d87aee1fcb2bdcccd251`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/fleet03-B09-20260922T155042Z-qform12/REPORT.md`.
 
 ## 3. Product logarithm lemma
 

@@ -232,7 +232,7 @@ The new reduction therefore identifies a sharp quantitative fork inside the prev
 Latest completed designated partner result available at the start of this run:
 
 `QFORM-ROUGH-STAR-UNIFORM-SQRT-SMALLBALL-v1` and its pair-log splice,
-`yspennstate/math-open-problems@9ccee3f9a64a934c026786b63baca551ef0ba743`,
+`private-source-repository@9ccee3f9a64a934c026786b63baca551ef0ba743`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260924T042556Z-fleet02-B09-QFORM-auto11-r17/REPORT.md`.
 
 For an invertible indefinite literal physical pair `B`, with

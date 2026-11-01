@@ -20,7 +20,7 @@ work remains stopped.
 Latest complete team-lead report consumed:
 
 - fleet03/B07 `20260922T074824Z-fleet03-B07-MOC4-r13`, report blob
-  `7724d19f793eb934c5fcc2b469bb9d0a108da4eb` in `yspennstate/math-open-problems`;
+  `7724d19f793eb934c5fcc2b469bb9d0a108da4eb` in `private-source-repository`;
 - named result `MOC4-MSQR-CROSS-SPLIT-RESERVE-v1`: on a mixed-Schur pair boundary the
   pair-null vector is a full-Hessian null vector and the fourth-order Lyapunov-Schmidt
   gate acquires a nonnegative cross-Schur reserve. The lead leaves the generic MSQR

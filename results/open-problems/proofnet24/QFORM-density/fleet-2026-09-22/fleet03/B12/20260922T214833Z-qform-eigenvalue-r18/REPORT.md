@@ -13,14 +13,14 @@ The full QFORM conjecture remains OPEN / NOT PROVED / NOT DISPROVED. The theorem
 ## Source-valid dependencies actually read
 
 1. **Assigned partner fleet04/B12: mixed-norm shear compiler.**
-   `yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e`,
+   `private-source-repository@9ce47e2a0f2c8434d901df13a218450c2189d80e`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260922T192552Z-fleet04-B12-mixed-shear-r1/REPORT.md`.
    If `(U,R)` has joint density `h(u,r)` and
    `M(h)=int esssup_u h(u,r) dr`, then every measurable `psi` satisfies
    `||p_(U+psi(R))||_infinity <= M(h)`. No independence between `U` and `psi(R)` is assumed.
 
 2. **Arbitrary-rank indefinite physical-pair theorem.**
-   `yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
+   `private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
    For independent cap-one coordinates, `s_3(H)>=s>0`, and an invertible indefinite original-coordinate pair `B` with `D=|det B|` and `kappa=sigma_min(B)`,
    `||p||_infinity <= 3*400^(1/3)*(D^2*kappa*s)^(-1/6)`, uniformly over affine terms and all other coefficients.

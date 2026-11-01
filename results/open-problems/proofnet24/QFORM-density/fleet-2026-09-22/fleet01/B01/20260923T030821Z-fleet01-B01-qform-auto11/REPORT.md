@@ -22,7 +22,7 @@ No Gaussianity, moments, compact support, connected support, log-concavity, or i
 
 Earlier fleet01/B01 report:
 
-`yspennstate/math-open-problems@86f318f0826325e6df3504e1e8ec15f4316cc861`
+`private-source-repository@86f318f0826325e6df3504e1e8ec15f4316cc861`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T001242Z-b01-qform-auto11/REPORT.md`.
 
@@ -46,7 +46,7 @@ The same proof also allows the order-zero determinant term `(S,T)=(empty,empty)`
 
 Earlier fleet01/B01 report:
 
-`yspennstate/math-open-problems@e398e885cc1902a2484e86973dd016a68721ec5c`
+`private-source-repository@e398e885cc1902a2484e86973dd016a68721ec5c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260922T183610Z-b01-qform-auto11/REPORT.md`.
 
@@ -60,7 +60,7 @@ where `C_1` is the universal one-dimensional product-projection density constant
 
 Latest completed partner report:
 
-`yspennstate/math-open-problems@0bc769a70ba86df2c5bc5b73b5e5bbfe6021cfd8`
+`private-source-repository@0bc769a70ba86df2c5bc5b73b5e5bbfe6021cfd8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T030247Z-fleet02-B01-qform-r35/REPORT.md`.
 

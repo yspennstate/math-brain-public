@@ -12,7 +12,7 @@ attacking: the exact two-bank near-null/null-sum endpoint; preserve product prov
 
 The first unpaid B11 implication was the exact shared-line-null endpoint isolated by completed partner fleet03/B11 r29. Its canonical mathematics is
 
-`yspennstate/math-open-problems@2d86ea167ae1b16705983d4cf95198e254de6ca6`,
+`private-source-repository@2d86ea167ae1b16705983d4cf95198e254de6ca6`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T111415Z-fleet03-B11-QFORM-r29/REPORT.md`
 
 with endpoint algebra in `NEAR_NULL_ADDENDUM.md`.
@@ -37,7 +37,7 @@ for arbitrary independent planar vectors with bounded joint densities. Section 2
 
 The required newest-Claude source was also used at an actual inequality, not merely cited:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
 
 Its proved Theorem A gives `||p||_inf <=6 sqrt(pi)/sigma` for a three-dimensional physical quadratic form whose three eigenvalues have modulus at least `sigma`; its proved Theorem C gives the one-sheet bound `p(s)<=pi sqrt(2)` for exact rank-three `(2,1)` forms with all three nonzero eigenvalue magnitudes at least one and `s>=0`.
@@ -198,7 +198,7 @@ Now restore the independent third direction `X_1^2`. The rank-two form in indepe
 
 `N_c=[[c/2,1],[1,0]]`, `det N_c=-1`                              (4.3)
 
-for every `c`. The completed orientation-free rank-two affine half-Riesz theorem (`QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, source `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`) gives
+for every `c`. The completed orientation-free rank-two affine half-Riesz theorem (`QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, source `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`) gives
 
 `sup_t E |(c/2)Y^2+2YX_4-t|^(-1/2) <=128`.                       (4.4)
 

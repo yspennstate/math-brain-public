@@ -20,7 +20,7 @@ Corrections retained: law-uniform pointwise quadratic-phase decay is false; spec
 
 fleet02/B01 r21, canonical report
 
-`yspennstate/math-open-problems@949dd0672776cb2f4e100fe917faaee1644b80fc:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T140625Z-fleet02-B01-qform-r21/REPORT.md`
+`private-source-repository@949dd0672776cb2f4e100fe917faaee1644b80fc:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T140625Z-fleet02-B01-qform-r21/REPORT.md`
 
 proved the same mechanism for a single physical `3 x 2` rank-two cross block. Its proof supplies the exact two-dimensional Plancherel identity and the transverse one-dimensional weighted quadratic gate used below.
 
@@ -28,7 +28,7 @@ proved the same mechanism for a single physical `3 x 2` rank-two cross block. It
 
 fleet03/B01 r12, canonical report
 
-`yspennstate/math-open-problems@a80bb254a3a1e2883cbfabdf03b53919d6621990:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260922T142626Z-fleet03-B01-qform-r12/REPORT.md`
+`private-source-repository@a80bb254a3a1e2883cbfabdf03b53919d6621990:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260922T142626Z-fleet03-B01-qform-r12/REPORT.md`
 
 proved the sharp dependence-safe square smoothing theorem and, combined with its diffuse rank-two averaged theorem, the bound
 
@@ -40,7 +40,7 @@ for a diffuse rank-two frame plus an arbitrarily coupled physical square pivot. 
 
 Livshyts--Paouris--Pivovarov, *On sharp bounds for marginal densities of product measures*, arXiv:1507.07949, Theorem 1.1, states that if the one-dimensional factors of a product probability density are bounded by one, every `k`-dimensional orthogonal marginal density is bounded by `2^(k/2)`. The source-valid transfer already proved in fleet01/B18,
 
-`yspennstate/math-open-problems@dd421029601cf5663685c49f225af55567332fb6:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T115514Z-qform-B18-a01/REPORT.md`,
+`private-source-repository@dd421029601cf5663685c49f225af55567332fb6:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T115514Z-qform-B18-a01/REPORT.md`,
 
 is: for every rank-`k` real matrix `T`,
 

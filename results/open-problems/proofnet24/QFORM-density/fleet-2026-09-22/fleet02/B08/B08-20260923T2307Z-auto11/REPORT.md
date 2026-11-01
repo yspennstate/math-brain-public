@@ -37,7 +37,7 @@ with `R` symmetric. The next receiver must consume this aligned carrier plus arb
 
 The owner-required source was read at the exact commit
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`:
 
 - `RESULTS.md`;
@@ -54,12 +54,12 @@ This is used below at an explicit matrix for which every physical pair misses th
 
 The newest compatible fleet03/B08 report at pre-write refresh is
 
-`yspennstate/math-open-problems@2dc8a71902532a4e28c15b86346d758f004bfab3`,
+`private-source-repository@2dc8a71902532a4e28c15b86346d758f004bfab3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T222118Z-fleet03-B08-qform-diffuse-r44/REPORT.md`.
 
 Its analytic engine is the independently reviewed grouped projected-crossing theorem
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 For two literal original hub coordinates and one projected crossing direction, write
@@ -85,7 +85,7 @@ In the live common-plane descendant, each two-row arm obeys
 
 The preceding fleet02/B08 physical-pair theorem at
 
-`math-open-problems@34c64bff0ddefd088c372ef60e7a1e1266a18a43`
+`private-source@34c64bff0ddefd088c372ef60e7a1e1266a18a43`
 
 supplies (1.1). No inverse of the near-singular hub block is used anywhere in the new router below.
 

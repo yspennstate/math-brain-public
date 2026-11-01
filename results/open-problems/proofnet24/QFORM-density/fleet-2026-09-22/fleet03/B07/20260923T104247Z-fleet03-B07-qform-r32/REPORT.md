@@ -18,7 +18,7 @@ The unrestricted target remains open. Nothing below assumes Gaussianity, moments
 
 The designated partner now has a completed current-QFORM artifact:
 
-`yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`
+`private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`.
 
@@ -41,7 +41,7 @@ for every physical off-diagonal coefficient. The partner's open issue was that i
 
 The immediately preceding B07 report is
 
-`yspennstate/math-open-problems@af2202db60286d57da95dd3f2aee934ed153f3e7`
+`private-source-repository@af2202db60286d57da95dd3f2aee934ed153f3e7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T093531Z-fleet03-B07-qform-r31/REPORT.md`.
 
@@ -65,7 +65,7 @@ The completed coordinate-minor theorem
 
 is in
 
-`yspennstate/math-open-problems@b967ff246e7e5b480b098c17f01cd0fc93072991`
+`private-source-repository@b967ff246e7e5b480b098c17f01cd0fc93072991`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T043951Z-fleet02-B07-4c9e7a/REPORT.md`.
 
@@ -83,7 +83,7 @@ It is an aggregate determinant-weight statement and does not select an individua
 
 The volume-stability report
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
 
@@ -97,7 +97,7 @@ with arbitrary same-bank terms and outside couplings retained.
 
 The B07 theorem `QFORM-ANCHORED-H3-TO-EDGE-E2-OR-FOURBANK-v1` is in
 
-`yspennstate/math-open-problems@466a8413b3d1ec6ce723633be0fe14eafaa7175d`
+`private-source-repository@466a8413b3d1ec6ce723633be0fe14eafaa7175d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T090613Z-fleet03-B07-qform-r30/REPORT.md`.
 

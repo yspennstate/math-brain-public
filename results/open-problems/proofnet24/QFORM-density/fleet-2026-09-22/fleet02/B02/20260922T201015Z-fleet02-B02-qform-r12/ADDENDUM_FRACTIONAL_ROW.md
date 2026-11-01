@@ -61,7 +61,7 @@ For a physical row of a product-input quadratic form with off-diagonal coefficie
 
 Use the source-pinned fleet02/B02 theorem `QFORM-PAIR-FRACTIONAL-TRACE-TRANSDUCER-v1` from
 
-`yspennstate/math-open-problems@853a4e86c7ff9789891c473905eeb57b13f615ed`,
+`private-source-repository@853a4e86c7ff9789891c473905eeb57b13f615ed`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T190827Z-fleet02-B02-40617e89/REPORT.md`.
 

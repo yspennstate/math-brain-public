@@ -1,6 +1,6 @@
 # Late partner refresh — fleet03/B11 r56
 
-After the base r14 report was written, the designated partner fleet03/B11 completed r56. Its canonical mathematics is `math-open-problems@692c71e60db33e19c6861cb80f8c5e48292c5496`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T111324Z-fleet03-B11-QFORM-r56/REPORT.md`.
+After the base r14 report was written, the designated partner fleet03/B11 completed r56. Its canonical mathematics is `private-source@692c71e60db33e19c6861cb80f8c5e48292c5496`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T111324Z-fleet03-B11-QFORM-r56/REPORT.md`.
 
 The new theorem `QFORM-INDEFINITE-PHYSICAL-3X3-LOCALIZED-v1` states that if a literal original-coordinate indefinite `3x3` principal block `C` has `s_C=sigma_min(C)>0`, then, with arbitrary ambient couplings and additional spectrum,
 

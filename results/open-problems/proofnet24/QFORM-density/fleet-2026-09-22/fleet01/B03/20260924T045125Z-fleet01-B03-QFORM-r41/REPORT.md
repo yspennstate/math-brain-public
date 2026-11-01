@@ -24,7 +24,7 @@ Use the completed fleet02/B03 theorem
 
 source-pinned in the brain at commit `c2cf502ba91445ad3119cfb9991131ec7d32d725`, with canonical mathematics
 
-`yspennstate/math-open-problems@5e5366b98337d13ba24bf666f4e42155553de7c2`.
+`private-source-repository@5e5366b98337d13ba24bf666f4e42155553de7c2`.
 
 For
 
@@ -60,7 +60,7 @@ has a density satisfying
 
 A pinned package source is
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 

@@ -14,7 +14,7 @@ The current owner continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`; QFO
 
 The exact grouped crossing input is the checked source
 
-`yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`,
+`private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`,
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -32,7 +32,7 @@ No random coordinate is rotated and declared independent; U^T X and V^T Y are on
 
 The designated partner actually consumed is fleet02/B02 at
 
-`yspennstate/math-open-problems@727768b1384cc165e2ee915145bfdfc873837229`,
+`private-source-repository@727768b1384cc165e2ee915145bfdfc873837229`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T170839Z-fleet02-B02-qform-auto11/REPORT.md`.
 

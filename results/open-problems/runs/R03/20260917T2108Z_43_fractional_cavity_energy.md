@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 
 # R03 run43 — F0097 random k-SAT: fractional cavity-energy budget and overlap-scale reformulation
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **F0097 OPEN / R03 PARTIAL.** F0001 / sharp iid Rademacher singularity remains handed off after run41's third stuck episode and is **not reopened**. The current canonical R03 claim is `operations/claims/F0097.md`; returning to F0001 without an explicit reassignment would violate the owner's stuck/rotation rule.
 

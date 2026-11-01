@@ -26,7 +26,7 @@ No pointwise law-uniform Fresnel decay, post-rotation independence, bounded-diam
 
 ### 2.1 Assigned partner `fleet02/B11`
 
-Canonical source: `yspennstate/math-open-problems@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T135203Z-b11-qform-6080e0b3/REPORT.md`.
+Canonical source: `private-source-repository@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T135203Z-b11-qform-6080e0b3/REPORT.md`.
 
 For exact rank three, if a physical spectral row has leverage `c>=1/2`, is rotated only inside the three-dimensional spectral representation to `sqrt(c)e_1`, and its Rayleigh coefficient `a` has the minority sign, the partner proves
 
@@ -40,7 +40,7 @@ The same report proves the one-dimensional projection cap `sqrt(e)` and the two-
 
 ### 2.2 Mixed-Hessian Plancherel endpoint
 
-The exact mixed-Hessian estimate is from `yspennstate/math-open-problems@446d0a33ef626b11ed5da529f2cec821732e97e9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T130227Z-fleet03-B09-QFORM-r11/REPORT.md`.
+The exact mixed-Hessian estimate is from `private-source-repository@446d0a33ef626b11ed5da529f2cec821732e97e9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T130227Z-fleet03-B09-QFORM-r11/REPORT.md`.
 
 For arbitrary square-integrable amplitudes `F,G` on `R^2` and invertible `2x2` physical cross block `B`, the same Plancherel calculation gives
 
@@ -51,7 +51,7 @@ At mixed dimension two this is the exact logarithmic Fourier endpoint.
 
 ### 2.3 One-sided scalar-curvature repair
 
-The completed `fleet01/B19` source is `yspennstate/math-open-problems@1620f286923bde59e02467ff11ed662d2a18514f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260922T141737Z-b19-qform-r11/REPORT.md`.
+The completed `fleet01/B19` source is `private-source-repository@1620f286923bde59e02467ff11ed662d2a18514f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260922T141737Z-b19-qform-r11/REPORT.md`.
 
 It proves the one-sided theorem with constant
 

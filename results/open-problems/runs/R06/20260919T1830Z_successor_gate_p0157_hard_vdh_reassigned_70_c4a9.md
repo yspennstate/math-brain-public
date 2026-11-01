@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # R06 CLOSABLE OUTSIDE — successor-admission delta: P0157 is released but HARD, VDH is reassigned, no free CLOSABLE target
 
 Date checked: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R06  
 Lane: CLOSABLE OUTSIDE  
 Operational state entering/leaving: `PENDING_ADMISSION`

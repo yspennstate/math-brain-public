@@ -21,12 +21,12 @@ Corrections respected here include: no law-uniform pointwise quadratic-phase dec
 Two mathematical dependencies are used.
 
 1. Previous fleet01/B09 exact singular-pair ledger, source
-   `yspennstate/math-open-problems@b6ecc365cd6c0b38adc73872dec204ab5d4e3059`,
+   `private-source-repository@b6ecc365cd6c0b38adc73872dec204ab5d4e3059`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260924T005202Z-fleet01-B09-QFORM-auto11/REPORT.md`.
    For an exact rank-one physical pair and rank-one pair-to-leaf cross, it proves the anchored compound identity and the exact relation `P_H+Omega_(2,H)=tau^2 s^4` in the notation below.
 
 2. Designated partner fleet02/B09 r15, source
-   `yspennstate/math-open-problems@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`,
+   `private-source-repository@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T224553Z-fleet02-B09-QFORM-r15/REPORT.md`.
    Besides its square-hyperbola theorem, it uses the reviewed one-dimensional product-projection estimate
    `||p_(r^T X)||_infinity <= sqrt(2)/||r||_2`

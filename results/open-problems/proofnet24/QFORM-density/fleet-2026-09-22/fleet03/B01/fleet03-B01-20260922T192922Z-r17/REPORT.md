@@ -198,7 +198,7 @@ and proves
 
 for laws with bounded density, with the converse implication as well. Canonical partner source:
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 
 Applying that result to (4.2) gives the genuine averaged-frequency bound
 

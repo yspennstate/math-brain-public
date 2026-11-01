@@ -27,7 +27,7 @@ Neither statement controls arbitrary finite-row spikes, two or more interacting 
 
 The designated partner fleet03/B17 completed `QFORM-DISJOINT-THREE-BANK-2PI-v1`, canonical report
 
-`yspennstate/math-open-problems@d53ca1d541b2b2dbf861ec39fda699209b267158`
+`private-source-repository@d53ca1d541b2b2dbf861ec39fda699209b267158`
 
 at
 

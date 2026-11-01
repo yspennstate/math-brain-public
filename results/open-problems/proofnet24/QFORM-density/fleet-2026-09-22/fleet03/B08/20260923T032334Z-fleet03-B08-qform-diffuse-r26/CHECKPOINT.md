@@ -13,7 +13,7 @@ w_{S,T}=det B[S,T]^2/Delta3(B),
 alpha_i=sum_{S contains i,T} w_{S,T},
 beta_j=sum_{S,T contains j} w_{S,T}.
 
-The newest fractional-volume theorem at math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba gives, for 1<=q<3/2, a continuous density bound
+The newest fractional-volume theorem at private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba gives, for 1<=q<3/2, a continuous density bound
 
 ||p_Q||_inf <= 3e/[(3-2q)sqrt(q)] Delta3(B)^(-1/6)
 

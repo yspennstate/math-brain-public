@@ -20,7 +20,7 @@ The analytic receiver is the completed same-slot theorem
 
 `QFORM-CROSS-E3-OPTIMAL-THRESHOLD-v1`,
 
-`yspennstate/math-open-problems@563bc41e4f9247f9daf3343a57757f45e3f6e703:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T215155Z-fleet03-B04-QFORM-auto11-r42/REPORT.md`.
+`private-source-repository@563bc41e4f9247f9daf3343a57757f45e3f6e703:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T215155Z-fleet03-B04-QFORM-auto11-r42/REPORT.md`.
 
 For every literal original-coordinate cross block `M`, it proves
 
@@ -34,7 +34,7 @@ The theorem retains arbitrary same-bank quadratic terms and affine terms produce
 
 The live rank-five source used for the numerical application below is fleet01/B20's actual physical approximant branch, read from
 
-`yspennstate/math-open-problems@af30108d1fd48a138ef13c683d397a74f8e0228e:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T165154Z-fleet01-B20-QFORM-auto11/REPORT.md`.
+`private-source-repository@af30108d1fd48a138ef13c683d397a74f8e0228e:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T165154Z-fleet01-B20-QFORM-auto11/REPORT.md`.
 
 It supplies an original-coordinate symmetric `S_0` satisfying
 
@@ -308,7 +308,7 @@ The density is continuous and vanishes at infinity. A deterministic matrix check
 
 The completed designated-partner report is
 
-`yspennstate/math-open-problems@3224f273e92d97a8bff7424e9b1191c1e49d0611:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260923T214340Z-fleet04-B04-QFORM-r1/REPORT.md`.
+`private-source-repository@3224f273e92d97a8bff7424e9b1191c1e49d0611:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260923T214340Z-fleet04-B04-QFORM-r1/REPORT.md`.
 
 It supplies a literal cross block `M=A[I,J]`, fixed physical row `i`, fixed physical column `j`, and separated anchored third-volume
 

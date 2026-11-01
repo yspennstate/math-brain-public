@@ -15,7 +15,7 @@ No Gaussianity, moments, log-concavity, compact or connected support, iid assump
 
 The exact incoming theorem is fleet03/B07 r44:
 
-`yspennstate/math-open-problems@b12b80a3b5a2185d67074eed7c739bec6abc06b2`
+`private-source-repository@b12b80a3b5a2185d67074eed7c739bec6abc06b2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260924T050943Z-fleet03-B07-qform-r44/REPORT.md`.
 
@@ -48,7 +48,7 @@ or
 
 The nonzero coefficient tail is retained in this statement.
 
-The completed physical-E3 receiver used below is the current source line quoted and applied in fleet03/B20 r46 (`yspennstate/math-open-problems@9ae7023224386e95ab2bd7f088347db8750c7b06`): for any literal original-coordinate cross block `M`,
+The completed physical-E3 receiver used below is the current source line quoted and applied in fleet03/B20 r46 (`private-source-repository@9ae7023224386e95ab2bd7f088347db8750c7b06`): for any literal original-coordinate cross block `M`,
 
 `||p_Q||_infinity <= C_E3 E3(M)^(-1/6)`,
 
@@ -58,7 +58,7 @@ with a continuous C0 density on the paid branch; arbitrary same-side quadratic b
 
 The designated fleet04/B07 dependency read in full is
 
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 

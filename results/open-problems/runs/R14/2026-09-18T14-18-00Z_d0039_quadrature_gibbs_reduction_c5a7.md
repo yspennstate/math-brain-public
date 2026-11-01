@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R14 HARD OUTSIDE — D0039 Gaussian-quadrature cells and an exact endpoint Gibbs representation
 
 Date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / source problem OPEN.** This run does not reopen the handed-off negative-margin spherical perceptron, H0017, or Bradley D0036. It continues the exclusive R14 hard-outside claim `operations/claims/D0039.md`: Bálint Virág, *Operator limits of random matrices*, ICM 2014 / arXiv:1804.06953, Section 4, Question 1, on the multifractal spectrum of the beta-Hermite spectral measure.
 

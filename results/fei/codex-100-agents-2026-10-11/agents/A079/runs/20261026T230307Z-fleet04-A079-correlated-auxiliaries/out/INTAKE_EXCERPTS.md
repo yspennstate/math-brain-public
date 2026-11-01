@@ -1,23 +1,23 @@
-math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json
+private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json
 
 
-math-open-problems/reports\fei-2026-10-11\README.md
+private-source/reports\fei-2026-10-11\README.md
 
 
-math-open-problems/reports\fei-2026-10-11\CURRENT_STATUS.md
+private-source/reports\fei-2026-10-11\CURRENT_STATUS.md
 7: The finished paper has 38 pages and is public at [b38ba0ab4961](https://github.com/yspennstate/fourier-entropy-threshold-functions/commit/b38ba0ab49618ccbe6d1518a34c141dcec9f247c). All twenty scientific files were verified against the completed package. Its main regular/all-LTF bound is `H <= C_reg D`, with `C_reg = log2(4+e) + 2 log2(e*pi) < 8.937
 23: 3. **G-BOOLEANITY / G-PHASE-COND:** derive a full-Booleanity consequence beyond refuted fixed prefixes, retaining the unpaid conditional spectral entropy.
 
-math-open-problems/reports\fei-2026-10-11\CLAIM_REGISTRY.json
+private-source/reports\fei-2026-10-11\CLAIM_REGISTRY.json
 223:       "gap_id": "G-PHASE-COND",
 229:         "B16"
 
-math-open-problems/reports\fei-2026-10-11\OBSTRUCTION_REGISTRY.json
+private-source/reports\fei-2026-10-11\OBSTRUCTION_REGISTRY.json
 228:         "B16"
 247:         "B16"
 287:         "B16"
 
-math-open-problems/reports\fei-2026-10-11\PACKET_STATUS.json
+private-source/reports\fei-2026-10-11\PACKET_STATUS.json
 274:       "topic": "Shared-data collision law",
 1173:       "stream": "B16",
 1184:       "design_target_id": "FEI-B16-A076-INITIAL"
@@ -31,7 +31,7 @@ math-open-problems/reports\fei-2026-10-11\PACKET_STATUS.json
 1233:       "stream": "B16",
 1244:       "design_target_id": "FEI-B16-A080-INITIAL"
 
-math-open-problems/reports\fei-2026-10-11\STREAM_NEXT_ACTIONS.json
+private-source/reports\fei-2026-10-11\STREAM_NEXT_ACTIONS.json
 48:       "next_action": "Compute the complete conditioned posterior cost for one low-energy/shared-data family, including v log Z, witness entropy and the supplement's paid scale prior.",
 79:       "name": "Addressing and shared-data tests",
 137:       "next_action": "Prove a proper adaptive-block selection or stopping rule on a growing class, retaining full block channel/conditional entropy and the terminal cost.",
@@ -39,7 +39,7 @@ math-open-problems/reports\fei-2026-10-11\STREAM_NEXT_ACTIONS.json
 354:       "native_stream": "B16",
 360:         "A079",
 
-math-open-problems/reports\fei-2026-10-11\FEI_100_agent_research_plan.tex
+private-source/reports\fei-2026-10-11\FEI_100_agent_research_plan.tex
 60: The interrupted work supplied a 36-page version of \emph{Fourier entropy of threshold functions and their compositions}. The audited recovery and shared-data extension produce the 38-page public paper, released at repository commit \texttt{cd27aa96a5bb670a5b3ae5451095b7020db8e9d4} \cite{Threshold}. Its principal constant is
 71: The public recovery revision includes the exact shared-data multiplexer identity from the separate reductions manuscript, with the improved regular-leaf constant. If adjacent branches are orthogonal and selectors are fresh at each node, recursive multiplexers preserve $\Creg$ even when the branch data variables overlap. This is a concrete further c
 267: \subsection{Boolean phase and conditional entropy}
@@ -55,59 +55,59 @@ math-open-problems/reports\fei-2026-10-11\FEI_100_agent_research_plan.tex
 726: {\small\emph{Execution contract:} new math; P1; initial cap 3 work cycles. Deliverables: \path{CONDITIONAL_PHASE_THEOREM.tex}; \path{PHASE_SCOPE.md}. Independent review: A088, A094. Consumers: A003, A079, A088.}
 794: \emph{Acceptance tests.} Normalize coefficients in the actual product orthonormal basis and prove the inverse is a Boolean gate at every positive-mass input. Handle probability-zero/one coordinates by contraction; repeated physical variables invalidate a claimed disjoint product law unless separately proved. Replay the three weighted control failur
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\CAMPAIGN.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\CAMPAIGN.md
 20: - [baseline/current-threshold-paper.tex](baseline/current-threshold-paper.tex): the current 38-page source, including the independently checked shared-data multiplexer closure.
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\CLAIMS.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\CLAIMS.md
 61: | C024 | OPEN_TARGET | Pay actual-source entropy/history transfer while retaining history probabilities and full Boolean ancestry. The true integrated cost satisfies H_nat−3I≤C_path≤H_nat+I, so a universal linear payment is FEI-equivalent. | F08,F09,F20 | RM §§11.13–11.16 |
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\COUNTEREXAMPLES.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\COUNTEREXAMPLES.md
 91: **Owners:** F08,F09,F18,F19. **Related:** C023,C024,C032. **Source:** RM §§11.15,11.19–11.20, including `POINT_FLIP_SURPLUS.md` and `ADDRESS_HISTORY_GUARD.md`.
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\SEED_LEMMAS.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\SEED_LEMMAS.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\NATIVE_MAPPING.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\NATIVE_MAPPING.md
 28: | B16 | Counterfamily |
 42: | F03 — Rare-root amortization | B05, B02, B08, B16 | Sparse-root priors, scale costs, KL rebates, and asymptotic failures of local payments. |
 54: | F15 — Sparse extremal structure | B05, B11, B16, B01 | Activation-preserving reductions, non-equivalent structural hypotheses, and potential high-ratio families. |
 56: | F17 — Asymptotic stress families | B16, B11, B05, B10 | All-dimensional addressing, bent, parity, sparse and tensor families distinguishing a route failure from a conjecture counterfamily. |
 80: | B16 | F03, F15, F17 |
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_26_CRITICAL_RARE_MOMENT.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_26_CRITICAL_RARE_MOMENT.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_44_COMPONENT_ENTROPY_COUNTEREXAMPLE.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ADDENDUM_11_44_COMPONENT_ENTROPY_COUNTEREXAMPLE.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\BLOCK_RESTRICTION_IDENTITY_2026-09-18.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\BLOCK_RESTRICTION_IDENTITY_2026-09-18.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_REDUCTION.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_REDUCTION.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_RIGIDITY.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_RIGIDITY.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ERASURE_SYNERGY_AND_DUALITY_2026-09-18.md
 133: There is a sharper class-level consequence. Let Z be the class of Boolean functions whose positive Fourier support contains no adjacent pair. This is exactly the class B=0 (equivalently K=0): a binary conditional entropy is positive precisely when both members of some spectral edge have positive mass. Every parity lift (5) lies in the still smaller
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\GAMMA_ENDPOINT_LEDGER.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\GAMMA_ENDPOINT_LEDGER.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ISOSPECTRAL_SPLICING_CURATED.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ISOSPECTRAL_SPLICING_CURATED.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\LOG_ALLOCATION_CURATED.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\LOG_ALLOCATION_CURATED.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ONE_BIT_ENDPOINT.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ONE_BIT_ENDPOINT.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\OVERLAPPING_PRODUCT_NOTE.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\OVERLAPPING_PRODUCT_NOTE.md
 
 
-math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources\ROUTE_MAP_CURATED.md
+private-source/research_pushes\2026-10-11-full-fei-100-agents\sources\ROUTE_MAP_CURATED.md
 
 
 context\percolation_spectral_pivotal_entropy_30pp.txt

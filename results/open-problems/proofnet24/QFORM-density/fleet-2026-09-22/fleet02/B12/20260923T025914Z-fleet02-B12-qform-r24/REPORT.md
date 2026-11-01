@@ -21,7 +21,7 @@ The theorem below does **not** assert this extraction. It shows that, once such 
 ## 2. Source-pinned completed inputs actually used
 
 1. Required newest-Claude source at
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
    Its proved Theorem D' says that for an ORIGINAL-coordinate cross block `M=A_IJ`, if the 3-volume row marginals satisfy `alpha_i<=h<3/4`, then
 
@@ -30,7 +30,7 @@ The theorem below does **not** assert this extraction. It shows that, once such 
    with arbitrary self blocks, outside couplings and affine terms. No rotated independence is used.
 
 2. Current volume-tail extension at
-   `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+   `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
    `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md`.
    It proves, for `T2(M)=sum_{j>=3}s_j(M)^2`, any row-space projection `P`, and `epsilon=||(I-P)M||op`,
 
@@ -43,7 +43,7 @@ The theorem below does **not** assert this extraction. It shows that, once such 
    where `Ctail=9 sqrt(3) e / 2 = 21.186910062820317...`. The density is continuous at this terminal Fourier certificate.
 
 3. Designated partner fleet03/B12 r23 at
-   `yspennstate/math-open-problems@4894ced504d555e84620c46029ed08a2af389d9f`,
+   `private-source-repository@4894ced504d555e84620c46029ed08a2af389d9f`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T024437Z-qform-eigenvalue-r23/REPORT.md`.
    If a terminal original-coordinate Schur remainder has density cap `B/L`, then any preceding physical scalar pivot chain with `|a_j|>=(4/B)L` preserves the same cap `B/L`. Its proof uses the exact one-sided half-Riesz bound and does not assume independence between the completed square and its dependent remainder.
 

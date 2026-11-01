@@ -1,7 +1,7 @@
 # ProofNet24 P21 — restricted correlated Gaussian equivalence (cGEC)
 
 **Run timestamp:** 2026-09-16 08:15:39 Asia/Jerusalem  
-**Repository / branch:** `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** `private-source-repository` / `master`  
 **Track:** `P21-kernel-cGEC`  
 **Exact target:** P04 Target 1; exactly two augmentations per original sample; fixed Delta > 0 and fixed ridge lambda > 0; smooth bounded odd activation with bounded derivatives (especially tanh); Gaussian feature entries variance 1/d; n/d -> alpha > 0; m/d -> beta > 0; initially a unit-norm linear teacher; NO number theory.  
 **Runtime honesty:** the exposed runtime is GPT-5.6 Sol. The user requested GPT-6 / maximum reasoning, but no GPT-6 selector or separate reasoning-effort control is exposed. I do not claim an unavailable model switch, hidden subagent, or unperformed review.  

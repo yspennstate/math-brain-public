@@ -1,7 +1,7 @@
 # ProofNet24 P26 immutable archive / health fragment
 
 **P26 report timestamp:** 2026-09-15 15:58:44 Asia/Jerusalem  
-**Repository:** `yspennstate/math-open-problems`  
+**Repository:** `private-source-repository`  
 **Branch:** `master`  
 **Source policy:** GitHub canonical research artifacts and genuinely exposed internal scheduler status only; no email/Gmail source used.
 

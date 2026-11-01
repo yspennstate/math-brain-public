@@ -4,7 +4,7 @@ After the primary report was committed, fresh programme main exposed two later s
 
 ## 1. Latest assigned partner fleet02/B09
 
-Source: `yspennstate/math-open-problems@caa2cef304844e9d6f841acaf2e003f0bc1c24b5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T183809Z-fleet02-B09-QFORM-r7/REPORT.md`, theorem `QFORM-RANK3-BILINEAR-SCHUR-BANK-v1`.
+Source: `private-source-repository@caa2cef304844e9d6f841acaf2e003f0bc1c24b5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T183809Z-fleet02-B09-QFORM-r7/REPORT.md`, theorem `QFORM-RANK3-BILINEAR-SCHUR-BANK-v1`.
 
 For an exact-rank-three zero-diagonal form and any nonzero physical edge `(i,j)`, put
 
@@ -22,7 +22,7 @@ Thus the exact-rank-three zero-diagonal branch with a quantitatively nontrivial 
 
 ## 2. Fresh fleet03/B09 Schur half-Riesz result
 
-Source: `yspennstate/math-open-problems@2589a6230149bd8c3b4b2a0aad6f404bc7ab034a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T184648Z-fleet03-B09-QFORM-r15/REPORT.md`.
+Source: `private-source-repository@2589a6230149bd8c3b4b2a0aad6f404bc7ab034a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T184648Z-fleet03-B09-QFORM-r15/REPORT.md`.
 
 That run proves two translation-uniform half-Riesz exits for a residual quadratic form `F` with `s_2(S)>=1`:
 

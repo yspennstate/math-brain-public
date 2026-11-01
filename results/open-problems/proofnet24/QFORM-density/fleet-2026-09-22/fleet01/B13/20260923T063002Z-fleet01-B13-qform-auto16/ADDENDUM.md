@@ -4,7 +4,7 @@ This addendum strengthens the same run's `REPORT.md`. Full QFORM remains OPEN.
 
 ## A. Recursive scalar compression improves from 6k+2 to 4k+2
 
-The immediately preceding fleet01/B13 run (`math-open-problems@829f5ef443f751724dc20e7ec45d04b37459df6`) proved recursive high-slab-ratio compression using the older three-hub E2 theorem. The new `QFORM-SCALAR-E2-LINF-OR-TWOHUB-v1` from the present report can be substituted at every recursive step.
+The immediately preceding fleet01/B13 run (`private-source@829f5ef443f751724dc20e7ec45d04b37459df6`) proved recursive high-slab-ratio compression using the older three-hub E2 theorem. The new `QFORM-SCALAR-E2-LINF-OR-TWOHUB-v1` from the present report can be substituted at every recursive step.
 
 Let an actual interval witness have slab ratio
 
@@ -50,7 +50,7 @@ Thus the present run improves the preceding recursive theorem simultaneously in 
 
 ## B. Pair-pivot h<1 extension
 
-The preceding fleet01/B13 report `math-open-problems@2b4a2e8c6490c5e2fb063a2aaa34303f6ba3d9ce` proves for an invertible indefinite original-coordinate physical pair, with least singular value `kappa`, the pointwise conditional envelope
+The preceding fleet01/B13 report `private-source@2b4a2e8c6490c5e2fb063a2aaa34303f6ba3d9ce` proves for an invertible indefinite original-coordinate physical pair, with least singular value `kappa`, the pointwise conditional envelope
 
 `p_Q(t) <=4 kappa^(-1/2) E|t-R|^(-1/2)`.                          (B.1)
 

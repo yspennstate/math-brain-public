@@ -1,6 +1,6 @@
 # Late source refresh: B09 stable-rank pivot theorem and same-square correction
 
-After the primary report was committed, fresh programme main exposed fleet02/B09 run `20260922T160923Z-fleet02-B09-QFORM-r4`, canonical `yspennstate/math-open-problems@77d71ed8bbd7f8a3fd40958e54b5bf658163c27a`. I read and apply it here rather than leaving the primary synthesis stale.
+After the primary report was committed, fresh programme main exposed fleet02/B09 run `20260922T160923Z-fleet02-B09-QFORM-r4`, canonical `private-source-repository@77d71ed8bbd7f8a3fd40958e54b5bf658163c27a`. I read and apply it here rather than leaving the primary synthesis stale.
 
 B09 proves `QFORM-PIVOT-OFFDIAG-STABLERANK-v1`: for a genuine physical scalar pivot `a!=0`, if the scalar Schur complement `S` has offdiagonal stable rank at least `24`, a random physical cut plus the completed fleet03/B09 ridge theorem yields a bounded density. In the exact target, the window-heavy, diagonal-dominant case closes by `<340`. Therefore the live structural debt is already narrower than the primary report's generic disjoint-scalar wording: after the spectral-window branch, one only needs to route either an offdiagonal-heavy physical coordinate or a diagonal-heavy pivot whose Schur offdiagonal stable rank is `<24`.
 

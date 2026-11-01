@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-03 — admission delta screen 33: TS12 owned; legacy-P cursor cross-check; no residue-2 release
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Track / namespace: `NM13-03` / `proofnet24/NM13-03/`  
 Category: **CLOSABLE OUTSIDE**  
 Initial preference: other authors' finite random-matrix inequalities, exact moment questions, or sharp spectral constants  

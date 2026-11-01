@@ -21,7 +21,7 @@ Fresh owner control was resolved from `yspennstate/math-research-brain` main at 
 
 Required owner-pinned source package read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 
@@ -29,7 +29,7 @@ including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md
 
 The designated partner actually used is fleet03/B10 r23, canonical report commit
 
-`yspennstate/math-open-problems@be74f28001070ca45728f51da989c89335e2803c`,
+`private-source-repository@be74f28001070ca45728f51da989c89335e2803c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T101459Z-fleet03-B10-QFORM-r23/REPORT.md`.
 
@@ -45,7 +45,7 @@ The completed dependence-safe receiver used below is fleet01/B11's `QFORM` null-
 
 The two-dimensional product-projection cap is the completed `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical source
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
 
 All uses below preserve original-coordinate product provenance. In particular, no conditional projection-density cap is promoted to independence.
 

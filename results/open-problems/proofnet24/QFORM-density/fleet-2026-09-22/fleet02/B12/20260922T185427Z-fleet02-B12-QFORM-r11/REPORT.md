@@ -15,11 +15,11 @@ The full target remains open: for independent real coordinates with densities at
 
 The designated same-role partner result was read in full from fleet03/B12:
 
-* fleet03/B12 `QFORM-SIGNED-SCHUR-EXTRA-EIGENVALUE-RECURRENCE`, canonical `yspennstate/math-open-problems@c10963494049ba2708f33e8533198ac38fc2ba31`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T164418Z-qform-eigenvalue-r13/REPORT.md`. It proves signed Schur spectral-count inheritance at the degraded scale `alpha(q) ell` and, on the high-leverage diagonal-heavy branch, the fixed-point recurrence constant `8456.328510410563...`.
+* fleet03/B12 `QFORM-SIGNED-SCHUR-EXTRA-EIGENVALUE-RECURRENCE`, canonical `private-source-repository@c10963494049ba2708f33e8533198ac38fc2ba31`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T164418Z-qform-eigenvalue-r13/REPORT.md`. It proves signed Schur spectral-count inheritance at the degraded scale `alpha(q) ell` and, on the high-leverage diagonal-heavy branch, the fixed-point recurrence constant `8456.328510410563...`.
 
 I also read the complete dependent square-smoothing theorem used by that partner:
 
-* fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`. If `R` has density cap `M`, and conditionally on `R=r` the scalar `V_r` has density cap one, then `R+aV_R^2` has density cap at most `2 sqrt(M/|a|)`.
+* fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`. If `R` has density cap `M`, and conditionally on `R=r` the scalar `V_r` has density cap one, then `R+aV_R^2` has density cap at most `2 sqrt(M/|a|)`.
 
 A concurrent fleet03/B09 report records the already-known scalar singular-value inheritance as an input. The result below therefore does not claim novelty for that scalar inequality itself; the new B12 contribution is the exact block form, its use to remove the partner's `alpha(q)` loss from absolute-eigenvalue peeling, and the resulting tunable no-blowup recurrence for arbitrary extra large eigenvalues.
 

@@ -28,7 +28,7 @@ This keeps continuity logically separate from the universal height bound.
 
 I apply the fresh completed assigned-partner report
 
-- repository/commit: `yspennstate/math-open-problems@d73760eb784a86c356c64f05dd92f84655618f02`;
+- repository/commit: `private-source-repository@d73760eb784a86c356c64f05dd92f84655618f02`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T153101Z-fleet03-B15-r12/REPORT.md`.
 
 It proves that if `rank(A)>=3` and at least one original-coordinate diagonal entry is nonzero, then every admissible rough product input gives `X^TAX` a density in `C_0(R)`. Thus its exact remaining rough-input regularity class is `diag(A)=0`.
@@ -39,7 +39,7 @@ I use that result as the completed nonzero-diagonal branch and attack the comple
 
 I also use the completed local product-transversality theorem
 
-- repository/commit: `yspennstate/math-open-problems@4b2e6a36bcffeb767998c43d27cee1d8f5eaa07e`;
+- repository/commit: `private-source-repository@4b2e6a36bcffeb767998c43d27cee1d8f5eaa07e`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T150242Z-fleet02-B15-qform-r3/REPORT.md`.
 
 At its exact scope: for `d=3` or `4`, any invertible real symmetric physical-coordinate block B, any affine terms, and independent cap-one coordinate densities, the resulting affine quadratic has a continuous density. The same report retains the earlier height bounds
@@ -56,12 +56,12 @@ That report also uses the previously completed principal-pivot theorem: every re
 
 For the final target reformulation I apply fleet03/B15
 
-- `yspennstate/math-open-problems@40946450aa2bfb06068a2c688d4407be10470c22`,
+- `private-source-repository@40946450aa2bfb06068a2c688d4407be10470c22`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T122718Z-fleet03-B15-qform-r11/REPORT.md`,
 
 which proves that the sharp interval-density supremum over all admissible marginals equals the supremum over product indicators `1_{E_i}` with `|E_i|=1`, and equally over bounded finite unions of intervals, with no universal bound on the fragment count or separation.
 
-I also keep in view fleet04/B15 `yspennstate/math-open-problems@07672b7beb8f867c7a7b973aa3157a42ae506460`, which independently proves equality of the full sharp constant with the sharp constant over compactly supported smooth cap-one marginals. It is not used to infer rough-output continuity.
+I also keep in view fleet04/B15 `private-source-repository@07672b7beb8f867c7a7b973aa3157a42ae506460`, which independently proves equality of the full sharp constant with the sharp constant over compactly supported smooth cap-one marginals. It is not used to infer rough-output continuity.
 
 ## 3. New local tail lemma: every invertible 3/4-coordinate product quadratic is C0
 

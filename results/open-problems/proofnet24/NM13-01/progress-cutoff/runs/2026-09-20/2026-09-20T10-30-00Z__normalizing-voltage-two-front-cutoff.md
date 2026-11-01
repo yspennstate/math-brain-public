@@ -8,7 +8,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6/maximum
 
 **Publication novelty:** `UNVERIFIED`. The mathematical claim is new relative to the repository state read in this run; bounded external searches did not establish worldwide priority.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 Prewrite master observed immediately before this run's writes: `72623e774cf7068f8034a68db0b2402c01658bdf`.
 

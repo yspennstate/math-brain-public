@@ -10,13 +10,13 @@ attacking: target-level regularity via physical-pair height certificates and lea
 
 Completed assigned partner results actually used:
 
-1. `fleet02/B15` r18, canonical mathematics `yspennstate/math-open-problems@159482a9594e177145fa61c337bf16e1f9fefc55`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T212015Z-fleet02-B15-qform-r18/REPORT.md`. If an ORIGINAL-coordinate `2x2` principal block `D` is positive or negative definite, then, after conditioning on every other physical coordinate, the resulting affine two-variable quadratic has density cap
+1. `fleet02/B15` r18, canonical mathematics `private-source-repository@159482a9594e177145fa61c337bf16e1f9fefc55`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T212015Z-fleet02-B15-qform-r18/REPORT.md`. If an ORIGINAL-coordinate `2x2` principal block `D` is positive or negative definite, then, after conditioning on every other physical coordinate, the resulting affine two-variable quadratic has density cap
 
    `pi/sqrt(|det D|)`.
 
    In particular the full quadratic form has this same cap, independently of all outside couplings. The proof is the exact ellipse-shell area estimate and is affine-term insensitive.
 
-2. `fleet02/B15` r4, canonical mathematics `yspennstate/math-open-problems@28ddaf28bf6779837fb1212a025d8a8b9d329f8a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T160529Z-fleet02-B15-qform-r4/REPORT.md`. For every fixed real symmetric matrix of rank at least three and arbitrary cap-one product marginals, the quadratic output has an instance-dependent bounded density in `C_0(R)`. More locally, an invertible physical principal block `B` of order `d=3` or `4` gives a uniform-in-affine-term conditional cap
+2. `fleet02/B15` r4, canonical mathematics `private-source-repository@28ddaf28bf6779837fb1212a025d8a8b9d329f8a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T160529Z-fleet02-B15-qform-r4/REPORT.md`. For every fixed real symmetric matrix of rank at least three and arbitrary cap-one product marginals, the quadratic output has an instance-dependent bounded density in `C_0(R)`. More locally, an invertible physical principal block `B` of order `d=3` or `4` gives a uniform-in-affine-term conditional cap
 
    `C_d/sigma_min(B)`,
 

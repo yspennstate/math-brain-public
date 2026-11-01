@@ -12,7 +12,7 @@ Regularity: essential boundedness is proved for the family below. The pinned rul
 
 The current partner reduction leaves a genuine near-coloop collar. Fleet03/B16 r28 proves `QFORM-XOR-BALANCED-BASIS-v1`: after the prior disjoint-basis and transverse escapes, duplicated-gate failure is paid whenever `a=1-c>=1/64`; therefore only `c>63/64` remains. Its exact source is
 
-`yspennstate/math-open-problems@5f7b47acd0c385e3c65a9c20c808eca6a5527e71`
+`private-source-repository@5f7b47acd0c385e3c65a9c20c808eca6a5527e71`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T105237Z-fleet03-B16-QFORM-r28/REPORT.md`.
 
@@ -142,7 +142,7 @@ This is the curved quadratic pushforward to which the projection information mus
 
 The required pinned Claude source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`
 
@@ -194,7 +194,7 @@ Now apply the completed designated-partner theorem
 
 source
 
-`yspennstate/math-open-problems@b94cc7446401c02727c42024274c002e2f4e0cab`
+`private-source-repository@b94cc7446401c02727c42024274c002e2f4e0cab`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T202347Z-fleet03-B16-QFORM-r15/REPORT.md`.
 
@@ -269,9 +269,9 @@ The explicit family shows why searching only for one good physical triple is too
 ## 9. Source ledger and status
 
 Owner target/control: QFORM only, revision `2026-09-22.15`, full claim open.  
-Pinned Claude product/Fourier/ruled source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`.  
-Latest compatible designated partner used structurally: fleet03/B16 r28 `QFORM-XOR-BALANCED-BASIS-v1` at `math-open-problems@5f7b47acd0c385e3c65a9c20c808eca6a5527e71`.  
-Completed partner theorem used quantitatively: fleet03/B16 r15 `QFORM-PHYSICAL-TRIPLE-DETERMINANT-v1` at `math-open-problems@b94cc7446401c02727c42024274c002e2f4e0cab`.
+Pinned Claude product/Fourier/ruled source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`.  
+Latest compatible designated partner used structurally: fleet03/B16 r28 `QFORM-XOR-BALANCED-BASIS-v1` at `private-source@5f7b47acd0c385e3c65a9c20c808eca6a5527e71`.  
+Completed partner theorem used quantitatively: fleet03/B16 r15 `QFORM-PHYSICAL-TRIPLE-DETERMINANT-v1` at `private-source@b94cc7446401c02727c42024274c002e2f4e0cab`.
 
 Full QFORM: `OPEN / NOT PROVED / NOT DISPROVED`.  
 No post-rotation independence, conditional projection-height supremum, hidden moment/support assumption, or small-quadratic-perturbation deletion is used.

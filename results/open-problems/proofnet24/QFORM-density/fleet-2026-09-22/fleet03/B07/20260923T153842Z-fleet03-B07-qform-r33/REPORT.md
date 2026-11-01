@@ -17,7 +17,7 @@ The full unrestricted conjecture is not proved or disproved here. No Gaussian, m
 
 The immediate predecessor is fleet03/B07 r32,
 
-`yspennstate/math-open-problems@b684b8edb29274a17fd5e8ed7fc8049ce12a4595`,
+`private-source-repository@b684b8edb29274a17fd5e8ed7fc8049ce12a4595`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T143815Z-fleet03-B07-qform-r32/REPORT.md`.
 
@@ -50,7 +50,7 @@ where, by index contraction,
 
 The designated completed partner is fleet04/B07,
 
-`yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`,
+`private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`.
 

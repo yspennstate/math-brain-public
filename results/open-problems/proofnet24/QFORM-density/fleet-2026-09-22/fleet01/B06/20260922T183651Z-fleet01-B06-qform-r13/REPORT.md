@@ -11,13 +11,13 @@ The full target remains open: for arbitrary independent real coordinates with pr
 ## Dependencies actually used
 
 1. **fleet02/B06**, `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical source
-   `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+   `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
    If C has orthonormal columns in R^{m x k} and Y=C^T X for independent cap-one coordinates, then
    `||p_Y||_infinity <= exp(k/2)`.
 
 2. `QFORM-CROSSBLOCK-RANK-r-FOURIER-v1`, canonical source
-   `yspennstate/math-open-problems@8624982153e5a2154e4ae8922d2fe4dc77080efc`,
+   `private-source-repository@8624982153e5a2154e4ae8922d2fe4dc77080efc`,
    `proofnet24/QFORM-density/fleet-2026-09-22/interactive/20260922T121109Z-crossblock-and-lower-bounds/REPORT.md`.
    For an original-coordinate partition S,T whose cross block has rank r>2 and product Delta of all nonzero singular values,
    `||p_Q||_infinity <= (2r/(r-2)) Delta^(-1/r)`, with a continuous density.

@@ -22,13 +22,13 @@ The full owner target remains OPEN: arbitrary finite dimension, independent orig
 
 The two mathematical inputs used below are source-pinned:
 
-1. **Actual product-projection theorem.** `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T115514Z-qform-B18-a01/REPORT.md`, Theorem 3.1: for every full-row-rank `T`,
+1. **Actual product-projection theorem.** `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T115514Z-qform-B18-a01/REPORT.md`, Theorem 3.1: for every full-row-rank `T`,
 
    `||p_(TX)||_infinity <= 2^(k/2)/sqrt(det(TT^T))`.
 
    In particular a genuine orthonormal three-dimensional product projection has cap `2 sqrt(2)` and a genuine orthonormal two-dimensional product projection has cap `2`. This statement supplies joint densities only; it supplies no independence after projection.
 
-2. **Dependence-safe overlap-square receiver.** `yspennstate/math-open-problems@bfb102a2317191969c16cf336b53ed47a8a06c6d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/fleet01-B16-20260923T170732Z-auto11/REPORT.md`, theorem `QFORM-CROSS2-OVERLAP-SQUARE-L1-v1`: for disjoint source banks, a rank-two crossing plus a nonzero square carried by a third, possibly dependent, projection of the same bank as one crossing pair has
+2. **Dependence-safe overlap-square receiver.** `private-source-repository@bfb102a2317191969c16cf336b53ed47a8a06c6d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/fleet01-B16-20260923T170732Z-auto11/REPORT.md`, theorem `QFORM-CROSS2-OVERLAP-SQUARE-L1-v1`: for disjoint source banks, a rank-two crossing plus a nonzero square carried by a third, possibly dependent, projection of the same bank as one crossing pair has
 
    `||p_Q||_infinity <= C_* (MN)^(2/5)(s_1s_2)^(-2/5)|lambda|^(-1/5)`,
 
@@ -38,7 +38,7 @@ The two mathematical inputs used below are source-pinned:
 
 The newest completed designated-partner source actually applied in Section 5 is fleet02/B16 at
 
-`yspennstate/math-open-problems@c8258480a0bfb67e9b128e67c477c5c5dcdd38e8`,
+`private-source-repository@c8258480a0bfb67e9b128e67c477c5c5dcdd38e8`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/fleet02-B16-20260923T163017Z-auto11b/REPORT.md`.
 
@@ -396,10 +396,10 @@ The full arbitrary-rank QFORM conjecture remains **OPEN / NOT PROVED / NOT DISPR
 
 ## 7. Source pins and verification record
 
-- product-projection theorem: `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T115514Z-qform-B18-a01/REPORT.md`;
-- overlap-square theorem: `yspennstate/math-open-problems@bfb102a2317191969c16cf336b53ed47a8a06c6d:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/fleet01-B16-20260923T170732Z-auto11/REPORT.md`;
-- newest fleet02/B16 partner: `yspennstate/math-open-problems@c8258480a0bfb67e9b128e67c477c5c5dcdd38e8:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/fleet02-B16-20260923T163017Z-auto11b/REPORT.md`;
-- newest projected-crossing context read: `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`;
+- product-projection theorem: `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T115514Z-qform-B18-a01/REPORT.md`;
+- overlap-square theorem: `private-source-repository@bfb102a2317191969c16cf336b53ed47a8a06c6d:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/fleet01-B16-20260923T170732Z-auto11/REPORT.md`;
+- newest fleet02/B16 partner: `private-source-repository@c8258480a0bfb67e9b128e67c477c5c5dcdd38e8:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/fleet02-B16-20260923T163017Z-auto11b/REPORT.md`;
+- newest projected-crossing context read: `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`;
 - current Claude continuation read from `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md`; its adapted-hub `(SP)` statement remains explicitly OPEN for arbitrary cap-one inputs and was not used as a theorem.
 
 The algebraic identity (2.21) was independently checked numerically on 100 deterministic seeded random instances; maximum relative discrepancy was below `6.0e-15`. The numerical check is only a consistency audit; the proof is the exact derivation in Section 2.

@@ -197,7 +197,7 @@ Therefore the near-null shear `2 epsilon LP` is **not by itself** the source of 
 
 The newest completed partner report `fleet02/B05`, canonical mathematics
 
-`yspennstate/math-open-problems@fcb8ba61036bee6535de7b0fb0077bb07d76bea6:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T184914Z-fleet02-B05-QFORM-auto11c/REPORT.md`,
+`private-source-repository@fcb8ba61036bee6535de7b0fb0077bb07d76bea6:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T184914Z-fleet02-B05-QFORM-auto11c/REPORT.md`,
 
 proves for a physical triple
 

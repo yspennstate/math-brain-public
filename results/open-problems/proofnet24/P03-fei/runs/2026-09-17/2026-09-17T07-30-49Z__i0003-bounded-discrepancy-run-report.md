@@ -3,7 +3,7 @@ Model actually run: GPT-5.6 Sol. Reasoning level: UNVERIFIED. GPT-6 / maximum wa
 # P03 / I0003 run report — bounded-discrepancy Manhattan fields and the stream-function route
 
 Run date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Track: P03 / HARD OUTSIDE.  
 Canonical claim: `operations/claims/I0003.md`.  
 Own root: `proofnet24/P03-fei`.  

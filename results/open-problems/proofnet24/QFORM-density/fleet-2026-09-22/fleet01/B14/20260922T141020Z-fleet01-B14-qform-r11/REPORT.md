@@ -15,7 +15,7 @@ Fresh control was read at math-research-brain commit `cc11f162b6476b407e38059370
 
 The named partner actually applied is fleet02/B14, canonical report
 
-`yspennstate/math-open-problems@2e0f363a166b694e6b91a8eb6dc59f1488c5cba8:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T125819Z-fleet02-B14-QFORM-r12/REPORT.md`.
+`private-source-repository@2e0f363a166b694e6b91a8eb6dc59f1488c5cba8:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T125819Z-fleet02-B14-QFORM-r12/REPORT.md`.
 
 That report proves (i) lossless localization to finite-fragment indicator inputs, (ii) exact median-gauge/range-affine translation equivalence, and (iii) the subcritical packing/rearrangement estimate
 

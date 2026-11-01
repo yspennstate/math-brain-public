@@ -4,7 +4,7 @@ Status: supporting calculation; full QFORM remains open.
 
 ## Conditioning-order obstruction for Claude's D5 theorem
 
-Use the completed D5 theorem from `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`:
+Use the completed D5 theorem from `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`:
 
 For a physical cross block `M` with `Z_5=e_5(M^T M)>0`, arbitrary self blocks and affine terms,
 

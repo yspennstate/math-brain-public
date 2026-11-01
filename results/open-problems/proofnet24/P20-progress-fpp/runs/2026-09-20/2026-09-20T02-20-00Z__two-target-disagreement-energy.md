@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # P20 T10 — finite two-target residuals and disagreement energy
 
 Date: 2026-09-20.
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 Parent claim: `operations/claims/PROB10-10.md` (owned by the canonical PROB10-10 lane; P20 remains the complementary LIVE20 Busemann/variational route).
 Status: **PARTIAL / OPEN**.
 

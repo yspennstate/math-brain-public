@@ -23,7 +23,7 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 The immediate B09 inputs are:
 
 1. `QFORM-RANK2-NOAUGMENT-AGGREGATE-STABILITY-v1`, fleet03/B09 r31, canonical source
-   `yspennstate/math-open-problems@e8b97d9dcd8dd85cacc8fc73c2be4e86fde4b27a`,
+   `private-source-repository@e8b97d9dcd8dd85cacc8fc73c2be4e86fde4b27a`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T114612Z-fleet03-B09-QFORM-r31/REPORT.md`.
 
    For a rank-two normalized cross factor `A[H,I]=P C^T`, `P^T P=I_2`, put
@@ -49,7 +49,7 @@ The immediate B09 inputs are:
 
 4. The designated partner theorem, fleet04/B09,
    `QFORM-PHYSICAL-CROSS-DETERMINANT-SMOOTHING-v1`, canonical source
-   `yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`,
+   `private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
    A literal invertible physical `3 x 3` cross block `K` gives
 

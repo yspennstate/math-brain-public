@@ -107,7 +107,7 @@ The proof is entirely deterministic matrix algebra in the original coordinate de
 
 The completed fleet02/B08 r18 source is
 
-`yspennstate/math-open-problems@9fb59f9549a85af6173ade505fd53bc035c611ba`,
+`private-source-repository@9fb59f9549a85af6173ade505fd53bc035c611ba`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T004036Z-fleet02-B08-qform-diffuse-r18/REPORT.md`.
 
@@ -149,7 +149,7 @@ This is an application to the partner's **actual physical cut and actual child c
 
 A completed earlier B08 theorem is
 
-`yspennstate/math-open-problems@0a9b587adf257c8983f8351de2670006c75e02fe`,
+`private-source-repository@0a9b587adf257c8983f8351de2670006c75e02fe`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T063906Z-fleet01-B08-qform-r24/REPORT.md`,
 
@@ -174,7 +174,7 @@ This is a substantial strengthening of the preceding k=0 constants and retains a
 
 The completed designated-partner r27 report is
 
-`yspennstate/math-open-problems@41ee49f6e9c3383e4c3a322bdc52779768a17eb7`,
+`private-source-repository@41ee49f6e9c3383e4c3a322bdc52779768a17eb7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T130941Z-fleet02-B08-qform-diffuse-r27/REPORT.md`.
 

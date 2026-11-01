@@ -43,7 +43,7 @@ Hence `rank(A)=rank(B)+rank(S)`. For `B=B_*` and `S=0`, `rank(A)=3`.
 ## Partner application check
 
 Designated partner `fleet04/B14` r10 source:
-`yspennstate/math-open-problems@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`,
+`private-source-repository@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260924T001624Z-fleet04-B14-scaled-schur-localization-r10/REPORT.md`.
 
 For `B_*`, `sigma_min_abs=1`, so the partner inequality becomes

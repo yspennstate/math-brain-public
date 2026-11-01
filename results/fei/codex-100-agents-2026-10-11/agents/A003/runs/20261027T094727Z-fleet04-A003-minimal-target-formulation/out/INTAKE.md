@@ -1,16 +1,16 @@
 
-## math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json
+## private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json
 
 
-## math-open-problems/reports\fei-2026-10-11\README.md
+## private-source/reports\fei-2026-10-11\README.md
 11: The main objectives are a complete expected whole-set witness cost and a nonlocal physical restriction payment. Signed Booleanity, conditional phase entropy, arbitrary weighted thresholds under product biases, and low-energy/shared-variable composition provide distinct routes and substantial class targets. All constants, normalizers, rare-event logarithms and Boolean realizability requirements remain explicit.
 
-## math-open-problems/reports\fei-2026-10-11\CURRENT_STATUS.md
+## private-source/reports\fei-2026-10-11\CURRENT_STATUS.md
 21: 1. **G-J-COST:** pay the complete conditioned posterior witness expectation, including root normalization, labels, ranks, rarity and latent-witness entropy.
 23: 3. **G-BOOLEANITY / G-PHASE-COND:** derive a full-Booleanity consequence beyond refuted fixed prefixes, retaining the unpaid conditional spectral entropy.
 43: Independent review has not yet accepted it. In particular, section 5(4) cannot infer impossibility of every O(p) replacement solely from the asymptotic of an available upper-bound tax; that needs a lower-bound family or a narrower claim. Exact tensor additivity must also be distinguished from broader composition. B09/B19 should review the core lemma, fixed certificate and stronger consequences separately. This source is not an accepted premise for a full-FEI argument.
 
-## math-open-problems/reports\fei-2026-10-11\CLAIM_REGISTRY.json
+## private-source/reports\fei-2026-10-11\CLAIM_REGISTRY.json
 99:         "Distinguish additive disjoint tensor products from any broader composition statement."
 163:       "gap_id": "G-J-COST",
 208:       "gap_id": "G-BOOLEANITY",
@@ -18,7 +18,7 @@
 217:       "exact_open_obligation": "Use a consequence of full signed Booleanity absent from the already refuted finite-prefix relaxations to bound a precise entropy term.",
 231:       "exact_open_obligation": "Bound the unpaid conditional spectral entropy under a proved structural condition that does not silently contain an arbitrary tensor factor.",
 
-## math-open-problems/reports\fei-2026-10-11\OBSTRUCTION_REGISTRY.json
+## private-source/reports\fei-2026-10-11\OBSTRUCTION_REGISTRY.json
 164:       "title": "Raw collision entropy under tensors",
 165:       "exact_scope": "For v_U=C_b(U)^2 and Z=sum v_U, L=sum v_U*log2(1/v_U) is not tensor additive; L/Z=H(v/Z)-log2 Z is. A Boolean factor with Z=319/256 refutes the recorded raw-L payments after tensoring.",
 179:         "RAW_CONV_TENSOR"
@@ -26,19 +26,19 @@
 222:       "title": "Arbitrary tensor factor in an auxiliary class",
 223:       "exact_scope": "A conditional phase statement must pay the residual conditional spectral entropy and survive arbitrary tensor embeddings; low X-degree alone is insufficient for that term.",
 
-## math-open-problems/reports\fei-2026-10-11\PACKET_STATUS.json
+## private-source/reports\fei-2026-10-11\PACKET_STATUS.json
 47:       "packet_id": "A003",
 59:       "design_target_id": "FEI-B01-A003-INITIAL"
 754:       "topic": "Tensor stress",
 829:       "topic": "Near-tensor perturbations",
 
-## math-open-problems/reports\fei-2026-10-11\STREAM_NEXT_ACTIONS.json
+## private-source/reports\fei-2026-10-11\STREAM_NEXT_ACTIONS.json
 12:         "A003",
 16:       "first_packet_id": "A003",
 145:       "name": "Signed Booleanity identities",
 160:       "next_action": "Preserve conditional auxiliary entropy while testing one signed Boolean phase bound; for the two-address alternative keep coupled rows and move beyond the refuted constant two.",
 
-## math-open-problems/reports\fei-2026-10-11\FEI_100_agent_research_plan.tex
+## private-source/reports\fei-2026-10-11\FEI_100_agent_research_plan.tex
 37: \textbf{Recommendation.} Spend the largest share of proof effort on the \emph{posterior cost of an entire Fourier-set witness} and on \emph{nonlocal restriction accounting}. Keep a substantial independent effort on signed Booleanity and product-biased gate inequalities. Use targeted falsification continuously, particularly on addressing, rare activation, near-tensor surgery, and actual Boolean realizations of proposed spectral laws. Treat every surviving universal reformulation as an unpaid obligation until its quantitative bound is proved.
 297: structural admission or stability hypothesis; the arbitrary-tensor
 430: Sparse activated tensor cores & Arbitrarily small influence and minority probability preserve the optimal full-FEI constant. & Prove additional structural information; do not use rarity alone as a simplification. \\
@@ -48,10 +48,10 @@
 462: not $H(v/Z)$ alone. The archived genuine Boolean tensor
 516: {\small\emph{Execution contract:} baseline audit; P0; initial cap 1 work cycles. Deliverables: \path{TARGET_QUANTIFIERS.md}; \path{GAP_MAP.json}. Independent review: A086, A094. Consumers: A003, A004, A081, A093.}
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\CAMPAIGN.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\CAMPAIGN.md
 37: 3. Use full signed Boolean convolution identities to obtain a new valid entropy or spectral-edge inequality.
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\CLAIMS.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\CLAIMS.md
 39: | C007 | PROVED_BASELINE | Full signed Booleanity is equivalent to sum_S a_S²=1 and sum_S a_S a_(S△U)=0 for every nonempty U. Arbitrary nonnegative spectral laws or truncated identities do not suffice. | F09,F16,F19 | ER §6; RM §3 |
 44: | C012 | PROVED_BASELINE | For balanced g, M_g=((1+g)/2)y₁+((1−g)/2)y₂ has H=2+H(g)/2 and I=1+I(g)/2. Tensoring/balancing proves the optimal constant on these unrestricted two-cell selectors equals C_FEI. | F11,F15,F20 | P, “Unrestricted selectors and the optimal FEI constant” |
 46: | C014 | PROVED_BASELINE | Arbitrary signed constant leaves on singleton address cells represent every Boolean g exactly. Even requiring balanced leaves does not remove full scope if overlapping supports are allowed: leaves g_u(y)=g(u)y give F(z,y)=g(z)y, H(F)=H(g), I(F)=I(g)+1. Tensor amplification removes the additive one. | F11,F14,F15,F20 | Direct identity from C010's selector setup without its disjoint-support hypothesis; see X005 |
@@ -60,15 +60,15 @@
 57: | C020 | OPEN_TARGET | Bound the full expected joint witness cost by an absolute multiple of I on a new class or universally, including the rank, sparse-root, attachment and normalization terms. Addressing alone is already solved. | F01–F04,F18,F20 | C008,C009; P, “Scope of the refinement” |
 61: | C024 | OPEN_TARGET | Pay actual-source entropy/history transfer while retaining history probabilities and full Boolean ancestry. The true integrated cost satisfies H_nat−3I≤C_path≤H_nat+I, so a universal linear payment is FEI-equivalent. | F08,F09,F20 | RM §§11.13–11.16 |
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\COUNTEREXAMPLES.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\COUNTEREXAMPLES.md
 49: Even if leaves must be balanced, take g_u(y)=g(u)y. Then F(z,y)=g(z)y, H(F)=H(g), I(F)=I(g)+1. All leaves have the same Fourier support. Apply this to the t-fold disjoint tensor power of g and divide by t: a uniform C on this selector class implies H(g)≤CI(g), with the same constant.
 71: **Defeats:** uncharged coherent product composition and fixed linear overlap corrections. Disjoint tensor additivity and averages over physical translations remain valid. The seven-variable table and integer histograms must be loaded from the pinned source before replay; this ledger does not replace that certificate.
 91: **Owners:** F08,F09,F18,F19. **Related:** C023,C024,C032. **Source:** RM §§11.15,11.19–11.20, including `POINT_FLIP_SURPLUS.md` and `ADDRESS_HISTORY_GUARD.md`.
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\SEED_LEMMAS.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\SEED_LEMMAS.md
 
 
-## math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\NATIVE_MAPPING.md
+## private-source/research_pushes\2026-10-11-full-fei-100-agents\NATIVE_MAPPING.md
 56: | F17 — Asymptotic stress families | B16, B11, B05, B10 | All-dimensional addressing, bent, parity, sparse and tensor families distinguishing a route failure from a conjecture counterfamily. |
 
 ## context\percolation_spectral_pivotal_entropy_30pp.txt

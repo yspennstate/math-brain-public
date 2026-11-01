@@ -211,7 +211,7 @@ The meaning of (4.3) is source-compatible. On each disjoint physical bank, the r
 
 The latest completed designated partner result used here remains
 
-`yspennstate/math-open-problems@ec29bb4321feffe020e5cb0185d148f2f6de847e`,
+`private-source-repository@ec29bb4321feffe020e5cb0185d148f2f6de847e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260924T013622Z-fleet02-B07-qform-auto11/REPORT.md`.
 

@@ -24,7 +24,7 @@ All random variables below remain ORIGINAL independent coordinates. Deterministi
 
 Completed source actually applied:
 
-`yspennstate/math-open-problems@eeabf558e96ea803514f8e438b49c18fe9ee789a`
+`private-source-repository@eeabf558e96ea803514f8e438b49c18fe9ee789a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T171027Z-fleet02-B13-rank2core/REPORT.md`.
 
@@ -42,7 +42,7 @@ This is the branch treated below. The partner's nonzero-Delta branch remains the
 
 Source:
 
-`yspennstate/math-open-problems@55255bcb25271145aa9f5a1a93a0cc84ad8e1c3d`
+`private-source-repository@55255bcb25271145aa9f5a1a93a0cc84ad8e1c3d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T030821Z-fleet01-B01-qform-auto11/REPORT.md`.
 
@@ -64,7 +64,7 @@ There is no leverage gate in (1.3), and arbitrary same-side curvature is retaine
 
 Source:
 
-`yspennstate/math-open-problems@d9f6bcd057b7804ea7ba06fea8dad5f54e357990`
+`private-source-repository@d9f6bcd057b7804ea7ba06fea8dad5f54e357990`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T121154Z-fleet04-B13-nonattained-bathtub-r1/REPORT.md`.
 

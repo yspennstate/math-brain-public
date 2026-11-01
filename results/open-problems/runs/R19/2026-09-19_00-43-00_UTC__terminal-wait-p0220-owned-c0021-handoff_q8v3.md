@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 at 
 # R19 — terminal wait preserved; fresh P0220 CLOSABLE admission was already claimed, and C0021 rotation is not a release
 
 Run date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Lane: **CLOSABLE OUTSIDE**
 
 ## Runtime truth and scheduler/model-control status

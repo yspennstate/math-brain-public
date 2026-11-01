@@ -3,7 +3,7 @@
 Run: `20260924T121239Z-fleet01-B11-fixed-multiplicity-r11`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Starting lens: sign-independent Schur-complement spectral counts, inverse compression, strict/non-strict thresholds, singular-matrix approximation.  
-Pinned mathematical source: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`.  
+Pinned mathematical source: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`.  
 Pinned manuscript blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`.  
 Pinned source SHA-256 reported by the objective/package: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.  
 Fresh master immediately before publication was observed at `9516b965846f9cf55364f37ffecd0794c435d8ba`; the manuscript blob was unchanged.

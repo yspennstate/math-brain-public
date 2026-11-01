@@ -46,7 +46,7 @@ Take six `I` coordinates, three `J` coordinates, and
 
 For `A=[[0,M],[M^T,0]]`, the nonzero spectrum is `{1,1,1,-1,-1,-1}`, so this is inside the exact owner target. Also `M^T M=I_3`, hence `Z=e_3(M^T M)=1`. The eight nonzero 3x3 row minors all have squared determinant `1/8`; every row occurs in exactly four, so every volume row marginal is exactly `1/2`.
 
-Therefore the completed fixed-source Theorem D at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` gives
+Therefore the completed fixed-source Theorem D at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` gives
 
 `||p_Q||_infty <= 6 sqrt(e) = 9.8923276242...`
 

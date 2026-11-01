@@ -19,7 +19,7 @@ The immediate same-slot predecessor is
 
 `QFORM-LOCAL-COMPOUND-NEWTON-CASCADE-v1`,
 
-`yspennstate/math-open-problems@c5cc2edeeee6426fcbbf73eb00fbd68a176d28cb`,
+`private-source-repository@c5cc2edeeee6426fcbbf73eb00fbd68a176d28cb`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T201213Z-fleet03-B02-qform-r38/REPORT.md`.
 
@@ -35,7 +35,7 @@ The local shared-hub identity used below is the already-proved B02 theorem
 
 canonical source
 
-`yspennstate/math-open-problems@343750e0bd888523ca52f424f46de7a25d070930`,
+`private-source-repository@343750e0bd888523ca52f424f46de7a25d070930`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T194347Z-fleet03-B02-qform-r38/REPORT.md`.
 
@@ -53,7 +53,7 @@ The designated fleet04/B02 input is
 
 `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`,
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 

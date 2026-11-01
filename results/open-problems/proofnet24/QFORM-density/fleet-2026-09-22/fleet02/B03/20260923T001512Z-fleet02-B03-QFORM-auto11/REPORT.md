@@ -12,9 +12,9 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 Fresh brain control was read on main and refreshed before publication. The active owner control remains revision `2026-09-22.15`, sole target QFORM, with no applicable pause. The current no-pivot reduction N3 is source-pinned in the newest Claude synthesis. The exact Fourier inputs used below are:
 
-1. `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`: Theorem H (mixed hub/Fresnel/BL) and Theorem D/D'/D5.
-2. Later compatible geometric source `yspennstate/math-open-problems@2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926`, same directory, `GEOMETRIC_ROUTE_REPORT.md`: the no-pivot class and the one-hub plus one-rank-one family are legitimate surviving structures; the gluing lemma is still open.
-3. Designated partner fleet03/B03, `yspennstate/math-open-problems@438f565ec17517e0b742b333154a4c9881209958`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T222730Z-fleet03-B03-QFORM-r20b/REPORT.md`: translation-uniform indefinite-pair half-Riesz and its exact independent-copy identity.
+1. `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`: Theorem H (mixed hub/Fresnel/BL) and Theorem D/D'/D5.
+2. Later compatible geometric source `private-source-repository@2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926`, same directory, `GEOMETRIC_ROUTE_REPORT.md`: the no-pivot class and the one-hub plus one-rank-one family are legitimate surviving structures; the gluing lemma is still open.
+3. Designated partner fleet03/B03, `private-source-repository@438f565ec17517e0b742b333154a4c9881209958`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T222730Z-fleet03-B03-QFORM-r20b/REPORT.md`: translation-uniform indefinite-pair half-Riesz and its exact independent-copy identity.
 
 No use is made of law-uniform pointwise quadratic-phase decay, post-rotation independence, conditional sum/difference density caps, arbitrary-joint rank-three coarea, or a universally good physical minor.
 

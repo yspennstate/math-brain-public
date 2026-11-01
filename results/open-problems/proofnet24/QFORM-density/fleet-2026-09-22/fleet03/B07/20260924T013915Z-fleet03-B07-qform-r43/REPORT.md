@@ -16,7 +16,7 @@ No Gaussian, moment, support, iid, log-concavity, diagonal-basis, or post-rotati
 
 The immediate predecessor is my r42 report
 
-`yspennstate/math-open-problems@e91150711e87a3e9040e3b93333e55ab574d7c01`
+`private-source-repository@e91150711e87a3e9040e3b93333e55ab574d7c01`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260924T004021Z-fleet03-B07-qform-r42/REPORT.md`.
 
@@ -26,7 +26,7 @@ It leaves a low-diagonal bank `H` (after harmless relabeling of its surviving su
 
 The newest completed complementary B07 result used here is fleet02/B07
 
-`yspennstate/math-open-problems@81d6956476fa400f61d266effb4123a42fe3185c`
+`private-source-repository@81d6956476fa400f61d266effb4123a42fe3185c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260924T003945Z-fleet02-B07-qform-auto11/REPORT.md`.
 
@@ -259,7 +259,7 @@ This improves the previous statement “the common crossing is near rank two.”
 
 The designated completed partner is
 
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 

@@ -26,7 +26,7 @@ The first unpaid implication after this report is therefore structural rather th
 
 The designated OTHER-account partner result actually applied is fleet02/B04 `QFORM-HYPERBOLIC-PAIR-DENSITY-TRANSFER-v1`, complete at
 
-`yspennstate/math-open-problems@4bea103ece44732c1c7c31368fec4e33b35e1fdd`,
+`private-source-repository@4bea103ece44732c1c7c31368fec4e33b35e1fdd`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T174702Z-r15/REPORT.md`.
 
@@ -43,7 +43,7 @@ I apply (2.1) in Section 7 to the new matching estimate, giving a new explicit n
 
 I also use the standard product-projection estimate recorded and used in the completed fleet02/B04 star-bank report
 
-`yspennstate/math-open-problems@2ac6c31f920852005f11947f020bb4642af38d27`,
+`private-source-repository@2ac6c31f920852005f11947f020bb4642af38d27`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T171934Z-r11/REPORT.md`:
 if `Z_j` are independent with densities at most one and `a` is a real coefficient vector, then the density of `sum a_j Z_j` is bounded by

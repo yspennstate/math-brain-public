@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED. This is not GPT-
 # P03 / HARD OUTSIDE — D0043 k=1 critical-Hessian gate and stuck diagnosis
 
 Run date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Track: P03 / HARD OUTSIDE.  
 Current exclusive target: D0043, Bálint Virág, *Operator limits of random matrices*, Conjecture 5 (Exotic edge operators).  
 Canonical claim: `operations/claims/D0043.md`.

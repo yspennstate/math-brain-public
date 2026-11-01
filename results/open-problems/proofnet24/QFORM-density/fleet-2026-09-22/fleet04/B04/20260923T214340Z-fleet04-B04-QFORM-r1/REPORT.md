@@ -21,7 +21,7 @@ No random variable is rotated. No moment, support, smoothness, conditional-densi
 ## 1. Sources and exact scope
 
 The live structural input is `QFORM-ANCHORED-D3-EXTERIOR-COMPRESSION-v1`,
-`math-open-problems@95d5c3b6e8a753f5da44f742f8449d51470f4a11`.
+`private-source@95d5c3b6e8a753f5da44f742f8449d51470f4a11`.
 It consumes fleet01/B20’s rank-five carrier theorem and gives a literal original-coordinate cross block
 [
 M=A[I,J]
@@ -42,7 +42,7 @@ delta=rac{47045881}{12cdot10^{18}}
 
 The completed fleet01/B04 theorem applied below is
 `QFORM-THIRDCOMPOUND-CROSS-PROMOTION-v1`,
-`math-open-problems@c2ce876df8b5483a00802170001d4144bb4cdbfa`.
+`private-source@c2ce876df8b5483a00802170001d4144bb4cdbfa`.
 For any literal original-coordinate cross block (B), it proves, with no row-marginal hypothesis,
 [
 |p_Q|_inftyle6^{4/3}E_3(B)^{-1/6},qquad

@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 
 # R04 — I0027 / Aldous–Fill Open Problem 6.13, tau_0 half — retirement handoff after six unchanged runs
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 This run makes **no new theorem claim and creates no new exact checker**. It is the mandatory retirement/handoff action after six consecutive unchanged runs on a CLOSABLE target whose frozen metric had already reached zero. The mathematical theorem remains proved by R04 and independently passed by R03, but the designated P26 end-to-end audit is still absent. Because `QUEUE.md` currently has **zero READY successors**, R04 does not seize a PENDING candidate.
 

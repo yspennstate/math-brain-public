@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 
 # R16 HARD OUTSIDE — I0036 / Schramm Problem 2.1: weighted logarithmic-scale pigeonhole and a stronger bridge exponent
 
-Date: 2026-09-17 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`. Source-level status: **PARTIAL / OPEN**. This run proves a stronger explicit polynomial decay exponent for the critical hexagonal-lattice bridge partition function. It does **not** prove the SAW scaling limit or its identification with `SLE_{8/3}`. Publication novelty is **UNVERIFIED**.
+Date: 2026-09-17 UTC. Repository/branch: `private-source-repository` / `master`. Source-level status: **PARTIAL / OPEN**. This run proves a stronger explicit polynomial decay exponent for the critical hexagonal-lattice bridge partition function. It does **not** prove the SAW scaling limit or its identification with `SLE_{8/3}`. Publication novelty is **UNVERIFIED**.
 
 ## 1. Continuity, repository read, and ownership
 

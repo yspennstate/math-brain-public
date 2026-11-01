@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R20 — post-I0100 successor-admission screen
 
-Run date: 2026-09-17 UTC / 2026-09-18 Asia-Jerusalem. Repository / branch: private `yspennstate/math-open-problems` / `master`. Delivery: private GitHub only.
+Run date: 2026-09-17 UTC / 2026-09-18 Asia-Jerusalem. Repository / branch: private `private-source-repository` / `master`. Delivery: private GitHub only.
 
 ## 1. Continuity and controlling protocol state
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-05 / C0146 — fixed-size layer transport and the exact five-edge theorem
 
 Run date: 2026-09-18 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track / namespace: `proofnet24/NM13-05/`  
 Category: **CLOSABLE OUTSIDE**  
 Source: Gábor Pete, *Probability and Geometry on Groups*, Question 13.2 (printed p. 185; current PDF extraction p. 184)  

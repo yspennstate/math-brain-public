@@ -21,7 +21,7 @@ This run closes a quantitative part of that implication. A square-dominant heavy
 ## 2. Source-pinned dependencies and corrections
 
 1. **Named partner fleet03/B04.** Canonical report
-   `yspennstate/math-open-problems@093c15486c794a2e8b23978ca7b289feabf999a7`,
+   `private-source-repository@093c15486c794a2e8b23978ca7b289feabf999a7`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T154859Z-r13/REPORT.md`.
    I use its independently checked MSS spectral-window passage and ridge-perturbation estimate. For a high spectral subspace with row leverage at most `epsilon`, a two-part MSS partition has both partial frame operators at least
 
@@ -30,7 +30,7 @@ This run closes a quantitative part of that implication. A square-dominant heavy
    If the discarded tail has operator norm at most `tau`, then a physical cross block inherits the corresponding high singular directions up to `tau`, and its ridge leverage obeys the partner's perturbation inequality.
 
 2. **Own preceding square-assisted theorem.** Canonical report
-   `yspennstate/math-open-problems@b129377880c18fe011dd4513282f2e0b60e412e0`,
+   `private-source-repository@b129377880c18fe011dd4513282f2e0b60e412e0`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T155815Z-qform-r11b/REPORT.md`.
    It proves `QFORM-SQUARE-ASSISTED-RIDGE-L32-v1`: for
 

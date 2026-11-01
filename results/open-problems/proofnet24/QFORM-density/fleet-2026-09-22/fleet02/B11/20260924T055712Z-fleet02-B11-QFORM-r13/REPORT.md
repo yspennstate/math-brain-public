@@ -14,7 +14,7 @@ The unrestricted owner target remains OPEN / NOT PROVED / NOT DISPROVED. No mome
 
 The latest completed compatible designated-partner result consumed in this run is fleet03/B11 r50, source
 
-`yspennstate/math-open-problems@d8d9b012dd63602c80919b2dbf53296905ba05a8`,
+`private-source-repository@d8d9b012dd63602c80919b2dbf53296905ba05a8`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T051120Z-fleet03-B11-QFORM-r50/REPORT.md`.
 
@@ -190,7 +190,7 @@ The shell law above is an arbitrary dependent three-dimensional density. It is *
 
 The contrast is exact. Take genuinely independent cap-one original variables `(Z,Y,V)` and the same matrix `M_epsilon`. The required pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was read at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed Theorem A says that an `n=3` quadratic form all of whose eigenvalues have modulus at least `sigma` has
 

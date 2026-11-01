@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-01 — admission screen 4: canonical I-series residue-0 reconciliation
 
 Run date: 2026-09-18 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track: `NM13-01`  
 Category: `CLOSABLE OUTSIDE`  
 Own namespace: `proofnet24/NM13-01/`  

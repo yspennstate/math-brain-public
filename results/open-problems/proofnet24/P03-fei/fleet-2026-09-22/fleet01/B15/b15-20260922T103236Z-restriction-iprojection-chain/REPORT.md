@@ -11,7 +11,7 @@ The active all-team assignment for fleet01/B15 asks for the exact transfer of th
 
 The exact predecessor used here is fleet02/B15's influence I-projection theorem:
 
-- repository `yspennstate/math-open-problems`, commit `4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`.
+- repository `private-source-repository`, commit `4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`.
 
 For a nonempty spectral law `P` with occurrence marginals `r_i=P(i in S)`, it constructs the unique maximum-entropy conditional-product law `Q_r` and proves
 
@@ -22,7 +22,7 @@ K_{\rm occ}(P)=D_{\rm KL,2}(P\Vert Q_r)=H_{\max}(r)-H(P).
 
 The named compatible partner result consumed is fleet02/B15's suspension no-loss theorem and its same-run correction:
 
-- report/addendum repository `yspennstate/math-open-problems`, commit `b5bf5c990f3597cf26c2aa0ab1eabea4ae9ea277`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T085941Z-suspension-kl-no-loss/`.
+- report/addendum repository `private-source-repository`, commit `b5bf5c990f3597cf26c2aa0ab1eabea4ae9ea277`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T085941Z-suspension-kl-no-loss/`.
 
 It proves on genuine Boolean suspensions that for every finite center `C`, every finite `L`, and every fixed `theta<1`, replacing `K_occ` by `theta K_occ` and compensating by `L J` eventually fails. Thus a restriction recursion must preserve the dependence KL with coefficient one, up to additive source-scale debits; a fixed multiplicative loss is not admissible.
 

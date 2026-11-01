@@ -15,7 +15,7 @@ The unrestricted conjecture is **not** proved here. All random variables remain 
 
 Fresh QFORM-only owner control and the current correction ledger were read before this run. The analytic source refined here is the checked grouped projected-crossing theorem
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -27,7 +27,7 @@ The published theorem bounds the exponential factor by `exp(ell/2)`. The current
 
 For the physical descent I use the completed fleet03/B02 result
 
-`yspennstate/math-open-problems@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`
+`private-source-repository@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T170106Z-fleet03-B02-qform-r35/REPORT.md`,
 
@@ -272,7 +272,7 @@ A simpler threshold `h=1/2` already gives the clean constant `6sqrt(2)=8.485281.
 
 The completed fleet04/B02 theorem
 
-`yspennstate/math-open-problems@674f13a108a33176aafffe8f9b6d44ec3a89f03a`
+`private-source-repository@674f13a108a33176aafffe8f9b6d44ec3a89f03a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260923T151038Z-fleet04-B02-QFORM-r1/REPORT.md`
 

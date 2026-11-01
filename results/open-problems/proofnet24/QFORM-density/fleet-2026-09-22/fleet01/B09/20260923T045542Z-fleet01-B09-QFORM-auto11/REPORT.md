@@ -18,7 +18,7 @@ The proof stays in original physical coordinates. It does not use law-uniform po
 
 The immediate B09 predecessor is
 
-`yspennstate/math-open-problems@96594eeaba7df69cc9414fd77ef8119fda034867`
+`private-source-repository@96594eeaba7df69cc9414fd77ef8119fda034867`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T041440Z-fleet01-B09-QFORM-auto11/REPORT.md`.
 
@@ -30,7 +30,7 @@ The designated partner input is the latest completed fleet02/B09 theorem
 
 canonical source
 
-`yspennstate/math-open-problems@c5a57d1be0dc69e47bcb9fb52d5eaac77f4833c6`
+`private-source-repository@c5a57d1be0dc69e47bcb9fb52d5eaac77f4833c6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T041423Z-fleet02-B09-QFORM-auto11/REPORT.md`.
 

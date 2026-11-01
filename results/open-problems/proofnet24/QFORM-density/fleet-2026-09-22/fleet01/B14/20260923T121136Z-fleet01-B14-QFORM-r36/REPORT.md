@@ -13,7 +13,7 @@ attacking: protected-smoother block localization—retain one whole product bloc
 
 The completed designated-partner result actually applied is fleet02/B14 r34:
 
-`yspennstate/math-open-problems@ee5472663f2f7934749ac90f2a0305a4cbda37b0`,
+`private-source-repository@ee5472663f2f7934749ac90f2a0305a4cbda37b0`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T112750Z-fleet02-B14-QFORM-r34/REPORT.md`.
 
 Its theorem `QFORM-ARBITRARY-SELF-RANDOM-SLOPE-MASS-v1` gives the following. Let an outer pair of ORIGINAL coordinates have an invertible indefinite symmetric block `C`, with

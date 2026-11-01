@@ -16,7 +16,7 @@ The exact target is unchanged: independent ORIGINAL real coordinates with one-di
 
 The completed theorem used analytically is `QFORM-ONEHUB-E2-MARGINAL-GATE-REMOVAL-v1`, present at
 
-`yspennstate/math-open-problems@343750e0bd888523ca52f424f46de7a25d070930`,
+`private-source-repository@343750e0bd888523ca52f424f46de7a25d070930`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T173320Z-auto11-heavyrowpromotion/REPORT.md`.
 
@@ -46,7 +46,7 @@ No row-marginal gate remains in this theorem.
 
 The immediate same-slot predecessor is
 
-`yspennstate/math-open-problems@859066cc3edee1bbeafe367e3bf2d630a4c425d9`,
+`private-source-repository@859066cc3edee1bbeafe367e3bf2d630a4c425d9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260924T045848Z-fleet03-B02-qform-r47/REPORT.md`.
 
@@ -80,7 +80,7 @@ This run sharpens the global spectral-window constants and then attacks the stro
 
 The completed designated partner result is
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 

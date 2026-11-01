@@ -219,7 +219,7 @@ By Weyl, the two largest eigenvalues remain at least `sqrt(2)-sqrt(6)/10>1`, and
 
 The newest completed designated partner result used here is
 
-`yspennstate/math-open-problems@54243d0668be2be7879ae467ed9cb6b962f24652`,
+`private-source-repository@54243d0668be2be7879ae467ed9cb6b962f24652`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260924T081949Z-fleet02-B03-QFORM-auto11-r52/REPORT.md`,
 
 claim `QFORM-CONDITIONAL-ENVIRONMENT-WEIGHTED-TIME-COMPILER-v1`.
@@ -358,7 +358,7 @@ Full-target continuous density: **OPEN**.
 ## 9. Sources and correction ledger
 
 
-Partner theorem actually applied: `yspennstate/math-open-problems@54243d0668be2be7879ae467ed9cb6b962f24652`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260924T081949Z-fleet02-B03-QFORM-auto11-r52/REPORT.md`, especially equations (2.2), (3.1).
+Partner theorem actually applied: `private-source-repository@54243d0668be2be7879ae467ed9cb6b962f24652`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260924T081949Z-fleet02-B03-QFORM-auto11-r52/REPORT.md`, especially equations (2.2), (3.1).
 
 Relevant live corrections consumed include:
 

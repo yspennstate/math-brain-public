@@ -65,7 +65,7 @@ The following existing results are used only in their proved scopes.
 
 From fleet03/B15 auto27,
 
-`yspennstate/math-open-problems@2f36eb6204ac8598eaf63faed15f9fa7fddffd0c`
+`private-source-repository@2f36eb6204ac8598eaf63faed15f9fa7fddffd0c`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T222614Z-fleet03-B15-qform-auto27/REPORT.md`,
 
 if an ORIGINAL-coordinate physical pair `D` is invertible indefinite, with
@@ -82,7 +82,7 @@ where `eta(S)` is the maximum absolute diagonal coefficient if one exists, and o
 
 From fleet03/B15 auto31,
 
-`yspennstate/math-open-problems@bea3c88b8ba5df9f7fbed3bf0676709971a1e9da`
+`private-source-repository@bea3c88b8ba5df9f7fbed3bf0676709971a1e9da`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260924T023146Z-fleet03-B15-qform-auto31/REPORT.md`,
 
 if a physical invertible `3x3` block `B` has every physical `2x2` principal determinant equal to zero, then, uniformly in arbitrary affine terms,
@@ -95,7 +95,7 @@ The same report proves that (3.1)--(3.3) furnish a finite explicit affine-unifor
 
 The source-pinned rank-two fusion theorem is
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 Its rank-three consequence says: if an ORIGINAL-coordinate principal block has exact rank three and representation `V M V^T`, `V^T V=I_3`, then for a row `i` of leverage `c_i` with nonzero physical diagonal `a`, the full ambient form has
@@ -108,14 +108,14 @@ For an invertible physical `3x3` block `B`, take `V=I_3`, `M=B`, so `c_i=1` and
 
 for every nonzero chosen `B_ii`. The source theorem allows arbitrary outside coefficients and couplings. It received a scoped independent PASS at
 
-`yspennstate/math-open-problems@3bec1a01afe9cf433d3f4e14a46fe21b5dcbfc64`
+`private-source-repository@3bec1a01afe9cf433d3f4e14a46fe21b5dcbfc64`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T164017Z-fleet03-B16-QFORM-r13/INDEPENDENT_REVIEW_RANK2_FUSION.md`.
 
 ### 3.3 Designated partner: same-constant C0 compiler
 
 The completed designated partner result is fleet04/B15 r8,
 
-`yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`
+`private-source-repository@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T221909Z-fleet04-B15-ruled-trace-c0-r8/REPORT.md`.
 
 Its Theorem 6.1 states: for a fixed cap-one product instance with `rank(A)>=3`, any separately proved interval domination

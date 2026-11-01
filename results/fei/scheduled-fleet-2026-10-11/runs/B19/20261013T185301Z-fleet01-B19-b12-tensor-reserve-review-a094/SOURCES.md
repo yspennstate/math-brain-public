@@ -1,6 +1,6 @@
 # Sources
 
-- Target canonical receipt: `yspennstate/math-open-problems` commit
+- Target canonical receipt: `private-source-repository` commit
   `ef67e8cd5c8e81b3eb4ffb13ce2a786bb52bddc3`.
 - Target core package: commit
   `b631276522c94b64f7f54e2014822e4c6e05463f`, path

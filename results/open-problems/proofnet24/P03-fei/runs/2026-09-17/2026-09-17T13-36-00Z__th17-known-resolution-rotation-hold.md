@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED.** GPT-6 / maximu
 # P03 / RS-2025-TH17 run report — current 2026 resolution found; expectation transfer; rotation hold
 
 Run date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Track: P03 / HARD OUTSIDE.  
 Canonical claim: `operations/claims/RS-2025-TH17.md` (creation commit `35d7976952cbc4e4715a49e0fd3a1bb8eaa0560c`, blob `18c33f8a9de69faf93a1317ca57005b9dd4f0b02`).
 

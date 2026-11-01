@@ -23,9 +23,9 @@ rooted at required commit
 with the later Claude-review corrections retained.
 
 The completed fleet01/B19 theorem applied below is
-\`yspennstate/math-open-problems@de21053f13cdf4e81634fa3bde3a6246b90a9a6d\`.
+\`private-source-repository@de21053f13cdf4e81634fa3bde3a6246b90a9a6d\`.
 The new physical bank-grid reduction used below is
-\`yspennstate/math-open-problems@386b201c7236ed77017e14c1d3afb17587edbf1c\`.
+\`private-source-repository@386b201c7236ed77017e14c1d3afb17587edbf1c\`.
 
 ## 2. Actual application of fleet01/B19 r57
 

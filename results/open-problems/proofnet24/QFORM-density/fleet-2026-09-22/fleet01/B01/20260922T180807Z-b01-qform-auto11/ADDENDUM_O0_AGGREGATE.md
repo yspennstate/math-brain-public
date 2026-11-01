@@ -6,7 +6,7 @@ The six-coordinate collar payment in `REPORT.md` can be strengthened substantial
 
 Fleet03/B07 r13, canonical
 
-`yspennstate/math-open-problems@f2d3682e9f9d24d67ea14dc990d9f49bebeb5a6e`,
+`private-source-repository@f2d3682e9f9d24d67ea14dc990d9f49bebeb5a6e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T173711Z-fleet03-B07-qform-r13/REPORT.md`,
 
@@ -26,7 +26,7 @@ Equivalently, the aggregate three-dimensional cross volume of the physical tripl
 
 B01's completed `QFORM-RANDOM-SLOPE-CROSSMINOR-v1` report,
 
-`yspennstate/math-open-problems@508b0985ba8bb658a7f6a935af5138a195cb89de`,
+`private-source-repository@508b0985ba8bb658a7f6a935af5138a195cb89de`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260922T124907Z-b01-qform-auto11/REPORT.md`,
 

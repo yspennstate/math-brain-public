@@ -45,7 +45,7 @@ Live correction inbox at that refresh: blob `6bdbd9987a4eefeba79d53915cfe7e23226
 The analytic receivers are:
 
 1. **Audited third-volume decoupling / Theorem D**, source
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
    If the determinant-weighted third-volume row marginals of a physical cross block are all `<=1/2`, it proves
    \[
@@ -55,7 +55,7 @@ The analytic receivers are:
    with an integrable characteristic-function envelope. Dense same-side blocks cancel only inside the valid source-coordinate decoupling.
 
 2. **Grouped projected crossing**, source
-   `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,
+   `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,
    `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
    Its `(GC)` theorem permits `k` literal/grouped hub directions and an `ell`-volume crossing remainder, retaining arbitrary hub functions and arbitrary light-side quadratic curvature. The two instances used below are:
    - `k=1, ell=2`:
@@ -80,7 +80,7 @@ The analytic receivers are:
    For three literal physical hub coordinates, `M_X<=1`; for an arbitrary three-dimensional orthonormal projection of a cap-one product law, the source projection theorem gives `M_Y<=2^{3/2}`.
 
 The designated fleet04/B09 partner theorem is independently recorded at
-`yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`,
+`private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
 For a literal invertible physical `3x3` cross block `K` it gives
 \[

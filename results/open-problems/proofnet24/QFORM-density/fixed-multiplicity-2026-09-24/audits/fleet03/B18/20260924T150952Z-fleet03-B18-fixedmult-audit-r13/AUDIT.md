@@ -29,7 +29,7 @@ No novelty claim is made for the primary marginal theorem or for earlier fleet l
 
 The current standalone paper audited end to end is:
 
-- `yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f`,
+- `private-source-repository@eeb752c8943536541b34b42b8bf48e924f4d3d2f`,
 - `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`,
 - git blob `19fb119877426b640b2c0dae19ec2f78a399fe11`,
 - advertised SHA-256 `bf1caf6ae4b4bc33992f501c169b5dc6c795db757b0f6089eff9991391effdf3`.

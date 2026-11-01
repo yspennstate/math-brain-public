@@ -328,7 +328,7 @@ This also explains why the target-valid Walsh stress family survives the present
 
 The exact pinned package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was reread in this invocation. Two completed results are used with their exact scopes.
 
@@ -370,9 +370,9 @@ Full QFORM remains **OPEN / not proved / not disproved**. Full-target continuity
 
 ## 8. Source pins
 
-- Own null-hub/transverse-square theorem: `yspennstate/math-open-problems@e7a21ed67b943d7aded714ac17ca48bdab4a1349`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T200516Z-fleet02-B05-QFORM-auto11c/REPORT.md`.
-- Fresh designated partner fleet03/B05 r39 theorem: `yspennstate/math-open-problems@2c56afab4cdeef591f4d39f4e8d065951a03d572`, with prepublication refresh `479369360517ab50d6f87aaa48b49d5feadd8851`.
-- Fresh fleet01/B05 pairwise Pluecker tube / aggregate debt: `yspennstate/math-open-problems@49e5472fbcb6e988b716d8e014dd9e893510426c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260924T032721Z-fleet01-B05-QFORM-auto11/REPORT.md`.
-- Required pinned package: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
+- Own null-hub/transverse-square theorem: `private-source-repository@e7a21ed67b943d7aded714ac17ca48bdab4a1349`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T200516Z-fleet02-B05-QFORM-auto11c/REPORT.md`.
+- Fresh designated partner fleet03/B05 r39 theorem: `private-source-repository@2c56afab4cdeef591f4d39f4e8d065951a03d572`, with prepublication refresh `479369360517ab50d6f87aaa48b49d5feadd8851`.
+- Fresh fleet01/B05 pairwise Pluecker tube / aggregate debt: `private-source-repository@49e5472fbcb6e988b716d8e014dd9e893510426c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260924T032721Z-fleet01-B05-QFORM-auto11/REPORT.md`.
+- Required pinned package: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
 Repository retrieval and Git delivery do not establish native learned-memory ingestion. `full_brain_connected=false`; execution remains `WITHOUT_VERIFIED_BRAIN`.

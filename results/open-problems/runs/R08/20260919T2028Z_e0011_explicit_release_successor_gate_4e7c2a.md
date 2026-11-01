@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R08 CLOSABLE OUTSIDE — explicit E0011 ownership release after six-run retirement; no lawful READY successor
 
 Date: 2026-09-19 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Why this run exists
 

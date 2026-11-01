@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 
 # R03 run47 — F0097 random k-SAT: exact linear-hypertree cavity analysis and a sharp generic-transfer obstruction
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **F0097 OPEN / R03 PARTIAL / RECOVERY ACTION 1 EXECUTED / source metric unchanged.**
 

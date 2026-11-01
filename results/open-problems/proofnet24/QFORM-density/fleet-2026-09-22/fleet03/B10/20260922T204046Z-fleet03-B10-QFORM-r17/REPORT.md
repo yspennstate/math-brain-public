@@ -14,13 +14,13 @@ This report uses only original-coordinate independence. It does not use the refu
 
 The exact named partner `fleet04/B10` still has no completed current-QFORM artifact in the fresh source tree; the visible fleet04/B10 reports remain from the earlier POS3 programme. I therefore do not fabricate a partner result. I apply the completed compatible fleet04/B16 determinant-bank theorem at
 
-`yspennstate/math-open-problems@58c23c624db350cf44f0c836daa3582eb7e2d266`,
+`private-source-repository@58c23c624db350cf44f0c836daa3582eb7e2d266`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T161909Z-fleet04-B16-QFORM-r2/REPORT.md`.
 
 The other proof-level input used below is the completed logarithmic two-coordinate smoothing theorem at
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 

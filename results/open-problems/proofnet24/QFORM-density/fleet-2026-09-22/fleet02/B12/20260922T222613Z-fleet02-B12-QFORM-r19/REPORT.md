@@ -14,7 +14,7 @@ This run addresses the assignment's extra-eigenvalue question without diagonaliz
 
 Read in full:
 
-`yspennstate/math-open-problems@e71ed8023266f157a6f5c7a04ea6f9c53acc59c5`
+`private-source-repository@e71ed8023266f157a6f5c7a04ea6f9c53acc59c5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T214833Z-qform-eigenvalue-r18/REPORT.md`.
 

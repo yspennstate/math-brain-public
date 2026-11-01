@@ -104,9 +104,9 @@ ball-volume lower-tail estimates used in R46 give logarithmic norm extremes
 - `STATE.md`: added row `V.A-square-diag` and the R47 round log.
 - `PLAN.md`: split the exact square diagonal/normalization transfer from the
   fixed-excess lower-side quaternion paragraph.
-- `math-open-problems-fleet/master/chO_phase_retrieval_rmt.tex`: added the
+- `private-source-fleet/master/chO_phase_retrieval_rmt.tex`: added the
   Lane O square quaternion diagonal/normalization transfer.
-- `math-open-problems-fleet/MASTER_STATE.md`: recorded the master-side summary.
+- `private-source-fleet/MASTER_STATE.md`: recorded the master-side summary.
 
 ## Build verification
 

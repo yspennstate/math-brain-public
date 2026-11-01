@@ -15,7 +15,7 @@ All coordinates below are ORIGINAL physical coordinates. No random variable is r
 
 The predecessor is fleet01/B07 r38,
 
-`yspennstate/math-open-problems@a6688b11032f2e29ad10a8ab2c8356811bae926e`,
+`private-source-repository@a6688b11032f2e29ad10a8ab2c8356811bae926e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/20260924T011014Z-fleet01-B07-qform-auto11-r38/REPORT.md`.
 
@@ -35,7 +35,7 @@ The complete incident overlap-two squared-minor packet therefore has mass at lea
 
 The designated partner fleet02/B07 was refreshed at
 
-`yspennstate/math-open-problems@ec29bb4321feffe020e5cb0185d148f2f6de847e`,
+`private-source-repository@ec29bb4321feffe020e5cb0185d148f2f6de847e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260924T013622Z-fleet02-B07-qform-auto11/REPORT.md`.
 

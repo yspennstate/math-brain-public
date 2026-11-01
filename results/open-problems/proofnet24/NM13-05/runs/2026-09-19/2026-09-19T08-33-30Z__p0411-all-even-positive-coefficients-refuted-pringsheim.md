@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # NM13-05 — P0411: all even-dimensional positive-coefficient claims fail by a complex singularity / Pringsheim argument
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-05` / `proofnet24/NM13-05/`  
 Canonical source claim: `P0411`  
 Category: **CLOSABLE OUTSIDE**  

@@ -22,7 +22,7 @@ The same UTC-hour B19 login already existed from the earlier same-hour invocatio
 
 The immediate own predecessor is
 
-`yspennstate/math-open-problems@cd266a121698fcefd5d9d00477916cb21b5f7700`,
+`private-source-repository@cd266a121698fcefd5d9d00477916cb21b5f7700`,
 
 which leaves disjoint ORIGINAL-coordinate banks `D_1,D_2,K` with physical cross blocks
 
@@ -51,7 +51,7 @@ so `sigma_*=0.0188762460510862...`.
 
 The designated partner is fleet02/B19 r36,
 
-`yspennstate/math-open-problems@9157730c1b552b81f58b3cb6ef604b687962e548`,
+`private-source-repository@9157730c1b552b81f58b3cb6ef604b687962e548`,
 
 `QFORM-OVERLAP-MIXED-EXTERIOR-VOLUME-v1`. For disjoint physical banks and `N=A[I,K]`, `M=A[I,J]`, it proves
 
@@ -80,7 +80,7 @@ For the live strong-self scale
 
 The completed marginal-free physical-E3 Fourier theorem from fleet03/B02,
 
-`yspennstate/math-open-problems@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`,
+`private-source-repository@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`,
 
 then gives
 

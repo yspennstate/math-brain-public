@@ -18,7 +18,7 @@ This run does not use the refuted law-uniform pointwise quadratic-phase decay, u
 
 The incoming B08 theorem is the source-pinned run
 
-`yspennstate/math-open-problems@86cbf124545c3457b0037b49151f4f641391fc76`
+`private-source-repository@86cbf124545c3457b0037b49151f4f641391fc76`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T194215Z-fleet03-B08-qform-diffuse-r19/REPORT.md`.
 
@@ -183,7 +183,7 @@ A fresh completed fleet03/B06 theorem is
 
 source
 
-`yspennstate/math-open-problems@1287456c9a709f8c3f117c23faa46e75f4560d01`,
+`private-source-repository@1287456c9a709f8c3f117c23faa46e75f4560d01`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T194649Z-fleet03-B06-qform-r17/REPORT.md`.
 
@@ -194,7 +194,7 @@ It keeps arbitrary self quadratic terms and affine terms and proves for an exact
 The compatible completed fleet04 result applied here is fleet04/B18
 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, source
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

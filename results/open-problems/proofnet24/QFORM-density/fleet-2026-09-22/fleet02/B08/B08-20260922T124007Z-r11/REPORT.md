@@ -16,10 +16,10 @@ Required route corrections were consumed: law-uniform pointwise one-dimensional 
 
 Completed sources actually used:
 
-1. `fleet03/B08`, report `yspennstate/math-open-problems@9dcddd0bf3fbcb8e0b3396e0a4d883924d3f4ada`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T114830Z-fleet03-B08-qform-diffuse-v1/REPORT.md`, blob `022e24d4e6470665c48d7bfb1a3ad5c7963f664a`. Its Corollary 4 is the conditional/whitened diffuse estimate.
-2. Interactive supporting theorem `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, path `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`, blob `d08d2488c072386e2b8ad818e30b1a6dec79e63a`.
-3. `fleet02/B15`, localized principal-triple theorem, `yspennstate/math-open-problems@d5392d73398e2811f58b612fb8f191aa79d8ee5e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`, blob `1da4167bbf6b2785659bd50007cab5f04b9c3084`.
-4. This slot's preceding diffuse theorem `QFORM-DIFFUSE-RANK3-BL-v1`, `yspennstate/math-open-problems@0b5925a458d36c1ec1cf8ab344c9676260a97c8a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T113624Z-qform11/REPORT.md`, blob `212febc02c4c1f3a8e6c073d0a8ed5d2d6b4ea0a`.
+1. `fleet03/B08`, report `private-source-repository@9dcddd0bf3fbcb8e0b3396e0a4d883924d3f4ada`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T114830Z-fleet03-B08-qform-diffuse-v1/REPORT.md`, blob `022e24d4e6470665c48d7bfb1a3ad5c7963f664a`. Its Corollary 4 is the conditional/whitened diffuse estimate.
+2. Interactive supporting theorem `QFORM-DIFFUSE-SEPARABLE-PHASE-v1`, `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, path `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`, blob `d08d2488c072386e2b8ad818e30b1a6dec79e63a`.
+3. `fleet02/B15`, localized principal-triple theorem, `private-source-repository@d5392d73398e2811f58b612fb8f191aa79d8ee5e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`, blob `1da4167bbf6b2785659bd50007cab5f04b9c3084`.
+4. This slot's preceding diffuse theorem `QFORM-DIFFUSE-RANK3-BL-v1`, `private-source-repository@0b5925a458d36c1ec1cf8ab344c9676260a97c8a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T113624Z-qform11/REPORT.md`, blob `212febc02c4c1f3a8e6c073d0a8ed5d2d6b4ea0a`.
 
 No moment, support, continuity, identical-law, centering, sign, or post-rotation independence assumption is added.
 

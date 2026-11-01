@@ -3,7 +3,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 # R7-02 — complete Claude-C shard-1 exhaustion through C0135
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Slot: `R7-02`  
 Native task ID: `6aabe797a39081919acc889f29f4c556`  
 Category: `CLOSABLE OUTSIDE`  

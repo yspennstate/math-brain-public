@@ -12,7 +12,7 @@ The target is the unrestricted one: for every dimension, every independent real 
 
 The live correction inbox was reread before publication. No law-uniform pointwise Fresnel decay, no post-rotation independence, no conditional density cap for a rotated aggregate, no fixed-good-triple assertion, no rank-three cross-cut dichotomy, and no fiber-supremum closure is used.
 
-The assigned partner result actually used is fleet02/B19 run `20260922T151209Z-fleet02-B19-qform-r15`, canonical `yspennstate/math-open-problems@333ffdfd83679ff020bfb45c27257e651cde5130`, report blob `5e4928506aa238452599129b712318349b3626c3`. It pays the uncontaminated aggregate core and isolates the exact remaining normal form
+The assigned partner result actually used is fleet02/B19 run `20260922T151209Z-fleet02-B19-qform-r15`, canonical `private-source-repository@333ffdfd83679ff020bfb45c27257e651cde5130`, report blob `5e4928506aa238452599129b712318349b3626c3`. It pays the uncontaminated aggregate core and isolates the exact remaining normal form
 
 `A = diag(a,-b,D_T) + lambda v v^T + R`,
 
@@ -22,7 +22,7 @@ with
 
 leaving same-bank contamination as its first unpaid implication.
 
-I also use fleet03/B19 run `20260922T154500Z-fleet03-B19-QFORM-r13`, canonical `yspennstate/math-open-problems@0e6d1715955458010d43193cab3dafc293c0e28c`. It proves the exact physical-pivot quarter-kernel and, in the above one-effective branch, forces either a physical Schur diagonal or an original-coordinate Schur cross cut with singular value `>27/2240`.
+I also use fleet03/B19 run `20260922T154500Z-fleet03-B19-QFORM-r13`, canonical `private-source-repository@0e6d1715955458010d43193cab3dafc293c0e28c`. It proves the exact physical-pivot quarter-kernel and, in the above one-effective branch, forces either a physical Schur diagonal or an original-coordinate Schur cross cut with singular value `>27/2240`.
 
 ## 2. A product-preserving cross-bank concentration lemma
 

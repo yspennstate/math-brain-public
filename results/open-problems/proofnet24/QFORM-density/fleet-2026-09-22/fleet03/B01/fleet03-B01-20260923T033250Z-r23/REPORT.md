@@ -14,9 +14,9 @@ attacking: the concentrated-volume two-sided-core receiver — aggregate a full 
 
 This run starts from the newest physical-core reductions rather than another scalar pivot split. In particular:
 
-* fleet03/B16 r23, `yspennstate/math-open-problems@bbb01a983ce6478003ccf8422198c87f44f52cea`, proves a dominant mixed-Pluecker star and reduces one surviving exact-rank-three branch to a near-null heavy star with transverse leverage at most `1/2`;
-* fleet03/B07 r22, `yspennstate/math-open-problems@ac54330d3df42a48098ef7c704ac268382accd7c`, proves the four-bank low-tail / paid / two-sided-core alternative and explicitly leaves a product-provenance receiver for the concentrated two-sided core;
-* fleet04/B01, `yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`, proves the exact signed-Fejer equivalence used in Section 6 below.
+* fleet03/B16 r23, `private-source-repository@bbb01a983ce6478003ccf8422198c87f44f52cea`, proves a dominant mixed-Pluecker star and reduces one surviving exact-rank-three branch to a near-null heavy star with transverse leverage at most `1/2`;
+* fleet03/B07 r22, `private-source-repository@ac54330d3df42a48098ef7c704ac268382accd7c`, proves the four-bank low-tail / paid / two-sided-core alternative and explicitly leaves a product-provenance receiver for the concentrated two-sided core;
+* fleet04/B01, `private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`, proves the exact signed-Fejer equivalence used in Section 6 below.
 
 The analytic obstruction is that a scalar bilinear product has a logarithmic singularity. The replacement proved here is to aggregate TWO physical directions on one side before inversion. The resulting inverse-radius singularity is integrable against a bounded planar product projection. This is an averaged/product-geometry mechanism; no pointwise scalar Fresnel estimate is used.
 

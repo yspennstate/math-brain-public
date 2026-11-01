@@ -269,7 +269,7 @@ This is not a small-coefficient perturbation of the random quadratic form. Every
 
 The completed designated partner fleet04/B11 result is `QFORM-SIGN-FRUSTRATED-NEAR-NULL-TRIANGLE-v1` from
 
-`yspennstate/math-open-problems@572f6cd066c9cdef7b5a509917b4dcd79cea2fda`
+`private-source-repository@572f6cd066c9cdef7b5a509917b4dcd79cea2fda`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T021512Z-fleet04-B11-sign-frustrated-triangle-r4/REPORT.md`.
 
@@ -328,9 +328,9 @@ Continuity is proved in the new balanced robust-recolor branch through the two F
 
 ## 9. Source pins
 
-- designated partner fleet04/B11: `yspennstate/math-open-problems@572f6cd066c9cdef7b5a509917b4dcd79cea2fda`, path above;
-- exact-rank-one recoloring and its scale-free obstruction: fleet01/B08 report present at `yspennstate/math-open-problems@81d042c1d5c1c0e4c861ab9f55c3d4564b05323d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T033753Z-fleet01-B08-QFORM-auto11/REPORT.md`;
-- fractional three-volume theorem: `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`;
-- square rank-three physical cross-block Fourier theorem: fleet02/B02 report present at `yspennstate/math-open-problems@81d042c1d5c1c0e4c861ab9f55c3d4564b05323d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/B02-20260922T120900Z-qform-r11/REPORT.md`.
+- designated partner fleet04/B11: `private-source-repository@572f6cd066c9cdef7b5a509917b4dcd79cea2fda`, path above;
+- exact-rank-one recoloring and its scale-free obstruction: fleet01/B08 report present at `private-source-repository@81d042c1d5c1c0e4c861ab9f55c3d4564b05323d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T033753Z-fleet01-B08-QFORM-auto11/REPORT.md`;
+- fractional three-volume theorem: `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`;
+- square rank-three physical cross-block Fourier theorem: fleet02/B02 report present at `private-source-repository@81d042c1d5c1c0e4c861ab9f55c3d4564b05323d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/B02-20260922T120900Z-qform-r11/REPORT.md`.
 
 No full-solution claim is made. Independent end-to-end reviews of a hypothetical full solution are not applicable because the full theorem remains open.

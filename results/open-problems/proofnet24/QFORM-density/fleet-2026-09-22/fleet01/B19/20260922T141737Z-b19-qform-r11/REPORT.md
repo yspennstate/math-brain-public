@@ -28,13 +28,13 @@ and likewise with `C` replaced by `D`. Thus the only genuinely new analytic diff
 
 Two immutable peer results are used at their exact scopes.
 
-1. **Designated partner fleet02/B19**, canonical package `yspennstate/math-open-problems@23b520c19dd0e43cbff0fc0514a4dbfcd637b0f4`, report blob `802371834ddf9f3ad03d4db1875058c2a266d1b9`, proves `QFORM-RECTANGULAR-MULTIPIVOT-SINGULAR-v1`: if an original-coordinate pivot side has zero self block and a rectangular cross block `B` has `s_2(B)>0`, then
+1. **Designated partner fleet02/B19**, canonical package `private-source-repository@23b520c19dd0e43cbff0fc0514a4dbfcd637b0f4`, report blob `802371834ddf9f3ad03d4db1875058c2a266d1b9`, proves `QFORM-RECTANGULAR-MULTIPIVOT-SINGULAR-v1`: if an original-coordinate pivot side has zero self block and a rectangular cross block `B` has `s_2(B)>0`, then
 
    `||p_Q||_infinity <= 2 sqrt(pi)/sqrt(s_1(B)s_2(B))`.
 
    This is the paid zero-self endpoint of the present mixed phase diagram and avoids selecting a coordinate minor.
 
-2. **fleet03/B09**, canonical report `yspennstate/math-open-problems@446d0a33ef626b11ed5da529f2cec821732e97e9`, report blob `193f3f41acb6bbf7fa4a3edfd9eb918489b51ded`, proves the exact mixed-Hessian Plancherel estimate. In mixed dimension two, for arbitrary unit-modulus same-side phases and an invertible physical `2x2` cross block `B`, the same calculation gives
+2. **fleet03/B09**, canonical report `private-source-repository@446d0a33ef626b11ed5da529f2cec821732e97e9`, report blob `193f3f41acb6bbf7fa4a3edfd9eb918489b51ded`, proves the exact mixed-Hessian Plancherel estimate. In mixed dimension two, for arbitrary unit-modulus same-side phases and an invertible physical `2x2` cross block `B`, the same calculation gives
 
    `|psi(t)| <= pi |t|^{-1}|det B|^{-1/2} ||F_t||_2 ||G_t||_2`.    (2.1)
 

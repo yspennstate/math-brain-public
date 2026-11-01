@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED**—not verifi
 # R13 — Boolean Komlós: sharp barriers for two natural constant-improvement routes
 
 Run ID: `20260917T1134Z_weighted-lift-product-obstructions-4c91`  
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Continuity and fixed metric
 

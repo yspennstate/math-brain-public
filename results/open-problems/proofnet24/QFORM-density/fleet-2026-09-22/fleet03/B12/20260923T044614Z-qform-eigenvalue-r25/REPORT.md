@@ -20,7 +20,7 @@ The proof uses no spectral-coordinate independence, no law-uniform pointwise van
 The two completed inputs actually used are:
 
 1. **Newest three-volume stability package.**  
-   `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,  
+   `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,  
    `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md` and `PEER_TAIL_EXTENSION.md`.
 
    Its q=`4/3` Fourier proof gives, for a physical cross block `M`, a uniform characteristic-function envelope with exponent `9/8` whenever the volume-marginal gate holds. In the near-diffuse perturbative branch
@@ -33,7 +33,7 @@ The two completed inputs actually used are:
    it proves a continuous density `<23/a`, retaining arbitrary self blocks, outside couplings and affine terms. Its collective-tail extension replaces a third substantial singular value by the total squared tail `T2=sum_(j>=3)s_j(M)^2` under its stated projection gate.
 
 2. **Designated partner fleet04/B12 mixed-norm shear compiler.**  
-   `yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e`,  
+   `private-source-repository@9ce47e2a0f2c8434d901df13a218450c2189d80e`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260922T192552Z-fleet04-B12-mixed-shear-r1/REPORT.md`.
 
    For a joint density `h(u,z)`, define

@@ -17,7 +17,7 @@ This run uses only ORIGINAL-coordinate conditioning. It does not assume independ
 
 The completed designated partner result actually used is fleet04/B11 `QFORM-SIGN-FRUSTRATED-NEAR-NULL-TRIANGLE-v1`, current canonical report
 
-`yspennstate/math-open-problems:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T021512Z-fleet04-B11-sign-frustrated-triangle-r4/REPORT.md`
+`private-source-repository:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T021512Z-fleet04-B11-sign-frustrated-triangle-r4/REPORT.md`
 
 (read from private `master` during this run). Its theorem says: for an ORIGINAL-coordinate physical triple with positive diagonals `a_r`, normalized off-diagonals within `eta<1/2` of a sign pattern whose triangle product is `-1`, and `m=min a_r`, the conditional full three-variable density satisfies
 

@@ -15,19 +15,19 @@ The full unrestricted conjecture remains OPEN. No Gaussianity, log-concavity, mo
 
 The immediate predecessor is fleet01/B11
 
-`yspennstate/math-open-problems@a8464073b21943a8194edac6886389139d4fdcf7`,
+`private-source-repository@a8464073b21943a8194edac6886389139d4fdcf7`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260923T171318Z-fleet01-B11-QFORM-auto11/REPORT.md`.
 
 It gives an exact near-coloop hidden-frame representation and, at zero physical hub pivot, the saddle-plus-square normal form. The current Claude continuation through
 
-`yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`,
+`private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`,
 `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`
 
 shows that the tempting maximal functional for a rough hub that sees the hidden projection can grow for comb laws. Hence the new proof below does not take that maximal route.
 
 The designated partner result actually applied is fleet02/B11
 
-`yspennstate/math-open-problems@f5996ecc005a07b4e2f0e2a728ed383f0a8e2555`,
+`private-source-repository@f5996ecc005a07b4e2f0e2a728ed383f0a8e2555`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T155550Z-fleet02-B11-QFORM-auto11c/REPORT.md`.
 
 Its one-third-atom crosscut pays its diffuse near-null-ruling branch continuously by

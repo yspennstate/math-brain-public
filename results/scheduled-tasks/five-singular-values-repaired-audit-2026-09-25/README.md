@@ -6,7 +6,7 @@ Read `ORDER.md`, `MANIFEST.json` and `ASSIGNMENTS.json`. They replace the old fo
 
 ## Canonical new manuscript
 
-Research repository `yspennstate/math-open-problems`, commit `4e530247ec0ef4101a6e5ecf621bd35a969c42aa`, path `proofnet24/QFORM-density/five-eigenvalues-paper-2026-09-25/repaired-2026-09-25/paper.tex`.
+Research repository `private-source-repository`, commit `4e530247ec0ef4101a6e5ecf621bd35a969c42aa`, path `proofnet24/QFORM-density/five-eigenvalues-paper-2026-09-25/repaired-2026-09-25/paper.tex`.
 
 Source blob `98e45d53d106db9a205051a4dd4917fc39dc2e3a`; SHA-256 `90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb`. There are 683 actual source lines and 26 proof environments. The local reference PDF is 15 pages. The PDF is delivered in the owner's conversation; a GitHub PDF binary upload is not asserted. Build the exact source locally using existing available TeX tools, or record visual verification UNCHECKED.
 

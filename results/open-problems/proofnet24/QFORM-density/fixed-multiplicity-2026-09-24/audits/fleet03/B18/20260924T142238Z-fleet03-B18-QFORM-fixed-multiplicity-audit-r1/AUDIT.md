@@ -6,7 +6,7 @@ Role lens: primary-source prior-art verification plus complete proof audit; flee
 
 ## Source pin and scope
 
-Pinned mathematical source: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, path `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, declared SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`, 47,883 bytes, 790 lines.
+Pinned mathematical source: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, path `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, declared SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`, 47,883 bytes, 790 lines.
 
 I read the complete manuscript and the package `README.md`, `DELIVERY_STATUS.md`, `SOURCE_MANIFEST.json`, `AUDIT.md`, `proof_map.csv`, `verify.py`, and `checks.json`. The current finite checker records PASS (534 exact interpolation seeds, 18 volume-sampling cases, 9 strict-sampling cases, exact diagonal-dominance slack `297/2800`, plus floating Schur/graph diagnostics), but it is correctly labeled a diagnostic rather than a proof.
 

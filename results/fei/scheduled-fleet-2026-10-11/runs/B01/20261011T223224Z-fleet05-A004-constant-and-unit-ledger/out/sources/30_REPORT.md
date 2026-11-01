@@ -19,7 +19,7 @@ No completed B10--B17 natural campaign packet was indexed in the authoritative s
 
 Audit target:
 
-`yspennstate/math-open-problems@80cc2e5027efa56d79c4ecdf7d4949759ef2068b`,
+`private-source-repository@80cc2e5027efa56d79c4ecdf7d4949759ef2068b`,
 
 `reports/fei-2026-10-11/runs/B05/20261011T193057Z-fleet01-B05-rare-restrictions/`.
 

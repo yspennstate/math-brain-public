@@ -17,7 +17,7 @@ Execution context remains `WITHOUT_VERIFIED_BRAIN`: repository reads/writes are 
 
 The completed designated partner is fleet02/B20 r25:
 
-- scientific source `yspennstate/math-open-problems@1ed18b869e338fb93f2cf0572928ab124d8e34aa`;
+- scientific source `private-source-repository@1ed18b869e338fb93f2cf0572928ab124d8e34aa`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T082458Z-fleet02-B20-QFORM-r25/REPORT.md`.
 
 Its exact-rank-three state is
@@ -32,7 +32,7 @@ This is the partner inequality spent below.
 
 A second compatible source used only to identify the current frontier is fleet03/B20 r30:
 
-- `yspennstate/math-open-problems@00f21a8efa65d29fc13bad8686edd1b7e7d1388d`;
+- `private-source-repository@00f21a8efa65d29fc13bad8686edd1b7e7d1388d`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T084738Z-fleet03-B20-QFORM-r30/REPORT.md`.
 
 Its remaining structural suggestion was a quantitative Hall/mixed-discriminant dichotomy for three packet Grams. The theorem below shows that, after repartitioning around the actual r25 heavy row, a fixed-scale anchored mixed discriminant is automatic. This removes that particular structural precursor; it does **not** by itself give the missing analytic density payment.

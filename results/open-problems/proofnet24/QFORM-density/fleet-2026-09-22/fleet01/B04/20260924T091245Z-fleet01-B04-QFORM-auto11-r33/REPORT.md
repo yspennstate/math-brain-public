@@ -16,12 +16,12 @@ The unrestricted conjecture remains open. This run uses only original-coordinate
 The live correction `QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1` is respected: a square plus one heavy off-diagonal coefficient does not absorb arbitrary quadratic curvature on that same second coordinate. The theorem below therefore requires that the second physical coordinate have exactly zero self-quadratic coefficient and zero mutual edge to the square coordinate. Curvature on every other coordinate is arbitrary.
 
 A source-valid one-dimensional product projection cap `sqrt(2)` is recorded at
-`yspennstate/math-open-problems@85c3d540cf82ea6a6aca0f22f31811516a8b81aa`,
+`private-source-repository@85c3d540cf82ea6a6aca0f22f31811516a8b81aa`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`,
 via Livshyts--Paouris--Pivovarov / Rogozin--Ball. The main theorem is stated with an abstract cap `M`, so this external input is needed only for the row-norm corollary.
 
 The sharp scalar-square Lp rearrangement lemma used below was already proved in this slot at
-`yspennstate/math-open-problems@08728154a68cb8f41ae42d97e1365e90a8b8db82`,
+`private-source-repository@08728154a68cb8f41ae42d97e1365e90a8b8db82`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260924T084623Z-fleet01-B04-QFORM-auto11-r32/REPORT.md`.
 For completeness its one-line bathtub proof is repeated.
 
@@ -235,7 +235,7 @@ Note that `A_13=1/10` is nonzero: the square coordinate itself couples to the cr
 
 The completed designated partner result is fleet02/B04 r21:
 
-`yspennstate/math-open-problems@bb6e1a7e2e46a3434649dfd1b6a4afe94d25e7fa`,
+`private-source-repository@bb6e1a7e2e46a3434649dfd1b6a4afe94d25e7fa`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/9a73ca69-5439-45c6-9b34-581521e6e6a2/REPORT.md`.
 
 Its fully dense six-coordinate matrix `A_*` contains the physical principal triple

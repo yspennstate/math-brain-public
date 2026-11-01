@@ -30,7 +30,7 @@ Inside exact rank three, after a heavy exact-null row is fixed, it closes every 
 
 2. **Weighted product projection.** fleet02/B06, `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical source
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
@@ -38,7 +38,7 @@ For an orthonormal `k`-dimensional original-coordinate projection, the projected
 
 3. **Full-matrix indefinite physical pair theorem.** canonical source
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 
@@ -48,7 +48,7 @@ If `s_3(A)>=sigma`, an original-coordinate principal pair `B` is invertible inde
 
 4. **Designated partner fleet04/B19.** `QFORM-FINITE-UNION-CORE-v1`, canonical source
 
-`yspennstate/math-open-problems@02171dc794a56c0235afb1ca394b3e614162bff4`.
+`private-source-repository@02171dc794a56c0235afb1ca394b3e614162bff4`.
 
 For every measurable output map and interval, the supremum over arbitrary independent cap-one input densities equals the supremum over product indicator laws on bounded finite unions of intervals of measure one. This will be applied to the actual pair inequality in Section 5.
 

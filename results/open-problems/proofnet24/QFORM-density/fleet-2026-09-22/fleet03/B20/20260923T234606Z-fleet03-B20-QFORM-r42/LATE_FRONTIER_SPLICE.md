@@ -2,7 +2,7 @@
 
 After `REPORT.md` was written, the newest completed fleet01/B20 synthesis appeared at
 
-`yspennstate/math-open-problems@7dfae44fba90921c7e030f9ebe017caa2d640415`,
+`private-source-repository@7dfae44fba90921c7e030f9ebe017caa2d640415`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T235011Z-fleet01-B20-QFORM-auto11d/REPORT.md`.
 

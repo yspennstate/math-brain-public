@@ -9,7 +9,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Full unrestricted QFORM remains **OPEN
 Sources actually consumed:
 
 - designated partner fleet03/B06 r56, canonical commit `24fd6e4552117b2dd56c62db304883d5360b59f2`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T090040Z-fleet03-B06-qform-r56/REPORT.md`;
-- pinned owner-required source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`;
+- pinned owner-required source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`;
 - in particular the completed localized three-dimensional Theorem A from `COUNTEREXAMPLE_SEARCH.md`: if a three-coordinate quadratic matrix has all eigenvalue magnitudes at least `sigma`, then for arbitrary independent cap-one inputs (linear shifts allowed) its output density is at most `6 sqrt(pi)/sigma`.
 
 ## 1. First unpaid implication

@@ -14,7 +14,7 @@ This run deliberately changes mechanism from B12's previous small physical princ
 
 The source theorem consumed is the completed interactive report
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 

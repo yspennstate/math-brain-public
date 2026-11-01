@@ -27,7 +27,7 @@ The partner fleet02/B06 current all-team deliverable was not yet present at the 
 
 ### BALANCED
 
-`yspennstate/math-open-problems`, commit
+`private-source-repository`, commit
 `7d20a4bb4067085af7c5e7c9a82aef31998a7d36`,
 
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B18/20260922T093253Z-balanced-slice-admission/REPORT.md`.
@@ -42,7 +42,7 @@ and that bounding `H(f)/(I(f)-1)` over balanced functions is equivalent, at the 
 
 ### IPROJ
 
-`yspennstate/math-open-problems`, commit
+`private-source-repository`, commit
 `4bd6d05f1eb8325d665f2748f4d74dcee2550a04`,
 
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`.
@@ -57,7 +57,7 @@ and the exact all-gate decomposition `R_Gamma=B_inf^Gamma+K_occ`.
 
 ### EQUALITY
 
-`yspennstate/math-open-problems`, commit
+`private-source-repository`, commit
 `84c69136ca6b008badb76f15bf1071d029c927aa`,
 
 `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B15/20260922T085625Z-product-equality-rigidity/REPORT.md`.
@@ -72,7 +72,7 @@ with `F` nonempty and `b` bent on an even coordinate set `A`.
 
 ### HIERARCHY — named OTHER-account theorem applied in the main proof
 
-`yspennstate/math-open-problems`, commit
+`private-source-repository`, commit
 `2bf247373576eb406ca91bb3ea5f3ce5e5ab8588`,
 
 `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md`.
@@ -100,7 +100,7 @@ so no hierarchy credit may be silently discarded.
 
 ### SELECTOR_DEBIT
 
-`yspennstate/math-open-problems`, commit
+`private-source-repository`, commit
 `4ccd51ad517f425a529daa52c3352905b86ea69d`,
 
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md`, Sections 2–4 only. Its Section 5 quadratic candidate is superseded/refuted and is not used here.

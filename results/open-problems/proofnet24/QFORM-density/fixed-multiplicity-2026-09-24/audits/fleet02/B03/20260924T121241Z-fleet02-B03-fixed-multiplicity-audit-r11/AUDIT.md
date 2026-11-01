@@ -8,7 +8,7 @@ Lens: decoupling, copies, conditional independence, Fourier exponents; fleet02 c
 
 I froze the mathematical source at the master snapshot observed at audit start:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - branch: `master`
 - audit-start master commit: `a0cdb4f53dfbbec72979d5c7c0c95da061c283c6`
 - manuscript initial source commit named by the package: `7c0d6e60946b19423e6400a12d34b473cf0591e2`

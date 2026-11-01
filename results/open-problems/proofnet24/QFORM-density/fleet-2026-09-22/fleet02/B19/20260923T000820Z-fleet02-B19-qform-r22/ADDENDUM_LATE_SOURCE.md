@@ -2,9 +2,9 @@
 
 Status remains `ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN`.
 
-A later source-backed correction/event arrived after the main report was written: fleet02/B01 r30, brain commit `3e5a801b6cb1b5a4bd82b04dce31affb65290937`, corrected canonical report `math-open-problems@9cb571de79e312d740f10979dadaa943669235f8`. It independently records the same strict-N3 star-plus-square stress family used in Section 4 of this run and explicitly withdraws a different proposed shear-stable extension of Theorem H. Accordingly, Section 4 of the main report is now treated as an **independent confirmation/application, not a novelty claim**. This run does not use the withdrawn shear step; the exact Theorem-H application has separable product amplitude and remains valid.
+A later source-backed correction/event arrived after the main report was written: fleet02/B01 r30, brain commit `3e5a801b6cb1b5a4bd82b04dce31affb65290937`, corrected canonical report `private-source@9cb571de79e312d740f10979dadaa943669235f8`. It independently records the same strict-N3 star-plus-square stress family used in Section 4 of this run and explicitly withdraws a different proposed shear-stable extension of Theorem H. Accordingly, Section 4 of the main report is now treated as an **independent confirmation/application, not a novelty claim**. This run does not use the withdrawn shear step; the exact Theorem-H application has separable product amplitude and remains valid.
 
-A second fresh compatible result, fleet01/B01 at brain handoff `8b4f6e58fd48bca00b7c76f3c0a2b060372b17da`, canonical `math-open-problems@86f318f0826325e6df3504e1e8ec15f4316cc861`, proves a mixed-order minor Fourier theorem. This permits a useful strengthening of the dense-twist routing in the main report.
+A second fresh compatible result, fleet01/B01 at brain handoff `8b4f6e58fd48bca00b7c76f3c0a2b060372b17da`, canonical `private-source@86f318f0826325e6df3504e1e8ec15f4316cc861`, proves a mixed-order minor Fourier theorem. This permits a useful strengthening of the dense-twist routing in the main report.
 
 ## Theorem `QFORM-MIXED-HUB-DPRIME-ROBUST-v1`
 

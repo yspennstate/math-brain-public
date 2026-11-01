@@ -24,7 +24,7 @@ Current corrections retained: no law-uniform pointwise quadratic-phase decay; no
 
 The latest completed partner theorem used here is fleet02/B06 `QFORM-ONE-SIDED-RANK2-CROSS-SMOOTHER-v1`, canonical source
 
-`yspennstate/math-open-problems@dc9752d372165b011f4c8b1101174a6698ae2c64`
+`private-source-repository@dc9752d372165b011f4c8b1101174a6698ae2c64`
 
 at
 
@@ -46,7 +46,7 @@ The same partner run proves that replacing the zero `J` self-block by an operato
 
 I also use fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical source
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 at
 
@@ -66,7 +66,7 @@ No independence between `R` and `V_R` is required.
 
 The newest completed B08 compression, fleet03/B08 `QFORM-BICOLOOP-NEAR-RANK2-SPECTRAL-GAP-v1`, canonical
 
-`yspennstate/math-open-problems@d5547a484fcc9b62341d80e9ba902cbe2e484284`,
+`private-source-repository@d5547a484fcc9b62341d80e9ba902cbe2e484284`,
 
 path
 

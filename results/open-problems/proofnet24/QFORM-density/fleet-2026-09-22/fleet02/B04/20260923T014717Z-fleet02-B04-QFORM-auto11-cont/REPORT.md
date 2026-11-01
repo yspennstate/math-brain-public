@@ -19,15 +19,15 @@ No law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, conditio
 
 ## 2. Sources actually used at equations
 
-1. Claude Fourier package `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md` and `RESULTS.md`. Its audited Theorem D proves the volume-sampling estimate and, importantly here, records the arbitrary-weight determinant/entropy replacement. It also shows why only row marginals are constrained.
+1. Claude Fourier package `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md` and `RESULTS.md`. Its audited Theorem D proves the volume-sampling estimate and, importantly here, records the arbitrary-weight determinant/entropy replacement. It also shows why only row marginals are constrained.
 
-2. Sharp fractional-volume package `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. For the squared-minor volume law it proves, for `1<=q<3/2`,
+2. Sharp fractional-volume package `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. For the squared-minor volume law it proves, for `1<=q<3/2`,
 
    `||p_Q||_inf <= [3e/((3-2q)sqrt(q))] E3^(-1/6)`
 
    under `alpha_i<=q/2`. Its status is complete supporting proof, independent review pending.
 
-3. Ridge theorem `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`. For
+3. Ridge theorem `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`. For
 
    `K_gamma=MM^T(gamma^2 I+MM^T)^(-1)`, `theta=tr K_gamma`, `D_gamma=det(I+MM^T/gamma^2)`,
 

@@ -7,7 +7,7 @@ Start with FULL_MATRIX_PAIR_EXTENSION.md. It supplies a complete supporting argu
 CORRECTIONS.md gives two exact counterexamples to proposed intermediate claims. Neither is a counterexample to the original independent-input conjecture: the first uses dependent joint inputs, and the second refutes a conditional-density moment used in a proof route rather than the quadratic output-density conclusion.
 
 ## Canonical archive
-Repository: yspennstate/math-open-problems
+Repository: private-source-repository
 Directory: proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/
 Full-matrix proof commit: 742ac943440e41925fe09db9a8c02a96cbd83dbc
 Pair-envelope proof commit: f7f0fedb2d93b46824f96cac1164af6f8a55626f

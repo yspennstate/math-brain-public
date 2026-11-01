@@ -16,7 +16,7 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`. Repository retrieval was used, but no
 
 The immediate predecessor is fleet01/B06 r31,
 
-`yspennstate/math-open-problems@7ca9a0a1ff12547d4791b2ffed064150e85fcad7`,
+`private-source-repository@7ca9a0a1ff12547d4791b2ffed064150e85fcad7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T120046Z-fleet01-B06-QFORM-r31/REPORT.md`.
 
@@ -28,7 +28,7 @@ Two completed fleet02/B06 results are used as real inequalities.
 
 First, `QFORM-SHARED-COEFFICIENT-MAX-RECIPROCAL-v1`, canonical
 
-`yspennstate/math-open-problems@2fdec7c0b085cb5acf5a09847b293b5bcb296b80`,
+`private-source-repository@2fdec7c0b085cb5acf5a09847b293b5bcb296b80`,
 
 states that in the two-hub zero-anchor chamber the full density obeys
 
@@ -51,7 +51,7 @@ Thus the packet analysis below is needed only after this explicit partner exit h
 
 Second, the newest completed fleet02/B06 theorem `QFORM-191-STAR-HUB-INTERNAL-PAYMENT-v1`, canonical
 
-`yspennstate/math-open-problems@328a550b1ddde3d2d9b7c2d245678f0b6fd5e7ae`,
+`private-source-repository@328a550b1ddde3d2d9b7c2d245678f0b6fd5e7ae`,
 
 proves in the exact-rank-three high-leverage star-hub branch that
 

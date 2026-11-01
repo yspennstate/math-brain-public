@@ -52,7 +52,7 @@ The next compiler must pay the scalar branch or one of these two source-valid br
 
 The required fixed source was read exactly at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -76,7 +76,7 @@ The marginal-free physical third-compound receiver is the completed fleet01/B04 
 
 canonical source
 
-`yspennstate/math-open-problems@c2ce876df8b5483a00802170001d4144bb4cdbfa`.
+`private-source-repository@c2ce876df8b5483a00802170001d4144bb4cdbfa`.
 
 For every literal ORIGINAL-coordinate crossing `B=A[I,J]`, arbitrary same-bank phases included,
 
@@ -87,7 +87,7 @@ with `p_Q in C_0`.
 
 The newest completed designated partner available in the fresh handoff tree is fleet03/B08 `20260924T061920Z-fleet03-B08-qform-diffuse-r51`, canonical mathematics
 
-`yspennstate/math-open-problems@19c12072f7e67266ce894042034bcabb9c376bea`.
+`private-source-repository@19c12072f7e67266ce894042034bcabb9c376bea`.
 
 Its deterministic exterior-algebra lemma says that for any matrix `D` and row `z`, with `R_2(D)` the top-two right singular subspace,
 

@@ -17,7 +17,7 @@ The current proof-first owner request explicitly keeps B10 on the hub/star plus 
 
 This run starts from B10 r19, canonical source
 
-`yspennstate/math-open-problems@322b559872ab4c004ce7b5f4681fb2ffb40376a5`
+`private-source-repository@322b559872ab4c004ce7b5f4681fb2ffb40376a5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T214631Z-fleet03-B10-QFORM-r19/REPORT.md`.
 
@@ -45,7 +45,7 @@ and a distinguished independent cap-one null coordinate of leverage `c>=7/9`. B1
 
 The exact designated partner `fleet04/B10` still has no completed current-QFORM report discoverable in the repository. No result is attributed to it. The completed compatible fleet04/B16 theorem is used below at its proved scope; canonical source:
 
-`yspennstate/math-open-problems@58c23c624db350cf44f0c836daa3582eb7e2d266`
+`private-source-repository@58c23c624db350cf44f0c836daa3582eb7e2d266`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T161909Z-fleet04-B16-QFORM-r2/REPORT.md`.
 
@@ -192,7 +192,7 @@ outside couplings become an arbitrary affine term.
 
 Diagonalize `M` in spectral space only. The completed Fresnel-Brascamp-Lieb Theorem F from
 
-`yspennstate/math-open-problems@7359c982f3fa85f61b99e8768b915cce6e596d36`
+`private-source-repository@7359c982f3fa85f61b99e8768b915cce6e596d36`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
@@ -283,7 +283,7 @@ Now apply the completed determinant-only three-coordinate theorem
 
 canonical source
 
-`yspennstate/math-open-problems@89e6481f4f7ed7d49a77cfcb989ee93572d5d5cd`
+`private-source-repository@89e6481f4f7ed7d49a77cfcb989ee93572d5d5cd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T190524Z-fleet03-B14-QFORM-r16/REPORT.md`.
 

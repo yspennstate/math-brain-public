@@ -13,7 +13,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The designated partner is fleet02/B03. I read its complete r12 report at
 
-`yspennstate/math-open-problems@c2bc78fc4f8e642f5d8c85fcc7d53956730b5cb1`
+`private-source-repository@c2bc78fc4f8e642f5d8c85fcc7d53956730b5cb1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T211507Z-fleet02-B03-QFORM-r12/REPORT.md`.
 
@@ -28,7 +28,7 @@ one has `s_2(S_eta)=1` and a cross coefficient `b_eta~(2eta)^(-1)`, but
 Thus one cannot hope for `H_(1/2)<=C |b|^(-1/2)` uniformly under arbitrary self curvature. The same partner report also source-pins the immediately preceding completed fleet02/B03 theorem
 
 `QFORM-AMBIENT-PIVOT-FRACTIONAL-COLLISION-v1`, canonical
-`yspennstate/math-open-problems@d205dc643b8d2439efdbbe986f93ea8b4f2933f5`,
+`private-source-repository@d205dc643b8d2439efdbbe986f93ea8b4f2933f5`,
 
 which gives, for any full quadratic form having a nonzero original-coordinate diagonal `a`,
 

@@ -12,7 +12,7 @@ Let `P_2` project onto the top two left singular vectors of `B`, and put
 
 `T_2=sum_{nu>=3}s_nu(B)^2`, `gamma=beta/64`.
 
-The completed tail-volume theorem at `math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba` gives the following immediate exhaustive router.  If
+The completed tail-volume theorem at `private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba` gives the following immediate exhaustive router.  If
 
 `T_2>=gamma^2 L^2`, `max_i (P_2)_{ii}<=1/2`, and `T_2/s_3(B)^2>=225`,
 

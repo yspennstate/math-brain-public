@@ -4,7 +4,7 @@
 **Status:** **PARTIAL. Full uniform-cube Fourier entropy-influence remains OPEN / NOT PROVED.**  
 **Brain label:** **WITHOUT_VERIFIED_BRAIN.** No authenticated brain retrieval or receiver-side brain context was used.  
 **Live role:** FEI new proof mechanisms.  
-**Scientific source recovered before delivery:** `yspennstate/math-open-problems` master `89891aff5a122c7966aaafe8bf9929b70f538ba8`.  
+**Scientific source recovered before delivery:** `private-source-repository` master `89891aff5a122c7966aaafe8bf9929b70f538ba8`.  
 **Creative moves:** FLEET_RULES #1 (change category: quadratic phases as block-unitary Fourier transforms), #4 (prove a weaker statement completely: a constant-4 nonlinear phase-peeling class), and #20 (find why the obvious bridge fails: an exact Boolean counterexample).
 
 No publication-priority or novelty claim is made.

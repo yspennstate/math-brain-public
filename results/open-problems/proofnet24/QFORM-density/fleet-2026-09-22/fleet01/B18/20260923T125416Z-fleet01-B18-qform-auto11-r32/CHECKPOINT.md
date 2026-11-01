@@ -1,6 +1,6 @@
 # Early substantive checkpoint — circular family is paid by the transverse-null-hub theorem
 
-Source actually consumed: designated partner fleet02/B18 r28, `yspennstate/math-open-problems@71636c1be698996cc0fe90b91f872efdb6c11860`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/fleet02-B18-20260923T120424Z-r28/REPORT.md`.
+Source actually consumed: designated partner fleet02/B18 r28, `private-source-repository@71636c1be698996cc0fe90b91f872efdb6c11860`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/fleet02-B18-20260923T120424Z-r28/REPORT.md`.
 
 Partner family, for integer m>=3:
 

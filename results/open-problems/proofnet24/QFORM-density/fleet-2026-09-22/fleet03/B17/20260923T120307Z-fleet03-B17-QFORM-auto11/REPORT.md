@@ -66,7 +66,7 @@ g_m(y)=\gamma_v(y)\left[1-{1\over20m}H_4(y/\sqrt v)\right]
 \tag{3}
 \]
 
-Partner source: `yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`.
+Partner source: `private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`.
 
 Let `a_m` be the density of `S_m^2`, and let `a` be the density of `G^2` for `G~N(0,v)`. Since `g_m` and `\gamma_v` are even,
 

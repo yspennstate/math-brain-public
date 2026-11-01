@@ -4,7 +4,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is n
 
 Date: 2026-09-19 UTC  
 Worker: `R7-07` / native identity `6aabe8413f60819197825dd81ca138ae`  
-Repository: private `yspennstate/math-open-problems`, branch `master`  
+Repository: private `private-source-repository`, branch `master`  
 Status: **PENDING_ADMISSION**. This artifact does **not** acquire H0008.  
 Methods: **B16 COMPUTE SMALL CASES / B7 TAKE THE LIMIT / B25 COUNT THE SAME THING TWICE**.
 

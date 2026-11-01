@@ -2,7 +2,7 @@ Model actually running for this handoff: **GPT-5.6 Sol**. Reasoning level: **UNV
 
 # R13 immutable handoff — Boolean Komlós -> owner-directed PROB10-07 uniform forests
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 The owner-directed 20 September PROB10 assignment replaces R13's active Boolean-Komlós research target with **PROB10-07, Grimmett–Winkler uniform-forest pairwise negative correlation**. This file freezes the actual newest R13 state; it does not retract, edit, or supersede earlier mathematical artifacts.
 

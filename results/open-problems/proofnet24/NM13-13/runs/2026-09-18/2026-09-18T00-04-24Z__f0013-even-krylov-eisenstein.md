@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # NM13-13 — F0013 even-order 2-adic Krylov/Eisenstein irreducible family
 
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track: `NM13-13`  
 Category: `HARD OUTSIDE`  
 Canonical source / claim: `F0013` / `operations/claims/F0013.md`  

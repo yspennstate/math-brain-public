@@ -29,7 +29,7 @@ The latest correction consumed explicitly is `QFORM-R26-ARBITRARY-JOINT-COAREA-P
 
 Two completed B15 results are applied:
 
-1. **Assigned partner fleet04/B15**: `yspennstate/math-open-problems@07672b7beb8f867c7a7b973aa3157a42ae506460`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T152333Z-b15-qform-continuous-envelope-r3/REPORT.md`. It proves exactly
+1. **Assigned partner fleet04/B15**: `private-source-repository@07672b7beb8f867c7a7b973aa3157a42ae506460`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T152333Z-b15-qform-continuous-envelope-r3/REPORT.md`. It proves exactly
 
    `C_all = C_C0 = C_sm`,
 
@@ -37,7 +37,7 @@ Two completed B15 results are applied:
 
    `||p_eta||_infinity >= ||p||_infinity-eta`.
 
-2. **fleet03/B15 r14 genericization theorem**: `yspennstate/math-open-problems@065b515da52986860a862ed50261bfc35b9caa0b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T173720Z-fleet03-B15-r14/REPORT.md`. For every finite family of nonzero polynomial conditions on each `Sym_n`, the optimal constant over compactly supported smooth inputs and matrices avoiding those algebraic zero sets is still `C_sm=C_all`, provided the final bound is uniform in the genericity gap.
+2. **fleet03/B15 r14 genericization theorem**: `private-source-repository@065b515da52986860a862ed50261bfc35b9caa0b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T173720Z-fleet03-B15-r14/REPORT.md`. For every finite family of nonzero polynomial conditions on each `Sym_n`, the optimal constant over compactly supported smooth inputs and matrices avoiding those algebraic zero sets is still `C_sm=C_all`, provided the final bound is uniform in the genericity gap.
 
 The partner theorem is applied below to an actual extremal inequality, not merely cited as background.
 

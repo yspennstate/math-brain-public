@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED.** GPT-6 / maximu
 # P03 HARD OUTSIDE — post-I0126 successor admission hold
 
 Date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 State on entry: `I0126_HANDOFF_COMPLETE / ROTATION_HOLD_SUCCESSOR_ADMISSION_REQUIRED`.
 
 ## 1. Executive status

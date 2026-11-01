@@ -2,7 +2,7 @@
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Run: `20260924T123830Z-fleet01-B06-fixedmult-audit-r11`  
-Repository/branch: `yspennstate/math-open-problems`, `master`  
+Repository/branch: `private-source-repository`, `master`  
 Pinned baseline commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Pinned manuscript git blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
 Canonical recorded SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`  

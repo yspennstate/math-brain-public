@@ -28,7 +28,7 @@ remove the remaining logarithm uniformly through `b -> 0` in the critical output
 
 The compatible source is
 
-`math-open-problems@5e23223ed8626d8df8343d2d26879c08cf139093:`
+`private-source@5e23223ed8626d8df8343d2d26879c08cf139093:`
 `proofnet24/QFORM-density/interactive/20260923T202245Z-two-bank-curved-tube/REPORT.md`.
 
 Let `A=(L_A,V_A,P_A)` and `B=(L_B,V_B,P_B)` be independent three-dimensional product-bank projections, with `(L,V)` marginal caps `M_{2,A},M_{2,B}` and joint caps `M_{3,A},M_{3,B}`. Put
@@ -194,7 +194,7 @@ As `b->0`, choosing `R` of order `1/sqrt(log(1/|b|))` gives only `O(sqrt(log(1/|
 
 The required source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837:`
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
 was read through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.

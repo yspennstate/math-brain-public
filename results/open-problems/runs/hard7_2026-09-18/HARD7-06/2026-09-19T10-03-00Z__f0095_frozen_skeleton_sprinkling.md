@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 Status: **F0095 OPEN / HARD7-06 PARTIAL.** This run does not prove existence of the constant ordinary Erdős–Rényi 3-colourability threshold. It replaces the raw-colouring sprinkling obstruction from run 13 by a deterministic quotient theorem: if proper colourings admit a subexponential cover by linear-size common equality skeletons, then any linear edge sprinkling kills 3-colourability with exponentially high probability. An explicit sparse family proves that this quotient can succeed even when both the raw-colouring union bound and a raw VC-dimension route are exponentially useless.
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, ownership, exclusions, and source status
 

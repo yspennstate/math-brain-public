@@ -33,7 +33,7 @@ Moreover Ran(M0)=Ran(U_I), and its row-index projection is P_I=U_I G_I^(-1)U_I^T
 
 (P_I)_{ii}=u_i^T G_I^(-1)u_i <= delta/c_delta <=1/2.
 
-The actual cross block is M=M0+E[I,J], with ||E[I,J]||op<=||E||op. The current volume-stability theorem at math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba applies whenever ||E||op<=c_delta/16, and yields a continuous density with
+The actual cross block is M=M0+E[I,J], with ||E[I,J]||op<=||E||op. The current volume-stability theorem at private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba applies whenever ||E||op<=c_delta/16, and yields a continuous density with
 
 ||p_Q||_infinity <= (24 sqrt(3)e)/(5 c_delta) < 23/c_delta.
 

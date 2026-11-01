@@ -13,7 +13,7 @@ Fresh prepublication owner control remained revision `2026-09-22.15`, QFORM-only
 
 The same canonical-run report already proved the exact pair-volume/deletion calculus for a common-hub rank-one-leaf packet. The prior B01 receiver used below is `QFORM-HIGH-LEVERAGE-RECEIVER-SCHUR-v1`, proved at
 
-`yspennstate/math-open-problems@995ecef79fea84985a483b6a25d695c7131d934c`,
+`private-source-repository@995ecef79fea84985a483b6a25d695c7131d934c`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T081748Z-fleet01-B01-qform-auto11/REPORT.md`.
 
 Its invariant content is: if a rank-two physical cross block has singular-value product `Delta`, a physical receiver coordinate has nonzero pivot `a`, and the exact post-pivot cross product is `Delta_j=Delta sqrt(N_j)/|a|` with `N_j>0`, then
@@ -24,7 +24,7 @@ Only essential boundedness is asserted by that receiver.
 
 The designated partner result actually applied remains fleet02/B01 r42,
 
-`yspennstate/math-open-problems@2aa47367766e1b63306bec723c42fcd2899ca6ac`,
+`private-source-repository@2aa47367766e1b63306bec723c42fcd2899ca6ac`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T120442Z-fleet02-B01-qform-r42/REPORT.md`,
 
 whose exterior decomposition gives `W0+W1+W2+W3=e_3(A^2)>=1` and whose strict-N3 hub-square family has

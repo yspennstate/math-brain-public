@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # HARD7-04 bounded research iteration — quantitative post-giant degree-law duality
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL / stronger source-level duality proof candidate / source still OPEN until the repository closure protocol is satisfied**.
 

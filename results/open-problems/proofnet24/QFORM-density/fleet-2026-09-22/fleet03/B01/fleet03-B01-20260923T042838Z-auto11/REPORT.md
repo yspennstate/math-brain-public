@@ -12,7 +12,7 @@ attacking: two-sided curved bicore receiver by combining a rank-two random physi
 ## 1. Source boundary and precise debt attacked
 
 
-The previous B01 receiver (`yspennstate/math-open-problems@eb1104e11956999f1285c2d03e549f2df1c3a986`, `.../fleet03-B01-20260923T033250Z-r23/REPORT.md`) proved a bounded-density theorem for a rank-two grouped bilinear interaction when arbitrary same-side curvature is retained on the conditioned side but the still-random grouped side is linear. Its first unpaid analytic step was simultaneous curvature on both active sides.
+The previous B01 receiver (`private-source-repository@eb1104e11956999f1285c2d03e549f2df1c3a986`, `.../fleet03-B01-20260923T033250Z-r23/REPORT.md`) proved a bounded-density theorem for a rank-two grouped bilinear interaction when arbitrary same-side curvature is retained on the conditioned side but the still-random grouped side is linear. Its first unpaid analytic step was simultaneous curvature on both active sides.
 
 The present run pays a substantial part of that debt. The new mechanism is:
 
@@ -25,12 +25,12 @@ This is compatible with all live corrections. In particular it does not assert l
 
 Dependencies actually used:
 
-1. `QFORM-TRANSLATED-FRESNEL-LP-v1`, B01 r17, canonical source `yspennstate/math-open-problems@b6c3fd34d5c608023be5149189c1e88e66f3baeb`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T192922Z-r17/REPORT.md`.
+1. `QFORM-TRANSLATED-FRESNEL-LP-v1`, B01 r17, canonical source `private-source-repository@b6c3fd34d5c608023be5149189c1e88e66f3baeb`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T192922Z-r17/REPORT.md`.
 2. The two-dimensional product-projection cap used and source-pinned in B01 r23: if `M` is `2 x m`, rank two, and `Y` has independent cap-one coordinates, then
    `||p_(MY)||_infinity <= 2/sqrt(det(MM^T))`.
-3. Designated partner fleet04/B01 signed-Fejer theorem, canonical source `yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
+3. Designated partner fleet04/B01 signed-Fejer theorem, canonical source `private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 
-The newest B07 physical-core handoff (`yspennstate/math-open-problems@e24329a6a315b96a87b3efc608473ef0554f3b8d`) is used only to identify the structural successor: its remaining packets contain rank-two aggregate cross mass plus a near-null/rank-one alternative. No unproved B07 implication is imported here.
+The newest B07 physical-core handoff (`private-source-repository@e24329a6a315b96a87b3efc608473ef0554f3b8d`) is used only to identify the structural successor: its remaining packets contain rank-two aggregate cross mass plus a near-null/rank-one alternative. No unproved B07 implication is imported here.
 
 ## 2. Setup and invariant currency
 

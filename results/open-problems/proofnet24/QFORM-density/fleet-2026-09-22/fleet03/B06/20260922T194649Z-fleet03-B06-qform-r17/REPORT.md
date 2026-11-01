@@ -20,9 +20,9 @@ The mechanism is different from the preceding B06 ridge-collar run. It uses a **
 
 ### Source-valid inputs used
 
-1. `QFORM-EXACT-CROSS-RANK-L2-v1`, fleet03/B19, canonical source `yspennstate/math-open-problems@9d55d9ca5a7beaed6f693a57bd32b5fc9949b981`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T172719Z-fleet03-B19-QFORM-r16/REPORT.md`. Its proof gives the mixed-Hessian Plancherel identity with arbitrary within-bank quadratic-affine phases. The published theorem used `rank>=3` only at the final `L^1` frequency integration. The rank-two fractional endpoint is proved explicitly below rather than inferred silently.
+1. `QFORM-EXACT-CROSS-RANK-L2-v1`, fleet03/B19, canonical source `private-source-repository@9d55d9ca5a7beaed6f693a57bd32b5fc9949b981`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T172719Z-fleet03-B19-QFORM-r16/REPORT.md`. Its proof gives the mixed-Hessian Plancherel identity with arbitrary within-bank quadratic-affine phases. The published theorem used `rank>=3` only at the final `L^1` frequency integration. The rank-two fractional endpoint is proved explicitly below rather than inferred silently.
 
-2. `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, fleet04/B18, source pinned in the current B06 chain at `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`. Before its final bathtub estimate, its proof gives the dependence-safe square-kernel domination
+2. `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, fleet04/B18, source pinned in the current B06 chain at `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`. Before its final bathtub estimate, its proof gives the dependence-safe square-kernel domination
 
    `p_(R+aV_R^2)(t) <= |a|^(-1/2) int_0^infinity p_R(t-sgn(a)u) u^(-1/2) du`,
 

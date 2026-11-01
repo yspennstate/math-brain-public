@@ -19,12 +19,12 @@ Fresh controls and corrections were read from `yspennstate/math-research-brain` 
 Two proved dependencies are used.
 
 1. **Own preceding exact smooth-input reduction:**
-   `yspennstate/math-open-problems@5e161df12dcfebf0d13eb7efeaef5c478bf09455`,
+   `private-source-repository@5e161df12dcfebf0d13eb7efeaef5c478bf09455`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260922T150652Z-fleet01-B15-qform-r11/REPORT.md`.
    It proves that every admissible marginal can be approximated in `L1` by compactly supported `C^infinity` probability densities still bounded by one, and that the optimal universal interval-density constant is unchanged by restricting to such smooth marginals.
 
 2. **Assigned partner fleet02/B15 continuity theorem:**
-   `yspennstate/math-open-problems@4b2e6a36bcffeb767998c43d27cee1d8f5eaa07e`,
+   `private-source-repository@4b2e6a36bcffeb767998c43d27cee1d8f5eaa07e`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T150242Z-fleet02-B15-qform-r3/REPORT.md`.
    It proves that for every fixed real symmetric `A` of rank at least three and every independent cap-one product law, `X^TAX` has a bounded continuous density. Its height bound may depend on `A`; thus it does not prove the universal constant.
 

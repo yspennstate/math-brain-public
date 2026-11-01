@@ -25,7 +25,7 @@ Thus the unrestricted target is reduced to a ridge-certified diffuse branch plus
 
 The main completed supporting input is the interactive theorem `QFORM-RIDGE-DENSITY-v1`, source
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 
 path
 
@@ -294,7 +294,7 @@ The exact assigned partner `fleet04/B12` has no completed current-QFORM theorem 
 
 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`,
 
-source `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+source `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 
 path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

@@ -14,9 +14,9 @@ The new ridge-window theorem solves a broad diffuse spectral-window branch, but 
 
 ## 2. Sources actually consumed
 
-1. Ridge-window proof: `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, path `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`, blob `1241fa7ba9a36a91bc75f047677f2daac764c2bf`.
-2. Starting regularized-determinant proof: `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`, blob `080253f929411bfa9c7aa3254a2bdaf37be72ebb`.
-3. Named partner `fleet03/B02`: `QFORM-SQUARE-PIVOT-EK-INTEGRATED-v1`, canonical report `yspennstate/math-open-problems@c080587ef3f1458c8d1fecff9083d5a8c0d0f6bb`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T142939Z-fleet03-B02-QFORM-r11b/REPORT.md`, blob `71062ff6ea33339bd22bb0509400d19afc4be746`.
+1. Ridge-window proof: `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, path `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`, blob `1241fa7ba9a36a91bc75f047677f2daac764c2bf`.
+2. Starting regularized-determinant proof: `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`, blob `080253f929411bfa9c7aa3254a2bdaf37be72ebb`.
+3. Named partner `fleet03/B02`: `QFORM-SQUARE-PIVOT-EK-INTEGRATED-v1`, canonical report `private-source-repository@c080587ef3f1458c8d1fecff9083d5a8c0d0f6bb`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T142939Z-fleet03-B02-QFORM-r11b/REPORT.md`, blob `71062ff6ea33339bd22bb0509400d19afc4be746`.
 4. W. Beckner, *Inequalities in Fourier analysis*, Ann. Math. 102 (1975), 159–182, DOI `10.2307/1970980`, for sharp Hausdorff–Young/Young constants.
 5. G. Livshyts, G. Paouris, P. Pivovarov, *On sharp bounds for marginal densities of product measures*, arXiv:1507.07949, for the normalized rank-one geometric Brascamp–Lieb formulation used by the ridge proof.
 

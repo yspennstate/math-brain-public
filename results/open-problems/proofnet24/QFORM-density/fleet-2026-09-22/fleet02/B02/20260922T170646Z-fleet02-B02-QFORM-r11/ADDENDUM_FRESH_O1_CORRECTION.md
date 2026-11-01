@@ -2,7 +2,7 @@
 
 A new correction appeared after the main report was archived:
 
-`QFORM-O1-PIVOT-SCALE-FROM-MASS-FALSE-v1`, brain commit `b217c7e6427570220a79b3d7a409a1a9d41f76dc`, canonical math-open-problems report `41ed0a3af4b1aec79c036031a00066b0f49a9a45`.
+`QFORM-O1-PIVOT-SCALE-FROM-MASS-FALSE-v1`, brain commit `b217c7e6427570220a79b3d7a409a1a9d41f76dc`, canonical private-source report `41ed0a3af4b1aec79c036031a00066b0f49a9a45`.
 
 It correctly refutes any inference that O1 determinant mass forces a non-negligible scalar diagonal pivot. The main report did not make that inference: its O1 formula explicitly retains the factor `|d|^(-1/4)` and names the near-zero pivot as unpaid. The correction instead suggests an inverse-free hyperbolic packet. The following new theorem supplies exactly such an integrated-Fourier resource.
 

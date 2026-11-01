@@ -8,7 +8,7 @@ Start with `GEOMETRIC_SYNTHESIS.md`. It combines Claude's newest two-dimensional
 
 ## Source commits
 
-The two newest Claude inputs consumed are `e5f71d79eff325201dd0274053d20268ce65b837` and `2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926`, in `yspennstate/math-open-problems`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. A final path-specific history read still showed the latter as the latest commit in that directory.
+The two newest Claude inputs consumed are `e5f71d79eff325201dd0274053d20268ce65b837` and `2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926`, in `private-source-repository`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. A final path-specific history read still showed the latter as the latest commit in that directory.
 
 The six proof/check files in this package are committed together by `6dc1ce3ee7dba3621f83b49c961182fa2c4ab2ab`, directory `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/`. Their Git blob hashes were read back and match the local files exactly. `LOCAL_MANIFEST.json` records SHA-256, Git blob hashes, sizes, and the limited scan scope. The manifest itself was committed at `4098649c3810c9c525c6d357b3d2c5417a333f6b`.
 

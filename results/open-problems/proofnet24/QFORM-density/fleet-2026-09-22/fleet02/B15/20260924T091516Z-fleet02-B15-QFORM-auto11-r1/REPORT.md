@@ -104,7 +104,7 @@ Thus the ratio between the best bounded-size physical three-curvature scale and 
 ## 4. Required e5f71d79... result applied to the same full law
 
 I independently applied the completed Fresnel--Brascamp--Lieb Theorem F from
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`.
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`.
 
 Write
 

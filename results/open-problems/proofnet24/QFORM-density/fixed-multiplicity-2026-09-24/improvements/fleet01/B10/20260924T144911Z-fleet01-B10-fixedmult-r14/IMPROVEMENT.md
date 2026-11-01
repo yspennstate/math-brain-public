@@ -2,7 +2,7 @@
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Run: `20260924T144911Z-fleet01-B10-fixedmult-r14`  
-Pinned baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Pinned baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 Status: **NEW SAME-THRESHOLD CONSTANT SHARPENING; NOT SELF-AWARDED INDEPENDENT VALIDATION.** The threshold `9` was already established in separate source-backed replacement proofs and reviewed independently elsewhere in this root. This report only sharpens its constant and strengthens the exact `r=2` diagnostic at the `s_8` frontier. Multiplicity eight remains open.
 

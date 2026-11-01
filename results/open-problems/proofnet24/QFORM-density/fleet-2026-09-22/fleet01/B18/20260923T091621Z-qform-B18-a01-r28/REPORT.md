@@ -16,7 +16,7 @@ The full target remains OPEN: arbitrary independent real original-coordinate inp
 This report does not use any refuted interface: no independence after spectral rotation, no arbitrary-joint three-dimensional coarea inequality, no conditional-cap-as-independence step, no positive moment of a worst conditional projection cap, no pointwise law-uniform Fresnel decay, no small-coefficient deletion, and no fixed-good-minor or exact-two-plane extraction.
 
 
-`yspennstate/math-open-problems:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T081256Z-fleet02-B18-QFORM-r26/REPORT.md`.
+`private-source-repository:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T081256Z-fleet02-B18-QFORM-r26/REPORT.md`.
 
 Its new result `QFORM-SHEAR-CROSSVOLUME-MSS-BARRIER-v1` proves, in the diffuse Schur-isotropic branch, a whole-line bound from one MSS cross-volume cut and proves that the same single-cut certificate necessarily retains a positive shear exponent. Its circular stress family is the one used below.
 

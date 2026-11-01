@@ -19,7 +19,7 @@ This report does not rotate the input and retain false independence, does not us
 
 The assigned partner result actually consumed is fleet04/B14:
 
-`yspennstate/math-open-problems@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`
+`private-source-repository@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`.
 
@@ -201,7 +201,7 @@ for the complete arbitrary-law problem in this matrix branch. Formula (6.1) expl
 
 The completed interactive report
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`
 

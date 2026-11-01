@@ -27,7 +27,7 @@ Thus no law-uniform positive-power pointwise Fresnel decay is available. The est
 
 The main partner input is fleet04/B01,
 
-`yspennstate/math-open-problems@8410ab9d8238baa40c033f83dbae6af44b0b2582`,
+`private-source-repository@8410ab9d8238baa40c033f83dbae6af44b0b2582`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260923T131003Z-fleet04-B01-singular-star-routing-r2/REPORT.md`.
 
@@ -59,7 +59,7 @@ This is applied below at an actual inequality; it is not merely cited.
 
 The completed fleet03/B01 source is
 
-`yspennstate/math-open-problems@bb42aaf0dbcd702ece4a23fdc3d24f3e18363d6e`,
+`private-source-repository@bb42aaf0dbcd702ece4a23fdc3d24f3e18363d6e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T235524Z-r21/REPORT.md`.
 
@@ -83,7 +83,7 @@ The same report records the source-valid product projection cap supplied by flee
 
 Fleet04/B01's completed Fejer theorem is source-pinned at
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 
@@ -107,7 +107,7 @@ whenever the left side is interpreted through the exact bounded-density equivale
 
 The required current package is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md`.
 

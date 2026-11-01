@@ -18,7 +18,7 @@ The first essential implication attacked is the heavy physical-square branch lef
 ## 2. Source-pinned completed inputs
 
 1. **Assigned partner `fleet04/B11`.** Canonical report
-   `yspennstate/math-open-problems@44e7ab6750fbc3dccd77f1dd9e8bdba0bba2f0f5`,
+   `private-source-repository@44e7ab6750fbc3dccd77f1dd9e8bdba0bba2f0f5`,
    path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T161514Z-b11-cone-trace-r1/REPORT.md`.
    It proves the exact cone-trace formula for signature `(+,+,-)` and, at the exact null-heavy product endpoint with one physical Parseval row `(1,0,0)`,
@@ -27,7 +27,7 @@ The first essential implication attacked is the heavy physical-square branch lef
 
 2. **Ridge quarter-Riesz splice.** fleet01/B01,
    canonical report visible at
-   `yspennstate/math-open-problems@1bc95193312b70572b2765529ac3b6d98e3fe754`,
+   `private-source-repository@1bc95193312b70572b2765529ac3b6d98e3fe754`,
    path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260922T160919Z-b01-qform-auto11d/REPORT.md`.
    Under a physical cross block with ridge operator
@@ -36,7 +36,7 @@ The first essential implication attacked is the heavy physical-square branch lef
    quarter-Riesz integral as soon as `theta>q/2`.
 
 3. **Spectral-window/MSS localization package.** fleet03/B12,
-   `yspennstate/math-open-problems@2bd58d21cf8eda48d6451469ceaf5fb8dc19bf5`,
+   `private-source-repository@2bd58d21cf8eda48d6451469ceaf5fb8dc19bf5`,
    path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T154709Z-qform-window-r12/REPORT.md`.
    In particular, at spectral cutoff `tau` and high-subspace leverage `eps`,
@@ -54,7 +54,7 @@ The first essential implication attacked is the heavy physical-square branch lef
    with `K_11=3.663273516008612...`.
 
 5. **Indefinite binary half-potential.** this slot's earlier proved theorem,
-   `yspennstate/math-open-problems@860d849b7f2e0198bf7c3531a71b14e59f03e430`,
+   `private-source-repository@860d849b7f2e0198bf7c3531a71b14e59f03e430`,
    path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T121353Z-fleet03-B11-QFORM-r11/REPORT.md`.
    For independent cap-one `X,Y` and any affine indefinite binary quadratic with
@@ -62,7 +62,7 @@ The first essential implication attacked is the heavy physical-square branch lef
    both one-sided half-potentials are bounded by `8 Delta^(-1/4)`.
 
 6. **Square-to-quarter reduction.** fleet03/B05,
-   `yspennstate/math-open-problems@bf7bff5c9b11cf495ccbcb09ef48549fd9c0d409`,
+   `private-source-repository@bf7bff5c9b11cf495ccbcb09ef48549fd9c0d409`,
    path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/fleet03-B05-20260922T133738Z-qform-r12/REPORT.md`.
    For an original independent coordinate,

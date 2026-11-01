@@ -4,7 +4,7 @@ Run ID: `20260925T014938Z-fleet01-B03-five270-audit-r12`
 
 Objective: `QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925`.
 
-Source: `yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c`, `short/short.tex` blob `c4f2a997cf336ee974e15409b5bccdd8cca039d8`; exact 14-page PDF SHA-256 `4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423`.
+Source: `private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c`, `short/short.tex` blob `c4f2a997cf336ee974e15409b5bccdd8cca039d8`; exact 14-page PDF SHA-256 `4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423`.
 
 Fresh controls were reread before publication. This invocation reconstructed the proof in reverse dependency order, beginning with Section 7 and Theorem 1.1 and working back through Sections 6, 5, 4, 3 and the preliminary lemmas.
 

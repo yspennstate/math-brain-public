@@ -27,7 +27,7 @@ If `f(x)=prod_j f_j(x_j)` is a product probability density with every `||f_j||_i
 
 The completed designated-partner analytic result applied below is fleet02/B18 `QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1`, canonical source
 
-`yspennstate/math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`
+`private-source-repository@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`.
 
@@ -238,8 +238,8 @@ A separate exact-rank-three near-coloop collar and the arbitrary-additional-spec
 ## 10. Source pins and status
 
 - Primary marginal theorem: Livshyts--Paouris--Pivovarov, arXiv:1507.07949, Theorem 1.1.
-- Designated partner payoff: fleet02/B18 `QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1`, `yspennstate/math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`, report blob `7d4e66d4305ec7e63418078b4c8f8a274db16dd1`.
-- Latest partner one-sheet reduction: fleet02/B18 `20260923T040922Z-fleet02-B18-QFORM-auto11`, canonical math `yspennstate/math-open-problems@826920faef301e7d6880266805e11a0a7350076f`, report blob `7a8aa858eb243f3165c4bc42fea030be34d3f286`.
+- Designated partner payoff: fleet02/B18 `QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1`, `private-source-repository@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`, report blob `7d4e66d4305ec7e63418078b4c8f8a274db16dd1`.
+- Latest partner one-sheet reduction: fleet02/B18 `20260923T040922Z-fleet02-B18-QFORM-auto11`, canonical math `private-source-repository@826920faef301e7d6880266805e11a0a7350076f`, report blob `7a8aa858eb243f3165c4bc42fea030be34d3f286`.
 - Preceding fleet01/B18 equal-weight Hadamard packet: `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260923T045524Z-fleet01-B18-qform-r24/REPORT.md`.
 
 Independent end-to-end review: **not performed**. This is a supporting target-level branch, not a claim of the full theorem.

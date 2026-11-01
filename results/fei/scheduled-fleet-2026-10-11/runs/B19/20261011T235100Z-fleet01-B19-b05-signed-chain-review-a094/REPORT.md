@@ -10,7 +10,7 @@
 
 The reviewed author bundle is:
 
-- repository `yspennstate/math-open-problems`;
+- repository `private-source-repository`;
 - final observed commit `f36335b340a4fbebabaee041c96fbdc6005b5565`;
 - path `reports/fei-2026-10-11/runs/B05/20261011T232707Z-fleet01-B05-signed-chain-a023/`;
 - `REPORT.md` blob `21a73a3d68e9b3e3dbb47464b803340047ccad1c`;

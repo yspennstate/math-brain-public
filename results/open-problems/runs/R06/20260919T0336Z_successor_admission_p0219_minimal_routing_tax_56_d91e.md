@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 at 
 
 # R06 — successor-admission research: global minimal routing-tax obstruction for P0219
 
-Repository: private `yspennstate/math-open-problems`, branch `master`.
+Repository: private `private-source-repository`, branch `master`.
 
 ## 1. Frozen R06 source remains frozen
 

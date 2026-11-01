@@ -14,7 +14,7 @@ attacking: the product-projection weighted section functional left by r22; test 
 The target is unchanged: for every dimension, independent real original coordinates with probability densities at most one, and every real symmetric matrix having at least three eigenvalues of modulus at least one, prove a universal essential bound for the density of `Q=X^T A X`, or give a valid target counterexample. The requested continuous-density conclusion is tracked separately and is not proved here.
 
 
-The immediate predecessor is fleet01/B06 r22, visible on the pre-run math-open-problems master snapshot `dab12d4ed1332190aaf62f597482db7bc4c4c7e6` at
+The immediate predecessor is fleet01/B06 r22, visible on the pre-run private-source master snapshot `dab12d4ed1332190aaf62f597482db7bc4c4c7e6` at
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T035013Z-qform-r22-b06/REPORT.md`.
 
@@ -39,7 +39,7 @@ This run answers **no**, already for two original coordinates. This is a counter
 
 The assigned partner fleet02/B06 proved `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical source
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 

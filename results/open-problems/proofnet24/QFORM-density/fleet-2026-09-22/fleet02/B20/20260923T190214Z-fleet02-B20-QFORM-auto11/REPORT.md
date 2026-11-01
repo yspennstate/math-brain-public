@@ -20,7 +20,7 @@ Fresh account-local keeper inspection found the same twenty `fleet02` QFORM task
 
 The pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 at
 
@@ -50,7 +50,7 @@ Thus a still-unpaid mixed fan may be assumed to have `Z_5<1/1024`.  This is the 
 
 The newest compatible completed designated result at publication preparation is fleet03/B20 r37,
 
-`math-open-problems@598dae792b4a447492bc318bfa830fece803bb6d`,
+`private-source@598dae792b4a447492bc318bfa830fece803bb6d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T184417Z-fleet03-B20-QFORM-r37/REPORT.md`.
 

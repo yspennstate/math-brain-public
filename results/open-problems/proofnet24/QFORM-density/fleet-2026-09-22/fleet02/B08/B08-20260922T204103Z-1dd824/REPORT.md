@@ -25,7 +25,7 @@ The answer is yes for every exact rank-two physical cross bank. This gives a gro
 ## 2. Sources actually consumed
 
 1. **Designated partner fleet03/B08 r20.**  
-   `yspennstate/math-open-problems@d5547a484fcc9b62341d80e9ba902cbe2e484284`  
+   `private-source-repository@d5547a484fcc9b62341d80e9ba902cbe2e484284`  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T201956Z-fleet03-B08-qform-diffuse-r20/REPORT.md`.
 
    The source proves in its surviving bicolop branch, with physical cross block `H`, scale `gamma`, fine scale `g=gamma/16`, normalized cross matrix `Z=H(g^2 I+H^T H)^(-1/2)`, and physical heavy row/column `j,r`, that the factorized top-two exterior slice has squared Frobenius mass
@@ -42,7 +42,7 @@ The answer is yes for every exact rank-two physical cross bank. This gives a gro
 
 2. **Exact rank-two Fourier endpoint.**  
    fleet03/B06, `QFORM-EXACT-RANK2-CROSSBANK-L3-v1`, canonical source  
-   `yspennstate/math-open-problems@1287456c9a709f8c3f117c23faa46e75f4560d01`  
+   `private-source-repository@1287456c9a709f8c3f117c23faa46e75f4560d01`  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T194649Z-fleet03-B06-qform-r17/REPORT.md`.
 
    Its two-dimensional Plancherel calculation is reused below, but with new grouped physical coordinates whose density caps are paid by the whole incident bank rather than by a spectral projection cap.
@@ -50,7 +50,7 @@ The answer is yes for every exact rank-two physical cross bank. This gives a gro
 3. **One-dimensional product projection cap.**  
 
 4. **Dependence-safe outer square smoothing.**  
-   fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, source used in the B06 and partner chains: `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
+   fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, source used in the B06 and partner chains: `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
 No false arbitrary-joint coarea lemma, conditional projection-density moment, pointwise quadratic-phase decay, post-rotation independence, or reciprocal single-minor selection is used.
 

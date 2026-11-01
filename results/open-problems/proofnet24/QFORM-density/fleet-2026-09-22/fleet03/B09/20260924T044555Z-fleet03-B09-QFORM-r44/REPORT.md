@@ -16,7 +16,7 @@ The unrestricted owner target remains OPEN. All random coordinates used below ar
 
 The immediate same-slot predecessor is
 
-`yspennstate/math-open-problems@e7db74e3e49a1dd8c63a1e2024328b089018ee3c`,
+`private-source-repository@e7db74e3e49a1dd8c63a1e2024328b089018ee3c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T031325Z-fleet03-B09-QFORM-r43/REPORT.md`.
 
@@ -30,7 +30,7 @@ The analytic receiver used here is the completed pair-log theorem
 
 source
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -50,7 +50,7 @@ Continuity is not claimed by that receiver.
 
 The designated partner result is fleet04/B09's physical-cross theorem at
 
-`yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`,
+`private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
 

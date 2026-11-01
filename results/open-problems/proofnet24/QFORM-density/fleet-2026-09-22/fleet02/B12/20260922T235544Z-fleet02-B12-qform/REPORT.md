@@ -20,12 +20,12 @@ The point is that once either protected certificate exists, arbitrary-rank dense
 ## 2. Source pins actually used
 
 1. Newest Claude package requested by the owner:
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
    `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` were read. In particular, the completed D/D' volume theorem is stable under extra singular directions and the physical-coordinate method conditions only on original coordinates.
 
 2. Newest finite-core synthesis:
-   `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`.
+   `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`.
    Its Theorem 3.1 / Corollary 4.1 gives, in dimension three and with arbitrary affine terms,
 
    `||p_q||_infinity <= 6 sqrt(pi)/sigma`
@@ -33,7 +33,7 @@ The point is that once either protected certificate exists, arbitrary-rank dense
    whenever the actual `3x3` quadratic matrix has all singular values at least `sigma>0`. The proof is in original coordinates and permits arbitrary outside spectrum after conditioning.
 
 3. Assigned partner fleet03/B12, latest completed run:
-   `yspennstate/math-open-problems@287541ac87d8fa9d977eb1214c8b61e69858bb47:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T234350Z-qform-eigenvalue-r20/REPORT.md`.
+   `private-source-repository@287541ac87d8fa9d977eb1214c8b61e69858bb47:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T234350Z-qform-eigenvalue-r20/REPORT.md`.
    Its theorem `QFORM-LOCAL-FOOTPRINT-HYBRID-STABILITY-v1` proves the weighted D' packet branch for arbitrary determinant weights. If supported baseline `3x3` cross minors have singular gap `kappa`, I-side packet marginals are at most `h<3/4`, and the final perturbation footprint on every supported cross minor is `<kappa`, then the final full form has
 
    `||p_Q||_infinity <= C(h)/(kappa-delta_V)`,
@@ -43,7 +43,7 @@ The point is that once either protected certificate exists, arbitrary-rank dense
    The outside quadratic term is restored by a dependence-safe mixed-norm shear, not independent convolution.
 
 4. New no-pivot reduction:
-   `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`.
+   `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`.
    For fixed `tau`, the full conjecture is reduced to the class `N3(tau)`: actual matrices with three absolute eigenvalues at least one and all `|A_ii|<tau`, `|det A[{i,j},{i,j}]|<tau`.
 
 No arbitrary-joint coarea bound, worst normalized conditional-fiber bound, uniformly good physical minor, or independence after rotation is used.

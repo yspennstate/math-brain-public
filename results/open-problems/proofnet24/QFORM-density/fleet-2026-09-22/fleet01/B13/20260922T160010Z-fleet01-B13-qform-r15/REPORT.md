@@ -14,7 +14,7 @@ Fresh control was read from `yspennstate/math-research-brain`; the owner program
 
 The assigned partner result actually consumed is:
 
-`fleet02/B13`, `yspennstate/math-open-problems@93bed74b07afe996a4aa08eaeb88f35060653134`,
+`fleet02/B13`, `private-source-repository@93bed74b07afe996a4aa08eaeb88f35060653134`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T152225Z-fleet02-B13-productset-7f3c9a/REPORT.md`.
 
@@ -22,7 +22,7 @@ It supplies the exact residual Pluecker pair laws, their cross-disjoint lower bo
 
 I also use the already completed edge-distribution star/triangle theorem from
 
-`fleet03/B07`, `yspennstate/math-open-problems@0b3ca7e927cad2a7c7805a7f2ba6b88b12d000fd`,
+`fleet03/B07`, `private-source-repository@0b3ca7e927cad2a7c7805a7f2ba6b88b12d000fd`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T143620Z-fleet03-B07-QFORM-r12/REPORT.md`.
 
@@ -34,7 +34,7 @@ either one vertex has incident mass at least `kappa(rho)`, or one triangle has i
 
 Finally, the exact bang-bang reduction of the assigned partner is source-pinned at
 
-`yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94`:
+`private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94`:
 for every measurable `0<=K<=1`, the supremum over independent densities `0<=f_i<=1`, `int f_i=1`, equals the supremum over product indicators `1_{E_i}`, `|E_i|=1`. Thus every density statement below has the corresponding product-set slab interpretation, with no interval-extremality assumption.
 
 ## 2. Partner pair laws
@@ -299,7 +299,7 @@ This strictly sharpens the previous `three-planar-heavy plus diffuse-transverse`
 
 The exact limiting geometry in Corollary 7.1(2) has at most four projective row directions: the three concentrated planar rows plus the transverse line. The assigned partner's completed finite-direction theorem
 
-`yspennstate/math-open-problems@8a21bd3d25ce1622121616ce789589e1e073f68d`
+`private-source-repository@8a21bd3d25ce1622121616ce789589e1e073f68d`
 
 therefore pays the exact limit with
 

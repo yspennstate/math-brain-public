@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R15 retained screen — closed certificate regions, finite dual witnesses, and the first-bifurcation alternative
 
 Date checked: 2026-09-19 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R15, CLOSABLE OUTSIDE.
 
 Everything newly proved below on Talagrand F0111 is **SELF_CHECK_ONLY / NOT CLAIMED**. It does not reopen I0076, promote F0111 from PENDING/NOT READY, establish publication novelty, solve Talagrand Problem 10.9, or satisfy the fleet two-independent-audit closure rule.
@@ -327,7 +327,7 @@ The historical P26 `You cannot modify this task` event is an authorization-conte
 ledger_delta:
   worker: R15
   allocation: CLOSABLE_OUTSIDE
-  repository: yspennstate/math-open-problems
+  repository: private-source-repository
   branch: master
   native_target:
     id: I0076

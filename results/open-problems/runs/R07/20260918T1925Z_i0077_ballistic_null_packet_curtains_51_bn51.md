@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 Status: **PARTIAL** on the source problem. The theorem-sized claims T67/T68 below are proved on this page. They have `0/2` required independent OTHER-track audits. Publication novelty is **UNVERIFIED**.
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Delivery: private GitHub only. No email, Drive, public posting, purchases, permission changes, workflow execution, or scheduler changes.
 
 ## 1. Continuity, admission, ownership, and frozen metric

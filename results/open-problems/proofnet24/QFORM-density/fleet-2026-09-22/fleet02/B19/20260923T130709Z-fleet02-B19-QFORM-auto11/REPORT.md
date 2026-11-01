@@ -14,7 +14,7 @@ The unrestricted theorem remains OPEN. Nothing below assumes moments, compact or
 
 The owner-controlled geometric synthesis
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`, Theorem 5.1,
 
 proves: for **any fixed** `tau in (0,1]`, a universal density theorem on the strict no-`tau`-pivot class implies the full QFORM conjecture. Thus a proof is free to choose one convenient universal `tau`; it is not necessary to stay at `1/64`.
@@ -36,7 +36,7 @@ The pair condition implies the literal physical edge cap
 The newest compatible fleet01/B20 completed theorem used here is
 `QFORM-SPECTRAL-WINDOW-1OVER16-v1`, canonical source
 
-`yspennstate/math-open-problems@5593a06e6c0d8a346375176fc18181171fdc7ed9`,
+`private-source-repository@5593a06e6c0d8a346375176fc18181171fdc7ed9`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T122603Z-fleet01-B20-QFORM-auto11/REPORT.md`.
 
 Let
@@ -56,7 +56,7 @@ with a continuous `C_0` density. It retains the entire spectral tail below `1/16
 
 The owner-required newest-Claude package at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 
 was reread at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The completed `D_5` theorem from that package is applied below to an actual physical leaf cut.
@@ -262,7 +262,7 @@ This is the direct attack on the first new gap: every global N3 survivor is now 
 The newest completed fleet03/B19 result found at the dependency refresh was r33,
 `QFORM-TRIANGLE-PAIR-TRANSFER-RECONDITIONING-v1`, canonical source
 
-`yspennstate/math-open-problems@f534d70a365f444c54234cd0c88f97c5201b27d6`,
+`private-source-repository@f534d70a365f444c54234cd0c88f97c5201b27d6`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T114327Z-fleet03-B19-QFORM-r33/REPORT.md`.
 
 Its exact-rank-three TRIANGLE state has rank-two cross product `rho`, physical pair covariance determinant `d>377/1344`, and residual pair-complement determinant `r_T`. It proves

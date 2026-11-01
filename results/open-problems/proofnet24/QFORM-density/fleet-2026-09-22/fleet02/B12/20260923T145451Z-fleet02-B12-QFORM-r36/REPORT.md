@@ -12,7 +12,7 @@ Continuity: **not claimed for the theorem as a whole**; the D5 exit is continuou
 
 The newest designated partner, fleet03/B12 r35,
 
-`yspennstate/math-open-problems@03e610ce80aca57585c3b997f5d194b94443df1b`
+`private-source-repository@03e610ce80aca57585c3b997f5d194b94443df1b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T144737Z-qform-eigenvalue-r35/REPORT.md`
 
@@ -110,7 +110,7 @@ No support or moment assumption is used.
 
 Use the completed arbitrary-rank physical-pair theorem
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 
@@ -173,7 +173,7 @@ It is applied after conditioning only outside the original set `H`.
 
 Now consume the required pinned newest-Claude result at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 

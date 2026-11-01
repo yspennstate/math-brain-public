@@ -16,7 +16,7 @@ This run deliberately changes mechanism from the preceding local-matrix compiler
 
 ### 1.1 Designated partner fleet04/B13
 
-`yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
+`private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
 
@@ -32,7 +32,7 @@ This theorem is applied in Section 5 to an actual new slab inequality.
 
 Immutable source:
 
-`yspennstate/math-open-problems@04973c0d13c8cbe814f1303b7de8aeffd40791df`
+`private-source-repository@04973c0d13c8cbe814f1303b7de8aeffd40791df`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T110032Z-fleet02-B13-extremal-r25/REPORT.md`.
 

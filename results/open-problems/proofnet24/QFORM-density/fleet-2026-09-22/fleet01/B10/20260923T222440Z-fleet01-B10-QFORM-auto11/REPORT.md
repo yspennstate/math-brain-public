@@ -16,7 +16,7 @@ This report explicitly preserves the live corrections: no independence is inferr
 
 The immediate fleet01/B10 predecessor is
 
-`yspennstate/math-open-problems@8103579cff840cf3e09607ac05841bd156fa8744`
+`private-source-repository@8103579cff840cf3e09607ac05841bd156fa8744`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260923T184744Z-fleet01-B10-QFORM-auto11/REPORT.md`.
 
@@ -24,7 +24,7 @@ It showed that in the diffuse ultra-coloop state the hub-containing rank-three d
 
 The designated partner result actually used here is fleet02/B10:
 
-`yspennstate/math-open-problems@ca0549ef8c582478415aba1a953bdc6115fe84c6`
+`private-source-repository@ca0549ef8c582478415aba1a953bdc6115fe84c6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T214702Z-fleet02-B10-QFORM-auto11/REPORT.md`.
 

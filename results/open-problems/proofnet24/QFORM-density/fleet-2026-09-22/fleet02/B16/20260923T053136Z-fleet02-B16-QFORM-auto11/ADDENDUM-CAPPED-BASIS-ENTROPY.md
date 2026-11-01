@@ -10,13 +10,13 @@ This addendum is to be read after `REPORT.md` together with `CORRECTION.md`. It 
 
 ## Source pins actually used
 
-2. Designated partner: fleet03/B16 r26, `yspennstate/math-open-problems@d6730c301e46e6337bc3b32e30eb3d04f07dc90b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T045948Z-fleet03-B16-QFORM-r26/REPORT.md`. In particular, its capped-basis Fresnel interface uses a probability law `w` on nonsingular physical 3-bases with every coordinate marginal at most `1/2` and the score
+2. Designated partner: fleet03/B16 r26, `private-source-repository@d6730c301e46e6337bc3b32e30eb3d04f07dc90b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T045948Z-fleet03-B16-QFORM-r26/REPORT.md`. In particular, its capped-basis Fresnel interface uses a probability law `w` on nonsingular physical 3-bases with every coordinate marginal at most `1/2` and the score
 
 `Z_w = exp(H(w)+sum_S w_S log(det(R_S)^2))`,
 
 and yields the density certificate `3e (D Z_w)^(-1/3)` with `D=|det Lambda|`.
-3. Required pinned Claude package: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its ruled one-sheet theorem gives the majority-sign density bound `pi sqrt(2)` for exact-rank-three indefinite forms while using two-dimensional product projections without asserting projected independence.
-4. Previously completed fleet02/B16 theorem `QFORM-FINITE-LINE-BANK-COMPRESSION-v1`, canonical source `yspennstate/math-open-problems@b9e19e2c19ecd6f6ede282cd3c73ad014c449e9f`, proves for an exact-rank-three target whose nonzero spectral rows occupy `K` one-dimensional directions that
+3. Required pinned Claude package: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its ruled one-sheet theorem gives the majority-sign density bound `pi sqrt(2)` for exact-rank-three indefinite forms while using two-dimensional product projections without asserting projected independence.
+4. Previously completed fleet02/B16 theorem `QFORM-FINITE-LINE-BANK-COMPRESSION-v1`, canonical source `private-source-repository@b9e19e2c19ecd6f6ede282cd3c73ad014c449e9f`, proves for an exact-rank-three target whose nonzero spectral rows occupy `K` one-dimensional directions that
 
 `||p_Q||_infinity <= 2 C_3 binom(K,3)^(1/3)`,
 

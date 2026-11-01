@@ -17,7 +17,7 @@ The owner target is unchanged: for arbitrary finite `n`, independent real origin
 
 The analytic input is fleet01/B18 `QFORM-FRESNEL-CAPPED-BASIS-WEIGHTS-v1`, canonical source
 
-`yspennstate/math-open-problems@8c04ccbc1f032d1a82ad505223f08e3c344bde74`
+`private-source-repository@8c04ccbc1f032d1a82ad505223f08e3c344bde74`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T225705Z-qform-B18-a01-r19/REPORT.md`.
 

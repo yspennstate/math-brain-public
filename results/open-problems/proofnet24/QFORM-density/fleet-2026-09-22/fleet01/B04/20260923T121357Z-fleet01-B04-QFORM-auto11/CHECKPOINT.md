@@ -54,6 +54,6 @@ So no universal single-six-row Hellinger lower bound can follow from the three-l
 
 The new global compatibility coupling repairs this family: take E to be all ordered disjoint row-base pairs. There are k^3 bases, every base has (k-1)^3 compatible bases, B_E=(k-1)^3, H(T|S)=3 log(k-1), beta_*=0, hence G=1 and the sharp q=1 theorem gives ||p_Q||_inf <=3e, uniformly in k. This is the intended replacement for local packet extraction.
 
-Partner to apply in final report: fleet02/B04 run fleet02-B04-20260923T111930Z-qform, theorem QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1, source math-open-problems@febf0c97f0f85e802b6bc2ab4a475c15109de013. On the dense 4x4 Householder cross block M_4=I_4-(1/2)11^T, strict h<3/4 support is impossible and Z=E3=4, so the partner theorem gives the actual bound ||p_Q||_inf<=6. This is exactly the beta_*=1/2 endpoint of the overlap-coupling mechanism.
+Partner to apply in final report: fleet02/B04 run fleet02-B04-20260923T111930Z-qform, theorem QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1, source private-source@febf0c97f0f85e802b6bc2ab4a475c15109de013. On the dense 4x4 Householder cross block M_4=I_4-(1/2)11^T, strict h<3/4 support is impossible and Z=E3=4, so the partner theorem gives the actual bound ||p_Q||_inf<=6. This is exactly the beta_*=1/2 endpoint of the overlap-coupling mechanism.
 
 Status: supporting theorem/correction in derivation; full target OPEN; continuity only in completed Fourier branches. Execution memory status WITHOUT_VERIFIED_BRAIN.

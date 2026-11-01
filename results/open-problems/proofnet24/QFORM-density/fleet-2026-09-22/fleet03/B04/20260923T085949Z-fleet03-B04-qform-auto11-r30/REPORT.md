@@ -21,7 +21,7 @@ The previous B04 run converted the *disjoint* portion of the third compound into
 
 The analytic input is fleet01/B01 `QFORM-PAIRVOLUME-HALF-RIESZ-UNCONDITIONAL-v1`, canonical source
 
-`yspennstate/math-open-problems@1f3af9dc58afb9e902b972466d6da01cece89734`
+`private-source-repository@1f3af9dc58afb9e902b972466d6da01cece89734`
 
 at
 

@@ -29,7 +29,7 @@ so under the three-large-eigenvalue condition `|det S| >= |d|^{-1}`. It also sho
 
 The freshest completed designated partner fleet02/B05 result available at the start was
 
-`math-open-problems@75df8a812c96735205ee8370363808fd734e2d12`,
+`private-source@75df8a812c96735205ee8370363808fd734e2d12`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T130427Z-fleet02-B05-QFORM-auto11/REPORT.md`.
 
 It closes the entire exact-rank-three heavy **physical-null** endpoint in the residual-diffuse branch by slicing a transverse projection and applying a product-Fourier/Fresnel--Brascamp--Lieb estimate, with bound `<55.776`; its first successor is the nonzero near-null pivot bridge.
@@ -263,7 +263,7 @@ The absorption renormalization introduces no hidden factor: the determinant gain
 
 Use fleet02/B05 r19, theorem `QFORM-EXACTRANK3-LEAVEONEOUT-FRESNEL-v1`, canonical mathematics
 
-`math-open-problems@96b63ddb9eb6835e92a5ad56e3fd91f5b220f9e2`,
+`private-source@96b63ddb9eb6835e92a5ad56e3fd91f5b220f9e2`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T092247Z-fleet02-B05-QFORM-r19/REPORT.md`.
 
 It gives, after conditioning one original independent coordinate and provided every remaining normalized leaf leverage is at most `1/2`,
@@ -316,7 +316,7 @@ then after absorption the normalized frame has a leverage-one synthetic original
 
 Use the completed fleet02/B05 r22 theorem `QFORM-EXACT-COLOOP-CLOSURE-v1`, canonical proof
 
-`math-open-problems@e175c1cd46ed7803bdd10a9fe7f8bb30f22c72fd`.
+`private-source@e175c1cd46ed7803bdd10a9fe7f8bb30f22c72fd`.
 
 That theorem gives `||p||_infinity<=256` when the active three eigenvalues have magnitude at least one. Here `s_min(B_*)>=c`, so apply it to `B_*/c` and scale back. This gives
 

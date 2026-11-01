@@ -3,7 +3,7 @@ Problem/source: David Aldous and James Fill, *Reversible Markov Chains and Rando
 
 # C28 closable transition — I0032 source correction, operator dualization, and spectral-profile route
 
-Run date: 16 September 2026. Repository: `yspennstate/math-open-problems`, branch `master`.
+Run date: 16 September 2026. Repository: `private-source-repository`, branch `master`.
 Own root: `proofnet24/C28-closure-hypercontractivity`.
 Prior Paley root preserved unchanged in HARD RESERVE: `proofnet24/C28-paley-etf`.
 Status: **CLAIMED / PENDING_ADMISSION, not READY; mathematical status PARTIAL / source problem still treated as OPEN on bounded current evidence**.

@@ -20,7 +20,7 @@ The first planned implication was the translation-uniform hyperbolic-square esti
 
 A fresh source check found that this exact density-cap theorem is already complete in fleet02/B10:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - canonical cited commit: `1eba911614ef9f6683f8eacb5d6608a0f9a4b833`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T1147Z-qform-rank3-coupled-B10-r1/REPORT.md`
 - theorem: `QFORM-HYPERBOLIC-SQUARE-v1`.
@@ -115,7 +115,7 @@ The freshest completed designated-partner result read this run is fleet02/B04's
 
 source:
 
-- `yspennstate/math-open-problems@c7fbb4f97fef82c9e6920e17bc01fa3efc0da85e`
+- `private-source-repository@c7fbb4f97fef82c9e6920e17bc01fa3efc0da85e`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T071501Z-fleet02-B04-QFORM-r11/REPORT.md`.
 
 In its exact scope, if the original-coordinate `Y` bank is quadratically clean, `P` is a deterministic orthogonal projection on coefficient space, `N=MP` has exact rank two, and deleting one physical hub row of `N` leaves rank at most one, then

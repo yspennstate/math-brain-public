@@ -18,7 +18,7 @@ No spectral rotation is treated as preserving independence. No Gaussian, moment,
 
 The current B10 predecessor actually used is
 
-`yspennstate/math-open-problems@91759f77fcdf696a75d8e6c6ef398c03654b025a`
+`private-source-repository@91759f77fcdf696a75d8e6c6ef398c03654b025a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T023946Z-fleet03-B10-QFORM-r23b/REPORT.md`.
 
@@ -163,7 +163,7 @@ Its smaller singular value satisfies
 
 Now apply the completed compatible **fleet04/B16** fixed-pair determinant-bank identity from
 
-`yspennstate/math-open-problems@58c23c624db350cf44f0c836daa3582eb7e2d266`
+`private-source-repository@58c23c624db350cf44f0c836daa3582eb7e2d266`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T161909Z-fleet04-B16-QFORM-r2/REPORT.md`.
 
@@ -182,7 +182,7 @@ Hence
 
 Feed the **total bank**, not an individual minor, into B10 r17's completed `QFORM-INDEFINITE-PAIR-SCHUR-BANK-v1`, source
 
-`yspennstate/math-open-problems@11505bc9c70f8dfc4c587dbdb2ebaeee1dd0ca04`.
+`private-source-repository@11505bc9c70f8dfc4c587dbdb2ebaeee1dd0ca04`.
 
 It yields
 
@@ -245,7 +245,7 @@ where the `ell_j(x)` come from the hub-complement cross terms. They are coordina
 
 Apply the established `QFORM-DIFFUSE-SEPARABLE-PHASE-v1` theorem at
 
-`yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`.
+`private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`.
 
 For rank three it gives uniformly in `x`
 
@@ -370,7 +370,7 @@ This is narrower than r23b's generic near-null hub/star payment problem and narr
 
 ### 7.1 Latest Claude one-hub record
 
-During this run `math-open-problems` advanced to
+During this run `private-source` advanced to
 
 `469544eaf917159c10c7b04f661c6e411feb392b`,
 

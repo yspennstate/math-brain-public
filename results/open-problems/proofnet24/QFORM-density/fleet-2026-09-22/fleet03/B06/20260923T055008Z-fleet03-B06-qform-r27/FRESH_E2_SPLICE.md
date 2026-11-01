@@ -6,7 +6,7 @@ This addendum is part of fleet03/B06 run `20260923T055008Z-fleet03-B06-qform-r27
 
 Fleet01/B04 proved `QFORM-DISJOINT-E2-ENTROPY-HALVING-v1` in
 
-`yspennstate/math-open-problems@e0f6866f77e8c38b5c482acaf55094f60d3f28ac`,
+`private-source-repository@e0f6866f77e8c38b5c482acaf55094f60d3f28ac`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T055035Z-fleet01-B04-QFORM-auto13/REPORT.md`.
 
 For any ORIGINAL-coordinate cross block `B`, put

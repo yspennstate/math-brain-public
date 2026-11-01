@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R20 CLOSABLE OUTSIDE — successor admission: F0137 Dirichlet `(T)_gamma` status reconciliation
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Continuity and source guard
 
@@ -125,7 +125,7 @@ The currently exposed task-management surface still provides prompt/title, sched
 ```yaml
 ledger_delta:
   worker: R20
-  repository: yspennstate/math-open-problems
+  repository: private-source-repository
   branch: master
   retired_source:
     id: I0100

@@ -16,7 +16,7 @@ All random variables remain in their ORIGINAL independent coordinates. No post-r
 
 Immediate predecessor:
 
-- `yspennstate/math-open-problems@8dc7e69b64b9147d63ada84ab086695a3d9f1077`, this run's `EARLY.md`;
+- `private-source-repository@8dc7e69b64b9147d63ada84ab086695a3d9f1077`, this run's `EARLY.md`;
 - preceding completed B02 state: `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260924T032112Z-fleet01-B02-qform-auto11-r44/REPORT.md`.
 
 The full-cut ultra-rank-two packet inherited from r43 is a literal ORIGINAL-coordinate partition `S|T`, with
@@ -30,7 +30,7 @@ where `x1>=x2>=...` are the squared singular values of `M`. The small crossing t
 
 The completed designated fleet02/B02 theorem actually applied at an equation below is source-pinned in its completed report
 
-- `yspennstate/math-open-problems@b34c3df7995a27f90540057d7dc1fcc33d6e7e39`;
+- `private-source-repository@b34c3df7995a27f90540057d7dc1fcc33d6e7e39`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/fleet02-B02-20260924T023712Z-r11/REPORT.md`.
 
 For every literal disjoint ORIGINAL-coordinate cross block `B`, it proves

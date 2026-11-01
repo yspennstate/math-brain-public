@@ -5,7 +5,7 @@ Problem/source: Antonio Agresti and Mark Veraar, *Nonlinear SPDEs and Maximal Re
 # R10 I0070 — deterministic-horizon localization repairs the compact-tail endpoint route
 
 Run ID: `20260916T1833Z_i0070_stopped_perturbation_repair`  
-Repository/branch: `yspennstate/math-open-problems` / `master`  
+Repository/branch: `private-source-repository` / `master`  
 Dated source/status check: 2026-09-16
 
 No email/Gmail, Drive, public posting, purchase, permission change, workflow execution, scheduler mutation, peer-file edit, or shared-root edit was performed.

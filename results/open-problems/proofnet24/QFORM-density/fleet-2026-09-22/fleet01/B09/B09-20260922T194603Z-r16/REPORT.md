@@ -18,7 +18,7 @@ No pointwise van-der-Corput estimate, post-rotation independence, arbitrary-join
 
 ## 2. Source-pinned inputs actually consumed
 
-1. **One-scale ridge characteristic estimate.** `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`. In its notation, for an original-coordinate cross block `B`, `gamma>0`, `q in [1,2]`,
+1. **One-scale ridge characteristic estimate.** `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`. In its notation, for an original-coordinate cross block `B`, `gamma>0`, `q in [1,2]`,
 
    `K_gamma = BB^T (gamma^2 I + BB^T)^(-1)`, `theta=tr K_gamma`, `D=det(I+BB^T/gamma^2)`,
 
@@ -28,7 +28,7 @@ No pointwise van-der-Corput estimate, post-rotation independence, arbitrary-join
 
    with `L_q=pi e sqrt(2/q)`. The report proves this while allowing arbitrary self blocks and affine/coordinate-separable perturbations. I use this inequality below at `q=1`, but only require a half-Riesz weighted time integral, so the threshold becomes `theta>1`, not the density threshold `theta>2`.
 
-2. **Designated partner fleet02/B09 r7.** `QFORM-RANK3-BILINEAR-SCHUR-BANK-v1`, canonical `yspennstate/math-open-problems@caa2cef304844e9d6f841acaf2e003f0bc1c24b5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T183809Z-fleet02-B09-QFORM-r7/REPORT.md`. For an exact-rank-three zero-diagonal matrix and an edge `(i,j)`, with
+2. **Designated partner fleet02/B09 r7.** `QFORM-RANK3-BILINEAR-SCHUR-BANK-v1`, canonical `private-source-repository@caa2cef304844e9d6f841acaf2e003f0bc1c24b5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260922T183809Z-fleet02-B09-QFORM-r7/REPORT.md`. For an exact-rank-three zero-diagonal matrix and an edge `(i,j)`, with
 
    `R_ij = |A_ij|^2 sum_{k != i,j} |A_ik A_jk|`,
 
@@ -38,9 +38,9 @@ No pointwise van-der-Corput estimate, post-rotation independence, arbitrary-join
 
    I convert this actual density inequality into a half-Riesz payment in Section 7.
 
-3. **Current neighboring gap.** fleet03/B09 r15, `yspennstate/math-open-problems@2589a6230149bd8c3b4b2a0aad6f404bc7ab034a`, proves a uniform half-Riesz bound when a residual with `s_2>=1` has a physical diagonal at least `1/2`, and another when a physical cross block has two singular values bounded below. It identifies the remaining one-strong-cross geometry.
+3. **Current neighboring gap.** fleet03/B09 r15, `private-source-repository@2589a6230149bd8c3b4b2a0aad6f404bc7ab034a`, proves a uniform half-Riesz bound when a residual with `s_2>=1` has a physical diagonal at least `1/2`, and another when a physical cross block has two singular values bounded below. It identifies the remaining one-strong-cross geometry.
 
-4. **Concurrent compatible result.** fleet03/B04 r17, `yspennstate/math-open-problems@77c5654ee92f27e444b650ee1635c868af5f76c9`, proves a scalar-square plus invertible rank-two banked-Schur half-Riesz closure. Its remaining hard branch explicitly includes a zero/near-isotropic scalar pivot with rank-deficient residual bank. The theorem below addresses the exact-zero physical-pivot endpoint of that residual geometry rather than duplicating the invertible rank-two bank packet.
+4. **Concurrent compatible result.** fleet03/B04 r17, `private-source-repository@77c5654ee92f27e444b650ee1635c868af5f76c9`, proves a scalar-square plus invertible rank-two banked-Schur half-Riesz closure. Its remaining hard branch explicitly includes a zero/near-isotropic scalar pivot with rank-deficient residual bank. The theorem below addresses the exact-zero physical-pivot endpoint of that residual geometry rather than duplicating the invertible rank-two bank packet.
 
 The live correction ledger was reread before publication. In particular the proof respects `QFORM-CROSSMINOR-ALONE-FALSE`, `QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE`, `QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE`, the false arbitrary-joint coarea claim, the false positive conditional-projection moment, and the false law-uniform pointwise Fresnel decay.
 

@@ -175,7 +175,7 @@ No random coordinate has been rotated.  The variable `H` is allowed to share the
 
 The source-valid theorem `QFORM-MIXED-BASIS-TRIPLE-FRESNEL-v1` is in
 
-`yspennstate/math-open-problems@3d991ad3ab91593155b0b465007f4938968a14bf:`
+`private-source-repository@3d991ad3ab91593155b0b465007f4938968a14bf:`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T111508Z-fleet01-B03-QFORM-auto11/REPORT.md`.
 
 Its packet is

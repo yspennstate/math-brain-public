@@ -92,7 +92,7 @@ The completed designated partner `fleet04/B15` proved, for every probability law
 
 with the value `+infinity` if no bounded density exists. Its canonical source is
 
-`yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`,
+`private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`.
 
@@ -236,7 +236,7 @@ This does not by itself bound `S_sqrt3`. The hard product-geometry step remains:
 
 The completed fixed-matrix regularity theorem at
 
-`yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`,
+`private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`,
 

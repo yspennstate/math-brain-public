@@ -17,15 +17,15 @@ The target remains the unrestricted one: for every dimension, independent real O
 Completed sources used at equations:
 
 1. This slot's preceding double-anchor compiler:
-   `yspennstate/math-open-problems@dbdedece92b8abf88ad0eee0860011f88764fca4`,
+   `private-source-repository@dbdedece92b8abf88ad0eee0860011f88764fca4`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T100306Z-r22/REPORT.md`.
    Its unpaid survivor contains a fixed two-row/two-column anchored third-volume bank `H>G/5`; on the inherited r29 scale this gives `H>F^6/64123518131896320`.
 2. Designated partner fleet02/B07, `QFORM-PAIRTAIL-CURVATURE-RECEIVER-v1`:
-   `yspennstate/math-open-problems@3e36370502df5afeb00457b74d05cdbfd87168b0`,
+   `private-source-repository@3e36370502df5afeb00457b74d05cdbfd87168b0`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T104812Z-fleet02-B07-qform-r13/REPORT.md`.
    Its actual pair-tail estimate is applied in Section 5.
 3. The current required fractional-volume theorem:
-   `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+   `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
    `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
    It is applied at the actual third-volume inequality in Section 4.
 

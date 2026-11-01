@@ -116,7 +116,7 @@ Notice that no density estimate for `S` is needed.
 
 The completed fleet04/B18 result used here is the source-pinned banked zero-pivot theorem in
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`
 
 at
 
@@ -196,7 +196,7 @@ which proves (1.2). The factor `((1+r^2)/r^2)^(1/3)` decreases for `r>0`. At `r=
 
 ## 6. Relation to the latest fleet04/B18 Schur-frame results
 
-The newest fleet04/B18 diffuse-frame handoff (`math-open-problems@e9eb90e2a7746482fb3ba75bf449b224cbf507ce`) gives a continuous bound `<3e` when `0<r<=1` and every residual row has leverage at most `1/2`. Its mixed-volume predecessor (`math-open-problems@24a9362bd3f24a3849021093cf98611f95b5ab04`) gives `<8.785` on `1/2<=r<=2` under the row condition `p_j+q_j<=1`.
+The newest fleet04/B18 diffuse-frame handoff (`private-source@e9eb90e2a7746482fb3ba75bf449b224cbf507ce`) gives a continuous bound `<3e` when `0<r<=1` and every residual row has leverage at most `1/2`. Its mixed-volume predecessor (`private-source@24a9362bd3f24a3849021093cf98611f95b5ab04`) gives `<8.785` on `1/2<=r<=2` under the row condition `p_j+q_j<=1`.
 
 The present theorem pays a complementary region: it allows arbitrarily heavy residual rows and gives a uniform `<=10.260` bound for **all source-separated packets with r>=2**. Hence source-separated high shear is no longer an unpaid analytic branch. What remains is genuinely non-source-separated high shear, where the longitudinal aggregate and transverse pair share original coordinates.
 
@@ -229,7 +229,7 @@ The next local implication is therefore:
 
 > in the exact-rank-three Schur-isotropic packet with `r>2`, either extract a product-preserving aggregate transformation that produces genuine scalar-versus-pair independence without conditioning-generated cap loss, or route the shared-source rows to an already-paid heavy-hub / physical-pair / ridge certificate.
 
-The conjugate-shear theorem in fleet01/B14 (`math-open-problems@aa7d48b99329ae100c0b50fa12a23d4dfc6399b8`) is relevant to this next step because it shows that certain shears can be formed *before* conditioning while retaining a cap-one source. But no claim is made here that every nonsource-separated row geometry has that form.
+The conjugate-shear theorem in fleet01/B14 (`private-source@aa7d48b99329ae100c0b50fa12a23d4dfc6399b8`) is relevant to this next step because it shows that certain shears can be formed *before* conditioning while retaining a cap-one source. But no claim is made here that every nonsource-separated row geometry has that form.
 
 **Full QFORM remains OPEN / NOT PROVED. Full-target continuity remains OPEN.**
 
@@ -237,8 +237,8 @@ The conjugate-shear theorem in fleet01/B14 (`math-open-problems@aa7d48b99329ae10
 
 - LPP primary source: https://arxiv.org/abs/1507.07949
 - Juškevičius--Lee primary source: https://arxiv.org/abs/1503.09190
-- Designated fleet04/B18 banked zero-pivot result: `yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
-- Latest fleet04/B18 diffuse-frame addendum: `yspennstate/math-open-problems@e9eb90e2a7746482fb3ba75bf449b224cbf507ce`.
-- fleet01/B14 conjugate-shear source: `yspennstate/math-open-problems@aa7d48b99329ae100c0b50fa12a23d4dfc6399b8`.
+- Designated fleet04/B18 banked zero-pivot result: `private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
+- Latest fleet04/B18 diffuse-frame addendum: `private-source-repository@e9eb90e2a7746482fb3ba75bf449b224cbf507ce`.
+- fleet01/B14 conjugate-shear source: `private-source-repository@aa7d48b99329ae100c0b50fa12a23d4dfc6399b8`.
 
 Repository retrieval is not native mathematical-brain ingestion. This run is `WITHOUT_VERIFIED_BRAIN`.

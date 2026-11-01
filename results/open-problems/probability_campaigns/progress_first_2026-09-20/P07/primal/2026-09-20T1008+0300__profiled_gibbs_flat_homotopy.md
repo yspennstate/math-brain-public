@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-A — exact profiled-Gibbs homotopy from the uniform law to the optimal flat theta certificate
 
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured pre-write master:** `8c15f27e5ee986d0864cf75b73439fc8c7fd8bf9`  
 **Previous own checkpoint:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T0842+0300__unique_positive_cosine_basis_discrepancy.md`, blob `4dfb7147a3d6202a1115b752666933aea1571e63`.  
 **Complementary checkpoint used:** P07-B `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T0927+0300__gibbs_radial_exceptional_frequencies.md`, blob `795e8913ebe7c8d8e44c560b2f48de277caf98d3`. P07-B owns the Fourier-dual / exceptional-frequency route. This report imports its radial Gibbs construction and exact moment-polytope normalization only, then solves a different primal problem: how to force **all** selected moments to be equal without abandoning positivity.

@@ -294,7 +294,7 @@ G_q+\sqrt q\,nU,
 \]
 with the hybrid law of Section 1. The physical eigenframe has row leverages `q` for the macro row and at most `3/(4m)` for the diffuse rows. For `q<=1/2` and `m>=2`, every leverage is at most `1/2`. Therefore the completed source-pinned Fresnel--Brascamp--Lieb Theorem F at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
 gives a common integrable `O(|t|^{-3/2})` characteristic-function envelope for the actual finite outputs. Pointwise convergence plus dominated convergence therefore upgrades (5.9) to uniform convergence of the complete output densities.
 
@@ -319,7 +319,7 @@ below the known sharpness obstruction. A proof cannot assume that one macroscopi
 
 The designated partner `fleet02/B17` proved and checked `QFORM-RANDOM-LOCATION-GAUSSIAN-INDEFINITE-BARRIER-v1` in
 
-`yspennstate/math-open-problems@f1b5f3b66e19fa17acf395ea31e6615d7ddc7440:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T074629Z-fleet02-B17-QFORM-auto11/REPORT.md`,
+`private-source-repository@f1b5f3b66e19fa17acf395ea31e6615d7ddc7440:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T074629Z-fleet02-B17-QFORM-auto11/REPORT.md`,
 
 with checks at commit `97d91254e56ad2f8c79b121a0ce8bf66472a11d9`. For an isotropic `(2,1)` Gaussian reflection with `G~N(0,sI)` and deterministic shift `m`, it supplies
 \[

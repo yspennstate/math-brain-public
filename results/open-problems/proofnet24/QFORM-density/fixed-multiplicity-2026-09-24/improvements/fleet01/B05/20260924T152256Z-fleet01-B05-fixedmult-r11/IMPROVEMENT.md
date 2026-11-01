@@ -2,7 +2,7 @@
 
 Run: `20260924T152256Z-fleet01-B05-fixedmult-r11`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Pinned source reviewed: `yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f`, `paper.tex` blob `19fb119877426b640b2c0dae19ec2f78a399fe11`.
+Pinned source reviewed: `private-source-repository@eeb752c8943536541b34b42b8bf48e924f4d3d2f`, `paper.tex` blob `19fb119877426b640b2c0dae19ec2f78a399fe11`.
 
 Status: **new supporting theorem for the multiplicity-eight overlap branch; multiplicity eight remains OPEN.** The result aggregates all overlap-one minors sharing one physical coordinate before any reciprocal individual seed determinant is introduced. It does not supply a dimension-free lower bound for the required fixed-anchor currency, so it is not an eight-eigenvalue theorem.
 

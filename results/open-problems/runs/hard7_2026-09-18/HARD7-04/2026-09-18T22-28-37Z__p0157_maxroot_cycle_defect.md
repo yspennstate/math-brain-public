@@ -2,7 +2,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — HARD7-0
 
 # HARD7-04 bounded research iteration — P0157 maximal-root cycle defect
 
-Date: 2026-09-18 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-18 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL; source OPEN.** This is the second P0157 run after the P0150 source-correction handoff. The frozen source metric has one consecutive no-movement run after its preceding exact identification; this is not a section-I stuck run.
 

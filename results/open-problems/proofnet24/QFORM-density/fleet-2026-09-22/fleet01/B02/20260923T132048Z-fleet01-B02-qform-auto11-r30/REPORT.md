@@ -16,7 +16,7 @@ The exact owner target remains unchanged: independent ORIGINAL real coordinates 
 
 The designated partner fleet02/B02 proves `QFORM-CROSS-SCHUR-SHEAR-GROUPED-L1-v1` in
 
-`yspennstate/math-open-problems@b84e108c872878d108d736c123482d15b252b5df`,
+`private-source-repository@b84e108c872878d108d736c123482d15b252b5df`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T110948Z-fleet02-B02-QFORM-r11/REPORT.md`.
 

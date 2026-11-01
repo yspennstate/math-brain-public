@@ -16,17 +16,17 @@ The calculation below proves two exact identities and a source-valid route obstr
 
 ## 2. Sources actually consumed
 
-Required source bundle: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. I read `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` at that commit.
+Required source bundle: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. I read `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` at that commit.
 
 Two completed results from that source are applied below at actual inequalities: the ruled one-sheet theorem `p_Q(s)<=pi sqrt(2)` on the one-sheet side of exact rank-three inertia `(2,1)` with the present zero linear term, and the three-variable theorem `||p_Q||_infinity<=6 sqrt(pi)/sigma` when all three eigenvalues have modulus at least `sigma`.
 
-Designated partner actually applied: fleet03/B10 r24, canonical bundle `yspennstate/math-open-problems@c0d7e627b3b877fcecc3004a58335658f6541d64`, report introduced at `dc9d69f51688728122da9fd35835593beaa694c7`. Its completed theorem `QFORM-NULL-HUB-TRANSVERSE-LEVERAGE-CLOSURE-v1` gives
+Designated partner actually applied: fleet03/B10 r24, canonical bundle `private-source-repository@c0d7e627b3b877fcecc3004a58335658f6541d64`, report introduced at `dc9d69f51688728122da9fd35835593beaa694c7`. Its completed theorem `QFORM-NULL-HUB-TRANSVERSE-LEVERAGE-CLOSURE-v1` gives
 
 `||p_Q||_infinity <= 3*2^(4/3)(h |det M|)^(-1/3)`
 
 for an exact-null ORIGINAL hub `u_0=sqrt(h)r` when every complementary transverse leverage is at most `1/2`.
 
-Newest continuation checked: `math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`, `20260922T231000Z-semidefinite-and-hub-reduction/README.md` and `hub_with_diagonal/REPORT.md`; and `math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`, `NEW_PROJECTED_CROSSING.md`. During this run fleet01/B03 completed the compatible row-marginal-free one-hub theorem at `math-open-problems@4b7608c198ea570378ae30b5a22d63ba7d387534`, theorem `QFORM-ONE-HUB-ROW-MARGINAL-FREE-2VOLUME-v1`; it is applied in Section 6 to an actual physical partition.
+Newest continuation checked: `private-source@c4c23b784395630c094ba299a50712209921d1ae`, `20260922T231000Z-semidefinite-and-hub-reduction/README.md` and `hub_with_diagonal/REPORT.md`; and `private-source@4f92aeb74083c6f95cb314a11fed1b812eacef9a`, `NEW_PROJECTED_CROSSING.md`. During this run fleet01/B03 completed the compatible row-marginal-free one-hub theorem at `private-source@4b7608c198ea570378ae30b5a22d63ba7d387534`, theorem `QFORM-ONE-HUB-ROW-MARGINAL-FREE-2VOLUME-v1`; it is applied in Section 6 to an actual physical partition.
 
 ## 3. Exact discriminant identity in ORIGINAL product coordinates
 

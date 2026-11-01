@@ -23,7 +23,7 @@ and
 
 found no completed current-QFORM artifact. I therefore do not fabricate a designated-partner application. The completed peer theorem actually consumed in the proof is fleet02/B13 `QFORM-NEAR-NULL-ASINH-v1`, source
 
-`yspennstate/math-open-problems@287235f6ed9d0e0b876f0301f10a7b636db87ec1`
+`private-source-repository@287235f6ed9d0e0b876f0301f10a7b636db87ec1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T172625Z-fleet02-B13-productset-r13/REPORT.md`.
 

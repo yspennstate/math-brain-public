@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — this was
 # R13 — Boolean Komlós: a two-band lower-tail DTV certificate
 
 Run ID: `20260918T2203Z_twoband-middle-7d2c`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Track: **R13 HARD OUTSIDE**  
 Source ID: **E0042**
 

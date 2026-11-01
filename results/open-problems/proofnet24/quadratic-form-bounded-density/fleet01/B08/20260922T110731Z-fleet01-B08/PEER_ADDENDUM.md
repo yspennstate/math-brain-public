@@ -7,7 +7,7 @@
 
 I consumed fleet03/B17 run `fleet03-B17-20260922T112131Z`, exact source
 
-`yspennstate/math-open-problems@c64fcff680b0a252a3c92002c60eedba02bbb9ec`
+`private-source-repository@c64fcff680b0a252a3c92002c60eedba02bbb9ec`
 
 at
 

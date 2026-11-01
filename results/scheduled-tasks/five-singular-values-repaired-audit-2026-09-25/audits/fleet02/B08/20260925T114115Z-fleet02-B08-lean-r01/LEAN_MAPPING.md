@@ -2,7 +2,7 @@
 
 Fresh control contains the later 25 Sep 2026 12:29 owner directive to pivot open-problem mathematics work to Lean verification of the repaired five-singular-value paper. This run therefore performed Lean-coverage reconciliation rather than another prose audit.
 
-Exact repaired source: `math-open-problems@4e530247ec0ef4101a6e5ecf621bd35a969c42aa`, blob `98e45d53d106db9a205051a4dd4917fc39dc2e3a`, SHA-256 `90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb`.
+Exact repaired source: `private-source@4e530247ec0ef4101a6e5ecf621bd35a969c42aa`, blob `98e45d53d106db9a205051a4dd4917fc39dc2e3a`, SHA-256 `90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb`.
 
 ## Fully closed: repaired Lemma 4.2, lines 260–269
 

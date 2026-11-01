@@ -82,7 +82,7 @@ No coordinatewise X-X' is ever detached from its conjugate X+X'.
 
 Suppose, in addition, the three-dimensional deterministic coefficient range in original coordinates has physical leverage at most 1/2. Apply completed Theorem F of
 
-    math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837
+    private-source@e5f71d79eff325201dd0274053d20268ce65b837
     proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md.
 
 Because the product of the three nonzero eigenvalues of (2.2) has modulus J and the restricted Gram determinant is one after choosing an orthonormal basis of the packet range, Theorem F gives the actual characteristic-function envelope

@@ -22,13 +22,13 @@ The result below therefore keeps a tolerance that decays with the subcube codime
 The exact source inputs used are:
 
 1. **C.1 near-support block theorem and elimination identity.**  
-   Repository `yspennstate/math-open-problems`, commit `3739dd232ab781de9e899a5caf364a7144cf5bef`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet02/interactive/20260921T192650Z-joint-fei-subcube-peeling/ADDENDUM.md`, Sections B--C. It proves the punctured-cube/log-Sobolev restriction machinery, the coefficient-12 block theorem under total support error `e<=q/(16r)`, and the sign-independent residual-pivot bound after the control block is exposed.
+   Repository `private-source-repository`, commit `3739dd232ab781de9e899a5caf364a7144cf5bef`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet02/interactive/20260921T192650Z-joint-fei-subcube-peeling/ADDENDUM.md`, Sections B--C. It proves the punctured-cube/log-Sobolev restriction machinery, the coefficient-12 block theorem under total support error `e<=q/(16r)`, and the sign-independent residual-pivot bound after the control block is exposed.
 2. **Robust-row posterior crossing.**  
-   Repository `yspennstate/math-open-problems`, commit `fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md`, Lemma 2.1 / Theorem 3.1. It gives the exact trigger crossing lower bound `c_i(F)>=q_i-epsilon` and the terminal trigger-surplus inequality.
+   Repository `private-source-repository`, commit `fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md`, Lemma 2.1 / Theorem 3.1. It gives the exact trigger crossing lower bound `c_i(F)>=q_i-epsilon` and the terminal trigger-surplus inequality.
 3. **Pairwise trigger transfer / codimension staircase.**  
-   Repository `yspennstate/math-open-problems`, commit `a1b2a93210fe7cc871cd10c5bbbf43b1b983a254`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T094436Z-robust-row-codimension-staircase/REPORT.md`, Sections 2--4. It proves the Boolean-square identity `p_ik=p_ki<=2q_k` and hence influence on every genuine trigger.
+   Repository `private-source-repository`, commit `a1b2a93210fe7cc871cd10c5bbbf43b1b983a254`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T094436Z-robust-row-codimension-staircase/REPORT.md`, Sections 2--4. It proves the Boolean-square identity `p_ik=p_ki<=2q_k` and hence influence on every genuine trigger.
 4. **Fresh pathwise refund retention.**  
-   Repository `yspennstate/math-open-problems`, commit `c6e0f3df3424a27d4a05aec2460ecc52085ea1e3`, path `proofnet24/P03-fei/fleet-2026-09-22/fleet03/B12/fleet03-B12-20260922T104514Z/REPORT.md`, Sections 1--4. This is the named OTHER-account result applied directly below. It proves
+   Repository `private-source-repository`, commit `c6e0f3df3424a27d4a05aec2460ecc52085ea1e3`, path `proofnet24/P03-fei/fleet-2026-09-22/fleet03/B12/fleet03-B12-20260922T104514Z/REPORT.md`, Sections 1--4. This is the named OTHER-account result applied directly below. It proves
    \[
    D_A=I_A+C_A,
    \qquad
@@ -36,7 +36,7 @@ The exact source inputs used are:
    \]
    with `C_A,R_A>=0`, and exact adaptive-tree telescoping after child recentering.
 5. **All-block terminal core.**  
-   Repository `yspennstate/math-open-problems`, commit `85ffa60db26997421d980b1f86c03d82259504ca`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md`, Sections 2--4. This supplies the candidate-independent `F/J` critical-core setting and the exact folded restriction drift.
+   Repository `private-source-repository`, commit `85ffa60db26997421d980b1f86c03d82259504ca`, path `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T075416Z-all-block-terminal-core/REPORT.md`, Sections 2--4. This supplies the candidate-independent `F/J` critical-core setting and the exact folded restriction drift.
 
 The assignment names `fleet03/B11` as partner. At the last pre-write source refresh, no completed FEI artifact for `fleet03/B11` existed under the current all-team FEI root, so no unfinished partner result is cited or treated as a premise. The fresh compatible fleet03/B12 pathwise-refund theorem above is used instead, without waiting.
 

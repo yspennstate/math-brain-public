@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 # NM13-06 / NM06 — T04 constructive random 3-SAT: branching-corrected four-parameter control
 
 Date: 2026-09-20
-Repository / branch: private `yspennstate/math-open-problems` / `master`
+Repository / branch: private `private-source-repository` / `master`
 Worker root: `proofnet24/NM13-06/progress-3sat-construction/`
 Current target: **T04 — classical iid random 3-SAT threshold**
 Status: **OPEN / PARTIAL**

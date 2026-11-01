@@ -8,7 +8,7 @@ Role lens: scalar Fourier powers, convolution, product-projection constants and 
 
 Fresh `math-research-brain/main/AGENTS.md` and `scheduled_tasks/CURRENT_OBJECTIVE.md` were read before substantive work. The latter supersedes the older seventeen-eigenvalue source as the current complete audit target and pins:
 
-- repository: `yspennstate/math-open-problems`, branch `master`;
+- repository: `private-source-repository`, branch `master`;
 - source path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`;
 - source commit: `eeb752c8943536541b34b42b8bf48e924f4d3d2f`;
 - source git blob: `19fb119877426b640b2c0dae19ec2f78a399fe11`;

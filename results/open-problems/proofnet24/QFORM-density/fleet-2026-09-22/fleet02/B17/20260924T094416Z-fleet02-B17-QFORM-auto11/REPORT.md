@@ -218,7 +218,7 @@ Weak convergence alone is not enough to control density peaks; the next step is 
 
 This is the required direct use of the completed result at
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, Theorem F (also audited in `FOURIER_ROUTE_REPORT.md`).
 
 Diagonalize only the fixed coefficient matrix,
@@ -312,7 +312,7 @@ This is a family-specific continuity statement; it is not a proof of the full ta
 The latest compatible designated partner result is fleet03/B17
 `QFORM-GAUSSIAN-FULLTARGET-COMPARATOR-v1`, canonical source
 
-`math-open-problems@ea855178c7771925095c4517c830888c9a8938ea`,
+`private-source@ea855178c7771925095c4517c830888c9a8938ea`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260924T090408Z-fleet03-B17-QFORM-auto11/REPORT.md`.
 
 It proves: if `H~N(mu,Sigma)`, `Sigma>=vI`, and a symmetric coefficient matrix has at least three eigenvalues of magnitude at least `s`, then
@@ -448,8 +448,8 @@ A failure of the present mechanism in those regimes would be only a proof-mechan
 Consumed at this run:
 
 - current brain control revision `2026-09-22.15` and live QFORM correction inbox;
-- pinned completed Theorem F and its audit at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`;
-- latest compatible fleet03/B17 Gaussian full-target comparator at `math-open-problems@ea855178c7771925095c4517c830888c9a8938ea`.
+- pinned completed Theorem F and its audit at `private-source@e5f71d79eff325201dd0274053d20268ce65b837`;
+- latest compatible fleet03/B17 Gaussian full-target comparator at `private-source@ea855178c7771925095c4517c830888c9a8938ea`.
 
 The proof does not use the refuted arbitrary-joint coarea bound, law-uniform pointwise stationary phase, post-rotation input independence, generic two-sheet X-ray-only control, bounded-support localization, or a universal finite-fragment reduction.
 

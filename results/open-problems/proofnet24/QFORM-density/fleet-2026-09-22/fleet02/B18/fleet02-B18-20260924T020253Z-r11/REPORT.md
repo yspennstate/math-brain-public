@@ -61,7 +61,7 @@ No generic continuity claim is part of (2.1).
 
 ## 3. The pinned completed receiver used in this run
 
-The required pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` was reread at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.  The completed result spent below is the fifth-volume extension `D_5`:
+The required pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` was reread at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.  The completed result spent below is the fifth-volume extension `D_5`:
 
 For an arbitrary original-coordinate cut `I sqcup J`, put
 

@@ -18,7 +18,7 @@ No Gaussianity, moments, compact support, connected support, log-concavity, iden
 
 The completed fleet02/B01 report
 
-`yspennstate/math-open-problems@941c738e26b7d39898595b407790da3e8ae51945`
+`private-source-repository@941c738e26b7d39898595b407790da3e8ae51945`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T020247Z-fleet02-B01-qform-r33/REPORT.md`
 
@@ -60,7 +60,7 @@ This report changes only the payment of `J_t`.
 
 The completed fleet02/B07 theorem `QFORM-PLUCKER-ENTROPY-BL-v1` is at
 
-`yspennstate/math-open-problems@32c257209b588141fb60af698f478f1d0ad20b8a`
+`private-source-repository@32c257209b588141fb60af698f478f1d0ad20b8a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T123512Z-b07-qform-minors-11/REPORT.md`.
 

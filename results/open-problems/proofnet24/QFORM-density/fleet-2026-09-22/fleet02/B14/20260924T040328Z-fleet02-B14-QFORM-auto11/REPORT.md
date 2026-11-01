@@ -25,7 +25,7 @@ The latest fleet03/B14 theorem supplies the receiver once such a transverse squa
 
 The newest compatible fleet03/B14 result is `QFORM-TRANSVERSE-VERTEX-RANDOM-SLOPE-LOCALIZATION-v1`, canonical report
 
-`yspennstate/math-open-problems@eac495331ac51a64b786478b490564b25a06c233`
+`private-source-repository@eac495331ac51a64b786478b490564b25a06c233`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260924T033822Z-fleet03-B14-QFORM-auto11/REPORT.md`.
 
 It proves: if `W,U,Z` are mutually independent, `||p_W||_inf<=K_W`, `||p_U||_inf<=K_U`, `D=D(Z)` has probability-density cap `M`, `Phi(U,Z)` is arbitrary measurable, `R(Z)` arbitrary, and `a!=0`, then
@@ -250,7 +250,7 @@ Thus arbitrary countable, unbounded, exponentially separated localization is gen
 
 The required fixed source was freshly read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
 through `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.

@@ -151,7 +151,7 @@ This is **not** a counterexample to the density conjecture. It only refutes that
 
 I substantively apply fleet04/B18's completed theorem `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical report
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
 That theorem proves: if `R` has density at most `M` and the conditional density of `V` given `R=r` is at most one, then
 
@@ -243,4 +243,4 @@ The remaining full-target implication is an exhaustive product-preserving dichot
 1. Livshyts, Paouris, Pivovarov, arXiv:1507.07949, Theorem 1.1.
 2. DLMF 5.6.4 / Gautschi inequality for the exact gamma-ratio lower bound.
 3. fleet04/B18 partner report at commit `441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, exact path above.
-4. Live ridge-window handoff, full proof source `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
+4. Live ridge-window handoff, full proof source `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7:proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.

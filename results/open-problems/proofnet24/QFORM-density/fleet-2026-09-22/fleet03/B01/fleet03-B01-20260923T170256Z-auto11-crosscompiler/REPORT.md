@@ -19,7 +19,7 @@ The phase-aligned obstruction is preserved: at any prescribed frequency `s`, a c
 
 The designated partner source is
 
-`yspennstate/math-open-problems@8410ab9d8238baa40c033f83dbae6af44b0b2582`
+`private-source-repository@8410ab9d8238baa40c033f83dbae6af44b0b2582`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260923T131003Z-fleet04-B01-singular-star-routing-r2/REPORT.md`.
 
@@ -51,7 +51,7 @@ A correction to the printed Corollary 4.1 is recorded in Section 5 below: (1.3) 
 
 The fresh interactive source is
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 

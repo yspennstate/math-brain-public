@@ -26,7 +26,7 @@ The exact-line finite-diagonal-support endpoint is discharged below; the remaini
 
 The latest completed compatible designated-partner result is fleet03/B13 r41, canonical report at
 
-`yspennstate/math-open-problems@37177f7694c9aab73604b36c452e2a92c612aad4`
+`private-source-repository@37177f7694c9aab73604b36c452e2a92c612aad4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260924T023349Z-fleet03-B13-qform-r41/REPORT.md`.
 
@@ -50,7 +50,7 @@ for every pair in its stated transverse scope, after deleting at most seven high
 
 The owner-required pinned Fourier source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 

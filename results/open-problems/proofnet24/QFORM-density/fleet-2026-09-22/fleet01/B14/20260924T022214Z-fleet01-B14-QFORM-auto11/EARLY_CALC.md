@@ -5,7 +5,7 @@ attacking: two-sided mass-homogeneous overlap localization — preserve full unn
 
 Programme `QFORM-DENSITY-3EIG-20260922`, owner programme revision `2026-09-22.5`; full QFORM status remains OPEN. Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-Source pin for the completed designated-partner result used here: `yspennstate/math-open-problems@0adab5e8aa852db2831d712bc820c9ea347b79ae:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260924T020607Z-fleet02-B14-QFORM-auto11/REPORT.md`, theorem `QFORM-OVERLAP-SLOPE-SUBPROBABILITY-HOMOGENEITY-v1`.
+Source pin for the completed designated-partner result used here: `private-source-repository@0adab5e8aa852db2831d712bc820c9ea347b79ae:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260924T020607Z-fleet02-B14-QFORM-auto11/REPORT.md`, theorem `QFORM-OVERLAP-SLOPE-SUBPROBABILITY-HOMOGENEITY-v1`.
 
 The partner theorem is one-sided in the following useful sense: with a probability slice law satisfying `ess sup_l |F_t(l)| <= A |t|^{-1/2}` and a slope-bank positive measure of mass `m` whose slope pushforward has density cap `M`, its output measure has density at most
 

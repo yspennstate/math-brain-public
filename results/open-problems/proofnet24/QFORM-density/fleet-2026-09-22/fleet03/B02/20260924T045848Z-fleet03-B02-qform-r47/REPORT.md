@@ -16,7 +16,7 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates with 
 
 The complete free-regularizer and spectral-window proof is
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
@@ -42,7 +42,7 @@ All same-bank blocks and all additional spectral directions remain in the full q
 
 Immediate completed predecessor:
 
-`yspennstate/math-open-problems@969923934518c728e4611e670ab6244ceea30215`,
+`private-source-repository@969923934518c728e4611e670ab6244ceea30215`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260924T030004Z-fleet03-B02-qform-r45/REPORT.md`.
 
@@ -66,7 +66,7 @@ for every literal disjoint ORIGINAL-coordinate cross block `B`, with a continuou
 
 The completed designated partner theorem is
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 

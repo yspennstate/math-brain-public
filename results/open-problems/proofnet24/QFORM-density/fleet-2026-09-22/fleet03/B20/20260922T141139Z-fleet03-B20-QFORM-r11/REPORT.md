@@ -12,7 +12,7 @@ The owner target is unchanged: for every dimension, independent real coordinates
 
 The freshest complete proof-assembly report consumed before this run is fleet03/B19, `QFORM-LOW-STABLERANK-OFFDIAGONAL-BRIDGE-v1`, source
 
-`yspennstate/math-open-problems@6e3c22b4fcc1038ded1aeff8d107be6a76f7df17:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T140323Z-fleet03-B19-QFORM-r11/REPORT.md`.
+`private-source-repository@6e3c22b4fcc1038ded1aeff8d107be6a76f7df17:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T140323Z-fleet03-B19-QFORM-r11/REPORT.md`.
 
 It proves a continuous density bound `<70` when the physical off-diagonal part `H=A-diag(A)` has sufficiently large stable rank, and leaves the residual state
 
@@ -28,7 +28,7 @@ Corrections retained: no law-uniform pointwise quadratic-phase decay; no indepen
 
 The complete supporting proof at
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`
 
 proves, for every original-coordinate cut with cross block `B`, the fractional estimate
 
@@ -40,7 +40,7 @@ when `1<=q<2` and the coordinate leverage of `range(B)` on one physical side is 
 
 The complete fleet01/B11 theorem at
 
-`yspennstate/math-open-problems@2279571f59ade7a9ec478af1e4818f6c117ac224:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`
+`private-source-repository@2279571f59ade7a9ec478af1e4818f6c117ac224:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`
 
 proves: if `R` has density `p_R` with `||p_R||_3=M`, and conditionally on `R` a real variable `V` has density cap one, then for every `d!=0`,
 
@@ -50,7 +50,7 @@ proves: if `R` has density `p_R` with `||p_R||_3=M`, and conditionally on `R` a 
 
 The completed designated-partner report
 
-`yspennstate/math-open-problems@1f85677029fc5ae27fc69b278620ae89d789efd2:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T132134Z-fleet04-B20-QFORM-r1/REPORT.md`
+`private-source-repository@1f85677029fc5ae27fc69b278620ae89d789efd2:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T132134Z-fleet04-B20-QFORM-r1/REPORT.md`
 
 proves the disjoint-aggregate hyperbolic-square theorem
 

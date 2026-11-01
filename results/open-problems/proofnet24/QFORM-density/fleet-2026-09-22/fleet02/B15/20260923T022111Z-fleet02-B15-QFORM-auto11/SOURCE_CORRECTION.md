@@ -4,7 +4,7 @@ The mathematical statement quoted in `REPORT.md` as the fleet03/B15 r23 countabl
 
 The verified canonical source is:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - commit: `8e22652e1fd8dc943b5744309bdadfe8674471c7`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T012829Z-fleet03-B15-qform-r23/REPORT.md`
 

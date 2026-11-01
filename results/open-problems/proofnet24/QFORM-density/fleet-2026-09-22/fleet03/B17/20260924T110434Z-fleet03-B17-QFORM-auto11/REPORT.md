@@ -271,7 +271,7 @@ Combining (7), (12), and (15) proves (1). Since `K(-d)<=pi/2`, (3) follows at `s
 
 The completed designated partner theorem is fleet04/B17 `QFORM-MACROFRAGMENTED-STRICTSLACK-DENSE-WITNESS-v1`, canonical source
 
-`yspennstate/math-open-problems@4be63022324b82f254f1d7a4353a3e883f08d10a`,
+`private-source-repository@4be63022324b82f254f1d7a4353a3e883f08d10a`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260924T011922Z-fleet04-B17-QFORM-r6/REPORT.md`.
 
 At its parameter `theta=0.01`, that exact source-valid fragmented sequence satisfies

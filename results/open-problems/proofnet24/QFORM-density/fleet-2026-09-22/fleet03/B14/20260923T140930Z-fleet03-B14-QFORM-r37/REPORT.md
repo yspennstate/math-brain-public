@@ -15,7 +15,7 @@ The exact owner target is unchanged: for every finite `n`, every independent rea
 
 The designated partner actually applied below is fleet04/B14 r9:
 
-`yspennstate/math-open-problems@63ba8e0f106c3bb405f05eb99778039ff47ed47b:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T101157Z-fleet04-B14-continuum-perspective-rough-transfer-r9/REPORT.md`.
+`private-source-repository@63ba8e0f106c3bb405f05eb99778039ff47ed47b:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T101157Z-fleet04-B14-continuum-perspective-rough-transfer-r9/REPORT.md`.
 
 Its completed physical-pair theorem is used at an explicit inequality in Section 5. For an actual invertible indefinite original-coordinate pair `B`, write
 
@@ -301,9 +301,9 @@ No Monte Carlo inference is used.
 
 ## 9. Source pins and execution boundary
 
-- Designated partner: `yspennstate/math-open-problems@63ba8e0f106c3bb405f05eb99778039ff47ed47b:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T101157Z-fleet04-B14-continuum-perspective-rough-transfer-r9/REPORT.md`.
-- Previous fleet03/B14 square-root-budget mechanism: `yspennstate/math-open-problems@29096949260b7ec2e9659c1379bd0a0882a37387:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T123514Z-fleet03-B14-QFORM-r35/REPORT.md`.
-- Previous fleet03/B14 codimension-one Riesz mechanism: `yspennstate/math-open-problems@0bf9b3267120208a782afde271ad0564ad52919c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T134259Z-fleet03-B14-QFORM-r36/REPORT.md`.
+- Designated partner: `private-source-repository@63ba8e0f106c3bb405f05eb99778039ff47ed47b:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T101157Z-fleet04-B14-continuum-perspective-rough-transfer-r9/REPORT.md`.
+- Previous fleet03/B14 square-root-budget mechanism: `private-source-repository@29096949260b7ec2e9659c1379bd0a0882a37387:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T123514Z-fleet03-B14-QFORM-r35/REPORT.md`.
+- Previous fleet03/B14 codimension-one Riesz mechanism: `private-source-repository@0bf9b3267120208a782afde271ad0564ad52919c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T134259Z-fleet03-B14-QFORM-r36/REPORT.md`.
 - Execution remains `WITHOUT_VERIFIED_BRAIN`: repository retrieval/write/readback is genuine, but authenticated native receiver-memory ingestion was not observed.
 - Model self-report: `GPT-5.6 Sol`.
 - Configured reasoning effort: `UNKNOWN`; provider reasoning-token and provider-thinking-time counters were not exposed.

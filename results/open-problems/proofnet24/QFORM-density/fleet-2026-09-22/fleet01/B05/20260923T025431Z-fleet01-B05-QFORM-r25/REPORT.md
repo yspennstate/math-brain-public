@@ -64,7 +64,7 @@ Applying (1.2) to one physical first-bank coordinate and the two normalized scal
 
 Canonical source:
 
-`yspennstate/math-open-problems@e06922bfa31bbd225cdce6ee6aea563254e62563`
+`private-source-repository@e06922bfa31bbd225cdce6ee6aea563254e62563`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T122133Z-b05-qform-5c41e5bb/REPORT.md`.
 
@@ -80,7 +80,7 @@ This is the assigned-partner result actually applied in Section 4 below.
 
 The latest completed assigned-partner report was also read in full:
 
-`yspennstate/math-open-problems@b6ded18bee0fe20353530653ce654308cac0631c`
+`private-source-repository@b6ded18bee0fe20353530653ce654308cac0631c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T225232Z-fleet02-B05-QFORM-37473ccc/REPORT.md`.
 
@@ -96,7 +96,7 @@ An independent translated square with coefficient `a` then gives an output-densi
 
 Canonical source:
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -119,7 +119,7 @@ It permits arbitrary affine terms and both pair diagonals may vanish. No post-ro
 
 Canonical source:
 
-`yspennstate/math-open-problems@a1e27348ad252fe1a4014c41d024368dff651cda`
+`private-source-repository@a1e27348ad252fe1a4014c41d024368dff651cda`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T023137Z-fleet01-B05-QFORM-r24/REPORT.md`.
 

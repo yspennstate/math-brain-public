@@ -12,7 +12,7 @@ The live target is the bounded-density conjecture for `Q=X^T A X` with independe
 
 The proof below respects all current route corrections. In particular, it does **not** use a law-uniform pointwise one-dimensional Fresnel estimate (which is false), does not diagonalize `A` and pretend that independence survives, and does not replace a spectral fiber by an unrestricted fiber supremum.
 
-I apply the exact other-account result fleet02/B06, canonical report `yspennstate/math-open-problems@6902eb62f21a7c833ca27dcca69f34d50e711a7d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`. That report constructs the rank-three Hadamard-delocalized family
+I apply the exact other-account result fleet02/B06, canonical report `private-source-repository@6902eb62f21a7c833ca27dcca69f34d50e711a7d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`. That report constructs the rank-three Hadamard-delocalized family
 
 `A=U diag(1,1,-1) U^T`
 

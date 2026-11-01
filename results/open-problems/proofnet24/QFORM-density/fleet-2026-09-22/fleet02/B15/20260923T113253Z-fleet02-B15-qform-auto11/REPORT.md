@@ -21,7 +21,7 @@ The remaining task is to rule out this simultaneous configuration from original-
 
 Required owner-pinned source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 - `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`;
 - `.../FOURIER_ROUTE_REPORT.md`;
@@ -36,7 +36,7 @@ hence `C_B<=pi sqrt(2)/kappa`, `kappa=min(lambda_1,lambda_2,mu)`.
 Latest compatible assigned partner used:
 
 `fleet03/B15`, source-pinned at
-`yspennstate/math-open-problems@602d508c11f3bb5848b65581a750b4497708bd5f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T103159Z-fleet03-B15-qform-auto11/REPORT.md`.
+`private-source-repository@602d508c11f3bb5848b65581a750b4497708bd5f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T103159Z-fleet03-B15-qform-auto11/REPORT.md`.
 
 Its abstract paid-submeasure lemma gives balanced Laplace half-posterior excision and the two-sided local packing bounds (3.4)--(3.7). I also use the immediately preceding completed fleet03/B15 Gaussian Gibbs theorem, source-pinned at the same repository commit:
 

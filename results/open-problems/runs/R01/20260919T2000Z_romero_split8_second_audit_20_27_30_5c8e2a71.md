@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R01 — independent second audit of R06 / Romero split reliability, complete `n=8` layer
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Run date: 2026-09-19.
 
 This run does **not** reopen Aldous–Fill 3.44, does not reopen TFIK22 owner-side mathematics, and does not perform a seventh empty successor scan. The permitted checking budget is used on a complete neighboring package which already has a P26 full-proof PASS and is waiting only for one genuinely distinct OTHER-task full audit: R06's `ROMERO-2025-SPLIT8` package.

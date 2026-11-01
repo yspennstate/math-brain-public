@@ -18,8 +18,8 @@ Fresh owner controls keep QFORM as the sole programme. The live correction set i
 
 The assigned partner is `fleet04/B10`. No completed current-QFORM handoff/report from that slot existed at the startup or pre-work source checks, so no result is attributed to it. Two completed compatible sources are used substantively:
 
-1. **fleet02/B10**, `math-open-problems@11c9ae19edfd07e3a0bd4053a910667c20e721ab`, proves the independent-leakage heavy-isotropic branch and gives the exact correction `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`: bounded pair density plus bounded conditional scalar density does not replace genuine independence.
-2. **fleet01/B19**, `math-open-problems@072cf685a12893b44d555f14e4e610bcf2154037`, gives the hard high-cardinality rank-three star-plus-square family and its aggregate hyperbolic-square closure, showing that reciprocal local-minor costs cannot be paid before aggregation.
+1. **fleet02/B10**, `private-source@11c9ae19edfd07e3a0bd4053a910667c20e721ab`, proves the independent-leakage heavy-isotropic branch and gives the exact correction `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`: bounded pair density plus bounded conditional scalar density does not replace genuine independence.
+2. **fleet01/B19**, `private-source@072cf685a12893b44d555f14e4e610bcf2154037`, gives the hard high-cardinality rank-three star-plus-square family and its aggregate hyperbolic-square closure, showing that reciprocal local-minor costs cannot be paid before aggregation.
 
 The present run attacks the first unpaid heavy-isotropic implication while preserving an original physical coordinate as the genuinely independent scalar.
 

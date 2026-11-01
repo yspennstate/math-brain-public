@@ -17,7 +17,7 @@ The target remains unrestricted: for every finite `n`, independent real ORIGINAL
 
 The immediate B02 predecessor is
 
-`yspennstate/math-open-problems@648ea277fc2cfcc8ce11a7093c61951a9e15baa8`,
+`private-source-repository@648ea277fc2cfcc8ce11a7093c61951a9e15baa8`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T043653Z-fleet03-B02-qform-r20/ADDENDUM_COMPOUND_HUB_COMPILER.md`.
 
@@ -29,7 +29,7 @@ The key live correction is fleet03/B06's target-valid witness showing that the t
 
 is false when same-side anchor couplings are present. Canonical source:
 
-`yspennstate/math-open-problems@15b6186ccb23f17a42749b71bfa05f3b80622f05`,
+`private-source-repository@15b6186ccb23f17a42749b71bfa05f3b80622f05`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T022131Z-fleet03-B06-qform-auto11/REPORT.md`.
 
@@ -39,7 +39,7 @@ This run resolves the algebraic gap exactly: the difference between those two Sc
 
 The newest required volume-stability theorem is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -230,7 +230,7 @@ The old cross-only `E2` branch has therefore been replaced by a correction-safe 
 
 The completed fractional rank-two volume theorem is fleet03/B01,
 
-`yspennstate/math-open-problems@e83f41d90267abdb753682dbe60bceecd8e6558a`,
+`private-source-repository@e83f41d90267abdb753682dbe60bceecd8e6558a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T223030Z-auto12/REPORT.md`.
 
@@ -295,7 +295,7 @@ The designated partner completed
 
 canonical source
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 

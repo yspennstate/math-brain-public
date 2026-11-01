@@ -22,8 +22,8 @@ This run proves a uniform arbitrary-law theorem for a genuinely dependent Hadama
 
 ## Sources and corrections actually used
 
-1. Previous fleet02/B11 theorem, canonical source `yspennstate/math-open-problems@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T135203Z-b11-qform-6080e0b3/REPORT.md`. I use its self-contained one-dimensional projection lemma: for independent cap-one variables and coefficients of squared sum one, the linear combination has density at most \(\sqrt e\).
-2. Assigned partner fleet03/B11, canonical source `yspennstate/math-open-problems@860d849b7f2e0198bf7c3531a71b14e59f03e430`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T121353Z-fleet03-B11-QFORM-r11/REPORT.md`. I use Corollary 6.1: for a physical independent three-variable block \(B\) with a nonzero majority-sign pivot \(a\) and indefinite Schur complement,
+1. Previous fleet02/B11 theorem, canonical source `private-source-repository@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T135203Z-b11-qform-6080e0b3/REPORT.md`. I use its self-contained one-dimensional projection lemma: for independent cap-one variables and coefficients of squared sum one, the linear combination has density at most \(\sqrt e\).
+2. Assigned partner fleet03/B11, canonical source `private-source-repository@860d849b7f2e0198bf7c3531a71b14e59f03e430`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T121353Z-fleet03-B11-QFORM-r11/REPORT.md`. I use Corollary 6.1: for a physical independent three-variable block \(B\) with a nonzero majority-sign pivot \(a\) and indefinite Schur complement,
 \[
 \|p_Q\|_\infty\le 8\,|a\det B|^{-1/4},
 \]

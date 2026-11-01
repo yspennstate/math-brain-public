@@ -16,15 +16,15 @@ The unrestricted theorem is not claimed. All probabilistic conditioning remains 
 
 Fresh `math-research-brain` main was resolved and the owner/control files, programme manifest, current research, claims, live correction inbox, memory protocol, and `fleet01/B07` assignment were read. The full conjecture and the global continuity conclusion remain OPEN.
 
-The immediately preceding B07 state is `yspennstate/math-open-problems@f03bb7505dc80819aae237e34f516c801e15c6d8`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T150507Z-r27/REPORT.md`.
+The immediately preceding B07 state is `private-source-repository@f03bb7505dc80819aae237e34f516c801e15c6d8`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T150507Z-r27/REPORT.md`.
 
-The completed designated-partner result actually applied here is fleet02/B07's star/E2 compiler, source-pinned by brain commit `24f75537c3e283f33de7c532409d3404b04daa67`, canonical mathematics `yspennstate/math-open-problems@5ff9d960bffec400a9d6db422401e4c4df98ce6d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T150720Z-fleet02-B07-qform/REPORT.md`. Its exact consequence used below is
+The completed designated-partner result actually applied here is fleet02/B07's star/E2 compiler, source-pinned by brain commit `24f75537c3e283f33de7c532409d3404b04daa67`, canonical mathematics `private-source-repository@5ff9d960bffec400a9d6db422401e4c4df98ce6d`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T150720Z-fleet02-B07-qform/REPORT.md`. Its exact consequence used below is
 
 `dist_F(K, rank<=2) <= (2 G_*/S^2)^(1/4)`                         (1.1)
 
 for the partner's physical block `M=[[s^T,r^T],[C,K]]`, where `S=||s||_2>0` and `G_*` is the complete star-supported anchored third-compound packet.
 
-For the optional high-tail payment after a new macroscopic edge is produced, I also use the already-completed fleet02/B07 theorem `QFORM-PAIRTAIL-CURVATURE-RECEIVER-v1`, canonical source `yspennstate/math-open-problems@3e36370502df5afeb00457b74d05cdbfd87168b0`, which gives
+For the optional high-tail payment after a new macroscopic edge is produced, I also use the already-completed fleet02/B07 theorem `QFORM-PAIRTAIL-CURVATURE-RECEIVER-v1`, canonical source `private-source-repository@3e36370502df5afeb00457b74d05cdbfd87168b0`, which gives
 
 `||p_Q||_inf <= 26.00795742 Delta^(-2/5) kappa^(-1/10) T_2(D)^(-1/20)` (1.2)
 

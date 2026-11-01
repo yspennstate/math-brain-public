@@ -14,7 +14,7 @@
 ## Exact predecessor evidence
 
 - Canonical predecessor final commit
-  `yspennstate/math-open-problems@3dd5f38ff0768c47b18a5be8b409723a8bb1a9ac`,
+  `private-source-repository@3dd5f38ff0768c47b18a5be8b409723a8bb1a9ac`,
   `reports/fei-2026-10-11/runs/B12/20261012T083727Z-fleet01-B12-block-reassociation/`.
 - Brain predecessor mirror final commit
   `yspennstate/math-research-brain@2a4f21e2a8df20c9faeeeffbd44576fd2810fac9`,
@@ -38,7 +38,7 @@
 
 - B01 compact contract blob `ac038a028831d59ad053dd56b2b527e2a71ffdee`.
 - B01/A003 exact KL-by-JS falsifier core commit
-  `yspennstate/math-open-problems@59d698866d319542ba55d8215846586b14279ad1`,
+  `private-source-repository@59d698866d319542ba55d8215846586b14279ad1`,
   path `reports/fei-2026-10-11/runs/B01/20261012T090930Z-fleet01-B01-kl-js-falsifier-a003/`.
 - Original proof `KL_JS_FALSIFIER.tex` blob
   `65ca9eda98e984065237aa7eab1c1f8acf42de2d` and report blob

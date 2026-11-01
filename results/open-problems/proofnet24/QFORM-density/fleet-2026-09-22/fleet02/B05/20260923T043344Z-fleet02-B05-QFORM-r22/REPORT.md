@@ -13,7 +13,7 @@ Fresh brain control at run start: `yspennstate/math-research-brain@242a09dd20507
 
 Required newest Claude/math package:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
@@ -25,7 +25,7 @@ without a continuity assumption. The same checkpoint writes the exact negative-s
 
 Immediately preceding B05 mathematics, recovered before the new proof:
 
-`yspennstate/math-open-problems@c661893c05a7fd40d7f1e9b0a0a81a6f08f242a6`
+`private-source-repository@c661893c05a7fd40d7f1e9b0a0a81a6f08f242a6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T035943Z-fleet02-B05-QFORM-r21/REPORT.md`.
 
@@ -41,7 +41,7 @@ with the exact-null `a=0` endpoint supplied by the source-pinned B16 theorem.
 
 Rank-two fractional receiver:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, Theorem 6.1. In the zero-affine case it gives
 
@@ -51,7 +51,7 @@ for every two-dimensional orthogonal projection `U^T Z` of a cap-one product law
 
 Designated partner fleet03/B05 r20:
 
-`yspennstate/math-open-problems@929322485c85c8a08367589be2b8e2e73839c65f`, theorem `QFORM-HS-LINEAR-SMALLBALL-v1` and `QFORM-THREE-ARM-FROBENIUS-COAREA-v1`. The checkpoint applies the first theorem to the two null-transverse coordinates. The three-arm theorem remains the complementary receiver for the non-coloop/same-side-curvature branch after the exact-coloop theorem below.
+`private-source-repository@929322485c85c8a08367589be2b8e2e73839c65f`, theorem `QFORM-HS-LINEAR-SMALLBALL-v1` and `QFORM-THREE-ARM-FROBENIUS-COAREA-v1`. The checkpoint applies the first theorem to the two null-transverse coordinates. The three-arm theorem remains the complementary receiver for the non-coloop/same-side-curvature branch after the exact-coloop theorem below.
 
 All live corrections remain in force: no post-rotation independence, no arbitrary-joint three-dimensional coarea bound, no X-ray-only two-sheet replacement, and no conditional-cap-to-independence substitution.
 

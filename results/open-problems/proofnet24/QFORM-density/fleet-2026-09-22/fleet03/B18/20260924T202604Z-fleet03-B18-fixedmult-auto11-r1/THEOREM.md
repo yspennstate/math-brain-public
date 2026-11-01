@@ -31,5 +31,5 @@ Combine with (1),(3) to obtain the claimed bound.
 No random-variable rotation is used. Same-side curvature and all affine terms remain in R. The fair cut preserves original-coordinate product provenance, and the scalar-square step is a conditional domination statement, not an independence assertion.
 
 Source for the half-potential compiler:
-yspennstate/math-open-problems@94fcf7454085070f4a81b46d20cda28220ad0e1c
+private-source-repository@94fcf7454085070f4a81b46d20cda28220ad0e1c
 proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet03/B18/20260924T142238Z-fleet03-B18-QFORM-fixed-multiplicity-audit-r1/LPP_SOURCE_TRANSFER.md

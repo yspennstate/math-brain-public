@@ -18,7 +18,7 @@ The fresh control observed owner revision `2026-09-22.15` and QFORM as the sole 
 
 This run consumes two completed results at actual inequalities:
 
-1. **Assigned partner fleet02/B06** — `QFORM-NEAR-COLOOP-RIDGE-AREA-BUDGET-v1`, canonical mathematics `yspennstate/math-open-problems@baf159fa655efe4d683c6d1e33a233d088f0db64`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T193018Z-76cbee5f2059/REPORT.md`. For
+1. **Assigned partner fleet02/B06** — `QFORM-NEAR-COLOOP-RIDGE-AREA-BUDGET-v1`, canonical mathematics `private-source-repository@baf159fa655efe4d683c6d1e33a233d088f0db64`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T193018Z-76cbee5f2059/REPORT.md`. For
 
    `K=H(H^T H+g^2 I)^(-1)H^T`,
 
@@ -26,7 +26,7 @@ This run consumes two completed results at actual inequalities:
 
    `sum_(k!=j) det K[{j,k}] = K_jj tr K-(K^2)_jj >= K_jj(tr K-1)`.      (1.1)
 
-2. **Latest complete fleet03/B06 curved-fiber state** — `QFORM-ONE-ROW-E2-HYBRID-L3-v1`, canonical mathematics `yspennstate/math-open-problems@897d37adecb8f18c46b456569884b2ee22eeb3ee`, correction bundle `fc92e85ebc8099f25a9770d81348d74d5d2aa4d5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T201841Z-fleet03-B06-qform-r18/REPORT.md`. In the live B08 near-coloop state at `g=gamma/16`, after normalizing
+2. **Latest complete fleet03/B06 curved-fiber state** — `QFORM-ONE-ROW-E2-HYBRID-L3-v1`, canonical mathematics `private-source-repository@897d37adecb8f18c46b456569884b2ee22eeb3ee`, correction bundle `fc92e85ebc8099f25a9770d81348d74d5d2aa4d5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T201841Z-fleet03-B06-qform-r18/REPORT.md`. In the live B08 near-coloop state at `g=gamma/16`, after normalizing
 
    `Z=H(g^2 I+H^T H)^(-1/2)`,
 

@@ -1,6 +1,6 @@
 # fleet02/B20 P5 issue ledger
 
-Exact source: math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c; short.tex c4f2a997cf336ee974e15409b5bccdd8cca039d8; short.pdf 8be3aae36ecad7a9dc9b7c95978aad09499f32d0; PDF SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
+Exact source: private-source@ec211ba2d77a4a9850168c6af1574ea651feaa7c; short.tex c4f2a997cf336ee974e15409b5bccdd8cca039d8; short.pdf 8be3aae36ecad7a9dc9b7c95978aad09499f32d0; PDF SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
 
 - C04 L41/p1 FALSE exposition: abstract random-sign sentence omits no-pivot; A=I_5 is a counterexample to the unqualified sentence.
 - C07 L62/p1 UNCHECKED metadata: current-literature status only, not a proof premise.

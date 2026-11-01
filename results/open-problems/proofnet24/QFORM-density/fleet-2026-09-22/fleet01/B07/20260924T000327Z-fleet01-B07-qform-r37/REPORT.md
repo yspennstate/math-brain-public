@@ -16,7 +16,7 @@ The unrestricted conjecture is not proved or disproved here. All random variable
 
 The immediate B07 predecessor is
 
-`yspennstate/math-open-problems@58a9d1f57cbccfe181890c0dbf2e1c3ea63eb482`
+`private-source-repository@58a9d1f57cbccfe181890c0dbf2e1c3ea63eb482`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/20260923T230142Z-fleet01-B07-qform-r36/REPORT.md`.
 
@@ -32,7 +32,7 @@ The role banks in the latter two cases are pairwise disjoint original-coordinate
 
 The newest completed fixed-pair Fourier input used here is fleet03/B01,
 
-`yspennstate/math-open-problems@5695c695b900f9bb65aa32ede474398b6404de62`
+`private-source-repository@5695c695b900f9bb65aa32ede474398b6404de62`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T203127Z-auto11/REPORT.md`,
 
@@ -42,7 +42,7 @@ theorem `QFORM-SCALARPIVOT-W2-QUARTERRIESZ-v1`. For a physical pair `H={x,y}`, i
 
 The newest fixed-indefinite-pair aggregate input is fleet01/B04,
 
-`yspennstate/math-open-problems@da10ec9c10ed601095b763a3df3128ab7e400ac5`
+`private-source-repository@da10ec9c10ed601095b763a3df3128ab7e400ac5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T235358Z-fleet01-B04-QFORM-auto11-r23/REPORT.md`,
 
@@ -54,7 +54,7 @@ Both (1.3) and (1.4) retain arbitrary same-bank curvature and arbitrary addition
 
 The latest completed designated partner fleet02/B07 remains
 
-`yspennstate/math-open-problems@b2d2cccb46aa3fc83162b2cc4fba61a5e040ebd2`
+`private-source-repository@b2d2cccb46aa3fc83162b2cc4fba61a5e040ebd2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T211034Z-fleet02-B07-qform-mixedvolume/REPORT.md`,
 

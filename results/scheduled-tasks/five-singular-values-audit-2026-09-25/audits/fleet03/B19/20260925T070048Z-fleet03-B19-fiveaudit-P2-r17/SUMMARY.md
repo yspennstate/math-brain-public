@@ -1,6 +1,6 @@
 # B19 P2 r17 summary
 
-Pinned exact fourteen-page source at math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c; short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8.
+Pinned exact fourteen-page source at private-source@ec211ba2d77a4a9850168c6af1574ea651feaa7c; short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8.
 
 Direct P2 coverage this run: L286-L345 (PDF p.7 by package mapping; fresh visual PDF render unchecked). Combined P2 direct coverage: L286-L646. Next target: L243-L285.
 

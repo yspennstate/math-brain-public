@@ -96,7 +96,7 @@ This converts a combinatorial property of the exact rank-three frame into an act
 
 ### 2.1 Real inequality from the required pinned source
 
-The required pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, proves Theorem D' for a cross block with 3-volume `Z`: if its I-side volume-sampling marginals are at most `h<3/4`, then
+The required pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, proves Theorem D' for a cross block with 3-volume `Z`: if its I-side volume-sampling marginals are at most `h<3/4`, then
 
 `||p_Q||_infinity <= 6 sqrt(e) (2h)^(-1/2) (3-4h)^(-1) Z^(-1/6)`.
 
@@ -256,7 +256,7 @@ The variables `X_0,S_m,T_m` are genuinely independent because their original-coo
 
 `||p_{S_m}||_infinity, ||p_{T_m}||_infinity <=sqrt(2)`.                   (5.6)
 
-Now apply the newest completed designated partner fleet03/B11 r55 theorem `QFORM-INDEFINITE-PAIR-L3-v1` (`math-open-problems@bc05973cb71eb6707de7342cafeef36af6a99230`) to the indefinite pair `S_m^2-T_m^2`, whose determinant currency is one. It gives
+Now apply the newest completed designated partner fleet03/B11 r55 theorem `QFORM-INDEFINITE-PAIR-L3-v1` (`private-source@bc05973cb71eb6707de7342cafeef36af6a99230`) to the indefinite pair `S_m^2-T_m^2`, whose determinant currency is one. It gives
 
 `||p_{S_m^2-T_m^2}||_3
  <=22 (sqrt(2)*sqrt(2))^(2/3)
@@ -322,10 +322,10 @@ Required pinned source consumed at exact commit `e5f71d79eff325201dd0274053d2026
 
 Newest completed designated partner consumed:
 
-- fleet03/B11 r55, `QFORM-INDEFINITE-PAIR-L3-v1`, `math-open-problems@bc05973cb71eb6707de7342cafeef36af6a99230`.
+- fleet03/B11 r55, `QFORM-INDEFINITE-PAIR-L3-v1`, `private-source@bc05973cb71eb6707de7342cafeef36af6a99230`.
 
 Previous B11 dependency actually used:
 
-- `QFORM-INDEFINITE-PHYSICAL-TRIPLE-DET49-v1`, `math-open-problems@e65ea69496521e9d4f4469e8cc8366381d03473f`.
+- `QFORM-INDEFINITE-PHYSICAL-TRIPLE-DET49-v1`, `private-source@e65ea69496521e9d4f4469e8cc8366381d03473f`.
 
 Full unrestricted QFORM remains OPEN / NOT PROVED / NOT DISPROVED. Full-target continuity remains separate and OPEN.

@@ -28,7 +28,7 @@ The second statement directly applies the completed fleet04/B14 extreme-product/
 
 The designated `fleet04/B17` had no completed QFORM artifact discoverable at the coherent prepublication check. I therefore did not fabricate one. I used the compatible completed fleet04/B14 result instead:
 
-- repository `yspennstate/math-open-problems`;
+- repository `private-source-repository`;
 - commit `8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`.
 

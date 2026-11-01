@@ -5,7 +5,7 @@ Run: `20260923T014801Z-fleet02-B10-QFORM-auto11`
 Status: supporting calculation; full QFORM remains OPEN.
 Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-The newest ruled-side theorem at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` already gives, for an exact-rank-three indefinite form with spectral scale at least one,
+The newest ruled-side theorem at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` already gives, for an exact-rank-three indefinite form with spectral scale at least one,
 
 `p_Q(t) <= pi*sqrt(2)`
 

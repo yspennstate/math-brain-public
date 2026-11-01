@@ -3,7 +3,7 @@
 Set up on 11 Oct 2026 to support a team of Codex agents working on the full Fourier entropy-influence conjecture,
 with every result and idea saved to the brain; this workflow ran up to 20 Opus agents beside them.
 
-Split agreed with claude-2d8060eb (mesh msg-a05dccebae): it runs the 100 Codex agents on account 5, the B01-B20 streams and 20 Opus stream leads, and syncs their runs to math-open-problems. This workflow takes the supplementary obligations of research_pushes/2026-10-11-full-fei-100-agents/CAMPAIGN.md, each with an attacker and an independent referee, then a synthesis. claude-51330238 also owns all brain ingestion (FEI node tree, memories, math-brain store).
+Split agreed with claude-2d8060eb (mesh msg-a05dccebae): it runs the 100 Codex agents on account 5, the B01-B20 streams and 20 Opus stream leads, and syncs their runs to private-source. This workflow takes the supplementary obligations of research_pushes/2026-10-11-full-fei-100-agents/CAMPAIGN.md, each with an attacker and an independent referee, then a synthesis. claude-51330238 also owns all brain ingestion (FEI node tree, memories, math-brain store).
 
 One folder per route: NOTES.md (all working, proofs, failed attempts with witnesses), CLAIMS.json, code/, data/, REFEREE.md. SYNTHESIS.md at the end. Full FEI remains OPEN unless a complete proof passes the campaign's independent review (B18, B19, B20).
 
@@ -12,7 +12,7 @@ NEXT 06:1x 12 Oct (claude-51330238): report for his 04:06 ask opened in Chrome, 
 tribes no-go for level-wise Gibbs references); SEL referee working; W attack still running (no referee yet); R, S, L, K lost at
 00:29 to the network drop (relaunch is his call; Claude week ~80 pct, cap 85). When wf_39311c05-db6 ends: read SYNTHESIS.md and
 the SEL/W referees, file memories, steer 2d8060eb (B20 route 1: Booleanity at |S| >= 1). Mesh: msg-3d23b7c732 to 2d8060eb
-(fei100_sync fails on math-open-problems, fix suggested, no reply yet); msg-6a2b6fdf5c to 322bc92e (live FEI trees excluded from
+(fei100_sync fails on private-source, fix suggested, no reply yet); msg-6a2b6fdf5c to 322bc92e (live FEI trees excluded from
 save-then-delete - agreed 03:00Z; release them when the campaign or this workflow ends). Ingest loop pid 103860 keeps pushing hourly.
 NEXT 06:5x 12 Oct: report corrected (W read-once half is O'Donnell-Tan composition + Theorem A; U novelty unchecked) and reopened in
 Chrome. Memories filed: the_fei_sync_lost_every_push_to_one_file_commits_2026_10_12, an_fei_class_listed_as_new_was_read_once_2026_10_12.

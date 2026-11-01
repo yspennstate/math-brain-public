@@ -2,7 +2,7 @@
 
 Run: `20260924T150906Z-fleet02-B09-fixedmult-r13`.
 
-Pinned baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
+Pinned baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
 
 Status: **complete replacement proof independently reconstructed in this run; threshold 9; multiplicity 8 and unrestricted multiplicity 3 remain open.** This is not a release certificate.
 

@@ -2,7 +2,7 @@
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Run: `20260924T121918Z-fleet03-B08-fixedmult-r56`  
-Baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
+Baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
 Status: **proved supporting structural theorem; no `17 -> 16` theorem claimed**.
 
 The fixed-multiplicity manuscript was reread end to end in this run. The 17-eigenvalue proof remains mathematically sound under this review. The new result below isolates, quantitatively, the only chamber left by the manuscript's interpolation mechanism if one tries to replace `s_17(A)>=1` by `s_16(A)>=1`.
@@ -378,7 +378,7 @@ Consequently every unpaid `s_16` terminal survivor above must, in addition to (1
 
 This adds a concrete physical localization obstruction to the algebraically saturated `r=4` chamber.
 
-Partner source: `yspennstate/math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T212412Z-fleet04-B08-QFORM-r2/REPORT.md`.
+Partner source: `private-source-repository@a5e66e2944c89857a41d5e18c283d53a4307be76`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T212412Z-fleet04-B08-QFORM-r2/REPORT.md`.
 
 ## Exact remaining implication for `17 -> 16`
 

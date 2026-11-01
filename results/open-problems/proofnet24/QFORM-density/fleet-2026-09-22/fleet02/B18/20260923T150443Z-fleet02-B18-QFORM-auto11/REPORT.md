@@ -20,7 +20,7 @@ The incoming fleet02/B18 r29 state is the exact-rank-three null-hub Schur packet
 
 From the pinned interactive source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `RESULTS.md` / `FOURIER_ROUTE_REPORT.md`, the completed scalar square peel says: if an ORIGINAL physical scalar pivot has coefficient `a!=0`, completing that square gives
 
@@ -36,7 +36,7 @@ The second completed input is the orientation-free theorem
 
 `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`,
 
-canonical `math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, which states that for a rank-two quadratic form in independent cap-one ORIGINAL coordinates, with arbitrary affine term,
+canonical `private-source@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, which states that for a rank-two quadratic form in independent cap-one ORIGINAL coordinates, with arbitrary affine term,
 
 `H_(1/2)(R) <=128 |pdet_2 R|^(-1/4)`.                           (2.2)
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R20 successor admission — F0111 tangent-majorant calculus and multiscale obstruction
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R20, CLOSABLE OUTSIDE.
 
 ## 1. Continuity first: I0100 stays retired and frozen
@@ -459,7 +459,7 @@ The historical P26 `You cannot modify this task` response remains an authorizati
 ledger_delta:
   worker: R20
   allocation: CLOSABLE_OUTSIDE
-  repository: yspennstate/math-open-problems
+  repository: private-source-repository
   branch: master
   continuity:
     I0100:

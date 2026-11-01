@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # R06 — mandatory Section-I thinking run: the missing marked-edge reliability monotonicity
 
 Run date: 2026-09-19.
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Lane: **CLOSABLE OUTSIDE**.
 Active canonical successor claim: `operations/claims/ROMERO-2025-SPLIT8.md`.
 

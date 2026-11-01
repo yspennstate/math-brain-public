@@ -14,7 +14,7 @@ This run respects the current corrections: no law-uniform pointwise Fresnel deca
 
 The named partner result actually applied is the latest completed `fleet03/B03` theorem:
 
-- `yspennstate/math-open-problems@d62131527f6bcb996c27a9fbf04fc1059797a9aa`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T125813Z-fleet03-B03-QFORM-r12/REPORT.md`.
+- `private-source-repository@d62131527f6bcb996c27a9fbf04fc1059797a9aa`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T125813Z-fleet03-B03-QFORM-r12/REPORT.md`.
 
 For an exact-rank-three frame `A=U Lambda U^T`, it defines Pluecker weights `w_I=det(U_I)^2`, the disjoint mass `R(U)=sum_{I cap J=empty}w_Iw_J`, proves
 
@@ -24,7 +24,7 @@ and converts a positive random-cut resource into an original-coordinate rank-thr
 
 A second source-pinned theorem used below is `fleet02/B15`:
 
-- `yspennstate/math-open-problems@60e7f51716e67553ce759519f9801ff3674dcce9`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T120155Z-fleet02-B15-qform-r1/REPORT.md`.
+- `private-source-repository@60e7f51716e67553ce759519f9801ff3674dcce9`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T120155Z-fleet02-B15-qform-r1/REPORT.md`.
 
 For independent density-one variables and any invertible symmetric physical `3 x 3` block `B`, including arbitrary affine terms from outside conditioning,
 

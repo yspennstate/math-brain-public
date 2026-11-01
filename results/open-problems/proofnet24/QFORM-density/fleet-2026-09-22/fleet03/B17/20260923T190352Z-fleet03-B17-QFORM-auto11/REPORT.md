@@ -101,7 +101,7 @@ Thus **even exact irrational null-cone alignment of the remote cell cannot creat
 
 The designated partner `fleet04/B17` proved the fragmented-main-cell theorem at
 
-`yspennstate/math-open-problems@8c57f6e8fd6fe7ea16e6acbe7f199be22f1daf58`,
+`private-source-repository@8c57f6e8fd6fe7ea16e6acbe7f199be22f1daf58`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260923T171805Z-fleet04-B17-QFORM-r5/REPORT.md`.
 
@@ -114,7 +114,7 @@ which gives the lower inequality in (1.1).  The new work below supplies the matc
 
 The exact value `p_*` and its certified interval evaluation come from
 
-`yspennstate/math-open-problems@e83d0cc194d791acf31d6c86245204887cfd8171`,
+`private-source-repository@e83d0cc194d791acf31d6c86245204887cfd8171`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260923T144233Z-fleet01-B17-QFORM-auto11/REPORT.md`.
 

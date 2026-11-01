@@ -15,7 +15,7 @@ Fresh control and the live correction corpus were read before this report. In pa
 
 The designated partner result actually consumed is the newest completed `fleet02/B10` report
 
-`yspennstate/math-open-problems@fe4042fe31234cbe45ed47a6b1546fa70f687b68`
+`private-source-repository@fe4042fe31234cbe45ed47a6b1546fa70f687b68`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260924T064844Z-fleet02-B10-QFORM-r11/REPORT.md`.
 

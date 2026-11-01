@@ -14,7 +14,7 @@ The unrestricted conjecture remains **OPEN / NOT PROVED / NOT DISPROVED**. Globa
 
 The live TRIANGLE packet is the completed fleet03/B19 result at
 
-`yspennstate/math-open-problems@63e569420a83b6a9f073c2158e3b5f46214535d7`,
+`private-source-repository@63e569420a83b6a9f073c2158e3b5f46214535d7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T093525Z-fleet03-B19-QFORM-r28/REPORT.md`.
 
@@ -45,7 +45,7 @@ Equivalently its pair-to-source cross singular product is
 The completed uniform receiver used below is fleet01/B19
 `QFORM-RANK2-CROSS-TRANSVERSE-UNIFORM-NEARNULL-v1`, canonical
 
-`yspennstate/math-open-problems@d72be34399b8d0325c715973e7af3a37df7ce227`,
+`private-source-repository@d72be34399b8d0325c715973e7af3a37df7ce227`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260923T060843Z-fleet01-B19-QFORM-auto11/REPORT.md`.
 
@@ -235,7 +235,7 @@ The exact endpoint `det(I-K)=0` leaves a rank-at-most-one receiver after promoti
 
 The completed designated-partner theorem `QFORM-NULL-COLOOP-ADAPTIVE-HY-STABILITY-v1` is source-pinned at
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 

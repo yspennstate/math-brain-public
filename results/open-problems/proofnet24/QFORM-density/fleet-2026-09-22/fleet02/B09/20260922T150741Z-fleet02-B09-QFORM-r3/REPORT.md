@@ -23,7 +23,7 @@ This run makes that step concrete: it replaces the physical scalar pivot by a **
 
 Latest completed partner report observed before publication:
 
-- repository `yspennstate/math-open-problems`;
+- repository `private-source-repository`;
 - commit `fb2f074c2fe11dc9343397ae0a06f20bcc971f65`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/fleet03-B09-20260922T144807Z-qform11/REPORT.md`.
 

@@ -17,7 +17,7 @@ The current owner control remains revision `2026-09-22.15`, full QFORM only. The
 
 The latest completed designated partner actually consumed is fleet03/B07 r42:
 
-`yspennstate/math-open-problems@e91150711e87a3e9040e3b93333e55ab574d7c01`
+`private-source-repository@e91150711e87a3e9040e3b93333e55ab574d7c01`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260924T004021Z-fleet03-B07-qform-r42/REPORT.md`.
 
@@ -40,7 +40,7 @@ by one literal physical `Z3` crossing. If that exit fails, there is a surviving 
 
 The compatible previous fleet02/B07 router, source
 
-`yspennstate/math-open-problems@81d6956476fa400f61d266effb4123a42fe3185c`,
+`private-source-repository@81d6956476fa400f61d266effb4123a42fe3185c`,
 
 also starts from the genuine one-overlap packet
 
@@ -238,7 +238,7 @@ It sharpens the previous equal-singular-value diffuse-core stress: here the comm
 
 The required pinned source was reread at exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`,
 `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.

@@ -1,7 +1,7 @@
 # ProofNet24 immutable health/index fragment — P26
 
 Observed run label: 2026-09-16_00-57-32
-Repository / branch: `yspennstate/math-open-problems` / `master`
+Repository / branch: `private-source-repository` / `master`
 No email/Gmail source or action was used.
 
 ## Canonical P26 report created this run

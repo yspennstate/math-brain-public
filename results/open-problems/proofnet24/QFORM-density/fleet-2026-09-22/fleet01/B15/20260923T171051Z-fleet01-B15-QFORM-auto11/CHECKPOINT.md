@@ -40,7 +40,7 @@ Hence bounded density is merely boundedness of the dyadic desmoothing ladder; co
 
 ## 3. Soft-bank regularity budget from completed fleet02/B15
 
-Use the completed fleet02/B15 ruled-majority theorem (canonical source `math-open-problems@46c33d97490f78f8c3de0435f63d573958d81180`): for each invertible indefinite original-coordinate physical triple `S`, the majority output submeasure satisfies
+Use the completed fleet02/B15 ruled-majority theorem (canonical source `private-source@46c33d97490f78f8c3de0435f63d573958d81180`): for each invertible indefinite original-coordinate physical triple `S`, the majority output submeasure satisfies
 
 `mu_S^+(E)<=C_S |E|`, `C_S<=pi sqrt(2)/kappa_S`, `kappa_S=sigma_min(A_SS)`.
 

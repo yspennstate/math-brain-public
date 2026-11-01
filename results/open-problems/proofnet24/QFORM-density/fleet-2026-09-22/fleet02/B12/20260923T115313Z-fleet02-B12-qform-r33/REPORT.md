@@ -24,7 +24,7 @@ What changes in this run is the tail parameter. The preceding fleet02/B12 theore
 
 Required pinned newest-Claude source:
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 - `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 - `FOURIER_ROUTE_REPORT.md`
 - `COUNTEREXAMPLE_SEARCH.md`.
@@ -40,7 +40,7 @@ with no row-marginal condition. Same-bank quadratic blocks, all outside coupling
 Latest designated partner actually used:
 
 - fleet03/B12 r32,
-- `yspennstate/math-open-problems@eb3111d97a233b15ea18088a2cf97bc17d9d4c25`,
+- `private-source-repository@eb3111d97a233b15ea18088a2cf97bc17d9d4c25`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T114533Z-qform-eigenvalue-r32/REPORT.md`.
 
 Its proved singular-reserve inequality for real symmetric matrices is

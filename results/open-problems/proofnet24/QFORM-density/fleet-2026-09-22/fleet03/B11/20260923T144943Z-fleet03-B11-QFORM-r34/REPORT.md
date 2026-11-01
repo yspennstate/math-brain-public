@@ -16,7 +16,7 @@ Execution status: `WITHOUT_VERIFIED_BRAIN`.
 
 The analytic compiler used below is the completed fleet03/B09 theorem
 `QFORM-GROUPED-CROSS-RANK-r-SMOOTHING-v1`, canonical source
-`yspennstate/math-open-problems`, path
+`private-source-repository`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T104947Z-fleet03-B09-QFORM-r30/REPORT.md`.
 For a disjoint original-coordinate cut with physical cross block `B` of rank `r>2`,
 
@@ -26,7 +26,7 @@ where `Delta_r(B)` is the product of the nonzero singular values. Same-side quad
 
 The designated partner fleet04/B11 result actually applied below is
 `QFORM-EXTENSION-MASS-SECOND-MOMENT-v1`, canonical source
-`yspennstate/math-open-problems@30555c1ca97752e10f5089ccd95f8514c704be5a`, path
+`private-source-repository@30555c1ca97752e10f5089ccd95f8514c704be5a`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T131400Z-fleet04-B11-extension-mass-r6/REPORT.md`.
 
 ## 2. Setup

@@ -1,6 +1,6 @@
 # Addendum: original floating interval exports are not certificates
 
-30 September 2026. This addendum preserves and qualifies the original [independent audit at commit 933891c](https://github.com/yspennstate/math-open-problems/blob/933891c27be3104c3a6f6e310f2db388d193a123/research_pushes/2026-09-30-fei-convolution-product-audit-0321z/AUDIT.md). No original audit, input, script, or result file has been overwritten by this addendum.
+30 September 2026. This addendum preserves and qualifies the original [independent audit at commit 933891c](private-source-repository). No original audit, input, script, or result file has been overwritten by this addendum.
 
 ## Corrected verdict
 
@@ -41,7 +41,7 @@ The author was notified of the original defect and this second parsing issue. Th
 
 ## Final repaired artifact verdict: PASS
 
-The final repair is [commit 67c4459ae0e8ae85a228c7a5c2629f003910139b](https://github.com/yspennstate/math-open-problems/commit/67c4459ae0e8ae85a228c7a5c2629f003910139b). Both corrected `encl()` implementations step toward the appropriate infinity until **both** `Fraction.from_float(endpoint)` and `Fraction(str(endpoint))` contain the source rational enclosure. The routines then assert both containment conditions. Their regression tests include values exactly represented as binary floats and exact rational midpoints between a float and its emitted decimal spelling.
+The final repair is [commit 67c4459ae0e8ae85a228c7a5c2629f003910139b](private-source-repository). Both corrected `encl()` implementations step toward the appropriate infinity until **both** `Fraction.from_float(endpoint)` and `Fraction(str(endpoint))` contain the source rational enclosure. The routines then assert both containment conditions. Their regression tests include values exactly represented as binary floats and exact rational midpoints between a float and its emitted decimal spelling.
 
 Both complete corrected verifiers were independently replayed in isolated directories while intercepting every endpoint-export call. The audit checked the exact binary64 endpoint values and, separately, parsed the actual `json.dumps()` output as exact fractions. All 15 convolution and 31 product calls passed both contracts. Generated result bytes exactly matched the author's corrected outputs. The four corrected interval fields in the product's `witness.json` also passed independent 64-term rational bounds under both interpretations. In particular its corrected gap pair is `[0.16308520020956166, 0.16308520020956171]`.
 

@@ -18,7 +18,7 @@ All coordinate sets are literal ORIGINAL-coordinate sets. No random coordinate r
 
 Immediate same-slot source:
 
-`yspennstate/math-open-problems@bcb36a7573a7e9f23f1ea78792e0b72bc8bb0d9c`
+`private-source-repository@bcb36a7573a7e9f23f1ea78792e0b72bc8bb0d9c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T060028Z-fleet03-B19-QFORM-r51/REPORT.md`.
 
@@ -50,7 +50,7 @@ The earlier r49 common-plane compiler, on its aligned-self branch, supplies an e
 
 The analytic input used here is Theorem H from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
@@ -225,7 +225,7 @@ with continuous density, arbitrary outside blocks retained. This is an available
 
 The completed fleet04/B19 null-coloop theorem is
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 
@@ -245,7 +245,7 @@ No near-null interpolation and no arbitrary-joint extension is inferred.
 
 The designated partner's newer moving-ridge barrier is
 
-`yspennstate/math-open-problems@ac55b70485c4108c7073a75365127e00be3bc097`.
+`private-source-repository@ac55b70485c4108c7073a75365127e00be3bc097`.
 
 It proves that replacing original-product provenance by only a bounded joint-density cap is invalid. At `epsilon=2^-20` its fixed three-large-eigenvalue surrogate satisfies
 

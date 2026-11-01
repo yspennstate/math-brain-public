@@ -5,7 +5,7 @@ The LaTeX chapter makes no claim of literature novelty.
 
 ## Sources
 
-- Repository yspennstate/math-open-problems, master:
+- Repository private-source-repository, master:
   proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/semidefinite/REPORT.md.
   Retrieved blob SHA efbae86d6eee22ae94c3d3f7b9792e77100d562d.
   Source for the arbitrary-rank semidefinite theorem, Gram partition,

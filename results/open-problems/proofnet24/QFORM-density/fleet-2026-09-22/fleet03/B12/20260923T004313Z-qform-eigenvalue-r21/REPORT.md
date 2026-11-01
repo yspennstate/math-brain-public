@@ -89,11 +89,11 @@ This independently validates the `spectral-count fact` used in the newest N3/Gau
 
 Source checked:
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`
 
 with the newest Claude geometric source at
 
-`yspennstate/math-open-problems@2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/GEOMETRIC_ROUTE_REPORT.md`.
+`private-source-repository@2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/GEOMETRIC_ROUTE_REPORT.md`.
 
 The following checks pass.
 
@@ -188,7 +188,7 @@ where U contains the entire quadratic/linear dependence on X_I, including all X_
 
 For each fixed original-coordinate value Z=z, U is a three-dimensional quadratic-plus-affine polynomial in three independent cap-one variables with quadratic matrix B. The projected-gradient n=3 theorem in
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371:proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`
 
 gives
 
@@ -198,7 +198,7 @@ uniformly in z and in the induced affine coefficients.
 
 Now use the completed partner theorem
 
-`yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260922T192552Z-fleet04-B12-mixed-shear-r1/REPORT.md`.
+`private-source-repository@9ce47e2a0f2c8434d901df13a218450c2189d80e:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260922T192552Z-fleet04-B12-mixed-shear-r1/REPORT.md`.
 
 If h(u,z) is the joint density of (U,Z), then (6) gives its mixed norm
 

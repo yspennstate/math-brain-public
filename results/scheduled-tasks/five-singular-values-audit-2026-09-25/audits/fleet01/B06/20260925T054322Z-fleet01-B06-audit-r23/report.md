@@ -1,7 +1,7 @@
 # fleet01/B06 r23 audit report
 
 Objective: QFORM-FIVE-SINGULAR-VALUES-LINE-AUDIT-20260925.
-Exact source: yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c; short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8; short.pdf SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
+Exact source: private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c; short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8; short.pdf SHA-256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
 Model: GPT-5.6 Sol. Effort telemetry: UNKNOWN. Native-brain status: WITHOUT_VERIFIED_BRAIN.
 
 Fresh controls: AGENTS 4646f2cdea765ce003f25c2d00fed0c02292f873; CURRENT_OBJECTIVE b167cb098b86d7f000e3fdd58efd17bcb2a58715; scheduled_tasks/README 78641886865a96b85edacf2f2d342581bd2464c6.

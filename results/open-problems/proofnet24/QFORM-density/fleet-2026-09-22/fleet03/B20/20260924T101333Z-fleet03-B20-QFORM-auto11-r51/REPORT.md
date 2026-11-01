@@ -19,7 +19,7 @@ The full target is: for every `n`, independent real `X_i` with probability densi
 
 The freshest same-route structural endpoint read before this run is fleet01/B19 r56,
 
-`yspennstate/math-open-problems@e5211d16c0bc2b4bce3cb6fef161d984b20d3029`,
+`private-source-repository@e5211d16c0bc2b4bce3cb6fef161d984b20d3029`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260924T095039Z-fleet01-B19-QFORM-auto11-r56/REPORT.md`.
 
@@ -31,7 +31,7 @@ The analytic payment used here is the completed one-scale ridge theorem
 
 source:
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
@@ -57,7 +57,7 @@ This is a deterministic coefficient perturbation estimate, not deletion of `X^T 
 
 The designated partner input actually applied below is fleet04/B20 r13,
 
-`yspennstate/math-open-problems@d2560a041fd91c05d7fddf50f5b5414ecd2680a2`,
+`private-source-repository@d2560a041fd91c05d7fddf50f5b5414ecd2680a2`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260924T051424Z-fleet04-B20-QFORM-r13/REPORT.md`,
 

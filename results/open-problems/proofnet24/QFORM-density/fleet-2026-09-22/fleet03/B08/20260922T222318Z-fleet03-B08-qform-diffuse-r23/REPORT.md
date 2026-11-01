@@ -19,7 +19,7 @@ This run changes mechanism from the preceding grouped-core / near-rank-two deter
 The designated current-QFORM partner path `fleet04/B08` still has no completed handoff or report, so no partner theorem is fabricated. The compatible completed fleet04 theorem actually applied below is:
 
 * fleet04/B18, `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`,  
-  `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,  
+  `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,  
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
 Its dependence-safe outer-square kernel is used in Section 3 at an actual inequality.
@@ -27,7 +27,7 @@ Its dependence-safe outer-square kernel is used in Section 3 at an actual inequa
 Two completed same-programme inputs are also used literally:
 
 1. fleet03/B06, `QFORM-EXACT-RANK2-CROSSBANK-L3-v1`,  
-   `yspennstate/math-open-problems@1287456c9a709f8c3f117c23faa46e75f4560d01`,  
+   `private-source-repository@1287456c9a709f8c3f117c23faa46e75f4560d01`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T194649Z-fleet03-B06-qform-r17/REPORT.md`.  
    If an original-coordinate cross bank has exact rank two and one active bank consists of exactly two physical coordinates, with two-singular-value product `Pi_2`, then its residual density satisfies
    
@@ -42,13 +42,13 @@ Two completed same-programme inputs are also used literally:
    `C_*=(2^(4/3)+1) sqrt(3) e^(1/4)=7.8281191852... .`         (1.3)
 
 2. fleet03/B06 r20, `QFORM-WEIGHTED-SCHUR-FLAG-RANK1-ENDPOINT-v1`,  
-   `yspennstate/math-open-problems@` [the canonical r20 report path below],  
+   `private-source-repository@` [the canonical r20 report path below],  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T215055Z-fleet03-B06-qform-r20/REPORT.md`.  
    It supplies the weighted Schur-flag representation used in Section 2 and identifies the exact-rank-one endpoint. The present run removes the **rank-one** requirement whenever its leading left singular vector is physically localized.
 
 The B08 source immediately preceding this run is
 
-`yspennstate/math-open-problems@d7add2eca585a9c871e910f4afdda02491944843`,
+`private-source-repository@d7add2eca585a9c871e910f4afdda02491944843`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T215031Z-fleet03-B08-qform-diffuse-r22/REPORT.md`.
 

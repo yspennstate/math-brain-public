@@ -47,9 +47,9 @@ The remaining debt is therefore **normal-form extraction / treatment of the forb
 
 3. **Named partner actually applied.** fleet03/B05 run `20260922T194010Z-fleet03-B05-QFORM-r16`, canonical report commit `d6312e9c0de9a774079895ee3c7aad7043015e49`, proved `QFORM-NEARZERO-MOVING-TRANSLATION-PAIR-REPAIR-v1` and independently passed the arbitrary-rank pair-log extension. Section 6 below applies its near-zero theorem to a genuinely diffuse-bank lift.
 
-4. **Pair-log proof read in full.** `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+4. **Pair-log proof read in full.** `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
-5. **Arbitrary-rank pair extension read in full.** `yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`. The partner's current run independently reviewed its Sections 3--5 as PASS.
+5. **Arbitrary-rank pair extension read in full.** `private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`. The partner's current run independently reviewed its Sections 3--5 as PASS.
 
 No refuted arbitrary-joint three-dimensional coarea estimate, conditional-projection positive moment, post-rotation independence, unrestricted curved-fiber supremum, or law-uniform pointwise Fresnel estimate is used.
 

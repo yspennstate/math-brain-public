@@ -15,7 +15,7 @@ The owner target is unchanged: independent real original coordinates with arbitr
 
 The full conjecture remains OPEN. This run does not use arbitrary-joint rank-three coarea, a conditional projection-density cap as independence, post-rotation independence, law-uniform pointwise quadratic-phase decay, a fixed good physical minor, deletion of a small nonzero term, or an arbitrary-remainder near-zero continuation.
 
-The fresh correction `QFORM-NEARZERO-ARBITRARY-REMAINDER-EXTENSION-FALSE-v1` at math-open-problems commit `b3a997d0819eccceb313da22e1e04c0dd92c6b42` is preserved: a small nonzero hub core cannot be replaced by zero while allowing an arbitrary environment remainder. The theorem below uses an EXACT zero physical pivot and conditions only ORIGINAL outside coordinates, so the retained quadratic block is exact and the outside variables create affine terms only.
+The fresh correction `QFORM-NEARZERO-ARBITRARY-REMAINDER-EXTENSION-FALSE-v1` at private-source commit `b3a997d0819eccceb313da22e1e04c0dd92c6b42` is preserved: a small nonzero hub core cannot be replaced by zero while allowing an arbitrary environment remainder. The theorem below uses an EXACT zero physical pivot and conditions only ORIGINAL outside coordinates, so the retained quadratic block is exact and the outside variables create affine terms only.
 
 ## 2. Primary literature theorem and exact hypothesis match
 
@@ -53,7 +53,7 @@ The analytic receiver is the completed fleet02/B18 theorem
 
 source:
 
-- math-open-problems commit `ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`;
+- private-source commit `ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`.
 
 It states: let `S` be a scalar with density cap `K`, genuinely independent of a possibly dependent pair `(C,D)` whose joint density has cap `M`. If the symmetric quadratic matrix in `(S,C,D)` has zero `S^2` pivot and determinant `Delta!=0`, then arbitrary affine terms are harmless (after deterministic translation) and
@@ -344,11 +344,11 @@ The identities themselves are proved exactly above; the numerical checks are reg
 ## 12. Source pins
 
 - LPP primary source: arXiv:1507.07949; Israel J. Math. 216 (2016), 877--889, Theorem 1.1.
-- Designated partner fleet02/B18 receiver: `math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`.
-- Newest fleet02/B18 private-bank theorem: `math-open-problems@529be48498963ede3243fd4a2b00a0104442fc05`.
+- Designated partner fleet02/B18 receiver: `private-source@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`.
+- Newest fleet02/B18 private-bank theorem: `private-source@529be48498963ede3243fd4a2b00a0104442fc05`.
 - Existing qualitative rank1+rank2 grouped solution/continuity: fleet03/B18 r21, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T021509Z-fleet03-B18-QFORM-r21/REPORT.md`.
-- Low-hub equal-spectrum source family: `math-open-problems@c99a85972a70c210b19dd41128300ad55a9b8cb4`.
-- Prior finite-ray closure: `math-open-problems@35fc7bb8691555a8cfdd3aefc06da310ed19e175`.
-- Fresh near-zero correction: `math-open-problems@b3a997d0819eccceb313da22e1e04c0dd92c6b42`.
+- Low-hub equal-spectrum source family: `private-source@c99a85972a70c210b19dd41128300ad55a9b8cb4`.
+- Prior finite-ray closure: `private-source@35fc7bb8691555a8cfdd3aefc06da310ed19e175`.
+- Fresh near-zero correction: `private-source@b3a997d0819eccceb313da22e1e04c0dd92c6b42`.
 
 No email/push, new task, cross-account authentication, paid/remote call, public release, repository visibility change, permission expansion, or scheduler-state change was made.

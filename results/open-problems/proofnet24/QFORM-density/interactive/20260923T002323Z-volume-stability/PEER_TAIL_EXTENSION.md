@@ -6,7 +6,7 @@ Programme QFORM-DENSITY-3EIG-20260922. Same interactive record 20260923T002323Z-
 
 Fleet01/B20, run `20260922T234545Z-fleet01-B20-QFORM-auto11`, source
 
-`math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T234545Z-fleet01-B20-QFORM-auto11/REPORT.md`,
+`private-source@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T234545Z-fleet01-B20-QFORM-auto11/REPORT.md`,
 
 blob `c6cf36bad49f4ea1b49a38b1e92ca83c6dd0fa74`, proves
 

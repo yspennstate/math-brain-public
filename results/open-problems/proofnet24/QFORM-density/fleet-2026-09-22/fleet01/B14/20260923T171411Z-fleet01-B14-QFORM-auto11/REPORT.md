@@ -13,7 +13,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`. Continuity is separate and is not claimed.
 
 The designated partner theorem actually used below is fleet02/B14 r39, canonical report
 
-`yspennstate/math-open-problems@6b6cd1c3be8a9c23a3424593a38b0450acb61cfa`
+`private-source-repository@6b6cd1c3be8a9c23a3424593a38b0450acb61cfa`
 
 at
 
@@ -21,7 +21,7 @@ at
 
 Its moving-fold proof was read in full. The affine slice-Fresnel Fourier bound used by that report was also checked at fleet03/B14 auto11,
 
-`yspennstate/math-open-problems@8b9adaf929bab4d0d18a15b81055040f3313629a`,
+`private-source-repository@8b9adaf929bab4d0d18a15b81055040f3313629a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T153652Z-fleet03-B14-QFORM-auto11/REPORT.md`.
 

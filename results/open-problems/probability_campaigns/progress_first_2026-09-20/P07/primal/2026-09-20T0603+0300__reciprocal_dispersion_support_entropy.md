@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-A — reciprocal dispersion and a positive-Fourier support/entropy pivot
 
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured pre-write master:** `55c33878f7188489e5df4c2211c9ebe992952475`  
 **Previous own report:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T0445+0300__critical_householder_orthant.md`, blob `eb3512758485899c244f7ce4b4d2fc37307dd8c8` on current master.  
 **Complementary checkpoint read:** P07-B `2026-09-20T0512+0300__damped_schur_threshold_count.md`. P07-B continues to own Fourier-dual exceptional-frequency / Schur-repair work; nothing below duplicates that route.  

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — METRIC MOVEME
 # R09 CLOSABLE OUTSIDE — G0013: moment-projection improvement of the global copula bound
 
 Date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, ownership, and current status
 

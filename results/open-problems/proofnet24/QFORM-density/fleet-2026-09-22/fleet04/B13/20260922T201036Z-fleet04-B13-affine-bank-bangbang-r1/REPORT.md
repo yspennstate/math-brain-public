@@ -104,7 +104,7 @@ This point matters for quadratic conditioning: the optimizing physical-coordinat
 ## 5. Application of fleet01/B13
 
 Fleet01/B13 run `20260922T190849Z-fleet01-B13-qform-r17`, canonical report
-`yspennstate/math-open-problems@01c524aa389abf1b9b58c852bfa11fc747ec5b59`, proves that in the paid branch of the exact-rank-three mixed regime,
+`private-source-repository@01c524aa389abf1b9b58c852bfa11fc747ec5b59`, proves that in the paid branch of the exact-rank-three mixed regime,
 [
 |{xinprod_iE_i:x^TAxin J}|le8228|J|
 ]

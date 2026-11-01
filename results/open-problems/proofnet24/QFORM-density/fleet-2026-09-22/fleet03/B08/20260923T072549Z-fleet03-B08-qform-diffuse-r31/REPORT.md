@@ -20,13 +20,13 @@ Fresh owner control was read from `yspennstate/math-research-brain` main and rem
 
 Immediate predecessor:
 
-`yspennstate/math-open-problems@3ae967e80c1d47013c756555785a38aa0aeca199`
+`private-source-repository@3ae967e80c1d47013c756555785a38aa0aeca199`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T064830Z-fleet03-B08-qform-diffuse-r30/REPORT.md`.
 
 Completed compatible fleet04 result actually applied below:
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 
@@ -38,7 +38,7 @@ The designated `fleet04/B08` current-QFORM handoff directory was still absent on
 
 A second completed theorem used for the scoped clean endpoint is fleet03/B07 `QFORM-TWO-DISJOINT-PRODUCT-DENSITY-v1`:
 
-`yspennstate/math-open-problems@2357dd6b61a8d631b6fca2d63e998b27585c8f21`
+`private-source-repository@2357dd6b61a8d631b6fca2d63e998b27585c8f21`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T221112Z-fleet03-B07-qform-r18/REPORT.md`.
 

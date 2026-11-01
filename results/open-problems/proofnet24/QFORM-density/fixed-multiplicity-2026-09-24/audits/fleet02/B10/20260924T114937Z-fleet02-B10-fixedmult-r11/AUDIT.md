@@ -172,7 +172,7 @@ The first unpaid implication is therefore:
 
 ## Required legacy source result: actual receiver use
 
-The older pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` proves the ruled one-sheet estimate for signature `(2,1)`. Applying it to a genuinely rotated exact-rank-three target, let
+The older pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` proves the ruled one-sheet estimate for signature `(2,1)`. Applying it to a genuinely rotated exact-rank-three target, let
 
 `r1=(1,1,1,1)/2`, `r2=(1,-1,1,-1)/2`, `r3=(1,1,-1,-1)/2`,
 

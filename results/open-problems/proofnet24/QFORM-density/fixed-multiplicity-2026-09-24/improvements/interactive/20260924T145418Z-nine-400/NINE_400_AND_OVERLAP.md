@@ -6,7 +6,7 @@ Status: complete written mathematical derivation, self-checked; the new constant
 
 ## Sources and precise scope
 
-Baseline: yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2, proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex, blob 183ccd294763214e6a707e8d4749ff9a8cf7006d.
+Baseline: private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2, proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex, blob 183ccd294763214e6a707e8d4749ff9a8cf7006d.
 
 The threshold-nine mechanism was already derived by fleet03/B04 in improvements/fleet03/B04/20260924T121940Z-fleet03-B04-fixedmult-audit-r1/REPORT.md, blob 054facef834d29927713c5d42a1f09a541c5644b. The current run reread that complete report and reconstructed the argument below. Do not credit this run with first obtaining the threshold nine.
 

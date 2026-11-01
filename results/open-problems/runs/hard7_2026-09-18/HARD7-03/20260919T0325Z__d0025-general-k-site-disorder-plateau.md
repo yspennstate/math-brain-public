@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # HARD7-03 — source-coordinate recovery and a general-`K` site-disorder plateau candidate
 
-Date: 2026-09-19 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-19 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / source Problem 4 remains OPEN as a whole.** This run gives a theorem-sized self-check that answers the **flat-segment clause** of Seppäläinen's Problem 4 for every fixed capacity `K>=1` in the iid **site-disorder** model covered below, assuming the source growth-model/duality framework exactly as printed. It does not settle the broader phase-transition question, particle disorder, finer-scale behavior, or any formulation outside this source model. No closure is claimed: prior-art search is bounded and the result has not received the two required independent audits.
 

@@ -41,7 +41,7 @@ This run changes the mechanism at that precise point.  In singular blocks it can
 
 Fleet03/B14 run `20260922T203640Z-fleet03-B14-QFORM-r18`, theorem `QFORM-ACTIVE-BLOCK-FOURIER-LOCALIZATION-v1`, canonical proof
 
-`yspennstate/math-open-problems@ed8e20464e9cbfd43eefc9ada31eafb3abd8c472`,
+`private-source-repository@ed8e20464e9cbfd43eefc9ada31eafb3abd8c472`,
 
 path
 
@@ -55,7 +55,7 @@ Besides the final sufficient supremum theorem, its equation (3.3) gives the stro
 
 Fleet02/B06 proved `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1` at
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
 
 path
 

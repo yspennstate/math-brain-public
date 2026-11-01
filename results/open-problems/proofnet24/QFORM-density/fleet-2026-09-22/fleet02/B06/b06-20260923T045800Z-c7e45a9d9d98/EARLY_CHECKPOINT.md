@@ -25,6 +25,6 @@ The endpoint `alpha=1/2` is genuinely unavailable under the same assumptions: fo
 
 has `E T^(-1/2)=E|X+C|^(-1)=infinity`. Thus a single non-null star supplies every subcritical half-Riesz potential but not the half-Riesz endpoint required by the square peel.
 
-Planned full splice: Claude's completed coordinate-hyperbola peel at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` requires only `H_(1/4)`, so an exact zero-diagonal physical pair followed by such a star residual is paid dimension-free. Designated partner fleet03/B06 r25 (`math-open-problems@1e7aa194ee0cd3c2981afdeb2ddf66acf53b87fe`) separately pays the large-third-volume branch; the survivor is the low-Delta3/rank-two tube where the new hyperbola-or-second-curvature receiver is relevant.
+Planned full splice: Claude's completed coordinate-hyperbola peel at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` requires only `H_(1/4)`, so an exact zero-diagonal physical pair followed by such a star residual is paid dimension-free. Designated partner fleet03/B06 r25 (`private-source@1e7aa194ee0cd3c2981afdeb2ddf66acf53b87fe`) separately pays the large-third-volume branch; the survivor is the low-Delta3/rank-two tube where the new hyperbola-or-second-curvature receiver is relevant.
 
 Status: substantive checkpoint only; full QFORM remains open.

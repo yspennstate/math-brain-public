@@ -14,7 +14,7 @@ The unrestricted bounded-density conjecture remains OPEN. The unrestricted conti
 
 Canonical source:
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
@@ -30,7 +30,7 @@ The proof is by an original-coordinate ridge cross block and permits arbitrary o
 
 Canonical source:
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md`.
 
@@ -53,7 +53,7 @@ with a continuous density. All same-bank curvature, outside couplings and affine
 
 Canonical source:
 
-`yspennstate/math-open-problems@41ee49f6e9c3383e4c3a322bdc52779768a17eb7`
+`private-source-repository@41ee49f6e9c3383e4c3a322bdc52779768a17eb7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T130941Z-fleet02-B08-qform-diffuse-r27/REPORT.md`.
 

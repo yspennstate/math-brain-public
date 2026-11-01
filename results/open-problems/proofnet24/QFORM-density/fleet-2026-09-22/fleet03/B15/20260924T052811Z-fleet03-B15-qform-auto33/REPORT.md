@@ -266,7 +266,7 @@ Conversely, proving a single uniform bound on this enumerated rational skeleton 
 
 The completed rank-at-least-three fixed-matrix theorem at
 
-`yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`
+`private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`
 
 path
 
@@ -296,7 +296,7 @@ This is a logical/regularity reduction, not an algorithmic proof of a uniform bo
 
 The completed fleet04/B15 theorem in
 
-`yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`
+`private-source-repository@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`
 
 path
 
@@ -370,9 +370,9 @@ The remaining mathematical task is now equivalent to showing that the countable 
 ## 11. Source discipline
 
 
-Completed fixed-instance regularity source actually read: `math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`.
+Completed fixed-instance regularity source actually read: `private-source@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`.
 
-Designated completed partner actually applied: fleet04/B15 at `math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`.
+Designated completed partner actually applied: fleet04/B15 at `private-source@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`.
 
 Live correction retained: `QFORM-NO-UNIFORM-FRAGMENT-COUNT-BATHTUB-v1`; this report makes no fixed-fragment assertion.
 

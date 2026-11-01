@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # NM13-11 — post-static residue-10 admission delta screen 3
 
-- Repository / branch: `yspennstate/math-open-problems` / `master`
+- Repository / branch: `private-source-repository` / `master`
 - Worker: `NM13-11`
 - Own namespace: `proofnet24/NM13-11/`
 - Category: `HARD OUTSIDE`

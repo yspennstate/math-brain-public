@@ -6,7 +6,7 @@ Classification: **AUXILIARY_ONLY / ROTATED_INFINITESIMAL_LIMIT_NO_ESCAPE**. The 
 
 ## Source pins actually used
 
-1. Designated partner `fleet02/B17`, theorem `GENERAL_INFINITESIMAL_BANK_LIMIT_NO_ESCAPE`, canonical mathematics `yspennstate/math-open-problems@9ef2d4cbf56e1aa3368eeaa322d09ba4d91f31cf`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T154450Z-fleet02-B17-QFORM-r11b/REPORT.md`. The scalar input needed below is: for every convergent infinitesimal scalar triangular array
+1. Designated partner `fleet02/B17`, theorem `GENERAL_INFINITESIMAL_BANK_LIMIT_NO_ESCAPE`, canonical mathematics `private-source-repository@9ef2d4cbf56e1aa3368eeaa322d09ba4d91f31cf`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T154450Z-fleet02-B17-QFORM-r11b/REPORT.md`. The scalar input needed below is: for every convergent infinitesimal scalar triangular array
    
    `Z_mk = a_mk X_mk - c_mk`, `sum_k a_mk^2 = 1`, `max_k |a_mk| -> 0`,
    

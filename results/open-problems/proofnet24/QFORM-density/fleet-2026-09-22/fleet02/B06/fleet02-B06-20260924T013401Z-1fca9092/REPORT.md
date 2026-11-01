@@ -15,7 +15,7 @@ The unrestricted QFORM conjecture remains OPEN. No moment, bounded-support, log-
 
 Fresh owner control at startup was revision `2026-09-22.15`, QFORM-only. The required pinned packet
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was reread: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. I use two proved pieces from that packet at equations below:
 
@@ -24,7 +24,7 @@ was reread: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.
 
 I also use the independently checked exact-rank crossing theorem with arbitrary internal functions in
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`,
 
@@ -252,7 +252,7 @@ For a definite invertible `H`, the usual two-dimensional physical area argument 
 
 The latest compatible designated partner packet read in this run is
 
-`yspennstate/math-open-problems@a4090a876e18635918b87f87a7af42726b29337a`
+`private-source-repository@a4090a876e18635918b87f87a7af42726b29337a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T001713Z-fleet03-B06-qform-r48/REPORT.md`.
 

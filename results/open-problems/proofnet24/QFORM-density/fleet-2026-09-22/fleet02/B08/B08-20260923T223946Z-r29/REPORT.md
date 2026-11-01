@@ -35,7 +35,7 @@ Thus “diffuse” alone does not force the transverse currency. A successful ne
 
 The owner-required fixed source was reread at
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 
 including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The completed result applied below is its Fresnel--Brascamp--Lieb Theorem F: an exact rank-three quadratic form whose orthonormal spectral range has physical leverage at most `1/2` has

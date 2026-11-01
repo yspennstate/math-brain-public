@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # R01 — terminal KPS handoff: two diffuse ultrafilter limits fail on opposite sides of approximation
 
 Date: 2026-09-18 UTC.
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. State recovered before continuing
 

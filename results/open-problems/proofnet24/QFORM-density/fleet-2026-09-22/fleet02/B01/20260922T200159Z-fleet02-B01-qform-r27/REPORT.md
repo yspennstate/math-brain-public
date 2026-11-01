@@ -10,7 +10,7 @@ Status: `ESSENTIAL_STEP_APPLIED / CORRECTION_APPLIED / FULL_TARGET_OPEN / WITHOU
 The target remains the full arbitrary-matrix conjecture: for every dimension, independent real inputs with probability densities bounded by one, and every real symmetric matrix with at least three eigenvalues of modulus at least one, prove a universal finite essential density bound for `Q=X^T A X`, or produce a valid target counterexample.
 
 
-This run directly consumes the completed named-partner result fleet03/B01 r17, canonical report `yspennstate/math-open-problems@b6c3fd34d5c608023be5149189c1e88e66f3baeb:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T192922Z-r17/REPORT.md` and its decoupling addendum `yspennstate/math-open-problems@e3ea72181ebd1934c889703821a7a9396c5fb853:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T192922Z-r17/DECOUPLING_CRITICAL_LOSS.md`.
+This run directly consumes the completed named-partner result fleet03/B01 r17, canonical report `private-source-repository@b6c3fd34d5c608023be5149189c1e88e66f3baeb:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T192922Z-r17/REPORT.md` and its decoupling addendum `private-source-repository@e3ea72181ebd1934c889703821a7a9396c5fb853:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T192922Z-r17/DECOUPLING_CRITICAL_LOSS.md`.
 
 The partner proves the translation-uniform scalar Fresnel `L^p`, `p>2`, theorem and identifies the unnormalized overlap kernel
 
@@ -237,7 +237,7 @@ where `C_p` is the named partner's translated-Fresnel constant. Indeed, conditio
 
 ## 8. Relation to the newest three-bank result
 
-During this run fleet02/B05 published `QFORM-THREE-BANK-GENERAL-CORE-v1` at `yspennstate/math-open-problems@a31006ef311ca9e937f37c62d602d21ada3b1139:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T202100Z-b05-qform-47d9c1a2/REPORT.md`. It proves `<36/s` once three **independent scalar aggregates** with density-normalized compressed `3x3` core have `sigma_min>=s`; the old arrowhead zero pattern is unnecessary. Its explicit first unpaid step is preservation/extraction of that three-scalar interface in the presence of within-bank quadratic residual dependence.
+During this run fleet02/B05 published `QFORM-THREE-BANK-GENERAL-CORE-v1` at `private-source-repository@a31006ef311ca9e937f37c62d602d21ada3b1139:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T202100Z-b05-qform-47d9c1a2/REPORT.md`. It proves `<36/s` once three **independent scalar aggregates** with density-normalized compressed `3x3` core have `sigma_min>=s`; the old arrowhead zero pattern is unnecessary. Its explicit first unpaid step is preservation/extraction of that three-scalar interface in the presence of within-bank quadratic residual dependence.
 
 Equations (4.2)-(4.3) above give an exact analytic representation of precisely that leakage: every bank residual is retained inside a complex amplitude, while its unnormalized overlap keeps the full shear budget (3.3)-(3.6). What remains unpaid is a multi-bank Brascamp-Lieb / signed-Fejer synthesis that converts these individual overlap budgets plus the **total** three-large-eigenvalue geometry into `L^1_t`, without assuming the compressed core survives a canceling internal phase.
 

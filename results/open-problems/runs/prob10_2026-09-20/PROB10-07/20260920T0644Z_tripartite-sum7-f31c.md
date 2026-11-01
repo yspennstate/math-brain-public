@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED**. GPT-6 maxi
 
 # PROB10-07 — complete tripartite fixed-width-seven Rayleigh theorem
 
-Repository/branch: private `yspennstate/math-open-problems` / `master`  
+Repository/branch: private `private-source-repository` / `master`  
 Parent: Grimmett–Winkler pairwise edge negative correlation for the uniform measure on **all forests**  
 Status: **PARTIAL / universal conjecture OPEN**  
 Artifact stem: `20260920T0644Z_tripartite-sum7-f31c`

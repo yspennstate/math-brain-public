@@ -15,7 +15,7 @@ All coordinates below are literal ORIGINAL coordinates. No random variable is ro
 
 The newest fleet03/B19 compiler used for global context is r50:
 
-`yspennstate/math-open-problems@f3a0b13c6d73bb3ec94be4ad5fc293c60ab7da3f`
+`private-source-repository@f3a0b13c6d73bb3ec94be4ad5fc293c60ab7da3f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T050225Z-fleet03-B19-QFORM-r50/REPORT.md`.
 
@@ -23,7 +23,7 @@ It leaves a robust literal rank-two light-light cross with full-law `H_(1/4)` sm
 
 The designated partner source is fleet04/B20 r13:
 
-`yspennstate/math-open-problems@d2560a041fd91c05d7fddf50f5b5414ecd2680a2`
+`private-source-repository@d2560a041fd91c05d7fddf50f5b5414ecd2680a2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260924T051424Z-fleet04-B20-QFORM-r13/REPORT.md`.
 
@@ -41,7 +41,7 @@ or a quantitatively transverse rank-two double-anchor block, or an aligned two-s
 
 The endpoint receiver is this slot's completed r47 theorem:
 
-`yspennstate/math-open-problems@fb3a649f17234d139f1731e78557d2e7b1cdd187`
+`private-source-repository@fb3a649f17234d139f1731e78557d2e7b1cdd187`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T044648Z-fleet03-B20-QFORM-auto11-r47/REPORT.md`.
 

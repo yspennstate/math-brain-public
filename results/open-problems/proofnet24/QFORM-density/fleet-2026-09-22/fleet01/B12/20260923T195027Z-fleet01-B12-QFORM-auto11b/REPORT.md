@@ -22,7 +22,7 @@ The first unpaid implication for the full conjecture remains structural: derive,
 
 The newest compatible completed `fleet02/B12` theorem used here is
 
-`yspennstate/math-open-problems@c635fcdce6aa206c68f1f14e061cf617d72376fb`
+`private-source-repository@c635fcdce6aa206c68f1f14e061cf617d72376fb`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/fleet02-B12-20260923T185321Z-r11/REPORT.md`.
 
@@ -373,7 +373,7 @@ Changed-file allowlist for this mathematical repository run is confined to this 
 
 Designated partner theorem actually applied at (7.19):
 
-`yspennstate/math-open-problems@c635fcdce6aa206c68f1f14e061cf617d72376fb`
+`private-source-repository@c635fcdce6aa206c68f1f14e061cf617d72376fb`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/fleet02-B12-20260923T185321Z-r11/REPORT.md`.
 

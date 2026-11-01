@@ -1,6 +1,6 @@
 # Exact-rank-three positive semidefinite quadratic forms: a uniform all-level density bound
 
-**Status: proved scoped theorem and alternate derivation.** This handles arbitrary original-coordinate affine terms. The assembled manuscript already proves the stronger [full arbitrary-rank semidefinite theorem](https://github.com/yspennstate/math-open-problems/blob/d6f59993e85da91da39942ae96d92481abbaf541/proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/semidefinite.tex) with bound 17100/σ, and an exact-rank-three bound 58/σ. The argument below gives another proof with constant 234/σ; it does not address indefinite matrices.
+**Status: proved scoped theorem and alternate derivation.** This handles arbitrary original-coordinate affine terms. The assembled manuscript already proves the stronger [full arbitrary-rank semidefinite theorem](private-source-repository) with bound 17100/σ, and an exact-rank-three bound 58/σ. The argument below gives another proof with constant 234/σ; it does not address indefinite matrices.
 
 Let \(X_1,\ldots,X_n\) be independent real random variables with densities bounded by one. Let \(A\succeq0\) have **exact rank three** and \(s_3(A)\ge\sigma>0\). For arbitrary \(b\in\mathbb R^n\) and \(c\in\mathbb R\), the random variable
 \[
@@ -20,7 +20,7 @@ Write \(A=U\Lambda U^T\), where \(U^TU=I_3\) and all three diagonal entries of \
 a=A_{ii}=U_{i,\cdot}\Lambda U_{i,\cdot}^T\ge\sigma c_i>0,
 \qquad \det\Lambda\ge\sigma^3.
 \]
-The arbitrary-affine, exact-rank-three Schur consequence of the [rank-two half-Riesz theorem](https://github.com/yspennstate/math-open-problems/blob/e542b1a6ef471b329e4e88a6553e1aacb45acc1a/proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md), Equation (1.2), gives
+The arbitrary-affine, exact-rank-three Schur consequence of the [rank-two half-Riesz theorem](private-source-repository), Equation (1.2), gives
 \[
 \|p_Q\|_\infty\le128(c_i a\det\Lambda)^{-1/4}
 \le {128\over\sigma\sqrt{c_i}}
@@ -39,7 +39,7 @@ U_S^TU_S,\ U_{T_{\rm bank}}^TU_{T_{\rm bank}}
 \succeq c_0 I_3,\qquad
 c_0={1-\sqrt{9/10}\over2}>0.
 \]
-The [exact-rank-three two-bank Fourier theorem](https://github.com/yspennstate/math-open-problems/blob/ded875c2199e63eebfc49dd25d3ca4d349723301/proofnet24/QFORM-density/interactive/20260923T193700Z-diffuse-rank-three-fourier/REPORT.md) applies with arbitrary affine \(b\) and gives
+The [exact-rank-three two-bank Fourier theorem](private-source-repository) applies with arbitrary affine \(b\) and gives
 \[
 \|p_Q\|_\infty\le{6\over c_0\sigma}
 ={12\over(1-\sqrt{9/10})\sigma}

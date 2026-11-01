@@ -76,7 +76,7 @@ The squared spectral leverage of residual original coordinate `j` in this orthon
 
 `||u_j||^2=r_j^T G^(-1)r_j=ell_j^(h)`.                               (A.12)
 
-Hence (A.3) is precisely the leverage hypothesis of the completed Fresnel--Brascamp--Lieb Theorem F in the required Claude package `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`. That theorem tolerates the arbitrary linear term induced by the conditioned value of `X_h`, so uniformly in that value,
+Hence (A.3) is precisely the leverage hypothesis of the completed Fresnel--Brascamp--Lieb Theorem F in the required Claude package `private-source@e5f71d79eff325201dd0274053d20268ce65b837`. That theorem tolerates the arbitrary linear term induced by the conditioned value of `X_h`, so uniformly in that value,
 
 `||p_(Q | X_h)||infinity<=12 |det M_h|^(-1/3)`.                      (A.13)
 

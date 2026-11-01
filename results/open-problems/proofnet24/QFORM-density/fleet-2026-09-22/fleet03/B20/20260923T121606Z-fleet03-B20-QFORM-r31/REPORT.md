@@ -10,15 +10,15 @@ The owner target remains: for arbitrary finite `n`, independent real original-co
 
 This report does not rotate the random vector, does not infer independence of spectral coordinates, does not use law-uniform pointwise quadratic-phase decay, arbitrary-joint coarea, a conditional density cap as independence, small-coefficient deletion, or a one-good-minor shortcut. Every conditioning step below is on literal original coordinates.
 
-Fresh current global synthesis predecessor: fleet01/B20, `QFORM-N3-LOWLEVERAGE-ANNULUS-OR-STAR4DIR-COMPILER-v1`, canonical `yspennstate/math-open-problems@0a22623e8aa296bfdb618b8952fbd186c670c55c`. It leaves the arbitrary-extra-spectrum annulus/star-four-direction packet open. The theorem below does not claim to pay that arbitrary-rank packet; it closes a distinct exact-rank-three heavy-leverage recursion that was still feeding the older mixed-range/near-coloop frontier.
+Fresh current global synthesis predecessor: fleet01/B20, `QFORM-N3-LOWLEVERAGE-ANNULUS-OR-STAR4DIR-COMPILER-v1`, canonical `private-source-repository@0a22623e8aa296bfdb618b8952fbd186c670c55c`. It leaves the arbitrary-extra-spectrum annulus/star-four-direction packet open. The theorem below does not claim to pay that arbitrary-rank packet; it closes a distinct exact-rank-three heavy-leverage recursion that was still feeding the older mixed-range/near-coloop frontier.
 
-Fresh fleet03/B20 predecessor: r30, canonical `yspennstate/math-open-problems@2c0131b6830892a77a8faaf3521388d3a51e7514`, which reduced the exact-rank-three double-coloop state to a three-packet/mixed-range survivor.
+Fresh fleet03/B20 predecessor: r30, canonical `private-source-repository@2c0131b6830892a77a8faaf3521388d3a51e7514`, which reduced the exact-rank-three double-coloop state to a three-packet/mixed-range survivor.
 
-Required completed partner actually applied: fleet04/B20 `QFORM-MODERATE-HEAVY-ANCHOR-DELETION-v1`, canonical `yspennstate/math-open-problems@1d3bcd6c2a19605a6bdcb3fa572b7f85c19369db`. Its theorem says that for an exact-rank-three Parseval factor `A=RMR^T`, `s_min(M)>=1`, one physical row of leverage `c in (1/2,3/4]`, and all residual deletion-whitened leverages at most `1/2`, the density is continuous and
+Required completed partner actually applied: fleet04/B20 `QFORM-MODERATE-HEAVY-ANCHOR-DELETION-v1`, canonical `private-source-repository@1d3bcd6c2a19605a6bdcb3fa572b7f85c19369db`. Its theorem says that for an exact-rank-three Parseval factor `A=RMR^T`, `s_min(M)>=1`, one physical row of leverage `c in (1/2,3/4]`, and all residual deletion-whitened leverages at most `1/2`, the density is continuous and
 
 `||p_Q||_infinity <= 3 e (1-c)^(-1/3) <= 3 e 4^(1/3) < 12.946`.
 
-The determinant-basis receiver used for later deletion stages is fleet01/B18 `QFORM-FRESNEL-CAPPED-BASIS-WEIGHTS-v1`, canonical `yspennstate/math-open-problems@b42066397eb5ba83a885c6e700e0417a49a1d8ac`. In its natural volume-sampling specialization, for a `3 x m` column matrix `L`, an invertible symmetric `D`, all leverage marginals at most `1/2`, and `G=LL^T`, it gives, uniformly under affine terms,
+The determinant-basis receiver used for later deletion stages is fleet01/B18 `QFORM-FRESNEL-CAPPED-BASIS-WEIGHTS-v1`, canonical `private-source-repository@b42066397eb5ba83a885c6e700e0417a49a1d8ac`. In its natural volume-sampling specialization, for a `3 x m` column matrix `L`, an invertible symmetric `D`, all leverage marginals at most `1/2`, and `G=LL^T`, it gives, uniformly under affine terms,
 
 `||p||_infinity <= 3e (|det D| det G)^(-1/3)`
 

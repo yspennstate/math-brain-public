@@ -18,7 +18,7 @@ The point of the argument below is that the added spectral directions are used o
 
 The latest completed `fleet02/B12` report used here is
 
-`yspennstate/math-open-problems@06fbcbb277d5db4f89dfc0c04b14174cc4315cc7`
+`private-source-repository@06fbcbb277d5db4f89dfc0c04b14174cc4315cc7`
 
 at
 

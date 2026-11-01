@@ -3,7 +3,7 @@ attacking: moving-sheet weak closure for the ruled majority submeasure and the e
 
 # Early calculation: the ruled majority constant does not see a vanishing minority curvature
 
-For a physical three-coordinate block of signature `(2,1)` with eigenvalue magnitudes `lambda1,lambda2,mu>0`, the completed ruled one-sheet theorem at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` gives the majority-side coefficient
+For a physical three-coordinate block of signature `(2,1)` with eigenvalue magnitudes `lambda1,lambda2,mu>0`, the completed ruled one-sheet theorem at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` gives the majority-side coefficient
 
 `C_+(lambda1,lambda2,mu)`
 `=(lambda1 lambda2 mu)^(-1/2) int_0^(2pi) [sin^2(theta)/lambda1+cos^2(theta)/lambda2+1/mu]^(-1/2) dtheta`
@@ -37,7 +37,7 @@ For `0<gamma<=1/8`, on each of the two intervals `|theta-pi/2|<=1/2`, `|theta-3p
 
 Thus only the minority-null collar is uniformly paid by this exact one-sheet constant; a majority-null collar retains the expected rank-two indefinite logarithm.
 
-Partner obstruction consumed: fleet03/B15 `math-open-problems@4d7b28c4737455388bd14f7bb7abeca5264dffd7` proves sharply that for `S=gamma Z^2+2rZ`, `gamma!=0`,
+Partner obstruction consumed: fleet03/B15 `private-source@4d7b28c4737455388bd14f7bb7abeca5264dffd7` proves sharply that for `S=gamma Z^2+2rZ`, `gamma!=0`,
 
 `||p_S||_q <= [2^(q-1)/(2-q)]^(1/q)|gamma|^(-1+1/q)`, `1<q<2`,
 

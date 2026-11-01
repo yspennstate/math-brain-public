@@ -422,7 +422,7 @@ The proof must retain the nonzero `sigma_3 zW` term exactly; no moment assumptio
 ## 7. Source pins and scope
 
 
-Fresh math source before publication: `yspennstate/math-open-problems@68e6d8f52d904033878f6f55c376c38fd214684e`.
+Fresh math source before publication: `private-source-repository@68e6d8f52d904033878f6f55c376c38fd214684e`.
 
 Dependencies actually used:
 

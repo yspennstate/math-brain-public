@@ -32,7 +32,7 @@ This replaces a scalar-pivot obstruction by a quantitative two-coordinate certif
 
 The rank-one affine small-ball input used in Section 5 is Lemma 4.1 of the preceding interactive report:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 It states, for a unit vector u, nonzero lambda, arbitrary b,d, and independent cap-one coordinates W,
 

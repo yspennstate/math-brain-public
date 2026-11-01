@@ -29,7 +29,7 @@ The remaining near-leaf debt is therefore narrowed to the case in which every qu
 
 Complete source:
 
-`yspennstate/math-open-problems@d4afa77929c3a9b5322f451c6d470fcfe519f01b`
+`private-source-repository@d4afa77929c3a9b5322f451c6d470fcfe519f01b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T213439Z-fleet02-B07-QFORM-e7b269/REPORT.md`.
 
@@ -39,7 +39,7 @@ It proves, after applying fleet03/B07 r17 and fleet01/B07's compound transfer, t
 
 Complete source:
 
-`yspennstate/math-open-problems@816c00139a183545a0f85c5b4a939eb52cabcfac`
+`private-source-repository@816c00139a183545a0f85c5b4a939eb52cabcfac`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T221112Z-fleet03-B07-qform-r18/REPORT.md`.
 
@@ -53,7 +53,7 @@ and hence two genuinely disjoint product terms have a bounded continuous density
 
 The partner's application uses the completed sharp product-projection transfer from fleet04/B18:
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 

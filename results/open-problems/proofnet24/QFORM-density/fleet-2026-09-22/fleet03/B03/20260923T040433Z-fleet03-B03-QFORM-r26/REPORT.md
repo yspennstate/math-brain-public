@@ -6,15 +6,15 @@ Target remains the universal bounded-density conjecture for `Q=X^T A X` under in
 
 ## Source inputs actually used
 
-1. `QFORM-ARBITRARY-HUB-SQRT-SMALLBALL-v1`, fleet03/B19, canonical `yspennstate/math-open-problems@80403bc0adff2c5e8278848674c81448e9782e44`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T030233Z-fleet03-B19-QFORM-r23/`. For one original physical row with aggregate star norm `S>0`, its residual law obeys
+1. `QFORM-ARBITRARY-HUB-SQRT-SMALLBALL-v1`, fleet03/B19, canonical `private-source-repository@80403bc0adff2c5e8278848674c81448e9782e44`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T030233Z-fleet03-B19-QFORM-r23/`. For one original physical row with aggregate star norm `S>0`, its residual law obeys
 
    `sup_z P(|R-z|<=eps) <= H1 eps^(1/2)`, `H1=4*2^(1/4) S^(-1/2)`.
 
-2. `QFORM-TWO-PHYSICAL-GRADIENT-2OVER3-SMALLBALL-v1`, fleet03/B19, canonical `yspennstate/math-open-problems@2c88af5e0ac6a4faf8d923a621c7d7006d544ffe`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T034239Z-fleet03-B19-QFORM-r24/`. For two original physical coordinates and a rank-two original-product cross matrix `M`, with `Delta=sqrt(det(M M^T))>0`, the same residual law obeys
+2. `QFORM-TWO-PHYSICAL-GRADIENT-2OVER3-SMALLBALL-v1`, fleet03/B19, canonical `private-source-repository@2c88af5e0ac6a4faf8d923a621c7d7006d544ffe`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T034239Z-fleet03-B19-QFORM-r24/`. For two original physical coordinates and a rank-two original-product cross matrix `M`, with `Delta=sqrt(det(M M^T))>0`, the same residual law obeys
 
    `sup_z P(|R-z|<=eps) <= H2 eps^(2/3)`, `H2=12(2 Delta)^(-1/3)`.
 
-3. The designated fleet04/B03 handoff is `yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`. Its advertised weighted-L2 compiler is not used because the fleet has already identified the missing time-weight/homogeneity step. Only the elementary valid lemma
+3. The designated fleet04/B03 handoff is `private-source-repository@28681f9af7c2307f80968df86010084019599e38`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`. Its advertised weighted-L2 compiler is not used because the fleet has already identified the missing time-weight/homogeneity step. Only the elementary valid lemma
 
    `P(|Y-Y'|<=eps) <= 2 eps ||p_Y||_2^2`
 

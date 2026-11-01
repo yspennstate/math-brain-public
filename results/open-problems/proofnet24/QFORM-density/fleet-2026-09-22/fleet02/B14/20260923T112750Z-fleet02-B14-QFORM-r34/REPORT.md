@@ -51,7 +51,7 @@ Fresh brain control and the live correction corpus were read before work. In par
 
 Required newest-Claude source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -67,7 +67,7 @@ Newest compatible designated partner:
 
 `fleet03/B14` r33, canonical source
 
-`yspennstate/math-open-problems@20e9f45a5d8c8d79034aa09318d8922daae66599`
+`private-source-repository@20e9f45a5d8c8d79034aa09318d8922daae66599`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T103613Z-fleet03-B14-QFORM-r33/REPORT.md`.
 
@@ -79,7 +79,7 @@ Section 6 below applies this completed partner algebra and shows that the new th
 
 The outer physical-pair logarithmic envelope is the already-paid source-pinned theorem at
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`, together with its companion pair-log formula. Only its original-coordinate independence scope is used.
 

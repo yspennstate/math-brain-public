@@ -16,7 +16,7 @@ The open-problems allocation supersedes the older installation/benchmark duties 
 
 Lead source consumed in full:
 - fleet02/B04 run `20260922T011943Z-b04-bt4-r11`,
-  `yspennstate/math-open-problems` commit
+  `private-source-repository` commit
   `ca30763c69284b71c197ba0f49e37962f07e30c3`,
   report blob `ee3294c169f9736cd8f0fdb943b5cefab5906a9e`,
   candidate: equality completion plus off-pivot witness regeneration.
@@ -24,7 +24,7 @@ Lead source consumed in full:
 Named OTHER-account partner consumed in full and applied:
 - fleet03/B04 run `20260922T011921Z-fleet03-B04-BT4-r12`,
   candidate `BT4-MENGER-COLLAR-v1`,
-  `yspennstate/math-open-problems` commit
+  `private-source-repository` commit
   `1e497832eeeb2409499cbfb97f1bdba544686844`,
   report blob `a11cd981b4d76eaeb6dd02b4820d16a740ee0057`.
 

@@ -18,7 +18,7 @@ No moment, support, log-concavity, single-interval, bounded-diameter, fixed-frag
 ## 1. Fresh sources and exact scope
 
 
-`math-open-problems@7ebaff80e4d6d1c5c45a561d1ff17a87cfd7a052`
+`private-source@7ebaff80e4d6d1c5c45a561d1ff17a87cfd7a052`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T203053Z-fleet03-B13-qform-r34/REPORT.md`
 
@@ -44,7 +44,7 @@ If every row leverage is at most `q0<=2/3`, the same report proves
 
 The unconditional pair-volume half-Riesz theorem used below is the completed fleet01/B01 result
 
-`math-open-problems@55255bcb25271145aa9f5a1a93a0cc84ad8e1c3d`:
+`private-source@55255bcb25271145aa9f5a1a93a0cc84ad8e1c3d`:
 
 for any full quadratic polynomial on independent cap-one ORIGINAL coordinates and any disjoint physical cross block `M` with
 
@@ -60,7 +60,7 @@ No leverage gate is needed and arbitrary same-side curvature/outside couplings/a
 
 The required pinned source is
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. Its `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` were read. The completed result applied in Section 5 is D5:
 

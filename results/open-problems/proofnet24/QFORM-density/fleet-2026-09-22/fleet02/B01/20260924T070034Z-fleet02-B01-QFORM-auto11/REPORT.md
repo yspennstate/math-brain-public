@@ -25,7 +25,7 @@ The full QFORM conjecture remains OPEN.
 
 Required source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
@@ -61,7 +61,7 @@ The same pinned source's D/D'/D5 cross-volume results are tested on an actual ta
 
 Source:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -75,7 +75,7 @@ There is no leverage assumption and no affine-in-range assumption. I use (2.6) o
 
 Source:
 
-`yspennstate/math-open-problems@25a695084d9acb02a3c81da41ef3e23953fb1a34`
+`private-source-repository@25a695084d9acb02a3c81da41ef3e23953fb1a34`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T050513Z-fleet02-B01-qform-auto11/REPORT.md`.
 
@@ -90,7 +90,7 @@ The proof is an averaged-frequency argument: conditional Cauchy-Schwarz plus Pla
 
 The immediately preceding B01 result is
 
-`yspennstate/math-open-problems@fb7b0f71ead32ea608ff9ec45370edc246f7239e`
+`private-source-repository@fb7b0f71ead32ea608ff9ec45370edc246f7239e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T063552Z-fleet02-B01-qform-auto11-r46/REPORT.md`.
 
@@ -98,7 +98,7 @@ It pays every rank-one two-hub arrowhead with at least two nonzero leaf slopes b
 
 The newest compatible designated-partner fleet03/B01 theorem is
 
-`yspennstate/math-open-problems@17d8c84cf1b4bf67dab6340ffa0ea432c6feb8f6`
+`private-source-repository@17d8c84cf1b4bf67dab6340ffa0ea432c6feb8f6`
 
 with source addendum `7b617d334690a672477a5cd834bf27731d262ef4`, report
 

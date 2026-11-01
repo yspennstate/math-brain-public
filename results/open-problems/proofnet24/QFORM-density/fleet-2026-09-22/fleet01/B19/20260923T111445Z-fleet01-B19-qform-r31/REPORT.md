@@ -13,7 +13,7 @@ attacking: the strict-N3 high-star two-channel residue; choose the partner's sta
 
 The designated partner result is fleet02/B19 r32, read at
 
-`yspennstate/math-open-problems@4d1f394498f795b72de7694748aab2b3bd3030f1`
+`private-source-repository@4d1f394498f795b72de7694748aab2b3bd3030f1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T103645Z-fleet02-B19-QFORM-r32/REPORT.md`.
 
@@ -35,7 +35,7 @@ It proves that the leaf block `B=A[h^c,h^c]` has at least one eigenvalue of modu
 
 The completed unrestricted fifth-volume theorem is source-pinned at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 

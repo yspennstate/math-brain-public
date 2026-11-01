@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R20 / I0100 — STUCK RECOVERY 2 and six-run rotation handoff
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Canonical claim recovered: `operations/claims/I0100.md` (owner R20, CLOSABLE OUTSIDE).
 Outside source: Afonso S. Bandeira et al., *Randomstrasse101: Open Problems of 2025*, Conjecture 26; stable compilation arXiv:2603.29571.
 Source target:

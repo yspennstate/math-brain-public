@@ -83,7 +83,7 @@ Thus every fixed `(k,l)` component has density norm at most `1/(2sqrt(2)s)`. Mix
 
 ## Relation to the designated partner result
 
-The latest completed `fleet02/B17` result (`math-open-problems@5b85a3d5f95ea478f2534589aaf8729a4e1a29d6`) proved the exact `1/(2sqrt(2)s)` bound on the majority-sign one-sheet `q>=0` for arbitrary Gaussian location mixtures, and identified the off-axis negative two-sheet branch as unpaid. Theorem G closes that branch globally by a different mechanism: noncentral chi-square Poissonization plus gamma-shape additivity and `L^infinity` contraction under convolution. It does not use the live-refuted generic two-sheet X-ray shortcut.
+The latest completed `fleet02/B17` result (`private-source@5b85a3d5f95ea478f2534589aaf8729a4e1a29d6`) proved the exact `1/(2sqrt(2)s)` bound on the majority-sign one-sheet `q>=0` for arbitrary Gaussian location mixtures, and identified the off-axis negative two-sheet branch as unpaid. Theorem G closes that branch globally by a different mechanism: noncentral chi-square Poissonization plus gamma-shape additivity and `L^infinity` contraction under convolution. It does not use the live-refuted generic two-sheet X-ray shortcut.
 
 ## Stronger exact rotated stress family: all physical marginals iid
 
@@ -117,7 +117,7 @@ For the four rows `r_j` of `R0`, the latent limit is
 
 where the `S_j` are independent Skellam variables with Poisson parameters `(lambda/2,lambda/2)`. The location `M` now spans all of `R^3`; it is not restricted to either spectral sign subspace.
 
-Pinned Theorem F at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` still applies in the actual physical frame: every row leverage is `3/(4m)`, the Gram is `I_3`, and the residual is zero. Hence the complete output densities converge uniformly to that of
+Pinned Theorem F at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` still applies in the actual physical frame: every row leverage is `3/(4m)`, the Gram is `I_3`, and the residual is zero. Hence the complete output densities converge uniformly to that of
 
 `(G+M)^T B(G+M)`.
 

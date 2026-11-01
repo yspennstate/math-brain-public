@@ -53,7 +53,7 @@ No independence is asserted between the two projected coordinates.
 
 The volume-stability theorem actually used below is
 
-`math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -69,7 +69,7 @@ Its primary analytic inputs are Beckner's sharp Hausdorff--Young theorem and Lie
 
 The designated partner result is fleet04/B18 at
 
-`math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`
+`private-source@ce50e74f705c49f66524aa6565d4aa4a9be88061`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 

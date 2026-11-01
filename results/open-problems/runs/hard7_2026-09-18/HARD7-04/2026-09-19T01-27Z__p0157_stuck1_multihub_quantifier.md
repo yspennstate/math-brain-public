@@ -2,7 +2,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is n
 
 # HARD7-04 bounded research iteration — P0157 STUCK1: the multi-hub quantifier obstruction
 
-Date: 2026-09-19 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-19 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL; source residual OPEN. SECTION-I RECOVERY 1 OF AT MOST 2.** This is the mandatory thinking/recovery run triggered by the preceding third consecutive no-movement checkpoint. In accordance with Section I, I do **not** add another incremental lemma, checker, or closure claim. Instead I isolate the exact obstruction, inventory every route already tried, identify what is missing, and choose one recovery route.
 

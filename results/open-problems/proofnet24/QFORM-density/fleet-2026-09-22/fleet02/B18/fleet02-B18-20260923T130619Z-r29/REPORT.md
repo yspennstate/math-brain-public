@@ -40,7 +40,7 @@ Earlier exact scalar-bank, exact planar-bank, one-cut and one-pivot compilers al
 
 The latest compatible completed designated-partner theorem consumed here is fleet03/B18 r28:
 
-`yspennstate/math-open-problems@43b16ba3992035298289170540682e8aa62a9ad4`
+`private-source-repository@43b16ba3992035298289170540682e8aa62a9ad4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T120257Z-fleet03-B18-QFORM-r28/REPORT.md`.
 
@@ -68,7 +68,7 @@ This result is source-compatible with the owner class because its proof uses a j
 
 The partner in turn consumes the exact-null mixed-Fresnel theorem fleet03/B10 r24:
 
-`yspennstate/math-open-problems@c0d7e627b3b877fcecc3004a58335658f6541d64`
+`private-source-repository@c0d7e627b3b877fcecc3004a58335658f6541d64`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T114517Z-fleet03-B10-QFORM-r24/REPORT.md`.
 
@@ -78,7 +78,7 @@ That theorem identifies the transverse leverage gate exactly with the two-dimens
 
 The required source bundle
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 

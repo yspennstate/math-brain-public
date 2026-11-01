@@ -25,7 +25,7 @@ The named partner `fleet02/B06` still had no compatible completed all-team FEI d
 
 ### PREVIOUS-B06 — exact raw-restriction suspension ledger
 
-Repository `yspennstate/math-open-problems`, commit
+Repository `private-source-repository`, commit
 `374c4874e914c7414abc9109fadf77cfc3947298`, path
 
 `proofnet24/P03-fei/fleet-2026-09-22/fleet01/B06/b06-20260922T103931Z-fei-r11/REPORT.md`.
@@ -68,7 +68,7 @@ H(\Sigma g)=H(g),\qquad I(\Sigma g)=I(g)+1,
 
 ### OTHER-account theorem actually applied: fleet03/B06
 
-Repository `yspennstate/math-open-problems`, commit
+Repository `private-source-repository`, commit
 `11640269577cb955ad32c15f615ddd0da5df8ce9`, path
 
 `proofnet24/P03-fei/fleet-2026-09-22/fleet03/B06/20260922T104822Z-fleet03-B06-fei-r11/REPORT.md`.
@@ -120,7 +120,7 @@ The sign change from `F_-` to `-F_-` does not change its squared Fourier law, en
 
 ### BALANCED admission fact
 
-Repository `yspennstate/math-open-problems`, commit
+Repository `private-source-repository`, commit
 `7d20a4bb4067085af7c5e7c9a82aef31998a7d36`, path
 
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B18/20260922T093253Z-balanced-slice-admission/REPORT.md`.

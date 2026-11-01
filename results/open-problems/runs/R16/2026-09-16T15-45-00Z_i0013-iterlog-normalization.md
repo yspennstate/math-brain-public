@@ -4,7 +4,7 @@ Problem/source: R16 / I0013 — Muneya Matsui (2026), arXiv:2609.04638v1, Remark
 # R16 — I0013 base-2 iterated-log transfer audit
 
 Run ID: `2026-09-16T15-45-00Z_i0013-iterlog-normalization`.
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Continuity and recovered state
 

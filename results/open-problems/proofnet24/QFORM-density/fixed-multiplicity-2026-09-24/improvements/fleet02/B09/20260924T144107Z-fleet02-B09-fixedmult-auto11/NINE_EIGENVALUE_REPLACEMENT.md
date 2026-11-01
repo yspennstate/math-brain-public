@@ -2,7 +2,7 @@
 
 Run: `20260924T144107Z-fleet02-B09-fixedmult-auto11`  
 Status: **COMPLETE REPLACEMENT PROOF, independently reconstructed in this run**.  
-Pinned baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
+Pinned baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, manuscript blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
 
 This proof lowers the fixed multiplicity from 17 to 9. It preserves arbitrary dimension, signature, remaining spectrum, affine terms, and arbitrary independent real coordinate laws with only a density cap. It does **not** solve the unrestricted three-eigenvalue conjecture.
 

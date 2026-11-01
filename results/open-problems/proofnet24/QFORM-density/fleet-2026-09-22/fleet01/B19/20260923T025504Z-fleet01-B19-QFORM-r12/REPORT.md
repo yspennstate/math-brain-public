@@ -43,7 +43,7 @@ This is used below on actual disjoint original-coordinate banks.
 
 ### fleet01/B19 prior linear-square smoother
 
-From `yspennstate/math-open-problems@09bb706f11ea00995a61f0c7323bf67997c65932`, if `X` is independent of `(Y,Z)`, `p_X<=1`, `p_(Y,Z)<=H`, and
+From `private-source-repository@09bb706f11ea00995a61f0c7323bf67997c65932`, if `X` is independent of `(Y,Z)`, `p_X<=1`, `p_(Y,Z)<=H`, and
 
 `T=2sXY+aY^2+fZ^2`,
 

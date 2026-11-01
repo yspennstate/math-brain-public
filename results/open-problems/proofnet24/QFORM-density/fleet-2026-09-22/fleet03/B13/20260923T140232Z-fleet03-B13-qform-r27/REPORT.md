@@ -16,7 +16,7 @@ Full continuity: **OPEN**.
 
 Canonical mathematics:
 
-`yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
+`private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`.
 
@@ -31,7 +31,7 @@ and the right-hand supremum is unchanged if every `E_i` is required to be a boun
 
 Canonical proof:
 
-`yspennstate/math-open-problems@9d9e2369ad137664a48b1b7c6d682ddaed62bcad`
+`private-source-repository@9d9e2369ad137664a48b1b7c6d682ddaed62bcad`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T125929Z-fleet01-B13-qform-auto23/FRESNEL_RANGE_ADDENDUM.md`.
 

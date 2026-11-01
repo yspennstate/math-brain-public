@@ -13,7 +13,7 @@ Execution: **WITHOUT_VERIFIED_BRAIN**
 
 The immediate synthesis source is fleet03/B19 r37,
 
-`yspennstate/math-open-problems@735e91d0d47eb10655192981f38b7e965d23521a`,
+`private-source-repository@735e91d0d47eb10655192981f38b7e965d23521a`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T170040Z-fleet03-B19-qform-r37/REPORT.md`.
 
 Its unpaid exact common-plane receiver has three disjoint original-coordinate banks and two-dimensional orthogonal frames. In frame coordinates the pairwise cross matrices are `C,N,P`, with `N,P` invertible. The normalized cycle is
@@ -44,7 +44,7 @@ I also use the completed fleet03/B20 r34 physical-third-volume theorem:
 
 The designated partner actually applied is fleet04/B20 r10,
 
-`yspennstate/math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912`.
+`private-source-repository@c6f29397b3d45a7cf7ab67633a5451767b478912`.
 
 Its unrestricted fifth-volume theorem remains valid for every literal physical cross block and retains arbitrary same-bank terms and extra spectrum.
 

@@ -17,7 +17,7 @@ Two completed `fleet02/B14` sources are used below.
 
 1. Latest generic-closure report:
 
-`yspennstate/math-open-problems@9b3f83bd70880feb4c0ce0fb1820aa0efb335d20`
+`private-source-repository@9b3f83bd70880feb4c0ce0fb1820aa0efb335d20`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T214233Z-fleet02-B14-QFORM-generic-closure/REPORT.md`.
 
@@ -25,7 +25,7 @@ It proves zero-loss closure under total-variation approximation of the product l
 
 2. Pre-Jensen receiver report:
 
-`yspennstate/math-open-problems@6bc5027a5df12a2cd28130ded9fb53711eb90e39`
+`private-source-repository@6bc5027a5df12a2cd28130ded9fb53711eb90e39`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T173217Z-fleet02-B14-QFORM-r41/REPORT.md`.
 

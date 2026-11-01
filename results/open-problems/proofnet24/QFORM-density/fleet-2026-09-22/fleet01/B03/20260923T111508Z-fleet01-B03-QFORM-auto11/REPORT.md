@@ -15,7 +15,7 @@ The unrestricted conjecture remains OPEN. The theorem below is a product-coordin
 
 The one-dimensional integrated Fourier input is from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
@@ -27,13 +27,13 @@ The same source supplies the damped Fresnel linearisation and the rank-one Brasc
 
 The designated partner result actually applied is fleet02/B03 r12:
 
-`yspennstate/math-open-problems@9f2a751322a0351e12a855be56db1e78ea4a6154`
+`private-source-repository@9f2a751322a0351e12a855be56db1e78ea4a6154`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T101024Z-fleet02-B03-QFORM-r12/REPORT.md`,
 
 with its source-scope correction
 
-`yspennstate/math-open-problems@af2202db60286d57da95dd3f2aee934ed153f3e7`
+`private-source-repository@af2202db60286d57da95dd3f2aee934ed153f3e7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T101024Z-fleet02-B03-QFORM-r12/SUPPLEMENT.md`.
 
@@ -347,7 +347,7 @@ Then at least one of the following holds:
 
 The second structural statement is source-pinned to
 
-`yspennstate/math-open-problems@ba06ed6272b1929f19f39deaf99691f77a096d22`,
+`private-source-repository@ba06ed6272b1929f19f39deaf99691f77a096d22`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/.../REPORT.md`.
 

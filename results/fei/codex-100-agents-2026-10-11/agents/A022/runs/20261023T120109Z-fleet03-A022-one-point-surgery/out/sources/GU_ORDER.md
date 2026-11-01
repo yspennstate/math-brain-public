@@ -26,11 +26,11 @@ The detailed B01-B20 assignments, exact relevance gate, evidence requirements, k
 
 ## Original ownership and complete persistence
 
-Keep A001-A100 and all original B ownership. The canonical `yspennstate/math-open-problems/master/reports/fei-2026-10-11/STREAM_PACKET_INDEX.json`, `EXECUTION_PROTOCOL.json` and `assignments/Bnn.json` retain their evidence/acceptance interfaces. Older CASE_TARGETS supplies background only where consistent with this current focus. Do not rename mathematical work as a new worker pool.
+Keep A001-A100 and all original B ownership. The canonical `private-source-repository/master/reports/fei-2026-10-11/STREAM_PACKET_INDEX.json`, `EXECUTION_PROTOCOL.json` and `assignments/Bnn.json` retain their evidence/acceptance interfaces. Older CASE_TARGETS supplies background only where consistent with this current focus. Do not rename mathematical work as a new worker pool.
 
 Every substantive run saves complete REPORT.md, CLAIMS.json, PROGRESS.json, compatible PACKET_DELTA.json, proofs, code, actual outputs, failures and next action in the existing unique private destinations:
 
-- Canonical fleet01: `math-open-problems/master/reports/fei-2026-10-11/runs/Bnn/<UTC_RUN_ID>/`.
+- Canonical fleet01: `private-source/master/reports/fei-2026-10-11/runs/Bnn/<UTC_RUN_ID>/`.
 - Math Brain mirror: `math-research-brain/main/research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/Bnn/<UTC_RUN_ID>/`.
 
 Verify complete nonempty readback at the actual returned commit. If blocked, preserve full available work in the natural run response and record the exact failed operation. Never invent a save, circumvent a denial or substitute a summary for the full artifact. Distinguish configured, invoked, researched, saved, mirrored, reviewed and native-ingested states. Other accounts retain their actual producer namespaces. Only B20 reconciles shared mathematical indices from original evidence.

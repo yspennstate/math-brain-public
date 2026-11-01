@@ -23,7 +23,7 @@ The one-index-overlap third-compound packet is
 
 and globally `V_1(A)=sum ||P w||_2^2`. The completed fleet03/B02 theorem at
 
-`yspennstate/math-open-problems@c41a5ae669366b253862aa15277c401b932954ad`,
+`private-source-repository@c41a5ae669366b253862aa15277c401b932954ad`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T175727Z-fleet03-B02-qform-r36/REPORT.md`,
 
 pays the **kernel-curvature** component whenever
@@ -42,12 +42,12 @@ leaves an exact `kernel-shear` endpoint: `w^T P w=0` while `P w !=0`. The theore
 
 Two reviewed source facts are used quantitatively:
 
-1. The orthonormal projection-density estimate in `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`: an `r`-dimensional orthonormal projection of an independent cap-one product law has density at most `2^(r/2)`.
+1. The orthonormal projection-density estimate in `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`: an `r`-dimensional orthonormal projection of an independent cap-one product law has density at most `2^(r/2)`.
 2. The angular Fourier convention and Hausdorff--Young/Plancherel normalizations used in the same source and in the fleet03/B02 kernel-curvature report.
 
 The designated partner fleet04/B09 theorem used later is pinned at
 
-`yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`,
+`private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
 
 It states that a literal disjoint physical `3x3` cross block `K` gives a continuous density with

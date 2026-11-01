@@ -16,7 +16,7 @@ All random variables remain literal original independent source coordinates with
 
 The immediate source is fleet01/B09 r32, `QFORM-PROMOTED-LEAF-RETAINED-HUB-BL-v1`, at
 
-`yspennstate/math-open-problems@dd2f429f6135ce79e5801d58eca341a82d736527`,
+`private-source-repository@dd2f429f6135ce79e5801d58eca341a82d736527`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260924T065224Z-fleet01-B09-QFORM-auto11-r32/REPORT.md`.
 
@@ -54,7 +54,7 @@ The designated partner source actually applied below is fleet02/B09 r19,
 
 `QFORM-TWOHUB-DOUBLE-RETENTION-v1`,
 
-at `yspennstate/math-open-problems@6e6427a931f0c121990176664cc3870715edbead`,
+at `private-source-repository@6e6427a931f0c121990176664cc3870715edbead`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260924T064452Z-fleet02-B09-QFORM-r19/REPORT.md`.
 

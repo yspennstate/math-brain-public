@@ -10,7 +10,7 @@ in three independent cap-one variables. I claim the uniform slab bound below can
 
 Set theta=9/16.
 
-1. If some |B_ii|>=theta s, apply the completed scalar-Schur/rank-two half-Riesz theorem at `math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`.  For V=I_3 its ambient rank-three consequence gives
+1. If some |B_ii|>=theta s, apply the completed scalar-Schur/rank-two half-Riesz theorem at `private-source@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`.  For V=I_3 its ambient rank-three consequence gives
 
     ||p_P||_infinity <=128 (|B_ii| |det B|)^(-1/4)
                        <=128 theta^(-1/4) s^(-1)
@@ -31,7 +31,7 @@ and, comparing C to [[0,b],[b,0]],
       >= [sqrt((1-theta^2)/2)-theta]s
       = [(5 sqrt(14)-18)/32]s.
 
-The pair is necessarily indefinite. The completed pair-log theorem at `math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f` then gives, with the third-curvature scale s,
+The pair is necessarily indefinite. The completed pair-log theorem at `private-source@f7f0fedb2d93b46824f96cac1164af6f8a55626f` then gives, with the third-curvature scale s,
 
     ||p_P||_infinity <=8 sqrt(5) (D kappa s)^(-1/4)
       <116.183/s.

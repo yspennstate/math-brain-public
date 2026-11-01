@@ -48,7 +48,7 @@ Only titles and prompts were submitted. The returned hourly cadence, offsets, ti
 
 Each updated worker must show the explicit implication of its work to GU, spend the majority of the run on substantive mathematics, and change mechanism after three unchanged substantive attempts without renaming the gap. No movie/image work, generic Brain-maintenance diversion, publication work or unrelated problem is assigned.
 
-Every substantive result, partial proof, falsifier and failure must include complete REPORT, CLAIMS, PROGRESS, compatible PACKET_DELTA, proof/code/certificate/output files, commands, seeds, source pins and next action. Save to private math-open-problems/master `reports/fei-2026-10-11/runs/Bnn/<run>/`; mirror all artifacts to private math-research-brain/main `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/Bnn/<run>/`; verify complete nonempty readbacks at immutable returned commits. A summary or pointer is not a full mirror.
+Every substantive result, partial proof, falsifier and failure must include complete REPORT, CLAIMS, PROGRESS, compatible PACKET_DELTA, proof/code/certificate/output files, commands, seeds, source pins and next action. Save to private private-source/master `reports/fei-2026-10-11/runs/Bnn/<run>/`; mirror all artifacts to private math-research-brain/main `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/Bnn/<run>/`; verify complete nonempty readbacks at immutable returned commits. A summary or pointer is not a full mirror.
 
 Configuration and returned saved prompts were verified; post-revision natural mathematical execution and successful delivery for every worker have NOT been established. A native last-run timestamp is not a research-success receipt. Concurrent GU adoption records elsewhere in this package may describe the same local set; do not sum them as distinct cohorts.
 
@@ -68,7 +68,7 @@ The other two local B03 packages already matched. All four local B10 packages an
 
 ## Missing historical outputs now preserved as evidence
 
-Fresh source snapshot: math-open-problems `4a16555709214b313e181c00231efe8f6ac3c187`. The inspected canonical B02, B08 and B13 streams contained peer contributions but no fleet01 runs, while the initial designated fleet01 Brain tree had no B02/B08/B13 folders. Do not relabel fleet05/Claude output as local completion.
+Fresh source snapshot: private-source `4a16555709214b313e181c00231efe8f6ac3c187`. The inspected canonical B02, B08 and B13 streams contained peer contributions but no fleet01 runs, while the initial designated fleet01 Brain tree had no B02/B08/B13 folders. Do not relabel fleet05/Claude output as local completion.
 
 Original task-response retrieval did locate substantive local statements. The recovery package is now saved and fully read back at Brain commit `2c35977515c98c958052021d4bea604d61e56846`:
 

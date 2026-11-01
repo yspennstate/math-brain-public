@@ -21,7 +21,7 @@ This report does not use the refuted uniform pointwise quadratic-phase decay, ar
 
 Completed theorem `QFORM-DOUBLE-INCIDENT-RANK2-GROUPED-L3-v1`:
 
-- repository/commit: `yspennstate/math-open-problems@c248abc9be918698c6d5a68108c615ba1c4790b3`
+- repository/commit: `private-source-repository@c248abc9be918698c6d5a68108c615ba1c4790b3`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T204103Z-1dd824/REPORT.md`.
 
 For an exact-rank-two physical cross block C and fixed physical row j / column r,
@@ -42,7 +42,7 @@ where `C_grp=(2^(4/3)+1)sqrt(3)2^(1/4)<7.254`.
 
 fleet03/B08 `QFORM-BICOLOOP-NEAR-RANK2-SPECTRAL-GAP-v1`:
 
-- repository/commit: `yspennstate/math-open-problems@d5547a484fcc9b62341d80e9ba902cbe2e484284`
+- repository/commit: `private-source-repository@d5547a484fcc9b62341d80e9ba902cbe2e484284`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T201956Z-fleet03-B08-qform-diffuse-r20/REPORT.md`.
 
 In the only unpaid nonzero-pivot bicolop branch it supplies a physical cross block H, scale gamma>0, SVD

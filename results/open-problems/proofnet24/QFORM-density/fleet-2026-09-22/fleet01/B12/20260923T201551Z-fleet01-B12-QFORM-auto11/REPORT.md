@@ -24,7 +24,7 @@ This makes arbitrarily large global eigenvalues harmless when their physical ove
 
 The newest designated partner result actually used is fleet02/B12:
 
-- repository `yspennstate/math-open-problems`,
+- repository `private-source-repository`,
 - commit `c635fcdce6aa206c68f1f14e061cf617d72376fb`,
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/fleet02-B12-20260923T185321Z-r11/REPORT.md`,
 - theorem `QFORM-SIX-SQUARE-MODE-PAIR-COMPILER-v2`.

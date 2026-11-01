@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-12 — successor admission screen 1 after P0483 mandatory handoff
 
 Date: 2026-09-18 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track: `NM13-12`  
 Category: `HARD OUTSIDE`  
 Required shard: `int(SHA256(UTF-8 canonical dedup_key),16) mod 13 = 11`

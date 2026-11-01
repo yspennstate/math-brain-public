@@ -14,7 +14,7 @@ The full target remains open: arbitrary independent original-coordinate densitie
 
 The immediate designated-partner input is fleet03/B16 r26, canonical report
 
-`yspennstate/math-open-problems@a398a1c2e6e97683e3fe594fa19476929a882be6`
+`private-source-repository@a398a1c2e6e97683e3fe594fa19476929a882be6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T045948Z-fleet03-B16-QFORM-r26/REPORT.md`.
 
@@ -274,7 +274,7 @@ So (3.11) is not a localized-pivot result in disguise.
 
 The required source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was read at its `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` scopes. The completed result used here is Theorem C from `COUNTEREXAMPLE_SEARCH.md`: for a rank-three signature `(+, +, -)` product projection, the one-sheet side has the source-valid ruled-hyperboloid bound
 
@@ -320,13 +320,13 @@ retain the original product factors when the smoothing transverse square and the
 
 Required pinned Claude/source package actually used:
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`;
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`;
 - `COUNTEREXAMPLE_SEARCH.md`, Theorem C, used in (4.3);
 - `RESULTS.md` and `FOURIER_ROUTE_REPORT.md` reread for the live product/Fresnel scope and corrections.
 
 Designated partner proof actually read and used:
 
-- fleet03/B16 r26, `yspennstate/math-open-problems@a398a1c2e6e97683e3fe594fa19476929a882be6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T045948Z-fleet03-B16-QFORM-r26/REPORT.md`.
+- fleet03/B16 r26, `private-source-repository@a398a1c2e6e97683e3fe594fa19476929a882be6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T045948Z-fleet03-B16-QFORM-r26/REPORT.md`.
 
 Immediate own predecessor sharpening the current interface:
 

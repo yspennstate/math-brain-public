@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED**, not verifie
 # R13 run 11 — parametric Rademacher-tail compiler for finite-column Komlos bounds
 
 Run ID: `20260916T2231Z_parametric-tail-6e2a`  
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Target and continuity
 

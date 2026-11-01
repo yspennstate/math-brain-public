@@ -20,7 +20,7 @@ The completed designated-partner source is fleet02/B09 r18,
 
 at
 
-`yspennstate/math-open-problems@e03ae6cafb3cca423b4a2fab5c6aa0106cc319f4`,
+`private-source-repository@e03ae6cafb3cca423b4a2fab5c6aa0106cc319f4`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260924T055153Z-fleet02-B09-QFORM-r18/REPORT.md`.
 
@@ -56,7 +56,7 @@ and the identical coefficient gives `P{Q in L}<=C|L|` for every interval `L`.
 
 The previous fleet01/B09 r31 source is
 
-`yspennstate/math-open-problems@14ef2c833e502312b3e86d503933fa930a7f6f9e`,
+`private-source-repository@14ef2c833e502312b3e86d503933fa930a7f6f9e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260924T054443Z-fleet01-B09-QFORM-auto11-r31/REPORT.md`.
 

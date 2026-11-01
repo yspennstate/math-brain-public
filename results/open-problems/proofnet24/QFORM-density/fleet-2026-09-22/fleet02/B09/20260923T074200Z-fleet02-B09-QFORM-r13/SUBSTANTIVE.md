@@ -33,7 +33,7 @@ For a uniformly random original-coordinate bipartition T=I disjoint-union J,
 
 E e_5(B[I,J]^T B[I,J]) = 2^{-10} Omega_5(B).
 
-Hence some deterministic source-coordinate partition has Z_5 >=2^{-10}Omega_5. Applying the completed D_5 theorem from math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 yields, for the FULL quadratic form with arbitrary hub self-term, star couplings, dense A_II/A_JJ blocks, outside couplings, and affine terms,
+Hence some deterministic source-coordinate partition has Z_5 >=2^{-10}Omega_5. Applying the completed D_5 theorem from private-source@e5f71d79eff325201dd0274053d20268ce65b837 yields, for the FULL quadratic form with arbitrary hub self-term, star couplings, dense A_II/A_JJ blocks, outside couplings, and affine terms,
 
 ||p_Q||_infinity <= 10 sqrt(2e) Omega_5(B)^(-1/10),
 
@@ -42,7 +42,7 @@ and P{Q in interval L} <= same_constant * |L|.
 This is a direct linear small-ball estimate; the Fourier decoupling in D_5 does not create a square-root loss in interval length.
 
 ## Analytic continuation on the exact low-disjoint-rank branch
-After the completion lemma, write C=sum_{a=1}^r lambda_a v_a v_a^T, 1<=r<=4, and let c=A[L,h] be the literal source-coordinate hub star. Put W=[v_1,...,v_r,c], G=W^T W, d=r+1, whiten U=W G^{-1/2}, and let rho be the determinant-weighted probability that two iid Pluecker bases of U are disjoint. Combining the completed mixed-hub Fresnel reduction at e5f71d79... with `QFORM-PLUCKER-ENTROPY-BL-v1` (math-open-problems@32c257209b588141fb60af698f478f1d0ad20b8a) gives the new one-hub bound
+After the completion lemma, write C=sum_{a=1}^r lambda_a v_a v_a^T, 1<=r<=4, and let c=A[L,h] be the literal source-coordinate hub star. Put W=[v_1,...,v_r,c], G=W^T W, d=r+1, whiten U=W G^{-1/2}, and let rho be the determinant-weighted probability that two iid Pluecker bases of U are disjoint. Combining the completed mixed-hub Fresnel reduction at e5f71d79... with `QFORM-PLUCKER-ENTROPY-BL-v1` (private-source@32c257209b588141fb60af698f478f1d0ad20b8a) gives the new one-hub bound
 
 ||p_Q||_infinity <= ((r+2)/r) exp((r+1)/(r+2))
   [rho det(G) prod_a |lambda_a|]^(-1/(r+2)).

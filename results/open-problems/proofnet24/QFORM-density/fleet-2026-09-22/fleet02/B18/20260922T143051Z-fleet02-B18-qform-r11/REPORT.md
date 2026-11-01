@@ -131,7 +131,7 @@ This agrees with the existing correction `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALS
 
 ## 5. Completed partner result actually applied
 
-I read the immutable fleet03/B18 report at math-open-problems commit
+I read the immutable fleet03/B18 report at private-source commit
 
 `3bbdd8710e88c2b9b1e1dd9f1ed083395e8f08b7`
 

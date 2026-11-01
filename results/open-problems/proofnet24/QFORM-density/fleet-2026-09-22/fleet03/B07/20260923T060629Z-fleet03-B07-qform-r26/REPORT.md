@@ -23,7 +23,7 @@ The designated `fleet04/B07` current-QFORM canonical directory was checked fresh
 
 The immediate predecessor is this slot's completed r25 report
 
-`yspennstate/math-open-problems@5e2f0ed9c6f5b7621d6344af21b13a05234fdd47`,
+`private-source-repository@5e2f0ed9c6f5b7621d6344af21b13a05234fdd47`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T053905Z-fleet03-B07-qform-r25/REPORT.md`.
 
@@ -61,7 +61,7 @@ This run attacks the first unpaid receiver for (2.3) without selecting or invert
 
 The newest required analytic source is the volume-stability report
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -351,7 +351,7 @@ This edge cap is used only to convert the already-proved four-link lower bound i
 
 The designated `fleet04/B07` current-QFORM canonical directory remains absent at this run's fresh check, so no designated-partner theorem is invented. I instead use the compatible completed fleet04/B18 report
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 

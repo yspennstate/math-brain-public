@@ -13,7 +13,7 @@ attacking: the first unpaid high-volume/high-marginal edge-times-E2 branch by a 
 
 The target remains unrestricted: independent ORIGINAL real coordinates with densities at most one and a real symmetric matrix having at least three eigenvalues of modulus at least one. No moments, support restrictions, log-concavity, identical laws, diagonal-basis independence, or post-rotation independence are used.
 
-The required newest Claude package was used at its actual scopes: D' on third exterior volume, D5 on fifth exterior volume, and the reviewed sharp Hausdorff--Young refinement. The latest designated `fleet03/B02` result was also consumed: `QFORM-PAIR-TRUE-SCHUR-E2-UNCONDITIONAL-v1` at `yspennstate/math-open-problems@40bf94187444ad5a6008bcf4b06931689b0e7383`, which pays the invertible-indefinite TRUE-pair-Schur E2 branch without an E2 marginal gate.
+The required newest Claude package was used at its actual scopes: D' on third exterior volume, D5 on fifth exterior volume, and the reviewed sharp Hausdorff--Young refinement. The latest designated `fleet03/B02` result was also consumed: `QFORM-PAIR-TRUE-SCHUR-E2-UNCONDITIONAL-v1` at `private-source-repository@40bf94187444ad5a6008bcf4b06931689b0e7383`, which pays the invertible-indefinite TRUE-pair-Schur E2 branch without an E2 marginal gate.
 
 Two corrections are essential here. First, the current `fleet03/B02` r21 repair shows that the cross-only anchored Schur packet need not equal the TRUE physical-pair Schur packet when same-side anchor couplings are present. Second, the fresh `QFORM-UNIFORM-MATRIX-PERTURBATION-CONTINUITY-FALSE-v1` correction forbids treating a small matrix perturbation as a law-uniformly small output perturbation. The new argument below uses neither identification nor perturbative passage: it works directly in the exact physical cross block under one-sided Weyl differencing.
 
@@ -306,7 +306,7 @@ If both disjointness parameters are `<1/16`, (5.4) instead forces more than `7/8
 
 The latest compatible completed `fleet03/B02` theorem is `QFORM-PAIR-TRUE-SCHUR-E2-UNCONDITIONAL-v1`, source
 
-`yspennstate/math-open-problems@40bf94187444ad5a6008bcf4b06931689b0e7383`,
+`private-source-repository@40bf94187444ad5a6008bcf4b06931689b0e7383`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T053047Z-fleet03-B02-qform-auto11/REPORT.md`.
 

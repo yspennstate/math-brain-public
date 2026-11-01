@@ -14,7 +14,7 @@ The exact owner target remains unchanged. All random coordinates below are ORIGI
 
 Immediate predecessor:
 
-- `yspennstate/math-open-problems@434d3ab3168164b38fdba61456e35e747a67bea3`;
+- `private-source-repository@434d3ab3168164b38fdba61456e35e747a67bea3`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260924T012005Z-fleet01-B02-qform-auto11-r42/REPORT.md`.
 
 Its exact low-third-volume identity is
@@ -25,7 +25,7 @@ and it reduces a literal block with `E2>4/9` to an `E3` Fourier exit, a giant ne
 
 The designated fleet02/B02 result applied below is the current completed marginal-free physical-third-volume Fourier theorem, pinned at
 
-- `yspennstate/math-open-problems@fd2df23554ecd9d2e0f1dc05e74974645a210922`;
+- `private-source-repository@fd2df23554ecd9d2e0f1dc05e74974645a210922`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260924T011009Z-fleet02-B02-qform-auto11/REPORT.md`.
 
 For every literal ORIGINAL-coordinate cross block `B=A[I,J]`, `I cap J=emptyset`, with `Z3=E3(B)>0`, it gives
@@ -38,8 +38,8 @@ and a continuous `C0` density.
 
 I also use my earlier aggregate rank-two spectral-plane transfer and finite-rank carrier fork:
 
-- `yspennstate/math-open-problems@1084cf8ec8916b7e5b9754cbb7ebad2a4c29cf4`, r37;
-- `yspennstate/math-open-problems@38ff5f34b3b87c21d44b8e6fd12646e496436234`, r38.
+- `private-source-repository@1084cf8ec8916b7e5b9754cbb7ebad2a4c29cf4`, r37;
+- `private-source-repository@38ff5f34b3b87c21d44b8e6fd12646e496436234`, r38.
 
 The coordinate-core receiver used only in a secondary bounded-density exit is fleet04/B07, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 

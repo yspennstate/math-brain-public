@@ -31,7 +31,7 @@ Fresh programme controls mark the unrestricted conjecture and the full continuit
 
 Source:
 
-`yspennstate/math-open-problems@5a750c5b1188ea297a92c01b9692de5d87ab7f4c`
+`private-source-repository@5a750c5b1188ea297a92c01b9692de5d87ab7f4c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260924T041020Z-fleet01-B01-qform-auto11-r12/REPORT.md`.
 
@@ -61,7 +61,7 @@ This is product-preserving and uses distribution-function / joint-frequency esti
 
 Source:
 
-`yspennstate/math-open-problems@522585af1e80eff6ad75808d7e3be55a3a2bc8ac`
+`private-source-repository@522585af1e80eff6ad75808d7e3be55a3a2bc8ac`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T070034Z-fleet02-B01-QFORM-auto11/REPORT.md`.
 
@@ -81,7 +81,7 @@ The partner proof itself uses original-coordinate spectral allocation, a physica
 
 Source:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 

@@ -8,7 +8,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — no authentica
 
 **Publication novelty:** `UNVERIFIED`. A bounded repository search for `pure odd distance bipartite cutoff` and bounded web searches for `exact distance three graph random walk cutoff Ramanujan`, `distance-3 graph cutoff random walk Ramanujan`, and variants did not recover a matching ordinary-SRW theorem. This is negative evidence only, not a priority certificate.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 Run root: `proofnet24/P26-progress-cutoff-transfer/runs/2026-09-20/`.
 

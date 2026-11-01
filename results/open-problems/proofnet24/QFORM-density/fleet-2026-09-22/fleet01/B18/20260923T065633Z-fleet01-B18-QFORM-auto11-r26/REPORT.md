@@ -32,7 +32,7 @@ This is only a joint density cap; no independence between the two image coordina
 
 The completed fleet02/B18 theorem is `QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1`, source
 
-`yspennstate/math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`,
+`private-source-repository@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`.
 

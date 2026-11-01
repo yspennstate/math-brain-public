@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this was no
 # P20 successor admission — Fokam–Bitjoka cyclic interval conjecture
 
 Date: **2026-09-18 UTC**.  
-Repository: `yspennstate/math-open-problems`, branch `master`.  
+Repository: `private-source-repository`, branch `master`.  
 Category: **CLOSABLE OUTSIDE**.
 
 Canonical claim created this run:

@@ -5,7 +5,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 Date: 2026-09-17 UTC  
 Track: NM13-08  
 Category: CLOSABLE OUTSIDE  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Own namespace: `proofnet24/NM13-08/`
 
 ## 1. Continuity, ownership, and controlling state

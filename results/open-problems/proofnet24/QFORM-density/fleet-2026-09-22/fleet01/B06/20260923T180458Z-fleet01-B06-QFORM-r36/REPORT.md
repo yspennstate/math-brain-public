@@ -163,7 +163,7 @@ No perturbative deletion of `beta B` is allowed here because the input laws can 
 
 Use completed partner theorem `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical source
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
 
 If `w,v,b` are supported on three pairwise disjoint original-coordinate banks, then `L,V,B` are independent, and the partner theorem gives the actual inequalities
 
@@ -179,7 +179,7 @@ Convolution with independent `beta B` cannot increase this supremum, and indepen
 
 for **every** `beta`, including zero. Thus the entire small-beta problem is already paid at the exact disjoint-bank endpoint.
 
-The newer fleet02/B06 fused-concentration handoff `math-open-problems@e06fb19a6918caacb1b9848ed248f43a9886526b` is compatible with the same splice: if a fused packet concentrates on at most two original coordinates it forces either localized square mass or a quantitative transverse residual hub. I do not promote that structural statement to a complete receiver here; its own handoff records the remaining transverse-chain-hub step.
+The newer fleet02/B06 fused-concentration handoff `private-source@e06fb19a6918caacb1b9848ed248f43a9886526b` is compatible with the same splice: if a fused packet concentrates on at most two original coordinates it forces either localized square mass or a quantitative transverse residual hub. I do not promote that structural statement to a complete receiver here; its own handoff records the remaining transverse-chain-hub step.
 
 ## 6. New exact obstruction: physical-pair coarea summation loses linearly even in a perfectly diffuse frame
 

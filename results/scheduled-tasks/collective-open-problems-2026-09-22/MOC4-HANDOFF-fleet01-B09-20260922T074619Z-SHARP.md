@@ -38,4 +38,4 @@ The same statement holds for mixed-Schur column edges with the column covariance
 
 Scientific report commit: `e9818a17f7655970420fbc3bd4a4e5059c21aa2d`.  
 Sharp addendum commit: `b5bbe1cca9667c311f72d7f0f5086194df51d21a`.  
-Paths: `proofnet24/collective-MOC4/fleet01/B09/20260922T074619Z-b09-moc4-r11/REPORT.md` and `ADDENDUM_SHARP_CEILING.md` in `yspennstate/math-open-problems`.
+Paths: `proofnet24/collective-MOC4/fleet01/B09/20260922T074619Z-b09-moc4-r11/REPORT.md` and `ADDENDUM_SHARP_CEILING.md` in `private-source-repository`.

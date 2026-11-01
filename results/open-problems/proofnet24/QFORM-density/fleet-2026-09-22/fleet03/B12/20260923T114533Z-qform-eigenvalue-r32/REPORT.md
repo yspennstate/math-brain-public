@@ -24,14 +24,14 @@ No post-rotation independence is used. Singular-value decompositions below are d
 
 Completed designated partner actually applied:
 
-- `yspennstate/math-open-problems@3948d77b0bde5af1bd37cd7c975d4f540eba901b`
+- `private-source-repository@3948d77b0bde5af1bd37cd7c975d4f540eba901b`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T081758Z-fleet04-B12-complementary-schur-shield-r4/REPORT.md`.
 
 The exact congruence factorization and singular-value inequality in its equations (4.7)--(4.10) are used in Section 6 below.
 
 Newest required volume source actually applied:
 
-- `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+- `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 - `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 Its stable original-coordinate cross-block theorem is used in Section 7.

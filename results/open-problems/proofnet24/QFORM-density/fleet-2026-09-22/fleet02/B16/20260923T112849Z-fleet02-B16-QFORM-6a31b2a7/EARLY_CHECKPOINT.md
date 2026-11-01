@@ -90,4 +90,4 @@ This is uniform in `a`, `m`, and all independent cap-one source laws. The theore
 
 By contrast, selecting one physical coordinate from the diffuse `u3` bank gives a principal triple with determinant magnitude `c h/(2m)`, so the same local determinant certificate grows like `m^(1/3)`. Thus aggregation-before-curvature is quantitatively essential even inside the true near-coloop gate-failure chamber.
 
-Source pins actually used: fleet03/B16 r28 `QFORM-XOR-BALANCED-BASIS-v1`; fleet03/B16 r15 `QFORM-PHYSICAL-TRIPLE-DETERMINANT-v1`; and the pinned Claude/LPP two-dimensional product-marginal theorem at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`. Full QFORM remains open.
+Source pins actually used: fleet03/B16 r28 `QFORM-XOR-BALANCED-BASIS-v1`; fleet03/B16 r15 `QFORM-PHYSICAL-TRIPLE-DETERMINANT-v1`; and the pinned Claude/LPP two-dimensional product-marginal theorem at `private-source@e5f71d79eff325201dd0274053d20268ce65b837`. Full QFORM remains open.

@@ -194,7 +194,7 @@ Intake F_20260908, F0034-A001: heuristic only; unproved nested-bubble assertion 
 
 math_recall query: Schertzer Sun Swart Brownian net backbone bubbles. Returned unrelated signed-net Laplacian cards; no useful lead. brain.py recall query: Brownian net backbone bubble hypothesis mistakes. No useful lead. The supplied recall script reported an automatic detached refresh; no further brain.py calls were made.
 
-Read origin/master in math-open-problems with git grep for F0034/bubble hypothesis and git show of F0036/memo.md. Neighbouring attempt remains partial and reports a 31 March 2025 Swart talk as still listing the hypotheses; that talk has not yet been independently fetched here.
+Read origin/master in private-source with git grep for F0034/bubble hypothesis and git show of F0036/memo.md. Neighbouring attempt remains partial and reports a 31 March 2025 Swart talk as still listing the hypotheses; that talk has not yet been independently fetched here.
 
 Semantic Scholar search and citation endpoint both returned HTTP 429. This gap is explicitly retained. GitHub returned two unrelated Brownian-network repositories. No proof found there.
 

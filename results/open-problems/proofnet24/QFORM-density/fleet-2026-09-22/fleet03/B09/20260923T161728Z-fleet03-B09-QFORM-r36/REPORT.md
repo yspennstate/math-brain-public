@@ -31,7 +31,7 @@ The present result removes `E` entirely in a substantial subbranch.
 
 The regularized-determinant theorem from
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 at
 
@@ -179,7 +179,7 @@ This is an actual application of the designated partner result and illustrates p
 
 Partner `fleet04/B09` proved `QFORM-PHYSICAL-CROSS-DETERMINANT-SMOOTHING-v1` at
 
-`yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`
+`private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`
 
 with canonical report
 

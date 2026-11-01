@@ -18,8 +18,8 @@ I consumed the three required route corrections from the current programme state
 
 The named partner `fleet03/B02` had no completed current-programme handoff at the fresh snapshot, so I did not wait. I applied two exact peer sources instead.
 
-* `fleet02/B15`, immutable report `yspennstate/math-open-problems@289810e1f075755898f573ee5b863ad3fa9af5b8:qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`, proves a three-physical-coordinate theorem but exhibits a flat rank-three Hadamard projector for which every fixed principal triple is small.
-* `fleet02/B06`, immutable report `yspennstate/math-open-problems@6902eb62f21a7c833ca27dcca69f34d50e711a7d:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`, strengthens the obstruction to the indefinite Hadamard family `A=U diag(1,1,-1)U^T`, where every fixed-size physical compression has norm `O(m/n)`.
+* `fleet02/B15`, immutable report `private-source-repository@289810e1f075755898f573ee5b863ad3fa9af5b8:qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`, proves a three-physical-coordinate theorem but exhibits a flat rank-three Hadamard projector for which every fixed principal triple is small.
+* `fleet02/B06`, immutable report `private-source-repository@6902eb62f21a7c833ca27dcca69f34d50e711a7d:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`, strengthens the obstruction to the indefinite Hadamard family `A=U diag(1,1,-1)U^T`, where every fixed-size physical compression has norm `O(m/n)`.
 
 The external analytic input is Mark Rudelson and Roman Vershynin, *Small Ball Probabilities for Linear Images of High-Dimensional Distributions*, IMRN 2015, no. 19, 9594–9617, DOI `10.1093/imrn/rnu243`, arXiv `1402.4492`. I use their Lemma 3.1 and Proposition 5.1 **at the proof level**, not merely the stated projection-density conclusion. In the small-coordinate regime `||Pe_i||<=1/2`, their Brascamp–Lieb argument proves an absolute Fourier integral bound
 

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R17 C077 — G0004 recovery 2/2: full Flammant quantifiers on `K_{3,n}` and a larger bipartite class
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R17, HARD OUTSIDE.  
 Status: **OPEN / PARTIAL. Recovery 2/2 produced a source-valid nonplanar theorem, but the fixed source-wide metric is unchanged.**
 

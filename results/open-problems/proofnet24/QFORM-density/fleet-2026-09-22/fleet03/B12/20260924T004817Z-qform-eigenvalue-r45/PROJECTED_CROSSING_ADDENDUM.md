@@ -2,7 +2,7 @@
 
 This addendum consumes the later owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`, which specifically asks B09--B12 workers to apply `NEW_PROJECTED_CROSSING.md` to an actual surviving physical partition and check the rank, projected volume and all row-marginal gates.
 
-Source theorem: `yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
+Source theorem: `private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 ## Actual original-coordinate partition
 

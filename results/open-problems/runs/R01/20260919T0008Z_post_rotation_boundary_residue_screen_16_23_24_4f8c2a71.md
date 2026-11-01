@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # R01 — post-rotation boundary-residue admission screen: owner-bound exact candidates, fresh alpha=2 PAM boundary is HARD not CLOSABLE
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R01  
 Category: CLOSABLE OUTSIDE
 

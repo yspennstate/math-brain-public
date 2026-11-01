@@ -294,7 +294,7 @@ The full conjecture remains `OPEN / NOT PROVED`.
 
 Fresh controls immediately before publication: `yspennstate/math-research-brain@026692a030fc864d59bccb110245e7f5491482c3`, owner revision `2026-09-22.5`; live correction inbox blob `b9bf5f3faf9e9725becf7fbbdad56ee5ba9c0d50`.
 
-Mathematical dependencies were retrieved from `yspennstate/math-open-problems` on `master` at commit `e58461e07b19315b290cb4b397929090ec6f48b9`:
+Mathematical dependencies were retrieved from `private-source-repository` on `master` at commit `e58461e07b19315b290cb4b397929090ec6f48b9`:
 
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/fleet03-B19-20260922T123215Z-186f53a8/REPORT.md` (`QFORM-DIFFUSE-RANK2-L3-v1`);
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260922T125623Z-r11-product-fourier/REPORT.md` (`QFORM-LINEAR-FORM-L2-CAP-v1`);

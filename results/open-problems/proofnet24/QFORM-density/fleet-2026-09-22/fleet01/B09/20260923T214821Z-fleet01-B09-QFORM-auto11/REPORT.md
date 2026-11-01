@@ -19,7 +19,7 @@ The following completed results are used at their exact scopes.
 ### 1.1 No-marginal physical third-volume receiver
 
 Source:
-`yspennstate/math-open-problems@8a4e6d0048174e047fc3b4ae8cabfbabba3cdc3b`,
+`private-source-repository@8a4e6d0048174e047fc3b4ae8cabfbabba3cdc3b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T165154Z-fleet01-B20-QFORM-auto11/NO_MARGINAL_D3.md`.
 
 For a literal original-coordinate cut `I|J`, if
@@ -39,7 +39,7 @@ Arbitrary same-bank curvature, diagonals, exterior coordinates and exterior coup
 ### 1.2 Rank-two fractional half-Riesz receiver
 
 Source:
-`yspennstate/math-open-problems@936b0f0bad22de82921c2a743fb0738226270348`,
+`private-source-repository@936b0f0bad22de82921c2a743fb0738226270348`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T013054Z-auto11/REPORT.md`.
 
 For disjoint original-coordinate banks and
@@ -72,7 +72,7 @@ This receiver gives absolute continuity / essential boundedness; continuity is n
 ### 1.3 Latest designated partner fleet02/B09 theorem
 
 Source:
-`yspennstate/math-open-problems@65ed9ea70175fb28541d756aea01f6aeb491fd6c`,
+`private-source-repository@65ed9ea70175fb28541d756aea01f6aeb491fd6c`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T201318Z-fleet02-B09-QFORM-r14/REPORT.md`.
 
 `QFORM-3x2-KERNELDERIVATIVE-L1-v1`: for literal `|L|=3`, `|R|=2`, `P=A[L,L]`, rank-two `C=A[L,R]` with columns `c1,c2`, `w=c1 x c2`, if `P w !=0`, then the full ambient form, retaining arbitrary same-side curvature and outside couplings, has a continuous density and

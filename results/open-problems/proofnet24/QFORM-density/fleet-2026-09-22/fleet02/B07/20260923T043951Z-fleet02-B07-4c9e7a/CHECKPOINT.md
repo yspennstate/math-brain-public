@@ -4,8 +4,8 @@ Programme `QFORM-DENSITY-3EIG-20260922`; full conjecture remains OPEN. This run 
 
 Sources already consumed at equations:
 
-- designated partner fleet03/B07 r23: `math-open-problems@e24329a6a315b96a87b3efc608473ef0554f3b8d`, giving the actual physical block `M`, `F=||M||_F`, the inherited rank-3 scale `s3(M)>=a=theta F/sqrt(12)`, and on the incident branch `sqrt(Z_ia) > (11 theta^2/98304) F^2`;
-- required Claude/e5 D' theorem: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, giving `||p_Q||_inf <= 9 sqrt(3e) E3(M)^(-1/6)` whenever one side of the third-volume law has all inclusion marginals at most `2/3`.
+- designated partner fleet03/B07 r23: `private-source@e24329a6a315b96a87b3efc608473ef0554f3b8d`, giving the actual physical block `M`, `F=||M||_F`, the inherited rank-3 scale `s3(M)>=a=theta F/sqrt(12)`, and on the incident branch `sqrt(Z_ia) > (11 theta^2/98304) F^2`;
+- required Claude/e5 D' theorem: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, giving `||p_Q||_inf <= 9 sqrt(3e) E3(M)^(-1/6)` whenever one side of the third-volume law has all inclusion marginals at most `2/3`.
 
 ## New calculation
 

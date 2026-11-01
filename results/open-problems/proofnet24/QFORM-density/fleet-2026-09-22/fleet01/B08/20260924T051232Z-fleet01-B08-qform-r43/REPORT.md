@@ -18,7 +18,7 @@ No moment, bounded-support, connected-support, Gaussian, log-concavity, iid, dia
 
 Source pin:
 
-`yspennstate/math-open-problems@d904e910bf8f33151faa938fd501e4358fb8d58d`,
+`private-source-repository@d904e910bf8f33151faa938fd501e4358fb8d58d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T214909Z-fleet02-B08-qform-diffuse-r28/REPORT.md`.
 
 Its completed theorem says: if `s_3(A)>=L` and some invertible ORIGINAL-coordinate principal pair `B` satisfies
@@ -44,7 +44,7 @@ These two displayed source estimates are the only ingredients needed for the all
 
 At the immutable current source snapshot
 
-`yspennstate/math-open-problems@1d81e62c818d6b592a6a6da78870f12f533d615a`,
+`private-source-repository@1d81e62c818d6b592a6a6da78870f12f533d615a`,
 `proofnet24/QFORM-density/interactive/20260923T192150Z-all-sign-scalar-pivot/REPORT.md`,
 
 if `s_3(A)>=L` and an ORIGINAL diagonal coefficient `a=A_ii` is nonzero, then
@@ -61,12 +61,12 @@ This is an essential-boundedness theorem; continuity is not asserted there.
 
 The present B08 predecessor is
 
-`yspennstate/math-open-problems@209e9a8756cdab08ef8fb12c49d1d46934742b9c`,
+`private-source-repository@209e9a8756cdab08ef8fb12c49d1d46934742b9c`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260924T033839Z-fleet01-B08-qform-r42/REPORT.md`.
 
 The newer quantitative three-frame half-cut/crossing refinement is source-pinned at
 
-`yspennstate/math-open-problems@1d81e62c818d6b592a6a6da78870f12f533d615a`,
+`private-source-repository@1d81e62c818d6b592a6a6da78870f12f533d615a`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T042041Z-fleet03-B08-qform-diffuse-r50/REPORT.md`.
 
 For a diffuse leading three-eigenvector frame, r50 proves: either

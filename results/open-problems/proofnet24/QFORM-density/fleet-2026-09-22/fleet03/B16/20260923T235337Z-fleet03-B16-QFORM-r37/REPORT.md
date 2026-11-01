@@ -16,13 +16,13 @@ The exact owner target remains: for every dimension, every independent real orig
 
 The analytic input is the completed grouped projected-crossing theorem
 
-`yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`
+`private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 The designated partner input is fleet04/B16 r3,
 
-`yspennstate/math-open-problems@c47c53d4ef3e255431a6fb13960de1794bf2698f`
+`private-source-repository@c47c53d4ef3e255431a6fb13960de1794bf2698f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260923T211939Z-fleet04-B16-QFORM-r3/REPORT.md`.
 

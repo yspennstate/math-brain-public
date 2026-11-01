@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-B — quenched quadratic-energy concentration and a target-specific collision reduction
 
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Fresh pre-write master:** `8f85da4e95b29db2a06e796daae82b91cc5a458d`  
 **Previous own substantive report:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T1508+0300__selected_quadratic_energy_scale_sharpness.md`.  
 **Complementary P07-A checkpoint read:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1544+0300__affine_barrier_buffered_hinge_repair.md`. P07-A owns the primal positive-certificate / buffered-hinge route; this report stays on the Fourier-dual quadratic interpolation obstruction.

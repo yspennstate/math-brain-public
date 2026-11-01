@@ -3,7 +3,7 @@
 **Status:** **PARTIAL. Full Friedgut--Kalai Fourier entropy--influence (FEI) remains OPEN / NOT PROVED.**  
 **Execution:** `WITHOUT_VERIFIED_BRAIN`.  
 **Primary route:** APPROACH 7 (larger composition/read-twice class), informed by the killed APPROACH 3 sensitivity coupling and APPROACH 14 point-process relaxations.  
-**Fresh source state used:** `yspennstate/math-open-problems` master was refreshed during this run; the standing read-once continuation and newest B17 artifacts were read before this derivation.  
+**Fresh source state used:** `private-source-repository` master was refreshed during this run; the standing read-once continuation and newest B17 artifacts were read before this derivation.  
 **Novelty:** no literature-priority claim is made.
 
 ## 1. What moved

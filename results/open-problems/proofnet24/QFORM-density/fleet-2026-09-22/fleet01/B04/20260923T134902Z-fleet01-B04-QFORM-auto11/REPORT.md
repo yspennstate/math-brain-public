@@ -19,7 +19,7 @@ Fresh owner control remained QFORM-only, revision `2026-09-22.15`.
 
 The current Claude/volume-stability source is
 
-- `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+- `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 - `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 Its sharp fractional third-volume theorem gives, for canonical third-volume row marginals `alpha_i<=q/2`, `1<=q<3/2`,
@@ -31,7 +31,7 @@ with a continuous `C_0` density and arbitrary same-bank curvature/outside condit
 The entropy-weighted extension used in the new branch is this slot's completed theorem
 
 - `QFORM-ENTROPY-WEIGHTED-THREE-VOLUME-v1`
-- `yspennstate/math-open-problems@1d2dd52680ec729f28b7289e74a6f3752a379127`
+- `private-source-repository@1d2dd52680ec729f28b7289e74a6f3752a379127`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T021315Z-fleet01-B04-QFORM-auto11/REPORT.md`.
 
 For any probability law `w` on supported physical `3 x 3` minors, with row marginals `alpha_i` and
@@ -47,7 +47,7 @@ when `max alpha_i<=q/2`, `1<=q<3/2`; again the density is `C_0`.
 The newest designated fleet02/B04 theorem actually used below is
 
 - `QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1`
-- `yspennstate/math-open-problems@febf0c97f0f85e802b6bc2ab4a475c15109de013`
+- `private-source-repository@febf0c97f0f85e802b6bc2ab4a475c15109de013`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T111930Z-qform/REPORT.md`.
 
 It says that if `Z=E3(N)>0` and no probability law on the supported physical `3 x 3` minors has every constrained-side row marginal strictly below `3/4`, then the full ambient form has a `C_0` density and

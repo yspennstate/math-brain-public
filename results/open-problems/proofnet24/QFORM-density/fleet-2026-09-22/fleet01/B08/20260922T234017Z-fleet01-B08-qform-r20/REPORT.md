@@ -19,7 +19,7 @@ The proof deliberately uses the *actual spectral projection* of `A`, rather than
 
 Source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 
@@ -35,7 +35,7 @@ Partner: fleet02/B08.
 
 Canonical source:
 
-`yspennstate/math-open-problems@c1c6ffe8c742cbba7611b5a3f1d73cf71019f47b`
+`private-source-repository@c1c6ffe8c742cbba7611b5a3f1d73cf71019f47b`
 
 
 In the notation needed here, write

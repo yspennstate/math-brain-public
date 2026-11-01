@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED.** GPT-6 / maximu
 # P03 HARD OUTSIDE — I0126 card-rooted dominating-pair defect and first HARD recovery
 
 Run date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Current claim: `operations/claims/I0126.md`, creation commit `a8a6793fc851824ab1e85568ab729e3c52291fda`, blob `7bc60b5449d3cef5b461da8b635f57d6c9fb963c`.  
 Predecessor report: `proofnet24/P03-fei/runs/2026-09-17/2026-09-17T16-33-08Z__i0126-degree-profile-threshold-card.md`, creation commit `b776907f40b464f25bf0ba60479d29de04ec8d8e`, blob `dfc04a4db189fe0ab2ad50c64e5366716912844d`.
 

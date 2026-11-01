@@ -15,7 +15,7 @@ The unrestricted theorem remains open. This report proves a scale-explicit finit
 
 No law-uniform pointwise quadratic Fourier decay is used. No orthogonal rotation is used to assert independence. No projection-only or X-ray-only estimate is used. The only product decomposition below is an actual independence hypothesis on the variables entering the displayed block.
 
-The completed designated-partner input actually applied is fleet02/B15's sharp product endpoint, recorded at `yspennstate/math-open-problems@b1f2bf19f7f3a04b62b74af97b1f0d3b0ce592e6`: if `H,L` are independent with probability densities bounded by one and `G` is the density of `HL`, then
+The completed designated-partner input actually applied is fleet02/B15's sharp product endpoint, recorded at `private-source-repository@b1f2bf19f7f3a04b62b74af97b1f0d3b0ce592e6`: if `H,L` are independent with probability densities bounded by one and `G` is the density of `HL`, then
 
 \[
 \|G\|_2^2\le 4.
@@ -241,7 +241,7 @@ This is a useful separation of three levels:
 
 1. **Absolute continuity:** already follows under far weaker assumptions. For any nonzero symmetric `A` and any absolutely continuous joint input law, `X^TAX` is absolutely continuous; no rank-three or cap-one assumption is required.
 2. **Finite-L^r regularity:** Theorem 3.1 supplies uniform, scale-explicit bounds for every finite exponent in the displayed independent bilinear-plus-square branch.
-3. **Continuity:** the completed source-pinned B15 fixed-matrix theorem at `yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056` gives an individual `C_0(R)` representative for every fixed rank-at-least-three QFORM instance. This qualitative conclusion is separate from the uniform `L^infinity` target and does not supply a target-uniform continuity modulus.
+3. **Continuity:** the completed source-pinned B15 fixed-matrix theorem at `private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056` gives an individual `C_0(R)` representative for every fixed rank-at-least-three QFORM instance. This qualitative conclusion is separate from the uniform `L^infinity` target and does not supply a target-uniform continuity modulus.
 
 Thus an argument of the form “prove all finite `L^r` bounds and send `r` to infinity” is not presently a closure mechanism: the sharp elementary chain itself records a `sqrt(r)` endpoint loss. Nor can the loss be repaired by splitting the characteristic function into an absolute product-Hölder estimate, because the completed fleet02/B15 Fourier endpoint obstruction says that the needed law-uniform product exponent below two is false.
 

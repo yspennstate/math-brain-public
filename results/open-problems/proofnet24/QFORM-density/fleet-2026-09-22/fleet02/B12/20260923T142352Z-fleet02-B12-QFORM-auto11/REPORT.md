@@ -100,7 +100,7 @@ Important point: this is a deterministic matrix statement. No random variable is
 
 Use the completed ridge-window theorem at
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 It states: if a symmetric final matrix has at least three eigenvalues of modulus at least one, and the spectral projection `Pi=1_{|A|>=1/64}` satisfies
@@ -193,7 +193,7 @@ This family can have only the three protected cross singular directions: taking 
 
 The pinned source package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
 was read at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The completed `D_5` theorem in the Fourier report says that for an actual original-coordinate cross block `M`, with
@@ -232,7 +232,7 @@ No post-rotation independence is used. This D5 branch is stronger on the deliber
 
 The latest designated partner result read this run is
 
-`yspennstate/math-open-problems@c09e907f60e1c8819becc9254f8f512c3d3e6ff2`,
+`private-source-repository@c09e907f60e1c8819becc9254f8f512c3d3e6ff2`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T134701Z-qform-eigenvalue-r34/REPORT.md`.
 
 Its `QFORM-ERODED-SPECTRAL-PROFILE-STABILITY-v1` theorem says that if an original-coordinate reference cross block `B_0` is perturbed by `E`, the first `r` singular directions of `E` may be completely arbitrary, while the residual threshold `beta=s_{r+1}(E)` erodes the baseline profile by

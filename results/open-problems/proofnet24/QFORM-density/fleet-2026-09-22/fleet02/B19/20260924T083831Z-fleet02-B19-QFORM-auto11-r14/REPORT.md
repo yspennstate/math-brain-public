@@ -42,7 +42,7 @@ The newest compatible designated fleet03/B19 r52 result independently pays an ex
 
 The completed source used here is Theorem H at the required exact source commit
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 

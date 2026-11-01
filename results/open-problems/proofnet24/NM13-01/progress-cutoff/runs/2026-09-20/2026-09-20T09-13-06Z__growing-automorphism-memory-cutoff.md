@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6/maximum
 
 **Status:** `PARTIAL / OPEN` for Salez Problem 2.3; `CANDIDATE_FULL` for the restricted transfer theorem and explicit degree-20 class below, pending later independent review. Publication novelty is `UNVERIFIED`.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`. Controlling policy: `operations/PROGRESS20_2026-09-20.md`. Prewrite master observed before this run's writes: `b9e0c9d5b870caaece23c2693a9bc25edd55e0f4`.
+Repository/branch: `private-source-repository` / `master`. Controlling policy: `operations/PROGRESS20_2026-09-20.md`. Prewrite master observed before this run's writes: `b9e0c9d5b870caaece23c2693a9bc25edd55e0f4`.
 
 ## 0. Short handoff and partner split
 

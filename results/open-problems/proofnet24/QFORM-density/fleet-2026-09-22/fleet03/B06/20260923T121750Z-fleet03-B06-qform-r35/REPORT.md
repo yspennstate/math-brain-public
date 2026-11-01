@@ -19,7 +19,7 @@ The exact designated partner directory `fleet04/B06` was absent from the current
 
 ### 2.1 fleet02/B16 semi-aligned near-null kernel
 
-`yspennstate/math-open-problems@f13d13f2dd1d240c98505a03afebe80f64d4bf10`
+`private-source-repository@f13d13f2dd1d240c98505a03afebe80f64d4bf10`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T082859Z-fleet02-B16-QFORM-r11/REPORT.md`.
 
@@ -36,7 +36,7 @@ Its proof retains the original scalar `X` and never demands a conditional densit
 
 ### 2.2 fleet03/B06 r34 opposite-sign shell
 
-`yspennstate/math-open-problems@cbcf1a98b7e64f0bd053155a36ec557d1985e12a`
+`private-source-repository@cbcf1a98b7e64f0bd053155a36ec557d1985e12a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T111729Z-fleet03-B06-qform-r34/REPORT.md`.
 
@@ -44,7 +44,7 @@ For `delta beta<0`, on the two-sheet side `t beta<0`, its exact shell-length cal
 
 ### 2.3 Claude ruled one-sheet theorem
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
 
@@ -56,7 +56,7 @@ It uses original-product two-dimensional marginals along ruled hyperboloid lines
 
 ### 2.4 fleet04/B18 dependent square smoothing
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

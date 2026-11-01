@@ -7,10 +7,10 @@ Programme: `QFORM-DENSITY-3EIG-20260922`.  Logical worker: `fleet03/B11`, indefi
 
 Required mathematical sources actually used:
 
-1. Claude mixed-Fresnel theorem: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, Theorem MF / equivalent Theorem H formulation in `RESULTS.md`.
-2. New volume-stability continuation: `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/` (used to identify the receiver needed after a third cross singular direction is generated; no unsupported converse is used).
-3. Designated partner `fleet04/B11`: `yspennstate/math-open-problems@572f6cd066c9cdef7b5a509917b4dcd79cea2fda:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T021512Z-fleet04-B11-sign-frustrated-triangle-r4/REPORT.md`.
-4. Mechanism warning, near-null scalar completion: `yspennstate/math-open-problems@2826d09f8370995686abaf5a51a9a5b38febab9:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T043305Z-fleet02-B16-QFORM-r25/REPORT.md`.
+1. Claude mixed-Fresnel theorem: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, Theorem MF / equivalent Theorem H formulation in `RESULTS.md`.
+2. New volume-stability continuation: `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/` (used to identify the receiver needed after a third cross singular direction is generated; no unsupported converse is used).
+3. Designated partner `fleet04/B11`: `private-source-repository@572f6cd066c9cdef7b5a509917b4dcd79cea2fda:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T021512Z-fleet04-B11-sign-frustrated-triangle-r4/REPORT.md`.
+4. Mechanism warning, near-null scalar completion: `private-source-repository@2826d09f8370995686abaf5a51a9a5b38febab9:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T043305Z-fleet02-B16-QFORM-r25/REPORT.md`.
 
 The main new result is a scale-free structural lemma for the sign-balanced pair-PSD chamber, followed by a product-preserving analytic receiver for its pure-star endpoint.
 

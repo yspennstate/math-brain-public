@@ -3,7 +3,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 # R7-01 admission disposition — E0041 current-literature resolution
 
 Date checked: 2026-09-19 UTC  
-Repository: `yspennstate/math-open-problems`  
+Repository: `private-source-repository`  
 Branch: `master`  
 Slot: `R7-01`  
 Native ID: `6aabe777361481919c9e614646464772`  

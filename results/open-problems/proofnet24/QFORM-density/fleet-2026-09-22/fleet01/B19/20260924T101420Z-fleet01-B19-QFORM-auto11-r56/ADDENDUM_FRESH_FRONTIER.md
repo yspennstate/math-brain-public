@@ -2,7 +2,7 @@
 
 After the main derivation was written, the own-slot `LATEST.json` exposed a newer immediately preceding B19 run that had not appeared in the initial search results:
 
-`yspennstate/math-open-problems@e5211d16c0bc2b4bce3cb6fef161d984b20d3029`,
+`private-source-repository@e5211d16c0bc2b4bce3cb6fef161d984b20d3029`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260924T095039Z-fleet01-B19-QFORM-auto11-r56/REPORT.md`.
 

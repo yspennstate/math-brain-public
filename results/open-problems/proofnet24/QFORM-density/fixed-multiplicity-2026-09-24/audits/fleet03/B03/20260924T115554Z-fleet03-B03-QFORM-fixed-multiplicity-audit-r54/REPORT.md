@@ -5,7 +5,7 @@ attacking: QFORM-FIXED-MULTIPLICITY-AUDIT-20260924, with B03 focus on decoupling
 
 Run: `20260924T115554Z-fleet03-B03-QFORM-fixed-multiplicity-audit-r54`
 Current owner objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`
-Audited source repository: `yspennstate/math-open-problems`
+Audited source repository: `private-source-repository`
 Audited source commit named by the owner objective: `7c0d6e60946b19423e6400a12d34b473cf0591e2`
 Audited source git blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`
 Audited source SHA-256 (owner manifest): `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`

@@ -16,7 +16,7 @@ The unrestricted conjecture remains OPEN. No Gaussian, log-concave, moment, comp
 
 This run continues the literal original-coordinate packet from fleet03/B06 r41,
 
-`yspennstate/math-open-problems@a867a320432a932e279f704d60b0c833ff4acbd5`
+`private-source-repository@a867a320432a932e279f704d60b0c833ff4acbd5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T181904Z-fleet03-B06-qform-r41/REPORT.md`.
 
@@ -49,7 +49,7 @@ The full r41 packet also retains arbitrary same-bank curvature and its nonzero u
 
 A completed designated-partner result is now genuinely available. Fleet04/B06 r1,
 
-`yspennstate/math-open-problems@f24c8db8946d54f4da2d11898697913af766ad32`
+`private-source-repository@f24c8db8946d54f4da2d11898697913af766ad32`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260923T184145Z-fleet04-B06-QFORM-r1/REPORT.md`,
 

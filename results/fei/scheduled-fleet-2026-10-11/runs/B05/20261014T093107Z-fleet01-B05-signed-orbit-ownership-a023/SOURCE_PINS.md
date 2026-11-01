@@ -5,7 +5,7 @@
   blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
 - Current owner order: same repository,
   `scheduled_tasks/work/shared/full-fei-only-2026-10-12/ORDER.md`.
-- B05 compact contract: `yspennstate/math-open-problems`,
+- B05 compact contract: `private-source-repository`,
   `reports/fei-2026-10-11/assignments/B05.json`, blob
   `05447e6d999437bb82a266b427bd76a4b37266b6`.
 - Execution protocol: same repository, blob

@@ -42,6 +42,6 @@ whenever H_k>0. In particular,
 
 No inverse power of the possibly tiny physical entry b remains in (2)-(3).
 
-Newest partner source actually used: yspennstate/math-open-problems, path proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T043951Z-fleet02-B07-4c9e7a/REPORT.md. In its incident branch it gives T_2(M)>=theta F^2 and sqrt(H_2)>11 theta F^2/7200, hence H_3>omega(theta)F^6 with omega(theta)=121 theta^3/(2*7200^2). The next calculation will combine (3) with the e5 D5 failure H_5<=E_5<eta_*F^10 to obtain a same-anchor rank-2/rank-3 Schur collar and a concentrated-H_4 physical-core exit.
+Newest partner source actually used: private-source-repository, path proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T043951Z-fleet02-B07-4c9e7a/REPORT.md. In its incident branch it gives T_2(M)>=theta F^2 and sqrt(H_2)>11 theta F^2/7200, hence H_3>omega(theta)F^6 with omega(theta)=121 theta^3/(2*7200^2). The next calculation will combine (3) with the e5 D5 failure H_5<=E_5<eta_*F^10 to obtain a same-anchor rank-2/rank-3 Schur collar and a concentrated-H_4 physical-core exit.
 
 Execution status: WITHOUT_VERIFIED_BRAIN. Independent review not claimed.

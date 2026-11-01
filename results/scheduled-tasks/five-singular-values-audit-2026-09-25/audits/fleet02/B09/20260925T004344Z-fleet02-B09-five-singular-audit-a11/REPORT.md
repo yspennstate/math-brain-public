@@ -2,7 +2,7 @@
 
 Run: `20260925T004344Z-fleet02-B09-five-singular-audit-a11`
 
-Pinned source: `yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c`; `short/short.tex` blob `c4f2a997cf336ee974e15409b5bccdd8cca039d8`; PDF blob `8be3aae36ecad7a9dc9b7c95978aad09499f32d0`; PDF SHA-256 `4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423`.
+Pinned source: `private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c`; `short/short.tex` blob `c4f2a997cf336ee974e15409b5bccdd8cca039d8`; PDF blob `8be3aae36ecad7a9dc9b7c95978aad09499f32d0`; PDF SHA-256 `4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423`.
 
 ## Scope and verdict
 

@@ -16,7 +16,7 @@ The unrestricted owner target remains OPEN. No Gaussian, log-concavity, moment, 
 
 Immediate predecessor:
 
-- `yspennstate/math-open-problems@77f2529fd72579097d71036df3e63a1c2954ea22`
+- `private-source-repository@77f2529fd72579097d71036df3e63a1c2954ea22`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T105822Z-fleet03-B08-qform-diffuse-r53/REPORT.md`.
 
 Its still-unpaid exact-child state has one ORIGINAL physical hub and
@@ -215,7 +215,7 @@ while the other three singular values are at least one. Hence no general improve
 The completed designated partner theorem is fleet04/B08
 `QFORM-DISTRIBUTED-STAR-DERIVATIVE-SPLIT-v1`, canonical source
 
-`yspennstate/math-open-problems@f324267086411b9725aa0733e108ab6efc2e760a`,
+`private-source-repository@f324267086411b9725aa0733e108ab6efc2e760a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260924T081435Z-fleet04-B08-QFORM-r3/REPORT.md`.
 

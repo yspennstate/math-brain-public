@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R15 retained screen — exact optimal serial Pascal compiler for heterogeneous `k=2`
 
 Date checked: 2026-09-19 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R15, CLOSABLE OUTSIDE.
 
 All new mathematics below is **SELF_CHECK_ONLY**. It neither reopens Burdzy–Scheutzow Problem 7.2 after the mandatory six-run handoff nor promotes Talagrand F0111 from `PENDING / NOT READY` to an owned assignment. No closure or novelty claim is made without the required independent audits and a broader prior-art review.

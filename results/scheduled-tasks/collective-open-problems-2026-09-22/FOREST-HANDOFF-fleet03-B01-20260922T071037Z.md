@@ -5,7 +5,7 @@ Brain status: **WITHOUT_VERIFIED_BRAIN**.
 
 ## Source-bound scientific artifact
 
-- Repository: `yspennstate/math-open-problems`
+- Repository: `private-source-repository`
 - Report commit: `c1fb74eb7de8e57d72d6f2eb961a0aef23b2f2dd`
 - Report: `proofnet24/P14-probability-correlation/collective-2026-09-22/fleet03/B01/20260922T071037Z-component-credit-localization/report.md`
 - Report blob: `47d8a1c95ffaa13be8981d3a5841cd9707dbdfa2`

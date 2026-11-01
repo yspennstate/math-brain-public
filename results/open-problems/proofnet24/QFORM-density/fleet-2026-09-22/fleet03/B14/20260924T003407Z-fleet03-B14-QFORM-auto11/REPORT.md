@@ -15,7 +15,7 @@ Continuity: the theorem below proves an essentially bounded density. The unrestr
 
 The designated completed partner actually applied below is:
 
-`yspennstate/math-open-problems@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`
+`private-source-repository@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260924T001624Z-fleet04-B14-scaled-schur-localization-r10/REPORT.md`.
 

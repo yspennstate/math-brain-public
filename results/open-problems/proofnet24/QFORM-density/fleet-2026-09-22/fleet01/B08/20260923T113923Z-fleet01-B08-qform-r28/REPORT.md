@@ -154,7 +154,7 @@ Now apply the completed designated-partner theorem
 
 from
 
-`yspennstate/math-open-problems@ac9b000da88c4923d8a3adb6a0a8bdccbd27ccae`,
+`private-source-repository@ac9b000da88c4923d8a3adb6a0a8bdccbd27ccae`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T093606Z-fleet02-B08-qform-diffuse-r25/REPORT.md`.
 

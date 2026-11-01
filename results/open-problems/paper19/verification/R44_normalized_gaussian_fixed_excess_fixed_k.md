@@ -68,9 +68,9 @@ envelopes.
   carrying the fixed-excess fixed-\(k\) lower sides.
 - `PLAN.md`: recorded the row/column-normalized Gaussian consequence under
   V.B.
-- `math-open-problems-fleet/master/chO_phase_retrieval_rmt.tex`: added the
+- `private-source-fleet/master/chO_phase_retrieval_rmt.tex`: added the
   Lane O discoverability sentence in `laneO:cor:conditioning-variants`.
-- `math-open-problems-fleet/MASTER_STATE.md`: recorded the master-side summary.
+- `private-source-fleet/MASTER_STATE.md`: recorded the master-side summary.
 
 ## Build verification
 

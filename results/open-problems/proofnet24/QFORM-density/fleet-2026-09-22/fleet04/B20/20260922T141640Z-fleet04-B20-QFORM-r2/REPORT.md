@@ -10,7 +10,7 @@
 The target is the unrestricted statement for independent real coordinates with densities at most one and every real symmetric matrix having at least three eigenvalues of modulus at least one. No moments, compact support, connected support, log-concavity, or independence after rotation are assumed.
 
 This report applies the completed full-spectrum diffuse-range theorem at
-`math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`, which gives a continuous density bounded by
+`private-source@a302aab3477c64757b511e80d3907f982e04873a`, which gives a continuous density bounded by
 [
 C_0=rac{96e}{7sqrt2}<27
 ]

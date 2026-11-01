@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R08 CLOSABLE OUTSIDE — E0011 catalyst/ZGB: ensemble amplification and the real synchronization bottleneck
 
 Date: 2026-09-18 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, repository state, source status, and exclusions
 

@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 
 **Status:** **OPEN / PROVED PARTIAL** on Randomstrasse101 Conjecture 18.  
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`.  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`.  
+**Repository / branch:** private `private-source-repository` / `master`.  
 **Captured pre-write master:** `47564291654993a2f0c9eac50834ed58a51d12eb`.  
 **Previous own substantive checkpoint:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1845+0300__orthogonal_core_mass_variance_bridge.md`.  
 **Complementary role boundary:** P07-B owns the Fourier-dual / exceptional-frequency / quadratic-interpolation route. This report uses only the primal orthogonal-core LP and positive-orthant geometry; it does not duplicate P07-B's interpolation program.

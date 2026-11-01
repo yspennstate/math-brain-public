@@ -17,7 +17,7 @@ The early note `EARLY.md` had one arithmetic root error; immutable `CORRECTION.m
 
 The required pinned source was read at exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The completed result used below is Theorem D: for a literal physical crossing and any supported squared-minor weight whose constrained-side row marginals are at most `1/2`,
 
@@ -34,7 +34,7 @@ The D' proof in the same source gives the relaxed row-marginal window `h<3/4`; r
 
 The newest compatible designated partner is fleet03/B04 r48,
 
-`yspennstate/math-open-problems@085560dcfb3b90238f3e84dd2de7d0e09bfa7525`,
+`private-source-repository@085560dcfb3b90238f3e84dd2de7d0e09bfa7525`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260924T041814Z-fleet03-B04-QFORM-auto11-r48/REPORT.md`.
 
@@ -48,7 +48,7 @@ one has
 
 This branch has an integrable characteristic function and hence a continuous `C_0` density. It preserves literal original-coordinate hubs and promotes heavy residual rows instead of assuming independence after any coefficient rotation.
 
-For comparison I use the completed direct ridge theorem at `math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, `interactive/20260922T151048Z-ridge-window/REPORT.md`.
+For comparison I use the completed direct ridge theorem at `private-source@9c1167db05c7b0f520f060796fde921ed769a4e7`, `interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 ## 2. New theorem — `QFORM-THREE-CARRIER-CUBE-DUAL-v1`
 

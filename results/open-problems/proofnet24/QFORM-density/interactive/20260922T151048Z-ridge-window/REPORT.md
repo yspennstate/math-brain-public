@@ -37,7 +37,7 @@ Classical analytic inputs:
 
 3. A. W. Marcus, D. A. Spielman and N. Srivastava, *Interlacing families II: Mixed characteristic polynomials and the Kadison-Singer problem*, Annals of Mathematics 182 (2015), 327-350, Corollary 1.5, https://arxiv.org/pdf/1306.3969 . Its two-part frame-partition statement is specified in Section 7. This is a published input, not a theorem proved by this project.
 
-The starting graph argument is in the private archive at yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a, path proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md, blob 080253f929411bfa9c7aa3254a2bdaf37be72ebb. Its Sections 3-6 have a passing scoped review recorded by fleet02/B02 at brain handoff 20260922T140817Z-fleet02-B02-qform-r11.md, blob 72a94fec2ea0dd275892cfd62267b7e6d4225e18. That review is not a review of this extension. All steps needed here are supplied below.
+The starting graph argument is in the private archive at private-source-repository@a302aab3477c64757b511e80d3907f982e04873a, path proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md, blob 080253f929411bfa9c7aa3254a2bdaf37be72ebb. Its Sections 3-6 have a passing scoped review recorded by fleet02/B02 at brain handoff 20260922T140817Z-fleet02-B02-qform-r11.md, blob 72a94fec2ea0dd275892cfd62267b7e6d4225e18. That review is not a review of this extension. All steps needed here are supplied below.
 
 ## 3. Scalar estimates
 

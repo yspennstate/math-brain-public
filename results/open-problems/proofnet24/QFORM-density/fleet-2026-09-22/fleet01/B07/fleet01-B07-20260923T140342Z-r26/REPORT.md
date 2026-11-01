@@ -15,15 +15,15 @@ The unrestricted theorem is not claimed. All probabilistic conditioning is in OR
 ## 1. Sources actually consumed
 
 1. Own preceding B07 report:
-   `yspennstate/math-open-problems@fa0ddeb784bad52ae142e49e7c9448d4772decf8`,
+   `private-source-repository@fa0ddeb784bad52ae142e49e7c9448d4772decf8`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T130435Z-r25/REPORT.md`.
    It proves `QFORM-E2-FRACTIONAL-TRACE-v1`, the scalar-square peel, and leaves an E2 near-coloop `theta_j>3/4` as the first large-diagonal obstruction.
 2. Own mixed-compound derivation:
-   `yspennstate/math-open-problems@7bf5a0bd8a8d2fa12a5c2370811ecfe5d2cf7444`,
+   `private-source-repository@7bf5a0bd8a8d2fa12a5c2370811ecfe5d2cf7444`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T090322Z-r20/REPORT.md`.
    Its determinant expansion / Lieb--Brascamp--Lieb / Hausdorff--Young calculation is reused below with compound orders 2 and 1; only the final fractional integration changes.
 3. Latest completed designated partner fleet02/B07:
-   `yspennstate/math-open-problems@d57825ed929db0db057013ee2a12d547fd7cacac`,
+   `private-source-repository@d57825ed929db0db057013ee2a12d547fd7cacac`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T133358Z-fleet02-B07-qform-r11auto/REPORT.md`.
    Its genuinely support-diffuse residual-E3 survivor supplies, in the notation of Section 5 below,
    `||r|| ||c|| ||E||_F > (sqrt(2)/3) a^3`.

@@ -41,7 +41,7 @@ Therefore
 `H_{1/2}(S) <= 2^(11/4) ||g||^(-1/2)`.
 
 Applying the completed square-peel Lemma 4.2 from the required fixed source
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, gives the full-ambient essential-density estimate
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, gives the full-ambient essential-density estimate
 
 `boxed: ||p_Q||_infinity <= 2^(11/4) (|a| ||g||)^(-1/2).`
 

@@ -2,8 +2,8 @@
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Run: `20260924T124642Z-fleet03-B08-fixedmult-r57`  
-Baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
-Candidate reviewed: `yspennstate/math-open-problems@8ff490c177d0cd7d6f33130f1431785e312a9d10`, fleet03/B04 nine-eigenvalue candidate  
+Baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
+Candidate reviewed: `private-source-repository@8ff490c177d0cd7d6f33130f1431785e312a9d10`, fleet03/B04 nine-eigenvalue candidate  
 Status: **PASS in this independent worker review; second independent end-to-end review still required before promotion.**
 
 ## Result
@@ -28,7 +28,7 @@ This review does **not** establish continuity in every branch. The no-pivot bran
 
 I did not treat the new B04 grouped compiler as a black box. I reconstructed the threshold argument using two earlier full-form original-coordinate receivers whose exact scopes match the required branches:
 
-1. `QFORM-THIRDCOMPOUND-CROSS-PROMOTION-v1`, `yspennstate/math-open-problems@c2ce876df8b5483a00802170001d4144bb4cdbfa`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T194715Z-fleet01-B04-QFORM-auto11-r18/REPORT.md`:
+1. `QFORM-THIRDCOMPOUND-CROSS-PROMOTION-v1`, `private-source-repository@c2ce876df8b5483a00802170001d4144bb4cdbfa`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T194715Z-fleet01-B04-QFORM-auto11-r18/REPORT.md`:
    for a literal original-coordinate split with crossing block `B`, arbitrary same-bank quadratic/affine phases retained,
    \[
    E_3(B)=e_3(BB^T)>0
@@ -37,7 +37,7 @@ I did not treat the new B04 grouped compiler as a black box. I reconstructed the
    \]
    The finite promotion proof removes all physical row-marginal assumptions without rotating the random inputs.
 
-2. `QFORM-ROW-MARGINAL-FREE-2VOLUME-COLLISION-v1`, `yspennstate/math-open-problems@588fa418bc29d4b889fcbbee2b61370234ceef37`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T175336Z-fleet01-B03-QFORM-r30/REPORT.md`:
+2. `QFORM-ROW-MARGINAL-FREE-2VOLUME-COLLISION-v1`, `private-source-repository@588fa418bc29d4b889fcbbee2b61370234ceef37`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T175336Z-fleet01-B03-QFORM-r30/REPORT.md`:
    for a literal two-bank full quadratic with `Z_2=e_2(BB^T)>0`,
    \[
    \sup_a\mathbb E|Q-a|^{-1/2}

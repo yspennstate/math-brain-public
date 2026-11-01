@@ -5,7 +5,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 Date: 2026-09-19 UTC  
 Slot: `R7-07`  
 Native identity: `6aabe8413f60819197825dd81ca138ae`  
-Repository: `yspennstate/math-open-problems`, branch `master`  
+Repository: `private-source-repository`, branch `master`  
 Run-start master snapshot: `13b623132250e526bf18294cef8b502ea145d30f`  
 Fresh pre-write master snapshot: `e9fa850251b63f6c2ebbabf5651c50d0289da194`  
 Canonical target: `F0012`  

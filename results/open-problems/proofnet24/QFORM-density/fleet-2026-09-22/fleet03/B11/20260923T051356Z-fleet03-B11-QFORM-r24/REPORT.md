@@ -22,7 +22,7 @@ Binding corrections are retained. No post-rotation independence, arbitrary-joint
 
 The newest source theorem actually applied to pay the balanced construction is the three-variable finite-dimensional result in
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`
 
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`.
 
@@ -34,7 +34,7 @@ uniformly in affine terms.
 
 The designated partner result applied in Section 6 is fleet04/B11,
 
-`yspennstate/math-open-problems@572f6cd066c9cdef7b5a509917b4dcd79cea2fda`
+`private-source-repository@572f6cd066c9cdef7b5a509917b4dcd79cea2fda`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T021512Z-fleet04-B11-sign-frustrated-triangle-r4/REPORT.md`.
 

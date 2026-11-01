@@ -132,7 +132,7 @@ and `v_x,F'_x` are arbitrary real measurable functions for the purpose of the re
 
 Now use the owner-pinned theorem **A transverse square with an independent hub**, canonical source
 
-`math-open-problems@fad298c9bb0e96eae32c5a98861b42b50eec8568:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/hubs.tex`.
+`private-source@fad298c9bb0e96eae32c5a98861b42b50eec8568:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/manuscript/hubs.tex`.
 
 Its hypotheses match exactly: `X_0` is an original coordinate and is genuinely independent of the residual product vector `Z`; `w,v` are deterministic orthonormal coefficient vectors; the theorem explicitly allows dependence between `L` and `V` and arbitrary measurable square centre `v_x(L)` and remainder `F'_x(L)`. It gives, uniformly in `x`,
 
@@ -215,7 +215,7 @@ This example is source-valid for arbitrary independent cap-one coordinate laws. 
 
 ## 5. Required e5f transfer on the same genuine target family
 
-The pinned `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` counterexample-search record proves the ruled one-sheet theorem: for an exact rank-three form with signature `(2+,1-)` and all three nonzero eigenvalue magnitudes at least one,
+The pinned `private-source@e5f71d79eff325201dd0274053d20268ce65b837` counterexample-search record proves the ruled one-sheet theorem: for an exact rank-three form with signature `(2+,1-)` and all three nonzero eigenvalue magnitudes at least one,
 
 `p_Q(t)<=pi sqrt(2)` for a.e. `t>=0`.                               (5.1)
 
@@ -298,6 +298,6 @@ Pinned math snapshot `e5f71d79eff325201dd0274053d20268ce65b837`: `RESULTS.md`, `
 
 Designated partner: fleet03/B18 r32 report above.
 
-Owner-pinned receiver theorem: `math-open-problems@fad298c9bb0e96eae32c5a98861b42b50eec8568:.../manuscript/hubs.tex`.
+Owner-pinned receiver theorem: `private-source@fad298c9bb0e96eae32c5a98861b42b50eec8568:.../manuscript/hubs.tex`.
 
 Primary external theorem: Livshyts--Paouris--Pivovarov, arXiv:1507.07949, Theorem 1.1.

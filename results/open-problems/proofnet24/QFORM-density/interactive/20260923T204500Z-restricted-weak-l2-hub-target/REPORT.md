@@ -80,5 +80,5 @@ The unresolved case has \(L,V,P\) as overlapping linear images of independent or
 The stronger-looking assumption that **every one- and two-dimensional orthogonal projection of \(Y\)** has a universal density cap is insufficient for (RW2). The dependent-light construction with independent cap-one \(H\) and those projection caps has unbounded output density at negative targets. If (RW2) held under projection caps alone, the preceding dyadic sum would bound that output, a contradiction. Thus an eventual proof must use the convolution/independent-coordinate provenance, or a stronger property derived from it.
 
 Related source-pinned reports:
-- Outer two-bank density: https://github.com/yspennstate/math-open-problems/blob/f0d3e4df297cf45c4f8a0298051cef186faf1de4/proofnet24/QFORM-density/interactive/20260923T203000Z-two-bank-outer-density/REPORT.md
-- Negative-target dependent-light fake: https://github.com/yspennstate/math-open-problems/blob/ed1915681c630e9b26339c245f49056e908ee333/proofnet24/QFORM-density/interactive/20260923T203400Z-negative-target-projection-fake/REPORT.md
+- Outer two-bank density: private-source-repository
+- Negative-target dependent-light fake: private-source-repository

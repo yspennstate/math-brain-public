@@ -116,7 +116,7 @@ This strengthens the older fiber-supremum dimension-loss correction: the scaling
 Now apply the completed designated partner theorem
 
 `fleet02/B16, run 20260922T163840Z-fleet02-B16-qform-r13`,
-canonical report `yspennstate/math-open-problems@d2e3dd1587a3fa93707631ea847c48279f3dc6dc`,
+canonical report `private-source-repository@d2e3dd1587a3fa93707631ea847c48279f3dc6dc`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T163840Z-fleet02-B16-qform-r13/REPORT.md`.
 
 Take the rank-two projected variable

@@ -14,7 +14,7 @@ The unrestricted theorem remains OPEN. Nothing below uses moment bounds, bounded
 ## 1. Fresh source and mechanism change
 
 
-- repository/commit: `yspennstate/math-open-problems@b376a5b911fdf54fef212829f376ab301e2561a3`;
+- repository/commit: `private-source-repository@b376a5b911fdf54fef212829f376ab301e2561a3`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260924T025846Z-fleet02-B14-QFORM-auto11/REPORT.md`;
 - theorem: `QFORM-PREPLANCHEREL-COHERENT-PARTITION-v1`.
 

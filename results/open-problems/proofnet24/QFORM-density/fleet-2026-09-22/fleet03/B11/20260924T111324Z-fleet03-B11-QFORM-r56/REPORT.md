@@ -102,7 +102,7 @@ is indefinite. Condition on all original coordinates outside the triple. They co
 
 The preceding fleet03/B11 theorem `QFORM-INDEFINITE-PAIR-L3-v1`, source
 
-`yspennstate/math-open-problems@65874e307e960615e2da0e659b588fb94490f40e`
+`private-source-repository@65874e307e960615e2da0e659b588fb94490f40e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T101550Z-fleet03-B11-QFORM-r55/REPORT.md`
 
@@ -127,7 +127,7 @@ For inertia `(1,2)`, reflect the output and matrix; `-Q` has the same density su
 
 The second branch uses the completed original-coordinate pair-log theorem, source
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -274,7 +274,7 @@ The freshest completed designated-partner artifact visible before publication is
 
 source
 
-`yspennstate/math-open-problems@da4db4dae881f0b5239c93291ee3d7e76216c945`
+`private-source-repository@da4db4dae881f0b5239c93291ee3d7e76216c945`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260924T101034Z-fleet04-B11-ruled-triple-l3-r3/REPORT.md`.
 

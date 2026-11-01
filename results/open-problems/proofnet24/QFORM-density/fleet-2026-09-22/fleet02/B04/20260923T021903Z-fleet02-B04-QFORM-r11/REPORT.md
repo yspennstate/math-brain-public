@@ -17,15 +17,15 @@ No moment, support, log-concavity, diagonal-basis, arbitrary-joint coarea, condi
 
 ## 2. Source-pinned completed inputs actually applied
 
-1. Claude Fourier package at `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, especially `RESULTS.md` and `FOURIER_ROUTE_REPORT.md`. The audited Theorem D allows **arbitrary probability weights on nonzero physical 3x3 minors**: if their row marginals obey the required cap, weighted AM-GM replaces the Gibbs third volume by
+1. Claude Fourier package at `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, especially `RESULTS.md` and `FOURIER_ROUTE_REPORT.md`. The audited Theorem D allows **arbitrary probability weights on nonzero physical 3x3 minors**: if their row marginals obey the required cap, weighted AM-GM replaces the Gibbs third volume by
 
    `G(w)=exp(E_w log det(M_ST)^2 + H(w))`.
 
    This source is applied in Section 4 to prove an actual obstruction: for the matrix constructed here every nonzero three-minor contains the same row, so every such weight has marginal one and the theorem's admissibility gate is impossible.
 
-2. The preceding B04 weighted sharp extension, `QFORM-WEIGHTED-FRACTIONAL-VOLUME-SHARP-v1`, source report `yspennstate/math-open-problems@061327b7e45c28e5b8c898ed3729456fcea6f7d7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T014717Z-fleet02-B04-QFORM-auto11-cont/REPORT.md`. For `1<=q<3/2`, it requires `alpha_i<=q/2<3/4`. The same exact coloop therefore blocks not only `q=1` but every exponent in the theorem's admissible range.
+2. The preceding B04 weighted sharp extension, `QFORM-WEIGHTED-FRACTIONAL-VOLUME-SHARP-v1`, source report `private-source-repository@061327b7e45c28e5b8c898ed3729456fcea6f7d7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T014717Z-fleet02-B04-QFORM-auto11-cont/REPORT.md`. For `1<=q<3/2`, it requires `alpha_i<=q/2<3/4`. The same exact coloop therefore blocks not only `q=1` but every exponent in the theorem's admissible range.
 
-3. Square-assisted ridge theorem `QFORM-SQUARE-ASSISTED-RIDGE-L32-v1`, source `yspennstate/math-open-problems@b129377880c18fe011dd4513282f2e0b60e412e0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T155815Z-qform-r11b/REPORT.md`. If
+3. Square-assisted ridge theorem `QFORM-SQUARE-ASSISTED-RIDGE-L32-v1`, source `private-source-repository@b129377880c18fe011dd4513282f2e0b60e412e0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T155815Z-qform-r11b/REPORT.md`. If
 
    `Q=a(Z+m(Y))^2+R(Y)`,
 
@@ -35,7 +35,7 @@ No moment, support, log-concavity, diagonal-basis, arbitrary-joint coarea, condi
 
    `||p_Q||_inf <= 8*3^(-5/8)*sqrt(e)*q^(-1/4)*sqrt(3theta/(3theta-4q))*D^(-1/(4theta))/sqrt(|a|gamma)`.
 
-4. Latest completed designated-partner result fleet03/B04 r22, source `yspennstate/math-open-problems@406753a39f5fbaf78396b31075f36ae5682ef3ad`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260923T015102Z-r22/REPORT.md`. Its `QFORM-FINITE-BANK-PLANCHEREL-v1` says that for an original three-coordinate bank and arbitrary quadratic leakage on both sides, a full-column-rank physical cross block with singular values `sigma_1,sigma_2,sigma_3` gives
+4. Latest completed designated-partner result fleet03/B04 r22, source `private-source-repository@406753a39f5fbaf78396b31075f36ae5682ef3ad`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260923T015102Z-r22/REPORT.md`. Its `QFORM-FINITE-BANK-PLANCHEREL-v1` says that for an original three-coordinate bank and arbitrary quadratic leakage on both sides, a full-column-rank physical cross block with singular values `sigma_1,sigma_2,sigma_3` gives
 
    `||p_Q||_inf <= 3sqrt(e)(sigma_1 sigma_2 sigma_3)^(-1/3)`.
 

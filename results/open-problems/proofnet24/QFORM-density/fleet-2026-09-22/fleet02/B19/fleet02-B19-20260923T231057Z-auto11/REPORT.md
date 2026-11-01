@@ -16,7 +16,7 @@ All coordinates below are literal ORIGINAL product coordinates. There is no post
 
 The newest completed designated partner fleet03/B19 r43 is
 
-`yspennstate/math-open-problems@ef38106705da5fab5a2fb6dbdd64745206580f62`
+`private-source-repository@ef38106705da5fab5a2fb6dbdd64745206580f62`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T220120Z-fleet03-B19-QFORM-r43/REPORT.md`.
 
@@ -28,7 +28,7 @@ Moreover an irreducible target has exactly three threshold-large eigenvalues, or
 
 The newest fleet02/B20 source used here is
 
-`yspennstate/math-open-problems@405fc21676782cde5254f7a7b9709f06e188a672`
+`private-source-repository@405fc21676782cde5254f7a7b9709f06e188a672`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T225733Z-fleet02-B20-QFORM-auto11/REPORT.md`.
 
@@ -51,7 +51,7 @@ where `m_j` is column `j` of `M`, B20 proves the exhaustive alternative
 
 The newest compatible product-Fourier receiver used below is fleet03/B04 r42,
 
-`yspennstate/math-open-problems@563bc41e4f9247f9daf3343a57757f45e3f6e703`,
+`private-source-repository@563bc41e4f9247f9daf3343a57757f45e3f6e703`,
 
 which proves for every literal disjoint physical cross block `N`
 
@@ -65,7 +65,7 @@ without a marginal hypothesis; same-bank quadratic terms, outside couplings and 
 
 The owner-required pinned source was reread at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The completed result applied at an actual inequality below is its D' theorem: if a physical third-volume cross block has natural row marginals at most `h<3/4`, then
 

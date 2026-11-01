@@ -23,7 +23,7 @@ as a universal proof route. This report does not revive it and does not use a po
 The completed designated partner result is fleet01/B02,
 \`QFORM-ZERO-DIAGONAL-TRIPLE-v1\`, canonical report
 \[
-\texttt{yspennstate/math-open-problems@168c80d9837ca68e580ae9b750defb2b45504093}
+\texttt{private-source-repository@168c80d9837ca68e580ae9b750defb2b45504093}
 \]
 at
 \[

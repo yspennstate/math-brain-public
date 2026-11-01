@@ -92,7 +92,7 @@ The previous fleet02/B14 r34 theorem `QFORM-ARBITRARY-SELF-RANDOM-SLOPE-MASS-v1`
 
 The required source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 proves the Fourier `L^p` lemma
 

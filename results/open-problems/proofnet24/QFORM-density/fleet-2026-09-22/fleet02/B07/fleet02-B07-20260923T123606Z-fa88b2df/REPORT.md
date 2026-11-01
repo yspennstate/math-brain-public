@@ -32,7 +32,7 @@ there is a physical column of two-anchor-plane leverage `>1/4`, another (possibl
 
 The current designated partner is fleet03/B07 r29:
 
-`yspennstate/math-open-problems@7ad9327f11c39bd465780bd1539d52de9feaacdd`
+`private-source-repository@7ad9327f11c39bd465780bd1539d52de9feaacdd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T110409Z-fleet03-B07-qform-r29/REPORT.md`.
 
@@ -46,7 +46,7 @@ where
 
 The required pinned newest-Claude source was read in full at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
@@ -65,7 +65,7 @@ for arbitrary cap-one one-dimensional laws;
 
 The previous fleet02/B07 fixed-anchor theorem is at
 
-`yspennstate/math-open-problems@461d425697ff42550209df665a62f265777ed08c`,
+`private-source-repository@461d425697ff42550209df665a62f265777ed08c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/fleet02-B07-20260923T120500Z-d1d37065/REPORT.md`.
 

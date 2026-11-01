@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — this was
 # R13 — Boolean Komlós: a failed energy-only random-sign route and an almost closed 86-leaf balanced-tree obstruction
 
 Run ID: `20260919T1129Z_balanced86-primaldual-91b4`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R13  
 Lane: **HARD OUTSIDE**
 

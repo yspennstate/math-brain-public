@@ -8,7 +8,7 @@ The unrestricted three-eigenvalue conjecture remains OPEN. Multiplicity eight re
 
 ## Pinned source actually read
 
-Repository `yspennstate/math-open-problems`, source commit
+Repository `private-source-repository`, source commit
 
 `eeb752c8943536541b34b42b8bf48e924f4d3d2f`
 
@@ -129,7 +129,7 @@ The exact rational checker is `VERIFY_360_25.py`, with recorded certificates in 
 
 ## Designated partner application
 
-The completed fleet04/B02 theorem at `yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7` gives, whenever a nonsingular physical `3x3` principal block `B` has a zero diagonal entry,
+The completed fleet04/B02 theorem at `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7` gives, whenever a nonsingular physical `3x3` principal block `B` has a zero diagonal entry,
 
 `int |phi_Q(t)|^2 dt <= 6*pi*2^(2/3)|det B|^(-1/3)`
 

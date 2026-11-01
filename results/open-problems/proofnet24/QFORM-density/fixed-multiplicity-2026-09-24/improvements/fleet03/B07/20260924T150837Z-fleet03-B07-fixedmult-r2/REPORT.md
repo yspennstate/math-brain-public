@@ -11,18 +11,18 @@ Status: **NEW CANDIDATE FIXED-MULTIPLICITY-8 THEOREM / REQUIRES TWO INDEPENDENT 
 This run used the current fixed-multiplicity objective and the following source-valid dependencies.
 
 1. Complete self-contained multiplicity-nine manuscript and marginal-free `Z_3` / `Z_2` receivers:
-   `yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f`,
+   `private-source-repository@eeb752c8943536541b34b42b8bf48e924f4d3d2f`,
    `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`.
 2. Eight-direction terminal collar:
-   `yspennstate/math-open-problems@5dc3b183bf69c8ab69f725c4464d5073f5c803cd`.
+   `private-source-repository@5dc3b183bf69c8ab69f725c4464d5073f5c803cd`.
 3. Robust two-anchor extraction:
-   `yspennstate/math-open-problems@0408c579bcda638e72c010ff99892a22b9049796`.
+   `private-source-repository@0408c579bcda638e72c010ff99892a22b9049796`.
 4. Product-safe incident third-volume receiver:
-   `yspennstate/math-open-problems@d44d368cd18a2590fc62d0aadd2cf2b7e9d0e83f`.
+   `private-source-repository@d44d368cd18a2590fc62d0aadd2cf2b7e9d0e83f`.
 5. Zero/one-high leverage closure for the robust pair:
-   `yspennstate/math-open-problems@74542593cca87e76d83b07f98e2c895f76b90796`.
+   `private-source-repository@74542593cca87e76d83b07f98e2c895f76b90796`.
 6. Designated partner fleet04/B07 coordinate-core theorem:
-   `yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`,
+   `private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 
 No post-rotation independence, moment, support, Gaussian, log-concavity, connected-support, arbitrary-joint coarea, or pointwise rough quadratic-phase hypothesis is used below.

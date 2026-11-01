@@ -13,7 +13,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`.  Role: extremal product laws.  No rota
 
 Source:
 
-`yspennstate/math-open-problems@9d9e2369ad137664a48b1b7c6d682ddaed62bcad`
+`private-source-repository@9d9e2369ad137664a48b1b7c6d682ddaed62bcad`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T125929Z-fleet01-B13-qform-auto23/FRESNEL_RANGE_ADDENDUM.md`.
 
@@ -27,7 +27,7 @@ The proof is uniform in every affine coefficient. In particular its `U`-bank may
 
 Source:
 
-`yspennstate/math-open-problems@82f9b7e9372c2434f27fd1f5a65e7148663516a7`
+`private-source-repository@82f9b7e9372c2434f27fd1f5a65e7148663516a7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T121154Z-fleet04-B13-nonattained-bathtub-r1/REPORT.md`.
 
@@ -48,7 +48,7 @@ I record (1.3) for compatibility, but the main theorem below shows that this ran
 
 Fleet02/B13 source:
 
-`yspennstate/math-open-problems@6d77eb1e452afcd8c4f779344b5602118223d42a`
+`private-source-repository@6d77eb1e452afcd8c4f779344b5602118223d42a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T145505Z-fleet02-B13-leveragecascade-r29/REPORT.md`.
 

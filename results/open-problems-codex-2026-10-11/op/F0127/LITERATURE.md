@@ -16,7 +16,7 @@ Search date: 2026-10-11. Raw responses are retained in this folder.
 
 - 2026-10-11: brain.py recall "coalescing random walks Kingman meeting time" and "coalescing walks mistakes"; math_recall.py "Oliveira mean field coalescing random walks". Cycle and complete-graph hints were returned; none treated as a verdict.
 - 2026-10-11: rg for F0127 in probability_1000_intake_* ledgers and codex_pool_2026_10_10. Initial literal wildcard directory failed in PowerShell; corrected enumeration followed by rg succeeded. Found F0127-A001, a Stage 1 sketch leaving Stage 2 unresolved, plus leads to Oliveira and Big Bang. Its unrestricted Stage 1 claim was not adopted.
-- 2026-10-11: read-only git ls-tree origin/master in ~/math-open-problems, filtered for F0127/coalesc/kingman. No named F0127 proof found. No working-tree modifications.
+- 2026-10-11: read-only git ls-tree origin/master in ~/private-source, filtered for F0127/coalesc/kingman. No named F0127 proof found. No working-tree modifications.
 
 ## Search coverage and limitations
 

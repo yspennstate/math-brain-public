@@ -2,7 +2,7 @@
 
 After the main report was committed, the B15 directory search exposed the newer Claude-attributed source
 
-- math-open-problems@44568becca495a4cf41f1f2314c6c24c24563266,
+- private-source@44568becca495a4cf41f1f2314c6c24c24563266,
 - proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md,
 
 together with fleet02/B15's scope audit at commit f68d7d90eac1d49c3cfd5c218dd7688bbd5b85d2.

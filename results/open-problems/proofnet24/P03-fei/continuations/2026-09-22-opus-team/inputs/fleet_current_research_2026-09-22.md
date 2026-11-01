@@ -6,15 +6,15 @@
 
 ## New proved inputs and one mandatory correction
 
-The [five-report assistance package](https://github.com/yspennstate/math-open-problems/blob/c21927aeb34be4ed9270867c9f3b80c976e771eb/proofnet24/P03-fei/fleet-2026-09-22/interactive/20260922T105045Z-fei-proof-assist/README.md) and its source-bound reviews add auxiliary mathematics. Every old claim and the first fourteen correction events remain unchanged. This update does not assert an exhaustive review of all intervening worker commits.
+The [five-report assistance package](private-source-repository) and its source-bound reviews add auxiliary mathematics. Every old claim and the first fourteen correction events remain unchanged. This update does not assert an exhaustive review of all intervening worker commits.
 
 | Input | Precise result and remaining implication |
 |---|---|
-| [Physical entropy and phase](https://github.com/yspennstate/math-open-problems/blob/c21927aeb34be4ed9270867c9f3b80c976e771eb/proofnet24/P03-fei/fleet-2026-09-22/interactive/20260922T105045Z-fei-proof-assist/interference/REPORT.md) | Child-mixture information is paid by phase; explicit packet and influence-variation refunds telescope. The exact physical variance identity gives one nonreused budget. The conditional packet entropy, including its rare logarithm, remains unpaid. |
-| [Occurrence credit plus phase](https://github.com/yspennstate/math-open-problems/blob/c21927aeb34be4ed9270867c9f3b80c976e771eb/proofnet24/P03-fei/fleet-2026-09-22/interactive/20260922T105045Z-fei-proof-assist/path_a/REPORT.md) | Their sum is a nonnegative physical supermartingale. Newly generated average-child occurrence credit has one phase budget. Initial occurrence credit can greatly exceed influence, so monotonicity is not full FEI payment. |
-| [All-level KL bins](https://github.com/yspennstate/math-open-problems/blob/c21927aeb34be4ed9270867c9f3b80c976e771eb/proofnet24/P03-fei/fleet-2026-09-22/interactive/20260922T105045Z-fei-proof-assist/rigidity/REPORT.md) | Fixed and level-adaptive bins control information loss at influence scale; equal-influence cell counts are explicit. The sufficient lower bound on retained bin probabilities remains open; source computation may still be exponential. |
-| [Normalized multiscale reference](https://github.com/yspennstate/math-open-problems/blob/c21927aeb34be4ed9270867c9f3b80c976e771eb/proofnet24/P03-fei/fleet-2026-09-22/interactive/20260922T105045Z-fei-proof-assist/path_b/REPORT.md) | Fixed regular disjoint gate iterates admit one hybrid law recovering KL to additive epsilon I from logarithmically many hierarchy heights. Arbitrary prime sources do not yet have this construction. |
-| [Robust rows and physical slack](https://github.com/yspennstate/math-open-problems/blob/c21927aeb34be4ed9270867c9f3b80c976e771eb/proofnet24/P03-fei/fleet-2026-09-22/interactive/20260922T105045Z-fei-proof-assist/path_c/REPORT.md) | Reciprocal robust rows form cores; one-way scales jump by at least16. Full ratio extremality gives physical child slack. Hall transport prevents reuse within one selected family and state, but does not yet pay query entropy or cover all rows. |
+| [Physical entropy and phase](private-source-repository) | Child-mixture information is paid by phase; explicit packet and influence-variation refunds telescope. The exact physical variance identity gives one nonreused budget. The conditional packet entropy, including its rare logarithm, remains unpaid. |
+| [Occurrence credit plus phase](private-source-repository) | Their sum is a nonnegative physical supermartingale. Newly generated average-child occurrence credit has one phase budget. Initial occurrence credit can greatly exceed influence, so monotonicity is not full FEI payment. |
+| [All-level KL bins](private-source-repository) | Fixed and level-adaptive bins control information loss at influence scale; equal-influence cell counts are explicit. The sufficient lower bound on retained bin probabilities remains open; source computation may still be exponential. |
+| [Normalized multiscale reference](private-source-repository) | Fixed regular disjoint gate iterates admit one hybrid law recovering KL to additive epsilon I from logarithmically many hierarchy heights. Arbitrary prime sources do not yet have this construction. |
+| [Robust rows and physical slack](private-source-repository) | Reciprocal robust rows form cores; one-way scales jump by at least16. Full ratio extremality gives physical child slack. Hall transport prevents reuse within one selected family and state, but does not yet pay query entropy or cover all rows. |
 
 **Correction15 is mandatory whenever FEI work resumes:** a universal fixed positive reserve `D_Gamma-lambda C_occ>=0` is false for every fixed `lambda>0` at every finite potential center. Recursive ternary majority gives `C_occ/I` unbounded; an independent B01 two-flip dictator family gives `K_occ/(I-1)` unbounded. The sparse suspension defeats every nonempty root block under the additional elementary-child-validity hypothesis. The exact signed identities survive. This is neither a disproof of FEI nor a refutation of lambda=0, state-dependent reserves or nonlinear credit use.
 
@@ -33,20 +33,20 @@ Programme: FEI-ALL-TEAM-20260922T095941Z
 Control revision: 2026-09-22.3  
 State revision: FEI-20260922T1000Z-v1  
 Scientific observation cutoff: 22 September 2026, 10:14:41 UTC  
-Scientific snapshot: yspennstate/math-open-problems, 96f577fb8f469710897ea8c2a208e927283cb1e9; individual sources are pinned below.  
+Scientific snapshot: private-source-repository, 96f577fb8f469710897ea8c2a208e927283cb1e9; individual sources are pinned below.  
 Machine-readable companion: CLAIMS.json
 
 ## Pre-publication correction sweep: 10:14:41 UTC
 
 A targeted sweep of FEI commits after the original cutoff found no reported refutation of the refined shaped candidate. It found the following additions, all preserved in CLAIMS.json. The earlier 10:00:20 snapshot is preserved in CLAIMS.json as provenance; this later correction layer is included in the current state.
 
-1. **Further scalar refinement, not full FEI.** Fleet01/B18 supplies epsilon=0.0226886585855132 and lambda=0.037443614456434, with candidate center6.5584452830718245.... The source reports a universal direction-safety certificate and known-witness reserve greater than1.5163e-16. This supersedes the description of the prior scalar as the latest checked frontier, without refuting the earlier candidate. All-gate nonnegativity is still open. [Near-sharp singleton-safe frontier](https://github.com/yspennstate/math-open-problems/blob/a5f19f05fa03671fb5ffeb435081ed92e9827e6a/proofnet24/P03-fei/fleet-2026-09-21/fleet01/B18/20260922T095300Z-shaped-safe-frontier/REPORT.md).
+1. **Further scalar refinement, not full FEI.** Fleet01/B18 supplies epsilon=0.0226886585855132 and lambda=0.037443614456434, with candidate center6.5584452830718245.... The source reports a universal direction-safety certificate and known-witness reserve greater than1.5163e-16. This supersedes the description of the prior scalar as the latest checked frontier, without refuting the earlier candidate. All-gate nonnegativity is still open. [Near-sharp singleton-safe frontier](private-source-repository).
 
-2. **Fixed or low-depth labelled KL extraction is refuted.** Recursive ternary majority makes the KL retained by every fixed cutoff, and by cutoffs d_m<=(1/2-epsilon)m, an asymptotically vanishing fraction of the required I-projection payment. The family itself has H=4(I-1). Path B must retain multiscale/high-cardinality dependence; successful finite Pi2 checks do not pay the universal entropy term. [Recursive-majority low-level KL barrier](https://github.com/yspennstate/math-open-problems/blob/bff0d7b6c21485f386841c42582eb04f32705046/proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md).
+2. **Fixed or low-depth labelled KL extraction is refuted.** Recursive ternary majority makes the KL retained by every fixed cutoff, and by cutoffs d_m<=(1/2-epsilon)m, an asymptotically vanishing fraction of the required I-projection payment. The family itself has H=4(I-1). Path B must retain multiscale/high-cardinality dependence; successful finite Pi2 checks do not pay the universal entropy term. [Recursive-majority low-level KL barrier](private-source-repository).
 
-3. **New broad safe-cone claim requires revalidation.** The10:14 report claims a center floor6.5574578583 for arbitrary symmetric nonnegative globally gate-safe additive directions. Section3 infers a local selector inequality although one child is a nonliteral AND and its own safe-direction slack need not vanish. Global nonnegative defect does not by itself imply local nonnegative defect after removing positive child defects. This is recorded as NEEDS_REVALIDATION, not a disproof of the conclusion. Do not use the new floor to constrain assignments until the implication is proved or the theorem is restricted to separately verified local singleton-safe directions. [Global safe-cone selector claim requiring local-slack clarification](https://github.com/yspennstate/math-open-problems/blob/96f577fb8f469710897ea8c2a208e927283cb1e9/proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T101139Z-infinite-safe-direction-barrier/REPORT.md).
+3. **New broad safe-cone claim requires revalidation.** The10:14 report claims a center floor6.5574578583 for arbitrary symmetric nonnegative globally gate-safe additive directions. Section3 infers a local selector inequality although one child is a nonliteral AND and its own safe-direction slack need not vanish. Global nonnegative defect does not by itself imply local nonnegative defect after removing positive child defects. This is recorded as NEEDS_REVALIDATION, not a disproof of the conclusion. Do not use the new floor to constrain assignments until the implication is proved or the theorem is restricted to separately verified local singleton-safe directions. [Global safe-cone selector claim requiring local-slack clarification](private-source-repository).
 
-4. **Checker provenance correction.** The earlier fleet04/B13 report's final committed checker bytes were executed after readback, not byte-identically before publication; the source says they reproduced the committed output. The mathematical theorem and constants are unchanged. This correction is source-reported and does not constitute an independent replay by this state editor. [Checker-byte execution timing correction](https://github.com/yspennstate/math-open-problems/blob/4bf7d1f1ee6bb8f26e55c8519b4ca0d49cf35143/proofnet24/P03-fei/fleet-2026-09-21/fleet04/B13/20260922T0954Z-nearoptimal-singleton-repair/CORRECTION.md).
+4. **Checker provenance correction.** The earlier fleet04/B13 report's final committed checker bytes were executed after readback, not byte-identically before publication; the source says they reproduced the committed output. The mathematical theorem and constants are unchanged. This correction is source-reported and does not constitute an independent replay by this state editor. [Checker-byte execution timing correction](private-source-repository).
 
 For REFUTED claim cards, statement/rejected_statement names the rejected conjecture; counterexample_result records the true positive evidence for rejecting it. A refutation result must never be mistaken for a false barrier lemma.
 
@@ -62,7 +62,7 @@ or construct a genuine Boolean family with unbounded H/I. Every research pathway
 
 This state records analytic proofs and finite certificates **reported by their sources**, scoped refutations, explicit candidate potentials, and unpaid implications. It does not certify the entire dependency graph. No full FEI proof has received independent end-to-end review. The state editor read the cited contents and recomputed the older 3/8-witness defect arithmetic; this is a limited spot check, not verification of the entire 18-input construction or primality certificate. Any additional independent replay must be recorded separately with its exact source bytes, inputs, output and scope.
 
-The already-announced read-once AND/OR/NOT theorem remains H <= 6.4573 I. Its source provides an analytic reduction and an interval certificate. The numerical value 6.4547837 is the sharp candidate/lower-construction limit cited there; it is not a proved universal FEI constant. No later local coefficient in this file supersedes that theorem. See [Read-once AND/OR/NOT bound](https://github.com/yspennstate/math-open-problems/blob/3f3da29b0d177ffdccaab7f92f510dc14fd0e587/proofnet24/P03-fei/continuations/2026-09-21-readonce-certificate/REPORT.md).
+The already-announced read-once AND/OR/NOT theorem remains H <= 6.4573 I. Its source provides an analytic reduction and an interval certificate. The numerical value 6.4547837 is the sharp candidate/lower-construction limit cited there; it is not a proved universal FEI constant. No later local coefficient in this file supersedes that theorem. See [Read-once AND/OR/NOT bound](private-source-repository).
 
 ## 2. Corrections that every worker must consume first
 
@@ -77,7 +77,7 @@ The exact 18-input composition-prime Numaro gate at p1=3/8, all other biases 1/2
 \[
 D_{\Gamma^\dagger}=-0.01761141995580175378949\ldots.
 \]
-It asks for base quadratic correction c_G=0.3367154558335169..., exceeding the AND floor cited in the corrected owner pivot. This resolves the fixed-source falsification branch. The binding gate maximizes c_G under the displayed sign convention; the old owner text's “minimum” wording was inconsistent with that convention. See [Exact 18-input witness at p1=3/8](https://github.com/yspennstate/math-open-problems/blob/c3924dbab8894f04db32a65c7651a65825e54c7a/proofnet24/P03-fei/fleet-2026-09-21/fleet03/B12/20260922T061544Z-biased-prime-candidate-refutation/REPORT.md) and [Corrected AND-extremality pivot](https://github.com/yspennstate/math-open-problems/blob/3dc3688168fbabd58b8dd902ed3f6e1510f1a1eb/proofnet24/P03-fei/fleet-2026-09-21/fleet01/B18/20260922T065447Z-two-level-anti-amplification/CURRENT_OWNER_PIVOT_CORRECTED.md).
+It asks for base quadratic correction c_G=0.3367154558335169..., exceeding the AND floor cited in the corrected owner pivot. This resolves the fixed-source falsification branch. The binding gate maximizes c_G under the displayed sign convention; the old owner text's “minimum” wording was inconsistent with that convention. See [Exact 18-input witness at p1=3/8](private-source-repository) and [Corrected AND-extremality pivot](private-source-repository).
 
 Do not transfer numerical margins between cert_vi_h96k40, a separately named f4 object, another interpolation rule, or an altered center. A source-complete assertion identifies the exact potential bytes and bias conventions.
 
@@ -93,13 +93,13 @@ p_{\rm out}=1019/2048,
 \[
 -0.038023735<D_{\Gamma^\dagger}<-0.038023734.
 \]
-The unit quadratic correction is 62098577/239075328. Even coefficient 0.34 gives negative defect below -0.0193753. Since quadratic correction is globally monotone, **0.337 is also refuted**. The earlier shaped scale 0.01734442 fails too. This conclusion supersedes statements calling those candidates live. See [Bias-uniform entropy debit and historical 0.337 repair](https://github.com/yspennstate/math-open-problems/blob/4ccd51ad517f425a529daa52c3352905b86ea69d/proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md), [Stronger prime witness, 0.34 refutation, shaped repair](https://github.com/yspennstate/math-open-problems/blob/f5946fb64d336ed7369de279159643944efc47af/proofnet24/P03-fei/fleet-2026-09-21/fleet02/B17/20260922T091146Z-strong-prime-shaped-repair/REPORT.md) and [Explicit supersession of old repair scale](https://github.com/yspennstate/math-open-problems/blob/17283f827bb95676b5a62fa37bcd8682e45baf08/proofnet24/P03-fei/fleet-2026-09-21/fleet03/B13/20260922T093915Z-safe-direction-coercivity/UPDATE_STRONG_PRIME.md).
+The unit quadratic correction is 62098577/239075328. Even coefficient 0.34 gives negative defect below -0.0193753. Since quadratic correction is globally monotone, **0.337 is also refuted**. The earlier shaped scale 0.01734442 fails too. This conclusion supersedes statements calling those candidates live. See [Bias-uniform entropy debit and historical 0.337 repair](private-source-repository), [Stronger prime witness, 0.34 refutation, shaped repair](private-source-repository) and [Explicit supersession of old repair scale](private-source-repository).
 
 ### 2.3 Two tempting next lemmas were also refuted before this cutoff
 
-**Full unweighted convolution L2 payment fails.** On genuine sparse one-point-defect suspensions, the complete squared signed-convolution energy is 4I+o(I), while the indispensable KL term is of order dimension times I and the valuation tails are zero. No fixed multiple of that energy plus an O(J) reserve can replace the exact KL. Merely aggregating every shift in the same quadratic norm does not repair the issue. See [Full unweighted convolution L2 obstruction](https://github.com/yspennstate/math-open-problems/blob/7ec649dfb3d1ab2f92855f2069590fca2ac956dd/proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md).
+**Full unweighted convolution L2 payment fails.** On genuine sparse one-point-defect suspensions, the complete squared signed-convolution energy is 4I+o(I), while the indispensable KL term is of order dimension times I and the valuation tails are zero. No fixed multiple of that energy plus an O(J) reserve can replace the exact KL. Merely aggregating every shift in the same quadratic norm does not repair the issue. See [Full unweighted convolution L2 obstruction](private-source-repository).
 
-**Raw hidden curvature is not O(J) on primitive terminal functions.** A one-point surgery on tensor products creates genuine tensor-primitive, all-block K=4 terminal functions with U4/J tending to infinity. The source does not refute a result using full rho>4 ratio-extremal criticality. It refutes the weaker shortcut using terminality and qualitative primitivity alone. See [Two-survivor identities and primitive-terminal U4 no-go](https://github.com/yspennstate/math-open-problems/blob/85ffa60db26997421d980b1f86c03d82259504ca/proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md).
+**Raw hidden curvature is not O(J) on primitive terminal functions.** A one-point surgery on tensor products creates genuine tensor-primitive, all-block K=4 terminal functions with U4/J tending to infinity. The source does not refute a result using full rho>4 ratio-extremal criticality. It refutes the weaker shortcut using terminality and qualitative primitivity alone. See [Two-survivor identities and primitive-terminal U4 no-go](private-source-repository).
 
 ## 3. Shared definitions and a precise universal endpoint
 
@@ -111,7 +111,7 @@ D_\Gamma(G;p)
   \bigl(\Gamma(p_i)+h_2(V_{p_i})\bigr)
 -\Gamma(p_{\rm out})-\widetilde H_G(p).
 \]
-A symmetric nonnegative finite-cap potential with D_Gamma >= 0 for every finite Boolean gate and every product bias implies FEI. The project source states a converse equivalence. A complete end-to-end proof must retain the realizable-bias/envelope and limiting details; finite grid checks are not a proof for all real biases. See [All-gate formulation; preserve base-source version differences](https://github.com/yspennstate/math-open-problems/blob/a898203278af25794901b42c965816e0d9df7e11/proofnet24/P03-fei/continuations/2026-09-22-gate-reformulation/REPORT.md).
+A symmetric nonnegative finite-cap potential with D_Gamma >= 0 for every finite Boolean gate and every product bias implies FEI. The project source states a converse equivalence. A complete end-to-end proof must retain the realizable-bias/envelope and limiting details; finite grid checks are not a proof for all real biases. See [All-gate formulation; preserve base-source version differences](private-source-repository).
 
 For the actual nonempty biased spectral law P, its coordinate-occurrence vector r, output variance v, and the maximum-entropy nonempty I-projection Q_r,
 \[
@@ -131,7 +131,7 @@ The balanced-excess inequality for all balanced functions is equivalent to ordin
 \[
 K_{\rm occ}\ge H_{\max}(r)-C(\mu-1),\qquad \mu=I(f).
 \]
-See [Balanced-slice admission and exact KL target](https://github.com/yspennstate/math-open-problems/blob/7d20a4bb4067085af7c5e7c9a82aef31998a7d36/proofnet24/P03-fei/fleet-2026-09-21/fleet02/B18/20260922T093253Z-balanced-slice-admission/REPORT.md).
+See [Balanced-slice admission and exact KL target](private-source-repository).
 
 ## 4. Explicit candidates currently available for attack
 
@@ -149,7 +149,7 @@ Here
 \]
 The refined epsilon has a source-reported **universal safety theorem for the added direction**, using an exact rational Bernstein certificate with 80 terminal boxes and zero unresolved boxes. A genuine two-input obstruction forces epsilon <= 10625/468288 within that one-parameter family. This is meaningful local scalar optimization. Its improvement in the candidate center is only 7.016373e-9; tiny center retuning must not displace the universal entropy problem.
 
-Universal safety means that adding a nonnegative multiple cannot make a gate defect worse. It does not imply the repaired base potential satisfies every gate inequality. The current strongest known witness has very small clearance; adjacent source interpolation cells and other bias directions are high-value falsification tests. See [Stronger prime witness, 0.34 refutation, shaped repair](https://github.com/yspennstate/math-open-problems/blob/f5946fb64d336ed7369de279159643944efc47af/proofnet24/P03-fei/fleet-2026-09-21/fleet02/B17/20260922T091146Z-strong-prime-shaped-repair/REPORT.md), [Near-optimal universally safe singleton direction](https://github.com/yspennstate/math-open-problems/blob/c50e06733fc1e7f109e20dbb1a0013d67aa71dc7/proofnet24/P03-fei/fleet-2026-09-21/fleet04/B13/20260922T0954Z-nearoptimal-singleton-repair/REPORT.md) and [Balanced-slice admission and exact KL target](https://github.com/yspennstate/math-open-problems/blob/7d20a4bb4067085af7c5e7c9a82aef31998a7d36/proofnet24/P03-fei/fleet-2026-09-21/fleet02/B18/20260922T093253Z-balanced-slice-admission/REPORT.md).
+Universal safety means that adding a nonnegative multiple cannot make a gate defect worse. It does not imply the repaired base potential satisfies every gate inequality. The current strongest known witness has very small clearance; adjacent source interpolation cells and other bias directions are high-value falsification tests. See [Stronger prime witness, 0.34 refutation, shaped repair](private-source-repository), [Near-optimal universally safe singleton direction](private-source-repository) and [Balanced-slice admission and exact KL target](private-source-repository).
 
 ## 5. Positive results to build on without overstating their scope
 
@@ -163,7 +163,7 @@ K_{\rm occ}(F)=K_{\rm occ}(G)
 \]
 The hierarchy term is an explicit sum of KL divergences. The corresponding normalized gate remainder transfers exactly. Dropping this term is false: OR(literal,AND) has zero binary-local Kocc but global Kocc about 0.132521 bits.
 
-This closes a supporting composition-accounting gap. The defect composition identity itself was already project-local; the new contribution is the exact ledger for the I-projection credit. It leaves the arbitrary prime-gate inequality unpaid. See [Exact KL composition and hierarchy credit](https://github.com/yspennstate/math-open-problems/blob/2bf247373576eb406ca91bb3ea5f3ce5e5ab8588/proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md).
+This closes a supporting composition-accounting gap. The defect composition identity itself was already project-local; the new contribution is the exact ledger for the I-projection credit. It leaves the arbitrary prime-gate inequality unpaid. See [Exact KL composition and hierarchy credit](private-source-repository).
 
 ### Arbitrary-bias Booleanity supplies a quantitative KL lower bound
 
@@ -172,7 +172,7 @@ The biased Fourier coefficients obey exact quadratic equations a^T M_U a=0 for e
 K_{\rm occ}\ge
 \frac1{4v\ln2}\max_{U\ne\varnothing}\frac{g_U^2}{L_U^2}.
 \]
-This preserves arbitrary product bias and signed Boolean realizability. It does not prove that the bound pays the Bellman deficit. The new full-L2 obstruction prohibits replacing that missing comparison by a fixed unweighted quadratic energy estimate. See [Arbitrary-bias Booleanity quadratic-form KL bound](https://github.com/yspennstate/math-open-problems/blob/603b35e74227d1c2d8ee34c0c527c439c686e30b/proofnet24/P03-fei/fleet-2026-09-21/fleet04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md) and [Full unweighted convolution L2 obstruction](https://github.com/yspennstate/math-open-problems/blob/7ec649dfb3d1ab2f92855f2069590fca2ac956dd/proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md).
+This preserves arbitrary product bias and signed Boolean realizability. It does not prove that the bound pays the Bellman deficit. The new full-L2 obstruction prohibits replacing that missing comparison by a fixed unweighted quadratic energy estimate. See [Arbitrary-bias Booleanity quadratic-form KL bound](private-source-repository) and [Full unweighted convolution L2 obstruction](private-source-repository).
 
 ### Net selector entropy
 
@@ -181,7 +181,7 @@ For an actual physical split with child disagreement probability d and selector 
 \Delta_i\widetilde H-dh_2(V_s)
 \le h_2(d)+\frac2{\ln2}\min(d,1-d).
 \]
-Both agreement and complement endpoints are exactly paid. The residual h2(d) still grows like d log(1/d); a finite pointwise quadratic term cannot pay it universally. Descendant slack or a source-valid nonlocal entropy argument is essential. The theorem survives refutation of the same report's historical 0.337 candidate. See [Bias-uniform entropy debit and historical 0.337 repair](https://github.com/yspennstate/math-open-problems/blob/4ccd51ad517f425a529daa52c3352905b86ea69d/proofnet24/P03-fei/fleet-2026-09-21/fleet02/B12/20260922T091546Z-uniform-selector-debit-and-safe-lift/REPORT.md).
+Both agreement and complement endpoints are exactly paid. The residual h2(d) still grows like d log(1/d); a finite pointwise quadratic term cannot pay it universally. Descendant slack or a source-valid nonlocal entropy argument is essential. The theorem survives refutation of the same report's historical 0.337 candidate. See [Bias-uniform entropy debit and historical 0.337 repair](private-source-repository).
 
 ### Conditional terminal/curvature structure
 
@@ -204,7 +204,7 @@ The latest co-pair theorem proves, after revealing all but two original coordina
 \mathbb E F_{\rm child}=0,\quad
 r_{ij}=p_{ij}/4+o_{ij}.
 \]
-The orientation term cannot be discarded. Raw U4 contains quadratic cross-factor orientation even for tensors. Its primitive-terminal counterexample now forces the next proof to use full ratio-extremality, a justified tensor-baseline subtraction, or a genuinely nonreusing selector. Small and nonrobust positive-defect rows remain unpaid. This conditional programme must connect to the universal FEI conclusion; another unpriced residual is not closure. See [Terminal trigger-surplus theorem](https://github.com/yspennstate/math-open-problems/blob/fdbfbcc1beed0db4cb6d13c8d61fd92db53a8113/proofnet24/P03-fei/fleet-2026-09-21/fleet04/B12/20260922T081051Z-terminal-trigger-surplus/REPORT.md), [Surplus-weighted hidden-curvature reduction](https://github.com/yspennstate/math-open-problems/blob/200e3fd37fe201f78d882ba8809414d201efb829/proofnet24/P03-fei/fleet-2026-09-22/fleet04/B18/20260922T091529Z-surplus-hidden-curvature/REPORT.md) and [Two-survivor identities and primitive-terminal U4 no-go](https://github.com/yspennstate/math-open-problems/blob/85ffa60db26997421d980b1f86c03d82259504ca/proofnet24/P03-fei/fleet-2026-09-21/fleet02/B13/20260922T093723Z-copair-terminal-tax/REPORT.md).
+The orientation term cannot be discarded. Raw U4 contains quadratic cross-factor orientation even for tensors. Its primitive-terminal counterexample now forces the next proof to use full ratio-extremality, a justified tensor-baseline subtraction, or a genuinely nonreusing selector. Small and nonrobust positive-defect rows remain unpaid. This conditional programme must connect to the universal FEI conclusion; another unpriced residual is not closure. See [Terminal trigger-surplus theorem](private-source-repository), [Surplus-weighted hidden-curvature reduction](private-source-repository) and [Two-survivor identities and primitive-terminal U4 no-go](private-source-repository).
 
 ## 6. Three source-grounded research pathways
 
@@ -244,9 +244,9 @@ Do not mark full FEI solved until one source-complete argument handles every qua
 
 ## 8. Known stale wording and scope preservation
 
-The older B13 finite two-quarter slice theorem is useful, but its 09:34 report calls AND extremality live after the fixed-source refutation had appeared. Preserve its valid finite theorem and supersede that status language. The newer B13 09:57 report does consume the stronger witness. See [Valid finite-slice theorem with stale extremality language](https://github.com/yspennstate/math-open-problems/blob/9328d92e397f5cf2a8cad06b81cffd872662a716/proofnet24/P03-fei/fleet-2026-09-21/fleet04/B13/20260922T0930Z-prime-twoquarter-slice/REPORT.md) and [Near-optimal universally safe singleton direction](https://github.com/yspennstate/math-open-problems/blob/c50e06733fc1e7f109e20dbb1a0013d67aa71dc7/proofnet24/P03-fei/fleet-2026-09-21/fleet04/B13/20260922T0954Z-nearoptimal-singleton-repair/REPORT.md).
+The older B13 finite two-quarter slice theorem is useful, but its 09:34 report calls AND extremality live after the fixed-source refutation had appeared. Preserve its valid finite theorem and supersede that status language. The newer B13 09:57 report does consume the stronger witness. See [Valid finite-slice theorem with stale extremality language](private-source-repository) and [Near-optimal universally safe singleton direction](private-source-repository).
 
-Local MUX information-credit improvements likewise remain valid at their stated family and candidate scope. They are supporting lemmas, not evidence that a refuted potential is universal. See [Surviving local MUX information bound](https://github.com/yspennstate/math-open-problems/blob/6264ab41f9ba424c467a423f8e630ee557f4c7fe/proofnet24/P03-fei/fleet-2026-09-21/fleet04/B14/20260922T091203Z-mux-schur-credit/REPORT.md).
+Local MUX information-credit improvements likewise remain valid at their stated family and candidate scope. They are supporting lemmas, not evidence that a refuted potential is universal. See [Surviving local MUX information bound](private-source-repository).
 
 The main unresolved burden remains the same: a source-valid universal entropy payment, or a genuine Boolean FEI counterexample. Current corrections prevent the fleet from spending another cycle on the already-refuted 0.337/0.34 candidates, unweighted full-convolution L2 payment, or primitive-terminal raw-U4 payment.
 

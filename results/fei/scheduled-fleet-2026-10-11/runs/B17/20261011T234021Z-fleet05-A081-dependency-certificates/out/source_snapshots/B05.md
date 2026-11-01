@@ -12,10 +12,10 @@ The newly requested campaign files were not present at the beginning of this run
 Pinned inputs actually used:
 
 - `yspennstate/math-research-brain`, `scheduled_tasks/work/shared/fei-all-team-2026-09-22/CURRENT_RESEARCH.md`, blob `793b5c167ece8fabf9d1f26aca43b395def6201d`;
-- `yspennstate/math-open-problems`, `research_pushes/2026-09-30-fei-log-allocation/REPORT.md`, blob `822c380de0c4be109415f22f040cc2c8c345d53c`;
-- `yspennstate/math-open-problems`, physical restriction/refund report `proofnet24/P03-fei/fleet-2026-09-22/interactive/20260922T105045Z-fei-proof-assist/interference/REPORT.md`, blob `67759a5275432c298be6a0025c9a375d90b2cd1d`;
-- `yspennstate/math-open-problems`, nonlinear rare-event certificate `proofnet24/P03-fei/fleet-2026-09-22/fleet02/B08/B08-20260922T103745Z-0f440e/REPORT.md` (one bounded event recovers one half of the sparse-suspension leading KL logarithm);
-- `yspennstate/math-open-problems`, full convolution-L2 obstruction `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md`, blob `4bc39b0a0ece044759e884c9463926caf8e5be33`.
+- `private-source-repository`, `research_pushes/2026-09-30-fei-log-allocation/REPORT.md`, blob `822c380de0c4be109415f22f040cc2c8c345d53c`;
+- `private-source-repository`, physical restriction/refund report `proofnet24/P03-fei/fleet-2026-09-22/interactive/20260922T105045Z-fei-proof-assist/interference/REPORT.md`, blob `67759a5275432c298be6a0025c9a375d90b2cd1d`;
+- `private-source-repository`, nonlinear rare-event certificate `proofnet24/P03-fei/fleet-2026-09-22/fleet02/B08/B08-20260922T103745Z-0f440e/REPORT.md` (one bounded event recovers one half of the sparse-suspension leading KL logarithm);
+- `private-source-repository`, full convolution-L2 obstruction `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md`, blob `4bc39b0a0ece044759e884c9463926caf8e5be33`.
 
 The tracked quantity before this run was the sufficient local/tree criterion from the physical-refund report:
 

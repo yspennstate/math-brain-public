@@ -8,13 +8,13 @@ Fresh control source at start: `yspennstate/math-research-brain@bdc146bfbc18be1c
 
 The designated partner result actually used below is the completed fleet02/B17 theorem
 
-- `yspennstate/math-open-problems@103fe9295f04e9fae87c2ef9a88ba46a3b1e7fcc`,
+- `private-source-repository@103fe9295f04e9fae87c2ef9a88ba46a3b1e7fcc`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/fleet02-B17-20260923T234600Z-1da1d1ec/REPORT.md`,
 - theorem name `QFORM-THREEBANK-ALLROT-DIFFUSE-NOSPIKE-v1`.
 
 Its Fourier input is the proved Fresnel--Brascamp--Lieb Theorem F at
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 - `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 No independence after rotation is used anywhere.

@@ -16,17 +16,17 @@ The exact target remains: independent ORIGINAL real coordinates with one-dimensi
 
 The parametric spectral-window theorem used and re-specialized below is the completed fleet03/B02 r47 report:
 
-`yspennstate/math-open-problems@fbbacb396165d3e3a41304a73ff2331601e6ee05` (master content read during this run),
+`private-source-repository@fbbacb396165d3e3a41304a73ff2331601e6ee05` (master content read during this run),
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260924T045848Z-fleet03-B02-qform-r47/REPORT.md`.
 
 Its source theorem is the free-regularizer ridge/MSS argument at
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 The completed designated partner theorem actually applied at an equation in Section 4 is fleet02/B02's marginal-free physical-third-volume Fourier theorem:
 
-`yspennstate/math-open-problems@3fccd9b82b456e198758e5839be364b4b0ec5024`,
+`private-source-repository@3fccd9b82b456e198758e5839be364b4b0ec5024`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T170839Z-fleet02-B02-qform-auto11/REPORT.md`.
 
 For every literal ORIGINAL-coordinate physical cross block `B`, with `Z=E3(B)>0`, it proves
@@ -39,7 +39,7 @@ and the density is continuous and vanishes at infinity.
 
 The target-level scalar-pivot bounded-density theorem used in Section 3 is fleet03/B01:
 
-`yspennstate/math-open-problems@28cbe14c4381d5f1b58145b29bbcc160b4d2ea5c`,
+`private-source-repository@28cbe14c4381d5f1b58145b29bbcc160b4d2ea5c`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T233049Z-auto11/REPORT.md`.
 
 Under `s3(A)>=1`, any literal `a=A_ii!=0` gives

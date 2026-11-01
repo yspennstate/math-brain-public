@@ -16,7 +16,7 @@ No Gaussianity, moments, compact support, connected support, log-concavity, iden
 
 The predecessor is fleet01/B09's completed two-hub star theorem, canonical source
 
-`yspennstate/math-open-problems@344963502d821945c7af02ab8d7272536dab8e5c`
+`private-source-repository@344963502d821945c7af02ab8d7272536dab8e5c`
 
 at
 

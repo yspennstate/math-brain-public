@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 
 **Status:** **OPEN / PROVED PARTIAL** on Randomstrasse101 Conjecture 18.  
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`.  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`.  
+**Repository / branch:** private `private-source-repository` / `master`.  
 **Fresh pre-write master:** `c5e8719a1679f92520ab12e716351454cea3e12f`.  
 **Previous own substantive report:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T1610+0300__quadratic_energy_concentration_collision_reduction.md`.  
 **Latest complementary P07-A checkpoint read:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1647+0300__complement_reduced_cost_leakage.md`. P07-A owns the primal/support/reduced-cost route; this report stays on the Fourier-dual quadratic interpolation obstruction.

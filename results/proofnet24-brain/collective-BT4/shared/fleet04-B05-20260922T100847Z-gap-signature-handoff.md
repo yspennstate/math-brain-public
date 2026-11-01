@@ -6,7 +6,7 @@ Outcome: `ESSENTIAL_STEP_APPLIED`
 Target: `OPEN_NOT_PROVED`  
 Brain: `WITHOUT_VERIFIED_BRAIN`
 
-Canonical scientific report: `yspennstate/math-open-problems:proofnet24/collective-BT4/fleet04/B05/b05-20260922t100847z-r34/report.md`, blob `fd5055a18e9374ba0d4edafd0a7c849f031848f0`, creation commit `ec0c18cada93ea0d963f1c8f0f97c4d59816c882`.
+Canonical scientific report: `private-source-repository:proofnet24/collective-BT4/fleet04/B05/b05-20260922t100847z-r34/report.md`, blob `fd5055a18e9374ba0d4edafd0a7c849f031848f0`, creation commit `ec0c18cada93ea0d963f1c8f0f97c4d59816c882`.
 
 ## Applied inputs
 

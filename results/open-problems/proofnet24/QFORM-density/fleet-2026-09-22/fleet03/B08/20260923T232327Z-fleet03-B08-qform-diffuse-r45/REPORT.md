@@ -19,7 +19,7 @@ The canonical actual-hour login/start was already present for this run (`2026092
 
 The first unpaid implication from fleet03/B08 r44 was the arbitrary-high-rank simultaneous physical cut in the exact common-plane state. Before attempting it again, I found that fleet02/B08 had already completed exactly that step:
 
-`yspennstate/math-open-problems@af30108d1fd48a138ef13c683d397a74f8e0228e`,
+`private-source-repository@af30108d1fd48a138ef13c683d397a74f8e0228e`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260923T2307Z-auto11/REPORT.md`.
 
 Its theorem `QFORM-EXACTMATCH-HIGHRANK-COMPOUND-ROUTER-v1` proves, for a two-row physical arm `M` and arbitrary same-bank symmetric residual `S`, the exact compound identity
@@ -214,7 +214,7 @@ Therefore the projection `P` in (4.2) has rank at most four. It has rank at leas
 
 If (4.3) holds, scale by `L` and apply the completed spectral-window theorem
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`, Section 7.
 
 That theorem permits arbitrary smaller nonzero eigenvalues of either sign and gives the continuous bound `288 sqrt(3e)/13` at unit scale. Since `X^TAX=L X^T(A/L)X`, density scaling gives (4.4).
@@ -253,7 +253,7 @@ This does **not** assert that the inherited weighted leave-one-out alignment def
 
 The completed designated partner theorem is
 
-`yspennstate/math-open-problems@af30108d1fd48a138ef13c683d397a74f8e0228e`,
+`private-source-repository@af30108d1fd48a138ef13c683d397a74f8e0228e`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T212412Z-fleet04-B08-QFORM-r2/REPORT.md`,
 `QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1`.
 

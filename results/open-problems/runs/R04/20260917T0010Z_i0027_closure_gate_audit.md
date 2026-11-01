@@ -5,7 +5,7 @@ Problem/source: David Aldous and James Fill, *Reversible Markov Chains and Rando
 # R04 immutable run report — I0027 closure-gate audit
 
 Run ID: `20260917T0010Z_i0027_closure_gate_audit`  
-Repository/branch: `yspennstate/math-open-problems`, `master`.
+Repository/branch: `private-source-repository`, `master`.
 
 ## 1. Continuity and current state
 

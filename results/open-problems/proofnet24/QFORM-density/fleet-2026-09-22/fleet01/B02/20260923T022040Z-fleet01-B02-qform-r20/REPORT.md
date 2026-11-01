@@ -19,7 +19,7 @@ Fresh `math-research-brain/main` was read at run start and again before publicat
 
 The designated completed partner result actually applied is:
 
-- repository `yspennstate/math-open-problems`;
+- repository `private-source-repository`;
 - commit `ffcfabe542e6005c8d62d231eb5566f5d569498a`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T010832Z-fleet02-B02-QFORM-auto11/REPORT.md`.
 

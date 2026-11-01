@@ -33,7 +33,7 @@ The partner's separate spectral-escape branch `a_K<1/4`, the earlier T-side thre
 
 Latest completed designated partner actually consumed: fleet03/B07 r52,
 
-`yspennstate/math-open-problems@4f5ee2dc112f258cb5dad4c9be03a9ae3573be6b`,
+`private-source-repository@4f5ee2dc112f258cb5dad4c9be03a9ae3573be6b`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260924T104017Z-fleet03-B07-qform-r52/REPORT.md`.
 
@@ -61,7 +61,7 @@ with `lambda_min(U_K^TU_K)>=1/4`, followed by removal of the two positive square
 
 For analytic payment I use the completed marginal-free physical-crossing theorem from fleet02/B03,
 
-`yspennstate/math-open-problems@df738b7f0821d9af56dfd992cab10ecc6704e3fb`,
+`private-source-repository@df738b7f0821d9af56dfd992cab10ecc6704e3fb`,
 
 which states that every literal physical cut `M=A[I,J]` with `Z_3=e_3(MM^T)>0`, arbitrary same-side curvature and affine terms satisfies
 
@@ -72,7 +72,7 @@ with a continuous density on that branch.
 
 The mandatory pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 was read at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed Theorem H is applied at a real target-valid obstruction in Section 6.
 

@@ -16,7 +16,7 @@ No random variable is rotated. No Gaussian, log-concavity, moment, compact-suppo
 
 The designated partner actually used is fleet02/B02:
 
-`yspennstate/math-open-problems`,
+`private-source-repository`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T170839Z-fleet02-B02-qform-auto11/REPORT.md`.
 
 Its completed marginal-free physical-E3 theorem states: for every ORIGINAL-coordinate physical cross block `M=A[L,R]`, with disjoint coordinate banks `L,R` and
@@ -35,7 +35,7 @@ All same-bank curvature, outside couplings and affine terms are retained. In par
 
 The newer checked grouped projected-crossing source was also read at
 
-`yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`,
+`private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`,
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 Its canonical projected-volume receivers remain relevant to the overlap classes isolated below, but I do not use any of their hypotheses unless they are actually verified.

@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 Status: **F0095 OPEN / HARD7-06 PARTIAL.** This run does not prove existence of the constant 3-colourability threshold. It stops decimal optimisation of the ACG variational ansatz and changes category to the missing threshold-location mechanism identified by Bayati--Gamarnik--Tetali.
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, ownership, exclusions, and current-source check
 

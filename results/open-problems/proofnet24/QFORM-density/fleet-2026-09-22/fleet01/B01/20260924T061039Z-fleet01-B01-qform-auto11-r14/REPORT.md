@@ -23,7 +23,7 @@ with `alpha>0` is used. The only oscillatory input below is a joint physical-edg
 Source-pinned premises actually used:
 
 1. **Previous B01 star aggregation / outer-pivot theorem.**  
-   `yspennstate/math-open-problems@6c6b0d78a725b7a1cfa941b0497d17cc6a2223ba`,  
+   `private-source-repository@6c6b0d78a725b7a1cfa941b0497d17cc6a2223ba`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260924T051102Z-fleet01-B01-qform-auto11-r13/REPORT.md`.  
    It proves `QFORM-STAR-DISPERSION-HALFRIESZ-v1`:
 
@@ -32,7 +32,7 @@ Source-pinned premises actually used:
    for a literal diagonal-plus-star quadratic polynomial, and the exact rank-one singular-value reduction `s_3(A)<=s_2(S)` after one scalar completion.
 
 2. **Any-sign two-literal-pivot receiver.**  
-   `yspennstate/math-open-problems@5a750c5b1188ea297a92c01b9692de5d87ab7f4c`,  
+   `private-source-repository@5a750c5b1188ea297a92c01b9692de5d87ab7f4c`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260924T041020Z-fleet01-B01-qform-auto11-r12/REPORT.md`.  
    If `s_3(A)>=1`, a first literal pivot is `a!=0`, and a second literal LDL pivot is `d!=0`, then
 
@@ -41,7 +41,7 @@ Source-pinned premises actually used:
    `C_2=27.2653244653667...`.
 
 3. **Orientation-free rank-two affine half-Riesz theorem, including its sharper in-range constant.**  
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,  
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,  
    `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.  
    In the physical two-coordinate case, after conditioning all other ORIGINAL coordinates, the induced affine vector lies in the physical coordinate plane, so the sharper source bound applies:
 
@@ -49,7 +49,7 @@ Source-pinned premises actually used:
       <=16 sqrt(30) |det Lambda|^(-1/4)`.
 
 4. **Newest completed designated partner fleet02/B01.**  
-   `yspennstate/math-open-problems@6efd5124aa67510aa22fb5aff7acd57463050ba8`,  
+   `private-source-repository@6efd5124aa67510aa22fb5aff7acd57463050ba8`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T050513Z-fleet02-B01-qform-auto11/REPORT.md`.  
    Its `QFORM-PHYSICAL-EDGE-QUARTER-RIESZ-v1` proves for an arbitrary ambient quadratic polynomial containing one literal physical edge `mu!=0`:
 
@@ -59,7 +59,7 @@ Source-pinned premises actually used:
    The proof is a two-coordinate conditional Plancherel estimate and therefore respects the pointwise-decay correction.
 
 5. **Exact square-fractional upgrade.**  
-   `yspennstate/math-open-problems@9c7d5029a308cb0f4903065baab48638203c4206`,  
+   `private-source-repository@9c7d5029a308cb0f4903065baab48638203c4206`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T230734Z-fleet01-B01-qform-auto11/REPORT.md`.  
    For `0<beta<1/2`, adding a source-disjoint literal square upgrades `H_beta` to `H_(beta+1/2)` with factor `|b|^(-1/2)J_beta`, where
 

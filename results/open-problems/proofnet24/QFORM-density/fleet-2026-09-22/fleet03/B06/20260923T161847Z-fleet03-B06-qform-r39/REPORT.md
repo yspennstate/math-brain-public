@@ -19,7 +19,7 @@ Fresh control source at startup: `yspennstate/math-research-brain@e1a13a8fc3898c
 
 The exact designated `fleet04/B06` current-QFORM handoff directory was absent at startup/source refresh, so no theorem is fabricated there. The compatible completed fleet04 result actually applied below is the fleet04/B20 cross-cut theorem:
 
-`yspennstate/math-open-problems@3671f29afb89083947437ffc4ebbb037aba58a4d`
+`private-source-repository@3671f29afb89083947437ffc4ebbb037aba58a4d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`.
 
@@ -39,13 +39,13 @@ and the B06 r37 near-rank-two survivor additionally has squared singular values
 
 The source for (1.2)-(1.3) is
 
-`yspennstate/math-open-problems@fa9d5dd3cc78a092484480b536872d332e22c90a`
+`private-source-repository@fa9d5dd3cc78a092484480b536872d332e22c90a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T141825Z-fleet03-B06-qform-r37/REPORT.md`.
 
 The ridge theorem used below is the source-pinned `QFORM-RIDGE-DENSITY-v1`:
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 

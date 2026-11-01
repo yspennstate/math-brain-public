@@ -17,7 +17,7 @@ Execution remains `WITHOUT_VERIFIED_BRAIN`.
 
 Canonical partner source:
 
-`yspennstate/math-open-problems@7685ac9631e259a673e88ab2648c79d063eaa2e4`
+`private-source-repository@7685ac9631e259a673e88ab2648c79d063eaa2e4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T032810Z-fleet02-B20-QFORM-r23/REPORT.md`.
 
@@ -37,7 +37,7 @@ The partner also proves the source-valid one-star square-root small-ball estimat
 
 The preceding fleet03/B20 r22 chamber, canonical
 
-`yspennstate/math-open-problems@5de4e98c424cd036c97126ffa3d6abef6191b0e1`,
+`private-source-repository@5de4e98c424cd036c97126ffa3d6abef6191b0e1`,
 
 has an exact-rank-three representation whose three nonzero singular values are all at least
 
@@ -49,7 +49,7 @@ The only use of spectral coordinates below is deterministic algebra on the matri
 
 The completed fleet03/B19 r24 theorem, canonical
 
-`yspennstate/math-open-problems@2c88af5e0ac6a4faf8d923a621c7d7006d544ffe`,
+`private-source-repository@2c88af5e0ac6a4faf8d923a621c7d7006d544ffe`,
 
 states that for two ORIGINAL independent coordinates and a disjoint original-product bank with physical cross matrix `M` of row rank two, if
 

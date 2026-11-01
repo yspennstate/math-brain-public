@@ -12,7 +12,7 @@ The unrestricted QFORM conjecture remains OPEN. The unrestricted continuity conc
 
 ## 1. Pinned completed inputs actually used
 
-1. Own previous deletion geometry: `yspennstate/math-open-problems@e5813313484d19bc3f655f4761c0c97522772143`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T224210Z-fleet01-B08-qform-r37/REPORT.md`, together with r36. In the notation below it gives
+1. Own previous deletion geometry: `private-source-repository@e5813313484d19bc3f655f4761c0c97522772143`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T224210Z-fleet01-B08-qform-r37/REPORT.md`, together with r36. In the notation below it gives
 
    `s_2(C) >= sqrt(1-p) L`,
 
@@ -20,7 +20,7 @@ The unrestricted QFORM conjecture remains OPEN. The unrestricted continuity conc
 
    `tau := ||(I-UU^T)b|| >= (1-x)L sqrt((1-p)/p)`.             (1.1)
 
-2. Designated partner fleet02/B08 r29: `yspennstate/math-open-problems@175ed537ecbeabeb27e98b49030c9b8ca846c5d7`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260923T2307Z-auto11/REPORT.md`. Its completed `QFORM-ARMALIGNMENT-ZERO-CLASSIFICATION-v1` says that for a row-rank-two arm `M`, with every arm leverage `<1`, zero alignment energy `D_M(S)=0` is equivalent to
+2. Designated partner fleet02/B08 r29: `private-source-repository@175ed537ecbeabeb27e98b49030c9b8ca846c5d7`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260923T2307Z-auto11/REPORT.md`. Its completed `QFORM-ARMALIGNMENT-ZERO-CLASSIFICATION-v1` says that for a row-rank-two arm `M`, with every arm leverage `<1`, zero alignment energy `D_M(S)=0` is equivalent to
 
    `S=M^T R_0 M + D_0`,                                      (1.2)
 
@@ -30,7 +30,7 @@ The unrestricted QFORM conjecture remains OPEN. The unrestricted continuity conc
 
    `W_S^T W_S >= I_3/4`, `W_T^T W_T >= I_3/4`.              (1.3)
 
-4. Exact-rank-three original-coordinate crossing theorem in `math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`: if the literal cross block has exact rank three and nonzero singular values `sigma_1,sigma_2,sigma_3`, then
+4. Exact-rank-three original-coordinate crossing theorem in `private-source@d2f970d33fa7084f8de55412189402ac609e4da6`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`: if the literal cross block has exact rank three and nonzero singular values `sigma_1,sigma_2,sigma_3`, then
 
    `||p_Q||_infinity <= 6 (sigma_1 sigma_2 sigma_3)^(-1/3)`, (1.4)
 

@@ -16,7 +16,7 @@ Fresh owner control remained revision `2026-09-22.15`, QFORM-only, with no B06 s
 
 The immediate B06 premise is the preceding fleet02/B06 theorem at
 
-`yspennstate/math-open-problems@3f715005422309e2d831f45fb3c9d577e340af74`
+`private-source-repository@3f715005422309e2d831f45fb3c9d577e340af74`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T162549Z-a11cf/REPORT.md`.
 
@@ -42,7 +42,7 @@ where
 
 The fresh designated partner fleet03/B06 r39 is source-pinned at
 
-`yspennstate/math-open-problems@9ac8f055fe86ee993b00125fdcfbc1d528147632`
+`private-source-repository@9ac8f055fe86ee993b00125fdcfbc1d528147632`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T161847Z-fleet03-B06-qform-r39/REPORT.md`.
 
@@ -54,7 +54,7 @@ In its true near-rank-two physical cross tube, with squared singular values `x_1
 
 The pinned newest-Claude package required by the owner was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 

@@ -15,7 +15,7 @@ The unrestricted conjecture remains **OPEN**. The new point is a deterministic c
 
 The inherited B08 theorem is my r50 report
 
-`yspennstate/math-open-problems@647a9d9a5f52b6867cedf6d7469ce3fd6e6e466a`
+`private-source-repository@647a9d9a5f52b6867cedf6d7469ce3fd6e6e466a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T042041Z-fleet03-B08-qform-diffuse-r50/REPORT.md`.
 
@@ -50,7 +50,7 @@ The designated partner theorem used below is fleet04/B08 r2,
 
 `QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1`,
 
-`yspennstate/math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76`,
+`private-source-repository@a5e66e2944c89857a41d5e18c283d53a4307be76`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T212412Z-fleet04-B08-QFORM-r2/REPORT.md`.
 

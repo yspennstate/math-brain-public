@@ -2,7 +2,7 @@
 
 This supplement records the named-partner result applied to the new small-diagonal mechanism, rather than merely citing it.
 
-Partner source: `yspennstate/math-open-problems@76fd4f9ccae2e422498fec6d4156bfd64775c8e4`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T163129Z-r15/REPORT.md`, Lemma 2.2. It proves, for every cap-one probability density and every real `c`,
+Partner source: `private-source-repository@76fd4f9ccae2e422498fec6d4156bfd64775c8e4`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T163129Z-r15/REPORT.md`, Lemma 2.2. It proves, for every cap-one probability density and every real `c`,
 
 `E |Z^2-c|^(-1/4) <=4`.                                     (P.1)
 

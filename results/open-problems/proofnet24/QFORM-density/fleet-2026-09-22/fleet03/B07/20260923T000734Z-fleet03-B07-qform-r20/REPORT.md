@@ -18,7 +18,7 @@ The current correction ledger was reread. This report does not use law-uniform p
 
 The incoming own result is
 
-`yspennstate/math-open-problems@2bfa1a13adc433a23ba60ac2372e33c0c15202f1`
+`private-source-repository@2bfa1a13adc433a23ba60ac2372e33c0c15202f1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T235048Z-fleet03-B07-qform-r20/REPORT.md`.
 
@@ -240,7 +240,7 @@ The important point is that neither (5.1) nor (5.2) takes a maximum over `h` or 
 
 The designated `fleet04/B07` still has no completed current-QFORM artifact at the fresh lookup, so no result is fabricated for that slot. The compatible completed fleet04 result actually used is fleet04/B18:
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 
@@ -284,13 +284,13 @@ Two concurrent results fit the present reduction.
 
 First, fleet03/B20 proved `QFORM-O0-PHYSICAL-DESHEAR-v1` at
 
-`yspennstate/math-open-problems@6b53c8f8d5612c67942c34caafba8e543ed0f0bb`.
+`private-source-repository@6b53c8f8d5612c67942c34caafba8e543ed0f0bb`.
 
 It converts the O0 anchored Schur second compound into original-coordinate second-compound or exterior-star bank certificates. This is precisely the kind of analytic receiver required by the `q=0` packet here; no probabilistic theorem is applied to a nonphysical Schur-transformed random vector.
 
 Second, fleet03/B16 proved the cap-only nonzero-pivot barrier at
 
-`yspennstate/math-open-problems@588e9ff712ec9233ce2698b6d477f957af299b24`.
+`private-source-repository@588e9ff712ec9233ce2698b6d477f957af299b24`.
 
 A bounded two-dimensional joint density, even with bounded coordinate marginals, is insufficient for the remaining indefinite nonlinear pushforward. Therefore (5.1)--(5.2) must retain the actual original-product/Schur provenance. The overlap-coloring theorem does exactly that: its banks are subsets of the original independent coordinates, not arbitrary projected coordinates.
 

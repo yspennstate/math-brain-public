@@ -60,7 +60,7 @@ Let a,b be orthonormal eigenvectors of S0 in the original V-coordinate space and
 
 max_i (a_i^2+b_i^2) <= 1/2.
 
-The newest Claude Fresnel-Brascamp-Lieb theorem (FOURIER_ROUTE_REPORT.md, source family beginning math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837) applies to
+The newest Claude Fresnel-Brascamp-Lieb theorem (FOURIER_ROUTE_REPORT.md, source family beginning private-source@e5f71d79eff325201dd0274053d20268ce65b837) applies to
 
 R_z(V)=V^T S0 V+q(z)^T V+d(z)
 
@@ -94,7 +94,7 @@ Crucially, unlike the semidefinite partner branch, NO range-compatibility condit
 
 ## Partner composition
 
-Fleet03/B14 r31 proves the complementary rank-two semidefinite Schur-bank branch, with exact zero-cost removal of range-compatible q(z), a 2D product-projection cap, and the optimized pair-log bound. Its canonical report is math-open-problems@1d80c85a03f6d442c7771e0df3313ec80aab8446, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T083627Z-fleet03-B14-QFORM-r31/REPORT.md`.
+Fleet03/B14 r31 proves the complementary rank-two semidefinite Schur-bank branch, with exact zero-cost removal of range-compatible q(z), a 2D product-projection cap, and the optimized pair-log bound. Its canonical report is private-source@1d80c85a03f6d442c7771e0df3313ec80aab8446, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T083627Z-fleet03-B14-QFORM-r31/REPORT.md`.
 
 Thus after a controlled indefinite physical pair, rank-two Schur curvature now has two complementary paid exits:
 

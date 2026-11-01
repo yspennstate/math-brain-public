@@ -2,7 +2,7 @@
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Run: `20260924T133059Z-fleet01-B07-fixedmult-audit-r12`  
-Repository: `yspennstate/math-open-problems`  
+Repository: `private-source-repository`  
 Baseline source commit: `7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Audited current-head snapshot at start: `d11ccbed9e8d0f45b0f42b519564641bdfb9f1bc`; source blob there is still exactly `183ccd294763214e6a707e8d4749ff9a8cf7006d`.  
 Manifested SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.

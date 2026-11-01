@@ -20,7 +20,7 @@ The early checkpoint for this run is commit `68f59d83eaa14f5118d7383ec25764dfcc4
 
 The immediately relevant B01 predecessor is
 
-`yspennstate/math-open-problems@5a4923fcec8db7b5f5b7a14e5762c3291b02d299`,
+`private-source-repository@5a4923fcec8db7b5f5b7a14e5762c3291b02d299`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T060557Z-fleet02-B01-qform-auto11/REPORT.md`.
 
 It proves, for
@@ -35,14 +35,14 @@ Its proof is a fair-cut dichotomy: an order-one determinant/Brascamp--Lieb Fouri
 
 The underlying mixed-order envelope is source-pinned at
 
-`yspennstate/math-open-problems@21cf221fb1e8b99c99298fb11a0d5a41a8382aba`,
+`private-source-repository@21cf221fb1e8b99c99298fb11a0d5a41a8382aba`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T054511Z-fleet01-B01-qform-auto11b/REPORT.md`.
 
 ### 2.2 Rank-two two-bank Plancherel envelope
 
 The newest completed designated partner is
 
-`yspennstate/math-open-problems@e8c8cc633f1fe33ec6b568f80c5c7f68a105a159`,
+`private-source-repository@e8c8cc633f1fe33ec6b568f80c5c7f68a105a159`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T073210Z-auto11/REPORT.md`.
 
 For disjoint original-coordinate banks `I,J`, an exact rank-two physical cross matrix `K` with nonzero singular values `kappa_1,kappa_2`, and arbitrary same-bank measurable phases on both sides, its two-dimensional projection/Plancherel calculation proves uniformly in all affine shifts

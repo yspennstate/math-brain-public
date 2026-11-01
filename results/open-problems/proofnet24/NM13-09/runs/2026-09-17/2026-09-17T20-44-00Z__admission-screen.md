@@ -3,7 +3,7 @@ Model actually run: GPT-5.6 Sol. Reasoning level: UNVERIFIED. ADMISSION_PENDING;
 # NM13-09 — stochastic-process successor admission screen
 
 Date: 2026-09-17 UTC
-Repository / branch: `yspennstate/math-open-problems` / `master`
+Repository / branch: `private-source-repository` / `master`
 Own namespace: `proofnet24/NM13-09/`
 Category requested: CLOSABLE OUTSIDE
 

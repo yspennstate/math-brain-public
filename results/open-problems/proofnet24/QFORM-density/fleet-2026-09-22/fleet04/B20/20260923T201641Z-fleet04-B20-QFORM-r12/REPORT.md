@@ -14,9 +14,9 @@ The target is unchanged: arbitrary independent real coordinates with probability
 
 This run consumes:
 
-- reviewed Claude source `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially physical cross-block theorem D' and its marginal gates;
-- later Claude one-coordinate partner source `yspennstate/math-open-problems@92293ef443eb46467637799d3511b6dbd08201f7`;
-- completed fleet01/B20 rank-five paving/double-anchor result `yspennstate/math-open-problems@bedc345f96a6cc7ee4fcbfc25b117aa0839f22f2`;
+- reviewed Claude source `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially physical cross-block theorem D' and its marginal gates;
+- later Claude one-coordinate partner source `private-source-repository@92293ef443eb46467637799d3511b6dbd08201f7`;
+- completed fleet01/B20 rank-five paving/double-anchor result `private-source-repository@bedc345f96a6cc7ee4fcbfc25b117aa0839f22f2`;
 - fleet04 exact-rank-three three-bank packet `9d07c5d5c69c885509db66cb1093acdeff8bcb64`;
 - fleet04 bankwise triple-curvature receiver `205481d65e155470ceb4eb37c1601679abbda5e0`;
 - fleet04 physical-pair/bank overlap receiver `a70c05e517e8a195a31ab4f4c301c672d1c8d4e6`;

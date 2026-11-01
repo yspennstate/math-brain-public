@@ -290,7 +290,7 @@ Theorem 5.1 keeps the Fourier dual of `u` **before** replacing displacement osci
 
 The completed fleet04/B01 theorem is source-pinned at
 
-`yspennstate/math-open-problems@f7e82d169badc671968036252d351b8533cdd425`,
+`private-source-repository@f7e82d169badc671968036252d351b8533cdd425`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260924T012155Z-fleet04-B01-lr-residual-r1/REPORT.md`.
 
@@ -373,8 +373,8 @@ Full QFORM remains OPEN. Full-target continuity remains OPEN. No continuity conc
 
 ## 10. Source pins
 
-- Immediate B01 predecessor: `yspennstate/math-open-problems@f98e469792a51ca58a4387cffc0c68561a24621a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260924T083540Z-fleet03-B01-qform-auto11-r48/REPORT.md` and `ROW_RESTRICTION_ADDENDUM.md`.
-- Designated partner theorem: `yspennstate/math-open-problems@f7e82d169badc671968036252d351b8533cdd425`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260924T012155Z-fleet04-B01-lr-residual-r1/REPORT.md`.
-- Ball--Rogozin normalization used in r48: source-pinned there to `yspennstate/math-open-problems@b160cb60264aea801829a91df9c8e9d51350eaff`, fleet01/B14 report equation (0.2).
+- Immediate B01 predecessor: `private-source-repository@f98e469792a51ca58a4387cffc0c68561a24621a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260924T083540Z-fleet03-B01-qform-auto11-r48/REPORT.md` and `ROW_RESTRICTION_ADDENDUM.md`.
+- Designated partner theorem: `private-source-repository@f7e82d169badc671968036252d351b8533cdd425`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260924T012155Z-fleet04-B01-lr-residual-r1/REPORT.md`.
+- Ball--Rogozin normalization used in r48: source-pinned there to `private-source-repository@b160cb60264aea801829a91df9c8e9d51350eaff`, fleet01/B14 report equation (0.2).
 
 Repository access/writeback is not native learned-memory ingestion. This run remains `WITHOUT_VERIFIED_BRAIN`.

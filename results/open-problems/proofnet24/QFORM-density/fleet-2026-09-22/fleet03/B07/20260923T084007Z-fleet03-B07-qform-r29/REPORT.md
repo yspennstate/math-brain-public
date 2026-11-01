@@ -23,7 +23,7 @@ The live correction ledger was refreshed immediately before publication. The des
 
 Use this slot's completed r28 report
 
-`yspennstate/math-open-problems@1ffce50d452b85f4f080ce0b61c68023e8f0d66c`,
+`private-source-repository@1ffce50d452b85f4f080ce0b61c68023e8f0d66c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T073755Z-fleet03-B07-qform-r28/REPORT.md`.
 
@@ -119,7 +119,7 @@ Use the completed anchored-compound theorem
 
 source
 
-`yspennstate/math-open-problems@33b7581b6dc153541b2aa4f6c706192bd8a81eaa`,
+`private-source-repository@33b7581b6dc153541b2aa4f6c706192bd8a81eaa`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T050509Z-r16/REPORT.md`.
 
@@ -172,7 +172,7 @@ In particular
 
 Now use the current fractional-volume theorem from
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -236,7 +236,7 @@ The designated `fleet04/B07` current-QFORM directory is still absent. The compat
 
 `fleet04/B18`, `QFORM` r2,
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 

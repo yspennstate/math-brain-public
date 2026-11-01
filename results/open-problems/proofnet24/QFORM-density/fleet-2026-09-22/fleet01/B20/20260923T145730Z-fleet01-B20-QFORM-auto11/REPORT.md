@@ -21,7 +21,7 @@ The designated completed partner is fleet02/B20 run
 
 with source-pinned handoff in `yspennstate/math-research-brain` and canonical mathematics refreshed through
 
-`yspennstate/math-open-problems@a996362199678ee069db30c5ab31a44b2d3d29d6`.
+`private-source-repository@a996362199678ee069db30c5ab31a44b2d3d29d6`.
 
 Together with its fresh fleet03/B20 dependency, the current physical cross block `N=A[J,K]` in `N3(1/64)` satisfies
 

@@ -101,7 +101,7 @@ with all Gaussian variables and `S` mutually independent. Consequently
 
 This is where a completed result from the required pinned source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 is used at an actual inequality. Theorem F in `RESULTS.md` / `FOURIER_ROUTE_REPORT.md` is the Fresnel--Brascamp--Lieb estimate. For the present matrix, take the physical block-constant eigenframe. Every physical row has leverage exactly `1/m`, the frame Gram matrix is exactly `I_3`, the spectral coefficients are `1,1,-1`, and the residual quadratic block is zero. Hence, for every finite `m>=2`,
 
@@ -126,7 +126,7 @@ The latest compatible designated-partner report is
 
 `QFORM-MINORITY-AXIS-NONCENTRAL-RIGIDITY-v1`,
 
-`math-open-problems@5c2801936dd1d01560fb79090e62e8479d421298`,
+`private-source@5c2801936dd1d01560fb79090e62e8479d421298`,
 
 with checks completed at `ed026c9c00b376409230a24b75f4aebf3bb40754`.
 
@@ -261,7 +261,7 @@ A failure to extend the present Gaussian-line/ruling method to that branch would
 
 Pinned completed inputs actually used:
 
-- `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md` / `FOURIER_ROUTE_REPORT.md`: Theorem F gives the physical-frame `|t|^{-3/2}` integrable envelope.
+- `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md` / `FOURIER_ROUTE_REPORT.md`: Theorem F gives the physical-frame `|t|^{-3/2}` integrable envelope.
 - Same pinned source, `COUNTEREXAMPLE_SEARCH.md`: Theorem C gives the exact one-sheet ruling/coarea identity used in the Gaussian location-mixture lemma.
 - Latest compatible `fleet03/B17`, report commit `5c2801936dd1d01560fb79090e62e8479d421298`, checks commit `ed026c9c00b376409230a24b75f4aebf3bb40754`: global minority-axis noncentral rigidity and explicit `H_c(b)` envelope.
 

@@ -281,7 +281,7 @@ Full QFORM remains **OPEN / NOT PROVED / NOT DISPROVED**. Full-target continuity
 
 - Immediate predecessor: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260924T013705Z-fleet03-B05-QFORM-r37/REPORT.md`.
 - Ratio-packet reduction: `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T033640Z-fleet01-B05-QFORM-r26/REPORT.md`.
-- Rank-one affine small-ball source: `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+- Rank-one affine small-ball source: `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 - Designated partner: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260924T011830Z-fleet04-B05-convex-pair-r3/REPORT.md`.
 
 Repository transport is not native learned-memory ingestion. `full_brain_connected=false` and execution remains `WITHOUT_VERIFIED_BRAIN`.

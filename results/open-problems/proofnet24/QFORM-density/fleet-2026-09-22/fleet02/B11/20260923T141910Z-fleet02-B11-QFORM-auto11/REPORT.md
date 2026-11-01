@@ -22,11 +22,11 @@ Fresh owner control kept the full QFORM target open. I consumed the live correct
 
 The completed source results actually used are:
 
-1. `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, Theorem C: for an exact rank-three `(+, +, -)` form with eigenvalue magnitudes at least one, the one-sheet side satisfies `p_Q(s)<=pi sqrt(2)` for `s>=0`. No such conclusion is inferred for `s<0`.
-2. `math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, rank-three Schur consequence: for exact rank three, a physical row with leverage `c_i`, nonzero pivot `a=A_ii`, and spectral matrix `M` gives
+1. `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, Theorem C: for an exact rank-three `(+, +, -)` form with eigenvalue magnitudes at least one, the one-sheet side satisfies `p_Q(s)<=pi sqrt(2)` for `s>=0`. No such conclusion is inferred for `s<0`.
+2. `private-source@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, rank-three Schur consequence: for exact rank three, a physical row with leverage `c_i`, nonzero pivot `a=A_ii`, and spectral matrix `M` gives
    `||p_Q||_infinity <=128 [c_i |a| |det M|]^(-1/4)`.
 3. Designated partner fleet03/B11 r32, `20260923T131406Z-fleet03-B11-QFORM-r32`: its equal-weight four-ray theorem and, crucially, its correction that vanishing rowwise pivot certificates do not force rowwise or bank-L2 proximity to the exact split.
-4. The disjoint-volume compiler used by that partner, fleet04/B11 r5 at `math-open-problems@50b07997bec888ff7cc6820cd42be8e34d0ffc48`: for exact rank three `A=RMR^T`, two disjoint physical triples with squared spectral volumes `v_K,v_L`, and `s=min |lambda(M)|`,
+4. The disjoint-volume compiler used by that partner, fleet04/B11 r5 at `private-source@50b07997bec888ff7cc6820cd42be8e34d0ffc48`: for exact rank three `A=RMR^T`, two disjoint physical triples with squared spectral volumes `v_K,v_L`, and `s=min |lambda(M)|`,
    `||p_Q||_infinity <= (3/s)(v_K v_L)^(-1/6)`.
 
 All uses below stay in original independent coordinates or in normalized sums over disjoint original-coordinate groups.

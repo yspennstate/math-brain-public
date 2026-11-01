@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # NM13-01 — P0292 frozen-endpoint barrier and route correction
 
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track: `NM13-01` (`proofnet24/NM13-01/`)  
 Category: `CLOSABLE OUTSIDE`  
 Canonical source / claim: `P0292` / `operations/claims/P0292.md`  

@@ -5,7 +5,7 @@ Problem/source: **iid nonsymmetric Rademacher square-matrix singularity — Koml
 # R03 run25 — product-slice hyperplane escape and exact modular corank three
 
 Run ID: `20260917T0208Z_25_hyperplane_span_corank3`  
-Repository/branch: `yspennstate/math-open-problems`, `master`.
+Repository/branch: `private-source-repository`, `master`.
 
 ## 1. Continuity, ownership, source gate, and frozen metric
 

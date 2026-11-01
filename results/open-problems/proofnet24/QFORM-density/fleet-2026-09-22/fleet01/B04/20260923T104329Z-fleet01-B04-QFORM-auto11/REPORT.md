@@ -18,9 +18,9 @@ The full QFORM conjecture remains open because the bare three-large-eigenvalue h
 
 ## 2. Sources actually used at equations
 
-1. **Designated partner fleet02/B04.** `QFORM-THIRDVOLUME-Q1-BASEPACKING-v1`, source `yspennstate/math-open-problems@cf648c06ce0b8ffeb9f62838dee132c0ca41598b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T094548Z-auto11/REPORT.md`. It proves that a q=1 row-marginal support weight exists iff the rank-three row matroid contains two disjoint bases.
+1. **Designated partner fleet02/B04.** `QFORM-THIRDVOLUME-Q1-BASEPACKING-v1`, source `private-source-repository@cf648c06ce0b8ffeb9f62838dee132c0ca41598b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T094548Z-auto11/REPORT.md`. It proves that a q=1 row-marginal support weight exists iff the rank-three row matroid contains two disjoint bases.
 
-2. **Weighted sharp product-Fourier theorem.** `QFORM-WEIGHTED-FRACTIONAL-VOLUME-SHARP-v1`, read at `yspennstate/math-open-problems@b967ff246e7e5b480b098c17f01cd0fc93072991`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T014717Z-fleet02-B04-QFORM-auto11-cont/REPORT.md`. For any probability weight `w` on nonzero physical `3x3` minors, with row marginals `alpha_i<=q/2`, `1<=q<3/2`, and
+2. **Weighted sharp product-Fourier theorem.** `QFORM-WEIGHTED-FRACTIONAL-VOLUME-SHARP-v1`, read at `private-source-repository@b967ff246e7e5b480b098c17f01cd0fc93072991`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T014717Z-fleet02-B04-QFORM-auto11-cont/REPORT.md`. For any probability weight `w` on nonzero physical `3x3` minors, with row marginals `alpha_i<=q/2`, `1<=q<3/2`, and
 
 `G(w)=exp(H(w)+sum_w log det(M_ST)^2)`, 
 
@@ -30,7 +30,7 @@ it proves
 
 Its scope retains arbitrary same-bank quadratic terms, outside couplings and affine terms in original coordinates. The characteristic function is integrable, so the density is continuous and vanishes at infinity.
 
-3. **Newest Claude Fourier source actually applied.** Claude/e5 Theorem D and its arbitrary-weight/KL remark, `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, path `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. At the q=1 marginal gate the same constructed weight below gives the older explicit bound `6 sqrt(e) G(w)^(-1/6)`; the sharp theorem in item 2 improves its coefficient.
+3. **Newest Claude Fourier source actually applied.** Claude/e5 Theorem D and its arbitrary-weight/KL remark, `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, path `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. At the q=1 marginal gate the same constructed weight below gives the older explicit bound `6 sqrt(e) G(w)^(-1/6)`; the sharp theorem in item 2 improves its coefficient.
 
 No law-uniform pointwise quadratic-phase decay, post-rotation independence, arbitrary-joint coarea estimate, conditional spectral-fiber cap, or universally good single physical minor is used.
 

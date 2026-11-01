@@ -13,17 +13,17 @@ attacking: co-heavy aggregate routing: replace the now-refuted fixed-second-grad
 
    and gives a target-valid family showing that N3 aggregate curvature cannot in general be converted first into one fixed physical second-gradient area. Its first synthesis debt is `QFORM-N3-CURVED-AGGREGATE-THIRD-SOURCE-v1`.
 
-2. **Rank-two affine half-Riesz theorem.** Source `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, report blob `00681629acaba8f2e04edda6c9f6b5c4f0fdafa4`. For independent cap-one inputs and an invertible symmetric two-dimensional quadratic part `S`, arbitrary affine terms satisfy
+2. **Rank-two affine half-Riesz theorem.** Source `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, report blob `00681629acaba8f2e04edda6c9f6b5c4f0fdafa4`. For independent cap-one inputs and an invertible symmetric two-dimensional quadratic part `S`, arbitrary affine terms satisfy
 
    `sup_t E|Z^T S Z + ell^T Z - t|^(-1/2) <= 128 |det S|^(-1/4)`;
 
    when the affine term lies in the quadratic range the constant improves to `16 sqrt(30)`. In dimension two the range is all of `R^2`, so the improved constant applies below.
 
-3. **Pair-log theorem.** Source `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `PAIR_LOG_THEOREM.md`. For an exact-rank-three original-coordinate form with nonzero eigenvalue magnitudes at least `s`, any invertible indefinite physical pair `B`, with `D=|det B|` and `kappa=sigma_min(B)`, gives
+3. **Pair-log theorem.** Source `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `PAIR_LOG_THEOREM.md`. For an exact-rank-three original-coordinate form with nonzero eigenvalue magnitudes at least `s`, any invertible indefinite physical pair `B`, with `D=|det B|` and `kappa=sigma_min(B)`, gives
 
    `||p_Q||_infinity <= 8 sqrt(5) (D kappa s)^(-1/4)`.
 
-4. **Weighted affine-fiber BL.** fleet02/B06, canonical `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, report blob `dfdbbc3b74ad0cf0d56eae0f75e0cab8c742f38e`. A normalized one-dimensional product projection has density cap at most `sqrt(e)`.
+4. **Weighted affine-fiber BL.** fleet02/B06, canonical `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, report blob `dfdbbc3b74ad0cf0d56eae0f75e0cab8c742f38e`. A normalized one-dimensional product projection has density cap at most `sqrt(e)`.
 
 These are used at their stated scopes only.
 

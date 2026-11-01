@@ -1,6 +1,6 @@
 # Addendum — reconcile the earlier same-hour B02 result
 
-A late run-record refresh found that this UTC hour already contained an earlier actual B02 invocation, `20260923T020317Z-fleet03-B02-QFORM-r18`, canonical `yspennstate/math-open-problems@a3d95679414f21ac90b90ee08acdac45e606d014`. Its theorem `QFORM-DOUBLE-NULL-OUTSIDE-LINEAR-OR-GLOBAL-KERNEL-v1` further analyzes a local chamber of the span-aligned/resonant geometry.
+A late run-record refresh found that this UTC hour already contained an earlier actual B02 invocation, `20260923T020317Z-fleet03-B02-QFORM-r18`, canonical `private-source-repository@a3d95679414f21ac90b90ee08acdac45e606d014`. Its theorem `QFORM-DOUBLE-NULL-OUTSIDE-LINEAR-OR-GLOBAL-KERNEL-v1` further analyzes a local chamber of the span-aligned/resonant geometry.
 
 This does not invalidate the present report. The new present-run statement
 

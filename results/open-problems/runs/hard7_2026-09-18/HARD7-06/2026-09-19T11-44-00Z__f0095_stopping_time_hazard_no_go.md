@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 Status: **F0095 OPEN / HARD7-06 PARTIAL.** This run deliberately does not shave another decimal from the Ayre--Coja-Oghlan--Greenhill upper endpoint. Instead it attacks the source-level constant-location obstruction. The main progress is a source-matching reduction: under the known sharp-threshold theorem, Frieze's fixed `q=3` constant-location conjecture is equivalent to convergence of one scalar, the normalized expected first non-3-colourable time in the random graph process. I then identify the exact one-edge hazard budget for that stopping time, connect the strongest general monotone-system theorem to the older IFRA literature, and prove an abstract no-go showing that even the much stronger IFR/log-concavity property plus a BGT-type exponential-rate limit and sharpness still would not force the threshold locations to converge.
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, ownership, exclusions, and fresh source check
 

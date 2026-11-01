@@ -13,7 +13,7 @@ The owner target is unchanged: for every dimension, every independent real produ
 
 The newest compatible designated partner is fleet03/B20 r46 at
 
-`yspennstate/math-open-problems@9ae7023224386e95ab2bd7f088347db8750c7b06`
+`private-source-repository@9ae7023224386e95ab2bd7f088347db8750c7b06`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T034736Z-fleet03-B20-QFORM-auto11-r46/REPORT.md`.
 
@@ -54,7 +54,7 @@ Unless the full law is already paid by `<13098`, r44 gives
 
 The required owner-pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 

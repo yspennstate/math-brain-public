@@ -26,7 +26,7 @@ The block `P_i` has exactly three physical rows. Since `E3(P_i)>0`, it has rank 
 
 Now apply the completed designated-partner theorem `QFORM-EXACT-RANK3-CROSSBLOCK-FOURIER-v1` from
 
-`yspennstate/math-open-problems`,
+`private-source-repository`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T230126Z-fleet03-B02-QFORM-r17/REPORT.md`.
 
 That theorem allows arbitrary same-bank quadratic terms and outside couplings, and for an exact-rank-three physical cross block `P` gives

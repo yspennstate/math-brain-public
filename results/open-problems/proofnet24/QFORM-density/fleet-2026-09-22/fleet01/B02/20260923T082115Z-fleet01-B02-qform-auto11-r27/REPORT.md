@@ -20,7 +20,7 @@ Continuity is proved on the explicit L1 two-hub branches below. It is not claime
 The designated completed partner source is fleet02/B02:
 
 - brain handoff commit `cd7b64e5a13be8274370fd9b16814bb2666ea93c`;
-- canonical mathematics `yspennstate/math-open-problems@5d35b697d95d20e66fd72c96a5ea2dffa1201958`;
+- canonical mathematics `private-source-repository@5d35b697d95d20e66fd72c96a5ea2dffa1201958`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/fleet02-B02-20260923T071011Z-3508bbe2/REPORT.md`.
 
 Write an actual physical cross block as
@@ -62,8 +62,8 @@ This is the partner result used at the first essential inequality below.
 
 I also use the completed two-hub Fourier theorem from fleet02/B09 and its vertex-cover puncture corollary from fleet01/B09:
 
-- base theorem `QFORM-TWOHUB-PLUCKER-SMOOTHING-v1`, canonical source `yspennstate/math-open-problems@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T064043Z-fleet02-B09-QFORM-r13/REPORT.md`;
-- puncture theorem `QFORM-TWOHUB-VERTEXCOVER-PUNCTURE-v1`, canonical source `yspennstate/math-open-problems@c7dc3ed482691c13923c99a820877bfe07d0dfc6`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T074931Z-fleet01-B09-QFORM-auto12/REPORT.md`.
+- base theorem `QFORM-TWOHUB-PLUCKER-SMOOTHING-v1`, canonical source `private-source-repository@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T064043Z-fleet02-B09-QFORM-r13/REPORT.md`;
+- puncture theorem `QFORM-TWOHUB-VERTEXCOVER-PUNCTURE-v1`, canonical source `private-source-repository@c7dc3ed482691c13923c99a820877bfe07d0dfc6`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T074931Z-fleet01-B09-QFORM-auto12/REPORT.md`.
 
 For two literal hubs with leaf-coupling matrix `C`, `G=C^T C`, and a leaf-curvature vertex cover with certificate
 

@@ -18,7 +18,7 @@ The proof stays entirely in original-coordinate product space. It uses no law-un
 
 The newest required Claude/e5 source was read at the immutable source
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 - `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`,
 - `.../FOURIER_ROUTE_REPORT.md`,
 - `.../COUNTEREXAMPLE_SEARCH.md`.
@@ -28,7 +28,7 @@ The equation-level input from e5 is Theorem D and its arbitrary-weight/KL remark
 For the final constant I use this slot's completed sharper compiler
 
 - `QFORM-ENTROPY-WEIGHTED-THREE-VOLUME-v1`,
-- `yspennstate/math-open-problems@1d2dd52680ec729f28b7289e74a6f3752a379127`,
+- `private-source-repository@1d2dd52680ec729f28b7289e74a6f3752a379127`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T021315Z-fleet01-B04-QFORM-auto11/REPORT.md`.
 
 If a probability law `w` on supported physical `3 x 3` minors has constrained-side row marginals `alpha_i<=q/2`, `1<=q<3/2`, and
@@ -44,7 +44,7 @@ and has a representative in `C_0(R)`.
 The designated partner theorem actually applied below is fleet02/B04
 
 - `QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1`,
-- `yspennstate/math-open-problems@febf0c97f0f85e802b6bc2ab4a475c15109de013`,
+- `private-source-repository@febf0c97f0f85e802b6bc2ab4a475c15109de013`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T111930Z-qform/REPORT.md`.
 
 It completely pays the exact strict-`3/4` support-defect geometries. In particular an exact-rank-three four-row tetrahedral packet with third volume `E3` has a `C_0` density bounded by `6 E3^(-1/6)`.

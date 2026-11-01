@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 
 **Status:** **OPEN / PROVED PARTIAL** on Randomstrasse101 Conjecture 18.  
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`.  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`.  
+**Repository / branch:** private `private-source-repository` / `master`.  
 **Fresh pre-write master:** `54d24129090cc4c2bb418eef7cc4bd4835173677`.  
 **Previous own substantive report:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T1714+0300__physical_variance_imbalance_duality.md`.  
 **Latest complementary P07-A checkpoint read:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1745+0300__bipositive_basis_plucker_volume_balance.md`. P07-A owns the primal basis / complementary-minor / Pluecker-volume route. This report stays on the Fourier-moment interpolation route and uses none of P07-A's optimizer-selection claims.

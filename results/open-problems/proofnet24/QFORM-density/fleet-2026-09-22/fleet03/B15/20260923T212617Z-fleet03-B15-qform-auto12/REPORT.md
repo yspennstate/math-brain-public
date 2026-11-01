@@ -14,14 +14,14 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 The completed designated-partner results used below are:
 
 1. fleet04/B15 pivot-neutral hyperbolic estimate, corrected source
-   `yspennstate/math-open-problems@cff8e1368d32302e6d649f776579a5c1951929b1`,
+   `private-source-repository@cff8e1368d32302e6d649f776579a5c1951929b1`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T151702Z-fleet04-B15-pivoted-convolution-r6/REPORT.md`:
    for independent cap-one `X,Y`, arbitrary `a,u,v,k`, and `b!=0`,
    
    `||p_(aX^2+2bXY+2uX+2vY+k)||_p <= p |b|^(-1+1/p)` for every `1<p<infinity`.
 
 2. fleet04/B15 rough conditional-convolution compiler,
-   `yspennstate/math-open-problems@d734abaae2eedafe9572b4215107c9637807acaa`,
+   `private-source-repository@d734abaae2eedafe9572b4215107c9637807acaa`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T211918Z-fleet04-B15-rough-mixture-c0-r7/REPORT.md`:
    measurable conditional `L^p*L^q` convolutions with integrable norm product mix to a canonical `C_0` density with the averaged height bound.
 

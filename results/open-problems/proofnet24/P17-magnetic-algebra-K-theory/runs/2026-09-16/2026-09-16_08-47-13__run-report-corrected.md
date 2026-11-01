@@ -2,7 +2,7 @@
 
 **Run timestamp:** 2026-09-16 08:47:13 Asia/Jerusalem  
 **Track:** P17 magnetic algebra / K-theory / source certification  
-**Repository / branch:** `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** `private-source-repository` / `master`  
 **Scope:** exact historical Example 4.3.3; magnetic twisted crossed products/groupoids; generator-wise Pimsner–Voiculescu maps; exact K-theory tomography; **NO number theory**.  
 **Delivery:** GitHub-only. No email/Gmail action, collaborator contact, or collaborator-file modification.  
 **Runtime discipline:** GPT-6 / maximum reasoning was requested, but no model selector or reasoning-effort override is exposed here. No unavailable runtime control is claimed. `MODEL_AND_EFFORT_UNVERIFIED` beyond exposed product metadata.

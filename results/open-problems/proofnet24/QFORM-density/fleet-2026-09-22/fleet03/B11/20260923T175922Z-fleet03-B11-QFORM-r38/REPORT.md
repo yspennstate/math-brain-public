@@ -370,9 +370,9 @@ The unrestricted owner target remains OPEN. Global continuity remains OPEN.
 
 ## 6. Sources actually used
 
-2. fleet03/B11 r37 exact graph boundary: `yspennstate/math-open-problems@60366e6dcbf3a321423e2ff1b0f4ecb9a78776f6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T171407Z-fleet03-B11-QFORM-r37/BOUNDARY_CHECKPOINT.md`.
-3. designated partner fleet04/B11 disjoint-volume/pair-area compiler: `yspennstate/math-open-problems@50b07997bec888ff7cc6820cd42be8e34d0ffc48`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T111608Z-fleet04-B11-disjoint-volume-compiler-r5/REPORT.md`.
-4. projected-crossing Fourier normalization and product-projection caps: `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
+2. fleet03/B11 r37 exact graph boundary: `private-source-repository@60366e6dcbf3a321423e2ff1b0f4ecb9a78776f6`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T171407Z-fleet03-B11-QFORM-r37/BOUNDARY_CHECKPOINT.md`.
+3. designated partner fleet04/B11 disjoint-volume/pair-area compiler: `private-source-repository@50b07997bec888ff7cc6820cd42be8e34d0ffc48`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T111608Z-fleet04-B11-disjoint-volume-compiler-r5/REPORT.md`.
+4. projected-crossing Fourier normalization and product-projection caps: `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 5. rank-two logarithmic control and current corrections are retained from the shared QFORM state; no refuted arbitrary-joint coarea or conditional-cap shortcut is used.
 
 No public release, workflow execution, paid API/model call, installation, scheduler mutation, cross-account authentication, notification change, or email action was performed.

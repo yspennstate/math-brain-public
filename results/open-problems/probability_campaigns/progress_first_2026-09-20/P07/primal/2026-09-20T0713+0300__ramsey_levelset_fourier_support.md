@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-A — a random-Cayley Ramsey barrier forces source-scale positive witnesses to be Fourier-dense
 
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured pre-write master:** `da9965ccf624d8f0530dd38ce47063abedfb54ee`  
 **Previous own report:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T0603+0300__reciprocal_dispersion_support_entropy.md`, blob `4b41c2dbe09cf54cc43635fda9b52c52c3ef5045`.  
 **Complementary checkpoint read:** P07-B `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T0610+0300__projected_hinge_directional_margin.md`, blob `0becacf6c58d389eb6ecee6c98b48824fe1d8d95`. P07-B continues to own projected-hinge / Fourier-dual exceptional-frequency control; the argument below is primal positive-definite geometry and does not duplicate it.  

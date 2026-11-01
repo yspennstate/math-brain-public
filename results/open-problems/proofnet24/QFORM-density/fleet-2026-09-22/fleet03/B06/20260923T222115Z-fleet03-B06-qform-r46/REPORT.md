@@ -16,7 +16,7 @@ The unrestricted owner target remains OPEN. No Gaussian, log-concavity, moment, 
 
 The immediate B06 predecessor is
 
-`yspennstate/math-open-problems@b5d4a62bb80a7ad84db292cb8d886282a95e851b`
+`private-source-repository@b5d4a62bb80a7ad84db292cb8d886282a95e851b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T211904Z-fleet03-B06-qform-r45/REPORT.md`.
 
@@ -34,7 +34,7 @@ Three completed inputs are used at their proved scopes.
 
 1. `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, source
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -45,7 +45,7 @@ For two independent cap-one original coordinates and an invertible symmetric `2 
 
 2. `QFORM-PAIR-LOG-SMALLBALL-SMOOTHING-v1`, source
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -59,7 +59,7 @@ the full pair-plus-residual form has
 
 3. `QFORM-THREE-HUB-JOINT-PLANCHEREL-v1`, source
 
-`yspennstate/math-open-problems@f98635ec90f47da9c38e40516896462bb423f3c6`
+`private-source-repository@f98635ec90f47da9c38e40516896462bb423f3c6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T140911Z-fleet02-B01-qform-r43/REPORT.md`.
 
@@ -75,7 +75,7 @@ This branch has a continuous `C_0` density. The proof is joint three-dimensional
 
 The designated partner theorem actually applied in Section 5 is fleet04/B06's `QFORM-BANKWISE-TRIPLE-CURVATURE-v1`, source
 
-`yspennstate/math-open-problems@f24c8db8946d54f4da2d11898697913af766ad32`
+`private-source-repository@f24c8db8946d54f4da2d11898697913af766ad32`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260923T184145Z-fleet04-B06-QFORM-r1/REPORT.md`.
 

@@ -9,7 +9,7 @@ Status: substantive partial calculation; full QFORM remains open.
 ## New calculation: arbitrary positive small-ball exponent smooths the indefinite pair logarithm
 
 Use the proved physical-pair envelope from
-`math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+`private-source@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 For an invertible indefinite physical pair B, write
 `Delta=|det B|`, `kappa=sigma_min(B)`. After completing the pair,
 
@@ -42,7 +42,7 @@ This recovers the published alpha=1/2 pair-log bound exactly. At `alpha=1/8`,
 ## Apply the required e5 source to the Schur remainder
 
 From
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, Extension D_k with k=1 and q=2 is valid with no marginal obstruction, and Lemma 4.1 converts its `|t|^(-1/4)` decay to fractional potentials.
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, Extension D_k with k=1 and q=2 is valid with no marginal obstruction, and Lemma 4.1 converts its `|t|^(-1/4)` decay to fractional potentials.
 
 Let I,J be disjoint ORIGINAL-coordinate banks in the completed-pair remainder and put
 
@@ -99,7 +99,7 @@ For a definite B the ellipse bound already gives `pi delta^(-1/2)R0^(-1)`. Hence
 ## Partner r30 interface
 
 Latest completed designated partner used here:
-`math-open-problems@466a8413b3d1ec6ce723633be0fe14eafaa7175d:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T090613Z-fleet03-B07-qform-r30/REPORT.md`.
+`private-source@466a8413b3d1ec6ce723633be0fe14eafaa7175d:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T090613Z-fleet03-B07-qform-r30/REPORT.md`.
 On its edge-E2 branch,
 
 `|b| sqrt(E2(D)) >= sqrt(G)/2`, `G>gamma F^6`, `gamma=113246208^(-2)`, and `|b|<=F`,

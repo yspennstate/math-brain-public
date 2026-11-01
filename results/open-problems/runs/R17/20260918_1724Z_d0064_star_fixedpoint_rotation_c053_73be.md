@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is not
 
 # R17 C053 — D0064 star-equation classification: first counterexample-first run
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Lifecycle transition; binary LCS remains handed off
 

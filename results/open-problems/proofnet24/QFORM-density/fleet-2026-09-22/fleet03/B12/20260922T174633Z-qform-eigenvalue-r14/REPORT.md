@@ -15,7 +15,7 @@ for a three-dimensional spectral core `Y`.
 
 This run tests that exact missing implication.
 
-Designated partner `fleet04/B12` still has no current QFORM canonical directory at the fresh `math-open-problems` source tree, so no result is fabricated for that slot. A compatible completed fleet04 theorem is genuinely applied below: fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical commit `441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`.
+Designated partner `fleet04/B12` still has no current QFORM canonical directory at the fresh `private-source` source tree, so no result is fabricated for that slot. A compatible completed fleet04 theorem is genuinely applied below: fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical commit `441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`.
 
 ## 1. Main correction: the proposed conditional 3-D L-infinity moment is unbounded
 

@@ -21,13 +21,13 @@ Fresh control was read from `yspennstate/math-research-brain` main. The run star
 
 Completed mathematical inputs used:
 
-1. `QFORM-REGULARIZED-DETERMINANT`, canonical report `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`. For a physical cross block `B=A[I,J]`, and `1<=q<2` with maximum coordinate leverage of `range(B)` on the selected side at most `q/2`,
+1. `QFORM-REGULARIZED-DETERMINANT`, canonical report `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`. For a physical cross block `B=A[I,J]`, and `1<=q<2` with maximum coordinate leverage of `range(B)` on the selected side at most `q/2`,
 
    `|eta(t)| <= det(I + c_q t^2 B B^T)^(-1/(4q)),   c_q=2q/(pi^2 e^2)`.
 
    For `q=2` the same formula with `c_2=4/(pi^2 e^2)` is unconditional. Arbitrary self phases and outside couplings are retained.
 
-2. Compatible fleet04 result `QFORM-SCHUR-PIVOT-SMOOTHING-v1`, canonical report `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`. If `R` has density at most `M` and, conditional on `R=r`, `V` has density at most one, then `R+aV^2` has density at most `2 sqrt(M/|a|)`. I apply this below to an actual inequality. The designated `fleet04/B03` location had no completed current-QFORM handoff at the fresh scan, so none is invented.
+2. Compatible fleet04 result `QFORM-SCHUR-PIVOT-SMOOTHING-v1`, canonical report `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`. If `R` has density at most `M` and, conditional on `R=r`, `V` has density at most one, then `R+aV^2` has density at most `2 sqrt(M/|a|)`. I apply this below to an actual inequality. The designated `fleet04/B03` location had no completed current-QFORM handoff at the fresh scan, so none is invented.
 
 3. Fleet02/B03 run `20260922T171110Z-fleet02-B03-QFORM-r12`, canonical report path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T171110Z-fleet02-B03-QFORM-r12/REPORT.md`. It proves a dependence-safe pair-collision estimate and, crucially, the exact structural obstruction `A_m=[1] direct_sum J_m/m direct_sum (-J_m/m)`: every single disjoint `2 x 2` cross minor after the singleton pivot has determinant `1/m^2`, and bank pivots have no invertible such minor. This refutes a *single-minor* exhaustion, not bank aggregation.
 

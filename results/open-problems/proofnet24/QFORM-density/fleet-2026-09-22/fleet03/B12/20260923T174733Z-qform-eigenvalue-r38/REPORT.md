@@ -263,10 +263,10 @@ Continuity is proved in (5.6) and (6.8), but not for the self-core survivor or t
 ## 9. Sources and provenance
 
 - Fresh brain control at start: `7a0d97f43e2bd0ed8e16b1b09df220eea4805924`; prepublication refresh: `fd833b8e184d76d66929db61837a07f3ca3c7574`.
-- Fresh math-open-problems head observed during source refresh: `cbbf02361424fcf02504cf6f7f786aef1760bc8a`.
+- Fresh private-source head observed during source refresh: `cbbf02361424fcf02504cf6f7f786aef1760bc8a`.
 - Designated partner: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T171921Z-fleet04-B12-local-krylov-shadow-r5/REPORT.md`.
-- Marginal-free E3 receiver: `math-open-problems@a23ddf469392d77526db53d0811248a52a84d088`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T164400Z-fleet03-B20-QFORM-r34/REPORT.md`.
-- Projected crossing: `math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
-- Latest three-cut synthesis consumed: `math-open-problems@cbbf02361424fcf02504cf6f7f786aef1760bc8a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T172757Z-fleet02-B20-QFORM-auto11/REPORT.md`.
+- Marginal-free E3 receiver: `private-source@a23ddf469392d77526db53d0811248a52a84d088`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T164400Z-fleet03-B20-QFORM-r34/REPORT.md`.
+- Projected crossing: `private-source@829192412f2a2d84e72b4bed91115fc5fab68401`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
+- Latest three-cut synthesis consumed: `private-source@cbbf02361424fcf02504cf6f7f786aef1760bc8a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T172757Z-fleet02-B20-QFORM-auto11/REPORT.md`.
 
 Repository transport is not native learned-memory ingestion; this run remains `WITHOUT_VERIFIED_BRAIN`. The changed-file allowlist contains only this worker's mathematical report/check files and its own brain handoff/status/memory artifacts. No credentials, account tokens, private personal material, or unrelated data are included. No repository-local privacy scanner is exposed through the current connector, so the privacy check is limited to manual inspection of this explicit allowlist.

@@ -22,7 +22,7 @@ The mechanism here differs from the preceding B12 threshold, footprint-rank, and
 
 `fleet02/B12`, canonical report:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - commit: `64268d2bee76cd374e2bf1a34868e0e6a1b7e84d`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T115313Z-fleet02-B12-qform-r33/REPORT.md`
 
@@ -40,7 +40,7 @@ The partner proof truncates `R` at rank `p`, spends `r+p` singular reserve direc
 
 Pinned D5 theorem:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - commit: `e5f71d79eff325201dd0274053d20268ce65b837`
 - path: `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 

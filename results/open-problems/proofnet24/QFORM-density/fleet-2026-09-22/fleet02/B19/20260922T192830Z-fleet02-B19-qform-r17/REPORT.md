@@ -20,11 +20,11 @@ The immediate incoming B19 debt was the aligned/near-singular O0 splice from r16
 
 ## 2. Source-pinned inputs actually used
 
-1. **Current named partner fleet03/B19 r17.** Canonical mathematics `yspennstate/math-open-problems@9989e8640c2933ba54cd8de88723ac5c223be3b1`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T190100Z-fleet03-B19-QFORM-r17/REPORT.md`. It closes every O0 state with at least three `3/4`-heavy rows by an exact three-row cross-bank payment, with continuous density `<12 sqrt(e)<19.785`. Hence any unpaid O0 heavy-row branch has at most two such rows.
+1. **Current named partner fleet03/B19 r17.** Canonical mathematics `private-source-repository@9989e8640c2933ba54cd8de88723ac5c223be3b1`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T190100Z-fleet03-B19-QFORM-r17/REPORT.md`. It closes every O0 state with at least three `3/4`-heavy rows by an exact three-row cross-bank payment, with continuous density `<12 sqrt(e)<19.785`. Hence any unpaid O0 heavy-row branch has at most two such rows.
 
-2. **Prior fleet02/B19 r16.** Canonical mathematics `yspennstate/math-open-problems@89a0197f2e9ed58383cdd516eedcc2ecd2145407`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T190733Z-fleet02-B19-qform-r16/REPORT.md`. It proves the two-heavy raw factor, exact Schur-projection inheritance, the R0 scalar `GOOD3/ALIGNED2` split, the R1 moderate-row/diffuse payment, and the definite physical-pair payment. Its first unpaid implication is the aligned/near-singular splice.
+2. **Prior fleet02/B19 r16.** Canonical mathematics `private-source-repository@89a0197f2e9ed58383cdd516eedcc2ecd2145407`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T190733Z-fleet02-B19-qform-r16/REPORT.md`. It proves the two-heavy raw factor, exact Schur-projection inheritance, the R0 scalar `GOOD3/ALIGNED2` split, the R1 moderate-row/diffuse payment, and the definite physical-pair payment. Its first unpaid implication is the aligned/near-singular splice.
 
-3. **fleet03/B03 determinant-bank half-Riesz theorem.** Canonical `yspennstate/math-open-problems@924b3c4c70f86a64402863fe228f641bf3db60b2`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T175531Z-fleet03-B03-QFORM-r17/REPORT.md`. For a physical residual cross block `B`, if `E_2(B)=e_2(BB^T)>0` and one selected side has range leverage at most `1/2`, then
+3. **fleet03/B03 determinant-bank half-Riesz theorem.** Canonical `private-source-repository@924b3c4c70f86a64402863fe228f641bf3db60b2`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T175531Z-fleet03-B03-QFORM-r17/REPORT.md`. For a physical residual cross block `B`, if `E_2(B)=e_2(BB^T)>0` and one selected side has range leverage at most `1/2`, then
 
 `H_(1/2)(R):=sup_y E|R-y|^(-1/2)
  <= 7.673759290384858 E_2(B)^(-1/8)`.                         (2.1)
@@ -33,7 +33,7 @@ It also proves the scalar-pivot transducer
 
 `Q=a(X_i+h(Z))^2+R(Z)  =>  ||p_Q||_infinity<=|a|^(-1/2) H_(1/2)(R)`. (2.2)
 
-4. **Newest compatible affine-hyperbolic fractional trace.** fleet01/B02, canonical `yspennstate/math-open-problems@960599513eef0d6048af1e0e1d279650d2d67e75`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260922T192922Z-fleet01-B02-qform-auto11/REPORT.md`. If `R=2a XU+H(X,V)` with `X,U,V` on genuinely independent original-coordinate banks, cap-one `X`, cap-`M` `U`, and **no hidden U-curvature in H**, then
+4. **Newest compatible affine-hyperbolic fractional trace.** fleet01/B02, canonical `private-source-repository@960599513eef0d6048af1e0e1d279650d2d67e75`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260922T192922Z-fleet01-B02-qform-auto11/REPORT.md`. If `R=2a XU+H(X,V)` with `X,U,V` on genuinely independent original-coordinate banks, cap-one `X`, cap-`M` `U`, and **no hidden U-curvature in H**, then
 
 `H_(1/2)(R)<=4 sqrt(2) sqrt(M/|a|)`.                           (2.3)
 

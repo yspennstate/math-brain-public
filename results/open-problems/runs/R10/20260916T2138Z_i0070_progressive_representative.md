@@ -7,7 +7,7 @@ Status: **PARTIAL / RECOVERY2 / author-side full-source proof candidate strength
 # R10 I0070 — Hilbert reference-scale and progressive-representative repair
 
 Run ID: `20260916T2138Z_i0070_progressive_representative`
-Repository/branch: `yspennstate/math-open-problems` / `master`
+Repository/branch: `private-source-repository` / `master`
 Dated source/status check: 2026-09-16/17 UTC boundary
 
 No Gmail/email, Drive, public posting, purchases, permission changes, workflow execution, shared-root edit, peer-file edit, or scheduler mutation was performed.

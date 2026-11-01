@@ -114,7 +114,7 @@ Indeed the relevant subset of the real line is a translate of
 `2 sqrt(2 rho/|d|)`.
 
 Now apply the completed **indefinite physical-pair logarithmic theorem** from the pinned source
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, Section 7: if an invertible indefinite pair has determinant magnitude `D`, least singular value `kappa`, and the completed remainder obeys `sup_t P(|R-t|<rho)<=H sqrt(rho)`, then
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, Section 7: if an invertible indefinite pair has determinant magnitude `D`, least singular value `kappa`, and the completed remainder obeys `sup_t P(|R-t|<rho)<=H sqrt(rho)`, then
 
 \[
 \|p_Q\|_\infty

@@ -12,7 +12,7 @@ The target remains: for every dimension `n`, independent real coordinates `X_i` 
 
 Fresh control additionally assigns `fleet03/B04` an independent review of the regularized-determinant proof at
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 
 The exact assigned partner `fleet04/B04` had no completed QFORM handoff/report in the fresh shared handoff tree, so no partner result is fabricated. The owner-specified completed interactive determinant proof is the mathematical dependency actually applied below.
 

@@ -14,7 +14,7 @@ The owner target remains open: arbitrary independent original-coordinate inputs 
 
 The designated partner result actually used is fleet02/B18 run `20260923T013147Z-bf13c29b`, canonical report
 
-- `yspennstate/math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`
+- `private-source-repository@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`.
 
 Its theorem `QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1` states: if S has density cap K and is independent of a pair (C,D) with arbitrary joint density cap M, then for beta,gamma nonzero,
@@ -35,7 +35,7 @@ The target-valid family to which I apply it is the same partner family. For ten 
 
 for r>0. Fleet03/B18 r21 proves that the physical matrix of Q_r has exactly the nonzero spectrum `{-1,1,1}` for every r, at
 
-- `yspennstate/math-open-problems@c7d99a5becf262e519f50bd221ab49c0bd807534`
+- `private-source-repository@c7d99a5becf262e519f50bd221ab49c0bd807534`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T005908Z-fleet03-B18-QFORM-r21/REPORT.md`.
 
 Thus every Q_r is inside the exact owner target.

@@ -14,7 +14,7 @@ No Gaussian, moment, iid, compact-support, log-concavity, or independence-after-
 
 Fresh designated partner input:
 
-- `yspennstate/math-open-problems@0f3465fa7e160288fb739586dadc47d30ac77e5b`
+- `private-source-repository@0f3465fa7e160288fb739586dadc47d30ac77e5b`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260924T040000Z-fleet02-B20-QFORM-r44/REPORT.md`
 - brain handoff commit `yspennstate/math-research-brain@7dcca8fc8d031a5b6018471b1b6498c38aba7b66`.
 

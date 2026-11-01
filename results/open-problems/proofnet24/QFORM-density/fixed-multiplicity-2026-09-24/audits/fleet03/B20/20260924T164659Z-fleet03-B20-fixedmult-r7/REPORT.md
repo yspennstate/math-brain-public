@@ -7,7 +7,7 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 ## Executive verdict
 
 1. **Pinned source, literal status:** `GAP_REPAIRABLE_LOCAL`. The current self-contained source is
-   `yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f`,
+   `private-source-repository@eeb752c8943536541b34b42b8bf48e924f4d3d2f`,
    `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex`,
    blob `19fb119877426b640b2c0dae19ec2f78a399fe11`.
    I read every line 1--955. The only mathematical source defect found is local wording in the negative-tail part of the hyperbolic-pair proof: the maximizing physical coordinate for the negative exponential vector must be chosen independently of the maximizing coordinate for the positive exponential vector. Because the two vectors have the same Euclidean norm, the cutoff and constants are unchanged. With that repair, the mathematical nine-value chain passes this complete reconstruction.

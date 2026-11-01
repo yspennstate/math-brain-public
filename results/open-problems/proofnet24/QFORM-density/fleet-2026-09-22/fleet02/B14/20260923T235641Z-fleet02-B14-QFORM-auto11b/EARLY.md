@@ -74,7 +74,7 @@ uniformly in the partner's support diameter, bridge floor, smoothing scale, tran
 
 ## Required fixed-source comparison
 
-The completed Theorem A in `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, applies to the aggregated independent triple `(L,D,Y)` because its matrix has eigenvalues `{1,-1,1}` and all three laws have density at most one. It gives
+The completed Theorem A in `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, applies to the aggregated independent triple `(L,D,Y)` because its matrix has eigenvalues `{1,-1,1}` and all three laws have density at most one. It gives
 
 `||p_Q||_infinity <= 6 sqrt(pi) = 10.634723105433...`.
 

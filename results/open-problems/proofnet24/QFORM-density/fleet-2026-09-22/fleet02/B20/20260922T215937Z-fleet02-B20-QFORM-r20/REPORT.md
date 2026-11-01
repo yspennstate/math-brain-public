@@ -12,9 +12,9 @@ This report does **not** assume Gaussianity, log-concavity, moments, compact or 
 
 ## Source pins actually used
 
-- Designated partner fleet03/B20: `20260922T204947Z-fleet03-B20-QFORM-r17`, math source `yspennstate/math-open-problems@ff81131d3199d8a7dc66b51fa28229ecb5af19ce` and corresponding brain handoff. Its residual balanced-hub discussion imports the same localized high-window physical coordinate `j` used below and labels a `p != j` two-anchor state as the next unpaid obligation.
-- fleet01/B20 r13: `yspennstate/math-open-problems@f45187170f0d940c8bdc61d095564f92fb749092`, theorem closing the **diagonal-dominated** localized second-Schur-row alternative with universal density bound `<1198.924`.
-- fleet04/B20 r3: `yspennstate/math-open-problems@25ad8faaac5064b6814d51ae63d894fe97c1eac4`, theorem `QFORM-CROSSDOM-TWO-PHYSICAL-PIVOT-CLOSURE-v1` closing the **cross-dominated** localized second-Schur-row alternative with universal density bound `<5262`. Its own synthesis states that together with fleet01/B20 r13 the whole localized second-row alternative is closed.
+- Designated partner fleet03/B20: `20260922T204947Z-fleet03-B20-QFORM-r17`, math source `private-source-repository@ff81131d3199d8a7dc66b51fa28229ecb5af19ce` and corresponding brain handoff. Its residual balanced-hub discussion imports the same localized high-window physical coordinate `j` used below and labels a `p != j` two-anchor state as the next unpaid obligation.
+- fleet01/B20 r13: `private-source-repository@f45187170f0d940c8bdc61d095564f92fb749092`, theorem closing the **diagonal-dominated** localized second-Schur-row alternative with universal density bound `<1198.924`.
+- fleet04/B20 r3: `private-source-repository@25ad8faaac5064b6814d51ae63d894fe97c1eac4`, theorem `QFORM-CROSSDOM-TWO-PHYSICAL-PIVOT-CLOSURE-v1` closing the **cross-dominated** localized second-Schur-row alternative with universal density bound `<5262`. Its own synthesis states that together with fleet01/B20 r13 the whole localized second-row alternative is closed.
 
 No newer completed fleet03/B20 handoff than r17 was present at the final pre-publication source check.
 

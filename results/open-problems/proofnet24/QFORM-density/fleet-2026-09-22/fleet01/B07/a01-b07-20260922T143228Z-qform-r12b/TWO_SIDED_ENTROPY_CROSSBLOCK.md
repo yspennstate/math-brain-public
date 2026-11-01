@@ -54,7 +54,7 @@ This is therefore a genuine arbitrary-residual upgrade of the assigned partner's
 
 The only nontrivial imported analytic input is fleet02/B07's proved entropy-basis lemma, canonical source
 
-`yspennstate/math-open-problems@32c257209b588141fb60af698f478f1d0ad20b8a`,
+`private-source-repository@32c257209b588141fb60af698f478f1d0ad20b8a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T123512Z-b07-qform-minors-11/REPORT.md`.
 

@@ -228,7 +228,7 @@ The newest completed designated partner result consumed in this run is
 
 canonical source
 
-`yspennstate/math-open-problems@8e8d72d622eea594469107df2bb98b37961bb776`,
+`private-source-repository@8e8d72d622eea594469107df2bb98b37961bb776`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260924T022114Z-fleet02-B12-QFORM-auto11/REPORT.md`.
 

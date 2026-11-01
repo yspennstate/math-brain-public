@@ -18,7 +18,7 @@ No Gaussian, moment, iid, compact-support, log-concavity, or post-rotation indep
 Newest completed fleet02/B20 handoff available when this run began:
 
 - brain handoff `yspennstate/math-research-brain@a057829adcded023e5622f914d9e44a15ff92be8`;
-- canonical mathematics `yspennstate/math-open-problems@f79eb61287e930716db6a6de8e6c5a4d31d25e29`;
+- canonical mathematics `private-source-repository@f79eb61287e930716db6a6de8e6c5a4d31d25e29`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260924T043714Z-fleet02-B20-QFORM-r45/REPORT.md`.
 
 Its theorem `QFORM-CROSS-SVD-SIGNATURE-PEEL-v1` gives a literal all-coordinate partition `L|J` and a global physical cross block

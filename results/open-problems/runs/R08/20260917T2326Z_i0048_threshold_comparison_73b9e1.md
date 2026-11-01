@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — ROTATION-SCRE
 # R08 CLOSABLE OUTSIDE — I0048 preferential-attachment threshold comparison resolved at the threshold level
 
 Date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Delivery: private GitHub only.
 
 ## 1. Continuity: retired targets stay retired

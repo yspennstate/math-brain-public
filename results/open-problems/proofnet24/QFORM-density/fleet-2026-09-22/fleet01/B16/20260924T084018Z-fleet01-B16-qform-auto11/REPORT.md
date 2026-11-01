@@ -27,11 +27,11 @@ The key new intermediate estimate is an `L^3` density bound for a diffuse rank-t
 
 ## 2. Dependencies actually used
 
-1. `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`. Its proof gives the complex-amplitude Brascamp--Lieb/Hausdorff--Young estimate uniformly in arbitrary coordinate-separable phases. I reproduce the rank-two portion needed here.
-2. `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`. This supplies the orientation-free rank-two fractional-potential context and the pinned Rogozin--Ball scalar projection bound `||p_(u^T X)||_infinity<=sqrt(2)` for `||u||_2=1`.
-3. Designated partner fleet02/B16 completed positive theorem `QFORM-ONE-HUB-ORTHOGONAL-LEAF-PLANE-v1`, `yspennstate/math-open-problems@683c75fe7fda55dab7a003d1423a870df2d747f8`. It is applied to an explicit strict-target inequality in Section 7.
-4. Newest fleet02/B16 barrier, canonical report `yspennstate/math-open-problems@da95de5766feae03678f55d90adb8064d362bbd6`, is consumed as a limitation: ordinary conjugate Holder splitting after separate absoluteization of the shared hub-star fibre is ruled out even for a strict target.
-5. Complementary fleet03/B16 result `QFORM-THREEBANK-PROJECTEDSQUARE-HYPERBOLIC-LP-v1`, `yspennstate/math-open-problems@cb1cffb4f4644bd7cf1bb912f792dd9ce060957a`, handles three disjoint square/hyperbolic banks. The present result differs by allowing the two rank-two directions to be dependent projections of the **same** product bank.
+1. `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`. Its proof gives the complex-amplitude Brascamp--Lieb/Hausdorff--Young estimate uniformly in arbitrary coordinate-separable phases. I reproduce the rank-two portion needed here.
+2. `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`. This supplies the orientation-free rank-two fractional-potential context and the pinned Rogozin--Ball scalar projection bound `||p_(u^T X)||_infinity<=sqrt(2)` for `||u||_2=1`.
+3. Designated partner fleet02/B16 completed positive theorem `QFORM-ONE-HUB-ORTHOGONAL-LEAF-PLANE-v1`, `private-source-repository@683c75fe7fda55dab7a003d1423a870df2d747f8`. It is applied to an explicit strict-target inequality in Section 7.
+4. Newest fleet02/B16 barrier, canonical report `private-source-repository@da95de5766feae03678f55d90adb8064d362bbd6`, is consumed as a limitation: ordinary conjugate Holder splitting after separate absoluteization of the shared hub-star fibre is ruled out even for a strict target.
+5. Complementary fleet03/B16 result `QFORM-THREEBANK-PROJECTEDSQUARE-HYPERBOLIC-LP-v1`, `private-source-repository@cb1cffb4f4644bd7cf1bb912f792dd9ce060957a`, handles three disjoint square/hyperbolic banks. The present result differs by allowing the two rank-two directions to be dependent projections of the **same** product bank.
 
 No dependency above is promoted to a full-QFORM proof.
 
@@ -287,7 +287,7 @@ If `S` is instead one literal physical coordinate (density cap one rather than `
 
 The latest completed positive designated-partner theorem is `QFORM-ONE-HUB-ORTHOGONAL-LEAF-PLANE-v1` at
 
-`yspennstate/math-open-problems@683c75fe7fda55dab7a003d1423a870df2d747f8`.
+`private-source-repository@683c75fe7fda55dab7a003d1423a870df2d747f8`.
 
 Its diffuse branch states that for a fresh physical source `H`, a diffuse orthonormal leaf pair `(L,V)`, and
 

@@ -23,7 +23,7 @@ The preceding B04 run proved that if the canonical physical `2x2`-minor support 
 
 Own predecessor:
 
-`yspennstate/math-open-problems@053c462960cc0c0068d221ffece8029a662a7ab6`
+`private-source-repository@053c462960cc0c0068d221ffece8029a662a7ab6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T055256Z-fleet03-B04-qform-auto11-r26/REPORT.md`.
 
@@ -37,7 +37,7 @@ The bounded-density projection theorem used throughout the current QFORM archive
 
 A current source-recorded use is
 
-`yspennstate/math-open-problems@e743f52c143097b7704e414647ad94511a74f1b1`
+`private-source-repository@e743f52c143097b7704e414647ad94511a74f1b1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260922T133816Z-qform-b16-r11/REPORT.md`.
 
@@ -51,7 +51,7 @@ Fleet01/B01 completed
 
 at
 
-`yspennstate/math-open-problems@55255bcb25271145aa9f5a1a93a0cc84ad8e1c3d`
+`private-source-repository@55255bcb25271145aa9f5a1a93a0cc84ad8e1c3d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T030821Z-fleet01-B01-qform-auto11/REPORT.md`.
 

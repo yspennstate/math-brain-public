@@ -18,7 +18,7 @@ Every set below is a set of literal ORIGINAL coordinates. Orthogonal changes of 
 
 The immediate robust crossing is fleet03/B19 r51:
 
-`yspennstate/math-open-problems@bcb36a7573a7e9f23f1ea78792e0b72bc8bb0d9c`,
+`private-source-repository@bcb36a7573a7e9f23f1ea78792e0b72bc8bb0d9c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T060028Z-fleet03-B19-QFORM-r51/REPORT.md`.
 
@@ -36,13 +36,13 @@ and the left/right rank-two coefficient planes of `M_0` have normalized physical
 
 The earlier common-plane rigidity lemma is fleet03/B19 r49:
 
-`yspennstate/math-open-problems@35b71af9bbf9feb9542681486f190155c71ff247`,
+`private-source-repository@35b71af9bbf9feb9542681486f190155c71ff247`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T040014Z-fleet03-B19-QFORM-r49/REPORT.md`, Lemma 3.1.
 
 The designated partner input actually used is fleet04/B19 r4:
 
-`yspennstate/math-open-problems@332842522b31419442774a27cfb21cd15e19d1b0`,
+`private-source-repository@332842522b31419442774a27cfb21cd15e19d1b0`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260924T071532Z-fleet04-B19-QFORM-r4/REPORT.md`,
 

@@ -5,7 +5,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 at 
 Date: 2026-09-19 UTC  
 Track / native slot: P13 / `6aa7b253b37c8191b693d8dc79298d37`  
 Own root: `proofnet24/P13-outside-successor`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`
+Repository / branch: private `private-source-repository` / `master`
 
 Status after this invocation: **SUCCESSOR_ADMISSION_HOLD**. No canonical claim was created. The former I0051 clade-covariance target remains retired, and C0021 remains at its completed six-unchanged-run terminal handoff.
 

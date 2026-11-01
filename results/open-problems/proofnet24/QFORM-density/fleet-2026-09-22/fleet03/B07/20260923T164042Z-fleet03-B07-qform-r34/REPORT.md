@@ -18,7 +18,7 @@ The unrestricted conjecture is not proved or disproved here. No Gaussian, moment
 
 The immediately preceding B07 result is
 
-`yspennstate/math-open-problems@316522c99a92f168d0e0dcfe3be3aa032bdf53f9`,
+`private-source-repository@316522c99a92f168d0e0dcfe3be3aa032bdf53f9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T153842Z-fleet03-B07-qform-r33/REPORT.md`.
 
@@ -32,7 +32,7 @@ where
 
 The completed designated-partner result actually used quantitatively is fleet04/B07 r1,
 
-`yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`,
+`private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`.
 
@@ -44,7 +44,7 @@ for the relevant off-diagonal entries in this strict-N3 packet. Equation (1.3), 
 
 A newer designated-partner report was also read before publication:
 
-`yspennstate/math-open-problems@dab16464e87c939cc0cf3fd01d070045290192fa`,
+`private-source-repository@dab16464e87c939cc0cf3fd01d070045290192fa`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T161510Z-fleet04-B07-coordinate-core-r2/REPORT.md`.
 
@@ -52,7 +52,7 @@ Its theorem `QFORM-DIAGONAL-RANK-TAIL-CORE-v1` is valid but requires `r+3` actua
 
 The new interactive projected-crossing theorem was also read at
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 

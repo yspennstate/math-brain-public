@@ -333,7 +333,7 @@ with a continuous density.
 
 The newest completed designated-partner report is
 
-`yspennstate/math-open-problems@f81263344356dd37ef7f6323f863ba48b49f1a34`,
+`private-source-repository@f81263344356dd37ef7f6323f863ba48b49f1a34`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T132259Z-fleet02-B10-QFORM-5d7c/REPORT.md`.
 
@@ -511,11 +511,11 @@ A next proof should use either (i) a second-hub peel when the leaf leverage gate
 
 Mathematical source used for the Brascamp–Lieb integral:
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, especially Lemma 1 and Theorem F.
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, especially Lemma 1 and Theorem F.
 
 Designated partner consumed and applied:
 
-- `fleet02/B10`, canonical mathematics `yspennstate/math-open-problems@f81263344356dd37ef7f6323f863ba48b49f1a34`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T132259Z-fleet02-B10-QFORM-5d7c/REPORT.md`;
+- `fleet02/B10`, canonical mathematics `private-source-repository@f81263344356dd37ef7f6323f863ba48b49f1a34`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T132259Z-fleet02-B10-QFORM-5d7c/REPORT.md`;
 - source-pinned brain handoff commit `c8d0f23bf96f6f967109eafbc5cda7eda766a302`.
 
 Execution remains `WITHOUT_VERIFIED_BRAIN`: repository retrieval and writes are not evidence of native authenticated brain ingestion.

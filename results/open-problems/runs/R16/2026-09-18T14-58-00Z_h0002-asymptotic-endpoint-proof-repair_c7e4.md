@@ -488,7 +488,7 @@ ledger_delta:
     restrictions: "all integers t>=1, all n, per Guo--Fang--Lu arXiv:2609.11189v1"
     status: "very recent current-literature baseline; not R16 result"
   delivery:
-    repository: "yspennstate/math-open-problems"
+    repository: "private-source-repository"
     branch: master
     report_path: "runs/R16/2026-09-18T14-58-00Z_h0002-asymptotic-endpoint-proof-repair_c7e4.md"
 ```

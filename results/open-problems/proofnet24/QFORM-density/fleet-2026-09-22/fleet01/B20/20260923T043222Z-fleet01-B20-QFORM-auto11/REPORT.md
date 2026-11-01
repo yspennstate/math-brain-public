@@ -9,7 +9,7 @@ Status: `ESSENTIAL_STEP_APPLIED / FULL_TARGET_OPEN / CONTINUITY_OPEN / WITHOUT_V
 
 Fresh owner control on `yspennstate/math-research-brain/main` is revision `2026-09-22.15`; QFORM remains the sole research target. The full target is still OPEN and the global continuity claim is still OPEN. Live corrections were reread before this argument; in particular this report does not use law-uniform pointwise quadratic oscillatory decay, post-rotation independence, arbitrary-joint coarea, one-good-minor extraction, or a conditional spectral-density cap.
 
-Designated partner actually consumed: completed `fleet02/B20` run `20260923T035847Z-fleet02-B20-QFORM-r24`, canonical mathematics `yspennstate/math-open-problems@0da7f3ef78f89efa33d2014211323fcda3d3214b`. In its physical star block
+Designated partner actually consumed: completed `fleet02/B20` run `20260923T035847Z-fleet02-B20-QFORM-r24`, canonical mathematics `private-source-repository@0da7f3ef78f89efa33d2014211323fcda3d3214b`. In its physical star block
 
 `C = [[a,m^T],[m,B]]`, `r=||m||>0`, `gamma=s3(C)>0`,
 
@@ -33,7 +33,7 @@ so at least one of
 
 holds. The partner had paid a single large `W_j` by a two-gradient theorem but left diffuse `W` and aggregate `E` open.
 
-The reviewed diffuse third-volume receiver used below is Theorem D' source-pinned in the prior B20 handoff to `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, with subsequent review. At row- or column-third-volume marginals at most `2/3`, it gives for a physical original-coordinate cross block `N`
+The reviewed diffuse third-volume receiver used below is Theorem D' source-pinned in the prior B20 handoff to `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, with subsequent review. At row- or column-third-volume marginals at most `2/3`, it gives for a physical original-coordinate cross block `N`
 
 `||p_Q||_inf <= 9 sqrt(3e) e3(NN^T)^(-1/6)`,
 

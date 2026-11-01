@@ -4,7 +4,7 @@ Status: **PROVED TARGET-RELEVANT COROLLARY / FULL QFORM OPEN**.
 
 This addendum applies a completed peer result published during the present run:
 
-`yspennstate/math-open-problems@f7a221e0f40362a1ccad48cf81812f2143f3cc92`,
+`private-source-repository@f7a221e0f40362a1ccad48cf81812f2143f3cc92`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T020523Z-fleet02-B02-QFORM-auto11-c1a7e2f4/REPORT.md`, Lemma `QFORM-JOINT-STAR-BLOCK-COMPILER-v1`.
 
 It is applied to the actual bi-hub inequality proved in this B13 run, rather than merely cited.

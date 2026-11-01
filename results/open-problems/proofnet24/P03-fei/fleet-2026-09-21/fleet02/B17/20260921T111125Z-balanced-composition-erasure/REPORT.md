@@ -5,7 +5,7 @@ TASK: B17 ACCOUNT: fleet02 RUN: 2026-09-21T11:11:25.712618Z — balanced block c
 **Full uniform-cube FEI: OPEN / NOT PROVED.**  
 **Execution context: WITHOUT_VERIFIED_BRAIN.** No authenticated mathematical/cognitive-brain retrieval or receiver-context use occurred in this derivation.  
 **Role:** FEI new proof mechanisms.  
-**Fresh mathematical source used for the derivation:** `yspennstate/math-open-problems` master `0263d8eec0c8936e2c5d221f85132fe95d58f18a`, followed by a freshness check through `6bb4d5709d42e2e10584a36e13d70fc86a0c9745`.  
+**Fresh mathematical source used for the derivation:** `private-source-repository` master `0263d8eec0c8936e2c5d221f85132fe95d58f18a`, followed by a freshness check through `6bb4d5709d42e2e10584a36e13d70fc86a0c9745`.  
 **Novelty:** no publication-priority claim. The composition and erasure-entropy ingredients individually have prior literature; the exact selector-composition identity and finite obstruction below are recorded as new-to-this-repository pending specialist literature review.
 
 This run used three different creative moves from `FLEET_RULES.md`: **#2 attack the negation first**, **#18 say it in another language**, and **#25 count the same thing twice**. The named universal obstruction is the current low-influence erasure-selector target: at the Hod-scale coefficient `C=6.4547837`, current P03 work reduces the remaining restriction-induction problem to forcing some coordinate with

@@ -17,7 +17,7 @@ The required interactive source package was reread in its latest compatible stat
 
 The fresh global synthesis source is fleet01/B20 run
 `20260923T135635Z-fleet01-B20-QFORM-auto11`,
-canonical `yspennstate/math-open-problems@936b0f0bad22de82921c2a743fb0738226270348`.
+canonical `private-source-repository@936b0f0bad22de82921c2a743fb0738226270348`.
 It proves the leverage-free N3 cross-cut and tail compiler. Put
 `c_*=(63/128)^2=3969/16384`.
 For every `A in N3(1/64)` there is an original-coordinate cross block `N=A[J,K]` with
@@ -26,13 +26,13 @@ The paid D5 branch is
 `e_5(N^TN)>=E^5/(120*64^4)`.
 
 The newest compatible completed designated partner is fleet03/B20 r31,
-canonical `yspennstate/math-open-problems@c6e058c3d4aa36e89ad433c1f4d41b6f82739bf8`.
+canonical `private-source-repository@c6e058c3d4aa36e89ad433c1f4d41b6f82739bf8`.
 For exact rank three `A=RMR^T`, `R^TR=I_3`, `s_min(M)>=1`, it proves:
 either `||p_Q||_infinity<=192e<522` with continuous density, or there are at most 18 original coordinates `S` and a unit spectral vector `v` with
 `sum_(i in S)<r_i,v>^2>63/64`.
 
 A second compatible source used below is fleet02/B09 r13,
-canonical `yspennstate/math-open-problems@59ccddd0766b466b30abd645926887f907b0bcd7`.
+canonical `private-source-repository@59ccddd0766b466b30abd645926887f907b0bcd7`.
 Its theorem `QFORM-ONE-ANCHOR-THREEVOLUME-HYBRID-v1` is the `q=1` endpoint of the extension proved here.
 
 All conditioning in this report is on literal original coordinates. Spectral/frame coordinates are used only for deterministic matrix identities.

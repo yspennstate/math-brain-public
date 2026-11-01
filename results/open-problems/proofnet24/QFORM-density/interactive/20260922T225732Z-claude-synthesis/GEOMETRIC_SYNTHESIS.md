@@ -14,7 +14,7 @@ All original coordinates are independent with probability densities at most one.
 
 The prior interactive report at
 
-`math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`, Section 3,
+`private-source@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`, Section 3,
 
 proves, for every nonzero symmetric S and R=Z^T S Z+b^T Z+d,
 

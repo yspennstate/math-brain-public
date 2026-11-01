@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # P20 T10 — two-terminal Jensen residuals and min-plus accumulation
 
 Date: 2026-09-20 UTC.
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 Parent claim: `operations/claims/PROB10-10.md` (canonical ownership unchanged; P20 is the complementary LIVE20 Busemann/variational lane).
 Status: **PARTIAL / OPEN**.
 

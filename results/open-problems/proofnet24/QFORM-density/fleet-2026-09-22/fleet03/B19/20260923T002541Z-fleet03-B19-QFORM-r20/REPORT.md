@@ -240,7 +240,7 @@ Thus the r19 near-singular/double-near-null state cannot remain a weak `1/512` p
 
 The completed designated partner `fleet04/B19` proved `QFORM-NULL-COLOOP-ADAPTIVE-HY-STABILITY-v1` at canonical source
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 

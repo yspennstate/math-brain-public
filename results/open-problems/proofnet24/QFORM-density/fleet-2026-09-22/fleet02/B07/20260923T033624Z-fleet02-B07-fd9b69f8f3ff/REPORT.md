@@ -21,7 +21,7 @@ The live corrections exclude law-uniform pointwise quadratic-phase decay, arbitr
 
 The latest completed designated partner is fleet03/B07 r22, source
 
-`yspennstate/math-open-problems@ac54330d3df42a48098ef7c704ac268382accd7c`,
+`private-source-repository@ac54330d3df42a48098ef7c704ac268382accd7c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T030701Z-fleet03-B07-qform-r22/REPORT.md`.
 
@@ -39,7 +39,7 @@ On the partner's non-low-tail branch `T_2>=theta S`, `0<theta<=1/2`, its proved 
 
 The mandatory newest-Claude e5 source actually used at an inequality is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
@@ -49,7 +49,7 @@ Its proved fifth-volume theorem D5 says for any physical cross block, with no de
 
 The newer volume-stability theorem used below is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -59,7 +59,7 @@ If `M=M0+E`, `s_3(M0)>=a>0`, `max diag P_range(M0)<=1/2`, and `||E||op<=a/16`, t
 
 The previous own-slot physical-support receiver, used in Section 7, is
 
-`yspennstate/math-open-problems@1f5ab2ddba6e99675fb9177666c5e64e396e54e5`,
+`private-source-repository@1f5ab2ddba6e99675fb9177666c5e64e396e54e5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T023322Z-r11/REPORT.md`.
 

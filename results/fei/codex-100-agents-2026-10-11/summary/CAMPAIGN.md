@@ -1,6 +1,6 @@
 # Full FEI: mathematical supplement to the installed campaign
 
-**Status: SUPPLEMENT. Full FEI remains OPEN.** This directory adds mathematical routes, source notes, counterexamples, and proof interfaces to the installed plan in [reports/fei-2026-10-11/](https://github.com/yspennstate/math-open-problems/tree/master/reports/fei-2026-10-11/). The installation reference is [commit bc85302284612e979faae67ea51663242d322221](https://github.com/yspennstate/math-open-problems/commit/bc85302284612e979faae67ea51663242d322221). The installed report and subsequent authorized updates remain the primary campaign instructions.
+**Status: SUPPLEMENT. Full FEI remains OPEN.** This directory adds mathematical routes, source notes, counterexamples, and proof interfaces to the installed plan in [reports/fei-2026-10-11/](private-source-repository). The installation reference is [commit bc85302284612e979faae67ea51663242d322221](private-source-repository). The installed report and subsequent authorized updates remain the primary campaign instructions.
 
 **Fixed deadline: 21 October 2026, 19:15:57 UTC (2026-10-21T19:15:57Z).** This supplement uses the installed endpoint. It does not reset the ten-day period, restart a recurrence, alter an existing COUNT, or extend the final eligible run.
 

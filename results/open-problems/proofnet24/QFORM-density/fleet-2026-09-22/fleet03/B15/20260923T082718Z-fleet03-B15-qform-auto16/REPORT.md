@@ -15,7 +15,7 @@ Fresh owner control is revision `2026-09-22.15`. I explicitly avoid the live ref
 
 The completed partner result applied below is fleet04/B15 r5:
 
-`yspennstate/math-open-problems@728598f48c29cbf4f15e04312727663abeccb0af`
+`private-source-repository@728598f48c29cbf4f15e04312727663abeccb0af`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T232152Z-fleet04-B15-ruled-trace-regularity-r5/REPORT.md`.
 

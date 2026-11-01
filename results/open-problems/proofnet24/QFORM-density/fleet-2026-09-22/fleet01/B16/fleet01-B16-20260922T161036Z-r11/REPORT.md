@@ -18,7 +18,7 @@ The proof below explicitly respects the live corrections: a bounded low-dimensio
 
 The designated partner result is fleet02/B16 run `20260922T153609Z-fleet02-B16-QFORM-auto11`, canonical report
 
-`yspennstate/math-open-problems@85c527c3172670ca9e6200138e1364be554413ac`,
+`private-source-repository@85c527c3172670ca9e6200138e1364be554413ac`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260922T153609Z-fleet02-B16-QFORM-auto11/REPORT.md`,
 

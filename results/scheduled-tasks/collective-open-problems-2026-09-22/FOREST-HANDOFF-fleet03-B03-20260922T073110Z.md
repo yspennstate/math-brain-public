@@ -25,7 +25,7 @@ and 3-connectivity (`m>=3|V|/2`) gives `a<1/(|V|+1)`. This strengthens the partn
 
 Independent structured stress: exact five-state transfer for `K_{3,n}` proves all three forest-pair orbits have positive Rayleigh gaps, while `rho_same-left` and `rho_disjoint` are `Theta(n^-2)` and `rho_same-right -> -1/3`. For `e=A-r1,f=A-r2,g=B-r3`, `rho_disjoint^2/|rho_same-left|<1` for every `n>=3`, with ratio `~578/(1107 n^2)`. Thus a generic `Omega(1/v)` lower bound for arbitrary nonzero 3-connected forest correlations cannot close the new upper bound; any next lower-bound mechanism must exploit the positive-pair/minimality structure.
 
-Canonical final scientific report: `proofnet24/P14-probability-correlation/collective-2026-09-22/fleet03/B03/20260922T073110Z-fleet03-B03-forest-r13/report_final.md`, creation commit `33b2e68bc71b6750249f865f6970424a6ae888d6`, readback blob `d0c5d8edcdc82e61e8d88325a90f8fa7d1aef7ac` in `yspennstate/math-open-problems`.
+Canonical final scientific report: `proofnet24/P14-probability-correlation/collective-2026-09-22/fleet03/B03/20260922T073110Z-fleet03-B03-forest-r13/report_final.md`, creation commit `33b2e68bc71b6750249f865f6970424a6ae888d6`, readback blob `d0c5d8edcdc82e61e8d88325a90f8fa7d1aef7ac` in `private-source-repository`.
 
 Exact checker/output readback blobs: `5c0b81c8da1a64bf34b9d41bdc4daf72ff5f7f65`, `706cdfbd539938c6a0e0b62dfe82f33b3e978eab`.
 

@@ -29,7 +29,7 @@ The analytic point established below is that **arbitrarily many extra cross dire
 
 Required source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
@@ -45,7 +45,7 @@ but the Fourier `L^p` step imposes a row marginal gate. The proved D' extension 
 
 Fresh completed partner source:
 
-`yspennstate/math-open-problems@b0d436cae66ffaf557b60427db5ae2fd4d909e65`
+`private-source-repository@b0d436cae66ffaf557b60427db5ae2fd4d909e65`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T065845Z-fleet03-B04-qform-auto11-r27/REPORT.md`.
 
@@ -59,7 +59,7 @@ Its proof is product-preserving: the hub original coordinate is independent of t
 
 Source:
 
-`yspennstate/math-open-problems@10a74bd7d75466fe46f4ff6ecf3362fba6cb2e5d`
+`private-source-repository@10a74bd7d75466fe46f4ff6ecf3362fba6cb2e5d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T052139Z-fleet02-B04-qform-auto11/REPORT.md`.
 
@@ -78,7 +78,7 @@ After one untouched original square of coefficient one, the same right side boun
 
 The square-assisted ridge source is
 
-`yspennstate/math-open-problems@b129377880c18fe011dd4513282f2e0b60e412e0`
+`private-source-repository@b129377880c18fe011dd4513282f2e0b60e412e0`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/B04-20260922T155815Z-qform-r11b/REPORT.md`.
 
@@ -97,7 +97,7 @@ The direct ridge theorem has the stronger gate `theta>2q`.
 
 The immediate predecessor run is source-pinned at
 
-`yspennstate/math-open-problems@c63eec6fd03d23bb41493a502670d52bed383d35`
+`private-source-repository@c63eec6fd03d23bb41493a502670d52bed383d35`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T065059Z-fleet02-B04-qform-auto12/REPORT.md`.
 

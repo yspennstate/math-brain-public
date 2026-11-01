@@ -11,7 +11,7 @@ Status: **ESSENTIAL_STEP_APPLIED / FULL QFORM OPEN / GLOBAL CONTINUITY OPEN**
 
 The live matrix is the physical cut constructed in fleet04/B20 at
 
-\`yspennstate/math-open-problems@c6f29397b3d45a7cf7ab67633a5451767b478912\`.
+\`private-source-repository@c6f29397b3d45a7cf7ab67633a5451767b478912\`.
 
 For every \(A\in N3(1/64)\) with \(s_3(A)\ge1\), it supplies ORIGINAL-coordinate banks \(J,K\) and
 
@@ -22,7 +22,7 @@ For every \(A\in N3(1/64)\) with \(s_3(A)\ge1\), it supplies ORIGINAL-coordinate
 
 The completed fleet01/B02 theorem actually consumed is \`QFORM-OPTIMIZED-TWOPLUSTAIL-L1-v1\` at
 
-\`yspennstate/math-open-problems@7fbdcedec6fdb0dc4afa1f771f168db1cb4a4b8c\`.
+\`private-source-repository@7fbdcedec6fdb0dc4afa1f771f168db1cb4a4b8c\`.
 
 For squared singular values \(x_1\ge x_2\ge\cdots\), put
 

@@ -12,7 +12,7 @@ The sole target is the full arbitrary-dimension statement: for independent real 
 
 Live corrections consumed include the failure of law-uniform pointwise Fresnel decay, the dimension loss from unrestricted fiber suprema, the failure of conditional density caps to replace genuine independence, the failure of one local cross/minor as a universal structural certificate, and the failure of pre-pivot two-cross survival under Schur completion. In particular, this report never conditions on a transformed spectral coordinate and then treats it as independent.
 
-The assigned partner result actually applied is fleet03/B05 `QFORM-PAIR-SECTIONAL-COAREA-v1`, canonical source `yspennstate/math-open-problems@332f29e335274f2b3f81ccf92d62443b928c66cd`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T144946Z-qform-B05-a03-r12/REPORT.md`. Its exact-rank-three heavy-isotropic application gives, for every residual physical pair with
+The assigned partner result actually applied is fleet03/B05 `QFORM-PAIR-SECTIONAL-COAREA-v1`, canonical source `private-source-repository@332f29e335274f2b3f81ccf92d62443b928c66cd`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T144946Z-qform-B05-a03-r12/REPORT.md`. Its exact-rank-three heavy-isotropic application gives, for every residual physical pair with
 
 `Delta_jk = y_j z_k - y_k z_j != 0`,
 
@@ -22,7 +22,7 @@ an original-coordinate conditional density bound proportional to `|Delta_jk|^(-2
 
 The first unpaid implication at entry was therefore the partner's `QFORM-PAIR-PLUCKER-AGGREGATION-v1`: aggregate the total pair-Pluecker mass before reciprocal local-minor payment while retaining shared-coordinate product provenance.
 
-For comparison and for source-validity of the stress family below, I also apply fleet03/B07 `QFORM-PLUCKER-COLLAR-TRICHOTOMY-v1`, canonical source `yspennstate/math-open-problems@c3b0a3023962496543da62be43f07bff5ca0865b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/fleet03-B07-20260922T124045Z-qform-minors-v11/REPORT.md`.
+For comparison and for source-validity of the stress family below, I also apply fleet03/B07 `QFORM-PLUCKER-COLLAR-TRICHOTOMY-v1`, canonical source `private-source-repository@c3b0a3023962496543da62be43f07bff5ca0865b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/fleet03-B07-20260922T124045Z-qform-minors-v11/REPORT.md`.
 
 ## 2. Conditional end-to-end argument and the exact first missing factor
 
@@ -201,7 +201,7 @@ The newer ridge-window theorem advertised in fresh controls was also checked for
 
 ## 7. Relation to the preceding B05 theorem
 
-The previous fleet02/B05 result, source `yspennstate/math-open-problems@d88444f6ee8744b72a46448734db26349baabdd7`, proved fractional half-Riesz bounds from controlled post-Schur cross singular values and already showed that one cannot assume two pre-pivot cross directions survive a scalar Schur update.
+The previous fleet02/B05 result, source `private-source-repository@d88444f6ee8744b72a46448734db26349baabdd7`, proved fractional half-Riesz bounds from controlled post-Schur cross singular values and already showed that one cannot assume two pre-pivot cross directions survive a scalar Schur update.
 
 The present result changes the mechanism: instead of searching for another local cross block, it tests whether the partner's exact `sum Delta^2=1` identity can be harvested through low-overlap sectionalization. The answer is no, quantitatively. The loss is not merely that `max |Delta|` can be `O(1/m)`; even the **entire bounded-congestion collection** carries only `O(1/m)` squared Pluecker mass.
 

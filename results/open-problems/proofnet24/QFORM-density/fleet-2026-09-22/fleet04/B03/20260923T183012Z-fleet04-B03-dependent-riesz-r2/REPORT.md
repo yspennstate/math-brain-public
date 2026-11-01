@@ -145,6 +145,6 @@ Thus (4.1) closes the dependency-safe \(1/4+1/4\) estimate after a balanced two-
 
 Sources:
 - Brain controls: fresh main and \`QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z\`.
-- Required Claude base: \`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837\`.
+- Required Claude base: \`private-source@e5f71d79eff325201dd0274053d20268ce65b837\`.
 - Current continuation checked: \`proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md\`.
 - Partner: fleet01/B03 r18 cited above.

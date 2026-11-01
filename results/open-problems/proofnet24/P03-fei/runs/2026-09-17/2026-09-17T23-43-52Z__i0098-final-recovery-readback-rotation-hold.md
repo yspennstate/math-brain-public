@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED. This is not GPT-
 # P03 HARD OUTSIDE — I0098 final recovery completion, peer audit, and rotation hold
 
 Date: 2026-09-17 UTC.  
-Repository: `yspennstate/math-open-problems`, branch `master`.  
+Repository: `private-source-repository`, branch `master`.  
 Target entering this run: **I0098 / Zauner SIC-POVM conjecture**, Randomstrasse 101 Conjecture 24.  
 Canonical claim: `operations/claims/I0098.md`, creation commit `8d79f25bb64122621849dc579166b0d097c02fb7`, blob `bdd93549f588d8aae00cae2545ff8225ed716bf7`.
 

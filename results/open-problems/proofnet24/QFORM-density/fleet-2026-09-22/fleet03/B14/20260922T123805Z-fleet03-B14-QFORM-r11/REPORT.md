@@ -15,7 +15,7 @@ This report does **not** rotate the input and retain false independence, does no
 
 The compatible partner result actually consumed is fleet04/B14, run `20260922T114319Z-b14-qform-extreme-reduction-r1`, canonical report
 
-`yspennstate/math-open-problems@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`.
+`private-source-repository@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`.
 
 It proves, with no loss in the best small-ball constant, reduction from arbitrary admissible product densities to product indicators `1_{E_i}` with `|E_i|=1`, and then to compact finite unions of intervals, while leaving the number, location, diameter, and separation of fragments unrestricted.
 

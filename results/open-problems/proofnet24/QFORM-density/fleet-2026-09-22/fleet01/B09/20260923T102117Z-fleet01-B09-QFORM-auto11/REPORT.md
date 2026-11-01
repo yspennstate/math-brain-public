@@ -20,7 +20,7 @@ It is obtained by preserving the exact Brascamp--Lieb half-leverage hypothesis u
 
 I use the completed interactive theorem `Theorem H` from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
@@ -51,7 +51,7 @@ The newest completed designated-partner report actually used below is fleet02/B0
 
 read at
 
-`yspennstate/math-open-problems@0029401037d9e0bb0f18c030c959bbc5afd57d52`
+`private-source-repository@0029401037d9e0bb0f18c030c959bbc5afd57d52`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T074200Z-fleet02-B09-QFORM-r13/REPORT.md`.
 

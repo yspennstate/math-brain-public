@@ -15,7 +15,7 @@ Fresh source corrections were consumed, including the failures of law-uniform po
 
 The named partner result actually applied is fleet02/B08, theorem `QFORM-DIFFUSE-RANK3-BL-v1`, canonical source
 
-`yspennstate/math-open-problems@0b5925a458d36c1ec1cf8ab344c9676260a97c8a`
+`private-source-repository@0b5925a458d36c1ec1cf8ab344c9676260a97c8a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T113624Z-qform11/REPORT.md`.
 

@@ -26,7 +26,7 @@ The current assignment asks for a rigorous reduction from arbitrary densities `0
 
 The assigned partner `fleet02/B13` had no source-visible qform handoff at the control pin above, so no partner theorem is fabricated. I instead substantively consume the compatible fleet02/B15 theorem at
 
-`yspennstate/math-open-problems@289810e1f075755898f573ee5b863ad3fa9af5b8:qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`.
+`private-source-repository@289810e1f075755898f573ee5b863ad3fa9af5b8:qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`.
 
 That report proves a three-original-coordinate principal-block theorem and, crucially for this run, exhibits the flat rank-three projector `A=UU^T` with row leverage `3/n`, for which every fixed principal triple has curvature only `O(1/n)` although the total Cauchy--Binet determinant mass is one. Its first unresolved geometry is exactly distributed/delocalized rank-three curvature rather than a single good coordinate block.
 

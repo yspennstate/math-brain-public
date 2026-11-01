@@ -18,14 +18,14 @@ The full owner target remains OPEN. The new density conclusion below is essentia
 Two pinned mathematical inputs are used explicitly:
 
 1. `QFORM-E2-HALFRIESZ-ROW-GATE-FREE-v1`, fleet02/B06, canonical report  
-   `yspennstate/math-open-problems@c2ce876df8b5483a00802170001d4144bb4cdbfa:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T192839Z-auto11/REPORT.md`.  
+   `private-source-repository@c2ce876df8b5483a00802170001d4144bb4cdbfa:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T192839Z-auto11/REPORT.md`.  
    If a quadratic polynomial in the original product coordinates has a literal cross block `M=A[I,J]` with
    `Z=e_2(M^T M)>0`, then, retaining all same-bank curvature, other cross directions and affine terms,
 
    `H_(1/2)(Q):=sup_s E|Q-s|^(-1/2) <= 8 e^(1/4) Z^(-1/8)`.       (1.1)
 
 2. The source-valid scalar-square peel, in the previous B01 synthesis  
-   `yspennstate/math-open-problems@0bbbd2e99a4d26b7a4380a9827d92596daeaf2a6:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T200355Z-fleet01-B01-qform-auto11/E2_SQUARE_SYNTHESIS.md`: if exact completion of one literal original coordinate gives
+   `private-source-repository@0bbbd2e99a4d26b7a4380a9827d92596daeaf2a6:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T200355Z-fleet01-B01-qform-auto11/E2_SQUARE_SYNTHESIS.md`: if exact completion of one literal original coordinate gives
 
    `Q=a(X_0+h(Y))^2+R(Y)`, `a!=0`,                                (1.2)
 
@@ -221,7 +221,7 @@ For the five-dimensional special case `m=2`, `R=S=I_2`, the exact currency is `e
 
 The newest completed designated-partner result read in this run is fleet02/B01 r46,
 
-`yspennstate/math-open-problems@fb7b0f71ead32ea608ff9ec45370edc246f7239e:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T063552Z-fleet02-B01-qform-auto11-r46/REPORT.md`,
+`private-source-repository@fb7b0f71ead32ea608ff9ec45370edc246f7239e:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T063552Z-fleet02-B01-qform-auto11-r46/REPORT.md`,
 
 theorem `QFORM-RANK1-TWOHUB-ARROWHEAD-HALFRIESZ-v1`.
 

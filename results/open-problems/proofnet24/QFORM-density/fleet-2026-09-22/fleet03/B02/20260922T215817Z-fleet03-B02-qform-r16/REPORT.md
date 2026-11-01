@@ -34,7 +34,7 @@ The designated partner is fleet04/B02. I read and use its completed theorem
 
 canonical mathematics
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`
 
 at
 

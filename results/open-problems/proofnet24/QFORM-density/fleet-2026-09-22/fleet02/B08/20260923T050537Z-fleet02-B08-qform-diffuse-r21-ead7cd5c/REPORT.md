@@ -16,7 +16,7 @@ The unrestricted target remains open: independent ORIGINAL real coordinates with
 
 I use the completed B08 predecessor
 
-`yspennstate/math-open-problems@17f39d9b82d8a802756ba1efb6a7b223b7df725b`,
+`private-source-repository@17f39d9b82d8a802756ba1efb6a7b223b7df725b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T020620Z-fleet02-B08-QFORM-auto11/REPORT.md`.
 
 For three genuine orthonormal eigenvectors of `A`, with eigenvalues of modulus at least `L`, and maximum selected-frame original-coordinate row leverage at most `1/48`, it supplies a balanced physical cut `I|J`. Put
@@ -33,7 +33,7 @@ The same predecessor proves the elementary one-cross/two-cross tail compilers us
 
 I use the completed supporting argument at
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 For an ORIGINAL-coordinate cross block `M`, put
@@ -50,7 +50,7 @@ All same-side quadratic terms, outside couplings and affine terms remain arbitra
 
 The newest completed designated-partner report is
 
-`yspennstate/math-open-problems@e875d54d4a946d399466cb6afa1fc37da12a11d2`,
+`private-source-repository@e875d54d4a946d399466cb6afa1fc37da12a11d2`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T042303Z-fleet03-B08-qform-diffuse-r27/REPORT.md`.
 
 Its theorem `QFORM-ANCHORED-THREEVOLUME-SELF-MATCHED-MIX-v1` applies directly to an anchored third-minor packet. If
@@ -67,7 +67,7 @@ The conclusion is a continuous `C0` density, and the transpose statement holds w
 
 I reread the owner-required Claude snapshot
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
 I use its proved no-marginal five-volume estimate

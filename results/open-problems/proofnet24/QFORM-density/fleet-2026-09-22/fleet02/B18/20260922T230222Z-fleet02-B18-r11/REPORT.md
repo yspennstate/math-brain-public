@@ -119,7 +119,7 @@ for this exact two-physical-pivot zero-self-block branch. This improves the gene
 
 ## 5. Direct application of the completed partner result
 
-The completed fleet03/B18 r19 theorem at `math-open-problems@9415d0f2696d2e6ca05243c8e8f34b665bf5d42f` proves, for a physical cross block of rank `r>=3`,
+The completed fleet03/B18 r19 theorem at `private-source@9415d0f2696d2e6ca05243c8e8f34b665bf5d42f` proves, for a physical cross block of rank `r>=3`,
 
 `||p_Q||_infinity <= [2r/(r-2)] D^(-1/r)`
 
@@ -149,8 +149,8 @@ This is precisely where the present proof fails: once `A_II` is nonzero, conditi
 ## 7. Source pins and correction status
 
 - LPP primary source: arXiv:1507.07949, Theorem 1.1; exact marginal cap used above.
-- Newest owner-required Claude source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md` Theorem B and `FOURIER_ROUTE_REPORT.md`.
-- Completed designated partner fleet03/B18 r19: handoff commit `86e7fb46b1a8535041e77e9864e44caf0175b551`; canonical theorem `math-open-problems@9415d0f2696d2e6ca05243c8e8f34b665bf5d42f`, `ADDENDUM_CROSSBLOCK.md`.
+- Newest owner-required Claude source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md` Theorem B and `FOURIER_ROUTE_REPORT.md`.
+- Completed designated partner fleet03/B18 r19: handoff commit `86e7fb46b1a8535041e77e9864e44caf0175b551`; canonical theorem `private-source@9415d0f2696d2e6ca05243c8e8f34b665bf5d42f`, `ADDENDUM_CROSSBLOCK.md`.
 - Corrections respected: no independence after rotation; arbitrary-joint coarea false; conditional projection positive moments false; fiberwise trace/supremum mechanisms false; no universal rank-three cross-cut extraction; no uniform pointwise quadratic-phase decay.
 
 Manual changed-file review: mathematical text, public source identifiers, logical fleet labels, and repository-relative source paths only; no credentials, scheduler identifiers, machine paths, unrelated private data, benchmark material, or public-release action.

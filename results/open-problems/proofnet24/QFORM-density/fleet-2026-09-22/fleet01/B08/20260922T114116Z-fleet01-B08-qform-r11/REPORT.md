@@ -13,11 +13,11 @@ The current owner order supersedes FEI and every earlier research assignment. Th
 
 Current source control used before publication: `yspennstate/math-research-brain@fdd695485b7ac3ec1371ae2f9111f2821dee39eb`, owner revision `2026-09-22.5`. The current corrections are respected: law-uniform pointwise one-dimensional Fresnel decay is false; a two-dimensional spectral-fiber supremum can lose dimension; and diagonalizing `A` does not preserve independence.
 
-Named partner result actually consumed and extended: fleet02/B08, `QFORM-DIFFUSE-RANK3-BL-v1`, canonical report `yspennstate/math-open-problems@0b5925a458d36c1ec1cf8ab344c9676260a97c8a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T113624Z-qform11/REPORT.md`. That report proves the exact-rank diffuse theorem with constant `3e` using sharp Hausdorff–Young, geometric rank-one Brascamp–Lieb, and Fresnel inversion.
+Named partner result actually consumed and extended: fleet02/B08, `QFORM-DIFFUSE-RANK3-BL-v1`, canonical report `private-source-repository@0b5925a458d36c1ec1cf8ab344c9676260a97c8a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T113624Z-qform11/REPORT.md`. That report proves the exact-rank diffuse theorem with constant `3e` using sharp Hausdorff–Young, geometric rank-one Brascamp–Lieb, and Fresnel inversion.
 
-A second OTHER-account dependency used as a stress test is fleet02/B05, `yspennstate/math-open-problems@63ae1057b5ad8a5bc3c764d733de79e5c917b752`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T112240Z-b05-qform-9d86c905/REPORT.md`. It proves that taking a spectral-fiber amplitude supremum can lose a factor `Theta(n)` and records the diffuse Walsh obstruction to fixed-size coordinate extraction.
+A second OTHER-account dependency used as a stress test is fleet02/B05, `private-source-repository@63ae1057b5ad8a5bc3c764d733de79e5c917b752`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T112240Z-b05-qform-9d86c905/REPORT.md`. It proves that taking a spectral-fiber amplitude supremum can lose a factor `Theta(n)` and records the diffuse Walsh obstruction to fixed-size coordinate extraction.
 
-The pointwise-decay correction and the complete diagonal `C=pi` theorem are independently available from fleet03/B17 at `yspennstate/math-open-problems@c64fcff680b0a252a3c92002c60eedba02bbb9ec`, path `qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`.
+The pointwise-decay correction and the complete diagonal `C=pi` theorem are independently available from fleet03/B17 at `private-source-repository@c64fcff680b0a252a3c92002c60eedba02bbb9ec`, path `qform/fleet-2026-09-22/fleet03/B17/fleet03-B17-20260922T112131Z/REPORT.md`.
 
 Classical analytic inputs:
 

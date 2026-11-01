@@ -10,7 +10,7 @@
 The target remains: for every `n`, independent real `X_i` with densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove that `Q=X^T A X` has an essentially bounded density by one universal finite constant, or give a valid counterexample. No moment, support, compactness, connected-support, Gaussian, log-concavity, iid, or diagonal-basis assumption is introduced. No input rotation is treated as preserving independence.
 
 
-Immediate predecessor: fleet01/B06 r49, canonical mathematics `yspennstate/math-open-problems@3b734087af35e1fa1c601fc92ddadf73e4d3a206`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T063803Z-fleet01-B06-QFORM-r49/REPORT.md`. It paid the exact rank-one physical-pair endpoint by a parabolic product-fiber theorem but left the invertible-near-singular transition unpaid.
+Immediate predecessor: fleet01/B06 r49, canonical mathematics `private-source-repository@3b734087af35e1fa1c601fc92ddadf73e4d3a206`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T063803Z-fleet01-B06-QFORM-r49/REPORT.md`. It paid the exact rank-one physical-pair endpoint by a parabolic product-fiber theorem but left the invertible-near-singular transition unpaid.
 
 The designated partner result actually applied below is fleet02/B06 `QFORM-E2-HALFRIESZ-ROW-GATE-FREE-v1`, source `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T192839Z-auto11/REPORT.md`. For a literal original-coordinate cross block `N` between two disjoint product banks, with `Z_2=e_2(N^T N)>0`, and arbitrary same-bank quadratic/affine curvature retained, it proves
 

@@ -52,7 +52,7 @@ This is different from the earlier independent-L2-residual theorem: it accepts a
 
 ## Actual designated-partner splice
 
-The newest fleet02/B03 theorem `QFORM-DISJOINT-EXTERIOR-MASS-EXIT-v1`, canonical math-open-problems commit 5e5366b98337d13ba24bf666f4e42155553de7c2, proves for a quadratic residual on an independent W bank with disjoint exterior mass E0>0 the uniform whole-copy budget
+The newest fleet02/B03 theorem `QFORM-DISJOINT-EXTERIOR-MASS-EXIT-v1`, canonical private-source commit 5e5366b98337d13ba24bf666f4e42155553de7c2, proves for a quadratic residual on an independent W bank with disjoint exterior mass E0>0 the uniform whole-copy budget
 
 K <= K0 E0^{-1/12},
 K0=29.1511643034760... .                                        (E8)

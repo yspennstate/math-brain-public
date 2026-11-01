@@ -2,7 +2,7 @@
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Run: `20260924T124642Z-fleet03-B08-fixedmult-r57`  
-Baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`  
+Baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Status: **new proved supporting theorem; no eight-eigenvalue density theorem claimed**.
 
 The sibling audit proves the nine-eigenvalue theorem in one independent review. This note identifies exactly what the current interpolation mechanism leaves if one tries to replace `s_9(A)>=1` by `s_8(A)>=1`.
@@ -187,7 +187,7 @@ Thus the terminal `s_8` state saturates all three rank-two channels simultaneous
 ## 7. Designated fleet04/B08 theorem applied to the same `s_8` survivor
 
 Use `QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1` from
-`yspennstate/math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76`, path
+`private-source-repository@a5e66e2944c89857a41d5e18c283d53a4307be76`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T212412Z-fleet04-B08-QFORM-r2/REPORT.md`.
 
 For every original coordinate deletion, write the child principal matrix as `C_i`. Embedding `C_i` back into the parent dimension changes `A` by rank at most two, hence

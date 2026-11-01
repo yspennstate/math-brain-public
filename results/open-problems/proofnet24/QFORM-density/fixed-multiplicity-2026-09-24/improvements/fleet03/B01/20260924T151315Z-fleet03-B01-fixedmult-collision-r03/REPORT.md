@@ -14,7 +14,7 @@ The unrestricted three-large-eigenvalue conjecture remains open. Global continui
 
 Fresh control says the latest standalone audit source is the nine-eigenvalue manuscript
 
-- repository `yspennstate/math-open-problems`;
+- repository `private-source-repository`;
 - source commit `eeb752c8943536541b34b42b8bf48e924f4d3d2f`;
 - blob `19fb119877426b640b2c0dae19ec2f78a399fe11`;
 - SHA-256 `bf1caf6ae4b4bc33992f501c169b5dc6c795db757b0f6089eff9991391effdf3`;
@@ -157,7 +157,7 @@ The next multiplicity question is therefore **seven**, not a four-coordinate end
 
 The completed fleet04/B01 theorem at
 
-`yspennstate/math-open-problems@beb9cc5cbb78b4fd4a8411862ac99fd7b7976034`
+`private-source-repository@beb9cc5cbb78b4fd4a8411862ac99fd7b7976034`
 
 `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet04/B01/20260924T130927Z-fleet04-B01-fixedmult-s13-L2-r1/THIRTEEN_EIGENVALUE_L2.md`
 

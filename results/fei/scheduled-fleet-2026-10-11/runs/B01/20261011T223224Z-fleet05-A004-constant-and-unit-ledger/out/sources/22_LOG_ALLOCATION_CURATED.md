@@ -2,7 +2,7 @@
 
 **Full FEI remains OPEN.** Curated mathematical excerpt. Original section numbers and mathematical prose are retained; unrelated historical operating instructions and unneeded sections are omitted. This is not a complete archive or a new proof.
 
-Original repository source: [research_pushes/2026-09-30-fei-log-allocation/REPORT.md](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/research_pushes/2026-09-30-fei-log-allocation/REPORT.md). Immutable Git blob: `822c380de0c4be109415f22f040cc2c8c345d53c`. See `../SOURCES.json` for exact retained line ranges, original hashes, and the packaged-file hash. Links to unbundled companion files refer to their original repository locations.
+Original repository source: [research_pushes/2026-09-30-fei-log-allocation/REPORT.md](private-source-repository). Immutable Git blob: `822c380de0c4be109415f22f040cc2c8c345d53c`. See `../SOURCES.json` for exact retained line ranges, original hashes, and the packaged-file hash. Links to unbundled companion files refer to their original repository locations.
 
 ## 2. Definitions
 

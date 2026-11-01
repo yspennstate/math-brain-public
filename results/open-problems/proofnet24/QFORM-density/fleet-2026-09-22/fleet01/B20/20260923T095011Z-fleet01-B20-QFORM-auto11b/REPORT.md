@@ -14,7 +14,7 @@ The unrestricted owner target remains OPEN. Global continuity remains OPEN. No G
 
 The completed fleet02/B20 result used here is
 
-`yspennstate/math-open-problems@6a4e9c575bcea2bbc12efd5a439bfb94f290d399`,
+`private-source-repository@6a4e9c575bcea2bbc12efd5a439bfb94f290d399`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T090422Z-fleet02-B20-QFORM-auto11/REPORT.md`.
 
@@ -30,11 +30,11 @@ The partner also supplies three disjoint original-coordinate packets with design
 
 Two previously completed analytic inputs are used at their proved scope:
 
-1. `QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1`, canonical `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, gives for any physical coordinate `i` with `A_ii!=0`
+1. `QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1`, canonical `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, gives for any physical coordinate `i` with `A_ii!=0`
 
 `||p_Q||_infinity <= 128 [ c_i |A_ii| |det M| ]^(-1/4)`.             (1.3)
 
-2. `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, gives an `R^2` orthogonal projection of an original-coordinate cap-one product vector joint density at most `e`. More generally, after an invertible deterministic `2 x 2` scaling with Gram `H`, the density cap is multiplied by `(det H)^(-1/2)`.
+2. `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, gives an `R^2` orthogonal projection of an original-coordinate cap-one product vector joint density at most `e`. More generally, after an invertible deterministic `2 x 2` scaling with Gram `H`, the density cap is multiplied by `(det H)^(-1/2)`.
 
 No statement below treats a rotated spectral coordinate as probabilistically independent.
 

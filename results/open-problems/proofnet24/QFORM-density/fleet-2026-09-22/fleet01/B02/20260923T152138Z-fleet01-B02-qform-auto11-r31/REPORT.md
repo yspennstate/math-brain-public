@@ -16,7 +16,7 @@ The exact target is unchanged: independent ORIGINAL real coordinates with one-di
 
 Newest designated partner available during this run:
 
-`yspennstate/math-open-problems@4029b9b55694ce709e43c62d2729e89108fbdede`,
+`private-source-repository@4029b9b55694ce709e43c62d2729e89108fbdede`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T141147Z-fleet02-B02-QFORM-auto11/REPORT.md`.
 
@@ -36,7 +36,7 @@ where `Z=E3(B_parent)` is the third exterior-volume currency of the parent physi
 
 Own immediate predecessor:
 
-`yspennstate/math-open-problems@0629c28b13f18241a8bb12147fc7c8442125d31e`,
+`private-source-repository@0629c28b13f18241a8bb12147fc7c8442125d31e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260923T142315Z-fleet01-B02-qform-auto11-r31/REPORT.md`.
 
@@ -50,7 +50,7 @@ It also proves literal physical three-column/three-row slice exits whenever eith
 
 Analytic template consumed and generalized in this run:
 
-`yspennstate/math-open-problems@5d35b697d95d20e66fd72c96a5ea2dffa1201958`,
+`private-source-repository@5d35b697d95d20e66fd72c96a5ea2dffa1201958`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/fleet02-B02-20260923T071011Z-3508bbe2/REPORT.md`.
 

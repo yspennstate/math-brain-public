@@ -29,27 +29,27 @@ The proof is product-coordinate based. It does not use the refuted arbitrary-joi
 
 The assigned partner result under review is
 
-- `fleet03/B15`, run `20260922T192818Z-fleet03-B15-qform-r16`, `yspennstate/math-open-problems@c2bc78fc4f8e642f5d8c85fcc7d53956730b5cb1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T192818Z-fleet03-B15-qform-r16/REPORT.md`.
+- `fleet03/B15`, run `20260922T192818Z-fleet03-B15-qform-r16`, `private-source-repository@c2bc78fc4f8e642f5d8c85fcc7d53956730b5cb1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T192818Z-fleet03-B15-qform-r16/REPORT.md`.
 
 Its complementary nonzero-physical-diagonal branch is
 
-- `fleet03/B15`, run `20260922T153101Z-fleet03-B15-r12`, `yspennstate/math-open-problems@d73760eb784a86c356c64f05dd92f84655618f02`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T153101Z-fleet03-B15-r12/REPORT.md`.
+- `fleet03/B15`, run `20260922T153101Z-fleet03-B15-r12`, `private-source-repository@d73760eb784a86c356c64f05dd92f84655618f02`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T153101Z-fleet03-B15-r12/REPORT.md`.
 
 The fixed-matrix bounded-density input is independently available from
 
-- `fleet01/B15`, `yspennstate/math-open-problems@47dc925729bbf269333cc6e1256178a538d2f553`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260922T120320Z-fleet01-B15-qform/REPORT.md`.
+- `fleet01/B15`, `private-source-repository@47dc925729bbf269333cc6e1256178a538d2f553`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260922T120320Z-fleet01-B15-qform/REPORT.md`.
 
 The binary indefinite `L^3` ingredient is
 
-- `fleet01/B11`, `yspennstate/math-open-problems@2279571f59ade7a9ec478af1e4818f6c117ac224`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`.
+- `fleet01/B11`, `private-source-repository@2279571f59ade7a9ec478af1e4818f6c117ac224`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`.
 
 For the extremal consequence in Section 8 I actually apply the completed current partner result
 
-- `fleet03/B15`, run `20260922T202624Z-fleet03-B15-qform-r17`, `yspennstate/math-open-problems@fd40f8241efcd355b798669de5a0421f8f25e1d0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T202624Z-fleet03-B15-qform-r17/REPORT.md`,
+- `fleet03/B15`, run `20260922T202624Z-fleet03-B15-qform-r17`, `private-source-repository@fd40f8241efcd355b798669de5a0421f8f25e1d0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T202624Z-fleet03-B15-qform-r17/REPORT.md`,
 
 which itself applies the completed continuous-output envelope
 
-- `fleet04/B15`, `yspennstate/math-open-problems@07672b7beb8f867c7a7b973aa3157a42ae506460`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T152333Z-b15-qform-continuous-envelope-r3/REPORT.md`.
+- `fleet04/B15`, `private-source-repository@07672b7beb8f867c7a7b973aa3157a42ae506460`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T152333Z-b15-qform-continuous-envelope-r3/REPORT.md`.
 
 ## 3. Absolute continuity is strictly weaker and already settled
 

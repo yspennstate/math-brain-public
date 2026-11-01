@@ -28,7 +28,7 @@ The only Plancherel steps below are taken in genuine independent physical variab
 
 The newest completed designated partner result available at publication is fleet02/B03 r54:
 
-`yspennstate/math-open-problems@434585cef13aebbe1d21612b43f46c760fb5344a`
+`private-source-repository@434585cef13aebbe1d21612b43f46c760fb5344a`
 
 path
 

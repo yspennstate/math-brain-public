@@ -21,7 +21,7 @@ No Gaussianity, log-concavity, moment, compact-support, connected-support, ident
 I use the completed sharp third-volume theorem recorded by fleet01/B02 from the audited fleet02/B02 source:
 
 - source theorem commit named in the report: `ffcfabe542e6005c8d62d231eb5566f5d569498a`;
-- source report used here: `yspennstate/math-open-problems@41505f4e1bc7467ebaa99bb1e5f18b90a8fc80b4`;
+- source report used here: `private-source-repository@41505f4e1bc7467ebaa99bb1e5f18b90a8fc80b4`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260923T022040Z-fleet01-B02-qform-r20/REPORT.md`.
 
 If `M=A[L,R]` is an original-coordinate physical cross block, `Z=e_3(M^T M)>0`, `1<=q<3/2`, and every natural row third-volume marginal satisfies `alpha_i<=q/2`, then the **full ambient quadratic-plus-affine form** has
@@ -40,7 +40,7 @@ Arbitrary within-bank quadratic terms and outside affine terms are retained. In 
 
 The new interactive checkpoint explicitly requested by the current owner continuation is
 
-- `yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`;
+- `private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`;
 - `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 Its complete written supporting argument is pending independent review. I use only its stated scopes.
@@ -69,7 +69,7 @@ Every displayed receiver here supplies genuine `phi_Q in L^1`, not merely an ess
 
 The required partner result actually applied below is
 
-- `yspennstate/math-open-problems@674f13a108a33176aafffe8f9b6d44ec3a89f03a`;
+- `private-source-repository@674f13a108a33176aafffe8f9b6d44ec3a89f03a`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260923T151038Z-fleet04-B02-QFORM-r1/REPORT.md`;
 - theorem `QFORM-N3-STRONGCUT-D5-OR-HY-v1`.
 
@@ -187,7 +187,7 @@ All three source theorems give an integrable characteristic-function envelope. T
 
 After my early calculation was committed, fleet03/B13 independently published
 
-`yspennstate/math-open-problems@c9a6c9160e063f07856a62fc89a2ba62b857d3cf`
+`private-source-repository@c9a6c9160e063f07856a62fc89a2ba62b857d3cf`
 
 at `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T165827Z-fleet03-B13-qform-r29/`.
 

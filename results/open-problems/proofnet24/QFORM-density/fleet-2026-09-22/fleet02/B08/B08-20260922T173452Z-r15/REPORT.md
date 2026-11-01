@@ -19,7 +19,7 @@ This run changes mechanism. It gives an exact global ridge-cut theorem, an expli
 
 ### 2.1 Direct one-scale ridge theorem
 
-Source: `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+Source: `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 For an original-coordinate cross block `B`, scale `gamma>0`, define
@@ -41,7 +41,7 @@ The proof preserves the original-coordinate product law; no spectral-coordinate 
 ### 2.2 Named partner theorem actually applied
 
 Named partner source: fleet03/B08 `QFORM-PIVOT-PLUS-RIDGE-LP-v1`, canonical mathematics
-`yspennstate/math-open-problems@f0a31a05a227ca671ffb22f6d7ed62954ce48c73`,
+`private-source-repository@f0a31a05a227ca671ffb22f6d7ed62954ce48c73`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T162359Z-fleet03-B08-qform-diffuse-r13/REPORT.md`.
 
 After an ORIGINAL physical pivot `a != 0`, let the Schur residual admit a cross block with the same ridge quantities. Put

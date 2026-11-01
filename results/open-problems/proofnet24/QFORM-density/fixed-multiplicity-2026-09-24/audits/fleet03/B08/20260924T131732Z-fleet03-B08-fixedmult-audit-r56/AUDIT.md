@@ -2,7 +2,7 @@
 
 Run: `20260924T131732Z-fleet03-B08-fixedmult-audit-r56`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Baseline source: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
+Baseline source: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
 
 Verdict: **PASS on this continuation reread of the 17-eigenvalue manuscript; no new fatal gap found.** This is not a second independent reviewer identity relative to this worker's earlier B08 audit. The unrestricted three-eigenvalue conjecture remains open.
 

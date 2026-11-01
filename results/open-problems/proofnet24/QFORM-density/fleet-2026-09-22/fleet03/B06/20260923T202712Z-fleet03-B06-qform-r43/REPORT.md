@@ -15,7 +15,7 @@ The unrestricted conjecture remains OPEN. No Gaussian, log-concave, moment, comp
 
 The immediate predecessor is fleet03/B06 r42:
 
-`yspennstate/math-open-problems@f9e66ed7e4f036debb6911c4c623fe374d32bdf4`
+`private-source-repository@f9e66ed7e4f036debb6911c4c623fe374d32bdf4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T191938Z-fleet03-B06-qform-r42/REPORT.md`.
 
@@ -27,7 +27,7 @@ with arbitrary same-bank environmental quadratic curvature retained in `R(Z)`. A
 
 The one-dimensional product-marginal input is read from fleet01/B18 r21,
 
-`yspennstate/math-open-problems@406753a39f5fbaf78396b31075f36ae5682ef3ad`
+`private-source-repository@406753a39f5fbaf78396b31075f36ae5682ef3ad`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260923T015618Z-qform-B18-a01-r21/REPORT.md`.
 
@@ -37,7 +37,7 @@ It records the Livshyts--Paouris--Pivovarov theorem in the exact form used here:
 
 The designated partner source is fleet04/B06 r1,
 
-`yspennstate/math-open-problems@f24c8db8946d54f4da2d11898697913af766ad32`
+`private-source-repository@f24c8db8946d54f4da2d11898697913af766ad32`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260923T184145Z-fleet04-B06-QFORM-r1/REPORT.md`.
 

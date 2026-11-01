@@ -6,7 +6,7 @@ Problem/source: Takahiro Hasebe and Yuki Ueda, *Large time unimodality for class
 
 Run ID: `20260916T1828Z_i0082_strictstable_firstvariation_c84d2e`  
 Date checked: 2026-09-16  
-Repository: `yspennstate/math-open-problems`, branch `master`  
+Repository: `private-source-repository`, branch `master`  
 Source status: **OPEN in the bounded current-status search**  
 Track status: **OPEN**  
 

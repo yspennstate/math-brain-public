@@ -14,13 +14,13 @@ Fresh control before the mathematical write was `yspennstate/math-research-brain
 
 The assigned partner is `fleet03/B13`. No completed current-QFORM handoff from that slot existed at the fresh read, so no stale FEI result was imported. A named completed **other-account** result was consumed instead:
 
-`yspennstate/math-open-problems@db7e2efa23166b1ce2e7ef376b69b8e973ccf391`
+`private-source-repository@db7e2efa23166b1ce2e7ef376b69b8e973ccf391`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/fleet03-B12-20260922T114435Z-349dfcff7c/REPORT.md`.
 
 At the scope used here it proves a uniform density bound `<24.231/lambda` for a flat four-coordinate core with three equal large eigenvalues and arbitrary fourth eigenvalue, by stitching definite-pair and nonsingular-triple mechanisms. I use it in §7 as an already-closed geometric branch after the new product-set reduction.
 
 I also read the underlying pair/triple source
-`yspennstate/math-open-problems@289810e1f075755898f573ee5b863ad3fa9af5b8`
+`private-source-repository@289810e1f075755898f573ee5b863ad3fa9af5b8`
 `qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`.
 
 ## 2. One-coordinate bathtub lemma

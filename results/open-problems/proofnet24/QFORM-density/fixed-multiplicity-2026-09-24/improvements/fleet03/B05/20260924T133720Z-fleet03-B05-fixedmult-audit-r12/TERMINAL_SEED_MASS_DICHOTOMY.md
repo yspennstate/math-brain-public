@@ -1,7 +1,7 @@
 # QFORM-S16-TERMINAL-SEED-MASS-DICHOTOMY-v1
 
 Run: `20260924T133720Z-fleet03-B05-fixedmult-audit-r12`.
-Baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 Status: **proved supporting structural/analytic theorem; not a universal 16-eigenvalue theorem**.
 
 Use `eta=1/100`, `kappa=1/6400`. Let `A=A^T` have no `eta`-pivot and `s_16(A)>=1`. Then the existing `k=4` theorem gives `V_4>=kappa^4`.

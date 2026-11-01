@@ -20,7 +20,7 @@ No post-rotation independence, law-uniform pointwise van-der-Corput decay, condi
 
 The preceding B07 theorem is source-pinned at
 
-`yspennstate/math-open-problems@685929d9daee92a164dbf6ba6f9305d2e6550826`,
+`private-source-repository@685929d9daee92a164dbf6ba6f9305d2e6550826`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T163733Z-fleet03-B07-qform-r12/REPORT.md`.
 
@@ -30,7 +30,7 @@ It proves the full-matrix third-compound overlap reduction. In the O0 branch the
 
 The designated partner `fleet04/B07` still had no completed current-QFORM canonical directory or shared handoff at the fresh source check. No result is fabricated. The completed compatible result actually applied below is fleet01/B04's `QFORM-O0-EFFECTIVE3-ADAPTIVE-Q-v1`, source-pinned at
 
-`yspennstate/math-open-problems@c03349badbdfce229ca3a1548d3de8615d1028c5`,
+`private-source-repository@c03349badbdfce229ca3a1548d3de8615d1028c5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260922T171055Z-fleet01-B04-QFORM-r14/REPORT.md`.
 

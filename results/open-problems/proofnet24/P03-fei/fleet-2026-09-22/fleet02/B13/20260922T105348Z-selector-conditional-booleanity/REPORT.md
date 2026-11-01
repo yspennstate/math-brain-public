@@ -19,7 +19,7 @@ The answer is yes. The theorem below is auxiliary rather than FEI closure: it pr
 
 The base Booleanity theorem is fleet04/B17,
 
-`yspennstate/math-open-problems@603b35e74227d1c2d8ee34c0c527c439c686e30:proofnet24/P03-fei/fleet-2026-09-21/fleet04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md`.
+`private-source-repository@603b35e74227d1c2d8ee34c0c527c439c686e30:proofnet24/P03-fei/fleet-2026-09-21/fleet04/B17/20260922T092422Z-biased-booleanity-gap/REPORT.md`.
 
 For product bias `p`, normalized basis `phi_i=(x_i-p_i)/sqrt(p_i(1-p_i))`, and multiplication matrices `M_U`, it proves for every Boolean gate
 
@@ -34,13 +34,13 @@ L_U=\prod_{i\in U}\sqrt{\max(p_i,1-p_i)\over\min(p_i,1-p_i)}.
 
 The exact I-projection identity is fleet02/B15,
 
-`yspennstate/math-open-problems@4bd6d05f1eb8325d665f2748f4d74dcee2550a04:proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`,
+`private-source-repository@4bd6d05f1eb8325d665f2748f4d74dcee2550a04:proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`,
 
 which gives `K_occ=H_max(r)-H(P)` for the actual nonempty spectral law with its original-coordinate occurrence marginals.
 
 The named completed **other-account partner** result actually used is fleet03/B13,
 
-`yspennstate/math-open-problems@a04dec15aa083216c437d1327aba981f5c8dbab8:proofnet24/P03-fei/fleet-2026-09-21/fleet03/B13/20260922T093915Z-safe-direction-coercivity/REPORT.md`.
+`private-source-repository@a04dec15aa083216c437d1327aba981f5c8dbab8:proofnet24/P03-fei/fleet-2026-09-21/fleet03/B13/20260922T093915Z-safe-direction-coercivity/REPORT.md`.
 
 It proves for the universally safe direction
 

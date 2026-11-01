@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — not auth
 # R13 — Boolean Komlós: exact determination of the five-column constant
 
 Run ID: `20260918T1314Z_k5-exact-equality-7c2f`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Deployment: `NEW-METHODS-2026-09-16`.
 
 ## 1. Continuity, ownership, and source status

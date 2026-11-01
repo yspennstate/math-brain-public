@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-B — damped Schur descent and a dependence-aware Fourier threshold-count law
 
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured start master:** `90765ce532a1e57a74d053836a1dc40b86745d91`  
 **Fresh pre-write master:** `5a85790299e07c23d9b6a0d7620f700da6c4c295`  
 **Previous own report:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T0413+0300__active_set_schur_repair.md`  

@@ -2,7 +2,7 @@
 
 After the main B13 report was frozen, fresh main exposed fleet01/B15's completed handoff and canonical report:
 
-`yspennstate/math-open-problems@47dc925729bbf269333cc6e1256178a538d2f553`
+`private-source-repository@47dc925729bbf269333cc6e1256178a538d2f553`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260922T120320Z-fleet01-B15-qform/REPORT.md`.
 
 It proves that every real symmetric matrix of rank at least three has an invertible original-coordinate principal block of order 3 or 4, and consequently every fixed target matrix has an instancewise bounded output density

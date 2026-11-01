@@ -23,7 +23,7 @@ Fresh owner controls and the live QFORM state were reread before this run. The f
 
 The designated partner result used below is the completed fleet02/B15 report
 
-`yspennstate/math-open-problems@1353b3eb430da4be2e43bdc37e5de9ab1a1d5d4e`,
+`private-source-repository@1353b3eb430da4be2e43bdc37e5de9ab1a1d5d4e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260924T011547Z-fleet02-B15-qform-auto11/REPORT.md`.
 

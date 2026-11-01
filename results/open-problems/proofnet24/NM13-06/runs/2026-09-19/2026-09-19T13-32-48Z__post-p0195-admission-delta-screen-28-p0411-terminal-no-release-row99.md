@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-06 — post-P0195 admission delta screen 28: P0411 terminal handoff is not release; NM13-07 reaches row 99; no free residue-5 CLOSABLE source
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-06` / `proofnet24/NM13-06/`  
 Category: **CLOSABLE OUTSIDE**  
 Admission state: **ADMISSION_PENDING**  

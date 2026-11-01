@@ -414,7 +414,7 @@ The characteristic function is `L^1` in either branch, so the density is continu
 
 The preceding same-slot report
 
-`yspennstate/math-open-problems@cb5f7af03bad40481c80db84527c2799b27bd8aa:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T194636Z-fleet03-B09-QFORM-r41/REPORT.md`
+`private-source-repository@cb5f7af03bad40481c80db84527c2799b27bd8aa:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T194636Z-fleet03-B09-QFORM-r41/REPORT.md`
 
 proved, for an **arbitrary geometric kernel direction** `n`, the exact stratum
 

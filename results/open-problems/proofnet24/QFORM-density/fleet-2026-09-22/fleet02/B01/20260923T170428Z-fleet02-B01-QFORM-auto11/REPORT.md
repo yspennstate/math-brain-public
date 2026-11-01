@@ -16,7 +16,7 @@ The phase-aligned-density obstruction to any law-uniform scalar quadratic-phase 
 
 ### 1.1 Required 20260922T211500Z Fourier package
 
-At `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md` proves the two interfaces used here:
+At `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md` proves the two interfaces used here:
 
 1. fractional potentials are controlled by the weighted Fourier integral `int |t|^(alpha-1)|phi(t)| dt`; and
 2. if an original coordinate of coefficient `a!=0` is completed as
@@ -33,7 +33,7 @@ The exact Fourier constant at `alpha=1/2` is rederived below rather than importe
 
 ### 1.2 Current projected-crossing theorem
 
-At `yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`, the grouped-hub theorem proves that for
+At `private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`, `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`, the grouped-hub theorem proves that for
 
 `R = F(Y)+2Y(ell dot Z+beta)+H(Z)`
 

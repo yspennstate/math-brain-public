@@ -43,7 +43,7 @@ Thus this is a genuinely nonseparable source-valid rank-three family with two ma
 
 The completed `fleet03/B17` r22 theorem is
 
-`math-open-problems@ba000d70d1d4f523a2396155a24d5088d5c94802`,
+`private-source@ba000d70d1d4f523a2396155a24d5088d5c94802`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T021034Z-fleet03-B17-QFORM-r22/REPORT.md`.
 
 It proves, for an arbitrary joint probability density `rho(u,v)<=1` and independent `G_0~N(0,sigma_0^2)`, `sigma_0^2=1/12`,
@@ -100,7 +100,7 @@ The estimate is uniform in `h`, so averaging over the arbitrary law of `H` prove
 
 The latest completed `fleet03/B17` result read in this invocation is
 
-`math-open-problems@5f4048aeb8c04ee61aa695b961ca8ae213dc3293`,
+`private-source@5f4048aeb8c04ee61aa695b961ca8ae213dc3293`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T100331Z-fleet03-B17-QFORM-auto11/REPORT.md`.
 
 Among its proved ingredients is a weighted one-bank local limit for the cap-one remote-fragment law with probability `lambda/m` in an interval centered at `a sqrt(m)`: the normalized bank converges locally, with polynomial control, to
@@ -233,7 +233,7 @@ where `h_m` is the density of `S_m`.
 
 Lemma 1 of the required pinned source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`,
 
 proves for every cap-one probability density `f` and every `p>=2`

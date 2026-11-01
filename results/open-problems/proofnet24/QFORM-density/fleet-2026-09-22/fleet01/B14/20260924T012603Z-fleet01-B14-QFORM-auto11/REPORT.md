@@ -14,7 +14,7 @@ Live corrections used: no uniform pointwise quadratic Fourier decay; rotations d
 
 Completed designated-partner source actually applied below:
 
-- fleet02/B14, run `20260922T181403Z-fleet02-B14-QFORM-r17`, canonical report at `yspennstate/math-open-problems@04e83634ca19b2a891726f12ea1767c44fbf76a0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T181403Z-fleet02-B14-QFORM-r17/REPORT.md`.
+- fleet02/B14, run `20260922T181403Z-fleet02-B14-QFORM-r17`, canonical report at `private-source-repository@04e83634ca19b2a891726f12ea1767c44fbf76a0`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T181403Z-fleet02-B14-QFORM-r17/REPORT.md`.
 
 Its Theorem A says that if a finite measure `mu` on the line has mass `m` and density cap `D`, then for `0<alpha<1`, uniformly in `t`,
 

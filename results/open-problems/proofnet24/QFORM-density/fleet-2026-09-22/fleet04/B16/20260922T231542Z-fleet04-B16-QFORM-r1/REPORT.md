@@ -8,7 +8,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The target is the law of `Q=X^TAX` for arbitrary independent real coordinates with densities at most one, when `A` has at least three eigenvalues of modulus at least one.  No moment, support, log-concavity, or post-rotation independence hypothesis is imposed.
 
-The new geometric input is Claude's ruled-level-set theorem in `yspennstate/math-open-problems`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb`, read on `master` after the required baseline `e5f71d79eff325201dd0274053d20268ce65b837`.  The product-preserving cross-cut input is fleet01/B16's `QFORM-PLUCKER-DISJOINT-CUT-v1`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260922T223900Z-qform-b16-r11/REPORT.md` (report blob `8b36df2db3e1af9f2534b995de54059d485fb30d`).
+The new geometric input is Claude's ruled-level-set theorem in `private-source-repository`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb`, read on `master` after the required baseline `e5f71d79eff325201dd0274053d20268ce65b837`.  The product-preserving cross-cut input is fleet01/B16's `QFORM-PLUCKER-DISJOINT-CUT-v1`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260922T223900Z-qform-b16-r11/REPORT.md` (report blob `8b36df2db3e1af9f2534b995de54059d485fb30d`).
 
 ## Theorem
 

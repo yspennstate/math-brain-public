@@ -145,7 +145,7 @@ A useful interpretation is that an order-three volume law with two clustered row
 
 The completed partner result used here is fleet02/B02 r16:
 
-`yspennstate/math-open-problems@49c80441f24d6c697350119fac09426077b7e313`
+`private-source-repository@49c80441f24d6c697350119fac09426077b7e313`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T231047Z-fleet02-B02-qform-r16-6c4f9a1e/REPORT.md`.
 
 Its D5 branch states, for any physical cross block M and arbitrary same-bank curvature/outside couplings,

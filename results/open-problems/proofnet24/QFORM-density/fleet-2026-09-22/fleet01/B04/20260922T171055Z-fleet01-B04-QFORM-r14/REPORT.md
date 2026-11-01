@@ -30,7 +30,7 @@ No pointwise law-uniform quadratic-phase decay, post-rotation independence, fibe
 
 Interactive canonical proof:
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
@@ -51,7 +51,7 @@ This is the product-space integrated Fourier input used below.
 
 fleet03/B07 canonical proof:
 
-`yspennstate/math-open-problems@685929d9daee92a164dbf6ba6f9305d2e6550826`
+`private-source-repository@685929d9daee92a164dbf6ba6f9305d2e6550826`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T163733Z-fleet03-B07-qform-r12/REPORT.md`.
 
@@ -69,7 +69,7 @@ Its previous O0 payment fixed `theta=8/3,q=1`, hence required `max diag K<=1/2`.
 
 Latest completed partner handoff points to
 
-`yspennstate/math-open-problems@f5f62136676a5334d5b00a7a25081b8436be9bf4`
+`private-source-repository@f5f62136676a5334d5b00a7a25081b8436be9bf4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260922T164653Z-d0a9bbf0/REPORT.md`.
 

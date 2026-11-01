@@ -14,7 +14,7 @@ This run consumed the later owner continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T
 
 The designated partner theorem is fleet04/B14 r9:
 
-`yspennstate/math-open-problems@b5f173477a3889ad9432ea7d97767e969c83b279`
+`private-source-repository@b5f173477a3889ad9432ea7d97767e969c83b279`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T141430Z-fleet04-B14-affine-slice-fresnel-r9/REPORT.md`.
 
@@ -28,14 +28,14 @@ Its translated Brascamp--Lieb step applies the newest-Claude cap-one Fourier ine
 
 from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 The current continuation at `c4c23b784395630c094ba299a50712209921d1ae` was read. Its new `(SP)` estimate for a hub adapted to an extra projection is explicitly OPEN and is not used below.
 
 I also apply the current volume-stability theorem at an actual inequality in Section 6. Its source is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 ## 2. New theorem: an L^p core plus a self-curved random-slope receiver
@@ -279,7 +279,7 @@ This family is a genuine member of the original target for every `m`; it is not 
 
 The current interactive theorem at
 
-`math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 states that if an ORIGINAL-coordinate crossing block satisfies
 

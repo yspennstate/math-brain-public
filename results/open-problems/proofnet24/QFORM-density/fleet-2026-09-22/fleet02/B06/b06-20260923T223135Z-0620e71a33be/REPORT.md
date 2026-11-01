@@ -22,7 +22,7 @@ Partner fleet03/B06 r45 already pays a fixed diagonal anchored curvature `(K_H)_
 
 The newest completed designated partner at invocation was fleet03/B06 r45, source-pinned as
 
-`yspennstate/math-open-problems@b5d4a62bb80a7ad84db292cb8d886282a95e851b`.
+`private-source-repository@b5d4a62bb80a7ad84db292cb8d886282a95e851b`.
 
 It proves, for every literal environment coordinate `k`,
 
@@ -42,7 +42,7 @@ with notation recalled in Section 3, and proved an aggregate wedge compiler payi
 
 The owner-required pinned source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`.
 
 Two completed pieces are applied below at equation level:
 

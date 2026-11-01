@@ -16,7 +16,7 @@ All coordinate sets below are literal ORIGINAL-coordinate sets. No random coordi
 
 The newest compatible completed designated partner was fleet03/B20 r51:
 
-`yspennstate/math-open-problems@ceb973b9c1549a8247baf169db9152844b9decde`
+`private-source-repository@ceb973b9c1549a8247baf169db9152844b9decde`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T091209Z-fleet03-B20-QFORM-auto11-r51/REPORT.md`.
 
@@ -49,7 +49,7 @@ with actual row-small residuals, retained nonzero tails, and the physical D5 fai
 
 The owner-required pinned package was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its localized Theorem A is spent in Section 4 and its Theorem F is spent on the stress family in Section 7. Its marginal-free D5 theorem is also re-applied to the live residual-bank cuts in Section 8.
 

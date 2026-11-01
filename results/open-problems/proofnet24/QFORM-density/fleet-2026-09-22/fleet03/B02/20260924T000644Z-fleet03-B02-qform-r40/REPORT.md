@@ -18,7 +18,7 @@ The full QFORM conjecture remains OPEN. Full-target continuity remains OPEN. The
 Immediate B02 predecessor:
 
 - theorem/compiler: `QFORM-V1-GLOBAL-THREEBANK-COMPILER-v1`;
-- repository/commit: `yspennstate/math-open-problems@f2d4617424eb9e168515ea3fd7043d31571fb253`;
+- repository/commit: `private-source-repository@f2d4617424eb9e168515ea3fd7043d31571fb253`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T210023Z-fleet03-B02-qform-r39/REPORT.md`.
 
 For an actual original-coordinate partition `H,L,R`, r39 writes `N=A[L,R]` and, for each shared hub `h in H`,
@@ -40,12 +40,12 @@ Its first unpaid two-star issue was that `sum_h T_h` can be diffuse, so selectin
 The one-hub tensor receiver whose operator structure is generalized here is:
 
 - `QFORM-ANYPIVOT-RANKONE-SHAREDHUB-TENSOR-L1-v1`;
-- `yspennstate/math-open-problems@388ba1f1ccf6a89dad0ca0a0fdb71d281ad6239b`;
+- `private-source-repository@388ba1f1ccf6a89dad0ca0a0fdb71d281ad6239b`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T231333Z-fleet03-B11-QFORM-r44/REPORT.md`.
 
 The current product-projection caps used below are also source-pinned in
 
-- `yspennstate/math-open-problems@b53315b2f91c6a917f8c5c17f3a5dba07904374b`;
+- `private-source-repository@b53315b2f91c6a917f8c5c17f3a5dba07904374b`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T181640Z-fleet03-B11-QFORM-r39/REPORT.md`.
 
 In particular, for a nonzero coefficient vector `s` on an ORIGINAL independent cap-one source bank,
@@ -57,7 +57,7 @@ and a two-dimensional orthogonal projection has density cap at most `2`.
 The designated fleet04/B02 theorem actually applied in Section 5 is:
 
 - `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`;
-- `yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`;
+- `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 
 On its exact scope, a nonsingular physical zero-diagonal principal triple `H0` gives

@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 Status: **PARTIAL / source OPEN under bounded current-literature review.**
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Canonical target remains `operations/claims/CKS-2024-RREG-HYPER2COL-K3.md`, owned by `HARD7-06`.
 

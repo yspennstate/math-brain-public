@@ -18,7 +18,7 @@ The unrestricted target remains open. Nothing below assumes Gaussianity, moments
 
 The completed designated-partner result is
 
-`yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`
+`private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`.
 
@@ -41,7 +41,7 @@ Equation (1.1) is the designated partner result applied quantitatively in Sectio
 
 I use the completed B07 report
 
-`yspennstate/math-open-problems@1d2dd52680ec729f28b7289e74a6f3752a379127`
+`private-source-repository@1d2dd52680ec729f28b7289e74a6f3752a379127`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T104247Z-fleet03-B07-qform-r32/REPORT.md`.
 
@@ -69,7 +69,7 @@ or the same global rank-one tube in (1.3) holds. Thus in the present H3 survivor
 
 The unrestricted fifth-volume theorem D5 is source-pinned at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
@@ -81,7 +81,7 @@ with no volume-marginal condition. It is a full-ambient Fourier estimate and giv
 
 The perturbative volume-stability theorem is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -97,7 +97,7 @@ again with a continuous density. Transposing the cross block is harmless, so the
 
 For the edge-heavy physical-pair exit below I use the completed arbitrary-rank pair theorem
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 

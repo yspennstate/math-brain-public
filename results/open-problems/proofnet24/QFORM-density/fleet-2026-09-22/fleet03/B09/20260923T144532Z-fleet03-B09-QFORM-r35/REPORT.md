@@ -22,30 +22,30 @@ Corrections retained: law-uniform pointwise quadratic-phase decay is false; arbi
 
 Completed source results used at their exact scopes:
 
-1. **This slot r32, aggregate compiler.** `QFORM-RANK2-HUBSTAR-AGGREGATE-COMPILER-v1`, canonical bundle `yspennstate/math-open-problems@640165d39efca44cf3cf7fe2d2e5638a823a335b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T124906Z-fleet03-B09-QFORM-r32/REPORT.md`. It gives a leaf partition `S,T` with `W(S)>=(27/256)G_*` in the diffuse-singleton branch.
+1. **This slot r32, aggregate compiler.** `QFORM-RANK2-HUBSTAR-AGGREGATE-COMPILER-v1`, canonical bundle `private-source-repository@640165d39efca44cf3cf7fe2d2e5638a823a335b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T124906Z-fleet03-B09-QFORM-r32/REPORT.md`. It gives a leaf partition `S,T` with `W(S)>=(27/256)G_*` in the diffuse-singleton branch.
 
-2. **This slot r34 checkpoint.** `yspennstate/math-open-problems@3fb21248b8a2c0947f7c48fcb11e5bf6f47a7b8c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T141215Z-fleet03-B09-QFORM-r34/SUBSTANTIVE.md`. In the still-unpaid high-hub branch, with the concrete choice `delta=1/4`, either the one-anchor theorem is already payable, or there are two literal physical hub rows `a,b` whose Pluecker weight satisfies
+2. **This slot r34 checkpoint.** `private-source-repository@3fb21248b8a2c0947f7c48fcb11e5bf6f47a7b8c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T141215Z-fleet03-B09-QFORM-r34/SUBSTANTIVE.md`. In the still-unpaid high-hub branch, with the concrete choice `delta=1/4`, either the one-anchor theorem is already payable, or there are two literal physical hub rows `a,b` whose Pluecker weight satisfies
 
    `w_ab=det(P[{a,b},:])^2 >=16/25`.                            (1.1)
 
-3. **Exact-rank-one pair theorem.** This slot r25, `QFORM-RANKONE-HUBPAIR-RANDOM-SLOPE-v1`, canonical `yspennstate/math-open-problems@195447da931f086720afaa12ac902ed7d33dd32e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T061516Z-fleet03-B09-QFORM-r25/REPORT.md`. If the physical pair core is `E=sigma r r^T`, `n perpendicular r`, and `Hn!=0`, then
+3. **Exact-rank-one pair theorem.** This slot r25, `QFORM-RANKONE-HUBPAIR-RANDOM-SLOPE-v1`, canonical `private-source-repository@195447da931f086720afaa12ac902ed7d33dd32e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T061516Z-fleet03-B09-QFORM-r25/REPORT.md`. If the physical pair core is `E=sigma r r^T`, `n perpendicular r`, and `Hn!=0`, then
 
    `||p_Q||_infinity <=4*2^(3/4)*e^(1/4)(|sigma| ||Hn||_2)^(-1/2)`.
 
-4. **Two-zero-anchor coefficient-plane theorem.** fleet03/B07 `QFORM-TWO-ANCHOR-COEFFICIENT-PLANE-v1`, canonical `yspennstate/math-open-problems@309a7cf35906f05d767ff2fcf1be74367f479d1c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T224159Z-fleet03-B07-qform-r19/REPORT.md`. If the physical two-anchor core is zero and the two random coefficient forms have row matrix `R`, then
+4. **Two-zero-anchor coefficient-plane theorem.** fleet03/B07 `QFORM-TWO-ANCHOR-COEFFICIENT-PLANE-v1`, canonical `private-source-repository@309a7cf35906f05d767ff2fcf1be74367f479d1c`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T224159Z-fleet03-B07-qform-r19/REPORT.md`. If the physical two-anchor core is zero and the two random coefficient forms have row matrix `R`, then
 
    `||p_Q||_infinity <=2 sqrt(2) det(RR^T)^(-1/4)`,
 
 with a continuous density; arbitrary outside quadratic curvature is allowed.
 
-5. **Indefinite pair plus one Schur cross direction.** fleet01/B09 `QFORM-INDEFINITE-PAIR-PLUS-ONECROSS-v1`, canonical report commit `yspennstate/math-open-problems@450fc77b41e4f29ae8e535b6edf03db5cf732c5e`, produced in `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T141440Z-fleet01-B09-QFORM-auto11/REPORT.md`. For an invertible indefinite physical pair `E`, `D=|det E|`, `kappa=sigma_min(E)`, pair-row wedge `Delta`, and pair-anchored physical third volume `V_P>0`, it proves
+5. **Indefinite pair plus one Schur cross direction.** fleet01/B09 `QFORM-INDEFINITE-PAIR-PLUS-ONECROSS-v1`, canonical report commit `private-source-repository@450fc77b41e4f29ae8e535b6edf03db5cf732c5e`, produced in `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T141440Z-fleet01-B09-QFORM-auto11/REPORT.md`. For an invertible indefinite physical pair `E`, `D=|det E|`, `kappa=sigma_min(E)`, pair-row wedge `Delta`, and pair-anchored physical third volume `V_P>0`, it proves
 
    `||p_Q||_infinity
      <=11.463 D^(-2/5) kappa^(-1/10) Delta^(1/20) V_P^(-1/20)`, (1.2)
 
 and the same coefficient times interval length. Continuity is not claimed there.
 
-6. **Designated partner fleet04/B09.** `QFORM-PHYSICAL-CROSS-DETERMINANT-SMOOTHING-v1`, canonical `yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`. A literal invertible physical `3x3` cross block `K` gives
+6. **Designated partner fleet04/B09.** `QFORM-PHYSICAL-CROSS-DETERMINANT-SMOOTHING-v1`, canonical `private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`. A literal invertible physical `3x3` cross block `K` gives
 
    `||p_Q||_infinity <=3 |det K|^(-1/3)`,                       (1.3)
 

@@ -13,7 +13,7 @@ The unrestricted target remains OPEN: arbitrary independent original-coordinate 
 ## 1. Fresh source boundary and first unpaid implication
 
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its ruled one-sheet theorem is used at an actual inequality in Section 4 below. The current continuation `c4c23b784395630c094ba299a50712209921d1ae` and the newer projected-crossing record `829192412f2a2d84e72b4bed91115fc5fab68401` were also read. They do not claim the full theorem.
 
@@ -21,7 +21,7 @@ The latest completed designated partner result used here is fleet03/B10 r24,
 
 `QFORM-NULL-HUB-TRANSVERSE-LEVERAGE-CLOSURE-v1`,
 
-at `yspennstate/math-open-problems@97a77b266879a93eb43ad36555ffdec1d981ebe0`,
+at `private-source-repository@97a77b266879a93eb43ad36555ffdec1d981ebe0`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T114517Z-fleet03-B10-QFORM-r24/REPORT.md`.
 
 It proves for an exact-null ORIGINAL hub `u_0=sqrt(h)r`, with every complementary transverse leverage at most `1/2`,
@@ -34,7 +34,7 @@ The newest completed analytic compiler relevant to the prior B10 gap is fleet01/
 
 `QFORM-ONE-HUB-ROW-MARGINAL-FREE-2VOLUME-v1`,
 
-at `yspennstate/math-open-problems@97a77b266879a93eb43ad36555ffdec1d981ebe0`,
+at `private-source-repository@97a77b266879a93eb43ad36555ffdec1d981ebe0`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T165124Z-fleet01-B03-QFORM-r29/REPORT.md`.
 
 For a physical hub `h`, leaf split `I disjoint J`, and

@@ -4,10 +4,10 @@
   `yspennstate/math-research-brain/main/scheduled_tasks/work/shared/full-fei-only-2026-10-12/GU_LASER_FOCUS_20261014.md`,
   blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
 - B12 compact contract:
-  `yspennstate/math-open-problems/master/reports/fei-2026-10-11/assignments/B12.json`,
+  `private-source-repository/master/reports/fei-2026-10-11/assignments/B12.json`,
   blob `40935ac651643a17815d0addf664ec4c1c0313cc`.
 - Execution protocol:
-  `yspennstate/math-open-problems/master/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json`,
+  `private-source-repository/master/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json`,
   blob `457358ff62cbf1141a72096bcabdf95bf18c1be2`.
 - Immediate original predecessor (masked two-defect theorem):
   `reports/fei-2026-10-11/runs/B12/20261014T101924Z-fleet01-B12-gu-two-defect-overlap/`,

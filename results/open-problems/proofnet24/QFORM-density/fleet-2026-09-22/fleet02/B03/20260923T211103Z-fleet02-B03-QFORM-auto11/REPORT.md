@@ -13,7 +13,7 @@ The unrestricted conjecture is not proved here. Continuity is not asserted by th
 ## 1. Sources and live corrections used
 
 
-Pinned package actually used: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `FOURIER_ROUTE_REPORT.md` Section 1.2. Its volume-sampling decoupling proof is valid for general volume degree `k`; at `k=2`, under two-volume row marginals `alpha_i<=1/2`, it gives the critical one-copy envelope used in Branch A below. The square peel from the same package is used in Corollary 4.1.
+Pinned package actually used: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially `FOURIER_ROUTE_REPORT.md` Section 1.2. Its volume-sampling decoupling proof is valid for general volume degree `k`; at `k=2`, under two-volume row marginals `alpha_i<=1/2`, it gives the critical one-copy envelope used in Branch A below. The square peel from the same package is used in Corollary 4.1.
 
 Fresh crossing source actually used: `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md` at the fresh source commit. I use (i) the grouped projected-crossing theorem at `(k,ell)=(1,1)` and (ii) its exact-rank-two arbitrary-internal-functions crossing theorem.
 

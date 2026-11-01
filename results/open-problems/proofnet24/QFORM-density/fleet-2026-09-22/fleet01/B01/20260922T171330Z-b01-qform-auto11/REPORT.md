@@ -16,7 +16,7 @@ B01's first missing implication was the higher-rank Schur obstruction left by th
 
 The source-complete supporting theorem is `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, canonical report
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -108,7 +108,7 @@ The key point is that all physical pair minors are aggregated **before** paying 
 
 The designated partner `fleet02/B01` completed r24, canonical report
 
-`yspennstate/math-open-problems@007d06d8118bc87becd247676c7a63ae336755c9`
+`private-source-repository@007d06d8118bc87becd247676c7a63ae336755c9`
 
 
 Its theorem treats a rank-two residual

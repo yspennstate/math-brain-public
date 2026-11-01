@@ -1,6 +1,6 @@
 # fleet03/B07 Lean verification run 20260925T164444Z-fleet03-B07-lean-r15
 
-Exact target: math-open-problems commit 4e530247ec0ef4101a6e5ecf621bd35a969c42aa,
+Exact target: private-source commit 4e530247ec0ef4101a6e5ecf621bd35a969c42aa,
 repaired source blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a.
 
 Fresh coordination: Lemma 2.6 is already compiled in FiveS2Schur.lean and Lemma 2.7(a,b)

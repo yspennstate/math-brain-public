@@ -14,15 +14,15 @@ The target remains: for arbitrary independent real coordinates with densities `0
 
 Source-pinned mathematics actually used:
 
-1. **Regularized determinant theorem**, `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`, source report blob recorded in the brain handoff as `080253f929411bfa9c7aa3254a2bdaf37be72ebb`. For an original-coordinate cross block `B=A[I,J]`, `1<=q<2`, left range leverage at most `q/2`, and at least `r>2q` singular values at least `sigma`, it proves
+1. **Regularized determinant theorem**, `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`, source report blob recorded in the brain handoff as `080253f929411bfa9c7aa3254a2bdaf37be72ebb`. For an original-coordinate cross block `B=A[I,J]`, `1<=q<2`, left range leverage at most `q/2`, and at least `r>2q` singular values at least `sigma`, it proves
 
    `||p_Q||_infinity <= e r / [sqrt(2q) sigma (r-2q)]`,
 
    with a sharper gamma-factor constant, while retaining arbitrary self-block phases/outside couplings and arbitrary extra small singular values.
 2. **Marcus--Spielman--Srivastava two-part frame partition**, Corollary 1.5 as quoted and source-pinned in the regularized-determinant report: if `sum_i u_i u_i^T=I` and `||u_i||^2<=delta`, there is a two-partition whose two Gram sums have operator norm at most `(1/sqrt(2)+sqrt(delta))^2`.
 3. **Named partner fleet03/B08 latest completed report**, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T122924Z-fleet03-B08-qform-diffuse-v2/REPORT.md`, current blob `4741a2fa3876dc21a520cc8d990e2a95ca438d15`. Its theorem `QFORM-DIFFUSE-BLOCK-REMAINDER-v1` gives, for selected rank `r=3` and residual physical blocks of mass `mu<1/3`, the bound `12/(1-sqrt(3mu)) |det Lambda|^(-1/3)`.
-4. This slot's preceding theorem `QFORM-WHITENED-PHYSICAL-BLOCK-v1`, canonical report `yspennstate/math-open-problems@84657e690f8411d99602ddc772b622686c3874ed`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T124007Z-r11/REPORT.md`.
-5. Fresh complementary result `QFORM-AGGREGATE-CROSSMINOR-DETERMINANT-v1`, fleet01/B07, `yspennstate/math-open-problems@22acf813ef825872ffe594818d6adb27e9d4e41f`, report blob `6b0996f550365a62f2a3bb7ac9322fb20f3c160f`. Its exact determinant-decrement identity confirms that high physical leverage is the remaining payment variable, not a missing single-minor estimate.
+4. This slot's preceding theorem `QFORM-WHITENED-PHYSICAL-BLOCK-v1`, canonical report `private-source-repository@84657e690f8411d99602ddc772b622686c3874ed`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T124007Z-r11/REPORT.md`.
+5. Fresh complementary result `QFORM-AGGREGATE-CROSSMINOR-DETERMINANT-v1`, fleet01/B07, `private-source-repository@22acf813ef825872ffe594818d6adb27e9d4e41f`, report blob `6b0996f550365a62f2a3bb7ac9322fb20f3c160f`. Its exact determinant-decrement identity confirms that high physical leverage is the remaining payment variable, not a missing single-minor estimate.
 
 The regularized-determinant source is a complete supplied supporting proof but was explicitly marked pending its assigned independent reviews when read. The theorem below is therefore source-dependent on that result; it is not promoted to a reviewed full solution.
 

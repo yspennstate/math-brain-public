@@ -1,7 +1,7 @@
 Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 maximum. NO MOVEMENT: `Delta_BM = 1 -> 1`; `unchanged_count = 0 -> 1`. Section-B moves tried: #5 ADD A PARAMETER, #20 FIND WHY THE ALGORITHM FAILS, #21 ASK WHO ELSE HAS THIS SHAPE.**
 
 Problem/source: Ramon van Handel, *The strong convergence phenomenon*, current PDF dated 11 February 2026, Section 6.9 “Complex eigenvalues”; intake/campaign target P0189 = the literal general Brown-measure-convergence principle under strong convergence.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Delivery: private GitHub only. No email/Gmail, Drive, public posting, purchase, permission change, workflow execution, or scheduler change.
 
 # R06 CLOSABLE OUTSIDE — run 12: prior-art correction and the critical one-parameter mechanism

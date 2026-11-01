@@ -163,9 +163,9 @@ Continuity is not asserted as part of Theorem 1; the theorem gives an essential 
 
 ## 5. Source pins
 
-- Required Claude package begins at \`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/\`.
-- Prior rough ruled/two-sheet B05 report: \`math-open-problems@ae670b9085d4bb7ab01c54021cd89f620aa2f0b3\`.
-- Completed fleet01/B05 input: \`math-open-problems@ad88bc891f3094c84b4e7c3be104d407c8ed032f\`.
+- Required Claude package begins at \`private-source@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/\`.
+- Prior rough ruled/two-sheet B05 report: \`private-source@ae670b9085d4bb7ab01c54021cd89f620aa2f0b3\`.
+- Completed fleet01/B05 input: \`private-source@ad88bc891f3094c84b4e7c3be104d407c8ed032f\`.
 - Rough regularity compiler: fleet04/B15, commit \`d734abaae2eedafe9572b4215107c9637807acaa\`.
 
 Repository delivery is not native brain ingestion. Model and thinking metadata remain UNKNOWN.

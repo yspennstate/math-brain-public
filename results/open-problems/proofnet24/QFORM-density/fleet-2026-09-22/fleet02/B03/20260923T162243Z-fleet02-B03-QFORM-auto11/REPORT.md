@@ -14,27 +14,27 @@ attacking: the near-coloop/grouped-pair endpoint — keep one genuine independen
 
 The required pinned Claude package was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. In particular I retain the product-coordinate Fourier/Lp estimates, Theorem D/D'/D5 gates and all stated counterexample boundaries; no claim there closes the full theorem.
 
 The later owner continuation required the current Claude record
 
-`yspennstate/math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`
+`private-source-repository@c4c23b784395630c094ba299a50712209921d1ae`
 
 `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/README.md`.
 Its newest `hub that sees P` proposal `(SP)` is explicitly OPEN, not used as a theorem here.
 
 The newest interactive projected-crossing theorem used below is
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 It proves the arbitrary-rank projected crossing compiler `(GC)` provided the projected crossing volume and every row-marginal gate are actually verified.
 
 The latest designated partner fleet03/B03 result actually used below is the 16:23 exact-coloop compiler and its supplement,
 
-`yspennstate/math-open-problems@dc887389947d0e4195eb1e28d6736060e718905c`
+`private-source-repository@dc887389947d0e4195eb1e28d6736060e718905c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T162345Z-fleet03-B03-QFORM-r35/{REPORT.md,SUPPLEMENT.md}`.
 It proves a target-scale density bound at an exact right-frame coloop and dependence-safe weighted whole-copy time estimates for the residuals.

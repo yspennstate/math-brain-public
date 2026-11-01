@@ -17,13 +17,13 @@ This run attacks the first localization debt left by fleet03/B14 r26: its comple
 
 Two completed sources are applied at equations.
 
-1. Designated partner fleet03/B14 r26: `yspennstate/math-open-problems@f89093b26b458e02914d99e7235268aff6ae1e40`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T043707Z-fleet03-B14-QFORM-r26/REPORT.md`. It supplies (i) the product-safe one-dimensional projection cap `||p_(a^T V)||_infinity <= sqrt(2)/||a||_2`, and (ii) after product-preserving bank compression, a fixed four-independent-variable theorem with constant
+1. Designated partner fleet03/B14 r26: `private-source-repository@f89093b26b458e02914d99e7235268aff6ae1e40`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T043707Z-fleet03-B14-QFORM-r26/REPORT.md`. It supplies (i) the product-safe one-dimensional projection cap `||p_(a^T V)||_infinity <= sqrt(2)/||a||_2`, and (ii) after product-preserving bank compression, a fixed four-independent-variable theorem with constant
 
    `C4 = 1000(8+log 4) = 9386.294361119892...`,
 
    uniform in arbitrary affine terms and arbitrary rough/unbounded supports, whenever the resulting physical `4x4` quadratic block has three eigenvalues of modulus at least `sigma`; the density bound is `C4/sigma`.
 
-2. Required newest-Claude source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. `RESULTS.md` proves the mixed hub/Fresnel theorem H; `FOURIER_ROUTE_REPORT.md` proves the relaxed D' and unconditional fifth-volume D5 exits. Theorem H is applied below to an explicit target-valid family and gives the concrete uniform bound `3*4^(2/3)<7.560` where one-bank selection loses `sqrt(d)`.
+2. Required newest-Claude source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. `RESULTS.md` proves the mixed hub/Fresnel theorem H; `FOURIER_ROUTE_REPORT.md` proves the relaxed D' and unconditional fifth-volume D5 exits. Theorem H is applied below to an explicit target-valid family and gives the concrete uniform bound `3*4^(2/3)<7.560` where one-bank selection loses `sqrt(d)`.
 
 The live correction boundary is respected: no arbitrary-joint rank-three coarea, no positive moment of a worst conditional projection cap, no post-rotation independence, no universally good physical minor/cross cut, and no interpretation of a small matrix coefficient as a uniformly small random perturbation on unbounded laws.
 

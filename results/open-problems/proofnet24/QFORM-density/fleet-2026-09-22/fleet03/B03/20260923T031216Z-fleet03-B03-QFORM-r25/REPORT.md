@@ -12,10 +12,10 @@ The exact unrestricted conjecture remains open. This report proves an analytic b
 ## 1. Inputs and source pins
 
 1. Completed one-dimensional product-projection density bound used below: for independent original coordinates with densities at most one,
-   `||p_(m^T Y)||_infinity <= sqrt(2)/||m||_2` for `m != 0`. The source used by the current QFORM fleet is pinned through `yspennstate/math-open-problems@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7` and the completed projection result cited by the fleet01/B03 zero-hub theorem.
-2. Completed indefinite-pair quarter-small-ball transducer: `yspennstate/math-open-problems@fab77e73a6163b18eea08d2807aa1a38166279ff:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T021907Z-fleet02-B03-QFORM-auto11/REPORT.md`. If an invertible indefinite original-coordinate pair has `D=|det B|`, `kappa=sigma_min(B)`, and its residual `H` obeys `sup_t P(|H-t|<rho)<=K rho^(1/4)`, then
+   `||p_(m^T Y)||_infinity <= sqrt(2)/||m||_2` for `m != 0`. The source used by the current QFORM fleet is pinned through `private-source-repository@07305f53ba9b8a1d3e6e79f8c851f415f007d4a7` and the completed projection result cited by the fleet01/B03 zero-hub theorem.
+2. Completed indefinite-pair quarter-small-ball transducer: `private-source-repository@fab77e73a6163b18eea08d2807aa1a38166279ff:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T021907Z-fleet02-B03-QFORM-auto11/REPORT.md`. If an invertible indefinite original-coordinate pair has `D=|det B|`, `kappa=sigma_min(B)`, and its residual `H` obeys `sup_t P(|H-t|<rho)<=K rho^(1/4)`, then
    `||p_Q||_infinity <= 3*2^(4/3) K^(2/3) D^(-1/3) kappa^(-1/6)`.
-3. Designated partner fleet04/B03: `yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`. Only its valid elementary collision identity/inequality is used here:
+3. Designated partner fleet04/B03: `private-source-repository@28681f9af7c2307f80968df86010084019599e38:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`. Only its valid elementary collision identity/inequality is used here:
    `P(|Y-Y'|<=epsilon) <= 2 epsilon ||p_Y||_2^2`.
    Its previously challenged weighted-L2 compiler is not used.
 

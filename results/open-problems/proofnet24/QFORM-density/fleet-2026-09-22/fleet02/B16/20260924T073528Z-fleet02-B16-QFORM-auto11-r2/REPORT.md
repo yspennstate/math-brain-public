@@ -12,7 +12,7 @@ Continuity: not claimed by the global pair-log bound below; the unrestricted con
 ## 1. Fresh boundary and first unpaid implication
 
 
-The required pinned package was read at exactly `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. In particular, the completed ruled one-sheet theorem is applied below to a real strict-target inequality. No independence after projection is inferred.
+The required pinned package was read at exactly `private-source@e5f71d79eff325201dd0274053d20268ce65b837`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. In particular, the completed ruled one-sheet theorem is applied below to a real strict-target inequality. No independence after projection is inferred.
 
 The first unpaid implication after this run is:
 
@@ -192,7 +192,7 @@ For a symmetric `2x2` matrix, `sigma_min=D/sigma_max`; hence
 
 The whole matrix is exact rank three with all three nonzero eigenvalue magnitudes at least one. Therefore the completed physical-pair logarithmic theorem at
 
-`math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 applies with `s=1`, `D>=4033/8192`, `kappa>7/16`, and gives
 

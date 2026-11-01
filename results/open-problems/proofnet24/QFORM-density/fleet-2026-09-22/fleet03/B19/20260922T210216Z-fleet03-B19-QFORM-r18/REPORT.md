@@ -17,7 +17,7 @@ This run changes mechanism from the preceding B19 two-bank/null-row work. It use
 
 1. **Arbitrary-rank residual small ball.** The complete full-matrix pair extension at
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`
 
@@ -32,7 +32,7 @@ It also proves the rank-two approximation fact that if an invertible physical `2
 
 2. **Fresh two-arm packet.** fleet03/B20 at
 
-`yspennstate/math-open-problems@56f7a951d545e6639d4b89fbfa18b0a1158ffe44`,
+`private-source-repository@56f7a951d545e6639d4b89fbfa18b0a1158ffe44`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T204947Z-fleet03-B20-QFORM-r17/REPORT.md`
 
@@ -44,7 +44,7 @@ The same-sign case was already paid there. Its first unpaid implication was exac
 
 3. **Designated partner fleet04/B19.** `QFORM-FINITE-UNION-CORE-v1`, canonical source
 
-`yspennstate/math-open-problems@02171dc794a56c0235afb1ca394b3e614162bff4`,
+`private-source-repository@02171dc794a56c0235afb1ca394b3e614162bff4`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T122030Z-fleet04-B19-QFORM-r1/REPORT.md`,
 

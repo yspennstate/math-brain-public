@@ -47,7 +47,7 @@ so the repair retains the rare-event logarithm required by the current B05 obstr
 
 The current campaign status and plan were read at the start of the run:
 
-- `yspennstate/math-open-problems/reports/fei-2026-10-11/CURRENT_STATUS.md`, blob `b41d59bda7a8b8c67bb047894906b1cf3aa8a44e`;
+- `private-source-repository/reports/fei-2026-10-11/CURRENT_STATUS.md`, blob `b41d59bda7a8b8c67bb047894906b1cf3aa8a44e`;
 - campaign `README.md`, blob `95f6d823ee84b409f761da44fe7ed7986ec7bd0a`;
 - `FEI_100_agent_research_plan.tex` on current master;
 - Brain campaign `CURRENT_STATUS.md`, blob `b41d59bda7a8b8c67bb047894906b1cf3aa8a44e`;

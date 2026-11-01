@@ -17,17 +17,17 @@ The point of the present result is that a completely dense small tail and an arb
 ## 1. Sources actually used
 
 1. Newest Claude package required by the owner:  
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,  
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,  
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
    I read `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.  The completed physical three-coordinate theorem used below is Theorem A of `COUNTEREXAMPLE_SEARCH.md`: if an actual `3 x 3` quadratic matrix has all three eigenvalues of modulus at least `sigma`, arbitrary linear terms allowed, then the density cap is `6 sqrt(pi)/sigma`.  Conditioning on the other ORIGINAL coordinates therefore gives the same bound for a physical `3 x 3` principal block of an ambient form.
 
 2. Finite-core theorem:  
-   `yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`,  
+   `private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`,  
    `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Corollary 4.1.  On `m>=3` original independent coordinates, an actual symmetric quadratic matrix with three eigenvalues of modulus at least `sigma` has density at most
    `2 sqrt(6 pi m)/sigma`, uniformly in arbitrary affine terms.  The same report's Theorem 5.1 already proves stability under a small dense tail alone; the new step here is to add an arbitrary-magnitude spectral perturbation on top and pay it by local rank/inertia rather than norm.
 
 3. Designated partner `fleet03/B12`:  
-   `yspennstate/math-open-problems@2b9f9ccd93e8df4a7bb6b6f4bd3ec351c286976c`,  
+   `private-source-repository@2b9f9ccd93e8df4a7bb6b6f4bd3ec351c286976c`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T014701Z-qform-eigenvalue-r22/REPORT.md`.  Its threshold hostile-inertia theorem says, for symmetric `M,E` and `L>0`,
    `N_+(M+E;L) >= N_+(M;L)-nu_-(E)` and
    `N_-(M+E;L) >= N_-(M;L)-nu_+(E)`.

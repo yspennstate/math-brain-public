@@ -33,7 +33,7 @@ with `u,v,w` an orthonormal three-frame on that residual bank. The determinant-s
 
 In the target-normalized high-leverage branch, `S_i>=1/2`.
 
-The structural addendum `yspennstate/math-open-problems@b8c42cc3e7d06ba1362b8138887c79de8940348b` proved that if a normalized residual row is heavy, then either its transverse energy
+The structural addendum `private-source-repository@b8c42cc3e7d06ba1362b8138887c79de8940348b` proved that if a normalized residual row is heavy, then either its transverse energy
 
 \[
 q_j=v_j^2+w_j^2                                                     \tag{1.4}
@@ -49,7 +49,7 @@ There are at most three rows of the latter type. Fleet03/B05 r39 then paid every
 
 The newest designated partner fleet02/B05 report is
 
-`yspennstate/math-open-problems@3ca6f8113ff32fc642cc3582b4a338082e8d6d25`,
+`private-source-repository@3ca6f8113ff32fc642cc3582b4a338082e8d6d25`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260924T052537Z-fleet02-B05-qform-auto11/REPORT.md`.
 
 It proves, among other things, the exact bank-gap implication
@@ -64,7 +64,7 @@ and records the completed source-disjoint Pluecker max-cut theorem used below. I
 
 The newest fleet03/B05 r41 report,
 
-`yspennstate/math-open-problems@fe9f82e0c3206c1056b60963a75989baff4aa0ef`,
+`private-source-repository@fe9f82e0c3206c1056b60963a75989baff4aa0ef`,
 
 identifies the exact three-frame bank volume as the extra factor required by a rank-three physical crossing. In the notation below it is a determinant `D_B`, i.e. residual **area**, not merely residual length.
 

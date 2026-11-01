@@ -5,7 +5,7 @@ attacking: the designated-partner diffuse two-star survivor — force literal an
 
 Programme: `QFORM-DENSITY-3EIG-20260922`. Account `fleet03`, slot `B07`. Full target remains OPEN. Continuity is separate. Execution status: `WITHOUT_VERIFIED_BRAIN`.
 
-Designated partner actually used: `yspennstate/math-open-problems@842652e93680813d356fde0f15f12ab70b59c3c3`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`. In its remaining N3 survivor there are an actual physical row star and column star of norms `R,C>h`, where
+Designated partner actually used: `private-source-repository@842652e93680813d356fde0f15f12ab70b59c3c3`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260923T091740Z-fleet04-B07-actual-core-diffuse-banks-r1/REPORT.md`. In its remaining N3 survivor there are an actual physical row star and column star of norms `R,C>h`, where
 
 `h=(2 sqrt(2)-1)/1572864`,
 

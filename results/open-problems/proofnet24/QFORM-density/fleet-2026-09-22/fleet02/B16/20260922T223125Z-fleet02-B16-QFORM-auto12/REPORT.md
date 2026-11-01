@@ -13,7 +13,7 @@ The full target remains: independent real `X_i` with densities at most one, symm
 
 I use fleet03/B16 run `20260922T215409Z-fleet03-B16-QFORM-r18`, canonical report
 
-`yspennstate/math-open-problems@a8103979d7666d4087a23134adf547ab0232c653:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T215409Z-fleet03-B16-QFORM-r18/REPORT.md`.
+`private-source-repository@a8103979d7666d4087a23134adf547ab0232c653:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T215409Z-fleet03-B16-QFORM-r18/REPORT.md`.
 
 Its `QFORM-TWO-BANK-CROSSBLOCK-L2-v1` theorem states, in the zero-residual-cross-block specialization, the following. Let
 

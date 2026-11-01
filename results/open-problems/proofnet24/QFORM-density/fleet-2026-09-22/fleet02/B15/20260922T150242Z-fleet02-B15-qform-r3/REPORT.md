@@ -24,7 +24,7 @@ This report proves that implication at full target scope. It does **not** prove 
 
 The fresh completed assigned-partner result is:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `5b2073a19b463978d5e0b10df035842a8f3e22ff`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T142847Z-fleet03-B15-r11/REPORT.md`.
 

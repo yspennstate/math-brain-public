@@ -17,7 +17,7 @@ Fresh `math-research-brain/main` was resolved during this run. The live `CLAIMS.
 
 The immediate own predecessor is
 
-- `yspennstate/math-open-problems@<master source before this run>`;
+- `private-source-repository@<master source before this run>`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260924T031514Z-fleet01-B11-QFORM-auto11/REPORT.md`;
 - theorem `QFORM-ARBITRARY-PIVOT-LOWRESIDUAL-RANK-v1`, which pays every exact-rank-three branch with a literal physical hub whose complementary principal block has rank at most two, by `<134/s`.
 
@@ -25,7 +25,7 @@ Thus the live exact-rank-three B11 debt is the genuinely rank-three complementar
 
 The structural input consumed in full is fleet03/B11 r50:
 
-- report-introducing source `yspennstate/math-open-problems@85cef4be19e5e356fa4e4feff11b250e0c2fe0ed`;
+- report-introducing source `private-source-repository@85cef4be19e5e356fa4e4feff11b250e0c2fe0ed`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T051120Z-fleet03-B11-QFORM-r50/REPORT.md`;
 - theorem `QFORM-PUNCTURED-VOLUME1-LDL-v1`.
 
@@ -209,7 +209,7 @@ The completed fleet02/B11 r12 endpoint theorem is
 
 `QFORM-PURE-NULL-COLOOP-PAIRCAP-v1`,
 
-source `yspennstate/math-open-problems@5117e9ec45221d02dfa74cedf6c4dcee9fae60c7`, path
+source `private-source-repository@5117e9ec45221d02dfa74cedf6c4dcee9fae60c7`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260924T040707Z-fleet02-B11-QFORM-r12/R49_REFRESH.md`.
 
 Apply it to the literal three-coordinate matrix

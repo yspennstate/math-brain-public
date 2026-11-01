@@ -165,7 +165,7 @@ Unlike the vector-conditioning moment already declared dead in the current owner
 
 ## 7. Compatible completed partner result applied
 
-The assigned partner fleet03/B15 run 20260922T173720Z-fleet03-B15-r14, canonical math-open-problems commit 065b515da52986860a862ed50261bfc35b9caa0b, proves that finite algebraic nondegeneracy conditions can be imposed on smooth compactly supported targets without changing the optimal universal height constant, provided the final estimate is uniform in the genericity gap. It uses fleet04/B15's exact equality C_all=C_C0=C_sm.
+The assigned partner fleet03/B15 run 20260922T173720Z-fleet03-B15-r14, canonical private-source commit 065b515da52986860a862ed50261bfc35b9caa0b, proves that finite algebraic nondegeneracy conditions can be imposed on smooth compactly supported targets without changing the optimal universal height constant, provided the final estimate is uniform in the genericity gap. It uses fleet04/B15's exact equality C_all=C_C0=C_sm.
 
 Applied here, this means the full height problem may be sought on the smooth/generic closure class without separately paying exact zero pivots. The present scalar-sup obstruction is stronger than an exact-degeneracy warning: its matrix already has simple spectrum, is invertible, and has no zero physical entries. Therefore the failure cannot be repaired merely by removing the common algebraic degeneracies licensed by the partner theorem.
 

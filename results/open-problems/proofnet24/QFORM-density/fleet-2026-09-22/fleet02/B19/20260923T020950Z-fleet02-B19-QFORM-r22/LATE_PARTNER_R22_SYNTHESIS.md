@@ -1,6 +1,6 @@
 # Late source refresh: fleet03/B19 r22 closes the internally diffuse part of its new residual
 
-Fresh designated-partner handoff after the main report is fleet03/B19 r22, canonical mathematics `yspennstate/math-open-problems@d0d68512c0e8ddaa3893134fdfc03e2214a751aa`, theorem `QFORM-O3-ONE-RANK1-TWO-RANK2-ROUTING-v1`.
+Fresh designated-partner handoff after the main report is fleet03/B19 r22, canonical mathematics `private-source-repository@d0d68512c0e8ddaa3893134fdfc03e2214a751aa`, theorem `QFORM-O3-ONE-RANK1-TWO-RANK2-ROUTING-v1`.
 
 Its exact one-rank-one / two-rank-two frame geometry is
 

@@ -51,8 +51,8 @@ where `R0` is symmetric, `D0` is a physical diagonal matrix, `F` is symmetric, a
 `c0=12/sqrt(47)=1.7503798979747347...`.
 
 Sources:
-- `yspennstate/math-open-problems@be69878c354322977d5741284a7802d2c12a75e5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T213743Z-fleet01-B08-qform-r36/REPORT.md`;
-- `yspennstate/math-open-problems@6691a29d20e3cfd119c67b7b6bc345c68f407712`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T234122Z-fleet01-B08-qform-r38/REPORT.md`.
+- `private-source-repository@be69878c354322977d5741284a7802d2c12a75e5`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T213743Z-fleet01-B08-qform-r36/REPORT.md`;
+- `private-source-repository@6691a29d20e3cfd119c67b7b6bc345c68f407712`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T234122Z-fleet01-B08-qform-r38/REPORT.md`.
 
 ### 1.2 Own r40 carrier contraction
 
@@ -64,7 +64,7 @@ where `nu=max_i ||U_i||^2`. Therefore, if `nu<=1/48`,
 
 `||R0||op/L <= [x+2c0 d]/(1-1/48)`.
 
-Source: `yspennstate/math-open-problems@e7816c67f620c184df76dcc6bc2b15a1d9621911`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260924T014447Z-fleet01-B08-qform-r40/REPORT.md`.
+Source: `private-source-repository@e7816c67f620c184df76dcc6bc2b15a1d9621911`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260924T014447Z-fleet01-B08-qform-r40/REPORT.md`.
 
 ### 1.3 Completed fleet02/B08 physical half-cut
 
@@ -72,11 +72,11 @@ The completed designated-partner r28 theorem says that if the orthonormal physic
 
 `W_S^T W_S >= I_3/4`, `W_T^T W_T >= I_3/4`.
 
-Source: `yspennstate/math-open-problems@66582bd87d50634f3525a57c87acffdbde97aea1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T153836Z-fleet02-B08-qform-r28/REPORT.md`.
+Source: `private-source-repository@66582bd87d50634f3525a57c87acffdbde97aea1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T153836Z-fleet02-B08-qform-r28/REPORT.md`.
 
 ### 1.4 Literal-cross volume stability
 
-The completed theorem at `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`, states: for an actual literal ORIGINAL-coordinate cross block `M=M0+H`, if
+The completed theorem at `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`, states: for an actual literal ORIGINAL-coordinate cross block `M=M0+H`, if
 
 `s_3(M0)>=kappa`, `max_i(P_Ran(M0))_ii<=1/2`, `||H||op<=kappa/16`,
 
@@ -254,7 +254,7 @@ Thus the remaining diffuse geometry is quantitatively much sharper than the form
 
 The latest completed designated-partner result at prepublication refresh is fleet02/B08 r30:
 
-`yspennstate/math-open-problems@747e6c68617cff947d9277b2b6ec8674cf14cee5`,
+`private-source-repository@747e6c68617cff947d9277b2b6ec8674cf14cee5`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260923T234130Z-auto11b/REPORT.md`.
 
 Its theorem `QFORM-RANK2-CARRIER-DIAGONAL-STRICHARTZ-v1` applies to an exact physical light block
@@ -301,7 +301,7 @@ with a continuous `C_0` density. This is an equation-level application of the la
 
 ## 5. Relation to the newest fleet03/B08 tangent-shear result
 
-The newest completed fleet03/B08 r48 theorem (`math-open-problems@cdecc5cd3305f02b20e8fddc2d8dccb38c373cea`) pays an exact aligned rank-two carrier when an indefinite physical twist supplies product currency
+The newest completed fleet03/B08 r48 theorem (`private-source@cdecc5cd3305f02b20e8fddc2d8dccb38c373cea`) pays an exact aligned rank-two carrier when an indefinite physical twist supplies product currency
 
 `|d_j det R| det(MM^T)`.
 

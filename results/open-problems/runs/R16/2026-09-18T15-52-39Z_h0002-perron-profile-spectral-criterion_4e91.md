@@ -427,7 +427,7 @@ ledger_delta:
     restrictions: "all integer t>=1, all n, per Guo-Fang-Lu arXiv:2609.11189v1"
     status: "very recent current-literature baseline; not an R16 result"
   delivery:
-    repository: yspennstate/math-open-problems
+    repository: private-source-repository
     branch: master
     report_path: runs/R16/2026-09-18T15-52-39Z_h0002-perron-profile-spectral-criterion_4e91.md
 ```

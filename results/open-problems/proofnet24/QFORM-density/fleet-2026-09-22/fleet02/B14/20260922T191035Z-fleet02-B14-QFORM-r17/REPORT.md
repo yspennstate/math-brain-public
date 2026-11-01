@@ -135,7 +135,7 @@ In `A_m` this total principal determinant mass is exactly one, but (5.2) shows t
 Completed assigned-partner result consumed in full:
 
 `fleet03/B14`, run `20260922T183537Z-fleet03-B14-QFORM-r16`, canonical report
-`yspennstate/math-open-problems@1b9da0695f33c0d618a25e3ff5a85159d2dbe94d`,
+`private-source-repository@1b9da0695f33c0d618a25e3ff5a85159d2dbe94d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T183537Z-fleet03-B14-QFORM-r16/REPORT.md`.
 
 That report gives a target-valid four-variable family for which the full output is uniformly bounded but

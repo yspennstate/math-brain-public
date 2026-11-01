@@ -11,7 +11,7 @@ Execution status: WITHOUT_VERIFIED_BRAIN (authenticated repository retrieval occ
 
 Corrections consumed: no law-uniform pointwise quadratic-phase decay; no independence after spectral rotation; no arbitrary-joint rank-three coarea bound; no positive conditional projection-density moment; no worst-fiber supremum; no universally good fixed principal minor or rank-three cross cut. None is used below.
 
-Required Claude/e5 sources were read at exact commit `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Theorem D is used at an actual inequality in Section 4.
+Required Claude/e5 sources were read at exact commit `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`: `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Theorem D is used at an actual inequality in Section 4.
 
 The changed-mechanism obligation is not another near-coloop repair. It is:
 
@@ -77,7 +77,7 @@ This is qualitatively different from the preceding near-coloop families: the mar
 
 ## 4. Required application of the completed e5 result
 
-Apply Theorem D from exact source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` to the actual physical cut `M_eps`. Its conclusion is
+Apply Theorem D from exact source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` to the actual physical cut `M_eps`. Its conclusion is
 
 `||p_R||_infinity <= 6 sqrt(e) E_3(M_eps^T M_eps)^(-1/6)`
 
@@ -107,7 +107,7 @@ The e5 inequality from Section 4 applies to the residual `2X^T M_eps Y`, and con
 
 ## 6. Pure one-scale ridge on the same physical block
 
-Use the completed ridge theorem `QFORM-RIDGE-DENSITY-v1`, source `math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`. For `gamma>0`,
+Use the completed ridge theorem `QFORM-RIDGE-DENSITY-v1`, source `private-source@9c1167db05c7b0f520f060796fde921ed769a4e7`. For `gamma>0`,
 
 `K_gamma=M_eps M_eps^T (gamma^2 I + M_eps M_eps^T)^(-1)`.
 
@@ -158,7 +158,7 @@ for the optimized one-scale-ridge functional. This asymptotic is only a statemen
 
 Now use the earlier B04 theorem `QFORM-SQUARE-WEIGHTED-DETERMINANT-HALFRIESZ-v1`, source
 
-`math-open-problems@6155d85896070c87f6523a30646c38ac10be43a9`,
+`private-source@6155d85896070c87f6523a30646c38ac10be43a9`,
 
 which is product-coordinate based and allows the square shift to overlap the residual. Here the outer coordinate is exactly `Z`, `a=1`, shift zero, and the residual cross block is `M_eps`.
 
@@ -222,7 +222,7 @@ which is exactly the limiting ridge effective dimension. The virtual rows are al
 
 The latest completed designated-partner handoff found on fresh brain main is fleet03/B04 run `20260923T004843Z-fleet03-B04-qform-auto11`, canonical math
 
-`math-open-problems@370534c8763da810a1b81945e0e44344feab0b75`,
+`private-source@370534c8763da810a1b81945e0e44344feab0b75`,
 
 which proves `QFORM-SQUARE-PHYSICAL-PAIR-DETERMINANT-v1`:
 

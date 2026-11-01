@@ -81,7 +81,7 @@ C_M:=500e\,5(8+\log5)
 \]
 Because the target has `s_3(A)>=1` and the partner tails satisfy `||E_sep+E_ent||op=o(1)`, Weyl gives `s_3(M)>=1/2` for all sufficiently large `rho` along any putative divergent sequence.
 
-The owner-pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` was freshly read in `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed unconditional D5 theorem is applied in Section 7.
+The owner-pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` was freshly read in `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Its completed unconditional D5 theorem is applied in Section 7.
 
 ## 3. New theorem: slab-mass-trimmed translation-invariant escape
 

@@ -13,7 +13,7 @@ The result below closes the exact rank-one residual endpoint of the finite-share
 
 The designated partner source is
 
-`yspennstate/math-open-problems@34246a856445b2159c10dc138dda513b5e3b1bea`
+`private-source-repository@34246a856445b2159c10dc138dda513b5e3b1bea`
 
 at
 
@@ -97,7 +97,7 @@ a_i^2<1/4,\qquad b_i^2>\rho/4. \tag{1.4}
 
 The canonical rank-two fractional-potential input used below is `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`,
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`,
 

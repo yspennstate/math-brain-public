@@ -18,7 +18,7 @@ This report uses only original-coordinate principal blocks. It respects the live
 
 The completed assigned-partner result actually used is fleet03/B12, theorem `QFORM-TWO-SAMESIGN-THREEBLOCK-v1`, canonical source
 
-`yspennstate/math-open-problems@b3c543b40dfaef13468466fa82625303a7719af8`
+`private-source-repository@b3c543b40dfaef13468466fa82625303a7719af8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md`.
 

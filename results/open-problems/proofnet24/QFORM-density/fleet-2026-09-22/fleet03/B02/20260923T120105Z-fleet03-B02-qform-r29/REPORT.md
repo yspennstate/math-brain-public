@@ -18,7 +18,7 @@ Fresh owner controls were reread on `yspennstate/math-research-brain` before pub
 The mathematical inputs used at equations below are:
 
 1. **Fractional three-volume stability**, canonical source
-   `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+   `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
    `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
    If an ORIGINAL-coordinate cross block is `M=M0+E`,
    `s3(M0)>=a>0`, `max diag(P_range(M0))<=1/2`, and
@@ -47,7 +47,7 @@ The mathematical inputs used at equations below are:
    This run uses (1.3) only as aggregate second-volume dominance; it does NOT infer that one cross minor is automatically a TRUE symmetric Schur certificate.
 
 4. **Designated partner fleet04/B02**, canonical theorem
-   `yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+   `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
    If a nonsingular physical zero-diagonal principal triple `H0` exists, then
 

@@ -313,7 +313,7 @@ Integrating `z` gives the same small-ball inequality for the full form. Therefor
 
 The completed partner theorem used is fleet04/B14:
 
-- repository/commit: `yspennstate/math-open-problems@430065de1a8e478dc6156f6b489aa46a63681c09`;
+- repository/commit: `private-source-repository@430065de1a8e478dc6156f6b489aa46a63681c09`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T171953Z-fleet04-B14-QFORM-r2/REPORT.md`.
 
 It proves exact cap-preserving compact completion and

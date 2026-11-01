@@ -37,7 +37,7 @@ Sources consumed:
 
 - fleet03/B19 r19 rank-one-bank pivot theorem, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T223200Z-fleet03-B19-QFORM-r19/REPORT.md`, with the proved bound
   `||p_Q||_inf <=16 sqrt(60) [lambda |a| |det M|]^(-1/4)` for a nonzero rank-one-bank scalar pivot.
-- designated partner fleet04/B20 r2, `QFORM-CONDITIONED-WHITENED-DIFFUSE-v1`, canonical `yspennstate/math-open-problems@94bf446b8547b1124a37033e940ef594c460b64f`. If original-coordinate conditioning leaves frame Gram `S` with `delta=lambda_min(S)>0` and every residual whitened row leverage at most `1/32`, then the full conditional/unconditional form has a continuous density with
+- designated partner fleet04/B20 r2, `QFORM-CONDITIONED-WHITENED-DIFFUSE-v1`, canonical `private-source-repository@94bf446b8547b1124a37033e940ef594c460b64f`. If original-coordinate conditioning leaves frame Gram `S` with `delta=lambda_min(S)>0` and every residual whitened row leverage at most `1/32`, then the full conditional/unconditional form has a continuous density with
   `||p_Q||_inf <= 96e/(7 sqrt(2) delta) < 27/delta`.
 
 No post-rotation independence, arbitrary-joint coarea, conditional-density-cap substitute, pointwise van-der-Corput decay, fixed-good-minor extraction, or fiber supremum is used.

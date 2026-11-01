@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — NO MOVEMENT i
 
 Problem/source: **Pengfei Tang (2020 preprint; revised/published 2023), _A note on some critical thresholds of Bernoulli percolation_, arXiv:2012.01135v2 / Electronic Journal of Probability 28 (2023), source-PDF Question 4.11** — Bernoulli bond percolation; question: for a transitive graph or a periodic rooted tree, is the percolation probability `theta(p)` concave on `(p_c,1)`?
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Current mathematical status after this run:
 

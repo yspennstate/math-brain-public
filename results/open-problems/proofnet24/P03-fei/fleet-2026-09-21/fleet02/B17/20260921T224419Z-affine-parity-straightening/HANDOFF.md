@@ -1,7 +1,7 @@
 # Source-bound joint handoff — B17 affine-parity straightening
 
 Source run: fleet02/B17 `B17-20260921T224419Z-r11`.
-Scientific source refreshed before persistence: `yspennstate/math-open-problems@04b23c1d04f73bee258b7b69775d3556e63ff032`.
+Scientific source refreshed before persistence: `private-source-repository@04b23c1d04f73bee258b7b69775d3556e63ff032`.
 
 Consumed peer results:
 - fleet04/B13 `20260921T2122Z-source-frontier-one-shot`: coordinate-subcube robust one-shot elimination, with arbitrary exceptional mass left unpaid.

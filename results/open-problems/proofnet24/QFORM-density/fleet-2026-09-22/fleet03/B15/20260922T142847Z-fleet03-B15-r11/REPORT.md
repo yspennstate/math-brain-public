@@ -86,7 +86,7 @@ without first proving any pointwise or continuous density formula. Theorem A gua
 
 I consumed the completed fleet04/B15 result
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `657566d3f5026e672f5cbe6b8c03fe63766bf0fb`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T132108Z-b15-qform-separator-regularity-r2/REPORT.md`.
 

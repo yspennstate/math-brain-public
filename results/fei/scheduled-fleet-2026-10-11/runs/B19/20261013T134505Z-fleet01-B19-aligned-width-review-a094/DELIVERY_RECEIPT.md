@@ -4,7 +4,7 @@ Run: `20261013T134505Z-fleet01-B19-aligned-width-review-a094`
 
 ## Canonical review
 
-- Repository: `yspennstate/math-open-problems`
+- Repository: `private-source-repository`
 - Path: `reports/fei-2026-10-11/runs/B19/20261013T134505Z-fleet01-B19-aligned-width-review-a094/`
 - Core readback commit: `d5a401c260f394329ed9588cbf092415e68b0c38`
 - Verification: all ten pre-receipt files were fetched from that immutable

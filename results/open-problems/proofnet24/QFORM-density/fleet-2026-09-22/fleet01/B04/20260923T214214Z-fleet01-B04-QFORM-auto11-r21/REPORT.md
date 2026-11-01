@@ -17,7 +17,7 @@ Fresh owner control remained QFORM-only, revision `2026-09-22.15`. The live corr
 Two completed inputs are used at equations:
 
 1. **Indefinite physical-pair logarithmic envelope**, source
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
    For an invertible indefinite original-coordinate pair block `B`, writing
    `D=|det B|`, `kappa=sigma_min(B)`, completing that pair, and denoting its scalar Schur remainder by `R`, one has for every `r>0`
@@ -25,7 +25,7 @@ Two completed inputs are used at equations:
    `p_Q(t) <= 2 sqrt(2)/r + D^(-1/2) E log_+(2r^2/(kappa |t-R|)).`      (1.1)
 
 2. **Designated partner fleet02/B04 clean-bank top-two rearrangement**, source
-   `yspennstate/math-open-problems@dfe442ee899867f5677e5ced85a196eca922fe64`,
+   `private-source-repository@dfe442ee899867f5677e5ced85a196eca922fe64`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T211520Z-fleet02-B04-qform/REPORT.md`.
    For disjoint original product banks `X,Y` and
 

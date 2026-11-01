@@ -177,7 +177,7 @@ Therefore `alpha>=1` with `r=0`, no matter how large `J` is. This produces a ful
 
 The designated completed partner report is
 
-`yspennstate/math-open-problems@c635fcdce6aa206c68f1f14e061cf617d72376fb`
+`private-source-repository@c635fcdce6aa206c68f1f14e061cf617d72376fb`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/fleet02-B12-20260923T185321Z-r11/REPORT.md`.
 

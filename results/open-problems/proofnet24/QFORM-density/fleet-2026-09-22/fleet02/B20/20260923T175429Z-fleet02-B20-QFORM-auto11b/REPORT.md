@@ -23,7 +23,7 @@ The same-hour canonical fleet02/B20 login already existed and was preserved. Fre
 
 The required historical source was reread at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 
@@ -41,7 +41,7 @@ For reference, the same historical source also contains the physical-cross-block
 
 A fresh designated-partner search found no completed fleet03/B20 output later than
 
-`yspennstate/math-open-problems@ab5d7906b6ffc0ca6b07c354d912d7b5b1afccfc`,
+`private-source-repository@ab5d7906b6ffc0ca6b07c354d912d7b5b1afccfc`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T171148Z-fleet03-B20-QFORM-r35/REPORT.md`.
 

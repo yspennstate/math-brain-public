@@ -12,7 +12,7 @@ The unrestricted conjecture remains OPEN. This report proves a new correction-sa
 
 ## 1. Completed inputs
 
-Designated partner `fleet04/B11`: `yspennstate/math-open-problems@4110bbfd21beffa0260a017d468b0a486af56db1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T222040Z-fleet04-B11-cone-envelope-r3/REPORT.md`. It proves that if `Z` is independent of `(V,W)`, `||p_Z||_inf<=L`, `||(V,W)||_inf<=M_2`, and
+Designated partner `fleet04/B11`: `private-source-repository@4110bbfd21beffa0260a017d468b0a486af56db1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T222040Z-fleet04-B11-cone-envelope-r3/REPORT.md`. It proves that if `Z` is independent of `(V,W)`, `||p_Z||_inf<=L`, `||(V,W)||_inf<=M_2`, and
 
 `T=2 alpha ZW + beta V^2 + 2 gamma VW + delta W^2 + affine`,
 
@@ -24,7 +24,7 @@ The standard scalar product-projection bound used in the fleet gives, for a coef
 
 `||p_(a dot X)||_inf <=sqrt(2)/||a||_2`.                         (1.2)
 
-A source pin is `yspennstate/math-open-problems@39b2d7a6fc503f2abbeee3b50c30ed64886de365`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T223200Z-fleet03-B19-QFORM-r19/REPORT.md`.
+A source pin is `private-source-repository@39b2d7a6fc503f2abbeee3b50c30ed64886de365`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T223200Z-fleet03-B19-QFORM-r19/REPORT.md`.
 
 ## 2. New analytic compiler
 

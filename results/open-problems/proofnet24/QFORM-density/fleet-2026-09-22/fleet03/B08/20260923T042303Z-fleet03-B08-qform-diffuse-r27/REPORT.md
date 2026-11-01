@@ -16,7 +16,7 @@ The unrestricted target remains open: independent ORIGINAL real coordinates with
 
 The immediate B08 predecessor is
 
-`yspennstate/math-open-problems@74d0a2e9069b79a331c8a0b304f1772901f16b32`,
+`private-source-repository@74d0a2e9069b79a331c8a0b304f1772901f16b32`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T032334Z-fleet03-B08-qform-diffuse-r26/REPORT.md`.
 
 Its diffuse q=0 route starts from the r25 Pluecker packet
@@ -25,7 +25,7 @@ Its diffuse q=0 route starts from the r25 Pluecker packet
 
 for an ORIGINAL-coordinate cross block `B=A[I,J]`. Applying the completed fractional-volume theorem at
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`,
 
 with `q=4/3` gives either a continuous branch `||p_Q||inf<77/L`, or physical anchors `i in I`, `a in J` for which the double-incident third-volume mass
@@ -41,7 +41,7 @@ The predecessor then desheared this packet into `|b|sqrt(E2(D))` or a four-bank 
 
 The analytic engine is the completed mixed-order physical-minor Brascamp--Lieb/Fourier theorem
 
-`yspennstate/math-open-problems@86f318f0826325e6df3504e1e8ec15f4316cc861`,
+`private-source-repository@86f318f0826325e6df3504e1e8ec15f4316cc861`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T001242Z-b01-qform-auto11/REPORT.md`.
 
 For any probability law `Omega` on nonzero square physical minors of an original-coordinate cross block, if every row inclusion marginal is at most `1/2` and the mean minor order `kbar>2`, it proves a continuous `C0` density with

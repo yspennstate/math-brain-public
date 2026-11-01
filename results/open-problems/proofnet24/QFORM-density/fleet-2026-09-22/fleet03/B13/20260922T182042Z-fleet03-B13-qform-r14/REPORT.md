@@ -16,13 +16,13 @@ The full quadratic-form bounded-density conjecture remains **OPEN / NOT PROVED**
 
 The designated partner `fleet04/B13` completed the fixed-volume random-set representation and continuity transfer at the source-pinned report
 
-`yspennstate/math-open-problems@722a87d180720473e3c3e08010d62caedf298484:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T171018Z-b13-fixed-volume-mixture-r4/REPORT.md`.
+`private-source-repository@722a87d180720473e3c3e08010d62caedf298484:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T171018Z-b13-fixed-volume-mixture-r4/REPORT.md`.
 
 It proves that every one-dimensional probability density `0<=f<=1` is an exact barycenter of indicators `1_E` with `|E|=1`, independently across coordinates. Consequently every product law is an exact mixture of arbitrary unit-measure product indicators. It also proves that a uniform continuous output-density bound on all such indicator components transfers, with no constant loss, to all admissible product densities.
 
 A second completed input is the two-dimensional product-projection theorem from `fleet02/B11`, source
 
-`yspennstate/math-open-problems@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T135203Z-b11-qform-6080e0b3/REPORT.md`.
+`private-source-repository@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T135203Z-b11-qform-6080e0b3/REPORT.md`.
 
 If independent cap-one coordinates are mapped to `R^2` by coefficient vectors `b_k` satisfying `sum b_k b_k^T=I_2`, the resulting joint density is at most `e`. By target-plane whitening, for any rank-two coefficient matrix with Gram matrix `G`, the joint density cap is `e/sqrt(det G)`.
 

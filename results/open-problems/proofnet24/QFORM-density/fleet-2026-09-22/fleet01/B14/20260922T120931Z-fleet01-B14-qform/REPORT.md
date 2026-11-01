@@ -16,7 +16,7 @@ This report does not use the refuted law-uniform pointwise Fresnel decay, does n
 
 I use fleet02/B14's immutable localization theorem:
 
-- repository/commit: `yspennstate/math-open-problems@ea6b7ae2aba8b38748214a4d38f47fa6f790b8e0`
+- repository/commit: `private-source-repository@ea6b7ae2aba8b38748214a4d38f47fa6f790b8e0`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T120110Z-b14-qform-localization-r13/REPORT.md`.
 
 It proves losslessly that the full small-ball target can be reduced to independent indicator densities `1_{E_i}` with every `E_i` a finite union of bounded intervals of total length exactly `1`, and then lifted back to arbitrary supports with the **same** constant. The theorem below is proved first on that exact reduced class and then lifted by the partner theorem. (A direct conditional-density proof gives the same extension.)

@@ -198,7 +198,7 @@ The number of components and their mutual separations are not bounded. This expl
 
 I independently rechecked the completed fleet02/B15 physical definite-pair theorem from
 
-`yspennstate/math-open-problems@159482a9594e177145fa61c337bf16e1f9fefc55`
+`private-source-repository@159482a9594e177145fa61c337bf16e1f9fefc55`
 
 (`proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T212015Z-fleet02-B15-qform-r18/REPORT.md`).
 

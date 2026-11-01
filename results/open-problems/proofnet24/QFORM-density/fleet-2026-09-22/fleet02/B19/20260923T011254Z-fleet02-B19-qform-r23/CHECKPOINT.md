@@ -2,7 +2,7 @@
 
 Programme `QFORM-DENSITY-3EIG-20260922`. Status: supporting implication proved below; full target open.
 
-Immediate source: fleet03/B19 r20 (`math-open-problems@0a3018cb14b94787c8f3f8d95a0e292ed230f8e0`) proves that in its exactly-one-internal-rank-two O3 survivor there is a choice of one rank-one companion bank `H_a` and the rank-two internal bank `G` such that, with exact-rank-three representation `A=RMR^T`, `R^TR=I_3`, `D=|det M|>=1`,
+Immediate source: fleet03/B19 r20 (`private-source@0a3018cb14b94787c8f3f8d95a0e292ed230f8e0`) proves that in its exactly-one-internal-rank-two O3 survivor there is a choice of one rank-one companion bank `H_a` and the rank-two internal bank `G` such that, with exact-rank-three representation `A=RMR^T`, `R^TR=I_3`, `D=|det M|>=1`,
 
 `S := H_a union G`,
 `H := sum_(i in S) u_i u_i^T = I-lambda_b v_bv_b^T`,
@@ -20,7 +20,7 @@ Moreover the leverage of original coordinate `i in S` in the eigenspace of `A_SS
 
 `ell_i = u_i^T H^{-1} u_i = ||z_i||^2`.
 
-Therefore Claude's completed Fresnel--Brascamp--Lieb Theorem F (`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`) applies after conditioning every original coordinate outside `S` whenever
+Therefore Claude's completed Fresnel--Brascamp--Lieb Theorem F (`private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`) applies after conditioning every original coordinate outside `S` whenever
 
 `max_(i in S) ell_i <= 1/2`.
 

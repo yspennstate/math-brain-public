@@ -19,7 +19,7 @@ has a density satisfying
  \leq \frac12+C\sqrt{M_1M_2},
 \tag{2}
 \]
-where \(C\) is an absolute finite constant, independent of \(\beta,\varepsilon\), all supports, and all bank laws. If \(\varepsilon=0\), the earlier [beta-uniform one-hub coarea theorem](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T203100Z-beta-uniform-one-hub-square/REPORT.md) controls every target level, with the global planar density cap at most \(\min(M_1,M_2)\).
+where \(C\) is an absolute finite constant, independent of \(\beta,\varepsilon\), all supports, and all bank laws. If \(\varepsilon=0\), the earlier [beta-uniform one-hub coarea theorem](private-source-repository) controls every target level, with the global planar density cap at most \(\min(M_1,M_2)\).
 
 This theorem is especially useful for overlapping \(P\): both \(P_j\) may be formed from the same original leaves as \(L_j,V_j\). The only independence invoked is between the two banks and the physical hub.
 

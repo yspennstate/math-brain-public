@@ -15,7 +15,7 @@ The exact target remains the unrestricted product-law problem: independent origi
 
 The fresh reviewed projected-crossing source is
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -23,7 +23,7 @@ Only the proved `k=1, ell=2`, `k=2, ell=1`, and exact-rank-three crossing statem
 
 The designated partner source is fleet04/B01,
 
-`yspennstate/math-open-problems@8410ab9d8238baa40c033f83dbae6af44b0b2582`
+`private-source-repository@8410ab9d8238baa40c033f83dbae6af44b0b2582`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260923T131003Z-fleet04-B01-singular-star-routing-r2/REPORT.md`.
 
@@ -38,7 +38,7 @@ in the leakage branch, not the same lower bound on each factor.
 
 I also use the fleet04/B01 exact signed-Fejer theorem at
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`:
 
@@ -48,7 +48,7 @@ for every law with bounded density.
 
 Finally, the dependence-safe outer-square compiler from the immediately preceding B01 run is used in Section 4:
 
-`yspennstate/math-open-problems@5210a794376aaab39c9b5ff204a4e895bc5dc195`
+`private-source-repository@5210a794376aaab39c9b5ff204a4e895bc5dc195`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T170256Z-auto11-crosscompiler/REPORT.md`.
 

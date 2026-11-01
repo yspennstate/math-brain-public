@@ -14,9 +14,9 @@ This run stays in original coordinates. It does **not** assume independence afte
 
 The exact designated partner `fleet04/B03` still had no completed current-QFORM handoff at the final pre-publication scan, so no partner premise is invented. Two completed compatible results are actually used:
 
-1. fleet03/B09, `QFORM-SCHUR-RANK2-RECTANGULAR-v1`, canonical report `yspennstate/math-open-problems@ad5aac11726332af91f2f2680a10f755e22d08db:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T134741Z-fleet03-B09-QFORM-r12/REPORT.md`, which supplies the exact rank-two residual endpoint
+1. fleet03/B09, `QFORM-SCHUR-RANK2-RECTANGULAR-v1`, canonical report `private-source-repository@ad5aac11726332af91f2f2680a10f755e22d08db:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T134741Z-fleet03-B09-QFORM-r12/REPORT.md`, which supplies the exact rank-two residual endpoint
    `|eta(t)| <= min(1,2 pi Delta^{-1/2}/|t|)` after a physical pivot;
-2. fleet04/B20, `QFORM-CONDITIONED-WHITENED-DIFFUSE-v1`, canonical report `yspennstate/math-open-problems@94bf446b8547b1124a37033e940ef594c460b64f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T141640Z-fleet04-B20-QFORM-r2/REPORT.md`, which supplies the complementary diffuse-after-conditioning branch `||p_Q||_infinity < 27/delta` under its exact residual leverage certificate.
+2. fleet04/B20, `QFORM-CONDITIONED-WHITENED-DIFFUSE-v1`, canonical report `private-source-repository@94bf446b8547b1124a37033e940ef594c460b64f:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260922T141640Z-fleet04-B20-QFORM-r2/REPORT.md`, which supplies the complementary diffuse-after-conditioning branch `||p_Q||_infinity < 27/delta` under its exact residual leverage certificate.
 
 The new point here is that the B09 rank-two endpoint should be fed **directly** into a half-order Riesz time integral. Passing first through an `L^3` residual density and then doing spatial interpolation loses a fixed constant. The direct transducer is also closer to the assigned decoupled-time mechanism and yields linear small-ball scaling immediately.
 

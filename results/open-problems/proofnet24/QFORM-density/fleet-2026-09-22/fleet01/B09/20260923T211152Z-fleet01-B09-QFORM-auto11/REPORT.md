@@ -24,7 +24,7 @@ The completed designated partner theorem actually used is
 
 `QFORM-3x2-KERNELDERIVATIVE-L1-v1`,
 
-`yspennstate/math-open-problems@65ed9ea70175fb28541d756aea01f6aeb491fd6c`,
+`private-source-repository@65ed9ea70175fb28541d756aea01f6aeb491fd6c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T201318Z-fleet02-B09-QFORM-r14/REPORT.md`.
 
@@ -41,7 +41,7 @@ A second completed receiver used only for the fixed-triple compiler in Section 7
 
 `QFORM-PHYSICAL-D3-NO-MARGINAL-GATE-v1`,
 
-`yspennstate/math-open-problems@8a4e6d0048174e047fc3b4ae8cabfbabba3cdc3b`,
+`private-source-repository@8a4e6d0048174e047fc3b4ae8cabfbabba3cdc3b`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T165154Z-fleet01-B20-QFORM-auto11/NO_MARGINAL_D3.md`.
 

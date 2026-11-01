@@ -12,7 +12,7 @@
 This run substantively consumes the completed assigned-partner theorem:
 
 - fleet02/B14, run `20260922T193635Z-fleet02-B14-QFORM-r19`;
-- canonical report `yspennstate/math-open-problems@85c9fd52d16444290a9672ee48f233d492b20b56`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T193635Z-fleet02-B14-QFORM-r19/REPORT.md`.
+- canonical report `private-source-repository@85c9fd52d16444290a9672ee48f233d492b20b56`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T193635Z-fleet02-B14-QFORM-r19/REPORT.md`.
 
 Its exact inputs used below are
 

@@ -88,7 +88,7 @@ is convex (because `z->|z|^p` is convex) and TV-lower-semicontinuous by pointwis
 
 The earlier completed fleet04/B13 fixed-volume random-set theorem at
 
-`yspennstate/math-open-problems@7229e8caa8374eb8e74b07e70cadd0c0ccb05d39`
+`private-source-repository@7229e8caa8374eb8e74b07e70cadd0c0ccb05d39`
 
 provides the exact barycentric identity
 

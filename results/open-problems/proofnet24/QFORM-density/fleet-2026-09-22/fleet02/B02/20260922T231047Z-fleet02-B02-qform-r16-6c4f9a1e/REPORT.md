@@ -17,7 +17,7 @@ The target is unchanged. For every finite `n`, every vector `X=(X_1,...,X_n)` of
 
 After this invocation began, fresh main added the owner-required continuation `QFORM-CLAUDE-LATEST-20260922T225732Z`; later owner directions win, so I consumed it before publication. The required newest source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 in
 
@@ -25,7 +25,7 @@ in
 
 I read the updated `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`; I also re-read `FOURIER_ROUTE_REPORT.md` at a later master snapshot and found the same D'/D5 statements. The source-specific review is
 
-`yspennstate/math-open-problems@9844891a9fbe96a65e37f71122bf0300b53dcc80`
+`private-source-repository@9844891a9fbe96a65e37f71122bf0300b53dcc80`
 
 at `proofnet24/QFORM-density/interactive/20260922T220600Z-claude-review/REVIEW.md`.
 
@@ -283,7 +283,7 @@ This is a genuine arbitrary-self, arbitrary-extra-direction integrated-Fourier b
 
 The completed named partner result is
 
-`yspennstate/math-open-problems@484c89f85cda352b2c4318364a6206ebc4154950`,
+`private-source-repository@484c89f85cda352b2c4318364a6206ebc4154950`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T230126Z-fleet03-B02-QFORM-r17/REPORT.md`.
 
@@ -402,20 +402,20 @@ The output ends `STATUS=PASS`. These are regression checks of algebra and consta
 
 Newest required Claude-attributed source:
 
-- `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`.
+- `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`.
 
 Source-specific independent review and sharp-HY order-three refinement:
 
-- `math-open-problems@9844891a9fbe96a65e37f71122bf0300b53dcc80`, `proofnet24/QFORM-density/interactive/20260922T220600Z-claude-review/REVIEW.md`.
+- `private-source@9844891a9fbe96a65e37f71122bf0300b53dcc80`, `proofnet24/QFORM-density/interactive/20260922T220600Z-claude-review/REVIEW.md`.
 
 Named partner actually consumed:
 
-- `math-open-problems@484c89f85cda352b2c4318364a6206ebc4154950`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T230126Z-fleet03-B02-QFORM-r17/REPORT.md`.
+- `private-source@484c89f85cda352b2c4318364a6206ebc4154950`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T230126Z-fleet03-B02-QFORM-r17/REPORT.md`.
 
 Fresh corrections explicitly respected:
 
-- `QFORM-RIDGE-VOLUME-NONEXHAUSTIVE-v1`, canonical `math-open-problems@60f013f7f3f239bd33f90946478d7ddbcebc4ea5`.
-- `QFORM-NO-UNIFORM-COEFFICIENT-PERTURBATION-CONTINUITY-v1`, canonical `math-open-problems@84093fddd5e3d3c692449d49c8b01537b28eb8d8`.
+- `QFORM-RIDGE-VOLUME-NONEXHAUSTIVE-v1`, canonical `private-source@60f013f7f3f239bd33f90946478d7ddbcebc4ea5`.
+- `QFORM-NO-UNIFORM-COEFFICIENT-PERTURBATION-CONTINUITY-v1`, canonical `private-source@84093fddd5e3d3c692449d49c8b01537b28eb8d8`.
 - The older pointwise quadratic-phase decay, post-rotation independence, arbitrary-joint coarea, conditional projection-cap positive-moment, single-good-minor, and universal rank-three-cross-cut routes remain unavailable.
 
 The full QFORM conjecture is not proved or disproved by this report.

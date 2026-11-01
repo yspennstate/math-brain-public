@@ -31,7 +31,7 @@ The mechanism below is materially different from my preceding finite-heavy-core/
 
 I read the complete proof of fleet02/B07 `QFORM-DISJOINT-CROSS-PLANCHEREL-v1` at
 
-`yspennstate/math-open-problems@dbf85b8f59fcbb22d4599b7cba9edd97d9ffa83f`
+`private-source-repository@dbf85b8f59fcbb22d4599b7cba9edd97d9ffa83f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T180412Z-b07-afd8d7/REPORT.md`.
 
@@ -45,7 +45,7 @@ with a continuous density, while allowing arbitrary self blocks, outside couplin
 
 I also read the complete proof of fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1` at
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
@@ -183,7 +183,7 @@ This is the exact-rank-three aggregate-before-inversion estimate missing from my
 
 My earlier report `QFORM-AGGREGATE-CROSSMINOR-DETERMINANT-v1`, source-pinned at
 
-`yspennstate/math-open-problems@22acf813ef825872ffe594818d6adb27e9d4e41f`
+`private-source-repository@22acf813ef825872ffe594818d6adb27e9d4e41f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/a01-b07-20260922T134418Z-qform-r11/REPORT.md`,
 

@@ -16,7 +16,7 @@ The target is unchanged: for independent original real coordinates with one-dime
 
 The exact incoming branch is the preceding fleet01/B06 r20 report
 
-`yspennstate/math-open-problems@1d431d262969f767c2bf451f0e7210f41fe42696`
+`private-source-repository@1d431d262969f767c2bf451f0e7210f41fe42696`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T003549Z-qform-r20-b06/REPORT.md`.
 
@@ -24,7 +24,7 @@ The designated partner result actually used below is fleet02/B06
 
 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`,
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
@@ -32,7 +32,7 @@ For a two-dimensional orthogonal projection of an original-coordinate cap-one pr
 
 `||p_Y||_infinity <= e`.                                              (0.1)
 
-The partner's later `QFORM-THIRD-SQUARE-HYPERBOLIC-ABSORPTION-v1`, canonical `math-open-problems@168ac7725f62401408f20ce18cbf8ff7055e9013`, is also consistent with the mechanism below; the new point here is that the square is a **sum of one coordinate from each of two planar product-derived banks**, so the two square coordinates are not separated from the two hyperbolic coordinates by independent banks.
+The partner's later `QFORM-THIRD-SQUARE-HYPERBOLIC-ABSORPTION-v1`, canonical `private-source@168ac7725f62401408f20ce18cbf8ff7055e9013`, is also consistent with the mechanism below; the new point here is that the square is a **sum of one coordinate from each of two planar product-derived banks**, so the two square coordinates are not separated from the two hyperbolic coordinates by independent banks.
 
 ## 1. A geometric kernel lemma
 

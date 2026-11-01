@@ -11,9 +11,9 @@ Execution: `WITHOUT_VERIFIED_BRAIN`. Repository retrieval was used; no authentic
 
 Assignment: additional eigenvalue control. Exact target remains the universal bounded-density conjecture for independent coordinate laws with density cap one and symmetric `A` with at least three eigenvalues of modulus at least one.
 
-Consumed completed fleet04 result actually applied: fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`. The designated partner location fleet04/B12 still has no current QFORM handoff or canonical QFORM run visible at the fresh source read, so no result was fabricated on its behalf.
+Consumed completed fleet04 result actually applied: fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`. The designated partner location fleet04/B12 still has no current QFORM handoff or canonical QFORM run visible at the fresh source read, so no result was fabricated on its behalf.
 
-Also incorporated the latest fleet02/B07 handoff only as structural context: `QFORM-Q0-RIDGE-FOUR-HEAVY-DPP-v1`, canonical `yspennstate/math-open-problems@5f319d96212a5828ec74a6ea3e3c87d67290628a`; full QFORM remains open there as well.
+Also incorporated the latest fleet02/B07 handoff only as structural context: `QFORM-Q0-RIDGE-FOUR-HEAVY-DPP-v1`, canonical `private-source-repository@5f319d96212a5828ec74a6ea3e3c87d67290628a`; full QFORM remains open there as well.
 
 ## 1. Exact signed Schur spectral-count theorem
 
@@ -81,7 +81,7 @@ Thus the sign of a physical Schur pivot determines which exact-three topology su
 
 ## 2. Heavy-row pivot-or-cross dichotomy with exact constants
 
-Use the completed B12 spectral-window reduction from `yspennstate/math-open-problems@2bd58d21cf8eda48d6451469ceaf5fb8dc19bf5`.
+Use the completed B12 spectral-window reduction from `private-source-repository@2bd58d21cf8eda48d6451469ceaf5fb8dc19bf5`.
 
 At spectral scale `ell`, if the projection onto `|lambda(A)|>=ell/39` fails the leverage gate `max_i P_ii <=1/32`, then some physical coordinate satisfies
 

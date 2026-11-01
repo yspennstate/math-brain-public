@@ -15,7 +15,7 @@ The phase-aligned-density obstruction remains in force: no positive law-uniform 
 
 The source is exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
@@ -213,7 +213,7 @@ The newest compatible fleet03/B01 result read in this run is
 
 `QFORM-TWO-HUB-HUB-CONDITIONAL-LR-v1` and its two-sided corollary at
 
-`yspennstate/math-open-problems@706d8b161a7c4c19ad423130b43ce67a50fac60f`
+`private-source-repository@706d8b161a7c4c19ad423130b43ce67a50fac60f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260924T045746Z-fleet03-B01-qform-auto11-r44/REPORT.md`.
 

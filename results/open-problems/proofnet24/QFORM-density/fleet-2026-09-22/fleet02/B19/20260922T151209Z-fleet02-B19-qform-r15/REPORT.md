@@ -12,7 +12,7 @@ The target remains: for every dimension, independent real coordinates with proba
 
 Fresh control was read from `yspennstate/math-research-brain@46b75c39fb2d557c6550afd43d7bfdc26772177a`. The live correction inbox through that commit was consumed. In particular this report does not use law-uniform pointwise Fresnel decay, conditional-cap-as-independence, a universal good physical triple, a rank-three cross-cut dichotomy, or an absolute phase-Wiener norm.
 
-The designated partner result actually applied is fleet03/B19, canonical `yspennstate/math-open-problems@143e97c42cdbccb14fe847efb6abd3f6c3d349dc`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T143049Z-fleet03-B19-QFORM-r11b/REPORT.md`. Its one-effective residual writes
+The designated partner result actually applied is fleet03/B19, canonical `private-source-repository@143e97c42cdbccb14fe847efb6abd3f6c3d349dc`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T143049Z-fleet03-B19-QFORM-r11b/REPORT.md`. Its one-effective residual writes
 
 `A = D + lambda v v^T + R`, `||R||op<=1/8`,
 
@@ -24,7 +24,7 @@ The partner proved that the actual compressed matrix remains nondegenerate after
 
 Two completed compatible results are also used with exact scope:
 
-1. fleet02/B11, canonical `yspennstate/math-open-problems@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`, proves that every normalized linear form in independent cap-one coordinates has density at most `sqrt(e)`.
+1. fleet02/B11, canonical `private-source-repository@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`, proves that every normalized linear form in independent cap-one coordinates has density at most `sqrt(e)`.
 2. fleet03/B11, available in the completed zero-pivot/local-three-variable synthesis report on the current science branch, proves for an invertible indefinite physical three-variable block with a nonzero scalar pivot `c` the uniform bound `||p||inf <= 8 |c det B|^(-1/4)` in the indefinite-Schur branch, while the complementary definite-Schur branch has the smaller constant `2 sqrt(pi)` on the same scale. The proof is uniform in affine terms.
 
 ## 2. New theorem: the exact one-effective aggregate core is already paid

@@ -6,13 +6,13 @@ This file is authoritative over novelty labels in `REPORT.md` for this run.
 
 A wider source search after the first report found that its Section 3 mechanism, exact rank-two crossing plus a genuinely fresh independent square, is **not new**. It was already proved as `QFORM-CROSS2-PLUS-FRESH-SQUARE-v1` by fleet02/B16, source
 
-`yspennstate/math-open-problems@44bff195ea0a90c3fe24628eb2cf3b405368c37c`,
+`private-source-repository@44bff195ea0a90c3fe24628eb2cf3b405368c37c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/fleet02-B16-20260923T153432Z-auto11/REPORT.md`.
 
 Likewise the cap-one hyperbolic-product half-potential used in Section 6 is a rederivation/specialization of my own earlier `QFORM-AFFINE-HYPERBOLIC-FRACTIONAL-TRACE-SHARP-v1`, source
 
-`yspennstate/math-open-problems`,
+`private-source-repository`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260922T192922Z-fleet01-B02-qform-auto11/REPORT.md`.
 
@@ -22,7 +22,7 @@ The genuinely new step of this run is the sharper square Fourier budget below an
 
 The overlap source is
 
-`yspennstate/math-open-problems@1e49b6e87c2e7b965beee1261bf66592966c5a01`,
+`private-source-repository@1e49b6e87c2e7b965beee1261bf66592966c5a01`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/fleet01-B16-20260923T170732Z-auto11/REPORT.md`,
 
@@ -64,7 +64,7 @@ This improves the `50 pi M^2/|lambda|` square budget used by the current B16 fre
 
 The sharp Hausdorff--Young constant and Fourier normalization are source-pinned in
 
-`yspennstate/math-open-problems@1fe3d344529b743f64cb37b42a7a12b6a86a9414`,
+`private-source-repository@1fe3d344529b743f64cb37b42a7a12b6a86a9414`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T114830Z-fleet03-B08-qform-diffuse-v1/REPORT.md`, Lemma 1, which cites Beckner (1975).
 

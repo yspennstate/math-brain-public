@@ -16,7 +16,7 @@ The live corrections are respected: law-uniform pointwise quadratic-phase decay 
 
 I use the completed assigned-partner result fleet02/B07, `QFORM-PLUCKER-STRATUM-COLLAR-v1`, canonical report
 
-`yspennstate/math-open-problems@55751ad6d9915a2600d42385d41388c900d29a26`
+`private-source-repository@55751ad6d9915a2600d42385d41388c900d29a26`
 
 at
 
@@ -153,7 +153,7 @@ Hence some physical cut satisfies
 
 `E_3(A[S,S^c]) >= 1/2048`.                                        (6.1)
 
-Apply fleet01/B07's preceding theorem `QFORM-AGGREGATE-CROSSMINOR-DETERMINANT-v1` (canonical report `yspennstate/math-open-problems@22acf813ef825872ffe594818d6adb27e9d4e41f`) to `B=A[S,S^c]`. If either side of this cross block satisfies the `q=1` range-leverage gate `max diagonal <=1/2`, then the full quadratic form has a continuous density and
+Apply fleet01/B07's preceding theorem `QFORM-AGGREGATE-CROSSMINOR-DETERMINANT-v1` (canonical report `private-source-repository@22acf813ef825872ffe594818d6adb27e9d4e41f`) to `B=A[S,S^c]`. If either side of this cross block satisfies the `q=1` range-leverage gate `max diagonal <=1/2`, then the full quadratic form has a continuous density and
 
 `||p_Q||_infinity
  <= C_3 E_3(B)^(-1/6)

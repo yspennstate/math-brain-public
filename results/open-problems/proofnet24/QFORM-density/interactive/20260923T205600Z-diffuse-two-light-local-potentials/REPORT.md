@@ -19,7 +19,7 @@ Use the convention hat f(xi)=int exp(-i xi x)f(x)dx. The already proved diffuse 
 int_R² | E_X [prod_i omega_i(X_i) exp(i yL+i zV)] | dy dz
  <= K_2 := (2pi sqrt(e))².                                      (2)
 
-This is the geometric Brascamp–Lieb plus sharp scalar Hausdorff–Young estimate for an orthonormal two-frame whose physical row leverages are at most 1/2. A proof with the precise constant is in [the diffuse Wiener provenance report](https://github.com/yspennstate/math-open-problems/blob/1fcdb431e3fbe3cd369593c599f86d5bc1dd6102/proofnet24/QFORM-density/interactive/20260923T194039Z-diffuse-wiener-provenance/REPORT.md). In particular, (2) is uniform over the t-dependent phases omega_i(x)=exp(itR_i(x)).
+This is the geometric Brascamp–Lieb plus sharp scalar Hausdorff–Young estimate for an orthonormal two-frame whose physical row leverages are at most 1/2. A proof with the precise constant is in [the diffuse Wiener provenance report](private-source-repository). In particular, (2) is uniform over the t-dependent phases omega_i(x)=exp(itR_i(x)).
 
 Let phi_Q(t)=E exp(itQ). For t≠0 put
 F_t(y,z)=E_X exp(i yL+i zV+it sum_i R_i(X_i)).

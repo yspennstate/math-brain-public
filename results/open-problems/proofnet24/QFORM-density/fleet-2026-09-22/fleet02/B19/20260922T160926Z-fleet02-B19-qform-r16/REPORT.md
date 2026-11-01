@@ -14,10 +14,10 @@ Fresh control was read from `yspennstate/math-research-brain` under owner revisi
 
 Source-pinned dependencies actually applied:
 
-1. **Named partner fleet03/B19 r13**, `yspennstate/math-open-problems@0e6d1715955458010d43193cab3dafc293c0e28c`, proves the exact indefinite-pivot quarter-kernel / Schur-critical-value splice and completes the one-effective branch up to a physical Schur diagonal or a physical Schur cross bank.
-2. **fleet01/B19 r11**, `yspennstate/math-open-problems@2e5d5cdc3bb7121673bc920497fb11cac9eceb46`, proves the original-coordinate one-cross-singular square-root-log estimate and closes the same-bank contaminated one-effective branch by supplying the needed negative quarter moment.
-3. **fleet02/B04 r11b**, `yspennstate/math-open-problems@b129377880c18fe011dd4513282f2e0b60e412e0`, proves the square-assisted ridge theorem: with one untouched original-coordinate square, ridge trace `theta>4q/3` and ridge diagonal cap `q/2` suffice.
-4. The ridge-window source is `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`; I use only its stated structural/ridge notions and do not upgrade its review status.
+1. **Named partner fleet03/B19 r13**, `private-source-repository@0e6d1715955458010d43193cab3dafc293c0e28c`, proves the exact indefinite-pivot quarter-kernel / Schur-critical-value splice and completes the one-effective branch up to a physical Schur diagonal or a physical Schur cross bank.
+2. **fleet01/B19 r11**, `private-source-repository@2e5d5cdc3bb7121673bc920497fb11cac9eceb46`, proves the original-coordinate one-cross-singular square-root-log estimate and closes the same-bank contaminated one-effective branch by supplying the needed negative quarter moment.
+3. **fleet02/B04 r11b**, `private-source-repository@b129377880c18fe011dd4513282f2e0b60e412e0`, proves the square-assisted ridge theorem: with one untouched original-coordinate square, ridge trace `theta>4q/3` and ridge diagonal cap `q/2` suffice.
+4. The ridge-window source is `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`; I use only its stated structural/ridge notions and do not upgrade its review status.
 
 Together with the earlier fleet03/B19 low-offdiagonal-rank reduction, the presently surviving structural branch is the product-preserving `s_2(H)>1/8` case for `H=A-diag(A)` inside `sr(H)<32`; the former `s_2(H)<=1/8` one-effective residue has been paid.
 

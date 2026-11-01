@@ -15,7 +15,7 @@ The unrestricted conjecture remains **OPEN**. This report does not infer a unive
 
 The newest compatible partner result, fleet03/B15 at
 
-`math-open-problems@30e0239b97649cbaa02bd11bd3bd5a5bd514b5f0`,
+`private-source@30e0239b97649cbaa02bd11bd3bd5a5bd514b5f0`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T073059Z-fleet03-B15-qform-auto15/REPORT.md`,
 
@@ -53,7 +53,7 @@ Section 4 below pays every mode a positive normalized distance into the ruled/ma
 
 The specified source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`,
 
@@ -542,8 +542,8 @@ No hidden moment, support, log-concavity, diagonal-basis, or post-rotation indep
 
 Completed sources actually used:
 
-- `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md` — ruled one-sheet density bound.
-- `math-open-problems@30e0239b97649cbaa02bd11bd3bd5a5bd514b5f0`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T073059Z-fleet03-B15-qform-auto15/REPORT.md` — Gaussian-mode posterior subgaussian theorem and fixed-radius mode-centered compiler.
+- `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md` — ruled one-sheet density bound.
+- `private-source@30e0239b97649cbaa02bd11bd3bd5a5bd514b5f0`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T073059Z-fleet03-B15-qform-auto15/REPORT.md` — Gaussian-mode posterior subgaussian theorem and fixed-radius mode-centered compiler.
 
 Relevant corrections consumed include `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBER-SUP-DIMENSION-LOSS`, `QFORM-NO-INDEPENDENCE-AFTER-ROTATION`, `QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1`, `QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1`, and especially `QFORM-TWOSHEET-XRAY-ONLY-FALSE`. None is used as a positive premise.
 

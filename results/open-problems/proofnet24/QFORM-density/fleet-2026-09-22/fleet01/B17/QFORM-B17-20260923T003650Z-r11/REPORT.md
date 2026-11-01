@@ -134,7 +134,7 @@ The statement survives arbitrary cap-one heavy laws on the **necessary** side: t
 
 The designated partner source used here is fleet02/B17,
 
-`yspennstate/math-open-problems@84ffc0f291ae192f4d82742ae6909943f6710bc7`,
+`private-source-repository@84ffc0f291ae192f4d82742ae6909943f6710bc7`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T235536Z-r12-symmetric-unimodal/REPORT.md`.
 
 It proves: if independent `Y_1,Y_2,Y_3` have even densities nonincreasing on `[0,infinity)`, then for positive `alpha,beta,gamma`,

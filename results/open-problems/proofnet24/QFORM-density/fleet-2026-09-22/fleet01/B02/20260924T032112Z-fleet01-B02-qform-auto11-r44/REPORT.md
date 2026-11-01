@@ -16,7 +16,7 @@ The exact owner target is unchanged. All random coordinates remain ORIGINAL coor
 
 Immediate predecessor:
 
-- `yspennstate/math-open-problems@041bd053495db9b7e7c12d994501de10c059c459`;
+- `private-source-repository@041bd053495db9b7e7c12d994501de10c059c459`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260924T022016Z-fleet01-B02-qform-auto11-r43/REPORT.md`.
 
 The r43 survivor is an exact ORIGINAL-coordinate decomposition
@@ -32,7 +32,7 @@ with
 
 The designated fleet02/B02 result consumed at equation level is its newest completed full-cut exterior-propagation report:
 
-- `yspennstate/math-open-problems@b34c3df7995a27f90540057d7dc1fcc33d6e7e39`;
+- `private-source-repository@b34c3df7995a27f90540057d7dc1fcc33d6e7e39`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/fleet02-B02-20260924T023712Z-r11/REPORT.md`.
 
 It contains the completed marginal-free physical-third-volume Fourier theorem
@@ -48,7 +48,7 @@ for every literal disjoint ORIGINAL-coordinate cross block `B`, with continuous 
 
 I also use the proved *tunable* form of my r38 leverage fork, source
 
-- `yspennstate/math-open-problems@38ff5f34b3b87c21d44b8e6fd12646e496436234`;
+- `private-source-repository@38ff5f34b3b87c21d44b8e6fd12646e496436234`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260923T212524Z-fleet01-B02-qform-auto11-r38/REPORT.md`.
 
 For a rank-`k` carrier factor `V`, parameter `0<eta<=1`, and

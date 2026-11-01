@@ -18,7 +18,7 @@ The exact-rank-three setting is
 
 The completed designated partner used below is fleet04/B11 r5:
 
-`yspennstate/math-open-problems@50b07997bec888ff7cc6820cd42be8e34d0ffc48`,
+`private-source-repository@50b07997bec888ff7cc6820cd42be8e34d0ffc48`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T111608Z-fleet04-B11-disjoint-volume-compiler-r5/REPORT.md`.
 
 For disjoint physical triples `K,L`, with
@@ -31,7 +31,7 @@ and `s=min |lambda(M)|`, it gives
 
 The previous B11 report is
 
-`yspennstate/math-open-problems@07ecf405a0ca22d41d0cb17f7555165d65ad18fc`,
+`private-source-repository@07ecf405a0ca22d41d0cb17f7555165d65ad18fc`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T121207Z-fleet03-B11-QFORM-r31/REPORT.md`.
 
 Its near-zero physical-pivot quantities in the two-plane chamber are

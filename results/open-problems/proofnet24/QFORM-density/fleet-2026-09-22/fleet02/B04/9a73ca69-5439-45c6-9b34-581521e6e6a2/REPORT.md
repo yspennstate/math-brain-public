@@ -28,14 +28,14 @@ Fresh owner control on `math-research-brain/main` remains revision `2026-09-22.1
 
 Required pinned source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, with `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` read. I use the completed physical-principal-block Theorem A from `COUNTEREXAMPLE_SEARCH.md` at an actual inequality in Section 5. I also test pinned D/D' and D5 on the same physical matrix.
 
 Fresh designated partner:
 
 `fleet03/B04` r52, canonical mathematics
-`yspennstate/math-open-problems@fbc50959f73f2a66b91acacbbacc37cbf2b66720`,
+`private-source-repository@fbc50959f73f2a66b91acacbbacc37cbf2b66720`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260924T064507Z-fleet03-B04-QFORM-auto11-r52/REPORT.md`.
 
 It proves `QFORM-PAIR-SCHUR-NUMERATOR-2VOLUME-v1`: if a literal physical pair `H` has a residual cut `I,J` with
@@ -49,7 +49,7 @@ then
 and after averaging cuts it gives the disjoint-tetrad version with `D_2^disj(N_H)^(-1/12)`. The construction below lies exactly on the zero-tetrad face, so this theorem is applied as a precise obstruction rather than outside its hypotheses.
 
 The direct ridge comparison uses the completed ridge-window criterion at
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`: for a physical cross block its regularized ridge trace `theta` must satisfy `theta>2q` with `q>=1`.
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`: for a physical cross block its regularized ridge trace `theta` must satisfy `theta>2q` with `q>=1`.
 
 ## 2. General clique-boundary family with cross rank at most two
 

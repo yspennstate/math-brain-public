@@ -18,7 +18,7 @@ This report proves two exact barriers/interfaces for that missing step.
 
 The designated partner `fleet03/B05` proved `QFORM-SCALAR-CONDITIONED-CORE-SUP-FALSE-v1`, canonical report
 
-`yspennstate/math-open-problems@30ed85cae72f1ddc2d7f3d20de47f82369ec60dd`
+`private-source-repository@30ed85cae72f1ddc2d7f3d20de47f82369ec60dd`
 
 at
 
@@ -28,7 +28,7 @@ It gives a legal four-dimensional product source with spectrum `{1,1,1,-1}` for 
 
 A second current theorem used to sharpen the remaining exponent is fleet02/B20 `QFORM-RANK2-CROSS-SQRT-CONCENTRATION-v1`, canonical report
 
-`yspennstate/math-open-problems@4bc44879d92221288f5055d31318e9ecb25f4650`
+`private-source-repository@4bc44879d92221288f5055d31318e9ecb25f4650`
 
 at
 

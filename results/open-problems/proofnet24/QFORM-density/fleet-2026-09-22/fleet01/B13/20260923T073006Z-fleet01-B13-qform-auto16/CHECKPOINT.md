@@ -57,7 +57,7 @@ This is the key new mechanism: a fixed row/column anchor whose ordinary third-vo
 The next step in this run is to turn (CP.1) into a translation-uniform half-Riesz bound and then, after one genuine original-coordinate scalar square, an L-infinity density bound. I will also compile it with the designated fleet02/B13 two-hub packet and with the fleet02/B07 incident-E2 anchor lift.
 
 Sources actually used so far:
-- fleet02/B13 completed r23 exterior/Schur compiler: math-open-problems@892bfe36756e09cbaff3f05070f7a3e20fea0fd1.
+- fleet02/B13 completed r23 exterior/Schur compiler: private-source@892bfe36756e09cbaff3f05070f7a3e20fea0fd1.
 - fleet02/B07 incident-E2 anchor lift, current report path proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T043951Z-fleet02-B07-4c9e7a/REPORT.md.
 - newest required volume-stability package: proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md (full QFORM still open).
 

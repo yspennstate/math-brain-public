@@ -14,7 +14,7 @@ All coordinate sets below are literal ORIGINAL-coordinate sets. No random variab
 
 The completed analytic input is Theorem H (Fresnel--Brascamp--Lieb) from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 In the notation of that theorem, physical hub coordinates `H`, a physical receiver bank `I`, and arbitrary outside coordinates `J` are allowed. On `I`, the quadratic block may be
@@ -25,7 +25,7 @@ with `D` diagonal in the physical independent coordinates. The blocks `A_HH,A_HJ
 
 The designated partner fleet02/B19 supplies the fresh maximal-coloop stress at
 
-`yspennstate/math-open-problems@95e4f4427f21a599f0e4fd8f21e9a60e76e88fb3`,
+`private-source-repository@95e4f4427f21a599f0e4fd8f21e9a60e76e88fb3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260924T061029Z-fleet02-B19-QFORM-r53/PRINCIPAL_MINIMAL_ADDENDUM.md`.
 
 Its principal-minimal target family has spectrum `{1,-1,1}`, cross-SVD hub leverage exactly one, literal hub-star norm `1/2`, arbitrarily small scalar/pair/triple physical pivots, and **zero** pair-Schur rank-two currency for every invertible physical pair. Yet its full three-frame leverage is exactly `1/2` and Theorem F pays the full law by `<=12`. The same source records that the curved two-bank partial output has a logarithmically unbounded density for centered product uniforms. Therefore the star branch must keep a genuine third resource through the smoothing step; neither scalarization of the two-bank core nor positive pair-Schur `E2` forcing is valid universally.

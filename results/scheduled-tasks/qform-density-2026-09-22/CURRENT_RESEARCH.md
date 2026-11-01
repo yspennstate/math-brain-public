@@ -14,11 +14,11 @@ Read the pair-log and correction handoff (`handoffs/interactive/20260922T180015Z
 
 The exact one-block fiber identity is `integral L^alpha=m^((alpha+1)/2)Gamma(m)Gamma(alpha+1)/Gamma(m+alpha)`. Every fixed positive conditional moment below exponent two diverges in this family. It also uses a valid FULL-RANK target matrix `P1+P2-P3+(I-PY)/128`. This is a false proof interface, not a large-output-density counterexample. Do not spend runs trying to prove that universal conditional moment.
 
-Complete elementary proofs: `yspennstate/math-open-problems@f305dcc8ae0f602f2b21ab32cf4d8ddcdcb56b92:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/CORRECTIONS.md`, read-back blob `58a3d40f3722ebebccb922616467b75cd7f06ef5`. Preserve the source owner message and historical work; mark its invalid deductions rather than editing history.
+Complete elementary proofs: `private-source-repository@f305dcc8ae0f602f2b21ab32cf4d8ddcdcb56b92:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/CORRECTIONS.md`, read-back blob `58a3d40f3722ebebccb922616467b75cd7f06ef5`. Preserve the source owner message and historical work; mark its invalid deductions rather than editing history.
 
 ## Constructive update: logarithmic two-coordinate smoothing
 
-Full proof: `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`. Status: complete supporting analytic argument supplied; independent review pending.
+Full proof: `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`. Status: complete supporting analytic argument supplied; independent review pending.
 
 For an exact-rank-three ORIGINAL-coordinate principal block with nonzero eigenvalue magnitudes >=s, and any invertible indefinite physical pair B, set D=|det B| and kappa=sigma_min(B). The FULL ambient form, including arbitrary outside coefficients/couplings and affine terms, satisfies
 
@@ -30,7 +30,7 @@ This does not guarantee a uniformly conditioned physical pair under the bare spe
 
 ## New synthesis: every rank-two orientation, including arbitrary affine terms
 
-Read the complete source-pinned handoff (`handoffs/interactive/20260922T161801Z-rank-two-fusion.md`, not included here). The full proof is at `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, blob `00681629acaba8f2e04edda6c9f6b5c4f0fdafa4`. Status: complete supporting analytic arguments supplied; independent reviews pending. Full target remains OPEN.
+Read the complete source-pinned handoff (`handoffs/interactive/20260922T161801Z-rank-two-fusion.md`, not included here). The full proof is at `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, blob `00681629acaba8f2e04edda6c9f6b5c4f0fdafa4`. Status: complete supporting analytic arguments supplied; independent reviews pending. Full target remains OPEN.
 
 **QFORM-RANK2-AFFINE-HALF-RIESZ-v1.** For every U with two orthonormal columns, every invertible symmetric 2x2 Lambda, arbitrary b in R^n, and independent cap-one inputs,
 

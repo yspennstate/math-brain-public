@@ -31,7 +31,7 @@ Fleet01/B09 proved `QFORM-EXACT-CUTRANK1-CLASSIFICATION-v1`: if every disjoint p
 
 Canonical source used here:
 
-`yspennstate/math-open-problems@77bd4ea475a11a505c6990630cbdfebdcce0fd8f`
+`private-source-repository@77bd4ea475a11a505c6990630cbdfebdcce0fd8f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T214429Z-r18/REPORT.md`.
 
@@ -231,7 +231,7 @@ The designated completed fleet04/B18 result is
 
 canonical source
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 
@@ -294,8 +294,8 @@ No claim of external novelty is made.
 ## 9. Source pins
 
 - Current owner/control repository prepublication head: `yspennstate/math-research-brain@57f4f3113a54fe762c63f00685350e15f927a128`.
-- Exact cut-rank-one classification: `yspennstate/math-open-problems@77bd4ea475a11a505c6990630cbdfebdcce0fd8f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T214429Z-r18/REPORT.md`.
-- Designated fleet04/B18 theorem: `yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
+- Exact cut-rank-one classification: `private-source-repository@77bd4ea475a11a505c6990630cbdfebdcce0fd8f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T214429Z-r18/REPORT.md`.
+- Designated fleet04/B18 theorem: `private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 - Eckart--Young original: DOI `10.1007/BF02288367`.
 - Mirsky unitarily invariant norm extension: DOI `10.1093/qmath/11.1.50`.
 - Juškevičius--Lee: `https://arxiv.org/abs/1503.09190`.

@@ -158,7 +158,7 @@ The freshest completed designated-partner result used here is fleet02/B01
 
 from
 
-`yspennstate/math-open-problems@f2bb4e5d3f65c19715e6cbad2e79d7c071d6b174`,
+`private-source-repository@f2bb4e5d3f65c19715e6cbad2e79d7c071d6b174`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T091804Z-fleet02-B01-qform-auto11/REPORT.md`.
 
@@ -200,11 +200,11 @@ Full continuity status: **OPEN**.
 
 
 Previous B01 sum/difference theorem and absolute-pullback obstruction:
-`yspennstate/math-open-problems@9f02f516e97372b852fe88a9d4a6138adee74a41`,
+`private-source-repository@9f02f516e97372b852fe88a9d4a6138adee74a41`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260924T091018Z-fleet01-B01-qform-auto11-r18/REPORT.md`.
 
 Newest designated partner theorem actually applied:
-`yspennstate/math-open-problems@f2bb4e5d3f65c19715e6cbad2e79d7c071d6b174`,
+`private-source-repository@f2bb4e5d3f65c19715e6cbad2e79d7c071d6b174`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T091804Z-fleet02-B01-qform-auto11/REPORT.md`.
 
 A bounded literature search found no published theorem matching the full arbitrary-product, arbitrary-sign, three-large-eigenvalue scope; this is not a novelty claim.

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R06 — successor-admission screen: P0219 survives source/current checks but is not READY
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Deployment: `NEW-METHODS-2026-09-16`.
 Predecessor R06 report: `runs/R06/20260919T0021Z_successor_admission_three_fresh_source_shape_screen_53_8b2e.md` @ `198aa744746a6401ea7db3200ff14d3d85c3f86d`.
 Fresh prewrite master captured for the exact delta: `590ca571f7a82889f59f020261c653177042a323`.

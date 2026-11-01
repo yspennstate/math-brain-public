@@ -97,7 +97,7 @@ The computation certifies the finite three-bit classification only.  The cylinde
 ## 7. Sources actually read
 
 - Owner control revision `2026-10-12.1`, source commit `40210272c19f43fed84f6a67653f9a04b0e11e28` (`ORDER.md`, `CASE_TARGETS.json`; B07 row).
-- `math-open-problems` B07 contract, blob `2402180c94777484a0f41d5f13a9e01059107569`; protocol blob `457358ff62cbf1141a72096bcabdf95bf18c1be2`.
+- `private-source` B07 contract, blob `2402180c94777484a0f41d5f13a9e01059107569`; protocol blob `457358ff62cbf1141a72096bcabdf95bf18c1be2`.
 - A034 soft Rényi baseline: canonical artifact commit `89735cd5f31664f0a6d965bc7330b4be1d204e40` and delivery receipt `c7f4db2eb2566b5c3ba9228a9b1ac6357603c566`.
 - Archived original A2 route: `A2-two-addresses/NOTES.md` blob `7df82ce208f2bd61bc9b5310022d8705f0079beb`, `CLAIMS.json` blob `e6c926538094cd1da3d48b8b0a56ae47e69861e9`, and independent `REFEREE.md` blob `576d755fb6ba875c4545d5efaf894e622ca518ef`.  Used claims: A2-L3k, A2-H-ladder, and A2-E-k3 at their exact scopes.
 

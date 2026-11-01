@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R01 — independent second audit of P0063 / Lyons–Peres Question 16.7; sixth successor-gate no-movement run
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Run date: 2026-09-19.
 
 This run does **not** reopen Aldous–Fill 3.44, does not reopen TFIK22 owner-side mathematics, and does not invent a free successor. The permitted checking action is used on a complete neighboring package that already has a P26 full-proof PASS and is waiting only for a genuinely distinct OTHER-track audit: P0063, Lyons–Peres Question 16.7.

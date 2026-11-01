@@ -20,7 +20,7 @@ The remaining obstruction is correspondingly narrower: two useful cross directio
 ## 2. Sources actually used
 
 1. **Regularized determinant theorem.**  
-   `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`  
+   `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`  
    `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.  
    For any symmetric residual matrix `S`, disjoint original-coordinate sets `I,J`, and `B=S[I,J]`, for `1<=q<2` with
    `rho := max diag(P_range(B)) <= q/2`,
@@ -31,7 +31,7 @@ The remaining obstruction is correspondingly narrower: two useful cross directio
    At `q=2` the leverage condition disappears and the exponent is `-1/8`. The source allows arbitrary self blocks, outside couplings and arbitrary additional small singular values. The determinant proof has a scoped independent PASS in fleet03/B04, canonical mathematics commit `55e0a30b6ac56934614a5416056cae2e4a6dc77e`.
 
 2. **Assigned partner fleet03/B05.**  
-   `yspennstate/math-open-problems@bf7bff5c9b11cf495ccbcb09ef48549fd9c0d409`  
+   `private-source-repository@bf7bff5c9b11cf495ccbcb09ef48549fd9c0d409`  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/fleet03-B05-20260922T133738Z-qform-r12/REPORT.md`.  
    For every exact rank-two product quadratic form with nonzero eigenvalues `mu_1,mu_2`,
    \[

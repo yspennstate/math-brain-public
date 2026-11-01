@@ -51,7 +51,7 @@ I found no published theorem in this targeted check that exactly supplies all ow
 
 The newest completed compatible fleet02/B18 theorem is source-pinned at
 
-`yspennstate/math-open-problems@fedbabc70c2245476d15532f38c5c2555a0d6c31`,
+`private-source-repository@fedbabc70c2245476d15532f38c5c2555a0d6c31`,
 
 path
 

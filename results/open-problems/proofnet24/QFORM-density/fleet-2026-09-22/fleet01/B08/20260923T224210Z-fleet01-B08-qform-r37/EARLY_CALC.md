@@ -88,7 +88,7 @@ Crucially, **beta does not appear**.  Thus the crossing three-volume is uniforml
 
 The checked interactive exact-rank crossing theorem in
 
-`math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`,
+`private-source@d2f970d33fa7084f8de55412189402ac609e4da6`,
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`, Section 1,
 
 applies to the actual rank-three original-coordinate crossing `M`.  For independent cap-one scalar coordinates on both sides and crossing rank three it gives

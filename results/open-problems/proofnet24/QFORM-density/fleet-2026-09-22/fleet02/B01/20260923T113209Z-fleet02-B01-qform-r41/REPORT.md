@@ -29,7 +29,7 @@ and for `r>2`,
 
 Linear terms are allowed. Therefore the theorem may be applied after conditioning arbitrary disjoint ORIGINAL coordinates; no post-rotation independence is asserted.
 
-A related earlier correction is fleet02/B07 r13, `math-open-problems@febf0c97f0f85e802b6bc2ab4a475c15109de013`, which records a family where a legitimate rank-two pair Schur correction annihilates one rank-one component of a pre-completion far core. The construction below strengthens that obstruction to **complete annihilation of a quantitatively strong rank-two bicore**, while also giving a uniform pre-Schur Fourier payment.
+A related earlier correction is fleet02/B07 r13, `private-source@febf0c97f0f85e802b6bc2ab4a475c15109de013`, which records a family where a legitimate rank-two pair Schur correction annihilates one rank-one component of a pre-completion far core. The construction below strengthens that obstruction to **complete annihilation of a quantitatively strong rank-two bicore**, while also giving a uniform pre-Schur Fourier payment.
 
 ## 2. Exact construction
 
@@ -196,7 +196,7 @@ Then every physical diagonal has magnitude `<tau`, every physical `2 x 2` princi
 
 The newest completed fleet03/B01 result observed before publication is
 
-`math-open-problems@ffbc3b5d921d1c8c391fe1ea3d8c1264697e8813`,
+`private-source@ffbc3b5d921d1c8c391fe1ea3d8c1264697e8813`,
 
 `QFORM-RANK1-BILINEAR-PLUS-SQUARE-LP-v1`. For disjoint ORIGINAL coordinate banks it proves, at `p=3`,
 

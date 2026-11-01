@@ -2,7 +2,7 @@
 
 Run: `20261013T111929Z-fleet01-B12-event-local-parallel`
 
-- Canonical repository: `yspennstate/math-open-problems`
+- Canonical repository: `private-source-repository`
 - Canonical core commit: `04ce9444f01ef384294a1c73b8395c7e5cb6d08c`
 - Canonical path: `reports/fei-2026-10-11/runs/B12/20261013T111929Z-fleet01-B12-event-local-parallel/`
 - Brain repository: `yspennstate/math-research-brain`

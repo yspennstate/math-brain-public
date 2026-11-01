@@ -223,12 +223,12 @@ so the limit measure also has a density bounded by `M`. This passage does not by
 
 Completed designated partner actually applied:
 
-- fleet02/B19, `QFORM-RECTANGULAR-MULTIPIVOT-SINGULAR-v1`, canonical package `yspennstate/math-open-problems@23b520c19dd0e43cbff0fc0514a4dbfcd637b0f4`, report path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T123814Z-fleet02-B19-qform-r11/REPORT.md`.
+- fleet02/B19, `QFORM-RECTANGULAR-MULTIPIVOT-SINGULAR-v1`, canonical package `private-source-repository@23b520c19dd0e43cbff0fc0514a4dbfcd637b0f4`, report path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T123814Z-fleet02-B19-qform-r11/REPORT.md`.
 
 Other completed mathematics actually applied:
 
-- regularized determinant and MSS full-spectrum diffuse theorem, canonical `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`;
-- fleet03/B19 critical rank-two `L^3` / localized residual theorem, canonical `yspennstate/math-open-problems@f600d39b2e88b14acf5af050076e1062cc33f1f6`, used in the conditional assembly status but not re-proved here;
+- regularized determinant and MSS full-spectrum diffuse theorem, canonical `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`;
+- fleet03/B19 critical rank-two `L^3` / localized residual theorem, canonical `private-source-repository@f600d39b2e88b14acf5af050076e1062cc33f1f6`, used in the conditional assembly status but not re-proved here;
 - fleet03/B13 finite projective-bank theorem, canonical handoff records report commit `5c37d1ea814c481c8a6c0230a871f6d59b448cda`.
 
 Fresh control at run start: `yspennstate/math-research-brain@0c0c57ad0f1454ca3ba708eaa2f8a42743d94608`; before publication main advanced through unrelated QFORM worker records, with owner revision still `2026-09-22.5` and the same exclusive target.

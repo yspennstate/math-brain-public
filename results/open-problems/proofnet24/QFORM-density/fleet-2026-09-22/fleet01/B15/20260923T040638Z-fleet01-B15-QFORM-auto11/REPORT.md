@@ -337,6 +337,6 @@ Full QFORM remains OPEN.
 ## 10. Source/control pins
 
 
-Peer mathematical sources were read from the private `yspennstate/math-open-problems` repository at a master state containing the cited immutable paths, with master observed at `0da7f3ef78f89efa33d2014211323fcda3d3214b` before publication.
+Peer mathematical sources were read from the private `private-source-repository` repository at a master state containing the cited immutable paths, with master observed at `0da7f3ef78f89efa33d2014211323fcda3d3214b` before publication.
 
 Repository transport is not native learned-memory ingestion; execution remains `WITHOUT_VERIFIED_BRAIN`.

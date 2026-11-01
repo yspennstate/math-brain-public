@@ -102,7 +102,7 @@ At `m=2`, (2.4) decays only as `|t|^-1`, so this proof has a logarithmic endpoin
 
 The latest completed partner result consumed is fleet03/B07 r13, `QFORM-O0-HEAVY-PACKET-ISOLATION-v1`, source-pinned at
 
-`yspennstate/math-open-problems@f2d3682e9f9d24d67ea14dc990d9f49bebeb5a6e`,
+`private-source-repository@f2d3682e9f9d24d67ea14dc990d9f49bebeb5a6e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T173711Z-fleet03-B07-qform-r13/REPORT.md`.
 

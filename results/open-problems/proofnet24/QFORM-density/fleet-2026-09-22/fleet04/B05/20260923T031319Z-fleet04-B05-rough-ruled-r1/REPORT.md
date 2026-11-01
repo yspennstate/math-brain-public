@@ -164,7 +164,7 @@ The unrestricted conjecture also requires a structural reduction placing every t
 
 ## 5. Source pins
 
-- Claude ruled-surface package beginning at `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, with later corrections retained.
+- Claude ruled-surface package beginning at `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, with later corrections retained.
 - fleet01/B05 r25 report blob `0bed6a6426109541a9664c70b1acb27a9166528a`, audit commit `3e8704eead81b6fef2d305978ec89abb307d899a`.
 - fleet02/B05 rough-transfer checkpoint blob `f0be659bbc113dbf7c203f6a42d4791c4d7e6d32`.
 

@@ -13,8 +13,8 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 Fresh owner control was read at brain commit `02e2134e540b7268895d2ffb346725d8f58d8b42`; final correction refresh used later main `e9da9e142dc86da409d1a46f50044af52f0838c1`, with `CORRECTION_INBOX.json` blob `c7000cf3822ae4935a2faf43b89ac92ea65ac0fe` unchanged.
 
 The completed analytic input is the product Brascamp--Lieb/volume theorem in
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, especially its general `D_k` calculation. I also use the already-completed arbitrary-minor-weight extension mechanism from
-`yspennstate/math-open-problems@04297a630381fcfcf429b4c5ec560886bebacb39:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T052139Z-fleet02-B04-qform-auto11/REPORT.md`: in the determinant AM--GM step, replacing canonical minor weights by any probability weight `w` replaces `Z_k` by
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, especially its general `D_k` calculation. I also use the already-completed arbitrary-minor-weight extension mechanism from
+`private-source-repository@04297a630381fcfcf429b4c5ec560886bebacb39:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T052139Z-fleet02-B04-qform-auto11/REPORT.md`: in the determinant AM--GM step, replacing canonical minor weights by any probability weight `w` replaces `Z_k` by
 
 `G_k(w)=exp(E_w log det(M_ST)^2 + H(w)) = Z_k exp(-D(w||nu))`.
 

@@ -40,11 +40,11 @@ This arbitrary-dimensional family shows that dense, unbounded cross coupling is 
 
 Fresh controls were read at math-research-brain main commit a05302d52d58e6fa6d55dee11dc356c85c477dab, with owner-control revision 2026-09-22.15.
 
-The completed fleet01/B15 input is math-open-problems@fc9d06c78e03b4e1ad924f49fb9ab0f03018d2cd, run 20260923T220552Z-fleet01-B15-QFORM-auto11. Its exact interval theorem is applied below.
+The completed fleet01/B15 input is private-source@fc9d06c78e03b4e1ad924f49fb9ab0f03018d2cd, run 20260923T220552Z-fleet01-B15-QFORM-auto11. Its exact interval theorem is applied below.
 
-The same-constant regularity compiler is fleet04/B15 at math-open-problems@a1654d5fe319f483999583921d127819e40bc868, run 20260923T221909Z-fleet04-B15-ruled-trace-c0-r8.
+The same-constant regularity compiler is fleet04/B15 at private-source@a1654d5fe319f483999583921d127819e40bc868, run 20260923T221909Z-fleet04-B15-ruled-trace-c0-r8.
 
-The newest complementary B15 source checked before publication is fleet02/B15 at math-open-problems@7a0ffb7d9c4c6074cc6e13375db70828740e1bd4. It proves a collective rank-one Schur repair and a genuine obstruction to adding arbitrary leaf curvature through a worst-fibre grouped argument. The family here instead uses an exact algebraic cancellation.
+The newest complementary B15 source checked before publication is fleet02/B15 at private-source@7a0ffb7d9c4c6074cc6e13375db70828740e1bd4. It proves a collective rank-one Schur repair and a genuine obstruction to adding arbitrary leaf curvature through a worst-fibre grouped argument. The family here instead uses an exact algebraic cancellation.
 
 Retained corrections: no post-rotation independence, arbitrary-joint coarea height, pointwise rough trace, universal pointwise quadratic-phase decay, guaranteed good single minor, or inference of continuity from essential boundedness alone.
 

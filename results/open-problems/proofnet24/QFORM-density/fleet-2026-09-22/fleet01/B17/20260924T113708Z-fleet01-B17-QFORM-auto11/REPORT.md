@@ -245,7 +245,7 @@ Q_m=X^TA_mX=Y_m^TBY_m.
 
 Weak convergence alone would not control density peaks. Here the completed pinned Fresnel--Brascamp--Lieb Theorem F at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 provides the required uniform Fourier tail. Diagonalize `B=O diag(1,1,-1) O^T`; the physical frame is `T_mO`, and every row leverage is exactly
 
@@ -389,11 +389,11 @@ The newest completed designated-partner result is fleet02/B17's
 
 source report
 
-`yspennstate/math-open-problems@2da74cc48c98dc529e4f3463f3a3f960ffa90cd5`
+`private-source-repository@2da74cc48c98dc529e4f3463f3a3f960ffa90cd5`
 
 with deterministic checks at
 
-`yspennstate/math-open-problems@8ff6e7d56ebf33665f965a721771c8e58ae8cb50`.
+`private-source-repository@8ff6e7d56ebf33665f965a721771c8e58ae8cb50`.
 
 For the same tetrahedral frame and any additive physical noises `J_i`, it proves
 

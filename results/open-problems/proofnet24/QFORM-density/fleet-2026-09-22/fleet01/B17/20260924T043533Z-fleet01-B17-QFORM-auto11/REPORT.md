@@ -102,7 +102,7 @@ P(a)=\int_0^\infty\prod_{j=1}^3(1-ta_j)_+dt
 
 For any essentially bounded output density, `||p_Q||_infty >= I_*`; thus `I_*` is a valid universal-constant obstruction without choosing an arbitrary pointwise representative of a density.
 
-Source dependency for (1.6)--(1.8): `yspennstate/math-open-problems@e68c07e9490090e0e27f33cd478b41ce42aad2f9`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260924T033844Z-fleet01-B17-QFORM-auto11/REPORT.md`.
+Source dependency for (1.6)--(1.8): `private-source-repository@e68c07e9490090e0e27f33cd478b41ce42aad2f9`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260924T033844Z-fleet01-B17-QFORM-auto11/REPORT.md`.
 
 ## 2. Symmetry reduces the cone integral to two elementary pieces
 
@@ -276,7 +276,7 @@ which still comes from the diffuse three-bank limit. The gap between that obstru
 
 The latest completed designated-partner result consumed here is
 
-`yspennstate/math-open-problems@f6c1d85bd32a1bf5e70264d4327806d128481131`,
+`private-source-repository@f6c1d85bd32a1bf5e70264d4327806d128481131`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T034414Z-fleet02-B17-qform-auto11-r46/REPORT.md`.
 
 It proves the following global product-law theorem. If a real symmetric `3 x 3` matrix has all three eigenvalue magnitudes at least one and has a zero physical diagonal entry, then for arbitrary independent cap-one marginals

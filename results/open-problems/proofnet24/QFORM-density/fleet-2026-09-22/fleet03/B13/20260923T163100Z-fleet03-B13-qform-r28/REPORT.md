@@ -15,7 +15,7 @@ The target remains: independent real coordinates with densities `0<=f_i<=1`, sym
 
 Source:
 
-`yspennstate/math-open-problems@82f9b7e9372c2434f27fd1f5a65e7148663516a7`
+`private-source-repository@82f9b7e9372c2434f27fd1f5a65e7148663516a7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260923T121154Z-fleet04-B13-nonattained-bathtub-r1/REPORT.md`.
 
@@ -32,7 +32,7 @@ A short proof, to pin the precise scope used here: freeze every coordinate excep
 
 Source:
 
-`yspennstate/math-open-problems@9d9e2369ad137664a48b1b7c6d682ddaed62bcad`
+`private-source-repository@9d9e2369ad137664a48b1b7c6d682ddaed62bcad`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T125929Z-fleet01-B13-qform-auto23/FRESNEL_RANGE_ADDENDUM.md`.
 
@@ -52,7 +52,7 @@ The estimate is uniform in `ell,c`. The underlying proof factorizes only in the 
 
 My preceding B13 theorem also checked that disjoint outside original coordinates may be conditioned first, so arbitrary cross couplings become affine coefficients and do not alter (1.4). That source is
 
-`yspennstate/math-open-problems@<preceding-run-commit-as-published>`,
+`private-source-repository@<preceding-run-commit-as-published>`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T151646Z-fleet03-B13-qform-r28/REPORT.md`.
 

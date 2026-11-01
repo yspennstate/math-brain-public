@@ -21,7 +21,7 @@ The newest completed designated-partner result available at refresh was fleet02/
 
 canonical mathematics
 
-`yspennstate/math-open-problems@c8bbb166c448ccd194451b47524b13d5de3eaed5`
+`private-source-repository@c8bbb166c448ccd194451b47524b13d5de3eaed5`
 
 at
 
@@ -665,6 +665,6 @@ Fresh source control used: `yspennstate/math-research-brain` main, owner-control
 
 Designated partner proof used at source pin:
 
-`yspennstate/math-open-problems@c8bbb166c448ccd194451b47524b13d5de3eaed5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260924T065522Z-fleet02-B13-qform-r11/REPORT.md`.
+`private-source-repository@c8bbb166c448ccd194451b47524b13d5de3eaed5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260924T065522Z-fleet02-B13-qform-r11/REPORT.md`.
 
 Changed-file review for this mathematical repository write: only this run-owned `REPORT.md`; no credentials, account secrets, private personal archives, financial/trading material, benchmark answers, or unrelated data are present. No repository-integrated secret scanner was exposed through the connector, so the privacy check for this write is a manual narrow changed-file review rather than a claim of a full repository scan.

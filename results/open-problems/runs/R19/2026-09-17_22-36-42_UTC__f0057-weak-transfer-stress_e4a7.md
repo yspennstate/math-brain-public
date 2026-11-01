@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 # R19 — F0057 weak fixed-law adversarial recovery
 
 Run date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 This invocation executes the single recovery action selected by the preceding mandatory stuck report: **REFUTE INSTEAD OF PROVE**. I did not strengthen the already-saturated binary metric and did not manufacture an audit. The target of the adversarial check was the weakest source interface: `j=2`, `lambda<nu`, `m/n=lambda+o(1/log n)`, nontrivial lattice span, ties, and an `n`-dependent TV-positive set.
 

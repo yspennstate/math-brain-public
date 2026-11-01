@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-10 — admission delta screen 45: P0462 retirement-history correction; no residue-9 CLOSABLE admission
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-10` / `proofnet24/NM13-10/`  
 Category gate: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed probability or analysis inequalities admitting an exact sharp constant, explicit counterexample, finite certificate, or complete short restricted-class theorem  

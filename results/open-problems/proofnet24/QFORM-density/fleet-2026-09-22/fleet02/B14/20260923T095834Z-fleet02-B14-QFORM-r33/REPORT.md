@@ -26,7 +26,7 @@ The new theorem below completely pays branch (1), even when the rest of the same
 
 I read the required pinned directory
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
@@ -44,7 +44,7 @@ This is fed into the already completed critical-Fourier/log physical-pair compil
 
 The newest completed designated-partner report at the time of this run is fleet03/B14 r32,
 
-`yspennstate/math-open-problems@7d56182ff8bd5766d26974c9b02d543ee155654e`,
+`private-source-repository@7d56182ff8bd5766d26974c9b02d543ee155654e`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T093552Z-fleet03-B14-QFORM-r32/REPORT.md`.
 
 Its `QFORM-SHEAR-SUBPROB-HOMOGENEITY-v1` proves, in particular, the source-valid subprobability convolution estimate used in Section 6: if

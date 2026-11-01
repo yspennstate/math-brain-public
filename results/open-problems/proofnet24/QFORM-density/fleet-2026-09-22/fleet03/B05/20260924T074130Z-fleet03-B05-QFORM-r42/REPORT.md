@@ -14,7 +14,7 @@ attacking: QFORM-WITT-RANKTWO-BANK-AGGREGATE-COAREA-v1 — prove a product-prese
 
 The immediate predecessor is fleet03/B05 r41,
 
-`yspennstate/math-open-problems@fe9f82e0c3206c1056b60963a75989baff4aa0ef:`
+`private-source-repository@fe9f82e0c3206c1056b60963a75989baff4aa0ef:`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260924T060943Z-fleet03-B05-QFORM-r41/REPORT.md`.
 
 Its live Witt packet is
@@ -48,7 +48,7 @@ Its exact rank-three crossing receiver pays every branch with a quantitative pos
 
 The analytic receiver used below is fleet02/B05's completed rough Borel theorem `QFORM-NULL-HUB-TRANSVERSE-SQUARE-v1`, canonical source
 
-`yspennstate/math-open-problems@e7a21ed67b943d7aded714ac17ca48bdab4a1349:`
+`private-source-repository@e7a21ed67b943d7aded714ac17ca48bdab4a1349:`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T200516Z-fleet02-B05-QFORM-auto11c/REPORT.md`.
 
 It states: if `H_0` is independent of a pair `(L,Z)`, `||f_{H_0}||_\infty<=m`, the pair has joint-density cap `M`, and
@@ -71,7 +71,7 @@ It is an interval/Borel argument for rough laws; it does not use the refuted arb
 
 The designated partner result used in Section 6 is fleet04/B05's `QFORM-PHYSICAL-DEFINITE-PAIR-COAREA-v1`,
 
-`yspennstate/math-open-problems@33cabb3bd5e466a58adc6eac49eba210ef62ef14`,
+`private-source-repository@33cabb3bd5e466a58adc6eac49eba210ef62ef14`,
 
 which for a literal original-coordinate definite principal pair `C` gives
 

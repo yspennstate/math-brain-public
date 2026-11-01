@@ -13,7 +13,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`; no native learned-memory receiver was used.
 Fresh owner controls were read from `yspennstate/math-research-brain` main commit `00bd16396410aae9a7bc394e03e733be30a801a6`, control revision `2026-09-22.5`. This later owner order supersedes the stale FEI text attached to the scheduler: all workers are on the quadratic-form bounded-density conjecture.
 
 
-The scientific source repository was resolved at `yspennstate/math-open-problems` master commit `92717ee3ab720389cb84a8941c62810b5a2fd605` before the derivation.
+The scientific source repository was resolved at `private-source-repository` master commit `92717ee3ab720389cb84a8941c62810b5a2fd605` before the derivation.
 
 Named completed other-account result actually used: fleet03/B05, run `20260922T113800Z-fleet03-B05-qform-r11`, report blob `6e4da2dbfb380b2b0d1ff2a9723ec7b4422942ca`. That theorem proves the full-density bound for a full nonzero small-leverage spectral support from a Fourier–Brascamp–Lieb `L^1` bound, and identifies the exact unpaid interface when only three large eigenvalues are selected: the complementary quadratic phase turns the projected density into a phase-weighted complex density, for which ordinary projection `L^infinity` control does not preserve the Wiener norm. The assigned fleet03/B16 partner had no completed current-qform artifact visible at the pinned master, so no stale artifact was substituted.
 

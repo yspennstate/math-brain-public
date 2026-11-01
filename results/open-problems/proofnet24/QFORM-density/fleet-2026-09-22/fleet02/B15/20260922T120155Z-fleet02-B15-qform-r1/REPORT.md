@@ -11,13 +11,13 @@ The fresh owner control supersedes the older FEI prompt for this slot. The only 
 
 The completed cross-account partner result is:
 
-- `yspennstate/math-open-problems@1ce0598e1c9c4e0681f8f6b86d3dfef990ec5d4e`, `qform/fleet-2026-09-22/fleet03/B15/fleet03-B15-20260922T112830Z/REPORT.md`.
+- `private-source-repository@1ce0598e1c9c4e0681f8f6b86d3dfef990ec5d4e`, `qform/fleet-2026-09-22/fleet03/B15/fleet03-B15-20260922T112830Z/REPORT.md`.
 
 It proves the exact bathtub reduction: for every interval `J`, maximizing `P(X^TAX in J)` over independent one-dimensional densities bounded by one is equivalent to maximizing the shell volume over product sets `E_1 x ... x E_n` with `|E_i|=1`. I use that equivalence below to interpret the local principal-block theorem as an exact geometric certificate, not as a regularity-of-input argument.
 
 I also consume the newer completed cross-block theorem at
 
-- `yspennstate/math-open-problems@8624982153e5a2154e4ae8922d2fe4dc77080efc`, `proofnet24/QFORM-density/fleet-2026-09-22/interactive/20260922T121109Z-crossblock-and-lower-bounds/REPORT.md`.
+- `private-source-repository@8624982153e5a2154e4ae8922d2fe4dc77080efc`, `proofnet24/QFORM-density/fleet-2026-09-22/interactive/20260922T121109Z-crossblock-and-lower-bounds/REPORT.md`.
 
 Its proved rank-`r>2` cross-block Fourier estimate gives a bounded continuous density whenever an original-coordinate cut has cross-block rank at least three, and in particular closes a large delocalized rank-three branch. I use it only as a continuity/coverage input; the new theorem below is independent of it.
 

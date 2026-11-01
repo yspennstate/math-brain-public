@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED**—not verifi
 # R13 — Boolean Komlós: exact weighted four-vector constant and a sharper five-column bound
 
 Run ID: `20260917T1323Z_n5-weighted-sharp-7d3c`  
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, fixed metric, repository state
 

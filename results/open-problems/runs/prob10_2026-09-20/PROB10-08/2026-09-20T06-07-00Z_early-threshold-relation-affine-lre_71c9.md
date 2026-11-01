@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 
 # PROB10-08 — early-threshold regular-relation obstruction and an affine family genuinely outside LRE
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Status: **OPEN / PARTIAL / auxiliary obstruction theorems proved / no new TV-cutoff graph class this run / independent validation pending / worldwide novelty UNVERIFIED**.
 

@@ -4,9 +4,9 @@ Programme: QFORM-DENSITY-3EIG-20260922. Role: translations and localization / co
 
 ## Source pins actually used
 
-2. Required newest-Claude source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. I use its proved D_k theorem, in particular the no-marginal-condition k>=5 branch.
-3. Assigned partner fleet03/B14 r24: `yspennstate/math-open-problems@2fe2734d7fc9a7e9a29edd26cbeda837fee10900`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T023535Z-fleet03-B14-QFORM-r24/REPORT.md`, together with its overlap calculation at `9f7efc2c599ca92ad63e2f55a526498132d8604b`. I use the exact conjugate-fiber cap and overlap-power formula.
-4. Previous fleet02/B14 simultaneous affine-envelope localization: `yspennstate/math-open-problems@ae5a1d83e5434d0c318a53da7095cebe8ec6f17e`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T015809Z-fleet02-B14-QFORM-r23/REPORT.md`.
+2. Required newest-Claude source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. I use its proved D_k theorem, in particular the no-marginal-condition k>=5 branch.
+3. Assigned partner fleet03/B14 r24: `private-source-repository@2fe2734d7fc9a7e9a29edd26cbeda837fee10900`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T023535Z-fleet03-B14-QFORM-r24/REPORT.md`, together with its overlap calculation at `9f7efc2c599ca92ad63e2f55a526498132d8604b`. I use the exact conjugate-fiber cap and overlap-power formula.
+4. Previous fleet02/B14 simultaneous affine-envelope localization: `private-source-repository@ae5a1d83e5434d0c318a53da7095cebe8ec6f17e`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T015809Z-fleet02-B14-QFORM-r23/REPORT.md`.
 
 No arbitrary-joint coarea, post-rotation independence, bounded-diameter localization, fixed fragment count, moment bound, or small-output-law perturbation premise is used.
 

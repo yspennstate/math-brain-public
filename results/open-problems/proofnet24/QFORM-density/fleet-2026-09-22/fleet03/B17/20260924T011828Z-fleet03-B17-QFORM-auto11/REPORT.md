@@ -295,7 +295,7 @@ Consequently, if such a \(3\times3\) physical principal block appears inside a l
 
 Use fleet04/B17's completed theorem `QFORM-EDGEWORTH-FRAME-DEFICIT-SHARP-v1`, scientific source
 
-`yspennstate/math-open-problems@092be154e735f99a60d80dff46b648ae7bae01b7`,
+`private-source-repository@092be154e735f99a60d80dff46b648ae7bae01b7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T201827Z-fleet04-B17-QFORM-r2/REPORT.md`.
 

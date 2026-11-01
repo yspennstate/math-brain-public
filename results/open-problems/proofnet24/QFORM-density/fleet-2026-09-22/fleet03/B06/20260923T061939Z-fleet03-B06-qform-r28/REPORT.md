@@ -33,7 +33,7 @@ Consumed live corrections include: law-uniform pointwise quadratic-phase decay i
 
 Fleet01/B04 proved `QFORM-DISJOINT-E2-ENTROPY-HALVING-v1` at
 
-`yspennstate/math-open-problems@e0f6866f77e8c38b5c482acaf55094f60d3f28ac`,
+`private-source-repository@e0f6866f77e8c38b5c482acaf55094f60d3f28ac`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T055035Z-fleet01-B04-QFORM-auto13/REPORT.md`.
 
@@ -49,7 +49,7 @@ The completed fleet04/B18 result
 
 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`,
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`,
 

@@ -13,7 +13,7 @@ attacking: the exact-coloop endpoint left by r34 — replace the fragile cancell
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems@926549e6ace81816d0533164f35f548a4f84d508`
+`private-source-repository@926549e6ace81816d0533164f35f548a4f84d508`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T125915Z-fleet03-B03-QFORM-r34/REPORT.md`.
 
@@ -47,7 +47,7 @@ The scalar projection input used below is the same source-valid one used in r32:
 
 The designated partner remains fleet04/B03, canonical
 
-`yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`.
+`private-source-repository@28681f9af7c2307f80968df86010084019599e38`.
 
 Only its elementary valid collision implication
 

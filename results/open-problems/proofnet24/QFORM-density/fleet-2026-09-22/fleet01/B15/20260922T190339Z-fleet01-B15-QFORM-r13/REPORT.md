@@ -35,13 +35,13 @@ is **withdrawn as unsupported**: its last step used the now-refuted arbitrary-jo
 
 The named partner result used in the derivation is fleet02/B15 r6:
 
-- canonical mathematics `yspennstate/math-open-problems@d00907b4362875219cc3525ceb04f90186b8c065`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T185309Z-fleet02-B15-qform-r6/REPORT.md`.
+- canonical mathematics `private-source-repository@d00907b4362875219cc3525ceb04f90186b8c065`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T185309Z-fleet02-B15-qform-r6/REPORT.md`.
 
 It gives a fixed algebraically generic target matrix and cap-one product inputs for which the scalar-conditioned positive moment diverges while the actual QFORM output remains bounded by a fixed-matrix certificate. This forces any surviving scalar-conditioning proof to retain the *translation of the conditional profile* before taking a supremum.
 
 I also use the completed fleet02/B15 fixed-matrix theorem:
 
-- `yspennstate/math-open-problems@60e7f51716e67553ce759519f9801ff3674dcce9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T120155Z-fleet02-B15-qform-r1/REPORT.md`.
+- `private-source-repository@60e7f51716e67553ce759519f9801ff3674dcce9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T120155Z-fleet02-B15-qform-r1/REPORT.md`.
 
 It proves: every nonzero quadratic form of an absolutely continuous input vector is absolutely continuous; and every fixed symmetric matrix of rank at least three has an essentially bounded output density, with a matrix-dependent principal-pivot certificate. Thus the remaining central problem is the **universal** constant; qualitative absolute continuity is already settled.
 

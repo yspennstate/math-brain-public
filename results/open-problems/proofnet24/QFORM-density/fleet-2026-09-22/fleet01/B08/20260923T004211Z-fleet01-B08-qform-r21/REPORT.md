@@ -18,7 +18,7 @@ This run changes mechanism from the preceding B08 ridge/near-rank-two iterations
 
 The only external analytic input needed for the new cross-block theorem is the product-marginal estimate transferred in fleet01/B18 r20:
 
-`yspennstate/math-open-problems@a9cecd1c7eaa605bd5d4bfd69ae9d9cb721705b7`
+`private-source-repository@a9cecd1c7eaa605bd5d4bfd69ae9d9cb721705b7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260923T002242Z-qform-B18-a01-r20/REPORT.md`.
 
@@ -30,7 +30,7 @@ The B18 report itself proves a two-full-bank theorem for exact rank three. The t
 
 Source:
 
-`yspennstate/math-open-problems@c37badc7438c808fa283f574d22a8cb4db87216e`
+`private-source-repository@c37badc7438c808fa283f574d22a8cb4db87216e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260922T144029Z-fleet01-B08-qform-r13/REPORT.md`.
 
@@ -52,7 +52,7 @@ Completed partner theorem:
 
 canonical source
 
-`yspennstate/math-open-problems@c248abc9be918698c6d5a68108c615ba1c4790b3`
+`private-source-repository@c248abc9be918698c6d5a68108c615ba1c4790b3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T204103Z-1dd824/REPORT.md`.
 
@@ -337,7 +337,7 @@ Since `A=R Lambda R^T`,
 
 The completed rank-three affine half-Riesz theorem
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`
 
@@ -366,7 +366,7 @@ Thus, for exact rank three, the new diffuse theorem reduces the unpaid max-lever
 
 The exact null-coloop endpoint is known to be paid when the leverage is exactly one and the diagonal is exactly zero: fleet01/B19, canonical
 
-`yspennstate/math-open-problems@09bb706f11ea00995a61f0c7323bf67997c65932`,
+`private-source-repository@09bb706f11ea00995a61f0c7323bf67997c65932`,
 
 proves `||p_Q||_infinity<11.687` there. This does **not** pay the whole near-null hub region (4.7), so no full exact-rank-three closure is claimed here.
 

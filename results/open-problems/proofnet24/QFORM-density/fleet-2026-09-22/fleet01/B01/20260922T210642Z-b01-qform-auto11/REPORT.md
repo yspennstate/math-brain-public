@@ -128,7 +128,7 @@ This directly applies the named partner result rather than merely citing it, and
 
 Partner source actually used:
 
-`yspennstate/math-open-problems@b3f18a11f29e878b69278f6487fe50b4e3380d99:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T200159Z-fleet02-B01-qform-r27/REPORT.md`.
+`private-source-repository@b3f18a11f29e878b69278f6487fe50b4e3380d99:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260922T200159Z-fleet02-B01-qform-r27/REPORT.md`.
 
 ## 5. Target-valid embedding: the conjecture survives because the missing curvature is elsewhere
 
@@ -158,7 +158,7 @@ Fleet02/B05 proved that for three independent scalar aggregates and an actual sc
 
 B05 source used for the scope comparison:
 
-`yspennstate/math-open-problems@a31006ef311ca9e937f37c62d602d21ada3b1139:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T202100Z-b05-qform-47d9c1a2/REPORT.md`.
+`private-source-repository@a31006ef311ca9e937f37c62d602d21ada3b1139:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T202100Z-b05-qform-47d9c1a2/REPORT.md`.
 
 ## 7. Compact conditional end-to-end consequence
 

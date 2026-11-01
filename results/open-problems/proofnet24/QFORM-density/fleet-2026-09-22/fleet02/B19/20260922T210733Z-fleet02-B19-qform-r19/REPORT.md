@@ -18,7 +18,7 @@ This argument does **not** use law-uniform pointwise Fresnel decay, the false ar
 
 The named partner actually applied is **fleet03/B19 r19**, canonical mathematics
 
-`yspennstate/math-open-problems@63568dad79e5381abb3081ef4685ea126fdd4297`
+`private-source-repository@63568dad79e5381abb3081ef4685ea126fdd4297`
 
 at
 
@@ -36,7 +36,7 @@ and in particular each `S_G` is positive definite and `det S_G>=1/640`. Thus `J`
 
 The current compatible fleet02/B10 endpoint, canonical
 
-`yspennstate/math-open-problems@2045e39c5eda8d2a94098d79932223c77f2a4db7`,
+`private-source-repository@2045e39c5eda8d2a94098d79932223c77f2a4db7`,
 
 combines null-bank compression with the preceding residual-heavy closure. In the near-endpoint hard state it produces one genuine independent cap-one heavy-null coordinate `X_0`, a spectral basis `(r,e,w)`, and
 
@@ -52,7 +52,7 @@ while every remaining transverse row `v_j=(beta_j,gamma_j)` has leverage at most
 
 The completed fleet03/B19 r16 theorem `QFORM-EXACT-CROSS-RANK-L2-v1`, canonical
 
-`yspennstate/math-open-problems@9d55d9ca5a7beaed6f693a57bd32b5fc9949b981`,
+`private-source-repository@9d55d9ca5a7beaed6f693a57bd32b5fc9949b981`,
 
 will be used in its general rank-three cross-bank form:
 

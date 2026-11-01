@@ -6,7 +6,7 @@ Run: 20260924T154801Z-fleet01-B03-fixedmult-audit-r15.
 Fresh AGENTS.md and CURRENT_OBJECTIVE.md were read before work.
 
 Current standalone source pin:
-- repo yspennstate/math-open-problems
+- repo private-source-repository
 - commit eeb752c8943536541b34b42b8bf48e924f4d3d2f
 - paper proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/interactive/20260924T145418Z-nine-400/paper.tex
 - blob 19fb119877426b640b2c0dae19ec2f78a399fe11

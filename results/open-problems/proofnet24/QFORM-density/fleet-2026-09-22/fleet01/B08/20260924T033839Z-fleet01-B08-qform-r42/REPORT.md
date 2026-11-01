@@ -16,7 +16,7 @@ The unrestricted QFORM conjecture remains OPEN. The theorem below proves a compl
 
 From fleet02/B08 r28,
 
-`yspennstate/math-open-problems@66582bd87d50634f3525a57c87acffdbde97aea1`,
+`private-source-repository@66582bd87d50634f3525a57c87acffdbde97aea1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T153836Z-fleet02-B08-qform-r28/REPORT.md`,
 
 if `R` is an `n x 3` orthonormal frame with
@@ -33,7 +33,7 @@ This partner result is applied below to the actual top-three absolute-eigenvalue
 
 From
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`,
 
 for an actual ORIGINAL-coordinate cross block `M=M0+E`, if
@@ -50,7 +50,7 @@ All within-bank curvature and outside couplings are retained.
 
 The one-scale ridge theorem is source-pinned at
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 After scaling: if a symmetric matrix has at least three eigenvalues of absolute value at least `sigma>0`, and `P_sigma` denotes the full spectral projection onto

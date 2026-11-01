@@ -4,7 +4,7 @@
 **Status:** **PARTIAL. Full uniform-cube Fourier entropy-influence remains OPEN / NOT PROVED.**  
 **Brain label:** **WITHOUT_VERIFIED_BRAIN.** No authenticated brain retrieval or receiver-side brain context was used.  
 **Live role:** FEI new proof mechanisms.  
-**Scientific source recovered at entry:** `yspennstate/math-open-problems` master `606eb5a033dff5458380d69c00481fe7d6b5112b`, followed by a freshness check immediately before delivery.
+**Scientific source recovered at entry:** `private-source-repository` master `606eb5a033dff5458380d69c00481fe7d6b5112b`, followed by a freshness check immediately before delivery.
 
 ## 1. Named universal obstruction and why this is a different method
 

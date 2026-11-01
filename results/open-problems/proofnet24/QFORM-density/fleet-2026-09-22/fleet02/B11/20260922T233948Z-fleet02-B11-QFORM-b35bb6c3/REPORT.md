@@ -28,7 +28,7 @@ This is strictly narrower than the previous vague request for a stability theore
 
 Completed partner source:
 
-`yspennstate/math-open-problems@6f501dcdf1db12adaa34b54c10c5fa75c1688e69`
+`private-source-repository@6f501dcdf1db12adaa34b54c10c5fa75c1688e69`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T221034Z-fleet03-B11-QFORM-r18/REPORT.md`
 
@@ -52,7 +52,7 @@ and hence, at `s=1`, `||p_Q||_infinity <=449.0569661600281...`. Its addendum als
 
 Completed source:
 
-`yspennstate/math-open-problems@c869a82e52e46664d5bf299c3b210de02a02fc50`
+`private-source-repository@c869a82e52e46664d5bf299c3b210de02a02fc50`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T215136Z-fleet03-B11-QFORM-r17/REPORT.md`.
 

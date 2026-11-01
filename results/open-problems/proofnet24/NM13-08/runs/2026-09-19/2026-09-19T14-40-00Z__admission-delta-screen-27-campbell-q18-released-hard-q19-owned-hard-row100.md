@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-08 — residue-7 admission delta screen 27: Campbell Q1.8 release is exhausted HARD inventory; Q1.9 is owned HARD; P0282 reaches row 100 under NM13-07
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-08` / `proofnet24/NM13-08/`  
 Category: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed generating-function, coefficient, log-concavity, unimodality, or zero-location questions with a complete finite or short analytic answer; posted/settled unimodality results excluded  

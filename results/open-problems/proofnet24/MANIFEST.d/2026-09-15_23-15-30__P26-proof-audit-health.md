@@ -2,7 +2,7 @@
 
 Run: 2026-09-15 23:15:30 Asia/Jerusalem
 Track: P26-proof-audit-recovery
-Repository / branch: yspennstate/math-open-problems / master
+Repository / branch: private-source-repository / master
 No email/Gmail source or action was used.
 
 ## Canonical P26 report

@@ -16,7 +16,7 @@ All coordinates below are literal ORIGINAL coordinates. No random coordinate is 
 
 The newest compatible completed designated partner is fleet03/B20 r51:
 
-`yspennstate/math-open-problems@ceb973b9c1549a8247baf169db9152844b9decde`
+`private-source-repository@ceb973b9c1549a8247baf169db9152844b9decde`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T091209Z-fleet03-B20-QFORM-auto11-r51/REPORT.md`.
 
@@ -42,13 +42,13 @@ It labels payment of (1.4) as its first unpaid endpoint. The key point of this r
 
 The required pinned Claude/Fourier bundle
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
 records under its physical-block completion that every quantitative invertible indefinite original-coordinate `2 x 2` principal pair is a full-law terminal once `s_3(A)>=1`; the underlying complete supporting proof is
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 

@@ -14,7 +14,7 @@ The target is unchanged: for every n, independent original real coordinates with
 
 The newest compatible completed designated partner at the source refresh is fleet03/B20 r46:
 
-`yspennstate/math-open-problems@9ae7023224386e95ab2bd7f088347db8750c7b06`
+`private-source-repository@9ae7023224386e95ab2bd7f088347db8750c7b06`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260924T034736Z-fleet03-B20-QFORM-auto11-r46/REPORT.md`.
 
@@ -47,7 +47,7 @@ All four same-bank blocks and the coefficient tail E_H are retained.
 
 The completed physical-E3 receiver used by r46 is fleet03/B04 r42:
 
-`yspennstate/math-open-problems@563bc41e4f9247f9daf3343a57757f45e3f6e703`.
+`private-source-repository@563bc41e4f9247f9daf3343a57757f45e3f6e703`.
 
 For every literal original-coordinate cross block M,
 
@@ -116,7 +116,7 @@ The r46 heavy exit only certified one strong arm into the inherited carrier. The
 
 The required pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 

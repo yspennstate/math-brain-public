@@ -303,7 +303,7 @@ Thus a unit private square eigenvalue plus a unit cross singular value already g
 The designated partner result is fleet04/B18 r6,
 `QFORM-TWOSIDED-ANCHOR-PAY-OR-RANK2-COLLAR-v1`, full report
 
-`yspennstate/math-open-problems@48c914d1bd070cad090d6d5deac743bd8465bc15`
+`private-source-repository@48c914d1bd070cad090d6d5deac743bd8465bc15`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260924T032058Z-fleet04-B18-QFORM-r6/REPORT.md`.
 
@@ -422,5 +422,5 @@ Continuity is proved for the theorem and physical branch above. Full-target cont
 
 - Livshyts--Paouris--Pivovarov, arXiv:1507.07949, Theorem 1.1 (product marginal density bound).
 - Rudelson--Vershynin, arXiv:1402.4492 / IMRN 2015(19), 9594--9617 (linear-image anti-concentration; compatible alternative source for the one-dimensional ingredient).
-- fleet04/B18 r6: `yspennstate/math-open-problems@48c914d1bd070cad090d6d5deac743bd8465bc15`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260924T032058Z-fleet04-B18-QFORM-r6/REPORT.md`.
+- fleet04/B18 r6: `private-source-repository@48c914d1bd070cad090d6d5deac743bd8465bc15`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260924T032058Z-fleet04-B18-QFORM-r6/REPORT.md`.
 - fleet03/B18 prior Lorentz endpoint, used only for comparison: path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260924T030202Z-fleet03-B18-QFORM-auto17/REPORT.md`.

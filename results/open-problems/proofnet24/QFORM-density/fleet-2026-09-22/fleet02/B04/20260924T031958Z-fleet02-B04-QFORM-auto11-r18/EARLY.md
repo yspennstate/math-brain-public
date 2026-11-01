@@ -4,7 +4,7 @@ Programme `QFORM-DENSITY-3EIG-20260922`; fleet02/B04. Full unrestricted QFORM re
 
 First unpaid implication attacked: `QFORM-HIGHLEVERAGE-RESIDUAL-TO-CARRIER-DELETION-DICHOTOMY-v1`.
 
-Fresh pinned input: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, where Theorem D permits arbitrary supported physical 3-minor weights with row marginals at most `1/2`, replacing `Z` by `G=exp(E log det^2+H)`. The D' extension permits cap `h<3/4`. Fresh designated partner fleet03/B04 r47 is `math-open-problems@24476f8abf801b3e862fd227748790459d731340`, proving rank-free higher-compound downshift, in particular `||p_Q||inf <=7.659094523616393 E4(M)^(-1/8)` on any literal cross block with `E4(M)>0`.
+Fresh pinned input: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, where Theorem D permits arbitrary supported physical 3-minor weights with row marginals at most `1/2`, replacing `Z` by `G=exp(E log det^2+H)`. The D' extension permits cap `h<3/4`. Fresh designated partner fleet03/B04 r47 is `private-source@24476f8abf801b3e862fd227748790459d731340`, proving rank-free higher-compound downshift, in particular `||p_Q||inf <=7.659094523616393 E4(M)^(-1/8)` on any literal cross block with `E4(M)>0`.
 
 New calculation. Coarsen a physical 3-minor law by two distinguished row carriers `i,j`; let `W_ab` be the total squared-minor mass in category `1{i in S}=a,1{j in S}=b`. Conditional Gibbs optimization shows the global entropy-determinant problem reduces exactly to
 

@@ -5,7 +5,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 Date checked: 2026-09-18 UTC  
 Slot: `R7-03 Boundary-Case Research`  
 Native ID: `6aabe7be74008191b526b109ee4e9e80`  
-Repository: private `yspennstate/math-open-problems`, existing `master`  
+Repository: private `private-source-repository`, existing `master`  
 R7-03 assignment status: **PENDING_ADMISSION**
 
 ## 1. Why this screen is material

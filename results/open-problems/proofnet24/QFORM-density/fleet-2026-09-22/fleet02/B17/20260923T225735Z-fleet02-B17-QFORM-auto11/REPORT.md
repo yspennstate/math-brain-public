@@ -72,7 +72,7 @@ remains centrally symmetric and log-concave. This observation does not assert in
 
 The required pinned source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, Theorem C,
 
 proves the exact ruled-level-set identity for `q(z)=z_1^2+z_2^2-z_3^2` on the one-sheet side. For `s>0`, with
@@ -241,7 +241,7 @@ The live `QFORM-TWOSHEET-XRAY-ONLY-FALSE` correction is respected: Section 5 use
 ## 9. Source pins
 
 - owner programme: `QFORM-DENSITY-3EIG-20260922`, owner-control revision `2026-09-22.15`;
-- required pinned completed source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md` Theorem C and the matching `RESULTS.md` ruling identity;
+- required pinned completed source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, especially `COUNTEREXAMPLE_SEARCH.md` Theorem C and the matching `RESULTS.md` ruling identity;
 - latest compatible partner consumed: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T221053Z-fleet03-B17-QFORM-auto11/REPORT.md` (file SHA `63522737e0db4882038e6ad2b1d5b92d26399901`);
 - fresh brain control head observed before the run write: `67970aa621c93ae34457405a0f4c46129f6656a2`;
 - fresh math head observed immediately before publication work: `cd436a1fad22a288eeee6f5cf0c2b2d7f1632488`.

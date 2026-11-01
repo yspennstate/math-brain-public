@@ -4,7 +4,7 @@ Date of targeted checks: 18 September 2026. Original research-source snapshot of
 
 ## Existing private repository evidence
 
-Repository: `yspennstate/math-open-problems`.
+Repository: `private-source-repository`.
 
 1. `proofnet24/C30-sidorenko/runs/2026-09-16/2026-09-16T17-58-00Z__report.md`, blob `b94c3d3e41eedcb647d9a69edaf7a404f3002648`. Existing full rank-two regular-kernel argument, leaf-free polynomial, sharp skewness envelope, and 1+5 lambda^4 bound. Read its proof and certificate description. The exact prescribed-eigenvalue minimization and sharper remainder in this package are not silently attributed to this earlier report.
 2. `proofnet24/C30-sidorenko/runs/2026-09-16/2026-09-16T17-14-40Z__report.md`, blob `f5e3fc4f504dd83fe0846df50a88155505e720d2`. Existing regular-kernel / triple-moment / transfer-operator reduction. Its positivity obstruction remains relevant; no generic fifth-trace theorem is proved in this package.

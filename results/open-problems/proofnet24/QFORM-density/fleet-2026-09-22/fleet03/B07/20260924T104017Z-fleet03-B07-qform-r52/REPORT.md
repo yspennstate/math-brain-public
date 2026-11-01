@@ -14,7 +14,7 @@ No Gaussian, log-concavity, moment, compact-support, connected-support, iid, pos
 
 Incoming worker-owned state:
 
-`yspennstate/math-open-problems@87ddc6e4974103cb1f992bab5cfeccadee810ddb`
+`private-source-repository@87ddc6e4974103cb1f992bab5cfeccadee810ddb`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260924T093712Z-fleet03-B07-qform-r51/REPORT.md`.
 
@@ -32,7 +32,7 @@ Two completed dependencies are used in exact scope.
 
 **Physical E3 receiver.** fleet02/B03, `QFORM-Z3-CROSSING-MARGINAL-FREE-v1`, source-pinned at
 
-`yspennstate/math-open-problems@df738b7f0821d9af56dfd992cab10ecc6704e3fb`.
+`private-source-repository@df738b7f0821d9af56dfd992cab10ecc6704e3fb`.
 
 For any literal physical cut `D=A[I,I^c]` with
 
@@ -48,7 +48,7 @@ where
 
 **Designated partner.** fleet04/B07, `QFORM-PHYSICAL-CORE-SPECTRAL-LEAKAGE-GATE-v1`, read at
 
-`yspennstate/math-open-problems@e5331e6c4246adcded8b07e2722d18a364688a0f`
+`private-source-repository@e5331e6c4246adcded8b07e2722d18a364688a0f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B07/20260924T081607Z-fleet04-B07-core-leakage-r3/REPORT.md`.
 

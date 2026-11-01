@@ -11,7 +11,7 @@ attacking: QFORM-MIXED-OFFDIAGONAL-TRANSVERSE-COAREA-v1 — after the chi and Ps
 
 The predecessor r28 is source-pinned at
 
-`yspennstate/math-open-problems@175ac74eb73ef3444ec1a6d998b78a02e72104f2:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T164014Z-fleet03-B05-QFORM-r28/`.
+`private-source-repository@175ac74eb73ef3444ec1a6d998b78a02e72104f2:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T164014Z-fleet03-B05-QFORM-r28/`.
 
 Its final source refresh already removed the broad punctured-null gap by applying fleet02/B05 `QFORM-NEARNULL-SCALAR-DEPENDENT-PAIR-v1`. The actual survivor is the simultaneous mixed-transverse cancellation chamber. This run proves that the two previously identified currencies cannot both disappear without forcing a large determinant in the same original product-projection bank.
 
@@ -204,7 +204,7 @@ This gives an exact deterministic trichotomy for the active-shear chamber:
 
 The completed designated partner theorem
 
-`yspennstate/math-open-problems@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
+`private-source-repository@59c6ff7db9aceb8b575abe0e064ebeda06f6f77f`
 
 proves
 \[

@@ -15,7 +15,7 @@ The unrestricted owner target remains open: for independent cap-one input densit
 This report uses two completed sources in their exact scopes.
 
 1. Fresnel--Brascamp--Lieb Theorem F:
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
    For
    `A=sum_{k=1}^3 lambda_k v_k v_k^T+B`, an ORIGINAL-coordinate set `I` with `B_II` diagonal, `rho_i=((v_1)_i,(v_2)_i,(v_3)_i)`, `G_I=sum_{i in I}rho_i rho_i^T`, and normalized leverages `rho_i^T G_I^{-1}rho_i<=1/2`, it proves
@@ -25,7 +25,7 @@ This report uses two completed sources in their exact scopes.
    The product factorization is performed in the original independent coordinates; no independence after spectral rotation is asserted.
 
 2. Designated partner fleet02/B15:
-   `yspennstate/math-open-problems@084356368f3e6a4de2486d6fccc60e0a3f157524`,
+   `private-source-repository@084356368f3e6a4de2486d6fccc60e0a3f157524`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260924T100100Z-fleet02-B15-QFORM-auto11/REPORT.md`.
    Its `QFORM-FRESNEL-DIFFUSE-L1-STABILITY-v1` theorem says, in the exact-rank-three diffuse frame `A=D+R Lambda R^T`, `R^T R=I_3`, `c_i=|R_{i,*}|^2<=1/2`, `L=|det Lambda|`, that for two cap-one product inputs with `delta_i=||f_i-g_i||_1`,
    `||p_f-p_g||_infinity <=12 L^(-1/3) sum_i c_i^(-c_i/3) delta_i^(1-2c_i/3)`.
@@ -221,7 +221,7 @@ Qualitative absolute continuity: already true for every nonconstant affine quadr
 
 Essential boundedness: the hard quantitative layer. The full universal owner theorem remains open. In the Theorem-F chamber it is paid by (4.1).
 
-Continuous density: in the Theorem-F chamber it follows from the integrable characteristic function and costs no increase in the already-paid height. A separate fixed-Hessian theorem (`fleet03/B15`, `math-open-problems@b8cb4aa22c840d8f4fc76bcca6d0cb49d4aeb9f9`) gives a canonical `C_0` density for every fixed rank-at-least-three affine Hessian under arbitrary rough cap-one product inputs, but with a matrix-dependent height; that does not solve the universal owner bound.
+Continuous density: in the Theorem-F chamber it follows from the integrable characteristic function and costs no increase in the already-paid height. A separate fixed-Hessian theorem (`fleet03/B15`, `private-source@b8cb4aa22c840d8f4fc76bcca6d0cb49d4aeb9f9`) gives a canonical `C_0` density for every fixed rank-at-least-three affine Hessian under arbitrary rough cap-one product inputs, but with a matrix-dependent height; that does not solve the universal owner bound.
 
 Quantitative output regularity: Theorem 2 gives a universal one-half Hölder exponent inside the diffuse Theorem-F chamber, with explicit matrix parameter `M`; Section 5 proves that the exponent is sharp at the leverage endpoint. This does not contradict the already-known absence of a target-wide universal continuity modulus: the coefficient in (4.2) depends on the structural Fresnel determinant parameter.
 

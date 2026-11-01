@@ -18,7 +18,7 @@ The preceding fleet03/B15 theorem proved a finite matrix-dependent density bound
 
 where `S_D` is the Schur complement and `eta(S_D)>0` is one explicit physical Schur coefficient; for a definite block it gives `pi/sqrt(|det D|)`. The source is
 
-`yspennstate/math-open-problems@2f36eb6204ac8598eaf63faed15f9fa7fddffd0c`
+`private-source-repository@2f36eb6204ac8598eaf63faed15f9fa7fddffd0c`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T222614Z-fleet03-B15-qform-auto27/REPORT.md`.
 
 That argument does not cover matrices for which every physical `2x2` principal determinant is zero. Such matrices can nevertheless have rank three or more; for example
@@ -265,7 +265,7 @@ The result is not uniform under only `s_3(A)>=1`: the paying pair/triple physica
 
 The completed designated partner result is fleet04/B15,
 
-`yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`
+`private-source-repository@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T221909Z-fleet04-B15-ruled-trace-c0-r8/REPORT.md`.
 
 Its Theorem 6.1 states that for a fixed cap-one product instance with `rank(A)>=3`, any separately proved interval bound

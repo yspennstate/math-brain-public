@@ -11,7 +11,7 @@ Full unrestricted QFORM and global continuity remain OPEN.
 
 The newest compatible completed fleet03/B20 result is r42 at
 
-- `yspennstate/math-open-problems@eb50a2dc3acc7884f284a1f94847106c89bf5889`
+- `private-source-repository@eb50a2dc3acc7884f284a1f94847106c89bf5889`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T234606Z-fleet03-B20-QFORM-r42/REPORT.md`.
 
 Its operator third-compound theorem says
@@ -55,7 +55,7 @@ This retains every same-bank term and every outside coefficient; it is coefficie
 
 ## Pinned fifth-volume exit applied to this exact cut
 
-The required pinned source `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, proves the unrestricted fifth-volume receiver
+The required pinned source `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, proves the unrestricted fifth-volume receiver
 
 `||p_Q||infinity <= 5 sqrt(2e) e5(M^T M)^(-1/10)`
 

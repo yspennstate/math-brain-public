@@ -15,7 +15,7 @@ The target remains the full arbitrary-dimensional statement for independent orig
 This proof uses three completed inputs at their exact scopes.
 
 1. `QFORM-PHYSICAL-PAIR-LOG-ENVELOPE-v1`, canonical source
-   `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+   `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
    path `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
    For two original independent cap-one coordinates with an invertible indefinite coefficient matrix `B`, writing
    `D=|det B|`, `kappa=sigma_min(B)`, and `t0` for the completed-pair critical value, for every `r>0`
@@ -25,7 +25,7 @@ This proof uses three completed inputs at their exact scopes.
    The shifts of the two physical coordinates may depend arbitrarily on the remaining original variables when the estimate is applied conditionally.
 
 2. `QFORM-CROSS-3VOLUME-L3-v1`, fleet03/B13, canonical source
-   `yspennstate/math-open-problems@3345697a0e1ea6c84ef3128a22917d49f0b0a826`,
+   `private-source-repository@3345697a0e1ea6c84ef3128a22917d49f0b0a826`,
    path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T013555Z-fleet03-B13-qform-r21/REPORT.md`.
    If a quadratic polynomial in independent cap-one original coordinates has a disjoint physical cross block `M` with
 
@@ -38,7 +38,7 @@ This proof uses three completed inputs at their exact scopes.
    Arbitrary same-side quadratic terms and affine terms are allowed.
 
 3. The designated partner fleet02/B13 result `QFORM-L3-RIESZ-INTERPOLATION-v1`, canonical source
-   `yspennstate/math-open-problems@f3a7dec6b3f56132ba769d3e0e205596114f22c2`,
+   `private-source-repository@f3a7dec6b3f56132ba769d3e0e205596114f22c2`,
    path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T025607Z-fleet02-B13-extreme-cf3f0909/REPORT.md`.
    If a probability density `p` satisfies `||p||_3<=M`, then
 
@@ -219,7 +219,7 @@ Thus one uniformly invertible indefinite physical pair plus five robust cross si
 ## 7. Actual application to the designated partner's finite-grid bad-witness normal form
 
 The designated fleet02/B13 r15 normal form, canonical report
-`yspennstate/math-open-problems@d59fc91cdb6c772a0b3c73ba5b90fb62e10e3bf5`,
+`private-source-repository@d59fc91cdb6c772a0b3c73ba5b90fb62e10e3bf5`,
 produces, under a hypothetical failure of full QFORM, for every `m` a rational finite-grid product-indicator witness with slab ratio
 
 `R_m > C3 m`, `C3=9 sqrt(3e)=25.701021...`,

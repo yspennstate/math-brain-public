@@ -6,7 +6,7 @@ Reviewer role: fleet02/B12 (counterexample emphasis; scalar pivots, completing-s
 
 ## Source pin and verdict
 
-Mathematical baseline audited: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, file `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`. The source git blob is `183ccd294763214e6a707e8d4749ff9a8cf7006d`, package SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`, 47,883 bytes, 790 lines. At the final pre-write refresh, master was `8c893780233ba299a0fa3954b07409f462d744fe` and `manuscript.tex` still returned the same source blob.
+Mathematical baseline audited: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, file `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`. The source git blob is `183ccd294763214e6a707e8d4749ff9a8cf7006d`, package SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`, 47,883 bytes, 790 lines. At the final pre-write refresh, master was `8c893780233ba299a0fa3954b07409f462d744fe` and `manuscript.tex` still returned the same source blob.
 
 **Mathematical verdict on the pinned 17-eigenvalue theorem: PASS in this review.** I found no theorem-breaking FALSE statement and no fatal mathematical GAP. I found one harmless presentation GAP in the projection-density proof (described below), plus UNCHECKED package/build and historical-test claims that are not mathematical dependencies. This is one worker review, not formal verification or an independent-validation certificate. The unrestricted three-eigenvalue QFORM conjecture remains open.
 

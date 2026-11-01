@@ -1,6 +1,6 @@
 # ProofNet24 P26 immutable archive / health fragment — 2026-09-16 05:56:27
 
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Protocol: `proofnet24/HOURLY_PROTOCOL_2026-09-15.md`  
 Email/Gmail: not used.  
 Number theory: none.

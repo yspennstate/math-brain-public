@@ -16,7 +16,7 @@ The target remains exact: independent ORIGINAL real coordinates with probability
 
 Immediate predecessor:
 
-`yspennstate/math-open-problems@a34117c225af44237b2da3198897932806a95a82`,
+`private-source-repository@a34117c225af44237b2da3198897932806a95a82`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260924T072000Z-fleet01-B02-qform-auto11-r47/REPORT.md`.
 
@@ -40,7 +40,7 @@ is the exact scalar Schur complement in the remaining original coordinates (row/
 
 The newest completed designated partner is fleet02/B02:
 
-`yspennstate/math-open-problems@6b5539d7c55c495c8b0f410b90dbf704c70c3a50`,
+`private-source-repository@6b5539d7c55c495c8b0f410b90dbf704c70c3a50`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260924T080656Z-fleet02-B02-QFORM-auto11/REPORT.md`.
 
@@ -62,7 +62,7 @@ This forces the present mechanism change: use weighted Fourier / half-Riesz cred
 
 The ridge source actually used below is
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
@@ -287,7 +287,7 @@ If (4.1) fails, then
 
 This is precisely the strong original-coordinate off-diagonal-hub scale in the completed fleet03/B02 r47 compiler
 
-`yspennstate/math-open-problems@859066cc3edee1bbeafe367e3bf2d630a4c425d9`.
+`private-source-repository@859066cc3edee1bbeafe367e3bf2d630a4c425d9`.
 
 Applied to the same robust full cut, that source gives a genuine physical-E3 Fourier payment, at most four near-coloops, or a carrier-aligned hub of size `>1/(228 sqrt(2))`. Therefore the diagonal-pivot branch need not retain a separate large-row subcase: it rejoins the already-tracked off-diagonal carrier funnel.
 

@@ -253,6 +253,6 @@ The full universal QFORM conjecture remains **OPEN / NOT PROVED**. Continuity is
 
 1. Livshyts--Paouris--Pivovarov, arXiv:1507.07949, Theorem 1.1.
 2. Hu--Paouris, arXiv:2403.20192, simple-random-tensor small-ball theorem and sharp-low-dimensional statement.
-3. Designated partner fleet03/B18 `QFORM-ONE-SIDED-CROSS-AGGREGATE-v1`: `yspennstate/math-open-problems@fb0c75e8f951da2564fe595f09f7e484c37dfd40`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/B18-20260922T155856Z-r13/REPORT.md`.
-4. Latest completed partner correction/aggregate-before-conditioning rescue: `yspennstate/math-open-problems@58cde0caae66f5236332d48a1022fa7c5d12a1f7`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260922T175531Z-fleet03-B18-QFORM-r15/REPORT.md`.
+3. Designated partner fleet03/B18 `QFORM-ONE-SIDED-CROSS-AGGREGATE-v1`: `private-source-repository@fb0c75e8f951da2564fe595f09f7e484c37dfd40`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/B18-20260922T155856Z-r13/REPORT.md`.
+4. Latest completed partner correction/aggregate-before-conditioning rescue: `private-source-repository@58cde0caae66f5236332d48a1022fa7c5d12a1f7`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260922T175531Z-fleet03-B18-QFORM-r15/REPORT.md`.
 5. Current owner proof-first request and full-matrix pair theorem source are pinned by brain control revision `2026-09-22.11`; no claim from those sources is extended beyond its stated scope here.

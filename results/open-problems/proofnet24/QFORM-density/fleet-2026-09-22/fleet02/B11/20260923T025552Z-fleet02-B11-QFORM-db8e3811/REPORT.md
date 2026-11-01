@@ -9,13 +9,13 @@ The full QFORM conjecture is not proved here. The first unpaid implication attac
 
 ## 1. Source pins actually used
 
-1. Required Claude source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`. Its proved rank-two PSD theorem states that for two orthonormal spectral directions and positive eigenvalues `sigma1,sigma2`, the product-input quadratic form has density at most
+1. Required Claude source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`. Its proved rank-two PSD theorem states that for two orthonormal spectral directions and positive eigenvalues `sigma1,sigma2`, the product-input quadratic form has density at most
 
    `2*pi / sqrt(sigma1*sigma2)`.
 
    The same source's ruled theorem gives the `(2,1)` one-sheet side `t>=0` the dimension-free bound `<= pi*sqrt(2)` when all three spectral magnitudes are at least one.
 
-2. Designated partner actually applied: fleet03/B11 r22, `yspennstate/math-open-problems@3a8e3494dac898f3b7180d5b80a8c5eb974a8412`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T021243Z-fleet03-B11-QFORM-r22/REPORT.md`. Its full-matrix theorem gives, if two ORIGINAL physical diagonals satisfy `Aii>=eta` and `Ajj<=-eta`,
+2. Designated partner actually applied: fleet03/B11 r22, `private-source-repository@3a8e3494dac898f3b7180d5b80a8c5eb974a8412`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T021243Z-fleet03-B11-QFORM-r22/REPORT.md`. Its full-matrix theorem gives, if two ORIGINAL physical diagonals satisfy `Aii>=eta` and `Ajj<=-eta`,
 
    `||p_Q||_inf <= eta^(-1) [9.2 + log_+(10000 eta)]`.
 

@@ -198,7 +198,7 @@ For `R>0`, replace `f_W(w)` by the finite majorant `c 1_{[-R,R]}(w)`. Its mass i
 The completed designated partner theorem fleet02/B17,
 
 `QFORM-SEPARATED-SYMMETRIC-UNIMODAL-OFFZERO-v1`,
-canonical source `yspennstate/math-open-problems@84ffc0f291ae192f4d82742ae6909943f6710bc7`,
+canonical source `private-source-repository@84ffc0f291ae192f4d82742ae6909943f6710bc7`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/B17-20260922T235536Z-r12-symmetric-unimodal/REPORT.md`,
 
 proves that for independent symmetric-unimodal `Y_1,Y_2,Y_3` and positive coefficients, the density of `Y_1^2+Y_2^2-Y_3^2` has its global maximum at zero.

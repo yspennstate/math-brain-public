@@ -13,7 +13,7 @@ That report's strong-edge leaf supplies a literal ORIGINAL-coordinate invertible
 while the owner target supplies `s_3(A)>=1`.
 
 Apply the proved arbitrary-rank physical-pair theorem from
-`math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`:
+`private-source@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`:
 
 `||p_Q||_infinity <= 3*400^(1/3) * (D^2*kappa*s_3(A))^(-1/6)`.
 

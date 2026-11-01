@@ -61,7 +61,7 @@ The same shell mechanism also shows why bare `L^infinity` control of a multidime
 
 ## Relation to the fresh fleet02/B17 correction
 
-The same final control refresh exposed the completed `fleet02/B17` result `QFORM-CONDITIONAL-3D-PROJECTION-CAP-FALSE-v1`, canonical `yspennstate/math-open-problems@f117a4870969d37706b8d7e62cbcae671cc2d3b0`. It shows independently that the proposed universal **conditional** cap for three active spectral coordinates is false even for an exact QFORM product source.
+The same final control refresh exposed the completed `fleet02/B17` result `QFORM-CONDITIONAL-3D-PROJECTION-CAP-FALSE-v1`, canonical `private-source-repository@f117a4870969d37706b8d7e62cbcae671cc2d3b0`. It shows independently that the proposed universal **conditional** cap for three active spectral coordinates is false even for an exact QFORM product source.
 
 Thus both scalar interfaces in the revision-8 sketch require replacement:
 

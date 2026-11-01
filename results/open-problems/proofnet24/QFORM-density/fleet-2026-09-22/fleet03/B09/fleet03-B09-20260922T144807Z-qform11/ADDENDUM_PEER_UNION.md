@@ -2,7 +2,7 @@
 
 After the main B09 derivation, I consumed the completed same-role other-account result
 
-`yspennstate/math-open-problems@af33ca7715dcdf248d4bb4732ee533a1f47b253b:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T134455Z-r11/REPORT.md`.
+`private-source-repository@af33ca7715dcdf248d4bb4732ee533a1f47b253b:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T134455Z-r11/REPORT.md`.
 
 Its theorem `QFORM-RANK2-CROSS-TRANSVERSE-SHEAR-v1` proves, on a `3 x 2` rank-two cross packet with zero kernel curvature and one-overlap energy `M_1>0`,
 

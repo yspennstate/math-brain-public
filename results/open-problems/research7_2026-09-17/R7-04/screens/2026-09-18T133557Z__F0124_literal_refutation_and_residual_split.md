@@ -4,7 +4,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 
 ## Snapshot and shard gate
 
-- Repository: private `yspennstate/math-open-problems`, branch `master`.
+- Repository: private `private-source-repository`, branch `master`.
 - Run-start captured master: `e4eb6920ab45122a2228633062148c6052600286`.
 - Fresh master immediately before this screen: `42129ecfbab6960c808022996f981e87d13ed6a8`.
 - Slot: `R7-04`, native ID `6aabe7ea6e1881919a65503f8445a813`.

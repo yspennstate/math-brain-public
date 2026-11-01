@@ -187,7 +187,7 @@ These constants are independent of `n`, the unselected spectrum, signs, moments,
 
 The designated completed partner is `fleet02/B08` r18, `QFORM-DIFFUSE-ACTUAL-SPECTRAL-GATE-v1`, canonical source
 
-`yspennstate/math-open-problems@9fb59f9549a85af6173ade505fd53bc035c611ba`
+`private-source-repository@9fb59f9549a85af6173ade505fd53bc035c611ba`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T004036Z-fleet02-B08-qform-diffuse-r18/REPORT.md`.
 

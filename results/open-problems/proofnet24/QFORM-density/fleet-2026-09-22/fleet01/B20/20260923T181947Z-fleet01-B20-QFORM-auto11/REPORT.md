@@ -22,7 +22,7 @@ The active continuation `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z` is acknowledge
 
 The freshest completed designated partner package is
 
-`yspennstate/math-open-problems@391bc53a0249051fde8383684519350051ae4384`
+`private-source-repository@391bc53a0249051fde8383684519350051ae4384`
 
 with underlying report commit
 

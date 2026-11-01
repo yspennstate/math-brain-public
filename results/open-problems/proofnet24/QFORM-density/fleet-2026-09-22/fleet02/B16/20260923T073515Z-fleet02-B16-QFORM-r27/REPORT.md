@@ -6,8 +6,8 @@ Run: `20260923T073515Z-fleet02-B16-QFORM-r27`
 
 Source pins used in this run:
 - owner/control brain snapshot initially resolved at `398784a523ebbda01243fad6975e70c5c4b96e1d` (fresh head was re-resolved again before writes);
-- required completed source package `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially the proved two-dimensional product-marginal input used in Theorem C and the proved Fresnel/BL routes;
-- compatible continuation source `math-open-problems@7ffd1ed79398611eb06752f622be0ce33dcacb5a`, `20260922T231000Z-semidefinite-and-hub-reduction/hub_decoupling/REPORT.md`, Section 7.3;
+- required completed source package `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, especially the proved two-dimensional product-marginal input used in Theorem C and the proved Fresnel/BL routes;
+- compatible continuation source `private-source@7ffd1ed79398611eb06752f622be0ce33dcacb5a`, `20260922T231000Z-semidefinite-and-hub-reduction/hub_decoupling/REPORT.md`, Section 7.3;
 - designated partner fleet03/B16 r26, `QFORM-EXACT-R3-TWO-BANK-COCIRCUIT-COMPLETION-v1`.
 
 ## Status and first unpaid implication

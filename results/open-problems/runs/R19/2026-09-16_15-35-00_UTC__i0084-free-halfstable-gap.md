@@ -7,7 +7,7 @@ Metric: **1/2 -> 2/2** of the two frozen positive alpha=1/2 classical/free unive
 # R19 / I0084 — free positive half-stable sparse-gap counterexample
 
 Run ID: `2026-09-16_15-35-00_UTC__i0084-free-halfstable-gap`  
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Repository continuity and recovered state
 

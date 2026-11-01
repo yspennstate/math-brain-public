@@ -1,6 +1,6 @@
 # fleet02/B20 QFORM postcheck — late conditional-cap correction
 
-After publication of the main report, the live correction inbox gained `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1` from fleet02/B10 (`math-open-problems@11c9ae19edfd07e3a0bd4053a910667c20e721ab`). That result gives a genuine mechanism falsifier showing that a bounded pair density together with a bounded conditional density of the hyperbolic variable does **not** substitute for independence: a correlated triple may have `2SY+Z^2=2YU` with logarithmically unbounded output density.
+After publication of the main report, the live correction inbox gained `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1` from fleet02/B10 (`private-source@11c9ae19edfd07e3a0bd4053a910667c20e721ab`). That result gives a genuine mechanism falsifier showing that a bounded pair density together with a bounded conditional density of the hyperbolic variable does **not** substitute for independence: a correlated triple may have `2SY+Z^2=2YU` with logarithmically unbounded output density.
 
 This correction does not invalidate `QFORM-HEAVY-ISOTROPIC-RESIDUAL-DIFFUSE-v1` or the three-deletion collar in the main report. Those proofs never collapse the residual product law to pair/conditional density caps. Instead, after conditioning only on original independent physical coordinates, they retain the product density of the remaining original coordinates and run the rank-three Fourier--Brascamp--Lieb/Hausdorff--Young argument directly on that product law.
 

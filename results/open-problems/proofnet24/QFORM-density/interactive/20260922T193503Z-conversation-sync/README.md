@@ -1,6 +1,6 @@
 # QFORM conversation source archive and proof-status check
 
-Record: 20260922T193503Z-conversation-sync. Repository: yspennstate/math-open-problems, branch master. Programme: QFORM-DENSITY-3EIG-20260922.
+Record: 20260922T193503Z-conversation-sync. Repository: private-source-repository, branch master. Programme: QFORM-DENSITY-3EIG-20260922.
 
 ## What was synchronized
 
@@ -14,7 +14,7 @@ The manifest records exact paths, immutable source commits and hashes. The sourc
 
 From an existing local clone containing the source commits, run:
 
-    python restore_sources.py --repo-root /path/to/math-open-problems --output /path/to/restored-qform
+    python restore_sources.py --repo-root /path/to/private-source --output /path/to/restored-qform
 
 The helper uses only local files or local git show, checks every reconstructed text file, and refuses conflicting output. It does not access the network, execute mathematical checkers, compile LaTeX, or launch workflows. The raw ZIP byte streams are not reconstructed.
 

@@ -17,13 +17,13 @@ The full conjecture is not proved here. All arguments remain in original coordin
 
 The named partner `fleet02/B12` proved the hostile-sign Ky-Fan budget for `K` disjoint definite physical triples:
 
-`yspennstate/math-open-problems@dd063cf7cfb9b0748193f8ab2eaf75f30d42c9bb`
+`private-source-repository@dd063cf7cfb9b0748193f8ab2eaf75f30d42c9bb`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T215532Z-fleet02-B12-QFORM-r18/REPORT.md`.
 
 Its input theorem is the source-valid physical-three-block result
 
-`yspennstate/math-open-problems@b3c543b40dfaef13468466fa82625303a7719af8`
+`private-source-repository@b3c543b40dfaef13468466fa82625303a7719af8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260922T141530Z-two-samesign-threeblock/REPORT.md`:
 

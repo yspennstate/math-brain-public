@@ -13,22 +13,22 @@ The full universal conjecture is **not** proved here. This report proves a new s
 ## 1. Sources actually used
 
 1. Newest volume theorem and sharp q-dependent constants:
-   `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+   `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
    `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
    I use its original-coordinate decoupling, determinant expansion, endpoint-safe Brascamp--Lieb treatment, and sharp Hausdorff--Young normalization.
 
 2. Determinant-weighted entropy basis law:
-   `yspennstate/math-open-problems@32c257209b588141fb60af698f478f1d0ad20b8a`,
+   `private-source-repository@32c257209b588141fb60af698f478f1d0ad20b8a`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T123512Z-b07-qform-minors-11/REPORT.md`, theorem `QFORM-PLUCKER-ENTROPY-BL-v1`.
    I use its conditioned-disjoint-basis entropy construction, but lift it to the **full row/column three-volume law** rather than a single rank-three frame or selected column triple.
 
 3. Previous B02 fixed-three-column packet:
-   `yspennstate/math-open-problems@f445f3dd7e2b845f96ac58cc4bd96f12ec7a839c`,
+   `private-source-repository@f445f3dd7e2b845f96ac58cc4bd96f12ec7a839c`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T040049Z-fleet03-B02-qform-r19/REPORT.md`.
    The present theorem removes the fixed-column-triple selection from that mechanism.
 
 4. Designated partner `fleet04/B02`:
-   `yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+   `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`, theorem `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`.
    Its genuine L2 Fourier estimate is applied in Section 7 below.
 

@@ -14,7 +14,7 @@ The unrestricted theorem remains OPEN / NOT PROVED / NOT DISPROVED. Essential bo
 
 The newest designated partner fleet03/B06 result is r48:
 
-- `yspennstate/math-open-problems@a4090a876e18635918b87f87a7af42726b29337a`,
+- `private-source-repository@a4090a876e18635918b87f87a7af42726b29337a`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T001713Z-fleet03-B06-qform-r48/REPORT.md`.
 
 Its exact shear-flat normal form is
@@ -29,12 +29,12 @@ I retain the standing corrections: no law-uniform pointwise quadratic-phase deca
 
 The required pinned package was reread at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 In particular `RESULTS.md` Section 7 records the completed two-coordinate logarithmic smoothing theorem, whose immutable proof is
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 That theorem is applied below at an actual inequality, not merely cited.
@@ -271,7 +271,7 @@ Full QFORM remains OPEN. Global continuity remains OPEN. No scheduler, task, ema
 ## 8. Source pins
 
 - Live correction inbox blob: `a884b835aba929c5376e6417ae5cfcd44c0f7a76`.
-- Newest designated partner fleet03/B06 r48: `yspennstate/math-open-problems@a4090a876e18635918b87f87a7af42726b29337a`, exact REPORT path above.
-- Required pinned package: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`.
-- Physical-pair proof: `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+- Newest designated partner fleet03/B06 r48: `private-source-repository@a4090a876e18635918b87f87a7af42726b29337a`, exact REPORT path above.
+- Required pinned package: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`.
+- Physical-pair proof: `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 - One-dimensional product projection input: sharp Rogozin/Ball / Juškevičius--Lee maximum-density consequence as used throughout the current QFORM source package; for nonzero `w`, `||p_<w,Y>||_infinity<=sqrt(2)/||w||_2`.

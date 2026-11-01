@@ -173,9 +173,9 @@ The current counterexample evidence rules out the naive statement that the first
 
 ## Sources consumed
 
-- fleet02/B02, `B02-20260922T120900Z-qform-r11`, canonical math-open-problems commit `400f82c8b98fc5623f567581b6ccb0b4298974e8`.
-- fleet02/B10, `20260922T1147Z-qform-rank3-coupled-B10-r1`, canonical math-open-problems commit `1eba911614ef9f6683f8eacb5d6608a0f9a4b833`.
-- fleet01/B19, `20260922T121338Z-b19-qform-r11`, canonical math-open-problems commit `072cf685a12893b44d555f14e4e610bcf2154037`.
+- fleet02/B02, `B02-20260922T120900Z-qform-r11`, canonical private-source commit `400f82c8b98fc5623f567581b6ccb0b4298974e8`.
+- fleet02/B10, `20260922T1147Z-qform-rank3-coupled-B10-r1`, canonical private-source commit `1eba911614ef9f6683f8eacb5d6608a0f9a4b833`.
+- fleet01/B19, `20260922T121338Z-b19-qform-r11`, canonical private-source commit `072cf685a12893b44d555f14e4e610bcf2154037`.
 - live correction `QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE`, canonical falsifier commit `17dec75dc10459933f8bfde30daa86d1c6d90a6a`.
 - Mark Rudelson and Roman Vershynin, *Small ball probabilities for linear images of high-dimensional distributions*, IMRN 2015, Theorem 1.2, DOI `10.1093/imrn/rnu243`, arXiv `1402.4492`.
 

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R19 — I0120 projective resonance, exact factor-3 closure, and six-run handoff
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / SOURCE OPEN / SIX UNCHANGED RUNS / ROTATED / UNAUDITED / SUCCESSOR_ADMISSION_REQUIRED**.
 

@@ -16,7 +16,7 @@ This report does **not** use the refuted arbitrary-joint rank-three coarea bound
 
 The assigned partner fleet02/B05 proved `QFORM-2D-PARSEVAL-PROJECTION-CAP-v1` in
 
-`yspennstate/math-open-problems@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`,
+`private-source-repository@e74a5d8fabe1c914be1ca2d3689a2cd65ba58f5a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T155206Z-b05-qform-779c4c9b/REPORT.md`.
 

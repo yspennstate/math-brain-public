@@ -33,7 +33,7 @@ This is strictly narrower than the partner r50 terminal alternative “some phys
 
 The required fixed source was read exactly at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -65,7 +65,7 @@ The fixed-source proofs retain the original product laws; the spectral frame is 
 
 The newest compatible designated partner found at publication is fleet03/B08 r50,
 
-`yspennstate/math-open-problems@11f861a6349b8865fcbcf6f1feb5afcccd25531a`,
+`private-source-repository@11f861a6349b8865fcbcf6f1feb5afcccd25531a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T042041Z-fleet03-B08-qform-diffuse-r50/REPORT.md`.
 

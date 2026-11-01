@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — no authentica
 
 # PROB10-04 run 13 — simplicial entropy-dual certificate for the global Díaz annulus
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **OPEN / PARTIAL**.
 

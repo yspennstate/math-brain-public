@@ -16,7 +16,7 @@ The owner target remains the unrestricted statement: for every finite `n`, indep
 
 The immediate B16 predecessor is
 
-`yspennstate/math-open-problems@ed79d5f9d8a99c466397114723e3695d49bf9044`
+`private-source-repository@ed79d5f9d8a99c466397114723e3695d49bf9044`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T035222Z-fleet03-B16-QFORM-r25/REPORT.md`.
 
@@ -42,7 +42,7 @@ No random variable has been rotated.
 
 The completed analytic input used below is fleet01/B18 `QFORM-FRESNEL-CAPPED-BASIS-WEIGHTS-v1`, canonical source
 
-`yspennstate/math-open-problems@8c04ccbc1f032d1a82ad505223f08e3c344bde74`
+`private-source-repository@8c04ccbc1f032d1a82ad505223f08e3c344bde74`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T225705Z-qform-B18-a01-r19/REPORT.md`.
 
@@ -68,7 +68,7 @@ The r24 residual chamber has a dominant physical row with
 
 The designated partner fleet04/B16 is already source-valid here. Its theorem `QFORM-RULED-PLUECKER-ENDPOINT-v1`, canonical source
 
-`yspennstate/math-open-problems@b111363ff02b67015d14db35482e0150591744cd`
+`private-source-repository@b111363ff02b67015d14db35482e0150591744cd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T231542Z-fleet04-B16-QFORM-r1/REPORT.md`,
 

@@ -109,7 +109,7 @@ Thus the old need for lower bounds on individual `q_ki` and complement determina
 
 ## Pinned Fourier obstruction used at an equation
 
-The pinned `D5` theorem at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` gives for every disjoint physical cross block `M=A[I,J]`
+The pinned `D5` theorem at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` gives for every disjoint physical cross block `M=A[I,J]`
 
 `rho <= 5 sqrt(2e) e_5(M^T M)^(-1/10)`.
 

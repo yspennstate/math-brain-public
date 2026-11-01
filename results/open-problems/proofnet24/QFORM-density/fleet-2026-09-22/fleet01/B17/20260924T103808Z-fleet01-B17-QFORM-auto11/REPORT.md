@@ -339,7 +339,7 @@ Take all physical coordinates independently uniform on \([-1/2,1/2]\). The laten
 
 The completed Fresnel--Brascamp--Lieb Theorem F at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
 therefore gives a common integrable \(O(|t|^{-3/2})\) characteristic-function majorant for the **actual finite physical forms**. Pointwise convergence of characteristic functions plus dominated convergence and Fourier inversion yield
 \[
@@ -364,11 +364,11 @@ Thus the known lower obstruction \(C_{\rm univ}\ge3\sqrt2\) survives even under 
 The newest designated-partner result is fleet02/B17's
 `finite tight-frame Poisson-location barrier`, source-pinned at
 
-`yspennstate/math-open-problems@1e29eef72bce4aa7766f2f81c8ea13fb0786b6c9`
+`private-source-repository@1e29eef72bce4aa7766f2f81c8ea13fb0786b6c9`
 
 with checker results at
 
-`yspennstate/math-open-problems@765da2b09b7612839c204e1899a7363574e10014`.
+`private-source-repository@765da2b09b7612839c204e1899a7363574e10014`.
 
 It proves, for every fixed finite Parseval tight frame with root-\(m\) cap-one satellite laws, that the exact finite target matrices have complete output-density convergence to an isotropic Gaussian core plus a generally non-collinear compound-Poisson location, and
 \[
@@ -454,7 +454,7 @@ This is genuinely non-collinear and non-Lindeberg. Applying the completed fleet0
 
 We can make this concrete inequality strict by combining the same partner construction with fleet02/B17's earlier completed quantitative Gaussian-location theorem
 
-`yspennstate/math-open-problems@f1b5f3b66e19fa17acf395ea31e6615d7ddc7440`,
+`private-source-repository@f1b5f3b66e19fa17acf395ea31e6615d7ddc7440`,
 checks at `97d91254e56ad2f8c79b121a0ce8bf66472a11d9`.
 
 For \(G\sim N(0,I/12)\), a reflection \(B\), and deterministic shift \(m\), that theorem gives

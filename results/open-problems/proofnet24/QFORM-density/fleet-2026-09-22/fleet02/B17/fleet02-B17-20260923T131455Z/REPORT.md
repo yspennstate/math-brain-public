@@ -10,7 +10,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 ## 1. First unpaid implication and strengthened target class
 
-The predecessor theorem at `yspennstate/math-open-problems@189fc052089ae2d3237bc0865b290b01b26a6513` reduced the exact one-heavy majority-sign family
+The predecessor theorem at `private-source-repository@189fc052089ae2d3237bc0865b290b01b26a6513` reduced the exact one-heavy majority-sign family
 \[
 A_m=\operatorname{diag}(1,J_m/m,-J_m/m)
 \]
@@ -104,7 +104,7 @@ Thus it remains only to bound one exact cone-tip integral.
 
 ## 4. Two cube-projection norms
 
-The pinned Claude source `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` uses the Rogozin/Ball cube-slicing theorem in its proved `L^p` characteristic-function lemma. Apply that same completed projection bound to the actual bank here.
+The pinned Claude source `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837` uses the Rogozin/Ball cube-slicing theorem in its proved `L^p` characteristic-function lemma. Apply that same completed projection bound to the actual bank here.
 
 Because `||a||_2=1`, `S_a` is a unit-direction one-dimensional projection of the centered unit cube. Therefore
 \[
@@ -217,7 +217,7 @@ p_Q(s)\le\pi\sqrt2.
 \]
 That constant is above `3sqrt(2)` and therefore is only an auxiliary one-sheet control. The exact bathtub reduction plus (5.8) improves it to a global bound below `3sqrt(2)` for the present source-valid family. Failure of `pi sqrt(2)` to reach the candidate sharp constant is a proof-constant limitation, not a QFORM counterexample.
 
-The latest completed designated partner `fleet03/B17` result is `yspennstate/math-open-problems@86b970bb350ff450a5f3672eff13aaec60c18447`. For the genuinely dense three-coordinate Householder cube
+The latest completed designated partner `fleet03/B17` result is `private-source-repository@86b970bb350ff450a5f3672eff13aaec60c18447`. For the genuinely dense three-coordinate Householder cube
 \[
 A=I-2ee^\top,\qquad e=(1,1,1)/\sqrt3,
 \]

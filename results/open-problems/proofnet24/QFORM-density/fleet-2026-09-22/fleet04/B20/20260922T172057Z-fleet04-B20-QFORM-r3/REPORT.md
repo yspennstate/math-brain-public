@@ -13,19 +13,19 @@ This report closes the cross-dominated second-Schur-row branch left by the assig
 
 ## 2. Source-pinned dependencies
 
-1. **Assigned partner fleet01/B20 r13.** `yspennstate/math-open-problems@f45187170f0d940c8bdc61d095564f92fb749092`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T164728Z-fleet01-B20-QFORM-r13/REPORT.md`. It proves the shared-anchor exterior-square reserve and physical diagonal/cross-cut dichotomy, closes the diagonal-dominated second-row branch, and leaves exactly the cross-dominated alternative.
+1. **Assigned partner fleet01/B20 r13.** `private-source-repository@f45187170f0d940c8bdc61d095564f92fb749092`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260922T164728Z-fleet01-B20-QFORM-r13/REPORT.md`. It proves the shared-anchor exterior-square reserve and physical diagonal/cross-cut dichotomy, closes the diagonal-dominated second-row branch, and leaves exactly the cross-dominated alternative.
 
-2. **Cross-bank quarter moment.** fleet01/B19, `yspennstate/math-open-problems@2e5d5cdc3bb7121673bc920497fb11cac9eceb46`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260922T155027Z-fleet01-B19-QFORM-r11/REPORT.md`. For disjoint original-coordinate banks and cross block of top singular value `sigma`, with arbitrary same-bank quadratic and affine terms,
+2. **Cross-bank quarter moment.** fleet01/B19, `private-source-repository@2e5d5cdc3bb7121673bc920497fb11cac9eceb46`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260922T155027Z-fleet01-B19-QFORM-r11/REPORT.md`. For disjoint original-coordinate banks and cross block of top singular value `sigma`, with arbitrary same-bank quadratic and affine terms,
 
    `sup_t E|W-t|^(-1/4) <= B sigma^(-1/4)`,
 
    where `B=(2+sqrt(pi))(4e)^(1/4)`.
 
-3. **Physical three-pivot endpoint.** fleet02/B20, `yspennstate/math-open-problems@2979c262e6ba9c4cef66314aabd714431f5e9c95`. For successive scalar Schur pivots `p1,p2,p3`,
+3. **Physical three-pivot endpoint.** fleet02/B20, `private-source-repository@2979c262e6ba9c4cef66314aabd714431f5e9c95`. For successive scalar Schur pivots `p1,p2,p3`,
 
    `||p_Q||_infinity <= C3 (|p1|^4 |p2|^3 |p3|)^(-1/8)`, `C3<94.356`.
 
-4. **Translated quadratic kernel.** The source kernel recorded in `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, path `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, states for
+4. **Translated quadratic kernel.** The source kernel recorded in `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, path `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, states for
 
    `Psi(u)=1+log(1/|u|)` when `0<|u|<=1` and `Psi(u)=|u|^(-1/4)` when `|u|>=1`,
 

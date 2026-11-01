@@ -62,6 +62,6 @@ transverse packet: `H_(1/2)(Q) <= 2^(7/2) H^(-1/2)`.
 
 This does NOT yet give a density bound from two-anchor E2 alone; the next step must spend a third spectral currency. Indeed the rank-two family `Q=2(eps X1+eps^(-1)Z1)(eps X2+eps^(-1)Z2)` has a genuinely nonzero anchor block, `Z_2=1`, and logarithmically unbounded density for independent centered unit-interval inputs. This is an obstruction only to a local E2-to-density theorem, not to QFORM, because the matrix has rank two.
 
-Required pinned source actually used: yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, Section 2.4 (LPP projection density) and Lemma 4.1 (fractional potentials).
+Required pinned source actually used: private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, Section 2.4 (LPP projection density) and Lemma 4.1 (fractional potentials).
 
-Designated partner actually used: yspennstate/math-open-problems@7ad9327f11c39bd465780bd1539d52de9feaacdd, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T110409Z-fleet03-B07-qform-r29/REPORT.md`.
+Designated partner actually used: private-source-repository@7ad9327f11c39bd465780bd1539d52de9feaacdd, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T110409Z-fleet03-B07-qform-r29/REPORT.md`.

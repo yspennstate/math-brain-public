@@ -25,7 +25,7 @@ The previous B14 runs completed law-level localization and several fragment/gap 
 
 Fleet02/B14 run `20260922T170244Z-fleet02-B14-QFORM-r16`, canonical report
 
-`yspennstate/math-open-problems@09de6ccb5717e33b999cae0cf0c6b5f6a3579f08`
+`private-source-repository@09de6ccb5717e33b999cae0cf0c6b5f6a3579f08`
 
 at
 
@@ -49,7 +49,7 @@ In particular, a deterministic-outside estimate with one constant `K` may be int
 
 Interactive report
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 at
 

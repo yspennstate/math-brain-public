@@ -25,7 +25,7 @@ The point of the new theorem is that the previous lower-bound hypotheses on one 
 
 The latest completed designated partner result consumed is fleet03/B13 r36:
 
-`yspennstate/math-open-problems@a558625206539a6eaee5aa6b2c6d851ccd2f1990`
+`private-source-repository@a558625206539a6eaee5aa6b2c6d851ccd2f1990`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T223116Z-fleet03-B13-qform-r36/REPORT.md`.
 
@@ -61,7 +61,7 @@ and `rho=P{X^TAX in J}/|J|` is any slab ratio. The partner's proof already works
 
 The owner-required pinned source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 in `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. I read `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The completed result used below is the unconditional fifth-volume theorem `D5`; no numerical counterexample-search output is used as proof.
 

@@ -3,7 +3,7 @@ attacking: the genuinely nonzero near-coloop hub-square collar — average the f
 
 # Early substantive calculation
 
-The previous B03 r49 half-Riesz report left the bare null-pivot near-coloop density as an apparent debt. Fresh source matching shows that exact zero-pivot implication is already closed by `QFORM-FRESH-HUB-DIVISIBLE-TWIST-ABSORPTION-v1` at `yspennstate/math-open-problems@be8062b160868bcc71aff45a77c56ff2d0501a9a`. The live B03 target is therefore the small **nonzero** physical hub square.
+The previous B03 r49 half-Riesz report left the bare null-pivot near-coloop density as an apparent debt. Fresh source matching shows that exact zero-pivot implication is already closed by `QFORM-FRESH-HUB-DIVISIBLE-TWIST-ABSORPTION-v1` at `private-source-repository@be8062b160868bcc71aff45a77c56ff2d0501a9a`. The live B03 target is therefore the small **nonzero** physical hub square.
 
 Let `H` be a genuine original-coordinate variable with density `f<=1`, independent of a light source object `W`. Let `L=L(W)` have marginal density at most `M`, let `R=R(W)` be arbitrary measurable and let
 

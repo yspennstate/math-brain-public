@@ -4,7 +4,7 @@ Run: `20261013T132531Z-fleet01-B12-interleaved-activation`
 
 ## Canonical package
 
-- Repository: `yspennstate/math-open-problems`
+- Repository: `private-source-repository`
 - Path: `reports/fei-2026-10-11/runs/B12/20261013T132531Z-fleet01-B12-interleaved-activation/`
 - Core readback ref: `ffa97db738c479d16888d5380950981ed38160ff`
 - Verification: all 11 pre-receipt files were fetched at that ref, nonempty, and byte-identical to the local artifacts.

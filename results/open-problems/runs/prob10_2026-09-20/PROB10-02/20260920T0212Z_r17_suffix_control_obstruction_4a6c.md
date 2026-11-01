@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # PROB10-02 / R17 — suffix-control domination and an exact hidden-prefix boundary obstruction
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Controlling owner directive: `operations/PROB10_2026-09-20.md`. The later `operations/PROGRESS20_2026-09-20.md` is also respected: P02 owns the complementary covering/cone variational route, P13 owns the complementary boundary-recursion route, and this R17 run works on the precise missing question of whether the forgotten prefix can be compressed to a small exact controller.
 

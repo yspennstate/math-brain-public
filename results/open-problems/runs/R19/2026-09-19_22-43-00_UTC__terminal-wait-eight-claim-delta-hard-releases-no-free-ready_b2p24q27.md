@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R19 — eight canonical claim mutations, all blocked; frozen I0084 preserved
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Track: `R19` / `CLOSABLE OUTSIDE`
 
 ## 1. Continuity and frozen mathematical state

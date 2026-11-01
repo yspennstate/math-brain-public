@@ -15,7 +15,7 @@ The unrestricted conjecture remains OPEN. The result below advances the exact-ra
 
 The previous B19 report is
 
-`yspennstate/math-open-problems@a2c543d935168ec8996535219d8c0c25ae261763`
+`private-source-repository@a2c543d935168ec8996535219d8c0c25ae261763`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T062711Z-fleet03-B19-QFORM-r27/REPORT.md`.
 
@@ -45,7 +45,7 @@ and, equivalently, its frame-defect formula. The live aggregate branch has
 
 The analytic receiver is fleet01/B19,
 
-`yspennstate/math-open-problems@d72be34399b8d0325c715973e7af3a37df7ce227`,
+`private-source-repository@d72be34399b8d0325c715973e7af3a37df7ce227`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260923T060843Z-fleet01-B19-QFORM-auto11/REPORT.md`.
 
@@ -59,7 +59,7 @@ where
 
 The newest partner-side structural input is fleet02/B19,
 
-`yspennstate/math-open-problems@333dd6db61c9d18e88f9b8be5bae55c811d49b42`,
+`private-source-repository@333dd6db61c9d18e88f9b8be5bae55c811d49b42`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T071320Z-fleet02-B19-QFORM/REPORT.md`.
 
@@ -67,7 +67,7 @@ It normalizes the two-dimensional `J` frame and proves a repartition under a con
 
 The designated fleet04/B19 endpoint theorem is
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 

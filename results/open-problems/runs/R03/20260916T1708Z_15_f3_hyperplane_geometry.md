@@ -4,7 +4,7 @@ Problem: **iid Rademacher square-matrix singularity — Komlós (1967) lineage; 
 # R03 immutable run report — odd-prime cube-subspace sieve, corank-one reduction, and hyperplane extremizers
 
 Run ID: `20260916T1708Z_15_f3_hyperplane_geometry`
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Recovery, source/status, and fixed metric
 

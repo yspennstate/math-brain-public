@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 
 # R16 HARD OUTSIDE — H0021 post-recovery test: correcting the linear-forest normal form and locating the multiport scale barrier
 
-Date: 2026-09-17 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-17 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Active source: H0021 = Asaf Cohen Antonir, Lyuben Lichev, Maksim Zhukovskii, *Universality in random graphs via optimal linking systems: trees and beyond*, arXiv:2608.06358v1 (6 August 2026), Conjecture 1.4.
 

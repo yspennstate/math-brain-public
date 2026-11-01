@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R14 HARD OUTSIDE — VDH-8.3-DUALITY STUCK-RECOVERY-2: random-time profile diagnosis and source-level route correction
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL / source OPEN / mandatory second and final stuck-recovery / no new theorem claim.**
 

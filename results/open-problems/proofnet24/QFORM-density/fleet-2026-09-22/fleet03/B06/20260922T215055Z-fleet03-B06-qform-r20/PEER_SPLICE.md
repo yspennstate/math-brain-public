@@ -2,7 +2,7 @@
 
 After `REPORT.md` was committed, a compatible completed fleet01/B08 result appeared at
 
-`yspennstate/math-open-problems@0363353c145404642d80537955b58c3ce519dc09`
+`private-source-repository@0363353c145404642d80537955b58c3ce519dc09`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260922T215231Z-fleet01-B08-qform-r18/REPORT.md`.
 

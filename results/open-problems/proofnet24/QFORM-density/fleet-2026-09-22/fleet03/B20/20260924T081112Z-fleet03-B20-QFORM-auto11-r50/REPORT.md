@@ -18,7 +18,7 @@ All coordinate sets below are literal ORIGINAL-coordinate sets. No random coordi
 
 The immediate same-account frontier is fleet03/B19 r52:
 
-`yspennstate/math-open-problems@5ec1cc2bf208bc0249ea89d86fd7298b62ac324e`
+`private-source-repository@5ec1cc2bf208bc0249ea89d86fd7298b62ac324e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T070220Z-fleet03-B19-QFORM-r52/REPORT.md`.
 
@@ -35,7 +35,7 @@ where
 
 The r49 source is
 
-`yspennstate/math-open-problems@b3922fe080467f7f34a7dd248460fa2478bc03d2`
+`private-source-repository@b3922fe080467f7f34a7dd248460fa2478bc03d2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T040014Z-fleet03-B19-QFORM-r49/REPORT.md`.
 
@@ -212,7 +212,7 @@ Thus the first analytic debt in r52 has been narrowed: arbitrarily high spectral
 
 The designated partner source is fleet04/B20 r13:
 
-`yspennstate/math-open-problems@d2560a041fd91c05d7fddf50f5b5414ecd2680a2`
+`private-source-repository@d2560a041fd91c05d7fddf50f5b5414ecd2680a2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260924T051424Z-fleet04-B20-QFORM-r13/REPORT.md`.
 

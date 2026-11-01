@@ -25,7 +25,7 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 Fleet02/B18 r26:
 
-- repository/commit: `yspennstate/math-open-problems@b0fe7c60d4fb400917fb53d2435d5262fdcfea97`;
+- repository/commit: `private-source-repository@b0fe7c60d4fb400917fb53d2435d5262fdcfea97`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T081256Z-fleet02-B18-QFORM-r26/REPORT.md`;
 - claim: `QFORM-SHEAR-CROSSVOLUME-MSS-BARRIER-v1`.
 
@@ -94,7 +94,7 @@ c_\delta I\le G_S,G_T\le a_\delta I.\tag{1.5}
 
 Pinned source:
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`;
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`;
 - `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, Theorem D;
 - companion `FOURIER_ROUTE_REPORT.md`, Section 1.1, extension D'.
 

@@ -47,7 +47,7 @@ A strict rational-skeleton family also shows that **fragmenting the final protec
 
 Required immutable source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -71,7 +71,7 @@ Equation (1.1) proves the whole-bank scalar slope cap in Section 4. Equation (1.
 
 Source:
 
-`yspennstate/math-open-problems@ee5472663f2f7934749ac90f2a0305a4cbda37b0`
+`private-source-repository@ee5472663f2f7934749ac90f2a0305a4cbda37b0`
 
 path
 
@@ -83,7 +83,7 @@ The result actually composed is (0.1), `QFORM-ARBITRARY-SELF-RANDOM-SLOPE-MASS-v
 
 Newest completed compatible fleet03/B14 result available before publication:
 
-`yspennstate/math-open-problems@c236343d243b355155e5bc9a5c57edc42b2d301a`
+`private-source-repository@c236343d243b355155e5bc9a5c57edc42b2d301a`
 
 path
 

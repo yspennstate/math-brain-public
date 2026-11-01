@@ -5,7 +5,7 @@ Fresh brain main later exposed the completed assigned-partner handoff
 
 with canonical mathematics
 
-`yspennstate/math-open-problems@87e1ab186dd03a3f8ba3aafcf4a9f23028e3bd6f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T114319Z-fleet03-B11-qform-r1/REPORT.md`.
+`private-source-repository@87e1ab186dd03a3f8ba3aafcf4a9f23028e3bd6f:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T114319Z-fleet03-B11-qform-r1/REPORT.md`.
 
 This addendum applies that result to the primary report rather than leaving the earlier availability statement stale.
 

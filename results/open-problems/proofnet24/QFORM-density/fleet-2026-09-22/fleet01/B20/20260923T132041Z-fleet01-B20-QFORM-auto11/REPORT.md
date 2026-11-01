@@ -11,7 +11,7 @@ The unrestricted conjecture remains **OPEN**. Full-target continuity remains **O
 
 The latest completed designated fleet02/B20 result available during the run is
 
-`yspennstate/math-open-problems@19327f690f815425717fcbd07854302df2090970`
+`private-source-repository@19327f690f815425717fcbd07854302df2090970`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T112426Z-fleet02-B20-QFORM-auto11/REPORT.md`.
 
@@ -31,7 +31,7 @@ This is used at the displayed inequalities above: the high-`P_0` state is alread
 
 The current downstream refinement used here is fleet03/B20 r32,
 
-`yspennstate/math-open-problems@491beff2a56f4fd7110597b12b2151485fa12006`
+`private-source-repository@491beff2a56f4fd7110597b12b2151485fa12006`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T125643Z-fleet03-B20-QFORM-r32/REPORT.md`.
 
@@ -41,7 +41,7 @@ It reduces the remaining `N3(1/64)` state to four original-coordinate packets, t
 
 The analytic receiver used below is fleet01/B07 r25,
 
-`yspennstate/math-open-problems@0942d044043f3a73e2411cf2676af89bbf3853e6`
+`private-source-repository@0942d044043f3a73e2411cf2676af89bbf3853e6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T130435Z-r25/REPORT.md`.
 

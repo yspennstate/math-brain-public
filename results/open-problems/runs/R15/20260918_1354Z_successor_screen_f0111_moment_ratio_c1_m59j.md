@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R15 CLOSABLE OUTSIDE — exact moment-ratio envelope closes the homogeneous `n=3,k=2` Talagrand slice
 
 Date: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 All mathematical statements newly derived below are **SELF_CHECK_ONLY** unless explicitly identified as standard/prior art. No source closure, novelty certificate, ownership claim, or independent audit is asserted.
 

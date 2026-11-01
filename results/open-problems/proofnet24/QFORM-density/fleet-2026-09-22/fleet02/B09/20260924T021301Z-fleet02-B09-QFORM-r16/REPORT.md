@@ -25,13 +25,13 @@ Section 7 gives a target-valid family proving this method obstruction exactly.
 
 Required historical source, read at the owner-pinned commit:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 with `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The completed ingredients used here are the one-dimensional product-projection density bound (in its reviewed Rogozin--Ball form in the current source line), the scalar-square / half-Riesz interface, and Theorem H, which is applied to an actual source-coordinate star in Section 6. The pinned counterexample search reports no valid full-target counterexample.
 
 The latest designated partner fleet03/B09 result is
 
-`yspennstate/math-open-problems@4ddad6fe460658dd00ffa73da5bb6da181065a26`,
+`private-source-repository@4ddad6fe460658dd00ffa73da5bb6da181065a26`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T014456Z-fleet03-B09-QFORM-auto11/REPORT.md`.
 
 It proves a Schur/E2 receiver for an exact rank-one physical pair **under rank-one pair-to-leaf cross** and arbitrary leaf curvature, with a positive transverse-defect currency. It is applied quantitatively in Section 5.

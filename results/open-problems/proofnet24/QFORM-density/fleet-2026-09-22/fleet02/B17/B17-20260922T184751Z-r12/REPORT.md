@@ -13,7 +13,7 @@ The full target remains open: for arbitrary independent real inputs with one-dim
 
 The designated completed partner result actually used is fleet03/B17:
 
-- complete mathematics `yspennstate/math-open-problems@0fe842ad60b590ca774ecfd71cf2bb9d15639f90`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260922T180732Z-fleet03-B17-QFORM-r14/REPORT.md`.
+- complete mathematics `private-source-repository@0fe842ad60b590ca774ecfd71cf2bb9d15639f90`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260922T180732Z-fleet03-B17-QFORM-r14/REPORT.md`.
 
 That result proves (i) an exact six-variable rotated witness with zero peak `4.0630706168060372601...`, still below `3 sqrt(2)`, and (ii) that arbitrary one-coordinate fragmentation cannot improve the earlier six-variable cross witness when the other five laws remain centered intervals. I use (ii) to move to the first unexcluded coordinated two-law macroscopic deformation, rather than repeat a one-coordinate fragment search.
 

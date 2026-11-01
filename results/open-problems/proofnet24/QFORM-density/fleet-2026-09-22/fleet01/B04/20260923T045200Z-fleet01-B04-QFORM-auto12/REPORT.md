@@ -15,7 +15,7 @@ No Gaussianity, moments, compact support, connected support, log-concavity, inde
 
 The early checkpoint of this run started to rederive a weighted E2 half-Riesz theorem. A source-match search then located the already-completed fleet01/B04 theorem `QFORM-SQUARE-ENTROPY-E2-HALFRIESZ-v1` in
 
-`yspennstate/math-open-problems@e6cb03b671784bc5ea61a293144b6c3731b942a5`
+`private-source-repository@e6cb03b671784bc5ea61a293144b6c3731b942a5`
 
 at
 
@@ -35,7 +35,7 @@ with exact entropy/diagonal-scaling optimization and arbitrary same-bank curvatu
 
 The new designated-partner source is fleet02/B04 run
 
-`yspennstate/math-open-problems@36263ba314738468f934a5b3245130b6754e940f`,
+`private-source-repository@36263ba314738468f934a5b3245130b6754e940f`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T043800Z-fleet02-B04-qform-auto11/REPORT.md`.
 

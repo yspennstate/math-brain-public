@@ -2,7 +2,7 @@
 
 Run: `20261013T092029Z-fleet01-B12-parallel-triple-local`
 
-- Canonical repository: `yspennstate/math-open-problems`
+- Canonical repository: `private-source-repository`
 - Canonical core commit: `06091e2de7530db3f3d5d5ec5c1419d9bcd7081b`
 - Canonical path: `reports/fei-2026-10-11/runs/B12/20261013T092029Z-fleet01-B12-parallel-triple-local/`
 - Brain repository: `yspennstate/math-research-brain`

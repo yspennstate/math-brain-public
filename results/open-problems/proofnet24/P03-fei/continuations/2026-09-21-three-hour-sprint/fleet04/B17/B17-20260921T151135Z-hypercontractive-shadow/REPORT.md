@@ -3,7 +3,7 @@
 **Status:** **PARTIAL. Full uniform-cube Fourier entropy–influence (FEI) remains OPEN / NOT PROVED.**  
 **Execution:** **WITHOUT_VERIFIED_BRAIN.** No authenticated brain retrieval or receiver-side brain context was used.  
 **Role:** genuinely different FEI proof mechanisms; this run changes method from the preceding affine/character-orbit normalization.  
-**Scientific source snapshot:** fresh `yspennstate/math-open-problems` master was resolved before the derivation; the exact source commit is recorded in the operational receipt.
+**Scientific source snapshot:** fresh `private-source-repository` master was resolved before the derivation; the exact source commit is recorded in the operational receipt.
 
 ## 1. Named obstruction attacked
 

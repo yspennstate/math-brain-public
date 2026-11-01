@@ -1,6 +1,6 @@
 # Late Fourier-endpoint obstruction
 
-A later compatible frontier handoff recorded the sharp product-Fourier endpoint (`math-open-problems@f34ca21deff2e7fdae04b4b238fdd249ba7f0c80`): if `g` is the density of `HL` for independent cap-one `H,L`, then
+A later compatible frontier handoff recorded the sharp product-Fourier endpoint (`private-source@f34ca21deff2e7fdae04b4b238fdd249ba7f0c80`): if `g` is the density of `HL` for independent cap-one `H,L`, then
 
 \[
 \|g\|_2^2\le4,

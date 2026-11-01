@@ -18,13 +18,13 @@ The latest completed designated partner result actually used is fleet03/B10 r24,
 
 `QFORM-NEARCOLOOP-MIXED-TRANSVERSE-EXCISION-v1`,
 
-`yspennstate/math-open-problems@06f180467d43940acc1f939e216db2e23b7d7c88`,
+`private-source-repository@06f180467d43940acc1f939e216db2e23b7d7c88`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T044329Z-fleet03-B10-QFORM-r24/REPORT.md`,
 
 with the later fleet03/B10 r25 transverse-heavy closure at
 
-`yspennstate/math-open-problems@291d344e0c5af27b8b5074dbba22fee22abddbf8`,
+`private-source-repository@291d344e0c5af27b8b5074dbba22fee22abddbf8`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T034310Z-fleet03-B10-QFORM-r25/REPORT.md`.
 
@@ -72,7 +72,7 @@ This is the starting collar below. Fleet03/B10 r25 separately pays any state hav
 
 The required newest-Claude source was read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The ruled theorem in the last file applies to the ACTUAL exact-rank-three form, not to a rotated independent law. For signature `(2,1)` it gives the genuine target inequality
 
@@ -142,7 +142,7 @@ which proves (2.3). Equation (2.4) follows from `eta>7/8`. QED.
 
 Fleet04/B10's completed `QFORM-REGRESSION-THREEBANK-CURVATURE-SPLIT-v1`,
 
-`yspennstate/math-open-problems@afdea9634d9e3f5fb09659da436292cf7dbe5b20`,
+`private-source-repository@afdea9634d9e3f5fb09659da436292cf7dbe5b20`,
 
 applied to this mixed bank (its regression residual is exactly `rho_M`, because `sum s_jw_j=0`) gives a three-colour certificate proportional to
 

@@ -3,7 +3,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 # R7-02 — Tier-3 shard-1 source gate: P0367
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Slot / native ID: `R7-02` / `6aabe797a39081919acc889f29f4c556`  
 Own root: `research7_2026-09-17/R7-02/`  
 Run-start captured master: `19d26f22ae96e542ed09a2bdeb46d4700724f8e3`  

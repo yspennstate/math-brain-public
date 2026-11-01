@@ -1,6 +1,6 @@
 # Matching the sharp product-marginal caps does not rescue the false joint-law claim
 
-The companion [REPORT.md](https://github.com/yspennstate/math-open-problems/blob/44fd60cd4bfc12e9847ec7e332f84c4890aaf70e/proofnet24/QFORM-density/interactive/20260923T204519Z-oblique-projection-hyperboloid-obstruction/REPORT.md) proves that every line meets the thin negative hyperboloid shell \(S_R\) in length at most \(100\), while its quadratic-value density is at least \((\pi/2)R\) throughout \(|s+1|\le R^{-2}\). We can match the **sharp numerical two-dimensional marginal cap** \(2\) that would hold for an actual orthogonal projection of independent cap-one coordinates.
+The companion [REPORT.md](private-source-repository) proves that every line meets the thin negative hyperboloid shell \(S_R\) in length at most \(100\), while its quadratic-value density is at least \((\pi/2)R\) throughout \(|s+1|\le R^{-2}\). We can match the **sharp numerical two-dimensional marginal cap** \(2\) that would hold for an actual orthogonal projection of independent cap-one coordinates.
 
 Keep \(S_R\) and its volume \(m_R=O(1/R)<1\). Fix \(\alpha=1/100\), and choose a cube \(D_R\) of side length \(10\), disjoint from the shell (for example start its first coordinate at \(10R\)). Set
 \[

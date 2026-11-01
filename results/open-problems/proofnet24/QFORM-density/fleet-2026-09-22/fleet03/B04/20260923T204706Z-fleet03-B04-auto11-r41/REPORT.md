@@ -22,7 +22,7 @@ Fresh owner control remained QFORM-only, revision `2026-09-22.15`, with the full
 
 The completed peer dependency actually used below is the orientation-free rank-two fractional estimate and its scalar-Schur rank-three consequence:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-A — prime optimal complementarity forces full available support and paired positive Fourier circuits
 
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured pre-write master:** `0832e1c1d0b2617b6645f5addfc506afb0985cf7`  
 **Previous own report:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T0713+0300__ramsey_levelset_fourier_support.md`, blob `cb7358eb124ebd064dff81da8f181cc6991fe702`.  
 **Complementary checkpoint read:** P07-B `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T0725+0300__static_moreau_cone_projection.md`, blob `3623ec148eeed786cc94541a41f8a530dccbbe8e`. P07-B owns the Moreau / Fourier-dual exceptional-frequency route; this report stays on the primal optimal-certificate geometry.  

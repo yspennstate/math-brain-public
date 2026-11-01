@@ -28,7 +28,7 @@ Section 5 gives an exact rotated `(+,+,-)` family in which every diagonal entry 
 
 The designated partner result actually applied is fleet03/B11:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `6ce69d3584ae62a4f08532971c950fb625235c93`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T171058Z-fleet03-B11-r11/REPORT.md`.
 
@@ -38,7 +38,7 @@ It proves that if all orthogonal two-dimensional marginals of `Y in R^3` have de
 
 The completed orientation-free rank-two affine half-Riesz theorem used in the conditional route is:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 - path `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 

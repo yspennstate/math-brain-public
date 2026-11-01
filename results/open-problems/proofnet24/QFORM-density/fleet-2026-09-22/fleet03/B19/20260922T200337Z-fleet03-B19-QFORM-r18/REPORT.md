@@ -346,7 +346,7 @@ The theorem proves absolute continuity and an essential `L^infinity` bound. The 
 
 The completed designated-partner result remains `QFORM-FINITE-UNION-CORE-v1`, canonical source
 
-`yspennstate/math-open-problems@02171dc794a56c0235afb1ca394b3e614162bff4`,
+`private-source-repository@02171dc794a56c0235afb1ca394b3e614162bff4`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T122030Z-fleet04-B19-QFORM-r1/REPORT.md`.
 
 Apply it to the concrete interval inequality produced by Theorem 5.1. On bounded finite-union product-indicator cores the proof above gives

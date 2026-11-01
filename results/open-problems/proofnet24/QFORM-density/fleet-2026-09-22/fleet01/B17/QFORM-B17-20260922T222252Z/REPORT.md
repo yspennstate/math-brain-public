@@ -18,7 +18,7 @@ This report proves a sharp-witness exclusion theorem for an exact original-coord
 
 The designated partner theorem actually used is fleet02/B17 run `20260922T204449Z-fleet02-B17-QFORM-r19`, complete proof
 
-`yspennstate/math-open-problems@50913ed00c5943aaf2772473cbf17ddcb5bed090:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T204449Z-fleet02-B17-QFORM-r19/REPORT.md`.
+`private-source-repository@50913ed00c5943aaf2772473cbf17ddcb5bed090:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260922T204449Z-fleet02-B17-QFORM-r19/REPORT.md`.
 
 It proves, for iid standard Gaussians and every `delta>0`,
 
@@ -38,7 +38,7 @@ I apply that exact Bessel/Laplace representation in Section 7, obtaining the sam
 
 I also reuse the fixed-parameter BV/local-limit mechanism proved in fleet01/B17 run `20260922T204400Z-fleet01-B17-QFORM-r19`, canonical proof
 
-`yspennstate/math-open-problems@bfc251e91668cd258a337a5207a53bd1167a48b9:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T204400Z-fleet01-B17-QFORM-r19/REPORT.md`.
+`private-source-repository@bfc251e91668cd258a337a5207a53bd1167a48b9:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B17/20260922T204400Z-fleet01-B17-QFORM-r19/REPORT.md`.
 
 ## 2. Exact finite source-valid rotated family
 

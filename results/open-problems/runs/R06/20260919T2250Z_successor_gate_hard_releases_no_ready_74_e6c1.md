@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # R06 CLOSABLE OUTSIDE — hard-release delta gives no lawful CLOSABLE successor
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R06.  
 Lane: CLOSABLE OUTSIDE.  
 Date checked: 2026-09-19 UTC.

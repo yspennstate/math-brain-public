@@ -6,7 +6,7 @@ STATUS: PARTIAL. The full Friedgut–Kalai Fourier entropy-influence conjecture 
 
 Normalization: f:{0,1}^n->{-1,+1}, normalized Walsh coefficients a_S=\hat f(S), p_S=a_S^2, spectral entropy H(f)=sum_S p_S log_2(1/p_S), total influence I(f)=sum_S |S|p_S.
 
-Fresh scientific source at entry: yspennstate/math-open-problems master c687362ab487b56d0b9aa2c7c5c3dcf017ec3156. The newest own B17 report at entry was the central-cone normal form. Relevant newer neighboring work included fleet01/B17's exact signed-autocorrelation characterization and maximal-support granularity lemma, and fleet04/B17's exact no-amplification theorem for affine tensor products. This run does not duplicate those results: it starts from the “buried coefficient” obstruction and tries to build the missing bounded-congestion charging mechanism.
+Fresh scientific source at entry: private-source-repository master c687362ab487b56d0b9aa2c7c5c3dcf017ec3156. The newest own B17 report at entry was the central-cone normal form. Relevant newer neighboring work included fleet01/B17's exact signed-autocorrelation characterization and maximal-support granularity lemma, and fleet04/B17's exact no-amplification theorem for affine tensor products. This run does not duplicate those results: it starts from the “buried coefficient” obstruction and tries to build the missing bounded-congestion charging mechanism.
 
 FLEET_RULES moves, deliberately different from the immediately preceding own route (#3/#6/#23):
 - #11 DUALIZE: turn buried-atom entropy debt into a finite max-flow/min-cut problem on strict support inclusions.

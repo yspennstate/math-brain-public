@@ -24,7 +24,7 @@ The point of this run is to repair, with a product-preserving proof, the attract
 
 Source:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -41,7 +41,7 @@ When the affine term lies in the quadratic range, including the full-rank litera
 
 Source:
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -61,7 +61,7 @@ The pair shifts may depend arbitrarily on the remaining original coordinates. Th
 
 Newest completed designated-partner theorem consumed in this run:
 
-`yspennstate/math-open-problems@fb7b0f71ead32ea608ff9ec45370edc246f7239e`
+`private-source-repository@fb7b0f71ead32ea608ff9ec45370edc246f7239e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T063552Z-fleet02-B01-qform-auto11-r46/REPORT.md`, theorem `QFORM-RANK1-TWOHUB-ARROWHEAD-HALFRIESZ-v1`.
 

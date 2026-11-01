@@ -26,7 +26,7 @@ This is narrower than the preceding “near-rank-one / localized” label: the r
 
 The required fixed source was read at exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
@@ -65,7 +65,7 @@ H_{1/2}:=\sup_s E|Z-s|^{-1/2}
 
 The newest compatible designated-partner result read in full was
 
-`math-open-problems@899dd7e3b1c6b469af23d5103094ad7c160d6da6`,
+`private-source@899dd7e3b1c6b469af23d5103094ad7c160d6da6`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T012032Z-fleet03-B08-qform-diffuse-r47/REPORT.md`,
 Theorem `QFORM-RANK1-ALIGNED-CANCELLED-TWIST-SHEAR-v1`.
 

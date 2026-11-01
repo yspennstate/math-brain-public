@@ -17,9 +17,9 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates with 
 
 The completed theorem used below is `QFORM-Z3-CROSSING-MARGINAL-FREE-v1`, with current source
 
-- `yspennstate/math-open-problems@master`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T184716Z-fleet02-B03-QFORM-auto11/REPORT.md`;
-- supporting projected-crossing proof `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`, path `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`;
-- prior B02 compiler `yspennstate/math-open-problems@c8536549aca3308f1773992e46a6abe4a1dc9922`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T170106Z-fleet03-B02-qform-r35/REPORT.md`.
+- `private-source-repository@master`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T184716Z-fleet02-B03-QFORM-auto11/REPORT.md`;
+- supporting projected-crossing proof `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`, path `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`;
+- prior B02 compiler `private-source-repository@c8536549aca3308f1773992e46a6abe4a1dc9922`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T170106Z-fleet03-B02-qform-r35/REPORT.md`.
 
 For every literal original-coordinate cross block `M=A[I,J]` with
 
@@ -57,14 +57,14 @@ In particular, on the target-scale branch `V_1>1/4`,
 
 `S>1/3125`.                                                        (1.4)
 
-The source is `yspennstate/math-open-problems@f2d4617424eb9e168515ea3fd7043d31571fb253`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T210023Z-fleet03-B02-qform-r39/REPORT.md`.
+The source is `private-source-repository@f2d4617424eb9e168515ea3fd7043d31571fb253`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T210023Z-fleet03-B02-qform-r39/REPORT.md`.
 
 ### 1.3 Designated partner fleet04/B02
 
 The partner result applied at an actual new inequality in Section 5 is
 
 - `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`;
-- `yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`;
+- `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 
 On its exact overlap, a nonsingular physical zero-diagonal principal triple `H_0` gives
@@ -73,7 +73,7 @@ On its exact overlap, a nonsingular physical zero-diagonal principal triple `H_0
    <= 6 pi 2^(2/3) |det H_0|^(-1/3)`.                              (1.5)
 
 I also use fleet04/B02's strong-cut inequality from
-`yspennstate/math-open-problems@674f13a108a33176aafffe8f9b6d44ec3a89f03a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260923T151038Z-fleet04-B02-QFORM-r1/REPORT.md`, only as a compatibility/application check in Section 6.
+`private-source-repository@674f13a108a33176aafffe8f9b6d44ec3a89f03a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260923T151038Z-fleet04-B02-QFORM-r1/REPORT.md`, only as a compatibility/application check in Section 6.
 
 ## 2. A uniform pointwise tail for the physical `Z_3` crossing theorem
 
@@ -292,7 +292,7 @@ Hence the generic grouped two-star residue is now paid by genuine Fourier `L1`. 
 - `x_2(N)<E_N/4` or `T_2(N)<E_N/4`, or
 - `x_2(B_*)<E_*/4` or `T_2(B_*)<E_*/4`.
 
-Those are actual near-rank-one/two collars on literal original-coordinate blocks, not a statement about rotated random variables. The fresh fleet02/B20 exact-rank-two four-currency theorem (`math-open-problems@246f7b039bd6a1411ceccfa38bf922cac02ab5dc`) is therefore a directly relevant successor: it already pays the transverse exact-rank-two currencies and isolates Schur/internal-star/extreme-condition remnants.
+Those are actual near-rank-one/two collars on literal original-coordinate blocks, not a statement about rotated random variables. The fresh fleet02/B20 exact-rank-two four-currency theorem (`private-source@246f7b039bd6a1411ceccfa38bf922cac02ab5dc`) is therefore a directly relevant successor: it already pays the transverse exact-rank-two currencies and isolates Schur/internal-star/extreme-condition remnants.
 
 ## 6. Designated fleet04/B02 theorem applied at a new equation
 

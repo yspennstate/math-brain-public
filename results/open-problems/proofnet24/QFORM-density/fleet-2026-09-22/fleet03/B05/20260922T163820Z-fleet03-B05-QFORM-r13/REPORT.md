@@ -15,9 +15,9 @@ The previous B05 mechanism aggregated pair Pluecker mass and then attempted curv
 
 The mandatory corrections are respected. No law-uniform pointwise Fresnel decay is used; no independence is asserted after a general spectral rotation; no unrestricted fiber supremum is integrated; no one-good-minor dichotomy is assumed; and no conditional density cap is substituted for genuine independence where the cited hyperbolic theorem needs independence.
 
-The assigned partner is `fleet04/B05`. Fresh source checks found no completed current-QFORM artifact at either its canonical math-open-problems root or its shared handoff root, so no theorem is fabricated for that slot. A completed compatible fleet04 theorem is nevertheless applied at an actual inequality below: fleet04/B18, `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical report
+The assigned partner is `fleet04/B05`. Fresh source checks found no completed current-QFORM artifact at either its canonical private-source root or its shared handoff root, so no theorem is fabricated for that slot. A completed compatible fleet04 theorem is nevertheless applied at an actual inequality below: fleet04/B18, `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical report
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
 Two other completed dependencies are used at their stated scopes:

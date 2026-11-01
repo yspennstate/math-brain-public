@@ -1,6 +1,6 @@
 # fleet02/B02 r13 audit summary
 
-Source: math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c; short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8; short.pdf blob 8be3aae36ecad7a9dc9b7c95978aad09499f32d0; PDF SHA256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
+Source: private-source@ec211ba2d77a4a9850168c6af1574ea651feaa7c; short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8; short.pdf blob 8be3aae36ecad7a9dc9b7c95978aad09499f32d0; PDF SHA256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
 
 Two fresh complete source passes were executed: forward Fourier-first and reverse theorem-dependency. Physical-line counts in each: PASS 333, GAP 6, FALSE 4, UNCHECKED 12, NOT_MATHEMATICAL 321. Literal source remains GAP; the internal 270 K^2/s theorem chain closes after local zero-loss repairs.
 

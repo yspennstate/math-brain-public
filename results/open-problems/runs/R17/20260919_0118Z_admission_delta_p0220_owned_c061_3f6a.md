@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R17 C061 — terminal admission delta; P0220 is newly claimed elsewhere and no HARD release crosses the gate
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R17, HARD OUTSIDE.  
 Status: **TERMINAL HANDOFF / ADMISSION WAIT**.
 

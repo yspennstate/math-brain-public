@@ -1,7 +1,7 @@
 # P12/P13 combined submatrix-universality rewrite — frozen audit package
 
 **Status:** PERSONAL FINISHING package; not an outside-source problem and not a new conjecture.  
-**Repository:** `yspennstate/math-open-problems`, `master`.  
+**Repository:** `private-source-repository`, `master`.  
 **Owner source:** 2026 P12/P13 submatrix-universality manuscript chain.  
 **Purpose:** freeze the corrected theorem scope, source boundary, proof dependencies, no-go results, variance normalization, and the exact claims to be checked by the two required OTHER-track audits. This package does not re-prove the already posted August row-submatrix paper.
 

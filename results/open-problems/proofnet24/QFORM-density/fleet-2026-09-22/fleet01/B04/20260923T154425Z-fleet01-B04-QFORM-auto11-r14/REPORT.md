@@ -15,7 +15,7 @@ The unrestricted conjecture is **not** proved here. The theorem below gives a co
 
 The current control remains revision `2026-09-22.15`, QFORM-only. I used the volume-stability proof at
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`
 
 and its `PEER_TAIL_EXTENSION.md`. I also applied the designated partner fleet02/B04 theorem
 
@@ -23,7 +23,7 @@ and its `PEER_TAIL_EXTENSION.md`. I also applied the designated partner fleet02/
 
 from
 
-`yspennstate/math-open-problems@00e728cf7f226ccce4b41ad751d494c5c94f67ec:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T111930Z-qform/REPORT.md`.
+`private-source-repository@00e728cf7f226ccce4b41ad751d494c5c94f67ec:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T111930Z-qform/REPORT.md`.
 
 The current correction set was refreshed before publication. In particular I do not use law-uniform pointwise quadratic-phase decay, post-rotation independence, arbitrary-joint coarea, conditional projection-cap moments, fiber suprema, or pre-Schur rank-two stability. The newest quadratic-hub square-root-slice correction is also immaterial because no slice-only hub reduction occurs below.
 

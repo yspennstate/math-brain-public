@@ -6,7 +6,7 @@ This addendum continues the same B20 run after `QFORM-O0-FIVEBANK-LAPLACE-CASCAD
 
 The completed fractional-ridge theorem is fleet01/B03 run `fleet01-B03-20260922T164925Z-r12`, canonical mathematics
 
-`yspennstate/math-open-problems@c301be6b21f382934962aeb4c019b713377eac2f`,
+`private-source-repository@c301be6b21f382934962aeb4c019b713377eac2f`,
 
 path
 

@@ -31,7 +31,7 @@ The transposed statement holds for an appended physical column. Therefore in bra
 
 `E3([r;K]) >= ||r||^2 Omega/1024`.
 
-Applying the completed D' theorem from `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` to this actual augmented cross block, whenever either orientation of its natural third-volume law has all inclusion marginals at most `2/3`, gives the full-ambient curvature-safe bound
+Applying the completed D' theorem from `private-source@e5f71d79eff325201dd0274053d20268ce65b837` to this actual augmented cross block, whenever either orientation of its natural third-volume law has all inclusion marginals at most `2/3`, gives the full-ambient curvature-safe bound
 
 `||p_Q||_inf <= 9 sqrt(3e) (||r||^2 Omega/1024)^(-1/6)
               <81.596 (||r||^2 Omega)^(-1/6)`.
@@ -40,6 +40,6 @@ If its determinant volume is concentrated on bounded original-coordinate support
 
 Thus the genuinely new survivor of the r32 aggregate-E2 branch is not an arbitrary rank-two tube: after the residual-E3 and rank-one alternatives are separated, either a transverse star regenerates third volume, or the star is quantitatively aligned with the top-two singular space. With two partner stars on opposite orientations, the terminal geometric state is bi-aligned (or a coheavy E3 packet that descends by the existing anchor machinery).
 
-Designated-partner source actually used: fleet03/B07 r32, `math-open-problems@b684b8edb29274a17fd5e8ed7fc8049ce12a4595`, whose r30 six-bank aggregate branch supplies two disjoint physical star banks and aggregate literal second-minor mass `Omega` with `S_L S_R sqrt(Omega)>a^4/(6912 sqrt(6))`.
+Designated-partner source actually used: fleet03/B07 r32, `private-source@b684b8edb29274a17fd5e8ed7fc8049ce12a4595`, whose r30 six-bank aggregate branch supplies two disjoint physical star banks and aggregate literal second-minor mass `Omega` with `S_L S_R sqrt(Omega)>a^4/(6912 sqrt(6))`.
 
 This checkpoint is a supporting lemma/branch reduction, not a full proof. Full QFORM remains OPEN; continuity remains separate.

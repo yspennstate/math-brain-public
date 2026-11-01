@@ -24,7 +24,7 @@ Corrections respected: no law-uniform pointwise one-dimensional Fresnel decay is
 
 The designated partner fleet02/B05 proved at
 
-`yspennstate/math-open-problems@e06922bfa31bbd225cdce6ee6aea563254e62563`
+`private-source-repository@e06922bfa31bbd225cdce6ee6aea563254e62563`
 
 path
 
@@ -42,7 +42,7 @@ Its binary gradient-box theorem also proves a complete fixed nonsingular physica
 
 The Fourier input is the completed fleet03/B05 theorem
 
-`yspennstate/math-open-problems@c828d2ee2f8acef5eb96892bc8a9a25594db0f51`,
+`private-source-repository@c828d2ee2f8acef5eb96892bc8a9a25594db0f51`,
 
 path
 

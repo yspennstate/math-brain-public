@@ -4,9 +4,9 @@ Date: 2026-09-30. Full FEI remains OPEN. No programme schedule or existing claim
 
 ## Delivery
 
-Three mathematical text artifacts are on math-open-problems master through commit 0add87669946788d041f3ee5e2f27ec10316c90b. Executable verification artifacts follow the required draft-PR workflow. The complete eight-file package is available in [draft PR 12](https://github.com/yspennstate/math-open-problems/pull/12), head b41923c107aac0e2ca095db25ac4686c604f7d7f, under proofnet24/P03-fei/continuations/2026-09-30-entropy-wringing/. All eight head files were fetched and compared exactly with the tested/reviewed local bytes. Do not report the five draft files as merged to master.
+Three mathematical text artifacts are on private-source master through commit 0add87669946788d041f3ee5e2f27ec10316c90b. Executable verification artifacts follow the required draft-PR workflow. The complete eight-file package is available in [draft PR 12](private-source-repository), head b41923c107aac0e2ca095db25ac4686c604f7d7f, under proofnet24/P03-fei/continuations/2026-09-30-entropy-wringing/. All eight head files were fetched and compared exactly with the tested/reviewed local bytes. Do not report the five draft files as merged to master.
 
-[Complete report at verified head](https://github.com/yspennstate/math-open-problems/blob/b41923c107aac0e2ca095db25ac4686c604f7d7f/proofnet24/P03-fei/continuations/2026-09-30-entropy-wringing/REPORT.md)
+[Complete report at verified head](private-source-repository)
 
 ## Positive bridge
 

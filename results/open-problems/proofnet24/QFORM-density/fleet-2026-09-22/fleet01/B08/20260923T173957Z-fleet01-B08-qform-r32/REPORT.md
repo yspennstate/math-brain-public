@@ -27,7 +27,7 @@ the full ambient form has a continuous density `<83/L`. Thus any unpaid diffuse 
 
 I use the complete theorem at
 
-`yspennstate/math-open-problems`,
+`private-source-repository`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`,
 read on current `master` (blob `f9efb2a4c89b81707d720b88db35ebdea2013f74`).
 
@@ -51,7 +51,7 @@ This is a coefficient-matrix perturbation statement for the actual cross block, 
 
 The completed `fleet02/B08` r28 report is
 
-`yspennstate/math-open-problems@66582bd87d50634f3525a57c87acffdbde97aea1`,
+`private-source-repository@66582bd87d50634f3525a57c87acffdbde97aea1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T153836Z-fleet02-B08-qform-r28/REPORT.md`.
 
 Its `QFORM-K1-MACROSCOPIC-3FRAME-HALFCUT-v1` says, in the one-sided transverse `k=1` chamber, that if the augmented physical three-frame has leverage at most `1/48`, the child/cross sine-angle is at least `1/2`, and the child/cross operator leakage is at most `kappa(1/2)L/16`, then the full ambient form has a continuous density `<23/[kappa(1/2)L]`.

@@ -17,7 +17,7 @@ The exact cap-one-to-product-indicator purification from the immediately precedi
 
 The newest completed designated partner is fleet02/B13 r12, source-pinned as
 
-`yspennstate/math-open-problems@89c5263400fd23e149295699eaff0811d6219828`
+`private-source-repository@89c5263400fd23e149295699eaff0811d6219828`
 
 at
 

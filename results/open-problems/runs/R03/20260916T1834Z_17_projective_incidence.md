@@ -4,7 +4,7 @@ Problem: **iid Rademacher square-matrix singularity — Komlós (1967) lineage; 
 # R03 run 17 — projective modular null incidence after exact collision removal
 
 Run ID: `20260916T1834Z_17_projective_incidence`  
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Continuity, source, exact target, and fixed metric
 

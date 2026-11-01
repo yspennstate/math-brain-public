@@ -16,7 +16,7 @@ The unrestricted conjecture remains OPEN. This run proves a coefficient-space ri
 
 Own preceding endpoint:
 
-`yspennstate/math-open-problems@6691a29d20e3cfd119c67b7b6bc345c68f407712`
+`private-source-repository@6691a29d20e3cfd119c67b7b6bc345c68f407712`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T234122Z-fleet01-B08-qform-r38/REPORT.md`.
 
@@ -45,7 +45,7 @@ At `nu<=1/48`,
 
 Designated partner source actually read in full:
 
-`yspennstate/math-open-problems@175ed537ecbeabeb27e98b49030c9b8ca846c5d7`
+`private-source-repository@175ed537ecbeabeb27e98b49030c9b8ca846c5d7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260923T2307Z-auto11/REPORT.md`.
 

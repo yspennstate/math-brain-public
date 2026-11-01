@@ -81,7 +81,7 @@ For the slab kernel `K=1_{x^T A x in J}`, a strict ratio `rho` therefore transfe
 
 The completed fleet02/B13 r40 report is source-pinned at
 
-`yspennstate/math-open-problems@2af615c6d649e207191127733fc6dd180db14944`
+`private-source-repository@2af615c6d649e207191127733fc6dd180db14944`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260924T025738Z-fleet02-B13-QFORM-auto11/REPORT.md`.
 

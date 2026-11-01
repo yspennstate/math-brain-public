@@ -12,7 +12,7 @@ Exact target: for every dimension, every product law with independent real coord
 
 This report does NOT prove the full target. It uses the completed ridge-density criterion from
 
-- yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7
+- private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7
 - proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md
 
 and independently checks only its Section 6 ridge-perturbation lemma and Section 7 MSS/spectral-window passage. The free-regularizer graph/Fourier argument in Sections 3--5 is treated as a supplied premise here, not re-reviewed in full by this run.

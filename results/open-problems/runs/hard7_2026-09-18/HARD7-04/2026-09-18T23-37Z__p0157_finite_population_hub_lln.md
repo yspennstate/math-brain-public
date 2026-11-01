@@ -2,7 +2,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is n
 
 # HARD7-04 bounded research iteration — P0157 finite-population hub LLN
 
-Date: 2026-09-18 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-18 UTC. Repository/branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL; source OPEN by current source plus bounded literature review.** This is the third P0157 run and the second consecutive no-movement run for the frozen metric after its exact identification. It is therefore not yet a section-I stuck run.
 

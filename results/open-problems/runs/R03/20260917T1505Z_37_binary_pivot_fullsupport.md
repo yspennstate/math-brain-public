@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 
 # R03 run37 — binary pivot pairs, asymptotically full null support, and a determinant-pencil obstruction
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL; source OPEN.** The frozen finite envelope does not move. The substantive progress is a source-scale sharpening of C285/C294 plus an exact binary-matrix representation of the surviving affine-excess count. No source-closure claim is made.
 

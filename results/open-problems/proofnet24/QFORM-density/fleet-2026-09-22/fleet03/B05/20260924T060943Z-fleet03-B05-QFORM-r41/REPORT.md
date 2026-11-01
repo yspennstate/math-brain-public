@@ -321,7 +321,7 @@ This is a genuine dimension-free branch of the hard shared-source Witt packet. I
 
 The completed partner theorem `QFORM-PHYSICAL-DEFINITE-PAIR-COAREA-v1`, canonical mathematics
 
-`yspennstate/math-open-problems@33cabb3bd5e466a58adc6eac49eba210ef62ef14`,
+`private-source-repository@33cabb3bd5e466a58adc6eac49eba210ef62ef14`,
 
 proves for any literal original-coordinate definite principal pair `C` under cap-one laws, with arbitrary outside coupling retained,
 

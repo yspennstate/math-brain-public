@@ -152,7 +152,7 @@ This is the requested localization compiler: arbitrary fragment number, shifts, 
 
 ## 5. Application of the completed partner result fleet03/B14 r15
 
-Partner source applied: yspennstate/math-open-problems@49f1c21b47979575eaa8c34b90d066c8034140b4, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T173618Z-fleet03-B14-QFORM-r15/REPORT.md`.
+Partner source applied: private-source-repository@49f1c21b47979575eaa8c34b90d066c8034140b4, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T173618Z-fleet03-B14-QFORM-r15/REPORT.md`.
 
 That report proves: for independent cap-one X,Y,Z and every affine vector, if
 

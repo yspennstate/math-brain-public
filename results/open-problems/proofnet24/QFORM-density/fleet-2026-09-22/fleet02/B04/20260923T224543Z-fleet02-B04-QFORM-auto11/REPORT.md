@@ -56,7 +56,7 @@ Its proof conditions only original coordinates, uses the cap-two density of a tw
 
 The required pinned Claude/e5 source was re-read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. The completed result used at an actual inequality below is Theorem D with arbitrary supported minor weights:
 

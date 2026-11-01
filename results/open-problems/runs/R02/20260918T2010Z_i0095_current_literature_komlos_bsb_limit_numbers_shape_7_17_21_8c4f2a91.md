@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R02 successor-admission / I0095 current-literature reconciliation — Komlós solved, Boolean small-ball strengthened, exact sign-matrix constant still not moved
 
 Run date: 2026-09-18 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Lane: **CLOSABLE OUTSIDE**
 
 ## 1. Continuity and status

@@ -2,7 +2,7 @@ Model actually run: GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maximum
 
 # P20 successor admission — D0072
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Track: `proofnet24/P20-closure-log-unimodality`.
 Category: CLOSABLE OUTSIDE.
 Previous active source H0023 is retired from active P20 research after six unchanged substantive runs. Its source remains OPEN/PARTIAL and `C_link=0`; no H0023 mathematics is resumed here.

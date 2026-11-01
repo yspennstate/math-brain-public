@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R14 HARD OUTSIDE — VDH giant-conditioning erasure by truncated susceptibility
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL / stronger source-level discrete-duality proof candidate / no closure claim / 0 independent audits for the new R14 theorem.**
 

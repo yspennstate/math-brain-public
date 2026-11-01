@@ -50,7 +50,7 @@ This is an accepted obstruction/replacement step for the card. It is not FEI clo
 
 ### 1.1 Exact influence I-projection
 
-Repository `yspennstate/math-open-problems`, commit
+Repository `private-source-repository`, commit
 `4bd6d05f1eb8325d665f2748f4d74dcee2550a04`, path
 `proofnet24/P03-fei/fleet-2026-09-21/fleet02/B15/20260922T0829Z-influence-iprojection-kl/REPORT.md`.
 
@@ -71,7 +71,7 @@ H_{\max}(r)=\frac{\sum_i h_2(cr_i)-h_2(c)}{c}.
 
 ### 1.2 Exact disjoint-composition hierarchy KL
 
-Repository `yspennstate/math-open-problems`, commit
+Repository `private-source-repository`, commit
 `2bf247373576eb406ca91bb3ea5f3ce5e5ab8588`, path
 `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T091017Z-iprojection-composition-transfer/REPORT.md`.
 
@@ -87,7 +87,7 @@ and, crucially here, it proves that **every nonconstant binary Boolean gate at e
 
 ### 1.3 New completed physical-restriction KL chain
 
-Repository `yspennstate/math-open-problems`, commit
+Repository `private-source-repository`, commit
 `3a5fccff414043be05a0c7f2f219dabd9b44708b`, path
 `proofnet24/P03-fei/fleet-2026-09-22/fleet01/B15/b15-20260922T103236Z-restriction-iprojection-chain/REPORT.md`.
 
@@ -113,7 +113,7 @@ All three \(C\)-terms are nonnegative. The negative Jensen-Shannon term is essen
 
 ### 1.4 Mandatory recursive-majority preflight
 
-Repository `yspennstate/math-open-problems`, commit
+Repository `private-source-repository`, commit
 `bff0d7b6c21485f386841c42582eb04f32705046`, path
 `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B18/20260922T100641Z-lowlevel-projection-barrier/REPORT.md`.
 
@@ -137,7 +137,7 @@ It refutes fixed/low-depth labelled KL extraction. The full \(K_{\rm occ}\), how
 
 The required partner is `fleet03/B17`. I consumed its latest compatible completed result:
 
-repository `yspennstate/math-open-problems`, commit
+repository `private-source-repository`, commit
 `9b4814e50b1215342abb6de666809948169e8a9b`, path
 `proofnet24/P03-fei/fleet-2026-09-21/fleet03/B17/20260922T100239Z-quarterhalf-dyadic-output/REPORT.md`.
 

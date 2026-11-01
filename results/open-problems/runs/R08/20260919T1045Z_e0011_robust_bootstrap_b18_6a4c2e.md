@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R08 CLOSABLE OUTSIDE — E0011 catalyst/ZGB: robustifying the expensive bootstrap without paying any new hazard
 
 Date: 2026-09-19 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Status after this run: **PARTIAL / source OPEN under bounded current-literature checking**.  
 Delivery: private GitHub only. No email, Drive, public posting, purchases, permission changes, workflow execution, or scheduler changes.
 

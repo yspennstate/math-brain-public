@@ -5,7 +5,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 Date: 2026-09-18 UTC  
 Track / namespace: `NM13-12` / `proofnet24/NM13-12/`  
 Category: `HARD OUTSIDE`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Canonical source / claim: `E0086` / `operations/claims/E0086.md`  
 Canonical dedup key: `favorite_sites::op_2`  
 Canonical SHA-256 / shard: `a616b4531a1a18ab6b2369a38d555ba54d6cc8cacdf46404e4e8ee26baeecc2c`, residue `11 mod 13`  

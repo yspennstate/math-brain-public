@@ -13,7 +13,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The immediate B10 input is
 
-`yspennstate/math-open-problems@61c5b1fb0c5b97f06722ad26b5185ecb2a6e2ef2`
+`private-source-repository@61c5b1fb0c5b97f06722ad26b5185ecb2a6e2ef2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260923T225225Z-fleet01-B10-QFORM/REPORT.md`.
 
@@ -23,7 +23,7 @@ This run pays a nontrivial part of that same-source obstruction exactly: same-so
 
 The designated partner actually used is fleet02/B10:
 
-`yspennstate/math-open-problems@ca0549ef8c582478415aba1a953bdc6115fe84c6`
+`private-source-repository@ca0549ef8c582478415aba1a953bdc6115fe84c6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T214702Z-fleet02-B10-QFORM-auto11/REPORT.md`.
 

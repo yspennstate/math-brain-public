@@ -123,7 +123,7 @@ This is a product-preserving ORIGINAL-coordinate packet; no rotated coordinates 
 
 ## Required fleet04/B20 application
 
-Use fleet04/B20 r4, theorem `QFORM-PARTITIONED-NEAR-NULL-HYBRID-v1` (`math-open-problems@f97aa31585b7b547a116d4580f898576af4e0842`). If the heavy row above has leverage `c_j>=1/2` and every other spectral frame row is genuinely partitioned into the longitudinal line `Re` or transverse plane `e^perp`, where `u_j=sqrt(c_j)e`, then its spectral Rayleigh coefficient is
+Use fleet04/B20 r4, theorem `QFORM-PARTITIONED-NEAR-NULL-HYBRID-v1` (`private-source@f97aa31585b7b547a116d4580f898576af4e0842`). If the heavy row above has leverage `c_j>=1/2` and every other spectral frame row is genuinely partitioned into the longitudinal line `Re` or transverse plane `e^perp`, where `u_j=sqrt(c_j)e`, then its spectral Rayleigh coefficient is
 
 \[
 |a|=|e^T\Lambda e|=|A_{jj}|/c_j< (1/32)/(1/2)=1/16<1/2.

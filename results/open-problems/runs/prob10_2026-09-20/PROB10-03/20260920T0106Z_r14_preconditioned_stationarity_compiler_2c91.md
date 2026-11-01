@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # PROB10-03 — R14 bounded iteration: preconditioned stationarity compiler
 
-Repository/branch: private `yspennstate/math-open-problems` / `master`.
+Repository/branch: private `private-source-repository` / `master`.
 
 Status: **PARTIAL / SOURCE OPEN / NO NEW RIGOROUS BRACKET ENDPOINT / NEW EXACT CERTIFICATION THEOREM**.
 

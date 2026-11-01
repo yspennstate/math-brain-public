@@ -6,7 +6,7 @@ First unpaid implication: `QFORM-STAR-COVER-TRANSVERSE-SPOKE-CLOSURE-v1` — aft
 
 ## Exact star-cover payment
 
-Take two original-coordinate hubs `H0={h1,h2}` and a distinguished original leaf `j*`. Assume that, after conditioning any outside coordinates, every off-diagonal leaf-leaf coefficient among the remaining leaves `L` is zero; equivalently `j*` is a vertex cover for the non-diagonal leaf curvature before moving it into the heavy set. Put `H=H0 union {j*}`, `C=A[L,H]`, `Gamma=C^T C`. If `Gamma` is invertible and every physical row `c_l` has leverage `c_l^T Gamma^{-1} c_l <=1/2`, then the proved pinned mixed-Fresnel theorem (math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837, FOURIER_ROUTE_REPORT.md, Theorem MF with r=0 and |H|=3) gives
+Take two original-coordinate hubs `H0={h1,h2}` and a distinguished original leaf `j*`. Assume that, after conditioning any outside coordinates, every off-diagonal leaf-leaf coefficient among the remaining leaves `L` is zero; equivalently `j*` is a vertex cover for the non-diagonal leaf curvature before moving it into the heavy set. Put `H=H0 union {j*}`, `C=A[L,H]`, `Gamma=C^T C`. If `Gamma` is invertible and every physical row `c_l` has leverage `c_l^T Gamma^{-1} c_l <=1/2`, then the proved pinned mixed-Fresnel theorem (private-source@e5f71d79eff325201dd0274053d20268ce65b837, FOURIER_ROUTE_REPORT.md, Theorem MF with r=0 and |H|=3) gives
 
 `|phi_Q(t)| <= (2*pi)^3 |t|^{-3} det(Gamma)^(-1/2)`.
 

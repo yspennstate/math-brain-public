@@ -18,7 +18,7 @@ The preceding B02 result
 
 `QFORM-EXACT-RANK3-CROSSBLOCK-FOURIER-v1`,
 
-canonical source `yspennstate/math-open-problems@484c89f85cda352b2c4318364a6206ebc4154950`,
+canonical source `private-source-repository@484c89f85cda352b2c4318364a6206ebc4154950`,
 
 closed every *transverse* two-sided packet. After conditioning all outside original coordinates, the only residue from that argument has the form
 
@@ -52,7 +52,7 @@ Because of (1.2), this scalar is intrinsic to the physical packet; no input rota
 ## 2. Banked Schur-potential theorem
 
 The old physical-two-pair theorem `QFORM-SCHUR-2PLUS1-POTENTIAL-v1` was proved at
-`yspennstate/math-open-problems@1489c81e0a377fd24b1a8372944e4ca63c85b13a`.
+`private-source-repository@1489c81e0a377fd24b1a8372944e4ca63c85b13a`.
 Here I extend precisely the part needed for arbitrary product banks by paying their *two-dimensional projected-density caps*, rather than pretending the singular coordinates are independent.
 
 ### Theorem 2.1 — `QFORM-BANKED-SCHUR-2PLUS1-POTENTIAL-v1`
@@ -283,7 +283,7 @@ q_{\rm target}=w^2+(z+x_1+y_1)^2+(x_2+y_2)^2.\tag{4.4}
 For the same Gaussian law its characteristic function gains a third square factor and decays like `|t|^{-3/2}`, so it is in `L^1`. More generally the three aggregates in (4.4) live on disjoint original-coordinate groups; the scalar-square `L^3` theorem plus Holder controls their product. Thus (4.4) is **not** a QFORM counterexample. It shows exactly what the critical packet is missing: the global third-direction resource must be combined *before* the absolute-value/time integration, rather than inferred from the skeleton after arbitrary self-curvature is discarded.
 
 This conclusion is consistent with the fresh fleet02/B03 result at
-`yspennstate/math-open-problems@90b9e0b5438b950fd2a0ed054833c055fdb92967`: its target-valid no-pivot star-plus-square family has every physical cross block of rank at most two, but a mixed-hub/Fresnel aggregate recovers a uniform `|t|^{-3/2}` bound. It quantitatively shows that aggregation must precede local fractional-collision payment.
+`private-source-repository@90b9e0b5438b950fd2a0ed054833c055fdb92967`: its target-valid no-pivot star-plus-square family has every physical cross block of rank at most two, but a mixed-hub/Fresnel aggregate recovers a uniform `|t|^{-3/2}` bound. It quantitatively shows that aggregation must precede local fractional-collision payment.
 
 ## 5. Designated partner result actually applied: a weighted collision endpoint
 
@@ -291,7 +291,7 @@ The designated partner `fleet04/B02` completed
 
 `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`,
 
-canonical proof `yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+canonical proof `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 
 which says that if the ambient form contains a nonsingular physical `3x3` principal block `D` with one exact zero diagonal, then
 
@@ -353,10 +353,10 @@ I did **not** obtain a target-valid counterexample to the owner's stronger globa
 ## 7. Sources actually consumed
 
 - Fresh owner/control repository at publication refresh: `yspennstate/math-research-brain@272127e579949a171c7a0ebdf0945c9d57f0db8d`, owner revision `2026-09-22.15`.
-- fleet03/B02 r17 transverse exact-rank-three cross-block theorem: `yspennstate/math-open-problems@484c89f85cda352b2c4318364a6206ebc4154950`.
-- fleet03/B02 banked theorem predecessor: `yspennstate/math-open-problems@1489c81e0a377fd24b1a8372944e4ca63c85b13a`.
-- designated partner fleet04/B02 zero-diagonal triple continuity theorem: `yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`.
-- fresh compatible fleet02/B03 mixed-hub/collision separation: `yspennstate/math-open-problems@90b9e0b5438b950fd2a0ed054833c055fdb92967`.
-- r16 false Gabor-line interface retained as a correction: `yspennstate/math-open-problems@864e0222357c77d628a7e3389a32e230f30b9321`.
+- fleet03/B02 r17 transverse exact-rank-three cross-block theorem: `private-source-repository@484c89f85cda352b2c4318364a6206ebc4154950`.
+- fleet03/B02 banked theorem predecessor: `private-source-repository@1489c81e0a377fd24b1a8372944e4ca63c85b13a`.
+- designated partner fleet04/B02 zero-diagonal triple continuity theorem: `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`.
+- fresh compatible fleet02/B03 mixed-hub/collision separation: `private-source-repository@90b9e0b5438b950fd2a0ed054833c055fdb92967`.
+- r16 false Gabor-line interface retained as a correction: `private-source-repository@864e0222357c77d628a7e3389a32e230f30b9321`.
 
 No paid model/API/Codex call, no remote workflow, no email/Drive/public release, and no native learned-memory receiver claim was used. Configured reasoning telemetry is unavailable and remains `UNKNOWN/null`.

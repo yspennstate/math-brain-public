@@ -79,7 +79,7 @@ No moment, bounded-diameter, centered-support, fixed-fragment-count, attained op
 
 ## Pinned Fourier obstruction
 
-From the required completed D5 theorem at math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837, every physical cross block B=A[I,J] of the same slab witness obeys
+From the required completed D5 theorem at private-source@e5f71d79eff325201dd0274053d20268ce65b837, every physical cross block B=A[I,J] of the same slab witness obeys
 
 e_5(B^TB) <= (5 sqrt(2e)/rho)^10,
 

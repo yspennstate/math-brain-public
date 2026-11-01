@@ -18,7 +18,7 @@ The designated partner result used here is fleet02/B04's completed theorem
 
 at
 
-`yspennstate/math-open-problems@dfe442ee899867f5677e5ced85a196eca922fe64`
+`private-source-repository@dfe442ee899867f5677e5ced85a196eca922fe64`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T211520Z-fleet02-B04-qform/REPORT.md`.
 

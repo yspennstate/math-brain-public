@@ -6,7 +6,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 This addendum is downstream of `REPORT.md` in the same immutable run folder.  It uses the new quarter-Riesz indefinite-pair receiver proved there and the completed orientation-free rank-two half-Riesz theorem at
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 

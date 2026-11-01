@@ -14,12 +14,12 @@ This report proves a new aggregate-minor consequence of the regularized-determin
 
 Source-pinned inputs actually used:
 
-1. **Regularized determinant theorem**, interactive report `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`. For a physical cross block `B=A[I,J]`, `1<=q<2`, and left range leverage at most `q/2`, it gives
+1. **Regularized determinant theorem**, interactive report `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`, path `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`. For a physical cross block `B=A[I,J]`, `1<=q<2`, and left range leverage at most `q/2`, it gives
    
    `|phi_Q(t)| <= det(I + 2 q t^2 B B^T/(pi^2 e^2))^(-1/(4q))`.
 
    The `q=2` version is unconditional.
-2. **Assigned partner fleet02/B07**, result `determinant-weighted disjoint-basis selection`, canonical report `yspennstate/math-open-problems@32c257209b588141fb60af698f478f1d0ad20b8a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T123512Z-b07-qform-minors-11/REPORT.md`. For an orthonormal `n x 3` spectral frame `U`, with Pluecker weights `w_K=det(U_K)^2`, it defines
+2. **Assigned partner fleet02/B07**, result `determinant-weighted disjoint-basis selection`, canonical report `private-source-repository@32c257209b588141fb60af698f478f1d0ad20b8a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T123512Z-b07-qform-minors-11/REPORT.md`. For an orthonormal `n x 3` spectral frame `U`, with Pluecker weights `w_K=det(U_K)^2`, it defines
    
    `delta = sum_{K cap L=empty} w_K w_L`
    

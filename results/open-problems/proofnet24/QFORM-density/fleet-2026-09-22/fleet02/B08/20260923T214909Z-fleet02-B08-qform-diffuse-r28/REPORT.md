@@ -40,7 +40,7 @@ including the exact endpoint `N=0`. The stress family in Section 5 shows that (1
 
 The owner-required fixed source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 I read `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. Three completed statements are used below at equations:
@@ -59,19 +59,19 @@ I read `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. 
 
 The physical indefinite-pair logarithmic envelope is the completed pair theorem at
 
-`math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 ### 2.2 Newest designated-partner state
 
 The newest compatible `fleet03/B08` report read in this run is
 
-`math-open-problems@5d188af909a000338bfbb259d93eca33ba6124c2`,
+`private-source@5d188af909a000338bfbb259d93eca33ba6124c2`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T211945Z-fleet03-B08-qform-diffuse-r43/REPORT.md`.
 
 It consumes the stronger rank-free first-compound theorem from `fleet01/B04` and records the current common-plane identity. Its r45 predecessor is
 
-`math-open-problems@a3624cdb18747a63e9e6991d83233c30e1664f4b`,
+`private-source@a3624cdb18747a63e9e6991d83233c30e1664f4b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T190424Z-fleet03-B08-qform-diffuse-r45/REPORT.md`.
 
 In that state two original physical hubs have block `B`; two disjoint product banks have full-row-rank arm matrices `M_1,M_2`; and
@@ -88,7 +88,7 @@ where `P_r` projects onto the row space of `M_r`. After exact completion of an i
 
 The strongest new analytic receiver I use is `fleet01/B04` r20,
 
-`math-open-problems@202572bac02518f01c712763376277ba45ab5e0b`,
+`private-source@202572bac02518f01c712763376277ba45ab5e0b`,
 `.../fleet01/B04/20260923T212739Z-fleet01-B04-QFORM-auto11-r20/REPORT.md`,
 
 which proves, with no rank assumption on `N`,

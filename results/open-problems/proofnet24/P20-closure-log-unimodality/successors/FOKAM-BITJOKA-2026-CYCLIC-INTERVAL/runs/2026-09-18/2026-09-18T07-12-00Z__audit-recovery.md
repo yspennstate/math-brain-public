@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this was no
 # P20 — Fokam–Bitjoka Conjecture 2.41 audit-recovery report
 
 Date: **2026-09-18 UTC**.  
-Repository: `yspennstate/math-open-problems`, branch `master`.  
+Repository: `private-source-repository`, branch `master`.  
 Category: **CLOSABLE OUTSIDE / SOURCE-LITERAL YES PROOF CANDIDATE / AUDITS PENDING**.
 
 ## 1. Continuity and controlling state

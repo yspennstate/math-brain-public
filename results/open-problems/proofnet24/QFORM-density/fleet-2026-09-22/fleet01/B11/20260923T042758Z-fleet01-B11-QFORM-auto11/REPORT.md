@@ -18,18 +18,18 @@ This run changes mechanism from the preceding half-Riesz/finite-ray endpoint wor
 Source-valid inputs actually used:
 
 1. Previous B11 Lorentz angular reduction:
-   `yspennstate/math-open-problems@42a6318c46518baa413d08d31a0b18fbda582860`,
+   `private-source-repository@42a6318c46518baa413d08d31a0b18fbda582860`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260923T014132Z-fleet01-B11-QFORM-r13/REPORT.md`.
    It proves the exact null-circle representation and the tangent/opposite-null identity for the zero-physical-diagonal chamber.
 
 2. Required newest volume-stability theorem:
-   `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+   `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
    `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
    Its `E=0` specialization says: for an ORIGINAL-coordinate cross block `C` with `sigma_3(C)>=a>0` and maximum row-range leverage at most `1/2`, the full quadratic-plus-affine output has a continuous `C_0` density and
    `||p_Q||_infinity < 23/a`, with arbitrary self blocks and outside couplings retained.
 
 3. Designated partner fleet02/B11:
-   `yspennstate/math-open-problems@8cf17ad7a60ab0eab6d6c4f8900e62947390db7e`,
+   `private-source-repository@8cf17ad7a60ab0eab6d6c4f8900e62947390db7e`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T025552Z-fleet02-B11-QFORM-db8e3811/REPORT.md`.
    Its minority-sign Schur theorem gives, in exact rank three,
    `||p_Q||_infinity <= 2 sqrt(2 pi)(|a| c_i |det Lambda|)^(-1/4)`

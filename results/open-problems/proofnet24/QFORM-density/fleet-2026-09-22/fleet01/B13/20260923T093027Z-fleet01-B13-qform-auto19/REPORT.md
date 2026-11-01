@@ -21,7 +21,7 @@ No step below uses pointwise quadratic oscillatory decay, independence after rot
 Completed premises actually used:
 
 1. **Designated partner `fleet02/B13`, r24.**  
-   `yspennstate/math-open-problems@cc40e95933db0262eddb6e679211145a84dca081`, path
+   `private-source-repository@cc40e95933db0262eddb6e679211145a84dca081`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T085705Z-fleet02-B13-extremal-r24/REPORT.md`.
 
    For every integer `m>=5`, define the complete disjoint exterior energy
@@ -51,7 +51,7 @@ Completed premises actually used:
    The partner also proves finite-family product purification. This run does not merely restate it: Section 2 supplies a stronger law-level finite-mixture approximation in `L1`, and Sections 4–5 apply (1.1) and (1.4) to actual singular-value inequalities.
 
 2. **Earlier `fleet01/B13` max-volume skeleton.**  
-   `yspennstate/math-open-problems@66b5ff888a219c7c8e754dd25062fac6aecb2f22`, path
+   `private-source-repository@66b5ff888a219c7c8e754dd25062fac6aecb2f22`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T002634Z-fleet01-B13-qform-auto12/REPORT.md`.
 
    If every disjoint physical cross block has `(r+1)`-st singular value at most `sigma`, a single maximum-volume disjoint `r x r` physical pivot yields

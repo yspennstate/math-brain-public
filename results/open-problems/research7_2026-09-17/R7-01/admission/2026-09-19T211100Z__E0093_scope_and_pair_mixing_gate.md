@@ -10,7 +10,7 @@ R7-01 remains `PENDING_ADMISSION`. No canonical claim is created, no successor m
 
 ## Repository snapshot and shard
 
-- Repository: private `yspennstate/math-open-problems`, existing branch `master`.
+- Repository: private `private-source-repository`, existing branch `master`.
 - Worker: `R7-01 Counterexamples and Constants`.
 - Native ID: `6aabe777361481919c9e614646464772`.
 - Own root: `research7_2026-09-17/R7-01/`.

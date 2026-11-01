@@ -17,7 +17,7 @@ The designated partner `fleet04/B04` has no completed current-QFORM canonical re
 
 The completed peer theorem actually applied at equation level is fleet03/B01:
 
-`yspennstate/math-open-problems@e83f41d90267abdb753682dbe60bceecd8e6558a`
+`private-source-repository@e83f41d90267abdb753682dbe60bceecd8e6558a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T223030Z-auto12/REPORT.md`.
 

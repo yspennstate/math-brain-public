@@ -10,7 +10,7 @@ Owner programme: `QFORM-DENSITY-3EIG-20260922`, programme revision `2026-09-22.5
 
 Designated partner result actually used below:
 
-- `fleet02/B14`, r41 report at `yspennstate/math-open-problems@6bc5027a5df12a2cd28130ded9fb53711eb90e39`, path
+- `fleet02/B14`, r41 report at `private-source-repository@6bc5027a5df12a2cd28130ded9fb53711eb90e39`, path
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T173217Z-fleet02-B14-QFORM-r41/REPORT.md`.
 
 I use only its completed pre-Jensen receiver inequality and its subprobability mass-homogeneity/whole-score localization. I do **not** use uniform pointwise quadratic Fourier decay, post-rotation independence, arbitrary-joint coarea, a bounded-diameter localization, or any fixed fragment-count statement.

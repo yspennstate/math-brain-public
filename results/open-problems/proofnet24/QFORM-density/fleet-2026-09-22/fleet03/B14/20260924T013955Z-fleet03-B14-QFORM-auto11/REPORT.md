@@ -27,7 +27,7 @@ This source-valid scalar projection input requires no support, moment, centering
 ### Designated partner result
 The completed fleet04/B14 theorem actually applied is
 
-- repository: `yspennstate/math-open-problems`,
+- repository: `private-source-repository`,
 - commit: `deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`,
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260924T001624Z-fleet04-B14-scaled-schur-localization-r10/REPORT.md`,
 - theorem: scale-covariant three-coordinate Schur localization.

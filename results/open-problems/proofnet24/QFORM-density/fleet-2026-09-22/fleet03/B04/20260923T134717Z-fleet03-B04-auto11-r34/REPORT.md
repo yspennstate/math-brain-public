@@ -15,7 +15,7 @@ This run uses no law-uniform pointwise quadratic-phase decay, no post-rotation i
 
 The completed peer theorem applied at an actual inequality is fleet03/B02, `QFORM-WEIGHTED-MIXED32-FOURIER-L1-v1`, at
 
-`yspennstate/math-open-problems@ff8ec2ee90d4846f39e728e1ca20d50c717cc894:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T085705Z-fleet03-B02-qform-r25/REPORT.md`.
+`private-source-repository@ff8ec2ee90d4846f39e728e1ca20d50c717cc894:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T085705Z-fleet03-B02-qform-r25/REPORT.md`.
 
 For one anchor it requires, with mixture parameter theta and average order s=2+theta, a q satisfying
 
@@ -25,7 +25,7 @@ and every mixed physical inclusion marginal at most q/2.
 
 The new positive estimate uses this slot's immediately preceding proved finite-family extension `QFORM-MULTI-COMPOUND-FOURIER-MIXTURE-v1` from r33:
 
-`yspennstate/math-open-problems@8df80736853803f472ba6662c9c4a07e7801dfdb:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T124716Z-fleet03-B04-auto11-r33/REPORT.md`.
+`private-source-repository@8df80736853803f472ba6662c9c4a07e7801dfdb:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T124716Z-fleet03-B04-auto11-r33/REPORT.md`.
 
 That theorem permits finitely many fractionally allocated determinant families. If their mixture has average compound order s, row or column marginals at most q/2, and 1<=q<s/2, then
 

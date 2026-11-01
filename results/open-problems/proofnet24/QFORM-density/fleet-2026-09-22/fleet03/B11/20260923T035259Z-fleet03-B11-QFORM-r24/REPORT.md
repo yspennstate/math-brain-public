@@ -17,7 +17,7 @@ This run attacks a remaining opposite-sign physical branch and uses only origina
 
 The preceding fleet03/B11 physical-triangle compiler is pinned at
 
-`yspennstate/math-open-problems@a64123b3154f1f9ee0e37ef043ee591bf5b0ddbf`
+`private-source-repository@a64123b3154f1f9ee0e37ef043ee591bf5b0ddbf`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T031429Z-fleet03-B11-QFORM-r23/REPORT.md`.
 
@@ -25,7 +25,7 @@ It pays all fixed-scale sign-frustrated pair-PSD physical triangles and shows th
 
 The completed designated partner fleet04/B11 theorem actually used again below is
 
-`yspennstate/math-open-problems@572f6cd066c9cdef7b5a509917b4dcd79cea2fda`
+`private-source-repository@572f6cd066c9cdef7b5a509917b4dcd79cea2fda`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T021512Z-fleet04-B11-sign-frustrated-triangle-r4/REPORT.md`.
 

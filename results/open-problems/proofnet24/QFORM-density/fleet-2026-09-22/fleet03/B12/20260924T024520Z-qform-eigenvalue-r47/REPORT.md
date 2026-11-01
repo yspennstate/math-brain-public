@@ -23,7 +23,7 @@ be the spectral projection onto **all** eigenspaces with `|lambda(A)|>=gamma`.
 There are two exhaustive cases.
 
 1. If `max_i P_ii<=eta`, the completed spectral-window theorem at
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`, applies directly and gives a continuous `C_0` density with
 
 `||p_(X^T A X)||_infinity <= 288 sqrt(3e)/13 = 63.26405187778285... <64.`
@@ -127,7 +127,7 @@ A useful point is that (3.3) is sign-blind. Adding a positive, negative, or mixe
 
 The completed partner theorem is fleet04/B12 r8:
 
-`yspennstate/math-open-problems@bcb9fd2641440a89d6e4967781d755618e163001`,
+`private-source-repository@bcb9fd2641440a89d6e4967781d755618e163001`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T002154Z-fleet04-B12-multihub-shear-r8/REPORT.md`.
 
 Its concrete `m=6,p=2,ell=4` family has

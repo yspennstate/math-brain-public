@@ -12,4 +12,4 @@ Therefore unrestricted universal STAR-2 is exactly parent-equivalent to unit FOR
 
 Partner application: fleet04/B02's K4 witness rules out trying to replace this size expansion by an old union/intersection-preserving or transfer-only Hall injection. The next direct coupling must be size-controlled and permit genuine cross-fiber cut/join moves that can change union/intersection.
 
-Exact finite diagnostics: `(C,D)=(54,27)` and 3,972 small labelled substitution/Rayleigh identities checked with zero failures. Canonical full report: `yspennstate/math-open-problems` commit `7690480382f6fe01822dde20492372714b594432` under the assigned fleet03/B01 FOREST archive.
+Exact finite diagnostics: `(C,D)=(54,27)` and 3,972 small labelled substitution/Rayleigh identities checked with zero failures. Canonical full report: `private-source-repository` commit `7690480382f6fe01822dde20492372714b594432` under the assigned fleet03/B01 FOREST archive.

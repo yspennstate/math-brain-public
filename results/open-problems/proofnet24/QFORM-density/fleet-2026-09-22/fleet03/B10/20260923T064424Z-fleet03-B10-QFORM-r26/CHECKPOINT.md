@@ -107,7 +107,7 @@ Thus this branch is uniform through `alpha=0` and through every nonzero near-nul
 
 The newest completed designated partner report is
 
-`yspennstate/math-open-problems@5bfbad861ea24cd956f12fd00cb32b1514b64fc8`
+`private-source-repository@5bfbad861ea24cd956f12fd00cb32b1514b64fc8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B10/20260923T061725Z-fleet04-B10-QFORM-r4/REPORT.md`.
 

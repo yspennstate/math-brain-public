@@ -61,7 +61,7 @@ If `T_3(S)<=G^2/16`, then `dist_F(N,{rank<=4})<=G/4`.
 
 `H_5 >= (G^2/64)H_4 >= b^2 G^8/2^22`.
 
-Since `E5(B)>=H5`, the completed fifth-volume receiver from `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, gives in branch 4
+Since `E5(B)>=H5`, the completed fifth-volume receiver from `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, gives in branch 4
 
 `||p_Q||_infinity <= 5 sqrt(2e) E5(B)^(-1/10)
  <= 5 sqrt(2e) 2^(11/5) |b|^(-1/5) G^(-4/5)`.

@@ -15,7 +15,7 @@ This report proves a new pivot-plus-bilinear-block criterion. It retains arbitra
 ## 2. Source-pinned inputs
 
 1. Fresh control source read at start: `yspennstate/math-research-brain@78662a360fecd178e0c343e1107cecde5ea3cc70`, including `AGENTS.md`, `scheduled_tasks/README.md`, `fleet.json`, `roles.json`, `PROTOCOL.md`, programme manifest/current research/claims/corrections/memory protocol, and `assignments/fleet03/B09.json`.
-2. Ridge characteristic-function envelope: `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`, especially (5.4). For a residual cross block `N`, scale `gamma>0`, `1<=q<=2`,
+2. Ridge characteristic-function envelope: `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`, especially (5.4). For a residual cross block `N`, scale `gamma>0`, `1<=q<=2`,
 
    `K=N N^T (gamma^2 I+N N^T)^(-1)`, `theta=tr K`, `D=det(I+N N^T/gamma^2)`,
 
@@ -24,7 +24,7 @@ This report proves a new pivot-plus-bilinear-block criterion. It retains arbitra
    `|phi_R(t)| <= D^(-1/(4q)) [L_q/(2 gamma |t|)]^(theta/(2q))`,
 
    with `L_q=pi e sqrt(2/q)`. The source proof allows arbitrary self blocks, outside couplings, signs, and bounded-density product laws.
-3. Overlap-one Schur aggregation used for comparison/application: `yspennstate/math-open-problems@290f3246bf7eaf376522bd67cb58afa841ad86c4`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T144636Z-r12/REPORT.md`; brain handoff commit `c531f3c1b56c9a434013af4c71fa0696bb7c3469`. It proves `E_P E2(S_i[P,P^c])=M1_i/(16 a^2)` for a physical pivot `a=A_ii!=0`.
+3. Overlap-one Schur aggregation used for comparison/application: `private-source-repository@290f3246bf7eaf376522bd67cb58afa841ad86c4`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T144636Z-r12/REPORT.md`; brain handoff commit `c531f3c1b56c9a434013af4c71fa0696bb7c3469`. It proves `E_P E2(S_i[P,P^c])=M1_i/(16 a^2)` for a physical pivot `a=A_ii!=0`.
 
 The designated partner is `fleet04/B09`. At the fresh-source checks there was no completed current-QFORM `fleet04/B09` artifact in either the shared handoff root or the canonical QFORM archive. I therefore did not fabricate partner consumption; this run proceeds asynchronously using the completed ridge proof and the completed fleet01/B09 aggregation result. A later completed `fleet04/B09` result should be applied on the next run.
 

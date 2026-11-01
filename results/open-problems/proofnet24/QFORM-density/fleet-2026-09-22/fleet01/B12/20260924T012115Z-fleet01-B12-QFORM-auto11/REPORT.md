@@ -238,7 +238,7 @@ so every matrix in this family is literally inside the owner's exact three-large
 
 Use the completed theorem `QFORM-SIX-MODE-SPECTRAL-SQUARE-CARRIER-v1` from
 
-`yspennstate/math-open-problems@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`
+`private-source-repository@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T145451Z-fleet02-B12-QFORM-r36/REPORT.md`.
 

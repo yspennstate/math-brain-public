@@ -5,7 +5,7 @@ attacking: lower the audited fixed-multiplicity theorem by replacing the order-f
 
 Status: **NEW CANDIDATE IMPROVEMENT, PENDING INDEPENDENT END-TO-END REVIEW**.
 
-Pinned baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, path `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`.
+Pinned baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, path `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`.
 
 The baseline 17-eigenvalue proof was independently audited in the sibling `audits/fleet03/B04/.../REPORT.md`. The argument below does not edit or overwrite that baseline. It uses the baseline's proved geometric Brascamp--Lieb theorem, product-projection density lemma, scalar Fourier-power estimate, Fourier/Riesz inversion, Schur spectral count, pivot estimates, disjoint-volume interpolation proposition, and random coordinate cut. The only new analytic ingredient is proved here from those baseline lemmas.
 

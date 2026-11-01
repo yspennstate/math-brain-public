@@ -8,7 +8,7 @@ Status: substantive checkpoint; full QFORM remains OPEN.
 
 ## 1. Requested independent check of the projected-Fisher argument
 
-Source: `yspennstate/math-open-problems@4a65677d185d35154dc3dfae320c5df9f939b8a2`, `proofnet24/QFORM-density/interactive/20260923T184054Z-fisher-continuation/FISHER_INFORMATION.md`.
+Source: `private-source-repository@4a65677d185d35154dc3dfae320c5df9f939b8a2`, `proofnet24/QFORM-density/interactive/20260923T184054Z-fisher-continuation/FISHER_INFORMATION.md`.
 
 For the B02-assigned analytic scope I obtain PASS.
 

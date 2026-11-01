@@ -23,7 +23,7 @@ so sigma_min(K)>=s2(C)/N>=b/N. Weyl on the actual pair C[I,I]=K+E[I,I] gives
 
    sigma_min(C[I,I]) >= kappa := b/N-a >0.
 
-If this pair is definite, conditioning outside I and completing the square gives the elementary 2D bound ||p_Q||inf<=pi/kappa. If it is indefinite, the full-matrix physical-pair theorem at math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc gives, for s=s3(A),
+If this pair is definite, conditioning outside I and completing the square gives the elementary 2D bound ||p_Q||inf<=pi/kappa. If it is indefinite, the full-matrix physical-pair theorem at private-source@742ac943440e41925fe09db9a8c02a96cbd83dbc gives, for s=s3(A),
 
    ||p_Q||inf <= 3*400^(1/3)*(D^2*kappa*s)^(-1/6)
                <= 3*400^(1/3)*kappa^(-5/6)*s^(-1/6),

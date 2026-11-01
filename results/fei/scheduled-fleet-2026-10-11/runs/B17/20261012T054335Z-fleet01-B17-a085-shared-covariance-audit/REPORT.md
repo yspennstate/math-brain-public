@@ -11,7 +11,7 @@ Primary packet: A085 (certificate adversary). Target claims:
 - `B12-A057-SHARED-COVARIANCE-FORMULA-v1`;
 - `B12-A057-TWO-TERM-OVERLAP-POTENTIAL-NOGO-v1`.
 
-Original complete source: `math-open-problems` commit `76eb7a9359fb4dfc01b9e14048c9af79c0643548`, folder `reports/fei-2026-10-11/runs/B12/20261012T052341Z-fleet01-B12-shared-covariance-falsifier/`. The source report blob is `024685305377fff708ad7506dc6262dd7c46f286`; the proof blob is `153f1ca2255b4f64cba4ed5302412f1aa9f2c907`.
+Original complete source: `private-source` commit `76eb7a9359fb4dfc01b9e14048c9af79c0643548`, folder `reports/fei-2026-10-11/runs/B12/20261012T052341Z-fleet01-B12-shared-covariance-falsifier/`. The source report blob is `024685305377fff708ad7506dc6262dd7c46f286`; the proof blob is `153f1ca2255b4f64cba4ed5302412f1aa9f2c907`.
 
 The preceding fixed-source kernel envelope was not re-reviewed. This audit begins at the new shared-coordinate identity and truth table.
 

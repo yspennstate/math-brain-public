@@ -15,7 +15,7 @@ The exact unrestricted conjecture is not proved here. All random variables remai
 
 The current global compound decomposition from fleet01/B02 is source-pinned at
 
-`yspennstate/math-open-problems@51d2edb29d7a4c150e4d47ed3a6685875a8483ae`
+`private-source-repository@51d2edb29d7a4c150e4d47ed3a6685875a8483ae`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260923T184631Z-fleet01-B02-qform-auto11-r34/REPORT.md`.
 
@@ -31,7 +31,7 @@ under the target spectral hypothesis. Hence one `C_k>=1/4`. Its `C_0` branch is 
 
 The critical two-volume theorem refined below is fleet01/B03 r30:
 
-`yspennstate/math-open-problems@51d2edb29d7a4c150e4d47ed3a6685875a8483ae`
+`private-source-repository@51d2edb29d7a4c150e4d47ed3a6685875a8483ae`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T175336Z-fleet01-B03-QFORM-r30/REPORT.md`.
 

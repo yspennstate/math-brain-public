@@ -229,7 +229,7 @@ What cannot be done is impose a universal diameter or universal number of fragme
 
 Use fleet04/B14's completed scale-covariant conjugate-shear theorem at
 \[
-\texttt{yspennstate/math-open-problems@2ac84e141e8e939506cbd5cd8314589141b714d5},
+\texttt{private-source-repository@2ac84e141e8e939506cbd5cd8314589141b714d5},
 \]
 whose active form is
 \[

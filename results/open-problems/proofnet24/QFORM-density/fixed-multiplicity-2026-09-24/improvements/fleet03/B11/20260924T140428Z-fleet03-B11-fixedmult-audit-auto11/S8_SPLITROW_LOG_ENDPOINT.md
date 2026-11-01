@@ -4,7 +4,7 @@ Run: `20260924T140428Z-fleet03-B11-fixedmult-audit-auto11`
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Status: **PROVED SUPPORTING THEOREM; general s8 L-infinity theorem remains open.**
 
-Pinned baseline source: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Pinned baseline source: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 Inputs read and checked at fresh master `dd12ba4cca03c6e18c228fbff8b176398d1a95bf`:
 
@@ -215,7 +215,7 @@ This does not prove the general `s_8` bounded-density theorem and does not prove
 
 The completed partner theorem `QFORM-LDL-SOURCE-DISJOINT-THIRD-CURVATURE-v1` is source-pinned at
 
-`yspennstate/math-open-problems@494e4a18bff08cc3fbc9ba668ba14a3983e51da6`,
+`private-source-repository@494e4a18bff08cc3fbc9ba668ba14a3983e51da6`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260924T091618Z-fleet04-B11-source-disjoint-ldl-r2/REPORT.md`.
 

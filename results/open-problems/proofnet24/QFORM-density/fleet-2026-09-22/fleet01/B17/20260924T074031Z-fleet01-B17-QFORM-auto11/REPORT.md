@@ -11,7 +11,7 @@ This run closes the exact majority-plane compound-Poisson branch left open by th
 
 The completed partner result actually used is `QFORM-POISSON-SATELLITE-NONLINDEBERG-BARRIER-v1`, source-pinned at
 
-`yspennstate/math-open-problems@5b85a3d5f95ea478f2534589aaf8729a4e1a29d6:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T064827Z-fleet02-B17-QFORM-auto11/REPORT.md`.
+`private-source-repository@5b85a3d5f95ea478f2534589aaf8729a4e1a29d6:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T064827Z-fleet02-B17-QFORM-auto11/REPORT.md`.
 
 Its Gaussian location-mixture one-sheet lemma states: if `G~N(0,s I_3)`, `M` is any independent random vector, `J=diag(1,1,-1)`, and `Q=(G+M)^T J(G+M)`, then for a.e. `q>=0`,
 
@@ -21,7 +21,7 @@ At `s=1/12`, this is exactly `3 sqrt(2)`.
 
 The physical-frame Fourier input used below is Theorem F at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 ## 2. Global majority-plane Gaussian-location theorem
 

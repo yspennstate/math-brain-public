@@ -239,7 +239,7 @@ Q_{a,m}=-aX^2+2\sqrt{1-a^2}\,XB_m+aB_m^2+C_m^2.
 
 The designated partner `fleet04/B17` proved at
 
-`yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`
+`private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260922T211900Z-fleet04-B17-QFORM-r3/REPORT.md`
 

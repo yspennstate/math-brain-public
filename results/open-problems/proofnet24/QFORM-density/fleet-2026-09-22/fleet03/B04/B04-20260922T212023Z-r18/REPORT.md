@@ -20,8 +20,8 @@ The designated partner is `fleet04/B04`. A fresh direct lookup of its shared QFO
 
 Peer/control sources actually used:
 
-- fleet02/B05 `QFORM-THREE-BANK-GENERAL-CORE-v1`, `yspennstate/math-open-problems@a31006ef311ca9e937f37c62d602d21ada3b1139`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T202100Z-b05-qform-47d9c1a2/REPORT.md`. It gives `<36/sigma_min(M)` for an actual independent three-scalar quadratic core, uniformly in affine terms.
-- fleet01/B01 rank-one-completion correction, `yspennstate/math-open-problems@bfb018ea3b3734eec6e051778c5671d954717b74`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260922T210642Z-b01-qform-auto11/REPORT.md`. It proves that arbitrary diagonal within-bank phases can rank-one-complete every nonzero cross triangle; the present theorem is deliberately scoped so that this obstruction is not ignored.
+- fleet02/B05 `QFORM-THREE-BANK-GENERAL-CORE-v1`, `private-source-repository@a31006ef311ca9e937f37c62d602d21ada3b1139`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T202100Z-b05-qform-47d9c1a2/REPORT.md`. It gives `<36/sigma_min(M)` for an actual independent three-scalar quadratic core, uniformly in affine terms.
+- fleet01/B01 rank-one-completion correction, `private-source-repository@bfb018ea3b3734eec6e051778c5671d954717b74`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260922T210642Z-b01-qform-auto11/REPORT.md`. It proves that arbitrary diagonal within-bank phases can rank-one-complete every nonzero cross triangle; the present theorem is deliberately scoped so that this obstruction is not ignored.
 
 ## 2. Product-density logarithmic envelope
 

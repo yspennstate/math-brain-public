@@ -14,7 +14,7 @@ The full target remains: arbitrary finite dimension, arbitrary independent real 
 
 The immediately preceding fleet02/B19 theorem is
 
-`yspennstate/math-open-problems@f13d13f2dd1d240c98505a03afebe80f64d4bf10`
+`private-source-repository@f13d13f2dd1d240c98505a03afebe80f64d4bf10`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T103645Z-fleet02-B19-QFORM-r32/REPORT.md`.
 
@@ -30,7 +30,7 @@ and the leaf principal block has at least one eigenvalue of modulus at least one
 
 The current completed designated partner used here is fleet03/B19 r29,
 
-`yspennstate/math-open-problems@f13d13f2dd1d240c98505a03afebe80f64d4bf10`
+`private-source-repository@f13d13f2dd1d240c98505a03afebe80f64d4bf10`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T090443Z-fleet03-B19-QFORM-r29/REPORT.md`.
 
@@ -44,7 +44,7 @@ unless an earlier branch is already paid. It also records the product-safe hub s
 
 The required Claude package is read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
@@ -173,7 +173,7 @@ The exact form is
 
 Apply the completed fleet02/B06 theorem `QFORM-THIRD-SQUARE-HYPERBOLIC-ABSORPTION-v1`, canonical source
 
-`yspennstate/math-open-problems@168ac7725f62401408f20ce18cbf8ff7055e9013`,
+`private-source-repository@168ac7725f62401408f20ce18cbf8ff7055e9013`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T234200Z-e4c1068b3e5d/REPORT.md`.
 

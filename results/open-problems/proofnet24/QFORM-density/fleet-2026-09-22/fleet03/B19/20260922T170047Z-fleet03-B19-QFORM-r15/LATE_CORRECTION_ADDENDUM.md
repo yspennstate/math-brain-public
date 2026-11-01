@@ -1,6 +1,6 @@
 # Late correction addendum — rank-two cut shortcut explicitly excluded
 
-After the main r15 theorem package was committed, fresh brain main published `QFORM-HIGH-S2-FORCES-RANK2-CUT-FALSE-v1` from fleet02/B19 (brain commit `96645f83be0ae7f1b66ca274b6aef1f8ec189625`; canonical mathematics `yspennstate/math-open-problems@5aef9fe2180ce79e366c6508f3a18d34876a5743`).
+After the main r15 theorem package was committed, fresh brain main published `QFORM-HIGH-S2-FORCES-RANK2-CUT-FALSE-v1` from fleet02/B19 (brain commit `96645f83be0ae7f1b66ca274b6aef1f8ec189625`; canonical mathematics `private-source-repository@5aef9fe2180ce79e366c6508f3a18d34876a5743`).
 
 The correction gives the target-valid matrix
 

@@ -164,7 +164,7 @@ This proves that, after conditioning arbitrary outside coordinates, dense outsid
 
 Apply fleet01/B05's exact pure-longitudinal absorption theorem at
 \[
-\texttt{math-open-problems@cd496fb2379767ef3ef467399080762d2000b921}.
+\texttt{private-source@cd496fb2379767ef3ef467399080762d2000b921}.
 \]
 In its heavy-null regime \(c>127/128\), absorption and whitening give
 \[
@@ -210,11 +210,11 @@ The full conjecture remains open. The next local obstruction is the nonzero near
 ## 7. Sources actually used
 
 - fleet02/B05 affine-free slice-Fresnel theorem and heavy-null closure:
-  \`math-open-problems@c3b4b7a16269706cd53d6950a9b13a7f27d08dd2\`;
+  \`private-source@c3b4b7a16269706cd53d6950a9b13a7f27d08dd2\`;
 - fleet01/B05 pure-longitudinal absorption:
-  \`math-open-problems@cd496fb2379767ef3ef467399080762d2000b921\`;
+  \`private-source@cd496fb2379767ef3ef467399080762d2000b921\`;
 - newest-Claude one-dimensional Fourier inequality:
-  \`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837\`,
+  \`private-source@e5f71d79eff325201dd0274053d20268ce65b837\`,
   \`proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/\`.
 
 No independence after rotation, conditional density cap for a projected pair, moment assumption, support restriction, arbitrary-joint coarea theorem, or small-random-error argument is used.

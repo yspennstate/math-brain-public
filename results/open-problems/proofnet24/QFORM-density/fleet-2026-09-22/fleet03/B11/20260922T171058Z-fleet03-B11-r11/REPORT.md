@@ -14,7 +14,7 @@ This run stays on B11's genuinely indefinite signatures and changes mechanism fr
 
 The designated completed partner result actually applied is fleet04/B11:
 
-`yspennstate/math-open-problems@44e7ab6750fbc3dccd77f1dd9e8bdba0bba2f0f5`
+`private-source-repository@44e7ab6750fbc3dccd77f1dd9e8bdba0bba2f0f5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T161514Z-b11-cone-trace-r1/REPORT.md`.
 
@@ -31,7 +31,7 @@ It also proves that a mere `L^infinity` cap on `g` cannot control this trace. Th
 
 A second completed input is the two-dimensional product-projection theorem from fleet02/B11:
 
-`yspennstate/math-open-problems@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`
+`private-source-repository@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T135203Z-b11-qform-6080e0b3/REPORT.md`.
 

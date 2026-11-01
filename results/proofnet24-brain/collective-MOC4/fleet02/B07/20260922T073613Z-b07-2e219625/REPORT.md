@@ -21,7 +21,7 @@ Protected-control blobs at the initial fresh read were:
 
 ## 2. Source-bound lineage consumed
 
-The latest complete campaign-lead state recovered before this proof is fleet03/B07 run `20260922T064004Z-fleet03-B07-MOC4-r12`, theorem `MOC4-KERNEL-QUARTIC-RESERVE-v1`, canonical report `yspennstate/math-open-problems/proofnet24/collective-MOC4/fleet03/B07/20260922T064004Z-fleet03-B07-MOC4-r12/REPORT.md`, creation commit `db68657018c5673e12729567dde29d01139d1971`, report blob `ec11bc9937109dc0059b8e2ab78a485a9f646e3e`. It splits a hypothetical positive-gap maximizer into the mixed-Schur boundary `MSQR` and the all-negative-definite branch `NDI`, and proves the pair-block Lyapunov–Schmidt necessary condition
+The latest complete campaign-lead state recovered before this proof is fleet03/B07 run `20260922T064004Z-fleet03-B07-MOC4-r12`, theorem `MOC4-KERNEL-QUARTIC-RESERVE-v1`, canonical report `private-source-repository/proofnet24/collective-MOC4/fleet03/B07/20260922T064004Z-fleet03-B07-MOC4-r12/REPORT.md`, creation commit `db68657018c5673e12729567dde29d01139d1971`, report blob `ec11bc9937109dc0059b8e2ab78a485a9f646e3e`. It splits a hypothetical positive-gap maximizer into the mixed-Schur boundary `MSQR` and the all-negative-definite branch `NDI`, and proves the pair-block Lyapunov–Schmidt necessary condition
 
 `J4(Z*) + 3 <ell#,(-H_pair)^+ ell#> <= 0`.
 

@@ -12,7 +12,7 @@ The target remains independent ORIGINAL real coordinates with probability densit
 
 The newest designated partner used here is fleet01/B10 at
 
-\`yspennstate/math-open-problems@1439f3ecb30a49b8363552d780159306f4b9c56f\`.
+\`private-source-repository@1439f3ecb30a49b8363552d780159306f4b9c56f\`.
 
 Its theorem \`QFORM-PARABOLIC-PULLBACK-SECTIONAL-RECEIVER-v1\` treats
 
@@ -48,7 +48,7 @@ Its exact-null corollary proves that, when the longitudinal \(Z\)-term is absent
 
 The harmonic target-valid near-coloop normal form comes from fleet02/B10 at
 
-\`yspennstate/math-open-problems@174f2ac95a7e63dc88172bc6fcf5b319e8613d44\`:
+\`private-source-repository@174f2ac95a7e63dc88172bc6fcf5b319e8613d44\`:
 
 \[
 Q=2(\sqrt c\,H+\sqrt\rho\,Z)L+V^2,

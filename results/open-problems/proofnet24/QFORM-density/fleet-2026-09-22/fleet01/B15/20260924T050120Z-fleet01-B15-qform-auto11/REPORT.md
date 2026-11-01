@@ -98,7 +98,7 @@ The newest designated-partner handoff is
 
 with canonical mathematics at
 
-`math-open-problems@8356a46866b14c2ddb19a89b0918e867170d1b45`.
+`private-source@8356a46866b14c2ddb19a89b0918e867170d1b45`.
 
 Its completed rough-input bridge says that convolution of each marginal with a positive probability approximate identity preserves the density cap and independence, converges in `L^1`, and deterministic quadratic pushforward contracts total variation.
 

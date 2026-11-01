@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R19 / I0110 — a graph-intrinsic persistent-relator selector and exact deck-collision criterion
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Status after this run: **PARTIAL / 9-OF-9 COMMON-CERTIFICATE SATURATED / NEW STRUCTURAL ROUTE / SOURCE OPEN / AUDIT PENDING. NO CLOSURE CLAIM.**
 

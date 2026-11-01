@@ -11,9 +11,9 @@ The target is unchanged: independent real coordinates with probability densities
 
 Fresh controls and the live correction inbox were read before publication. This report does not use law-uniform pointwise van der Corput decay, arbitrary-joint rank-three coarea, a conditional projection-density moment, a largest-minor inference, or an unrestricted fiber supremum.
 
-Immediate predecessor: fleet01/B06 r50, `yspennstate/math-open-problems@5b36d64e5c6f1f6d38ac240ea80fa966f942ba0b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T073602Z-fleet01-B06-QFORM-r50/REPORT.md`. It proved the scalar-pivot/P2 receiver and the exact P1/P2 Pluecker bridge, leaving a near-rank-one hub with low P2 and nearly collinear P1 rows.
+Immediate predecessor: fleet01/B06 r50, `private-source-repository@5b36d64e5c6f1f6d38ac240ea80fa966f942ba0b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T073602Z-fleet01-B06-QFORM-r50/REPORT.md`. It proved the scalar-pivot/P2 receiver and the exact P1/P2 Pluecker bridge, leaving a near-rank-one hub with low P2 and nearly collinear P1 rows.
 
-The designated partner theorem actually applied here is fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical mathematics `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. If `R` has orthonormal columns and `Y=R^T X` is a `k`-dimensional projection of independent cap-one coordinates, then
+The designated partner theorem actually applied here is fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical mathematics `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. If `R` has orthonormal columns and `Y=R^T X` is a `k`-dimensional projection of independent cap-one coordinates, then
 
 `||p_Y||_infinity <= product_i (1-ell_i)^(-(1-ell_i)/2) <= exp(k/2)`.
 
@@ -23,7 +23,7 @@ For `k=2`, after deterministic normalization this implies the exact inequality u
 
 for every full-row-rank `2 x n` matrix `L` and every original-coordinate cap-one product vector `W`.
 
-The newest fleet02/B06 r15 result, `yspennstate/math-open-problems@85005bde4c308c565d29f1f8de42fdb08c062776`, is also used to locate the live branch: for a literal three-hub block `K`,
+The newest fleet02/B06 r15 result, `private-source-repository@85005bde4c308c565d29f1f8de42fdb08c062776`, is also used to locate the live branch: for a literal three-hub block `K`,
 
 `sigma_2(K)>=1/64  =>  ||p_Q||_infinity<3149`.                 (0.2)
 

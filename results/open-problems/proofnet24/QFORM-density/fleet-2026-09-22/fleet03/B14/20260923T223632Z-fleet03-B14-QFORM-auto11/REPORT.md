@@ -226,7 +226,7 @@ b-a\uparrow\infty.
 
 I apply the completed fleet04/B14 scale-covariant conjugate-shear theorem:
 
-`yspennstate/math-open-problems@2ac84e141e8e939506cbd5cd8314589141b714d5`,
+`private-source-repository@2ac84e141e8e939506cbd5cd8314589141b714d5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T051013Z-fleet04-B14-scale-shear-r7/REPORT.md`.
 

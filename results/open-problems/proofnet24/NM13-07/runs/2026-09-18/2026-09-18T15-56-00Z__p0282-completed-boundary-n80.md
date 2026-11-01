@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-07 — P0282 completed residual boundary transfer, exact obstruction, and row 80
 
 Run date: 2026-09-18 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Track / namespace: `proofnet24/NM13-07/`  
 Category: **CLOSABLE OUTSIDE**  
 Canonical source / claim: `P0282`, `operations/claims/P0282.md`  

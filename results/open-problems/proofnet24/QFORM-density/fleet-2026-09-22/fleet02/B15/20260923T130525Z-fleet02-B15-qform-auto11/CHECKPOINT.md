@@ -5,7 +5,7 @@ attacking: independently verify the moving-sheet rough-input closure, then combi
 
 The full QFORM theorem remains open. This checkpoint records a target-valid obstruction to strengthening the latest fleet03/B15 weak-limit trace theorem.
 
-Use the completed fleet03/B15 phase-aligned family at math-open-problems@a5094ce57d028af28c2c114f92ca26ac277d4cec. For every s>=2 there is a smooth compactly supported cap-one density f_s on (1,10) such that, for three iid coordinates and the fixed target A=I_3,
+Use the completed fleet03/B15 phase-aligned family at private-source@a5094ce57d028af28c2c114f92ca26ac277d4cec. For every s>=2 there is a smooth compactly supported cap-one density f_s on (1,10) such that, for three iid coordinates and the fixed target A=I_3,
 
 Q_s=X_{s,1}^2+X_{s,2}^2+X_{s,3}^2
 
@@ -13,7 +13,7 @@ has a smooth density p_s supported in (3,300), ||p_s||_infinity<=1/2, and
 
 |hat p_s(s)|>=27/64.
 
-Choose s_j->infinity and then a subsequence, still denoted s_j, for which the one-dimensional source laws converge weakly to a law mu on [1,10]. Cap-one laws are weakly closed, so mu has a density f<=1. The triple products converge weakly and hence the Q_s laws converge weakly to the law rho of Q=X_1^2+X_2^2+X_3^2 with iid X_i~mu. By the latest completed partner trace theorem at math-open-problems@be22adf9f67e9fa02063418c000bc5ee2d2d0c43, rho is atomless and
+Choose s_j->infinity and then a subsequence, still denoted s_j, for which the one-dimensional source laws converge weakly to a law mu on [1,10]. Cap-one laws are weakly closed, so mu has a density f<=1. The triple products converge weakly and hence the Q_s laws converge weakly to the law rho of Q=X_1^2+X_2^2+X_3^2 with iid X_i~mu. By the latest completed partner trace theorem at private-source@be22adf9f67e9fa02063418c000bc5ee2d2d0c43, rho is atomless and
 
 sup_{a<=b}|rho_j((a,b])-rho((a,b])| ->0.
 

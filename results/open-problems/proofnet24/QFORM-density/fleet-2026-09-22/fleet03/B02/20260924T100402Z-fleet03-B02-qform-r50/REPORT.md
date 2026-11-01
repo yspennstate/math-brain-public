@@ -16,7 +16,7 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates with 
 
 Immediate own source:
 
-`yspennstate/math-open-problems@859066cc3edee1bbeafe367e3bf2d630a4c425d9`,
+`private-source-repository@859066cc3edee1bbeafe367e3bf2d630a4c425d9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260924T045848Z-fleet03-B02-qform-r47/REPORT.md`.
 
@@ -26,7 +26,7 @@ It leaves, among other fixed-scale survivors, an ORIGINAL physical diagonal
 
 Fresh complementary B02 source:
 
-`yspennstate/math-open-problems@4f9513fc5f561ab1db4ee87ecf55eea90644ecb2`,
+`private-source-repository@4f9513fc5f561ab1db4ee87ecf55eea90644ecb2`,
 
 fleet01/B02 r48. It proves `QFORM-TWOEIG-1OVER19-DIFFUSE-HALFRIESZ-v1`: if a symmetric residual matrix `S` has two eigenvalues of modulus at least `s`, and for
 
@@ -40,7 +40,7 @@ one has `max_i P_ii<=1/72`, then, for arbitrary affine terms,
 
 The one-large-direction quarter-potential input is fleet03/B11,
 
-`yspennstate/math-open-problems@0e0a0ab9b2a27d7a647567690e2c7f79c05341b0`,
+`private-source-repository@0e0a0ab9b2a27d7a647567690e2c7f79c05341b0`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T161210Z-fleet03-B11-QFORM-r13/REPORT.md`.
 
@@ -54,7 +54,7 @@ and the exact square-to-quarter estimate
 
 Finally, the newest local two-sided-curvature B02 analysis is
 
-`yspennstate/math-open-problems@6b5539d7c55c495c8b0f410b90dbf704c70c3a50`.
+`private-source-repository@6b5539d7c55c495c8b0f410b90dbf704c70c3a50`.
 
 It gives the source-valid obstruction
 
@@ -224,7 +224,7 @@ This is exactly the critical rank-one-cross half-Riesz endpoint: a one-row cross
 
 The designated partner result is
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 

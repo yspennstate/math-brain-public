@@ -21,7 +21,7 @@ Fresh control was read from `yspennstate/math-research-brain` main at commit
 
 The direct predecessor is fleet03/B09 r27,
 
-`yspennstate/math-open-problems@e6d2395b5b13bf75552b015668177a0270d3e89f`,
+`private-source-repository@e6d2395b5b13bf75552b015668177a0270d3e89f`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T091354Z-fleet03-B09-QFORM-r27/REPORT.md`.
 
@@ -31,7 +31,7 @@ The completed determinant-balanced analytic source is fleet02/B09
 
 `QFORM-TWOHUB-PLUCKER-SMOOTHING-v1`,
 
-`yspennstate/math-open-problems@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`,
+`private-source-repository@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T064043Z-fleet02-B09-QFORM-r13/REPORT.md`.
 
@@ -39,7 +39,7 @@ The completed projection theorem applied at an actual inequality below is fleet0
 
 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`,
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`.
 
 For an `n x h` matrix `P` with orthonormal columns and an original-coordinate cap-one product source `X`, it gives
 
@@ -49,7 +49,7 @@ The newest fleet01/B09 theorem
 
 `QFORM-MULTIHUB-PLUCKER-SMOOTHING-v1`,
 
-`yspennstate/math-open-problems@b7fca6f016b94984bfdfdb30e4c183fafff77443`,
+`private-source-repository@b7fca6f016b94984bfdfdb30e4c183fafff77443`,
 
 is the literal-physical-hub analogue of the theorem proved here. The present proof identifies the extra step needed to replace those literal hubs by a dependent grouped projection.
 

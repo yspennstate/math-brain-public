@@ -17,7 +17,7 @@ The unrestricted target remains OPEN: arbitrary independent real ORIGINAL-coordi
 
 The first live B07 debt at startup was the nonlinear receiver left by fleet03/B07 r30. Its immutable source is
 
-`yspennstate/math-open-problems@466a8413b3d1ec6ce723633be0fe14eafaa7175d`,
+`private-source-repository@466a8413b3d1ec6ce723633be0fe14eafaa7175d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T090613Z-fleet03-B07-qform-r30/REPORT.md`.
 
 In its double-anchored branch an ORIGINAL-coordinate cross block
@@ -41,7 +41,7 @@ The corrections used here are the live programme restrictions: no post-rotation 
 
 This is a direct but previously unapplied combination of two completed results in the required Claude source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`:
 
 1. the general `D_k` decoupling/volume argument; and

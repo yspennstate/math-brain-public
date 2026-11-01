@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R12 / I0115 — multihit regularization, projective-consistency obstruction, and the finite-depth main-road no-go
 
-Repository/branch: `yspennstate/math-open-problems`, `master`.  
+Repository/branch: `private-source-repository`, `master`.  
 Deployment: `NEW-METHODS-2026-09-16`.  
 Status: **OPEN / PARTIAL / second I0115 report**.  
 Canonical claim: `operations/claims/I0115.md`.

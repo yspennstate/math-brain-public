@@ -14,14 +14,14 @@ This run keeps the current corrections: no law-uniform pointwise van-der-Corput 
 
 The immediate predecessor is fleet03/B11 r53:
 
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `76badd15bb5b007835da3c731f56430bb7eb19b6`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T081221Z-fleet03-B11-QFORM-r53/REPORT.md`.
 
 It introduced the product-valid Schur difference frequency `Z` and proved its 2D density cap. The designated partner theorem used below is fleet04/B11:
 
 - theorem `QFORM-SPECTRAL-SCHUR-PSEUDODET-v1`
-- repository `yspennstate/math-open-problems`
+- repository `private-source-repository`
 - commit `28cbe14c4381d5f1b58145b29bbcc160b4d2ea5c`
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260924T041708Z-fleet04-B11-schur-pseudodet-r1/REPORT.md`.
 

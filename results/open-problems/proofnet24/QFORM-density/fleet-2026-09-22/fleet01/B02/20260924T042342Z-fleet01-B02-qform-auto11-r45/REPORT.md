@@ -14,7 +14,7 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates with 
 
 The newest completed designated partner available to this slot is fleet02/B02:
 
-`yspennstate/math-open-problems@a9d0b0bd0ae5e9587eaa8aed6a21d871a5b81e56`,
+`private-source-repository@a9d0b0bd0ae5e9587eaa8aed6a21d871a5b81e56`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260924T031112Z-fleet02-B02-QFORM-auto11/REPORT.md`.
 
@@ -31,7 +31,7 @@ where `x1>=x2>=...` are the squared singular values of N. Its theorem attacks a 
 
 The target-level scalar-pivot closure used below is fleet03/B01,
 
-`yspennstate/math-open-problems@28cbe14c4381d5f1b58145b29bbcc160b4d2ea5c`,
+`private-source-repository@28cbe14c4381d5f1b58145b29bbcc160b4d2ea5c`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T233049Z-auto11/REPORT.md`.
 
@@ -43,7 +43,7 @@ This is essential boundedness; that theorem does not assert Fourier L1 or contin
 
 For the new robust-E2 consequence I use fleet02/B06,
 
-`yspennstate/math-open-problems@cd0be625c8f7143a46ad14bb936e9c24bfb19a8d`,
+`private-source-repository@cd0be625c8f7143a46ad14bb936e9c24bfb19a8d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T192839Z-auto11/REPORT.md`.
 

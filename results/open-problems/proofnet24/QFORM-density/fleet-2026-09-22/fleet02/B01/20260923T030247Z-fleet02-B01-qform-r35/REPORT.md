@@ -16,7 +16,7 @@ The law-uniform scalar pointwise Fresnel estimate remains false: for any prescri
 
 Current completed sources actually used:
 
-1. `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`. In particular, the two-dimensional product-projection density cap `<=2` after orthonormal projection and Theorem H are used below at equations, not only cited.
+1. `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`. In particular, the two-dimensional product-projection density cap `<=2` after orthonormal projection and Theorem H are used below at equations, not only cited.
 2. Designated partner fleet03/B01, bundle tip `f651c96b5c87b1b0df9a5701b9b47293d08dc94c`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T013054Z-auto11/REPORT.md`. Its critical rank-two volume half-Riesz theorem is applied in Section 5.
 3. The source square-peel/fractional-Riesz interface from the same Claude directory (later source-pinned update `2f3340cd21be3e8b1a0d3a738e1fa7b7c6b76926`) is used in Section 4.
 

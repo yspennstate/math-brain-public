@@ -5,7 +5,7 @@ attacking: frame-covariant routing of arbitrary signed eigenvalue replacements t
 
 Full QFORM remains OPEN. This checkpoint records the first useful derivation before the final report.
 
-Use fleet03/B12's completed matrix-parameter Schur inequality (math-open-problems@333dd6db61c9d18e88f9b8be5bae55c811d49b42): on physical core j,
+Use fleet03/B12's completed matrix-parameter Schur inequality (private-source@333dd6db61c9d18e88f9b8be5bae55c811d49b42): on physical core j,
 
 sigma_min(B_j+U_j Theta U_j^T) >= ell(rho_j)^2 min{mu_j, f_j sigma_min(K_j+S_j Theta S_j^T)},
 

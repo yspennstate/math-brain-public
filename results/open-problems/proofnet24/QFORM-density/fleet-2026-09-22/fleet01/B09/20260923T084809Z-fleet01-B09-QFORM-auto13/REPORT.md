@@ -15,17 +15,17 @@ The unrestricted quadratic-form bounded-density conjecture remains OPEN. The res
 
 The completed designated partner theorem used and extended is fleet02/B09 `QFORM-TWOHUB-PLUCKER-SMOOTHING-v1`, canonical source
 
-`yspennstate/math-open-problems@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`
+`private-source-repository@bc348aa1a3631b0a0a3a9939cbb6b023578e9abc`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T064043Z-fleet02-B09-QFORM-r13/REPORT.md`.
 
 Its proof combines the source-coordinate mixed-hub Fresnel identity from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 with `QFORM-PLUCKER-ENTROPY-BL-v1` from
 
-`yspennstate/math-open-problems@32c257209b588141fb60af698f478f1d0ad20b8a`.
+`private-source-repository@32c257209b588141fb60af698f478f1d0ad20b8a`.
 
 The only facts used here from those sources are:
 

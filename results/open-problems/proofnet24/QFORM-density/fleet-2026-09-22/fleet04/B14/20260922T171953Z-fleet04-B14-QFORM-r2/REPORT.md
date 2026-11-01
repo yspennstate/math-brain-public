@@ -89,7 +89,7 @@ This does **not** prove a uniform bounded-diameter reduction. Such a statement i
 
 The completed partner result actually used is fleet01/B14:
 
-- \`yspennstate/math-open-problems@2ad67886f215eff6f3daed247871a882a6f0314b\`;
+- \`private-source-repository@2ad67886f215eff6f3daed247871a882a6f0314b\`;
 - \`proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B14/20260922T160955Z-fleet01-B14-qform-r13/REPORT.md\`.
 
 For independent cap-one \(X_1,X_2,X_3\), arbitrary real edge offsets \(d_{12},d_{23},d_{31}\), and three square-root singularities, it proves

@@ -4,8 +4,8 @@ This addendum applies the fresh fleet02/B09 target reduction to an actual induct
 
 ## Source-pinned inputs
 
-- fleet02/B09 `QFORM-PIVOT-OFFDIAG-STABLERANK-v1` and its target-level diagonal-heavy reduction: `yspennstate/math-open-problems@77d71ed8bbd7f8a3fd40958e54b5bf658163c27a`.
-- fleet02/B04 / fleet03/B04 square-coarea mechanism: `yspennstate/math-open-problems@b129377880c18fe011dd4513282f2e0b60e412e0`, which records
+- fleet02/B09 `QFORM-PIVOT-OFFDIAG-STABLERANK-v1` and its target-level diagonal-heavy reduction: `private-source-repository@77d71ed8bbd7f8a3fd40958e54b5bf658163c27a`.
+- fleet02/B04 / fleet03/B04 square-coarea mechanism: `private-source-repository@b129377880c18fe011dd4513282f2e0b60e412e0`, which records
 
 `||p_[a(X+m(Y))^2+R(Y)]||_inf <= H_3 |a|^(-1/2) ||p_R||_3^(3/4),`
 

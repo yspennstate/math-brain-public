@@ -142,7 +142,7 @@ or
 
 ## 4. Concrete reduction of the current exact-rank-three near-coloop endpoint
 
-A completed fleet02/B20 proof-assembly report (`math-open-problems@b967ff246e7e5b480b098c17f01cd0fc93072991`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T070214Z-fleet02-B20-QFORM-auto11/REPORT.md`) reduces its still-unpaid exact-rank-three packet to simultaneous facts:
+A completed fleet02/B20 proof-assembly report (`private-source@b967ff246e7e5b480b098c17f01cd0fc93072991`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T070214Z-fleet02-B20-QFORM-auto11/REPORT.md`) reduces its still-unpaid exact-rank-three packet to simultaneous facts:
 
 1. there is an ORIGINAL coordinate `h` with rank-three frame leverage `p_h>1/2`; and
 2. there is a spectral near-coloop carrying more than `0.9773917815` of its squared mass on one of the two physical banks.
@@ -151,7 +151,7 @@ Apply Theorem 3.1 at `i=h`, `L=1`, `d=1/2`. If the star satisfies `beta_h<1/2`, 
 
 `|A_hh|>1/2`.                                                      (4.1)
 
-The completed orientation-free exact-rank-three residual theorem in the current proof ledger (`QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1`, source package `math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`) gives, for exact rank three `A=R Lambda R^T`,
+The completed orientation-free exact-rank-three residual theorem in the current proof ledger (`QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1`, source package `private-source@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`) gives, for exact rank three `A=R Lambda R^T`,
 
 `||p_Q||_infinity <=128 [p_h |A_hh| |det Lambda|]^(-1/4)`.         (4.2)
 
@@ -167,13 +167,13 @@ in addition to the existing `>0.9773917815` near-coloop. The scalar-pivot altern
 
 Continuity is **not** claimed from (4.2); this paragraph establishes essential boundedness on the pivot branch.
 
-The fresh fleet01/B02 anchored-star `L^1` theorem (`math-open-problems@1b322450fa949ea725cdf47b11c06917737bee57`) was also checked before publication. Its hypotheses require positive incident third-volume and anchored residual second-volume currencies plus marginal/cross-disjoint gates. A bare `ell^2` star (4.4) does not supply those determinant currencies, so that theorem is not silently used to close (4.4).
+The fresh fleet01/B02 anchored-star `L^1` theorem (`private-source@1b322450fa949ea725cdf47b11c06917737bee57`) was also checked before publication. Its hypotheses require positive incident third-volume and anchored residual second-volume currencies plus marginal/cross-disjoint gates. A bare `ell^2` star (4.4) does not supply those determinant currencies, so that theorem is not silently used to close (4.4).
 
 ## 5. Designated partner fleet02/B08 applied to an actual conditional inequality
 
 The newest completed designated-partner result available in this run is fleet02/B08 r25,
 
-`math-open-problems@ac9b000da88c4923d8a3adb6a0a8bdccbd27ccae`,
+`private-source@ac9b000da88c4923d8a3adb6a0a8bdccbd27ccae`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T093606Z-fleet02-B08-qform-diffuse-r25/REPORT.md`,
 
 the theorem `QFORM-EXACT-RANGE-CONDITIONING-FRESNEL-v1`.

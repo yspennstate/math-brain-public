@@ -5,7 +5,7 @@ attacking: the precise rough-law limiting/trace passage for the newest ruled and
 
 Programme: QFORM-DENSITY-3EIG-20260922. Full conjecture remains OPEN.
 
-Source actually used at an equation: `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. Its fractional-volume theorem says: for a fixed original-coordinate cross block `M=A[I,J]`, `Z=e_3(M^T M)>0`, `1<=q<3/2`, and third-volume row marginals `alpha_i<=q/2`, every cap-one product law has
+Source actually used at an equation: `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. Its fractional-volume theorem says: for a fixed original-coordinate cross block `M=A[I,J]`, `Z=e_3(M^T M)>0`, `1<=q<3/2`, and third-volume row marginals `alpha_i<=q/2`, every cap-one product law has
 
 `|phi(t)| <= min(1,K |t|^{-b})`,
 

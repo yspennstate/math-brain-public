@@ -20,7 +20,7 @@ For an independent copy Z', |phi_Z(t)|^2=phi_{Z-Z'}(t), so J_theta is literally 
 
 ## Partner envelope -> positive-weight collision
 Latest designated partner fleet02/B03, canonical source
-math-open-problems@0feb5b58d53a266b5df517982780448aa9b6daf5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T101024Z-fleet02-B03-QFORM-r12/REPORT.md,
+private-source@0feb5b58d53a266b5df517982780448aa9b6daf5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T101024Z-fleet02-B03-QFORM-r12/REPORT.md,
 proves for 1<q<2, beta=1/2+1/q>1, under deletion-plane leverage max ell_j<=q/2,
 |phi_Z(t)|<=min(1,K_q |t|^-beta).
 Hence, for every -1<theta<2beta-1,

@@ -3,7 +3,7 @@ Problem/source: proposed C29 replacement Burdzy–Scheutzow (2014), *Forward Bro
 
 # C29 closable transition — Brownian ownership exclusion and directional-convexity fallback
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Own transition root: `proofnet24/C29-closure-brownian-shapes`.
 Old C29 hard root preserved unchanged: `proofnet24/C29-mub-six`.
 Run date: 2026-09-16.

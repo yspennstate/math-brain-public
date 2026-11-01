@@ -57,4 +57,4 @@ because each `Q_i(e)` is the unit Rayleigh gap between `e` and a new virtual `uv
 
 Deletion-contraction warning from the same run: the prior 3-terminal K4-synthesis cone is not additive. Genuine child signatures `(1,0,0,0,0)` and `(1,1,1,0,1)` each lie on the cone boundary, but their sum `(2,1,1,0,1)` violates the second cone inequality. Even allowed single-edge partition-transition support plus child cone membership is abstractly insufficient; graph-realizability must be used.
 
-Full scientific report blob will be read back from the canonical `math-open-problems` run directory before finish. No full-proof claim is made.
+Full scientific report blob will be read back from the canonical `private-source` run directory before finish. No full-proof claim is made.

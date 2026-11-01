@@ -25,7 +25,7 @@ For the rank-two leaf-curvature case, failure by small disjoint-basis mass alrea
 
 At the owner-required source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`,
 
@@ -49,7 +49,7 @@ The same required source package's `FOURIER_ROUTE_REPORT.md` and `COUNTEREXAMPLE
 
 The completed theorem `QFORM-PLUCKER-ENTROPY-BL-v1` is
 
-`yspennstate/math-open-problems@32c257209b588141fb60af698f478f1d0ad20b8a`
+`private-source-repository@32c257209b588141fb60af698f478f1d0ad20b8a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T123512Z-b07-qform-minors-11/REPORT.md`.
 
@@ -323,7 +323,7 @@ The latest completed fleet03/B09 result available to this run is
 
 canonical source
 
-`yspennstate/math-open-problems@0ca2df8a2cfb2702f2498ee6924f3a7cee63166a`
+`private-source-repository@0ca2df8a2cfb2702f2498ee6924f3a7cee63166a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T034845Z-fleet03-B09-QFORM-r23/REPORT.md`.
 

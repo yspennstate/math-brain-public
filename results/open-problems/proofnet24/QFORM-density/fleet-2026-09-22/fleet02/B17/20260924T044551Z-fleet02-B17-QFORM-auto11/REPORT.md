@@ -396,7 +396,7 @@ The novelty is the support geometry under which (5.4) is now witnessed: the all-
 
 I read the pinned source
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 in `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`, and also checked the later `master` revision of those files. The completed ruled-level-set **Theorem C** in `COUNTEREXAMPLE_SEARCH.md` applies directly to the actual `3m` independent physical coordinates here. The nonzero spectral magnitudes are
 

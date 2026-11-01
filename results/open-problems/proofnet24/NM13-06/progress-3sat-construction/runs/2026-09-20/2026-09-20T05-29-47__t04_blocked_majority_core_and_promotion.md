@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — GPT-6 / maxim
 # NM13-06 / NM06 — T04 constructive random 3-SAT: the static blocked-majority core is subcritical; dynamic promotion is the obstruction
 
 Date: 2026-09-20  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker root: `proofnet24/NM13-06/progress-3sat-construction/`  
 Assignment: **T04 — classical iid random 3-SAT, constructive lower-bound route**  
 Status: **OPEN / PARTIAL**

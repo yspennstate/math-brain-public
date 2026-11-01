@@ -24,12 +24,12 @@ The early `CHECKPOINT.md` imposed a global tiny-leverage condition. That conditi
 
 ## 2. Sources actually used
 
-1. Required Claude package: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `COUNTEREXAMPLE_SEARCH.md`.
+1. Required Claude package: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `COUNTEREXAMPLE_SEARCH.md`.
    - Theorem D is applied below to the actual cross block at equation (5.5).
    - Theorem C is applied at equation (7.1) only on the ruled one-sheet half-line.
-2. Predecessor fleet02/B11: `math-open-problems@8ae1a16002c77879645875d1e3b9a9d136365289`, same slot, run `20260923T141910Z-fleet02-B11-QFORM-auto11`. Its `QFORM-NULL-RULING-L1-TO-L2-v1` supplies the quantitative projected clusters used here.
-3. Designated partner fleet03/B11 r32: `math-open-problems@28b5041d7a1147a167c4366e51e161ac34a9a8f7`, run `20260923T131406Z-fleet03-B11-QFORM-r32`. Its grouped four-ray compiler and its small-pivot obstruction are applied in Section 8.
-4. Full-matrix cross-volume stability: `math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. Its independent review is still pending; the corollary in Section 6 inherits that status.
+2. Predecessor fleet02/B11: `private-source@8ae1a16002c77879645875d1e3b9a9d136365289`, same slot, run `20260923T141910Z-fleet02-B11-QFORM-auto11`. Its `QFORM-NULL-RULING-L1-TO-L2-v1` supplies the quantitative projected clusters used here.
+3. Designated partner fleet03/B11 r32: `private-source@28b5041d7a1147a167c4366e51e161ac34a9a8f7`, run `20260923T131406Z-fleet03-B11-QFORM-r32`. Its grouped four-ray compiler and its small-pivot obstruction are applied in Section 8.
+4. Full-matrix cross-volume stability: `private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`. Its independent review is still pending; the corollary in Section 6 inherits that status.
 
 No spectral projection is declared independent. Every cut below is a subset of original product coordinates.
 

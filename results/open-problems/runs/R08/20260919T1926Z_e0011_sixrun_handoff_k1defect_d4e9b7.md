@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R08 CLOSABLE OUTSIDE — E0011 one-defect restart computation, six-run handoff, and successor gate
 
-Run date: 2026-09-19 UTC. Repository / branch: private `yspennstate/math-open-problems` / `master`. Entering active source: **E0011**, Rick Durrett, *Coexistence in stochastic spatial models* (2009), Problem 5, original two-dimensional no-stirring catalyst/ZGB model. Disposition after this run: **OPEN / PARTIAL / RESEARCH-RETIRED FROM ACTIVE R08 UNDER THE SIX-UNCHANGED CLOSABLE RULE**. Delivery: private GitHub only.
+Run date: 2026-09-19 UTC. Repository / branch: private `private-source-repository` / `master`. Entering active source: **E0011**, Rick Durrett, *Coexistence in stochastic spatial models* (2009), Problem 5, original two-dimensional no-stirring catalyst/ZGB model. Disposition after this run: **OPEN / PARTIAL / RESEARCH-RETIRED FROM ACTIVE R08 UNDER THE SIX-UNCHANGED CLOSABLE RULE**. Delivery: private GitHub only.
 
 ## 1. Continuity and exclusions
 

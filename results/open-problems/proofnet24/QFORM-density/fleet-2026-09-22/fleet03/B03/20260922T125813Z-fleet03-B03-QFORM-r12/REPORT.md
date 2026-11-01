@@ -22,7 +22,7 @@ The designated assignment partner `fleet04/B03` still had no completed current-Q
 
 from
 
-`yspennstate/math-open-problems@8624982153e5a2154e4ae8922d2fe4dc77080efc:proofnet24/QFORM-density/fleet-2026-09-22/interactive/20260922T121109Z-crossblock-and-lower-bounds/REPORT.md`.
+`private-source-repository@8624982153e5a2154e4ae8922d2fe4dc77080efc:proofnet24/QFORM-density/fleet-2026-09-22/interactive/20260922T121109Z-crossblock-and-lower-bounds/REPORT.md`.
 
 For a partition of the **original coordinates** into two blocks whose cross block has rank `r>2` and nonzero singular-value product `Delta`, that theorem gives
 
@@ -32,7 +32,7 @@ For `r=3` this is `6 Delta^(-1/3)`. The proof preserves the independence of the 
 
 I also use the source-valid fleet02/B03 overlap-collapse adversary
 
-`yspennstate/math-open-problems@ac57190328fc109873ebe3b17122d835abbc2c3a:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T121352Z-b03-qform-auto11/REPORT.md`
+`private-source-repository@ac57190328fc109873ebe3b17122d835abbc2c3a:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T121352Z-b03-qform-auto11/REPORT.md`
 
 as a stress test. It shows why selecting one disjoint `3 x 3` packet before aggregation is not a universal mechanism.
 

@@ -45,7 +45,7 @@ Use these functions as additional direct stopping classes. The missing theorem i
 
 ## Delivery and actual checks
 
-Repository `yspennstate/math-open-problems`, branch `master`:
+Repository `private-source-repository`, branch `master`:
 
 - Proof creation commit: `86b5c86b7856e702149f5c0dff1d4bf2bf2105c2`; Git blob `29d8afcabc09ee1564a1e0db51cf42a21ffa804d`.
 - Checker creation commit: `80bd8b83f28f6ce5950fa866e90ca85aa4e93e9d`; Git blob `225b3be486eb7472fd023304baef24709733ab18`.

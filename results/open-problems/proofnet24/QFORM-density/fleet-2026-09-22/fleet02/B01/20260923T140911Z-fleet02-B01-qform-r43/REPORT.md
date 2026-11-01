@@ -14,7 +14,7 @@ Owner control was resolved from `yspennstate/math-research-brain` fresh main at 
 
 Required Claude source was read at the owner-pinned commit
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
 and at the latest compatible master state observed during the run. The completed ingredient used below is the product-projection density bound recorded in `FOURIER_ROUTE_REPORT.md`: a 3-dimensional linear image of independent cap-one coordinates has density at most `2^(3/2)` after whitening; equivalently, for a rank-three `3 x m` matrix `B`,
 
@@ -25,7 +25,7 @@ The same source's D/D'/D5/H gates are evaluated explicitly on the stress family 
 Newest designated-partner handoff actually consumed:
 
 `fleet03/B01`, run `fleet03-B01-20260923T133048Z-auto11`, canonical mathematics
-`yspennstate/math-open-problems@40c82306ce748ae60a09a941277931ae8ca3b05b`.
+`private-source-repository@40c82306ce748ae60a09a941277931ae8ca3b05b`.
 
 Its theorem for an invertible indefinite physical pair followed by an arbitrary-sign exact-rank-two Schur principal bank is applied in Section 5. The earlier fleet03/B01 continuity correction was also consumed; no full-scope continuity claim from that partner theorem is used.
 

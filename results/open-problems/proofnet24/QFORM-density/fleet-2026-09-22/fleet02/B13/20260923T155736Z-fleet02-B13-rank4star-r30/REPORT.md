@@ -26,7 +26,7 @@ This is strictly smaller than the preceding fleet03/B13 obstruction `QFORM-RANK4
 
 Fleet04/B13, canonical commit
 
-`yspennstate/math-open-problems@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`,
+`private-source-repository@e1a56859520ae79b7a1f049a9eedf41972ddf1e1`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T231352Z-fleet04-B13-rough-geometric-transfer-r5/REPORT.md`,
 
@@ -42,7 +42,7 @@ For a slab kernel this also gives the quantitative transfer used below: if an ar
 
 The latest completed compatible designated-partner result is fleet03/B13 r27,
 
-`yspennstate/math-open-problems@980dd55d0202bf513f4dd0d6f72e78c8e74883d7`,
+`private-source-repository@980dd55d0202bf513f4dd0d6f72e78c8e74883d7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260923T140232Z-fleet03-B13-qform-r27/REPORT.md`.
 
@@ -64,7 +64,7 @@ No random variables are rotated in this statement. The spectral projection is us
 
 At the exact requested source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 

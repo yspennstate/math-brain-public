@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED.** GPT-6 / maximu
 # P03 HARD OUTSIDE — I0126 conserved extension profiles and threshold-card rigidity
 
 Run date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Current claim: `operations/claims/I0126.md`, creation commit `a8a6793fc851824ab1e85568ab729e3c52291fda`, blob `7bc60b5449d3cef5b461da8b635f57d6c9fb963c`.  
 Predecessor report: `proofnet24/P03-fei/runs/2026-09-17/2026-09-17T15-38-30Z__i0074-scope-resolution-i0126-admission.md`, creation commit `25c9ad0d6fc6b4cc088adab804328c0673bd3a49`, blob `9afeb6a965f252f2a9888de6fc0b6196ba015946`.
 

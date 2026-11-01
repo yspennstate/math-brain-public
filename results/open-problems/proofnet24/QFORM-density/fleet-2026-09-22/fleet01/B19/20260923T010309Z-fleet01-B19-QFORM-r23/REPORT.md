@@ -15,13 +15,13 @@ Fresh main control was read before the run. QFORM remains the sole research targ
 
 Named other-account mathematics actually used:
 
-1. **Designated partner fleet02/B19 r22**, late-corrected canonical mathematics `yspennstate/math-open-problems@34d46a5906078d3c91ca4932f246885b53238ae6`. Its robust dense-twist statements pay an actual leaf-bank branch: if `A_LL=D+B0+E`, `rank(B0)<=r`, and some disjoint physical cut has `s_{r+5}(E[I,J])>=gamma`, then the completed D5 theorem gives
+1. **Designated partner fleet02/B19 r22**, late-corrected canonical mathematics `private-source-repository@34d46a5906078d3c91ca4932f246885b53238ae6`. Its robust dense-twist statements pay an actual leaf-bank branch: if `A_LL=D+B0+E`, `rank(B0)<=r`, and some disjoint physical cut has `s_{r+5}(E[I,J])>=gamma`, then the completed D5 theorem gives
 
    `||p_Q||_infinity <= 5 sqrt(2e) / gamma`.
 
    In particular `gamma=1/64` gives `<746.127`. Its late correction explicitly forbids inferring such a singular-value resource merely from aggregate E2/E3/E5 currencies, and forbids localizing the remaining N3 geometry to one physical square/pair before aggregation.
 
-2. **fleet03/B19 r20**, canonical `yspennstate/math-open-problems@0a3018cb14b94787c8f3f8d95a0e292ed230f8e0`. In the exactly-one-internal-rank-two O3 survivor it proves a robust product-preserving 2+1 grouped block. There are disjoint original-coordinate banks `H` and `G`, with `H` rank-one in spectral space and `G` rank two, such that after normalization
+2. **fleet03/B19 r20**, canonical `private-source-repository@0a3018cb14b94787c8f3f8d95a0e292ed230f8e0`. In the exactly-one-internal-rank-two O3 survivor it proves a robust product-preserving 2+1 grouped block. There are disjoint original-coordinate banks `H` and `G`, with `H` rank-one in spectral space and `G` rank two, such that after normalization
 
    `L=[sqrt(lambda) v, W]`,
 
@@ -35,7 +35,7 @@ Named other-account mathematics actually used:
 
 3. **fleet02/B06 weighted affine-fiber BL theorem**, canonical source commit `8dd33c1abd4fd64140f59032feda2b13d4351da5`: a `k`-dimensional orthogonal projection of the original product law has density cap at most `exp(k/2)`. I use it only before nonlinear operations: cap `sqrt(e)` in dimension one and cap `e` in dimension two.
 
-4. Own predecessor `QFORM-INDEPENDENT-LINEAR-SQUARE-SMOOTHING-v1`, canonical `yspennstate/math-open-problems@09bb706f11ea00995a61f0c7323bf67997c65932`.
+4. Own predecessor `QFORM-INDEPENDENT-LINEAR-SQUARE-SMOOTHING-v1`, canonical `private-source-repository@09bb706f11ea00995a61f0c7323bf67997c65932`.
 
 No step below uses arbitrary-joint rank-three coarea, a positive moment of a conditional projection density, post-rotation independence, a fixed good physical minor, deletion of small coefficients, or the false implication from aggregate determinant mass to robust singular directions.
 

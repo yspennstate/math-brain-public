@@ -15,7 +15,7 @@ The unrestricted target remains OPEN. Nothing below claims that the three-large-
 
 1. Latest completed designated partner fleet02/B08: `QFORM-DIFFUSE-HYBRID-VOLUME-TAIL-LADDER-v1`, canonical mathematics
 
-   `yspennstate/math-open-problems@31212dc0982ef58cdae6fc12c9354599a663fad6`,
+   `private-source-repository@31212dc0982ef58cdae6fc12c9354599a663fad6`,
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T020620Z-fleet02-B08-QFORM-auto11/REPORT.md`.
 
@@ -29,7 +29,7 @@ The unrestricted target remains OPEN. Nothing below claims that the three-large-
 
 2. Previous B08 bilateral-curvature theorem:
 
-   `yspennstate/math-open-problems@9534b12fbf558d1b6c82db1bc55068afd764fcce`.
+   `private-source-repository@9534b12fbf558d1b6c82db1bc55068afd764fcce`.
 
    In the partner rank-one tube it supplies two actual child eigenvalues on each physical bank larger than
 
@@ -37,7 +37,7 @@ The unrestricted target remains OPEN. Nothing below claims that the three-large-
 
 3. Previous B08 recoloring theorem and its falsifier:
 
-   `yspennstate/math-open-problems@e18687997f34a76c422a1d8c76f2cdeba38faff1`,
+   `private-source-repository@e18687997f34a76c422a1d8c76f2cdeba38faff1`,
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T033753Z-fleet01-B08-QFORM-auto11/REPORT.md`.
 

@@ -25,7 +25,7 @@ This is a deterministic consequence of N3, not a small-random-perturbation asser
 
 Use fleet02/B07's completed compound-tail lemma at
 
-`yspennstate/math-open-problems@67a5863d5e97c6b27499ccf7690d6008965f62c3`,
+`private-source-repository@67a5863d5e97c6b27499ccf7690d6008965f62c3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T033624Z-fleet02-B07-fd9b69f8f3ff/REPORT.md`.
 
 For the partner packet, `F=||M||_F`, `T2>=theta F^2`, and
@@ -59,7 +59,7 @@ Hence split:
 - if `s4(M)<=4 epsilon a`, take `M0=M3`; then `||M-M0||op<=4 epsilon a<=a/16`;
 - if `s4(M)>4 epsilon a`, take `M0=M4`; then `||M-M0||op<epsilon a<=s3(M0)/16`.
 
-Applying the required current volume-stability theorem `math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba` to either left or right range projection, every case with a diffuse range projection is already continuously density-paid. Therefore an unpaid case has a physical heavy row and heavy column on both retained range projections.
+Applying the required current volume-stability theorem `private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba` to either left or right range projection, every case with a diffuse range projection is already continuously density-paid. Therefore an unpaid case has a physical heavy row and heavy column on both retained range projections.
 
 In the rank-three survivor, actual (not truncated) physical row/column star norms satisfy
 

@@ -38,7 +38,7 @@ The source owner target is the full arbitrary-product-law QFORM conjecture. The 
 
 The completed partner result used at an actual inequality is
 
-`yspennstate/math-open-problems@66582bd87d50634f3525a57c87acffdbde97aea1`,
+`private-source-repository@66582bd87d50634f3525a57c87acffdbde97aea1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T153836Z-fleet02-B08-qform-r28/REPORT.md`.
 
 Its Lemma 3.1 is the following balanced physical half-cut. If `W` is an `m x 3` matrix with orthonormal columns and
@@ -56,7 +56,7 @@ The proof is the exact second-moment Rademacher argument in that report. This is
 
 The completed volume-stability theorem is at
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 For a literal ORIGINAL-coordinate cross block `M=M_0+E`, if

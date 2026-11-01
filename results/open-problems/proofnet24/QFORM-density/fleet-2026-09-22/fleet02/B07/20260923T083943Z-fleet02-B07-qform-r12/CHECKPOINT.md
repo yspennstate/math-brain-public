@@ -43,7 +43,7 @@ and therefore
 
 `s3(M)>=sqrt(J)/(32 sqrt(2)(tau+tau^2))`.
 
-The symmetric principal block on the at-most-eight original coordinates containing this cross block has third singular value at least `s3(M)`. The completed finite-dimensional spectral receiver (`math-open-problems@472b70d...`, Corollary 4.1) therefore yields
+The symmetric principal block on the at-most-eight original coordinates containing this cross block has third singular value at least `s3(M)`. The completed finite-dimensional spectral receiver (`private-source@472b70d...`, Corollary 4.1) therefore yields
 
 `||p_Q||infinity <=256 sqrt(6 pi)(tau+tau^2) J^(-1/2)`.
 

@@ -281,7 +281,7 @@ More generally, if a fixed cap-one base density `g` has compact support of diame
 
 ## 8. Completed Claude D5 theorem: a real zero-tax translated-core inequality
 
-The fixed source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, proves the no-marginal five-volume bound. For disjoint active coordinate sets `I,J`, write
+The fixed source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, proves the no-marginal five-volume bound. For disjoint active coordinate sets `I,J`, write
 
 \[
 M=B_{IJ},

@@ -13,7 +13,7 @@ Brain status: `WITHOUT_VERIFIED_BRAIN`
 
 The first unpaid implication remains structural. From the bare target hypothesis `s_3(A)>=1`, one must force either a bounded ORIGINAL-coordinate physical carrier to which one of the completed receivers applies, or one of the already-paid physical-pair / projected-crossing / grouped-bank / ridge / hub / Schur / common-plane / Pluecker-volume exits. This report does **not** infer a universal carrier scale from `s_3(A)>=1`.
 
-What is new is the stability step **after** such a physical carrier is identified. The newest completed partner result, fleet03/B12 r53 (`math-open-problems@ee98b8445086ec2ab29bdd8aa62dbcc4f433def4`), shows that only negative directions of a normalized signed anticommutator can destroy carrier modes; it deliberately discards arbitrary transverse action as nonnegative. Here that transverse action is retained quantitatively and combined in quadrature with the in-range relative action. This pays cases in which an added spectral packet cancels the old carrier inside its image but replaces it by a strong orthogonal output.
+What is new is the stability step **after** such a physical carrier is identified. The newest completed partner result, fleet03/B12 r53 (`private-source@ee98b8445086ec2ab29bdd8aa62dbcc4f433def4`), shows that only negative directions of a normalized signed anticommutator can destroy carrier modes; it deliberately discards arbitrary transverse action as nonnegative. Here that transverse action is retained quantitatively and combined in quadrature with the in-range relative action. This pays cases in which an added spectral packet cancels the old carrier inside its image but replaces it by a strong orthogonal output.
 
 No probabilistic rotation is used. A final small dense matrix is paid only as a coefficient-matrix perturbation by singular-value Weyl; `X^T T X` is never declared uniformly small.
 
@@ -160,7 +160,7 @@ This is a localized stability theorem under an arbitrary dense operator-norm tai
 
 ## 6. Required pinned-source application: a real density inequality
 
-The required source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, proves the unrestricted fifth-volume theorem D5. For any actual disjoint ORIGINAL-coordinate cross block `B=A[I,J]`, with
+The required source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, proves the unrestricted fifth-volume theorem D5. For any actual disjoint ORIGINAL-coordinate cross block `B=A[I,J]`, with
 
 `Z_5=e_5(B^T B)`,
 
@@ -302,6 +302,6 @@ The still-unpaid target-level implication is to derive, from only `s_3(A)>=1`, e
 
 ## Sources consumed
 
-- Newest completed partner at the time of this report: fleet03/B12 r53, `math-open-problems@ee98b8445086ec2ab29bdd8aa62dbcc4f433def4`, signed anticommutator stability.
-- Required pinned source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`; D5 is applied in (6.1)-(6.2) and (8.3)-(8.4).
+- Newest completed partner at the time of this report: fleet03/B12 r53, `private-source@ee98b8445086ec2ab29bdd8aa62dbcc4f433def4`, signed anticommutator stability.
+- Required pinned source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`; D5 is applied in (6.1)-(6.2) and (8.3)-(8.4).
 - Live corrections consumed: no uniform pointwise quadratic-phase decay; no arbitrary-joint coarea shortcut; no conditional cap/moment replacement for product provenance; no naive fiber-sup dimension-free step; no independence after spectral rotation.

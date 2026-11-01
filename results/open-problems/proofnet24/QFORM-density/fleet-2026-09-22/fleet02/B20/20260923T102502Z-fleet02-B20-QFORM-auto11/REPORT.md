@@ -11,7 +11,7 @@ The unrestricted theorem remains OPEN. No moment, Gaussian, log-concave, support
 
 The current strongest end-to-end compiler is the no-pivot reduction in
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`, Theorem 5.1.
 
 Fix any `tau in (0,1]`. Let `N3(tau,C0)` denote the statement that every real symmetric matrix `A` with
@@ -26,7 +26,7 @@ That source proves that `N3(tau,C0)` implies the full QFORM theorem, including a
 
 The newest completed designated partner at the publication-stage refresh is fleet03/B20 r30,
 
-`yspennstate/math-open-problems@2c0131b6830892a77a8faaf3521388d3a51e7514`,
+`private-source-repository@2c0131b6830892a77a8faaf3521388d3a51e7514`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T084738Z-fleet03-B20-QFORM-r30/REPORT.md`.
 
 Its exact-rank-three survivor supplies three disjoint ORIGINAL-coordinate packets carrying three orthogonal spectral-direction masses at least `453/4096`, plus an ORIGINAL physical row of leverage `>1/2`; after its exact partitioned endpoint, every unpaid packet survivor also has a genuinely mixed longitudinal/transverse physical row. Its report explicitly warns that packet directional masses alone do not force a cross-packet third volume.
@@ -97,7 +97,7 @@ and, since the eigenvalues of a symmetric `2x2` matrix are centered at `(A_hh+A_
 
 The arbitrary-rank physical-pair theorem at
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`
 
 therefore gives
 
@@ -257,7 +257,7 @@ The coefficient vectors defining `W` and `Z` on the ORIGINAL `B3` variables are 
 
 `c+2L alpha^2=1`, `2L beta^2=1`, and their inner product is zero. Therefore the orientation-free rank-two affine half-Riesz theorem
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 applies to `H=2WZ`, with
 
@@ -283,7 +283,7 @@ Thus this no-pivot/Hall-degenerate family is uniformly PAID. The correct currenc
 
 The pinned Claude/Fourier report at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`
 
 proves the unrestricted fifth-volume estimate

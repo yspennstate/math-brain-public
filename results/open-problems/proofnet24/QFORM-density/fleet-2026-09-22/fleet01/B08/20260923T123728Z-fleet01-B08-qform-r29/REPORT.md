@@ -18,7 +18,7 @@ The current programme state still records the unrestricted target as OPEN and re
 
 The designated partner result actually applied is fleet02/B08 r26,
 
-`yspennstate/math-open-problems@ac7e9c4772e977672044e7cacd55b74c91ea8b6d`,
+`private-source-repository@ac7e9c4772e977672044e7cacd55b74c91ea8b6d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T104126Z-fleet02-B08-qform-diffuse-r26/REPORT.md`.
 
 Its actual `k=1` hybrid gate supplies
@@ -32,7 +32,7 @@ so one physical child has a genuine eigenvalue of magnitude at least `c L` and t
 
 The ambient receiver used after recoloring is fleet01/B08 r24,
 
-`yspennstate/math-open-problems@a11ebd02f863b82324e449b4a31d468ec654f080`,
+`private-source-repository@a11ebd02f863b82324e449b4a31d468ec654f080`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T063906Z-fleet01-B08-qform-r24/REPORT.md`.
 
 It proves: if an ORIGINAL-coordinate cross block `M` satisfies `s_3(M)>=sigma`, then either the full ambient form has a continuous `C_0` density with

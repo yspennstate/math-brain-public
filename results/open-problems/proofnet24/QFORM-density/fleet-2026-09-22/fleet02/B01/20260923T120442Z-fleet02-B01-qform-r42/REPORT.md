@@ -15,7 +15,7 @@ The phase-aligned fragmented-density construction still refutes every positive-p
 
 Fresh owner control observed revision `2026-09-22.15`, QFORM-only. The required pinned Claude/Fourier source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
@@ -247,7 +247,7 @@ The newest completed designated-partner result read before this report is fleet0
 
 `QFORM-RANK1-BILINEAR-PLUS-SQUARE-LP-v1`,
 
-canonical mathematics `yspennstate/math-open-problems@ffbc3b5d921d1c8c391fe1ea3d8c1264697e8813`. It proves at `p=3`, on disjoint ORIGINAL banks,
+canonical mathematics `private-source-repository@ffbc3b5d921d1c8c391fe1ea3d8c1264697e8813`. It proves at `p=3`, on disjoint ORIGINAL banks,
 
 `||p_Q||_infinity <= 12 kappa^(-2/3) rho^(-1/3)`,                  (8.1)
 

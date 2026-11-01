@@ -16,8 +16,8 @@ Current corrections are respected: the law-uniform pointwise quadratic Fourier-d
 
 Two completed peer results are consumed.
 
-1. `fleet04/B15`, canonical source `yspennstate/math-open-problems@1d658cd8ef6386a8f8ef7e6b9aaf26fdafe68de3`, proves (among other things) that interval domination is exactly equivalent to an `L^infinity` density, and separates continuity from boundedness by a Steklov criterion.
-2. `fleet01/B13`, canonical source `yspennstate/math-open-problems@f5c63b29011eb394cd621ecc887fe3331aa485af`, proves that the admissible one-dimensional density class
+1. `fleet04/B15`, canonical source `private-source-repository@1d658cd8ef6386a8f8ef7e6b9aaf26fdafe68de3`, proves (among other things) that interval domination is exactly equivalent to an `L^infinity` density, and separates continuity from boundedness by a Steklov criterion.
+2. `fleet01/B13`, canonical source `private-source-repository@f5c63b29011eb394cd621ecc887fe3331aa485af`, proves that the admissible one-dimensional density class
    `D={f in L1(R): 0<=f<=1, int f=1}`
    is the `L1`-closed convex hull of indicators `1_E` of measurable sets of Lebesgue measure one, and therefore product laws are TV limits of finite convex mixtures of product-indicator laws. Its finite-fragment localization, through the cited fleet04/B14 result, allows the extreme sets to be taken as bounded finite unions of intervals.
 

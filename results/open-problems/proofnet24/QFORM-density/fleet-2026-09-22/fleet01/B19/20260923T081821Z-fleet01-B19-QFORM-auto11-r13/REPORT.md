@@ -17,7 +17,7 @@ The unrestricted theorem remains open. This run proves a new product-preserving 
 
 The current designated partner is
 
-`yspennstate/math-open-problems@32e921cf63500a7118cf30724f9e67d7997185e0`,
+`private-source-repository@32e921cf63500a7118cf30724f9e67d7997185e0`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T071320Z-fleet02-B19-QFORM/REPORT.md`.
 
@@ -61,7 +61,7 @@ The cardinality follows from `sum ell_j=2`.
 
 The analytic receiver used by the partner is source-pinned at
 
-`yspennstate/math-open-problems@d72be34399b8d0325c715973e7af3a37df7ce227`,
+`private-source-repository@d72be34399b8d0325c715973e7af3a37df7ce227`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260923T060843Z-fleet01-B19-QFORM-auto11/REPORT.md`.
 

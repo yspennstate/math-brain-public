@@ -14,7 +14,7 @@ Fresh control was read from `yspennstate/math-research-brain` main and remained 
 
 The exact assigned partner `fleet04/B07` still had no completed current-QFORM handoff at the fresh pre-publication source check. No result is fabricated or attributed to it. The compatible completed fleet04/B18 theorem actually applied below is:
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
 It proves, for a physical `3x3` block with scalar pivot `a!=0` and definite Schur complement,
@@ -25,7 +25,7 @@ with arbitrary outside couplings after conditioning on original coordinates.
 
 I also consume fleet03/B13's newest completed nested-heavy theorem, canonical source
 
-`yspennstate/math-open-problems@dd421029601cf5663685c49f225af55567332fb6`,
+`private-source-repository@dd421029601cf5663685c49f225af55567332fb6`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/b13-20260922T143428Z-qform11/REPORT.md`,
 
 which pays every rank-three nested-heavy state except a simultaneous final-bank/covariance-saturation limit described precisely in Section 6 below.

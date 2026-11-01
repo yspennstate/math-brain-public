@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this was not 
 # P0459 retired-slot CLOSABLE successor-admission delta
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Native slot: `6aa7b517489c8191a5250c9384e9b33c`  
 Lane: **CLOSABLE OUTSIDE successor gate**  
 Gate-only metric: **`E_READY_SUCCESSOR in {0,1}`**, before `0`, after `0`  

@@ -23,7 +23,7 @@ for two physical zero-pivot rows that are transverse. The surviving hard geometr
 
 The exact assigned partner `fleet04/B10` still had no completed current-QFORM handoff at the fresh source read; none is invented. A completed compatible fleet04 result used below is `fleet04/B18`, canonical source
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 
 which proves the definite-Schur physical-triple gate
 
@@ -33,8 +33,8 @@ for a physical `3x3` block `B_3` with nonzero scalar pivot `d` and definite rank
 
 Two additional completed inputs are used only in their stated scopes:
 
-1. `fleet03/B09`, `math-open-problems@41fc39eccdd44a0dcae6619676bf41f5ea21bb3e`: every two-dimensional orthogonal projection of the cap-one product law has joint density at most `2`.
-2. The earlier B10 theorem `QFORM-DEPENDENT-PAIR-HYPERBOLIC-SQUARE-v1`, `math-open-problems@c1af196adade03e07456c8f6e783f952b0fa0e8d`, proved a dependence-tolerant hyperbolic-square density bound when one scalar factor is genuinely independent of a two-dimensional projected pair.
+1. `fleet03/B09`, `private-source@41fc39eccdd44a0dcae6619676bf41f5ea21bb3e`: every two-dimensional orthogonal projection of the cap-one product law has joint density at most `2`.
+2. The earlier B10 theorem `QFORM-DEPENDENT-PAIR-HYPERBOLIC-SQUARE-v1`, `private-source@c1af196adade03e07456c8f6e783f952b0fa0e8d`, proved a dependence-tolerant hyperbolic-square density bound when one scalar factor is genuinely independent of a two-dimensional projected pair.
 
 The live correction `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1` is enforced: a conditional scalar density cap plus a bounded pair density is not treated as independence.
 

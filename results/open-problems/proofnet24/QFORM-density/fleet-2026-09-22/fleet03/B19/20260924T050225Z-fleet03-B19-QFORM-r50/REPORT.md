@@ -18,7 +18,7 @@ All coordinates below are literal ORIGINAL coordinates. No random variable is ro
 
 The immediate inherited source is fleet03/B19 r49:
 
-`yspennstate/math-open-problems@35b71af9bbf9feb9542681486f190155c71ff247`
+`private-source-repository@35b71af9bbf9feb9542681486f190155c71ff247`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T040014Z-fleet03-B19-QFORM-r49/REPORT.md`.
 
@@ -40,7 +40,7 @@ where `U,V` have two orthonormal columns. r49 already shows that there are at mo
 
 The fresh analytic input used here is fleet02/B19:
 
-`yspennstate/math-open-problems@f4d95bc33caf8db11888cceb817c005484f67d31`
+`private-source-repository@f4d95bc33caf8db11888cceb817c005484f67d31`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260924T031336Z-fleet02-B19-QFORM-auto11/REPORT.md`,
 
@@ -239,7 +239,7 @@ Parallel debts remain the giant near-rank-one crossing, small-Pluecker aggregate
 
 Fresh fleet01/B19 r12 is
 
-`yspennstate/math-open-problems@1c7cd60173b1c7836e2613e3a096989ae76d6fff`,
+`private-source-repository@1c7cd60173b1c7836e2613e3a096989ae76d6fff`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260924T044522Z-fleet01-B19-QFORM-auto11-r12/REPORT.md`.
 
@@ -253,7 +253,7 @@ for its exact physical-pair scope, with `J_T=D^6 kappa^4 W_T`, and proves exact 
 
 The designated partner theorem consumed is
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`,
 

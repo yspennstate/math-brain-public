@@ -10,7 +10,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning/effort level: UNVERIFIED** — the 
 
 **Publication novelty:** `UNVERIFIED`. The repository and a bounded dated web search were checked for the exact construction below; no matching cutoff theorem was located. This is negative evidence only, not a worldwide priority claim.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 

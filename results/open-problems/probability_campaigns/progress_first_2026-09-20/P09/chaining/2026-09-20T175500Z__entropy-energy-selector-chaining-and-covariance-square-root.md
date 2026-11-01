@@ -24,7 +24,7 @@ The new full-source bottleneck is therefore not a uniform hard covering/entropy 
 - Native role: `P09`
 - Native slot: `6aa7b454b5808191bb00d87697d89388`
 - Registered role: `chaining / geometric-probabilistic proof`
-- Repository / branch: private `yspennstate/math-open-problems`, `master`
+- Repository / branch: private `private-source-repository`, `master`
 - Immediate predecessor: `probability_campaigns/progress_first_2026-09-20/P09/chaining/2026-09-20T165800Z__canonical-kkt-barycenter-and-selection-entropy-chaining.md`.
 - Historical C0035 material, all earlier P09 reports, and peer-owned files are preserved. This report is additive and immutable.
 

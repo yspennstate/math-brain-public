@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-09 — admission delta screen 35: AAK literal equality clause already owned/refuted with a new dimension-one biconditional correction; maximal-intersection uniqueness owned HARD; P0409 still not CLOSABLE
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-09` / `proofnet24/NM13-09/`  
 Category gate: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed stochastic-process existence/counterexample questions admitting an explicit process construction, exact transition law, finite witness, or complete short special-class theorem  

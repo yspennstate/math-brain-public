@@ -14,12 +14,12 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates with 
 
 Required pinned base package:
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`;
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`;
 - `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
 Reviewed sharp Hausdorff--Young refinement:
 
-- `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`;
+- `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`;
 - `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 For a literal physical cross block `M=A[I,J]`, `Z=E3(M)>0`, `1<=q<3/2`, and third-volume row marginals `alpha_i<=q/2`, it proves
@@ -59,7 +59,7 @@ The proof keeps arbitrary leaf-leaf curvature and all outside coefficients by co
 
 The new Fisher-information continuation explicitly assigned this B02 a scoped independent check. The source is
 
-- `yspennstate/math-open-problems@4a65677d185d35154dc3dfae320c5df9f939b8a2`;
+- `private-source-repository@4a65677d185d35154dc3dfae320c5df9f939b8a2`;
 - `proofnet24/QFORM-density/interactive/20260923T184054Z-fisher-continuation/FISHER_INFORMATION.md`, blob `8a562d0d8c8c47679b83c33d1e0bbe9390387f4d`.
 
 The separate file `FISHER_REVIEW.md` in this run records a PASS on the assigned weak-IBP/cutoff/inverse-distance/primitive-normalization/density-domination scope only.

@@ -8,7 +8,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 **Publication novelty:** `UNVERIFIED`. Bounded searches on 20 September 2026 for combinations of `distance six Cayley bigraph cutoff`, `distance-6 halved graph random walk cutoff`, `Sarnak-Xue Green cutoff half graph`, and `weighted exceptional spectrum cutoff transitive graph` recovered the EFMP NBRW theorem and general distance/halved-graph terminology, but no matching ordinary-SRW cutoff theorem for the exact-distance-six arithmetic class below. This is negative evidence only, not a priority certificate.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 Run root: `proofnet24/P26-progress-cutoff-transfer/runs/2026-09-20/`.
 

@@ -14,7 +14,7 @@ The unrestricted conjecture remains open. No Gaussianity, log-concavity, moment,
 
 The exact-singular anchored-fourth-compound input is fleet01/B07 r43:
 
-`yspennstate/math-open-problems@0d782a4c89b6e45e7e38a4aedd3eeb38cda538a7`,
+`private-source-repository@0d782a4c89b6e45e7e38a4aedd3eeb38cda538a7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/20260924T070328Z-fleet01-B07-qform-auto11-r43/REPORT.md`.
 
@@ -36,7 +36,7 @@ and therefore
 
 The latest completed designated partner used below is fleet02/B07 r51:
 
-`yspennstate/math-open-problems@0489be649867dd226d4b6cea9ded74c973f19d46`,
+`private-source-repository@0489be649867dd226d4b6cea9ded74c973f19d46`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260924T093902Z-fleet02-B07-qform-r51/REPORT.md`.
 
@@ -46,7 +46,7 @@ Its balanced physical-cut theorem says that for a symmetric rank-r physical prin
 
 The source-refresh upgrade in the same completed partner result combines this with the completed fleet02/B03 marginal-free physical-E3 crossing theorem
 
-`yspennstate/math-open-problems@df738b7f0821d9af56dfd992cab10ecc6704e3fb`,
+`private-source-repository@df738b7f0821d9af56dfd992cab10ecc6704e3fb`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T184716Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 

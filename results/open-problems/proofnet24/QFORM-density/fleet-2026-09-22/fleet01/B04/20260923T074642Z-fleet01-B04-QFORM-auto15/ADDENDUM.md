@@ -107,6 +107,6 @@ In the quadratically clean `J`-bank setting of fleet02/B04's completed theorem `
 
 `||p_Q||_infinity <=2^(3/4) sqrt(pi) E_2(M)^(-1/4)`.
 
-Source: `yspennstate/math-open-problems@c7fbb4f97fef82c9e6920e17bc01fa3efc0da85e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T071501Z-fleet02-B04-QFORM-r11/REPORT.md`.
+Source: `private-source-repository@c7fbb4f97fef82c9e6920e17bc01fa3efc0da85e`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260923T071501Z-fleet02-B04-QFORM-r11/REPORT.md`.
 
 This closes the strict-coloop endpoint only in that clean-bank scope. It does **not** close the arbitrary two-sided-curvature endpoint of the full QFORM problem.

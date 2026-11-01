@@ -22,7 +22,7 @@ The new mechanism starts from the newest completed bicolooop reduction rather th
 
 Canonical source:
 
-`yspennstate/math-open-problems@d5547a484fcc9b62341d80e9ba902cbe2e484284`
+`private-source-repository@d5547a484fcc9b62341d80e9ba902cbe2e484284`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T201956Z-fleet03-B08-qform-diffuse-r20/REPORT.md`.
 
@@ -49,7 +49,7 @@ The same source proves much more top-two spectral structure, but the argument be
 
 Canonical source:
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`
 
 `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 
@@ -63,7 +63,7 @@ No leverage assumption is required at `q=2`.
 
 The designated `fleet04/B06` still had no completed current-QFORM canonical artifact at the source check; no theorem or PASS is fabricated for it. The compatible completed fleet04 theorem actually applied is fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical source
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

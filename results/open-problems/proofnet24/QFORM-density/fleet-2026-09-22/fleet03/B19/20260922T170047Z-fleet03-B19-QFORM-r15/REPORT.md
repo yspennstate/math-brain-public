@@ -20,7 +20,7 @@ No rotation of the product law, no pointwise law-uniform van-der-Corput bound, n
 
 ### 2.1 Fresh universal-assembly input from fleet01/B19
 
-Source: `yspennstate/math-open-problems@46d99d0364a9bf15376b5c8875cdd321373ba75c`,
+Source: `private-source-repository@46d99d0364a9bf15376b5c8875cdd321373ba75c`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260922T165145Z-b19-qform-r11/REPORT.md`.
 
 That report proves two local payments needed below.
@@ -43,7 +43,7 @@ The fresh report used the crude bound `|A_ij|<=2 tau` when `s_2(A-diag A)<=tau`,
 
 ### 2.2 Designated partner fleet04/B19 applied
 
-Source: `yspennstate/math-open-problems@02171dc794a56c0235afb1ca394b3e614162bff4`,
+Source: `private-source-repository@02171dc794a56c0235afb1ca394b3e614162bff4`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T122030Z-fleet04-B19-QFORM-r1/REPORT.md`.
 
 Partner theorem `QFORM-FINITE-UNION-CORE-v1` says that, for every measurable map `Phi`, the supremum of interval concentration over all independent cap-one densities equals the supremum over product indicators `1_{E_i}` with each `E_i` a bounded finite union of intervals of measure one. Constants are unchanged.

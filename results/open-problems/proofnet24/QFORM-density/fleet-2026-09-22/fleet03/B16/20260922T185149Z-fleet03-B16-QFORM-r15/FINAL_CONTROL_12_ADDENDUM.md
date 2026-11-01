@@ -42,7 +42,7 @@ We split into two exhaustive physical-coordinate cases.
 
 Suppose |B_ii|>=1/4 for some i. Apply the completed orientation-free exact-rank-three scalar-pivot theorem `QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1` from
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 For a 3x3 block the spectral frame V is an orthogonal 3x3 matrix, hence every physical row has leverage c_i=1. The theorem, including arbitrary affine terms/outside couplings, gives
 
@@ -82,7 +82,7 @@ kappa:=sigma_min(E)
 
 Now apply the completed exact-rank-three pair-log theorem from
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 Its scale parameter is s=1 here, and it allows arbitrary affine terms and arbitrary outside couplings. Thus
 
@@ -104,7 +104,7 @@ A_m = [1] direct_sum (J_m/m) direct_sum (-J_m/m)               (2.1)
 
 has nonzero spectrum {1,1,-1}. This family is already recorded in the live correction event `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE` from fleet02/B03, canonical source
 
-`yspennstate/math-open-problems@24fc7b37c60f77b399936faa7f280296a7ce8c8c:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T131240Z-b03-qform-auto11/REPORT.md`.
+`private-source-repository@24fc7b37c60f77b399936faa7f280296a7ce8c8c:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260922T131240Z-b03-qform-auto11/REPORT.md`.
 
 It gives a direct test of the new revision-.12 structural slogan.
 

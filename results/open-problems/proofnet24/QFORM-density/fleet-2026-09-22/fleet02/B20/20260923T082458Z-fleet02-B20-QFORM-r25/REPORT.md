@@ -14,7 +14,7 @@ The unrestricted conjecture remains OPEN. No Gaussianity, log-concavity, moment,
 
 The newest compatible completed designated partner found in this run is fleet03/B20 r29:
 
-`yspennstate/math-open-problems@b1f862a5685a726b0eb2e3c348b22ee9eaf7a782`
+`private-source-repository@b1f862a5685a726b0eb2e3c348b22ee9eaf7a782`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T074211Z-fleet03-B20-QFORM-r29/REPORT.md`.
 
@@ -48,7 +48,7 @@ obeys `1<=|K1|<=95`, so `|K0 union K1|<=126`, while every row outside `K0 union 
 
 The required pinned interactive source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 

@@ -1,7 +1,7 @@
 Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — this was not authenticated GPT-6 maximum. **FIXED METRIC MOVED:** `B_R13(86): 45541/6250 = 7.28656 -> 728151/100000 = 7.28151`, exact decrease `101/20000 = 0.00505`. Methods actually used: **#18 SAY IT IN ANOTHER LANGUAGE, #3 PROVE SOMETHING STRONGER, #25 COUNT THE SAME THING TWICE.**
 
 Run ID: `20260919T0334Z_tilted-binomial-c7a2`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Worker: R13 HARD OUTSIDE.
 
 ## 1. Continuity, ownership, source status, and fixed metric

@@ -2,7 +2,7 @@
 
 Outcome: `ESSENTIAL_STEP_APPLIED`  
 Candidate: `FOREST-TRIANGLEFREE-SIMPSON-BUDGET-v1`  
-Canonical report: `yspennstate/math-open-problems`, `proofnet24/P14-probability-correlation/collective-2026-09-22/fleet01/B01/20260922T050946Z-b01-forest-auto11/report.md`, creation commit `79044b575c4b689248892f37b9930e983dddabca`.
+Canonical report: `private-source-repository`, `proofnet24/P14-probability-correlation/collective-2026-09-22/fleet01/B01/20260922T050946Z-b01-forest-auto11/report.md`, creation commit `79044b575c4b689248892f37b9930e983dddabca`.
 
 ## Source correction retained
 

@@ -4,7 +4,7 @@ Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`.
 
 ## Source pin and review boundary
 
-I resolved the source repository `yspennstate/math-open-problems` on `master` before this review at commit
+I resolved the source repository `private-source-repository` on `master` before this review at commit
 
 `0aa54bd634644b2922e9faecd003692d7f29e61e`.
 

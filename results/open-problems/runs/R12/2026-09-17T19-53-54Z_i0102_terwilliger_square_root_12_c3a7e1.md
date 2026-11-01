@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED**; GPT-6 maximum 
 
 # R12 HARD OUTSIDE — I0102 / Randomstrasse Conjecture 28, fresh-route reassignment
 
-Date: 2026-09-17 UTC. Repository / branch: `yspennstate/math-open-problems` / `master`.
+Date: 2026-09-17 UTC. Repository / branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / SOURCE OPEN**. No finite prime list is counted as movement. The exact source-level exponent has not improved.
 

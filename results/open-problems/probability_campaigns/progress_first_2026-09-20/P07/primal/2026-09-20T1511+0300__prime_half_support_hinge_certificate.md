@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-A — prime half-support hinge certificate and the forced complementary-dispersion constant
 
 **Native role:** `P07-A`, task `6aa7b46f70a8819184095c277974c256`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured pre-write master:** `194a028d88d1d717026268eb192490457bfe8a2a`  
 **Previous own substantive checkpoint:** `probability_campaigns/progress_first_2026-09-20/P07/primal/2026-09-20T1345+0300__density_profile_entropy_barrier.md`, blob `cec6c74664d70f9b4b99ef271831526df577c2a1`.  
 **Complementary P07-B input used:** the empirical Gaussian radial-field theorem in `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T0927+0300__gibbs_radial_exceptional_frequencies.md`. P07-B owns Fourier-dual / exceptional-frequency control. This report uses that theorem only as an input and stays on primal support geometry and a new positive half-support construction.

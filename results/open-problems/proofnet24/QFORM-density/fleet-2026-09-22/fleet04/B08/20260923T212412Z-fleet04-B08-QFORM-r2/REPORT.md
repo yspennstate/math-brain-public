@@ -13,12 +13,12 @@ The unrestricted conjecture remains OPEN. This note removes the diffuse part of 
 ## 1. Exact inputs
 
 The new structural input is fleet01/B08 r35,
-`math-open-problems@68f8d8a91987834d73fa06849d9ec8795a3df883`,
+`private-source@68f8d8a91987834d73fa06849d9ec8795a3df883`,
 theorems `QFORM-DELETE1-TWOCHILD-RIGIDITY-v1` and
 `QFORM-DUAL-K2-STAR-HALFCUT-v1`.
 
 The analytic input is the affine-uniform spectral-window theorem,
-`math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 `interactive/20260922T151048Z-ridge-window/REPORT.md`, Section 7. At scale (m>0), it states that if a symmetric matrix (C) has three eigenvalues of modulus at least (m), and its spectral projection (P_C(m/64)) onto (|\lambda(C)|\ge m/64) obeys
 [
 max_j (P_C(m/64))_{jj}le rac1{32},

@@ -292,7 +292,7 @@ and the residual physical quadratic block is zero.
 
 Conditioning on the additive noises `J` makes `z=T_K^TJ` deterministic and leaves the original `U_i` independent unit-interval variables. Expanding `(S_K+z)^TB_K(S_K+z)` adds only a physical linear term. The completed pinned Fresnel--Brascamp--Lieb Theorem F at
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 explicitly permits such a linear term. Applying it to this actual physical frame gives, for every shift `z`,
 
@@ -390,7 +390,7 @@ Numerically `(3/pi) C_*^(2/3)=14.5121633802...`; no rate for `epsilon_K` is need
 The latest compatible designated partner theorem is fleet03/B17
 
 `QFORM-GAUSSIAN-FULLTARGET-COMPARATOR-v1`,
-`math-open-problems@ea855178c7771925095c4517c830888c9a8938ea`.
+`private-source@ea855178c7771925095c4517c830888c9a8938ea`.
 
 It proves that for every Gaussian `H~N(mu,Sigma)` with `Sigma>=vI` and every symmetric coefficient matrix having at least three eigenvalues of magnitude at least `s`,
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-10 — admission delta screen 46: VDH is an exhausted HARD release, BHS is a new owned HARD claim, P0290 retires without release; no residue-9 CLOSABLE admission
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-10` / `proofnet24/NM13-10/`  
 Category: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed probability or analysis inequalities admitting an exact sharp constant, explicit counterexample, or complete restricted-class theorem; owner's projects and claimed Agresti–Veraar problems excluded  
@@ -317,7 +317,7 @@ ledger_delta:
   worker: NM13-10
   date_utc: 2026-09-19
   invocation: admission_delta_screen_46
-  repository: yspennstate/math-open-problems
+  repository: private-source-repository
   branch: master
   category: CLOSABLE_OUTSIDE
   shard_residue_mod_13: 9

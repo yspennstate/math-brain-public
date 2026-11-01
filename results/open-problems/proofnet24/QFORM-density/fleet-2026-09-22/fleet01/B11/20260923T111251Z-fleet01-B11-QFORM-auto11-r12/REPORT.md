@@ -15,20 +15,20 @@ The result below concerns the genuinely indefinite exact-rank-three chamber and 
 Three previously completed ingredients are used only in their stated scopes.
 
 1. **Fresnel--Brascamp--Lieb Theorem F.** Source:
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
    If a rank-three quadratic part on a bank of ORIGINAL coordinates has normalized spectral-row leverages at most `1/2`, then, allowing arbitrary affine terms and a diagonal twist, the density is continuous and
    `||p||_infinity <= 12 (|lambda_1 lambda_2 lambda_3| det G)^(-1/3)`.
 
 2. **B11 unit-leverage null-scalar endpoint.** Source:
-   `yspennstate/math-open-problems@1515e474fa8110a0b704a6ff73a25fc554005017`,
+   `private-source-repository@1515e474fa8110a0b704a6ff73a25fc554005017`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T211147Z/REPORT.md`.
    For exact rank three, if an ORIGINAL coordinate has spectral leverage one and physical diagonal zero, then
    `||p_Q||_infinity < 9.276 |det M|^(-1/3)`.
    This endpoint proves essential boundedness; continuity was not proved there.
 
 3. **Designated partner fleet02/B11 balanced four-bank theorem.** Source:
-   `yspennstate/math-open-problems@ba000d70d1d4f523a2396155a24d5088d5c94802`,
+   `private-source-repository@ba000d70d1d4f523a2396155a24d5088d5c94802`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T095139Z-fleet02-B11-qform-r11-86d203a2/REPORT.md`.
    Its explicit target-valid Walsh/four-bank family is paid by a product-preserving three-mode estimate, despite every fixed physical packet losing the second/third scale.
 

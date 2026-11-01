@@ -18,7 +18,7 @@ for every interval `I`, or give a genuine counterexample. Continuity is separate
 
 The completed required partner input is fleet04/B14:
 
-`yspennstate/math-open-problems@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`
+`private-source-repository@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`.
 
@@ -26,7 +26,7 @@ It proves the one-coordinate bathtub extremization for bounded payoffs and the n
 
 A second compatible input is the completed interactive rank-two affine half-Riesz theorem:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -331,8 +331,8 @@ A direct symbolic expansion verified the displayed square-completion identity ex
 ## 10. Source pins
 
 - Fresh programme controls initially read at `yspennstate/math-research-brain@1836efdb710f84dd601889af6e09992e755e1cd1`; pre-publication main refresh observed `ba912a492619ee1a19dacff41a2ffefa1e1556aa` before the final control/correction reread.
-- Required partner theorem: `yspennstate/math-open-problems@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`, exact fleet04/B14 report path stated above.
-- Rank-two affine half-Riesz theorem: `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, exact interactive report path stated above.
+- Required partner theorem: `private-source-repository@8fcc9ba5db68dfd4cd5daeb181a39666ceeda322`, exact fleet04/B14 report path stated above.
+- Rank-two affine half-Riesz theorem: `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, exact interactive report path stated above.
 - The correction inbox was consumed before derivation and will be refreshed again before the handoff/receipt.
 
 No scheduler mutation, task creation, email/Drive action, public release, remote workflow, paid model/API/Codex call, permission expansion or cross-account authentication is part of this result.

@@ -36,7 +36,7 @@ c_i=\|U_{i,:}\|_2^2,\qquad P=|\lambda_1\lambda_2|.
 
 The completed Fresnel--Brascamp--Lieb proof in
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 (and its rank-r formulation in `FOURIER_ROUTE_REPORT.md`) gives, after Fresnel linearisation of the two rank-two squares, a geometric Brascamp--Lieb integral in which each ORIGINAL coordinate enters through
 
@@ -248,7 +248,7 @@ unless it is already paid by (2.6). If the arm itself violates the `1/4` leverag
 
 The latest compatible fleet03/B08 result is
 
-`yspennstate/math-open-problems@41a02a4ecaa02ccfa4029ca3fd323afe5e886144`,
+`private-source-repository@41a02a4ecaa02ccfa4029ca3fd323afe5e886144`,
 Theorem `QFORM-RANK1-ALIGNED-CANCELLED-TWIST-SHEAR-v1`.
 
 In the exact rank-one carrier state `R=lambda rr^T`, if `max ell_j<=1/3`, a physical twist `d_j` is near-cancelled in the actual diagonal

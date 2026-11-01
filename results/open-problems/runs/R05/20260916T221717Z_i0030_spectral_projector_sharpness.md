@@ -5,7 +5,7 @@ Problem/source: David Aldous and James Fill, *Reversible Markov Chains and Rando
 # R05 immutable run report — I0030 / spectral-projector criterion and an 8-vertex sharpness witness
 
 Run ID: `20260916T221717Z_i0030_spectral_projector_sharpness`  
-Repository/branch: `yspennstate/math-open-problems`, `master`.
+Repository/branch: `private-source-repository`, `master`.
 
 Overall source status: **candidate positive answer mathematically PROVED / audit-gated / publication novelty UNVERIFIED**. The frozen finite metric did not move this run because the research effort was deliberately spent on a new structural route rather than another census extension. The previous run moved the metric `14 -> 15`, so the unchanged-run count is now `1`.
 

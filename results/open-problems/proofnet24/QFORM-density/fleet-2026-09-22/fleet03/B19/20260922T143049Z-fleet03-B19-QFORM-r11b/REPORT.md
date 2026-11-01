@@ -20,7 +20,7 @@ This run changes mechanism: instead of another stable-rank cross-cut estimate, i
 
 The designated partner `fleet04/B19` completed `QFORM-FINITE-UNION-CORE-v1` at
 
-`yspennstate/math-open-problems@02171dc794a56c0235afb1ca394b3e614162bff4`
+`private-source-repository@02171dc794a56c0235afb1ca394b3e614162bff4`
 
 and proves exact equality of interval-concentration suprema between arbitrary independent cap-one densities and bounded finite-union product indicators. That theorem is applied below to an actual small-ball inequality, not merely cited.
 

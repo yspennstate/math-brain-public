@@ -1,6 +1,6 @@
 # fleet03/B02 Lean r07
 
-Exact paper: math-open-problems@4e530247, blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a.
+Exact paper: private-source@4e530247, blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a.
 
 No new theorem is claimed compiled in this runtime because Lean/Lake are not exposed.
 
@@ -18,6 +18,6 @@ The remaining proof can reuse L2 Fourier isometry, finite-dimensional integral s
 RN-density integration, and Fourier-integral continuity.
 
 The local Lean WIP contains no sorry/admit/new axiom but is uncompiled.
-Publication to math-open-problems was blocked by the platform external-write safety gate.
+Publication to private-source was blocked by the platform external-write safety gate.
 
 Execution: WITHOUT_VERIFIED_BRAIN.

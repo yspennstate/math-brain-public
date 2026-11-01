@@ -116,7 +116,7 @@ The downloaded papers were searched/read for support, accumulation, regularity, 
 
 ## Read-only prior-work checks
 Before the attempt, math_recall.py queried "branching random walk hyperbolic boundary limiting measure"; brain.py recall queried "branching random walk boundary" and "branching random walk boundary mistakes". During the attempt math_recall.py queried "hyperbolic group convergence action harmonic measure nonatomic". These produced broad background, no verified solution.
-The intake ledger probability_1000_intake_E_20260908/attempts.jsonl contains E0101-A001: its directional-UI equivalence is unsupported and was not adopted. The problem ledger confirms Problem 4.2. Read-only rg also searched codex_pool_2026_10_10 with no matching output. A read-only origin/master filename search in math-open-problems found no E0101/2205.15287 path. No working-tree changes were made there.
+The intake ledger probability_1000_intake_E_20260908/attempts.jsonl contains E0101-A001: its directional-UI equivalence is unsupported and was not adopted. The problem ledger confirms Problem 4.2. Read-only rg also searched codex_pool_2026_10_10 with no matching output. A read-only origin/master filename search in private-source found no E0101/2205.15287 path. No working-tree changes were made there.
 
 - Valid OpenAlex DOI-filter lookup, 2026-10-12: https://api.openalex.org/works?filter=doi%3Ahttps%3A%2F%2Fdoi.org%2F10.1214%2F23-ecp560&per-page=5
   Result: HTTP Error 429: Too Many Requests

@@ -10,7 +10,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`
 
 The full target remains the arbitrary-product-law statement: independent real coordinates with densities at most one, and arbitrary real symmetric `A` having at least three eigenvalues of absolute value at least one, should give a universal density bound for `X^T A X`.
 
-The first B07 debt inherited from the preceding run was the localized branch of determinant-weighted minor selection. The designated partner fleet03/B07 has now completed `QFORM-PLUCKER-COLLAR-TRICHOTOMY-v1`, canonical report `yspennstate/math-open-problems@3f7a03a9e3799798af3ed81e4f55ea6aed46efe9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/fleet03-B07-20260922T124045Z-qform-minors-v11/REPORT.md`. I apply its exceptional branch below rather than merely citing it.
+The first B07 debt inherited from the preceding run was the localized branch of determinant-weighted minor selection. The designated partner fleet03/B07 has now completed `QFORM-PLUCKER-COLLAR-TRICHOTOMY-v1`, canonical report `private-source-repository@3f7a03a9e3799798af3ed81e4f55ea6aed46efe9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/fleet03-B07-20260922T124045Z-qform-minors-v11/REPORT.md`. I apply its exceptional branch below rather than merely citing it.
 
 Partner input: for a rank-three spectral frame `U^T U=I_3`, after the paid diffuse and minority-pivot branches fail there is an actual original-coordinate set `J`, `1<=|J|<=3`, such that
 
@@ -159,11 +159,11 @@ Full QFORM remains `OPEN / NOT PROVED`.
 Fresh control: owner revision `2026-09-22.5`; no later stop observed before publication.
 
 Applied designated partner result:
-- fleet03/B07, `QFORM-PLUCKER-COLLAR-TRICHOTOMY-v1`, canonical package `yspennstate/math-open-problems@3f7a03a9e3799798af3ed81e4f55ea6aed46efe9`.
+- fleet03/B07, `QFORM-PLUCKER-COLLAR-TRICHOTOMY-v1`, canonical package `private-source-repository@3f7a03a9e3799798af3ed81e4f55ea6aed46efe9`.
 
 Compatible completed results used to locate the remaining packet debt:
 - fleet02/B19 sequential-heavy determinant bank, handoff `20260922T140533Z-fleet02-B19-qform-r12`;
 - fleet03/B19 off-diagonal stable-rank branch, handoff `20260922T140323Z-fleet03-B19-QFORM-r11`;
-- interactive regularized-determinant theorem, canonical package `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`.
+- interactive regularized-determinant theorem, canonical package `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`.
 
 No moments, support regularity, Gaussianity, post-rotation independence, public data, paid calls, or benchmark material are used.

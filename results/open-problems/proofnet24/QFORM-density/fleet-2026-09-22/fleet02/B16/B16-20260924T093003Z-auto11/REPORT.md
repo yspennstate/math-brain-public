@@ -25,7 +25,7 @@ The live corrections remain binding: arbitrary-joint rank-three coarea is false;
 
 The required pinned package
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 
 was reread at `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The completed product-projection input used at the actual inequality below is the two-dimensional marginal cap
@@ -38,7 +38,7 @@ for a rank-two projection of an original independent cap-one bank. It is used on
 
 The latest compatible designated partner fleet03/B16 report is r45,
 
-`yspennstate/math-open-problems@bc397f473db245b56f3a4a29a8af75b2562d1967`,
+`private-source-repository@bc397f473db245b56f3a4a29a8af75b2562d1967`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260924T085813Z-fleet03-B16-QFORM-auto11-r3/REPORT.md`,
 
 with checker PASS at `fb28047260afcaa64675fef64af6457e2815af2d`. Its named remaining B16 gap is the genuinely two-dimensional same-bank overlap. The theorem below closes the whole invertible zero-pivot part of that gap.

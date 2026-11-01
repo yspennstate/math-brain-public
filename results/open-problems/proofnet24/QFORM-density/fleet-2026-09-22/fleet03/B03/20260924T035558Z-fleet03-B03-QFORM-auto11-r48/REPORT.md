@@ -9,9 +9,9 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The unrestricted owner target remains OPEN. Full-target continuity remains OPEN. This report does not assume moments, compact or connected support, Gaussianity, log-concavity, iid laws, a diagonal eigenbasis, or independence after rotating the random vector. All rotations below are deterministic coefficient calculations only. No nonzero coefficient tail is deleted as a random perturbation.
 
-Fresh inherited frontier: fleet03/B20 r45 (`yspennstate/math-open-problems@9340f6ef0ba72023989f2fbd3cf2ff3bb47a60c4`) reduces one strong-crossing survivor to a finite-hub / two-sided-nested-rank-two packet. Its aggregate promoted-E3 theorem already pays every substantial component transverse to the relevant rank-two carrier plane. Therefore the next exact model to understand is the genuinely **carrier-aligned** two-sided curvature packet. The newest fleet02/B03 aligned-curvature family (`yspennstate/math-open-problems@c9a27b38fff24b31ff9a53fc96abbf1770d5b42a`) shows that aligned same-bank curvature can itself become the missing third crossing direction after a physical repartition. The theorem below makes that mechanism quantitative for an arbitrary four-mode aligned carrier.
+Fresh inherited frontier: fleet03/B20 r45 (`private-source-repository@9340f6ef0ba72023989f2fbd3cf2ff3bb47a60c4`) reduces one strong-crossing survivor to a finite-hub / two-sided-nested-rank-two packet. Its aggregate promoted-E3 theorem already pays every substantial component transverse to the relevant rank-two carrier plane. Therefore the next exact model to understand is the genuinely **carrier-aligned** two-sided curvature packet. The newest fleet02/B03 aligned-curvature family (`private-source-repository@c9a27b38fff24b31ff9a53fc96abbf1770d5b42a`) shows that aligned same-bank curvature can itself become the missing third crossing direction after a physical repartition. The theorem below makes that mechanism quantitative for an arbitrary four-mode aligned carrier.
 
-The analytic receiver used after the deterministic promotion is fleet03/B04 r42 (`yspennstate/math-open-problems@563bc41e4f9247f9daf3343a57757f45e3f6e703`): for any literal disjoint original-coordinate cross block `B`,
+The analytic receiver used after the deterministic promotion is fleet03/B04 r42 (`private-source-repository@563bc41e4f9247f9daf3343a57757f45e3f6e703`): for any literal disjoint original-coordinate cross block `B`,
 
 `||p_Q||_infinity <= C_E3 E3(B)^(-1/6)`,
 
@@ -236,7 +236,7 @@ So failure of the E3 payment funnels the aligned packet to a genuinely near-rank
 
 Apply Theorem 1.1 to the exact target-valid fleet02/B03 family at
 
-`yspennstate/math-open-problems@c9a27b38fff24b31ff9a53fc96abbf1770d5b42a`.
+`private-source-repository@c9a27b38fff24b31ff9a53fc96abbf1770d5b42a`.
 
 For its balanced halves,
 
@@ -284,7 +284,7 @@ The point is not the small constant improvement over that report's hub-including
 
 The latest completed designated partner theorem read this run is fleet04/B03 r3,
 
-`yspennstate/math-open-problems@19345adf8bb78f11da95a556d6fdcc47af957b19`,
+`private-source-repository@19345adf8bb78f11da95a556d6fdcc47af957b19`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260924T021651Z-fleet04-B03-hyperbola-fourvolume-r3/REPORT.md`.
 

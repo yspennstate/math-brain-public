@@ -5,7 +5,7 @@ Problem/source: **iid Rademacher square-matrix singularity — Komlós (1967) li
 # R03 run21 — partition Möbius inversion and overlap-one modular planes
 
 Run ID: `20260916T2208Z_21_overlap_partition_mobius`  
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Recovery, current source status, and fixed metric
 

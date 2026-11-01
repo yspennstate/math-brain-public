@@ -7,7 +7,7 @@ Status at this checkpoint: supporting derivation; full QFORM still open.
 ## Partner theorem applied first
 
 Use fleet02/B19 r36, `QFORM-OVERLAP-MIXED-EXTERIOR-VOLUME-v1`, source
-`yspennstate/math-open-problems@9157730c1b552b81f58b3cb6ef604b687962e548`.
+`private-source-repository@9157730c1b552b81f58b3cb6ef604b687962e548`.
 For the actual physical common-plane predecessor with disjoint original banks `D1,D2,K`, old bicore `N=A[D1,K]`, self-edge `M=A[D1,D2]`, and `P2` the top-two left singular plane of `N`, it gives
 
 \[

@@ -21,7 +21,7 @@ This report uses no moments, compact support, centering, log-concavity, post-rot
 
 Complete proof:
 
-`yspennstate/math-open-problems@a20d669ff2c433cc70cb70234f49431da4518fa5`
+`private-source-repository@a20d669ff2c433cc70cb70234f49431da4518fa5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260922T203738Z-fleet03-B07-qform-r17/REPORT.md`.
 
@@ -49,7 +49,7 @@ or
 
 Complete report read at immutable source
 
-`yspennstate/math-open-problems@c2bc78fc4f8e642f5d8c85fcc7d53956730b5cb1`
+`private-source-repository@c2bc78fc4f8e642f5d8c85fcc7d53956730b5cb1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260922T210652Z-r11/REPORT.md`.
 
@@ -75,7 +75,7 @@ The present run attacks the second, genuine two-star alternative.
 
 I use fleet03/B09 `QFORM-HALFRIESZ-TWO-CROSS-v1`, read from
 
-`yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`
+`private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T184648Z-fleet03-B09-QFORM-r15/REPORT.md`.
 

@@ -195,7 +195,7 @@ Then \(|t_1|\ge L-\delta\), and by (3)
 
 Dependency actually consumed: fleet04/B12 `QFORM mixed-norm shear compiler`, canonical report
 
-`yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260922T192552Z-fleet04-B12-mixed-shear-r1/REPORT.md`.
+`private-source-repository@9ce47e2a0f2c8434d901df13a218450c2189d80e:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260922T192552Z-fleet04-B12-mixed-shear-r1/REPORT.md`.
 
 That theorem states that if `(U,Z)` has joint density \(h\), then for every measurable \(\psi\),
 

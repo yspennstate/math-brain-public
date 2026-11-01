@@ -10,13 +10,13 @@ The unrestricted theorem is **not** claimed. Continuity remains separate and ope
 
 ## 1. Source-pinned inputs
 
-1. **Designated partner fleet02/B19 r22.** Canonical source `yspennstate/math-open-problems@3a8e3494dac898f3b7180d5b80a8c5eb974a8412`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T020950Z-fleet02-B19-QFORM-r22/REPORT.md`. In its two-rank-two-bank geometry, if a bank frame has least positive eigenvalue `g` and a row has normalized leverage `ell_i>1/2`, then the row carries fixed Euclidean spectral mass; its grouped determinant identity is `delta_i=pdet(S_H)(n_H.u_i)^2`, with aggregate lower bound `sum delta_i >= g^2 h eta`. This is used only for the co-heavy input and its exact leverage meaning.
+1. **Designated partner fleet02/B19 r22.** Canonical source `private-source-repository@3a8e3494dac898f3b7180d5b80a8c5eb974a8412`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T020950Z-fleet02-B19-QFORM-r22/REPORT.md`. In its two-rank-two-bank geometry, if a bank frame has least positive eigenvalue `g` and a row has normalized leverage `ell_i>1/2`, then the row carries fixed Euclidean spectral mass; its grouped determinant identity is `delta_i=pdet(S_H)(n_H.u_i)^2`, with aggregate lower bound `sum delta_i >= g^2 h eta`. This is used only for the co-heavy input and its exact leverage meaning.
 
-2. **fleet03/B19 r23 arbitrary-hub theorem.** Canonical source `yspennstate/math-open-problems@80403bc0adff2c5e8278848674c81448e9782e44`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T030233Z-fleet03-B19-QFORM-r23/REPORT.md`. If one ORIGINAL coordinate has star row `m=A[i,-i]`, then for arbitrary diagonal coefficient and arbitrary residual curvature
+2. **fleet03/B19 r23 arbitrary-hub theorem.** Canonical source `private-source-repository@80403bc0adff2c5e8278848674c81448e9782e44`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T030233Z-fleet03-B19-QFORM-r23/REPORT.md`. If one ORIGINAL coordinate has star row `m=A[i,-i]`, then for arbitrary diagonal coefficient and arbitrary residual curvature
 
 `sup_z P(|Q-z|<=eps) <= 4*2^(1/4)||m||^(-1/2) sqrt(eps)`.
 
-3. **fleet03/B06 r24 aggregate-E2 theorem.** Canonical source `yspennstate/math-open-problems@606257652f3c70e90c7b7f80ea7cb76c1abf689b`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T011959Z-fleet03-B06-qform-r24/REPORT.md`. For an original-coordinate cross block `B`, if one cross-range side has coordinate leverage at most `q/2`, `1<=q<3/2`, then the whole quadratic form has an `L^3` density obeying
+3. **fleet03/B06 r24 aggregate-E2 theorem.** Canonical source `private-source-repository@606257652f3c70e90c7b7f80ea7cb76c1abf689b`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T011959Z-fleet03-B06-qform-r24/REPORT.md`. For an original-coordinate cross block `B`, if one cross-range side has coordinate leverage at most `q/2`, `1<=q<3/2`, then the whole quadratic form has an `L^3` density obeying
 
 `||p_Q||_3 <= C3(q) Delta2(B)^(-1/6)`,
 

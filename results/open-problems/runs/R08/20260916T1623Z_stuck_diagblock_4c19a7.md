@@ -5,7 +5,7 @@ Problem/source: strict convexity of the two-dimensional first-passage-percolatio
 
 Run ID: `20260916T1623Z_stuck_diagblock_4c19a7`  
 Date checked: 2026-09-16  
-Repository: `yspennstate/math-open-problems`, branch `master`  
+Repository: `private-source-repository`, branch `master`  
 Source target: **OPEN**  
 Frozen pair:
 \[

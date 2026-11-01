@@ -15,7 +15,7 @@ The full owner target remains open: for arbitrary independent original coordinat
 
 This run starts from fleet03/B16 r23, canonical source
 
-`yspennstate/math-open-problems@bbb01a983ce6478003ccf8422198c87f44f52cea`
+`private-source-repository@bbb01a983ce6478003ccf8422198c87f44f52cea`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T025235Z-fleet03-B16-QFORM-r23/REPORT.md`.
 
@@ -38,7 +38,7 @@ and the completed designated-partner theorem fleet04/B16 is already applied at t
 
 Hence this report works only on `d<1/64`. The same partner theorem also keeps its majority-sign one-sheet estimate `pi sqrt(2)` available. Its canonical source is
 
-`yspennstate/math-open-problems@b111363ff02b67015d14db35482e0150591744cd`
+`private-source-repository@b111363ff02b67015d14db35482e0150591744cd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T231542Z-fleet04-B16-QFORM-r1/REPORT.md`.
 
@@ -355,7 +355,7 @@ Substitution of the actual threshold `d=1/64` gives `<=24`, so all of Sections 2
 
 The new duplicated-slice proof additionally reuses only the already source-validated sharp Hausdorff--Young/geometric Brascamp--Lieb normalization from the completed hub-Fresnel package
 
-`yspennstate/math-open-problems@a93d62ee254b5d17d8608a39f25aa3a5d87628f4`
+`private-source-repository@a93d62ee254b5d17d8608a39f25aa3a5d87628f4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T221830Z-fleet02-B11-QFORM-r16/REPORT.md`.
 

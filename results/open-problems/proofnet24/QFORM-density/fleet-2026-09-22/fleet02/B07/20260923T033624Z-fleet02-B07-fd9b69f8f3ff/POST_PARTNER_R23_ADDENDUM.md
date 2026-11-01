@@ -2,7 +2,7 @@
 
 A newer designated-partner result appeared after `REPORT.md` was committed: fleet03/B07 r23,
 
-`yspennstate/math-open-problems@e24329a6a315b96a87b3efc608473ef0554f3b8d`,
+`private-source-repository@e24329a6a315b96a87b3efc608473ef0554f3b8d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T033734Z-fleet03-B07-qform-r23/REPORT.md`.
 

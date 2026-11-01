@@ -9,7 +9,7 @@ This report proves a new supporting theorem for an exact six-variable rotated ta
 
 
 The designated completed partner result actually applied below is `fleet04/B17`,
-`yspennstate/math-open-problems@4e8d5ae06f2657e9e1ac8a89f7bc26c9ff95169e`,
+`private-source-repository@4e8d5ae06f2657e9e1ac8a89f7bc26c9ff95169e`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B17/20260923T171805Z-fleet04-B17-QFORM-r5/REPORT.md`.
 It supplies the exact main-cell scaling for the same dense matrix and fragmented cap-one laws.
 

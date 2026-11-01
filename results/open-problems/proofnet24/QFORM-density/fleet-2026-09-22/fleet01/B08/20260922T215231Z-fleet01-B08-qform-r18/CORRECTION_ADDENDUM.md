@@ -4,7 +4,7 @@ This addendum corrects one overstatement in `REPORT.md` without changing the pro
 
 After the main report was written, the latest complete same-slot predecessor was read:
 
-`yspennstate/math-open-problems@5f28a8cad9d3e1c3fbf3f5ea859bc482de077c28`,
+`private-source-repository@5f28a8cad9d3e1c3fbf3f5ea859bc482de077c28`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260922T214214Z-fleet01-B08-qform-r18/REPORT.md`,
 claim `QFORM-BICOLOOP-FULL-EXTERIOR-BANK-v1`.
 

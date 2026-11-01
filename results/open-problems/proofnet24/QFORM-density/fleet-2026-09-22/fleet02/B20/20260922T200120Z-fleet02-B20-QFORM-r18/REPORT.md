@@ -20,7 +20,7 @@ This run uses only original-coordinate algebra and exact Schur complements. It d
 The newest compatible completed designated-partner run available at the source snapshot is
 
 - `fleet03/B20`, run `20260922T194915Z-fleet03-B20-QFORM-r16`;
-- canonical report `yspennstate/math-open-problems@241e781422352daf5ca803898f1e2d20f4dfda8e`.
+- canonical report `private-source-repository@241e781422352daf5ca803898f1e2d20f4dfda8e`.
 
 In the retained physical-pivot setup `|a|>=m:=3501/8000`, with exact physical Schur complement `S`, fleet01/B20 has already paid every residual original-coordinate cut `C=S[L,R]` having `s_2(C)>=beta:=1/64`. The partner then proves that a still-unpaid survivor satisfies, for **every** residual physical cut,
 
@@ -36,7 +36,7 @@ is the quantitative input used below. The partner also proves approximate tetrad
 
 ## 3. Prior B20 externalization input and the pivot/Schur interface
 
-The previous B20 theorem `QFORM-COHERENT-TRIANGLE-EXTERNALIZATION-v1`, canonical report `yspennstate/math-open-problems@23f3d87a9e93f573c201efee403e45ce6c54098a`, shows that an unpaid compact coherent physical triangle `T={i,j,k}` either is already paid, exports an outside two-direction packet, or has
+The previous B20 theorem `QFORM-COHERENT-TRIANGLE-EXTERNALIZATION-v1`, canonical report `private-source-repository@23f3d87a9e93f573c201efee403e45ce6c54098a`, shows that an unpaid compact coherent physical triangle `T={i,j,k}` either is already paid, exports an outside two-direction packet, or has
 
 `||A[T,O]||_op > 1/2`,                                      (3.1)
 

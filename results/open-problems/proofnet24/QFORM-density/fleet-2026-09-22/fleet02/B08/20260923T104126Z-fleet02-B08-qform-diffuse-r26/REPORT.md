@@ -27,7 +27,7 @@ Before reaching that endpoint, Section 3 removes arbitrary high cross-rank compl
 
 The current predecessor is fleet02/B08 r25:
 
-`math-open-problems@ac9b000da88c4923d8a3adb6a0a8bdccbd27ccae`,
+`private-source@ac9b000da88c4923d8a3adb6a0a8bdccbd27ccae`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T093606Z-fleet02-B08-qform-diffuse-r25/REPORT.md`.
 
 Its actual spectral gate uses
@@ -39,7 +39,7 @@ In the `k=1` branch the actual physical cross block has at least two singular va
 
 The newest completed designated partner is fleet03/B08 r32:
 
-`math-open-problems@2cb64b71f8aafa0892547dffebcf6af647ea7c64`,
+`private-source@2cb64b71f8aafa0892547dffebcf6af647ea7c64`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T102108Z-fleet03-B08-qform-diffuse-r32/REPORT.md`.
 
 The theorem used here is `QFORM-SCALAR-SCHUR-E2-LINF-v1`: if one ORIGINAL coordinate has quadratic coefficient `a!=0`, and after exact scalar Schur complementation a literal residual physical cross block `M` satisfies `Delta_2=E_2(M)>0`, then
@@ -50,7 +50,7 @@ It retains arbitrary same-bank residual curvature, all other residual couplings 
 
 The required fixed Claude source was read at exactly
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`
 with `RESULTS.md`, `FOURIER_ROUTE_REPORT.md` and `COUNTEREXAMPLE_SEARCH.md`.
 
@@ -68,7 +68,7 @@ All same-side blocks and outside couplings remain arbitrary, and the Fourier pro
 
 when every physical spectral-row leverage is at most `1/2`. This is a deterministic frame argument in original product coordinates, not independence after rotation.
 
-The later volume-stability continuation `math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba` was also read. In particular, its two-cross collective-tail extension remains available, but the D5 reduction below is completely marginal-free and is therefore the cleaner first router for the arbitrary complementary cross spectrum.
+The later volume-stability continuation `private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba` was also read. In particular, its two-cross collective-tail extension remains available, but the D5 reduction below is completely marginal-free and is therefore the cleaner first router for the arbitrary complementary cross spectrum.
 
 ## 3. New structural router: the actual hybrid plus D5 is either paid or within a rank-four cross tube
 

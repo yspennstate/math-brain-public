@@ -5,7 +5,7 @@ attacking: the finite-hub diagonal-plus-symmetric-rank-two chamber from partner 
 
 Programme `QFORM-DENSITY-3EIG-20260922`; full unrestricted theorem remains OPEN. No moment, support, log-concavity, diagonal-basis, or post-rotation-independence assumption is used below.
 
-Pinned source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, specifically the proved D_k volume-decoupling estimate and Lemma 4.1 converting Fourier decay to fractional potentials.
+Pinned source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, specifically the proved D_k volume-decoupling estimate and Lemma 4.1 converting Fourier decay to fractional potentials.
 
 Let `I,J` be disjoint physical coordinate sets and `M=A[I,J]`. Put
 

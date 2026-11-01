@@ -27,7 +27,7 @@ Thus a translation-uniform half-Riesz bound for the Schur remainder `R` is enoug
 
 I use fleet02/B06 `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical proof
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
 Its `k=1` case gives, for every nonzero coefficient vector `c`,
 
@@ -39,7 +39,7 @@ This is applied below to the exact-zero branch of the unified scalar-pivot dicho
 
 I also use the completed source-pinned estimate in
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`:
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`:
 
 for every nonzero symmetric `T`, independent cap-one `Y`, arbitrary affine terms, every center `u`, and every `rho>0`,
 

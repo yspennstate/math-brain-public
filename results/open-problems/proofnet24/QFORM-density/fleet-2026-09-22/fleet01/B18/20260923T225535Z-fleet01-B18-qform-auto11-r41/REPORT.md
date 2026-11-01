@@ -14,7 +14,7 @@ The owner target remains: for independent real coordinates with one-dimensional 
 
 This report does **not** claim the full theorem. It preserves the live corrections: no post-rotation independence; no arbitrary-joint three-dimensional coarea; no replacement of genuine independence by a conditional density cap; no deletion of a small nonzero coefficient; no law-uniform pointwise Fresnel decay; no worst-fiber substitution; and no fixed-good-minor inference.
 
-The newest designated partner handoff is fleet02/B18 `fleet02-B18-20260923T220809Z-a35ad7e4`, canonical mathematics `yspennstate/math-open-problems@c666bf6ec06dea6643ea0a0b8cd054edf5d893a6`. It isolates the target-valid family
+The newest designated partner handoff is fleet02/B18 `fleet02-B18-20260923T220809Z-a35ad7e4`, canonical mathematics `private-source-repository@c666bf6ec06dea6643ea0a0b8cd054edf5d893a6`. It isolates the target-valid family
 
 \[
 Q_{m,\eta}=2X_0G+2\eta GV+(b_0C+\rho B)^2,
@@ -52,7 +52,7 @@ This is used only as a joint-density cap. No independence of `G` and `C` is asse
 
 The completed fleet02/B18 theorem `QFORM-CAPPED-SCALAR-DEPENDENT-PAIR-v1`, source
 
-`yspennstate/math-open-problems@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`,
+`private-source-repository@ba2e2fbc9d22196f83c4ae35080e7f3d23a55fa1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260923T013147Z-bf13c29b/REPORT.md`,
 
 states the following. Let `S` be a scalar with density cap `K`, genuinely independent of a possibly dependent pair `(Y,Z)` whose joint density has cap `M`. Then

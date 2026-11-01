@@ -16,9 +16,9 @@ Fresh owner control remained revision `2026-09-22.15`, QFORM-only. The live corr
 
 Two immutable premises are used.
 
-1. This slot's preceding r36 report, `yspennstate/math-open-problems@d2180eded43f3c299ecff739c67109d342c032b7`, proves `QFORM-FULL-SMALLBALL-EXTREME-LOCALIZATION-v1`: the exact full small-ball supremum is unchanged when every marginal is restricted to indicators of arbitrary compact finite unions of intervals of total length one. This is a law-level reduction and imposes no fixed fragment count or diameter.
+1. This slot's preceding r36 report, `private-source-repository@d2180eded43f3c299ecff739c67109d342c032b7`, proves `QFORM-FULL-SMALLBALL-EXTREME-LOCALIZATION-v1`: the exact full small-ball supremum is unchanged when every marginal is restricted to indicators of arbitrary compact finite unions of intervals of total length one. This is a law-level reduction and imposes no fixed fragment count or diameter.
 
-2. The designated partner fleet03/B14 r35, canonical `yspennstate/math-open-problems@29096949260b7ec2e9659c1379bd0a0882a37387`, proves `QFORM-SQRT-CRITICAL-BUDGET-MIXTURE-v1`. For a fixed original-coordinate invertible indefinite physical pair with `D=|det B|`, `kappa=s_min(B)`, define
+2. The designated partner fleet03/B14 r35, canonical `private-source-repository@29096949260b7ec2e9659c1379bd0a0882a37387`, proves `QFORM-SQRT-CRITICAL-BUDGET-MIXTURE-v1`. For a fixed original-coordinate invertible indefinite physical pair with `D=|det B|`, `kappa=s_min(B)`, define
 
 `F_(D,kappa)(K)=inf_(y>0)[4 sqrt(K/(kappa y))+D^(-1/2) Omega(y)]`,
 

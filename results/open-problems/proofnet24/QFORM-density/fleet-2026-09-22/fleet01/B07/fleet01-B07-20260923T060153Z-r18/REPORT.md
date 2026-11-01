@@ -14,7 +14,7 @@ The unrestricted conjecture is not proved here. The new result is a deterministi
 
 The current B07 input is the preceding fleet01/B07 r17 bundle
 
-`yspennstate/math-open-problems@abbd51dd7e691844aa6bfa3d34410af4b23f1cda`,
+`private-source-repository@abbd51dd7e691844aa6bfa3d34410af4b23f1cda`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/fleet01-B07-20260923T053559Z-r17/REPORT.md`.
 
@@ -38,7 +38,7 @@ The concrete collar is `theta=1/16`, with the inherited scale relation `F>kappa/
 
 The **designated partner fleet02/B07 theorem actually applied below** is `QFORM-CROSS-FIBER-PLANCHEREL-v1`, canonical source
 
-`yspennstate/math-open-problems@5266d24ea98d9bb5902c51a92eca0e3e38112e39`,
+`private-source-repository@5266d24ea98d9bb5902c51a92eca0e3e38112e39`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T193347Z-b07-639234ec/REPORT.md`.
 

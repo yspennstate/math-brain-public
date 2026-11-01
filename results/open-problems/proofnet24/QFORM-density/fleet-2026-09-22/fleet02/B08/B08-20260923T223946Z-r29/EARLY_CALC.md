@@ -117,7 +117,7 @@ This is not a QFORM counterexample. The full spectral range is rank three and di
 
 Hence for `epsilon<1` and `m>=5` every leverage is below `1/2`. The owner-required fixed-source Fresnel--Brascamp--Lieb Theorem F at
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 applies to the entire exact rank-three range, giving a continuous `C_0` density and
 

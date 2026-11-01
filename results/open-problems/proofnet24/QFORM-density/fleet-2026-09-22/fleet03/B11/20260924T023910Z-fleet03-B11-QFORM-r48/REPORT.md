@@ -17,7 +17,7 @@ No Gaussianity, log-concavity, moments, compact support assumption on the target
 
 Immediate predecessor:
 
-- repository: `yspennstate/math-open-problems`
+- repository: `private-source-repository`
 - commit: `559dcad1a7ad077c7e784bd806602b951926fe28`
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260924T011327Z-fleet03-B11-QFORM-r46/REPORT.md`.
 
@@ -43,7 +43,7 @@ r46 gives the full same-bank hyperbolic part finite `L^m` norms, including a uni
 
 A concurrent fleet02/B11 theorem, canonical report at
 
-`yspennstate/math-open-problems@02aedcd3be33ace107851fa74e0b9ac846d0aa25`,
+`private-source-repository@02aedcd3be33ace107851fa74e0b9ac846d0aa25`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/B11-20260924T012138Z-auto11/REPORT.md`,
 
 proves that if the third-square scalar is genuinely **source-disjoint**, then the r46 `L^3` bound pairs with the square's uniform `L^(3/2)` bound to give a determinant-homogeneous `L^infinity` estimate. It explicitly leaves the same-bank case open.
@@ -248,7 +248,7 @@ This distinction is exactly the live correction `QFORM-CONDITIONAL-CAP-NOT-INDEP
 
 The completed designated partner result consumed from
 
-`yspennstate/math-open-problems@30555c1ca97752e10f5089ccd95f8514c704be5a`,
+`private-source-repository@30555c1ca97752e10f5089ccd95f8514c704be5a`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T131400Z-fleet04-B11-extension-mass-r6/REPORT.md`,
 
 gives the pair-area receiver

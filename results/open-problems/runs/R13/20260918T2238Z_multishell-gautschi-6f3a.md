@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — not auth
 # R13 — Boolean Komlós: a multishell lower-tail certificate with an exact Gautschi normalization
 
 Run ID: `20260918T2238Z_multishell-gautschi-6f3a`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Track: **R13 HARD OUTSIDE**  
 Canonical source ID: **E0042**
 

@@ -14,7 +14,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 
 The newest required volume-stability source used below is
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -36,7 +36,7 @@ All self blocks and affine terms are retained in that theorem.
 
 The designated fleet02/B11 result actually used below is
 
-`yspennstate/math-open-problems@15189fa11c0c752c1d9022c60e253a9e8d457df8`,
+`private-source-repository@15189fa11c0c752c1d9022c60e253a9e8d457df8`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260923T124731Z-fleet02-B11-QFORM-r31/REPORT.md`.
 

@@ -1,6 +1,6 @@
 # P26 ledger delta / readback — 2026-09-17 12:56:42
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## Immutable report receipt
 

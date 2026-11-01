@@ -14,7 +14,7 @@ The unrestricted owner target remains OPEN, and the unrestricted continuity clai
 
 The immediate B03 predecessor is
 
-`yspennstate/math-open-problems@b4633364805377102bf4e9da285a695fcb7b55ff`
+`private-source-repository@b4633364805377102bf4e9da285a695fcb7b55ff`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T062811Z-fleet03-B03-QFORM-auto11/REPORT.md`.
 
@@ -22,17 +22,17 @@ At the exact heavy-row angular cancellation `h_r=0`, that run proved an `L2` den
 
 A later completed curved-fiber source, fleet01/B06 r25,
 
-`yspennstate/math-open-problems@3f8e20afcd53d32515b7c451b1a06c5c54290f4e`,
+`private-source-repository@3f8e20afcd53d32515b7c451b1a06c5c54290f4e`,
 
 shows that the current one-sided packet may be organized by the physical right-plane vectors without changing basis in probability space.  Its heavy-set addendum
 
-`yspennstate/math-open-problems@43345308f06f3224ef0c03a181a7a8c1937dfa97`
+`private-source-repository@43345308f06f3224ef0c03a181a7a8c1937dfa97`
 
 shows that the plane leverage numbers `ell_j=v_j^2+q_j^2` sum to two, there are at most three heavy rows `ell_j>1/2`, and in the still-unpaid state every heavy row obeys `|h_j|/rho<1/8`.
 
 I also use the completed Fourier/Hausdorff-Young input from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`:
 for a cap-one probability density `f` and any unit-modulus coordinatewise phase, if `Psi` is the resulting twisted characteristic function, then for `p>=2`,
@@ -41,7 +41,7 @@ for a cap-one probability density `f` and any unit-modulus coordinatewise phase,
 
 Finally, the designated fleet04/B03 source is
 
-`yspennstate/math-open-problems@28681f9af7c2307f80968df86010084019599e38`,
+`private-source-repository@28681f9af7c2307f80968df86010084019599e38`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260922T193150Z-fleet04-B03-collision-l2-r1/REPORT.md`.
 

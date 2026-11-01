@@ -19,7 +19,7 @@ The phase-aligned fragmented-support obstruction is retained throughout. No poin
 
 ## 2. Designated partner result actually applied
 
-Source: `yspennstate/math-open-problems@f7e82d169badc671968036252d351b8533cdd425`,
+Source: `private-source-repository@f7e82d169badc671968036252d351b8533cdd425`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260924T012155Z-fleet04-B01-lr-residual-r1/REPORT.md`.
 
 For independent cap-one `U,V`, every `c!=0`, every `1<r<=2`, and arbitrary real affine coefficients,
@@ -137,7 +137,7 @@ All terms depending only on `H` are absorbed into `F_*`; all terms depending onl
 
 We use the previously proved fleet03/B01 double-decoupling theorem from
 
-`yspennstate/math-open-problems@0993b0d6fcaadedcc7873bf89d99c5eedf630dc0`,
+`private-source-repository@0993b0d6fcaadedcc7873bf89d99c5eedf630dc0`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260924T002941Z-auto11/REPORT.md`.
 
 For arbitrary measurable `F_*(H),G_*(Y)` and physical cross block `B_*`, two original-coordinate Cauchy--Schwarz differences give
@@ -169,7 +169,7 @@ Every difference is still in original coordinates and retains coordinatewise den
 
 Use the completed logarithmic physical-pair theorem
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 For an invertible indefinite physical pair matrix `P`, with
@@ -246,7 +246,7 @@ The homogeneity is exact: under scaling of the whole quadratic form by `lambda`,
 
 The designated fleet04/B01 signed-Fejer theorem at
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
 
 proves that for a bounded density,
 

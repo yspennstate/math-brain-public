@@ -5,7 +5,7 @@ Metric: before `b(n)=c_PP log n` for integers n>=2 with one fixed non-explicit `
 # R07 canonical GitHub run — exact weighted geodesic-overlap identity
 
 Run date: 2026-09-16.
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Repository recovery and source/status check
 

@@ -22,7 +22,7 @@ with `M` a physical `2 x m` full-row-rank arm and `D` arbitrary diagonal. Define
 \]
 
 The analytic receiver is fleet03/B08 r37, theorem `QFORM-MULTIHUB-TRANSVERSE-FRESNEL-v1`, at
-`yspennstate/math-open-problems@58b2a0752f409dd48ae5e39851ac84f13be4470b`, path
+`private-source-repository@58b2a0752f409dd48ae5e39851ac84f13be4470b`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T122051Z-fleet03-B08-qform-diffuse-r37/REPORT.md`.
 Its one-hub/one-child specialization says: if the light block is `D+lambda ss^T`, `||s||=1`, the retained physical hub-light vector is `g`, `h=(I-ss^T)g`, `tau=||h||>0`, and
 \[
@@ -196,7 +196,7 @@ A=\begin{pmatrix}a_*&b_*^T\\b_*&C_*\end{pmatrix}.
 \tag{5.1}
 \]
 Apply fleet04/B08 r2, theorem `QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1`, at
-`yspennstate/math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76`.
+`private-source-repository@a5e66e2944c89857a41d5e18c283d53a4307be76`.
 If
 \[
 s_3(C_*)\ge L/64

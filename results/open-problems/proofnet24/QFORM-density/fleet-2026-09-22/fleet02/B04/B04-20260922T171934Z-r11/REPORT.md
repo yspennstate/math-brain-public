@@ -19,7 +19,7 @@ This report pays the canonical **pure rank-one star bank** endpoint. The mechani
 
 I use the completed theorem `QFORM-RANK2-SCHUR-NOLEVERAGE-v1` from
 
-`yspennstate/math-open-problems@2761bd3896c56a1f929761e69035ba7cb8ebc2bc`,
+`private-source-repository@2761bd3896c56a1f929761e69035ba7cb8ebc2bc`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T164839Z-r14/REPORT.md`.
 
@@ -37,7 +37,7 @@ The same partner report also uses the standard one-dimensional product-projectio
 
 For the explicit null-center subfamily I also use fleet03/B13's `QFORM-NULLPAIR-PLUS-SQUARE-v1`, read at source snapshot
 
-`yspennstate/math-open-problems@3bb57a5517de87855824e393ec1601b8921abc13`,
+`private-source-repository@3bb57a5517de87855824e393ec1601b8921abc13`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B13/20260922T165804Z-fleet03-B13-qform-r12/REPORT.md`.
 

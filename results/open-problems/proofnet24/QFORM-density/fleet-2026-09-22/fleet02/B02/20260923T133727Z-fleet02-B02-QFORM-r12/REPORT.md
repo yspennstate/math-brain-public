@@ -16,13 +16,13 @@ The full target remains the arbitrary product-law statement: independent real co
 
 Fresh owner control remained QFORM-only, revision `2026-09-22.15`. The required Claude package was reread at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
 I use its physical-cross-block volume-sampling theorem, especially the D5 mechanism, together with the reviewed sharp Hausdorff--Young coefficient from
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`:
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`:
 
 for a physical cross block `M`,
 
@@ -30,7 +30,7 @@ for a physical cross block `M`,
 
 The newest compatible designated partner is `fleet03/B02` r30,
 
-`yspennstate/math-open-problems@cb55a355bc5c623eb5a98c1db8a0ebaa58ff1027`,
+`private-source-repository@cb55a355bc5c623eb5a98c1db8a0ebaa58ff1027`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T125927Z-fleet03-B02-qform-r30/REPORT.md`.
 

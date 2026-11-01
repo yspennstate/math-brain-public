@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # R06 CLOSABLE OUTSIDE — mandatory post-ROMERO successor gate
 
 Run date: 2026-09-19 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Delivery: private GitHub only.
 
 ## 1. Lifecycle first: ROMERO owner-side research is rotated

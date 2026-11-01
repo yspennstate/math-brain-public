@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-B — exact second-order Gibbs cancellation, multiscale clipping, and a positive sparse-exception patch
 
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured start master:** `096cd70d196edc7013da42ad1bc10e3b6a49104b`  
 **Fresh pre-write master:** `8f7d1f8209955bb8a12cb8d041417bd23970680b`  
 **Previous own substantive report:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T1028+0300__bounded_transverse_interpolation.md`, creation commit `35ecc3e5ba83a20856e115b9ef4f2bdc3190f951`.  

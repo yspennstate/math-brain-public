@@ -7,7 +7,7 @@ Let `L>0` and let the real symmetric matrix `A` have at least three eigenvalues 
 
 `D=|det B|`, `kappa=sigma_min(B)`.
 
-Complete the pair exactly. The remaining original coordinates stay independent and the residual quadratic coefficient is the Schur complement `S=A/B`; arbitrary affine terms are retained. The fixed source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` gives two inputs: (i) Schur complement interlacing leaves at least one eigenvalue of modulus at least `L`, hence `||S||op>=L`; (ii) its arbitrary-rank small-ball theorem gives, uniformly in the affine term,
+Complete the pair exactly. The remaining original coordinates stay independent and the residual quadratic coefficient is the Schur complement `S=A/B`; arbitrary affine terms are retained. The fixed source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` gives two inputs: (i) Schur complement interlacing leaves at least one eigenvalue of modulus at least `L`, hence `||S||op>=L`; (ii) its arbitrary-rank small-ball theorem gives, uniformly in the affine term,
 
 `sup_w P(|R-w|<rho) <= min(1, 5 (rho/L)^(1/4)).`                 (E1)
 

@@ -11,11 +11,11 @@ Full universal QFORM theorem: **OPEN**.
 The central target remains one universal finite constant for the essential density height of `Q=X^TAX` under independent one-dimensional densities `f_i<=1` and at least three eigenvalues of `A` of modulus at least one. Continuity is separate.
 
 For exact rank three of signature `(+,+,-)`, the completed ruled estimate in
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`
 pays the majority-sign one-sheet side. This report gives the missing rough-law limiting justification in a form that never takes a trace of a rough projection density, then applies the latest compatible fleet03/B15 heat certificate to isolate the still-unpaid two-sheet functional.
 
 The latest compatible partner result used is fleet03/B15 r23,
-`math-open-problems@0d6589d347490912ece0ea097eebb63e0e017d9a:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T012829Z-fleet03-B15-qform-r23/REPORT.md`.
+`private-source@0d6589d347490912ece0ea097eebb63e0e017d9a:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T012829Z-fleet03-B15-qform-r23/REPORT.md`.
 It proves for every probability law `mu`
 
 `D(mu)=sup_{k>=1,m in Z} int gamma_{2^{-k}}(x-m 2^{-3k}) dmu(x)`, 
@@ -131,7 +131,7 @@ on `R^{3m}`, where `J_m` is the all-ones matrix. Its nonzero spectrum is exactly
 
 Every positive-definite physical `2x2` principal block uses one coordinate from each of the two positive banks and equals `diag(1/m,1/m)`, hence has determinant `1/m^2`. Pairs within one bank have determinant zero, and no negative-definite physical pair exists because the negative bank is rank one. Thus the definite-pair certificate above deteriorates to `pi m` and cannot be a universal structural reduction.
 
-This deterioration is not an output-density counterexample. Apply the completed Theorem F from the pinned `FOURIER_ROUTE_REPORT.md` at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`. The exact rank-three eigenframe for `A_m` has every row leverage equal to `1/m<=1/2`; with eigenvalues `1,1,-1`, Theorem F gives directly
+This deterioration is not an output-density counterexample. Apply the completed Theorem F from the pinned `FOURIER_ROUTE_REPORT.md` at `private-source@e5f71d79eff325201dd0274053d20268ce65b837`. The exact rank-three eigenframe for `A_m` has every row leverage equal to `1/m<=1/2`; with eigenvalues `1,1,-1`, Theorem F gives directly
 
 `||p_{X^T A_m X}||_infinity <=12`
 

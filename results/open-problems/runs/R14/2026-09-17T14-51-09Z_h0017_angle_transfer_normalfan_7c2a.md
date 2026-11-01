@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # R14 HARD OUTSIDE — terminal BIS32 handoff and H0017 cone-survival first attack
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Date: 2026-09-17 UTC.
 
 ## 1. Continuity and mandatory handoff

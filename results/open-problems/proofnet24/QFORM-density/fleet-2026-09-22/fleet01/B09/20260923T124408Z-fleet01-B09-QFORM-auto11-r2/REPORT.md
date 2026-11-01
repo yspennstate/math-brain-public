@@ -14,7 +14,7 @@ The unrestricted conjecture remains OPEN. The new result below is a source-coord
 
 ### 1.1 Fractional three-volume Fourier theorem
 
-From `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+From `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`:
 for an ORIGINAL-coordinate cross block `M=A[I,J]`, `Z=e_3(M^T M)>0`, and `1<=q<3/2`, if the row three-volume marginals satisfy `alpha_i<=q/2`, then
 
@@ -39,7 +39,7 @@ whenever `max alpha_i<=q/2`. This is an application of the completed theorem's d
 ### 1.2 Aggregate singleton-augmentation identity
 
 From fleet03/B09 `QFORM-RANK2-NOAUGMENT-AGGREGATE-STABILITY-v1`, canonical source
-`yspennstate/math-open-problems@e8b97d9dcd8dd85cacc8fc73c2be4e86fde4b27a`,
+`private-source-repository@e8b97d9dcd8dd85cacc8fc73c2be4e86fde4b27a`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T114612Z-fleet03-B09-QFORM-r31/REPORT.md`:
 for a full-rank two-column hub cross `C`, `G=C^T C`, `Delta=sqrt(det G)`, leaf block `D`, row leverages `ell_k`, `q_C=max ell_k<1`, and singleton-augmentation three-volume `Gamma_k`,
 
@@ -221,7 +221,7 @@ The physical hub couplings are `m^(-1/2)` and the dense leaf-square coefficients
 
 The newest completed fleet02/B09 theorem consumed here is
 `QFORM-GROUPED-ONEHUB-DENSE-HUB-CURVATURE-v1`, canonical source
-`yspennstate/math-open-problems@46f88948cb35d25a7b146a31c223ec83ca23d65a`,
+`private-source-repository@46f88948cb35d25a7b146a31c223ec83ca23d65a`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T103752Z-fleet02-B09-QFORM-auto11/REPORT.md`.
 It states
 

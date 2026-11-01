@@ -10,7 +10,7 @@ Target: for independent real coordinates with probability densities bounded by o
 
 Control source read coherently at `math-research-brain@2c421dda3573fe3a1872350b4751a3b0dd1aa2f1`, revision `2026-09-22.5`; refreshed before publication at a descendant with the same owner control. Corrections consumed include `QFORM-UV-CONDITIONAL-CAP-FALSE`, `QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE`, `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`, `QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-v1`, and `QFORM-PLUCKER-PIVOT-SUPPORT-DISJOINT-v1`.
 
-Named partner result actually used: fleet02/B03, `math-open-problems@f40d5d4f5013b0a6af275a19aa3dc0fa2d76c347`, which proves for independent cap-one `U,V`
+Named partner result actually used: fleet02/B03, `private-source@f40d5d4f5013b0a6af275a19aa3dc0fa2d76c347`, which proves for independent cap-one `U,V`
 
 `||p_{UV}||_3 <= 2 sqrt(3)`.
 

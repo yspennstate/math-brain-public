@@ -15,7 +15,7 @@ The full conjecture is not proved here. The new result is an exact-rank-three st
 
 The designated partner result actually used is fleet02/B16 r23:
 
-`yspennstate/math-open-problems@7044d3cf479cc067d97a317cf67b41121cc48aab:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T023136Z-fleet02-B16-QFORM-r23/REPORT.md`.
+`private-source-repository@7044d3cf479cc067d97a317cf67b41121cc48aab:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T023136Z-fleet02-B16-QFORM-r23/REPORT.md`.
 
 Its theorem `QFORM-DISJOINT-SPECTRAL-LINE-PLANE-44-v1` says, in exact rank three, that if the original-coordinate source splits into a spectral line bank and an orthogonal spectral-plane bank, then for arbitrary independent cap-one coordinate laws
 
@@ -25,7 +25,7 @@ Crucially, the scalar line projection is independent of the whole dependent plan
 
 The newest Claude/interactive result actually used is the fractional three-volume theorem in
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 Its q=1 case says: for an original-coordinate cross block `M=A[I,J]`, if the third-volume row marginals satisfy `alpha_i^(vol)<=1/2`, then with `Z=e_3(M^TM)`
 

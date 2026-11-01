@@ -14,7 +14,7 @@ attacking: curvature-slope derivative localization—prove exact cap-preserving 
 
 The completed designated-partner result actually used below is fleet02/B14 r33:
 
-`yspennstate/math-open-problems@9c77bae76f0d884fc60a2ffee86ad6269b79d690`,
+`private-source-repository@9c77bae76f0d884fc60a2ffee86ad6269b79d690`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260923T095834Z-fleet02-B14-QFORM-r33/REPORT.md`.
 
 Its completed physical-pair logarithmic envelope says that if an outer pair consists of two original independent cap-one coordinates and has invertible indefinite block `B`, with

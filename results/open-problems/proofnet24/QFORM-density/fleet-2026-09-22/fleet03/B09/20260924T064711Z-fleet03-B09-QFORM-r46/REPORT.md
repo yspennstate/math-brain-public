@@ -15,7 +15,7 @@ All stochastic coordinates below are literal ORIGINAL coordinates. No random-var
 
 The same-slot predecessor is
 
-`yspennstate/math-open-problems@4eb95514089a21f787b60af1ed9ea65610d79660`,
+`private-source-repository@4eb95514089a21f787b60af1ed9ea65610d79660`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T054559Z-fleet03-B09-QFORM-r45/REPORT.md`.
 
@@ -31,7 +31,7 @@ This run closes the **exact singular-pair** part of that debt. The punctured nea
 
 A fresh existing-worker source is
 
-`yspennstate/math-open-problems@cdd0eb22227a505e827a658038a1512897c0ad56`,
+`private-source-repository@cdd0eb22227a505e827a658038a1512897c0ad56`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/fleet02-B08-20260924T034000Z-7c4f/REPORT.md`,
 
@@ -213,7 +213,7 @@ The designated partner theorem is
 
 canonical source
 
-`yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`,
+`private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
 
@@ -277,6 +277,6 @@ Full unrestricted QFORM remains **OPEN**. Full-target continuity remains **OPEN*
 
 Startup math-brain main: `476dac163193307b170035c926b485fb62baf20b`.  
 Prepublication math-brain refresh: `b128a0ddd5a3d9fb05c5637ff2145850ff1cb2a7`.  
-Prepublication math-open-problems master observed: `a03856e50323746433d26e0f9b2b112e2736f66e`.
+Prepublication private-source master observed: `a03856e50323746433d26e0f9b2b112e2736f66e`.
 
 Repository use and source retrieval are verified. Separate native learned-memory ingestion is not, so status remains `WITHOUT_VERIFIED_BRAIN`.

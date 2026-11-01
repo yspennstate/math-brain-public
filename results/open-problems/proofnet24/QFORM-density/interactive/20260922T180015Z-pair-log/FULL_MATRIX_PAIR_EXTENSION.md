@@ -28,7 +28,7 @@ There is no claim that the bare three-large-eigenvalue condition guarantees such
 
 The earlier report
 
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`
 
 Section 5 proves, for any disjoint original-coordinate cut with cross block T and arbitrary within-block phases,
 
@@ -41,7 +41,7 @@ In particular, if ||T||>=sigma then
 
 Extra small singular values can be discarded from the regularized determinant without loss. Original-coordinate affine terms are within-block phases and are allowed. No moment assumptions enter.
 
-This supporting estimate, not a conjectured scalar Fresnel bound, is the analytic input below. Its proof uses independent-copy decoupling and geometric Brascamp--Lieb with difference densities; the exact sharp Young/Hausdorff--Young constants are given in that report. A scoped passing independent review of Sections 3--6 was recorded by fleet02/B02 at math-open-problems commit e3fe4ce35f6aa4a90cca913051886c96c7febfc3; that review does NOT certify the present extension.
+This supporting estimate, not a conjectured scalar Fresnel bound, is the analytic input below. Its proof uses independent-copy decoupling and geometric Brascamp--Lieb with difference densities; the exact sharp Young/Hausdorff--Young constants are given in that report. A scoped passing independent review of Sections 3--6 was recorded by fleet02/B02 at private-source commit e3fe4ce35f6aa4a90cca913051886c96c7febfc3; that review does NOT certify the present extension.
 
 The logarithmic pair-density envelope is proved directly in the companion PAIR_LOG_THEOREM.md, canonical commit f7f0fedb2d93b46824f96cac1164af6f8a55626f. All its coordinate-independence requirements are retained here.
 

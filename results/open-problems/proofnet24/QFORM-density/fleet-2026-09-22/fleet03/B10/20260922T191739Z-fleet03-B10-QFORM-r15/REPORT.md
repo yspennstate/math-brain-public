@@ -17,7 +17,7 @@ Fresh `CURRENT_RESEARCH.md` still marks the arbitrary-joint rank-three coarea ca
 
 The preceding B10 run, canonical source
 
-`yspennstate/math-open-problems@d41decf403b7b6a6761096fa35fbd4427c24ffe7`
+`private-source-repository@d41decf403b7b6a6761096fa35fbd4427c24ffe7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T181253Z-fleet03-B10-QFORM-r14/REPORT.md`,
 
@@ -205,7 +205,7 @@ The exact named partner `fleet04/B10` still has no completed current-QFORM run/h
 
 I apply the completed compatible fleet04/B16 theorem
 
-`yspennstate/math-open-problems@58c23c624db350cf44f0c836daa3582eb7e2d266`,
+`private-source-repository@58c23c624db350cf44f0c836daa3582eb7e2d266`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T161909Z-fleet04-B16-QFORM-r2/REPORT.md`.
 

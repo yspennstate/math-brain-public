@@ -8,9 +8,9 @@ Outcome: **ESSENTIAL_STEP_APPLIED / PROVED_SUPPORTING_THEOREM / FULL TARGET OPEN
 ## Sources consumed
 
 
-Assigned partner actually used: fleet02/B11 run `20260922T192814Z-b11-qform-70f57503`, canonical mathematics `yspennstate/math-open-problems@2c065b1bb6a45a479bd2ac5d3405cd59e7bafe8f`. Its exact-ray aggregation step gives a normalized exact-ray aggregate density cap `sqrt(e)` while retaining independence between disjoint ray classes. Earlier completed projection-product machinery supplies the standard two-dimensional orthonormal product-projection cap `e`; the present proof only uses such caps after a genuine original-coordinate support separation.
+Assigned partner actually used: fleet02/B11 run `20260922T192814Z-b11-qform-70f57503`, canonical mathematics `private-source-repository@2c065b1bb6a45a479bd2ac5d3405cd59e7bafe8f`. Its exact-ray aggregation step gives a normalized exact-ray aggregate density cap `sqrt(e)` while retaining independence between disjoint ray classes. Earlier completed projection-product machinery supplies the standard two-dimensional orthonormal product-projection cap `e`; the present proof only uses such caps after a genuine original-coordinate support separation.
 
-Fresh peer context also consumed: fleet03/B19 run `20260922T210216Z-fleet03-B19-QFORM-r18`, canonical mathematics `yspennstate/math-open-problems@4caa949abfce263bcfdcdf7fe175a4a999ae35b5`, proving the sequential two-original-pivot third-source estimate. It is used only as an exit in the conditional synthesis below, not as a premise of the new lemma.
+Fresh peer context also consumed: fleet03/B19 run `20260922T210216Z-fleet03-B19-QFORM-r18`, canonical mathematics `private-source-repository@4caa949abfce263bcfdcdf7fe175a4a999ae35b5`, proving the sequential two-original-pivot third-source estimate. It is used only as an exit in the conditional synthesis below, not as a premise of the new lemma.
 
 Corrections respected: no arbitrary-joint 3D coarea bound, no conditional-cap-as-independence step, no law-uniform pointwise quadratic-phase decay, no perturbative deletion of small coefficients under unbounded supports, and no assertion that one fixed physical minor is uniformly good.
 

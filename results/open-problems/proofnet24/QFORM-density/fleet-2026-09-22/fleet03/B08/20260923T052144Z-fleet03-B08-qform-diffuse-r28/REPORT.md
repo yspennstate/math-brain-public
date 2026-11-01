@@ -18,7 +18,7 @@ The live corrections used here include the failure of law-uniform pointwise quad
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems@e76d2e984f81a058590bb143ff21e387fbbeab09`,
+`private-source-repository@e76d2e984f81a058590bb143ff21e387fbbeab09`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T042303Z-fleet03-B08-qform-diffuse-r27/REPORT.md`.
 
 It constructed, from an anchored third-volume law, a self-matched half-half mixture of physical order-three and order-two minors. The present run removes its artificial residual-row threshold `1/2` by combining that mixture with the completed Jensen/sharp-Hausdorff--Young compiler.
@@ -26,12 +26,12 @@ It constructed, from an anchored third-volume law, a self-matched half-half mixt
 Two completed analytic sources are used at proof level:
 
 1. **Mixed-order physical-minor BL/Fourier theorem:**
-   `yspennstate/math-open-problems@86f318f0826325e6df3504e1e8ec15f4316cc861`,
+   `private-source-repository@86f318f0826325e6df3504e1e8ec15f4316cc861`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T001242Z-b01-qform-auto11/REPORT.md`.
    It proves the varying-order determinant expansion and entropy currency at the `q=1` Fourier exponent.
 
 2. **Sharp-HY volume/Jensen compiler:**
-   `yspennstate/math-open-problems@49c80441f24d6c697350119fac09426077b7e313`,
+   `private-source-repository@49c80441f24d6c697350119fac09426077b7e313`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T231047Z-fleet02-B02-qform-r16-6c4f9a1e/REPORT.md`.
    It proves the Jensen step and the exact scalar sharp-Hausdorff--Young factor `H_q(c)` for fixed-order volume laws.
 
@@ -321,7 +321,7 @@ A fresh current-QFORM search found no completed artifact for the designated `fle
 
 The compatible completed fleet04/B18 maximum-density transfer is source-pinned at
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 
 Its product-projection consequence is

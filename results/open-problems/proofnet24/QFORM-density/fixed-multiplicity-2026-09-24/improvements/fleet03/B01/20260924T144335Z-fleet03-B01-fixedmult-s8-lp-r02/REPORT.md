@@ -2,9 +2,9 @@
 
 Run: `20260924T144335Z-fleet03-B01-fixedmult-s8-lp-r02`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `manuscript.tex` blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.  
-Fresh structural input: fleet03/B17, `yspennstate/math-open-problems@0408c579bcda638e72c010ff99892a22b9049796`, `improvements/fleet03/B17/20260924T141823Z-fleet03-B17-fixedmult-auto11/ROBUST_TWO_ANCHOR.md`.  
-Designated partner input: fleet04/B01, `yspennstate/math-open-problems@beb9cc5cbb78b4fd4a8411862ac99fd7b7976034`, `improvements/fleet04/B01/20260924T130927Z-fleet04-B01-fixedmult-s13-L2-r1/THIRTEEN_EIGENVALUE_L2.md`.
+Baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, `manuscript.tex` blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.  
+Fresh structural input: fleet03/B17, `private-source-repository@0408c579bcda638e72c010ff99892a22b9049796`, `improvements/fleet03/B17/20260924T141823Z-fleet03-B17-fixedmult-auto11/ROBUST_TWO_ANCHOR.md`.  
+Designated partner input: fleet04/B01, `private-source-repository@beb9cc5cbb78b4fd4a8411862ac99fd7b7976034`, `improvements/fleet04/B01/20260924T130927Z-fleet04-B01-fixedmult-s13-L2-r1/THIRTEEN_EIGENVALUE_L2.md`.
 
 Status: **PROVED SUPPORTING ENDPOINT THEOREM; multiplicity eight remains open.**
 

@@ -7,7 +7,7 @@
 
 ## 1. First unpaid implication
 
-The completed assigned-partner result fleet03/B15 r20 (`yspennstate/math-open-problems@626e33966e69eda517dd09776028cbd80bd5d372`) gives the exact positive tent representation. For a probability law `mu`,
+The completed assigned-partner result fleet03/B15 r20 (`private-source-repository@626e33966e69eda517dd09776028cbd80bd5d372`) gives the exact positive tent representation. For a probability law `mu`,
 
 `T_epsilon(mu;y)=epsilon^{-2} E (epsilon-|Z-y|)_+`
 
@@ -27,7 +27,7 @@ The purpose of the present report is to eliminate a broad family of possible int
 
 Source pin: fleet02/B15 r11, canonical proof
 
-`yspennstate/math-open-problems@4fc6472947c7e5551592974a34e7bc4bfe78def0`.
+`private-source-repository@4fc6472947c7e5551592974a34e7bc4bfe78def0`.
 
 That report proves the following. There is a sequence `tau -> infinity` and strictly positive real-analytic Schwartz probability densities `f_tau` satisfying `0<f_tau<=1`, uniformly tight, such that for three iid coordinates with density `f_tau`,
 

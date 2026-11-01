@@ -18,7 +18,7 @@ The answer is negative for an explicit broad triangular-array class: such fragme
 
 The designated partner `fleet04/B17` proved at
 
-`yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`
+`private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f`
 
 path
 

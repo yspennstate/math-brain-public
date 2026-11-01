@@ -18,7 +18,7 @@ No Gaussian, log-concave, moment, compact-support, connected-support, iid, cente
 
 The immediate fresh global input is fleet03/B01 `QFORM-SCALARPIVOT-COMPOUND-OPERATOR-CLOSURE-v1`, canonical source
 
-`yspennstate/math-open-problems@319a41e1179abcd7827abc2a54b117b4d1276dcf`,
+`private-source-repository@319a41e1179abcd7827abc2a54b117b4d1276dcf`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T233049Z-auto11/REPORT.md`.
 
 It proves, under the full target hypotheses, that any literal diagonal pivot `a=A_ii!=0` gives
@@ -50,7 +50,7 @@ Two additional completed receivers are used exactly at their proved scope:
 
 The designated partner actually applied below is corrected fleet04/B20 r12,
 
-`yspennstate/math-open-problems@95d5c3b6e8a753f5da44f742f8449d51470f4a11`,
+`private-source-repository@95d5c3b6e8a753f5da44f742f8449d51470f4a11`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T201641Z-fleet04-B20-QFORM-r12/REPORT.md`.
 
 For an anchored literal cross block

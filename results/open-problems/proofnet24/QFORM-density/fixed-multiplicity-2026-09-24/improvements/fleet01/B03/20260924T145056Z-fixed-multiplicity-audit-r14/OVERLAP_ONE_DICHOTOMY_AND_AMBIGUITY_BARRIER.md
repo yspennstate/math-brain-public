@@ -2,7 +2,7 @@
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
 Run: `20260924T145056Z-fixed-multiplicity-audit-r14`  
-Pinned baseline: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`  
+Pinned baseline: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Pinned manuscript blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 Status: **new exact structural reduction proved; a tempting retained-copy endpoint compiler is disproved in the arbitrary-density class; no unconditional reduction of the bounded-density threshold below 17 is claimed.**

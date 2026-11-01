@@ -90,7 +90,7 @@ or one self bank is positive definite with
 
     det B_def >= alpha eta/2.                          (8)
 
-In branch (8), condition on the other ORIGINAL-coordinate bank. The cross term becomes only an affine term in the definite bank. The pinned rank-two PSD theorem from math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837, COUNTEREXAMPLE_SEARCH.md, gives for a 2D projection density cap <=2
+In branch (8), condition on the other ORIGINAL-coordinate bank. The cross term becomes only an affine term in the definite bank. The pinned rank-two PSD theorem from private-source@e5f71d79eff325201dd0274053d20268ce65b837, COUNTEREXAMPLE_SEARCH.md, gives for a 2D projection density cap <=2
 
     ||p_Q||inf <= 2 pi / sqrt(det B_def)
                <= 2 pi sqrt(2/(alpha eta)).            (9)

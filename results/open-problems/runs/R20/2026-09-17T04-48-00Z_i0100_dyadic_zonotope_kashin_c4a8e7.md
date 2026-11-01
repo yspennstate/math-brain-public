@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning: UNVERIFIED** — GPT-6 / maximum w
 
 # R20 / I0100 — one-localized Paley theta, dyadic-zonotope reduction and a Paley one-point Kashin bound
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 
 Status after this run: **PARTIAL / source OPEN. NO CLOSURE CLAIM.**
 

@@ -22,12 +22,12 @@ Immediately before publication, `math-research-brain` main was refreshed to comm
 
 Pinned mathematical inputs:
 
-1. `QFORM-GROUPED-CROSSING-EXACT-SUBSET-ENTROPY-v1`, `yspennstate/math-open-problems@13f0b0b271b4e230cb5493e887ed5ec7dd65f63b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T181304Z-fleet01-B04-QFORM-auto11-r16/REPORT.md`. Its pre-integration product-Fourier estimate is used below; the condition `d>2` in its displayed density theorem is needed only for the final `t`-integral, not for that pre-integration estimate.
-2. `QFORM-CANONICAL-COMPOUND-PROMOTION-v1`, `yspennstate/math-open-problems@d5e114f4a9f515344575756615fce3a754195b13`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T185132Z-fleet01-B04-QFORM-auto11-r17/REPORT.md`. Its exact promotion identity is
+1. `QFORM-GROUPED-CROSSING-EXACT-SUBSET-ENTROPY-v1`, `private-source-repository@13f0b0b271b4e230cb5493e887ed5ec7dd65f63b`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T181304Z-fleet01-B04-QFORM-auto11-r16/REPORT.md`. Its pre-integration product-Fourier estimate is used below; the condition `d>2` in its displayed density theorem is needed only for the final `t`-integral, not for that pre-integration estimate.
+2. `QFORM-CANONICAL-COMPOUND-PROMOTION-v1`, `private-source-repository@d5e114f4a9f515344575756615fce3a754195b13`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T185132Z-fleet01-B04-QFORM-auto11-r17/REPORT.md`. Its exact promotion identity is
    `S_+^2 Z_{ell-1}^+=alpha_h S^2 Z_ell`.
-3. `QFORM-DEPENDENT-SQUARE-L3-SMOOTHING-v1`, `yspennstate/math-open-problems@2279571f59ade7a9ec478af1e4818f6c117ac224`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`.
-4. The overlap-one Schur determinant and random-cut identities from fleet01/B09, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T144636Z-r12/REPORT.md`, available immutably at `yspennstate/math-open-problems@0d42128032953f968d7a37c82f7ea4413929c508`.
-5. Designated partner fleet02/B04 theorem `QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1`, `yspennstate/math-open-problems@00e728cf7f226ccce4b41ad751d494c5c94f67ec`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T111930Z-qform/REPORT.md`. Its exact-rank-three coloop branch is applied to an actual inequality in Section 6.
+3. `QFORM-DEPENDENT-SQUARE-L3-SMOOTHING-v1`, `private-source-repository@2279571f59ade7a9ec478af1e4818f6c117ac224`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`.
+4. The overlap-one Schur determinant and random-cut identities from fleet01/B09, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/B09-20260922T144636Z-r12/REPORT.md`, available immutably at `private-source-repository@0d42128032953f968d7a37c82f7ea4413929c508`.
+5. Designated partner fleet02/B04 theorem `QFORM-FRACTIONAL-SUPPORT-DEFECT-COMPLETE-EXIT-v1`, `private-source-repository@00e728cf7f226ccce4b41ad751d494c5c94f67ec`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T111930Z-qform/REPORT.md`. Its exact-rank-three coloop branch is applied to an actual inequality in Section 6.
 
 ## 2. New theorem: marginal-free second-compound cross `L^p`
 

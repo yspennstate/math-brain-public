@@ -27,7 +27,7 @@ This run proves that route in a general finite-window form and obtains a clean r
 
 ### 2.1 Finite-rank floating half-paving
 
-Source: `yspennstate/math-open-problems@c37badc7438c808fa283f574d22a8cb4db87216e`, path
+Source: `private-source-repository@c37badc7438c808fa283f574d22a8cb4db87216e`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260922T144029Z-fleet01-B08-qform-r13/REPORT.md`.
 
 If `U in R^{n x m}` has orthonormal columns, row leverage at most `epsilon`, and
@@ -46,7 +46,7 @@ The proof is by floating in `Sym_m`, leaving at most `m(m+1)/2` fractional atoms
 
 ### 2.2 One-scale ridge theorem
 
-Source: `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, path
+Source: `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, path
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
 For a physical cross block `B`, `gamma>0`,
@@ -68,7 +68,7 @@ The same source proves the perturbative row-ridge estimate: if `B=B0+F`, `||F||<
 ### 2.3 Current assigned partner result actually applied
 
 Partner: **fleet02/B08**, `QFORM-DOUBLE-INCIDENT-RANK2-GROUPED-L3-v1`, source
-`yspennstate/math-open-problems@c248abc9be918698c6d5a68108c615ba1c4790b3`, path
+`private-source-repository@c248abc9be918698c6d5a68108c615ba1c4790b3`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/B08-20260922T204103Z-1dd824/REPORT.md`.
 
 For an exact-rank-two physical cross bank `C` and fixed incident row/column `j,r`, define

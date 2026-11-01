@@ -23,9 +23,9 @@ Corrections retained throughout: no law-uniform pointwise quadratic-phase decay;
 
 Three completed mathematical dependencies are used at equations.
 
-1. **Claude/e5 Theorem D**, `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`: for an original-coordinate cross block M with `Z=E3(M)>0`, any probability weight on nonzero physical 3x3 minors whose row marginals are at most 1/2 yields the product-Fourier density estimate with the corresponding determinant/entropy volume.  For the canonical squared-minor law the stated constant is `6 sqrt(e) Z^(-1/6)`.
+1. **Claude/e5 Theorem D**, `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`: for an original-coordinate cross block M with `Z=E3(M)>0`, any probability weight on nonzero physical 3x3 minors whose row marginals are at most 1/2 yields the product-Fourier density estimate with the corresponding determinant/entropy volume.  For the canonical squared-minor law the stated constant is `6 sqrt(e) Z^(-1/6)`.
 
-2. **Sharp q-dependent weighted-volume theorem**, `yspennstate/math-open-problems@96ef944654c4056cc75bba6256e600eb791fb2d1`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`: if `1<=q<3/2` and the row marginals obey `alpha_i<=q/2`, then
+2. **Sharp q-dependent weighted-volume theorem**, `private-source-repository@96ef944654c4056cc75bba6256e600eb791fb2d1`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`: if `1<=q<3/2` and the row marginals obey `alpha_i<=q/2`, then
 
 `||p_Q||inf <= [3e/((3-2q)sqrt(q))] G(w)^(-1/6)`,
 
@@ -35,7 +35,7 @@ where
 
 The same-bank phases may be arbitrary measurable functions and outside coordinates may be conditioned on; no random-coordinate rotation is used.  The resulting density is continuous and vanishes at infinity.
 
-3. **Designated partner fleet03/B04 r30**, canonical report `yspennstate/math-open-problems@1e5343fdf008f0da0d800b028dcfeec46550b1b0`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T091659Z-fleet03-B04-qform-auto11-r30/REPORT.md`: for `T2=sum_{j>=3}s_j(M)^2`, at `theta=1/3` the fixed soft-ridge exit succeeds if `max diag K<=1/3`, where
+3. **Designated partner fleet03/B04 r30**, canonical report `private-source-repository@1e5343fdf008f0da0d800b028dcfeec46550b1b0`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T091659Z-fleet03-B04-qform-auto11-r30/REPORT.md`: for `T2=sum_{j>=3}s_j(M)^2`, at `theta=1/3` the fixed soft-ridge exit succeeds if `max diag K<=1/3`, where
 
 `K=MM^T(MM^T+(T2/3)I)^(-1)`.
 

@@ -31,7 +31,7 @@ van-der-Corput decay, fiber supremum, or reciprocal-minor estimate is used.
 
 I use the completed fleet04/B15 theorem
 
-- `yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`
+- `private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`.
 
 For a Borel probability measure \(\mu\) on \(\mathbb R\), define

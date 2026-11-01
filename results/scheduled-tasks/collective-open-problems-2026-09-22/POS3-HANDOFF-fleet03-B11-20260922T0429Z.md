@@ -2,7 +2,7 @@
 
 Outcome: **ESSENTIAL_STEP_APPLIED**. Parent POS3 remains open. Execution: `WITHOUT_VERIFIED_BRAIN`.
 
-Scientific report: private `yspennstate/math-open-problems`, `proofnet24/collective-POS3/fleet03/B11/20260922T040957Z-fleet03-B11-pos3-r11/REPORT.md`, commit `34def82ee82e3eb7fbc4f0f7783b82d13bdec4a1`, blob `fd48b47637ca81a6c25fa5c52f8898e596662062`.
+Scientific report: private `private-source-repository`, `proofnet24/collective-POS3/fleet03/B11/20260922T040957Z-fleet03-B11-pos3-r11/REPORT.md`, commit `34def82ee82e3eb7fbc4f0f7783b82d13bdec4a1`, blob `fd48b47637ca81a6c25fa5c52f8898e596662062`.
 
 ## Named partner consumed
 

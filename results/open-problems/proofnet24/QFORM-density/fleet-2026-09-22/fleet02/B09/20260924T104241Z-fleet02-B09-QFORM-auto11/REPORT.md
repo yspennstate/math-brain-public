@@ -23,11 +23,11 @@ The new construction below proves that the alternative “force one scalar pivot
 
 ## 2. Sources actually applied
 
-The required pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` proves Theorem H, the mixed-hub Fresnel–Brascamp–Lieb estimate. In the notation used here, if `H` is a set of literal hubs, the active leaf block is diagonal plus `r` Fresnel directions, the mixed rows combine those Fresnel coefficients with the literal hub-to-leaf coefficients, the mixed Gram is positive, and every leaf leverage is at most `1/2`, then the full characteristic function obeys an explicit power envelope. All hub self terms, outside blocks, and affine terms are retained. This is a no-decoupling estimate: no probability squaring occurs.
+The required pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` proves Theorem H, the mixed-hub Fresnel–Brascamp–Lieb estimate. In the notation used here, if `H` is a set of literal hubs, the active leaf block is diagonal plus `r` Fresnel directions, the mixed rows combine those Fresnel coefficients with the literal hub-to-leaf coefficients, the mixed Gram is positive, and every leaf leverage is at most `1/2`, then the full characteristic function obeys an explicit power envelope. All hub self terms, outside blocks, and affine terms are retained. This is a no-decoupling estimate: no probability squaring occurs.
 
 The latest compatible completed designated-partner artifact observed before this report is fleet03/B09 r48,
 
-`math-open-problems@677dba9150479b33025f9f0b948e46eec5dbf9c5`
+`private-source@677dba9150479b33025f9f0b948e46eec5dbf9c5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T094653Z-fleet03-B09-QFORM-r48/REPORT.md`.
 

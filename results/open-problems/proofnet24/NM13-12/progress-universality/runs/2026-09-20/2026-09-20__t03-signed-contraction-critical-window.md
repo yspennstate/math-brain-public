@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # NM13-12 progress-universality — signed low-rank covariance universality boundary and a sharp contraction critical window for T03
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: `NM13-12`  
 Progress root: `proofnet24/NM13-12/progress-universality/`  
 Owner policy: `operations/PROGRESS20_2026-09-20.md`  

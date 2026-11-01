@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R01 post-closure rotation admission — Lovasz-theta candidates TH17/TH18 are current but HARD, so no false CLOSABLE claim
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Dated source/status checks: 2026-09-17 UTC.
 
 ## 1. Continuity: do not reopen I0024 or I0113

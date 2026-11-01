@@ -18,7 +18,7 @@ This report proves a no-loss reduction making that distinction rigorous.
 
 The assigned partner `fleet04/B15` proved in
 
-- `yspennstate/math-open-problems@07672b7beb8f867c7a7b973aa3157a42ae506460`,
+- `private-source-repository@07672b7beb8f867c7a7b973aa3157a42ae506460`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T152333Z-b15-qform-continuous-envelope-r3/REPORT.md`
 
 that the optimal target height constants satisfy
@@ -176,7 +176,7 @@ So rank two can have a bounded but discontinuous quadratic-form density. This do
 
 The preceding B15 rank-at-least-three `C_0` theorem is at
 
-- `yspennstate/math-open-problems@4813f09ed4f518a1ee172b77a0f1d315989a84e1`,
+- `private-source-repository@4813f09ed4f518a1ee172b77a0f1d315989a84e1`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T162724Z-fleet03-B15-r13/REPORT.md`,
 
 and remains a worker-scope candidate pending independent review. The genericization theorem in Sections 3--5 does not depend on accepting that continuity proof.

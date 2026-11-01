@@ -84,7 +84,7 @@ No post-rotation independence has been asserted.
 
 Use the completed ruled-level-set theorem in
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
 
@@ -126,7 +126,7 @@ Thus this family is emphatically not a counterexample to QFORM; its whole densit
 
 The source-pinned r26 report
 
-`yspennstate/math-open-problems@86d53dbc4715d6d1e8d5c9adb9bea080cf73d482`
+`private-source-repository@86d53dbc4715d6d1e8d5c9adb9bea080cf73d482`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T181522Z-fleet03-B10-QFORM-r26/REPORT.md`
 

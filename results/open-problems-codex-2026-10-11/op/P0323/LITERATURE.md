@@ -65,7 +65,7 @@ The Crossref title search for Boursier returned Dereudre?Vasseur as its first re
 - math_recall.py: query ?Boursier Riesz DLR?; then walked claim_b2d7742dc0f38b378d96a39cccfd6bf5a9b9853c1c78c3dac019e506b502a50b. Warning concerns conditional-law passage under weak convergence; checked independently. Our proof uses stronger local Borel convergence and uniform tail comparison.
 - brain.py recall: ?Riesz gas DLR mistakes?; results mostly off-topic, no theorem relied upon.
 - Intake directories: searched P0323 in JSONL/Markdown and inspected the three named JSONL filenames where present; found intake statement, not a complete prior proof.
-- math-open-problems origin/master: read-only ls-tree search for P0323 paths returned no match; no working-tree mutation.
+- private-source origin/master: read-only ls-tree search for P0323 paths returned no match; no working-tree mutation.
 
 - 2026-10-12: semantic_search: https://api.semanticscholar.org/graph/v1/paper/search?query=circular%20Riesz%20DLR&limit=20&fields=title,year,authors,externalIds ? HTTP 429; 
 

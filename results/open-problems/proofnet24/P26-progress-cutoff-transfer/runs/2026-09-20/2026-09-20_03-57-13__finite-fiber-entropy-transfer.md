@@ -4,7 +4,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6/m
 
 **Status:** `CANDIDATE_FULL` for the restricted transfer theorem and explicit class below; **PARTIAL / OPEN** for Salez Problem 2.3. Publication novelty is **UNVERIFIED** pending later independent review.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 Report root: `proofnet24/P26-progress-cutoff-transfer/runs/2026-09-20/`.
 

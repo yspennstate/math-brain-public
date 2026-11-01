@@ -22,7 +22,7 @@ No Gaussianity, log-concavity, moments, compact support, connected support, iden
 
 From fleet03/B01,
 
-`yspennstate/math-open-problems@1a17dbbee81858c6cb1082c7cafaea345f07554b`
+`private-source-repository@1a17dbbee81858c6cb1082c7cafaea345f07554b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T073210Z-auto11/REPORT.md`,
 
@@ -40,7 +40,7 @@ The proof is two-dimensional product-projection plus Plancherel; it is not scala
 
 The latest completed designated-partner result used here is
 
-`yspennstate/math-open-problems@2276262ea756f8da3fc0b5252ec69537a5941257`
+`private-source-repository@2276262ea756f8da3fc0b5252ec69537a5941257`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T073435Z-fleet02-B01-qform-aggfresnel/REPORT.md`.
 

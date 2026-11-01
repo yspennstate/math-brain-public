@@ -17,7 +17,7 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates with 
 
 The fresh complementary B02 predecessor is fleet02/B02 r11:
 
-`yspennstate/math-open-problems@b34c3df7995a27f90540057d7dc1fcc33d6e7e39`,
+`private-source-repository@b34c3df7995a27f90540057d7dc1fcc33d6e7e39`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/fleet02-B02-20260924T023712Z-r11/REPORT.md`.
 
@@ -43,7 +43,7 @@ with `C3=10.345083232147514...` and a continuous `C0` density.
 
 The completed final-matrix spectral-window theorem is
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
@@ -61,7 +61,7 @@ The theorem retains every smaller spectral direction, however numerous, signed, 
 
 The completed partner theorem used at an actual new inequality in Section 6 is
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 

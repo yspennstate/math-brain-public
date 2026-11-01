@@ -60,7 +60,7 @@ So every member of the family satisfies the owner's exact target, in fact with f
 
 ## 2. Required pinned result: mixed-hub smoothing pays the law at linear small-ball scale
 
-Apply the completed mixed Fresnel theorem from the required pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` with one literal physical hub `H={U}` and two physical-leaf Fresnel directions `w1,w2`, with coefficients
+Apply the completed mixed Fresnel theorem from the required pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` with one literal physical hub `H={U}` and two physical-leaf Fresnel directions `w1,w2`, with coefficients
 
 `lambda_1=1`, `lambda_2=2`.
 
@@ -256,6 +256,6 @@ No diagonal-basis independence, post-rotation independence, moments, support bou
 
 ## 8. Source pins used
 
-Owner-control brain main was freshly resolved during the invocation and the required control/assignment/correction files were read before publication.  Required fixed mathematical source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, using its completed mixed Fresnel theorem and counterexample search.  Latest compatible designated partner observed before publication: fleet03/B09 `20260924T091232Z-fleet03-B09-QFORM-r47`, using `QFORM-DEFINITEPAIR-POLYNOMIAL-STAR-UNIFORM-v1`.
+Owner-control brain main was freshly resolved during the invocation and the required control/assignment/correction files were read before publication.  Required fixed mathematical source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, using its completed mixed Fresnel theorem and counterexample search.  Latest compatible designated partner observed before publication: fleet03/B09 `20260924T091232Z-fleet03-B09-QFORM-r47`, using `QFORM-DEFINITEPAIR-POLYNOMIAL-STAR-UNIFORM-v1`.
 
 The unrestricted conjecture remains OPEN.

@@ -24,7 +24,7 @@ G_\rho(w)=\int f(w+y)\rho(y)\,dy,\qquad
 
 Thus `gamma_rho=G_rho/m` is again a cap-one probability density. Coordinatewise, any finite/countable product localization of only one duplicated copy becomes an exact convex mixture of admissible product cap-one difference laws. The partner then applies this to the fixed-source volume-sampling decoupling theorem D without fragment tax.
 
-The source theorem D used by the partner is at `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. In its order-three scope, if `M=A_{IJ}`, `Z=e_3(M^TM)`, and the volume-sampling row marginals are at most `1/2`, then
+The source theorem D used by the partner is at `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. In its order-three scope, if `M=A_{IJ}`, `Z=e_3(M^TM)`, and the volume-sampling row marginals are at most `1/2`, then
 
 \[
 \|p_Q\|_\infty\le 6\sqrt e\,Z^{-1/6},
@@ -268,8 +268,8 @@ This is a structural decomposition problem, not a remaining tail/moment/translat
 
 Fresh owner control was re-resolved before publication; the latest protected controls still require exclusive full-QFORM work and contain no later B14 stop. The live correction set forbidding law-uniform pointwise oscillatory decay, bounded-diameter localization, fixed fragment-count localization, post-rotation independence, and false arbitrary-joint coarea arguments was retained.
 
-Completed designated partner actually applied: `yspennstate/math-open-problems@388f936ef5954b951203df7bab568a64e0afe985`, fleet02/B14 `QFORM-ONE-COPY-DIFFERENCE-LOCALIZATION-v1`.
+Completed designated partner actually applied: `private-source-repository@388f936ef5954b951203df7bab568a64e0afe985`, fleet02/B14 `QFORM-ONE-COPY-DIFFERENCE-LOCALIZATION-v1`.
 
-Fixed-source receiver actually applied: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, theorem D in the decoupling/Brascamp-Lieb report.
+Fixed-source receiver actually applied: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, theorem D in the decoupling/Brascamp-Lieb report.
 
 Execution remains `WITHOUT_VERIFIED_BRAIN`: authenticated repository reads and writes occurred, but no genuine native learned-memory receiver use was established. No schedule, task identity, enabled/quiet state, notification, email/push, cross-account authentication, paid/remote call, public release, or permission state was changed.

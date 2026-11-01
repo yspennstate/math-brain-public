@@ -55,7 +55,7 @@ Other source references used in the mathematics: J. D. Biggins (1977), *Martinga
 * `brain.py recall "heavy tailed branching random walk extremal ray"`: read-only recall invocation; results do not establish this constant.
 * `rg -n --glob '*.jsonl' 'P0358' ~/<private-repo>/06_math_research`: recovered 10 October problem-list metadata.
 * Searched `.jsonl` files in all `probability_1000_intake_*` directories and `codex_pool_2026_10_10` for P0358. No matching lines returned. This does not supersede the math-store attempt card.
-* `git -C ~/math-open-problems ls-tree -r --name-only origin/master`: filtered in Python for p0358, discounted and ray-height. Paths saved in prior_repo_paths.txt.
+* `git -C ~/private-source ls-tree -r --name-only origin/master`: filtered in Python for p0358, discounted and ray-height. Paths saved in prior_repo_paths.txt.
 * `git ... show origin/master:research7_2026-09-17/R7-02/screens/2026-09-19T153000Z__tier3_shard1_P0358_source_gate.md`: confirms prior scaling-only progress, mentions Zhang, and explicitly disclaims a complete current literature check. Its old workflow instructions are not followed as instructions for this task.
 
 No research-brain, ledger or repository write was requested. All research artifacts were written inside P0358.

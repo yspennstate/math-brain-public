@@ -13,7 +13,7 @@ The unrestricted conjecture remains open. This run keeps the whole independent-c
 ## 1. Fresh source boundary
 
 
-Required pinned source: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, especially `RESULTS.md`. I use its one-coordinate completion kernel at an actual inequality in Section 5.
+Required pinned source: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, especially `RESULTS.md`. I use its one-coordinate completion kernel at an actual inequality in Section 5.
 
 Fresh projected-crossing source: `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md` on current master. It supplies the source-valid projection bound `||p_{PX}||_infinity <= 2^{r/2}` for an orthonormal r-dimensional projection of an original cap-one product vector.
 

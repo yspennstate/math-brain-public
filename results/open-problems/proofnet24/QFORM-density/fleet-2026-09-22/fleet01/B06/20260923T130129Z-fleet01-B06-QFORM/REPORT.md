@@ -18,9 +18,9 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`. Repository retrieval was used, but no
 
 The source inputs used are:
 
-1. **Newest Claude Fourier report**, `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. Its Lemma 4.3 proves the exactly zero-diagonal coordinate-hyperbola peel and Section 6.3 explicitly leaves the interpolation to products of two general linear forms unwritten.
+1. **Newest Claude Fourier report**, `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. Its Lemma 4.3 proves the exactly zero-diagonal coordinate-hyperbola peel and Section 6.3 explicitly leaves the interpolation to products of two general linear forms unwritten.
 
-2. **Pair-log theorem**, `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`. It proves the rank-one affine small-ball estimate
+2. **Pair-log theorem**, `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`. It proves the rank-one affine small-ball estimate
 
    `sup_t P(|R-t|<rho) <= min(1,10 sqrt(rho/|lambda|))`              (1.1)
 
@@ -33,7 +33,7 @@ The source inputs used are:
 
    Thus every failure of that partner robust-light gate is already paid. The new pair receiver below is relevant only after (1.2) has reduced the remaining geometry to robust light packets / physical-pair emergence; it is not being used to re-open the paid branch.
 
-4. **Designated partner fleet02/B06 weighted projection theorem**, canonical `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, gives for a one-dimensional orthogonal projection of the original cap-one product law the actual bound
+4. **Designated partner fleet02/B06 weighted projection theorem**, canonical `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, gives for a one-dimensional orthogonal projection of the original cap-one product law the actual bound
 
    `||p_(h dot X)||_inf <= sqrt(e)`.                                (1.3)
 

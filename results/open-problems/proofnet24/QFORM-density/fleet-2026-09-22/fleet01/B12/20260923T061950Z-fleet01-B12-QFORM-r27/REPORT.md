@@ -23,7 +23,7 @@ The mechanism is deliberately different from r26. Run r26 obtained magnitude-fre
 
 The designated completed partner source is
 
-`yspennstate/math-open-problems@06fbcbb277d5db4f89dfc0c04b14174cc4315cc7`
+`private-source-repository@06fbcbb277d5db4f89dfc0c04b14174cc4315cc7`
 
 at
 
@@ -43,7 +43,7 @@ For every real `tau`, choosing physical triple `H_-={1,2,3}` when `tau<=0` and `
 
 The terminal localized density theorem used below is Theorem A in
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`:
 
@@ -498,8 +498,8 @@ Initial brain control commit consumed: `84597da00ef1ab282d3a84481920d438fa8ec9c5
 
 Prepublication brain control commit consumed: `397d7ddcb7b107f7491a1e8ef34f00731013b27b`.
 
-Designated partner source: `yspennstate/math-open-problems@06fbcbb277d5db4f89dfc0c04b14174cc4315cc7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T045101Z-fleet02-B12-auto11/REPORT.md`.
+Designated partner source: `private-source-repository@06fbcbb277d5db4f89dfc0c04b14174cc4315cc7`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T045101Z-fleet02-B12-auto11/REPORT.md`.
 
-Localized terminal theorem source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, path `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
+Localized terminal theorem source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, path `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
 
 Native-brain receiver use was not authenticated, so execution remains `WITHOUT_VERIFIED_BRAIN`.

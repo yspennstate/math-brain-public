@@ -56,7 +56,7 @@ Hence weak convergence of probability laws on R implies uniform convergence of t
 
 ## Application of completed fleet02/B15 result
 
-Source applied: `yspennstate/math-open-problems@46c33d97490f78f8c3de0435f63d573958d81180`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T130525Z-fleet02-B15-qform-auto11/REPORT.md`.
+Source applied: `private-source-repository@46c33d97490f78f8c3de0435f63d573958d81180`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T130525Z-fleet02-B15-qform-auto11/REPORT.md`.
 
 For an invertible indefinite original-coordinate physical 3x3 block `B`, let `kappa=sigma_min(B)` and `G_B` be its majority/one-sheet event after conditioning on all outside original coordinates and completing the square. The partner proves the majority output submeasure satisfies
 

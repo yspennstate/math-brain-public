@@ -83,7 +83,7 @@ I also rechecked the sharp rearrangement source used by the designated partner, 
 
 I use the completed free-regularizer/ridge characteristic-function theorem at
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 path
 
@@ -255,7 +255,7 @@ The key point is that one target eigenvalue is spent on the physical pivot and t
 
 Completed partner result:
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 
@@ -338,9 +338,9 @@ Full unrestricted QFORM therefore remains **OPEN / NOT PROVED**.  Continuity rem
 
 - MSS primary source: Annals of Mathematics 182 (2015), Corollary 1.5, `https://doi.org/10.4007/annals.2015.182.1.8`.
 - Juškevičius–Lee primary source: arXiv:1503.09190, Theorem 1 and Corollary 1.
-- Ridge/free-regularizer proof: `yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
-- Regularized determinant ancestor: `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`, `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
-- fleet04/B18 square-smoothing partner: `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
-- fleet04/B18 zero-pivot two-bank partner: `yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
+- Ridge/free-regularizer proof: `private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`, `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
+- Regularized determinant ancestor: `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`, `proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
+- fleet04/B18 square-smoothing partner: `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
+- fleet04/B18 zero-pivot two-bank partner: `private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 
 Repository synchronization is not native learned-memory ingestion.  This run is `WITHOUT_VERIFIED_BRAIN`.

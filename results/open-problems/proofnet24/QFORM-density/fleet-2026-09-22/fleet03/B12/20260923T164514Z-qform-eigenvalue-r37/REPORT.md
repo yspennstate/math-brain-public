@@ -299,9 +299,9 @@ For the balanced-cut lemma, a 1024-by-3 Sylvester-Hadamard frame has exact row l
 ## 8. Source pins
 
 
-Completed designated partner actually applied: `yspennstate/math-open-problems@3948d77b0bde5af1bd37cd7c975d4f540eba901b`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T081758Z-fleet04-B12-complementary-schur-shield-r4/REPORT.md`.
+Completed designated partner actually applied: `private-source-repository@3948d77b0bde5af1bd37cd7c975d4f540eba901b`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T081758Z-fleet04-B12-complementary-schur-shield-r4/REPORT.md`.
 
-Newest fractional-volume theorem actually applied: `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
+Newest fractional-volume theorem actually applied: `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 Execution remains `WITHOUT_VERIFIED_BRAIN`: repository retrieval and writes are not authenticated native learned-memory ingestion.
 

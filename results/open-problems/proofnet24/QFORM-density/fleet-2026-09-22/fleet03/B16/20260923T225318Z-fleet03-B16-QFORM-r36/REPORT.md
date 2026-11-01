@@ -16,7 +16,7 @@ The exact owner target remains: independent real original-coordinate inputs with
 
 The analytic input actually used is the checked grouped projected-crossing theorem
 
-`yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`
+`private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -29,7 +29,7 @@ with the exponential factor omitted for `ell=1`. Here `S` is the singular-value 
 
 The designated partner input is fleet04/B16 r2,
 
-`yspennstate/math-open-problems@a70c05e517e8a195a31ab4f4c301c672d1c8d4e6`
+`private-source-repository@a70c05e517e8a195a31ab4f4c301c672d1c8d4e6`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260923T192012Z-fleet04-B16-QFORM-r2/REPORT.md`.
 

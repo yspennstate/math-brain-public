@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 Status: **PARTIAL on the parent problem / CANDIDATE_FULL for the restricted all-parameter class proved below.** The Grimmett–Winkler conjecture for arbitrary finite graphs remains OPEN. No counterexample was found.
 
-Repository/branch: private `yspennstate/math-open-problems` / `master`  
+Repository/branch: private `private-source-repository` / `master`  
 Assigned root: `proofnet24/NM13-04/progress-forest/`  
 Companion: NM13-08, `proofnet24/NM13-08/progress-forest-structure/`
 

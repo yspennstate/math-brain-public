@@ -174,7 +174,7 @@ This answers the preceding B17 run's fixed-spectral-floor question in a sharp va
 
 No completed current-QFORM artifact from the designated partner `fleet04/B17` was visible at the fresh shared/canonical scans, so none is invented. I apply the compatible completed `fleet04/B14` extreme-product theorem instead:
 
-- repository: `yspennstate/math-open-problems`;
+- repository: `private-source-repository`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260922T114319Z-b14-qform-extreme-reduction-r1/REPORT.md`;
 - result: for every fixed output interval, the sharp small-ball problem over cap-one product densities reduces without loss to product indicators `1_{E_i}`, `|E_i|=1`; compact finite unions of intervals suffice by total-variation approximation.
 

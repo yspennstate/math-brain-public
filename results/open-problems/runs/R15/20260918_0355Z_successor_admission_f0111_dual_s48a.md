@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R15 successor admission — F0111 exact hazard/dual reduction
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Worker: R15, CLOSABLE OUTSIDE.
 
 ## 1. Continuity and exclusions
@@ -205,7 +205,7 @@ The historical P26 `You cannot modify this task` event remains an authorization-
 ledger_delta:
   worker: R15
   allocation: CLOSABLE_OUTSIDE
-  repository: yspennstate/math-open-problems
+  repository: private-source-repository
   branch: master
   continuity:
     I0076:

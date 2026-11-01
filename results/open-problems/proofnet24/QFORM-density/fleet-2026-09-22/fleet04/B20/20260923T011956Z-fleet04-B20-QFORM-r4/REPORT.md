@@ -11,7 +11,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 The target remains unrestricted: independent real coordinates with probability densities at most one, arbitrary dimension, and arbitrary real symmetric `A` having at least three eigenvalues of modulus at least one. No moment, support, identical-law, sign, or post-rotation-independence assumption is made. Continuity is separate.
 
 
-The completed fleet01/B20 input actually used is `QFORM-DOUBLE-WEYL-E3-L3-v1` and its half-Riesz consequence at `yspennstate/math-open-problems@3801530a0437970354a492e8257237902e6619ff`. The completed cross-transverse input is fleet01/B16 `QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1` at `ded9c22e680325b3ea44ef57a973d50f3db88128`.
+The completed fleet01/B20 input actually used is `QFORM-DOUBLE-WEYL-E3-L3-v1` and its half-Riesz consequence at `private-source-repository@3801530a0437970354a492e8257237902e6619ff`. The completed cross-transverse input is fleet01/B16 `QFORM-CROSS-TRANSVERSE-PROJECTION-PRODUCT-v1` at `ded9c22e680325b3ea44ef57a973d50f3db88128`.
 
 No full proof is asserted. In particular, neither the ruled one-sheet estimate nor the E3 `L^3` estimate pays the convex/two-sheet or anchor-shear endpoint by itself.
 

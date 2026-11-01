@@ -17,7 +17,7 @@ No random coordinate is rotated. Every conditioning step fixes only original ind
 
 The immediately preceding B04 run is
 
-`yspennstate/math-open-problems@016b7981bb82bfc2847c47e42949708877c003d1`
+`private-source-repository@016b7981bb82bfc2847c47e42949708877c003d1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260924T001509Z-fleet01-B04-QFORM-auto11-r24/REPORT.md`.
 
@@ -35,7 +35,7 @@ where `B=A[S,S]`, `W=A[S,S^c]`, `C=A[S^c,S^c]`. It proved the singular-safe iden
 
 The fresh designated partner is fleet02/B04 r16,
 
-`yspennstate/math-open-problems@779dc7079332af772c3445c0f58dbb5a59b504cf`
+`private-source-repository@779dc7079332af772c3445c0f58dbb5a59b504cf`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260924T001554Z-fleet02-B04-QFORM-auto11-r16/REPORT.md`.
 
@@ -51,7 +51,7 @@ The proof explicitly permits arbitrary induced affine terms after conditioning o
 
 A second source used below is the one-scale ridge/spectral-window theorem
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 

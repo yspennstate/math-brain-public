@@ -8,7 +8,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 **Publication novelty:** `UNVERIFIED`. The exact-distance-k theorem for `k>=3` and the way it is combined here with the transitivity quotient are new to the checked repository state. Bounded literature searches did not locate this exact cutoff theorem, but that is not a worldwide priority certificate. The orbit-lumping lemma itself is elementary representation/lumping folklore in spirit; no novelty claim is made for it.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 Run root: `proofnet24/NM13-01/progress-cutoff/runs/2026-09-20/`.
 Pre-write master observed before this run's writes: `9270e2fb95326f9f340a824c635ad86a6d08b356`.

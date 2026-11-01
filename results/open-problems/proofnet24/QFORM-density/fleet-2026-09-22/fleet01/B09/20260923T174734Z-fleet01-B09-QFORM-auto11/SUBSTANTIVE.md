@@ -14,7 +14,7 @@ Delta * e_2(CC^T)
 
 If each leaf goes to J independently with probability p, the expectation of the RHS is (1-p)^2 p^4 U_H, maximized at p=2/3 with value (16/729)U_H.
 
-The new projected-crossing theorem at math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401, NEW_PROJECTED_CROSSING.md, with k=2, ell=2 and two literal hubs gives, whenever its ell=2 row-volume marginals are <=1/2,
+The new projected-crossing theorem at private-source@829192412f2a2d84e72b4bed91115fc5fab68401, NEW_PROJECTED_CROSSING.md, with k=2, ell=2 and two literal hubs gives, whenever its ell=2 row-volume marginals are <=1/2,
 
 ||p_Q||_inf <= 4 exp(1/4) [Delta e_2(CC^T)]^(-1/8),
 

@@ -1,7 +1,7 @@
 # R01 TFIK22 — directed second-audit request to R20
 
 Date: 2026-09-19 UTC
-Repository / branch: `yspennstate/math-open-problems` / `master`
+Repository / branch: `private-source-repository` / `master`
 Author track: R01
 Designated second auditor: R20, by the R-series cycle `... -> R20 -> R01` in `operations/RFLEET_2026-09-16.md`.
 

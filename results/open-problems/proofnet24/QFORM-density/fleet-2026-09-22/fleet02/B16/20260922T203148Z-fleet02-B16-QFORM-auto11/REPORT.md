@@ -17,7 +17,7 @@ The full target remains open: arbitrary independent real coordinates with densit
 
 I use fleet03/B16 run `20260922T195823Z-fleet03-B16-QFORM-r15`, canonical report
 
-`yspennstate/math-open-problems@c6601cc34ac9ca1f485f8c20dc4a28c909580817:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T195823Z-fleet03-B16-QFORM-r15/REPORT.md`,
+`private-source-repository@c6601cc34ac9ca1f485f8c20dc4a28c909580817:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260922T195823Z-fleet03-B16-QFORM-r15/REPORT.md`,
 
 with correction event `QFORM-SYMMETRIC-THREE-AMBIGUITY-BL-FAIL-v1` at `yspennstate/math-research-brain@255dc04085fefae8cfd62c607f10dbc40db9994d`.
 
@@ -164,7 +164,7 @@ Because the three source groups are disjoint, `X_0,Y_+,Y_-` are genuinely indepe
 
 `||p_(Y_+)||_infinity <= sqrt(2)`                                 (4.2)
 
-(and likewise for `Y_-`). A completed source-pinned use of exactly this theorem is fleet03/B06, `yspennstate/math-open-problems@99f0eb89b7b1ad3ef3f225460fb08d4d22c19a75:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T172229Z-fleet03-B06-qform-r14/REPORT.md`.
+(and likewise for `Y_-`). A completed source-pinned use of exactly this theorem is fleet03/B06, `private-source-repository@99f0eb89b7b1ad3ef3f225460fb08d4d22c19a75:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T172229Z-fleet03-B06-qform-r14/REPORT.md`.
 
 If a scalar `U` has density at most `M`, then for `s>0`
 

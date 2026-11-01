@@ -22,7 +22,7 @@ The first unpaid implication is now
 
 Required pinned source actually used:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
@@ -30,7 +30,7 @@ The completed ruled theorem there will be spent at an actual density inequality 
 
 Current partner input consumed: fleet03/B10 r32, exact calculation
 
-`yspennstate/math-open-problems@c97e404492dc02e28ee6c465c4328df3afe22d70`
+`private-source-repository@c97e404492dc02e28ee6c465c4328df3afe22d70`
 
 with verifier output through `c1b9d3e30df05f6b27df2b0bc0431475448a0a57`. For
 
@@ -42,7 +42,7 @@ it proves
 
 The latest completed full partner report used for source geometry is fleet03/B10 r29,
 
-`yspennstate/math-open-problems@fa694dbcc9a8e70293a5120263fabe67e5f1465b`,
+`private-source-repository@fa694dbcc9a8e70293a5120263fabe67e5f1465b`,
 
 which proves the endpoint-stable hard transverse square and nondegenerate hub pencil in the near-coloop collar. The construction below saturates the hard-square floor; its obstruction is therefore not weak transverse curvature.
 

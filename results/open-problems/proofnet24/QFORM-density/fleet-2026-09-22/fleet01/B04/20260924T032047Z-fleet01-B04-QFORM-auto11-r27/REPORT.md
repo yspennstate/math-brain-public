@@ -20,7 +20,7 @@ Fresh `math-research-brain/main` was resolved at control commit
 
 The analytic receiver used below is fleet03/B04 `QFORM-CROSS-E3-OPTIMAL-THRESHOLD-v1`, source
 
-`yspennstate/math-open-problems@563bc41e4f9247f9daf3343a57757f45e3f6e703`
+`private-source-repository@563bc41e4f9247f9daf3343a57757f45e3f6e703`
 
 at
 

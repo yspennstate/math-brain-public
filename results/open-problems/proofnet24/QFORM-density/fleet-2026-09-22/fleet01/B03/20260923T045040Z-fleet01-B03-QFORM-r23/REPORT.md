@@ -18,7 +18,7 @@ No claim below conditions one member of a conjugate sum/difference pair on the o
 
 The designated completed partner is fleet02/B03:
 
-`yspennstate/math-open-problems@ab591d183afaaeb8c8accbc9a80c06241f433532`
+`private-source-repository@ab591d183afaaeb8c8accbc9a80c06241f433532`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T041654Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 

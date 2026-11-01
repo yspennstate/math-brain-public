@@ -34,7 +34,7 @@ The exact zero-disjoint-volume endpoint is paid below except for the explicitly 
 
 I read, at the owner-pinned compatible snapshot
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 all of
 
@@ -63,7 +63,7 @@ I also read the full proof of fleet02/B07
 
 canonical source
 
-`yspennstate/math-open-problems@32c257209b588141fb60af698f478f1d0ad20b8a`,
+`private-source-repository@32c257209b588141fb60af698f478f1d0ad20b8a`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T123512Z-b07-qform-minors-11/REPORT.md`.
 
@@ -81,7 +81,7 @@ The newest completed fleet03/B09 result available at the fresh check was r25,
 
 canonical proof
 
-`yspennstate/math-open-problems@195447da931f086720afaa12ac902ed7d33dd32e`,
+`private-source-repository@195447da931f086720afaa12ac902ed7d33dd32e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T061516Z-fleet03-B09-QFORM-r25/REPORT.md`.
 

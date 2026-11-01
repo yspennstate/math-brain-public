@@ -22,7 +22,7 @@ The full conjecture remains OPEN. The live corrections remain binding. In partic
 
 The exact predecessor is this slot's `QFORM-RANK2-CROSS-TRANSVERSE-L4-v1`, canonical report
 
-`yspennstate/math-open-problems@ca4b2621702ac337d21abb817d19bc629e0eac62`
+`private-source-repository@ca4b2621702ac337d21abb817d19bc629e0eac62`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T042838Z-auto11/REPORT.md`.
 
@@ -36,7 +36,7 @@ A complementary source arrived during this run: fleet01/B01 proved the exact end
 
 The designated partner result actually applied below is fleet04/B01's exact signed-Fejer interface, source
 
-`yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
+`private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
 

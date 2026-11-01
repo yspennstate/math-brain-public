@@ -19,7 +19,7 @@ The run began from brain main `c27181f672cb5f8930fd42a41d9f7411ab0c5881`; the pr
 
 The immediate B08 predecessor is
 
-`yspennstate/math-open-problems@d2d64042e84bba8609cd2a27ae2dada21e215c38`
+`private-source-repository@d2d64042e84bba8609cd2a27ae2dada21e215c38`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T165737Z-fleet03-B08-qform-diffuse-r42/REPORT.md`.
 
@@ -39,7 +39,7 @@ The new theorem below answers that question exactly: the post-Schur rank-two are
 
 I use Section 1 of
 
-`yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`
+`private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -308,7 +308,7 @@ and the exact Schur crossing is `diag(0,1)`, rank one. Therefore no proof may as
 
 The completed designated partner is
 
-`yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
+`private-source-repository@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T091414Z-fleet04-B08-QFORM-r1/REPORT.md`.
 

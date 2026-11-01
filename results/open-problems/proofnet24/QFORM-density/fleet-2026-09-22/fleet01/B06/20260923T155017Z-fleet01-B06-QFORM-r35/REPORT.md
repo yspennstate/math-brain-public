@@ -26,15 +26,15 @@ Corrections explicitly retained:
 
 Two completed own/partner inputs are used at equation level.
 
-1. **fleet01/B06 r33 quarter-Riesz pair receiver**: `yspennstate/math-open-problems@ababe93762d210413fe9f19389e3b45f5dd150ba`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T130129Z-fleet01-B06-QFORM/REPORT.md`. For an invertible indefinite original-coordinate physical pair `B`, `D=|det B|`, arbitrary affine terms and critical value `t0`, the pair output has the translation-uniform envelope
+1. **fleet01/B06 r33 quarter-Riesz pair receiver**: `private-source-repository@ababe93762d210413fe9f19389e3b45f5dd150ba`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T130129Z-fleet01-B06-QFORM/REPORT.md`. For an invertible indefinite original-coordinate physical pair `B`, `D=|det B|`, arbitrary affine terms and critical value `t0`, the pair output has the translation-uniform envelope
 
    `p_pair(t) <= 2 sqrt(3) D^(-3/8) |t-t0|^(-1/4)`.
 
-2. **designated partner fleet02/B06 product-projection theorem** `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`: `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. A unit scalar projection of an original cap-one product bank has density cap `sqrt(e)`. It is applied below to the exact Schur-normal projection `H=h^T Z` at the concrete inequality
+2. **designated partner fleet02/B06 product-projection theorem** `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`: `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. A unit scalar projection of an original cap-one product bank has density cap `sqrt(e)`. It is applied below to the exact Schur-normal projection `H=h^T Z` at the concrete inequality
 
    `||p_H||_infinity <= sqrt(e)`.
 
-The newest fleet02/B06 r39 null-bank receiver was also read (`math-open-problems@6cd2c039236dd0ef98cd972d35be5d0752bd4c95`): its exact-null theorem and its counterexample to naive nonzero-curvature perturbation are consistent with the present mechanism. This report does **not** infer a perturbative extension from that theorem.
+The newest fleet02/B06 r39 null-bank receiver was also read (`private-source@6cd2c039236dd0ef98cd972d35be5d0752bd4c95`): its exact-null theorem and its counterexample to naive nonzero-curvature perturbation are consistent with the present mechanism. This report does **not** infer a perturbative extension from that theorem.
 
 ## 2. Exact rank-three Schur-normal identity
 

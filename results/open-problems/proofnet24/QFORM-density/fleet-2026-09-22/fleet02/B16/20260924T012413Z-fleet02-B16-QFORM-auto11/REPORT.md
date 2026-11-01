@@ -13,7 +13,7 @@ attacking: the punctured majority-sign near-coloop by deriving the exact physica
 
 Required pinned source consumed at
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 in `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The completed two-dimensional product-projection density bound and the ruled one-sheet theorem are applied below at actual equations. No arbitrary-joint rank-three coarea, conditional projection-height cap, or independence after rotation is used.
 

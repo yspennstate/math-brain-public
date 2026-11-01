@@ -15,7 +15,7 @@ No moments, compact support, connected support, log-concavity, Gaussianity, post
 
 The completed designated partner result actually applied is fleet02/B13 r37:
 
-`yspennstate/math-open-problems@4a8e12f1956a541cbd8a03961c29de79d1b12592`
+`private-source-repository@4a8e12f1956a541cbd8a03961c29de79d1b12592`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T225517Z-fleet02-B13-qform-r37/REPORT.md`.
 
@@ -51,7 +51,7 @@ If `M=E_mu |tau_E|`, an edge is called good when `|tau_E|<=M/eta`. Let `C_3` be 
 
 The present run also consumes my previous sharp leave-one-out DPP theorem:
 
-`yspennstate/math-open-problems@090f67b2941f8781c0da2cb3be2f5698b5742418`.
+`private-source-repository@090f67b2941f8781c0da2cb3be2f5698b5742418`.
 
 In the chamber (1.1) it improves the normalization to
 

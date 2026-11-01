@@ -12,7 +12,7 @@ attacking: the exact-null-hub near-parallel private-bank collar; test whether th
 
 The latest designated partner fleet03/B18 theorem, source
 
-`math-open-problems@f621e672e07c62d1565b9a0fddeb57626a97cb10`,
+`private-source@f621e672e07c62d1565b9a0fddeb57626a97cb10`,
 
 proves the following exact-null-hub branch. For
 
@@ -31,7 +31,7 @@ If b rho eta>0, then
 
 and the density is continuous C_0. The preceding aligned endpoint theorem fleet03/B18 r34, source
 
-`math-open-problems@12cb94062390a52deaf9a0c74b5d81aa41e5a128`,
+`private-source@12cb94062390a52deaf9a0c74b5d81aa41e5a128`,
 
 proves, when ell_K is parallel to beta_K,
 
@@ -279,7 +279,7 @@ This is an obstruction to a proof architecture, not to QFORM itself.
 
 ## 7. Required pinned result applied to a real target inequality
 
-The pinned source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, proves the ruled one-sheet theorem: for a rank-three form with signature (2+,1-) and all three nonzero eigenvalue moduli at least one,
+The pinned source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, proves the ruled one-sheet theorem: for a rank-three form with signature (2+,1-) and all three nonzero eigenvalue moduli at least one,
 
     p_Q(t) <= pi sqrt(2)                                             (7.1)
 

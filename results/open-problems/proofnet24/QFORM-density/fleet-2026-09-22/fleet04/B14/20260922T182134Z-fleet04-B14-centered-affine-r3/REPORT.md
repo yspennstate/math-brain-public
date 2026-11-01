@@ -150,7 +150,7 @@ is required by the correction inbox.
 The completed partner result is fleet01/B14
 `QFORM-GROUPED-SCHUR-RANK2-OUTSIDE-FREE-v1`, source-pinned at brain commit
 `5a332df9b12f3403cac5c68cc07bfc8a768648b1` and canonical mathematical source
-`yspennstate/math-open-problems@c7303438b647f318f0c2a052cb0bec1557f47b37`.
+`private-source-repository@c7303438b647f318f0c2a052cb0bec1557f47b37`.
 
 It states: pivot an original coordinate with (a=A_{ii}\ne0), let (S) be
 the full Schur complement, and suppose a physical coordinate bank (J) has

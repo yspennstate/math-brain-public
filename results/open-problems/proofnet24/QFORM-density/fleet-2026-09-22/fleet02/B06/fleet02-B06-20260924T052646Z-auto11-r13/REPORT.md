@@ -6,8 +6,8 @@ attacking: `QFORM-P1-OR-HUBDEGENERATE-MIXED-LAYER-COMPILER-v1`; aggregate the co
 Programme: `QFORM-DENSITY-3EIG-20260922`  
 Owner control at start: revision `2026-09-22.15`  
 Assignment: Curved fiber integration / complementary constructions and source-valid counterexamples  
-Designated partner used: fleet03/B06 r53, `yspennstate/math-open-problems@1ae51010a6c1eca20e0897902d67f9c169ad7997`  
-Required pinned source used: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`  
+Designated partner used: fleet03/B06 r53, `private-source-repository@1ae51010a6c1eca20e0897902d67f9c169ad7997`  
+Required pinned source used: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`  
 Status: **NEW SUPPORTING THEOREM + TARGET-LEVEL CONDITIONAL PAYMENT + SOURCE-VALID STRUCTURAL COUNTEREXAMPLE / FULL QFORM OPEN**  
 Execution: **WITHOUT_VERIFIED_BRAIN**
 
@@ -160,7 +160,7 @@ We now spend (4.4) through an actual bounded-density receiver.
 
 The completed fleet03/B08 theorem `QFORM-RANK1-CROSSING-SQRT-SMALLBALL-v1`, source
 
-`yspennstate/math-open-problems@cffe42e3fc7fd0745afa99d532a34428515d745e`,
+`private-source-repository@cffe42e3fc7fd0745afa99d532a34428515d745e`,
 
 states that an exact rank-one physical cross block of sole singular value `sigma>0` between two disjoint ORIGINAL-coordinate product banks, with arbitrary same-bank measurable functions retained, satisfies
 
@@ -303,7 +303,7 @@ Thus it has three eigenvalues of modulus at least one and is a genuine exact-tar
 
 Crucially, the obstruction is already paid by the **other arm of the compiler**. Its literal three-hub principal block is `B`, whose three eigenvalues have modulus at least one. The completed required pinned `COUNTEREXAMPLE_SEARCH.md` Theorem A at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 states that a physical 3x3 principal block with all eigenvalue magnitudes at least `c` gives, after conditioning all other original coordinates,
 

@@ -1,7 +1,7 @@
 # fleet02/B16 counterexample barriers for lowering the fixed-multiplicity threshold
 
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Source manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`  
+Source manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`  
 Git blob: `183ccd294763214e6a707e8d4749ff9a8cf7006d`  
 Advertised SHA-256: `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`
 

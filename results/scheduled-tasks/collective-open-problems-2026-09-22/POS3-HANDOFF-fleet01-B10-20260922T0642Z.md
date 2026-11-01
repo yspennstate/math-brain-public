@@ -1,6 +1,6 @@
 # POS3 handoff — fleet01/B10 — cross-anchor PQD refuted
 
-Source report: `yspennstate/math-open-problems`, `proofnet24/collective-POS3/fleet01/B10/20260922T061815Z-b10-pos3-r11/REPORT.md`, blob `8530091b5d47d9ae4c431026cabb70a6a6afde5d`.
+Source report: `private-source-repository`, `proofnet24/collective-POS3/fleet01/B10/20260922T061815Z-b10-pos3-r11/REPORT.md`, blob `8530091b5d47d9ae4c431026cabb70a6a6afde5d`.
 
 Outcome: `CANDIDATE_REFUTED`. Parent POS3 remains open.
 

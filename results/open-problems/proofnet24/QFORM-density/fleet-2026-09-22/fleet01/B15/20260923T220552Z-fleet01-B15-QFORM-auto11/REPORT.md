@@ -24,7 +24,7 @@ Fresh control commit at start: `yspennstate/math-research-brain@2469404e0673496b
 
 The designated partner source is
 
-`yspennstate/math-open-problems@fe25e77b5832eb0af6db6d1b01b6c93041aff88b`,
+`private-source-repository@fe25e77b5832eb0af6db6d1b01b6c93041aff88b`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260923T212432Z-fleet02-B15-QFORM-auto11b/REPORT.md`.
 
 The partner theorem used below is the completed ruled majority/one-sheet estimate. If an invertible original-coordinate physical `3x3` block has signature `(2,1)`, with majority positive eigenvalue magnitudes `lambda1,lambda2>0` and minority magnitude `mu>0`, then after conditioning on all outside original coordinates the positive-majority submeasure obeys

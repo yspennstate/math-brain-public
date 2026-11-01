@@ -10,7 +10,7 @@ The unrestricted owner target remains OPEN. Everything below stays in ORIGINAL i
 ## 1. Source-valid inputs
 
 
-The analytic input actually used is the completed mixed-Fresnel theorem in `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, path `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. Split original coordinates into heavy coordinates `H` and light coordinates `L`. Suppose
+The analytic input actually used is the completed mixed-Fresnel theorem in `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, path `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. Split original coordinates into heavy coordinates `H` and light coordinates `L`. Suppose
 
 `A_LL = D + S Lambda S^T`,
 
@@ -22,9 +22,9 @@ If `Gamma` is invertible and `max_l w_l^T Gamma^(-1)w_l<=1/2`, then, with no con
 
 `|phi_Q(t)| <= (4pi)^(|H|+r/2) 2^(-|H|) |t|^(-|H|-r/2) prod_k |lambda_k|^(-1/2) det(Gamma)^(-1/2).`  (1.1)
 
-The immediate B08 predecessor is `yspennstate/math-open-problems@3c4c6882813d9530dc5c3884ce3e25f5993c7062`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T115108Z-fleet03-B08-qform-diffuse-r36/REPORT.md`. It paid the physical-pair branch whenever exact post-pair Schur completion leaves aggregate `E_2`, and showed that rank-two pair-Schur leakage cannot erase fourth-singular-tail mass. Its remaining obstruction was leakage-stable low-rank grouped smoothing.
+The immediate B08 predecessor is `private-source-repository@3c4c6882813d9530dc5c3884ce3e25f5993c7062`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T115108Z-fleet03-B08-qform-diffuse-r36/REPORT.md`. It paid the physical-pair branch whenever exact post-pair Schur completion leaves aggregate `E_2`, and showed that rank-two pair-Schur leakage cannot erase fourth-singular-tail mass. Its remaining obstruction was leakage-stable low-rank grouped smoothing.
 
-The designated partner is completed at `yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T091414Z-fleet04-B08-QFORM-r1/REPORT.md`. It proves the maximally anisotropic original-coordinate family
+The designated partner is completed at `private-source-repository@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T091414Z-fleet04-B08-QFORM-r1/REPORT.md`. It proves the maximally anisotropic original-coordinate family
 
 `Q_R=X_0^2+2R U_1V_1+2R^(-1)U_2V_2`, `R>=3`,
 

@@ -92,7 +92,7 @@ Therefore exactly four eigenvalues have modulus greater than one, verifying that
 
 The designated partner input is fleet02/B03 r54,
 
-`math-open-problems@434585cef13aebbe1d21612b43f46c760fb5344a`,
+`private-source@434585cef13aebbe1d21612b43f46c760fb5344a`,
 
 which proves the pair estimate
 

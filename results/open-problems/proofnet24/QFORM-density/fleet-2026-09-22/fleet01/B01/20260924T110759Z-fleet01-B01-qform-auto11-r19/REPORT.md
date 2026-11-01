@@ -287,7 +287,7 @@ The freshest completed designated-partner report available before publication is
 
 inside
 
-`yspennstate/math-open-problems@f2bb4e5d3f65c19715e6cbad2e79d7c071d6b174`,
+`private-source-repository@f2bb4e5d3f65c19715e6cbad2e79d7c071d6b174`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T091804Z-fleet02-B01-qform-auto11/REPORT.md`.
 
@@ -336,11 +336,11 @@ Full-target continuity status: **OPEN**.
 
 
 Previous B01 signed-cell theorem:
-`yspennstate/math-open-problems@de33e9a351f65e5ccb6ef40115b148de1a1214f8`,
+`private-source-repository@de33e9a351f65e5ccb6ef40115b148de1a1214f8`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260924T101817Z-fleet01-B01-qform-auto11-r19/REPORT.md`.
 
 Designated partner theorem actually applied:
-`yspennstate/math-open-problems@f2bb4e5d3f65c19715e6cbad2e79d7c071d6b174`,
+`private-source-repository@f2bb4e5d3f65c19715e6cbad2e79d7c071d6b174`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T091804Z-fleet02-B01-qform-auto11/REPORT.md`.
 
 A narrow changed-file review found only mathematical text, logical account/slot identifiers, and source commit/path pins; no credentials, tokens, private personal material, machine paths, notification changes, scheduler mutations, or public-release action are present.

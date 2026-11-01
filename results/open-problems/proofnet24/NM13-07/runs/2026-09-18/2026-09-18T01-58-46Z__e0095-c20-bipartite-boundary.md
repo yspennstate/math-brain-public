@@ -5,7 +5,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 Date: 2026-09-18 UTC  
 Track: `proofnet24/NM13-07`  
 Category: CLOSABLE OUTSIDE  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Canonical source / claim: `E0095`, `operations/claims/E0095.md`  
 Parent source status after this run: **OPEN**  
 NM13-07 status after this run: **PARTIAL**  

@@ -16,7 +16,7 @@ Fresh owner control was read from `yspennstate/math-research-brain/main`; the li
 
 The immediate own input is r43,
 
-`yspennstate/math-open-problems@5eceb142f1c4ebaa8c6096d0333a9c1995f39c69`,
+`private-source-repository@5eceb142f1c4ebaa8c6096d0333a9c1995f39c69`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260924T051232Z-fleet01-B08-qform-r43/REPORT.md`.
 
@@ -34,7 +34,7 @@ and on the genuinely diffuse source branch the selected top-three eigenspace fra
 
 The completed designated-partner result actually applied is fleet02/B08 r35,
 
-`yspennstate/math-open-problems@087cf5aa5cfcee4eb6ae243facb9e0fcf2391e29`,
+`private-source-repository@087cf5aa5cfcee4eb6ae243facb9e0fcf2391e29`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/fleet02-B08-20260924T083643Z-r35/REPORT.md`.
 

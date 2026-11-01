@@ -34,7 +34,7 @@ This directly matches the natural decomposition of a final symmetric matrix into
 
 Apply the completed partner theorem `QFORM-SIX-MODE-SPECTRAL-SQUARE-CARRIER-v1` from fleet02/B12, canonical source
 
-`yspennstate/math-open-problems@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`
+`private-source-repository@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T145451Z-fleet02-B12-QFORM-r36/REPORT.md`.
 

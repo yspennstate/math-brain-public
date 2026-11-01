@@ -25,7 +25,7 @@ No coordinate sum/difference pair is split and re-capped conditionally. No law-u
 
 The completed designated partner result is fleet02/B03:
 
-`yspennstate/math-open-problems@c3bba054c20287883c43303711eec7eefc05d46e`
+`private-source-repository@c3bba054c20287883c43303711eec7eefc05d46e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T131311Z-fleet02-B03-QFORM-r11/REPORT.md`.
 
@@ -62,7 +62,7 @@ These statements allow arbitrary cross-quadratic curvature inside `P`; the two c
 
 The immediately preceding fleet01/B03 result is
 
-`yspennstate/math-open-problems@1a225e191722b852e59d9c8b7c4646929193cad8`
+`private-source-repository@1a225e191722b852e59d9c8b7c4646929193cad8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T134955Z-fleet01-B03-QFORM-r27/REPORT.md`.
 

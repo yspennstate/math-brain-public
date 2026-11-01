@@ -14,7 +14,7 @@ The exact target remains open: for every dimension, every product law of indepen
 
 
 The designated completed partner actually used is fleet04/B14 r6, canonical report
-`yspennstate/math-open-problems@6442bbe9d4647a730b27b8e0786bc54b2546b7ec:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T011517Z-fleet04-B14-kernel-leakage-core-r6/REPORT.md`.
+`private-source-repository@6442bbe9d4647a730b27b8e0786bc54b2546b7ec:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260923T011517Z-fleet04-B14-kernel-leakage-core-r6/REPORT.md`.
 Its kernel-leakage inequality is inserted explicitly in Theorem 5.1 below. I also use fleet04/B14 r4's law-level finite-mixture localization theorem, whose proof gives TV approximation by finite convex mixtures of product indicators of compact finite interval unions.
 
 ## 2. Compact end-to-end route

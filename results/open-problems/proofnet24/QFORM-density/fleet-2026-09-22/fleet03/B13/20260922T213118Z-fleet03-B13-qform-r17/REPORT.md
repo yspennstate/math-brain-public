@@ -41,7 +41,7 @@ with the same quantitative transverse ellipticity. The result below in fact does
 
 The designated partner fleet04/B13 result actually applied is `QFORM-AFFINE-BANK-BANGBANG-WITNESS-v1`, canonical report
 
-`yspennstate/math-open-problems@451c19388a559167a609d82310c6087e8ba211e1`
+`private-source-repository@451c19388a559167a609d82310c6087e8ba211e1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B13/20260922T201036Z-fleet04-B13-affine-bank-bangbang-r1/REPORT.md`.
 

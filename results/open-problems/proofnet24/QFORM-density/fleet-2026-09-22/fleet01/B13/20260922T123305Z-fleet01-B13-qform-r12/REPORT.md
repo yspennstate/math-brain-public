@@ -12,11 +12,11 @@ The full target remains: for every dimension, every independent real input famil
 This report does **not** prove the full target. It isolates a sharp obstruction in the leverage-heavy branch of the current Fourier/Brascamp-Lieb mechanism.
 
 The named partner result actually applied is fleet02/B13, canonical report
-`yspennstate/math-open-problems@604a08009638981da254a72f09a24dd50e3a3c94:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`.
+`private-source-repository@604a08009638981da254a72f09a24dd50e3a3c94:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260922T115714Z-fleet02-B13-qform-480ba28b/REPORT.md`.
 It proves that the target small-ball supremum reduces with zero loss to product indicators `1_{E_i}`, `|E_i|=1`, and that bounded finite unions of intervals are sufficient for approximation. Thus any obstruction already present on finite-union indicators is genuinely present inside the canonical extreme class.
 
 Also consumed: the current diffuse separable-phase theorem
-`yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb:proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`, which closes the rank-r diffuse Fourier branch under row leverages `c_i<=1/2` and leaves the leverage-heavy branch open.
+`private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb:proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`, which closes the rank-r diffuse Fourier branch under row leverages `c_i<=1/2` and leaves the leverage-heavy branch open.
 
 ## 2. Theorem: exact Fourier L^q threshold for admissible extreme laws
 

@@ -1,7 +1,7 @@
 # R18 — Salem Bernoulli-convolution classification
 
 **Run:** `2026-09-16_12-50-00_UTC__R18__tri-geometry-a7c3`  
-**Repository:** `yspennstate/math-open-problems`, branch `master`  
+**Repository:** `private-source-repository`, branch `master`  
 **Status:** **OPEN.** No reciprocal-Salem parameter and no full classification is resolved in this run.
 
 Target:

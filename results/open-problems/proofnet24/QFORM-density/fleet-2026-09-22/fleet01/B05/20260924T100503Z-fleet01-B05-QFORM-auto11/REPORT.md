@@ -217,7 +217,7 @@ At the exact interface `eps=0`, (6.1) is
 Apply the completed designated-partner theorem fleet02/B05,
 `QFORM-NULL-HUB-TRANSVERSE-SQUARE-v1`, canonical source
 
-`yspennstate/math-open-problems@e7a21ed67b943d7aded714ac17ca48bdab4a1349`
+`private-source-repository@e7a21ed67b943d7aded714ac17ca48bdab4a1349`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T200516Z-fleet02-B05-QFORM-auto11c/REPORT.md`.
 
@@ -229,7 +229,7 @@ The new mixed-`L^p` theorem sharpens the same equation to `<=6`, but (7.2) is re
 
 I also consumed the newer fleet02/B05 theorem `QFORM-WITT-DISJOINT-PLUCKER-CROSSING-v1` at
 
-`yspennstate/math-open-problems@8b902bf20457a12c8ad394ece3808c9a0130a95b`
+`private-source-repository@8b902bf20457a12c8ad394ece3808c9a0130a95b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260924T075515Z-fleet02-B05-QFORM-r12/REPORT.md`.
 
@@ -271,8 +271,8 @@ No counterexample to the owner conjecture is produced.
 
 ## 10. Sources actually used
 
-2. Previous fleet01/B05 scalar-pivot obstruction: `yspennstate/math-open-problems@b2459adaa430f8a8df8c703544128b283e49a3c4:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260924T085700Z-fleet01-B05-QFORM-auto11/REPORT.md`.
-3. Designated partner endpoint: `yspennstate/math-open-problems@e7a21ed67b943d7aded714ac17ca48bdab4a1349:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T200516Z-fleet02-B05-QFORM-auto11c/REPORT.md`.
-4. Newest compatible fleet02/B05 crossing compiler: `yspennstate/math-open-problems@8b902bf20457a12c8ad394ece3808c9a0130a95b:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260924T075515Z-fleet02-B05-QFORM-r12/REPORT.md`.
+2. Previous fleet01/B05 scalar-pivot obstruction: `private-source-repository@b2459adaa430f8a8df8c703544128b283e49a3c4:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260924T085700Z-fleet01-B05-QFORM-auto11/REPORT.md`.
+3. Designated partner endpoint: `private-source-repository@e7a21ed67b943d7aded714ac17ca48bdab4a1349:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T200516Z-fleet02-B05-QFORM-auto11c/REPORT.md`.
+4. Newest compatible fleet02/B05 crossing compiler: `private-source-repository@8b902bf20457a12c8ad394ece3808c9a0130a95b:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260924T075515Z-fleet02-B05-QFORM-r12/REPORT.md`.
 
 No schedule, task-state, notification, permission, repository-visibility, public-release, cross-account authentication, or paid-model/API setting is changed by this report.

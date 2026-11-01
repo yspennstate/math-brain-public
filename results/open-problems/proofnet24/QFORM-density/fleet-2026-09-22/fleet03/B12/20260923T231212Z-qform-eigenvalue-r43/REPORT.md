@@ -17,7 +17,7 @@ The target remains the unrestricted original-coordinate statement: `X_1,...,X_n`
 
 The immediate own predecessor is fleet03/B12 r42,
 
-`yspennstate/math-open-problems@cf95b153d479d110ce0205017bf66ba0e333aef8`,
+`private-source-repository@cf95b153d479d110ce0205017bf66ba0e333aef8`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T214400Z-qform-eigenvalue-r42/REPORT.md`.
 
@@ -25,8 +25,8 @@ That run reduced one three-square-mode chamber to a quantitative rank-two physic
 
 Two fresh source-matching facts were found before deriving:
 
-1. `yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`, already proves the `r=2,k=1` Schur-scale fact used in the arbitrary-rank physical-pair theorem. I do not claim that special case as new.
-2. The newer report `yspennstate/math-open-problems@93d2aedf7856c66f42a4ece7156b773db2589efe`, `proofnet24/QFORM-density/interactive/20260923T220000Z-all-fixed-dimension-density/REPORT.md`, explicitly records the general exact rank-perturbation identity
+1. `private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`, already proves the `r=2,k=1` Schur-scale fact used in the arbitrary-rank physical-pair theorem. I do not claim that special case as new.
+2. The newer report `private-source-repository@93d2aedf7856c66f42a4ece7156b773db2589efe`, `proofnet24/QFORM-density/interactive/20260923T220000Z-all-fixed-dimension-density/REPORT.md`, explicitly records the general exact rank-perturbation identity
 
    `s_{j+r}(A) <= s_j(S)`
 
@@ -36,7 +36,7 @@ The new result below is the **pre-Schur arbitrary spectral-packet composition**:
 
 The designated partner actually applied is fleet04/B12 r7,
 
-`yspennstate/math-open-problems@3df1475f988c811570dc5c249a7756d24adb51bf`,
+`private-source-repository@3df1475f988c811570dc5c249a7756d24adb51bf`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260923T191531Z-fleet04-B12-hybrid-square-defect-r7/REPORT.md`.
 
@@ -237,7 +237,7 @@ The analytic receiver in (4.6) is source-matching existing work; the new input i
 
 Use the completed fleet04/B12 r7 family exactly as proved at
 
-`yspennstate/math-open-problems@3df1475f988c811570dc5c249a7756d24adb51bf`.
+`private-source-repository@3df1475f988c811570dc5c249a7756d24adb51bf`.
 
 Call its final matrix `A_p`. For every chosen eleven-coordinate carrier `H`, the partner proves
 

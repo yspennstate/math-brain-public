@@ -42,7 +42,7 @@ Thus, in inertia `(2,1)`, the eigenvalues can be written `p,q,-(p+q)` with `p,q>
 
 The latest designated-partner result used below is fleet02/B11, run `20260922T233948Z-fleet02-B11-QFORM-b35bb6c3`, canonical mathematics
 
-`yspennstate/math-open-problems@e47740cfec219112c826613bec5785af4b96cf3f`,
+`private-source-repository@e47740cfec219112c826613bec5785af4b96cf3f`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T233948Z-fleet02-B11-QFORM-b35bb6c3/REPORT.md`.
 

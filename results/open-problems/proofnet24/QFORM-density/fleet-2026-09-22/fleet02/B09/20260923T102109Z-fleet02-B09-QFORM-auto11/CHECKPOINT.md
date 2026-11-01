@@ -16,7 +16,7 @@ and the row quantities rho_i^T G^{-1}rho_i from the e5f71d79... mixed-hub theore
 
 ell_i=(P_{L + span(c_perp)})_ii.
 
-Thus, if max_i ell_i<=1/2, Theorem H at math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 gives
+Thus, if max_i ell_i<=1/2, Theorem H at private-source@e5f71d79eff325201dd0274053d20268ce65b837 gives
 
 ||p_Q||_infinity <= C_r [ |pdet(V Lambda V^T)| ||c_perp||^2 ]^(-1/(r+2)),
 

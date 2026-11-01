@@ -10,7 +10,7 @@ This supplement is append-only relative to the run report. It records the newer 
 
 Newest compatible designated partner:
 
-`yspennstate/math-open-problems@7dc1a1fb738f263d7fe021dcf3ce5c37223ced4e`
+`private-source-repository@7dc1a1fb738f263d7fe021dcf3ce5c37223ced4e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T112849Z-fleet02-B16-QFORM-6a31b2a7/REPORT.md`
 

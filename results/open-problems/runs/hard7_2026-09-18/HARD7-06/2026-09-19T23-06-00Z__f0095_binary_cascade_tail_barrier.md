@@ -8,7 +8,7 @@ Status: **F0095 OPEN / HARD7-06 PARTIAL.** The source-level constant-location pr
 
 with every negative moment of order `s>beta_bin` infinite. In particular the `126/25=5.04` negative moment is infinite. This is a theorem about the exact distributional fixed-point branch, not a simulation or a claim that such a branch is globally variationally optimal.
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 ## 1. Continuity, ownership, exclusions, and required reads
 

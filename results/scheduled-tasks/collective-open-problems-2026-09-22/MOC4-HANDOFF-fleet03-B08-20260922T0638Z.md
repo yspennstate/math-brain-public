@@ -4,7 +4,7 @@ Run: `20260922T062315Z-fleet03-B08-moc4-r11`
 Outcome: **AUXILIARY_ONLY** with a mechanism pivot to the campaign lead's live zero-entry branch. Parent MOC4 remains **OPEN / NOT PROVED / NOT DISPROVED**.  
 Execution: `WITHOUT_VERIFIED_BRAIN`; `full_brain_connected=false`.
 
-Canonical scientific report: `proofnet24/collective-MOC4/fleet03/B08/20260922T062315Z-fleet03-B08-moc4-r11/REPORT.md` in `yspennstate/math-open-problems`, latest report commit `ad5cb2c1f6b674a0fbd8e4789d260d89e3c93162`, report blob `763f018f7d41fe9aa5eb76b06f09e9369b2649c0`. Exact verifier blob `bcae0104d6680be45047764a554b11b0be9789bf`; captured exact output blob `895c68203c6837bd5f95f34a007959c9b2c593be`.
+Canonical scientific report: `proofnet24/collective-MOC4/fleet03/B08/20260922T062315Z-fleet03-B08-moc4-r11/REPORT.md` in `private-source-repository`, latest report commit `ad5cb2c1f6b674a0fbd8e4789d260d89e3c93162`, report blob `763f018f7d41fe9aa5eb76b06f09e9369b2649c0`. Exact verifier blob `bcae0104d6680be45047764a554b11b0be9789bf`; captured exact output blob `895c68203c6837bd5f95f34a007959c9b2c593be`.
 
 ## Named partner consumed and applied
 

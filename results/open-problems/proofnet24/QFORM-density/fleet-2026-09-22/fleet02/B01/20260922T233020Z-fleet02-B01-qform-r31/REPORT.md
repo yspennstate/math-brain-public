@@ -13,7 +13,7 @@ The full target remains: for every dimension, independent real coordinates with 
 
 ## Source premises actually used
 
-1. `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md` on the current math-open-problems source contains the proved volume-sampling Fourier theorem. For a physical cross block M=A_{IJ}, put
+1. `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md` on the current private-source source contains the proved volume-sampling Fourier theorem. For a physical cross block M=A_{IJ}, put
 
    Z = e_3(M^T M) = sum_{|S|=|T|=3} det(M_{ST})^2.
 

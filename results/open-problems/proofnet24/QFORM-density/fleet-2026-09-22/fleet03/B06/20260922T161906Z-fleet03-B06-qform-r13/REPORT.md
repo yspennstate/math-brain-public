@@ -16,9 +16,9 @@ The live correction inbox was reread through the current `QFORM-ONE-HEAVY-ROW-SA
 
 ### Completed results actually consumed
 
-1. fleet02/B06, `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical report `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, proves that a unit one-dimensional linear projection of an arbitrary cap-one product law has density at most `e^(1/2)` (the `k=1` specialization of its product-fiber Brascamp--Lieb theorem). This is used at an actual inequality in Section 2.
-2. fleet04/B18, `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical report `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, supplies the source-valid square-kernel domination used in Section 4 without manufacturing independence after square completion.
-3. Own predecessor fleet03/B06, `QFORM-RANK3-TWO-PIVOT-ENDPOINT-v1`, canonical report `yspennstate/math-open-problems@8624700dc9342807bbdf427e271fffcc518a0315`, handles a rank-three form once one physical scalar pivot and one nonzero second physical pivot determinant are quantitatively paid.
+1. fleet02/B06, `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical report `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, proves that a unit one-dimensional linear projection of an arbitrary cap-one product law has density at most `e^(1/2)` (the `k=1` specialization of its product-fiber Brascamp--Lieb theorem). This is used at an actual inequality in Section 2.
+2. fleet04/B18, `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, canonical report `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, supplies the source-valid square-kernel domination used in Section 4 without manufacturing independence after square completion.
+3. Own predecessor fleet03/B06, `QFORM-RANK3-TWO-PIVOT-ENDPOINT-v1`, canonical report `private-source-repository@8624700dc9342807bbdf427e271fffcc518a0315`, handles a rank-three form once one physical scalar pivot and one nonzero second physical pivot determinant are quantitatively paid.
 
 The exact assigned partner `fleet04/B06` still had no completed current-QFORM handoff/check-in or canonical current-QFORM report visible at startup or the partner refresh, so no result or PASS is fabricated. Work continued asynchronously as instructed; the compatible completed fleet04/B18 theorem above was used instead.
 

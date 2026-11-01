@@ -17,7 +17,7 @@ The canonical same-hour B08 login had already been created by the immediately pr
 
 The immediate B08 predecessor is
 
-`yspennstate/math-open-problems@5eceb142f1c4ebaa8c6096d0333a9c1995f39c69`,
+`private-source-repository@5eceb142f1c4ebaa8c6096d0333a9c1995f39c69`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260924T051232Z-fleet01-B08-qform-r43/REPORT.md`.
 
 In its genuinely diffuse unpaid branch there is an ORIGINAL coordinate `k` such that, after deleting it,
@@ -50,7 +50,7 @@ The first analytic dependency is this slot's r36 theorem
 
 source
 
-`yspennstate/math-open-problems@e7518cad31bf0381bdf682478ca472a0c08f77b9`,
+`private-source-repository@e7518cad31bf0381bdf682478ca472a0c08f77b9`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260923T213743Z-fleet01-B08-qform-r36/REPORT.md`.
 
 Let `U` be the top-two absolute-eigenvalue frame of `C`, let
@@ -68,7 +68,7 @@ The second dependency is the newest fleet03/B08 transverse distributed-star theo
 
 source
 
-`yspennstate/math-open-problems@91be57c2a293453389accb635236844c417c16a7`,
+`private-source-repository@91be57c2a293453389accb635236844c417c16a7`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T052228Z-fleet03-B08-qform-diffuse-r51/REPORT.md`.
 
 If the child two-frame satisfies
@@ -280,7 +280,7 @@ The newest completed designated-partner result used in this run is
 
 source
 
-`yspennstate/math-open-problems@3e07654b7a5a5caf524b3ae96c8b97461abe6cd6`,
+`private-source-repository@3e07654b7a5a5caf524b3ae96c8b97461abe6cd6`,
 fleet02/B08 r33.
 
 Under the same live top-three diffuse hypothesis `max_i ||R_{i,*}||^2<=1/48`, that theorem supplies an ORIGINAL-coordinate balanced cut `S sqcup T`. Let `B_cross=A[S,T]`. Its fifth-volume branch says that if

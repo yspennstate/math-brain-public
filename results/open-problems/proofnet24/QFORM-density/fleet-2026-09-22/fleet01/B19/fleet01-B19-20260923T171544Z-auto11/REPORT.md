@@ -20,7 +20,7 @@ The live correction state was reread. Nothing below uses post-rotation independe
 
 The immediate B19 predecessor is
 
-`yspennstate/math-open-problems@97a77b266879a93eb43ad36555ffdec1d981ebe0`,
+`private-source-repository@97a77b266879a93eb43ad36555ffdec1d981ebe0`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260923T165949Z-fleet01-B19-QFORM-auto11b/REPORT.md`.
 

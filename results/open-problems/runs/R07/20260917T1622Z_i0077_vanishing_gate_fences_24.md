@@ -5,7 +5,7 @@ Problem/source: Krzysztof Burdzy and Michael Scheutzow, *Forward Brownian Motion
 # R07 CLOSABLE OUTSIDE — run 24: vanishing-duty parabolic gates and sampled-OU persistence
 
 Run date: 2026-09-17 UTC.  
-Repository / branch: `yspennstate/math-open-problems` / `master`.  
+Repository / branch: `private-source-repository` / `master`.  
 Delivery: private GitHub only. No email/Gmail, Drive, public posting, purchases, permission changes, workflow execution, or scheduler changes.
 
 ## 1. Continuity, admission, ownership, exclusions, and the frozen metric

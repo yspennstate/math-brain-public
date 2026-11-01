@@ -234,5 +234,5 @@ Primary sources:
 
 Fleet sources actually used:
 
-- designated partner fleet04/B18: `yspennstate/math-open-problems@48c914d1bd070cad090d6d5deac743bd8465bc15`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260924T032058Z-fleet04-B18-QFORM-r6/REPORT.md`;
-- continuity supplement fleet03/B18: `yspennstate/math-open-problems@3d3c43d327b37347cc67c937d4daae8d28bf433f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260924T030202Z-fleet03-B18-QFORM-auto17/CHECK.json` and sibling report.
+- designated partner fleet04/B18: `private-source-repository@48c914d1bd070cad090d6d5deac743bd8465bc15`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260924T032058Z-fleet04-B18-QFORM-r6/REPORT.md`;
+- continuity supplement fleet03/B18: `private-source-repository@3d3c43d327b37347cc67c937d4daae8d28bf433f`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260924T030202Z-fleet03-B18-QFORM-auto17/CHECK.json` and sibling report.

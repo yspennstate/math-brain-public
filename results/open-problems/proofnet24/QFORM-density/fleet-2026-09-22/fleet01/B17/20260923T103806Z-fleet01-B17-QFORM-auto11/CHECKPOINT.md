@@ -99,7 +99,7 @@ Fourier inversion yields
 \]
 
 The newest-Claude Lemma 1 at
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, gives for every cap-one density `f` and `p>=2`
 
 \[

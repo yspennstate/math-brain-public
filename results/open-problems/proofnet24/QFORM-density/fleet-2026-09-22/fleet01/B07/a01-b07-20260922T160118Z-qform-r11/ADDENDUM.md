@@ -2,7 +2,7 @@
 
 The immediately preceding fleet01/B07 result `QFORM-TWO-SIDED-PLUCKER-CROSSBLOCK-v1` was read from its immutable source
 
-`yspennstate/math-open-problems@6632b82758a39b45a72f482f12c558f620957a6d`,
+`private-source-repository@6632b82758a39b45a72f482f12c558f620957a6d`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/a01-b07-20260922T143228Z-qform-r12b/TWO_SIDED_ENTROPY_CROSSBLOCK.md`.
 

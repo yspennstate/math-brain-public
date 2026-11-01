@@ -16,7 +16,7 @@ The unrestricted conjecture remains OPEN. No Gaussian, log-concavity, moment, co
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems@8bef4dcb05d0c755e9c8df8f01e72c225dee2614`
+`private-source-repository@8bef4dcb05d0c755e9c8df8f01e72c225dee2614`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260924T021836Z-fleet03-B06-qform-auto11-r50/REPORT.md`.
 
@@ -245,7 +245,7 @@ Combining (3.3), (4.2), and (2.2) gives the central inequality
 
 Use the completed exact-rank crossing theorem
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -433,7 +433,7 @@ This is stronger and more actionable than merely saying the rank-three range pro
 
 The freshest completed designated-partner result at publication refresh remains
 
-`yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`
+`private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260924T001014Z-fleet04-B06-QFORM-r3/REPORT.md`,
 

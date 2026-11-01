@@ -2,7 +2,7 @@
 
 A prepublication refresh found a newer completed designated-partner result than r33:
 
-`yspennstate/math-open-problems@5d0600968569ced59d5a9efe08311ae656debed6`,
+`private-source-repository@5d0600968569ced59d5a9efe08311ae656debed6`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T154628Z-fleet03-B20-QFORM-auto11/REPORT.md`.
 
 Its theorem `QFORM-ALIGNED-TRANSVERSE-OR-INPLANE-R5-v1` reduces the aligned strict-N3 survivor to either:
@@ -58,7 +58,7 @@ Therefore the physical fifth volume obeys
  =1.3027697064847294e-23.`
 
 Apply the required pinned unrestricted D5 theorem from
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`:
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`:
 
 `||p_Q||inf
  <5 sqrt(2e) Z5^(-1/10)

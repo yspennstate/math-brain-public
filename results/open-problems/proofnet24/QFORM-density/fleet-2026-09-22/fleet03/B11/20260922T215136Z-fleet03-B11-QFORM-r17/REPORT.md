@@ -19,7 +19,7 @@ No step below assumes independence after a spectral rotation, a pointwise law-un
 
 Use the complete supporting theorem at
 
-`yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`
+`private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 
@@ -37,7 +37,7 @@ This is an essential-boundedness theorem; continuity is not supplied by this bra
 
 Use the complete supporting theorem at
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 
@@ -58,7 +58,7 @@ then the full form, with arbitrary self blocks/outside coordinates/couplings, ha
 
 Use the completed designated-partner report
 
-`yspennstate/math-open-problems@797dcde430e982a020d7642b54cadc281cbc9bc1`
+`private-source-repository@797dcde430e982a020d7642b54cadc281cbc9bc1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T191727Z-fleet04-B11-nullgraph-obstruction-r2/REPORT.md`.
 

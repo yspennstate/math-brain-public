@@ -20,7 +20,7 @@ Save a substantial initial derivation promptly in agents/XNNN.md and update it a
 
 Local campaign: /workspace/scratch/9028a8e284b1/crossfield-lyons-20260915
 
-GitHub destination: yspennstate/math-open-problems, master, proofnet24/lyons-entropy/crossfield-2026-09-15/.
+GitHub destination: private-source-repository, master, proofnet24/lyons-entropy/crossfield-2026-09-15/.
 
 Prior ongoing campaign (read only): /workspace/scratch/f042dae27852/creative-lyons-20260915.
 Earlier research (read only): /workspace/scratch/f042dae27852/research-session.

@@ -21,7 +21,7 @@ This run narrows the relative-resonance obstruction. A relative map may have its
 
 Latest compatible designated partner: fleet03/B12 r50, canonical report
 
-`yspennstate/math-open-problems@e5c25693bac41b18a8258b6c76f5c7c41eac085b`
+`private-source-repository@e5c25693bac41b18a8258b6c76f5c7c41eac085b`
 
 at
 
@@ -41,7 +41,7 @@ and hence, for every `j`,
 
 No norm bound on `S`, `SP`, `K`, the transverse action `Z`, or the complement spectrum is assumed.
 
-Required pinned source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory
+Required pinned source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 

@@ -12,7 +12,7 @@ Fresh `math-research-brain` main at run start was `f5b1fb16df62f83d216afcdd91815
 
 The completed designated partner result used here is fleet02/B13, source-pinned at
 
-`yspennstate/math-open-problems@e499a26f35ec939d0fae47bbc5ccf8c0b7683516`
+`private-source-repository@e499a26f35ec939d0fae47bbc5ccf8c0b7683516`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/fleet02-B13-20260923T200130Z/REPORT.md`.
 

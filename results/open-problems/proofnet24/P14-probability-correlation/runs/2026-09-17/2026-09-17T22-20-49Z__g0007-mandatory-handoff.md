@@ -4,7 +4,7 @@ Model actually running: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED**. This w
 
 # P14 G0007 mandatory handoff — contact-process critical percolation
 
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Native/root continuity: P14 / `proofnet24/P14-probability-correlation`  
 Canonical claim being handed off: `operations/claims/G0007.md`  
 Category: **HARD OUTSIDE**  

@@ -13,7 +13,7 @@ The sole target remains: for independent real coordinates with one-dimensional d
 
 The latest completed assigned-partner result, fleet03/B11 run `20260922T182528Z-fleet03-B11-QFORM-r12`, canonical source
 
-`yspennstate/math-open-problems@e100de67669c37c8243fe9e389efc909f3179839`
+`private-source-repository@e100de67669c37c8243fe9e389efc909f3179839`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T182528Z-fleet03-B11-QFORM-r12/REPORT.md`,
 
@@ -27,15 +27,15 @@ This run attacks that first implication directly. It proves a uniform theorem fo
 
 ## 2. Source-pinned supporting results used
 
-1. **One-dimensional product projection cap.** fleet02/B11 canonical report `yspennstate/math-open-problems@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2` proves: if independent `X_j` have densities at most one and `sum a_j^2=1`, then `sum a_j X_j` has density at most `sqrt(e)`.
+1. **One-dimensional product projection cap.** fleet02/B11 canonical report `private-source-repository@245a4e2a4414294fbb20b9dd4f292f6b001e5aa2` proves: if independent `X_j` have densities at most one and `sum a_j^2=1`, then `sum a_j X_j` has density at most `sqrt(e)`.
 
-2. **Orientation-free nonzero scalar-pivot theorem.** Interactive rank-two fusion canonical report `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, proves for an exact-rank-three matrix, after reduction to independent cap-one physical coordinates, that a nonzero physical pivot `a=A_ii` with range leverage `ell_i` gives
+2. **Orientation-free nonzero scalar-pivot theorem.** Interactive rank-two fusion canonical report `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, proves for an exact-rank-three matrix, after reduction to independent cap-one physical coordinates, that a nonzero physical pivot `a=A_ii` with range leverage `ell_i` gives
 
 `||p_Q||_infinity <=128 [ell_i |a| |det M_3|]^(-1/4)`,
 
 where `M_3` denotes the nonzero three-dimensional spectral matrix. Arbitrary induced affine terms are allowed.
 
-3. **Arbitrary-rank physical indefinite-pair theorem.** Canonical report `yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`, proves: if `s_3(A)>=sigma>0` and an original-coordinate principal pair `B` is invertible indefinite, with `D=|det B|` and `eta=sigma_min(B)`, then
+3. **Arbitrary-rank physical indefinite-pair theorem.** Canonical report `private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`, proves: if `s_3(A)>=sigma>0` and an original-coordinate principal pair `B` is invertible indefinite, with `D=|det B|` and `eta=sigma_min(B)`, then
 
 `||p_Q||_infinity <=3*400^(1/3) (D^2 eta sigma)^(-1/6)`.
 

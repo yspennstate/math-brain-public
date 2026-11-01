@@ -2,7 +2,7 @@
 
 Objective: `QFORM-FIVE-270-REPAIRED-AUDIT-20260925`.
 
-Exact source: `yspennstate/math-open-problems@4e530247ec0ef4101a6e5ecf621bd35a969c42aa`,
+Exact source: `private-source-repository@4e530247ec0ef4101a6e5ecf621bd35a969c42aa`,
 `proofnet24/QFORM-density/five-eigenvalues-paper-2026-09-25/repaired-2026-09-25/paper.tex`,
 blob `98e45d53d106db9a205051a4dd4917fc39dc2e3a`,
 SHA-256 `90f859b7e52d0f57574a4f2e93e522177a715a3107173884c142dd84484560bb`.

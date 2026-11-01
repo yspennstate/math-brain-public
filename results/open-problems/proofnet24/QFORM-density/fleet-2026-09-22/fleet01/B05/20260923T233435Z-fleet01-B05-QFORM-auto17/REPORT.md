@@ -219,8 +219,8 @@ The full QFORM conjecture is still OPEN. No claim is made that every target matr
 
 ## 8. Sources actually used
 
-2. Orientation-free half-Riesz source: `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, theorem `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`.
-3. Required designated-partner source: fleet02/B05 `QFORM-NULL-HUB-TRANSVERSE-SQUARE-v1`, canonical report `yspennstate/math-open-problems@e7a21ed67b943d7aded714ac17ca48bdab4a1349:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T200516Z-fleet02-B05-QFORM-auto11c/REPORT.md`.
+2. Orientation-free half-Riesz source: `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`, theorem `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`.
+3. Required designated-partner source: fleet02/B05 `QFORM-NULL-HUB-TRANSVERSE-SQUARE-v1`, canonical report `private-source-repository@e7a21ed67b943d7aded714ac17ca48bdab4a1349:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T200516Z-fleet02-B05-QFORM-auto11c/REPORT.md`.
 4. Immediate B05 predecessor: `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260923T205421Z-fleet01-B05-QFORM-auto16/REPORT.md`.
 5. Fresh live correction inbox consumed through the 23 September corrections including the nonzero-square affine-slope and indefinite-innovation warnings; neither challenges the exact rank-two affine theorem used here.
 

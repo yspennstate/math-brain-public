@@ -18,9 +18,9 @@ with one universal finite `C`, or construct a genuine counterexample. Continuity
 
 The current owner message identifies scalar conditioning on the residual quadratic `Q'` as a priority route. This report improves that gate: a **weighted average** of conditional heights is enough; the supremum over residual values is unnecessary. The improvement is exact and comes with a joint absolute-continuity theorem guaranteeing that the scalar-conditioned objects exist as honest densities in the spectral core/rest split.
 
-Assigned partner actually consumed: `fleet02/B15`, run `20260922T170424Z-fleet02-B15-qform-r5`, canonical source `yspennstate/math-open-problems@42920d321a16b9393856cfb0ed78d8557170ad38`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T170424Z-fleet02-B15-qform-r5/REPORT.md`. That report proves scalar absolute continuity for every nonzero quadratic form and, using its assigned partner, records the fixed-matrix rank>=3 `C_0` theorem; it also proves that no target-uniform `C_0` tail envelope exists.
+Assigned partner actually consumed: `fleet02/B15`, run `20260922T170424Z-fleet02-B15-qform-r5`, canonical source `private-source-repository@42920d321a16b9393856cfb0ed78d8557170ad38`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T170424Z-fleet02-B15-qform-r5/REPORT.md`. That report proves scalar absolute continuity for every nonzero quadratic form and, using its assigned partner, records the fixed-matrix rank>=3 `C_0` theorem; it also proves that no target-uniform `C_0` tail envelope exists.
 
-A second dependency from my preceding run is the exact affine closure `C_aff=C_hom`, canonical source `yspennstate/math-open-problems@e4ec163c51bac9e10fd5737e9b1333a410fb7ce7`, same worker root, run `20260922T170451Z-fleet01-B15-qform-r11`.
+A second dependency from my preceding run is the exact affine closure `C_aff=C_hom`, canonical source `private-source-repository@e4ec163c51bac9e10fd5737e9b1333a410fb7ce7`, same worker root, run `20260922T170451Z-fleet01-B15-qform-r11`.
 
 ## 2. Spectral split
 

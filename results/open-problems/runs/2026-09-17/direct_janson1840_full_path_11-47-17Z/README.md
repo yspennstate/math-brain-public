@@ -1,6 +1,6 @@
 # Janson 18.40: full-path subsequence complete condensation
 
-Date: 17 September 2026. Repository: `yspennstate/math-open-problems`, branch `master`.
+Date: 17 September 2026. Repository: `private-source-repository`, branch `master`.
 
 **Status: COMPLETE PROOF CANDIDATE IN THE FULL-PATH SOURCE SCOPE.** Independent end-to-end audits: **0/2**. Publication novelty: **UNVERIFIED**. The new argument removes the bounded-upward-increment hypothesis; no unresolved mathematical lemma is being assumed in `main.tex`. This status is a statement about the written argument, not independent certification or a shared-ledger promotion.
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 # P13 — D0093 admission and first substantive research: multiscale repair route for the fast ARW cycle
 
 Date: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Own root: `proofnet24/P13-outside-successor`.  
 Canonical claim: `operations/claims/D0093.md`.  
 Source: Leonardo T. Rolla, *Activated Random Walks on Z^d*, Probability Surveys 17 (2020), arXiv:1906.05037v2, Section 6.2, open problem immediately after Theorem 6.1 / estimate (6.3).  
@@ -326,7 +326,7 @@ ledger_delta:
   worker: P13
   native_slot: 6aa7b253b37c8191b693d8dc79298d37
   allocation: CLOSABLE_OUTSIDE
-  repository: yspennstate/math-open-problems
+  repository: private-source-repository
   branch: master
   retired_preserved:
     - I0051_Aldous_Janson_OP9

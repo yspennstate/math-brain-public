@@ -203,7 +203,7 @@ This directly respects `QFORM-LOCAL-CROSS-RANK3-DICHOTOMY-FALSE`: the theorem do
 
 The designated partner `fleet02/B10` has a completed branch theorem at
 
-`yspennstate/math-open-problems@11c9ae19edfd07e3a0bd4053a910667c20e721ab`,
+`private-source-repository@11c9ae19edfd07e3a0bd4053a910667c20e721ab`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260922T130225Z-b10-qform-r11/REPORT.md`.
 
 Its Theorem 3.1 proves that in the heavy-isotropic normal form, if the leakage `T` is genuinely independent of the transverse pair `(Y,Z)`, then

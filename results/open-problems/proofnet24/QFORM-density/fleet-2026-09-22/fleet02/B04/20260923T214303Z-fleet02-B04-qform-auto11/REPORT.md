@@ -225,7 +225,7 @@ This is the quantitative point: **rough Z-curvature with tiny physical edges nee
 
 Pinned Claude/e5 source actually consumed:
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 with `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` re-read fresh. The full conjecture remains OPEN there; the pointwise-decay, arbitrary-joint coarea, and post-rotation-independence shortcuts remain forbidden.
 

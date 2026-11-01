@@ -14,8 +14,8 @@ This run changes mechanism from the preceding scalar-pivot/rank-two-Schur route.
 
 The designated partner is `fleet04/B09`. At the startup and pre-derivation checks there was no completed current-QFORM handoff or canonical research directory for that slot, so no partner premise is fabricated. A final partner check is required before publication; if a completed artifact appears it can be incorporated in a later run. The completed source results actually applied here are:
 
-1. `QFORM-CROSS-SQUARE-PRODUCT-v1`, source-pinned at `yspennstate/math-open-problems@1cb7cc3265c46a8509e4b5c4f5e2c064ef1640c2:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/b10-20260922T115000Z-qform-r1/REPORT.md`. It gives the cap-one scalar estimate for `2bUV+cW^2`.
-2. Livshyts--Paouris--Pivovarov marginal-density transfer, as recorded in `yspennstate/math-open-problems@1cb7cc3265c46a8509e4b5c4f5e2c064ef1640c2:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T135329Z-qform-B18-a01-r11/REPORT.md`: every normalized one-dimensional projection of a cap-one product density has density at most `sqrt(2)`.
+1. `QFORM-CROSS-SQUARE-PRODUCT-v1`, source-pinned at `private-source-repository@1cb7cc3265c46a8509e4b5c4f5e2c064ef1640c2:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/b10-20260922T115000Z-qform-r1/REPORT.md`. It gives the cap-one scalar estimate for `2bUV+cW^2`.
+2. Livshyts--Paouris--Pivovarov marginal-density transfer, as recorded in `private-source-repository@1cb7cc3265c46a8509e4b5c4f5e2c064ef1640c2:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T135329Z-qform-B18-a01-r11/REPORT.md`: every normalized one-dimensional projection of a cap-one product density has density at most `sqrt(2)`.
 
 The newer fleet01/B18 two-bank definite transfer is complementary rather than duplicative: it treats a definite quadratic compression of two independent banks. The theorem below handles the **indefinite cross-square normal form** in three disjoint banks.
 

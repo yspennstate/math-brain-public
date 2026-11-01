@@ -4,7 +4,7 @@ Reviewed 2026-09-14. Files reviewed: the memo
 `downloads_memos/Probability_E0064_strictly_nonVolterra_fixed_point_uniqueness_fails_for_five_types_2026-09-11.md`,
 the audit passage (results_B_settled_and_audits.md lines 968-1044), the report row (Probability_1000_open_problems_report lines 5492-5556),
 the brain node `rozikov_theorem6_uniqueness_fails_for_five_types_two_fixed_points_2026_09_11`, and the evidence files in
-`math-open-problems-master/prob1000_lean_20260908/` (e0064_m5_exact.out, e0064_fixed_point_search.out, e0064_face_construction.out - all present, contents as quoted).
+`private-source-master/prob1000_lean_20260908/` (e0064_m5_exact.out, e0064_fixed_point_search.out, e0064_face_construction.out - all present, contents as quoted).
 All computations below are mine, run fresh in this session (scripts in `scratchpad/qso/`).
 
 ## 1. Scope: does the answer answer the question as posed?

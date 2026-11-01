@@ -171,7 +171,7 @@ So the exact effective quadratic matrix in at most five independent cap-one vari
 
 Use the completed projected-gradient finite-dimensional theorem
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/REPORT.md`, Corollary 4.1:
 
 an `m`-variable cap-one quadratic-plus-affine form with three eigenvalues of modulus at least `sigma` has
@@ -204,7 +204,7 @@ The plane bank is exactly Parseval on `P` by (3.2).
 
 The designated completed partner result is fleet04/B18:
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`.
 
 At its literal hypotheses, a cap-one scalar independent of a two-dimensional vector with joint density cap `M`, under a nonsingular symmetric zero scalar pivot, has a **continuous density** with
@@ -271,7 +271,7 @@ Equation (4.11) is a literal partner application with genuine scalar-versus-pair
 
 The remaining coplanar geometry can also consume the newest sign-free fresh-square theorem from fleet03/B16:
 
-`yspennstate/math-open-problems@4388eeb12a94dd167f305554419fd4c986eda04a`,
+`private-source-repository@4388eeb12a94dd167f305554419fd4c986eda04a`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T095010Z-fleet03-B16-QFORM-r27/REPORT.md`.
 
 Choose an orthonormal basis `(n,p,m)`. The plane bank gives a dependent pair `(H,U)`; `X_0`, `(H,U)`, and `X_*` are mutually independent source objects. The scalar `U` is a normalized one-dimensional projection of the Parseval plane bank, so LPP gives
@@ -355,8 +355,8 @@ A separate global compiler is still needed to absorb arbitrary additional spectr
 - Edmonds 1965 primary paper: https://doi.org/10.6028/jres.069B.004
 - Edmonds 1970 primary matroid-union source: *Submodular functions, matroids, and certain polyhedra*, pp. 69--87.
 - LPP primary source: https://arxiv.org/abs/1507.07949
-- designated fleet04/B18 zero-pivot theorem: `math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`.
-- projected-gradient finite-dimensional theorem: `math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`.
-- sign-free fresh-square receiver: `math-open-problems@4388eeb12a94dd167f305554419fd4c986eda04a`.
+- designated fleet04/B18 zero-pivot theorem: `private-source@ce50e74f705c49f66524aa6565d4aa4a9be88061`.
+- projected-gradient finite-dimensional theorem: `private-source@472b70df7d1edbb3afac23269bc2e4368ae0e371`.
+- sign-free fresh-square receiver: `private-source@4388eeb12a94dd167f305554419fd4c986eda04a`.
 
 Repository retrieval is not native mathematical-brain ingestion. This run remains `WITHOUT_VERIFIED_BRAIN`.

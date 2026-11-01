@@ -5,7 +5,7 @@ Problem: planar self-avoiding-walk displacement — Flory (1949), *The Configura
 
 Run ID: `2026-09-16T13-37-28Z_saw-rate-modulus-a31f`
 Branch: `master`
-Repository: `yspennstate/math-open-problems`
+Repository: `private-source-repository`
 Date/status search: 2026-09-16
 
 ## 1. Repository recovery and scope

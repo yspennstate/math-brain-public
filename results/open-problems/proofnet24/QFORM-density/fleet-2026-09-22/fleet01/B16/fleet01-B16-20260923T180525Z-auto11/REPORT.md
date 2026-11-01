@@ -16,7 +16,7 @@ The target remains the unrestricted statement: independent real original-coordin
 
 This run keeps the live correction that a bounded joint projected density is not enough for an indefinite or curved level-set integral. Independence is used only between disjoint ORIGINAL source banks. No spectral rotation is interpreted as creating independent coordinates. No normalized conditional projection-height bound is inserted.
 
-Fresh control was read from `math-research-brain@89b9e16d28eea26a58af6a17b374846d1f45219f`. Fresh `math-open-problems` master was observed at `8acd119a2b2cbeb7678cfa5ee08b573a2cf0e298` before the mathematical write.
+Fresh control was read from `math-research-brain@89b9e16d28eea26a58af6a17b374846d1f45219f`. Fresh `private-source` master was observed at `8acd119a2b2cbeb7678cfa5ee08b573a2cf0e298` before the mathematical write.
 
 ## 2. Source-pinned completed inputs used at equations
 
@@ -24,7 +24,7 @@ Fresh control was read from `math-research-brain@89b9e16d28eea26a58af6a17b374846
 
 I use the completed report
 
-`math-open-problems@8acd119a2b2cbeb7678cfa5ee08b573a2cf0e298`
+`private-source@8acd119a2b2cbeb7678cfa5ee08b573a2cf0e298`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/fleet02-B16-20260923T163017Z-auto11b/REPORT.md`.
 
@@ -52,14 +52,14 @@ The partner proves that the translation-uniform Schur square envelope can diverg
 
 The checked projected-density input is recorded, inter alia, in
 
-`math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`
+`private-source@d2f970d33fa7084f8de55412189402ac609e4da6`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`:
 for a normalized one-dimensional projection of independent cap-one inputs the density cap is at most `sqrt(2)`, while a `k`-dimensional orthonormal projection has cap at most `2^(k/2)`.
 
 The partner report pins the completed localized theorem A from
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`:
 for three genuinely independent cap-one scalar variables, every real symmetric `3 x 3` quadratic matrix whose three eigenvalues have modulus at least `sigma>0`, with arbitrary affine terms, has output density at most

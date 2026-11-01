@@ -11,7 +11,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`
 The target remains the unrestricted one: for every finite `n`, every vector of independent real coordinates with probability densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of modulus at least one, prove that `Q=X^T A X` has a density with one universal finite essential-supremum bound, or give a target-valid counterexample. Continuity is tracked separately.
 
 
-The newest completed designated proof-closure partner used here is fleet02/B20 r20, canonical source `yspennstate/math-open-problems@2c967d975f242fa53556b8ec132ac668dcf003a0`, theorem `QFORM-LOCALIZED-HIGHWINDOW-COMPLETE-PAYMENT-v1`. It proves that a source-valid physical outer pivot with
+The newest completed designated proof-closure partner used here is fleet02/B20 r20, canonical source `private-source-repository@2c967d975f242fa53556b8ec132ac668dcf003a0`, theorem `QFORM-LOCALIZED-HIGHWINDOW-COMPLETE-PAYMENT-v1`. It proves that a source-valid physical outer pivot with
 
 `|a|>=tau>=1/4`
 
@@ -23,7 +23,7 @@ has
 
 `||p_Q||_infinity<5262`.
 
-The newest upstream two-anchor compression used below is fleet03/B20 r19 at `yspennstate/math-open-problems@3a9ff3c15dbb02068cc29ba5d3ac36991d4934f4`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T224748Z-fleet03-B20-QFORM-r19/REPORT.md`.
+The newest upstream two-anchor compression used below is fleet03/B20 r19 at `private-source-repository@3a9ff3c15dbb02068cc29ba5d3ac36991d4934f4`, report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260922T224748Z-fleet03-B20-QFORM-r19/REPORT.md`.
 
 Live corrections are retained. In particular, this report does **not** use law-uniform pointwise quadratic Fresnel decay, arbitrary-joint rank-three coarea, a worst conditional projection-density cap or positive moment, post-rotation independence, a single-good-minor inference from compound mass, or deletion of arbitrary same-side curvature. Every cross block below is an original-coordinate physical block unless explicitly labelled as a deterministic Schur/shear matrix used only algebraically.
 

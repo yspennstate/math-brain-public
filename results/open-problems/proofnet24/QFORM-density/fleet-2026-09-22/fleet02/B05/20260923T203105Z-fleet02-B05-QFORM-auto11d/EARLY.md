@@ -3,7 +3,7 @@ attacking: turn the fresh two-bank curved-tube estimate into a full rough-input 
 
 # Early calculation: dyadic tube-to-hub splice
 
-Let H be independent of two independent R^3 banks A,B, with ||f_H||_infinity<=m. Put (L,V,P)=A+B and let K=K_2+K_3 be the bank-density currency in the proved two-bank curved-tube theorem at math-open-problems@5e23223ed8626d8df8343d2d26879c08cf139093. Thus for 0<r<=1 and b!=0,
+Let H be independent of two independent R^3 banks A,B, with ||f_H||_infinity<=m. Put (L,V,P)=A+B and let K=K_2+K_3 be the bank-density currency in the proved two-bank curved-tube theorem at private-source@5e23223ed8626d8df8343d2d26879c08cf139093. Thus for 0<r<=1 and b!=0,
 
 P(r<=|L|<=2r, |bP+c+dL+(gamma+V^2)/(2L)|<=a)
  <= C_T a r^(3/2)|b|^(-1/2) K,

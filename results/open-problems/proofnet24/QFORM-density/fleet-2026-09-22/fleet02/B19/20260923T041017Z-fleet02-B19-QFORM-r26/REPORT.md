@@ -14,13 +14,13 @@ while retaining at least three eigenvalues of modulus at least one. The full con
 
 The required newest-Claude package was read at the exact source pin
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. In particular I use Theorem H below at equation level. Theorem D/D' and D5 remain valid paid exits; arbitrary-joint 3D coarea remains refuted.
 
 The newest completed designated-partner handoff available at the fresh control state is fleet03/B19 r24, canonical mathematics
 
-`yspennstate/math-open-problems@2c88af5e0ac6a4faf8d923a621c7d7006d544ffe`.
+`private-source-repository@2c88af5e0ac6a4faf8d923a621c7d7006d544ffe`.
 
 Its theorem `QFORM-TWO-PHYSICAL-GRADIENT-2OVER3-SMALLBALL-v1` gives, for two original physical coordinates and a disjoint product bank with two-row cross-area
 
@@ -34,7 +34,7 @@ and hence
 
 A further compatible completed analytic result is fleet02/B14's `QFORM-TOP-d-CROSS-AVERAGING-v1`, source-visible at
 
-`yspennstate/math-open-problems@2734623e95f9fafea5354620290ee75ad835b7df`,
+`private-source-repository@2734623e95f9fafea5354620290ee75ad835b7df`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B14/20260922T220604Z-fleet02-B14-QFORM-r21/REPORT.md`.
 

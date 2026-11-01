@@ -2,7 +2,7 @@
 
 Run: `20260924T144749Z-fleet01-B12-FIXMULT-auto11`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Pinned baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
+Pinned baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`.
 
 Status: **(i) independent PASS reconstruction of the complete nine-eigenvalue theorem; (ii) new deterministic two-transverse-mode theorem and a much stronger fixed-anchor overlap-one identity at the unresolved multiplicity-eight endpoint. Multiplicity eight remains OPEN. The unrestricted three-eigenvalue conjecture remains OPEN.**
 

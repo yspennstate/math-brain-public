@@ -16,15 +16,15 @@ The target remains unrestricted: for every `n`, independent original-coordinate 
 Completed sources actually used:
 
 1. Designated partner fleet02/B07, `QFORM-CROSS-FIBER-PLANCHEREL-v1`:
-   `yspennstate/math-open-problems@5266d24ea98d9bb5902c51a92eca0e3e38112e39`,
+   `private-source-repository@5266d24ea98d9bb5902c51a92eca0e3e38112e39`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T193347Z-b07-639234ec/REPORT.md`.
    Its one-sided exact-rank-three form is applied at an actual inequality in Section 3.
 2. The current fractional-volume Fourier proof:
-   `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+   `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
    `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
    Section 2 below extends its determinant-expansion/BL mechanism to a geometric mean of *different compound orders* rather than invoking it as a black box.
 3. Fresh fleet03/B07 r29 four-hub transducer:
-   `yspennstate/math-open-problems@0e842117ca7ec8472538faa120677507f16b5c17`,
+   `private-source-repository@0e842117ca7ec8472538faa120677507f16b5c17`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T084007Z-fleet03-B07-qform-r29/REPORT.md`.
    Its live double-anchor third-volume lower bound is compiled in Section 4.
 

@@ -17,16 +17,16 @@ Corrections consumed before publication include `QFORM-POINTWISE-DECAY-FALSE`, `
 Completed designated-partner results actually applied:
 
 1. fleet03/B03 all-order collision hierarchy, canonical report  
-   `yspennstate/math-open-problems@719c114f8dad72a6780b194cbea124cfa4cf6d44:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T123410Z-fleet03-B03-QFORM-r11b/REPORT.md`.
+   `private-source-repository@719c114f8dad72a6780b194cbea124cfa4cf6d44:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T123410Z-fleet03-B03-QFORM-r11b/REPORT.md`.
    In particular, for Gaussian mollification `p_eps`, `J_m(eps)=int p_eps^m`, and `||p||_infinity<=B` is equivalent to `J_m(eps)<=B^(m-1)` for all `m>=2,eps>0`. At `m=2`,
    `J_2=(2pi)^(-1)int |phi(t)|^2 e^{-eps^2t^2}dt` and the exact independent-copy bilinearization retains the dependence of each sum/difference pair.
 2. fleet03/B03 half-Riesz endpoint theorem, canonical report  
-   `yspennstate/math-open-problems@f1e0ffb295dd293cf7bb2e401fa0f24659a26c6d:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T142410Z-fleet03-B03-QFORM-r13/REPORT.md`.
+   `private-source-repository@f1e0ffb295dd293cf7bb2e401fa0f24659a26c6d:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T142410Z-fleet03-B03-QFORM-r13/REPORT.md`.
    If `Q=d(Z+h(W))^2+R(W)`, `Z` is independent of `W`, `f_Z<=1`, and `|eta_R(t)|<=min(1,K/|t|)`, then
    `||p_Q||_infinity <= 4 sqrt(2/pi)|d|^(-1/2)K^(1/2)`.
 
 A second completed source used below is the regularized determinant theorem
-`yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
+`private-source-repository@a302aab3477c64757b511e80d3907f982e04873a:proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md`.
 For an original-coordinate cross block `B`, if `1<=q<2` and the coordinate leverage of `range(B)` on one side is at most `q/2`, then
 
 `|eta(t)| <= det(I+2q t^2 BB^T/(pi^2 e^2))^(-1/(4q))`.

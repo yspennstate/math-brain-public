@@ -1,6 +1,6 @@
 # C08 local repair — short.tex line 222
 
-Pinned source: yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8.
+Pinned source: private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8.
 
 Literal source clause: "Factors with beta_i=0 are at most one and are dropped."
 

@@ -11,7 +11,7 @@ Status: **ESSENTIAL_STEP_APPLIED / FULL QFORM OPEN / GLOBAL CONTINUITY OPEN**
 
 The target remains independent cap-one real coordinates and arbitrary real symmetric \(A\) with \(s_3(A)\ge1\). No moment, support, iid, sign, finite-rank, or post-rotation independence assumption is added.
 
-The newest completed fleet01/B20 input actually used is \`math-open-problems@f63decefb7148fe0640c66d014a49a4ef1f5621e\`, with arithmetic readback \`936b0f0bad22de82921c2a743fb0738226270348\`. Its unrestricted fifth-volume receiver says that for every ORIGINAL-coordinate cross block \(M\), with \(Z_5=e_5(M^TM)\),
+The newest completed fleet01/B20 input actually used is \`private-source@f63decefb7148fe0640c66d014a49a4ef1f5621e\`, with arithmetic readback \`936b0f0bad22de82921c2a743fb0738226270348\`. Its unrestricted fifth-volume receiver says that for every ORIGINAL-coordinate cross block \(M\), with \(Z_5=e_5(M^TM)\),
 
 \[
  \|p_Q\|_\infty\le 5\sqrt{2e}\,Z_5^{-1/10}. \tag{1.1}
@@ -19,7 +19,7 @@ The newest completed fleet01/B20 input actually used is \`math-open-problems@f63
 
 It retains arbitrary same-bank quadratic blocks, outside couplings, affine terms, signs, and additional spectrum.
 
-The prior fleet04/B20 compiler is \`math-open-problems@a688b9384b65031a9c3646401ed26c141ec746d2\`. In \(N3(1/192)\) it left a top-four cross-singular-direction packet with energy at least
+The prior fleet04/B20 compiler is \`private-source@a688b9384b65031a9c3646401ed26c141ec746d2\`. In \(N3(1/192)\) it left a top-four cross-singular-direction packet with energy at least
 
 \[
  L_4=\frac{2298303}{9437184}=\frac{255367}{1048576}. \tag{1.2}

@@ -14,7 +14,7 @@ This run attacks the first structural implication in the heavy-physical-pivot br
 
 Dependencies actually used:
 
-1. fleet02/B09 `QFORM-PIVOT-OFFDIAG-STABLERANK-v1`, canonical source `yspennstate/math-open-problems@77d71ed8bbd7f8a3fd40958e54b5bf658163c27a`, which states for a physical pivot `a!=0`, Schur complement `S`, `s=||S||_op`, and `S^o=S-diag(S)`, if
+1. fleet02/B09 `QFORM-PIVOT-OFFDIAG-STABLERANK-v1`, canonical source `private-source-repository@77d71ed8bbd7f8a3fd40958e54b5bf658163c27a`, which states for a physical pivot `a!=0`, Schur complement `S`, `s=||S||_op`, and `S^o=S-diag(S)`, if
    
    `||S^o||_F^2 >= 24 s^2`,
    
@@ -22,11 +22,11 @@ Dependencies actually used:
    
    `||p_Q||_infinity <= 11.876 / sqrt(|a| s)`.
 
-2. fleet02/B09 `QFORM-ZERODIAG-TRIANGLE-LOGSMOOTH-v1`, canonical source `yspennstate/math-open-problems@1abb65eef22eb44be26d8b21dd5c7174fba4aa1`, which states that if a zero-diagonal physical triple in a quadratic form has edge product `tau=|abc|>0`, then the residual quadratic form has density at most
+2. fleet02/B09 `QFORM-ZERODIAG-TRIANGLE-LOGSMOOTH-v1`, canonical source `private-source-repository@1abb65eef22eb44be26d8b21dd5c7174fba4aa1`, which states that if a zero-diagonal physical triple in a quadratic form has edge product `tau=|abc|>0`, then the residual quadratic form has density at most
    
    `(3+log 8) tau^(-1/3)`.
 
-3. fleet03/B20 `QFORM-NESTED-CUT-THREE-RESOURCE-v1`, canonical source `yspennstate/math-open-problems@06ef7346c08f41c3fac240e1acdeb1b42dc2995d`, whose current heavy-pivot branch supplies a physical pivot of size at least `157/320` in one unresolved case.
+3. fleet03/B20 `QFORM-NESTED-CUT-THREE-RESOURCE-v1`, canonical source `private-source-repository@06ef7346c08f41c3fac240e1acdeb1b42dc2995d`, whose current heavy-pivot branch supplies a physical pivot of size at least `157/320` in one unresolved case.
 
 No pointwise quadratic-phase decay, post-rotation independence, conditional projection-density cap, or fixed-small-minor dichotomy is used.
 

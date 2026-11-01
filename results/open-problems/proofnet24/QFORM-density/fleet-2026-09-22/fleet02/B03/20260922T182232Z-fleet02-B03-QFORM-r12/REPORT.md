@@ -10,7 +10,7 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`
 
 The target is the universal essential-density bound for `Q=X^T A X` under independent real input densities `f_i<=1` when `A` has at least three eigenvalues of modulus at least one. This report does not claim the full theorem.
 
-The designated partner result is fleet03/B03 run `20260922T165635Z-fleet03-B03-QFORM-r16`, canonical source `yspennstate/math-open-problems@16849154c191385e444059bd0a43a2c8a2bba674`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T165635Z-fleet03-B03-QFORM-r16/REPORT.md`, blob `ccff06141088ee91b459276139554a340b62b1a0`. Its exact pair-law identity is used below, including the dependence between `U=X+X'` and `V=X-X'`.
+The designated partner result is fleet03/B03 run `20260922T165635Z-fleet03-B03-QFORM-r16`, canonical source `private-source-repository@16849154c191385e444059bd0a43a2c8a2bba674`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T165635Z-fleet03-B03-QFORM-r16/REPORT.md`, blob `ccff06141088ee91b459276139554a340b62b1a0`. Its exact pair-law identity is used below, including the dependence between `U=X+X'` and `V=X-X'`.
 
 The live corrections consumed include at least `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-UV-CONDITIONAL-CAP-FALSE`, `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`, `QFORM-ONEPAIR-NORMALIZED-TTSTAR-FALSE-v1`, `QFORM-JOINT-DENSITY-COAREA-23-FALSE-v1`, and `QFORM-CONDITIONAL-PROJECTION-POSITIVE-MOMENT-FALSE-v1`. No arbitrary-joint coarea, post-rotation independence, or conditional-cap premise is used.
 

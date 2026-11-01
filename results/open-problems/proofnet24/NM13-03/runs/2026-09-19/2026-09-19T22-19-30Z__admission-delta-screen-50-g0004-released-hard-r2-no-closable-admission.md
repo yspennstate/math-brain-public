@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-03 admission delta screen 50 — G0004 genuinely released at residue 2 but HARD; no lawful CLOSABLE admission
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-03` / `proofnet24/NM13-03/`  
 Category: **CLOSABLE OUTSIDE**  
 Preferred lane: other authors' finite random-matrix inequalities, exact moment questions, or sharp spectral constants  
@@ -242,7 +242,7 @@ This invocation creates exactly one immutable file in `proofnet24/NM13-03/runs/`
 ledger_delta:
   worker: NM13-03
   namespace: proofnet24/NM13-03/
-  repository: yspennstate/math-open-problems
+  repository: private-source-repository
   branch: master
   category: CLOSABLE_OUTSIDE
   status_before: ADMISSION_PENDING

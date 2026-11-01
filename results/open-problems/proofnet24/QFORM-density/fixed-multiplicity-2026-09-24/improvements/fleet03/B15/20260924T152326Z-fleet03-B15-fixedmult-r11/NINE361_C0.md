@@ -15,7 +15,7 @@ for every interval `I`.
 
 A completed fixed-instance affine regularity theorem at
 
-`yspennstate/math-open-problems@b8cb4aa22c840d8f4fc76bcca6d0cb49d4aeb9f9`,
+`private-source-repository@b8cb4aa22c840d8f4fc76bcca6d0cb49d4aeb9f9`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260924T092642Z-fleet03-B15-qform-auto11/REPORT.md`,
 

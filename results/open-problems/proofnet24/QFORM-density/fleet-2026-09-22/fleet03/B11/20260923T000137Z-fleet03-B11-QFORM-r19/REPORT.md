@@ -19,7 +19,7 @@ No step uses post-rotation independence, arbitrary-joint coarea, conditional-den
 
 Completed source:
 
-`yspennstate/math-open-problems@4110bbfd21beffa0260a017d468b0a486af56db1`
+`private-source-repository@4110bbfd21beffa0260a017d468b0a486af56db1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T222040Z-fleet04-B11-cone-envelope-r3/REPORT.md`.
 
@@ -42,13 +42,13 @@ For the associated symmetric matrix
 
 The completed weighted affine-fiber Brascamp--Lieb theorem is at
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
 
 For an orthonormal two-dimensional projection of independent cap-one coordinates it gives joint-density cap at most `e`. The completed fleet03/B19 source also records the one-dimensional Rogozin--Ball product-projection bound `sqrt(2)` for a normalized scalar linear form:
 
-`yspennstate/math-open-problems@39b2d7a6fc503f2abbeee3b50c30ed64886de365`
+`private-source-repository@39b2d7a6fc503f2abbeee3b50c30ed64886de365`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260922T223200Z-fleet03-B19-QFORM-r19/REPORT.md`.
 
@@ -58,7 +58,7 @@ Both estimates are taken before applying the indefinite quadratic pushforward; n
 
 Completed fleet04/B19 source:
 
-`yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
+`private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 

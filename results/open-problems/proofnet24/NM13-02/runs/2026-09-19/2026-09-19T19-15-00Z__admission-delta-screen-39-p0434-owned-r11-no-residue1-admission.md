@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-02 admission delta screen 39 — P0434 is CLOSABLE but owned/residue 11; no lawful residue-1 admission
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-02` / `proofnet24/NM13-02/`  
 Category: **CLOSABLE OUTSIDE**  
 Preferred lane: source-posed discrete probability inequalities, exact extremal probabilities, and sharp expectation constants  

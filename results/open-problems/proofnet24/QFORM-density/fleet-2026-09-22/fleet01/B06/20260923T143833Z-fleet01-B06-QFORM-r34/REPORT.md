@@ -23,7 +23,7 @@ Global continuity is **not** proved. The new conclusions are essential-density b
 Two completed fleet02/B06 inputs are used at equation level.
 
 1. `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical proof
-   `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+   `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`.
    If `P` has `k` orthonormal rows and `Z` has independent cap-one coordinates, then
 
@@ -32,7 +32,7 @@ Two completed fleet02/B06 inputs are used at equation level.
    In particular a normalized scalar projection has density cap `sqrt(e)` and a normalized planar projection has density cap `e`.
 
 2. The latest fleet02/B06 hub compiler,
-   `yspennstate/math-open-problems@328a550b1ddde3d2d9b7c2d245678f0b6fd5e7ae`,
+   `private-source-repository@328a550b1ddde3d2d9b7c2d245678f0b6fd5e7ae`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T105551Z-182f201f81de/REPORT.md`, gives in its exact-rank-three heavy-star survivor
 
    `either ||p_Q||_infinity < 1447/s,
@@ -41,7 +41,7 @@ Two completed fleet02/B06 inputs are used at equation level.
    The new endpoint below is intended for the latter robust-light geometry when a physical pair compression becomes singular; it does not reopen the already-paid branch.
 
 The immediate own predecessor is fleet01/B06 r33,
-`yspennstate/math-open-problems@ababe93762d210413fe9f19389e3b45f5dd150ba`,
+`private-source-repository@ababe93762d210413fe9f19389e3b45f5dd150ba`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T130129Z-fleet01-B06-QFORM/REPORT.md`.
 Its determinant-only quarter-Riesz theorem pays every **invertible indefinite** physical pair, but its factor `|det B|^(-3/8)` necessarily diverges at `rank(B)=1`. This run attacks that endpoint directly rather than pretending the determinant estimate is stable there.
 

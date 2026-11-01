@@ -18,7 +18,7 @@ The present run changes mechanism from the preceding relative-inertia/operator-c
 The first unpaid implication remains structural: bare `s_3(A)>=1` has not been shown to force a fifth-volume physical cross certificate, nor does common spectral independence imply such a certificate (the live `QFORM-BIINDEPENDENT-SPECTRAL-MODES-NOT-CROSS-VOLUME-v1` correction forbids that shortcut). The theorem below transports a certificate once it exists; it does not manufacture one from `s_3(A)>=1`.
 
 
-The density receiver used at the end is the completed fifth-volume theorem in `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, path `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`: for any actual disjoint ORIGINAL-coordinate cross block `B=A[I,J]`,
+The density receiver used at the end is the completed fifth-volume theorem in `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, path `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`: for any actual disjoint ORIGINAL-coordinate cross block `B=A[I,J]`,
 
 `||p_(X^T A X)||_infinity <= 5 sqrt(2e) e_5(B^T B)^(-1/10)`,
 
@@ -369,8 +369,8 @@ Fresh control source: `yspennstate/math-research-brain@ff61378f690209c9d98542dbb
 
 Consumed live corrections include: pointwise quadratic-phase decay false; no independence after spectral rotation; fiber-sup dimension loss; arbitrary-joint rank-three coarea false; positive conditional projection-density moments false; and `QFORM-BIINDEPENDENT-SPECTRAL-MODES-NOT-CROSS-VOLUME-v1`. None is used as a positive premise.
 
-Partner applied: `yspennstate/math-open-problems@572fa1f2bc3b1ab29018a426f414d21dce2b5504`, fleet02/B12 `QFORM-RELATIVE-NUMERICAL-RANGE-MODE-SHIELD-v1`, equations (2.1)-(2.3) and explicit family (5.1)-(5.7).
+Partner applied: `private-source-repository@572fa1f2bc3b1ab29018a426f414d21dce2b5504`, fleet02/B12 `QFORM-RELATIVE-NUMERICAL-RANGE-MODE-SHIELD-v1`, equations (2.1)-(2.3) and explicit family (5.1)-(5.7).
 
-Receiver applied: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, theorem D5.
+Receiver applied: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, theorem D5.
 
 No scheduler state, email, notification, task identity, permission, repository visibility, paid model/API, remote workflow or cross-account authentication was changed.

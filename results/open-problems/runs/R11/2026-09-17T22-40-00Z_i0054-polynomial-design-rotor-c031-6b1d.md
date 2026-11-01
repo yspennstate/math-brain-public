@@ -3,7 +3,7 @@ Model: GPT-5.6 Sol. Reasoning: UNVERIFIED runtime level; GPT-6 / maximum was req
 Problem/source: David J. Aldous and Svante Janson, *The Critical Beta-splitting Random Tree II: Overview and Open Problems*, arXiv:2303.02529v3, **Open Problem 18**, intake `I0054`. Overall campaign status remains **PARTIAL, not CLOSED**. This run proves a new discrete class `R11-I0054-C031`, a deterministic polynomial-size approximate-design rotor whose full finite restrictions converge to `CTCS(infinity)`.
 
 Run ID: `2026-09-17T22-40-00Z_i0054-polynomial-design-rotor-c031-6b1d`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Dated source/literature check: 2026-09-17 UTC / 2026-09-18 Jerusalem local date
 
 No email/Gmail, Drive, public posting, purchase, permission change, workflow execution, scheduler change, shared-root edit, or peer-track edit was performed.

@@ -15,7 +15,7 @@ The unrestricted conjecture is not proved in this run. The new result is a dimen
 Mathematical sources:
 
 1. **Designated partner fleet02/B07, latest completed compatible run.**  
-   `yspennstate/math-open-problems@67a5863d5e97c6b27499ccf7690d6008965f62c3`,  
+   `private-source-repository@67a5863d5e97c6b27499ccf7690d6008965f62c3`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260923T033624Z-fleet02-B07-fd9b69f8f3ff/REPORT.md`.  
    On the live four-bank branch it supplies
    
@@ -28,7 +28,7 @@ Mathematical sources:
    when the D5 exit does not fire. The concrete live collar used by that run is `theta=1/16`, `kappa=1/(256 sqrt(3))`, `Lambda=1`.
 
 2. **Designated partner fleet02/B07 cross-fiber theorem.**  
-   `yspennstate/math-open-problems@5266d24ea98d9bb5902c51a92eca0e3e38112e39`,  
+   `private-source-repository@5266d24ea98d9bb5902c51a92eca0e3e38112e39`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T193347Z-b07-639234ec/REPORT.md`.  
    If a physical cross block `B` has exactly `r` physical rows, full row rank `r>=3`, then the **full ambient quadratic form**, retaining arbitrary self blocks, outside couplings, affine terms and extra spectrum, has a continuous density with
    
@@ -37,7 +37,7 @@ Mathematical sources:
    I apply this below at `r=3` to an actual row triple selected from a determinant-weighted four-row core.
 
 3. **Three-sample volume compiler and stability, fleet02/B02.**  
-   `yspennstate/math-open-problems@d6730c301e46e6337bc3b32e30eb3d04f07dc90b`,  
+   `private-source-repository@d6730c301e46e6337bc3b32e30eb3d04f07dc90b`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T050831Z-fleet02-B02-QFORM-auto11-f98b4bb5/REPORT.md`.  
    For the canonical squared-`3x3`-minor row law of a physical cross block with `Z=E3(M)>0`, let
    
@@ -62,7 +62,7 @@ Mathematical sources:
    The same result applies to columns by transposition.
 
 4. **Physical edge-or-incident-E2 algebra, fleet03/B07.**  
-   `yspennstate/math-open-problems@287729053a28e2b51caa113509e7136c01e3e79d`,  
+   `private-source-repository@287729053a28e2b51caa113509e7136c01e3e79d`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B07/20260923T033734Z-fleet03-B07-qform-r23/REPORT.md`, Lemma `QFORM-PHYSICAL-ROWCOL-EDGE-OR-E2-v1`. If
    
    `M=[[b,r^T],[c,D]]`, `a=||row_i(M)||`, `d=||col_j(M)||`, `F=||M||_F`,
@@ -81,7 +81,7 @@ Mathematical sources:
    `Z_ij=sum_{k!=i,l!=j} det M[{i,k},{j,l}]^2`.               (1.11)
 
 5. **Own preceding Schur-compound sandwich.**  
-   `yspennstate/math-open-problems@885b55c191d2964c24a21d8c5d806e32f24cdb53`, same B07 fleet root, r15. It proves for fixed physical row/column anchors `(i,j)` and all invertible incident physical `2x2` pivots with determinant `d_kl` and Schur residual `S_kl`,
+   `private-source-repository@885b55c191d2964c24a21d8c5d806e32f24cdb53`, same B07 fleet root, r15. It proves for fixed physical row/column anchors `(i,j)` and all invertible incident physical `2x2` pivots with determinant `d_kl` and Schur residual `S_kl`,
    
    `H_(t+2)^(i,j) <= sum d_kl^2 E_t(S_kl) <=(t+1)^2 H_(t+2)^(i,j)`. (1.12)
 

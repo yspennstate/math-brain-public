@@ -16,7 +16,7 @@ Authenticated fleet control was resolved from `yspennstate/math-research-brain` 
 `e2cf6cf6cb8c4941b55a12284a4e69ac75747e3198e0bb34df42ec9f30520aa6`.
 Those two SHA-256 values retain prior exact-byte provenance for the unchanged immutable README blob; they are not relabelled as fresh hashes of connector-rendered JSON.
 
-The first recovered `math-open-problems` master was
+The first recovered `private-source` master was
 `f080552b0e8328c13f865bc6f830e91ee9d5265d`. During the run master advanced, and the latest scientific freshness check before this report saw
 `0f10523935d7447dc059438e90c3f656e81e3f01`, including the fresh affine-tensor direct-product theorem.
 

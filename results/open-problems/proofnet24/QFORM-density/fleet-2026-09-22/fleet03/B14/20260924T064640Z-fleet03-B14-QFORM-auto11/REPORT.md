@@ -17,7 +17,7 @@ This run consumes the live corrections excluding law-uniform pointwise quadratic
 
 The completed designated-partner result actually applied is fleet04/B14 r10:
 
-- source: `yspennstate/math-open-problems@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`;
+- source: `private-source-repository@deb713bc8e6df3f7e0ac5398e8cccbf00d1e7513`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B14/20260924T001624Z-fleet04-B14-scaled-schur-localization-r10/REPORT.md`;
 - theorem: if an original-coordinate `3 x 3` principal block `B` is invertible and `sigma=min_j |lambda_j(B)|`, then `||p_Q||_(infinity,ess)<=6 sqrt(pi)/sigma`, uniformly over all outside curvature, cross-couplings, affine leakage, tails and fragments.
 

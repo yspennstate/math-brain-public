@@ -8,7 +8,7 @@ Source control: `yspennstate/math-research-brain@2a07f73272566942e2ffa8620e16ccf
 
 The full target is: independent real coordinates with densities `f_i<=1`, and a real symmetric matrix `A` with at least three eigenvalues of modulus at least one; prove one dimension- and matrix-independent density bound. Continuity is separate.
 
-This run does **not** use any law-uniform pointwise quadratic Fourier decay, independence after spectral rotation, arbitrary-joint rank-three coarea estimate, or positive moment of scalar-conditioned spectral density height. In particular, fleet02/B15 r6 (`math-open-problems@d00907b4362875219cc3525ceb04f90186b8c065`) gives a fixed target and cap-one product sources for which every positive moment of the scalar-conditioned three-dimensional spectral density height can diverge, while the target output itself stays bounded.
+This run does **not** use any law-uniform pointwise quadratic Fourier decay, independence after spectral rotation, arbitrary-joint rank-three coarea estimate, or positive moment of scalar-conditioned spectral density height. In particular, fleet02/B15 r6 (`private-source@d00907b4362875219cc3525ceb04f90186b8c065`) gives a fixed target and cap-one product sources for which every positive moment of the scalar-conditioned three-dimensional spectral density height can diverge, while the target output itself stays bounded.
 
 ## 2. Physical monotone-pivot lemma
 
@@ -95,7 +95,7 @@ This is substantially stronger than merely knowing a fixed-matrix constant exist
 
 ## 4. Continuity is separate and supplied by the completed partner theorem
 
-The completed fleet02/B15 target-scope regularity theorem (handoff r4; canonical `math-open-problems@28ddaf28bf6779837fb1212a025d8a8b9d329f8a`) proves at worker-candidate scope that every fixed `rank(A)>=3` cap-one product target has a bounded `C_0(R)` density, using an invertible physical principal `3x3` or `4x4` block and dominated outside conditioning. Applying that theorem to the same Hadamard matrix shows that the densities in (3.1) have continuous representatives vanishing at infinity.
+The completed fleet02/B15 target-scope regularity theorem (handoff r4; canonical `private-source@28ddaf28bf6779837fb1212a025d8a8b9d329f8a`) proves at worker-candidate scope that every fixed `rank(A)>=3` cap-one product target has a bounded `C_0(R)` density, using an invertible physical principal `3x3` or `4x4` block and dominated outside conditioning. Applying that theorem to the same Hadamard matrix shows that the densities in (3.1) have continuous representatives vanishing at infinity.
 
 Thus the two assertions are cleanly separated here:
 

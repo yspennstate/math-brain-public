@@ -13,11 +13,11 @@ The first unpaid implication is now `QFORM-SCHUR-NEARRANK1-TRANSVERSE-RECEIVER-v
 
 Fresh owner control remained QFORM-only, revision `2026-09-22.15`.  Required source package:
 
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`;
-- q-dependent sharp-HY continuation `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`;
-- projection-density input `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`;
-- designated partner fleet03/B02 r28, `QFORM-DOUBLEANCHOR-E5-SCHUR-BRIDGE-v1`, canonical mathematics `yspennstate/math-open-problems@3dc52765d1ebb50341bba6a4fea5ca8d68f97372`;
-- compatible grouped-cross result fleet03/B09 r30, `yspennstate/math-open-problems@562304f5ab9c8b19ba586a31e55a5a4535cbe445`.
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`;
+- q-dependent sharp-HY continuation `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`;
+- projection-density input `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`;
+- designated partner fleet03/B02 r28, `QFORM-DOUBLEANCHOR-E5-SCHUR-BRIDGE-v1`, canonical mathematics `private-source-repository@3dc52765d1ebb50341bba6a4fea5ca8d68f97372`;
+- compatible grouped-cross result fleet03/B09 r30, `private-source-repository@562304f5ab9c8b19ba586a31e55a5a4535cbe445`.
 
 I rechecked the q-dependent sharp Hausdorff--Young calculation on its analytic scope.  For a physical cross block `M`, `Z=E3(M)=e3(M^TM)`, if all third-volume row marginals satisfy `alpha_i<=q/2`, `1<=q<3/2`, then
 

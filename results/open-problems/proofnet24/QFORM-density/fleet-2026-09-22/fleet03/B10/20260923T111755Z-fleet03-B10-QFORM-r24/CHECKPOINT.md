@@ -10,7 +10,7 @@ Fresh owner direction assigns B10 to the near-null nonzero coloop interpolation.
 
     ||p_Q||_infinity <= 31 M^(2/3) |beta^2 gamma det B|^(-1/6).
 
-Its source is `yspennstate/math-open-problems@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f` for the exact-null endpoint and the completed near-null interpolation report currently at
+Its source is `private-source-repository@5bf3d5e6765ecd1dd091fc7d862f6f04211c530f` for the exact-null endpoint and the completed near-null interpolation report currently at
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T035943Z-fleet02-B05-QFORM-r21/REPORT.md`.
 
 The B05 report left `|gamma|<1/2` as a mixed-transverse branch. In the exact coloop geometry this branch is actually impossible as an obstruction.

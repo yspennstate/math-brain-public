@@ -27,7 +27,7 @@ Its diagonal-pivot branch has an ORIGINAL coordinate `h` with `|A_hh|>1/228`; th
 
 The newest completed designated partner available at startup is fleet02/B02 auto12,
 
-`yspennstate/math-open-problems@19a3d60ceb5d0989aa527b32d3e76f388b9419f6`,
+`private-source-repository@19a3d60ceb5d0989aa527b32d3e76f388b9419f6`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260924T060210Z-fleet02-B02-QFORM-auto12/REPORT.md`.
 

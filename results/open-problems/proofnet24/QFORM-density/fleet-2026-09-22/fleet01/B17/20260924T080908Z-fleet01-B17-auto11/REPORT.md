@@ -163,7 +163,7 @@ where `G~N(0,Sigma_G)`, `M` is independent of `G`, and Theorem 2 gives `Sigma_G 
 
 The completed designated-partner theorem `QFORM-RANDOM-LOCATION-GAUSSIAN-INDEFINITE-BARRIER-v1` from fleet02/B17, source
 
-`yspennstate/math-open-problems@97d91254e56ad2f8c79b121a0ce8bf66472a11d9:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T074629Z-fleet02-B17-QFORM-auto11/REPORT.md`,
+`private-source-repository@97d91254e56ad2f8c79b121a0ce8bf66472a11d9:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T074629Z-fleet02-B17-QFORM-auto11/REPORT.md`,
 
 therefore gives the actual limit inequality
 
@@ -178,7 +178,7 @@ This is already a broad sharp-witness barrier: any exact-rank-three stress mecha
 
 There is also a finite-stage transfer. By (2.5), eventually every row leverage is at most `1/2`. Apply the completed Fresnel--Brascamp--Lieb Theorem F at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
 with `I` equal to all coordinates. Here `G_I=R_m^TR_m=I_3` and there is no residual quadratic part. Since the active eigenvalue product has absolute value at least one,
 

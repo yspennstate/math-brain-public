@@ -21,7 +21,7 @@ The designated partner is `fleet02/B20`.
 
 The completed run `20260922T182735Z-fleet02-B20-QFORM-r16`, canonical report
 
-`yspennstate/math-open-problems@4bc44879d92221288f5055d31318e9ecb25f4650`
+`private-source-repository@4bc44879d92221288f5055d31318e9ecb25f4650`
 
 at
 
@@ -42,7 +42,7 @@ The partner correctly identified exponent `1/2` as too weak for absolute half-Ri
 
 The newest fleet02/B20 run `20260922T190540Z-fleet02-B20-QFORM-r17`, canonical report
 
-`yspennstate/math-open-problems@23f3d87a9e93f573c201efee403e45ce6c54098a`,
+`private-source-repository@23f3d87a9e93f573c201efee403e45ce6c54098a`,
 
 will be applied after the analytic theorem. It externalizes every analytically unpaid coherent P1 triangle to an outside two-direction packet or a triangle-to-outside cross packet, while retaining a physical pivot `|a|>=m=3501/8000`.
 

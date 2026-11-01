@@ -9,4 +9,4 @@ All checks here are algebraic/numerical diagnostics for proved formulas, not evi
 5. With product-projection caps `M_X=M_Y=2`, the Fourier-L1 coefficient is `44.10206347383454` and the inversion density coefficient is `7.019061402413293`.
 6. With literal two-coordinate banks, `M_X=M_Y=1`, the Fourier-L1 coefficient is `26.22324383469283` and the inversion density coefficient is `4.173558880195433`.
 7. Newest fleet02/B02 partner baseline `8*pi=25.132741228718345`, so its one-sided carrier remains slightly sharper on the stress family, while Theorem 4.1 has the strictly broader two-sided internal-curvature scope.
-8. Exact source pin for the newest partner report: `yspennstate/math-open-problems@1ba45d17ca2552d36aa7cf520125b85f910f392a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260924T041549Z-fleet02-B02-QFORM-auto11/REPORT.md`.
+8. Exact source pin for the newest partner report: `private-source-repository@1ba45d17ca2552d36aa7cf520125b85f910f392a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260924T041549Z-fleet02-B02-QFORM-auto11/REPORT.md`.

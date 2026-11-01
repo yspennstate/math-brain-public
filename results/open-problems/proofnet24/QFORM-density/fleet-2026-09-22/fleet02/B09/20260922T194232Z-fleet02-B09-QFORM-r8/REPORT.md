@@ -15,7 +15,7 @@ The unrestricted theorem remains open. This report proves a new translation-unif
 
 The newest completed named-partner result is fleet03/B09 run `20260922T194535Z-fleet03-B09-QFORM-r16`, theorem `QFORM-THREE-BANK-RANKONE-TRIANGLE-v1`, canonical source
 
-`yspennstate/math-open-problems@5e92c0aa0681b3d24630451076ab511f92dc718c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T194535Z-fleet03-B09-QFORM-r16/REPORT.md`.
+`private-source-repository@5e92c0aa0681b3d24630451076ab511f92dc718c:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T194535Z-fleet03-B09-QFORM-r16/REPORT.md`.
 
 For three disjoint rank-one product banks with aggregate strengths `s_IJ,s_IK,s_JK`, it proves
 

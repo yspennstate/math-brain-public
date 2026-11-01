@@ -12,7 +12,7 @@ The full target remains open: for arbitrary independent real coordinates whose d
 
 This run keeps the live corrections: no law-uniform pointwise Fresnel decay is assumed; no independence is asserted after an orthogonal change of variables; a fixed cross minor is not assumed to follow from the spectral hypothesis; bounded conditional density is not substituted for genuine independence; and the rank-two cross-block endpoint by itself is nonintegrable.
 
-The named partner result actually consumed is fleet03/B02 `QFORM-RANK2-PLUS-PIVOT-FOURIER-v1`, canonical report `yspennstate/math-open-problems@ac57190328fc109873ebe3b17122d835abbc2c3a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T121820Z-fleet03-B02-QFORM-r11/REPORT.md`, blob `cf1b7abb4f9bd91f991db6e54c0c36e92ad6125f`. That theorem closes a `2+1` Fourier configuration when the third physical pivot has **zero couplings** to both sides of an invertible `2x2` cross block. The first implication attacked here is removal of that exact decoupling condition while preserving original-coordinate product provenance.
+The named partner result actually consumed is fleet03/B02 `QFORM-RANK2-PLUS-PIVOT-FOURIER-v1`, canonical report `private-source-repository@ac57190328fc109873ebe3b17122d835abbc2c3a`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T121820Z-fleet03-B02-QFORM-r11/REPORT.md`, blob `cf1b7abb4f9bd91f991db6e54c0c36e92ad6125f`. That theorem closes a `2+1` Fourier configuration when the third physical pivot has **zero couplings** to both sides of an invertible `2x2` cross block. The first implication attacked here is removal of that exact decoupling condition while preserving original-coordinate product provenance.
 
 ## 2. New theorem: a fully coupled 2x3 physical block still closes the Fourier integral
 
@@ -222,9 +222,9 @@ The fixed-small-minor version cannot be silently assumed: existing Walsh/Hadamar
 
 Mathematics actually applied:
 
-- fleet03/B02 `QFORM-RANK2-PLUS-PIVOT-FOURIER-v1`: `yspennstate/math-open-problems@ac57190328fc109873ebe3b17122d835abbc2c3a`, report blob `cf1b7abb4f9bd91f991db6e54c0c36e92ad6125f`;
+- fleet03/B02 `QFORM-RANK2-PLUS-PIVOT-FOURIER-v1`: `private-source-repository@ac57190328fc109873ebe3b17122d835abbc2c3a`, report blob `cf1b7abb4f9bd91f991db6e54c0c36e92ad6125f`;
 - Livshyts--Paouris--Pivovarov, *On sharp bounds for marginal densities of product measures*, arXiv:1507.07949, specifically the bound `2^(k/2)` for a `k`-dimensional marginal of a product density with coordinate factors bounded by one;
-- prior fleet02/B02 physical cross-block Plancherel mechanism: `yspennstate/math-open-problems@400f82c8b98fc5623f567581b6ccb0b4298974e8`.
+- prior fleet02/B02 physical cross-block Plancherel mechanism: `private-source-repository@400f82c8b98fc5623f567581b6ccb0b4298974e8`.
 
 Live correction state consumed before publication includes `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBER-SUP-DIMENSION-LOSS`, `QFORM-NO-INDEPENDENCE-AFTER-ROTATION`, `QFORM-CROSSMINOR-ALONE-FALSE`, `QFORM-UV-CONDITIONAL-CAP-FALSE`, `QFORM-SINGLE-SCHUR-RANK2-EXTRACTION-FALSE`, `QFORM-ABSOLUTE-AMBIGUITY-HOLDER-LOG-LOSS`, and `QFORM-CONDITIONAL-CAP-NOT-INDEPENDENCE-v1`. The present proof does not use any challenged premise.
 

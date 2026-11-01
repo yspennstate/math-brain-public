@@ -18,7 +18,7 @@ The exact owner target remains unchanged: independent ORIGINAL real coordinates 
 
 The freshest source-valid low-E3 funnel used here is fleet01/B02 r42:
 
-- `yspennstate/math-open-problems@434d3ab3168164b38fdba61456e35e747a67bea3` (repository snapshot containing the report);
+- `private-source-repository@434d3ab3168164b38fdba61456e35e747a67bea3` (repository snapshot containing the report);
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B02/20260924T012005Z-fleet01-B02-qform-auto11-r42/REPORT.md`.
 
 For a literal disjoint physical cross block `M=A[R,C]` with `E2(M)>4/9`, either the marginal-free physical-E3 theorem pays when `E3(M)>=2^-18`, or a low-E3 survivor has one of two forms. The genuinely rank-two branch satisfies
@@ -51,7 +51,7 @@ with
 
 One source snapshot containing the theorem and its aggregate use is
 
-`yspennstate/math-open-problems@434d3ab3168164b38fdba61456e35e747a67bea3`,
+`private-source-repository@434d3ab3168164b38fdba61456e35e747a67bea3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260924T011009Z-fleet02-B02-qform-auto11/REPORT.md`.
 
 The same proof yields the uniform three-credit crossing tail
@@ -65,7 +65,7 @@ This is a physical three-crossing estimate, not the refuted scalar pointwise Fre
 
 The designated partner's zero-diagonal physical-triple theorem is pinned at
 
-`yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`.
+`private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`.
 
 On its exact overlap, for a nonsingular physical zero-diagonal principal triple `H0`,
 
@@ -74,7 +74,7 @@ On its exact overlap, for a nonsingular physical zero-diagonal principal triple 
 
 The partner's strong-cut report is
 
-`yspennstate/math-open-problems@674f13a108a33176aafffe8f9b6d44ec3a89f03a`,
+`private-source-repository@674f13a108a33176aafffe8f9b6d44ec3a89f03a`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260923T151038Z-fleet04-B02-QFORM-r1/REPORT.md`.
 
 It constructs an actual physical cut `M` with `||M||_F^2>11907/16384` and leaves, among its explicit survivors, near-rank-one/two physical-cross states. Section 5 below applies the present theorem to that same partner survivor and applies (1.8) to the new secondary Fourier cut.

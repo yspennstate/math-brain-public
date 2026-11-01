@@ -17,15 +17,15 @@ The unrestricted QFORM conjecture remains OPEN. The global continuous-density co
 
 The immediate B08 inputs are:
 
-1. `yspennstate/math-open-problems@a3624cdb18747a63e9e6991d83233c30e1664f4b`,
+1. `private-source-repository@a3624cdb18747a63e9e6991d83233c30e1664f4b`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T190424Z-fleet03-B08-qform-diffuse-r45/REPORT.md`.
    This pays the two-hub common-plane state when the exact two-hub Schur mismatch has nonzero rank-two area, and separately pays the exact physical-hub block `B=0`.  It leaves singular/near-singular nonzero hub blocks and the rank-at-most-one Schur-mismatch surface.
 
-2. `yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,
+2. `private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,
    `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
    Section 1 proves the exact-rank crossing characteristic-function estimate with arbitrary same-bank functions.  The owner continuation records this projected-crossing bundle as independently reviewed.  I use only the rank-one specialization and the scalar orthonormal-projection density cap `sqrt(2)`.
 
-3. `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+3. `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
    Its general physical-indefinite-pair implication says that if, after exact completion of an invertible indefinite physical pair, the remainder `R` satisfies
 
@@ -233,7 +233,7 @@ Continuity of this family is not claimed from the current argument; (5.6) is an 
 
 The designated completed partner theorem is
 
-`yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`,
+`private-source-repository@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T091414Z-fleet04-B08-QFORM-r1/REPORT.md`.
 
 For the exact original-coordinate anisotropic family

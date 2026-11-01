@@ -10,7 +10,7 @@
 The target remains: for every `n`, independent real `X_i` with densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove that `Q=X^TAX` has a density with a universal `L^infinity` bound, or give a valid counterexample. No moment, support, Gaussian, log-concavity, compactness, connected-support, or diagonal-basis assumption is introduced. Rotating the input coordinates is never used as an independence-preserving operation.
 
 
-Immediate predecessor: fleet01/B06 r48, canonical mathematics `yspennstate/math-open-problems@abcdb34fb8b6994835f829536f058701b2a65fea`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T060138Z-fleet01-B06-QFORM-r48/REPORT.md`. Its theorem `QFORM-RANK1-PHYSICAL-PAIR-TRANSVERSE-SLOPE-v1` states that for a literal original-coordinate physical pair with rank-one quadratic block `P=theta vv^T`, null unit vector `w`, and complete complement cross vector `q=A[J,J^c]^T w`, one has
+Immediate predecessor: fleet01/B06 r48, canonical mathematics `private-source-repository@abcdb34fb8b6994835f829536f058701b2a65fea`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T060138Z-fleet01-B06-QFORM-r48/REPORT.md`. Its theorem `QFORM-RANK1-PHYSICAL-PAIR-TRANSVERSE-SLOPE-v1` states that for a literal original-coordinate physical pair with rank-one quadratic block `P=theta vv^T`, null unit vector `w`, and complete complement cross vector `q=A[J,J^c]^T w`, one has
 
 `||p_Q||_infinity <= C_par (|theta| ||q||_2)^(-1/2)`,
 
@@ -20,7 +20,7 @@ where
 
 with completely arbitrary same-complement quadratic curvature retained.
 
-Designated partner actually applied below: fleet02/B06 r13, canonical mathematics `yspennstate/math-open-problems@bc7c60dbcb335ba3b18748816a62b026dc8ef4ab`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/fleet02-B06-20260924T052646Z-auto11-r13/REPORT.md`. In its three-hub normal form it proves the complete P1 mixed-minor aggregate
+Designated partner actually applied below: fleet02/B06 r13, canonical mathematics `private-source-repository@bc7c60dbcb335ba3b18748816a62b026dc8ef4ab`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/fleet02-B06-20260924T052646Z-auto11-r13/REPORT.md`. In its three-hub normal form it proves the complete P1 mixed-minor aggregate
 
 `Lambda_1 = sum_h ||R_h||_2^2 = beta^2 tr(adj(N) G adj(N)^T)`
 
@@ -300,7 +300,7 @@ New theorem IDs:
 - `QFORM-P1-SINGULAR-PAIR-CURVED-RECEIVER-v1`;
 - `QFORM-P1-EXACT-SINGULAR-AGGREGATE-PAYMENT-v1`.
 
-Partner actually applied: fleet02/B06 r13, `QFORM-P1-MIXED-CROSSMINOR-AGGREGATE-v1` / `QFORM-P1-AGGREGATE-SURVIVAL-v1`, source `yspennstate/math-open-problems@bc7c60dbcb335ba3b18748816a62b026dc8ef4ab`.
+Partner actually applied: fleet02/B06 r13, `QFORM-P1-MIXED-CROSSMINOR-AGGREGATE-v1` / `QFORM-P1-AGGREGATE-SURVIVAL-v1`, source `private-source-repository@bc7c60dbcb335ba3b18748816a62b026dc8ef4ab`.
 
 Full target: **OPEN**.  
 Continuous-density conclusion: **OPEN globally**.  

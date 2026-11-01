@@ -14,7 +14,7 @@ The full conjecture remains open. This report works only in the exact-rank-three
 
 The completed named partner `fleet03/B10`, run r15, source
 
-`yspennstate/math-open-problems@a3dd62b198d84dc9b92653b8a9c77494fc6ed2d4`,
+`private-source-repository@a3dd62b198d84dc9b92653b8a9c77494fc6ed2d4`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T191739Z-fleet03-B10-QFORM-r15/REPORT.md`,
 
@@ -28,7 +28,7 @@ where
 
 The preceding fleet02/B10 theorem, canonical source
 
-`yspennstate/math-open-problems@b539c58ee7c0f4c09fe8a061b14a48ba279ae4`,
+`private-source-repository@b539c58ee7c0f4c09fe8a061b14a48ba279ae4`,
 
 proved that if any complementary row has residual leverage
 
@@ -42,7 +42,7 @@ The new step below is to convert (1.3) into two **disjoint original-coordinate b
 
 I also use, only in its proved scope, the product marginal theorem as source-pinned in fleet03/B09 r11,
 
-`yspennstate/math-open-problems@41fc39eccdd44a0dcae6619676bf41f5ea21bb3e`,
+`private-source-repository@41fc39eccdd44a0dcae6619676bf41f5ea21bb3e`,
 
 which gives joint density at most `2` for every two-dimensional orthogonal projection of independent cap-one coordinates. The same source proves the exact Pluecker/random-split identities for rank-two product blocks.
 

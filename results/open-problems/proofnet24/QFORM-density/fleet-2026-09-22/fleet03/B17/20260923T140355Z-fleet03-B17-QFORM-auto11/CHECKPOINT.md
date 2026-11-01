@@ -10,7 +10,7 @@ Y_j=m_j^{-1/2}\sum_{k=1}^{m_j}X_{jk},\qquad X_{jk}\sim\mathrm{Unif}[-1/2,1/2]
 independently. Let `J=diag(1,1,-1)`, `O\in O(3)`, `B=O^TJO`, and let `R` repeat the physical row `e_j/sqrt(m_j)` in bank `j`. Then `R^TR=I_3`, so `A=RBR^T` has exact nonzero spectrum `{1,1,-1}` and all input densities have cap one.
 
 Using the weighted local Edgeworth lemma proved in fleet04/B17 at
-`yspennstate/math-open-problems@2156b76156ad5956c214a881fcfd6d977d6f3b9f`,
+`private-source-repository@2156b76156ad5956c214a881fcfd6d977d6f3b9f`,
 write
 \[
 g_{m_j}(y)=\gamma_\sigma(y)\Bigl[1-\frac1{20m_j}H_4(y/\sigma)\Bigr]

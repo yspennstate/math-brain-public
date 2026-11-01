@@ -1,6 +1,6 @@
 # P20: radial inverse-source criterion from the 100-agent review
 
-This is an append-only cross-reference to the complete new proof in [agent 105](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/portfolio-completion/runs/2026-09-14/2026-09-14_20-23-26/agents/105.md), Git blob `cf9813d491f65884742f303aeccd0b34d6e254cf`. The full derivation, source snapshot, exact arithmetic checks and limitations are retained there.
+This is an append-only cross-reference to the complete new proof in [agent 105](private-source-repository), Git blob `cf9813d491f65884742f303aeccd0b34d6e254cf`. The full derivation, source snapshot, exact arithmetic checks and limitations are retained there.
 
 For the actual independent radial coordinates
 \[
@@ -24,4 +24,4 @@ A separate explicit deterministic invertible family shows that centered contract
 
 **Remaining task:** prove the displayed weighted contraction and mean-direction condition for the actual harmonic inverse or the required selected-bottom map. The report does not prove expectation-level \(O(1/d)\), the remaining spectral/secular and graph-factor steps, or the full fixed-\(t\) hard-edge law.
 
-The [complete report](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/portfolio-completion/runs/2026-09-14/2026-09-14_20-23-26/agents/105.md) compares the P20 and later P22 source reports at immutable baseline `4c708781adf206a4d28b7e3027365ba2b735c12d`. Its [exact check source](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/portfolio-completion/runs/2026-09-14/2026-09-14_20-23-26/computations/105_inverse_source_exact.js) and [recorded output](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/portfolio-completion/runs/2026-09-14/2026-09-14_20-23-26/computations/105_inverse_source_exact_output.json) contain 134 exact arithmetic checks. The probability theorem is established analytically, not by those finite checks. Historical priority and formal verification are not claimed.
+The [complete report](private-source-repository) compares the P20 and later P22 source reports at immutable baseline `4c708781adf206a4d28b7e3027365ba2b735c12d`. Its [exact check source](private-source-repository) and [recorded output](private-source-repository) contain 134 exact arithmetic checks. The probability theorem is established analytically, not by those finite checks. Historical priority and formal verification are not claimed.

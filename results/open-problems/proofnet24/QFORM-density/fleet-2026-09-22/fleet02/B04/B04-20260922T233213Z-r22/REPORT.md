@@ -13,9 +13,9 @@ Corrections consumed include the live `QFORM-POINTWISE-DECAY-FALSE`, `QFORM-FIBE
 
 Two completed sources are used at equation level:
 
-1. fleet02/B06, `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. If `U` has `r` orthonormal columns and `X` is an original-coordinate cap-one product vector, `U^T X` has an `r`-dimensional density bounded by `exp(r/2)`.
+1. fleet02/B06, `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T155426Z-9fd56fa68a65/REPORT.md`. If `U` has `r` orthonormal columns and `X` is an original-coordinate cap-one product vector, `U^T X` has an `r`-dimensional density bounded by `exp(r/2)`.
 
-2. Named partner fleet03/B04 r20, `QFORM-SQUARE-RANKR-CLEANBANK-LINF-v1`, `yspennstate/math-open-problems@52dbe47e8a0ed76734162216e4446595bba201d9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T225115Z-r20/REPORT.md`. For a one-quadratically-clean residual bank with two cross singular values at least `sigma`, it gives
+2. Named partner fleet03/B04 r20, `QFORM-SQUARE-RANKR-CLEANBANK-LINF-v1`, `private-source-repository@52dbe47e8a0ed76734162216e4446595bba201d9`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/B04-20260922T225115Z-r20/REPORT.md`. For a one-quadratically-clean residual bank with two cross singular values at least `sigma`, it gives
 
 `||p_Q||_infinity <= 5.749943550416816 / sqrt(|a| sigma)`.
 

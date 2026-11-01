@@ -29,7 +29,7 @@ The Walsh family in Section 5 shows that the second warning is real.
 
 The newest completed localized/diffuse B08 source used here is fleet01/B08 r48,
 
-`yspennstate/math-open-problems@6aeabdd6343abdea18945673eafbb3ed9fa42fe5`,
+`private-source-repository@6aeabdd6343abdea18945673eafbb3ed9fa42fe5`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B08/20260924T094957Z-fleet01-B08-qform-r48/REPORT.md`.
 
 Its exact selected spectral component is `A_3=U Lambda U^T`, with three actual eigenvalues of modulus at least `L`. In the two-mode complementary-cancellation branch it proves
@@ -53,7 +53,7 @@ and sixteen disjoint original-coordinate banks `J_1,...,J_16 subset T` satisfyin
 
 The newest completed designated partner is fleet03/B08 r51,
 
-`yspennstate/math-open-problems@b72d0f5814183fc536c65a4b9dbbbec4ae93d611`,
+`private-source-repository@b72d0f5814183fc536c65a4b9dbbbec4ae93d611`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T092359Z-fleet03-B08-qform-diffuse-r51/REPORT.md`.
 
 It works in the same thin-puncture hub/child state
@@ -237,7 +237,7 @@ No uniformly conditioned physical pair is hidden here. A hub-light `2x2` princip
 
 Use Theorem F from the pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 Take the light coordinates as `I`, the three selected child squares as the rank-three frame `(u,v,w)` with coefficients `(L,L,eps L)`, and put the hub coordinate in `J`. The hub-star terms are then in the arbitrary `I-J` block, while the remaining `I-I` term is diagonal (zero). Since every light-row leverage is `3/m<=1/2` and `G_I=I_3`, Theorem F gives, for every admissible cap-one product source,

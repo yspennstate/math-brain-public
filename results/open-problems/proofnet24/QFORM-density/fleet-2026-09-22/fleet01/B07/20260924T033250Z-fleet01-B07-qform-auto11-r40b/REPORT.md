@@ -14,7 +14,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The incoming B07 theorem is fleet01/B07 r39,
 
-`yspennstate/math-open-problems@ce8f5fb778ae6f29b4b99ee9574360f71f584c68`,
+`private-source-repository@ce8f5fb778ae6f29b4b99ee9574360f71f584c68`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B07/20260924T020937Z-fleet01-B07-qform-auto11-r39/REPORT.md`.
 
@@ -40,7 +40,7 @@ The present run treats the exact singular face `delta=0` and, crucially, uses th
 
 The newest completed designated partner actually consumed is fleet02/B07,
 
-`yspennstate/math-open-problems@ec29bb4321feffe020e5cb0185d148f2f6de847e`,
+`private-source-repository@ec29bb4321feffe020e5cb0185d148f2f6de847e`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260924T013622Z-fleet02-B07-qform-auto11/REPORT.md`.
 
@@ -121,7 +121,7 @@ So the exact-singular survivor contains a constant complete overlap-two packet e
 
 A newer completed theorem from fleet02/B09,
 
-`yspennstate/math-open-problems@9c6683c03c8b0dbd635314109854871448343055`,
+`private-source-repository@9c6683c03c8b0dbd635314109854871448343055`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260924T021301Z-fleet02-B09-QFORM-r16/REPORT.md`,
 

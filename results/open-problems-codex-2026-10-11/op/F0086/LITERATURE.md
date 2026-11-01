@@ -82,7 +82,7 @@ No claim about the contents of the citing-works list is made.
   Their open-status statement was stale in light of Branden (2012).
   Their immanant speculation was not relied on.
 * Searched codex_pool_2026_10_10 for F0086: no matching output.
-* git ls-tree -r --name-only origin/master in math-open-problems and filtered
+* git ls-tree -r --name-only origin/master in private-source and filtered
   for F0086/f0086: no matching problem artifact found. Working tree untouched.
 
 ## Decision

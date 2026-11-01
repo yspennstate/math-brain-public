@@ -18,7 +18,7 @@ A=RMR^T,\qquad R^TR=I_3,\qquad s:=\min_a|\lambda_a(M)|\ge1,
 \]
 with signature `(2,1)` or `(1,2)`.
 
-From fleet03/B11 r41 (`yspennstate/math-open-problems@7120df98e7d30de603f45a8823fb02d25564f218`), the true-near-coloop construction supplies a literal original-coordinate bank `H` for which
+From fleet03/B11 r41 (`private-source-repository@7120df98e7d30de603f45a8823fb02d25564f218`), the true-near-coloop construction supplies a literal original-coordinate bank `H` for which
 
 \[
 \Gamma_H:=R_H^TR_H,\qquad
@@ -56,7 +56,7 @@ z_i:=E^Te_i,\qquad q_i:=\|z_i\|^2.
 \]
 Thus `P:=EE^T` is an orthogonal projection, `P_ii=q_i`, and `sum_i q_i=3`.
 
-From fleet03/B11 r42 (`yspennstate/math-open-problems@8207aee23be9554e960f48d82c2e706eacc50c04`), in the only branch not already paid by aggregate physical third-volume one has
+From fleet03/B11 r42 (`private-source-repository@8207aee23be9554e960f48d82c2e706eacc50c04`), in the only branch not already paid by aggregate physical third-volume one has
 
 \[
 J:=\{i\in H:q_i>3/4\},\qquad 1\le |J|\le3,
@@ -89,7 +89,7 @@ Hence any full argument must supply a genuine third smoothing resource.
 
 The completed designated-partner result fleet04/B11 r6 is
 
-`yspennstate/math-open-problems@30555c1ca97752e10f5089ccd95f8514c704be5a`
+`private-source-repository@30555c1ca97752e10f5089ccd95f8514c704be5a`
 
 at
 
@@ -261,7 +261,7 @@ QED.
 
 For the full exact-rank-three form, the completed orientation-free scalar-pivot theorem `QFORM-RANK3-ALL-RESIDUAL-ORIENTATIONS-v1` from
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a:proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`
 
 states
 
@@ -373,7 +373,7 @@ while Weyl's inequality relative to
 
 Apply the completed exact-rank-three pair-log theorem `QFORM-PAIR-LOG` from
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`,
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f:proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`,
 
 \[
 \|p_Q\|_\infty

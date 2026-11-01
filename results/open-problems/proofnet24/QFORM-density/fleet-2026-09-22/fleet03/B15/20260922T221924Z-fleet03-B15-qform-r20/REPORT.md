@@ -23,7 +23,7 @@ The new result is not the missing universal inequality. It gives a no-loss targe
 
 Completed partner `fleet04/B15`:
 
-- repository/commit: `yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`;
+- repository/commit: `private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`.
 
 For the Gaussian kernel
@@ -350,7 +350,7 @@ directly, while the original-coordinate product/shift geometry is still present,
 The exact tent inequality (5.4), uniformly over all scales, proves **essential boundedness** and absolute continuity by Theorem 3.2. It does **not**, by itself, imply that the resulting `L^infinity` density has a continuous representative. This separation is important.
 
 A separate completed fleet02/B15 report,
-`yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`, gives a fixed-matrix `C_0` theorem for rank `>=3` product targets with matrix-dependent height constants. Thus the current archive contains a target-wide qualitative continuity proof, while the shared top-level `CLAIMS.json` has not yet been promoted from `OPEN` for the continuity claim. This report does not use that qualitative continuity statement to infer the missing universal height.
+`private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`, gives a fixed-matrix `C_0` theorem for rank `>=3` product targets with matrix-dependent height constants. Thus the current archive contains a target-wide qualitative continuity proof, while the shared top-level `CLAIMS.json` has not yet been promoted from `OPEN` for the continuity claim. This report does not use that qualitative continuity statement to infer the missing universal height.
 
 For a fixed instance already known to have `p in C_0`, the tent approximate identity satisfies
 

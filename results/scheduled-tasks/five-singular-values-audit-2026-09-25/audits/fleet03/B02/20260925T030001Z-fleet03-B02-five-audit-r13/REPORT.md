@@ -1,5 +1,5 @@
 # fleet03/B02 r13 audit
-Source: yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short/short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, PDF SHA256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
+Source: private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c, short/short.tex blob c4f2a997cf336ee974e15409b5bccdd8cca039d8, PDF SHA256 4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423.
 
 Pass 1 coverage is now complete: bibliography lines 651-671 independently verified; line 62 current-open-status remains GAP/UNVERIFIED (no source-matching settlement found, but negative search does not prove openness). Literal local issues retained C01-C07; no fatal theorem counterexample found after local proof repairs.
 

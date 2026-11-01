@@ -19,7 +19,7 @@ Fresh owner control remained revision `2026-09-22.15`, QFORM-only, with no fleet
 
 ### 2.1 Required 20260922T211500Z Fourier package
 
-Pinned source: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
+Pinned source: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 Two exact interfaces are used.
 
@@ -35,7 +35,7 @@ Second, Theorems D, D' and D5 spend third/fifth cross volume. Section 4 below ap
 
 ### 2.2 Previous bilateral projected-Plancherel receiver
 
-Source: `yspennstate/math-open-problems@5aaab64e61035d0ccb3be7f947e50f55d9a4711b`, fleet02/B01 r36.
+Source: `private-source-repository@5aaab64e61035d0ccb3be7f947e50f55d9a4711b`, fleet02/B01 r36.
 
 For a residual quadratic polynomial on two disjoint ORIGINAL-coordinate banks whose physical cross block has exact rank two with nonzero singular values `sigma_1,sigma_2`, arbitrary same-bank quadratic curvature and affine terms are allowed and
 
@@ -49,7 +49,7 @@ then integrates only after inserting the half-Riesz weight. This is the oscillat
 
 ### 2.3 Newest designated partner fleet03/B01
 
-Source: `yspennstate/math-open-problems@d78ae0f6e38047072728cc9a0c53d3499d242222`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T212842Z-auto11/REPORT.md`.
+Source: `private-source-repository@d78ae0f6e38047072728cc9a0c53d3499d242222`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T212842Z-auto11/REPORT.md`.
 
 The partner proves scalar-Schur singular-value persistence and the following high-physical-diagonal routing at threshold `alpha=beta=1/64`. If `s_3(A)>=1` and some literal physical diagonal satisfies `|A_ii|>=1/64`, then either
 

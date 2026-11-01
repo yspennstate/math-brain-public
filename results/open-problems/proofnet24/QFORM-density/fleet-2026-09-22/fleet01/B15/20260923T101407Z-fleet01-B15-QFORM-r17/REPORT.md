@@ -23,7 +23,7 @@ Completed partner results used at equations below:
    
    for every interval `I`. The source proves the rough-input passage by cap-preserving mollification and total variation. It retains arbitrary outside quadratic coefficients and cross couplings and does not invoke continuity or independence after rotation.
 
-2. **Fixed-instance regularity theorem**, `fleet02/B15`, `math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`, path
+2. **Fixed-instance regularity theorem**, `fleet02/B15`, `private-source@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`. At its stated scope, every fixed symmetric `A` with `rank(A)>=3` and every cap-one product source has an instance-dependent bounded density with a representative in `C_0(R)`. Its constants are matrix-dependent and do **not** prove the universal-height conjecture.
 
 Corrections preserved throughout: no law-uniform pointwise quadratic Fourier decay; no independence after spectral rotation; no arbitrary-joint coarea shortcut; no projection/X-ray-only replacement of the product-sensitive curved trace; no assumption that one physical minor is uniformly conditioned.

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-13 — F0013 multi-prime row exposure after stuck recovery 1
 
 Date: 2026-09-18 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track: `NM13-13`  
 Category: `HARD OUTSIDE`  
 Canonical source / claim: `F0013` / `operations/claims/F0013.md`  

@@ -17,12 +17,12 @@ All random coordinates in the argument are literal ORIGINAL product coordinates.
 The completed mathematical inputs are:
 
 1. **Principal-minimal same-constant descent**, fleet03/B19 r43:  
-   `yspennstate/math-open-problems@ef38106705da5fab5a2fb6dbdd64745206580f62`,  
+   `private-source-repository@ef38106705da5fab5a2fb6dbdd64745206580f62`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T220120Z-fleet03-B19-QFORM-r43/REPORT.md`.  
    This reduces a full affine interval theorem, without constant loss, to ORIGINAL-coordinate principal-minimal targets. It is used only as proof-assembly context, not as an extra hypothesis below.
 
 2. **Exact singular physical pair with arbitrary leaf curvature**, fleet01/B09:  
-   `yspennstate/math-open-problems@6eb2e227445e7d165e7359d2157988867ae61e56`,  
+   `private-source-repository@6eb2e227445e7d165e7359d2157988867ae61e56`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260924T015544Z-fleet01-B09-QFORM-auto11/REPORT.md`.  
    In the exact rank-one pair/rank-one cross geometry it proves
    \[
@@ -35,7 +35,7 @@ The completed mathematical inputs are:
    This is the chamber attacked here.
 
 3. **Marginal-free physical third-volume receiver and aggregate E3 compiler**, fleet02/B19:  
-   `yspennstate/math-open-problems@5633a44f2d0dfefe54240878bc9deb46d315109c`,  
+   `private-source-repository@5633a44f2d0dfefe54240878bc9deb46d315109c`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/fleet02-B19-20260923T231057Z-auto11/REPORT.md`.  
    For any literal disjoint physical cross block `N`, its cited completed Fourier theorem gives
    \[
@@ -50,12 +50,12 @@ The completed mathematical inputs are:
    and this branch has a continuous `C_0` density.
 
 4. **Our preceding two-star alignment compiler**, fleet03/B19 r46:  
-   `yspennstate/math-open-problems@628222e360badf19079bf4e36c2122d894669e57`,  
+   `private-source-repository@628222e360badf19079bf4e36c2122d894669e57`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T010216Z-fleet03-B19-QFORM-r46/REPORT.md`.  
    It established the exact appended-star Cauchy--Binet mechanism and routed the two-star packet either to physical E3 or to a rank-two crossing whose one factor is aligned with a literal physical star. The present run reuses that mechanism in the new large-leaf-curvature endpoint.
 
 5. **Designated partner fleet04/B19**, adaptive exact-null-coloop theorem:  
-   `yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,  
+   `private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`,  
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.  
    In its exact residual-diffuse rank-three null-coloop normal form, for `0<D<=1` and `|det M|>=1`,
    \[
@@ -63,7 +63,7 @@ The completed mathematical inputs are:
    \]
    with continuous density. This scope is not enlarged here.
 
-The designated partner's later moving-ridge barrier, `math-open-problems@dbadc6024c1dbcafa4269688b2a21cc5c3b25dd0`, is also retained as a correction boundary: forgetting original-product provenance and keeping merely a bounded joint density cannot close the surviving ridge geometry.
+The designated partner's later moving-ridge barrier, `private-source@dbadc6024c1dbcafa4269688b2a21cc5c3b25dd0`, is also retained as a correction boundary: forgetting original-product provenance and keeping merely a bounded joint density cannot close the surviving ridge geometry.
 
 ## 2. Setup: the exact singular-pair endpoint
 

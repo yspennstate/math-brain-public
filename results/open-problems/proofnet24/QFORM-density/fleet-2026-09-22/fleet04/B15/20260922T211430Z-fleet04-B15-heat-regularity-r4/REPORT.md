@@ -168,7 +168,7 @@ without the factor \(\sqrt{2\pi e}\) by Theorem 3.1.
 The completed partner result is fleet01/B15 r13:
 
 - canonical commit:
-  `yspennstate/math-open-problems@1b7a876f7577cf99599322926154ce0032a034fd`;
+  `private-source-repository@1b7a876f7577cf99599322926154ce0032a034fd`;
 - path:
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260922T210451Z-fleet01-B15-qform-r13/REPORT.md`.
 
@@ -215,7 +215,7 @@ The normalization is exact: if \(s=s_3(A)\ge1\) and \(A_0=A/s\), then
 ## 6. Regularity ledger
 
 The completed fleet02/B15 theorem
-(`yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`)
+(`private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`)
 proves that every fixed rank-\(\ge3\) target instance has
 \[
 p_Q\in C_0(\mathbb R)\cap L^\infty(\mathbb R),

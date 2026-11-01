@@ -23,7 +23,7 @@ The newest owner continuation also asks B01 specifically for a frequency-average
 
 The completed source is
 
-`yspennstate/math-open-problems@21cf221fb1e8b99c99298fb11a0d5a41a8382aba`,
+`private-source-repository@21cf221fb1e8b99c99298fb11a0d5a41a8382aba`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T054511Z-fleet01-B01-qform-auto11b/REPORT.md`.
 
 It proves at `beta=1/4` that, for
@@ -43,7 +43,7 @@ Its proof records two ingredients valid for every `0<beta<1/2`: the mixed-order 
 
 The required pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`
 
 was reread together with its compatible current state. Its Theorem F is applied in Section 6 to the diffuse strict-N3 stress family, giving the actual joint-frequency inequality
@@ -56,7 +56,7 @@ and hence `||p_Q||inf<=12*2^(-1/3)`. This is a three-direction Brascamp-Lieb/Fre
 
 Partner source:
 
-`yspennstate/math-open-problems@c65e53a795f4f47c223a21698549857342bd1b5f`,
+`private-source-repository@c65e53a795f4f47c223a21698549857342bd1b5f`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T052757Z-auto11/REPORT.md`.
 
 For a three-original-coordinate center with rank-two cross block `K`, `Delta=sigma_1(K)sigma_2(K)>0`, kernel unit vector `v`, and transverse curvature `d=|v^T Bv|>0`, its logarithmic endpoint theorem gives

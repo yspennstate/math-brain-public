@@ -17,20 +17,20 @@ Fresh control was read from `math-research-brain` main at
 
 The Claude inputs are used at their proved scopes:
 
-- `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+- `private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
   `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
   This contains Theorem D, D' (with marginal threshold (h<3/4)),
   the finite-dimensional estimates, mixed Fresnel/hub tools, and the
   ruled-side theorem. It explicitly says the conjecture is open.
 - The corrected synthesis and Gaussian-padding/N3 reduction are at
-  `math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`.
+  `private-source@472b70df7d1edbb3afac23269bc2e4368ae0e371`.
   It does not prove N3.
 - The one-sheet ruled estimate is independently realized at
-  `math-open-problems@6cc61cf326bd672c2177cc0411a5ce7291eafe16`.
+  `private-source@6cc61cf326bd672c2177cc0411a5ce7291eafe16`.
   For signature ((2,1)), it bounds only (sge0) by (pisqrt2);
   signs reverse for ((1,2)).
 - The newest designated fleet01/B19 result is
-  `math-open-problems@d037aee47f5f73abf078021e69478a2ebece1700`,
+  `private-source@d037aee47f5f73abf078021e69478a2ebece1700`,
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B19/20260923T035138Z-fleet01-B19-QFORM-r11/REPORT.md`.
 
 ## 2. Compact noncircular proof graph

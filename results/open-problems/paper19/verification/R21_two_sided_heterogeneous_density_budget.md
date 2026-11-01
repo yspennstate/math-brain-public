@@ -78,7 +78,7 @@ stale citation state, followed by the needed `pdflatex` passes from `paper19/`.
 The final standalone PDF is 36 pages / 577,951 bytes.
 
 `pdflatex -interaction=nonstopmode -halt-on-error master.tex` was run from
-`math-open-problems-fleet/master/`; the final master PDF is 853 pages /
+`private-source-fleet/master/`; the final master PDF is 853 pages /
 7,758,359 bytes and was copied to `~/Downloads/master.pdf`.
 
 Targeted log scans found no LaTeX errors, undefined control sequences,

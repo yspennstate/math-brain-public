@@ -1,6 +1,6 @@
 # r38 late-source refresh note
 
-Immediately before publication I re-resolved `math-open-problems/master` and consumed the newer completed fleet01/B09 run
+Immediately before publication I re-resolved `private-source/master` and consumed the newer completed fleet01/B09 run
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B09/20260923T174734Z-fleet01-B09-QFORM-auto11/REPORT.md`
 

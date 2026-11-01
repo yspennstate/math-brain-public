@@ -21,19 +21,19 @@ The live corrections were reread. In addition to the standing pointwise-decay, a
 ## 2. Inputs actually used
 
 1. **Own preceding diffuse theorem.** fleet03/B08 r24,
-   `yspennstate/math-open-problems@1bf6f41d81ffddcc6e8ff93b4df165d0ce5bbd05`,
+   `private-source-repository@1bf6f41d81ffddcc6e8ff93b4df165d0ce5bbd05`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260922T231729Z-fleet03-B08-qform-diffuse-r24/REPORT.md`.
    It supplied the balanced-cut curvature transfer, but its proposed multiscale recursion is *not* used below.
 
 2. **Overlap-aware coordinate banks.** fleet03/B07,
-   `yspennstate/math-open-problems@391688138f7f481a2c8688c2d27f9508db7af6af`.
+   `private-source-repository@391688138f7f481a2c8688c2d27f9508db7af6af`.
    For the overlap energies
    `E_q(A)=sum_{|I|=|J|=3, |I cap J|=q} det A[I,J]^2`,
    it proves finite disjoint original-coordinate bank extractions with factors
    `1/1296`, `4/3125`, `1/128`, `2/9` for `q=0,1,2,3`, respectively.
 
 3. **Regularized cross-block determinant theorem.** interactive source
-   `yspennstate/math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`.
+   `private-source-repository@a302aab3477c64757b511e80d3907f982e04873a`.
    If `B=A[I,J]` is an original-coordinate cross block and for some `1<=q<2`
    the coordinate diagonal of the projection onto `range(B)` on one side is at most `q/2`, then
    `|phi_Q(t)| <= det(I+2q t^2 BB^T/(pi^2 e^2))^(-1/(4q))`,
@@ -41,7 +41,7 @@ The live corrections were reread. In addition to the standing pointwise-decay, a
 
 4. **Compatible completed fleet04 result actually applied.** The designated `fleet04/B08` current-QFORM report/handoff is still absent, so none is fabricated. I apply fleet04/B01,
    `QFORM-GROUPED-SQUARE-INNOVATIONS-v1`,
-   `yspennstate/math-open-problems@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`,
+   `private-source-repository@88003dc06af684cc4bc178a7dfe8e7cbebb0f987`,
    to a genuine diffuse target family in Section 7.
 
 ## 3. Pluecker law of the selected three-eigenspace

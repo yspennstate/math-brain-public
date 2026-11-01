@@ -12,10 +12,10 @@ The full target remains: for arbitrary dimension, arbitrary independent real coo
 
 Source-valid routes used here are:
 
-1. `fleet03/B19` (named partner), canonical package `math-open-problems@f600d39b2e88b14acf5af050076e1062cc33f1f6`, proves the critical rank-two `L^3` bridge for diffuse residual frames and closes the localized exact-rank-three branch when the whitened Schur residual is diffuse.
-2. `fleet01/B19`, canonical package `math-open-problems@2a3b747c13a2c39364c59d93f9bb2192b78cde7c`, proves the balanced-cut self/cross resource theorem for any selected three large eigenvectors, retaining arbitrary extra spectrum. Its first unpaid branch is the mixed rank-budget profile (`1 self + 2 cross` or `2 self + 1 cross`) and rank-three-cross with heavy range.
-3. The interactive regularized-determinant theorem, canonical package `math-open-problems@a302aab3477c64757b511e80d3907f982e04873a`, pays five general cross directions, or three cross directions under the stated fractional leverage condition, and proves the full-spectrum entire-range-diffuse branch.
-4. This worker's preceding theorem `QFORM-DEPENDENT-AGGREGATE-HYPERBOLIC-SQUARE-v1`, canonical package `math-open-problems@23b520c19dd0e43cbff0fc0514a4dbfcd637b0f4`, proves
+1. `fleet03/B19` (named partner), canonical package `private-source@f600d39b2e88b14acf5af050076e1062cc33f1f6`, proves the critical rank-two `L^3` bridge for diffuse residual frames and closes the localized exact-rank-three branch when the whitened Schur residual is diffuse.
+2. `fleet01/B19`, canonical package `private-source@2a3b747c13a2c39364c59d93f9bb2192b78cde7c`, proves the balanced-cut self/cross resource theorem for any selected three large eigenvectors, retaining arbitrary extra spectrum. Its first unpaid branch is the mixed rank-budget profile (`1 self + 2 cross` or `2 self + 1 cross`) and rank-three-cross with heavy range.
+3. The interactive regularized-determinant theorem, canonical package `private-source@a302aab3477c64757b511e80d3907f982e04873a`, pays five general cross directions, or three cross directions under the stated fractional leverage condition, and proves the full-spectrum entire-range-diffuse branch.
+4. This worker's preceding theorem `QFORM-DEPENDENT-AGGREGATE-HYPERBOLIC-SQUARE-v1`, canonical package `private-source@23b520c19dd0e43cbff0fc0514a4dbfcd637b0f4`, proves
 
 `||p_{2 alpha X Y + H(Y) + beta (Z+theta(Y))^2}||_infinity <= 6 M^(2/3)|alpha|^(-2/3)|beta|^(-1/3)`
 

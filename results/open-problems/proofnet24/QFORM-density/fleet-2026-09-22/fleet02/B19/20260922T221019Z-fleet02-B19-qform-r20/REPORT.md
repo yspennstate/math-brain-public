@@ -17,7 +17,7 @@ The live correction inbox was reread before this report. The argument below does
 
 The current named partner is fleet03/B19 r18, canonical mathematics
 
-`yspennstate/math-open-problems@4caa949abfce263bcfdcdf7fe175a4a999ae35b5`
+`private-source-repository@4caa949abfce263bcfdcdf7fe175a4a999ae35b5`
 
 at
 
@@ -31,7 +31,7 @@ I use it in the conditional proof below to remove the nonnull quantitative two-p
 
 The immediate compatible near-span input is fleet03/B10 r19, source snapshot
 
-`yspennstate/math-open-problems@bb2a985a44425ae3cbfd222da9c42fee8486cf51`
+`private-source-repository@bb2a985a44425ae3cbfd222da9c42fee8486cf51`
 
 at
 
@@ -47,7 +47,7 @@ Two older completed inputs are used literally:
 
 provided `delta(epsilon)>0`.
 
-2. fleet03/B19 r16, `QFORM-EXACT-CROSS-RANK-L2-v1`, canonical source `yspennstate/math-open-problems@9d55d9ca5a7beaed6f693a57bd32b5fc9949b981`, says that a disjoint original-coordinate cross block `C` of exact rank three has a bounded continuous density with
+2. fleet03/B19 r16, `QFORM-EXACT-CROSS-RANK-L2-v1`, canonical source `private-source-repository@9d55d9ca5a7beaed6f693a57bd32b5fc9949b981`, says that a disjoint original-coordinate cross block `C` of exact rank three has a bounded continuous density with
 
 `||p_Q||_inf <= 3e Pi_3(C)^(-1/3)`,
 

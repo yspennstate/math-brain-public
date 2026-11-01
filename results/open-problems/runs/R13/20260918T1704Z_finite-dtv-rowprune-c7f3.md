@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol**; reasoning level **UNVERIFIED** — not auth
 
 # R13 — finite-dimensional DTV sharpening for Boolean Komlos
 
-Repository/branch: private `yspennstate/math-open-problems` / `master`. The target is the real Boolean Komlos quantity
+Repository/branch: private `private-source-repository` / `master`. The target is the real Boolean Komlos quantity
 `disc(A)=min_{eps in {+-1}^n} ||A eps||_infinity` for matrices whose columns have Euclidean norm at most one.
 
 I reread `probability_campaign_2026_09/INDEX.md`, `RANKING.md`, root `POSTED.md`, `RESULTS.md`, `QUEUE.md`, `operations/NEW_METHODS_2026-09-16.md`, the newest R13 report `runs/R13/20260918T1437Z_n11-explicit-near2-8c4d.md`, the R12 audit of Guo--Fang--Lu, and neighboring discrepancy state. Current source checks on 18 September 2026: Bansal--Jiang arXiv:2508.03961 remains v2; Guo--Fang--Lu arXiv:2609.11189 remains v1 (10 Sep 2026) and proves the real-Boolean `3 sqrt(2 pi)` theorem; Guillen--Kobzar arXiv:2609.15071v1 is complex/rank-two, not Boolean. Existing R12/P26 audits cover only the Guo--Fang--Lu universal theorem, not the sharpening below. Bounded searches found no matching finite-dimensional correction; novelty is **UNVERIFIED**.

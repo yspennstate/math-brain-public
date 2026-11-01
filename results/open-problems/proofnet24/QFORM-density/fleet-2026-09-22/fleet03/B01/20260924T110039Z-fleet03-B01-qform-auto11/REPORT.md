@@ -26,7 +26,7 @@ The run started by attempting to recover the missing phase-space dimension in th
 
 The source-matched report
 
-`yspennstate/math-open-problems`,
+`private-source-repository`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/B03-20260922T115130Z-qform-decoupled-time/REPORT.md`
 
 proves, by conditioning every coordinate outside disjoint original-coordinate sets I,J of equal size m and then one Cauchy--Plancherel step, that for C=A[I,J]
@@ -283,7 +283,7 @@ The shared W bank is important: the theorem is stronger than a bare convolution 
 
 The completed designated partner result is
 
-`yspennstate/math-open-problems@f7e82d169badc671968036252d351b8533cdd425`,
+`private-source-repository@f7e82d169badc671968036252d351b8533cdd425`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260924T012155Z-fleet04-B01-lr-residual-r1/REPORT.md`.
 
 For independent cap-one U,V and every `1<r<=2`, it proves, uniformly over affine coefficients,

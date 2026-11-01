@@ -17,7 +17,7 @@ For this B12 assignment the first unpaid implication is structural. If one start
 
 I read and use the newest compatible completed `fleet02/B12` report:
 
-`yspennstate/math-open-problems@c635fcdce6aa206c68f1f14e061cf617d72376fb`
+`private-source-repository@c635fcdce6aa206c68f1f14e061cf617d72376fb`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/fleet02-B12-20260923T185321Z-r11/REPORT.md`.
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-07 — P0282 Jucys/Weingarten norm representation, curvature block through order 32, and exact row 102
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Namespace: `proofnet24/NM13-07/`  
 Category: `CLOSABLE OUTSIDE`  
 Canonical claim: `P0282`, `operations/claims/P0282.md`  

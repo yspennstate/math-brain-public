@@ -13,7 +13,7 @@ attacking: the exact d=g=0 boundary of the newest rank-two center receiver, by s
 ## 1. Sources actually used
 
 
-The required newest Claude source was read both at the owner-pinned snapshot `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` and at its compatible current state, directory
+The required newest Claude source was read both at the owner-pinned snapshot `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837` and at its compatible current state, directory
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
@@ -33,7 +33,7 @@ All hub self-curvature, hub-to-conditioned coordinates, leaf-to-conditioned coor
 
 The designated partner was also applied from its immutable report
 
-`yspennstate/math-open-problems@c65e53a795f4f47c223a21698549857342bd1b5f`
+`private-source-repository@c65e53a795f4f47c223a21698549857342bd1b5f`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260923T052757Z-auto11/REPORT.md`.
 
@@ -50,7 +50,7 @@ It also identifies the only intrinsic rank-two-center state not paid by (1.2) or
 
 For the nonzero physical-pair branch below I use the completed determinant-only indefinite-pair theorem at
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`
 
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`:
 if `s_3(A)>=1` and an ORIGINAL indefinite principal pair has `D=|det B_pair|>0`, then

@@ -86,7 +86,7 @@ Moreover the hub-residual pair determinants satisfy `|det A[{0,j}]|=A_{0j}^2<=2/
 
 Pinned source:
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`, Theorem C.
 
 For a rank-three form of signature `(2+,1-)` with all three absolute eigenvalues at least one, that theorem proves on the one-sheet side
@@ -107,7 +107,7 @@ for every `m,r` and every admissible product input law. Thus any unresolved beha
 
 The designated partner fleet03/B18 proved at
 
-`math-open-problems@dfbc17f17b702ed7c7191ba24648a70f67dda851`
+`private-source@dfbc17f17b702ed7c7191ba24648a70f67dda851`
 
 that if a nonzero original physical scalar pivot `a=A_ii` has a Schur complement admitting an original-coordinate rank-two cross block `B` with nonzero singular values `sigma_1,sigma_2`, then
 
@@ -292,7 +292,7 @@ This is a lower bound on that theorem's numerical certificate, not a lower bound
 
 The newest designated-partner handoff,
 
-`math-open-problems@2d03e0a0014e3aa8e3ecf95994501bde16093872`,
+`private-source@2d03e0a0014e3aa8e3ecf95994501bde16093872`,
 
 iterates nonzero scalar Schur pivots outside a terminal rank-two cross block. But every nonzero scalar Schur pivot reduces matrix rank by exactly one:
 
@@ -308,7 +308,7 @@ This is an exact incompatibility, not a criticism of the partner theorem: the pa
 
 The preceding B18 report at
 
-`math-open-problems@b0fe7c60d4fb400917fb53d2435d5262fdcfea97`
+`private-source@b0fe7c60d4fb400917fb53d2435d5262fdcfea97`
 
 proved for every exact-rank-three Schur-isotropic matrix `A=UDU^T` with normalized spectral product one that any physical rank-three cross-volume cut satisfies
 
@@ -365,8 +365,8 @@ Consumed completed sources at equations:
 
 - e5f `COUNTEREXAMPLE_SEARCH.md`, ruled one-sheet Theorem C: actual inequality `p(t)<=pi sqrt(2)` for this family on `t>=0`.
 - e5f `RESULTS.md` / `FOURIER_ROUTE_REPORT.md`, Theorem D: actual certificate obstruction (6.1), combined with the preceding B18 exact cross-volume factorization.
-- designated partner fleet03/B18 `math-open-problems@dfbc17f17b702ed7c7191ba24648a70f67dda851`: rank-two half-Riesz Schur compiler (3.1), used in the new lower bound (4.8).
-- newest designated partner `math-open-problems@2d03e0a0014e3aa8e3ecf95994501bde16093872`: nested compiler, shown exactly incompatible after one pivot because the stress family has rank three.
+- designated partner fleet03/B18 `private-source@dfbc17f17b702ed7c7191ba24648a70f67dda851`: rank-two half-Riesz Schur compiler (3.1), used in the new lower bound (4.8).
+- newest designated partner `private-source@2d03e0a0014e3aa8e3ecf95994501bde16093872`: nested compiler, shown exactly incompatible after one pivot because the stress family has rank three.
 
 Primary external source checked at its theorem statement: Livshyts--Paouris--Pivovarov, arXiv:1507.07949, Theorem 1.1. Its product-density hypotheses and `2^{k/2}` cap match the partner use; no rotation-independence inference is made.
 

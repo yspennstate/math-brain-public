@@ -249,7 +249,7 @@ The order is important: (4.2) is paid before (4.3).
 
 ## 5. Required owner-pinned ruled theorem applied to the same target
 
-Use the completed one-sheet theorem from `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, with its later correction that an affine term must lie in the quadratic range. Condition in (4.1) on the ORIGINAL coordinate V=v:
+Use the completed one-sheet theorem from `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, with its later correction that an affine term must lie in the quadratic range. Condition in (4.1) on the ORIGINAL coordinate V=v:
 
 \[
 Q=4XY+U^2+2vU=4XY+(U+v)^2-v^2.

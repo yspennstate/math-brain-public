@@ -55,8 +55,8 @@ Mandatory rank-two control remains intact: the pair itself need not have bounded
 
 ## Required source applications
 
-1. Pair envelope and moving-centre averaging framework: `math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
-2. Pinned Claude ruled theorem: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `.../COUNTEREXAMPLE_SEARCH.md`, Theorem C. For signature `(+,+,-)`, it gives `p_Q(t)<=pi sqrt(2)` on the one-sheet side `t>=0`; reflection gives the corresponding majority-sign side for `(+,-,-)`.
+1. Pair envelope and moving-centre averaging framework: `private-source@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+2. Pinned Claude ruled theorem: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `.../COUNTEREXAMPLE_SEARCH.md`, Theorem C. For signature `(+,+,-)`, it gives `p_Q(t)<=pi sqrt(2)` on the one-sheet side `t>=0`; reflection gives the corresponding majority-sign side for `(+,-,-)`.
 3. Designated partner fleet03/B11 latest compatible report: `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260923T061800Z-fleet03-B11-QFORM-r24/REPORT.md`. In the balanced pair-PSD complement at `s_3(A)>=1`, its Theorem 1 forces either a defect star of squared mass at least `1/4` or a disjoint defect cross-block with second exterior volume at least `1/32`.
 
 ## First remaining implication

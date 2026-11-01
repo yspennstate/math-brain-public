@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 Status: **PARTIAL / Chang--Kolhe--Sohn k=3 sharpness conjecture remains OPEN under a bounded current-literature review.**
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Canonical ownership remains `operations/claims/CKS-2024-RREG-HYPER2COL-K3.md`, owner `HARD7-06`. This report is the second Section-I thinking/recovery report. It deliberately does not manufacture another auxiliary lemma after the frozen source metric failed to move through the first recovery cycle.
 

@@ -8,12 +8,12 @@ The unrestricted universal theorem is not claimed. All matrices below are litera
 
 ## 1. Source pins and terminal nodes
 
-The Claude baseline is \`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837\`, directory
+The Claude baseline is \`private-source@e5f71d79eff325201dd0274053d20268ce65b837\`, directory
 \`proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/\`.
 Its \(D'\), \(D_5\), mixed-hub/Fresnel, and ruled-side results are retained only in their stated hypotheses; the ruled estimate does not pay arbitrary translated access to the convex/two-sheet side.
 
 The live two-column input is fleet04/B20 r13,
-\`math-open-problems@d2560a041fd91c05d7fddf50f5b5414ecd2680a2\`.
+\`private-source@d2560a041fd91c05d7fddf50f5b5414ecd2680a2\`.
 After the child-window, scalar-pivot, strong-edge, and alignment splits, its transverse double-anchor branch supplies a literal physical block
 \[
 M=[u\ v],\qquad
@@ -24,7 +24,7 @@ s_2(M)>\sigma_0 L,\qquad
 
 The marginal-free terminal receiver is fleet01/B04's
 \`QFORM-THIRDCOMPOUND-CROSS-PROMOTION-v1\`,
-\`math-open-problems@c2ce876df8b5483a00802170001d4144bb4cdbfa\`:
+\`private-source@c2ce876df8b5483a00802170001d4144bb4cdbfa\`:
 for every literal physical cross block \(B\),
 \[
 \|p_Q\|_\infty\le 6^{4/3}E_3(B)^{-1/6},
@@ -35,7 +35,7 @@ with a continuous \(C_0\) density, while arbitrary same-bank quadratic blocks an
 
 The newest completed fleet01/B19 input is
 \`QFORM-PHYSICAL-HUB-ONE-SQUARE-FRESNEL-LINFINITY-v1\`,
-\`math-open-problems@c47451aed1eb3e9a621cb1f327bca666c7f760cf\`.
+\`private-source@c47451aed1eb3e9a621cb1f327bca666c7f760cf\`.
 For a physical hub \(h\), receiver bank \(I\), self block
 \[
 A[I,I]=D+\lambda vv^\top,

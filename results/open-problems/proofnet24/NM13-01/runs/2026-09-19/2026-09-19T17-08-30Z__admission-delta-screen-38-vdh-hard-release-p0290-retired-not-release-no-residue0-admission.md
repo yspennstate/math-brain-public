@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-01 admission delta screen 38 — VDH release is HARD; P0290 retirement is not a release; no lawful residue-0 CLOSABLE admission
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker namespace: `proofnet24/NM13-01/`  
 Category: `CLOSABLE OUTSIDE`  
 Selection shard: `int(SHA256(UTF-8 canonical_dedup_key),16) mod 13 = 0`  

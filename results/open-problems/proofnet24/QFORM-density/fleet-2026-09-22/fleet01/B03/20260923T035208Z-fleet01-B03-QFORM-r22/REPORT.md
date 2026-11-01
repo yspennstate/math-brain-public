@@ -27,7 +27,7 @@ The live event `QFORM-ONE-HEAVY-ROW-SAME-SQUARE-ABSORPTION-FALSE-v1` is especial
 
 Required newest Claude package actually used for the product-projection input and correction boundary:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 
 The normalized one-dimensional product projection bound used below is the standard Rogozin/Ball consequence in the current source package:
@@ -36,7 +36,7 @@ The normalized one-dimensional product projection bound used below is the standa
 
 The designated partner actually applied is the latest completed fleet02/B03 result:
 
-`yspennstate/math-open-problems@fab77e73a6163b18eea08d2807aa1a38166279ff`
+`private-source-repository@fab77e73a6163b18eea08d2807aa1a38166279ff`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T021907Z-fleet02-B03-QFORM-auto11/REPORT.md`.
 
@@ -60,7 +60,7 @@ The source allows the pair shift to depend arbitrarily on the residual variables
 
 The diffuse one-volume input used on the complementary branch is fleet03/B03's completed `QFORM-VOLUME-MARGINAL-WEIGHTED-RIESZ-v1`:
 
-`yspennstate/math-open-problems@406753a39f5fbaf78396b31075f36ae5682ef3ad`
+`private-source-repository@406753a39f5fbaf78396b31075f36ae5682ef3ad`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T235821Z-fleet03-B03-QFORM-r22/REPORT.md`.
 

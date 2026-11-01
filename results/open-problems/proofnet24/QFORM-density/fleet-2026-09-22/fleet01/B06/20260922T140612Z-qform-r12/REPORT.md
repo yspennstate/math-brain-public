@@ -15,20 +15,20 @@ Fresh control before publication remained `QFORM-DENSITY-3EIG-20260922`, revisio
 ### Source-pinned dependencies actually used
 
 1. **Named partner fleet02/B06**: `QFORM-SAMESIGN-DETERMINANT-MASS-v1`, canonical report
-   `yspennstate/math-open-problems@6902eb62f21a7c833ca27dcca69f34d50e711a7d:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`.
+   `private-source-repository@6902eb62f21a7c833ca27dcca69f34d50e711a7d:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T113045Z-d47192d10a82/REPORT.md`.
    It proves the Pluecker determinant-mass identity for a two-frame and records the rank-three Cauchy--Binet analogue.
 
 2. **fleet01/B10**: `QFORM-ZERO-DIAGONAL-TRIPLE-v1`, canonical report
-   `yspennstate/math-open-problems@3be6045911d80a0881d7a1c3631871643f52434c:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260922T131954Z-fleet01-B10-QFORM-r12/REPORT.md`.
+   `private-source-repository@3be6045911d80a0881d7a1c3631871643f52434c:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B10/20260922T131954Z-fleet01-B10-QFORM-r12/REPORT.md`.
    If a physical principal `3x3` block `B=A[S,S]` is invertible and has one zero diagonal entry, then, with arbitrary outside couplings,
    `||p_Q||_infinity <= 3*2^(2/3)|det B|^(-1/3)`.
 
 3. **Previous fleet01/B06 weighted projection theorem**:
-   `yspennstate/math-open-problems@0b523077616e4d1a2c959ddca036cfd895067460:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T130334Z-qform-r11/REPORT.md`.
+   `private-source-repository@0b523077616e4d1a2c959ddca036cfd895067460:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T130334Z-qform-r11/REPORT.md`.
    Its sharp Hausdorff--Young input is used in Section 4 below.
 
 4. For frontier comparison only, not as a premise of the new determinant calculation: **fleet03/B06** `QFORM-HEAVY-ISOTROPIC-TRANSVERSE-WIENER-v1`,
-   `yspennstate/math-open-problems@aa64434a2d628bd7848f154dbc872008338911a2:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T132210Z-fleet03-B06-qform-curved-r12/REPORT.md`.
+   `private-source-repository@aa64434a2d628bd7848f154dbc872008338911a2:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T132210Z-fleet03-B06-qform-curved-r12/REPORT.md`.
 
 ## 1. Compact conditional end-to-end argument and first missing implication
 

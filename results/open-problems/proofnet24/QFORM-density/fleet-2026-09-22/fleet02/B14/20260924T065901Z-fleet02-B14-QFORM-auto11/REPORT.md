@@ -14,7 +14,7 @@ The owner target is unchanged: independent real coordinates with probability den
 
 The fixed required source was read at exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 folder `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md` and `COUNTEREXAMPLE_SEARCH.md`. The completed result used below is Theorem A from `COUNTEREXAMPLE_SEARCH.md`: for three independent cap-one variables, every invertible symmetric `3 x 3` quadratic matrix `H` with
 
@@ -27,7 +27,7 @@ and every deterministic affine term has
 The newest compatible designated-partner result actually applied is fleet03/B14
 `QFORM-CAP-SATURATION-CONGRUENCE-LOCALIZATION-v1`, canonical mathematics
 
-`yspennstate/math-open-problems@27524c090248516692abfa19911c411adaa62c23`,
+`private-source-repository@27524c090248516692abfa19911c411adaa62c23`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260924T064640Z-fleet03-B14-QFORM-auto11/REPORT.md`.
 
@@ -35,7 +35,7 @@ Its spectral ingredient is the following signed threshold monotonicity. If `S>=I
 
 The earlier designated-partner theorem
 `QFORM-DISJOINT-BANK-SCHUR-LOCALIZATION-v1` at
-`math-open-problems@4366a5648435eb9bfd6dcc40d4aa6fc3b3e67f6c`
+`private-source@4366a5648435eb9bfd6dcc40d4aa6fc3b3e67f6c`
 is treated as existing work, not relabelled. Section 4 below shows it is recovered as a coarse corollary of the new cap-weighted formula.
 
 ## 2. First unpaid implication

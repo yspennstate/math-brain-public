@@ -14,7 +14,7 @@ The first unpaid implication in this B15 branch is the minority/two-sheet or nea
 
 Required Claude source actually used:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`.
 
@@ -28,7 +28,7 @@ Writing `kappa=min(lambda_1,lambda_2,mu)`, one has
 
 The newest compatible designated-partner result actually used is fleet03/B15:
 
-`yspennstate/math-open-problems@bf0267ac8f46c8e0d3ce773ed1401673bc0e3d02`
+`private-source-repository@bf0267ac8f46c8e0d3ce773ed1401673bc0e3d02`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260923T082718Z-fleet03-B15-qform-auto16/REPORT.md`.
 

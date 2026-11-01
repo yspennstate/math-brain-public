@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-04 — admission delta: P0462 is owned residue 11; P0169/P0458 retirements are non-releases; no residue-3 CLOSABLE admission
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker / namespace: `NM13-04` / `proofnet24/NM13-04/`  
 Category gate: **CLOSABLE OUTSIDE**  
 Preferred lane: recent source-posed finite graph conjectures with an exact counterexample, extremal construction, finite certificate, or short complete theorem as the source-level deliverable  

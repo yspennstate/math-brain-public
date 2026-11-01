@@ -350,7 +350,7 @@ has exact nonzero spectrum `{1,1,-1}` for every finite `m`. Put independent `Uni
 
 For `ell<=1/2` and `m>=2`, every row leverage in the rank-three frame is at most `1/2`. The pinned Fresnel--Brascamp--Lieb Theorem F,
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`,
 
 gives the actual finite-matrix characteristic-function bound
@@ -394,7 +394,7 @@ It also shows that near-saturation cannot be reduced to frames whose physical le
 
 Required partner source:
 
-`yspennstate/math-open-problems@1db8b3d52c99a32e0ce352173f7023c69cdbdae3`,
+`private-source-repository@1db8b3d52c99a32e0ce352173f7023c69cdbdae3`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T104613Z-fleet02-B17-QFORM-auto11c/REPORT.md`.
 
 The partner theorem proves, for the exact face

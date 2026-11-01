@@ -172,7 +172,7 @@ Thus, in the exact zero-active-leaf-curvature/rank-one-cross geometry, **overlap
 
 The newest completed fleet02/B09 handoff read in this run is r15, canonical mathematics
 
-`yspennstate/math-open-problems@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`,
+`private-source-repository@57b57dc6fa114b1c782a91599bdfbe94a358b2cb`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T224553Z-fleet02-B09-QFORM-r15/REPORT.md`.
 

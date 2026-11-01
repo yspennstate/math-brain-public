@@ -20,7 +20,7 @@ The phase-aligned fragmented-support counterexample to any law-uniform scalar po
 
 The preceding B01 proof is
 
-`yspennstate/math-open-problems@7eb915c055ec899017e7b3cd409a826eea7c7212`,
+`private-source-repository@7eb915c055ec899017e7b3cd409a826eea7c7212`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T220810Z-fleet01-B01-qform-auto11/REPORT.md`.
 
 For disjoint original product banks `I,J`, arbitrary same-bank measurable phases `F,G`, nonzero vectors `u,v`, and `sigma!=0`, put
@@ -191,7 +191,7 @@ The point is not the numerical constant; it is that the critical parabolic cance
 
 The newest completed designated partner is
 
-`yspennstate/math-open-problems@8a05b72743a9dc1ffa5afd22be6a7fa66d59b8ba`,
+`private-source-repository@8a05b72743a9dc1ffa5afd22be6a7fa66d59b8ba`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T220140Z-fleet02-B01-QFORM-auto11/REPORT.md`.
 
 Its theorem `QFORM-RANK1-LATENT-TRANSVERSE-WEDGE-v1` states that an exact-rank-one cut in a diagonal-plus-rank-two Schur residual can be re-cut to rank two whenever its latent triple currency `Zeta_3` is positive. On its concrete exact-W2 target family, conditioning the defining pair leaves

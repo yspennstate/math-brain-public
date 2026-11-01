@@ -68,7 +68,7 @@ So the next mechanism must spend this large first-bank curvature jointly with th
 
 Canonical source:
 
-`yspennstate/math-open-problems@70f181cf738aa51ee6fb7043a329ac9e8b22c4ec`
+`private-source-repository@70f181cf738aa51ee6fb7043a329ac9e8b22c4ec`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T223741Z-fleet03-B05-QFORM-r19/REPORT.md`.
 
@@ -84,7 +84,7 @@ Although r19 then assumes the pair is indefinite to invoke the pair-log theorem,
 
 Canonical source:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -101,7 +101,7 @@ No leverage, sign, or affine-range condition is needed.
 
 Canonical source:
 
-`yspennstate/math-open-problems@e06922bfa31bbd225cdce6ee6aea563254e62563`
+`private-source-repository@e06922bfa31bbd225cdce6ee6aea563254e62563`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T122133Z-b05-qform-5c41e5bb/REPORT.md`.
 
@@ -117,7 +117,7 @@ This is applied below to the normalized scalar-bank pivot, not merely cited.
 
 The latest completed fleet02/B05 report read this run is
 
-`yspennstate/math-open-problems@b6ded18bee0fe20353530653ce654308cac0631c`
+`private-source-repository@b6ded18bee0fe20353530653ce654308cac0631c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T225232Z-fleet02-B05-QFORM-37473ccc/REPORT.md`.
 

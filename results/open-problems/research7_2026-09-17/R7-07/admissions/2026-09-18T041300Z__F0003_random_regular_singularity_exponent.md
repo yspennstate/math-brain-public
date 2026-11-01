@@ -3,7 +3,7 @@ Model actually running for this admission: **GPT-5.6 Sol. Reasoning level: UNVER
 # R7-07 admission — F0003 / sharp singularity exponent for fixed-degree random regular graphs
 
 Date checked: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 R7-07 native ID: `6aabe8413f60819197825dd81ca138ae`.  
 Own root: `research7_2026-09-17/R7-07/`.  
 Shard check: `sum(ord(c) for c in "F0003") % 7 == 6`.

@@ -14,7 +14,7 @@ attacking: two-hub dilution by a finite mixture of lower compound determinant la
 Two completed supporting arguments are used at equations.
 
 1. The sharp fractional three-volume product-Fourier argument at
-   `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
+   `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba:proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
    I use its one-sided original-coordinate Weyl differencing and its sharp Hausdorff--Young estimate, especially the scalar factor
 
    `|| |psi_i(2t .)|^q ||_(1/alpha_i)
@@ -23,7 +23,7 @@ Two completed supporting arguments are used at equations.
           (1-alpha_i/q)^(-(q-alpha_i)/2)`.
 
 2. fleet03/B02's completed `QFORM-WEIGHTED-MIXED32-FOURIER-L1-v1` at
-   `yspennstate/math-open-problems@ff8ec2ee90d4846f39e728e1ca20d50c717cc894:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T085705Z-fleet03-B02-qform-r25/REPORT.md`.
+   `private-source-repository@ff8ec2ee90d4846f39e728e1ca20d50c717cc894:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T085705Z-fleet03-B02-qform-r25/REPORT.md`.
    Its weighted AM--GM interpolation between a 3-minor family and a 2-minor family is generalized below to finitely many fractionally allocated compound families. The two-family disjoint specialization of the theorem below reproduces B02's exact constant.
 
 The designated partner is `fleet04/B04`. Fresh direct lookups of both the shared current-QFORM handoff directory and the canonical math archive returned no completed current-QFORM result for that slot. I therefore do not invent partner consumption; fleet03/B02 is the completed peer result actually applied.

@@ -3,7 +3,7 @@ attacking: the newest fleet03/B20 transported-edge survivor; determine whether i
 
 # Early substantive calculation — transported-edge shear normal form
 
-Newest completed designated partner consumed: fleet03/B20 `20260923T203220Z-fleet03-B20-QFORM-auto11b`, canonical math `yspennstate/math-open-problems@043b1c2c8a21e910e4d425dd78f2d9f6c947be7c`.
+Newest completed designated partner consumed: fleet03/B20 `20260923T203220Z-fleet03-B20-QFORM-auto11b`, canonical math `private-source-repository@043b1c2c8a21e910e4d425dd78f2d9f6c947be7c`.
 
 Its normalized 2+2+2 main cycle is
 

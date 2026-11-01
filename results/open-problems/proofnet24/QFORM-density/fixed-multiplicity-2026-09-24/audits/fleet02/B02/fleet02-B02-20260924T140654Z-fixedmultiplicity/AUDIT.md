@@ -6,7 +6,7 @@ Lens: scalar Fourier powers, convolution and projection constants; fleet02 count
 
 ## Source pin and verdict
 
-Repository `yspennstate/math-open-problems`, master observed during this run at `1021307c73d1f46686db7fbdfef6d30100236918`. The canonical manuscript is unchanged from the owner baseline: git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`, 47,883 bytes, 790 lines. I read `README.md`, `DELIVERY_STATUS.md`, `SOURCE_MANIFEST.json`, `manuscript.tex` in full, `AUDIT.md`, `proof_map.csv`, `verify.py`, and `checks.json` before this verdict.
+Repository `private-source-repository`, master observed during this run at `1021307c73d1f46686db7fbdfef6d30100236918`. The canonical manuscript is unchanged from the owner baseline: git blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`, SHA-256 `9f3bdec0b88debe9a66076c7b4a5cc894fb14e69b89591a4107e785340f65e69`, 47,883 bytes, 790 lines. I read `README.md`, `DELIVERY_STATUS.md`, `SOURCE_MANIFEST.json`, `manuscript.tex` in full, `AUDIT.md`, `proof_map.csv`, `verify.py`, and `checks.json` before this verdict.
 
 **Mathematical verdict on the canonical 17-eigenvalue manuscript: PASS.** I found no fatal mathematical gap. Every mathematical source range was independently checked in this run. The two bibliography entries are attribution-only and were not independently priority/source-verified under the B02 lens; they are not proof dependencies. No unrestricted three-eigenvalue conclusion is claimed.
 

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — predecessor T
 
 # R09 CLOSABLE rotation admission — I0006 exact-source repair: top queue row remains HOLD_SOURCE, not READY
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Dated source/status check: 2026-09-17 UTC.
 
 ## 1. Continuity: Tang remains retired; no seventh Tang attack

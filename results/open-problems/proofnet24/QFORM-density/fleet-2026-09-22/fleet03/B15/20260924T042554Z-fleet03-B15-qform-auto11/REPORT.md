@@ -158,7 +158,7 @@ Consequences:
 
 The completed fleet04/B15 Theorem 6.1, source
 
-`yspennstate/math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`
+`private-source-repository@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`
 
 at
 
@@ -209,7 +209,7 @@ Any such proof automatically yields the full arbitrary-rough, arbitrary-degenera
 ## 13. Source discipline
 
 
-Partner theorem actually read and applied: fleet04/B15 r8 at `math-open-problems@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`.
+Partner theorem actually read and applied: fleet04/B15 r8 at `private-source@7b2b0f54db9acbd23a5f69f715178ab666e22d8e`.
 
 Current correction constraints retained: no pointwise law-uniform quadratic phase decay; no post-rotation independence; no arbitrary-joint coarea height theorem; no dimension-free fiber-sup shortcut; no inference of continuity from boundedness alone.
 

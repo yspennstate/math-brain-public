@@ -23,7 +23,7 @@ The live correction ledger was refreshed before publication. In particular, this
 
 Required source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
@@ -61,7 +61,7 @@ The same pinned package's D/D'/D5 volume currencies are tested on a concrete tar
 
 The immediately preceding grouped-arrowhead theorem is at
 
-`yspennstate/math-open-problems@fb7b0f71ead32ea608ff9ec45370edc246f7239e`
+`private-source-repository@fb7b0f71ead32ea608ff9ec45370edc246f7239e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260924T063552Z-fleet02-B01-qform-auto11-r46/REPORT.md`.
 
@@ -85,7 +85,7 @@ The loss in (2.6) diverges as `q->0`; removing that loss is the present task.
 
 The previous B01 3-variable theorem is at
 
-`yspennstate/math-open-problems@522585af1e80eff6ad75808d7e3be55a3a2bc8ac`.
+`private-source-repository@522585af1e80eff6ad75808d7e3be55a3a2bc8ac`.
 
 It proves that every symmetric `3x3` coefficient with `s_2>=1` has
 
@@ -97,7 +97,7 @@ for arbitrary independent cap-one laws and arbitrary affine terms. By homogeneit
 
 Finally, the orientation-free exact-rank-two affine theorem at
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 gives
 
@@ -109,7 +109,7 @@ for any exact rank-two coefficient and arbitrary affine term.
 
 Fresh source resolution found fleet03/B01 r47 at
 
-`yspennstate/math-open-problems@fb16bfb901a09a67fd139e99f5b79e9381307a0d`
+`private-source-repository@fb16bfb901a09a67fd139e99f5b79e9381307a0d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/20260924T073034Z-fleet03-B01-qform-auto11-r47/REPORT.md`.
 

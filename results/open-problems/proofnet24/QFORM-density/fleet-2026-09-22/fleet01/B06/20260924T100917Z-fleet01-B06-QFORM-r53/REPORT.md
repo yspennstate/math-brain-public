@@ -17,7 +17,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Owner control read on fresh `main`: re
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260924T092809Z-auto11-a9c3/REPORT.md`.
    For a kernel subspace supported on at most three literal coordinates it conditions on literal original coordinates, preserves product density caps by deterministic translation, and retains `s_3` with loss at most a factor three.
 
-3. Pinned three-dimensional affine base theorem at `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`: for a literal three-coordinate symmetric matrix whose three eigenvalue magnitudes are at least `sigma`, arbitrary independent cap-one inputs and arbitrary linear terms give density at most `6 sqrt(pi)/sigma`.
+3. Pinned three-dimensional affine base theorem at `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`: for a literal three-coordinate symmetric matrix whose three eigenvalue magnitudes are at least `sigma`, arbitrary independent cap-one inputs and arbitrary linear terms give density at most `6 sqrt(pi)/sigma`.
 
 4. Live correction `QFORM-DENSITY-PRESERVING-SHEAR-FACTORISATION-GAP-v1` was explicitly checked before this argument. The invalid interface there removes a translated density factor inside a leaf Fourier transform after a random-variable shear. The argument below does **not** do that. It conditions first on one literal original coordinate; only then are the remaining variables deterministically translated, so their product provenance is exact.
 
@@ -275,7 +275,7 @@ A separate global assembly issue remains: repeated lower-dimensional deletions c
 
 - Owner source message: `https://github.com/yspennstate/math-research-brain/blob/0dc369ddf8b860648dd780d8f92c62994dc53ecf/scheduled_tasks/README.md`.
 - Prepublication refresh read: `yspennstate/math-research-brain@b0b17be8ce16b8baaccfeec0230015dd1e66ec46`.
-- Predecessor r52: `yspennstate/math-open-problems@6c9adce6b8378fa430fc731b4969ae9e2f2f0659:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T093818Z-fleet01-B06-QFORM-r52/REPORT.md`.
-- Designated partner result actually applied: `yspennstate/math-open-problems@006892a091e8f58edf21e071244a2c7e2a340ec0:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260924T092809Z-auto11-a9c3/REPORT.md`, theorem `QFORM-SPARSE-KERNEL-PRODUCT-DELETION-v1`.
-- Three-dimensional affine base theorem: `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, Theorem A.
+- Predecessor r52: `private-source-repository@6c9adce6b8378fa430fc731b4969ae9e2f2f0659:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260924T093818Z-fleet01-B06-QFORM-r52/REPORT.md`.
+- Designated partner result actually applied: `private-source-repository@006892a091e8f58edf21e071244a2c7e2a340ec0:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260924T092809Z-auto11-a9c3/REPORT.md`, theorem `QFORM-SPARSE-KERNEL-PRODUCT-DELETION-v1`.
+- Three-dimensional affine base theorem: `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `COUNTEREXAMPLE_SEARCH.md`, Theorem A.
 - Live shear-interface correction consumed: `yspennstate/math-research-brain@b944bf36baa222e9f7e778a91a3ef8a06ae70a64`, event `QFORM-DENSITY-PRESERVING-SHEAR-FACTORISATION-GAP-v1`.

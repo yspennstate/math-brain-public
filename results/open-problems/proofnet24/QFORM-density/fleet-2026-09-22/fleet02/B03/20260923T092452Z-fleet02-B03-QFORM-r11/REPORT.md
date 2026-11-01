@@ -11,7 +11,7 @@ Target: independent real coordinates with densities at most one, symmetric `A` w
 
 Fresh designated-partner input is fleet03/B03 r29, canonical mathematics
 
-`yspennstate/math-open-problems@f7c9ef92371b6602f9a432a16555c48c2ed45a51:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T090012Z-fleet03-B03-QFORM-r29/REPORT.md`.
+`private-source-repository@f7c9ef92371b6602f9a432a16555c48c2ed45a51:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T090012Z-fleet03-B03-QFORM-r29/REPORT.md`.
 
 For its exact angular-cancellation packet `T`, with spectral parameter `s=s_3(A_T)>0`, r29 proves
 
@@ -30,7 +30,7 @@ It also proves a weighted collision integral, but (1.1) is the endpoint needed b
 
 Required pinned Claude package read at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 
 Its Theorem D5 says that for a disjoint original-coordinate cross block `M`, with
 

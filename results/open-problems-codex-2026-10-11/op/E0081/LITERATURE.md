@@ -38,7 +38,7 @@ No SOLVED_IN_LITERATURE verdict is warranted. There is no purported resolving th
 
 Executed math_recall.py with “Pitman Tang pattern matching matrix waiting time”; it returned mostly off-target cards (including a permutation-pattern inequality paper). Executed brain.py recall with “pattern waiting time mistakes” and “Pitman Tang random walk patterns”; neither returned a directly relevant research result. The recall script reported an automatic index-refresh side effect; no remember/write command was requested, and it was not invoked again after the recalls. The prescribed scripts were treated only as hints.
 
-Searched intake and pool JSONL records for E0081. Found E0081-A001 and neighboring E0082-A001 in probability_1000_intake_E_20260908. Their finite correlation-system lead is classical, but the claimed excursion density discrepancy is erroneous and the autocorrelation-only race identity omits cross correlations. ATTEMPT.md explains the corrections. Listed origin/master paths in ~/math-open-problems read-only, then filtered for E0081/Pitman: no relevant answer path found. No repository working tree was changed.
+Searched intake and pool JSONL records for E0081. Found E0081-A001 and neighboring E0082-A001 in probability_1000_intake_E_20260908. Their finite correlation-system lead is classical, but the claimed excursion density discrepancy is erroneous and the autocorrelation-only race identity omits cross correlations. ATTEMPT.md explains the corrections. Listed origin/master paths in ~/private-source read-only, then filtered for E0081/Pitman: no relevant answer path found. No repository working tree was changed.
 
 ## Every network query/download recorded
 

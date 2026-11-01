@@ -18,7 +18,7 @@ This report preserves the live corrections. It does not use post-rotation indepe
 
 Use the completed partner report
 
-`yspennstate/math-open-problems@718ed012b3271daaab97d01e459c400c877aee0d`
+`private-source-repository@718ed012b3271daaab97d01e459c400c877aee0d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260922T210733Z-fleet02-B19-qform-r19/REPORT.md`.
 
@@ -48,7 +48,7 @@ The same partner proves the exact-span endpoint and every leakage residual bound
 
 Use
 
-`yspennstate/math-open-problems@bb2a985a44425ae3cbfd222da9c42fee8486cf51`
+`private-source-repository@bb2a985a44425ae3cbfd222da9c42fee8486cf51`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T214631Z-fleet03-B10-QFORM-r19/REPORT.md`.
 
@@ -58,7 +58,7 @@ It proves the exact slope-gap identity and four-stratum exterior-volume decompos
 
 Use
 
-`yspennstate/math-open-problems@898bf19622a52a515c2034b27ae5f98dd0e21f75`
+`private-source-repository@898bf19622a52a515c2034b27ae5f98dd0e21f75`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T194649Z-fleet03-B06-qform-r17/REPORT.md`.
 

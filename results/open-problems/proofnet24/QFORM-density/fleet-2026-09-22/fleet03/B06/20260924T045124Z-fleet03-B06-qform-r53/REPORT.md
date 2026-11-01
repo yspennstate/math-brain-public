@@ -12,7 +12,7 @@ The unrestricted conjecture remains OPEN / NOT PROVED / NOT DISPROVED. No Gaussi
 
 The immediate predecessor is fleet03/B06 r52,
 
-`yspennstate/math-open-problems@87d28c657b28f8f816f4b72e6b92af8dd52398c0`
+`private-source-repository@87d28c657b28f8f816f4b72e6b92af8dd52398c0`
 
 at
 
@@ -145,7 +145,7 @@ The freshest completed designated fleet04/B06 result available in the run is
 
 `QFORM-TANGENTIAL-SHARED-LEAKAGE-ABSORPTION-v1`,
 
-`yspennstate/math-open-problems@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`,
+`private-source-repository@a09353b7b4cc9b1b812b1d1f2f319f5dcef5e10b`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260924T001014Z-fleet04-B06-QFORM-r3/REPORT.md`.
 
@@ -270,7 +270,7 @@ where the term is interpreted as zero at `a_h=0`.
 Now use the completed rank-two-cross scalar-pivot theorem
 `QFORM-RANK2-CROSS-SCALAR-PIVOT-v1`, source
 
-`yspennstate/math-open-problems@38724ac681c4d046c3c843145121528135d3846b`
+`private-source-repository@38724ac681c4d046c3c843145121528135d3846b`
 
 at
 

@@ -13,7 +13,7 @@ Execution context: `WITHOUT_VERIFIED_BRAIN`. Authenticated repository retrieval 
 
 
 Required newest-Claude package:
-- `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
+- `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 - same commit/path `FOURIER_ROUTE_REPORT.md`
 - same commit/path `COUNTEREXAMPLE_SEARCH.md`
 
@@ -25,7 +25,7 @@ No condition is imposed on `A_HH`, the diagonal leaf twist, or affine terms. Thi
 
 The source `COUNTEREXAMPLE_SEARCH.md` also proves the rough-law ruled one-sheet estimate for exact rank-three signature `(2,1)`, using the cap-two two-dimensional marginal theorem without asserting projected independence.
 
-Newest designated-partner result actually applied: fleet03/B16 handoff `20260923T000300Z-fleet03-B16-QFORM-r20`, canonical mathematics `yspennstate/math-open-problems@bf4ea19e3c7e327cd53615128f4daaeee0e53811`. It proves that bounded joint projection density, even together with bounded coordinate marginals, is insufficient receiver-side data at a nonzero pivot, and records the valid scalar-square plus rank-two half-Riesz replacement. The comparison in Section 6 below applies that replacement to the present family.
+Newest designated-partner result actually applied: fleet03/B16 handoff `20260923T000300Z-fleet03-B16-QFORM-r20`, canonical mathematics `private-source-repository@bf4ea19e3c7e327cd53615128f4daaeee0e53811`. It proves that bounded joint projection density, even together with bounded coordinate marginals, is insufficient receiver-side data at a nonzero pivot, and records the valid scalar-square plus rank-two half-Riesz replacement. The comparison in Section 6 below applies that replacement to the present family.
 
 Corrections preserved: no independence after spectral rotation; no arbitrary-joint rank-three coarea; no normalized conditional-density supremum; no law-uniform one-dimensional Fresnel decay; no fixed physical pair/triple extraction from spectrum alone.
 

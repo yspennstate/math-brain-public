@@ -5,7 +5,7 @@ attacking: close the actual-spectral-gate BICOLOP survivors by self-matching the
 
 Full QFORM remains open. This checkpoint records the first paid implication for the current B08 hybrid.
 
-Source 1: own predecessor `math-open-problems@17f39d9b82d8a802756ba1efb6a7b223b7df725b`, `.../fleet02/B08/20260923T020620Z-fleet02-B08-QFORM-auto11/REPORT.md`. For a selected three-eigenvector frame of maximum row leverage <=1/48, the actual spectral gate has
+Source 1: own predecessor `private-source@17f39d9b82d8a802756ba1efb6a7b223b7df725b`, `.../fleet02/B08/20260923T020620Z-fleet02-B08-QFORM-auto11/REPORT.md`. For a selected three-eigenvector frame of maximum row leverage <=1/48, the actual spectral gate has
 
 `beta=(3L/16)sqrt(3/5)`.
 
@@ -13,7 +13,7 @@ In the one-child/two-cross branch, the prior two-cross compiler with parameter `
 
 `Z_anchor > beta^6/57600`.
 
-Source 2: designated partner fleet03/B08, `math-open-problems@e875d54d4a946d399466cb6afa1fc37da12a11d2`, theorem `QFORM-ANCHORED-THREEVOLUME-SELF-MATCHED-MIX-v1`. For an anchored packet Z, anchor-row norm R_i, and conditional residual-row third-minor marginals all <=1/2,
+Source 2: designated partner fleet03/B08, `private-source@e875d54d4a946d399466cb6afa1fc37da12a11d2`, theorem `QFORM-ANCHORED-THREEVOLUME-SELF-MATCHED-MIX-v1`. For an anchored packet Z, anchor-row norm R_i, and conditional residual-row third-minor marginals all <=1/2,
 
 `||p_Q||inf <= 10 sqrt(e) (2Z/R_i)^(-1/5)`.
 

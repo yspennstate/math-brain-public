@@ -28,14 +28,14 @@ The central universal `L^infinity` conjecture remains open even on the nonzero-d
 
 I consumed the completed partner report
 
-- repository/commit: `yspennstate/math-open-problems@657566d3f5026e672f5cbe6b8c03fe63766bf0fb`;
+- repository/commit: `private-source-repository@657566d3f5026e672f5cbe6b8c03fe63766bf0fb`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T132108Z-b15-qform-separator-regularity-r2/REPORT.md`.
 
 Its Lemma 2.2 says: a common conditional `L^infinity` density bound `C`, convolved conditionally with an independent `L^1` density and then mixed, produces an unconditional `C_0` density with the **same** height bound `C`. I apply this to an actual inequality in Section 7.
 
 I also consumed the newer partner reduction
 
-- repository/commit: `yspennstate/math-open-problems@07672b7beb8f867c7a7b973aa3157a42ae506460`;
+- repository/commit: `private-source-repository@07672b7beb8f867c7a7b973aa3157a42ae506460`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T152333Z-b15-qform-continuous-envelope-r3/REPORT.md`.
 
 It proves exactly that the optimal universal interval-density constant over the full target class equals the optimal constant over target instances with `C_0` output, and also equals the optimal constant over compactly supported smooth cap-one marginals. I use this only in the final regularity ledger; it does not prove rough-input continuity.
@@ -44,19 +44,19 @@ It proves exactly that the optimal universal interval-density constant over the 
 
 I use the following completed results at their exact scopes.
 
-1. `fleet01/B15`, repository/commit `yspennstate/math-open-problems@47dc925729bbf269333cc6e1256178a538d2f553`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260922T120320Z-fleet01-B15-qform/REPORT.md`:
+1. `fleet01/B15`, repository/commit `private-source-repository@47dc925729bbf269333cc6e1256178a538d2f553`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260922T120320Z-fleet01-B15-qform/REPORT.md`:
    - every invertible physical symmetric `3x3` block gives an affine-quadratic density bound `(2*pi+3*sqrt(3))/sigma_min(B)`;
    - every invertible physical symmetric `4x4` block gives `(4*pi+8)/sigma_min(B)`;
    - every symmetric matrix of rank at least three has an invertible principal block of order three or four, and the Schur-complement extension proof can be started from a prescribed nonsingular `1x1` principal pivot.
 
-2. `fleet01/B11`, repository/commit `yspennstate/math-open-problems@2279571f59ade7a9ec478af1e4818f6c117ac224`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`:
+2. `fleet01/B11`, repository/commit `private-source-repository@2279571f59ade7a9ec478af1e4818f6c117ac224`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`:
    every nondegenerate indefinite binary quadratic in two original independent cap-one coordinates has a density in `L^3`, quantitatively
    
    `||p_R||_3 <= C_bin D^(-1/3)`,
    
    where `D=a^2-alpha beta=-det(S)>0` for matrix `S=[[alpha,a],[a,beta]]`.
 
-3. The square-density estimate used there from `fleet02/B11`, repository/commit `yspennstate/math-open-problems@ea26c080ff290b0f10ec701ec8bf8847cc84ceb6`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T115006Z-fleet02-B11-qform-r18-7c1e/REPORT.md`:
+3. The square-density estimate used there from `fleet02/B11`, repository/commit `private-source-repository@ea26c080ff290b0f10ec701ec8bf8847cc84ceb6`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260922T115006Z-fleet02-B11-qform-r18-7c1e/REPORT.md`:
    
    `||p_{dZ^2+uZ+v}||_(3/2) <= 2 |d|^(-1/3)`
    

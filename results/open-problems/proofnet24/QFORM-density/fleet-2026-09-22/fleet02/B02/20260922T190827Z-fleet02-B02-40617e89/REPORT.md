@@ -18,7 +18,7 @@ The unweighted target-wide criterion `integral |phi_Q(t)| dt<infinity` is not cl
 
 ## 2. Source-pinned incoming results
 
-1. Prior fleet02/B02 pair theorem: `yspennstate/math-open-problems@4d41fbacb2f0f17ebde23274d06397d5ab7ba147`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T183829Z-fleet02-B02-qform-r11/REPORT.md`. For an invertible indefinite physical `2 x 2` block `B`, with `D=|det B|`, `kappa=sigma_min(B)`, and arbitrary residual-dependent translation, the conditional pair-density envelope can be taken as
+1. Prior fleet02/B02 pair theorem: `private-source-repository@4d41fbacb2f0f17ebde23274d06397d5ab7ba147`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260922T183829Z-fleet02-B02-qform-r11/REPORT.md`. For an invertible indefinite physical `2 x 2` block `B`, with `D=|det B|`, `kappa=sigma_min(B)`, and arbitrary residual-dependent translation, the conditional pair-density envelope can be taken as
 
 `Psi(tau)=D^(-1/2)[2sqrt(2)+log(T/|tau|)]`, `0<|tau|<=T`,
 
@@ -26,7 +26,7 @@ The unweighted target-wide criterion `integral |phi_Q(t)| dt<infinity` is not cl
 
 where `T=2D/kappa`.
 
-2. Named partner fleet03/B02, completed report `yspennstate/math-open-problems@056867164c939f4e70988e762258f2542e32fd75`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T182919Z-fleet03-B02-qform-r12/REPORT.md`, proves for independent `X,U`, with `X` density cap one and `U` density cap `M`, and an independent bank `V`,
+2. Named partner fleet03/B02, completed report `private-source-repository@056867164c939f4e70988e762258f2542e32fd75`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T182919Z-fleet03-B02-qform-r12/REPORT.md`, proves for independent `X,U`, with `X` density cap one and `U` density cap `M`, and an independent bank `V`,
 
 `R=2a XU+H(X,V)`
 
@@ -34,9 +34,9 @@ has for every `p>1`
 
 `||p_R||_p <= p |a|^(-(1-1/p)) M^(1-1/p)`.
 
-Its fresh addendum `yspennstate/math-open-problems@c83d7f618cd630af9757c44d4c8b5f74b3962de9` records the necessary restriction: no hidden `U`-dependent curvature may be placed inside `H`. The correction example `(U+X)^2` shows why an endpoint half-Riesz argument may fail if that restriction is discarded.
+Its fresh addendum `private-source-repository@c83d7f618cd630af9757c44d4c8b5f74b3962de9` records the necessary restriction: no hidden `U`-dependent curvature may be placed inside `H`. The correction example `(U+X)^2` shows why an endpoint half-Riesz argument may fail if that restriction is discarded.
 
-3. Current O0 structural source used only to locate the remaining debt: fleet02/B19 `yspennstate/math-open-problems@06913a3636bf0add597d8dcf16eca5cd2ccd92a2` proves a scale-free raw-third-compound decomposition into `r=0,1,2,3` packets. The `r=3` physical-row packet is already paid; the `r<=2` packets remain aggregate and must not be silently identified with an indefinite principal pair or scalar Schur pivot.
+3. Current O0 structural source used only to locate the remaining debt: fleet02/B19 `private-source-repository@06913a3636bf0add597d8dcf16eca5cd2ccd92a2` proves a scale-free raw-third-compound decomposition into `r=0,1,2,3` packets. The `r=3` physical-row packet is already paid; the `r<=2` packets remain aggregate and must not be silently identified with an indefinite principal pair or scalar Schur pivot.
 
 4. New compatible correction at brain commit `1a0bbd1c03f98cc935b6c9f6125ae9b7fb856d36` (`QFORM-NO-GOOD-TRIPLE-DOES-NOT-IMPLY-PURE-CLT-v1`) prevents a false localized-versus-pure-CLT exhaustion. Nothing below uses that implication.
 

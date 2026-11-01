@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R15 CLOSABLE OUTSIDE — reliability-theory transfer and a one-atom dual no-go for Talagrand 10.9
 
 Date: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 
 All new derivations below are **SELF_CHECK_ONLY** unless explicitly identified as prior art. No independent audit is claimed.
 
@@ -336,7 +336,7 @@ No scheduler, permission, email, Drive, public-posting or purchase action was ta
 ledger_delta:
   worker: R15
   allocation: CLOSABLE_OUTSIDE
-  repository: yspennstate/math-open-problems
+  repository: private-source-repository
   branch: master
   predecessor:
     source: "Burdzy-Scheutzow, Forward Brownian Motion, Problem 7.2 / I0076"

@@ -16,7 +16,7 @@ The full universal QFORM theorem remains open. This report proves a new synthesi
 
 Required pinned Claude source:
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
@@ -26,13 +26,13 @@ Required pinned Claude source:
 
 The designated partner theorem actually used is fleet03/B03, `QFORM-VOLUME-MARGINAL-WEIGHTED-RIESZ-v1`:
 
-`yspennstate/math-open-problems@406753a39f5fbaf78396b31075f36ae5682ef3ad`
+`private-source-repository@406753a39f5fbaf78396b31075f36ae5682ef3ad`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T235821Z-fleet03-B03-QFORM-r22/REPORT.md`.
 
 The physical-pair logarithmic envelope used as the second completed input is:
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 

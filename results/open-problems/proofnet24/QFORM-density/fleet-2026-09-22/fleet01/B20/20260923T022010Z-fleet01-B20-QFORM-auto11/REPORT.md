@@ -17,7 +17,7 @@ Fresh owner control remained QFORM-only at revision `2026-09-22.15`. I preserve 
 
 The newest completed designated partner actually consumed is fleet02/B20 auto11:
 
-`yspennstate/math-open-problems@34a57f18778ea4be069a3f39a953801296d01864`
+`private-source-repository@34a57f18778ea4be069a3f39a953801296d01864`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260923T000049Z-fleet02-B20-QFORM-auto11/REPORT.md`.
 
@@ -37,7 +37,7 @@ The partner's high fifth-volume subbranch `e_5(D^T D)>=1/1024` is already paid b
 
 The analytic engine actually applied is fleet01/B01's completed mixed-order physical-minor Brascamp--Lieb/Fourier theorem:
 
-`yspennstate/math-open-problems@86f318f0826325e6df3504e1e8ec15f4316cc861`
+`private-source-repository@86f318f0826325e6df3504e1e8ec15f4316cc861`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T001242Z-b01-qform-auto11/REPORT.md`.
 

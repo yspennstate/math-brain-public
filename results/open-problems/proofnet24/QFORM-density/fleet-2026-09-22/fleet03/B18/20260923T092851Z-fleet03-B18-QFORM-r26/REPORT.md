@@ -128,7 +128,7 @@ A probability measure satisfying this interval estimate is absolutely continuous
 
 The previous fleet03/B18 theorem `QFORM-CROSSBLOCK-RANKGE3-FRESNEL-v1`, source
 
-`yspennstate/math-open-problems@9415d0f2696d2e6ca05243c8e8f34b665bf5d42f`
+`private-source-repository@9415d0f2696d2e6ca05243c8e8f34b665bf5d42f`
 
 proves that when a residual cross block has rank `r>=3`,
 
@@ -136,7 +136,7 @@ proves that when a residual cross block has rank `r>=3`,
 
 Now apply the completed **fleet04/B18** Schur-pivot square-smoothing theorem at
 
-`yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
+`private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`,
 
 which states that if a residual has density cap `M`, then after the physical completed square the full form has density cap `2 sqrt(M/|a|)`, without assuming independence after the completion. Combining it with (8) gives the actual inequality
 

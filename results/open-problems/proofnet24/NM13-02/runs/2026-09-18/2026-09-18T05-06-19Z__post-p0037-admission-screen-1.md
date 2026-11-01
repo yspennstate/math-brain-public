@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 # NM13-02 — post-P0037 successor admission screen 1
 
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track: `NM13-02`  
 Category: `CLOSABLE OUTSIDE`  
 Own namespace: `proofnet24/NM13-02/`  

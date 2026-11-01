@@ -2,7 +2,7 @@ Runtime model: **GPT-5.6 Sol**. Requested GPT-6/maximum is not an authenticated 
 
 # PROB10-03 — R14 bounded substantive iteration: parameter-face calculus, overlap obstruction, and nonconvex dual
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Status: **OPEN / PARTIAL / SOURCE BRACKET UNCHANGED BY R14 THIS RUN / NEW EXACT PARAMETER-FACE COMPILER**.
 
 ## 1. Contract, continuity, current ownership, and consumed updates

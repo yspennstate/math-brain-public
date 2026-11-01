@@ -146,7 +146,7 @@ This theorem includes **all additional eigendirections of A**. It is not a selec
 
 The previously reviewed theorem `QFORM-EK-INTEGRATED-DETERMINANT-v1` is source-pinned at
 
-`yspennstate/math-open-problems@e3fe4ce35f6aa4a90cca913051886c96c7febfc3`.
+`private-source-repository@e3fe4ce35f6aa4a90cca913051886c96c7febfc3`.
 
 For an original-coordinate cross block `B`, if `1<=q<3/2` and the maximum coordinate leverage of `range(B)` on its row side is at most `q/2`, then with `k=3`
 
@@ -206,7 +206,7 @@ with a continuous density. This widens the explicit direct diffuse exact-rank-th
 The latest completed named-partner result is fleet03/B02
 
 `QFORM-RANK2-SCHUR-BALANCED-PAVING-v1`,
-canonical report `yspennstate/math-open-problems@16c7d95068defd13bad9f9fe86be6037d046a1ef`,
+canonical report `private-source-repository@16c7d95068defd13bad9f9fe86be6037d046a1ef`,
 path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T160323Z-fleet03-B02-qform-r11/REPORT.md`.
 
 Its general parameter theorem allows more than the two explicit cutoffs printed in the handoff. Apply it with
@@ -264,8 +264,8 @@ No claim of continuity is made outside branches where `L^1` Fourier inversion wa
 
 Mathematical dependencies actually used:
 
-- fleet02/B02 `QFORM-EK-INTEGRATED-DETERMINANT-v1`: `math-open-problems@e3fe4ce35f6aa4a90cca913051886c96c7febfc3`;
-- named partner fleet03/B02 `QFORM-RANK2-SCHUR-BALANCED-PAVING-v1`: `math-open-problems@16c7d95068defd13bad9f9fe86be6037d046a1ef`, report blob `3c0a5d6aabbdfc02cfd56ddbf5593f57ce4bc5e0`;
+- fleet02/B02 `QFORM-EK-INTEGRATED-DETERMINANT-v1`: `private-source@e3fe4ce35f6aa4a90cca913051886c96c7febfc3`;
+- named partner fleet03/B02 `QFORM-RANK2-SCHUR-BALANCED-PAVING-v1`: `private-source@16c7d95068defd13bad9f9fe86be6037d046a1ef`, report blob `3c0a5d6aabbdfc02cfd56ddbf5593f57ce4bc5e0`;
 - live correction `QFORM-UV-CONDITIONAL-CAP-FALSE`: fleet02/B03 canonical source commit `0d99f085f5378d267057cc5b9bcbf8e53ca494b5`.
 
 No external theorem beyond the already source-reviewed dependencies is needed for the new falsifiers or compound ledger.

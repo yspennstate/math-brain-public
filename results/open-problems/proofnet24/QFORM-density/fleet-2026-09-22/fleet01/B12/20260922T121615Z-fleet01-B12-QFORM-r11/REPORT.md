@@ -22,7 +22,7 @@ Neither corrected claim is used below. The argument is entirely in original inde
 
 The assigned partner `fleet02/B12` proved in
 
-`yspennstate/math-open-problems@ffbe643d91659c040e06f33eb688b2d0ad5f0d50`
+`private-source-repository@ffbe643d91659c040e06f33eb688b2d0ad5f0d50`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T115433Z-fleet02-B12/REPORT.md`
 
@@ -32,7 +32,7 @@ that a four-variable matrix of the form
 
 has a density cap below `24.193/lambda`, uniformly in the exceptional eigenvalue and orientation. That report also gave a `1%` perturbative theorem. Its proof uses the source theorem
 
-`yspennstate/math-open-problems@289810e1f075755898f573ee5b863ad3fa9af5b8`
+`private-source-repository@289810e1f075755898f573ee5b863ad3fa9af5b8`
 
 `qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`,
 
@@ -269,8 +269,8 @@ This is the precise sense in which an arbitrary extra eigenvalue and arbitrary m
 
 Corrections consumed at that snapshot: `QFORM-CROSSMINOR-ALONE-FALSE` and `QFORM-UNIVERSAL-PI-FALSE-AND-DIFFUSE-BRANCH`.
 
-Primary partner dependency: `yspennstate/math-open-problems@ffbe643d91659c040e06f33eb688b2d0ad5f0d50:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T115433Z-fleet02-B12/REPORT.md`.
+Primary partner dependency: `private-source-repository@ffbe643d91659c040e06f33eb688b2d0ad5f0d50:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260922T115433Z-fleet02-B12/REPORT.md`.
 
-Underlying pair/triple dependency: `yspennstate/math-open-problems@289810e1f075755898f573ee5b863ad3fa9af5b8:qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`.
+Underlying pair/triple dependency: `private-source-repository@289810e1f075755898f573ee5b863ad3fa9af5b8:qform/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`.
 
 No public release, external paid computation, new permissions, or scheduler mutation is part of this result.

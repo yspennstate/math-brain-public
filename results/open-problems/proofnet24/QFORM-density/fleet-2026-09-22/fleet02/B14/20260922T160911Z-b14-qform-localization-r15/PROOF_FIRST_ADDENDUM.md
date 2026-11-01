@@ -6,7 +6,7 @@
 
 This addendum responds to the later owner continuation `QFORM-PROOF-FIRST-20260922T161801Z`, which prioritizes full-target proof synthesis and in particular translation-uniform fractional-trace mechanisms. It strengthens the run's main graphical theorem from cycle-consistent vertex shifts to **arbitrary edge offsets**, so a shell/coarea calculation need not first prove that all singular centers arise from one set of vertex translations.
 
-A compatible completed result from fleet01/B14, `yspennstate/math-open-problems@2ad67886f215eff6f3daed247871a882a6f0314b`, independently proves the three-vertex arbitrary-offset case and gives the square-root triangle constant `125`. The theorem below extends the same offset robustness to every fixed finite graph and gives the exact cluster threshold.
+A compatible completed result from fleet01/B14, `private-source-repository@2ad67886f215eff6f3daed247871a882a6f0314b`, independently proves the three-vertex arbitrary-offset case and gives the square-root triangle constant `125`. The theorem below extends the same offset robustness to every fixed finite graph and gives the exact cluster threshold.
 
 ## 1. Theorem — arbitrary-offset graphical inverse-gap localization
 
@@ -148,7 +148,7 @@ For cycle-consistent offsets `d_ij=tau_i-tau_j`, the run's main report already g
 
 ## 6. Full-target localization compiler with component-adaptive certificates
 
-Combine this theorem with the completed assigned-partner fleet03/B14 law-level convex-mixture localization (`yspennstate/math-open-problems@871a2d4c9f1ea58d89748ab1abab05021b4408de`).
+Combine this theorem with the completed assigned-partner fleet03/B14 law-level convex-mixture localization (`private-source-repository@871a2d4c9f1ea58d89748ab1abab05021b4408de`).
 
 Suppose there are universal `m_0`, `delta_0>0`, and `K<infinity` such that for every compact finite-fragment extreme-product component `nu`, every target matrix `A`, every interval `I`, and every deterministic outside vector `z`, one may choose — separately for that component — an original-coordinate active set `S`, `|S|<=m_0`, a pair-gap graph `G_nu`, exponents with cluster slack at least `delta_0`, and **arbitrary edge offsets** `d_e(z)` satisfying
 
@@ -168,7 +168,7 @@ This also stays compatible with `QFORM-ONE-TRIPLE-RANK2-AGGREGATE-UNIFORM-FALSE-
 
 ## 7. Interaction with the new curved-coarea peer result
 
-The newly completed fleet01/B06 theorem (`yspennstate/math-open-problems@1bc95193312b70572b2765529ac3b6d98e3fe754`) proves a translation-uniform three-coordinate curved-coarea bound for any invertible physical `3x3` block and explicitly refutes post-hoc determinant-weight averaging in the delocalized Hadamard family. Its first unpaid step is to retain determinant/Pluecker weights inside the reciprocal-distance kernel before scalar collapse.
+The newly completed fleet01/B06 theorem (`private-source-repository@1bc95193312b70572b2765529ac3b6d98e3fe754`) proves a translation-uniform three-coordinate curved-coarea bound for any invertible physical `3x3` block and explicitly refutes post-hoc determinant-weight averaging in the delocalized Hadamard family. Its first unpaid step is to retain determinant/Pluecker weights inside the reciprocal-distance kernel before scalar collapse.
 
 The theorem above gives a precise admissible endpoint for such a prebound synthesis: if that weighted curved kernel can be reorganized, before taking the scalar block bound, into a convex combination of bounded-size pair-gap graphs satisfying the cluster inequalities with uniform slack, then all arbitrary offsets created by completing squares are harmless and fleet03/B14 removes the outside localization. Conversely, if the reorganization produces a critical collision cluster, Section 4 shows that an absolute pair-gap majorant cannot be the missing final step even for iid uniforms.
 
@@ -178,9 +178,9 @@ No claim is made that fleet01/B06's current `1/|Cu|` kernel has already been con
 
 - owner continuation: `QFORM-PROOF-FIRST-20260922T161801Z`, source `yspennstate/math-research-brain@10695e7784b41c0a2bf1a5e61a93cbc8cfc66564`;
 - correction snapshot before this write: `yspennstate/math-research-brain@29e91087236ca7ebeaa5d6b64e42adc450cba975`;
-- assigned partner applied: fleet03/B14 `yspennstate/math-open-problems@871a2d4c9f1ea58d89748ab1abab05021b4408de`;
-- compatible arbitrary-offset triangle peer: fleet01/B14 `yspennstate/math-open-problems@2ad67886f215eff6f3daed247871a882a6f0314b`;
-- curved-coarea synthesis peer: fleet01/B06 `yspennstate/math-open-problems@1bc95193312b70572b2765529ac3b6d98e3fe754`;
-- main report for this run: `yspennstate/math-open-problems@cc52390bf9c5007889d0004bd994a3142225d54a`.
+- assigned partner applied: fleet03/B14 `private-source-repository@871a2d4c9f1ea58d89748ab1abab05021b4408de`;
+- compatible arbitrary-offset triangle peer: fleet01/B14 `private-source-repository@2ad67886f215eff6f3daed247871a882a6f0314b`;
+- curved-coarea synthesis peer: fleet01/B06 `private-source-repository@1bc95193312b70572b2765529ac3b6d98e3fe754`;
+- main report for this run: `private-source-repository@cc52390bf9c5007889d0004bd994a3142225d54a`.
 
 Full QFORM remains open. No scheduler mutation, new task, email/notification action, public release, paid call, remote workflow, permission change, or cross-account authentication is used here.

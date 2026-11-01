@@ -64,7 +64,7 @@ This says nothing about boundedness or continuity of the density.
 
 The completed fleet01/B15 theorem at
 
-`yspennstate/math-open-problems@47dc925729bbf269333cc6e1256178a538d2f553`
+`private-source-repository@47dc925729bbf269333cc6e1256178a538d2f553`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B15/20260922T120320Z-fleet01-B15-qform/REPORT.md`
 
 contains two ingredients used here.
@@ -85,7 +85,7 @@ Hence the set defining `K_*(A)` is nonempty.
 
 For an invertible physical `3x3` symmetric block `B`, the completed fleet02/B15 theorem at
 
-`yspennstate/math-open-problems@d5392d73398e2811f58b612fb8f191aa79d8ee5e`
+`private-source-repository@d5392d73398e2811f58b612fb8f191aa79d8ee5e`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`
 
 proves for every affine quadratic in three independent cap-one original coordinates
@@ -118,7 +118,7 @@ The newest completed designated partner result is fleet04/B15 run
 
 scientific commit
 
-`yspennstate/math-open-problems@0ba4f7d74b9b06d689c5a540b228a31cf9833043`.
+`private-source-repository@0ba4f7d74b9b06d689c5a540b228a31cf9833043`.
 
 Its rough interval closure theorem says: if `mu_m -> mu` in total variation and every approximating law obeys the same interval inequality `mu_m(J)<=M|J|`, then `mu(E)<=M|E|` for every Borel set and the rough limit has essential density cap `M`. This statement is purely measure-level and does not infer continuity from boundedness.
 
@@ -152,7 +152,7 @@ The structural `C_0` theorem is obtained by exhausting the two physical-coordina
 
 The completed fleet03/B15 theorem at
 
-`yspennstate/math-open-problems@d73760eb784a86c356c64f05dd92f84655618f02`
+`private-source-repository@d73760eb784a86c356c64f05dd92f84655618f02`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260922T153101Z-fleet03-B15-r12/REPORT.md`
 
 proves that every rank-at-least-three symmetric matrix with some `A_jj!=0` has `C_0` output for arbitrary cap-one product laws. The high-dimensional argument selects an invertible physical principal block of order three or four containing that pivot and conditions on all other original coordinates.
@@ -173,7 +173,7 @@ I rechecked the key structural points: the critical set of `(u^T S u,v^T u)` is 
 
 The completed fleet02/B15 theorem at
 
-`yspennstate/math-open-problems@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`
+`private-source-repository@9b8bb7e84811978a2c46c7bb5ec50f2570dbc056`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T200544Z-fleet02-B15-qform-r11/REPORT.md`
 
 closes the complementary class. I rechecked both branches rather than importing its conclusion only by name.

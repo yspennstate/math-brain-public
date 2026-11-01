@@ -91,9 +91,9 @@ quaternion \(\chi^2\) norm tails used in R47 give `o_P(m)` extrema and a.s.
   `cor:quat-random-prefix-conditioning-exact`.
 - `STATE.md`: added row `V.A-square-rc-cond` and the R50 round log.
 - `PLAN.md`: recorded the random-prefix conditioning transfer in V.A.
-- `math-open-problems-fleet/master/chO_phase_retrieval_rmt.tex`: added the Lane
+- `private-source-fleet/master/chO_phase_retrieval_rmt.tex`: added the Lane
   O compact random-prefix conditioning paragraph.
-- `math-open-problems-fleet/MASTER_STATE.md`: recorded the master-side summary.
+- `private-source-fleet/MASTER_STATE.md`: recorded the master-side summary.
 
 ## Build verification
 

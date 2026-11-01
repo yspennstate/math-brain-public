@@ -3,7 +3,7 @@
 **Run:** `B17-20260921T121657Z-r29`  
 **Status:** PARTIAL. Full uniform-cube Fourier entropy–influence (FEI) remains **OPEN / NOT PROVED**.  
 **Brain label:** **WITHOUT_VERIFIED_BRAIN**. No authenticated brain retrieval or receiver-side brain context was used.  
-**Fresh scientific source state:** `yspennstate/math-open-problems` master `38478ec564b732c16e302f3be7504d1d23bbdf72` at the start of the derivation.  
+**Fresh scientific source state:** `private-source-repository` master `38478ec564b732c16e302f3be7504d1d23bbdf72` at the start of the derivation.  
 **Active sprint:** `FEI-PROOF-NUMERICS-SPRINT-20260921T120803Z`; fleet04/B17 scope is adversarial non-read-once phase constructions.  
 **Named universal obstruction attacked:** the previous B17 run showed that an FEI proof based on rare-history dependence must retain **conditional KL scale**, not merely Hellinger distance. This run asks whether a fixed-order local spectral/phase payment can recover that KL. The answer is no: exact Boolean quadratic phases can hide arbitrarily much total correlation from every fixed collection of low-order spectral marginals, even after a rare selector activates the phase.
 

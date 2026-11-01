@@ -2456,7 +2456,7 @@ Written by fei_brain_ingest.py (claude-51330238). Sources: brain_workers/FEI100_
 
 ## Not in git (binary, over 2 MB or flagged by the secret scan)
 
-Binary and flagged files of the fleet and the Opus routes, and the computed arrays of TRIO_1011, are also assets of this repo's release fei-campaign-binaries-2026-10 (manifest in its notes), marked [release] below. TRIO_1011's downloaded papers and raw API responses stay on the laptop only. Text over 2 MB in finished fleet runs is on math-open-problems through the fleet sync.
+Binary and flagged files of the fleet and the Opus routes, and the computed arrays of TRIO_1011, are also assets of this repo's release fei-campaign-binaries-2026-10 (manifest in its notes), marked [release] below. TRIO_1011's downloaded papers and raw API responses stay on the laptop only. Text over 2 MB in finished fleet runs is on private-source through the fleet sync.
 
 - ~/brain_workers/FEI100_20261011/agents/A026/runs/20261011T214052Z-fleet05-A026-good-coordinate-erasure/out/gray_selections.bin (32906 bytes) [release]
 - ~/brain_workers/FEI100_20261011/agents/A029/runs/20261014T055200Z-fleet05-A029-child-deficit-transport/REVIEW_A028.md (2927 bytes) [release]

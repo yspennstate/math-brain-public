@@ -14,7 +14,7 @@ Fresh authenticated control on entry was `yspennstate/math-research-brain` main
 The live directive is `FEI-FULL-PROOF-PROGRESS-2026-09-21-174421Z`.
 
 Fresh scientific master used for the final integration was
-`yspennstate/math-open-problems` master
+`private-source-repository` master
 `bd0e57e6297a1078b42c6f39e8eb843d3c32fa79`.
 
 ## 0. Before / after and the last three B18 runs

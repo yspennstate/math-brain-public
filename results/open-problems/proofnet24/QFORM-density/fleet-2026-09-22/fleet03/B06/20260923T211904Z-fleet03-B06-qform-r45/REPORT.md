@@ -15,7 +15,7 @@ The unrestricted owner target remains OPEN. No Gaussianity, log-concavity, momen
 
 The immediate B06 predecessor is
 
-`yspennstate/math-open-problems@eb5cd7bd244d799988b7fa618280b46713bd13c8`
+`private-source-repository@eb5cd7bd244d799988b7fa618280b46713bd13c8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T205344Z-fleet03-B06-qform-r44/REPORT.md`.
 
@@ -33,7 +33,7 @@ Two completed analytic inputs are used below at their proved scopes.
 
 1. `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, full source
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
@@ -46,7 +46,7 @@ The sharper constant applies because in two physical dimensions every affine vec
 
 2. `QFORM-PAIR-LOG-SMALLBALL-SMOOTHING-v1`, full source
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -62,7 +62,7 @@ The physical-pair shifts may depend arbitrarily on the residual/environment.
 
 A recent physical-three-core theorem was also checked to avoid duplicate work:
 
-`yspennstate/math-open-problems@c46d60b27a443ae41a51ce9aaec12a1aab6243f9`
+`private-source-repository@c46d60b27a443ae41a51ce9aaec12a1aab6243f9`
 
 `proofnet24/QFORM-density/interactive/20260923T191724Z-physical-three-core/REPORT.md`.
 
@@ -226,7 +226,7 @@ while a nontrivial off-diagonal/aggregate `K_H` currency may remain. That aggreg
 
 The completed designated partner theorem is
 
-`yspennstate/math-open-problems@f24c8db8946d54f4da2d11898697913af766ad32`
+`private-source-repository@f24c8db8946d54f4da2d11898697913af766ad32`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B06/20260923T184145Z-fleet04-B06-QFORM-r1/REPORT.md`,
 

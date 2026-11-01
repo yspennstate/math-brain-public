@@ -2,7 +2,7 @@
 
 Programme `QFORM-DENSITY-3EIG-20260922`; full unrestricted target remains OPEN.
 
-Pinned source actually used: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, especially the completed bounded two-dimensional product-projection marginal used in `COUNTEREXAMPLE_SEARCH.md` and the source-integrity warnings in `RESULTS.md` / `FOURIER_ROUTE_REPORT.md`. Latest compatible designated partner read: fleet03/B16 `20260923T210312Z-fleet03-B16-QFORM-r34`, whose fixed-P Minkowski mixed norm diverges for authentic fragmented product projections.
+Pinned source actually used: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, especially the completed bounded two-dimensional product-projection marginal used in `COUNTEREXAMPLE_SEARCH.md` and the source-integrity warnings in `RESULTS.md` / `FOURIER_ROUTE_REPORT.md`. Latest compatible designated partner read: fleet03/B16 `20260923T210312Z-fleet03-B16-QFORM-r34`, whose fixed-P Minkowski mixed norm diverges for authentic fragmented product projections.
 
 ## First implication
 

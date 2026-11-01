@@ -20,7 +20,7 @@ At prepublication refresh, `yspennstate/math-research-brain` main was observed a
 
 The designated completed partner result actually applied is fleet04/B15's Gaussian heat-height theorem:
 
-- repository/commit: `yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`;
+- repository/commit: `private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`;
 - path: `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`.
 
 For every Borel probability law `mu` on `R`, with
@@ -33,7 +33,7 @@ with value `+infinity` if no bounded density exists; and if `p_mu in C_0`, then 
 
 The newest owner-required mathematical result actually applied is the volume-stability theorem:
 
-- repository/commit: `yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`;
+- repository/commit: `private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`;
 - path: `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 On its certified original-coordinate cross-block branch `M=M0+E`, `s3(M0)>=a`, `max diag(P_range(M0))<=1/2`, `||E||op<=a/16`, it proves a continuous density with
@@ -44,7 +44,7 @@ for the full ambient quadratic-plus-affine output, with all self blocks and outs
 
 The immediately preceding B15 run was
 
-`yspennstate/math-open-problems@ac5676953c28ec64bc907924b20ef9a24542c914`,
+`private-source-repository@ac5676953c28ec64bc907924b20ef9a24542c914`,
 
 which proved lower semicontinuity of density height under weak convergence. The present result is a strict finite-scale refinement: at every fixed positive Gaussian heat scale, the entire smoothed density converges **uniformly in the output center**, not merely through a liminf inequality for its eventual height.
 

@@ -2,7 +2,7 @@
 
 Run: `20260924T025900Z-fleet02-B20-QFORM-auto11b`.
 
-Working source: fresh B20 predecessor `math-open-problems@f8623c2ad724913062a5c86a21f0714a94bab3c0`, plus fleet01/B02 r38/r43 and newest compatible fleet03/B20 r44. Full QFORM remains open.
+Working source: fresh B20 predecessor `private-source@f8623c2ad724913062a5c86a21f0714a94bab3c0`, plus fleet01/B02 r38/r43 and newest compatible fleet03/B20 r44. Full QFORM remains open.
 
 ## Tuned leverage peel
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # R06 — P0025 exterior-disc synchronous coupling / corner-layer L1 drift and trace smoothing
 
 Run ID: `20260918T0617Z_p0025_corner_layer_trace_smoothing_35`
-Repository / branch: `yspennstate/math-open-problems` / `master`
+Repository / branch: `private-source-repository` / `master`
 Track: `R06`, lane `CLOSABLE OUTSIDE`
 
 ## 0. Continuity and frozen predecessor states

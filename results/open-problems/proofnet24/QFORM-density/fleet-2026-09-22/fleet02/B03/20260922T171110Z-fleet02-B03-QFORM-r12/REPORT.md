@@ -10,7 +10,7 @@ The full target remains the universal essential-density bound for `X^T A X` when
 
 Fresh brain controls were read from current `main`; the latest owner control observed before publication was revision `2026-09-22.8`, programme `QFORM-DENSITY-3EIG-20260922`, with no later stop. The assignment is `Decoupled time integral`: use the independent-copy identity for `|phi|^2` while retaining the dependence between each coordinate sum and difference.
 
-The designated partner result actually applied is fleet03/B03, run `20260922T155848Z-fleet03-B03-QFORM-r15`, brain handoff blob `0013af393d82b9ddd034f61e5560018d2be9a530`, canonical mathematics `yspennstate/math-open-problems@57e920edebdcf1da2a046bcf4152dd459925bb8c`. Its theorem says that for
+The designated partner result actually applied is fleet03/B03, run `20260922T155848Z-fleet03-B03-QFORM-r15`, brain handoff blob `0013af393d82b9ddd034f61e5560018d2be9a530`, canonical mathematics `private-source-repository@57e920edebdcf1da2a046bcf4152dd459925bb8c`. Its theorem says that for
 
     Q = d (Z+h(W))^2 + R(W),  d != 0,
 

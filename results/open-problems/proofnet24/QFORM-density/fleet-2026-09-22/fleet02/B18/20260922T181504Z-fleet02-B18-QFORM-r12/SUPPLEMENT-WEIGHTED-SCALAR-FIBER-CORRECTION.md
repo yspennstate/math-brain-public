@@ -1,6 +1,6 @@
 # Late source correction — weighted scalar-fiber supremum is also false
 
-After the primary B18 report and first correction supplement, fleet01/B05 published the source-backed event `QFORM-WEIGHTED-SCALAR-FIBER-SUP-FALSE-v1`, canonical proof `yspennstate/math-open-problems@e790015edd17308192429ebd0461a60dd57a06c1:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260922T182410Z-fleet01-B05-qform15/REPORT.md`.
+After the primary B18 report and first correction supplement, fleet01/B05 published the source-backed event `QFORM-WEIGHTED-SCALAR-FIBER-SUP-FALSE-v1`, canonical proof `private-source-repository@e790015edd17308192429ebd0461a60dd57a06c1:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B05/20260922T182410Z-fleet01-B05-qform15/REPORT.md`.
 
 That theorem refutes the repaired scalar-fiber mixed norm
 

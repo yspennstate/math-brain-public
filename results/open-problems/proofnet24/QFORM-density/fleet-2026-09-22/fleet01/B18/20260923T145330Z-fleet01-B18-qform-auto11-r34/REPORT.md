@@ -14,7 +14,7 @@ The unrestricted owner target remains OPEN: independent real inputs with arbitra
 
 Fresh control was consumed before this proof. The latest completed designated-partner result is fleet02/B18 r29, present at source snapshot
 
-`yspennstate/math-open-problems@d522cbf61b6744403b82d955f27d8059465e6f38`
+`private-source-repository@d522cbf61b6744403b82d955f27d8059465e6f38`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/fleet02-B18-20260923T130619Z-r29/REPORT.md`.
 
@@ -26,7 +26,7 @@ The smoothing theorem applied below is the completed physical-pair logarithmic t
 
 source-pinned at
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 

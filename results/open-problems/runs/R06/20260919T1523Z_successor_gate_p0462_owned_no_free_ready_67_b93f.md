@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 # R06 successor-admission delta — P0462 is newly CLOSABLE but already owned; no free READY successor
 
 Date checked: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: R06  
 Category gate: CLOSABLE OUTSIDE  
 Status entering/leaving: `PENDING_ADMISSION`

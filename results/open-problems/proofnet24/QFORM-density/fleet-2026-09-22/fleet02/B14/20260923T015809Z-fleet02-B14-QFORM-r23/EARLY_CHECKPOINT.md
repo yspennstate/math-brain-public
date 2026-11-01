@@ -35,7 +35,7 @@ Coordinatewise translation is a bijection of both `D_n` and `F_n`. Therefore the
 
 ## Required Claude-source application
 
-Claude's completed Theorem D/D' at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, proves for a physical cross block `M=A[I,J]`, third-volume `Z=e_3(M^T M)` and row volume marginals `alpha_i<=h<3/4`, a uniform density estimate (older D' constant)
+Claude's completed Theorem D/D' at `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`, proves for a physical cross block `M=A[I,J]`, third-volume `Z=e_3(M^T M)` and row volume marginals `alpha_i<=h<3/4`, a uniform density estimate (older D' constant)
 
 `||p_Q||inf <= 6 sqrt(e) (2h)^(-1/2) (3-4h)^(-1) Z^(-1/6)`
 

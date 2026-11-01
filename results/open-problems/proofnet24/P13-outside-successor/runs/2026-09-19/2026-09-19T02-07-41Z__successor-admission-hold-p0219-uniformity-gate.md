@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 at 
 
 # P13 outside-successor admission hold — P0219 uniformity gate — 2026-09-19T02:07:41Z
 
-Repository / branch: private `yspennstate/math-open-problems` / `master`.
+Repository / branch: private `private-source-repository` / `master`.
 Own root: `proofnet24/P13-outside-successor`.
 Native slot: `6aa7b253b37c8191b693d8dc79298d37`.
 Prewrite master snapshot: `ee898ed8c44e54e320e1c015355f42dd78aa7810`.

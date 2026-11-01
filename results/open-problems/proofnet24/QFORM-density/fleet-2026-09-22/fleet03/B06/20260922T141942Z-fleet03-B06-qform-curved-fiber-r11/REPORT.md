@@ -14,7 +14,7 @@ This run does **not** use any of the retired mechanisms: no law-uniform pointwis
 
 The immediate starting point is the previous B06 heavy-isotropic normal form, source-pinned at
 
-`yspennstate/math-open-problems@505e316c1806a352965a5781bdaa2f81929f0f42`
+`private-source-repository@505e316c1806a352965a5781bdaa2f81929f0f42`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260922T132210Z-fleet03-B06-qform-curved-r12/REPORT.md`.
 
@@ -28,7 +28,7 @@ Two compatible completed results are actually used.
 
 1. **Product projection density.** fleet03/B02 records the sharp one-dimensional product projection estimate, sourced to Rogozin/Ball and Rudelson--Vershynin: if independent coordinates have densities at most one and a coefficient vector has Euclidean norm one, then the linear combination has density at most `sqrt(2)`. Source used here:
 
-   `yspennstate/math-open-problems@18fb381e300dd86514835d27eedcf2507ab09227`
+   `private-source-repository@18fb381e300dd86514835d27eedcf2507ab09227`
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T130245Z-fleet03-B02-QFORM-r11/REPORT.md`.
 
@@ -38,7 +38,7 @@ Two compatible completed results are actually used.
 
    on the appropriate one-sided half-line, whenever the conditional density of `V_R` is at most one. The final theorem in that report assumes `p_R in L^infinity`; Section 6 below applies the **displayed proof inequality itself** to the new `L^4` bank proved here. Exact source:
 
-   `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
+   `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`.
 

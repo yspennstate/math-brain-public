@@ -311,9 +311,9 @@ The remaining B12 obligation is now sharper: in the no-local-certificate regime,
 ## 9. Provenance
 
 
-Newest mathematical source applied: `yspennstate/math-open-problems`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md` and `GEOMETRIC_ROUTE_REPORT.md`; the owner continuation identifies initial Claude-attributed commit `e5f71d79eff325201dd0274053d20268ce65b837`, and later master content was read before this report.
+Newest mathematical source applied: `private-source-repository`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, especially `RESULTS.md`, `FOURIER_ROUTE_REPORT.md` and `GEOMETRIC_ROUTE_REPORT.md`; the owner continuation identifies initial Claude-attributed commit `e5f71d79eff325201dd0274053d20268ce65b837`, and later master content was read before this report.
 
-Assigned partner actually applied: `fleet04/B12`, `QFORM mixed-norm shear compiler`, canonical report `yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260922T192552Z-fleet04-B12-mixed-shear-r1/REPORT.md`.
+Assigned partner actually applied: `fleet04/B12`, `QFORM mixed-norm shear compiler`, canonical report `private-source-repository@9ce47e2a0f2c8434d901df13a218450c2189d80e:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260922T192552Z-fleet04-B12-mixed-shear-r1/REPORT.md`.
 
 Corrections respected include: no law-uniform pointwise quadratic-phase decay, no independence after spectral rotation, no arbitrary-joint rank-three coarea bound, no dimension-free normalized worst conditional fiber, no universally good single physical minor/cross-rank-three cut, and no claim that a small matrix norm makes its quadratic value uniformly small on arbitrary unbounded product inputs.
 

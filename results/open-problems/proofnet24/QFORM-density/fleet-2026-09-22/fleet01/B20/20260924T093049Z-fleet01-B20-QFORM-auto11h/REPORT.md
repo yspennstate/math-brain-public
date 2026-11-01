@@ -16,11 +16,11 @@ No Gaussian, moment, iid, compact-support, log-concavity, conditional-cap, rotat
 
 1. Fresh owner control: `yspennstate/math-research-brain@0aae39e792eb341d930934f748c48cc0325f14a8`, with owner revision `2026-09-22.15`; QFORM remains the sole research target and the full theorem remains open.
 
-2. Designated completed partner: `yspennstate/math-open-problems@3482c3d93d336c0993f6aa85a7a0c78c9a07ffad`,
+2. Designated completed partner: `private-source-repository@3482c3d93d336c0993f6aa85a7a0c78c9a07ffad`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B20/20260924T091256Z-fleet02-B20-QFORM-auto11-r50/REPORT.md`.
 Its unpaid r50 chamber is a retained-tail rank-12/rank-11 moderate residual endpoint. It also records the explicit flat Walsh rank-three residual stress family used in Section 5 below.
 
-3. The actual r52 light crossing used below is pinned at `yspennstate/math-open-problems@5ec1cc2bf208bc0249ea89d86fd7298b62ac324e`,
+3. The actual r52 light crossing used below is pinned at `private-source-repository@5ec1cc2bf208bc0249ea89d86fd7298b62ac324e`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T070220Z-fleet03-B19-QFORM-r52/REPORT.md`.
 It supplies a literal original-coordinate crossing `N=A[R,C]` with
 
@@ -30,7 +30,7 @@ It supplies a literal original-coordinate crossing `N=A[R,C]` with
 
 where `N0` has rank at most two and its source-normalized left and right two-frames have every physical row leverage at most 1/2.
 
-4. Analytic receiver: `yspennstate/math-open-problems@1439f3ecb30a49b8363552d780159306f4b9c56f`,
+4. Analytic receiver: `private-source-repository@1439f3ecb30a49b8363552d780159306f4b9c56f`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260923T184716Z-fleet02-B03-QFORM-auto11/REPORT.md`, theorem `QFORM-Z3-CROSSING-MARGINAL-FREE-v1`:
 for every literal original-coordinate cross block `M` with `Z3=e3(MM^T)>0`, the full ambient quadratic form has a continuous C0 density and
 

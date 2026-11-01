@@ -4,7 +4,7 @@
 
 `fourier.tex` is an anonymous mathematical chapter. It contains complete proofs of the stated analytic consequences, with explicitly cited classical input theorems. It does not claim that the unrestricted three-eigenvalue conjecture is solved.
 
-Repository snapshot: `yspennstate/math-open-problems@36d0dc0c4ac0910e8d84ae64d443136df86242d5`.
+Repository snapshot: `private-source-repository@36d0dc0c4ac0910e8d84ae64d443136df86242d5`.
 
 The chapter is reconstructed from the sources below and re-derived algebraically. Source prose and administrative records are not included in the mathematical chapter.
 
@@ -36,17 +36,17 @@ Each URL below fixes the repository snapshot and each listed blob is the Git blo
 
 | Source | Snapshot blob | Local byte verification |
 |---|---|---|
-| [interactive/20260922T120815Z-separable-perturbations/REPORT.md](https://github.com/yspennstate/math-open-problems/blob/36d0dc0c4ac0910e8d84ae64d443136df86242d5/proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md) | `d08d2488c072386e2b8ad818e30b1a6dec79e63a` | Exact after removing one appended final newline |
-| [interactive/20260922T131746Z-regularized-determinant/REPORT.md](https://github.com/yspennstate/math-open-problems/blob/36d0dc0c4ac0910e8d84ae64d443136df86242d5/proofnet24/QFORM-density/interactive/20260922T131746Z-regularized-determinant/REPORT.md) | `080253f929411bfa9c7aa3254a2bdaf37be72ebb` | Exact after removing one appended final newline |
-| [interactive/20260922T151048Z-ridge-window/REPORT.md](https://github.com/yspennstate/math-open-problems/blob/36d0dc0c4ac0910e8d84ae64d443136df86242d5/proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md) | `1241fa7ba9a36a91bc75f047677f2daac764c2bf` | Exact after removing one appended final newline |
-| [interactive/20260922T161801Z-rank-two-fusion/REPORT.md](https://github.com/yspennstate/math-open-problems/blob/36d0dc0c4ac0910e8d84ae64d443136df86242d5/proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md) | `00681629acaba8f2e04edda6c9f6b5c4f0fdafa4` | Exact after removing one appended final newline |
-| [interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md](https://github.com/yspennstate/math-open-problems/blob/36d0dc0c4ac0910e8d84ae64d443136df86242d5/proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md) | `d690b4e1e9f29a458c5ee7d8f2f107b98da64360` | Exact after removing one appended final newline |
-| [interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md](https://github.com/yspennstate/math-open-problems/blob/36d0dc0c4ac0910e8d84ae64d443136df86242d5/proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md) | `9da148eed6cd43b1046a6f91d0f9329e12921cb4` | Exact after removing one appended final newline |
-| [interactive/20260922T220600Z-claude-review/REVIEW.md](https://github.com/yspennstate/math-open-problems/blob/36d0dc0c4ac0910e8d84ae64d443136df86242d5/proofnet24/QFORM-density/interactive/20260922T220600Z-claude-review/REVIEW.md) | `44ee51368aad3796beda43e15534087cd0b298fd` | Exact after removing one appended final newline |
-| [interactive/20260923T002323Z-volume-stability/REPORT.md](https://github.com/yspennstate/math-open-problems/blob/36d0dc0c4ac0910e8d84ae64d443136df86242d5/proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md) | `f9efb2a4c89b81707d720b88db35ebdea2013f74` | Exact after removing one appended final newline |
-| [interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md](https://github.com/yspennstate/math-open-problems/blob/36d0dc0c4ac0910e8d84ae64d443136df86242d5/proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md) | `d728798f2a5656bd6e34ee5da0f3d080e41a6315` | Exact after removing one appended final newline |
-| [fleet/fleet01/B04/20260923T144427Z-fleet01-B04-QFORM-auto11-r13/REPORT.md](https://github.com/yspennstate/math-open-problems/blob/36d0dc0c4ac0910e8d84ae64d443136df86242d5/proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T144427Z-fleet01-B04-QFORM-auto11-r13/REPORT.md) | `fe94d8ac06cc25527a259d291887b6112bf6cf28` | Exact bytes |
-| [fleet/fleet01/B04/20260923T154425Z-fleet01-B04-QFORM-auto11-r14/REPORT.md](https://github.com/yspennstate/math-open-problems/blob/36d0dc0c4ac0910e8d84ae64d443136df86242d5/proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T154425Z-fleet01-B04-QFORM-auto11-r14/REPORT.md) | `1333b52ede708fd86a5bd68158e540ba72e5ad1f` | Exact bytes |
+| [interactive/20260922T120815Z-separable-perturbations/REPORT.md](private-source-repository) | `d08d2488c072386e2b8ad818e30b1a6dec79e63a` | Exact after removing one appended final newline |
+| [interactive/20260922T131746Z-regularized-determinant/REPORT.md](private-source-repository) | `080253f929411bfa9c7aa3254a2bdaf37be72ebb` | Exact after removing one appended final newline |
+| [interactive/20260922T151048Z-ridge-window/REPORT.md](private-source-repository) | `1241fa7ba9a36a91bc75f047677f2daac764c2bf` | Exact after removing one appended final newline |
+| [interactive/20260922T161801Z-rank-two-fusion/REPORT.md](private-source-repository) | `00681629acaba8f2e04edda6c9f6b5c4f0fdafa4` | Exact after removing one appended final newline |
+| [interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md](private-source-repository) | `d690b4e1e9f29a458c5ee7d8f2f107b98da64360` | Exact after removing one appended final newline |
+| [interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md](private-source-repository) | `9da148eed6cd43b1046a6f91d0f9329e12921cb4` | Exact after removing one appended final newline |
+| [interactive/20260922T220600Z-claude-review/REVIEW.md](private-source-repository) | `44ee51368aad3796beda43e15534087cd0b298fd` | Exact after removing one appended final newline |
+| [interactive/20260923T002323Z-volume-stability/REPORT.md](private-source-repository) | `f9efb2a4c89b81707d720b88db35ebdea2013f74` | Exact after removing one appended final newline |
+| [interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md](private-source-repository) | `d728798f2a5656bd6e34ee5da0f3d080e41a6315` | Exact after removing one appended final newline |
+| [fleet/fleet01/B04/20260923T144427Z-fleet01-B04-QFORM-auto11-r13/REPORT.md](private-source-repository) | `fe94d8ac06cc25527a259d291887b6112bf6cf28` | Exact bytes |
+| [fleet/fleet01/B04/20260923T154425Z-fleet01-B04-QFORM-auto11-r14/REPORT.md](private-source-repository) | `1333b52ede708fd86a5bd68158e540ba72e5ad1f` | Exact bytes |
 
 The nine interactive local copies each contain one extra final newline compared with their source blobs. Removing that one byte in memory reproduces the expected Git blob hash in every case. The two fresh B04 fleet reports match their Git blobs byte-for-byte. No shared snapshot file was modified. Detailed local checks are saved in `fleet_work/fourier_source_checks.json`.
 

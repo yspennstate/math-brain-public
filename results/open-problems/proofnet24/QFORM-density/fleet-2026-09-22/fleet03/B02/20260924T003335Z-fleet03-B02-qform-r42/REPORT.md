@@ -16,12 +16,12 @@ The exact owner target is unchanged: independent ORIGINAL real coordinates, one-
 Immediate B02 predecessor:
 
 - `QFORM-GROUPED-SHAREDHUB-SCHUR-L1-v1` and the r39/r40 grouped-star state;
-- `yspennstate/math-open-problems@eec1fd20aef4373f1bb20e9834aaa22992d37537`;
+- `private-source-repository@eec1fd20aef4373f1bb20e9834aaa22992d37537`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260924T000644Z-fleet03-B02-qform-r40/REPORT.md`.
 
 The sharp product-projection input used below is the Livshyts--Paouris--Pivovarov marginal theorem as source-pinned and audited in:
 
-- `yspennstate/math-open-problems@95ff0426e2d6e2f9899ace3bd23695706faf356c`;
+- `private-source-repository@95ff0426e2d6e2f9899ace3bd23695706faf356c`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/B18-20260922T155856Z-r13/REPORT.md`.
 
 For a three-dimensional orthogonal projection of an ORIGINAL cap-one product law, it gives density cap at most `2^(3/2)`. When the source ambient dimension itself is three, the product density cap is at most one, so the same `2^(3/2)` bound is harmlessly valid.
@@ -29,7 +29,7 @@ For a three-dimensional orthogonal projection of an ORIGINAL cap-one product law
 The designated fleet04/B02 theorem actually applied in Section 5 is:
 
 - `QFORM-ZERO-DIAGONAL-TRIPLE-CONTINUITY-v1`;
-- `yspennstate/math-open-problems@0b11995430ce407a8852ac3bc5651491f2ee64f7`;
+- `private-source-repository@0b11995430ce407a8852ac3bc5651491f2ee64f7`;
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B02/20260922T193108Z-fleet04-B02-QFORM-r2/REPORT.md`.
 
 On its exact scope, a nonsingular physical zero-diagonal principal triple `H0` gives

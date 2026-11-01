@@ -23,7 +23,7 @@ Consumed live corrections include: law-uniform pointwise quadratic-phase decay i
 
 The completed fleet04/B20 result is
 
-`yspennstate/math-open-problems@3671f29afb89083947437ffc4ebbb037aba58a4d`
+`private-source-repository@3671f29afb89083947437ffc4ebbb037aba58a4d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B20/20260923T142031Z-fleet04-B20-QFORM-r10/REPORT.md`.
 
@@ -55,7 +55,7 @@ The exact designated directory `fleet04/B06` still has no completed current-QFOR
 
 The completed fleet01/B04 theorem `QFORM-DISJOINT-E2-ENTROPY-HALVING-v1` is available in
 
-`yspennstate/math-open-problems@0a1747a38edea53a7b05d226d5bea53e835877cd`
+`private-source-repository@0a1747a38edea53a7b05d226d5bea53e835877cd`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B04/20260923T055035Z-fleet01-B04-QFORM-auto13/REPORT.md`.
 
@@ -86,7 +86,7 @@ The proof conditions the determinant law, not the random coordinates, and preser
 
 The source-pinned arbitrary-rank theorem is
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`
 
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`, Theorem 3.1.
 

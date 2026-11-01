@@ -13,7 +13,7 @@ The target remains the full statement: for every dimension `n`, every independen
 
 The designated partner result actually consumed is fleet03/B20, run `20260922T175041Z-fleet03-B20-QFORM-r14`, canonical mathematics
 
-`yspennstate/math-open-problems@e0d5eb88a5c953ca0fce31b386a35e7faea8389e`
+`private-source-repository@e0d5eb88a5c953ca0fce31b386a35e7faea8389e`
 
 at
 
@@ -33,7 +33,7 @@ The present run attacks packet 1 directly.
 
 A second source used at an exact inequality is fleet02/B06, `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical report
 
-`yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`
+`private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`
 
 at
 

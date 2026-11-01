@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 # R03 run29 — dense Schur reduction and Hadamard obstruction
 
 Run ID: `20260917T0708Z_29_dense_schur_hadamard`  
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Continuity, source gate, ownership and fixed metric
 

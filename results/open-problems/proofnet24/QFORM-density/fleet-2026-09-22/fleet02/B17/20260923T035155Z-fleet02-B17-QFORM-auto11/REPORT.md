@@ -38,7 +38,7 @@ Q_{m,f}=X_f^2+S_m^2-T_m^2.
 
 The completed preceding same-slot theorem
 
-`yspennstate/math-open-problems@189fc052089ae2d3237bc0865b290b01b26a6513`,
+`private-source-repository@189fc052089ae2d3237bc0865b290b01b26a6513`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260923T031047Z-fleet02-B17-QFORM-r11/REPORT.md`,
 
 proves the exact finite extremizer identity
@@ -222,7 +222,7 @@ C_2=3.41360248382402189110504446162\ldots,
 
 At the required source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`,
 
 Theorem C proves for every exact rank-three `(+,+,-)` source-valid form on the one-sheet side `s>=0` that
@@ -244,7 +244,7 @@ Failure to improve `pi sqrt(2)` by that Fourier theorem would only be a failure 
 
 The latest compatible completed `fleet03/B17` result is
 
-`yspennstate/math-open-problems@0a23c8b4c6e8f1ce727bd99d55ed6258ce18ade2`,
+`private-source-repository@0a23c8b4c6e8f1ce727bd99d55ed6258ce18ade2`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B17/20260923T033115Z-fleet03-B17-QFORM-r24/REPORT.md`.
 
 It constructs a genuinely rotated source-valid three-bank family with order-`1/m` remote fragments at distance `Theta(sqrt(m))`, proves a global noncentral-Gaussian shift penalty, and obtains for the concrete `a=c=1` fragmented family

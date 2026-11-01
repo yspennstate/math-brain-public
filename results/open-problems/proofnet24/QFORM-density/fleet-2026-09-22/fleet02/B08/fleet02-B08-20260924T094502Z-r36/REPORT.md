@@ -187,7 +187,7 @@ As `epsilon downarrow0`, `||A_epsilon-A_0||_op=epsilon L`, and `A_0` is precisel
 
 The family (4.1) is **not** a counterexample. Apply the completed generalized Fresnel--Brascamp--Lieb Theorem F from
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 
 on the full set of light ORIGINAL coordinates, conditioning only through the theorem's permitted outside block. The rank-three light frame is `[u_1,u_2,u_3]`; its physical leverage is `3/m<=1/2`, its Gram is the identity, and the three light eigenvalues are `L,L,epsilon L`. The hub scalar and hub-light star are allowed outside the used block. Therefore
 

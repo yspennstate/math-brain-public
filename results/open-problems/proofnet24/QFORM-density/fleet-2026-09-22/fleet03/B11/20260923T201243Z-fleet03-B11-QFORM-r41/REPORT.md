@@ -161,7 +161,7 @@ This statement is symmetric under `M\mapsto-M`; it covers both signatures `(2,1)
 
 Use the completed fleet04/B11 exact extension-mass theorem from
 
-`yspennstate/math-open-problems@30555c1ca97752e10f5089ccd95f8514c704be5a:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T131400Z-fleet04-B11-extension-mass-r6/REPORT.md`.
+`private-source-repository@30555c1ca97752e10f5089ccd95f8514c704be5a:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260923T131400Z-fleet04-B11-extension-mass-r6/REPORT.md`.
 
 For a physical pair `P={i,j}`, that theorem writes
 
@@ -250,7 +250,7 @@ Arbitrary additional nonseparable spectrum remains a separate bridge to the full
 
 Fresh control before publication: `yspennstate/math-research-brain@f5b1fb16df62f83d216afcdd918156d44ea30d37`; owner control remains revision `2026-09-22.15` and full QFORM remains open.
 
-Fresh math source before publication: `yspennstate/math-open-problems@c6096975fb4c91c3aa529230462fecf5d539a2e2`.
+Fresh math source before publication: `private-source-repository@c6096975fb4c91c3aa529230462fecf5d539a2e2`.
 
 Dependencies actually used:
 

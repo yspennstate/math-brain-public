@@ -21,7 +21,7 @@ The theorem below proves that this mass-linear slice condition is sufficient for
 
 The designated partner result actually used is fleet03/B14 r38, `QFORM-CHIRP-SLICE-L2-COMPILER-v1`, source
 
-`yspennstate/math-open-problems@0bd14ffdefeeb7e94e99c9f48b4220aa40ff55be`
+`private-source-repository@0bd14ffdefeeb7e94e99c9f48b4220aa40ff55be`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T143741Z-fleet03-B14-QFORM-r38/REPORT.md`.
 
@@ -291,7 +291,7 @@ This is `QFORM-ACTIVE-FRESNEL-FRAGMENT-LP-BARRIER-v1`: it refutes only the proof
 
 I read the required pinned Claude directory at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`. The completed `COUNTEREXAMPLE_SEARCH.md` Theorem A states that when every eigenvalue of an `n`-dimensional symmetric form has modulus at least `sigma`, linear terms allowed,
 

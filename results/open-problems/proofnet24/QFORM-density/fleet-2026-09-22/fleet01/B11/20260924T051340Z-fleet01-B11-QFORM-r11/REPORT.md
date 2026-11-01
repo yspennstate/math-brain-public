@@ -15,7 +15,7 @@ The unrestricted owner target remains OPEN / NOT PROVED / NOT DISPROVED. No Gaus
 
 The interrupted fleet01/B11 run at
 
-- `yspennstate/math-open-problems@5a4909d3e5c696bc6c23c036b60f04a46784157b`,
+- `private-source-repository@5a4909d3e5c696bc6c23c036b60f04a46784157b`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260924T031514Z-fleet01-B11-QFORM-auto11/REPORT.md`,
 
 proved an arbitrary-pivot theorem under `rank(A_{-i,-i})<=2` and initially labeled it as a new supporting theorem. That scope is source-matched by the earlier interactive theorem
@@ -186,7 +186,7 @@ This identity makes the near-coloop limit precise: `delta->0` suppresses only th
 The fresh designated partner is fleet02/B11 r12:
 
 - brain handoff commit `2fec8f73a1c8cc72ea36308039fe1fbeb4a7cb64`,
-- canonical mathematics `yspennstate/math-open-problems@7a45322747438aa340df490db33a2fb2e1d6d31d`,
+- canonical mathematics `private-source-repository@7a45322747438aa340df490db33a2fb2e1d6d31d`,
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B11/20260924T040707Z-fleet02-B11-QFORM-r12/REPORT.md`.
 
 Its completed fixed-transverse-Pluecker theorem says that in the exact-rank-three null physical-pivot chamber, if the hub leverage is `q` and the maximum squared transverse Pluecker atom is `omega_*`, then
@@ -252,7 +252,7 @@ with `(T,C,D_0)` a genuine three-dimensional orthonormal projection of the resid
 
 That exact implication is already covered by the completed fleet02/B16 theorem `QFORM-FRESH-HUB-DIVISIBLE-TWIST-ABSORPTION-v1`, source
 
-`yspennstate/math-open-problems@be8062b160868bcc71aff45a77c56ff2d0501a9a`.
+`private-source-repository@be8062b160868bcc71aff45a77c56ff2d0501a9a`.
 
 Indeed take the literal fresh scalar `H=X_0`, the receiver variables `(L,V)=(C,D_0)`, and the arbitrary light twist
 

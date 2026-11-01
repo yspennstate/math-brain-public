@@ -238,7 +238,7 @@ I read the complete canonical proof of fleet02/B09's newest completed theorem
 
 at
 
-`yspennstate/math-open-problems@59ccddd0766b466b30abd645926887f907b0bcd7`
+`private-source-repository@59ccddd0766b466b30abd645926887f907b0bcd7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T134326Z-fleet02-B09-QFORM-r13/REPORT.md`.
 

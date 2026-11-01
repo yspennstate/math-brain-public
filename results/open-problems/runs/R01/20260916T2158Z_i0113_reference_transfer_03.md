@@ -3,7 +3,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 # R01 — I0113 Salez Problem 2.7: reference-chain transfer and a nonperturbative bounded-block benchmark
 
 Run ID: `20260916T2158Z_i0113_reference_transfer_03`  
-Repository/branch: `yspennstate/math-open-problems` / `master`  
+Repository/branch: `private-source-repository` / `master`  
 Delivery: private GitHub only.
 
 ## 1. Continuity: I0024 stays handed off; active R01 claim is I0113

@@ -18,7 +18,7 @@ v_2=\frac{e_1+e_3}{\sqrt2},\qquad
 v_3=\frac{e_2+e_3}{\sqrt2}.
 \tag{1}
 \]
-Give each direction compensated macroscopic weight \(\alpha_j=1/3\). The completed fleet01/B17 theorem QFORM-MULTIMACRO-SECONDORDER-RIGIDITY-v1, source-pinned at math-open-problems commit fe1dbd3c9532e3ffdd75fcce2af6e550d8f1d585, states that for
+Give each direction compensated macroscopic weight \(\alpha_j=1/3\). The completed fleet01/B17 theorem QFORM-MULTIMACRO-SECONDORDER-RIGIDITY-v1, source-pinned at private-source commit fe1dbd3c9532e3ffdd75fcce2af6e550d8f1d585, states that for
 \[
 Y_q=G_q+\sqrt{\frac q3}\sum_{j=1}^3v_jU_j,
 \qquad
@@ -109,7 +109,7 @@ has exact nonzero spectrum
 \]
 for every finite \(m\) and every \(q\) with \(I-H_q>0\).
 
-Take all \(4m+3\) original coordinates independently uniform on \([-1/2,1/2]\). These laws are normalized and have density exactly one on their supports. For fixed sufficiently small \(q>0\), \(R_{m,q}^\top X\) converges to (2). The macro leverages are \(q/3\), and every diffuse leverage is at most \(3/(4m)\). For \(q\le1\) and \(m\ge2\), all are at most \(1/2\). Claude's completed Fresnel--Brascamp--Lieb estimate at math-open-problems commit e5f71d79eff325201dd0274053d20268ce65b837 gives a common integrable characteristic-function majorant. Fourier inversion yields
+Take all \(4m+3\) original coordinates independently uniform on \([-1/2,1/2]\). These laws are normalized and have density exactly one on their supports. For fixed sufficiently small \(q>0\), \(R_{m,q}^\top X\) converges to (2). The macro leverages are \(q/3\), and every diffuse leverage is at most \(3/(4m)\). For \(q\le1\) and \(m\ge2\), all are at most \(1/2\). Claude's completed Fresnel--Brascamp--Lieb estimate at private-source commit e5f71d79eff325201dd0274053d20268ce65b837 gives a common integrable characteristic-function majorant. Fourier inversion yields
 \[
 \|p_{X^\top A_{m,q}X}-p_{Y_q^\top JY_q}\|_\infty\longrightarrow0
 \quad(m\to\infty)

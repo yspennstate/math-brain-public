@@ -274,8 +274,8 @@ A useful next B01 question is therefore whether the half-integral ladder can be 
 ## 8. Source pins
 
 - Fresh controls: `yspennstate/math-research-brain`, programme `QFORM-DENSITY-3EIG-20260922`, owner revision `2026-09-22.5`.
-- Assigned partner fleet04/B01: `yspennstate/math-open-problems@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
-- Previous fleet03/B01 averaged-frequency theorem: `yspennstate/math-open-problems@d54e3a5d40a1d9837d39a1e525781fcf44ec0d9d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T123142Z-qform-r11/REPORT.md`.
+- Assigned partner fleet04/B01: `private-source-repository@a3693ed6d50e8e4143b2f33bf997c5de2cb52d79`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B01/20260922T141507Z-b01-qform-fejer-r1/REPORT.md`.
+- Previous fleet03/B01 averaged-frequency theorem: `private-source-repository@d54e3a5d40a1d9837d39a1e525781fcf44ec0d9d`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T123142Z-qform-r11/REPORT.md`.
 - Fleet03/B19 rank-three spectral-Schur/localized-diffuse branch: current repository report `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/fleet03-B19-20260922T123215Z-186f53a8/REPORT.md`; the exact decomposition and old constant are consumed only at their proved scope.
 
 No credential, scheduler identifier, machine path, private transcript, email content, public release, remote workflow, paid model/API call, or unrelated private data is included. Repository retrieval is not native learned-memory ingestion; this run is `WITHOUT_VERIFIED_BRAIN`.

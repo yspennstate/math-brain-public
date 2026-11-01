@@ -13,7 +13,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The completed fleet03/B10 reduction
 
-`yspennstate/math-open-problems@master:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T181522Z-fleet03-B10-QFORM-r26/REPORT.md`
+`private-source-repository@master:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T181522Z-fleet03-B10-QFORM-r26/REPORT.md`
 
 establishes that every still-unpaid positive-leakage near-coloop state may be written
 
@@ -39,7 +39,7 @@ No variable in the spectral coordinates is declared independent. Every partition
 
 The fresh arbitrary-rank projected-crossing theorem used later is
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 For a disjoint original-coordinate crossing block `B` of rank three with singular values `s_1>=s_2>=s_3>0`, it gives a continuous density and
 
@@ -217,7 +217,7 @@ The latest completed designated-partner theorem used here is
 
 `QFORM-NEARCOLOOP-ONEHUB-CURRENCY-BARRIER-v1`,
 
-`yspennstate/math-open-problems@bf1ec1482020bc1da89f7f888057b70269df650d`
+`private-source-repository@bf1ec1482020bc1da89f7f888057b70269df650d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B10/20260923T170933Z-fleet02-B10-QFORM-r11/REPORT.md`.
 

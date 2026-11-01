@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED; GPT-6 / maximum 
 
 # R03 run41 — terminal F0001 stuck handoff; final rich-core test fails; rotate to F0097 random k-SAT
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status of old target: **F0001 OPEN / R03 PARTIAL / HANDOFF REQUIRED AND EXECUTED.**  
 Successor: **F0097 HARD OUTSIDE / OPEN_CURRENT / claimed by R03 for the next research run.**

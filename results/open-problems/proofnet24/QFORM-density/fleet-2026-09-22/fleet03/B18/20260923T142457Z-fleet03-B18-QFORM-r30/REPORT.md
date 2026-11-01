@@ -29,7 +29,7 @@ If `f(x)=prod_i f_i(x_i)` and each one-dimensional `f_i` is a probability densit
 
 The immutable internal endpoint derived from exactly this source and two-dimensional Plancherel is fleet03/B18 r26, `QFORM-CROSSBLOCK-RANK2-HALFRIESZ-v1`, canonical report
 
-`yspennstate/math-open-problems@d01d9d8a4d7664bfb2ae9c6da3f4d41867ddac16`,
+`private-source-repository@d01d9d8a4d7664bfb2ae9c6da3f4d41867ddac16`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B18/20260923T102742Z-fleet03-B18-QFORM-r26/REPORT.md`.
 
@@ -174,9 +174,9 @@ After the `Z` pivot the residual cross block is exactly `diag(1/2,1)`, so the de
 
 Use the completed fleet04/B18 theorem `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, immutable source
 
-`yspennstate/math-open-problems@4ea84670b15b538f2163d53bf31f81cd1f1eabfa`,
+`private-source-repository@4ea84670b15b538f2163d53bf31f81cd1f1eabfa`,
 
-with claim-card source at `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`.
+with claim-card source at `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`.
 
 It proves that if a base variable has density cap `M` and an outer original scalar square with coefficient `r!=0` is completed dependence-safely, then
 
@@ -233,4 +233,4 @@ Exact algebra checked:
 - coupled example `Q1` characteristic polynomial is `lambda(lambda-4)(lambda-1)^2(lambda+1)^2`;
 - constants are `8*2^(-1/4)=6.727171322029716...` and `2^(19/8)=5.187358218604039...`.
 
-Only the two files in this run's immutable B18 directory are written in `math-open-problems`; no peer artifact, control file, task state, notification setting, public release, permission, workflow or external account is changed. The changed-file text contains no credentials, tokens, account identifiers beyond the logical fleet label, or unrelated private material.
+Only the two files in this run's immutable B18 directory are written in `private-source`; no peer artifact, control file, task state, notification setting, public release, permission, workflow or external account is changed. The changed-file text contains no credentials, tokens, account identifiers beyond the logical fleet label, or unrelated private material.

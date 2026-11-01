@@ -39,7 +39,7 @@ First unpaid implication after this run:
 
 I read the owner-pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -59,7 +59,7 @@ Thus that family is a genuine **two-sheet** obstruction to finite-frame extracti
 
 The immediate predecessor is
 
-`yspennstate/math-open-problems@3c4c6882813d9530dc5c3884ce3e25f5993c7062`,
+`private-source-repository@3c4c6882813d9530dc5c3884ce3e25f5993c7062`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260923T102208Z-fleet02-B05-QFORM-a4c7d9e1/REPORT.md`.
 
@@ -92,7 +92,7 @@ The freshest fleet03/B05 run present before publication is r23, whose new theore
 
 The compatible theorem used here is therefore fleet03/B05 r24:
 
-`yspennstate/math-open-problems@b0e14a08fe8abb97f7aeb518cfa8cf4cef568d36`,
+`private-source-repository@b0e14a08fe8abb97f7aeb518cfa8cf4cef568d36`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T094405Z-fleet03-B05-QFORM-r24/REPORT.md`.
 

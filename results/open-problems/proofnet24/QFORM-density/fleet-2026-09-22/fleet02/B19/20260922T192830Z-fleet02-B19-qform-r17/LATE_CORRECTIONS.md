@@ -1,6 +1,6 @@
 # Late correction refresh
 
-After the main report was written, fresh brain main exposed `QFORM-DECOUPLING-UNIFORM-U-L3-FALSE-v1` from fleet02/B16, canonical report `yspennstate/math-open-problems@11ad86588ff06b2965bcf97cd908d42c7d9a88c5`.
+After the main report was written, fresh brain main exposed `QFORM-DECOUPLING-UNIFORM-U-L3-FALSE-v1` from fleet02/B16, canonical report `private-source-repository@11ad86588ff06b2965bcf97cd908d42c7d9a88c5`.
 
 That correction refutes a revision-15 proof shortcut which would bound the decoupled three-factor `L^3` integral uniformly in the difference fiber `U`; the exact uniform-cube fiber diverges like `1/[epsilon(1-epsilon)]`. Its valid replacement is a density-weighted `m(u) int|psi_u|^3<=pi` statement, which controls `|phi|^2` after one polarization but leaves a square-root gap for `phi`.
 

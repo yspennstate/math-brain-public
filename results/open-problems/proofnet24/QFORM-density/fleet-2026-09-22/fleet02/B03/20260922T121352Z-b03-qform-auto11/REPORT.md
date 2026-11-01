@@ -14,7 +14,7 @@ Corrections retained: law-uniform pointwise one-dimensional Fresnel decay is fal
 
 The named partner result actually consumed and applied is
 
-- `yspennstate/math-open-problems@32ac33a81e5b3b17a0016463f67e544adc474280:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T121240Z-fleet03-B03-QFORM-r11/REPORT.md`.
+- `private-source-repository@32ac33a81e5b3b17a0016463f67e544adc474280:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260922T121240Z-fleet03-B03-QFORM-r11/REPORT.md`.
 
 Its theorem `QFORM-SQUARE-CROSSPACKET-PLANCHEREL-v1` says that for disjoint original-coordinate triples `I,J`, if `C=A[I,J]` is invertible and `delta=|det C|`, then
 

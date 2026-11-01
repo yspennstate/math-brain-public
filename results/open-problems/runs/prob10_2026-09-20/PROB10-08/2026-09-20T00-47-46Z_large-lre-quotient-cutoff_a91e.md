@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 
 # PROB10-08 — a large long-range-expander quotient is enough for cutoff
 
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 Status: **PARTIAL / SOURCE OPEN / NEW REPOSITORY THEOREM / NOT INDEPENDENTLY AUDITED**.
 

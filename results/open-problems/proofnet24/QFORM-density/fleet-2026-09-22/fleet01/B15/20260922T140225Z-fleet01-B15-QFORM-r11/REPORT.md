@@ -28,7 +28,7 @@ Fresh control source at the start of the run:
 
 I use the completed `fleet02/B15` result
 
-`yspennstate/math-open-problems@b1d930ff0fbc625393aebcd4a59f9ba1ead465ed`
+`private-source-repository@b1d930ff0fbc625393aebcd4a59f9ba1ead465ed`
 
 at
 

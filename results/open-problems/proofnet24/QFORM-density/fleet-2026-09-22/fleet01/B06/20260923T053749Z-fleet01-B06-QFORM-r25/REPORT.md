@@ -17,7 +17,7 @@ The live programme still records the full theorem as open. The following correct
 
 The predecessor used at an equation is fleet01/B06 r24:
 
-`yspennstate/math-open-problems@d9fa07806fc6c5b55fbb4603ed0ec6801390a378`
+`private-source-repository@d9fa07806fc6c5b55fbb4603ed0ec6801390a378`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260923T043620Z-fleet01-B06-QFORM-r24/REPORT.md`.
 
@@ -42,16 +42,16 @@ and the exact spectral identities from r20/r24 include
 Two external inputs are consumed at displayed inequalities.
 
 1. **Designated partner fleet02/B06.** `QFORM-WEIGHTED-AFFINE-FIBER-BL-v1`, canonical
-   `yspennstate/math-open-problems@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
+   `private-source-repository@8dd33c1abd4fd64140f59032feda2b13d4351da5`,
    gives for every unit scalar projection of an original cap-one product bank
 
    `||p_(u.X)||_infinity <= sqrt(e)`.                                (0.6)
 
    The partner's later `QFORM-PHYSICAL-CHAIN-WEIGHTED-FIBER-v1`, canonical
-   `yspennstate/math-open-problems@8ea6c8ee1c50f0d02a455ff646e2035a22eba845`,
+   `private-source-repository@8ea6c8ee1c50f0d02a455ff646e2035a22eba845`,
    is the product-preserving physical-chain predecessor. The theorem below extends the same weighted one-sided-kernel mechanism to a square centre allowed to depend on the *other hyperbolic bank*.
 
-2. **Newest Claude source package.** `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+2. **Newest Claude source package.** `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
    Its Lemma 3 is applied below at (1.2): after completing one genuine independent scalar square, the conditional density is bounded by the translated **one-sided** kernel
 

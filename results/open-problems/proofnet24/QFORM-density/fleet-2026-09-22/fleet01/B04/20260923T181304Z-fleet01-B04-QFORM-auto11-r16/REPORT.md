@@ -18,7 +18,7 @@ The early `CHECKPOINT.md` in this run derived a no-marginal third-volume closure
 
 - `QFORM-PHYSICAL-D3-NO-MARGINAL-GATE-v1`,
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B20/20260923T165154Z-fleet01-B20-QFORM-auto11/NO_MARGINAL_D3.md`,
-- immutable indexed source `math-open-problems@ceae3cdd55d3d6f02f1db4328e1ac9f8178f27e6`.
+- immutable indexed source `private-source@ceae3cdd55d3d6f02f1db4328e1ac9f8178f27e6`.
 
 It gives the full ambient bound
 
@@ -32,7 +32,7 @@ The successor mechanism in this report is different: retain, rather than discard
 
 The source theorem refined here is
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`, blob `dc7e29c3ee746ebf2856aaa6866b4b16b9a04b9f`.
 
@@ -303,7 +303,7 @@ The newest completed designated-partner result located in the fresh fleet02/B04 
 
 from
 
-`yspennstate/math-open-problems@00e728cf7f226ccce4b41ad751d494c5c94f67ec`
+`private-source-repository@00e728cf7f226ccce4b41ad751d494c5c94f67ec`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/fleet02-B04-20260923T111930Z-qform/REPORT.md`.
 

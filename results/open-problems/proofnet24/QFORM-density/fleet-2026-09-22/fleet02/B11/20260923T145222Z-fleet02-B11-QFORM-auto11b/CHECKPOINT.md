@@ -20,7 +20,7 @@ Moreover every constrained-side row leverage is at most `h/gamma<=1/2`. For the 
 
 `Z=e_3(C^T C)=det(M)^2 det(G_I) det(G_J) >= s^6 gamma^6`.
 
-Hence Claude's completed volume-sampling Theorem D at `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` applies to the actual quadratic form, not a projected-row surrogate, and yields the provisional bound
+Hence Claude's completed volume-sampling Theorem D at `private-source@e5f71d79eff325201dd0274053d20268ce65b837` applies to the actual quadratic form, not a projected-row surrogate, and yields the provisional bound
 
 `||p_Q||_infinity <= 6 sqrt(e)/(s gamma) = 497664 sqrt(e)/(s tau^3)`.
 

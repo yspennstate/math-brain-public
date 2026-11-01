@@ -168,7 +168,7 @@ The preceding family is precisely a diffuse configuration, so the failure of loc
 
 Use the newest completed designated-partner theorem:
 
-    yspennstate/math-open-problems@2c12e7f90d3aae38758a85564f060f400052c432
+    private-source-repository@2c12e7f90d3aae38758a85564f060f400052c432
     proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/
       20260923T035318Z-fleet02-B12-qform-auto11/REPORT.md.
 

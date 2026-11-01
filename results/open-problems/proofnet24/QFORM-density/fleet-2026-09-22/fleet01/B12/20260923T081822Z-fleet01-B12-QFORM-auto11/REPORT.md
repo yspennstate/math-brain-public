@@ -13,7 +13,7 @@ This report proves a stability theorem for **adding arbitrary smaller and larger
 
 The terminal density input is the completed five-cross-volume theorem `D_5` from
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`.
 
 For a physical original-coordinate cross block `M=A[I,J]`, with `I,J` disjoint, define
 

@@ -14,7 +14,7 @@ The pointwise law-uniform oscillatory-decay route is refuted by phase-aligned de
 
 The named partner result actually consumed is:
 
-`yspennstate/math-open-problems@d5392d73398e2811f58b612fb8f191aa79d8ee5e`
+`private-source-repository@d5392d73398e2811f58b612fb8f191aa79d8ee5e`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B15/20260922T110507Z-fleet02-B15-qform-pivot-r1/REPORT.md`.
 

@@ -24,7 +24,7 @@ No arbitrary-joint coarea estimate, normalized conditional-density supremum, pos
 
 Fresh source: fleet02/B05 run `20260922T202100Z-b05-qform-47d9c1a2`, canonical commit
 
-`yspennstate/math-open-problems@a31006ef311ca9e937f37c62d602d21ada3b1139`,
+`private-source-repository@a31006ef311ca9e937f37c62d602d21ada3b1139`,
 
 path
 
@@ -40,7 +40,7 @@ It also records the density-normalized version for disjoint scalar banks. This r
 
 Canonical source:
 
-`yspennstate/math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7`,
+`private-source-repository@9c1167db05c7b0f520f060796fde921ed769a4e7`,
 
 `proofnet24/QFORM-density/interactive/20260922T151048Z-ridge-window/REPORT.md`.
 

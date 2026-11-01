@@ -18,7 +18,7 @@ The live corrections consumed before this report include: failure of law-uniform
 
 The completed designated partner actually applied in Section 4 is fleet04/B14 r6, canonical source
 
-`yspennstate/math-open-problems@6442bbe9d4647a730b27b8e0786bc54b2546b7ec`
+`private-source-repository@6442bbe9d4647a730b27b8e0786bc54b2546b7ec`
 
 at
 

@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 maxim
 
 # R16 HARD OUTSIDE — I0036 / Schramm Problem 2.1: stuck recovery 1, exact obstruction to length-preserving four-terminal switching, and a Fomin-type route
 
-Date: 2026-09-17 UTC. Repository/branch: `yspennstate/math-open-problems` / `master`. Source-level status: **PARTIAL / OPEN**. This report makes no new source-level theorem claim and does not improve the frozen bridge exponent. Its purpose is to execute the required first stuck recovery, isolate the geometric obstruction precisely, and select one genuinely different route.
+Date: 2026-09-17 UTC. Repository/branch: `private-source-repository` / `master`. Source-level status: **PARTIAL / OPEN**. This report makes no new source-level theorem claim and does not improve the frozen bridge exponent. Its purpose is to execute the required first stuck recovery, isolate the geometric obstruction precisely, and select one genuinely different route.
 
 ## 1. Continuity, repository state, source status, and ownership
 

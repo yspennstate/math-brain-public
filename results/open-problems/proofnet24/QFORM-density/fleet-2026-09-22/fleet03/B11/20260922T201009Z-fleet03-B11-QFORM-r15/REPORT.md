@@ -18,7 +18,7 @@ The full universal conjecture remains open. This run pays a genuinely high-dimen
 
 From
 
-`yspennstate/math-open-problems@a9f23a3a387c9be219fcaf08ef66079f8c124e0c`
+`private-source-repository@a9f23a3a387c9be219fcaf08ef66079f8c124e0c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B11/20260922T192514Z-fleet03-B11-QFORM-r14/REPORT.md`,
 
@@ -44,7 +44,7 @@ This is the standard one-dimensional product-marginal bound and is also the quan
 
 The completed designated partner result is fleet04/B11 r2:
 
-`yspennstate/math-open-problems@797dcde430e982a020d7642b54cadc281cbc9bc1`
+`private-source-repository@797dcde430e982a020d7642b54cadc281cbc9bc1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T191727Z-fleet04-B11-nullgraph-obstruction-r2/REPORT.md`.
 

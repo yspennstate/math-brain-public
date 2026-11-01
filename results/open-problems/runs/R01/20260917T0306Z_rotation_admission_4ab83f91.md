@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R01 post-closure successor admission — I0045 scope changed by later PA local-limit work; DC35/BIS32 are source-clean but HARD, so no unlawful claim
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Dated source/status checks: 2026-09-17 UTC.
 
 ## 1. Continuity: I0024 stays closed and I0113 stays rotated

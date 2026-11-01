@@ -1,6 +1,6 @@
 # fleet01/B05 r16
 
-Source: yspennstate/math-open-problems@4e530247ec0ef4101a6e5ecf621bd35a969c42aa, paper.tex blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a.
+Source: private-source-repository@4e530247ec0ef4101a6e5ecf621bd35a969c42aa, paper.tex blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a.
 
 B05 lens lines 218-226: PASS mathematically. Zero-beta factors are fiber-independent and bounded by one; any number may be dropped. Density representatives are fixed before fiber integration. p(y)=0 is treated before logarithms. No rotated-coordinate independence is used.
 

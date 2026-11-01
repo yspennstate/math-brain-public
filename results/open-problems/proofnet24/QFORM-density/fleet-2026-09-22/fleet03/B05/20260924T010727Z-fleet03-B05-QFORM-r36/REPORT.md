@@ -14,7 +14,7 @@ Full-target continuity: **OPEN**. The theorem below proves absolute continuity a
 
 Immediate predecessor:
 
-- `yspennstate/math-open-problems@3b26570e5ee8a21471acba644e9b20483cbb2118`
+- `private-source-repository@3b26570e5ee8a21471acba644e9b20483cbb2118`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T234035Z-fleet03-B05-QFORM-r35/REPORT.md`.
 
 Fresh complementary coarea input:
@@ -26,7 +26,7 @@ That theorem pays the exact double-zero scalar pair `[[0,c],[c,0]]` by averaging
 
 Fresh designated partner fleet04/B05:
 
-- `yspennstate/math-open-problems@3b2896d107b17c889b09ce366c957fd901e9a1fc`
+- `private-source-repository@3b2896d107b17c889b09ce366c957fd901e9a1fc`
 - `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B05/20260924T011830Z-fleet04-B05-convex-pair-r3/REPORT.md`.
 
 Its theorem gives the exact full-line interval bound `pi/sqrt(|det C|)` for an actual definite original-coordinate two-by-two block. Section 8 applies it to the literal-scalar endpoint, at the same scalar-pair boundary treated hyperbolically below.

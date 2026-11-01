@@ -2,7 +2,7 @@ Model actually running: GPT-5.6 Sol. Reasoning level: UNVERIFIED; this was not G
 
 # C28 — STUCK RECOVERY 2 and six-run rotation handoff for Aldous–Fill Open Problem 8.23
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Own root: `proofnet24/C28-closure-hypercontractivity`.
 Run date: 2026-09-17.
 Allocation/status entering run: CLOSABLE OUTSIDE, `I0032` **CLAIMED / PENDING_ADMISSION / NOT READY**.

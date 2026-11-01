@@ -8,7 +8,7 @@ Read fresh from the brain's FEI checkpoint: CURRENT_RESEARCH.md, CORRECTION_INBO
 
 Read the current P03 README and the September 30 probability audit. The September 20 minor-child report proves B_i <= C_chi j_i + min I(child), and its character-defect successor already improves the additive term to kappa_min. Those improvements are prior work, not rediscovered results. The certified-core max-splicing report explicitly left B_i <= C j_i + O(j_i I_child) as a plausible but unproved alternative. The obstruction below rejects exactly that alternative. Known bent one-point-flip bad splits and sparse suspension techniques are credited as ingredients; the present output concerns their combination and the precise new rejected quantifiers.
 
-Source files in yspennstate/math-open-problems:
+Source files in private-source-repository:
 - proofnet24/P03-fei/runs/2026-09-20/2026-09-20T05-32-22+0300__fei-minor-child-allocation.md
 - proofnet24/P03-fei/runs/2026-09-20/2026-09-20T06-31-37+0300__fei-character-defect-curvature-allocation.md
 - proofnet24/P03-fei/runs/2026-09-20/2026-09-20T11-28-37+0300__fei-certified-core-max-splicing.md

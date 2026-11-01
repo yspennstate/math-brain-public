@@ -16,7 +16,7 @@ The full target remains unchanged: independent ORIGINAL real coordinates with pr
 
 The new collective-tail marginal certificate is taken from
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md`.
 
@@ -34,7 +34,7 @@ then the third-volume row marginals obey
 
 The q-dependent sharp Hausdorff--Young three-volume theorem is in the same package. The designated partner fleet02/B02 independently re-audits this calculation, including the admissible endpoint `q=1`, in its current report
 
-`yspennstate/math-open-problems@3c4c6882813d9530dc5c3884ce3e25f5993c7062`,
+`private-source-repository@3c4c6882813d9530dc5c3884ce3e25f5993c7062`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/20260923T110948Z-fleet02-B02-QFORM-r11/REPORT.md`.
 

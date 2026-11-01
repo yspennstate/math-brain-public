@@ -113,7 +113,7 @@ The present proof uses these theorems only on genuine original-coordinate produc
 The source-pinned prior fleet02/B18 theorem is
 
 - `QFORM-ZEROBLOCK-CROSSRANK2PLUS-v1`;
-- `math-open-problems@27627ef9d4fdc75d875861033dcd31c1cb47a386`;
+- `private-source@27627ef9d4fdc75d875861033dcd31c1cb47a386`;
 - path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/20260922T230222Z-fleet02-B18-r11/REPORT.md`.
 
 Its hypotheses match (2.2) after grouping the entire opposite side as `(X_J,W)`. The cross matrix from `I` to `(J,w)` is simply
@@ -426,7 +426,7 @@ Primary literature:
 
 Partner / fleet sources:
 
-- cross-rank prior: `math-open-problems@27627ef9d4fdc75d875861033dcd31c1cb47a386`;
-- latest fleet02/B18 private-bank theorem: `math-open-problems@fedbabc70c2245476d15532f38c5c2555a0d6c31`.
+- cross-rank prior: `private-source@27627ef9d4fdc75d875861033dcd31c1cb47a386`;
+- latest fleet02/B18 private-bank theorem: `private-source@fedbabc70c2245476d15532f38c5c2555a0d6c31`.
 
 Changed-file allowlist for this run is restricted to this immutable fleet01/B18 run directory and the required fleet01/B18 handoff/memory/run-status records. Manual review finds only abstract mathematics, public bibliographic data and repository-relative source identifiers; no credentials, scheduler IDs, machine paths, signed URLs, personal/client/company/trading material, public-release action or permission change is present.

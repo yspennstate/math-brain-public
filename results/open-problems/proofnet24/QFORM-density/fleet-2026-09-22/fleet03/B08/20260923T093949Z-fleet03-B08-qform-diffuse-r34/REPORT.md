@@ -17,19 +17,19 @@ The unrestricted target remains OPEN. Inputs are independent ORIGINAL coordinate
 
 The exact algebraic input is B08 r31:
 
-`yspennstate/math-open-problems@5283f320ecb1386e9210a8d2588c2bf8219dd32c`
+`private-source-repository@5283f320ecb1386e9210a8d2588c2bf8219dd32c`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T072549Z-fleet03-B08-qform-diffuse-r31/REPORT.md`.
 
 The immediate predecessor is B08 r33:
 
-`yspennstate/math-open-problems@6f8e99aec5b12f0e3a5f13d60e7da490ce491647`
+`private-source-repository@6f8e99aec5b12f0e3a5f13d60e7da490ce491647`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T090721Z-fleet03-B08-qform-diffuse-r33/REPORT.md`.
 
 The unconditional aggregate pair-volume half-Riesz theorem used below is fleet01/B01:
 
-`yspennstate/math-open-problems@1f3af9dc58afb9e902b972466d6da01cece89734`
+`private-source-repository@1f3af9dc58afb9e902b972466d6da01cece89734`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T030821Z-fleet01-B01-qform-auto11/REPORT.md`.
 
@@ -225,7 +225,7 @@ The missing target exponent is still linear in interval length; (5.2) has expone
 
 The designated partner `fleet04/B08` has now landed. Its completed report is
 
-`yspennstate/math-open-problems@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
+`private-source-repository@abbec61f52e1f4b4d367fd67e73e4d2501ac9c74`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T091414Z-fleet04-B08-QFORM-r1/REPORT.md`.
 

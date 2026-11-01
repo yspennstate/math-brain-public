@@ -20,7 +20,7 @@ The current corrections are respected. In particular, this report does not use l
 
 Completed report:
 
-`yspennstate/math-open-problems@54c9b45ccd6dd4dd686e91ff04e39e2cc5ebbbcf`
+`private-source-repository@54c9b45ccd6dd4dd686e91ff04e39e2cc5ebbbcf`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T200207Z-fleet03-B02-qform-r14/REPORT.md`.
 
@@ -34,7 +34,7 @@ This result is used below as the localized branch of the conditional end-to-end 
 
 Completed report:
 
-`yspennstate/math-open-problems@1b8f72a4e25ef55ca4fd974007146d3971f49bf8`
+`private-source-repository@1b8f72a4e25ef55ca4fd974007146d3971f49bf8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T190121Z-fleet03-B02-qform-r13/REPORT.md`.
 

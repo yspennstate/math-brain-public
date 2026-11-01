@@ -15,19 +15,19 @@ The unrestricted conjecture remains OPEN. Global continuity remains OPEN. This r
 
 Immediate predecessor:
 
-- fleet03/B08 r51, `yspennstate/math-open-problems@b28041e2486d6523b22946efc2c4a9b5bc5eea04`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T052228Z-fleet03-B08-qform-diffuse-r51/REPORT.md`.
+- fleet03/B08 r51, `private-source-repository@b28041e2486d6523b22946efc2c4a9b5bc5eea04`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260924T052228Z-fleet03-B08-qform-diffuse-r51/REPORT.md`.
 
 Analytic inputs used exactly at their proved scopes:
 
-1. General three-variable small-hub coarea core, `yspennstate/math-open-problems@391db3ae3b9f9fd5104eb19c8394cc13c9f6a045`, `proofnet24/QFORM-density/interactive/20260923T191000Z-small-hub-square-coarea/GENERAL_3D_CORE.md`. If a cap-one physical hub is independent of a light pair of joint density cap `M`, and a symmetric `3 x 3` core `T` has `s_3(T)>=1` and physical hub diagonal `<1/64` in modulus, then the quadratic output density is at most `1+32M`. The theorem allows deterministic affine terms. In particular an orthonormal two-dimensional projection of an original product source has `M<=2`.
+1. General three-variable small-hub coarea core, `private-source-repository@391db3ae3b9f9fd5104eb19c8394cc13c9f6a045`, `proofnet24/QFORM-density/interactive/20260923T191000Z-small-hub-square-coarea/GENERAL_3D_CORE.md`. If a cap-one physical hub is independent of a light pair of joint density cap `M`, and a symmetric `3 x 3` core `T` has `s_3(T)>=1` and physical hub diagonal `<1/64` in modulus, then the quadratic output density is at most `1+32M`. The theorem allows deterministic affine terms. In particular an orthonormal two-dimensional projection of an original product source has `M<=2`.
 
-2. Orientation-free rank-two affine half-Riesz / exact-rank-three Schur consequence, `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`. For an exact-rank-three representation `A=VMV^T`, `V^TV=I_3`, a physical row with leverage `c_i`, and nonzero `a=A_ii`, the full form obeys
+2. Orientation-free rank-two affine half-Riesz / exact-rank-three Schur consequence, `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`. For an exact-rank-three representation `A=VMV^T`, `V^TV=I_3`, a physical row with leverage `c_i`, and nonzero `a=A_ii`, the full form obeys
 
 `||p_Q||_infinity <=128 [c_i |a| |det M|]^(-1/4)`.
 
-3. Exact-null physical-hub mixed-Fresnel closure, `yspennstate/math-open-problems@c0d7e627b3b877fcecc3004a58335658f6541d64`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T114517Z-fleet03-B10-QFORM-r24/REPORT.md`. It is used only for the optional continuity sharpening at zero hub diagonal.
+3. Exact-null physical-hub mixed-Fresnel closure, `private-source-repository@c0d7e627b3b877fcecc3004a58335658f6541d64`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T114517Z-fleet03-B10-QFORM-r24/REPORT.md`. It is used only for the optional continuity sharpening at zero hub diagonal.
 
-4. Designated partner fleet04/B08, `QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1`, `yspennstate/math-open-problems@a5e66e2944c89857a41d5e18c283d53a4307be76`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T212412Z-fleet04-B08-QFORM-r2/REPORT.md`. If an ORIGINAL-coordinate deletion child has three eigenvalues of modulus at least `s` and its spectral projection onto `|lambda|>=s/64` has physical leverage at most `1/32`, then the full parent has
+4. Designated partner fleet04/B08, `QFORM-PHYSICAL-DELETION-CHILD-WINDOW-v1`, `private-source-repository@a5e66e2944c89857a41d5e18c283d53a4307be76`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B08/20260923T212412Z-fleet04-B08-QFORM-r2/REPORT.md`. If an ORIGINAL-coordinate deletion child has three eigenvalues of modulus at least `s` and its spectral projection onto `|lambda|>=s/64` has physical leverage at most `1/32`, then the full parent has
 
 `||p_Q||_infinity <64/s`, `p_Q in C_0(R)`.
 

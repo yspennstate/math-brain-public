@@ -20,9 +20,9 @@ and assume `G>0`. Whiten only the coefficient frame, `U=W G^(-1/2)`, so `U^T U=I
 for iid `S,T` from the Pluecker law.
 
 Combining the pre-leverage part of newest-Claude Theorem H at
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 with the completed determinant-entropy BL theorem
-`math-open-problems@32c257209b588141fb60af698f478f1d0ad20b8a`
+`private-source@32c257209b588141fb60af698f478f1d0ad20b8a`
 gives, when `rho>0`,
 
 `|phi_Q(t)| <= pi^((r+4)/2) exp((r+2)/2)

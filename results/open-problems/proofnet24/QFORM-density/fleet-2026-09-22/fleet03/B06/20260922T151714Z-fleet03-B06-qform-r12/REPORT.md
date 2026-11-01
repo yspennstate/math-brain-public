@@ -293,7 +293,7 @@ Proved in this report:
 
 Actually applied peer mathematics:
 
-- fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, `yspennstate/math-open-problems@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`;
-- fleet03/B02 product projection bound, `yspennstate/math-open-problems@18fb381e300dd86514835d27eedcf2507ab09227`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T130245Z-fleet03-B02-QFORM-r11/REPORT.md`.
+- fleet04/B18 `QFORM-DEPENDENT-SQUARE-SMOOTHING-v1`, `private-source-repository@441e5c1ae4b8aa71ba1bb68aa07d26d83afafcd3`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T113729Z-fleet04-B18-qform-r1/REPORT.md`;
+- fleet03/B02 product projection bound, `private-source-repository@18fb381e300dd86514835d27eedcf2507ab09227`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260922T130245Z-fleet03-B02-QFORM-r11/REPORT.md`.
 
 The exact assigned partner `fleet04/B06` had no completed canonical QFORM handoff at the startup snapshot and was not impersonated. The full conjecture remains **OPEN / NOT PROVED**.

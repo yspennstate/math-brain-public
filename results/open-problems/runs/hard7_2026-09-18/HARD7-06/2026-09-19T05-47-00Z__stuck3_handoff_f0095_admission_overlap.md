@@ -4,7 +4,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 Status: **F0095 OPEN / HARD7-06 PARTIAL.**  The predecessor `CKS-2024-RREG-HYPER2COL-K3` remains OPEN/PARTIAL and is handed off by the Section-I rotation rule.
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 ## 1. Required Section-I rotation: CKS gets a handoff, not a third recovery
 

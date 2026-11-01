@@ -16,7 +16,7 @@ The unrestricted conjecture is not proved here. All coordinates remain literal o
 
 The analytic receiver used below is the completed marginal-free cross-third-volume theorem from fleet03/B04 r42, source
 
-`yspennstate/math-open-problems@563bc41e4f9247f9daf3343a57757f45e3f6e703`
+`private-source-repository@563bc41e4f9247f9daf3343a57757f45e3f6e703`
 
 at
 
@@ -34,7 +34,7 @@ and the resulting density belongs to `C_0(R)`.
 
 The designated fleet02/B04 source actually applied below is r16,
 
-`yspennstate/math-open-problems@779dc7079332af772c3445c0f58dbb5a59b504cf`,
+`private-source-repository@779dc7079332af772c3445c0f58dbb5a59b504cf`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B04/20260924T001554Z-fleet02-B04-QFORM-r16/REPORT.md`.
 

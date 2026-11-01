@@ -13,7 +13,7 @@ Execution: `WITHOUT_VERIFIED_BRAIN`.
 
 The immediate completed B10 source used is
 
-`yspennstate/math-open-problems@70f02a787a432edc745fa632b80ecfff0cc2ef11`
+`private-source-repository@70f02a787a432edc745fa632b80ecfff0cc2ef11`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260923T221626Z-fleet03-B10-QFORM-r25/REPORT.md`.
 
@@ -49,8 +49,8 @@ The exact-null point `alpha=0` is already paid uniformly by B10 r24; r25 gives t
 
 Two completed external inputs are applied at equations:
 
-1. Designated partner fleet04/B10, `QFORM-REGRESSION-THREEBANK-CURVATURE-SPLIT-v1`, source `yspennstate/math-open-problems@afdea9634d9e3f5fb09659da436292cf7dbe5b20`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B10/20260923T061725Z-fleet04-B10-QFORM-r4/REPORT.md`.
-2. The checked arbitrary-rank grouped projected-crossing theorem, source `yspennstate/math-open-problems@d2f970d33fa7084f8de55412189402ac609e4da6`, path `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. In its one-original-hub, `ell=2` specialization it gives
+1. Designated partner fleet04/B10, `QFORM-REGRESSION-THREEBANK-CURVATURE-SPLIT-v1`, source `private-source-repository@afdea9634d9e3f5fb09659da436292cf7dbe5b20`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B10/20260923T061725Z-fleet04-B10-QFORM-r4/REPORT.md`.
+2. The checked arbitrary-rank grouped projected-crossing theorem, source `private-source-repository@d2f970d33fa7084f8de55412189402ac609e4da6`, path `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`. In its one-original-hub, `ell=2` specialization it gives
 
 `||p_Q||_infinity <= 3*2^(7/6)*exp(1/3) (||w_J||^2 Z_2)^(-1/6)`    (1.8)
 

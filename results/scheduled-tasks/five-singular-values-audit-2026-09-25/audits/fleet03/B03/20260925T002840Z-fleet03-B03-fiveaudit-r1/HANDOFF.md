@@ -1,6 +1,6 @@
 # fleet03/B03 r1 handoff
 
-Source: `yspennstate/math-open-problems@ec211ba2d77a4a9850168c6af1574ea651feaa7c`, exact `short/short.tex` blob `c4f2a997cf336ee974e15409b5bccdd8cca039d8`, PDF SHA-256 `4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423`.
+Source: `private-source-repository@ec211ba2d77a4a9850168c6af1574ea651feaa7c`, exact `short/short.tex` blob `c4f2a997cf336ee974e15409b5bccdd8cca039d8`, PDF SHA-256 `4c1a8eb808b32739625aa475c1aad24dc857a3f35fc960504b371487f2850423`.
 
 Pass 1 coverage this invocation: lines 129–138 (Lemma 2.4) and 271–370 (Lemma 4.3), plus dependency spot checks 208–240. Complete passes: 0; first unchecked line: 1.
 

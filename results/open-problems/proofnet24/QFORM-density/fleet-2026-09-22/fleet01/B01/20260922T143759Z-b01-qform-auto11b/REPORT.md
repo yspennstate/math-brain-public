@@ -204,8 +204,8 @@ The third item is still unpaid. Full QFORM remains OPEN.
 ## 10. Sources
 
 - Owner programme/control: `yspennstate/math-research-brain`, revision `2026-09-22.5`.
-- fleet02/B01 r19 scalar theorem: `yspennstate/math-open-problems@fedbec07e3e8b2f9fcd2b1a65b0bb2a0137c212f`, exact r19 `REPORT.md` path.
-- fleet02/B01 r21 coupled two-column theorem: `yspennstate/math-open-problems@949dd0672776cb2f4e100fe917faaee1644b80fc`, exact r21 `REPORT.md` path.
+- fleet02/B01 r19 scalar theorem: `private-source-repository@fedbec07e3e8b2f9fcd2b1a65b0bb2a0137c212f`, exact r19 `REPORT.md` path.
+- fleet02/B01 r21 coupled two-column theorem: `private-source-repository@949dd0672776cb2f4e100fe917faaee1644b80fc`, exact r21 `REPORT.md` path.
 - G. Livshyts, G. Paouris, P. Pivovarov, *On sharp bounds for marginal densities of product measures*, arXiv:1507.07949; Israel J. Math. 216 (2016), 877--889.
 
 No claim of novelty or full-target completion is made.

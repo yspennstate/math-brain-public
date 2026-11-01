@@ -13,7 +13,7 @@ Execution: **WITHOUT_VERIFIED_BRAIN**.
 
 The newest completed designated partner available at the mathematical start of this argument is fleet03/B19 r38,
 
-`yspennstate/math-open-problems@f09b670173440c4c511985c9a89baf38f97e82c1`
+`private-source-repository@f09b670173440c4c511985c9a89baf38f97e82c1`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T183023Z-fleet03-B19-QFORM-r38/REPORT.md`.
 
@@ -215,7 +215,7 @@ This is **not** a QFORM counterexample: the matrix has only two large eigenvalue
 
 ## 5. Required owner-source theorem applied at an equation
 
-The requested source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837` was reread (`RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`). A direct application of its proved **Theorem H** is available inside the exact collar:
+The requested source `private-source@e5f71d79eff325201dd0274053d20268ce65b837` was reread (`RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, `COUNTEREXAMPLE_SEARCH.md`). A direct application of its proved **Theorem H** is available inside the exact collar:
 
 if after conditioning to (1.3) the light block `D` is diagonal and every normalized cross leverage satisfies
 

@@ -14,7 +14,7 @@ attacking: after detecting that the run's first conditional half-Riesz calculati
 
 The target is the unrestricted assertion that for independent real original-coordinate variables with probability densities at most one, every real symmetric matrix having at least three eigenvalues of modulus at least one produces a quadratic form with universally bounded density. No moment, compact-support, log-concavity, connected-support, Gaussianity, centeredness, diagonal-basis independence, or post-rotation independence may be inserted.
 
-The current exact-rank-three B16 hard chamber contains a physical near-coloop. In the notation of the preceding B16 run `math-open-problems@bdbe6e38a3ee3d586e8e6119e518c573310253fb`, write
+The current exact-rank-three B16 hard chamber contains a physical near-coloop. In the notation of the preceding B16 run `private-source@bdbe6e38a3ee3d586e8e6119e518c573310253fb`, write
 
 `A=R Lambda R^T`, `R^T R=I_3`,
 
@@ -230,7 +230,7 @@ The mechanism change forced by this proposition is sharp: a successful punctured
 
 The newest compatible complementary B16 result read in this run is fleet02/B16
 
-`math-open-problems@c9c865f02890e5fe7108c49759ee82b84f42ee38`,
+`private-source@c9c865f02890e5fe7108c49759ee82b84f42ee38`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B16/20260923T225009Z-fleet02-B16-QFORM-r37/REPORT.md`.
 
 It proves the phase-weighted punctured two-bank receiver
@@ -246,7 +246,7 @@ The present proposition rules out a different fallback at the same interface: ta
 The designated partner result is fleet04/B16
 
 `QFORM-PHYSICALPAIR-BANK-OVERLAP-v1`,
-`math-open-problems@a70c05e517e8a195a31ab4f4c301c672d1c8d4e6`.
+`private-source@a70c05e517e8a195a31ab4f4c301c672d1c8d4e6`.
 
 On the live three-bank packet it proves
 

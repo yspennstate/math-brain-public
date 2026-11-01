@@ -16,13 +16,13 @@ The target remains the unrestricted owner target: the coordinates are independen
 
 This run uses the newest-Claude source package at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`,
 
 and the current sharp-Hausdorff--Young volume-stability derivation at
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -40,7 +40,7 @@ The immediately preceding fleet02/B02 theorem is
 
 `QFORM-EDGE-E2-CROSSDISJOINT-SHARP-HY-L1-v1`,
 
-`yspennstate/math-open-problems@5d35b697d95d20e66fd72c96a5ea2dffa1201958`,
+`private-source-repository@5d35b697d95d20e66fd72c96a5ea2dffa1201958`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B02/fleet02-B02-20260923T071011Z-3508bbe2/REPORT.md`.
 
@@ -50,7 +50,7 @@ The latest completed designated partner `fleet03/B02` is r25,
 
 `QFORM-WEIGHTED-MIXED32-FOURIER-L1-v1`,
 
-`yspennstate/math-open-problems@ff8ec2ee90d4846f39e728e1ca20d50c717cc894`,
+`private-source-repository@ff8ec2ee90d4846f39e728e1ca20d50c717cc894`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T085705Z-fleet03-B02-qform-r25/REPORT.md`.
 
@@ -363,7 +363,7 @@ The conditioned-disjoint theorem (5.6) is substantially sharper whenever its dis
 
 The partner r24 physical-square receiver can also pay a genuine subbranch. Its source is
 
-`yspennstate/math-open-problems@10637245c15bc79333cd70bd6f30d417da6874cc`,
+`private-source-repository@10637245c15bc79333cd70bd6f30d417da6874cc`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T080037Z-fleet03-B02-qform-auto11-r24/REPORT.md`.
 

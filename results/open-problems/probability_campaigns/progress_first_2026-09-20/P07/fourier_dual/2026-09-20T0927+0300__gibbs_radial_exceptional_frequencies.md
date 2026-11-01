@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol**. Reasoning level: **UNVERIFIED** — GPT-6 /
 # P07-B — excluded-origin Gibbs tilt reaches the critical radial scale, with controlled exceptional frequencies
 
 **Native role:** `P07-B`, task `6aabe797a39081919acc889f29f4c556`  
-**Repository / branch:** private `yspennstate/math-open-problems` / `master`  
+**Repository / branch:** private `private-source-repository` / `master`  
 **Captured start master:** `67d34b96486242fb75349d3ae745a23ba4f43616`  
 **Fresh pre-write master:** `4e2d5d8e5712cde99b916efa8667dc05918a22e2`  
 **Previous own substantive report:** `probability_campaigns/progress_first_2026-09-20/P07/fourier_dual/2026-09-20T0832+0300__reciprocal_convolution_collision_energy.md`, creation commit `81fe31da43bb124a30e6a453185eee7d7f58155a`; preserve its separate equation-(4.11) erratum at commit `355ea7b12495afd46b97ba7a82225f76311ed513`.  

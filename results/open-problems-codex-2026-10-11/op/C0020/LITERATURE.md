@@ -45,7 +45,7 @@ Other arXiv and citation results on Voronoi/Poisson/Gaussian/Ising models, criti
 - math_recall.py: "percolation randomized algorithm computational complexity revealment"; intake attempt card returned, treated as unverified.
 - brain.py recall: "percolation algorithms mistakes" and "percolation crossing query complexity"; no checked solution returned.
 - rg for C0020 in intake ledgers and codex_pool_2026_10_10. The first wildcard directory invocation failed on Windows; it was rerun with enumerated directory paths. The relevant intake is C0020-A001 in probability_1000_intake_claude_20260907/attempts.jsonl; it claims no solution and includes unsupported Fourier-level speculation.
-- Read codex_pool_2026_10_10/team_O/w336/proofs/C0020.md: fixed-order OR and prepended-site-query counterexamples refute uniform revealment from total cost. Also read the corresponding file directly with git show origin/master:probability_campaigns/codex_pool_2026-10-10/team_O/w336/proofs/C0020.md in math-open-problems, after read-only git ls-tree filtering. No repository changes.
+- Read codex_pool_2026_10_10/team_O/w336/proofs/C0020.md: fixed-order OR and prepended-site-query counterexamples refute uniform revealment from total cost. Also read the corresponding file directly with git show origin/master:probability_campaigns/codex_pool_2026-10-10/team_O/w336/proofs/C0020.md in private-source, after read-only git ls-tree filtering. No repository changes.
 
 ## Every external request, including unsuccessful searches
 

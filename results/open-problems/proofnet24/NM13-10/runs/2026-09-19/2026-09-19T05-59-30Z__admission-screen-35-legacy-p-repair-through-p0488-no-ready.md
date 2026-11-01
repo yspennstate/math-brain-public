@@ -5,7 +5,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 **ADMISSION_PENDING / NO MATHEMATICAL MOVEMENT.** No source passed the exact-source, current-literature, repository-wide ownership/history, canonical residue-9, and honest-CLOSABLE gates in this invocation. No canonical claim was created. Successor metric remains **UNMEASURED -> UNMEASURED**. The prescribed Section-B methods **#2 ATTACK THE NEGATION FIRST, #11 DUALIZE, and #30 ONE SCALE / DIRECTION AT A TIME remain genuinely NOT_TRIED**, because source admission screening is not substantive research on an admitted target.
 
 Date: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Own namespace: `proofnet24/NM13-10/`  
 Category: `CLOSABLE OUTSIDE`  
 Exclusive selection shard: `int(SHA256(UTF-8 canonical dedup_key).hexdigest(),16) mod 13 = 9`

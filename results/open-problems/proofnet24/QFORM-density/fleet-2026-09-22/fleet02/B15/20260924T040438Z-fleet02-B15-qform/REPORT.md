@@ -85,7 +85,7 @@ No continuity is used to obtain essential boundedness here.
 
 The required source is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`, together with its `FOURIER_ROUTE_REPORT.md` and `COUNTEREXAMPLE_SEARCH.md`.
 
 For the standard cone
@@ -195,7 +195,7 @@ Consequently the correct rough-input interface for the owner height theorem is t
 
 The newest compatible fleet03/B15 theorem is
 
-`yspennstate/math-open-problems@696a0784ba7d270db657c1596d9c2ee940a1745d`,
+`private-source-repository@696a0784ba7d270db657c1596d9c2ee940a1745d`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B15/20260924T032517Z-fleet03-B15-qform-auto32/REPORT.md`.
 
 For every fixed symmetric `A` of rank at least three and original coordinate `j`, it constructs a finite matrix-dependent `K(A,j)` such that a cap-one subdensity of mass `m` in coordinate `j` produces a `C_0` output subdensity of height at most `K(A,j)sqrt(m)`. It derives

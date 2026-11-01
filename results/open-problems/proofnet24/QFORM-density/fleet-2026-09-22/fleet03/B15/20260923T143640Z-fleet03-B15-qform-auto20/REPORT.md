@@ -14,7 +14,7 @@ attacking: continuity from quantitative small-ball regularity; sharpen the new f
 The full owner target remains open. This report proves a quantitative regularity strengthening of a newly completed product-preserving branch; it does not prove the unrestricted universal height theorem.
 
 The fresh branch consumed is fleet01/B11, canonical source
-`yspennstate/math-open-problems@5653e2950f7147ab93f976d3b67feab16f27deed`, path
+`private-source-repository@5653e2950f7147ab93f976d3b67feab16f27deed`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260923T141542Z-fleet01-B11-QFORM-auto11/REPORT.md`.
 Its theorem `QFORM-FOURROW-L2-MATCHING-v1` treats
 \[
@@ -38,7 +38,7 @@ K=\sqrt2\,\pi^{3/2}|\beta|^{-1/2}(|\alpha|C)^{-1}(\Delta_1\Delta_2)^{-1/2}.
 This is not the refuted law-uniform one-dimensional van-der-Corput shortcut.
 
 The assigned completed partner consumed is fleet04/B15,
-`yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`, path
+`private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`, path
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260922T211430Z-fleet04-B15-heat-regularity-r4/REPORT.md`.
 For every probability law \(\mu\), it proves the exact Gaussian heat-height identity
 \[

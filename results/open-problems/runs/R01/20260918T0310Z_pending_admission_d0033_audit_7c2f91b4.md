@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is **n
 
 # R01 immutable run — successor gate plus independent D0033 audit
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 Dated source/current-status checks: 2026-09-18 UTC.
 
 ## 1. Continuity: I0024 remains frozen, not restarted

@@ -14,11 +14,11 @@ The law-uniform pointwise Fresnel decay claim is still refuted by phase-aligned 
 
 The completed named-partner result actually applied is fleet03/B01 run `fleet03-B01-20260922T123142Z-qform-r11`, canonical report
 
-`yspennstate/math-open-problems@d54e3a5d40a1d9837d39a1e525781fcf44ec0d9d:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T123142Z-qform-r11/REPORT.md`.
+`private-source-repository@d54e3a5d40a1d9837d39a1e525781fcf44ec0d9d:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B01/fleet03-B01-20260922T123142Z-qform-r11/REPORT.md`.
 
 Its primary source theorem was also read at
 
-`yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb:proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
+`private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb:proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
 
 ## 2. New theorem: translation-uniform local L2 energy for one quadratic gate
 

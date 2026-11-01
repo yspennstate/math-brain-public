@@ -141,7 +141,7 @@ Hence no universal receiver may replace the Borel profile in Theorem 2 by interv
 
 The newest completed fleet03/B05 result is
 
-`yspennstate/math-open-problems@9e0a5c32599f8cc180dd905615c9d034a9b51d2c:`
+`private-source-repository@9e0a5c32599f8cc180dd905615c9d034a9b51d2c:`
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260923T172119Z-fleet03-B05-QFORM-r29/REPORT.md`.
 
 Its `QFORM-RATIOPACKET-CURRENCY-COMPENSATION-v1` proves, in the low-`Psi` active-shear chamber,
@@ -210,7 +210,7 @@ So (5.1) is in the exact target class for every `N`.
 
 Apply Theorem H from the required pinned source
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837:`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837:`
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`.
 
 Take hub `H={L}` and light set `I={X,U,S_1,S_2}`. On `I`, the quadratic block is rank one,
@@ -271,8 +271,8 @@ Full QFORM remains **OPEN / NOT PROVED / NOT DISPROVED**. No moments, compact su
 
 Current controls were read fresh from `yspennstate/math-research-brain` at the run start and refreshed before this report; the programme revision is `2026-09-22.5`, owner control `2026-09-22.15`, and the current owner continuation is `QFORM-EXCLUSIVE-SIGNIN-20260923T164448Z`.
 
-Required old-Claude source actually applied: `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md` Theorem H; `FOURIER_ROUTE_REPORT.md` and `COUNTEREXAMPLE_SEARCH.md` were also read at their pinned revision.
+Required old-Claude source actually applied: `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `RESULTS.md` Theorem H; `FOURIER_ROUTE_REPORT.md` and `COUNTEREXAMPLE_SEARCH.md` were also read at their pinned revision.
 
-Current Claude continuation checked: `math-open-problems@c4c23b784395630c094ba299a50712209921d1ae`, `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`; `(SP)` is used only as an open-obstruction comparison, never as a premise.
+Current Claude continuation checked: `private-source@c4c23b784395630c094ba299a50712209921d1ae`, `proofnet24/QFORM-density/interactive/20260922T231000Z-semidefinite-and-hub-reduction/single_hub_core/REPORT.md`; `(SP)` is used only as an open-obstruction comparison, never as a premise.
 
-Designated partner actually applied: `math-open-problems@9e0a5c32599f8cc180dd905615c9d034a9b51d2c`, fleet03/B05 r29.
+Designated partner actually applied: `private-source@9e0a5c32599f8cc180dd905615c9d034a9b51d2c`, fleet03/B05 r29.

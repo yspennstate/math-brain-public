@@ -15,7 +15,7 @@ The unrestricted owner target remains OPEN. No Gaussian, log-concavity, moment, 
 
 The immediate same-slot predecessor is
 
-`yspennstate/math-open-problems@1fe06352f0192b8b0110e6d86844daa785da8c93`,
+`private-source-repository@1fe06352f0192b8b0110e6d86844daa785da8c93`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260924T024509Z-fleet03-B09-QFORM-r43/REPORT.md`.
 
@@ -25,7 +25,7 @@ It reduced the nonphysical-kernel grouped rank-two endpoint to a literal physica
 
 The complementary fleet02/B09 source
 
-`yspennstate/math-open-problems@d5d7bf292da3a593888913cc453ad0e604462cd6`,
+`private-source-repository@d5d7bf292da3a593888913cc453ad0e604462cd6`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260924T021301Z-fleet02-B09-QFORM-r16/REPORT.md`
 
@@ -35,7 +35,7 @@ Two completed analytic inputs are used below.
 
 1. `QFORM-PAIR-LOG-SMALLBALL-SMOOTHING-v1`, source
 
-`yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
+`private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`,
 
 `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
@@ -55,7 +55,7 @@ This is a final linear interval bound, not a square-root decoupling conclusion.
 
 2. `QFORM-ROW-MARGINAL-FREE-2VOLUME-COLLISION-v1`, source
 
-`yspennstate/math-open-problems@588fa418bc29d4b889fcbbee2b61370234ceef37`,
+`private-source-repository@588fa418bc29d4b889fcbbee2b61370234ceef37`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B03/20260923T175336Z-fleet01-B03-QFORM-r30/REPORT.md`.
 
@@ -455,7 +455,7 @@ The completed designated partner theorem is
 
 `QFORM-PHYSICAL-CROSS-DETERMINANT-SMOOTHING-v1`,
 
-source `yspennstate/math-open-problems@c0d3f34e557a374f41b2639994c43af4f950b682`,
+source `private-source-repository@c0d3f34e557a374f41b2639994c43af4f950b682`,
 
 path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B09/20260923T101659Z-fleet04-B09-dense-self-cross-fourier-r1/REPORT.md`.
 

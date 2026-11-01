@@ -45,7 +45,7 @@ then
 
 All same-bank quadratic terms and affine terms are retained. No continuity is asserted from this critical endpoint.
 
-Source: `yspennstate/math-open-problems@8192c4990fff2ba5dee1ce62fdf92e815b5b89c1`.
+Source: `private-source-repository@8192c4990fff2ba5dee1ce62fdf92e815b5b89c1`.
 
 ## 2. Exact pair Schur-numerator algebra
 
@@ -216,7 +216,7 @@ Again, only essential boundedness is asserted.
 
 The completed fleet03/B20 r42 operator-overlap theorem is at
 
-`yspennstate/math-open-problems@7e9f6e73f1f1f5304cc30a6204caf7ee0629904a`.
+`private-source-repository@7e9f6e73f1f1f5304cc30a6204caf7ee0629904a`.
 
 Under the full owner hypothesis `s_3(A)>=1`, it proves the dimension-free four-way funnel
 
@@ -332,7 +332,7 @@ The theorem and the spectral proof do not rely on Monte Carlo output.
 
 The newest completed `fleet04/B04` handoff remains r2:
 
-`yspennstate/math-open-problems@4a54666abf2316bb79b939cef3ea940605a0af57`,
+`private-source-repository@4a54666abf2316bb79b939cef3ea940605a0af57`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260924T001353Z-fleet04-B04-QFORM-r2/REPORT.md`.
 
 On its high-carrier branch, failure of the anchored entropy gate produces a literal physical row pair `{a,b}` in a cross block `M` with canonical fourth-volume pair mass

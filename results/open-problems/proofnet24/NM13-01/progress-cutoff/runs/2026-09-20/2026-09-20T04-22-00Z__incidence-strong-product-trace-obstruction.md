@@ -8,7 +8,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 
 **Publication novelty:** `UNVERIFIED`. The results below are new to the checked repository state; bounded literature searches did not locate the exact strong-product/line-graph transfer or the polynomial trace obstruction, but this is not a worldwide priority claim.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 Run root: `proofnet24/NM13-01/progress-cutoff/runs/2026-09-20/`.
 Pre-write master observed before this run's artifact writes: `d0b619ed2756c1eda46198108f011389d2a22f4d`.

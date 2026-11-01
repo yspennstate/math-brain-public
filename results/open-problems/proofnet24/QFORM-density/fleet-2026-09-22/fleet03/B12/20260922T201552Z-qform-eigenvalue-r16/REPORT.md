@@ -12,7 +12,7 @@ Supporting theorem proved. Full QFORM remains OPEN / NOT PROVED / NOT DISPROVED.
 ## Dependencies actually read
 
 1. `QFORM-RANK2-AFFINE-HALF-RIESZ-v1`, complete supporting proof at
-   `yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
+   `private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`,
    `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
    Its exact input used below is
    \[
@@ -22,7 +22,7 @@ Supporting theorem proved. Full QFORM remains OPEN / NOT PROVED / NOT DISPROVED.
    for two independent cap-one coordinates `Y`, every invertible symmetric `2x2` matrix `B`, and every affine vector `ell`.
 
 2. Assigned partner fleet04/B12 result `QFORM mixed-norm shear compiler`, complete supporting proof at
-   `yspennstate/math-open-problems@9ce47e2a0f2c8434d901df13a218450c2189d80e`,
+   `private-source-repository@9ce47e2a0f2c8434d901df13a218450c2189d80e`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260922T192552Z-fleet04-B12-mixed-shear-r1/REPORT.md`.
    If `(U,Z)` has joint density `h` and
    \[
@@ -35,7 +35,7 @@ Supporting theorem proved. Full QFORM remains OPEN / NOT PROVED / NOT DISPROVED.
    No independence of `U` and `Z` is required.
 
 3. For the zero-diagonal comparison branch only, the full-matrix indefinite-pair theorem at
-   `yspennstate/math-open-problems@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
+   `private-source-repository@742ac943440e41925fe09db9a8c02a96cbd83dbc`,
    `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/FULL_MATRIX_PAIR_EXTENSION.md`.
 
 ## Lemma 1: a cap-one translated square gives the exact half-Riesz kernel

@@ -14,7 +14,7 @@ for every bounded interval J. Equivalently, the output has an essentially bounde
 
 The first newest-source snapshot consumed in this invocation is
 
-    yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837
+    private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837
     proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/
 
 In that directory:
@@ -191,7 +191,7 @@ If instead G_L>=2delta I, the existing diffuse Fresnel theorem applies to the ph
 
 The new counterexample report lists definite rank-three forms among the remaining convex cases. The existing archive already closes them:
 
-    math-open-problems@f8b6f4d6763094eedf3b23b845dce57e28279c55
+    private-source@f8b6f4d6763094eedf3b23b845dce57e28279c55
     proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B18/
     20260922T123541Z-fleet02-B18-QFORM-r11/REPORT.md
 

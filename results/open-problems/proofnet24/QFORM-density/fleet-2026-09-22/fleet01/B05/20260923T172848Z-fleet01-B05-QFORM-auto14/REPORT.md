@@ -204,7 +204,7 @@ The earlier direct leave-one-out estimate in this state was `12 rho^(-1/3)` unde
 
 The newest completed fleet02/B05 moving-slope theorem, canonical mathematics at
 
-`yspennstate/math-open-problems@36d0dc0c4ac0910e8d84ae64d443136df86242d5`,
+`private-source-repository@36d0dc0c4ac0910e8d84ae64d443136df86242d5`,
 
 uses the near-null coordinates
 
@@ -247,7 +247,7 @@ Fresh brain controls were read from current `main`; owner continuation `QFORM-EX
 
 Sources actually used:
 
-1. preceding fleet01/B05 absorption theorem: `yspennstate/math-open-problems@118a74200ff58a869f7e4f81d93d5da45ecd7d8d`;
+1. preceding fleet01/B05 absorption theorem: `private-source-repository@118a74200ff58a869f7e4f81d93d5da45ecd7d8d`;
 2. projected-crossing theorem: `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md` on current master (source file sha `c1bf1f2816e579069352848e04a32d4a22994096` when read);
 3. MSS two-part frame theorem in the source-pinned QFORM ridge-window proof, where the exact `(1/sqrt(2)+sqrt(epsilon))^2` bound is recorded;
 4. designated partner fleet02/B05 moving-slope report, canonical mathematics `36d0dc0c4ac0910e8d84ae64d443136df86242d5`.

@@ -53,7 +53,7 @@ Therefore, for actual C=C0+E_C and B=B0+E_B, the actual grouped cross block M di
 
 rho=sqrt(||E_C||op^2+||E_B||op^2).
 
-If rho<=kappa(delta)L/16, the completed volume-stability theorem at math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba applies to this literal ORIGINAL-coordinate cross block and gives a continuous C0 density with
+If rho<=kappa(delta)L/16, the completed volume-stability theorem at private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba applies to this literal ORIGINAL-coordinate cross block and gives a continuous C0 density with
 
 ||p_Q||inf < 23/[kappa(delta)L].
 

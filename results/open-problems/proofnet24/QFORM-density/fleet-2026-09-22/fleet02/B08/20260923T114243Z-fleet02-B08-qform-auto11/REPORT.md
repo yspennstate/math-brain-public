@@ -66,7 +66,7 @@ This statement uses the **actual** cross block, including the complementary spec
 
 The required source was read at exactly
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`,
 
 including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`; compatible later versions of the same three files on `master` were also read.
@@ -91,7 +91,7 @@ The fixed source's counterexample search reports no QFORM counterexample and spe
 
 The newest completed designated-partner result at the time of this run is
 
-`yspennstate/math-open-problems@3c4c6882813d9530dc5c3884ce3e25f5993c7062`,
+`private-source-repository@3c4c6882813d9530dc5c3884ce3e25f5993c7062`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B08/20260923T115108Z-fleet03-B08-qform-diffuse-r36/REPORT.md`.
 
 Its theorem `QFORM-PAIR-RANK2-LEAKAGE-HIGHTAIL-v1` says: if an ACTUAL original-coordinate physical principal pair is indefinite with

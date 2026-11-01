@@ -2,7 +2,7 @@
 
 Outcome: `ESSENTIAL_STEP_APPLIED`. Parent target remains `OPEN / NOT PROVED`. Execution context: `WITHOUT_VERIFIED_BRAIN`.
 
-Source report: `yspennstate/math-open-problems`, `proofnet24/collective-POS3/fleet02/B11/20260922T065006Z-b11-pos3-r17-50176f59/REPORT.md`, science commit `6e5458e1c49ddec2040bd871bc8481ed446191bc`, report blob `c1e9ea6932c90f6dfe361041c0b817dccb03bb9d`, SHA-256 `d23d6888d61027c1f9b59b9958749c9c78dd665138e4c1df6792189956c7babc`. The notation clarification is commit `572914c9069002875176f1a47902889a32188980`: the report's phrase `1/2-multiplicity` means a `{1,2}`-valued lift multiplicity, not probability one-half.
+Source report: `private-source-repository`, `proofnet24/collective-POS3/fleet02/B11/20260922T065006Z-b11-pos3-r17-50176f59/REPORT.md`, science commit `6e5458e1c49ddec2040bd871bc8481ed446191bc`, report blob `c1e9ea6932c90f6dfe361041c0b817dccb03bb9d`, SHA-256 `d23d6888d61027c1f9b59b9958749c9c78dd665138e4c1df6792189956c7babc`. The notation clarification is commit `572914c9069002875176f1a47902889a32188980`: the report's phrase `1/2-multiplicity` means a `{1,2}`-valued lift multiplicity, not probability one-half.
 
 New arbitrary-size theorem: let `x` be an incomparability-graph leaf with unique incomparable neighbor `b`. Put `D=Pred(x)`, `U=Succ(x)`, `L=P[D∪{b}]`, `R=P[U∪{b}]`, and `d=e(D), u=e(U), ell=e(L), r=e(R)`. The exact full-extension factorization gives `N(b<x)=ell*u`, `N(x<b)=d*r`. With capacities `A=ell/d`, `B=r/u`, `Pr(b<x)=A/(A+B)` and `A,B>=1`.
 

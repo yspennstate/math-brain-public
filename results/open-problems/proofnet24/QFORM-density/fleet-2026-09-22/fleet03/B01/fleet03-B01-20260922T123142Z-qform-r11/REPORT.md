@@ -32,7 +32,7 @@ where `K=B(U) pi^(r/2) Delta^(-1/2)`.
 
 That estimate comes from complex product amplitudes `h_{i,t}=f_i exp(i t V_i)`, geometric rank-one Brascamp--Lieb, Hausdorff--Young for each coordinate amplitude, and exact Gaussian evaluation of the quadratic kernel. The leverage assumption is used only to keep the coordinate Fourier exponents at least two. The source then takes `r>=3` so the envelope is in `L^1(dt)` and obtains an `L^infinity` output density.
 
-Canonical source: `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb:proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
+Canonical source: `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb:proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
 
 ## 3. New theorem: the full Hausdorff--Young ladder
 
@@ -130,7 +130,7 @@ A completed compatible peer result was available from `fleet01/B11`: for two **p
 
 has a universal `L^3` density bound `||p||_3 <= C_bin D^(-1/3)`.
 
-Canonical source: `yspennstate/math-open-problems@2279571f59ade7a9ec478af1e4818f6c117ac224:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`.
+Canonical source: `private-source-repository@2279571f59ade7a9ec478af1e4818f6c117ac224:proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/QFORM-B11-20260922T121344Z/REPORT.md`.
 
 Applying its inequality to an independent third square and using the same `L^(3/2)` square estimate gives the actual three-direction bound
 

@@ -24,7 +24,7 @@ The global source-correct synthesis reduces the unrestricted theorem to the fixe
 
 The current designated partner is fleet03/B19 r28:
 
-`yspennstate/math-open-problems@4d5181180f8d5e9e14c9b1c5c5e44679c8c212b9`
+`private-source-repository@4d5181180f8d5e9e14c9b1c5c5e44679c8c212b9`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260923T080333Z-fleet03-B19-QFORM-r28/REPORT.md`.
 
@@ -50,7 +50,7 @@ form a Parseval frame. If the disjoint two-basis mass is below `1/64`, r28 reduc
 
 The immediately preceding fleet02/B19 r30 theorem is
 
-`yspennstate/math-open-problems@f27836052ed614a51f833f1e214eadd976debfcf`
+`private-source-repository@f27836052ed614a51f833f1e214eadd976debfcf`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B19/20260923T083941Z-fleet02-B19-QFORM-r30/REPORT.md`.
 
@@ -243,7 +243,7 @@ Now apply the completed fleet02/B06 theorem
 
 canonical source
 
-`yspennstate/math-open-problems@168ac7725f62401408f20ce18cbf8ff7055e9013`,
+`private-source-repository@168ac7725f62401408f20ce18cbf8ff7055e9013`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260922T234200Z-e4c1068b3e5d/REPORT.md`.
 
@@ -281,7 +281,7 @@ The explicit strict-N3 extreme-coloop family above is uniformly paid by the exac
 
 The owner-required Claude package is
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`.
 

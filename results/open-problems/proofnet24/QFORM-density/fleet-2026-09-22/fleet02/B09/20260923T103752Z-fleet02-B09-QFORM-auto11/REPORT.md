@@ -27,7 +27,7 @@ The newest partner theorem pays arbitrary curvature on the grouped hub bank, but
 
 Required analytic source:
 
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`,
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
 Its completed mixed-hub Theorem H works directly in original product coordinates. With one physical hub, one spread square, and leaf mixed-frame Gram `G`, it gives an integrable `|t|^{-3/2}` characteristic-function envelope and therefore
@@ -39,7 +39,7 @@ under the stated leverage condition. Arbitrary outside blocks survive conditioni
 Newest completed designated partner result:
 
 fleet03/B09 `QFORM-GROUPED-HUB-PLUCKER-SMOOTHING-v1`, canonical source
-`math-open-problems@ba035d3e65b7687b9ec8c05320f6340caabc34bb`.
+`private-source@ba035d3e65b7687b9ec8c05320f6340caabc34bb`.
 
 Split original coordinates as `H union I union J`, condition only `J`, and factor
 

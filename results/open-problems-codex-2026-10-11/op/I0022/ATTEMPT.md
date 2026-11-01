@@ -15,7 +15,7 @@ This does not settle all weights ν<1, nor rule out limits in other topologies. 
 
 Brain recall on subcritical conditioned Galton–Watson condensation and mistakes found warnings about irregular/lacunary tails. Math recall on Kortchemski condensation scaling returned largely irrelevant cards; no claim from those cards is used.
 
-Read origin/master:probability_1000_attempts_I_20260914/Probability_F0064b_Janson_problems_20_3_20_4_20_11_2026-09-14.md in ~/math-open-problems. It treats Problem 20.11 as unresolved beyond regular variation. Its assertion that lacunary laws have no limit “of any of these kinds” is not accompanied there by a proof and is not adopted.
+Read origin/master:probability_1000_attempts_I_20260914/Probability_F0064b_Janson_problems_20_3_20_4_20_11_2026-09-14.md in ~/private-source. It treats Problem 20.11 as unresolved beyond regular variation. Its assertion that lacunary laws have no limit “of any of these kinds” is not accompanied there by a proof and is not adopted.
 
 ## Later literature: a positive limit under complete condensation
 

@@ -234,4 +234,4 @@ This theorem removes unconditional source-disjointness from the complementary-we
 
 The unrestricted density conjecture remains OPEN. Unrestricted continuity remains OPEN.
 
-Sources consumed: fresh brain owner/control files at main; newest compatible fleet03/B03 r50 handoff; pinned math-open-problems commit e5f71d79eff325201dd0274053d20268ce65b837 RESULTS.md, FOURIER_ROUTE_REPORT.md, COUNTEREXAMPLE_SEARCH.md. Execution context remains WITHOUT_VERIFIED_BRAIN.
+Sources consumed: fresh brain owner/control files at main; newest compatible fleet03/B03 r50 handoff; pinned private-source commit e5f71d79eff325201dd0274053d20268ce65b837 RESULTS.md, FOURIER_ROUTE_REPORT.md, COUNTEREXAMPLE_SEARCH.md. Execution context remains WITHOUT_VERIFIED_BRAIN.

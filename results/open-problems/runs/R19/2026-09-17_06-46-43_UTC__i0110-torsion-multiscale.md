@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R19 / I0110 — the fixed persistent-relator scale fails on growing torsion; a canonical multiscale hierarchy survives the attack
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status after this run: **PARTIAL / 9-OF-9 COMMON-CERTIFICATE METRIC SATURATED / NEW STRUCTURAL ROUTE NARROWED / SOURCE OPEN / AUDIT PENDING / STUCK TRIGGERED FOR NEXT RUN. NO CLOSURE CLAIM.**
 

@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-05 successor admission screen 2 — canonical E-series reconciliation
 
 Run date: 2026-09-18 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track / namespace: `proofnet24/NM13-05/`  
 Category: **CLOSABLE OUTSIDE**  
 Selection shard: `int(SHA256(UTF-8 canonical dedup_key),16) mod 13 = 4`  

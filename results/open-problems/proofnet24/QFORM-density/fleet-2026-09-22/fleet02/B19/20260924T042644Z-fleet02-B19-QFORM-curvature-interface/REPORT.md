@@ -10,7 +10,7 @@ All random-coordinate independence below is inherited only from disjoint ORIGINA
 ## 1. Source-pinned inputs
 
 Required Claude/source checkpoint read at
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`:
 `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`.
 The completed result used at equation level below is Theorem F (Fresnel–Brascamp–Lieb): if
@@ -19,7 +19,7 @@ The completed result used at equation level below is Theorem F (Fresnel–Brasca
 `||p_Q||_infinity <= 12 (|lambda_1 lambda_2 lambda_3| det G_I)^(-1/3)`.
 
 Fresh designated partner fleet03/B19 r48 is source-pinned at
-`yspennstate/math-open-problems@e922248c12820c303861233f1a626fdf9aae9687:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T030130Z-fleet03-B19-QFORM-r48/REPORT.md`.
+`private-source-repository@e922248c12820c303861233f1a626fdf9aae9687:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B19/20260924T030130Z-fleet03-B19-QFORM-r48/REPORT.md`.
 Its new strong-rank-two funnel says: for a physical cross block `N=A[R,C]` with the stated ultra-thin rank-two gate, either a light same-bank row has transverse distance `F_j>=2^-12` and a physical `E3` receiver pays the full law by `<905`, or every light same-bank row is within `2^-12` of the adaptive deleted-cross top-two singular plane, with at most three heavy coordinates per bank. The remaining edge is `QFORM-HEAVY6-ADAPTIVE-R2-SELF-CURVATURE-PAYMENT-v1`.
 
 ## 2. Exact full-target family in the perfect-alignment survivor

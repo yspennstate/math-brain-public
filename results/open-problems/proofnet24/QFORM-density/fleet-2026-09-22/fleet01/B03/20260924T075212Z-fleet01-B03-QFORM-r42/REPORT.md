@@ -174,7 +174,7 @@ Thus this theorem simultaneously supplies the assigned negative-half collision c
 
 The newest completed fleet02/B03 r51 report is
 
-`yspennstate/math-open-problems@2d69242a9eb20165a65b4493a66a7f73995c43c2`,
+`private-source-repository@2d69242a9eb20165a65b4493a66a7f73995c43c2`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B03/20260924T072538Z-fleet02-B03-QFORM-auto11-r51/REPORT.md`.
 
 Its Proposition 2.1 proves the two-slope random-hub Plancherel estimate. In the notation above with `r=2`, it contains the actual inequality

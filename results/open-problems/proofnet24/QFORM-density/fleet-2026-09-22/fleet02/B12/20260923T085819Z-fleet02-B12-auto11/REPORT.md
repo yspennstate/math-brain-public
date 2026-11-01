@@ -19,11 +19,11 @@ Fresh owner control and all required QFORM state/corrections were read from the 
 Two completed mathematical inputs are used at equations:
 
 1. **Designated partner fleet03/B12 matrix-parameter Schur gap**, source-pinned at
-   `yspennstate/math-open-problems@333dd6db61c9d18e88f9b8be5bae55c811d49b42`,
+   `private-source-repository@333dd6db61c9d18e88f9b8be5bae55c811d49b42`,
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260923T074544Z-qform-eigenvalue-r28/REPORT.md`.
    Its equation (2.2) is recalled in Section 3.
 2. **Newest-Claude localized physical-triple theorem (Theorem A)**, source-pinned at
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/COUNTEREXAMPLE_SEARCH.md`:
    if an ORIGINAL-coordinate principal `3x3` block has all three eigenvalues of absolute value at least `c>0`, then, after conditioning on all other original coordinates,
    `||p_Q||_infinity <= 6 sqrt(pi)/c`, uniformly in the affine terms created by conditioning.

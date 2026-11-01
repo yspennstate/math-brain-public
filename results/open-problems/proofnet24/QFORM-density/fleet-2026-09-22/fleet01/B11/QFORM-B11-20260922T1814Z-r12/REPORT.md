@@ -42,7 +42,7 @@ Arbitrary additional nonzero spectrum remains a separate debt to the full target
 
 Source:
 
-`yspennstate/math-open-problems@cfd6217faa10f4e19f4f35228593699c91fb9489`
+`private-source-repository@cfd6217faa10f4e19f4f35228593699c91fb9489`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B11/20260922T170957Z-fleet01-B11-QFORM-r11/REPORT.md`
 
@@ -60,7 +60,7 @@ The proof combines the cross-dominated saddle estimate with the independently re
 
 Source:
 
-`yspennstate/math-open-problems@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
+`private-source-repository@e542b1a6ef471b329e4e88a6553e1aacb45acc1a`
 
 `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`
 
@@ -81,7 +81,7 @@ Latest completed assigned-partner handoff used here:
 
 Canonical partner proof:
 
-`yspennstate/math-open-problems@d56d97c85ced819f45ddad0987deaa5eb4b53cdc`
+`private-source-repository@d56d97c85ced819f45ddad0987deaa5eb4b53cdc`
 
 For independent cap-one variables, `sum b_k^2=1`, `Y=sum b_kX_k`,
 

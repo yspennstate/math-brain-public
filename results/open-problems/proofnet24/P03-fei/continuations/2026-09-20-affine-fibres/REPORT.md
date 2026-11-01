@@ -1,6 +1,6 @@
 # FEI continuation: sharp affine-fibre gluing and quadratic tag phases
 
-20 September 2026. Owner-requested continuation. Repository: `yspennstate/math-open-problems`, branch `master`.
+20 September 2026. Owner-requested continuation. Repository: `private-source-repository`, branch `master`.
 
 **Full Friedgut–Kalai Fourier entropy–influence conjecture: NOT PROVED by this continuation.** The main result is an all-dimensional gluing theorem with a sharp constant-four threshold. It permits dependent branches on arbitrary affine partitions, retains any larger certified local FEI constant, and survives arbitrary quadratic phases on the existing tag coordinates. It does not assert that arbitrary Boolean functions have the required representation. Mathematical priority and independent review remain unverified.
 

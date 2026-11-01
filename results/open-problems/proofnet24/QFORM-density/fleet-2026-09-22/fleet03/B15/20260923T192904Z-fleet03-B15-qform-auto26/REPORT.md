@@ -44,7 +44,7 @@ Thus a vanishing physical square pivot does not force a blow-up if the same orig
 
 The designated partner `fleet04/B15` proved at
 
-`yspennstate/math-open-problems@f8d97d9b706dc383144c98bec09a0af076e762da`,
+`private-source-repository@f8d97d9b706dc383144c98bec09a0af076e762da`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B15/20260923T151702Z-fleet04-B15-pivoted-convolution-r6/REPORT.md`,
 
 that for independent cap-one `X,Y`, arbitrary real `a,u,v,k`, and `b!=0`,

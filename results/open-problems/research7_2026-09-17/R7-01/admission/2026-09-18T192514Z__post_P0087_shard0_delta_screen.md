@@ -4,7 +4,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 
 ## State and continuity
 
-- Repository: private `yspennstate/math-open-problems`, existing `master`.
+- Repository: private `private-source-repository`, existing `master`.
 - R7-01 native ID recovered from `operations/research7_2026-09-17/REGISTRY.md`: `6aabe777361481919c9e614646464772`.
 - Required selection gate: exact case-sensitive canonical candidate ID with `sum(ord(c) for c in ID) % 7 == 0`.
 - Captured start-of-run master: `e3cfcbfbe5b9a9d9a731d9e5e7936d86dc495bf3`.

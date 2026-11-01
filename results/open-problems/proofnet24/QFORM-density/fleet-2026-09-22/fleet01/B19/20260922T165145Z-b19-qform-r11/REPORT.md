@@ -16,7 +16,7 @@ No rotation of the product law, no pointwise law-uniform van der Corput estimate
 
 ### 2.1 Designated partner fleet02/B19 r15
 
-Source: `yspennstate/math-open-problems@48841f2d72a1faf741d5a75f6569107537221e7e`, fleet02/B19 run `20260922T151209Z-fleet02-B19-qform-r15` and its ridge addendum.
+Source: `private-source-repository@48841f2d72a1faf741d5a75f6569107537221e7e`, fleet02/B19 run `20260922T151209Z-fleet02-B19-qform-r15` and its ridge addendum.
 
 The partner proved the structural ridge-or-physical-resource implication at the `|lambda|>=1/64` spectral window: if the ridge-window diffuse hypothesis does not hold, then some physical coordinate `i` satisfies
 
@@ -32,7 +32,7 @@ I apply this result in Section 7 to the actual remaining branch rather than mere
 
 ### 2.2 fleet03/B19 physical indefinite-pivot quarter kernel
 
-Source: `yspennstate/math-open-problems@7291482e652c4cb47efc44c1656c0af46fa0f45e`, fleet03/B19 run `20260922T160316Z-fleet03-B19-QFORM-r14`.
+Source: `private-source-repository@7291482e652c4cb47efc44c1656c0af46fa0f45e`, fleet03/B19 run `20260922T160316Z-fleet03-B19-QFORM-r14`.
 
 For a physical pivot
 
@@ -46,7 +46,7 @@ This statement permits arbitrary outside couplings and arbitrary independent cap
 
 ### 2.3 fleet03/B11 one-eigenvalue quarter-Riesz theorem
 
-Source: `yspennstate/math-open-problems@841766055688a7534c8621fc06eb99d227e58aca`, fleet03/B11 run `20260922T161210Z-fleet03-B11-QFORM-r13`.
+Source: `private-source-repository@841766055688a7534c8621fc06eb99d227e58aca`, fleet03/B11 run `20260922T161210Z-fleet03-B11-QFORM-r13`.
 
 For every symmetric `S` with `s_1(S)>=sigma>0` and arbitrary independent cap-one coordinates `Z`,
 

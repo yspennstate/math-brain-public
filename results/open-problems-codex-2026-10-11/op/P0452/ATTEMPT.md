@@ -163,7 +163,7 @@ Referee checks:
 8. No independent-edge theorem is applied conditional on the random preference thresholds.
 9. Formal verification covers the finite algebra (3.1) only, not Efron--Stein, local convergence, branching extinction, or coalescence in this model. Lean check result is recorded separately below when available.
 
-Read-only research provenance: recalled the topic and topic mistakes through brain.py; recalled EWT cards, followed the previous-attempt card by ID, and searched the math store for almost-local giant results. The earlier attempt's mesoscopic-cycle example is an obstruction for general local limits, not a counterexample for this model. Intake-ledger P0452 entries were searched and agree with that previous attempt. A read-only origin/master path listing in math-open-problems found no P0452/EWT-specific answer path; its working tree was not changed.
+Read-only research provenance: recalled the topic and topic mistakes through brain.py; recalled EWT cards, followed the previous-attempt card by ID, and searched the math store for almost-local giant results. The earlier attempt's mesoscopic-cycle example is an obstruction for general local limits, not a counterexample for this model. Intake-ledger P0452 entries were searched and agree with that previous attempt. A read-only origin/master path listing in private-source found no P0452/EWT-specific answer path; its working tree was not changed.
 
 Final mathematical gap: prove lim_{k->infinity} limsup_{n->infinity} E Q_{n,k}=0 for supercritical La--Kabkab graphs under the fixed-law/source-array hypotheses. The available-endpoint argument described in Section 5 is a possible route, but it is not proved. Thus the requested general lower bound is NOT solved by this attempt.
 

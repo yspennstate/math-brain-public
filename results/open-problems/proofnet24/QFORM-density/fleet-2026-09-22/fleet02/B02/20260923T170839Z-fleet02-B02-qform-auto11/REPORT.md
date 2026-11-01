@@ -29,13 +29,13 @@ Fresh owner control remained `QFORM-DENSITY-3EIG-20260922`, revision `2026-09-22
 
 The required original Claude Fourier source was reread at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`,
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`,
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 
 The reviewed q-dependent sharp-Hausdorff--Young continuation was reread at
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
@@ -57,7 +57,7 @@ again with genuine Fourier `L1`. Every fifth-volume row marginal is at most one,
 
 The current grouped projected-crossing source was read at
 
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a`,
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -65,7 +65,7 @@ Its stated scopes allow arbitrary same-bank curvature and use original-coordinat
 
 The newest completed designated partner actually consumed is `fleet03/B02` r35,
 
-`yspennstate/math-open-problems@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`,
+`private-source-repository@d0bda9f4e884eff19e5e7b0cf4cacab34d416c28`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B02/20260923T170106Z-fleet03-B02-qform-r35/REPORT.md`,
 

@@ -81,7 +81,7 @@ This is the aggregate curvature that disappears if one insists on selecting one 
 
 Use fleet02/B07 `QFORM-CROSS-FIBER-PLANCHEREL-v1`, canonical source
 
-`yspennstate/math-open-problems@5266d24ea98d9bb5902c51a92eca0e3e38112e39`,
+`private-source-repository@5266d24ea98d9bb5902c51a92eca0e3e38112e39`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B07/20260922T193347Z-b07-639234ec/REPORT.md`.
 

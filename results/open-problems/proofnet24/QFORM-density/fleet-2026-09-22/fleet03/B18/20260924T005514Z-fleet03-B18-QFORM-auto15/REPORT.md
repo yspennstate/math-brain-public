@@ -123,7 +123,7 @@ Continuity is not asserted by this conditional negative-moment proof.
 
 Read and applied the completed partner theorem `QFORM-4COORD-NULLHUB-WINDOW-EDGE-DICHOTOMY-v1` from
 
-`yspennstate/math-open-problems@84fa5922df082f90064dea4d22a600a60e799803`,
+`private-source-repository@84fa5922df082f90064dea4d22a600a60e799803`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260923T221534Z-fleet04-B18-QFORM-r5/REPORT.md`.
 
 It states: for an original-coordinate exact-rank-three `4x4` null-hub block whose three nonzero eigenvalues satisfy `s<=|mu_j|<=L`, if one hub edge has magnitude at least `a`, then
@@ -156,5 +156,5 @@ A failure of `A_II=0` cannot be treated perturbatively under the arbitrary cap-o
 
 - Livshyts--Paouris--Pivovarov, arXiv:1507.07949, Theorem 1.1: product marginal density cap `2^(k/2)`.
 - Herry--Malicet--Poly, arXiv:2303.09488: quadratic-form regularity under iid / smooth Gaussian-field-representation hypotheses; scope comparison only.
-- Partner: `yspennstate/math-open-problems@84fa5922df082f90064dea4d22a600a60e799803`, exact report path above.
+- Partner: `private-source-repository@84fa5922df082f90064dea4d22a600a60e799803`, exact report path above.
 - Control refresh: `yspennstate/math-research-brain@e54bb99afabe21870e4be39fac48783b9556cc56`.

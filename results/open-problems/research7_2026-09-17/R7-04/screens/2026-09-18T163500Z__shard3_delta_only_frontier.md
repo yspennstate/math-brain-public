@@ -3,7 +3,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 # R7-04 shard-3 delta-only admission frontier — no lawful CLOSABLE successor in the current repository delta
 
 Date: 2026-09-18 UTC  
-Repository: `yspennstate/math-open-problems`  
+Repository: `private-source-repository`  
 Branch: `master`  
 Worker: `R7-04`  
 Native ID: `6aabe7ea6e1881919a65503f8445a813`  

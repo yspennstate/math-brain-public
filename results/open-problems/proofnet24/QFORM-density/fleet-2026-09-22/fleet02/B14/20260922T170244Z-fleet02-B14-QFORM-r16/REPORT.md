@@ -27,7 +27,7 @@ This report proves an exact mass-linear compiler and then gives three target-val
 
 I use the complete fleet03/B14 report
 
-`yspennstate/math-open-problems@871a2d4c9f1ea58d89748ab1abab05021b4408de`
+`private-source-repository@871a2d4c9f1ea58d89748ab1abab05021b4408de`
 
 at
 
@@ -278,7 +278,7 @@ This is a supporting theorem/correction to proof architecture, not a full soluti
 ## 10. Source pins and integrity
 
 - Control repository snapshot used immediately before publication: `yspennstate/math-research-brain@5409f30d9883f7d4dc3cc11348a3f817251a214e`, owner control revision `2026-09-22.8`.
-- Assigned partner complete report: `yspennstate/math-open-problems@871a2d4c9f1ea58d89748ab1abab05021b4408de`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T153828Z-fleet03-B14-QFORM-r13/REPORT.md`, blob `af0567bbeccf3e204d94b89c7d1083b9a2f8a33f`.
+- Assigned partner complete report: `private-source-repository@871a2d4c9f1ea58d89748ab1abab05021b4408de`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260922T153828Z-fleet03-B14-QFORM-r13/REPORT.md`, blob `af0567bbeccf3e204d94b89c7d1083b9a2f8a33f`.
 - Later source-backed correction consumed: `QFORM-CONDITIONAL-3D-PROJECTION-CAP-FALSE-v1`, fleet02/B17, canonical report commit `f117a4870969d37706b8d7e62cbcae671cc2d3b0`.
 - Diagonal `pi` theorem source/status: current programme state `CURRENT_RESEARCH.md`; it is used only in its proved diagonal scope.
 

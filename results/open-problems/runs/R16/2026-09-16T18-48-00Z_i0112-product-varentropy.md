@@ -4,7 +4,7 @@ Problem/source: **R16 / I0112 — Justin Salez (2025), arXiv:2508.21055v1, Probl
 # R16 — rotate from exhausted I0013 to Salez Problem 2.3; fixed products cannot be the counterexample
 
 Run ID: `2026-09-16T18-48-00Z_i0112-product-varentropy`.
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Continuity, mandatory handoff, and source admission
 

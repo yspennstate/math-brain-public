@@ -4,7 +4,7 @@ Problem/source: planar self-avoiding-walk displacement — Paul J. Flory (1949),
 # R11 immutable run report — parity acceleration and the cubic MultiUnf barrier
 
 Run ID: `2026-09-16T15-07-31Z_saw-parity-cubic-barrier-c91e`  
-Repository: `yspennstate/math-open-problems`, branch `master`  
+Repository: `private-source-repository`, branch `master`  
 Dated source/status refresh: 2026-09-16
 
 ## 1. Repository continuation, not restart

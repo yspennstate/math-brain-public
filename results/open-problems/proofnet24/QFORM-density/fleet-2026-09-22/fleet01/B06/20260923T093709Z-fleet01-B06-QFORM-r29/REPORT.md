@@ -13,7 +13,7 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
 
 ### Source-valid inputs actually used
 
-1. **Designated partner fleet02/B06, r30-ish latest handoff.** `QFORM-SHARED-COEFFICIENT-MAX-RECIPROCAL-v1`, canonical source `yspennstate/math-open-problems@2fdec7c0b085cb5acf5a09847b293b5bcb296b80`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T083202Z-7358ab1fe71c/REPORT.md`. If `X,Y` are independent cap-one scalars, independent of a background `Omega`, and `(U,V)` is a background-measurable pair with joint density cap `K`, then `2XU+2YV+R(Omega)` has continuous density at most `2 sqrt(K)`. For affine product projections `U=a.Z+u0`, `V=b.Z+v0`, the earlier weighted affine-fiber BL theorem gives `K<=e/Delta`, where
+1. **Designated partner fleet02/B06, r30-ish latest handoff.** `QFORM-SHARED-COEFFICIENT-MAX-RECIPROCAL-v1`, canonical source `private-source-repository@2fdec7c0b085cb5acf5a09847b293b5bcb296b80`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T083202Z-7358ab1fe71c/REPORT.md`. If `X,Y` are independent cap-one scalars, independent of a background `Omega`, and `(U,V)` is a background-measurable pair with joint density cap `K`, then `2XU+2YV+R(Omega)` has continuous density at most `2 sqrt(K)`. For affine product projections `U=a.Z+u0`, `V=b.Z+v0`, the earlier weighted affine-fiber BL theorem gives `K<=e/Delta`, where
    
    `Delta=sqrt(||a||^2||b||^2-(a.b)^2)`.
    
@@ -21,7 +21,7 @@ Execution label: `WITHOUT_VERIFIED_BRAIN`.
    
    `||p||inf <= 2 sqrt(e/Delta)`.                                      (0.1)
 
-2. **Newest Claude volume-sampling theorem D'.** Source `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, path `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. For any ORIGINAL-coordinate cross block `M=A_IJ`, let `Z_3=E_3(M)=e_3(MM^T)`, and let `alpha_i` be the row marginals of squared-minor volume sampling. If `max_i alpha_i<=h<3/4`, then, with arbitrary self blocks, outside conditioning and affine terms,
+2. **Newest Claude volume-sampling theorem D'.** Source `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, path `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/FOURIER_ROUTE_REPORT.md`. For any ORIGINAL-coordinate cross block `M=A_IJ`, let `Z_3=E_3(M)=e_3(MM^T)`, and let `alpha_i` be the row marginals of squared-minor volume sampling. If `max_i alpha_i<=h<3/4`, then, with arbitrary self blocks, outside conditioning and affine terms,
    
    `||p_Q||inf <= C_h Z_3^(-1/6)`,                                   (0.2)
    

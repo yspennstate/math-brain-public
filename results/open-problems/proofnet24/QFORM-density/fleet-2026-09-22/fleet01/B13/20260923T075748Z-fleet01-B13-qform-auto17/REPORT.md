@@ -12,7 +12,7 @@ The exact target remains unrestricted: independent original-coordinate real vari
 
 The live corrections are respected: there is no law-uniform pointwise quadratic Fresnel decay; rotations are not used to preserve independence; projection-density bounds are not substituted for an indefinite quadratic pushforward; arbitrary-joint coarea and positive conditional-projection-moment shortcuts are not used; small matrix coefficients are not deleted perturbatively on translated/fragmented supports.
 
-Completed source actually applied below: designated partner `fleet02/B13` r23, canonical mathematics `yspennstate/math-open-problems@892bfe36756e09cbaff3f05070f7a3e20fea0fd1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T040105Z-fleet02-B13-extremal-r23/REPORT.md`. Its exact rank-one Schur `E_2`-loss identity is used in Section 5 at an actual inequality. The previous fleet01/B13 auto16 source is `yspennstate/math-open-problems@8b002eaeebab0b09362bc2f258e2f5dfd62e15ce`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T063002Z-fleet01-B13-qform-auto16/REPORT.md`.
+Completed source actually applied below: designated partner `fleet02/B13` r23, canonical mathematics `private-source-repository@892bfe36756e09cbaff3f05070f7a3e20fea0fd1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B13/20260923T040105Z-fleet02-B13-extremal-r23/REPORT.md`. Its exact rank-one Schur `E_2`-loss identity is used in Section 5 at an actual inequality. The previous fleet01/B13 auto16 source is `private-source-repository@8b002eaeebab0b09362bc2f258e2f5dfd62e15ce`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B13/20260923T063002Z-fleet01-B13-qform-auto16/REPORT.md`.
 
 ## 1. Extremal product front end retained exactly
 

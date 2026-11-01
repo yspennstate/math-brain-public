@@ -8,7 +8,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — no sepa
 
 **Publication novelty:** `UNVERIFIED`. A bounded web search for combinations of `line graph`, `biregular`, `Ramanujan bigraph`, `cutoff`, and `(9,3)` did not recover a matching ordinary-SRW cutoff theorem. This is negative evidence only, not a priority certificate.
 
-Repository/branch: `yspennstate/math-open-problems` / `master`.
+Repository/branch: `private-source-repository` / `master`.
 Controlling policy: `operations/PROGRESS20_2026-09-20.md`.
 Run root: `proofnet24/P26-progress-cutoff-transfer/runs/2026-09-20/`.
 

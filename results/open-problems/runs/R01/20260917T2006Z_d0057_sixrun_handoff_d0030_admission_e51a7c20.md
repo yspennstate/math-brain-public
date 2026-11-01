@@ -2,7 +2,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R01 — D0057 six-run handoff; successor admission to Bradley Question 2 (D0030)
 
-Run date: 2026-09-17 UTC. Repository / branch: private `yspennstate/math-open-problems` / `master`. Delivery: private GitHub only.
+Run date: 2026-09-17 UTC. Repository / branch: private `private-source-repository` / `master`. Delivery: private GitHub only.
 
 ## 0. Continuity, exclusions, whole-repository refresh, and runtime controls
 

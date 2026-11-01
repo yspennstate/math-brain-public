@@ -19,7 +19,7 @@ No Gaussianity, log-concavity, moments, compact support, connected support, iid 
 
 Two completed dependencies are used at equations:
 
-1. **Designated partner fleet04/B12 r8**, `yspennstate/math-open-problems@bcb9fd2641440a89d6e4967781d755618e163001`, path
+1. **Designated partner fleet04/B12 r8**, `private-source-repository@bcb9fd2641440a89d6e4967781d755618e163001`, path
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T002154Z-fleet04-B12-multihub-shear-r8/REPORT.md`.
    Its theorem `QFORM-MULTIHUB-ALIGNED-SPECTRAL-PACKET-STABILITY-v1` proves
    ```
@@ -31,7 +31,7 @@ Two completed dependencies are used at equations:
    `B_*=UW^T+R`, `U^T R=0`.
 
 2. **Completed six-square-mode receiver**, fleet02/B12 at
-   `yspennstate/math-open-problems@c635fcdce6aa206c68f1f14e061cf617d72376fb`,
+   `private-source-repository@c635fcdce6aa206c68f1f14e061cf617d72376fb`,
    theorem `QFORM-SIX-SQUARE-MODE-PAIR-COMPILER-v2`. If `H` is an ORIGINAL-coordinate set of size `m>=6` and
    `lambda_6((A^2)[H,H])>=h^2>0`, then
    ```
@@ -47,7 +47,7 @@ Two completed dependencies are used at equations:
    That source explicitly does **not** claim continuity for the theorem as a whole.
 
 The previous fleet03/B12 r53 theorem is preserved at
-`yspennstate/math-open-problems@ee98b8445086ec2ab29bdd8aa62dbcc4f433def4`.
+`private-source-repository@ee98b8445086ec2ab29bdd8aa62dbcc4f433def4`.
 It retained only a one-sided lower bound from the normalized anticommutator. The present run changes mechanism by retaining the full square term and treating the resonance point `-1` two-sidedly.
 
 ## 2. Exact whitened carrier identity
@@ -524,12 +524,12 @@ The present theorem does **not** prove that every target matrix admits such a ba
 ## 9. Source pins
 
 - Fresh control repository: `yspennstate/math-research-brain`, branch `main`; publication-refresh commit recorded in the run receipt.
-- Designated partner: `yspennstate/math-open-problems@bcb9fd2641440a89d6e4967781d755618e163001`,
+- Designated partner: `private-source-repository@bcb9fd2641440a89d6e4967781d755618e163001`,
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B12/20260924T002154Z-fleet04-B12-multihub-shear-r8/REPORT.md`.
-- Six-mode receiver: `yspennstate/math-open-problems@c635fcdce6aa206c68f1f14e061cf617d72376fb`,
+- Six-mode receiver: `private-source-repository@c635fcdce6aa206c68f1f14e061cf617d72376fb`,
   theorem `QFORM-SIX-SQUARE-MODE-PAIR-COMPILER-v2`.
 - Previous B12 one-sided theorem preserved for comparison:
-  `yspennstate/math-open-problems@ee98b8445086ec2ab29bdd8aa62dbcc4f433def4`,
+  `private-source-repository@ee98b8445086ec2ab29bdd8aa62dbcc4f433def4`,
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B12/20260924T084208Z-qform-eigenvalue-r53/REPORT.md`.
 
 Repository transport is not native brain ingestion. This run remains `WITHOUT_VERIFIED_BRAIN`.

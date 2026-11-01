@@ -188,7 +188,7 @@ The newest completed designated-partner theorem is fleet02/B03
 
 canonical mathematics
 
-`yspennstate/math-open-problems@5e5366b98337d13ba24bf666f4e42155553de7c2`.
+`private-source-repository@5e5366b98337d13ba24bf666f4e42155553de7c2`.
 
 For a symmetric coefficient matrix `A_W` on the source-disjoint W-bank, define its disjoint third exterior mass `E_0(A_W)` as in that report. It proves the whole-output collision estimate
 

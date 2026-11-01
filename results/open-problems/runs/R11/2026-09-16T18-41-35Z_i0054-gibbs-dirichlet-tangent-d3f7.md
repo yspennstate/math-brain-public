@@ -5,7 +5,7 @@ Problem/source: David J. Aldous and Svante Janson, *The Critical Beta-splitting 
 # R11 I0054 — a near-critical ternary Gibbs/Dirichlet fragmentation tree converges to CTCS(infinity)
 
 Run ID: `2026-09-16T18-41-35Z_i0054-gibbs-dirichlet-tangent-d3f7`  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Dated source/status check: 2026-09-16
 
 No Gmail/email, Drive, public posting, paid compute, workflow execution, permission change, scheduler mutation, peer-file edit, or shared-root edit was performed.

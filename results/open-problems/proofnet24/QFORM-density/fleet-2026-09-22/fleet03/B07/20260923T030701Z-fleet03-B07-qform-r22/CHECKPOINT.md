@@ -9,7 +9,7 @@ Incoming physical packet is fleet03/B07 r21: in the current N3/O0 survivor there
 
     C R F > kappa,              kappa = 1/(256 sqrt(3)).          (1)
 
-The current volume-tail source is `math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md`. It supplies
+The current volume-tail source is `private-source@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`, `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/PEER_TAIL_EXTENSION.md`. It supplies
 
     T E2 <= 3 E3,               T=sum_{j>=3}s_j(M)^2,             (2)
 

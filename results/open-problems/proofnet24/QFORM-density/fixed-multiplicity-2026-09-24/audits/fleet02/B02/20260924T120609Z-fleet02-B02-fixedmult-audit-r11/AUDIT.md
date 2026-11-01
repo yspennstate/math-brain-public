@@ -6,7 +6,7 @@ Lens: scalar Fourier powers, convolution and projection constants; counterexampl
 
 ## Source pin
 
-- Repository: `yspennstate/math-open-problems`, branch `master`.
+- Repository: `private-source-repository`, branch `master`.
 - Fresh master observed before publication: `2886aaea3eb2cf55fff7b70e878fd175efb705fc`.
 - Canonical manuscript path: `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/manuscript.tex`.
 - Manuscript git blob read in full: `183ccd294763214e6a707e8d4749ff9a8cf7006d` (unchanged from owner-specified initial source commit `7c0d6e60946b19423e6400a12d34b473cf0591e2`).

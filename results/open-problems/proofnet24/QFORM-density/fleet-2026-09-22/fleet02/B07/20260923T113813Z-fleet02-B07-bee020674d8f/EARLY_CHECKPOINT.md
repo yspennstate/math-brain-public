@@ -54,7 +54,7 @@ then (3) yields
 `E_5 >= a^10/5120 = W^(5/3)/5120`.                                 (5)
 
 The pinned completed newest-Claude D5 theorem at
-`math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source@e5f71d79eff325201dd0274053d20268ce65b837`
 therefore applies to the ACTUAL final cross block, with arbitrary same-bank quadratic terms, outside couplings and affine terms retained:
 
 `||p_Q||_infinity <= 5 sqrt(2e) E_5^(-1/10)`

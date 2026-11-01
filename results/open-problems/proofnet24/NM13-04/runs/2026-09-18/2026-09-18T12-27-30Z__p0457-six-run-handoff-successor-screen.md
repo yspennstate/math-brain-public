@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # NM13-04 / P0457 — mandatory six-run handoff and residue-3 successor admission screen
 
 Run date: 2026-09-18 UTC  
-Repository / branch: `yspennstate/math-open-problems` / `master`  
+Repository / branch: `private-source-repository` / `master`  
 Track / namespace: `proofnet24/NM13-04/`  
 Category: **CLOSABLE OUTSIDE**  
 Captured pre-write master: `742f9ab21d7e73d8a5dcb5d388b6ec86249b8320`  

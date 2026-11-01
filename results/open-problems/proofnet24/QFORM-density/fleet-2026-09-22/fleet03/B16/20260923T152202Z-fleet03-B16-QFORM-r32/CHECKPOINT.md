@@ -12,7 +12,7 @@ Full QFORM remains OPEN; global continuity remains OPEN.
 
 The analytic input is the completed mixed-hub Fresnel theorem (Theorem H) in
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md` and `FOURIER_ROUTE_REPORT.md`.
 
@@ -20,7 +20,7 @@ That theorem keeps genuine original-coordinate hub variables, uses only the cap-
 
 The B16 predecessor is
 
-`yspennstate/math-open-problems@321c962d54aaeb625a9417dea9842f0910c13714`
+`private-source-repository@321c962d54aaeb625a9417dea9842f0910c13714`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/20260923T132339Z-fleet03-B16-QFORM-r29/REPORT.md`.
 

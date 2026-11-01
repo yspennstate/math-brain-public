@@ -25,7 +25,7 @@ The designated completed partner result actually applied is fleet02/B08,
 
 canonical source
 
-`yspennstate/math-open-problems@31212dc0982ef58cdae6fc12c9354599a663fad6`,
+`private-source-repository@31212dc0982ef58cdae6fc12c9354599a663fad6`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B08/20260923T020620Z-fleet02-B08-QFORM-auto11/REPORT.md`.
 

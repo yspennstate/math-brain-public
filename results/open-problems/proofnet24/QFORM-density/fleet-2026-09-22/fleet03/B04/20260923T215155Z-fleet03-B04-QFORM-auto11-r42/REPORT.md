@@ -17,12 +17,12 @@ The unrestricted conjecture is **not** proved here. All random variables stay in
 The two analytic inputs refined here are:
 
 1. fleet03/B04 r39, `QFORM-CROSS-E3-SHARP-ENTROPY-MARGINALFREE-v1`, full report at
-   `yspennstate/math-open-problems@04f0b30d5f729ed26d9f8c2cb1354973c587c3cc:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T185112Z-fleet03-B04-auto11-r39/REPORT.md`;
+   `private-source-repository@04f0b30d5f729ed26d9f8c2cb1354973c587c3cc:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B04/20260923T185112Z-fleet03-B04-auto11-r39/REPORT.md`;
 2. the completed designated-partner result fleet04/B04 r1, `QFORM-NESTED-ANCHOR-D3-MARGINALFREE-PAYMENT-v1`, full report at
-   `yspennstate/math-open-problems@3224f273e92d97a8bff7424e9b1191c1e49d0611:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260923T214340Z-fleet04-B04-QFORM-r1/REPORT.md`.
+   `private-source-repository@3224f273e92d97a8bff7424e9b1191c1e49d0611:proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260923T214340Z-fleet04-B04-QFORM-r1/REPORT.md`.
 
 The checked grouped projected-crossing source underlying r39 is
-`yspennstate/math-open-problems@4f92aeb74083c6f95cb314a11fed1b812eacef9a:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
+`private-source-repository@4f92aeb74083c6f95cb314a11fed1b812eacef9a:proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
 ## 2. Exact minimax optimization of the marginal-free E3 compiler
 

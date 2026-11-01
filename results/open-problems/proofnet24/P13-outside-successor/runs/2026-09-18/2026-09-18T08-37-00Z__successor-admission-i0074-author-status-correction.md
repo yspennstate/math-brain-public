@@ -3,7 +3,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 # P13 outside successor — current-author status correction for I0074
 
 Date: 2026-09-18 UTC.  
-Repository / branch: private `yspennstate/math-open-problems` / `master`.  
+Repository / branch: private `private-source-repository` / `master`.  
 Own root: `proofnet24/P13-outside-successor/`.  
 Native slot: `6aa7b253b37c8191b693d8dc79298d37`.
 

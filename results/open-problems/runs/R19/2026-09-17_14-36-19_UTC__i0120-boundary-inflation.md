@@ -2,7 +2,7 @@ Model actually run: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — GPT-6 / max
 
 # R19 — I0120 factor-aligned recovery: an exact `e_5=2` boundary survivor
 
-Repository / branch: `yspennstate/math-open-problems` / `master`.
+Repository / branch: `private-source-repository` / `master`.
 
 Status: **PARTIAL / SOURCE OPEN / STUCK RECOVERY 1 EXECUTED / FIRST LEVEL-15 TERMINAL ROUTE OBSTRUCTED / UNAUDITED / NO FIXED-METRIC CREDIT**.
 

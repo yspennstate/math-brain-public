@@ -3,7 +3,7 @@
 - GU focus: `yspennstate/math-research-brain/main`,
   `scheduled_tasks/work/shared/full-fei-only-2026-10-12/GU_LASER_FOCUS_20261014.md`,
   blob `9448198701fbfe0cceb72bda7a6837ebd59704f9`.
-- B12 contract: `yspennstate/math-open-problems/master`,
+- B12 contract: `private-source-repository/master`,
   `reports/fei-2026-10-11/assignments/B12.json`, blob
   `40935ac651643a17815d0addf664ec4c1c0313cc`.
 - Immediate predecessor:

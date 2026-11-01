@@ -18,7 +18,7 @@ Three source-pinned inputs are used at displayed inequalities.
 
 1. **Required newest Claude/e5 Fourier package**
 
-   `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+   `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
    `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/RESULTS.md`
 
@@ -30,7 +30,7 @@ Three source-pinned inputs are used at displayed inequalities.
 
 2. **Newest designated partner fleet03/B03 actually consumed**
 
-   `yspennstate/math-open-problems@b580b09027d8c20c3d3bbea0bea6cf8caa04d541`
+   `private-source-repository@b580b09027d8c20c3d3bbea0bea6cf8caa04d541`
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B03/20260923T045638Z-fleet03-B03-QFORM-r27/REPORT.md`.
 
@@ -44,7 +44,7 @@ Three source-pinned inputs are used at displayed inequalities.
 3. **Exact-coloop endpoint already paid after r27**
 
    fleet03/B14 r27, latest corrected source through
-   `yspennstate/math-open-problems@ba66d82dd8e99e4b651a0442ef3a1175a953bf90`,
+   `private-source-repository@ba66d82dd8e99e4b651a0442ef3a1175a953bf90`,
 
    `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B14/20260923T053308Z-fleet03-B14-QFORM-r27/REPORT.md`.
 

@@ -30,7 +30,7 @@ Hence no law-uniform bound `|E exp(i s X^2)| <= C |s|^{-1/2}` can hold over all 
 
 I use the product-marginal theorem in exactly the source-valid scope recorded in
 
-`yspennstate/math-open-problems@f643a9fa13dd0d3bc084de86e1791e11a6bf348b`
+`private-source-repository@f643a9fa13dd0d3bc084de86e1791e11a6bf348b`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T115514Z-qform-B18-a01/REPORT.md`.
 
@@ -141,7 +141,7 @@ Since `phi_Q in L^1`, the inverse Fourier transform is a continuous density tend
 
 The latest completed designated partner result is fleet02/B01 r35:
 
-`yspennstate/math-open-problems@0bc769a70ba86df2c5bc5b73b5e5bbfe6021cfd8`
+`private-source-repository@0bc769a70ba86df2c5bc5b73b5e5bbfe6021cfd8`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T030247Z-fleet02-B01-qform-r35/REPORT.md`.
 
@@ -222,7 +222,7 @@ The bare target hypothesis implies `e_3(A^2)>=1`, but (5.4) includes overlap cla
 
 ## 6. Relation to the newest all-cross-minor compiler
 
-During this run, fleet03/B02 supplied a stronger balanced cross-minor aggregation (`QFORM-BALANCED-CROSSMINOR-ENTROPY-L1-v1`) on `math-open-problems` commit `c24c63bd01e1f3c46fb85cd700c180b4e59ffe01`. It controls an arbitrary original-coordinate cross block when a probability law on its nonzero `3x3` minors has row marginals at most `1/2`, using the entire three-volume and an entropy penalty.
+During this run, fleet03/B02 supplied a stronger balanced cross-minor aggregation (`QFORM-BALANCED-CROSSMINOR-ENTROPY-L1-v1`) on `private-source` commit `c24c63bd01e1f3c46fb85cd700c180b4e59ffe01`. It controls an arbitrary original-coordinate cross block when a probability law on its nonzero `3x3` minors has row marginals at most `1/2`, using the entire three-volume and an entropy penalty.
 
 The present theorem is complementary: it has **no row-marginal/leverage gate at all**, but it requires the three hub variables to be an actual fixed physical triple. Thus it is a clean endpoint compiler for a concentrated three-row packet. It does not replace the balanced theorem in the diffuse multi-row regime, and the balanced theorem does not make (3.5) unnecessary in a fixed-hub analysis.
 

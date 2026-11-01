@@ -31,7 +31,7 @@ Fresh control and state were read from `yspennstate/math-research-brain@b5ddc3ce
 
 The only mathematical dependency used below is the weak-`L^2` logarithmic ridge estimate proved in
 
-`yspennstate/math-open-problems@1defc84f1bfd79994a103a6d683c887d9dead1e7`
+`private-source-repository@1defc84f1bfd79994a103a6d683c887d9dead1e7`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B16/B16-20260922T135620Z-r11/REPORT.md`.
 

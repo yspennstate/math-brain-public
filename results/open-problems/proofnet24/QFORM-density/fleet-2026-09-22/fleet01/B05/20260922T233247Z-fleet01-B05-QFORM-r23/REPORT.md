@@ -285,7 +285,7 @@ This closes the **exact singular scalar-pair endpoint** without selecting a smal
 
 The designated partner fleet02/B05 completed run `20260922T225232Z-fleet02-B05-QFORM-37473ccc`, canonical mathematics
 
-`yspennstate/math-open-problems@b6ded18bee0fe20353530653ce654308cac0631c:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T225232Z-fleet02-B05-QFORM-37473ccc/REPORT.md`.
+`private-source-repository@b6ded18bee0fe20353530653ce654308cac0631c:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T225232Z-fleet02-B05-QFORM-37473ccc/REPORT.md`.
 
 Its theorem `QFORM-RANDOM-SLOPE-HALF-RIESZ-v1` says that if `X` has density cap `L_X`, an independent environment supplies a random slope `T` of density cap `L_T`, and `R=K(E)+2XT(E)`, then
 
@@ -341,6 +341,6 @@ Configurations with two or three internally rank-two resource banks, arbitrary a
 
 ## 8. Source pins
 
-- fleet03/B05 aggregate rank-two-bank theorem and determinant packet identity: `yspennstate/math-open-problems@70f181cf738aa51ee6fb7043a329ac9e8b22c4ec:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T223741Z-fleet03-B05-QFORM-r19/REPORT.md`.
-- fleet03/B10 tripartite packet `mu>=1/512`: `yspennstate/math-open-problems@7acd371ee2ee83a7fae12d7bedb38bc99c051b6d:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T221548Z-fleet03-B10-QFORM-r20/REPORT.md`.
-- designated partner fleet02/B05 reverse-conditioned leakage + random-slope half-Riesz: `yspennstate/math-open-problems@b6ded18bee0fe20353530653ce654308cac0631c:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T225232Z-fleet02-B05-QFORM-37473ccc/REPORT.md`.
+- fleet03/B05 aggregate rank-two-bank theorem and determinant packet identity: `private-source-repository@70f181cf738aa51ee6fb7043a329ac9e8b22c4ec:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B05/20260922T223741Z-fleet03-B05-QFORM-r19/REPORT.md`.
+- fleet03/B10 tripartite packet `mu>=1/512`: `private-source-repository@7acd371ee2ee83a7fae12d7bedb38bc99c051b6d:proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T221548Z-fleet03-B10-QFORM-r20/REPORT.md`.
+- designated partner fleet02/B05 reverse-conditioned leakage + random-slope half-Riesz: `private-source-repository@b6ded18bee0fe20353530653ce654308cac0631c:proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B05/20260922T225232Z-fleet02-B05-QFORM-37473ccc/REPORT.md`.

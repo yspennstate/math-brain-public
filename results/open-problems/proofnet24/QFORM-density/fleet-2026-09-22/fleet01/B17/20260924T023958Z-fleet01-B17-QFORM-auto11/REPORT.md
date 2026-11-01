@@ -237,7 +237,7 @@ The source-valid unrestricted obstruction remains the stronger asymptotic bound 
 
 The completed partner theorem is source-pinned at
 
-`yspennstate/math-open-problems@5358d1f4f32d64254b0234463015b42f1d36bc13`
+`private-source-repository@5358d1f4f32d64254b0234463015b42f1d36bc13`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B17/20260924T004826Z-fleet02-B17-QFORM-7c2f/REPORT.md`.
 

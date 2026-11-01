@@ -7,7 +7,7 @@ Programme: `QFORM-DENSITY-3EIG-20260922`. Full unrestricted QFORM remains OPEN. 
 
 ## Sources consumed
 
-- Required base Fourier package at `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
+- Required base Fourier package at `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/{RESULTS.md,FOURIER_ROUTE_REPORT.md,COUNTEREXAMPLE_SEARCH.md}`.
 - Reviewed q-dependent sharp-HY refinement and its D'/D5 consequences from the existing QFORM source chain.
 - Current grouped crossing theorem `NEW_PROJECTED_CROSSING.md` at release commit `d2f970d33fa7084f8de55412189402ac609e4da6`; it retains arbitrary same-bank phases but still degenerates with the small projected crossing direction.
 - Immediate same-slot exact-rank-one tensor theorem in `20260923T200844Z-fleet02-B02-qform-auto11/REPORT.md` and positive-tail physical compound checkpoint in `20260923T204251Z-fleet02-B02-qform-auto11-r2/EARLY.md`.

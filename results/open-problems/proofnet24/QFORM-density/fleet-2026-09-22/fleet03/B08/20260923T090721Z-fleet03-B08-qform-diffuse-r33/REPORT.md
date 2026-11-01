@@ -55,7 +55,7 @@ or
 
 Completed analytic input used below is fleet03/B09 `QFORM-HALFRIESZ-TWO-CROSS-v1`, canonical source
 
-`yspennstate/math-open-problems@ad7e5daa036cc8330b1432285ad40fec611d37dd`,
+`private-source-repository@ad7e5daa036cc8330b1432285ad40fec611d37dd`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260922T184648Z-fleet03-B09-QFORM-r15/REPORT.md`.
 
@@ -84,7 +84,7 @@ If the ridge gate fails on both sides, that theorem produces a physical row/colu
 
 The designated `fleet04/B08` current-QFORM directory was absent at the fresh check, so no designated-partner theorem is fabricated. The compatible completed fleet04 theorem actually applied in Section 4 is fleet04/B18 at
 
-`yspennstate/math-open-problems@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
+`private-source-repository@ce50e74f705c49f66524aa6565d4aa4a9be88061`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B18/20260922T182500Z-fleet04-B18-QFORM-r2/REPORT.md`,
 

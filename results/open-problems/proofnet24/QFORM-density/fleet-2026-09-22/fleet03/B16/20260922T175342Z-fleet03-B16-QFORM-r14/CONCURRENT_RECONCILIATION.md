@@ -1,6 +1,6 @@
 # Concurrent reconciliation after the B16 report
 
-After the B16 report was committed, fleet03/B18 independently committed `QFORM-CONDITIONAL-3D-SUP-MOMENT-UNIFORM-FALSE-v1` in `yspennstate/math-open-problems@58cde0caae66f5236332d48a1022fa7c5d12a1f7`. That result reaches the same central correction by an exact cube-fiber calculation and additionally embeds the failure in a full-rank matrix with small complementary eigenvalues.
+After the B16 report was committed, fleet03/B18 independently committed `QFORM-CONDITIONAL-3D-SUP-MOMENT-UNIFORM-FALSE-v1` in `private-source-repository@58cde0caae66f5236332d48a1022fa7c5d12a1f7`. That result reaches the same central correction by an exact cube-fiber calculation and additionally embeds the failure in a full-rank matrix with small complementary eigenvalues.
 
 This B16 run therefore makes **no priority or uniqueness claim** for the correction. The two constructions are complementary:
 

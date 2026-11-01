@@ -13,7 +13,7 @@ For arbitrary dimension, independent real coordinates `X_i` with probability den
 
 Fresh designated-partner result actually consumed: fleet03/B20 r32, canonical mathematics
 
-`yspennstate/math-open-problems@5cb423f9026efd414c2bbc57af2827c3abded292`,
+`private-source-repository@5cb423f9026efd414c2bbc57af2827c3abded292`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T125643Z-fleet03-B20-QFORM-r32/REPORT.md`.
 

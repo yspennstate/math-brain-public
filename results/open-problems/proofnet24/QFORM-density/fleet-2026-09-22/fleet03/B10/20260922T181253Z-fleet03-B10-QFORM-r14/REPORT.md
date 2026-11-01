@@ -69,7 +69,7 @@ Regularity: essential boundedness is proved here. The source diffuse theorem giv
 
 ## Completed compatible fleet04 result applied
 
-Fresh repository inspection found no completed current-QFORM artifact for the exact named partner `fleet04/B10`; none is fabricated. I applied the completed compatible fleet04/B16 theorem at `yspennstate/math-open-problems@58c23c624db350cf44f0c836daa3582eb7e2d266`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T161909Z-fleet04-B16-QFORM-r2/REPORT.md`.
+Fresh repository inspection found no completed current-QFORM artifact for the exact named partner `fleet04/B10`; none is fabricated. I applied the completed compatible fleet04/B16 theorem at `private-source-repository@58c23c624db350cf44f0c836daa3582eb7e2d266`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T161909Z-fleet04-B16-QFORM-r2/REPORT.md`.
 
 Apply its exact fixed-pair identity to
 
@@ -100,10 +100,10 @@ Arbitrary additional spectral directions are also unpaid for the full owner conj
 
 ## Exact sources used
 
-Previous B10 null-ray bank theorem: `yspennstate/math-open-problems@a2970af7de27ec651907650644ca9689880ac5b1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T171741Z-fleet03-B10-QFORM-r13/REPORT.md`.
+Previous B10 null-ray bank theorem: `private-source-repository@a2970af7de27ec651907650644ca9689880ac5b1`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B10/20260922T171741Z-fleet03-B10-QFORM-r13/REPORT.md`.
 
-Diffuse separable-phase theorem: `yspennstate/math-open-problems@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
+Diffuse separable-phase theorem: `private-source-repository@773b7fb6f0e6a8142066f0bac08d228dfc164fdb`, `proofnet24/QFORM-density/interactive/20260922T120815Z-separable-perturbations/REPORT.md`.
 
-Compatible fleet04/B16 determinant-bank theorem: `yspennstate/math-open-problems@58c23c624db350cf44f0c836daa3582eb7e2d266`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T161909Z-fleet04-B16-QFORM-r2/REPORT.md`.
+Compatible fleet04/B16 determinant-bank theorem: `private-source-repository@58c23c624db350cf44f0c836daa3582eb7e2d266`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B16/20260922T161909Z-fleet04-B16-QFORM-r2/REPORT.md`.
 
 **Full QFORM conjecture: OPEN / NOT PROVED.**

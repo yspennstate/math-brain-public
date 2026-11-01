@@ -5,7 +5,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — this is not G
 Date: 2026-09-18 UTC  
 Worker: R01  
 Lane: CLOSABLE OUTSIDE  
-Repository: private `yspennstate/math-open-problems`, branch `master`
+Repository: private `private-source-repository`, branch `master`
 
 ## 1. Continuity and source recovery
 

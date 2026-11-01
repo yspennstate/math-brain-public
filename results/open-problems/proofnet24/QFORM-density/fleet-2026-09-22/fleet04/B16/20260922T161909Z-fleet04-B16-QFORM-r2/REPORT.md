@@ -14,7 +14,7 @@ This report does not use a bounded projected density as a substitute for an inde
 
 The completed assigned-partner input is fleet01/B16, run `20260922T154258Z-fleet01-B16-QFORM-r12`, source-read at
 
-`yspennstate/math-open-problems@47fe1ce92881fa4b6df0fa8a12b706d6a4eb14c5`,
+`private-source-repository@47fe1ce92881fa4b6df0fa8a12b706d6a4eb14c5`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B16/20260922T154258Z-fleet01-B16-QFORM-r12/REPORT.md`,
 

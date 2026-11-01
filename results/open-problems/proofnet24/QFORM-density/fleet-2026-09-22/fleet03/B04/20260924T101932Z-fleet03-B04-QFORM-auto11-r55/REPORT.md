@@ -14,9 +14,9 @@ The owner target remains the unrestricted one: independent ORIGINAL real coordin
 
 ## 1. Source-valid inputs and the first missing implication
 
-The analytic input is the grouped-projection / projected-crossing theorem read on fresh `math-open-problems` master at commit
+The analytic input is the grouped-projection / projected-crossing theorem read on fresh `private-source` master at commit
 
-`yspennstate/math-open-problems@35bc266eff789abbc87566751c074d636337489d`,
+`private-source-repository@35bc266eff789abbc87566751c074d636337489d`,
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 
@@ -294,7 +294,7 @@ No Monte Carlo evidence is used.
 
 The newest completed designated partner remains fleet04/B04 r2:
 
-`yspennstate/math-open-problems@4a54666abf2316bb79b939cef3ea940605a0af57`,
+`private-source-repository@4a54666abf2316bb79b939cef3ea940605a0af57`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B04/20260924T001353Z-fleet04-B04-QFORM-r2/REPORT.md`.
 

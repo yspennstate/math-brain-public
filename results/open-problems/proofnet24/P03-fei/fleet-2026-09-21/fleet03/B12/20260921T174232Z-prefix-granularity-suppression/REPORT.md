@@ -5,7 +5,7 @@
 **Route:** APPROACHES #1 (spectral-sample compression / sequential prediction), with the physical derivative structure behind #3.  
 **Provenance:** no novelty or publication-priority claim is made. This is a private proof-route artifact.
 
-Before substantive mathematics this run read, in the owner-required order, `TASKS_2026-09-21.md`, then `REPORT.md`, then `APPROACHES.md` from fresh `math-open-problems` master. It also consumed the immediately relevant B12 uniform-prefix/shadow handoff and B12 two-local sensitivity-coupling handoff, plus fleet02/B17's weak-overlap face-boundary theorem. It did not re-audit the read-once certificate or repeat a settled FEI sweep.
+Before substantive mathematics this run read, in the owner-required order, `TASKS_2026-09-21.md`, then `REPORT.md`, then `APPROACHES.md` from fresh `private-source` master. It also consumed the immediately relevant B12 uniform-prefix/shadow handoff and B12 two-local sensitivity-coupling handoff, plus fleet02/B17's weak-overlap face-boundary theorem. It did not re-audit the read-once certificate or repeat a settled FEI sweep.
 
 The current source state includes the corrected external lower bound `C_FEI > 6.521845710923046575`; Hod's `6.4547837...` is no longer a valid universal sharp target. Full FEI still asks only for some absolute dimension-free constant.
 

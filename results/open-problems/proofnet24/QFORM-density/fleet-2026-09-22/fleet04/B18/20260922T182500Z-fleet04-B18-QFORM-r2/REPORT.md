@@ -174,7 +174,7 @@ new branch, not for the full target.  No claim of external novelty is made.
 - Juškevičius--Lee primary source: https://arxiv.org/abs/1503.09190
 - Livshyts--Paouris--Pivovarov primary source:
   https://arxiv.org/abs/1507.07949
-- Partner report: `yspennstate/math-open-problems@dd94932dae1791af1bca9396c062e17d0e55142a`,
+- Partner report: `private-source-repository@dd94932dae1791af1bca9396c062e17d0e55142a`,
   `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B18/20260922T175509Z-qform-B18-a01-r15/REPORT.md`.
 - Fresh owner control observed at run start:
   `yspennstate/math-research-brain@f3d6df2bd8d4f570cad5861e8de863f80fa0ff0a`,

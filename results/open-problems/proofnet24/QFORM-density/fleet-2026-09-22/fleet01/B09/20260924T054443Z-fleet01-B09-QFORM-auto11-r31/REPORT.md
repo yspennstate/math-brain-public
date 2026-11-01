@@ -14,7 +14,7 @@ The unrestricted conjecture remains OPEN / not proved / not disproved. Full-targ
 
 The preceding B09 report
 
-`yspennstate/math-open-problems@5eb1e8fee3156a3cd6615dcde33f117ba54445b8`
+`private-source-repository@5eb1e8fee3156a3cd6615dcde33f117ba54445b8`
 
 proved in the diffuse exact singular-pair collar that either a disjoint physical third-volume branch is paid, or a macroscopic one-overlap third-compound packet is localized to one of the two literal hub coordinates, or the matrix enters an exact/near diagonal-plus-rank-four form. In particular its first unpaid implication was
 
@@ -124,7 +124,7 @@ The completed designated-partner theorem used here is fleet02/B09's
 
 canonical source
 
-`yspennstate/math-open-problems`,
+`private-source-repository`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260923T074200Z-fleet02-B09-QFORM-r13/REPORT.md`.
 
 For a literal hub with leaf block `D+sum_(s=1)^r lambda_s v_s v_s^T`, actual star `c`, augmented frame Gram matrix `G`, and two-basis disjointness probability `rho>0`, it proves a continuous density with
@@ -242,7 +242,7 @@ I also apply the newer completed designated-partner result
 `QFORM-ROUGH-STAR-UNIFORM-SQRT-SMALLBALL-v1`
 plus its pair-log splice,
 
-`yspennstate/math-open-problems@9ccee3f9a64a934c026786b63baca551ef0ba743`,
+`private-source-repository@9ccee3f9a64a934c026786b63baca551ef0ba743`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B09/20260924T042556Z-fleet02-B09-QFORM-auto11-r17/REPORT.md`.
 
 For an invertible indefinite literal physical pair `B`, put

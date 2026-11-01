@@ -6,7 +6,7 @@ All matrices and random variables below remain in original physical coordinates.
 
 ## Source inputs actually applied
 
-The newest completed designated-partner report used is fleet03/B20 r26, `yspennstate/math-open-problems@766e706f955b5cf514e00be2a14fc856d65c2244`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T044630Z-fleet03-B20-QFORM-r26/REPORT.md`. In the surviving exact-rank-three collar it proves that a physical anchor `i` has an aggregate anchored compound packet
+The newest completed designated-partner report used is fleet03/B20 r26, `private-source-repository@766e706f955b5cf514e00be2a14fc856d65c2244`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B20/20260923T044630Z-fleet03-B20-QFORM-r26/REPORT.md`. In the surviving exact-rank-three collar it proves that a physical anchor `i` has an aggregate anchored compound packet
 
 `max(P_i,M_i,D_i)>1/192`,
 

@@ -24,7 +24,7 @@ The immediate source boundary is fleet03/B19 r18: the B10 near-span aggregate O3
    `sup_t E |(U^T X)^T Lambda(U^T X)+b^T X-t|^(-1/2)`
    ` <=128 |det Lambda|^(-1/4)`,
 
-   with the sharper constant `16 sqrt(30)` when the affine term lies in `Ran U`, in particular for zero affine term. Source snapshot: `yspennstate/math-open-problems@3034661243d00674dd35b8c9f0959e68d9379543`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
+   with the sharper constant `16 sqrt(30)` when the affine term lies in `Ran U`, in particular for zero affine term. Source snapshot: `private-source-repository@3034661243d00674dd35b8c9f0959e68d9379543`, `proofnet24/QFORM-density/interactive/20260922T161801Z-rank-two-fusion/REPORT.md`.
 
 2. Rogozin--Ball scalar product-projection bound: a normalized linear form of independent cap-one variables has density at most `sqrt(2)`. This is already source-pinned inside the preceding theorem and in B19 r18.
 
@@ -32,7 +32,7 @@ The immediate source boundary is fleet03/B19 r18: the B10 near-span aggregate O3
 
    `||p_Q||_infinity <=4 sqrt(2H) (D kappa)^(-1/4)`.
 
-   Source: `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
+   Source: `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`.
 
 These are used only as supporting theorems at their stated source status; neither is promoted here to an independently reviewed full solution.
 
@@ -281,7 +281,7 @@ Together with the partner's exact singular endpoint `D_res=0`, where the complet
 
 Only the punctured interval `0<D_res<e^(-8)` retains the partner's logarithmic nonuniformity. This is an equation-level use of the completed designated-partner theorem, not a formal citation.
 
-Partner source: `yspennstate/math-open-problems@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
+Partner source: `private-source-repository@5b5cea245bb2f9f6e85e0efb7f9bc28183fc5f1a`, `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B19/20260922T222052Z-fleet04-B19-QFORM-r2/REPORT.md`.
 
 ## 7. Updated compact proof map and exact remaining implication
 

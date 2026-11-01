@@ -155,7 +155,7 @@ The completed partner result consumed here is
 
 proved by fleet02/B12 at
 
-`yspennstate/math-open-problems@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`,
+`private-source-repository@e6c20a6e5a077c71e1ae7ac27e71d889a5e6a004`,
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B12/20260923T145451Z-fleet02-B12-QFORM-r36/REPORT.md`.
 
@@ -264,7 +264,7 @@ This materially extends the partner's orthogonal-spectator stability: the fourte
 
 The current owner continuation asks B09-B12 to consume the completed projected-crossing theorem. I use
 
-`yspennstate/math-open-problems@829192412f2a2d84e72b4bed91115fc5fab68401`,
+`private-source-repository@829192412f2a2d84e72b4bed91115fc5fab68401`,
 
 `proofnet24/QFORM-density/interactive/20260923T164118Z-full-proof-paper/NEW_PROJECTED_CROSSING.md`.
 

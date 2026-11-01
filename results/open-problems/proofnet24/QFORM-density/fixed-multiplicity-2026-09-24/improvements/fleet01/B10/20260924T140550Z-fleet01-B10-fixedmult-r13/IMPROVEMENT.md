@@ -2,7 +2,7 @@
 
 Run: `20260924T140550Z-fleet01-B10-fixedmult-r13`  
 Objective: `QFORM-FIXED-MULTIPLICITY-AUDIT-20260924`  
-Pinned baseline manuscript: `yspennstate/math-open-problems@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
+Pinned baseline manuscript: `private-source-repository@7c0d6e60946b19423e6400a12d34b473cf0591e2`, blob `183ccd294763214e6a707e8d4749ff9a8cf7006d`.
 
 Status: **NEW CONSTANT SHARPENING OF THE NINE-EIGENVALUE CANDIDATE; NOT SELF-AWARDED INDEPENDENT VALIDATION.** The threshold `9` is not new in this report. The unrestricted three-eigenvalue conjecture and multiplicity `8` remain open.
 

@@ -82,7 +82,7 @@ This belongs to weak \(L^2(dh)\) at the expected scale but not to strong \(L^2(d
 
 ## Why all-plane caps fail (RW2)
 
-Use the independently audited dependent-light shell law from the [negative-target projection-cap fake](https://github.com/yspennstate/math-open-problems/blob/master/proofnet24/QFORM-density/interactive/20260923T203400Z-negative-target-projection-fake/REPORT.md). It has an independent cap-one hub, light joint density below one, and all exact numerical product-projection caps, but its light triple is **not** a product projection.
+Use the independently audited dependent-light shell law from the [negative-target projection-cap fake](private-source-repository). It has an independent cap-one hub, light joint density below one, and all exact numerical product-projection caps, but its light triple is **not** a product projection.
 
 For a base shell \(E_k\) with width \(a_k\), and any dyadic \(r\) with \(a_k\le r\le1/2\), the fixed-hub conditional kernel at \(s=-1\) satisfies
 \[

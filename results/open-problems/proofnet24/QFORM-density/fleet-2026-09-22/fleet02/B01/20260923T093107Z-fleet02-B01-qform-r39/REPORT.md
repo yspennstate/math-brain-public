@@ -14,11 +14,11 @@ This run preserves the phase-aligned fragmented-support counterexample to any la
 
 Inputs used at their proved scopes:
 
-1. `QFORM-TWO-BANK-RANK2-HALF-RIESZ-v1`, fleet02/B01 r36, canonical source `yspennstate/math-open-problems@f8d3db5ea232c2bbe191a97660836b65fc591bb1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T040531Z-fleet02-B01-qform-r36/REPORT.md`. For a quadratic polynomial on two disjoint original-coordinate banks with arbitrary same-bank curvature and rank-two physical cross block `M`, if `Delta=sigma_1(M)sigma_2(M)>0`, then
+1. `QFORM-TWO-BANK-RANK2-HALF-RIESZ-v1`, fleet02/B01 r36, canonical source `private-source-repository@f8d3db5ea232c2bbe191a97660836b65fc591bb1`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B01/20260923T040531Z-fleet02-B01-qform-r36/REPORT.md`. For a quadratic polynomial on two disjoint original-coordinate banks with arbitrary same-bank curvature and rank-two physical cross block `M`, if `Delta=sigma_1(M)sigma_2(M)>0`, then
 
    `H_(1/2)(R):=sup_s E|R-s|^(-1/2) <= 8 Delta^(-1/4)`.
 
-2. The completed logarithmic indefinite-pair theorem in the pair-log source, `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, path `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`: after completing an invertible **indefinite** original-coordinate pair block `B`, if its exact Schur remainder obeys
+2. The completed logarithmic indefinite-pair theorem in the pair-log source, `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, path `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`: after completing an invertible **indefinite** original-coordinate pair block `B`, if its exact Schur remainder obeys
 
    `sup_s P(|R-s|<=rho) <= H sqrt(rho)`,
 
@@ -26,9 +26,9 @@ Inputs used at their proved scopes:
 
    `||p_Q||_infinity <= 4 sqrt(2H) (D kappa)^(-1/4)`.
 
-3. Required newest Claude/Fourier source package `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`; compatible current `master` was checked. In particular, Theorem D/D' constrain the I-side natural three-volume row marginals, with D' still requiring `h<3/4`, while D5 has no marginal gate but needs nonzero fifth volume.
+3. Required newest Claude/Fourier source package `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`, including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md`; compatible current `master` was checked. In particular, Theorem D/D' constrain the I-side natural three-volume row marginals, with D' still requiring `h<3/4`, while D5 has no marginal gate but needs nonzero fifth volume.
 
-4. Latest completed designated partner fleet03/B01 theorem `QFORM-RANK2-CROSS-DEFINITE-KERNEL-L2-v1`, brain handoff commit `595bd2c5ac1322b641639f582e55b1cf5737cf98`, canonical math `yspennstate/math-open-problems@dde65d9e08434761ec633e1acc3865fb9ad05941`.
+4. Latest completed designated partner fleet03/B01 theorem `QFORM-RANK2-CROSS-DEFINITE-KERNEL-L2-v1`, brain handoff commit `595bd2c5ac1322b641639f582e55b1cf5737cf98`, canonical math `private-source-repository@dde65d9e08434761ec633e1acc3865fb9ad05941`.
 
 ## 2. New fusion theorem
 

@@ -11,7 +11,7 @@ q(X)=<r_1^*,X>^2+<r_2^*,X>^2-<r_3^*,X>^2,
 
 where equivalently Y=R^T X and q=Y_1^2+Y_2^2-Y_3^2. All original coordinates are independent with probability densities <=1 except a chosen coordinate j, whose factor g satisfies 0<=g<=1 and int g=m<=1. Denote by nu_g^+ the pushforward submeasure restricted to {q>=0}.
 
-The completed ruled theorem at math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837 gives, for smooth inputs and s>=0, the parametrisation
+The completed ruled theorem at private-source@e5f71d79eff325201dd0274053d20268ce65b837 gives, for smooth inputs and s>=0, the parametrisation
 
   y=sqrt(s)e_theta+t v_theta,  v_theta=e_theta^perp+e_3,
   delta(q-s)dy=(1/2)dtheta dt.

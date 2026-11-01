@@ -4,7 +4,7 @@
 
 ## Completed repository delivery
 
-The four substantive files in the original append-only patch have now been created on `master` in `yspennstate/math-open-problems`:
+The four substantive files in the original append-only patch have now been created on `master` in `private-source-repository`:
 
 | File | Creation commit | Verified Git blob |
 | --- | --- | --- |

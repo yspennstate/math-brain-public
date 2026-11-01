@@ -16,7 +16,7 @@ No random source variable is rotated. The only rotations below diagonalize a det
 
 The required historical source was reread at
 
-`yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`
+`private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`
 
 under
 
@@ -26,7 +26,7 @@ including `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md
 
 The newest completed designated fleet03/B09 source consumed here is r39, canonical report
 
-`yspennstate/math-open-problems@4b076c614a1e1b826433acf811adcffc29e8f05d`
+`private-source-repository@4b076c614a1e1b826433acf811adcffc29e8f05d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B09/20260923T184804Z-fleet03-B09-QFORM-r39/REPORT.md`,
 

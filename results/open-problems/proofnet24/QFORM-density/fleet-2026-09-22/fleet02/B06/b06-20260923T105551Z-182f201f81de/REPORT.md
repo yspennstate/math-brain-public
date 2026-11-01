@@ -19,19 +19,19 @@ The live correction boundary is retained: arbitrary-joint rank-three coarea is f
 
 The mathematical inputs actually used are:
 
-1. **Designated partner fleet03/B06 r33**, canonical mathematics `yspennstate/math-open-problems@6e33b73460eb417643369a043ebfe903f78e1bd2`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T102206Z-fleet03-B06-qform-r33/REPORT.md`. Its theorem `QFORM-RANK3-LIGHT-DIFFUSE-OR-191-STAR-HUB-v1` is the starting point of Section 1 below.
+1. **Designated partner fleet03/B06 r33**, canonical mathematics `private-source-repository@6e33b73460eb417643369a043ebfe903f78e1bd2`, path `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T102206Z-fleet03-B06-qform-r33/REPORT.md`. Its theorem `QFORM-RANK3-LIGHT-DIFFUSE-OR-191-STAR-HUB-v1` is the starting point of Section 1 below.
 
 2. **Exact-rank-three physical-pivot theorem**, cited and applied in partner r33: for an exact-rank-three original-coordinate matrix `B=U Lambda U^T`, physical leverage `ell_i=||u_i||^2`, nonzero pivot `a_i=B_ii`,
 
    `||p||_inf <= 128 [ell_i |a_i| |det Lambda|]^(-1/4)`.
 
-3. **Completed pair-log theorem**, `yspennstate/math-open-problems@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`: if an exact-rank-three original-coordinate principal block has nonzero eigenvalue magnitudes at least `s`, and a physical `2 x 2` principal pair `P` is invertible indefinite, with `D=|det P|` and `kappa=sigma_min(P)`, then the full ambient form satisfies
+3. **Completed pair-log theorem**, `private-source-repository@f7f0fedb2d93b46824f96cac1164af6f8a55626f`, `proofnet24/QFORM-density/interactive/20260922T180015Z-pair-log/PAIR_LOG_THEOREM.md`: if an exact-rank-three original-coordinate principal block has nonzero eigenvalue magnitudes at least `s`, and a physical `2 x 2` principal pair `P` is invertible indefinite, with `D=|det P|` and `kappa=sigma_min(P)`, then the full ambient form satisfies
 
    `||p||_inf <= 8 sqrt(5) (D kappa s)^(-1/4)`.
 
-4. **Required newest-Claude package**, pinned at `yspennstate/math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` were read. Section 4 applies its completed mixed-Fresnel Theorem MF to a genuine target obstruction.
+4. **Required newest-Claude package**, pinned at `private-source-repository@e5f71d79eff325201dd0274053d20268ce65b837`, directory `proofnet24/QFORM-density/interactive/20260922T211500Z-decoupling-brascamp-lieb/`. `RESULTS.md`, `FOURIER_ROUTE_REPORT.md`, and `COUNTEREXAMPLE_SEARCH.md` were read. Section 4 applies its completed mixed-Fresnel Theorem MF to a genuine target obstruction.
 
-5. **Own immediate durable predecessor**, `yspennstate/math-open-problems@2fdec7c0b085cb5acf5a09847b293b5bcb296b80`, which proved the weighted max-reciprocal receiver for shared zero-anchor coefficients and isolated arbitrary-background near-collinearity. A still later incomplete same-slot checkpoint at `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T103249Z-15bb5d1acfac/EARLY_CHECKPOINT.md` established a determinant-only ruled-side estimate; it is preserved and not claimed as completed by this run.
+5. **Own immediate durable predecessor**, `private-source-repository@2fdec7c0b085cb5acf5a09847b293b5bcb296b80`, which proved the weighted max-reciprocal receiver for shared zero-anchor coefficients and isolated arbitrary-background near-collinearity. A still later incomplete same-slot checkpoint at `proofnet24/QFORM-density/fleet-2026-09-22/fleet02/B06/b06-20260923T103249Z-15bb5d1acfac/EARLY_CHECKPOINT.md` established a determinant-only ruled-side estimate; it is preserved and not claimed as completed by this run.
 
 The early checkpoint for the present run was committed before the full argument.
 

@@ -3,7 +3,7 @@
 **Run:** `B17-20260921T131430Z-selector-composition`  
 **Status:** **PARTIAL / PROVED structured composition theorem. Full uniform-cube Fourier entropy–influence remains OPEN / NOT PROVED.**  
 **Brain label:** **WITHOUT_VERIFIED_BRAIN.** No authenticated brain retrieval or receiver-side brain context was used.  
-**Fresh scientific state:** started from `yspennstate/math-open-problems` master `91d12a2a0db4716340610edb9f293f1f8ec8f94a`; immediately before delivery master had advanced to `4b842e2da393c2ec23c4b2dcc24b73f21a28f642`.  
+**Fresh scientific state:** started from `private-source-repository` master `91d12a2a0db4716340610edb9f293f1f8ec8f94a`; immediately before delivery master had advanced to `4b842e2da393c2ec23c4b2dcc24b73f21a28f642`.  
 **Live role:** fleet04/B17, FEI new proof mechanisms / adversarial non-read-once phase constructions.  
 **Named universal obstruction attacked:** the preceding B17 code-phase construction hides arbitrarily large conditional spectral total correlation from every fixed collection of local marginals after a rare selector activates. This run asks whether an FEI proof must actually recover that hidden KL locally. For a broad balanced-selector substitution, the answer is **no**: entropy and influence split by an exact composition identity, so the activated branch can be paid by its own influence without reconstructing the hidden syndrome bit-by-bit.
 

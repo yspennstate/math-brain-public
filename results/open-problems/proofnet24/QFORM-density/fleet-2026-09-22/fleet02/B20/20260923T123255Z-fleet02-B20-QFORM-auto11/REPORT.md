@@ -8,7 +8,7 @@ Status: **ESSENTIAL_STEP_APPLIED / N3-LOWLEVERAGE-DEBT-REMOVED / SPECTRALWINDOW-
 
 The target remains: for every finite `n`, every independent real `X_i` with densities `0<=f_i<=1`, and every real symmetric `A` with at least three eigenvalues of absolute value at least one, prove that `Q=X^TAX` has an essentially bounded density with one universal finite bound, or give a valid counterexample. No moment, support, log-concavity, diagonal-basis, or post-rotation-independence hypothesis is added. Continuity is separate.
 
-The top-level reduction used below is the source-backed no-pivot equivalence in `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md` at `math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`: for **any fixed** `tau in (0,1]`, it is enough to prove a universal density bound on the class
+The top-level reduction used below is the source-backed no-pivot equivalence in `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md` at `private-source@472b70df7d1edbb3afac23269bc2e4368ae0e371`: for **any fixed** `tau in (0,1]`, it is enough to prove a universal density bound on the class
 
 `N3(tau): s_3(A)>=1, |A_ii|<tau, |det A[{i,j},{i,j}]|<tau for every i!=j`.
 
@@ -24,7 +24,7 @@ This smaller fixed threshold is deliberate. It converts failure of the spectral-
 
 ### 2.1 Spectral-window ridge payment
 
-The complete supporting theorem `QFORM-SPECTRAL-WINDOW-DENSITY-v1` in `math-open-problems@9c1167db05c7b0f520f060796fde921ed769a4e7` says: if `P` is the deterministic spectral projection onto **all** eigenspaces of `A` with `|lambda|>=1/64` and
+The complete supporting theorem `QFORM-SPECTRAL-WINDOW-DENSITY-v1` in `private-source@9c1167db05c7b0f520f060796fde921ed769a4e7` says: if `P` is the deterministic spectral projection onto **all** eigenspaces of `A` with `|lambda|>=1/64` and
 
 `max_i P_ii <= 1/32`,
 
@@ -44,7 +44,7 @@ No lower bound on `sigma_min(B)` is needed.
 
 ### 2.3 Required pinned interactive D5 payment
 
-From the required record `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, if a physical cross block `M=A[I,J]` on disjoint original-coordinate banks has
+From the required record `private-source@e5f71d79eff325201dd0274053d20268ce65b837`, `FOURIER_ROUTE_REPORT.md`, if a physical cross block `M=A[I,J]` on disjoint original-coordinate banks has
 
 `Z5=e_5(M^T M)>=1/1024`,
 
@@ -165,7 +165,7 @@ Because `J_1,J_2,J_3` are disjoint sets of original coordinates, these three sca
 
 ## 6. Newest designated partner fleet03/B20 r31, consumed exactly
 
-A fresh partner refresh after the initial discovery found the completed fleet03/B20 r31 handoff, canonical mathematics `math-open-problems@c6e058c3d4aa36e89ad433c1f4d41b6f82739bf`. Its theorem `QFORM-EXACTR3-18ANCHOR-DIFFUSE-OR-NEARCOLOOP-v1` states that for an exact-rank-three factorization
+A fresh partner refresh after the initial discovery found the completed fleet03/B20 r31 handoff, canonical mathematics `private-source@c6e058c3d4aa36e89ad433c1f4d41b6f82739bf`. Its theorem `QFORM-EXACTR3-18ANCHOR-DIFFUSE-OR-NEARCOLOOP-v1` states that for an exact-rank-three factorization
 
 `A=R M R^T`, `R^T R=I_3`, `s_min(M)>=1`,
 

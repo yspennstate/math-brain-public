@@ -23,7 +23,7 @@ The proof preserves the live corrections:
 
 A newer correction is especially relevant: `QFORM-RANK1-SAMEBANK-HALFRIESZ-FALSE-v1`, source
 
-`yspennstate/math-open-problems@769800c0ab0851828772adabfb6874aa813e423d`
+`private-source-repository@769800c0ab0851828772adabfb6874aa813e423d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B01/20260923T220810Z-fleet01-B01-qform-auto11/REPORT.md`.
 
@@ -31,7 +31,7 @@ It gives the exact counterexample `-Y^2-Z^2+2YZ=-(Y-Z)^2`, showing that a rank-o
 
 The designated partner is fleet04/B03:
 
-`yspennstate/math-open-problems@05ff82a8d052b024ae584e60dffb7b198fcd7db4`
+`private-source-repository@05ff82a8d052b024ae584e60dffb7b198fcd7db4`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B03/20260923T183012Z-fleet04-B03-dependent-riesz-r2/REPORT.md`.
 
@@ -327,7 +327,7 @@ This is an actual use of the designated partner theorem on the same endpoint. It
 
 A concurrent fleet03/B06 supporting theorem, source
 
-`yspennstate/math-open-problems@769800c0ab0851828772adabfb6874aa813e423d`
+`private-source-repository@769800c0ab0851828772adabfb6874aa813e423d`
 
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet03/B06/20260923T222115Z-fleet03-B06-qform-r46/REPORT.md`,
 

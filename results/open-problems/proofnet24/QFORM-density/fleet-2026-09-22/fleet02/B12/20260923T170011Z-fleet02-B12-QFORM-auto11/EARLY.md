@@ -34,4 +34,4 @@ When the right side is positive, the pinned `e5f71d79...` D5 theorem applies to 
 
 No post-rotation independence and no claim that `X^T T X` is small are used. The arbitrary orthogonal spectral completion `R` is magnitude-free and may contain arbitrarily many eigenvalues of either sign.
 
-Sources consumed: fleet03/B12 r37 `math-open-problems@3d6d9699d94146c3d2cbc475936dacd74109f913`; pinned D5 source `math-open-problems@e5f71d79eff325201dd0274053d20268ce65b837`.
+Sources consumed: fleet03/B12 r37 `private-source@3d6d9699d94146c3d2cbc475936dacd74109f913`; pinned D5 source `private-source@e5f71d79eff325201dd0274053d20268ce65b837`.

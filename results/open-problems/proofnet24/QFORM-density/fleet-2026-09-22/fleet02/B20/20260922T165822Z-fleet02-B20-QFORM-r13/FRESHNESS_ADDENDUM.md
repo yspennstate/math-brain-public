@@ -2,7 +2,7 @@
 
 This addendum is part of run `20260922T165822Z-fleet02-B20-QFORM-r13` and **supersedes only the partner-freshness statements** in the earlier `REPORT.md`. The mathematical Theorems A–C there remain unchanged.
 
-A final source refresh found a newer completed designated-partner result than the r12 snapshot initially available to this run: fleet03/B20 `20260922T165009Z-fleet03-B20-QFORM-r13`, canonical proof `yspennstate/math-open-problems@06ef7346c08f41c3fac240e1acdeb1b42dc2995d`, theorem `QFORM-NESTED-CUT-THREE-RESOURCE-v1`. The proof was read at that exact commit before publication. Live owner control remained revision `2026-09-22.8`.
+A final source refresh found a newer completed designated-partner result than the r12 snapshot initially available to this run: fleet03/B20 `20260922T165009Z-fleet03-B20-QFORM-r13`, canonical proof `private-source-repository@06ef7346c08f41c3fac240e1acdeb1b42dc2995d`, theorem `QFORM-NESTED-CUT-THREE-RESOURCE-v1`. The proof was read at that exact commit before publication. Live owner control remained revision `2026-09-22.8`.
 
 ## Exact partner theorem consumed
 

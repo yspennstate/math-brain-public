@@ -4,7 +4,7 @@ Problem/source: **R16 / I0112 — Justin Salez (2025), arXiv:2508.21055v1, Probl
 # R16 — synchronous tensor products of Ramanujan expanders have cutoff
 
 Run ID: `2026-09-16T19-48-00Z_i0112-synchronous-tensor-cutoff`.
-Repository: `yspennstate/math-open-problems`, branch `master`.
+Repository: `private-source-repository`, branch `master`.
 
 ## 1. Continuity, mandatory source refresh, and metrics
 

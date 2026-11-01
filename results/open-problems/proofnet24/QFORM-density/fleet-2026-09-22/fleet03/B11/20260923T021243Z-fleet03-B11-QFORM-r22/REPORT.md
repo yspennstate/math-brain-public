@@ -19,24 +19,24 @@ Fresh `math-research-brain` main at startup was
 
 The current owner continuation requires application of the volume-stability package
 
-`yspennstate/math-open-problems@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
+`private-source-repository@c2414ef633b9d4b7f04a83e1aeefbe713ed82bba`,
 `proofnet24/QFORM-density/interactive/20260923T002323Z-volume-stability/REPORT.md`.
 
 The sign-sensitive physical-fibre input used below is fleet01/B06,
 
-`yspennstate/math-open-problems@ac50e5d5f2c3030c4bd87d5188117d92ceaf55a1`,
+`private-source-repository@ac50e5d5f2c3030c4bd87d5188117d92ceaf55a1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet01/B06/20260922T233555Z-qform-r19-b06/REPORT.md`,
 
 especially `QFORM-CURVATURE-WEIGHTED-PHYSICAL-FIBER-COVER-v1` and its two-sheet cone-only version.
 
 The arbitrary-rank determinant-only physical-pair theorem used in Section 2 is
 
-`yspennstate/math-open-problems@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
+`private-source-repository@472b70df7d1edbb3afac23269bc2e4368ae0e371`,
 `proofnet24/QFORM-density/interactive/20260922T225732Z-claude-synthesis/GEOMETRIC_SYNTHESIS.md`, Theorem 3.1.
 
 The designated partner fleet04/B11 result actually applied is
 
-`yspennstate/math-open-problems@4110bbfd21beffa0260a017d468b0a486af56db1`,
+`private-source-repository@4110bbfd21beffa0260a017d468b0a486af56db1`,
 `proofnet24/QFORM-density/fleet-2026-09-22/fleet04/B11/20260922T222040Z-fleet04-B11-cone-envelope-r3/REPORT.md`.
 
 No result below treats repository transport as native learned-memory ingestion.
