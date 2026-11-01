@@ -94,11 +94,11 @@ machine-specific constants parameterized and worked examples kept synthetic.
 ### The `brain-repo` folder
 
 Many scripts and pages expect a second folder, `~/brain-repo`, beside the installed copy
-under `~/.claude`. It is the brain's own working tree (keep it under git so it is backed up),
-and the installer does not create it yet. Make it yourself and copy the shared modules to
-the places the code looks for them:
+under `~/.claude`. It is the brain's own working tree (keep it under git so it is backed up).
+`bootstrap/install.py` creates it and copies the shared modules to the places the code
+looks for them:
 
-| expected under `~/brain-repo/` | copy from this repo |
+| expected under `~/brain-repo/` | copied from this repo |
 |---|---|
 | `12_cognitive_architecture/agent_mesh/` | `framework/mesh/` |
 | `12_cognitive_architecture/delegation/` | `framework/delegation/` |

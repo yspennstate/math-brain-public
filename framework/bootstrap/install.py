@@ -27,6 +27,24 @@ SUBSYSTEMS = {
     "tools": os.path.join("brain-framework", "tools"),
 }
 
+# Many scripts and pages reach the shared modules through the brain's own working tree,
+# <home>/brain-repo, at the paths they had in the deployment they came from. Nothing created
+# that tree before, so the mesh, delegation and resilience commands those pages give failed on
+# a fresh install with a missing file.
+BRAIN_REPO = "brain-repo"
+BRAIN_REPO_COPIES = {
+    "mesh": os.path.join("12_cognitive_architecture", "agent_mesh"),
+    "delegation": os.path.join("12_cognitive_architecture", "delegation"),
+    "resilience": os.path.join("12_cognitive_architecture", "resilience"),
+    "workspace/global_workspace": os.path.join("12_cognitive_architecture", "global_workspace"),
+    "governor": os.path.join("12_cognitive_architecture", "compute_governor"),
+}
+BRAIN_REPO_DIRS = [
+    os.path.join("01_ai_consciousness", "brain"),
+    os.path.join("12_cognitive_architecture", "audits"),
+    "11_raw_session_transcripts",
+]
+
 TEXT_EXT = {".py", ".ps1", ".psm1", ".vbs", ".md", ".json", ".toml", ".txt",
             ".yml", ".yaml", ".sh", ".bat", ".cfg", ".ini", ".sql", ".service",
             ".timer", ".slice"}
@@ -147,6 +165,13 @@ def longest_path_this_install_would_create(home, slug):
             for f in files:
                 paths.append(os.path.join(dst, rel if rel != "." else "", f))
     paths += [os.path.join(home, d) for d in STATE_DIRS]
+    for sub, target in BRAIN_REPO_COPIES.items():
+        src = os.path.join(REPO, *sub.split("/"))
+        for root, dirs, files in os.walk(src):
+            dirs[:] = [d for d in dirs if d != "__pycache__"]
+            rel = os.path.relpath(root, src)
+            paths += [os.path.join(home, BRAIN_REPO, target, rel if rel != "." else "", f) for f in files]
+    paths += [os.path.join(home, BRAIN_REPO, d) for d in BRAIN_REPO_DIRS]
     mem = os.path.join(home, ".claude", "projects", slug, "memory")
     paths.append(os.path.join(mem, "dreams"))
     paths += [os.path.join(mem, fn) for fn in MEM_SEEDS]
@@ -258,6 +283,21 @@ def main():
         n = copy_expand(src, dst, tok, a.apply)
         total += n
         print(f"  {sub} -> {dst}  ({n} files)")
+
+    brain_repo = os.path.join(home, BRAIN_REPO)
+    for sub, target in BRAIN_REPO_COPIES.items():
+        src = os.path.join(REPO, *sub.split("/"))
+        if not os.path.isdir(src):
+            print(f"  skip {sub} for brain-repo (not in repo)")
+            continue
+        dst = os.path.join(brain_repo, target)
+        n = copy_expand(src, dst, tok, a.apply)
+        total += n
+        print(f"  {sub} -> {dst}  ({n} files)")
+    if a.apply:
+        for d in BRAIN_REPO_DIRS:
+            os.makedirs(os.path.join(brain_repo, d), exist_ok=True)
+    print(f"  brain-repo: {brain_repo} (keep it under git; the empty folders fill as the brain runs)")
 
     for d in STATE_DIRS:
         p = os.path.join(home, d)

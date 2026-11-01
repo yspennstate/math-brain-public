@@ -14,7 +14,9 @@
 
    This copies the machinery into the standard layout (`~/.claude/dreaming`,
    `~/.claude/fleet`, `~/CrashGuard`, ...), expands the install tokens, creates the
-   state directories, seeds the memory corpus (index, ledgers, and the seed identity
+   state directories, makes `~/brain-repo` with the mesh, delegation, resilience,
+   workspace and governor modules where the code looks for them (see the framework
+   README), seeds the memory corpus (index, ledgers, and the seed identity
    templates), and generates `bootstrap/settings.hooks.generated.json`.
 
 3. Wire the hooks: merge the generated `hooks` object into `~/.claude/settings.json`,
