@@ -2,6 +2,93 @@
 
 Each test runs agents on a fixed set of questions with and without the brain and counts correct answers. P values come from exact paired tests on the items where the arms disagree. The questions, the answer keys and the per-question records are kept private, to avoid disclosing the test instruments. Public answer-bearing records can still contaminate later evaluations; repeated runs on exposed items are regression checks, not fresh holdouts. Anchors for some blinded experiments were committed in advance and are public: [brain-benefit-experiment-anchors](https://github.com/yspennstate/brain-benefit-experiment-anchors). The rows of earlier tests not described here are kept in [results/earlier-tests](results/earlier-tests/), each with its own README.
 
+## Every test at a glance
+
+| Test | Agents | Without the brain | With the brain | On the items where they differ |
+|---|---|---|---|---|
+| 2,000 questions about files in 113 git repositories, round 3, new questions (30 Oct 2026) | Codex | git and the files: 88.6% | consulting the brain once a question: 90.2% | 97 to 70, p = 0.044, on the 1,726 both arms reached |
+| the same design, round 2, pairs that ran under one condition (29 and 30 Oct 2026) | Codex | 75.8% | 82.2% | 182 to 79, p = 1.6e-10, n = 1,607 |
+| the same design, round 1, recall starved at a machine load of about 340 (29 Oct 2026) | Codex | 46.5% | 39.9%, with 0.04 recalls a question | 210 to 342, p = 2e-8, n = 2,000 |
+| 1,000 items whose answer must be recalled (13 Sep 2026) | | 538 | 1,000 | 462 to 0, p = 1.7e-139 |
+| 988 items, 600 seconds each (23 and 24 Oct 2026) | Claude | model alone 18.9%; research repositories 82.0% | 95.4% | 146 to 13 against the repositories, p = 1.2e-29; 30.6 session-hours against 53.2 |
+| 394 of the same bank, 900 seconds each (23 to 28 Oct 2026) | Codex | model alone 21.6%; research repositories 97.0% | 94.7% | 10 to 19, p = 0.14 |
+| 100 questions on results held in the store (11 Oct 2026) | Codex | no tools 0; text search 75 | recall tool 83; hook, recall and walk 82 | 10 to 3 against text search, p = 0.09 |
+| 61 reasoning and audit items (5 and 6 Oct 2026) | Claude | tools only 41 | full package 52 | 15 to 4, p = 0.019 |
+| 60 questions whose answer exists only in the store, no tools (5 Sep 2026) | Claude | none 0; a block served for another question 0 | 48 (20 before a retrieval fix) | 48 to 0, p < 0.0001; no wrong number copied in 240 verdicts |
+| 160 proof audits with planted faults, right notes against scrambled notes (Aug 2026) | | scrambled 117 | right notes 128 | 18 to 7, p = 0.043, replicated on a second bank |
+| 80 questions about files in GitHub repositories (12 Oct 2026) | Codex | git alone 68 | git and the brain 73 | 9 to 4, p = 0.27 |
+| 20 recall items, one agent, without and then with (23 Oct 2026) | Claude | 9 | 19 | 10 to 0, p = 0.002 |
+| 13 open problems, graded blind out of a possible 39 (11 Oct 2026) | Codex | 26 | 24 | referee preferred the no-brain attempt 8 to 3, p = 0.23 |
+
+Without agents: 584 held-out questions went from 298 to 317 answers in the first eight after one day's ranking changes, and six more sets from 891 to 1,018 of 1,070. Two wordings fused by rank found 112 of 120 against 96 for one query. A rule for silence on questions the store cannot answer has AUC 0.997 and 6.4 percent false silences on 2,000 answerable and 60 unanswerable questions. Details, and the things that did not help, are further down.
+
+## Brain against git, 2,000 questions, three rounds (29 and 30 October 2026)
+
+This is the largest test so far and the hardest setting for a memory, because the questions come from git's own ground. Questions were drawn from random files of 113 git repositories, in 15 kinds: a value, the file that holds it, the date it was added, the value before a change, a commit date, a two-step lookup, an identifier, a count, something that is not there, which repository, long digit strings, a memory note, a math statement, which came first, and a deleted file. Keys came mechanically from the files and git history. Fifty pairs of Codex agents (gpt-6.1-sol, medium reasoning) each took 40 questions with a budget of 12 commands. One arm of each pair had the working brain's recall tool (the larger private brain, not the public snapshot) as well as the files, and the other had git and the files only. The repositories include the brain's own, so both arms could read those. A missing answer is left out, never counted wrong.
+
+| Round | Questions graded | Git | Brain | Differ | p | Recalls a question | Median seconds a question, brain and git |
+|---|---|---|---|---|---|---|---|
+| 1, machine load about 340 | 2,000 | 46.5% | 39.9% | 210 to 342 | 2e-8 | 0.04 | 22 and 60 |
+| 2, told to consult once a question, same-condition pairs | 1,607 | 75.8% | 82.2% | 182 to 79 | 1.6e-10 | 1.04 | 61 and 16 (all pairs) |
+| 2, both arms before a crash, load 100 to 340 | 640 | 63.1% | 73.8% | 99 to 31 | 1.8e-9 | | |
+| 2, both arms after the restart, load 30 to 75 | 967 | 84.2% | 87.8% | 83 to 48 | 0.0028 | | |
+| 3, 2,000 new questions, load 30 to 75 | 1,726 | 88.6% | 90.2% | 97 to 70 | 0.044 | 1.02 | 67 and 13 |
+
+Round 1 shows a brain starved of compute. One recall took 700 to 2,300 seconds, so agents all but stopped calling it, and the arm lost. Round 2 asked the same questions with the instruction to consult once a question, so it is a second measurement and not a fresh bank. Over all 2,000 pairs round 2 reads 82.2 against 69.2 percent (355 to 94), but that figure overstates the brain and should not be quoted alone: twelve agents stalled under the load and were resumed after the restart, ten of them on the brain side, so on 393 items the two arms ran under different conditions (173 to 15). The table keeps the pairs that ran under one condition.
+
+Where both arms committed to an answer they were right equally often: 92.4 and 92.5 percent on 1,183 items in round 2, 92.5 and 92.0 on 1,517 in round 3. The lead comes from the git arm giving up, answering NOT_FOUND on 24.3 percent of round 2's same-condition items against 15.8 for the brain, and 11.0 against 8.2 in round 3. The brain arm was also slower in rounds 2 and 3, by about the cost of its one recall call on a busy machine (round 3 means: 154 seconds a question against 25). So this test does not repeat the time saving of the 988-item test. It says recall has to be fast and has to be called, and that the brain then keeps an agent going on questions it would otherwise drop.
+
+Round 3 was stopped early when the agents' quota was needed elsewhere. By then the brain arm had answered 1,726 questions and the git arm all 2,000. The git arm's other 274 answers are graded too, 239 right (87.2 percent), and stay out of the paired figures, since the brain arm has no answers to set beside them.
+
+| Kind of question | Round 2 n | Brain % | Git % | Differ | Round 3 n | Brain % | Git % | Differ |
+|---|---|---|---|---|---|---|---|---|
+| value | 103 | 82.5 | 72.8 | 13 to 3 | 118 | 94.9 | 94.9 | 3 to 3 |
+| locate file | 104 | 84.6 | 79.8 | 12 to 7 | 143 | 87.4 | 87.4 | 4 to 4 |
+| date added | 111 | 80.2 | 73.0 | 13 to 5 | 146 | 89.7 | 84.2 | 14 to 6 |
+| value before change | 54 | 75.9 | 68.5 | 6 to 2 | 76 | 86.8 | 84.2 | 4 to 2 |
+| commit date | 126 | 88.1 | 80.2 | 15 to 5 | 46 | 97.8 | 95.7 | 1 to 0 |
+| two-hop | 122 | 86.9 | 81.1 | 13 to 6 | 85 | 96.5 | 95.3 | 3 to 2 |
+| identifier | 127 | 85.8 | 77.2 | 16 to 5 | 139 | 93.5 | 94.2 | 6 to 7 |
+| count | 116 | 82.8 | 81.9 | 8 to 7 | 132 | 87.1 | 85.6 | 12 to 10 |
+| absent (NOT_FOUND) | 105 | 86.7 | 93.3 | 3 to 10 | 133 | 81.2 | 91.0 | 4 to 17 |
+| which repo | 124 | 64.5 | 57.3 | 20 to 11 | 135 | 71.9 | 71.9 | 11 to 11 |
+| long digits | 127 | 81.9 | 73.2 | 12 to 1 | 133 | 93.2 | 91.7 | 6 to 4 |
+| memory note | 76 | 71.1 | 53.9 | 16 to 3 | 95 | 92.6 | 93.7 | 2 to 3 |
+| math statement | 87 | 89.7 | 89.7 | 3 to 3 | 74 | 94.6 | 91.9 | 2 to 0 |
+| which first | 132 | 80.3 | 69.7 | 23 to 9 | 132 | 97.7 | 84.8 | 18 to 1 |
+| deleted file | 93 | 89.2 | 81.7 | 9 to 2 | 139 | 97.1 | 92.1 | 7 to 0 |
+
+The clearest wins in round 3 are which came first (18 to 1, p = 7.6e-5) and the deleted file (7 to 0, p = 0.016), and the clearest loss is the question with no answer (4 to 17, p = 0.0072), where the brain arm is likelier to name something that isn't there. No memory about this test held an answer. Of the 355 brain-only wins in round 2, the answer sat in a recalled memory's text 33 times and elsewhere in the recall output 103 times; 129 were in no recall output, and 90 were too short to trace. The keys and per-item rows stay private, since a resumed run would use them.
+
+## Sixty questions whose answer exists only in the store (5 September 2026)
+
+Sixty questions asked for exact counts of constrained self-avoiding walks that agents had computed and that appear in no published table. Claude Opus 5 had every tool denied and was graded on the exact integer. With no notes it answered 0, and with a block served for a different question 0, copying no wrong number. With the block the retrieval served that day it answered 20; after a fix to one margin in the retrieval it answered 48 (48 to 0 against no notes, p < 0.0001). A second script re-derived all 240 verdicts with no disagreement. The questions are worded like the store and come from one family, so this says the path works, not how often it will in the wild.
+
+## Right notes against scrambled notes (August 2026)
+
+Proof audits with a planted fault, with served notes from the brain against notes matched in kind and size but scrambled: 128 against 117 of 160 (18 to 7, p = 0.043), replicated on a second bank, so what the notes say matters. Whether having served notes beats having none did not show in the same setting: 80.0 against 77.4 percent at 150 items (p = 0.50), and 301 against 299 of 358 in the powered run.
+
+## Silence, fusion and long records (October and November 2026)
+
+- A rule for when to say nothing: on 2,000 questions the store can answer and 60 it cannot, a simple word-score threshold has AUC 0.997 and 6.4 percent false silences. Prototype rules built on the meaning channel did worse, with 27 to 37 percent.
+- Two wordings fused by rank found 112 of 120 against 96 for one query. Passing several wordings on hard rows moved the first five from 45 to 56 of 60.
+- Fusing the meaning channel with word search on 279 reworded questions over a general store of 28,112 notes found 81 against 67 in the first eight (26 to 12, p = 0.034). The meaning channel alone found 57.
+- A line past the point where the word index stops reading a long record reached the top ten 23 times of 60. With a separate index for the tail it reached it 53 times, with no change on a 700-question bank or in latency.
+
+## Speed (29 October to 1 November 2026)
+
+The medians are from one machine and move with its load.
+
+| Change | Before | After | Answers |
+|---|---|---|---|
+| Resident recall server, fixed copy | 26.8 s | 7.4 s | 20 of 20 identical |
+| Reading attachments from a snapshot | 121 s, 36 timeouts | 28 s, 0 timeouts | |
+| Two-wording recall | 295 to 411 s | 45 to 61 s | |
+| Problem recall on a stale index | past 600 s | about 5 s | |
+| Fast path repinned on a second machine | 8 s | about 2 s | 69 of 69 identical |
+| Superseded check in recall | 3.86 s | 1.25 s | same answers |
+| A recall bank at depth 0, quiet machine, mixed with the fixes above | 28.2 s | 8.4 s | accuracy held |
+
 ## The brain, the repositories, and the model alone, 1,000 items (23 and 24 October 2026)
 
 Three arms, one item a session, the same instructions in each. With the brain, the agent has the recall tool and the prompt hooks and no file tools. With the repositories, it has no brain, no hooks and no recall tool, but it can read, list and search the research repositories, which include the exported store, the campaign records and the open-problem files; the brain's own folders, the keys and every test folder are closed to it. The model alone has no tools. Claude Sonnet agents (high reasoning) had 600 seconds an item and no shell in any arm. Codex agents (gpt-6.1-sol, high reasoning) had 900 seconds; their brain arm had the recall tool and no shell, their repository arm a read-only shell. A timeout counts as wrong. A session that never reached the model (a refused account or a session limit, seen as an empty event stream) was rerun, not graded.
