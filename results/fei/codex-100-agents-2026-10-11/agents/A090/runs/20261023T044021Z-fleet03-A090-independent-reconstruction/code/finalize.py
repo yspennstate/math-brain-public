@@ -9,7 +9,7 @@ c=json.loads((run/'out/CHECK.json').read_text(encoding='utf-8'))
 assert c['status']=='PASS' and c['assertions']==819 and len(c['rows'])==24
 assert c['checker_sha256']==sha(run/'code/check.py') and c['helper_sha256']==sha(run/'code/exact.py')
 assert all(r['conditional_nonempty_shape_changed']==[True,True] for r in c['rows'] if r['new_on_spread']==r['new_off_spread']=='1')
-sources=[Path('BOARD.md'),Path('claude/B18/STREAM_NOTES.md'),Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+sources=[Path('BOARD.md'),Path('claude/B18/STREAM_NOTES.md'),Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 for agent,name in [('A004','20261023T031926Z-fleet03-A004-constant-and-unit-ledger'),('A001','20261023T000044Z-fleet03-A001-quantifier-audit')]:
     src=base.parent/agent/'runs'/name
     sources.extend([src/'CLAIMS.json',src/'DERIVATION.md'])

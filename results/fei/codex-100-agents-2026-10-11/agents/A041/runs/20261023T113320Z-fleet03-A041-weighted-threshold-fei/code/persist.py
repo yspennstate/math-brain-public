@@ -10,7 +10,7 @@ checks=json.loads(read(O/'CHECKS.json'));pilot=json.loads(read(O/'PILOT_CHECKS.j
 assert checks['status']==pilot['status']=='PASS'
 root=A.parents[1]
 src=root/'agents/A043/runs/20261023T063610Z-fleet03-A043-prime-gate-decomposition'
-protocol=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 source_claims=json.loads(read(src/'CLAIMS.json'))
 if isinstance(source_claims,dict):source_claims=source_claims.get('claims',source_claims.get('records',[]))
 source=next(c for c in source_claims if c['claim_id']=='A043-PAID-SECTOR-COMPLETE-REFERENCE')

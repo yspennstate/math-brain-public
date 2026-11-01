@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1];B=A.parents[1]
 def load(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def dump(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=load(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=load(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 main=load(R/'out/MAIN.json');audit=load(R/'out/AUDIT.json');pilot=load(R/'out/PILOT.json');ap=load(R/'out/AUDIT_PILOT.json')
 assert all(x['status']=='PASS' for x in [main,audit,pilot,ap])
 assert main['pairs']==256 and main['sharp_dimensions']==[4,6,8] and main['query_nodes']==1319 and main['post_reset_query_nodes']==1060

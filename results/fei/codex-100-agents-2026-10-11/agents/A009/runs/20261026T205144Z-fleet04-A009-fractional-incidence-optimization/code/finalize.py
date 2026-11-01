@@ -2,7 +2,7 @@ import json, hashlib, datetime
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]; A=R.parent.parent
 BASE=Path('~/brain_workers/FEI100_20261011')
-P=Path('math-open-problems/reports/fei-2026-10-11')
+P=Path('private-source/reports/fei-2026-10-11')
 S=BASE/'agents/A010/runs/20261023T131928Z-fleet03-A010-universal-residual-falsifier'
 def put(name,obj): (R/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()

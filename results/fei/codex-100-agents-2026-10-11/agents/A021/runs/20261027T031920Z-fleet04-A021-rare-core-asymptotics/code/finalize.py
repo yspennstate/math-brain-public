@@ -26,7 +26,7 @@ claim={
  'status':'AUTHOR_PROOF_PENDING_INDEPENDENT_REVIEW','supersedes':[], 'refutes':[],
  'first_unproved_line':None,'next_consumers':['A022','A025','A029','A087','A094']}
 put('CLAIMS.json',[claim])
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 progress={
  'protocol_revision':protocol['revision'],'run_id':R.name,'stream':'B05','packet_id':'A021',
  'gap_id':'B05-ORIGINAL-MARKED-DEPENDENT-PAIR-PAYMENT','attempt_id':'A021-stage22-three-moment-curvature-and-signed-mark-cancellation',

@@ -2,7 +2,7 @@
 import subprocess,urllib.request,urllib.parse,concurrent.futures,json
 paths=Path('prior_repository_paths.txt').read_text().splitlines()
 for i,p in enumerate(paths):
- r=subprocess.run(['git','-C','~/math-open-problems','show','origin/master:'+p],capture_output=True,text=True,encoding='utf8');Path('prior_repo_'+str(i)+'.md').write_text(r.stdout,encoding='utf8');print('PRIOR',p,r.stdout[:14000],flush=True)
+ r=subprocess.run(['git','-C','~/private-source','show','origin/master:'+p],capture_output=True,text=True,encoding='utf8');Path('prior_repo_'+str(i)+'.md').write_text(r.stdout,encoding='utf8');print('PRIOR',p,r.stdout[:14000],flush=True)
 queries={
 'arxiv_fredrickson':'https://export.arxiv.org/api/query?search_query='+urllib.parse.quote('all:Fredrickson')+'&max_results=70&sortBy=submittedDate&sortOrder=descending',
 'arxiv_kcm':'https://export.arxiv.org/api/query?search_query='+urllib.parse.quote('ti:"kinetically constrained"')+'&max_results=40&sortBy=submittedDate&sortOrder=descending',

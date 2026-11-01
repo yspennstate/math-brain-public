@@ -4,12 +4,12 @@ import json, hashlib, datetime
 run=Path(__file__).resolve().parents[1]; owner=run.parents[1]
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def save(name,obj): (run/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-protocol=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 rules=json.loads(protocol.read_text(encoding='utf-8-sig'))
 sources=[]
 base=protocol.parent
 targets=[base/n for n in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
-supp=Path('math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+supp=Path('private-source/research_pushes/2026-10-11-full-fei-100-agents')
 targets += [supp/n for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 targets += list((supp/'sources').glob('*.md'))
 ctx=Path('~/brain_workers/FEI100_20261011')

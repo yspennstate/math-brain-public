@@ -8,7 +8,7 @@ def sha(x):return hashlib.sha256(x.encode('utf-8')).hexdigest()
 val=load(OUT/'VALIDATION.json');pilot=load(OUT/'PILOT.json');intake=load(OUT/'INTAKE.json')
 audit=load(OUT/'SOURCE_AUDIT.json');assert audit['status']=='PASS'
 assert val['status']==pilot['status']=='PASS' and not intake['read_errors']
-protocol=load(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=load(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 cf=protocol['required_per_run']['claim_fields'];pf=[x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']]
 source=BASE/'agents/A085/runs/20261023T112613Z-fleet03-A085-certificate-adversary/CLAIMS.json'
 src=load(source);src=src if isinstance(src,list) else src['claims']

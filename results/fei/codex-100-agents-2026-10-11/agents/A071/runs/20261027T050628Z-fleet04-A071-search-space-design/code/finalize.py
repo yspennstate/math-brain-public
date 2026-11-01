@@ -65,7 +65,7 @@ This stage advances the C019/C024 initialization obstruction by accepting A080's
 entry=f'\n{stamp} stage22 {R.name}: A080 arbitrary-seed row/coupling/bank theorem reconstructed unchanged; antecedent authorship disclosed. New exact optimal TWO-output summary influence k^2*2^(1-k); simple u,v bill k(k+1)*2^(1-k), excess physical activity bill2k2^(1-N). All552 constructions/21348blocks/80865 assertions and120 encodings/40 entropy cases/205 assertions PASS. Arbitrarily cheap summaries retain exact full FEI supremum; retained outer seed unpaid. Formal status {formal_status}; no full Lean certification claim. Brain stale alert delivered; research writes only A071, mirrors unverified.\n'
 with (A/'WORKLOG.md').open('a',encoding='utf-8',newline='') as f:f.write(entry)
 with (A/'LEARNED.md').open('a',encoding='utf-8',newline='') as f:f.write(entry+'For the radius-one prime perturbation, the whole fresh block has exactly3 rows. Codes00,10,11 attain the lower bound from k zero-to-one plus k(k-1) one-to-two edges, even against arbitrary non-row-constant two-output summaries. Correlated state support is3, not a product law. Tiny summary cost does not pay the arbitrary outside seed.\n')
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
 expected=set(protocol['progress_fields']); expected.remove('packet_ids (one primary ID, for compatibility)');expected.add('packet_ids')
 assert set(prog)==expected
 for claim in [c,new]:assert set(claim)==set(protocol['claim_fields'])

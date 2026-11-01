@@ -16,7 +16,7 @@ progress=get(R/'PROGRESS.json');progress['source_artifacts']+=['out/NESTED_CHECK
 write(A/'STATUS.md','STATE: Stage19 source-complete: A045 signed transfer HOLDS; adaptive normalizer<=18Delta, absolute conversion<=47Delta/2;16664 main+395 adversarial checks PASS;FEI OPEN.\nNEXT: Pay actual two-weight J in selected complete flat/tree reference from SAME unused original deficit after adaptive debit, retaining ordinary KL and both full terminals; A045/A042/A044 review.\n')
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
 with (A/'WORKLOG.md').open('a',encoding='utf-8',newline='') as f:f.write(f'\n{now} Stage19 adversarial supplement: four depth-three formulas plus physical repeated-wire check passed286 assertions; two nonzero inherited-R controls passed109. Main16664 and pilot970 unchanged. Artifacts refreshed; next actual scale J remains unpaid.\n')
-protocol=get(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=get(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 assert set(claims[0])==set(protocol['claim_fields'])
 assert set(progress)==set('packet_ids' if s.startswith('packet_ids ') else s for s in protocol['progress_fields'])
 assert [s[2:] for s in report.splitlines() if s.startswith('# ')]==protocol['report_fields']

@@ -9,7 +9,7 @@ def write(p,s):p.write_text(s,encoding='utf-8',newline='\n')
 def save(p,o):write(p,json.dumps(o,indent=2,ensure_ascii=False)+'\n')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 for f in ['reconstruction.json','critical12_certificate.json','distance_bitset.json','quadratic_distance.json']:
     assert read(R/'out'/f)['status']=='PASS'
 pos=read(R/'out/position_certificate.json')

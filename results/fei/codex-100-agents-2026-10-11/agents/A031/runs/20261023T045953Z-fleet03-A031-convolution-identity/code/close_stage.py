@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def read(p):return p.read_text(encoding='utf-8')
 def put(p,x):p.write_text(json.dumps(x,indent=2)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-p=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'));f=p['required_per_run']
+p=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'));f=p['required_per_run']
 claims=json.loads(read(R/'CLAIMS.json'));progress=json.loads(read(R/'PROGRESS.json'));report=read(R/'REPORT.md')
 assert all(set(c)==set(f['claim_fields']) for c in claims)
 assert set(progress)=={s.split(' (')[0] for s in f['progress_fields']}

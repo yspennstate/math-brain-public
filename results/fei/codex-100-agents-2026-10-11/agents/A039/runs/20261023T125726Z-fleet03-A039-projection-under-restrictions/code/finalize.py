@@ -9,7 +9,7 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,s):
  with p.open('w',encoding='utf-8',newline='') as f:f.write(s)
 def dump(p,v):write(p,json.dumps(v,indent=2,ensure_ascii=False)+'\n')
-protocol=js(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=js(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 main=js(R/'out/CHECK.json');pilot=js(R/'out/PILOT.json');audit=js(R/'out/AUDIT.json');block=js(R/'out/BLOCK_CHECK.json')
 private=js(R/'out/PRIVATE_CHECK.json');assert private['status']=='PASS' and private['cases']==108
 assert all(v['status']=='PASS' for v in [main,pilot,audit,block])
@@ -18,7 +18,7 @@ prior=OWN/'runs/20261023T105639Z-fleet03-A039-projection-under-restrictions'
 priorclaims=js(prior/'CLAIMS.json')
 if isinstance(priorclaims,dict):priorclaims=priorclaims.get('claims',[priorclaims])
 depids=[c['claim_id']+'@'+str(c['version']) for c in priorclaims]
-sources=[BASE/'BOARD.md',BASE/'claude/B08/STREAM_NOTES.md',prior/'PROOF.md',prior/'REPORT.md',prior/'CLAIMS.json',prior/'code/check.py',OWN/'runs/20261023T032407Z-fleet03-A039-projection-under-restrictions/code/check.py',Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+sources=[BASE/'BOARD.md',BASE/'claude/B08/STREAM_NOTES.md',prior/'PROOF.md',prior/'REPORT.md',prior/'CLAIMS.json',prior/'code/check.py',OWN/'runs/20261023T032407Z-fleet03-A039-projection-under-restrictions/code/check.py',Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 for a,run in [('A036','20261023T113129Z-fleet03-A036-reference-law-divergence'),('A037','20261023T120303Z-fleet03-A037-conditional-credit-ledger'),('A040','20261023T111233Z-fleet03-A040-credit-insufficiency-tests')]:
  p=BASE/'agents'/a/'runs'/run
  sources.extend(q for q in [p/'PROOF.md',p/'REPORT.md',p/'CLAIMS.json'] if q.exists())

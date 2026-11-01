@@ -4,7 +4,7 @@ ROOT=Path(__file__).resolve().parents[1];HOME=ROOT.parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def write(p,v):p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=read(Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 results={f:read(ROOT/'out'/f) for f in ['pair_validation.json','graph_validation.json','independent.json','structural.json']}
 assert all(r['status']=='PASS' for r in results.values())
 total=sum(r.get('exact_assertions',r.get('assertions',0)) for r in results.values())

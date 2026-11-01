@@ -32,7 +32,7 @@ raw=raw[:raw.index(heading)]+heading+nl+nl+new.encode('utf-8')+nl;(R/'REPORT.md'
 stamp=datetime.now(timezone.utc).isoformat()
 for name in ['WORKLOG.md','LEARNED.md']:
  with (AG/name).open('a',encoding='utf-8',newline='') as f:f.write('\n'+stamp+' '+R.name+' VACUUM: Isolated all positive witness drift in empty coefficient; nonempty remainder<0 iff7^3087<2^5076*3^2268. Universal phi(t)=-t²log2(t²) is2/ln2-Lipschitz; mean coupling and influence telescoping give superharmonic V=phi(Ef)+3I<=9I/2. This pays only EMPTY entropy, using actually unused influence; full nonempty envelope remains open.256 tables/768 queries checked, all-dimensional proof analytic.\n')
-fields=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+fields=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 assert set(p)=={x.split(' (')[0] for x in fields['progress_fields']}
 for q in claims:assert set(q)==set(fields['claim_fields']) and q['statement_sha256']==digest(q['exact_statement'],q['hypotheses'])
 assert all(('## '+x).encode() in raw for x in fields['report_fields'])

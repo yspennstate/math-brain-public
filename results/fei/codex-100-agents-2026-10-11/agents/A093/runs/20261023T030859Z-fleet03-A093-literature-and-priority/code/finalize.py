@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def write(p,s):p.write_text(s,encoding='utf-8')
 def dump(p,x):write(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
-proto=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+proto=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 req=proto['required_per_run'];v=read(R/'out/VALIDATION.json');assert v['status']=='PASS'
 peer=Path('agents/A003/runs/20261023T021528Z-fleet03-A003-minimal-target-formulation')
 pc=read(peer/'CLAIMS.json')[0]

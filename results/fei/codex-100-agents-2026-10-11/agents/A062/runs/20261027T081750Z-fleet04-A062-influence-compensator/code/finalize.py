@@ -3,7 +3,7 @@ from pathlib import Path
 import json,hashlib,datetime
 root=Path(__file__).resolve().parents[1]
 agent=root.parents[1]
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 checks=json.loads((root/'out/CHECKS.json').read_text(encoding='utf-8'))
 repair=json.loads((root/'out/REPAIR_CHECKS.json').read_text(encoding='utf-8'))
 assert checks['status']==repair['status']=='PASS'

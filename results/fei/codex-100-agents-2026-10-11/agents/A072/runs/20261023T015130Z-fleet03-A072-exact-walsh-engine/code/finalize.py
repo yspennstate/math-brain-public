@@ -124,7 +124,7 @@ for name,text in notes.items():
     if marker not in old:p.write_text(old+text,encoding='utf-8')
 
 receipt_paths=[BASE/'BOARD.md',BASE/'claude/B15/STREAM_NOTES.md',source/'REPORT.md',source/'CLAIMS.json',source/'out/ADAPTIVE.json',source/'out/SEVEN_PROFILES.json',BASE/'agents/A074/runs/20261022T225155Z-fleet03-A074-independent-reproducer/REPORT.md',BASE/'agents/A089/runs/20261022T225420Z-fleet03-A089-repair-specialist/REPORT.md']
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');receipt_paths.append(protocol_path)
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');receipt_paths.append(protocol_path)
 save(RUN/'out/SOURCE_RECEIPTS.json',[{'path':str(p),'bytes':p.stat().st_size,'sha256':digest(p)} for p in receipt_paths])
 protocol=load(protocol_path);pf=[x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']];cf=protocol['required_per_run']['claim_fields']
 assert set(progress)==set(pf)

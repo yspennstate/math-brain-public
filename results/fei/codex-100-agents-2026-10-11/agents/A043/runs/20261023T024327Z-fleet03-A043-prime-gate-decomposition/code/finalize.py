@@ -4,7 +4,7 @@ import json,hashlib,datetime
 ROOT=Path(__file__).resolve().parents[1]; AGENT=ROOT.parents[1]; OUT=ROOT/'out'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def save(p,x):p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 P=json.loads(protocol.read_text(encoding='utf-8-sig'))
 fields=P['required_per_run']; CF=fields['claim_fields']; PF=[s.split(' (')[0] for s in fields['progress_fields']]
 HEAD=fields['report_fields']; stamp=datetime.datetime.now(datetime.timezone.utc).isoformat()

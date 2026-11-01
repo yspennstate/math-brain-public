@@ -8,7 +8,7 @@ def js(p,x):put(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')
 check=read(O/'CHECK.json');verify=read(O/'VERIFY.json');review=read(O/'REVIEW_A006.json');lean=read(O/'LEAN.json')
 assert check['status']==verify['status']==review['status']=='PASS'
 assert (check['functions'],check['scalar_triples'],check['assertions'])==(40,6448,217218)
-protocolpath=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=read(protocolpath)
+protocolpath=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=read(protocolpath)
 # This is the same explicit field schema extracted at stage opening.
 claimfields=['claim_id','version','exact_statement','hypotheses','statement_sha256','contributors','proof_source','proof_dependencies','review_records','status','supersedes','refutes','first_unproved_line','next_consumers']
 progressfields=['protocol_revision','run_id','stream','packet_id','gap_id','attempt_id','method','mathematical_delta','deliverable_status','mathematical_status','claim_versions_used','claims_created_or_changed','source_artifacts','next_consumers','next_action','stagnant_substantive_attempts','blockers','packet_ids']
@@ -25,7 +25,7 @@ nextaction='Use the same generic width-two forest and derive exact weighted Four
 artifacts=['GROWING_MATCHING.md','REVIEW_A006.md','REVIEW_A009.md','FROZEN_SPEC.json','VERIFY_SPEC.json','REVIEW_SPEC.json','out/CHECK.json','out/VERIFY.json','out/REVIEW_A006.json','out/LEAN.json','out/SOURCES.json','out/RECEIPTS.json']
 progress=dict(zip(progressfields,['2026-10-11-execution-v2',B.name,'B02','A010','G-J-COST','A010-growing-matching-complete-cost','Whole-source exact reviews; generic source-SCC width-two forest; exact Boolean weighted Fourier moments; rational logarithm and probability replay','Closed the growing-deleted-matching NEXT: unchanged-table complete cost<1255I/72<18I for every size. Generic width-two event pays arbitrary root count. Reconstructed A006201 dual certificates,5878 complete runs,67 cost/infimum enclosures. No variational-growth falsifier found.','COMPLETE_LOCAL_ARTIFACTS','SCOPED_AUTHOR_PROOF_AND_EXACT_CERTIFICATES; INDEPENDENT_AGENT_REVIEW_PENDING; FULL_FEI_OPEN; '+lean['status'],used,[{'claim_id':c['claim_id'],'version':1} for c in claims],artifacts,consumers,nextaction,0,['Universal complete original-reference payment remains unproved for overlapping deleted neighborhoods and arbitrary Boolean prime tables. New author proof has no independent-agent acceptance. Supervisor mirror/adoption not verified. Brain self-care degraded: owner-model and state-of-mind required sources stale; personal-state-dependent guidance unverified.'],['A010']]))
 js(B/'PROGRESS.json',progress);js(B/'PACKET_DELTA.json',progress)
-sourcepaths=[protocolpath,SHARED/'BOARD.md',SHARED/'claude/B02/STREAM_NOTES.md',Path(r'math-open-problems/reports/fei-2026-10-11/source_material/reductions/paper/forests.tex')]
+sourcepaths=[protocolpath,SHARED/'BOARD.md',SHARED/'claude/B02/STREAM_NOTES.md',Path(r'private-source/reports/fei-2026-10-11/source_material/reductions/paper/forests.tex')]
 for agent,run,names in [('A006','20261021T182437Z-fleet03-A006-posterior-forest-optimization',['PROOF.md','CLAIMS.json','out/CHECK.json','out/COST.json']),('A009','20261022T220926Z-fleet03-A009-fractional-incidence-optimization',['ONE_MISSING_EDGE.md','LEAFLESS_CERTIFICATE.md','CLAIMS.json']),('A008','20261021T234312Z-fleet03-A008-gate-label-compression',['ROOT_PAYMENT.md'])]:
  sourcepaths.extend(SHARED/'agents'/agent/'runs'/run/name for name in names)
 sources=[]

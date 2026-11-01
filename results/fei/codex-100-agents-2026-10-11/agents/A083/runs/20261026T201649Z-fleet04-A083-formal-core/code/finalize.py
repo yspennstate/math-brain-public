@@ -5,7 +5,7 @@ def read(name):return json.loads((R/name).read_text(encoding='utf-8'))
 def write(name,obj):(R/name).write_text(json.dumps(obj,indent=2)+'\n',encoding='utf-8')
 result=read('out/CHECK_RESULT.json'); formal=read('out/LEAN_RESULT.json')
 assert result['status']=='PASS'
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 peer=Path('agents/A097/runs/20261023T143952Z-fleet03-A097-cross-route-transfer')
 original=json.loads((peer/'CLAIMS.json').read_text(encoding='utf-8-sig'))[0]
 assert hashlib.sha256(original['exact_statement'].encode()).hexdigest()==original['statement_sha256']

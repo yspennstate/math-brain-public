@@ -8,7 +8,7 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def digest(s,h):return hashlib.sha256(json.dumps({'exact_statement':s,'hypotheses':h},sort_keys=True,separators=(',',':')).encode()).hexdigest()
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
 check=json.loads(read(R/'out/CHECK.json'));assert check['status']=='PASS' and check['assertions']==4780
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');pr=json.loads(read(protocol))
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');pr=json.loads(read(protocol))
 src=B/'agents/A016/runs/20261021T183838Z-fleet03-A016-addressing-benchmark'
 source_claim=json.loads(read(src/'CLAIMS.json'))[0]
 assert source_claim['claim_id']=='A016-NONFLAT-ACTIVATION-SAME-BANK' and source_claim['version']==1

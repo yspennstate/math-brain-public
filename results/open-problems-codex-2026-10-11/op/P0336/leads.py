@@ -1,9 +1,9 @@
 ﻿import subprocess,pathlib,json,concurrent.futures,urllib.request
-p=subprocess.run(['git','-C','~/math-open-problems','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True)
+p=subprocess.run(['git','-C','~/private-source','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True)
 paths=[s for s in p.stdout.splitlines() if 'p0336' in s.lower()]
 print('repo matching paths',paths)
 for i,s in enumerate(paths):
- t=subprocess.run(['git','-C','~/math-open-problems','show','origin/master:'+s],capture_output=True,text=True,encoding='utf8')
+ t=subprocess.run(['git','-C','~/private-source','show','origin/master:'+s],capture_output=True,text=True,encoding='utf8')
  pathlib.Path(f'repo_P0336_{i}.txt').write_text(t.stdout,encoding='utf8');print(t.stdout[:3000])
 for d in pathlib.Path('~/<private-repo>/06_math_research').glob('probability_1000_intake_*'):
  for name in ['problems.jsonl','attempts.jsonl','sources.jsonl']:

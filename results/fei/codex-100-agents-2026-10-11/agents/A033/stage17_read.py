@@ -10,8 +10,8 @@ print('CURRENT FILES', [p.name for p in run.iterdir()])
 for name in ['REPORT.md','PROOF.md','CLAIMS.json']:
  p=prev/name
  if p.exists(): print('\nPREVIOUS',name,'\n',p.read_text(encoding='utf-8')[:26000])
-base=Path(r'math-open-problems/reports\fei-2026-10-11')
-supp=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+base=Path(r'private-source/reports\fei-2026-10-11')
+supp=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 paths=[base/n for n in ['README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
 paths += [supp/n for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 paths += list((root/'context').glob('*.txt'))

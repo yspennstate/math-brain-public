@@ -4,7 +4,7 @@ import json,hashlib,copy,datetime
 ROOT=Path(__file__).resolve().parents[1]
 AGENT=ROOT.parents[1]
 BASE=AGENT.parent
-PROTO=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+PROTO=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 SOURCE=BASE/'A061/runs/20261023T113614Z-fleet03-A061-entropy-process'
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()

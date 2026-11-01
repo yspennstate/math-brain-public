@@ -111,7 +111,7 @@ if RID not in (HOME/'WORKLOG.md').read_text(encoding='utf-8-sig'):
 if '2026-10-21 stage7:' not in (HOME/'LEARNED.md').read_text(encoding='utf-8-sig'):
  with (HOME/'LEARNED.md').open('a',encoding='utf-8') as f:f.write('\n2026-10-21 stage7: code7 original U23/32, release5/64, childU=(3/4,17/32). Sole B_new is negative despite favorable sigma-E. Retiring only17/64 pays isolated R but leaves original root full-reference admission negative. Under prescribed core0 then S then stop, both S erasures are rate4-good; retire5/16 from child0 and17/32 from child1 at half reaches=27/64, retain mean7/32; root source and complete actual-node margins>1/800. Both S full CE drops exceed4Inf, so keep signed terminal telescope; erasure-goodness alone never pays the reference drop. R is part of full node debit, not a second spend. Policy-certified retirement does not extend to another earlier core query without a new liability proof.\n')
 
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
 expected=set(x.split(' (')[0] for x in protocol['progress_fields']);ck(set(progress)==expected)
 for c in [a040,new]:ck(set(c)==set(protocol['claim_fields']));ck(hashlib.sha256(c['exact_statement'].encode('utf-8')).hexdigest()==c['statement_sha256'])
 ck((RUN/'PROGRESS.json').read_bytes()==(RUN/'PACKET_DELTA.json').read_bytes())

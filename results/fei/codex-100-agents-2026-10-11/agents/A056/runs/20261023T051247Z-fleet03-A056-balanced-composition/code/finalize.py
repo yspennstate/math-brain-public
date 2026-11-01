@@ -24,7 +24,7 @@ assert positive
 put('out/POSITIVE_RESET_CERTIFICATE.json',positive[0])
 put('out/SCALAR_CERTIFICATES.json',lanes[0]['scalar_certificates'])
 
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');proto=read(protocol)
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');proto=read(protocol)
 prior=A/'runs/20261023T002740Z-fleet03-A056-balanced-composition'
 sources=[protocol,ROOT/'BOARD.md',ROOT/'claude/B12/STREAM_NOTES.md',prior/'DERIVATION.md',prior/'CLAIMS.json',Path(r'~\AGENTS.md')]
 put('out/SOURCE_RECEIPTS.json',[{'path':str(p),'sha256':sha(p),'bytes':p.stat().st_size} for p in sources])

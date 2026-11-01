@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];HOME=R.parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def save(p,o):p.write_text(json.dumps(o,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 main=read(R/'out/MAIN.json');act=read(R/'out/ACTIVATION_MAIN.json');audit=read(R/'out/AUDIT.json')
 assert all(x['status']=='PASS' for x in [main,act,audit])
 formal=read(R/'out/FORMAL.json')

@@ -10,7 +10,7 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,s):p.write_bytes(s.encode('utf-8'))
 def js(p,d):write(p,json.dumps(d,indent=2,ensure_ascii=False)+'\n')
 check=json.loads(read(R/'out/CHECK.json'));assert check['status']=='PASS'
-protocol=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 P=json.loads(read(protocol));source=json.loads(read(SRC/'CLAIMS.json'))
 reviewed=copy.deepcopy(source[1]);consumed=copy.deepcopy(source[0])
 assert reviewed['statement_sha256']=='782c00ee932ecbcb576235ab56925977a27f6988633ec33dfa987d79a6cbf2a6'

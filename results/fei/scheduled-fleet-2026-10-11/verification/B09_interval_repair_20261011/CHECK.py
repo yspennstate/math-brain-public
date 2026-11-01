@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
 """Independent rational-interval repair for the B09 two-bit AND certificate.
 
-Source: yspennstate/math-open-problems@adb671ffcda143fa68347806bb96e8c305621a7d
+Source: private-source-repository@adb671ffcda143fa68347806bb96e8c305621a7d
 reports/fei-2026-10-11/runs/B09/
 20261011T195500Z-fleet01-B09-biased-restriction-uncertainty/
 check_biased_and_counterexample.py

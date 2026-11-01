@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];A=R.parent.parent
 def put(p,t):p.write_text(t,encoding='utf-8',newline='\n')
 def dump(p,x):put(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 oldrun=A/'runs/20261023T124913Z-fleet03-A014-overlap-beyond-worst-case-read'
 oldprogress=json.loads((oldrun/'PROGRESS.json').read_text(encoding='utf-8-sig'))
 results={n:json.loads((R/'out'/n).read_text(encoding='utf-8-sig')) for n in ['pilot.json','check.json','local_pilot.json','local_check.json']}

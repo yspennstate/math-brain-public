@@ -23,7 +23,7 @@ for name in ['STATUS.md','WORKLOG.md','LEARNED.md']:(ROOT/'out'/('ROLLING_'+name
 scanner=module('a089_scanner',r'~\.claude\dreaming\scan_secrets.py')
 paths=sorted(p for p in ROOT.rglob('*') if p.is_file())
 scanned=call(scanner,[str(p) for p in paths])
-pre={'status':'PASS' if scanned[0]==0 else 'BLOCKED_SECRET_SCAN','mesh_agent':AGENT,'mesh_resource':RESOURCE,'mesh_claim':claim[1],'secret_scan_exit':scanned[0],'secret_scan_output':scanned[1],'scan_mode':'Explicit named text files; REPO_ROUTING.md open-problem exception to range scan; GitHub connector uses no local git.','repository':'yspennstate/math-open-problems','branch':'master','branch_authority':'REPO_ROUTING.md Open-problem solving work explicitly master (not main)','remote_prefix':PREFIX}
+pre={'status':'PASS' if scanned[0]==0 else 'BLOCKED_SECRET_SCAN','mesh_agent':AGENT,'mesh_resource':RESOURCE,'mesh_claim':claim[1],'secret_scan_exit':scanned[0],'secret_scan_output':scanned[1],'scan_mode':'Explicit named text files; REPO_ROUTING.md open-problem exception to range scan; GitHub connector uses no local git.','repository':'private-source-repository','branch':'master','branch_authority':'REPO_ROUTING.md Open-problem solving work explicitly master (not main)','remote_prefix':PREFIX}
 (ROOT/'out/PUBLISH_PREFLIGHT.json').write_text(json.dumps(pre,indent=2)+'\n',encoding='utf-8',newline='\n')
 if scanned[0]:print(json.dumps(pre));raise SystemExit(scanned[0])
 # Include the preflight receipt itself in a second named-file scan.

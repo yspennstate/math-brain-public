@@ -2,7 +2,7 @@ from pathlib import Path
 from fractions import Fraction as Q
 import hashlib,json
 R=Path(__file__).resolve().parents[1];OWN=R.parents[1];B=OWN.parents[1]
-P=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+P=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(P.read_text(encoding='utf-8'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,s):p.write_text(s,encoding='utf-8')

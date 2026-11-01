@@ -60,7 +60,7 @@ for name,text,marker in [('WORKLOG.md',work,R.name),('LEARNED.md',learn,'## Stag
  content=(A/name).read_text(encoding='utf-8')
  if marker not in content:
   with (A/name).open('a',encoding='utf-8',newline='') as f:f.write(text)
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=read(protocol_path)
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=read(protocol_path)
 fields=set(protocol['required_per_run']['progress_fields']);fields.remove('packet_ids (one primary ID, for compatibility)');fields.add('packet_ids')
 assert set(progress)==fields and set(claim)==set(protocol['required_per_run']['claim_fields'])
 assert set(sections)==set(protocol['required_per_run']['report_fields'])

@@ -9,7 +9,7 @@ assert all(Q(x['sigma2'][1])<0 and Q(x['remaining'][0])>Q(3,4) for x in main['ro
 assert Q(front['minimum_pair_lower'])>Q(33,20)
 checks=main['assertions']+front['assertions'];assert checks==7464
 stamp=datetime.datetime.now(datetime.timezone.utc).isoformat()
-paths=[Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),Path('BOARD.md'),Path('claude/B10/STREAM_NOTES.md')]
+paths=[Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),Path('BOARD.md'),Path('claude/B10/STREAM_NOTES.md')]
 for who,when,topic in [('A050','20261022T232833Z','repair-with-scope'),('A046','20261023T002101Z','current-candidate-intake'),('A047','20261023T014805Z','boundary-search')]:
  base=agent.parent/who/'runs'/f'{when}-fleet03-{who}-{topic}'
  paths.extend([base/'PROOF.md',base/'CLAIMS.json'])

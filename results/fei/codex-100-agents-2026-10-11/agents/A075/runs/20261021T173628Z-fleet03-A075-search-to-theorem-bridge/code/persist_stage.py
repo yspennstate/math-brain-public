@@ -3,7 +3,7 @@ from pathlib import Path
 import json,hashlib,datetime
 
 RUN=Path(__file__).resolve().parents[1];AGENT=RUN.parents[1]
-TEAM=AGENT.parents[1];CAMPAIGN=Path(r'math-open-problems/reports\fei-2026-10-11')
+TEAM=AGENT.parents[1];CAMPAIGN=Path(r'private-source/reports\fei-2026-10-11')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def put(name,data):
     (RUN/name).write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')

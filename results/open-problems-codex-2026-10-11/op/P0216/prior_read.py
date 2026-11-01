@@ -15,10 +15,10 @@ for d in list(base.glob('probability_1000_intake_*'))+[base/'codex_pool_2026_10_
 print('Prior rows',len(records))
 for rec in records:
  x=rec['record'];print(rec['file'],json.dumps(x,ensure_ascii=False)[:2500])
-p=subprocess.run(['git','-C','~/math-open-problems','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,timeout=60)
+p=subprocess.run(['git','-C','~/private-source','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,timeout=60)
 paths=[x for x in p.stdout.splitlines() if 'P0216' in x or 'p0216' in x]
 print('matching git paths',paths)
 for path in paths[:5]:
- p=subprocess.run(['git','-C','~/math-open-problems','show','origin/master:'+path],capture_output=True,text=True,encoding='utf8',timeout=60)
+ p=subprocess.run(['git','-C','~/private-source','show','origin/master:'+path],capture_output=True,text=True,encoding='utf8',timeout=60)
  (R/('prior_git_'+str(paths.index(path))+'.txt')).write_text(p.stdout,encoding='utf8')
  print(path,p.stdout[:3000])

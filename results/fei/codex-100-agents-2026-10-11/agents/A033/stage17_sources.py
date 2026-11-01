@@ -9,7 +9,7 @@ for a in ['A079','A032','A034']:
  for n in ['REPORT.md','DERIVATION.md','PROOF.md']:
   p=d/n
   if p.exists(): print(n,p.read_text(encoding='utf-8')[:26000])
-base=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents\sources')
+base=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents\sources')
 for name in ['ROUTE_MAP_CURATED.md','ERASURE_RIGIDITY.md','ONE_BIT_ENDPOINT.md']:
  p=base/name; s=p.read_text(encoding='utf-8'); ls=s.splitlines()
  print('\nSOURCE',name)

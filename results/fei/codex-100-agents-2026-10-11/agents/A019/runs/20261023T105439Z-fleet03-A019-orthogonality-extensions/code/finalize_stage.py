@@ -2,7 +2,7 @@ import json,hashlib,copy
 from pathlib import Path
 from datetime import datetime,timezone
 R=Path(__file__).resolve().parents[1];A=R.parents[1];ROOT=A.parents[1]
-P=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+P=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 OLD=A/'runs/20261023T032030Z-fleet03-A019-orthogonality-extensions'
 PEER=ROOT/'agents/A018/runs/20261023T063125Z-fleet03-A018-shared-data-collision-law'
 GHOST=ROOT/'agents/A020/runs/20261023T040246Z-fleet03-A020-selector-boundary-tests'

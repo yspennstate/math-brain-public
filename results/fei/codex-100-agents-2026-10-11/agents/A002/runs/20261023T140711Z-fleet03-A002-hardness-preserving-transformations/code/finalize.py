@@ -5,7 +5,7 @@ A=Path(__file__).resolve().parents[3];R=Path(__file__).resolve().parents[1];B=A.
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def save(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-protofile=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');proto=read(protofile)
+protofile=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');proto=read(protofile)
 x=read(R/'out/CHECK.json');y=read(R/'out/INDEPENDENT.json');assert x['status']==y['status']=='PASS'
 assert x['assertions']==462803 and y['assertions']==52299;total=x['assertions']+y['assertions'];assert total==515102
 assert x['counts']['candidate_pairs']==36864 and x['counts']['applicable_pairs']==25664 and x['counts']['strict_refinement_pairs']==14840

@@ -15,7 +15,7 @@ spec={'helper_version':'A026 stage19 exact_helper, prior API byte copy; structur
  'negative_guard':'fair true-zero completion may fail rank-one nonempty shape; record actual witness',
  'no_heavy_job':True}
 (R/'out/FROZEN_SPEC.json').write_text(json.dumps(spec,indent=2)+'\n',encoding='utf-8')
-p=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+p=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 d=json.loads(p.read_text(encoding='utf-8'))
 (R/'out/PROTOCOL_PIN.json').write_text(json.dumps({'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'required_per_run':d['required_per_run']},indent=2)+'\n',encoding='utf-8')
 sources=[p, A/'STATUS.md',Path(r'BOARD.md'),Path(r'claude\B06\STREAM_NOTES.md'),old/'DERIVATION.md',old/'CLAIMS.json',Path(r'agents\A029\runs\20261023T105559Z-fleet03-A029-child-deficit-transport\REPORT.md')]

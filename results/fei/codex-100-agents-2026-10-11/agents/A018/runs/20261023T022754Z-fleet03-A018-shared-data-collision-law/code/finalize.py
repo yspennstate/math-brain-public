@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def write(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 main=read(R/'out/CHECKS.json');owned=read(R/'out/OWNED_CHECKS.json');boundary=read(R/'out/BOUNDARIES.json')
 assert main['status']==owned['status']==boundary['status']=='PASS'
 assert main['cases']==3264 and owned['cases']==10 and boundary['cases']==64

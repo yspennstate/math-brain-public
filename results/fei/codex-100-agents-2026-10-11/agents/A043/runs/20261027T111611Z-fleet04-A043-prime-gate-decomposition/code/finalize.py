@@ -5,7 +5,7 @@ def sha(b):return hashlib.sha256(b).hexdigest()
 def write(p,s):p.write_text(s,encoding='utf-8')
 def js(p,o):write(p,json.dumps(o,indent=2)+'\n')
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 req=protocol['required_per_run']
 main=json.loads((out/'exact_results.json').read_text(encoding='utf-8'))
 review=json.loads((out/'review_results.json').read_text(encoding='utf-8'))

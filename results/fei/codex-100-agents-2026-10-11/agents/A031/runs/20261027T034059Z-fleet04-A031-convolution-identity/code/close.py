@@ -17,7 +17,7 @@ with (a/'WORKLOG.md').open('a',encoding='utf-8') as f:
  f.write('\nStage22 final audit: formal AM-GM attempt returned RUNTIME_UNVERIFIED after123.9s, no Lean certificate. memok admitted it, but wrapper source subsequently disclosed typical Mathlib commit4.1GB above packet1.5GB target; actual peak unmeasured, no retry. Future formal checks must use memory-bounded/core route. Report and receipts updated; primary mathematics/checker unchanged.\n')
 with (a/'LEARNED.md').open('a',encoding='utf-8') as f:
  f.write('\nPacket resource lesson: memok passing does not establish a compiler fits this packet\'s1.5GB job cap. lean_check Mathlib imports document about4.1GB typical commit. Inspect resource needs BEFORE launching; use a memory-bounded/core route here. Stage22 attempt remained RUNTIME_UNVERIFIED, never a proof certificate.\n')
-proto=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+proto=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 claim=json.loads((r/'CLAIMS.json').read_text(encoding='utf-8'))[0]
 assert set(claim)==set(proto['required_per_run']['claim_fields'])
 assert hashlib.sha256(claim['exact_statement'].encode()).hexdigest()==claim['statement_sha256']

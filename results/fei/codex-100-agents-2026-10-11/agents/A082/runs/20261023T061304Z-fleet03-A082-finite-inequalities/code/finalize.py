@@ -4,7 +4,7 @@ import json,hashlib,copy
 ROOT=Path(__file__).resolve().parents[1];HOME=ROOT.parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def write(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 v=read(ROOT/'out/VALIDATION.json');o=read(ROOT/'out/OBSTRUCTION.json')
 source=Path('agents/A096/runs/20261023T053800Z-fleet03-A096-live-gap-ledger/CLAIMS.json')
 claims=copy.deepcopy(read(source))

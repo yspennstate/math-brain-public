@@ -4,7 +4,7 @@ from hashlib import sha256
 from datetime import datetime,timezone
 import json
 R=Path(__file__).resolve().parents[1];BASE=R.parents[1];ROOT=BASE.parents[1]
-P=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+P=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 A13=ROOT/'agents/A013/runs/20261023T121800Z-fleet03-A013-representation-stability'
 OLD=BASE/'runs/20261023T115812Z-fleet03-A012-sparse-activation-accounting'
 def read(p):return json.loads(p.read_text(encoding='utf-8'))

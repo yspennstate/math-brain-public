@@ -89,7 +89,7 @@ sources=[]
 for path in [Path('BOARD.md'),Path('claude/B12/STREAM_NOTES.md'),BASE/'runs/20261023T130150Z-fleet03-A059-decomposition-depth/PROOF.md',Path('agents/A060/runs/20261023T132943Z-fleet03-A060-composition-sharpness/PROOF.md'),Path('agents/A091/runs/20261023T140242Z-fleet03-A091-composition-referee/ONESHOT_PROOF.md')]:
  sources.append({'path':str(path),'sha256':sha(path)})
 dump(R/'out/SOURCES.json',sources)
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 assert set(progress)==set(x.split(' (')[0] for x in protocol['required_per_run']['progress_fields'])
 assert set(claims[0])==set(protocol['required_per_run']['claim_fields'])
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()

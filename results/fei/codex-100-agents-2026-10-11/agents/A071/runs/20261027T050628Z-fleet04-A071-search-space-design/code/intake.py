@@ -1,8 +1,8 @@
 from pathlib import Path
 import hashlib,json
 R=Path(__file__).resolve().parents[1]
-report=Path(r'math-open-problems/reports\fei-2026-10-11')
-supp=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+report=Path(r'private-source/reports\fei-2026-10-11')
+supp=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 ctx=Path(r'context')
 base=Path(r'agents')
 source=base/'A080/runs/20261027T015619Z-fleet04-A080-universal-counterexample-standard'

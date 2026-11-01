@@ -4,7 +4,7 @@ import json,hashlib
 R=Path(__file__).resolve().parents[1];A=R.parents[1];O=R/'out'
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-P=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=read(P)
+P=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=read(P)
 author=read(O/'CHILD_author.json');replay=read(O/'CHILD_replay.json');base=read(O/'FIXTURES_base.json');lift=read(O/'FIXTURES_lift.json');control=read(O/'CONTROLS.json')
 assert all(x['status']=='PASS' for x in [author,replay,base,lift,control])
 assert author['histogram']==replay['histogram'];assert author['cases']==replay['cases']==65536

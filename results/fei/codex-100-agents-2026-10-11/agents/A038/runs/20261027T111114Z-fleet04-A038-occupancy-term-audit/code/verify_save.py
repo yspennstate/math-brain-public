@@ -14,7 +14,7 @@ if admission not in p['blockers']:p['blockers'].append(admission)
 for extra in ['out/BRAIN_AND_ADMISSION.json','out/SOURCE_SCAN_FAILURE.json','out/SCHEMA_SAVE_FAILURE.json','code/verify_save.py']:
  if extra not in p['source_artifacts']:p['source_artifacts'].append(extra)
 dump(R/'PROGRESS.json',p);dump(R/'PACKET_DELTA.json',p)
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 expected={x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']}
 assert set(p)==expected
 claims=json.loads(read(R/'CLAIMS.json'))

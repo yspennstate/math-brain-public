@@ -93,7 +93,7 @@ audit_note='Direct-prefix ownership audit: appending x and immediately resetting
 for name in ['WORKLOG.md','LEARNED.md']:
  if audit_note not in (A/name).read_text(encoding='utf-8'):
   with (A/name).open('a',encoding='utf-8',newline='') as f:f.write('\n'+stamp+' '+audit_note+'\n')
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 fields=set(protocol['required_per_run']['progress_fields']);fields.remove('packet_ids (one primary ID, for compatibility)');fields.add('packet_ids')
 assert set(P)==fields and set(claim)==set(protocol['required_per_run']['claim_fields'])
 assert all(x in report for x in protocol['required_per_run']['report_fields'])
@@ -102,7 +102,7 @@ assert len((A/'STATUS.md').read_text(encoding='utf-8').splitlines())==2
 assert report.rstrip().split('\n')[-1].startswith('Universal bridge:')
 files=[p for p in R.rglob('*') if p.is_file() and p.name!='RECEIPTS.json']
 assert all(p.stat().st_size<20*1024**2 for p in files)
-sources=[B/'BOARD.md',B/'claude/B08/STREAM_NOTES.md',oldrun/'ANALYTIC_PROOF.md',oldrun/'CLAIMS.json',A/'runs/20261011T221733Z-fleet05-A038-occupancy-term-audit/OCCUPANCY_TARGET_SOURCE.md',B/'agents/A050/runs/20261022T232833Z-fleet03-A050-repair-with-scope/REPORT.md',B/'agents/A039/runs/20261022T222059Z-fleet03-A039-projection-under-restrictions/REPORT.md',Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')]
+sources=[B/'BOARD.md',B/'claude/B08/STREAM_NOTES.md',oldrun/'ANALYTIC_PROOF.md',oldrun/'CLAIMS.json',A/'runs/20261011T221733Z-fleet05-A038-occupancy-term-audit/OCCUPANCY_TARGET_SOURCE.md',B/'agents/A050/runs/20261022T232833Z-fleet03-A050-repair-with-scope/REPORT.md',B/'agents/A039/runs/20261022T222059Z-fleet03-A039-projection-under-restrictions/REPORT.md',Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')]
 # Read the actual source bytes while pinning local receipts; no source mutations.
 save(R/'out/RECEIPTS.json',{'status':'PASS','saved_at_utc':stamp,'schema_fieldsets_exact':True,'progress_delta_identical':True,'all_files_under20MB':True,'claim_sha256':claim['statement_sha256'],'artifacts':[receipt(p) for p in files],'sources':[receipt(p) for p in sources],'rolling':[receipt(A/n) for n in ['STATUS.md','WORKLOG.md','LEARNED.md']],'independent_review':'PENDING','remote_mirrors':'UNVERIFIED','lean':'NOT_LAUNCHED_MEMORY_GATE_REFUSED'})
 print(json.dumps({'status':'PASS','main_assertions':C['assertions']+C['primitive_assertions'],'independent_assertions':I['assertions'],'artifacts':len(files),'claim_sha256':claim['statement_sha256']}))

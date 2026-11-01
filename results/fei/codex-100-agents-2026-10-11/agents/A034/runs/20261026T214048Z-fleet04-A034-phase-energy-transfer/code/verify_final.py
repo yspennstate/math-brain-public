@@ -3,7 +3,7 @@ import json,hashlib
 R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def load(p):return json.loads(p.read_text(encoding='utf-8'))
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-proto=load(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
+proto=load(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
 p=load(R/'PROGRESS.json');c=load(R/'CLAIMS.json')[0]
 assert set(p)=={s.split(' (')[0] for s in proto['progress_fields']}
 assert set(c)==set(proto['claim_fields'])

@@ -9,7 +9,7 @@ validation=load(O/'VALIDATION.json');intake=load(O/'INTAKE_TOTALS.json');adv=loa
 assert validation['status']==adv['status']=='PASS'
 assert validation['roots']==54 and validation['histories']==1548
 assert validation['runtime_seconds']<55
-protocol=load(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=load(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 old=A/'runs/20261014T094929Z-fleet05-A096-live-gap-ledger'
 depfiles=[B/'agents/A097/runs/20261014T050248Z-fleet05-A097-cross-route-transfer/CLAIMS.json',old/'CLAIMS.json']
 deps=[]

@@ -12,7 +12,7 @@ t=report.read_text(encoding='utf-8').replace('final receipt attempt is separate.
 report.write_text(t,encoding='utf-8')
 with (A/'WORKLOG.md').open('a',encoding='utf-8') as f:
  f.write('\n2026-10-23 stage20 final seal: 72238 assertions PASS, 336 positive actual selector-child resets. Original saved-file hashes reread PASS. Checklist working AND done acknowledgements failed: checklist lock held too long; mathematical deliverables complete locally, independent review and supervisor publication unverified.\n')
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 c=read(R/'CLAIMS.json')[0]; p=read(R/'PROGRESS.json')
 assert set(c)==set(protocol['required_per_run']['claim_fields'])
 pf=set(protocol['required_per_run']['progress_fields']);pf.remove('packet_ids (one primary ID, for compatibility)');pf.add('packet_ids')

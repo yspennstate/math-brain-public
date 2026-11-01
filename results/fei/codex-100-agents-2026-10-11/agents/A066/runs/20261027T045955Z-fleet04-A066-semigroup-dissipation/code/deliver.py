@@ -2,7 +2,7 @@
 from pathlib import Path
 import json,hashlib,datetime
 root=Path(__file__).resolve().parents[1]; owner=root.parents[1]
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 check=json.loads((root/'out/CHECK.json').read_text(encoding='utf-8'))
 audit=json.loads((root/'out/AUDIT.json').read_text(encoding='utf-8'))
 assert check['status']==audit['status']=='PASS'

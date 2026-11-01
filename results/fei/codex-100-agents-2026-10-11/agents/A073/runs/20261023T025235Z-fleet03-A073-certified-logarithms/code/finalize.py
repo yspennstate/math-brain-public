@@ -39,7 +39,7 @@ This advances C019 stopping-tree payment and C024 history transfer by paying a g
  manifest={str(p.relative_to(run)):sha(p) for p in sorted(run.rglob('*')) if p.is_file() and p.name!='MANIFEST.json'}
  save(run/'out'/'MANIFEST.json',manifest)
  assert all(p.stat().st_size<20*1024*1024 for p in run.rglob('*') if p.is_file())
- proto=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+ proto=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
  assert set(progress)=={k.split(' (')[0] for k in proto['required_per_run']['progress_fields']}
  assert set(claim)==set(proto['required_per_run']['claim_fields'])
  return claimid,manifest

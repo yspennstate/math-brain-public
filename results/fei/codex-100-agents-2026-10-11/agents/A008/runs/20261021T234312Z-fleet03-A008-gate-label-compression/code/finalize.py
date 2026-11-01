@@ -31,7 +31,7 @@ new={
  'status':'ANALYTIC_PROOF_EXACT_CHECKED_PENDING_INDEPENDENT_AGENT_REVIEW','supersedes':[],'refutes':[],'first_unproved_line':None,'next_consumers':['A006','A007','A009','A010','A015','A086','B02','B20']}
 new['statement_sha256']=statement_hash(new)
 dump(RUN/'CLAIMS.json',[claim,new])
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 progress={
  'protocol_revision':protocol['revision'],'run_id':RUN.name,'stream':'B02','packet_id':'A008','gap_id':'G-J-COST','attempt_id':'A008-stage6-universal-implicant-root-payment',
  'method':'Whole independent review; physical cube minimum-cut bound on every implicant fiber; packing sum; same-reference substitution; exact integer/Fraction enumeration',

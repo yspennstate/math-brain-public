@@ -2,7 +2,7 @@ from pathlib import Path
 import json, hashlib, datetime
 R=Path(__file__).resolve().parents[1]; A=R.parents[1]
 load=lambda p: json.loads(p.read_text(encoding='utf-8'))
-protocol=load(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=load(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 P=load(R/'PROGRESS.json'); C=load(R/'CLAIMS.json'); V=load(R/'out/VALIDATION.json')
 assert P==load(R/'PACKET_DELTA.json')
 assert set(P)=={f.split(' (')[0] for f in protocol['progress_fields']}

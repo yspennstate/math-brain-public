@@ -88,7 +88,7 @@ for name,text in [('WORKLOG.md',f'{stamp} stage9: read new BOARD/B06 and A028@9/
  marker='stage9: read new BOARD/B06' if name=='WORKLOG.md' else 'Stage9 durable:'
  if marker not in existing:
   with (AG/name).open('a',encoding='utf-8',newline='\n') as f:f.write('\n'+text+'\n')
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 def fields(v):
  if isinstance(v,list):return set((x if isinstance(x,str) else x['name']).split(' (')[0] for x in v)
  return set(v)

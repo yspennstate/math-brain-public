@@ -5,7 +5,7 @@ def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def save(p,v):p.write_text(json.dumps(v,indent=2)+'\n',encoding='utf-8')
 v=read(R/'out/RESULT.json');assert v['status']=='PASS' and v['balanced_core_cases']==78
 lean=read(R/'out/LEAN_RESULT.json');assert lean['status']=='NOT_RUN_ADMISSION_HELD'
-proto=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+proto=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 statement=('For every balanced Boolean h on a finite uniform cube, F_h=h when x=0, otherwise 2y-1 when b=1 and +1 when b=0. '
  'Along b then y only in b1, with the SAME normalized dominating reference Q and fair zero-source fallback, '
  'the complete reference bill equals D(P_F||Q), all three terminal entropies equal 2+H(h)/2, and the original mean b-child '

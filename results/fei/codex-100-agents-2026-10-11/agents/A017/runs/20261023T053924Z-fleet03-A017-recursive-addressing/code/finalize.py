@@ -6,7 +6,7 @@ PREV=A/'runs/20261023T012331Z-fleet03-A017-recursive-addressing'
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def save(p,v):p.write_bytes((json.dumps(v,indent=2,ensure_ascii=False)+'\n').encode('utf-8'))
-proto=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+proto=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 main=read(R/'out/certificate.json');ind=read(R/'out/independent_certificate.json');bad=read(R/'out/bad_intermediate_query.json')
 assert main['status']==ind['status']==bad['status']=='PASS'
 assert main['parents']==2432 and main['adaptive_prefix_rows']==533248 and main['assertions']==1136256

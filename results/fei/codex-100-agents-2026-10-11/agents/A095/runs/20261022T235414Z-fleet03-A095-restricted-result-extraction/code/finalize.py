@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1];ROOT=A.parents[1]
 def sh(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def put(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False),encoding='utf-8')
 result=json.loads((R/'out/EXACT_RESULTS.json').read_text(encoding='utf-8'));assert result['status']=='PASS'
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 old=ROOT/'agents/A094/runs/20261022T230414Z-fleet03-A094-proof-chain-challenger'
 source=json.loads((old/'CLAIMS.json').read_text(encoding='utf-8'))
 review=source[-1]

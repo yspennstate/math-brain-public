@@ -133,7 +133,7 @@ C020 whole-set witness cost advances from disjoint deleted matching edges to eve
 pins = [base/'BOARD.md',base/'claude/B02/STREAM_NOTES.md',
  source/'GROWING_MATCHING.md',source/'CLAIMS.json',
  base/'agents/A008/runs/20261021T234312Z-fleet03-A008-gate-label-compression/ROOT_PAYMENT.md',
- Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+ Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 dump('out/SOURCE_PINS.json',[{'path':str(p),'sha256':digest(p)} for p in pins])
 status = ('STATE: Stage8 saved: complete original-reference cost<42I for every maximum-degree-two deleted bipartite graph (<36I if a>=4); exact checks PASS; full FEI OPEN.\n'
  'NEXT: A010/B02 independent review, then pay or replace the dense-transfer 2J log2 b charge for growing-degree overlaps without a reference reset.\n')

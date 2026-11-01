@@ -1,7 +1,7 @@
 // Controller function for execution through functions.exec, whose tools/store/load globals are supplied by Work Mode.
 // Writes only this campaign's unique prefix and uses non-forced fast-forward updates.
 async function publishX(message) {
- const repo="yspennstate/math-open-problems",base="/workspace/scratch/9028a8e284b1/crossfield-lyons-20260915",prefix="proofnet24/lyons-entropy/crossfield-2026-09-15/";
+ const repo="private-source-repository",base="/workspace/scratch/9028a8e284b1/crossfield-lyons-20260915",prefix="proofnet24/lyons-entropy/crossfield-2026-09-15/";
  const mr=await tools.exec_command({cmd:"python - <<'PY'\nfrom pathlib import Path\nimport hashlib,json\np=Path('/workspace/scratch/9028a8e284b1/crossfield-lyons-20260915')\na=[]\nfor f in sorted(p.rglob('*')):\n if not f.is_file() or '__pycache__' in f.parts or f.suffix=='.pyc':continue\n b=f.read_bytes();a.append({'name':f.relative_to(p).as_posix(),'sha':hashlib.sha1(b'blob '+str(len(b)).encode()+b'\\0'+b).hexdigest(),'bytes':len(b)})\nprint(json.dumps(a))\nPY",max_output_tokens:15000});
  if(mr.exit_code!==0)throw new Error(mr.output);
  const hashes=load("x_published_hashes")||{},rows=JSON.parse(mr.output).filter(r=>hashes[r.name]!==r.sha);

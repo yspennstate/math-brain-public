@@ -5,7 +5,7 @@ now=datetime.datetime.now(datetime.timezone.utc).isoformat()
 read=lambda p: json.loads(p.read_text(encoding='utf-8'))
 write=lambda p,x: p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 V=read(R/'out/VALIDATION.json'); assert V['status']=='PASS'
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 req=protocol['required_per_run']
 statement='For the GMP26 Proposition 5.1 family F_k with selector children OR of k disjoint AND3 blocks and its specified one-minimal-positive-point deletion, the explicit complete selector-first computing tree described in DERIVATION.md has signed Cov(T)<=16 I(F_k)/3 for k>=2; WWW14 therefore gives H(F_k)<26 I(F_k) for every k>=1. This is a narrow primary-source application, not a universal paid-tree theorem or an improved constant over the prior 23-rate repair.'
 hyp=['Uniform physical cube and sign-valued Boolean functions','Bits for spectral entropy','The precise minimal-positive-point edit and complete leaf refinement in DERIVATION.md','Source protocol is WWW14 arXiv:1312.3003v1 Lemma1.5/Section2.3; all leaves constant']

@@ -3,7 +3,7 @@ from pathlib import Path
 from datetime import datetime,timezone
 import hashlib,json
 R=Path(__file__).resolve().parents[1]; A=R.parents[1]; S=A.parents[1]
-P=Path('math-open-problems/reports/fei-2026-10-11')
+P=Path('private-source/reports/fei-2026-10-11')
 SRC=S/'agents/A008/runs/20261023T062437Z-fleet03-A008-gate-label-compression'
 PRIOR=A/'runs/20261023T035924Z-fleet03-A015-minterm-barrier-analysis'
 def read(p):return json.loads(p.read_text(encoding='utf-8'))

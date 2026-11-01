@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib,datetime,ast
 R=Path(__file__).resolve().parents[1];A=R.parent.parent
-P=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=json.loads(P.read_text(encoding='utf-8'));fields=protocol['required_per_run'];old=json.loads((A/'runs/20261023T055409Z-fleet03-A037-conditional-credit-ledger/PROGRESS.json').read_text(encoding='utf-8'))
+P=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=json.loads(P.read_text(encoding='utf-8'));fields=protocol['required_per_run'];old=json.loads((A/'runs/20261023T055409Z-fleet03-A037-conditional-credit-ledger/PROGRESS.json').read_text(encoding='utf-8'))
 main=json.loads((R/'out/CHECK.json').read_text(encoding='utf-8'));audit=json.loads((R/'out/AUDIT.json').read_text(encoding='utf-8'));assert main['status']==audit['status']=='PASS'
 sourcepaths=[P,Path(r'BOARD.md'),Path(r'claude\B08\STREAM_NOTES.md')]
 sources={

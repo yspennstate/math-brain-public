@@ -3,7 +3,7 @@ import json,hashlib,datetime
 run=Path(__file__).resolve().parents[1]
 home=run.parents[1]
 prior=run.parent/'20261022T221625Z-fleet03-A024-biased-child-stability'
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 def read(p):return p.read_text(encoding='utf-8')
 def write(p,s):
  with p.open('w',encoding='utf-8',newline='\n') as f:f.write(s)

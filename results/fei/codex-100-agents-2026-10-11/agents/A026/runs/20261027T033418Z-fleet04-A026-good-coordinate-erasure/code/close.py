@@ -33,7 +33,7 @@ if result.returncode:
 write(R/'PROGRESS.json',progress);write(R/'PACKET_DELTA.json',progress)
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
 with (A/'WORKLOG.md').open('a',encoding='utf-8',newline='\n') as f:f.write(f'\n{now} stage22 closure: fresh memok0; correctly quoted Lean algebra attempt RUNTIME_UNVERIFIED after120.4s, no formal certificate. Administrative done exit{result.returncode}; receipt retained. Mathematical final total remains89325, no jobs intentionally left running.\n')
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
 claims=read(R/'CLAIMS.json')
 for c in claims:
  assert set(c)==set(protocol['claim_fields'])

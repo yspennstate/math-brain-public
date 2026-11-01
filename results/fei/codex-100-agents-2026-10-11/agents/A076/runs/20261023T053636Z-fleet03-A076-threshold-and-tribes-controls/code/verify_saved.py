@@ -2,7 +2,7 @@ from pathlib import Path
 import json,hashlib,datetime
 root=Path(__file__).resolve().parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
-p=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+p=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 report=(root/'REPORT.md').read_text(encoding='utf-8')
 for h in p['required_per_run']['report_fields']:assert '# '+h+'\n' in report
 assert report.rstrip().split('\n')[-1].startswith('Universal bridge:')

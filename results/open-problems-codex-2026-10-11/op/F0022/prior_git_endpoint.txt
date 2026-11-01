@@ -3,7 +3,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 # R7-01 admission screen — F0022 literal endpoint versus intended percolation singularity
 
 Date checked: 2026-09-19 UTC  
-Repository / branch: private `yspennstate/math-open-problems` / `master`  
+Repository / branch: private `private-source-repository` / `master`  
 Worker: `R7-01`  
 Native ID: `6aabe777361481919c9e614646464772`  
 Canonical candidate: `F0022`  

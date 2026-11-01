@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1];B=A.parents[1]
 def dump(p,j):p.write_text(json.dumps(j,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 old=A/'runs/20261023T001719Z-fleet03-A036-reference-law-divergence'
-paths=[B/'BOARD.md',B/'claude/B08/STREAM_NOTES.md',Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'),old/'PROOF.md',old/'CLAIMS.json']
+paths=[B/'BOARD.md',B/'claude/B08/STREAM_NOTES.md',Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'),old/'PROOF.md',old/'CLAIMS.json']
 for agent in ['A039','A047','A050']:
  p=sorted((B/'agents'/agent/'runs').iterdir())[-1]
  paths += [p/'PROOF.md',p/'REPORT.md']

@@ -35,7 +35,7 @@ for name,msg in [('WORKLOG.md','Consumed current GU owner contract. Proved zero-
  if tag not in path.read_text(encoding='utf-8'):
   with path.open('a',encoding='utf-8',newline='\n') as f:f.write('\n'+tag+': '+msg+'\n')
 (O/'NEXT.md').write_text('STATE: Complete local v4, universal GU/FEI OPEN, review pending.\nNEXT: '+nextaction+'\n',encoding='utf-8',newline='\n')
-protocol=load(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=load(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 keys=set(protocol['progress_fields']);keys.remove('packet_ids (one primary ID, for compatibility)');keys.add('packet_ids')
 assert set(p)==keys and set(claim)==set(protocol['claim_fields'])
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()

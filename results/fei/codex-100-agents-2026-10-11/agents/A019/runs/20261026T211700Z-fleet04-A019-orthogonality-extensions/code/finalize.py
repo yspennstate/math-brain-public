@@ -5,7 +5,7 @@ now=datetime.datetime.now(datetime.timezone.utc).isoformat()
 def write(p,s):p.write_text(s,encoding='utf-8',newline='\n')
 def js(p,x):write(p,json.dumps(x,indent=2)+'\n')
 sha=lambda s:hashlib.sha256(s.encode('utf-8')).hexdigest()
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 main=json.loads((R/'out/CHECKS.json').read_text(encoding='utf-8'));audit=json.loads((R/'out/AUDIT.json').read_text(encoding='utf-8'))
 assert main['status']==audit['status']=='PASS'
 assert 31**31>2**152

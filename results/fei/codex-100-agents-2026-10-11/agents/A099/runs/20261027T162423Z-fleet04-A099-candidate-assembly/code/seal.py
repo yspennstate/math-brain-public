@@ -4,7 +4,7 @@ import json,hashlib,re
 R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def load(p):return json.loads((R/p).read_text(encoding='utf-8'))
 def put(p,x):(R/p).write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-proto=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+proto=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 claims=load('CLAIMS.json');progress=load('PROGRESS.json');dag=load('out/PROOF_DEPENDENCIES.json')
 claimfields=set(proto['required_per_run']['claim_fields']);assert all(set(c)==claimfields for c in claims)
 progressfields={x.split(' (')[0] for x in proto['required_per_run']['progress_fields']};assert set(progress)==progressfields

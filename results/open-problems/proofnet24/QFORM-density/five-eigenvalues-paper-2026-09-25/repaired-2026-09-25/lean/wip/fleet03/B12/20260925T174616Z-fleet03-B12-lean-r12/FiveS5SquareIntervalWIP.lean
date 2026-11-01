@@ -3,7 +3,7 @@ import FiveS5Square
 /-!
 fleet03/B12 WIP for the remaining statement-level wrapper in repaired Lemma 5.1.
 
-Target source: yspennstate/math-open-problems@4e530247ec0ef4101a6e5ecf621bd35a969c42aa,
+Target source: private-source-repository@4e530247ec0ef4101a6e5ecf621bd35a969c42aa,
 paper.tex blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a, lines 403--414.
 
 The canonical compiled theorem `QformFiveB.lemma51b` proves the closed-interval case

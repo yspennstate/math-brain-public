@@ -12,7 +12,7 @@ def pin(p,copy=False):
  receipts.append(dict(path=str(p),bytes=len(raw),sha256=hashlib.sha256(raw).hexdigest()))
  if copy:(R/'out/sources'/(p.parent.name+'-'+p.name)).write_bytes(raw)
  return s
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 pin(protocol);pin(ROOT/'BOARD.md');pin(ROOT/'claude/B20/STREAM_NOTES.md');pin(A/'STATUS.md')
 sources=[('A012','20261027T062634Z-fleet04-A012-sparse-activation-accounting',['DERIVATION.md','CLAIMS.json','REPORT.md']),('A097','20261027T092641Z-fleet04-A097-cross-route-transfer',['PROOF.md','CLAIMS.json','REPORT.md']),('A093','20261027T124307Z-fleet04-A093-literature-and-priority',['DERIVATION.md','CLAIMS.json']),('A098','20261027T125558Z-fleet04-A098-resource-reallocation',['REVIEW.md','CLAIMS.json']),('A011','20261027T025625Z-fleet04-A011-representation-existence',['DERIVATION.md','CLAIMS.json']),('A094','20261026T232939Z-fleet04-A094-proof-chain-challenger',['REPORT.md']),('A100','20261027T023227Z-fleet04-A100-release-and-continuation-ledger',['REVIEW.md'])]
 for a,run,names in sources:

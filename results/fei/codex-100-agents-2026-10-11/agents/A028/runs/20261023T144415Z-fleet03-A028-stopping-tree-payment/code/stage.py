@@ -109,7 +109,7 @@ put(A/'STATUS.md','STATE: Final A028 stage saved exact outside-channel SAME-T af
 stamp=datetime.datetime.now(datetime.timezone.utc).isoformat()
 for name,text in [('WORKLOG.md',stamp+' final stage: certified actual Boolean post-dummy-DATA odds1/2 outside channel [3/16,7/16] but SAME T has S>1/8; exact4I quota and old1/8 remain. General nodewise admission C<=Z+gamma Cvac is sufficient for all mixed trees, necessary for local S>=0. Source supplier/required class target/FEI remain open; saved '+R.name),('LEARNED.md','Exact affordability is broader than v9 common-channel feasibility. For fixed r,B, Dstar=D8+C and T-Dstar=Z+gamma Cvac-C. Outside-image targets can consume ORIGINAL unused KL slack. Actual a=pointdefect2,G=z,H=1,dummy d, Ra=Pa,Rg=Rh=uniform-on-z: target z odds1/2 outside [3/16,7/16], S=11/4-(21/16)log2(3)>1/8; H=4-(9/8)log2(3),I=5/4,T=1. A missing required target or universal O(I) initial source is not fixed by this clarification.')]:
  with (A/name).open('a',encoding='utf-8',newline='') as out:out.write('\n'+text+'\n')
-protocol=load(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=load(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 assert set(claim)==set(protocol['claim_fields'])
 assert set(progress)=={x.split(' (')[0] for x in protocol['progress_fields']}
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()

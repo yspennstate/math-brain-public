@@ -27,7 +27,7 @@ with (BASE/'LEARNED.md').open('a',encoding='utf-8') as f:f.write('''\n## Stage7:
 For h=chi_u off A and chi_q on A, the q children have equal squared spectra even when A has unequal Fourier masses. J_A=4 sum|T|Ahat^2 is the indicator flip-probability influence; I(h_q)=1-p+J_A/2. Same inherited endpoint Q_core=((1+p)/2,(1-p)/2) depends only on p, not activation shape or adaptive exposure order. With c=CE(P,(P+point_empty)/2), original S=2(1-p+J_A/2)-c/2 leaves EXACT C_end-c-1-2p+J_A-E-D after insertion/all queries/conversion and positive terminal deficit. For p<=1/8, c<=J_A+2 implies remainder>5/128. Fresh activation cost is c/2+3-L_q-E (do not forget L_q); its remaining rate4 budget contains S+1-p, so S has an actual unused owner.
 A=point_k B on r bits gives H(P)=eta((1-p)^2)-eta(p^2)+4kp+2*2^-k L_B; J_A=2kp+2^-k J_B and L_B<=2r E B. Thus (2k+4r+3)2^-k<=1 admits all B; r3,k>=5 suffices. Complete same-reference adaptive activation histories then pay the original bank; every partial partition has expected signed reserve>121/64. Do not infer local child eligibility or universal unbounded-width admission. A020 stage6 sections1--4 independently HOLD at their point-event scope; new extension still needs independent review.456239 exact checks, all256 three-bit indicators; Lean timeout proves nothing.
 ''')
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
 pk=[x.split(' (')[0] for x in protocol['progress_fields']]
 assert set(pk)==set(progress)
 assert all(set(x)==set(protocol['claim_fields']) for x in claims)

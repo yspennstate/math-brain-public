@@ -3,7 +3,7 @@ import hashlib,json,copy,datetime
 B=Path(__file__).resolve().parents[1];HOME=B.parents[1]
 ROOT=HOME.parents[1]
 S=ROOT/'agents/A050/runs/20261022T232833Z-fleet03-A050-repair-with-scope'
-P=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+P=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(P.read_text(encoding='utf8'))
 check=json.loads((B/'out/CHECK.json').read_text(encoding='utf8'));assert check['status']=='PASS'
 src=json.loads((S/'CLAIMS.json').read_text(encoding='utf8'))[0]

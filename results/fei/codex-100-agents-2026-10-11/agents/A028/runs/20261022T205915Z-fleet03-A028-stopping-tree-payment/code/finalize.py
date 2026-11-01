@@ -97,7 +97,7 @@ helper=old/'code/exact.py'
 shutil.copyfile(helper,RUN/'code/exact_helper.py')
 assert sha(RUN/'code/exact_helper.py')==main['helper_sha256']
 # Keep the original pin and include the exact helper for standalone reproduction.
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 assert set(claim)==set(protocol['required_per_run']['claim_fields'])
 expected=set(protocol['required_per_run']['progress_fields']); expected.remove('packet_ids (one primary ID, for compatibility)');expected.add('packet_ids')
 assert set(progress)==expected

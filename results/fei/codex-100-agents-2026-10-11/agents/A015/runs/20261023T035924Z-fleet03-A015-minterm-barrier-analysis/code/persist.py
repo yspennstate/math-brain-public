@@ -5,7 +5,7 @@ import hashlib
 import json
 
 RUN=Path(__file__).resolve().parents[1];AGENT=RUN.parents[1];SHARED=AGENT.parents[1]
-CAMPAIGN=Path('math-open-problems/reports/fei-2026-10-11')
+CAMPAIGN=Path('private-source/reports/fei-2026-10-11')
 A008=SHARED/'agents/A008/runs/20261023T024024Z-fleet03-A008-gate-label-compression'
 A014=SHARED/'agents/A014/runs/20261023T032009Z-fleet03-A014-overlap-beyond-worst-case-read'
 PRIOR=AGENT/'runs/20261022T231544Z-fleet03-A015-minterm-barrier-analysis'

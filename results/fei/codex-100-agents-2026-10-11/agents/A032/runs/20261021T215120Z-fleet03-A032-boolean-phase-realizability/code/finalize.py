@@ -6,8 +6,8 @@ R=Path(__file__).resolve().parents[1];OWN=R.parents[1]
 BASE=OWN.parents[1]; NOW=datetime.now(timezone.utc).isoformat()
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,v):p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-P=Path(r'math-open-problems/reports\fei-2026-10-11')
-S=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+P=Path(r'private-source/reports\fei-2026-10-11')
+S=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 EXT=BASE/'agents/A079/runs/20261021T153136Z-fleet03-A079-correlated-auxiliaries'
 protocol=json.loads((P/'EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 source=json.loads((EXT/'CLAIMS.json').read_text(encoding='utf-8'))[1]

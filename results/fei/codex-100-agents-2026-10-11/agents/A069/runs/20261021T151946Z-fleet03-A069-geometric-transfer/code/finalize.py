@@ -4,7 +4,7 @@ RUN=Path(__file__).resolve().parents[1];HOME=RUN.parents[1]
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(name,obj):
  p=RUN/name;p.write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-protocol_path=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 protocol=json.loads(protocol_path.read_text(encoding='utf-8'))
 cert=json.loads((RUN/'out/CERTIFICATE.json').read_text(encoding='utf-8'))
 assert cert['status']=='PASS' and cert['exact_assertions']==1150
@@ -69,9 +69,9 @@ sources=[protocol_path,HOME/'STATUS.md',HOME/'LEARNED.md',
  Path(r'~/AGENTS.md'),
  Path(r'BOARD.md'),
  Path(r'claude/B14/STREAM_NOTES.md')]
-root=Path(r'math-open-problems/reports/fei-2026-10-11')
+root=Path(r'private-source/reports/fei-2026-10-11')
 sources += [root/n for n in ['README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
-root=Path(r'math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+root=Path(r'private-source/research_pushes/2026-10-11-full-fei-100-agents')
 sources += [root/n for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md','sources/ERASURE_REDUCTION.md','sources/GAMMA_ENDPOINT_LEDGER.md','sources/ONE_BIT_ENDPOINT.md','sources/BLOCK_RESTRICTION_IDENTITY_2026-09-18.md']]
 ctx=Path(r'context')
 sources += list(ctx.glob('*.txt'))

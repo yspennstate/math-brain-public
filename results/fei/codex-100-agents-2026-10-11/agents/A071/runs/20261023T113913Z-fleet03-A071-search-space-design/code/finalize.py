@@ -61,7 +61,7 @@ for name,line in [('WORKLOG.md',f'{stamp} {marker}: consumed A089 candidate; fro
  p=AG/name;old=p.read_text(encoding='utf-8') if p.exists() else ''
  if marker not in old:
   with p.open('a',encoding='utf-8',newline='') as f:f.write('\n'+line+'\n')
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 assert set(progress)=={s.split(' (')[0] for s in protocol['progress_fields']};assert set(claim)==set(protocol['claim_fields'])
 assert claim['statement_sha256']==digest(statement,hyp)
 assert all('## '+s in report for s in protocol['report_fields']);assert report.rfind('## Universal bridge')>report.rfind('## actual persistence')

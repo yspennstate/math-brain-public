@@ -6,7 +6,7 @@ def save(p,d):p.write_text(json.dumps(d,indent=2)+'\n',encoding='utf-8',newline=
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 old=read(R/'out/ARTIFACTS.json')
 assert all(sha(R/x['path'])==x['sha256'] for x in old)
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 report=(R/'REPORT.md').read_text(encoding='utf-8')
 assert all('## '+k in report for k in protocol['report_fields'])
 assert read(R/'PROGRESS.json')==read(R/'PACKET_DELTA.json')

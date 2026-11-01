@@ -10,7 +10,7 @@ leanpath=R/'out/LEAN_ATTEMPT.json'
 lean=json.loads(leanpath.read_text(encoding='utf-8')) if leanpath.exists() else {'exit_code':None,'stdout':'NOT YET RETURNED'}
 root=Path(r'~\brain_workers\FEI100_20261011')
 sources=[root/'BOARD.md',root/'claude/B09/STREAM_NOTES.md',root/'agents/A044/runs/20261014T055346Z-fleet05-A044-non-symmetric-gate-classes/PROOF.md',root/'agents/A045/runs/20261021T165712Z-fleet03-A045-biased-realizability-referee/PROOF.md',root/'agents/A041/runs/20261021T190738Z-fleet03-A041-weighted-threshold-fei/PROOF.md']
-sources += [Path(r'math-open-problems/reports\fei-2026-10-11')/n for n in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
+sources += [Path(r'private-source/reports\fei-2026-10-11')/n for n in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
 sources += list((root/'context').glob('*.txt'))
 receipts=[{'path':str(p),'sha256':sha(p),'bytes':p.stat().st_size} for p in sources]
 put(R/'out/SOURCE_RECEIPTS.json',receipts)
@@ -58,7 +58,7 @@ Universal bridge: This stage moves B09's C020 whole-set witness-cost bridge by r
 (A/'STATUS.md').write_text(f'STATE: A042 stage7 COMPLETE_LOCAL: uniform zero/unit cofactor endpoint bounds and independent-rate AND ledger;{tests["exact_assertions"]} exact assertions PASS; analytic proof pending review; FEI OPEN.\nNEXT: A044/A045/A091 review and merge zero-profile refunds/signed unit charges into SAME complete conditional reference, retaining normalizer, ordinary KL, degree owners and full terminals.\n',encoding='utf-8')
 with (A/'WORKLOG.md').open('a',encoding='utf-8') as f:f.write(f'\n{now} stage7: resumed actual saved stage6 rather than empty fleet05 runs. Derived uniform integer-cofactor zero/unit bounds, cancelling vanishing v_S exactly; AND independent-rate corner errors. {tests["exact_assertions"]} exact assertions, {tests["seconds"]:.6f}s. Initial equality-interval checker failure repaired algebraically and preserved. Formal attempt separately recorded. Global complete-reference congestion/FEI open.\n')
 with (A/'LEARNED.md').open('a',encoding='utf-8') as f:f.write('\nStage7 uniform endpoints: integer increments d satisfy |E d|<=E d^2=b, V=b-a^2>=b(1-b). For b<=1/4, zero-profile h(m)/V<=2b ln(1/b)/(1-b); unit sigma profile |h(m)/V+2sigma*a/b|<=8b. Exact physical residual/tail-mass ratio cancels v_S, so simultaneous endpoint rates need no compact-interior assumption. AND codimension-one exact charge phi(p)=2p ln(1/p)/(1-p), zero limit0, unit limit2; total<=3 top-packet degree deficit for d>=3. Integer admission remains unsplittable at every interior bias even when actual residual vanishes. Same-log exact equality must be cancelled algebraically before interval comparisons. Mean convergence alone is insufficient; second-moment localization is used. No global congestion theorem follows.\n')
-proto=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+proto=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 expected={x.split(' (')[0] for x in proto['required_per_run']['progress_fields']}
 assert set(progress)==expected,(set(progress),expected)
 assert set(claim)==set(proto['required_per_run']['claim_fields'])

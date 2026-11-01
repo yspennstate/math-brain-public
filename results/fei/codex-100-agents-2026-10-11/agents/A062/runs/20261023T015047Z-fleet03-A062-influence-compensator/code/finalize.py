@@ -12,7 +12,7 @@ def put(p,s):
 def js(p,x):put(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')
 def digest(p):return sha256(Path(p).read_bytes()).hexdigest()
 now=datetime.now(timezone.utc).isoformat()
-protocol_path=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol_path=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 protocol=json.loads(read(protocol_path));rid=r.name
 exact=json.loads(read(r/'out/EXACT.json'));general=json.loads(read(r/'out/GENERAL.json'));pilot=json.loads(read(r/'out/PILOT.json'))
 assert exact['roots']==38 and exact['histories']==456 and exact['assertions']==27082

@@ -57,7 +57,7 @@ text=text.replace('Main frozen revised domain: all276 Boolean tables n1..3,','Ma
 stamp=datetime.datetime.now(datetime.timezone.utc).isoformat()
 with (own/'WORKLOG.md').open('a',encoding='utf-8') as f:f.write(f'\n{stamp} stage22 {r.name}: independently reconstructed A050 free vacuum theorem; positive-reference AND2 Onew>d exact rational sign. Main {main["assertions"]}, audit {audit["assertions"]} PASS. Initial full-pair n3 timed out55s; domain reduced and frozen, not called exhaustive over all pairs. Lean unverified, checklist lock failure, initial save/decode failures repaired. Universal source/terminal gap remains.\n')
 with (own/'LEARNED.md').open('a',encoding='utf-8') as f:f.write('\n2026-10-27 stage22: A050 repeated vacuum projection independently HOLDS with ghosts, actual biased reference outcomes and original physical reach weights. Free does NOT imply it pays next query: actual AND2 P=(1/4)^4,Q=(63,1,32,32)/128 has Oold=0; calibrated Q*=(1/4,3/260,24/65,24/65) has Onew>d, exact 2^[4(Onew-d)]=34315595234375/33513629810688>1. Full original A survives because Eold-Enew=d+Onew. Thus charge joint erasure/query liability, not releases alone. No FEI disproof or source funding. Independent likelihood-product trees avoid prime-log implementation reuse. Full n3 ordered-pair census exceeded55s; reduced4112-reference domain is explicit, not a symmetry claim. Lean runtime unverified.\n')
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 pf=[x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']]
 cf=protocol['required_per_run']['claim_fields']
 assert set(progress)==set(pf)

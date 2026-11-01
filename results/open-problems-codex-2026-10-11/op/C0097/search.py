@@ -32,7 +32,7 @@ for work in source.get('works',[]):
   result=fetch(('openalex_citing','https://api.openalex.org/works',{'filter':'cites:'+work['id'].split('/')[-1],'per-page':200,'sort':'publication_date:desc'}))
   log.append(result); break
 (P/'search_log.json').write_text(json.dumps(log,indent=2,ensure_ascii=False),encoding='utf-8')
-paths=subprocess.run(['git','-C','~/math-open-problems','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf-8').stdout.splitlines()
+paths=subprocess.run(['git','-C','~/private-source','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf-8').stdout.splitlines()
 hits=[x for x in paths if 'C0097' in x or 'connective' in x.lower()]
 (P/'recorded_paths.txt').write_text('\n'.join(hits),encoding='utf-8')
 print('Recorded paths:',hits[:30],flush=True)

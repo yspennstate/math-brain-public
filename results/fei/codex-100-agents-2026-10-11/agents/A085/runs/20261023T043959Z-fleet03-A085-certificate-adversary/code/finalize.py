@@ -5,7 +5,7 @@ def get(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def put(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
-protocol=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 fields=get(protocol)['required_per_run']
 pilot=get(R/'out/PILOT.json');main=get(R/'out/VALIDATION.json');bound=get(R/'out/BOUNDARY.json');spec=get(R/'out/FROZEN_SPEC.json')
 assert main['status']==pilot['status']==bound['status']=='PASS'

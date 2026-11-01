@@ -3,13 +3,13 @@ import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def dump(p,obj):p.write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-reportbase=Path(r'math-open-problems/reports\fei-2026-10-11')
+reportbase=Path(r'private-source/reports\fei-2026-10-11')
 protocol=json.loads((reportbase/'EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 source075=Path(r'agents\A075\runs\20261023T133516Z-fleet03-A075-search-to-theorem-bridge')
 source080=Path(r'agents\A080\runs\20261023T133708Z-fleet03-A080-universal-counterexample-standard')
 old=A/'runs/20261023T130925Z-fleet03-A089-repair-specialist'
 paths=[reportbase/n for n in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
-supp=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+supp=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 paths += [supp/n for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]+list((supp/'sources').glob('*.md'))
 paths += list(Path(r'context').glob('*.txt'))
 paths += [source075/'PROOF.md',source075/'CLAIMS.json',source080/'REPORT.md',source080/'SOURCE_REVIEW.md',old/'PROOF.md',old/'REPORT.md',old/'CLAIMS.json',Path(r'BOARD.md'),Path(r'claude\B18\STREAM_NOTES.md')]

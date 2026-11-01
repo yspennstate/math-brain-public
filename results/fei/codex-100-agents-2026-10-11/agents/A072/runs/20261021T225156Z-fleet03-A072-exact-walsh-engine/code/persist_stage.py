@@ -33,8 +33,8 @@ save(RUN/'out/PRIOR_REPRODUCTION_COMPARISON.json',{'cases':60,'interval_overlap_
 save(RUN/'out/LEAN_ATTEMPT.json',{'statement':'example (s d e v w : ℝ) (h : v + w = s + e) : d + e - v = w - (s - d) := by linarith','command':'python -X utf8 lean_check.py --stmt <statement>','exit_code':1,'output':'SETUP_UNVERIFIED: Compute admission held (hung window or under 5500 MB free); no new compiler process','rung':'not Lean checked'})
 
 sources=[]
-campaign=Path(r'math-open-problems/reports\fei-2026-10-11')
-supp=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+campaign=Path(r'private-source/reports\fei-2026-10-11')
+supp=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 paths=[campaign/n for n in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
 paths += [supp/n for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md','SOURCES.json']]
 paths += [ROOT/'BOARD.md',ROOT/'claude/B15/STREAM_NOTES.md',source/'REPORT.md']

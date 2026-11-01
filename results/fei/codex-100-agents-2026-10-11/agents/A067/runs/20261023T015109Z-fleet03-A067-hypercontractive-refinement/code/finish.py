@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];A=R.parent.parent
-P=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+P=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 full=json.loads((R/'out/FULL.json').read_text(encoding='utf-8'));guard=json.loads((R/'out/OCCUPANCY_GUARD.json').read_text(encoding='utf-8'))
 assert full['status']==guard['status']=='PASS';assert full['checks']==117038 and guard['checks']==18
 aud=Path('agents/A088/runs/20261022T215524Z-fleet03-A088-booleanity-referee')

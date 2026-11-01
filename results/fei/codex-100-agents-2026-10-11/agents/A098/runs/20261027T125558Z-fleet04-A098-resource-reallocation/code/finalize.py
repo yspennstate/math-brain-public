@@ -2,7 +2,7 @@ from pathlib import Path
 import json,hashlib,copy,datetime
 
 R=Path(__file__).resolve().parents[1];O=R/'out';AG=R.parent.parent
-CAN=Path(r'math-open-problems/reports\fei-2026-10-11')
+CAN=Path(r'private-source/reports\fei-2026-10-11')
 def read(p):return p.read_text(encoding='utf-8-sig')
 def put(p,s):p.write_bytes(s.encode('utf-8'))
 def save(p,x):put(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')

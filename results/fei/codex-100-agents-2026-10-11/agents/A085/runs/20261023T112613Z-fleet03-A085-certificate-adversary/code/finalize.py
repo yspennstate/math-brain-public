@@ -18,7 +18,7 @@ assert main['helper_sha256']==pilot['helper_sha256']==spec['helper_sha256']==sha
 assert get(R/'out/ENDPOINT_SPEC.json')['endpoint_helper_sha256']==sha(R/'code/endpoint.py')
 assert main['embedding']['source_prefix_states']==spec['embedding_source_prefix_states']
 assert main['embedding']['zero_credit_source_queries']==spec['embedding_zero_credit_queries']
-protocol=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');fields=get(protocol)['required_per_run']
+protocol=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');fields=get(protocol)['required_per_run']
 source=BASE/'agents/A079/runs/20261023T105923Z-fleet03-A079-correlated-auxiliaries'
 old=next(c for c in get(source/'CLAIMS.json') if c['claim_id']=='A079-ZERO-SINGLETON-GHOST-CREDIT-SHARP')
 review=copy.deepcopy(old)

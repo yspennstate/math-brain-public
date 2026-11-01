@@ -11,7 +11,7 @@ assert sha(R/'code/check.py')==read(O/'spec.json')['helper_sha256']
 runpy.run_path(str(R/'code/scalar_certificate.py'),run_name='__main__')
 runpy.run_path(str(R/'code/overlap.py'),run_name='__main__')
 assert read(O/'scalar_certificate.json')['status']==read(O/'overlap_counterexample.json')['status']=='PASS'
-proto_path=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+proto_path=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 proto=read(proto_path)
 previous=A/'runs/20261023T053924Z-fleet03-A017-recursive-addressing'
 source=A/'runs/20261021T213328Z-fleet03-A017-recursive-addressing/out/boolean_counterexample.json'

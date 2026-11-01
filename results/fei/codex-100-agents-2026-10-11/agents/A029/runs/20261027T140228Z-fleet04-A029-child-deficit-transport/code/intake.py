@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib
 r=Path(__file__).resolve().parents[1]; agents=r.parents[2]; project=agents.parent
-paths=[project/'BOARD.md',project/'claude/B06/STREAM_NOTES.md',agents/'A029/STATUS.md',Path(r'~\AGENTS.md'),Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')]
+paths=[project/'BOARD.md',project/'claude/B06/STREAM_NOTES.md',agents/'A029/STATUS.md',Path(r'~\AGENTS.md'),Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')]
 for a,d in [('A028','20261027T103152Z-fleet04-A028-stopping-tree-payment'),('A012','20261027T062634Z-fleet04-A012-sparse-activation-accounting'),('A096','20261027T055827Z-fleet04-A096-live-gap-ledger'),('A097','20261027T092641Z-fleet04-A097-cross-route-transfer'),('A029','20261026T213208Z-fleet04-A029-child-deficit-transport')]:
  p=agents/a/'runs'/d
  for n in ['REPORT.md','DERIVATION.md','PROOF.md','CLAIMS.json']:

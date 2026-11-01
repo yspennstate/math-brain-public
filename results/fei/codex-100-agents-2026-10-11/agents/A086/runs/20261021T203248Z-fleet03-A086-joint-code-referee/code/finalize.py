@@ -3,7 +3,7 @@ import json, hashlib, datetime as dt
 BASE=Path(__file__).resolve().parents[1]
 OWN=BASE.parents[1]
 SOURCE=OWN.parent/'A095'/'runs'/'20261021T180853Z-fleet03-A095-restricted-result-extraction'
-PROTOCOL=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+PROTOCOL=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 RUN=BASE.name
 def read(p): return json.loads(p.read_text(encoding='utf-8-sig'))
 def write(p,value): p.write_text(json.dumps(value,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')

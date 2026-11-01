@@ -2,8 +2,8 @@ import datetime as dt,hashlib,json
 from pathlib import Path
 
 R=Path(__file__).resolve().parents[1]; HOME=R.parents[1]
-PROTO=Path(r'math-open-problems/reports\fei-2026-10-11')
-BASE=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+PROTO=Path(r'private-source/reports\fei-2026-10-11')
+BASE=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 CONTEXT=Path(r'context')
 OLD=R.parent/'20261014T055119Z-fleet05-A019-orthogonality-extensions'
 def readj(p):return json.loads(p.read_text(encoding='utf-8-sig'))

@@ -24,7 +24,7 @@ p['blockers']=[x for x in p['blockers'] if not x.startswith('Two ACTIVE')]
 p['blockers'].insert(0,'General mask hereditary spectral-entropy/source bill and growing profile count remain unpaid; original240 enlargement must not be advertised as same96 or an active old-Xi identity.')
 save(R/'PROGRESS.json',p);save(R/'PACKET_DELTA.json',p)
 report=(R/'REPORT.md').read_text(encoding='utf-8');prefix,oldbridge=report.rsplit('\n\nUniversal bridge:',1)
-heads=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']['report_fields']
+heads=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']['report_fields']
 blocks=prefix.split('\n\n# ');bodies=[]
 for i,block in enumerate(blocks):
     marker='# '+heads[i]+'\n\n' if i==0 else heads[i]+'\n\n'

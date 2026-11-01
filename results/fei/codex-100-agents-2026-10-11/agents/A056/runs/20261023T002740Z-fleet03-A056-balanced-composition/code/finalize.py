@@ -2,7 +2,7 @@ from pathlib import Path
 from fractions import Fraction
 import json,hashlib,datetime
 r=Path(__file__).resolve().parents[1];a=r.parents[1];b=a.parents[1]
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(protocol_path.read_text(encoding='utf-8'))
 def write(name,obj):(r/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()

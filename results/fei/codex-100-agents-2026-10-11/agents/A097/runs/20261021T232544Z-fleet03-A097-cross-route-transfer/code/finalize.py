@@ -22,7 +22,7 @@ status='STATE: A097 stage17 saved: A096 active-reset v1 independently HOLDS; one
 (ROOT/'STATUS.md').write_text(status,encoding='utf-8')
 with (ROOT/'WORKLOG.md').open('a',encoding='utf-8') as f:f.write('\n'+stamp+' stage17: reconstructed A096 canonical active-reset theorem (HOLDS), then paid one control exposure after any proper active prefix from SAME original rate18 bank: off CE excess<11e, erasure<12e, extra<8e versus original reserve>=20ae.48 roots/256 histories/9649 exact assertions PASS. Lean admission refused, not launched. Next second mixed query; full FEI OPEN.\n')
 with (ROOT/'LEARNED.md').open('a',encoding='utf-8') as f:f.write('\nStage17 durable transfer: for r>=2, the original K=2C0+10 bank exceeds W=c+10e(a+b+r) by >=20ae. A control Fourier-pair l1 sum<=4e gives B<12e; actual off-child likelihood has kappa^-1<=1+(e/s)/2, vacuum nonnegative refund, and full signed excess<11e. One control reset to same-R floor costs<W+8e. Active-prefix reach*e stays e_root, so original reserve pays with>=12e_root left and rate18 structurally. Full inherited complementary reference is essential. This does not yet prove repeated mixed-query payment; r1 boundary is excluded because e/s can equal1. A096 active reset@1 independently reconstructed; no repair required.\n')
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 pf={x.split(' (')[0] for x in protocol['progress_fields']};cf=set(protocol['claim_fields'])
 assert set(progress)==pf,(set(progress)^pf)
 assert all(set(c)==cf for c in [old,new])

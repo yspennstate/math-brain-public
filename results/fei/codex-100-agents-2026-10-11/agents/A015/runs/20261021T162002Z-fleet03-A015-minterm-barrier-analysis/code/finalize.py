@@ -4,7 +4,7 @@ import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1]
 A=R.parents[1]
 TEAM=A.parents[1]
-PROTOCOL=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+PROTOCOL=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 def read(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
 def write(p,x):Path(p).write_text(json.dumps(x,indent=2)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()

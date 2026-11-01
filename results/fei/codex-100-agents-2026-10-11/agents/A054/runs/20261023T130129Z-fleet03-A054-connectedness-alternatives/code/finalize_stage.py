@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1];FLEET=A.parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(name,obj):(R/name).write_text(json.dumps(obj,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-base=Path('math-open-problems/reports/fei-2026-10-11');P=read(base/'EXECUTION_PROTOCOL.json')
+base=Path('private-source/reports/fei-2026-10-11');P=read(base/'EXECUTION_PROTOCOL.json')
 main=read(R/'out/EXACT_CHECK.json');ind=read(R/'out/INDEPENDENT_CHECK.json');pilot=read(R/'out/PILOT.json')
 assert all(o['status']=='PASS' for o in [main,ind,pilot]);total=main['assertions']+ind['assertions']
 prev=A/'runs/20261023T105740Z-fleet03-A054-connectedness-alternatives'

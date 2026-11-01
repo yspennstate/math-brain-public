@@ -70,7 +70,7 @@ entry=f'\n\n{now} [{R.name}] Adaptive full-child Gibbs tree identity proved anal
 with (home/'WORKLOG.md').open('a',encoding='utf-8',newline='') as f:f.write(entry)
 lesson=f'\n\n{now}: With optimal affine/character representatives at every node, the complete local Gibbs identity telescopes exactly: Droot+Sleaf+C sum rho R+sum rho(W+G)=kappa E(query bits). Occupied W must retain unconditional exterior reference. Aggregate U/V control requires an explicit relative occupation hypothesis; local spectral spaces need not form one path law. Exact phase deficit losses stay signed on RHS. This is an upper capacity, not ORIGINAL lower funding. Finite n<=3 main C>=2 proper children cannot give negative reserves (all have <=2 bits, FEI2); use the explicit noncritical K1 point defect as that harness guard.\n'
 with (home/'LEARNED.md').open('a',encoding='utf-8',newline='') as f:f.write(lesson)
-proto=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+proto=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 expected=[x.split(' (')[0] for x in proto['required_per_run']['progress_fields']]
 assert set(progress)==set(expected)
 assert set(claim)==set(proto['required_per_run']['claim_fields'])

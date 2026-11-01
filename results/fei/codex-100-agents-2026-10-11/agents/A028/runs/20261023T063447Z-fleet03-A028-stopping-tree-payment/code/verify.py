@@ -14,7 +14,7 @@ for row in receipt['files']:
 claim=read(R/'CLAIMS.json')[0];progress=read(R/'PROGRESS.json')
 assert claim['version']==8 and claim['statement_sha256']==hashlib.sha256(claim['exact_statement'].encode()).hexdigest()
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()
-proto=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+proto=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 assert set(claim)==set(proto['required_per_run']['claim_fields'])
 fields=set(proto['required_per_run']['progress_fields']);fields.remove('packet_ids (one primary ID, for compatibility)');fields.add('packet_ids')
 assert set(progress)==fields and progress['gap_id']=='C019' and progress['packet_ids']==['A028']

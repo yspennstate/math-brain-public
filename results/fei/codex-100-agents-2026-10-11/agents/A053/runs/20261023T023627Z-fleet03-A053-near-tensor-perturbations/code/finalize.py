@@ -4,7 +4,7 @@ import json, hashlib
 ROOT=Path(__file__).resolve().parents[3]
 RUN=Path(__file__).resolve().parents[1]
 CAMP=ROOT.parents[1]
-PROTO=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+PROTO=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 def write(p,s): p.write_text(s,encoding='utf-8',newline='\n')
 def save(p,x): write(p,json.dumps(x,indent=2)+'\n')
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()

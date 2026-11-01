@@ -19,9 +19,9 @@ for d in base.glob('probability_1000_intake_*'):
    for i,line in enumerate(p.read_text(encoding='utf8').splitlines(),1):
     if 'C0031' in line:print('LEDGER',str(p),i,line,flush=True)
 import subprocess
-p=subprocess.run(['git','-C','~/math-open-problems','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8',timeout=60)
+p=subprocess.run(['git','-C','~/private-source','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8',timeout=60)
 for name in p.stdout.splitlines():
  if 'c0031' in name.lower() or 'heavy_tailed_circular' in name.lower():
   print('PUBLISHED_PATH',name,flush=True)
-  q=subprocess.run(['git','-C','~/math-open-problems','show','origin/master:'+name],capture_output=True,text=True,encoding='utf8',timeout=60)
+  q=subprocess.run(['git','-C','~/private-source','show','origin/master:'+name],capture_output=True,text=True,encoding='utf8',timeout=60)
   print(q.stdout[:25000],flush=True)

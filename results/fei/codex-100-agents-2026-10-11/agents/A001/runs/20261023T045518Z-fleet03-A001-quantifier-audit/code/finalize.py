@@ -9,7 +9,7 @@ A004=TEAM/'agents/A004/runs/20261023T031926Z-fleet03-A004-constant-and-unit-ledg
 A090=TEAM/'agents/A090/runs/20261023T044021Z-fleet03-A090-independent-reconstruction'
 A003=TEAM/'agents/A003/runs/20261023T021528Z-fleet03-A003-minimal-target-formulation'
 A097=TEAM/'agents/A097/runs/20261023T021120Z-fleet03-A097-cross-route-transfer'
-PROTO=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTO=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def read(p): return json.loads(p.read_text(encoding='utf-8-sig'))
 def write(p,s): p.write_text(s,encoding='utf-8',newline='')
 def dump(p,x): write(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')

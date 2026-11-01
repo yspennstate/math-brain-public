@@ -5,7 +5,7 @@ def read(p):return p.read_text(encoding='utf-8')
 def write(p,s):p.write_text(s,encoding='utf-8')
 def dump(p,x):write(p,json.dumps(x,ensure_ascii=False,indent=2)+'\n')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 P=json.loads(read(protocol));check=json.loads(read(R/'out/CHECK.json'))
 assert check['status']=='PASS'
 source=B/'A016/runs/20261023T000905Z-fleet03-A016-addressing-benchmark'

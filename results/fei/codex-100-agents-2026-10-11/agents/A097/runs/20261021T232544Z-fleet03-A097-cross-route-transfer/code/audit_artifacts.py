@@ -7,7 +7,7 @@ s=s.replace('The first unpaid line is a repeated/interleaved non-active reset fr
 s=s.replace('No shared campaign tree, other agent folder, git state, external system, or brain record is modified.','No shared campaign tree, other agent folder, git state, external system or research brain record is edited; mandatory wake/checklist bookkeeping and recall-tool-managed index activity are separate from the research output.')
 p.write_text(s,encoding='utf-8')
 (RUN/'out/CHECKPOINT.md').write_text('STATE: stage17 complete locally; A097-MIXED-ACTIVE-CONTROL-RESET-SAME-ANCESTOR@1 saved with analytic proof and15538 exact assertions; full FEI OPEN, new independent review pending.\nNEXT: A096/A094/A086 review; pay dummy-data or off-branch canonical reset using SAME diminished original bank, all old debits and full terminal references retained. No git commit or remote adoption claimed.\n',encoding='utf-8')
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 progress=read(RUN/'PROGRESS.json');claims=read(RUN/'CLAIMS.json')
 assert set(progress)=={x.split(' (')[0] for x in protocol['progress_fields']}
 assert all(set(c)==set(protocol['claim_fields']) for c in claims)

@@ -12,7 +12,7 @@ rp=R/'REPORT.md';s=rp.read_text(encoding='utf-8');s=s.replace('## proof dependen
 pr=R/'PROOF.md';pr.write_text(pr.read_text(encoding='utf-8')+'\n## 6. Complete finite conditional-account replay\n\n'+line+'\n',encoding='utf-8')
 with (A/'WORKLOG.md').open('a',encoding='utf-8') as f:f.write('\n2026-10-23 final conditional-ledger verification: '+line+'\n')
 # Exact protocol keys, including its human-readable compatibility annotation.
-protocol=load(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=load(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 def find(x,key):
  if isinstance(x,dict):
   if key in x:return x[key]

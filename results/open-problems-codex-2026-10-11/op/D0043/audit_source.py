@@ -21,7 +21,7 @@ for d in base.glob('probability_1000_intake_*'):
     if 'D0043' in line: matches.append(str(f)+'\n'+line)
 (r/'prior_ledger_matches.txt').write_text('\n'.join(matches),encoding='utf8')
 print('\nPRIOR LEDGERS', '\n'.join(matches)[:15000],flush=True)
-p=subprocess.run(['git','-C','~/math-open-problems','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8',timeout=90)
+p=subprocess.run(['git','-C','~/private-source','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8',timeout=90)
 paths=[x for x in p.stdout.splitlines() if 'd0043' in x.lower()]
 (r/'prior_repository_paths.txt').write_text('\n'.join(paths),encoding='utf8')
 print('REPOSITORY D0043 PATHS', '\n'.join(paths)[:4000],flush=True)

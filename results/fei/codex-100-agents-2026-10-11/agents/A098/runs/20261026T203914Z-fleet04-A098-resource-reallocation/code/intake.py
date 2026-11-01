@@ -1,8 +1,8 @@
 from pathlib import Path
 import json,hashlib
 RUN=Path(__file__).resolve().parents[1]; OUT=RUN/'out';OUT.mkdir(exist_ok=True)
-BASE=RUN.parents[3]; CAN=Path(r'math-open-problems/reports\fei-2026-10-11')
-SUP=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+BASE=RUN.parents[3]; CAN=Path(r'private-source/reports\fei-2026-10-11')
+SUP=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 receipts=[]
 def read(p):
     b=p.read_bytes();receipts.append({'path':str(p),'bytes':len(b),'sha256':hashlib.sha256(b).hexdigest()})

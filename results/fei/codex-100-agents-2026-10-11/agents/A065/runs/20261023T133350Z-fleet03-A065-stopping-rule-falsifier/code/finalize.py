@@ -2,7 +2,7 @@ from pathlib import Path
 import json,hashlib,copy,datetime
 
 ROOT=Path(__file__).resolve().parents[1]; OWN=ROOT.parents[1]; BASE=OWN.parents[1]
-PROTOCOL=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+PROTOCOL=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 SOURCE=BASE/'agents/A087/runs/20261023T121304Z-fleet03-A087-restriction-referee'
 PREV=OWN/'runs/20261023T112150Z-fleet03-A065-stopping-rule-falsifier'
 def read(p):return json.loads(p.read_bytes().decode('utf-8-sig'))

@@ -5,7 +5,7 @@ import json,hashlib,datetime,copy
 ROOT=Path(__file__).resolve().parents[1]
 AGENT=ROOT.parents[1]
 BASE=Path(r'~\brain_workers\FEI100_20261011')
-PROTOCOL=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+PROTOCOL=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 SOURCE=BASE/'agents/A059/runs/20261022T224007Z-fleet03-A059-decomposition-depth'
 def write(name,obj):
  p=ROOT/name;p.parent.mkdir(parents=True,exist_ok=True)

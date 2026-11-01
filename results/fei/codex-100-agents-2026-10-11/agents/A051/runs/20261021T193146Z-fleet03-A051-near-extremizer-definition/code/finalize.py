@@ -2,8 +2,8 @@ from pathlib import Path
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1]; A=R.parents[1]
 TEAM=A.parents[1]
-PROTO=Path('math-open-problems/reports/fei-2026-10-11')
-SUPP=Path('math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+PROTO=Path('private-source/reports/fei-2026-10-11')
+SUPP=Path('private-source/research_pushes/2026-10-11-full-fei-100-agents')
 RUN=R.name
 def save(p,x):
     p=R/p

@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib,datetime,copy
 RUN=Path(__file__).resolve().parents[1]; OWN=RUN.parents[1]; OUT=RUN/'out'
-BASE=OWN.parents[1]; CAN=Path(r'math-open-problems/reports\fei-2026-10-11')
+BASE=OWN.parents[1]; CAN=Path(r'private-source/reports\fei-2026-10-11')
 def read(p):return p.read_text(encoding='utf-8-sig')
 def save(p,obj):p.write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()

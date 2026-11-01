@@ -7,7 +7,7 @@ def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 cert=json.loads((root/'out/CERTIFICATE.json').read_text(encoding='utf-8'))
 small=json.loads((root/'out/SMALL_CHECKS.json').read_text(encoding='utf-8'))
 assert cert['status']==small['status']=='PASS'
-protocol_path=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol_path=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 protocol=json.loads(protocol_path.read_text(encoding='utf-8'))
 statement='For arbitrary Boolean A,B sharing a finite uniform data cube, let delta=Pr(A!=B), E=I(AB). For balanced independent selector phase s and fresh fair t, let F choose A iff t=1,s=-1. Its ACTUAL original ticket is B0=4Inf_t(F)+I(F_t+ F_t-)=E/2+delta(2+I(s)). If H(s)<=6(I(s)-1)+7/5, its coherent overhead D=H(F)-H(A)/4-3H(B)/4 satisfies 0<=D<=3B0-9E/8-3delta/5. All adaptive reach-weighted signed coherent costs telescope with both full inherited cores and terminals retained. An explicit 12288-variable Boolean NAND formula g has certified 139/100<H(g)-6I(g)<7/5, so s=x*g fails the v9 surplus criterion but is admitted by this stronger theorem after an actual positive old debit. With A=1,B=x and s_m=x0*product of m disjoint copies of g, the SAME price3 account fits m=1..10 and FAILS at m=11 by more than9/400; the prior first debit remains positive. This is an actual Boolean source-price counterexample, not an FEI counterexample. Existence of a finite universal ticket price P(K) for all balanced selectors is equivalent to full FEI: P(K) implies FEI(2K), and FEI(C) implies P(3+C/2).'
 prior=json.loads((agent/'runs/20261023T123737Z-fleet03-A058-overlapping-compositions/CLAIMS.json').read_text(encoding='utf-8'))[0]

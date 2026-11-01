@@ -105,7 +105,7 @@ def main():
             if not src.get("url"):   # the integrator refuses an entry without one (10 Oct 10:0x, 13 of 13)
                 ax = re.search(r"(\d{4}\.\d{4,5})", json.dumps(q.get(pid, {}).get("source") or {}))
                 src["url"] = ("https://arxiv.org/abs/%s" % ax.group(1) if ax else
-                              "https://github.com/yspennstate/math-open-problems/tree/master/probability_1000")
+                              "private-source-repository")
             e["source"] = src
             if e.get("kind") in ("theorem", "lemma") and not e.get("proof_text"):
                 e["kind"], e["proof_text"] = "concept", None

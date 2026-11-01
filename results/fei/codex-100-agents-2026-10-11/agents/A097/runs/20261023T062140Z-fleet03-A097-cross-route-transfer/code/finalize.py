@@ -6,7 +6,7 @@ def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(name,v):
  (RUN/name).write_text(json.dumps(v,indent=2,ensure_ascii=False,default=str)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 v=read(RUN/'out/VALIDATION.json');pilot=read(RUN/'out/PILOT.json');audit=read(RUN/'out/INDEPENDENT_AUDIT.json')
 assert all(t['status']=='PASS' for t in (v,pilot,audit))
 source=BASE/'agents/A096/runs/20261023T053800Z-fleet03-A096-live-gap-ledger/CLAIMS.json'

@@ -5,7 +5,7 @@ def read(p):return Path(p).read_text(encoding='utf-8-sig')
 def save(p,s):Path(p).write_text(s,encoding='utf-8')
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def js(p,o):save(p,json.dumps(o,ensure_ascii=False,indent=2)+'\n')
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');P=json.loads(read(protocol));fields=P['required_per_run']
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');P=json.loads(read(protocol));fields=P['required_per_run']
 main=json.loads(read(R/'out/EXACT_CHECK.json'));assert main['status']=='PASS'
 source52=team/'agents/A052/runs/20261027T075723Z-fleet04-A052-critical-source-structure'
 sources=[protocol,team/'BOARD.md',team/'claude/B11/STREAM_NOTES.md',A/'STATUS.md',A/'LEARNED.md',source52/'PROOF.md',source52/'CLAIMS.json',A/'runs/20261026T222013Z-fleet04-A054-connectedness-alternatives/PROOF.md']

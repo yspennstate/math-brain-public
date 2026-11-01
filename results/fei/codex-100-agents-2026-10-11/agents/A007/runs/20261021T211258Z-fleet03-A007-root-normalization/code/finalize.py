@@ -5,7 +5,7 @@ def rd(p): return Path(p).read_text(encoding='utf-8-sig')
 def save(p,t): Path(p).write_text(t,encoding='utf-8')
 def js(p,d): save(p,json.dumps(d,indent=2,ensure_ascii=False)+'\n')
 def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
-protocol=json.loads(rd(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=json.loads(rd(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 results={n:json.loads(rd(ROOT/'out'/n)) for n in ['pilot.json','checks.json','scale_checks.json','payment_checks.json']}
 assert all(x['status']=='PASS' for x in results.values())
 lean=json.loads(rd(ROOT/'out/lean_attempt.json'))

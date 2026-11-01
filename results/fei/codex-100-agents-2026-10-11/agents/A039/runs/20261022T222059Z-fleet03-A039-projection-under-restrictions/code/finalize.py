@@ -5,7 +5,7 @@ import hashlib,json
 R=Path(__file__).resolve().parents[1]
 OWN=R.parents[1]
 BASE=OWN.parents[1]
-PROTO=Path("math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json")
+PROTO=Path("private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json")
 def read(p):return p.read_text(encoding="utf-8")
 def write(p,s):p.write_text(s,encoding="utf-8")
 def dump(p,v):write(p,json.dumps(v,indent=2,ensure_ascii=False)+"\n")

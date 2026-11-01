@@ -25,7 +25,7 @@ for agent,run in [('A039','20261026T214918Z-fleet04-A039-projection-under-restri
     for f in ['PROOF.md','CLAIMS.json']:
         p=BASE/'agents'/agent/'runs'/run/f
         source(p,'PROOF read in full; CLAIMS byte pin/intake only' if f=='PROOF.md' else 'claim metadata pin, not new independent acceptance')
-campaign=Path(r'math-open-problems/reports\fei-2026-10-11')
+campaign=Path(r'private-source/reports\fei-2026-10-11')
 for f in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']:
     source(campaign/f,'execution protocol full read; other campaign baselines relevant sections refreshed, not a new complete source audit')
 for p in (BASE/'context').glob('*.txt'):source(p,'prior accepted paper baseline; selected entropy/restriction/relative-entropy/singularity excerpts reread; explicit cp1252 decoding')

@@ -5,7 +5,7 @@ RUN=Path(__file__).resolve().parents[1];AGENT=RUN.parents[1];FLEET=AGENT.parents
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def write(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol_path=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=read(protocol_path)
+protocol_path=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=read(protocol_path)
 check=read(RUN/'out/CHECK.json');boundary=read(RUN/'out/BOUNDARY_CERTIFICATE.json');real=read(RUN/'out/REAL_GUARD.json');formal=read(RUN/'out/LEAN_RESULT.json')
 assert [x['status'] for x in [check,boundary,real]]==['PASS']*3
 assert check['assertions']==6860 and real['exact_assertions']==10 and boundary['exact_assertions']==3
@@ -46,7 +46,7 @@ p=AGENT/'LEARNED.md';s=p.read_text(encoding='utf-8')
 if tag not in s:
  with p.open('a',encoding='utf-8') as f:f.write('\n## Stage6 '+tag+' selected control under the same account\n\n- A069-DEPTH-FREE-PAIRED-TRANSFER-AND-ONE-CHILD-HISTORY@1 independently HOLDS unchanged; prior A070 flag theorem independently accepted by A069, receipt consumed without self-review.\n- After all actual core bits, paired signs reduce to u*q2 (d0) or c*q2 (d1). Marginalize the ORIGINAL Q in the queried frequency; do not reset its flag. For u, d0 has Inf1 and DeltaC=(2rho-rho^2)log2(5)<4; d1 has Inf0 and DeltaC=t log2((1+3t)/(4t))+(1-t)log2(5/4)<1. Thus new expected positive spend<=actual disagreement density, strictly<1/512 in the specified nine-bit point edit.\n- Old<3/5 debit plus<1/512 costs SAME original5/8 owner, spare>59/2560. Previous spare>1/40 shrinks by the new booking1/512; no family/reference/rate change or budget renewal. Both actual u children nonconstant; c children may be constant and still carry full inherited CE.\n- Alternate c costs e0=(1-2rho+2rho^2)log2(5/4)-2rho on d0 leaves. Exact original P+(511/512)log2(5/4)-5/8>3/16, so c overspends THAT earmark allm>=4. This does not bound the entire owner surplus or refute FEI/source theorem.\n- Normalized real a=(3+4y)/5,b=1 give paired root norm1 but physical leaf norms37/25,13/25 and empty-control mass t/5, while Boolean substitution gives t. The used unit-sign terminal normalization is real content.\n- Next unpaid step: actual private query after u under already marginalized Q, SAME diminished original bank and old debit; arbitrary prior core-reference payment still OPEN. New continuation/obstruction pending independent review.\n')
 # Fresh read-only source byte receipts. No source tree is modified.
-base=Path(r'math-open-problems/reports/fei-2026-10-11')
+base=Path(r'private-source/reports/fei-2026-10-11')
 paths=[protocol_path,FLEET/'BOARD.md',FLEET/'claude/B14/STREAM_NOTES.md',source,source.parent/'DERIVATION.md',source.parent/'REPORT.md',FLEET/'agents/A088/runs/20261022T215524Z-fleet03-A088-booleanity-referee/REPORT.md',AGENT/'runs/20261021T173219Z-fleet03-A070-analytic-route-referee/DERIVATION.md']
 paths += [base/n for n in ['README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json']]
 manifest=[]

@@ -5,7 +5,7 @@ R=Path(__file__).resolve().parents[1]
 HOME=R.parents[1]
 FLEET=HOME.parents[1]
 SRC=FLEET/'agents/A096/runs/20261023T053800Z-fleet03-A096-live-gap-ledger'
-PROTO=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+PROTO=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def write(p,s):p.write_text(s,encoding='utf-8',newline='\n')
 def js(p,x):write(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')

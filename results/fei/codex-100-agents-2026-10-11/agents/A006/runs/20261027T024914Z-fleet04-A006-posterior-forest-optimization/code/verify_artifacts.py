@@ -2,7 +2,7 @@ from pathlib import Path
 import json,hashlib
 R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def rd(p):return json.loads(p.read_text(encoding='utf-8'))
-protocol=rd(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=rd(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
 claims=rd(R/'CLAIMS.json');progress=rd(R/'PROGRESS.json')
 expected={k.split(' ')[0] for k in protocol['claim_fields']}
 assert all(set(c)==expected for c in claims)

@@ -184,7 +184,7 @@ entry=f'\n{now} - {RUN}: Independently reconstructed A032 signed-tag reset uncha
 for filename in ('WORKLOG.md','LEARNED.md'):
  oldtext=read(AGENT/filename)
  if RUN not in oldtext:write(AGENT/filename,oldtext+entry)
-sources=[source_run/'PROOF.md',source_run/'CLAIMS.json',BASE/'agents/A079/runs/20261022T225318Z-fleet03-A079-correlated-auxiliaries/PROOF.md',BASE/'claude/B07/STREAM_NOTES.md',Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),Path('math-open-problems/research_pushes/2026-10-11-full-fei-100-agents/sources/ROUTE_MAP_CURATED.md')]
+sources=[source_run/'PROOF.md',source_run/'CLAIMS.json',BASE/'agents/A079/runs/20261022T225318Z-fleet03-A079-correlated-auxiliaries/PROOF.md',BASE/'claude/B07/STREAM_NOTES.md',Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),Path('private-source/research_pushes/2026-10-11-full-fei-100-agents/sources/ROUTE_MAP_CURATED.md')]
 dump(ROOT/'out/SOURCE_MANIFEST.json',[{'path':str(p),'sha256':sha(p),'role':'source actually read; final local hash'} for p in sources])
 claimfields=set('claim_id version exact_statement hypotheses statement_sha256 contributors proof_source proof_dependencies review_records status supersedes refutes first_unproved_line next_consumers'.split())
 progressfields=set('protocol_revision run_id stream packet_id gap_id attempt_id method mathematical_delta deliverable_status mathematical_status claim_versions_used claims_created_or_changed source_artifacts next_consumers next_action stagnant_substantive_attempts blockers packet_ids'.split())

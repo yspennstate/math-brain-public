@@ -8,10 +8,10 @@ def read(p,role):
     except UnicodeDecodeError: s=raw.decode('cp1252'); enc='cp1252'
     sources.append(dict(path=str(p),sha256=hashlib.sha256(raw).hexdigest(),bytes=len(raw),encoding=enc,role=role))
     return s
-base=Path('math-open-problems/reports/fei-2026-10-11')
+base=Path('private-source/reports/fei-2026-10-11')
 for name in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']:
     read(base/name,'campaign protocol/navigation read in full by intake; relevant excerpts reviewed')
-supp=Path('math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+supp=Path('private-source/research_pushes/2026-10-11-full-fei-100-agents')
 for name in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']:
     s=read(supp/name,'supplement intake'); print(name, len(s), s[:220].replace('\n',' '))
 context=Path('context')

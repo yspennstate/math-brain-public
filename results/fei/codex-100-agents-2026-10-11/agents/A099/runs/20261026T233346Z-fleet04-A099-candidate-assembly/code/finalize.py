@@ -98,7 +98,7 @@ labels=re.findall(r'\\label\{([^}]+)\}',text);refs=re.findall(r'\\(?:ref|eqref)\
 assert len(labels)==len(set(labels));assert not set(refs)-set(labels)
 assert text.count(r'\begin{conjecture}')==base.count(r'\begin{conjecture}')
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()
-proto=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+proto=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 claimfields=set(proto['required_per_run']['claim_fields']);assert all(set(c)==claimfields for c in claims)
 progressfields={x.split(' (')[0] for x in proto['required_per_run']['progress_fields']};assert set(old)==progressfields
 for h in proto['required_per_run']['report_fields']:assert h in report

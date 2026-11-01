@@ -3,7 +3,7 @@ import json,hashlib,datetime
 
 run=Path(__file__).resolve().parent.parent
 agent=run.parent.parent
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 old=json.loads((agent/'runs/20261014T111143Z-fleet05-A037-conditional-credit-ledger/PROGRESS.json').read_text(encoding='utf-8'))
 check=json.loads((run/'out/CHECK.json').read_text(encoding='utf-8'))
 audit=json.loads((run/'out/AUDIT.json').read_text(encoding='utf-8'))

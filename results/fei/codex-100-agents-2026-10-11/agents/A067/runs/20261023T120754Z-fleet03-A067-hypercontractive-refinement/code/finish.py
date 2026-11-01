@@ -9,7 +9,7 @@ def sha(b):return hashlib.sha256(b).hexdigest()
 def write(name,v):
  p=R/name;assert p.resolve().is_relative_to(A.resolve());p.parent.mkdir(parents=True,exist_ok=True)
  p.write_text(v if isinstance(v,str) else json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(protocol_path.read_text(encoding='utf-8-sig'))
 sources=[]
 paths=[Path(x['path']) for x in json.loads((PREV/'out/SOURCES.json').read_text())]

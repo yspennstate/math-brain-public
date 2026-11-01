@@ -2,7 +2,7 @@ from pathlib import Path
 import shutil,json,hashlib
 R=Path(__file__).resolve().parents[1];OLD=R.parent/'20261023T023055Z-fleet03-A028-stopping-tree-payment'
 for src,dst in [('check.py','base.py'),('exact_helper.py','exact_helper.py')]:shutil.copyfile(OLD/'code'/src,R/'code'/dst)
-paths=[Path('BOARD.md'),Path('claude/B06/STREAM_NOTES.md'),OLD/'REPORT.md',OLD/'out/DERIVATION.md',OLD/'CLAIMS.json',Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+paths=[Path('BOARD.md'),Path('claude/B06/STREAM_NOTES.md'),OLD/'REPORT.md',OLD/'out/DERIVATION.md',OLD/'CLAIMS.json',Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 receipt=[]
 for p in paths:
     text=p.read_text(encoding='utf-8')

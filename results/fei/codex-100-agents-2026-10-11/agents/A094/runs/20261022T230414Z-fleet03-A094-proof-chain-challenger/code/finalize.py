@@ -62,7 +62,7 @@ paths=[BASE/'BOARD.md',BASE/'claude/B19/STREAM_NOTES.md',OWN/'runs/20261021T1552
     src_run/'CLAIMS.json',src_run/'DERIVATION.md',BASE/'agents/A086/runs/20261021T203248Z-fleet03-A086-joint-code-referee/CLAIMS.json',
     BASE/'agents/A086/runs/20261021T203248Z-fleet03-A086-joint-code-referee/RECONSTRUCTION.md',
     BASE/'agents/A097/runs/20261021T232544Z-fleet03-A097-cross-route-transfer/DERIVATION.md',
-    Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')]
+    Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')]
 save('out/SOURCE_RECEIPTS.json',[{'path':str(p),'sha256':sha(p),'bytes':p.stat().st_size} for p in paths])
 status=f'STATE: Stage17 saved: full A095 all-wide chain HOLDS; one narrow-query prescribed reset paid SAME original rate4, reserve>75/256;{main["reset_cases"]} reset cases/{main["assertions"]} exact checks PASS; FEI OPEN.\nNEXT: A086/A095 review; price second narrow query/reset from SAME diminished ancestor bank with actual first reset debit, all old releases and both complete inherited terminals retained.\n'
 (OWN/'STATUS.md').write_text(status,encoding='utf-8')

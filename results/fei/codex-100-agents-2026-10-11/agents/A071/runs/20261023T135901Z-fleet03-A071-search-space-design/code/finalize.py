@@ -42,7 +42,7 @@ status='STATE: A071 stage21: prime radius-one balls force SINGLETON proper Boole
 line='\n2026-10-23 stage21 13:59UTC: Read updated board and consumed A075 whole-row coherence theorem (independently accepted unchanged); changed from superseded nonempty-drift search to INITIAL partition obstruction. Radius-one Hamming balls have exactly3 residual rows for every proper block of size>=2, hence only singleton proper Boolean decompositions; zero bank entropy discount for all K>=0; H/I->4 and rational3 bank/I->7. Exact120coefficients/94blocks,30 binomial dimensions and256circuits/768query audit passed. New result external review pending; full FEI and original-owner initialization OPEN. Local files verified; supervisor mirrors unverified.\n'
 for name in ['WORKLOG.md','LEARNED.md']:
  with (B/name).open('a',encoding='utf-8') as f:f.write(line)
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 assert set(progress)=={x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']}
 assert all(set(z)==set(protocol['required_per_run']['claim_fields']) for z in [new,review])
 assert len((B/'STATUS.md').read_text(encoding='utf-8').splitlines())==2

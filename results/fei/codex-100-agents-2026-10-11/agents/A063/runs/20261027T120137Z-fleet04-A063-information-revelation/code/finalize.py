@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1]; A=R.parents[1]
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,obj): p.write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 old=R.parent/'20261026T193525Z-fleet04-A063-information-revelation'
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(protocol_path.read_text(encoding='utf-8'))
 prior=json.loads((old/'CLAIMS.json').read_text(encoding='utf-8'))[0]
 cid=prior['claim_id']; cons=['A061','A062','A064','A065','A087','A094','B13 lead']

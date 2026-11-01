@@ -21,10 +21,10 @@ p=rd(OLD/'PROGRESS.json');p.update(run_id=R.name,attempt_id='A099-assembly-v9',m
  mathematical_delta='CHECKPOINT: new phase-funded nonempty changes consumed; independent synthesis/validation in progress.',deliverable_status='CHECKPOINT',mathematical_status='FULL_FEI_OPEN_VALIDATION_PENDING',claims_created_or_changed=[],source_artifacts=[str(R/'out/FROZEN_SPEC.json')],
  next_action='Reconstruct phase-bin and JS refinements, identify exact matched-isospectral nullspace, preserve universal source-price leaf.')
 save(R/'PROGRESS.json',p);save(R/'PACKET_DELTA.json',p)
-protocol=rd(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=rd(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 (R/'REPORT.md').write_text('# A099 version9 checkpoint\n\n'+'\n\n'.join('## '+s+'\n\nCheckpoint: source intake complete, independent validation pending.' for s in protocol['required_per_run']['report_fields'])+'\n\n## Universal bridge\n\nC024/C019 supplied-source profile payment is being assembled; all-dimensional influence-priced source admission remains open.\n',encoding='utf-8')
 (A/'STATUS.md').write_text('STATE: A099 v9 checkpoint saved; reconstructing actual phase-funded nonempty changes, JS refinement and inherited-reference discrepancy; FEI OPEN.\nNEXT: Finish complete-reference audit; assemble exact nullspace and source-admission leaf without repeating canonical-return work.\n',encoding='utf-8')
-sources=[TEAM/'BOARD.md',TEAM/'claude/B20/STREAM_NOTES.md',OLD/'CANDIDATE_MANUSCRIPT.tex',OLD/'CLAIMS.json',OLD/'out/PROOF_DEPENDENCIES.json',Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+sources=[TEAM/'BOARD.md',TEAM/'claude/B20/STREAM_NOTES.md',OLD/'CANDIDATE_MANUSCRIPT.tex',OLD/'CLAIMS.json',OLD/'out/PROOF_DEPENDENCIES.json',Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 for agent,run,files in [('A096','20261023T053800Z-fleet03-A096-live-gap-ledger',['REPORT.md','DERIVATION.md','CLAIMS.json']),('A097','20261023T062140Z-fleet03-A097-cross-route-transfer',['REPORT.md','DERIVATION.md','CLAIMS.json']),('A093','20261023T070224Z-fleet03-A093-literature-and-priority',['REPORT.md','DERIVATION.md','CLAIMS.json']),('A003','20261023T062246Z-fleet03-A003-minimal-target-formulation',['REPORT.md','DERIVATION.md','CLAIMS.json'])]:
  sources += [TEAM/'agents'/agent/'runs'/run/f for f in files]
 save(R/'out/SOURCE_RECEIPTS.json',[{'path':str(pth),'bytes':len(pth.read_bytes()),'sha256':hashlib.sha256(pth.read_bytes()).hexdigest()} for pth in sources])

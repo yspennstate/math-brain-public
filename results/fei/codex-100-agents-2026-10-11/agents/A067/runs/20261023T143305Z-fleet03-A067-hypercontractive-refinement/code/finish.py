@@ -3,7 +3,7 @@ import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];A=R.parents[1];assert A==Path(r'agents\A067')
 def sha(b):return hashlib.sha256(b).hexdigest()
 def write(n,v):(R/n).write_text(v if isinstance(v,str) else json.dumps(v,indent=2)+'\n',encoding='utf-8')
-p=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=json.loads(p.read_text(encoding='utf-8-sig'))
+p=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=json.loads(p.read_text(encoding='utf-8-sig'))
 prev=A/'runs/20261023T120754Z-fleet03-A067-hypercontractive-refinement'
 source=Path(r'agents\A088\runs\20261023T124326Z-fleet03-A088-booleanity-referee\PROOF.md')
 paths=[Path(x['path']) for x in json.loads((prev/'out/SOURCES.json').read_text())]+[source,prev/'PROOF.md',prev/'CLAIMS.json',p]

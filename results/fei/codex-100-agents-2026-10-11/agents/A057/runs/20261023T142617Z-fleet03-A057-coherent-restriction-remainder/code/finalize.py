@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];HOME=R.parents[1];SHARED=HOME.parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def write(p,v):p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 v=read(R/'out/validation.json');assert v['status']=='PASS' and v['core_tables']==256
 sources=[];versions=[]
 for a,run in [('A059','20261023T130150Z-fleet03-A059-decomposition-depth'),('A060','20261023T132943Z-fleet03-A060-composition-sharpness')]:

@@ -6,7 +6,7 @@ def write(p,s):p.write_text(s,encoding='utf-8',newline='\n')
 def save(p,x):write(p,json.dumps(x,indent=2)+'\n')
 results={name:json.loads(read(R/'out'/name)) for name in ['PILOT.json','CHECK.json','BOUNDARY.json','AUDIT.json']}
 assert all(x['status']=='PASS' for x in results.values())
-base=Path(r'math-open-problems/reports\fei-2026-10-11')
+base=Path(r'private-source/reports\fei-2026-10-11')
 protocol=json.loads(read(base/'EXECUTION_PROTOCOL.json'))
 statement='For every integer m>=6, every full-rank quadratic Boolean F2 phase b on 2m bits including affine terms, every set E of k distinct vertices with 1<=k<=2^(m-2), form c by flipping b only on E times {w=0} and G with z children b,c. Choose original rate4, I_X=(I(b)+I(c))/2, D=H(G)-(H(b)+H(c))/2, r4=4I_X-H(G), and inherit original squared-spectral marginals at every physical restriction. For every finite adaptive physical stopping forest below z, its complete actual entropy-drop-minus4-influence debit E_H obeys r4-E_H>m/2-25/12-(2m^2+2m-1)/(4*2^m)>=455/768. Every outcome, old D, actual removed influence J and both full terminal CE/KL bills are retained; no renewal or reset. Units bits.'
 claim={
@@ -39,7 +39,7 @@ assert set(progress)==expected
 save(R/'PROGRESS.json',progress);save(R/'PACKET_DELTA.json',progress)
 parent=Path(r'~\brain_workers\FEI100_20261011')
 sources=[base/f for f in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
-sup=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+sup=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 sources += [sup/f for f in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 sources+=list((sup/'sources').glob('*.md'))+list((parent/'context').glob('*.txt'))
 sources +=[parent/'BOARD.md',parent/'claude/B14/STREAM_NOTES.md',parent/'agents/A088/runs/20261026T201930Z-fleet04-A088-booleanity-referee/PROOF.md',parent/'agents/A088/runs/20261026T201930Z-fleet04-A088-booleanity-referee/REPORT.md',AGENT/'runs/20261023T143305Z-fleet03-A067-hypercontractive-refinement/REPORT.md',AGENT/'runs/20261023T143305Z-fleet03-A067-hypercontractive-refinement/code/check.py',AGENT/'runs/20261023T120754Z-fleet03-A067-hypercontractive-refinement/code/check.py']

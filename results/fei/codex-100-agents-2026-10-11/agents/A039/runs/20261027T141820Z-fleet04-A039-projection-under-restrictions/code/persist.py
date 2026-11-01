@@ -13,7 +13,7 @@ assert check['status']==audit['status']==gamma['status']=='PASS'
 assert check['rows']==612 and audit['trees']==780
 assert F('0.78240592592391')<F(gamma['gamma_lower'])<F(gamma['gamma_upper'])<F('0.78240592592393')
 assert formal['memok_exit']==1 and formal['status']=='ADMISSION_HELD'
-base=Path(r'math-open-problems/reports\fei-2026-10-11');protocol=json.loads(rd(base/'EXECUTION_PROTOCOL.json'))
+base=Path(r'private-source/reports\fei-2026-10-11');protocol=json.loads(rd(base/'EXECUTION_PROTOCOL.json'))
 camp=A.parents[1]
 src48=camp/'agents/A048/runs/20261027T113055Z-fleet04-A048-tensor-stress'
 src36=camp/'agents/A036/runs/20261027T034601Z-fleet04-A036-reference-law-divergence'

@@ -20,10 +20,10 @@ p=rd(OLD/'PROGRESS.json');p.update(run_id=R.name,attempt_id='A099-assembly-v8',m
  next_action='Finish independent supplied-reference proof audit; retain original version/hash and exact remaining shape-payment leaf.',
  blockers=['Universal influence-priced source/floor open','Actual changed conditional-nonempty profile payment open','Two integrated full-candidate audits pending'])
 save(R/'PROGRESS.json',p);save(R/'PACKET_DELTA.json',p)
-fields=rd(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']['report_fields']
+fields=rd(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']['report_fields']
 (R/'REPORT.md').write_text('# A099 candidate assembly v8 checkpoint\n\n'+'\n\n'.join('## '+s+'\n\nCheckpoint: proof intake complete; validation/assembly in progress.' for s in fields)+'\n\n## Universal bridge\n\nC024 supplied-reference history transfer is being assembled; universal source pricing and changed nonempty-profile payment remain open.\n',encoding='utf-8')
 (A/'STATUS.md').write_text('STATE: A099 v8 checkpoint saved; reconstructing supplied-reference first-frontier and repeated original-source canonical returns; FEI OPEN.\nNEXT: Verify complete query/reset ledgers, assemble exact sources and retire only canonical-return liability; changed nonempty profile stays unpaid.\n',encoding='utf-8')
-sources=[Path('~/AGENTS.md'),Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),TEAM/'BOARD.md',TEAM/'claude/B20/STREAM_NOTES.md',OLD/'CANDIDATE_MANUSCRIPT.tex',OLD/'CLAIMS.json',OLD/'out/PROOF_DEPENDENCIES.json']
+sources=[Path('~/AGENTS.md'),Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),TEAM/'BOARD.md',TEAM/'claude/B20/STREAM_NOTES.md',OLD/'CANDIDATE_MANUSCRIPT.tex',OLD/'CLAIMS.json',OLD/'out/PROOF_DEPENDENCIES.json']
 for agent,run,files in [
  ('A096','20261023T010221Z-fleet03-A096-live-gap-ledger',['REPORT.md','DERIVATION.md','CLAIMS.json']),
  ('A097','20261023T021120Z-fleet03-A097-cross-route-transfer',['REPORT.md','DERIVATION.md','CLAIMS.json']),

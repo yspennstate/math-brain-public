@@ -8,7 +8,7 @@ B=Path('~/brain_workers/FEI100_20261011')
 S6=B/'agents/A006/runs/20261023T045540Z-fleet03-A006-posterior-forest-optimization'
 S10=B/'agents/A010/runs/20261023T035817Z-fleet03-A010-universal-residual-falsifier'
 S8=B/'agents/A008/runs/20261023T062437Z-fleet03-A008-gate-label-compression'
-PROTOCOL=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTOCOL=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 P=json.loads(PROTOCOL.read_text(encoding='utf-8'));stamp=datetime.now(timezone.utc).isoformat()
 def save(r,n,x):
     (r/n).write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
@@ -18,7 +18,7 @@ def pin(paths):return [{'path':str(p),'sha256':sha(p),'bytes':p.stat().st_size} 
 source6=read(S6,'CLAIMS.json');source10=read(S10,'CLAIMS.json')
 sourcecopy=source6+source10
 save(OLD,'out/SOURCE_CLAIMS.json',sourcecopy)
-sourcepins=pin([S6/'CONNECTOR.md',S6/'CLAIMS.json',S10/'COMPONENT_FACTOR.md',S10/'CLAIMS.json',S8/'REPORT.md',S8/'MIXTURE_OBSTRUCTION.md',PROTOCOL,B/'BOARD.md',B/'claude/B02/STREAM_NOTES.md',Path('math-open-problems/reports/fei-2026-10-11/source_material/reductions/paper/forests.tex')])
+sourcepins=pin([S6/'CONNECTOR.md',S6/'CLAIMS.json',S10/'COMPONENT_FACTOR.md',S10/'CLAIMS.json',S8/'REPORT.md',S8/'MIXTURE_OBSTRUCTION.md',PROTOCOL,B/'BOARD.md',B/'claude/B02/STREAM_NOTES.md',Path('private-source/reports/fei-2026-10-11/source_material/reductions/paper/forests.tex')])
 save(OLD,'out/SOURCE_PINS.json',sourcepins)
 reviews=[]
 for s in sourcecopy:

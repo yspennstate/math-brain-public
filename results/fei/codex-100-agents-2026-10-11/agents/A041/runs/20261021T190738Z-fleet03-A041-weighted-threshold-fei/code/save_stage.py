@@ -4,7 +4,7 @@ import hashlib,json
 R=Path(__file__).resolve().parents[1];A=R.parent.parent;O=R/'out'
 def save(p,obj):p.write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-base=Path('math-open-problems/reports/fei-2026-10-11')
+base=Path('private-source/reports/fei-2026-10-11')
 protocol=json.loads((base/'EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 prior=A/'runs/20261014T083216Z-fleet05-A041-weighted-threshold-fei'
 reviewbase=Path('agents/A045/runs/20261021T165712Z-fleet03-A045-biased-realizability-referee')
@@ -12,7 +12,7 @@ external=json.loads((reviewbase/'CLAIMS.json').read_text(encoding='utf-8'))[0]
 assert external['statement_sha256']=='ce2b1fec390b3a4c95326ac3e172d77076303d633b838c50aa8dff0382d152e2'
 sourcepaths=[base/x for x in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
 sourcepaths.append(base/'source_material/reductions/paper/biased.tex')
-supp=Path('math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+supp=Path('private-source/research_pushes/2026-10-11-full-fei-100-agents')
 sourcepaths += [supp/x for x in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 sourcepaths += [prior/x for x in ['REPORT.md','TWO_DIRECTION_REFERENCE.md','CLAIMS.json','code/check_stage.py','out/SOURCE_RECEIPTS.json']]
 sourcepaths += [reviewbase/x for x in ['REPORT.md','PROOF.md','CLAIMS.json']]

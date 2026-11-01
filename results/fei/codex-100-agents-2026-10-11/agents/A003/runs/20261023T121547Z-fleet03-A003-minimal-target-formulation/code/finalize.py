@@ -26,7 +26,7 @@ assert sorted(x for x in spectrum(lift) if x)==[F(1,4)]*4
 assert physicalI(core)==F(3,2) and physicalI(lift)==3
 save(R/'out/MAJORITY_LEDGER_AUDIT.json',{'representation':'direct character sums and physical edge counts, independent of main FWHT checker','core_H_bits':2,'core_I':'3/2','lift_L':2,'root_I':3,'K':1,'entropy_residual_root_and_endpoint':1,'endpoint_remaining_influence_residual':'-1/2','status':'PASS'})
 sources=[]
-for p in [ROOT/'BOARD.md',ROOT/'claude/B01/STREAM_NOTES.md',A/'STATUS.md',Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'),ROOT/'agents/A066/runs/20261023T113807Z-fleet03-A066-semigroup-dissipation/REPORT.md',ROOT/'agents/A068/runs/20261023T065356Z-fleet03-A068-antichain-beyond-one-order/REPORT.md']:
+for p in [ROOT/'BOARD.md',ROOT/'claude/B01/STREAM_NOTES.md',A/'STATUS.md',Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'),ROOT/'agents/A066/runs/20261023T113807Z-fleet03-A066-semigroup-dissipation/REPORT.md',ROOT/'agents/A068/runs/20261023T065356Z-fleet03-A068-antichain-beyond-one-order/REPORT.md']:
  sources.append({'path':str(p),'sha256':sha(p),'bytes':p.stat().st_size})
 save(R/'out/FINAL_SOURCE_RECEIPTS.json',sources)
 shutil.copyfile(A/'runs/20261023T062246Z-fleet03-A003-minimal-target-formulation/IMPLICATIONS_BASELINE.md',R/'IMPLICATIONS_BASELINE.md')
@@ -80,7 +80,7 @@ save(R/'PROGRESS.json',progress); (R/'PACKET_DELTA.json').write_bytes((R/'PROGRE
 (A/'STATUS.md').write_text('STATE: A003 stage20 saved: exact matched deferral preserves original entropy bank; SAME-K current-influence compression is FEI(K)-equivalent;1828004 exact checks PASS;full FEI OPEN.\nNEXT: A090/A094 review both ledgers; prove noncircular O(I(core)) quotient-frontier capacity or contraction<1, rather than an unnecessary exact-match reset.\n',encoding='utf-8')
 for name,entry in [('WORKLOG.md',f'\n2026-10-23 stage20 ({run}): consumed A090 deferral/A085 nullspace and A066/A068 handoff distinction. Proved exact all-frontier two-ledger identity and same-K FEI-hardness of current-influence compression from unconditionally cheaply admitted matched lifts. Full556 tables/1828004 assertions PASS41.453s. Maj3 guard independently reconstructed by physical edges. No FEI constant gain; independent review open.\n'),('LEARNED.md','\nStage20 durable: for an L-parity-block lift of arbitrary g, every legal zero-erasure deferral frontier has CE=H(g), remaining I=J_F, queried influence=L I(g)-J_F. ORIGINAL entropy residual K L I-H stays unchanged. Earmarking K times queried influence instead gives K J_F-H, ending K I(g)-H. These are different ledgers. Every core admits an unconditionally paid exact matched lift by H<=n,I>=2^(1-n); inheriting endpoint SAME-K influence allowance is exactly FEI(K). Exact references cannot be improved below H, so an arbitrary positive reset is neither needed nor a remedy. Maj3 L2 K1 distinguishes entropy residual1 from influence residual-1/2.\n')]:
  p=A/name; old=read(p) if p.exists() else ''; p.write_text(old+entry,encoding='utf-8')
-protocol=js(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=js(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
 assert set(claim)==set(protocol['claim_fields'])
 assert set(progress)=={s.split(' (')[0] for s in protocol['progress_fields']}
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()

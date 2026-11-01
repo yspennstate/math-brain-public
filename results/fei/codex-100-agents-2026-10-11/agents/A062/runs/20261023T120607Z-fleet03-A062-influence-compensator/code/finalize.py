@@ -3,7 +3,7 @@ import json, hashlib, datetime
 
 run=Path(__file__).resolve().parents[1]
 agent=run.parents[1]
-proto=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+proto=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 checks=json.loads((run/'out/checks.json').read_text(encoding='utf-8'))
 assert checks['status']=='PASS'
 statement=('For every finite subset law p with all actual coordinate marginals strictly between zero and one, actual marginal product Q, and partition into nonempty blocks with p_j(empty)>=Q_j(empty), let Z record occupied blocks. If R(S)=r(Z) times the product, over occupied blocks, of Q_j conditional on nonempty tilted by lambda_j^rank and normalized, where 0<lambda_j<=1 and r supports p_Z, then TC(p)-KL(p||R)<=TC(p_Z)+log2(e)I(p)-KL(p_Z||r). The occupancy correction cannot be bounded by c I from local eligibility alone: for every k>=2 the actual 2k-bit point-function spectrum with consecutive pair blocks admits the supporting reference R(S)=p_Z(Z)Q(S|Z), all lambda_j=1, all blocks eligible, and both C_p(R)/I and [TC(p)-KL(p||R)]_+/I exceed 3k/2-9/2-1/(2k). These references are constructed, not certified descendants of an original product reference.')

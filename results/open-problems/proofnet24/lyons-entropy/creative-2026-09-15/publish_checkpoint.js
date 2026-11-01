@@ -4,7 +4,7 @@
  */
 const base = load('creative2026_base');
 const prefix = load('creative2026_repo_prefix');
-const repo = 'yspennstate/math-open-problems';
+const repo = 'private-source-repository';
 if (!base || !prefix) throw Error('Missing observed campaign paths');
 const indexed = await tools.exec_command({
   cmd: 'python3 ' + base + '/campaign_admin.py --index',

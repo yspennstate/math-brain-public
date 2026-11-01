@@ -60,7 +60,7 @@ lesson='\n2026-10-23: Do not carry a terminal-only character donor after control
 with (ROOT/'LEARNED.md').open('a',encoding='utf-8',newline='\n') as f:f.write(lesson)
 sources=[R/'PROOF.md',R/'PROOF_OBSTRUCTION.md',R/'code/check.py',R/'code/obstruction.py',R/'code/audit.py',R/'out/CHECK_RESULTS.json',R/'out/OBSTRUCTION.json',R/'out/AUDIT.json',R/'out/BOARD_SNAPSHOT.txt',BASE/'claude/B13/STREAM_NOTES.md',ROOT.parent/'A087/runs/20261023T061410Z-fleet03-A087-restriction-referee/PROOF.md',ROOT.parent/'A039/runs/20261023T032407Z-fleet03-A039-projection-under-restrictions/PROOF.md',ROOT.parent/'A037/runs/20261023T055409Z-fleet03-A037-conditional-credit-ledger/PROOF.md',ROOT.parent/'A039/runs/20261014T055326Z-fleet05-A039-projection-under-restrictions/code/mixed.py']
 dump(R/'out/SOURCE_RECEIPTS.json',[{'path':str(q),'sha256':hashlib.sha256(q.read_bytes()).hexdigest(),'bytes':q.stat().st_size} for q in sources])
-protocol=read(Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=read(Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 assert set(prog)=={q.split(' (')[0] for q in protocol['progress_fields']}
 assert all(set(c)==set(protocol['claim_fields']) for c in claims)
 assert read(R/'PROGRESS.json')==read(R/'PACKET_DELTA.json')

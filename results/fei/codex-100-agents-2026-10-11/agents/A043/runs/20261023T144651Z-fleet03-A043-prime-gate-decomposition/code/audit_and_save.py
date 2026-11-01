@@ -6,7 +6,7 @@ RUN=Path(__file__).resolve().parents[1];AGENT=RUN.parents[1];BASE=AGENT.parents[
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def save(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 source=BASE/'agents/A041/runs/20261023T135351Z-fleet03-A041-weighted-threshold-fei/PROOF.md'
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 P=json.loads(protocol.read_text(encoding='utf-8-sig'));F=P['required_per_run'];CF=F['claim_fields'];PF=[x.split(' (')[0] for x in F['progress_fields']];HF=F['report_fields']
 spec={'helper':'A043-closing-joint-source-review-v1','family':'actual equal-bias Boolean AND2 gates realizing scalar dyadic cells','domain':'j=0,...,12; u=k/64, k=33,...,64; p=2^-j u, omit p=1 deterministic endpoint; additional sharpness p=1/2,3/4,15/16,255/256',
  'case_count':415,'sharpness_controls':4,'symmetry':'none','arithmetic':'exact Fraction physical masses and24-term outward rational atanh logarithms; no floating-point sign','memory_estimate_mb':25,'max_runtime_seconds':55,'automatic_dimension_escalation':False,

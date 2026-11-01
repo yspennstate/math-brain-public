@@ -14,9 +14,9 @@ source_paths=[
  Path(r'~\AGENTS.md'),
  Path(r'BOARD.md'),
  Path(r'claude\B09\STREAM_NOTES.md')]
-campaign=Path(r'math-open-problems/reports\fei-2026-10-11')
+campaign=Path(r'private-source/reports\fei-2026-10-11')
 source_paths += [campaign/n for n in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
-supp=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+supp=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 source_paths += [supp/n for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 for agent,stamp in [('A041','20261014T083216Z-fleet05-A041-weighted-threshold-fei'),('A043','20261014T052009Z-fleet05-A043-prime-gate-decomposition'),('A044','20261014T055346Z-fleet05-A044-non-symmetric-gate-classes')]:
  source_paths.append(root.parent/agent/'runs'/stamp/'REPORT.md')

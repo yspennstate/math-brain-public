@@ -78,7 +78,7 @@ for name,text in [('WORKLOG.md',lesson+'Exact main278 circuits/14782 blocks/3151
  if 'stage21: For every actual f' not in (A/name).read_text(encoding='utf-8'):
   with (A/name).open('a',encoding='utf-8',newline='') as out:out.write(text)
 # Protocol schema and persistence audit, independent of prose completion.
-protocol=load(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=load(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 fields=protocol['required_per_run']
 expected={k.split(' (')[0] for k in fields['progress_fields']}
 assert set(progress)==expected

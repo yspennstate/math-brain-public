@@ -10,7 +10,7 @@ v=json.loads(read(R/'out/VALIDATION.json'));iv=json.loads(read(R/'out/INDEPENDEN
 assert v['status']==iv['status']=='PASS' and v['roots']==48 and iv['roots']==72
 assert v['final_active_closures']==1944 and v['history_prefixes']==2816
 assert iv['flat_boundary_count']==4
-P=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+P=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 protocol=json.loads(read(P));fields=protocol['required_per_run']
 oldrun=A/'runs/20261021T185558Z-fleet03-A026-good-coordinate-erasure'
 old=json.loads(read(oldrun/'CLAIMS.json'))[0]

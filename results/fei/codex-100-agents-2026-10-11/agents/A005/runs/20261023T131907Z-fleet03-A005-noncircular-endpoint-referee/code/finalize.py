@@ -8,7 +8,7 @@ RUN=Path(__file__).resolve().parents[1]
 AGENT=RUN.parents[1]
 ROOT=AGENT.parents[1]
 RID=RUN.name
-PROTOCOL=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTOCOL=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 
 def read(path):
     return path.read_text(encoding='utf-8')

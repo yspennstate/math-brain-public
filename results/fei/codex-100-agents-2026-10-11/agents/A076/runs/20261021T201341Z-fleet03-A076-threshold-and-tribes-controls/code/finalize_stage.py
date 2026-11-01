@@ -3,7 +3,7 @@ from pathlib import Path
 import json,hashlib,datetime
 ROOT=Path(__file__).resolve().parents[1];AGENT=ROOT.parents[1];BASE=AGENT.parents[1]
 OLD=AGENT/'runs/20261014T091637Z-fleet05-A076-threshold-and-tribes-controls'
-PROTO=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTO=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def load(p):return json.loads(Path(p).read_text(encoding='utf-8-sig'))
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def save(n,v):(ROOT/n).write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
@@ -44,9 +44,9 @@ assert set(progress)=={x.split(' (')[0] for x in pr['required_per_run']['progres
 save('PROGRESS.json',progress);save('PACKET_DELTA.json',progress)
 paths=[PROTO,BASE/'BOARD.md',BASE/'claude/B16/STREAM_NOTES.md',OLD/'PHASE_BANK_PROOF.md',OLD/'CLAIMS.json',OLD/'code/arithmetic.py',
  BASE/'agents/A028/runs/20261014T051435Z-fleet05-A028-stopping-tree-payment/DERIVATION.md']
-reportdir=Path(r'math-open-problems/reports/fei-2026-10-11')
+reportdir=Path(r'private-source/reports/fei-2026-10-11')
 paths += [reportdir/x for x in ['README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
-supp=Path(r'math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+supp=Path(r'private-source/research_pushes/2026-10-11-full-fei-100-agents')
 paths += [supp/x for x in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 paths += list((BASE/'context').glob('*.txt'))
 paths += [supp/'sources'/x for x in ['ERASURE_REDUCTION.md','ISOSPECTRAL_SPLICING_CURATED.md','LOG_ALLOCATION_CURATED.md']]

@@ -6,7 +6,7 @@ WIP for repaired Lemma 3.3, source lines 231--241:
 the pointwise cap on the convolution kernel proposed as the density of Y - Y'.
 
 Exact paper source:
-  yspennstate/math-open-problems@4e530247ec0ef4101a6e5ecf621bd35a969c42aa
+  private-source-repository@4e530247ec0ef4101a6e5ecf621bd35a969c42aa
   paper.tex blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a
 
 This file has NOT been compiled in this runtime. Do not count it as verified

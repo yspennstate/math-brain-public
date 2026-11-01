@@ -5,7 +5,7 @@ import hashlib, json
 
 R=Path(__file__).resolve().parents[1]
 A=R.parents[1]
-BASE=Path(r'math-open-problems/reports\fei-2026-10-11')
+BASE=Path(r'private-source/reports\fei-2026-10-11')
 PEER=Path(r'agents\A087\runs\20261023T143823Z-fleet03-A087-restriction-referee')
 def read(p): return p.read_text(encoding='utf-8')
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()

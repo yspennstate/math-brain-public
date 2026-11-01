@@ -2,8 +2,8 @@ from pathlib import Path
 import json, hashlib, re
 R=Path(__file__).resolve().parents[1]
 (R/'out').mkdir(parents=True,exist_ok=True)
-B=Path('math-open-problems/reports/fei-2026-10-11')
-S=Path('math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+B=Path('private-source/reports/fei-2026-10-11')
+S=Path('private-source/research_pushes/2026-10-11-full-fei-100-agents')
 C=Path('context')
 paths=[B/x for x in ['README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','EXECUTION_PROTOCOL.json','FEI_100_agent_research_plan.tex']]
 paths += [S/x for x in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]

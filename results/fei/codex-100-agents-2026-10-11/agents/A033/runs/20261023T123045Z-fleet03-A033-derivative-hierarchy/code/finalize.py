@@ -77,9 +77,9 @@ entry=entry.replace('New narrow exact theorem: compatible full child mean','New 
 for name in ('WORKLOG.md','LEARNED.md'):
  old=rd(AGENT/name)
  if ROOT.name not in old:wr(AGENT/name,old+entry)
-sources=[BASE/'BOARD.md',BASE/'claude/B07/STREAM_NOTES.md',src/'DERIVATION.md',src/'CLAIMS.json',BASE/'agents/A011/runs/20261023T112901Z-fleet03-A011-representation-existence/DERIVATION.md',BASE/'agents/A001/runs/20261023T112820Z-fleet03-A001-quantifier-audit/REPORT.md',Path('~/<private-repo>/12_cognitive_architecture/scheduled_tasks/README.md'),Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+sources=[BASE/'BOARD.md',BASE/'claude/B07/STREAM_NOTES.md',src/'DERIVATION.md',src/'CLAIMS.json',BASE/'agents/A011/runs/20261023T112901Z-fleet03-A011-representation-existence/DERIVATION.md',BASE/'agents/A001/runs/20261023T112820Z-fleet03-A001-quantifier-audit/REPORT.md',Path('~/<private-repo>/12_cognitive_architecture/scheduled_tasks/README.md'),Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 dump(ROOT/'out/SOURCE_MANIFEST.json',[{'path':str(x),'sha256':sha(x),'role':'Actually read this stage except protocol retained baseline; hash at final save; board mutable'} for x in sources])
-schema=js(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+schema=js(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 pf=set(x.split(' (')[0] for x in schema['progress_fields']);cf=set(schema['claim_fields'])
 assert set(p)==pf
 for c in js(ROOT/'CLAIMS.json'):assert set(c)==cf and hashlib.sha256(c['exact_statement'].encode()).hexdigest()==c['statement_sha256']

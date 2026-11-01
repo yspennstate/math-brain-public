@@ -8,7 +8,7 @@ CAMPAIGN=AGENT.parents[1]
 RID=ROOT.name
 def sha(path): return hashlib.sha256(path.read_bytes()).hexdigest()
 def writej(path,obj): path.write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 checks=json.loads((ROOT/'out/CHECKS.json').read_text(encoding='utf-8'))
 audit=json.loads((ROOT/'out/ENTROPY_CHECKS.json').read_text(encoding='utf-8'))
 assert checks['status']==audit['status']=='PASS'

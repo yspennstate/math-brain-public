@@ -96,7 +96,7 @@ for name,text in [('WORKLOG.md',f'\n{now} | {RUN}: Independently accepted A085@1
                   ('LEARNED.md','\nStage17: A085-ABSOLUTE-TV-RESET-OBSTRUCTION@1 independently accepted unchanged. f_n=-1 at vertices0,1,3 has full support, both children nonconstant, I=(3n-1)2^-n,H<=8I. Matching Q yields zero conditional refund; one child reset TV<2^(1-2n) adds Z>3/8, tending1/2, while Inf_j=2^-n. Three dimensions minimal under these additional support/child hypotheses. Relative atom domination gives the safe -log2(1-eta) bound; TV alone cannot replace likelihood. A047-CANONICAL-FULL-SOURCE-PRICE-OBSTRUCTION@1 all-r substatement independently accepted: m=2^(r+2),r>=2, actual disjoint-point tensor root has CE(P,Qcanonical)/I>r-1 but H<=4I; unique c>1/2, data CE>2r^2, sole negative term>-1, I<2r+5/4. Thus EVERY fixed complete product-occupancy rate fails; taking the positive part later does not repair the sharp whole-owner account. Other A047 finite/asymptotic clauses remain outside this review. Preserve correlations or price a selected inherited signed transaction with SAME unused source, old bookings and both terminals.\n')]:
     with (HOME/name).open('a',encoding='utf-8',newline='') as f:f.write(text)
 
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 pf=[x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']]
 cf=protocol['required_per_run']['claim_fields']
 assert set(progress)==set(pf),(set(progress)^set(pf))

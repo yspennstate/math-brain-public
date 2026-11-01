@@ -10,7 +10,7 @@ claims=json.loads((R/'CLAIMS.json').read_text(encoding='utf-8'))
 for c in claims:assert hashlib.sha256(c['exact_statement'].encode('utf-8')).hexdigest()==c['statement_sha256']
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()
 report=(R/'REPORT.md').read_text(encoding='utf-8')
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 for field in protocol['required_per_run']['report_fields']:assert '\n## '+field+'\n' in report
 assert report.rstrip().split('\n\n')[-1].startswith('Universal bridge:')
 assert 'HELD_MEMORY_ADMISSION_NO_COMPILER_STARTED' in report

@@ -3,7 +3,7 @@ import json, hashlib, datetime
 
 r=Path(__file__).resolve().parents[1]; a=r.parents[1]
 camp=a.parents[1]
-canon=Path('math-open-problems/reports/fei-2026-10-11')
+canon=Path('private-source/reports/fei-2026-10-11')
 proto=json.loads((canon/'EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 src=camp/'agents/A011/runs/20261027T025625Z-fleet04-A011-representation-existence'
 original=json.loads((src/'CLAIMS.json').read_text(encoding='utf-8'))[0]

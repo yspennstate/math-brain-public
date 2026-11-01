@@ -35,7 +35,7 @@ progress={'protocol_revision':'2026-10-11-execution-v2','run_id':R.name,'stream'
  'blockers':['Independent proof review and supervisor mirror verification pending','Unequal proper FOUR-cell mass-disparity loss remains; full FEI OPEN','Brain self-care degraded/unverified: stale personal owner/state/dream notes; not mathematical dependencies'],
  'packet_ids':['A034']}
 dump(R/'PROGRESS.json',progress);dump(R/'PACKET_DELTA.json',progress)
-sources=[Path('BOARD.md'),Path('claude/B07/STREAM_NOTES.md'),Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),A/'runs/20261023T105619Z-fleet03-A034-phase-energy-transfer/PROOF.md',A/'runs/20261023T105619Z-fleet03-A034-phase-energy-transfer/code/check.py']
+sources=[Path('BOARD.md'),Path('claude/B07/STREAM_NOTES.md'),Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),A/'runs/20261023T105619Z-fleet03-A034-phase-energy-transfer/PROOF.md',A/'runs/20261023T105619Z-fleet03-A034-phase-energy-transfer/code/check.py']
 dump(R/'out/source_receipts.json',[{'path':str(p),'sha256':sha(p),'bytes':p.stat().st_size} for p in sources])
 descriptions={'rows':'3834 certified equal-mass rows, nY0..3, <=4 singleton/line pieces','controls':'16 exact restriction-instability parameters; point defect, nonBoolean, tensor controls','M2':'5097 states; two phase cells, common carrier ranks0..4','M4a':'2673 four-phase-cell states; first X bit free','M4b':'2673 four-phase-cell states; first X bit fixed0','M4c':'2673 four-phase-cell states; first X bit fixed1','direct':'All81 X restrictions, independent full Boolean Walsh coefficients and original IY'}
 table='\n'.join(f'| {x["mode"]} | {descriptions[x["mode"]]} | {x["assertions"]} | {x["seconds"]:.3f} |' for x in results)
@@ -88,7 +88,7 @@ Proof, frozen spec, code, seven PASS outputs and four protocol files saved in th
 G-PHASE-COND advances by paying arbitrary-codimension equal-mass proper FOUR-cell rows without bounded affine completion at full coefficient5+log2(e)<6.5, and by adding a concrete all-restriction common-affine-carrier class whose phase complexity, not address-label count or carrier rank, controls the full entropy rate. This retains BOTH the full conditional spectrum and SAME physical influence ownership; no universal C018/C019 conversion follows. The exact remaining loss is log2(mu/alpha_min) for unbalanced proper four-cell fibers. NEXT attacks that mass-disparity loss directly, the shortest extension of the same row interface toward arbitrary-core phase sources, rather than changing to an unrelated isolated class.
 '''
 (R/'REPORT.md').write_text(report,encoding='utf8')
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 cf=set(protocol['required_per_run']['claim_fields']);pf={x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']}
 assert set(claim)==cf and set(progress)==pf
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()

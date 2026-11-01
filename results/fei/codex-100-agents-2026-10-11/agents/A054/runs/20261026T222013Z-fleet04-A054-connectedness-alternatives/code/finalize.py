@@ -5,12 +5,12 @@ def read(p):return Path(p).read_text(encoding='utf-8-sig')
 def save(p,s):Path(p).write_text(s,encoding='utf-8')
 def js(p,o):save(p,json.dumps(o,indent=2,ensure_ascii=False)+'\n')
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 P=json.loads(read(protocol));fields=P['required_per_run']
 sources=[protocol,Path(r'~\AGENTS.md'),A/'STATUS.md',A/'LEARNED.md',A/'WORKLOG.md',A.parents[1]/'BOARD.md',A.parents[1]/'claude/B11/STREAM_NOTES.md',A/'runs/20261023T130129Z-fleet03-A054-connectedness-alternatives/PAIR_RANK_INTERFACE.md',A.parents[0]/'A052/runs/20261023T142511Z-fleet03-A052-critical-source-structure/REPORT.md']
 base=protocol.parent
 for name in ['README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']:sources.append(base/name)
-sup=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+sup=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 for name in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']:sources.append(sup/name)
 receipts=[]
 for p in sources:

@@ -7,7 +7,7 @@ def writej(path,obj):path.write_text(json.dumps(obj,indent=2,ensure_ascii=False)
 v=readj(RUN/'out'/'validation.json');r=readj(RUN/'out'/'review_validation.json');lean=readj(RUN/'out'/'lean_receipt.json')
 assert v['status']==r['status']=='PASS'
 now=datetime.now(timezone.utc).isoformat()
-protocol=readj(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=readj(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 statement='For every Boolean F(X,Y) on disjoint independent uniform physical cubes, if F=sum_J chi_J(X)u_J(Y), each u_J is the sum of at most two quadratic F2 phases on disjoint affine Y cells, and all row cells partition Y, then H(S_Y|S_X)<=24 I_Y(F) and H(F)<=24 I_Y(F). The class is stable under all Y coordinate restrictions, includes every single X-coordinate restriction of distinct-label quadratic affine partitions, and any fresh Boolean Y tensor factor has F2 degree at most three. No closure under arbitrary further X collisions is asserted.'
 claim={
 'claim_id':'A034-TWO-CELL-QUADRATIC-COLLISION','version':1,'exact_statement':statement,

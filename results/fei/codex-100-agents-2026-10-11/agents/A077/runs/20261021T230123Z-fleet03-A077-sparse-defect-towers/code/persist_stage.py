@@ -11,7 +11,7 @@ assert all(x['status']=='PASS' for x in D.values())
 assert D['collision_full.json']['queries']==197136 and D['collision_full.json']['failure_count']==0
 assert len(D['bent_full.json']['compressed'])==8
 assert all(x['guarded_price4_refuted'] for x in D['bent_full.json']['compressed'] if x['k']>=8)
-P=Path(r'math-open-problems/reports\fei-2026-10-11')
+P=Path(r'private-source/reports\fei-2026-10-11')
 protocol=json.loads((P/'EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 run=R.name; now=datetime.datetime.now(datetime.timezone.utc).isoformat()
 sources=[]
@@ -20,7 +20,7 @@ def source(p,scope):
  if p.exists():sources.append({'path':str(p),'sha256':sha(p),'scope':scope})
 for n in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']:
  source(P/n,'Protocol complete; navigation/status and relevant B16/A077/bridge entries; old endpoint superseded by current user order')
-base=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+base=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']:
  source(base/n,'Campaign scope, baseline identities, controls and B16 mapping; no full-FEI proof premise')
 for n in ['BLOCK_RESTRICTION_IDENTITY_2026-09-18.md','OVERLAPPING_PRODUCT_NOTE.md','ADDENDUM_11_44_COMPONENT_ENTROPY_COUNTEREXAMPLE.md','LOG_ALLOCATION_CURATED.md']:

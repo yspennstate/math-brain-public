@@ -6,7 +6,7 @@ def save(name,value):(root/name).write_text(json.dumps(value,indent=2,ensure_asc
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 checks=read(root/'out/CHECKS.json');assert checks['status']=='PASS'
 lean=read(root/'out/LEAN.json');leanstate=lean.get('status',lean.get('result',{}));leanreason=lean.get('reason','See raw receipt')
-protocolpath=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=read(protocolpath)
+protocolpath=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=read(protocolpath)
 source=Path('agents/A091/runs/20261027T054729Z-fleet04-A091-composition-referee')
 review={'subject':str(source/'PROOF.md'),'subject_sha256':sha(source/'PROOF.md'),'scope':'Section4 actual-fee answer-independent continuation and liquidation identities ONLY; no new acceptance of its initial source, NAND certificate or full dependency chain','reviewer':'A058','verdict':'HOLDS_AT_STATED_EXPECTED_RESOURCE_SCOPE','reconstruction':'General actual remaining cash R; child principal masses A ia/2; feasibility D+sum qa ma<=R. The best common q is min(1,(R-D)/(A J)) when J>0. With R=AI recover A091 exactly; local discarded principal equals(D-Ap)+ at the ideal boundary; nonnegative dyadic rounding error retained. J=0 ends at constant children. Full stopped entropy is not paid by discarding influence.','independence':'New two-outcome primal/dual representation; direct-character/physical-edge finite implementation; A058 did not supply A091 Section4','limits':'The outcome-dependent extension in this run is an A058 author result awaiting independent review; no scope change or repair is imposed on A091.'}
 save('out/REVIEW.json',review)

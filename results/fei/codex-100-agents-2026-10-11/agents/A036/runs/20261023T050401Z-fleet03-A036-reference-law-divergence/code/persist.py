@@ -5,7 +5,7 @@ def ck(b):
  global n
  n+=1;assert b,n
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-p=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+p=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 schemas={}
 def walk(x):
  if isinstance(x,dict):

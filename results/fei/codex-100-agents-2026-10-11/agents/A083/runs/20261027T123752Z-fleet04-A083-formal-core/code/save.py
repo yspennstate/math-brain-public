@@ -7,7 +7,7 @@ root=Path('~/brain_workers/FEI100_20261011')
 peer=root/'agents/A097/runs/20261027T092641Z-fleet04-A097-cross-route-transfer'
 claim_source=json.loads((peer/'CLAIMS.json').read_text(encoding='utf-8-sig'))[1]
 assert hashlib.sha256(claim_source['exact_statement'].encode()).hexdigest()==claim_source['statement_sha256']
-paths=[root/'BOARD.md',root/'claude/B17/STREAM_NOTES.md',peer/'PROOF.md',peer/'CLAIMS.json',root/'agents/A012/runs/20261027T062634Z-fleet04-A012-sparse-activation-accounting/DERIVATION.md',root/'agents/A033/runs/20261027T105244Z-fleet04-A033-derivative-hierarchy/PROOF.md',Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),A/'runs/20261026T201649Z-fleet04-A083-formal-core/REPORT.md',A/'runs/20261026T201649Z-fleet04-A083-formal-core/out/SOURCE_RECEIPTS.json']
+paths=[root/'BOARD.md',root/'claude/B17/STREAM_NOTES.md',peer/'PROOF.md',peer/'CLAIMS.json',root/'agents/A012/runs/20261027T062634Z-fleet04-A012-sparse-activation-accounting/DERIVATION.md',root/'agents/A033/runs/20261027T105244Z-fleet04-A033-derivative-hierarchy/PROOF.md',Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),A/'runs/20261026T201649Z-fleet04-A083-formal-core/REPORT.md',A/'runs/20261026T201649Z-fleet04-A083-formal-core/out/SOURCE_RECEIPTS.json']
 write('out/SOURCE_RECEIPTS.json',[{'path':str(p),'raw_sha256':digest(p),'bytes':p.stat().st_size} for p in paths])
 result=json.loads((R/'out/CHECK_RESULT.json').read_text(encoding='utf-8'))
 formal=json.loads((R/'out/LEAN_RESULT.json').read_text(encoding='utf-8'))

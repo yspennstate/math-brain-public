@@ -1,6 +1,6 @@
 from pathlib import Path
 import subprocess
-repo='~/math-open-problems'
+repo='~/private-source'
 r=subprocess.run(['git','-C',repo,'ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf-8')
 hits=[x for x in r.stdout.splitlines() if 'p0286' in x.lower()]
 Path('previous_paths.txt').write_text('\n'.join(hits),encoding='utf-8')

@@ -3,7 +3,7 @@ from fractions import Fraction as F
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];home=R.parents[1]
 root=home.parent
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 source=root/'A097'/'runs'/'20261023T121505Z-fleet03-A097-cross-route-transfer'
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()

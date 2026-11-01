@@ -1,7 +1,7 @@
 from pathlib import Path
 import json, hashlib, re
-root=Path(r'math-open-problems/reports\fei-2026-10-11')
-supp=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+root=Path(r'private-source/reports\fei-2026-10-11')
+supp=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 paths=list(root.glob('*.md'))+list(root.glob('*.json'))+[root/'FEI_100_agent_research_plan.tex']+list((root/'runs').rglob('REPORT.md'))+list(supp.glob('*.md'))+list((supp/'sources').rglob('*.md'))+list((supp/'sources').rglob('*.txt'))+list(Path(r'context').glob('*.txt'))
 receipt=[]
 for p in paths:

@@ -4,8 +4,8 @@ R=Path(__file__).resolve().parents[1]
 HOME=R.parents[1]; TEAM=HOME.parents[1]
 def sha(b): return hashlib.sha256(b).hexdigest()
 def save(p,x):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-canonical=Path('math-open-problems/reports/fei-2026-10-11')
-supp=Path('math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+canonical=Path('private-source/reports/fei-2026-10-11')
+supp=Path('private-source/research_pushes/2026-10-11-full-fei-100-agents')
 files=[canonical/n for n in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json']]
 files+=list(canonical.glob('*.tex'))
 files += [supp/n for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]

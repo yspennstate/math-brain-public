@@ -8,7 +8,7 @@ TEAM=ROOT.parents[1]
 OLD=ROOT/'runs/20261023T045518Z-fleet03-A001-quantifier-audit'
 A094=TEAM/'agents/A094/runs/20261023T110024Z-fleet03-A094-proof-chain-challenger'
 A011=TEAM/'agents/A011/runs/20261023T000841Z-fleet03-A011-representation-existence'
-PROTO=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTO=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def write(p,s):p.write_text(s,encoding='utf-8',newline='')
 def dump(p,x):write(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')

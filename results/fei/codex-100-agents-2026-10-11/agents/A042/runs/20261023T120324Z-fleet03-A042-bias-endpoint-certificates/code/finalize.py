@@ -9,7 +9,7 @@ now=datetime.now(timezone.utc).isoformat()
 main=load(R/'out/CHECKS.json'); majority=load(R/'out/MAJORITY.json'); review=load(R/'out/REVIEW_CHECKS.json')
 assert all(x['status']=='PASS' for x in [main,majority,review])
 assert (main['cases'],majority['cases'],review['cases'])==(1200,6,192)
-protocolpath=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocolpath=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 protocol=load(protocolpath)
 src=B/'agents/A045/runs/20261023T111726Z-fleet03-A045-biased-realizability-referee'
 original=next(c for c in load(src/'CLAIMS.json') if c['claim_id']=='A045-MULTISELECTOR-COMPLETE-SEED-TRANSFER')

@@ -9,7 +9,7 @@ for folder in list(base.glob('probability_1000_intake_*'))+[base/'codex_pool_202
     if 'E0024' in line:out.append({'file':str(f),'record':line.strip()})
 pathlib.Path('earlier_records.json').write_text(json.dumps(out,indent=2),encoding='utf8')
 for r in out: print(r['file'],r['record'][:3000])
-p=subprocess.run(['git','-C','~/math-open-problems','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8')
+p=subprocess.run(['git','-C','~/private-source','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8')
 paths=[v for v in p.stdout.splitlines() if 'e0024' in v.lower() or 'hunt' in v.lower()]
 pathlib.Path('published_paths.txt').write_text('\n'.join(paths),encoding='utf8');print('Relevant repo paths:',paths[:40])
 s=pathlib.Path('source.txt').read_text(encoding='utf8')

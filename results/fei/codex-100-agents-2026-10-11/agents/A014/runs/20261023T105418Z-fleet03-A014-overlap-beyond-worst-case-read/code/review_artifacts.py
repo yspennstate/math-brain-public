@@ -3,7 +3,7 @@ import json,hashlib
 R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def read(p):return p.read_text(encoding='utf-8-sig')
 def js(p):return json.loads(read(p))
-protocol=js(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=js(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 def find(obj,key):
     if isinstance(obj,dict):
         if key in obj:return obj[key]

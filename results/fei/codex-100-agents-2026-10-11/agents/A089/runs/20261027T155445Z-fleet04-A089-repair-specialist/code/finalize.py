@@ -3,7 +3,7 @@ import json,hashlib
 R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def dump(p,v):p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 fields=protocol['required_per_run'];pf={s.split(' (')[0] for s in fields['progress_fields']}
 progress=json.loads((R/'PROGRESS.json').read_text(encoding='utf-8'));assert set(progress)==pf
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()

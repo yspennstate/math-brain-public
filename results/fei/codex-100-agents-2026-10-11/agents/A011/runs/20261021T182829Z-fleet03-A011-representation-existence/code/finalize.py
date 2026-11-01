@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];A=R.parents[1];now=datetime.datetime.now(datetime.timezone.utc).isoformat()
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 jobs=[json.loads(p.read_text(encoding='utf-8')) for p in sorted((R/'out').glob('CHECK_*.json'))]
 for name in ['ADVERSARIAL_RESULTS.json','TRANSPORT_RESULTS.json']:
  p=R/'out'/name

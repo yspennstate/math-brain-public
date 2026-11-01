@@ -3,7 +3,7 @@ import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1]; ROOT=R.parents[1]
 def dump(path,obj):path.write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-B=Path('math-open-problems/reports/fei-2026-10-11')
+B=Path('private-source/reports/fei-2026-10-11')
 protocol=json.loads((B/'EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 check=json.loads((R/'out/CHECK.json').read_text(encoding='utf-8'));audit=json.loads((R/'out/AUDIT.json').read_text(encoding='utf-8'));pilot=json.loads((R/'out/PILOT.json').read_text(encoding='utf-8'))
 assert check['status']==audit['status']==pilot['status']=='PASS'

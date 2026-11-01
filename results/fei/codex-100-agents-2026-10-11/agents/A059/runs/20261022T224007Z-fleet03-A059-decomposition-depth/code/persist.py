@@ -5,7 +5,7 @@ R=Path(__file__).resolve().parents[1];HOME=R.parents[1]
 run=R.name;now=datetime.now(timezone.utc).isoformat()
 def save(name,obj): (R/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 main=json.loads((R/'out/validation.json').read_text(encoding='utf-8'))
 review=json.loads((R/'out/review_validation.json').read_text(encoding='utf-8'))
 tree=json.loads((R/'out/tree_validation.json').read_text(encoding='utf-8'))

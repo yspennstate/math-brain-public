@@ -11,7 +11,7 @@ source=B/'A094/runs/20261023T131208Z-fleet03-A094-proof-chain-challenger'
 older=B/'A094/runs/20261023T110024Z-fleet03-A094-proof-chain-challenger'
 src95=B/'A095/runs/20261023T112654Z-fleet03-A095-restricted-result-extraction'
 src86=B/'A086/runs/20261023T114749Z-fleet03-A086-joint-code-referee'
-protocol=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 proto=json.loads(read(protocol));cert=json.loads(read(R/'out/CERTIFICATE.json'));pilot=json.loads(read(R/'out/PILOT.json'))
 assert cert['status']=='PASS' and cert['profiles']==417 and cert['source_paths']==30
 assert cert['runtime_seconds']<55 and pilot['runtime_seconds']<60

@@ -7,7 +7,7 @@ def put(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encodin
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def claims(doc):return doc['claims'] if isinstance(doc,dict) else doc
 def statement_hash(c):return hashlib.sha256(json.dumps({k:c[k] for k in ['exact_statement','hypotheses']},sort_keys=True,separators=(',',':'),ensure_ascii=False).encode('utf-8')).hexdigest()
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=read(protocol_path)
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=read(protocol_path)
 root=read(R/'out/CRITICAL_POINT.json');audit=read(R/'out/SCALAR_AUDIT.json');physical=read(R/'out/PHYSICAL.json')
 assert all(z['status']=='PASS' for z in [root,audit,physical])
 assert root['certified_rational_upper']=='39/8' and physical['core_tables']==257

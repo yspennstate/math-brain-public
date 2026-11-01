@@ -9,7 +9,7 @@ def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 v=json.loads(read(R/'out/VALIDATION.json'));iv=json.loads(read(R/'out/INDEPENDENT.json'));pv=json.loads(read(R/'out/PILOT.json'))
 assert v['status']==iv['status']==pv['status']=='PASS'
 assert v['prefixes']==2136 and v['profile_transactions']==19224 and iv['assertions']==209
-P=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=json.loads(read(P));fields=protocol['required_per_run']
+P=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=json.loads(read(P));fields=protocol['required_per_run']
 prior=A/'runs/20261023T001250Z-fleet03-A026-good-coordinate-erasure'
 s29=B/'agents/A029/runs/20261023T032111Z-fleet03-A029-child-deficit-transport'
 s28=B/'agents/A028/runs/20261023T023055Z-fleet03-A028-stopping-tree-payment'

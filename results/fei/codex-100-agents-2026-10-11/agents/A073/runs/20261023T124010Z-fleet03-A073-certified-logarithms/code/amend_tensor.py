@@ -90,7 +90,7 @@ with (agent/'LEARNED.md').open('a', encoding='utf-8') as stream:
 assert json.loads(read(progress_path)) == json.loads(read(run/'PACKET_DELTA.json'))
 assert len(read(agent/'STATUS.md').splitlines()) == 2
 assert claim['statement_sha256'] == hashlib.sha256(claim['exact_statement'].encode('utf-8')).hexdigest()
-protocol = json.loads(read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')))
+protocol = json.loads(read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')))
 assert set(claim) == set(protocol['required_per_run']['claim_fields'])
 assert set(progress) == {k.split(' (')[0] for k in protocol['required_per_run']['progress_fields']}
 manifest = {str(p.relative_to(run)): hashlib.sha256(p.read_bytes()).hexdigest()

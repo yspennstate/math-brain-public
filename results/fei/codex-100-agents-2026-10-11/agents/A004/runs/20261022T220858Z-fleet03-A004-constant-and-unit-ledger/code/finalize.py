@@ -2,7 +2,7 @@ from pathlib import Path
 from datetime import datetime,timezone
 import json,hashlib
 RUN=Path(__file__).resolve().parents[1]; OWN=RUN.parents[1]
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 check=json.loads((RUN/'out/CHECK.json').read_text(encoding='utf-8'))
 assert check['status']=='PASS' and not check['pilot'] and check['local_query_cases']==804
 assert check['seconds']<55

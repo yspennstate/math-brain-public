@@ -7,7 +7,7 @@ RUN = Path(__file__).resolve().parents[1]
 HOME = RUN.parents[1]
 assert HOME.name == 'A007'
 SHARED = HOME.parents[1]
-BASE = Path('math-open-problems/reports/fei-2026-10-11')
+BASE = Path('private-source/reports/fei-2026-10-11')
 def read(path): return path.read_text(encoding='utf-8')
 def load(path): return json.loads(read(path))
 def write(path, text):

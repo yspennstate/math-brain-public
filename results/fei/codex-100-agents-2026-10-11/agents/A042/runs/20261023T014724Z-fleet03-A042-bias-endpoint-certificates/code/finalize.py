@@ -18,7 +18,7 @@ assert sourceclaim['statement_sha256']=='75ecb79b377e491b6a62f6c08fc25c5c3decc0c
 assert sha(src44/'PROOF.md')=='54304c42a8e72c617ee060ffcee191ebb9647ed645b1793ab407e510793d1468'
 review={'source_claim_id':sourceclaim['claim_id'],'source_version':1,'statement_sha256':sourceclaim['statement_sha256'],'reviewer':'A042/fleet03','verdict':'HOLDS','scope':'Full stated actual bent-family fixed-order/growing-order obstruction, asymptotic and complete-reference calibration; no FEI theorem','reconstruction':'Independent integer Walsh transform and rational+ln2 expression; analytic binomial pairing, Markov and finite-event Chebyshev reconstruction in REVIEW_A044.md','source_repair':False,'review_checks':rev,'review_path':'REVIEW_A044.md','source_path':str(src44)}
 put(R/'out/REVIEW_A044.json',review)
-protocolpath=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocolpath=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(protocolpath.read_text(encoding='utf-8'))
 sources=[b/'BOARD.md',b/'claude/B09/STREAM_NOTES.md',protocolpath,src44/'PROOF.md',src44/'CLAIMS.json',src43/'PROOF.md',src41/'PROOF.md',src45/'PROOF.md',A/'runs/20261021T221439Z-fleet03-A042-bias-endpoint-certificates/PROOF.md']
 put(R/'out/SOURCE_RECEIPTS.json',[{'path':str(p),'sha256':sha(p),'bytes':p.stat().st_size} for p in sources])

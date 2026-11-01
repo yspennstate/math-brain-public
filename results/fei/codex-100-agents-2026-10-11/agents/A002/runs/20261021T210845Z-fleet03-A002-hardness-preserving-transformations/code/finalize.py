@@ -3,7 +3,7 @@ from datetime import datetime,timezone
 import json,hashlib
 run=Path(__file__).resolve().parents[1]; root=run.parents[1]
 campaign=root.parents[1]
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11/EXECUTION_PROTOCOL.json')
 P=json.loads(protocol.read_text(encoding='utf-8'))
 def save(name,obj):
     (run/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')

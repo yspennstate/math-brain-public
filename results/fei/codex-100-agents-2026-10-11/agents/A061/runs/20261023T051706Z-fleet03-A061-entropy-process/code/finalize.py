@@ -2,7 +2,7 @@
 from pathlib import Path
 import json,hashlib
 R=Path(__file__).resolve().parents[1];HOME=R.parents[1];ROOT=HOME.parents[1]
-P=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+P=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def rd(p):return Path(p).read_text(encoding='utf-8')
 def wr(p,s):Path(p).write_text(s,encoding='utf-8',newline='\n')
 def obj(p):return json.loads(rd(p))
@@ -63,7 +63,7 @@ progress=dict(protocol_revision=protocol['revision'],run_id=R.name,stream='B13',
  'Brain self-care degraded/unverified: stale personal notes and failed attachment integrity/renderer; affected notes not used as mathematical premises.'],packet_ids=['A061'])
 assert set(progress)=={x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']}
 dump(R/'PROGRESS.json',progress);dump(R/'PACKET_DELTA.json',progress)
-dump(R/'out/ARCHIVE_RECEIPT.json',{'status':'BLOCKED_REQUESTED_BRANCH_ABSENT','repository':'yspennstate/math-open-problems','requested_branch':'main','readback':'Fresh GitHub GET branches/main returned404 Branch not found','remote_mutation':False,'git_executed':False,'commit':None,'next':'Supervisor established archive copy; no new branch created.'})
+dump(R/'out/ARCHIVE_RECEIPT.json',{'status':'BLOCKED_REQUESTED_BRANCH_ABSENT','repository':'private-source-repository','requested_branch':'main','readback':'Fresh GitHub GET branches/main returned404 Branch not found','remote_mutation':False,'git_executed':False,'commit':None,'next':'Supervisor established archive copy; no new branch created.'})
 sources=[P,ROOT/'BOARD.md',ROOT/'claude/B13/STREAM_NOTES.md',
  ROOT/'agents/A064/runs/20261023T034109Z-fleet03-A064-global-debt-potential/PROOF.md',
  ROOT/'agents/A064/runs/20261023T034109Z-fleet03-A064-global-debt-potential/CLAIMS.json',

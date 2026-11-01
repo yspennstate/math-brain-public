@@ -2,7 +2,7 @@ from pathlib import Path
 from datetime import datetime,timezone
 import json,hashlib
 run=Path(__file__).resolve().parents[1];agent=run.parents[1]
-protocol=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 p=json.loads(protocol.read_text(encoding='utf-8-sig'))
 def read(name):return json.loads((run/'out'/name).read_text(encoding='utf-8'))
 v=read('VALIDATION.json');pilot=read('PILOT.json')

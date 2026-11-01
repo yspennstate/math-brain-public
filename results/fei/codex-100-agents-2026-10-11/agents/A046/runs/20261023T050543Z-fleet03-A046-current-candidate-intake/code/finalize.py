@@ -58,7 +58,7 @@ for p in sorted(R.rglob('*')):
   data=p.read_bytes();assert len(data)<20_000_000
   manifest.append({'path':str(p.relative_to(R)),'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})
 save('out/PERSISTENCE.json',{'scope':'local only; no remote receipt','files':manifest})
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 expected=protocol['required_per_run']['progress_fields'];expected=[x.split(' (')[0] for x in expected]
 assert set(progress)==set(expected)
 for claim in read(R/'CLAIMS.json'):

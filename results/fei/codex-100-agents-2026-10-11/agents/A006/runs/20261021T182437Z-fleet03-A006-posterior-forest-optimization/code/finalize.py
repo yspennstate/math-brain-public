@@ -2,8 +2,8 @@ from pathlib import Path
 from fractions import Fraction as F
 import json,hashlib,datetime
 B=Path(__file__).resolve().parents[1];A=B.parents[1];FLEET=A.parent.parent
-PROTO=Path(r'math-open-problems/reports/fei-2026-10-11')
-SUP=Path(r'math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+PROTO=Path(r'private-source/reports/fei-2026-10-11')
+SUP=Path(r'private-source/research_pushes/2026-10-11-full-fei-100-agents')
 OTHER=A.parent/'A010/runs/20261021T161852Z-fleet03-A010-universal-residual-falsifier'
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')

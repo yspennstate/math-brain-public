@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];A=R.parent.parent
-protocolpath=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=json.loads(protocolpath.read_text(encoding='utf-8'))
+protocolpath=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=json.loads(protocolpath.read_text(encoding='utf-8'))
 old=json.loads((A/'runs/20261023T014602Z-fleet03-A037-conditional-credit-ledger/PROGRESS.json').read_text(encoding='utf-8'))
 main=json.loads((R/'out/CHECK.json').read_text(encoding='utf-8'));scalars=json.loads((R/'out/SCALARS.json').read_text(encoding='utf-8'));audit=json.loads((R/'out/AUDIT.json').read_text(encoding='utf-8'))
 assert all(x['status']=='PASS' for x in [main,scalars,audit]);assert main['cases']==12 and scalars['cases']==1377 and audit['local_cases']==24 and audit['martingale_cases']==27

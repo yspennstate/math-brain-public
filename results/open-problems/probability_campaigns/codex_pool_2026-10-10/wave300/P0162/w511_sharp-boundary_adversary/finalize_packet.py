@@ -20,7 +20,7 @@ source["local_target_records"] = {"intake_artifact":"SOURCE_RECORDS.json", "read
     "prior_attempt_scope":"Real-valued singleton-spectrum obstruction; no full FEI solution recorded in this target card"}
 source["primary_sources"].append({"title":"A new bound for the Fourier-Entropy-Influence conjecture","author":"Xiao Han",
     "url":"https://arxiv.org/abs/2312.08271","version":"v2 2025-12-10","scope_read":"Abstract bound with the additional sum_i I_i log(1/I_i) term","verified":True})
-source["owner_status_check_limit"] = "Named H/I folders had no matching P0162 text. Relevant recalled prior FEI note still reports full FEI open as of September. The referenced math-open-problems checkout was unavailable at the tested local path. No exhaustive current solved/retired check is certified."
+source["owner_status_check_limit"] = "Named H/I folders had no matching P0162 text. Relevant recalled prior FEI note still reports full FEI open as of September. The referenced private-source checkout was unavailable at the tested local path. No exhaustive current solved/retired check is certified."
 source["current_openness"] = "UNKNOWN"
 source["next"] = "Independent referee should check the sharp profile proof; current openness and novelty remain UNKNOWN."
 source_path.write_text(json.dumps(source,indent=2,ensure_ascii=False)+"\n",encoding="utf-8")

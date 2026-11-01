@@ -6,7 +6,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1];ROOT=A.parents[1]
 def put(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False),encoding='utf-8')
 def sh(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def get(p):return json.loads(p.read_text(encoding='utf-8'))
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=get(protocol_path)
 batches=[get(R/'out'/('BATCH_'+str(j)+'.json')) for j in range(4)]
 assert all(x['status']=='PASS' and x['runtime_seconds']<55 for x in batches)

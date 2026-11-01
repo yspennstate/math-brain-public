@@ -3,7 +3,7 @@ from datetime import datetime,timezone
 import json,hashlib
 R=Path(__file__).resolve().parents[1];HOME=R.parents[1];TEAM=HOME.parent.parent
 SRC=HOME.parent/'A012'/'runs'/'20261023T010946Z-fleet03-A012-sparse-activation-accounting'
-P=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+P=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 def sha(b):return hashlib.sha256(b).hexdigest()
 def load(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def dump(p,d):p.write_text(json.dumps(d,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')

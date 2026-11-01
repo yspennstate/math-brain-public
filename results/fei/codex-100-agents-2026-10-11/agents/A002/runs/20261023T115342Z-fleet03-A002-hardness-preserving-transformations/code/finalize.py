@@ -6,7 +6,7 @@ now=datetime.now(timezone.utc).isoformat()
 def read(p): return json.loads(p.read_text(encoding='utf-8'))
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def save(p,x): p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-protocolpath=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'); proto=read(protocolpath)
+protocolpath=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'); proto=read(protocolpath)
 check=read(R/'out/CHECK.json'); ind=read(R/'out/INDEPENDENT.json'); pilot=read(R/'out/PILOT.json')
 assert check['status']==ind['status']==pilot['status']=='PASS'; assert check['assertions']==129282 and ind['assertions']==14336
 assert check['counts']=={'policies':2224,'nodes':12134,'leaves':14358,'eligible_banks':2080,'sharp_depth_laws':8416}

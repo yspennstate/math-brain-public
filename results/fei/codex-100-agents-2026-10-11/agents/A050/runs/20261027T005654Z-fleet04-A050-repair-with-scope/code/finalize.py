@@ -3,7 +3,7 @@ import json,hashlib,datetime,copy
 run=Path(__file__).resolve().parents[1]; home=run.parents[1]
 def read(p): return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(p,v):p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 main=read(run/'out/MAIN.json'); audit=read(run/'out/AUDIT.json')
 assert main['status']==audit['status']=='PASS'
 source=Path('agents/A096/runs/20261023T140303Z-fleet03-A096-live-gap-ledger/CLAIMS.json')

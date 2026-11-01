@@ -5,7 +5,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1];ROOT=A.parents[1]
 def get(p):return json.loads(p.read_text(encoding='utf-8'))
 def put(p,x):p.write_bytes(json.dumps(x,indent=2,ensure_ascii=False).encode('utf-8'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=get(protocol_path)
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=get(protocol_path)
 comp=get(R/'out/CHECK_compressed.json');parts=[get(R/'out'/('CHECK_'+x+'.json')) for x in ['20','21','30','31']]
 assert comp['status']=='PASS' and comp['cases']==1112
 assert all(p['status']=='PASS' and p['seconds']<55 for p in parts+[comp])

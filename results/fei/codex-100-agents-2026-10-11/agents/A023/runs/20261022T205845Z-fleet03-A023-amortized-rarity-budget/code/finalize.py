@@ -30,7 +30,7 @@ progress={
  'blockers':['Actual mixed-data nonflat residual is unpaid by this root theorem.','General arbitrary-core terminal admission and full FEI remain open.','Independent mathematical review and supervisor copies unverified.','Lean status: '+lean['status']],
  'packet_ids':['A023']}
 save(RUN/'PROGRESS.json',progress);write(RUN/'PACKET_DELTA.json',read(RUN/'PROGRESS.json'))
-fields=json.loads(read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')))['required_per_run']
+fields=json.loads(read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')))['required_per_run']
 assert set(progress)==set(x.split(' (')[0] for x in fields['progress_fields'])
 assert set(claim)==set(fields['claim_fields'])
 report=f'''# exact target, quantifiers, hypotheses and units

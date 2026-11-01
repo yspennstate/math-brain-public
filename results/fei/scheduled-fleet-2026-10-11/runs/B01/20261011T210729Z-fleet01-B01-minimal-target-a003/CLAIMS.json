@@ -8,7 +8,7 @@
       "exact_statement": "Let C_FEI be the optimal universal Fourier entropy-influence constant and C_step=sup over nonconstant genuine Boolean f of min over relevant coordinates i of [H(f)-average_b H(f_{i=b})]/I_i(f). Then C_FEI <= C_step <= C_FEI+2/ln(2). In particular, finiteness of the relevant-coordinate physical restriction criterion is equivalent to full FEI finiteness.",
       "hypotheses": ["uniform Boolean cube", "genuine sign-valued Boolean f", "entropy in bits", "coordinate i is required to satisfy I_i(f)>0"],
       "contributors": ["fleet01/B01"],
-      "proof_source": {"repository": "yspennstate/math-open-problems", "path": "reports/fei-2026-10-11/runs/B01/20261011T210729Z-fleet01-B01-minimal-target-a003/REPORT.md"},
+      "proof_source": {"repository": "private-source-repository", "path": "reports/fei-2026-10-11/runs/B01/20261011T210729Z-fleet01-B01-minimal-target-a003/REPORT.md"},
       "proof_dependencies": [
         {"source": "recovered reductions restriction identity", "role": "Delta_i H=conditional erasure+JS and exact influence decrement"},
         {"source": "elementary reverse-chain-rule bound", "role": "sum_i H(S_i|S_-i)<=H(S)"}
@@ -27,7 +27,7 @@
       "exact_statement": "For a genuine Boolean signed Fourier vector a, let L=sum_A a_A^2 sum_{i in A} log2(1+a_{A\\{i}}^2/a_A^2), and let C_L be the optimal universal constant in L<=C_L I under the complete signed Boolean autocorrelation system. Then C_L<=C_FEI<=C_L+3/ln(2).",
       "hypotheses": ["complete signed autocorrelations sum_A a_A a_{A triangle U}=0 for every nonempty U", "Parseval normalization", "entropy in bits"],
       "contributors": ["fleet01/B01"],
-      "proof_source": {"repository": "yspennstate/math-open-problems", "path": "reports/fei-2026-10-11/runs/B01/20261011T210729Z-fleet01-B01-minimal-target-a003/REPORT.md"},
+      "proof_source": {"repository": "private-source-repository", "path": "reports/fei-2026-10-11/runs/B01/20261011T210729Z-fleet01-B01-minimal-target-a003/REPORT.md"},
       "proof_dependencies": [{"source": "source identity L<=B<=L+I/ln2", "role": "reproved pairwise in report"}, {"claim_id": "B01-A003-RESTRICTION-STEP-CONSTANT-SANDWICH", "version": 1, "role": "B bound to FEI induction"}],
       "review_records": [],
       "status": "ANALYTICALLY_PROVED_PENDING_INDEPENDENT_REVIEW",
@@ -43,7 +43,7 @@
       "exact_statement": "If there is a finite K such that every genuine Boolean f admits an admissible ordered-gate/weight/actual-partition-forest-posterior package with J_f=v(Lambda+log2 Z)+sum_{A nonempty}P_f(A)[E B_lambda(A;r)-H(P_A)]<=K I(f), then FEI holds with constant 2+K_ref+K, where K_ref=3+2log2(3)+log2(6e). No converse is claimed.",
       "hypotheses": ["all admissibility conditions in recovered forests.tex", "actual distinct finite runs", "root conditioning and posterior entropy retained"],
       "contributors": ["fleet01/B01"],
-      "proof_source": {"repository": "yspennstate/math-open-problems", "path": "reports/fei-2026-10-11/runs/B01/20261011T210729Z-fleet01-B01-minimal-target-a003/ENDPOINT_INTERFACES.tex"},
+      "proof_source": {"repository": "private-source-repository", "path": "reports/fei-2026-10-11/runs/B01/20261011T210729Z-fleet01-B01-minimal-target-a003/ENDPOINT_INTERFACES.tex"},
       "proof_dependencies": [{"source": "forests.tex blob 3fd08d81a2bcd96acaaa268757c7f343e71e8249", "role": "conditioned posterior forest theorem"}],
       "review_records": [],
       "status": "SOURCE_VALID_REFORMULATION_PENDING_INDEPENDENT_REVIEW",

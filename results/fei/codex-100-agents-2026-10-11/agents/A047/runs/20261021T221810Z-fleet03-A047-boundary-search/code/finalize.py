@@ -7,7 +7,7 @@ def dump(p,x):write(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def append(p,s):
  with Path(p).open('a',encoding='utf-8',newline='') as f:f.write(s)
-P=Path(r'math-open-problems/reports\fei-2026-10-11');S=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+P=Path(r'private-source/reports\fei-2026-10-11');S=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 protocol=json.loads(read(P/'EXECUTION_PROTOCOL.json'))
 check=json.loads(read(R/'out/CHECK.json'));alt=json.loads(read(R/'out/ALTERNATE.json'))
 assert check['status']==alt['status']=='PASS'

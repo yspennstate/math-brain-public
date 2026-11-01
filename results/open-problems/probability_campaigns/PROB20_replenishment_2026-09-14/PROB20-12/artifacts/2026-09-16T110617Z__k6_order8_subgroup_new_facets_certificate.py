@@ -1,6 +1,6 @@
 """Exact reproducibility certificate for the 2026-09-16T110617Z PROB20-12 run.
 
-Run from a checkout of yspennstate/math-open-problems.  This extends the
+Run from a checkout of private-source-repository.  This extends the
 previous exact 6,880-facet certificate by descending from the orbit-size-3
 K6 wall to two order-8 subgroups, extracting two further full facet orbits,
 and checking closure of those two invariant slices after augmentation.

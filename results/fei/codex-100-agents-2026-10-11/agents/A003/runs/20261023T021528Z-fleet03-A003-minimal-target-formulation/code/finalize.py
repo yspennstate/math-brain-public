@@ -2,8 +2,8 @@ from pathlib import Path
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];A=R.parents[1]
 ROOT=Path(r'~\brain_workers\FEI100_20261011')
-CAM=Path(r'math-open-problems/reports\fei-2026-10-11')
-SUP=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+CAM=Path(r'private-source/reports\fei-2026-10-11')
+SUP=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 PREV=A/'runs/20261021T233555Z-fleet03-A003-minimal-target-formulation'
 P96=ROOT/'agents/A096/runs/20261023T010221Z-fleet03-A096-live-gap-ledger'
 P97=ROOT/'agents/A097/runs/20261021T232544Z-fleet03-A097-cross-route-transfer'

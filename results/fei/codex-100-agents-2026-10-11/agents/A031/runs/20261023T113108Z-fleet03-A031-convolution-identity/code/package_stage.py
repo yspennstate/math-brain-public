@@ -57,7 +57,7 @@ claim={
 'first_unproved_line':first,'next_consumers':['B07 Claude lead','A035','A096','A097','C019/C024 universal bridge reviewers']}
 jsave(RUN/'CLAIMS.json',[claim])
 sources=[
-Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'),
+Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'),
 ROOT/'BOARD.md',ROOT/'claude/B07/STREAM_NOTES.md',AGENT/'LEARNED.md',
 ROOT/'agents/A035/runs/20261023T110610Z-fleet03-A035-signed-cancellation-countersearch/DERIVATION.md',
 ROOT/'agents/A035/runs/20261023T110610Z-fleet03-A035-signed-cancellation-countersearch/REPORT.md',

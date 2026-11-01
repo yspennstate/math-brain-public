@@ -40,7 +40,7 @@ dump(R/'PROGRESS.json',progress);dump(R/'PACKET_DELTA.json',progress)
 sources=[
  Path('BOARD.md'),
  Path('claude/B07/STREAM_NOTES.md'),
- Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),
+ Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),
  A/'runs/20261023T032301Z-fleet03-A034-phase-energy-transfer/PROOF.md',
  A/'runs/20261023T032301Z-fleet03-A034-phase-energy-transfer/CLAIMS.json',
  A/'runs/20261023T032301Z-fleet03-A034-phase-energy-transfer/PROGRESS.json']
@@ -92,7 +92,7 @@ PROOF.md, frozen spec, code, all five PASS outputs, four protocol files and roll
 G-PHASE-COND advances from four labels with rate24 to ANY eight-cell affine partition with full coefficient10+log2(e)<11.5 through ALL physical restrictions, paying the previously unpaid proper nonaffine noncoarsenable four-cell fibers from the SAME original I_Y and retaining full H(S_Y|S_X). The general maximum-codimension-k payment exposes the remaining loss precisely at the absolute derivative cutoff2^(-(k+1)). Full universal C018 erasure/C019 history conversion is not obtained. The shortest next route is to remove that codimension loss for proper four-cell rows without bounded completion; this directly addresses the phase-payment obstruction needed by arbitrary-core sources, rather than opening another unrelated class.
 '''
 (R/'REPORT.md').write_text(report,encoding='utf8')
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 cf=set(protocol['required_per_run']['claim_fields']);pf={f.split(' (')[0] for f in protocol['required_per_run']['progress_fields']}
 assert set(claim)==cf and set(progress)==pf
 assert (R/'PACKET_DELTA.json').read_bytes()==(R/'PROGRESS.json').read_bytes()

@@ -4,7 +4,7 @@ import json, hashlib, datetime, sys
 R=Path(__file__).resolve().parents[1]
 A=R.parents[1]
 AG=A.parent
-P=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+P=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def read(p): return Path(p).read_text(encoding='utf-8-sig')
 def obj(p): return json.loads(read(p))
 def save(p,x): Path(p).write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

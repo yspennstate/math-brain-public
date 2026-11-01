@@ -7,7 +7,7 @@ def load(p):return json.loads(read(p))
 def save(p,x):p.write_text(x,encoding='utf-8')
 def js(p,x):save(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=load(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=load(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 old=load(OLD/'CLAIMS.json')[0]
 names=['selector_pilot','selector_main','selector_adjacent','independent','antipodal','corner']
 outputs={n:load(R/'out'/f'{n}.json') for n in names}

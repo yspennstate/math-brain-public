@@ -38,7 +38,7 @@ old['generated_at']=now
 old['files']={str(p.relative_to(R)):{'bytes':p.stat().st_size,'sha256':sha(p)} for p in sorted(R.rglob('*')) if p.is_file() and '__pycache__' not in str(p) and p.name not in ('PERSISTENCE.json','FINAL_VALIDATION.json')}
 old['rolling']={str(A/n):sha(A/n) for n in ('STATUS.md','WORKLOG.md','LEARNED.md')}
 dump(R/'out/PERSISTENCE.json',old)
-protocol=load('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')['required_per_run'];expected=set(protocol['progress_fields']);expected.remove('packet_ids (one primary ID, for compatibility)');expected.add('packet_ids')
+protocol=load('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')['required_per_run'];expected=set(protocol['progress_fields']);expected.remove('packet_ids (one primary ID, for compatibility)');expected.add('packet_ids')
 assert set(pr)==expected and set(c)==set(protocol['claim_fields'])
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()
 assert c['proof_source']['sha256']==sha(R/'PROOF.md')

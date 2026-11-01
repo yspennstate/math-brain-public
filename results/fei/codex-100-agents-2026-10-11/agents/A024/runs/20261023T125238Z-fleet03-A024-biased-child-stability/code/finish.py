@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];home=R.parents[1]
-P=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+P=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 def read(p):return p.read_bytes().decode('utf-8')
 def write(p,s):p.write_bytes(s.encode('utf-8'))
 def dump(p,v):write(p,json.dumps(v,indent=2,ensure_ascii=False)+'\n')

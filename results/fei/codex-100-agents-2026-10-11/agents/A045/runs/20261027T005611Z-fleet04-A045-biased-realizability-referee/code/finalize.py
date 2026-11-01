@@ -4,8 +4,8 @@ import json, hashlib
 
 r=Path(__file__).resolve().parents[1]; own=r.parents[1]
 b=Path(r'~\brain_workers\FEI100_20261011')
-shared=Path(r'math-open-problems/reports\fei-2026-10-11')
-supp=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+shared=Path(r'private-source/reports\fei-2026-10-11')
+supp=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 source=b/'agents/A044/runs/20261026T220625Z-fleet04-A044-non-symmetric-gate-classes'
 now=datetime.now(timezone.utc).isoformat()
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()

@@ -4,7 +4,7 @@ import json,hashlib,copy
 R=Path(__file__).resolve().parents[1]; A=R.parents[1]
 ROOT=A.parents[1]
 S=ROOT/'agents/A072/runs/20261023T120900Z-fleet03-A072-exact-walsh-engine'
-PROTO=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTO=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def read(p):return p.read_text(encoding='utf-8')
 def js(p):return json.loads(read(p))
 def dump(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')

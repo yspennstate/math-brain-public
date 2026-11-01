@@ -1,7 +1,7 @@
 import json,hashlib,datetime
 from pathlib import Path
 root=Path(__file__).resolve().parents[1]; home=root.parents[1]
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 def load(p):return json.loads((root/p).read_text(encoding='utf-8'))
 def save(p,obj):(root/p).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 chunks=[load(f'out/main_{a:03}_{a+100:03}.json') for a in range(0,400,100)]

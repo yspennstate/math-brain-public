@@ -8,7 +8,7 @@ def js(p,v):put(p,json.dumps(v,indent=2,ensure_ascii=False)+'\n')
 v=json.loads(read(R/'out'/'check.json')); au=json.loads(read(R/'out'/'audit.json'))
 assert v['status']==au['status']=='PASS'
 assert v['counts']=={'invoice_cases':2304,'physical_marginals':18432,'character_guards':8,'paid_roots':48,'paid_terminals':192}
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 p=json.loads(read(protocol)); req=p['required_per_run']
 sources=[protocol,A/'STATUS.md',Path(r'BOARD.md'),Path(r'claude\B14\STREAM_NOTES.md'),A/'runs'/'20261023T065356Z-fleet03-A068-antichain-beyond-one-order'/'REPORT.md']
 for a,d in [('A066','20261023T113807Z-fleet03-A066-semigroup-dissipation'),('A097','20261023T121505Z-fleet03-A097-cross-route-transfer')]:

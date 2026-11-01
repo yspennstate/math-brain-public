@@ -10,7 +10,7 @@ p.write_text(s,encoding='utf-8',newline='\n')
 p=R/'PROOF.md';s=p.read_text(encoding='utf-8');s+='\nFormal receipt: the guarded core attempt returned SETUP_UNVERIFIED (exit2), with no compiler process launched because compute admission held. No Lean-checked mathematical result is claimed. The analytic proof and exact finite certificates are the achieved rung.\n';p.write_text(s,encoding='utf-8',newline='\n')
 for name in ['PROGRESS.json','PACKET_DELTA.json']:
  p=R/name;v=json.loads(p.read_text(encoding='utf-8'));v['blockers'].append('Lean core attempt INCOMPLETE: admission held, no compiler launched; no Lean certification.');dump(p,v)
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 fields=protocol['required_per_run'];pf=[x.split(' (')[0] for x in fields['progress_fields']]
 v=json.loads((R/'PROGRESS.json').read_text(encoding='utf-8'));assert set(v)==set(pf)
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()

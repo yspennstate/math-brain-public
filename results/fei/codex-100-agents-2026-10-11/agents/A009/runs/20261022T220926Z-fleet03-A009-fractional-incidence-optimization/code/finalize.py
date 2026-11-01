@@ -5,7 +5,7 @@ from pathlib import Path
 ROOT=Path(__file__).resolve().parents[1]
 HOME=ROOT.parents[1]
 assert HOME.name=='A009'
-PROTO=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTO=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 P=json.loads(PROTO.read_text(encoding='utf-8-sig'))
 def read(name): return json.loads((ROOT/'out'/name).read_text(encoding='utf-8'))
 def write(name,obj): (ROOT/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
@@ -28,7 +28,7 @@ newclaim={
  'claim_id':'A009-ONE-MISSING-EDGE-LEAFLESS-COMPLETE-CERTIFICATE','version':1,
  'exact_statement':statement,'hypotheses':hypotheses,'statement_sha256':hashlib.sha256(canonical).hexdigest(),
  'contributors':['A009'],'proof_source':{'path':str(ROOT/'ONE_MISSING_EDGE.md'),'calibration':str(ROOT/'LEAFLESS_CERTIFICATE.md'),'code':[str(ROOT/'code/damaged.py'),str(ROOT/'code/damaged_verify.py')],'certificates':[str(ROOT/'out/DAMAGED_CHECK.json'),str(ROOT/'out/DAMAGED_VERIFY.json')]},
- 'proof_dependencies':[{'source':str(Path('math-open-problems/reports/fei-2026-10-11/source_material/reductions/paper/forests.tex')),'use':'Original conditioned queue, actual root/count/multiset/label probabilities; no universal payment assumed'},{'claim_id':rootclaim['claim_id'],'version':rootclaim['version'],'statement_sha256':rootclaim['statement_sha256'],'use':'Universal width-two root substatement ONLY, independently reconstructed here; no private-leaf premise'}],
+ 'proof_dependencies':[{'source':str(Path('private-source/reports/fei-2026-10-11/source_material/reductions/paper/forests.tex')),'use':'Original conditioned queue, actual root/count/multiset/label probabilities; no universal payment assumed'},{'claim_id':rootclaim['claim_id'],'version':rootclaim['version'],'statement_sha256':rootclaim['statement_sha256'],'use':'Universal width-two root substatement ONLY, independently reconstructed here; no private-leaf premise'}],
  'review_records':[{'reviewer':'A009','verdict':'AUTHOR_ANALYTIC_PROOF_AND_SEPARATE_ORIGINAL_PROBABILITY_REPLAY; NO_INDEPENDENT_AGENT_ACCEPTANCE','validation':str(ROOT/'out/DAMAGED_VERIFY.json'),'lean_status':'SETUP_UNVERIFIED; admission held, no compiler process','timestamp_utc':stamp}],
  'status':'ANALYTIC_PROOF_EXACT_CHECKED_PENDING_INDEPENDENT_AGENT_REVIEW','supersedes':[],'refutes':[],
  'first_unproved_line':None,'next_consumers':['A006','A007','A008','A010','A015','A086','B02','B20']}

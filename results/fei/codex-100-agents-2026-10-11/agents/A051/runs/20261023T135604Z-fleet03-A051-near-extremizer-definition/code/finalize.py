@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];A=R.parents[1];TEAM=A.parents[1];RUN=R.name
-P=Path('math-open-problems/reports/fei-2026-10-11')
+P=Path('private-source/reports/fei-2026-10-11')
 def rd(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def save(p,v):(R/p).write_text(v if isinstance(v,str) else json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8',newline='')

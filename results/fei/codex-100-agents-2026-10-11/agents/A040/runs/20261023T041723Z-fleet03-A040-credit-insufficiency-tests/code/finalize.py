@@ -4,7 +4,7 @@ import json,hashlib,copy
 from datetime import datetime,timezone
 ROOT=Path(__file__).resolve().parents[1];AGENT=ROOT.parents[1]
 BASE=AGENT.parents[1]
-SHARED=Path('math-open-problems/reports/fei-2026-10-11')
+SHARED=Path('private-source/reports/fei-2026-10-11')
 NOW=datetime.now(timezone.utc).isoformat()
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def write(p,s):p.write_text(s,encoding='utf-8',newline='\n')

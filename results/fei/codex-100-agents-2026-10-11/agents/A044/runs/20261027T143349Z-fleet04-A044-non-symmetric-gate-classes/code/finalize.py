@@ -3,7 +3,7 @@ from datetime import datetime,timezone
 import json,hashlib
 root=Path(__file__).resolve().parents[1]
 agent=root.parents[1];team=agent.parents[1]
-base=Path(r'math-open-problems/reports\fei-2026-10-11')
+base=Path(r'private-source/reports\fei-2026-10-11')
 protocol=json.loads((base/'EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 sha=lambda b:hashlib.sha256(b).hexdigest()
 now=datetime.now(timezone.utc).isoformat()

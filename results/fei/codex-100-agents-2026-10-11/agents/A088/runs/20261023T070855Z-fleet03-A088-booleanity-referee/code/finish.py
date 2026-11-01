@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 R=Path(__file__).resolve().parents[1];HOME=R.parents[1];BASE=HOME.parents[1]
 SRC=HOME.parent/'A067'/'runs'/'20261023T060732Z-fleet03-A067-hypercontractive-refinement'
 OLD=HOME/'runs'/'20261023T025955Z-fleet03-A088-booleanity-referee'
-PROTO=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTO=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def read(p):return p.read_text(encoding='utf-8-sig')
 def load(p):return json.loads(read(p))
 def save(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')

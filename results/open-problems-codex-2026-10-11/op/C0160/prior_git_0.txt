@@ -3,7 +3,7 @@ Model actually running: **GPT-5.6 Sol. Reasoning level: UNVERIFIED** — this is
 # R7-01 — shard-zero status reconciliation: C0151 and C0160
 
 Date: 2026-09-18 UTC  
-Repository: `yspennstate/math-open-problems`  
+Repository: `private-source-repository`  
 Branch: `master`  
 Native slot: `6aabe777361481919c9e614646464772`  
 Own root: `research7_2026-09-17/R7-01/`  

@@ -56,7 +56,7 @@ write(ROOT/'STATUS.md','STATE: A023 stage18 author proof: all-bent mixed prescri
 date=datetime.datetime.now(datetime.timezone.utc).isoformat()
 with (ROOT/'WORKLOG.md').open('a',encoding='utf-8',newline='\n') as f:f.write(f'\n{date} stage18 {RUN.name}: All adaptive mixed expected-depth<=m/4 frontiers paid from one original DATA source; full prescribed seed/controller reference and same R retained, old U<=m/8; balance>=1+m/32. 70145 primary/190 direct-character reconstruction checks PASS. Negative first-one deep leaf retained. Full FEI/review OPEN; z query next.\n')
 with (ROOT/'LEARNED.md').open('a',encoding='utf-8',newline='\n') as f:f.write('\n2026-10-23 stage18: q_h=(P_bh+uniform)/2 pays full reference conversions by one frontier floor, not one extra bit per query. Original projected controller reference CE is a DATA martingale/CONTROL supermartingale. Actual pair-product R is a mixed supermartingale, never renewed. E B>=1+m/32 for all-bent expected-depth<=m/4, z hidden, old U<=m/8. Conditional B>=0 is false: canonical first-one stop has negative all-zero leaf for m>=8, yet expected frontier is paid with full KL.\n')
-fields=json.loads(read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')))['required_per_run']
+fields=json.loads(read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')))['required_per_run']
 assert set(progress)=={x.split(' (')[0] for x in fields['progress_fields']};assert set(claim)==set(fields['claim_fields'])
 for title in fields['report_fields']:assert '# '+title in report
 assert (RUN/'PROGRESS.json').read_bytes()==(RUN/'PACKET_DELTA.json').read_bytes();assert len(read(ROOT/'STATUS.md').splitlines())==2

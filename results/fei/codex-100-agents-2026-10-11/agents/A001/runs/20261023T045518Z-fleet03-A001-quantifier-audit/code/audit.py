@@ -4,7 +4,7 @@ import json, hashlib, re, datetime
 
 run=Path(__file__).resolve().parents[1]
 root=run.parents[1]
-proto=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+proto=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def read(p): return json.loads(p.read_text(encoding='utf-8-sig'))
 def locate(x,k):
  if isinstance(x,dict):

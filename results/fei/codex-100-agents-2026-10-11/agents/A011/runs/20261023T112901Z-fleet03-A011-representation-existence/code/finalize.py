@@ -5,7 +5,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def save(p,v):p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 main=[read(R/'out'/('CHECK_'+str(i)+'.json')) for i in range(6)]
 other=[read(R/'out'/n) for n in ['CHECK_pilot.json','CHECK_grid.json','CHECK_gold.json','BOUND_first.json','BOUND_later.json','REPLAY_RESULTS.json']]
 assert all(x['status']=='PASS' for x in main+other)

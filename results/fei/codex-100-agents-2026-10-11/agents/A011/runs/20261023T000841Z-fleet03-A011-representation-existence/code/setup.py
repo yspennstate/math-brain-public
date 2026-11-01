@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1];(R/'out').mkdir(exist_ok=Tr
 old=A/'runs/20261014T074949Z-fleet05-A011-representation-existence/code/shared.py'
 raw=old.read_bytes();(R/'code/shared.py').write_bytes(raw)
 (R/'out/HELPER_PROVENANCE.json').write_text(json.dumps({'source':str(old),'sha256':hashlib.sha256(raw).hexdigest()},indent=2),encoding='utf-8')
-paths=[Path('~/AGENTS.md'),Path('BOARD.md'),Path('claude/B03/STREAM_NOTES.md'),Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),A/'runs/20261021T182829Z-fleet03-A011-representation-existence/DERIVATION.md',A/'runs/20261021T182829Z-fleet03-A011-representation-existence/CLAIMS.json',A/'runs/20261014T074949Z-fleet05-A011-representation-existence/GENERAL_ENVELOPE.md']
+paths=[Path('~/AGENTS.md'),Path('BOARD.md'),Path('claude/B03/STREAM_NOTES.md'),Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),A/'runs/20261021T182829Z-fleet03-A011-representation-existence/DERIVATION.md',A/'runs/20261021T182829Z-fleet03-A011-representation-existence/CLAIMS.json',A/'runs/20261014T074949Z-fleet05-A011-representation-existence/GENERAL_ENVELOPE.md']
 receipts=[]
 for p in paths:
  data=p.read_bytes();receipts.append({'path':str(p),'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest()})

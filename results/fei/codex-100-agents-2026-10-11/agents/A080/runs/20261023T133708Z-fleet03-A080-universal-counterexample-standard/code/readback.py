@@ -17,7 +17,7 @@ for entry in old['entries']:
     assert p.is_relative_to(r)
     assert p.stat().st_size==entry['bytes'] and digest(p)==entry['sha256'],p
 claims=read('CLAIMS.json')['claims']
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 for c in claims:
     assert set(c)==set(protocol['required_per_run']['claim_fields'])
 own=next(c for c in claims if c['claim_id']=='A080-EXACT-HULL-TENSOR-FAITHFUL-BANK')

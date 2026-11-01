@@ -5,7 +5,7 @@ import audit_hull as a
 R=a.R;A=R.parents[1]
 ROOT=Path(r'~\brain_workers\FEI100_20261011')
 source=ROOT/'agents/A072/runs/20261023T015130Z-fleet03-A072-exact-walsh-engine'
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
 def dump(p,z):p.write_text(json.dumps(z,indent=2,ensure_ascii=False,default=str)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()

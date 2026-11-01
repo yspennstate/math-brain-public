@@ -35,7 +35,7 @@ ack={'claim_id':old_id,'version':1,'statement_sha256':prev['statement_sha256'],'
 js(R/'out/PREVIOUS_REVIEW_ACKNOWLEDGED.json',ack)
 save(snap/'A033_REVIEW_A031.md',rd(peers['A033']/'REVIEW_A031.md'))
 sources.append({'source':str(peers['A033']/'REVIEW_A031.md'),'snapshot':'out/source_snapshots/A033_REVIEW_A031.md','sha256':sha((snap/'A033_REVIEW_A031.md').read_bytes())})
-for label,p in [('B07_STREAM_NOTES',ROOT/'claude/B07/STREAM_NOTES.md'),('EXECUTION_PROTOCOL',Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))]:
+for label,p in [('B07_STREAM_NOTES',ROOT/'claude/B07/STREAM_NOTES.md'),('EXECUTION_PROTOCOL',Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))]:
  data=p.read_bytes();target=snap/(label+p.suffix);target.write_bytes(data);sources.append({'source':str(p),'snapshot':target.relative_to(R).as_posix(),'sha256':sha(data)})
 sources.append({'source':str(ROOT/'BOARD.md'),'snapshot':'out/BOARD_READ.md','sha256':sha((R/'out/BOARD_READ.md').read_bytes()),'revision':'2026-10-23 13:48 UTC snapshot; live board may advance'})
 js(R/'out/SOURCES.json',sources)

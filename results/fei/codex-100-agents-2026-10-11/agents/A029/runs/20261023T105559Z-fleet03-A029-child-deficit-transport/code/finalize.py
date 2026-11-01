@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib,datetime
 B=Path(__file__).resolve().parents[3];R=Path(__file__).resolve().parents[1];RID=R.name
-P=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+P=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 OLD=B/'runs/20261023T032111Z-fleet03-A029-child-deficit-transport'
 prior=json.loads((OLD/'CLAIMS.json').read_text(encoding='utf-8'))[-1]
 oldprogress=json.loads((OLD/'PROGRESS.json').read_text(encoding='utf-8'))

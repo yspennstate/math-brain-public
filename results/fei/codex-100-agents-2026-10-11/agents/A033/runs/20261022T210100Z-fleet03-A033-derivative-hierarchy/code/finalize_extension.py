@@ -49,7 +49,7 @@ with (O/'WORKLOG.md').open('a',encoding='utf-8',newline='\n') as f:f.write(f'\n{
 with (O/'LEARNED.md').open('a',encoding='utf-8',newline='\n') as f:f.write(f'\n{now} - ALL-C all-history fixed-controller-bank no-go: for even m>=max(2,C+6), g=quadratic bent, h=g with origin flipped, f=(g,h), delta=2^-m. Midpoint normalized spectrum has chi-square4/(2^m-1); hence Delta_z H(f)-C delta>delta*(m-C-4/ln2)>0 using ln2>2/3. Exact I(f)=m/2+(m+1)delta and H(f)<=3I(f). Tensor copies and query only each selector, STOP with all g/h terminals: cost grows linearly while H/I<=3. Any fixed outer mask with beta>0 scales the cost by beta. A079 fixed-mask outer family also has H/I<=3. Thus a controller-only constant cannot pay EVERY seed history, even on a proved FEI-bounded family; retain beta V_C(h) or choose a paid seed-dependent history. Prior bent/flip local example credited to ERASURE_RIGIDITY/B05; no priority claim for it. Proof:NO_GO.md;6 frozen dimensions exact PASS.\n')
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()
 assert len((O/'STATUS.md').read_text(encoding='utf-8').splitlines())==2
-proto=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))['required_per_run']
+proto=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))['required_per_run']
 assert set(p)=={x.split(' (')[0] for x in proto['progress_fields']}
 assert set(c)==set(proto['claim_fields'])
 assert hashlib.sha256(c['exact_statement'].encode('utf-8')).hexdigest()==c['statement_sha256']

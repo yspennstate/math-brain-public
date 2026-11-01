@@ -11,7 +11,7 @@ v=json.loads(read(R/'out/validation.json'));a=json.loads(read(R/'out/independent
 assert all(x['status']=='PASS' for x in [v,a,pilot])
 assert v['helper_sha256']==sha(R/'code/check.py')==json.loads(read(R/'FROZEN_SPEC.json'))['sha256']
 assert a['helper_sha256']==sha(R/'code/independent.py')==json.loads(read(R/'INDEPENDENT_SPEC.json'))['sha256']
-source_paths=[Path(r'~\AGENTS.md'),BASE/'BOARD.md',BASE/'claude/B16/STREAM_NOTES.md',Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')]
+source_paths=[Path(r'~\AGENTS.md'),BASE/'BOARD.md',BASE/'claude/B16/STREAM_NOTES.md',Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')]
 src=[];reviewed=[]
 specs=[('A032','20261023T120239Z-fleet03-A032-boolean-phase-realizability','PROOF.md','A032-ISOSPECTRAL-CORE-BOUNDED-MIXTURE-OBSTRUCTION'),('A096','20261023T115236Z-fleet03-A096-live-gap-ledger','DERIVATION.md',None)]
 for agent,stamp,proofname,cid in specs:
@@ -86,7 +86,7 @@ status=f'STATE: Stage10 saved: A032 arbitrary-core obstruction and A096 geometri
 write(OWN/'STATUS.md',status)
 for filename,text in [('WORKLOG.md',f'\n## {now} stage10 ({R.name})\nIndependently accepted A032 arbitrary-core conversion/posterior-rank theorem and A096 full-target geometric-normalizer theorem at stated scope. Proved exact diagonal posterior identity, sharp D>=H(g)-log2 M and actual Boolean duplicated-core phase realization. Main {v["assertions"]}/{v["runtime_seconds"]:.6f}s; separate direct-character {a["assertions"]}/{a["runtime_seconds"]:.6f}s. Final pilot and preserved earlier pilots pass; metadata path typo corrected; no failed mathematical run. Full FEI and intrinsic necessity/initial source price open; new external review and supervisor publication pending.\n'),('LEARNED.md','\n## Stage10: latent capacity retains arbitrary-core entropy\nFor any diagonal law P(s,t)=p(s)1{s=t} and Q=sum_{j<=M}w_j A_j(s)B_j(t), exact posterior lift gives D=H(S|J)+D(v||w)+E[D(p_j||A_j)+D(p_j||B_j)]>=H(p)-log M. This allows arbitrary within-half correlations. Boolean g(x*y) realizes P exactly with H unchanged and I doubled. Three tag characters embed it in the original controller with zero local credits; prescribed product-mixture conversion costs beta*KL at both complete children. Uniform bent-product cores attain H-logM exactly; their core I=n/2, not n. This is declared-class capacity, not universal necessity or an FEI counterfamily. A096 geometric normalizer -log Z is an additional nonnegative exact full-target bill even when effective root KL is0. A032 coefficient2 theorem on original three-bit point-defect blocks is separately valid; do not replace it by coefficient1 without the duplicate-variable construction.\n')]:
  with (OWN/filename).open('a',encoding='utf-8',newline='') as f:f.write(text)
-protocol=json.loads(read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')))['required_per_run']
+protocol=json.loads(read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')))['required_per_run']
 expected=set(protocol['progress_fields']);expected.remove('packet_ids (one primary ID, for compatibility)');expected.add('packet_ids')
 assert set(progress)==expected
 assert all(set(c)==set(protocol['claim_fields']) for c in reviewed+[claim])

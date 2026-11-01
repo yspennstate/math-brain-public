@@ -15,7 +15,7 @@ statement=('For every integer k>=1 let g_k=chi_z*d_6(a)*d_(k+1)(i,y), with disjo
 new={'claim_id':'A046-RARE-GATE-WHOLE-BLOCK-REFRESH-INFLUENCE-OBSTRUCTION','version':1,'exact_statement':statement,'hypotheses':['Finite uniform independent bits; sign functions; bits as KL/entropy units.','Fixed alpha1/7 and beta1/8; full essential block recomputed at children; product-factor source is a DIFFERENT rule.','Actual coherent kernels with own reference outcome normalizers, both physical outcomes and both activation signs retained.','Paid embedding uses only the explicitly specified original source, exact prior reset debit and one old eligible booking<=1/4; no earlier unmentioned withdrawals.'],'statement_sha256':hashlib.sha256(statement.encode('utf-8')).hexdigest(),'contributors':['A046'],'proof_source':{'run_id':R.name,'files':['PROOF.md','code/check.py','code/bank_audit.py','out/CHECK.json','out/BANK_AUDIT.json']},'proof_dependencies':[],'review_records':[],'status':'ANALYTIC_COUNTERFAMILY_AND_PAID_SCOPED_EMBEDDING_EXACT_CERTIFICATES_EXTERNAL_REVIEW_PENDING','supersedes':[],'refutes':['Existence of finite K_alpha at alpha1/7 with sigma_i<=K_alpha Inf_i(J_s) for every arbitrary-core full-essential-block same-alpha activation refresh as frozen in PROOF.md section1.'],'first_unproved_line':None,'next_consumers':['A036','A039','A047','A048','A049','A050','A073','A092','A094','A097','B10','B20']}
 save('CLAIMS.json',[reviewed,new])
 sourcepaths=[B/'BOARD.md',B/'claude/B10/STREAM_NOTES.md',ref/'PROOF.md',ref/'CLAIMS.json',B/'agents/A050/runs/20261023T112002Z-fleet03-A050-repair-with-scope/PROOF.md']
-sourcepaths.append(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+sourcepaths.append(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 receipts=[]
 for p in sourcepaths:
  if p.exists():
@@ -63,7 +63,7 @@ Universal bridge: C024 history transfer/C019 stopping-tree payment gains an exac
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
 with (A/'WORKLOG.md').open('a',encoding='utf-8') as f:f.write(f'\n{now} stage10 {R.name}: consumed A073/A050 closure; froze arbitrary-factor local-price quantifiers. Derived g_k rare-gate reset sigma>1/2048 versus influence2^(-k-1), refuting all finite local K. Main4 actual selectors PASS; bank2roots/10terminals PASS with first debit+oldquarter retained. No FEI disproof; chosen conversion necessity and arbitrary initial supplier still open.\n')
 with (A/'LEARNED.md').open('a',encoding='utf-8') as f:f.write('\nStage10 durable obstruction: WHOLE-essential-core spike and PRODUCT-of-point-factor references are different rules. For g_k=chi_z*d6*d(k+1), samealpha1/7 activation refresh after rare gate i costs>1/2048 while Inf_i=2^(-k-1), even after recomputing actual essential child masks. No finite local multiplier works. Outcome KL from reference branch masses(1-/+alpha/2)/2 stays nonzero as the true influence vanishes. The explicit original source nevertheless pays both resets and oldquarter. A bad local supplier conversion need not be mandatory; do not infer an FEI counterexample.\n')
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 assert set(progress)=={x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']}
 for claim in read(R/'CLAIMS.json'):
  assert set(claim)==set(protocol['required_per_run']['claim_fields'])

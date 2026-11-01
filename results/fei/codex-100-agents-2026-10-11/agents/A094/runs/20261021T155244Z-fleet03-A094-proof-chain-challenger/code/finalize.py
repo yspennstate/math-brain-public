@@ -53,9 +53,9 @@ src=[BASE/'BOARD.md',BASE/'claude/B19/STREAM_NOTES.md',
     BASE/'agents/A095/runs/20261014T074829Z-fleet05-A095-restricted-result-extraction/CLAIMS.json',
     BASE/'agents/A095/runs/20261014T034647Z-fleet05-A095-restricted-result-extraction/DERIVATION.md',
     BASE/'agents/A094/runs/20261014T061347Z-fleet05-A094-proof-chain-challenger/REPORT.md']
-campaign=Path(r'math-open-problems/reports\fei-2026-10-11')
+campaign=Path(r'private-source/reports\fei-2026-10-11')
 src +=[campaign/n for n in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
-supp=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+supp=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 src +=[supp/n for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 # Read the source notes as read-only intake; no theorem from them is blanket accepted.
 src +=list((supp/'sources').glob('*.md'))+list((BASE/'context').glob('*.txt'))

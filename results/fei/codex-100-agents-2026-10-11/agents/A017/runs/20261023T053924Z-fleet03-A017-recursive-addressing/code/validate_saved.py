@@ -8,7 +8,7 @@ receipt=read(R/'out/PERSISTENCE_RECEIPTS.json')
 for item in receipt['files']:
     p=R/item['path'];assert p.stat().st_size==item['bytes'] and sha(p)==item['sha256'],p
 for item in receipt['rolling']:assert sha(A/item['path'])==item['sha256']
-proto=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+proto=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 claim=read(R/'CLAIMS.json')[0];progress=read(R/'PROGRESS.json')
 assert set(claim)==set(proto['required_per_run']['claim_fields'])
 assert set(progress)=={s.split(' (')[0] for s in proto['required_per_run']['progress_fields']}

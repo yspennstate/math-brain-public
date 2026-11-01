@@ -6,7 +6,7 @@ run=R.name;now=datetime.datetime.now(datetime.timezone.utc).isoformat()
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def save(name,x):(R/name).write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-proto_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+proto_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=read(proto_path)
 main=read(R/'out'/'VALIDATION.json');ind=read(R/'out'/'INDEPENDENT.json');pilot=read(R/'out'/'PILOT.json')
 assert main['status']==ind['status']==pilot['status']=='PASS'

@@ -15,7 +15,7 @@ def source(sid,p,origin=None):
 registry=json.loads(read(BASE/'CLAIM_REGISTRY.json'))
 source('registry',BASE/'CLAIM_REGISTRY.json',{'revision':registry['revision'],'snapshot':registry['snapshot_at']})
 source('protocol',BASE/'EXECUTION_PROTOCOL.json')
-source('paper38',SUP/'baseline/current-threshold-paper.tex',{'repository':'yspennstate/math-open-problems','path':'research_pushes/2026-10-11-full-fei-100-agents/baseline/current-threshold-paper.tex','revision':'local content-addressed archived snapshot; not asserted byte-identical to public release','related_public_commit':'b38ba0ab49618ccbe6d1518a34c141dcec9f247c','published_sha256':'85e9c4f36026eb5890be5686d03bf5264e524144686ee203ed799e3d41ac7017'})
+source('paper38',SUP/'baseline/current-threshold-paper.tex',{'repository':'private-source-repository','path':'research_pushes/2026-10-11-full-fei-100-agents/baseline/current-threshold-paper.tex','revision':'local content-addressed archived snapshot; not asserted byte-identical to public release','related_public_commit':'b38ba0ab49618ccbe6d1518a34c141dcec9f247c','published_sha256':'85e9c4f36026eb5890be5686d03bf5264e524144686ee203ed799e3d41ac7017'})
 source('seed',SUP/'SEED_LEMMAS.md',registry['baseline_sources'][1])
 source('supplement_claims',SUP/'CLAIMS.md')
 source('percolation30',CTX/'percolation_spectral_pivotal_entropy_30pp.txt')

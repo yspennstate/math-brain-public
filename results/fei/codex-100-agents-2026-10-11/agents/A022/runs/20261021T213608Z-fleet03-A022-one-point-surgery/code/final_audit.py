@@ -4,7 +4,7 @@ import json, hashlib, datetime
 root=Path(__file__).resolve().parents[1]; agent=root.parents[1]
 def read(p): return json.loads(p.read_text(encoding='utf-8'))
 def save(p,o): p.write_text(json.dumps(o,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 c=read(root/'CLAIMS.json'); p=read(root/'PROGRESS.json')
 for name in ['ENDPOINT_SPEC.json','code/check_endpoints.py','out/endpoint_checks.json','out/source_excerpts.txt','code/final_audit.py']:
     if name not in p['source_artifacts']: p['source_artifacts'].append(name)

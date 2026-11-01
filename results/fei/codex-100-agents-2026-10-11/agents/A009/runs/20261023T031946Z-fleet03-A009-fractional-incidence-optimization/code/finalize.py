@@ -13,7 +13,7 @@ def digest(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 full=json.loads((R/'out/full.json').read_text(encoding='utf-8'))
 pilot=json.loads((R/'out/pilot.json').read_text(encoding='utf-8'))
 assert full['status']==pilot['status']=='PASS'
-sources=[S6/'DELETED_DEGREE_TWO.md',S6/'CLAIMS.json',S10/'GROWING_MATCHING.md',S10/'CLAIMS.json',BASE/'BOARD.md',BASE/'claude/B02/STREAM_NOTES.md',Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+sources=[S6/'DELETED_DEGREE_TWO.md',S6/'CLAIMS.json',S10/'GROWING_MATCHING.md',S10/'CLAIMS.json',BASE/'BOARD.md',BASE/'claude/B02/STREAM_NOTES.md',Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 pins=[{'path':str(p),'sha256':digest(p),'bytes':p.stat().st_size} for p in sources]
 save('out/SOURCE_PINS.json',pins)
 source=json.loads((S6/'CLAIMS.json').read_text(encoding='utf-8'))[0]

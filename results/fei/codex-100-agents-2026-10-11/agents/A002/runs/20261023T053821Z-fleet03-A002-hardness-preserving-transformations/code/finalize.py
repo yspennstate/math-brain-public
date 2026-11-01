@@ -6,7 +6,7 @@ B=A.parents[1]; now=datetime.now(timezone.utc).isoformat()
 def read(p): return json.loads(p.read_text(encoding='utf-8'))
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def save(p,x): p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-protocolpath=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'); proto=read(protocolpath)
+protocolpath=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'); proto=read(protocolpath)
 check=read(R/'out/CHECK.json'); indep=read(R/'out/INDEPENDENT.json'); pilot=read(R/'out/PILOT.json')
 assert check['status']==indep['status']==pilot['status']=='PASS'
 assert check['counts']=={'rounding_roots':278,'roundings':804,'activation_roots':44,'data_children':566,'data_blocks':194,'canonical_roots':16}

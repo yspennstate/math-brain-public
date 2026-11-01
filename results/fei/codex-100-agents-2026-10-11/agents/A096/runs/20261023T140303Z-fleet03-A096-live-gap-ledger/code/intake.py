@@ -23,7 +23,7 @@ for i in range(1,101):
     for c in entries:
      if isinstance(c,dict):claims.append({'claim_source':str(cp),'claim_file_sha256':hashlib.sha256(rawc).hexdigest(),'report_sha256':row['sha256'],'full_report_read':True,'protocol_bundle':complete,**{k:c.get(k) for k in ('claim_id','version','statement_sha256','exact_statement','status','proof_dependencies','review_records','refutes','supersedes','first_unproved_line','next_consumers')}});newc+=1
   except Exception as e:errors.append({'path':str(p),'error':repr(e)})
-required=[BASE/'BOARD.md',BASE/'claude/B20/STREAM_NOTES.md',ROOT.parents[1]/'STATUS.md',Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+required=[BASE/'BOARD.md',BASE/'claude/B20/STREAM_NOTES.md',ROOT.parents[1]/'STATUS.md',Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 critical={'A050':'20261023T132645Z-fleet03-A050-repair-with-scope','A097':'20261023T121505Z-fleet03-A097-cross-route-transfer','A079':'20261023T130748Z-fleet03-A079-correlated-auxiliaries','A082':'20261023T121241Z-fleet03-A082-finite-inequalities'}
 for a,r in critical.items():
  folder=BASE/'agents'/a/'runs'/r

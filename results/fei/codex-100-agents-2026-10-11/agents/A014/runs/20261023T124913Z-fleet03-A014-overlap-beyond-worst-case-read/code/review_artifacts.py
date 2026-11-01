@@ -13,7 +13,7 @@ def find(obj,key):
         found=find(val,key)
         if found is not None:return found
     return None
-protocol=js(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=js(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 progress=js(R/'PROGRESS.json');assert set(progress)=={s.split(' (')[0] for s in find(protocol,'progress_fields')}
 assert progress==js(R/'PACKET_DELTA.json') and progress['packet_ids']==['A014']
 claim=js(R/'CLAIMS.json')[0];assert set(claim)==set(find(protocol,'claim_fields'))

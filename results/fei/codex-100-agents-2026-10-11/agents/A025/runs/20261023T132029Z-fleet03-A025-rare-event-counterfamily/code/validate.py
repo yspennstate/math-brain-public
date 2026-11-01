@@ -3,7 +3,7 @@ from pathlib import Path
 import json,hashlib
 R=Path(__file__).resolve().parents[1]; home=R.parents[1]
 rd=lambda p:json.loads(p.read_text(encoding='utf-8'))
-protocol=rd(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=rd(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 progress=rd(R/'PROGRESS.json'); claims=rd(R/'CLAIMS.json')
 assert set(progress)=={x.split(' (')[0] for x in protocol['progress_fields']}
 assert progress['packet_ids']==['A025'] and progress['packet_id']=='A025'

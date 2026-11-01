@@ -13,8 +13,8 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 
 def prepare():
     (RUN/'out').mkdir(exist_ok=True)
-    protocol=Path(r'math-open-problems/reports\fei-2026-10-11')
-    supplement=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+    protocol=Path(r'private-source/reports\fei-2026-10-11')
+    supplement=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
     paths=[protocol/x for x in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
     paths += [supplement/x for x in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
     paths += sorted((supplement/'sources').glob('*.txt'))+sorted((supplement/'sources').glob('*.md'))

@@ -87,7 +87,7 @@ sources=[];base=Path('~/brain_workers/FEI100_20261011')
 for p in [base/'BOARD.md',base/'claude/B12/STREAM_NOTES.md',base/'agents/A058/runs/20261027T114055Z-fleet04-A058-overlapping-compositions/PROOF.md',base/'agents/A060/runs/20261027T011815Z-fleet04-A060-composition-sharpness/PROOF.md',base/'agents/A091/runs/20261027T054729Z-fleet04-A091-composition-referee/PROOF.md',base/'agents/A057/runs/20261027T080128Z-fleet04-A057-coherent-restriction-remainder/REPORT.md']:
  sources.append({'path':str(p),'sha256':sha(p)})
 dump(R/'out/SOURCES.json',sources)
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 assert set(progress)=={x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']}
 assert set(claim)==set(protocol['required_per_run']['claim_fields'])
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()

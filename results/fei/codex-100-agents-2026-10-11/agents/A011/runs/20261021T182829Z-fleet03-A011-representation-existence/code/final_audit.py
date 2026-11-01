@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];A=R.parents[1]
-P=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+P=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 c=json.loads((R/'CLAIMS.json').read_text(encoding='utf-8'))[0];p=json.loads((R/'PROGRESS.json').read_text(encoding='utf-8'));r=(R/'REPORT.md').read_text(encoding='utf-8');d=(R/'DERIVATION.md').read_text(encoding='utf-8')
 assert set(c)==set(P['required_per_run']['claim_fields'])
 assert set(p)=={x if not x.startswith('packet_ids ') else 'packet_ids' for x in P['required_per_run']['progress_fields']}

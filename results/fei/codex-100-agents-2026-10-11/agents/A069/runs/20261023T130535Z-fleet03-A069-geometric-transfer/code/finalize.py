@@ -5,7 +5,7 @@ RUN=Path(__file__).resolve().parents[1];BASE=RUN.parents[1]
 ROOT=BASE.parents[1]
 OLD=BASE/'runs/20261023T105842Z-fleet03-A069-geometric-transfer'
 REF=ROOT/'agents/A070/runs/20261023T112210Z-fleet03-A070-analytic-route-referee'
-PROTO=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+PROTO=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def save(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')

@@ -6,7 +6,7 @@ base=Path(__file__).resolve().parents[1]
 agent=base.parents[1]
 agents=base.parents[2]
 source=agents/'A036/runs/20261023T135330Z-fleet03-A036-reference-law-divergence'
-proto_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+proto_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 proto=json.loads(proto_path.read_text(encoding='utf-8'))
 check=json.loads((base/'out/CHECK.json').read_text(encoding='utf-8'))
 audit=json.loads((base/'out/AUDIT.json').read_text(encoding='utf-8'))

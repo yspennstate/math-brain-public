@@ -8,7 +8,7 @@ rid=R.name;now=datetime.now(timezone.utc).isoformat()
 def dump(p,v):p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def load(p):return json.loads(p.read_text(encoding='utf-8-sig'))
-protocol_path=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 protocol=load(protocol_path)
 cert=load(R/'out/FAMILY_CERTIFICATE.json');ind=load(R/'out/INDEPENDENT_CERTIFICATE.json')
 assert cert['status']==ind['status']=='PASS'
@@ -21,7 +21,7 @@ sourcepaths=[protocol_path,B/'BOARD.md',B/'claude/B13/STREAM_NOTES.md',A/'runs/2
 root=protocol_path.parent
 sourcepaths += [root/n for n in ['README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json']]
 sourcepaths += list(root.glob('*.tex'))
-supp=Path(r'math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+supp=Path(r'private-source/research_pushes/2026-10-11-full-fei-100-agents')
 sourcepaths += [supp/n for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 sourcepaths += list((B/'context').glob('*.txt'))
 sources=[]

@@ -2,7 +2,7 @@ from pathlib import Path
 from fractions import Fraction as F
 import datetime,json,hashlib
 R=Path(__file__).resolve().parents[1];A=R.parents[1];now=datetime.datetime.now(datetime.timezone.utc).isoformat()
-P=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+P=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 checks=[json.loads((R/f'out/CHECK_{mode}.json').read_text(encoding='utf-8')) for mode in ['pilot']+list(map(str,range(8)))];replay=json.loads((R/'out/REPLAY_RESULTS.json').read_text(encoding='utf-8'))
 assert all(x['status']=='PASS' for x in checks+[replay]);assert sum(x['labelled_cores'] for x in checks)==270
 assert sum(x['source_order_prefix_reference_cases'] for x in checks)==73632

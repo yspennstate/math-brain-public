@@ -17,7 +17,7 @@ with open('prior_hits.txt','w',encoding='utf8') as out:
       if 'E0007' in line:out.write(str(p)+'\n'+line+'\n')
     except (UnicodeError,OSError):pass
  print('prior_hits:',Path('prior_hits.txt').read_text(encoding='utf8')[:16000])
-names=subprocess.run(['git','-C','~/math-open-problems','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8').stdout
+names=subprocess.run(['git','-C','~/private-source','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8').stdout
 hits=[s for s in names.splitlines() if 'e0007' in s.lower() or 'unequal-death' in s.lower()]
 Path('repo_paths.txt').write_text('\n'.join(hits),encoding='utf8');print('repo paths',hits[:30])
 for k,u in [('comparison.pdf','https://arxiv.org/pdf/1908.06628'),('neuhauser_metadata.json','https://api.crossref.org/works/10.1007/BF01192067')]:

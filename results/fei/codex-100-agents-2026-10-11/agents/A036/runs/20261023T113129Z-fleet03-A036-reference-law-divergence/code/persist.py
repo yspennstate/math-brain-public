@@ -7,7 +7,7 @@ def ck(v):
  global N
  N+=1;assert v,N
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-p=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'));schema={}
+p=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'));schema={}
 def walk(j):
  if isinstance(j,dict):
   for k,v in j.items():

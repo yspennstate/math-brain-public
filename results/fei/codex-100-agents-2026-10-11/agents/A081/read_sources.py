@@ -1,7 +1,7 @@
 from pathlib import Path
 import json, hashlib
-BASE=Path(r'math-open-problems/reports\fei-2026-10-11')
-SUP=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+BASE=Path(r'private-source/reports\fei-2026-10-11')
+SUP=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 CTX=Path(r'context')
 OWN=Path(__file__).parent
 RUN=OWN/'runs/20261011T214745Z-fleet05-A081-dependency-certificates'

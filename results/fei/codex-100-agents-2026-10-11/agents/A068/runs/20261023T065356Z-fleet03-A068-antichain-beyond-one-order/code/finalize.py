@@ -82,7 +82,7 @@ oldlearn='\n'.join(line for line in read(HOME/'LEARNED.md').splitlines() if not 
 write(HOME/'LEARNED.md',oldlearn+lesson)
 
 sources=[(ROOT/'BOARD.md','relevant current agent rows'),(ROOT/'claude'/'B14'/'STREAM_NOTES.md','full lead direction'),
- (Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),'protocol and exact field arrays'),
+ (Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),'protocol and exact field arrays'),
  (Path('~/<private-repo>/12_cognitive_architecture/scheduled_tasks/README.md'),'current full-FEI-only order'),
  (Path('~/AGENTS.md'),'machine operational restrictions read'),
  (RUN.parent/'20261023T024829Z-fleet03-A068-antichain-beyond-one-order'/'REPORT.md','complete predecessor proof'),

@@ -5,7 +5,7 @@ from datetime import datetime, timezone
 run = Path(__file__).resolve().parents[1]
 home = run.parents[1]
 agents = home.parent
-protocol_path = Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol_path = Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def read(p):
     return json.loads(p.read_text(encoding='utf-8-sig'))
 def write(p, data):

@@ -3,7 +3,7 @@ from datetime import datetime,timezone
 import json,hashlib
 R=Path(__file__).resolve().parents[1];AG=R.parents[1];BASE=AG.parents[1]
 SRC=AG.parent/'A075'/'runs'/'20261023T043917Z-fleet03-A075-search-to-theorem-bridge'
-PROTO=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTO=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def save(p,o):p.write_text(json.dumps(o,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()

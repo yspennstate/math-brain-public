@@ -5,7 +5,7 @@ def ck(x):
  global checks
  checks+=1;assert x,checks
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 p=json.loads(protocol.read_text(encoding='utf-8-sig'))['required_per_run']
 progress=json.loads((R/'PROGRESS.json').read_text());fields=set(p['progress_fields']);fields.remove('packet_ids (one primary ID, for compatibility)');fields.add('packet_ids')
 ck(set(progress)==fields);ck(progress['packet_ids']==['A036']);ck((R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes())

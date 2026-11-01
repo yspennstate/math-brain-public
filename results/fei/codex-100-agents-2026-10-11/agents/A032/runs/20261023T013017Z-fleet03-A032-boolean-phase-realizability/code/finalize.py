@@ -7,7 +7,7 @@ def save(p,v):p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encodi
 v=json.loads((O/'validation.json').read_text(encoding='utf-8'));ind=json.loads((O/'independent.json').read_text(encoding='utf-8'))
 assert v['PASS'] and ind['PASS'] and v['controller_seed_pairs']==2038 and ind['fixtures']==2
 assert v['seconds']<180 and ind['seconds']<45
-P=Path(r'math-open-problems/reports\fei-2026-10-11')
+P=Path(r'private-source/reports\fei-2026-10-11')
 protocol=json.loads((P/'EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 src=BASE/'agents/A079/runs/20261022T225318Z-fleet03-A079-correlated-auxiliaries'
 claims=json.loads((src/'CLAIMS.json').read_text(encoding='utf-8'))

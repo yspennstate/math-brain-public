@@ -23,8 +23,8 @@ holds. This reconstruction does **not** claim a globally continuous representati
 
 The proof below was reconstructed from the following source-pinned ingredients, but each transition was rederived rather than importing a peer verdict:
 
-1. the audited standalone nine/400 source `yspennstate/math-open-problems@eeb752c8943536541b34b42b8bf48e924f4d3d2f`, in particular its marginal-free order-three receiver, five-direction full half-potential proposition, physical pivot estimates, and product-coordinate grouped Fourier compiler;
-2. the eight-direction terminal-collar theorem `yspennstate/math-open-problems@5dc3b183bf69c8ab69f725c4464d5073f5c803cd`;
+1. the audited standalone nine/400 source `private-source-repository@eeb752c8943536541b34b42b8bf48e924f4d3d2f`, in particular its marginal-free order-three receiver, five-direction full half-potential proposition, physical pivot estimates, and product-coordinate grouped Fourier compiler;
+2. the eight-direction terminal-collar theorem `private-source-repository@5dc3b183bf69c8ab69f725c4464d5073f5c803cd`;
 3. robust two-anchor extraction `proofnet24/QFORM-density/fixed-multiplicity-2026-09-24/improvements/fleet03/B17/20260924T141823Z-fleet03-B17-fixedmult-auto11/ROBUST_TWO_ANCHOR.md`;
 4. the one-exception completion route in fleet01/B12, commit `804377122a7a321d1b65eff634066f59f45bf9a3`, which I independently checked algebraically.
 

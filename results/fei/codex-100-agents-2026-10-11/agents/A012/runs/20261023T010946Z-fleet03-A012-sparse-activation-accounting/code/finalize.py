@@ -3,7 +3,7 @@ import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];A=R.parents[1];O=R/'out'
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 classification=read(O/'CLASSIFICATION.json');v=[read(O/f'VERIFY_{j}.json') for j in range(5)];c=[read(O/f'CONTINUUM_{j}.json') for j in range(5)]
 fixtures=[read(O/f'FIXTURES_{m}.json') for m in ('base','lift')]
 assert all(x['status']=='PASS' for x in v+c)
@@ -63,7 +63,7 @@ for field in protocol['required_per_run']['report_fields']:assert '## '+field in
 stamp='2026-10-23 stage18 (run '+R.name+')'
 with (A/'WORKLOG.md').open('a',encoding='utf-8') as f:f.write('\n'+stamp+': Consumed A013 scoped v5 review and rank4 bent obstruction. Two-total upper relaxation failed numerically (~4.066); replaced by signed-row continuum trees. All8 rows now proved; exact inactive-frequency cancellation gives affine parity quotient and unbounded physical overlap at rank3. Five complete covers,6398 classification/replay and143704 Boolean/reference assertions pass. v6 pending independent review; memok denied compiler; checklist lock blocked working marker. Full FEI remains open.\n')
 with (A/'LEARNED.md').open('a',encoding='utf-8') as f:f.write('\n'+stamp+'\n- Exact pure-child identity: B=2d+sum_{a!=0}[Phi((a-b)^2,b^2)-2b^2]. Inactive pure coefficients cancel; retain their full true terminal entropy. This makes B depend only on q conditioned on the pure Fourier affine quotient.\n- All256 three-bit phases (support1/4/8 counts16/112/128), ALL8 independent row probabilities and arbitrary correlated private events now have B<4min(d,1-d), endpoints zero. Exact signed-row cover:5 seed reps,332 positive leaves,8 analytic leaves,335 splits. Full normalized private KL transfer remains D_F=D_Hcal/2.\n- Affine Fourier dimension<=3, unlike physical overlap, survives restriction and permits arbitrary physical overlap; leaves H<=48I/7<KI. Both actual child certificates are essential. threshold>=2 on5 bits remains a nonmember: affine rank5, all10 cofactor ranks4,15 product minors.\n- Grouping seven small Fourier rows by log-sum loses necessary signs (numerical upper relaxation>4), not an actual Boolean refutation. A013 rank4 bent edit blocks unchanged selector-only K<7. Universal next gap is BOTH-private rank3 payment from unused inherited surplus, not fresh references.\n')
-sources=[Path('BOARD.md'),Path('claude/B03/STREAM_NOTES.md'),Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+sources=[Path('BOARD.md'),Path('claude/B03/STREAM_NOTES.md'),Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 review=Path('agents/A013/runs/20261022T202344Z-fleet03-A013-representation-stability')
 sources += [review/'REPORT.md',review/'DERIVATION.md',review/'code'/'replay.py']
 receipts=[]

@@ -2,7 +2,7 @@ from pathlib import Path
 import json, hashlib, copy
 from datetime import datetime, timezone
 RUN=Path(__file__).resolve().parents[1]; OWN=RUN.parents[1]; BASE=RUN.parents[3]; OUT=RUN/'out'
-CAN=Path(r'math-open-problems/reports\fei-2026-10-11')
+CAN=Path(r'private-source/reports\fei-2026-10-11')
 proto=json.loads((CAN/'EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 now=datetime.now(timezone.utc).isoformat()
 def save(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')

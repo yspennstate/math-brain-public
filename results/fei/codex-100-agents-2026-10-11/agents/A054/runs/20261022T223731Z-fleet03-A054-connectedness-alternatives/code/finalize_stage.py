@@ -184,7 +184,7 @@ if complete:
         existing=(A/name).read_text(encoding='utf-8') if (A/name).exists() else ''
         if ('stage17: audited prior fiber route' if name=='WORKLOG.md' else 'Stage17 durable:') not in existing:
             with (A/name).open('a',encoding='utf-8') as f:f.write(line)
-P=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+P=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 fields=P['required_per_run'];expected=set(fields['progress_fields']);expected.remove('packet_ids (one primary ID, for compatibility)');expected.add('packet_ids')
 assert set(progress)==expected
 assert all(set(c)==set(fields['claim_fields']) for c in claims)

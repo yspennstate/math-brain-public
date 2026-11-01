@@ -9,7 +9,7 @@ check=read(R/'out/CHECK.json');other=read(R/'out/INDEPENDENT.json');pilot=read(R
 assert check['status']==other['status']==pilot['status']=='PASS'
 assert check['assertions']==152876 and other['assertions']==934
 total=check['assertions']+other['assertions']
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=read(protocol_path)
 runs={
  'A002':'20261023T053821Z-fleet03-A002-hardness-preserving-transformations',

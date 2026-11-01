@@ -11,7 +11,7 @@ assert [checks[k] for k in ('full_count_cases','top_formula_cases','direct_cases
 assert bank['status']=='PASS' and bank['cases']==768 and bank['assertions']==3840
 shared=Path('~/brain_workers/FEI100_20261011')
 review=shared/'agents/A045/runs/20261022T232557Z-fleet03-A045-biased-realizability-referee'
-sources=[shared/'BOARD.md',shared/'claude/B09/STREAM_NOTES.md',review/'REPORT.md',review/'PROOF.md',review/'REVIEW_A041.md',review/'CLAIMS.json',shared/'context/threshold_paper_38pp.txt',A/'runs/20261021T190738Z-fleet03-A041-weighted-threshold-fei/CLAIMS.json',A/'runs/20261014T083216Z-fleet05-A041-weighted-threshold-fei/code/check_stage.py',Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+sources=[shared/'BOARD.md',shared/'claude/B09/STREAM_NOTES.md',review/'REPORT.md',review/'PROOF.md',review/'REVIEW_A041.md',review/'CLAIMS.json',shared/'context/threshold_paper_38pp.txt',A/'runs/20261021T190738Z-fleet03-A041-weighted-threshold-fei/CLAIMS.json',A/'runs/20261014T083216Z-fleet05-A041-weighted-threshold-fei/code/check_stage.py',Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 receipts=[]
 for p in sources:
  b=p.read_bytes()

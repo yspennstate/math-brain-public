@@ -77,7 +77,7 @@ def append(p,text):
     with p.open('a',encoding='utf-8',newline='') as f:f.write(text.replace('\n',newline))
 append(A/'WORKLOG.md',f'\n{stamp}: Stage22 independently reconstructed A012v9 ALL-policy certificate: {audit["assertions"]} exact checks PASS,729 raw restrictions,2121 potential rows+108 mandatory entries=2229 states,2642 query pairs. Main margin>19/1024, U>3/5, additive tensor potential proves all interleavings. Initial checker count error repaired; no source theorem changed. Compiler held by memok exit1. Universal original supplier and FEI OPEN. Run {R.name}.\n')
 append(A/'LEARNED.md','\nStage22 durable: A012v9 certificate has2121 ordinary potential rows plus108 mandatory conversion entries, totaling2229 augmented states. Count operation-entry states as well as stored potentials. Independent direct spectra/rational logs confirm margin>19/1024 from SAME original K=4+2/ln2, old5/(4ln2); prescribed U>3/5. Sum LOCAL Bellman entry potentials to prove arbitrary disjoint-tensor adaptive interleavings directly: one block changes, all other summands stay fixed. Keep actual beta>1 vacuum-ray laws nonnegative; do not call them convex mixtures. Cost convention signed entropy increments is essential; this is not A011v5 conversion-only ledger. Original arbitrary-core initial O(I) supplier remains unpaid.\n')
-protocol=load(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=load(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 required=lambda xs:{s.split(' (')[0] for s in xs}
 assert set(progress)==required(protocol['progress_fields'])
 assert set(claim)==set(protocol['claim_fields'])

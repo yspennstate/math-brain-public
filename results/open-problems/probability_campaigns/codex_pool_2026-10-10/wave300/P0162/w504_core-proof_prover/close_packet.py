@@ -81,7 +81,7 @@ The single hardest remaining input is a uniform suitable-coordinate inequality f
 
 The current four-entry DRAFT is {s['draft_path']}: three independently checked special-case lemmas with full proof text and one conjectural concept, with three supported relations. Prior versions are preserved and supersedes_existing marks the reviewed revisions. BRAIN_SUBMISSION.json records publication and review separately from ingestion (not observed) and retrieval (not tested). The validating coordinator integrates. The hook proposal is staged locally in proposals/math-w504.jsonl under the worker write restriction.
 
-After review, apply the new research note from ~/<private-repo>/06_math_research/math-open-problems with git apply --check ~/brain_workers/w504/patches/01_adaptive_coordinate_note.diff, then git apply with the same path. The worker checked the patch in its own fixture; no original repository was modified.
+After review, apply the new research note from ~/<private-repo>/06_math_research/private-source with git apply --check ~/brain_workers/w504/patches/01_adaptive_coordinate_note.diff, then git apply with the same path. The worker checked the patch in its own fixture; no original repository was modified.
 
 NEXT: Independently check C006's Delta<=2 localization and validate the reviewed draft, while keeping C005 conjectural.
 '''

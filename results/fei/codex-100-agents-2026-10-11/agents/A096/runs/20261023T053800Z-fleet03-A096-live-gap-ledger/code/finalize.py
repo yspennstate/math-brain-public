@@ -95,7 +95,7 @@ for file,text in [
  ('WORKLOG.md',f'2026-10-23 stage19 {run}: Consumed A003/A082/A097 closure of prior original-source reset NEXT. Derived current phase-funded nonempty mixture x/(tail+x), Gamma9/3584, complete increment<=-D_occ-x/ln2. Arbitrary finite adaptive repetitions preserve SAME supplied K and old refund. Parity3 gives exact zero-refund obstruction to fixed-strength local rule. {validation_text} Full FEI and independent review remain open.'),
  ('LEARNED.md',f'2026-10-23 {run}: Exact wrapper lemma: mean current seed-query coarse KL >=2 Gamma*(E h*x_j)^2/ln2, Gamma=C-D^2/E from sums A^2B^2,AB^3,B^4. Fixed A079 Gamma9/3584. After paid coherent calibration, arbitrary nonempty target mixture epsilon=x/(tail+x) costs<=x/ln2; full transaction<=-D_occ-x/ln2. Repetition needs no finite tag-refund budget and preserves supplied K, but no arbitrary source price is supplied. Parity3/query yields Inf1, d=B=occupancy=blockRefund0; fixed1/64 ghost profile costs(3/8)log2(64/63)>0. Calibration absorption already paid by A003/A082/A097; previous NEXT obsolete. Source DERIVATION.md.')]:
  p=HOME/file; lines=p.read_text(encoding='utf-8').splitlines(); lines=[line for line in lines if run not in line];lines+=['',text];p.write_text('\n'.join(lines)+'\n',encoding='utf-8')
-protocol=load(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=load(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 for c in claims:
  assert set(c)==set(protocol['required_per_run']['claim_fields'])
  assert c['statement_sha256']==sha(c['exact_statement'])

@@ -13,7 +13,7 @@ for x in m['files']+m['rolling_snapshot']:
  b=Path(x['path']).read_bytes();assert len(b)==x['bytes'] and hashlib.sha256(b).hexdigest()==x['sha256'],x['path']
 for x in load(O/'REVIEW_SOURCE_RECEIPTS.json'):
  b=Path(x['path']).read_bytes();assert len(b)==x['bytes'] and hashlib.sha256(b).hexdigest()==x['sha256'],x['path']
-protocol=load(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'));cs=load(R/'CLAIMS.json');p=load(R/'PROGRESS.json');spec=load(O/'FROZEN_SPEC.json');main=load(O/'GHOST_REVIEW.json');audit=load(O/'INDEPENDENT_CONSERVATION_AUDIT.json')
+protocol=load(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'));cs=load(R/'CLAIMS.json');p=load(R/'PROGRESS.json');spec=load(O/'FROZEN_SPEC.json');main=load(O/'GHOST_REVIEW.json');audit=load(O/'INDEPENDENT_CONSERVATION_AUDIT.json')
 assert len(cs)==1 and set(cs[0])==set(protocol['required_per_run']['claim_fields']);assert set(p)=={s.split(' (')[0] for s in protocol['required_per_run']['progress_fields']};assert p['packet_ids']==['A100'];assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()
 assert hashlib.sha256((R/'code/check_ghost.py').read_bytes()).hexdigest()==spec['helper_sha256'];assert main['transactions']==spec['case_count']==1512;assert main['exact_assertions']==90330;assert audit['assertions']==825;assert main['status']==audit['status']=='PASS';assert main['runtime_seconds']<55 and audit['runtime_seconds']<55
 src=next(c for c in load(Path(load(O/'CRITICAL_SOURCE_RUNS.json')['A079'])/'CLAIMS.json') if c['claim_id']==cs[0]['claim_id'])

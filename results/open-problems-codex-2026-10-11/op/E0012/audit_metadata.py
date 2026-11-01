@@ -18,5 +18,5 @@ for d in list(base.glob('probability_1000_intake_*'))+[base/'codex_pool_2026_10_
     for line in f.read_text(encoding='utf8').splitlines():
      if 'E0012' in line or 'colicin' in line.lower(): print('PRIOR',str(f),line[:8000])
    except Exception: pass
-r=subprocess.run(['git','-C','~/math-open-problems','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True)
+r=subprocess.run(['git','-C','~/private-source','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True)
 print('PUBLISHED PATHS','\n'.join(x for x in r.stdout.splitlines() if 'E0012' in x or 'colicin' in x.lower()))

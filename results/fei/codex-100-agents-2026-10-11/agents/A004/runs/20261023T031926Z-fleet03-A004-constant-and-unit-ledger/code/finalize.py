@@ -6,7 +6,7 @@ RUN=Path(__file__).resolve().parents[1]; OWN=RUN.parents[1]
 def load(p):return json.loads(Path(p).read_text(encoding='utf-8'))
 def save(p,x):Path(p).write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
-protocolpath=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocolpath=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 protocol=load(protocolpath); out=load(RUN/'out/CHECK.json')
 assert out['status']=='PASS' and not out['pilot'] and out['source_cases']==15 and out['active_query_reset_cases']==15 and out['repaired_endpoint_cases']==15
 assert all(F(a['complete_original_quota_margin']['lower'])>F(303343,10**6) for a in out['rows'])

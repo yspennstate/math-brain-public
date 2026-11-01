@@ -5,7 +5,7 @@ def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,x):p.write_text(json.dumps(x,indent=2)+'\n',encoding='utf-8',newline='\n')
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 v=read(ROOT/'out/validation.json'); independent=read(ROOT/'out/independent.json'); frontier=read(ROOT/'out/frontier.json')
 formal=(ROOT/'out/formal.txt').read_text(encoding='utf-8') if (ROOT/'out/formal.txt').exists() else 'PENDING'
 assert formal!='PENDING','Formal attempt still running; do not seal yet'

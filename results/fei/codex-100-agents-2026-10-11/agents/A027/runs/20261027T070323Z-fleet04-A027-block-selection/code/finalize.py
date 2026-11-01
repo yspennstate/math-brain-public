@@ -65,7 +65,7 @@ dump('out/SOURCE_RECEIPTS.json',[{'path':str(p),'sha256':hashlib.sha256(p.read_b
 date=datetime.now(timezone.utc).isoformat()
 for name,entry in [('WORKLOG.md','Stage22: consumed A094/A011 correction; discovered OWN v10 raw=sigma+refund local check was not reflected in endpoint telescope. Scoped candidatev11;15 actual witnesses/2312 checks;300 physical ledgers/12899 predicates;12 strict old envelope failures but SAME exact bank leaves>3/10; independent selected-policy excess>1/128. Full FEI OPEN.'),('LEARNED.md','v10 bounds terminal functional H+E D, not automatically rootCE+actual signed resets. Exact full bill adds Qloss=sum w[erased-pairKL+outcomeKL]. Point activation m>=2, proper DATA then odds tilt then CONTROL: terminalKL0, positive reached bill. Literal D3/OR2 alternating odds/data-prefix3 exceeds old T+4eta/9 envelope>1/128;12/300 failures, while exact original B_OR pays300/300 with residual>3/10 (finite domain only). Exact admission: Qloss<=original unused margin+released Tnew+terminal Snew. Never call signed endpoint differences actual conversion payment without booking query loss. Prior scalar/transport results retained; full FEI/source remain open.')]:
     with (A/name).open('a',encoding='utf-8',newline='') as f:f.write('\n'+date+' A027 '+entry+'\n')
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 assert set(progress)==set(x.split(' (')[0] for x in protocol['required_per_run']['progress_fields'])
 assert set(claim)==set(protocol['required_per_run']['claim_fields'])
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()

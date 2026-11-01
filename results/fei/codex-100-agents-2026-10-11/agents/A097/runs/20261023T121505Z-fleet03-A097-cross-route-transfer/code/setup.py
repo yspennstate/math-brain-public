@@ -6,7 +6,7 @@ spec={'helper_version':'A097-floor-admission-same-owner-v1','helper_sha256':hash
 base=R.parents[3];paths=[base/'BOARD.md',base/'claude/B20/STREAM_NOTES.md',base/'agents/A097/STATUS.md']
 for who,rid in [('A085','20261023T112613Z-fleet03-A085-certificate-adversary'),('A083','20261023T070041Z-fleet03-A083-formal-core'),('A079','20261023T105923Z-fleet03-A079-correlated-auxiliaries'),('A090','20261023T112633Z-fleet03-A090-independent-reconstruction')]:
  p=base/'agents'/who/'runs'/rid;paths.extend(x for x in p.iterdir() if x.name in ['PROOF.md','REPORT.md','CLAIMS.json'])
-camp=Path('math-open-problems/reports/fei-2026-10-11');paths.extend(camp/x for x in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex'])
+camp=Path('private-source/reports/fei-2026-10-11');paths.extend(camp/x for x in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex'])
 records=[]
 for p in paths:
  data=p.read_bytes();text=data.decode('utf-8-sig');records.append({'path':str(p),'bytes':len(data),'sha256':hashlib.sha256(data).hexdigest(),'lines':len(text.splitlines())})

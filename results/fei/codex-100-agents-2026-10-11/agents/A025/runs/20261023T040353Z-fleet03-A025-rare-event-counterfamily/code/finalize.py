@@ -3,7 +3,7 @@ from pathlib import Path
 import json,hashlib,datetime
 ROOT=Path(__file__).resolve().parents[1]; AGENT=ROOT.parents[1]; OUT=ROOT/'out'
 BASE=Path('~/brain_workers/FEI100_20261011')
-PROTO=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTO=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def js(p): return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(p,x): p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='')
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()

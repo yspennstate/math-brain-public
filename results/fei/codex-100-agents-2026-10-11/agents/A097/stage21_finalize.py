@@ -81,9 +81,9 @@ res=subprocess.run([sys.executable,'-B','-X','utf8',str(R/'code/check.py')],capt
 save(R/'out/CHECK_STDOUT.txt',res.stdout);save(R/'out/CHECK_STDERR.txt',res.stderr)
 if res.returncode: raise RuntimeError(res.stderr)
 val=json.loads(res.stdout);save(R/'out/VALIDATION.json',val)
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text())
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text())
 prev=json.loads((B/'runs/20261023T121505Z-fleet03-A097-cross-route-transfer/PROGRESS.json').read_text())
-sourcepaths=[Path('BOARD.md'),Path('claude/B20/STREAM_NOTES.md'),B/'runs/20261023T121505Z-fleet03-A097-cross-route-transfer/PROOF.md',Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+sourcepaths=[Path('BOARD.md'),Path('claude/B20/STREAM_NOTES.md'),B/'runs/20261023T121505Z-fleet03-A097-cross-route-transfer/PROOF.md',Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 sources=[]
 for p in sourcepaths:
  content=p.read_bytes();sources.append({'path':str(p),'sha256':hashlib.sha256(content).hexdigest()})

@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];HOME=R.parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def dump(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 v=read(R/'out/CERTIFICATE.json');assert v['status']=='PASS'
-P=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+P=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 src=Path('agents/A096/runs/20261023T115236Z-fleet03-A096-live-gap-ledger/CLAIMS.json')
 original=read(src)
 selected=[c for c in original if any(w in c['exact_statement'].lower() for w in ['geometric','normalizer','compression']) and 'terminal' in c['exact_statement'].lower()]

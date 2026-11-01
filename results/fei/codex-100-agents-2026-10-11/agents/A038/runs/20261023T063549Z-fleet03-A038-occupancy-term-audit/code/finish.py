@@ -47,7 +47,7 @@ learn='\n## Stage8: preserve actual old booking through a data leg and second re
 for name,text,marker in [('WORKLOG.md',work,R.name),('LEARNED.md',learn,'## Stage8: preserve actual old booking')]:
  if marker not in (A/name).read_text(encoding='utf-8'):
   with (A/name).open('a',encoding='utf-8',newline='') as f:f.write(text)
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 fields=set(protocol['required_per_run']['progress_fields']);fields.remove('packet_ids (one primary ID, for compatibility)');fields.add('packet_ids')
 assert set(P)==fields and set(claim)==set(protocol['required_per_run']['claim_fields'])
 assert all(k in sections for k in protocol['required_per_run']['report_fields'])
@@ -56,6 +56,6 @@ assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()
 claim_read=read(R/'CLAIMS.json')[0]
 assert hashlib.sha256(json.dumps({'statement':claim_read['exact_statement'],'hypotheses':claim_read['hypotheses']},sort_keys=True,separators=(',',':')).encode()).hexdigest()==claim_read['statement_sha256']
 files=[p for p in R.rglob('*') if p.is_file() and p.name!='RECEIPTS.json'];assert all(p.stat().st_size<20*1024**2 for p in files)
-sources=[B/'BOARD.md',B/'claude/B08/STREAM_NOTES.md',prior/'PROOF.md',prior/'CLAIMS.json',A/'runs/20261011T221733Z-fleet05-A038-occupancy-term-audit/OCCUPANCY_TARGET_SOURCE.md',B/'agents/A039/runs/20261023T032407Z-fleet03-A039-projection-under-restrictions/REPORT.md',B/'agents/A050/runs/20261023T042019Z-fleet03-A050-repair-with-scope/REPORT.md',Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')]
+sources=[B/'BOARD.md',B/'claude/B08/STREAM_NOTES.md',prior/'PROOF.md',prior/'CLAIMS.json',A/'runs/20261011T221733Z-fleet05-A038-occupancy-term-audit/OCCUPANCY_TARGET_SOURCE.md',B/'agents/A039/runs/20261023T032407Z-fleet03-A039-projection-under-restrictions/REPORT.md',B/'agents/A050/runs/20261023T042019Z-fleet03-A050-repair-with-scope/REPORT.md',Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')]
 save(R/'out/RECEIPTS.json',{'status':'PASS','saved_at_utc':stamp,'fieldsets_exact':True,'progress_delta_identical':True,'claim_sha256':claim_read['statement_sha256'],'artifacts':[receipt(p) for p in files],'sources':[receipt(p) for p in sources],'rolling':[receipt(A/n) for n in ['STATUS.md','WORKLOG.md','LEARNED.md']],'independent_external_review':'PENDING','mirror_and_supervisor_copy':'UNVERIFIED','lean':'NOT_LAUNCHED'})
 print(json.dumps({'status':'PASS','main_assertions':total,'second_witness_assertions':D['assertions'],'independent_assertions':I['assertions'],'artifacts':len(files),'claim_sha256':claim_read['statement_sha256']}))

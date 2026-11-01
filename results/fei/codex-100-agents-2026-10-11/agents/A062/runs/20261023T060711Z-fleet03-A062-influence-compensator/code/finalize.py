@@ -11,7 +11,7 @@ def put(p,s):
 def js(p,x):put(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')
 def h(p):return sha256(Path(p).read_bytes()).hexdigest()
 now=datetime.now(timezone.utc).isoformat();rid=r.name
-protocol_path=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=json.loads(rd(protocol_path))
+protocol_path=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=json.loads(rd(protocol_path))
 b=json.loads(rd(r/'out/BLOCKS.json'));c=json.loads(rd(r/'out/COUPLED.json'));ledger=json.loads(rd(r/'out/COUPLED_LEDGER.json'));w=json.loads(rd(r/'out/SELECTED_WITNESSES.json'))
 assert (b['roots'],b['profiles'],b['raw_queries'],b['assertions'])==(32,868,936,335469)
 assert (c['roots'],c['child_rows'],c['assertions'])==(24,288,30217)

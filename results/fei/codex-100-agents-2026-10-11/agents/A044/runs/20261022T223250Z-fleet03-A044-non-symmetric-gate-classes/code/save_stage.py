@@ -6,7 +6,7 @@ A=R.parents[1]
 B=A.parents[1]
 run=R.name
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(protocol_path.read_text(encoding='utf-8'))
 check=json.loads((R/'out/CHECK.json').read_text(encoding='utf-8'))
 assert check['status']=='PASS'

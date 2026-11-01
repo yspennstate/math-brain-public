@@ -5,7 +5,7 @@ R=Path(__file__).resolve().parents[1];O=R/'out';A=R.parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def write(p,d):p.write_text(json.dumps(d,indent=2)+'\n',encoding='utf-8')
 reason='Required publication branch main does not resolve: GitHub get-repository reports default_branch=master; get-commit main returns422 No commit found for SHA: main. No remote changes made; supervisor copy remains unverified.'
-write(O/'PUBLICATION_RECEIPT.json',{'status':'BLOCKED_BRANCH_MISMATCH','repository':'yspennstate/math-open-problems','default_branch_observed':'master','required_branch':'main','get_commit_main_http_status':422,'get_commit_main_message':'No commit found for SHA: main','remote_mutations':False,'git_commands_executed':False,'reason':reason})
+write(O/'PUBLICATION_RECEIPT.json',{'status':'BLOCKED_BRANCH_MISMATCH','repository':'private-source-repository','default_branch_observed':'master','required_branch':'main','get_commit_main_http_status':422,'get_commit_main_message':'No commit found for SHA: main','remote_mutations':False,'git_commands_executed':False,'reason':reason})
 p=read(R/'PROGRESS.json');p['blockers'].append(reason);p['source_artifacts'].append('out/PUBLICATION_RECEIPT.json')
 write(R/'PROGRESS.json',p);write(R/'PACKET_DELTA.json',p)
 report=(R/'REPORT.md').read_text(encoding='utf-8');needle='Supervisor copy, brain ingestion and remote mirror are not claimed.'
@@ -18,7 +18,7 @@ files=[p for p in R.rglob('*') if p.is_file() and p!=O/'FINAL_VALIDATION.json' a
 v['artifacts']=[{'path':str(p.relative_to(R)),'bytes':p.stat().st_size,'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in files]
 assert all(p.stat().st_size<20_000_000 for p in files)
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 fields=set(protocol['progress_fields']);fields.remove('packet_ids (one primary ID, for compatibility)');fields.add('packet_ids')
 assert set(read(R/'PROGRESS.json'))==fields
 assert set(read(R/'CLAIMS.json')[0])==set(protocol['claim_fields'])

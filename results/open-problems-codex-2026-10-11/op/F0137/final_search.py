@@ -8,7 +8,7 @@ if 'error' not in r:
 else:
  # DOI-form citation filter is attempted, but no successful graph traversal is claimed if the service rejects it.
  fetch('openalex_citing_attempt.json','https://api.openalex.org/works?'+urllib.parse.urlencode({'filter':'cites:https://doi.org/10.5802/afst.1542','per-page':100,'sort':'publication_date:desc'}))
-paths=subprocess.run(['git','-C','~/math-open-problems','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8',timeout=90).stdout.splitlines()
+paths=subprocess.run(['git','-C','~/private-source','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8',timeout=90).stdout.splitlines()
 hits=[p for p in paths if any(s in p.lower() for s in ['f0137','sabot_tournier','dirichlet'])]
 (R/'repository_path_hits.json').write_text(json.dumps(hits,indent=2),encoding='utf8')
 print('REPOSITORY_PATHS',json.dumps(hits[:35]),flush=True)

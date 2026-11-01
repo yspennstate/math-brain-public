@@ -9,7 +9,7 @@ def read(p): return Path(p).read_text(encoding='utf-8')
 def sha(p): return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def write(p,s): Path(p).write_text(s,encoding='utf-8')
 def dump(p,x): write(p,json.dumps(x,ensure_ascii=False,indent=2)+'\n')
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 P=json.loads(read(protocol))
 prior=B/'runs/20261023T110208Z-fleet03-A020-selector-boundary-tests'
 a16=ROOT/'agents/A016/runs/20261023T112921Z-fleet03-A016-addressing-benchmark'

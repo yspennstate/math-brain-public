@@ -2,7 +2,7 @@ from pathlib import Path
 from datetime import datetime,timezone
 import json,hashlib
 R=Path(__file__).resolve().parents[1];OWN=R.parents[1]
-P=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+P=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 protocol=json.loads(P.read_text(encoding='utf-8-sig'))
 def save(name,x):(R/name).write_text(json.dumps(x,indent=2)+'\n',encoding='utf-8',newline='\n')
 v=json.loads((R/'out/VALIDATION.json').read_text(encoding='utf-8'))

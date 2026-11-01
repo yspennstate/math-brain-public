@@ -7,7 +7,7 @@ A=R.parents[1]
 ROOT=A.parents[1]
 OLD=A/'runs/20261022T221313Z-fleet03-A019-orthogonality-extensions'
 REVIEW=ROOT/'agents/A018/runs/20261023T022754Z-fleet03-A018-shared-data-collision-law'
-PROTOCOL=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+PROTOCOL=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 def read(p): return p.read_text(encoding='utf-8-sig')
 def js(p): return json.loads(read(p))
 def save(p,x): p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')

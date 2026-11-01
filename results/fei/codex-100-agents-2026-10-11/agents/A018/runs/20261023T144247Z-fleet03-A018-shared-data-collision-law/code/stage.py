@@ -5,7 +5,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def write(p,x):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(json.dumps(x,indent=2)+'\n',encoding='utf-8')
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-P=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+P=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 spec={'helper_version':'standalone Fraction physical-edge checker v1; no source checker imported','family':'one-balanced A=point_k*(1-product_m g3)/2, g3 negative only000; padding untouched; at most one bit from each fresh seed','domain':'physical fresh-seed diagnostic k1,2,3 and both external product signs; analytic theorem ALL k>=8,m>=1, ALL adaptive distinct-seed query tree prefixes with <=floor(3m/4) queries/path','case_count':'pilot2 physical cases at k1, main6 physical cases; 384 rational parameter bounds k8..10,m1..128','symmetry':'each of three seed coordinates equivalent by permutation; external product is checked at BOTH signs; policy theorem is analytic, not enumeration','arithmetic':'exact integer edge counts and Fractions; integer entropy certificates','memory_estimate_MB':60,'maximum_runtime_seconds':50,'automatic_dimension_increase':False}
 write(R/'out/FROZEN_SPEC.json',spec)
 checks=0

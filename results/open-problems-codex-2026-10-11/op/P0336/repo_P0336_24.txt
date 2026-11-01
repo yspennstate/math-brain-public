@@ -5,7 +5,7 @@ Model actually ran: **GPT-5.6 Sol. Reasoning level: UNVERIFIED — not GPT-6 max
 Date: 2026-09-19 UTC  
 Worker: `R02`  
 Lane: `CLOSABLE OUTSIDE`  
-Repository / branch: private `yspennstate/math-open-problems` / `master`
+Repository / branch: private `private-source-repository` / `master`
 
 ## 1. Continuity and fixed source metric
 

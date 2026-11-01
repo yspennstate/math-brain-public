@@ -9,7 +9,7 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,s):p.write_text(s,encoding='utf-8',newline='')
 def dump(p,x):write(p,json.dumps(x,ensure_ascii=False,indent=2)+'\n')
 stamp=datetime.datetime.now(datetime.timezone.utc).isoformat()
-proto=load(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+proto=load(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 checks=load(run/'out/CHECKS.json');pilot=load(run/'out/PILOT.json')
 assert checks['status']==pilot['status']=='PASS' and checks['cases']==512
 assert checks['runtime_seconds']<55 and pilot['runtime_seconds']<55

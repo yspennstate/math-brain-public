@@ -163,7 +163,7 @@ for name,text in [('WORKLOG.md',entry),('LEARNED.md',learned)]:
     if marker not in old:
         save(path,old+text)
 
-protocol = json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
+protocol = json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
 expected_progress = {('packet_ids' if x.startswith('packet_ids ') else x) for x in protocol['progress_fields']}
 assert set(progress) == expected_progress
 assert set(claim) == set(protocol['claim_fields'])

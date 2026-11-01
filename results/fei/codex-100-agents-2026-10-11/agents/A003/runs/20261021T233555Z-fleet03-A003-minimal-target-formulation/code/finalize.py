@@ -7,7 +7,7 @@ v=read(R/'out/VALIDATION.json');u=read(R/'out/UNIFORM_SOURCE_VALIDATION.json');p
 assert v['status']=='EXACT_CERTIFICATE_PASS' and u['status']=='EXACT_PASS' and pa['status']=='EXACT_PASS'
 count=v['assertions']+u['assertions']+pa['assertions'];assert count==82544
 lean=read(R/'out/LEAN_RECEIPT.json')
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 original=Path(r'agents\A096\runs\20261021T210221Z-fleet03-A096-live-gap-ledger\CLAIMS.json')
 prod=read(original)
 dump(R/'out/PRODUCER_CLAIM_RECORD.json',prod)

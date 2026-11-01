@@ -9,7 +9,7 @@ def write(n,o):(R/n).write_text(json.dumps(o,indent=2,ensure_ascii=False)+'\n',e
 c=read(R/'out/CHECK.json');s=read(R/'out/SCALAR.json');a=read(R/'out/AUDIT.json')
 assert all(o['status']=='PASS' for o in [c,s,a]);assert F(s['minimum_middle_cell_lower'])>F(1,50)
 total=c['assertions']+c['primitive_assertions']+s['assertions']+a['assertions']+a['primitive_assertions'];assert total==131869
-proto=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=read(proto)
+proto=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=read(proto)
 ap=BASE/'agents/A073/runs/20261023T065921Z-fleet03-A073-certified-logarithms';source_claim=read(ap/'CLAIMS.json')[0]
 assert source_claim['claim_id']=='A073-ACTIVATION-NONEMPTY-OCCUPANCY-REFRESH'
 assert source_claim['statement_sha256']==hashlib.sha256(source_claim['exact_statement'].encode('utf-8')).hexdigest()

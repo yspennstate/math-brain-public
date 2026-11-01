@@ -102,7 +102,7 @@ needle='outerC_plus+sum(q_j*inner_hull)'
 if needle in old:
     old=old.replace(needle,needle+' [WITHDRAWN: A071 stage20 literal7bit witness; use stage10 signed reserve, initial price still unpaid]')
     with learned.open('w',encoding='utf-8',newline='') as f:f.write(old)
-protocol=load(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=load(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 cf=set(protocol['required_per_run']['claim_fields']);pf=set(protocol['required_per_run']['progress_fields']);pf.remove('packet_ids (one primary ID, for compatibility)');pf.add('packet_ids')
 assert all(set(c)==cf for c in load(ROOT/'CLAIMS.json'))
 assert set(load(ROOT/'PROGRESS.json'))==pf

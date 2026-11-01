@@ -73,7 +73,7 @@ dump(RUN/'PROGRESS.json',progress)
 dump(RUN/'PACKET_DELTA.json',progress)
 dump(RUN/'out/ARCHIVE_RECEIPT.json',{
  'status':'BLOCKED_REQUESTED_BRANCH_ABSENT',
- 'repository':'yspennstate/math-open-problems',
+ 'repository':'private-source-repository',
  'metadata_default_branch':'master',
  'requested_branch':'main',
  'readback':'GitHub GET branches/main:404 Branch not found',
@@ -154,7 +154,7 @@ status = ('STATE: A061 stage18 complete: all ordinary carrier histories paid by 
 write(HOME/'STATUS.md',status)
 entry = ('\n2026-10-23 stage18 (20261023T002802Z): consumed A064 carrier transfer and A065 ordinary-history invariant/first-query objection; proved one original M=sum h2(Inf) envelope pays ALL permitted adaptive ordinary carrier histories. Field-family Wcap<13Sbar/48 leaves>23Sbar/48 after old quarter, retaining old pending theta by top-up only. Exact second-query DP l=2,3: W2=47/32-(3/8)log2(7),0; total<Sbar/25, incremental<Sbar/50. Main114154 + independent actual-full-source1205 + readback14 =115373 primary exact assertions; auxiliary/pilot excluded. Fresh memok exit1 (physical1.3GB), compiler not started. Analytic all-l proof saved; independent review/full FEI open; stale brain self-care context not used as premise.\n')
 if entry.strip() not in read(HOME/'WORKLOG.md'): write(HOME/'WORKLOG.md',read(HOME/'WORKLOG.md')+entry)
-archive_entry='\n2026-10-23 stage18 archive check: GitHub metadata reports yspennstate/math-open-problems default master; requested main branch GET returned404. No remote mutation, no git, no branch creation, no push claimed. Local artifacts and supervisor archive handoff retained.\n'
+archive_entry='\n2026-10-23 stage18 archive check: GitHub metadata reports private-source-repository default master; requested main branch GET returned404. No remote mutation, no git, no branch creation, no push claimed. Local artifacts and supervisor archive handoff retained.\n'
 if archive_entry.strip() not in read(HOME/'WORKLOG.md'): write(HOME/'WORKLOG.md',read(HOME/'WORKLOG.md')+archive_entry)
 learned = '''
 Stage18 durable fact (2026-10-23): With source-supporting normalized inherited reference R and a fresh bent carrier, ordinary physical restriction preserves its full lift, including fair reference-only rows. K+M, M=sum h2(Inf), has drift E+O+M-parent-mean Mchild>=O, hence pays any bounded adaptive ordinary-history cut followed by at most one terminal carrier/product conversion. Full H+TC remains; no intermediate reset or earlier carrier-u query is included. The least pending B=max([TC-K]_+,max_i(mean Bchild-E)) is <=M by backward induction. ONE original M bank suffices; no per-node renewal. For the all-l field fixture, Wcap=3(l2) or39l/32(l>=3) is <13Sbar/48; after unrelated old quarter, spare>23Sbar/48. Old nested pending theta counts once, top-up only cap-theta. Complete depth-two minima at l2,l3 are47/32-(3/8)log2(7),0, both<Sbar/25 and incremental second top-up<Sbar/50. Analytic proof plus115373 primary exact checks; independent review pending, no Lean certificate. Point defect f_n=1-2*1[x=0] has M/I>=n-1: generic marginal reserve does NOT solve universal FEI. Next frontier is signed K/E payment in sparse non-carrier histories, not greater field restriction depth.

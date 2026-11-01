@@ -130,7 +130,7 @@ This stage moves C019 stopping-tree payment through every prescribed next query 
     now=datetime.datetime.now(datetime.timezone.utc).isoformat()
     for name,text in [('WORKLOG.md',f'{now} | Stage17 consumes A089 spent sibling:60 alternatives all full children positive;36 selected-only shortfalls; independent product-moment47 states. Exact certificate saved in{run}; universal eligibility remains open.'),('LEARNED.md',f'{now} | After A089 minimal third-query transfer at rate4, all60 other-core next queries are full-capacity feasible but36 fail corrected-newly-queried-core-only debit. Witness b0,j1,i0 has shortfall in(31/1000,4/125) bits. If incoming D=S(parent), then mean S(children)=D+e, so full child allocation leaves exactly zero. This invariant is conditional on child nonnegativity; it does not prove FEI. Keep old debit2tau on the charged sibling and both full terminals.')]:
         with (folder/name).open('a',encoding='utf-8',newline='') as f:f.write('\n'+text+'\n')
-    protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+    protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
     expected=set(protocol['required_per_run']['progress_fields']);expected.remove('packet_ids (one primary ID, for compatibility)');expected.add('packet_ids');ck(set(progress)==expected)
     ck(set(claims[0])==set(protocol['required_per_run']['claim_fields']))
     ck((ROOT/'PROGRESS.json').read_bytes()==(ROOT/'PACKET_DELTA.json').read_bytes())

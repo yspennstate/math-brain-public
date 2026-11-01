@@ -4,7 +4,7 @@ import json,hashlib,datetime
 import exact_helper as e
 R=Path(__file__).resolve().parents[1];AGENT=R.parents[1];BASE=AGENT.parents[1]
 OLD=R.parent/'20261023T023055Z-fleet03-A028-stopping-tree-payment'
-PROTO=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTO=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 REV=BASE/'agents/A029/runs/20261023T032111Z-fleet03-A029-child-deficit-transport'
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()

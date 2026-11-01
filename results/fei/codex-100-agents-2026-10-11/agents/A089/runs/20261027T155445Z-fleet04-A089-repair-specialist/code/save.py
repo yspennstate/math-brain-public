@@ -3,7 +3,7 @@ import json,hashlib
 R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def dump(p,v):p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-P=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=json.loads(P.read_text(encoding='utf-8'))
+P=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=json.loads(P.read_text(encoding='utf-8'))
 src=Path(r'agents\A092\runs\20261027T092049Z-fleet04-A092-counterexample-referee')
 source=json.loads((src/'CLAIMS.json').read_text(encoding='utf-8'))['claims'][-1]
 assert source['claim_id']=='A092-EXACT-ORIGINAL-INFLUENCE-AND-SUMMARY-ONLY-NOGO'

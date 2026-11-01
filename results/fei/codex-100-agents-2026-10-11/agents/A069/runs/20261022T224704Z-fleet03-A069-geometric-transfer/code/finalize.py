@@ -3,7 +3,7 @@ import json,hashlib,datetime,copy
 RUN=Path(__file__).resolve().parents[1];AGENT=RUN.parents[1]
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def save(n,v):(RUN/n).write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-P=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+P=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 protocol=json.loads(P.read_text(encoding='utf-8'));cert=json.loads((RUN/'out/CERTIFICATE.json').read_text(encoding='utf-8'))
 assert cert['status']=='PASS' and cert['assertions']==31065
 lean=json.loads((RUN/'out/LEAN_RESULT.json').read_text(encoding='utf-8'));assert lean['status']=='NOT_RUN_ADMISSION_HELD'

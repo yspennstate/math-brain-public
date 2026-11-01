@@ -3,7 +3,7 @@ import json,hashlib,datetime
 ROOT=Path(__file__).resolve().parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=read(Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 fields={x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']}
 assert set(read(ROOT/'PROGRESS.json'))==fields
 assert (ROOT/'PROGRESS.json').read_bytes()==(ROOT/'PACKET_DELTA.json').read_bytes()

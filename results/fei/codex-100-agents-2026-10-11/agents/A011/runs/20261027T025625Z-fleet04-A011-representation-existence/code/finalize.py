@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib,datetime,copy
 R=Path(__file__).resolve().parents[1];A=R.parents[1];ROOT=A.parent.parent
-P=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+P=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(P.read_text(encoding='utf-8'));fields=protocol['required_per_run']
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def write(name,obj):

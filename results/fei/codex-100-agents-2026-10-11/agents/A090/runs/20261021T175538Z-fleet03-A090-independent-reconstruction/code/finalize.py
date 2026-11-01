@@ -5,8 +5,8 @@ from datetime import datetime, timezone
 run=Path(__file__).resolve().parents[1]
 own=run.parents[1]
 team=own.parents[1]
-campaign=Path(r'math-open-problems/reports\fei-2026-10-11')
-supplement=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+campaign=Path(r'private-source/reports\fei-2026-10-11')
+supplement=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 now=datetime.now(timezone.utc).isoformat()
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,t):

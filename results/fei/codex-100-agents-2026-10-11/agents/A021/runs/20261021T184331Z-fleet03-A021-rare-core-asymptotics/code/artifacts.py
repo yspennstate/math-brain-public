@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib
 R=Path(__file__).resolve().parents[1]
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
 p=json.loads((R/'PROGRESS.json').read_text(encoding='utf-8'))
 c=json.loads((R/'CLAIMS.json').read_text(encoding='utf-8'))
 assert set(p)=={x.split(' (')[0] for x in protocol['progress_fields']}

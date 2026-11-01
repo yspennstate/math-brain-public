@@ -81,7 +81,7 @@ for filename,text in [('WORKLOG.md',f'{now} stage21: Read current board; consume
  marker='stage21:' if filename=='WORKLOG.md' else 'Stage21 durable:'
  if marker not in before:write(p,before.rstrip()+'\n\n'+text+'\n')
 
-protocol=json.loads(read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')))
+protocol=json.loads(read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')))
 required=protocol['required_per_run'];claims=json.loads(read(R/'CLAIMS.json'))
 assert all(set(c)==set(required['claim_fields']) for c in claims)
 expected=[s.split(' (')[0] for s in required['progress_fields']]

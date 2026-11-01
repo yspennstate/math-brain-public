@@ -9,7 +9,7 @@ assert all(x['status']=='PASS' for x in outputs.values())
 total=sum(x['assertions'] for x in outputs.values())
 source21=campaign/'agents/A021/runs/20261023T112941Z-fleet03-A021-rare-core-asymptotics'
 source22=campaign/'agents/A022/runs/20261023T120109Z-fleet03-A022-one-point-surgery'
-sources=[Path('~/AGENTS.md'),Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),campaign/'BOARD.md',campaign/'claude/B05/STREAM_NOTES.md',agent/'runs/20261023T110228Z-fleet03-A025-rare-event-counterfamily/PROOF.md',source21/'PROOF.md',source21/'CLAIMS.json',source22/'PROOF.md',source22/'CLAIMS.json']
+sources=[Path('~/AGENTS.md'),Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),campaign/'BOARD.md',campaign/'claude/B05/STREAM_NOTES.md',agent/'runs/20261023T110228Z-fleet03-A025-rare-event-counterfamily/PROOF.md',source21/'PROOF.md',source21/'CLAIMS.json',source22/'PROOF.md',source22/'CLAIMS.json']
 wr(R/'out/SOURCE_PINS.json',[{'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest()} for p in sources])
 consumers=['A021','A022','A028','A029','A087','A094','A096']
 next_action='A028/A022 specify an actually required descendant nonempty profile outside calibrated phase inheritance; compute its residual signed conditional KL and pay it from the SAME diminished original owner, retaining original entropy spend, old U, both full F terminal debts and source-versus-F phase distinction. No fresh supplier or assumed positive selector refund.'

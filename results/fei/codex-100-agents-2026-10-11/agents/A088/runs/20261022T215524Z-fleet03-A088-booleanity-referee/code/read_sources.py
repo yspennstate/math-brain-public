@@ -2,8 +2,8 @@ from pathlib import Path
 import hashlib, json
 
 root=Path(r'~\brain_workers\FEI100_20261011')
-campaign=Path(r'math-open-problems/reports\fei-2026-10-11')
-supp=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+campaign=Path(r'private-source/reports\fei-2026-10-11')
+supp=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 receipt=[]
 def read(p,cap=None):
     if not p.exists():

@@ -37,7 +37,7 @@ learn='\n## Stage11: universal positive-variation structure\n- V4 is the exact f
 for name,text,marker in [('WORKLOG.md',work,R.name),('LEARNED.md',learn,'## Stage11: universal positive-variation structure')]:
  if marker not in (A/name).read_text(encoding='utf-8'):
   with (A/name).open('a',encoding='utf-8',newline='') as f:f.write(text)
-proto=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'));fields=set(proto['required_per_run']['progress_fields']);fields.remove('packet_ids (one primary ID, for compatibility)');fields.add('packet_ids')
+proto=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'));fields=set(proto['required_per_run']['progress_fields']);fields.remove('packet_ids (one primary ID, for compatibility)');fields.add('packet_ids')
 assert set(progress)==fields and set(claim)==set(proto['required_per_run']['claim_fields']) and set(sections)==set(proto['required_per_run']['report_fields'])
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()
 assert len(status.splitlines())==2 and report.rstrip().split('\n')[-1].startswith('Universal bridge:')

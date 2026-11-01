@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1];B=A.parents[1]
 def load(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def dump(p,v):p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=load(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=load(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 main=load(R/'out/MAIN.json');pilot=load(R/'out/PILOT.json')
 assert main['status']==pilot['status']=='PASS' and main['query_nodes']==124 and main['actual_query_children']==248 and main['field_widths']==[2,3]
 source=B/'agents/A087/runs/20261023T020220Z-fleet03-A087-restriction-referee'

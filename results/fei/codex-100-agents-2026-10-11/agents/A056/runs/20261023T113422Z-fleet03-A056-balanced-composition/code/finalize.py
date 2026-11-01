@@ -14,7 +14,7 @@ assert all(q['both_guard_children_nonconstant'] for q in x['direct_cases'])
 assert all(len(q['z_children'])==2 for q in x['direct_cases'])
 summary={'status':'PASS','exact_assertions':x['assertions'],'direct_Boolean_roots':3,'direct_input_bits':[4,7,12],'direct_truth_entries':sum(q['truth_entries'] for q in x['direct_cases']),'direct_restricted_children':12,'compressed_cases':35,'largest_compressed_k':256,'runtime_seconds':x['runtime_seconds'],'positive_active_child_resets':sum(q['active_fresh_reset_positive'] for q in x['direct_cases']),'pilot_excluded':True,'all_k_proof':'DERIVATION.md equations1-15; no inference from finite extrapolation','independent_review':'PENDING','full_FEI':'OPEN'}
 put('out/EXACT_RESULTS.json',summary);put('out/EXPLICIT_BOUNDARY.json',x['compressed_cases'][-1]);put('out/PHYSICAL_LEDGER_CERTIFICATES.json',x['direct_cases'])
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');p=read(protocol)
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');p=read(protocol)
 prior=A/'runs/20261023T051247Z-fleet03-A056-balanced-composition'
 sources=[protocol,ROOT/'BOARD.md',ROOT/'claude/B12/STREAM_NOTES.md',prior/'DERIVATION.md',prior/'CLAIMS.json',prior/'code/degree_reset.py',Path(r'~\CRASH_RESTORE_2026_10_23_1330\common.md')]
 put('out/SOURCE_RECEIPTS.json',[{'path':str(q),'bytes':q.stat().st_size,'sha256':sha(q)} for q in sources if q.exists()])

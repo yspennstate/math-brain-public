@@ -6,7 +6,7 @@ import Mathlib.LinearAlgebra.FiniteDimensional.Lemmas
 fleet02/B11 WIP toward repaired Lemma 2.6 (Schur complement singular-value count).
 
 Exact manuscript target:
-  yspennstate/math-open-problems@4e530247ec0ef4101a6e5ecf621bd35a969c42aa
+  private-source-repository@4e530247ec0ef4101a6e5ecf621bd35a969c42aa
   repaired-2026-09-25/paper.tex
   blob 98e45d53d106db9a205051a4dd4917fc39dc2e3a
 

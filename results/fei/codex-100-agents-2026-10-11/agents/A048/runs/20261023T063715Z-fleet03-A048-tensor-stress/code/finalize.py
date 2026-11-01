@@ -3,7 +3,7 @@ import json,hashlib,copy,datetime
 B=Path(__file__).resolve().parents[1];HOME=B.parents[1];ROOT=HOME.parents[1]
 S=ROOT/'agents/A047/runs/20261023T055836Z-fleet03-A047-boundary-search'
 SP=ROOT/'agents/A050/runs/20261023T042019Z-fleet03-A050-repair-with-scope/PROOF.md'
-P=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+P=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(P.read_text(encoding='utf8'))
 check=json.loads((B/'out/CHECK.json').read_text(encoding='utf8'))
 audit=json.loads((B/'out/CERTIFICATE_AUDIT.json').read_text(encoding='utf8'))

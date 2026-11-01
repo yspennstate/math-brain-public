@@ -5,7 +5,7 @@ R=Path(__file__).resolve().parents[1]; A=R.parents[1]
 def put(p,s):p.write_text(s,encoding='utf-8')
 def js(p,x):put(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')
 run=R.name
-proto=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+proto=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 checks=json.loads((R/'out/EXACT_CHECKS.json').read_text(encoding='utf-8'))
 audit=json.loads((R/'out/INDEPENDENT_IMPLEMENTATION_AUDIT.json').read_text(encoding='utf-8'))
 old=A/'runs/20261023T144012Z-fleet03-A003-minimal-target-formulation/IMPLICATIONS_BASELINE.md'

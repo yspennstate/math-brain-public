@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1]; A=R.parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(name,obj): (R/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 main=read(R/'out/CHECKS.json'); independent=read(R/'out/INDEPENDENT.json')
 assert main['status']==independent['status']=='PASS'
 total=main['checks']+independent['checks']
@@ -17,9 +17,9 @@ sources=[Path('~/AGENTS.md'),Path('BOARD.md'),
 Path('claude/B11/STREAM_NOTES.md'),
 A/'runs/20261023T123501Z-fleet03-A053-near-tensor-perturbations/REPORT.md',
 A/'runs/20261023T123501Z-fleet03-A053-near-tensor-perturbations/LINEAR_RADIUS_PROOF.md']
-base=Path('math-open-problems/reports/fei-2026-10-11')
+base=Path('private-source/reports/fei-2026-10-11')
 sources += [base/x for x in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
-supp=Path('math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+supp=Path('private-source/research_pushes/2026-10-11-full-fei-100-agents')
 sources +=[supp/x for x in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 ctx=Path('context')
 sources +=list(ctx.glob('*.txt'))

@@ -3,10 +3,10 @@ import hashlib, json, datetime
 R=Path(__file__).resolve().parents[1]; A=R.parents[1]
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,obj): p.write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-P=Path(r'math-open-problems/reports\fei-2026-10-11')
+P=Path(r'private-source/reports\fei-2026-10-11')
 protocol=json.loads((P/'EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 old=R.parent/'20261023T123929Z-fleet03-A063-information-revelation'
-supp=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+supp=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 paths=[P/n for n in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
 paths += [supp/n for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 paths += list(Path(r'context').glob('*.txt'))

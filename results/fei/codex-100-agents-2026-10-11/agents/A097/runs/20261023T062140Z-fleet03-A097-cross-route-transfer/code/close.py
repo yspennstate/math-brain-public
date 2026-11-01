@@ -10,7 +10,7 @@ read=lambda p:json.loads(p.read_text(encoding='utf-8-sig'))
 sha=lambda p:hashlib.sha256(p.read_bytes()).hexdigest()
 proof=(RUN/'DERIVATION.md').read_text(encoding='utf-8');report=(RUN/'REPORT.md').read_text(encoding='utf-8')
 claims=read(RUN/'CLAIMS.json');progress=read(RUN/'PROGRESS.json')
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 for c in claims:
  assert set(c)==set(protocol['required_per_run']['claim_fields'])
  assert hashlib.sha256(c['exact_statement'].encode()).hexdigest()==c['statement_sha256']

@@ -96,7 +96,7 @@ p=rd(R/'PROGRESS.json');p.update(deliverable_status='COMPLETE_SINGLE_SOURCE_AND_
 p['mathematical_delta']+=f" Frozen full{full['exact_assertions']} checks PASS; positive signed spent-history reset certified. Original rate unchanged; no universal FEI improvement."
 p['source_artifacts'] += [str(R/'out/EXACT_EXIT_RESET.json'),str(R/'out/POSITIVE_RESET_CERTIFICATE.json')]
 save(R/'PROGRESS.json',p);save(R/'PACKET_DELTA.json',p)
-protocol=rd(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=rd(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 cf=set(protocol['required_per_run']['claim_fields']);pf={x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']}
 assert all(set(c)==cf for c in claims);assert set(p)==pf
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes() and p['packet_ids']==['A099']

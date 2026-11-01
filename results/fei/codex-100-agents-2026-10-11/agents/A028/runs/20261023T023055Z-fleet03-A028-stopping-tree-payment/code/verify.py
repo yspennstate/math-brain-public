@@ -15,7 +15,7 @@ claim=load('CLAIMS.json')[0];progress=load('PROGRESS.json')
 assert sha(ROOT/'PROGRESS.json')==sha(ROOT/'PACKET_DELTA.json')
 assert hashlib.sha256(claim['exact_statement'].encode()).hexdigest()==claim['statement_sha256']
 assert claim['version']==7 and progress['gap_id']=='C019' and progress['packet_ids']==['A028']
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 assert set(claim)==set(protocol['required_per_run']['claim_fields'])
 fields=set(protocol['required_per_run']['progress_fields']);fields.remove('packet_ids (one primary ID, for compatibility)');fields.add('packet_ids')
 assert set(progress)==fields

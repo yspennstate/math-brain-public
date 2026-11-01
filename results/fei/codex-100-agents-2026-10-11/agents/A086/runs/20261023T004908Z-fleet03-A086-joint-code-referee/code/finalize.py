@@ -9,7 +9,7 @@ FUTURE=ROOT/'agents/A011/runs/20261023T000841Z-fleet03-A011-representation-exist
 def load(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocolpath=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocolpath=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=load(protocolpath);result=load(O/'EXACT_RESULTS.json');pilot=load(O/'PILOT.json');formal=load(O/'LEAN_RECEIPT.json')
 assert result['status']=='PASS' and result['histories']==48 and result['assertions']==54283
 assert result['helper_sha256']==sha(R/'code/check.py')

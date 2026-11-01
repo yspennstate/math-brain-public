@@ -8,7 +8,7 @@ root=A.parent.parent
 def load(p): return json.loads(p.read_text(encoding='utf-8'))
 def dump(p,o): p.write_text(json.dumps(o,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(b): return hashlib.sha256(b).hexdigest()
-protocol=load(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=load(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
 claims=load(R/'CLAIMS.json')
 peer_run=root/'agents/A035/runs/20261023T110610Z-fleet03-A035-signed-cancellation-countersearch'
 srcclaims=load(peer_run/'CLAIMS.json')

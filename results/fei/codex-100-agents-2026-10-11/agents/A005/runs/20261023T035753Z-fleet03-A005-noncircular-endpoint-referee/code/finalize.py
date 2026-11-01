@@ -9,7 +9,7 @@ def read(path):return json.loads(path.read_text(encoding='utf-8'))
 main=read(R/'out/CHECK.json');ind=read(R/'out/INDEPENDENT.json');pilot=read(R/'out/PILOT.json')
 assert main['status']==ind['status']==pilot['status']=='PASS'
 assert main['source_tables']==278 and main['fixtures']==279 and main['assertions']==11439 and ind['assertions']==37
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=read(protocol_path)
 source_root=OWN.parent
 source_runs={

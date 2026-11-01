@@ -5,7 +5,7 @@ def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def dump(p,v):p.write_text(json.dumps(v,indent=2)+'\n',encoding='utf-8')
 result=read(R/'out/RESULT.json');assert result['status']=='PASS'
 lean=read(R/'out/LEAN_RESULT.json');assert lean['status']=='NOT_RUN_ADMISSION_HELD'
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 statement=('For F(x,a,b,y)=(-1)^a if x=0, otherwise 2y-1 if b=1 and +1 if b=0, '
  'and every real c in [3/4,13/16], let Q_c have empty mass 1/16 and nonempty mass 15/16 '
  'distributed as Bernoulli(8c/15,8c/15,4c/15,4c/15) conditioned nonempty. '

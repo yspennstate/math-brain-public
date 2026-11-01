@@ -2,7 +2,7 @@ from pathlib import Path
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];A=R.parent.parent; B=A.parents[1]
 SRC=B/'agents/A006/runs/20261027T024914Z-fleet04-A006-posterior-forest-optimization'
-PROTO=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTO=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def readj(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def put(n,x):(R/n).write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()

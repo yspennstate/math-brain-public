@@ -9,7 +9,7 @@ hist=read(R/'out/HISTORY.json');replay=read(R/'out/HISTORY_REPLAY.json');child=r
 assert hist['status']==replay['status']==child['status']=='PASS'
 assert hist['positive_policies']==replay['positive']==30 and replay['negative']==214
 checks=sum(x['assertions'] for x in (hist,replay,child))
-sources=[Path('~/AGENTS.md'),Path('BOARD.md'),Path('claude/B03/STREAM_NOTES.md'),Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+sources=[Path('~/AGENTS.md'),Path('BOARD.md'),Path('claude/B03/STREAM_NOTES.md'),Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 S=Path('agents/A012/runs/20261023T053904Z-fleet03-A012-sparse-activation-accounting')
 sources += [S/p for p in ['REPORT.md','DERIVATION.md','REFEREE_NOTES.md','CLAIMS.json','out/NEXT_TARGET.json','code/child_exact.py','code/fixtures.py','out/CHILD_author.json','out/CHILD_replay.json']]
 save(R/'out/SOURCE_RECEIPTS.json',[{'path':str(p),'sha256':hashlib.sha256(p.read_bytes()).hexdigest(),'bytes':p.stat().st_size} for p in sources])

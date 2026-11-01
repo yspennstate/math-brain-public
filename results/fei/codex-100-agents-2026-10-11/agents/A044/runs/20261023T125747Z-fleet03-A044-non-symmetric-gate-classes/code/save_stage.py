@@ -89,7 +89,7 @@ for name,text in {
     p=agent/name;old=p.read_text(encoding='utf-8') if p.exists() else ''
     if marker not in old:
         with p.open('a',encoding='utf-8',newline='') as stream:stream.write('\n## '+marker+'\n'+text+'\n')
-protocol=read(Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=read(Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 assert all(set(c)==set(protocol['claim_fields']) for c in claims)
 fields=['packet_ids' if x.startswith('packet_ids (') else x for x in protocol['progress_fields']]
 assert set(progress)==set(fields)

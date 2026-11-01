@@ -25,7 +25,7 @@ if not ok:p['blockers'].append(line)
 write(R/'PROGRESS.json',p);write(R/'PACKET_DELTA.json',p)
 for name in ('WORKLOG.md','LEARNED.md'):
  with (R.parents[1]/name).open('a',encoding='utf-8',newline='') as f:f.write('\nStage20 final persistence: '+line+' Supervisor remote mirror remains unobserved.\n')
-proto=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
+proto=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
 c=json.loads((R/'CLAIMS.json').read_text(encoding='utf-8'))
 assert set(c[0])==set(proto['claim_fields'])
 assert sha256(c[0]['exact_statement'].encode()).hexdigest()==c[0]['statement_sha256']

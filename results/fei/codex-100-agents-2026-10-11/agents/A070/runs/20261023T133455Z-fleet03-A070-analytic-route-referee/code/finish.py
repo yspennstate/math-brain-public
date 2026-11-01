@@ -1,7 +1,7 @@
 from pathlib import Path
 import json,hashlib,copy
 R=Path(__file__).resolve().parents[1];HOME=R.parents[1];ROOT=HOME.parents[1]
-PROTO=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTO=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def read(p):return p.read_text(encoding='utf-8-sig')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,t):p.write_bytes(t.encode('utf-8'))

@@ -18,7 +18,7 @@ SOURCE ~\mop_fei100\reports\fei-2026-10-11\EXECUTION_PROTOCOL.json
   },
   "state": {
     "canonical": {
-      "repository": "yspennstate/math-open-problems",
+      "repository": "private-source-repository",
       "commit": "CURRENT_DEFAULT_BRANCH",
       "path": "reports/fei-2026-10-11/"
     },
@@ -66,7 +66,7 @@ The independently audited revision removes targets already proved, adds known co
 - [Obstruction registry](OBSTRUCTION_REGISTRY.json) preserves the failed statements and valid scope of each control.
 - B20 maintains the concise indices and coverage of all hundred packets. Original derivations remain in immutable run folders.
 
-Each substantive run saves `REPORT.md`, `CLAIMS.json`, `PROGRESS.json`, and the full proof/code/output it uses. The canonical destination is `reports/fei-2026-10-11/runs/Bxx/<UTC_RUN_ID>/` in private `yspennstate/math-open-problems`. Complete source-bound handoffs are mirrored under `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/Bxx/<UTC_RUN_ID>/` in private `yspennstate/math-research-brain`.
+Each substantive run saves `REPORT.md`, `CLAIMS.json`, `PROGRESS.json`, and the full proof/code/output it uses. The canonical destination is `reports/fei-2026-10-11/runs/Bxx/<UTC_RUN_ID>/` in private `private-source-repository`. Complete source-bound handoffs are mirrored under `research_pushes/2026-10-11-full-fei-campaign/handoffs/fleet01/Bxx/<UTC_RUN_ID>/` in private `yspennstate/math-research-brain`.
 
 Review starts on Day 1. A stream holds at most two complete unreviewed candidates before prioritizing repair, verification or review. Full candidates require two independent complete proof-chain reconstructions. A reviewer contributing a material repair cannot independently accept that version.
 
@@ -167,7 +167,7 @@ SOURCE ~\mop_fei100\reports\fei-2026-10-11\CLAIM_REGISTRY.json
         "fleet01/B05 original run"
       ],
       "proof_source": {
-        "repository": "yspennstate/math-open-problems",
+        "repository": "private-source-repository",
         "commit": "80cc2e5027efa56d79c4ecdf7d4949759ef2068b",
         "path": "reports/fei-2026-10-11/runs/B05/20261011T193057Z-fleet01-B05-rare-restrictions/REPORT.md"
       },
@@ -177,7 +177,7 @@ SOURCE ~\mop_fei100\reports\fei-2026-10-11\CLAIM_REGISTRY.json
           "reviewer": "fleet01/B19",
           "verdict": "ACCEPT_AT_STATED_SCOPE",
           "source": {
-            "repository": "yspennstate/math-open-problems",
+            "repository": "private-source-repository",
             "commit": "7955d427222392911dc6af2e4ee3aa8aab67ac8c",
             "path": "reports/fei-2026-10-11/runs/B19/20261011T195038Z-fleet01-B19-independent-review/REPORT.md",
             "blob_sha": "dcec4cb77233a7b233b4798b25aab5f2dd5c82b6"
@@ -232,7 +232,7 @@ SOURCE ~\mop_fei100\reports\fei-2026-10-11\OBSTRUCTION_REGISTRY.json
       ],
       "sources": [
         {
-          "repository": "yspennstate/math-open-problems",
+          "repository": "private-source-repository",
 
 SOURCE ~\mop_fei100\reports\fei-2026-10-11\PACKET_STATUS.json
 {
@@ -342,7 +342,7 @@ SOURCE ~\mop_fei100\reports\fei-2026-10-11\AGENT_ASSIGNMENTS.json
     "assignment_source": {
       "sha256": "940483bc46fe5cdad8ec05d69983898fa9f4c873b8bc8358f3e20d37c6928ccf",
       "canonical_source": {
-        "repository": "yspennstate/math-open-problems",
+        "repository": "private-source-repository",
         "commit": "bc85302284612e979faae67ea51663242d322221",
         "path": "reports/fei-2026-10-11/AGENT_ASSIGNMENTS.json",
         "snapshot": "original plan provenance, superseded operationally by revision v2"
@@ -352,7 +352,7 @@ SOURCE ~\mop_fei100\reports\fei-2026-10-11\AGENT_ASSIGNMENTS.json
     "plan_source": {
       "sha256": "e7cc3f21e59cf4c718e481c21caac18c042b0f716f0e15162a86e09d2e7fd692",
       "canonical_source": {
-        "repository": "yspennstate/math-open-problems",
+        "repository": "private-source-repository",
         "commit": "bc85302284612e979faae67ea51663242d322221",
         "path": "reports/fei-2026-10-11/FEI_100_agent_research_plan.tex",
         "snapshot": "original plan provenance, superseded operationally by revision v2"
@@ -371,7 +371,7 @@ SOURCE ~\mop_fei100\reports\fei-2026-10-11\AGENT_ASSIGNMENTS.json
     "reductions_main": {
       "sha256": "f8d454549fedbb688261d0181fe33b0c4f01be8d26d9c8a38cc1cc6d6a0b3153",
       "canonical_source": {
-        "repository": "yspennstate/math-open-problems",
+        "repository": "private-source-repository",
         "path": "reports/fei-2026-10-11/source_material/reductions/paper/main.tex",
         "release_commit_source": "PUBLICATION_RECEIPTS.json revised report content release",
 
@@ -425,7 +425,7 @@ For $f:\bits^n\to\bits$ under the uniform measure, set
 SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\CAMPAIGN.md
 # Full FEI: mathematical supplement to the installed campaign
 
-**Status: SUPPLEMENT. Full FEI remains OPEN.** This directory adds mathematical routes, source notes, counterexamples, and proof interfaces to the installed plan in [reports/fei-2026-10-11/](https://github.com/yspennstate/math-open-problems/tree/master/reports/fei-2026-10-11/). The installation reference is [commit bc85302284612e979faae67ea51663242d322221](https://github.com/yspennstate/math-open-problems/commit/bc85302284612e979faae67ea51663242d322221). The installed report and subsequent authorized updates remain the primary campaign instructions.
+**Status: SUPPLEMENT. Full FEI remains OPEN.** This directory adds mathematical routes, source notes, counterexamples, and proof interfaces to the installed plan in [reports/fei-2026-10-11/](private-source-repository). The installation reference is [commit bc85302284612e979faae67ea51663242d322221](private-source-repository). The installed report and subsequent authorized updates remain the primary campaign instructions.
 
 **Fixed deadline: 21 October 2026, 19:15:57 UTC (2026-10-21T19:15:57Z).** This supplement uses the installed endpoint. It does not reset the ten-day period, restart a recurrence, alter an existing COUNT, or extend the final eligible run.
 
@@ -613,7 +613,7 @@ Then
 SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\NATIVE_MAPPING.md
 # Mapping supplemental F roles to installed B streams
 
-**This is a many-to-many research crosswalk, not a native reassignment.** The installed plan is [reports/fei-2026-10-11/](https://github.com/yspennstate/math-open-problems/tree/master/reports/fei-2026-10-11/), with installation reference [bc85302284612e979faae67ea51663242d322221](https://github.com/yspennstate/math-open-problems/commit/bc85302284612e979faae67ea51663242d322221). Its twenty native B streams and fixed endpoint **2026-10-21T19:15:57Z** remain authoritative.
+**This is a many-to-many research crosswalk, not a native reassignment.** The installed plan is [reports/fei-2026-10-11/](private-source-repository), with installation reference [bc85302284612e979faae67ea51663242d322221](private-source-repository). Its twenty native B streams and fixed endpoint **2026-10-21T19:15:57Z** remain authoritative.
 
 F01–F20 are the topical role groups in [TEAMS.json](TEAMS.json) and [REPORT.md](REPORT.md): five proposed roles per group, totaling 100 logical roles. This is an alternative decomposition of the same research effort, not another 100 workers or twenty new scheduled jobs. Matching numerical suffixes have no operational meaning.
 
@@ -776,7 +776,7 @@ SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ADDEN
 
 ## Exact source and result
 
-The independently checked [nine-bit witness](https://github.com/yspennstate/math-open-problems/blob/1517573ec0b37bd7aeb6a285562a6763059c5a20/proofnet24/P03-fei/continuations/2026-09-30-entropy-wringing/separated-entropy-counterexamples/report-connected.md) is on private open draft PR12 at commit `1517573ec0b37bd7aeb6a285562a6763059c5a20`, report blob `5254f18a649fcdb9fb3b3dcbcf5e34fcc1b8595c`, SHA256 `d3a5f3503cf776f87c282f60b67b9a7968e859a5abe33c92e409855fe3f25a4e`.
+The independently checked [nine-bit witness](private-source-repository) is on private open draft PR12 at commit `1517573ec0b37bd7aeb6a285562a6763059c5a20`, report blob `5254f18a649fcdb9fb3b3dcbcf5e34fcc1b8595c`, SHA256 `d3a5f3503cf776f87c282f60b67b9a7968e859a5abe33c92e409855fe3f25a4e`.
 
 On the uniform binary9cube, write coordinates as five data bits y and four control bits x. Set A={wt(y)<=1} times the full4cube and B={(11111,0000)}. A and B are the two connected components of their union, have sizes96 and1, and minimum cross-distance4. For indicator raw Fourier entropy with natural logarithms, including the empty coefficient and zero terms interpreted as0,
 
@@ -803,7 +803,7 @@ A smaller7bit graph-separated pair is archived in the same package but its first
 
 Do not revive disjoint physical support as disjoint Fourier support, or use an incoherent mixture for the squared sum of amplitudes. Actual single-coordinate separation has an elementary packet-entropy proof, but arbitrary complementary subsets do not inherit it. A weaker ratio-max or controlled-excess argument still needs a complete proof and nonreusing global accounting. Existing signed/source-sensitive and Boolean-middle lifetime gaps remain open.
 
-[Exact checker](https://github.com/yspennstate/math-open-problems/blob/1517573ec0b37bd7aeb6a285562a6763059c5a20/proofnet24/P03-fei/continuations/2026-09-30-entropy-wringing/separated-entropy-counterexamples/check_connected.py) has blob `762313d59d3b5ebbc9b5d01bce4b487e9624e748`, SHA256 `af13bc0e45c2f927aae5ca7348ac5a20c6257f87592e4b6f1b38120aaed3e527`. All nine publication readbacks, including the historical diagnostic correction, matched complete expected bytes. Code remains on the unmerged draft branch; this index neither deploys it nor grants source admission, scheduler control or external permissions.
+[Exact checker](private-source-repository) has blob `762313d59d3b5ebbc9b5d01bce4b487e9624e748`, SHA256 `af13bc0e45c2f927aae5ca7348ac5a20c6257f87592e4b6f1b38120aaed3e527`. All nine publication readbacks, including the historical diagnostic correction, matched complete expected bytes. Code remains on the unmerged draft branch; this index neither deploys it nor grants source admission, scheduler control or external permissions.
 
 SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\BLOCK_RESTRICTION_IDENTITY_2026-09-18.md
 # Block restriction identity and its exact surviving term
@@ -1045,7 +1045,7 @@ SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ISOSP
 
 **Full FEI remains OPEN.** Curated mathematical excerpt. Original section numbers and mathematical prose are retained; unrelated historical operating instructions and unneeded sections are omitted. This is not a complete archive or a new proof.
 
-Original repository source: [proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+0300__fei-isospectral-splicing-symmetry-quotient.md](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+0300__fei-isospectral-splicing-symmetry-quotient.md). Immutable Git blob: `3421c0cbfd22031554befb962ec92cd0c8bb45b9`. See `../SOURCES.json` for exact retained line ranges, original hashes, and the packaged-file hash. Links to unbundled companion files refer to their original repository locations.
+Original repository source: [proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+0300__fei-isospectral-splicing-symmetry-quotient.md](private-source-repository). Immutable Git blob: `3421c0cbfd22031554befb962ec92cd0c8bb45b9`. See `../SOURCES.json` for exact retained line ranges, original hashes, and the packaged-file hash. Links to unbundled companion files refer to their original repository locations.
 
 ## 2. Exact one-step child-spectrum representation
 
@@ -1092,7 +1092,7 @@ SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\LOG_A
 
 **Full FEI remains OPEN.** Curated mathematical excerpt. Original section numbers and mathematical prose are retained; unrelated historical operating instructions and unneeded sections are omitted. This is not a complete archive or a new proof.
 
-Original repository source: [research_pushes/2026-09-30-fei-log-allocation/REPORT.md](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/research_pushes/2026-09-30-fei-log-allocation/REPORT.md). Immutable Git blob: `822c380de0c4be109415f22f040cc2c8c345d53c`. See `../SOURCES.json` for exact retained line ranges, original hashes, and the packaged-file hash. Links to unbundled companion files refer to their original repository locations.
+Original repository source: [research_pushes/2026-09-30-fei-log-allocation/REPORT.md](private-source-repository). Immutable Git blob: `822c380de0c4be109415f22f040cc2c8c345d53c`. See `../SOURCES.json` for exact retained line ranges, original hashes, and the packaged-file hash. Links to unbundled companion files refer to their original repository locations.
 
 ## 2. Definitions
 
@@ -1184,7 +1184,7 @@ If only one slice has positive mass, its mass is one and the prior exact-product
 SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\OVERLAPPING_PRODUCT_NOTE.md
 # FEI overlapping-product route: source-corrected intake
 
-Full FEI remains OPEN. Immutable [complete report](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/REPORT.md), [attribution correction](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/CORRECTION.md), [claim ledger](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/CLAIMS.json), and [executed verification](https://github.com/yspennstate/math-open-problems/blob/e894a01f20ba02694c099f903fbdf26cc39db0b3/research_pushes/2026-09-30-fei-overlapping-product-0302z/verification.json).
+Full FEI remains OPEN. Immutable [complete report](private-source-repository), [attribution correction](private-source-repository), [claim ledger](private-source-repository), and [executed verification](private-source-repository).
 
 ## Correct attribution first
 
@@ -1197,7 +1197,7 @@ The all-overlapping Boolean inequality H(fg)<=H(f)+H(g) was already disproved by
 - Under uniform physical translations, E_z H(f g(.+z))<=Hf+Hg remains valid. The exact deficit equals H(S|S xor T)+I(U;Z), with its second term between zero and the first. The corresponding mean influence is If+Ig-2 sum_i Inf_i(f)Inf_i(g). These are retained two-input forms of the archived uncertainty mechanism, not new FEI closure.
 - If the factors overlap in at most k coordinates, the standard restriction ledger gives H(fg)<=Hf+Hg+2k. k is not universally paid by influence.
 
-The corrected scientific commit e894a01f20ba02694c099f903fbdf26cc39db0b3 was verified on math-open-problems master; every modified artifact was read back byte-equal. Its final checker passed. This is analytic mathematics plus exact finite self-checks, not independent audit or formalization. The selected-translation versus average distinction is an explicit remaining obstacle. No scheduled fleet, queue, controls, peer artifacts, or repository visibility is changed.
+The corrected scientific commit e894a01f20ba02694c099f903fbdf26cc39db0b3 was verified on private-source master; every modified artifact was read back byte-equal. Its final checker passed. This is analytic mathematics plus exact finite self-checks, not independent audit or formalization. The selected-translation versus average distinction is an explicit remaining obstacle. No scheduled fleet, queue, controls, peer artifacts, or repository visibility is changed.
 
 SOURCE ~\mop_fei100\research_pushes\2026-10-11-full-fei-100-agents\sources\ROUTE_MAP_CURATED.md
 # FEI route map: selected mathematical sections and source pins
@@ -1216,7 +1216,7 @@ For a genuine Boolean function on a finite uniform cube, let P(S)=fhat(S)^2, H=H
 - B<=H, and universal B<=K I implies H<=(K+2/ln 2)I by a physically realizable restriction induction
 - Thus finiteness of sup B/I is equivalent to full FEI; it is not a solved weaker estimate
 
-Read the [complete erasure reduction](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/proofnet24/P03-fei/solo-2026-09-17/ERASURE_REDUCTION.md) before reconstructing it. Its downward-edge residual L_down satisfies L_down<=B<=L_down+I/ln 2. The blind Jensen bound L_down<=I log(n/I) discards precisely the structure needed for closure. L_down is **not** the all-shift collision L in Section 4.
+Read the [complete erasure reduction](private-source-repository) before reconstructing it. Its downward-edge residual L_down satisfies L_down<=B<=L_down+I/ln 2. The blind Jensen bound L_down<=I log(n/I) discards precisely the structure needed for closure. L_down is **not** the all-shift collision L in Section 4.
 
 ## 2. Strongest retained local restriction information
 
@@ -1232,7 +1232,7 @@ Read the [complete erasure reduction](https://github.com/yspennstate/math-open-p
 
 When M=0, B_i=JS=Delta_i H=0 exactly. If the child squared spectra agree coordinatewise, the parent inherits their FEI constant with zero extra cost. An r-dimensional signed physical translation symmetry can be removed by r actual coordinate queries at zero allocation/decrement, preserving H and weakly decreasing I. A minimum-dimensional counterexample to a proposed constant may therefore be assumed to have no nontrivial signed-translation symmetry.
 
-[Full proof, Theorems 3.1–5.1](https://github.com/yspennstate/math-open-problems/blob/fe94de760ee2b47545419a7447b492816bd16045/proofnet24/P03-fei/runs/2026-09-20/2026-09-20T12-28-55+0300__fei-isospectral-splicing-symmetry-quotient.md). Preserve the KL rebate and recognize exact isospectral splits before replacing M by j or charging a scalar child statistic. This is stronger structural information than a blind kappa surcharge, although the different numerical upper bounds need not be pointwise ordered.
+[Full proof, Theorems 3.1–5.1](private-source-repository). Preserve the KL rebate and recognize exact isospectral splits before replacing M by j or charging a scalar child statistic. This is stronger structural information than a blind kappa surcharge, although the different numerical upper bounds need not be pointwise ordered.
 
 **OPEN payment.** A real stopping tree still needs a nonreusing bound on
 
@@ -2350,7 +2350,7 @@ No completed B10--B17 natural campaign packet was indexed in the authoritative s
 
 Audit target:
 
-`yspennstate/math-open-problems@80cc2e5027efa56d79c4ecdf7d4949759ef2068b`,
+`private-source-repository@80cc2e5027efa56d79c4ecdf7d4949759ef2068b`,
 
 `reports/fei-2026-10-11/runs/B05/20261011T193057Z-fleet01-B05-rare-restrictions/`.
 
@@ -2455,7 +2455,7 @@ so the repair retains the rare-event logarithm required by the current B05 obstr
 
 The current campaign status and plan were read at the start of the run:
 
-- `yspennstate/math-open-problems/reports/fei-2026-10-11/CURRENT_STATUS.md`, blob `b41d59bda7a8b8c67bb047894906b1cf3aa8a44e`;
+- `private-source-repository/reports/fei-2026-10-11/CURRENT_STATUS.md`, blob `b41d59bda7a8b8c67bb047894906b1cf3aa8a44e`;
 - campaign `README.md`, blob `95f6d823ee84b409f761da44fe7ed7986ec7bd0a`;
 - `FEI_100_agent_research_plan.tex` on current master;
 - Brain campaign `CURRENT_STATUS.md`, blob `b41d59bda7a8b8c67bb047894906b1cf3aa8a44e`;
@@ -2497,10 +2497,10 @@ The newly requested campaign files were not present at the beginning of this run
 Pinned inputs actually used:
 
 - `yspennstate/math-research-brain`, `scheduled_tasks/work/shared/fei-all-team-2026-09-22/CURRENT_RESEARCH.md`, blob `793b5c167ece8fabf9d1f26aca43b395def6201d`;
-- `yspennstate/math-open-problems`, `research_pushes/2026-09-30-fei-log-allocation/REPORT.md`, blob `822c380de0c4be109415f22f040cc2c8c345d53c`;
-- `yspennstate/math-open-problems`, physical restriction/refund report `proofnet24/P03-fei/fleet-2026-09-22/interactive/20260922T105045Z-fei-proof-assist/interference/REPORT.md`, blob `67759a5275432c298be6a0025c9a375d90b2cd1d`;
-- `yspennstate/math-open-problems`, nonlinear rare-event certificate `proofnet24/P03-fei/fleet-2026-09-22/fleet02/B08/B08-20260922T103745Z-0f440e/REPORT.md` (one bounded event recovers one half of the sparse-suspension leading KL logarithm);
-- `yspennstate/math-open-problems`, full convolution-L2 obstruction `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md`, blob `4bc39b0a0ece044759e884c9463926caf8e5be33`.
+- `private-source-repository`, `research_pushes/2026-09-30-fei-log-allocation/REPORT.md`, blob `822c380de0c4be109415f22f040cc2c8c345d53c`;
+- `private-source-repository`, physical restriction/refund report `proofnet24/P03-fei/fleet-2026-09-22/interactive/20260922T105045Z-fei-proof-assist/interference/REPORT.md`, blob `67759a5275432c298be6a0025c9a375d90b2cd1d`;
+- `private-source-repository`, nonlinear rare-event certificate `proofnet24/P03-fei/fleet-2026-09-22/fleet02/B08/B08-20260922T103745Z-0f440e/REPORT.md` (one bounded event recovers one half of the sparse-suspension leading KL logarithm);
+- `private-source-repository`, full convolution-L2 obstruction `proofnet24/P03-fei/fleet-2026-09-21/fleet04/B15/20260922T093820Z-full-convolution-energy-obstruction/REPORT.md`, blob `4bc39b0a0ece044759e884c9463926caf8e5be33`.
 
 The tracked quantity before this run was the sufficient local/tree criterion from the physical-refund report:
 

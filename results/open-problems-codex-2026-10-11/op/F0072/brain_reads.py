@@ -20,10 +20,10 @@ for folder in list(base.glob('probability_1000_intake_*'))+[base/'codex_pool_202
     except (OSError,UnicodeError): pass
 (R/'prior_records.txt').write_text('\n'.join(matches),encoding='utf8')
 print('Prior records', '\n'.join(matches)[:20000],flush=True)
-x=subprocess.run(['git','-C','~/math-open-problems','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8',timeout=60)
+x=subprocess.run(['git','-C','~/private-source','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8',timeout=60)
 paths=[p for p in x.stdout.splitlines() if 'F0072' in p]
 for p in paths:
- x=subprocess.run(['git','-C','~/math-open-problems','show','origin/master:'+p],capture_output=True,text=True,encoding='utf8',timeout=60)
+ x=subprocess.run(['git','-C','~/private-source','show','origin/master:'+p],capture_output=True,text=True,encoding='utf8',timeout=60)
  matches.append('REPOSITORY '+p+'\n'+x.stdout)
 (R/'prior_records.txt').write_text('\n'.join(matches),encoding='utf8')
 print('Repository matching paths',paths,flush=True)

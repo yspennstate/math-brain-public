@@ -29,7 +29,7 @@ def main():
     runpy.run_path(str(R/'code/independent.py'),run_name='__main__')
     audit=read(O/'witness_certificate.json');assert audit['status']=='PASS' and audit['verdict']=='PAID_SAME_K'
     fullaudit=read(O/'independent_full.json');assert fullaudit['status']=='PASS' and fullaudit['roots']==2560 and fullaudit['checks']==10241
-    protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+    protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
     cf=find(protocol,'claim_fields');pf=[k.split(' (')[0] for k in find(protocol,'progress_fields')];rf=find(protocol,'report_fields')
     source_paths=[Path('BOARD.md'),Path('claude/B04/STREAM_NOTES.md'),OLD/'PROOF.md',OLD/'out/source_b.json',Path('agents/A024/runs/20261023T125238Z-fleet03-A024-biased-child-stability/DERIVATION.md')]
     save(O/'source_receipts.json',[dict(path=str(p),sha256=sha(p),bytes=p.stat().st_size) for p in source_paths])

@@ -85,7 +85,7 @@ All four protocol files, derivation, scoped verdict, frozen spec, code and exact
 C019 stopping-tree payment through B11 critical curvature and physical-pair selection: this stage evaluates the whole-sign refund exactly and proves its smaller rare-regime endpoint has the full FEI limiting optimal constant, with explicit error4eps/ln2. It rules out interpreting a whole-sign refund bound as an independently funded resource. No universal constant gain is claimed. What remains is a proper-pair comparison from finite maximality spending one SAME unused D+S bank and retaining all terminals. NEXT targets that universal unpaid implication; another qualitative critical-class admission leaves this entropy obligation unchanged.
 """.replace('LEAN_STATUS', ls).replace('NEXT_ACTION', next_action)
 (r/'REPORT.md').write_text(report, encoding='utf-8')
-f = json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
+f = json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
 assert set(claim) == set(f['claim_fields'])
 ex = set(f['progress_fields'])
 ex.remove('packet_ids (one primary ID, for compatibility)')

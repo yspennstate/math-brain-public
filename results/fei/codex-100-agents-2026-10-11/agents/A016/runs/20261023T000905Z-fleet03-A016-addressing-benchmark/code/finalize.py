@@ -34,7 +34,7 @@ For every predetermined tensor subset, projected seed r-bit law has empty1/2+2^(
 '''
 if '## Stage8: retire bounded-offset admission' not in (A/'LEARNED.md').read_text(encoding='utf-8'):
  with (A/'LEARNED.md').open('a',encoding='utf-8') as f:f.write(learn)
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
 assert set(prog)=={k.split(' (')[0] for k in protocol['progress_fields']}
 assert all(set(c)==set(protocol['claim_fields']) for c in claims)
 for c in claims:assert c['statement_sha256']==sha(json.dumps({k:c[k] for k in ['exact_statement','hypotheses']},sort_keys=True,separators=(',',':')).encode())

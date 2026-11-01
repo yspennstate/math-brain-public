@@ -3,7 +3,7 @@ import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1]; ROOT=R.parents[1]
 def dump(p,x): p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-base=Path('math-open-problems/reports/fei-2026-10-11')
+base=Path('private-source/reports/fei-2026-10-11')
 protocol=json.loads((base/'EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 sourcepaths=[base/x for x in ('EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex')]
 sourcepaths += [Path('BOARD.md'), Path('claude/B14/STREAM_NOTES.md'), ROOT/'runs/20261023T123949Z-fleet03-A068-antichain-beyond-one-order/REPORT.md',Path('agents/A066/runs/20261023T135841Z-fleet03-A066-semigroup-dissipation/REPORT.md'),Path('agents/A097/runs/20261023T143952Z-fleet03-A097-cross-route-transfer/REPORT.md')]

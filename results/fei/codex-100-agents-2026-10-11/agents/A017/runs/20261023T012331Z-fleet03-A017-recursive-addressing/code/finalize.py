@@ -7,7 +7,7 @@ R = Path(__file__).resolve().parents[1]
 A = R.parent.parent
 OLD = A / 'runs/20261021T213328Z-fleet03-A017-recursive-addressing'
 SIX = A / 'runs/20261014T102650Z-fleet05-A017-recursive-addressing'
-P = Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+P = Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def read(p): return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(p, x): p.write_text(json.dumps(x, indent=2, ensure_ascii=False)+'\n', encoding='utf-8')
 def sha(b): return hashlib.sha256(b).hexdigest()

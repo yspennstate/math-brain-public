@@ -16,7 +16,7 @@ import claude_reader_s11 as R  # noqa: E402
 import wave_target_reader as W  # noqa: E402  (its ASK and claim filter)
 
 
-REPO = "~/math-open-problems"
+REPO = "~/private-source"
 WAVE = "probability_campaigns/codex_pool_2026-10-10/wave300"
 _INDEX = {}
 

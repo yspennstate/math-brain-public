@@ -10,7 +10,7 @@ c=read(RUN/'out/CHECK.json');b=read(RUN/'out/BOUNDARY.json');a=read(RUN/'out/PAI
 assert all(x['status']=='PASS' for x in (c,b,a))
 total=sum(x['assertions']+x['primitive_assertions'] for x in (c,b))+a['direct_character_and_pivot_assertions']+a['primitive_assertions']
 assert total==302956
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=read(protocol_path)
 sources=[protocol_path,BASE/'BOARD.md',BASE/'claude/B10/STREAM_NOTES.md',
  ROOT/'runs/20261022T232833Z-fleet03-A050-repair-with-scope/PROOF.md',

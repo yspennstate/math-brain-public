@@ -2,7 +2,7 @@ from pathlib import Path
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];HOME=R.parents[1]
 OLD=HOME/'runs/20261021T214405Z-fleet03-A027-block-selection'
-P=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+P=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def write(p,s):p.write_text(s,encoding='utf-8',newline='\n')
 def js(p,o):write(p,json.dumps(o,indent=2,ensure_ascii=False)+'\n')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()

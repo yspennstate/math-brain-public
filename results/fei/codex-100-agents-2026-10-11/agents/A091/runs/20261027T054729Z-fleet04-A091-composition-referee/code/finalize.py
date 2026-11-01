@@ -87,7 +87,7 @@ lp=ROOT/'out/LEAN_RECEIPT.json'
 if lp.exists():
     raw=lp.read_bytes(); text=raw.decode('utf-16') if raw.startswith(b'\xff\xfe') else raw.decode('utf-8-sig')
     receipt=json.loads(text); save('out/LEAN_NORMALIZED.json',dict(original_sha256=sha(lp),original_encoding='UTF16LE BOM' if raw.startswith(b'\xff\xfe') else 'UTF8',receipt=receipt))
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
 pf=set(protocol['progress_fields']); pf.remove('packet_ids (one primary ID, for compatibility)'); pf.add('packet_ids')
 assert set(progress)==pf
 for c in claims:

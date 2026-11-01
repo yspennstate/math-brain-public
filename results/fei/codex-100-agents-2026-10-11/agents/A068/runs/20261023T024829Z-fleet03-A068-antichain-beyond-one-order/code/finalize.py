@@ -94,7 +94,7 @@ write(HOME/'LEARNED.md',read(HOME/'LEARNED.md')+lesson)
 
 sources=[
  (ROOT/'BOARD.md','current relevant agent rows'),(ROOT/'claude'/'B14'/'STREAM_NOTES.md','full lead direction'),
- (Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),'protocol and exact field schemas'),
+ (Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),'protocol and exact field schemas'),
  (RUN.parent/'20261022T211502Z-fleet03-A068-antichain-beyond-one-order'/'REPORT.md','full predecessor proof'),
  (RUN.parent/'20261022T211502Z-fleet03-A068-antichain-beyond-one-order'/'code'/'verify.py','exact arithmetic helper; pinned and imported'),
  (HOME.parent/'A070'/'runs'/'20261022T234315Z-fleet03-A070-analytic-route-referee'/'REPORT.md','opening derivation and positive-debit scope'),

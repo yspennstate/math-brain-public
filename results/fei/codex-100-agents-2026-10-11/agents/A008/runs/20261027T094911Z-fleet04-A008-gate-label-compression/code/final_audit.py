@@ -29,7 +29,7 @@ wr(B/'PROGRESS.json',progress);wr(B/'PACKET_DELTA.json',progress)
 status=(H/'STATUS.md').read_text(encoding='utf-8').replace('7703 exact checks PASS','7703+'+str(codes['checks'])+' exact checks PASS')
 (H/'STATUS.md').write_text(status,encoding='utf-8')
 with (H/'WORKLOG.md').open('a',encoding='utf-8') as f:f.write('\n'+now+' — Stage22 decoder supplement: '+str(codes['checks'])+' exact independent canonical-code checks PASS, all leaves decoded, full wrapper/prefix cost paid; duplicate-leaf injections rejected on both live codes.\n')
-protocol=rd(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=rd(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
 assert all(set(c)==set(protocol['claim_fields']) for c in claims)
 assert set(progress)=={x.split(' (')[0] for x in protocol['progress_fields']}
 assert rd(B/'PACKET_DELTA.json')==progress

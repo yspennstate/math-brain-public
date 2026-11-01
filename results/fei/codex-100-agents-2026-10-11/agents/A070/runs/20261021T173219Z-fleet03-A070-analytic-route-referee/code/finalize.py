@@ -5,7 +5,7 @@ run=Path(__file__).resolve().parents[1];agent=run.parents[1];fleet=agent.parents
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def write(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=read(Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 check=read(run/'out/CHECK.json');assert check['status']=='PASS' and check['assertions']==1568
 rows=read(run/'out/QUERY_EXCESSES.json')
 row=next(r for r in rows if r['m']==1 and r['pat']==[-1,0,-1] and r['query']==2)

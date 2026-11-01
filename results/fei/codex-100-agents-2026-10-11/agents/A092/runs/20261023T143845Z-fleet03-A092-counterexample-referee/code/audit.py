@@ -67,7 +67,7 @@ old=next(c for c in source['claims'] if c['claim_id']=='A080-EXACT-HULL-TENSOR-F
 c['review_records'].append({'reviewer':'A092','independent_reviewer':True,'verdict':'INDEPENDENTLY_ACCEPTED_UNCHANGED_STATEMENT','run_id':R.name,'scope':'Full tensor/hull/sandwich/extraction statement only. A089 owner proof and separate bank coherence are NOT accepted by this review.','proof':'REPORT.md complete reconstruction; code/audit.py independent full Bellman recursion from original truth tables; out/VALIDATION.json','repair_supplied':False})
 c['status']='INDEPENDENTLY_ACCEPTED_AT_STATED_SCOPE'
 assert all(c[k]==old[k] for k in ['exact_statement','hypotheses','statement_sha256','version','proof_dependencies'])
-proto=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+proto=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 assert set(c)==set(proto['required_per_run']['claim_fields']);js(R/'CLAIMS.json',[c])
 paths=[SRC/n for n in ['CLAIMS.json','REPORT.md','PROOF.md','SOURCE_REVIEW.md']]+[FLEET/'BOARD.md',FLEET/'claude/B19/STREAM_NOTES.md']
 js(R/'out/SOURCES.json',[{'path':str(x),'sha256':sha(x)} for x in paths])

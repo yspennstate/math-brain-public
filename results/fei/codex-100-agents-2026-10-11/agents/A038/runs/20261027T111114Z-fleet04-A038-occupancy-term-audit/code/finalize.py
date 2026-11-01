@@ -1,8 +1,8 @@
 import json, hashlib, datetime
 from pathlib import Path
 R=Path(__file__).resolve().parents[1]; A=R.parents[1]
-BASE=Path('math-open-problems/reports/fei-2026-10-11')
-SUP=Path('math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+BASE=Path('private-source/reports/fei-2026-10-11')
+SUP=Path('private-source/research_pushes/2026-10-11-full-fei-100-agents')
 CTX=Path('context')
 encodings={}
 def read(p):

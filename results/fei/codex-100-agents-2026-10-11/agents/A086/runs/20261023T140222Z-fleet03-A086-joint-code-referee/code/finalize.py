@@ -7,7 +7,7 @@ def write(p,s):Path(p).write_text(s,encoding='utf-8',newline='')
 def js(p,v):write(p,json.dumps(v,indent=2,ensure_ascii=False)+'\n')
 def receipt(p):
  p=Path(p);v=p.read_bytes();return {'path':str(p),'sha256':hashlib.sha256(v).hexdigest(),'bytes':len(v)}
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');proto=json.loads(read(protocol))
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');proto=json.loads(read(protocol))
 src=base/'agents/A094/runs/20261023T131208Z-fleet03-A094-proof-chain-challenger'
 draft=base/'agents/A011/runs/20261023T134844Z-fleet03-A011-representation-existence/DERIVATION.md'
 # Save the source draft verbatim; it is still live and not a versioned claim.

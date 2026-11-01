@@ -5,7 +5,7 @@ root=Path(__file__).resolve().parents[1]; agent=root.parents[1]
 def read(p): return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(p,o): p.write_text(json.dumps(o,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='')
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol_path=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol_path=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 protocol=read(protocol_path)
 results={n:read(root/'out'/f'{n}.json') for n in ['pilot','main','targeted','scalar','replay']}
 assert all(o['status']=='PASS' for o in results.values())

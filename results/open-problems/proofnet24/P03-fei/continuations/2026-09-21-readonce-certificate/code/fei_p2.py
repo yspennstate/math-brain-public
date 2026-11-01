@@ -1,6 +1,6 @@
 """Numerical test of the FEI compute package's induction step.
 
-The package (math-open-problems, operations/COMPUTE_STRATEGY_2026-09-20.md,
+The package (private-source, operations/COMPUTE_STRATEGY_2026-09-20.md,
 Section 3) proposes: find a potential Psi with 0 <= Psi <= K I and, for
 every nonconstant Boolean f, a coordinate i with
 

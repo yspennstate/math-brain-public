@@ -7,7 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 AGENT = ROOT.parents[1]
 BASE = Path('~/brain_workers/FEI100_20261011')
-PROTOCOL = Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTOCOL = Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 
 def read(path):
     return json.loads(path.read_text(encoding='utf-8-sig'))

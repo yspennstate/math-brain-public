@@ -11,14 +11,14 @@ def receipt(p):return {'path':str(p),'sha256':sha(p),'bytes':p.stat().st_size}
 check=json.loads(read(R/'out/CHECK.json'));audit=json.loads(read(R/'out/AUDIT.json'))
 assert check['status']==audit['status']=='PASS'
 assert check['rows']==5476 and audit['trees']==5532
-proto=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+proto=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(read(proto));base=proto.parent
 source=Path(r'agents\A036\runs\20261023T135330Z-fleet03-A036-reference-law-divergence')
 sourceclaims=json.loads(read(source/'CLAIMS.json'))
 sourceclaim=next(c for c in sourceclaims if c['claim_id']=='A036-CHARACTER-ANCHORED-NORMALIZED-DIVERGENCE-BANK')
 assert hashlib.sha256(sourceclaim['exact_statement'].encode()).hexdigest()==sourceclaim['statement_sha256']
 paths=[proto,base/'README.md',base/'CURRENT_STATUS.md',base/'CLAIM_REGISTRY.json',base/'OBSTRUCTION_REGISTRY.json',base/'PACKET_STATUS.json',base/'STREAM_NEXT_ACTIONS.json',base/'FEI_100_agent_research_plan.tex',source/'PROOF.md',source/'REPORT.md',source/'CLAIMS.json',Path(r'BOARD.md'),Path(r'claude\B08\STREAM_NOTES.md')]
-supp=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+supp=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 paths += [supp/n for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 paths += list((supp/'sources').glob('*.md'))
 paths += list(Path(r'context').glob('*.txt'))

@@ -8,6 +8,6 @@ for root in roots:
  for file in r.stdout.splitlines():
   for line in Path(file).read_text(encoding='utf8').splitlines():
    if 'G0008' in line: print(file,line[:6000])
-r=subprocess.run(['git','-C','~/math-open-problems','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8')
+r=subprocess.run(['git','-C','~/private-source','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8')
 files=[s for s in r.stdout.splitlines() if 'G0008' in s]
 Path('prior_paths.txt').write_text('\n'.join(files),encoding='utf8');print('GIT MATCHES',files[:40])

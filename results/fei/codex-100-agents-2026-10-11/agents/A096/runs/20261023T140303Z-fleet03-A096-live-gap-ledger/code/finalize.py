@@ -7,7 +7,7 @@ def dump(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encodi
 def sha(s):return hashlib.sha256(s.encode('utf-8')).hexdigest()
 val=load(OUT/'VALIDATION.json');pilot=load(OUT/'PILOT.json');intake=load(OUT/'INTAKE.json')
 assert val['status']==pilot['status']=='PASS' and not intake['read_errors']
-protocol=load(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'));cf=protocol['required_per_run']['claim_fields'];pf=[s.split(' (')[0] for s in protocol['required_per_run']['progress_fields']]
+protocol=load(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'));cf=protocol['required_per_run']['claim_fields'];pf=[s.split(' (')[0] for s in protocol['required_per_run']['progress_fields']]
 source=BASE/'agents/A050/runs/20261023T132645Z-fleet03-A050-repair-with-scope/CLAIMS.json';src=load(source);src=src if isinstance(src,list) else src['claims']
 found=[c for c in src if any(x in c['claim_id'].upper() for x in ('HEREDITARY','TRANSPORTED-WITNESS','ADAPTIVE-WITNESS'))]
 adopted=False

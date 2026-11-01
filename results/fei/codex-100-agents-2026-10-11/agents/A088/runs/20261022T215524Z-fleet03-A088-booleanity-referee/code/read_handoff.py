@@ -12,5 +12,5 @@ print('\nCONTEXT')
 for p in (root / 'context').iterdir():
     print(p.name)
 print('\nCAMPAIGN FILES')
-for p in Path(r'math-open-problems/reports\fei-2026-10-11').iterdir():
+for p in Path(r'private-source/reports\fei-2026-10-11').iterdir():
     print(p.name)

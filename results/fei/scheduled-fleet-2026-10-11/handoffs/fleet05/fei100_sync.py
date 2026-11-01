@@ -1,11 +1,11 @@
 """FEI100 sync: finished run directories and the agents' rolling files to GitHub.
 
-math-open-problems master: reports/fei-2026-10-11/runs/<stream>/<RUN_ID>/ (Codex and Claude runs),
+private-source master: reports/fei-2026-10-11/runs/<stream>/<RUN_ID>/ (Codex and Claude runs),
 reports/fei-2026-10-11/fleet05/ (rolling files, board, token ledger). math-research-brain main: the same under
 research_pushes/2026-10-11-full-fei-campaign/handoffs/{fleet05,claude}/. Brain-repo ingestion belongs to
 claude-51330238 (agreed 11 Oct 23:5x), so this script does not push there.
 Commits are built in a temporary index (read-tree origin/<branch>, hash-object, update-index, commit-tree) and
-pushed by object: no checkout, no shared working tree touched. [skip ci] on every commit (math-open-problems runs
+pushed by object: no checkout, no shared working tree touched. [skip ci] on every commit (private-source runs
 CI on push). The secret scanner must pass on the new range before any push.
 """
 import ctypes, ctypes.wintypes as wt, datetime as dt, hashlib, json, os, pathlib, subprocess, sys, time
@@ -15,7 +15,7 @@ SCAN = r"~/.claude/dreaming/scan_secrets.py"
 NOWIN = 0x08000000
 MAXF = 20 * 2**20
 REPOS = {
-    "mop": (pathlib.Path(r"~/math-open-problems"), "master"),
+    "mop": (pathlib.Path(r"~/private-source"), "master"),
     "mrb": (pathlib.Path(r"~/math-research-brain"), "main"),
 }
 k32 = ctypes.WinDLL("kernel32", use_last_error=True)

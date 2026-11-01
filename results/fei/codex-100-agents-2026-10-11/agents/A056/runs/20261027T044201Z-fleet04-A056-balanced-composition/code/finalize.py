@@ -89,11 +89,11 @@ C020 whole-set source cost, feeding C024 history transfer and C019 stopping-tree
 write('REPORT.md',report)
 # Read-only source receipt: hash current observed bytes, distinguish excerpts from full intake.
 sources=[]
-paths=[Path(r'math-open-problems/reports\fei-2026-10-11')/x for x in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
+paths=[Path(r'private-source/reports\fei-2026-10-11')/x for x in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
 B=A.parents[1]
 paths += [B/'BOARD.md',B/'claude/B12/STREAM_NOTES.md']
 paths += list((B/'context').glob('*.txt'))
-S=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+S=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 paths += [S/x for x in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 for p in paths:
     raw=p.read_bytes();sources.append({'path':str(p),'bytes':len(raw),'sha256':digest(raw),'scope':'full protocol' if p.name=='EXECUTION_PROTOCOL.json' else 'targeted current excerpts; previous complete intake not repeated'})

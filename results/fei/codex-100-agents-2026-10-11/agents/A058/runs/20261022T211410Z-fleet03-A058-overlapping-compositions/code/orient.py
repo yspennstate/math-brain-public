@@ -2,8 +2,8 @@ from pathlib import Path
 import json, hashlib, sys
 sys.stdout.reconfigure(line_buffering=True)
 R=Path(r'agents\A058')
-base=Path(r'math-open-problems/reports\fei-2026-10-11')
-push=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+base=Path(r'private-source/reports\fei-2026-10-11')
+push=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 ctx=Path(r'context')
 for p in sorted((R/'runs').glob('*/REPORT.md'))[-1:]:
     print('\nPREVIOUS_REPORT',p);print(p.read_text(encoding='utf-8-sig'))

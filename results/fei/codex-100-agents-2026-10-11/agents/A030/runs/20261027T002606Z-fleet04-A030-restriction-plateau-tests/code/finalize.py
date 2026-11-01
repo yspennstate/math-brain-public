@@ -5,7 +5,7 @@ import hashlib,json
 RUN=Path(__file__).resolve().parents[1]
 HOME=RUN.parents[1]
 SHARED=HOME.parents[1]
-REPORTS=Path('math-open-problems/reports/fei-2026-10-11')
+REPORTS=Path('private-source/reports/fei-2026-10-11')
 PROTO=json.loads((REPORTS/'EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 def sha(path):return hashlib.sha256(path.read_bytes()).hexdigest()
 def save(name,value):
@@ -86,7 +86,7 @@ sources=[
  (SHARED/'agents/A094/runs/20261026T232939Z-fleet04-A094-proof-chain-challenger/REPORT.md','complete scoped objection and validation'),
  (SHARED/'agents/A094/LEARNED.md','last24 lines including exact-ledger clause')
 ]
-supp=Path('math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+supp=Path('private-source/research_pushes/2026-10-11-full-fei-100-agents')
 for name in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']:
     sources.append((supp/name,'selected relevant extracts; earlier baseline readings inherited'))
 sources.append((supp/'sources/BLOCK_RESTRICTION_IDENTITY_2026-09-18.md','sections1-2'))

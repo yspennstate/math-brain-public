@@ -15,7 +15,7 @@ assert results['check_full']['cases']==10560 and results['check_full']['seconds'
 assert results['independent']['nodes']==166
 old=js(R.parent/'20261023T063447Z-fleet03-A028-stopping-tree-payment/CLAIMS.json')[0]
 reviews=js(R/'out/new_review_receipts.json')
-protocol=js(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=js(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
 claimid=old['claim_id']; consumers=['A029','A056','A087','A091','A094','A096','A097']
 first=('An influence-priced ORIGINAL initial reference supplier for every Boolean input remains unproved. '

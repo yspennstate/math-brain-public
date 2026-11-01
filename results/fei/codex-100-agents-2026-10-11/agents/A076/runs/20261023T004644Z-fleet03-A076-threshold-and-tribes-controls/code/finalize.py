@@ -4,7 +4,7 @@ ROOT=Path(__file__).resolve().parents[1]
 AGENT=ROOT.parents[1]
 BASE=AGENT.parents[1]
 old=ROOT.parent/'20261021T201341Z-fleet03-A076-threshold-and-tribes-controls'
-protocol_path=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol_path=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def dump(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()

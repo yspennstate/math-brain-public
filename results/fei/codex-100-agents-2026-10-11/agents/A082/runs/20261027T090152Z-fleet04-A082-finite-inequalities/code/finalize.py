@@ -59,7 +59,7 @@ C024 history transfer inside C019/C020 feeding C018 gains an independently check
 for name,msg in [('WORKLOG.md','Stage22: consumed A096 new projection dependency, independently reconstructed root/count; certified three-component nonnegative deletion closure and exact AND2 physical-branch negative control. Final487 exact assertions PASS. Compiler admission held; no heavy job, no stopped work. Full FEI OPEN.'),('LEARNED.md','For A096 even-n AND2 tensor projection, the tilt root satisfies1/2<x<1 (at1/2 conditional mean/n=1/3+(2/3)^n), simplifying the exact2^n-n atom count. Yet u is a nonnegative mixture of vacuum, conditioned-nonempty product-cardinality law, and full atom; three components survive every coordinate deletion. Atom count is not general description complexity. Full physical branches involve phase: AND2 children are two point spectra while deletion gives a uniform two-atom law. Neither this compression nor free moment matching prices an arbitrary initial source.')]:
  if msg not in (A/name).read_text(encoding='utf-8'):
   with (A/name).open('a',encoding='utf-8') as f:f.write('\n'+now+': '+msg+'\n')
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 req=protocol['required_per_run']
 expected={s.split(' (')[0] for s in req['progress_fields']}
 assert set(p)==expected

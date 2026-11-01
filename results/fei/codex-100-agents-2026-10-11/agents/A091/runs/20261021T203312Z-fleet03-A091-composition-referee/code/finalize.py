@@ -2,7 +2,7 @@ from pathlib import Path
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];A=R.parent.parent
 BASE=Path('~/brain_workers/FEI100_20261011')
-REPORTS=Path('math-open-problems/reports/fei-2026-10-11')
+REPORTS=Path('private-source/reports/fei-2026-10-11')
 OLD=A/'runs/20261014T094139Z-fleet05-A091-composition-referee'
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
 def digest(b):return hashlib.sha256(b).hexdigest()
@@ -25,7 +25,7 @@ assert main['cases']==3086 and repro['cases']==256
 sources=[REPORTS/p for p in ('EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','STREAM_NEXT_ACTIONS.json')]
 sources += [BASE/'BOARD.md',BASE/'claude/B19/STREAM_NOTES.md']
 sources += [OLD/p for p in ('REPORT.md','PROOF.md','NEXT_IDENTITY.md','code/exact.py','code/check.py','code/next_query.py')]
-supp=Path('math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+supp=Path('private-source/research_pushes/2026-10-11-full-fei-100-agents')
 sources += [supp/p for p in ('CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md')]
 dump(R/'out/SOURCE_RECEIPTS.json',{'captured_at':now,'note':'Capture-time byte hashes of sources consulted; paper baselines remain previously audited imports, not a new literature audit. Some source display batches were truncated; no whole-file rereview is inferred.','sources':[{'path':str(p),'bytes':p.stat().st_size,'sha256':digest(p.read_bytes())} for p in sources if p.exists()]})
 statement='For F=(1-Y)G+Y[A*u+(1-A)*(B*v+(1-B)*G)] on finite uniform independent physical blocks, with A a point event of r>=1 bits, B any indicator, u,v,G arbitrary Boolean signs on mutually disjoint data blocks, and one actual G, every A-coordinate i satisfies B_i(F)<=12 Inf_i(F) and H(F)-(H(F_i=0)+H(F_i=1))/2 <= (12+2/ln(2)) Inf_i(F). In the original physically merged fine U/R account, U is harmonic and kappa=R-E R_child>=0, hence the same bound holds for the H-U-R decrement with both complete terminals retained.'

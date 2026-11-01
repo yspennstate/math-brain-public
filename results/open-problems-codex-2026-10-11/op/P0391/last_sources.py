@@ -18,6 +18,6 @@ def get(pair):
  except Exception as e:return dict(service=name,query=url,date='2026-10-11',result=str(e))
 with concurrent.futures.ThreadPoolExecutor(max_workers=3) as ex: res=list(ex.map(get,urls.items()))
 (root/'last_sources_log.json').write_text(json.dumps(res,indent=2),encoding='utf-8'); print(json.dumps(res,indent=2),flush=True)
-p=subprocess.run(['git','-C','~/math-open-problems','grep','-n','-m','2','-F','P0391','origin/master','--','probability_1000'],capture_output=True,text=True,encoding='utf-8',timeout=120)
+p=subprocess.run(['git','-C','~/private-source','grep','-n','-m','2','-F','P0391','origin/master','--','probability_1000'],capture_output=True,text=True,encoding='utf-8',timeout=120)
 (root/'prior_git_hits.txt').write_text(p.stdout,encoding='utf-8')
 print('GIT P0391 HITS', '\n'.join(line[:2200] for line in p.stdout.splitlines()[:12]))

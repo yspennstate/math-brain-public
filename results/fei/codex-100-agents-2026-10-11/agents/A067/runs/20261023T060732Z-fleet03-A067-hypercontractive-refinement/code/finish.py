@@ -8,7 +8,7 @@ def write(name,value):
  p=R/name;assert p.resolve().is_relative_to(A.resolve());p.parent.mkdir(parents=True,exist_ok=True)
  p.write_text(json.dumps(value,indent=2,ensure_ascii=False)+'\n' if not isinstance(value,str) else value,encoding='utf-8')
 def sha(b):return hashlib.sha256(b).hexdigest()
-protocolpath=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocolpath=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(protocolpath.read_text(encoding='utf-8-sig'))
 # Read-only source refresh; paper/context hashes do not imply a new theorem was used.
 paths=[Path(x['path']) for x in json.loads((OLD/'out/SOURCES.json').read_text(encoding='utf-8'))]

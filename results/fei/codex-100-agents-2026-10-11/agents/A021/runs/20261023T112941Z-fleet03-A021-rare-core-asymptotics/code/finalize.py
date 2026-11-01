@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];BASE=R.parents[1]
 def dump(name,obj):(R/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='')
 names=['PILOT.json','BELLMAN.json','INDEPENDENT.json','MIXED.json','LOCAL.json']
 checks={n:json.loads((R/'out'/n).read_text(encoding='utf-8')) for n in names};assert all(x['status']=='PASS' for x in checks.values())
-sources=[Path(r'BOARD.md'),Path(r'claude\B05\STREAM_NOTES.md'),Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')]
+sources=[Path(r'BOARD.md'),Path(r'claude\B05\STREAM_NOTES.md'),Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')]
 p=BASE.parent/'A022/runs/20261023T053944Z-fleet03-A022-one-point-surgery'
 sources +=[p/n for n in ['PROOF.md','CLAIMS.json']]
 p=R.parent/'20261023T045725Z-fleet03-A021-rare-core-asymptotics';sources +=[p/'PROOF.md',p/'CLAIMS.json',p/'code/arithmetic.py']

@@ -5,7 +5,7 @@ import json, hashlib, datetime, copy
 R=Path(__file__).resolve().parents[1]
 A=R.parents[1]
 B=A.parents[1]
-P=Path('math-open-problems/reports/fei-2026-10-11')
+P=Path('private-source/reports/fei-2026-10-11')
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
 def read(p): return Path(p).read_text(encoding='utf-8')
 def obj(p): return json.loads(read(p))

@@ -124,7 +124,7 @@ manifest={'generated_at':now,'local_only':True,'files':{str(p.relative_to(R)):{'
  'sources':{str(source/n):sha(source/n) for n in ('GU_PROOF.md','CLAIMS.json','PROOF.md')},
  'rolling':{str(A/n):sha(A/n) for n in ('STATUS.md','WORKLOG.md','LEARNED.md')}}
 dump(R/'out/PERSISTENCE.json',manifest)
-protocol=json.loads(read('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=json.loads(read('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 expected=set(protocol['progress_fields']);expected.remove('packet_ids (one primary ID, for compatibility)');expected.add('packet_ids')
 assert set(progress)==expected
 assert set(claim)==set(protocol['claim_fields'])

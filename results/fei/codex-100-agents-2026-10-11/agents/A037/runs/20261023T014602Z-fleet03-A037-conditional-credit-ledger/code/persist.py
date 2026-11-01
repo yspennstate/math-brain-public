@@ -2,7 +2,7 @@ from pathlib import Path
 import json,hashlib,datetime
 
 r=Path(__file__).resolve().parent.parent;a=r.parent.parent
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(protocol_path.read_text(encoding='utf-8'))
 old=json.loads((a/'runs/20261021T220645Z-fleet03-A037-conditional-credit-ledger/PROGRESS.json').read_text(encoding='utf-8'))
 main=json.loads((r/'out/CHECK.json').read_text(encoding='utf-8'));audit=json.loads((r/'out/AUDIT.json').read_text(encoding='utf-8'));formal=json.loads((r/'out/LEAN.json').read_text(encoding='utf-8'))

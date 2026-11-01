@@ -73,7 +73,7 @@ for name,text in [('WORKLOG.md',f'{now} stage22: Independently accepted A080 pri
     marker='stage22:' if name=='WORKLOG.md' else 'Stage22:'
     if marker not in (A/name).read_text(encoding='utf-8'):
         with (A/name).open('a',encoding='utf-8') as f:f.write('\n'+text+'\n')
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
 expected_progress={x.split(' (')[0] for x in protocol['progress_fields']}
 assert set(progress)==expected_progress
 for c in claims:assert set(c)==set(protocol['claim_fields'])

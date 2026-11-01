@@ -10,10 +10,10 @@ if r.content.startswith(b'%PDF'):
  for i,p in enumerate(d):
   t=p.get_text()
   if any(w in t.lower() for w in ['monotonicity','quasi-transitive','nonunimodular','harris','kesten','theorem 3.1']): print('PDF PAGE',i+1,'\n'+t,flush=True)
-paths=subprocess.run(['git','-C','~/math-open-problems','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf-8',timeout=120).stdout.splitlines()
+paths=subprocess.run(['git','-C','~/private-source','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf-8',timeout=120).stdout.splitlines()
 relevant=[p for p in paths if 'C0160' in p]
 print('git paths',relevant,flush=True)
 for p in relevant[:5]:
- rr=subprocess.run(['git','-C','~/math-open-problems','show','origin/master:'+p],capture_output=True,text=True,encoding='utf-8',timeout=60)
+ rr=subprocess.run(['git','-C','~/private-source','show','origin/master:'+p],capture_output=True,text=True,encoding='utf-8',timeout=60)
  print('git show',p,rr.stdout[:15000],flush=True)
  (R/('prior_git_'+str(relevant.index(p))+'.txt')).write_text(rr.stdout,encoding='utf-8')

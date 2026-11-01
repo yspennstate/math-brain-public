@@ -57,7 +57,7 @@ All four protocol files, proof, code, frozen spec and exact outputs are saved on
 stamp=datetime.now(timezone.utc).isoformat()
 for name,text in [('WORKLOG.md',f'{stamp} stage21: reconstructed A052 rank rigidity without repair; extended signed child identity to optimized negative-part scale. Main {count} exact checks pass. Original pair funding remains open; checklist registration lock failure recorded.'),('LEARNED.md',f'{stamp} stage21 durable fact: for full optimized children N*=sum(-E[Ka-H])+, N*>=(n-1)(H-KI)+DTC+K sum E[I-a]-(2/ln2)I. Therefore a growing relevant-dimensional fixed-gap embedding cannot have N*=o(nI). Absolute-small reserves do not give normalized criticality. This does not rule out true critical gaps O(I/n). A052 rank rigidity independently holds at analytic scope; new corollary review pending.')]:
  with (A/name).open('a',encoding='utf-8') as f:f.write('\n'+text+'\n')
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 cf=set(protocol['required_per_run']['claim_fields']);pf=set(protocol['required_per_run']['progress_fields']);pf.remove('packet_ids (one primary ID, for compatibility)');pf.add('packet_ids')
 assert set(p)==pf
 for c in (claim,review):assert set(c)==cf;assert hashlib.sha256(c['exact_statement'].encode()).hexdigest()==c['statement_sha256']

@@ -91,9 +91,9 @@ entry='\n'+NOW+' stage22 '+RID+': replaced balanced dimension/rarity continuity 
 for name in ['WORKLOG.md','LEARNED.md']:
  with (BASE/name).open('a',encoding='utf-8') as f:f.write(entry)
 paths=[Path('~/AGENTS.md'),BASE/'STATUS.md',BASE/'LEARNED.md',Path('BOARD.md'),Path('claude/B16/STREAM_NOTES.md')]
-campaign=Path('math-open-problems/reports/fei-2026-10-11')
+campaign=Path('private-source/reports/fei-2026-10-11')
 paths += [campaign/n for n in ['README.md','CURRENT_STATUS.md','EXECUTION_PROTOCOL.json','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
-supp=Path('math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+supp=Path('private-source/research_pushes/2026-10-11-full-fei-100-agents')
 paths += [supp/n for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 context=Path('context')
 paths += list(context.glob('*.txt'))

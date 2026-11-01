@@ -6,7 +6,7 @@ def main():
     audit=json.loads((RUN/'out/AUDIT.json').read_text(encoding='utf-8'))
     adversary=json.loads((RUN/'out/ADVERSARY.json').read_text(encoding='utf-8'))
     assert audit['status']==adversary['status']=='PASS'
-    protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
+    protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
     sources=json.loads((RUN/'out/SOURCES.json').read_text(encoding='utf-8'))
     for p in [ROOT.parent/'BOARD.md',ROOT.parent/'claude/B18/STREAM_NOTES.md',ROOT/'A091/runs/20261027T054729Z-fleet04-A091-composition-referee/REPORT.md']:
         sources.append({'path':str(p),'sha256':sha(p),'bytes':p.stat().st_size,'scope':'board/lead navigation or read-only context; no new dependency acceptance'})

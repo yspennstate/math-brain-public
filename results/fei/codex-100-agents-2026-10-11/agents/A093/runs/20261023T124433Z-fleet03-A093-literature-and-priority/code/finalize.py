@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def rd(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def wr(p,s):p.write_text(s,encoding='utf-8')
 def save(p,x):wr(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')
-protocol=rd(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'));req=protocol['required_per_run']
+protocol=rd(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'));req=protocol['required_per_run']
 v=rd(R/'out/VALIDATION.json');pilot=rd(R/'out/PILOT.json');assert v['status']==pilot['status']=='PASS'
 source=Path('agents/A003/runs/20261023T121547Z-fleet03-A003-minimal-target-formulation')
 target=rd(source/'CLAIMS.json')[0];assert target['statement_sha256']=='df9ec9e0c2775d8d6e51c4b5fe56977e58b11efd8432558cbbb8c9de7f48c646'

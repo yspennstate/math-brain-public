@@ -5,7 +5,7 @@ old=R.parent/'20261023T053636Z-fleet03-A076-threshold-and-tribes-controls'
 def read(p): return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(p,x): p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
-protocolpath=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocolpath=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 protocol=read(protocolpath); v=read(R/'out/validation.json'); pilot=read(R/'out/pilot.json')
 assert v['status']==pilot['status']=='PASS'
 assert v['counts']['roots']==24 and v['counts']['partial_states']==21384 and v['counts']['queries']==45360

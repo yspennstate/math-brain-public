@@ -3,7 +3,7 @@ import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];A=R.parents[1];O=R/'out'
 def load(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def put(p,obj):p.write_text(json.dumps(obj,indent=2)+'\n',encoding='utf-8')
-protocol=load(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=load(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 main=load(O/'CHECK.json');audit=load(O/'INDEPENDENT_REVIEW.json')
 assert main['status']==audit['status']=='PASS'
 statement=('For every r>=1 let n=2r+1, c=binom(2r,r)/4^r, g(a,y)=(1+a)/2+(1-a)Maj_n(y)/2, f=a*(product y_j)*g, and the actual one-bit parity lift F(a,y,z)=f(az,yz). All inputs are uniform independent signs. H(F)=H(f)=2+H(Maj_n)/2, I(f)=n+1/2-nc/2, I(F)=n+1-nc/2, and I_z(F)=1/2. The full upper-set discount d=U(f)-U(F) obeys d>=1/4+(nc^2/4)log2(1+1/c^2)>=1/4+(1/8)log2(r+2). Both actual padding children have full U(f), so Delta_z U(F)=-d and |Delta_z U(F)|/I_z(F)>=1/2+(1/4)log2(r+2) diverges. Exact all-r finite-sum U,G formulas are given in PROOF.md, with G(F)<=-2d. Nevertheless H(f)<=2I(f) and H(F)<2I(F). Thus added-padding-influence-only ABSOLUTE U payment fails; signed one-sided GU and FEI are not refuted.')
@@ -15,7 +15,7 @@ assert set(p)=={s.split(' (')[0] for s in protocol['required_per_run']['progress
 put(R/'PROGRESS.json',p);(R/'PACKET_DELTA.json').write_bytes((R/'PROGRESS.json').read_bytes())
 review=dict(source_claim='A077-COMPLETE-EVENT-SPECTRUM-TRANSFER@1',source_statement_sha256='1efa805d5d6903430571d93310e74c5fc3af99df7b5b88f471e5d44c832ccb63',reviewer='A078',verdict='HOLDS_SCOPED',scope='PROOF equations7-9: constant-carrier one-sign activation full spectra/influences and C*<=K*<=2C*; NOT the complete transfer inequality or recursive closure',repair=False,proof='REVIEW_A077.md',certificate='out/INDEPENDENT_REVIEW.json')
 put(O/'A077_REVIEW_RECORD.json',review)
-files=[Path('BOARD.md'),Path('claude/B16/STREAM_NOTES.md'),A/'runs/20261026T195952Z-fleet04-A078-coding-and-padding/PROOF.md',Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+files=[Path('BOARD.md'),Path('claude/B16/STREAM_NOTES.md'),A/'runs/20261026T195952Z-fleet04-A078-coding-and-padding/PROOF.md',Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 for who,run,names in [('A076','20261027T052241Z-fleet04-A076-threshold-and-tribes-controls',['REPORT.md','ACTIVATION_PROOF.md']),('A077','20261027T084958Z-fleet04-A077-sparse-defect-towers',['REPORT.md','PROOF.md','CLAIMS.json'])]:
  files.extend(Path('agents')/who/'runs'/run/name for name in names)
 put(O/'SOURCE_MANIFEST.json',[dict(path=str(f),bytes=f.stat().st_size,sha256=hashlib.sha256(f.read_bytes()).hexdigest()) for f in files])

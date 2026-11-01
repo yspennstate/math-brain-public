@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def write(p,v):p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-P=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+P=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 checks=read(R/'out/CHECKS.json');cert=read(R/'out/CERTIFICATES.json')
 assert checks['status']=='PASS' and checks['chains']==6 and checks['nodes']==27 and checks['assertions']==835
 assert checks['seconds']<55

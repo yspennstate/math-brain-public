@@ -3,7 +3,7 @@ from datetime import datetime,timezone
 import json,hashlib,copy
 
 RUN=Path(__file__).resolve().parents[1]; HOME=RUN.parents[1]; SHARED=HOME.parents[1]
-BASE=Path('math-open-problems/reports/fei-2026-10-11')
+BASE=Path('private-source/reports/fei-2026-10-11')
 SOURCE=SHARED/'agents/A008/runs/20261023T024024Z-fleet03-A008-gate-label-compression'
 S15=SHARED/'agents/A015/runs/20261023T035924Z-fleet03-A015-minterm-barrier-analysis'
 assert HOME.name=='A007'

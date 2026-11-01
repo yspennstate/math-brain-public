@@ -105,7 +105,7 @@ with (HOME/'WORKLOG.md').open('a',encoding='utf-8',newline='') as f:
 with (HOME/'LEARNED.md').open('a',encoding='utf-8',newline='') as f:
  f.write('\nStage18: A003-CANONICAL-RESET-NO-EDIT-MASS-PRICE@1 independently accepted unchanged: F_m=1-2A_m+2A_(2m+1), s=2^-m,e=s^2 has uniformly calibrated source CE<=17 I(g), positive canonical reset Z/s->4/ln2-4 and Z/e->infinity. NEW A092 net refund: root vacuum-frequency pair true masses A=(1-2s+s^2)^2,B=(2s-s^2)^2, reference A,uB/qj, gives rho>=rho0=(A+B)log2(o0/(A+B))+B log2(qj/u). Here o0=A+uB/qj, qj=s^2(4-3s), u=(1-s)[4s(1-s)(1-s^2-s^6)+4s^8]+s^3. rho0/s->4/ln2, (Z-rho0)/s->-4, so limsup(Z-rho)/Inf_j<=-2 with Inf_j=2s-s^2. Eventually the actual SAME query releases at least Inf credit despite positive reset. Six finite m4,5,6,8,16,32 net upper signs negative do NOT establish cutoff4. Actual full I(F)=2ms+s^2. Independent AND2 books1/retains1 from its own2; no donation. Do not misread positive Z or divergent Z/edit as failure of net payment; next test proper interleaved ORIGINAL-source reset with nonconstant retained sibling and actual conditional-KL refund. New theorem independent review pending.\n')
 
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 pf=[x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']];cf=protocol['required_per_run']['claim_fields']
 assert set(progress)==set(pf);assert all(set(c)==set(cf) for c in [original,new])
 assert read(R/'PROGRESS.json')==read(R/'PACKET_DELTA.json')

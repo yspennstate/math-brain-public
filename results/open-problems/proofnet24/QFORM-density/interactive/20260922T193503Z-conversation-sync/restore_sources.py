@@ -1,6 +1,6 @@
 """Restore the 33 text members from an existing local repository, without network.
 
-Usage: python restore_sources.py --repo-root /path/to/math-open-problems --output ./restored
+Usage: python restore_sources.py --repo-root /path/to/private-source --output ./restored
 The compiled PDF and original ZIP bytes are not present in this source archive.
 No mathematical checker, compiler, workflow, or remote command is executed.
 """

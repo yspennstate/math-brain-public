@@ -27,14 +27,14 @@ save(ROOT/'PROGRESS.json',progress);(ROOT/'PACKET_DELTA.json').write_bytes((ROOT
 mp=Path(r'~\<private-repo>\12_cognitive_architecture\agent_mesh\agent_mesh.py')
 spec=importlib.util.spec_from_file_location('a089_mesh_finish',mp);m=importlib.util.module_from_spec(spec);sys.modules[spec.name]=m;spec.loader.exec_module(m)
 agent='codex-A089-stage10-save';logs=[]
-commands=[['--json','inbox','--agent',agent,'--pending'],['--json','send','--agent',agent,'--to','all','--topic','repo:math-open-problems','--body','Checkpoint A089 stage10 archived on master at '+commit+' [skip ci]. Exact19-file remote hash readback PASS; workflow runs0. New mathematical reserve theorem awaits independent review; full FEI and initial owner funding remain OPEN.'],['--json','bye','--agent',agent,'--status','done','--summary','A089 own-run archival snapshot verified; no remaining job; new theorem review and initial funding open.']]
+commands=[['--json','inbox','--agent',agent,'--pending'],['--json','send','--agent',agent,'--to','all','--topic','repo:private-source','--body','Checkpoint A089 stage10 archived on master at '+commit+' [skip ci]. Exact19-file remote hash readback PASS; workflow runs0. New mathematical reserve theorem awaits independent review; full FEI and initial owner funding remain OPEN.'],['--json','bye','--agent',agent,'--status','done','--summary','A089 own-run archival snapshot verified; no remaining job; new theorem review and initial funding open.']]
 for cmd in commands:
     out=io.StringIO()
     with contextlib.redirect_stdout(out),contextlib.redirect_stderr(out):rc=m.main(cmd)
     logs.append({'command':cmd[1],'exit':rc,'response':out.getvalue()})
 save(ROOT/'out/PUBLISH_CLOSEOUT.json',logs)
 assert logs[-1]['exit']==0,logs[-1]
-protocol=load(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=load(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 pf=set(protocol['required_per_run']['progress_fields']);pf.remove('packet_ids (one primary ID, for compatibility)');pf.add('packet_ids')
 assert set(load(ROOT/'PROGRESS.json'))==pf
 assert (ROOT/'PROGRESS.json').read_bytes()==(ROOT/'PACKET_DELTA.json').read_bytes()

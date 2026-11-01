@@ -2,7 +2,7 @@
 from pathlib import Path
 import json,hashlib
 R=Path(__file__).resolve().parents[1]; A=R.parents[1]
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 def read(p):return json.loads((R/p).read_text(encoding='utf-8'))
 p=read('PROGRESS.json'); d=read('PACKET_DELTA.json')
 expected={x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']}

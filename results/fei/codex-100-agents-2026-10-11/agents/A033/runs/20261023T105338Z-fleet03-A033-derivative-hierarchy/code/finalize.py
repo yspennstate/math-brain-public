@@ -95,7 +95,7 @@ entry=entry.replace('preserving original statement hashes/contributors','preserv
 for name in ('WORKLOG.md','LEARNED.md'):
  old=rd(AGENT/name)
  if ROOT.name not in old:wr(AGENT/name,old+entry)
-sources=[BASE/'BOARD.md',BASE/'claude/B07/STREAM_NOTES.md',src97/'DERIVATION.md',src97/'CLAIMS.json',src93/'DERIVATION.md',src93/'CLAIMS.json',AGENT/'runs/20261023T065015Z-fleet03-A033-derivative-hierarchy/PROGRESS.json',Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+sources=[BASE/'BOARD.md',BASE/'claude/B07/STREAM_NOTES.md',src97/'DERIVATION.md',src97/'CLAIMS.json',src93/'DERIVATION.md',src93/'CLAIMS.json',AGENT/'runs/20261023T065015Z-fleet03-A033-derivative-hierarchy/PROGRESS.json',Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 dump(ROOT/'out/SOURCE_MANIFEST.json',[{'path':str(x),'sha256':sha(x),'role':'actually read; hash at final save; mutable board may update'} for x in sources])
 fields=set('protocol_revision run_id stream packet_id gap_id attempt_id method mathematical_delta deliverable_status mathematical_status claim_versions_used claims_created_or_changed source_artifacts next_consumers next_action stagnant_substantive_attempts blockers packet_ids'.split())
 cf=set('claim_id version exact_statement hypotheses statement_sha256 contributors proof_source proof_dependencies review_records status supersedes refutes first_unproved_line next_consumers'.split())
@@ -103,7 +103,7 @@ assert set(p)==fields
 for c in js(ROOT/'CLAIMS.json'):assert set(c)==cf and hashlib.sha256(c['exact_statement'].encode()).hexdigest()==c['statement_sha256']
 assert (ROOT/'PROGRESS.json').read_bytes()==(ROOT/'PACKET_DELTA.json').read_bytes()
 assert len(rd(AGENT/'STATUS.md').splitlines())==2
-for heading in js(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']['report_fields']:assert '# '+heading in report
+for heading in js(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']['report_fields']:assert '# '+heading in report
 assert report.rfind('# Universal bridge')>report.rfind('REPORT:')
 files=[x for x in ROOT.rglob('*') if x.is_file() and x.name!='PERSISTENCE_RECEIPT.json'];assert all(x.stat().st_size<20*1024*1024 for x in files)
 dump(ROOT/'out/PERSISTENCE_RECEIPT.json',{'status':'PASS','at':now,'field_sets_exact':True,'printed_statement_hashes_verified':True,'A093_source_declared_hash_mismatch_recorded':True,'progress_delta_identical':True,'rolling_status_two_lines':True,'file_count':len(files),'files':[{'path':str(x.relative_to(ROOT)),'bytes':x.stat().st_size,'sha256':sha(x)} for x in files]})

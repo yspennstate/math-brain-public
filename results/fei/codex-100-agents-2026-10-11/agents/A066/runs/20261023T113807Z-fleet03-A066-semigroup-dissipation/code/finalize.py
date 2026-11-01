@@ -79,7 +79,7 @@ for name,entry in [('WORKLOG.md',work),('LEARNED.md',learn)]:
  q=agent/name;s=q.read_text(encoding='utf-8') if q.exists() else ''
  if run.name not in s:write(q,s+entry)
 write(run/'CHECKPOINT.md','STATE: Stage10 v4 complete locally; necessary zero-energy orbit handoff paid from SAME owner; FEI OPEN.\nNEXT: '+next_action+'\n')
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
 assert set(claim)==set(protocol['claim_fields'])
 assert set(pr)=={s.split(' (')[0] for s in protocol['progress_fields']}
 assert (run/'PROGRESS.json').read_bytes()==(run/'PACKET_DELTA.json').read_bytes()

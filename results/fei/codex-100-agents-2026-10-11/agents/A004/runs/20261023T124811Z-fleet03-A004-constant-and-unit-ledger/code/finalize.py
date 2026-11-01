@@ -6,7 +6,7 @@ RUN=Path(__file__).resolve().parents[1];OWN=RUN.parents[1];BASE=OWN.parent.paren
 def load(p):return json.loads(Path(p).read_text(encoding='utf-8'))
 def save(p,x):Path(p).write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
-protocolp=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=load(protocolp)
+protocolp=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=load(protocolp)
 out=load(RUN/'out/CHECK.json');pilot=load(RUN/'out/PILOT.json')
 assert out['status']=='PASS' and out['assertions']==292977 and out['boolean_tables']==278 and out['parity_block_states']==7070
 assert out['physical_deferral_queries']==14024 and out['source_query_cases']==3216 and out['quarter_tariff_cases']==2160

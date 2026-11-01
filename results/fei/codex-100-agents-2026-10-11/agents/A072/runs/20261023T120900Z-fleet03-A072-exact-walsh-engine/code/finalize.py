@@ -11,7 +11,7 @@ def digest(c):return hashlib.sha256(json.dumps({'exact_statement':c['exact_state
 
 def source_digest(c):return hashlib.sha256(json.dumps({'statement':c['exact_statement'],'hypotheses':c['hypotheses']},sort_keys=True,separators=(',',':')).encode('utf-8')).hexdigest()
 
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');p=read(protocol)
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');p=read(protocol)
 v=read(R/'out/VALIDATION.json');pilot=read(R/'out/PILOT.json');controls=read(R/'out/CONTROLS.json')
 assert v['verdict']==controls['verdict']==pilot['verdict']=='PASS'
 assert v['rows']==7 and controls['physical_rows']==26 and controls['zero_influence_query_checked']

@@ -9,7 +9,7 @@ old='a higher constant or different reference is not refuted.'
 assert s.count(old)==1
 s=s.replace(old,'this fixed-width subfamily alone does not refute a higher constant. The all-width result below rules out every fixed rate for the same prescribed complete reference; a different reference is not refuted.')
 Path(p).write_text(s,encoding='utf-8')
-proto=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+proto=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 claims=json.loads(read(R/'CLAIMS.json'));progress=json.loads(read(R/'PROGRESS.json'))
 assert len(claims)==2
 for cl in claims:

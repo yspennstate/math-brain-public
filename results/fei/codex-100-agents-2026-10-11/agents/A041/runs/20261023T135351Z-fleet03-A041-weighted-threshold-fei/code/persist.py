@@ -66,7 +66,7 @@ put(A/'STATUS.md','STATE: Sharp joint singleton source J1+alpha L1<=max(ln4,2alp
 entry=f'\n\n2026-10-23 13:53 UTC stage: A045 full singleton-scale/low-carry theorem independently HOLDS. New sharp joint source J1+alpha L1<=max(ln4,2alpha)(2Delta-R); critical alpha=ln2 lowers signed carry coefficient to1-ln2 with explicit terminal/mantissa commitments. Actual AND2 branches prove optimal source constant. Main {main["assertions"]} exact assertions PASS. Prime Jhi and full FEI OPEN. Run {R.name}.\n'
 with (A/'WORKLOG.md').open('a',encoding='utf-8',newline='') as f:f.write(entry)
 with (A/'LEARNED.md').open('a',encoding='utf-8',newline='') as f:f.write('\n\n2026-10-23 sharp joint source: x-1-j-ln(x/2^j)>=0 on the dyadic cell implies t[j+ln(1/u)]<=1-t. Thus J1+alpha L1<=max(ln4,2alpha)(2Delta-R), sharply at fair AND2 or nearconstant biased AND2. Weighted telescope: T+J1F+alpha(L1F+V)+Balpha=kalpha(2Delta-Rtree)+(1-alpha)ln4 C1. Critical alpha ln2 reduces explicit carry coefficient to1-ln2, but books partial mantissas/refunds and leaves remaining mantissas with their original owner. Never count these alternative ledgers as additive credit. Actual prime Jhi remains the unpaid universal supplier.\n')
-protocol=json.loads(read('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=json.loads(read('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 assert all(set(c)==set(protocol['claim_fields']) for c in [accepted,claim])
 assert set(progress)=={k.split(' (')[0] for k in protocol['progress_fields']}
 assert [s[2:] for s in report.splitlines() if s.startswith('# ')]==protocol['report_fields']

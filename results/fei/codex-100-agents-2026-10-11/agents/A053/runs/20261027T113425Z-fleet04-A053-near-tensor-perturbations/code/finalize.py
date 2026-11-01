@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def load(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(p,o):p.write_text(json.dumps(o,indent=2)+'\n',encoding='utf-8',newline='\n')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=load(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=load(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 main=load(R/'out/CHECKS.json');replay=load(R/'out/INDEPENDENT.json');guards=load(R/'out/GUARDS.json')
 assert main['status']==replay['status']==guards['status']=='PASS'
 total=main['checks']+replay['checks']+guards['checks']
@@ -19,7 +19,7 @@ sources=[Path('BOARD.md'),Path('claude/B11/STREAM_NOTES.md'),
  Path('agents/A054/runs/20261026T222013Z-fleet04-A054-connectedness-alternatives/PROOF.md'),
  Path('agents/A054/runs/20261026T222013Z-fleet04-A054-connectedness-alternatives/REPORT.md'),
  Path('agents/A052/runs/20261027T075723Z-fleet04-A052-critical-source-structure/REPORT.md'),
- Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
+ Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]
 save(R/'out/SOURCE_RECEIPTS.json',dict(note='Observed local bytes; prior complete campaign/manuscript baseline reads retained, no new full audit.',
  files=[dict(path=str(p),sha256=sha(p),bytes=p.stat().st_size) for p in sources]))
 statement='Retain stage21 exact repair-density exclusion. Further, let F be a product of disjoint violating Boolean factors h_j, G differ from F on event E of uniform mass delta, and a finite adaptive physical query tree have hereditarily K-certified complete leaves (or the explicitly stated untouched-factor fibre eligibility). Let rho_j>0 be h_j distance to H<=KI, alpha_j its minimum directional influence, p_j probability the tree touches its block, e_j=Pr(E and touch_j), and Q_j actual original-reach first-query influence in that block. Then delta-e_j>=rho_j(1-p_j), Q_j>=alpha_j*p_j-2e_j, and total physical spent influence is at least sum_j max(0,alpha_j-max(alpha_j/rho_j,2)*delta). No error independence or single total occupation budget is assumed. For t two-bit point-defect cores at K1 this is t max(0,1/2-2delta); for three-bit point-defect cores at K2 it is t max(0,1/4-2delta). The unedited h2 boundary t/2 is attained. Ordinary certified leaves do not suffice, as z*h2 at K1 shows. This is a necessary original influence debit, not entropy payment or full FEI.'

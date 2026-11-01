@@ -4,7 +4,7 @@ import json, hashlib, time, sys
 from datetime import datetime, timezone
 R=Path(__file__).resolve().parents[1]; H=R.parents[1]
 S=H.parent/'A007/runs/20261023T140735Z-fleet03-A007-root-normalization'
-P=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+P=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def load(p): return json.loads(p.read_text(encoding='utf-8-sig'))
 def save(p,v): p.write_text(json.dumps(v,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()

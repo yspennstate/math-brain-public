@@ -85,7 +85,7 @@ C019 stopping-tree payment and C024 history transfer advance to ALL m>=4 exterio
   if entry not in old:f.write_text(old+'\n'+entry+'\n',encoding='utf-8')
  assert len((A/'STATUS.md').read_text(encoding='utf-8').splitlines())==2
  assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()
- proto=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))['required_per_run']
+ proto=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))['required_per_run']
  for cc in claims:
   assert set(cc)==set(proto['claim_fields']);assert cc['statement_sha256']==hashlib.sha256(cc['exact_statement'].encode()).hexdigest()
  assert set(p)==set(s.split(' (')[0] for s in proto['progress_fields'])

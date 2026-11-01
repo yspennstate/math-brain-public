@@ -21,7 +21,7 @@ claim=json.loads(read(R/'CLAIMS.json'))[0]
 assert hashlib.sha256(claim['exact_statement'].encode('utf-8')).hexdigest()==claim['statement_sha256']
 progress=json.loads(read(R/'PROGRESS.json'))
 assert progress==json.loads(read(R/'PACKET_DELTA.json'))
-protocol=json.loads(read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')))
+protocol=json.loads(read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')))
 assert set(claim)==set(protocol['required_per_run']['claim_fields'])
 assert set(progress)=={x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']}
 assert all('## '+field in report for field in protocol['required_per_run']['report_fields'])

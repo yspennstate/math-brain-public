@@ -9,8 +9,8 @@ def save(name,obj):
     p=ROOT/name;p.parent.mkdir(parents=True,exist_ok=True)
     p.write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def orient():
-    base=Path(r'math-open-problems/reports\fei-2026-10-11')
-    push=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+    base=Path(r'private-source/reports\fei-2026-10-11')
+    push=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
     ctx=Path(r'context')
     files=[Path(r'~\AGENTS.md')]+[base/x for x in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
     files += [push/x for x in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]

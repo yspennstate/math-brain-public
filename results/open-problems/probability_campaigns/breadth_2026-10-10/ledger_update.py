@@ -57,7 +57,7 @@ def main():
                "statement": r.get("problem_statement"), "source_id": (r.get("source") or {}).get("source_id"),
                "locator": (r.get("source") or {}).get("locator"), "current_status": status, "result_status": result,
                "verification": "Codex gpt-6.1-sol (max) solver; sealed Claude (claude-opus-5-5) referee verdict %s; not "
-                               "refereed by a person; files in math-open-problems probability_campaigns/breadth_2026-10-10"
+                               "refereed by a person; files in private-source probability_campaigns/breadth_2026-10-10"
                                % (v or "n/a"),
                "recorded_at": STAMP, "intake": "breadth_2026_10_10", "admitted": True}
         out.setdefault(tag, []).append(row)

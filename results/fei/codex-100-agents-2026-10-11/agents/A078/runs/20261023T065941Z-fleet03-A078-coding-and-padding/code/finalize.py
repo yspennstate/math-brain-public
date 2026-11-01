@@ -34,7 +34,7 @@ if tag not in (A/'WORKLOG.md').read_text(encoding='utf-8'):
  with (A/'WORKLOG.md').open('a',encoding='utf-8',newline='\n') as f:f.write('\n'+entry)
 if tag not in (A/'LEARNED.md').read_text(encoding='utf-8'):
  with (A/'LEARNED.md').open('a',encoding='utf-8',newline='\n') as f:f.write('\n'+tag+' [v3]: Twice-conditioned odd-majority Fourier coefficients no longer have adjacent equality. Ancestor derivative energies obey alpha=X+Y+2Z and P<=X, so paired absolute products<=10alpha via2(u-v)^2+8v^2+16Z>=0. Physical cofactor influence q>=2alpha/3 and the full two-edit mean-sector translation costs<=20q, yielding third shared price38 after nonempty releaseR and JS. This pays ANY three nonseparator exposures with arbitrary private interleavings and means from SAME original account. Scope does NOT cover fourth/arbitrary-depth or a fresh universal input certificate; complete terminal entropy remains. Independent arithmetic is not independent mathematical review.\n')
-protocol=load(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=load(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']
 keys=set(protocol['progress_fields']);keys.remove('packet_ids (one primary ID, for compatibility)');keys.add('packet_ids')
 assert set(load(R/'PROGRESS.json'))==keys
 assert set(load(R/'CLAIMS.json')[0])==set(protocol['claim_fields'])

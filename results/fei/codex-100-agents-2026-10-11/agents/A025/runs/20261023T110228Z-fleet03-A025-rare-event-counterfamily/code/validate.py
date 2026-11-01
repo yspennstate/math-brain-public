@@ -3,7 +3,7 @@ from pathlib import Path
 import json,hashlib
 R=Path(__file__).resolve().parents[1]; home=R.parents[1]
 read=lambda p:json.loads(p.read_text(encoding='utf-8'))
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 claimkeys=set('claim_id version exact_statement hypotheses statement_sha256 contributors proof_source proof_dependencies review_records status supersedes refutes first_unproved_line next_consumers'.split())
 progresskeys=set('protocol_revision run_id stream packet_id gap_id attempt_id method mathematical_delta deliverable_status mathematical_status claim_versions_used claims_created_or_changed source_artifacts next_consumers next_action stagnant_substantive_attempts blockers packet_ids'.split())
 claims=read(R/'CLAIMS.json'); progress=read(R/'PROGRESS.json')

@@ -15,7 +15,7 @@ audit=read(OUT/'AUDIT.json')
 assert main['status']==audit['status']=='PASS'
 assert main['family_profiles']==20 and main['roots']==278
 total=main['exact_assertions']+audit['exact_assertions']
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 source_receipts=read(OUT/'SOURCE_RECEIPTS.json')
 
 lean={

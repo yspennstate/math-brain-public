@@ -22,8 +22,8 @@ for p in sorted((BASE/'agents').glob('*/runs/*/REPORT.md')):
                 if isinstance(c,dict):
                     claims.append({'claim_source':str(cp),'claim_file_sha256':digest(cr),'report_sha256':row['sha256'],'full_report_read':True,'protocol_bundle':row['protocol_bundle'],**{k:c.get(k) for k in ('claim_id','version','statement_sha256','exact_statement','status','proof_dependencies','review_records','refutes','supersedes','first_unproved_line','next_consumers')}})
     except Exception as e:errors.append({'path':str(p),'error':repr(e)})
-reportroot=Path('math-open-problems/reports/fei-2026-10-11')
-push=Path('math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+reportroot=Path('private-source/reports/fei-2026-10-11')
+push=Path('private-source/research_pushes/2026-10-11-full-fei-100-agents')
 required=[reportroot/n for n in ('EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json')]
 required+=list(reportroot.glob('*.tex'))
 required+=[push/n for n in ('CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md')]

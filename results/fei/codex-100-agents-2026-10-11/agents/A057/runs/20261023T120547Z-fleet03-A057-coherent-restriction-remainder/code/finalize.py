@@ -4,7 +4,7 @@ ROOT=Path(__file__).resolve().parents[1];HOME=ROOT.parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def write(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=read(Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 results={f:read(ROOT/'out'/f) for f in ['validation.json','independent.json','mixed.json','mixed_repro.json']}
 assert all(x['status']=='PASS' for x in results.values())
 total=sum(x['exact_assertions'] for x in results.values());assert total==5643
@@ -13,7 +13,7 @@ shared=Path(r'~/brain_workers/FEI100_20261011')
 sources=[]
 for a,run in [('A059','20261023T105800Z-fleet03-A059-decomposition-depth'),('A060','20261023T112129Z-fleet03-A060-composition-sharpness')]:
  p=shared/'agents'/a/'runs'/run/'PROOF.md';sources.append({'path':str(p),'sha256':sha(p),'scope':'full current proof read; scoped acceptance of stage19 exterior module and new obstruction consumed, not acceptance of stage20'})
-for p in [ROOT.parent/'20261023T060651Z-fleet03-A057-coherent-restriction-remainder/PAIR_PROOF.md',shared/'claude/B12/STREAM_NOTES.md',Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]:
+for p in [ROOT.parent/'20261023T060651Z-fleet03-A057-coherent-restriction-remainder/PAIR_PROOF.md',shared/'claude/B12/STREAM_NOTES.md',Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')]:
  sources.append({'path':str(p),'sha256':sha(p),'scope':'prior own stage or governing protocol'})
 write(ROOT/'out/SOURCES.json',sources)
 statement='Let m>=4 be divisible by4, c=2^-m, b(X)=(-1)^(sum X_(2j)X_(2j+1)), C=1_(X=1^m), K=b-C, G any independent finite Boolean sign, and chi_J the full character on ANY fresh nonempty physical block J. F=K+C G chi_J has ACTUAL original X-owner B0=4I_X(F)=2m-4mc. While a character remains, any core query has EXACT full decrement c D_iH(G), and every proper character query has decrement0. At the last character, with CURRENT q=(EG)^2 and CURRENT mask density t after exterior restrictions, its exact coherent decrement is sum_s Phi(Khat(s)^2,q Chat(s)^2)+J with0<=J<=2tq/ln2, bounded by T(t,q)=t[q log2(1/t)+q log2(1/q)+(9/2)q]. The q-log term is retained. One specified actual core query costs<=2c; after it, without X queries, the SAME ORIGINAL larger owner funds ALL adaptive character orders/stops and retains>=29B0/32 in every actual terminal. More generally after that core query allow EVERY adaptive interleaving of J and X with at most m/2 X queries on each path, no further core query: T(t,q)-E T(tchild,q)=tq at X while a character remains, and the SAME original owner cash and total remainder remain>=B0/8. The exact stopping inequality Hroot<=B0+E[Hleaf-Bleaf] retains BOTH full terminal profiles, all old debits and all unqueried core/exterior entropy. No hereditary pair floor, private-controller/DATA import, new source account, or designation-pair-only price is assumed. Full X exhaustion, further core queries and universal FEI/root supplier are not proved.'

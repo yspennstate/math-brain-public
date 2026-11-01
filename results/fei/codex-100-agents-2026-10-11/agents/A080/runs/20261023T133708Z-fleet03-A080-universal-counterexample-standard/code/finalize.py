@@ -8,7 +8,7 @@ R=Path(__file__).resolve().parents[1]
 A=R.parents[1]
 RUN=R.name
 STAMP=datetime.datetime.now(datetime.timezone.utc).isoformat()
-PROTOCOL=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTOCOL=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 P=json.loads(PROTOCOL.read_text(encoding='utf-8'))
 
 def read(name):

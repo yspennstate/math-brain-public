@@ -105,7 +105,7 @@ with (A/'WORKLOG.md').open('a',encoding='utf-8') as f:
 with (A/'LEARNED.md').open('a',encoding='utf-8') as f:
  f.write(f'\n## {now} signed-current admission sign guard\nA097@1 statement reconstructs; correct derivative t(z-a)/(z(t-z)ln2), correct query B_j+meanCEchild-CEparent=-D_occ. For actual AND2 law uniform4, incoming q_b=(1/4,(3/4-b)/2,(3/4-b)/2,b), floor1/3 price Delta=log2(432b(3/4-b)^2/25)/4. Unique interior zero bcrit=(7-2sqrt6)/12; every m>=4 adjacent dyadics bracket it with TV2^-m and opposite signed prices, same target. Frozen diagnostic first binary64 alias m58; not a global algorithm minimum. Dimension2 is minimal for interior calibrated two-cell Boolean seed. Signed CURRENT-price tolerance must resolve cancellation exactly or by rigorous intervals; no fixed absolute input precision suffices. Analytic proof/exact4791+790 checks; Lean timeout is unresolved formal status, not a refutation. No universal source/capacity gain.\n')
 
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 fields=protocol['required_per_run']
 expected={x.split(' (')[0] for x in fields['progress_fields']}
 assert set(progress)==expected

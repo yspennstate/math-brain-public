@@ -2,8 +2,8 @@ from pathlib import Path
 import hashlib,json,time
 ROOT=Path(__file__).resolve().parents[1]
 BASE=Path(r'~\brain_workers\FEI100_20261011')
-CAN=Path(r'math-open-problems/reports\fei-2026-10-11')
-SUP=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+CAN=Path(r'private-source/reports\fei-2026-10-11')
+SUP=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 OUT=ROOT/'out'; OUT.mkdir(exist_ok=True)
 receipts=[]
 def read(p):

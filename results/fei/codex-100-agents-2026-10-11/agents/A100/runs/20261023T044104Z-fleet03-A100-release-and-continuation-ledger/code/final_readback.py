@@ -33,7 +33,7 @@ for p in sorted(R.rglob('*')):
 m['files']=files;m['local_readback']='PASS';m['independent_final_readback']='out/FINAL_READBACK.json';save(O/'PERSISTENCE_RECEIPTS.json',m)
 for f in files:
  b=Path(f['path']).read_bytes();assert len(b)==f['bytes'] and hashlib.sha256(b).hexdigest()==f['sha256']
-protocol=load(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'));prog=load(R/'PROGRESS.json');cs=load(R/'CLAIMS.json')
+protocol=load(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'));prog=load(R/'PROGRESS.json');cs=load(R/'CLAIMS.json')
 assert set(prog)=={s.split(' (')[0] for s in protocol['required_per_run']['progress_fields']};assert prog['packet_ids']==['A100']
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes();assert all(set(c)==set(protocol['required_per_run']['claim_fields']) for c in cs)
 report=(R/'REPORT.md').read_text();assert all('## '+h+'\n' in report for h in protocol['required_per_run']['report_fields']);assert report.rstrip().split('## ')[-1].startswith('Universal bridge\n')

@@ -18,7 +18,7 @@ from reportlab.platypus import SimpleDocTemplate, Paragraph, Spacer, Table, Tabl
 ROOT = Path(__file__).resolve().parents[1]
 TMP = ROOT / 'tmp' / 'pdfs'
 OUT = ROOT / 'output' / 'pdf'
-BASE = ('https://github.com/yspennstate/math-open-problems/blob/master/'
+BASE = ('private-source-repository'
         'proofnet24/portfolio-completion/runs/2026-09-14/2026-09-14_20-23-26/')
 
 

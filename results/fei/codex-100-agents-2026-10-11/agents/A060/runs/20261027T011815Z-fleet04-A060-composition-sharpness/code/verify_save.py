@@ -5,7 +5,7 @@ AGENT=ROOT.parents[1]
 def read(n):return json.loads((ROOT/n).read_text(encoding='utf-8'))
 def write(n,o):(ROOT/n).write_text(json.dumps(o,indent=2)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))['required_per_run']
 checks=[]
 for n in ('PROGRESS.json','PACKET_DELTA.json'):
     expected={x.split(' (')[0] for x in protocol['progress_fields']}

@@ -5,7 +5,7 @@ run=Path(__file__).resolve().parents[1];home=run.parents[1]
 old=run.parent/'20261023T032050Z-fleet03-A024-biased-child-stability'
 helper=run.parent/'20261022T221625Z-fleet03-A024-biased-child-stability/code/check.py'
 root=home.parents[1]
-proto=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+proto=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 def read(p):return p.read_text(encoding='utf-8')
 def write(p,s):
  with p.open('w',encoding='utf-8',newline='\n') as f:f.write(s)

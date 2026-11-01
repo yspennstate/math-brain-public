@@ -6,7 +6,7 @@ R=Path(__file__).resolve().parents[1]
 AG=R.parents[1]
 BASE=AG.parent
 SOURCE=BASE/'A006'/'runs'/'20261023T112840Z-fleet03-A006-posterior-forest-optimization'
-PROTO=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTO=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def rd(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def wr(p,x):p.write_bytes((json.dumps(x,indent=2,ensure_ascii=False)+'\n').encode('utf-8'))
 def digest(p):return hashlib.sha256(p.read_bytes()).hexdigest()

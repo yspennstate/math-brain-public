@@ -6,7 +6,7 @@ import independent as E
 ROOT=Path(__file__).resolve().parents[1]; OUT=ROOT/'out'
 def read(p): return json.loads(p.read_text(encoding='utf-8-sig'))
 def digest(p): return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 claims=read(ROOT/'CLAIMS.json'); progress=read(ROOT/'PROGRESS.json'); report=(ROOT/'REPORT.md').read_text(encoding='utf-8')
 assert set(progress)=={s.split(' (')[0] for s in protocol['required_per_run']['progress_fields']}
 assert all(set(c)==set(protocol['required_per_run']['claim_fields']) for c in claims)

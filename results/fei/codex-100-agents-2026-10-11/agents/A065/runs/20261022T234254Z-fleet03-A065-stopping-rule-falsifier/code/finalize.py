@@ -93,7 +93,7 @@ with (A/'WORKLOG.md').open('a',encoding='utf-8',newline='') as f:f.write(entry)
 with (A/'LEARNED.md').open('a',encoding='utf-8',newline='') as f:f.write('\n2026-10-23: Ordinary non-carrier physical restrictions commute with normalized lifted-reference transport, including fair zero-source rows; arbitrary such histories preserve eta=Ocarrier=0. They CAN increase complete terminal-reset booking: B_j=[mean child[TC-K]_+-E_j]_+. Actual l2 data0 has E0 and Delta=-9/2+3log2(3)/8+15log2(5)/8>11/25. G-stop/H-continue asymmetric cut shortfall Delta/2>11/50; global fair-kernel tensor amplification must NOT be inferred (two-module prediction53/256, not1/8). Fixed l2,l3 one-data frontier repaired by TOTAL new booking<S_original/50, leaving>73/100 after prior quarter, no bank renewal. A062 all-width induction holds at reviewed new-step scope; whole-chain external acceptance cannot be supplied by A065 because it contributed prior inputs.\n')
 sources=[Path(r'BOARD.md'),Path(r'claude\B13\STREAM_NOTES.md'),src62/'PROOF.md',src62/'CLAIMS.json',Path(r'agents\A064\runs\20261022T224340Z-fleet03-A064-global-debt-potential\PROOF.md'),Path(r'agents\A064\runs\20261022T224340Z-fleet03-A064-global-debt-potential\code\check.py')]
 put(R/'out/SOURCE_RECEIPTS.json',[{'path':str(p),'sha256':sha(p),'scope':'new source read'} for p in sources])
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
 assert set(progress)==set(x.split(' (')[0] for x in protocol['progress_fields'])
 assert set(claim)==set(protocol['claim_fields'])
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes()

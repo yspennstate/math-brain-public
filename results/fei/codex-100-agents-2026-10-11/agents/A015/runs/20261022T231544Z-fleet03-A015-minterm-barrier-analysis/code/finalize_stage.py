@@ -7,7 +7,7 @@ import json
 RUN=Path(__file__).resolve().parents[1]
 AGENT=RUN.parents[1]
 SHARED=AGENT.parents[1]
-CAMPAIGN=Path('math-open-problems/reports/fei-2026-10-11')
+CAMPAIGN=Path('private-source/reports/fei-2026-10-11')
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def dump(p,data):p.write_text(json.dumps(data,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()

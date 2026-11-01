@@ -5,7 +5,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1];BASE=A.parents[1]
 def write(p,s):p.write_text(s,encoding='utf-8')
 def js(p,x):write(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 P=json.loads(protocol.read_text(encoding='utf-8'))
 aud=json.loads((R/'out/AUDIT.json').read_text(encoding='utf-8'))
 ex=json.loads((R/'out/EXHAUSTIVE.json').read_text(encoding='utf-8'))

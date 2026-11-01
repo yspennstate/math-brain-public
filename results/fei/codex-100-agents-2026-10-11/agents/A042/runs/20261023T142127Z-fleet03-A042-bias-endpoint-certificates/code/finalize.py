@@ -8,7 +8,7 @@ def put(p,o):p.write_text(json.dumps(o,indent=2,ensure_ascii=False)+'\n',encodin
 now=datetime.now(timezone.utc).isoformat();main=load(R/'out/CHECKS.json');review=load(R/'out/REVIEW_CHECKS.json')
 assert main['status']==review['status']=='PASS'
 assert main['cases']==1152 and review['cases']==448 and review['nonzero_singleton_carry_cases']>0
-protocolpath=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=load(protocolpath)
+protocolpath=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=load(protocolpath)
 src=B/'agents/A041/runs/20261023T135351Z-fleet03-A041-weighted-threshold-fei'
 original=next(x for x in load(src/'CLAIMS.json') if x['claim_id']=='A041-SHARP-JOINT-SINGLETON-SOURCE')
 assert original['statement_sha256']=='858bf303c4d23127fd913d7bc8c6e670e56b44a2ac6db09f682328ce51ed371f'

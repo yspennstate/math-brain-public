@@ -59,7 +59,7 @@ if R.name not in read(A/'WORKLOG.md'):
  with (A/'WORKLOG.md').open('a',encoding='utf-8',newline='') as f:f.write(entry)
 if 'Stage8 durable:' not in read(A/'LEARNED.md'):
  with (A/'LEARNED.md').open('a',encoding='utf-8',newline='') as f:f.write('\nStage8 durable: q01+q23+q45+z3z4+z2z5+z0z2+z1z3 has polar ranks6->4->2 on pair01, pairI1, both debits2, both final entropies2. This forces incoming4/open2 for SELECTED pair-owned capacity, but globalH/I=2. Hereditary pair floor cannot simply be dropped: b_m-C_allones+C_allones*parity(z,w), m divisible4, is origin/unit positive, both selected controls relevant, pairI=2c, full pair debit>=c(m-1). Constant pair-only price diverges. Odd-slice [1,-1,-1,-1] plus origin edit g=-1 is constant-1: incoming influence0 but fixed open2 creates capacity, so unit normalization is needed for that conversion. Tensor fixed global slack cannot hide selected-owner coefficient<4. New universal bottleneck is ORIGINAL cross-owner funding, not numerical pair optimization.\n')
-protocol=json.loads(read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')))['required_per_run']
+protocol=json.loads(read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')))['required_per_run']
 assert all(set(c)==set(protocol['claim_fields']) for c in [source,own]);assert set(p)=={x.split(' (')[0] for x in protocol['progress_fields']}
 assert (R/'PROGRESS.json').read_bytes()==(R/'PACKET_DELTA.json').read_bytes();assert all('# '+x in report for x in protocol['report_fields'])
 assert len(read(A/'STATUS.md').splitlines())==2;assert all(f.stat().st_size<20*1024*1024 for f in R.rglob('*') if f.is_file())

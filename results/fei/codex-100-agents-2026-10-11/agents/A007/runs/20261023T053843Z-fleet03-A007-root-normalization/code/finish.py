@@ -139,7 +139,7 @@ Shared registries, other-agent files, brain data, source trees, protected paths,
 
 This stage moves C020 at the root-normalization interface in BOTH directions. The complete fixed-positive-prime route is locally refuted by actual-output cost/I>2^w/7, and even one global polarity choice fails on a product family with both costs/I>2^w/112; the exact D refunds one root rarity only. Positively, a universal Boolean prime-complementarity lemma constructs ONE-root partition forests for EVERY Fourier-supported set inside ONE fixed two-polarity mixture, with selector debit v<=I paid once. What remains is its complete original label/rank/rarity/count/multiset payment, not structural root existence or a free normalization reset. NEXT attacks that universal unpaid cost through the product's joint sector and the original mixture, so it tests a necessary representation interface rather than adding another already-known FEI class. Full FEI remains OPEN and all new local proofs await independent review.
 '''
-protocol=load(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=load(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 for heading in protocol['required_per_run']['report_fields']:assert '## '+heading+'\n' in report
 assert all(set(c)==set(protocol['required_per_run']['claim_fields']) for c in claims)
 write(RUN/'REPORT.md',report)

@@ -2,7 +2,7 @@ from pathlib import Path
 import json,hashlib,datetime
 from arith import Q,add
 R=Path(__file__).resolve().parents[1];OWN=R.parents[1];BASE=OWN.parents[1];O=R/'out'
-P=Path(r'math-open-problems/reports\fei-2026-10-11')
+P=Path(r'private-source/reports\fei-2026-10-11')
 def read(p):return p.read_text(encoding='utf-8')
 def load(p):return json.loads(read(p))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()

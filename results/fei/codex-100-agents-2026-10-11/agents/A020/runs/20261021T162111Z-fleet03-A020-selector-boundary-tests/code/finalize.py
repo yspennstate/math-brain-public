@@ -18,7 +18,7 @@ endpoints={
  'final remaining bank endpoint':Q(53,16)-Q(417,128)-Q(1,64)==Q(5,128),
  'after positive final deficit':Q(5,128)-Q(1,128)==Q(1,32)}
 assert all(endpoints.values());put(R/'out/RATIONAL_ENDPOINTS.json',endpoints)
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 prot=json.loads(protocol.read_text(encoding='utf-8-sig'))
 statement=('For every integer k>=3, on F=1 at gate0 and s*[chi_u(1-A)+chi_q A] at gate1, A=1(v=0), '
  's the two-bit point-defect sign of mean1/2, supply Q_h=(P_h+point_{q})/2, Q_s=P_s and '
@@ -52,7 +52,7 @@ for ident,stamp in [('A020','20261014T062539Z-fleet05-A020-selector-boundary-tes
  sources.extend([p/'REPORT.md',p/'CLAIMS.json'])
 root=protocol.parent
 sources.extend(root/n for n in ['README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex'])
-sup=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+sup=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 sources.extend(sup/n for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md'])
 sources.extend((B/'context').glob('*.txt'))
 put(R/'out/SOURCE_RECEIPTS.json',{'as_of':now,'note':'Byte hashes at close, not historical board snapshot pins. Receipt does not certify source claims.','files':[{'path':str(p),'sha256':sha(p)} for p in sources if p.exists()]})

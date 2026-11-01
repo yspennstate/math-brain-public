@@ -1,7 +1,7 @@
 from pathlib import Path
 import hashlib,json,datetime
 r=Path(__file__).resolve().parents[1];a=r.parents[1]
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
 def write(name,obj):
  (r/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')

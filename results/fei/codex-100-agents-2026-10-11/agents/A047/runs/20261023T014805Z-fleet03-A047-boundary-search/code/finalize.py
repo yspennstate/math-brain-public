@@ -8,7 +8,7 @@ def dump(p,x):write(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 def append(p,s):
  with Path(p).open('a',encoding='utf-8',newline='') as f:f.write(s)
-proto_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+proto_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 proto=json.loads(read(proto_path))
 check=json.loads(read(R/'out/CHECK.json'));control=json.loads(read(R/'out/CONTROL.json'));review=json.loads(read(R/'out/REVIEW.json'));formal=json.loads(read(R/'out/LEAN.json'))
 assert all(x['status']=='PASS' for x in [check,control,review])

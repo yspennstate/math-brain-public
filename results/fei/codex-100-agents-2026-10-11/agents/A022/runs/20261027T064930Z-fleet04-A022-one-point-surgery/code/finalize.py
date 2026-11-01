@@ -3,7 +3,7 @@ from datetime import datetime,timezone
 import json,hashlib
 R=Path(__file__).resolve().parents[1];OWN=R.parents[1]
 def save(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8',newline='\n')
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 dep_path=OWN.parent/'A021/runs/20261027T031920Z-fleet04-A021-rare-core-asymptotics/CLAIMS.json'
 dep=json.loads(dep_path.read_text(encoding='utf-8'))[0]
 statement='For delta=1/64, b=g tensor g on six uniform DATA bits with g negative only at000, and arbitrary dependent Boolean controllers a,c on the same independent finite uniform cube, define F(0,z)=a(z), F(1,z)=-c(z), F=b elsewhere and h(y,z)=a(z) or -c(z). For V the nonempty upper-set potential, W=V minus the marked singleton contribution, and Gmark retaining W in both physical control children and V(a),V(c) at the original mark query, GV(F)-2delta Gmark(h)<101<256 I_DATA(F) and V(F)>=2delta W(h). No balance is required. Control-only descendants retain the original mark; no arbitrary DATA-history or initial-source payment is asserted.'

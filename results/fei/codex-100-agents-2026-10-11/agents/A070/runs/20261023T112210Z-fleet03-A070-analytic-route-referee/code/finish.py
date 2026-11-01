@@ -3,7 +3,7 @@ import json,copy,hashlib
 R=Path(__file__).resolve().parents[1];HOME=R.parents[1];ROOT=HOME.parents[1]
 S=HOME.parent/'A069/runs/20261023T105842Z-fleet03-A069-geometric-transfer'
 PREV=HOME/'runs/20261023T043857Z-fleet03-A070-analytic-route-referee'
-PROTO=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTO=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def read(p):return p.read_text(encoding='utf-8-sig')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,t):p.write_bytes(t.encode('utf-8'))

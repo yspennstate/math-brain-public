@@ -6,7 +6,7 @@ R=Path(__file__).resolve().parents[1];BASE=R.parents[1]
 ROOT=Path('~/brain_workers/FEI100_20261011')
 SRC=R.parent/'20261023T053904Z-fleet03-A012-sparse-activation-accounting'
 A13=ROOT/'agents/A013/runs/20261023T062458Z-fleet03-A013-representation-stability'
-P=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+P=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def write(p,x):p.write_bytes((json.dumps(x,indent=2,ensure_ascii=False)+'\n').encode('utf-8'))
 def md(p,s):p.write_bytes(s.encode('utf-8'))

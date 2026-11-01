@@ -4,7 +4,7 @@ import json, hashlib, datetime
 B=Path(__file__).resolve().parents[1]
 HOME=B.parents[1]
 ROOT=HOME.parents[1]
-CAM=Path(r'math-open-problems/reports\fei-2026-10-11')
+CAM=Path(r'private-source/reports\fei-2026-10-11')
 A7=ROOT/'agents'/'A007'/'runs'/'20261027T062000Z-fleet04-A007-root-normalization'
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def write(p,o):p.write_text(json.dumps(o,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')

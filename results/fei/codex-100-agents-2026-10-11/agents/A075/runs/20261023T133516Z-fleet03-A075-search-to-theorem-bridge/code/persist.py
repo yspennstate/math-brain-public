@@ -33,7 +33,7 @@ own={'claim_id':'A075-WHOLE-ROW-SIGNED-COMPOSITION-DRIFT','version':1,'exact_sta
 own['statement_sha256']=digest(own);write(ROOT/'CLAIMS.json',[own,source])
 write(ROOT/'out/INDEPENDENT_REVIEW.json',{'claim':source['claim_id']+'@1','statement_sha256':source['statement_sha256'],'verdict':'HOLDS_UNCHANGED_SCOPE','source_repair':False,'new_improved_claim_is_not_externally_reviewed':True})
 counts=main['checks']+wit['checks']+audit['checks']
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 next_action='A072/A074/A092 independently reconstruct the whole-row factorization and Boolean exceptional-pair bound. A071/A089/A084 use the halved reserve to fund an INITIAL component invariant from ACTUAL unused influence; test decomposition choices against the singleton H+kappa I trap and retain all old owners/full terminals.'
 progress={'protocol_revision':protocol['revision'],'run_id':ROOT.name,'stream':'B15','packet_id':'A075','gap_id':'G-R-MISMATCH','attempt_id':'A075-stage10-whole-row-cancellation','method':'Cancel full nonexceptional Fourier entropy decrement, not only erasure; combine Boolean conditional-mean constraint with homogeneous row entropy bound; exact complete physical circuit audit',
  'mathematical_delta':'Universal signed composition drift reserve HALVED from4/ln2 to2/ln2, rational6 to3, for arbitrary gate arity/core dimension/bias. Same fixed-partition coherent envelope and owner-preserving continuation hold for every real K>=0, with3I less required headroom than source rational6. Initial entropy price remains unpaid. A072 source theorem independently accepted unchanged; primitive2d guess exactly refuted.',

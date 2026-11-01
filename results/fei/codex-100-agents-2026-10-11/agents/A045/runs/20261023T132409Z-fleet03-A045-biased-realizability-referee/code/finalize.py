@@ -7,7 +7,7 @@ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,s):p.write_text(s,encoding='utf-8',newline='')
 def dump(p,d):write(p,json.dumps(d,ensure_ascii=False,indent=2)+'\n')
 stamp=datetime.datetime.now(datetime.timezone.utc).isoformat()
-proto=load(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+proto=load(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 p=run/'PROOF.md';s=p.read_text(encoding='utf-8').replace('If and ONLY AS A SUFFICIENT CONDITION\n+C_1,tot=0','When C_1,tot=0 (a sufficient condition)').replace('If and ONLY AS A SUFFICIENT CONDITION\nC_1,tot=0','When C_1,tot=0 (a sufficient condition)');write(p,s)
 c=load(run/'out/CHECKS.json');pilot=load(run/'out/PILOT.json');assert c['status']==pilot['status']=='PASS'
 assert c['two_child_cases']==512 and c['depth3_chain_cases']==32 and c['compressed_towers']==8

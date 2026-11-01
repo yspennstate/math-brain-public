@@ -5,7 +5,7 @@ OWN=RUN.parents[1]
 def read(p): return json.loads(p.read_text(encoding='utf-8'))
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
 def save(name,obj): (RUN/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-proto=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
+proto=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))['required_per_run']
 claims=read(RUN/'CLAIMS.json'); progress=read(RUN/'PROGRESS.json')
 assert all(set(c)==set(proto['claim_fields']) for c in claims)
 assert set(progress)=={x.split(' (')[0] for x in proto['progress_fields']}

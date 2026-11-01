@@ -11,7 +11,7 @@ corner=next(x for x in c['crossed'] if x['lambda']=='1' and x['alpha']=='3/4')
 bad=next(x for x in c['crossed'] if x['lambda']==x['alpha']=='1')
 assert F(corner['remaining_same_ancestor']['interval'][0])>F(42173,10**6)
 assert F(bad['remaining_same_ancestor']['interval'][1])<-F(153188,10**6)
-protocol_path=Path(r'math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=read(protocol_path)
+protocol_path=Path(r'private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=read(protocol_path)
 src=Path(r'agents/A004/runs/20261022T220858Z-fleet03-A004-constant-and-unit-ledger')
 review=read(src/'CLAIMS.json')[0]
 assert review['claim_id']=='A001-NEUTRAL-CORE-ACTUAL-DATA-TRANSFER' and review['version']==2

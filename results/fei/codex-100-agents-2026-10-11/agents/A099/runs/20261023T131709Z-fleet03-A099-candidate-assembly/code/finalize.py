@@ -135,7 +135,7 @@ Did: reconstructed four exact-scope claims and assembled v10. Stopped: no unrela
 C024 history transfer and C020 complete-reference costs inside C019 now have a complete arbitrary-target ancestor normalizer bill, the arbitrary-core/all-depth zero-credit scope boundary, sharp class-admission paid from a real finite-core original bank, and an exact separation of free entropy deferral from FEI-equivalent influence compression. The universal improvement is zero: arbitrary-core O(I) initial capacity or a useful compatible admission paid by actual unused original margin remains the first unsupported line; C018 and full FEI remain OPEN. NEXT targets that precise source/quotient-frontier inequality because deeper phase searches, optional-reset tests, normalization-free compression and relabeling an old bank cannot discharge it.
 '''
 (R/'REPORT.md').write_text(report,encoding='utf-8')
-protocol=get(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=get(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 fields=set(protocol['required_per_run']['claim_fields'])
 assert all(set(c)==fields for c in claims)
 pf={x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']}

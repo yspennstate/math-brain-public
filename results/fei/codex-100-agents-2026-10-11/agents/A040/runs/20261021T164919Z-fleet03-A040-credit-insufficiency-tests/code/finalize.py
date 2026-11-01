@@ -2,7 +2,7 @@ from pathlib import Path
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(protocol_path.read_text(encoding='utf-8'))
 claims=json.loads((R/'CLAIMS.json').read_text(encoding='utf-8'));progress=json.loads((R/'PROGRESS.json').read_text(encoding='utf-8'))
 keys=set(protocol['required_per_run']['claim_fields'])

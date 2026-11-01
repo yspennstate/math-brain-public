@@ -53,7 +53,7 @@ assert '\\input{' not in text and '\\include{' not in text
 assert text.count('\\begin{conjecture}')==4
 assert (RUN/'STAGE6_ADDITIONS.tex').read_text(encoding='utf-8') in text
 assert not re.search(r'Theorem~\\ref\{(?:lem|cor|prop):',text)
-new_claim_fields=set(read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']['claim_fields'])
+new_claim_fields=set(read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))['required_per_run']['claim_fields'])
 assert all(set(c)==new_claim_fields for c in claims)
 
 # Read and compare all required source pins. A mutable board change is recorded, not falsified.
@@ -100,7 +100,7 @@ p.update(deliverable_status='COMPLETE_SINGLE_SOURCE_AND_PROTOCOL',mathematical_s
 p['mathematical_delta'] += ' Independent 52896-assertion reproduction PASS; no universal constant improvement.'
 p['source_artifacts'] += [str(RUN/'out/EXACT_TRANSPORT.json'),str(RUN/'out/LEAN_CORE.json')]
 save(RUN/'PROGRESS.json',p);save(RUN/'PACKET_DELTA.json',p)
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 fields=[x.split(' (')[0] for x in protocol['required_per_run']['progress_fields']]
 assert set(p)==set(fields)
 assert (RUN/'PROGRESS.json').read_bytes()==(RUN/'PACKET_DELTA.json').read_bytes()

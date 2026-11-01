@@ -2,8 +2,8 @@ from pathlib import Path
 import hashlib,json
 root=Path(__file__).resolve().parents[1]
 base=Path(r'~\brain_workers\FEI100_20261011')
-campaign=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
-reports=Path(r'math-open-problems/reports\fei-2026-10-11')
+campaign=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
+reports=Path(r'private-source/reports\fei-2026-10-11')
 files=list((base/'context').glob('*.txt'))+list((campaign/'sources').glob('*.md'))
 files += [campaign/n for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 files += [reports/n for n in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]

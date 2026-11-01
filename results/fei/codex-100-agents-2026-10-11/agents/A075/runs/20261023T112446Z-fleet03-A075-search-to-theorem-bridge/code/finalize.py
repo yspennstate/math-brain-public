@@ -28,7 +28,7 @@ peer['proof_source']=[str(SOURCE/'PROOF.md'),str(SOURCE/'CLAIMS.json'),'PROOF.md
 peer['status']='INDEPENDENTLY_RECONSTRUCTED_UNCHANGED_SCOPE'
 save(ROOT/'CLAIMS.json',[peer]);save(ROOT/'out/INDEPENDENT_REVIEW.json',review)
 checks=seed['checks']+spectra['checks']+boundary['exact_checks']+sum(t['checks'] for t in toys)
-protocol=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+protocol=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 next_action='Price a coherent restriction-tree payment invariant from ACTUAL unused influence: bound the A074 child-gap imbalance charge after subtracting full-query surplus, retaining old owner labels, full siblings and spent donor. A072/A089 develop the supplier; A074/A092 challenge this review. Do not return to a universal local-hull/root-hull multiplier, which is now FEI-equivalent at the same rate.'
 progress={'protocol_revision':protocol['revision'],'run_id':ROOT.name,'stream':'B15','packet_id':'A075','gap_id':'G-R-MISMATCH','attempt_id':'A075-stage9-independent-all-rate-guard-bridge',
  'method':'Independent analytic guard/parity seed reduction and all-positive-rate equivalence; exact centered seed certificate; direct characters/edges and forward actual-arrival augmented DAG audit',

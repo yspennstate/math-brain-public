@@ -2,7 +2,7 @@
 from pathlib import Path
 import json,hashlib
 R=Path(__file__).resolve().parents[1];HOME=R.parents[1];ROOT=HOME.parents[1]
-P=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+P=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def rd(p):return Path(p).read_text(encoding='utf-8')
 def wr(p,s):Path(p).write_text(s,encoding='utf-8',newline='\n')
 def obj(p):return json.loads(rd(p))

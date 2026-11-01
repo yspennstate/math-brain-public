@@ -3,10 +3,10 @@ from pathlib import Path
 B=Path(__file__).resolve().parents[1];ROOT=B.parents[1]
 def sha(b):return hashlib.sha256(b).hexdigest()
 def put(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-campaign=Path('math-open-problems/reports/fei-2026-10-11')
+campaign=Path('private-source/reports/fei-2026-10-11')
 protocol=json.loads((campaign/'EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 paths=[campaign/x for x in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
-supp=Path('math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+supp=Path('private-source/research_pushes/2026-10-11-full-fei-100-agents')
 paths += [supp/x for x in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 ctx=Path('context')
 paths += list(ctx.glob('*.txt'))

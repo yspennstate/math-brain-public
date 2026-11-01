@@ -16,7 +16,7 @@ with p.joinpath('LITERATURE.md').open('a',encoding='utf-8') as f:f.write(r'''
 ## Additional local searches (2026-10-12)
 All were read-only.
 - `rg -n -m 3 F0021 ~/<private-repo>/06_math_research --glob '*.jsonl' --glob '*.md'` (intake and campaign records).
-- `git -C ~/math-open-problems ls-tree -r --name-only origin/master` (initial tree enumeration, output too large; subsequent queries were filtered).
+- `git -C ~/private-source ls-tree -r --name-only origin/master` (initial tree enumeration, output too large; subsequent queries were filtered).
 - Same tree enumeration piped to `rg 'F0021|C0120'` and limited to first 35 paths.
 - Tree enumeration restricted to probability_campaigns and piped to `rg 'F0021'` (no matching paths).
 - `rg -n 'Assumption 1|Zβ|\[DZ16\]|\[BT19\]|\[GL' source.txt` (source model and reference locations).

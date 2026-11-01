@@ -61,7 +61,7 @@ for name,line in [('WORKLOG.md',f'{stamp} Stage21: reconstructed A086 selector f
  prior=AGENT.joinpath(name).read_text(encoding='utf-8') if AGENT.joinpath(name).exists() else ''
  if ('A011v5 equation6' not in prior if name=='LEARNED.md' else str(ROOT) not in prior):
   with AGENT.joinpath(name).open('a',encoding='utf-8') as f:f.write('\n'+line+'\n')
-protocol=read('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')['required_per_run']
+protocol=read('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')['required_per_run']
 expected_progress=[('packet_ids' if x.startswith('packet_ids ') else x) for x in protocol['progress_fields']]
 assert set(progress)==set(expected_progress)
 for c in read(ROOT/'CLAIMS.json'):

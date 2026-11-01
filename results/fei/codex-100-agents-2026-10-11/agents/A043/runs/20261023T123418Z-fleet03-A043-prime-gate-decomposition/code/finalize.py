@@ -4,7 +4,7 @@ import json,hashlib,datetime
 RUN=Path(__file__).resolve().parents[1];AGENT=RUN.parents[1];BASE=AGENT.parents[1];OUT=RUN/'out'
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def save(p,v):p.write_text(json.dumps(v,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 P=json.loads(protocol.read_text(encoding='utf-8-sig'));F=P['required_per_run'];CF=F['claim_fields'];PF=[x.split(' (')[0] for x in F['progress_fields']];HF=F['report_fields']
 src41=BASE/'agents/A041/runs/20261023T113320Z-fleet03-A041-weighted-threshold-fei/PROOF.md'
 src44=BASE/'agents/A044/runs/20261023T105700Z-fleet03-A044-non-symmetric-gate-classes/PROOF.md'

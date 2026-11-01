@@ -216,7 +216,7 @@ for name,s in [('WORKLOG.md',entry),('LEARNED.md',learn)]:
     if run.name not in old:write(p,old+s)
 write(run/'CHECKPOINT.md','STATE: Stage9 v3 complete locally; exact source-admission continuation obstruction and calibration repair saved; full FEI OPEN.\nNEXT: '+next_action+'\n')
 
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 required=protocol['required_per_run']
 assert set(claim)==set(required['claim_fields'])
 pf={x.split(' (')[0] for x in required['progress_fields']}

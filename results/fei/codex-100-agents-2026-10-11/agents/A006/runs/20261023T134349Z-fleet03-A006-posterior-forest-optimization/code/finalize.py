@@ -7,7 +7,7 @@ def read(p): return p.read_text(encoding='utf-8')
 def write(p,s): p.write_text(s,encoding='utf-8')
 def js(p,o): write(p,json.dumps(o,indent=2,ensure_ascii=False)+'\n')
 def digest(p): return sha256(p.read_bytes()).hexdigest()
-P=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+P=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 protocol=json.loads(read(P)); chk=json.loads(read(R/'out/CHECK.json')); pilot=json.loads(read(R/'out/PILOT.json'))
 assert chk['status']==pilot['status']=='PASS'
 assert chk['assertions']==5716 and chk['truth_inputs']==1868

@@ -1,7 +1,7 @@
 # -*- coding: utf-8 -*-
 """After wave_target_reader.py: write the FIX/DROP list for the integrator (claude-4a88bc43 maps each claim to its landed
 logical_name and lands the correction or retirement), a count table, and the argument list for the push of
-claude_labels/ beside the wave's results in math-open-problems (claude-322bc92e, 10 Oct 2026)."""
+claude_labels/ beside the wave's results in private-source (claude-322bc92e, 10 Oct 2026)."""
 import collections
 import glob
 import io

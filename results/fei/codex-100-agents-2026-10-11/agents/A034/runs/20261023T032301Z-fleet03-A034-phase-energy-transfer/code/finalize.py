@@ -7,7 +7,7 @@ def readj(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def putj(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 v=readj(RUN/'out'/'validation.json');f=readj(RUN/'out'/'frontier_validation.json');lean=readj(RUN/'out'/'lean_receipt.json')
 assert v['status']==f['status']=='PASS'
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=readj(protocol_path)
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=readj(protocol_path)
 previous=AGENT/'runs'/'20261022T221938Z-fleet03-A034-phase-energy-transfer'
 sources=[protocol_path,Path(r'BOARD.md'),Path(r'claude\B07\STREAM_NOTES.md'),previous/'PROOF.md',previous/'CLAIMS.json',previous/'REPORT.md',Path(r'agents\A033\LEARNED.md'),Path(r'agents\A079\LEARNED.md')]
 receipts=[]

@@ -6,7 +6,7 @@ P96=ROOT/'agents/A096/runs/20261023T053800Z-fleet03-A096-live-gap-ledger'
 P93=ROOT/'agents/A093/runs/20261023T030859Z-fleet03-A093-literature-and-priority'
 P79=ROOT/'agents/A079/runs/20261023T034945Z-fleet03-A079-correlated-auxiliaries'
 P50=ROOT/'agents/A050/runs/20261023T042019Z-fleet03-A050-repair-with-scope'
-CAM=Path(r'math-open-problems/reports\fei-2026-10-11')
+CAM=Path(r'private-source/reports\fei-2026-10-11')
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def dump(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(b):return hashlib.sha256(b).hexdigest()

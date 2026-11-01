@@ -2,8 +2,8 @@ from pathlib import Path
 import json, hashlib
 BASE=Path(__file__).resolve().parents[1]
 OUT=BASE/'out'; OUT.mkdir(exist_ok=True)
-campaign=Path(r'math-open-problems/reports\fei-2026-10-11')
-supp=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+campaign=Path(r'private-source/reports\fei-2026-10-11')
+supp=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 context=Path(r'context')
 files=[campaign/x for x in ['README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json']]
 files+=list(campaign.glob('*.tex'))

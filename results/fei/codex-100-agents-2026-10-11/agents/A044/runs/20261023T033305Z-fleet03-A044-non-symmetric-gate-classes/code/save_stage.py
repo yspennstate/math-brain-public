@@ -5,7 +5,7 @@ now=datetime.datetime.now(datetime.timezone.utc).isoformat();run=R.name
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def write(p,s):p.write_text(s,encoding='utf-8')
 def js(p,d):write(p,json.dumps(d,indent=2,ensure_ascii=False)+'\n')
-protocolpath=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocolpath=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(protocolpath.read_text(encoding='utf-8'))
 check=json.loads((R/'out/CHECK.json').read_text(encoding='utf-8'))
 adversary=json.loads((R/'out/ADVERSARY.json').read_text(encoding='utf-8'))

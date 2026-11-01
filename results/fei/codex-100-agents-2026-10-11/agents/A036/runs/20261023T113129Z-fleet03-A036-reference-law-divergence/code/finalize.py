@@ -3,7 +3,7 @@ import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];A=R.parents[1];B=A.parents[1]
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def dump(p,j):p.write_text(json.dumps(j,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 paths=[protocol,B/'BOARD.md',B/'claude/B08/STREAM_NOTES.md',A/'runs/20261023T050401Z-fleet03-A036-reference-law-divergence/PROOF.md',A/'runs/20261023T050401Z-fleet03-A036-reference-law-divergence/CLAIMS.json']
 source_runs={'A039':'20261023T105639Z-fleet03-A039-projection-under-restrictions','A047':'20261023T055836Z-fleet03-A047-boundary-search','A048':'20261023T063715Z-fleet03-A048-tensor-stress','A049':'20261023T105720Z-fleet03-A049-minimal-falsifier-extraction','A087':'20261023T061410Z-fleet03-A087-restriction-referee'}
 for agent,run in source_runs.items():paths.append(B/'agents'/agent/'runs'/run/'PROOF.md')

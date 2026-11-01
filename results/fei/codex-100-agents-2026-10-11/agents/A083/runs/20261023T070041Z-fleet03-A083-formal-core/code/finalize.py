@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1]
 BASE=Path('~/brain_workers/FEI100_20261011')
 def sha(b):return hashlib.sha256(b).hexdigest()
 def save(name,x):(R/name).write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-protocol=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 pr=json.loads(protocol.read_text(encoding='utf-8'))
 result=json.loads((R/'out/RESULT.json').read_text(encoding='utf-8'))
 audit=json.loads((R/'out/AUDIT.json').read_text(encoding='utf-8'))

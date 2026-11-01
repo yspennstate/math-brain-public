@@ -4,7 +4,7 @@ from datetime import datetime,timezone
 import json,hashlib
 
 R=Path(__file__).resolve().parents[1];OWN=R.parents[1];BASE=OWN.parents[1]
-PROTO=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTO=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def read(p):return p.read_text(encoding='utf-8-sig')
 def put(p,s):p.parent.mkdir(parents=True,exist_ok=True);p.write_text(s,encoding='utf-8')
 def dump(p,obj):put(p,json.dumps(obj,indent=2,ensure_ascii=False)+'\n')

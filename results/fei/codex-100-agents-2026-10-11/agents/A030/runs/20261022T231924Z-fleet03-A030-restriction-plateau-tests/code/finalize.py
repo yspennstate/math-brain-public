@@ -124,7 +124,7 @@ sources=[base/'BOARD.md',base/'claude/B06/STREAM_NOTES.md',
  base/'agents/A028/runs/20261022T205915Z-fleet03-A028-stopping-tree-payment/DERIVATION.md',
  base/'agents/A029/runs/20261022T221752Z-fleet03-A029-child-deficit-transport/DERIVATION.md',
  base/'agents/A029/runs/20261022T221752Z-fleet03-A029-child-deficit-transport/CLAIMS.json',
- Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')]
+ Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')]
 put(RUN/'out/SOURCE_RECEIPTS.json',[{'path':str(p),'sha256':sha(p),'bytes':p.stat().st_size} for p in sources])
 protocol=read(sources[-1])['required_per_run']
 expected_progress=[k.split(' (')[0] for k in protocol['progress_fields']]

@@ -2,9 +2,9 @@
 from pathlib import Path
 import json, hashlib, datetime
 R=Path(__file__).resolve().parents[1]; A=R.parents[1]
-P=Path(r'math-open-problems/reports\fei-2026-10-11')
+P=Path(r'private-source/reports\fei-2026-10-11')
 W=Path(r'~\brain_workers\FEI100_20261011')
-SUP=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+SUP=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 protocol=json.loads((P/'EXECUTION_PROTOCOL.json').read_text(encoding='utf-8-sig'))
 sources=[P/n for n in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
 sources += [SUP/n for n in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]

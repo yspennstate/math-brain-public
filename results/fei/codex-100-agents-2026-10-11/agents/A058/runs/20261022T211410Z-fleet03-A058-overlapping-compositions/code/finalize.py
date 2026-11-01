@@ -2,7 +2,7 @@ from pathlib import Path
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1]
 A=R.parents[1]
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 def readj(p): return json.loads(p.read_text(encoding='utf-8-sig'))
 def writej(p,x): p.write_text(json.dumps(x,ensure_ascii=False,indent=2)+'\n',encoding='utf-8')
 P=readj(protocol)
@@ -31,7 +31,7 @@ sources=[protocol,Path(r'~\AGENTS.md'),Path(r'BOARD.md'),Path(r'claude\B12\STREA
 base=protocol.parent
 sources += [base/x for x in ['README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json']]
 sources += list(base.glob('*.tex'))
-push=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+push=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 sources += [push/x for x in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 sources += list((push/'sources').glob('*.md'))
 sources += list(Path(r'context').glob('*.txt'))

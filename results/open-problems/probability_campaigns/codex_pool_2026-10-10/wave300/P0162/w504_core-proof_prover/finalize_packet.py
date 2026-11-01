@@ -165,7 +165,7 @@ These computations verify formulas and are not a formal proof receipt. Independe
 
 Four review-only concept entries and three supported relations were published at {dest}. Submission is recorded in BRAIN_SUBMISSION.json; review is pending, ingestion is not observed, and retrievability is not tested. The worker did not run the integrator or alter a live store. The hook proposal is staged in proposals/math-w504.jsonl under the worker-folder write restriction; a reviewer can file it in the shared hook queue.
 
-Apply the note only after independent review: from ~/<private-repo>/06_math_research/math-open-problems, the reviewer runs git apply --check ~/brain_workers/w504/patches/01_adaptive_coordinate_note.diff, then git apply with that same path. The test command is above; integration of the draft belongs to the validating coordinator.
+Apply the note only after independent review: from ~/<private-repo>/06_math_research/private-source, the reviewer runs git apply --check ~/brain_workers/w504/patches/01_adaptive_coordinate_note.diff, then git apply with that same path. The test command is above; integration of the draft belongs to the validating coordinator.
 
 NEXT: Independently check C003's two restricted spectra and Jensen step, then test a coordinate-averaged defect bound in the all-small-influence regime against balanced-composition counterexamples.
 '''

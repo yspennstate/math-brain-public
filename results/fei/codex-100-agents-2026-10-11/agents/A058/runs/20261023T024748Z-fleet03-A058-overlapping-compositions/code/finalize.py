@@ -68,7 +68,7 @@ for n in [2,4,6,8,10,12]:
 independent={'status':'PASS','method':'direct truth-table mux; Fraction character sums; prime-log maps; actual quadratic edge counts','mux_fixtures':fixtures,'quadratic_cases':quadratics,'elapsed_seconds':time.perf_counter()-started,'independent_agent_review':False}
 dump(R/'out/INDEPENDENT_VALIDATION.json',independent)
 
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(protocol_path.read_text(encoding='utf-8-sig'))
 statement='For every finite uniform cube, arbitrary Boolean G,H on the same physical data bits, and a fresh fair selector z, let F=(G+H)/2+z(G-H)/2, J=Pr(G!=H), e=GH, and L=H(F)-(H(G)+H(H))/2. Then 0<=L<=h2(J)+4J<=I(e)+4J. For every adaptive physical stopping tree the signed coherent debit equals L_root minus the reached live-terminal L values and is at most the ONE original allowance 4J_root+I(e_root)<=4I(F_root), retaining every inherited-core decrement and full actual terminal. This supplies no ownership across nested muxes. Indeed for complete quadratic Boolean f_n=(-1)^(sum_{i<j}x_i*x_j), even n>=2, the sum of newly supplied disagreement-influence tickets at all mux levels is n(n-1)/2, while I(f_n)=n/2, for any complete adaptive coordinate-order tree.'
 claim={

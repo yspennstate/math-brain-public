@@ -15,7 +15,7 @@ assert F(results['INDEPENDENT_REPLAY.json']['fixed_conversion_bits'][1])<F(1,8)
 assert F(results['TENSOR.json']['minimum_margin_bits'])>F(3,5)
 checks=sum(x['assertions'] for x in results.values())
 root=Path('~/brain_workers/FEI100_20261011')
-source_paths=[root/'BOARD.md',root/'claude/B03/STREAM_NOTES.md',Path('~/AGENTS.md'),Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),root/'agents/A012/runs/20261023T053904Z-fleet03-A012-sparse-activation-accounting/out/NEXT_TARGET.json',root/'agents/A012/runs/20261023T115812Z-fleet03-A012-sparse-activation-accounting/DERIVATION.md',A/'runs/20261023T062458Z-fleet03-A013-representation-stability/DERIVATION.md',A/'runs/20261023T062458Z-fleet03-A013-representation-stability/out/HISTORY_REPLAY.json']
+source_paths=[root/'BOARD.md',root/'claude/B03/STREAM_NOTES.md',Path('~/AGENTS.md'),Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'),root/'agents/A012/runs/20261023T053904Z-fleet03-A012-sparse-activation-accounting/out/NEXT_TARGET.json',root/'agents/A012/runs/20261023T115812Z-fleet03-A012-sparse-activation-accounting/DERIVATION.md',A/'runs/20261023T062458Z-fleet03-A013-representation-stability/DERIVATION.md',A/'runs/20261023T062458Z-fleet03-A013-representation-stability/out/HISTORY_REPLAY.json']
 receipts=[]
 for p in source_paths:
  raw=p.read_bytes();receipts.append({'path':str(p),'sha256_at_final_read':hashlib.sha256(raw).hexdigest(),'bytes':len(raw)})

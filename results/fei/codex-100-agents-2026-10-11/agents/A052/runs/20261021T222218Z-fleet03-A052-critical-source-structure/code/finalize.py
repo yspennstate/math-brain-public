@@ -2,7 +2,7 @@ from pathlib import Path
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1]; A=R.parents[1]
 B=Path(r'~\brain_workers\FEI100_20261011')
-P=Path(r'math-open-problems/reports\fei-2026-10-11')
+P=Path(r'private-source/reports\fei-2026-10-11')
 def put(name,text): (R/name).write_text(text,encoding='utf-8')
 def js(name,obj): put(name,json.dumps(obj,indent=2,ensure_ascii=False)+'\n')
 def sha(p): return hashlib.sha256(p.read_bytes()).hexdigest()
@@ -79,7 +79,7 @@ put('REPORT.md',report)
 sources=[P/x for x in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
 sources += [B/'BOARD.md', B/'claude/B11/STREAM_NOTES.md']
 sources += list((B/'context').glob('*.txt'))
-supp=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+supp=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 sources += [supp/x for x in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]
 sources += [supp/'sources'/x for x in ['ADDENDUM_11_44_COMPONENT_ENTROPY_COUNTEREXAMPLE.md','ADDENDUM_11_26_CRITICAL_RARE_MOMENT.md','BLOCK_RESTRICTION_IDENTITY_2026-09-18.md']]
 for who,run,names in [('A051','20261021T193146Z-fleet03-A051-near-extremizer-definition',['AFFINE_SELECTION.md','REPORT.md','CLAIMS.json']),('A055','20261021T171306Z-fleet03-A055-extremal-obstruction-referee',['DERIVATION.md','REPORT.md','CLAIMS.json']),('A052','20261014T015635Z-fleet05-A052-critical-source-structure',['SIGNED_PAIR_PROOF.md']),('A052','20261014T044609Z-fleet05-A052-critical-source-structure',['WEAK_CRITICAL_PROOF.md']),('A052','20261014T124751Z-fleet05-A052-critical-source-structure',['MONOCHROMATIC_FLOW_PROOF.md','REPORT.md'])]:

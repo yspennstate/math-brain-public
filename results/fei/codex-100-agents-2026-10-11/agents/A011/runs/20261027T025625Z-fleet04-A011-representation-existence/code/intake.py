@@ -4,8 +4,8 @@ import hashlib,json,re
 RUN=Path(__file__).resolve().parents[1]
 (RUN/'out').mkdir(exist_ok=True)
 ROOT=Path(r'~\brain_workers\FEI100_20261011')
-CAN=Path(r'math-open-problems/reports\fei-2026-10-11')
-SUP=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+CAN=Path(r'private-source/reports\fei-2026-10-11')
+SUP=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 files=[Path(r'~\AGENTS.md'),ROOT/'BOARD.md',ROOT/'claude/B03/STREAM_NOTES.md',RUN.parents[1]/'STATUS.md',RUN.parents[1]/'LEARNED.md',RUN.parents[1]/'WORKLOG.md',Path(r'~\brain_workers\PRIMARY_DIRECTIVE.md'),Path(r'~\<private-repo>\12_cognitive_architecture\scheduled_tasks\README.md')]
 files += [CAN/f for f in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json']]
 files += list(CAN.glob('*.tex'))

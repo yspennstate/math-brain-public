@@ -1,8 +1,8 @@
 from pathlib import Path
 import json,hashlib
 R=Path(__file__).resolve().parents[1];out=R/'out';out.mkdir(exist_ok=True)
-base=Path('math-open-problems/reports/fei-2026-10-11')
-push=Path('math-open-problems/research_pushes/2026-10-11-full-fei-100-agents')
+base=Path('private-source/reports/fei-2026-10-11')
+push=Path('private-source/research_pushes/2026-10-11-full-fei-100-agents')
 context=Path('context')
 files=[base/x for x in ['EXECUTION_PROTOCOL.json','README.md','CURRENT_STATUS.md','CLAIM_REGISTRY.json','OBSTRUCTION_REGISTRY.json','PACKET_STATUS.json','STREAM_NEXT_ACTIONS.json','FEI_100_agent_research_plan.tex']]
 files += [push/x for x in ['CAMPAIGN.md','CLAIMS.md','COUNTEREXAMPLES.md','SEED_LEMMAS.md','NATIVE_MAPPING.md']]

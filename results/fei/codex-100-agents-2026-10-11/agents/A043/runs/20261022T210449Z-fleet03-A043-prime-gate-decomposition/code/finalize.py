@@ -3,8 +3,8 @@ from pathlib import Path
 from datetime import datetime,timezone
 import hashlib,json,runpy
 R=Path(__file__).resolve().parents[1];A=R.parents[1];O=R/'out'
-P=Path(r'math-open-problems/reports\fei-2026-10-11')
-B=Path(r'math-open-problems/research_pushes\2026-10-11-full-fei-100-agents')
+P=Path(r'private-source/reports\fei-2026-10-11')
+B=Path(r'private-source/research_pushes\2026-10-11-full-fei-100-agents')
 C=Path(r'context')
 OLD=A/'runs/20261014T052009Z-fleet05-A043-prime-gate-decomposition'
 def read(p):return p.read_text(encoding='utf-8')

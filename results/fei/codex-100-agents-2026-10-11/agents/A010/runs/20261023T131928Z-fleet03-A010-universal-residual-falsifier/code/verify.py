@@ -54,7 +54,7 @@ for name in ['WORKLOG.md','LEARNED.md']:
         f.write('\n2026-10-23 13:19UTC stage review receipt: A006 run20261023T112840Z independently accepts A010-BOUNDED-MIXTURE-VARIATIONAL-RESIDUAL-OBSTRUCTION@1 at unchanged hash1a2abb8577b60236493c8a8b38ad46dfcaf5d65b352cf0e99c293d9b511be6d0, full stated scope/no repair. Consumed in current out/PRIOR_REVIEW_CONSUMED.json. New intersecting-core bundle remains independently unreviewed.\n')
 
 # Independently read the exact owner-facing artifacts and enforce their protocol.
-protocol=read(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
+protocol=read(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json'))
 claims=read(B/'CLAIMS.json');assert len(claims)==3
 for c in claims:
     assert set(c)==set(protocol['required_per_run']['claim_fields'])

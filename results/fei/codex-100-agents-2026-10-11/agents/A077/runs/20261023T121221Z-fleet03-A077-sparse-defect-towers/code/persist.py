@@ -5,7 +5,7 @@ now=datetime.datetime.now(datetime.timezone.utc).isoformat();run=R.name
 def load(p):return json.loads(p.read_text(encoding='utf-8'))
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
 def save(name,obj):(R/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
-proto_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=load(proto_path)
+proto_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json');protocol=load(proto_path)
 v=load(R/'out/VALIDATION.json');pilot=load(R/'out/PILOT.json');ind=load(R/'out/INDEPENDENT.json')
 assert all(t['status']=='PASS' for t in (v,pilot,ind))
 assert v['counts']['mixed_leaves']==1024 and v['counts']['handoffs']==128

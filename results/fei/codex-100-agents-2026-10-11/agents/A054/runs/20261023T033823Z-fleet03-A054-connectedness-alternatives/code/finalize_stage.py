@@ -4,7 +4,7 @@ R=Path(__file__).resolve().parents[1];A=R.parents[1];FLEET=A.parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def write(name,obj):(R/name).write_text(json.dumps(obj,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-base=Path('math-open-problems/reports/fei-2026-10-11')
+base=Path('private-source/reports/fei-2026-10-11')
 P=read(base/'EXECUTION_PROTOCOL.json');main=read(R/'out/EXACT_CHECK.json');ind=read(R/'out/INDEPENDENT_CHECK.json');rank=read(R/'out/RANK_CHECK.json');pilot=read(R/'out/PILOT.json');lean=read(R/'out/LEAN_ADMISSION.json')
 assert all(x['status']=='PASS' for x in [main,ind,rank,pilot])
 total=main['assertions']+ind['assertions']+rank['assertions']

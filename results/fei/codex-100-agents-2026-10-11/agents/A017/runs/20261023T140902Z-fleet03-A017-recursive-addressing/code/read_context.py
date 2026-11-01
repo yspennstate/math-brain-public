@@ -1,7 +1,7 @@
 from pathlib import Path
 import json
 base=Path('~/brain_workers/FEI100_20261011')
-protocol=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+protocol=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 d=json.loads(protocol.read_text(encoding='utf-8'))
 def walk(d):
     if isinstance(d,dict):

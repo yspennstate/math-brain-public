@@ -4,7 +4,7 @@ RUN=Path(__file__).resolve().parents[1];ROOT=RUN.parents[1];OUT=RUN/'out'
 def write(p,s):p.write_text(s,encoding='utf-8',newline='\n')
 def jwrite(p,o):write(p,json.dumps(o,indent=2,ensure_ascii=False)+'\n')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 main=json.loads((OUT/'CHECK.json').read_text(encoding='utf-8'));ind=json.loads((OUT/'INDEPENDENT.json').read_text(encoding='utf-8'))
 assert main['status']==ind['status']=='PASS'
 source=Path('agents/A077/runs/20261021T230123Z-fleet03-A077-sparse-defect-towers')

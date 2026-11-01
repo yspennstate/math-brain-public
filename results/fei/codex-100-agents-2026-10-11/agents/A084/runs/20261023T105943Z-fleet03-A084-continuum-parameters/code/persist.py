@@ -6,7 +6,7 @@ R=Path(__file__).resolve().parents[1];BASE=R.parents[1]
 def read(p):return json.loads(p.read_text(encoding='utf-8'))
 def put(p,x):p.write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-protocol_path=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol_path=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=read(protocol_path)
 v=read(R/'out/VALIDATION.json');extension=read(R/'out/RATE_EXTENSION.json')
 audits=[read(R/'out'/f'AUDIT_d{i}.json') for i in range(3)]

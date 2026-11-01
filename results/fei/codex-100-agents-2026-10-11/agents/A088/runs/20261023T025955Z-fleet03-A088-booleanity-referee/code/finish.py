@@ -5,7 +5,7 @@ R=Path(__file__).resolve().parents[1];HOME=R.parents[1]
 SOURCE=HOME.parent/'A067'/'runs'/'20261023T015109Z-fleet03-A067-hypercontractive-refinement'
 OLD=HOME/'runs'/'20261022T215524Z-fleet03-A088-booleanity-referee'
 BASE=Path('~/brain_workers/FEI100_20261011')
-PROTO=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
+PROTO=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json')
 def read(p):return p.read_text(encoding='utf-8-sig')
 def load(p):return json.loads(read(p))
 def save(p,data):p.write_text(json.dumps(data,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')

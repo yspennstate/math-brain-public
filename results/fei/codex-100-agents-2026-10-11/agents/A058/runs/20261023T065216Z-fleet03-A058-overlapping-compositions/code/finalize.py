@@ -72,7 +72,7 @@ for k in [1,2,3]:
 ind={'status':'PASS','cases':cases,'assertions':checks,'method':'actual full truth tables, direct character sums and Fraction prime-log forms; signs from exact integer products; actual outer product influence','witness':witness,'elapsed_seconds':time.perf_counter()-started,'independent_agent_review':False}
 dump('out/INDEPENDENT_VALIDATION.json',ind)
 
-protocolpath=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocolpath=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(protocolpath.read_text(encoding='utf-8-sig'))
 statement='For arbitrary Boolean A,B on the same finite uniform data cube, k>=1 fresh fair selectors, alpha=2^-k, and F_k equal to A only when all selectors are1 and B otherwise, let delta=Pr(A!=B), E=I(AB), D_k=H(F_k)-alpha H(A)-(1-alpha)H(B), and B_k=2alpha E+4alpha(k+1)delta. Then 0<=D_k<=3 B_k. B_k is exactly the v7 outermost-selector ticket 4Inf_outer(F_k)+I(F_(k-1)B). ONE original allocation 3B_root pays every signed coherent debit along any adaptive physical stopping tree, retaining all complete inherited core decrements and actual terminals; no descendant ticket is renewed. Price1 is false already at k2,A=1,B=x: D_2=4-(9/8)log2(3)>B_2=2, after a positive outer debit. The same family has D_k/B_k tending to2, so any all-depth multiplier is at least2. Price2 remains open. If H(A)<=C I(A) and H(B)<=C I(B), then H(F_k)<=max(C+6,9)I(F_k), uniformly in k. Arbitrary branching source ownership and full FEI remain open.'
 claim=json.loads((P/'CLAIMS.json').read_text(encoding='utf-8'))[0]

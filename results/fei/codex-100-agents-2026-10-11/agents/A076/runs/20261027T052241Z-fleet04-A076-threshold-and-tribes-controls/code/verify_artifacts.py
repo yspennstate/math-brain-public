@@ -2,7 +2,7 @@
 from pathlib import Path
 import json, hashlib
 R=Path(__file__).resolve().parents[1]
-P=json.loads(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+P=json.loads(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 def read(n):return (R/n).read_text(encoding='utf-8')
 progress=json.loads(read('PROGRESS.json'));claims=json.loads(read('CLAIMS.json'))
 fields=P['required_per_run']

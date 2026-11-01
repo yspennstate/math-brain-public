@@ -119,7 +119,7 @@ for name in ['WORKLOG.md','LEARNED.md']:
 durable='''\nStage22 mechanism: for phi(t)=sqrt(-t^2 ln t^2), sum|a_j|<=1 implies phi(|sum a_j|)<=sqrt2 sum phi(|a_j|); sum|a_j|<=1/2 gives factor1. Dominant amplitude a>exp(-1/2) forces t^2>=2a^2-1 and concavity pays factor2. For disjoint ternary physical groups, sqrt(Btotal)<=sqrt2 sum sqrt(Bg). Use group-specific Lg, not q*maxLg: B<=2(sumLg)(sumEg), Etotal>=6/11 sumEg. Group sizes m sum to s; sumLg<=(s-2)(1+log(64s^2))+2(3+loge) at q>=2. This improves complete proper-row cost to O(s log s), general FOUR<114 and rare FOUR<57. All source restrictions/tensor guards remain; complete-source FOUR32 is a separate stronger-hypothesis bound. Scalar factor2 is sharp, so NEXT must attack remaining geometric group-width/piece complexity, not seek scalar<2.\n'''
 if 'Stage22 mechanism:' not in read(A/'LEARNED.md'):
     with (A/'LEARNED.md').open('a',encoding='utf-8',newline='') as f:f.write(durable)
-protocol=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+protocol=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 pf=json.loads(read(protocol))['required_per_run']
 assert set(progress)=={s.split(' (')[0] for s in pf['progress_fields']}
 assert set(claim)==set(pf['claim_fields'])

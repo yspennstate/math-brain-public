@@ -18,4 +18,4 @@ for root in Path('~/<private-repo>/06_math_research').glob('probability_1000_int
   if p.exists():
    for line in p.open(encoding='utf8'):
     if 'P0281' in line: print(str(p),line[:9000])
-r=subprocess.run(['git','-C','~/math-open-problems','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8');paths=[x for x in r.stdout.splitlines() if 'P0281' in x or 'p0281' in x];Path('prior_repo_paths.txt').write_text('\n'.join(paths));print('repo paths',paths[:30])
+r=subprocess.run(['git','-C','~/private-source','ls-tree','-r','--name-only','origin/master'],capture_output=True,text=True,encoding='utf8');paths=[x for x in r.stdout.splitlines() if 'P0281' in x or 'p0281' in x];Path('prior_repo_paths.txt').write_text('\n'.join(paths));print('repo paths',paths[:30])

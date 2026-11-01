@@ -6,7 +6,7 @@ def obj(p):return json.loads(read(p))
 def save(p,x):Path(p).write_text(json.dumps(x,indent=2,ensure_ascii=False)+'\n',encoding='utf-8')
 def sha(p):return hashlib.sha256(Path(p).read_bytes()).hexdigest()
 now=datetime.datetime.now(datetime.timezone.utc).isoformat()
-P=Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=obj(P)
+P=Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json');protocol=obj(P)
 checks={name:obj(R/'out'/name) if (R/'out'/name).exists() else {'status':'UNOBSERVED'} for name in ['PILOT.json','CHECK.json','REPRODUCTION.json']}
 summary={name:{k:v for k,v in x.items() if k not in ['rows','m6_certificate']} for name,x in checks.items()}
 incoming=[];sources=[P,AG.parent/'BOARD.md',AG.parent/'claude/B10/STREAM_NOTES.md',A/'runs/20261023T120344Z-fleet03-A047-boundary-search/PROOF.md']

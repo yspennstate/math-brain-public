@@ -3,7 +3,7 @@ from datetime import datetime,timezone
 import json,hashlib
 
 run=Path(__file__).resolve().parents[1]; root=run.parents[1]; team=root.parents[1]
-proto=Path(r'math-open-problems/reports\fei-2026-10-11/EXECUTION_PROTOCOL.json')
+proto=Path(r'private-source/reports\fei-2026-10-11/EXECUTION_PROTOCOL.json')
 protocol=json.loads(proto.read_text(encoding='utf-8'))
 check=json.loads((run/'out/CHECK.json').read_text(encoding='utf-8'))
 ind=json.loads((run/'out/INDEPENDENT.json').read_text(encoding='utf-8'))

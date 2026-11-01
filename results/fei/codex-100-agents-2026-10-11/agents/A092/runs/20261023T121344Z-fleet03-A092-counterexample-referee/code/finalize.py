@@ -3,7 +3,7 @@ import json,hashlib,copy
 
 R=Path(__file__).resolve().parents[1];HOME=R.parents[1];FLEET=HOME.parents[1]
 SRC=FLEET/'agents/A071/runs/20261023T113913Z-fleet03-A071-search-space-design'
-PROTO=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+PROTO=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 def rd(p):return json.loads(p.read_text(encoding='utf-8-sig'))
 def wr(p,s):p.write_text(s,encoding='utf-8',newline='\n')
 def js(p,x):wr(p,json.dumps(x,indent=2,ensure_ascii=False)+'\n')

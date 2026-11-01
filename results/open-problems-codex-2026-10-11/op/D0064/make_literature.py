@@ -72,7 +72,7 @@ These are related results and leads. No theorem is designated a solution in prin
 - math_recall.py queried “Gaussian multiplicative chaos star scale invariance Rhodes Vargas” and later “stable independently scattered random measure subordination”. Relevant hints were the ordinary GMC construction/interpolation and the stable-distribution definition; no classification theorem card was found. The irrelevant returned cards were not used.
 - brain.py recall queried “Gaussian multiplicative chaos star equation mistakes” and “Gaussian multiplicative chaos”. No specific usable solution was returned. The advertised recall printed that a detached index refresh failed; no explicit write/remember operation was invoked.
 - rg searched D0064 across the allowed 06_math_research ledgers. The D_20260908 problems/attempts entries were inspected, as was the 2026-10-10 intake summary. The prior smoothing-transform analogy is a lead, not a proof. Its statement about finite Laplace exponents failing with infinite mean is incorrect for locally finite random measures.
-- git ls-tree on origin/master of ~/math-open-problems, with D0064/d0064 path patterns, found no matching recorded-answer path. No working-tree or repository change was made.
+- git ls-tree on origin/master of ~/private-source, with D0064/d0064 path patterns, found no matching recorded-answer path. No working-tree or repository change was made.
 ''')
 (root/'LITERATURE.md').write_text(''.join(lines),encoding='utf8')
 print('Wrote LITERATURE.md',len(''.join(lines)))

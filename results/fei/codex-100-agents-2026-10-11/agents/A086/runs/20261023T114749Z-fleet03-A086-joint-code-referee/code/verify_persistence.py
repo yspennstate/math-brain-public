@@ -9,7 +9,7 @@ new='two new claims pending in this run; global stream queue/adoption reconcilia
 for p in (R/'REPORT.md',R/'code/finalize.py'):
  text=p.read_text(encoding='utf-8')
  if old in text:p.write_text(text.replace(old,new),encoding='utf-8')
-pr=read(Path('math-open-problems/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
+pr=read(Path('private-source/reports/fei-2026-10-11/EXECUTION_PROTOCOL.json'))
 claims=read(R/'CLAIMS.json');progress=read(R/'PROGRESS.json')
 assert all(set(c)==set(pr['required_per_run']['claim_fields']) for c in claims)
 assert set(progress)=={x.split(' (')[0] for x in pr['required_per_run']['progress_fields']}

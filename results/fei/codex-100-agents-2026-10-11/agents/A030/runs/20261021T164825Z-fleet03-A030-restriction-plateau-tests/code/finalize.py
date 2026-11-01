@@ -2,7 +2,7 @@ from pathlib import Path
 from datetime import datetime,timezone
 import json,hashlib
 ROOT=Path(__file__).resolve().parents[1];AGENT=ROOT.parents[1]
-protocol=json.loads(Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
+protocol=json.loads(Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json').read_text(encoding='utf-8'))
 load=lambda n:json.loads((ROOT/'out'/n).read_text(encoding='utf-8'))
 pilot,main,verify,lean=[load(n) for n in ['PILOT.json','VALIDATION.json','CONTINUATION.json','LEAN_RUN.json']]
 assert pilot['status']==main['status']==verify['status']=='PASS'

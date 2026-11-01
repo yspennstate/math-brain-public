@@ -2,7 +2,7 @@ from pathlib import Path
 import json,hashlib,copy,datetime
 B=Path(__file__).resolve().parents[1];HOME=B.parents[1];ROOT=HOME.parents[1]
 S=ROOT/'agents/A036/runs/20261023T113129Z-fleet03-A036-reference-law-divergence'
-P=Path(r'math-open-problems/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
+P=Path(r'private-source/reports\fei-2026-10-11\EXECUTION_PROTOCOL.json')
 protocol=json.loads(P.read_text(encoding='utf8'))
 check=json.loads((B/'out/CHECK.json').read_text(encoding='utf8'))
 audit=json.loads((B/'out/AUDIT.json').read_text(encoding='utf8'))
