@@ -121,9 +121,28 @@ macOS, with launchd: save as `~/Library/LaunchAgents/local.brain.dream.plist`, t
 </dict></plist>
 ```
 
-Windows, with Task Scheduler: create a daily task whose action is `python dream/run_dream.py --agent-cmd "..."`
-with the brain folder as "Start in". Set it to run whether the user is logged on or not, or a console window opens
-on the desktop at every run; the agent tool must then be signed in for that account.
+Windows, with Task Scheduler. A task that runs only while you are logged on opens a console window on the desktop
+at every run, and `powershell -WindowStyle Hidden` still flashes one. Start the dream through a short VBScript
+instead, which hides the window before it is drawn. Save this as `dream\dream_hidden.vbs`, with your own folder:
+
+```vbs
+Set sh = CreateObject("WScript.Shell")
+sh.CurrentDirectory = "C:\path\to\your-brain"
+sh.Run "cmd /c py -3 dream\run_dream.py --agent-cmd ""claude -p --permission-mode acceptEdits"" >> dream\task.log 2>&1", 0, True
+```
+
+and register it from a command prompt, every night at 03:00:
+
+```
+schtasks /Create /TN "brain dream" /SC DAILY /ST 03:00 /TR "wscript.exe //B C:\path\to\your-brain\dream\dream_hidden.vbs"
+```
+
+`py` is the Python launcher in `C:\Windows`, which a task always finds. In the `Run` line, `0` keeps the window
+hidden and `True` makes the task wait for the dream to end, so two nights never overlap; a doubled quote is how
+VBScript writes a quote inside a string. The task runs as you, so the agent tool uses the sign-in it already has. A
+full path to the agent works too (`--agent-cmd ""C:\Tools\claude.exe -p""`), and so does a tool installed by npm,
+which is a `.cmd` file. If the folder's path has a space, put `\"` around the file in the `schtasks` line. Start the
+task once by hand (`schtasks /Run /TN "brain dream"`) and read `dream\task.log` and `dream\logs\` before you rely on it.
 
 A scheduler starts with a short `PATH`, so give the full path to `python3` and, if the agent tool is not found, to
 the agent tool as well. Read the first week of logs: a dream that stops changing anything, or stops running, is the

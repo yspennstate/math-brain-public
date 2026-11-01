@@ -98,10 +98,12 @@ def main():
     agent = os.path.join(work, "agent.py")
     with open(agent, "w", encoding="utf-8") as fh:
         fh.write(AGENT)
-    py = shlex.quote(sys.executable.replace("\\", "/"))
+    # one quoting rule per system: run_dream.py splits Windows-style on Windows
+    quote = (lambda s: subprocess.list2cmdline([s])) if os.name == "nt" else shlex.quote
+    py = quote(sys.executable.replace("\\", "/"))
 
     def agent_cmd(mode):
-        return "%s %s %s" % (py, shlex.quote(agent.replace("\\", "/")), mode)
+        return "%s %s %s" % (py, quote(agent.replace("\\", "/")), mode)
 
     def run(script, *args, env=None):
         res = subprocess.run([sys.executable, os.path.join(starter, "dream", script)] + list(args), cwd=starter,

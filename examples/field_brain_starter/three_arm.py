@@ -19,12 +19,30 @@ import json
 import os
 import re
 import shlex
+import shutil
 import subprocess
 import sys
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
 import recall  # noqa: E402
+
+
+def split_cmd(cmd):
+    """Split an agent command line into argv on any system.
+
+    On Windows, POSIX splitting eats the backslashes of a full path (C:\\Tools\\claude.exe), and a
+    tool installed by npm is a .cmd file that subprocess cannot start by its bare name, so the
+    words are split Windows-style and the program is looked up on PATH the way a shell would.
+    """
+    if os.name == "nt":
+        argv = [w[1:-1] if len(w) > 1 and w[0] == w[-1] == '"' else w for w in shlex.split(cmd, posix=False)]
+    else:
+        argv = shlex.split(cmd)
+    if argv:
+        argv[0] = shutil.which(argv[0]) or argv[0]
+    return argv
+
 
 ASK = "Answer the question in one or two sentences. If the notes cannot answer it, say so plainly.\n\n"
 
@@ -89,7 +107,7 @@ def main():
                     fh.write(prompt)
             if a.model_cmd:
                 try:
-                    res = subprocess.run(shlex.split(a.model_cmd), input=prompt, capture_output=True, text=True,
+                    res = subprocess.run(split_cmd(a.model_cmd), input=prompt, capture_output=True, text=True,
                                          encoding="utf-8", timeout=a.timeout)
                     answer = res.stdout
                 except subprocess.TimeoutExpired:

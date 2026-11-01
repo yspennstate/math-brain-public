@@ -35,6 +35,23 @@ MEM = os.path.join(ROOT, "memory")
 AGENDA = os.path.join(HERE, "DREAM_AGENDA.md")
 LOCK = os.path.join(HERE, ".dream.lock")
 
+
+def split_cmd(cmd):
+    """Split an agent command line into argv on any system.
+
+    On Windows, POSIX splitting eats the backslashes of a full path (C:\\Tools\\claude.exe), and a
+    tool installed by npm is a .cmd file that subprocess cannot start by its bare name, so the
+    words are split Windows-style and the program is looked up on PATH the way a shell would.
+    """
+    if os.name == "nt":
+        argv = [w[1:-1] if len(w) > 1 and w[0] == w[-1] == '"' else w for w in shlex.split(cmd, posix=False)]
+    else:
+        argv = shlex.split(cmd)
+    if argv:
+        argv[0] = shutil.which(argv[0]) or argv[0]
+    return argv
+
+
 RULES = """You are running tonight's dream for the brain in this folder. The records are in memory/, one fact per
 file; memory/MEMORY.md is the index and memory/MISTAKES.md the dated corrections. The agenda below says what to work on.
 
@@ -155,7 +172,7 @@ def main():
         shutil.copytree(MEM, backup)
         before = section_counts(agenda)
         try:
-            res = subprocess.run(shlex.split(a.agent_cmd), input=prompt, cwd=ROOT, capture_output=True, text=True,
+            res = subprocess.run(split_cmd(a.agent_cmd), input=prompt, cwd=ROOT, capture_output=True, text=True,
                                  encoding="utf-8", errors="replace", timeout=a.timeout)
             reply, rc = res.stdout.strip(), res.returncode
         except subprocess.TimeoutExpired:
