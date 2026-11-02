@@ -172,6 +172,7 @@ with 79 edges, each picked and read by hand.
 | 83 | 91,138 | 90,963 | 85,625 | 94.0% |
 | 90 | 91,157 | 90,980 | 85,849 | 94.2% |
 | 147 | 91,275 | 91,096 | 86,558 | 94.8% |
+| 203 | 91,786 | 91,599 | 88,223 | 96.1% |
 
 The store had 127,881 edges after round 42. The work continues one island at a time; after round 42 no island
 other than the main one had more than 35 nodes.
@@ -184,6 +185,10 @@ outside the main component sat in islands of at most 58 nodes.
 
 After round 147 the store had 129,153 edges and the main component held 86,558 of 91,275 nodes. 179 nodes touched
 no edge, and the 4,717 outside the main component still sat in islands of at most 58 nodes.
+
+After round 203 the store had 133,753 live edges (237 retracted rows left out) and the main component held 88,223 of
+91,786 nodes. About 500 cards came in from a second store between rounds 147 and 203, with their own links, and 187
+nodes touched no edge.
 
 ## What carries over to another field
 
