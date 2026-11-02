@@ -682,6 +682,18 @@ The number nine is used only in the case without pivots, through Proposition~\re
 Order three is the smallest order at which Theorem~\ref{thm:decay} gives an integrable envelope, and the second crossing volume alone does not bound the density. Let $X_1,X_2,Y_1,Y_2$ be independent and uniform on $[-\frac12,\frac12]$, and $Q=(X_1+Y_1)^2-(X_2+Y_2)^2$. For the partition $I=\{X_1,X_2\}$, $J=\{Y_1,Y_2\}$ the cross block is $\diag(1,-1)$, so $E_2=1$. But $U=X_1+Y_1$ and $V=X_2+Y_2$ are independent with the triangular density on $[-1,1]$, and $U^2$ and $V^2$ have densities $(1-\sqrt y)/\sqrt y$ on $(0,1)$, so the density of $Q=U^2-V^2$ at $0$ is $\int_0^1(1-\sqrt y)^2y^{-1}\dd y=\infty$; near $0$ it grows like $\log(1/\abs z)$. By Theorem~\ref{thm:decay} at order two the negative half moment of this $Q$ is nevertheless bounded.
 \end{remark}
 
+\section*{Acknowledgments and funding}
+
+This research was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+
+This paper forms part of the author's ongoing project on AI systems for research mathematics, provisionally called Math Brain. Its mathematical development, computation and preparation were carried out with AI systems. Versions of the result for seventeen and thirty-three large eigenvalues, with a larger constant, were first obtained in the same project by OpenAI Codex. On 24 September 2026, Anthropic's Claude Opus~5.5 wrote the proof for nine eigenvalues and the present manuscript, wrote the numerical checks of the constants and lemmas, formalized the numerical constants, the elementary inequalities and the finite algebraic steps in Lean~4 with Mathlib, and audited each statement against its hypotheses.
+
 \begin{thebibliography}{99}
 
 \bibitem{Ball} K.~Ball, \emph{Volumes of sections of cubes and related problems}, in Geometric Aspects of Functional Analysis (1987--88), Lecture Notes in Math.~1376, Springer, Berlin, 1989, 251--260.
