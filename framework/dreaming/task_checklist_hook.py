@@ -37,6 +37,15 @@ import re
 import sys
 import time
 
+try:
+    from shared_read import open_shared as _open_shared, posix_replace as _posix_replace
+except Exception:          # the module missing: plain open and os.replace, as before
+    def _open_shared(path, binary=False):
+        return io.open(path, "rb") if binary else io.open(path, encoding="utf-8")
+
+    def _posix_replace(src, dst):
+        return False
+
 HOME = os.path.expanduser("~")
 _BRAIN_TREE = os.path.join(HOME, "brain-repo", "12_cognitive_architecture", "task_checklist")
 STORE = (os.environ.get("TASK_CHECKLIST_HOME")
@@ -149,7 +158,7 @@ def _backup_path():
 
 
 def _read_json(path):
-    with io.open(path, encoding="utf-8") as fh:
+    with _open_shared(path) as fh:     # share-delete: a writer's POSIX replace does not wait on this reader
         return json.load(fh)
 
 
@@ -184,10 +193,13 @@ def load_state():
 
 def _replace_retrying(tmp, dest, tries=60):
     """os.replace, retried: on Windows it fails with PermissionError while any other process has dest open, and with
-    the 9 Oct wave's fifty workers reading state.json on every prompt that cost 33 lost writes in an evening (hook.log)."""
+    the 9 Oct wave's fifty workers reading state.json on every prompt that cost 33 lost writes in an evening (hook.log).
+    A POSIX-semantics rename comes first: it does not wait on readers that opened with share-delete (_read_json does),
+    where a plain os.replace waited 20 to 28 s at a time on many plain-open readers (see shared_read.py)."""
     for k in range(tries):
         try:
-            os.replace(tmp, dest)
+            if not _posix_replace(tmp, dest):
+                os.replace(tmp, dest)
             return
         except PermissionError:
             if k == tries - 1:

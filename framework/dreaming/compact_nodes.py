@@ -48,6 +48,11 @@ import re
 import subprocess
 import sys
 import time
+try:
+    from shared_read import open_shared as _open_shared_ro
+except Exception:
+    def _open_shared_ro(path, binary=False):
+        return io.open(path, "rb") if binary else io.open(path, encoding="utf-8")
 
 HOME = os.environ.get("COMPACT_HOME") or os.path.expanduser("~")
 ROOT = os.environ.get("COMPACT_NODES_ROOT") or os.path.join(HOME, ".claude", "brain_graph", "compactions")
@@ -156,7 +161,7 @@ def _open_tasks(session_id, runtime="claude", extra_agent=None):
     if extra_agent:
         agents.add(extra_agent)
     try:
-        with io.open(CHECKLIST, encoding="utf-8") as fh:
+        with _open_shared_ro(CHECKLIST) as fh:
             st = json.load(fh)
     except (OSError, ValueError):
         return []
