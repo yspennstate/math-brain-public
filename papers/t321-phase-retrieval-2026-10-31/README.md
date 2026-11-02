@@ -2,7 +2,6 @@
 
 **Author:** Yitzchak Shmalo  
 **Affiliation:** Einstein Institute of Mathematics, The Hebrew University of Jerusalem; Givat Ram, Jerusalem, Israel  
-**Email:** yitzchak.shmalo@gmail.com  
 **Manuscript date:** 31 October 2026  
 **Research identifier:** T321
 
