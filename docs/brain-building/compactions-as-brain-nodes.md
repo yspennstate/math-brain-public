@@ -78,6 +78,15 @@ stopped answering in time and the share of new anchors with a topic link fell fr
 limit linked nothing, because its recall never got the processor, while a pass at normal priority with 240 seconds
 a recall brought one day's anchors from 8 to 82 percent linked.
 
+## The week after (to 2 November 2026)
+
+By 05:20 on 2 November the brain held 17,484 compactions, between 900 and 970 a day in the last days of October
+and 1,016 on 1 November. Nearly every one is chained to its session's previous compaction (1,003 of the 1,016 on
+1 November). The topic link at save time has recovered: the share of a day's compactions saved with one was 9
+percent on 27 October, then 17, 20, 27 and 40 percent on the four days after, 52 percent on 1 November and 67
+percent in the first hours of 2 November. The normal-priority sweep closes most of the rest. After its passes,
+31 October ended with 80 percent of its anchors linked to related memories and 1 November with 77 percent.
+
 ## Building it for your own brain
 
 Most harnesses let a hook run on the compaction event or on the session start that follows it. Copy the summary
