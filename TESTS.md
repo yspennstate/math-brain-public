@@ -81,7 +81,7 @@ In a preregistered test with a blind judge, at eight cut-offs on two open proble
 - A line past the point where the word index stops reading a long record reached the top ten 23 times of 60. With a separate index for the tail it reached it 53 times, with no change on a 700-question bank or in latency.
 - A spelling corrector on the query replaced a rare word, one seen in at most eight records, with a far commoner word one edit away and dropped the original, which lost records that quote a misspelling or use a rare real word or name. Scoring each changed word again beside its correction (2 November) lifted the first hit on 496 stored questions containing such a word from 280 to 411 and the first eight from 384 to 487, with nine answers slipping one or two places; on 32 quoted sentences the first eight went from 27 to 32. Queries the corrector leaves alone are unchanged. The stored questions use each record's own words, which favours this change.
 
-## Speed (29 October to 1 November 2026)
+## Speed (29 October to 2 November 2026)
 
 The medians are from one machine and move with its load.
 
@@ -97,6 +97,8 @@ The medians are from one machine and move with its load.
 | A new card becoming findable | the next full rebuild, 20 to 39 minutes | the first call after it is written | 7 of 7 new cards at rank 1; with 1,000 cards added, 40 of 40 searches identical to a full rebuild |
 | A recall bank at depth 0, quiet machine, mixed with the fixes above | 28.2 s | 8.4 s | accuracy held |
 | Memory recall with Windows power throttling turned off for the process (1 Nov, three calls each) | 17 to 19 s | 5.3 to 11.6 s on a quiet machine; 20 to 26 s with every core busy, where most of the call is waiting for a core | |
+| Memory recall encoding the query on a thread instead of starting a helper process (2 Nov, nine alternating pairs) | 14.1 s inside recall, 18.0 s from the command line | 6.4 s and 13.5 s | same answers on all three questions |
+| Loading the meaning vectors lazily, checking only the rows a lane uses (2 Nov, by profile; wall times on the busy machine swung too much to show it) | 1.04 s | 0.13 s | same first eight on 9 of 9 |
 
 Where the time goes (30 and 31 October). One recall call spent 2.2 seconds starting Python and 4.4 seconds importing, then read and hashed the 182 MB vector file four times, 9.1 seconds in all; it now reads that file once a question. On a heavily loaded machine a resident server saved little (22.0 against 24.0 seconds median), because the time went to waiting for the processor, not to computing: on 31 October the same 30-item bank took a median of 549 seconds wall time a question at 6.2 seconds of processor time, and answered 10 of 30, against 11 on a quiet machine.
 
