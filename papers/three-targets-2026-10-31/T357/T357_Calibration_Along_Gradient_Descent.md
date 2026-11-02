@@ -14,8 +14,7 @@ toc-depth: 1
 
 \begin{center}
 \small Einstein Institute of Mathematics, The Hebrew University of Jerusalem\\
-Givat Ram, Jerusalem, Israel\\
-\texttt{yitzchak.shmalo@gmail.com}
+Givat Ram, Jerusalem, Israel
 \end{center}
 
 \begin{abstract}
@@ -3340,16 +3339,18 @@ Consequently a separately proved exact-model max-margin limit \(\kappa_d\to\kapp
 
 The complete manuscript, six detailed proof appendices, and editable sources are archived in the public Math Brain repository [9]. The paper-specific archive and PDF are given in [10], together with the release's contribution history and verification record.
 
-# Acknowledgments, funding, and declarations
+# Acknowledgments and funding {.unnumbered}
 
-**Acknowledgments and funding.**
 The research presented in this paper was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No. 101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25).
 
-**Declaration of competing interest.**
+# Declaration of competing interest {.unnumbered}
+
 The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
 
 
-**AI assistance and provenance.** The mathematical arguments, literature
+# Declaration of generative AI and AI-assisted technologies {.unnumbered}
+
+The mathematical arguments, literature
 comparisons, verification, and writing were produced by AI systems under
 the author's direction. This manuscript consolidates the finite-time
 proof package of 24 October 2026 and its strongly overparameterized
