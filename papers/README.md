@@ -63,6 +63,7 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | The maximal Kemeny constant of an n-vertex graph | [maximal-kemeny-constant](https://github.com/yspennstate/maximal-kemeny-constant) |
 | Moments of level widths in conditioned Galton-Watson trees | [level-width-moments](https://github.com/yspennstate/level-width-moments) |
 | Multicommodity flow, the relaxation time and the diameter | [flow-parameter-diameter](https://github.com/yspennstate/flow-parameter-diameter) |
+| Neural means and kernel corrections for operator learning | [neural-means-kernel-corrections](https://github.com/yspennstate/neural-means-kernel-corrections) |
 | Non-Gaussian fluctuations of degree counts in conditioned Galton-Watson trees | [non-gaussian-degree-counts](https://github.com/yspennstate/non-gaussian-degree-counts) |
 | Non-normal orbit quotients that are not normal quotients | [nonnormal-orbit-quotients](https://github.com/yspennstate/nonnormal-orbit-quotients) |
 | A nonergodic flow rule with Galton–Watson stationary measure | [nonergodic-galton-watson-flow-rule](https://github.com/yspennstate/nonergodic-galton-watson-flow-rule) |
