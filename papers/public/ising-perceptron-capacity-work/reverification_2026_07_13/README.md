@@ -188,8 +188,8 @@ consistency check, not evidence at the precision of the certificates.
 ## Manuscript spot-checks
 
 A targeted line-pass of the manuscript's hardest quantitative paragraphs
-against the certificate artifacts, using only numbers measured independently
-this session. The star-interior display: the printed matrix enclosure
+against the certificate artifacts, using only independently recomputed
+numbers. The star-interior display: the printed matrix enclosure
 contains all four mpmath-recomputed integrals; the printed
 `det A >= 0.003059813871082545`, ball radius `> 0.01503919829455`, required
 radius `< 0.012096`, and clearance `> 0.002943` agree digit-for-digit with
@@ -210,8 +210,7 @@ the derivative lanes, the central lane, and the near-one block.
 
 ## Provenance
 
-This archive was published to the public repository on the owner's
-instruction the same afternoon: `ising-perceptron-capacity` main
+This archive is in the public repository: `ising-perceptron-capacity` main
 `0221e98..072cdc2` carries this directory, a post-release verification
 section in the public README, and the rebuilt manuscript, whose status
 remark and declarations record this round and the research program behind
