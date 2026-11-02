@@ -81,6 +81,20 @@ prints what the model would receive for a sample request. To wire it in, add it 
 `~/.codex/hooks.json` with its absolute path, approve it with `/hooks`, and ask Codex something the records answer
 ("what does the festival want for delivery?"). The answer should quote the 31 March delivery record.
 
+You can see what Codex will hand the model before you open it: send a hook the event Codex would send. From
+`examples/field_brain_starter`:
+
+```
+echo '{"session_id": "t1", "hook_event_name": "UserPromptSubmit", "prompt": "what does the festival want for delivery?"}' | python3 hooks/recall_hook.py
+echo '{"session_id": "t1", "hook_event_name": "PreToolUse", "tool_name": "Bash", "tool_input": {"command": "rm -rf raw_footage to free disk space"}}' | python3 hooks/scar_hook.py
+```
+
+Each prints one line of JSON in the shape above, and its `additionalContext` is what the model reads. The first
+names the 31 March delivery record, the second the record about deleting raw footage. A hook that prints nothing
+here prints nothing in Codex either. The scar hook warns once per session, so change `session_id` to see it again.
+`python3 hooks/session_test.py` runs six of the seven hooks this way, each as its own process, on a scratch copy of
+the store.
+
 The other two hooks in the example above are in the same folder. `scar_hook.py` runs before a tool call, scores
 the command against the records of mistakes only, and adds one short warning when a scar matches well (at most two
 scars, each once per session). `write_back_hook.py` runs when the turn ends: if the agent's last message reads like
