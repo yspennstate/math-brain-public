@@ -75,6 +75,7 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | The second largest outdegree of conditioned Galton–Watson trees with infinite variance | [second-largest-degree-infinite-variance](https://github.com/yspennstate/second-largest-degree-infinite-variance) |
 | The sharp diameter threshold for unimodality of free Brownian motion | [free-brownian-unimodality-sharp-constant](https://github.com/yspennstate/free-brownian-unimodality-sharp-constant) |
 | Sharp relaxation, cutoff, and graph diffusion for a linear-polymer chain | [linear-polymer-relaxation](https://github.com/yspennstate/linear-polymer-relaxation) |
+| The smallest eigenvalue of the NTK of a deep tanh network in the ordered phase | [ntk-smallest-eigenvalue-ordered-phase](https://github.com/yspennstate/ntk-smallest-eigenvalue-ordered-phase) |
 | The stationary law of the leftmost particles in Aldous's drift-jump process | [drift-jump-leftmost-particles](https://github.com/yspennstate/drift-jump-leftmost-particles) |
 | Supermodular ordering of speeded-up Markov chains without stochastic monotonicity | [supermodular-speed-ordering](https://github.com/yspennstate/supermodular-speed-ordering) |
 | The time-stationary and Palm inter-arrival times of a Markov-modulated Poisson process need not be ordered | [mmpp-stationary-order](https://github.com/yspennstate/mmpp-stationary-order) |
