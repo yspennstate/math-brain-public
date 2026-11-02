@@ -188,8 +188,8 @@ consistency check, not evidence at the precision of the certificates.
 ## Manuscript spot-checks
 
 A targeted line-pass of the manuscript's hardest quantitative paragraphs
-against the certificate artifacts, using only numbers measured independently
-this session. The star-interior display: the printed matrix enclosure
+against the certificate artifacts, using only independently recomputed
+numbers. The star-interior display: the printed matrix enclosure
 contains all four mpmath-recomputed integrals; the printed
 `det A >= 0.003059813871082545`, ball radius `> 0.01503919829455`, required
 radius `< 0.012096`, and clearance `> 0.002943` agree digit-for-digit with
