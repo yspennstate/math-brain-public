@@ -12,6 +12,10 @@ The [31 October 2026 release](three-targets-2026-10-31/README.md) contains three
 
 The release states the restrictions and earlier contributions explicitly. Completion is based on internal review; external acceptance and exclusive priority have not been established.
 
+## T321: sampling barriers for real Gaussian phase retrieval
+
+[Sampling barriers for real Gaussian phase retrieval](t321-phase-retrieval-2026-10-31/README.md) (31 October 2026, PDF and LaTeX source) studies the Gibbs measure of the empirical quartic loss with m = 10^6 d measurements. On one high-probability data event it proves an exponentially large Poincaré constant at low temperature while the Poincaré and logarithmic Sobolev constants stay finite, a lower bound on Metropolis-adjusted Langevin mixing from a warm start, and a finite all-start upper bound for a ball-truncated version. The obstruction is the separation of the two signs of the signal.
+
 ## Papers mirrored from their public repositories
 
 Papers that came out of this work. Each has its own public repository; a copy of each is in `public/`, under the repository's name.
