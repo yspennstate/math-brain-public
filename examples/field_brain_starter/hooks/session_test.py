@@ -1,4 +1,4 @@
-"""Run one whole session through the six hooks, the way a runtime calls them, and check what each one says.
+"""Run one whole session through six of the seven hooks, the way a runtime calls them, and check what each one says.
 
 Each hook has its own --selftest, which calls its functions directly. This test does what Codex or Claude Code does:
 it starts every hook as a separate process, writes the event as JSON on its stdin, and reads what it prints. The
@@ -13,7 +13,9 @@ session is the ordinary one:
     stop               request_hook     --stop links the new record to the request as produced
     same request       request_hook     the second ask says it was asked before and what it produced
     compaction         compaction_hook  the session's compaction summary is saved as a record, once
-    wiring             print_wiring     the Claude Code and Codex blocks parse and name all six hooks
+    wiring             print_wiring     the Claude Code and Codex blocks parse and name all seven hooks
+
+The seventh, keep_working_hook, acts only after a compaction; its own --selftest covers it.
 
 Everything runs on a scratch copy of memory/ with its own state folder and ledger, so the real store is not
 touched. Exit 0 when every step behaves, 1 otherwise.
@@ -149,9 +151,9 @@ def main():
         except (ValueError, KeyError):
             wired = ""
         missing = [h for h in ("wake_hook", "recall_hook", "request_hook", "scar_hook", "write_back_hook",
-                                  "compaction_hook")
+                                  "compaction_hook", "keep_working_hook")
                    if h + ".py" not in wired]
-        check("wiring: the %s block parses and names all six hooks" % runtime, wired and not missing,
+        check("wiring: the %s block parses and names all seven hooks" % runtime, wired and not missing,
               "missing " + ", ".join(missing) if wired else out[:200])
 
     shutil.rmtree(work, ignore_errors=True)

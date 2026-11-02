@@ -208,8 +208,10 @@ version, with heartbeats, mailboxes and handoffs, for a team of agents working a
    Codex and Claude Code; `python3 hooks/print_wiring.py --runtime claude` or `--runtime codex` prints the block
    with your own paths filled in), so every session starts with the index, recall runs before work instead of after a
    mistake, and a lesson is filed before the turn ends. `python3 hooks/session_test.py` runs one session through
-   all five the way a runtime calls them (JSON on stdin, a scratch copy of the store) and says which step misbehaves;
-   run it again after you point the hooks at your own records. `framework/bootstrap/` installs the larger set the full
+   six of the seven the way a runtime calls them (JSON on stdin, a scratch copy of the store), checks that the
+   printed wiring names all seven, and says which step misbehaves; run it again after you point the hooks at your
+   own records. The seventh, `keep_working_hook.py`, acts only after a compaction, so it is checked on its own with
+   `python3 hooks/keep_working_hook.py --selftest`. `framework/bootstrap/` installs the larger set the full
    framework uses.
 3. Schedule `dream/run_dream.py` for the night (`dream/README.md`): it works from the agenda `dream/make_agenda.py`
    builds, merges duplicates, links what belongs together, and turns a mistake that recurs in `MISTAKES.md` into a
