@@ -1,0 +1,461 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{xurl}
+\usepackage{hyperref}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+
+\newcommand{\Pt}{\mathbb{P}_t}
+\newcommand{\Et}{\mathbb{E}_t}
+\newcommand{\Dscr}{\Delta}
+
+\title[Forests of complete graphs]{Negative edge correlation for weighted spanning forests of complete graphs}
+\author{Yitzchak Shmalo}
+\date{}
+
+\begin{document}
+
+\begin{abstract}
+Let $\Pt$ be the arboreal gas on the complete graph $K_n$: the probability measure on
+acyclic edge sets $F$ proportional to $t^{|F|}$. We prove that for every $n$ and every
+$t>0$ any two distinct edges $e,f$ satisfy $\Pt(e,f\in F)<\Pt(e\in F)\,\Pt(f\in F)$.
+The case $t=1$ is due to Gupta. For two edges sharing a vertex the inequality follows
+from the real-rootedness of the degree polynomial of a vertex, which is the
+characteristic polynomial of a rank-one perturbation of a Hermite Jacobi matrix. For
+disjoint edges the edge marginal satisfies an explicit Riccati equation, and the
+covariance is controlled by a barrier argument along it.
+\end{abstract}
+
+\maketitle
+
+\section{Introduction}
+
+Let $G=(V,E)$ be a finite graph and $t>0$. The \emph{arboreal gas} (or weighted
+spanning forest measure) on $G$ is the probability measure
+\[
+\Pt(F)=\frac{t^{|F|}}{Z_G(t)},\qquad F\subseteq E \text{ acyclic},
+\]
+where $Z_G(t)=\sum_F t^{|F|}$. It is the $q\to0$ limit of the random-cluster model with
+edge weight $p/(1-p)=qt$. Kahn \cite{Kahn}, Grimmett and Winkler \cite{GW} and
+Pemantle \cite{Pemantle} asked whether the uniform spanning forest ($t=1$) has
+negatively correlated edges, as uniform spanning trees do; for the arboreal gas at every
+$t>0$ this is Conjecture~1.8 of Bauerschmidt, Crawford, Helmuth and Swan \cite{BCHS}.
+The conjecture is open for general graphs.
+
+On complete graphs several cases are known. Gupta \cite{Gupta} proved negative
+correlation of distinct edges of the uniform random forest of $K_n$ for every $n$.
+Huang \cite{Huang} proved it for adjacent edges at sufficiently large $t$ on any fixed
+graph, and on $K_n$ for $n$ sufficiently large when $t$ is sufficiently small or
+sufficiently large. \c{C}i\c{c}eksiz and Ravichandran \cite{CR} proved negative edge
+correlation for the arboreal gas on any finite graph at sufficiently large fugacity,
+under a nondegeneracy condition, and for the random-cluster model on $K_n$ with
+$0<q<1$ and common edge weight at least one; the arboreal gas is the limit in which the
+weight tends to zero, so it lies outside that range. Tang and Zhang \cite{TZ} prove
+negative edge correlation for the random-cluster model with $0\le q<1$ and fixed edge
+weight on sufficiently large regular graphs of diverging degree satisfying an
+isoperimetric condition. We prove the complete-graph case at
+every fugacity.
+
+\begin{theorem}\label{thm:main}
+Let $n\ge3$ and $t>0$. For any two distinct edges $e,f$ of $K_n$,
+\[
+\Pt(e\in F,\ f\in F)<\Pt(e\in F)\,\Pt(f\in F).
+\]
+\end{theorem}
+
+By symmetry there are two cases: $e$ and $f$ share a vertex (Section~\ref{sec:adj}),
+or they are disjoint, which requires $n\ge4$ (Sections~\ref{sec:counts}--\ref{sec:barrier}).
+For disjoint edges the proof has three ingredients: exact formulas for the four forest
+sums in terms of one sequence of Hermite-type polynomials, a Riccati equation for the
+edge marginal $\rho(t)=\Pt(e\in F)$, and the observation that the covariance is a fixed
+quadratic $F_t$ evaluated at $\rho(t)$. Positivity of $F_t(\rho(t))$ is then propagated
+from both endpoints $t\to0$ and $t\to\infty$ by a first-zero argument, which needs the
+sign of the derivative of $F_t(\rho)$ along each root of $F_t$. These signs come from
+two polynomial identities and the location of the zeros of a discriminant and of a
+cubic.
+
+\section{Generating functions}\label{sec:gf}
+
+Throughout, $a=1/t$. Let $T(w)$ be the exponential generating function of rooted
+labelled trees and $U(w)$ that of unrooted labelled trees (both without the empty tree).
+Then $T=we^{T}$, $wU'=T$ and $U=T-T^2/2$, since both sides of the last identity vanish
+at $0$ and have derivative $T/w$ (using $(1-T)T'=T/w$).
+
+For $b,a\in\mathbb{R}$ define polynomials $P_k=P_k(b,a)$ by
+\[
+e^{bu-au^2/2}=\sum_{k\ge0}P_k\,\frac{u^k}{k!}.
+\]
+Differentiating in $u$ gives $P_0=1$, $P_1=b$ and
+\begin{equation}\label{eq:rec}
+P_k=bP_{k-1}-a(k-1)P_{k-2}\qquad(k\ge2).
+\end{equation}
+Put $Q_N=P_N-NP_{N-1}$.
+
+\begin{lemma}\label{lem:subst}
+For every power series $g$ and every $N\ge0$,
+\[
+[w^N]\,e^{aU(w)+zT(w)}g(T(w))=[u^N]\,(1-u)\,g(u)\,e^{(N+a+z)u-au^2/2}.
+\]
+\end{lemma}
+
+\begin{proof}
+Write the coefficient as a residue in $w$ and substitute $w=ue^{-u}$, so that $T=u$,
+$U=u-u^2/2$ and $dw/w^{N+1}=(1-u)e^{Nu}\,du/u^{N+1}$. This is the Lagrange
+inversion formula as a formal identity.
+\end{proof}
+
+\subsection*{The degree polynomial of a vertex}
+Fix a vertex $v$ of $K_n$, put $N=n-1$, and let
+$H(z)=\sum_F t^{|F|}z^{\deg_F(v)}$. Removing $v$ from a forest leaves a forest on the
+other $N$ vertices in which every component is joined to $v$ by at most one edge. A
+component on $k$ vertices that is not joined to $v$ has weight $t^{k-1}$; a component
+joined to $v$ through a chosen vertex has weight $t^{k-1}\cdot tz=zt^k$. By the
+exponential formula and Lemma~\ref{lem:subst} with $g=1$,
+\begin{equation}\label{eq:H}
+H(z)=N!\,t^N[w^N]\,e^{aU(w)+zT(w)}=t^N\,Q_N(N+a+z,\,a).
+\end{equation}
+In particular $Z:=Z_{K_n}(t)=H(1)=t^{n-1}Q_{n-1}(n+a,a)$.
+
+\section{Edges with a common vertex}\label{sec:adj}
+
+\begin{lemma}\label{lem:real}
+All zeros of $H$ are real and negative, and they are not all equal when $N\ge2$.
+\end{lemma}
+
+\begin{proof}
+Let $J_N$ be the $N\times N$ symmetric tridiagonal matrix with zero diagonal and
+off-diagonal entries $\sqrt a,\sqrt{2a},\dots,\sqrt{(N-1)a}$, and let $e_N$ be the last
+coordinate vector. Expanding along the last row and using \eqref{eq:rec} gives
+$\det(bI-J_N)=P_N(b,a)$. The determinant of $bI-J_N-Ne_Ne_N^{\top}$ is affine in its
+last diagonal entry, with cofactor $\det(bI-J_{N-1})=P_{N-1}$, so
+\[
+\det(bI-J_N-Ne_Ne_N^{\top})=P_N(b,a)-NP_{N-1}(b,a)=Q_N(b,a).
+\]
+Hence by \eqref{eq:H} the zeros of $H$ are $\lambda-N-a$ for the eigenvalues $\lambda$
+of the real symmetric matrix $J_N+Ne_Ne_N^{\top}$, and are real. The coefficients of $H$
+are nonnegative and $H(0)\ge1$, so $H$ has no zero in $[0,\infty)$. For $N\ge2$ this
+matrix has a nonzero off-diagonal entry, so it is not scalar and its eigenvalues are not
+all equal.
+\end{proof}
+
+\begin{proposition}\label{prop:adj}
+For $n\ge3$, $t>0$ and distinct edges $e,f$ with a common vertex,
+$\Pt(e,f\in F)<\Pt(e\in F)\Pt(f\in F)$.
+\end{proposition}
+
+\begin{proof}
+The leading coefficient of $H$ is $t^N$ (the star at $v$), so by Lemma~\ref{lem:real}
+$H(z)=t^N\prod_{j=1}^N(z+\lambda_j)$ with $\lambda_j>0$ not all equal. Let
+$Y=\deg_F(v)$ and $p_j=1/(1+\lambda_j)$. Logarithmic differentiation at $z=1$ gives
+\[
+\mu:=\Et Y=\sum_jp_j,\qquad \Et[Y(Y-1)]=\frac{H''(1)}{H(1)}=\mu^2-\sum_jp_j^2 .
+\]
+Since the $p_j$ are not all equal, $\sum_jp_j^2>\mu^2/N$, and so
+$\Et[Y(Y-1)]<(N-1)\mu^2/N$. The $N$ edges at $v$ are exchangeable; with
+$\rho=\Pt(e\in F)$ and $\eta=\Pt(e,f\in F)$ we have $\mu=N\rho$ and
+$\Et[Y(Y-1)]=N(N-1)\eta$. Hence $\eta<\rho^2$.
+\end{proof}
+
+\section{Forest sums with prescribed edges}\label{sec:counts}
+
+From now on $n\ge4$, $a=1/t$, $b=n+a$, and all $P_k$ are evaluated at $(b,a)$. Let $E$,
+$L$ and $D$ be the sums of $t^{|F|}$ over forests containing a fixed edge, two fixed
+edges with a common vertex, and two fixed disjoint edges, respectively, and put
+$\rho=E/Z$ and $h=(n-2)(n-3)$.
+
+\begin{lemma}\label{lem:counts}
+\[
+Z=t^{n-1}Q_{n-1},\quad E=t^{n-1}Q_{n-2},\quad L=t^{n-1}Q_{n-3},\quad
+D=t^{n-1}\bigl(P_{n-3}-(n-4)P_{n-4}\bigr).
+\]
+\end{lemma}
+
+\begin{proof}
+The formula for $Z$ is \eqref{eq:H} at $z=1$. Contract a prescribed edge $uv$ to a
+vertex $m$. A forest containing $uv$ corresponds to a forest of the contracted graph in
+which each edge from $m$ to an ordinary vertex $x$ stands for one of the two edges
+$ux,vx$; at most one of them can be present. So $m$ is a vertex of degree fugacity
+$z=2$ among $n-2$ ordinary vertices, and \eqref{eq:H} with $N=n-2$, $z=2$, times the
+weight $t$ of $uv$, gives $E$. Contracting two prescribed edges with a common vertex
+gives a vertex of fugacity $3$ among $n-3$ ordinary vertices, and $L$ in the same way.
+
+For two disjoint prescribed edges, contract each to a vertex, $m_1$ and $m_2$, each of
+fugacity $2$, among $N=n-4$ ordinary vertices; the edge $m_1m_2$ stands for four edges
+and has weight $4t$. If $m_1,m_2$ lie in different components, the components are
+counted by $e^{aU+4T}$. If they lie in one component, the path between them has
+$k\ge0$ ordinary internal vertices; its edges have total weight $4t^{k+1}$ and each
+internal vertex with the trees hanging from it contributes $T/t$, giving $4tT^k$. Hence
+the contracted sum is $N!\,t^N[w^N]e^{aU+4T}\bigl(1+4t/(1-T)\bigr)$, and by
+Lemma~\ref{lem:subst},
+\[
+D=t^{n-2}\bigl((1+4t)P_{n-4}-(n-4)P_{n-5}\bigr)=t^{n-1}\bigl(P_{n-3}-(n-4)P_{n-4}\bigr),
+\]
+the second form by \eqref{eq:rec} with $k=n-3$. For $n=4$ the term with $P_{-1}$ is
+absent and both forms equal $t^2(1+4t)$.
+\end{proof}
+
+Write $P=P_{n-1}$ and $R=P_{n-2}$. Eliminating $P_{n-3},P_{n-4}$ with \eqref{eq:rec}
+expresses the four quantities of Lemma~\ref{lem:counts}, divided by $t^{n-1}$, as
+\[
+P-(n-1)R,\quad \frac{P-nR}{a},\quad \frac{nP-(n^2+2a)R}{a^2(n-2)},\quad
+\frac{(n-4)(n-2)aR+(a-n(n-4))(bR-P)}{a^2h}.
+\]
+Collecting the coefficients of $P$ and $R$ then verifies the identities
+\begin{align}
+\frac LZ&=\frac{(2+nt)\rho-2t}{n-2},\label{eq:L}\\
+\frac DZ&=\frac{1-2(n-4)t+\bigl(-1/t+2n-9+n(n-4)t\bigr)\rho}{h}.\label{eq:D}
+\end{align}
+
+\begin{lemma}[Riccati equation]\label{lem:ric}
+For $n\ge4$ and $t>0$,
+\[
+2t^2\rho'=t-2nt^2+B\rho-n(n-1)t\rho^2,\qquad B=n^2t^2+(2n+1)t-1 .
+\]
+\end{lemma}
+
+\begin{proof}
+Let $M=\binom n2$. Since $t\,\partial_t$ applied to $\sum_Ft^{|F|}$ counts edges,
+exchangeability gives $tZ'=ME$. Applied to $E$ it counts, besides the prescribed edge,
+the $2(n-2)$ edges sharing a vertex with it and the $h/2$ disjoint ones, so
+$tE'-E=2(n-2)L+hD/2$. Hence
+$t\rho'=\rho+2(n-2)L/Z+hD/(2Z)-M\rho^2$, and \eqref{eq:L}--\eqref{eq:D} give the claim.
+\end{proof}
+
+Define
+\[
+\delta=th,\quad \alpha=t-2(n-4)t^2,\quad \beta_0=-1+(2n-9)t+n(n-4)t^2,\quad
+F_t(r)=\delta r^2-\beta_0r-\alpha .
+\]
+By \eqref{eq:D}, $F_t(\rho)=\delta(\rho^2-D/Z)$. So, writing $f(t)=F_t(\rho(t))$, the
+disjoint case of Theorem~\ref{thm:main} is the statement that $f>0$ on $(0,\infty)$.
+
+\section{The two ends}\label{sec:ends}
+
+\begin{lemma}\label{lem:ends}
+For each $n\ge4$, $f(t)/t^5\to2h$ as $t\to0^+$ and $f(t)\to4h/n^4$ as $t\to\infty$.
+\end{lemma}
+
+\begin{proof}
+Write $Z=\sum Z_kt^k$ and similarly for $E,D$. Counting edge sets with $k$ edges and
+removing those containing a cycle,
+\[
+Z_0=1,\ Z_1=M,\ Z_2=\tbinom M2;\quad E_1=1,\ E_2=M-1,\ E_3=\tbinom{M-1}2-(n-2);
+\]
+\[
+D_2=1,\ D_3=M-2,\ D_4=\tbinom{M-2}2-2(n-2)-2,
+\]
+with $E_0=D_0=D_1=0$. For $E_3$ the excluded sets are the $n-2$ triangles through the
+prescribed edge; for $D_4$ they are the $2(n-2)$ triangles through one prescribed edge
+completed by the other, and the two $4$-cycles through both. Multiplying out,
+$E^2-ZD=2t^4+O(t^5)$, and $\rho=t+O(t^2)$, so $f=th(E^2-ZD)/Z^2=2ht^5+O(t^6)$.
+
+As $t\to\infty$, $\rho$ is a rational function of $t$ with $\rho\to2/n$, the edge
+density of a uniform spanning tree. Write $\rho=2/n+r_1/t+r_2/t^2+O(t^{-3})$. The
+coefficients of $t$ and of $t^0$ in Lemma~\ref{lem:ric} give $1+6/n+n^2r_1=0$ and
+$-2r_1=n^2r_2+(5-2n)r_1-2/n$, so $r_1=-(n+6)/n^3$ and $r_2=(42-5n)/n^5$. Inserting these
+into \eqref{eq:D} gives $\rho^2-D/Z=4/(n^4t)+O(t^{-2})$, hence $f\to4h/n^4$.
+\end{proof}
+
+\section{Polynomial facts}\label{sec:poly}
+
+Let $n\ge7$ and
+\[
+\varphi(t,r)=t-2nt^2+Br-n(n-1)tr^2,\qquad G(t,r)=2t^2\partial_tF_t(r)+\partial_rF_t(r)\,\varphi(t,r).
+\]
+By Lemma~\ref{lem:ric}, $f'(t)=G(t,\rho(t))/(2t^2)$. Put $A=n(n-4)$,
+\begin{align*}
+\mathcal L&=n^3(n-4)t^4+2n(n^2-4n-6)t^3+3(n^2-9n+3)t^2+2(n^2-9n+9)t-(2n-3),\\
+\mathcal C&=2n^2(n-4)t^3+3n(n-6)t^2+(2n^2-16n+15)t-(2n-3),\\
+J&=2A^2t^3-6A(n-2)t^2+6(n-1)(n-3)t-(2n-3).
+\end{align*}
+
+\begin{lemma}\label{lem:ids}
+As polynomials in $n,t,r$,
+\begin{align}
+hG&=F_t(r)\bigl[-2hn(n-1)tr+2ht+2hB-n(n-1)\beta_0\bigr]+2(\mathcal Lr-t\mathcal C),\label{eq:id1}\\
+\delta t^2\mathcal C^2-\beta_0t\mathcal L\mathcal C-\alpha\mathcal L^2&=-h^2t^5J.\label{eq:id2}
+\end{align}
+\end{lemma}
+
+\begin{proof}
+Both are verified by expanding the definitions; the accompanying scripts do so in exact
+arithmetic.
+\end{proof}
+
+Let $\ell=2\mathcal L/h$ and $c_0=-2t\mathcal C/h$. By \eqref{eq:id1}, $G(t,r)=\ell r+c_0$
+at every real root $r$ of $F_t$. Let $\Dscr=\beta_0^2+4\delta\alpha$ be the
+discriminant of $F_t$. When $\Dscr\ge0$ write $r_-\le r_+$ for the roots and
+$g_\pm(t)=G(t,r_\pm(t))$. Since $r_-+r_+=\beta_0/\delta$ and $r_-r_+=-\alpha/\delta$,
+identity \eqref{eq:id2} gives
+\begin{equation}\label{eq:prod}
+g_-g_+=-\frac{4t^4J}{h}.
+\end{equation}
+The leading coefficient of $\ell$ in $t$ is $2n^3(n-4)/h>0$.
+
+\begin{lemma}\label{lem:J}
+For $n\ge7$, $J$ has exactly one positive zero $\beta$. It satisfies $\beta>1/(n-3)$,
+$J<0$ on $(0,\beta)$, $J>0$ on $(\beta,\infty)$ and $J'(\beta)>0$.
+\end{lemma}
+
+\begin{proof}
+One checks $J'(t)=6\bigl[(At-(n-2))^2-1\bigr]$, with positive zeros $t_a=(n-3)/A$ and
+$t_b=(n-1)/A$, and $J(t_a)=-(n-6)/(n-4)<0$, $J(t_b)=-(n-2)/n<0$, $J(0)=-(2n-3)<0$. So
+$J$ is negative on $[0,t_b]$ and strictly increasing on $(t_b,\infty)$ to $+\infty$.
+Finally $t_b>1/(n-3)$ because $(n-1)(n-3)-n(n-4)=3$.
+\end{proof}
+
+\begin{lemma}\label{lem:disc}
+For $n\ge7$, let $t_c=1/(n-3)$. Then $\Dscr$ has exactly two positive zeros
+$\tau_1<t_c<\tau_2$, both simple; $\Dscr>0$ on $(0,\tau_1)\cup(\tau_2,\infty)$,
+$\Dscr<0$ on $(\tau_1,\tau_2)$, $\Dscr'(\tau_1)<0$ and $\Dscr'(\tau_2)>0$.
+\end{lemma}
+
+\begin{proof}
+Expanding,
+\[
+\Dscr=1+(18-4n)t+(6n^2-48n+105)t^2+(-4n^3+38n^2-136n+192)t^3+n^2(n-4)^2t^4 .
+\]
+Let $c=n-3\ge4$. Under $t=u/(c(1+u))$, which maps $(0,\infty)$ onto $(0,t_c)$, the
+polynomial $c^4(1+u)^4\Dscr$ has coefficients, in increasing powers of $u$,
+\[
+c^4,\ 6c^3,\ c^2(6c+15),\ -2c(c+1)(2c-9),\ -3(c-3)(c+1).
+\]
+The sequence has exactly one sign change, so by Descartes' rule there is exactly one
+positive zero, and it is simple. Under $t=(1+u)/c$, which maps $(0,\infty)$ onto
+$(t_c,\infty)$, the coefficients of $c^4\Dscr$ are
+\[
+-3(c-3)(c+1),\ 2(2c^3-13c^2+3c+18),\ 9(2c^3-5c^2-2c+6),\ 6(c-1)(3c^2-c-6),\ (c+3)^2(c-1)^2,
+\]
+and with $c=x+4$ the third and fourth are positive, since
+$2c^3-5c^2-2c+6=2x^3+19x^2+54x+46$ and $3c^2-c-6=3x^2+23x+38$. Again there is exactly
+one sign change, and one simple positive zero. At $t=t_c$, $\Dscr=-3(c-3)(c+1)/c^4<0$.
+The signs at $0$, at $t_c$ and at $\infty$ give the rest.
+\end{proof}
+
+\section{The barrier argument}\label{sec:barrier}
+
+\begin{proposition}\label{prop:dis}
+For $n\ge4$, $t>0$ and disjoint edges $e,f$, $\Pt(e,f\in F)<\Pt(e\in F)\Pt(f\in F)$.
+\end{proposition}
+
+\begin{proof}
+For $n=4,5,6$, Lemma~\ref{lem:counts} gives
+\begin{align*}
+E^2-ZD&=t^4(2+4t),\\
+E^2-ZD&=t^4(2+24t+84t^2+100t^3),\\
+E^2-ZD&=t^4(2+48t+462t^2+2172t^3+5184t^4+5184t^5),
+\end{align*}
+which are positive for $t>0$. Let $n\ge7$; we show $f>0$ on $(0,\infty)$.
+
+\emph{Signs at the double roots.} Write
+$F_t(r)=\delta\bigl(r-\beta_0/(2\delta)\bigr)^2-\Dscr/(4\delta)$. At a zero $\tau$ of
+$\Dscr$ the double root is $r^*=\beta_0/(2\delta)$, where $\partial_rF=0$ and
+\[
+G(\tau,r^*)=2\tau^2\partial_tF_\tau(r^*)=-\frac{\tau^2\Dscr'(\tau)}{2\delta(\tau)} .
+\]
+By Lemma~\ref{lem:disc} this is positive at $\tau_1$ and negative at $\tau_2$. At
+$\tau_2$, \eqref{eq:prod} gives $0<G(\tau_2,r^*)^2=-4\tau_2^4J(\tau_2)/h$, so
+$J(\tau_2)<0$ and $\tau_2<\beta$ by Lemma~\ref{lem:J}.
+
+\emph{The interval $(0,\tau_1]$.} Here $t<t_c<\beta$, so $g_-g_+>0$ by \eqref{eq:prod};
+neither factor vanishes, and both tend to the positive value $G(\tau_1,r^*)$ at
+$\tau_1$. Hence $g_\pm>0$ on $(0,\tau_1]$. By Lemma~\ref{lem:ends}, $f>0$ near $0$. If
+$f$ had a first zero $t_0\le\tau_1$, then $f'(t_0)\le0$; but $\rho(t_0)$ is a root of
+$F_{t_0}$, so $f'(t_0)=g_\pm(t_0)/(2t_0^2)>0$. Thus $f>0$ on $(0,\tau_1]$.
+
+\emph{The interval $(\tau_1,\tau_2)$.} Here $\Dscr<0$ and $\delta>0$, so $F_t>0$ on all
+of $\mathbb R$, and $f>0$.
+
+\emph{The lower root above $\tau_2$.} We show $g_-<0$ on $[\tau_2,\infty)$. On
+$(\tau_2,\beta)$, $g_-g_+>0$, and both factors are negative at $\tau_2$, so
+$g_\pm<0$ on $[\tau_2,\beta)$. For $t>\beta$, $g_-g_+<0$, and by \eqref{eq:id1}
+\begin{equation}\label{eq:diff}
+g_+-g_-=\ell\,(r_+-r_-).
+\end{equation}
+If $\ell(t)=0$ for some $t>\beta$ then $g_+=g_-$ and $g_-g_+\ge0$, which is false; as
+$\ell$ is eventually positive, $\ell>0$ on $(\beta,\infty)$. At $\beta$, $\Dscr>0$ since
+$\beta>\tau_2$, so $g_\pm$ are differentiable near $\beta$, and $g_-g_+$ has a simple
+zero there with derivative $-4\beta^4J'(\beta)/h<0$. If $\ell(\beta)=0$ then
+$g_-(\beta)=g_+(\beta)=0$ and the derivative of $g_-g_+$ at $\beta$ would vanish; so
+$\ell(\beta)>0$. By continuity $g_\pm(\beta)\le0$, their product is $0$ and their
+difference is positive, so $g_-(\beta)<0=g_+(\beta)$. For $t>\beta$, \eqref{eq:diff}
+and $g_-g_+<0$ give $g_-<0<g_+$.
+
+\emph{The interval $[\tau_2,\infty)$.} Since $\rho\le2/n$ (a forest has at most $n-1$
+edges) while $r_+(t)\to\infty$, and $f>0$ for large $t$ by Lemma~\ref{lem:ends}, we have
+$\rho<r_-$ for all large $t$. Suppose $f$ vanishes somewhere in $[\tau_2,\infty)$, and
+let $t_0$ be its largest zero there. On $(t_0,\infty)$ the roots are real and distinct
+and $f\ne0$, so $\rho<r_-$ throughout, and $\rho(t_0)=r_-(t_0)$. Positivity of $f$ to
+the right of $t_0$ requires $f'(t_0)\ge0$, while $f'(t_0)=g_-(t_0)/(2t_0^2)<0$. Hence
+$f>0$ on $[\tau_2,\infty)$.
+\end{proof}
+
+Theorem~\ref{thm:main} follows from Propositions~\ref{prop:adj} and~\ref{prop:dis}; for
+$n=3$ every pair of edges has a common vertex.
+
+\begin{remark}
+The argument uses only the exact counts of Lemma~\ref{lem:counts} and properties of
+explicit polynomials. Whether the same method applies to other vertex-transitive
+graphs, or to unequal edge weights, is not addressed here.
+\end{remark}
+
+\section*{Acknowledgments and funding}
+
+This research was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+
+OpenAI Codex systems developed the mathematical argument and the exact verification code. Anthropic Claude AI systems audited the proofs, rechecked the algebra with independent code, compared the result with the literature, and wrote and prepared this manuscript and its publication files. The author selected the problem and directed the work; the author did not carry out the mathematics or the writing. Responsibility for publication rests with the author. The AI-assisted internal reviews and compilation checks are not external peer review or formal verification.
+
+\section*{Data and code availability}
+
+The scripts that verify Lemmas~\ref{lem:counts}--\ref{lem:disc} and the base cases, and
+that check Theorem~\ref{thm:main} by exhaustive enumeration for $n\le7$, are in the
+repository
+\url{https://github.com/yspennstate/kn-forest-negative-correlation}.
+
+\begin{thebibliography}{9}
+
+\bibitem{BCHS}
+R.~Bauerschmidt, N.~Crawford, T.~Helmuth and A.~Swan, Random spanning forests and
+hyperbolic symmetry, \emph{Comm. Math. Phys.} 381 (2021), 1223--1261.
+
+\bibitem{CR}
+R.~A.~\c{C}i\c{c}eksiz and M.~Ravichandran, Negative correlation for forests and the
+$q<1$ random-cluster model, arXiv:2610.00549, 2026.
+
+\bibitem{GW}
+G.~R.~Grimmett and S.~N.~Winkler, Negative association in uniform forests and connected
+graphs, \emph{Random Structures Algorithms} 24 (2004), 444--460.
+
+\bibitem{Gupta}
+A.~Gupta, Edges of the uniform random forest of $K_n$ are pairwise negatively
+correlated for every $n$, arXiv:2609.26134, 2026.
+
+\bibitem{Huang}
+X.~Huang, On negative correlation of arboreal gas on some graphs, arXiv:2311.00965, 2023.
+
+\bibitem{Kahn}
+J.~Kahn, A normal law for matchings, \emph{Combinatorica} 20 (2000), 339--391.
+
+\bibitem{Pemantle}
+R.~Pemantle, Towards a theory of negative dependence, \emph{J. Math. Phys.} 41 (2000),
+1371--1390.
+
+\bibitem{TZ}
+P.~Tang and Z.~Zhang, Negative correlation for the random-cluster model below one on
+high-degree regular graphs, arXiv:2609.11578, 2026.
+
+\end{thebibliography}
+
+\end{document}
