@@ -1,0 +1,100 @@
+# Learned representations and kernel corrections for radiative-transfer emulation
+
+This folder holds the code and figures of [emit-oco2-kernel-emulators](https://github.com/yspennstate/emit-oco2-kernel-emulators). The manuscript and the run records are in that repository.
+
+Manuscript, code and run records for a comparison of neural networks, exact Matérn kernel regression and their
+combinations as emulators of a six-dimensional radiative-transfer table on the 285-band EMIT wavelength grid, and for
+an analysis of how their forward accuracy carries over to reflectance retrieval.
+
+[Paper (PDF)](https://github.com/yspennstate/emit-oco2-kernel-emulators/blob/main/paper/emit_kernel_dnn.pdf) · [Supplement (PDF)](https://github.com/yspennstate/emit-oco2-kernel-emulators/blob/main/paper/supplement.pdf) ·
+[LaTeX source](https://github.com/yspennstate/emit-oco2-kernel-emulators/blob/main/paper/emit_kernel_dnn.tex) ·
+[How each table is produced](https://github.com/yspennstate/emit-oco2-kernel-emulators/blob/main/docs/REPRODUCE.md)
+
+## Findings
+
+On ten partitions of 23,313 tabulated states, each with 18,884 training rows and validation-based selection, a
+Matérn kernel with one length scale per input reaches 0.095% mean relative radiance error, against 0.760% for cubic
+regression and 0.387% for a 3 × 512 network. A residual kernel brings the network to 0.141%. An exact kernel on the
+hidden features of a width-2,000 network reaches 0.079%, and one kernel on the concatenated features of five width-512
+networks reaches 0.076%.
+
+Forward and inverse rankings disagree. The convex stack built on the width-2,000 network improves on its own feature
+kernel by 0.0006 radiance percentage points, while its mean within-split 95th-percentile reflectance error is 22.71
+points against 7.57, larger at every partition.
+On the physical domain of the retrieval, scored with its coverage and failed inversions, the order persists at a
+smaller ratio: at the transmission floor 1e-12 the stack's 95th percentile is 1.6 to 1.9 times the feature kernel's at
+width 512, and the ratio is above one at every floor, on every split. On a fresh partition evaluated once under a
+hypothesis fixed in advance, the ratio is 6.60 over all bands and 5.54 on the screened entries.
+
+The analysis proves that on the physical domain the constrained retrieval error is at most the retrieval-weighted
+component error divided by the transmission, with constant one; that the rate this implies is sharp; and that
+component errors proportional to the transmission lose no rate. Applied band by band, the bound marks in advance the
+bands where the retrieval error is large.
+
+Retraining every family only on physically admissible targets lowers the albedo error of every family and, at both
+widths, the radiance error of the feature kernel and the stack (the wide stack to 0.061%); the network itself gets
+worse at width 512 and is mixed at width 2000. At width 512 it also raises the 95th-percentile retrieval error on the
+physical domain for every family on average, and for each family on at least 8 of 10 splits: the filter moves
+component error toward the smallest transmissions, where the retrieval divides by them.
+
+On a second radiative-transfer code, libRadtran over the thirteen Sentinel-2 bands (9,722 states, ten splits), the
+reversal is much weaker: the hypothesis that the stack is no worse on radiance and worse in the tail holds on 5 of 10
+splits, and the stack's all-band tail is 0.92 to 1.13 times the feature kernel's, against 2.6 to 4.9 on the EMIT
+table. Away from band B10, which is nearly opaque and where the remaining difference lies, every transmission exceeds
+0.14, so the division by the transmission amplifies component error by at most about seven times.
+
+## Layout
+
+- `paper/`: the article (`emit_kernel_dnn.tex`), its supplement (`supplement.tex`: the proofs, the further
+  experiments and the extended tables), the tables of both (generated from the records) and the two compiled PDFs.
+- `code/`: drivers, scoring, table and figure scripts, and tests. `code/lanes/` holds the scripts that ran each fit of
+  the training-target experiment, the libRadtran comparison and the correction-coefficient benchmark.
+- `results/`: one JSON record per run, with the digests of its data and split indices. `results/target_quality/` and
+  `results/libradtran/` also hold the protocols of those two experiments with the SHA-256 of each, recorded before the
+  first fit; `results/confirmation/` holds the protocol, the frozen hyperparameters with their SHA-256, the scripts
+  and the report of the fresh-partition evaluation.
+- `figures/`: the figures of the paper.
+
+## Reproduction
+
+With Python 3.11 or later and a TeX installation:
+
+```sh
+python -m pip install -r requirements.txt
+python -m unittest discover -s code -p 'test_*.py' -v
+python code/make_width_numbers.py
+python code/make_scaling_tables.py
+python code/make_retune_table.py
+python code/make_emit_tables.py
+python code/make_tables.py
+python code/make_v2_tables.py
+python code/format_publication_tables.py
+python code/make_domain_table.py
+python code/make_tq_tables.py
+python code/make_lrt_tables.py
+python code/make_lrt_tables.py lrt
+python code/make_confirmation_table.py
+(cd paper && pdflatex -interaction=nonstopmode supplement.tex)
+latexmk -pdf -interaction=nonstopmode -halt-on-error -cd paper/emit_kernel_dnn.tex
+latexmk -g -pdf -interaction=nonstopmode -halt-on-error -cd paper/supplement.tex
+```
+
+These commands run the tests and regenerate every table of the paper from the records in `results/`, byte for byte;
+they do not retrain any model. [docs/REPRODUCE.md](https://github.com/yspennstate/emit-oco2-kernel-emulators/blob/main/docs/REPRODUCE.md) maps every table and figure to its records
+and scripts and gives the commands that redraw the figures and rerun the training.
+
+## Data
+
+The EMIT table was provided by the Jet Propulsion Laboratory for EMIT atmospheric correction and is identified in the
+paper by size and SHA-256; the arrays are available from the author on request, subject to JPL's permission. The
+libRadtran arrays are built from the public release of the paired 6S/libRadtran Sentinel-2 corpus with
+`code/make_libradtran_arrays.py`. The OCO-2 arrays and reference predictions come from the release accompanying
+Lamminpää et al. (2025); the other corpora are the cited public releases.
+
+## Contributions and license
+
+Claude Code (Anthropic) and Codex (OpenAI) implemented and ran the experiments and drafted the manuscript; ChatGPT
+(OpenAI) developed parts of the analysis. Funding and competing interests are stated in the paper. The companion
+method and experiments are in
+[neural-means-kernel-corrections](https://github.com/yspennstate/neural-means-kernel-corrections). The
+[MIT license](LICENSE) covers the code in this repository, not rights to data that are not distributed here.

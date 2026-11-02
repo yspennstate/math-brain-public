@@ -56,6 +56,7 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | The Kesten-Stigum bound is tight for the three-state Potts model on every regular tree | [potts-kesten-stigum-small-degree](https://github.com/yspennstate/potts-kesten-stigum-small-degree) |
 | The largest box in a sparse random allocation | [sparse-allocation-largest-box](https://github.com/yspennstate/sparse-allocation-largest-box) |
 | The layer distribution of the random recursive tree and the minimum of the Poisson-weighted infinite tree | [rrt-layer-tail](https://github.com/yspennstate/rrt-layer-tail) |
+| Learned representations and kernel corrections for radiative-transfer emulation | [emit-oco2-kernel-emulators](https://github.com/yspennstate/emit-oco2-kernel-emulators) |
 | A Lévy random drift destroys compactness for every confining power | [levy-drift-noncompact](https://github.com/yspennstate/levy-drift-noncompact) |
 | Maximal energy bounds fail for the stochastic Allen-Cahn equation with critical quadratic noise | [critical-allen-cahn-noise](https://github.com/yspennstate/critical-allen-cahn-noise) |
 | Maximal flow through thin boxes with heavy-tailed capacities | [maxflow-thin-boxes](https://github.com/yspennstate/maxflow-thin-boxes) |
