@@ -23,6 +23,7 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | Paper | Repository |
 |---|---|
 | A necessary and sufficient condition for convergence of the quantile process in L^p(0,1) | [quantile-process-lp](https://github.com/yspennstate/quantile-process-lp) |
+| Negative edge correlation for weighted spanning forests of complete graphs | [kn-forest-negative-correlation](https://github.com/yspennstate/kn-forest-negative-correlation) |
 | A tree automaton with infinitely many rogue fixed points under every supercritical offspring law | [automaton-fixed-simplex](https://github.com/yspennstate/automaton-fixed-simplex) |
 | Arc-transitive graphs that mimic the cycle | [arc-transitive-graphs-that-mimic-the-cycle](https://github.com/yspennstate/arc-transitive-graphs-that-mimic-the-cycle) |
 | Ballisticity for positive excited random walks without bounded cookie stacks | [positive-cookie-ballisticity](https://github.com/yspennstate/positive-cookie-ballisticity) |
