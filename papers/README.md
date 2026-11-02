@@ -41,6 +41,7 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | Entropy and singularity of spectral and pivotal sets in planar percolation | [percolation-crossing-entropy](https://github.com/yspennstate/percolation-crossing-entropy) |
 | Exact moments of the Toeplitz and Hankel limiting spectral distributions | [toeplitz-hankel-exact-moments](https://github.com/yspennstate/toeplitz-hankel-exact-moments) |
 | Finite-state counterexamples to Ross's second queueing conjecture | [Ross-s-second-queueing-conjecture](https://github.com/yspennstate/Ross-s-second-queueing-conjecture) |
+| Fitting and choosing radiative-transfer emulators for the retrieval | [rt-emulators-for-retrieval](https://github.com/yspennstate/rt-emulators-for-retrieval) |
 | Fixed points of strictly non-Volterra quadratic stochastic operators in four or more types | [strictly-nonvolterra-qso-fixed-points](https://github.com/yspennstate/strictly-nonvolterra-qso-fixed-points) |
 | Fourier entropy of threshold functions and their compositions | [fourier-entropy-threshold-functions](https://github.com/yspennstate/fourier-entropy-threshold-functions) |
 | Free multiplicative convolution and log-unimodality: three questions of Hasebe, Ueda and Wang | [free-multiplicative-log-unimodality](https://github.com/yspennstate/free-multiplicative-log-unimodality) |
@@ -96,4 +97,3 @@ Six more are kept here with their working files:
 - `public/ising-perceptron-capacity-work/`: working notes and the reverification for the Ising perceptron capacity paper.
 - `public/ising-perceptron-margin-work/`: working files for the Ising perceptron at general margin.
 - `public/three-problems-in-kernel-methods/`: *Three problems in kernel methods*, proofs and finite-size measurements.
-
