@@ -4,7 +4,7 @@ This directory accompanies **Mathematics of Pseudo-Cognitive Dynamics**, revisio
 
 ## Source references
 
-The broad source is pinned to [9c754d786b3a0ea4943da0585d1490c13cd9ef99](https://github.com/<private-repo>/tree/9c754d786b3a0ea4943da0585d1490c13cd9ef99), committed at 19:52:16 UTC on September 23. The research source is pinned to [24597f0dcc3cc32d81fd8f22b13903f636460396](https://github.com/private-source-repository/tree/24597f0dcc3cc32d81fd8f22b13903f636460396), committed at 20:04:37 UTC. Historical Math Brain/catalogue and usage sources retain the versions listed in [the parent supplement README](../README.md). Private source URLs require appropriate access. A later commit does not imply a later experiment event.
+The broad source is pinned to 9c754d786b3a0ea4943da0585d1490c13cd9ef99, committed at 19:52:16 UTC on September 23. The research source is pinned to [24597f0dcc3cc32d81fd8f22b13903f636460396](https://github.com/yspennstate/math-open-problems/tree/24597f0dcc3cc32d81fd8f22b13903f636460396), committed at 20:04:37 UTC. Historical Math Brain/catalogue and usage sources retain the versions listed in [the parent supplement README](../README.md). Private source URLs require appropriate access. A later commit does not imply a later experiment event.
 
 ## File index
 
@@ -16,11 +16,11 @@ The broad source is pinned to [9c754d786b3a0ea4943da0585d1490c13cd9ef99](https:/
 | `theory/` | Warning-budget propositions and independent review | Analytic deductions under explicit assumptions |
 | `research/` | Source locators, review and proof-scope manifest | Focused proof-interface and short-argument review, with remaining manuscript claims identified |
 
-The revision-wide [changelog](../../REVISION_2_CHANGELOG.md) explains the integration disposition. Existing catalogue and usage files remain in the parent supplement; this update does not silently replace their historical definitions.
+The revision-wide [changelog](../../REVISION_2_CHANGELOG.md) and [Claude handoff](../../CLAUDE_HANDOFF.md) explain the integration disposition. Existing catalogue and usage files remain in the parent supplement; this update does not silently replace their historical definitions.
 
 ## T11: four arms, ten shared tasks, two judges
 
-Each arm has one Opus 5.5 solver session answering all ten operational tasks. Two masked grading passes assess the same outputs. The endpoint adds one per credited standing-order key and subtracts one per listed violation; there are 35 available key points. The table therefore gives net rubric scores, not correct-task counts. [Pinned T11 result](https://github.com/<private-repo>/blob/9c754d786b3a0ea4943da0585d1490c13cd9ef99/12_cognitive_architecture/brain_improvement/campaign_2026-09-23_round6/tests/t11/RESULT.md), [aggregate CSV](benchmarks/t11_arm_aggregates.csv).
+Each arm has one Opus 5.5 solver session answering all ten operational tasks. Two masked grading passes assess the same outputs. The endpoint adds one per credited standing-order key and subtracts one per listed violation; there are 35 available key points. The table therefore gives net rubric scores, not correct-task counts. Pinned T11 result, [aggregate CSV](benchmarks/t11_arm_aggregates.csv).
 
 | Arm | Context | Solver sessions | Primary | Second judge | Approximate reported token counter |
 |---|---|---:|---:|---:|---:|
@@ -37,7 +37,7 @@ The reported counters imply B uses approximately 88,000 more tokens than M0, abo
 
 ## T12: retrieval success is not agent-use success
 
-The source reports top-five hub presence changing from 0/24 to 24/24 on source-designated held-out film prompts, and from 5/10 to 10/10 on reused T11 tasks. Twenty silent other-topic controls were selected conditional on no pin trigger. The stated 62 queries comprise those 54 and up to eight additional firing-other probes; eight is inferred from the count and harness, and no subgroup outcomes are published. [Pinned result](https://github.com/<private-repo>/blob/9c754d786b3a0ea4943da0585d1490c13cd9ef99/12_cognitive_architecture/brain_improvement/campaign_2026-09-23_round6/tests/t12/RESULT.md), [aggregate definitions](benchmarks/t12_aggregates.json).
+The source reports top-five hub presence changing from 0/24 to 24/24 on source-designated held-out film prompts, and from 5/10 to 10/10 on reused T11 tasks. Twenty silent other-topic controls were selected conditional on no pin trigger. The stated 62 queries comprise those 54 and up to eight additional firing-other probes; eight is inferred from the count and harness, and no subgroup outcomes are published. Pinned result, [aggregate definitions](benchmarks/t12_aggregates.json).
 
 The detailed report says the remaining list is unchanged on 23/24 held-out prompts and all ten T11 tasks. Raw comparison rows and the held-out file are uncommitted; untouched holdout status is not established. The 8,000-prompt trigger audit uses proxy topic labels, so its 765/830 film-label share among triggers is not adjudicated semantic precision. The result explicitly says the agent-level pinned-hub versus block comparison has not yet run. No solver outcome or cost saving is inferred. [Detailed T12 audit](benchmarks/t12_findings.md).
 
@@ -75,6 +75,6 @@ The QFORM update makes the already-present fixed-dimension bound `2 sqrt(6 pi n)
 
 ## Integration and continuing unknowns
 
-The package remains an additive proposal. Live integration requires native resource leases and assertion, comparison with current files, preservation of intervening changes, the dispatcher's applicable equivalence gate, and a documented experiment amendment. Neither native acknowledgment nor adoption has been observed. These files do not certify a completed push.
+The package remains an additive proposal. Live integration requires native resource leases and assertion, comparison with current files, preservation of intervening changes, the dispatcher's applicable equivalence gate, and a documented experiment amendment. Neither native acknowledgment nor adoption has been observed. The planned revision folders are listed in [the handoff](../../CLAUDE_HANDOFF.md); these files do not certify a completed push.
 
 The 45 old contrasts, 1,391 catalogue rows/1,168 IDs/223 additional occurrences, 29 reviewed cases, 87 ProofNet directories and original usage aggregates retain their historical scope. They are not counts of independently solved conjectures. All-time construction-only cross-provider cost remains unidentified; neither incomplete T11 counters nor unavailable AB30 costs fill the gap. No fresh Lean kernel run or reviewer-run model-performance cohort was produced. Held-out keys and private model transcripts are excluded.
