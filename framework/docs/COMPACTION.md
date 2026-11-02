@@ -134,6 +134,15 @@ answers `SessionStart` with source `compact` by handing back the wake text the s
 received. Re-running the full wake after every compaction had stalled agents for 160 to 390 seconds
 each time.
 
+Compaction nodes also compete in recall. A summary repeats the user's words exactly, so when a user's
+sentence is quoted back, the summaries that quote it can fill the first eight results above the memory
+that records the request. Capping summaries at one or two a session (28 October) and multiplying every
+summary's word score by 0.6 (2 November) were both rejected: a summary is often the only record of its
+session, and the second change cut the first eight on 1,976 questions about summaries from 482 to 129.
+What was kept moves a single row. The best record that is not a summary goes up to eighth place when it
+scores at least 0.7 of the top word score; on 187 quoted sentences the first eight rose from 168 to 170,
+with none worse. The numbers are in TESTS.md.
+
 ## What went wrong, and the fixes
 
 - Lost to encoding (9 October). The hook read its input in the console code page, and a lone surrogate
