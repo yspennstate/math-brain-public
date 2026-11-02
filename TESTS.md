@@ -11,6 +11,7 @@ Each test runs agents on a fixed set of questions with and without the brain and
 | 1,000 items whose answer must be recalled (13 Sep 2026) | | 538 | 1,000 | 462 to 0, p = 1.7e-139 |
 | 988 items, 600 seconds each (23 and 24 Oct 2026) | Claude | model alone 18.9%; research repositories 82.0% | 95.4% | 146 to 13 against the repositories, p = 1.2e-29; 30.6 session-hours against 53.2; 0.074 dollars a right answer against 0.153; tied at 99.3 and 99.4 percent on the 806 items both finished in time |
 | 394 of the same bank, 900 seconds each (23 to 28 Oct 2026) | Codex | model alone 21.6%; research repositories 97.0% | 94.7% | 10 to 19, p = 0.14 |
+| 84 hard questions on the store, rerun (1 and 2 Nov 2026; stopped early when the quota ran out) | Codex | research repositories 82 of 84 | 83 of 84 | the same items in October scored 26 of 85 against 67 of 86; 56 of the repositories arm's right answers were computed from the files in Python, so this bank no longer separates the arms |
 | 100 questions on results held in the store (11 Oct 2026) | Codex | no tools 0; text search 75 | recall tool 83; hook, recall and walk 82 | 10 to 3 against text search, p = 0.09 |
 | 61 reasoning and audit items (5 and 6 Oct 2026) | Claude | tools only 41 | full package 52 | 15 to 4, p = 0.019 |
 | 60 questions whose answer exists only in the store, no tools (5 Sep 2026) | Claude | none 0; a block served for another question 0 | 48 (20 before a retrieval fix) | 48 to 0, p < 0.0001; no wrong number copied in 240 verdicts |
