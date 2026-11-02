@@ -287,10 +287,17 @@ If several agents share the store from the first day, two of them will sooner or
 For hand edits and shared pieces of work, have each agent claim first:
 
 ```
-python claims.py claim --agent support-bot --resource record:refunds_over_500_dollars_need_a_second_approver_2026_03_02
+python claims.py claim --agent support-bot --resource record:refunds_over_500_dollars_need_a_second_approver_2026_03_02 \
+    --purpose "raise the limit to 1000 dollars"
 ```
 
-A second agent asking for the same record is refused (exit code 3) and told who holds it and why. The starter's
+```
+claimed record:refunds_over_500_dollars_need_a_second_approver_2026_03_02  held by support-bot for 29 more min  (raise the limit to 1000 dollars)
+```
+
+A second agent asking for the same record is refused with exit code 3 and the same line, so it learns who holds the
+record, for how long and why. Without `--purpose` it learns only who and how long. `release` hands the record back
+before the half hour is up. The starter's
 README, under "Several agents at once", has the rest.
 
 ## After the first week
