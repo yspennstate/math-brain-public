@@ -95,6 +95,7 @@ The medians are from one machine and move with its load.
 | Math recall answered by the resident server (1 Nov, two one-a-minute samples) | 24 to 60 s | 2.2 s median, 4.3 s at the 90th percentile | 87 of 87 calls served |
 | A new card becoming findable | the next full rebuild, 20 to 39 minutes | the first call after it is written | 7 of 7 new cards at rank 1; with 1,000 cards added, 40 of 40 searches identical to a full rebuild |
 | A recall bank at depth 0, quiet machine, mixed with the fixes above | 28.2 s | 8.4 s | accuracy held |
+| Memory recall with Windows power throttling turned off for the process (1 Nov, three calls each) | 17 to 19 s | 5.3 to 11.6 s on a quiet machine; 20 to 26 s with every core busy, where most of the call is waiting for a core | |
 
 Where the time goes (30 and 31 October). One recall call spent 2.2 seconds starting Python and 4.4 seconds importing, then read and hashed the 182 MB vector file four times, 9.1 seconds in all; it now reads that file once a question. On a heavily loaded machine a resident server saved little (22.0 against 24.0 seconds median), because the time went to waiting for the processor, not to computing: on 31 October the same 30-item bank took a median of 549 seconds wall time a question at 6.2 seconds of processor time, and answered 10 of 30, against 11 on a quiet machine.
 
