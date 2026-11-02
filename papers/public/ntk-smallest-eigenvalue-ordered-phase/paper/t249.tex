@@ -1,0 +1,365 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
+\newcommand{\E}{\mathbb{E}}
+\title{The smallest eigenvalue of the neural tangent kernel of a deep tanh network in the ordered phase}
+\author{Yitzchak Shmalo}
+\begin{document}
+\begin{abstract}
+For a fully connected tanh network of depth $L$ in the infinite-width limit, with weight variance $\sigma_w^2$ and bias
+variance $\sigma_b^2>0$ in the ordered phase $\chi_1<1$, we determine the smallest eigenvalue of the neural tangent kernel
+Gram matrix on $n$ distinct inputs of the sphere. It equals
+$L\chi_1^L\,(q^*+B\,T^*/\chi_1)\,\lambda_{\min}^{\perp}(-A)\,(1+O(1/L))$, where $q^*$ is the fixed-point preactivation
+variance, $T^*=q^*/(1-\chi_1)$, $B=\chi'(1)$, and $A$ is the matrix of limiting rescaled correlation gaps. That the
+non-constant eigenvalues are of order $L\chi_1^L$ is due to Xiao, Pennington and Schoenholz; the contribution here is the
+constant, its positivity, and the extension to inputs of unequal norm. The factor $L$ comes from a double root in the
+linear recursion for the kernel gap. We prove that $\lambda_{\min}^{\perp}(-A)>0$ for any
+distinct inputs by showing that every Taylor coefficient of the limiting gap profile is strictly positive, so the
+rate cannot degenerate further.
+\end{abstract}
+\maketitle
+
+\section{Setting and main result}
+Let $\phi=\tanh$. A fully connected network of depth $L$ with weights of variance $\sigma_w^2/n_{\ell}$ and biases of
+variance $\sigma_b^2$ has, in the limit of infinite width, preactivations that are centred Gaussian processes with
+covariance given by the recursion
+\[
+\Sigma_{\ell+1}(x,y)=\sigma_w^2\,\E\big[\phi(u)\phi(v)\big]+\sigma_b^2,\qquad
+(u,v)\sim N\!\Big(0,\begin{pmatrix}\Sigma_\ell(x,x)&\Sigma_\ell(x,y)\\ \Sigma_\ell(x,y)&\Sigma_\ell(y,y)\end{pmatrix}\Big),
+\]
+and the neural tangent kernel satisfies
+\[
+\Theta_{\ell+1}(x,y)=\Sigma_{\ell+1}(x,y)+\dot\Sigma_{\ell+1}(x,y)\,\Theta_\ell(x,y),\qquad
+\dot\Sigma_{\ell+1}(x,y)=\sigma_w^2\,\E\big[\phi'(u)\phi'(v)\big].
+\]
+We assume $\sigma_b^2>0$. The diagonal $q_\ell=\Sigma_\ell(x,x)$ obeys $q_{\ell+1}=\sigma_w^2\E[\phi(\sqrt{q_\ell}\,z)^2]+\sigma_b^2$
+and converges to a unique fixed point $q^*>0$. At $q^*$ write $\chi(c)=\sigma_w^2\E[\phi'(u)\phi'(v)]$ for $(u,v)$ of
+variance $q^*$ and correlation $c$, and
+\[
+\chi_1=\chi(1)=\sigma_w^2\,\E\big[\phi'(\sqrt{q^*}z)^2\big],\qquad B=\chi'(1),\qquad T^*=\frac{q^*}{1-\chi_1}.
+\]
+The ordered phase is $\chi_1<1$. In it every correlation $c_\ell(x,y)=\Sigma_\ell(x,y)/\sqrt{q_\ell(x)q_\ell(y)}$ tends
+to $1$, and
+\[
+A_{ij}=\lim_{\ell\to\infty}\chi_1^{-\ell}\big(1-c_\ell(x_i,x_j)\big)
+\]
+exists (Section 2). Let $\mathbf 1^\perp=\{v\in\mathbb R^n:\sum_i v_i=0\}$ and
+$\lambda_{\min}^\perp(M)=\min\{v^\top Mv: v\in\mathbf 1^\perp,\ |v|=1\}$.
+
+\begin{theorem}\label{thm:main}
+Let $x_1,\dots,x_n$ be distinct points with $\Sigma_0(x_i,x_i)=q^*$, and let $\Theta_L$ be the $n\times n$ Gram matrix
+of the neural tangent kernel at depth $L$. Then, as $L\to\infty$,
+\[
+\lambda_{\min}(\Theta_L)=\Big(q^*+\frac{B\,T^*}{\chi_1}\Big)\,\lambda_{\min}^\perp(-A)\;L\,\chi_1^{L}\,\big(1+O(1/L)\big),
+\]
+and $\lambda_{\min}^\perp(-A)>0$. For distinct inputs of arbitrary positive norm the same asymptotic form holds, with
+$A$ defined through the correlations of the network started at those inputs, whenever $\lambda_{\min}^\perp(-A)>0$.
+\end{theorem}
+
+\begin{remark}
+The rate is $L\chi_1^L$ rather than $\chi_1^L$ because the gap $\Theta_\ell(x,x)-\Theta_\ell(x,y)$ satisfies a linear
+recursion whose homogeneous rate and forcing rate are both $\chi_1$; the double root produces the factor $L$.
+\end{remark}
+
+For inputs normalized to $q^*$, Xiao, Pennington and Schoenholz \cite{xps} showed that the deviation of $\Theta_L$ from its limit,
+rescaled by $L^{-1}\chi_1^{-L}$, converges and that the eigenvalues of $\Theta_L$ other than the largest are
+$O(L\chi_1^L)$. Theorem~\ref{thm:main} identifies the limit as $\kappa(-A)$ with $\kappa=q^*+BT^*/\chi_1$
+(Section~\ref{sec:ninput}), proves that $-A$ is positive definite on $\mathbf 1^\perp$, so that the order is attained by
+the smallest eigenvalue and not only bounded above (Section~\ref{sec:positive}), and extends the asymptotics to inputs of
+unequal norm (Section~\ref{sec:offnorm}).
+
+\section{The correlation map and the double root}\label{sec:double}
+Fix two inputs $x,y$ with $q_0(x)=q_0(y)=q^*$, so that $q_\ell=q^*$ at every layer, and write $c_\ell=c_\ell(x,y)$ and
+$D_\ell=1-c_\ell$. The correlations obey $c_{\ell+1}=C(c_\ell)$ with
+\[
+C(c)=\frac{1}{q^*}\Big(\sigma_w^2\,\E\big[\phi(u)\phi(v)\big]+\sigma_b^2\Big),
+\]
+$(u,v)$ of variance $q^*$ and correlation $c$. Differentiating under the Gaussian integral gives $C'(c)=\chi(c)$, and
+expanding $\phi'$ in Hermite polynomials shows that $\chi(c)=\sum_{k\ge0}b_kc^k$ with $b_k\ge0$. Hence $C$ is convex on
+$[-1,1]$, $C(1)=1$ and $C'(1)=\chi_1$.
+
+\begin{lemma}\label{lem:cmap}
+In the ordered phase, $D_\ell\to0$ and the limit $A=\lim_{\ell\to\infty}\chi_1^{-\ell}D_\ell$ exists, with $A>0$ when
+$c_0<1$ and
+\[
+D_\ell=A\chi_1^{\ell}\big(1+O(\chi_1^{\ell})\big).
+\]
+\end{lemma}
+
+\begin{proof}
+Convexity and $C'(1)=\chi_1<1$ give $C(c)>c$ for $c<1$, so $c_\ell$ increases to the only fixed point in $[-1,1]$, which is
+$1$. Taylor's theorem at $c=1$ gives
+\[
+D_{\ell+1}=\chi_1D_\ell-\tfrac{B}{2}D_\ell^2+O(D_\ell^3),\qquad B=\chi'(1)\ge0,
+\]
+so $D_{\ell+1}/D_\ell=\chi_1(1+O(D_\ell))$. Since $D_\ell$ decays geometrically, $\sum_\ell D_\ell<\infty$ and the product
+$\chi_1^{-\ell}D_\ell=D_0\prod_{k<\ell}\chi_1^{-1}D_{k+1}/D_k$ converges to a positive limit, the tail of the product being
+$1+O(\sum_{k\ge\ell}D_k)=1+O(\chi_1^\ell)$.
+\end{proof}
+
+The same argument applied to each pair defines the matrix $A_{ij}$ of Theorem~\ref{thm:main}, with $A_{ii}=0$.
+
+Turn to the kernel. Take $\Theta_0=\Sigma_0$ and put $T_\ell=\Theta_\ell(x,x)$. On the diagonal $T_{\ell+1}=q^*+\chi_1T_\ell$,
+so $T_\ell=T^*+O(\chi_1^\ell)$. Off the diagonal $\Sigma_{\ell+1}(x,y)=q^*c_{\ell+1}$ and $\dot\Sigma_{\ell+1}(x,y)=\chi(c_\ell)$.
+The gap $E_\ell=T_\ell-\Theta_\ell(x,y)$ therefore satisfies
+\begin{equation}\label{eq:gap}
+E_{\ell+1}=\chi_1E_\ell+q^*D_{\ell+1}+\big(\chi_1-\chi(c_\ell)\big)\,\Theta_\ell(x,y).
+\end{equation}
+
+\begin{proposition}\label{prop:two}
+With $A$ as in Lemma~\ref{lem:cmap},
+\[
+E_L=A\Big(q^*+\frac{B\,T^*}{\chi_1}\Big)L\chi_1^L\big(1+O(1/L)\big).
+\]
+\end{proposition}
+
+\begin{proof}
+By Lemma~\ref{lem:cmap}, $q^*D_{\ell+1}=q^*A\chi_1^{\ell+1}(1+O(\chi_1^\ell))$ and $\chi_1-\chi(c_\ell)=BD_\ell+O(D_\ell^2)$.
+A first pass through \eqref{eq:gap} with the crude bound $|\Theta_\ell(x,y)|\le T_\ell$ gives $E_\ell=O(\ell\chi_1^\ell)$,
+hence $\Theta_\ell(x,y)=T_\ell-E_\ell=T^*+O(\ell\chi_1^\ell)$. The forcing in \eqref{eq:gap} is then
+\[
+f_\ell=A\big(q^*\chi_1+BT^*\big)\chi_1^\ell\big(1+O(\ell\chi_1^\ell)\big),
+\]
+and solving the recursion,
+\[
+E_L=\chi_1^LE_0+\sum_{\ell=0}^{L-1}\chi_1^{L-1-\ell}f_\ell
+=A\big(q^*\chi_1+BT^*\big)\chi_1^{L-1}\Big(L+O\Big(\sum_{\ell\ge0}\ell\chi_1^\ell\Big)\Big)+O(\chi_1^L).
+\]
+The sum is finite, which gives the claim.
+\end{proof}
+
+For two inputs the Gram matrix has equal diagonal entries, so its smaller eigenvalue is exactly $E_L$, and
+Proposition~\ref{prop:two} is Theorem~\ref{thm:main} for $n=2$, where $\lambda_{\min}^\perp(-A)=A_{12}$.
+
+\section{The $n$-input Gram matrix}\label{sec:ninput}
+Let $x_1,\dots,x_n$ be distinct with $\Sigma_0(x_i,x_i)=q^*$. Distinct inputs of equal norm have $c_0(x_i,x_j)<1$, so
+Lemma~\ref{lem:cmap} gives $A_{ij}>0$ for $i\ne j$, and $A_{ii}=0$. Put $\kappa=q^*+BT^*/\chi_1$ and let $J$ be the
+all-ones matrix. Every diagonal entry of $\Theta_L$ equals $T_L$ and, by Proposition~\ref{prop:two} applied to each of the
+finitely many pairs,
+\begin{equation}\label{eq:gram}
+\Theta_L=T_LJ+\kappa L\chi_1^L(-A)+R_L,\qquad \|R_L\|=O(\chi_1^L).
+\end{equation}
+
+\begin{proposition}\label{prop:ninput}
+$\lambda_{\min}(\Theta_L)=\kappa\,\lambda_{\min}^\perp(-A)\,L\chi_1^L+O(\chi_1^L)$.
+\end{proposition}
+
+\begin{proof}
+For the upper bound take a unit $u\in\mathbf 1^\perp$ with $u^\top(-A)u=\lambda_{\min}^\perp(-A)$. Since $Ju=0$,
+\eqref{eq:gram} gives $u^\top\Theta_Lu=\kappa\lambda_{\min}^\perp(-A)L\chi_1^L+O(\chi_1^L)$.
+
+For the lower bound write a unit vector as $w=\alpha n^{-1/2}\mathbf 1+\beta u$ with $u\in\mathbf 1^\perp$ a unit vector and
+$\alpha^2+\beta^2=1$. Then $w^\top Jw=n\alpha^2$, and with $\varepsilon_L=\kappa L\chi_1^L$,
+\[
+w^\top\Theta_Lw\ \ge\ nT_L\alpha^2-2\|A\|\,\varepsilon_L|\alpha\beta|+\beta^2\varepsilon_L\lambda_{\min}^\perp(-A)-O(\chi_1^L).
+\]
+By $2ab\le a^2+b^2$, $2\|A\|\varepsilon_L|\alpha\beta|\le\tfrac12nT_L\alpha^2+2\|A\|^2\varepsilon_L^2\beta^2/(nT_L)$, and
+the last term is $O(L^2\chi_1^{2L})=O(\chi_1^L)$. So
+\[
+w^\top\Theta_Lw\ \ge\ \tfrac12nT_L\alpha^2+\beta^2\varepsilon_L\lambda_{\min}^\perp(-A)-O(\chi_1^L)
+\ \ge\ \min\big(\tfrac12nT_L,\ \varepsilon_L\lambda_{\min}^\perp(-A)\big)-O(\chi_1^L),
+\]
+using $\lambda_{\min}^\perp(-A)\ge0$ (shown below). For large $L$ the minimum is $\varepsilon_L\lambda_{\min}^\perp(-A)$.
+\end{proof}
+
+The constant direction carries the eigenvalue $nT^*+O(L\chi_1^L)$, which stays of order one; every other eigenvalue
+decays like $L\chi_1^L$, at rates set by the spectrum of $-A$ on $\mathbf 1^\perp$. Once
+$\lambda_{\min}^\perp(-A)>0$ is known (Section~\ref{sec:positive}), Proposition~\ref{prop:ninput} is
+Theorem~\ref{thm:main} for inputs on the fixed-point sphere.
+
+That $-A$ is at least nonnegative on $\mathbf 1^\perp$ is elementary. For each $\ell$ the correlations $c_\ell(x_i,x_j)$
+form a positive semidefinite matrix $K_\ell$ with unit diagonal, so $1-c_\ell(x_i,x_j)=\tfrac12|z_i-z_j|^2$ for some
+unit vectors $z_i$, and for $v\in\mathbf 1^\perp$,
+\[
+v^\top\big(-(J-K_\ell)\big)v=v^\top K_\ell v\ge0 .
+\]
+Dividing by $\chi_1^\ell$ and letting $\ell\to\infty$ gives $v^\top(-A)v\ge0$. Strictness needs more, because a limit of
+positive definite matrices can be singular.
+
+\section{Strict positivity of $\lambda_{\min}^{\perp}(-A)$}\label{sec:positive}
+Write the correlation map as a power series. Expanding $\phi(\sqrt{q^*}z)=\sum_kb_kH_k(z)$ in Hermite polynomials,
+Mehler's formula gives
+\[
+C(c)=\sum_{k\ge0}a_kc^k,\qquad a_0=\frac{\sigma_b^2}{q^*},\qquad a_k=\frac{\sigma_w^2\,k!\,b_k^2}{q^*}\ (k\ge1),
+\]
+using $b_0=0$, since $\tanh$ is odd. Thus $a_k\ge0$, $\sum_ka_k=C(1)=1$, $a_0>0$, and $a_1>0$ because $\tanh$ is
+increasing. Infinitely many $a_k$ are positive, since $\tanh$ is not a polynomial. In particular $|C(c)|\le C(|c|)\le1$
+on $[-1,1]$. Put
+\[
+\Phi_\ell(c)=\chi_1^{-\ell}\big(C^{\circ\ell}(c)-1\big),\qquad c\in[-1,1],
+\]
+so that $\Phi_\ell(c_0)=-\chi_1^{-\ell}D_\ell$ and, by Lemma~\ref{lem:cmap}, $\Phi_\ell\to\Phi$ pointwise with
+$\Phi(c_0(x_i,x_j))=-A_{ij}$, $\Phi(1)=0$ and $\Phi<0$ on $[-1,1)$.
+
+\begin{lemma}\label{lem:series}
+There are $p_k\ge0$ with $\sum_kp_k<\infty$ such that $\Phi(c)=\Phi(0)+\sum_{k\ge1}p_kc^k$ on $[-1,1]$, and
+$\Phi(C(c))=\chi_1\Phi(c)$ there.
+\end{lemma}
+
+\begin{proof}
+A composition of power series with nonnegative coefficients has nonnegative coefficients, so
+$\Phi_\ell(c)=\Phi_\ell(0)+\sum_{k\ge1}p_k^{(\ell)}c^k$ with $p_k^{(\ell)}\ge0$. Evaluating at $c=1$, the total mass is
+$\sum_kp_k^{(\ell)}=-\Phi_\ell(0)\to-\Phi(0)$, so the sequences $p^{(\ell)}$ are bounded in $\ell^1$. Any coefficientwise
+limit point $p$ satisfies $\sum_kp_kc^k=\Phi(c)-\Phi(0)$ for $0\le c<1$ by dominated convergence, which determines $p$; so
+$p^{(\ell)}\to p$ coefficientwise. By Abel's theorem and the continuity of $\Phi$ at $1$ (the convergence in
+Lemma~\ref{lem:cmap} is uniform in $c_0$, as the error there is bounded by its value at $c_0=-1$), $\sum_kp_k=-\Phi(0)$,
+which is the limit of the total masses. By Scheff\'e's lemma $p^{(\ell)}\to p$ in $\ell^1$, so $\Phi_\ell$ converges
+uniformly on $[-1,1]$ to $\Phi(0)+\sum_kp_kc^k$, which is therefore $\Phi$. The functional equation follows from
+$\Phi_{\ell+1}=\chi_1^{-1}\Phi_\ell\circ C$ in the limit.
+\end{proof}
+
+\begin{proposition}\label{prop:pk}
+Every $p_k$, $k\ge1$, is strictly positive.
+\end{proposition}
+
+\begin{proof}
+Both sides of the functional equation are power series with nonnegative coefficients beyond the constant term, converging
+absolutely on $[0,1]$, so coefficients may be compared:
+\begin{equation}\label{eq:pk}
+\chi_1p_k=\sum_{j\ge1}p_j\,[c^k]\,C(c)^j\qquad(k\ge1).
+\end{equation}
+The function $\Phi$ is not constant, since $\Phi(1)=0>\Phi(0)$. It is not a polynomial either: if $p_d>0$ were the last
+nonzero coefficient, the right side of \eqref{eq:pk} would contain $p_d\,C^d$, which has infinitely many nonzero
+coefficients and cannot be cancelled, while the left side vanishes for $k>d$. Hence $p_j>0$ for infinitely many $j$.
+Given $k\ge1$, choose such a $j>k$. Selecting $k$ factors $a_1c$ and $j-k$ factors $a_0$ in $C(c)^j$ gives
+$[c^k]\,C^j\ge\binom jk a_0^{j-k}a_1^k>0$, so $p_k\ge\chi_1^{-1}p_j\binom jka_0^{j-k}a_1^k>0$.
+\end{proof}
+
+\begin{theorem}\label{thm:positive}
+For distinct inputs $x_1,\dots,x_n$ on the fixed-point sphere, $\lambda_{\min}^\perp(-A)>0$.
+\end{theorem}
+
+\begin{proof}
+The matrix $K=(c_0(x_i,x_j))$ is positive semidefinite with unit diagonal, so $c_0(x_i,x_j)=\langle z_i,z_j\rangle$ for unit
+vectors $z_i$ in some $\mathbb R^m$, and they are distinct because $c_0(x_i,x_j)<1$ for $i\ne j$. By
+Lemma~\ref{lem:series}, $-A=\Phi(0)J+\sum_{k\ge1}p_kK^{\circ k}$ with Hadamard powers $K^{\circ k}$. On $\mathbf 1^\perp$
+the first term vanishes. The kernel $\sum_kp_k\langle z,w\rangle^k$ has infinitely many positive even and infinitely
+many positive odd coefficients, by Proposition~\ref{prop:pk}, so it is strictly positive definite on every sphere
+\cite{schoenberg,cms}: the matrix $\sum_kp_kK^{\circ k}$ is positive definite, and its quadratic form is bounded below on
+the unit sphere of $\mathbf 1^\perp$.
+\end{proof}
+
+\section{Inputs off the fixed-point norm}\label{sec:offnorm}
+Now let the inputs have arbitrary positive norms. The diagonal recursion $q_{\ell+1}=F(q_\ell)$,
+$F(q)=\sigma_w^2\E[\phi(\sqrt q\,z)^2]+\sigma_b^2$, converges to $q^*$, and its rate is $\chi_q=F'(q^*)$.
+
+\begin{lemma}\label{lem:chiq}
+$0\le\chi_q<\chi_1$. Consequently $|q_\ell(x)-q^*|=O(\chi_q^\ell)$ for every input $x$.
+\end{lemma}
+
+\begin{proof}
+By the heat equation, $\frac{d}{dq}\E[f(\sqrt q\,z)]=\frac12\E[f''(\sqrt q\,z)]$. With $f=\phi^2$ and $u=\sqrt{q^*}z$,
+\[
+\chi_q=\sigma_w^2\,\E\big[\phi'(u)^2+\phi(u)\phi''(u)\big]=\chi_1-2\sigma_w^2\,\E\big[\tanh^2(u)\big(1-\tanh^2(u)\big)\big],
+\]
+using $\tanh''=-2\tanh\,(1-\tanh^2)$. The last expectation is positive because $q^*>0$, so $\chi_q<\chi_1$; and
+$\chi_q\ge0$ because $F$ is increasing, $\tanh^2$ being increasing in $|u|$. Since $F$ is smooth,
+$q_{\ell+1}-q^*=\chi_q(q_\ell-q^*)(1+O(|q_\ell-q^*|))$, and the product of the factors converges.
+\end{proof}
+
+Put $\rho=\chi_q$. For a pair $x,y$ the correlations obey $c_{\ell+1}=C_\ell(c_\ell)$, where $C_\ell$ is the
+correlation map built from the variances $q_\ell(x),q_\ell(y)$. By Lemma~\ref{lem:chiq}, $C_\ell$ and its derivative
+differ from $C$ and $C'$ by $O(\rho^\ell)$ uniformly on $[-1,1]$; in particular $C_\ell(1)=1+O(\rho^\ell)$ and
+$C_\ell'(1)=\chi_1+O(\rho^\ell)$. The correlations still tend to $1$, because $C$ has $1$ as its only fixed point in
+$[-1,1]$ and attracts every point of it.
+
+\begin{lemma}\label{lem:offcmap}
+For each pair the limit $A_{xy}=\lim_\ell\chi_1^{-\ell}(1-c_\ell)$ exists and is finite, and
+$D_\ell=1-c_\ell=A_{xy}\chi_1^\ell+O\big(\chi_1^{2\ell}+\rho^\ell\big)$.
+\end{lemma}
+
+\begin{proof}
+Expanding $C_\ell$ at $1$,
+\[
+D_{\ell+1}=\chi_1D_\ell\big(1+O(D_\ell)\big)+O(\rho^\ell).
+\]
+Since $D_\ell\to0$, for any $\lambda\in(\chi_1,1)$ the factor $\chi_1(1+O(D_\ell))$ is eventually below $\lambda$, so
+$D_\ell=O(\lambda^\ell)$. The factors $1+O(D_\ell)$ then have a convergent product, and comparing with the linear
+recursion gives $D_\ell=O\big(\chi_1^\ell+\sum_{k<\ell}\chi_1^{\ell-k}\rho^k\big)=O(\chi_1^\ell)$, because $\rho<\chi_1$.
+Dividing by $\chi_1^{\ell+1}$, which is positive since $\phi'>0$,
+\[
+\chi_1^{-\ell-1}D_{\ell+1}=\chi_1^{-\ell}D_\ell\big(1+O(\chi_1^\ell)\big)+O\big((\rho/\chi_1)^\ell\big),
+\]
+and both corrections are summable. So $\chi_1^{-\ell}D_\ell$ converges, at the rate of the tails of the two sums.
+\end{proof}
+
+The proof of Proposition~\ref{prop:two} carries over with two changes. The diagonal entries $T_\ell(x)=\Theta_\ell(x,x)$
+obey $T_{\ell+1}(x)=q_{\ell+1}(x)+\chi_{1,\ell}(x)T_\ell(x)$ with $\chi_{1,\ell}(x)=\chi_1+O(\rho^\ell)$, so for two inputs
+$T_\ell(x)-T_\ell(y)$ satisfies a recursion with rate $\chi_1$ and forcing $O(\rho^\ell)$, whence
+$T_\ell(x)-T_\ell(y)=O(\chi_1^\ell)$. The gap $E_\ell=T_\ell(x)-\Theta_\ell(x,y)$ satisfies \eqref{eq:gap} up to an
+additional forcing $O(\rho^\ell)$, coming from $q_{\ell+1}(x)-\sqrt{q_{\ell+1}(x)q_{\ell+1}(y)}$, from
+$\chi_{1,\ell}(x)-\chi_1$ and from $\chi_\ell(c_\ell)-\chi(c_\ell)$. Its contribution to $E_L$ is
+$\sum_{\ell<L}\chi_1^{L-1-\ell}O(\rho^\ell)=O(\chi_1^L)$. Hence
+\[
+E_L=A_{xy}\Big(q^*+\frac{BT^*}{\chi_1}\Big)L\chi_1^L+O(\chi_1^L),
+\]
+and the Gram matrix satisfies \eqref{eq:gram} with $A=(A_{x_ix_j})$, the differences between the diagonal entries going
+into $R_L$. The proof of Proposition~\ref{prop:ninput} uses nothing else, so the asymptotic formula of
+Theorem~\ref{thm:main} holds whenever $\lambda_{\min}^\perp(-A)>0$.
+
+The weak inequality survives: the matrix $(c_\ell(x_i,x_j))$ is still positive semidefinite with unit diagonal, and the
+argument at the end of Section~\ref{sec:ninput} gives $\lambda_{\min}^\perp(-A)\ge0$. The strict inequality does not
+follow from Section~\ref{sec:positive}. There $-A_{ij}=\Phi(c_0(x_i,x_j))$ for one function $\Phi$ given by a series with
+positive coefficients, which is what makes the kernel strictly positive definite. Off the sphere each pair is carried by
+its own sequence of maps $C_\ell$, and $A$ is no longer a fixed function of the initial correlations.
+
+\section{Numerical checks}\label{sec:numerics}
+All Gaussian expectations below are computed by Gauss--Hermite quadrature, the recursions of Section~1 are iterated
+exactly in the infinite-width limit, and $\sigma_b^2=0.05$ unless stated otherwise. The scripts are in the
+accompanying repository.
+
+\emph{Two inputs.} For two inputs on the fixed-point sphere with initial correlation $c_0$, Proposition~\ref{prop:two}
+predicts $E_L/(L\chi_1^L)\to\kappa A$ with a relative error of order $1/L$. Table~\ref{tab:two} lists the computed
+ratio $r_L=E_L/(L\chi_1^L\kappa A)$. In every row $(1-r_L)L$ is constant to two digits, as an error $c/L$ requires, and
+$\chi_1^{-L}D_L$ agrees with $A$ to five digits by the last depth shown, in line with the geometric rate of
+Lemma~\ref{lem:cmap}.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{cccccccc}
+\hline
+$\sigma_w^2$ & $c_0$ & $\chi_1$ & $\kappa$ & $A$ & $L$ & $r_L$ & $(1-r_L)L$\\
+\hline
+1.5 & 0.0 & 0.93864 & 1.8907 & 0.40464 & 160 & 0.8752 & 20.0\\
+    &     &         &        &         & 200 & 0.9001 & 20.0\\
+1.5 & 0.5 & 0.93864 & 1.8907 & 0.27864 & 160 & 0.8901 & 17.6\\
+    &     &         &        &         & 200 & 0.9121 & 17.6\\
+1.2 & 0.0 & 0.84517 & 0.4757 & 0.76500 & 80  & 0.9535 & 3.7\\
+    &     &         &        &         & 120 & 0.9690 & 3.7\\
+1.2 & 0.5 & 0.84517 & 0.4757 & 0.42715 & 80  & 0.9632 & 2.9\\
+    &     &         &        &         & 120 & 0.9755 & 2.9\\
+\hline
+\end{tabular}
+\caption{The two-input gap against the prediction of Proposition~\ref{prop:two}.}\label{tab:two}
+\end{table}
+
+\emph{Eight inputs.} Eight random points of the unit sphere in $\mathbb R^5$, rescaled to the fixed-point norm, give a
+$8\times8$ matrix $A$ whose restriction to $\mathbf 1^\perp$ is computed from the correlation recursion. The ratio of
+$\lambda_{\min}(\Theta_L)/(L\chi_1^L)$ to the prediction $\kappa\lambda_{\min}^\perp(-A)$ of Theorem~\ref{thm:main} is
+\[
+0.8171,\ 0.9071,\ 0.9443\quad(\sigma_w^2=1.5,\ L=60,120,200),\qquad
+1.0604,\ 1.0311,\ 1.0208\quad(\sigma_w^2=1.2,\ L=40,80,120).
+\]
+Here $|1-\text{ratio}|\,L$ equals $11.0,\ 11.1,\ 11.1$ and $2.4,\ 2.5,\ 2.5$, again an error of order $1/L$. The
+error changes sign between the two settings, so the approach to the limit is not monotone in general.
+
+\emph{The series of $\Phi$.} The coefficients $p_k$ of Lemma~\ref{lem:series} were computed by iterating the
+composition of truncated power series. At $(\sigma_w^2,\sigma_b^2)=(1.5,0.3)$, $(1.2,0.3)$ and $(1.5,0.05)$ every
+$p_k$ with $k\le24$ is positive, the smallest being $1.7\cdot10^{-6}$, $1.5\cdot10^{-7}$ and $5.7\cdot10^{-6}$; the
+first coefficients are $p_1=0.372,\ 0.548,\ 0.200$. This agrees with Proposition~\ref{prop:pk}, which needs no
+numerical input.
+
+\begin{thebibliography}{9}
+\bibitem{cms} D.~Chen, V.~A.~Menegatto and X.~Sun, \emph{A necessary and sufficient condition for strictly positive
+definite functions on spheres}, Proc. Amer. Math. Soc. \textbf{131} (2003), 2733--2740.
+\bibitem{xps} L.~Xiao, J.~Pennington and S.~S.~Schoenholz, \emph{Disentangling trainability and generalization in deep
+neural networks}, Proc. 37th Int. Conf. Machine Learning (ICML 2020), arXiv:1912.13053.
+\bibitem{schoenberg} I.~J.~Schoenberg, \emph{Positive definite functions on spheres}, Duke Math. J. \textbf{9} (1942),
+96--108.
+\end{thebibliography}
+
+
+\end{document}
