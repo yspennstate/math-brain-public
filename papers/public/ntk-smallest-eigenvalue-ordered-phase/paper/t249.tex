@@ -1,11 +1,12 @@
 \documentclass[11pt]{amsart}
 \usepackage{amsmath,amssymb,amsthm}
+\usepackage[margin=1in]{geometry}
 \newtheorem{theorem}{Theorem}[section]
 \newtheorem{lemma}[theorem]{Lemma}
 \newtheorem{proposition}[theorem]{Proposition}
 \theoremstyle{remark}\newtheorem{remark}[theorem]{Remark}
 \newcommand{\E}{\mathbb{E}}
-\title{The smallest eigenvalue of the neural tangent kernel of a deep tanh network in the ordered phase}
+\title[The smallest NTK eigenvalue in the ordered phase]{The smallest eigenvalue of the neural tangent kernel of a deep tanh network in the ordered phase}
 \author{Yitzchak Shmalo}
 \begin{document}
 \begin{abstract}
@@ -339,10 +340,10 @@ $\sigma_w^2$ & $c_0$ & $\chi_1$ & $\kappa$ & $A$ & $L$ & $r_L$ & $(1-r_L)L$\\
 \emph{Eight inputs.} Eight random points of the unit sphere in $\mathbb R^5$, rescaled to the fixed-point norm, give a
 $8\times8$ matrix $A$ whose restriction to $\mathbf 1^\perp$ is computed from the correlation recursion. The ratio of
 $\lambda_{\min}(\Theta_L)/(L\chi_1^L)$ to the prediction $\kappa\lambda_{\min}^\perp(-A)$ of Theorem~\ref{thm:main} is
-\[
-0.8171,\ 0.9071,\ 0.9443\quad(\sigma_w^2=1.5,\ L=60,120,200),\qquad
+\begin{gather*}
+0.8171,\ 0.9071,\ 0.9443\quad(\sigma_w^2=1.5,\ L=60,120,200),\\
 1.0604,\ 1.0311,\ 1.0208\quad(\sigma_w^2=1.2,\ L=40,80,120).
-\]
+\end{gather*}
 Here $|1-\text{ratio}|\,L$ equals $11.0,\ 11.1,\ 11.1$ and $2.4,\ 2.5,\ 2.5$, again an error of order $1/L$. The
 error changes sign between the two settings, so the approach to the limit is not monotone in general.
 
@@ -351,6 +352,25 @@ composition of truncated power series. At $(\sigma_w^2,\sigma_b^2)=(1.5,0.3)$, $
 $p_k$ with $k\le24$ is positive, the smallest being $1.7\cdot10^{-6}$, $1.5\cdot10^{-7}$ and $5.7\cdot10^{-6}$; the
 first coefficients are $p_1=0.372,\ 0.548,\ 0.200$. This agrees with Proposition~\ref{prop:pk}, which needs no
 numerical input.
+
+\section*{Acknowledgments and funding}
+
+This research was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25).
+
+\section*{Declaration of competing interest}
+
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+
+Anthropic Claude AI systems were used to develop the mathematical derivations, write and run the numerical checks, perform internal consistency and literature reviews, and write and prepare this manuscript and its publication files. The author selected the problem and directed the work; the author did not carry out the mathematics or the writing. Responsibility for submission or publication rests with the author. The AI-assisted internal reviews, compilation checks and rendered-page inspections are not external peer review or formal verification.
+
+\section*{Data and code availability}
+
+The paper is theoretical. The three scripts that produce the numerical checks of Section~\ref{sec:numerics} are in the \texttt{code} directory of the repository
+\[
+\texttt{github.com/yspennstate/ntk-smallest-eigenvalue-ordered-phase}.
+\]
 
 \begin{thebibliography}{9}
 \bibitem{cms} D.~Chen, V.~A.~Menegatto and X.~Sun, \emph{A necessary and sufficient condition for strictly positive
