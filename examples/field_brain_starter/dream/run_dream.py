@@ -174,9 +174,11 @@ def main():
         try:
             res = subprocess.run(split_cmd(a.agent_cmd), input=prompt, cwd=ROOT, capture_output=True, text=True,
                                  encoding="utf-8", errors="replace", timeout=a.timeout)
-            reply, rc = res.stdout.strip(), res.returncode
+            reply, rc, err = res.stdout.strip(), res.returncode, (res.stderr or "").strip()
         except subprocess.TimeoutExpired:
-            reply, rc = "(the agent ran past %d s and was stopped)" % a.timeout, None
+            reply, rc, err = "(the agent ran past %d s and was stopped)" % a.timeout, None, ""
+        except OSError as e:   # the agent tool itself was not found or could not start
+            reply, rc, err = "", None, "could not start the agent: %s" % e
 
         changes = changed_files(backup, MEM)
         restored = []
@@ -203,11 +205,18 @@ def main():
                              capture_output=True, text=True, encoding="utf-8", errors="replace")
         log += ["", "## The store after the dream (check_store.py)", ""] + ["    " + ln for ln in chk.stdout.splitlines()]
         log += ["", "## The agent's reply", "", reply or "(empty)", ""]
+        if err and rc != 0:   # a failed agent usually says why on stderr: keep the end of it
+            log += ["## What the agent printed on stderr (last 40 lines)", ""] + \
+                   ["    " + ln for ln in err.splitlines()[-40:]] + [""]
         os.makedirs(os.path.join(HERE, "logs"), exist_ok=True)
         path = os.path.join(HERE, "logs", "dream_%s.md" % stamp)
         open(path, "w", encoding="utf-8", newline="\n").write("\n".join(log))
-        print("dream done: %d file(s) changed, %d put back; store check exit %d; log %s"
-              % (len(changes), len(restored), chk.returncode, path))
+        print("dream done: agent exit %s, %d file(s) changed, %d put back; store check exit %d; log %s"
+              % (rc, len(changes), len(restored), chk.returncode, path))
+        if rc != 0:
+            first = (err or reply or "").strip().splitlines()
+            print("the agent did not finish cleanly%s; read the log before trusting this night"
+                  % ((": " + first[-1][:200]) if first else ""))
         return 0 if rc == 0 and chk.returncode == 0 else 1
     finally:
         os.remove(LOCK)

@@ -40,8 +40,12 @@ below, puts back any record the agent deleted, rebuilds the agenda and writes `d
 files changed and each section's count before and after. The count to watch is the line "Mistakes with no rule for
 next time": a dream that leaves it unchanged did not do the most useful part of its job. The log also carries the
 output of `check_store.py`: a record the agent wrote without an index line, or a `[[link]]` or `superseded_by:` that
-names no record, is listed there, and the run exits 1 so a scheduler can flag it. Only one dream runs at a
-time (`dream/.dream.lock`). Write paths in the agent command with forward slashes, also on Windows. The backups are
+names no record, is listed there, and the run exits 1 so a scheduler can flag it. It also exits 1 when the agent
+itself fails: the console line gives the agent's exit code and the last thing it printed, and the log keeps the end
+of its error output, so a wrong path or an agent tool that is not signed in shows up the first night instead of as a
+quiet store. Only one dream runs at a
+time (`dream/.dream.lock`). Write paths in the agent command with forward slashes, also on Windows (`C:/tools/agent.py`;
+a Git Bash path such as `/c/tools/agent.py` is not understood by Windows Python). The backups are
 yours to prune once you have read the log.
 
 Before you hand the dream a real agent, run `python3 dream/dream_test.py`. It copies this folder to a temporary
