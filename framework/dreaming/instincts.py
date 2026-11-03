@@ -386,7 +386,12 @@ def _atomic_write_text(path, text):
             pass
 
 
-def _file_sha256(path):
+def _file_sha256(path, allow_absent=False):
+    # A new brain has no learned overlay until the dream writes its first reflex; the receipt
+    # then records "absent", and the self-care check holds the file to that (it must still be
+    # missing, or the receipt is stale).
+    if allow_absent and not os.path.exists(path):
+        return "absent"
     with open(path, "rb") as handle:
         return hashlib.sha256(handle.read()).hexdigest()
 
@@ -443,7 +448,7 @@ def emit_compile_receipt(tsv_path, md_path, learned_path=None, receipt_path=None
         "compiled_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()),
         "reflex_count": len(INSTINCTS),
         "files": {
-            "instincts_learned.json": _file_sha256(learned_path),
+            "instincts_learned.json": _file_sha256(learned_path, allow_absent=True),
             "instincts.tsv": _file_sha256(tsv_path),
             "INSTINCTS.md": _file_sha256(md_path),
         },
