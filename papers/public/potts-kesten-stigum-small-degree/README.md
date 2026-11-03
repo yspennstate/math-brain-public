@@ -56,6 +56,10 @@ and likewise for `bern2`, `bern3`, `bern4` and for `--mode merge`. The cubic pol
 stages `bern1` to `bern3` rebuilt the same way with `ternary_cubic_certificate.py --mode upper|lower`. The
 replays can then be run.
 
+The N = 96 phase of `validate_radix_unit_fusion.py` reads a packed table of about 106 MB, also not included;
+`python code/universal_fusion.py build96` writes it (with about 2 GB of free disk), and without it the script
+stops after its small cases.
+
 ## Requirements
 
 Python 3.10 or later, with `sympy`, and `python-flint` for the ball-arithmetic steps. The entry
