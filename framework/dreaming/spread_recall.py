@@ -689,14 +689,19 @@ def _seeds_from_prompt(words, idx, skip_records=False):
             seeds[slug] = float(overlap)
             lex.add(slug)
     # also filenames across the whole store (memories not in the live index)
+    # (3 Nov 2026: the words of four letters or more are picked once and each name lowered once, not once per
+    # word, which was a tenth of a warm recall on a 50,000-entry folder. Fewer than two such words can never reach
+    # an overlap of 2, so the folder is not listed at all then. Same seeds, same order.)
+    long_words = [w for w in words if len(w) >= 4]
     try:
-        for fn in os.listdir(MEM):
+        for fn in (os.listdir(MEM) if len(long_words) >= 2 else ()):
             if not fn.endswith(".md"):
                 continue
             slug = fn[:-3]
             if slug in SKIP or slug in seeds or (skip_records and SESSION_RECORD.match(slug)):
                 continue
-            overlap = sum(1 for w in words if len(w) >= 4 and w in slug.lower())
+            slow = slug.lower()
+            overlap = sum(1 for w in long_words if w in slow)
             if overlap >= 2:
                 seeds[slug] = float(overlap)
                 lex.add(slug)
