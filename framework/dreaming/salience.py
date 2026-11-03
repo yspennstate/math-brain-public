@@ -83,6 +83,46 @@ def lexical_counts(head):
     final_fear = len(set(x.lower() for x in fear_matches if isinstance(x, str))) or raw_fear
     return raw_fear, len(joy_rx.findall(head)), len(stakes_rx.findall(head)), final_fear
 
+
+# The three lexicon scans cost ~3.4 ms a head; over ~50k memories that was 170 s of every
+# score_corpus call (3 Nov 2026: the dream's agenda step ran 574 s on a quiet box and hit its
+# 1800 s cap under load). Counts depend only on the head text and the patterns, so they are
+# cached by a digest of both. A lexicon edit changes the key and the cache refills itself.
+# A rebuilt cache, not brain data: deleting the file only costs one slow run.
+import hashlib, pickle
+_LEX_CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "cache", "salience_lexical_counts.pkl")
+_LEX_KEY = hashlib.blake2b("\x00".join(r.pattern + str(r.flags) for r in _UNICODE_LEXICONS + _ASCII_LEXICONS)
+                           .encode("utf-8"), digest_size=8).hexdigest()
+
+
+def _head_digest(head):
+    return hashlib.blake2b(head.encode("utf-8", "surrogatepass"), digest_size=16).digest()
+
+
+def _load_lex_cache():
+    try:
+        with open(_LEX_CACHE, "rb") as fh:
+            d = pickle.load(fh)
+        if isinstance(d, dict) and d.get("key") == _LEX_KEY and isinstance(d.get("counts"), dict):
+            return d["counts"]
+    except Exception:
+        pass
+    return {}
+
+
+def _save_lex_cache(counts):
+    try:
+        os.makedirs(os.path.dirname(_LEX_CACHE), exist_ok=True)
+        tmp = "%s.%d.tmp" % (_LEX_CACHE, os.getpid())
+        with open(tmp, "wb") as fh:
+            pickle.dump({"key": _LEX_KEY, "counts": counts}, fh, protocol=pickle.HIGHEST_PROTOCOL)
+        os.replace(tmp, _LEX_CACHE)
+    except Exception:
+        try:
+            os.remove(tmp)
+        except Exception:
+            pass
+
 # A memory that has itself been SUPERSEDED / REFUTED should FADE, so its correction (the fresh
 # memory) is what surfaces bright. Otherwise a busted "winner" keeps its JOY-charge + curation glow
 # and re-surfaces vivid - the W#72/W#73 flattering-sharpe bug the dream flagged. Precision matters
@@ -169,9 +209,12 @@ def _infer_type(fn, body):
             return ty
     return "project"
 
-def score_corpus(mem_dir=MEM_DEFAULT, curated_names=None):
+def score_corpus(mem_dir=MEM_DEFAULT, curated_names=None, bodies=None):
     """Return {fname: {salience, valence, charge, why, type, date}} for every live memory.
-    Pure read-only. curated_names: set of basenames present in MEMORY.md (auto-read if None)."""
+    Pure read-only. curated_names: set of basenames present in MEMORY.md (auto-read if None).
+    bodies: optional {fname: text} a caller already read (utf-8, errors=replace, as _read does);
+    a file missing from it is read from disk. dream.py passes its own reads, which saves a
+    second pass over every memory (~88 s on 49.8k files, 3 Nov 2026)."""
     now = time.time()
     today = time.strftime("%Y-%m-%d")
 
@@ -192,7 +235,9 @@ def score_corpus(mem_dir=MEM_DEFAULT, curated_names=None):
         p = os.path.join(mem_dir, fn)
         if not os.path.isfile(p):
             continue
-        body = _read(p)
+        body = bodies.get(fn) if bodies else None
+        if body is None:
+            body = _read(p)
         head = body[:1600]
         dm = DATE_F.search(fn) or DATE_F.search(FM_DESC.search(body).group(1) if FM_DESC.search(body) else "")
         date = f"{dm.group(1)}-{dm.group(2)}-{dm.group(3) or '01'}" if dm else None
@@ -231,11 +276,20 @@ def score_corpus(mem_dir=MEM_DEFAULT, curated_names=None):
     # max charge; below, the low-charge members' persistence is boosted toward it.
     _SESS = re.compile(r"originSessionId:\s*([0-9A-Za-z-]{8,})")
     _ch, _sess, _counts = {}, {}, {}
+    _lex_old = _load_lex_cache()
+    _lex_new = {}
     for fn, m in mems.items():
-        counts = _counts[fn] = lexical_counts(m["head"])
+        _dg = _head_digest(m["head"])
+        counts = _lex_old.get(_dg)
+        if counts is None:
+            counts = lexical_counts(m["head"])
+        _lex_new[_dg] = counts
+        _counts[fn] = counts
         _ch[fn] = min(1.0, sum(counts[:3]) / 6.0)
         _sm = _SESS.search(m["body"])
         _sess[fn] = _sm.group(1) if _sm else None
+    if _lex_new.keys() != _lex_old.keys():
+        _save_lex_cache(_lex_new)
     _sessmax = {}
     for fn, s in _sess.items():
         if s:
