@@ -275,15 +275,33 @@ def _graph_artifacts(rows):
     return "".join(graph_lines), "".join(related_lines), len(edges), kw_kw, len(topics)
 
 
+def _never_built():
+    """True when this brain has no keyword generation and no legacy keyword file yet."""
+    if os.path.exists(os.path.join(HERE, keyword_artifacts.POINTER_NAME)):
+        return False
+    return not os.path.exists(os.path.join(HERE, "keyword_nodes.tsv"))
+
+
+def _nothing_to_build(why):
+    """No artifact is written either way. A new brain has no prompts or memories until its
+    first sessions record them, so there the first dreams have nothing to build from and
+    that is not an error; the step builds once the material exists. A brain that already
+    published a generation keeps it, and the empty input is reported as a failure."""
+    if _never_built():
+        print("%s; no keyword generation yet (built once the brain has prompts and memories)"
+              % why)
+        return 0
+    print("%s; refusing to write an empty artifact" % why, file=sys.stderr)
+    return 1
+
+
 def build():
     prompt_counts = _prompt_terms()
     if not prompt_counts:
-        print("no owner prompt corpus found; refusing to write an empty artifact", file=sys.stderr)
-        return 1
+        return _nothing_to_build("no owner prompt corpus found")
     texts, vocab = _corpus()
     if not texts:
-        print("no memory corpus found; refusing to write an empty artifact", file=sys.stderr)
-        return 1
+        return _nothing_to_build("no memory corpus found")
 
     # his terms that the corpus also knows: these are the topic candidates
     canonical_terms = set()
@@ -330,8 +348,7 @@ def build():
             aliases.append((term, canonical, 1.0 / (len(members[canonical]) ** 0.5), "alias"))
 
     if not rows:
-        print("no keyword node cleared the membership bounds; artifact not written", file=sys.stderr)
-        return 1
+        return _nothing_to_build("no keyword node cleared the membership bounds")
     # ONE ROW PER SUBJECT, not one per membership. The row-per-membership form was 150,713 lines
     # and the live hook parses this file on every prompt: measured ~540ms of a ~590ms recall.
     # Collapsed, it is ~5.4k lines, and only the handful of subjects a prompt actually names ever
