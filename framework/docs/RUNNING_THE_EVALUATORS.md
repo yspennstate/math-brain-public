@@ -27,8 +27,11 @@ test_codex_sweep_identity.py        test_correction_ingestion_status.py
 test_compact_nodes_agent.py         test_coactivation_partition.py    (about four minutes; the others take seconds)
 ```
 
-`eval_retrieval_trace_integrity.py` is a control too, despite its name: it checks that the recall
-trace is built deterministically and fails closed, and it passes on an empty brain.
+Three `eval_*` scripts are controls too, despite their names, and pass on an empty brain:
+`eval_retrieval_trace_integrity.py` (the recall trace is built deterministically and fails
+closed), `eval_memory_access.py` (reads, searches and surfaced notes are told apart in Claude and
+Codex transcripts) and `eval_coactivation_decay.py` (the decay of unused links is one
+transaction).
 
 ## What each of the others needs
 
@@ -46,10 +49,6 @@ trace is built deterministically and fails closed, and it passes on an empty bra
 | Decision gates that refuse on an empty brain | `eval_domain2`, `eval_recency_ship` | They print FAIL or DO NOT SHIP when there is not enough to measure. That is the gate working. |
 | A question bank kept private | `eval_locate_reach`, `eval_paraphrase_reach`, `eval_archive_seed_replay` | Not runnable outside the source deployment; read them as worked examples of a bank-driven gate. |
 | The source deployment's git history | `test_foresight_dated` | It compares the current foresight code with a dated older version. Pass the old file's path as its argument if you have one. |
-
-Two scripts fail on a new install for reasons of their own: the self-tests inside
-`eval_memory_access` (a missing key) and `eval_coactivation_decay` (an assertion). Treat their
-results as unknown until they are fixed.
 
 ## Building your own evaluators
 
