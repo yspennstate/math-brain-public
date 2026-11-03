@@ -181,6 +181,10 @@ def load_events(days):
     """Fire events from the log: one event per (ts,session) write batch -> set of reflex ids."""
     events = {}
     cutoff = time.time() - days * 86400
+    if not os.path.exists(FIRELOG):
+        # A new brain has no fire log until its first reflex fires. No events is the thin
+        # window main() already handles: the ranking file is left as it is.
+        return events
     with io.open(FIRELOG, encoding="utf-8", errors="replace") as f:
         for ln in f:
             p = ln.rstrip("\n").split("\t")
