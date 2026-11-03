@@ -113,8 +113,8 @@ INPUT = re.compile(r"\\(?:input|include|subfile)\s*\{([^}]+)\}|\\input\s+([^\s{}
 
 
 def expand_inputs(t, dirs, depth=0):
-    """Inline \\input/\\include targets (claude-8bb6672a, 2 Nov: declarations kept in sections/declarations.tex
-    were read as missing). dirs: the paper's folder first, then the repo root; LaTeX resolves against both."""
+    """Inline \\input/\\include targets (so that declarations kept in a separate file such as
+    sections/declarations.tex are read). dirs: the paper's folder first, then the repo root; LaTeX resolves against both."""
     if depth > 4:
         return t
 
