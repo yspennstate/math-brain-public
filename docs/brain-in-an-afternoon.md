@@ -236,7 +236,10 @@ to be read. Running either example a second time therefore prints nothing; chang
 hook keeps what it has fired in `hooks/.state`). For your company, the records that earn this are the ones written after something broke: the refund
 issued twice, the migration run against the live database. `hooks/write_back_hook.py`, at the end of the turn, asks
 the agent to file a lesson it has just stated and not written down. `hooks/request_hook.py` keeps a ledger of the
-requests themselves and tells the agent when the same thing was asked before.
+requests themselves and tells the agent when the same thing was asked before. `hooks/compaction_hook.py` files
+the summary a runtime writes when an agent's context fills up as a record of its own, chained to the session's
+earlier ones, so the next session can read what this one was doing
+([brain-building/compactions-as-brain-nodes.md](brain-building/compactions-as-brain-nodes.md)).
 
 To connect all of them, print the wiring with this folder's paths filled in and merge the `"hooks"` object it
 prints into `~/.claude/settings.json` (Claude Code) or `~/.codex/hooks.json` (Codex), next to any hooks you
