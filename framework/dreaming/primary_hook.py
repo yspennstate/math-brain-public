@@ -15,6 +15,11 @@ C:/Users/me/.claude/dreaming/PRIMARY_HOOK_OFF (the partner's call only). State: 
     python primary_hook.py --runtime codex     Codex (JSON hookSpecificOutput; Codex discards plain stdout)
     python primary_hook.py --selftest          four controls on a temporary state file; the live state is untouched
 """
+import sys as _sys
+if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
+    # Asking for help must not run the script's real work.
+    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
+    raise SystemExit(0)
 import io
 import json
 import os

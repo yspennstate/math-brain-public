@@ -31,6 +31,11 @@ and no two machines can overwrite each other. The token comes from `gh auth toke
 The hook's inbox read is a conditional GET with the last ETag: an unchanged inbox answers 304, which GitHub does not
 count against the REST budget the computers share, so polling once a minute everywhere costs nothing.
 """
+import sys as _sys
+if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
+    # Asking for help must not run the script's real work.
+    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
+    raise SystemExit(0)
 import base64, json, os, re, socket, subprocess, sys, time, urllib.error, urllib.request
 
 NOWIN = 0x08000000 if os.name == "nt" else 0          # CREATE_NO_WINDOW: never a console flash on Windows

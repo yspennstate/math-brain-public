@@ -17,6 +17,11 @@ and sidecar, the study's cut stores, the hook's per-session state. A word inside
 and does not trip it. Every refusal is logged to ~/.claude/brain_graph/logs/guard.log. There is no override: only his
 words in a live session change the law.
 """
+import sys as _sys
+if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
+    # Asking for help must not run the script's real work.
+    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
+    raise SystemExit(0)
 import json
 import os
 import re

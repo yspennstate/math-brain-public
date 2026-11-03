@@ -19,6 +19,11 @@ Use:
 A file that is not a paper (a table fragment, a beamer talk) is skipped. A draft that must go to a public repo
 before it is finished does not exist: finish it first. There is no bypass.
 """
+import sys as _sys
+if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
+    # Asking for help must not run the script's real work.
+    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
+    raise SystemExit(0)
 import io, json, os, re, shutil, subprocess, sys, tarfile, tempfile, time, urllib.request
 
 LOG = os.path.join(os.path.dirname(os.path.abspath(__file__)), "logs", "paper_release_guard.log")

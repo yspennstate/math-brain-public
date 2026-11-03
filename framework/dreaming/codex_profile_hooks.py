@@ -21,6 +21,11 @@ This hook keeps it so:
       write that strips a profile's hooks.json or sets features.hooks=false in a Codex config.
   --check: prints the state of every profile and exits 1 on drift.
 """
+import sys as _sys
+if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
+    # Asking for help must not run the script's real work.
+    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
+    raise SystemExit(0)
 import hashlib
 import io
 import json

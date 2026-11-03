@@ -14,6 +14,11 @@ text that only mentions the words inside a heredoc or here-string.
     python -s brain_checkout_guard.py            (reads the hook JSON on stdin)
     python -s brain_checkout_guard.py --selftest  (controls both ways)
 """
+import sys as _sys
+if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
+    # Asking for help must not run the script's real work.
+    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
+    raise SystemExit(0)
 import json
 import os
 import re

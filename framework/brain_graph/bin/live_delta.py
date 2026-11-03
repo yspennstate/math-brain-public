@@ -23,6 +23,11 @@ never the only copy of anything.
     python live_delta.py stats
     python live_delta.py selftest
 """
+import sys as _sys
+if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
+    # Asking for help must not run the script's real work.
+    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
+    raise SystemExit(0)
 import collections
 import glob
 import json

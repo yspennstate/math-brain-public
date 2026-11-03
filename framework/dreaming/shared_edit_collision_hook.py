@@ -23,6 +23,11 @@ without it rather than hold up the edit.
 Env for tests: SHARED_EDIT_LEDGER (another ledger file), SHARED_EDIT_NOW (epoch seconds), SHARED_EDIT_TEST_PAUSE
 (seconds to wait between the decision and the append, to widen the window a race needs).
 """
+import sys as _sys
+if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
+    # Asking for help must not run the script's real work.
+    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
+    raise SystemExit(0)
 import hashlib
 import io
 import json

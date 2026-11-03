@@ -23,6 +23,11 @@ live/session_kinds.json; 'unknown' never is.
     python session_kinds.py ID [ID ...]      the kind of each
     python session_kinds.py --stats [DAYS]   sessions by kind among the transcripts touched in the last DAYS (default 7)
 """
+import sys as _sys
+if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
+    # Asking for help must not run the script's real work.
+    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
+    raise SystemExit(0)
 import collections
 import json
 import os

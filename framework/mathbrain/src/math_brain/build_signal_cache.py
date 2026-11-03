@@ -12,6 +12,11 @@ sessions running concurrently cannot race on the file. Re-run it after any bulk 
 """
 
 from __future__ import annotations
+import sys as _sys
+if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]):
+    # Asking for help must not run the script's real work.
+    print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
+    raise SystemExit(0)
 
 import os
 import pickle
