@@ -159,7 +159,9 @@ def main():
     if head != commit:
         sys.exit("checkout is at %s, not %s" % (head, commit))
     files = [l.rstrip("\n") for l in io.open(flist, encoding="utf-8") if l.strip()]
-    core = sorted(f for f in files if not f.startswith(("results/", "papers/")))
+    # the map's own data files are left out: a card for cards.jsonl would describe the previous build
+    own = {"navigation/cards.jsonl", "navigation/edges.jsonl", "navigation/MANIFEST.json"}
+    core = sorted(f for f in files if not f.startswith(("results/", "papers/")) and f not in own)
     cards, edges, missing = {}, set(), []
     file_ids = {f: cid("file", f) for f in core}
 
