@@ -26,6 +26,7 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | A necessary and sufficient condition for convergence of the quantile process in L^p(0,1) | [quantile-process-lp](https://github.com/yspennstate/quantile-process-lp) |
 | Negative edge correlation for weighted spanning forests of complete graphs | [kn-forest-negative-correlation](https://github.com/yspennstate/kn-forest-negative-correlation) |
 | A prophet secretary instance with ratio below 0.7230 | [prophet-secretary-hardness](https://github.com/yspennstate/prophet-secretary-hardness) |
+| Read-once formulas and a question of Han on the Fourier entropy-influence conjecture | [han-question-read-once-formulas](https://github.com/yspennstate/han-question-read-once-formulas) |
 | A tree automaton with infinitely many rogue fixed points under every supercritical offspring law | [automaton-fixed-simplex](https://github.com/yspennstate/automaton-fixed-simplex) |
 | Arc-transitive graphs that mimic the cycle | [arc-transitive-graphs-that-mimic-the-cycle](https://github.com/yspennstate/arc-transitive-graphs-that-mimic-the-cycle) |
 | Ballisticity for positive excited random walks without bounded cookie stacks | [positive-cookie-ballisticity](https://github.com/yspennstate/positive-cookie-ballisticity) |
