@@ -61,9 +61,11 @@ session to bring it to a stopping point. Their signals:
   words as current, answer from the records rather than the old context.
 
 Each hook has a cooldown, at most one fires per action, small routine commands stay silent, and fires
-are logged to `~/.claude/brain_graph/compactions/hook_fires.jsonl`. `compact_math.py` selects hooks for
-mathematical work: a finished proof, a Lean compile or a resume pulls a compaction hook, an unrelated
-computation does not.
+are logged to `~/.claude/brain_graph/compactions/hook_fires.jsonl`. Mathematical work has one more path:
+a solver run that wants its result kept supplies a math-only digest (in the node's extra fields, or in the
+file named by `COMPACT_MATH_STAGE_FILE`), and `compact_nodes.py` hands it to `compact_math.py`, which checks
+it and stages it under `math_drafts` with a name ending in `.json.pending`, so nothing imports it into the
+math store before it is reviewed. The session summary itself is never used as mathematical input.
 
 A hook can only tell the session; it cannot compact it. For interactive sessions a `Stop` hook therefore
 starts a small windowless helper when the turn closed a task and the context is past 150,000 tokens. The

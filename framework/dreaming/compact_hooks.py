@@ -2,9 +2,8 @@
 """Compaction hooks: agents compact at task boundaries, sooner, and lose nothing when they do (9 Oct 2026: an agent that has finished
 a subject compacts then, compaction follows tasks rather than a full context, and it happens sooner).
 
-Fifty brain hooks in compact_hooks.jsonl (the math brain's fifty are HOOK_IDEAS_v6.jsonl under primary_directive/
-math_hooks). Each is fired by a measured signal; at most one per event (two right after a compaction); a per-session
-cooldown per hook; within a kind the hook shown least recently goes first, so the fifty rotate.
+Fifty-three brain hooks in compact_hooks.jsonl (a math brain can keep its own set beside them). Each is fired by a measured signal; at most one per event (two right after a compaction); a per-session
+cooldown per hook; within a kind the hook shown least recently goes first, so they rotate.
 - A task or subject ends: a checklist entry closed, a final report ("This was your ..."), a push, a commit, a released
   claim, a handoff sent, a report written to Downloads, a gate decision written, tests passed, a checkpoint written.
 - The context is large: the live token count from the transcript's last usage record (bands 200k, 250k, 280k, 350k,
