@@ -18,6 +18,9 @@ REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
 SUBSYSTEMS = {
     "dreaming": os.path.join(".claude", "dreaming"),
+    # Dreaming scripts import shared helpers from ~/.claude/brain_graph/bin (session_kinds, live_membrane,
+    # quarantine_rows); without this entry a new install had no such folder.
+    "brain_graph": os.path.join(".claude", "brain_graph"),
     "fleet": os.path.join(".claude", "fleet"),
     "hooks/commands": os.path.join(".claude", "commands"),
     "governor": os.path.join("brain-framework", "governor"),
