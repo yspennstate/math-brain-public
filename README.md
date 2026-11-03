@@ -119,7 +119,7 @@ The [release record](papers/three-targets-2026-10-31/README.md) gives the precis
 
 ## Results posted since 13 October 2026
 
-Thirty-three more problems from the literature were answered, fully or in part, between 13 October and 3 November, each written up as a short paper with its verification code in its own repository. The twenty-five from 13 to 23 October are also copied into `papers/public/<name>/`. They are single-author write-ups checked by the agents' own audits; none has yet been refereed.
+Thirty-nine more problems from the literature were answered, fully or in part, between 13 October and 3 November, each written up as a short paper with its verification code in its own repository. The twenty-five from 13 to 23 October are also copied into `papers/public/<name>/`. They are single-author write-ups checked by the agents' own audits; none has yet been refereed.
 
 | Date | Repository | Result |
 |---|---|---|
@@ -148,8 +148,14 @@ Thirty-three more problems from the literature were answered, fully or in part, 
 | 2026-10-21 | [bjorklund-star-quotient](https://github.com/yspennstate/bjorklund-star-quotient) | A homogeneous space G/H of infinite index with no nonconstant quasiharmonic functions (Bjorklund, Problem 2) |
 | 2026-10-22 | [nonnormal-orbit-quotients](https://github.com/yspennstate/nonnormal-orbit-quotients) | A non-normal subgroup with a complete orbit quotient K_m that no normal quotient realizes (Grimmett-Li, Question 4.5) |
 | 2026-10-23 | [arc-transitive-edge-heat](https://github.com/yspennstate/arc-transitive-edge-heat) | Edge monotonicity of the normalized heat kernel on arc-transitive and 1-walk-regular graphs (Aldous-Fill, Open Problem 7.30) |
+| 2026-10-25 | [maxflow-thin-boxes](https://github.com/yspennstate/maxflow-thin-boxes) | Maximal flow through thin boxes with heavy-tailed capacities (Auffinger-Damron-Hanson, Question 36) |
+| 2026-10-25 | [posterior-cones-reconstruction](https://github.com/yspennstate/posterior-cones-reconstruction) | Sharp reconstruction thresholds for 3- and 4-state Potts broadcasting on finite-mean Galton-Watson trees |
 | 2026-10-29 | [hadamard-discrepancy-odd](https://github.com/yspennstate/hadamard-discrepancy-odd) | The discrepancy of Sylvester-Hadamard matrices in odd dimension (Randomstrasse101 Conjecture 13) |
+| 2026-10-29 | [quantile-process-lp](https://github.com/yspennstate/quantile-process-lp) | A necessary and sufficient condition for convergence of the quantile process in L^p(0,1) |
+| 2026-10-29 | [bilateral-preference-connectivity-window](https://github.com/yspennstate/bilateral-preference-connectivity-window) | The connectivity window of bilateral preference random graphs LK(n,k) for k = log n + O(1) |
 | 2026-10-30 | [potts-kesten-stigum-small-degree](https://github.com/yspennstate/potts-kesten-stigum-small-degree) | The Kesten-Stigum bound is sharp for the three-state Potts model on regular trees |
+| 2026-10-30 | [geodesic-tree-branching](https://github.com/yspennstate/geodesic-tree-branching) | Every geodesic spanning tree of a Cayley graph has branching number equal to the growth rate (Lyons-Peres, Question 3.12) |
+| 2026-10-30 | [automaton-fixed-simplex](https://github.com/yspennstate/automaton-fixed-simplex) | A tree automaton with infinitely many rogue fixed points under every supercritical offspring law |
 | 2026-11-01 | [ntk-smallest-eigenvalue-ordered-phase](https://github.com/yspennstate/ntk-smallest-eigenvalue-ordered-phase) | Smallest eigenvalue of the NTK Gram matrix of a deep tanh network in the ordered phase |
 | 2026-11-02 | [rr-constant-step-log-factor](https://github.com/yspennstate/rr-constant-step-log-factor) | The logarithmic factor in the tuned constant-step rate of random reshuffling |
 | 2026-11-02 | [kn-forest-negative-correlation](https://github.com/yspennstate/kn-forest-negative-correlation) | Negative edge correlation for weighted spanning forests of complete graphs |
