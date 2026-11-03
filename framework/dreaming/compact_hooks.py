@@ -298,7 +298,7 @@ def _named_on_disk(sp):
 def _this_compactions_rows(sid, sp, st):
     """The node rows written for THIS compaction, newest last: the session's rows from NODE_FRESH_S before the hook
     started on that no earlier SessionStart named, polled for up to sum(NODE_WAITS) seconds.
-    14 Oct 12:07:53 (claude-1789621d-r): the old half-hour window named compaction_claude_aeda7a9b_20261014T120520, a
+    14 Oct 12:07:53: the old half-hour window named compaction_claude_e5f6a7b8_20261014T120520, a
     sibling subagent's node 153 s old, as this compaction's; this compaction's own row landed at 12:07:55. A subagent's
     compaction reaches the hook with its parent's session id and transcript, so a session's window holds its siblings'
     nodes; and in any session that compacted in the half hour before, a lost node read as saved. Run this once per

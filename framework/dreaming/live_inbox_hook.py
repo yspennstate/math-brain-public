@@ -1,6 +1,6 @@
 """live_inbox_hook.py - show a Claude or Codex session the messages waiting for it, within one tool call.
 
-Before 1 Oct 2026 no hook on this machine read the agent mesh: a message sent to "claude-7fe30841" sat undelivered until
+Before 1 Oct 2026 no hook on this machine read the agent mesh: a message sent to an agent's name sat undelivered until
 that agent ran `agent_mesh.py inbox` by hand (three hourly broadcasts to this very session were found that way), and the
 dots' brain-inbox messages reached nobody until someone read the board. The relay (12_cognitive_architecture/live_inbox/
 live_inbox.py) now turns every inbox message for a local session into a mesh message; this hook puts mesh messages in
@@ -20,7 +20,7 @@ readable with `agent_mesh.py inbox --include-acked`). Output: plain text for the
 for Codex. Fail-open: any error prints nothing. Switch: ~/.agents/live_inbox/HOOK_ON (the dispatcher's enabled_if).
 A message the relay fanned out because no session holds its name (topic brain-inbox-broadcast) is shown but never
 blocks a stop or wakes a waiter: only mail addressed to the session does.
-claude-7fe30841, 1 Oct 2026; the waiter offer, the broadcast rule and the 3 s look by claude-7fe30841-inbox the same
+1 Oct 2026; the waiter offer, the broadcast rule and the 3 s look by the inbox agent the same
 evening (his 22:3x order: "messages go through right away and prompt the other agents")."""
 import sys
 if __name__ == "__main__" and ("-h" in sys.argv[1:] or "--help" in sys.argv[1:]):
@@ -396,7 +396,7 @@ def main():
             st["last_reg"] = now - REG_EVERY_S + 60       # try again in a minute
             _log(f"{agent} {event} register failed: {type(e).__name__}: {str(e)[:160]}")
     ids = [agent, f"{runtime}:{sid[:16]}"]
-    # A launcher that names its worker (series_keeper sets AGENT_MESH_ID=codex-0d21ef1c-s1c) gets mail sent to that name
+    # A launcher that names its worker (series_keeper sets AGENT_MESH_ID=codex-d4e5f6a7-s1c) gets mail sent to that name
     # too. Before 15 Oct mail to the name waited forever: the hook read only codex-<first 8 of the thread>, and Codex
     # thread ids are time-ordered, so threads started within about a minute share those 8 (s3 and s4 both 01a13b70).
     named = (os.environ.get("AGENT_MESH_ID") or "").strip()

@@ -1,5 +1,5 @@
 # -*- coding: utf-8 -*-
-"""Compact a session when it finishes a task (claude-322bc92e, 9 Oct 2026).
+"""Compact a session when it finishes a task (9 Oct 2026).
 
 Why a hook cannot just call /compact: Claude Code takes /compact only as typed input. Its hook outputs are decision,
 reason, stopReason, terminalSequence (OSC titles and bells only), additionalContext and the like; none compacts (read
@@ -14,7 +14,7 @@ writes to the session while it waits (he may be typing) or it is not idle within
 Idle means: the transcript quiet IDLE_S, the last turn ended and no queue-operation or loop fire since (a new turn shows
 as a queue-operation before its user record is written), and no keyboard or mouse input for OWNER_STILL_S.
 
-Proven 10 Oct on claude-322bc92e: the keys typed at 00:56:16 entered that session's queue (queue-operation enqueue
+Proven 10 Oct on one session: the keys typed at 00:56:16 entered that session's queue (queue-operation enqueue
 "/compact" at 21:56:16Z), and Claude Code ran /compact when the turn that had started 16 s earlier ended (22:03:02Z).
 That turn was the reason for the 7-minute delay; the idle rule above now waits for such a turn to finish.
 
@@ -91,7 +91,7 @@ def is_prompt(r, notifications=True):
 def turn_start(r):
     """Where a turn begins for the question 'was a task closed in it': his prompt, a prompt queued while the agent worked,
     or a loop prompt. A task notification or the Stop hooks' own feedback continues the turn it lands in: on 10 Oct 03:33
-    background-task notifications cut claude-322bc92e's turn after its checklist 'done', and the hook saw no task closed."""
+    background-task notifications cut an agent's turn after its checklist 'done', and the hook saw no task closed."""
     if r.get("type") == "user":
         c = (r.get("message") or {}).get("content")
         if not isinstance(c, str):

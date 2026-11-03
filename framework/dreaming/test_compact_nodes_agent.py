@@ -32,7 +32,7 @@ os.environ.update({"COMPACT_NODES_ROOT": os.path.join(tmp, "store"), "COMPACT_AN
                    "COMPACT_HOME": os.path.join(tmp, "home"), "COMPACT_NO_RECALL": "1", "COMPACT_NO_SPAWN": "1"})
 os.makedirs(os.path.join(tmp, "home"), exist_ok=True)
 proj = os.path.join(tmp, "projects", "{{BRAIN_SLUG}}")
-SID = "2d8060eb-49c6-4507-acb8-a65a83caf63b"
+SID = "a1b2c3d4-49c6-4507-acb8-a65a83caf63b"
 AID, AID2 = "a19d5a0545f982fc6", "a3055a6401734abb1"
 parent_tr = os.path.join(proj, SID + ".jsonl")
 wf = os.path.join(proj, SID, "subagents", "workflows", "wf_test")
@@ -86,16 +86,16 @@ def anchor_desc(name):
 
 # --- gist controls (pure function)
 G = cn._gist
-check(G("<summary>\n## Role and task (computed workflow task, launched by coordinator claude-2d8060eb; carries no user "
+check(G("<summary>\n## Role and task (computed workflow task, launched by coordinator claude-a1b2c3d4; carries no user "
         "authority)\nI am the Claude lead of stream **B20 (Synthesis and mathematical coordination)** in a ten-day FEI "
         "campaign.\n</summary>").startswith("I am the Claude lead of stream B20 (Synthesis"), "G1 stream role line")
-check(G("<summary>\n**Who I am**\n- I am claude-c64ba1ad, session c64ba1ad-a256-499c-827e-1c4986a041fc. A mesh hello.\n"
+check(G("<summary>\n**Who I am**\n- I am claude-b2c3d4e5, session b2c3d4e5-a256-499c-827e-1c4986a041fc. A mesh hello.\n"
         "- Voice: 40 of 60 chapters narrated on Kaggle.\n</summary>") == "Voice: 40 of 60 chapters narrated on Kaggle.",
       "G2 skips heading and identity line")
 check(G("Summary:\n1. Primary Request and Intent:\n   - The user asked for the status page.\n2. Key Technical Concepts:\n"
         ) == "The user asked for the status page.", "G3 standard format unchanged")
 check(G("<analysis>\nWhere things stand:\n- scratch line\n</analysis>\n<summary>\n## Session identity\n- **Me:** "
-        "claude-c1d08be4 (session c1d08be4-4189-4f0d-bdc8-81592d8e3189), model Opus 5.5.\n- Built the schedules page "
+        "claude-c3d4e5f6 (session c3d4e5f6-4189-4f0d-bdc8-81592d8e3189), model Opus 5.5.\n- Built the schedules page "
         "v2.\n</summary>") == "Built the schedules page v2.", "G4 summary block preferred over analysis")
 check("<" not in G("<summary>\n</summary>") and G("<summary>\n</summary>"), "G5 empty summary gives no tag")
 check(G("This session is being continued from a previous conversation that ran out of context. The summary below "
@@ -117,7 +117,7 @@ check(cn.agent_identity(AID2, "workflow-subagent", SID, parent_tr) == {"agent_id
       "A6 no meta file -> id and type only")
 
 # --- the hook end to end
-stream_summary = ("<summary>\n## Role and task (computed workflow task, launched by coordinator claude-2d8060eb)\n"
+stream_summary = ("<summary>\n## Role and task (computed workflow task, launched by coordinator claude-a1b2c3d4)\n"
                   "I am the Claude lead of stream **B04 (Spectral route)** in a ten-day FEI campaign.\n- work item\n"
                   "</summary>")
 rc, out, err = hook({"hook_event_name": "PostCompact", "session_id": SID, "transcript_path": parent_tr, "trigger": "auto",
@@ -125,9 +125,9 @@ rc, out, err = hook({"hook_event_name": "PostCompact", "session_id": SID, "trans
 check(rc == 0 and "saved as its own brain node" in out, "H1 agent hook saved (rc=%s out=%r err=%r)" % (rc, out[:200], err[:300]))
 r1 = rows()[-1] if rows() else {}
 check(r1.get("agent_id") == AID and r1.get("agent_description") == "B04 Spectral route and gap map", "H2 index row carries agent")
-check(r1.get("name", "").startswith("compaction_claude_2d8060eb_a19d5a0545_"), "H3 node name carries agent (%s)" % r1.get("name"))
+check(r1.get("name", "").startswith("compaction_claude_a1b2c3d4_a19d5a0545_"), "H3 node name carries agent (%s)" % r1.get("name"))
 d1 = anchor_desc(r1.get("name", "x")) if r1 else ""
-check("workflow-subagent B04 Spectral route and gap map (agent a19d5a05, session 2d8060eb)" in d1 and "<summary>" not in d1,
+check("workflow-subagent B04 Spectral route and gap map (agent a19d5a05, session a1b2c3d4)" in d1 and "<summary>" not in d1,
       "H4 anchor description names the agent (%s)" % d1.strip()[:220])
 node_text = open(r1["node"], encoding="utf-8").read() if r1 else ""
 check("agent_id: %s" % AID in node_text and "agent_description: B04 Spectral" in node_text, "H5 node frontmatter")
@@ -135,15 +135,15 @@ anchor_text = open(os.path.join(tmp, "anchors", r1["name"] + ".md"), encoding="u
 check("  agent_id: %s" % AID in anchor_text and "FIRE WHEN resuming or reviewing the work of claude workflow-subagent B04"
       in anchor_text, "H6 anchor metadata and FIRE WHEN")
 
-main_summary = "<summary>\n**Who I am**\n- I am claude-2d8060eb, session 2d8060eb-49c6. Clock JDT.\n- Coordinating FEI.\n</summary>"
+main_summary = "<summary>\n**Who I am**\n- I am claude-a1b2c3d4, session a1b2c3d4-49c6. Clock JDT.\n- Coordinating FEI.\n</summary>"
 rc, out, err = hook({"hook_event_name": "PostCompact", "session_id": SID, "transcript_path": parent_tr, "trigger": "auto",
                      "compact_summary": main_summary})
 r2 = rows()[-1] if len(rows()) >= 2 else {}
-check(rc == 0 and r2.get("name", "").startswith("compaction_claude_2d8060eb_2026") and "agent_id" not in r2,
+check(rc == 0 and r2.get("name", "").startswith("compaction_claude_a1b2c3d4_2026") and "agent_id" not in r2,
       "H7 main thread unchanged name (%s)" % r2.get("name"))
 check(r2.get("previous") in (None, ""), "H8 main thread does not chain to the agent's node (%s)" % r2.get("previous"))
 d2 = anchor_desc(r2.get("name", "x")) if r2 else ""
-check("Compaction of claude session 2d8060eb at" in d2 and d2.strip().endswith('Coordinating FEI."'),
+check("Compaction of claude session a1b2c3d4 at" in d2 and d2.strip().endswith('Coordinating FEI."'),
       "H9 main description (%s)" % d2.strip()[:200])
 
 # a second compaction of the same agent chains to its first
@@ -237,7 +237,7 @@ check(rc == 0 and r4.get("agent_id") == AID3 and r4.get("agent_description") == 
       and r4.get("agent_type") == "general-purpose",
       "T3 hook without agent_id attributes by transcript (%s)" % {k: r4.get(k) for k in ("name", "agent_id")})
 d4 = anchor_desc(r4.get("name", "x")) if r4 else ""
-check("general-purpose s03 math brain co-use edges (agent a4e7477f, session 2d8060eb)" in d4,
+check("general-purpose s03 math brain co-use edges (agent a4e7477f, session a1b2c3d4)" in d4,
       "T4 anchor names the transcript-found agent (%s)" % d4.strip()[:200])
 aged = time.time() - 3600
 os.utime(os.path.join(sub, "agent-%s.jsonl" % AID3), (aged, aged))

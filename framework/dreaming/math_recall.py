@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
 """Recall from the math store in one call: the best matching current cards, each with its id, its whole text and the
-cards it links to (claude-4a88bc43, 11 Oct 2026; leaner printout claude-4a88bc43-f03, 12 Oct 2026).
+cards it links to (11 Oct 2026; leaner printout 12 Oct 2026).
 
     python ~/.claude/dreaming/math_recall.py "<words>" [--or "<other words>" ...] [--limit 8] [--chars 4000]
     python ~/.claude/dreaming/math_recall.py --id <card id> [<card id> ...]     walk: one card whole, every link
@@ -370,7 +370,7 @@ def strength_edges(edges, S, typed):
     return out, kinds
 
 
-# Possessive names (claude-68ceaf54, 28 Oct 2026). The tokenizer keeps an apostrophe inside a word, so the card
+# Possessive names (28 Oct 2026). The tokenizer keeps an apostrophe inside a word, so the card
 # "Janson's Inequality" indexes the term janson's, and the question "Janson inequality" (term janson) never meets it:
 # the card was not in the top 8 for that wording, while three cards about a different Janson result were. Of the
 # lexical index's 98,255 terms, 1,138 are possessives (talagrand's 64 cards, hall's 54, jensen's 116, janson's 19).

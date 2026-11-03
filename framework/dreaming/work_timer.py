@@ -31,7 +31,7 @@ DUR_RE = re.compile(r"(\d+(?:\.\d+)?)\s*(?:hours?|hrs?|h)\b", re.I)
 LENGTH_AFTER = re.compile(r"[\s-]*(?:and\s+(?:a\s+)?(?:half|\d+\s*min\w*)\s+)?(?:long|lon\b|lnog|movie|moive|mvoie|"
                           r"film|flim|video|vidoe|vieo|version|versoin|verion|lecture|cut|episode|documentary|"
                           r"audiobook|series|poem|of (?:narration|speech|voice|video|footage|audio|film|movie))", re.I)
-# 2026-10-11 17:2x (claude-4a88bc43): "give me a report in chrome of all the work that you did in the last 10 hours"
+# 2026-10-11 17:2x: "give me a report in chrome of all the work that you did in the last 10 hours"
 # started a 10 h clock - "work" sat 40 characters off. A duration right after last/past/previous/prior names a
 # window already gone, not an order to work that long.
 PAST_BEFORE = re.compile(r"\b(?:last|past|previous|prior|preceding)\s+$", re.I)

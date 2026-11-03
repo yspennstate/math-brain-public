@@ -1,4 +1,4 @@
-"""Meaning vectors for the memories the sidecar does not cover yet (R13, claude-1789621d, 13 Oct 2026).
+"""Meaning vectors for the memories the sidecar does not cover yet (R13, 13 Oct 2026).
 
 The sidecar (memory_embeddings.npz) is rebuilt every three hours by BrainEmbeddingRefresh. A memory written in
 between has no current row, so brain.py's query-meaning lane scores it on its words alone, and its own session's

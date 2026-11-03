@@ -474,7 +474,7 @@ def load_documents(mem: str | os.PathLike[str] | Path, slug: str,
         return _load_documents_unlocked(mem_path, safe_slug, missing_ok=missing_ok)
 
 
-# 10 Oct 2026 (claude-9bb7da02): a Codex worker's sandbox lets it read the memory directory but not open the lock
+# 10 Oct 2026: a Codex worker's sandbox lets it read the memory directory but not open the lock
 # sidecar for writing. The lock loop retried that refusal for its 10 s bootstrap deadline on each of the 41 bundles,
 # so every recall from a sandboxed solver timed out at its 60 s limit with no attachment read at all (w356, w370).
 _LOCK_WRITABLE: dict = {}

@@ -135,7 +135,7 @@ _DECIMAL = re.compile(r"^[0-9]+_[0-9]+$")                             # 0_45, 0_
 # added terms appear in exactly one memory. A partner's rules are full of numbers they type back at the brain
 # (k=0.45, ratio 0.25, STEP 0.0035), so the lane is not obviously waste - it is measured, not assumed, below.
 _V3_DECIMALS = os.environ.get("BRAIN_TOKENS_V3_DECIMAL", "1") != "0"
-# DATES (2026-09-27, claude-825b1305; staged OFF behind BRAIN_TOKENS_DATES=1 for a shadow end-to-end measurement): a
+# DATES (2026-09-27; staged OFF behind BRAIN_TOKENS_DATES=1 for a shadow end-to-end measurement): a
 # month and day however written - "september 2", "2 Sep", "2026-09-02", a slug's 2026_09_02 - gains one shared token
 # md0902 on both sides; nothing is removed, so an exact match keeps its weight. A memory's head gets the tokens of the
 # dates in its first 12,000 characters (the slug's creation date among them), after the head budget, so they never
@@ -294,7 +294,7 @@ class QueryNormalizer:
         return " ".join(self._correct(t) for t in tokens(query))
 
 
-# DOC EXPANSION (2026-09-26, claude-825b1305). The index sees a memory in its own words, and he asks in his: measured on
+# DOC EXPANSION (2026-09-26). The index sees a memory in its own words, and he asks in his: measured on
 # 968 reworded questions, the answer memory is in a plain search's top five a third of the time. Each memory now also
 # carries three questions a person might ask whose answer is in it, written once in ordinary words by Haiku 4.5 from the
 # memory's own description and opening (doc_expand.py; it never sees a test question). They are appended after the
