@@ -151,6 +151,15 @@ def refresh(session_id, transcript_path, reg_dir=None):
         return None
 
 
+def _torn(f):
+    """True when the entry holds no JSON at all: empty, or only NUL bytes and whitespace (a crash-torn write)."""
+    try:
+        b = open(f, "rb").read()
+    except Exception:
+        return False
+    return not b.strip(b"\x00 \r\n\t")
+
+
 def ensure_registered(session_id, transcript_path, reg_dir=None):
     """Create registry/<id>.json if MISSING, for a top-level non-dream claude session - so crash-recovery
     coverage stops depending on a session remembering to self-register (register.ps1 is manual; -Discover
@@ -165,8 +174,18 @@ def ensure_registered(session_id, transcript_path, reg_dir=None):
     if os.environ.get("DREAM_TYPE"):
         return None                          # a dream (headless -p) must NEVER be registered -> never a window
     f = os.path.join(reg_dir, session_id + ".json")
-    if os.path.exists(f):
+    if os.path.exists(f) and not _torn(f):
         return None                          # already registered - refresh() owns updates
+    if os.path.exists(f):
+        # A crash mid-write can leave the file at its old length but all NUL bytes: json.load fails,
+        # refresh() returns None every turn, and the session has no crash recovery until someone notices.
+        # Keep the torn file aside and re-create the entry.
+        try:
+            qdir = os.path.join(reg_dir, ".quarantine")
+            os.makedirs(qdir, exist_ok=True)
+            os.replace(f, os.path.join(qdir, os.path.basename(f) + ".torn_%d" % int(os.path.getmtime(f))))
+        except Exception:
+            return None
     fu = _first_user(transcript_path) if transcript_path else ""
     fu = re.sub(r"<task-notification.*?</task-notification>|<system-reminder.*?</system-reminder>"
                 r"|<local-command-caveat>.*?</local-command-caveat>|<local-command-stdout>.*?</local-command-stdout>",
