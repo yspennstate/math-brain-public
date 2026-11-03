@@ -51,7 +51,7 @@ LINK_W = {"named": 0.7, "superseded_by": 1.0, "supersedes": 1.0, "same_incident"
           "contradicts": 0.5, "same_subject": 0.4}
 LINK = re.compile(r"\[\[([A-Za-z0-9_.\-]+)\]\]")
 NAMES = re.compile(r"^\s*(superseded_by|supersedes|related|see_also)\s*:\s*(.+)$", re.I | re.M)
-SKIP = {"MEMORY", "INDEX_ARCHIVE", "PREDICTIONS", "STATE_OF_MIND", "OPEN_QUESTIONS", "AUTOBIOGRAPHY", "MODEL_OF_YITZCHAK",
+SKIP = {"MEMORY", "INDEX_ARCHIVE", "PREDICTIONS", "STATE_OF_MIND", "OPEN_QUESTIONS", "AUTOBIOGRAPHY", "MODEL_OF_OWNER",
         "FASCINATIONS", "THE_OTHER_MINDS", "CONSCIENCE", "MISTAKES", "CURIOSITY", "RECONSOLIDATION_QUEUE", "INTENTIONS"}
 DESC_RX = re.compile(r"^description:\s*(.+)$", re.M)
 FIELD_RX = re.compile(r"^\s*(status|superseded_by|type)\s*:\s*(.+)$", re.M)
