@@ -215,6 +215,9 @@ carries and reports the math brain and the film brain absent. `--receipt PATH` r
 kind of tree tested, a hash over its files, the commit and the installer's hash beside every
 check.
 
+`docs/RUNNING_THE_EVALUATORS.md` says which of the installed `eval_*` and `test_*` scripts pass on a
+new install and what each of the others needs before it can measure anything.
+
 `docs/EXERCISING.md` has the state-redirect seams and the exact command forms. Read it
 before driving anything by hand — several of these tools take subcommands where a flag looks
 natural, and guessing has written to live state before.

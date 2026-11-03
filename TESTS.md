@@ -6,6 +6,8 @@
 
 Each test runs agents on a fixed set of questions with and without the brain and counts correct answers. P values come from exact paired tests on the items where the arms disagree. The questions, the answer keys and the per-question records are kept private, to avoid disclosing the test instruments. Public answer-bearing records can still contaminate later evaluations; repeated runs on exposed items are regression checks, not fresh holdouts. Anchors for some blinded experiments were committed in advance and are public: [brain-benefit-experiment-anchors](https://github.com/yspennstate/brain-benefit-experiment-anchors). The rows of earlier tests not described here are kept in [results/earlier-tests](results/earlier-tests/), each with its own README.
 
+The evaluator scripts that ship with the framework, which of them run on a new install and what the rest need, are listed in [framework/docs/RUNNING_THE_EVALUATORS.md](framework/docs/RUNNING_THE_EVALUATORS.md).
+
 ## The tests at a glance
 
 | Test | Agents | Without the brain | With the brain | On the items where they differ |
