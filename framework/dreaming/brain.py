@@ -3132,6 +3132,7 @@ def _recall_body(query, n=8):
                             except TypeError:
                                 _mem_payload, _added, _gone = _bm25mod.refresh_in_memory(out=_bm25mod.INDEX)
                         if _mem_payload is not None or _ovl_bm is not None:
+                            os.environ["BM25_REFRESH_ORIGIN"] = "recall"   # bm25.py's refresh log names who started it
                             _pid = _bm25mod.spawn_detached_refresh()
                             print("  [bm25] index was %.0f min old: merged %d fresh memor%s (dropped %d) in memory;"
                                   " publish handed to a detached refresh%s"
