@@ -314,11 +314,44 @@ def _nothing_to_build(why):
     return 1
 
 
-def build():
-    prompt_counts = _prompt_terms()
+def _inputs(full=False):
+    """(prompt_counts, texts, vocab). With --incremental the inputs come from keyword_corpus_cache: only new or
+    edited memory files and the new tail of PROMPTS.jsonl are read. Any cache trouble falls back to the full
+    read, which is the original code path unchanged."""
+    if not full:
+        try:
+            import keyword_corpus_cache as kcc
+            texts, vocab, cst = kcc.corpus((MEM, os.path.join(MEM, "dreams")), SKIP, TOKEN)
+            counts, read_any, pst = kcc.prompt_terms(PROMPTS, TOKEN)
+            if not read_any:
+                counts = _prompt_terms()       # the transcripts fallback, as in the full read
+            print("inputs: incremental (files %d, +%d new, %d edited, %d gone; prompts %s %d bytes)"
+                  % (cst["files"], cst["added"], cst["changed"], cst["removed"], pst.get("mode"), pst.get("bytes", 0)))
+            return counts, texts, vocab
+        except Exception as exc:
+            print("inputs: cache failed (%r); full read" % (exc,))
+    texts, vocab = _corpus()
+    return _prompt_terms(), texts, vocab
+
+
+def verify():
+    """Build the inputs both ways and compare the digests the generation's source manifest records."""
+    import time
+    t = time.time(); a = _inputs(full=False); ti = time.time() - t
+    t = time.time(); b = _inputs(full=True); tf = time.time() - t
+    same = True
+    for label, x, y in (("prompt_terms", a[0], b[0]), ("corpus_search", a[1], b[1]), ("corpus_vocab", a[2], b[2])):
+        dx, dy = _mapping_digest(x), _mapping_digest(y)
+        print("%-14s %s %s %s" % (label, dx[:12], dy[:12], "same" if dx == dy else "DIFFERENT"))
+        same = same and dx == dy
+    print("incremental %.1fs, full %.1fs" % (ti, tf))
+    return 0 if same else 3
+
+
+def build(full=True):
+    prompt_counts, texts, vocab = _inputs(full)
     if not prompt_counts:
         return _nothing_to_build("no prompt corpus found")
-    texts, vocab = _corpus()
     if not texts:
         return _nothing_to_build("no memory corpus found")
 
@@ -419,4 +452,7 @@ def build():
 
 
 if __name__ == "__main__":
-    raise SystemExit(build())
+    if "--verify" in sys.argv:
+        raise SystemExit(verify())
+    # Incremental inputs are opt-in: run --verify once on your own brain first.
+    raise SystemExit(build(full="--incremental" not in sys.argv))
