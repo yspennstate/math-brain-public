@@ -153,6 +153,18 @@ Then run it with your model's command line, which reads the prompt on stdin:
 python three_arm.py --model-cmd "your-model-cli --read-stdin"
 ```
 
+If your model is only a chat window, write the prompts to a folder, paste each one into a fresh chat, and save
+the reply beside its prompt with `.reply.txt` in place of `.txt` (`prompts/q01_brain.txt` gets
+`prompts/q01_brain.reply.txt`). Then grade the folder:
+
+```
+python three_arm.py --write-prompts prompts/
+python three_arm.py --grade-replies prompts/
+```
+
+Twenty questions make sixty prompts, about an hour of pasting. A reply you did not save is named at the end and
+counts as a fail, so a half-finished folder still gives an honest score.
+
 You get three scores: **brain** (recall's results in the prompt), **docs** (every record pasted in) and **none**
 (the question alone). With thirty records, docs and brain should tie, because everything fits in a prompt. The
 none arm should fail almost everything. The brain arm starts to pull ahead once the store is too big to paste.
