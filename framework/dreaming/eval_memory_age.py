@@ -466,11 +466,10 @@ def main(argv=None):
     parser.add_argument("--timezone", default="UTC")
     args = parser.parse_args(argv)
 
-    if ZoneInfo is None:
-        print("eval_memory_age: DATA-GATED - Python zoneinfo is unavailable.")
-        return 2
     try:
-        tz = ZoneInfo(args.timezone)
+        # The shared resolver answers UTC without a time-zone database (Windows has none unless
+        # tzdata is installed) and names the fix for any other zone it cannot find.
+        tz = current_memory_date._trusted_timezone(args.timezone)
         as_of = date.fromisoformat(args.as_of) if args.as_of else datetime.now(tz).date()
     except (KeyError, ValueError) as exc:
         print("eval_memory_age: invalid date/timezone: %s" % exc)
