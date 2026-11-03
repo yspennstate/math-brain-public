@@ -39,6 +39,14 @@ the night's judgments, and runs `hook_liveness.py`, which reports any part of th
 Every step runs with its own time limit and its exit code checked, because a step that hangs holds the dream's
 lock and cancels the next dream, and a step that fails in silence is a step nobody notices for days.
 
+On a new install `hook_liveness.py` prints a long list of files marked MISSING and ends with ATTENTION. That
+is expected. Each MISSING line names the hook or dream step that writes the file, and the file appears once that
+hook has fired in a session or the first dream has run. The dream-commit lines read UNKNOWN until the brain
+folder is a git repository with a remote, and the dispatcher line names the command that signs its allowlist.
+A Stop-order failure is different: it means the hooks are not wired, and running `bootstrap/install.py` again
+with `--merge-settings` added wires them. Run the check again after the first week; a file still
+MISSING then belongs to a part that has stopped firing.
+
 ## Three kinds of dream
 
 The runner picks the kind from the hour (before 09:00 a filing dream, 09:00 to 16:00 a nap, after 16:00 a

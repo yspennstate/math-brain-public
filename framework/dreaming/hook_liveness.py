@@ -336,7 +336,10 @@ def main():
         # hold is that work_timer.py is in the dispatched list at all. Before this the checker read the
         # dispatcher entry itself as "work_timer.py is not final" on every wake - a permanent red verdict is
         # how a safety checker stops being read [[a_pass_needs_a_way_to_fail]].
-        _dispatched = len(_stop_order) == 1 and _stop_order[0] == "hook_dispatch.py"
+        # The settings template wires one stand-alone Stop hook (keep_working_after_compact.py) beside the
+        # dispatcher; the dispatched list is still where work_timer.py has to be.
+        _dispatched = "hook_dispatch.py" in _stop_order
+        _beside = [_s for _s in _stop_order if _s != "hook_dispatch.py"]
         if _dispatched:
             _list_path = os.path.join(HERE, "hook_dispatch_list.json")
             _list = json.load(io.open(_list_path, encoding="utf-8"))
@@ -349,6 +352,8 @@ def main():
                                   (" -> ".join(_dispatched_order) if _dispatched_order else "empty list"))
             _order_note = ("ok - Stop is dispatched in one process (%d hooks run, blocks aggregated), so order is "
                            "not load-bearing; work_timer.py present" % len(_dispatched_order))
+            if _beside:
+                _order_note += "; wired beside it: " + ", ".join(_beside)
         else:
             if not _stop_order or _stop_order[-1] != "work_timer.py":
                 _order_bad.append("Stop order unsafe: work_timer.py is not final (%s)" %
@@ -364,7 +369,13 @@ def main():
     # selftests in-process (no console child), and read the privacy-safe host telemetry independently.
     _codex_bad = []
     _codex_note = ""
+    # A brain that does not run Codex has no hooks.json; that is not a broken contract.
+    _codex_absent = not os.path.exists(CODEX_HOOKS)
+    if _codex_absent:
+        _codex_note = "Codex is not configured here (no %s); skipped" % CODEX_HOOKS
     try:
+        if _codex_absent:
+            raise StopIteration
         import contextlib as _contextlib
         import codex_warning_acceptance as _cwa
         import codex_reflex_hook as _crh
@@ -469,15 +480,17 @@ def main():
         if _missing_trust:
             _codex_bad.append("Codex hook trust incomplete (%d/%d trusted); owner must review /hooks" %
                               (len(_expected_trust) - len(_missing_trust), len(_expected_trust)))
+    except StopIteration:
+        pass
     except Exception as _exc:
         _codex_bad.append("Codex warning contract audit failed: %s" % type(_exc).__name__)
     print("\nCODEX STATIC WARNING CONTRACT + SHADOW HOST TELEMETRY:")
     if _codex_note:
-        print("  telemetry - " + _codex_note)
+        print("  " + ("" if _codex_absent else "telemetry - ") + _codex_note)
     if _codex_bad:
         for _problem in _codex_bad:
             print("  " + _problem)
-    else:
+    elif not _codex_absent:
         print("  ok - static contract, wrapper selftests, trust records, and telemetry present")
 
     # 2. DATA-FLOW (growth since last run)
