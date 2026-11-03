@@ -121,6 +121,12 @@ def main() -> int:
     args = ap.parse_args()
 
     if not os.path.exists(LIVE):
+        # A new brain has no prompt ledger until the prompt hook records its first prompt, and
+        # then there is nothing to shard. A missing ledger is a fault only when shards already
+        # exist, because then the ledger that fed them has gone.
+        if not (os.path.isdir(ARCHIVE) and any(f.endswith(".jsonl") for f in os.listdir(ARCHIVE))):
+            print("shard_prompt_archive: no prompt ledger yet, nothing to shard")
+            return 0
         print("shard_prompt_archive: no live ledger at %s" % LIVE, file=sys.stderr)
         return 2
 
