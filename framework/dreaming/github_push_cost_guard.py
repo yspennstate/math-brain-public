@@ -16,6 +16,16 @@ What this hook does, on every `git push` from a clone it is installed in:
      [no ci], [skip actions], [actions skip] - GitHub then starts no push or pull_request run), or when the pusher
      set ALLOW_CI_PUSH=1 because this push needs the test run (then read its result);
   3. otherwise it refuses, says why and how to fix it (git commit --amend to add [skip ci], or ALLOW_CI_PUSH=1).
+Two more checks ride on the same hook:
+  4. a push that leaves a repository nearly empty (a commit made from a --no-checkout clone) is refused unless
+     ALLOW_MASS_DELETE=1;
+  5. on the repositories named in BRAIN_PRIVATE_TEXT_REPOS (owner/name, comma-separated; meant for the PUBLIC copy
+     of a brain), every added line is searched for private text, and a hit refuses the push. The patterns are one
+     regular expression per line in the file named by BRAIN_PRIVATE_TEXT_PATTERNS (# starts a comment); without it
+     the default looks for home-directory paths and email addresses. Put your own names, private repository names,
+     client and project words in that file. ALLOW_PRIVATE_TEXT=1 lets a reviewed push through, logged.
+If paper_release_guard.py sits beside this file, it runs first and judges any paper the push adds to a public
+repository (declarations present, no line running into the margin).
 Pushes to public repositories and pushes that start no workflow pass untouched. Every decision is logged to
 github_push_cost_guard.log beside this file (repo, ref, decision; never a credential).
 
@@ -242,6 +252,85 @@ def mass_delete_check(remote_url, lines, env=None, cwd=None):
     return True, []
 
 
+DEFAULT_PRIVATE_PATTERNS = [
+    r"[A-Za-z]:[\\/]+Users[\\/]+[^\\/\s\"']+",    # a Windows home directory
+    r"(?<![\w.])/(home|Users)/[A-Za-z][\w.-]*/",      # a Linux or macOS home directory
+    r"[A-Za-z0-9._%+-]+@[A-Za-z0-9-]+(\.[A-Za-z0-9-]+)*\.[A-Za-z]{2,}",   # an email address
+]
+PRIVATE_TEXT_SCAN_CAP = 40 * 1024 * 1024        # bytes of diff read; past it the push is refused as unscanned
+
+
+def private_text_rx(env):
+    """The deny-list: BRAIN_PRIVATE_TEXT_PATTERNS names a file of regular expressions, one per line."""
+    path = str(env.get("BRAIN_PRIVATE_TEXT_PATTERNS", "")).strip()
+    pats = DEFAULT_PRIVATE_PATTERNS
+    if path:
+        with io.open(path, encoding="utf-8") as fh:
+            pats = [l.strip() for l in fh if l.strip() and not l.lstrip().startswith("#")]
+    return re.compile("|".join("(?:%s)" % p for p in pats), re.I) if pats else None
+
+
+def private_text_check(remote_url, lines, env=None, cwd=None):
+    """Refuse a push to a guarded public repository whose ADDED lines carry private text (home paths, private
+    addresses, whatever the pattern file lists). ALLOW_PRIVATE_TEXT=1 lets a reviewed push through (logged).
+    Written after a public brain's first commit copied whole working folders and the only gate looked for keys."""
+    env = os.environ if env is None else env
+    slug = repo_slug(remote_url)
+    guarded = {s.strip() for s in str(env.get("BRAIN_PRIVATE_TEXT_REPOS", "")).split(",") if s.strip()}
+    if slug not in guarded:
+        return True, []
+    if str(env.get("ALLOW_PRIVATE_TEXT", "")).strip() == "1":
+        log("allow ALLOW_PRIVATE_TEXT %s" % slug)
+        return True, ["[push-privacy] ALLOW_PRIVATE_TEXT=1: added text on %s was not checked." % slug]
+    try:
+        rx = private_text_rx(env)
+    except (OSError, re.error) as exc:
+        log("REFUSE private-text %s: pattern file unreadable %r" % (slug, exc))
+        return False, ["[push-privacy] REFUSED: the pattern file in BRAIN_PRIVATE_TEXT_PATTERNS could not be used "
+                       "(%r); nothing reaches %s unscanned." % (exc, slug)]
+    if rx is None:
+        return True, []
+    for line in lines:
+        parts = line.split()
+        if len(parts) != 4:
+            continue
+        local_ref, local_sha, remote_ref, remote_sha = parts
+        if local_sha == ZERO:
+            continue
+        base = push_base(local_sha, remote_ref, remote_sha, cwd=cwd)
+        args = ["diff", "-U0", "--no-color", "--no-renames", "--no-ext-diff", base, local_sha] if base else \
+            ["show", "-U0", "--no-color", "--format=", local_sha]
+        p = subprocess.run(["git"] + args, cwd=cwd, stdout=subprocess.PIPE, stderr=subprocess.DEVNULL,
+                           creationflags=0x08000000 if os.name == "nt" else 0)
+        if p.returncode != 0:
+            log("REFUSE private-text %s %s: diff failed" % (slug, remote_ref))
+            return False, ["[push-privacy] REFUSED: could not read the diff of this push to %s; nothing private may "
+                           "reach it unscanned." % slug]
+        if len(p.stdout) > PRIVATE_TEXT_SCAN_CAP:
+            log("REFUSE private-text %s %s: diff %d bytes over cap" % (slug, remote_ref, len(p.stdout)))
+            return False, ["[push-privacy] REFUSED: this push to %s adds %d MB, more than the %d MB the privacy scan "
+                           "reads. Push it in smaller pieces." % (slug, len(p.stdout) >> 20,
+                                                                  PRIVATE_TEXT_SCAN_CAP >> 20)]
+        hits, path = [], "?"
+        for raw in p.stdout.decode("utf-8", "replace").split("\n"):
+            if raw.startswith("+++ "):
+                path = raw[6:] if raw.startswith("+++ b/") else raw[4:]
+                continue
+            if raw.startswith("+") and not raw.startswith("+++"):
+                m = rx.search(raw)
+                if m:
+                    hits.append("    %s: %r" % (path, m.group(0)))
+                    if len(hits) >= 12:
+                        break
+        if hits:
+            log("REFUSE private-text %s %s: %d hit(s), first %s" % (slug, remote_ref, len(hits), hits[0].strip()))
+            return False, ["[push-privacy] REFUSED: this push to the public repository %s adds private text:\n%s\n"
+                           "Remove it and push again. If a hit is reviewed and safe (a deny-list pattern quoted in "
+                           "documentation, say): ALLOW_PRIVATE_TEXT=1 git push ..." % (slug, "\n".join(hits))]
+        log("allow private-text-clean %s %s" % (slug, remote_ref))
+    return True, []
+
+
 def decide(remote_url, lines, env=None, cwd=None):
     """Return (allow, messages). lines are the pre-push stdin lines."""
     env = os.environ if env is None else env
@@ -250,6 +339,10 @@ def decide(remote_url, lines, env=None, cwd=None):
     ok, deletion_msgs = mass_delete_check(remote_url, lines, env=env, cwd=cwd)
     if not ok:
         return False, deletion_msgs
+    ok, privacy_msgs = private_text_check(remote_url, lines, env=env, cwd=cwd)
+    msgs.extend(privacy_msgs)
+    if not ok:
+        return False, msgs
     if slug in PUBLIC:
         log("allow public %s" % slug)
         return True, msgs
@@ -413,6 +506,41 @@ def selftest():
         head = g("rev-parse", "HEAD", cwd=clone)
         check("mass delete: the commit from a --no-checkout clone is refused",
               bool(head) and not mass_delete_check(url, line(head), {}, cwd=clone)[0])
+
+        # Private text on a guarded public repository, measured on the same temporary repository.
+        def commit_text(text, parent=base):
+            b = g("hash-object", "-w", "--stdin", inp=text)
+            rows = "".join("100644 blob %s\tf%05d.txt\n" % (blob, i) for i in range(1000))
+            return g("commit-tree", g("mktree", inp=rows + "100644 blob %s\tnotes.md\n" % b), "-p", parent,
+                     "-m", "notes")
+        pub = "https://github.com/example-org/brain-public.git"
+        guard = {"BRAIN_PRIVATE_TEXT_REPOS": "example-org/brain-public"}
+        # the fixture path is assembled so that this file itself carries no home path
+        home_leak = commit_text("see " + "C:" + "/Users/" + "alice/work/run.log for the run\n")
+        mail_leak = commit_text("ask jane.doe@example.com\n")
+        clean = commit_text("a theorem and its proof\n")
+        check("private text: a home path on the guarded repository is refused",
+              not private_text_check(pub, line(home_leak), guard, cwd=repo)[0])
+        check("private text: an email address is refused", not private_text_check(pub, line(mail_leak), guard, cwd=repo)[0])
+        check("private text: clean added text passes", private_text_check(pub, line(clean), guard, cwd=repo)[0])
+        check("private text: an unguarded repository is not scanned",
+              private_text_check(pub, line(home_leak), {}, cwd=repo)[0])
+        check("private text: ALLOW_PRIVATE_TEXT=1 lets it through",
+              private_text_check(pub, line(home_leak), dict(guard, ALLOW_PRIVATE_TEXT="1"), cwd=repo)[0])
+        pfile = os.path.join(tmp, "patterns.txt")
+        with io.open(pfile, "w", encoding="utf-8") as fh:
+            fh.write("# project words\n\\btheorem\\b\n")
+        own = dict(guard, BRAIN_PRIVATE_TEXT_PATTERNS=pfile)
+        check("private text: a pattern file replaces the defaults (its word is refused)",
+              not private_text_check(pub, line(clean), own, cwd=repo)[0])
+        check("private text: a pattern file replaces the defaults (a home path now passes)",
+              private_text_check(pub, line(home_leak), own, cwd=repo)[0])
+        check("private text: a missing pattern file refuses rather than skipping the scan",
+              not private_text_check(pub, line(clean), dict(guard, BRAIN_PRIVATE_TEXT_PATTERNS=pfile + ".no"),
+                                     cwd=repo)[0])
+        PUBLIC.add("example-org/brain-public")
+        check("private text: decide refuses a public-repository push that leaks",
+              not decide(pub, line(home_leak), env=guard, cwd=repo)[0])
     finally:
         shutil.rmtree(tmp, ignore_errors=True)
     print("selftest %s: %d/%d" % ("ok" if all(ok) else "FAILED", sum(ok), len(ok)))
@@ -428,6 +556,18 @@ def main():
     try:
         remote_url = sys.argv[2] if len(sys.argv) > 2 else (sys.argv[1] if len(sys.argv) > 1 else "")
         lines = [l for l in sys.stdin.read().splitlines() if l.strip()]
+        # Optional paper guard: if paper_release_guard.py sits beside this file, a paper added to a public
+        # repository must carry its declarations and fit its margins. It runs first and writes its own messages.
+        if os.path.exists(os.path.join(HERE, "paper_release_guard.py")):
+            try:
+                sys.path.insert(0, HERE)
+                import paper_release_guard
+                if not paper_release_guard.pre_push(remote_url, lines):
+                    return 1
+            except Exception as exc:
+                log("paper guard ERROR (push not judged for papers): %r" % (exc,))
+                sys.stderr.write("[paper-guard] guard error %r - run paper_release_guard.py check <paper> by "
+                                 "hand.\n" % (exc,))
         allow, msgs = decide(remote_url, lines)
         for m in msgs:
             sys.stderr.write(m + "\n")
