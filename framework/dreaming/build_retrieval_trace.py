@@ -506,6 +506,10 @@ def main(argv=None, transcript_dir=None, output=None, as_of=None):
         print("build_retrieval_trace: source integrity failure; prior trace preserved:", exc)
         return 2
     if not stats["transcript_files"]:
+        if not os.path.exists(out):
+            # A new brain: no session has been recorded yet and there is no trace to keep.
+            print("build_retrieval_trace: no transcripts yet (new brain); nothing to trace")
+            return 0
         print("build_retrieval_trace: no transcript files found; prior trace preserved")
         return 2
     if stats["open_errors"]:
