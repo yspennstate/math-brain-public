@@ -110,4 +110,7 @@ def main():
 
 
 if __name__ == "__main__":
+    if "--help" in sys.argv[1:] or "-h" in sys.argv[1:]:
+        print(__doc__)
+        sys.exit(0)
     sys.exit(main())
