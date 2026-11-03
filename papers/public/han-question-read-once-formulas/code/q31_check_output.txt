@@ -1,0 +1,68 @@
+AND_n: Q_k vs 2 - 2^(2-n)
+  n=1 Q=0 ok
+  n=2 Q=1 ok
+  n=3 Q=3/2 ok
+  n=4 Q=7/4 ok
+  n=5 Q=15/8 ok
+  n=6 Q=31/16 ok
+  n=7 Q=63/32 ok
+  n=8 Q=127/64 ok
+tribes T_{s,w}: every coordinate vs formula
+  s=1 w=2 n= 2 Q=1.000000 formula=1.000000 ok
+  s=1 w=3 n= 3 Q=1.500000 formula=1.500000 ok
+  s=1 w=4 n= 4 Q=1.750000 formula=1.750000 ok
+  s=1 w=5 n= 5 Q=1.875000 formula=1.875000 ok
+  s=2 w=1 n= 2 Q=1.000000 formula=1.000000 ok
+  s=2 w=2 n= 4 Q=1.000000 formula=1.000000 ok
+  s=2 w=3 n= 6 Q=1.500000 formula=1.500000 ok
+  s=2 w=4 n= 8 Q=1.750000 formula=1.750000 ok
+  s=2 w=5 n=10 Q=1.875000 formula=1.875000 ok
+  s=3 w=1 n= 3 Q=1.500000 formula=1.500000 ok
+  s=3 w=2 n= 6 Q=1.312500 formula=1.312500 ok
+  s=3 w=3 n= 9 Q=1.500000 formula=1.500000 ok
+  s=3 w=4 n=12 Q=1.750000 formula=1.750000 ok
+  s=3 w=5 n=15 Q=1.875000 formula=1.875000 ok
+  s=4 w=1 n= 4 Q=1.750000 formula=1.750000 ok
+  s=4 w=2 n= 8 Q=1.734375 formula=1.734375 ok
+  s=4 w=3 n=12 Q=1.500000 formula=1.500000 ok
+  s=4 w=4 n=16 Q=1.750000 formula=1.750000 ok
+  s=4 w=5 n=20 Q=1.875000 formula=1.875000 ok
+  s=5 w=1 n= 5 Q=1.875000 formula=1.875000 ok
+  s=5 w=2 n=10 Q=2.050781 formula=2.050781 ok
+  s=5 w=3 n=15 Q=1.500000 formula=1.500000 ok
+  s=5 w=4 n=20 Q=1.750000 formula=1.750000 ok
+  s=6 w=1 n= 6 Q=1.937500 formula=1.937500 ok
+  s=6 w=2 n=12 Q=2.288086 formula=2.288086 ok
+  s=6 w=3 n=18 Q=1.704819 formula=1.704819 ok
+  s=7 w=1 n= 7 Q=1.968750 formula=1.968750 ok
+  s=7 w=2 n=14 Q=2.466064 formula=2.466064 ok
+  s=8 w=1 n= 8 Q=1.984375 formula=1.984375 ok
+  s=8 w=2 n=16 Q=2.599548 formula=2.599548 ok
+read-once NOR trees: every coordinate vs closed form
+  fans=(2,)           n= 2 Q=1.000000 closed=1.000000 ok
+  fans=(3,)           n= 3 Q=1.500000 closed=1.500000 ok
+  fans=(2, 2)         n= 4 Q=1.000000 closed=1.000000 ok
+  fans=(3, 2)         n= 6 Q=1.500000 closed=1.500000 ok
+  fans=(2, 3)         n= 6 Q=1.312500 closed=1.312500 ok
+  fans=(4, 2)         n= 8 Q=1.750000 closed=1.750000 ok
+  fans=(2, 4)         n= 8 Q=1.734375 closed=1.734375 ok
+  fans=(3, 3)         n= 9 Q=1.500000 closed=1.500000 ok
+  fans=(5, 3)         n=15 Q=1.875000 closed=1.875000 ok
+  fans=(3, 5)         n=15 Q=1.500000 closed=1.500000 ok
+  fans=(2, 2, 2)      n= 8 Q=1.984375 closed=1.984375 ok
+  fans=(2, 2, 3)      n=12 Q=2.415039 closed=2.415039 ok
+  fans=(3, 2, 2)      n=12 Q=2.217773 closed=2.217773 ok
+  fans=(2, 3, 2)      n=12 Q=1.975586 closed=1.975586 ok
+  fans=(2, 2, 4)      n=16 Q=2.603455 closed=2.603455 ok
+  fans=(4, 2, 2)      n=16 Q=2.175720 closed=2.175720 ok
+  fans=(4, 4)         n=16 Q=1.750000 closed=1.750000 ok
+  fans=(2, 8)         n=16 Q=2.599548 closed=2.599548 ok
+  fans=(8, 2)         n=16 Q=1.984375 closed=1.984375 ok
+  fans=(2, 2, 2, 2)   n=16 Q=1.984375 closed=1.984375 ok
+  fans=(2, 2, 5)      n=20 Q=2.685886 closed=2.685886 ok
+  fans=(4, 5)         n=20 Q=1.750000 closed=1.750000 ok
+closed form on deep trees (fan-in least with p_l <= 1/4):
+  L= 1 max fan-in 2 log2 n=1.0 Q=1.0000
+  L= 2 max fan-in 5 log2 n=3.3 Q=2.0508
+  L= 5 max fan-in 7 log2 n=11.3 Q=5.4693
+TOTAL MISMATCHES 0

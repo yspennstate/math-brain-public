@@ -1,0 +1,17 @@
+1. constant P = 1 - delta, run until I < 1e-12 (sup over the run, final value):
+   delta=0.3    sup 4.831863686  final 4.831863686  (pi^2/2 - final = 0.1029)
+   delta=0.1    sup 4.924988103  final 4.924988103  (pi^2/2 - final = 0.009814)
+   delta=0.03   sup 4.933963793  final 4.933963793  (pi^2/2 - final = 0.0008384)
+   delta=0.01   sup 4.934710406  final 4.934710406  (pi^2/2 - final = 9.179e-5)
+   delta=0.003  sup 4.934793981  final 4.934793981  (pi^2/2 - final = 8.219e-6)
+   delta=0.001  sup 4.934801289  final 4.934801289  (pi^2/2 - final = 9.119e-7)
+   constant P elsewhere in (0,1): [('0.2', '3.850422'), ('0.4', '4.414056'), ('0.5', '4.600408'), ('0.6', '4.736935'), ('0.8', '4.892451')]
+2. series sum = 2.934802200544679309417245, pi^2/2 - 2 = 2.934802200544679309417245, diff 3.87e-121;  quadrature of Phi(1,b^2)/b^2 on (0,1) = 4.9348022005447, pi^2/2 = 4.9348022005447
+3. beam prefix alone: sup 4.770233591
+   beam prefix [: 0] then P = 1 - 0.003 tail: sup 4.934793981
+   beam prefix [: 1] then P = 1 - 0.003 tail: sup 4.86698675
+   beam prefix [: 2] then P = 1 - 0.003 tail: sup 4.832701341
+   beam prefix [: 4] then P = 1 - 0.003 tail: sup 4.763205323
+   beam prefix [: 8] then P = 1 - 0.003 tail: sup 4.770072072
+   beam prefix [:30] then P = 1 - 0.003 tail: sup 4.770233591
+   near-1 then a moderate P, then near-1 again: 4.934759517
