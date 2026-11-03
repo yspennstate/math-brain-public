@@ -12,6 +12,11 @@
    python bootstrap/install.py --project-dir C:\Users\<you> --timezone <tz> --apply
    ```
 
+   `--timezone` takes `UTC` (the default) or an IANA name such as `Europe/London`. Python on
+   Windows has no time-zone database of its own, so any name other than UTC needs
+   `python -m pip install tzdata` first; without it the nightly dream stops at its agenda step
+   and says so in its log.
+
    This copies the machinery into the standard layout (`~/.claude/dreaming`,
    `~/.claude/fleet`, `~/CrashGuard`, ...), expands the install tokens, creates the
    state directories, makes `~/brain-repo` with the mesh, delegation, resilience,
