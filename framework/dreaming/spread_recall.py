@@ -81,7 +81,7 @@ EMB = os.path.join(DR, "memory_embeddings.npz")   # optional semantic sidecar (b
 EMB_AUTHORITY = os.path.join(DR, ".embedding_current.json")
 EXPECTED_EMB_MODEL = "BAAI/bge-small-en-v1.5"
 MW = os.path.join(DR, "mistake_weights.tsv")      # slug -> severity (build_mistake_weights.py)
-KW = os.path.join(DR, "keyword_nodes.tsv")        # owner topic nodes (build_keyword_nodes.py)
+KW = os.path.join(DR, "keyword_nodes.tsv")        # user topic nodes (build_keyword_nodes.py)
 KWG = os.path.join(DR, "keyword_graph_edges.tsv") # the full topic graph (offline/analysis view)
 KWREL = os.path.join(DR, "keyword_related.tsv")   # subject-to-subject only; the live path reads this
 
@@ -180,13 +180,13 @@ MW_SCORE_TILT = 0.10   # score x(1 + tilt*sev): a big scar wins ties, never floo
 #       neutral-or-better). Combined with mistake-first surfacing, the session's total vs the
 #       morning baseline on the same prompts: 68 -> 138 fires = 2.03x triggering. SHIPPED.
 CONNECTION_GAIN = 2.0   # divides ACT_FLOOR at the speak gate; 1.0 restores pre-07-25 behaviour
-# OWNER TOPIC NODES x3 (owner, 2026-07-25: the words he uses - "microsoft volume", "aws",
-# "levrage" - are nodes, and when he is on one of them the mistakes and information under it
-# should surface ~3x more). keyword_nodes.tsv maps his vocabulary to member memories and maps
-# his misspellings to the corpus spelling (levrage -> leverage), so the boost survives his
+# USER TOPIC NODES x3: the words the user types about their work are nodes, and when a prompt
+# is on one of them the mistakes and information under it surface ~3x more. keyword_nodes.tsv
+# maps the user's vocabulary to member memories and maps reviewed misspellings to the corpus
+# spelling (recieve -> receive, from keyword_aliases.tsv), so the boost survives the user's
 # typing. The gain is differential, never global: only members of a topic the CURRENT text
 # names are lifted, which is the shape that worked for mistake severity and the opposite of
-# the uniform walk gain that measured WORSE. A broad topic (grid: 372 members) is capped to
+# the uniform walk gain that measured WORSE. A broad topic (one had 372 members) is capped to
 # its most salient TOPIC_TOP_K, so naming a big subject cannot light the whole corpus flat.
 KEYWORD_GAIN = 3.0        # a MISTAKE inside a named topic
 KEYWORD_INFO_GAIN = 1.7   # ordinary information inside a named topic
@@ -591,8 +591,8 @@ def _topic_overlay(words, sal, members, aliases, hit, weights=None, related=None
 def _topic_slugs(words, sal):
     """The slugs under the topics this text names, capped per topic by salience.
 
-    Matching accepts his spelling through the alias map, so 'levrage' activates the leverage
-    topic. Returns a set; membership in it is what earns the KEYWORD_GAIN in the walk."""
+    Matching accepts the user's spelling through the alias map, so 'recieve' activates the
+    receive topic. Returns a set; membership in it is what earns the KEYWORD_GAIN in the walk."""
     members, aliases, hit, _weights, _related, _generation = _topic_context(words)
     if not members:
         return set()
@@ -1071,7 +1071,7 @@ def main():
             # it is consuming the stale content right now, so the flag is unambiguous by construction.
             # (The prompt-path cousin was replay-evaled the same day and HELD: 8/10 of its fires were
             # weak-topical BM25 noise - eval_premise_check.py carries the verdict. Trace base rate for
-            # this path: 6/459 memory reads, 4 of them the pre-correction levered-grid memory.) Emits
+            # this path: 6/459 memory reads, 4 of them one memory that had since been corrected.) Emits
             # the correction pointer instead of a generic associate for this event - one output per hook.
             corr = _load_superseded().get(slug)
             if corr and _fresh(data.get("session_id") or "", "stale|" + slug):
