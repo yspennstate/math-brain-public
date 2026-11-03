@@ -12,7 +12,7 @@ memory corpus lives under <home>/.claude/projects/<slug>/memory where <slug>
 is that path with ':' and path separators replaced by '-' (the transcript-dir
 convention used by the agent runtime).
 """
-import argparse, io, json, os, shutil, sys, time
+import argparse, io, json, os, re, shutil, sys, time
 
 REPO = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -338,12 +338,28 @@ def main():
             if not os.path.exists(p):
                 io.open(p, "w", encoding="utf-8", newline="\n").write(body)
         seeds = os.path.join(REPO, "bootstrap", "templates", "seed_memories")
+        written = []
         if os.path.isdir(seeds):
-            for f in os.listdir(seeds):
+            for f in sorted(os.listdir(seeds)):
                 p = os.path.join(mem, f)
                 if not os.path.exists(p):
                     t = io.open(os.path.join(seeds, f), encoding="utf-8").read()
                     io.open(p, "w", encoding="utf-8", newline="\n").write(expand(t, tok))
+                    written.append(f)
+        # MEMORY.md is the index every session loads and the dream reads; a memory missing from it
+        # is invisible to the wake. The starter memories were written without index lines, so a new
+        # brain began with an empty index and the dream's recent-memory summary failed on it.
+        index = os.path.join(mem, "MEMORY.md")
+        have = io.open(index, encoding="utf-8").read()
+        add = []
+        for f in written:
+            if not f.endswith(".md") or "](%s)" % f in have:
+                continue
+            m = re.search(r"^description:[ \t]*(.+?)[ \t]*$", io.open(os.path.join(mem, f), encoding="utf-8").read(), re.M)
+            add.append("- [%s](%s) - %s\n" % (f, f, m.group(1).strip("\"'") if m else f[:-3].replace("_", " ")))
+        if add:
+            lead = "" if (not have or have.endswith("\n")) else "\n"
+            io.open(index, "a", encoding="utf-8", newline="\n").write(lead + "".join(add))
     print(f"  memory corpus: {mem}")
 
     # The agent instructions: how to wake, recall, keep the checklist and read a compaction.
