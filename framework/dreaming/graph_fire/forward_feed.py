@@ -99,7 +99,7 @@ def forward_feed(text, tool_name=None, session=None):
                 "gut": ("This conditions/filters on a FEATURE value in code (a df[...] / .loc / where by "
                         "vix/regime/vol/return/signal) with no 'regime'/'filter' word for the gut to catch. "
                         "Ask: could I have known this in real time? Peeking at data the moment wouldn't have "
-                        "had is the causal-lookahead class - the May regime-VIX lookahead was 31 backlinks."),
+                        "had is the causal-lookahead class - one leaked regime filter cost 31 backlinks."),
                 "why": "code-level conditioning on a feature",
             })
         # 3. resembles a command that just failed
