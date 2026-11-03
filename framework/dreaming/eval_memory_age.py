@@ -625,6 +625,11 @@ def main(argv=None):
     if len(gold) < 100 or strict_stats["n"] < 0.75 * len(gold):
         print("\nVERDICT: DATA-GATED - exact-create evidence or strict coverage is insufficient; "
               "do not change live age behavior.")
+        if passed == len(tests):
+            # Not a failure: the code's contracts hold and the gate waits for history a young
+            # brain does not have yet. A broken contract still exits 1.
+            print("(synthetic contracts pass; the ship gate needs more recorded history)")
+            return 0
     else:
         print("\nVERDICT: HOLD - the strict resolver failed an accuracy or contract gate; "
               "do not change live age behavior.")
