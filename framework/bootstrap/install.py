@@ -319,6 +319,20 @@ def main():
         io.open(flag, "w", encoding="utf-8").write("armed by bootstrap/install.py\n")
     print(f"  hook dispatcher flag: {flag}")
 
+    # The heed and ack gates are live by default and their HEED_ENABLED / ACK_ENABLED files
+    # are informational (graph_fire/enforcement.py): deleting one does not turn a gate off. The
+    # nightly regression gate still checks that both exist, so a missing one shows up as drift.
+    # A fresh install writes them here; without them the first dream fails that check.
+    gf = os.path.join(dreaming, "graph_fire")
+    for name, gate in (("HEED_ENABLED", "heed"), ("ACK_ENABLED", "ack")):
+        p = os.path.join(gf, name)
+        if a.apply and os.path.isdir(gf) and not os.path.exists(p):
+            io.open(p, "w", encoding="utf-8").write(
+                "LIVE. Informational marker only, written by bootstrap/install.py.\n"
+                "Deleting this file does not disable the %s gate; see graph_fire/enforcement.py.\n"
+                % gate)
+    print(f"  gate markers: {gf}")
+
     # Eleven dreaming scripts - brain.py, bm25.py, dream.py, spread_recall.py and the health
     # checks - carry no {{BRAIN_SLUG}} token and used to derive the corpus name from the HOME
     # directory at runtime. That agrees with slug_for(project_dir) only when the project
