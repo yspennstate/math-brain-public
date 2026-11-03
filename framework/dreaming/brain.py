@@ -47,6 +47,16 @@ from pathlib import Path
 
 DR = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, DR)
+if __name__ == "__main__" and len(sys.argv) > 1 and sys.argv[1] == "recall":
+    # A resident server (brain_recall_server.py) answers recall with its built state warm.
+    # Any failure falls through to the cold path below; BRAIN_RECALL_SERVER=0 turns it off.
+    try:
+        import brain_recall_client as _brc
+        _brc_rc = _brc.run(sys.argv[1:])
+    except Exception:
+        _brc_rc = None
+    if _brc_rc is not None:
+        sys.exit(_brc_rc)
 import spread_recall as sr
 import brain_node_documents as node_docs
 from supersession import SLUG_RX, active_supersessions, load_map, resolve as resolve_supersession
