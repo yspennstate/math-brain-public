@@ -318,12 +318,29 @@ try:
                  if s in mems and not mems[s]["transient"] and _tier.get(s) != "unconscious"]
         if _keep:
             _V = _vecs[_keep]
-            _cal = (_V @ _V.T - _bias) / (1.0 - _bias)
-            _iu = _np.triu_indices(len(_keep), 1)
-            _ord = _np.argsort(-_cal[_iu])
-            for _k in _ord[:4000]:
-                _i, _j = int(_iu[0][_k]), int(_iu[1][_k])
-                _c = float(_cal[_i, _j])
+            # Row blocks over columns j >= i, keeping only the best 4000 pairs above the cut. The full
+            # Gram over ~50k rows was 9.9 GB a copy plus 19.7 GB of triu indices; its MemoryError fell
+            # into the except below, so this list came back empty every night (found 3 Nov 2026).
+            # Same pair set as the full matrix (float32 noise ~2e-6); ties go row-major.
+            _cut = _np.float32(0.72 * (1.0 - _bias) + _bias)       # cal >= 0.72  <=>  dot >= _cut
+            _I = _np.empty(0, _np.int64); _J = _np.empty(0, _np.int64); _D = _np.empty(0, _V.dtype)
+            for _s in range(0, len(_keep), 1024):
+                _blk = _V[_s:_s + 1024] @ _V[_s:].T
+                _r, _cc = _np.nonzero(_blk >= _cut)
+                _m = _cc > _r
+                _r, _cc = _r[_m], _cc[_m]
+                _I = _np.concatenate([_I, _s + _r]); _J = _np.concatenate([_J, _s + _cc])
+                _D = _np.concatenate([_D, _blk[_r, _cc]])
+                if len(_D) > 16000:
+                    _kth = _np.partition(_D, len(_D) - 4000)[len(_D) - 4000]
+                    _m = _D >= _kth
+                    _I, _J, _D = _I[_m], _J[_m], _D[_m]
+                    _cut = max(_cut, _kth)
+                del _blk
+            _C = (_D - _bias) / (1.0 - _bias)
+            for _k in _np.lexsort((_J, _I, -_C))[:4000]:
+                _i, _j = int(_I[_k]), int(_J[_k])
+                _c = float(_C[_k])
                 if _c < 0.72 or len(sem_assoc) >= 10:
                     break
                 _a, _b = _slugs[_keep[_i]], _slugs[_keep[_j]]
@@ -337,8 +354,9 @@ try:
                 if _bn in _at or _an in _bt:
                     continue
                 sem_assoc.append((_c, _a, _b))
-except Exception:
+except Exception as _e:
     sem_assoc = []
+    sys.stderr.write("dream: semantic associations skipped: %s: %s\n" % (type(_e).__name__, _e))
 
 # ---- 3. staleness candidates ----
 stale = []
