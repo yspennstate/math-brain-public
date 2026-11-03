@@ -1,26 +1,26 @@
 #!/usr/bin/env python3
-"""build_keyword_nodes.py - the owner's working vocabulary as first-class topic nodes.
+"""build_keyword_nodes.py - the user's working vocabulary as first-class topic nodes.
 
-His 07-25 ask: the words he actually uses - "microsoft volume", "aws", "levrage" - should be
-NODES, and when he is talking about one of them the mistakes and information under it should
-surface about 3x more. Two things were missing for that. There were no keyword nodes at all
-(keyword_edges.tsv holds 8 memory-to-memory edges mined from shared terms, not a topic layer),
-and nothing connected HIS spelling to the corpus's spelling: he types "levrage", "microsfot",
-"voluem", and the memories say leverage, microsoft, volume, so a literal match finds nothing.
+The words a user actually types about their work should be NODES, so that when a prompt is
+about one of them the mistakes and information under it surface about 3x more. Two things are
+needed for that: keyword nodes (keyword_edges.tsv holds memory-to-memory edges mined from
+shared terms, not a topic layer), and a bridge from the user's spelling to the corpus's
+spelling: someone who types "recieve" will not match memories that say "receive".
 
 This builds one transactional generation containing keyword_nodes.tsv, keyword_graph_edges.tsv,
-and keyword_related.tsv. Alias rows are limited to spellings the owner explicitly supplied as
-examples; a shape-only spell guess can silently rewrite an intentional word.
+and keyword_related.tsv. Alias rows come only from keyword_aliases.tsv, reviewed spellings the
+user was seen to type; a shape-only spell guess can silently rewrite an intentional word.
 
   keyword \t slug \t weight \t kind        kind = member | alias
 
 Sources, all already in the brain - no new judgment, no hand-curation:
-  - HIS prompts (memory/prompts/PROMPTS.jsonl, else the session transcripts) supply the
-    candidate vocabulary. A term he never types is not his keyword, however common it is.
+  - The user's prompts (memory/prompts/PROMPTS.jsonl, else the session transcripts) supply the
+    candidate vocabulary. A term the user never types is not their keyword, however common.
   - The memory index supplies membership: a memory whose index line or slug carries the term
     is a member of that keyword.
-  - A small reviewed map supplies the misspelling bridge for the owner's named examples. The
-    live path never invents a correction from spelling shape alone.
+  - A small reviewed map (keyword_aliases.tsv, one "misspelling<TAB>word" per line, optional)
+    supplies the misspelling bridge for spellings the user has actually been seen to type.
+    The live path never invents a correction from spelling shape alone.
 
 Bounds that keep a topic node meaningful: MIN_MEMBERS (a term matching one memory is that
 memory, not a topic), MAX_MEMBERS (a term matching half the corpus is a stopword with a job),
@@ -77,23 +77,41 @@ GRAPH_MIN_SHARED = 3        # two subjects need real overlap to be called relate
 GRAPH_MIN_JACCARD = 0.06
 
 MIN_MEMBERS = 2
-# His biggest topics are the point of this layer, so the cap is generous: at a ~2,700 memory
-# corpus, 'leverage' reaches 86 members and 'grid' 372, and a 60-cap silently excluded exactly
-# the words he named. Breadth is handled at recall instead, where only the top members by
+# The user's biggest topics are the point of this layer, so the cap is generous: in a ~2,700
+# memory corpus the main subjects reached 86 and 372 members, and a 60-cap silently excluded
+# exactly the words that mattered most. Breadth is handled at recall instead, where only the
+# top members by
 # salience are boosted, so a broad topic cannot flatten the walk by lighting everything at once.
 MAX_MEMBERS = 400
-MIN_PROMPT_COUNT = 3        # he has to have used the word more than once in passing
-MIN_LEN = 3                 # 'aws' is one of his keywords; anything shorter is noise
+MIN_PROMPT_COUNT = 3        # the user has to have used the word more than once in passing
+MIN_LEN = 3                 # three-letter acronyms can be real topics; anything shorter is noise
 MIN_CORPUS_COUNT = 3        # ...and the corpus has to know it, or it is not a shared topic
 
-# Owner-observed examples from the request that created this layer (2026-07-25). This is a
-# reviewed semantic assertion, unlike shape-only guesses such as bride->bridge or arise->raise.
-# Adding an alias requires another explicit owner-observed spelling and a regression control.
-REVIEWED_ALIASES = {
-    "levrage": "leverage",
-    "microsfot": "microsoft",
-    "voluem": "volume",
-}
+# Reviewed misspellings: spellings the user has actually been seen to type, each mapped to the
+# word the corpus uses. This is a reviewed semantic assertion, unlike shape-only guesses such as
+# bride->bridge or arise->raise. The map lives in keyword_aliases.tsv beside this script, one
+# "misspelling<TAB>word" per line, # comments allowed; with no file there are no aliases. Add a
+# line only for a spelling you have seen the user type, and re-run the regression gate.
+ALIASES_FILE = os.path.join(os.path.dirname(os.path.abspath(__file__)), "keyword_aliases.tsv")
+
+
+def _reviewed_aliases(path=ALIASES_FILE):
+    out = {}
+    try:
+        with io.open(path, encoding="utf-8") as f:
+            for line in f:
+                line = line.split("#", 1)[0].strip()
+                if not line:
+                    continue
+                parts = line.split("\t")
+                if len(parts) == 2 and parts[0].strip() and parts[1].strip():
+                    out[parts[0].strip().lower()] = parts[1].strip().lower()
+    except OSError:
+        pass
+    return out
+
+
+REVIEWED_ALIASES = _reviewed_aliases()
 TOKEN = re.compile(r"[a-zA-Z][a-zA-Z0-9_]{2,}")
 SKIP = {"MEMORY", "INDEX_ARCHIVE", "PREDICTIONS", "STATE_OF_MIND", "OPEN_QUESTIONS",
         "AUTOBIOGRAPHY", "MODEL_OF_PARTNER", "FASCINATIONS", "THE_OTHER_MINDS", "MISTAKES",
@@ -125,7 +143,7 @@ def _mapping_digest(mapping):
 
 
 def _prompt_terms():
-    """Counter of the terms HE types. PROMPTS.jsonl first; transcripts as the fallback."""
+    """Counter of the terms the user types. PROMPTS.jsonl first; transcripts as the fallback."""
     counts = Counter()
     read_any = False
     try:
@@ -170,8 +188,8 @@ def _corpus():
 
     Membership must be read from the memory FILES, not MEMORY.md: the index is compacted to
     the newest entries (~60 lines against a ~2,700 memory corpus), so matching against it made
-    'volume', 'microsoft' and 'grid' look like one-memory terms - measured, and the reason this
-    function exists. The vocabulary is what decides whether one of his spellings is a real word
+    common subject words look like one-memory terms - measured, and the reason this function
+    exists. The vocabulary is what decides whether one of the user's spellings is a real word
     or a typo, so it too must come from the whole corpus.
     """
     texts, vocab = {}, Counter()
@@ -221,7 +239,8 @@ def _graph_artifacts(rows):
 
       kw:<term> <-> member memory     - the topic holds this memory
       kw:<a>    <-> kw:<b>            - two subjects that share members are related subjects,
-                                        weighted by Jaccard overlap so 'aws' reaches 'azure'
+                                        weighted by Jaccard overlap, so related subjects
+                                        meet
                                         and 'volume' without a hand-written ontology
 
     Bounded on purpose: only topics under GRAPH_MAX_MEMBERS become nodes (a term matching a
@@ -298,12 +317,12 @@ def _nothing_to_build(why):
 def build():
     prompt_counts = _prompt_terms()
     if not prompt_counts:
-        return _nothing_to_build("no owner prompt corpus found")
+        return _nothing_to_build("no prompt corpus found")
     texts, vocab = _corpus()
     if not texts:
         return _nothing_to_build("no memory corpus found")
 
-    # his terms that the corpus also knows: these are the topic candidates
+    # the user's terms that the corpus also knows: these are the topic candidates
     canonical_terms = set()
     for term, count in prompt_counts.items():
         if len(term) < MIN_LEN or count < MIN_PROMPT_COUNT or term in STOP:
@@ -312,7 +331,7 @@ def build():
             canonical_terms.add(term)
 
     # Membership over the real corpus, on TOKEN boundaries. Substring matching (`term in text`)
-    # put 86,394 of 150,713 memberships - 57% - on memories that never use the word: 'aws' matched
+    # put 86,394 of 150,713 memberships - 57% - on memories that never use the word: 'law' matched
     # 'laws'/'flaws', 'grid' matched 'gridlock', and 3-letter topics like 'eat'/'pos'/'ear' reached
     # several hundred unrelated memories each. A topic that points at the whole corpus carries no
     # information, and this layer diffuses at 3x, so the noise was amplified rather than diluted.
@@ -324,7 +343,7 @@ def build():
 
     # Aliases are semantic assertions, not edit-distance guesses. Shape-only inference still
     # rewrote real intended words (addrs->adds, bride->bridge, arise->raise) after the first
-    # tightening pass. Only spellings the owner explicitly supplied may bridge a topic.
+    # tightening pass. Only spellings listed in keyword_aliases.tsv may bridge a topic.
     candidates = {}
     strong = {
         term for term in canonical_terms
@@ -390,9 +409,10 @@ def build():
           % (edge_count, kw_kw, graph_topics))
     print("keyword_nodes.tsv: %d topics, %d memberships, %d misspelling aliases"
           % (topics, len(rows), len(aliases)))
-    for probe in ("leverage", "aws", "volume", "microsoft", "grid"):
-        if probe in members:
-            print("  %s -> %d members" % (probe, len(members[probe])))
+    top = sorted(((len(m), term) for term, m in members.items()
+                  if MIN_MEMBERS <= len(m) <= MAX_MEMBERS), reverse=True)[:5]
+    for count, probe in top:
+        print("  %s -> %d members" % (probe, count))
     if aliases:
         print("  aliases sample:", ", ".join("%s->%s" % (a[0], a[1]) for a in aliases[:8]))
     return 0
