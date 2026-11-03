@@ -2,6 +2,7 @@
 import concurrent.futures
 from dataclasses import replace
 from pathlib import Path
+import contextlib
 import sqlite3
 import tempfile
 import unittest
@@ -103,7 +104,7 @@ class OwnerQuestionTests(unittest.TestCase):
                 return False
         with concurrent.futures.ThreadPoolExecutor(2) as pool:
             self.assertEqual(sum(pool.map(initialize, ("route-a", "route-b"))), 1)
-        with sqlite3.connect(path) as db:
+        with contextlib.closing(sqlite3.connect(path)) as db, db:
             self.assertEqual(db.execute("SELECT count(*) FROM route").fetchone()[0], 1)
             db.execute("INSERT INTO route VALUES ('corrupt-route')")
         with self.assertRaisesRegex(ValueError, "outbox_destination_mismatch"):
