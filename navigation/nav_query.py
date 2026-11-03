@@ -167,7 +167,9 @@ class Nav:
             names = set(re.findall(r"[\w.\-]+", w.lower()))
             ranked = sorted(((self.score(cid, q) * self._prior(cid, names), cid) for cid in self.cards), reverse=True)
             for rank, (sc, cid) in enumerate([r for r in ranked if r[0] > 0][:50]):
-                fused[cid] = fused.get(cid, 0.0) + 1.0 / (60 + rank)
+                # k = 10, not the usual 60: a card one wording ranks first should beat a card that is merely
+                # middling in every wording (9 of 10 real repo questions in the top 5 at 10, 8 at 60)
+                fused[cid] = fused.get(cid, 0.0) + 1.0 / (10 + rank)
         best = sorted(fused.items(), key=lambda x: -x[1])[:k]
         return [cid for cid, _ in best]
 

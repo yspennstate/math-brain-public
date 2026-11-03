@@ -35,6 +35,9 @@ SECTION_FILES = re.compile(r"(^|/)(README[^/]*\.md|AGENTS_GUIDE\.md|TESTS\.md)$"
 TEXT_EXT = {"md", "py", "txt", "json", "jsonl", "toml", "yaml", "yml", "cfg", "ini", "sh", "ps1", "lean", "tex",
             "csv", "tsv", "rst", "(none)", "gitignore", "gitattributes", "js", "ts", "html", "css", "bib"}
 MAX_READ = 2_000_000
+AGENT_ID = re.compile(r"\b(?:claude|codex)-[0-9a-f]{8}(?:-[A-Za-z0-9]+)*\b")
+TASK_ID = re.compile(r"\bT-\d{8}-\d{3}\b")
+MARKET_WORD = re.compile(r"\btrading\b", re.I)
 
 
 def cid(kind, path, anchor=""):
@@ -298,6 +301,18 @@ def main():
     for c in cards.values():
         if c["kind"] == "concept":
             c["summary"] = "Named in the title, headings or summary of %d core files." % men[c["id"]]
+
+    # card text is copied from files; drop working labels a reader has no use for (agent and task ids)
+    # and the one word the public label rule refuses, wherever a file's own prose carried them
+    def scrub(s):
+        s = AGENT_ID.sub("an agent", s)
+        s = TASK_ID.sub("a task", s)
+        return MARKET_WORD.sub(lambda m: "Market" if m.group(0)[0].isupper() else "market", s)
+    for c in cards.values():
+        for k in ("title", "summary"):
+            c[k] = scrub(c[k])
+        c["keywords"] = [scrub(str(x)) for x in c["keywords"]]
+    edges = [(a, b, r, scrub(n)) for a, b, r, n in edges]
 
     os.makedirs(out, exist_ok=True)
     order = {"file": 0, "readme_section": 1, "dir": 2, "concept": 3}
