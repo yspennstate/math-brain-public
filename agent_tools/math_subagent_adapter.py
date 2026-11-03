@@ -57,7 +57,7 @@ LEDGER = os.environ.get("MATHBRAIN_SUBAGENT_LEDGER") or os.path.join(
 RECEIPTS = os.environ.get("MATHBRAIN_SUBAGENT_RECEIPTS") or os.path.join(os.path.dirname(LEDGER),
                                                                          "math_subagent_receipts.jsonl")
 FAULTS = os.environ.get("MATHBRAIN_SUBAGENT_FAULTS") or os.path.join(HERE, "logs", "math_subagent_faults.jsonl")
-# SERVE BY DEFAULT (30 Sep 2026, claude-825b1305, the owner's 14:09 order to get relevant knowledge to agents as fast as
+# SERVE BY DEFAULT (30 Sep 2026, the owner's 14:09 order to get relevant knowledge to agents as fast as
 # possible). Shadow saw 273 tasks, all film or helper work the math gate rightly refused, so it measured nothing. Replayed
 # in shadow, the 24 research-subagent tasks of 22-24 Sep (FEI, QFORM; 41 subagents that got no card then) would get a
 # block on 20, mostly on their subject: the LTF-FEI task gets the proven 14.22 bound, the monotone task the failed routes.

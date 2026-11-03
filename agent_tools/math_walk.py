@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Walk the math store's links: a compact map of what lies around a card, and which way to step (claude-4a88bc43-f04,
-12 Oct 2026, his 11 Oct 21:5x question: if the agent can walk along edges, with diffusion, and knows how diffusion and the
-brain work, can it find the information faster and cheaper?).
+"""Walk the math store's links: a compact map of what lies around a card, and which way to step (12 Oct 2026:
+an agent that walks along edges, with diffusion, and knows how the store is built should find what it needs faster and
+cheaper).
 
     python ~/.claude/dreaming/math_walk.py <card id> [<card id> ...] [--toward "<what you are looking for>"] [--chars 4000]
     python ~/.claude/dreaming/math_walk.py --words "<your question, in a mathematician's words>" [--chars 4000]

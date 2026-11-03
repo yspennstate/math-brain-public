@@ -88,7 +88,7 @@ MAX_STATEMENT_CHARS = int(os.environ.get("MATHBRAIN_MAX_STATEMENT_CHARS", "480")
 TIME_BUDGET_S = float(os.environ.get("MATHBRAIN_TIME_BUDGET_S", "30"))   # was 2.5 until 2026-09-07: under load the
                           # store load alone passed it and the lane abstained silently; the owner's order is that
                           # the brain always goes in, so the lane now waits (the hook's own timeout is the ceiling)
-# A HEADLESS WORKER WAITS LONGER (mb10d campaign, 2026-09-24, from claude-e93602d2's ab30 measurement). Research sessions
+# A HEADLESS WORKER WAITS LONGER (mb10d campaign, 2026-09-24, from the ab30 measurement). Research sessions
 # the Task Scheduler launches run BelowNormal; with 13 of 16 cores rendering film the 0.15 s prefilter-and-load stage
 # took 42 s, past the 30 s budget, the 2 s top-card integrity grace could not finish either, and the hook served NOTHING
 # in both brain arms of two items - mute exactly for the background research agents it is meant to serve. Their probe
@@ -768,7 +768,7 @@ def _verdict_text(prompt, data):
         return False
 
 
-# A PROHIBITION IS NOT THE SUBJECT (30 Sep 2026, claude-825b1305, the owner's 14:09 order on getting knowledge to agents).
+# A PROHIBITION IS NOT THE SUBJECT (30 Sep 2026, the owner's 14:09 order on getting knowledge to agents).
 # Research-subagent tasks carry safety lines such as "never start any <book word> or bot process", and the word inside the
 # prohibition silenced four quadratic-form research tasks at this gate while the one task without the line got three good
 # cards. A match is skipped when the text before it in the same clause ends in a prohibition (never, don't, do not, must
@@ -1334,7 +1334,7 @@ def _trust_tag(meta, read=None):
         return "unverified"
 
 
-# ORIGIN IN THE HINT (2026-09-24, campaign mb10d). T16 (claude-34f0942b, 24 Sep) handed research agents the store's
+# ORIGIN IN THE HINT (2026-09-24, campaign mb10d). T16 (24 Sep) handed research agents the store's
 # program frontier: a house claim later found false was printed "[theorem]" in the same format as a published theorem,
 # and the plans built on it - a list of our own results carries their errors with the list's authority. So a card that
 # is this project's own record says so in its hint: "ours, unrefereed". Read from provenance, never from the subject:
@@ -1346,7 +1346,7 @@ ORIGIN_HINT = os.environ.get("MATHBRAIN_ORIGIN_HINT", "1").strip() not in ("0", 
 # "owner result; ..." is how the campaign ledger marks his own settled problems (Aldous-Fill 4.48, Bradley Q5, the
 # maximal Kemeny constant); "T6 correction ..." and "round-5 correction of claim_..." are our corrections of our own
 # cards. An agent session named in a provenance is NOT the test: 96 Wikipedia cards carry "formula repair 2026-09-23
-# (claude-96cda5f6)" and are literature an agent tidied. Audited over every current card of the store on 24 Sep 20:4x
+# (<session id>)" and are literature an agent tidied. Audited over every current card of the store on 24 Sep 20:4x
 # (live0924Q): every harvest, Wikipedia, ProofWiki and literature card untagged, the textbook "growth-b1" cards
 # untagged, the open problem statements "as read from the source" untagged.
 _HOUSE_PROV_RE = re.compile(r"^(transported from the main brain memory|scar layer|typed (from|refinement)|owner result|"
@@ -1506,8 +1506,8 @@ def _carries_precision(node, places):
     return False
 
 
-# USE-GROWN LAYER (26 Sep 2026, claude-825b1305; his 15:5x order: the brain live, "the edges growing and learning,
-# including for math brain"). ~/.claude/brain_graph/bin/math_use.py keeps each claim's use history (every serve, every
+# USE-GROWN LAYER (26 Sep 2026: edges that grow and learn from use, in the
+# math store as elsewhere). ~/.claude/brain_graph/bin/math_use.py keeps each claim's use history (every serve, every
 # explicit fetch) and which claims were served into the same session; _rank_score tilts a candidate by
 # (1 + MATHBRAIN_USE_WEIGHT x its use score in 0..1), half its node size (ACT-R level of its uses), half its strongest
 # co-activation edge to a claim this session already has. A tilt among close candidates, never an override: at the
@@ -1560,7 +1560,7 @@ def _rank_score(hit, precision=None, boost=0.0):
     return base
 
 
-# WHERE THE USE LAYER ACTS (26 Sep 19:32, claude-825b1305). Until then the tilt above sat inside _rank_score, so it
+# WHERE THE USE LAYER ACTS (26 Sep 19:32). Until then the tilt above sat inside _rank_score, so it
 # decided which cards entered the block. Measured with MATHBRAIN_USE_LOG=0 on the three locate banks (130 questions,
 # eval_value_in_block.py): value in block 97 with the weight off, 96 at 0.15 - one question (l1_c99e1a03e8b5) lost all
 # three of its cards, the right one among them, to three other cards - and on the 40 reworded L2 questions
@@ -1860,7 +1860,7 @@ def _block_cov_floor_for(chosen, floor):
 
 
 def _cov_agree_wide(chosen, st):
-    """COV_AGREE's test (claude-5693aca3, 19 Oct; default 2). MATHBRAIN_COV_AGREE_WIDE 0 = the old rule (the semantic
+    """COV_AGREE's test (19 Oct; default 2). MATHBRAIN_COV_AGREE_WIDE 0 = the old rule (the semantic
     top is the lead). 1 = also when the semantic top is a same-title copy of the lead (titles equal after case and
     punctuation folding). 2 = also when the semantic top is any card of the block; it is moved to the front.
     Bank 19 Oct (math_probe_fresh_20260903, hook path): 0 -> 70/57/8 served/rank1/silent, 2 -> 72/59/6, the two rows
@@ -2070,7 +2070,7 @@ def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None, anchor
     )
     if not ranked:
         return []
-    # SANDBOX (claude-5693aca3, 19 Oct): coverage tie-break among near-tied leaders, MATHBRAIN_COVER_EPS (0 = off).
+    # SANDBOX (19 Oct): coverage tie-break among near-tied leaders, MATHBRAIN_COVER_EPS (0 = off).
     try:
         _ceps = float(os.environ.get("MATHBRAIN_COVER_EPS", "0") or 0)
     except ValueError:
@@ -2167,7 +2167,7 @@ def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None, anchor
                 _named = _name_tokens(prompt) & set(re.findall(r"[a-z0-9]+", _nf_fold(ranked[0].node.title)))
             except Exception:
                 _named = set()
-        # 2026-10-19 (claude-5693aca3): two more kinds of sibling, each behind its own switch, ON since 10:4x 19 Oct.
+        # 2026-10-19: two more kinds of sibling, each behind its own switch, ON since 10:4x 19 Oct.
         # Measured on the 218-item bank (state/hookpath_rival_{base,poss,vocab,both}_20261019.jsonl): each switch
         # answers exactly its own item and changes nothing else, unanswerable ids identical; both together q_content
         # served 68 -> 70, rank-1 55 -> 57, silent 10 -> 8, false fire 28/40 and strict 19/31 unchanged. Set "0" to turn off.
@@ -3944,7 +3944,7 @@ COV_AGREE = os.environ.get("MATHBRAIN_COV_AGREE", "1").strip() not in ("0", "off
 # reorder) could still put another card first. When a yield was used, the use reorder is skipped and the block is
 # emitted only if its first card is still the meaning channel's first claim.
 COV_SEAL = os.environ.get("MATHBRAIN_COV_SEAL", "1").strip() not in ("0", "off", "false", "")
-# A WEAK LEAD IN A SCATTERED BLOCK IS SILENCED (MATHBRAIN_COH_CUT, default on since 19 Oct 14:4x; 19 Oct, claude-5693aca3, study
+# A WEAK LEAD IN A SCATTERED BLOCK IS SILENCED (MATHBRAIN_COH_CUT, default on since 19 Oct 14:4x; 19 Oct, study
 # brain_graph/studies/math_hook_cov_agree_wide_20261019/NOTES_precision_screen.md). When the store lacks the theorem a
 # prompt asks about, the hook still tends to serve a block: its first card sits further from the prompt than a right
 # lead does, and its cards have little to do with one another. A block of two or more cards is withheld when the lead
@@ -4011,7 +4011,7 @@ def _incoherent_weak_block(prompt, ids):
 
 
 # A BLOCK FAR FROM THE PROMPT ON THE STORE'S OWN SCALE IS SILENCED (MATHBRAIN_MEANQ_Z, default 1.25 since 19 Oct 15:5x;
-# 19 Oct, claude-5693aca3, study math_hook_cov_agree_wide_20261019/calibrated_screen.py, z_sweep.py, NOTES). The served
+# 19 Oct, study math_hook_cov_agree_wide_20261019/calibrated_screen.py, z_sweep.py, NOTES). The served
 # cards' mean cosine to the prompt moves with prompt length, so it is read against the prompt's mean cosine to a fixed
 # random sample of 4000 store cards: z = (meanq - base) / sd. Held-out long prompts: 192 of 427 served blocks withheld
 # (146 gold misses, 46 unanswerable), 0 of 92 gold hits lost; fresh bank: 2 of 160 hits lost. 0/off disables.
@@ -4886,7 +4886,7 @@ def _main_body(data, out):
                     # reach a sum a 2,000-character proof reaches by length alone
                     qself = float(getattr(math_prefilter, "LAST_QSELF", 0.0) or 0.0)
                     floor = min(GATE_FLOOR, GATE_FRAC * qself) if (GATE_FRAC > 0 and qself > 0) else GATE_FLOOR
-                    # THE QUESTION PART (MATHBRAIN_GATE_QPART, 19 Oct, claude-5693aca3): a question asked
+                    # THE QUESTION PART (MATHBRAIN_GATE_QPART, 19 Oct): a question asked
                     # after a long lead-in carries a self-score the lead-in inflates, so the floor sits at its cap
                     # (25) while the cards the ranker chose score 12-25 on the whole prompt (embedded v2 trace: 15
                     # of 16 silent rows lost every chosen card here). A card that fails the whole-prompt floor is
@@ -4940,7 +4940,7 @@ def _main_body(data, out):
                                 continue
                             n_ml += 1
                         keep.append(h)
-                    # A LONE RESCUE (MATHBRAIN_QPART_SOLO, 19 Oct, claude-5693aca3): a block whose only card is one the
+                    # A LONE RESCUE (MATHBRAIN_QPART_SOLO, 19 Oct): a block whose only card is one the
                     # question part rescued has nothing beside it to corroborate it; it stays only when its closing-
                     # paragraph score clears that part's floor by the factor SOLO (0 = off). Real bank, rows under 25 s in
                     # every arm: question part alone 74 hits / 13 wrong, with SOLO 1.5 73 / 9 (SOLO 2: 71 / 9). The 1.5 is

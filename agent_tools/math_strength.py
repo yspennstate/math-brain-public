@@ -1,7 +1,7 @@
 #!/usr/bin/env python3
-"""Link strengths in the math store that grow from use (claude-6bb7036b-s03, 12 Oct 2026; his 06:17 order: "edges should get
-stronger as nodes that are similar are used at similar times, that strength should become automatic and agents should be
-able to see the strength between nodes and use that to find information").
+"""Link strengths in the math store that grow from use (12 Oct 2026). Two cards used at similar
+times grow a stronger tie; the strength is kept automatically and an agent can read it and follow it to find
+information.
 
     python ~/.claude/dreaming/math_strength.py <card id> <card id>     how strongly two cards are tied, and by what
     python ~/.claude/dreaming/math_strength.py --card <card id>        the cards most used together with this one
