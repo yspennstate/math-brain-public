@@ -30,21 +30,21 @@ Write the first records by hand, from what the desk has already paid to learn. A
 its reason and what to do next time; the reason is what lets an agent handle a case the rule did not foresee.
 
 ```
-python new_record.py feedback "Stop a trace at an exchange deposit address and open a records request" \
+python new_record.py feedback "Stop a trace at an exchange deposit address and open a records request" --date 2026-03-02 \
   --why "Funds that reach a custodial exchange are pooled; following outputs past the deposit address attributes other customers' coins to the case." \
   --apply "When a hop lands on a labelled exchange deposit address, end that branch, record the address and amount, and draft the records request."
 
-python new_record.py feedback "Treat a coinjoin output as a branch point, not a continuation" \
+python new_record.py feedback "Treat a coinjoin output as a branch point, not a continuation" --date 2026-03-09 \
   --why "A March report followed one equal-value coinjoin output as if it were the suspect's and named an unrelated wallet." \
   --apply "At an equal-output mixing transaction, split the trace into every output and carry each with a probability, never a single path."
 
-python new_record.py project "Case reports go to clients as a hop table plus a one-page summary" \
+python new_record.py project "Case reports go to clients as a hop table plus a one-page summary" --date 2026-03-02 \
   --body "Clients asked for a table of every hop (txid, block height, amount, confidence) and one page in plain words; graphs are an appendix."
 
 python new_record.py reference "Exchange deposit labels live in the team's label table, refreshed weekly" \
   --body "The label table maps addresses to services with a source and a date; a label older than ninety days is checked before it ends a trace."
 
-python new_record.py user "The lead investigator signs every report that names a person"
+python new_record.py user "The lead investigator signs every report that names a person" --date 2026-03-02
 ```
 
 Each call prints the record's name:
@@ -53,6 +53,8 @@ Each call prints the record's name:
 wrote .../memory/stop_a_trace_at_an_exchange_deposit_address_2026_03_02.md
 name for --link: stop_a_trace_at_an_exchange_deposit_address_2026_03_02
 ```
+
+A record takes today's date unless `--date` is given; the dates here follow the story.
 
 Use that printed name, or the same name without its date, wherever another command asks for a record. The name is
 built from the first words of the description, so it is shorter than the description and cannot be guessed from it
@@ -66,7 +68,7 @@ hop 31 and hop 44, the limit went to 60. The old record stays in the store, mark
 
 ```
 python new_record.py project "Traces stop at 25 hops unless the client pays for a deeper pass" --date 2026-01-20
-python new_record.py project "Traces stop at 60 hops; the 25-hop limit cut off two recoveries" \
+python new_record.py project "Traces stop at 60 hops; the 25-hop limit cut off two recoveries" --date 2026-04-02 \
   --supersedes traces_stop_at_25_hops_unless_the_client \
   --body "Raised after two cases where the funds reached an exchange at hop 31 and hop 44." \
   --link stop_a_trace_at_an_exchange_deposit_address
@@ -86,8 +88,10 @@ python check_store.py
 ```
 
 ```
+orphan  case_reports_go_to_clients_as_a_hop_2026_03_02.md: no [[link]] in or out, so a walk along links never reaches it
+orphan  the_lead_investigator_signs_every_report_that_names_2026_03_02.md: no [[link]] in or out, so a walk along links never reaches it
 orphan  treat_a_coinjoin_output_as_a_branch_point_2026_03_09.md: no [[link]] in or out, so a walk along links never reaches it
-9 records: 0 error(s), 0 warning(s), 4 orphan(s)
+8 records: 0 error(s), 0 warning(s), 3 orphan(s)
 ```
 
 An orphan is not an error. It is a record nothing links to yet, and linking orphans is part of the nightly dream's
@@ -100,16 +104,17 @@ python recall.py "how many hops do we follow" --or "trace depth limit"
 ```
 
 ```
-(score 2.2)
+(score 2.1)
 == traces_stop_at_60_hops_the_25_hop_2026_04_02  [project, provisional]
 Raised after two cases where the funds reached an exchange at hop 31 and hop 44.
 ...
-(score 0.7)
+(score 0.6)
 == traces_stop_at_25_hops_unless_the_client_2026_01_20  [project, provisional]  SUPERSEDED by traces_stop_at_60_hops_the_25_hop_2026_04_02
 ```
 
-The current limit comes first and the old one is printed with the record that replaced it. A question the store
-cannot answer says so instead of returning the nearest card as if it fitted:
+The current limit comes first. The old one comes further down, printed with the record that
+replaced it. A question the store cannot answer says so, above the nearest records, so they are not
+read as an answer:
 
 ```
 python recall.py "what is our retention period for case files"
@@ -117,10 +122,14 @@ python recall.py "what is our retention period for case files"
 
 ```
 WEAK MATCH: nothing here fits the question well. Reword it, or answer that the store does not have it.
+
+(score 1.0)
+== case_reports_go_to_clients_as_a_hop_2026_03_02  [project, provisional]
+...
 ```
 
 Wording matters. Records are found by the words they contain, so ask the way a record would put it. "mixing
-transaction equal outputs" finds the coinjoin rule at the top (score 7.9); a question in the client's words may not.
+transaction equal outputs" finds the coinjoin rule at the top (score 7.8); a question in the client's words may not.
 That is why recall takes two or three wordings in one call.
 
 ## 5. Connecting the agents
