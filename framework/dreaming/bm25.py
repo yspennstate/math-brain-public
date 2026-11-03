@@ -2414,8 +2414,10 @@ def main():
                 return 0 if live_holder else 1
             print("%s bm25 refresh: index already current (%d docs)" % (_stamp(), _docs()))
         else:
-            print("%s bm25 refresh: +%d fresh memor%s, -%d gone -> %d docs"
-                  % (_stamp(), added, "y" if added == 1 else "ies", removed, _docs()))
+            # origin (1 Nov 2026): who started this run - "recall" when brain.py spawned it, else the env is unset
+            print("%s bm25 refresh: +%d fresh memor%s, -%d gone -> %d docs [origin %s]"
+                  % (_stamp(), added, "y" if added == 1 else "ies", removed, _docs(),
+                     os.environ.get("BM25_REFRESH_ORIGIN", "other")))
         # The sidecar catches up HERE, in the detached process, whether or not this run published:
         # it is checked against the live generation, so a run that found the index already current
         # still rebuilds one that is absent or left behind by somebody else's publish.
@@ -2423,7 +2425,7 @@ def main():
         if st not in ("current", "rate-limited"):
             print("%s bm25 postings: %s" % (_stamp(), st))
         # New memories get their wiki-link edges in the association graph now, not at the next nightly
-        # spread_edges.tsv build (build_spread_edges.py --fresh, a few seconds).
+        # spread_edges.tsv build (which ran on 7 of 30 dream logs, 23 Oct-1 Nov; gaps up to ~56 h). About 3 s.
         if added:
             try:
                 import build_spread_edges
