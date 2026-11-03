@@ -162,6 +162,7 @@ def main():
 
 
 FRESH = os.path.join(DR, "spread_edges_fresh.tsv")
+LOOKBACK = 7200  # seconds; see fresh()
 
 
 def fresh():
@@ -175,7 +176,11 @@ def fresh():
     memory from a file older than the build are not seen here (that file was read before the target existed).
     bm25.py refresh calls this whenever it indexes a new memory, so the links are live within one refresh."""
     try:
-        cut = os.path.getmtime(OUT)
+        # Look back LOOKBACK seconds before the nightly file's mtime: the build reads the memory dir minutes
+        # before it writes OUT, so a memory written inside that window is in neither file (in the reference
+        # install, eleven memories written two minutes before the build file was stamped were all isolated).
+        # Pairs OUT already holds are skipped below, so re-reading the window never counts a link twice.
+        cut = os.path.getmtime(OUT) - LOOKBACK
     except OSError:
         return
     real, newer = {}, []
