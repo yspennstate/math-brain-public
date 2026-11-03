@@ -1401,6 +1401,14 @@ def main():
     except SourceStateError as exc:
         _report_watch_failure("CORRECTION SOURCE FAILED - no watch or artifact state advanced", exc)
         return 1
+    if len(recs) < 10 and not os.path.exists(SNAP):
+        # A young brain has only a handful of corrections, too few to mine into families, and
+        # it has never written a snapshot. That is not a broken source: there is nothing to
+        # watch yet. Once a snapshot exists, falling under ten means corrections went missing,
+        # and that still fails below.
+        print("mistake graph: %d structured corrections so far, fewer than 10; nothing to mine yet"
+              % len(recs))
+        return 0
     if len(recs) < 10:
         _report_watch_failure(
             "CORRECTION SOURCE FAILED - too few structured corrections; no state advanced",
