@@ -832,9 +832,12 @@ def prune_state(now=None):
         n = 0
         for name in os.listdir(STATE_DIR):
             p = os.path.join(STATE_DIR, name)
-            if name.endswith(".json") and now - os.path.getmtime(p) > STATE_KEEP_DAYS * 86400:
-                os.remove(p)
-                n += 1
+            try:  # another session's prune may remove the same file between listdir and here
+                if name.endswith(".json") and now - os.path.getmtime(p) > STATE_KEEP_DAYS * 86400:
+                    os.remove(p)
+                    n += 1
+            except FileNotFoundError:
+                continue
         with io.open(marker, "w", encoding="utf-8") as f:
             f.write(str(int(now)))
         return n
