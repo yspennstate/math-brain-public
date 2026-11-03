@@ -8,6 +8,28 @@ This repository contains the brain's code, a dated export of the store, the tool
 
 Nothing in the method is specific to mathematics. To build a brain for a company, a film studio, a lab or a support desk, start with [examples/field_brain_starter/](examples/field_brain_starter/): twenty example records, a search tool, a prompt hook for Claude Code and Codex, a nightly dream with a runner for Linux, macOS and Windows, and a ten-question test that measures whether the records help. [docs/brain-in-an-afternoon.md](docs/brain-in-an-afternoon.md) takes a team from an empty copy of that folder to a measured brain in a day, [docs/build-your-own-brain.md](docs/build-your-own-brain.md) covers each part in full, [docs/everything-is-a-node.md](docs/everything-is-a-node.md) says what goes into the store and how it is linked, [docs/agency.md](docs/agency.md) describes how agents should work with a brain so that better recall turns into progress on long tasks, and [docs/brain-building/everything-to-brain-10-day-loop.md](docs/brain-building/everything-to-brain-10-day-loop.md) is a prompt that has an agent keep building and testing one on a schedule for ten days. Every page in `docs/` is listed by purpose in [docs/README.md](docs/README.md).
 
+## First step: download the brain and load it
+
+The brain lives in this repository, **https://github.com/yspennstate/math-brain-public**, branch `main`. It comes with its own network: `export/population/` holds every card (13,374) and every typed link between them (23,544) as plain JSONL, about 100 MB, with counts and SHA-256 digests in `MANIFEST.json`. You do not need the rest of the repository to run it. Most of the 110,000 tracked files are research records under `results/` and `papers/`, so clone only the code and the store:
+
+```bash
+git clone --filter=blob:none --sparse https://github.com/yspennstate/math-brain-public
+cd math-brain-public
+git sparse-checkout set src tools agent_tools export config
+python tools/import_store.py --out local/population/brain.sqlite3
+python agent_tools/math_recall.py "random transposition walk spectral gap" --or "Diaconis Shahshahani cutoff"
+python agent_tools/math_recall.py --id <card id from the output>
+```
+
+No `pip install` and no environment variables are needed: the tools find `src/` and the store from the checkout. On 3 November 2026 this ran from a fresh clone with an empty home directory: the import rebuilt 60,977 rows in 42 seconds with no row failing its digest, and the first search took 49 seconds on a busy laptop because it builds the prepared fast-recall state; later searches take a few seconds.
+
+Then, in this order:
+
+1. **Give the store to your agent.** Wire the prompt hook (`agent_tools/math_sense.py`) into Claude Code or Codex, or run the MCP server (`agent_tools/mcp_math_recall.py`), as [AGENTS_GUIDE.md](AGENTS_GUIDE.md) section 2 describes, and tell the agent the recall workflow below.
+2. **Let the agent write back.** New results go in as packets of cards and links ([AGENTS_GUIDE.md](AGENTS_GUIDE.md) section 6, [docs/adding-cards.md](docs/adding-cards.md)).
+3. **Run the nightly dream** that files, links and consolidates the day's records: [framework/dreaming/README.md](framework/dreaming/README.md).
+4. **For a brain in another field**, start from [examples/field_brain_starter/](examples/field_brain_starter/) and follow [docs/brain-in-an-afternoon.md](docs/brain-in-an-afternoon.md).
+
 ## The tests
 
 There isn't one test behind this brain. The table has twelve paired agent tests, the largest asking 2,000 questions about files in git repositories, and there are more without agents on ranking, silence and speed. Some came out for the brain by a wide margin, some by a little, and two did not. When the answer has to be recalled, or the agent is on a clock, the brain wins by a lot. When an agent has the files, enough time and a question it can grep for, the lead is small. And a memory an agent doesn't call does nothing for it. Runs where the machine was over capacity and agents could not finish are left out, whichever way they went; [TESTS.md](TESTS.md) says which, and how the 2,000-question rounds were regraded.
