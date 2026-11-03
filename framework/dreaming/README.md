@@ -67,6 +67,26 @@ its value is that the reliable work is never crowded out by the creative work.
 - A note it writes carries a status (`verified` or `provisional`) and the measurement behind it, so the agent that
   reads it later knows how far to trust it.
 
+## Guards on the way out
+
+A brain that publishes needs a check at the last door, because the dream and the agents write fast and nobody
+rereads every line before a push. Two scripts here sit in a clone's `pre-push` hook:
+
+- `github_push_cost_guard.py` refuses a push that would start billed GitHub Actions on a private repository
+  unless the head commit says `[skip ci]`, refuses a push that would leave a repository nearly empty, and, on the
+  repositories you list in `BRAIN_PRIVATE_TEXT_REPOS`, refuses added lines that match your private-text patterns
+  (one regular expression per line in the file named by `BRAIN_PRIVATE_TEXT_PATTERNS`; without it, home-directory
+  paths and email addresses). Put the names of people, clients, private repositories and internal projects in
+  that file before you make a public copy of a brain. Install with
+  `python github_push_cost_guard.py --install <clone>` and run `--selftest` first.
+- `paper_release_guard.py` runs from the same hook when it sits beside it, and refuses a paper pushed to a public
+  repository without its funding, competing-interest and AI declarations, or with a line running into the
+  margin. Finished grant numbers that must never be listed again go in `BRAIN_FINISHED_GRANTS`.
+
+Both log every decision. The push guard's three refusals each have a one-variable override (`ALLOW_PRIVATE_TEXT=1`,
+`ALLOW_CI_PUSH=1`, `ALLOW_MASS_DELETE=1`) for a push someone has read and decided on; the paper guard has none, and
+the fix is to the paper.
+
 ## Schedule it
 
 On Windows, point a scheduled task at `wscript.exe //B launch_dream.vbs` three times a day (for example 03:30,
