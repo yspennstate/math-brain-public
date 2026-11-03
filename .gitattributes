@@ -4,5 +4,8 @@
 # rewrite these files to CRLF on Windows and make a cross-OS digest comparison lie.
 export/population/*.jsonl text eol=lf
 export/population/MANIFEST.json text eol=lf
+# navigation/ is checked against its MANIFEST.json digests on load, for the same reason.
+navigation/*.jsonl text eol=lf
+navigation/MANIFEST.json text eol=lf
 
 *.py text eol=lf

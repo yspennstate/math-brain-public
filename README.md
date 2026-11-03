@@ -15,13 +15,20 @@ The brain lives in this repository, **https://github.com/yspennstate/math-brain-
 ```bash
 git clone --filter=blob:none --sparse https://github.com/yspennstate/math-brain-public
 cd math-brain-public
-git sparse-checkout set src tools agent_tools export config
+git sparse-checkout set src tools agent_tools export config navigation
 python tools/import_store.py --out local/population/brain.sqlite3
 python agent_tools/math_recall.py "random transposition walk spectral gap" --or "Diaconis Shahshahani cutoff"
 python agent_tools/math_recall.py --id <card id from the output>
 ```
 
 No `pip install` and no environment variables are needed: the tools find `src/` and the store from the checkout. On 3 November 2026 this ran from a fresh clone with an empty home directory: the import rebuilt 60,977 rows in 42 seconds with no row failing its digest, and the first search took 49 seconds on a busy laptop because it builds the prepared fast-recall state; later searches take a few seconds.
+
+The repository has a small brain of its own as well. [navigation/](navigation/) holds one card for every file outside `results/` and `papers/`, one for each directory and README section, and a few concept cards, 1,697 in all, joined by 3,312 links. It answers "where is X and what do I open to use it" without walking the tree:
+
+```bash
+python navigation/nav_query.py --entry
+python navigation/nav_query.py "nightly consolidation" --or "dream cycle"
+```
 
 Then, in this order:
 
