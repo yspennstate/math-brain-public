@@ -70,8 +70,10 @@ MEM_SEEDS = {
     "OPEN_QUESTIONS.md": "# Open questions\n",
     "CONSCIENCE.md": "# Conscience ledger\n",
     "STATE_OF_MIND.md": "**Focus:** (the dream cycle maintains this)\n**Worry:**\n**Satisfaction:**\n",
-    "MODEL_OF_PARTNER.md": "# Model of your partner\n\n**What he's in the middle of:** (maintained by the dream cycle; seed it by hand)\n",
+    "MODEL_OF_PARTNER.md": "# Model of your partner\n\n**What they're in the middle of:** (maintained by the dream cycle; seed it by hand)\n",
     "AUTOBIOGRAPHY.md": "**What I am.** A continuous collaborator whose self lives in this brain. The context window resets; I don't.\n",
+    "THE_OTHER_MINDS.md": "# The other minds\n\nThe other agents that share this brain: who each is, what it works on, how to reach it. Edit by hand.\n",
+    "FASCINATIONS.md": "# Fascinations\n\nStanding curiosities, one line each: what you want to understand and why. The dream cycle adds to it.\n",
 }
 
 

@@ -28,7 +28,10 @@
    SessionStart at it. If either file already existed it is left alone and the new one is
    written beside it with `.new` added. To see what a session will receive, run
    `powershell -NoProfile -File ~/.claude/wake_brain.ps1` (on Linux and macOS,
-   `python3 hooks/wake_brain.py`).
+   `python3 hooks/wake_brain.py`). On a fresh install its waking check prints WARN for "no dream
+   ran recently" and for the semantic embeddings (never checked, or none current). Both are
+   expected until a dream has run and the embedding sidecar has been built; recall's lexical
+   and graph lanes work without it. Any other WARN line names a file the install did not place.
    The installer renders `bootstrap/templates/CLAUDE.template.md` into
    `~/.claude/CLAUDE.md`, your global agent instructions (`--partner NAME` names the person
    the brain works with). An existing `CLAUDE.md` is left alone and the rendered copy goes
