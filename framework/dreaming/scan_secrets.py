@@ -49,14 +49,19 @@ PATTERNS = [
     # They are not keys, and the export is regenerated on every store change, so each refresh re-flagged the
     # same benign token and the gate had to be overridden by hand. A gate that is overridden routinely stops
     # being read. Excluded NARROWLY and only here, the way the 2FA rule below excludes git file modes: the
-    # exclusion fires only when everything after sk-/sk-ant- is THREE OR MORE hyphen-separated runs of
+    # exclusion fires only when everything after sk-/sk-ant- is TWO OR MORE hyphen-separated runs of
     # lowercase LETTERS with no digits and no uppercase, ending at a non-token character. Controlled both ways
     # before landing (2026-09-13): six real-shaped keys still caught, including an all-lowercase unhyphenated
     # one and a two-segment one carrying digits; four word slugs excluded. No real key has this shape.
     ("OpenAI/Anthropic key",
-     r"(?<![A-Za-z0-9])sk-(?:ant-)?(?![a-z]+(?:-[a-z]+){2,}(?![A-Za-z0-9_\-]))[A-Za-z0-9_\-]{20,}"),
+     # (widened 2026-11-03 from three words to two: labels for the Sherrington-Kirkpatrick model, sk- plus two
+     # lowercase words, stopped an export; test_scan_secrets_sk_slugs.py holds the controls)
+     r"(?<![A-Za-z0-9])sk-(?:ant-)?(?![a-z]+(?:-[a-z]+){1,}(?![A-Za-z0-9_\-]))[A-Za-z0-9_\-]{20,}"),
     ("AWS access key id", r"AKIA[0-9A-Z]{16}"),
-    ("Telegram bot token", r"\b\d{8,10}:[A-Za-z0-9_-]{30,60}\b"),
+    # A store source id written as <name>-YYYYMMDD:<slug> has this rule's shape. Excluded narrowly and only here:
+    # the digits follow a hyphen or colon AND are exactly a calendar date 20YYMMDD. A token after a quote, space,
+    # = or /, a 9-10 digit id after a colon, and digits after a hyphen that are not a date still flag.
+    ("Telegram bot token", r"\b(?!(?<=[-:])20\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])\b)\d{8,10}:[A-Za-z0-9_-]{30,60}\b"),
     ("Slack token", r"xox[baprs]-[A-Za-z0-9-]{10,}"),
     ("Google API key", r"AIza[0-9A-Za-z_\-]{35}"),
     ("RunPod/HF/Groq key", r"\b(?:rpa_|rpk_|hf_|gsk_)[A-Za-z0-9_\-]{16,}\b"),
@@ -69,7 +74,17 @@ PATTERNS = [
     # tracked text files; no slower on 1 MB of adversarial text.
     ("bearer token", r"(?i)\bbearer[ \t]+(?!eyJ)(?=[A-Za-z0-9._~+/\-]*\d)(?=[A-Za-z0-9._~+/\-]*[A-Za-z])"
                      r"[A-Za-z0-9._~+/\-]{20,}=*"),
-    ("long API key", r"(?<![/\w.])(?=[A-Za-z0-9]*[a-z])(?=[A-Za-z0-9]*[A-Z])(?=[A-Za-z0-9]*\d)[A-Za-z0-9]{40,}(?![\w.])"),
+    # Two shapes in published paper text are excluded narrowly and only here. A file checksum written as SHA256 (or
+    # SHA) run straight into exactly 64 lowercase hex digits. And a LaTeX citation key or equation label: the token
+    # opens right after "{", "[", "eq:" or an escaped "\n" AND splits wholly into words (capitalised words, short
+    # capital runs, lowercase runs of three or more, a few two-letter words, digit runs of at most four). A random
+    # 40-64 character key almost never splits that way (0 of 5000 in each context), and a word-chain key anywhere
+    # else still flags. Controls in test_scan_secrets_citekeys.py.
+    ("long API key", r"(?<![/\w.])(?!SHA(?:256)?[0-9a-f]{64}(?![\w.]))"
+                     r"(?!(?:(?<=[{\[])|(?<=[Ee]q:)|(?<=\\)n)"
+                     r"(?:[A-Z][a-z]{2,}+|(?:On|Of|In|To|An|At|By|De|Du|La|Le)(?![a-z])|[A-Z]{1,5}+|[a-z]{3,}+|\d{1,4}+(?!\d))++"
+                     r"(?![\w.]))"
+                     r"(?=[A-Za-z0-9]*[a-z])(?=[A-Za-z0-9]*[A-Z])(?=[A-Za-z0-9]*\d)[A-Za-z0-9]{40,}(?![\w.])"),
     ("plain password", r"(?i)\b(?:password|passwd|pwd)\b(?:\s+(?:is|was))?\s*[:=]?\s+(?=\S*\d)[A-Za-z0-9!@#$%^&*_\-]{6,24}\b"),
     # Git file modes (100644, 100755, ...) are six digits, so prose such as "mode code 100644"
     # matched this rule and blocked brain-persist pushes on documents that exist to EXPLAIN the
