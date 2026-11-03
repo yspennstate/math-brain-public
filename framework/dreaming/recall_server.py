@@ -52,6 +52,9 @@ def main():
     ap.add_argument('--max-age',type=float,default=0)
     ap.add_argument('--test-controls',action='store_true')
     args = ap.parse_args()
+    if not args.store:
+        print("no store: set MATHBRAIN_STORE or pass --store", file=sys.stderr)
+        return 2
     # Enforced inside the server too, before resident imports or model creation.
     probe = resources()
     if not probe['allowed']:
@@ -63,7 +66,9 @@ def main():
     try:
         if stop.exists():
             return 5
-        sys.path.insert(0,os.environ.get('MATHBRAIN_BUILD_SRC',DEFAULT_BUILD))
+        build = os.environ.get('MATHBRAIN_BUILD_SRC',DEFAULT_BUILD)
+        if build:
+            sys.path.insert(0,build)
         import math_recall as tool   # serve the live tool; the client's code stamp refuses a server older than it
         import recall_client as _rc
         _rc.try_server = lambda argv: None   # inside the server a call never goes back to the server
