@@ -939,6 +939,16 @@ def main():
             _artifact_bad.append("owner_prompt_context.py is wired beside owner_prompts_hook.py in hook_dispatch_list.json - remove the second entry")
     except Exception:
         pass
+    # Any script wired twice under one event and matcher runs twice and prints twice. The 28 Oct film-hook landing copied
+    # the whole 221-hook film group; for four days nothing said so (1 Nov 2026, hook_double_wiring.py).
+    try:
+        from hook_double_wiring import double_wired as _dw
+        for _ev, _dup in _dw(os.path.join(HERE, "hook_dispatch_list.json")).items():
+            print(f"  double wiring          {_ev}: {len(_dup)} script(s) wired twice, e.g. {_dup[0][1][-70:]}")
+            _artifact_bad.append(f"{_ev}: {len(_dup)} hook script(s) wired twice in hook_dispatch_list.json under one matcher "
+                                 f"- each runs and prints twice; merge the groups (python hook_double_wiring.py)")
+    except Exception as _exc:
+        _artifact_bad.append("double-wiring check failed: %s" % type(_exc).__name__)
 
     # WRITE THE STATUS FILE HERE, NOT EARLIER. It used to be written before section 5 ran, so
     # _artifact_bad could not possibly appear in it: a missed rebuild cycle printed to the dream
