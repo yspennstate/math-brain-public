@@ -19,7 +19,7 @@ Output: link_suggestions.md (top-N pairs, each with descriptions, the shared-nei
 explain the association, and the current direct co-read count). Read-only, fail-safe.
 Usage:  python suggest_links.py [--top N] [--min-common K] [--quiet]
 """
-import io, math, os, re, sys
+import heapq, io, math, os, re, sys
 from collections import defaultdict
 try:
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")
@@ -100,6 +100,72 @@ def load():
     return real, desc, nbr, wiki_pairs, coread, superseded
 
 
+def rank(nbr, wiki_pairs, superseded, min_common=3, top=25, hub_deg=1000):
+    """Top-N unlinked pairs by Adamic-Adar, exact. Returns (ranked [((a, b), score)], deg, total, exact_total).
+
+    Sums are accumulated row by row (one small dict per node), so nothing holds every two-hop pair at once and
+    no pair needs a set intersection. Neighbours with degree above hub_deg are not walked: their share
+    (+1 to the count, +1/log(1+deg) to the score) is added by a membership test on each pair the walk found.
+    A pair whose ONLY shared neighbours are hubs is then never seen; its score is at most the sum of the hub
+    weights, so the top N is exact when the N-th score is above that bound. Otherwise the walk reruns with
+    every neighbour walked. (Before 1 Nov the walk kept a set of all ~150M two-hop pairs on a 41k-node graph
+    with a 16,770-degree hub and was killed at the dream's 2700 s cap every night.)"""
+    names = sorted(nbr)
+    idx = {nm: i for i, nm in enumerate(names)}
+    n = len(names)
+    N = [[idx[x] for x in nbr[nm]] for nm in names]
+    deg = [len(x) for x in N]
+    w = [1.0 / math.log(1.0 + d) if d > 1 else 0.0 for d in deg]
+    sup = [nm in superseded for nm in names]
+    wiki = set()
+    for p, q in wiki_pairs:
+        if p in idx and q in idx:
+            i, j = idx[p], idx[q]
+            wiki.add((i, j) if i < j else (j, i))
+    hubs = [z for z in range(n) if deg[z] > hub_deg]
+    hub_set = {h: set(N[h]) for h in hubs}
+    hubs_of = defaultdict(list)
+    for h in hubs:
+        for x in N[h]:
+            hubs_of[x].append(h)
+    heap, total = [], 0
+    for a in range(n):
+        if sup[a]:
+            continue
+        cnt, sc = {}, {}
+        for z in N[a]:
+            if deg[z] > hub_deg:
+                continue
+            wz = w[z]
+            for b in N[z]:
+                if b > a:
+                    cnt[b] = cnt.get(b, 0) + 1
+                    sc[b] = sc.get(b, 0.0) + wz
+        ha = hubs_of.get(a, ())
+        for b, c in cnt.items():
+            if sup[b] or (a, b) in wiki:
+                continue
+            s = sc[b]
+            for h in ha:
+                if b in hub_set[h]:
+                    c += 1
+                    s += w[h]
+            if c < min_common:
+                continue
+            total += 1
+            item = (s, -a, -b)
+            if len(heap) < top:
+                heapq.heappush(heap, item)
+            elif item > heap[0]:
+                heapq.heapreplace(heap, item)
+    bound = sum(w[h] for h in hubs)
+    if hubs and (len(heap) < top or heap[0][0] <= bound + 1e-9):
+        return rank(nbr, wiki_pairs, superseded, min_common, top, hub_deg=float("inf"))
+    ranked = [((names[-na], names[-nb]), s) for s, na, nb in sorted(heap, reverse=True)]
+    degn = {nm: deg[i] for i, nm in enumerate(names)}
+    return ranked, degn, total, not hubs
+
+
 def main():
     if any(a in ("-h", "--help") for a in sys.argv[1:]):
         # Discovery is not execution: this script writes, so a help request must
@@ -110,33 +176,12 @@ def main():
     min_common = _arg("--min-common", 3, int)
     quiet = "--quiet" in sys.argv[1:]
     real, desc, nbr, wiki_pairs, coread, superseded = load()
-    deg = {z: len(nbr[z]) for z in nbr}
-
-    aa = {}
+    ranked, deg, total, exact_total = rank(nbr, wiki_pairs, superseded, min_common, top)
     bridges = {}
-    seen = set()
-    for a in nbr:
-        Na = nbr[a]
-        for z in Na:
-            for b in nbr[z]:
-                if b <= a:
-                    continue
-                key = (a, b)
-                if key in seen:
-                    continue
-                seen.add(key)
-                if tuple(sorted((a, b))) in wiki_pairs:
-                    continue
-                if a in superseded or b in superseded:
-                    continue
-                common = Na & nbr[b]
-                if len(common) < min_common:
-                    continue
-                score = sum(1.0 / math.log(1.0 + deg.get(z, 1)) for z in common if deg.get(z, 1) > 1)
-                aa[key] = score
-                bridges[key] = sorted(common, key=lambda z: deg.get(z, 1))[:3]
+    for (a, b), _ in ranked:
+        common = nbr[a] & nbr[b]
+        bridges[(a, b)] = sorted(common, key=lambda z: (deg.get(z, 1), z))[:3]
 
-    ranked = sorted(aa.items(), key=lambda kv: -kv[1])[:top]
     lines = ["# Suggested wiki-links (Adamic-Adar over the association graph)", "",
              "Read-only curation aid (suggest_links.py). Each pair shares many neighbours but has no",
              "direct [[link]]. AA predicts future co-read of unlinked pairs at AUROC ~0.71-0.81 (causal,",
@@ -156,14 +201,17 @@ def main():
         lines.append(f"    - {desc.get(b, '')}")
         lines.append(f"    - shared context: {via}")
     try:
-        with io.open(OUT, "w", encoding="utf-8") as f:
+        tmp = OUT + ".tmp"
+        with io.open(tmp, "w", encoding="utf-8") as f:
             f.write("\n".join(lines) + "\n")
+        os.replace(tmp, OUT)
     except Exception as e:
         if not quiet:
             print("suggest_links: write failed:", e)
         return
     if not quiet:
-        print(f"suggest_links: {len(aa)} unlinked pairs with >={min_common} shared neighbours; "
+        more = "" if exact_total else " (pairs whose only shared neighbours are hubs not counted)"
+        print(f"suggest_links: {total} unlinked pairs with >={min_common} shared neighbours{more}; "
               f"wrote top {len(ranked)} to {OUT}")
         for (a, b), s in ranked[:8]:
             print(f"  AA {s:.2f}  {real.get(a, a)}  <>  {real.get(b, b)}")
