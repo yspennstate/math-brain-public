@@ -138,7 +138,11 @@ model:
 ```
 python three_arm.py --write-prompts prompts/                  # read or send the 30 prompts yourself
 python three_arm.py --model-cmd "your-model-cli --read-stdin"  # send each on stdin and grade the reply
+python three_arm.py --grade-replies prompts/                  # grade replies saved as prompts/q01_brain.reply.txt ...
 ```
+
+With no model on the command line, paste each prompt into a fresh chat, save the reply beside its prompt with
+`.reply.txt` in place of `.txt`, and grade the folder; a reply not saved is named and counts as a fail.
 
 Before spending model calls, check the wiring with a stand-in model that hands each prompt straight back:
 

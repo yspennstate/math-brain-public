@@ -144,7 +144,8 @@ answer must contain, and include one the store cannot answer. Then:
 
 ```
 python three_arm.py --model-cmd "<an agent command line that reads the prompt on stdin>"
-python three_arm.py --write-prompts out/     # or write the 30 prompts to files and send them by hand
+python three_arm.py --write-prompts out/     # or write the 30 prompts to files and send them by hand,
+python three_arm.py --grade-replies out/     # then grade the replies saved as out/q01_brain.reply.txt ...
 ```
 
 It asks every question three ways: with recall, with every record pasted into the prompt, and with no records. On a

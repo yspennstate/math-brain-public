@@ -55,7 +55,9 @@ The commands here are written `python3`. On Windows type `py -3` or `python` ins
        [{{"id": "q01", "question": "...", "any_of": [["phrase", "or this phrase"]]}},
         {{"id": "q10", "question": "...", "any_of": [["no record", "unknown"]], "absent": true}}]
 
-3. Run `python3 check_store.py`, then `python3 three_arm.py --write-prompts prompts/` (or `--model-cmd`). If the
+3. Run `python3 check_store.py`, then `python3 three_arm.py --write-prompts prompts/`; paste each prompt into a fresh
+   chat, save the reply as `prompts/q01_brain.reply.txt` (and so on), and run `python3 three_arm.py --grade-replies
+   prompts/` (or let `--model-cmd` send and grade them). If the
    brain arm does not beat the none arm on your own questions, fix the records before adding anything else.
 
 4. Then the hooks (`hooks/`), the nightly dream (`dream/README.md`) and, when several agents work at once,

@@ -7,6 +7,11 @@ Arms, same model and same question each time:
 
     python three_arm.py --write-prompts out/          # write 30 prompt files to read or send by hand
     python three_arm.py --model-cmd "my-cli --stdin"  # send each prompt on stdin, grade what comes back
+    python three_arm.py --grade-replies out/          # grade replies saved by hand as out/q01_brain.reply.txt ...
+
+Without a model on the command line, paste each prompt into a fresh chat and save the reply beside its prompt,
+with .reply.txt in place of .txt; --grade-replies then scores the folder. A reply not saved is named and counts
+as a fail.
 
 Grading is deliberately crude: an answer passes when, for every group in the question's any_of list, it contains
 at least one of the group's phrases (case-insensitive). Read the failing answers yourself before trusting a score.
@@ -86,10 +91,13 @@ def main():
     ap.add_argument("--questions", default=os.path.join(HERE, "questions.json"))
     ap.add_argument("--write-prompts")
     ap.add_argument("--model-cmd")
+    ap.add_argument("--grade-replies", metavar="DIR")
     ap.add_argument("--timeout", type=int, default=300)
     a = ap.parse_args()
-    if not (a.write_prompts or a.model_cmd):
-        ap.error("give --write-prompts DIR or --model-cmd CMD")
+    if not (a.write_prompts or a.model_cmd or a.grade_replies):
+        ap.error("give --write-prompts DIR, --model-cmd CMD or --grade-replies DIR")
+    if a.model_cmd and a.grade_replies:
+        ap.error("--model-cmd and --grade-replies both supply the answers; give one")
     recs = recall.load(a.dir)
     with open(a.questions, encoding="utf-8") as fh:
         items = json.load(fh)
@@ -98,6 +106,7 @@ def main():
                  % a.questions)
     arms ={"brain": lambda q: brain_context(recs, q), "docs": lambda q: docs_context(recs), "none": lambda q: ""}
     score = {k: 0 for k in arms}
+    missing = []
     for item in items:
         for arm, ctx in arms.items():
             prompt = ASK + ctx(item["question"]) + "Question: " + item["question"] + "\n"
@@ -105,17 +114,28 @@ def main():
                 os.makedirs(a.write_prompts, exist_ok=True)
                 with open(os.path.join(a.write_prompts, "%s_%s.txt" % (item["id"], arm)), "w", encoding="utf-8") as fh:
                     fh.write(prompt)
-            if a.model_cmd:
-                try:
-                    res = subprocess.run(split_cmd(a.model_cmd), input=prompt, capture_output=True, text=True,
-                                         encoding="utf-8", timeout=a.timeout)
-                    answer = res.stdout
-                except subprocess.TimeoutExpired:
-                    answer = ""
+            if a.model_cmd or a.grade_replies:
+                if a.grade_replies:
+                    rp = os.path.join(a.grade_replies, "%s_%s.reply.txt" % (item["id"], arm))
+                    if os.path.exists(rp):
+                        with open(rp, encoding="utf-8") as fh:
+                            answer = fh.read()
+                    else:
+                        missing.append(os.path.basename(rp))
+                        answer = ""
+                else:
+                    try:
+                        res = subprocess.run(split_cmd(a.model_cmd), input=prompt, capture_output=True, text=True,
+                                             encoding="utf-8", timeout=a.timeout)
+                        answer = res.stdout
+                    except subprocess.TimeoutExpired:
+                        answer = ""
                 ok = passes(answer, item)
                 score[arm] += ok
                 print("%s %-5s %s  %s" % (item["id"], arm, "PASS" if ok else "fail", " ".join(answer.split())[:100]))
-    if a.model_cmd:
+    if missing:
+        print("\nno reply saved for %d prompt(s), counted as fails: %s" % (len(missing), ", ".join(missing)))
+    if a.model_cmd or a.grade_replies:
         print("\n" + "  ".join("%s %d/%d" % (k, v, len(items)) for k, v in score.items()))
     if a.write_prompts:
         print("wrote %d prompts to %s" % (len(items) * len(arms), a.write_prompts))
