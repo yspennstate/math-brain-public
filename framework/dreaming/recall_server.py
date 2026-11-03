@@ -22,10 +22,22 @@ from server_safety import resources, resident
 CAP = int(1.5*1024**3)
 
 def mutex(store):
+    digest = hashlib.sha256(canonical(store).encode('utf-8')).hexdigest()
+    if os.name != 'nt':
+        # one server per store: an advisory lock the kernel drops when the process exits
+        import fcntl
+        import tempfile
+        fh = open(os.path.join(tempfile.gettempdir(), 'R39MathRecall_%s.lock' % digest), 'a')
+        try:
+            fcntl.flock(fh.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
+        except OSError:
+            fh.close()
+            raise RuntimeError('second instance')
+        return fh
     kernel = ctypes.windll.kernel32
     kernel.CreateMutexW.argtypes = [ctypes.c_void_p,ctypes.c_int,ctypes.c_wchar_p]
     kernel.CreateMutexW.restype = ctypes.c_void_p
-    name = 'Global\\R39MathRecall_' + hashlib.sha256(canonical(store).encode('utf-8')).hexdigest()
+    name = 'Global\\R39MathRecall_' + digest
     handle = kernel.CreateMutexW(None,False,name)
     error = kernel.GetLastError()
     if not handle:
@@ -257,6 +269,12 @@ def main():
                     endpoint.unlink()
             except Exception:
                 pass
+        release(handle)
+
+def release(handle):
+    if os.name != 'nt':
+        handle.close()
+    else:
         ctypes.windll.kernel32.CloseHandle(ctypes.c_void_p(handle))
 
 if __name__ == '__main__':
