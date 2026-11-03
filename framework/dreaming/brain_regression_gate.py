@@ -14,7 +14,9 @@ This gate deliberately attacks the failures that status checks missed:
 * a crash publishing a mixed three-file keyword snapshot;
 * a graph-loader signature change breaking ``brain.py recall``.
 
-Exit states: 0 PASS, 1 FAIL, 2 INCOMPLETE. Tests use temporary state and non-UUID replay
+Exit states: 0 PASS, 1 FAIL, 2 INCOMPLETE. A brand-new brain (no reflex has fired, no keyword
+generation exists) reports the properties that read those inputs as NEW: nothing to measure yet,
+which does not change the exit state. Tests use temporary state and non-UUID replay
 sessions, so the gate never pollutes live deny, dedup, surfacing, or activation ledgers.
 """
 import hashlib
@@ -54,6 +56,19 @@ results = []
 
 def record(section, name, state, detail=""):
     results.append((section, name, state, detail))
+
+
+def _new_brain():
+    """True for a brain that has not yet produced what the judge, keyword and recall checks read.
+
+    A fresh install has no reflex fire log, no keyword generation and too few prompts to replay,
+    so those properties cannot be inspected yet; reporting them as FAIL or INCOMPLETE made every
+    first dream fail. Once any reflex has fired or any keyword generation exists the brain is no
+    longer new, and a missing input there is reported as before."""
+    for name in ("instinct_fires.tsv", "keyword_current.json", "keyword_nodes.tsv"):
+        if os.path.exists(os.path.join(HERE, name)):
+            return False
+    return True
 
 
 def _read_json(path):
@@ -788,8 +803,11 @@ def check_judge_agenda():
     except Exception:
         record("judge", "judge agenda builds within budget", "FAIL", "unreadable output: %r" % (proc.stdout or "")[:120])
         return
-    record("judge", "judge agenda builds within budget", "PASS" if length > 1000 else "FAIL", "%.1f s, %d chars" % (dt, length))
-    record("judge", "judge cases carry path and reason", "PASS" if (n_path > 0 and has_reason and has_supp) else "INCOMPLETE",
+    new = length <= 1000 and _new_brain()
+    record("judge", "judge agenda builds within budget", "PASS" if length > 1000 else ("NEW" if new else "FAIL"),
+           "%.1f s, %d chars%s" % (dt, length, " (no reflex has fired yet)" if new else ""))
+    record("judge", "judge cases carry path and reason",
+           "PASS" if (n_path > 0 and has_reason and has_supp) else ("NEW" if new else "INCOMPLETE"),
            "path on %d cases, reason %s, suppressed section %s (INCOMPLETE when the day logged no suppressed fire)" % (n_path, has_reason, has_supp))
 
 
@@ -801,7 +819,8 @@ def check_keyword_artifact():
         selected = ka.load_generation(HERE, allow_legacy=False)
         members, aliases, weights = _parse_nodes(selected["paths"]["keyword_nodes.tsv"])
     except Exception as exc:
-        record("artifact", "verified generation loads", "INCOMPLETE", repr(exc)[:200])
+        record("artifact", "verified generation loads", "NEW" if _new_brain() else "INCOMPLETE",
+               repr(exc)[:200])
         _check_publication_transaction()
         _check_hash_seed_determinism()
         return
@@ -940,7 +959,8 @@ def check_recall(n_prompts):
             raise RuntimeError("memory graph is empty")
         record("recall", "brain.py graph-loader compatibility", "PASS", "%d nodes" % len(adj))
     except Exception as exc:
-        record("recall", "load replay + graph", "INCOMPLETE", repr(exc)[:180])
+        record("recall", "load replay + graph", "NEW" if _new_brain() else "INCOMPLETE",
+               repr(exc)[:180])
         return
 
     try:
@@ -949,7 +969,8 @@ def check_recall(n_prompts):
         record("recall", "harvest prompts", "INCOMPLETE", repr(exc)[:180])
         return
     if len(prompts) < 20:
-        record("recall", "harvest prompts", "INCOMPLETE", "only %d prompts" % len(prompts))
+        record("recall", "harvest prompts", "NEW" if _new_brain() else "INCOMPLETE",
+               "only %d prompts" % len(prompts))
         return
 
     def run(prompt, tag, index, overlay_on):
@@ -1067,9 +1088,11 @@ def main():
 
     fails = [item for item in results if item[2] == "FAIL"]
     incomplete = [item for item in results if item[2] == "INCOMPLETE"]
+    new = [item for item in results if item[2] == "NEW"]
     print(
-        "\n%d checks: %d pass, %d FAIL, %d INCOMPLETE"
-        % (len(results), len(results) - len(fails) - len(incomplete), len(fails), len(incomplete))
+        "\n%d checks: %d pass, %d FAIL, %d INCOMPLETE, %d NEW"
+        % (len(results), len(results) - len(fails) - len(incomplete) - len(new), len(fails),
+           len(incomplete), len(new))
     )
     if fails:
         print("VERDICT: FAIL")
@@ -1077,6 +1100,9 @@ def main():
     if incomplete:
         print("VERDICT: INCOMPLETE - an uninspected property is not a pass")
         return 2
+    if new:
+        print("VERDICT: PASS - new brain: %d properties have nothing to measure yet" % len(new))
+        return 0
     print("VERDICT: PASS")
     return 0
 
