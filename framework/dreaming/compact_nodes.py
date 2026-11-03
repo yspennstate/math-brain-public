@@ -71,7 +71,10 @@ KEEP = ("Compacting: keep in the summary, word for word where they appear: the o
         "Owner restrictions keep their scope words (for the night, until he says, this session).")
 # test material never reaches a memory file (a memory can be pushed; test items, keys and questions stay on this computer):
 # a summary that mentions the test bank keeps its full text in the local node and gives its anchor no excerpt
-TEST_RX = re.compile(r"test_v\d|[/\\]items[/\\]|keys?_quarantine|answer key|key\.quote|blind_solves|plit_keys|bank_\w+_keys",
+TEST_RX = re.compile(r"test_v\d|[/\\]items[/\\]|keys?_quarantine|answer key|key\.quote|blind_solves|plit_keys|bank_\w+_keys"
+                     # item files, per-item slices and answer-key fields written by a test factory
+                     r"|ITEMS\.jsonl|__by_[a-z]+\d+|SLICE\d+(_\w+)?\.tsv|grader.note"
+                     r"|key\.(answer|accept|witness|status_quote|solution_steps)",
                      re.I)
 SECTION_RX = re.compile(r"^\s*(\d{1,2})\.\s+([A-Z][A-Za-z ,/&'-]{2,60}):?\s*$", re.M)
 WANT_SECTIONS = ("primary request", "pending tasks", "current work", "optional next step", "next step")
