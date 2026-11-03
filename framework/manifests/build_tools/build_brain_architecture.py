@@ -29,6 +29,9 @@ OUT  = os.path.join(CONS, "brain")
 os.makedirs(OUT, exist_ok=True)
 DREAMING = os.path.join(ROOT, "12_cognitive_architecture", "dreaming")
 sys.path.insert(0, DREAMING)
+# A fresh install keeps the dreaming scripts only under ~/.claude/dreaming; the repo copy of
+# that folder appears later, if at all. Look there second so supersession.py is found either way.
+sys.path.insert(1, os.path.join(os.path.expanduser("~"), ".claude", "dreaming"))
 from supersession import active_supersessions
 SUPERSEDED = active_supersessions(
     LIVE, index_path=os.path.join(DREAMING, "superseded.tsv"), include_frontmatter=True)

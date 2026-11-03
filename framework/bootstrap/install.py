@@ -38,6 +38,9 @@ BRAIN_REPO_COPIES = {
     "resilience": os.path.join("12_cognitive_architecture", "resilience"),
     "workspace/global_workspace": os.path.join("12_cognitive_architecture", "global_workspace"),
     "governor": os.path.join("12_cognitive_architecture", "compute_governor"),
+    # run_dream.ps1 builds the RELATED graph and the navigation views with
+    # <brain-repo>/manifests/build_tools/build_brain_architecture.py
+    "manifests": "manifests",
 }
 BRAIN_REPO_DIRS = [
     os.path.join("01_ai_consciousness", "brain"),
