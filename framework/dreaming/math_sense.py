@@ -727,6 +727,82 @@ def _rank_score(hit, precision=None, boost=0.0):
     return base
 
 
+# USE-GROWN LAYER (26 Sep 2026). brain_graph/bin/math_use.py keeps each card's use history (every serve, every explicit
+# fetch) and which cards were served into the same session: a card's use score in 0..1 is half its node size (the ACT-R
+# base level of its uses) and half its strongest co-activation edge (positive NPMI over sessions) to a card this session
+# already has. Every serve is appended to brain_graph/live/math_serves.jsonl and math_use.py build folds it in, so the
+# layer grows with use. MATHBRAIN_USE_WEIGHT=0 switches it off; MATHBRAIN_USE_LOG=0 keeps evaluation serves out of it.
+#
+# WHERE IT ACTS. Inside the rank score it decided which cards entered the block, and on three locate banks (130
+# questions) that cost one question all three of its cards. So the lexical ranking alone decides the block, and the use
+# layer only orders the cards inside it: after the budget has fitted the block, a card moves up past its neighbour when
+# it has been used more and its tilted score, score x (1 + MATHBRAIN_USE_WEIGHT x use), passes the neighbour's. If the
+# new order would fit a different set of cards under the budget, the block keeps the old order.
+MATH_USE_WEIGHT = float(os.environ.get("MATHBRAIN_USE_WEIGHT", "0.15") or 0.0)
+_USE_CTX = {"sid": "", "served": set(), "cache": {}}
+
+
+def _use_module():
+    """math_use from the installed brain graph (~/.claude/brain_graph/bin) or, in a clone, framework/brain_graph/bin."""
+    here = os.path.dirname(os.path.abspath(__file__))
+    for p in (os.path.join(HOME, ".claude", "brain_graph", "bin"), os.path.join(here, "..", "brain_graph", "bin")):
+        if os.path.isfile(os.path.join(p, "math_use.py")):
+            if p not in sys.path:
+                sys.path.insert(0, p)
+            break
+    import math_use
+    return math_use
+
+
+def _use_begin(session_id):
+    """Start a prompt: forget the last prompt's scores and load the cards this session was already served."""
+    _USE_CTX.update(sid=session_id or "", served=set(), cache={})
+    if not session_id or MATH_USE_WEIGHT <= 0:
+        return
+    try:
+        with io.open(_session_shard(session_id), encoding="utf-8") as f:
+            _USE_CTX["served"] = set(json.load(f).get("ids") or [])
+    except Exception:
+        pass
+
+
+def _use_score(cid):
+    if MATH_USE_WEIGHT <= 0 or not cid:
+        return 0.0
+    c = _USE_CTX["cache"]
+    if cid not in c:
+        try:
+            c[cid] = float(_use_module().scores(_USE_CTX["sid"], [cid], _USE_CTX["served"]).get(cid, 0.0))
+        except Exception:
+            c[cid] = 0.0
+    return c[cid]
+
+
+def _use_order_pieces(pieces, emitted_ids, hits_by_id):
+    """Reorder the emitted cards by use, one neighbour at a time; the card set never changes."""
+    if MATH_USE_WEIGHT <= 0 or len(emitted_ids) < 2:
+        return pieces
+    emitted = set(emitted_ids)
+    shown = [p for p in pieces if p[0] in emitted]
+    rest = [p for p in pieces if p[0] not in emitted]
+    moved = False
+    for i in range(len(shown) - 1):
+        a, b = shown[i][0], shown[i + 1][0]
+        ha, hb = hits_by_id.get(a), hits_by_id.get(b)
+        if ha is None or hb is None:
+            continue
+        ua, ub = _use_score(a), _use_score(b)
+        if ub <= ua:
+            continue
+        ra, rb = _rank_score(ha), _rank_score(hb)
+        if rb > ra:
+            continue
+        if rb + MATH_USE_WEIGHT * ub * abs(rb) > ra + MATH_USE_WEIGHT * ua * abs(ra):
+            shown[i], shown[i + 1] = shown[i + 1], shown[i]
+            moved = True
+    return shown + rest if moved else pieces
+
+
 def _title_is_the_query(query, title):
     """True when the sub-query names the node itself: same words, order and punctuation aside.
 
@@ -2193,6 +2269,7 @@ def _main_body(data, out):
     started = time.time()
     prompt = data.get("prompt")
     prompt = (prompt if isinstance(prompt, str) else "")[:8000]
+    _use_begin(str(data.get("session_id") or data.get("thread_id") or ""))
     prompt = _latex_accents(prompt)
     _headless_budget(prompt)
     if len(prompt) < 12 or not _math_gate(prompt):
@@ -2904,6 +2981,15 @@ def _main_body(data, out):
         if _named_entries > 3 and len(pieces) > 3:
             _budget = max(MAX_BLOCK_CHARS, len(header) + 760 * len(pieces))
         block, emitted_ids = _assemble_note_block(header, pieces, _budget)
+        if block and len(emitted_ids) > 1 and MATH_USE_WEIGHT > 0:
+            try:
+                _pieces_u = _use_order_pieces(pieces, emitted_ids, {h.node.id: h for h in chosen})
+                if _pieces_u is not pieces:
+                    _bu, _idu = _assemble_note_block(header, _pieces_u, _budget)
+                    if _bu and set(_idu) == set(emitted_ids):
+                        pieces, block, emitted_ids = _pieces_u, _bu, _idu
+            except Exception as _exc:
+                _silence_note(data, "use_order_error:%s" % type(_exc).__name__)
         if block and emitted_ids and PITFALL_LINES:
             try:
                 block, emitted_ids = _with_pitfall_lines(header, pieces, emitted_ids, _budget, prompt)
@@ -2925,6 +3011,11 @@ def _main_body(data, out):
             return                          # the hard ceiling passed while this body ran: nothing was served
         if emitted_ids:
             _already_injected(sess_for_guard, emitted_ids)
+            try:
+                if os.environ.get("MATHBRAIN_USE_LOG", "1") != "0":   # evaluations set 0: test serves are not uses
+                    _use_module().log_serve(sess_for_guard, emitted_ids)
+            except Exception:
+                pass
         sess = data.get("session_id") or ""
         if emitted_ids and re.match(r"^[0-9a-f]{8}-", sess):
             try:
