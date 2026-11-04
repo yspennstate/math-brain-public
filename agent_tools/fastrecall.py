@@ -14,7 +14,7 @@ values only, never code.
 
     MATH_RECALL_FAST=0           the live path, always
     MATH_RECALL_FAST_ENCODER=0   keep the fast search, build the query encoder the usual way
-    MATH_RECALL_CACHE_DIR=DIR    where the prepared files live (default ~/.claude/dreaming/cache/math_recall)
+    MATH_RECALL_CACHE_DIR=DIR    where the prepared files live (default cache/math_recall beside this file)
     MATH_RECALL_FAST_DEBUG=1     one line on stderr: fast or live, built or loaded, and why
 """
 import hashlib
@@ -40,6 +40,7 @@ KEEP_FILES = 4   # prepared states kept at most; an evaluation arm with other di
 #: was set; on 28 Oct it was 370 MB, so four held 1.6 GB on a disk with 1.2 GB free (env MATH_RECALL_FAST_KEEP_MB).
 KEEP_MB = 800
 DREAMING = os.path.join(os.path.expanduser("~"), ".claude", "dreaming")
+HERE = os.path.dirname(os.path.abspath(__file__))
 STATUS = {}      # what the last open_prepared()/search() did (read by the controls and MATH_RECALL_FAST_DEBUG)
 _MEMO = {}       # key -> Prepared, for callers that run main() many times in one process
 
@@ -49,7 +50,7 @@ def enabled():
 
 
 def cache_dir():
-    return os.environ.get("MATH_RECALL_CACHE_DIR") or os.path.join(DREAMING, "cache", "math_recall")
+    return os.environ.get("MATH_RECALL_CACHE_DIR") or os.path.join(HERE, "cache", "math_recall")
 
 
 def _debug(msg):
@@ -865,7 +866,9 @@ class Encoder:
     @staticmethod
     def _run():
         try:
-            qe_path = os.path.join(DREAMING, "query_embed.py")
+            qe_path = os.path.join(HERE, "query_embed.py")
+            if not os.path.isfile(qe_path):
+                qe_path = os.path.join(DREAMING, "query_embed.py")
             if hashlib.sha256(_read(qe_path)).hexdigest() != PIN_QUERY_EMBED:
                 return
             qe = sys.modules.get("query_embed")
