@@ -3145,6 +3145,40 @@ def _quote_uncovered(prompt, hits):
         return None
 
 
+# A BLOCK FAR FROM THE PROMPT ON THE STORE'S OWN SCALE IS SILENCED (MATHBRAIN_MEANQ_Z, DEFAULT OFF). The served cards'
+# mean cosine to the prompt moves with prompt length, so it is read against the prompt's mean cosine to a fixed random
+# sample of 4000 store cards: z = (meanq - base) / sd, and a block with z under MEANQ_Z is withheld. At 1.25 on held-out
+# long prompts it withheld 192 of 427 served blocks (146 wrong, 46 unanswerable) and lost 0 of 92 right ones, and on a
+# fresh bank 2 of 160. It stays off because a fresh question placed after a long lead-in is silenced 14 times in 20: the
+# lead-in dominates the prompt's embedding (scoring the tail too saves 7 of the 14 at 150-250 characters, 5 at 400,
+# none at 800). Set MATHBRAIN_MEANQ_Z=1.25 to run it; any failure keeps the block.
+_MZ = os.environ.get("MATHBRAIN_MEANQ_Z", "off").strip().lower()
+MEANQ_Z = None if _MZ in ("", "0", "off", "false") else float(_MZ)
+_Z_BASE = []
+
+
+def _far_block_z(prompt, ids):
+    """(z, meanq) when z is below MEANQ_Z, else None. Any failure keeps the block."""
+    try:
+        from math_brain import semantic as _S
+        import numpy as _np
+        _S._load_artifact()
+        if not _Z_BASE:
+            rng = _np.random.default_rng(20261019)
+            _Z_BASE.append(_S._vecs[rng.choice(len(_S._vecs), size=min(4000, len(_S._vecs)), replace=False)])
+        pos = {i: n for n, i in enumerate(_S._ids)}
+        rows = [pos[str(i)] for i in ids if str(i) in pos]
+        if not rows:
+            return None
+        q = _np.asarray(_S._query_encoder().embed(_S.QUERY_PREFIX + (prompt or "")), dtype=_np.float32)
+        m = float((_S._vecs[rows] @ q).mean())
+        b = _Z_BASE[0] @ q
+        z = (m - float(b.mean())) / (float(b.std()) or 1e-6)
+        return (z, m) if z < MEANQ_Z else None
+    except Exception:
+        return None
+
+
 def _cut_unless_named(prompt, hits):
     """_incoherent_weak_block on these cards, None when the lead card's title is the result the prompt names."""
     c = _incoherent_weak_block(prompt, [str(h.node.id) for h in hits])
@@ -4210,6 +4244,11 @@ def _main_body(data, out):
                     _cut = None
             if _cut:
                 _silence_note(data, "incoherent_weak_block:lead%.3f_pair%.3f" % _cut)
+                return
+        if block and MEANQ_Z is not None and emitted_ids:
+            _zm = _far_block_z(prompt, emitted_ids)
+            if _zm:
+                _silence_note(data, "far_block_z:z%.2f_meanq%.3f" % _zm)
                 return
         if block and QUOTE_COV is not None and emitted_ids and not pinned_ids:
             _qc = _quote_uncovered(prompt, [h for h in chosen if h.node.id in set(emitted_ids)])
