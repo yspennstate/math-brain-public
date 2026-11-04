@@ -433,6 +433,24 @@ def main():
             os.makedirs(claude, exist_ok=True)
             io.open(dest, "w", encoding="utf-8", newline="\n").write(expand(io.open(sp, encoding="utf-8").read(), tok))
 
+    # Recall's lexical channel reads bm25_index.json.gz. Nothing built it at install, so a new brain's first recalls ran
+    # on file names alone ("lexical channel dark this recall") until the first dream. It takes seconds on the starter
+    # memories, so build it now. The graph channel fills from sessions (brain_graph/bin/run_graph.py capture, then
+    # build); the semantic channel needs models/bge-small-en-v1.5 (model.onnx, tokenizer.json) and published embeddings.
+    if a.apply:
+        import subprocess
+        env = dict(os.environ, HOME=home, USERPROFILE=home)
+        for k in [k for k in env if k.startswith("BRAIN_")]:
+            del env[k]
+        try:
+            p = subprocess.run([a.python, os.path.join(dreaming, "bm25.py"), "build"], cwd=dreaming, env=env,
+                               capture_output=True, text=True, timeout=600,
+                               creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+            lines = (p.stdout or p.stderr or "").strip().splitlines()
+            print(f"  recall index: rc {p.returncode} {lines[0] if lines else ''}")
+        except Exception as e:
+            print(f"  recall index: not built ({type(e).__name__}); run {os.path.join(dreaming, 'bm25.py')} build")
+
     if not a.apply:
         print("\ndry-run only; re-run with --apply to write")
     print(f"done ({total} files{' would be' if not a.apply else ''} installed)")
