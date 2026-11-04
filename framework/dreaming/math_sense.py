@@ -1323,6 +1323,103 @@ def _retraction_skip(con, col):
     return ""
 
 
+# SAME RESULT (MATHBRAIN_SAME_RESULT, 24 Sep 2026). A store can hold two cards for one result: a card written from a
+# working note and a card written from a curated ledger, tied by a semantic_association edge whose metadata says
+# relation same_result and carries the ledger card's logical id (ledger_logical_id). Without the tie two of the three
+# slots of a block went to one result in about half the blocks that served either, and the two can disagree on
+# standing (one "answered NO", the other "candidate refutation"). With it the finished block keeps the first card of a
+# pair and drops the later one, and the kept card names the other as a record line, "same result on record: <title>
+# (<id>)", so the standing the reader does not see in full still reaches them. A ledger revision written after the tie
+# is still recognised: the edge carries the ledger's logical id, and the record line names the current card for it.
+SAME_RESULT = os.environ.get("MATHBRAIN_SAME_RESULT", "1").strip() not in ("0", "off", "false", "")
+
+
+def _same_result_twins(ids, heads=False, sources=None):
+    """node id -> ids of its same-result twins: the edge's two ends plus the cards among `ids` that carry the edge's
+    ledger logical id, and with heads=True also the store's current cards that carry it (a ledger revision written
+    after the tie). A set passed as `sources` receives the edges' source ids (the working-note cards). Never raises."""
+    import sqlite3
+    out = {}
+    if not ids or not STORE_PATH:
+        return out
+    try:
+        con = sqlite3.connect("file:%s?mode=ro" % str(STORE_PATH).replace(chr(92), "/"), uri=True)
+        try:
+            rows = con.execute("select source_id, target_id, metadata_json from edges where kind = 'semantic_association' "
+                               "and metadata_json like '%same_result%'" + _retraction_skip(con, "id")).fetchall()
+            if not rows:
+                return out
+            marks = ",".join("?" * len(ids))
+            by_lid = {}
+            for nid, m in con.execute("select id, metadata_json from nodes where id in (%s)" % marks, list(ids)):
+                try:
+                    lid = json.loads(m or "{}").get("logical_id") or ""
+                except Exception:
+                    lid = ""
+                if lid:
+                    by_lid.setdefault(lid, set()).add(nid)
+            if heads:
+                # Heads are looked up only for the groups that touch `ids`: a group reaches a card of `ids` through an
+                # end of its edge or through a card of `ids` carrying its ledger id. The scan below reads the metadata
+                # of every node and is skipped when no group touches the shown cards, which is nearly every prompt.
+                want = set()
+                idset = set(ids)
+                for _s, _t, m in rows:
+                    try:
+                        _lid = json.loads(m or "{}").get("ledger_logical_id") or ""
+                        if _s in idset or _t in idset or _lid in by_lid:
+                            want.add(_lid)
+                    except Exception:
+                        pass
+                want.discard("")
+                if want:
+                    q = ("select id, metadata_json from nodes where metadata_json like '%logical_id%' "
+                         "and id not in (select target_id from edges where kind = 'supersedes')")
+                    for nid, m in con.execute(q):
+                        try:
+                            lid = json.loads(m or "{}").get("logical_id") or ""
+                        except Exception:
+                            lid = ""
+                        if lid in want:
+                            by_lid.setdefault(lid, set()).add(nid)
+        finally:
+            con.close()
+        for s, t, m in rows:
+            if sources is not None:
+                sources.add(s)
+            try:
+                lid = json.loads(m or "{}").get("ledger_logical_id") or ""
+            except Exception:
+                lid = ""
+            group = {s, t} | by_lid.get(lid, set())
+            for a in group:
+                out.setdefault(a, set()).update(group - {a})
+    except Exception:
+        return {}
+    return out
+
+
+def _drop_later_twins(chosen):
+    """One card per same-result pair (see SAME_RESULT): the pair keeps the place of its first card in block order, and
+    the card shown there is the working-note one (the same_result edge's source) - it names the construction and how it
+    was checked; the other card's standing still reaches the reader through the kept card's record line."""
+    if not SAME_RESULT or len(chosen) < 2:
+        return chosen
+    src = set()
+    tw = _same_result_twins([h.node.id for h in chosen], sources=src)
+    if not tw:
+        return chosen
+    kept, placed = [], set()
+    for h in chosen:
+        if h.node.id in placed:
+            continue
+        group = [x for x in chosen if x.node.id == h.node.id or x.node.id in tw.get(h.node.id, ())]
+        pick = next((x for x in group if x.node.id in src), h)
+        kept.append(pick)
+        placed.update(x.node.id for x in group)
+    return kept
+
+
 def _pitfalls_for(card_ids):
     """card id -> [(label, id, title)]: corrections and answered problems first, then FAILS_UNDER pitfalls."""
     import sqlite3
@@ -1350,6 +1447,17 @@ def _pitfalls_for(card_ids):
              "and n.id not in (select target_id from edges where kind = 'supersedes')") % marks + skip_e
         for src, pid, title in con.execute(q, list(card_ids)):
             out.setdefault(src, []).append(("on record", pid, " ".join((title or "").split())))
+        if SAME_RESULT:
+            tw = _same_result_twins(list(card_ids), heads=True)
+            want = sorted(set(x for c in card_ids for x in tw.get(c, ())) - set(card_ids))
+            if want:
+                q = ("select id, title from nodes where id in (%s) "
+                     "and id not in (select target_id from edges where kind = 'supersedes')") % ",".join("?" * len(want))
+                current = dict(con.execute(q, want).fetchall())
+                for cid in card_ids:
+                    for x in sorted(tw.get(cid, ())):
+                        if x in current:
+                            out.setdefault(cid, []).append(("same result on record", x, " ".join((current[x] or "").split())))
     finally:
         con.close()
     return out
@@ -1363,7 +1471,7 @@ def _with_pitfall_lines(header, pieces, emitted_ids, budget, prompt):
     pw = _pitfall_words(prompt or "")
     emitted = set(emitted_ids)
     lines = {}
-    rank = {"corrected since": 0, "answered since": 0, "on record": 1}
+    rank = {"corrected since": 0, "answered since": 0, "same result on record": 0.5, "on record": 1}
     for cid in emitted_ids:
         cands = [(lab, pid, t) for lab, pid, t in found.get(cid, []) if pid not in emitted]
         if not cands:
@@ -2719,6 +2827,9 @@ def _main_body(data, out):
         if not chosen:
             _silence_note(data, "all_dedup_suppressed:%d" % len(dup_ids))
             return
+        # SAME RESULT on the finished block (see SAME_RESULT): the reranks can put a twin back after the selection,
+        # so the check runs here, and the first card of the final order keeps the pair's place
+        chosen = _drop_later_twins(chosen)
         pieces = []
         for hit in chosen:
             node = hit.node
@@ -2887,6 +2998,7 @@ def cli_query(query):
                                  deadline=time.monotonic() + TIME_BUDGET_S)
         if not chosen:
             return
+        chosen = _drop_later_twins(chosen)
         print("Full current note: python ~/.claude/dreaming/math_note.py SOURCE_ID")
         for hit in chosen:
             node = hit.node
