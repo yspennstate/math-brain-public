@@ -1204,6 +1204,26 @@ def _ident_boost():
         return 0.0
 
 
+def _ident_kw_boost():
+    try:
+        return float(os.environ.get("MATHBRAIN_IDENT_KW_BOOST", "1.0") or 0.0)
+    except ValueError:
+        return 0.0
+
+
+# capitalised words a title or a prompt carries that are not the name of a source ("Open Problem", "Section 4.6")
+_KW_NAME_STOP = frozenset(("open", "section", "conjecture", "conjectures", "ansatz", "exercise", "problems",
+                           "questions", "part", "chapter", "remark", "solved", "answered", "proved", "refuted",
+                           "candidate", "resolved", "fully", "our", "id", "yes", "no", "not", "known", "false",
+                           "true", "result", "results", "attempt", "failed", "route", "note", "case"))
+
+
+def _kw_idents(text):
+    """Identifiers the text names WITH a keyword ("Problem 4.45", "Conjecture 18.4", "Section 4.6") - the first
+    alternative of _IDENT_RE only; a bare decimal is not a problem name in a question."""
+    return {m.group(1) for m in _IDENT_RE.finditer(text or "") if m.group(1)}
+
+
 def _carries_ident(node, wanted):
     """Only the TITLE is read. A body mentions neighbouring problem numbers in passing ("unlike Problem 7.6");
     the title is where a card states which problem it is about, and all 13 result cards do."""
@@ -1224,12 +1244,41 @@ def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None, anchor
 
     _ib = _ident_boost()
     _want = _idents(prompt if prompt is not None else (title_query or "")) if _ib else set()
+    # A PROBLEM THE PROMPT NAMES (MATHBRAIN_IDENT_KW_BOOST, relative, 0 = off). The fixed +MATHBRAIN_IDENT_BOOST above is
+    # sized for a one-line question; on a long research prompt the rank scores run into the hundreds and +2 moves nothing
+    # (boost 2.0 changed no block on 22 research prompts). Two of them named their problem outright ("Open Problem 4.45",
+    # "Open Problem 7.27") and the card whose title carries that number sat 11th and 3rd. So a card is lifted by a SHARE
+    # of the best card's own score when (a) the prompt names the identifier with a keyword - problem, question,
+    # conjecture, ansatz, section, exercise - never a bare decimal, which in a work order is usually a size or a setting,
+    # and (b) the card's title shares one of the prompt's names or carries none, so one book's Problem 4.45 is not
+    # lifted by a question about another book's.
+    _kwb = _ident_kw_boost()
+    _want_kw = _kw_idents(prompt if prompt is not None else (title_query or "")) if _kwb else set()
+    _names_q = (_name_tokens(prompt or title_query or "") - _KW_NAME_STOP) if _want_kw else set()
+    _kw_top = [0.0]
+
+    def _kw_lift(hit):
+        if not _want_kw:
+            return False
+        title = getattr(hit.node, "title", "") or ""
+        if not (_want_kw & _idents(title)):
+            return False
+        tn = _name_tokens(title) - _KW_NAME_STOP
+        return (not tn) or bool(tn & _names_q)
 
     def _rs(hit):
         s = _rank_score(hit, _prec, _pb)
         if _ib and _carries_ident(hit.node, _want):
             s += _ib
+        if _kwb and _kw_top[0] > 0 and _kw_lift(hit):
+            s += _kwb * _kw_top[0]
         return s
+
+    if _want_kw:
+        try:
+            _kw_top[0] = max(_rank_score(h, _prec, _pb) for h in hits)
+        except ValueError:
+            _kw_top[0] = 0.0
 
     # An evidence node (a recorded read, a certificate, a citation) is ABOUT a claim; it is not
     # mathematics to serve. The store links it to its claim and indexes its summary like any node,
