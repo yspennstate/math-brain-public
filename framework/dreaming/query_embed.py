@@ -2,8 +2,9 @@
 
 The sidecar (memory_embeddings.npz) was built with sentence-transformers: CLS pooling, L2-normalised, max 512 tokens.
 Importing sentence-transformers costs ~55 s on this machine (measured 2026-09-13), which no deliberate recall can pay,
-so the same weights run here through onnxruntime + tokenizers (models/bge-small-en-v1.5, exported by
-campaign_2026-09-12_ultracode_mathbrain/lanes/m7_brain/export_bge_onnx.py; parity cosines 1.0 on five texts).
+so the same weights run here through onnxruntime + tokenizers (models/bge-small-en-v1.5). fetch_bge_onnx.py
+downloads the model's published ONNX export and tokenizer at a pinned revision and checks their hashes; against a
+local export of the same weights the cosines are 0.9999999 or better and the token ids identical.
 
     embed(text) -> numpy float32 vector of dim 384, unit norm, or None when anything is missing (fail-open: the
     caller carries on without a query vector, exactly as before this module existed).
