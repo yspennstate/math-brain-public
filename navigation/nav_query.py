@@ -172,8 +172,22 @@ class Nav:
                 # No top-50 cut: a card a second wording ranks 52nd still needs that small share
                 # (tools/import_store.py fell from 3rd to 7th when the repo grew by six files).
                 fused[cid] = fused.get(cid, 0.0) + 1.0 / (10 + rank)
-        best = sorted(fused.items(), key=lambda x: -x[1])[:k]
-        return [cid for cid, _ in best]
+        out, kept, twins = [], [], set()
+        for cid, _ in sorted(fused.items(), key=lambda x: -x[1]):
+            c = self.cards[cid]
+            p, twin = c["path"], (c["path"].rsplit("/", 1)[-1], c["lines"])
+            # A copy of a file already listed (framework/mathbrain/src/x.py beside src/x.py, or the same name
+            # and length in two folders) adds nothing; fold it into the copy that ranked first and keep the
+            # slot for a different file.
+            if c["kind"] == "file" and (twin in twins or any(p.endswith("/" + q) or q.endswith("/" + p) for q in kept)):
+                continue
+            out.append(cid)
+            if c["kind"] == "file":
+                kept.append(p)
+                twins.add(twin)
+            if len(out) == k:
+                break
+        return out
 
     def resolve(self, key):
         if key in self.cards:
