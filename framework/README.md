@@ -33,6 +33,13 @@ machine-specific constants parameterized and worked examples kept synthetic.
   day of real inputs before anyone changes what the hook matches, and
   `test_reflex_precision_paths.py` pins the per-path contract (`docs/NOTES_ARE_HINTS.md`;
   `docs/CHANGES_2026-09-02.md` and `docs/CHANGES_2026-09-03.md` say what changed on those days and why).
+  Two measurements a deployment runs on itself: `brain_health.py` reads the corpus (size,
+  strata, link topology and isolated nodes, index coverage) and, with `--recall N`, runs N
+  recall queries split by how many words they share with their target; `verify_replay.py`
+  replays recent session transcripts through `verify_gate.py` and `verify_sense.py` to count
+  how often each rule would fire and whether the turns it would have stopped drew a
+  correction, and `test_verify_replay_compat.py` checks that it still agrees with
+  `verify_ops.py` (`--ops-source verify_ops.py --replay-source verify_replay.py`).
 - `dreaming/job_cycle/` — how a session closes out so its context can be cleared without
   losing what happened: a readme per finished job (what was asked, what was done, what is
   true now, what is open), filed into the corpus and recallable later, plus the
