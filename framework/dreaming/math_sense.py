@@ -3235,6 +3235,33 @@ def _store_n():
     return _lexdf()[1]
 
 
+# PASTED VERDICTS (MATHBRAIN_VERDICT_GATE, default on). A prompt that opens with a reviewer's verdict on a paper
+# ("Verdict: potentially publishable, but not as-is ...", "Executive verdict", "My vote is NO - do not resubmit") and asks
+# an agent to act on it passes the entry gate on the mathematics the verdict discusses, and the cards that come back are
+# about that vocabulary, not about what the prompt asks for. A verdict word in the first 400 characters marks the prompt;
+# on a hand-labelled set of real prompts those were 15 junk blocks, 12 undecidable and 2 useful. 0 switches it off.
+VERDICT_GATE = os.environ.get("MATHBRAIN_VERDICT_GATE", "1").strip() not in ("0", "off", "false", "")
+VERDICT_WORDS = re.compile(
+    r"\b(publishable|publishability|referee[- ]style|referee report|peer[- ]review|accept(?:ed)? for publication|"
+    r"minor revision|major revision|substantial revision|not ready for submission|resubmit)\b"
+    # "verdict" only as a reviewer's heading or after a possessive - a solver's "UNSAT verdict" is mathematics
+    r"|\b(?:executive|my|current|overall|final) verdict\b|(?:^|[\n#*]\s*)verdict\b", re.I)
+
+
+def _verdict_text(prompt, data):
+    """True (after writing the silence note) when the prompt opens with a publishability or referee verdict."""
+    if not VERDICT_GATE:
+        return False
+    try:
+        ws = sorted(set(m.group(0).lower() for m in VERDICT_WORDS.finditer(prompt[:400])))
+        if not ws:
+            return False
+        _silence_note(data, "verdict_text:%s" % ",".join(ws[:4]))
+        return True
+    except Exception:
+        return False
+
+
 def _nonmath_text(prompt, data):
     """True (after writing the silence note) when the prompt is a long text that is not mathematics. Never raises."""
     if not NONMATH_GATE:
@@ -3812,6 +3839,8 @@ def _main_body(data, out):
         from math_brain.store import ResearchStore
         _install_global_idf()
         if _nonmath_text(prompt, data):
+            return
+        if _verdict_text(prompt, data):
             return
 
         # The signal cache IS loaded here, and the 2026-08-30 note that stood in this place
