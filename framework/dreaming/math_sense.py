@@ -1446,7 +1446,8 @@ def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None, anchor
             (h for h in ranked[1:]
              if re.sub(r"[^a-z0-9]+", " ", (h.node.title or "").casefold()).strip() != top_key
              and _family_key(h.node.title) != top_family
-             and not (_top_campaign is not None and _campaign_key(h.node) == _top_campaign)),
+             and not (_top_campaign is not None and _campaign_key(h.node) == _top_campaign)
+             and not _linked_to(ranked[0].node.id, h.node.id)),
             None,
         )
         if rival is not None and (top - _rs(rival)) < MIN_MARGIN:
@@ -1712,6 +1713,56 @@ def _already_injected(session_id, node_ids, *, record=True):
     except Exception:
         return set()
 
+
+
+# LINKED RIVALS (MATHBRAIN_LINKED_RIVAL, default 2). The margin test asks whether there is a clear winner among DISTINCT
+# candidates. A card the store links to the leader by an edge is not a rival: a pitfall note and the result it warns about
+# (FAILS_UNDER), a lemma and the theorem resting on it (DEPENDS_ON), a statement and a refutation of it, a claim and the
+# notion it names. A near-tie inside one linked neighbourhood is concentrated evidence about one topic, and the block
+# carries both cards. Store-wide IDF packed the Hurwitz pitfall, Weierstrass convergence, Montel and Normal Family within
+# 0.1 of each other (all four linked) and the hook went silent on six pitfall questions it had answered. The adjacency
+# is the pool's own edges (SUPERSEDES excluded: a superseded card is not current). 0 restores the old rule.
+_POOL_ADJ = {}
+
+
+def _set_pool_adjacency(edges):
+    """Record which pool cards the store links directly, for the margin test's rival choice."""
+    global _POOL_ADJ
+    adj = {}
+    try:
+        for e in edges or ():
+            k = getattr(getattr(e, "kind", None), "value", str(getattr(e, "kind", "")))
+            if k == "supersedes":
+                continue
+            a, b = e.source_id, e.target_id
+            if a == b:
+                continue
+            adj.setdefault(a, set()).add(b)
+            adj.setdefault(b, set()).add(a)
+    except Exception:
+        adj = {}
+    _POOL_ADJ = adj
+
+
+def _linked_to(a_id, b_id):
+    """1 (default): a direct edge. 2: a direct edge or a shared neighbour of small degree - two cards about the same
+    result (a pitfall note and a convergence theorem that both touch Hurwitz's theorem) without a hub between them;
+    MATHBRAIN_LINK_HUB_MAX caps the shared neighbour's degree (default 8), so a concept card that half the pool
+    mentions never makes two unrelated cards siblings."""
+    mode = os.environ.get("MATHBRAIN_LINKED_RIVAL", "2")
+    if mode == "0":
+        return False
+    na = _POOL_ADJ.get(a_id, ())
+    if b_id in na:
+        return True
+    if mode != "2":
+        return False
+    try:
+        hub_max = int(os.environ.get("MATHBRAIN_LINK_HUB_MAX", "8") or 8)
+    except Exception:
+        hub_max = 8
+    nb = _POOL_ADJ.get(b_id, ())
+    return any(len(_POOL_ADJ.get(m, ())) <= hub_max for m in set(na) & set(nb))
 
 
 def _prefilter_revision_nodes(store, prefilter_ids, max_revision_nodes=4096):
@@ -3442,6 +3493,7 @@ def _subquery_block(query, prompt=None, exact_pass=False):
         with ResearchStore.open_read_only(STORE_PATH) as store:
             store.connection.execute("BEGIN")
             nodes, edges = _prefilter_revision_nodes(store, ids)
+        _set_pool_adjacency(edges)
         result = retrieve(query, nodes=nodes, edges=edges, limit=CANDIDATE_POOL, min_support_score=0.0, min_margin=0.0)
         hits = result.hits
         if PREFLOOR:
@@ -3915,9 +3967,11 @@ def _main_body(data, out):
                     _silence_note(data, "prefilter_empty")
                     return
                 nodes, edges = _prefilter_revision_nodes(store, prefilter_ids)
+                _set_pool_adjacency(edges)
             else:
                 nodes = list(store.iter_nodes())
                 edges = list(store.iter_edges())
+                _set_pool_adjacency(())        # the full store's links are not built here (cost); none carry over
         if not nodes:
             _silence_note(data, "no_nodes")
             return
@@ -4717,6 +4771,7 @@ def cli_query(query):
             store.connection.execute("BEGIN")
             nodes = list(store.iter_nodes())
             edges = list(store.iter_edges())
+        _set_pool_adjacency(())
         result = retrieve(
             query, nodes=nodes, edges=edges, limit=CANDIDATE_POOL,
             min_support_score=0.0, min_margin=0.0,
