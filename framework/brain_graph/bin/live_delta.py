@@ -580,6 +580,9 @@ def update(now=None):
     """Rebuild the fast layer and point live/delta.json at it."""
     t0 = time.time()
     now = float(now or time.time())
+    if not os.path.exists(SIDECAR):       # a new install: no build has published a sidecar yet, so there is no base
+        return {"skipped": "no sidecar yet (the first build publishes one)", "events_new": 0, "edges": 0, "nodes": 0,
+                "newest_event": None}
     try:
         b = base()
     except SidecarBehind as e:            # the previous pointer stays, and open_delta keeps pairing it with its sidecar
