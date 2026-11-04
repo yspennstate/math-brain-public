@@ -3420,6 +3420,67 @@ def _emit(out, text):
         return True
 
 
+# SESSION CONTEXT FOR CONTINUATIONS (MATHBRAIN_SESSION_CONTEXT, default 0 = OFF).
+# A continuation ("keep working until you have a full proof", "use another idea to solve the full problem") names no
+# topic because the session already has one, so the entry gate refuses it and even an ungated retrieval finds nothing in
+# its words. With the dial on, a prompt that passes the gate is remembered for its session (one small file per session,
+# hashed id, three-hour life), and a prompt the gate refuses is served on itself plus that remembered prompt - but only
+# when it carries a proof-or-problem cue and no admin cue (push, email, repo, render, thumbnail ...). Everything after
+# the gate - prefilter, coverage, margins, dedup - runs unchanged on the combined text, so the route can only be as sure
+# as the remembered prompt made it. The header says where the notes came from.
+# Measured off by default: over a month of real prompts the route fired about twice a day, and replayed as live sessions
+# most of what it served had already been shown for the prompt that set the context, so the repeat guard dropped it.
+# Widening the cue does not help: the eligible prompts it leaves quiet are mostly not mathematics.
+SESSION_CONTEXT = os.environ.get("MATHBRAIN_SESSION_CONTEXT", "0").strip() not in ("0", "off", "false", "")
+SESSION_CTX_DIR = os.environ.get("MATHBRAIN_SESSION_CTX_DIR") or os.path.join(HOME, ".claude", "dreaming",
+                                                                              ".math_session_ctx")
+SESSION_CTX_TTL_S = 3 * 3600
+SESSION_CTX_CHARS = 2000
+CONTINUATION_CUE = re.compile(
+    r"\b(proofs?|prove[ns]?|proving|solve[ds]?|solving|solutions?|conjectures?|theorems?|lemmas?|bounds?|limits?|"
+    r"infinit[ey]|estimates?|inequalit(?:y|ies)|constants?|converge\w*|counterexamples?|close are we|full problem)\b",
+    re.I)
+CONTINUATION_ADMIN = re.compile(
+    r"\b(push\w*|commit\w*|github|repos?|repository|e-?mail\w*|upload\w*|download\w*|overleaf|zip|acknowledg\w*|"
+    r"funding|affiliat\w*|cite[sd]?|citations?|abstract|titles?|format\w*|folders?|website|youtube|movies?|films?|"
+    r"videos?|images?|pictures?|render\w*|narrat\w*|thumbnails?|slides?|episodes?|usage|how long|timeline)\b", re.I)
+
+
+def _ctx_file(session_id):
+    h = hashlib.sha1((session_id or "").encode("utf-8", "replace")).hexdigest()[:24]
+    return os.path.join(SESSION_CTX_DIR, h + ".json")
+
+
+def _remember_math_context(session_id, prompt):
+    """Keep the session's latest gate-passing prompt. Never raises; a lost write only costs one continuation."""
+    if not session_id:
+        return
+    try:
+        os.makedirs(SESSION_CTX_DIR, exist_ok=True)
+        path = _ctx_file(session_id)
+        tmp = "%s.%d.tmp" % (path, os.getpid())
+        with io.open(tmp, "w", encoding="utf-8") as f:
+            json.dump({"ts": time.time(), "text": prompt[:SESSION_CTX_CHARS]}, f, ensure_ascii=True)
+        os.replace(tmp, path)
+    except Exception:
+        pass
+
+
+def _session_math_context(session_id, prompt):
+    """The remembered prompt for a gate-refused continuation, or None."""
+    if not session_id or not CONTINUATION_CUE.search(prompt) or CONTINUATION_ADMIN.search(prompt):
+        return None
+    try:
+        with io.open(_ctx_file(session_id), encoding="utf-8") as f:
+            rec = json.load(f)
+        if time.time() - float(rec.get("ts", 0)) > SESSION_CTX_TTL_S:
+            return None
+        text = str(rec.get("text") or "").strip()
+        return text or None
+    except Exception:
+        return None
+
+
 def _main_body_guarded(data, out):
     try:
         _main_body(data, out)
@@ -3471,7 +3532,18 @@ def _main_body(data, out):
     _use_begin(str(data.get("session_id") or data.get("thread_id") or ""))
     prompt = _latex_accents(prompt)
     _headless_budget(prompt)
-    if len(prompt) < 12 or not _math_gate(prompt):
+    ctx_used = None
+    gate_ok = not (len(prompt) < 12 or not _math_gate(prompt))
+    if SESSION_CONTEXT:
+        _ctx_sid = str(data.get("session_id") or data.get("thread_id") or "")
+        if gate_ok:
+            _remember_math_context(_ctx_sid, prompt)
+        else:
+            ctx_used = _session_math_context(_ctx_sid, prompt)
+            if ctx_used is not None:
+                _silence_note(data, "session_context_route", harness_only=True)
+                prompt = prompt + "\n\n" + ctx_used
+    if not gate_ok and ctx_used is None:
         # HARNESS RUNS ONLY (2026-09-14). This gate fires on every non-mathematical prompt in every
         # session, so logging it in production would bury the file - which is why it logged nothing at
         # all, and why it has been invisible. The cost of that invisibility, measured today: of the 12
@@ -4200,6 +4272,9 @@ def _main_body(data, out):
             "of this is independently verified: check each result's hypotheses against the step that uses it. "
             "Full note: python ~/.claude/dreaming/math_note.py SOURCE_ID"
         )
+        if ctx_used is not None:
+            header += (" This prompt names no topic, so these follow the session's last mathematical prompt - "
+                       "check they are about what you are working on.")
         # Whole rendered cards only. Source excerpts remain explicitly labeled.
         # The budget follows the cap. `_assemble_note_block` emits whole cards only, so a block sized for three
         # cards silently discards the fourth onward and widening the cap alone would change nothing (measured:
