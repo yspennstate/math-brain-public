@@ -3029,7 +3029,8 @@ def _recall_body(query, n=8):
         # are shown when their cosine clears a floor. Measured on a 27-memory clean install with the bge-small sidecar:
         # 12 no-foothold paraphrases had top cosines 0.53-0.71 (9 of them the right memory at rank 1), 12 off-topic
         # questions 0.41-0.56; at 0.58 all 9 right answers show and no off-topic question does (margin 0.02, tuned on
-        # that set). Larger corpora with long memories may want another floor: BRAIN_RECALL_NOFOOT_FLOOR.
+        # that set). Larger corpora sit higher: on a 50k-memory corpus 12 off-topic questions topped at 0.55-0.66, so
+        # there the floor belongs near 0.70 (BRAIN_RECALL_NOFOOT_FLOOR); such corpora rarely lack a lexical foothold.
         # BRAIN_RECALL_NOFOOT_SEM=0 restores the old stop.
         if os.environ.get("BRAIN_RECALL_NOFOOT_SEM", "1") != "0":
             try:
