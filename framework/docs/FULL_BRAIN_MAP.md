@@ -15,7 +15,7 @@ is in `docs/EXERCISING.md`.
 | Semantic recall | `dreaming/build_memory_embeddings_local.py`, `query_embed.py`, `embedding_artifact.py` | `dreaming/eval_semantic_recall.py` |
 | Fusion of the lanes | `dreaming/brain.py`, `recall_policy.json` | `dreaming/recall_policy_regression.py`, `dreaming/eval_fusion_weights.py` |
 | Salience (what is vivid) | `dreaming/salience.py`, `build_mistake_weights.py` | `dreaming/eval_S_predicts_recall.py` |
-| Mistake-first recall | `dreaming/mistake_graph.py`, `dreaming/error_graph/`, `docs/mistake-first-recall.md` | `dreaming/error_graph_gate.py` |
+| Mistake-first recall | `dreaming/mistake_graph.py`, `dreaming/error_graph/`, `docs/mistake-first-recall.md` | `dreaming/error_graph_gate.py`, `test_mistake_graph_dated.py` |
 
 ## The weighted graph
 
