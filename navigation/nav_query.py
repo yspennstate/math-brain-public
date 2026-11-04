@@ -197,7 +197,7 @@ class Nav:
         Words of the query that appear on no card (four letters or more) name what the map has never heard of;
         an ordinary word turns up here too, so read them. WEAK MATCH: the first card's score is under the floor
         in every wording. On a 39-question blind bank (4 Nov 2026), floor fit on half and read on the other:
-        the absent words were listed for 6 of 7 questions about things the repository lacks and for 10 of 32
+        the absent words were listed for 6 of 7 questions about things the repository lacks and for 9 of 32
         others; the floor marked 4 of 7 and none of the 32 (only 1 of 4 on the held-out half)."""
         out, absent = [], []
         for w in wordings:
