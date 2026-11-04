@@ -3459,6 +3459,73 @@ def _tuple_exact_first(query, hits):
         return hits
 
 
+# THE PRINTOUT POINTS AT THE WALK AND SAYS WHAT MATCHED. Both are applied to the FINISHED block, after every stage
+# that chooses, orders or fits cards, so neither can change which cards go out or in what order.
+# (1) MATHBRAIN_RECALL_POINTER (default 1): the header names math_recall.py --id, which prints the card whole with every
+#     link (kind, direction, the other card's id and title, the link's stated reason), instead of math_note.py, which
+#     prints the note alone. Measured on 100 recall questions: walking cards by id reached the same answers as
+#     whole-card search (82 against 83) on 24.6M against 186M input tokens. 0 restores the math_note.py line.
+# (2) MATHBRAIN_MATCHED_TERMS (default 3; 0 = off): each card's hint line ends "matched: a, b, c" - the prompt terms the
+#     ranker matched on that card, strongest first, read from retrieve()'s own score trace. A lead that came in on
+#     "field, rows" reads as the coincidence it is; one that came in on "martingale, stopping, optional" reads as on
+#     subject. A card with no word match in its trace (a pinned citation) gets no such line.
+RECALL_POINTER = os.environ.get("MATHBRAIN_RECALL_POINTER", "1").strip() not in ("0", "off", "false", "")
+_NOTE_POINTER = "Full note: python ~/.claude/dreaming/math_note.py SOURCE_ID"
+_RECALL_POINTER = "Card + links: python ~/.claude/dreaming/math_recall.py --id ID"
+_TRACE_TERM = re.compile(r"""matched (?:normalized term|title phrase) ['"](.+?)['"]\s*$""")
+
+
+def _matched_terms(hit, k):
+    """Up to k prompt terms retrieve() matched on this hit, strongest first; [] on any doubt."""
+    try:
+        best = {}
+        for t in getattr(hit, "trace", None) or ():
+            if getattr(getattr(t, "channel", None), "value", "") != "lexical":
+                continue
+            m = _TRACE_TERM.search(str(getattr(t, "detail", "") or ""))
+            if not m:
+                continue
+            term = m.group(1).strip()
+            if not term or len(term) > 40:
+                continue
+            best[term] = max(best.get(term, 0.0), float(getattr(t, "amount", 0.0) or 0.0))
+        return [w for w, _ in sorted(best.items(), key=lambda kv: (-kv[1], kv[0]))[:max(0, k)]]
+    except Exception:
+        return []
+
+
+def _finish_block(block, emitted_ids, hits_by_id):
+    """The finished block with the walk pointer and the matched-terms hint; the block unchanged on any doubt."""
+    try:
+        out = block
+        if RECALL_POINTER and _NOTE_POINTER in out:
+            out = out.replace(_NOTE_POINTER, _RECALL_POINTER, 1)
+        try:
+            k = int(os.environ.get("MATHBRAIN_MATCHED_TERMS", "3") or 0)
+        except ValueError:
+            k = 3
+        if k > 0:
+            for cid in emitted_ids or ():
+                hit = hits_by_id.get(cid)
+                terms = _matched_terms(hit, k) if hit is not None else []
+                if not terms:
+                    continue
+                words = ", ".join(re.sub(r"[()|\r\n]+", " ", w).strip() for w in terms)
+                marker = "    (%s | " % cid
+                i = out.find(marker)
+                if i < 0:
+                    continue
+                j = out.find(")\n", i)
+                if j < 0:
+                    j = len(out) - 1 if out.endswith(")") else -1
+                if j < 0:
+                    continue
+                out = out[:j] + " | matched: " + words + out[j:]
+        return out
+    except Exception:
+        return block
+
+
 # A HARD WALL-CLOCK CEILING (12 Oct 2026; MATHBRAIN_HARD_DEADLINE_S, default 60 s; headless prompts
 # MATHBRAIN_HEADLESS_HARD_DEADLINE_S, default 85 s; 0 = off, the old unbounded path, byte for byte).
 # The budget above is checked at two points only (before ranking, and the integrity read's deadline), so a stage
@@ -4416,6 +4483,7 @@ def _main_body(data, out):
         if not block:
             _silence_note(data, "empty_block:%d_pieces" % len(pieces))
             return
+        block = _finish_block(block, emitted_ids, {h.node.id: h for h in chosen})
         if not _emit(out, 
             json.dumps(
                 {
