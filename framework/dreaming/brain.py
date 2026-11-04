@@ -3023,6 +3023,32 @@ def _recall_body(query, n=8):
     tier = _tiers()
 
     if not seeds:
+        # NO-FOOTHOLD MEANING FALLBACK (4 Nov 2026). A query that shares no word with any index line, file name or
+        # memory text used to end here even when the query-meaning lane could read it, so a paraphrase on a small
+        # install ("trimming a puppy's claws safely" for dog_nail_trimming) found nothing. The lane's own nominations
+        # are shown when their cosine clears a floor. Measured on a 27-memory clean install with the bge-small sidecar:
+        # 12 no-foothold paraphrases had top cosines 0.53-0.71 (9 of them the right memory at rank 1), 12 off-topic
+        # questions 0.41-0.56; at 0.58 all 9 right answers show and no off-topic question does (margin 0.02, tuned on
+        # that set). Larger corpora with long memories may want another floor: BRAIN_RECALL_NOFOOT_FLOOR.
+        # BRAIN_RECALL_NOFOOT_SEM=0 restores the old stop.
+        if os.environ.get("BRAIN_RECALL_NOFOOT_SEM", "1") != "0":
+            try:
+                _nf_floor = float(os.environ.get("BRAIN_RECALL_NOFOOT_FLOOR", "0.58"))
+                _nf = [(s, c) for s, c in sorted(_query_semantic_scores(query, k=5, floor=_nf_floor).items(),
+                                                 key=lambda kv: -kv[1])
+                       if s not in sr.SKIP and s not in disabled and tier.get(s) != "unconscious"
+                       and (s not in parent_only or s in policy_seeds)]
+            except Exception:
+                _nf = []
+            if _nf:
+                print("recall: %r  (no lexical foothold | nearest by meaning, cosine >= %.2f)" % (query, _nf_floor))
+                for _s, _c in _nf:
+                    _st = _status_from_index(_s, idx)
+                    print("  %.2f [sem]%s %s" % (_c, "" if _st == "legacy" else " [%s]" % _st, _s))
+                    print("        %s" % (_full_description(_s) or sr._desc(_s, idx) or "(no description)")[:240])
+                print("  nothing shares a word with the question; these are close in meaning only - read before trusting.")
+                print("  read one WITH all attached documents:  python %s node <slug>" % os.path.abspath(__file__))
+                return
         print("no lexical foothold in the index for that query - try different words, or grep the")
         print("memory dir directly:  grep -ril \"term\" \"%s\"" % MEM)
         return
