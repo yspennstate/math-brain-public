@@ -3015,6 +3015,83 @@ def _block_cov_verdict(prompt, chosen, pinned_ids):
     return "block_coverage:%.3f" % cov
 
 
+# LONG NON-MATHEMATICAL TEXT (MATHBRAIN_NONMATH_GATE, default on). Of 177 blocks the hook served on real past math
+# prompts, 103 were hand-labelled junk, most of them on long texts that are not mathematics - code diffs and JSON, logs,
+# reports, novel chapters in LaTeX, agent loop instructions - which pass the entry gate on a few words ("theorem",
+# "proof", "bound") among hundreds. A prompt of 150 or more words whose entry-gate anchor matches are under 1.5 per 100
+# words (LaTeX command names are not words) AND under 70 pct of whose content words occur in at least three cards of the
+# store is a long text that is not mathematics, and gets no block. Either condition alone costs real mathematics:
+# density alone silenced three of thirty arXiv proof audits (proofs written in notation carry few anchor words), and the
+# vocabulary share alone removes less. Together, on the labelled blocks: 45 of 103 junk removed, 1 of 34 useful lost,
+# none of the 32 proof-audit prompts. The table is the store's own <store>.lexdf.pkl (written by math_prefilter.build);
+# without it the gate stays open.
+NONMATH_GATE = os.environ.get("MATHBRAIN_NONMATH_GATE", "1").strip() not in ("0", "off", "false", "")
+NONMATH_MIN_WORDS = int(os.environ.get("MATHBRAIN_NONMATH_MIN_WORDS", "150") or 150)
+NONMATH_DENSITY = float(os.environ.get("MATHBRAIN_NONMATH_DENSITY", "0.015") or 0.015)
+NONMATH_SHARE = float(os.environ.get("MATHBRAIN_NONMATH_SHARE", "0.70") or 0.70)
+_NONMATH_WORD = re.compile(r"[A-Za-z]{2,}")
+_NONMATH_LATEX = re.compile(r"\\[A-Za-z]+")
+_STORE_DF = None
+_STORE_N = None
+
+
+def _lexdf():
+    """(df, n) from <store>.lexdf.pkl, read from one snapshot and kept only when the read succeeds; ({}, 0) for this
+    call when the file is absent or unreadable, and the next call reads it again (a failed first read must not be kept
+    for the life of a process that imports the hook once)."""
+    global _STORE_DF, _STORE_N
+    if _STORE_DF is not None and _STORE_N is not None:
+        return _STORE_DF, _STORE_N
+    try:
+        import pickle
+        with open(str(STORE_PATH) + ".lexdf.pkl", "rb") as fh:
+            d = pickle.load(fh)
+        df, n = d.get("df") or {}, int(d.get("n") or 0)
+    except Exception:
+        return {}, 0
+    _STORE_DF, _STORE_N = df, n
+    return df, n
+
+
+def _store_df():
+    """term -> number of store cards carrying it, from <store>.lexdf.pkl; {} when absent or unreadable."""
+    return _lexdf()[0]
+
+
+def _store_n():
+    return _lexdf()[1]
+
+
+def _nonmath_text(prompt, data):
+    """True (after writing the silence note) when the prompt is a long text that is not mathematics. Never raises."""
+    if not NONMATH_GATE:
+        return False
+    try:
+        words = len(_NONMATH_WORD.findall(_NONMATH_LATEX.sub(" ", prompt)))
+        if words < NONMATH_MIN_WORDS:
+            return False
+        fams = [STRONG_ANCHORS, STRONG_ANCHORS_2, MATH_ANCHORS, EXTRA_ANCHORS, GREEK_ANCHORS, WEAK_ANCHORS_2]
+        if ANCHORS_3_ON:
+            fams.append(STRONG_ANCHORS_3)
+        density = sum(len(rx.findall(prompt)) for rx in fams) / float(words)
+        if density >= NONMATH_DENSITY:
+            return False
+        df = _store_df()
+        if not df:
+            return False
+        import math_brain.retrieval as _R
+        toks = _R._content_terms(_R.index_signals(prompt).lexical_tokens)
+        if not toks:
+            return False
+        share = sum(1 for t in toks if df.get(t, 0) >= 3) / float(len(toks))
+        if share >= NONMATH_SHARE:
+            return False
+        _silence_note(data, "nonmath_text:w=%d,d=%.4f,s=%.3f" % (words, density, share))
+        return True
+    except Exception:
+        return False
+
+
 def _cut_unless_named(prompt, hits):
     """_incoherent_weak_block on these cards, None when the lead card's title is the result the prompt names."""
     c = _incoherent_weak_block(prompt, [str(h.node.id) for h in hits])
@@ -3334,6 +3411,8 @@ def _main_body(data, out):
         sys.path.insert(0, BUILD_SRC)
         from math_brain.retrieval import retrieve
         from math_brain.store import ResearchStore
+        if _nonmath_text(prompt, data):
+            return
 
         # The signal cache IS loaded here, and the 2026-08-30 note that stood in this place
         # ("3.26 s median WITH the cache against 2.49 s WITHOUT") measured a cache that never
