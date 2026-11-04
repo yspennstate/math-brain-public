@@ -1765,6 +1765,13 @@ def _same_result_twins(ids, heads=False, sources=None):
 # after the selection's own dedup, so both can reach the block. The check runs on the finished block, after every gate,
 # so a fold never drops the copy a later floor would have kept. A card carrying the statement replaces one carrying an
 # encyclopedia opening; the dropped card's slot is not refilled.
+# ONE CARD PER TITLE ACROSS THE SUB-QUERY MERGE (MATHBRAIN_MERGE_TITLE_DEDUP, default on; 25 Sep). Two named sub-queries can
+# each bring a copy of one result ("Holder's Inequality" and "Hölder's inequality"); joined by node id only, both went
+# out and a slot was spent twice. The merge runs after every block has passed its own floor, so it always folds accents.
+MERGE_TITLE_DEDUP = os.environ.get("MATHBRAIN_MERGE_TITLE_DEDUP", "1").strip() not in ("0", "off", "false", "")
+# A DROPPED DUPLICATE KEEPS ITS PLACE (MATHBRAIN_MERGE_DUP_NO_REFILL, default on): the card behind it does not move up
+# into the slot, so the block carries one card fewer instead of a card from further down the merge.
+MERGE_DUP_NO_REFILL = os.environ.get("MATHBRAIN_MERGE_DUP_NO_REFILL", "1").strip() not in ("0", "off", "false", "")
 FINAL_TITLE_DEDUP = os.environ.get("MATHBRAIN_FINAL_TITLE_DEDUP", "1").strip() not in ("0", "", "off", "false")
 
 
@@ -2453,6 +2460,46 @@ def _title_names_only(query, title):
         return bool(qw) and _name_parts(re.split(r"[:(\[]", str(title or ""), 1)[0]) == qw
     except Exception:
         return False
+
+
+def _merge_subquery_blocks(blocks, chosen, lead=False):
+    """Round-robin the sub-query blocks three deep, then the whole-question cards; one card per node and, under
+    MERGE_TITLE_DEDUP, one per accent-folded title (a statement replaces an encyclopedia opening). A dropped duplicate
+    leaves None in its place under MERGE_DUP_NO_REFILL. lead=True (a named argument) puts the first
+    MATHBRAIN_SUBQ_LEAD_KEEP whole-question cards (default 1) ahead of the blocks."""
+    merged, seen, keys = [], set(), {}
+
+    def _merge_in(h):
+        if h.node.id in seen:
+            return
+        seen.add(h.node.id)
+        if MERGE_TITLE_DEDUP:
+            k = _title_key(getattr(h.node, "title", ""), fold=True)
+            if k and k in keys:
+                i = keys[k]
+                if merged[i] is not None and _is_lede(merged[i].node) and not _is_lede(h.node):
+                    merged[i] = h
+                if MERGE_DUP_NO_REFILL:
+                    merged.append(None)
+                return
+            if k:
+                keys[k] = len(merged)
+        merged.append(h)
+
+    try:
+        lead_keep = int(os.environ.get("MATHBRAIN_SUBQ_LEAD_KEEP", "1") or 0)
+    except Exception:
+        lead_keep = 0
+    if lead and lead_keep > 0:
+        for h in (chosen or [])[:lead_keep]:
+            _merge_in(h)
+    for depth in range(3):
+        for b in blocks:
+            if len(b) > depth:
+                _merge_in(b[depth])
+    for h in (chosen or []):
+        _merge_in(h)
+    return merged
 
 
 def _subquery_block(query, prompt=None, exact_pass=False):
@@ -3250,21 +3297,25 @@ def _main_body(data, out):
                     # in the order they appear, so here they are simply used.
                     subs = _covered_titles or _quoted_subqueries(prompt, limit=4)
                 if subs and (time.time() - started) < 0.5 * TIME_BUDGET_S:
-                    blocks = [_subquery_block(s, prompt=prompt, exact_pass=_subq_named) for s in subs]
+                    # A TIME GUARD INSIDE THE LOOP (MATHBRAIN_SUBQ_TIME_FRAC, default 0.6). Checked once before the first
+                    # sub-query, a long argument on a loaded machine ran every sub-query past the budget, and past it the
+                    # integrity read keeps the top card only. Past the fraction no new sub-query starts; the earlier names,
+                    # which the argument usually hinges on, keep theirs.
+                    try:
+                        _sq_frac = float(os.environ.get("MATHBRAIN_SUBQ_TIME_FRAC", "0.6") or 0.6)
+                    except Exception:
+                        _sq_frac = 0.6
+                    blocks = []
+                    for _sq in subs:
+                        if blocks and (time.time() - started) > _sq_frac * TIME_BUDGET_S:
+                            blocks.append([])
+                            continue
+                        blocks.append(_subquery_block(_sq, prompt=prompt, exact_pass=_subq_named))
                     if _subq_named and NAMED_TITLEMATCH:
                         # a named sub-query keeps only the cards titled with the result it named
                         blocks = [[h for h in b if _named_title_match(q, h.node.title)] for q, b in zip(subs, blocks)]
-                    merged, seen = [], set()
-                    for depth in range(3):
-                        for b in blocks:
-                            if len(b) > depth and b[depth].node.id not in seen:
-                                merged.append(b[depth])
-                                seen.add(b[depth].node.id)
-                    for h in (chosen or []):
-                        if h.node.id not in seen:
-                            merged.append(h)
-                            seen.add(h.node.id)
-                    chosen = merged[:_cap]
+                    merged = _merge_subquery_blocks(blocks, chosen, lead=_subq_named)
+                    chosen = [h for h in merged[:_cap] if h is not None]
             except Exception:
                 pass
         if not chosen:
