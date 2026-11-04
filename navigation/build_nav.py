@@ -53,8 +53,23 @@ def ext_of(p):
 
 
 def slug(h):
-    s = re.sub(r"[^\w\- ]", "", h.lower()).strip()
-    return re.sub(r"[\s]+", "-", s)
+    # GitHub's rule: lower case, drop punctuation, one hyphen PER space (a dropped dash between two spaces
+    # leaves "--", so runs of spaces are not collapsed).
+    s = re.sub(r"[^\w\- ]", "", h.strip().lower())
+    return s.replace(" ", "-")
+
+
+def count_lines(p):
+    """Line count of any text file, whatever its extension or size; 0 for a binary file."""
+    n, last, head = 0, b"", True
+    with open(p, "rb") as f:
+        for block in iter(lambda: f.read(1 << 20), b""):
+            if head and b"\x00" in block[:8192]:
+                return 0
+            head = False
+            n += block.count(b"\n")
+            last = block
+    return n + (1 if last and not last.endswith(b"\n") else 0)
 
 
 def clip(s, n=300):
@@ -223,8 +238,8 @@ def main():
                 text = None
             if text is not None and "\x00" in text:
                 text = None
-            if text is not None:
-                lines = text.count("\n") + (0 if text.endswith("\n") or not text else 1)
+        if os.path.isfile(p):
+            lines = count_lines(p)
         if text is not None and e == "md":
             t, summary, heads, links = md_parse(text)
             title = t or title
