@@ -54,6 +54,19 @@ def brain_env(env):
 
 
 def rss_bytes():
+    if os.name != "nt":   # Linux/macOS: psutil, else /proc (without either the cap is not judged)
+        try:
+            import psutil
+            return int(psutil.Process().memory_info().rss)
+        except ImportError:
+            pass
+        except Exception:
+            return 0
+        try:
+            with open("/proc/self/statm") as f:
+                return int(f.read().split()[1]) * os.sysconf("SC_PAGE_SIZE")
+        except Exception:
+            return 0
     try:
         import ctypes
         from ctypes import wintypes
@@ -464,12 +477,21 @@ def main():
 if __name__ == "__main__":
     lockf = None
     try:
-        import msvcrt
         os.makedirs(STATE_DIR, exist_ok=True)
         lockf = open(os.path.join(STATE_DIR, "server.lock"), "a+b")
+        if os.name == "nt":
+            import msvcrt
+
+            def take():
+                msvcrt.locking(lockf.fileno(), msvcrt.LK_NBLCK, 1)
+        else:   # Linux/macOS: an advisory lock the kernel drops when the process exits
+            import fcntl
+
+            def take():
+                fcntl.flock(lockf.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
         for _ in range(40):  # a server that is stopping holds the lock for up to ~16 s
             try:
-                msvcrt.locking(lockf.fileno(), msvcrt.LK_NBLCK, 1)
+                take()
                 break
             except OSError:
                 time.sleep(1)

@@ -29,7 +29,7 @@ def _spawn():
         env = {k: v for k, v in os.environ.items() if not k.startswith("BRAIN_")}
         subprocess.Popen([exe, "-B", os.path.join(D, "brain_recall_server.py")], cwd=D, env=env,
                          stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                         creationflags=flags, close_fds=True)
+                         creationflags=flags, close_fds=True, start_new_session=os.name != "nt")
     except Exception:
         pass
 
