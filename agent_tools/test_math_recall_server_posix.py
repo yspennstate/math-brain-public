@@ -5,7 +5,7 @@
 Builds a five-claim store with math_brain.cli in a temporary folder, copies this folder's .py files beside it (so
 endpoint.json and SERVER_STOP never touch the checkout), and checks: math_recall.py with the server disabled prints
 results and its fast path is on (no "fast path OFF" line, which appears when a hash pin does not match the files
-it loads); the server starts and publishes endpoint.json; the same call through the server prints the same text and
+it loads, and does appear for a copy of the library with retrieval.py edited); the server starts and publishes endpoint.json; the same call through the server prints the same text and
 the client audit records that the server answered it; SERVER_STOP stops the server and removes endpoint.json.
 Needs only the math_brain library (../mathbrain/src or ../src) and its dependency, cryptography. Skipped on Windows.
 Takes about 15 seconds.
@@ -66,6 +66,15 @@ direct, t_direct = run([tool] + QUERY, off_env)
 ok("direct call prints a result", direct.returncode == 0 and "cyclic" in direct.stdout,
    "rc=%d %.2fs" % (direct.returncode, t_direct))
 ok("fast path is on", "fast path OFF" not in direct.stdout + direct.stderr)
+
+# control: an edited retrieval.py must turn the fast path off and say so, or the check above proves nothing
+bad = os.path.join(WORK, "src_edited")
+shutil.copytree(BUILD, bad)
+with open(os.path.join(bad, "math_brain", "retrieval.py"), "a", encoding="utf-8") as f:
+    f.write("\n# edited\n")
+ctl, _ = run([tool] + QUERY, dict(off_env, MATHBRAIN_BUILD_SRC=bad, PYTHONPATH=bad))
+ok("an edited retrieval.py prints the OFF line", ctl.returncode == 0 and "cyclic" in ctl.stdout
+   and "fast path OFF (retrieval.py is not the pinned one)" in ctl.stderr, ctl.stderr.strip()[-160:])
 
 srv = subprocess.Popen([sys.executable, os.path.join(HERE, "recall_server.py"), "--store", STORE], cwd=WORK, env=ENV,
                        stdout=subprocess.DEVNULL, stderr=subprocess.PIPE, text=True)
