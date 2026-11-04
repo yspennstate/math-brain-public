@@ -376,7 +376,7 @@ def strength_edges(edges, S, typed):
 # lexical index's 98,255 terms, 1,138 are possessives (talagrand's 64 cards, hall's 54, jensen's 116, janson's 19).
 # Each wording gets the other form of a name added: base -> base's when base's is at least 0.5 pct of base's own
 # document count and in 2 or more cards (that keeps group's, graph's, function's out), and base's -> base always.
-# Meta words are skipped. OFF by default since the 28 Oct A/B (brain_recall_68ceaf54/possessive/POSS_RESULT.md: mixed); MATH_RECALL_POSSESSIVE=1 turns it on. Changing the two tokenizers instead would need the
+# Meta words are skipped. OFF by default since the 28 Oct A/B (mixed result); MATH_RECALL_POSSESSIVE=1 turns it on. Changing the two tokenizers instead would need the
 # prefilter index and the signal cache rebuilt.
 _POSS_SKIP = {"paper", "author", "agent", "page", "image", "wikipedia", "claim", "source", "model", "campaign",
               "worker", "collector", "card", "lemma", "theorem"}
