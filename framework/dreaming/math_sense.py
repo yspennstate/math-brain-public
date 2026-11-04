@@ -3251,6 +3251,54 @@ def _card_index_text(node):
     return (node.title or "") + " " + (node.body or "")
 
 
+# GENERIC-ONLY MATCH (MATHBRAIN_GENERIC_ONLY, default on). "How close are we to solving the open problem?" passes the gate
+# on "open problem" and drew three arbitrary "Open problem: ..." cards: the prompt names no object, and every served card met
+# it only on research words (open, problem, solve, conjecture, theorem, proof, result ...). A block whose BEST card shares no
+# prompt term outside those words is assembled from coincidence, and is silenced. The list also holds the words of work
+# orders about research (push, folder, task, report, repo ...), and English function words and instruction verbs, which the
+# retrieval tokenizer keeps as content terms: with them "do that, but are the theorems strong now?" no longer matches a card
+# on "but". These words are generic only here, never in the ranker. "mean" and "even" are left out: both name mathematics.
+# Measured on hand-labelled useful and junk blocks: junk blocks silenced, no useful block lost, no bank question changed.
+GENERIC_ONLY = os.environ.get("MATHBRAIN_GENERIC_ONLY", "1").strip() not in ("0", "off", "false", "")
+GENERIC_RESEARCH_WORDS = (
+    "open problem problems conjecture conjectures theorem theorems proof proofs prove proved proving "
+    "solve solved solving solution solutions result results question questions lemma lemmas paper papers "
+    "true false known famous literature full fully general case cases work working method methods close "
+    "closer area areas push pushed folder folders task tasks scheduled schedule converge better strong "
+    "stronger strongest strengthen fix fixed publishable publish published post posted github repo email "
+    "report list agents agent subagents box boxes run running test tests brain memory hook hooks")
+GENERIC_FUNCTION_WORDS = (
+    "but now them only like will again still right well before both once until after never already "
+    "through actually though off too while really else because rather own enough less per yes no also "
+    "just very much more most such each other into from with about than then there here where when which "
+    "what who whom whose why how all any some many few can could would should might must shall may does "
+    "did doing been being were has have had having this that these those its they their our your his her "
+    "you make sure keep want get put see look find need take give try show tell think know say let "
+    "please don't dont thing things stuff anything something everything way going done")
+_GENERIC_TERMS = None
+
+
+def _generic_only(prompt, chosen):
+    """True when no chosen card shares a prompt term outside the generic research words. False on any doubt."""
+    global _GENERIC_TERMS
+    if not GENERIC_ONLY or not chosen:
+        return False
+    try:
+        import math_brain.retrieval as _R
+        terms = lambda t: set(_R._content_terms(_R.index_signals(t or "").lexical_tokens))
+        if _GENERIC_TERMS is None:
+            _GENERIC_TERMS = terms(GENERIC_RESEARCH_WORDS) | terms(GENERIC_FUNCTION_WORDS)
+        pt = terms(prompt) - _GENERIC_TERMS
+        if not pt:
+            return True
+        for h in chosen:
+            if pt & terms(_card_index_text(h.node)):
+                return False
+        return True
+    except Exception:
+        return False
+
+
 def _block_best_coverage(prompt, hits):
     """The largest idf share of the prompt's store-known tokens carried by one card of the block (None: cannot tell)."""
     import math
@@ -4568,6 +4616,9 @@ def _main_body(data, out):
             _silence_note(data, _bcv, harness_only=True)
         elif _bcv:
             _silence_note(data, _bcv)
+            return
+        if chosen and not pinned_ids and _generic_only(prompt, chosen):
+            _silence_note(data, "generic_only_match")
             return
         if not chosen:
             _silence_note(data, "no_chosen_after_select")
