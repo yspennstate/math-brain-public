@@ -32,9 +32,9 @@ from collections.abc import Mapping
 
 FORMAT = 1
 #: the retrieve() / _channel_scores() this module mirrors (math-brain-build src/math_brain/retrieval.py, 12 Oct 2026)
-PIN_RETRIEVAL = "350904078336b15b89ae71cf3e57678c360fdb85949402dd42ea592e883d0a79"
+PIN_RETRIEVAL = "2d051a7f4038bcae897d31ef69b575ead3fbe0707fac097092d4ea98cbb17023"
 #: the query encoder whose ONNX session the Encoder thread builds ahead of time
-PIN_QUERY_EMBED = "855b962e6c462ef151ce9c9417208214bd13750af26ee35bb5c5d6dd3cae57d8"
+PIN_QUERY_EMBED = "588c8429492bb271b50fdf4c455246b4c7c40c8e1325979129a8babc18874290"
 KEEP_FILES = 4   # prepared states kept at most; an evaluation arm with other dials is one more
 #: and at most this many bytes of them (main + link file), the newest always kept. A state was about 60 MB when the count
 #: was set; on 28 Oct it was 370 MB, so four held 1.6 GB on a disk with 1.2 GB free (env MATH_RECALL_FAST_KEEP_MB).
