@@ -524,6 +524,53 @@ TECHNICAL_PROSE_ARTIFACT = re.compile(
 ADMIN_SUPPRESS = os.environ.get("MATHBRAIN_ADMIN_SUPPRESS", "0").strip() not in ("0", "off", "false", "")
 
 
+# A NAMED RESULT OF A WIDER KIND OPENS THE GATE WHEN THE STORE HOLDS A CARD ABOUT IT (MATHBRAIN_GATE_NAMED_KIND, default
+# on). "What does the Fredholm alternative say ..." was refused by the gate: "alternative" is no anchor. A capitalised name
+# followed by one of the wider kinds above (alternative, series, property, test, iteration, method, bound, transform,
+# calculus, expansion, duality, conjecture, trick) opens the gate only when a card's title opens with that name and kind
+# and its head holds at most four more words. Over a large archive of real prompts it admitted none the gate had refused
+# wrongly; a looser cut (name and kind anywhere in a title) admitted dozens, nearly all junk.
+GATE_NAMED_KIND = os.environ.get("MATHBRAIN_GATE_NAMED_KIND", "1").strip() not in ("0", "off", "false", "")
+_GATE_NEW_KINDS = re.compile(r"^(?:alternatives?|series|propert(?:y|ies)|(?:[A-Z]-)?tests?|iterations?|methods?|bounds?|"
+                             r"transforms?|calculus|expansions?|duality|conjectures?|tricks?)$", re.I)
+_GATE_TITLE_HEADS = None
+
+
+def _gate_fold(text):
+    return re.sub(r"[^a-z0-9]+", " ", (text or "").lower().replace("'s", "").replace("’s", "")).strip()
+
+
+def _named_kind_card(prompt):
+    """True when the prompt names a result of a wider kind and the store holds a card about exactly that result."""
+    global _GATE_TITLE_HEADS
+    try:
+        found = [(m.group(1), m.group(2)) for m in _NAMED_RESULT_RE.finditer(prompt or "")
+                 if m.group(1) and m.group(2) and _GATE_NEW_KINDS.match(m.group(2))]
+        if not found:
+            return False
+        if _GATE_TITLE_HEADS is None:
+            import sqlite3
+            con = sqlite3.connect("file:%s?mode=ro" % str(STORE_PATH).replace("\\", "/"), uri=True)
+            try:
+                _GATE_TITLE_HEADS = [_gate_fold(re.split(r"[:(\[]", t, maxsplit=1)[0])
+                                     for (t,) in con.execute("select title from nodes where title is not null")]
+            finally:
+                con.close()
+        for name, kind in found:
+            if name.isupper():
+                continue
+            nm, stem = _gate_fold(name), _gate_fold(kind)[:5]
+            if len(nm) < 3:
+                continue
+            for h in _GATE_TITLE_HEADS:
+                hh = h[4:] if h.startswith("the ") else h
+                if hh.startswith(nm + " " + stem) and len(hh.split()) <= len(nm.split()) + 4:
+                    return True
+        return False
+    except Exception:
+        return False
+
+
 def _math_gate(prompt):
     """The legacy gate, then - only when MATHBRAIN_PROSE_GATE=1 - a bounded prose route.
 
@@ -536,6 +583,8 @@ def _math_gate(prompt):
         if (ADMIN_SUPPRESS and TECHNICAL_PROSE_ACTION.search(prompt)
                 and TECHNICAL_PROSE_ARTIFACT.search(prompt)):
             return False
+        return True
+    if GATE_NAMED_KIND and _named_kind_card(prompt):
         return True
     if not PROSE_GATE:
         return False
@@ -2289,6 +2338,20 @@ _NAMED_RESULT_RE = re.compile(
     # One to three lowercase words, none of them a filler word, in front of the kind word.
     r"|(?:\b((?:[a-z][a-z-]{2,}\s+){1,3})(" + _KIND_WORD + r")\b)"
 )
+# PLURAL KINDS AND MORE KINDS AFTER A PROPER NAME (MATHBRAIN_SUBQ_KINDS2, default on). On a proof-audit bank, 33 of the
+# 42 named results the store held and the block missed were never extracted: "interior Schauder estimates" (a plural),
+# "Fredholm alternative", "Neumann series", "Lusin's property (N)", "Weierstrass M-test", "Moser iteration". Every kind now
+# matches its plural; after a capitalised name only, alternative, series, property, test, iteration, method, bound,
+# transform, calculus, expansion, duality, conjecture and trick count as kinds too. The descriptive (lowercase) pattern keeps
+# the old kinds, so "upper bound" and "this method" never become names. MATHBRAIN_SUBQ_KINDS2=0 restores the old list.
+SUBQ_KINDS2 = os.environ.get("MATHBRAIN_SUBQ_KINDS2", "1").strip() not in ("0", "off", "false", "")
+if SUBQ_KINDS2:
+    _NAMED_RESULT_RE = re.compile(
+        r"(?:\b([A-Z][\w'’À-ſ]+(?:(?:--|[-‐-―])[A-Z][\w'’À-ſ]+)*"
+        r"(?:\s+[A-Z][\w'’À-ſ]+){0,2})\s*'?s?\s+(" + _KIND_WORD_NAMED + r")\b)"
+        r"|(?:\b(" + _KIND_WORD_PL + r")\s+of\s+([A-Z][\w'’À-ſ]+(?:[-‐-―][A-Z][\w'’À-ſ]+)*)\b)"
+        r"|(?:\b((?:[a-z][a-z-]{2,}\s+){1,3})(" + _KIND_WORD_PL + r")\b)"
+    )
 # Filler that must never become the name of a result: "the following theorem", "this lemma", "our estimate".
 _NAMED_FILLER = {"the", "this", "that", "these", "those", "a", "an", "our", "its", "his", "her", "their",
                  "following", "above", "below", "next", "last", "first", "second", "third", "same", "such",
@@ -3999,7 +4062,10 @@ def _main_body(data, out):
                 _ps0 = getattr(math_prefilter, "LAST_SCORES", {}) or {}
                 _qs0 = float(getattr(math_prefilter, "LAST_QSELF", 0.0) or 0.0)
                 if _ps0 and 0 < _qs0 <= COVERAGE_QSELF_MAX and (max(_ps0.values()) / _qs0) < COVERAGE_MIN:
-                    if not _coverage_ident_exempt(prompt, _ps0):
+                    # a named result of a wider kind whose card the store holds is not abstained either: the gate
+                    # admitted "How does Stampacchia's iteration give an L-infinity bound?" and this check then
+                    # silenced it, the store's own "Stampacchia's iteration" card unserved
+                    if not _coverage_ident_exempt(prompt, _ps0) and not (GATE_NAMED_KIND and _named_kind_card(prompt)):
                         if COV_AGREE and _same_card(max(_ps0, key=_ps0.get), _semantic_top(prompt)):
                             _silence_note(data, "coverage_agree_prefilter", harness_only=True)
                             _COV_AGREED["prefilter"] = max(_ps0, key=_ps0.get)
