@@ -198,7 +198,11 @@ class Nav:
         an ordinary word turns up here too, so read them. WEAK MATCH: the first card's score is under the floor
         in every wording. On a 39-question blind bank (4 Nov 2026), floor fit on half and read on the other:
         the absent words were listed for 6 of 7 questions about things the repository lacks and for 9 of 32
-        others; the floor marked 4 of 7 and none of the 32 (only 1 of 4 on the held-out half)."""
+        others; the floor marked 4 of 7 and none of the 32 (only 1 of 4 on the held-out half). On a second
+        blind bank of 28, missing and present questions matched in length: absent words for 14 of 14 missing
+        and 2 of 14 present; the floor marked none. Two scaled floors were fit on half of it: one per query
+        word fell from 4 of 7 missing to 2 of 7 on the other half; one over the query's idf held there (4 of 7,
+        no present question marked) but marked 13 of 32 answerable questions of the first bank. Neither is used."""
         out, absent = [], []
         for w in wordings:
             for t in TOKEN.findall(w.lower()):

@@ -32,9 +32,10 @@ in two or three wordings if you like; the rankings are fused:
 
 Each result prints its id, kind, path and summary. Two hint lines can come before the results. One names the words
 of the question that appear on no card; a tool or format the repository never mentions shows up there, next to
-ordinary words the cards happen not to use. The other, WEAK MATCH, says the best card scored under the floor; reword
-with a file, function or folder name, and if two or three wordings still come back weak, the repository probably does
-not have it. Read a card whole, with every link in and out, by id (a unique
+ordinary words the cards happen not to use. It is the better of the two signals. The other, WEAK MATCH, says the
+best card scored under the floor; reword with a file, function or folder name, and if two or three wordings still
+come back weak, the repository probably does not have it. WEAK MATCH is rare: a question about a missing tool that
+is as long as an ordinary question usually scores above the floor, so a missing WEAK MATCH line proves nothing. Read a card whole, with every link in and out, by id (a unique
 prefix is enough):
 
     python navigation/nav_query.py --id 64d6e7
