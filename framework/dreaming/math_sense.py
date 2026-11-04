@@ -3092,6 +3092,59 @@ def _nonmath_text(prompt, data):
         return False
 
 
+# A SHORT PROMPT THAT QUOTES A NAME NO SERVED CARD CARRIES IS SILENCED (MATHBRAIN_QUOTE_COV, default 0.75). A prompt of
+# at most QUOTE_MAX_WORDS words outside its quotes is asking about the quoted thing; a block whose every card carries
+# less than QUOTE_COV of each quote's IDF weight (store-wide IDF, from <store>.lexdf.pkl) answers some other question.
+# On a control bank of 80 quoted questions the rule silenced the one absent-target item whose lone card covered 0.658
+# of its quote and fired on nothing else; the questions whose target is in the store were served and answered as before.
+# Prompts with more than 20 words outside their quotes are never judged. ACRONYM QUOTES: an all-caps quote of three or
+# more letters is covered when a served card's consecutive word initials spell it ("BDG" by Burkholder-Davis-Gundy);
+# without that the BDG question was silenced at coverage 0.000, while made-up acronyms are silenced either way.
+# A pinned title, a missing df table or any failure keeps the block. 0/off disables.
+_QC = os.environ.get("MATHBRAIN_QUOTE_COV", "0.75").strip().lower()
+QUOTE_COV = None if _QC in ("", "0", "off", "false") else float(_QC)
+QUOTE_MAX_WORDS = int(os.environ.get("MATHBRAIN_QUOTE_MAX_WORDS", "20") or 20)
+_QUOTE_RE = re.compile(r'"([^"\n]{3,120})"')
+_ACRO_RE = re.compile(r"^[A-Z][A-Z0-9]*(?:-[A-Z][A-Z0-9]*)*$")
+
+
+def _quote_uncovered(prompt, hits):
+    """(best coverage, words outside quotes) when the rule silences, else None. Any failure keeps the block."""
+    try:
+        qs = _QUOTE_RE.findall(prompt or "")
+        if not qs or not hits:
+            return None
+        nw = len(_NONMATH_WORD.findall(_QUOTE_RE.sub(" ", prompt)))
+        if nw > QUOTE_MAX_WORDS:
+            return None
+        df, n = _store_df(), _store_n()
+        if not df or not n:
+            return None
+        import math as _m
+        import math_brain.retrieval as _R
+        terms = lambda t: set(_R._content_terms(_R.index_signals(t or "").lexical_tokens))
+        idf = lambda t: _m.log1p(n / (1.0 + df.get(t, 0)))
+        raws = [_card_index_text(h.node) or "" for h in hits]
+        cards = [terms(t) for t in raws]
+        best, weighed = 0.0, False
+        for q in qs:
+            # three letters or more: two-letter initial runs match by chance in most cards
+            if _ACRO_RE.match(q.strip()):
+                ac = re.sub(r"[^a-z]", "", q.lower())
+                if len(ac) >= 3 and any(ac in "".join(w[0] for w in re.findall(r"[a-z]+", t.lower())) for t in raws):
+                    return None
+            qt = terms(q)
+            w = sum(idf(t) for t in qt)
+            if w <= 0:
+                continue
+            weighed = True
+            for ct in cards:
+                best = max(best, sum(idf(t) for t in qt & ct) / w)
+        return (best, nw) if weighed and best < QUOTE_COV else None
+    except Exception:
+        return None
+
+
 def _cut_unless_named(prompt, hits):
     """_incoherent_weak_block on these cards, None when the lead card's title is the result the prompt names."""
     c = _incoherent_weak_block(prompt, [str(h.node.id) for h in hits])
@@ -4157,6 +4210,11 @@ def _main_body(data, out):
                     _cut = None
             if _cut:
                 _silence_note(data, "incoherent_weak_block:lead%.3f_pair%.3f" % _cut)
+                return
+        if block and QUOTE_COV is not None and emitted_ids and not pinned_ids:
+            _qc = _quote_uncovered(prompt, [h for h in chosen if h.node.id in set(emitted_ids)])
+            if _qc is not None:
+                _silence_note(data, "quote_uncovered:cov%.3f_w%d" % _qc)
                 return
         if not block:
             _silence_note(data, "empty_block:%d_pieces" % len(pieces))
