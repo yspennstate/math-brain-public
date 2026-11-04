@@ -28,6 +28,9 @@ def log(msg):
         f.write(time.strftime('%Y-%m-%d %H:%M:%S ') + msg + '\n')
 
 
+_INSTANCE = None   # the lock (POSIX: an open flock file, closed and so released if it is dropped)
+
+
 def single_instance():
     if not WINDOWS:
         import fcntl
@@ -185,7 +188,8 @@ class Adopted:
 
 
 def main():
-    single_instance()
+    global _INSTANCE
+    _INSTANCE = single_instance()
     log('keeper up pid %d' % os.getpid())
     child, wait_until = None, 0
     next_probe, slow = time.time() + 120, 0
