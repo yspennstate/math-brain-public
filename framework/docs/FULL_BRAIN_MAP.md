@@ -77,6 +77,7 @@ itself off and `agent_tools/math_recall.py` prints `fast path OFF` with the reas
 | Agent mesh (claims, leases, handoffs) | `mesh/agent_mesh.py`, `claim_gate.py`, `PROTOCOL.md` | `mesh/tests/`, `scripts/smoke_framework.py` |
 | Task checklist | `dreaming/checklist.py`, `task_checklist_hook.py` | |
 | Secret scan before every push (install as a clone's `.git/hooks/pre-push`) | `dreaming/scan_secrets.py`, `prepush_secret_gate.py` | `dreaming/test_prepush_new_ref.py` |
+| Pushing named paths onto a busy main (scanned first, one commit, a lost race retried on the new tip) | `dreaming/push_paths.sh`, `push_paths_gitdata.py` | `dreaming/test_push_paths_gitdata.py` |
 | One brain on several computers (fleet inbox, memories copied across, insert-only) | `dreaming/fleet_board.py`, `fleet_inbox_hook.py`, `memory_pull.py` | `dreaming/test_memory_pull.py` |
 | Fleet, governor, delegation | `fleet/`, `governor/`, `delegation/` | `python -m pytest governor -q` (from `framework/`) |
 
