@@ -27,7 +27,7 @@ lists the files a newcomer should open first (the root README, AGENTS_GUIDE, TES
 the architecture note and the afternoon walkthrough). Then ask a question,
 in two or three wordings if you like; the rankings are fused:
 
-    python navigation/nav_query.py "nightly consolidation" --or "dream cycle"
+    python navigation/nav_query.py "dreaming" --or "turns repeated mistakes into reflexes"
     python navigation/nav_query.py "load the store into sqlite" --or "import_store"
 
 Each result prints its id, kind, path and summary. Up to three hint lines can come before the results. One names the

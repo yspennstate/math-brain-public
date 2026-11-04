@@ -296,6 +296,11 @@ class Nav:
 
 
 def main(argv=None):
+    for stream in (sys.stdout, sys.stderr):
+        try:
+            stream.reconfigure(errors="replace")  # a console that cannot show a character gets "?" instead of a crash
+        except (AttributeError, ValueError):
+            pass
     ap = argparse.ArgumentParser(description=__doc__.splitlines()[0])
     ap.add_argument("query", nargs="?", help="words to search for")
     ap.add_argument("--or", dest="alts", action="append", default=[], help="another wording, fused by rank")

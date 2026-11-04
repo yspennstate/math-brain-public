@@ -27,7 +27,7 @@ The repository has a small brain of its own as well. [navigation/](navigation/) 
 
 ```bash
 python navigation/nav_query.py --entry
-python navigation/nav_query.py "nightly consolidation" --or "dream cycle"
+python navigation/nav_query.py "dreaming" --or "turns repeated mistakes into reflexes"
 ```
 
 Then, in this order:
