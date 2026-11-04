@@ -803,6 +803,108 @@ def _use_order_pieces(pieces, emitted_ids, hits_by_id):
     return shown + rest if moved else pieces
 
 
+# ANCHOR RULE (2026-09-22). Measured on the 101 cards the hook served across the 35 harder proof
+# audits, each judged one at a time by an Opus 5 judge: 34 were off the argument's domain (Johnson-Lindenstrauss on
+# an extremal-graph item, pulled by "eps"; maximum likelihood on a dispersive-PDE item, pulled by "estimate";
+# quantifier elimination pulled by the single word "elimination"), 4 licensed the planted false step. Every
+# on-domain card shared at least THREE content words with the argument (median 8); the off-domain ones had a
+# first quartile of 1. Requiring three shared content words - or a title the prompt names - drops 13 of the 34
+# off-domain cards and 1 of the 4 false friends while keeping every one of the 52 bearing and 25 helpful cards.
+# The rule scales with the prompt: a long
+# argument (40+ content words) needs 3, a medium prompt 2, a short question is a name lookup and is exempt, so
+# the abstention gates and the title match carry it as before. MATHBRAIN_ANCHOR_SHARED=0 switches it off.
+_ANCHOR_STOP = frozenset("""a an the and or but if then than that this those these of in on at to for from by with
+without into over under about as is are was were be been being it its we our you your what which who when where why
+how not no so such very more most much many few some any all each every both one two first second next let there
+here per also only just after before then thus hence since where while any every for each given suppose assume
+follows holds implies proof step claim lemma theorem definition concept show shows""".split())
+
+
+# LaTeX command names are notation, not content (2026-09-24, ab30 study). On the arXiv proofs of the ab30 bank the
+# shared "words" that anchored Bernstein inequalities to a Lipschitz-free-space item were frac, leq and varepsilon,
+# and mathcal and mathfrak anchored a tensor-triangulated definition to a topological-monoid item. Removing \name
+# before the word scan drops those two cards and changes nothing on the 101 judged cards of 09-22, whose arguments are
+# prose.
+_LATEX_CMD = re.compile(r"\\[A-Za-z]+")
+
+
+# DASHES FOLD IN THE WORD-SET TESTS (MATHBRAIN_DASH_FOLD, default on; measured 25 Sep). An argument writes
+# "Cauchy–Schwarz" with an en dash, the card "Cauchy-Schwarz" with a hyphen; the prefilter and ranker fold dashes, these tests did
+# not, and the anchor rule dropped the Cauchy-Schwarz cards from a proof citing Cauchy–Schwarz. The em dash (punctuation) stays.
+DASH_FOLD_ON = os.environ.get("MATHBRAIN_DASH_FOLD", "1").strip() not in ("0", "off", "false", "")
+_MS_DASH_FOLD = {ord(c): "-" for c in "\u2010\u2011\u2012\u2013\u2212"}
+
+
+def _fold_dashes(text):
+    return (text or "").translate(_MS_DASH_FOLD) if DASH_FOLD_ON else (text or "")
+
+
+def _content_words(text):
+    return {w for w in re.findall(r"[a-z][a-z-]{2,}", _LATEX_CMD.sub(" ", _fold_dashes(text)).casefold())
+            if w not in _ANCHOR_STOP}
+
+
+def _anchor_min_shared(prompt):
+    """How many content words a card must share with THIS prompt, or 0 when the rule does not apply."""
+    if prompt is None:
+        return 0
+    try:
+        k = int(os.environ.get("MATHBRAIN_ANCHOR_SHARED", "3") or 0)
+    except ValueError:
+        k = 3
+    if k <= 0:
+        return 0
+    n = len(_content_words(prompt))
+    if n >= 40:
+        return k
+    # THE MEDIUM TIER, MEASURED (MATHBRAIN_ANCHOR_MEDIUM, default on; measured 25 Sep). It was extrapolated
+    # from the long-audit calibration above and never measured on its own; every house and fresh-bank question sits in it.
+    # Switched off: the held-out banks (memory-blind, FEI, fresh2, the hook-path bank) are identical; the house bank gains
+    # three first answers (the MMPP question whose card says "MMPP" where the question says "Markov-modulated") - but on his
+    # traffic the Erdos 548 verification prompt loses its Erdos-Sos card to Lean cards for other Erdos problems, a useful block
+    # turned junk. Kept on. MATHBRAIN_ANCHOR_MEDIUM=0 switches it off and leaves long prompts at k.
+    if n >= 12 and os.environ.get("MATHBRAIN_ANCHOR_MEDIUM", "1").strip() not in ("0", "off", "false", ""):
+        return max(1, k - 1)
+    return 0
+
+
+_ANCHOR_SUFFIXES = ("ations", "ation", "ities", "ity", "ions", "ion", "ings", "ing", "ies", "es", "ed", "s")
+
+
+def _anchor_stem(w):
+    for suf in _ANCHOR_SUFFIXES:
+        if w.endswith(suf) and len(w) - len(suf) >= 4:
+            return w[: -len(suf)]
+    return w
+
+
+# NORMALISED ANCHOR WORDS (MATHBRAIN_ANCHOR_NORM, default off; measured 25 Sep): a hyphenated word also
+# counts by its parts and every word by a light stem, so "event-stationary" meets "event". On the 101 judged cards of 22 Sep
+# it changes no decision; on the banks the held-out ones are identical and two house questions turn right (in-sample); on
+# live traffic it adds one more card to three blocks that were junk already and changes no useful block. A change whose only
+# gain is in-sample and whose traffic cost is more junk text is not taken; the switch stays for a denser test.
+def _anchor_words(text):
+    """The anchor rule's word set: _content_words, or under MATHBRAIN_ANCHOR_NORM=1 their light stems plus the parts of
+    hyphenated words."""
+    words = _content_words(text)
+    if os.environ.get("MATHBRAIN_ANCHOR_NORM", "0").strip() in ("0", "off", "false", ""):
+        return words
+    out = set()
+    for w in words:
+        out.add(_anchor_stem(w))
+        if "-" in w:
+            out |= {_anchor_stem(p) for p in w.split("-") if len(p) >= 3 and p not in _ANCHOR_STOP}
+    return out
+
+
+def _anchored(node, prompt_words, k):
+    title_words = _anchor_words(getattr(node, "title", "") or "")
+    if title_words and (title_words <= prompt_words or len(title_words & prompt_words) >= 2):
+        return True
+    card_words = _anchor_words((getattr(node, "title", "") or "") + " " + (getattr(node, "body", "") or "")[:1500])
+    return len(card_words & prompt_words) >= k
+
+
 def _title_is_the_query(query, title):
     """True when the sub-query names the node itself: same words, order and punctuation aside.
 
@@ -901,7 +1003,7 @@ def _carries_ident(node, wanted):
     return bool(wanted & _idents(getattr(node, "title", "") or ""))
 
 
-def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None):
+def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None, anchor=True):
     """Re-rank, gate, deduplicate by title, cap campaign deposits, take `cap` (three by default).
 
     Returns [] when the store should stay silent.
@@ -930,6 +1032,10 @@ def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None):
     )
     if not ranked:
         return []
+    # the anchor rule (see _anchor_min_shared) is applied to the CHOSEN cards at the end, dropping without
+    # refilling: refilling the freed slots from the ranked tail brought in cards that were again off-domain.
+    _k_anchor = _anchor_min_shared(prompt) if anchor else 0
+    _pw = _anchor_words(prompt) if _k_anchor else set()
     if apply_gates:
         top = _rs(ranked[0])
         if top < MIN_SUPPORT:
@@ -1097,7 +1203,10 @@ def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None):
     best_plain = max((_rs(h) for h in plain), default=float("-inf"))
     earned = [h for h in campaign_hits if _rs(h) > best_plain + DEMOTION_MARGIN]
     demoted = [h for h in campaign_hits if h not in earned]
-    return earned + plain + demoted
+    _out = earned + plain + demoted
+    if _k_anchor:
+        _out = [h for h in _out if _anchored(h.node, _pw, _k_anchor)]
+    return _out
 
 
 #: a claim node whose title runs this long carries the old projection
