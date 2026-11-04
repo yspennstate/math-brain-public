@@ -2683,6 +2683,167 @@ def _incoherent_weak_block(prompt, ids):
         return None
 
 
+# COVERAGE YIELDS TO AGREEMENT (MATHBRAIN_COV_AGREE, default on). A plainly worded question covers few of its card's words,
+# so the coverage abstention silences it even when the card is the right one: on a blind bank of plainly worded questions
+# the coverage gates silenced 18 of the 33 questions the hook otherwise left silent. When the lexical channel's first card
+# is also the prompt's first claim by the semantic channel (_semantic_top), the prefilter gate passes; without the claim
+# vectors there is no first claim, and the gate abstains as before.
+COV_AGREE = os.environ.get("MATHBRAIN_COV_AGREE", "1").strip() not in ("0", "off", "false", "")
+# THE AGREED CARD IS SEALED (MATHBRAIN_COV_SEAL, default on). The gate yields because the word and the meaning channels
+# agree on one card, and the stages after it (the lead filter, the integrity read, the property order, the session dedup,
+# the twin collapse, the use reorder) could still put another card first. When a yield was used, the use reorder is
+# skipped and the block is emitted only if its first card is still the meaning channel's first claim.
+COV_SEAL = os.environ.get("MATHBRAIN_COV_SEAL", "1").strip() not in ("0", "off", "false", "")
+# A FIRST CLAIM NEEDS A WINNER (MATHBRAIN_SEMTOP_MARGIN, default 1e-6). np.argmax always names an index: over a flat or
+# tied similarity vector it names the first one, so the meaning channel had a first claim with no evidence behind it, and
+# it agreed with the lexical top whenever that happened to be the same index. The channel names a claim only when the
+# cosines are finite and spread and the top one beats the second by more than the margin. Measured on 2,899 real
+# prompts: the top two tied exactly on 2 and never came within 1e-6 otherwise, and the spread was never below 0.023. A
+# negative margin turns the rule off.
+try:
+    SEMTOP_MARGIN = float(os.environ.get("MATHBRAIN_SEMTOP_MARGIN", "1e-6"))
+except ValueError:
+    SEMTOP_MARGIN = 1e-6
+# THE MEANING CHANNEL NAMES A CURRENT REVISION (MATHBRAIN_SEMTOP_CURRENT, default on). A claim a newer revision supersedes
+# keeps its vector, and the argmax ran over every vector: asked "What is <title>?" for 327 revised claims, the winner was
+# the old revision 181 times. retrieve() ranks current revisions only, so the agreement above could not happen on exactly
+# the cards that were revised. With the dial on, superseded revisions are masked out before the winner is named. Measured
+# side by side: on the 327 questions fired 246 -> 256 and first-card hits 184 -> 192, no answer lost; on 588 general
+# questions not one outcome changed. 0 restores the argmax over every vector.
+SEMTOP_CURRENT = os.environ.get("MATHBRAIN_SEMTOP_CURRENT", "1").strip() not in ("0", "off", "false", "")
+_COV_AGREED = {}
+_SEMTOP = {}
+_SEMTOP_WHY = {}
+_CURRENT_MASK = {}
+
+
+def _semantic_winner(cos, ids, np_):
+    """The index-identifier the similarity vector puts first, or None when it puts nobody first."""
+    if SEMTOP_MARGIN < 0:
+        return str(ids[int(np_.argmax(cos))])
+    if cos.shape[0] == 0 or not bool(np_.isfinite(cos).all()):
+        return None
+    if cos.shape[0] == 1:
+        return str(ids[0])
+    if float(cos.std()) <= 1e-9:
+        return None
+    first, second = np_.argpartition(-cos, 1)[:2]
+    if cos[second] > cos[first]:
+        first, second = second, first
+    if float(cos[first] - cos[second]) <= SEMTOP_MARGIN:
+        return None
+    return str(ids[int(first)])
+
+
+# THE VECTORS MUST COVER THE STORE. The claim vectors are a file beside the store, so a claim filed after the file was made
+# has no vector, and the meaning channel would pick its first claim from the claims the file holds: when the new claim is
+# the right answer and an older one leads on the words and wins on meaning among the rest, the two channels agree on the
+# older card and the gate yields to it. The channel names nobody while a current claim has no vector or a vector names no
+# node of the store. The text is bound too: the file records each row's store digest (node_digests), math_brain.semantic
+# reads them into _digests, and a row whose digest is not the store's counts as a claim without a vector; loaded vectors
+# with no digests name nobody. A row the file marks as legacy (row_source: no text of its claim reproduces it) counts as
+# a claim without a vector of its current text.
+def _claim_vectors_cover_store(ids, store=None, digests=None, sources=None):
+    """(missing, phantom): current claims of the store with no vector (a superseded claim needs none), and vector ids
+    that name no node of it. With digests (one per id: the store digest of the text each vector was made from), a row
+    whose digest is not the store's counts as a claim without a vector; with sources (one per id, the file's
+    row_source), so does a row of unknown text (legacy), whatever digest it carries; and so does an id that names more
+    than one row. Read in one snapshot, every call: the store runs in WAL mode, so its file's time says nothing about
+    what it holds."""
+    import sqlite3
+    con = sqlite3.connect("file:%s?mode=ro" % os.path.abspath(store or STORE_PATH).replace(os.sep, "/"),
+                          uri=True, timeout=10)
+    try:
+        con.execute("BEGIN")
+        claims = {r[0] for r in con.execute("select id from claims")}
+        superseded = {r[0] for r in con.execute("select target_id from edges where kind = 'supersedes'")}
+        nodes = {r[0]: str(r[1]) for r in con.execute("select id, digest from nodes")}
+    finally:
+        con.close()
+    have = [str(i) for i in ids]
+    seen, dup = set(), set()
+    for i in have:
+        (dup if i in seen else seen).add(i)
+    missing = (claims - set(have) - superseded) | dup
+    if digests is not None:
+        if len(digests) != len(have):
+            raise ValueError("%d store digests for %d vectors" % (len(digests), len(have)))
+        missing |= {i for i, d in zip(have, digests) if i in nodes and i not in superseded and nodes[i] != str(d)}
+    if sources is not None:
+        if len(sources) != len(have):
+            raise ValueError("%d row sources for %d vectors" % (len(sources), len(have)))
+        missing |= {i for i, s in zip(have, sources) if i in nodes and str(s) == "legacy"}
+    return sorted(missing), sorted(set(have) - set(nodes))
+
+
+def _current_revision_mask(ids, np_):
+    """Boolean mask over the claim vectors: False for a claim a newer revision supersedes (the target of a 'supersedes'
+    edge in the store), read once per process and per vector file; None when the store cannot be read (no masking)."""
+    key = (len(ids), STORE_PATH)
+    if key not in _CURRENT_MASK:
+        try:
+            import sqlite3
+            con = sqlite3.connect("file:%s?mode=ro" % STORE_PATH, uri=True)
+            try:
+                old = frozenset(t for (t,) in con.execute("SELECT target_id FROM edges WHERE kind='supersedes'"))
+            finally:
+                con.close()
+            _CURRENT_MASK[key] = np_.asarray([str(i) not in old for i in ids], dtype=bool) if old else None
+        except Exception:
+            _CURRENT_MASK[key] = None
+    return _CURRENT_MASK[key]
+
+
+def _semantic_top(prompt):
+    """The prompt's first claim by the semantic channel, cached per prompt; None when the channel is unavailable, its
+    vectors do not cover the store (_claim_vectors_cover_store), or it names no winner (_semantic_winner). Why is in
+    _SEMTOP_WHY."""
+    key = prompt or ""
+    if key not in _SEMTOP:
+        top = None
+        try:
+            from math_brain import semantic as _S
+            import numpy as _np
+            _S._load_artifact()
+            digests = getattr(_S, "_digests", None)
+            missing, phantom = ([], []) if digests is None else _claim_vectors_cover_store(
+                _S._ids, digests=digests, sources=getattr(_S, "_sources", None))
+            if digests is None:
+                _SEMTOP_WHY[key] = ("vectors do not cover the store: the loaded vectors carry no store digests (the "
+                                    "file records none, or math_brain.semantic does not read them)")
+            elif missing or phantom:
+                _SEMTOP_WHY[key] = ("vectors do not cover the store: %d current claim(s) without a vector of their "
+                                    "current text, %d vector(s) naming no node" % (len(missing), len(phantom)))
+            else:
+                vec = _S._query_encoder().embed(_S.QUERY_PREFIX + key)
+                cos = _S._vecs @ _np.asarray(vec, dtype=_np.float32)
+                ids = _S._ids
+                if SEMTOP_CURRENT:
+                    keep = _current_revision_mask(ids, _np)
+                    if keep is not None:
+                        cos, ids = cos[keep], [i for i, k in zip(ids, keep) if k]
+                top = _semantic_winner(cos, ids, _np)
+                _SEMTOP_WHY[key] = "winner" if top else "no winner"
+        except Exception as exc:
+            top = None
+            _SEMTOP_WHY[key] = "unavailable: %s" % type(exc).__name__
+        _SEMTOP[key] = top
+    return _SEMTOP[key]
+
+
+def _same_card(a, b):
+    a, b = str(a or ""), str(b or "")
+    return bool(a and b) and (a == b or a.startswith(b[:16]) or b.startswith(a[:16]))
+
+
+def _reset_cov_agree_state():
+    """A caller that runs several prompts in one process must not carry one prompt's agreed card or first claim into the
+    next (the live hook runs one process per prompt; an in-process measurement does not)."""
+    _COV_AGREED.clear()
+    _SEMTOP.clear()
+    _SEMTOP_WHY.clear()
+
+
 def _cut_unless_named(prompt, hits):
     """_incoherent_weak_block on these cards, None when the lead card's title is the result the prompt names."""
     c = _incoherent_weak_block(prompt, [str(h.node.id) for h in hits])
@@ -2969,6 +3130,7 @@ def main():
 
 def _main_body(data, out):
     started = time.time()
+    _reset_cov_agree_state()
     prompt = data.get("prompt")
     prompt = (prompt if isinstance(prompt, str) else "")[:8000]
     _use_begin(str(data.get("session_id") or data.get("thread_id") or ""))
@@ -3058,8 +3220,12 @@ def _main_body(data, out):
                 _qs0 = float(getattr(math_prefilter, "LAST_QSELF", 0.0) or 0.0)
                 if _ps0 and 0 < _qs0 <= COVERAGE_QSELF_MAX and (max(_ps0.values()) / _qs0) < COVERAGE_MIN:
                     if not _coverage_ident_exempt(prompt, _ps0):
-                        _silence_note(data, "coverage_gate_prefilter:%.3f" % (max(_ps0.values()) / _qs0))
-                        return
+                        if COV_AGREE and _same_card(max(_ps0, key=_ps0.get), _semantic_top(prompt)):
+                            _silence_note(data, "coverage_agree_prefilter", harness_only=True)
+                            _COV_AGREED["prefilter"] = max(_ps0, key=_ps0.get)
+                        else:
+                            _silence_note(data, "coverage_gate_prefilter:%.3f" % (max(_ps0.values()) / _qs0))
+                            return
             except Exception:
                 pass
         with ResearchStore.open_read_only(STORE_PATH) as store:
@@ -3703,7 +3869,7 @@ def _main_body(data, out):
         if _named_extra and len(pieces) > 4:
             _budget = max(_budget, len(header) + 760 * len(pieces))
         block, emitted_ids = _assemble_note_block(header, pieces, _budget)
-        if block and len(emitted_ids) > 1 and MATH_USE_WEIGHT > 0:
+        if block and len(emitted_ids) > 1 and MATH_USE_WEIGHT > 0 and not (COV_SEAL and _COV_AGREED):
             try:
                 _pieces_u = _use_order_pieces(pieces, emitted_ids, {h.node.id: h for h in chosen})
                 if _pieces_u is not pieces:
@@ -3717,6 +3883,16 @@ def _main_body(data, out):
                 block, emitted_ids = _with_pitfall_lines(header, pieces, emitted_ids, _budget, prompt)
             except Exception as _exc:
                 _silence_note(data, "pitfall_lines_error:%s" % type(_exc).__name__)
+        if block and emitted_ids and COV_SEAL and _COV_AGREED:
+            try:
+                _sealed = _same_card(emitted_ids[0], _semantic_top(prompt))
+                if not _sealed and os.environ.get("MATHBRAIN_COV_AGREE_WIDE", "2") not in ("", "0"):
+                    _sealed = _same_card(emitted_ids[0], _COV_AGREED.get("block"))
+            except Exception:
+                _sealed = False
+            if not _sealed:
+                _silence_note(data, "coverage_agree_identity_lost")
+                return
         if block and COH_CUT and len(emitted_ids) > 1:
             _cut = _incoherent_weak_block(prompt, emitted_ids)
             if _cut and COH_NAME_EXEMPT:
