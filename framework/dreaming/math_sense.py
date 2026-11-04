@@ -54,6 +54,29 @@ MAX_STATEMENT_CHARS = int(os.environ.get("MATHBRAIN_MAX_STATEMENT_CHARS", "480")
 TIME_BUDGET_S = float(os.environ.get("MATHBRAIN_TIME_BUDGET_S", "30"))   # was 2.5 until 2026-09-07: under load the
                           # store load alone passed it and the lane abstained silently; the owner's order is that
                           # the brain always goes in, so the lane now waits (the hook's own timeout is the ceiling)
+# A HEADLESS WORKER WAITS LONGER (24 Sep 2026). Research sessions a scheduler launches run at below-normal priority; on a
+# machine with most cores busy the prefilter-and-load stage took 42 s, past the 30 s budget, the 2 s top-card integrity
+# grace could not finish either, and the hook served nothing - mute exactly for the background agents it is meant to serve.
+# With an 85 s budget the same prompts got three cards in four of four runs, in 9-30 s. Nobody is waiting at a keyboard
+# on such a prompt, so when it opens with the worker marker the budget is HEADLESS_BUDGET_S and the integrity grace
+# HEADLESS_GRACE_S. The pair is sized for a 90 s UserPromptSubmit ceiling: 1.5 x 50 s of pre-ranking grace, the ranking,
+# then 8 s of integrity grace. An explicit MATHBRAIN_TIME_BUDGET_S / MATHBRAIN_INTEGRITY_GRACE_S wins; interactive
+# prompts keep 30 s and 2 s.
+HEADLESS_MARKER = "[headless-worker]"
+HEADLESS_BUDGET_S = float(os.environ.get("MATHBRAIN_HEADLESS_BUDGET_S", "50") or 50)
+HEADLESS_GRACE_S = float(os.environ.get("MATHBRAIN_HEADLESS_GRACE_S", "8") or 8)
+_HEADLESS = False
+
+
+def _headless_budget(prompt):
+    global TIME_BUDGET_S, _HEADLESS
+    if not (prompt or "").lstrip().startswith(HEADLESS_MARKER):
+        return
+    _HEADLESS = True
+    if "MATHBRAIN_TIME_BUDGET_S" not in os.environ:
+        TIME_BUDGET_S = max(TIME_BUDGET_S, HEADLESS_BUDGET_S)
+
+
 PREFILTER_K = int(os.environ.get("MATHBRAIN_PREFILTER_K", "300"))
 GATE_FLOOR = float(os.environ.get("MATHBRAIN_GATE_FLOOR", "25"))     # on-topic gate, 2026-09-07 (see the block after _select)
 GATE_RATIO = float(os.environ.get("MATHBRAIN_GATE_RATIO", "0.45"))   # a note must reach this fraction of the best prefilter score
@@ -453,7 +476,7 @@ def _legacy_math_gate(prompt):
     # (jensen, served "Jensen's Inequality" first) and THREE become confident wrong cards: Menger answered
     # with "Ore's Theorem on Hamiltonian Cycles", Kuratowski with "Robertson-Seymour", the prime number
     # theorem with "Infinitude of Primes". Those are the dangerous kind of wrong - a plausible neighbour
-    # that reads as the answer. Trading four silences for one answer and three of those runs straight
+    # that reads as the answer. Exchanging four silences for one answer and three of those runs straight
     # against his 2026-09-02 order to make the brain fire LESS and be surer when it fires, so the silence
     # is the better behaviour and this stays off.
     # THE COST IN PRODUCTION, separately: over the 33,970 real prompts in the archive, 43.1 pct pass this
@@ -1823,6 +1846,7 @@ def main():
     except Exception:
         return
     prompt = (data.get("prompt") or "")[:8000]
+    _headless_budget(prompt)
     if len(prompt) < 12 or not _math_gate(prompt):
         # HARNESS RUNS ONLY (2026-09-14). This gate fires on every non-mathematical prompt in every
         # session, so logging it in production would bury the file - which is why it logged nothing at
@@ -2406,7 +2430,8 @@ def main():
                 _silence_note(data, "integrity:%s" % exc)
                 raise
             try:
-                _grace = float(os.environ.get("MATHBRAIN_INTEGRITY_GRACE_S", "2.0") or 2.0)
+                _grace = float(os.environ.get("MATHBRAIN_INTEGRITY_GRACE_S",
+                                              str(HEADLESS_GRACE_S) if _HEADLESS else "2.0") or 2.0)
             except Exception:
                 _grace = 2.0
             _silence_note(data, "integrity_budget_exhausted:grace_top_card")
