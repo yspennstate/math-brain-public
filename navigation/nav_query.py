@@ -189,6 +189,33 @@ class Nav:
                 break
         return out
 
+    WEAK_FLOOR = 19.5
+
+    def hints(self, wordings, hits):
+        """Two hints for a reader deciding whether the repository has the thing at all. Hints, not verdicts.
+
+        Words of the query that appear on no card (four letters or more) name what the map has never heard of;
+        an ordinary word turns up here too, so read them. WEAK MATCH: the first card's score is under the floor
+        in every wording. On a 39-question blind bank (4 Nov 2026), floor fit on half and read on the other:
+        the absent words were listed for 6 of 7 questions about things the repository lacks and for 10 of 32
+        others; the floor marked 4 of 7 and none of the 32 (only 1 of 4 on the held-out half)."""
+        out, absent = [], []
+        for w in wordings:
+            for t in TOKEN.findall(w.lower()):
+                if len(t) > 3 and t not in self.df and t not in absent:
+                    absent.append(t)
+        if absent:
+            out.append("words on no card (from the query): " + clean(", ".join(absent[:4]), 80))
+        if hits:
+            best = 0.0
+            for w in wordings:
+                names = set(re.findall(r"[\w.\-]+", w.lower()))
+                best = max(best, self.score(hits[0], TOKEN.findall(w.lower())) * self._prior(hits[0], names))
+            if best < self.WEAK_FLOOR:
+                out.append("WEAK MATCH (best card scores %.1f, floor %.1f): reword with a file, function or folder "
+                           "name, or the repository may not have it" % (best, self.WEAK_FLOOR))
+        return out
+
     def resolve(self, key):
         if key in self.cards:
             return key
@@ -287,6 +314,8 @@ def main(argv=None):
         return 1 if missing else 0
     elif a.query:
         hits = nav.search([a.query] + a.alts, a.k)
+        for h in nav.hints([a.query] + a.alts, hits):
+            print("  hint: " + h)
         if not hits:
             print("no match; try other words (a file name, a function, a folder)")
             return 1
@@ -352,6 +381,8 @@ def selftest():
         check("a second wording fuses in ('multi wording search')", ids[4] in nav.search(["dream agenda", "multi wording search"], 5))
         check("no match returns nothing", nav.search(["zzzz qqqq"], 5) == [])
         check("id prefix resolves", nav.resolve(ids[2][:6]) == ids[2])
+        hs = nav.hints(["kubernetes deployment"], nav.search(["kubernetes deployment"], 3))
+        check("a word no card carries is named in a hint", any("kubernetes" in h for h in hs))
         check("walk from the dream folder toward 'agenda' finds dream.py", ids[2] in nav.walk(ids[0], "agenda scan"))
         check("--check reports the two files missing from the checkout", nav.check(repo) == ["agent_tools/math_recall.py", "framework/dreaming/dream.py"])
         check("the card with a path outside the repository (and its injected text) is never loaded",

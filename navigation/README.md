@@ -30,7 +30,11 @@ in two or three wordings if you like; the rankings are fused:
     python navigation/nav_query.py "nightly consolidation" --or "dream cycle"
     python navigation/nav_query.py "load the store into sqlite" --or "import_store"
 
-Each result prints its id, kind, path and summary. Read a card whole, with every link in and out, by id (a unique
+Each result prints its id, kind, path and summary. Two hint lines can come before the results. One names the words
+of the question that appear on no card; a tool or format the repository never mentions shows up there, next to
+ordinary words the cards happen not to use. The other, WEAK MATCH, says the best card scored under the floor; reword
+with a file, function or folder name, and if two or three wordings still come back weak, the repository probably does
+not have it. Read a card whole, with every link in and out, by id (a unique
 prefix is enough):
 
     python navigation/nav_query.py --id 64d6e7
