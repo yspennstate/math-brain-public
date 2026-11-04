@@ -2370,31 +2370,152 @@ def _attach_answers(chosen, pool_hits, edges, cap_extra=2):
         return chosen
 
 
-def _subquery_block(query):
-    """The block one sub-query earns on its own: prefilter -> ranker -> _select -> the on-topic floor. Hits, not ids."""
+# A NAMED SUB-QUERY KEEPS ONLY THE RESULT IT NAMED (MATHBRAIN_NAMED_TITLEMATCH, default on; 25 Sep).
+# The rule, on one title: the first two content words of the name, each by a
+# stem of four or more letters, or a one-word name as a whole word.
+NAMED_TITLEMATCH = os.environ.get("MATHBRAIN_NAMED_TITLEMATCH", "1").strip() not in ("0", "off", "false", "")
+_NTM_STOP = {"the", "a", "an", "of", "for", "and", "in", "on", "to", "by", "with", "its", "form", "version", "s"}
+
+
+NAMED_ACCENT_FOLD = os.environ.get("MATHBRAIN_NAMED_ACCENT_FOLD", "1").strip() not in ("0", "off", "false", "")
+
+
+def _fold_accents(text):
+    if not NAMED_ACCENT_FOLD:
+        return text or ""
+    t = unicodedata.normalize("NFKD", text or "")
+    return "".join(c for c in t if not unicodedata.combining(c))
+
+
+# INEQUALITY, ESTIMATE AND BOUND ARE ONE KIND for a named result (MATHBRAIN_NAMED_KIND_SYNONYMS, default on): "the
+# Caccioppoli estimate" is the store's "Caccioppoli Inequality". Theorem and lemma stay distinct.
+NAMED_KIND_SYNONYMS = os.environ.get("MATHBRAIN_NAMED_KIND_SYNONYMS", "1").strip() not in ("0", "off", "false", "")
+_KIND_SYN = frozenset(("inequality", "inequalities", "estimate", "estimates", "bound", "bounds"))
+_KIND_SYN_RE = r"\b(?:inequalit|estimat|bound)"
+
+
+def _named_title_match(name, title):
+    ws = [w for w in re.findall(r"[a-z][a-z-]{1,}", _fold_accents(name).lower()) if w not in _NTM_STOP]
+    if not ws:
+        return False
+    low = _fold_accents(title).lower()
+    if len(ws) == 1:
+        return re.search(r"\b%s\b" % re.escape(ws[0]), low) is not None
+    return all((re.search(_KIND_SYN_RE, low) is not None) if (NAMED_KIND_SYNONYMS and w in _KIND_SYN)
+               else (re.search(r"\b%s" % re.escape(w[:max(4, len(w) - 2)]), low) is not None) for w in ws[:2])
+
+
+# A NAMED SUB-QUERY WHOSE CANDIDATES ARE TITLED WITH THE NAME PASSES THE GATES (MATHBRAIN_SUBQ_EXACT_PASS, default on;
+# 25 Sep). "Aubin–Lions lemma" had one candidate, the card titled "Aubin-Lions compactness lemma", and served
+# nothing: 0.29 lexical on a long body against MIN_SUPPORT 0.5. When every surviving candidate carries every distinctive word of the
+# name in its title, the choice is among them with the support and margin gates off; the prefilter floor and the anchor rule stay.
+SUBQ_EXACT_PASS = os.environ.get("MATHBRAIN_SUBQ_EXACT_PASS", "1").strip() not in ("0", "off", "false", "")
+# ... and passes the anchor rule too (MATHBRAIN_SUBQ_EXACT_ANCHOR, default on): the cited name is its anchor. The
+# rule held "Weyl's inequality" to three shared words of a long proof that cites it by label and dropped it.
+SUBQ_EXACT_ANCHOR = os.environ.get("MATHBRAIN_SUBQ_EXACT_ANCHOR", "1").strip() not in ("0", "off", "false", "")
+# ... but only for the card the citation NAMES (MATHBRAIN_SUBQ_EXACT_TIGHT, default on). "Exact" above is containment,
+# so a title may carry the cited words among others, and a surname names many results: "F. Riesz's theorem" matched "Riesz
+# representation theorem for Hilbert spaces", a reverse-Hoelder citation matched the Carbery-Wright card, and past the anchor rule
+# each took a named slot and pushed a keyed card out. A title whose head - the text before a colon or
+# bracket - holds no distinctive word the citation lacks passes on the name; any other exact candidate meets the anchor rule.
+SUBQ_EXACT_TIGHT = os.environ.get("MATHBRAIN_SUBQ_EXACT_TIGHT", "1").strip() not in ("0", "off", "false", "")
+_TIGHT_NEUTRAL = frozenset(set(_TITLE_STOP) | set(_KIND_SYN) | {"principle", "formula", "identity", "conjecture", "law",
+                                                                "criterion", "corollary", "proposition", "theorems", "lemmas"})
+SUBQ_EPONYM_EXACT = os.environ.get("MATHBRAIN_SUBQ_EPONYM_EXACT", "1").strip() not in ("0", "off", "false", "")
+# A POSSESSIVE NAME ASKS FOR BOTH FORMS (MATHBRAIN_SUBQ_POSSESSIVE, default on; 25 Sep). The prefilter
+# keeps an apostrophe inside a token and "theorem" is a stop word, so the named sub-query "Plancherel's theorem" searched for the one
+# token "plancherel's" and found no candidate at all, while the cards are titled "Plancherel theorem" (13 candidates). A named
+# sub-query whose possessive form finds no candidate asks again with the plain name beside it (a fallback);
+# nothing else reads the changed text.
+SUBQ_POSSESSIVE = os.environ.get("MATHBRAIN_SUBQ_POSSESSIVE", "1").strip() not in ("0", "off", "false", "")
+_POSSESSIVE_RE = re.compile(r"\b([A-Za-zÀ-ſ][A-Za-zÀ-ſ-]{2,})(['’])s\b")
+
+
+def _name_parts(text):
+    """The distinctive words of a name, hyphenated names by their parts, accents and dashes folded."""
+    t = _fold_dashes(str(text or ""))
+    if NAMED_ACCENT_FOLD:
+        t = _fold_accents(t)
+    out = set()
+    for w in re.findall(r"[a-z][a-z-]{2,}", t.lower()):
+        if w in _TIGHT_NEUTRAL:
+            continue
+        for part in w.split("-"):
+            if len(part) >= 2 and part not in _TIGHT_NEUTRAL:
+                out.add(part)
+    return out
+
+
+def _title_names_only(query, title):
+    """True when a title's head names the cited result and nothing more: its distinctive words are the citation's."""
+    try:
+        qw = _name_parts(query)
+        return bool(qw) and _name_parts(re.split(r"[:(\[]", str(title or ""), 1)[0]) == qw
+    except Exception:
+        return False
+
+
+def _subquery_block(query, prompt=None, exact_pass=False):
+    """The block one sub-query earns on its own: prefilter -> ranker -> _select -> the on-topic floor. Hits, not ids.
+
+    `prompt` is the whole prompt the sub-query was cut from, so the anchor rule in _select can hold a card to the
+    argument's own words (2026-09-22: the sub-query path is where a long proof's cards come from, and without the
+    prompt the rule was inert there - a live capture served the same 101 cards with it on and off)."""
     import math_prefilter
     from math_brain.retrieval import retrieve
     from math_brain.store import ResearchStore
-    ids = math_prefilter.select(STORE_PATH, query, k=PREFILTER_K)
-    if not ids:
+    _xp = bool(exact_pass and SUBQ_EXACT_PASS)
+
+    def _pool(pq):
+        ids = math_prefilter.select(STORE_PATH, pq, k=PREFILTER_K)
+        if not ids:
+            return None
+        ps = dict(getattr(math_prefilter, "LAST_SCORES", {}) or {})
+        qself = float(getattr(math_prefilter, "LAST_QSELF", 0.0) or 0.0)
+        floor = min(GATE_FLOOR, GATE_FRAC * qself) if (GATE_FRAC > 0 and qself > 0) else GATE_FLOOR
+        with ResearchStore.open_read_only(STORE_PATH) as store:
+            store.connection.execute("BEGIN")
+            nodes, edges = _prefilter_revision_nodes(store, ids)
+        result = retrieve(query, nodes=nodes, edges=edges, limit=CANDIDATE_POOL, min_support_score=0.0, min_margin=0.0)
+        hits = result.hits
+        if PREFLOOR:
+            hits = [h for h in hits if float(ps.get(h.node.id, 0.0)) >= floor]
+        hits = _tuple_exact_first(query, hits)
+        return ps, floor, edges, result, hits, _title_exact_first(query, hits, parts=_xp)
+
+    got = _pool(query)
+    # THE PLAIN NAME WHEN NO CANDIDATE IS TITLED WITH THE POSSESSIVE ONE: "Plancherel's theorem" found no candidate,
+    # "Brouwer's theorem" found only cards that write "Brouwer's" - neither pool held a card titled with the result, and asking
+    # again with the plain name beside the possessive finds it. Asked every time, the plain name widened every possessive sub-query
+    # and cost the pivot bank two keyed results; asked on an empty pool only, it lost Brouwer.
+    if (exact_pass and SUBQ_POSSESSIVE and _POSSESSIVE_RE.search(query or "")
+            and (got is None or got[5] is got[4])):
+        again = _pool(_POSSESSIVE_RE.sub(lambda m: m.group(1) + m.group(2) + "s " + m.group(1), query))
+        if again is not None and (got is None or again[5] is not again[4]):
+            got = again
+    if got is None:
         return []
-    ps = dict(getattr(math_prefilter, "LAST_SCORES", {}) or {})
-    qself = float(getattr(math_prefilter, "LAST_QSELF", 0.0) or 0.0)
-    floor = min(GATE_FLOOR, GATE_FRAC * qself) if (GATE_FRAC > 0 and qself > 0) else GATE_FLOOR
-    with ResearchStore.open_read_only(STORE_PATH) as store:
-        store.connection.execute("BEGIN")
-        nodes, edges = _prefilter_revision_nodes(store, ids)
-    result = retrieve(query, nodes=nodes, edges=edges, limit=CANDIDATE_POOL, min_support_score=0.0, min_margin=0.0)
-    hits = result.hits
-    if PREFLOOR:
-        hits = [h for h in hits if float(ps.get(h.node.id, 0.0)) >= floor]
-    hits = _tuple_exact_first(query, hits)
-    hits = _title_exact_first(query, hits)
-    chosen = [h for h in (_select(hits, title_query=query) or []) if float(ps.get(h.node.id, 0.0)) >= floor]
+    ps, floor, edges, result, hits, _ex = got
+    if _xp and _ex is not hits:
+        # every candidate here is titled with the name the argument cited: the name is the anchor (MATHBRAIN_SUBQ_EXACT_ANCHOR)
+        chosen = [h for h in (_select(_ex, apply_gates=False, title_query=query, prompt=prompt,
+                                      anchor=not SUBQ_EXACT_ANCHOR) or [])
+                  if float(ps.get(h.node.id, 0.0)) >= floor]
+        if SUBQ_EXACT_ANCHOR and SUBQ_EXACT_TIGHT and prompt:
+            # the name anchors only the card it names; a looser namesake shares the argument's words or goes, exactly as the
+            # anchor rule's last step in _select would have judged it (no refill)
+            _k = _anchor_min_shared(prompt)
+            if _k:
+                _pw = _anchor_words(prompt)
+                chosen = [h for h in chosen
+                          if _title_names_only(query, getattr(h.node, "title", "")) or _anchored(h.node, _pw, _k)]
+    else:
+        hits = _ex
+        chosen = [h for h in (_select(hits, title_query=query, prompt=prompt) or []) if float(ps.get(h.node.id, 0.0)) >= floor]
     return _attach_answers(chosen, result.hits, edges)
 
 
-def _title_exact_first(query, hits):
+def _title_exact_first(query, hits, parts=False):
     """When the sub-query IS a stored entry's title, that entry goes first.
 
     Measured 2026-09-13 on the L6 bank: of the cards missing from wide enumeration blocks, 73 of 73 were IN THE
@@ -2415,14 +2536,40 @@ def _title_exact_first(query, hits):
     rescored and every gate downstream still judges whatever comes out.
     """
     try:
-        qw = {w for w in re.findall(r"[a-z][a-z-]{2,}", str(query or "").lower()) if w not in _TITLE_STOP}
-        if len(qw) < 2 or not hits:
+        _qs = _fold_dashes(str(query or ""))
+        if parts and NAMED_ACCENT_FOLD:
+            _qs = _fold_accents(_qs)
+        qw = {w for w in re.findall(r"[a-z][a-z-]{2,}", _qs.lower()) if w not in _TITLE_STOP}
+        # parts=True (a named result): a hyphenated name counts by its parts, so "Aubin-Lions lemma" is looked for
+        _n = sum(len(w.split("-")) for w in qw) if parts else len(qw)
+        # ONE PROPER NAME BEFORE "theorem" OR "lemma" (MATHBRAIN_SUBQ_EPONYM_EXACT, default on). Both words are stop
+        # words here, so "Tonelli's theorem" had one distinctive word and was never looked for: the pool held Tonelli's theorem
+        # and Fubini-Tonelli, and the block served a card on the hypotheses of Fubini-Tonelli. A named sub-query of one
+        # capitalised name and the kind word is looked for as a title holding both.
+        _ep = None
+        if _n == 1 and parts and SUBQ_EPONYM_EXACT and hits:
+            _w = next(iter(qw))
+            _kinds = set(re.findall(r"\b(theorem|lemma)s?\b", _qs.lower()))
+            if _kinds and re.search(r"\b" + re.escape(_w[:1].upper() + _w[1:]) + r"\b", _qs):
+                _ep = (_w, _kinds)
+        if (_n < 2 and _ep is None) or not hits:
             return hits
         exact = []
         for h in hits:
-            tw = {w for w in re.findall(r"[a-z][a-z-]{2,}",
-                                        str(getattr(h.node, "title", "") or "").lower())
-                  if w not in _TITLE_STOP}
+            _ts = _fold_dashes(str(getattr(h.node, "title", "") or ""))
+            if parts and NAMED_ACCENT_FOLD:
+                _ts = _fold_accents(_ts)
+            if _ep is not None:
+                _tws = set(re.findall(r"[a-z]{2,}", _ts.lower()))
+                if _ep[0] in _tws and _ep[1] <= _tws:
+                    exact.append(h)
+                continue
+            tw = {w for w in re.findall(r"[a-z][a-z-]{2,}", _ts.lower()) if w not in _TITLE_STOP}
+            if parts and NAMED_KIND_SYNONYMS:
+                tw = {("<kind>" if w in _KIND_SYN else w) for w in tw}
+                if tw and {("<kind>" if w in _KIND_SYN else w) for w in qw} <= tw:
+                    exact.append(h)
+                continue
             if tw and qw <= tw:
                 exact.append(h)
         return exact if exact else hits
@@ -3063,6 +3210,7 @@ def _main_body(data, out):
         # ahead of the whole-question cards, three slots, pins untouched (a pinned prompt skips the split)
         if CLAUSE_SPLIT and prefilter_ids is not None and not pinned_ids:
             try:
+                _subq_named = False
                 subs = _clause_subqueries(prompt)
                 # On an argument-shaped prompt the clause split is dead (it bails above 1,500 chars), so the named
                 # results are the only sub-queries available. ON by default since 2026-09-12 16:1x, measured on the
@@ -3079,6 +3227,7 @@ def _main_body(data, out):
                 if not subs and os.environ.get("MATHBRAIN_NAMED_SUBQ", "1") == "1" and (
                         ARGUMENT_SHAPE.search(prompt) or os.environ.get("MATHBRAIN_NAMED_SUBQ_ANY", "0") == "1"):
                     subs = _named_result_subqueries(prompt)
+                    _subq_named = bool(subs)
                 # Quoted titles (MATHBRAIN_QUOTED_SUBQ, ON by default since 2026-09-13 02:4x): a prompt naming stored
                 # entries by their quoted titles gets one sub-query per title - see _quoted_subqueries. Measured: 23 of
                 # the 28 items the 1,000-item test found mute now serve (56 of 66 titles named); fresh bank unnamed
@@ -3101,7 +3250,10 @@ def _main_body(data, out):
                     # in the order they appear, so here they are simply used.
                     subs = _covered_titles or _quoted_subqueries(prompt, limit=4)
                 if subs and (time.time() - started) < 0.5 * TIME_BUDGET_S:
-                    blocks = [_subquery_block(s) for s in subs]
+                    blocks = [_subquery_block(s, prompt=prompt, exact_pass=_subq_named) for s in subs]
+                    if _subq_named and NAMED_TITLEMATCH:
+                        # a named sub-query keeps only the cards titled with the result it named
+                        blocks = [[h for h in b if _named_title_match(q, h.node.title)] for q, b in zip(subs, blocks)]
                     merged, seen = [], set()
                     for depth in range(3):
                         for b in blocks:
