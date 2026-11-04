@@ -274,7 +274,10 @@ def emitted_eids():
     return out
 
 
-LANE_PATH = os.path.join(os.path.expanduser("~"), ".claude", "dreaming", "graph_lane.py")
+LANE_PATH = os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "..", "dreaming", "graph_lane.py")
+if not os.path.exists(LANE_PATH):          # brain_graph/bin and dreaming are siblings both in a checkout and installed
+    LANE_PATH = os.path.join(os.path.expanduser("~"), ".claude", "dreaming", "graph_lane.py")
+LANE_PATH = os.path.normpath(LANE_PATH)
 _LANE = {}
 CUT = 30                                   # items of each list the recall log keeps (graph_lane.log_recall)
 

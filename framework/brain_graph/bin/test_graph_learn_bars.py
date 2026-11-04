@@ -7,9 +7,9 @@ import importlib.util
 import os
 import sys
 
-PATH = sys.argv[1] if len(sys.argv) > 1 else os.path.join(os.path.expanduser("~"), ".claude", "brain_graph", "bin",
-                                                             "graph_learn.py")
-sys.path.insert(0, os.path.join(os.path.expanduser("~"), ".claude", "brain_graph", "bin"))   # its own imports
+HERE = os.path.dirname(os.path.abspath(__file__))
+PATH = os.path.abspath(sys.argv[1]) if len(sys.argv) > 1 else os.path.join(HERE, "graph_learn.py")
+sys.path.insert(0, os.path.dirname(PATH))   # its own imports
 spec = importlib.util.spec_from_file_location("graph_learn_under_test", PATH)
 G = importlib.util.module_from_spec(spec)
 spec.loader.exec_module(G)
