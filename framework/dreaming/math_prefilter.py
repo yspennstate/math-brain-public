@@ -274,6 +274,87 @@ LAST_SCORES = {}   # node id -> BM25 score of the last select() call
 LAST_QSELF = 0.0   # the last query's self-score: sum of idf over its distinct indexed tokens - what a document carrying
                    # every query token once at average length would score. math_sense scales its on-topic floor by it
                    # (2026-09-11), because a raw BM25 floor grows with the question and silenced one-line questions.
+LAST_FRESH = 0     # nodes the last select() found in the store newer than the index (the fresh-node lane below)
+
+# FRESH-NODE LANE. The index is a snapshot: a node filed after the last rebuild is invisible to every query until the
+# next one, and that is exactly when it matters most (the cards written while work on a problem is under way). So
+# select() also asks the store for nodes created after the index's own built_at stamp and scores them against the
+# query with the index's statistics (N, df, avgdl), merged into the same ranking. Every created_at in the store is UTC
+# ISO, so the first 19 characters compare as text. Bounded at FRESH_MAX, newest first: a longer backlog means the
+# rebuild is overdue. A query token the index does not carry (a new word, or one capped for df) scores nothing here,
+# so a fresh node is under-scored rather than over-scored. The scan is skipped when neither the store nor its WAL has
+# been written since the index file was. MATHBRAIN_PREFILTER_FRESH=0 restores the snapshot-only behaviour.
+try:
+    FRESH_MAX = int(os.environ.get("MATHBRAIN_PREFILTER_FRESH_MAX", "400") or 400)
+except Exception:
+    FRESH_MAX = 400
+
+
+def _store_changed_since_index(store_path):
+    """False only when neither the store file nor its WAL has been written since the index file was: then no node
+    can be newer than the index and the scan is skipped (it costs ~80 ms against ~3 ms for the lexical select).
+    The -shm file is not consulted - readers touch it. Unknown is treated as changed."""
+    try:
+        idx_m = os.path.getmtime(index_path(store_path))
+        store_m = max(os.path.getmtime(p) for p in (str(store_path), str(store_path) + "-wal") if os.path.exists(p))
+        return store_m > idx_m
+    except Exception:
+        return True
+
+
+def fresh_nodes(store_path, data=None, limit=None):
+    """[(id, title, body)] of store nodes created after the index was built, newest first; [] on any error.
+    `data` is a loaded index (load(store_path) when omitted)."""
+    try:
+        if not _store_changed_since_index(store_path):
+            return []
+        if data is None:
+            data = load(store_path)
+        built = str((data or {}).get("built_at") or "")[:19]
+        if len(built) != 19:
+            return []
+        import sqlite3
+        uri = "file:%s?mode=ro" % str(store_path).replace("\\", "/")
+        con = sqlite3.connect(uri, uri=True, timeout=2.0)
+        try:
+            # created_at > ? is implied by the substr test (a string is never below its own prefix), so the row set
+            # is unchanged; it lets SQLite seek idx_nodes_created_at instead of scanning every node (milliseconds
+            # instead of a full scan on a large store). Without the index it is just a second filter.
+            return con.execute("select id, title, body from nodes where created_at > ? and substr(created_at,1,19) > ? "
+                               "order by created_at desc limit ?",
+                               (built, built, int(limit if limit is not None else FRESH_MAX))).fetchall()
+        finally:
+            con.close()
+    except Exception:
+        return []
+
+
+def _fresh_scores(data, text, rows):
+    """BM25 of each fresh node against the text, with the index's own N, df and avgdl (as _scores does)."""
+    q = collections.Counter(tokens(text))
+    N, avgdl, post = data["n"], data["avgdl"] or 1.0, data["post"]
+    k1, b = 1.2, 0.75
+    known = data.get("_idset")
+    if known is None:
+        known = data["_idset"] = set(data["ids"])
+    out = {}
+    for nid, title, body in rows:
+        if nid in known:
+            continue
+        tf = collections.Counter(tokens((title or "") + " " + (body or "")))
+        dl = sum(tf.values()) or 1
+        s = 0.0
+        for tok in q:
+            pl = post.get(tok)
+            f = tf.get(tok, 0)
+            if not pl or not f:
+                continue
+            idf = math.log(1.0 + (N - len(pl) + 0.5) / (len(pl) + 0.5))
+            s += idf * f * (k1 + 1) / (f + k1 * (1 - b + b * dl / avgdl))
+        if s > 0:
+            out[nid] = s
+    return out
+
 
 def load(store_path):
     p = index_path(store_path)
@@ -312,9 +393,10 @@ def _scores(data, text):
 
 def select(store_path, text, k=300):
     """Top-k node ids for the text by BM25 over the prefilter index, or None when there is no index."""
-    global LAST_SCORES, LAST_QSELF
+    global LAST_SCORES, LAST_QSELF, LAST_FRESH
     LAST_SCORES = {}
     LAST_QSELF = 0.0
+    LAST_FRESH = 0
     data = load(store_path)
     if not data:
         return None
@@ -325,11 +407,23 @@ def select(store_path, text, k=300):
     except Exception:
         LAST_QSELF = 0.0
     score = _scores(data, text)
-    if not score:
+    fresh = {}
+    if os.environ.get("MATHBRAIN_PREFILTER_FRESH", "1") != "0":
+        try:
+            rows = fresh_nodes(store_path, data)
+            LAST_FRESH = len(rows)
+            if rows:
+                fresh = _fresh_scores(data, text, rows)
+        except Exception:
+            fresh = {}
+    if not score and not fresh:
         return []
     best = sorted(score.items(), key=lambda x: -x[1])[:k]
-    LAST_SCORES = {data["ids"][i]: float(sc) for i, sc in best}   # read by math_sense's on-topic gate (2026-09-07)
-    return [data["ids"][i] for i, _ in best]
+    ranked = [(data["ids"][i], float(sc)) for i, sc in best]
+    if fresh:
+        ranked = sorted(ranked + [(nid, float(sc)) for nid, sc in fresh.items()], key=lambda x: -x[1])[:k]
+    LAST_SCORES = dict(ranked)   # read by math_sense's on-topic gate (2026-09-07)
+    return [nid for nid, _ in ranked]
 
 
 REF_RE = re.compile(r"\((?:ref|Cref|cref|autoref|eqref)\s+([A-Za-z0-9:._'-]+)\)|\\(?:ref|Cref|cref|autoref)\{([^}]{1,60})\}")
