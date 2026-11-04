@@ -767,6 +767,10 @@ DELTA_CALL_MAX = int(os.environ.get("MATH_RECALL_DELTA_CALL_MAX", "2000") or 200
 DELTA_MAX_AGE_S = float(os.environ.get("MATH_RECALL_DELTA_MAX_AGE_S", "21600") or 21600) if DELTA else 0.0
 
 
+_DIVERGED = ("not append-only", "fewer cards than the state", "is not in the state", "carries a known card id",
+             "are current again", "(retracted)")
+
+
 def _bring_up_to_date(prepared, store_path, R, derive, path, heavy_path, folder, key, window):
     """A state behind the store: index the cards it has not seen (fastrecall_delta.extend, in memory only - the
     prebuild stays the one writer of states on disk). Refused or off: within the window serve it as it is, past the
@@ -790,9 +794,14 @@ def _bring_up_to_date(prepared, store_path, R, derive, path, heavy_path, folder,
             # extend() may have failed half way: never serve a half-extended state
             prepared = None
     STATUS["extend_refused"] = why
-    if not STATUS.get("past_window") and prepared is not None:
+    # a refusal that says the state is no longer a prefix of the store (a rebuilt, shrunk or rewritten store) means
+    # the old state can answer with cards the store no longer has: build, never serve it, even inside the window
+    diverged = any(s in why for s in _DIVERGED)
+    if diverged:
+        STATUS["diverged"] = True
+    if not STATUS.get("past_window") and prepared is not None and not diverged:
         return prepared
-    if prepared is None and not STATUS.get("past_window"):
+    if prepared is None and not STATUS.get("past_window") and not diverged:
         state = marshal.loads(_read(path))
         return Prepared(state, state["key"], heavy_path, store_path, R)
     t_read = time.time()
