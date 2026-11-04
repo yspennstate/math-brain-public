@@ -2461,6 +2461,39 @@ def _quoted_subqueries(prompt, limit=4):
     return out
 
 
+# ACRONYMS ON THE RETRIEVAL QUERY (MATHBRAIN_ALIASES, default on). A card may write a result the way the work that
+# found it talks ("the best known FEI lower bound is ...") while a reader asks the way a paper does ("the best known
+# lower bound on the Fourier entropy-influence constant"). Neither text carries the other's words, so the record card
+# lost to an unrelated card on "lower bound" and the margin test went silent. Each pair below is expanded in BOTH
+# directions, on the retrieval query only (the gate and every test of the prompt's own words still read what was
+# typed), and only when one side is present. Keep the table to acronyms whose meaning is unambiguous. Measured on the
+# hook-path bank: no question changed for the worse, and the FEI record question moved to the record card first.
+_ALIASES = (
+    (r"\bFEI\b", "Fourier entropy influence", r"\bFourier[- ]entropy[- ](?:versus[- ](?:total[- ])?)?influence\b", "FEI"),
+    (r"\bKKL\b", "Kahn Kalai Linial", r"\bKahn[- ]Kalai[- ]Linial\b", "KKL"),
+    (r"\bLTFs?\b", "linear threshold function", r"\blinear threshold functions?\b", "LTF"),
+    (r"\bMMPP\b", "Markov modulated Poisson process", r"\bMarkov[- ]modulated Poisson\b", "MMPP"),
+    (r"\bFPP\b", "first passage percolation", r"\bfirst[- ]passage percolation\b", "FPP"),
+    (r"\bSAWs?\b", "self avoiding walk", r"\bself[- ]avoiding walks?\b", "SAW"),
+    (r"\bLYM\b", "Lubell Yamamoto Meshalkin", r"\bLubell[- ]Yamamoto[- ]Meshalkin\b", "LYM"),
+)
+_ALIAS_RX = [(re.compile(a), exp_a, re.compile(b, re.I), exp_b) for a, exp_a, b, exp_b in _ALIASES]
+
+
+def _expand_aliases(prompt):
+    """The retrieval query: the prompt plus the other spelling of every house acronym it uses. Unchanged when the
+    prompt names none, or when MATHBRAIN_ALIASES=0."""
+    if os.environ.get("MATHBRAIN_ALIASES", "1") == "0" or not prompt:
+        return prompt
+    add = []
+    for rx_a, exp_a, rx_b, exp_b in _ALIAS_RX:
+        if rx_a.search(prompt) and not rx_b.search(prompt):
+            add.append(exp_a)
+        elif rx_b.search(prompt) and not rx_a.search(prompt):
+            add.append(exp_b)
+    return prompt if not add else "%s (%s)" % (prompt, "; ".join(add))
+
+
 TITLE_EXEMPT = os.environ.get("MATHBRAIN_TITLE_EXEMPT", "0") == "1"
 _TITLE_STOP = frozenset(("the", "and", "for", "with", "its", "from", "that", "this", "campaign", "theorem",
                          "lemma", "proof", "case", "note", "result", "value", "which", "what", "how", "give",
@@ -3239,6 +3272,29 @@ def _cov_agree_wide(chosen, st):
                 chosen.insert(0, chosen.pop(i))
                 return True
     return False
+
+
+# DOCUMENT EXPANSION (MATHBRAIN_EXPANSION, default on; math_brain.retrieval.EXPANSION). <store>.expansion.pkl gives a
+# card the mathematical words of its source note that the card itself lacks; the prefilter indexes them and the ranker
+# scores them. Every place this hook compares a prompt with a card's words reads the same text through _card_index_text,
+# or a card found by its expansion words would be silenced for not carrying them. With no sidecar beside the store
+# nothing changes. MATHBRAIN_EXPANSION=0 switches it off (no load, plain text).
+EXPANSION_ON = os.environ.get("MATHBRAIN_EXPANSION", "1").strip() not in ("0", "", "off", "false")
+_EXPANSION_LOADED = False
+
+
+def _load_expansion_once():
+    """Marked loaded only when the sidecar gave cards: load_expansion returns 0 on an absent or unreadable file
+    rather than raising, and a failed attempt is tried again by the next prompt."""
+    global _EXPANSION_LOADED
+    if _EXPANSION_LOADED or not EXPANSION_ON:
+        return
+    try:
+        from math_brain.retrieval import load_expansion
+        if load_expansion(str(STORE_PATH) + ".expansion.pkl") > 0:
+            _EXPANSION_LOADED = True
+    except Exception:
+        pass
 
 
 def _card_index_text(node):
@@ -4076,7 +4132,7 @@ def _main_body(data, out):
             sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
             import math_prefilter
             if os.path.exists(math_prefilter.index_path(STORE_PATH)):
-                prefilter_ids = math_prefilter.select(STORE_PATH, prompt, k=PREFILTER_K)
+                prefilter_ids = math_prefilter.select(STORE_PATH, _expand_aliases(prompt), k=PREFILTER_K)
                 # a result the prompt CITES by LaTeX label is served ahead of the ranked neighbours (2026-09-07:
                 # "(ref lem:hitting_prob)" in a proof step -> that lemma's statement, from the literature layer)
                 try:
@@ -4154,8 +4210,9 @@ def _main_body(data, out):
                 _silence_note(data, "budget_exhausted_before_ranking:%.1fs" % _elapsed)
                 return
             _silence_note(data, "budget_exceeded_before_ranking_proceeding:%.1fs" % _elapsed)
+        _load_expansion_once()
         result = retrieve(
-            prompt,
+            _expand_aliases(prompt),
             nodes=nodes,
             edges=edges,
             limit=CANDIDATE_POOL,
@@ -4938,8 +4995,11 @@ def cli_query(query):
             nodes = list(store.iter_nodes())
             edges = list(store.iter_edges())
         _set_pool_adjacency(())
+        _load_expansion_once()
+        # the acronyms travel with an agent's query too: "FEI for read-once formulas" reaches the cards
+        # that spell the program out
         result = retrieve(
-            query, nodes=nodes, edges=edges, limit=CANDIDATE_POOL,
+            _expand_aliases(query), nodes=nodes, edges=edges, limit=CANDIDATE_POOL,
             min_support_score=0.0, min_margin=0.0,
         )
         if not result.hits:
