@@ -701,6 +701,12 @@ def _trust_tag(meta, read=None):
         parts.append("draft" if (meta.get("draft") or meta.get("bundle_id")) else "curated")
         if not meta.get("statement_fidelity_reviewed"):
             parts.append("unreviewed")
+        # a revision that declared its own status (retracted, refuted, gap found, verified ...) says so here, apart
+        # from the closing word, which stays the authenticated one: a declared retraction must not reach a session as
+        # a plain 'unverified', and a declared 'verified' is not a verification (30 Sep 2026)
+        declared = meta.get("declared_status")
+        if isinstance(declared, str) and declared.strip() and declared.strip().lower() != "unverified":
+            parts.append("declared " + declared.strip().lower().replace("_", " "))
         if read:
             verdict = "no gap" if read.get("passed") else "GAP FOUND"
             who = "human" if read.get("human") else "agent"
@@ -711,6 +717,57 @@ def _trust_tag(meta, read=None):
         return "; ".join(parts)
     except Exception:
         return "unverified"
+
+
+# ORIGIN IN THE HINT (24 Sep 2026). A research agent handed the store's own frontier read a house claim that was
+# later found false printed "[theorem]" in the same format as a published theorem, and the plans built on it - a
+# list of a project's own results carries their errors with the list's authority. So a card that is this project's
+# own record says so in its hint: "ours, unrefereed". It is read from provenance, never from the subject: cards
+# transported from the main brain's memories and its scar layer, typed refinements, research.* deposits, ledger cards
+# carrying "(our id ...)", "Attempt on ..." cards, and a project's corrections of its own cards. Literature, textbook
+# and harvested cards are untouched. It says where the card came from, not whether the mathematics is right (a Lean
+# reproduction of a published theorem is still a house record of it). MATHBRAIN_ORIGIN_HINT=0 switches it off;
+# MATHBRAIN_HOUSE_PROVENANCE adds a deployment's own provenance prefixes (a regular expression, matched at the start).
+ORIGIN_HINT = os.environ.get("MATHBRAIN_ORIGIN_HINT", "1").strip() not in ("0", "off", "false", "")
+# An agent session named in a provenance is NOT the test: harvested encyclopedia cards carry "formula repair <date>
+# (<agent>)" and are literature an agent tidied. Audited over every card of a store of about 86,000 on 24 Sep: every
+# harvest, encyclopedia, ProofWiki and literature card untagged, the textbook cards untagged, open problem statements
+# "as read from the source" untagged.
+_HOUSE_PROV_EXTRA = os.environ.get("MATHBRAIN_HOUSE_PROVENANCE", "").strip()
+_HOUSE_PROV_RE = re.compile(r"^(transported from the main brain memory|scar layer|typed (from|refinement)|"
+                            r"T\d+ correction|round-\d+ correction" + ("|" + _HOUSE_PROV_EXTRA if _HOUSE_PROV_EXTRA else "")
+                            + ")", re.I)
+
+
+def _is_house(node, meta=None):
+    """True for this project's own records (see ORIGIN_HINT). False on any doubt."""
+    try:
+        meta = meta if meta is not None else _node_meta(node)
+        # a harvested statement (math:harvest.arxiv.*, harvest.wikipedia:...) is literature, whatever else it carries:
+        # _is_campaign counts the arXiv harvest as a campaign deposit when MATHBRAIN_HARVEST_CAP is on (for slot
+        # capping), so it is not a provenance test by itself - the first cut of this rule tagged three arXiv cards ours
+        lid = str(meta.get("logical_id") or "")
+        if "harvest." in lid:
+            return False
+        # a typed card whose statement is someone else's published result ("origin": "literature"), even when the
+        # project reproduced its proof
+        if str(meta.get("origin") or "").strip().lower() == "literature":
+            return False
+        # lemmas rescued from orphan status are a campaign's own mathematics
+        if "orphan-rescue" in lid or "orphan-rescue" in str(meta.get("bundle_id") or ""):
+            return True
+        title = str(node.title or "")
+        if "(our id " in title or title.startswith("Attempt on "):
+            return True
+        if meta.get("campaign") or _HOUSE_PROV_RE.search(str(meta.get("provenance") or "")):
+            return True
+        return _is_campaign(node)
+    except Exception:
+        return False
+
+
+def _origin_prefix(node, meta):
+    return "ours, unrefereed; " if ORIGIN_HINT and _is_house(node, meta) else ""
 
 
 def _is_campaign(node):
@@ -3176,7 +3233,7 @@ def _main_body(data, out):
             meta = _node_meta(node)
             kind = str(meta.get("claim_kind") or meta.get("kind") or node.kind)
             label, text = _render_parts(node, query=prompt, max_text_chars=MAX_STATEMENT_CHARS)
-            hint = _trust_tag(meta, reads.get(node.id))
+            hint = _origin_prefix(node, meta) + _trust_tag(meta, reads.get(node.id))
             if _structure_flattened(text):
                 hint = "notation flattened; " + hint
             if _source_is_excerpt(node, text):
@@ -3362,7 +3419,7 @@ def cli_query(query):
             label, text = _render_parts(node, query=query, max_text_chars=MAX_STATEMENT_CHARS)
             print("[math-brain] %s [%s]: %s" % (label, kind, text))
             print("  (source-id: %s)" % node.id)
-            hint = _trust_tag(meta, reads.get(node.id))
+            hint = _origin_prefix(node, meta) + _trust_tag(meta, reads.get(node.id))
             if _structure_flattened(text):
                 hint = "notation flattened (fractions/exponents lost in the harvest); " + hint
             if _source_is_excerpt(node, text):
