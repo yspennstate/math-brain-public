@@ -2502,7 +2502,7 @@ def _merge_subquery_blocks(blocks, chosen, lead=False):
     return merged
 
 
-def _named_slots(blocks, merged, cap, base, named):
+def _named_slots_full(blocks, merged, cap, base, named):
     """The cards a merged sub-query list serves, and whether the block budget widens for them.
 
     A FIFTH CARD FOR A FIFTH NAMED RESULT (MATHBRAIN_NAMED_EXTRA_SLOT, default on; 25 Sep). merged opens with each
@@ -2529,6 +2529,7 @@ def _named_slots(blocks, merged, cap, base, named):
         extra = True
     else:
         chosen = [h for h in merged[:cap] if h is not None]
+    cprime = list(chosen)
     try:
         n_app = int(os.environ.get("MATHBRAIN_SUBQ_APPEND", "4") or 0)
     except Exception:
@@ -2551,6 +2552,12 @@ def _named_slots(blocks, merged, cap, base, named):
                 break
         chosen = keep + add
         extra = bool(add)
+    return chosen, extra, cprime
+
+
+def _named_slots(blocks, merged, cap, base, named):
+    """_named_slots_full without the pre-append list."""
+    chosen, extra, _ = _named_slots_full(blocks, merged, cap, base, named)
     return chosen, extra
 
 
@@ -2674,6 +2681,48 @@ def _incoherent_weak_block(prompt, ids):
         return (lead, pair) if lead < COH_CUT_LEAD else None
     except Exception:
         return None
+
+
+def _cut_unless_named(prompt, hits):
+    """_incoherent_weak_block on these cards, None when the lead card's title is the result the prompt names."""
+    c = _incoherent_weak_block(prompt, [str(h.node.id) for h in hits])
+    if c and COH_NAME_EXEMPT and _lead_title_names_prompt(prompt, hits[0].node.title):
+        return None
+    return c
+
+
+def _switch_on(name):
+    return os.environ.get(name, "1").strip() not in ("0", "", "off", "false")
+
+
+def _subq_coh_guard(prompt, chosen, extra, pre, cprime, named):
+    """The cards a named or quoted-title sub-query block serves once the coherence cut has read it.
+
+    THE SUB-QUERY BLOCK MUST NOT TURN A COHERENT ANSWER INTO A SCATTERED ONE (MATHBRAIN_SUBQ_COH_GUARD, default on).
+    The cards a sub-query pulls are chosen by the names in the prompt, not by the question, so a merged block can
+    read as weak and scattered where the whole-question block (pre) did not. When the merged block would be cut:
+    on a named argument, the merge before the append (cprime, the named cards in their merged order) is served if
+    it passes (MATHBRAIN_SUBQ_APPEND_FALLBACK_MERGED, default on); else the whole-question block is served if it
+    passes; else nothing changes and the serve path's own cut decides. Any failure keeps the block.
+    """
+    if not (COH_CUT and pre and len(chosen) > 1 and _switch_on("MATHBRAIN_SUBQ_COH_GUARD")):
+        return chosen, extra
+    try:
+        if not _cut_unless_named(prompt, chosen):
+            return chosen, extra
+        cp = _cut_unless_named(prompt, pre) if len(pre) > 1 else None
+        try:
+            n_app = int(os.environ.get("MATHBRAIN_SUBQ_APPEND", "4") or 0)
+        except Exception:
+            n_app = 0
+        if (named and n_app > 0 and len(cprime) > 1 and _switch_on("MATHBRAIN_SUBQ_APPEND_FALLBACK_MERGED")
+                and not _cut_unless_named(prompt, cprime)):
+            return list(cprime), True
+        if not cp:
+            return list(pre), False
+    except Exception:
+        pass
+    return chosen, extra
 
 
 def _subquery_block(query, prompt=None, exact_pass=False):
@@ -3434,6 +3483,7 @@ def _main_body(data, out):
         if CLAUSE_SPLIT and prefilter_ids is not None and not pinned_ids:
             try:
                 _subq_named = False
+                _subq_quoted = False
                 subs = _clause_subqueries(prompt)
                 # On an argument-shaped prompt the clause split is dead (it bails above 1,500 chars), so the named
                 # results are the only sub-queries available. ON by default since 2026-09-12 16:1x, measured on the
@@ -3472,6 +3522,7 @@ def _main_body(data, out):
                     # only 22 of 59 present titles at a flat 3.0 cards. The covered titles are collected above
                     # in the order they appear, so here they are simply used.
                     subs = _covered_titles or _quoted_subqueries(prompt, limit=4)
+                    _subq_quoted = bool(subs)
                 if subs and (time.time() - started) < 0.5 * TIME_BUDGET_S:
                     # A TIME GUARD INSIDE THE LOOP (MATHBRAIN_SUBQ_TIME_FRAC, default 0.6). Checked once before the first
                     # sub-query, a long argument on a loaded machine ran every sub-query past the budget, and past it the
@@ -3491,7 +3542,11 @@ def _main_body(data, out):
                         # a named sub-query keeps only the cards titled with the result it named
                         blocks = [[h for h in b if _named_title_match(q, h.node.title)] for q, b in zip(subs, blocks)]
                     merged = _merge_subquery_blocks(blocks, chosen, lead=_subq_named)
-                    chosen, _named_extra = _named_slots(blocks, merged, _cap, _pre_subq_chosen, _subq_named)
+                    chosen, _named_extra, _cprime_chosen = _named_slots_full(blocks, merged, _cap, _pre_subq_chosen,
+                                                                             _subq_named)
+                    if _subq_named or _subq_quoted:
+                        chosen, _named_extra = _subq_coh_guard(prompt, chosen, _named_extra, _pre_subq_chosen,
+                                                               _cprime_chosen, _subq_named)
             except Exception:
                 pass
         if not chosen:
