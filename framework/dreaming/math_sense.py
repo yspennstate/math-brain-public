@@ -1289,6 +1289,109 @@ def _source_is_excerpt(node, rendered_text):
     return rendered_text != full
 
 
+# PITFALL LINES (MATHBRAIN_PITFALL_LINES, 24 Sep 2026). A served result that the store ties to a Pitfall note by a
+# FAILS_UNDER edge carries that pitfall's title as one extra line on its card - the title IS the lesson ("Lax-Milgram
+# Needs Coercivity on the Whole Space, Not Mere Positivity or Injectivity"), and the id lets the reader open the
+# counterexample. The measured harm of a served statement is that it makes a wrong use of the result look legitimate
+# (citation, scope and sharpness faults lost ground under notes); the pitfall is the half of the result that says where
+# it stops. Rendering only: the chosen cards, their order and every gate are untouched, a line is added only while the
+# block keeps every card it had, at most one per card and two per block.
+PITFALL_LINES = os.environ.get("MATHBRAIN_PITFALL_LINES", "1").strip() not in ("0", "off", "false", "")
+PITFALL_MAX_BLOCK = 2
+# ONE LINE PER RECORD PER BLOCK (MATHBRAIN_PITFALL_LINE_DEDUP, default on): two cards tied to the same pitfall showed
+# its line twice; the second card now takes its next record, or none.
+PITFALL_LINE_DEDUP = os.environ.get("MATHBRAIN_PITFALL_LINE_DEDUP", "1").strip() not in ("0", "off", "false", "")
+# CORRECTION LINES (MATHBRAIN_CORRECTION_LINES, 24 Sep 2026). A served card that rests (DEPENDS_ON) on a card whose
+# statement was mathematically corrected since - the edge carried forward by the supersession with premise_corrected -
+# says so: "corrected since: <title> (<id>)". An attempt on an open problem that the store has since answered (a
+# REFUTES edge into the problem) says "answered since". Scoped on purpose: REFUTES carries three meanings in a store
+# (a conjecture answered NO, a route that fails, an inconsistency with a stronger axiom), so a refutation is reported
+# only when the premise is an open problem, never for a theorem a scar "refutes" (Kingman's theorem rests on Fekete's
+# lemma, which is true). Same rendering rule as the pitfall lines. An edge retracted as wrong is never reported.
+CORRECTION_LINES = os.environ.get("MATHBRAIN_CORRECTION_LINES", "1").strip() not in ("0", "off", "false", "")
+
+
+def _pitfall_words(text):
+    """Content words, for ranking a card's record lines by overlap with the prompt."""
+    return {w for w in re.findall(r"[a-z][a-z-]{2,}", str(text or "").casefold()) if w not in _TITLE_STOP}
+
+
+def _retraction_skip(con, col):
+    """SQL that drops edges retracted as wrong (store.retract_edge); '' while the store has never retracted one."""
+    if con.execute("select 1 from sqlite_master where type = 'table' and name = 'edge_retractions'").fetchone():
+        return " and %s not in (select edge_id from edge_retractions)" % col
+    return ""
+
+
+def _pitfalls_for(card_ids):
+    """card id -> [(label, id, title)]: corrections and answered problems first, then FAILS_UNDER pitfalls."""
+    import sqlite3
+    out = {}
+    if not card_ids or not STORE_PATH:
+        return out
+    con = sqlite3.connect("file:%s?mode=ro" % str(STORE_PATH).replace(chr(92), "/"), uri=True)
+    marks = ",".join("?" * len(card_ids))
+    try:
+        skip_e, skip_f = _retraction_skip(con, "e.id"), _retraction_skip(con, "f.id")
+        if CORRECTION_LINES:
+            q = ("select e.source_id, n.id, n.title from edges e join nodes n on n.id = e.target_id "
+                 "where e.kind = 'depends_on' and e.source_id in (%s) and e.metadata_json like '%%premise_corrected%%' "
+                 "and n.id not in (select target_id from edges where kind = 'supersedes')") % marks + skip_e
+            for src, nid, title in con.execute(q, list(card_ids)):
+                out.setdefault(src, []).append(("corrected since", nid, " ".join((title or "").split())))
+            q = ("select e.source_id, r.id, r.title from edges e join nodes p on p.id = e.target_id "
+                 "join edges f on f.target_id = p.id and f.kind = 'refutes' join nodes r on r.id = f.source_id "
+                 "where e.kind = 'depends_on' and e.source_id in (%s) and lower(p.title) like 'open problem%%' "
+                 "and r.id not in (select target_id from edges where kind = 'supersedes')") % marks + skip_e + skip_f
+            for src, rid, title in con.execute(q, list(card_ids)):
+                out.setdefault(src, []).append(("answered since", rid, " ".join((title or "").split())))
+        q = ("select e.source_id, n.id, n.title from edges e join nodes n on n.id = e.target_id "
+             "where e.kind = 'fails_under' and e.source_id in (%s) "
+             "and n.id not in (select target_id from edges where kind = 'supersedes')") % marks + skip_e
+        for src, pid, title in con.execute(q, list(card_ids)):
+            out.setdefault(src, []).append(("on record", pid, " ".join((title or "").split())))
+    finally:
+        con.close()
+    return out
+
+
+def _with_pitfall_lines(header, pieces, emitted_ids, budget, prompt):
+    """Re-assemble the block with record lines added greedily, never at the cost of a card."""
+    found = _pitfalls_for(emitted_ids)
+    if not found:
+        return _assemble_note_block(header, pieces, budget)
+    pw = _pitfall_words(prompt or "")
+    emitted = set(emitted_ids)
+    lines = {}
+    rank = {"corrected since": 0, "answered since": 0, "on record": 1}
+    for cid in emitted_ids:
+        cands = [(lab, pid, t) for lab, pid, t in found.get(cid, []) if pid not in emitted]
+        if not cands:
+            continue
+        cands.sort(key=lambda lpt: (rank.get(lpt[0], 2), -len(_pitfall_words(lpt[2]) & pw), len(lpt[2])))
+        lines[cid] = cands if PITFALL_LINE_DEDUP else cands[:1]
+    base_block, base_ids = _assemble_note_block(header, pieces, budget)
+    added = 0
+    shown = set()
+    cur = dict(pieces)
+    for cid in emitted_ids:
+        if added >= PITFALL_MAX_BLOCK or cid not in lines:
+            continue
+        # a record already shown on another card of this block is not shown again (MATHBRAIN_PITFALL_LINE_DEDUP)
+        pick = next((c for c in lines[cid] if not (PITFALL_LINE_DEDUP and c[1] in shown)), None)
+        if pick is None:
+            continue
+        lab, pid, title = pick
+        trial = dict(cur)
+        trial[cid] = cur[cid] + "\n    %s: %s (%s)" % (lab, title, pid)
+        tb, tids = _assemble_note_block(header, [(i, trial.get(i, p)) for i, p in pieces], budget)
+        if tids == base_ids:
+            cur, base_block = trial, tb
+            added += 1
+            shown.add(pid)
+    return base_block, base_ids
+
+
 def _assemble_note_block(header, pieces, budget):
     """Fit whole rendered cards, including their hints, and return emitted IDs.
 
@@ -2656,6 +2759,11 @@ def _main_body(data, out):
         if _named_entries > 3 and len(pieces) > 3:
             _budget = max(MAX_BLOCK_CHARS, len(header) + 760 * len(pieces))
         block, emitted_ids = _assemble_note_block(header, pieces, _budget)
+        if block and emitted_ids and PITFALL_LINES:
+            try:
+                block, emitted_ids = _with_pitfall_lines(header, pieces, emitted_ids, _budget, prompt)
+            except Exception as _exc:
+                _silence_note(data, "pitfall_lines_error:%s" % type(_exc).__name__)
         if not block:
             _silence_note(data, "empty_block:%d_pieces" % len(pieces))
             return
