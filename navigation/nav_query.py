@@ -4,7 +4,7 @@
 Standard library only. Works offline. The data files are read as data: nothing in a card is executed,
 fetched or followed outside the repository, and a path that leaves the repository is refused.
 
-    python navigation/nav_query.py "nightly dream" --or "dreaming quickstart"
+    python navigation/nav_query.py "dreaming" --or "turns repeated mistakes into reflexes"
     python navigation/nav_query.py --id 3f2a9c1b07de
     python navigation/nav_query.py --path framework/dreaming/README.md
     python navigation/nav_query.py --walk 3f2a9c1b07de --toward "link suggestions"
