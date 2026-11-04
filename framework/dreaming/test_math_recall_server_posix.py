@@ -7,7 +7,7 @@ endpoint.json and SERVER_STOP never touch the checkout), and checks: math_recall
 results and its fast path is on (no "fast path OFF" line, which appears when a hash pin does not match the files
 it loads); the server starts and publishes endpoint.json; the same call through the server prints the same text and
 the client audit records that the server answered it; SERVER_STOP stops the server and removes endpoint.json.
-Needs only the math_brain library (framework/mathbrain/src) and its dependency, cryptography. Skipped on Windows.
+Needs only the math_brain library (../mathbrain/src or ../src) and its dependency, cryptography. Skipped on Windows.
 Takes about 15 seconds.
 """
 import json, os, shutil, subprocess, sys, tempfile, time
@@ -17,7 +17,8 @@ if os.name == "nt":
     sys.exit(0)
 
 SRC = os.path.dirname(os.path.abspath(__file__))
-BUILD = os.path.join(os.path.dirname(SRC), "mathbrain", "src")
+BUILD = next(p for p in (os.path.join(os.path.dirname(SRC), "mathbrain", "src"),
+                         os.path.join(os.path.dirname(SRC), "src")) if os.path.isdir(p))
 WORK = tempfile.mkdtemp(prefix="mrs_posix_")
 HERE = os.path.join(WORK, "dreaming")
 os.makedirs(HERE)

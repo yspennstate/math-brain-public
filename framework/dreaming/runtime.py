@@ -20,9 +20,16 @@ def unthrottle(handle):
 
 def policy():
     if os.name == 'nt':
-        handle = ctypes.windll.kernel32.GetCurrentProcess()
-        ctypes.windll.kernel32.SetPriorityClass(handle, 0x00004000)
+        # typed on a private kernel32: with ctypes' default int restype the pseudo-handle reaches SetPriorityClass
+        # as a 32-bit value on 64-bit Python and the call fails, returning 0 with nothing raised
+        k = ctypes.WinDLL('kernel32', use_last_error=True)
+        k.GetCurrentProcess.restype = ctypes.c_void_p
+        k.SetPriorityClass.argtypes = [ctypes.c_void_p, ctypes.c_ulong]
+        k.SetPriorityClass.restype = ctypes.c_int
+        handle = k.GetCurrentProcess()
+        ok = bool(k.SetPriorityClass(handle, 0x00004000))
         unthrottle(handle)
+        return ok
     else:
         try:
             if os.getpriority(os.PRIO_PROCESS, 0) < 10:
