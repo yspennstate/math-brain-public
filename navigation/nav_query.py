@@ -31,6 +31,10 @@ EDGE_FIELDS = {"src": str, "dst": str, "rel": str, "note": str}
 KINDS = {"file", "dir", "readme_section", "concept"}
 RELS = {"in_dir", "links_to", "mentions", "documents"}
 TOKEN = re.compile(r"[a-z0-9]+")
+TERM = re.compile(r"[a-z][a-z0-9_]+")
+STOP = set("""a an and are as at be by can do does for from how i if in is it its my of on or not the this to what
+where which who why with when into after before every any one than then them they there their these those run runs set
+file files find how does do repository repo order first also note says say make sure""".split())
 CONTROL = re.compile(r"[\x00-\x08\x0b-\x1f\x7f]")
 
 
@@ -190,6 +194,14 @@ class Nav:
         return out
 
     WEAK_FLOOR = 19.5
+    SCATTER_MIN_TERMS = 6
+    SCATTER_MAX = 3
+
+    def _file_texts(self):
+        if getattr(self, "_ftexts", None) is None:
+            self._ftexts = [" ".join([c["path"], c["title"], c["summary"], " ".join(c["keywords"])]).lower()
+                            for c in self.cards.values() if c["kind"] == "file"]
+        return self._ftexts
 
     def hints(self, wordings, hits):
         """Two hints for a reader deciding whether the repository has the thing at all. Hints, not verdicts.
@@ -202,7 +214,14 @@ class Nav:
         blind bank of 28, missing and present questions matched in length: absent words for 14 of 14 missing
         and 2 of 14 present; the floor marked none. Two scaled floors were fit on half of it: one per query
         word fell from 4 of 7 missing to 2 of 7 on the other half; one over the query's idf held there (4 of 7,
-        no present question marked) but marked 13 of 32 answerable questions of the first bank. Neither is used."""
+        no present question marked) but marked 13 of 32 answerable questions of the first bank. Neither is used.
+
+        SCATTERED: a wording of six or more terms (words of three letters or more, common words dropped) of which no
+        file card carries more than three. A question about something the repository lacks spreads its words over
+        unrelated cards. The rule was fixed on the first two banks and then read once on a third, whose missing
+        questions describe a tool without naming it: 8 of 10 missing and 1 of 10 present marked, where the word list
+        marked 8 and 1 (they agree on 7 missing). Over the three banks, with the six-term minimum: 23 of 31 missing,
+        4 of 56 others. Shorter wordings never trigger it."""
         out, absent = [], []
         for w in wordings:
             for t in TOKEN.findall(w.lower()):
@@ -210,6 +229,15 @@ class Nav:
                     absent.append(t)
         if absent:
             out.append("words on no card (from the query): " + clean(", ".join(absent[:4]), 80))
+        counts = []
+        for w in wordings:
+            ts = sorted(set(t for t in TERM.findall(w.lower()) if t not in STOP and len(t) > 2))
+            if len(ts) >= self.SCATTER_MIN_TERMS:
+                counts.append((max([sum(1 for t in ts if t in x) for x in self._file_texts()] or [0]), len(ts)))
+        if counts and all(b <= self.SCATTER_MAX for b, _ in counts):
+            b, n = max(counts)
+            out.append("SCATTERED (no file card carries more than %d of the query's %d terms): the words land on "
+                       "unrelated cards, as they do when the repository lacks the thing" % (b, n))
         if hits:
             best = 0.0
             for w in wordings:
@@ -387,6 +415,14 @@ def selftest():
         check("id prefix resolves", nav.resolve(ids[2][:6]) == ids[2])
         hs = nav.hints(["kubernetes deployment"], nav.search(["kubernetes deployment"], 3))
         check("a word no card carries is named in a hint", any("kubernetes" in h for h in hs))
+        lacking = "a shared ticket board where people assign sprint tasks with deadlines and priorities"
+        check("a long question whose words scatter over the cards is marked SCATTERED",
+              any(h.startswith("SCATTERED") for h in nav.hints([lacking], nav.search([lacking], 3))))
+        present = "the nightly dream agenda linking steps scanner records"
+        check("a long question one card answers is not marked SCATTERED",
+              not any(h.startswith("SCATTERED") for h in nav.hints([present], nav.search([present], 3))))
+        check("a short query is never marked SCATTERED",
+              not any(h.startswith("SCATTERED") for h in nav.hints(["sprint board"], nav.search(["sprint board"], 3))))
         check("walk from the dream folder toward 'agenda' finds dream.py", ids[2] in nav.walk(ids[0], "agenda scan"))
         check("--check reports the two files missing from the checkout", nav.check(repo) == ["agent_tools/math_recall.py", "framework/dreaming/dream.py"])
         check("the card with a path outside the repository (and its injected text) is never loaded",
