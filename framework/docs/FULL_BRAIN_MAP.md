@@ -89,5 +89,19 @@ python -m pytest dreaming mesh governor methods -q
 ```
 
 Run the directories one by one; a whole-tree `pytest` run fails on two `test_network.py`
-files with the same name. `docs/RUNNING_THE_EVALUATORS.md` says which `eval_*` scripts pass
+files with the same name.
+
+Most of the tests above are plain scripts: `python <path>` from `framework/` runs them on a
+fresh clone, with no installed brain and an empty home folder. A few need something first:
+
+- `mesh/tests/`, `governor/`, `network/test_network.py`: `pip install pytest`.
+- `brain_graph/bin/test_sidecar_publication.py`: `pip install numpy`.
+- `brain_graph/bin/test_codex_capture_boundaries.py`: run it as
+  `python brain_graph/bin/test_codex_capture_boundaries.py --implementation brain_graph/bin/extract_codex_events.py --run-dir <new folder>`.
+  The folder must not exist yet; every fixture and result stays in it.
+- `dreaming/bm25_lane_selftest.py`: needs a built index over a memory folder
+  (`python dreaming/bm25.py build`). It refreshes the live index it finds, so run it on an
+  installed brain while no other agent is writing memories.
+- `dreaming/test_recall_server_lock_posix.py`, `test_math_recall_server_posix.py` and the
+  three `agent_tools/` tests above run on Linux or macOS. `docs/RUNNING_THE_EVALUATORS.md` says which `eval_*` scripts pass
 on a new install and what each of the others needs first.
