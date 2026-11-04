@@ -189,6 +189,9 @@ three into a fresh install's agent instructions.
 
 ## Verifying a copy
 
+`docs/FULL_BRAIN_MAP.md` lists every part of the brain, the files that make it up and the
+test that checks it.
+
 ```
 python scripts/preflight.py              # all of the below in one command, before you push
 python scripts/smoke_framework.py        # does this copy actually work?
