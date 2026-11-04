@@ -33,7 +33,8 @@ Usage::
     python build_memory_embeddings.py [memory_dir] \
         --incremental-from memory_embeddings.npz --plan-only
 
-Actual BGE encoding is box-gated.  Planning, coverage checks, and the fake-encoder
+BGE encoding uses sentence-transformers when it is importable and otherwise the ONNX export that
+fetch_bge_onnx.py places in models/ (same weights, cosine 0.9999999).  Planning, coverage checks, and the fake-encoder
 regression are laptop-safe and do not import sentence-transformers.
 """
 import argparse
@@ -394,14 +395,44 @@ def build_sidecar(mem_dir=MEM_DEFAULT, model_name=DEFAULT_MODEL, out=OUT, increm
     }
 
 
+def _onnx_encoder_factory(model_name):
+    """The same BGE weights through onnxruntime (query_embed.py's session), for a machine without torch.
+
+    Only for the default model, and only when fetch_bge_onnx.py has placed the files. Each text is encoded
+    alone, so padding never enters the CLS vector."""
+    if model_name != DEFAULT_MODEL:
+        return None
+    try:
+        import query_embed
+    except Exception:
+        return None
+    if not query_embed.available():
+        return None
+
+    def encode(texts):
+        import numpy as np
+        rows = []
+        for text in texts:
+            v = query_embed.embed(text)
+            if v is None:
+                raise ValueError("onnx encoder returned nothing for a %d-char text" % len(text))
+            rows.append(v)
+        return np.asarray(rows, dtype="float32")
+    return encode
+
+
 def _box_encoder_factory(model_name):
     """Load the heavy model only after planning proves rows actually need encoding."""
     try:
         from sentence_transformers import SentenceTransformer
     except Exception as exc:
+        onnx = _onnx_encoder_factory(model_name)
+        if onnx is not None:
+            print("sentence-transformers is not importable; encoding with the ONNX export in models/")
+            return onnx
         raise EncoderUnavailable(
-            "sentence-transformers is not importable here; pip install sentence-transformers, or run the "
-            "encode step on a machine that has it and copy the NPZ"
+            "sentence-transformers is not importable here and the ONNX export is not in models/; run "
+            "fetch_bge_onnx.py, or pip install sentence-transformers, or encode elsewhere and copy the NPZ"
         ) from exc
     model = SentenceTransformer(model_name)
 
