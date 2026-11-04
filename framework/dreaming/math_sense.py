@@ -3843,8 +3843,19 @@ def main():
     return None
 
 
+def _reset_per_prompt_state():
+    """A caller that runs several prompts in one process (the resident server, an in-process measurement) must not
+    carry one prompt's agreed cards, semantic winner or pool adjacency into the next. The full-store path used to leave
+    the adjacency unset, so a prompt that fell back after a prefiltered one ranked with the earlier pool's links."""
+    _COV_AGREED.clear()
+    _SEMTOP.clear()
+    _SEMTOP_WHY.clear()
+    _set_pool_adjacency(())
+
+
 def _main_body(data, out):
     started = time.time()
+    _reset_per_prompt_state()
     _reset_cov_agree_state()
     prompt = data.get("prompt")
     prompt = (prompt if isinstance(prompt, str) else "")[:8000]
