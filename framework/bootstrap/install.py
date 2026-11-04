@@ -8,7 +8,7 @@ default; pass --apply to write.
     python bootstrap/install.py --project-dir C:\\Users\\me [--timezone UTC] --apply
 
 The project dir is the working directory your agent sessions start in; the
-memory corpus lives under <home>/.claude/projects/<slug>/memory where <slug>
+memory corpus lives under <HOME>/.claude/projects/{{BRAIN_SLUG}}/memory where {{BRAIN_SLUG}}
 is that path with ':' and path separators replaced by '-' (the transcript-dir
 convention used by the agent runtime).
 """
@@ -153,8 +153,8 @@ def long_paths_enabled():
 def longest_path_this_install_would_create(home, slug):
     """Every path the install writes, measured BEFORE anything is written.
 
-    Why this exists. The memory corpus sits at <home>/.claude/projects/<slug>/memory, and
-    <slug> is the project directory with its separators turned into dashes - so a project a
+    Why this exists. The memory corpus sits at <HOME>/.claude/projects/{{BRAIN_SLUG}}/memory, and
+    the slug is the project directory with its separators turned into dashes - so a project a
     few directories deep produces a slug longer than the path it came from. On a Windows
     machine without long paths that tips over MAX_PATH, and the install used to discover it
     two thirds of the way through, raising FileNotFoundError [WinError 3] and leaving a
@@ -235,7 +235,7 @@ def main():
                     help="the person the brain works with (fills <PARTNER> in the agent instructions)")
     ap.add_argument("--apply", action="store_true", help="write (default: dry-run)")
     ap.add_argument("--merge-settings", action="store_true",
-                    help="also merge the generated hook wiring into <home>/.claude/settings.json "
+                    help="also merge the generated hook wiring into <HOME>/.claude/settings.json "
                          "(a dated backup is written first; hooks already there are kept)")
     a = ap.parse_args()
 
@@ -415,9 +415,9 @@ def main():
             n = merge_hooks(sp, json.loads(t), a.apply)
             print(f"  {n} hook group(s) {'merged' if a.apply else 'would be merged'} into {sp}")
         else:
-            print("  merge its 'hooks' object into <home>/.claude/settings.json by hand, or re-run with --merge-settings")
+            print("  merge its 'hooks' object into <HOME>/.claude/settings.json by hand, or re-run with --merge-settings")
 
-    # The wiring above points SessionStart at <home>/.claude/wake_brain.ps1, so write it (and the startup note it
+    # The wiring above points SessionStart at <HOME>/.claude/wake_brain.ps1, so write it (and the startup note it
     # reads) here rather than leave the tokens for the reader. An existing file is kept and the new one goes beside it.
     for src, name in (("wake_brain.template.ps1", "wake_brain.ps1"), ("brain_startup.template.md", "brain_startup.md")):
         sp = os.path.join(REPO, "hooks", src)
