@@ -1323,6 +1323,16 @@ def _carries_ident(node, wanted):
     return bool(wanted & _idents(getattr(node, "title", "") or ""))
 
 
+NAMED_FAMILY_FOLD = os.environ.get("MATHBRAIN_NAMED_FAMILY_FOLD", "1").strip() not in ("0", "", "off", "false")
+
+
+def _nf_fold(title):
+    t = (title or "").casefold()
+    if NAMED_FAMILY_FOLD:
+        t = "".join(c for c in unicodedata.normalize("NFKD", t) if not unicodedata.combining(c))
+    return t
+
+
 def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None, anchor=True):
     """Re-rank, gate, deduplicate by title, cap campaign deposits, take `cap` (three by default).
 
@@ -1442,11 +1452,39 @@ def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None, anchor
         _top_campaign = _campaign_key(ranked[0].node) if _CAMPAIGN_FAMILY else None
         top_key = re.sub(r"[^a-z0-9]+", " ", (ranked[0].node.title or "").casefold()).strip()
         top_family = _family_key(ranked[0].node.title)
+        # SIBLINGS ARE NOT RIVALS. Three more kinds of sibling, each behind its own switch (default on):
+        # NAMED family (MATHBRAIN_NAMED_FAMILY): when the prompt names something (an acronym, a proper name - _name_tokens)
+        # and the leader's title carries that name, a runner-up whose title carries it too is a second result about the
+        # same thing, not a competing answer. "Prove the FEI conjecture" went silent with two FEI cards 0.1 apart on top.
+        # The title side folds accents (MATHBRAIN_NAMED_FAMILY_FOLD), so "Gronwall" in the prompt matches "Grönwall's".
+        # POSSESSIVE family (MATHBRAIN_POSSESSIVE_FAMILY): leader and runner-up carry the same "Name's" in their titles
+        # (two versions of Bernstein's inequality), even when the prompt never says the name.
+        # VOCABULARY is not a rival (MATHBRAIN_VOCAB_NOT_RIVAL): a card whose logical_id starts "vocab." defines a word and
+        # does not compete with a theorem card for the answer.
+        # Measured on a held bank, each switch answered exactly its own items and moved nothing else; absent-target
+        # false fires unchanged. Set any of them to "0" for the old rule.
+        _named = set()
+        if os.environ.get("MATHBRAIN_NAMED_FAMILY", "1") != "0" and prompt:
+            try:
+                _named = _name_tokens(prompt) & set(re.findall(r"[a-z0-9]+", _nf_fold(ranked[0].node.title)))
+            except Exception:
+                _named = set()
+        _POSS = os.environ.get("MATHBRAIN_POSSESSIVE_FAMILY", "1") != "0"
+        _VOCAB_NR = os.environ.get("MATHBRAIN_VOCAB_NOT_RIVAL", "1") != "0"
+        def _possessives(title):
+            return {m.casefold() for m in re.findall(r"([A-Z][^\s'’]*)['’]s\b", title or "")}
+        def _is_vocab(node):
+            return str(_node_meta(node).get("logical_id") or "").startswith("vocab.")
+        _top_poss = _possessives(ranked[0].node.title) if _POSS else set()
+        _top_vocab = _is_vocab(ranked[0].node) if _VOCAB_NR else True
         rival = next(
             (h for h in ranked[1:]
              if re.sub(r"[^a-z0-9]+", " ", (h.node.title or "").casefold()).strip() != top_key
+             and not (_top_poss and _top_poss & _possessives(h.node.title))
+             and not (not _top_vocab and _is_vocab(h.node))
              and _family_key(h.node.title) != top_family
              and not (_top_campaign is not None and _campaign_key(h.node) == _top_campaign)
+             and not (_named and _named & set(re.findall(r"[a-z0-9]+", _nf_fold(h.node.title))))
              and not _linked_to(ranked[0].node.id, h.node.id)),
             None,
         )
