@@ -91,3 +91,19 @@ legal, recall still fires, and the keyword arm silences nothing. It reports PASS
 INCOMPLETE — a check that cannot say "I could not inspect this" reports its blind spots as
 success. On a brand-new brain, before any keyword generation exists, the properties that need
 one report NEW (nothing to measure yet) and the gate still passes.
+
+## Rebuilding without re-reading everything
+
+`build_keyword_nodes.py --incremental` takes its inputs from `keyword_corpus_cache.py` instead of
+re-reading every memory file and the whole prompt log. The cache keeps one row per memory file
+(its modification time, size, search text and token counts) and the prompt log's byte offset with
+a hash of the 64 KB before it. A run reads only the files that are new or changed, subtracts what
+an edited or vanished file used to contribute, and reads only the prompt lines appended since the
+last run; if the hashed tail no longer matches, the whole log is read again. A lost or unreadable
+cache starts over from a full read.
+
+The incremental path is opt-in. Run `build_keyword_nodes.py --verify` once on your own brain: it
+builds both ways and compares the digests that go into the generation's source manifest.
+`test_keyword_corpus_cache.py` checks the same equality on a small synthetic brain through new,
+edited and deleted memories, a half-written prompt line, a rewritten prompt log, and a corrupt or
+missing cache.
