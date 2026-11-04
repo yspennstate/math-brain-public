@@ -138,6 +138,7 @@ def build(store_path):
         source_nodes = list(store.iter_nodes())
         revision_edges = list(store.iter_edges(kind=EdgeKind.SUPERSEDES))
     nodes, revision_projection = _current_index_nodes(source_nodes, revision_edges)
+    current_all = list(nodes)   # the IDF table below counts every current card, before the reader's integrity filter
     # INDEX WHAT YOU CAN SERVE (2026-09-12, goal 30h item 4). The hook's selection_integrity re-reads every chosen card and
     # DROPS one whose stored digest no longer matches what the reader recomputes - and never refills the slot. 34 nodes in
     # the store fail that read (25 'b2 replacement' orphans written outside any bundle on 08-10, each a duplicate of an
@@ -169,11 +170,39 @@ def build(store_path):
     revision_projection["reader_refused_excluded"] = len(refused)
     revision_projection["reader_refused_ids"] = refused
     source_revision_sha256 = _source_revision_seal(source_nodes, revision_edges)
+    # DOCUMENT EXPANSION: a card's index-only words (math_brain.expansion, read back by math_brain.retrieval.EXPANSION)
+    # are indexed here too, or a question that names a card only by those words never reaches the ranker's pool. The
+    # expansion is recomputed from the current cards at every build, so a revised card is expanded at the next build
+    # and a superseded one loses its words with it. The memory directory comes from MATHBRAIN_EXPANSION_MEMORY (the
+    # library reports in LAST_BUILD when none is configured). Any failure builds the index without expansion.
+    # MATHBRAIN_EXPANSION=0 builds without it.
+    expansion, expansion_meta = {}, {"path": None, "cards": 0}
+    if os.environ.get("MATHBRAIN_EXPANSION", "1").strip() not in ("0", "", "off", "false"):
+        try:
+            from math_brain import expansion as _X
+            _tx = time.time()
+            _mem = os.environ.get("MATHBRAIN_EXPANSION_MEMORY", "").strip() or None
+            expansion = _X.build(store_path, current_all, memory_dir=_mem)
+            _last = dict(getattr(_X, "LAST_BUILD", {}) or {})
+            _side = _last.get("sidecar")     # the file this build wrote, or None
+            import hashlib as _hx
+            _wrote = bool(_side) and os.path.exists(_side)
+            expansion_meta = {"path": _side if _wrote else None, "cards": len(expansion),
+                              "seconds": round(time.time() - _tx, 1),
+                              "sha256": _hx.sha256(open(_side, "rb").read()).hexdigest() if _wrote else None,
+                              "status": _last.get("status"), "reason": _last.get("reason")}
+        except Exception as exc:
+            expansion = {}
+            expansion_meta = {"path": None, "cards": 0, "error": "%s: %s" % (type(exc).__name__, str(exc)[:120])}
     ids, dl, post, labels = [], [], collections.defaultdict(list), collections.defaultdict(list)
     for i, n in enumerate(nodes):
         ids.append(n.id)
         tf = collections.Counter(tokens((n.title or "") + " " + (n.body or "")))
+        # the card's own length is its title and body; expansion words add postings, never length (a longer card
+        # scores less on every query, and near-floor cards fell under the gate floor that way)
         dl.append(sum(tf.values()))
+        if n.id in expansion:
+            tf.update(tokens(expansion[n.id]))
         for tok, f in tf.items():
             post[tok].append((i, f))
         # LaTeX labels of literature statements (metadata "labels": a list or its repr) -> node index, so a step that
@@ -194,14 +223,51 @@ def build(store_path):
             "labels": dict(labels), "built_at": time.strftime("%Y-%m-%dT%H:%M:%SZ", time.gmtime()), "store": str(store_path),
             "schema": "math_prefilter.current_revisions.v1", "revision_projection": revision_projection,
             "source_revision_sha256": source_revision_sha256,
-            "df_cap": DF_CAP, "token_re": TOKEN_RE.pattern}
+            "df_cap": DF_CAP, "token_re": TOKEN_RE.pattern, "expansion": expansion_meta}
     p = index_path(store_path)
     tmp = p + ".tmp"
     with open(tmp, "wb") as fh:
         pickle.dump(data, fh, protocol=pickle.HIGHEST_PROTOCOL)
     os.replace(tmp, p)
+    # STORE-WIDE LEXICAL DOCUMENT FREQUENCIES. The hook's ranker is handed only the ~300 cards select() returns, so its
+    # lexical IDF must come from the whole store: math_sense reads <store>.lexdf.pkl, written here so every index
+    # rebuild refreshes it with the ranker's own tokenizer and content filter over the same current cards. A missing
+    # table is the old pool IDF, so a failure here degrades, never breaks.
+    try:
+        import math_brain.retrieval as _R
+        _df = collections.Counter()
+        for n in current_all:
+            _df.update(set(_R._content_terms(_R.index_signals(
+                (n.title or "") + " " + (n.body or "")
+                + ((" " + expansion[n.id]) if n.id in expansion else "")).lexical_tokens)))
+        _lp = str(store_path) + ".lexdf.pkl"
+        with open(_lp + ".tmp", "wb") as fh:
+            pickle.dump({"n": len(current_all), "df": dict(_df), "built": data["built_at"], "store_nodes": len(source_nodes)},
+                        fh, protocol=pickle.HIGHEST_PROTOCOL)
+        os.replace(_lp + ".tmp", _lp)
+        lexdf = {"path": _lp, "terms": len(_df)}
+    except Exception as exc:
+        lexdf = {"error": "%s: %s" % (type(exc).__name__, str(exc)[:120])}
+    # KEYED SIGNAL SIDECAR (math_brain.retrieval.update_signal_db): the hook reads its ~300 pooled candidates' index
+    # signals from <store>.signals.sqlite instead of recomputing them every prompt. Filled here, at every index build,
+    # with the texts retrieve() hashes - title + body, and title + body + expansion for an expanded card - so a landing
+    # or an ingest keeps it current. Incremental; a failure leaves the hook computing.
+    try:
+        import math_brain.retrieval as _R
+        if hasattr(_R, "update_signal_db"):
+            _texts = []
+            for n in current_all:
+                _base = (n.title or "") + " " + (n.body or "")
+                _texts.append(_base)
+                if n.id in expansion:
+                    _texts.append(_base + " " + expansion[n.id])
+            sigdb = _R.update_signal_db(_R.signal_db_path(store_path), _texts)
+        else:
+            sigdb = {"skipped": "this math_brain.retrieval has no update_signal_db"}
+    except Exception as exc:
+        sigdb = {"error": "%s: %s" % (type(exc).__name__, str(exc)[:120])}
     return {"index": p, "nodes": N, "tokens": len(post), "seconds": round(time.time() - t0, 1),
-            "bytes": os.path.getsize(p)}
+            "bytes": os.path.getsize(p), "lexdf": lexdf, "expansion": expansion_meta, "signals": sigdb}
 
 _CACHE = {}
 LAST_SCORES = {}   # node id -> BM25 score of the last select() call
