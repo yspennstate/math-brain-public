@@ -2554,6 +2554,128 @@ def _named_slots(blocks, merged, cap, base, named):
     return chosen, extra
 
 
+# A WEAK LEAD IN A SCATTERED BLOCK IS WITHHELD (MATHBRAIN_COH_CUT, default on; 19 Oct). When the store lacks the theorem a
+# prompt asks about, the hook still tends to serve a block: its first card sits further from the prompt than a right
+# lead does, and its cards have little to do with one another. A block of two or more cards is withheld when the lead
+# card's claim vector is below COH_CUT_LEAD in cosine to the prompt AND the cards' mean pairwise cosine is below
+# COH_CUT_PAIR. Both readings exist at serve time. Measured at 0.70 / 0.70 on two question sets: about one in seven
+# unanswerable fires withheld and no right first card lost. The lead line rose to 0.80 on 2 Nov with the pair line
+# kept: every right serve in both sets has pair >= 0.697, so the pair line is the fragile one, and at 0.80 / 0.70 more
+# unanswerable fires were withheld with no right first card lost. MATHBRAIN_COH_CUT_LEAD=0.70 restores the old line.
+COH_CUT = os.environ.get("MATHBRAIN_COH_CUT", "1").strip() not in ("0", "", "off", "false")
+COH_CUT_LEAD = float(os.environ.get("MATHBRAIN_COH_CUT_LEAD", "0.80") or 0.80)
+COH_CUT_PAIR = float(os.environ.get("MATHBRAIN_COH_CUT_PAIR", "0.70") or 0.70)
+# The lead cosine is also read against the prompt's last COH_TAIL chars (cut at a paragraph or sentence start found in
+# the last 1.5x) and against its closing paragraph, and the highest reading counts: a question asked at the end of a
+# long lead-in otherwise reads as a weak match. MATHBRAIN_COH_TAIL, default 250; 0/off reads the whole prompt only.
+_CT = os.environ.get("MATHBRAIN_COH_TAIL", "250").strip().lower()
+COH_TAIL = 0 if _CT in ("", "0", "off", "false") else int(_CT)
+
+
+def _prompt_tail(prompt, n):
+    """The last n chars of the prompt, started at a paragraph or sentence break when one lies in the last 1.5n; None
+    when the prompt is no longer than n."""
+    t = (prompt or "").strip()
+    if n <= 0 or len(t) <= n:
+        return None
+    win = t[-int(n * 1.5):]
+    m = re.search(r"\n\s*\n|(?<=[.?!])\s+(?=[A-Z])", win[: len(win) - n // 3])
+    return win[m.end():] if m else t[-n:]
+
+
+def _closing_paragraph(prompt):
+    """The prompt's last paragraph (after its last blank line) when it is 40-600 chars, else None. A question asked
+    after a short lead-in sits there; the char tail above still carries part of the lead-in."""
+    parts = re.split(r"\n\s*\n", (prompt or "").strip())
+    if len(parts) > 1 and 40 <= len(parts[-1].strip()) <= 600:
+        return parts[-1].strip()
+    return None
+
+
+# THE CUT SPARES A BLOCK WHOSE LEAD CARD IS THE THING THE PROMPT NAMES (MATHBRAIN_COH_NAME_EXEMPT, default on; 2 Nov).
+# The prompt "Sylow theorems." was withheld at lead 0.583 / pair 0.666 although the lead card is titled "Sylow
+# Theorems": a two-word prompt sits far from any card in cosine. Exempt only when the prompt has name tokens
+# (_name_tokens), every one of them is a word of the lead card's title (prefix match for plurals), and the title
+# carries a result word (theorem, lemma, inequality, ...): a lead card that is only a concept the prompt names is
+# not the theorem it asks about.
+COH_NAME_EXEMPT = os.environ.get("MATHBRAIN_COH_NAME_EXEMPT", "1").strip() not in ("0", "", "off", "false")
+
+
+# A sentence-initial capital is not a name: _name_tokens reads "Total" in "Total variation ..." as one. Words common
+# enough to open a sentence (math_coh_common_words.txt beside this file: words found in more than 1 pct of a large
+# document collection; Sylow, Pinsker, Girsanov fall far below that) are dropped before the test, and the exemption
+# needs at least one name left. File missing = no drop.
+_COH_COMMON = None
+
+
+def _coh_common_words():
+    global _COH_COMMON
+    if _COH_COMMON is None:
+        try:
+            with open(os.path.join(os.path.dirname(os.path.abspath(__file__)), "math_coh_common_words.txt"),
+                      encoding="utf-8") as f:
+                _COH_COMMON = frozenset(w.strip() for w in f if w.strip())
+        except Exception:
+            _COH_COMMON = frozenset()
+    return _COH_COMMON
+
+
+_RESULT_WORDS = frozenset(("theorem", "theorems", "inequality", "inequalities", "lemma", "conjecture", "principle",
+                           "formula", "law", "identity", "criterion", "bound", "hypothesis", "estimate", "estimates"))
+
+
+def _lead_title_names_prompt(prompt, title):
+    try:
+        cw = _coh_common_words()
+        nt = [w for w in _name_tokens(prompt) if w.lower() not in cw]
+        if not nt or not title:
+            return False
+        t = unicodedata.normalize("NFKD", title)
+        t = "".join(c for c in t if not unicodedata.combining(c))
+        tw = set(w for w in re.findall(r"[a-z0-9]+", t.lower()) if len(w) > 2)
+        if not (tw & _RESULT_WORDS):
+            return False
+        return all(any(w == x or w.startswith(x) or x.startswith(w) for x in tw) for w in nt)
+    except Exception:
+        return False
+
+
+_COH_POS = None
+
+
+def _incoherent_weak_block(prompt, ids):
+    """(lead cosine, mean pairwise cosine) when the block should be withheld, else None. Cards without a vector are
+    skipped; fewer than two with vectors never cut. Any failure keeps the block. The pair is read first: a coherent
+    block is never cut, so it skips the prompt embedding; the id->row map is cached per vector artifact."""
+    try:
+        from math_brain import semantic as _S
+        import numpy as _np
+        _S._load_artifact()
+        global _COH_POS
+        if _COH_POS is None or _COH_POS[0] is not _S._ids:
+            _COH_POS = (_S._ids, {i: n for n, i in enumerate(_S._ids)})
+        pos = _COH_POS[1]
+        rows = [pos[str(i)] for i in ids if str(i) in pos]
+        if len(rows) < 2:
+            return None
+        vs = _S._vecs[rows]
+        g = vs @ vs.T
+        n = len(rows)
+        pair = float((g.sum() - _np.trace(g)) / (n * (n - 1)))
+        if pair >= COH_CUT_PAIR:
+            return None
+        q = _np.asarray(_S._query_encoder().embed(_S.QUERY_PREFIX + (prompt or "")), dtype=_np.float32)
+        lead = float(vs[0] @ q)
+        if lead < COH_CUT_LEAD and COH_TAIL:
+            for tail in (_prompt_tail(prompt, COH_TAIL), _closing_paragraph(prompt)):
+                if tail and lead < COH_CUT_LEAD:
+                    lead = max(lead, float(vs[0] @ _np.asarray(_S._query_encoder().embed(_S.QUERY_PREFIX + tail),
+                                                               dtype=_np.float32)))
+        return (lead, pair) if lead < COH_CUT_LEAD else None
+    except Exception:
+        return None
+
+
 def _subquery_block(query, prompt=None, exact_pass=False):
     """The block one sub-query earns on its own: prefilter -> ranker -> _select -> the on-topic floor. Hits, not ids.
 
@@ -3540,6 +3662,15 @@ def _main_body(data, out):
                 block, emitted_ids = _with_pitfall_lines(header, pieces, emitted_ids, _budget, prompt)
             except Exception as _exc:
                 _silence_note(data, "pitfall_lines_error:%s" % type(_exc).__name__)
+        if block and COH_CUT and len(emitted_ids) > 1:
+            _cut = _incoherent_weak_block(prompt, emitted_ids)
+            if _cut and COH_NAME_EXEMPT:
+                _lt = next((h.node.title for h in (chosen or []) if str(h.node.id) == str(emitted_ids[0])), "")
+                if _lead_title_names_prompt(prompt, _lt):
+                    _cut = None
+            if _cut:
+                _silence_note(data, "incoherent_weak_block:lead%.3f_pair%.3f" % _cut)
+                return
         if not block:
             _silence_note(data, "empty_block:%d_pieces" % len(pieces))
             return
