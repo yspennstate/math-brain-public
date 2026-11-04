@@ -552,6 +552,125 @@ def _read_records(store):
     return out
 
 
+_REVIEW_KINDS = ("discovery_report", "human_proof_review")
+
+
+def _review_reads(claim_ids, store_path=None):
+    """claim id -> the latest sound recorded read of it (tools/record_review.py), for the cards about to be shown.
+
+    Read after the selection, for those cards only, through the evidence table's claim index (29 Sep: the read used to decode every evidence row before ranking, to
+    annotate at most four cards). Each row is judged on its own, as the store's evidence_for judges it - a JSON object
+    whose id, claim and time are the row's and whose digest is the row's digest - and its `passed` must be a real
+    boolean (29 Sep): until then a payload edited without its digest was shown
+    as a human's pass, the string "false" read as a pass, and a payload that was a JSON list or null raised past the
+    row's guard and silenced the whole hook. A row that fails is skipped, so its card reads unverified; nothing here
+    changes which cards are shown, or silences the block. Only the three values the tag uses are kept (the reviewer's
+    name and the free-text summary used to be copied for every row). The record is shown beside the hint
+    and does not change the tag's verdict: an agent's read is a discovery report, not an authority (the store's own
+    promotion rules say so), and a human's single read makes a claim provisional at most."""
+    ids = sorted({str(i) for i in claim_ids if i})
+    if not ids:
+        return {}
+    try:
+        import sqlite3
+        from math_brain.models import Evidence, EvidenceKind
+        conn = sqlite3.connect("file:%s?mode=ro" % str(store_path or STORE_PATH).replace("\\", "/"), uri=True,
+                               timeout=2)
+    except Exception:
+        return {}
+    try:
+        conn.row_factory = sqlite3.Row
+        rows = conn.execute(
+            "SELECT id, claim_id, digest, created_at, payload_json FROM evidence WHERE claim_id IN (%s) "
+            "ORDER BY created_at, id" % ",".join("?" * len(ids)), ids).fetchall()
+    except Exception:
+        rows = []
+    finally:
+        try:
+            conn.close()
+        except Exception:
+            pass
+    out = {}
+    for row in rows:
+        try:
+            payload = json.loads(row["payload_json"])
+            if not isinstance(payload, dict) or payload.get("kind") not in _REVIEW_KINDS \
+                    or type(payload.get("passed")) is not bool:
+                continue
+            typed = dict(payload)
+            typed["kind"] = EvidenceKind(typed["kind"])
+            typed["limitations"] = tuple(typed["limitations"])
+            ev = Evidence(**typed)
+            if (ev.id, ev.claim_id, ev.created_at, ev.digest()) != (row["id"], row["claim_id"], row["created_at"],
+                                                                      row["digest"]):
+                continue
+        except Exception:
+            continue
+        out[row["claim_id"]] = {"when": str(row["created_at"] or "")[:10], "passed": ev.passed,
+                                "human": payload["kind"] == "human_proof_review"}
+    return out
+
+
+def _claim_parts(claim_ids, store_path=None):
+    """claim id -> (statement, assumptions) from the claims table, for the cards about to be shown.
+
+    An overlay claim's node lists its assumptions as bare lines after the statement, so the renderer took them for the
+    statement's tail and cut them first: on the gate's 218 bank prompts 90 of 466 served cards lost a hypothesis whose
+    words appear nowhere else on the card, and 29 through the view (30 Sep 2026). The claim row keeps the two apart, and _claim_view renders the card
+    from it. A row is used only when it is sound, as _review_reads judges evidence: a
+    JSON object that builds a Claim whose id and digest are the row's. Anything else is skipped and that card renders
+    as it did before; nothing here changes which cards are shown."""
+    ids = sorted({str(i) for i in claim_ids if i})
+    if not ids:
+        return {}
+    try:
+        import sqlite3
+        from math_brain.models import Claim, ClaimKind, RecordStatus
+        conn = sqlite3.connect("file:%s?mode=ro" % str(store_path or STORE_PATH).replace("\\", "/"), uri=True,
+                               timeout=2)
+    except Exception:
+        return {}
+    try:
+        rows = conn.execute("SELECT id, digest, payload_json FROM claims WHERE id IN (%s)" % ",".join("?" * len(ids)),
+                            ids).fetchall()
+    except Exception:
+        rows = []
+    finally:
+        try:
+            conn.close()
+        except Exception:
+            pass
+    out = {}
+    for cid, digest, raw in rows:
+        try:
+            payload = json.loads(raw)
+            if not isinstance(payload, dict):
+                continue
+            typed = dict(payload)
+            typed["kind"] = ClaimKind(typed["kind"])
+            typed["status"] = RecordStatus(typed["status"])
+            typed["assumptions"] = tuple(typed["assumptions"])
+            claim = Claim(**typed)
+            if (claim.id, claim.digest()) != (cid, digest):
+                continue
+        except Exception:
+            continue
+        out[cid] = (claim.statement, claim.assumptions)
+    return out
+
+
+def _claim_view(node, parts):
+    """The node to render: an overlay claim through its own statement and assumptions (math_brain.rendering.claim_view),
+    anything else as it is. Without the build, or on any error, the node itself."""
+    if not parts:
+        return node
+    try:
+        from math_brain.rendering import claim_view
+        return claim_view(node, parts[0], parts[1])
+    except Exception:
+        return node
+
+
 def _trust_tag(meta, read=None):
     """How far to trust one served node, read from its own metadata. Nothing in the store carries an
     independent verification event (verification_events was empty on 2026-09-02, and every harvested
@@ -559,7 +678,7 @@ def _trust_tag(meta, read=None):
     came from - never that it is right. Owner order 2026-09-02: a note can mean something good or bad,
     not necessarily good; the brain gives a hint. Fail-safe: any error -> 'unverified'.
 
-    `read`, when given, is the claim's latest recorded read (see _read_records): it is appended as a
+    `read`, when given, is the claim's latest recorded read (see _review_reads): it is appended as a
     dated fact - who read it and what they found - and the closing word stays 'unverified' unless the
     read was a human's, in which case it reads 'provisional'; the store promotes to verified only on a
     second, independent route.
@@ -2480,7 +2599,6 @@ def _main_body(data, out):
             else:
                 nodes = list(store.iter_nodes())
                 edges = list(store.iter_edges())
-            reads = _read_records(store)
         if not nodes:
             _silence_note(data, "no_nodes")
             return
@@ -3051,8 +3169,10 @@ def _main_body(data, out):
         # so the check runs here, and the first card of the final order keeps the pair's place
         chosen = _drop_title_twins(_drop_later_twins(chosen))
         pieces = []
+        reads = _review_reads([h.node.id for h in chosen])
+        parts = _claim_parts([h.node.id for h in chosen])
         for hit in chosen:
-            node = hit.node
+            node = _claim_view(hit.node, parts.get(hit.node.id))
             meta = _node_meta(node)
             kind = str(meta.get("claim_kind") or meta.get("kind") or node.kind)
             label, text = _render_parts(node, query=prompt, max_text_chars=MAX_STATEMENT_CHARS)
@@ -3220,7 +3340,6 @@ def cli_query(query):
             store.connection.execute("BEGIN")
             nodes = list(store.iter_nodes())
             edges = list(store.iter_edges())
-            reads = _read_records(store)
         result = retrieve(
             query, nodes=nodes, edges=edges, limit=CANDIDATE_POOL,
             min_support_score=0.0, min_margin=0.0,
@@ -3234,8 +3353,10 @@ def cli_query(query):
             return
         chosen = _drop_title_twins(_drop_later_twins(chosen))
         print("Full current note: python ~/.claude/dreaming/math_note.py SOURCE_ID")
+        reads = _review_reads([h.node.id for h in chosen])
+        parts = _claim_parts([h.node.id for h in chosen])
         for hit in chosen:
-            node = hit.node
+            node = _claim_view(hit.node, parts.get(hit.node.id))
             meta = _node_meta(node)
             kind = str(meta.get("claim_kind") or node.kind)
             label, text = _render_parts(node, query=query, max_text_chars=MAX_STATEMENT_CHARS)
