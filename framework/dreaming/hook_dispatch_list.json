@@ -109,6 +109,20 @@
           "enabled_if": "~/.claude/brain_graph/live/HOOK_ENABLED"
         }
       ]
+    },
+    {
+      "matcher": "Edit|Write|MultiEdit",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}\\verify_ops.py"
+          ],
+          "timeout": 600
+        }
+      ]
     }
   ],
   "PreToolUse": [
