@@ -65,6 +65,53 @@ def _emit_guard(ev, guard):
     if guard:
         sys.stdout.write(json.dumps({"hookSpecificOutput": {"hookEventName": ev, "additionalContext": guard}}))
 
+
+# MESH LITERAL DOLLAR (30 Sep 2026). A mesh claim, assert or release whose --resource builds a Windows path with a
+# backslash in front of a shell variable - "C:\\...\\notes\\$f" typed in a Bash command - reaches the mesh as the
+# literal text '...notes$f': the Bash tool halves the double backslash, and bash then reads backslash-dollar as an
+# escaped dollar. The lease covers no file, the command exits 0, and the write it was meant to guard goes ahead with
+# no claim over it. It happened three times in one month, once as thirty claims in one batch, each time with a
+# written warning on record; a PreToolUse note is read only after the command has run, so a note cannot stop it.
+# No one means a literal "$name" as a resource, so this refuses the command. A variable holding the whole path, a
+# path with forward slashes, and a logical resource (memory:, topic:) pass untouched.
+# 2 Oct 2026: the same slip arrived one step removed - W="C:\\...\\notes\\$S.md" assigned in the command, then
+# --resource "$W". The assignment already made the dollar literal, so a resource that is only a variable is judged by
+# that variable's assignments in the same command; a variable set elsewhere still passes.
+_MESH_CMD = re.compile(r"agent_mesh\.py[\"']?\s+(?:--json\s+)?(?:claim|assert|release)\b")
+_RESOURCE_ARG = re.compile(r"--resource(?:=|\s+)(\"(?:[^\"\\]|\\.)*\"|'[^']*'|[^\s;&|]+)")
+_DOLLAR = re.compile(r"(\\*)\$(?=[A-Za-z_{])")
+_VAR_ONLY = re.compile(r"^[\"']?\$(?:\{([A-Za-z_][A-Za-z0-9_]*)\}|([A-Za-z_][A-Za-z0-9_]*))[\"']?$")
+_ASSIGN = re.compile(r"(?:^|[\s;&|(])(?:export\s+|local\s+)?([A-Za-z_][A-Za-z0-9_]*)=(\"(?:[^\"\\]|\\.)*\"|'[^']*'|[^\s;&|]+)")
+
+
+def _literal_dollar_in(value):
+    """True when bash will pass this word on (as typed into the Bash tool) with a literal '$name' in it."""
+    if value.startswith("'"):
+        return bool(re.search(r"\$(?=[A-Za-z_{])", value))   # single quotes never expand
+    for d in _DOLLAR.finditer(value):
+        # the Bash tool turns each double backslash into one (k -> ceil(k/2)); an odd count left escapes the dollar
+        if (len(d.group(1)) + 1) // 2 % 2 == 1:
+            return True
+    return False
+
+
+def _mesh_literal_dollar(cmd):
+    """The first --resource of a mesh claim, assert or release that bash will pass on with a literal '$name', or ''."""
+    if "agent_mesh" not in (cmd or "") or "$" not in cmd or not _MESH_CMD.search(cmd):
+        return ""
+    for m in _RESOURCE_ARG.finditer(cmd):
+        value = m.group(1)
+        if _literal_dollar_in(value):
+            return value
+        v = _VAR_ONLY.match(value)
+        if v:
+            name = v.group(1) or v.group(2)
+            for a in _ASSIGN.finditer(cmd):
+                if a.group(1) == name and _literal_dollar_in(a.group(2)):
+                    return "%s (set in the command as %s=%s)" % (value, name, a.group(2))
+    return ""
+
+
 # (label, regex, weight). Action-on-live and secrets are weight 3; irreversible / phone 2; mention 1.
 # The process/host names below are EXAMPLES - populate the rosters for your deployment (the live
 # services, hosts, and account patterns that are dangerous to touch on YOUR systems).
@@ -122,7 +169,7 @@ def _runs_sender(cmd):
 # click past the alarm ("wallpaper is how the next flood gets in"). So on an edit we fire only when an
 # actual credential value is being written - the token-leak shape. These are the push-scanner's VENDOR
 # credential patterns (scan_secrets.py), kept in sync so the edit-advisory and the gate agree; an
-# adversarial review caught an older set missing sk-ant, github fine-grained PATs, and the
+# adversarial review caught an older set missing the anthropic key prefix, github fine-grained PATs, and the
 # broader telegram/google shapes.
 SECRET_VALUE = re.compile(
     r"-----BEGIN (?:RSA |EC |OPENSSH |DSA |PGP )?PRIVATE KEY-----"  # PEM private key
@@ -133,6 +180,46 @@ SECRET_VALUE = re.compile(
     r"|xox[baprs]-[A-Za-z0-9-]{10,}"                              # slack token
     r"|AIza[0-9A-Za-z_\-]{35}",                                   # google api key
     re.I)
+
+
+# python with '-' as its script reads the program from stdin; under Git Bash an empty heredoc or /dev/null is a
+# character device (NUL), Python 3.14 takes it for a console and opens pyrepl, which loops on WinError 123 writing
+# tracebacks and hangs the whole command (six recurrences across four sessions in two days, each after the lesson was
+# written down). So it is refused, not warned (20 Oct 2026). PYDASH_GUARD=0 turns it off.
+_PY = re.compile(r"^(?:py|python[0-9.]*)(?:\.exe)?$", re.I)
+
+
+def _python_dash(cmd):
+    """The first command segment that runs python with '-' as the script, or ''."""
+    import shlex
+    # PY=.../python.exe; $PY - : the interpreter behind a variable set in the same command (shell state does not
+    # persist between calls). It once walked past this guard that way and spun for 90 s (1 Nov 2026).
+    py_vars = {n for n, v in re.findall(r"(?:^|[\s;&|])([A-Za-z_][A-Za-z0-9_]*)=[\"']?([^\s\"';|&]+)", cmd or "")
+               if _PY.match(os.path.basename(v.replace("\\", "/")))}
+    for seg in re.split(r"\n|;|&&|\|\||\|", cmd or ""):
+        try:
+            toks = shlex.split(seg.strip(), posix=True)
+        except ValueError:
+            continue
+        while toks and re.match(r"^[A-Za-z_][A-Za-z0-9_]*=", toks[0]):   # VAR=x python ...
+            toks = toks[1:]
+        if toks and toks[0] in ("timeout", "nohup", "time", "exec") and len(toks) > 1:
+            toks = toks[2:] if toks[0] == "timeout" and len(toks) > 2 else toks[1:]
+        if toks:
+            m = re.match(r"^\$\{?([A-Za-z_][A-Za-z0-9_]*)\}?$", toks[0])
+            if m and m.group(1) in py_vars:
+                toks[0] = "python"
+        if not toks or not _PY.match(os.path.basename(toks[0].replace("\\", "/"))):
+            continue
+        i = 1
+        while i < len(toks):
+            t = toks[i]
+            if t == "-":
+                return seg.strip()[:120]
+            if t in ("-c", "-m") or not t.startswith("-"):
+                break
+            i += 2 if t in ("-X", "-W") else 1
+    return ""
 
 
 def _score(text):
@@ -147,6 +234,131 @@ def _score(text):
             if label == "a LIVE production action":
                 live_action = True
     return hits
+
+
+# A command that only READS (grep, cat, a brain recall ...) cannot start a service or change the live system, so a
+# production word inside its pattern or query is a mention, not an action. Before 31 Oct 2026 a recall whose question
+# named a live service, and a grep for this file's own alarm text, each raised the full LIVE-action alarm; an alarm
+# that fires on reads is the wallpaper this hook warns about. Every segment must be a reader; ssh, any other python
+# script, a launcher, $( ) or a backtick keeps the full scoring.
+_READERS = {"grep", "egrep", "fgrep", "rg", "cat", "head", "tail", "less", "wc", "ls", "echo", "printf", "cd", "pwd",
+            "sort", "uniq", "cut", "tr", "cmp", "diff", "stat", "file", "test", "[", "true", "false", "date",
+            "Select-String", "Get-Content", "Get-ChildItem", "Test-Path", "Measure-Object", "Select-Object", "Write-Output"}
+_READ_SCRIPTS = {"brain.py": {"recall", "node", "neighbors", "search", "show"}, "math_recall.py": None,
+                 "problem_recall.py": None}
+_SHELL_KW = {"do", "then", "else", "elif", "if", "while", "until", "!"}
+
+
+def _read_only(cmd):
+    """True when every segment of a shell command only reads files or queries the brain."""
+    if not cmd or "`" in cmd or "$(" in cmd or "<(" in cmd:
+        return False
+    for stages in _split_cmd(cmd):
+        for seg in stages:
+            if _seg_kind(seg) not in ("empty", "reader"):
+                return False
+    return True
+
+
+# Scripts whose arguments are TEXT for a record (a checklist line, a mesh message, a memory), not an action: a
+# production word in "done T-1 'the service now restarts'" is a mention. Before 1 Nov 2026 such a line raised the full
+# LIVE alarm. Only the named subcommands count; a segment holding $( ) or a backtick is never masked, because the
+# shell runs those inside double quotes.
+_NOTE_SCRIPTS = {
+    "task_checklist_hook.py": {"working", "note", "done", "blocked", "drop", "reopen", "list"},
+    "checklist.py": {"working", "note", "done", "blocked", "drop", "reopen", "list"},
+    "agent_mesh.py": {"send", "hello", "pulse", "claim", "release", "bye", "digest", "inbox", "status", "assert",
+                      "ack", "--json"},
+    "brain.py": {"remember", "dream-about"},
+    "fleet_board.py": {"broadcast", "ack", "check"},
+    "live_inbox.py": {"event"},
+}
+
+
+def _seg_kind(seg):
+    """'empty', 'reader' (only reads), 'note' (records text), or 'other' for one shell segment."""
+    import shlex
+    seg = seg.strip()
+    if not seg or seg in ("done", "fi", "esac", "{", "}", "(", ")"):
+        return "empty"
+    try:
+        # posix shlex eats the backslashes of a Windows path (C:\Users\...\x.py), so normalise them first
+        toks = shlex.split(seg.replace("\\", "/"), posix=True)
+    except ValueError:
+        return "other"
+    while toks and toks[0] in _SHELL_KW | {"{", "("}:
+        toks = toks[1:]
+    while toks and re.match(r"^[A-Za-z_][A-Za-z0-9_]*=", toks[0]):
+        toks = toks[1:]
+    if toks and toks[0] == "timeout" and len(toks) > 2:
+        toks = toks[2:]
+    if not toks:
+        return "empty"
+    head = os.path.basename(toks[0].replace("\\", "/"))
+    if head == "for":
+        return "empty"
+    if head in _READERS:
+        if head in ("grep", "rg") and any(t in ("--exec", "-exec") for t in toks):
+            return "other"
+        return "reader"
+    if head == "sed" and "-n" in toks and not any(t.startswith("-i") for t in toks):
+        return "reader"
+    if _PY.match(head):
+        args = [t for t in toks[1:] if not t.startswith("-")]
+        if args:
+            script = os.path.basename(args[0].replace("\\", "/"))
+            if script in _READ_SCRIPTS:
+                subs = _READ_SCRIPTS[script]
+                if subs is None or (len(args) > 1 and args[1] in subs):
+                    return "reader"
+            if script in _NOTE_SCRIPTS:
+                rest = toks[toks.index(args[0]) + 1:]
+                sub = next((t for t in rest if not t.startswith("-") or t == "--json"), "")
+                if sub in _NOTE_SCRIPTS[script]:
+                    return "note"
+    return "other"
+
+
+def _split_cmd(cmd):
+    """[[stage, ...], ...]: pipelines split on newline ; && || and stages on |, OUTSIDE quotes. A plain regex split
+    cut quoted note text at its ';' and scored the pieces as commands (a brain.py remember whose --evidence held a
+    ';'). An unclosed quote returns the whole command as one stage (never masked)."""
+    pipes, stages, cur, q, i, s = [], [], [], "", 0, cmd or ""
+    while i < len(s):
+        c = s[i]
+        if q:
+            cur.append(c)
+            if c == "\\" and q == '"' and i + 1 < len(s):
+                cur.append(s[i + 1]); i += 2; continue
+            if c == q:
+                q = ""
+            i += 1; continue
+        if c in "'\"":
+            q = c; cur.append(c); i += 1; continue
+        two = s[i:i + 2]
+        if two in ("&&", "||") or c in "\n;":
+            stages.append("".join(cur)); pipes.append(stages); stages, cur = [], []
+            i += 2 if two in ("&&", "||") else 1; continue
+        if c == "|":
+            stages.append("".join(cur)); cur = []; i += 1; continue
+        cur.append(c); i += 1
+    if q:
+        return [[s]]
+    stages.append("".join(cur)); pipes.append(stages)
+    return pipes
+
+
+def _action_text(cmd):
+    """The command with reader segments and note-writer segments removed: what the live-action labels are scored on.
+    A segment holding $( ), a backtick or <( ) is kept whole, as is anything shlex cannot parse."""
+    keep = []
+    for stages in _split_cmd(cmd):
+        pipeline = "|".join(stages)
+        # a reader piped into anything that runs ("grep -r x . | xargs python") feeds that stage: keep the whole pipeline
+        if "`" in pipeline or "$(" in pipeline or "<(" in pipeline or \
+                any(_seg_kind(s) == "other" for s in stages):
+            keep.append(pipeline)
+    return "\n".join(keep)
 
 
 def main():
@@ -187,6 +399,29 @@ def main():
                     "asked to run one on the LIVE production host, do that there with their "
                     "confirmation - not here.")}}))
             return
+        # REFUSED, not warned: a mesh lease on a literal "$name" (see _mesh_literal_dollar). MESH_DOLLAR_GUARD=0 turns it off.
+        if ev == "PreToolUse" and data.get("tool_name") == "Bash" and os.environ.get("MESH_DOLLAR_GUARD", "1") != "0":
+            _res = _mesh_literal_dollar((data.get("tool_input", {}) or {}).get("command", "") or "")
+            if _res:
+                sys.stdout.write(json.dumps({"hookSpecificOutput": {"hookEventName": "PreToolUse",
+                    "permissionDecision": "deny",
+                    "permissionDecisionReason": ("REFUSED (mesh literal dollar): the resource %s would reach the mesh as "
+                        "a literal '$name'. The Bash tool halves a double backslash and bash then reads backslash-dollar "
+                        "as an escaped dollar, so the lease would cover no file while the command exits 0. Write the path "
+                        "with forward slashes (C:/Users/<you>/...), or keep the whole path in the variable, or put the "
+                        "loop in a script file." % _res[:160])}}))
+                return
+        # REFUSED, not warned: python with '-' as its script (see _python_dash).
+        if ev == "PreToolUse" and data.get("tool_name") == "Bash" and os.environ.get("PYDASH_GUARD", "1") != "0":
+            _seg = _python_dash((data.get("tool_input", {}) or {}).get("command", "") or "")
+            if _seg:
+                sys.stdout.write(json.dumps({"hookSpecificOutput": {"hookEventName": "PreToolUse",
+                    "permissionDecision": "deny",
+                    "permissionDecisionReason": ("REFUSED (python dash): '%s' runs python with '-' as the script. Under "
+                        "Git Bash an empty heredoc or /dev/null reads as a console, Python opens its REPL and loops on "
+                        "WinError 123, hanging the whole command. Write the script with the Write "
+                        "tool and run it by file name, or use python -c for one line." % _seg)}}))
+                return
         # On an EDIT/WRITE, the danger is not the text mentioning money/secrets/production - it's writing
         # a real credential VALUE (the token-leak shape). Score edits on that alone, so the gut stops
         # crying wolf on every memory/hook edit that quotes a risky word or the word "secret" (the dream's
@@ -197,6 +432,15 @@ def main():
             hits = {"a secret / security credential": 3} if SECRET_VALUE.search(text) else {}
         else:
             hits = _score(text)
+            if ev == "PreToolUse" and tool in ("Bash", "PowerShell"):
+                # live-action labels count only on what the command RUNS: reader segments and the text arguments of
+                # note writers (checklist, mesh, brain remember) are dropped first; other labels stay as scored.
+                _left = _score(_action_text((data.get("tool_input", {}) or {}).get("command", "") or ""))
+                for _lab in ("a LIVE production action", "the live production stack"):
+                    if _lab in _left:
+                        hits[_lab] = _left[_lab]
+                    else:
+                        hits.pop(_lab, None)
         if not hits:
             _emit_guard(ev, guard)
             return
@@ -243,8 +487,8 @@ def main():
                     "reversible path; a mistake here costs more than usual, so trade speed for care.")
         out = {"hookSpecificOutput": {"hookEventName": ev,
                                       "additionalContext": "[danger-sense] " + body + ("\n" + guard if guard else "")}}
-        if ev == "PreToolUse":
-            out["hookSpecificOutput"]["permissionDecision"] = "allow"
+        # No permissionDecision: a PreToolUse warning that also said "allow" skipped the permission prompt of the
+        # very call it warned about (until 29 Sep 2026). The context reaches the model without a decision.
         sys.stdout.write(json.dumps(out))
     except Exception:
         return
