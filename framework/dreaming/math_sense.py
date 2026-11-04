@@ -272,6 +272,25 @@ WEAK_ANCHORS_2 = re.compile(
 
 
 
+# LATEX ACCENTS FOLD (MATHBRAIN_LATEX_ACCENTS, default on; 25 Sep 2026). A proof pasted from its LaTeX
+# source writes H\"older, Poincar\'e, Erd\H{o}s, \v{C}ech; the prefilter reads H\"older as "h" and "older" and the curated names
+# never see it, so a proof citing "H\"older's inequality" got no Hölder card. The accent macro folds to its letter before the gate
+# and retrieval: the symbol accents (\" \' \` \^) inside a word only - a JSON \" at a word start is left alone - and the letter
+# accents (\H \v \c \u \k \r) with one braced letter anywhere.
+LATEX_ACCENTS_ON = os.environ.get("MATHBRAIN_LATEX_ACCENTS", "1").strip() not in ("0", "off", "false", "")
+_LATEX_ACC_BR = re.compile(r"\{\\[\"'`^]([A-Za-z])\}")
+_LATEX_ACC_SYM = re.compile(r"(?<=[A-Za-z])\\[\"'`^](?:\{([A-Za-z])\}|([A-Za-z]))")
+_LATEX_ACC_LET = re.compile(r"\\[Hvcukr]\{([A-Za-z])\}")
+
+
+def _latex_accents(text):
+    if not LATEX_ACCENTS_ON or not text or "\\" not in text:
+        return text
+    t = _LATEX_ACC_BR.sub(r"\1", text)
+    t = _LATEX_ACC_SYM.sub(lambda m: m.group(1) or m.group(2), t)
+    return _LATEX_ACC_LET.sub(r"\1", t)
+
+
 # --- candidate additions (gate defect fix) ------------------------------------
 # The \b before the subscript variable is load-bearing. Without it, `fb_in1k` inside a
 # model name like DeiT-Base-Dist.patch16_224.fb_in1k reads as "b subscript i", and so do
@@ -1846,6 +1865,7 @@ def main():
     except Exception:
         return
     prompt = (data.get("prompt") or "")[:8000]
+    prompt = _latex_accents(prompt)
     _headless_budget(prompt)
     if len(prompt) < 12 or not _math_gate(prompt):
         # HARNESS RUNS ONLY (2026-09-14). This gate fires on every non-mathematical prompt in every
