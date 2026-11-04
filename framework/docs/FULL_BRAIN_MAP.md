@@ -76,6 +76,7 @@ itself off and `agent_tools/math_recall.py` prints `fast path OFF` with the reas
 |---|---|---|
 | Agent mesh (claims, leases, handoffs) | `mesh/agent_mesh.py`, `claim_gate.py`, `PROTOCOL.md` | `mesh/tests/`, `scripts/smoke_framework.py` |
 | Task checklist | `dreaming/checklist.py`, `task_checklist_hook.py` | |
+| One brain on several computers (fleet inbox, memories copied across, insert-only) | `dreaming/fleet_board.py`, `fleet_inbox_hook.py`, `memory_pull.py` | `dreaming/test_memory_pull.py` |
 | Fleet, governor, delegation | `fleet/`, `governor/`, `delegation/` | `python -m pytest governor -q` (from `framework/`) |
 
 ## Running everything
