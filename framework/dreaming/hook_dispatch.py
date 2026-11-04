@@ -1022,9 +1022,11 @@ def _owner_words(payload):
 def _entry_basename(cmd, args):
     """The script file an entry runs, whatever process runs it (a content hook must be recognised on either path). Until
     29 Sep this asked as_python_argv, which answers None for a hook forced onto its own process, so the two project-memory
-    hooks in HEADLESS_SKIP were never recognised and never skipped (critical-path audit D04)."""
+    hooks in HEADLESS_SKIP were never recognised and never skipped (critical-path audit D04). ntpath splits on both
+    separators, so a settings file written on Windows names the same hooks on Linux and macOS."""
     try:
-        return os.path.basename(script_argv(cmd, args)[0] or "").lower()
+        import ntpath
+        return ntpath.basename(script_argv(cmd, args)[0] or "").lower()
     except Exception:
         return ""
 

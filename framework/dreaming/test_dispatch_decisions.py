@@ -34,6 +34,7 @@ import importlib.machinery
 import importlib.util
 import io
 import json
+import ntpath
 import os
 import shutil
 import sys
@@ -202,7 +203,7 @@ def identity_controls(m):
         return [("python", ["-S", "-B", pm]), ("python", ["-S", ph]), ("python", [r"C:\x\other_hook.py"])]
 
     def fake_sub(cmd, args, payload, budget=None):
-        ran_.append(os.path.basename(args[-1]))
+        ran_.append(ntpath.basename(args[-1]))
         return 0, "", ""
     saved = os.environ.get("BRAIN_HEADLESS_DIET")
     try:
