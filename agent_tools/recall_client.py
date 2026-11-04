@@ -27,7 +27,7 @@ def try_server(argv):
         if endpoint['stamp'] != stamp or endpoint['environment'] != environment:
             return None
         signature=endpoint['code']
-        timeout = min(10.0,max(.01,float(os.environ.get('MATH_RECALL_SERVER_TIMEOUT','2.0'))))
+        timeout = min(60.0,max(.01,float(os.environ.get('MATH_RECALL_SERVER_TIMEOUT','30.0'))))
         deadline = time.monotonic()+timeout
         with socket.create_connection(('127.0.0.1',int(endpoint['port'])),timeout=min(.1,timeout)) as sock:
             sock.settimeout(timeout)
