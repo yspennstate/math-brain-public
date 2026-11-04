@@ -1858,13 +1858,96 @@ def _tuple_exact_first(query, hits):
         return hits
 
 
+# A HARD WALL-CLOCK CEILING (12 Oct 2026; MATHBRAIN_HARD_DEADLINE_S, default 60 s; headless prompts
+# MATHBRAIN_HEADLESS_HARD_DEADLINE_S, default 85 s; 0 = off, the old unbounded path, byte for byte).
+# The budget above is checked at two points only (before ranking, and the integrity read's deadline), so a stage
+# between them is unbounded - and since 8 Oct the dispatcher runs this hook IN ITS OWN PROCESS (hook_dispatch_allow.json),
+# where the 90 s per-hook timeout of a subprocess never applies. Measured in production, 1-12 Oct (mathbrain_silence.tsv,
+# real sessions only): 17 prompts spent 47-175 s loading before the hook gave up and served nothing
+# (budget_exhausted_before_ranking), and hook_dispatch.log holds math_sense runs of 83, 88, 92 and 190 s - the prompt
+# waits that long for a block that mostly never comes. Now the body runs on a daemon thread and the hook waits at most
+# the ceiling: on time, the block goes out exactly as before; past it, the hook returns silently (silence note
+# hard_deadline) and the late body can write nothing - its one write goes through _emit, which refuses once the hook
+# has given up, so a late block can never reach the dispatcher's real stdout or be recorded as served. Headless
+# workers keep the 85 s the 24 Sep sizing wanted under the dispatcher's 90 s; an interactive prompt gets 60 s, twice
+# the 30 s budget the stages are sized for.
+HARD_DEADLINE_S_DEFAULT = "60"
+HEADLESS_HARD_DEADLINE_S_DEFAULT = "85"
+_EMIT = {"lock": None, "abandoned": False, "exc": None}
+
+
+def _hard_deadline_s(prompt):
+    """The ceiling for this prompt in seconds; 0 or less = no ceiling (the body runs on the calling thread)."""
+    try:
+        if (prompt or "").lstrip().startswith(HEADLESS_MARKER):
+            return float(os.environ.get("MATHBRAIN_HEADLESS_HARD_DEADLINE_S", HEADLESS_HARD_DEADLINE_S_DEFAULT) or 0)
+        return float(os.environ.get("MATHBRAIN_HARD_DEADLINE_S", HARD_DEADLINE_S_DEFAULT) or 0)
+    except Exception:
+        return 0.0
+
+
+def _emit(out, text):
+    """Write the hook's one output unless the ceiling has passed. True when written."""
+    lock = _EMIT["lock"]
+    if lock is None:
+        out.write(text)
+        out.flush()
+        return True
+    with lock:
+        if _EMIT["abandoned"]:
+            return False
+        out.write(text)
+        out.flush()
+        return True
+
+
+def _main_body_guarded(data, out):
+    try:
+        _main_body(data, out)
+    except BaseException as exc:          # the body's own try covers almost everything; this is the rest
+        _EMIT["exc"] = exc
+        try:
+            _silence_note(data, "body_%s:%s" % (type(exc).__name__, str(exc)[:80]))
+        except Exception:
+            pass
+
+
 def main():
-    started = time.time()
+    """Read the UserPromptSubmit JSON; run the body under the hard ceiling. Returns "abandoned" when it gave up."""
     try:
         data = json.load(sys.stdin)
     except Exception:
         return
-    prompt = (data.get("prompt") or "")[:8000]
+    if not isinstance(data, dict):
+        return                              # a malformed payload is not a prompt: silent, fast, exit 0
+    out = sys.stdout
+    _p = data.get("prompt")
+    hard = _hard_deadline_s(_p if isinstance(_p, str) else "")
+    if hard <= 0:
+        _EMIT["lock"] = None
+        return _main_body(data, out)
+    import threading
+    _EMIT["lock"] = threading.Lock()
+    _EMIT["abandoned"] = False
+    _EMIT["exc"] = None
+    t0 = time.time()
+    worker = threading.Thread(target=_main_body_guarded, args=(data, out), name="math_sense_body", daemon=True)
+    worker.start()
+    worker.join(hard)
+    if worker.is_alive():
+        with _EMIT["lock"]:
+            _EMIT["abandoned"] = True
+        _silence_note(data, "hard_deadline:%.0fs" % (time.time() - t0))
+        return "abandoned"
+    if _EMIT["exc"] is not None and os.environ.get("MATHBRAIN_DEBUG"):
+        raise _EMIT["exc"]
+    return None
+
+
+def _main_body(data, out):
+    started = time.time()
+    prompt = data.get("prompt")
+    prompt = (prompt if isinstance(prompt, str) else "")[:8000]
     prompt = _latex_accents(prompt)
     _headless_budget(prompt)
     if len(prompt) < 12 or not _math_gate(prompt):
@@ -2576,7 +2659,7 @@ def main():
         if not block:
             _silence_note(data, "empty_block:%d_pieces" % len(pieces))
             return
-        sys.stdout.write(
+        if not _emit(out, 
             json.dumps(
                 {
                     "hookSpecificOutput": {
@@ -2585,8 +2668,8 @@ def main():
                     }
                 }
             )
-        )
-        sys.stdout.flush()
+        ):
+            return                          # the hard ceiling passed while this body ran: nothing was served
         if emitted_ids:
             _already_injected(sess_for_guard, emitted_ids)
         sess = data.get("session_id") or ""
@@ -2736,4 +2819,21 @@ if __name__ == "__main__":
         raise
     except Exception:
         pass
-    main()
+    _rc = main()
+    # A hook run as its own process (as some agent runtimes do) that gave up at the hard ceiling leaves its body on a daemon thread,
+    # possibly inside numpy or onnxruntime; ending the process here, with nothing written, keeps interpreter shutdown from
+    # waiting on or tearing down that thread. Never in the dispatcher's process, where stdout is the dispatcher's capture
+    # (io.StringIO) and os._exit would end every other hook of the prompt: only when this file is the process's own script
+    # and stdout is the process's own.
+    _own = False
+    try:
+        _own = (sys.stdout is sys.__stdout__
+                and os.path.abspath(sys.argv[0] or "") == os.path.abspath(__file__))
+    except Exception:
+        _own = False
+    if _rc == "abandoned" and _own:
+        try:
+            sys.stdout.flush()
+        except Exception:
+            pass
+        os._exit(0)
