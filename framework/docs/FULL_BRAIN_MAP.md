@@ -59,6 +59,7 @@ itself off and `agent_tools/math_recall.py` prints `fast path OFF` with the reas
 | Hook wiring and the dispatcher | `dreaming/hook_dispatch.py`, `hook_dispatch_list.json`, `hooks/settings.hooks.template.json`, `hooks/hooks.codex.template.json` | `dreaming/test_dispatch_decisions.py`, `test_verify_hooks.py`, `test_hook_stdin_utf8.py` |
 | Waking up (the SessionStart ritual) | `hooks/wake_brain.py`, `hooks/brain_startup.template.md` | `scripts/smoke_framework.py` |
 | Reflexes compiled from mistakes | `dreaming/instincts.py`, `instinct_prime.py`, `codex_reflex_hook.py`, `reflex_precision.py` | `dreaming/test_codex_reflex_hook.py`, `test_reflex_precision_paths.py`, `test_reflex_commit_after_emit.py` |
+| Danger sense and command guards (refuses `python -`, a mesh lease on a literal `$name`; reads and notes are not actions) | `dreaming/danger_mode.py` | `dreaming/test_python_dash_guard.py`, `test_mesh_literal_dollar.py` |
 | Notes as hints | `docs/NOTES_ARE_HINTS.md` | `dreaming/test_judge_reasons.py` |
 | Liveness (a faculty that quietly stops) | `dreaming/hook_liveness.py`, `brain_health.py` | `dreaming/test_brain_recall_liveness.py` |
 
