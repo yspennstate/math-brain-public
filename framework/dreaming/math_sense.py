@@ -2844,6 +2844,177 @@ def _reset_cov_agree_state():
     _SEMTOP_WHY.clear()
 
 
+# THE BLOCK MUST CARRY THE QUESTION (MATHBRAIN_BLOCK_COV, default 0.35). The last gate before the integrity read asks how
+# much of the question the block's best card actually carries: the idf share of the question's store-known tokens that
+# occur in the card's title and body (AUC 0.95 between a right first card and a confident card on a question whose answer
+# the store does not hold). Measured: blocks whose best card covers less than 0.40 of the question were right 6 times and
+# false fires 11 times, blocks from 0.40 to 0.45 about half and half. So below the floor the hook stays silent. Only on
+# plain questions (no digits, no formula tokens, at most 1,500 characters): a pinned title or an argument-shaped prompt,
+# where one card covers a small share of a long proof by design, is never judged by it. 0 is off.
+def _block_cov_floor():
+    try:
+        return float(os.environ.get("MATHBRAIN_BLOCK_COV", "0.35") or 0)
+    except Exception:
+        return 0.0
+
+
+# A HOUSE FLOOR (MATHBRAIN_BLOCK_COV_HOUSE, default 0.25; MATHBRAIN_BLOCK_COV_HOUSE_MODE lead|any, default lead). A block
+# that leads with one of this project's own records (_is_house) is judged at 0.25 instead of the floor above. A strong
+# model already knows a textbook theorem; it cannot know the project's own results, so this is where a lower floor pays.
+# Measured: on a bank of questions about the project's own results, 20 held-out questions left silence, 16 of them to the
+# answer card first, with the textbook and absent-target banks unchanged. Mode "any" (the block merely carries one of the
+# project's records) was not taken. 0 or empty switches it off.
+def _block_cov_floor_for(chosen, floor):
+    """The floor a block is judged at: the house floor when it is lower and the block leads with (mode any: carries) one of
+    this project's records; otherwise the floor itself."""
+    try:
+        raw = os.environ.get("MATHBRAIN_BLOCK_COV_HOUSE", "0.25").strip()
+        if raw in ("", "0", "off", "false") or not chosen:
+            return floor
+        house = float(raw)
+        if house >= floor:
+            return floor
+        if os.environ.get("MATHBRAIN_BLOCK_COV_HOUSE_MODE", "lead").strip() == "lead":
+            return house if _is_house(chosen[0].node) else floor
+        return house if any(_is_house(h.node) for h in chosen) else floor
+    except Exception:
+        return floor
+
+
+def _cov_agree_wide(chosen, st):
+    """COV_AGREE's test at the block floor (MATHBRAIN_COV_AGREE_WIDE, default 2). 0 = the semantic top is the lead card.
+    1 = also when the semantic top is a same-title copy of the lead (titles equal after case and punctuation folding).
+    2 = also when the semantic top is any card of the block; it is moved to the front. Measured on a fresh bank through
+    the hook path: 0 -> 70/57/8 served/first/silent, 2 -> 72/59/6, the two rows gained and nothing else changed."""
+    if not chosen or not st:
+        return False
+    if _same_card(chosen[0].node.id, st):
+        return True
+    try:
+        wide = int(os.environ.get("MATHBRAIN_COV_AGREE_WIDE", "2") or 0)
+    except ValueError:
+        wide = 0
+    if wide <= 0:
+        return False
+    fold = lambda t: " ".join(re.sub(r"[^a-z0-9]+", " ", (t or "").casefold()).split())
+    try:
+        from math_brain.store import ResearchStore
+        with ResearchStore.open_read_only(STORE_PATH) as store:
+            n = store.get_node(st) if len(st) >= 64 else None
+            if n is None:
+                row = store.connection.execute("SELECT id FROM nodes WHERE id LIKE ? LIMIT 2", (st + "%",)).fetchall()
+                n = store.get_node(row[0][0]) if len(row) == 1 else None
+    except Exception:
+        n = None
+    if n is not None and fold(n.title) and fold(n.title) == fold(chosen[0].node.title):
+        return True
+    if wide >= 2:
+        for i, h in enumerate(chosen[1:], 1):
+            if _same_card(h.node.id, st):
+                chosen.insert(0, chosen.pop(i))
+                return True
+    return False
+
+
+def _card_index_text(node):
+    try:
+        import math_brain.retrieval as _R
+        if getattr(_R, "EXPANSION", None) and node.id in _R.EXPANSION:
+            return _R.index_text(node)
+    except Exception:
+        pass
+    return (node.title or "") + " " + (node.body or "")
+
+
+def _block_best_coverage(prompt, hits):
+    """The largest idf share of the prompt's store-known tokens carried by one card of the block (None: cannot tell)."""
+    import math
+    import math_prefilter
+    data = math_prefilter.load(STORE_PATH)
+    if not data:
+        return None
+    n_docs, post = data["n"], data["post"]
+    qt = {t for t in math_prefilter.tokens(prompt) if t in post}
+    if not qt:
+        return None
+
+    def _idf(t):
+        df = len(post[t])
+        return math.log(1.0 + (n_docs - df + 0.5) / (df + 0.5))
+
+    wq = sum(_idf(t) for t in qt) or 1.0
+    best = 0.0
+    for h in hits:
+        ct = set(math_prefilter.tokens(_card_index_text(h.node)))
+        best = max(best, sum(_idf(t) for t in qt & ct) / wq)
+    return best
+
+
+# THE RARE-TERM EXEMPTION (MATHBRAIN_COV_RARE_EXEMPT, default on; MATHBRAIN_COV_RARE_DF, default 5). A question in other
+# words covers few of the card's words, but it keeps the rare technical term ("fork-join", "Sinkhorn", "hyperuniformity")
+# the name exemption cannot see when it is not capitalised. A term at most COV_RARE_DF store cards carry, shared by the
+# prompt and the lead card's title, lifts the floor.
+COV_RARE_EXEMPT = os.environ.get("MATHBRAIN_COV_RARE_EXEMPT", "1").strip() not in ("0", "off", "false", "")
+try:
+    COV_RARE_DF = int(os.environ.get("MATHBRAIN_COV_RARE_DF", "5") or 5)
+except ValueError:
+    COV_RARE_DF = 5
+
+
+def _block_cov_verdict(prompt, chosen, pinned_ids):
+    """None when the block is not judged by the coverage floor or passes it; "block_coverage:<cov>" when it is silenced;
+    "coverage_agree_block:<cov>" when it is under the floor but the word and meaning channels agree (COV_AGREE): the
+    agreed card is recorded in _COV_AGREED and the block passes."""
+    floor = _block_cov_floor()
+    if not (floor > 0 and chosen and not pinned_ids and len(prompt) <= 1500 and not ARGUMENT_SHAPE.search(prompt)):
+        return None
+    # PLAIN QUESTIONS ONLY: word coverage undercounts a prompt that carries digits or formulas, so the floor judges only a
+    # prompt with neither (at 0.40 on every prompt it silenced every enumerated lattice-walk lookup and research steps
+    # whose notation no card repeats word for word)
+    plain = not re.search(r"\d", prompt)
+    if plain and os.environ.get("MATHBRAIN_BLOCK_COV_PLAIN_ONLY", "1") != "0":
+        try:
+            from math_brain.retrieval import index_signals as _isg
+            plain = not _isg(prompt).math_tokens
+        except Exception:
+            plain = False
+    elif os.environ.get("MATHBRAIN_BLOCK_COV_PLAIN_ONLY", "1") == "0":
+        plain = True
+    if not plain:
+        return None
+    # NAMED SUBJECT: a served card whose title carries a name the prompt uses (an acronym, a proper name - _name_tokens)
+    # is on the prompt's subject however few of its other words the card repeats. A capitalised word that opens a
+    # sentence is grammar, not a name.
+    if os.environ.get("MATHBRAIN_BLOCK_COV_NAME_EXEMPT", "1") != "0":
+        try:
+            nm = _name_tokens(re.sub(r"(^|[.!?:;]\s+)[A-Z][a-z]+\b", r"\1", prompt.strip()))
+            if nm and any(nm & set(re.findall(r"[a-z0-9]+", (h.node.title or "").casefold())) for h in chosen):
+                return None
+        except Exception:
+            pass
+    if COV_RARE_EXEMPT:
+        try:
+            import math_prefilter as _mpf
+            pdata = _mpf.load(STORE_PATH)
+            if pdata:
+                post = pdata["post"]
+                shared = set(_mpf.tokens(prompt)) & set(_mpf.tokens(chosen[0].node.title or ""))
+                if any(len(t) >= 4 and t in post and len(post[t]) <= COV_RARE_DF for t in shared):
+                    return None
+        except Exception:
+            pass
+    try:
+        cov = _block_best_coverage(prompt, chosen)
+    except Exception:
+        cov = None
+    if cov is None or cov >= _block_cov_floor_for(chosen, floor):
+        return None
+    if COV_AGREE and _cov_agree_wide(chosen, _semantic_top(prompt)):
+        _COV_AGREED["block"] = chosen[0].node.id
+        return "coverage_agree_block:%.3f" % cov
+    return "block_coverage:%.3f" % cov
+
+
 def _cut_unless_named(prompt, hits):
     """_incoherent_weak_block on these cards, None when the lead card's title is the result the prompt names."""
     c = _incoherent_weak_block(prompt, [str(h.node.id) for h in hits])
@@ -3715,6 +3886,12 @@ def _main_body(data, out):
                                                                _cprime_chosen, _subq_named)
             except Exception:
                 pass
+        _bcv = _block_cov_verdict(prompt, chosen, pinned_ids)
+        if _bcv and _bcv.startswith("coverage_agree_block"):
+            _silence_note(data, _bcv, harness_only=True)
+        elif _bcv:
+            _silence_note(data, _bcv)
+            return
         if not chosen:
             _silence_note(data, "no_chosen_after_select")
             return
