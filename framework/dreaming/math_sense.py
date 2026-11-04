@@ -2502,6 +2502,58 @@ def _merge_subquery_blocks(blocks, chosen, lead=False):
     return merged
 
 
+def _named_slots(blocks, merged, cap, base, named):
+    """The cards a merged sub-query list serves, and whether the block budget widens for them.
+
+    A FIFTH CARD FOR A FIFTH NAMED RESULT (MATHBRAIN_NAMED_EXTRA_SLOT, default on; 25 Sep). merged opens with each
+    named block's first card, in order; when more distinct results than the cap came back title-matched, the next of
+    them gets one more slot - never a whole-question card - and the block budget widens for it.
+
+    NAMED CARDS AFTER THE WHOLE-QUESTION BLOCK (MATHBRAIN_SUBQ_APPEND=N, default 4): on a named argument the
+    whole-question block (base, the cards chosen before the sub-queries) is kept whole and up to N named cards with
+    new titles are appended after it, so a named card never pushes the whole-question answer out of the last slot.
+    """
+    extra = False
+    d0 = []
+    if named and NAMED_TITLEMATCH and os.environ.get("MATHBRAIN_NAMED_EXTRA_SLOT", "1").strip() not in ("0", "off", "false", ""):
+        d0k = set()
+        for b in blocks:
+            if b and b[0].node.id not in d0:
+                k0 = _title_key(b[0].node.title, fold=True) if MERGE_TITLE_DEDUP else b[0].node.id
+                if k0 in d0k:
+                    continue
+                d0k.add(k0)
+                d0.append(b[0].node.id)
+    if len(d0) > cap and len(merged) > cap and merged[cap] is not None and merged[cap].node.id == d0[cap]:
+        chosen = [h for h in merged[:cap + 1] if h is not None]
+        extra = True
+    else:
+        chosen = [h for h in merged[:cap] if h is not None]
+    try:
+        n_app = int(os.environ.get("MATHBRAIN_SUBQ_APPEND", "4") or 0)
+    except Exception:
+        n_app = 0
+    if named and n_app > 0 and base:
+        keep = list(base)[:cap]
+        ids = {h.node.id for h in keep}
+        tks = {_title_key(getattr(h.node, "title", ""), fold=True) for h in keep}
+        add = []
+        for h in merged:
+            if h is None or h.node.id in ids:
+                continue
+            k = _title_key(getattr(h.node, "title", ""), fold=True)
+            if k and k in tks:
+                continue
+            add.append(h)
+            ids.add(h.node.id)
+            tks.add(k)
+            if len(add) >= n_app:
+                break
+        chosen = keep + add
+        extra = bool(add)
+    return chosen, extra
+
+
 def _subquery_block(query, prompt=None, exact_pass=False):
     """The block one sub-query earns on its own: prefilter -> ranker -> _select -> the on-topic floor. Hits, not ids.
 
@@ -2949,6 +3001,7 @@ def _main_body(data, out):
         # on the L6 bank every name matches a card and the block widens; on the absent-title control nothing
         # matches and it stays at three, which is where it was before any of this.
         _named_entries = 0
+        _named_extra = False   # a named result earned a card past the cap (see _named_slots)
         _quoted_n = 0
         _covered_titles = []   # the quoted names the pool can actually cover, IN ORDER - see the sub-query stage
         if _enum_max > 0 and not pinned_ids:
@@ -3255,6 +3308,7 @@ def _main_body(data, out):
         _trace_answers('after_attach', chosen)
         # the clause split (see _clause_subqueries): each tuple-carrying clause earns its own block; merged round-robin
         # ahead of the whole-question cards, three slots, pins untouched (a pinned prompt skips the split)
+        _pre_subq_chosen = list(chosen or [])
         if CLAUSE_SPLIT and prefilter_ids is not None and not pinned_ids:
             try:
                 _subq_named = False
@@ -3315,7 +3369,7 @@ def _main_body(data, out):
                         # a named sub-query keeps only the cards titled with the result it named
                         blocks = [[h for h in b if _named_title_match(q, h.node.title)] for q, b in zip(subs, blocks)]
                     merged = _merge_subquery_blocks(blocks, chosen, lead=_subq_named)
-                    chosen = [h for h in merged[:_cap] if h is not None]
+                    chosen, _named_extra = _named_slots(blocks, merged, _cap, _pre_subq_chosen, _subq_named)
             except Exception:
                 pass
         if not chosen:
@@ -3469,6 +3523,8 @@ def _main_body(data, out):
         _budget = MAX_BLOCK_CHARS
         if _named_entries > 3 and len(pieces) > 3:
             _budget = max(MAX_BLOCK_CHARS, len(header) + 760 * len(pieces))
+        if _named_extra and len(pieces) > 4:
+            _budget = max(_budget, len(header) + 760 * len(pieces))
         block, emitted_ids = _assemble_note_block(header, pieces, _budget)
         if block and len(emitted_ids) > 1 and MATH_USE_WEIGHT > 0:
             try:
