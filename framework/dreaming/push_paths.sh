@@ -1,12 +1,13 @@
 #!/usr/bin/env bash
 # Push exactly the named paths onto origin/main of a SHARED clone without touching its working tree or branch.
-# The tip is read ONCE (memory a_temp_index_push_that_reads_the_tip_twice_reverts_a_peer_2026_09_24); the new tree
+# The tip is read ONCE (reading it twice can revert a peer's commit); the new tree
 # must differ from its parent in exactly the named paths; nothing is pushed unless the secret scan prints clean.
 # The push holds the remote to the tip it built on (--force-with-lease): a remote rewound after the scan would otherwise
-# make commits reachable that the scan never covered (28 Sep, fleet02/B06 r63/r64); a refusal rebuilds on the new tip.
+# make commits reachable that the scan never covered (28 Sep); a refusal rebuilds on the new tip.
 # usage: push_paths.sh REPO "commit message" path1 [path2 ...]
 set -u
 REPO="$1"; MSG="$2"; shift 2
+HERE=$(cd "$(dirname "$0")" && pwd)   # before the cd: $0 may be relative to the caller's directory
 cd "$REPO" || exit 3
 export GIT_TERMINAL_PROMPT=0 GCM_INTERACTIVE=never PYTHONIOENCODING=utf-8
 ATTEMPTS=${PUSH_PATHS_ATTEMPTS:-8}
@@ -18,7 +19,21 @@ PRIV="refs/push_paths/$$/main"
 IDX=""
 trap 'rm -f "$IDX"; git update-ref -d "$PRIV" 2>/dev/null' EXIT
 trap 'exit 143' TERM INT   # without it a `timeout` kill skips the EXIT trap and leaves refs/push_paths/<pid> behind (29 Oct)
+# Time budget (31 Oct): an attempt on this repo can take minutes (fetch, read-tree, scan), and callers wrap the
+# script in `timeout`; with 12 attempts the 1500 s timeout killed it three times before the API fallback ever ran.
+# Once a scanned commit exists and the budget is spent, stop racing the tip and go to the fallback.
+T_START=$(date +%s)
+# A path the repo ignores is refused (1 Nov): update-index --add stages it whatever .gitignore says, and a memory mirror
+# that listed every memory handed this script the one memory kept off GitHub on purpose (it holds a live bot key); only
+# the secret scan stopped it. check-ignore reads the clone's own index, so a TRACKED file matching a pattern still pushes.
+if [ "${ALLOW_IGNORED:-0}" != "1" ]; then
+  IGN=$(printf '%s\n' "$@" | git check-ignore --stdin 2>/dev/null | head -3 | tr '\n' ' ')
+  if [ -n "$IGN" ]; then echo "REFUSED: ${IGN}is in .gitignore (set ALLOW_IGNORED=1 if intended)"; exit 3; fi
+fi
 for attempt in $(seq 1 "$ATTEMPTS"); do
+  if [ -n "${SIG0:-}" ] && [ $(( $(date +%s) - T_START )) -ge "${PUSH_PATHS_BUDGET:-480}" ]; then
+    echo "time budget spent after $((attempt - 1)) attempt(s); going to the API fallback"; break
+  fi
   # --refmap= : without it git ALSO updates refs/remotes/origin/main opportunistically and fails the same way (28 Oct 23:4x)
   git fetch -q --no-tags --refmap= origin "+refs/heads/main:$PRIV" || { echo "fetch failed"; exit 3; }
   P=$(git rev-parse "$PRIV") || exit 3
@@ -53,13 +68,19 @@ for attempt in $(seq 1 "$ATTEMPTS"); do
   # the EXIT trap set above removes $IDX too: an early exit used to leave a 30 MB index in Temp (34 found 22 Oct, 1.0 GB)
   export GIT_INDEX_FILE="$IDX"
   git read-tree "$P" || { echo "read-tree failed"; exit 3; }
-  for p in "$@"; do
-    [ -f "$p" ] || { echo "missing path $p"; exit 3; }
-    B=$(git hash-object -w -- "$p") || exit 3
-    MODE=$(git ls-tree "$P" -- "$p" | awk '{print $1}'); MODE=${MODE:-100644}   # keep the tracked mode
-    git update-index --add --cacheinfo "$MODE","$B","$p" || exit 3
-  done
-  T=$(git write-tree) || exit 3
+  # Staged in three git calls for the whole list (31 Oct): one hash-object, ls-tree and update-index per path cost
+  # ~25 s a file on the loaded box, so a 150-file push spent an hour here before it reached the scan.
+  for p in "$@"; do [ -f "$p" ] || { echo "missing path $p"; exit 3; }; done
+  mapfile -t BL < <(printf '%s\n' "$@" | git hash-object -w --stdin-paths)
+  [ "${#BL[@]}" -eq "$#" ] || { echo "hash-object gave ${#BL[@]} blob(s) for $# path(s)"; exit 3; }
+  declare -A MODES=()
+  while IFS= read -r -d '' rec; do meta=${rec%%$'\t'*}; MODES["${rec#*$'\t'}"]=${meta%% *}; done < <(git ls-tree -z "$P" -- "$@")
+  i=0
+  for p in "$@"; do printf '%s %s\t%s\0' "${MODES[$p]:-100644}" "${BL[$i]}" "$p"; i=$((i + 1)); done \
+    | git update-index -z --add --index-info || exit 3   # keeps each tracked path's mode
+  # --missing-ok (2 Nov): the shared clone is partial, so the default existence check fetched absent blobs from the
+  # remote one by one - 15+ min (a mirror push sat here 1.5 h); every blob here comes from origin/main or hash-object -w
+  T=$(git write-tree --missing-ok) || exit 3
   unset GIT_INDEX_FILE; rm -f "$IDX"
   CHANGED=$(git diff-tree -r --name-only "$P^{tree}" "$T" | sort)
   WANT=$(printf '%s\n' "$@" | sort)
@@ -71,20 +92,21 @@ for attempt in $(seq 1 "$ATTEMPTS"); do
   # 04:4x: five ledger rows). Refuse any push that REMOVES lines unless ALLOW_REMOVALS=1; checked by exact set
   # comparison in python (sort/comm disagree on non-ASCII lines and reported 337 phantom removals).
   if [ "${ALLOW_REMOVALS:-0}" != "1" ]; then
-    for p in "$@"; do
-      REMOVED=$(python -c "
+    # one python for every path (31 Oct; it was one per path); prints the first path that loses lines, or nothing
+    REMOVED=$(python -c "
 import subprocess, sys
 def blob(spec):
     r = subprocess.run(['git', 'show', spec], capture_output=True)
     return set(r.stdout.decode('utf-8', 'replace').splitlines()) if r.returncode == 0 else set()
-old, new = blob(sys.argv[1] + ':' + sys.argv[3]), blob(sys.argv[2] + ':' + sys.argv[3])
-print(len(old - new))
-" "$P" "$T" "$p")
-      if [ "$REMOVED" != "0" ]; then echo "REFUSED: $p would lose $REMOVED line(s) that origin/main has (set ALLOW_REMOVALS=1 if intended)"; exit 3; fi
-    done
+for p in sys.argv[3:]:
+    n = len(blob(sys.argv[1] + ':' + p) - blob(sys.argv[2] + ':' + p))
+    if n:
+        print(str(n) + ' ' + p); break
+" "$P" "$T" "$@")
+    if [ -n "$REMOVED" ]; then echo "REFUSED: ${REMOVED#* } would lose ${REMOVED%% *} line(s) that origin/main has (set ALLOW_REMOVALS=1 if intended)"; exit 3; fi
   fi
   C=$(git commit-tree "$T" -p "$P" -m "$MSG") || exit 3
-  SCAN=$(python "${SCANNER:-$HOME/.claude/dreaming/scan_secrets.py}" --range "$P..$C" 2>&1); SRC=$?
+  SCAN=$(python "${SCANNER:-$HERE/scan_secrets.py}" --range "$P..$C" 2>&1); SRC=$?
   echo "$SCAN" | tail -2
   if [ $SRC -ne 0 ] || ! echo "$SCAN" | grep -qx "secret scan clean"; then echo "REFUSED: scan not clean (rc $SRC)"; exit 2; fi
   SIG0="$SIG"; C0="$C"; PB="$P"
@@ -105,14 +127,40 @@ if [ -n "$SIG0" ] && [ "${PUSH_PATHS_API:-1}" = "1" ]; then
   if [ -n "$(git ls-tree "$PB" .github/workflows 2>/dev/null)" ] && ! printf '%s' "$MSG" | grep -q '\[skip ci\]'; then
     echo "API fallback skipped: the repo has push CI and the message lacks [skip ci]"; echo "gave up after $ATTEMPTS attempts"; exit 3
   fi
-  SLUG=$(git remote get-url origin | sed -E 's#^(https://github.com/|git@github.com:)##; s#\.git$##')
+  SLUG=$(git remote get-url origin | sed -E 's#^.*github\.com[:/]##; s#\.git$##')
   export PP_TOK=$(printf 'protocol=https\nhost=github.com\n\n' | GCM_INTERACTIVE=never git credential fill 2>/dev/null | sed -n 's/^password=//p')
   [ -n "$PP_TOK" ] || { echo "API fallback: no credential"; echo "gave up after $ATTEMPTS attempts"; exit 3; }
-  for p in "$@"; do
-    if [ "$(git hash-object -- "$p")" != "$(git rev-parse "$C0:$p")" ]; then echo "API fallback REFUSED: $p changed on disk since the scan"; exit 3; fi
+  # One hash-object and one ls-tree for the whole list (1 Nov): two git calls per path took 15+ minutes for 150 paths.
+  mapfile -t DH < <(printf '%s\n' "$@" | git hash-object --stdin-paths)
+  mapfile -t CH < <(for p in "$@"; do printf '%s\n' "$p"; done | python -c "
+import subprocess, sys
+ps = sys.stdin.read().splitlines()
+out = subprocess.run(['git', 'ls-tree', '-z', sys.argv[1], '--'] + ps, capture_output=True).stdout.decode('utf-8')
+m = {}
+for r in filter(None, out.split(chr(0))):
+    meta, p = r.split(chr(9), 1); m[p] = meta.split()[2]
+sys.stdout.buffer.write((chr(10).join(m.get(p, '-') for p in ps) + chr(10)).encode())
+" "$C0")
+  [ "${#DH[@]}" -eq "$#" ] && [ "${#CH[@]}" -eq "$#" ] || { echo "API fallback REFUSED: could not hash the paths"; exit 3; }
+  i=0; for p in "$@"; do
+    if [ "${DH[$i]}" != "${CH[$i]}" ]; then echo "API fallback REFUSED: $p changed on disk since the scan"; exit 3; fi
+    i=$((i+1))
   done
+  # Batched route first (1 Nov): one commit for every path through the Git Data API, the scanned blobs read from C0,
+  # a lost race retried in about two seconds on the new tip (the contents API below is one commit per path - 875 for
+  # a memory mirror). Exit 4 = the API is unusable here, so fall through to the contents API; 0 landed; else refused.
+  if [ -f "$HERE/push_paths_gitdata.py" ]; then
+    python "$HERE/push_paths_gitdata.py" "$SLUG" "$PB" "$C0" "$MSG" "$@"; GRC=$?
+    if [ $GRC -eq 0 ]; then unset PP_TOK; git ls-remote origin refs/heads/main | cut -c1-12; exit 0; fi
+    if [ $GRC -ne 4 ]; then unset PP_TOK; exit 3; fi
+  fi
+  # A path that already matches the base costs no call (2 Nov): the list holds every NAMED path, and each PUT counts
+  # against the REST quota every agent on this token shares. CH holds the scanned blob of each path, in the same order.
+  i=-1
   for p in "$@"; do
+    i=$((i+1))
     OLD=$(git rev-parse -q --verify "$PB:$p" 2>/dev/null || true)
+    if [ -n "$OLD" ] && [ "$OLD" = "${CH[$i]}" ]; then continue; fi
     python -c "
 import os, sys, json, base64, urllib.request, urllib.parse, urllib.error
 slug, path, old, msg = sys.argv[1:5]
