@@ -372,6 +372,97 @@ ARGUMENT_SHAPE = re.compile(
     re.IGNORECASE | re.DOTALL,
 )
 
+# NAMES THAT ARE CITATIONS. (pattern, the name asked for): technique names whose store card carries them, and surnames
+# that name one result in a proof. Not here: Cauchy, Schur, Weyl, Young, Picard, Markov, Riesz (several results each),
+# Delta, Gamma (Greek letters), integration by parts (the store's card is Gaussian integration by parts).
+SUBQ_CURATED = os.environ.get("MATHBRAIN_SUBQ_CURATED", "1").strip() not in ("0", "off", "false", "")
+_CURATED_NAMED = [
+    (re.compile(r"\bSchur\s+complements?\b", re.IGNORECASE), "Schur complement lemma"),
+    (re.compile(r"\bchanges?\s+of\s+variables?\b", re.IGNORECASE), "change of variables"),
+    (re.compile(r"\bsingular[- ]value\s+decompositions?\b", re.IGNORECASE), "singular value decomposition"),
+    (re.compile(r"\bFubini\b"), "Fubini's theorem"),
+    (re.compile(r"\bTonelli\b"), "Tonelli's theorem"),
+    (re.compile(r"\bParseval\b"), "Parseval's identity"),
+    (re.compile(r"\bH(?:ö|o|oe)lder\b"), "Hölder's inequality"),
+    (re.compile(r"\bArzel(?:à|a)\b"), "Arzelà-Ascoli theorem"),
+    # the Plancherel cards are the L2 theorem; Cauchy-Schwarz is cited bare as often as not
+    (re.compile(r"\bPlancherel\b"), "Plancherel theorem"),
+    (re.compile(r"\bCauchy(?:--|[-‐-―])Schwarz\b"), "Cauchy-Schwarz inequality"),
+]
+# A DOUBLE-BARRELLED NAME AFTER A CITATION VERB ("apply Cauchy--Schwarz"). As a citation cue it is off by default
+# (MATHBRAIN_BARE_DOUBLE_CUE): the same form is usually an author pair in a pasted referee report ("from Higson--Prodan").
+SUBQ_BARE_DOUBLE = os.environ.get("MATHBRAIN_SUBQ_BARE_DOUBLE", "1").strip() not in ("0", "off", "false", "")
+BARE_DOUBLE_CUE = os.environ.get("MATHBRAIN_BARE_DOUBLE_CUE", "0").strip() not in ("0", "off", "false", "")
+_KIND_WORD_PL = (r"(?:theorem|lemma|principle|decomposition|representation|embedding|rule|estimate|construction|formula)s?|"
+                 r"inequalit(?:y|ies)|identit(?:y|ies)|criteri(?:on|a)|formulae|compactness|convergence")
+_KIND_WORD_NAMED = (_KIND_WORD_PL + r"|alternatives?|series|propert(?:y|ies)|(?:[A-Z]-)?tests?|iterations?|methods?|bounds?|"
+                    r"transforms?|calculus|expansions?|duality|conjectures?|tricks?")
+_BARE_DOUBLE_RE = re.compile(
+    r"\b(?:[Bb]y|[Ff]rom|[Uu]sing|[Uu]se|[Aa]pply|[Aa]pplying|[Aa]pplied|[Vv]ia|[Ii]nvoke|[Ii]nvoking)\s+(?:the\s+)?"
+    r"([A-Z][a-zà-ÿ]+(?:(?:--|[-‐-―])[A-Z][a-zà-ÿ]+)+)(?![\w'’‐-―-])"
+    r"(?!\s+(?:" + _KIND_WORD_NAMED + r")\b)")
+
+
+# A PASTED PROOF IS AN ARGUMENT (MATHBRAIN_ARG_PROOFTEXT, default on). ARGUMENT_SHAPE wants numbered steps or a phrase
+# naming the act of checking, and a proof written the way a paper writes it has neither, so a pasted proof never got the
+# argument treatment (the wider card budget, the named-result sub-queries). A prompt also counts as an argument when it reads
+# as a proof: 40 words or more, four or more LaTeX math commands from the fixed list below (never any backslash word - a
+# Windows path would pass that), and a citation made the way proofs make one: "by/from/using/applying/via <Name>'s [one or
+# two words] theorem|lemma|...", "by Lemma 3.2" / "Lemma~\ref", a possessive name ("Fatou's lemma") or a double-barrelled
+# name ("Cauchy--Schwarz inequality"). 0 switches it off.
+ARG_PROOFTEXT = os.environ.get("MATHBRAIN_ARG_PROOFTEXT", "1").strip() not in ("0", "off", "false", "")
+_PROOF_LATEX_RE = re.compile(
+    r"\\(?:le|leq|ge|geq|lesssim|gtrsim|int|iint|sum|prod|frac|dfrac|tfrac|sqrt|mathbb|mathcal|mathbf|mathrm|operatorname"
+    r"|lambda|sigma|mu|nu|epsilon|varepsilon|delta|alpha|beta|gamma|theta|omega|Omega|phi|varphi|psi|xi|eta|tau|rho|kappa"
+    r"|infty|cdot|langle|rangle|det|tr|log|exp|sup|inf|max|min|lim|partial|nabla|to|mapsto|subset|subseteq|in|notin"
+    r"|forall|exists|times|otimes|oplus|circ|quad|qquad|left|right|big|Big|norm|abs|mathsf|hat|tilde|bar|overline)(?![A-Za-z])")
+_PROOF_CITE_RE = re.compile(
+    r"\b(?:[Bb]y|[Ff]rom|[Uu]sing|[Aa]pplying|[Vv]ia)\s+(?:the\s+)?"
+    r"[A-Z][\w'’]+(?:(?:--|[-‐-―])[A-Z][\w'’]+)*(?:'s|’s)?(?:\s+[a-z][a-z-]{2,}){0,2}\s+"
+    r"(?:theorem|lemma|inequality|formula|identity|principle|decomposition|criterion|bound|estimate|test|complement)\b"
+    r"|\b(?:[Bb]y|[Ff]rom|[Uu]sing)\s+(?:Lemma|Theorem|Proposition|Corollary|Remark)[~\s]*(?:\\ref\{|\d)"
+    # the two standard citation forms anywhere in the text: a possessive name ("Tonelli's theorem", "Fatou's lemma gives")
+    # and a double-barrelled name ("Cauchy--Schwarz inequality")
+    r"|\b[A-Z][\w’]+(?:'s|’s)(?:\s+[a-z][a-z-]{2,}){0,2}\s+"
+    r"(?:theorem|lemma|inequality|formula|identity|principle|decomposition|criterion|bound|estimate|test)\b"
+    r"|\b[A-Z][a-z]+(?:--|[-‐-―])[A-Z][a-z]+(?:\s+[a-z][a-z-]{2,}){0,2}\s+"
+    r"(?:theorem|lemma|inequality|formula|identity|principle|decomposition|criterion|bound|estimate|test)\b")
+
+
+# A LATEX CROSS-REFERENCE AS A CITATION (MATHBRAIN_PROOF_REF_CUE, default off). A paper's proof cites its own lemmas as
+# "Lemma~\ref{lem:schur}" with no "by" in front. Off because the bare form is mostly not a proof: a pasted draft carrying
+# \cite{...} or a pasted log carrying Corollary~\ref{...} became an "argument" and its descriptive phrases took card slots.
+# "By Lemma~\ref{...}" is a citation under the rule above either way.
+PROOF_REF_CUE = os.environ.get("MATHBRAIN_PROOF_REF_CUE", "0").strip() not in ("0", "off", "false", "")
+NAME_CUE = os.environ.get("MATHBRAIN_NAME_CUE", "1").strip() not in ("0", "off", "false", "")
+_PROOF_REF_RE = re.compile(r"\b(?:Lemma|Lemmas|Theorem|Theorems|Proposition|Corollary|Claim)[~\s]*\\(?:ref|cref|eqref)\{|\\cite[a-z]*\{")
+
+
+def _proof_text(prompt):
+    if not ARG_PROOFTEXT or not prompt or len(prompt.split()) < 40:
+        return False
+    if len(_PROOF_LATEX_RE.findall(prompt)) < 4:
+        return False
+    if _PROOF_CITE_RE.search(prompt) is not None or (PROOF_REF_CUE and _PROOF_REF_RE.search(prompt) is not None):
+        return True
+    # A NAME IS A CITATION TOO (MATHBRAIN_NAME_CUE, default on): a name from the reviewed list _CURATED_NAMED ("the
+    # change of variables", "Use Tonelli", "its Schur complement"), or, when BARE_DOUBLE_CUE is on, a double-barrelled
+    # name after a citation verb ("apply Cauchy--Schwarz"). Many proofs cite only that way.
+    if NAME_CUE:
+        if SUBQ_CURATED and any(_rx.search(prompt) for _rx, _ in _CURATED_NAMED):
+            return True
+        if SUBQ_BARE_DOUBLE and BARE_DOUBLE_CUE and _BARE_DOUBLE_RE.search(prompt):
+            return True
+    return False
+
+
+def _argument_shape(prompt):
+    """ARGUMENT_SHAPE, or a pasted proof (see ARG_PROOFTEXT). Returns a truthy value or None."""
+    m = ARGUMENT_SHAPE.search(prompt or "")
+    if m:
+        return m
+    return True if _proof_text(prompt) else None
+
 
 # PROSE GATE (2026-09-14, staged OFF behind MATHBRAIN_PROSE_GATE=1, default off).
 # Re-derived as a PATCH from the candidate the 09-09 retrieval diagnosis left pending review
@@ -3048,7 +3139,7 @@ def _block_cov_verdict(prompt, chosen, pinned_ids):
     "coverage_agree_block:<cov>" when it is under the floor but the word and meaning channels agree (COV_AGREE): the
     agreed card is recorded in _COV_AGREED and the block passes."""
     floor = _block_cov_floor()
-    if not (floor > 0 and chosen and not pinned_ids and len(prompt) <= 1500 and not ARGUMENT_SHAPE.search(prompt)):
+    if not (floor > 0 and chosen and not pinned_ids and len(prompt) <= 1500 and not _argument_shape(prompt)):
         return None
     # PLAIN QUESTIONS ONLY: word coverage undercounts a prompt that carries digits or formulas, so the floor judges only a
     # prompt with neither (at 0.40 on every prompt it silenced every enumerated lattice-walk lookup and research steps
@@ -3860,7 +3951,7 @@ def _main_body(data, out):
             _argc = int(os.environ.get("MATHBRAIN_ARG_CARDS", "4") or 4)
         except Exception:
             _argc = 4
-        _cap = _argc if (_argc > 3 and ARGUMENT_SHAPE.search(prompt)) else 3
+        _cap = _argc if (_argc > 3 and _argument_shape(prompt)) else 3
         # A QUESTION THAT NAMES N ENTRIES NEEDS N CARDS (MATHBRAIN_ENUM_WIDTH, default 10 = the most it will
         # widen to; 0 disables). Until 2026-09-13 every lookup prompt got exactly three cards, because the card
         # budget above only widens on ARGUMENT_SHAPE. That is fine when a question asks about one thing and a
@@ -3972,7 +4063,7 @@ def _main_body(data, out):
         # comparison that decides whether ANY card goes out. Filtering the pool is not a neutral operation, and a
         # kind-aware selector has to work inside `_select` alongside those gates rather than upstream of them.
         if (os.environ.get("MATHBRAIN_DEFN_DEMOTE", "0") != "0"
-                and _cap > 3 and ARGUMENT_SHAPE.search(prompt) and not pinned_ids):
+                and _cap > 3 and _argument_shape(prompt) and not pinned_ids):
             try:
                 _nondef = [h for h in _hits_for_select
                            if str((_node_meta(h.node).get("claim_kind")
@@ -4032,7 +4123,7 @@ def _main_body(data, out):
         if (chosen and not pinned_ids
                 and (_enum_cover
                      or (os.environ.get("MATHBRAIN_COVER_SWAP", "0") != "0"
-                         and _cap > 3 and ARGUMENT_SHAPE.search(prompt)))):
+                         and _cap > 3 and _argument_shape(prompt)))):
             try:
                 if _enum_cover:
                     # the question quotes exactly what it wants; nothing else belongs in the target list
@@ -4223,7 +4314,7 @@ def _main_body(data, out):
                 # The guard against it is the absent-target bank: a named result the store lacks would pull its
                 # nearest neighbour and fire falsely.
                 if not subs and os.environ.get("MATHBRAIN_NAMED_SUBQ", "1") == "1" and (
-                        ARGUMENT_SHAPE.search(prompt) or os.environ.get("MATHBRAIN_NAMED_SUBQ_ANY", "0") == "1"):
+                        _argument_shape(prompt) or os.environ.get("MATHBRAIN_NAMED_SUBQ_ANY", "0") == "1"):
                     subs = _named_result_subqueries(prompt)
                     _subq_named = bool(subs)
                 # Quoted titles (MATHBRAIN_QUOTED_SUBQ, ON by default since 2026-09-13 02:4x): a prompt naming stored
@@ -4323,7 +4414,7 @@ def _main_body(data, out):
         # whether the step follows. The block budget truncates, so order is what the reader actually gets. Seen on
         # pa_an_3_07 (a Vitali-Caratheodory argument): the two served cards were "Lebesgue Measure" and "Functions of
         # Bounded Variation", both definitions, while the pivot theorem sat lower or absent.
-        if os.environ.get("MATHBRAIN_KIND_PREF", "0") == "1" and len(chosen) > 1 and ARGUMENT_SHAPE.search(prompt):
+        if os.environ.get("MATHBRAIN_KIND_PREF", "0") == "1" and len(chosen) > 1 and _argument_shape(prompt):
             try:
                 _pins = set(pinned_ids or ())
                 _rank = {"theorem": 0, "lemma": 0, "proposition": 0, "corollary": 1, "claim": 1}
@@ -4352,7 +4443,7 @@ def _main_body(data, out):
         # ways). The gate is a lookup-question instrument; on lookups 0.3 cuts absent fires 28 -> 22 of 40 for 7 of 89
         # unnamed theorems - still a trade for the owner, but no longer one that breaks proofs.
         if (_ccm > 0 and prefilter_ids is not None and not pinned_ids and not ENUMERATION_ANCHORS.search(prompt)
-                and not ARGUMENT_SHAPE.search(prompt)):
+                and not _argument_shape(prompt)):
             try:
                 import math as _m
                 _d = math_prefilter.load(STORE_PATH)
