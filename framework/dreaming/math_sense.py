@@ -516,6 +516,39 @@ def _legacy_math_gate(prompt):
     return len(set(m.group(0) for m in STRUCTURAL_MATH_RE.finditer(prompt))) >= 2
 
 
+def _install_global_idf():
+    """Give the ranker store-wide document frequencies (see math_brain.retrieval.GLOBAL_LEXICAL_DF).
+
+    Reads <store>.lexdf.pkl, written by math_prefilter.build beside the prefilter index. Missing, unreadable or switched off
+    (MATHBRAIN_GLOBAL_IDF=0) leaves the ranker on pool statistics exactly as before. Never raises."""
+    try:
+        import pickle
+        import math_brain.retrieval as _R
+        # Default 0. In a shadow on real traffic, store-wide IDF (mode 2) gained 3 rank-1 answers of 64 held-out
+        # questions, all of it from choosing different cards, and the same mechanism served unrelated notes on 21 live
+        # prompts: words the whole pool shares ("theorems", "problems") got weight and cleared the support floor, and
+        # English words rare among short statements ("neither", "nor") lifted the shortest card holding them.
+        mode = int(os.environ.get("MATHBRAIN_GLOBAL_IDF", "0") or 0)
+        if mode not in (1, 2):
+            _R.GLOBAL_LEXICAL_DF = None
+            return
+        path = str(STORE_PATH) + ".lexdf.pkl"
+        if not os.path.exists(path):
+            _R.GLOBAL_LEXICAL_DF = None
+            return
+        with open(path, "rb") as fh:
+            d = pickle.load(fh)
+        _R.GLOBAL_LEXICAL_DF = d["df"]
+        _R.GLOBAL_LEXICAL_N = int(d["n"])
+        _R.GLOBAL_LEXICAL_MODE = mode
+    except Exception:
+        try:
+            import math_brain.retrieval as _R
+            _R.GLOBAL_LEXICAL_DF = None
+        except Exception:
+            pass
+
+
 def _node_meta(node):
     return node.metadata if isinstance(node.metadata, dict) else {}
 
@@ -3570,6 +3603,7 @@ def _main_body(data, out):
         sys.path.insert(0, BUILD_SRC)
         from math_brain.retrieval import retrieve
         from math_brain.store import ResearchStore
+        _install_global_idf()
         if _nonmath_text(prompt, data):
             return
 
