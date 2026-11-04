@@ -1399,6 +1399,40 @@ def _same_result_twins(ids, heads=False, sources=None):
     return out
 
 
+# ONE CARD PER TITLE ON THE FINISHED BLOCK (MATHBRAIN_FINAL_TITLE_DEDUP, default on). A store can hold two cards under one
+# title that differ only in accents or punctuation ("Poincaré inequality" and "Poincare Inequality"), and the reranks run
+# after the selection's own dedup, so both can reach the block. The check runs on the finished block, after every gate,
+# so a fold never drops the copy a later floor would have kept. A card carrying the statement replaces one carrying an
+# encyclopedia opening; the dropped card's slot is not refilled.
+FINAL_TITLE_DEDUP = os.environ.get("MATHBRAIN_FINAL_TITLE_DEDUP", "1").strip() not in ("0", "", "off", "false")
+
+
+def _title_key(title, fold=True):
+    """Lower-case title with punctuation collapsed to single spaces; fold=True also drops accents."""
+    t = title or ""
+    if fold:
+        t = "".join(c for c in unicodedata.normalize("NFKD", t) if not unicodedata.combining(c))
+    return re.sub(r"[^a-z0-9]+", " ", t.casefold()).strip()
+
+
+def _drop_title_twins(chosen):
+    """One card per accent-folded title (see FINAL_TITLE_DEDUP): the first keeps its place, a statement beats a lede."""
+    if not FINAL_TITLE_DEDUP or len(chosen) < 2:
+        return chosen
+    kept, pos = [], {}
+    for h in chosen:
+        k = _title_key(getattr(h.node, "title", ""))
+        if k and k in pos:
+            i = pos[k]
+            if _is_lede(kept[i].node) and not _is_lede(h.node):
+                kept[i] = h
+            continue
+        if k:
+            pos[k] = len(kept)
+        kept.append(h)
+    return kept
+
+
 def _drop_later_twins(chosen):
     """One card per same-result pair (see SAME_RESULT): the pair keeps the place of its first card in block order, and
     the card shown there is the working-note one (the same_result edge's source) - it names the construction and how it
@@ -2829,7 +2863,7 @@ def _main_body(data, out):
             return
         # SAME RESULT on the finished block (see SAME_RESULT): the reranks can put a twin back after the selection,
         # so the check runs here, and the first card of the final order keeps the pair's place
-        chosen = _drop_later_twins(chosen)
+        chosen = _drop_title_twins(_drop_later_twins(chosen))
         pieces = []
         for hit in chosen:
             node = hit.node
@@ -2998,7 +3032,7 @@ def cli_query(query):
                                  deadline=time.monotonic() + TIME_BUDGET_S)
         if not chosen:
             return
-        chosen = _drop_later_twins(chosen)
+        chosen = _drop_title_twins(_drop_later_twins(chosen))
         print("Full current note: python ~/.claude/dreaming/math_note.py SOURCE_ID")
         for hit in chosen:
             node = hit.node
