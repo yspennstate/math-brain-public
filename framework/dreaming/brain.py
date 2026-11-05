@@ -5399,7 +5399,7 @@ def _recall_body(query, n=8):
     # asked about exactly the clause that moved ('which voice must narrate a film': a standing-orders memory
     # at 1, its narration-voice clause overtaken by a later single-voice order at 4). When a
     # displayed row's superseded_in_part clause shares BRAIN_RECALL_PART_LIFT_MIN (2) content words with the question,
-    # its successor goes directly above it. Measured in brain_recall_68ceaf54/RESULT_q65_4nov.md. BRAIN_RECALL_PART_LIFT=0 off.
+    # its successor goes directly above it. Measured 4 Nov 2026. BRAIN_RECALL_PART_LIFT=0 off.
     if scored and os.environ.get("BRAIN_RECALL_PART_LIFT", "1") != "0":
         try:
             import supersession as _sup
