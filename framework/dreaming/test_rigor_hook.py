@@ -12,7 +12,7 @@ Fail-open: any error prints nothing.
 
   python3 test_rigor_hook.py --list        print the 50 cards
   python3 test_rigor_hook.py --selftest    check triggers and rate limits on sample payloads
-claude-00000003, 3 Nov 2026.
+3 Nov 2026.
 """
 import json, os, re, sys, time, zlib
 
@@ -241,6 +241,9 @@ def selftest():
 
 
 if __name__ == "__main__":
+    if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+        print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+        raise SystemExit(0)
     if "--list" in sys.argv:
         print(ORDERS + "\n")
         for i, t, x in CARDS:
