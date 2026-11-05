@@ -3749,12 +3749,14 @@ except ValueError:
     COV_RARE_DF = 5
 
 
-def _block_cov_verdict(prompt, chosen, pinned_ids):
+def _block_cov_verdict(prompt, chosen, pinned_ids, split_used=False):
     """None when the block is not judged by the coverage floor or passes it; "block_coverage:<cov>" when it is silenced;
     "coverage_agree_block:<cov>" when it is under the floor but the word and meaning channels agree (COV_AGREE): the
-    agreed card is recorded in _COV_AGREED and the block passes."""
+    agreed card is recorded in _COV_AGREED and the block passes. A block the sub-queries built (split_used) is not
+    judged."""
     floor = _block_cov_floor()
-    if not (floor > 0 and chosen and not pinned_ids and len(prompt) <= 1500 and not _argument_shape(prompt)):
+    if not (floor > 0 and chosen and not pinned_ids and not split_used and len(prompt) <= 1500
+            and not _argument_shape(prompt)):
         return None
     # PLAIN QUESTIONS ONLY: word coverage undercounts a prompt that carries digits or formulas, so the floor judges only a
     # prompt with neither (at 0.40 on every prompt it silenced every enumerated lattice-walk lookup and research steps
@@ -3780,6 +3782,19 @@ def _block_cov_verdict(prompt, chosen, pinned_ids):
                 return None
         except Exception:
             pass
+        # A HOUSE ALIAS NAMES THE SUBJECT TOO (MATHBRAIN_BLOCK_COV_ALIAS_EXEMPT, default on): "MP law" is a name the
+        # alias table spells out ("Marchenko-Pastur law"), so a served card whose title carries every name token of that
+        # expansion is on the prompt's subject. The check above cannot see it, since no title says "MP".
+        if os.environ.get("MATHBRAIN_BLOCK_COV_ALIAS_EXEMPT", "1") != "0":
+            try:
+                xp = _expand_aliases(prompt)
+                if xp != prompt:
+                    at = {w for w in re.findall(r"[a-z0-9]+", xp[len(prompt):].casefold())
+                          if len(w) >= 4 and w not in _NAME_STOP}
+                    if at and any(at <= set(re.findall(r"[a-z0-9]+", (h.node.title or "").casefold())) for h in chosen):
+                        return None
+            except Exception:
+                pass
     if COV_RARE_EXEMPT:
         try:
             import math_prefilter as _mpf
@@ -5072,6 +5087,7 @@ def _main_body(data, out):
         # the clause split (see _clause_subqueries): each tuple-carrying clause earns its own block; merged round-robin
         # ahead of the whole-question cards, three slots, pins untouched (a pinned prompt skips the split)
         _pre_subq_chosen = list(chosen or [])
+        _split_used = False
         if CLAUSE_SPLIT and prefilter_ids is not None and not pinned_ids:
             try:
                 _subq_named = False
@@ -5139,9 +5155,10 @@ def _main_body(data, out):
                     if _subq_named or _subq_quoted:
                         chosen, _named_extra = _subq_coh_guard(prompt, chosen, _named_extra, _pre_subq_chosen,
                                                                _cprime_chosen, _subq_named)
+                    _split_used = True
             except Exception:
                 pass
-        _bcv = _block_cov_verdict(prompt, chosen, pinned_ids)
+        _bcv = _block_cov_verdict(prompt, chosen, pinned_ids, split_used=_split_used)
         if _bcv and _bcv.startswith("coverage_agree_block"):
             _silence_note(data, _bcv, harness_only=True)
         elif _bcv:
