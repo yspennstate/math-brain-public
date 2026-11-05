@@ -23,6 +23,8 @@ python agent_tools/math_recall.py --id <card id from the output>
 
 You need Python 3.11 or newer; macOS ships 3.9 as `/usr/bin/python3`, so install a newer one there first. No `pip install` and no environment variables are needed: the tools find `src/` and the store from the checkout. On 5 November 2026 this ran from a fresh clone with an empty home directory: the import rebuilt 60,977 rows in 49 seconds with no row failing its digest, and the first search took 56 seconds on a busy laptop because it builds the prepared fast-recall state; later searches take a few seconds.
 
+On Windows the sparse checkout above works as it is. A full checkout does not: a few paths under `papers/` are longer than 260 characters and git stops with "Filename too long". Before `git sparse-checkout disable`, run `git config core.longpaths true` in the clone, or clone with `git clone -c core.longpaths=true ...`.
+
 The repository has a small brain of its own as well. [navigation/](navigation/) holds one card for every file outside `results/` and `papers/`, one for each directory and README section, and a few concept cards, about 1,700 in all, joined by about 3,400 links. It answers "where is X and what do I open to use it" without walking the tree:
 
 ```bash
