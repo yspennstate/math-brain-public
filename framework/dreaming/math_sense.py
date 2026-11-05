@@ -1481,7 +1481,7 @@ def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None, anchor
     # so without this it could take a slot on a query that happens to share its words
     # (2026-09-03, the day the evidence tables stopped being empty).
     ranked = sorted(
-        (h for h in hits if str(getattr(h.node, "kind", "") or "").lower() != "evidence"),
+        (h for h in hits if str(getattr(h.node, "kind", "") or "").lower() not in _UNSERVED_KINDS),
         key=lambda hit: (-_rs(hit), hit.node.id),
     )
     if not ranked:
@@ -2231,6 +2231,13 @@ MERGE_DUP_NO_REFILL = os.environ.get("MATHBRAIN_MERGE_DUP_NO_REFILL", "1").strip
 FINAL_TITLE_DEDUP = os.environ.get("MATHBRAIN_FINAL_TITLE_DEDUP", "1").strip() not in ("0", "", "off", "false")
 
 
+# UNSERVED KINDS. An evidence node is a recorded read about a claim; a source node is a record about the store itself (for
+# example a pointer saying two claims are duplicates). Neither is mathematics to serve: a source note had been served as
+# the only card of blocks whose prompts were not about mathematics at all. MATHBRAIN_SERVE_SOURCE=1 serves source nodes again.
+_UNSERVED_KINDS = ("evidence",) + (() if os.environ.get("MATHBRAIN_SERVE_SOURCE", "0").strip() not in ("0", "off", "false", "")
+                                   else ("source",))
+
+
 def _title_key(title, fold=True):
     """Lower-case title with punctuation collapsed to single spaces; fold=True also drops accents."""
     t = title or ""
@@ -2869,7 +2876,7 @@ def _attach_answers(chosen, pool_hits, edges, cap_extra=2):
             for src in by_target.get(h.node.id, ()):
                 if added >= cap_extra or src in served or src in superseded or src not in pool:
                     continue
-                if str(getattr(pool[src].node, "kind", "") or "").lower() == "evidence":
+                if str(getattr(pool[src].node, "kind", "") or "").lower() in _UNSERVED_KINDS:
                     continue
                 out.append(pool[src])
                 served.add(src)
@@ -4917,7 +4924,7 @@ def _main_body(data, out):
                             _fm = _node_meta(_fh.node)
                             _ftitle = re.sub(r"[^a-z0-9]+", " ", (_fh.node.title or "").casefold()).strip()
                             _titles = {re.sub(r"[^a-z0-9]+", " ", (h.node.title or "").casefold()).strip() for h in (chosen or [])}
-                            if (str(getattr(_fh.node, "kind", "") or "").lower() != "evidence"
+                            if (str(getattr(_fh.node, "kind", "") or "").lower() not in _UNSERVED_KINDS
                                     and str(_fm.get("claim_kind") or "") != "lean_declaration"
                                     and not (HARVEST_CAP and "harvest.arxiv" in str(_fm.get("logical_id") or ""))
                                     and _ftitle not in _titles):
