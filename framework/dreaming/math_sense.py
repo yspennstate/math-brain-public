@@ -294,6 +294,35 @@ STRONG_ANCHORS_3 = re.compile(
     r"brownian|unimodal\w*|(?:arc|vertex|edge)-transitive|spectral gap|(?:relaxation|mixing|cover|hitting) times?|"
     r"(?:phi|alpha|beta|rho)-mixing|strong(?:ly)? mixing|ergodic\w*|stationary (?:measure|distribution|law|sequence)s?|"
     r"additive functionals?|normal approximation|beta[- ]splitting)\b", re.IGNORECASE)
+# PLURALS AND A FEW NAMES THE LISTS ABOVE LACK (MATHBRAIN_ANCHORS_4, default on). A plural never matched its singular:
+# "eigenvalue" opened the gate and "the real eigenvalues of the real Ginibre ensemble" did not, "latin square" did and "Latin
+# squares of order 12" did not. A word is kept only if it appears in at least one of the store's own node titles and adds
+# almost no fire on a large set of archived non-mathematical prompts (the whole set adds two, both mathematics). Rejected on
+# the same measurement: fields, groups, bounds, derivatives, distributions. The weak words count as one more anchor (two
+# anchors, or one plus notation, open the gate); the strong ones open it alone. Used only in the gate, never in the
+# long-text density of _nonmath_text. MATHBRAIN_ANCHORS_4=0 restores the gate without them.
+ANCHORS_4_ON = os.environ.get("MATHBRAIN_ANCHORS_4", "1").strip() not in ("0", "", "off", "false")
+WEAK_ANCHORS_4 = re.compile(
+    r"\b(eigen(?:values|vectors|functions|spaces)|polynomials|permutations|integrals|manifolds|inequalities|geodesics|"
+    r"martingales|bijections|variances|latin squares|norms|measures|random variables|simplex|polytopes?|"
+    r"stochastically)\b", re.IGNORECASE)
+STRONG_ANCHORS_4 = re.compile(
+    r"\b(ginibre|gumbel|ces[aà]ro|volterra|pollaczek|khinchine?|rayleigh|total[- ]variation|commute[- ]times?|"
+    r"spectral-gap|supermodular\w*|orthomorphisms?|interlacements?|subset sums?|radius of convergence)\b", re.IGNORECASE)
+# SINGULAR VALUES (MATHBRAIN_ANCHORS_5, default on). "the case where the fifth singular value is bigger than 1" was refused
+# here: no list carried the term. On the archived prompts it admits two of those the gate refused, both random-matrix
+# questions, and no must-stay-silent probe or absent-target control. "RMT" and "spectral/operator norm" were rejected on the
+# same run. MATHBRAIN_ANCHORS_5=0 restores the gate without it.
+ANCHORS_5_ON = os.environ.get("MATHBRAIN_ANCHORS_5", "1").strip() not in ("0", "", "off", "false")
+STRONG_ANCHORS_5 = re.compile(r"\bsingular[- ]values?\b", re.IGNORECASE)
+# A POSSESSIVE NAME BEFORE AN INEQUALITY, IDENTITY, FORMULA OR CRITERION IS A MATH ANCHOR (MATHBRAIN_ANCHORS_POSSESSIVE,
+# default on). The eponym lists leave out "holder" and "young" as English words, so "What does Holder's inequality say about
+# the product of two functions?", "State Young's inequality for convolutions" and "Wald's identity for the expectation of a
+# randomly stopped sum" were refused at the gate. It admits none of the archived non-mathematical prompts. "theorem" and
+# "lemma" are strong anchors already. MATHBRAIN_ANCHORS_POSSESSIVE=0 restores the gate without it.
+ANCHORS_POSSESSIVE_ON = os.environ.get("MATHBRAIN_ANCHORS_POSSESSIVE", "1").strip() not in ("0", "", "off", "false")
+STRONG_ANCHORS_POSSESSIVE = re.compile(
+    r"\b[A-Z][a-zà-ÿ]+(?:-[A-Z][a-zà-ÿ]+)*['’]s?\s+(?:inequalit(?:y|ies)|identit(?:y|ies)|formula|criterion)\b")
 # weak: two of these (or one plus notation) open the gate, like MATH_ANCHORS; never alone
 WEAK_ANCHORS_2 = re.compile(
     r"\b(vertex|vertices|edges|clique|planar|subgraph|bipartite|monochromatic|colou?rings?|labelled trees|"
@@ -654,10 +683,18 @@ def _legacy_math_gate(prompt):
         return True
     if ANCHORS_3_ON and STRONG_ANCHORS_3.search(prompt):
         return True
+    if ANCHORS_5_ON and STRONG_ANCHORS_5.search(prompt):
+        return True
+    if ANCHORS_POSSESSIVE_ON and STRONG_ANCHORS_POSSESSIVE.search(prompt):
+        return True
+    if ANCHORS_4_ON and STRONG_ANCHORS_4.search(prompt):
+        return True
     anchors = set(m.group(0).lower() for m in MATH_ANCHORS.finditer(prompt))
     anchors |= set(m.group(0).lower() for m in EXTRA_ANCHORS.finditer(prompt))
     anchors |= set(m.group(0).lower() for m in GREEK_ANCHORS.finditer(prompt))
     anchors |= set(m.group(0).lower() for m in WEAK_ANCHORS_2.finditer(prompt))
+    if ANCHORS_4_ON:
+        anchors |= set(m.group(0).lower() for m in WEAK_ANCHORS_4.finditer(prompt))
     if len(anchors) >= 2:
         return True
     # DERIVED ANCHORS (MATHBRAIN_DERIVED_ANCHORS, default 0 = OFF; 2026-09-14). The anchor lists above are
