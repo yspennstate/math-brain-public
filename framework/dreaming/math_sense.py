@@ -3248,18 +3248,42 @@ _RESULT_WORDS = frozenset(("theorem", "theorems", "inequality", "inequalities", 
                            "formula", "law", "identity", "criterion", "bound", "hypothesis", "estimate", "estimates"))
 
 
+# A QUOTED NAME COUNTS AS NAMING THE CARD (MATHBRAIN_QUOTE_NAME_EXEMPT, default on). A question that quotes a result in
+# lower case ("the "bounded convergence theorem"") carries no capitalised name, so the lead card that states it was not
+# treated as named. A quote whose content words (two or more) all sit in the card's title now counts, provided one of
+# them is SPECIFIC: "main theorem", "key lemma", "limit theorem" and "uniqueness theorem" name a kind of result, not one
+# result, and passed off-topic lead cards. MATHBRAIN_QUOTE_GENERIC_EXTRA adds words (space separated) to the generic list;
+# MATHBRAIN_QUOTE_NAME_EXEMPT=0 restores the capitalised-name rule alone.
+_QUOTE_GENERIC = frozenset(os.environ.get("MATHBRAIN_QUOTE_GENERIC_EXTRA", "").lower().split()) | frozenset((
+    "main", "key", "first", "second", "third", "fourth", "fifth", "basic", "general", "fundamental", "principal",
+    "important", "crucial", "technical", "auxiliary", "preliminary", "new", "simple", "useful", "standard", "classical",
+    "final", "last", "next", "following", "above", "previous", "our", "this", "that", "famous", "celebrated", "well",
+    "known", "deep", "easy", "big", "little", "one", "two", "three", "limit", "uniqueness", "existence", "structure",
+    "comparison", "convergence", "extension", "decomposition", "representation", "classification", "approximation",
+    "embedding", "global", "weak", "strong"))
+
+
 def _lead_title_names_prompt(prompt, title):
     try:
         cw = _coh_common_words()
         nt = [w for w in _name_tokens(prompt) if w.lower() not in cw]
-        if not nt or not title:
+        if not title or (not nt and not _QUOTE_RE.search(prompt or "")):
             return False
         t = unicodedata.normalize("NFKD", title)
         t = "".join(c for c in t if not unicodedata.combining(c))
         tw = set(w for w in re.findall(r"[a-z0-9]+", t.lower()) if len(w) > 2)
         if not (tw & _RESULT_WORDS):
             return False
-        return all(any(w == x or w.startswith(x) or x.startswith(w) for x in tw) for w in nt)
+        if nt and all(any(w == x or w.startswith(x) or x.startswith(w) for x in tw) for w in nt):
+            return True
+        if os.environ.get("MATHBRAIN_QUOTE_NAME_EXEMPT", "1").strip() in ("0", "off", "false", ""):
+            return False
+        tw2 = set(re.findall(r"[a-z0-9]+", t.lower()))
+        for _q in _QUOTE_RE.findall(prompt or ""):
+            _qt = {w for w in re.findall(r"[a-z0-9]+", _nf_fold(_q)) if w not in _NTM_STOP and len(w) > 1}
+            if len(_qt) >= 2 and _qt <= tw2 and (_qt - _RESULT_WORDS - _QUOTE_GENERIC):
+                return True
+        return False
     except Exception:
         return False
 
