@@ -10,7 +10,7 @@ import tempfile
 import numpy as np
 
 SP = os.path.dirname(os.path.abspath(__file__))
-sys.path.insert(0, os.path.expanduser("~/.claude/brain_graph/bin"))
+sys.path.insert(0, os.environ.get("BRAIN_GRAPH_BIN", os.path.dirname(os.path.abspath(__file__))))
 
 
 def load(name, path):
@@ -21,7 +21,7 @@ def load(name, path):
     return m
 
 
-BIN = os.path.expanduser("~/.claude/brain_graph/bin")
+BIN = os.environ.get("BRAIN_GRAPH_BIN", os.path.dirname(os.path.abspath(__file__)))
 GS = load("graph_store", os.path.join(BIN, "graph_store.py"))
 LS = load("live_sidecar", os.path.join(BIN, "live_sidecar.py"))
 LD = load("live_delta", os.path.join(BIN, "live_delta.py"))

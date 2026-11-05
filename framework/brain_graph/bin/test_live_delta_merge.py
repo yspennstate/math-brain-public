@@ -10,7 +10,7 @@ import sqlite3
 import sys
 import tempfile
 
-sys.path.insert(0, os.path.expanduser("~/.claude/brain_graph/bin"))
+sys.path.insert(0, os.environ.get("BRAIN_GRAPH_BIN", os.path.dirname(os.path.abspath(__file__))))
 import graph_store as GS
 import live_delta as LD
 import live_membrane as LM
