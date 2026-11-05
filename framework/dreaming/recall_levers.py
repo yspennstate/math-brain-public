@@ -33,13 +33,15 @@ STATS = {"bm25": [0, 0], "emb": [0, 0], "spread": [0, 0]}   # [served, fell back
 # Each lever replaces one function with a numpy form proven equal to ONE version of it. The brain-framework copies
 # of bm25.score_postings (heapq top-k) and load_verified_embeddings (lever 8 sidecar, BRAIN_EMB_LAZY, bodies=) are
 # other versions, so a lever goes in only when the function's source hashes to a version it was checked against.
-# sha256(inspect.getsource(f))[:16]; add a hash only after that version's A/B passes. In this repository the spread
-# and status levers match a proven version and go in; bm25 and the embeddings loader are other versions and fall
-# back to the original code until their own A/B is recorded.
+# sha256(inspect.getsource(f))[:16]; add a hash only after that version's A/B passes. In this repository the spread,
+# status and bm25 levers match a proven version and go in; the embeddings loader is another version and falls back
+# to the original code until its own A/B is recorded.
 PROVEN = {
     "bm25": {"b54f7a2d2b4c450c",      # light-loader lineage, 306/306
-             "53202072716ee9a9"},     # brain-framework (heapq top-k), 306/306 on two seeds, control 75/306,
+             "53202072716ee9a9",      # brain-framework (heapq top-k), 306/306 on two seeds, control 75/306,
                                       # 60.6 -> 12.1 ms
+             "dd2f30568c7b5401"},     # this repository (fast loop, no query-term weights): 320/320 against
+                                      # the fast and the plain loop, control caught (test_bm25_lever.py)
     "emb": {"467b923b88d89822",       # light-loader lineage, 21/21
             "012f6f954ea04578",       # brain-framework (lever-8 sidecar): 11/11 equal on every attribute, control
                                       # caught, 94 -> 25 ms; BRAIN_EMB_LAZY=1 falls back
@@ -67,7 +69,8 @@ def _bm25_np(bm25, np, query, topk, conn):
         if not row:
             continue
         df_t, blob = row
-        idf = math.log(1.0 + (n - df_t + 0.5) / (df_t + 0.5)) * bm25.QUERY_TERM_WEIGHTS.get(t, 1.0)
+        # a bm25 without per-term query weights scores every term at weight 1; x * 1.0 is x, so this stays exact
+        idf = math.log(1.0 + (n - df_t + 0.5) / (df_t + 0.5)) * getattr(bm25, "QUERY_TERM_WEIGHTS", {}).get(t, 1.0)
         import zlib
         b = zlib.decompress(blob)
         if len(b) % 12:
