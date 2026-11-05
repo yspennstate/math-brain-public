@@ -483,12 +483,30 @@ def _stat_key(st):
     return [st.st_size, st.st_mtime_ns, st.st_ctime_ns, getattr(st, "st_birthtime_ns", 0) or 0]
 
 
+def _fm_cache_path(memory_dir):
+    """One cache file per memory folder (29 Oct 2026). The single shared file held one folder at a time, so a recall
+    against the repo mirror's memory folder made the next live recall re-read all 28k files: 70-282 s on the loaded
+    Mac, and other agents' recalls queued 5-13 min behind it."""
+    import hashlib
+    tag = hashlib.sha256(os.path.normcase(os.path.abspath(memory_dir)).encode("utf-8")).hexdigest()[:12]
+    return os.path.join(HERE, "supersession_frontmatter_cache.%s.json" % tag)
+
+
+# What the last _frontmatter_targets call read: memory_dir and pointers, file name -> (strict, candidate) for every file
+# that has either. brain.py's recall keeps it beside a cached map to tell whether a later folder state can change it.
+LAST_POINTERS = {}
+
+
 def _frontmatter_targets(memory_dir):
     import json
-    cache_path = os.path.join(HERE, _FM_CACHE_NAME)
+    cache_path = _fm_cache_path(memory_dir)
     cached = {}
     try:
-        with io.open(cache_path, encoding="utf-8") as fh:
+        try:
+            fh = io.open(cache_path, encoding="utf-8")
+        except FileNotFoundError:   # first use: seed from the old shared file when it holds this folder
+            fh = io.open(os.path.join(HERE, _FM_CACHE_NAME), encoding="utf-8")
+        with fh:
             data = json.load(fh)
         if isinstance(data, dict) and data.get("memory_dir") == os.path.abspath(memory_dir) \
                 and data.get("version") == _FM_CACHE_VERSION \
@@ -502,7 +520,9 @@ def _frontmatter_targets(memory_dir):
                       if not (isinstance(v, list) and len(v) == 6 and v[5])}
     except Exception:
         cached = {}
-    files, out, dirty = {}, {}, False
+    files, out, dirty, stale = {}, {}, False, 0
+    pointers = {}
+    LAST_POINTERS.clear()
     import time as _time
     now_ns = _time.time_ns()
     entries = _md_files(memory_dir)
@@ -523,8 +543,18 @@ def _frontmatter_targets(memory_dir):
             head = _read_frontmatter(entry.path)
             strict = _frontmatter_target(head)
             candidate = "" if strict else _lenient_candidate(head)
-            dirty = True
+            # A re-read that parses to what the cache already holds changed only its stamp. CONSCIENCE.md is
+            # rewritten by a Stop hook on every turn, so counting that as dirty rewrote this 3.4 MB cache on
+            # every recall (30 Oct). Such a file is re-read next call instead; the map returned is the same.
+            # A new file waits the same way: agents file a memory every few minutes, so writing on each one
+            # still rewrote the cache on most recalls (2.6 s of a 15 s recall at load 48).
+            if prev is None or (isinstance(prev, list) and len(prev) == 6 and prev[4:] == [strict, candidate]):
+                stale += 1
+            else:
+                dirty = True
         files[name] = key + [strict, candidate]
+        if strict or candidate:
+            pointers[name] = (strict, candidate)
         # a prose pointer routes only while its target exists, judged against this listing on every call; a target is
         # spelled as its file is, so the resolver's exact-name check finds it
         if strict:
@@ -533,15 +563,19 @@ def _frontmatter_targets(memory_dir):
             target = canon.get(os.path.normcase(candidate), "") if candidate else ""
         if target and SLUG_RX.fullmatch(target):
             out[name[:-3]] = target
-    if dirty or len(files) != len(cached):
+    # a deleted file's leftover entry is never looked up, so removals alone do not force a write
+    if dirty or stale > 64 or (files and not cached):
         try:
             tmp = cache_path + ".tmp.%d" % os.getpid()
             with io.open(tmp, "w", encoding="utf-8") as fh:
-                json.dump({"memory_dir": os.path.abspath(memory_dir),
-                           "version": _FM_CACHE_VERSION, "files": files}, fh)
+                # dumps, not dump: json.dump streams through the pure-Python encoder; dumps takes the
+                # C encoder (about 4x faster on a 5 MB cache) and writes the same bytes
+                fh.write(json.dumps({"memory_dir": os.path.abspath(memory_dir),
+                                     "version": _FM_CACHE_VERSION, "files": files}))
             os.replace(tmp, cache_path)
         except Exception:
             pass
+    LAST_POINTERS.update(memory_dir=os.path.abspath(memory_dir), pointers=pointers)
     return out
 
 
@@ -565,22 +599,132 @@ def resolve(slug, routes, known_slugs=None, max_hops=32):
     return original
 
 
+# 3 Nov 2026: fok_probe and spread_recall both call active_supersessions on every prompt, in the one
+# dispatcher process since the hooks went in-process, and each listed the whole memory folder: 0.45 s of a 0.72 s call
+# with 45k files. The slug set is kept per process and reused while the folder's inode, mtime and ctime are
+# unchanged. Creating, removing or renaming an entry moves the folder's mtime and ctime, so the set is right by
+# construction; the stat is read before the listing, so a change during the listing makes the next call list again.
+# Not covered: a *.md symlink whose target changes between file and directory, which the listing alone would notice.
+_KNOWN_SLUGS = {}
+
+
+def _known_slugs(memory_dir):
+    path = os.path.abspath(memory_dir)
+    try:
+        st = os.stat(path)
+        key = (st.st_ino, st.st_mtime_ns, st.st_ctime_ns)
+    except Exception:
+        key = None
+    hit = _KNOWN_SLUGS.get(path)
+    if key is not None and hit is not None and hit[0] == key:
+        return hit[1]
+    names = frozenset(entry.name[:-3] for entry in _md_files(memory_dir))
+    if key is not None:
+        _KNOWN_SLUGS[path] = (key, names)
+    return names
+
+
+# 5 Nov 2026: the per-process set above still costs every fresh process the whole listing (26 ms cold on a
+# 45,000-file memory folder), and fok_probe's call is the first in each prompt's dispatcher. active_supersessions only asks
+# about slugs that appear in a route (as source or target): it intersects the listing with the route keys and resolve()
+# tests membership of route targets only. So across processes it is enough to keep the known slugs among those route
+# names, under the same folder key (inode, mtime, ctime) taken before the listing. A hit needs the key unchanged and
+# every current route name inside the saved universe; anything else lists the folder as before. Same result by
+# construction; BRAIN_SUP_ROUTE_CACHE=0 turns it off.
+# One file for every folder, the newest ROUTE_KNOWN_MAX kept: a file per folder left one behind for each test's temp
+# memory folder (eight from one test run).
+ROUTE_KNOWN_MAX = 4
+
+
+def _route_known_path(memory_dir=None):
+    return os.path.join(os.path.dirname(os.path.abspath(__file__)), ".sup_route_known.json")
+
+
+def _route_known_all():
+    import json
+    try:
+        with io.open(_route_known_path(), encoding="utf-8") as fh:
+            data = json.load(fh)
+        return data if isinstance(data, dict) else {}
+    except Exception:
+        return {}
+
+
+def _dir_key(memory_dir):
+    try:
+        st = os.stat(os.path.abspath(memory_dir))
+        return [st.st_ino, st.st_mtime_ns, st.st_ctime_ns]
+    except Exception:
+        return None
+
+
+def _route_known(memory_dir, routes):
+    if os.environ.get("BRAIN_SUP_ROUTE_CACHE", "1") == "0":
+        return None
+    try:
+        import json
+        key = _dir_key(memory_dir)
+        hit = _KNOWN_SLUGS.get(os.path.abspath(memory_dir))
+        if key is None or (hit is not None and list(hit[0]) == key):
+            return None              # no key, or this process already holds the full set: use it
+        saved = _route_known_all().get(os.path.abspath(memory_dir)) or {}
+        if saved.get("key") != key:
+            return None
+        universe = set(saved.get("universe") or ())
+        if not (set(routes) <= universe and set(routes.values()) <= universe):
+            return None
+        return frozenset(saved.get("known") or ())
+    except Exception:
+        return None
+
+
+def _route_known_save(memory_dir, routes, known):
+    if os.environ.get("BRAIN_SUP_ROUTE_CACHE", "1") == "0":
+        return
+    try:
+        import json
+        hit = _KNOWN_SLUGS.get(os.path.abspath(memory_dir))
+        if hit is None or hit[1] is not known:
+            return                   # only a set _known_slugs keyed this call; its key was read before its listing
+        import tempfile
+        tmp_root = os.path.join(os.path.realpath(tempfile.gettempdir()), "")
+        if os.path.realpath(memory_dir).startswith(tmp_root):
+            return                   # test folders would push the live folder out of the cap
+        universe = set(routes) | set(routes.values())
+        data = _route_known_all()
+        data.pop(os.path.abspath(memory_dir), None)
+        data[os.path.abspath(memory_dir)] = {"key": list(hit[0]), "universe": sorted(universe),
+                                             "known": sorted(universe & known)}
+        while len(data) > ROUTE_KNOWN_MAX:
+            data.pop(next(iter(data)))          # oldest written first: json keeps insertion order
+        path = _route_known_path()
+        tmp = "%s.%d.tmp" % (path, os.getpid())
+        with io.open(tmp, "w", encoding="utf-8") as fh:
+            fh.write(json.dumps(data))
+        os.replace(tmp, path)
+    except Exception:
+        pass
+
+
 def active_supersessions(memory_dir, index_path=None, known_slugs=None,
                          include_frontmatter=False):
     """Return known historical slug -> existing terminal correction."""
+    routes = load_map(memory_dir, index_path=index_path,
+                      include_frontmatter=include_frontmatter)
     if known_slugs is None:
         # The prompt hook calls this in a fresh process on every turn.  ``listdir`` followed
         # by ``isfile`` paid one new path lookup for every memory (2,700+ on the live corpus,
         # roughly 100-180 ms on Windows).  ``scandir`` carries the directory-entry metadata
         # through the enumeration, while retaining the old contract: only real ``.md`` files
         # (including file symlinks) are eligible; a directory named ``*.md`` is not.
-        known_slugs = {entry.name[:-3] for entry in _md_files(memory_dir)}
+        known_slugs = _route_known(memory_dir, routes)
+        if known_slugs is None:
+            known_slugs = _known_slugs(memory_dir)
+            _route_known_save(memory_dir, routes, known_slugs)
     else:
         known_slugs = set(known_slugs)
-    routes = load_map(memory_dir, index_path=index_path,
-                      include_frontmatter=include_frontmatter)
     active = {}
-    for slug in known_slugs:
+    for slug in known_slugs.intersection(routes):   # resolve() returns a slug with no route unchanged
         endpoint = resolve(slug, routes, known_slugs=known_slugs)
         if endpoint != slug:
             active[slug] = endpoint
