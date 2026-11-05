@@ -2,6 +2,10 @@
 # each under tools/run_script_tests.py instead.
 import os
 import sys
+import tempfile
+
+# keep the supersession frontmatter cache out of the source tree while the tests run
+os.environ.setdefault("BRAIN_SUPERSESSION_CACHE_DIR", tempfile.mkdtemp(prefix="sup_cache_"))
 
 _HERE = os.path.dirname(os.path.abspath(__file__))
 _up = _HERE

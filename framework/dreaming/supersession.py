@@ -489,7 +489,9 @@ def _fm_cache_path(memory_dir):
     Mac, and other agents' recalls queued 5-13 min behind it."""
     import hashlib
     tag = hashlib.sha256(os.path.normcase(os.path.abspath(memory_dir)).encode("utf-8")).hexdigest()[:12]
-    return os.path.join(HERE, "supersession_frontmatter_cache.%s.json" % tag)
+    # BRAIN_SUPERSESSION_CACHE_DIR moves the cache out of the code folder (tests point it at a temp dir)
+    return os.path.join(os.environ.get("BRAIN_SUPERSESSION_CACHE_DIR") or HERE,
+                        "supersession_frontmatter_cache.%s.json" % tag)
 
 
 # What the last _frontmatter_targets call read: memory_dir and pointers, file name -> (strict, candidate) for every file
