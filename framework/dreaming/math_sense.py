@@ -1545,7 +1545,7 @@ def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None, anchor
                 return "source:" + re.sub(r"\s+", " ", src.casefold()).strip()[:60]
             return "domain:" + re.sub(r"\s+", " ", str(meta.get("domain") or "").casefold()).strip()[:60]
         _top_campaign = _campaign_key(ranked[0].node) if _CAMPAIGN_FAMILY else None
-        top_key = re.sub(r"[^a-z0-9]+", " ", (ranked[0].node.title or "").casefold()).strip()
+        top_key = _title_key(ranked[0].node.title)
         top_family = _family_key(ranked[0].node.title)
         # SIBLINGS ARE NOT RIVALS. Three more kinds of sibling, each behind its own switch (default on):
         # NAMED family (MATHBRAIN_NAMED_FAMILY): when the prompt names something (an acronym, a proper name - _name_tokens)
@@ -1574,7 +1574,7 @@ def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None, anchor
         _top_vocab = _is_vocab(ranked[0].node) if _VOCAB_NR else True
         rival = next(
             (h for h in ranked[1:]
-             if re.sub(r"[^a-z0-9]+", " ", (h.node.title or "").casefold()).strip() != top_key
+             if _title_key(h.node.title) != top_key
              and not (_top_poss and _top_poss & _possessives(h.node.title))
              and not (not _top_vocab and _is_vocab(h.node))
              and _family_key(h.node.title) != top_family
@@ -1619,7 +1619,7 @@ def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None, anchor
             continue
         # harvest and authored waves can hold the same theorem under
         # near-identical titles; injecting it twice burns a slot
-        title_key = re.sub(r"[^a-z0-9]+", " ", (node.title or "").casefold()).strip()
+        title_key = _title_key(node.title)
         if title_key in seen_titles:
             # ... and when they do, the higher-ranked one is often the harvested
             # encyclopedia OPENING while the lower-ranked one actually states the
@@ -1648,15 +1648,14 @@ def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None, anchor
     # with the statement of a theorem that is already going out.
     if len(ranked) > SLOT_WINDOW:
         chosen_keys = {
-            re.sub(r"[^a-z0-9]+", " ", (h.node.title or "").casefold()).strip(): i
+            _title_key(h.node.title): i
             for i, h in enumerate(chosen) if _is_lede(h.node)
         }
         if chosen_keys:
             for hit in ranked[SLOT_WINDOW:]:
                 if not chosen_keys:
                     break
-                key = re.sub(r"[^a-z0-9]+", " ",
-                             (hit.node.title or "").casefold()).strip()
+                key = _title_key(hit.node.title)
                 i = chosen_keys.get(key)
                 if i is not None and not _is_lede(hit.node):
                     chosen[i] = hit
@@ -2238,10 +2237,16 @@ _UNSERVED_KINDS = ("evidence",) + (() if os.environ.get("MATHBRAIN_SERVE_SOURCE"
                                    else ("source",))
 
 
-def _title_key(title, fold=True):
-    """Lower-case title with punctuation collapsed to single spaces; fold=True also drops accents."""
+# ONE KEY FOR "THE SAME TITLE": case and punctuation folded, and accents when fold is on, so "Hölder's inequality"
+# and "Holder's Inequality" are one title. The final twin pass and the sub-query merge always fold; _select folds only under
+# MATHBRAIN_TITLE_DEDUP_FOLD (default off: a fold before the floor can drop the copy that would have survived it).
+TITLE_DEDUP_FOLD = os.environ.get("MATHBRAIN_TITLE_DEDUP_FOLD", "0").strip() not in ("0", "off", "false", "")
+
+
+def _title_key(title, fold=None):
+    """Lower-case title with punctuation collapsed to single spaces; fold drops accents (None: TITLE_DEDUP_FOLD)."""
     t = title or ""
-    if fold:
+    if (TITLE_DEDUP_FOLD if fold is None else fold):
         t = "".join(c for c in unicodedata.normalize("NFKD", t) if not unicodedata.combining(c))
     return re.sub(r"[^a-z0-9]+", " ", t.casefold()).strip()
 
@@ -2252,7 +2257,7 @@ def _drop_title_twins(chosen):
         return chosen
     kept, pos = [], {}
     for h in chosen:
-        k = _title_key(getattr(h.node, "title", ""))
+        k = _title_key(getattr(h.node, "title", ""), fold=True)
         if k and k in pos:
             i = pos[k]
             if _is_lede(kept[i].node) and not _is_lede(h.node):
