@@ -21,7 +21,7 @@ python agent_tools/math_recall.py "random transposition walk spectral gap" --or 
 python agent_tools/math_recall.py --id <card id from the output>
 ```
 
-No `pip install` and no environment variables are needed: the tools find `src/` and the store from the checkout. On 3 November 2026 this ran from a fresh clone with an empty home directory: the import rebuilt 60,977 rows in 42 seconds with no row failing its digest, and the first search took 49 seconds on a busy laptop because it builds the prepared fast-recall state; later searches take a few seconds.
+You need Python 3.11 or newer; macOS ships 3.9 as `/usr/bin/python3`, so install a newer one there first. No `pip install` and no environment variables are needed: the tools find `src/` and the store from the checkout. On 3 November 2026 this ran from a fresh clone with an empty home directory: the import rebuilt 60,977 rows in 42 seconds with no row failing its digest, and the first search took 49 seconds on a busy laptop because it builds the prepared fast-recall state; later searches take a few seconds.
 
 The repository has a small brain of its own as well. [navigation/](navigation/) holds one card for every file outside `results/` and `papers/`, one for each directory and README section, and a few concept cards, about 1,700 in all, joined by about 3,400 links. It answers "where is X and what do I open to use it" without walking the tree:
 

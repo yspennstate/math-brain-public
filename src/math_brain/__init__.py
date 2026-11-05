@@ -1,5 +1,15 @@
 """Privacy-isolated mathematical research memory and verification."""
 
+import sys as _sys
+
+# The package uses enum.StrEnum and other 3.11 features. Without this check, Python 3.9 (what macOS
+# ships as /usr/bin/python3) fails with an ImportError about StrEnum that never mentions the version.
+if _sys.version_info < (3, 11):
+    raise ImportError(
+        "math_brain needs Python 3.11 or newer; this is Python %d.%d. On macOS the python3 in /usr/bin is "
+        "3.9: install a newer one (python.org or Homebrew) and run the tools with it." % _sys.version_info[:2]
+    )
+
 from .benchmark import (
     BenchmarkItem,
     BenchmarkManifest,
