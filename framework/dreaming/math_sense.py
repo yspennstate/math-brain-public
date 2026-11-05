@@ -3491,6 +3491,75 @@ def _store_n():
     return _lexdf()[1]
 
 
+# LEAD CARDS ON LONG PROMPTS MUST BE NAMED (MATHBRAIN_LEAD_NAMED, default on). Some store populations are leads, not
+# results: concept cards harvested from an encyclopedia ("Model theory", "NP-completeness"), "Attempt on ..." records and
+# bare "Open problem: ..." cards. On a long prompt - a pasted referee report, a work order, a proof audit - some incidental
+# word always matches one of them. On a prompt of 80 or more words (LaTeX command names not counted) such a card is served
+# only when the prompt NAMES it: at least half of its title's IDF weight is carried by the prompt (acronyms expanded, so
+# "FEI" names "Fourier entropy versus total influence"). Measured on a large archive of real prompts: the junk blocks were
+# silenced and dozens of junk cards dropped, no useful block was silenced, and no bank question is that long, so every
+# bank is untouched. Pinned citations are never dropped. Which populations count as leads is read from
+# MATHBRAIN_LEAD_POPULATIONS (bundle id prefixes, comma separated). MATHBRAIN_LEAD_NAMED=0 switches the rule off.
+LEAD_NAMED = os.environ.get("MATHBRAIN_LEAD_NAMED", "1").strip() not in ("0", "off", "false", "")
+LEAD_POPULATIONS = tuple(p.strip() for p in os.environ.get(
+    "MATHBRAIN_LEAD_POPULATIONS", "population.wikipedia-harvest").split(",") if p.strip())
+LEAD_MIN_WORDS = int(os.environ.get("MATHBRAIN_LEAD_MIN_WORDS", "80") or 80)
+LEAD_MIN_COV = float(os.environ.get("MATHBRAIN_LEAD_MIN_COV", "0.5") or 0.5)
+
+
+# TITLES THAT ARE ENTRY KEYS ARE LEADS TOO (MATHBRAIN_LEAD_KEY_TITLE, default on). A card whose title is its bundle entry
+# key spelled out ("audit verdict thm1 thm2 pass" for xx-audit-verdict-thm1-thm2-pass) tells a reader nothing, and on long
+# prompts its process words ("audit", "verification", "report") are what matched. Such cards join the rule above; the
+# rule reads the title's form, not the family, so any bundle titled the same way is covered.
+LEAD_KEY_TITLE = os.environ.get("MATHBRAIN_LEAD_KEY_TITLE", "1").strip() not in ("0", "off", "false", "")
+
+
+def _key_titled(node):
+    """True when the card's title is its bundle entry key in words (lower case, the key's family prefix optional)."""
+    try:
+        meta = getattr(node, "metadata", None) or {}
+        key = str(meta.get("bundle_entry_key") or "")
+        title = str(getattr(node, "title", "") or "")
+        if not key or not title or title != title.lower():
+            return False
+        kw = re.sub(r"[^a-z0-9]+", " ", key.lower()).split()
+        tw = re.sub(r"[^a-z0-9]+", " ", title.lower()).split()
+        return bool(tw) and (kw == tw or kw[1:] == tw)
+    except Exception:
+        return False
+
+
+def _lead_filter(prompt, chosen, pinned=()):
+    """chosen without the lead cards a long prompt does not name. Returns chosen unchanged on any doubt."""
+    if not LEAD_NAMED or not chosen:
+        return chosen
+    try:
+        if len(_NONMATH_WORD.findall(_NONMATH_LATEX.sub(" ", prompt))) < LEAD_MIN_WORDS:
+            return chosen
+        df, n = _store_df(), _store_n()
+        if not df or not n:
+            return chosen
+        import math as _m
+        import math_brain.retrieval as _R
+        terms = lambda t: set(_R._content_terms(_R.index_signals(t or "").lexical_tokens))
+        pt = terms(_expand_aliases(prompt))
+        idf = lambda t: _m.log1p(n / (1.0 + df.get(t, 0)))
+        keep = []
+        for h in chosen:
+            src = str((getattr(h.node, "metadata", None) or {}).get("bundle_id") or "")
+            if h.node.id in pinned or not (any(src.startswith(p) for p in LEAD_POPULATIONS)
+                                           or (LEAD_KEY_TITLE and _key_titled(h.node))):
+                keep.append(h)
+                continue
+            tt = terms(h.node.title or "")
+            w = sum(idf(t) for t in tt)
+            if w > 0 and sum(idf(t) for t in tt if t in pt) / w >= LEAD_MIN_COV:
+                keep.append(h)
+        return keep
+    except Exception:
+        return chosen
+
+
 # PASTED VERDICTS (MATHBRAIN_VERDICT_GATE, default on). A prompt that opens with a reviewer's verdict on a paper
 # ("Verdict: potentially publishable, but not as-is ...", "Executive verdict", "My vote is NO - do not resubmit") and asks
 # an agent to act on it passes the entry gate on the mathematics the verdict discusses, and the cards that come back are
@@ -4674,6 +4743,12 @@ def _main_body(data, out):
         elif _bcv:
             _silence_note(data, _bcv)
             return
+        if chosen:
+            _kept = _lead_filter(prompt, chosen, pinned=set(pinned_ids or ()))
+            if not _kept:
+                _silence_note(data, "lead_unnamed:%d" % len(chosen))
+                return
+            chosen = _kept
         if chosen and not pinned_ids and _generic_only(prompt, chosen):
             _silence_note(data, "generic_only_match")
             return
