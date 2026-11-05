@@ -1859,11 +1859,23 @@ def _prefilter_revision_nodes(store, prefilter_ids, max_revision_nodes=4096):
     before retrieve() decides which immutable revision is current. A missing
     endpoint quarantines its connected revision family; it never enables an old
     record as a fallback. This does not transfer lexical scores to new wording.
+
+    Read cost: the closure needs only the kind and the two ends of the SUPERSEDES, PROVES and REFUTES edges, and the
+    return keeps only the edges with both ends in the pool, so _revision_edge_reader reads those three kinds through
+    the kind index and builds the pool's own edges from their rows, in the same created_at, id order. Building all
+    17,500 edges of a full store as objects to keep a few hundred cost 0.43-0.50 s of every math prompt; this costs
+    about 0.02 s. The whole-edge read stays as the fallback whenever the reader cannot match it exactly.
     """
     from math_brain.models import EdgeKind
 
-    edges = list(store.iter_edges())
-    revisions = [e for e in edges if e.kind is EdgeKind.SUPERSEDES]
+    fast = _revision_edge_reader(store, EdgeKind)
+    if fast is None:
+        edges = list(store.iter_edges())
+        rel, pool_edges = edges, None
+    else:
+        edges = None
+        rel, pool_edges = fast
+    revisions = [e for e in rel if e.kind is EdgeKind.SUPERSEDES]
     newer, connected = {}, {}
     for edge in revisions:
         newer.setdefault(edge.target_id, set()).add(edge.source_id)
@@ -1892,11 +1904,17 @@ def _prefilter_revision_nodes(store, prefilter_ids, max_revision_nodes=4096):
         _amax = 3
     if _amax > 0:
         answers = {}
-        for edge in edges:
+        for edge in rel:
             if edge.kind is EdgeKind.PROVES or edge.kind is EdgeKind.REFUTES:
                 answers.setdefault(edge.target_id, []).append(edge.source_id)
         for qid in list(wanted):
-            for src in answers.get(qid, ())[:_amax]:
+            # A superseded source is never loaded as an answer. This closure runs after the revision walk above, so an
+            # old revision added here would arrive without its newer revision and without the SUPERSEDES edge that
+            # marks it historical (the return keeps only edges with both ends loaded), and retrieve() would rank it as
+            # current. A relation is bound to the revision it was written against: the head is loaded through its own
+            # proves/refutes edge when it has one, and when it has none the question is served without an answer card.
+            # Filtering before the cap also keeps an old revision from taking a slot its current answer needed.
+            for src in [s for s in answers.get(qid, ()) if s not in newer][:_amax]:
                 if src not in wanted:
                     expanded += 1
                     if expanded > max_revision_nodes:
@@ -1916,7 +1934,68 @@ def _prefilter_revision_nodes(store, prefilter_ids, max_revision_nodes=4096):
     order.extend(sorted(wanted - set(order)))
     nodes = [loaded[nid] for nid in order if nid in loaded and nid not in blocked]
     keep = {node.id for node in nodes}
+    if pool_edges is not None:
+        return nodes, pool_edges(keep)
     return nodes, [e for e in edges if e.source_id in keep and e.target_id in keep]
+
+
+def _revision_edge_reader(store, EdgeKind):
+    """(closure records, pool-edge loader) for _prefilter_revision_nodes, or None for its whole-edge read.
+
+    The records are the SUPERSEDES, PROVES and REFUTES edges, not retracted, in created_at, id order, carrying only
+    kind, source_id and target_id - everything the two closures read. The loader returns the non-retracted edges with
+    both ends in `keep`, built by the store's own row reader in created_at, id order: the list the whole-edge read
+    filtered down to. None (the whole-edge read) when the store holds an edge kind that is not exactly one of
+    EdgeKind's values (that read raises UnknownEdgeKindError as before), when the store has no row reader, or when a
+    query fails. Not matched: the whole-edge read parses every edge, so one malformed edge row anywhere raised; here
+    only the pool's edges are parsed."""
+    import sqlite3
+    from collections import namedtuple
+
+    con = getattr(store, "connection", None)
+    if con is None or not callable(getattr(store, "_edge_from_row", None)):
+        return None
+    try:
+        values = {k.value for k in EdgeKind}
+        for row in con.execute("SELECT DISTINCT kind FROM edges").fetchall():
+            if row[0] not in values:
+                return None
+        retracted = store.retracted_edge_ids()
+        three = (EdgeKind.SUPERSEDES.value, EdgeKind.PROVES.value, EdgeKind.REFUTES.value)
+        rows = con.execute("SELECT id, kind, source_id, target_id FROM edges WHERE kind IN (?, ?, ?) "
+                           "ORDER BY created_at, id", three).fetchall()
+    except sqlite3.Error:
+        return None
+    rec = namedtuple("RevisionEdge", "kind source_id target_id")
+    rel = [rec(EdgeKind(r[1]), r[2], r[3]) for r in rows if r[0] not in retracted]
+
+    def pool_edges(keep):
+        if not keep:
+            return []
+        ids = sorted(keep)
+        rows = None
+        if all(isinstance(i, str) and i.isascii() for i in ids):
+            blob = json.dumps(ids)
+            try:
+                # the index serves source_id; +target_id keeps the planner from probing every (source, target) pair
+                rows = con.execute("SELECT * FROM edges WHERE source_id IN (SELECT value FROM json_each(?)) "
+                                   "AND +target_id IN (SELECT value FROM json_each(?)) ORDER BY created_at, id",
+                                   (blob, blob)).fetchall()
+            except sqlite3.Error:
+                rows = None
+        if rows is None:
+            return [e for e in store.iter_edges() if e.source_id in keep and e.target_id in keep]
+        warned = set()
+        out = []
+        for row in rows:
+            if row["id"] in retracted or row["source_id"] not in keep or row["target_id"] not in keep:
+                continue
+            edge = store._edge_from_row(row, skip_unknown=False, warned=warned)
+            if edge is not None:
+                out.append(edge)
+        return out
+
+    return rel, pool_edges
 
 
 
