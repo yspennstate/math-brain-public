@@ -14,7 +14,7 @@ local copy of a production file is fine - the danger is RUNNING/changing the liv
 (Bash/PowerShell/Edit/Write) and UserPromptSubmit; fail-safe silent otherwise. Never hard-blocks (the
 owner acts through this brain) - it raises caution, it doesn't lock the door.
 """
-import sys, os, io, json, re, time
+import sys, os, io, json, re, time, fnmatch
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 
@@ -57,6 +57,96 @@ def _backslash_line(data):
                 "double backslash into one before the shell runs, so a regex, an escape or a Windows path written "
                 "this way arrives changed (A, backslash, backslash, n reaches python as A and a newline). Text with "
                 "backslashes goes through the Write or Edit tool; if one backslash is what you mean, type one." % where)
+    except Exception:
+        return ""
+
+
+# ARGMAX GUARD (2026-11-01, Mac). The memory folder holds ~29,100 .md files whose paths total ~3.7 MB, past the
+# 1 MB kernel argument limit, so an unquoted `*.md` there never runs: the shell prints "argument list too long" and a
+# `2>/dev/null` hides even that, leaving an empty result that reads as "no match". Eight recorded slips, the rule
+# already in the brain each time. Replayed over 28,704 Mac Bash calls since 30 Oct: 34 shell refusals, 31 caught;
+# of the 49 fires with no refusal line 48 had stderr hidden and the last was a refusal whose message the transcript
+# lost. It lists only real directories named by a glob word (or the cwd / a `cd` earlier in the command).
+_AM_HEREDOC = re.compile(r"<<-?[ \t]*(['\"]?)(\w+)\1[^\n]*\n.*?(?:\n[ \t]*\2[ \t]*(?=\n|$)|\Z)", re.S)
+_AM_ARITH = re.compile(r"\$\(\([^()]*\)\)")
+_AM_QUOTED = re.compile(r"'[^']*'|\"(?:[^\"\\]|\\.)*\"")
+_AM_ASSIGN = re.compile(r"(?:^|[\s;&|(])([A-Za-z_][A-Za-z0-9_]*)=([^\s;&|()]+)")
+_AM_VAR = re.compile(r"\$\{?([A-Za-z_][A-Za-z0-9_]*)\}?")
+_AM_WORD = re.compile(r"[^\s;&|()<>]+")
+_AM_CD = re.compile(r"(?:^|[;&|(]\s*|\s)cd\s+([^\s;&|()]+)")
+_ARG_MAX = 1048576
+try:
+    _ARG_MAX = os.sysconf("SC_ARG_MAX")
+except (ValueError, OSError, AttributeError):
+    pass
+
+
+_AM_SUBST = re.compile(r"\$\(([^()]*)\)")
+
+
+def _am_unquote(m):
+    s = m.group(0)
+    if s[0] == '"' and "$(" in s:
+        # a command substitution runs even inside double quotes; keep its words, drop its own quoted strings
+        return " ; ".join(_AM_SUBST.findall(re.sub(r"'[^']*'", " ", s))) or " "
+    # a quoted glob never expands, so it goes; a quoted path stays (cd "$M" still moves the shell)
+    return " " if "*" in s or " " in s.strip("'\"") else s[1:-1]
+
+
+def _am_dir(d, cwd, env):
+    d = _AM_VAR.sub(lambda v: env.get(v.group(1), v.group(0)), d)
+    d = os.path.expanduser(d.replace("$HOME", "~").replace("${HOME}", "~"))
+    if "$" in d:
+        return ""
+    return os.path.normpath(os.path.join(cwd or os.getcwd(), d))
+
+
+def _argmax_trap(cmd, cwd=""):
+    """'' unless an unquoted glob in a Bash command expands past the argument limit, else the glob and its size."""
+    if "*" not in (cmd or ""):
+        return ""
+    rest = _AM_QUOTED.sub(_am_unquote, _AM_ARITH.sub(" ", _AM_HEREDOC.sub(" ", cmd)))
+    if "*" not in rest:
+        return ""
+    env = {}
+    for a in _AM_ASSIGN.finditer(rest):
+        env.setdefault(a.group(1), _AM_VAR.sub(lambda v: env.get(v.group(1), v.group(0)), a.group(2)))
+    cds = [(m.start(), m.group(1)) for m in _AM_CD.finditer(rest)]
+    for w in _AM_WORD.finditer(rest):
+        word = w.group(0)
+        if "*" not in word or word.startswith("-") or "=" in word.split("/")[0]:
+            continue
+        base = cwd or ""
+        for at, d in cds:
+            if at < w.start():
+                base = _am_dir(d, base, env) or base
+        head, pat = os.path.split(word)
+        if "*" in head or "*" not in pat:
+            continue
+        directory = _am_dir(head, base, env) if head else base
+        try:
+            names = os.listdir(directory) if directory else []
+        except OSError:
+            continue
+        hit = [n for n in fnmatch.filter(names, pat) if pat.startswith(".") or not n.startswith(".")]
+        size = sum(len(os.path.join(directory, n)) + 1 for n in hit)
+        if size > _ARG_MAX * 0.9:
+            return "%s (%d names, %.1f MB of a %.1f MB limit)" % (word, len(hit), size / 1e6, _ARG_MAX / 1e6)
+    return ""
+
+
+def _argmax_line(data):
+    """The guard's one line for a PreToolUse Bash call, or ''. ARGMAX_GUARD=0 turns it off. Fail-safe."""
+    try:
+        if os.environ.get("ARGMAX_GUARD", "1") == "0" or data.get("tool_name") != "Bash":
+            return ""
+        where = _argmax_trap(((data.get("tool_input") or {}).get("command")) or "", data.get("cwd") or "")
+        if not where:
+            return ""
+        return ("[argmax-guard] the unquoted glob %s expands past the kernel argument limit, so the shell will refuse "
+                "that command with 'argument list too long' and run nothing (a 2>/dev/null hides even that, and the "
+                "empty output reads as 'no match'). Let the tool walk the folder instead: grep -rl --include='*.md' "
+                "PATTERN DIR, or find DIR -name '*.md' -print0 | xargs -0 ..." % where)
     except Exception:
         return ""
 
@@ -219,6 +309,48 @@ def _python_dash(cmd):
             if t in ("-c", "-m") or not t.startswith("-"):
                 break
             i += 2 if t in ("-X", "-W") else 1
+    return ""
+
+
+# A gate piped into tail/head/sed hands the shell the LAST stage's exit, so `scan_secrets.py | tail -1 && git push`
+# pushes when the scan fails or never ran. Four scar cards (10 Sep, 3 Oct, 1 Nov, 3 Nov) and it recurred on 5 Nov 17:05
+# with the scanner path wrong: the push went out unscanned. Refused, not warned, like the python dash.
+# A pipeline that ends in grep is a gate by design (grep's own exit is the test); `set -o pipefail` lifts the refusal.
+# 5 Nov 2026. PIPEGATE_GUARD=0 turns it off.
+_GATE = re.compile(r"\b(?:scan_secrets|check_no_private_labels|export_public|prepush_secret_gate|check_gate"
+                   r"|brain_regression_gate|pytest)\b")
+_MUTATE = re.compile(r"\bgit\s+(?:-[cC]\s+\S+\s+)*(?:push|commit)\b|\bsafe_push\b|\bgh\s+(?:release|pr\s+merge)\b")
+_MASKERS = {"tail", "head", "sed", "cut", "cat", "tee", "awk", "sort", "uniq", "wc", "tr", "less", "column", "fold"}
+
+
+def _piped_gate(cmd):
+    """The gate segment whose exit a pipe hides from a later && commit or push, or ''."""
+    cmd = cmd or ""
+    if "pipefail" in cmd:
+        return ""
+    # quoted text is a message or a fixture, not a pipeline (3 of 61 fires on 21 days of real commands were a mesh
+    # --body or a python string quoting the shape); "$(...)" in double quotes still runs, so it is kept
+    cmd = re.sub(r"\"(?:\\.|[^\"\\])*\"|'[^']*'",
+                 lambda m: m.group(0) if m.group(0).startswith('"$(') else "''", cmd)
+    pending = ""
+    for part in re.split(r"(&&|\|\||;|\n)", cmd):
+        if part in ("&&",):
+            continue
+        if part in ("||", ";", "\n"):
+            pending = ""
+            continue
+        if pending and _MUTATE.search(part):
+            return pending.strip()[:160]
+        stages = [s.strip() for s in re.split(r"(?<![|>&])\|(?![|&])", part)]
+        if part.split()[:1] in (["["], ["[["], ["test"]):      # [ "$(scan | tail -1)" = "clean" ] is itself the gate,
+            continue                                             # and a test later in the chain keeps an earlier one
+        if len(stages) < 2 or not any(_GATE.search(s) for s in stages[:-1]):
+            continue
+        last = stages[-1].split()
+        if last and os.path.basename(last[0]) in _MASKERS:
+            pending = part
+        else:
+            pending = ""
     return ""
 
 
@@ -422,12 +554,23 @@ def main():
                         "WinError 123, hanging the whole command. Write the script with the Write "
                         "tool and run it by file name, or use python -c for one line." % _seg)}}))
                 return
+        # REFUSED, not warned: a gate whose exit a pipe hides from a later commit or push (see _piped_gate).
+        if ev == "PreToolUse" and data.get("tool_name") == "Bash" and os.environ.get("PIPEGATE_GUARD", "1") != "0":
+            _seg = _piped_gate((data.get("tool_input", {}) or {}).get("command", "") or "")
+            if _seg:
+                sys.stdout.write(json.dumps({"hookSpecificOutput": {"hookEventName": "PreToolUse",
+                    "permissionDecision": "deny",
+                    "permissionDecisionReason": ("REFUSED (piped gate): in '%s' the shell reads the last stage's exit, "
+                        "not the gate's, so the commit or push after && runs even when the gate fails or never ran. "
+                        "Let the gate's own exit decide: drop the pipe, end the pipeline in grep -q on the pass line, "
+                        "or start the command with set -o pipefail." % _seg)}}))
+                return
         # On an EDIT/WRITE, the danger is not the text mentioning money/secrets/production - it's writing
         # a real credential VALUE (the token-leak shape). Score edits on that alone, so the gut stops
         # crying wolf on every memory/hook edit that quotes a risky word or the word "secret" (the dream's
         # anti-wallpaper finding). Commands and prompts still get the full mention-aware scoring below.
         tool = data.get("tool_name", "")
-        guard = _backslash_line(data) if ev == "PreToolUse" else ""
+        guard = "\n".join(x for x in (_backslash_line(data), _argmax_line(data)) if x) if ev == "PreToolUse" else ""
         if ev == "PreToolUse" and tool in ("Edit", "Write", "MultiEdit"):
             hits = {"a secret / security credential": 3} if SECRET_VALUE.search(text) else {}
         else:
