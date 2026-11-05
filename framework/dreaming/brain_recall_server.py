@@ -16,6 +16,12 @@ Correctness rules:
 Launched windowless by the client (python.exe with CREATE_NO_WINDOW, so its own children inherit a hidden
 console). Read-only on the brain except what recall itself writes (its usage logs). Never deletes anything.
 """
+
+import sys
+if __name__ == "__main__" and any(arg in ("-h", "--help") for arg in sys.argv[1:]):
+    print(__doc__ or "No command-line options.")
+    raise SystemExit(0)
+
 import contextlib, functools, io, json, os, secrets, socket, socketserver, sys, threading, time
 
 D = os.path.dirname(os.path.abspath(__file__))
@@ -27,6 +33,22 @@ STATE_TTL = float(os.environ.get("BRS_STATE_TTL", "120"))
 IDLE_EXIT = float(os.environ.get("BRS_IDLE_EXIT", "7200"))
 LOCK_WAIT = float(os.environ.get("BRS_LOCK_WAIT", "20"))
 RSS_CAP = int(float(os.environ.get("BRS_RSS_CAP_GB", "2.5")) * 1024 ** 3)
+# Every BM25 rebuild unlinks the old postings sidecar (~157 MB), but a reader this
+# process opened keeps it on disk until we exit; after 19 h one server held 11 of them (2.3 GiB with other deleted
+# files) while the disk ran short. Exit after answering once the index has been replaced this many
+# times; the next client call starts a fresh server (0.1 s load). 0 turns it off.
+# Cap 1: rebuilds come about every 35 min (3 in 1 h 44 min in one measured stretch) and a fresh
+# server loads in 0.1 s, so exiting on the first one costs little and holds at most one dead generation (~157 MB).
+BM25_GEN_CAP = int(os.environ.get("BRS_BM25_GEN_CAP", "1"))
+BM25_INDEX = os.path.join(D, "bm25_index.json.gz")
+
+
+def bm25_gen():
+    try:
+        st = os.stat(BM25_INDEX)
+        return (st.st_ino, st.st_mtime_ns)
+    except OSError:
+        return None
 GROUP = {"_tiers": "tiers", "_archived_index_lines": "archive", "expansions": "selfkeyed", "_fc_get": "selfkeyed"}
 EXACT_GROUPS = frozenset() if os.environ.get("BRS_EXACT_NO_TTL", "1") == "0" else frozenset({"tiers", "archive"})
 MEMO_NAMES = ("_fc_get", "_load_superseded", "_memlist", "_fast_listing", "_archived_index_lines", "_tiers",
@@ -44,7 +66,12 @@ def log(msg):
 # BRAIN_ variables brain.py reads on each call (never at import), so the server applies the caller's value for the call
 # instead of declining. 3 Nov 2026: 91 of 98 recall calls were declined "brain env differs", all from compact_nodes.py's
 # linker, which sets BRAIN_RECALL_REFRESH=0. BRS_PER_CALL_ENV=0 restores the old decline.
-PER_CALL_ENV = () if os.environ.get("BRS_PER_CALL_ENV", "1") == "0" else ("BRAIN_RECALL_REFRESH",)
+# BRAIN_RECALL_LOG too. graph_lane.log_recall reads it on each call, and every test
+# bank sets BRAIN_RECALL_LOG=0, so all of them were declined and ran cold.
+# BRAIN_HEADLESS_DIET too. Only hook_dispatch reads it, never recall, and it was the one remaining env decline
+# (55 calls in 24 h).
+PER_CALL_ENV = () if os.environ.get("BRS_PER_CALL_ENV", "1") == "0" else (
+    "BRAIN_RECALL_REFRESH", "BRAIN_RECALL_LOG", "BRAIN_HEADLESS_DIET")
 CLIENT_ONLY_ENV = ("BRAIN_RECALL_SERVER",)   # read by brain_recall_client, never by brain.py
 
 
@@ -54,19 +81,6 @@ def brain_env(env):
 
 
 def rss_bytes():
-    if os.name != "nt":   # Linux/macOS: psutil, else /proc (without either the cap is not judged)
-        try:
-            import psutil
-            return int(psutil.Process().memory_info().rss)
-        except ImportError:
-            pass
-        except Exception:
-            return 0
-        try:
-            with open("/proc/self/statm") as f:
-                return int(f.read().split()[1]) * os.sysconf("SC_PAGE_SIZE")
-        except Exception:
-            return 0
     try:
         import ctypes
         from ctypes import wintypes
@@ -81,6 +95,26 @@ def rss_bytes():
         h = ctypes.windll.kernel32.GetCurrentProcess()
         if ctypes.windll.psapi.GetProcessMemoryInfo(h, ctypes.byref(pmc), pmc.cb):
             return int(pmc.WorkingSetSize)
+    except Exception:
+        pass
+    if os.name != "nt":   # Linux/macOS: psutil, else /proc (without either the cap is not judged)
+        try:
+            import psutil
+            return int(psutil.Process().memory_info().rss)
+        except ImportError:
+            pass
+        except Exception:
+            return 0
+        if sys.platform != "darwin":
+            try:
+                with open("/proc/self/statm") as f:
+                    return int(f.read().split()[1]) * os.sysconf("SC_PAGE_SIZE")
+            except Exception:
+                return 0
+    try:  # macOS: peak resident size in bytes; a cap on the peak is the cautious reading
+        import resource
+        if sys.platform == "darwin":
+            return int(resource.getrusage(resource.RUSAGE_SELF).ru_maxrss)
     except Exception:
         pass
     return 0
@@ -159,6 +193,16 @@ class Brain:
                 graph_lane.LAZY_RESIDENT = True
             except Exception as e:
                 log("resident link lists off: %s: %s" % (type(e).__name__, e))
+        # Lever 10: exact numpy forms of bm25.score_postings, the embeddings loader and _spread
+        # (recall_levers.py has the proofs). Each is admitted only for a source version it was checked on and falls
+        # back to the original otherwise. BRS_EXACT_NP=0 off.
+        try:
+            import recall_levers
+            put = recall_levers.install(self)
+            if put:
+                log("exact numpy levers: %s" % ",".join(put))
+        except Exception as e:
+            log("exact numpy levers off: %s: %s" % (type(e).__name__, e))
         self.code = self._code_sig()
         self.calls = 0
 
@@ -390,7 +434,7 @@ def main():
     base_env = brain_env(os.environ)
     lock = threading.Lock()
     token = secrets.token_hex(16)
-    last = {"t": time.time()}
+    last = {"t": time.time(), "bm25": bm25_gen(), "gens": 0}
     stop = threading.Event()
 
     class Handler(socketserver.StreamRequestHandler):
@@ -434,6 +478,13 @@ def main():
                         if rss_bytes() > RSS_CAP:
                             log("rss over cap after a call; exiting")
                             stop.set()
+                        g = bm25_gen()
+                        if g != last["bm25"]:
+                            last["bm25"], last["gens"] = g, last["gens"] + 1
+                        if BM25_GEN_CAP and last["gens"] >= BM25_GEN_CAP:
+                            log("bm25 index replaced %d times; exiting so its deleted postings files are freed" % last["gens"])
+                            last["respawn"] = True
+                            stop.set()
                 finally:
                     last["t"] = time.time()
                     lock.release()
@@ -472,26 +523,44 @@ def main():
         time.sleep(1)
         srv.shutdown()
         log("stopped pid %d after %d calls" % (os.getpid(), brain.calls))
+        # Index rebuilds can come every few minutes, and after each cap exit a sandboxed client (which cannot spawn) and
+        # BRAIN_-carrying loops ran cold until another session started a server. The exiting server starts its successor; it waits on server.lock until we are gone.
+        if last.get("respawn") and os.environ.get("BRS_RESPAWN", "1") != "0":
+            try:
+                import subprocess
+                subprocess.Popen([sys.executable, "-B", os.path.abspath(__file__)], cwd=D,
+                                 env={k: v for k, v in os.environ.items() if not k.startswith("BRAIN_")},
+                                 stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
+                                 close_fds=True, start_new_session=(os.name == "posix"),
+                                 creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+                log("started a successor after the index change")
+            except Exception as e:
+                log("successor start failed: %s: %s" % (type(e).__name__, e))
 
 
 if __name__ == "__main__":
+    if os.name == "posix":
+        try:
+            os.nice(max(0, 10 - os.nice(0)))   # niced to 10 (compute doctrine); a successor does not stack it
+        except OSError:
+            pass
     lockf = None
     try:
         os.makedirs(STATE_DIR, exist_ok=True)
         lockf = open(os.path.join(STATE_DIR, "server.lock"), "a+b")
-        if os.name == "nt":
+        try:
             import msvcrt
 
-            def take():
+            def _try_lock():
                 msvcrt.locking(lockf.fileno(), msvcrt.LK_NBLCK, 1)
-        else:   # Linux/macOS: an advisory lock the kernel drops when the process exits
+        except ImportError:  # macOS / Linux
             import fcntl
 
-            def take():
+            def _try_lock():
                 fcntl.flock(lockf.fileno(), fcntl.LOCK_EX | fcntl.LOCK_NB)
         for _ in range(40):  # a server that is stopping holds the lock for up to ~16 s
             try:
-                take()
+                _try_lock()
                 break
             except OSError:
                 time.sleep(1)

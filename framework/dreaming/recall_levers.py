@@ -1,4 +1,4 @@
-"""Lever 10 of the resident recall server (5 Nov 2026): three exact numpy forms of the hottest loops of a served recall,
+"""Lever 10 of the resident recall server: three exact numpy forms of the hottest loops of a served recall,
 installed in brain_recall_server's process only. A one-shot brain.py never imports this file.
 
 Each one gives the same answer as the code it stands in for, float for float and in the same order, and falls back to
@@ -18,8 +18,8 @@ that code on anything it does not cover or on any error:
    np.add.at for the sums, np.maximum.at / np.minimum.at for the strongest bridge with first-wins ties, dict insertion
    order rebuilt. 60 of 60 calls equal (act and parent as ordered item lists), 86 -> 27 ms; the same edges summed in
    reverse order (negative control) differ on 20 of 20.
-Together in one served Brain: 40 of 40 recall outputs equal, median 1264 -> 851 ms. Harnesses and the record are in
-~/brain/porting/spread_server (ab_np.py, ab_emb.py, ab_spread_np.py, ab_recall_e2e.py, NOTES.txt).
+Together in one served Brain: 40 of 40 recall outputs equal, median 1264 -> 851 ms. test_recall_levers.py checks the
+spread form against the original on random graphs and the version gate both ways.
 
 Switches: BRS_EXACT_NP=0 skips the install; BRS_NP_BM25=0, BRS_NP_EMB=0 and BRS_NP_SPREAD=0 skip one lever."""
 import io
@@ -33,17 +33,17 @@ STATS = {"bm25": [0, 0], "emb": [0, 0], "spread": [0, 0]}   # [served, fell back
 # Each lever replaces one function with a numpy form proven equal to ONE version of it. The brain-framework copies
 # of bm25.score_postings (heapq top-k) and load_verified_embeddings (lever 8 sidecar, BRAIN_EMB_LAZY, bodies=) are
 # other versions, so a lever goes in only when the function's source hashes to a version it was checked against.
-# sha256(inspect.getsource(f))[:16]; add a hash only after that version's A/B passes.
+# sha256(inspect.getsource(f))[:16]; add a hash only after that version's A/B passes. In this repository the spread
+# and status levers match a proven version and go in; bm25 and the embeddings loader are other versions and fall
+# back to the original code until their own A/B is recorded.
 PROVEN = {
-    "bm25": {"b54f7a2d2b4c450c",      # Mac lineage, 306/306 (5 Nov)
+    "bm25": {"b54f7a2d2b4c450c",      # light-loader lineage, 306/306
              "53202072716ee9a9"},     # brain-framework (heapq top-k), 306/306 on two seeds, control 75/306,
-                                      # 60.6 -> 12.1 ms (ab_bm25_lineage.py, 5 Nov 10:20 on the Mac's postings)
-    "emb": {"467b923b88d89822",       # Mac light-loader lineage, 21/21 (5 Nov)
-            "012f6f954ea04578",       # brain-framework (lever-8 sidecar): 11/11 equal on every attribute, control
-                                      # caught, 94 -> 25 ms (ab_emb_lineage.py, 5 Nov); BRAIN_EMB_LAZY=1 falls back
-            "e1093f7d5d9aa5cc"},      # the union loader with read_known_bytes: 9/9 twice, control
-                                      # caught, 88-109 -> 21-33 ms; without read_known_bytes the attribute check refuses it
-    "spread": {"fa0f3a9249918eb6"},   # same source on the Mac and in brain-framework, 60/60 (5 Nov)
+                                      # 60.6 -> 12.1 ms
+    "emb": {"467b923b88d89822",       # light-loader lineage, 21/21
+            "012f6f954ea04578"},      # brain-framework (lever-8 sidecar): 11/11 equal on every attribute, control
+                                      # caught, 94 -> 25 ms; BRAIN_EMB_LAZY=1 falls back
+    "spread": {"fa0f3a9249918eb6"},   # same source in both lineages and in this repository, 60/60
 }
 
 
@@ -442,7 +442,7 @@ def install(brain):
             done.append("emb")
     if os.environ.get("BRS_NP_STATUS", "1") != "0":
         f = g.get("_status_from_index")
-        try:   # only the version read and checked on 5 Nov (it reads the index line and nothing else)
+        try:   # only the version read and checked (it reads the index line and nothing else)
             import hashlib, inspect
             src_ok = hashlib.sha256(inspect.getsource(f).encode()).hexdigest()[:16] == "281001d65d05ba2f"
         except Exception:
@@ -456,7 +456,7 @@ def install(brain):
                 and _proven("spread", sr._spread)):
             _install_spread(sr, np, g)
             done.append("spread")
-            # Servers live a median of 2 calls (38 on 5 Nov), so lay the graph out now, while the new server waits
+            # Servers live a median of 2 calls (38 at most), so lay the graph out now, while the new server waits
             # for its first call, instead of in that call (~0.3 s). Same layout either way: any loader of this edge
             # generation gives the same keys and lists. BRS_NP_PREBUILD=0 leaves it to the first call.
             if os.environ.get("BRS_NP_PREBUILD", "1") != "0":
