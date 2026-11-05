@@ -40,8 +40,10 @@ PROVEN = {
     "bm25": {"b54f7a2d2b4c450c",      # light-loader lineage, 306/306
              "53202072716ee9a9",      # brain-framework (heapq top-k), 306/306 on two seeds, control 75/306,
                                       # 60.6 -> 12.1 ms
-             "dd2f30568c7b5401"},     # this repository (fast loop, no query-term weights): 320/320 against
+             "dd2f30568c7b5401",      # this repository (fast loop, no query-term weights): 320/320 against
                                       # the fast and the plain loop, control caught (test_bm25_lever.py)
+             "7ecb4a00e7c7c7e7"},     # this repository (fast loop with query-term weights): 320/320 against
+                                      # the fast and the plain loop, again with non-unit weights on every term
     "emb": {"467b923b88d89822",       # light-loader lineage, 21/21
             "012f6f954ea04578",       # brain-framework (lever-8 sidecar): 11/11 equal on every attribute, control
                                       # caught, 94 -> 25 ms; BRAIN_EMB_LAZY=1 falls back
