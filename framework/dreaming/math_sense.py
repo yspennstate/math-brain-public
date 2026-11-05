@@ -120,6 +120,10 @@ GATE_RATIO = float(os.environ.get("MATHBRAIN_GATE_RATIO", "0.45"))   # a note mu
 # so the proof-bank behaviour the gate was tuned on is unchanged; on short questions the gold node passes 88/89
 # unnamed and 89/89 named (offline, gate_analysis_20260911.json). Rollback: GATE_FRAC=0 restores the raw floor.
 GATE_FRAC = float(os.environ.get("MATHBRAIN_GATE_FRAC", "0.3"))
+# THE QUESTION PART: a card that fails the whole-prompt floor is kept when its score on the prompt's closing paragraph
+# clears that part's own scaled floor (see the on-topic gate). QPART_SOLO: the margin a lone rescued card must clear.
+GATE_QPART = os.environ.get("MATHBRAIN_GATE_QPART", "1") not in ("0", "", "off")
+QPART_SOLO = float(os.environ.get("MATHBRAIN_QPART_SOLO", "1.5") or 0)
 # 2026-09-12 (his 09-02 "fire less, be more confident"): COVERAGE - the best prefilter score over the query's own
 # self-score says how much of the question the store's best match covers. Measured in-process on the fresh bank
 # (89 theorems x 2 forms + 40 absent targets): silencing below 0.45 cut absent-target fires 34 -> 30 of 40 with ZERO
@@ -4786,6 +4790,32 @@ def _main_body(data, out):
                     # reach a sum a 2,000-character proof reaches by length alone
                     qself = float(getattr(math_prefilter, "LAST_QSELF", 0.0) or 0.0)
                     floor = min(GATE_FLOOR, GATE_FRAC * qself) if (GATE_FRAC > 0 and qself > 0) else GATE_FLOOR
+                    # THE QUESTION PART (MATHBRAIN_GATE_QPART): a question asked
+                    # after a long lead-in carries a self-score the lead-in inflates, so the floor sits at its cap
+                    # (25) while the cards the ranker chose score 12-25 on the whole prompt (in a trace, 15 of
+                    # 16 silent rows lost every chosen card here). A card that fails the whole-prompt floor is
+                    # kept when, scored on the prompt's closing paragraph (else its tail) alone, it clears that
+                    # part's own scaled floor - both numbers on one scale.
+                    _qp_sc, _qp_floor = {}, None
+                    if GATE_QPART and GATE_FRAC > 0:
+                        try:
+                            _qpart = _closing_paragraph(prompt) or _prompt_tail(prompt, COH_TAIL or 250)
+                            if _qpart and len(_qpart) < len(prompt):
+                                _qd = math_prefilter.load(STORE_PATH)
+                                _qtok = set(math_prefilter.tokens(_qpart))
+                                _qN, _qpost = _qd["n"], _qd["post"]
+                                import math as _qm
+                                _qself = sum(_qm.log(1.0 + (_qN - len(_qpost[t]) + 0.5) / (len(_qpost[t]) + 0.5))
+                                             for t in _qtok if t in _qpost)
+                                if _qself > 0:
+                                    _qp_floor = min(GATE_FLOOR, GATE_FRAC * _qself)
+                                    _ix = {nid: i for i, nid in enumerate(_qd["ids"])}
+                                    _raw = math_prefilter._scores(_qd, _qpart)
+                                    _qp_sc = {h.node.id: float(_raw.get(_ix.get(h.node.id, -1), 0.0)) for h in chosen}
+                        except Exception:
+                            _qp_sc, _qp_floor = {}, None
+                    _qp_resc = set()
+                    _qp_resc = set()
                     keep, n_ml = [], 0
                     for h in chosen:
                         nid = h.node.id
@@ -4804,13 +4834,24 @@ def _main_body(data, out):
                             # 72 -> 71 of 89, rank-1 54 -> 49, absent-target fires 27 -> 28 of 40. It does not even
                             # rescue the item it was built for: l1_c02 asks about off-U increments while the card it
                             # needs is titled for the block-increment exponent, so the prompt never carries its words.
-                            if not (TITLE_EXEMPT and _prompt_names_card(prompt, h.node.title)):
+                            _qp_ok = (_qp_floor is not None and sc >= GATE_RATIO * top
+                                      and _qp_sc.get(nid, 0.0) >= _qp_floor)
+                            if not (_qp_ok or (TITLE_EXEMPT and _prompt_names_card(prompt, h.node.title))):
                                 continue
+                            if _qp_ok:
+                                _qp_resc.add(nid)
                         if str(_node_meta(h.node).get("claim_kind") or "") == "lean_declaration":
                             if n_ml >= 1 or sc < 0.6 * top:
                                 continue
                             n_ml += 1
                         keep.append(h)
+                    # A LONE RESCUE (MATHBRAIN_QPART_SOLO): a block whose only card is one the question part rescued has
+                    # nothing beside it to corroborate it; it stays only when its closing-paragraph score clears that
+                    # part's floor by the factor SOLO (0 = off). On a recall bank, question part alone 74 hits / 13 wrong,
+                    # with SOLO 1.5 73 / 9 (SOLO 2: 71 / 9). It can only remove cards the question part added.
+                    if (QPART_SOLO > 0 and len(keep) == 1 and keep[0].node.id in _qp_resc
+                            and _qp_sc.get(keep[0].node.id, 0.0) < QPART_SOLO * (_qp_floor or 0.0)):
+                        keep = []
                     chosen = keep
             except Exception:
                 pass
