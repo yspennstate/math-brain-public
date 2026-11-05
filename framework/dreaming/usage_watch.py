@@ -218,9 +218,9 @@ def selftest():
 
         def probe(u7_now, u7_then, at_age=60):
             with open(P, "w") as f:
-                json.dump({"probes": {"acct3": {"u7": u7_now, "at": now - at_age, "r7": now + 5.8 * 86400}}}, f)
+                json.dump({"probes": {"meter_c": {"u7": u7_now, "at": now - at_age, "r7": now + 5.8 * 86400}}}, f)
             with open(H, "w") as f:
-                json.dump({"acct3": [[now - at_age - 3600, u7_then]]}, f)
+                json.dump({"meter_c": [[now - at_age - 3600, u7_then]]}, f)
 
         def ledger(read, wrote, turns):
             with open(L, "w") as f:
@@ -240,7 +240,7 @@ def selftest():
 
         cases = []
         probe(0.85, 0.83); ledger(1e6, 1e5, 30); transcript(80e3)
-        cases.append(("an account burning 2 points an hour against an even 0.09 fires", any("acct3 burned" in x for x in run())))
+        cases.append(("an account burning 2 points an hour against an even 0.09 fires", any("meter_c burned" in x for x in run())))
         probe(0.85, 0.849)
         cases.append(("an account at an even pace stays silent", run() == []))
         probe(0.05, 0.95)
