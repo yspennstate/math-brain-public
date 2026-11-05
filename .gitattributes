@@ -9,3 +9,8 @@ navigation/*.jsonl text eol=lf
 navigation/MANIFEST.json text eol=lf
 
 *.py text eol=lf
+# Archived run scripts under results/ and papers/ are kept byte for byte as they ran,
+# with the line endings they were written with; several folders list their sha256.
+# Leave them unconverted so a fresh clone does not report them as modified.
+results/**/*.py -text
+papers/**/*.py -text
