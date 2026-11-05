@@ -3194,6 +3194,62 @@ def _same_card(a, b):
     return bool(a and b) and (a == b or a.startswith(b[:16]) or b.startswith(a[:16]))
 
 
+# THE VOUCH ROUTE (MATHBRAIN_GATE_VOUCH, default on). A plainly worded question carries no anchor word, so the entry gate
+# refuses it before retrieval runs: on a bank of paraphrased questions, 32 of 40 per plain wrapper, and every one of 18
+# questions about results proved in the store. Two stages keep what the gate protects. The first is cheap: the prompt holds
+# at least two words of the vouch vocabulary (five or more letters, in at least two store cards, in at most three of the
+# user's own prompts that the gate refuses; build it with build_vouch_vocab.py). The second checks what retrieval serves:
+# the top card must also be the prompt's first claim by the semantic channel, else silence (vouch_disagree). Forced open,
+# the gate served plausible wrong neighbours as well as right cards; where the two channels agreed on the top card, 11 of
+# 13 blocks held the answer and the other 2 were attempt cards for the problem asked. Only a prompt the gate refused and
+# the session context did not admit takes this route; nothing the gate admits changes. Without a vocabulary file
+# (MATHBRAIN_VOUCH_VOCAB, default math_vouch_vocab.json beside this file) the route stays closed.
+GATE_VOUCH = os.environ.get("MATHBRAIN_GATE_VOUCH", "1").strip() not in ("0", "off", "false", "")
+VOUCH_VOCAB_PATH = os.environ.get("MATHBRAIN_VOUCH_VOCAB", "") or os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "math_vouch_vocab.json")
+_VOUCH = {"route": False, "vocab": None, "card": None}
+_VOUCH_WORD = re.compile(r"[a-z][a-z0-9]*(?:-[a-z0-9]+)*")
+_VOUCH_STOP = frozenset("""about above after again against because before being below between both could doing during each
+further having itself might myself other ought ourselves should their theirs them themselves there these those through under
+until where which while would yours yourself yourselves what when with from into once only same some such than that then this
+very just does have were been your they""".split())
+
+
+def _vouch_vocab():
+    if _VOUCH["vocab"] is None:
+        try:
+            with io.open(VOUCH_VOCAB_PATH, encoding="utf-8") as fh:
+                _VOUCH["vocab"] = frozenset(json.load(fh).get("terms") or ())
+        except Exception:
+            return frozenset()          # a failed read is not kept: the next prompt in this process reads again
+    return _VOUCH["vocab"]
+
+
+def _vouch_words(prompt):
+    return set(w for w in _VOUCH_WORD.findall((prompt or "").lower()) if len(w) >= 5 and w not in _VOUCH_STOP)
+
+
+def _vouch_stage1(prompt):
+    """At least two distinct store-language words (the vouch vocabulary) in a prompt the gate refused."""
+    try:
+        v = _vouch_vocab()
+        if not v:
+            return False
+        return len(_vouch_words(prompt) & v) >= 2
+    except Exception:
+        return False
+
+
+def _vouch_agrees(prompt, chosen):
+    """True when the served top card is also the prompt's first claim by the semantic channel; fails closed. The first
+    claim is _semantic_top's, so a flat or tied similarity vector names no claim and nothing agrees with it."""
+    try:
+        return _same_card(str(chosen[0].node.id), _semantic_top(prompt))
+    except Exception:
+        return False
+
+
+
 def _reset_cov_agree_state():
     """A caller that runs several prompts in one process must not carry one prompt's agreed card or first claim into the
     next (the live hook runs one process per prompt; an in-process measurement does not)."""
@@ -4119,8 +4175,10 @@ def main():
 
 def _reset_per_prompt_state():
     """A caller that runs several prompts in one process (the resident server, an in-process measurement) must not
-    carry one prompt's agreed cards, semantic winner or pool adjacency into the next. The full-store path used to leave
+    carry one prompt's vouch route, agreed cards, semantic winner or pool adjacency into the next. The full-store path used to leave
     the adjacency unset, so a prompt that fell back after a prefiltered one ranked with the earlier pool's links."""
+    _VOUCH["route"] = False
+    _VOUCH["card"] = None
     _COV_AGREED.clear()
     _SEMTOP.clear()
     _SEMTOP_WHY.clear()
@@ -4147,6 +4205,10 @@ def _main_body(data, out):
             if ctx_used is not None:
                 _silence_note(data, "session_context_route", harness_only=True)
                 prompt = prompt + "\n\n" + ctx_used
+    if not gate_ok and ctx_used is None and GATE_VOUCH and len(prompt) >= 12 and _vouch_stage1(prompt):
+        gate_ok = True
+        _VOUCH["route"] = True
+        _silence_note(data, "vouch_route", harness_only=True)
     if not gate_ok and ctx_used is None:
         # HARNESS RUNS ONLY (2026-09-14). This gate fires on every non-mathematical prompt in every
         # session, so logging it in production would bury the file - which is why it logged nothing at
@@ -4789,6 +4851,11 @@ def _main_body(data, out):
         if not chosen:
             _silence_note(data, "no_chosen_after_order")
             return
+        if _VOUCH["route"]:
+            if not _vouch_agrees(prompt, chosen):
+                _silence_note(data, "vouch_disagree")
+                return
+            _VOUCH["card"] = str(chosen[0].node.id)       # sealed against the block that goes out (below)
         # KIND PREFERENCE on an argument the reader is checking (MATHBRAIN_KIND_PREF, default 0 = off; 2026-09-12 15:0x).
         # Reordering only - the same cards, never a different set, never a refill. On a prompt that carries a numbered
         # argument, a theorem or lemma is what decides a step; a definition matches the vocabulary and says nothing about
@@ -4909,7 +4976,8 @@ def _main_body(data, out):
         if _named_extra and len(pieces) > 4:
             _budget = max(_budget, len(header) + 760 * len(pieces))
         block, emitted_ids = _assemble_note_block(header, pieces, _budget)
-        if block and len(emitted_ids) > 1 and MATH_USE_WEIGHT > 0 and not (COV_SEAL and _COV_AGREED):
+        if (block and len(emitted_ids) > 1 and MATH_USE_WEIGHT > 0 and not _VOUCH["route"]
+                and not (COV_SEAL and _COV_AGREED)):
             try:
                 _pieces_u = _use_order_pieces(pieces, emitted_ids, {h.node.id: h for h in chosen})
                 if _pieces_u is not pieces:
@@ -4932,6 +5000,13 @@ def _main_body(data, out):
                 _sealed = False
             if not _sealed:
                 _silence_note(data, "coverage_agree_identity_lost")
+                return
+        # THE VOUCHED CARD IS SEALED TOO. The stages after the agreement check (session dedup, twin collapse, the block
+        # budget, which drops a card too long to fit and keeps going) can put another card first. A vouched block goes
+        # out only if it still leads with the card the two channels agreed on.
+        if block and emitted_ids and _VOUCH["route"]:
+            if not (_VOUCH.get("card") and _same_card(emitted_ids[0], _VOUCH["card"])):
+                _silence_note(data, "vouch_identity_lost")
                 return
         if block and COH_CUT and len(emitted_ids) > 1:
             _cut = _incoherent_weak_block(prompt, emitted_ids)
