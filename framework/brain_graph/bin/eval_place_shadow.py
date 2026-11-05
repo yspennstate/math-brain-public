@@ -1,5 +1,5 @@
 """eval_place_shadow.py - do the membrane's place lines name a place the session then goes to, and one it was not
-already in? (27 Sep, claude-825b1305; pre-registered 12:3x in study/TWO_DAY_RUN_2026-09-26.md)
+already in? (27 Sep, claude-00000004; pre-registered 12:3x in study/TWO_DAY_RUN_2026-09-26.md)
 
 The live membrane (brain_graph/live/fires.jsonl) logs, at each evaluation, its place candidates [[name, weight], ...]
 (dir:... ids). Joined to the capture (events_touch.jsonl: dir and file events, session = first 8 of the id):

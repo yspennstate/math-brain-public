@@ -1,6 +1,6 @@
 """batch_rows_first_record.py - for each claim, node and edge the math store created on 10 Aug: the first backup that
 holds it, how long after its created_at that backup was copied, and whether the row is identical in every record from
-that one to the live store (R34, B07-R34-MATH-RESEAL-PREBACKUP-LAUNDERING-021; 28 Sep 09:3x, claude-825b1305).
+that one to the live store (R34, B07-R34-MATH-RESEAL-PREBACKUP-LAUNDERING-021; 28 Sep 09:3x, claude-00000004).
 
 The batch's night left iteration backups beside the store (brain.sqlite3.bak_iterNNN_HHMMSS). A backup's file time is
 the store's last write before the copy (the copy keeps it), so the copy time is read from the name: HHMMSS local

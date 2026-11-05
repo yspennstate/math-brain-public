@@ -1,4 +1,4 @@
-"""eval_act_errors.py - do error nodes that NAME THE ACT anticipate failures? (27 Sep, claude-825b1305; pre-registered
+"""eval_act_errors.py - do error nodes that NAME THE ACT anticipate failures? (27 Sep, claude-00000004; pre-registered
 12:2x in study/TWO_DAY_RUN_2026-09-26.md)
 
 The live membrane's error lines are classes like err:Bash:python:exit1 attached by co-occurrence with the context, and

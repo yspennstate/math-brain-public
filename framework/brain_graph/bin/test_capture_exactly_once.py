@@ -1,4 +1,4 @@
-"""test_capture_exactly_once.py - an interrupted capture adds no event twice (28 Sep, claude-825b1305; account03/B12
+"""test_capture_exactly_once.py - an interrupted capture adds no event twice (28 Sep, claude-00000004; account03/B12
 R12, B12-R12-CAPTURE-STATE-APPEND-NONATOMIC-DUPLICATION).
 
     python test_capture_exactly_once.py [DIR_WITH_THE_CAPTURE] [OLD_CAPTURE_DIR]

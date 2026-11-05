@@ -1,4 +1,4 @@
-"""Bind each row-level source decision to the exact row content it judged (28 Sep, claude-825b1305; scheduled audit
+"""Bind each row-level source decision to the exact row content it judged (28 Sep, claude-00000004; scheduled audit
 account03/B07 R40, B07-R40-SOURCE-VERDICT-NOT-ENFORCED-BY-APPLY-001).
 
 The source check of the 10 Aug batch judged 75 rows by reading their text against their sources, but its decisions
@@ -65,7 +65,7 @@ def main():
     d["bound"] = {"source_file": os.path.basename(dec_path), "source_sha256": hashlib.sha256(raw).hexdigest(),
                   "bound_rows": bound, "unbound_rows": unbound,
                   "hash": "sha256 of json.dumps([[column, value], ...] in column order, ensure_ascii=False, default=str)",
-                  "made": "28 Sep 2026, claude-825b1305 (bind_source_decisions.py)"}
+                  "made": "28 Sep 2026, claude-00000004 (bind_source_decisions.py)"}
     blob = json.dumps(d, ensure_ascii=False, indent=1).encode("utf-8")
     tmp = out + ".tmp"
     with io.open(tmp, "wb") as f:

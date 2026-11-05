@@ -1,4 +1,4 @@
-"""One record of his Codex corrections, repeats and praise from the two derivations (28 Sep 2026, claude-825b1305; the
+"""One record of his Codex corrections, repeats and praise from the two derivations (28 Sep 2026, claude-00000004; the
 scheduled audit jobs R25 and R30).
 
 Two files derive his verdicts in Codex sessions:

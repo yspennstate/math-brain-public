@@ -1,5 +1,5 @@
 """study_gra05_sequence_state.py - does the ORDER of the last two things an agent touched predict his correction better
-than what it touched together? (28 Sep, claude-825b1305; registered 05:3x in study/THREE_DAY_RUN_2026-09-27.md;
+than what it touched together? (28 Sep, claude-00000004; registered 05:3x in study/THREE_DAY_RUN_2026-09-27.md;
 scheduled audit account03/B03 r54, B03-R7-GRA05-HIGHER-ORDER-NOT-TESTED-001)
 
     CASE      the agent's last tool moment at most CASE_WINDOW s before a correction or repeat of his, in one of his

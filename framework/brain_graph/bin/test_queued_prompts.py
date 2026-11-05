@@ -1,5 +1,5 @@
 """test_queued_prompts.py - his prompts typed while an agent works reach the capture and the verdict file (27 Sep,
-claude-825b1305). Such a prompt is written only as a queued_command attachment (and a queue-operation record), never
+claude-00000004). Such a prompt is written only as a queued_command attachment (and a queue-operation record), never
 as a user record; until 27 Sep extract_touch_events.scan_file and backfill_history._verdicts_in read user records
 alone, and missed 1,213 of his 5,269 prompts since 16 Aug and 59 of his 165 corrections.
 

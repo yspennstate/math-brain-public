@@ -1,5 +1,5 @@
 """Run brain.py recall on the same questions under different PYTHONHASHSEED values and count where the printed lists
-differ (27 Sep, claude-825b1305). Pinned index, store and sidecar; the live recall log is left alone. Prints ids and
+differ (27 Sep, claude-00000004). Pinned index, store and sidecar; the live recall log is left alone. Prints ids and
 counts only (the bank's gold stays in the quarantine).
     python recall_determinism.py OUT_JSON --store STORE_DIR --sidecar SIDECAR [--n-his 56] [--n-rew 64] [--seeds 1,2,3]
                                  [--workers 4]

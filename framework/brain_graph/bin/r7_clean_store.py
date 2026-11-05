@@ -1,5 +1,5 @@
 """Build a copy of the use-grown graph store without the test workers' events, for the held-out measurement of the
-deployed graph mixture (the audit fleet's job R7). 27 Sep, claude-825b1305.
+deployed graph mixture (the audit fleet's job R7). 27 Sep, claude-00000004.
 
 Mirrors run_graph.build and run_graph._recall_walk exactly - same event files (build_config.json), the bank exclusion,
 the half-life and the verdict file - except that the live touch file is first copied without the events of sessions

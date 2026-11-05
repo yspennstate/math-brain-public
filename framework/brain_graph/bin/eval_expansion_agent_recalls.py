@@ -1,4 +1,4 @@
-"""eval_expansion_agent_recalls.py - doc expansion on the searches agents actually ran (26 Sep, claude-825b1305).
+"""eval_expansion_agent_recalls.py - doc expansion on the searches agents actually ran (26 Sep, claude-00000004).
 
 Every `brain.py recall` since the live log began (live/recall_log.jsonl), judged by the live learner's own rule,
 graph_learn.judge_searches: the session the record names (the shown-slug overlap within 90 s only for records logged

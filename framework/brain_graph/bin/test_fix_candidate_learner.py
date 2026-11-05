@@ -1,5 +1,5 @@
 """test_fix_candidate_learner.py - the fix memory an error line names is recorded in both arms and under both estimands,
-and the learner judges it in both arms and learns from it in neither (28 Sep 2026, claude-825b1305; scheduled audit
+and the learner judges it in both arms and learns from it in neither (28 Sep 2026, claude-00000004; scheduled audit
 account01/B08 R49, B08-R49-TOTAL-ESTIMAND-FIX-ID-048 and B08-R49-ADAPTIVE-LEARNER-INTERFERENCE-047).
 
     python test_fix_candidate_learner.py [--membrane PATH] [--learner PATH] [--old-membrane PATH] [--old-learner PATH]

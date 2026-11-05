@@ -1,5 +1,5 @@
 """test_prefix_binding.py - the fast layer uses the store's byte count only while the log's prefix is the one the store
-consumed (27 Sep, claude-825b1305; account04/B06 R12).
+consumed (27 Sep, claude-00000004; account04/B06 R12).
 
     python test_prefix_binding.py [PATH_TO_live_delta.py]
 

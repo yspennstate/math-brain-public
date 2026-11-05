@@ -1,5 +1,5 @@
 """wrong_at_creation_control.py - the control account03/B12 asked for (B12-R34-FIRST-RECORD-IMMUTABILITY-NOT-
-AUTHENTICITY-20260928), registered 28 Sep 10:2x in THREE_DAY_RUN_2026-09-27.md; claude-825b1305.
+AUTHENTICITY-20260928), registered 28 Sep 10:2x in THREE_DAY_RUN_2026-09-27.md; claude-00000004.
 
 A 10 Aug concept row is made wrong FROM ITS FIRST RECORD: in Lagrange's theorem "|H| is a divisor of |G|" becomes
 "|G| is a divisor of |H|", and the claim's payload, the ingest's own digest over it and the node body are changed

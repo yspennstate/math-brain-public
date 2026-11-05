@@ -1,4 +1,4 @@
-"""equivalence_membrane_hook.py - graph_membrane_hook.py in the dispatcher's process vs its own (26 Sep, claude-825b1305).
+"""equivalence_membrane_hook.py - graph_membrane_hook.py in the dispatcher's process vs its own (26 Sep, claude-00000004).
 
 hook_dispatch.py runs a hook in-process only when it is on hook_dispatch_allow.json, and a hook goes on that list only
 with evidence that in-process and own-process runs give the same exit and the same output. Five payloads: two silent by

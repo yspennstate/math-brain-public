@@ -1,4 +1,4 @@
-"""study_sequence_model.py - can the ORDER in which things were used predict the next new thing? (26 Sep, claude-825b1305)
+"""study_sequence_model.py - can the ORDER in which things were used predict the next new thing? (26 Sep, claude-00000004)
 
 His voice note: edges grow along the sequences things are used in. The live graph learns windowed co-occurrence (PMI
 over a ten-minute context); this learns order literally. From every session before the cut, the sequence of distinct

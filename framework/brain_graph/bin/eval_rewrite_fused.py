@@ -1,4 +1,4 @@
-"""eval_rewrite_fused.py - the rewrite tool against plain recall at the same number of lines shown (27 Sep, claude-825b1305).
+"""eval_rewrite_fused.py - the rewrite tool against plain recall at the same number of lines shown (27 Sep, claude-00000004).
 
 The rewrite measurement (memory a_cheap_rewrite_before_recall_finds_the_note_far_more_often_2026_09_25) counted the
 source memory in ANY of four top-5 lists, up to 20 notes, against the question's own top 5: candidate coverage, not what

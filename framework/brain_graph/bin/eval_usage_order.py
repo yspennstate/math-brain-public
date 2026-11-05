@@ -1,4 +1,4 @@
-"""eval_usage_order.py - does the usage tilt help once it is allowed to change the order? (27 Sep, claude-825b1305)
+"""eval_usage_order.py - does the usage tilt help once it is allowed to change the order? (27 Sep, claude-00000004)
 
 A scheduled audit (account03/B02, 26 Sep) showed that brain.py's usage tilt - ACT-R base-level activation of how often
 and how lately each memory was read, max +15 percent - multiplies the display score after the order is fixed, so on the

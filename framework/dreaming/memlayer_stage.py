@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Stage a memory layer for the full brain graph (TOP10 rank 8, claude-1ca628ae, 3 Nov 2026).
+"""Stage a memory layer for the full brain graph (TOP10 rank 8, claude-00000001, 3 Nov 2026).
 
 The installed full graph (graph_lane_store) is built from hook events, so it holds only the memories a hooked session
 wrote or recalled (7,795 of 45,087 on 3 Nov). This writes, beside it and never into it:

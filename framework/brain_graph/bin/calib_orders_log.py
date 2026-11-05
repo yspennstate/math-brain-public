@@ -1,5 +1,5 @@
 """calib_orders_log.py - the orders-channel calibration read from the capture log instead of the transcripts
-(27 Sep 19:1x, claude-825b1305). calib_orders_fast.py re-parses every transcript since the start date, gigabytes, which
+(27 Sep 19:1x, claude-00000004). calib_orders_fast.py re-parses every transcript since the start date, gigabytes, which
 at BelowNormal behind the film renders did not finish loading in 25 minutes. The capture log (events_touch.jsonl) holds
 the same events one JSON line each, time and session first, so a byte filter reads it in a minute.
 

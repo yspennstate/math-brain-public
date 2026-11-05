@@ -1,4 +1,4 @@
-"""Controls for the membrane's six-hour memory quota and who spends it (27 Sep, claude-825b1305; audit account03/B15, R9).
+"""Controls for the membrane's six-hour memory quota and who spends it (27 Sep, claude-00000004; audit account03/B15, R9).
 
 A memory reaches at most two other sessions in six hours. Before this change a bench test worker counted as one of the
 two, so two workers that drew a memory kept it from his next session. These controls check that test workers no longer

@@ -1,5 +1,5 @@
 """study_collision_replay.py - how often would a collision check on shared brain files have spoken last week?
-(registered 28 Sep 11:1x in THREE_DAY_RUN_2026-09-27.md; claude-825b1305)
+(registered 28 Sep 11:1x in THREE_DAY_RUN_2026-09-27.md; claude-00000004)
 
 Reads the 2,919 Edit/Write calls of 21-28 Sep from UNCLAIMED_WRITES_2026-09-28.json (session, minute, root, file) and
 the mesh claims table. For W in 10, 30 and 60 minutes, a FIRE is the first edit of a (session, file) pair that falls

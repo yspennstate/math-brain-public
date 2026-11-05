@@ -1,5 +1,5 @@
 """study_corrections_casecontrol.py - does the membrane's correction line rise before his corrections? (27 Sep,
-claude-825b1305; pre-registered 14:2x in study/TWO_DAY_RUN_2026-09-26.md).
+claude-00000004; pre-registered 14:2x in study/TWO_DAY_RUN_2026-09-26.md).
 
 The per-session replay (study_live_membrane + score_corrections_per_session) had three of his sessions with a correction
 after a sampled moment, too few to tell. This uses every correction or repeat of his after the cut instead of a sample:

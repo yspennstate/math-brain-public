@@ -1,4 +1,4 @@
-"""served_vs_delivered.py - did the membrane's served lines reach the session whole? (27 Sep, claude-825b1305; scheduled
+"""served_vs_delivered.py - did the membrane's served lines reach the session whole? (27 Sep, claude-00000004; scheduled
 audit account02/B08 auto11, R12: 'served' is logged before the dispatcher fits every hook's text into its shared budget).
 
 For every line in live/served.jsonl, the session's transcript records stamped from 5 s before to WINDOW s after the serve

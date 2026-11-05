@@ -1,4 +1,4 @@
-"""eval_graph_mixture.py - the graph lane as deployed, measured held out (the audit fleet's job R7; 27 Sep, claude-825b1305).
+"""eval_graph_mixture.py - the graph lane as deployed, measured held out (the audit fleet's job R7; 27 Sep, claude-00000004).
 
 brain.py recall blends its word-search body with the graph lane (the use-grown walk and the memories' own links, half
 and half) at the dial's weight, 0.2 today. That weight was set at 0.1 from the reworded bank and then moved to 0.15 and

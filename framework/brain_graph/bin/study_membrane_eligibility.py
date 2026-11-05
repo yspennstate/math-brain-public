@@ -1,5 +1,5 @@
 """study_membrane_eligibility.py - what the membrane would put into a fresh worker's context on a bank question, and
-whether that line names the answer (R12 step zero; 27 Sep, claude-825b1305).
+whether that line names the answer (R12 step zero; 27 Sep, claude-00000004).
 
 R12's show-or-hold trial (scheduled audit account03/B08 auto30) randomizes the delivery of a line the membrane has already
 decided to show, on pairs of fresh benchmark workers. How many pairs it needs depends on two things that can be read

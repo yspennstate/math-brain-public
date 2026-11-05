@@ -1,4 +1,4 @@
-"""Controls for doc expansion in bm25.py (26 Sep, claude-825b1305). Run after any change to bm25.read_doc, the expansion
+"""Controls for doc expansion in bm25.py (26 Sep, claude-00000004). Run after any change to bm25.read_doc, the expansion
 store or the index build. Counts only; no memory text is printed.
 
     python test_doc_expansion.py [--live-index]

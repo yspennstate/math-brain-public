@@ -1,5 +1,5 @@
 """test_codex_orders.py - the Codex orders hook (~/.claude/dreaming/codex_orders_hook.py) against a copy of the installed
-membrane, its log and state in a temp dir (27 Sep, claude-825b1305). His prompt, then eight tool calls, in three sessions
+membrane, its log and state in a temp dir (27 Sep, claude-00000004). His prompt, then eight tool calls, in three sessions
 whose rollouts say source "cli" (he types there), "exec" (codex exec) and nothing (no transcript): the order is served
 once, as Codex JSON, in the first only; every evaluation of all three is logged.
 

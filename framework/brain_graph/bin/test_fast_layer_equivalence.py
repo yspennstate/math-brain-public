@@ -1,5 +1,5 @@
 """test_fast_layer_equivalence.py - the five-minute fast layer (live_delta) keeps the targets the six-hour store
-(graph_store) keeps (27 Sep, claude-825b1305), after account01/B20 R12: the two differed on first touches outside the fast
+(graph_store) keeps (27 Sep, claude-00000004), after account01/B20 R12: the two differed on first touches outside the fast
 layer's 8 MiB look-back and on which tenth of the tool targets they sampled.
 
     python test_fast_layer_equivalence.py [PATH_TO_graph_store.py PATH_TO_live_delta.py]

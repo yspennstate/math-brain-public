@@ -1,6 +1,6 @@
 """study_scar_fire_moviehook.py - for the scar-fire cases whose order had no reflex, did the MOVIE hook (a separate
 channel from the reflexes: ~/.claude/movie_sentinel/movie_alert_hook.py) put the order's wording into the session before
-his correction? Post-hoc beside study_scar_fire_posthoc.py (28 Sep 09:2x, claude-825b1305).
+his correction? Post-hoc beside study_scar_fire_posthoc.py (28 Sep 09:2x, claude-00000004).
 
 For each case it scans the correction's session transcript up to the correction for hook context that carries the
 order's wording (a pattern per theme, below) and reports how many deliveries there were, the first and last relative to

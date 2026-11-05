@@ -1,5 +1,5 @@
 """test_r9_kinds.py - the fast layer leaves test workers out by the store's rule, and the kinds cache keeps every writer's
-kinds (27 Sep, claude-825b1305; scheduled audits account01/B15 and account02/B15, job R9). Temp files only.
+kinds (27 Sep, claude-00000004; scheduled audits account01/B15 and account02/B15, job R9). Temp files only.
 
     python test_r9_kinds.py [PATH_TO_live_delta.py] [PATH_TO_session_kinds.py]
 

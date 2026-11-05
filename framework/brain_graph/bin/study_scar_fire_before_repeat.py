@@ -1,5 +1,5 @@
 """study_scar_fire_before_repeat.py - when he had to restate one of his standing orders, did a reflex for that order
-exist, and did it fire before he had to? (28 Sep 08:5x, claude-825b1305; registered in study/THREE_DAY_RUN_2026-09-27.md
+exist, and did it fire before he had to? (28 Sep 08:5x, claude-00000004; registered in study/THREE_DAY_RUN_2026-09-27.md
 before any code.)
 
 Each labelled correction (results/STANDING_ORDERS_LABELS_2026-09-27.json) names the orders it restated as memory slugs.

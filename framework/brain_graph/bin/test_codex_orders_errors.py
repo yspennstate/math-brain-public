@@ -1,4 +1,4 @@
-"""test_codex_orders_errors.py - the Codex orders hook logs every failure it swallows (27 Sep, claude-825b1305; the
+"""test_codex_orders_errors.py - the Codex orders hook logs every failure it swallows (27 Sep, claude-00000004; the
 scheduled audit B14 r6 found that main() caught every exception and returned success with no trace, so a broken hook
 read as "no relevant order"), and it keeps a session's receiver kind only once the rollout says it (28 Sep, account01/B05
 r70, B05-R17-CODEX-INTERACTIVE-FALSE-STICKY-26). Log, state, error file and transcripts in a temp dir.

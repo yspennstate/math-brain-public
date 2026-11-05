@@ -1,4 +1,4 @@
-"""build_repeats_ab.py - what counting an exact repeat once does to the store (28 Sep, claude-825b1305; account03/B12 R12).
+"""build_repeats_ab.py - what counting an exact repeat once does to the store (28 Sep, claude-00000004; account03/B12 R12).
 
     python build_repeats_ab.py OUT_JSON [--keep-stores DIR]
 

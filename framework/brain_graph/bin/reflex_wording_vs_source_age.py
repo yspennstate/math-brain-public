@@ -1,5 +1,5 @@
 """reflex_wording_vs_source_age.py - which reflexes' wording is older than the memory they cite? (28 Sep 10:0x,
-claude-825b1305)
+claude-00000004)
 
 A reflex copies an order's wording when it is compiled. When the order moves, its memory is often revised in place
 rather than superseded (the GPU policy moved four times in two weeks; its reflex kept the older wording for days - the

@@ -1,5 +1,5 @@
 """study_reply_orders.py - could his stored orders, looked up once at the agent's reply, have handed back the order he then
-restated, without serving a line to most replies? (28 Sep, claude-825b1305; registered THREE_DAY_RUN 28 Sep 00:3x.)
+restated, without serving a line to most replies? (28 Sep, claude-00000004; registered THREE_DAY_RUN 28 Sep 00:3x.)
 
 His corrections follow the agent's report (a median 39 s after its last action; his_corrections_follow_quick_on_task_
 answers_not_drift_or_struggle_2026_09_27), and the orders channel that looked at every prompt and tool call was too chatty

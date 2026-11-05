@@ -1,4 +1,4 @@
-"""Test, then add, the reflex recall_before_you_register (28 Sep, claude-825b1305).
+"""Test, then add, the reflex recall_before_you_register (28 Sep, claude-00000004).
 
 It fires when a study is being registered: an entry line that opens with REGISTERED or PRE-REGISTERED (uppercase, as the
 run logs write registrations), or a lowercase "pre-registered (" that opens a parenthesis of its own (the one lived
@@ -33,8 +33,8 @@ ENTRY = {
              "and run as new; it was the same log's 00:3x reply-orders study, run by the same agent six hours earlier and "
              "left out of the summary written at a context reset. About forty minutes and a duplicate memory; the result "
              "reproduced within one case. brain.py recall on the question returns the 00:3x study's memory third.",
-    "source": "MISTAKES 2026-09-28 07:1x (claude-825b1305); memory a_reply_check_catches_only_the_mistakes_the_reply_admits_2026_09_28",
-    "added": "2026-09-28 07:4x (claude-825b1305)",
+    "source": "MISTAKES 2026-09-28 07:1x (claude-00000004); memory a_reply_check_catches_only_the_mistakes_the_reply_admits_2026_09_28",
+    "added": "2026-09-28 07:4x (claude-00000004)",
     "controls": "",
 }
 J = lambda d: json.dumps(d, ensure_ascii=False)

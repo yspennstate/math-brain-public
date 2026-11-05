@@ -1,4 +1,4 @@
-"""test_membrane_save.py - live_membrane.save_state under the Windows rename race (27 Sep, claude-825b1305). Another hook
+"""test_membrane_save.py - live_membrane.save_state under the Windows rename race (27 Sep, claude-00000004). Another hook
 call of the same session holding the state file open made os.replace raise Access denied, and the exception aborted the
 hook (17 'hook error: PermissionError' lines 26-27 Sep, each on an evaluation that served nothing). Temp dirs only.
 

@@ -1,6 +1,6 @@
 """Re-seal the math store rows whose stored digest does not match their payload, and give the claims whose status the
 library does not know the status of the claims they replaced (unverified). B07-R13-MATH-GRAPH-ROW-DIGEST-BYPASS-019;
-28 Sep 2026, claude-825b1305. Nothing is deleted and no row's text changes.
+28 Sep 2026, claude-00000004. Nothing is deleted and no row's text changes.
 
 A row is re-sealed only with evidence that its payload is the one it was written with:
   node   its claim's stored digest verifies over the claim's raw payload, the node body equals the claim statement, and

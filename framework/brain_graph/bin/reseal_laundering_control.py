@@ -2,7 +2,7 @@
 a batch row altered before the 22 Aug backup was taken, consistently (claim statement, claim digest over the raw
 payload, node body), so the re-seal's first rule sees nothing wrong. The old rule (identical in the 22 Aug backup) must
 re-seal it - the finding reproduced; the rule with --first-record must refuse it, and must still re-seal every other row
-it re-sealed before (28 Sep 09:4x, claude-825b1305). The live store and its backups are only read.
+it re-sealed before (28 Sep 09:4x, claude-00000004). The live store and its backups are only read.
 
     python reseal_laundering_control.py POPULATION_DIR SRC_DIR WORK_DIR OUT_JSON
 """

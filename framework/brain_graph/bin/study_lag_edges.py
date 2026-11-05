@@ -1,5 +1,5 @@
 """study_lag_edges.py - does weighting a pair by how soon the target followed the source predict the next new thing better
-than equal credit? (27 Sep, claude-825b1305; scheduled audit account03/B03 r51, B03-R7-SEQ-LAG-WEIGHT-MISMATCH-001.)
+than equal credit? (27 Sep, claude-00000004; scheduled audit account03/B03 r51, B03-R7-SEQ-LAG-WEIGHT-MISMATCH-001.)
 
 NODE_CLASSES.md describes a directed seq A -> B edge reinforced by exp(-lag/tau); the store gives every predecessor in
 its 600 s window equal credit, and the 26 Sep order-of-use study (study_sequence_model.py) tested only equal-credit

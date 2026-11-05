@@ -1,5 +1,5 @@
 """test_live_delta_generation.py - the fast layer is merged only onto the base generation it was counted on (28 Sep 2026,
-claude-825b1305; interactive audit IA-20260928-02).
+claude-00000004; interactive audit IA-20260928-02).
 
     python test_live_delta_generation.py [--module LIVE_DELTA.py] [--old OLD_LIVE_DELTA.py]
 

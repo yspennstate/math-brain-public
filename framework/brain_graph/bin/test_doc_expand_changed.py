@@ -1,4 +1,4 @@
-"""Controls for doc_expand.py's changed-memory selection and its source digest (27 Sep, claude-825b1305).
+"""Controls for doc_expand.py's changed-memory selection and its source digest (27 Sep, claude-00000004).
 
 A memory edited after its questions were written must get new ones; one merely touched, or edited beyond the part the
 question-writer reads, must not. Everything runs in a temporary folder with the Haiku call replaced; nothing live is read

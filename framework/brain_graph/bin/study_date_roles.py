@@ -1,4 +1,4 @@
-"""study_date_roles.py - does a memory's own creation date outweigh the dates it talks about? (27 Sep, claude-825b1305)
+"""study_date_roles.py - does a memory's own creation date outweigh the dates it talks about? (27 Sep, claude-00000004)
 
 A scheduled audit (account01/B14, job R8) found that the date tokens live since 27 Sep 03:11 count a memory's creation
 date several times: the slug, which carries it, is read three times, and the frontmatter's created lines are read too,

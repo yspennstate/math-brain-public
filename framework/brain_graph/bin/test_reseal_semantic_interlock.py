@@ -1,4 +1,4 @@
-"""test_reseal_semantic_interlock.py - the re-seal writes only rows whose source decision passed (28 Sep, claude-825b1305;
+"""test_reseal_semantic_interlock.py - the re-seal writes only rows whose source decision passed (28 Sep, claude-00000004;
 scheduled audit account03/B07 R40, B07-R40-SOURCE-VERDICT-NOT-ENFORCED-BY-APPLY-001).
 
 Every arm runs reseal_math_rows.py --apply on byte copies of the math store and of its earliest backup, made in WORK_DIR;

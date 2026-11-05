@@ -1,5 +1,5 @@
 """test_math_use_one_set_per_session.py - a session is one co-activation however many sources record it (29 Sep 2026,
-claude-825b1305; scheduled audit account01/B06 r24, B06-R70-MATH-USE-DOUBLE-COUNTS-SESSION-COACTIVATION-20260929).
+claude-00000004; scheduled audit account01/B06 r24, B06-R70-MATH-USE-DOUBLE-COUNTS-SESSION-COACTIVATION-20260929).
 
     python test_math_use_one_set_per_session.py [--old OLD_MATH_USE.py]
 

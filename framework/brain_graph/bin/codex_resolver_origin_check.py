@@ -1,5 +1,5 @@
 """codex_resolver_origin_check.py - how many of his Codex prompts does the rollout-origin rule move? (R30, scheduled audit
-account02/B15, B15-R30-ORIGIN-TEXTKEY-COLLISION-20260928; 28 Sep 10:0x, claude-825b1305)
+account02/B15, B15-R30-ORIGIN-TEXTKEY-COLLISION-20260928; 28 Sep 10:0x, claude-00000004)
 
 Resolves every Codex row of his in the prompt ledger twice with one Resolver: with the rollout check as it was (the
 prompt's opening anywhere in a rollout line) and as it is (inside a message sent to that session). Reports how many rows

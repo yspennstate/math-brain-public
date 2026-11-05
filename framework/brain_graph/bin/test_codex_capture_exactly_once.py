@@ -1,5 +1,5 @@
 """test_codex_capture_exactly_once.py - the Codex capture adds no event twice when a run loses its state replace (28 Sep,
-claude-825b1305; account03/B12 R12 applied to extract_codex_events.py, which had the same append-then-state order).
+claude-00000004; account03/B12 R12 applied to extract_codex_events.py, which had the same append-then-state order).
 
     python test_codex_capture_exactly_once.py [DIR_WITH_THE_CAPTURE] [OLD_CAPTURE_DIR]
 

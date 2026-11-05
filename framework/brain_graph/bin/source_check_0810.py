@@ -1,6 +1,6 @@
 """source_check_0810.py - are the 10 Aug batch's concept claims what their sources say? (account03/B12,
 B12-R34-FIRST-RECORD-IMMUTABILITY-NOT-AUTHENTICITY-20260928; registered 28 Sep 10:2x in THREE_DAY_RUN_2026-09-27.md;
-claude-825b1305)
+claude-00000004)
 
 The first-record rule shows what the 10 Aug ingest wrote and that nothing changed it since; it cannot show that what it
 wrote is right. For the concept claims of that batch ("harvested overview (Wikipedia lead)" and the one "QA-corrected"

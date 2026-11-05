@@ -1,4 +1,4 @@
-"""Controls for codex_verdicts.py (28 Sep, claude-825b1305), on a temporary ledger, prompt history and rollout folder:
+"""Controls for codex_verdicts.py (28 Sep, claude-00000004), on a temporary ledger, prompt history and rollout folder:
 
   1. a correction typed by him in a Codex session becomes a correction row keyed like the capture keys that session
   2. the same words in a Claude row (source "hook") are left to the Claude builder

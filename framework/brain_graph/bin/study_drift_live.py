@@ -1,5 +1,5 @@
 """study_drift_live.py (from study_drift_casecontrol.py, with the live arm) - can the brain graph tell that a session has drifted from his last ask, before he
-corrects it? (27 Sep, claude-825b1305; pre-registered 16:2x in study/TWO_DAY_RUN_2026-09-26.md)
+corrects it? (27 Sep, claude-00000004; pre-registered 16:2x in study/TWO_DAY_RUN_2026-09-26.md)
 
 His words, 19 Jul: "if we deviate too much from the propts then a propt fires, so every single part of the propt should be
 part of the brian, and if we move too far away it should fire, algorithmicl as part of the network". The question put to

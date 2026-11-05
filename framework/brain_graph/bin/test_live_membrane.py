@@ -1,4 +1,4 @@
-"""test_live_membrane.py - controls for the live membrane before it reaches a hook, and after (26 Sep, claude-825b1305).
+"""test_live_membrane.py - controls for the live membrane before it reaches a hook, and after (26 Sep, claude-00000004).
 
   negative   no sidecar -> nothing; STOP -> nothing; a malformed or empty payload -> nothing and no exception; a session
              whose words the graph has never seen -> nothing served

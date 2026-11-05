@@ -1,4 +1,4 @@
-"""His corrections, repeats and praise in Codex sessions (28 Sep 2026, claude-825b1305).
+"""His corrections, repeats and praise in Codex sessions (28 Sep 2026, claude-00000004).
 
 events_verdicts.jsonl, the file the brain's correction studies and graph_store.build read, is built by
 backfill_history.verdicts() from Claude transcripts alone, so none of the 112 corrections and repeats it held for

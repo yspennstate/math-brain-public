@@ -1,5 +1,5 @@
 """Widen split_the_population_before_naming_it to the population label its trigger missed (account01/B13 R27, 28 Sep,
-claude-825b1305), and add one line to recall_before_you_register's gut. Controls run on the serialized tool input,
+claude-00000004), and add one line to recall_before_you_register's gut. Controls run on the serialized tool input,
 matched with re.I as the hook does; --write edits instincts_learned.json (backup first), --via-hook checks the compiled
 entry through instinct_prime._fire.
     python widen_population_reflex.py [--write] [--via-hook]

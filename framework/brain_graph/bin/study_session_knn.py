@@ -1,4 +1,4 @@
-"""study_session_knn.py - do sessions that started like this one predict what it will read? (27 Sep, claude-825b1305)
+"""study_session_knn.py - do sessions that started like this one predict what it will read? (27 Sep, claude-00000004)
 
 His methodology: edges grow along the sequences things are used in, so a new ask should light what past asks like it
 led to. The cleanest form of that to test: for a session's first prompt, find the earlier sessions whose first prompts

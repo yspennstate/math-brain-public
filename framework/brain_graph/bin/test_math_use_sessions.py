@@ -1,4 +1,4 @@
-"""Controls for math_use.py's session filter and math_note.py's fetch session column (27 Sep, claude-825b1305).
+"""Controls for math_use.py's session filter and math_note.py's fetch session column (27 Sep, claude-00000004).
 
 Every path the build reads or writes is pointed into a temporary directory; nothing live is touched.
 

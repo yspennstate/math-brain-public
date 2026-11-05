@@ -1,4 +1,4 @@
-"""source_check_0810_formulas.py - the second instrument for the 10 Aug concept replacements (28 Sep, claude-825b1305).
+"""source_check_0810_formulas.py - the second instrument for the 10 Aug concept replacements (28 Sep, claude-00000004).
 
 The first pass (source_check_0810.py) found 0 of 25 statements contained in their harvested artifacts. Read by hand, the
 reason is the replacement itself: each harvested statement had lost its formulas ("then  is a divisor of ."), and the

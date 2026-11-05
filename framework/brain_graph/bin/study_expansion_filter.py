@@ -1,4 +1,4 @@
-"""study_expansion_filter.py - does dropping weak generated questions help the word index? (27 Sep, claude-825b1305)
+"""study_expansion_filter.py - does dropping weak generated questions help the word index? (27 Sep, claude-00000004)
 
 A scheduled audit (account04/B11, job R3) judged 207 stored questions: 94.7 percent answerable from their memory, 17.9
 percent so generic they would match hundreds of memories ("anything new?"), 5.3 percent claiming more than the memory says

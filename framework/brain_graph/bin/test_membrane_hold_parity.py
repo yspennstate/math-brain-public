@@ -1,4 +1,4 @@
-"""test_membrane_hold_parity.py - a line held back by design costs what a shown line costs (28 Sep, claude-825b1305;
+"""test_membrane_hold_parity.py - a line held back by design costs what a shown line costs (28 Sep, claude-00000004;
 scheduled audit account03/B08 R12, B08-R12-HOLD-PARITY-010).
 
     python test_membrane_hold_parity.py [LIVE_MEMBRANE.py] [OLD_LIVE_MEMBRANE.py] [--old-fixmem OLD_LIVE_MEMBRANE.py]

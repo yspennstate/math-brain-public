@@ -1,4 +1,4 @@
-"""Controls for quarantine_rows.keep_old and its six writers (27 Sep, claude-825b1305).
+"""Controls for quarantine_rows.keep_old and its six writers (27 Sep, claude-00000004).
 
 1-5 exercise keep_old in a temporary folder; 6 reads each writer's source and requires every fixed-name rows file it
 opens for writing to go through keep_old. Nothing live is read or written except the six sources, read-only.

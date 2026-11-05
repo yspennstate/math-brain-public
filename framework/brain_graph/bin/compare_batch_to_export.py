@@ -1,5 +1,5 @@
 """compare_batch_to_export.py - are the math store's 10 Aug rows the same today as in the earliest record git holds of
-them? (R34, B07-R34-MATH-RESEAL-PREBACKUP-LAUNDERING-021; 28 Sep 09:3x, claude-825b1305)
+them? (R34, B07-R34-MATH-RESEAL-PREBACKUP-LAUNDERING-021; 28 Sep 09:3x, claude-00000004)
 
 The re-seal's evidence rule compared each row with the 22 Aug backup, which proves only that nothing changed it after
 22 Aug. The math brain repository committed an export of the store on 15 Aug 17:01 UTC (a2e0b08ed9, "Deploy the

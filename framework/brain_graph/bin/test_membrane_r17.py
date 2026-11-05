@@ -1,4 +1,4 @@
-"""test_membrane_r17.py - live_membrane.run from load to save as one transaction (27 Sep, claude-825b1305), after
+"""test_membrane_r17.py - live_membrane.run from load to save as one transaction (27 Sep, claude-00000004), after
 account01/B15 and account01/B20 (R17): parallel calls of one session could each serve the same line, a failed save still
 returned the line, and a save failure outside the rename could leave a served row for a line that never printed.
 

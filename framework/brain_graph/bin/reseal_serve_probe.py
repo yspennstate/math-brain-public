@@ -1,5 +1,5 @@
 """reseal_serve_probe.py - does the math hook serve the 10 Aug curated cards before and after the re-seal? (28 Sep,
-claude-825b1305; the served-block comparison registered at 10:2x, first a targeted look.)
+claude-00000004; the served-block comparison registered at 10:2x, first a targeted look.)
 
 Today the hook's last read (selection_integrity -> current_note.read_current_note) refuses a card whose stored node
 digest matches neither the node nor its body ("stored_node_digest_mismatch"), and the 34 curated nodes of the 10 Aug

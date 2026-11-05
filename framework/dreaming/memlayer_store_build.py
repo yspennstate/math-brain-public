@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Build a COPY of the full brain store with the staged memory layer joined in (TOP10 rank 8, claude-1ca628ae, 3 Nov).
+"""Build a COPY of the full brain store with the staged memory layer joined in (TOP10 rank 8, claude-00000001, 3 Nov).
 
   memlayer_store_build.py [--out DIR]     default ~/.claude/dreaming/graph_lane_store_memlayer
 

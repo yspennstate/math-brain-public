@@ -1,4 +1,4 @@
-"""Entry-point parity for the agents'-searches evaluator (27 Sep, claude-825b1305; audit account03/B12, R6).
+"""Entry-point parity for the agents'-searches evaluator (27 Sep, claude-00000004; audit account03/B12, R6).
 
 The command line of eval_expansion_agent_recalls.py once judged searches by a rule of its own while its helper used the
 shared judge. These controls run the real command-line entry points (main() of both file names) on a small synthetic

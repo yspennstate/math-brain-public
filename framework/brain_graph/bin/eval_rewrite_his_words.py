@@ -1,4 +1,4 @@
-"""eval_rewrite_his_words.py - does the rewrite before search help on HIS wording? (27 Sep, claude-825b1305)
+"""eval_rewrite_his_words.py - does the rewrite before search help on HIS wording? (27 Sep, claude-00000004)
 
 recall_rewrite.py was measured on model-reworded bank questions (+9 points at top 5). This asks the same of his own 56
 owner-voice questions (eval_brain_recall_fresh BANK + BANK_V2_EXTRA) and his 82 real first prompts

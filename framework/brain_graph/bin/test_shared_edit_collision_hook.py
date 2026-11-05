@@ -1,5 +1,5 @@
 """test_shared_edit_collision_hook.py - the in-process equivalence the dispatcher's allowlist asks for (28 Sep,
-claude-825b1305): shared_edit_collision_hook.py run through hook_dispatch.run_in_process and run as its own process give
+claude-00000004): shared_edit_collision_hook.py run through hook_dispatch.run_in_process and run as its own process give
 the same stdout and exit code on silent and loud payloads, each from the same starting ledger.
 
     python test_shared_edit_collision_hook.py

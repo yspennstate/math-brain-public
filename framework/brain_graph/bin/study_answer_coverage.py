@@ -1,5 +1,5 @@
 """study_answer_coverage.py - does a report that leaves part of his ask unaddressed predict that he restates that part next?
-(27 Sep, claude-825b1305.)
+(27 Sep, claude-00000004.)
 
 Why: his corrections follow the agent's answer by a median 39 s and nothing in the trace before it predicts them
 (his_corrections_follow_quick_on_task_answers_not_drift_or_struggle_2026_09_27), so a mistake of his kind can only be
