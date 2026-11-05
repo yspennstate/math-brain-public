@@ -110,10 +110,10 @@ def _graph(d, build=False):
 
 def ranked(query, allowed=None, lex_top=(), depth=200, d=None):
     """[(slug, score)] best first from the walk; [] when the store is missing or no seed is a node."""
-    import numpy as np
     d = d or dial()
     if not d.get("store") or not os.path.exists(os.path.join(d["store"], "edges.npz")):
         return []
+    import numpy as np
     g = _graph(d)
     if g is None:
         print("  [graph lane] no prebuilt walk for %s - run: python graph_lane.py --build" % d["store"])
