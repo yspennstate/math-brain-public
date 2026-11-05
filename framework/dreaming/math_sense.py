@@ -323,6 +323,18 @@ STRONG_ANCHORS_5 = re.compile(r"\bsingular[- ]values?\b", re.IGNORECASE)
 ANCHORS_POSSESSIVE_ON = os.environ.get("MATHBRAIN_ANCHORS_POSSESSIVE", "1").strip() not in ("0", "", "off", "false")
 STRONG_ANCHORS_POSSESSIVE = re.compile(
     r"\b[A-Z][a-zà-ÿ]+(?:-[A-Z][a-zà-ÿ]+)*['’]s?\s+(?:inequalit(?:y|ies)|identit(?:y|ies)|formula|criterion)\b")
+# THE PROGRAMS THE STORE IS DENSEST IN (MATHBRAIN_PROGRAM_ANCHORS, default on). Questions that named the Fourier
+# entropy-influence program had no words of their own at the gate: "What FEI constants are proved for read-k DNFs" was
+# refused before retrieval ran, while a direct query answered it. Measured on a large set of archived prompts, these
+# patterns admit only questions about the programs themselves and break no must-stay-silent probe. Rejected on the same
+# measurement: ReLU (fires on non-mathematical uses of the word), CNF (an abbreviation with other meanings) and
+# "singular value(s)" (which drew unrelated cards here; it has its own dial, MATHBRAIN_ANCHORS_5). The DNF pattern is
+# upper case and does not take CNF. MATHBRAIN_PROGRAM_ANCHORS=0 restores the gate without them.
+PROGRAM_ANCHORS_ON = os.environ.get("MATHBRAIN_PROGRAM_ANCHORS", "1").strip() not in ("0", "", "off", "false")
+PROGRAM_ANCHORS = re.compile(r"\bFEI\+?(?![\w-])|\bDNFs?\b|\bLTFs?\b|\bKKL\b")
+PROGRAM_ANCHORS_WORDS = re.compile(
+    r"\b(walsh|read-k|total influences?|threshold (?:gates?|functions?)|"
+    r"monotone (?:boolean )?functions?)\b", re.IGNORECASE)
 # weak: two of these (or one plus notation) open the gate, like MATH_ANCHORS; never alone
 WEAK_ANCHORS_2 = re.compile(
     r"\b(vertex|vertices|edges|clique|planar|subgraph|bipartite|monochromatic|colou?rings?|labelled trees|"
@@ -682,6 +694,8 @@ def _legacy_math_gate(prompt):
     if STRONG_ANCHORS.search(prompt) or STRONG_ANCHORS_2.search(prompt):
         return True
     if ANCHORS_3_ON and STRONG_ANCHORS_3.search(prompt):
+        return True
+    if PROGRAM_ANCHORS_ON and (PROGRAM_ANCHORS.search(prompt) or PROGRAM_ANCHORS_WORDS.search(prompt)):
         return True
     if ANCHORS_5_ON and STRONG_ANCHORS_5.search(prompt):
         return True
