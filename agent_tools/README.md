@@ -15,7 +15,7 @@ These are the scripts agents call while they work. Each one reads a store built 
 After the setup below, make one search call such as:
 
 ```bash
-python agent_tools/math_recall.py "random transposition walk spectral gap" --or "Diaconis Shahshahani cutoff" --or "mixing time random transpositions"
+python agent_tools/math_recall.py "spectral gap relaxation time mixing time" --or "absolute spectral gap reversible Markov chain" --or "relaxation time bounds total variation mixing"
 ```
 
 Through MCP, send the same alternatives in the `wordings` array (up to three), then use `ids` to read the relevant cards.
@@ -42,7 +42,7 @@ Set two variables first:
 Follow this default workflow on every store lookup; [AGENTS_GUIDE.md](../AGENTS_GUIDE.md) gives the numbers.
 
 ```
-python agent_tools/math_recall.py "random transposition walk spectral gap" --or "Diaconis Shahshahani cutoff"
+python agent_tools/math_recall.py "spectral gap relaxation time mixing time" --or "absolute spectral gap reversible Markov chain"
 python agent_tools/math_recall.py --id claim_03ca421f claim_7e623698
 ```
 

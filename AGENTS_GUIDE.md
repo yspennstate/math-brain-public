@@ -17,7 +17,7 @@ The short version: an agent with the store answers questions about past work fas
 After the setup below, make one search call such as:
 
 ```bash
-python agent_tools/math_recall.py "random transposition walk spectral gap" --or "Diaconis Shahshahani cutoff" --or "mixing time random transpositions"
+python agent_tools/math_recall.py "spectral gap relaxation time mixing time" --or "absolute spectral gap reversible Markov chain" --or "relaxation time bounds total variation mixing"
 ```
 
 Through MCP, send the same alternatives in the `wordings` array (up to three), then use `ids` to read the relevant cards.

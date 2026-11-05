@@ -17,11 +17,11 @@ git clone --filter=blob:none --sparse https://github.com/yspennstate/math-brain-
 cd math-brain-public
 git sparse-checkout set src tools agent_tools export config navigation
 python tools/import_store.py --out local/population/brain.sqlite3
-python agent_tools/math_recall.py "random transposition walk spectral gap" --or "Diaconis Shahshahani cutoff"
+python agent_tools/math_recall.py "spectral gap relaxation time mixing time" --or "absolute spectral gap reversible Markov chain"
 python agent_tools/math_recall.py --id <card id from the output>
 ```
 
-You need Python 3.11 or newer; macOS ships 3.9 as `/usr/bin/python3`, so install a newer one there first. No `pip install` and no environment variables are needed: the tools find `src/` and the store from the checkout. On 3 November 2026 this ran from a fresh clone with an empty home directory: the import rebuilt 60,977 rows in 42 seconds with no row failing its digest, and the first search took 49 seconds on a busy laptop because it builds the prepared fast-recall state; later searches take a few seconds.
+You need Python 3.11 or newer; macOS ships 3.9 as `/usr/bin/python3`, so install a newer one there first. No `pip install` and no environment variables are needed: the tools find `src/` and the store from the checkout. On 5 November 2026 this ran from a fresh clone with an empty home directory: the import rebuilt 60,977 rows in 49 seconds with no row failing its digest, and the first search took 56 seconds on a busy laptop because it builds the prepared fast-recall state; later searches take a few seconds.
 
 The repository has a small brain of its own as well. [navigation/](navigation/) holds one card for every file outside `results/` and `papers/`, one for each directory and README section, and a few concept cards, about 1,700 in all, joined by about 3,400 links. It answers "where is X and what do I open to use it" without walking the tree:
 
@@ -73,7 +73,7 @@ The method and the full tables for each are in [TESTS.md](TESTS.md), which start
 After the setup below, make one search call such as:
 
 ```bash
-python agent_tools/math_recall.py "random transposition walk spectral gap" --or "Diaconis Shahshahani cutoff" --or "mixing time random transpositions"
+python agent_tools/math_recall.py "spectral gap relaxation time mixing time" --or "absolute spectral gap reversible Markov chain" --or "relaxation time bounds total variation mixing"
 ```
 
 Through MCP, send the same alternatives in the `wordings` array (up to three), then use `ids` to read the relevant cards.
@@ -222,7 +222,7 @@ The conjecture is open. The campaign proved that H ≤ 2(I − Var) + 2U for eve
 pip install -e .
 python tools/import_store.py --out local/population/brain.sqlite3
 export MATHBRAIN_STORE=local/population/brain.sqlite3 MATHBRAIN_BUILD_SRC=src
-python agent_tools/math_recall.py "random transposition walk spectral gap" --or "Diaconis Shahshahani cutoff"
+python agent_tools/math_recall.py "spectral gap relaxation time mixing time" --or "absolute spectral gap reversible Markov chain"
 python agent_tools/math_recall.py --id <card id>
 python agent_tools/math_walk.py <card id> --toward "mixing time lower bound"
 ```

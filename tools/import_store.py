@@ -276,8 +276,8 @@ def main() -> int:
     nodes_bad, manifests_bad = digest_failures(out)
     print(
         f"  {len(nodes_bad)} node rows and {len(manifests_bad)} bundle manifests fail their stored digest"
-        " (the store of 2026-09-25 carried 34 and 0; more means the home put back is not the exporting"
-        " machine's, or the private names file is missing)"
+        " (a clean checkout of this repository gives 0 and 0; a nonzero count means a file under"
+        " export/population/ differs from the release, and the reader will refuse those rows)"
     )
     return 0
 
