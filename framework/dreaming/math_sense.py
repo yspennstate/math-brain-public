@@ -30,6 +30,31 @@ import random
 import re
 import sys
 import time
+
+
+# A HOOK FINDS ITS OWN DEPENDENCIES UNDER THE FLAGS IT IS LAUNCHED WITH. Hooks are often started as `python -s`,
+# which drops the user site; where numpy is installed only there, math_brain.semantic failed to import and the hook
+# went silent on every prompt while a plain `python` run of the same code served normally, so every measurement
+# taken by hand described a path the hook never took. When the user site was dropped and numpy is not importable,
+# put the user site back on sys.path. With the user site present, or numpy on the system site, this does nothing.
+def _ensure_user_site():
+    if not getattr(sys.flags, "no_user_site", 0):
+        return
+    try:
+        import numpy  # noqa: F401
+        return
+    except ModuleNotFoundError:
+        pass
+    try:
+        import site
+        usp = site.getusersitepackages()
+        if usp and os.path.isdir(usp) and usp not in sys.path:
+            sys.path.append(usp)
+    except Exception:
+        pass
+
+
+_ensure_user_site()
 import unicodedata   # 2026-09-13: two helpers here fold accents; without this they raised NameError into a
 # swallowed except, which silently skipped the WHOLE on-topic gate - a behaviour change that reads as a result.
 
