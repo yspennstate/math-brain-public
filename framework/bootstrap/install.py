@@ -179,27 +179,70 @@ def portable_hooks(wiring, python, repo, fold=True):
     return n
 
 
-def copy_expand(src, dst, tok, apply_):
-    n = 0
+# Files a run of the framework writes inside its own folders. A clone in which anyone has already run a tool (brain.py
+# recall starts a recall server that writes brain_recall_server/endpoint.json beside the code) must not hand that state
+# to the install: the installed client then reads the clone's endpoint and talks to the clone's server, whose index
+# path is the clone's, and recall comes back with its lexical lane dark. Only files git tracks are copied when the
+# framework is a git checkout; a downloaded archive falls back to skipping the known runtime names.
+RUNTIME_DIRS = {"__pycache__", "brain_recall_server"}
+RUNTIME_FILES = {"endpoint.json", "spawn.stamp", "server.lock", "server.log", "calls.jsonl", "client.jsonl"}
+_TRACKED = None
+
+
+def _tracked_files():
+    """Absolute, normalised paths of every file git tracks under REPO's checkout; None when it is not one."""
+    global _TRACKED
+    if _TRACKED is None:
+        import subprocess
+        try:
+            top = subprocess.run(["git", "-C", REPO, "rev-parse", "--show-toplevel"], capture_output=True, text=True,
+                                 timeout=60, creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+            ls = subprocess.run(["git", "-C", REPO, "ls-files", "-z", "--full-name", "."], capture_output=True,
+                                timeout=120, creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
+            if top.returncode or ls.returncode:
+                _TRACKED = False
+            else:
+                root = top.stdout.strip()
+                _TRACKED = {os.path.normcase(os.path.normpath(os.path.join(root, p)))
+                            for p in ls.stdout.decode("utf-8", "replace").split("\0") if p}
+        except (OSError, subprocess.SubprocessError):
+            _TRACKED = False
+    return _TRACKED or None
+
+
+def source_files(src):
+    """(root, rel, name) of every file under src that belongs to the framework, not to a run of it."""
+    tracked = _tracked_files()
     for root, dirs, files in os.walk(src):
-        dirs[:] = [d for d in dirs if d != "__pycache__"]
+        dirs[:] = [d for d in dirs if d not in RUNTIME_DIRS]
         rel = os.path.relpath(root, src)
         for f in files:
-            sp = os.path.join(root, f)
-            dp = os.path.join(dst, rel if rel != "." else "", f)
-            if apply_:
-                os.makedirs(os.path.dirname(dp), exist_ok=True)
-                ext = os.path.splitext(f)[1].lower()
-                if ext in TEXT_EXT:
-                    try:
-                        t = io.open(sp, encoding="utf-8", newline="").read()
-                        io.open(dp, "w", encoding="utf-8", newline="").write(
-                            expand(t, tok, as_json=(ext == ".json")))
-                    except UnicodeDecodeError:
-                        shutil.copy2(sp, dp)
-                else:
+            if tracked is not None:
+                if os.path.normcase(os.path.normpath(os.path.join(root, f))) not in tracked:
+                    continue
+            elif f in RUNTIME_FILES or f.endswith((".pyc", ".lock")) or f.startswith("bm25_index.json"):
+                continue
+            yield root, rel, f
+
+
+def copy_expand(src, dst, tok, apply_):
+    n = 0
+    for root, rel, f in source_files(src):
+        sp = os.path.join(root, f)
+        dp = os.path.join(dst, rel if rel != "." else "", f)
+        if apply_:
+            os.makedirs(os.path.dirname(dp), exist_ok=True)
+            ext = os.path.splitext(f)[1].lower()
+            if ext in TEXT_EXT:
+                try:
+                    t = io.open(sp, encoding="utf-8", newline="").read()
+                    io.open(dp, "w", encoding="utf-8", newline="").write(
+                        expand(t, tok, as_json=(ext == ".json")))
+                except UnicodeDecodeError:
                     shutil.copy2(sp, dp)
-            n += 1
+            else:
+                shutil.copy2(sp, dp)
+        n += 1
     return n
 
 
@@ -237,18 +280,13 @@ def longest_path_this_install_would_create(home, slug):
         if not os.path.isdir(src):
             continue
         dst = target if os.path.isabs(target) else os.path.join(home, target)
-        for root, dirs, files in os.walk(src):
-            dirs[:] = [d for d in dirs if d != "__pycache__"]
-            rel = os.path.relpath(root, src)
-            for f in files:
-                paths.append(os.path.join(dst, rel if rel != "." else "", f))
+        for root, rel, f in source_files(src):
+            paths.append(os.path.join(dst, rel if rel != "." else "", f))
     paths += [os.path.join(home, d) for d in STATE_DIRS]
     for sub, target in BRAIN_REPO_COPIES.items():
         src = os.path.join(REPO, *sub.split("/"))
-        for root, dirs, files in os.walk(src):
-            dirs[:] = [d for d in dirs if d != "__pycache__"]
-            rel = os.path.relpath(root, src)
-            paths += [os.path.join(home, BRAIN_REPO, target, rel if rel != "." else "", f) for f in files]
+        for root, rel, f in source_files(src):
+            paths.append(os.path.join(home, BRAIN_REPO, target, rel if rel != "." else "", f))
     paths += [os.path.join(home, BRAIN_REPO, d) for d in BRAIN_REPO_DIRS]
     mem = os.path.join(home, ".claude", "projects", slug, "memory")
     paths.append(os.path.join(mem, "dreams"))
