@@ -99,16 +99,60 @@ def decide(payload, now=None, state_dir=None):
         st["last_fired"] = now
         st["fires"] = int(st.get("fires") or 0) + 1
     tmp = path + ".%d.tmp" % os.getpid()
+    # 2026-09-14: os.replace over a file another session has open raises WinError 5 on Windows, and
+    # this hook runs in every concurrent session at once. The bare `except: pass` swallowed that, so
+    # the update was LOST (the reminder re-fired on state it never managed to write) and the tmp was
+    # orphaned - 364 of them in seven days, the oldest a week old. The sharing violation is transient,
+    # so retry briefly; the tmp is removed either way.
     try:
         with io.open(tmp, "w", encoding="utf-8") as fh:
             json.dump(st, fh)
-        os.replace(tmp, path)
+        for _attempt in range(5):
+            try:
+                os.replace(tmp, path)
+                break
+            except OSError:
+                if _attempt == 4:
+                    raise
+                time.sleep(0.05)
     except Exception:
         pass
+    finally:
+        try:
+            if os.path.exists(tmp):
+                os.remove(tmp)
+        except Exception:
+            pass
     if not fire:
         return {}
-    log("fire session=%s event=%s n=%s" % (session, event, st.get("fires")))
-    return {"hookSpecificOutput": {"hookEventName": event, "additionalContext": ROUTING % ROUTING_DOC}}
+    text = _once(str(payload.get("session_id") or ""), ROUTING % ROUTING_DOC)
+    log("fire session=%s event=%s n=%s chars=%d" % (session, event, st.get("fires"), len(text)))
+    return {"hookSpecificOutput": {"hookEventName": event, "additionalContext": text}}
+
+
+REPEAT_NOTE = ("  (the routing table, the cost rules and the push discipline reached this context already and are"
+               " unchanged; full table: %s)")
+
+
+def _once(sess, full):
+    """The push line goes every half hour; the routing paragraph only once per context - again after a compaction
+    or three hours (4 Nov 2026: 3,125 chars a fire on the first deployment, 87 pct of it a repeat to the same
+    session). The line that always goes is the routing text's own first line, so a deployment's own routing file
+    keeps working. No session id, or any failure, sends the whole text as before."""
+    if not sess:
+        return full
+    try:
+        sys.path.insert(0, DREAMING)
+        from once_per_context import filter_lines
+        lines = full.split("\n")
+        lead = lines[0]
+        out, whole, _at = filter_lines(sess, "push_reminder", lines, keep=lambda l: l == lead)
+        if whole:
+            return full
+        body = [l for l in out if l != lead]
+        return "\n".join([lead] + body + ([] if body else [REPEAT_NOTE % ROUTING_DOC]))
+    except Exception:
+        return full
 
 
 def selftest():
