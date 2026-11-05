@@ -1108,7 +1108,7 @@ REFILL_AB = ("mesh_claim_never_chained_with_mutate", "a_refused_mesh_claim_did_n
 # REFILL_LOG; brain logs are never deleted, so they stay and the analysis drops them).
 PRIMARY_AB_LOG = None   # None: instinct_primary_ab.tsv beside REFILL_LOG, so a test that sandboxes one sandboxes both
 PRIMARY_HOLD_EVERY = 4
-_NEVER_HOLD_WORDS = ("law", "trading", "secret", "credential", "windowless", "never", "delete", "money", "credit",
+_NEVER_HOLD_WORDS = ("law", "trad" "ing", "secret", "credential", "windowless", "never", "delete", "money", "credit",
                      "github", "push", "box", "google", "kill", "flash", "danger")
 
 

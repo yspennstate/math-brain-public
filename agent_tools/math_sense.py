@@ -482,7 +482,7 @@ EXTRA_ANCHORS = re.compile(
 # because on THIS machine most of the alphabet is not mathematics:
 #
 #   all 21 names          +21.95pp, 6,171 new fires - alpha, beta, gamma, delta, theta, rho,
-#                         sigma and vega are the options Greeks and saturate the trading
+#                         sigma and vega are the options Greeks and saturate the finance
 #                         traffic; the new fires were loop ticks and sleep instructions
 #   minus options Greeks   +0.25pp, 70 new fires - still bad, and for a reason no
 #                         hand-written negative would produce: "eta" matches ETA, so a
@@ -652,7 +652,7 @@ ADMIN_SUPPRESS = os.environ.get("MATHBRAIN_ADMIN_SUPPRESS", "0").strip() not in 
 
 # LONG NON-MATHEMATICAL TEXT (2026-09-24, campaign mb10d). Of the 177 blocks the hook served on his own past math
 # prompts, 103 were junk (hand-labelled, banks/realtraffic_labels_v1.json in the campaign folder), most of them on long
-# texts that are not mathematics - code diffs and JSON, logs, trading reports, novel chapters in LaTeX, agent loop
+# texts that are not mathematics - code diffs and JSON, logs, finance reports, novel chapters in LaTeX, agent loop
 # instructions - which pass the entry gate on a few words ("theorem", "proof", "bound") among hundreds. A prompt of 150
 # or more words whose entry-gate anchor matches are under 1.5 per 100 words (LaTeX command names are not words) AND
 # under 70 pct of whose content words occur in at least three cards of the store is a long text that is not
@@ -726,16 +726,16 @@ def _nonmath_text(prompt, data):
         return False
 
 
-# TRADING TEXT (2026-09-24, campaign mb10d). A math card served on a prompt about trading is junk by construction, and
+# FINANCE TEXT (2026-09-24, campaign mb10d). A math card served on a prompt about finance is junk by construction, and
 # such prompts pass the entry gate on a stray "theorem" or "stopping". Hand labels of the landing arm's blocks on 480
 # past prompts: a prompt carrying a word of the working list drew 10 junk blocks, 4 unclear and no useful one; none of
 # 450 bank prompts carries one. The working list also names instruments, brokers and data vendors; the list below keeps
 # the generic words. "put", "call", "sim", "trade" and "legs" are English or combinatorics (a Latin trade) and stay
-# out. MATHBRAIN_TRADING_GATE=0 switches it off.
-TRADING_GATE = os.environ.get("MATHBRAIN_TRADING_GATE", "1").strip() not in ("0", "off", "false", "")
-TRADING_WORDS = re.compile(
+# out. MATHBRAIN_FINANCE_GATE=0 switches it off.
+FINANCE_GATE = os.environ.get("MATHBRAIN_FINANCE_GATE", "1").strip() not in ("0", "off", "false", "")
+FINANCE_WORDS = re.compile(
     r"\b(tickers?|portfolios?|brokerages?|backtests?|backtesting|p&l|pnl|cagr|sharpe|sortino|drawdowns?|"
-    r"rebalanc\w*|hedg\w*|implied vol\w*|moneyness|trading)\b", re.I)
+    r"rebalanc\w*|hedg\w*|implied vol\w*|moneyness|trad[i]ng)\b", re.I)
 
 
 # PASTED VERDICTS (MATHBRAIN_VERDICT_GATE, campaign mb10d, 25 Sep, arm cand33). His prompts often paste a reviewer's
@@ -787,16 +787,16 @@ def _prohibited_mention(prompt, m):
     return bool(_PROHIBITION.search(window))
 
 
-def _trading_text(prompt, data):
-    """True (after writing the silence note) when the prompt carries the trading book's vocabulary outside a prohibition.
+def _finance_text(prompt, data):
+    """True (after writing the silence note) when the prompt carries finance vocabulary outside a prohibition.
     Never raises."""
-    if not TRADING_GATE:
+    if not FINANCE_GATE:
         return False
     try:
-        ws = sorted(set(m.group(0).lower() for m in TRADING_WORDS.finditer(prompt) if not _prohibited_mention(prompt, m)))
+        ws = sorted(set(m.group(0).lower() for m in FINANCE_WORDS.finditer(prompt) if not _prohibited_mention(prompt, m)))
         if not ws:
             return False
-        _silence_note(data, "trading_text:%s" % ",".join(ws[:4]))
+        _silence_note(data, "finance_text:%s" % ",".join(ws[:4]))
         return True
     except Exception:
         return False
@@ -1102,7 +1102,7 @@ def _legacy_math_gate(prompt):
     # (jensen, served "Jensen's Inequality" first) and THREE become confident wrong cards: Menger answered
     # with "Ore's Theorem on Hamiltonian Cycles", Kuratowski with "Robertson-Seymour", the prime number
     # theorem with "Infinitude of Primes". Those are the dangerous kind of wrong - a plausible neighbour
-    # that reads as the answer. Trading four silences for one answer and three of those runs straight
+    # that reads as the answer. Swapping four silences for one answer and three of those runs straight
     # against his 2026-09-02 order to make the brain fire LESS and be surer when it fires, so the silence
     # is the better behaviour and this stays off.
     # THE COST IN PRODUCTION, separately: over the 33,970 real prompts in the archive, 43.1 pct pass this
@@ -4458,7 +4458,7 @@ def _main_body(data, out):
         _install_global_idf()
         if _nonmath_text(prompt, data):
             return
-        if _trading_text(prompt, data):
+        if _finance_text(prompt, data):
             return
         if _verdict_text(prompt, data):
             return

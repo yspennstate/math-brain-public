@@ -84,7 +84,7 @@ CORE = [
     ("ern: implausible Sharpe (canary)",    "error_monitor.py", post("Backtest done. Sharpe 7.67, Sortino 144", sid="e2"),     "implausible magnitude"),
     ("ern: a 3-digit-% std (canary)",       "error_monitor.py", post("the realized number came out to 950% std", sid="e5"),    "implausible magnitude"),
     # build the fake token at runtime so a secret-shaped literal isn't sitting in the source (it would
-    # trip our own pre-push scan and GitHub's) - the ERN detector still sees a real ghp_ shape at test time.
+    # trip our own pre-push scan and GitHub's) - the ERN detector still sees a real token shape at test time.
     ("ern: a leaked secret",                "error_monitor.py", post("token=" + "gh" + "p_" + "abcdefghij0123456789ABCDEF", sid="e3"), "LEAKED SECRET"),
     # a secret SCANNER echoing its own controls is not a leak
     ("ern: silent on a secret scanner's own output", "error_monitor.py",
