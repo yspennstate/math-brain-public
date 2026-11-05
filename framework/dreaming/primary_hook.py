@@ -29,6 +29,9 @@ import time
 HERE = os.path.dirname(os.path.abspath(__file__))
 STATE = os.path.join(HERE, "primary_hook_state.json")
 OFF = os.path.join(HERE, "PRIMARY_HOOK_OFF")
+# The three-minute line is for a machine running many agents at once. A new install starts without it; create
+# PRIMARY_HOOK_ON beside this file to turn it on. The directive rules and the usage watch below are unaffected.
+ON = os.path.join(HERE, "PRIMARY_HOOK_ON")
 EVERY_S = 180
 LINE = ("[primary-hook] Work faster, be more efficient, finish the job faster. The timeline is soon. Communicate faster, "
         "build faster, give a deliverable: agents are waiting on you. Find the nearest bottleneck and clear it; speed "
@@ -153,7 +156,7 @@ def main(argv):
         except Exception:
             payload = {}
         key, now = session_key(payload), time.time()
-        lines = [LINE] if due(key, now) else []
+        lines = [LINE] if os.path.exists(ON) and due(key, now) else []
         prompt = payload.get("prompt") if isinstance(payload, dict) else ""
         lines += directive_lines(key, prompt if isinstance(prompt, str) else "", now)
         lines += usage_lines(key, payload, now)

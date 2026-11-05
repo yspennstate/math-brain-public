@@ -298,6 +298,10 @@ def main() -> int:
         data = json.loads(raw.decode("utf-8", "strict"))
         if not isinstance(data, dict) or data.get("hook_event_name") != "PreToolUse":
             return 0
+        # A brain that has never built a project contract has neither file. That is not a failed validation, and
+        # warning about one on every tool call of a fresh install only teaches the agent to ignore this hook.
+        if not (ROOT / "project_memory.key").exists() or not (ROOT / "hot-contract-cache.json").exists():
+            return 0
         key = (ROOT / "project_memory.key").read_bytes()[:32]
         envelope = json.loads((ROOT / "hot-contract-cache.json").read_text(encoding="utf-8"))
         body = envelope["body"]
