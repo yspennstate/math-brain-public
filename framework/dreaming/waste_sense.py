@@ -98,6 +98,10 @@ def _census_live(timeout=300):
     # Measured 2026-09-18: this hook is 2,516 s of 7,419 s of all logged slow-hook time on the box - the
     # single largest item on the prompt path, median slow fire 4.79 s against ~1.5 s for every other hook.
     # Memory: a_seven_fold_median_gap_inside_a_sixty_fold_variance_2026_09_18.
+    if os.name != "nt":
+        # one `ps` over the process table - the same single-table read, in the same row shape
+        import posix_proc
+        return posix_proc.table(timeout=timeout)
     try:
         r = subprocess.run(["powershell", "-NoProfile", "-NonInteractive", "-Command", PS], capture_output=True, text=True,
                            encoding="utf-8", errors="replace", timeout=timeout, creationflags=(0x08000000 if os.name == "nt" else 0))
@@ -118,6 +122,9 @@ def _parent_map():
     """{pid: (ppid, exe name)} from ONE Toolhelp32 snapshot - a single kernel call with no per-process handle and no
     import beyond ctypes, so it works under the dispatcher's `python -s`, where psutil (a user-site package) is absent.
     Used only to link a hook to an ancestor the cached census already holds; the census itself stays the CIM read."""
+    if os.name != "nt":
+        import posix_proc
+        return posix_proc.parent_map()
     import ctypes
     from ctypes import wintypes
 
@@ -155,6 +162,11 @@ def _proc_details(pids):
     """{pid: (age_min, command line)} for a handful of live pids, one limited-query handle each (no process
     creation). Used only for the session's own descendants and orphan candidates that are younger than the cached
     census, so the report can still say what they are and how old."""
+    if os.name != "nt":
+        # libproc reads the whole table in ~20 ms on the Mac, so one read answers any handful of pids
+        import posix_proc
+        t = posix_proc.table()
+        return {p: (t[p][2], t[p][3]) for p in pids if p in t}
     import ctypes
     from ctypes import wintypes
 
@@ -283,6 +295,11 @@ def census():
         rows = _overlay_live(blob, t0, "snapshot" if age < CENSUS_MAX_AGE_S else "stale")
         if rows:
             return rows
+    # A failed snapshot or unreadable cache must still respect the shared retry
+    # budget; otherwise every prompt starts another expensive census rebuild.
+    if not _rebuild_due():
+        _LAST[:] = ["rebuild-backoff", time.perf_counter() - t0, 0]
+        return {}
     _mark_rebuild_attempt()
     rows = _census_live(CENSUS_REBUILD_TIMEOUT_S)
     if rows:
@@ -356,7 +373,9 @@ def my_session_root(rows):
             break
         chain.append(pid)
         ppid, name, _, _ = rows[pid]
-        if name.lower() in ("claude.exe", "codex.exe") or (name.lower() == "node.exe" and "claude" in rows[pid][3].lower()):
+        n = name.lower()
+        n = n[:-4] if n.endswith(".exe") else n   # the Mac names hosts claude / codex / node, with no .exe
+        if n in ("claude", "codex") or (n == "node" and "claude" in rows[pid][3].lower()):
             return pid, chain
         pid = ppid
     return None, chain
@@ -394,7 +413,33 @@ def _subtree(rows, root):
     return out
 
 
-HARNESS = ("shell-snapshots", "snapshot-bash", "snapshot-zsh", "snapshot-powershell")
+HARNESS = ("shell-snapshots", "snapshot-bash", "snapshot-zsh", "snapshot-powershell",
+           "caffeinate -i -t ")   # Claude Code on the Mac keeps one under every session
+_PARSER_SEEN = {}
+
+
+def _harness_parser(cmd):
+    """Claude Code's PowerShell tool keeps one long-lived helper per session that parses each command before it runs:
+    `powershell.exe -NoProfile -NonInteractive -NoLogo -EncodedCommand <b64>`, whose decoded script reads base64 from
+    stdin and calls Language.Parser]::ParseInput. Its command line names no snapshot file, so until 31 Oct this hook
+    listed it on every prompt as the session's oldest idle worker. Plumbing,
+    not work: recognised by decoding the command, cached per command line."""
+    if not cmd or "-EncodedCommand" not in cmd:
+        return False
+    hit = _PARSER_SEEN.get(cmd)
+    if hit is not None:
+        return hit
+    hit = False
+    try:
+        import base64, re
+        m = re.search(r"-EncodedCommand\s+(\S+)", cmd)
+        if m:
+            txt = base64.b64decode(m.group(1)).decode("utf-16-le", "ignore")
+            hit = "Language.Parser]::ParseInput" in txt and "[Console]::In.ReadToEnd()" in txt
+    except Exception:
+        hit = False
+    _PARSER_SEEN[cmd] = hit
+    return hit
 
 
 def descendants(rows, root, exclude):
@@ -409,7 +454,7 @@ def descendants(rows, root, exclude):
                 if _stale_link(rows, pid, p):
                     continue
                 seen.add(pid); out.append((pid, name, age, cmd)); stack.append(pid)
-    real = [d for d in out if not any(h in (d[3] or "") for h in HARNESS)]
+    real = [d for d in out if not any(h in (d[3] or "") for h in HARNESS) and not _harness_parser(d[3])]
     if all(d[1].lower() in ("conhost.exe", "openconsole.exe") for d in real):
         real = []
     return real
@@ -537,6 +582,25 @@ def render(event, desc, totals, orphans=()):
     return "\n".join(lines)
 
 
+def _once(session, block):
+    """The standing paragraphs (about 1,500 of the 1,926 chars a fire) go to a context once - again after a
+    compaction or three hours; the census lines go every time (4 Nov 2026; 95 pct of this
+    hook's 24 h text was a repeat to the same session). Any failure sends the block whole."""
+    try:
+        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+        from once_per_context import filter_lines
+        lines = block.split("\n")
+        live = lambda l: l.startswith(("[waste-sense]", "  - pid", "  - ...", "  ORPHANED"))
+        out, whole, at = filter_lines(session, "waste_sense", lines, keep=live)
+        if whole:
+            return block
+        out.append("  (the standing rules - judge, do not shed, report in one line at the end - went to this context "
+                   "whole at %s and are unchanged)" % time.strftime("%H:%M", time.localtime(at)))
+        return "\n".join(out)
+    except Exception:
+        return block
+
+
 def main():
     t0 = time.perf_counter()
     _LAST[:] = ["", 0.0, 0]          # only a census taken by THIS fire is logged (the selftest calls main() after census())
@@ -585,6 +649,7 @@ def _main():
     if not desc and not orphans:
         return
     block = render(event, desc, totals, orphans)
+    block = _once(session, block)
     sys.stdout.write(json.dumps({"hookSpecificOutput": {"hookEventName": event, "additionalContext": block}}))
 
 
