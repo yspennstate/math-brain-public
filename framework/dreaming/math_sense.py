@@ -633,6 +633,14 @@ def _math_gate(prompt):
     return len(existing) + extra >= 2
 
 
+
+# LETTER EXPONENTS (MATHBRAIN_EXP_LETTER, default on). ASCII_MATH_RE takes an exponent only from [0-9nkpq] and
+# STRUCTURAL_MATH_RE from a similar short list, so "3^m + (-1)^m" carried no notation this gate could see and a question
+# on a cycle count was refused. Any single letter now counts, as notation beside a word anchor and as a structural
+# notation ("x^y" alone stays refused: one notation, no anchor). Over a large archive of real prompts about one in ten
+# carries one and none is newly admitted by it alone. 0 switches it off.
+EXP_LETTER = os.environ.get("MATHBRAIN_EXP_LETTER", "1").strip() not in ("0", "off", "false", "")
+EXP_LETTER_RE = re.compile(r"(?:(?<![A-Za-z0-9_])[A-Za-z0-9]|\))\^\{?[a-z]\}?(?![A-Za-z0-9_])")
 def _legacy_math_gate(prompt):
     """One STRONG anchor (names, theorem-class words), two weak anchors, one weak
     anchor plus notation, or - new - two distinct STRUCTURAL notations with no word
@@ -686,8 +694,12 @@ def _legacy_math_gate(prompt):
     # The H1 question carries "self-avoiding"/"lattice" AND "<=", so it passes here.
     if len(anchors) >= 1 or ENUMERATION_ANCHORS.search(prompt):
         return (LATEX_RE.search(prompt) is not None
-                or ASCII_MATH_RE.search(prompt) is not None)
-    return len(set(m.group(0) for m in STRUCTURAL_MATH_RE.finditer(prompt))) >= 2
+                or ASCII_MATH_RE.search(prompt) is not None
+                or (EXP_LETTER and EXP_LETTER_RE.search(prompt) is not None))
+    _struct = set(m.group(0) for m in STRUCTURAL_MATH_RE.finditer(prompt))
+    if EXP_LETTER:
+        _struct |= set(m.group(0) for m in EXP_LETTER_RE.finditer(prompt))
+    return len(_struct) >= 2
 
 
 def _install_global_idf():
