@@ -12,17 +12,17 @@ WHAT IT DOES. Every run it reads every memory's description, sorts each into thr
     AUTO   an unambiguous mathematical result - a result word (THEOREM / PROVED / SETTLED / REFUTED / EXACT /
            COUNTEREXAMPLE ...) at the head of the description, or a named problem followed by a result verb
            ("Aldous-Fill Open Problem 4.48 settled", "the FEI constant is numerically ..."), with a
-           mathematical vocabulary signal and NO trading vocabulary. Ingested as a claim + node + evidence +
+           mathematical vocabulary signal and NO word from the hard deny list. Ingested as a claim + node + evidence +
            provenance row, status UNVERIFIED (the store requires it; the memory's own status rides in the
            provenance row and the evidence limitations, which is where a reader must look).
     QUEUE  a probable result the rule cannot settle on its own (a soft word such as "grid", "delta",
            "beta", "session" that lives in both worlds). Written to math_transport_queue.jsonl for an agent
            to ingest (python math_transport.py ingest <slug>) or dismiss (dismiss <slug> "<why>"). A queue
            item older than QUEUE_STALE_H trips hook_liveness - the transport never silently lapses again.
-    SKIP   everything else. Trading vocabulary is a HARD deny that wins over every result word: options pricing
-           and a trading book stay out of the math brain, and a strategy's own "theorems" (a counting law for
-           a grid of orders, a compounding identity for a leveraged fund) are the exact things a loose rule
-           would carry across.
+    SKIP   everything else. The hard deny list (math_transport_deny.json, local, empty by default) wins over every
+           result word: the words of a domain whose own "theorems" (a counting rule of a business, a budget
+           identity) are the exact things a loose rule would carry across. Process notes (a film about a
+           theorem, a release note) are denied the same way by a built-in list.
 
 IDEMPOTENT by the claim_provenance.source_ref = "memory:<slug>" row, plus
 the local ledger; a slug is never ingested twice. The store is backed up before the first write of a day.
@@ -227,31 +227,33 @@ MATH_SIGNAL = re.compile(
 MATH_SIGNAL_NAMED = re.compile(
     r"\b(?:Lean(?: ?4)?|Mathlib|lake build)\b|\.lean\b|"
     r"(?i:\bmeasures?\b(?! (?:a|an|the|how|what|whether|it|its|this|that|these|every|each|his|her|their|our|my|one)\b))")
-# HARD deny: the trading book. Wins over every result word. Unambiguous finance/engine words only.
-HARD_DENY = re.compile(
-    r"\b(nlv|vix|lanes?|premium|drawdown|sharpe|sortino|"
-    r"backtests?|sims?|simulations?|harvest\w*|rungs?|letf|leveraged|baskets?|notional|vrp|itm|otm|options?|"
-    # puts/calls as a verb before a determiner are words, not contracts ("a shared factor puts the tail in one
-    # direction"); "puts at/on/are", "the puts", "a put" still deny
-    r"put\b|puts\b(?! (?:the|a|an|it|its|this|that|them|one|all|most|every|each|mass|weight|half)\b)|"
-    r"call\b|calls\b(?! (?:the|a|an|it|its|this|that|them|one|all|most|every|each|mass|weight|half)\b)|strikes?|tenors?|plateau|engines?|rebalanc\w*|top-?offs?|borrow\w*|fills|p&l|pnl|cagr|etfs?|"
-    r"trading|trades?|untraded|traded|legs?|accounts?|pitch ?deck|nbbo|"
-    r"moneyness|expir\w*|hedg\w*|delta[- ]neutral|beta 0\.\d+|target beta|gamma\$|grid trad\w*|stock-?grid|"
-    # dd before an arXiv number is a citation's author initials ("DD 2604.09909 gives k^-3/4")
-    r"cboe|opra|broker|portfolio|equity curve|max dd|dd(?! \d{4}\.\d{4,5}))\b"
-    # a return multiple ("81.3x", "23.9x") - but never a time stamp ("05:0x", "02:4x-04:2x"), hence the lookbehind,
-    # and never a polynomial term ("root of 3x^2-3x-1", "2x+1", "3x_1"): x followed by ^ _ or an operator glued to a
-    # term is algebra (a card was once refused on the "3x" of its quadratic)
-    # ("4.69x/maxDD", "13.00x/16.93pct", "3x-quad", "8.3x-OVERSHOOT" and the range "6.05x-9.21x" stay multiples: the
-    # term after the operator must be a number that is no multiple, or a one-letter variable)
-    r"|(?<![:\-\d.])\b\d{1,4}(\.\d+)?x\b(?![\^_]|[+\-*=](?:\d(?!\d*(?:\.\d+)?x\b)|[a-z](?![a-z])))", re.I)
-# SOFT: words that live in both worlds - never AUTO, always a human eye.
-# (delta, beta, gamma, open, cells are NOT here: Laplacian Delta, Hod's beta(1/2), "Open Problem 4.48" and the
-#  certificate's "17.6M cells" are mathematics; their trading collocations are already in HARD_DENY)
-SOFT_DENY = re.compile(r"\b(grid|multiple|session|sessions|carry|book|books|ladder|exercise|fund|"
-                       r"dial|dials|sweep|campaign|library|catalog)\b", re.I)
+# DOMAIN DENY LISTS. A memory corpus usually holds some domain of work whose own "theorems" must never be carried into
+# the math store as mathematics (a business's counting rules, an engineering budget identity, a game's scoring law).
+# Name that domain's words in a LOCAL file, never in this one: MATH_TRANSPORT_DENY names it (default
+# math_transport_deny.json beside this file), a JSON object {"hard": "<regex>", "soft": "<regex>"}, read
+# case-insensitively over the slug and the first 400 characters. HARD wins over every result word, even when forced;
+# SOFT words live in both worlds and send a result to the QUEUE, never AUTO. With no file both lists are empty. A file
+# that exists but cannot be read or compiled stops the transport: an unreadable deny list must not read as no list.
+DENY_FILE = os.environ.get("MATH_TRANSPORT_DENY") or os.path.join(HERE, "math_transport_deny.json")
+NEVER = r"(?!)"
+
+
+def load_deny(path=None):
+    """(HARD_DENY, SOFT_DENY) compiled from the deny file; both match nothing when the file is absent."""
+    path = path or DENY_FILE
+    if not os.path.exists(path):
+        return re.compile(NEVER), re.compile(NEVER)
+    try:
+        with io.open(path, encoding="utf-8") as f:
+            d = json.load(f)
+        return re.compile(d.get("hard") or NEVER, re.I), re.compile(d.get("soft") or NEVER, re.I)
+    except Exception as exc:
+        raise SystemExit("math_transport: the deny file %s cannot be used (%s: %s)" % (path, type(exc).__name__, exc))
+
+
+HARD_DENY, SOFT_DENY = load_deny()
 # NON-MATH deny: a film about a theorem, a packaging lesson, a release note, an intake rule - process records that
-# quote a result are not the result. Read over the slug and the head; wins like the trading deny.
+# quote a result are not the result. Read over the slug and the head; wins like the hard deny.
 NON_MATH_DENY = re.compile(
     r"\b(films?|movies?|render\w*|boards?|narration|youtube|episodes?|scan\w*|wheel|package|privacy|secrets?|"
     r"hooks?|agents?|subagents?|brain|memory|memories|dream\w*|mesh|checklist|prompts?|readout|diffusion iter|"
@@ -273,7 +275,7 @@ SKIP_HEAD = re.compile(r"^\s*(\[?(FIRE WHEN|MECHANISM|SCAR|NAP GIST|GIST|METHOD|
 
 # PROGRAM GUARD (MATH_TRANSPORT_PROGRAM_GUARD). A verified memory of one of your named research programs can read
 # SKIP when its head lacks the result words above ("[MEASURED EXACTLY] ...", "[DERIVED + CHECKED] ...", a yes/no
-# past the question), or when its slug and first 400 characters use a program word the denies read as trading or
+# past the question), or when its slug and first 400 characters use a program word the denies read as domain or
 # process ("attack lanes", "the certificate engine", "the annealed defect identity", "frac(1.5 x)"). Such a memory
 # goes to the QUEUE: never AUTO, never past a process-note slug or head, never past a deny word outside
 # AMBIGUOUS_DENY. An agent decides each one. The programs are the slug prefixes in MATH_TRANSPORT_PROGRAMS
@@ -291,7 +293,7 @@ AMBIGUOUS_DENY = re.compile(r"^(lanes?|engines?|anneal\w*|sims?|simulations?|pla
 
 # FRONTIER ROWS. A frontier campaign keeps one folder per open problem, rows/T### . Its verified row memories often
 # head like "T109 hard-core Z^2: coexistence for lambda > 4.93828", with no result word in the first 70 characters.
-# A bare t\d{3}_ would also take other tags (t500_ as a tenor), so the row counts only when its folder rows/T###
+# A bare t\d{3}_ would also take other tags (t500_ as some other label), so the row counts only when its folder rows/T###
 # exists. The id may also sit inside the slug (label_noise_..._t355_...); the guard only ever QUEUEs.
 FRONTIER_ROW_ID = re.compile(r"(?:^|_)t(\d{3})_")
 FRONTIER_ROWS = os.environ.get("MATH_TRANSPORT_FRONTIER_ROWS") or os.path.join(HERE, "frontier", "rows")
@@ -338,7 +340,7 @@ def _program_guard(slug, desc, status, reason):
         return False
     if reason in ("no result marker", "no mathematical vocabulary"):
         return True
-    if reason.startswith("trading vocabulary") or reason.startswith("process vocabulary"):
+    if reason.startswith("denied vocabulary") or reason.startswith("process vocabulary"):
         scope = re.sub(r"_20\d\d_\d\d_\d\d$", "", slug).replace("_", " ") + " " + (desc or "")[:400]
         hits = [m.group(0) for rx in (HARD_DENY, NON_MATH_DENY, MACHINE_DENY) for m in rx.finditer(scope)]
         return bool(hits) and all(AMBIGUOUS_DENY.match(h.strip()) for h in hits)
@@ -371,8 +373,8 @@ POS_CONTROLS = (
 NEG_CONTROLS = (
     ("method_broken_lemma_selftest", "METHOD: a broken lemma is not a broken conclusion; re-derive the step before "
                                      "discarding the result."),
-    ("grid_counting_law_selftest", "THEOREM: a grid of limit orders harvests the counted crossings of the price path; its "
-                                   "trading P&L equals the crossing count times the spacing."),
+    ("widget_counting_law_selftest", "THEOREM: a row of widgets counts the crossings of a path; the widget total "
+                                     "equals the crossing count times the spacing."),
     ("the_brain_is_worth_points_selftest", "RESULT: recall with the brain answered 65 points more questions than without it."),
     ("cover_time_film_selftest", "RESULT: the film about the cover-time theorem rendered in 40 minutes."),
     ("commit_charge_selftest", "EXACT: the laptop's commit charge for the matrix job was 95 pct of 114 GB."),
@@ -382,7 +384,7 @@ NEG_CONTROLS = (
 E2E_SLUG, E2E_MARK = "readonce_constant_selftest", "6.4573"
 SUCCESSOR = ("readonce_constant_corrected_selftest", "THEOREM (computer-assisted): the influence constant 6.4573 holds for "
                                                      "read-once formulas over monotone gates; the general case is open.")
-BOOK_SLUG, BRAIN_TEST_SLUG = "grid_counting_law_selftest", "the_brain_is_worth_points_selftest"
+BOOK_SLUG, BRAIN_TEST_SLUG = "widget_counting_law_selftest", "the_brain_is_worth_points_selftest"
 
 
 def _control_file(slug, desc, status="verified"):
@@ -508,12 +510,12 @@ def _classify(slug, desc):
         return "SKIP", "process-note head tag"
     head = desc[:240]
     core = strip_head(head)
-    # the denies read the SLUG too: the_legs_drawdown_effect_... carried no trading word in its first 240
-    # characters and would have walked into the math store on the strength of "SETTLED"
+    # the denies read the SLUG too: a slug can carry a deny word the description's first 240 characters lack, and
+    # without it the memory would walk into the math store on the strength of "SETTLED"
     scope = re.sub(r"_20\d\d_\d\d_\d\d$", "", slug).replace("_", " ") + " " + desc[:400]
     hard = HARD_DENY.search(scope)
     if hard:
-        return "SKIP", "trading vocabulary: %s" % hard.group(0)
+        return "SKIP", "denied vocabulary: %s" % hard.group(0)
     non = NON_MATH_DENY.search(scope) or MACHINE_DENY.search(scope)
     if non:
         return "SKIP", "process vocabulary: %s" % non.group(0)
@@ -800,9 +802,9 @@ def ingest(slug, store=STORE, force=False, dry=False, rebuild=True):
     if tier == "SKIP" and not force:
         return False, "refused: %s" % reason
     # a provisional frontier row (provrows says: ingest --force) whose only deny words are the ambiguous ones ("plateau"
-    # as a loss plateau) passes when forced; a hard word ("account", "premium") still refuses.
-    if tier == "SKIP" and force and reason.startswith("trading vocabulary") and not _forced_row_ambiguous_only(slug, desc):
-        return False, "refused even when forced: %s (the trading boundary is not overridable here)" % reason
+    # as a loss plateau) passes when forced; a word from the hard list still refuses.
+    if tier == "SKIP" and force and reason.startswith("denied vocabulary") and not _forced_row_ambiguous_only(slug, desc):
+        return False, "refused even when forced: %s (the deny boundary is not overridable here)" % reason
     if slug in done_slugs(store):
         return False, "already in the store"
     if dry:
@@ -822,7 +824,7 @@ def revise(slug, store=STORE, dry=False, rebuild=True, why="an agent's verdict o
     if _ov:
         return False, "refused: the memory is overtaken (%s); transport its successor instead" % _why
     tier, reason = classify(slug, desc)
-    if tier == "SKIP" and reason.startswith(("trading vocabulary", "process-note")):
+    if tier == "SKIP" and reason.startswith(("denied vocabulary", "process-note")):
         return False, "refused: %s (a revision never carries what a first ingest would refuse)" % reason
     heads = transported_heads(slug, store)
     new = strip_head(desc)[:1500]
@@ -1233,10 +1235,16 @@ def selftest():
     global _read   # the revision controls read memories through a stand-in, restored in their finally
     global HOLD, STORE, LEDGER, QUEUE, STATE   # the hold controls point every write path into a scratch folder
     global MEM, FRONTIER_ROWS, FRONTIER_ROW_LIST, _ROW_IDS   # the controls live in a scratch memory folder
+    global HARD_DENY, SOFT_DENY   # the controls run on a synthetic deny file, restored in the finally
     import tempfile
     fails = 0
     scratch = tempfile.mkdtemp(prefix="mt_selftest_")
     saved_paths = (MEM, FRONTIER_ROWS, FRONTIER_ROW_LIST, _ROW_IDS)
+    saved_deny = (HARD_DENY, SOFT_DENY)
+    deny_file = os.path.join(scratch, "deny.json")
+    with io.open(deny_file, "w", encoding="utf-8") as f:
+        json.dump({"hard": r"\b(widgets?|gizmos?|sprockets?)\b", "soft": r"\b(shelf|shelves)\b"}, f)
+    HARD_DENY, SOFT_DENY = load_deny(deny_file)
     MEM = os.path.join(scratch, "memory")
     FRONTIER_ROWS = os.path.join(scratch, "rows")
     FRONTIER_ROW_LIST, _ROW_IDS = os.path.join(scratch, "no_row_list.txt"), None
@@ -1263,31 +1271,42 @@ def selftest():
         for slug, status, want in (("t109_frontier_row_control", "verified", "QUEUE"),
                                    ("t109_frontier_row_control", "provisional", "QUEUE"),
                                    ("t109_frontier_row_control", None, "SKIP"),
-                                   ("t500_tenor_lane_control", "verified", "SKIP"),
+                                   ("t500_other_label_control", "verified", "SKIP"),
                                    ("t999_no_such_row_control", "verified", "SKIP"),
                                    ("frontier_row_suffix_control_t109_x", "verified", "QUEUE"),
-                                   ("itm10_t500_tenor_lane_control", "verified", "SKIP"),
+                                   ("ab10_t500_other_label_control", "verified", "SKIP"),
                                    ("frontier_row_suffix_control_t109_x", None, "SKIP")):
             tier, reason = classify(slug, row_head, status)
             ok = tier == want
             fails += (not ok)
             print("  %-5s %-5s %-11s %-50s %s" % ("ok" if ok else "FAIL", tier, status, slug[:50], reason[:40]))
-        print("--- return multiple vs polynomial term: a multiple is trading, x^2 / 2x+1 is algebra")
-        for text, want in (("lam_risk tends to 81.3x the ridge", True), ("rule ON 4.69x/maxDD 10.32pct", True),
-                           ("oversubscribed 3x because", True), ("gives 3.54x (-67.4pct)", True),
-                           ("terminal multiple 6.05x-9.21x (1.52x)", True), ("2x-3x faster", True),
-                           ("together give 13.00x/16.93pct", True), ("13:54Z a 3x-quad", True), ("an 8.3x-OVERSHOOT", True),
-                           ("(3+sqrt21)/6 = 1.26376 (root of 3x^2-3x-1)", False), ("the map 2x+1 on Z", False),
-                           ("coordinates 3x_1 and 2x_2", False), ("at 05:0x and 02:4x-04:2x", False),
-                           ("worst dd 22.1pct", True), ("the DD of the lane", True), ("max dd 9.8", True),
-                           ("block projection breaks it; DD 2604.09909 gives k^-3/4", False),
-                           ("shared factor puts the tail in one direction", False), ("the paper calls it the octave", False),
-                           ("long puts at 50 pct", True), ("the puts are cheap", True), ("a put and a call", True),
-                           ("puts on the book", True), ("calls in the money", True), ("puts", True)):
+        print("--- the deny file: its words deny, the rest passes; no file denies nothing; a broken file stops")
+        for text, want in (("the widget count", True), ("gizmos on the shelf", True), ("a sprocket", True),
+                           ("the map 2x+1 on Z", False), ("(3+sqrt21)/6 = 1.26376 (root of 3x^2-3x-1)", False),
+                           ("the paper calls it the octave", False), ("widgetry", False)):
             hit = bool(HARD_DENY.search(text))
             ok = hit == want
             fails += (not ok)
             print("  %-5s %-5s %s" % ("ok" if ok else "FAIL", "deny" if hit else "pass", text))
+        h0, s0 = load_deny(os.path.join(scratch, "absent.json"))
+        ok = not h0.search("widget") and not s0.search("shelf")
+        fails += (not ok)
+        print("  %-5s no deny file -> both lists match nothing" % ("ok" if ok else "FAIL"))
+        bad_file = os.path.join(scratch, "bad_deny.json")
+        with io.open(bad_file, "w", encoding="utf-8") as f:
+            f.write('{"hard": "(unclosed"}')
+        try:
+            load_deny(bad_file)
+            ok = False
+        except SystemExit:
+            ok = True
+        fails += (not ok)
+        print("  %-5s a deny file that does not compile stops the transport" % ("ok" if ok else "FAIL"))
+        tier, reason = classify("shelf_lemma_selftest", "THEOREM: the shelf lemma holds for every finite graph; proved by "
+                                "induction on the vertices.", "verified")
+        ok = tier != "AUTO"
+        fails += (not ok)
+        print("  %-5s %-5s a soft word keeps a result out of AUTO (%s)" % ("ok" if ok else "FAIL", tier, reason[:40]))
         print("--- end to end on a fresh scratch store (no live store is read or touched)")
         try:
             sys.path.insert(0, BUILD_SRC)
@@ -1338,9 +1357,9 @@ def selftest():
         ok_again, why_again = ingest(slug, store=tmp, rebuild=False)
         print("  second ingest of the same slug -> %s: %s" % (ok_again, str(why_again)[:60]))
         fails += (ok_again is True)
-        # the trading boundary: a strategy's theorem must be refused even when forced
+        # the deny boundary: a theorem worded in the denied domain must be refused even when forced
         ok2, why = ingest(BOOK_SLUG, store=tmp, force=True, rebuild=False)
-        print("  forced ingest of a trading theorem -> %s: %s" % (ok2, str(why)[:80]))
+        print("  forced ingest of a denied-domain theorem -> %s: %s" % (ok2, str(why)[:80]))
         fails += (ok2 is True)
         ok3, why3 = ingest(BRAIN_TEST_SLUG, store=tmp, rebuild=False)
         print("  ingest of a brain-test memory -> %s: %s" % (ok3, str(why3)[:80]))
@@ -1451,6 +1470,7 @@ def selftest():
             HOLD, STORE, LEDGER, QUEUE, STATE = saved
     finally:
         MEM, FRONTIER_ROWS, FRONTIER_ROW_LIST, _ROW_IDS = saved_paths
+        HARD_DENY, SOFT_DENY = saved_deny
         shutil.rmtree(scratch, ignore_errors=True)
     print("SELFTEST %s (%d failures)" % ("PASS" if not fails else "FAIL", fails))
     return 0 if not fails else 1
