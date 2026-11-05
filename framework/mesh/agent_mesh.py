@@ -21,6 +21,7 @@ import contextlib
 import datetime as dt
 import hashlib
 import json
+import ntpath
 import os
 import platform
 import re
@@ -276,25 +277,45 @@ def canonical_resource(raw: str) -> tuple[str, str, str]:
         # Compatibility with the natural aliases agents used in the first live
         # campaign.  Without this, `file:C:\x` becomes a cwd-relative filename
         # containing a colon and can miss the real absolute-path claim.
-        rest = unquote(expanded.split(":", 1)[1])
+        # expanduser above saw "file:~/x", where the ~ is not leading, so it left it alone and the claim landed on
+        # cwd/~/x, guarding nothing (30 Oct, twice in one day). Expand again once the prefix is off.
+        rest = os.path.expandvars(os.path.expanduser(unquote(expanded.split(":", 1)[1])))
         if re.match(r"^/{2,}[A-Za-z]:[\\/]", rest):
             rest = rest.lstrip("/")
         elif re.match(r"^/[A-Za-z]:[\\/]", rest):
             rest = rest[1:]
         expanded = rest
+    elif lower.startswith(("repo:", "github:")):
+        # repo:owner/name/dir and github:owner/name/dir name a GitHub folder, the same thing git: names. Unaliased they
+        # fell through to the path branch and became cwd/repo:..., so they never met another agent's claim (627 repo:
+        # claims by 9 agents, 3 Nov).
+        display = "git:" + display.split(":", 1)[1]
+        expanded = display
     is_logical = expanded.lower().startswith(LOGICAL_PREFIXES)
     if not is_logical:
         # Anything without an explicit logical namespace is a path.  This prevents
         # src/file.py and C:\repo\src\file.py from becoming unrelated claims.
-        absolute = os.path.realpath(os.path.abspath(expanded))
-        if absolute.startswith("\\\\?\\UNC\\"):
+        # Recognize foreign Windows paths before the POSIX host can prefix cwd.
+        # On Windows retain realpath resolution (including junctions).
+        windows_path = bool(re.match(r"^[A-Za-z]:[\\/]", expanded)) or expanded.startswith("\\\\")
+        if os.name != "nt" and windows_path:
+            absolute = expanded
+        else:
+            absolute = os.path.realpath(os.path.abspath(expanded))
+        if absolute.upper().startswith("\\\\?\\UNC\\"):
             absolute = "\\\\" + absolute[8:]
         elif absolute.startswith("\\\\?\\"):
             absolute = absolute[4:]
-        normalized = os.path.normcase(os.path.normpath(absolute)).rstrip("\\/")
+        path_module = ntpath if windows_path or os.name == "nt" else os.path
+        absolute = path_module.normpath(absolute)
+        normalized = path_module.normcase(absolute)
+        if path_module is ntpath:
+            normalized = normalized.rstrip("\\/")
+        else:
+            normalized = normalized.rstrip("/") or "/"
         if re.fullmatch(r"[a-z]:", normalized, re.I):
             normalized += "\\"
-        return "path:" + normalized.replace("/", os.sep), absolute, "path"
+        return "path:" + normalized, absolute, "path"
     logical = re.sub(r"\s+", " ", display).strip().lower().rstrip("/")
     return "key:" + logical, display, "key"
 
@@ -303,8 +324,7 @@ def resources_overlap(a: str, b: str) -> bool:
     if a == b:
         return True
     if a.startswith("path:") and b.startswith("path:"):
-        aa, bb = a[5:].rstrip("\\"), b[5:].rstrip("\\")
-        return aa.startswith(bb + "\\") or bb.startswith(aa + "\\")
+        return resource_covers(a, b) or resource_covers(b, a)
     if a.startswith("key:") and b.startswith("key:"):
         aa, bb = a[4:].rstrip("/"), b[4:].rstrip("/")
         return aa.startswith(bb + "/") or bb.startswith(aa + "/")
@@ -316,7 +336,9 @@ def resource_covers(claim: str, target: str) -> bool:
     if claim == target:
         return True
     if claim.startswith("path:") and target.startswith("path:"):
-        return target[5:].rstrip("\\").startswith(claim[5:].rstrip("\\") + "\\")
+        parent, child = claim[5:], target[5:]
+        separator = "/" if parent.startswith("/") else "\\"
+        return child.startswith(parent.rstrip(separator) + separator)
     if claim.startswith("key:") and target.startswith("key:"):
         return target[4:].rstrip("/").startswith(claim[4:].rstrip("/") + "/")
     return False

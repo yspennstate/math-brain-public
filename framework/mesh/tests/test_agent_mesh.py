@@ -4,6 +4,7 @@ import concurrent.futures
 import datetime as dt
 import importlib.util
 import json
+import os
 import sqlite3
 import subprocess
 import sys
@@ -51,6 +52,18 @@ class MeshTest(unittest.TestCase):
         ).fetchone()[0]
         self.assertEqual(logged, 1)
 
+    def test_native_parent_claim_conflicts_and_covers_child(self):
+        self.hello("a")
+        self.hello("b")
+        parent = str(Path(self.temp.name) / "repo")
+        child = str(Path(parent) / "src" / "x.py")
+        sibling = parent + "-other"
+        self.mesh.claim("a", [parent], "write", "directory", 1800)
+        self.mesh.assert_claim("a", [child])
+        with self.assertRaises(agent_mesh.ConflictError):
+            self.mesh.claim("b", [child], "write", "child", 1800)
+        self.mesh.claim("b", [sibling], "write", "different directory", 1800)
+
     def test_relative_and_absolute_path_are_one_resource(self):
         self.hello("a")
         self.hello("b")
@@ -60,8 +73,36 @@ class MeshTest(unittest.TestCase):
         with self.assertRaises(agent_mesh.ConflictError):
             self.mesh.claim("b", [absolute], "write", "absolute", 1800)
 
+    def test_native_parent_claim_covers_child_but_not_sibling(self):
+        self.hello("a")
+        self.hello("b")
+        parent = str(Path(self.temp.name) / "repo")
+        child = str(Path(parent) / "src" / "x.py")
+        sibling = str(Path(self.temp.name) / "repo-other" / "x.py")
+        self.mesh.claim("a", [parent], "write", "parent", 1800)
+        self.mesh.assert_claim("a", [child])
+        with self.assertRaises(agent_mesh.ConflictError):
+            self.mesh.claim("b", [child], "write", "child", 1800)
+        self.mesh.claim("b", [sibling], "write", "sibling", 1800)
+
+    def test_windows_unc_and_parent_segments_normalize(self):
+        canonical = agent_mesh.canonical_resource
+        self.assertEqual(canonical(r"\\server\share\repo")[0],
+                         canonical(r"\\?\UNC\SERVER\share\x\..\repo")[0])
+        self.assertEqual(canonical(r"C:\Work\Repo")[0],
+                         canonical("c:/work/other/../repo")[0])
+
+    @unittest.skipIf(sys.platform == "win32", "POSIX path semantics")
+    def test_posix_root_and_case_sensitive_resources(self):
+        canonical = lambda value: agent_mesh.canonical_resource(value)[0]
+        self.assertTrue(agent_mesh.resource_covers(canonical("/"), canonical("/repo/file")))
+        self.assertFalse(agent_mesh.resources_overlap(canonical("/Repo"), canonical("/repo/file")))
+        self.assertFalse(agent_mesh.resources_overlap(canonical("/repo"), canonical("/repo-other")))
+
     def test_windows_extended_prefix_and_bare_paths_normalize(self):
         ordinary = agent_mesh.canonical_resource(r"C:\Work\Repo")[0]
+        # Active Windows claims use this stored key; portability must not rename it.
+        self.assertEqual(ordinary, r"path:c:\work\repo")
         extended = agent_mesh.canonical_resource(r"\\?\C:\Work\Repo")[0]
         self.assertEqual(ordinary, extended)
         self.assertEqual(ordinary, agent_mesh.canonical_resource(r"file:C:\Work\Repo")[0])
@@ -69,6 +110,23 @@ class MeshTest(unittest.TestCase):
         self.assertEqual(ordinary, agent_mesh.canonical_resource("file:///C:/Work/Repo")[0])
         self.assertTrue(agent_mesh.canonical_resource("file.txt")[0].startswith("path:"))
         self.assertTrue(agent_mesh.canonical_resource(r"C:file.txt")[0].startswith("path:"))
+
+    def test_repo_prefix_is_the_git_namespace_not_a_cwd_path(self):
+        canonical = lambda value: agent_mesh.canonical_resource(value)[0]
+        self.assertEqual(canonical("repo:Owner/Name/dir"), canonical("git:owner/name/dir"))
+        self.assertEqual(canonical("github:owner/name/dir/"), canonical("git:owner/name/dir"))
+        old = os.getcwd()
+        try:
+            os.chdir(tempfile.gettempdir())
+            elsewhere = canonical("repo:owner/name/dir")
+        finally:
+            os.chdir(old)
+        self.assertEqual(elsewhere, canonical("repo:owner/name/dir"))
+        self.hello("a")
+        self.hello("b")
+        self.mesh.claim("a", ["repo:owner/name/dir"], "write", "push", 1800)
+        with self.assertRaises(agent_mesh.ConflictError):
+            self.mesh.claim("b", ["git:owner/name/dir"], "write", "push", 1800)
 
     def test_glob_claim_syntax_is_rejected_without_partial_acquisition(self):
         self.hello("a")
