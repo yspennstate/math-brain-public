@@ -74,6 +74,11 @@ STORE_PATH = os.environ.get("MATHBRAIN_STORE", "")
 # 500 characters into its statement) was served as an 80-character excerpt plus its Assumes tail, and the solver
 # said UNKNOWN. 320 statement characters minus a 220-character Assumes clause leaves 80; the window cannot reach a
 # value the budget never reaches. Statement budget 320 -> 480 and block 2400 -> 3000 so three fuller cards still fit.
+# SHADOW (MATHBRAIN_SHADOW, default off). The hook computes and prints its block as usual but records nothing that
+# says a card was served: no session repeat guard, no use log, no vouch serve row, no surfaced row, no session math
+# context, and its silence notes go to the harness file. An evaluation arm that hands the block to a receiver which
+# may never read it runs this way, so a receiver that got nothing is not counted as exposed in the serve logs.
+SHADOW = os.environ.get("MATHBRAIN_SHADOW", "0").strip() in ("1", "on", "true")
 MAX_BLOCK_CHARS = int(os.environ.get("MATHBRAIN_MAX_BLOCK_CHARS", "3000"))
 MAX_STATEMENT_CHARS = int(os.environ.get("MATHBRAIN_MAX_STATEMENT_CHARS", "480"))
 TIME_BUDGET_S = float(os.environ.get("MATHBRAIN_TIME_BUDGET_S", "30"))   # was 2.5 until 2026-09-07: under load the
@@ -4323,7 +4328,8 @@ def _main_body(data, out):
     if SESSION_CONTEXT:
         _ctx_sid = str(data.get("session_id") or data.get("thread_id") or "")
         if gate_ok:
-            _remember_math_context(_ctx_sid, prompt)
+            if not SHADOW:
+                _remember_math_context(_ctx_sid, prompt)
         else:
             ctx_used = _session_math_context(_ctx_sid, prompt)
             if ctx_used is not None:
@@ -5170,7 +5176,7 @@ def _main_body(data, out):
             )
         ):
             return                          # the hard ceiling passed while this body ran: nothing was served
-        if emitted_ids:
+        if emitted_ids and not SHADOW:
             _already_injected(sess_for_guard, emitted_ids)
             try:
                 if os.environ.get("MATHBRAIN_USE_LOG", "1") != "0":   # evaluations set 0: test serves are not uses
@@ -5178,7 +5184,7 @@ def _main_body(data, out):
             except Exception:
                 pass
         sess = data.get("session_id") or ""
-        if emitted_ids and re.match(r"^[0-9a-f]{8}-", sess):
+        if emitted_ids and not SHADOW and re.match(r"^[0-9a-f]{8}-", sess):
             try:
                 with io.open(
                     os.path.join(HOME, ".claude", "dreaming", "surfaced.tsv"),
@@ -5217,7 +5223,7 @@ def _silence_note(data, reason, harness_only=False):
     are kept rather than dropped - they are how a failing stage gets debugged - but in their own file."""
     try:
         sess = str((data or {}).get("session_id") or "")
-        real = bool(re.match(r"^[0-9a-f]{8}-", sess))
+        real = bool(re.match(r"^[0-9a-f]{8}-", sess)) and not SHADOW
         if harness_only and real:
             return          # a stage that fires on ordinary traffic: diagnosable in a harness, silent in production
         name = "mathbrain_silence.tsv" if real else "mathbrain_silence_harness.tsv"
