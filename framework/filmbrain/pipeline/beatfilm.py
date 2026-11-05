@@ -21,7 +21,7 @@ import hashlib, json, os, shutil, subprocess, sys, tempfile
 import numpy as np
 import soundfile as sf
 
-CNW = 0x08000000
+CNW = (0x08000000 if os.name == "nt" else 0)
 HERE = os.path.dirname(os.path.abspath(__file__))
 
 

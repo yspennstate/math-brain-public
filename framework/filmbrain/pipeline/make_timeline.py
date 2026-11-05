@@ -20,7 +20,7 @@ plan.json is the richer form:
 import argparse, glob, json, os, subprocess, sys
 import xml.etree.ElementTree as ET
 
-CNW = 0x08000000
+CNW = (0x08000000 if os.name == "nt" else 0)
 
 
 def probe(path):

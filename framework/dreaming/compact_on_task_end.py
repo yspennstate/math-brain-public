@@ -220,7 +220,7 @@ def hook():
         pass
     pyw = os.path.join(os.path.dirname(sys.executable), "pythonw.exe")
     subprocess.Popen([pyw if os.path.exists(pyw) else sys.executable, os.path.abspath(__file__), "--inject", str(pid), path,
-                      sid], creationflags=0x08000000 | 0x00000008 | 0x00000200, stdin=subprocess.DEVNULL,
+                      sid], creationflags=(0x08000000 | 0x00000008 | 0x00000200 if os.name == "nt" else 0), stdin=subprocess.DEVNULL,
                      stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL, close_fds=True)
     log("%s: %s; helper started for claude.exe %d" % (sid[:8], why, pid))
     print("[compact-on-task-end] a task closed at a large context: this session will compact itself once it is idle "

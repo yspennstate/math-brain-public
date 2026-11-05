@@ -64,7 +64,7 @@ def _ensure_private_dir(path: Path) -> None:
             user = os.environ.get("USERNAME")
             if not user:
                 raise RuntimeError("cannot determine current Windows identity for private state ACL")
-            creation_no_window = 0x08000000
+            creation_no_window = (0x08000000 if os.name == "nt" else 0)
             result = subprocess.run(
                 ["icacls.exe", str(path), "/inheritance:r", "/grant:r",
                  "%s:(OI)(CI)F" % user, "SYSTEM:(OI)(CI)F"],

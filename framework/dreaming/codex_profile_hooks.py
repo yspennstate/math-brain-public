@@ -72,8 +72,8 @@ def _state_blocks(text):
 
 def _wanted_blocks(prof):
     main_text = io.open(os.path.join(MAIN, "config.toml"), encoding="utf-8").read()
-    src = os.path.join(MAIN, "hooks.json").replace("/", "\\")
-    dst = os.path.join(prof, "hooks.json").replace("/", "\\")
+    src = os.path.join(MAIN, "hooks.json").replace("/", os.sep)
+    dst = os.path.join(prof, "hooks.json").replace("/", os.sep)
     return [b.replace(src, dst) for b in _state_blocks(main_text)]
 
 

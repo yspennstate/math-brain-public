@@ -341,18 +341,18 @@ def _sample_config() -> dict[str, Any]:
         python + r" -S -B ~\.brain-framework\runtime\project_memory_hot_hook.py"
     )
 
-    dreaming = os.path.expanduser(r"~\.claude\dreaming")
+    dreaming = os.path.expanduser(r"~/.claude/dreaming")
     advisory = {name: python + " -B " + path for name, path in (
         ("proof", dreaming + r"\proof_sense.py"),
         ("math", dreaming + r"\math_sense.py"),
         ("waste", dreaming + r"\waste_sense.py"),
         ("push", dreaming + r"\push_reminder.py"),
-        ("movie", os.path.expanduser(r"~\.claude\movie_sentinel\movie_alert_hook.py")),
+        ("movie", os.path.expanduser(r"~/.claude/movie_sentinel/movie_alert_hook.py")),
         ("prime", dreaming + r"\instinct_prime.py"),
         ("compute", dreaming + r"\compute_sense.py"),
         ("danger", dreaming + r"\danger_mode.py"),
         ("slow", dreaming + r"\slow_sense.py"),
-        ("handoff", os.path.expanduser(r"~\.codex\restart_handoff_hook.py")),
+        ("handoff", os.path.expanduser(r"~/.codex/restart_handoff_hook.py")),
         ("summary", dreaming + r"\summary_hook.py"),
         ("voice", dreaming + r"\voice_guard_hook.py"),
     )}

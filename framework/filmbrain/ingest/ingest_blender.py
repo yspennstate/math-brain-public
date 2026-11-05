@@ -9,7 +9,7 @@ in the Blender on this machine, with its real properties.
 import os
 import json, sys
 
-sys.path.insert(0, os.path.expanduser(r"~/filmbrain"))
+sys.path.insert(0, os.environ.get("FILMBRAIN_ROOT") or os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from fb_store import Store, slug
 
 DUMP = os.path.expanduser(r"~/filmbrain/store/blender_api.json")

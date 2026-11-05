@@ -91,7 +91,7 @@ def _now():
 
 
 def _norm(p):
-    return os.path.normcase(os.path.abspath(p or "")).replace("/", "\\")
+    return os.path.normcase(os.path.abspath(p or "")).replace("/", os.sep)
 
 
 # ---------------------------------------------------------------- writing (the tools call log_use)

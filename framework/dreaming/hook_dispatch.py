@@ -67,7 +67,7 @@ SETTINGS = os.path.expanduser(r"~/.claude/settings.json")
 ENABLED = os.path.expanduser(r"~/.claude/dreaming/HOOK_DISPATCH_ENABLED")
 LOG = os.path.expanduser(r"~/.claude/compute/hook_dispatch.log")
 SELF = os.path.basename(__file__).lower()
-CREATE_NO_WINDOW = 0x08000000
+CREATE_NO_WINDOW = (0x08000000 if os.name == "nt" else 0)
 PER_HOOK_BUDGET_S = 120.0
 
 # THE BUDGET IS PER EVENT, BECAUSE THE EVENTS ARE NOT COMPARABLE (2026-09-18). One flat 120 s governed a

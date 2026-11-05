@@ -15,7 +15,7 @@ from fb_store import Store
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 PY = sys.executable
-CNW = 0x08000000
+CNW = (0x08000000 if os.name == "nt" else 0)
 
 # a natural-language question, and a node id the answer MUST contain.
 # These are phrased the way a person asks, not the way the graph is indexed.

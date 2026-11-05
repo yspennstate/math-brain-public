@@ -14,7 +14,7 @@ code has already lied about this once today.
 import glob, json, os, shutil, subprocess, sys, urllib.request
 
 DL = os.path.expanduser(r"~/filmtools/_msi")
-CNW = 0x08000000
+CNW = (0x08000000 if os.name == "nt" else 0)
 UA = {"User-Agent": "Mozilla/5.0 (Windows NT 10.0; Win64; x64) filmbrain-setup/1.0"}
 
 

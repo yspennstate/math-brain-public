@@ -9,10 +9,10 @@ from a memory of an install log.
 """
 import glob, json, os, subprocess, sys, time
 
-sys.path.insert(0, os.path.expanduser(r"~/filmbrain"))
+sys.path.insert(0, os.environ.get("FILMBRAIN_ROOT") or os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from fb_store import Store
 
-CNW = 0x08000000
+CNW = (0x08000000 if os.name == "nt" else 0)
 PF = r"C:\Program Files"
 PF86 = r"C:\Program Files (x86)"
 LOCAL = os.path.expandvars(r"%LOCALAPPDATA%\Programs")

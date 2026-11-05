@@ -36,5 +36,5 @@ while time.time() < deadline:
 if os.path.exists(CONFIRM):
     log("confirmed at the deadline - the wiring stays"); sys.exit(0)
 r = subprocess.run([sys.executable.replace("pythonw.exe", "python.exe"), "-X", "utf8", os.path.join(HERE, "hook_dispatch_wire.py"), "--off"],
-                   capture_output=True, text=True, creationflags=0x08000000)
+                   capture_output=True, text=True, creationflags=(0x08000000 if os.name == "nt" else 0))
 log("UNCONFIRMED after %.0f min - ran --off: rc=%s %s" % (minutes, r.returncode, (r.stdout or r.stderr or "").strip()[:160]))

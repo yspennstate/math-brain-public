@@ -65,7 +65,7 @@ def main():
         slugs = []
         if tool == "Read":
             fp = (inp.get("file_path", "") or "")
-            fpl = fp.replace("/", "\\").lower()
+            fpl = fp.replace("/", os.sep).lower()
             if MEMDIR not in fpl or not fpl.endswith(".md"):
                 return
             s = os.path.basename(fp)[:-3]

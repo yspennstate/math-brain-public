@@ -35,7 +35,7 @@ def run_lane(script, payload):
         return ""
     try:
         r = subprocess.run([sys.executable, "-s", p], input=json.dumps(payload), capture_output=True, text=True, encoding="utf-8",
-                           errors="replace", timeout=LANE_BUDGET_S, creationflags=0x08000000, env=dict(os.environ, PYTHONUTF8="1"))
+                           errors="replace", timeout=LANE_BUDGET_S, creationflags=(0x08000000 if os.name == "nt" else 0), env=dict(os.environ, PYTHONUTF8="1"))
         out = (r.stdout or "").strip()
         if not out:
             return ""

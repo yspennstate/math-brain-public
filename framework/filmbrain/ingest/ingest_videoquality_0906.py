@@ -17,7 +17,7 @@ Idempotent: add_node updates in place; edges are INSERT OR REPLACE. Nothing is d
 """
 import os, sys, json, glob, re, time, hashlib
 
-sys.path.insert(0, os.path.expanduser(r"~/filmbrain"))
+sys.path.insert(0, os.environ.get("FILMBRAIN_ROOT") or os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 sys.path.insert(0, os.path.expanduser(r"~/videoquality_20260906/tools"))
 from fb_store import Store, slug
 

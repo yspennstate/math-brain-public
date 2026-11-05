@@ -23,7 +23,7 @@ if __name__ == "__main__" and ("-h" in sys.argv[1:] or "--help" in sys.argv[1:])
     print(__doc__ or os.path.basename(__file__))
     raise SystemExit(0)
 
-CNW = 0x08000000
+CNW = (0x08000000 if os.name == "nt" else 0)
 
 # Bump this whenever a visual maker's CODE changes. The cache stamps a beat by
 # its data spec, so without a code version a renderer fix does not invalidate

@@ -294,7 +294,7 @@ def canonical_resource(raw: str) -> tuple[str, str, str]:
         normalized = os.path.normcase(os.path.normpath(absolute)).rstrip("\\/")
         if re.fullmatch(r"[a-z]:", normalized, re.I):
             normalized += "\\"
-        return "path:" + normalized.replace("/", "\\"), absolute, "path"
+        return "path:" + normalized.replace("/", os.sep), absolute, "path"
     logical = re.sub(r"\s+", " ", display).strip().lower().rstrip("/")
     return "key:" + logical, display, "key"
 

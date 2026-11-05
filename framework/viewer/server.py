@@ -122,7 +122,7 @@ def normalize_observed_path(raw: str) -> str | None:
         candidate = candidate.replace("\\\\", "\\")
     if re.match(r"(?i)^/[a-z]/users/", candidate):
         drive = candidate[1].upper()
-        candidate = drive + ":\\" + candidate[3:].replace("/", "\\")
+        candidate = drive + ":\\" + candidate[3:].replace("/", os.sep)
     if not re.match(r"(?i)^[a-z]:\\", candidate):
         return None
     try:

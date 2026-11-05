@@ -52,7 +52,7 @@ def msys_table():
     """{winpid: (msys_pid, msys_ppid)} for every MSYS process, from Git's ps.exe; None when it cannot be read."""
     try:
         r = subprocess.run([MSYS_PS, "-e", "-l"], capture_output=True, text=True, encoding="utf-8", errors="replace",
-                           timeout=60, creationflags=0x08000000)
+                           timeout=60, creationflags=(0x08000000 if os.name == "nt" else 0))
     except (OSError, subprocess.SubprocessError):
         return None
     out = {}
@@ -90,7 +90,7 @@ foreach ($p in $all) {
 
 def census():
     r = subprocess.run(["powershell", "-NoProfile", "-NonInteractive", "-Command", PS], capture_output=True, text=True,
-                       encoding="utf-8", errors="replace", timeout=240, creationflags=0x08000000)
+                       encoding="utf-8", errors="replace", timeout=240, creationflags=(0x08000000 if os.name == "nt" else 0))
     rows = []
     for ln in (r.stdout or "").splitlines():
         parts = ln.split("\t", 5)
@@ -134,7 +134,7 @@ def main():
     for pid, name, age, cmd in victims:
         if a.dry_run:
             continue
-        r = subprocess.run(["taskkill", "/F", "/PID", str(pid)], capture_output=True, text=True, creationflags=0x08000000)
+        r = subprocess.run(["taskkill", "/F", "/PID", str(pid)], capture_output=True, text=True, creationflags=(0x08000000 if os.name == "nt" else 0))
         if r.returncode == 0:
             killed += 1
     try:

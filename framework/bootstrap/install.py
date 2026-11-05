@@ -109,6 +109,76 @@ def expand(text, tok, as_json=False):
     return text
 
 
+def portable_hooks(wiring, python, repo, fold=True):
+    """Make each generated hook command one string this machine can run.
+
+    The template is written for Windows: commands start with a bare "python", the wake ritual
+    goes through powershell, some paths use backslashes, and several entries carry an "args"
+    list beside "command". Claude Code runs the "command" string alone, and on macOS and Linux
+    there is neither a "python" nor a "powershell" on PATH. Measured 5 Nov 2026 on a fresh macOS
+    install into an empty HOME: all 12 hook commands named a program that did not exist, so the
+    brain installed cleanly and then no hook ever fired. Here every entry gets the interpreter
+    the installer ran under (--python), its args folded into the command, forward slashes off
+    Windows, and, off Windows, hooks/wake_brain.py --part N in place of wake_brain.ps1 -Part N.
+
+    fold=False is for dreaming/hook_dispatch_list.json, which the dispatcher reads itself and
+    which keeps "args" as a list: there only the interpreter and the path separators change.
+    The same install had 66 of its 81 dispatched entries pointing at "dreaming\\x.py", a file
+    name that does not exist off Windows, so those hooks never ran either.
+    """
+    if not fold:
+        win = os.name == "nt"
+        n = 0
+        for groups in wiring.values():
+            for g in groups:
+                for h in g.get("hooks", []):
+                    old = json.dumps(h, sort_keys=True)
+                    cmd = h.get("command", "")
+                    if not win:
+                        cmd = cmd.replace(chr(92), "/")
+                        if "args" in h:
+                            h["args"] = [str(x).replace(chr(92), "/") for x in h["args"]]
+                    if cmd in ("python", "python3", "py"):
+                        cmd = python
+                    elif cmd.startswith(("python ", "python3 ")):
+                        cmd = python + cmd[cmd.index(" "):]
+                    h["command"] = cmd
+                    n += json.dumps(h, sort_keys=True) != old
+        return n
+    import shlex
+    import subprocess
+    win = os.name == "nt"
+    wake = os.path.join(repo, "hooks", "wake_brain.py")
+
+    def join(argv):
+        return subprocess.list2cmdline(argv) if win else " ".join(shlex.quote(x) for x in argv)
+
+    n = 0
+    for groups in wiring.get("hooks", {}).values():
+        for g in groups:
+            for h in g.get("hooks", []):
+                cmd = h.get("command", "")
+                args = h.pop("args", None)
+                if args is None:
+                    argv = shlex.split(cmd, posix=not win) if cmd else []
+                else:
+                    argv = [cmd] + [str(x) for x in args]
+                if not argv:
+                    continue
+                if not win:
+                    argv = [x.replace(chr(92), "/") for x in argv]
+                if argv[0] in ("python", "python3", "py"):
+                    argv[0] = python
+                elif argv[0] == "powershell" and not win:
+                    part = argv[argv.index("-Part") + 1] if "-Part" in argv else None
+                    argv = [python, "-s", wake] + (["--part", part] if part else [])
+                new = join(argv)
+                if new != cmd or args is not None:
+                    h["command"] = new
+                    n += 1
+    return n
+
+
 def copy_expand(src, dst, tok, apply_):
     n = 0
     for root, dirs, files in os.walk(src):
@@ -321,6 +391,12 @@ def main():
     if a.apply and not os.path.exists(flag):
         io.open(flag, "w", encoding="utf-8").write("armed by bootstrap/install.py\n")
     print(f"  hook dispatcher flag: {flag}")
+    dlist = os.path.join(dreaming, "hook_dispatch_list.json")
+    if a.apply and os.path.exists(dlist):
+        dl = json.load(io.open(dlist, encoding="utf-8"))
+        nd = portable_hooks(dl, a.python, REPO, fold=False)
+        io.open(dlist, "w", encoding="utf-8", newline="\n").write(json.dumps(dl, indent=2) + "\n")
+        print(f"  dispatched hook entries made runnable here: {nd}")
 
     # The heed and ack gates are live by default and their HEED_ENABLED / ACK_ENABLED files
     # are informational (graph_fire/enforcement.py): deleting one does not turn a gate off. The
@@ -406,6 +482,10 @@ def main():
     hooks_t = os.path.join(REPO, "hooks", "settings.hooks.template.json")
     if os.path.exists(hooks_t):
         t = expand(io.open(hooks_t, encoding="utf-8").read(), tok, as_json=True)
+        wiring = json.loads(t)
+        nfix = portable_hooks(wiring, a.python, REPO)
+        t = json.dumps(wiring, indent=2) + "\n"
+        print(f"  hook commands made runnable here: {nfix} rewritten for {a.python}")
         outp = os.path.join(REPO, "bootstrap", "settings.hooks.generated.json")
         if a.apply:
             io.open(outp, "w", encoding="utf-8", newline="\n").write(t)

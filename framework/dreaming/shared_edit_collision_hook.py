@@ -211,7 +211,7 @@ def selftest():
         r = subprocess.run([sys.executable, hook or os.path.abspath(__file__)],
                            input=json.dumps({"tool_name": tool, "session_id": full or (sid + "0000-aaaa"),
                                              "tool_input": {"file_path": path}}),
-                           capture_output=True, text=True, env=env, creationflags=0x08000000)
+                           capture_output=True, text=True, env=env, creationflags=(0x08000000 if os.name == "nt" else 0))
         return r.stdout.strip()
 
     ok.append(("first edit, nobody else: silent", run("aaaaaaaa", mem, t0) == ""))
@@ -285,7 +285,7 @@ def race_checks(hook, d, mem, expect_fixed=True):
         for sid, path in ((sid_a, path_a), (sid_b, path_b)):
             env = dict(os.environ, SHARED_EDIT_LEDGER=led, SHARED_EDIT_NOW=str(t0), SHARED_EDIT_TEST_PAUSE="0.4")
             procs.append(subprocess.Popen([sys.executable, hook], stdin=subprocess.PIPE, stdout=subprocess.PIPE,
-                                          stderr=subprocess.PIPE, text=True, env=env, creationflags=0x08000000))
+                                          stderr=subprocess.PIPE, text=True, env=env, creationflags=(0x08000000 if os.name == "nt" else 0)))
         for pr, (sid, path) in zip(procs, ((sid_a, path_a), (sid_b, path_b))):
             pr.stdin.write(json.dumps({"tool_name": "Edit", "session_id": sid + "0000-aaaa",
                                        "tool_input": {"file_path": path}}))

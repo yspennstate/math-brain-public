@@ -75,7 +75,7 @@ def show_toast(title, message):
         subprocess.Popen(
             ['powershell', '-Command', ps_cmd],
             stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-            creationflags=subprocess.CREATE_NO_WINDOW,
+            creationflags=(subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0),
         )
     except Exception:
         pass

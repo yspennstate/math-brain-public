@@ -182,7 +182,7 @@ def _shell_tokens(clause):
 
 
 def _basename(token):
-    return token.replace("/", "\\").rsplit("\\", 1)[-1].lower()
+    return token.replace("/", os.sep).rsplit("\\", 1)[-1].lower()
 
 
 def _strip_shell_prefixes(tokens):
@@ -302,7 +302,7 @@ def _script_candidate(script, cwd):
     if not match:
         match = re.match(r"^/mnt/([A-Za-z])/(.*)$", script)
     if match:
-        script = match.group(1) + ":\\" + match.group(2).replace("/", "\\")
+        script = match.group(1) + ":\\" + match.group(2).replace("/", os.sep)
     candidate = script if os.path.isabs(script) else os.path.join(cwd, script)
     return os.path.normcase(os.path.normpath(os.path.abspath(candidate)))
 
@@ -310,7 +310,7 @@ def _script_candidate(script, cwd):
 def _python_invocation_is_gpu(args, cwd):
     if not args:
         return False
-    joined_args = " ".join(args).replace("/", "\\").lower()
+    joined_args = " ".join(args).replace("/", os.sep).lower()
     if (
         EXACT_CRASH_SCRIPT.lower() in joined_args
         or EXACT_CRASH_MODULE in joined_args.replace("\\", ".")
@@ -509,7 +509,7 @@ def _slept_recently(gap_sec):
         out = subprocess.run(
             ["powershell", "-NoProfile", "-NonInteractive", "-Command", ps],
             capture_output=True, text=True, timeout=8,
-            creationflags=0x08000000,  # CREATE_NO_WINDOW - never flash a console
+            creationflags=(0x08000000 if os.name == "nt" else 0),  # CREATE_NO_WINDOW - never flash a console
         )
         return "RESUMED" in (out.stdout or "")
     except Exception:

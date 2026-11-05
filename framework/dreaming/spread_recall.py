@@ -1061,7 +1061,7 @@ def main():
             seeds, lex = _seeds_from_prompt(words, idx, skip_records=True)
         elif ev == "PostToolUse" and data.get("tool_name") == "Read":
             fp = ((data.get("tool_input", {}) or {}).get("file_path", "") or "")
-            if not fp.replace("/", "\\").lower().startswith(MEM.lower()):
+            if not fp.replace("/", os.sep).lower().startswith(MEM.lower()):
                 return
             slug = os.path.basename(fp)[:-3] if fp.endswith(".md") else ""
             if not slug or slug in SKIP:

@@ -100,7 +100,7 @@ def _census_live(timeout=300):
     # Memory: a_seven_fold_median_gap_inside_a_sixty_fold_variance_2026_09_18.
     try:
         r = subprocess.run(["powershell", "-NoProfile", "-NonInteractive", "-Command", PS], capture_output=True, text=True,
-                           encoding="utf-8", errors="replace", timeout=timeout, creationflags=0x08000000)
+                           encoding="utf-8", errors="replace", timeout=timeout, creationflags=(0x08000000 if os.name == "nt" else 0))
     except subprocess.TimeoutExpired:
         return {}
     rows = {}

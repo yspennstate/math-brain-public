@@ -44,7 +44,7 @@ NL = os.path.expanduser(r"~//narration_lab")
 AB_PY = os.path.expanduser(r"~//audiobook//venv//Scripts//python.exe")
 NL_PY = os.path.join(NL, "venv", "Scripts", "python.exe")
 HERE = os.path.dirname(os.path.abspath(__file__))
-CNW = 0x08000000
+CNW = (0x08000000 if os.name == "nt" else 0)
 
 
 def kokoro(voice="bm_lewis", speed=0.90):

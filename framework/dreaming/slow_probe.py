@@ -1,3 +1,4 @@
+import os
 """slow_probe.py - measure the things that make this laptop FEEL slow while CPU/RAM/disk read green.
 
 Writes ~/.claude/compute/slow_state.json every run (a 10-minute scheduled task, windowless), read by
@@ -28,7 +29,7 @@ SCANNED_TREE = r"C:\Windows\WinSxS"
 CONTRACT_CACHE = os.path.expanduser(r"~/.brain-framework/state/project_memory/hot-contract-cache.json")
 EXCLUDED_TREE = os.path.expanduser(r"~/brain-repo")
 SCRATCH = os.path.join(os.environ.get("LOCALAPPDATA", os.path.expanduser(r"~/AppData/Local")), "Temp", "claude")
-CREATE_NO_WINDOW = 0x08000000
+CREATE_NO_WINDOW = (0x08000000 if os.name == "nt" else 0)
 FRAGMENTS = {"sleep.exe", "grep.exe", "sed.exe", "head.exe", "tail.exe", "wc.exe", "find.exe", "cat.exe", "sort.exe", "uniq.exe"}
 
 try:

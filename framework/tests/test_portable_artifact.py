@@ -216,7 +216,7 @@ class TransferTests(unittest.TestCase):
             if os.name != "nt" or not hasattr(Path, "is_junction"):
                 self.skipTest("OS does not permit creating a symlink")
             result = subprocess.run(["cmd.exe", "/d", "/c", "mklink", "/J", str(link), str(self.root)],
-                                    capture_output=True, creationflags=subprocess.CREATE_NO_WINDOW)
+                                    capture_output=True, creationflags=(subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0))
             if result.returncode or not link.is_junction():
                 self.skipTest("OS does not permit creating a symlink or junction")
         self.destination = link / "escape"

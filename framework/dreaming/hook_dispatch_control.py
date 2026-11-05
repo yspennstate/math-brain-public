@@ -26,7 +26,7 @@ if any(a in ("-h", "--help") for a in sys.argv[1:]):
 sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
 import hook_dispatch as HD
 
-CREATE_NO_WINDOW = 0x08000000
+CREATE_NO_WINDOW = (0x08000000 if os.name == "nt" else 0)
 EVENTS = [("PreToolUse", "Bash"), ("PostToolUse", "Bash"), ("UserPromptSubmit", ""), ("PreToolUse", "Edit"),
           # 2026-09-17 09:4x: the Stop chain (14 hooks a turn, two of them gates that block a stop with exit 2) and the
           # PostToolUse Read/Edit arms, so the dispatcher can be wired for those events on the same evidence as the first two

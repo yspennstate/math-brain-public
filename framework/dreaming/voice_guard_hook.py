@@ -78,7 +78,7 @@ EMOJI = re.compile("[\U0001F300-\U0001FAFF\u2600-\u27BF\u2B50\u2705\u274C\u2714\
 
 
 def _is_prose(path):
-    p = path.replace("/", "\\")
+    p = path.replace("/", os.sep)
     low = p.lower()
     if any(s.lower() in low for s in SKIP_DIRS):
         return False

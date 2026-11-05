@@ -8,11 +8,11 @@ and colour properties all become nodes; options hang off their filter.
 """
 import os, re, subprocess, sys
 
-sys.path.insert(0, os.path.expanduser(r"~/filmbrain"))
+sys.path.insert(0, os.environ.get("FILMBRAIN_ROOT") or os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 from fb_store import Store, slug
 
 FF = "ffmpeg"
-CREATE_NO_WINDOW = 0x08000000
+CREATE_NO_WINDOW = (0x08000000 if os.name == "nt" else 0)
 
 
 def run(args):

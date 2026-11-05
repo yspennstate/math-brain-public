@@ -133,7 +133,7 @@ def has_unsafe_path_syntax(path: Path) -> bool:
 
     candidate = Path(path)
     raw = os.fspath(path)
-    windows_text = raw.replace("/", "\\")
+    windows_text = raw.replace("/", os.sep)
     separator = chr(92)
     namespace_prefix = separator * 2
     if windows_text.startswith(

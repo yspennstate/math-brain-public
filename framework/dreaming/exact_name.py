@@ -129,7 +129,7 @@ def _rebuild_in_background():
         import subprocess   # only here: a rebuild is rare, and the hook path should not pay for the module
         subprocess.Popen([exe, os.path.abspath(__file__), "build", "--unlock"], cwd=HERE, close_fds=True,
                          stdin=subprocess.DEVNULL, stdout=subprocess.DEVNULL, stderr=subprocess.DEVNULL,
-                         creationflags=0x08000000 | 0x00000008)   # CREATE_NO_WINDOW | DETACHED_PROCESS
+                         creationflags=(0x08000000 | 0x00000008 if os.name == "nt" else 0))   # CREATE_NO_WINDOW | DETACHED_PROCESS
     except Exception:
         pass
 
