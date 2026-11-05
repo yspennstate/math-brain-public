@@ -9,6 +9,9 @@ print a claim that is no longer in the store, and its output must match the call
 next call. HOME points into the temporary folder, so the prepared states never touch the real cache.
 Needs only the math_brain library and its dependency, cryptography. Takes about 20 seconds.
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import os, shutil, subprocess, sys, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))

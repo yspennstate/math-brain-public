@@ -8,6 +8,9 @@ helper recognised as harness plumbing.
 
     python test_waste_sense_once.py      (under a second; ALL PASS at the end; writes only to a temp folder)
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import base64
 import datetime
 import json

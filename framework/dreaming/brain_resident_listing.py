@@ -257,6 +257,9 @@ def parity(rounds=20, gap=3.0):
 
 
 if __name__ == "__main__":
+    if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+        print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+        raise SystemExit(0)
     if len(sys.argv) > 1 and sys.argv[1] == "parity":
         parity(int(sys.argv[2]) if len(sys.argv) > 2 else 20, float(sys.argv[3]) if len(sys.argv) > 3 else 3.0)
     elif len(sys.argv) > 1 and sys.argv[1] == "burst":

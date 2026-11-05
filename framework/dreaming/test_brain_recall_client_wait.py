@@ -70,6 +70,9 @@ def test_gives_up_at_the_deadline():
 
 
 if __name__ == "__main__":
+    if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+        print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+        raise SystemExit(0)
     n = 0
     for k, f in sorted(globals().items()):
         if k.startswith("test_") and callable(f):

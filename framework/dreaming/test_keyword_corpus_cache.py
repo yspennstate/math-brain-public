@@ -9,6 +9,9 @@ folders; a prompt line with no newline yet, then completed; a rewritten prompt l
 full re-read); a corrupt cache file and a lost cache file (both must reset, never drift). Nothing outside the
 temporary directory is read or written. Takes about a second.
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import io, json, os, re, shutil, sys, tempfile, time
 from collections import Counter
 
