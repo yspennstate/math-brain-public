@@ -3,7 +3,7 @@
 Why: the hook is the slowest one on every prompt (median ~400 ms of ~870 ms on 4 Nov). Almost all of it is reloading
 the same files each prompt: the embedding sidecar and its freshness check, the edge graph, the keyword generation,
 salience, habituation, the memory listing and MEMORY.md. Kept in one process those loads are paid once; on 5 Nov
-(claude-00000006) memoizing them cut the median from 415 ms to 50 ms with the output byte-identical on 8 of 8
+memoizing them cut the median from 415 ms to 50 ms with the output byte-identical on 8 of 8
 prompts (scratch harness memo_spread.py, kept in ~/brain/porting/spread_server/).
 
 The hook itself is unchanged: spread_client.py sends the hook's stdin here and prints the answer; any failure, a
