@@ -3180,6 +3180,26 @@ def _semantic_winner(cos, ids, np_):
 # reads them into _digests, and a row whose digest is not the store's counts as a claim without a vector; loaded vectors
 # with no digests name nobody. A row the file marks as legacy (row_source: no text of its claim reproduces it) counts as
 # a claim without a vector of its current text.
+# A SELECTED CARD THE INTEGRITY READ REFUSES REFUSES THE BLOCK. Dropping a refused card and serving the rest moved the
+# runner-up first under decisions made for the first card (its margin, and the coverage exception granted when both
+# channels agreed on it), and a refused later card changed the set that the block-coverage floor and the generic-only
+# test had judged. So the block is refused whenever any selected card is. math_brain has said "refuse the block" two
+# ways, on_refusal="all" and, in an older form, strict=True; each gets its own keyword, and a package offering neither
+# returns None: the caller serves nothing and notes integrity_api_incompatible, since the block's gates were decided
+# on the whole selection.
+def _refusal_kwargs():
+    try:
+        from math_brain import selection_integrity as _si
+        if "all" in getattr(_si, "ON_REFUSAL", ()):
+            return {"on_refusal": "all"}
+        import inspect
+        if "strict" in inspect.signature(_si.consistent_hits).parameters:
+            return {"strict": True}
+    except Exception:
+        pass
+    return None
+
+
 def _claim_vectors_cover_store(ids, store=None, digests=None, sources=None):
     """(missing, phantom): current claims of the store with no vector (a superseded claim needs none), and vector ids
     that name no node of it. With digests (one per id: the store digest of the text each vector was made from), a row
@@ -4900,9 +4920,13 @@ def _main_body(data, out):
         # Never refill rejected slots or alter ranking/margin thresholds.
         from math_brain.selection_integrity import consistent_hits, SelectionUnavailable
         remaining = TIME_BUDGET_S - (time.time() - started)
+        _rkw = _refusal_kwargs()
+        if _rkw is None:
+            _silence_note(data, "integrity_api_incompatible")
+            return
         try:
             chosen = consistent_hits(chosen, STORE_PATH,
-                                     deadline=time.monotonic() + max(0.0, remaining))
+                                     deadline=time.monotonic() + max(0.0, remaining), **_rkw)
         except SelectionUnavailable as exc:
             # GRACEFUL DEGRADATION (2026-09-12 22:4x). The integrity read RAISES when its clock runs out, and the
             # hook's outer except turned that into SILENCE: under ten max-effort solvers the whole hook slowed
@@ -4922,7 +4946,7 @@ def _main_body(data, out):
             except Exception:
                 _grace = 2.0
             _silence_note(data, "integrity_budget_exhausted:grace_top_card")
-            chosen = consistent_hits(chosen[:1], STORE_PATH, deadline=time.monotonic() + _grace)
+            chosen = consistent_hits(chosen[:1], STORE_PATH, deadline=time.monotonic() + _grace, **_rkw)
         from property_order import order_selected
         _trace_answers('after_consistent', chosen)
         chosen = order_selected(prompt, chosen, pinned_ids)
@@ -5234,8 +5258,11 @@ def cli_query(query):
         if not result.hits:
             return
         from math_brain.selection_integrity import consistent_hits
+        _rkw = _refusal_kwargs()
+        if _rkw is None:
+            return                       # a package whose refusal form is unknown serves nothing here either
         chosen = consistent_hits(_select(result.hits), STORE_PATH,
-                                 deadline=time.monotonic() + TIME_BUDGET_S)
+                                 deadline=time.monotonic() + TIME_BUDGET_S, **_rkw)
         if not chosen:
             return
         chosen = _drop_title_twins(_drop_later_twins(chosen))
