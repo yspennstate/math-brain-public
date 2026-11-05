@@ -162,6 +162,24 @@ def _read_json(path):
         return json.load(fh)
 
 
+def _file_key(st):
+    return (st.st_ino, st.st_size, st.st_mtime_ns)
+
+
+# A prompt parsed the 1.6 MB state.json twice, once to look up the session's mesh agent and again under the lock
+# (~7 ms each). hook_main hands its first parse over: _PRIMED holds (file key, state) and the next load_state takes
+# it, once, when state.json still has that inode, size and mtime. save_state always writes a temp file and replaces,
+# so an unchanged key is an unchanged file.
+_PRIMED = []
+_LAST_KEY = []          # the file key of the newest parse load_state made
+
+
+def _read_state_keyed():
+    with _open_shared(STATE) as fh:
+        key = _file_key(os.fstat(fh.fileno()))
+        return json.load(fh), key
+
+
 def _fallback_state():
     """state.json exists but does not parse. The 23 Oct 11:46 crash left it so; the old code went on with {} and the
     list lost 5,600 entries while the day's ids restarted at 001. Load the newest readable copy instead."""
@@ -180,14 +198,57 @@ def _fallback_state():
     return {}
 
 
-def load_state():
+def _state_looks_whole(path):
+    """True when the file has the shape of a complete JSON object: its first byte is '{' and its last non-blank byte '}'.
+    A read that failed on such a file failed for a passing reason (another writer's replace, memory), not damage.
+    A file that cannot even be opened counts as whole: falling back on it is the one move that loses the list."""
     try:
-        st = _read_json(STATE)
-    except Exception:
-        st = _fallback_state() if os.path.exists(STATE) and os.path.getsize(STATE) > 0 else {}
+        n = os.path.getsize(path)
+        with _open_shared(path, binary=True) as fh:
+            head = fh.read(1)
+            fh.seek(max(0, n - 64))
+            tail = fh.read()
+        return head == b"{" and tail.rstrip().endswith(b"}")
+    except OSError:
+        return True
+
+
+def load_state():
+    # A failed read of an intact file used to load the hourly copy (or a day-old temp) and then SAVE it over the list,
+    # dropping every change since that copy. A failed read of a whole file is now retried, then refused; only a
+    # damaged file falls back.
+    st, last, key = None, None, None
+    if _PRIMED:
+        key, primed = _PRIMED.pop()
+        try:
+            if _file_key(os.stat(STATE)) == key:
+                return primed
+        except OSError:
+            pass
+    for k in range(10):
+        try:
+            if not os.path.exists(STATE):
+                st = {}
+                break
+            if os.path.getsize(STATE) == 0:
+                st = {}
+                break
+            st, key = _read_state_keyed()
+            break
+        except Exception as exc:
+            last = exc
+            if not _state_looks_whole(STATE):
+                log("state.json is damaged (%r); falling back" % (exc,))
+                st = _fallback_state()
+                break
+            time.sleep(0.1 + 0.05 * k)
+    if st is None:
+        log("state.json would not load (%r) though it is whole; refusing, not loading an older copy" % (last,))
+        raise RuntimeError("state.json would not load: %r" % (last,))
     st.setdefault("entries", {})
     st.setdefault("sessions", {})
     st.setdefault("seq", {})
+    _LAST_KEY[:] = [key] if key is not None else []
     return st
 
 
@@ -782,8 +843,11 @@ def hook_main(runtime_arg):
     if "--runtime" not in sys.argv and os.environ.get("CODEX_THREAD_ID"):
         runtime = "codex"
     # the mesh lookup opens a 200 MB sqlite that is often write-locked; do it once per session and remember it
+    _LAST_KEY[:] = []
     st0 = load_state()
     sess0 = st0["sessions"].get(session[:12], {}) if session else {}
+    if _LAST_KEY:
+        _PRIMED[:] = [(_LAST_KEY[0], st0)]      # st0 is only read here; the next load_state may take it whole
     if "mesh_agent" in sess0:
         mesh_agent, mesh_task = sess0.get("mesh_agent"), sess0.get("mesh_task")
     else:
