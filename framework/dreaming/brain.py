@@ -5456,7 +5456,7 @@ def _recall_body(query, n=8):
             _disp = list(_display_rows(scored, n))
             _byslug = {r[4]: r for r in scored}
             _pl_done = set()
-            # q67 (4 Nov): examine a lifted successor too (chains 3c-D -> 3c-F -> generation 9); rows already examined skip.
+            # q67 (4 Nov): examine a lifted successor too (chains A -> B -> C); rows already examined skip.
             _pl_seen = set()
             _pl_hops = int(os.environ.get("BRAIN_RECALL_PART_LIFT_HOPS", "6") or 6)
             _i = 0
