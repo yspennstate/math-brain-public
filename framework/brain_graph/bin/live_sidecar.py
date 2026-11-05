@@ -494,6 +494,10 @@ def refresh_memories():
     # the per-slug deletes below scan content and link whole without these (32 s -> 9 s for ~110 files, 1 Nov)
     db.execute("CREATE INDEX IF NOT EXISTS content_slug ON content(slug)")
     db.execute("CREATE INDEX IF NOT EXISTS link_dst ON link(dst)")
+    # a links-only sidecar (memory_pass alone, no build) has no link_src either, and graph_lane's lazy walk reads
+    # src IN (...) OR dst IN (...): without both indexes every batch scans the whole table (Mac, 5 Nov: 274 batches,
+    # 2.9 s of a 3.2 s recall)
+    db.execute("CREATE INDEX IF NOT EXISTS link_src ON link(src)")
     known = dict(db.execute("SELECT slug, mtime FROM memory"))
     changed = []
     with os.scandir(MEM) as it:
