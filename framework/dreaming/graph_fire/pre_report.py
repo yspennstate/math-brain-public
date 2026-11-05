@@ -175,9 +175,9 @@ _RESULT_WORDS = os.environ.get("BRAIN_RESULT_CONTEXT") or (
 _BOOKCTX = re.compile(r"\b(" + _RESULT_WORDS + r")\b", re.I)
 # the worst drawdown the measured record has actually seen, in percent (BRAIN_LIVED_WORST_DD)
 try:
-    _LIVED_WORST_DD = float(os.environ.get("BRAIN_LIVED_WORST_DD") or 11)
+    _LIVED_WORST_DD = float(os.environ.get("BRAIN_LIVED_WORST_DD") or 25)
 except ValueError:
-    _LIVED_WORST_DD = 11.0
+    _LIVED_WORST_DD = 25.0
 _LOSS_SIGN = re.compile(r"\b(los(e|es|ing|s)\b|negative return|unprofitable|loses? money|in the red|"
                         r"bleeding money|down every (year|month)|lost money (every|each))\b", re.I)
 _DD_CTX = re.compile(r"draw.?down|drop|loss|lose|decline|crash|ruin|wipe|blow.?up|down\b", re.I)
@@ -195,7 +195,7 @@ def stat_sanity(text):
             return []
         tl = t.lower()
         # drawdown: a STRONG drawdown phrase within ~28 chars of a figure at least ~3.6x the worst measured
-        # drawdown (40% against the default 11%): the naive worst-case-scaling error. The tight
+        # drawdown (several times the configured worst): the naive worst-case-scaling error. The tight
         # phrase+proximity+magnitude keeps ordinary '30% of X' analysis prose from tripping it.
         _ddp = r"draw.?down|max.?dd|\bmaxdd\b|drew down|draws? down|drawn down|blow.?up|wiped? out|near.?ruin"
         for m in re.finditer(r"(\d{2,3})(?:\s*(?:to|-)\s*(\d{2,3}))?\s*%", t):

@@ -6,10 +6,10 @@ each reflex's FALSE-ALARM rate on real typical actions (budget ~1.5-2%). Nothing
 measures the other direction - the probability that a reflex STAYS SILENT on a live
 occurrence of its own family, worded the way trouble actually arrives. That miss side
 is exactly the score-error term in the pathwise stability bound the diffusion program
-imported (path-convergence Theorem 11.5 / the Girsanov-KL bound: the deployed
+imported (the Girsanov-KL bound: the deployed
 session's behavior drifts from the guarded ideal by at most a quantity driven by the
 integrated squared score shortfall along the realized prompt path, and zero loss on
-the probe wordings alone controls nothing off them - Proposition 11.6). This script
+the probe wordings alone controls nothing off them - the same bound). This script
 measures that shortfall on the best live corpus we have: the owner's own corrections.
 
 POSITIVES. MISTAKES.md correction bullets that name their reflex(es). The scored text
@@ -268,7 +268,7 @@ def main():
             f.write("calibrate.py; this measures the MISS side on the owner's own corrections\n")
             f.write("(MISTAKES.md situation text, lesson/reflex clauses excluded), scored by the\n")
             f.write("production gfcore token model at the calibrated thresholds. The pathwise\n")
-            f.write("stability bound (path-convergence Theorem 11.5; Girsanov form) makes the\n")
+            f.write("stability bound (Girsanov form) makes the\n")
             f.write("epsilon^2 column the per-event entry of the budget by which unguarded\n")
             f.write("behavior can drift from guarded behavior along a session; the units are\n")
             f.write("calibrated token-score units, so the rates and the ranking carry the\n")

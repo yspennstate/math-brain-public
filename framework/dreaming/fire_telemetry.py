@@ -64,7 +64,7 @@ def _firehose_line():
         trend = "ABOVE" if c24 > 3527 else "at/below"
         return ("## F. Reflex firehose SIZE - is the wall growing? (reader added 07-24)\n\n"
                 "Last 24h: ~%d reflex fires, %s the 07-12 baseline (~3527/day). A rising firehose "
-                "buries the rare load-bearing signal (the heeding wall; DIFFUSION_THEORY 5c, "
+                "buries the rare load-bearing signal (the heeding wall; the diffusion notes, "
                 "reflex_firehose_remeasured_2026_07_24). If it keeps climbing the lever is tightening "
                 "the top over-firers toward their referent (mesh #265), not more detectors. "
                 "Top 24h: %s.\n" % (c24, trend, topstr))

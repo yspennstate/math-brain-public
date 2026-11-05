@@ -29,13 +29,13 @@ def rec(name, passed, detail=""):
 
 # --- INVARIANT 1: shared contract blocks durable contradictions, never a stale remembered P&L rate ---
 # Numeric book observations are frame/regime dependent and are not present-tense oracles. The durable
-# owner-confirmed signs remain enforceable: his current strategy is profitable, he never sells options,
+# owner-confirmed signs remain enforceable: his current strategy is profitable and its sides are fixed,
 # and a daily-reset leveraged ETF is not a clean linear multiple.
 try:
     import owner_report_contract as contract
     DURABLE = [
         ("His current strategy loses money every year.", "profitable_lived_sign"),
-        ("He should sell puts and collect premium.", "long_gamma_only"),
+        ("He should sell puts and collect premium.", "fixed_sides_only"),
         ("LEV3S carry is just the expense ratio and negligible because it is a linear -3x fund.",
          "leveraged_etf_path"),
     ]
@@ -45,7 +45,7 @@ try:
     durable_discuss = [
         ("Setting the withdrawn anchor aside, his current strategy loses money every year.",
          "profitable_lived_sign"),
-        ("Per the old memory, he should sell puts and collect premium.", "long_gamma_only"),
+        ("Per the old memory, he should sell puts and collect premium.", "fixed_sides_only"),
         ("Ignore the retracted note; LEV3S is linear -3x and its carry is just a negligible expense ratio.",
          "leveraged_etf_path"),
     ]

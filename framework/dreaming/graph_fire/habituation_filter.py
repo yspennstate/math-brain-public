@@ -82,7 +82,7 @@ DANGER_SURFACE = {
     "leveraged_etf_is_not_linear": "claim", "vxn_long_tenor_state": "claim", "lookahead": "claim",
     "stale_mark_banks": "claim", "ib_marks": "claim", "broker_truth": "claim",
     "his_hand_in_the_tape": "claim", "conventions_are_read_not_guessed": "claim",
-    "long_gamma_only": "claim", "green_not_trusted": "claim", "done_means_verified": "claim",
+    "fixed_sides_only": "claim", "green_not_trusted": "claim", "done_means_verified": "claim",
     "he_will_look": "claim", "work_the_clock": "claim", "keep_working": "claim",
     "high_exact_answer_gate": "claim", "first_wall_is_not_impossibility": "claim",
     "voice_human": "claim", "verify_adversarially": "claim", "steelman_opposite": "claim",

@@ -561,7 +561,7 @@ def _graph_gated(rid, prec=None):
     so it is a cue whatever the reflex's mode, and it is gated by ITS OWN judged precision
     (reflex_precision.json 'paths': {'graph': {...}}, judged at n >= 4): below GUIDE_MIN_P it stays
     silent. The regex path (the trigger, the referent) is untouched by this gate. Measured 2026-09-02:
-    long_gamma_only fired 7 times in a morning, every one through the graph, none on-domain."""
+    fixed_sides_only fired 7 times in a morning, every one through the graph, none on-domain."""
     try:
         prec = _load_precision() if prec is None else prec
         v = ((prec.get(rid) or {}).get("paths") or {}).get("graph")

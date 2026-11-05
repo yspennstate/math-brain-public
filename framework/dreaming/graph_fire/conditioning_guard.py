@@ -11,7 +11,7 @@ archive-reader processes and announced it with ack-required mesh messages; the d
 sampled logs, process tables, and compute state - but never the mesh inbox - so a SUSPENDED
 process was killed as if WEDGED. No output guard can catch a decision conditioned on stale
 input: the score was evaluated against an incomplete conditioning set, not mis-scored. In the
-path-convergence frame (DIFFUSION_THEORY.md 5a) the CLT says nothing about this because it
+diffusion frame the diffusion notes the CLT says nothing about this because it
 assumes the conditioning is complete. The remedy is a guard keyed to the ACT and its INPUTS,
 not to any output surface.
 

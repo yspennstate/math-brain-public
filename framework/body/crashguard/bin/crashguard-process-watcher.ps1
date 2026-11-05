@@ -68,12 +68,12 @@ function React {
     param($Combos)
     if (-not $Combos -or $Combos.Count -eq 0) { return }
     foreach ($c in $Combos) {
-        if ($c -match '^ollama-vs-League') {
-            CG-Log 'process-watcher' 'warn' "Risk: ollama vs League - suspending ollama"
+        if ($c -match '^ollama-vs-ExampleGame') {
+            CG-Log 'process-watcher' 'warn' "Risk: ollama vs a game - suspending ollama"
             if (-not $DryRun) { Suspend-By-Name 'ollama' }
         }
-        elseif ($c -match '^BattleNet-while-LoL') {
-            CG-Log 'process-watcher' 'warn' "Battle.net while LoL - suspending Battle.net"
+        elseif ($c -match '^BattleNet-while-ExampleGame') {
+            CG-Log 'process-watcher' 'warn' "Battle.net while a game runs - suspending Battle.net"
             if (-not $DryRun) { Suspend-By-Name 'Battle.net' }
         }
         else {

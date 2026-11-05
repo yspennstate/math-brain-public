@@ -7,7 +7,7 @@ the "you said it worked / was set / connected - it wasn't" shape, median margin
 -4.30, the largest KL-form entry (eps^2 16.9). The token channel cannot chase this
 family without blowing its 1.5% false-alarm budget because the family's live wording
 is plain ("no, it did not connect") and situation-specific. The diffusion frame says
-why and what instead: the miss is Proposition 11.6 (training wordings control
+why and what instead: the miss is the same bound (training wordings control
 nothing off themselves), and the guard has to key on the ACT - an outgoing
 completed/effective-state claim without a verifying observation - not on scar
 vocabulary. Existing act machinery: pre_report._DONE (artifact-completion verbs:

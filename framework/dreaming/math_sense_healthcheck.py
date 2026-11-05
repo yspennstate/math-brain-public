@@ -120,7 +120,7 @@ MUST_STAY_SILENT = [
     ("finance words, not mathematics",
      "set the target beta to 0.30 in the release config and check the delta and theta "
      "columns in the weekly report before the roll-out"),
-    # "eta" matches ETA and lit the gate 21 times on a food-delivery assistant prompt.
+    # "eta" matches ETA and lit the gate 21 times on a customer-support assistant prompt.
     ("delivery ETA, not mathematics",
      "tell the customer the eta for the order is twenty minutes and offer a refund option"),
     # ENUMERATION_ANCHORS (2026-09-05) are weak anchors: "enumerate" and "lattice" are everyday

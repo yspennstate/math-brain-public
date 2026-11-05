@@ -1,6 +1,6 @@
 """Light probe: does candidate spread S separate answerable-narrow from vague?
 
-Chapter 9 (path-convergence): committing to a recall carries excess variance over
+From the diffusion analysis: committing to a recall carries excess variance over
 scoring it, equal to the posterior spread of the candidates
     S = sum_i alpha_i |m_i - m_p|^2,   alpha_i the recall weights, m_p the weighted mean.
 b_hat (evidence mass), coherence, and n_eff all measured the SEED side and failed to

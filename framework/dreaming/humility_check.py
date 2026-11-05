@@ -28,7 +28,7 @@ for f in (".danger_fired.json", ".ern_fired.json", ".instinct_fired.json", ".fon
 def run(script, payload):
     if script == "instinct_prime.py":
         # since 2026-09-02 instinct_prime keeps its back-off per session (.instinct_fired/<session>.json), which the
-        # cache clearing above does not reach: a rerun inside the back-off window read the long_gamma smoke case as a
+        # cache clearing above does not reach: a rerun inside the back-off window read the fixed_sides smoke case as a
         # failed fire (2026-09-23). Clear this case's own test-session state first.
         try:
             os.remove(os.path.join(HERE, ".instinct_fired", "%s.json" % payload.get("session_id", "")))

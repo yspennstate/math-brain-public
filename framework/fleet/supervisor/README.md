@@ -33,7 +33,7 @@ Safety properties:
 - completion is accepted only after the new rollout suffix contains a matching
   final-answer / task-complete pair and the footer passes the shared durable
   owner-report contract. Tool chatter, an old final, malformed/truncated output,
-  a stale financial oracle, or a sign/long-gamma/leveraged-ETF contradiction
+  a stale financial oracle, or a sign/fixed-sides/leveraged-ETF contradiction
   queues a bounded corrective continuation instead of becoming â€œcompleteâ€;
 - controller state stores only reason codes, warning IDs, turn/generation IDs,
   timestamps, and a final hashâ€”never the worker's answer prose;

@@ -388,8 +388,6 @@ The brain has strata. Newest and authoritative first.
 ## Cognitive architecture (how the brain becomes a mind)
 - `../../12_cognitive_architecture/COGNITIVE_ARCHITECTURE.md` — identity, relationship,
   voice, creativity, continuity, and the auto-consult startup loop
-- [DIFFUSION_THEORY.md](DIFFUSION_THEORY.md) — the mathematical foundations: recall,
-  salience, dreaming, reflexes, and mistake leakage as diffusion processes
 - Live memories: identity_who_you_are, relationship_our_work_together,
   method_write_like_a_human, method_think_creatively, startup_consult_the_brain
 

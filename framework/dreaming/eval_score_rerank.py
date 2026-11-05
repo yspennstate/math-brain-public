@@ -3,8 +3,7 @@
 than the seed-centroid cosine in brain.recall?
 
 THE QUESTION. brain._semantic_scores ranks every embedded memory by cosine to the
-UNWEIGHTED MEAN of the seed vectors. In the path-convergence model (the paper this
-program builds on) the seed-centroid readout is the tau->infty / population limit of
+UNWEIGHTED MEAN of the seed vectors. In the diffusion-kernel model the seed-centroid readout is the tau->infty / population limit of
 the exact finite-temperature object: on unit vectors the Gaussian pattern weight
 exp(-|x-y|^2/2tau) equals exp(cos(x,y)/tau) up to a constant, so the principled score
 of a candidate m against seeds s_1..s_k with strengths p_nu is the weighted
@@ -52,7 +51,7 @@ temperature - the optimum is regime-dependent and choosing one here would be
 argmax-on-noise (roll_cadence_argmax_is_noise). Iteration 2: two-stage annealed
 readout (sharp head, warm tail) against a regime-separating ground truth; the
 two-regime inversion above is the paper's annealing structure appearing in live
-retrieval data. Program doc: brain/DIFFUSION_THEORY.md section 7; memory node
+retrieval data. Program doc: the diffusion notes; memory node
 diffusion_foundations_program_2026_07_23.
 
 VERDICT 2, iteration 2 (2026-07-23 evening, run 3; 6,171 component queries, 2,310

@@ -35,7 +35,7 @@ $services = @(
     @{ name='gpu-watch';          script='crashguard-gpu-watch.ps1' }
     @{ name='gpu-trend-predictor'; script='crashguard-gpu-trend-predictor.ps1' }
     @{ name='gpu-keepalive';      script='crashguard-gpu-keepalive.py'; exe='pythonw' }
-    @{ name='league-mode';        script='crashguard-league-mode.ps1' }
+    @{ name='game-mode';          script='crashguard-game-mode.ps1' }
 )
 
 foreach ($svc in $services) {

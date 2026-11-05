@@ -1,5 +1,5 @@
 # Unit test: per-process criticality classification.
-# Confirms League, Claude, observers, ollama all match expected criticality.
+# Confirms games, Claude, observers, ollama all match expected criticality.
 
 . "$env:USERPROFILE\CrashGuard\bin\crashguard-common.ps1"
 
@@ -7,14 +7,10 @@ $policies = CG-LoadJson (Join-Path $CG_CONFIGS 'policies.json')
 
 $cases = @(
     @{ name='ExampleGame';                  expected='critical' }
-    @{ name='LeagueClient';                 expected='critical' }
-    @{ name='RiotClientServices';           expected='critical' }
     @{ name='dwm';                          expected='critical' }
     @{ name='csrss';                        expected='critical' }
     @{ name='nvcontainer';                  expected='critical' }
     @{ name='claude';                       expected='high' }
-    @{ name='IBGateway';                    expected='high' }
-    @{ name='TWS';                          expected='high' }
     @{ name='observer_drilldown';           expected='medium' }
     @{ name='inspector_finding';            expected='medium' }
     @{ name='codex';                        expected='medium' }

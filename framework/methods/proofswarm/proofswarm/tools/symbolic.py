@@ -99,7 +99,7 @@ def check_claim(claim: str, context: str = "") -> SymbolicCheck:
 if __name__ == "__main__":
     import sys
     sys.stdout.reconfigure(encoding="utf-8", errors="replace")  # type: ignore
-    # Quick examples relevant to the Shmalo paper
+    # Quick examples from a diffusion-models paper
     cases = [
         ("5*alpha/4 + 4*theta == 29*alpha/20", "given theta = alpha/20"),
         ("(m-1)*4*r < 4*m*r", ""),

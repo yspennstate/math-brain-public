@@ -1648,7 +1648,7 @@ def _semantic_scores(seeds, diag=None):
     {} if no sidecar/seeds.
 
     diag, if a dict is passed, is filled with the readout's own evidence-mass numbers (2026-07-23,
-    diffusion iteration 5). Chapter 7 of the path-convergence paper gives the exact finite-p
+    diffusion iteration 5). a finite-sample ratio decomposition gives the exact finite-p
     identity m_p - m_inf = n_hat / B_hat: ALL retrieval error is a centered fluctuation divided by
     the empirical evidence-mass denominator. The implementation's B_hat for a query is
         B_hat = (sum of live seed strengths) * ||strength-weighted mean of the unit seed vectors||
@@ -1701,8 +1701,8 @@ def _semantic_scores(seeds, diag=None):
         # Strength-weighted centroid (2026-07-23). The unweighted mean collapses the seed
         # set to equal votes; seed sets run to hundreds of slugs on ordinary queries, so a
         # strong lexical/bm25 seed drowns in weak ones. Keeping the seed strengths as
-        # evidence weights is the equal-weight -> weighted step of the path-convergence
-        # readout (brain/DIFFUSION_THEORY.md section 7) and measured better on BOTH
+        # evidence weights is the equal-weight -> weighted step of the diffusion
+        # readout the diffusion notes and measured better on BOTH
         # regimes of the wiki-link ground truth (eval_score_rerank 5-fold: component MRR
         # .0463->.0693 all pairs, .0111->.0163 hard subset, positive every fold; full
         # pipeline unchanged; positive controls green). BRAIN_SEM_CENTROID=1 restores
@@ -3910,7 +3910,7 @@ def _index_row_text(desc, budget):
 
     MEMORY.md is the one brain surface every agent loads whether it recalls or not, and a row is the slug written twice
     plus about 46 characters of description. Since 2026-09-22 descriptions open with the question they answer ("Is the
-    Caltech DGX up, and can we get in? Up since ..."), so 32 of 81 rows showed the question and lost the answer to the
+    GPU box up, and can we get in? Up since ..."), so 32 of 81 rows showed the question and lost the answer to the
     line cap. The slug already names the topic, so a description that opens with a question is indexed by its answer;
     the file's frontmatter keeps the question, which is what recall matches. Leading [STATUS] tags are dropped because
     the row adds its own (14 of 81 rows carried two). BRAIN_INDEX_ANSWER_FIRST=0 restores the plain prefix.

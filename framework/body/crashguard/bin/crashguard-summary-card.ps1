@@ -11,7 +11,7 @@ $minSinceWhea = if ($lastWhea) { [int]($now - $lastWhea.TimeCreated).TotalMinute
 $tests = [int](Get-Content "$env:USERPROFILE\CrashGuard\state\test-counter.txt" -ErrorAction SilentlyContinue)
 $ticks = [int](Get-Content "$env:USERPROFILE\CrashGuard\state\tick-counter.txt" -ErrorAction SilentlyContinue)
 
-$services = @('sentinel','watchdog','process-watcher','export','driver-health','pcie-watch','ring-recorder','dedup-watcher','power-watch','crisis-correlator','power-guard','wudfrd-watch','hid-watch','update-watcher','sleep-defender','self-heal','log-rotate','trend-analyzer','recovery','pulse','watchdog2','html-publisher','archive','singleton-enforcer','export-prometheus','gpu-watch','gpu-trend-predictor','league-mode')
+$services = @('sentinel','watchdog','process-watcher','export','driver-health','pcie-watch','ring-recorder','dedup-watcher','power-watch','crisis-correlator','power-guard','wudfrd-watch','hid-watch','update-watcher','sleep-defender','self-heal','log-rotate','trend-analyzer','recovery','pulse','watchdog2','html-publisher','archive','singleton-enforcer','export-prometheus','gpu-watch','gpu-trend-predictor','game-mode')
 $alive = 0
 foreach ($s in $services) {
     $hb = Get-Content "$env:USERPROFILE\CrashGuard\state\$s.heartbeat" -ErrorAction SilentlyContinue | ConvertFrom-Json

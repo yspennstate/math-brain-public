@@ -101,7 +101,7 @@ NODES = [
      ["failure", "blender", "measurement"]),
 
     ("machine.blender_speed", "Blender speed must be measured for this scene and machine",
-     "No local throughput is asserted here. Historical MATH-ROSS20 probes on 2026-09-16 measured "
+     "No local throughput is asserted here. Historical probes on a research machine on 2026-09-16 measured "
      "EEVEE 1080p diagram boards at 0.35-0.46 s/frame (Standard view, taa4, JPEG, no compositor). "
      "The same memo's 0.75 s/frame Cycles OptiX result was explicitly corrected on 09-17: a "
      "160x160-subdivided surface at 16 samples cost 26.5 s/frame versus EEVEE's 0.40. Scene and "

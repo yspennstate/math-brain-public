@@ -31,7 +31,7 @@ MENTION = [
     "Do not report the pipeline as $123k per year - that undershoots the lived ~$1.5M-per-year ledger.",
     "The pre-report guard blocks a sentence like 'the pipeline earns $123k per year' because it fights the ledger.",
     "That old memory saying the pipeline loses money every year is wrong and has been superseded.",
-    "The owner never sells options, so any 'sell puts to collect premium' recommendation is the error to avoid.",
+    "The owner has ruled that side out, so any 'sell puts to collect premium' recommendation is the error to avoid.",
 ]
 
 def run(label, arr, want_block):

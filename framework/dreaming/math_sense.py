@@ -332,7 +332,7 @@ EXTRA_ANCHORS = re.compile(
 #                         non-mathematical traffic; the new fires were loop ticks and sleep instructions
 #   minus those eight      +0.25pp, 70 new fires - still bad, and for a reason no
 #                         hand-written negative would produce: "eta" matches ETA, so a
-#                         food-delivery assistant prompt lit the gate 21 times. "nu" and
+#                         customer-support assistant prompt lit the gate 21 times. "nu" and
 #                         "xi" fired on non-ASCII table text rather than on mathematics.
 #   this set              +0.078pp, 22 new fires, ALL of them mathematical - his own
 #                         math-brain loop prompts, an RMT bibliography check, an RMT

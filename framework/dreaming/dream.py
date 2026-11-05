@@ -469,7 +469,7 @@ if unconscious:
 else:
     replay = random.sample(old, min(8, len(old))) + random.sample(orphans, min(5, len(orphans)))
 
-# ---- 5b. transition-band age replay (OFF by default; set BRAIN_REPLAY_BAND=1 to A/B - DIFFUSION_THEORY
+# ---- 5b. transition-band age replay (OFF by default; set BRAIN_REPLAY_BAND=1 to A/B - the diffusion notes
 # section 8.2). The draw above is age-agnostic (concern-overlap) or uniform-over-old; neither replays the
 # episodic->semantic CONSOLIDATION BOUNDARY. This adds up to 3 mid-age picks weighted by a log-Gaussian
 # band centred ~5d (center/width are the A/B knobs, illustrative), COMPLEMENTING not replacing the draw
