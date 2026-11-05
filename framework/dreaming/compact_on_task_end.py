@@ -364,7 +364,7 @@ def selftest():
         content = [{"type": "text", "text": "Done." + (" (This was your 21:40 ask: build it.)" if end_line else "")}]
         if done:
             content.append({"type": "tool_use", "name": "Bash",
-                            "input": {"command": "python checklist.py done T-20261009-128 \"ok\""}})
+                            "input": {"command": "python checklist.py done T-20990101-128 \"ok\""}})
         recs.append({"type": "assistant", "message": {"content": content, "stop_reason": "end_turn",
                                                        "usage": {"input_tokens": 10, "cache_read_input_tokens": tokens}}})
         return recs
@@ -375,7 +375,7 @@ def selftest():
     later = turn() + [{"type": "user", "message": {"content": "new ask"}}]    # a later prompt opens a new turn
     ok &= decide(later, "s", state={})[0] is False
     written = turn() ; written[1]["message"]["content"] = [{"type": "tool_use", "name": "Write",
-                       "input": {"content": "python checklist.py done T-20261009-128"}}]
+                       "input": {"content": "python checklist.py done T-20990101-128"}}]
     ok &= decide(written, "s", state={})[0] is False                         # a file's text is not a closed task
     queued = turn() + [{"type": "attachment", "attachment": {"type": "queued_command", "prompt": "next ask"}}]
     ok &= decide(queued, "s", state={})[0] is False                          # a queued prompt opens a new turn
