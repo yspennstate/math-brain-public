@@ -31,7 +31,7 @@ two review rounds were given. They refer to the inbox and to the bundle spec, wh
 
 | script | what it does |
 |---|---|
-| `export_store.py` | Writes the store as sorted JSONL, one file per table, into `export/population/`, so a diff between two exports is a diff between two states of the store. `--check` exits 1 when the export is stale. |
+| `export_store.py` | Writes the store as sorted JSONL, one file per table, into `export/population/`, so a diff between two exports is a diff between two states of the store. A table over 40 MB continues in `<table>.part01.jsonl`, `<table>.part02.jsonl` and so on, cut at line boundaries; read in that order the files give the table, and `MANIFEST.json` lists them under `parts`. `--check` exits 1 when the export is stale. |
 | `import_store.py` | Rebuilds a store from that export, never over the live one. `--roundtrip` rebuilds to a temporary database and re-exports it; the digests must match. |
 
 ## For the public repository

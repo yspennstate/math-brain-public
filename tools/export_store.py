@@ -140,6 +140,41 @@ def detokenise(value, spellings: list[tuple[str, str]]):
     return value
 
 
+# GitHub refuses a file over 100 MB and warns above 50 MB, so a table whose text passes PART_BYTES
+# is written as <table>.jsonl followed by <table>.part01.jsonl, <table>.part02.jsonl, ... Each file
+# holds whole lines and the files read in that order give the table's text, so counts and digests
+# in MANIFEST.json are those of the whole table whatever the split.
+PART_BYTES = 40_000_000
+
+
+def split_parts(table: str, text: str, limit: int = PART_BYTES) -> dict[str, str]:
+    """Return {file name: text} for one table, cut at line boundaries."""
+    data = text.encode("utf-8")
+    if len(data) <= limit:
+        return {f"{table}.jsonl": text}
+    files, start, n = {}, 0, 0
+    while start < len(data):
+        end = len(data) if len(data) - start <= limit else data.rfind(b"\n", start, start + limit) + 1
+        if end <= start:  # a single line longer than the limit: keep it whole
+            end = data.index(b"\n", start) + 1
+        name = f"{table}.jsonl" if n == 0 else f"{table}.part{n:02d}.jsonl"
+        files[name] = data[start:end].decode("utf-8")
+        start, n = end, n + 1
+    return files
+
+
+def table_files(table: str, out: Path = OUT) -> list[Path]:
+    """The files that hold one table, in reading order (the part files sorted by number)."""
+    parts = sorted(out.glob(f"{table}.part[0-9][0-9].jsonl"))
+    base = out / f"{table}.jsonl"
+    return ([base] if base.exists() else []) + parts
+
+
+def read_table(table: str, out: Path = OUT) -> str:
+    """The table's whole export text, its part files joined in order."""
+    return "".join(p.read_text(encoding="utf-8") for p in table_files(table, out))
+
+
 def dump_table(conn: sqlite3.Connection, table: str, keys: tuple[str, ...],
                spellings: list[tuple[str, str]] | None = None) -> str:
     """Return the JSONL text for one table, deterministically ordered.
@@ -214,11 +249,17 @@ def main() -> int:
     }
     manifest_text = json.dumps(manifest, indent=2, sort_keys=True) + "\n"
 
+    files = {t: split_parts(t, text) for t, text in texts.items()}
+    parts = {t: list(f) for t, f in sorted(files.items()) if len(f) > 1}
+    if parts:
+        manifest["parts"] = parts
+    manifest_text = json.dumps(manifest, indent=2, sort_keys=True) + "\n"
+
     if args.check:
         stale = []
-        for table, text in texts.items():
-            path = OUT / f"{table}.jsonl"
-            if not path.exists() or path.read_text(encoding="utf-8") != text:
+        for table, want in files.items():
+            have = {p.name: p.read_text(encoding="utf-8") for p in table_files(table)}
+            if have != want:
                 stale.append(table)
         if (OUT / "MANIFEST.json").exists():
             if (OUT / "MANIFEST.json").read_text(encoding="utf-8") != manifest_text:
@@ -232,8 +273,12 @@ def main() -> int:
         return 0
 
     OUT.mkdir(parents=True, exist_ok=True)
-    for table, text in texts.items():
-        (OUT / f"{table}.jsonl").write_text(text, encoding="utf-8", newline="\n")
+    for table, want in files.items():
+        for old in table_files(table):
+            if old.name not in want:
+                old.unlink()  # a part left from a larger export would be read as rows
+        for name, text in want.items():
+            (OUT / name).write_text(text, encoding="utf-8", newline="\n")
     (OUT / "MANIFEST.json").write_text(manifest_text, encoding="utf-8", newline="\n")
     print(f"wrote {sum(counts.values())} rows across {len(counts)} tables to {OUT}")
     for table in sorted(counts):

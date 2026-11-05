@@ -37,6 +37,8 @@ from export_store import (  # noqa: E402
     dump_table,
     home_spellings,
     private_names,
+    read_table,
+    table_files,
 )
 
 # Insert order respects the foreign keys declared in the schema.
@@ -69,14 +71,14 @@ def read_export(home: str | None = None, private: dict[str, str] | None = None) 
             f"ORDER and export_store.TABLES disagree: only in TABLES {sorted(set(TABLES) - set(ORDER))}, "
             f"only in ORDER {sorted(set(ORDER) - set(TABLES))}"
         )
-    missing = [t for t in TABLES if not (OUT / f"{t}.jsonl").exists()]
+    missing = [t for t in TABLES if not table_files(t)]
     if missing:
         raise SystemExit(f"export incomplete - missing {missing}; run export_store.py")
     spellings = home_spellings(home, private)
     rows = {}
     left = 0
     for table in TABLES:
-        text = (OUT / f"{table}.jsonl").read_text(encoding="utf-8")
+        text = read_table(table)
         rows[table] = [
             {k: detokenise(v, spellings) for k, v in json.loads(line).items()}
             for line in text.splitlines()
@@ -202,7 +204,7 @@ def roundtrip() -> int:
     # per table: a file that is not the live store's current export (stale, or edited) cannot
     # be compared with the live store, and is named rather than passed over
     stale = sorted(
-        t for t, text in live_texts.items() if (OUT / f"{t}.jsonl").read_text(encoding="utf-8") != text
+        t for t, text in live_texts.items() if read_table(t) != text
     )
     live_nodes_bad, live_manifests_bad = digest_failures(STORE)
     with tempfile.TemporaryDirectory() as tmp:
@@ -216,7 +218,7 @@ def roundtrip() -> int:
             bad, raw_bad = [], []
             for table, keys in sorted(TABLES.items()):
                 got = dump_table(conn, table, keys, spellings)
-                want = (OUT / f"{table}.jsonl").read_text(encoding="utf-8")
+                want = read_table(table)
                 if got != want:
                     bad.append(table)
                 if table not in stale and dump_table(conn, table, keys) != dump_table(live, table, keys):

@@ -15,6 +15,7 @@ import tempfile
 ROOT = Path(__file__).resolve().parents[3]
 sys.path[:0] = [str(ROOT / 'src'), str(ROOT / 'tools')]
 from import_store import read_export, build_db, digest_failures
+from export_store import table_files
 from math_brain.models import GraphEdge, EdgeKind, content_hash
 
 
@@ -24,12 +25,20 @@ def check():
     errors = []
     counts = {}
     for table, expected in manifest['counts'].items():
-        data = (export / f'{table}.jsonl').read_bytes()
+        files = table_files(table, export)
+        data = b''.join(p.read_bytes() for p in files)
+        listed = [f'{table}.jsonl'] + [p for p in manifest.get('parts', {}).get(table, []) if p != f'{table}.jsonl']
+        if [p.name for p in files] != listed:
+            errors.append({'table': table, 'check': 'part_files'})
         counts[table] = len(data.splitlines())
         if counts[table] != expected:
             errors.append({'table': table, 'check': 'row_count'})
         if hashlib.sha256(data).hexdigest() != manifest['digests'][table]:
             errors.append({'table': table, 'check': 'file_sha256'})
+    if errors:
+        # a file that does not match the manifest is not restored: its rows may not even parse
+        print(json.dumps({'passed': False, 'counts': counts, 'manifest_errors': errors}, indent=2, sort_keys=True))
+        return 1
     with tempfile.TemporaryDirectory() as tmp:
         db = Path(tmp) / 'restored.sqlite3'
         build_db(db, read_export())
