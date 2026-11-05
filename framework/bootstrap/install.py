@@ -138,6 +138,13 @@ def portable_hooks(wiring, python, repo, fold=True):
                         cmd = cmd.replace(chr(92), "/")
                         if "args" in h:
                             h["args"] = [str(x).replace(chr(92), "/") for x in h["args"]]
+                        # The dispatched SessionStart list names wake_brain.ps1 too, and there is no powershell
+                        # here: without this the dispatcher's wake ritual never ran on a Mac or Linux install.
+                        if cmd == "powershell" and any(str(x).endswith("wake_brain.ps1") for x in h.get("args", [])):
+                            av = [str(x) for x in h["args"]]
+                            part = av[av.index("-Part") + 1] if "-Part" in av else None
+                            cmd = python
+                            h["args"] = ["-s", os.path.join(repo, "hooks", "wake_brain.py")] + (["--part", part] if part else [])
                     if cmd in ("python", "python3", "py"):
                         cmd = python
                     elif cmd.startswith(("python ", "python3 ")):
@@ -471,8 +478,15 @@ def main():
         seeds = os.path.join(REPO, "bootstrap", "templates", "seed_memories")
         written = []
         if os.path.isdir(seeds):
+            have_names = set(os.listdir(mem))
             for f in sorted(os.listdir(seeds)):
                 p = os.path.join(mem, f)
+                # a corpus ported from another machine already holds the authored seed under a dated name
+                # (identity_who_you_are_2026_07_07.md); the blank template beside it outranked the real memory
+                # in recall, so it is only written when no authored version exists
+                stem = f[:-3] if f.endswith(".md") else f
+                if any(n.startswith(stem + "_") and n.endswith(".md") for n in have_names):
+                    continue
                 if not os.path.exists(p):
                     t = io.open(os.path.join(seeds, f), encoding="utf-8").read()
                     io.open(p, "w", encoding="utf-8", newline="\n").write(expand(t, tok))
