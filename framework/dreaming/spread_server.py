@@ -34,9 +34,14 @@ ENDPOINT = os.path.join(STATE_DIR, "endpoint.json")
 LOG = os.path.join(STATE_DIR, "server.log")
 WARM_KEYS = os.path.join(STATE_DIR, "warm_keys.json")   # the last server's loader calls, for a warm start
 CALL_LOG = os.path.join(STATE_DIR, "calls.jsonl")   # one line a call: session prefix, served or why not, ms
-STATE_TTL = float(os.environ.get("SPREAD_SERVER_TTL", "120"))
+# Laptop port (5 Nov): the laptop's loaders cost seconds, not the Mac's ~0.4 s, so a refill of every
+# entry each 72 s would keep a core busy for nothing; here the TTL is 300 s (a dependency's stat change still refills
+# at once). An in-place edit to one memory file, which moves no watched stat, is seen within 5 minutes.
+STATE_TTL = float(os.environ.get("SPREAD_SERVER_TTL", "300" if os.name == "nt" else "120"))
 IDLE_EXIT = float(os.environ.get("SPREAD_SERVER_IDLE_EXIT", "7200"))
 RSS_CAP = int(float(os.environ.get("SPREAD_SERVER_RSS_CAP_GB", "1.5")) * 1024 ** 3)
+SERVE_STALE = os.environ.get("SPREAD_SERVER_STALE", "1" if os.name == "nt" else "0") == "1"
+RESTAT_AGE = float(os.environ.get("SPREAD_SERVER_RESTAT_AGE", "120"))
 ENV_PREFIXES = ("BRAIN_", "SPREAD_", "MATHBRAIN_", "FOK_")
 # Hooks this process may run. fok_probe, 5 Nov: the first A/B timed the served arm in-process against a cold process
 # and read 68 vs ~85 ms; timed both as a hook runs (a fresh process each, ab_fok2.py) it is 86 vs 134 ms, 30 of 30
@@ -58,6 +63,28 @@ def env_subset(env):
 
 
 def rss_bytes():
+    if os.name == "nt":   # laptop port (5 Nov): the working set, from GetProcessMemoryInfo
+        try:
+            import ctypes
+            from ctypes import wintypes
+
+            class PMC(ctypes.Structure):
+                _fields_ = [("cb", wintypes.DWORD), ("PageFaultCount", wintypes.DWORD),
+                            ("PeakWorkingSetSize", ctypes.c_size_t), ("WorkingSetSize", ctypes.c_size_t),
+                            ("QuotaPeakPagedPoolUsage", ctypes.c_size_t), ("QuotaPagedPoolUsage", ctypes.c_size_t),
+                            ("QuotaPeakNonPagedPoolUsage", ctypes.c_size_t), ("QuotaNonPagedPoolUsage", ctypes.c_size_t),
+                            ("PagefileUsage", ctypes.c_size_t), ("PeakPagefileUsage", ctypes.c_size_t)]
+            c = PMC()
+            c.cb = ctypes.sizeof(PMC)
+            k = ctypes.WinDLL("kernel32")
+            k.GetCurrentProcess.restype = wintypes.HANDLE
+            psapi = ctypes.WinDLL("psapi")
+            psapi.GetProcessMemoryInfo.argtypes = [wintypes.HANDLE, ctypes.c_void_p, wintypes.DWORD]
+            if psapi.GetProcessMemoryInfo(k.GetCurrentProcess(), ctypes.byref(c), c.cb):
+                return int(c.WorkingSetSize)
+        except Exception:
+            pass
+        return 0
     try:
         import resource
         r = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
@@ -152,6 +179,14 @@ class Warm:
                 now = time.time()
                 if hit is not None and hit[0] == sig and now - hit[1] < STATE_TTL:
                     return hit[2]
+                # Serve the held value while the refresher reloads it off the lock (laptop, 5 Nov 19:1x): a memory
+                # written anywhere moves the memory folder's stat, and the caller that met it paid the graph reload
+                # itself (5-15 s here; 55 of 170 s of caller time 18:49-19:02). Only the serving thread gets the held
+                # value; the refresher (main thread) reloads, so _hook_graph's inner _load_graph is never stale to it.
+                if (SERVE_STALE and hit is not None and now - hit[1] < STATE_TTL
+                        and threading.current_thread() is not threading.main_thread()):
+                    self.misses.append("%s:stale:0" % _name)
+                    return hit[2]
                 t0 = time.perf_counter()
                 val = _f(*a, **k)
                 self.memo[key] = (sig, now, val, _f, a, k, _deps)
@@ -216,6 +251,11 @@ class Warm:
             # folder's stat), so that reload is paid here and not by the next prompt
             if now - t < STATE_TTL * 0.6 and tuple(st3(p) for p in deps) == sig:
                 continue
+            # laptop, 5 Nov 19:1x: with SERVE_STALE the callers already get the held value, and the memory folder
+            # moves about once a minute, so a stat refill waits until the entry is RESTAT_AGE old. A 12-15 s graph
+            # reload holds the GIL (marshal/json in C) and stretched a concurrent call from ~1 s to 17 s.
+            if SERVE_STALE and now - t < RESTAT_AGE:
+                continue
             try:
                 val = f(*a, **k)
             except Exception:
@@ -264,8 +304,12 @@ class Warm:
 def main():
     os.environ["SPREAD_SERVER_CHILD"] = "1"
     try:
-        os.nice(10)
-    except OSError:
+        if hasattr(os, "nice"):
+            os.nice(10)
+        elif os.name == "nt":   # laptop port: Windows has no os.nice (AttributeError killed every spawn); BelowNormal
+            import ctypes
+            ctypes.windll.kernel32.SetPriorityClass(ctypes.windll.kernel32.GetCurrentProcess(), 0x00004000)
+    except Exception:
         pass
     os.makedirs(STATE_DIR, exist_ok=True)
     warm = Warm()
@@ -289,7 +333,7 @@ def main():
                 resp["why"] = "not hosted: %s" % hook
             elif env_subset(req.get("env") or {}) != my_env:
                 resp["why"] = "env differs"
-            elif not lock.acquire(timeout=1.5):
+            elif not lock.acquire(timeout=float(os.environ.get("SPREAD_SERVER_LOCK_WAIT", "8" if os.name == "nt" else "1.5"))):   # laptop 1.5 -> 8 s: 15 of 105 calls declined busy (5 Nov)
                 resp["why"] = "busy"
             else:
                 try:
@@ -357,7 +401,24 @@ def main():
                 log("idle exit")
                 break
             tick += 1
-            if tick % 2 == 0 and lock.acquire(blocking=False):
+            if tick % 2 == 0 and SERVE_STALE:
+                # the stale check under the lock, the reload off it: a caller meanwhile is served the held value
+                if lock.acquire(blocking=False):
+                    try:
+                        why = warm.stale_reason()
+                    finally:
+                        lock.release()
+                    if why:
+                        log("exiting between calls: " + why)
+                        break
+                try:
+                    t = time.perf_counter()
+                    n = warm.refresh()
+                    if n and time.perf_counter() - t > 1:
+                        log("refreshed %d entries off the lock in %.1f s" % (n, time.perf_counter() - t))
+                except Exception as e:
+                    log("refresh error %r" % (e,))
+            elif tick % 2 == 0 and lock.acquire(blocking=False):
                 try:
                     why = warm.stale_reason()
                     if why:
