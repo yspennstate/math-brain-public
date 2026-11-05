@@ -1771,10 +1771,17 @@ def _session_shard(session_id):
     return os.path.join(SESSION_DIR, h + ".json")
 
 
+SERVED_ARCHIVE = os.environ.get("MATHBRAIN_SERVED_ARCHIVE") or os.path.join(
+    HOME, ".claude", "brain_graph", "live", "math_served_archive.jsonl")
+
+
 def _prune_session_shards(now, sample=1):
-    """Delete shards past the TTL. Runs on roughly one call in `1/sample`, never on the read path's
+    """Retire shards past the TTL. Runs on roughly one call in `1/sample`, never on the read path's
     critical section, and never raises: a directory scan is cheap but it is not free, and the guard
-    must not become the thing it replaced."""
+    must not become the thing it replaced.
+    A shard is the record of which claims reached which session, and that record is brain data: its content is
+    appended to the permanent archive (SERVED_ARCHIVE) first, and the file is removed only when that append
+    succeeded. A failed append leaves the shard where it is for the next pass."""
     try:
         if random.random() > sample:
             return
@@ -1784,6 +1791,19 @@ def _prune_session_shards(now, sample=1):
             p = os.path.join(SESSION_DIR, n)
             try:
                 if now - os.path.getmtime(p) > SESSION_STATE_TTL_S:
+                    with io.open(p, encoding="utf-8") as f:
+                        rec = f.read()
+                    try:
+                        body = json.loads(rec)
+                    except ValueError:
+                        body = {"raw": rec[:20000]}
+                    line = json.dumps({"shard": n[:-5], "archived": round(now, 1), "rec": body},
+                                      separators=(",", ":"))
+                    os.makedirs(os.path.dirname(SERVED_ARCHIVE), exist_ok=True)
+                    with io.open(SERVED_ARCHIVE, "a", encoding="utf-8") as out:
+                        out.write(line + "\n")
+                        out.flush()
+                        os.fsync(out.fileno())
                     os.remove(p)
             except OSError:
                 pass
