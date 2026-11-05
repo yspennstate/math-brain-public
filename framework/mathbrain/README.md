@@ -71,6 +71,9 @@ math-brain policy check $SOURCE_FILE --manifest $AUDIT_MANIFEST `
   --source-id source-001 --repository-root .
 ```
 
+A plain `python -m pytest -q` skips ten test files marked `slow` (the evaluation and pilot
+banks, two to more than ten minutes each); `MATHBRAIN_SLOW=1 python -m pytest -q` runs them as well.
+
 The command above checks one file against one source grant; it does not discover,
 upload, copy, or publish anything. See `docs/local-audit-protocol.md` and
 `docs/privacy-boundary.md` before auditing any local source.
