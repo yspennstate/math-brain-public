@@ -1913,10 +1913,18 @@ def markdown_board(data: dict) -> str:
 
 
 def print_human(value) -> None:
-    if isinstance(value, str):
-        print(value)
-    else:
-        print(json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True))
+    text = value if isinstance(value, str) else json.dumps(value, ensure_ascii=False, indent=2, sort_keys=True)
+    try:
+        print(text)
+    except UnicodeEncodeError:
+        # A console or pipe in a narrow code page cannot take every character; one such character in a message
+        # would otherwise turn the whole inbox into a traceback. JSON goes out escaped, which any JSON reader turns
+        # back into the same text; plain text gets backslash escapes.
+        if isinstance(value, str):
+            enc = getattr(sys.stdout, "encoding", None) or "ascii"
+            print(value.encode(enc, "backslashreplace").decode(enc))
+        else:
+            print(json.dumps(value, ensure_ascii=True, indent=2, sort_keys=True))
 
 
 def add_agent_arg(parser: argparse.ArgumentParser, required: bool = False) -> None:
@@ -2122,14 +2130,21 @@ def dispatch(mesh: Mesh, args: argparse.Namespace):
     if command == "handoff-cancel":
         return mesh.handoff_cancel(args.agent, args.message_id, args.reason)
     if command == "inbox":
-        return mesh.inbox(args.agent, args.mark_delivered, args.include_acked,
-                          pending_only=args.pending)
+        # Fetch without stamping; main() stamps after the print succeeds, so a crash in the middle of the output
+        # leaves the message queued and the next read shows it again.
+        rows = mesh.inbox(args.agent, False, args.include_acked, pending_only=args.pending)
+        if args.mark_delivered and rows:
+            mesh._deliver_after_print = (args.agent, [r["message_id"] for r in rows])
+        return rows
     if command == "ack":
         return mesh.ack(args.agent, args.message_id)
     if command == "receipts":
         return mesh.receipts(args.agent, args.message_id, args.pending, args.limit)
     if command == "digest":
-        return mesh.digest(args.agent, not args.no_mark_delivered)
+        text, ids = mesh.digest_with_ids(args.agent)
+        if not args.no_mark_delivered and ids:
+            mesh._deliver_after_print = (args.agent, ids)
+        return text
     if command == "campaign-start":
         return mesh.campaign_start(args.name, args.objective, args.agent, args.hours)
     if command == "campaign-join":
@@ -2182,6 +2197,15 @@ def main(argv: Sequence[str] | None = None) -> int:
             print(json.dumps(result, ensure_ascii=False, sort_keys=True))
         else:
             print_human(result)
+        # Stamp delivery only after the output above went out. A failed stamp leaves the messages queued, to be
+        # shown again on the next read: better twice than never.
+        try:
+            pend = getattr(mesh, "_deliver_after_print", None)
+            if pend:
+                sys.stdout.flush()
+                mesh.mark_delivered(*pend)
+        except Exception:
+            pass
         return 0
     except MeshError as exc:
         # Conflict payloads are often already structured JSON; preserve them.
@@ -2203,5 +2227,29 @@ def main(argv: Sequence[str] | None = None) -> int:
             mesh.close()
 
 
+def _raise_own_priority() -> None:
+    """A CLI call started from a scheduled task can inherit below-normal CPU and low I/O priority; on a contended
+    disk it then waits minutes on its reads while it holds the SQLite write lock every other agent needs (a priority
+    inversion). The CLI is short-lived, so on Windows it raises itself to normal CPU and I/O priority. Script runs
+    only: code that imports Mesh keeps its own priority. Never raises."""
+    if os.name != "nt":
+        return
+    try:
+        import ctypes
+        from ctypes import wintypes
+        k32 = ctypes.WinDLL("kernel32")
+        ntdll = ctypes.WinDLL("ntdll")
+        k32.GetCurrentProcess.restype = wintypes.HANDLE
+        k32.SetPriorityClass.argtypes = [wintypes.HANDLE, wintypes.DWORD]
+        ntdll.NtSetInformationProcess.argtypes = [wintypes.HANDLE, wintypes.ULONG, ctypes.c_void_p, wintypes.ULONG]
+        h = k32.GetCurrentProcess()
+        k32.SetPriorityClass(h, 0x20)                    # NORMAL_PRIORITY_CLASS
+        prio = wintypes.ULONG(2)                         # IoPriorityNormal
+        ntdll.NtSetInformationProcess(h, 33, ctypes.byref(prio), ctypes.sizeof(prio))   # ProcessIoPriority
+    except Exception:
+        pass
+
+
 if __name__ == "__main__":
+    _raise_own_priority()
     raise SystemExit(main())
