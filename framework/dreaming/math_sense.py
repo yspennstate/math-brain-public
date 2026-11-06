@@ -1602,6 +1602,23 @@ def _select(hits, apply_gates=True, cap=3, title_query=None, prompt=None, anchor
     )
     if not ranked:
         return []
+    # COVERAGE TIE-BREAK AMONG NEAR-TIED LEADERS (MATHBRAIN_COVER_EPS, default 0 = off). Every card scoring within
+    # the fraction eps of the top card is re-ordered by how many distinct query words its lexical trace matched,
+    # then by score; a leader that matches one word strongly yields to a near-tied card that matches more of the
+    # question. The rest of the ranking is untouched.
+    try:
+        _ceps = float(os.environ.get("MATHBRAIN_COVER_EPS", "0") or 0)
+    except ValueError:
+        _ceps = 0.0
+    if _ceps > 0:
+        _ctop = _rs(ranked[0])
+        if _ctop > 0:
+            def _ccov(h):
+                return len({str(t.detail) for t in (getattr(h, "trace", None) or ()) if t.channel.value == "lexical"})
+            _near = [h for h in ranked if _rs(h) >= (1 - _ceps) * _ctop]
+            if len(_near) > 1:
+                _near.sort(key=lambda h: (-_ccov(h), -_rs(h), h.node.id))
+                ranked = _near + ranked[len(_near):]
     # the anchor rule (see _anchor_min_shared) is applied to the CHOSEN cards at the end, dropping without
     # refilling: refilling the freed slots from the ranked tail brought in cards that were again off-domain.
     _k_anchor = _anchor_min_shared(prompt) if anchor else 0
