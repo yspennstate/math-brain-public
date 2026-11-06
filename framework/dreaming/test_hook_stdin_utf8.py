@@ -35,6 +35,10 @@ def _clean_env(**extra):
     env = dict(os.environ)
     env.pop("PYTHONIOENCODING", None)
     env.pop("PYTHONUTF8", None)
+    if os.name != "nt":
+        # A Mac or Linux stdin decodes UTF-8 by default, so here every check passed vacuously (5 Nov 2026). Give the
+        # child the Windows default instead: stdin through cp1252, UTF-8 mode off.
+        env.update(PYTHONIOENCODING="cp1252", PYTHONUTF8="0")
     env.update(extra)
     return env
 
@@ -59,6 +63,11 @@ def _run(script_body, payload, env=None):
 
 
 def test_environment_is_actually_hostile():
+    """Under pytest a returned False passed silently; a vacuous environment has to fail the run."""
+    assert _environment_is_hostile(), "stdin decodes UTF-8 in the test environment, so the stdin tests prove nothing"
+
+
+def _environment_is_hostile():
     """Guard the guard: if stdin already decodes UTF-8 here, the tests below prove nothing."""
     p = _run("import sys\n"
              "sys.stdout.reconfigure(encoding='utf-8')\n"
@@ -128,7 +137,7 @@ def test_mojibake_repair_is_conservative():
 
 
 if __name__ == "__main__":
-    hostile = test_environment_is_actually_hostile()
+    hostile = _environment_is_hostile()
     test_gate_preserves_non_ascii()
     test_gate_restored_stdin_still_exposes_buffer()
     test_archiver_stores_non_ascii_faithfully()
