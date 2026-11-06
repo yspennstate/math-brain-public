@@ -459,6 +459,13 @@ class Brain:
             if k.startswith(("CLAUDE", "CODEX", "AGENT")):
                 saved_env[k] = os.environ.get(k)
                 os.environ[k] = v
+        # And unset the ones the caller lacks. The client sends every CLAUDE/CODEX/AGENT name it has, so one it
+        # did not send is one a cold run would not see. Otherwise a caller with no session id (a script, a scheduled
+        # task, another runtime) runs with the server's spawner's session id and entry point, and the recall log
+        # files its search under that person's interactive session. BRS_POP_SESSION_ENV=0 keeps the spawner's.
+        if os.environ.get("BRS_POP_SESSION_ENV", "1") != "0":
+            for k in [k for k in os.environ if k.startswith(("CLAUDE", "CODEX", "AGENT")) and k not in env]:
+                saved_env[k] = os.environ.pop(k)
         for k in PER_CALL_ENV:   # the caller's value, or unset when the caller has none
             saved_env[k] = os.environ.get(k)
             if k in env:
