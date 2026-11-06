@@ -63,6 +63,8 @@ def main():
         tool = data.get("tool_name")
         inp = data.get("tool_input", {}) or {}
         slugs = []
+        if tool == "Bash":
+            _durable_bash(data)
         if tool == "Read":
             fp = (inp.get("file_path", "") or "")
             fpl = fp.replace("/", os.sep).lower()
@@ -81,6 +83,37 @@ def main():
             f.write("".join(s + "\n" for s in slugs))
     except Exception:
         return
+    if tool == "Read":
+        _durable(slugs[0], sess, "read", data.get("tool_use_id"))
+
+
+def _read_trace():
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    import read_trace
+    return read_trace
+
+
+def _durable(slug, sess, src, ref=None):
+    """The session log above is deleted at the next Stop; this line is kept (read_trace.py -> retrievals.tsv)."""
+    try:
+        _read_trace().append(slug, sess, src, ref or "")
+    except Exception:
+        pass
+
+
+def _durable_bash(data):
+    """A plain shell read of a memory file (cat, sed -n, head ... on its full path) also goes to the durable record;
+    the broader shell routes above (grep, brain.py node) feed only the co-read session log."""
+    try:
+        cmd = (data.get("tool_input", {}) or {}).get("command", "") or ""
+        if "/memory/" not in cmd:
+            return
+        rt = _read_trace()
+        for slug in rt.bash_reads(cmd):
+            if ok(slug):
+                rt.append(slug, data.get("session_id") or "nosess", "bash", data.get("tool_use_id") or "")
+    except Exception:
+        pass
 
 
 if __name__ == "__main__":
