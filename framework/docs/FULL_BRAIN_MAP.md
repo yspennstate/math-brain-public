@@ -75,6 +75,7 @@ itself off and `agent_tools/math_recall.py` prints `fast path OFF` with the reas
 | Danger sense and command guards (refuses `python -`, a mesh lease on a literal `$name`; reads and notes are not actions) | `dreaming/danger_mode.py` | `dreaming/test_python_dash_guard.py`, `test_mesh_literal_dollar.py` |
 | Notes as hints | `docs/NOTES_ARE_HINTS.md` | `dreaming/test_judge_reasons.py` |
 | Liveness (a faculty that quietly stops) | `dreaming/hook_liveness.py`, `brain_health.py` | `dreaming/test_brain_recall_liveness.py` |
+| Scheduled flows that stopped or keep failing (read-only; follows each task's scripts to their logs, reports a category, never the log text) | `dreaming/flow_sentinel.py` | `dreaming/test_flow_sentinel.py` |
 
 ## Between sessions
 
