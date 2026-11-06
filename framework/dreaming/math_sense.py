@@ -4686,12 +4686,31 @@ def _reset_per_prompt_state():
     _set_pool_adjacency(())
 
 
+# RELAYS AND PICTURE BATCHES ARE NOT A READER'S QUESTION (MATHBRAIN_RELAY_SKIP, default on). A runtime can call this
+# hook directly, past any dispatcher filter, and a picture worker that starts one session per batch of pictures sends
+# prompts the gate lets in on stray words ("an open field notebook", "a tape measure", "the generated file"): in one
+# day's log 91 of 102 serves went to such batches, most of them the same two cards. A relayed agent message, a task
+# notification or a system reminder is a peer's report, not a question put to the reader. The skip is anchored at the
+# START of the prompt and names only those heads; an agent-launched mathematics prompt ("You are auditing a numbered
+# mathematical argument") keeps its cards. The picture head is matched as "You are a/the picture maker" and the
+# review head as "You are checking pictures drawn for", so a reworded batch prompt does not slip past one sentence.
+# MATHBRAIN_RELAY_SKIP=0 restores the old behaviour.
+_RELAY_OR_PICTURE_HEAD = re.compile(
+    r"^\s*(?:\ufeff)?(?:<agent-message\b|Another Claude session sent a message\b|<cross-session-message\b"
+    r"|<task-notification\b|<agent-notification\b|<hook_prompt\b|<system-reminder\b|<local-command-stdout\b"
+    r"|<recommended_plugins\b|You are (?:a|the) picture maker\b|You are checking (?:the )?pictures drawn for\b)", re.I)
+RELAY_SKIP = os.environ.get("MATHBRAIN_RELAY_SKIP", "1").strip() not in ("0", "off", "false")
+
+
 def _main_body(data, out):
     started = time.time()
     _reset_per_prompt_state()
     _reset_cov_agree_state()
     prompt = data.get("prompt")
     prompt = (prompt if isinstance(prompt, str) else "")[:8000]
+    if RELAY_SKIP and _RELAY_OR_PICTURE_HEAD.match(prompt):
+        _silence_note(data, "skip_relay_or_picture_batch")
+        return
     if REPEAT_SKIP:
         _rk = _repeat_known_silence(data)
         if _rk:
