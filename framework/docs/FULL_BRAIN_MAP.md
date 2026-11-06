@@ -73,6 +73,7 @@ itself off and `agent_tools/math_recall.py` prints `fast path OFF` with the reas
 | Waking up (the SessionStart ritual) | `hooks/wake_brain.py`, `hooks/brain_startup.template.md` | `scripts/smoke_framework.py` |
 | Reflexes compiled from mistakes | `dreaming/instincts.py`, `instinct_prime.py`, `codex_reflex_hook.py`, `reflex_precision.py` | `dreaming/test_codex_reflex_hook.py`, `test_reflex_precision_paths.py`, `test_reflex_commit_after_emit.py` |
 | Danger sense and command guards (refuses `python -`, a mesh lease on a literal `$name`; reads and notes are not actions) | `dreaming/danger_mode.py` | `dreaming/test_python_dash_guard.py`, `test_mesh_literal_dollar.py` |
+| Math notes in the hook (an old revision of a card is never served as current) | `dreaming/math_sense.py` | `dreaming/test_revision_edge.py`, `math_answer_closure_selftest.py` |
 | Notes as hints | `docs/NOTES_ARE_HINTS.md` | `dreaming/test_judge_reasons.py` |
 | Liveness (a faculty that quietly stops) | `dreaming/hook_liveness.py`, `brain_health.py` | `dreaming/test_brain_recall_liveness.py` |
 | Scheduled flows that stopped or keep failing (read-only; follows each task's scripts to their logs, reports a category, never the log text) | `dreaming/flow_sentinel.py` | `dreaming/test_flow_sentinel.py` |
