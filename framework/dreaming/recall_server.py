@@ -56,19 +56,36 @@ class Server(socketserver.TCPServer):
     def handle_error(self,request,client_address):
         self.failures += 1
 
+def catch_up(held, fr, store, derive, new_key, now=time.monotonic):
+    """Bring the held prepared state up to date in memory after the store changed.
+
+    Re-reading the whole store on every change cost more than a cold call (median 14 s, p90 44 s in one day of
+    traffic). open_prepared already extends a lagging state in memory with fastrecall_delta.extend; this does the
+    same for the state the server holds. Returns the number of cards added, or None when the state must be dropped
+    and re-opened: no held state, the delta path off, a state older than DELTA_MAX_AGE_S, extend refusing (a
+    rebuilt or rewritten store) or extend failing. A state extend failed on half way is never served."""
+    old = held.get('prepared')
+    if old is None or not getattr(fr, 'DELTA', False) or not getattr(old, 'key', None):
+        return None
+    if now() - held.get('opened', 0.0) > getattr(fr, 'DELTA_MAX_AGE_S', 0.0):
+        return None
+    try:
+        import fastrecall_delta as FD
+        FD.MAX_CARDS = min(FD.MAX_CARDS, getattr(fr, 'DELTA_CALL_MAX', FD.MAX_CARDS))
+        short_ids = getattr(sys.modules.get(getattr(derive, '__module__', '')), 'short_ids', None)
+        n, _why = FD.extend(old, store, short_ids)
+    except Exception:
+        return None
+    if n is None:
+        return None
+    old.key = '%s|%s' % (old.key.split('|', 1)[0], new_key)
+    held['key'] = new_key
+    fr._MEMO[old.key] = old
+    return n
+
+
 def main():
     policy()
-    if os.name == 'nt':
-        # Normal, not BelowNormal: the server answers callers waiting at Normal (the cold path runs at Normal in the
-        # caller). 4 Nov, 88 pct CPU, same query: a BelowNormal test process 393 s / 397 s against 7.0 / 1.0 s at Normal;
-        # the live server, BelowNormal (the keeper's creation flag) and unthrottled, 73 s a call. Set through psutil:
-        # kernel32.SetPriorityClass(GetCurrentProcess(), ...) without a pointer restype passes an invalid handle on
-        # 64-bit and fails silently (returns 0) - policy()'s own BelowNormal call never took effect either.
-        try:
-            import psutil
-            psutil.Process().nice(psutil.NORMAL_PRIORITY_CLASS)
-        except Exception:
-            pass
     ap = argparse.ArgumentParser()
     ap.add_argument('--store',default=os.environ.get('MATHBRAIN_STORE',DEFAULT_STORE))
     ap.add_argument('--parent-pid',type=int,default=0)
@@ -101,22 +118,7 @@ def main():
         # Retain the encoder session and the exact prepared state; no query is used to warm them.
         fr.Encoder().start().wait()
         prepared = fr.open_prepared(args.store,ranking,tool.derive_tool,tool.__file__)
-        # 4 Nov 09:23: a peer's code edit restarted the server while MathRecallPrebuild5m was building the new
-        # prepared state; the server exited rc 6 with no reason and the keeper backed off 300 s (outage 09:15-09:32).
-        # Wait for another builder (up to 10 min) instead of exiting, and log why when it still fails.
-        waited = 0
-        while prepared is None and 'has been building' in str(fr.STATUS.get('why','')) and waited < 600 \
-                and not stop.exists():
-            time.sleep(15)
-            waited += 15
-            prepared = fr.open_prepared(args.store,ranking,tool.derive_tool,tool.__file__)
         if prepared is None:
-            try:
-                with open(HERE/'recall_server_reasons.log','a',encoding='utf-8') as fh:
-                    fh.write('%s pid %d start rc 6 after %d s: %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S'),os.getpid(),
-                                                                     waited,str(fr.STATUS.get('why',''))[:200]))
-            except Exception:
-                pass
             return 6
         if max(resident().values()) >= CAP:
             return 7
@@ -139,6 +141,7 @@ def main():
                 held.update(key=key,prepared=value)
             return value
         fr.open_prepared=warm_open
+        held['opened']=time.monotonic()
         del prepared
         started = time.monotonic()
         reasons = HERE/'recall_server_reasons.log'
@@ -155,8 +158,6 @@ def main():
         class Handler(socketserver.BaseRequestHandler):
             def handle(self):
                 self.request.settimeout(10)
-                t0 = time.monotonic()
-                reloaded = 0
                 try:
                     request = receive_frame(self.request)
                     argv = request.get('argv')
@@ -182,13 +183,13 @@ def main():
                         importlib.reload(ranking._semantic)
                         importlib.reload(ranking)
                         fr._MEMO.clear()
-                        held['key']=None
-                        held['prepared']=None
-                        reloaded = 1
                         state['store_key'] = current_key
-                        # The old prepared state sits in reference cycles; unfreed it pushed the next call to 1.82 GB,
-                        # over CAP, and the server stopped itself after every store change (30 Oct: 1,821 -> 1,053 MB).
-                        gc.collect()
+                        if catch_up(held, fr, args.store, tool.derive_tool, current_key) is None:
+                            held['key']=None
+                            held['prepared']=None
+                            # The old prepared state sits in reference cycles; unfreed it pushed the next call to
+                            # 1.82 GB, over CAP, and the server stopped itself after every store change.
+                            gc.collect()
                     context = request.get('context',{})
                     if not isinstance(context,dict):
                         raise ValueError('context')
@@ -256,18 +257,6 @@ def main():
                                 break
                             time.sleep(.01)
                         return
-                    # One timing line per served call, never the query (4 Nov: the keeper's probes timed out at 50 s
-                    # while a test copy of the same set-up answered in 2-8 s; this says whether the server is slow
-                    # or busy - 'idle' is the gap since the previous call ended).
-                    try:
-                        now = time.monotonic()
-                        with open(HERE/'recall_server_timing.log','a',encoding='utf-8') as fh:
-                            fh.write('%s pid %d req %d took %.1f idle %.1f reload %d rc %d\n' % (
-                                time.strftime('%Y-%m-%d %H:%M:%S'),os.getpid(),state['requests'],now-t0,
-                                t0-state.get('last_end',started),reloaded,int(rc or 0)))
-                        state['last_end'] = now
-                    except Exception:
-                        pass
                     send_frame(self.request,response)
                 except Exception as exc:
                     self.server.failures += 1
