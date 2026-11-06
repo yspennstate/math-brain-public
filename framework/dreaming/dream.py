@@ -205,8 +205,24 @@ except Exception:
 # historical date in prose from manufacturing consolidation pressure.
 def is_recent(m):
     return m["birth_epoch"] is not None and now - m["birth_epoch"] <= 8*86400
-recent = sorted((fn for fn, m in mems.items() if is_recent(m) and not m["transient"]),
-                key=lambda fn: trusted_recency_key(fn, mems[fn]["birth_epoch"]))
+# Birth is the created day's noon, so a whole day ties and the name tiebreak picked section A's 30: on 1 Nov 2026
+# the newest day held 788 memories and the 30 shown were all a_* slugs. Inside a tie, newest created_at goes first
+# (birth and age stay as they are). Measured over 8 day-ends: a_* slugs in the 30 shown 184 -> 47 of 240, adjacent
+# topic changes 44 -> 208 of 232.
+_CREATED_AT = re.compile(r"^\s*created_at:\s*[\"']?(\d{4}-\d{2}-\d{2}T\d{2}:\d{2}(?::\d{2})?(?:\.\d+)?(?:Z|[+-]\d{2}:?\d{2})?)", re.M)
+def created_at_epoch(m):
+    hit = _CREATED_AT.search(m["body"][:1600])
+    if hit:
+        try:
+            import datetime as _dtm
+            return _dtm.datetime.fromisoformat(hit.group(1).replace("Z", "+00:00")).timestamp()
+        except ValueError:
+            pass
+    return 0.0
+def recent_key(fn):
+    k = trusted_recency_key(fn, mems[fn]["birth_epoch"])
+    return (k[0], k[1], -created_at_epoch(mems[fn]), k[2])
+recent = sorted((fn for fn, m in mems.items() if is_recent(m) and not m["transient"]), key=recent_key)
 transient_recent = sum(1 for fn, m in mems.items() if is_recent(m) and m["transient"])
 
 # pairs co-cited by ONE connector note (daydream_*/gist_*): a daydream that links [[A]] and [[B]] in
@@ -236,6 +252,10 @@ for t, fs in inv.items():
         fs = sorted(fs)
         for i in range(len(fs)):
             for j in range(i+1, len(fs)):
+                # 31 Oct: same-series pairs (a session's compaction chain, a catalogue's cards) took 395 of the
+                # best 600 and all 175 candidates; skip them before the cut (first 12 characters agree, as in 2b)
+                if len(fs[i]) >= 15 and len(fs[j]) >= 15 and fs[i][:12] == fs[j][:12]:
+                    continue
                 pairs[(fs[i], fs[j])] += 1
 assoc = []
 for (a, b), shared in pairs.most_common(600):
@@ -360,6 +380,38 @@ except Exception as _e:
 
 # ---- 3. staleness candidates ----
 stale = []
+
+
+def _lit_gate(p):
+    """A lowercase literal every match of marker p must contain ("" = no safe gate). Conservative: any
+    alternation or character class gives no gate; group contents (lookaheads included) are ignored; a
+    character made optional by ? * {..} is dropped. Measured 3 Nov: the sweep 43.0 s -> 5.4 s, same 52 hits,
+    because a re.I search over 223 MB per marker loses the literal fast path."""
+    q = re.sub(r"\((?:[^()\\]|\\.)*\)", "\x00", p)
+    if "|" in q.replace("\\|", "") or "(" in q or "[" in q:
+        return ""
+    best, cur, i = "", [], 0
+    while i <= len(q):
+        ch = q[i] if i < len(q) else "\x00"
+        if ch == "\\" and i + 1 < len(q) and not q[i + 1].isalnum():
+            cur.append(q[i + 1]); i += 2; continue
+        if ch == "\\" or ch in ".^$*+?{}\x00":
+            if ch in "*?{" and cur:
+                cur.pop()
+            if len(cur) > len(best):
+                best = "".join(cur)
+            cur = []
+            if ch == "{":
+                j = q.find("}", i)
+                i = len(q) if j < 0 else j + 1
+            else:
+                i += 2 if ch == "\\" else 1
+            continue
+        cur.append(ch); i += 1
+    return best.lower()
+
+
+_STALE_MK = {mk: (_lit_gate(mk), re.compile(mk, re.I)) for _e, _t, _s, _mks in CURRENT_FACTS for mk in _mks}
 for fn, m in mems.items():
     hay = m["body"].lower()
     # already reconciled? a prior dream annotated it - don't re-flag (the 07-07 dream's find)
@@ -369,7 +421,7 @@ for fn, m in mems.items():
         # a memory dated on/after the fact became current IS the current record
         if m["event_date"] and m["event_date"] >= since:
             continue
-        if any(re.search(mk, hay, re.I) for mk in markers):
+        if any(_STALE_MK[mk][0] in hay and _STALE_MK[mk][1].search(hay) for mk in markers):
             stale.append((fn, entity, truth))
             break
 
@@ -379,13 +431,17 @@ for fn, m in mems.items():
 # meta-words like [[links]] - is tokenizer noise, not a memory the brain wants
 # (the 08-06 19:30 agenda's top ten was nine parts this junk). Filtered at the
 # REPORT only: extraction, association edges, and orphan logic are untouched.
+# 31 Oct: every memory name holds an underscore or a dash (the seven that do not, MEMORY,
+# MISTAKES and the like, always resolve), so a separator is required; that and the template names
+# below dropped 16 of the 25 targets only the agenda counted (memory, target, wiki-link, memo_name...).
 _LINK_NOISE = {"link", "links", "name", "names", "subject", "slug", "slugs",
-               "their_slug", "todo", "tbd"}
+               "their_slug", "todo", "tbd", "memo_name", "memo-name", "other-memory-name",
+               "their_name", "slug_name", "wiki-link", "wiki-links"}
 def _sluglike(t):
     t = t.strip()
     if t.lower() in _LINK_NOISE:
         return False
-    return bool(re.match(r"^[A-Za-z][A-Za-z0-9_-]{3,}$", t))
+    return bool(re.match(r"^[A-Za-z][A-Za-z0-9_-]{3,}$", t)) and bool(re.search(r"[_-]", t))
 dangling = Counter()
 for fn, m in mems.items():
     for l in m["links"]:
@@ -550,7 +606,17 @@ _CORRECTION_TELLS = re.compile(
     r"|\bi never (?:said|told|asked|specified)\b|\bi thought i (?:asked|told)\b"
     r"|\bi though?t? it (?:was|were)\b|\b(?:is|was|that'?s) wrong\b|\bnot what i (?:wanted|asked)\b"
     r"|\bwtf\b|\bcome on\b|\bwhy did(?:n'?t)? you\b|\bdon'?t do\b|\bovercomplicat"
-    r"|\bbefore (?:it was|you said)\b|\bnow you are saying\b|\bkeep happening\b", re.I)
+    r"|\bbefore (?:it was|you said)\b|\bnow you are saying\b|\bkeep happening\b"
+    # 31 Oct 2026: none of about 7 corrections typed on one machine (29-30 Oct) matched the list above,
+    # so the 4-day window fell back to 14-15 Oct. Added from them; on 8,132 older labelled heads the additions
+    # fire 87 more times at about 70% correct (recall 22.4 -> 26.8%, precision 59.5 -> 61.0%).
+    r"|\bwhy (?:are|aren'?t|do|don'?t|did|didn'?t|is|isn'?t|were|was) (?:you|u|they|it|we)\b[^?.\n]{0,60}"
+    r"(?:not|never|stop|idle|still|again|wrong)"
+    r"|\bwh?y? doi? you ever\b|\bi (?:said|told you|asked)(?: you)? (?:multiple|many|several|\d+) times?\b"
+    r"|\bi already (?:said|told|asked)\b|\bdo it (?:correctly|right|properly)\b|\bthat is (?:always )?a mistake\b"
+    r"|\bi (?:do ?n'?t|dont|didn'?t) see (?:any|the|terminal|it|them|that)\b|\bstop asking me\b"
+    r"|\bwhy (?:is|are) (?:it|this|that|they) (?:not|still)\b|\byou (?:forgot|missed|ignored|broke)\b"
+    r"|\bthat'?s not (?:right|true|it|correct)\b|\bit (?:did not|didn'?t|does not|doesn'?t) work\b", re.I)
 _MACHINE_PROMPT = re.compile(
     r"^\s*\[FABLE-1|WATCHDOG, owner directive|^\s*/goal loop wake|Overnight watchdog wake"
     r"|^\s*\[work-session|^\s*\[SYSTEM|^\s*\[campaign|^\s*\[AGENT|10-min cycle\]", re.I)
@@ -615,9 +681,29 @@ with io.open(OUT, "w", encoding="utf-8") as f:
     # >10 times must enter a designated connection-agent workflow during
     # dreaming. The helper revalidates the signed production generation before
     # exposing candidates; any failure is rendered as a loud degraded section.
+    def _strong_section_with_timeout(budget_s=300):
+        """2026-10-19 REM: strong_node_agenda_section() ran unbounded INSIDE the open agenda file. On
+        10-19 the corpus scan finished at 20:09 (OUT truncated to 0 bytes at open), this call then ran
+        until the 1800 s cap killed the tree at 20:23, and the buffered header never reached disk: a
+        0-byte agenda for the third pass running (03:30, 12:17, 20:23) on a disk reading at ~11 MB/s.
+        Same shape as the journal-written-last scar (2026-09-14): the valuable output must not wait
+        behind unbounded work. Built in a child under a timeout, like the judge section; a timeout or
+        a child failure raises and renders as the loud DEGRADED section below."""
+        import os as _os, subprocess as _sp, sys as _sys
+        _here = _os.path.dirname(_os.path.abspath(__file__))
+        code = ("import sys; sys.path.insert(0, %r); import brain as b; "
+                "sys.stdout.reconfigure(encoding='utf-8'); "
+                "sys.stdout.write(b.strong_node_agenda_section() or '')" % _here)
+        proc = _sp.run([_sys.executable, "-c", code], capture_output=True, timeout=budget_s, cwd=_here,
+                       creationflags=getattr(_sp, "CREATE_NO_WINDOW", 0))
+        if proc.returncode != 0:
+            raise RuntimeError("strong-node child exited %d: %s"
+                               % (proc.returncode, proc.stderr.decode("utf-8", "replace")[-300:]))
+        return proc.stdout.decode("utf-8", "replace")
+
+    f.flush()   # the header is on disk before any bounded-but-slow step (10-19: a kill lost it all)
     try:
-        import brain as _brain
-        _strong_section = _brain.strong_node_agenda_section()
+        _strong_section = _strong_section_with_timeout()
         if _strong_section:
             f.write("\n" + _strong_section)
     except Exception as _strong_exc:
@@ -627,6 +713,7 @@ with io.open(OUT, "w", encoding="utf-8") as f:
             % " ".join(str(_strong_exc).split())[:400]
         )
 
+    f.flush()
     # ---- Mistakes: ~30% of every dream is this (owner 2026-07-08). The owner's corrections - every
     # time he said "that's a mistake" or "not what I wanted" - are the highest-signal learning data
     # the brain has. A rotating sample surfaces each dream so the whole ledger gets worked over time.
