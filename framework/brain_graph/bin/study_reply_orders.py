@@ -1,9 +1,8 @@
 """study_reply_orders.py - could his stored orders, looked up once at the agent's reply, have handed back the order he then
 restated, without serving a line to most replies?
 
-His corrections follow the agent's report (a median 39 s after its last action; his_corrections_follow_quick_on_task_
-answers_not_drift_or_struggle_2026_09_27), and the orders channel that looked at every prompt and tool call was too chatty
-(his_orders_channel_stays_in_shadow_too_chatty_and_late_2026_09_27). This looks once per reply.
+His corrections follow the agent's report (a median 39 s after its last action),
+and the orders channel that looked at every prompt and tool call was too chatty. This looks once per reply.
 
 For the 22 corrections that restated a stored order (results/STANDING_ORDERS_LABELS_2026-09-27.json): the agent's last
 text block before the correction is the reply; his orders available then (study_standing_orders.orders / resolve) are
