@@ -1,5 +1,5 @@
 """study_standing_orders.py - could the brain have handed the agent the order he then had to say again?
-(27 Sep 18:0x, claude-00000004; asked whether the index method and the word method could be combined)
+(Asked whether the index method and the word method could be combined)
 
 Of his 73 corrections and repeats since 1 Sep, 22 restated an order of his that the brain already held (labelled by
 hand in standing_orders_labels.json: the GPU nine times, pictures and 3Blue1Brown motion six, the voice four, public
@@ -44,7 +44,7 @@ SLUG_DAY = re.compile(r"_(20\d\d)_(\d\d)_(\d\d)")
 TOKEN = re.compile(r"[a-z][a-z0-9]{2,}")
 NOISE = {"users", "owner", "appdata", "local", "temp", "claude", "scratchpad", "projects", "com", "www", "http", "https",
          "exe", "bin", "tmp", "the", "and", "for", "with", "src", "lib", "home", "jsonl", "json", "txt", "html", "memory",
-         "c--users-owner", "python", "bash", "powershell", "tool", "cmd", "file", "dir", "proj", "said", "kw", "hook"}
+         "python", "bash", "powershell", "tool", "cmd", "file", "dir", "proj", "said", "kw", "hook"}
 WEEKS = [("2026-09-01 00:00", "X_drift0901"), ("2026-09-08 00:00", "X_drift0908"), ("2026-09-15 00:00", "X_drift0915"),
          ("2026-09-22 00:00", "X_drift0922")]
 ARMS = ("ask", "context", "graph", "both")
