@@ -1,4 +1,4 @@
-"""Does recall's 0.02 display floor hide rows above it? (28 Sep 2026, claude-00000004; scheduled audit account01/B02 R1)
+"""Does recall's 0.02 display floor hide rows above it?
 
 On the bm25-first path the list recall displays runs in segment order - the BM25 block, then the lexical, graph and
 semantic tails - not sorted by display score, and the display loop ended at the first row scoring 0.02 or less. A
@@ -14,6 +14,9 @@ it), both rules applied offline, at 8 rows (recall's default) and at 40 (the his
 
     python study_recall_floor.py CANDIDATE.py OUT.json
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import hashlib
 import io
 import json

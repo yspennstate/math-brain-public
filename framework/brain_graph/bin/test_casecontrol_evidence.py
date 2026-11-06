@@ -1,6 +1,5 @@
 """test_casecontrol_evidence.py - the correction case-control study binds the evidence it ran on, and its verifier refuses
-a missing or altered rows file (28 Sep 2026, claude-00000004; scheduled audit account01/B01 r66,
-B01-R13-CORRECTION-CASECONTROL-EVIDENCE-GENERATION-UNBOUND-20260928).
+a missing or altered rows file.
 
     python test_casecontrol_evidence.py [--study PATH] [--old OLD_STUDY.py]
 
@@ -15,6 +14,9 @@ B01-R13-CORRECTION-CASECONTROL-EVIDENCE-GENERATION-UNBOUND-20260928).
     changed: refused (3)
 With --old the study before this change must have no evidence_generation (N1: the check can fail).
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import copy
 import importlib.util
 import json

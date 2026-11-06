@@ -1,10 +1,13 @@
 """test_codex_orders.py - the Codex orders hook (~/.claude/dreaming/codex_orders_hook.py) against a copy of the installed
-membrane, its log and state in a temp dir (27 Sep, claude-00000004). His prompt, then eight tool calls, in three sessions
+membrane, its log and state in a temp dir. His prompt, then eight tool calls, in three sessions
 whose rollouts say source "cli" (he types there), "exec" (codex exec) and nothing (no transcript): the order is served
 once, as Codex JSON, in the first only; every evaluation of all three is logged.
 
     python test_codex_orders.py [PATH_TO_live_membrane.py] [PATH_TO_codex_orders_hook.py]
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import importlib.util
 import json
 import os

@@ -1,4 +1,4 @@
-"""equivalence_membrane_hook.py - graph_membrane_hook.py in the dispatcher's process vs its own (26 Sep, claude-00000004).
+"""equivalence_membrane_hook.py - graph_membrane_hook.py in the dispatcher's process vs its own.
 
 hook_dispatch.py runs a hook in-process only when it is on hook_dispatch_allow.json, and a hook goes on that list only
 with evidence that in-process and own-process runs give the same exit and the same output. Five payloads: two silent by
@@ -7,6 +7,9 @@ per-session state, so each run starts clean). Digits are masked before comparing
 
     python equivalence_membrane_hook.py      exit 0 = identical on every payload
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import glob
 import json
 import os

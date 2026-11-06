@@ -1,5 +1,8 @@
 """Edge times in the store (graph_store.py, 27 Sep) against the fast layer's own computation (live_delta.pairs_of) on the
 same synthetic log, and through the sidecar (live_sidecar_times.py) into its edge table."""
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import importlib.util
 import json
 import os

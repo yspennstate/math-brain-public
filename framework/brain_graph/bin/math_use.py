@@ -23,6 +23,9 @@ session's shard of 13,242 and no fetch: the layer is nearly empty because real s
 
     python math_use.py build | stats
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import collections
 import glob
 import json
@@ -86,8 +89,7 @@ def _session_kinds():
 
 def build():
     t0 = time.time()
-    # One co-activation per SESSION (29 Sep; scheduled audit account01/B06 r24,
-    # B06-R70-MATH-USE-DOUBLE-COUNTS-SESSION-COACTIVATION-20260929). A session's shard (live, archived or
+    # One co-activation per SESSION. A session's shard (live, archived or
     # snapshotted) and its serve-log lines used to enter as separate sets, so one served session met the two-session
     # floor of an edge by itself. They are merged under one key: the whole session id when it is known, else the
     # shard's own name. An old 8-character serve id that matches no single known session cannot be joined to its
@@ -190,7 +192,7 @@ def build():
             if len(parts) >= 3 and parts[2].strip():
                 if not keep(parts[1].strip() or None, "fetch"):       # before 27 Sep the column was always empty
                     continue
-                if len(parts) >= 4 and parts[3].strip() != "ok":      # a refused read is not a use (B19-R79, 30 Sep)
+                if len(parts) >= 4 and parts[3].strip() != "ok":      # a refused read is not a use
                     continue
                 try:
                     uses[parts[2].strip()].append((float(parts[0]), 2.0))

@@ -1,5 +1,4 @@
-"""test_codex_capture_exactly_once.py - the Codex capture adds no event twice when a run loses its state replace (28 Sep,
-claude-00000004; account03/B12 R12 applied to extract_codex_events.py, which had the same append-then-state order).
+"""test_codex_capture_exactly_once.py - the Codex capture adds no event twice when a run loses its state replace.
 
     python test_codex_capture_exactly_once.py [DIR_WITH_THE_CAPTURE] [OLD_CAPTURE_DIR]
 
@@ -12,6 +11,9 @@ Three real Codex rollouts are copied into a temp ROOT/yyyy/mm/dd (read only; the
  N1 the capture before this change (OLD_CAPTURE_DIR, which must also hold its extract_touch_events.py) in P1's steps:
     extra events (the check can fail)
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import collections
 import glob
 import os

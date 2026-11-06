@@ -1,5 +1,4 @@
-"""test_capture_exactly_once.py - an interrupted capture adds no event twice (28 Sep, claude-00000004; account03/B12
-R12, B12-R12-CAPTURE-STATE-APPEND-NONATOMIC-DUPLICATION).
+"""test_capture_exactly_once.py - an interrupted capture adds no event twice.
 
     python test_capture_exactly_once.py [DIR_WITH_THE_CAPTURE] [OLD_CAPTURE_DIR]
 
@@ -15,6 +14,9 @@ uses, names) and the fast layer's pairs.
  N1 negative control, the capture before this change (OLD_CAPTURE_DIR) in P4's steps: its events are NOT the reference
     (the check can fail)
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import collections
 import glob
 import json

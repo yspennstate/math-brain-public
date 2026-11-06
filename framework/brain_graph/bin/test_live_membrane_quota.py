@@ -1,4 +1,4 @@
-"""Controls for the membrane's six-hour memory quota and who spends it (27 Sep, claude-00000004; audit account03/B15, R9).
+"""Controls for the membrane's six-hour memory quota and who spends it.
 
 A memory reaches at most two other sessions in six hours. Before this change a bench test worker counted as one of the
 two, so two workers that drew a memory kept it from his next session. These controls check that test workers no longer
@@ -8,6 +8,9 @@ its own transcript.
     python test_live_membrane_quota.py [path/to/live_membrane.py]     (default: the copy beside this file)
 Exit 0 when every control passes.
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import importlib.util
 import json
 import os

@@ -1,6 +1,5 @@
 """test_fix_candidate_learner.py - the fix memory an error line names is recorded in both arms and under both estimands,
-and the learner judges it in both arms and learns from it in neither (28 Sep 2026, claude-00000004; scheduled audit
-account01/B08 R49, B08-R49-TOTAL-ESTIMAND-FIX-ID-048 and B08-R49-ADAPTIVE-LEARNER-INTERFERENCE-047).
+and the learner judges it in both arms and learns from it in neither.
 
     python test_fix_candidate_learner.py [--membrane PATH] [--learner PATH] [--old-membrane PATH] [--old-learner PATH]
 
@@ -15,19 +14,21 @@ receiver behaviour in both arms, and the learner's state is compared. Nothing li
  M5 a failed save in HOLD: nothing served, the row names M as withheld, neither delivered nor spent
  M6 the candidate is never kept in the session state on disk
  M7 the record carries the unit the assignment was drawn for (session, line, two-hour block), the same in both arms:
-    the trial id a paired analysis joins on (account03/B08 auto61, B08-R49-HELD-FIX-JUDGED-PROVENANCE-019)
+    the trial id a paired analysis joins on
  L1 SHOW and focal HOLD with no read of M: the same learned edges (none), the same tired set, the same memory-bar evidence
     and the same fire-rate slots; the fix report counts one shown and one held, neither read
  L2 four SHOWs of M in a day, never read: M is not tired; the control, four memory-channel lines of M never read: tired
  L3 a SHOW read within 30 minutes: no learned edge, the fix report counts it read; the control, a memory-channel line
     read: a positive edge
  L4 a row written before this change (no fix record): its carried memory is still read as a memory line
- L5 a SHOW record whose carried line has been deleted while the error line stays (account04/B20 r14,
-    B20-R37-COARSE-COMPLIANCE-WITHOUT-UPTAKE-20260928): counted as shown by assignment and as a missing line, never as a
+ L5 a SHOW record whose carried line has been deleted while the error line stays: counted as shown by assignment and as a missing line, never as a
     delivered candidate; the intact record counts no missing line
 With --old-learner the learner before this change must fail L1 and L2 (N1, N2); with --old-membrane the membrane before
 this change must leave the total-estimand HOLD row without the candidate (N3).
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import contextlib
 import copy
 import importlib.machinery

@@ -1,5 +1,4 @@
-"""study_reply_judge.py - the two-step check at the reply, tested offline (28 Sep, claude-00000004; registered
-THREE_DAY_RUN 28 Sep 00:5x).
+"""study_reply_judge.py - the two-step check at the reply, tested offline.
 
 Step one, the word index, names the orders a reply is about; step two, a judge, says whether the reply breaks one. The
 judge sees shuffled (order, reply) pairs under blind ids and never the key.
@@ -11,6 +10,9 @@ Cases: the corrections of STANDING_ORDERS_LABELS_2026-09-27.json that have a rep
 in the same sessions with none of his corrections or repeats (those labels plus every case of the drift study's rows)
 within 30 minutes after them, up to 60, drawn with a fixed seed.
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import glob
 import json
 import os

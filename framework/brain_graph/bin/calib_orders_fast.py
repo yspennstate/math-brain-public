@@ -1,5 +1,4 @@
-"""calib_orders_fast.py - calibrate the membrane's standing-orders channel on his real sessions (27 Sep 18:4x,
-claude-00000004). The replay of calib_orders.py - every prompt and every fourth tool call of his interactive sessions
+"""calib_orders_fast.py - calibrate the membrane's standing-orders channel on his real sessions. The replay of calib_orders.py - every prompt and every fourth tool call of his interactive sessions
 from SINCE, his last ask kept, the leader counted across evaluations, each order served once per session in two hours -
 with three changes:
   - sessions run in parallel worker processes (BelowNormal, off cores 0 and 1), and a query already scored in a worker
@@ -13,6 +12,9 @@ his ask and his correction.
 
     python calib_orders_fast.py SINCE_YYYY-MM-DD OUT_JSON [--membrane PATH] [--workers N] [--labels PATH]
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import collections
 import importlib.util
 import json

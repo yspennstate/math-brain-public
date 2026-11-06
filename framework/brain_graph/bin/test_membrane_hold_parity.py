@@ -1,5 +1,4 @@
-"""test_membrane_hold_parity.py - a line held back by design costs what a shown line costs (28 Sep, claude-00000004;
-scheduled audit account03/B08 R12, B08-R12-HOLD-PARITY-010).
+"""test_membrane_hold_parity.py - a line held back by design costs what a shown line costs.
 
     python test_membrane_hold_parity.py [LIVE_MEMBRANE.py] [OLD_LIVE_MEMBRANE.py] [--old-fixmem OLD_LIVE_MEMBRANE.py]
                                         [--old-quota OLD_LIVE_MEMBRANE.py]
@@ -14,23 +13,25 @@ refractory keys and what a second eligible candidate gets must match between the
  P3 the refractory keys and the fire times match between the arms after the focal line
  P4 the focal line is shown in SHOW and not in HOLD, and HOLD logs it as held
 With OLD_LIVE_MEMBRANE, the same steps on the membrane before this change must differ (the check can fail).
- P5 (28 Sep 15:xx, B08 R12 B08-R12-FIXMEM-CARRYOVER-014) an error line whose fix memory is M: both arms spend the same
+ P5 an error line whose fix memory is M: both arms spend the same
     budget, only SHOW prints, and M offered a minute later or after the refractory is served in neither arm (focal
     isolation); the HOLD record names M. P6: hold_estimand "total" keeps the mediated exposure, as labelled.
     With --old-fixmem, the membrane before that change must serve M in HOLD and not in SHOW (N2).
- P7 (28 Sep 16:xx, account01/B08 R49, B08-R49-CROSSSESSION-QUOTA-INTERFERENCE-045) the two-session quota, on real
-    temporary logs with the module's own served_elsewhere (not stubbed, B08-R49-PARITY-TEST-MASKS-GLOBAL-STATE-046): M
+ P7 the two-session quota, on real
+    temporary logs with the module's own served_elsewhere: M
     served in session S0; in S1 an error line whose fix is M, SHOW or HOLD, written to the logs as the hook writes them;
     M offered in S2. S2 must be served the same, and the quota must count the same sessions, in both arms.
  P8 the same evaluation: a held fix memory stops the memory channel from serving a second memory, as the shown line's
     named memory does. P9 the word channel does not name a memory the evaluation already named or held.
     With --old-quota, the membrane before this change must fail P7, P8 and P9 (N3, N4, N5).
- P7 and P8 also pin the state the rule should leave, not only that the arms agree (28 Sep 18:xx, account03/B08 auto61,
-    B08-R49-PARITY-ABSOLUTE-CONTRACT-020: two arms can be identically wrong): in P7 M is refused in S2 in both arms, the
+ P7 and P8 also pin the state the rule should leave, not only that the arms agree: in P7 M is refused in S2 in both arms, the
     quota lists [M, 2] and counts S0 and S1; in P8 M2 is refused in both arms. N6: a membrane whose quota counts no
     session, in both arms, must fail P7; N7: one whose memory channel ignores the memory the evaluation named or held,
     in both arms, must fail P8 (the checks can fail on a symmetric regression).
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import copy
 import importlib.util
 import json

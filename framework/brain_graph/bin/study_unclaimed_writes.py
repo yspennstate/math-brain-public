@@ -1,5 +1,5 @@
 """study_unclaimed_writes.py - how often does a session edit a shared brain file with no live mesh claim of its own
-covering it? (registered 28 Sep 09:5x in study/THREE_DAY_RUN_2026-09-27.md before any code; claude-00000004)
+covering it?
 
 Population: Claude transcripts touched since SINCE; their Edit, Write, MultiEdit and NotebookEdit calls whose path lies
 under a shared root (below). A call is covered when one of the session's agent ids held a claim whose canonical path
@@ -10,6 +10,9 @@ keeps no session key). Kinds by session_kinds.py.
 
     python study_unclaimed_writes.py SINCE_ISO_DATE OUT_JSON
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import collections
 import glob
 import io

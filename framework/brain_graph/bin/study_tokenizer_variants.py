@@ -1,4 +1,4 @@
-"""study_tokenizer_variants.py - three tokenizer fixes aimed at the misses of his own questions (27 Sep, claude-00000004).
+"""study_tokenizer_variants.py - three tokenizer fixes aimed at the misses of his own questions.
 
 Nine of his 56 owner-voice questions miss the top five. About half are neighbouring memories about the same event; the
 rest are words the index cannot join: "box 4" against box04 (a lone digit is dropped), "version 3" against
@@ -13,6 +13,9 @@ searches, and the 968 reworded bank questions with their verbatim twins (quarant
 
     python study_tokenizer_variants.py OUT_JSON [--variants base,canon,stem,dates,all] [--skip-bank]
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import collections
 import hashlib
 import io

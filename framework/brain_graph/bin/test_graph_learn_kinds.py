@@ -16,6 +16,9 @@ projects folder, so nothing live is read or written. Counts only.
 8. a real sample: the live recall log and the extracted events of the last six hours, run dry against the live projects
    folder, count test workers and leave the weight unchanged (skipped when the extract is missing)
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import importlib.util
 import json
 import os
@@ -142,8 +145,7 @@ def main():
         transcript(proj, "22222222-0000-4000-8000-000000000002", "sdk-cli", "[headless-worker] QUESTION rec_01_02\n\nWhere did ...")
         transcript(proj, "33333333-0000-4000-8000-000000000003", "sdk-cli", "You are the nightly dream.")
         gl.PROJECTS = os.path.join(tmp, "projects")
-        # since 29 Sep the learner asks session_kinds, the resolver the store and the fast layer share (account03/B01
-        # auto73), so the fixture's transcripts are that module's folder; the real sample below points it back
+        # since 29 Sep the learner asks session_kinds, the resolver the store and the fast layer share, so the fixture's transcripts are that module's folder; the real sample below points it back
         sk = gl.session_kinds
         live_sk = (sk.PROJECTS, sk.CODEX, sk.CACHE)
         sk.PROJECTS, sk.CODEX = os.path.join(tmp, "projects"), os.path.join(tmp, "codex")

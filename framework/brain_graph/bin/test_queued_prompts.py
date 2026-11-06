@@ -1,5 +1,4 @@
-"""test_queued_prompts.py - his prompts typed while an agent works reach the capture and the verdict file (27 Sep,
-claude-00000004). Such a prompt is written only as a queued_command attachment (and a queue-operation record), never
+"""test_queued_prompts.py - his prompts typed while an agent works reach the capture and the verdict file. Such a prompt is written only as a queued_command attachment (and a queue-operation record), never
 as a user record; until 27 Sep extract_touch_events.scan_file and backfill_history._verdicts_in read user records
 alone, and missed 1,213 of his 5,269 prompts since 16 Aug and 59 of his 165 corrections.
 
@@ -8,6 +7,9 @@ alone, and missed 1,213 of his 5,269 prompts since 16 Aug and 59 of his 165 corr
 Controls on synthetic transcripts in a temp dir, plus one real transcript when it is present (his queued correction of
 26 Sep 20:11 in session fea50eb9). The pre-fix files fail the queued controls (checked at install).
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import collections
 import json
 import os

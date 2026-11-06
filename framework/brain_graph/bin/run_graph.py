@@ -20,6 +20,9 @@ Windows power throttling, refuses to build with less than 3 GB of commit headroo
 logs/run_graph.log and the latest state to STATUS.json. Launched windowless by run_graph.vbs (wscript //B, pythonw).
 A build or an hourly capture that finds a run in progress waits up to three minutes for it; a fast run skips.
 Usage: run_graph.py capture|build|fast|status"""
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import ctypes
 import ctypes.wintypes as wt
 import io
@@ -135,8 +138,7 @@ def _os_lock(fd, take):
 
 class Lock:
     """One run at a time, held by the operating system on an open file for as long as the run holds it and released by
-    the system when the run ends, however it ends (29 Sep, scheduled audits account02/B18 r76 and account01/B18,
-    B18-R63-PID-REUSE-FALSE-LIVENESS-001 and B18-R63-RUNGRAPH-POSIX-CONTENTION-CRASH-20260929).
+    the system when the run ends, however it ends.
 
     Until then the lock was a file created exclusively with the holder's pid in it, broken when that pid was not running
     or the file was older than stale_s. A pid says only that some process with that number is running: a crashed run's
@@ -166,7 +168,6 @@ class Lock:
     def __enter__(self):
         # A lock that cannot be opened is a failure, not a run in progress: until 29 Sep both came back as held = False,
         # and a lock path that could never be opened read as healthy contention on every run while nothing ran
-        # (account04/B15 r9, B15-R63-LOCK-OPEN-FAILURE-MASQUERADES-AS-CONTENTION-20260929-01).
         stage = "making the lock folder"
         try:
             os.makedirs(os.path.dirname(self.path), exist_ok=True)
@@ -355,7 +356,7 @@ def _sidecar_behind():
 def _fast_layer(retry=True):
     """The fast layer after a capture or a build. A sidecar left behind the store (its publish failed after a build
     swapped the store in) is republished first, since a delta is built only over the sidecar's own store; if it is still
-    behind, no delta is built and the previous pair keeps serving (29 Sep, account02/B11 r83). retry=False is the build's
+    behind, no delta is built and the previous pair keeps serving. retry=False is the build's
     call, right after its own sidecar step failed; the next capture retries."""
     why = _sidecar_behind()
     if why and retry:
@@ -451,7 +452,7 @@ def event_files():
     A Codex events file is left out, and the leaving logged, until the Codex capture keys sessions by a canonical id:
     extract_codex_events.py writes x + the last seven characters of the rollout id, which session_kinds cannot resolve
     (all 2,143 sessions of events_codex.jsonl read 'unknown' on 27 Sep), so the builder could not drop a script's session
-    and the store would stop being known-test-excluded (scheduled audit account01/B15, finding r52, 27 Sep). A study that
+    and the store would stop being known-test-excluded. A study that
     means to build with those events sets BRAIN_GRAPH_ALLOW_CODEX_EVENTS=1."""
     files = [EVENTS]
     try:
@@ -637,9 +638,9 @@ def build():
     files = event_files()
     nbytes = os.path.getsize(EVENTS)         # where this build's events end: the fast layer starts here (27 Sep)
     try:                                     # and what those bytes were, so the fast layer can tell a rewritten log
-        import live_delta                    # (account04/B06 R12, 27 Sep)
+        import live_delta
         marks = live_delta.prefix_marks(EVENTS, nbytes) or (None, None)
-        full_sha = live_delta.prefix_sha(EVENTS, nbytes)   # the whole prefix (account03/B12 R12, 28 Sep)
+        full_sha = live_delta.prefix_sha(EVENTS, nbytes)   # the whole prefix
     except Exception:
         marks, full_sha = (None, None), None
     try:

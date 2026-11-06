@@ -21,6 +21,9 @@ the number of distinct orders each method put in its top two over the stretch (n
 
     python study_standing_orders.py LABELS_JSON OUT_JSON
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import collections
 import datetime
 import glob
