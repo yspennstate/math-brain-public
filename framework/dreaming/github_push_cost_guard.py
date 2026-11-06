@@ -60,7 +60,7 @@ HOOK_TEXT = """#!/bin/sh
 # Cost guard: a push that would start billed GitHub Actions runs on a private repo is refused
 # unless the head commit says [skip ci] or ALLOW_CI_PUSH=1 is set. Source: %s
 PY="%s"
-[ -x "$PY" ] || PY=python
+[ -x "$PY" ] || PY=$(command -v python3 || command -v python)   # some systems have only python3
 exec "$PY" -X utf8 "%s" "$@"
 """ % (os.path.abspath(__file__).replace("\\", "/"), sys.executable.replace("\\", "/"),
        os.path.abspath(__file__).replace("\\", "/"))
@@ -363,7 +363,7 @@ def decide(remote_url, lines, env=None, cwd=None):
             continue                                  # a branch deletion starts nothing
         changed = None
         if remote_sha != ZERO and git("cat-file", "-e", remote_sha + "^{commit}", cwd=cwd)[0] == 0:
-            rc, out = git("diff", "--name-only", remote_sha, local_sha, cwd=cwd)
+            rc, out = git("diff", "--name-only", "--no-renames", remote_sha, local_sha, cwd=cwd)
             changed = [f for f in out.split("\n") if f.strip()] if rc == 0 else None
         hits = would_start_runs(workflows_at(local_sha, cwd=cwd), remote_ref, changed, default_branch)
         if not hits:
@@ -420,6 +420,7 @@ def install(clones):
                 continue
         with io.open(target, "w", encoding="utf-8", newline="\n") as fh:
             fh.write(HOOK_TEXT)
+        os.chmod(target, 0o755)   # git skips a hook without the execute bit, silently, on macOS and Linux
         print("installed: %s" % target)
 
 
