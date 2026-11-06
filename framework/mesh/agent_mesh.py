@@ -325,6 +325,18 @@ def canonical_resource(raw: str) -> tuple[str, str, str]:
     if not is_logical:
         # Anything without an explicit logical namespace is a path.  This prevents
         # src/file.py and C:\repo\src\file.py from becoming unrelated claims.
+        # A path that is not absolute ("src/x.py", a bare "file.txt", drive-relative "C:file.txt") resolves
+        # against this shell's cwd, so the same string claimed from two directories names two resources and the
+        # claim protects nothing: both agents get their lease and neither sees the other. Such claims are
+        # refused; pass an absolute path or a logical namespace.
+        _absolute = bool(os.path.isabs(expanded) and re.match(r"^([A-Za-z]:[\\/]|\\\\|[\\/])", expanded)) or \
+            bool(re.match(r"^([A-Za-z]:[\\/]|\\\\|~[\\/])", expanded))
+        if not _absolute:
+            raise MeshError(
+                "non-absolute path resource %r would resolve against this shell's cwd and cover nothing another "
+                "agent could collide with - pass an ABSOLUTE path, or use a logical namespace (topic:, memory:, "
+                "git:, ...) for non-file resources" % display
+            )
         # Recognize foreign Windows paths before the POSIX host can prefix cwd.
         # On Windows retain realpath resolution (including junctions).
         windows_path = bool(re.match(r"^[A-Za-z]:[\\/]", expanded)) or expanded.startswith("\\\\")
