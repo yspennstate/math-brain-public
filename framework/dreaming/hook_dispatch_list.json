@@ -123,6 +123,20 @@
           "timeout": 600
         }
       ]
+    },
+    {
+      "matcher": ".*",
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}/test_rigor_hook.py"
+          ],
+          "timeout": 10
+        }
+      ]
     }
   ],
   "PreToolUse": [
@@ -435,6 +449,20 @@
             "{{DREAMING}}\\compact_hooks.py"
           ],
           "timeout": 60
+        }
+      ]
+    },
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}/crash_breadcrumb.py"
+          ],
+          "timeout": 30,
+          "statusMessage": "Checking whether the machine crashed"
         }
       ]
     }
@@ -943,6 +971,19 @@
             "{{DREAMING}}\\primary_hook.py"
           ],
           "timeout": 30
+        }
+      ]
+    },
+    {
+      "hooks": [
+        {
+          "type": "command",
+          "command": "python",
+          "args": [
+            "-s",
+            "{{DREAMING}}/test_rigor_hook.py"
+          ],
+          "timeout": 10
         }
       ]
     }
