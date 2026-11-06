@@ -208,7 +208,7 @@ def emit(engine, payload, runtime, writer, *, base_output=None, budget=9000, now
             # workers start one `codex exec` per batch of five pictures; each batch session was handed the whole
             # hourly block, ~9 KB per tool step ("pending=22" at 06:17), about 200 KB of his prompts per batch across
             # ~150 batches a night, to a worker whose only job is to draw. The launcher head that the ledger and the
-            # checklist already skip (memory headless_codex_batches_were_recorded_as_his_asks_2026_09_23) marks the
+            # checklist already skip marks the
             # session headless on its first prompt; its tool steps then drain nothing. OWNER_PROMPTS_HEADLESS_SKIP=0
             # restores the old behaviour.
             if os.environ.get("OWNER_PROMPTS_HEADLESS_SKIP", "1") != "0":

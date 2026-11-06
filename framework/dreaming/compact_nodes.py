@@ -357,7 +357,7 @@ def _related_query(text, words=80):
 
     Until 14 Oct 03:22 the query was the summary's first 60 words - the preface, the agent id and the mesh claims every
     summary opens with - so 377 of the 777 nodes written 13-14 Oct got no related memory and many of the rest an
-    unrelated one (his_standing_film_orders_2026_09_23 on 158 of them). The 03:22 query still led with the scratchpad
+    unrelated one (the same standing-orders memory on 158 of them). The 03:22 query still led with the scratchpad
     path and the environment lines a custom summary opens with: 66 of the 227 nodes saved after it got nothing, and for
     8 recent such nodes every one of recall's top 25 rows was a compaction record. On 12 real nodes (14 Oct 07:00)
     quotes first, then the excerpt's words, brought on-topic memories for most of them.
