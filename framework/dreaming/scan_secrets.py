@@ -138,6 +138,13 @@ MAX_REPOSITORY_IDENTITY_FILE_BYTES = 256 * 1024 * 1024
 MAX_SHARED_INDEX_FILES = 64
 MAX_TOTAL_SHARED_INDEX_BYTES = 256 * 1024 * 1024
 GIT_TIMEOUT_SECONDS = 60
+# One non-batch git call (rev-parse, rev-list, diff). 60 s failed a memory sync's push twice in one day on a
+# machine at 95 pct commit that took ~35 s just to start a process; the same calls take 0.3-2.7 s on a
+# quiet box. A longer wait still fails closed with the same message.
+GIT_CALL_TIMEOUT_SECONDS = 180
+GIT_BATCH_IDLE_SECONDS = 60
+GIT_BATCH_SECONDS_PER_OBJECT = 0.5
+GIT_BATCH_CEILING_SECONDS = 4 * 3600
 MAX_REPORTED_LOCATIONS_PER_PATTERN = 3
 _OID = re.compile(rb"(?:[0-9a-f]{40}|[0-9a-f]{64})\Z")
 _OID_RANGE = re.compile(
@@ -796,6 +803,9 @@ def _execute_git(
     environment: dict[str, str] | None = None,
 ) -> tuple[bytes | None, str | None]:
     creationflags = subprocess.CREATE_NO_WINDOW if os.name == "nt" else 0
+    if input_bytes:
+        return _execute_git_batch(arguments, input_bytes, environment, creationflags)
+    timeout_seconds = GIT_CALL_TIMEOUT_SECONDS
     try:
         process = subprocess.run(
             arguments,
@@ -803,13 +813,123 @@ def _execute_git(
             capture_output=True,
             creationflags=creationflags,
             env=environment or _sanitized_git_environment(),
-            timeout=GIT_TIMEOUT_SECONDS,
+            timeout=timeout_seconds,
         )
     except (OSError, subprocess.TimeoutExpired) as error:
         return None, "could not complete Git operation (%s)" % _safe_exception(error)
     if process.returncode != 0:
         return None, "Git operation failed (exit=%d)" % process.returncode
     return process.stdout or b"", None
+
+
+def _execute_git_batch(
+    arguments: list[str],
+    input_bytes: bytes,
+    environment: dict[str, str] | None,
+    creationflags: int,
+) -> tuple[bytes | None, str | None]:
+    # A batch request (cat-file --batch / --batch-check) is timed on progress, not on its total length.
+    # The nightly dream stages ~17,700 memory files; right after git add they are loose objects, one cold
+    # open each, and on a loaded disk a cold open measured 0.7-2 s. A flat 60 s, then 20 ms and 100 ms per
+    # object, each timed out a scan that was still answering, and the dream committed nothing (4 Nov).
+    # cat-file flushes after every object, so output that stops for GIT_BATCH_IDLE_SECONDS means git is
+    # stuck; output that keeps coming means it is working. A hard ceiling still bounds the whole call, and
+    # either limit fails closed with the same message as before.
+    import threading
+    import time
+
+    requested = input_bytes.count(b"\n")
+    ceiling = min(
+        GIT_BATCH_CEILING_SECONDS,
+        GIT_TIMEOUT_SECONDS + GIT_BATCH_SECONDS_PER_OBJECT * requested,
+    )
+    timeout_message = "could not complete Git operation (TimeoutExpired)"
+    try:
+        process = subprocess.Popen(
+            arguments,
+            stdin=subprocess.PIPE,
+            stdout=subprocess.PIPE,
+            stderr=subprocess.PIPE,
+            creationflags=creationflags,
+            env=environment or _sanitized_git_environment(),
+        )
+    except OSError as error:
+        return None, "could not complete Git operation (%s)" % _safe_exception(error)
+    chunks: list[bytes] = []
+    last_progress = [time.monotonic()]
+
+    def feed() -> None:
+        try:
+            for offset in range(0, len(input_bytes), 65536):
+                process.stdin.write(input_bytes[offset:offset + 65536])
+                process.stdin.flush()
+                last_progress[0] = time.monotonic()
+        except (OSError, ValueError):
+            pass
+        finally:
+            try:
+                process.stdin.close()
+            except (OSError, ValueError):
+                pass
+
+    def drain_stdout() -> None:
+        try:
+            while True:
+                block = process.stdout.read1(65536)
+                if not block:
+                    break
+                chunks.append(block)
+                last_progress[0] = time.monotonic()
+        except (OSError, ValueError):
+            pass
+
+    def drain_stderr() -> None:
+        try:
+            while process.stderr.read(65536):
+                pass
+        except (OSError, ValueError):
+            pass
+
+    threads = [
+        threading.Thread(target=feed, daemon=True),
+        threading.Thread(target=drain_stdout, daemon=True),
+        threading.Thread(target=drain_stderr, daemon=True),
+    ]
+    for thread in threads:
+        thread.start()
+    started = time.monotonic()
+    timed_out = False
+    while True:
+        try:
+            process.wait(timeout=1.0)
+            break
+        except subprocess.TimeoutExpired:
+            now = time.monotonic()
+            if (
+                now - last_progress[0] > GIT_BATCH_IDLE_SECONDS
+                or now - started > ceiling
+            ):
+                timed_out = True
+                break
+    if timed_out:
+        try:
+            process.kill()
+        except OSError:
+            pass
+        try:
+            process.wait(timeout=30)
+        except subprocess.TimeoutExpired:
+            pass
+        for thread in threads:
+            thread.join(timeout=5)
+        return None, timeout_message
+    for thread in threads:
+        thread.join(timeout=GIT_BATCH_IDLE_SECONDS)
+    if any(thread.is_alive() for thread in threads):
+        return None, timeout_message
+    if process.returncode != 0:
+        return None, "Git operation failed (exit=%d)" % process.returncode
+    return b"".join(chunks), None
 
 
 def _discover_repository(

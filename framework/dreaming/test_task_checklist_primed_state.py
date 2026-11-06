@@ -52,7 +52,7 @@ class Counting:
         self.real, self.n = real, 0
 
     def load(self, fh, *a, **k):
-        if os.path.basename(getattr(fh, "name", "") or "") == "state.json" or "state.json" in str(getattr(fh, "name", "")):
+        if not isinstance(getattr(fh, "name", ""), str) or "state.json" in getattr(fh, "name", ""):
             self.n += 1
         return self.real.load(fh, *a, **k)
 
@@ -110,7 +110,7 @@ n = [0]
 real = m.json
 class C:
     def load(self, fh, *a, **k):
-        if "state.json" in str(getattr(fh, "name", "")):
+        if not isinstance(getattr(fh, "name", ""), str) or "state.json" in getattr(fh, "name", ""):
             n[0] += 1
         return real.load(fh, *a, **k)
     def __getattr__(self, k):
