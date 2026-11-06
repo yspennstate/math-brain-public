@@ -34,7 +34,7 @@ is in `docs/EXERCISING.md`.
 | Part | Files | Checked by |
 |---|---|---|
 | Resident memory-recall server | `dreaming/brain_recall_server.py`, `brain_recall_client.py`, `check_brain_recall_health.py` | `dreaming/test_brain_recall_liveness.py` |
-| Resident math-recall server, client and keeper | `dreaming/recall_server.py`, `recall_client.py`, `recall_protocol.py`, `recall_keeper.py`, `server_safety.py` | `dreaming/test_recall_server_lock_posix.py`, `test_math_recall_server_posix.py` (Linux or macOS) |
+| Resident math-recall server, client and keeper | `dreaming/recall_server.py`, `recall_client.py`, `recall_protocol.py`, `recall_keeper.py`, `server_safety.py` | `dreaming/test_recall_server_catch_up.py`, `test_recall_server_read_doc_memo.py`, `test_recall_server_timing.py`, `test_recall_server_prewarm.py`, `test_recall_keeper_dry.py`, `test_recall_client_retry.py`, `test_brain_recall_client_wait.py`; `test_recall_server_lock_posix.py`, `test_math_recall_server_posix.py` (Linux or macOS) |
 | Fast path over a cached store state | `dreaming/fastrecall.py`, `fastrecall_delta.py`, `math_recall_prebuild.py` | `dreaming/test_fastrecall_rebuilt_store.py` |
 | The levers measured, kept and dropped | `docs/RECALL_LEVERS.md` | |
 
@@ -47,6 +47,19 @@ python agent_tools/test_math_recall_server_posix.py
 python agent_tools/test_recall_keeper_posix.py
 python agent_tools/test_fastrecall_rebuilt_store.py
 ```
+
+To keep a server running, start the keeper once per login and leave it:
+`python agent_tools/recall_keeper.py` serves the checkout's own store
+(`local/population/brain.sqlite3`) when `MATHBRAIN_STORE` is unset;
+`python framework/dreaming/recall_keeper.py` needs `MATHBRAIN_STORE` set to the store the
+clients read, and exits at once without it. Start it with the same environment as the
+clients (a client whose environment differs is refused and recalls cold), windowless on
+Windows (`pythonw`, or a launcher at logon), from a login item, a user systemd unit or
+launchd elsewhere, and never with `python -s`. It starts the server when none answers,
+waits while memory or disk is short, times one query every ten minutes and stands a slow
+server down for an hour, and when a wire file changes it loads the next server beside the
+old one, which keeps serving until the new one is up. Its log is `recall_keeper.log` beside
+it; create `RECALL_KEEPER_STOP` there to stop it.
 
 The fast path checks the SHA-256 of `src/math_brain/retrieval.py` and
 `agent_tools/query_embed.py` before it trusts its cache. If either file changes, it turns
