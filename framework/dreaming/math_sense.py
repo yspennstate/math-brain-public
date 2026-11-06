@@ -1954,11 +1954,25 @@ def _already_injected(session_id, node_ids, *, record=True):
             rec = {}
         if not isinstance(rec, dict) or now - float(rec.get("ts", 0) or 0) >= SESSION_STATE_TTL_S:
             rec = {}
+        # ONE CONTEXT, NOT 48 HOURS (5 Nov 2026, MATHBRAIN_DEDUP_PER_CONTEXT, default on). A compaction
+        # drops every block the session was shown, so an id recorded before the session's newest compaction is not a
+        # duplicate after it. Measured 5 Nov: 409 of 416 all_dedup_suppressed silences in 24 h came a median 16 min
+        # after a compaction, in loop sessions that compact about every 40 min. The shard records the compaction it
+        # was written under ("ctx"); a newer one starts it empty. Any doubt (no index, unreadable) keeps the old rule.
+        _ctx = 0.0
+        if os.environ.get("MATHBRAIN_DEDUP_PER_CONTEXT", "1") != "0":
+            try:
+                import once_per_context as _opc
+                _ctx = float(_opc.last_compaction_at(session_id) or 0.0)
+            except Exception:
+                _ctx = 0.0
+            if _ctx and rec and _ctx > float(rec.get("ctx", 0) or 0):
+                rec = {}
         seen = set(rec.get("ids") or [])
         dup = set(node_ids) & seen
         if not record:
             return dup
-        rec = {"ids": sorted(seen | set(node_ids))[:400], "ts": now}
+        rec = {"ids": sorted(seen | set(node_ids))[:400], "ts": now, "ctx": max(_ctx, float(rec.get("ctx", 0) or 0))}
         try:
             os.makedirs(SESSION_DIR, exist_ok=True)
         except OSError:
