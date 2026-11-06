@@ -60,6 +60,41 @@ class Server(socketserver.TCPServer):
     def handle_error(self,request,client_address):
         self.failures += 1
 
+def usage_now(proc=None):
+    """(page faults, CPU seconds) of this process so far, either None when unread. Page faults are psutil's
+    num_page_faults on Windows and minor plus major faults from getrusage elsewhere."""
+    faults = cpu = None
+    try:
+        import psutil
+        proc = proc or psutil.Process()
+        cpu = sum(proc.cpu_times()[:2])
+        faults = getattr(proc.memory_info(), 'num_page_faults', None)
+    except Exception:
+        pass
+    if faults is None and os.name != 'nt':
+        try:
+            import resource
+            use = resource.getrusage(resource.RUSAGE_SELF)
+            faults = use.ru_minflt + use.ru_majflt
+            if cpu is None:
+                cpu = use.ru_utime + use.ru_stime
+        except Exception:
+            pass
+    return faults, cpu
+
+
+def timing_line(pid, requests, took, idle, reloaded, rc, catch_note, start, end):
+    """One line per served call, never the query. A slow call after an idle gap is paging when the faults are many
+    and the CPU small, and compute when the CPU is close to the time taken."""
+    cost = ''
+    if start[0] is not None and end[0] is not None:
+        cost += ' pf %d' % (end[0] - start[0])
+    if start[1] is not None and end[1] is not None:
+        cost += ' cpu %.1f' % (end[1] - start[1])
+    return '%s pid %d req %d took %.1f idle %.1f reload %d rc %d%s%s\n' % (
+        time.strftime('%Y-%m-%d %H:%M:%S'), pid, requests, took, idle, reloaded, rc, catch_note, cost)
+
+
 def catch_up(held, fr, store, derive, new_key, now=time.monotonic):
     """Bring the held prepared state up to date in memory after the store changed.
 
@@ -90,6 +125,16 @@ def catch_up(held, fr, store, derive, new_key, now=time.monotonic):
 
 def main():
     policy()
+    if os.name == 'nt':
+        # Normal, not BelowNormal: callers wait on the server at Normal, and on a busy machine a BelowNormal server
+        # took minutes for a call a Normal one answered in seconds (same query, 88 pct CPU: about 395 s against 1-7 s).
+        # Through psutil: kernel32.SetPriorityClass(GetCurrentProcess(), ...) without a pointer restype passes an
+        # invalid handle on 64-bit Windows and fails silently.
+        try:
+            import psutil
+            psutil.Process().nice(psutil.NORMAL_PRIORITY_CLASS)
+        except Exception:
+            pass
     ap = argparse.ArgumentParser()
     ap.add_argument('--store',default=os.environ.get('MATHBRAIN_STORE',DEFAULT_STORE))
     ap.add_argument('--parent-pid',type=int,default=0)
@@ -123,7 +168,21 @@ def main():
         # Retain the encoder session and the exact prepared state; no query is used to warm them.
         fr.Encoder().start().wait()
         prepared = fr.open_prepared(args.store,ranking,tool.derive_tool,tool.__file__)
+        # A server started while another process builds the prepared state used to exit rc 6 at once, and the keeper
+        # then backed off for minutes. Wait for that builder (up to 10 min), and log why when it still fails.
+        waited = 0
+        while prepared is None and 'has been building' in str(getattr(fr,'STATUS',{}).get('why','')) and waited < 600 \
+                and not stop.exists():
+            time.sleep(15)
+            waited += 15
+            prepared = fr.open_prepared(args.store,ranking,tool.derive_tool,tool.__file__)
         if prepared is None:
+            try:
+                with open(HERE/'recall_server_reasons.log','a',encoding='utf-8') as fh:
+                    fh.write('%s pid %d start rc 6 after %d s: %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S'),os.getpid(),
+                                                                     waited,str(getattr(fr,'STATUS',{}).get('why',''))[:200]))
+            except Exception:
+                pass
             return 6
         if max(resident().values()) >= CAP:
             return 7
@@ -163,6 +222,9 @@ def main():
         class Handler(socketserver.BaseRequestHandler):
             def handle(self):
                 self.request.settimeout(10)
+                t0 = time.monotonic()
+                start_use = usage_now()
+                reloaded, catch_note = 0, ''
                 try:
                     request = receive_frame(self.request)
                     argv = request.get('argv')
@@ -189,7 +251,11 @@ def main():
                         importlib.reload(ranking)
                         fr._MEMO.clear()
                         state['store_key'] = current_key
-                        if catch_up(held, fr, args.store, tool.derive_tool, current_key) is None:
+                        tc = time.monotonic()
+                        caught = catch_up(held, fr, args.store, tool.derive_tool, current_key)
+                        catch_note = ' catch %s %.1f' % (caught, time.monotonic()-tc)
+                        reloaded = 2 if caught is not None else 1   # 2 = caught up in memory, 1 = dropped and re-opened
+                        if caught is None:
                             held['key']=None
                             held['prepared']=None
                             # The old prepared state sits in reference cycles; unfreed it pushed the next call to
@@ -262,7 +328,17 @@ def main():
                                 break
                             time.sleep(.01)
                         return
+                    took = time.monotonic()-t0
                     send_frame(self.request,response)
+                    try:
+                        # 'idle' is the gap since the previous call ended. Written after the reply is sent, so the
+                        # caller never waits on the log.
+                        with open(HERE/'recall_server_timing.log','a',encoding='utf-8') as fh:
+                            fh.write(timing_line(os.getpid(),state['requests'],took,t0-state.get('last_end',started),
+                                                 reloaded,int(rc or 0),catch_note,start_use,usage_now()))
+                        state['last_end'] = time.monotonic()
+                    except Exception:
+                        pass
                 except Exception as exc:
                     self.server.failures += 1
                     try:
