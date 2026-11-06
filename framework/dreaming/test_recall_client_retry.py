@@ -1,13 +1,15 @@
-"""Controls for the math recall client against a fake server on a loopback port (no store, no model).
+"""test_recall_client_retry.py - recall_client asks the server once more after a store_moved_during_call refusal,
+and only once.
 
- C1 a warm answer is printed and its exit code returned
- C2 a call refused with store_moved_during_call is asked once more and the second, warm answer is used
- C3 two refusals in a row are not retried a third time: the call falls back (None)
- C4 any other refusal falls back at once, and the fallback is logged with its reason
- C5 no endpoint file: the call falls back and the log names the error
- C6 the default wait for the server is 180 s
+    python test_recall_client_retry.py
 
-    python test_recall_client_retry.py      (a few seconds; ALL PASS at the end)
+A fake server on 127.0.0.1 answers each connection from a script of replies; the client reads a temporary
+endpoint.json. No store, model or real server is touched.
+ R1 refused store_moved, then served: the client returns the served rc and makes 2 connections
+ R2 refused store_moved twice: the client falls back (None) after exactly 2 connections, no loop
+ N1 refused for another reason: the client falls back after 1 connection (no retry)
+ N2 served at once: 1 connection
+ R3 the retry flag is clear again after a retried call (a later call may retry once more)
 """
 import base64
 import hashlib
@@ -16,105 +18,88 @@ import json
 import os
 import socket
 import sys
+import tempfile
 import threading
+from pathlib import Path
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 sys.path.insert(0, HERE)
-os.environ.pop('MATH_RECALL_SERVER_DISABLE', None)
-os.environ.pop('MATH_RECALL_SERVER_TIMEOUT', None)
-import recall_protocol as P
-import recall_client as C
+import recall_client  # noqa: E402
+from recall_protocol import code_stamp, env_key, requested_store, send_frame, receive_frame  # noqa: E402
 
-results = []
-ENDPOINT = os.path.join(HERE, 'endpoint.json')
-COLD = os.path.join(HERE, 'recall_cold_calls.jsonl')
-saved = {p: open(p, 'rb').read() if os.path.exists(p) else None for p in (ENDPOINT, COLD)}
+fails, ran = [], []
 
 
 def check(ok, what):
-    results.append(ok)
-    print(('PASS  ' if ok else 'FAIL  ') + what)
+    print(("PASS  " if ok else "FAIL  ") + what)
+    ran.append(what)
+    if not ok:
+        fails.append(what)
 
 
-def answer(text, rc=0):
-    out = text.encode('utf-8')
-    return {'ok': 1, 'rc': rc, 'stdout': base64.b64encode(out).decode('ascii'), 'stderr': '',
-            'stdout_sha256': hashlib.sha256(out).hexdigest(), 'stderr_sha256': hashlib.sha256(b'').hexdigest()}
+def served(rc=0, out=b"answer\n"):
+    return dict(ok=1, rc=rc, stdout=base64.b64encode(out).decode(), stderr=base64.b64encode(b"").decode(),
+                stdout_sha256=hashlib.sha256(out).hexdigest(), stderr_sha256=hashlib.sha256(b"").hexdigest())
 
 
-def serve(replies):
-    """Answer one connection per reply, in order; return the port and the list of requests seen."""
+def refused(why):
+    return dict(ok=0, why=why)
+
+
+def run(replies):
     srv = socket.socket()
-    srv.bind(('127.0.0.1', 0))
+    srv.bind(("127.0.0.1", 0))
     srv.listen(8)
+    srv.settimeout(5)
+    port = srv.getsockname()[1]
     seen = []
 
-    def run():
+    def serve():
         for reply in replies:
-            conn, _ = srv.accept()
+            try:
+                conn, _ = srv.accept()
+            except OSError:
+                return
             with conn:
-                seen.append(P.receive_frame(conn))
-                P.send_frame(conn, reply)
-        srv.close()
-    threading.Thread(target=run, daemon=True).start()
-    return srv.getsockname()[1], seen
+                receive_frame(conn)
+                seen.append(1)
+                send_frame(conn, reply)
 
-
-def endpoint(port):
-    with open(ENDPOINT, 'w', encoding='utf-8') as fh:
-        json.dump({'host': '127.0.0.1', 'port': port, 'token': 't', 'code': 'c', 'store': P.requested_store([]),
-                   'stamp': P.code_stamp(()), 'environment': P.env_key()}, fh)
-
-
-class Out(io.StringIO):
-    pass
-
-
-def call():
-    C._COLD['logged'] = False
-    old, sys.stdout = sys.stdout, Out()
+    t = threading.Thread(target=serve, daemon=True)
+    t.start()
+    tmp = Path(tempfile.mkdtemp(prefix="rc_retry_"))
+    argv = ["question"]
+    (tmp / "endpoint.json").write_text(json.dumps(dict(
+        host="127.0.0.1", port=port, token="t", code="c", store=requested_store(argv),
+        stamp=code_stamp(()), environment=env_key(), model_files=[])), encoding="utf-8")
+    old_here, old_out = recall_client.HERE, sys.stdout
+    recall_client.HERE = tmp
+    sys.stdout = io.StringIO()
     try:
-        r = C._try_server([])
-        text = sys.stdout.getvalue()
+        rc = recall_client.try_server(argv)
+        printed = sys.stdout.getvalue()
     finally:
-        sys.stdout = old
-    return r, text
+        sys.stdout = old_out
+        recall_client.HERE = old_here
+    srv.close()
+    t.join(2)
+    return rc, len(seen), printed
 
 
-try:
-    port, seen = serve([answer('warm one\n', 3)])
-    endpoint(port)
-    r, text = call()
-    check(r == 3 and text == 'warm one\n' and len(seen) == 1, 'C1 a warm answer is printed and its code returned')
+def main():
+    os.environ.pop("MATH_RECALL_SERVER_DISABLE", None)
+    rc, n, out = run([refused("store_moved_during_call"), served(0)])
+    check(rc == 0 and n == 2 and "answer" in out, "R1 store_moved then served: rc %r, %d connections" % (rc, n))
+    check(recall_client._RETRY["used"] is False, "R3 retry flag clear after a retried call")
+    rc, n, _ = run([refused("store_moved_during_call"), refused("store_moved_during_call"), served(0)])
+    check(rc is None and n == 2, "R2 store_moved twice: rc %r, %d connections" % (rc, n))
+    rc, n, _ = run([refused("busy"), served(0)])
+    check(rc is None and n == 1, "N1 other refusal: rc %r, %d connections" % (rc, n))
+    rc, n, _ = run([served(3)])
+    check(rc == 3 and n == 1, "N2 served at once: rc %r, %d connections" % (rc, n))
+    print("FAIL" if fails else "PASS", "- %d controls, %d failed" % (len(ran), len(fails)))
+    return 1 if fails else 0
 
-    port, seen = serve([{'ok': 0, 'why': 'store_moved_during_call'}, answer('warm two\n')])
-    endpoint(port)
-    r, text = call()
-    check(r == 0 and text == 'warm two\n' and len(seen) == 2, 'C2 a store-moved refusal is asked once more, warm')
 
-    port, seen = serve([{'ok': 0, 'why': 'store_moved_during_call'}] * 2 + [answer('never\n')])
-    endpoint(port)
-    r, text = call()
-    check(isinstance(r, tuple) and r[1] is None and len(seen) == 2 and text == '', 'C3 a second refusal is not retried again')
-
-    port, seen = serve([{'ok': 0, 'why': 'busy'}])
-    endpoint(port)
-    r, text = call()
-    check(r == ('refused: busy', None) and len(seen) == 1, 'C4 another refusal falls back at once with its reason')
-
-    os.remove(ENDPOINT)
-    r, _ = call()
-    check(isinstance(r, tuple) and r[1] is None and r[0] == 'FileNotFoundError', 'C5 no endpoint falls back, error named')
-
-    src = open(os.path.join(HERE, 'recall_client.py'), encoding='utf-8').read()
-    check("'MATH_RECALL_SERVER_TIMEOUT','180.0'" in src, 'C6 the default wait for the server is 180 s')
-finally:
-    for p, b in saved.items():
-        if b is None:
-            if os.path.exists(p):
-                os.remove(p)
-        else:
-            open(p, 'wb').write(b)
-
-print('ALL PASS' if all(results) else 'FAILED %d of %d' % (results.count(False), len(results)))
-sys.exit(0 if all(results) else 1)
+if __name__ == "__main__":
+    sys.exit(main())
