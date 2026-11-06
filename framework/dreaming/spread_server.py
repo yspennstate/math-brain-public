@@ -49,6 +49,66 @@ ENV_PREFIXES = ("BRAIN_", "SPREAD_", "MATHBRAIN_", "FOK_")
 HOSTED = ("spread_recall", "fok_probe")
 
 
+# The BM25 build window. After each index publish the new generation's postings sidecar takes tens of seconds to build,
+# and in that window BM25() unpickles the whole payload under the GIL (measured: 14.9 s of a 15.1 s served call). The
+# previous generation's sidecar is still on disk then (the sweep keeps the newest older one as the next build's base),
+# and a sidecar file only ever appears by os.replace of a committed temp, so any *.postings.<tag>.sqlite3 is a finished
+# file. Here the hosted hooks' BM25() answers from it while the live one builds, the same one-generation-stale trade
+# SERVE_STALE makes for the graph; deliberate recall (outside this process) is untouched. Past STALE_BM25_MAX_S of age
+# the old file is not used and the payload path runs as before. Off: SPREAD_SERVER_STALE_BM25=0.
+STALE_BM25 = os.environ.get("SPREAD_SERVER_STALE_BM25", "1" if os.name == "nt" else "0") == "1"
+STALE_BM25_MAX_S = float(os.environ.get("SPREAD_SERVER_STALE_BM25_MAX_S", "1800"))
+STALE_BM25_USED = [0]
+
+
+def _stale_postings_conn(bm25, path):
+    import sqlite3
+    path = os.fspath(path)
+    sig = bm25._index_signature(path)
+    if sig is None:
+        return None
+    base = bm25._postings_base(path, bm25.postings_path(path, sig))
+    if base is None or time.time() - os.stat(base).st_mtime > STALE_BM25_MAX_S:
+        return None
+    con = sqlite3.connect("file:%s?mode=ro" % base.replace("?", "%3f"), uri=True)
+    try:
+        h = dict(con.execute("select k,v from hdr"))
+        if h.get("schema") != bm25.POSTINGS_SCHEMA:
+            con.close()
+            return None
+        return con, float(h["n"]), float(h["avgdl"])
+    except Exception:
+        con.close()
+        raise
+
+
+def install_stale_bm25():
+    import bm25
+    cls = bm25.BM25
+    if getattr(cls.__init__, "_stale_wrapped", False):
+        return
+    orig = cls.__init__
+
+    def __init__(self, path=bm25.INDEX):
+        if getattr(bm25, "_POSTINGS_ON", True):
+            try:
+                sc = bm25._postings_conn(path)            # what the original __init__ does first
+                if sc is None:                             # the live generation has no sidecar yet
+                    sc = _stale_postings_conn(bm25, path)
+                    if sc is not None:
+                        STALE_BM25_USED[0] += 1
+                if sc is not None:
+                    self._path, self._sc = os.fspath(path), sc
+                    self.n, self.avgdl = sc[1], sc[2]
+                    return
+            except Exception:
+                pass
+        orig(self, path)
+
+    __init__._stale_wrapped = True
+    cls.__init__ = __init__
+
+
 def log(msg):
     try:
         os.makedirs(STATE_DIR, exist_ok=True)
@@ -126,6 +186,12 @@ class Warm:
                     log("exact numpy bm25 on")
             except Exception as e:
                 log("exact numpy bm25 off: %s: %s" % (type(e).__name__, e))
+        if STALE_BM25:
+            try:
+                install_stale_bm25()
+                log("stale bm25 sidecar in the build window on (max age %.0f s)" % STALE_BM25_MAX_S)
+            except Exception as e:
+                log("stale bm25 off: %s: %s" % (type(e).__name__, e))
         log("loaded in %.2f s, %d code files watched" % (time.perf_counter() - t, len(self.code_files)))
 
     def _code_files(self):
