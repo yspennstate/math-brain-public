@@ -1,4 +1,4 @@
-"""study_live_membrane.py - the live membrane scored walk-forward on real sessions (26 Sep, claude-00000004).
+"""study_live_membrane.py - the live membrane scored walk-forward on real sessions.
 
 A cut D (default three days ago). The store and the sidecar are built only from what happened before D (bank work left
 out as in every build, memories last written after D left out); then every session after D is replayed from the

@@ -1,4 +1,4 @@
-"""doc_expand.py - write down, for each memory, the questions it answers, in plain words (26 Sep, claude-00000004).
+"""doc_expand.py - write down, for each memory, the questions it answers, in plain words.
 
 The brain's search is lexical: a question in his everyday words misses the note written in technical words about half
 the time, and a rewrite of the QUESTION closes part of that gap (+9 points at top 5, at a model call per search). This
@@ -112,10 +112,9 @@ def new_slugs(done, settle_s=120):
     minutes is left for the next run (it may still be being written). `done` is {slug: (written_at, sha or None)},
     the store's newest row per slug, which is the row bm25 uses. Changed means the text the writer sees now has a
     different digest from the row's; a row from before 27 Sep has no digest, and then a file modified after the row
-    counts as changed. Until 27 Sep a memory edited after its questions kept them (8 of 17,428 that morning, all
-    edited within the day; account03/B02's R4 audit). Until 28 Sep 04:1x the time test still ran first for a row with
+    counts as changed. Until 27 Sep a memory edited after its questions kept them. Until 28 Sep 04:1x the time test still ran first for a row with
     a digest too, so an edit made while the questions were being written, or within a minute after the row, was never
-    compared (account01/B02 auto11, B02-R4-SHA-INVALIDATION-MTIME-DEADZONE): the digest now decides every row that has
+    compared: the digest now decides every row that has
     one, which costs one read of each settled memory per run (15.6 s for 17,546 on 28 Sep, once an hour)."""
     sys.path.insert(0, os.path.join(HOME, ".claude", "dreaming"))
     import bm25

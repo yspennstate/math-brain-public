@@ -1,5 +1,4 @@
-"""reseal_blockdiff.py - what the math hook serves on the live store against the same store re-sealed (registered 28 Sep
-11:0x in THREE_DAY_RUN_2026-09-27.md; claude-00000004).
+"""reseal_blockdiff.py - what the math hook serves on the live store against the same store re-sealed.
 
 Every prompt of cand80's 898 (plain v1-v3, the 40 unanswerable probes, the absent bank, his gate-passing prompts) goes
 through the livepost80 hook, as its own process, once with MATHBRAIN_STORE on a byte copy of the live store and once on
