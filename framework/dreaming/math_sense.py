@@ -4788,6 +4788,14 @@ def _main_body(data, out):
                 load_signal_cache(os.path.join(os.path.dirname(STORE_PATH), "brain_signal_cache.pkl"))
             except Exception:
                 pass
+        else:
+            # the pooled candidates' signals from the keyed sidecar (math_brain.retrieval.load_signal_db):
+            # one query instead of ~300 recomputations; absent or stale, retrieve() computes them as before
+            try:
+                from math_brain.retrieval import load_signal_db, signal_db_path
+                load_signal_db(signal_db_path(STORE_PATH))
+            except Exception:
+                pass
 
         # the package copy is the maintained one; this file keeps a fallback
         global _render_parts
