@@ -50,6 +50,40 @@ ENV_PREFIXES = ("BRAIN_", "SPREAD_", "MATHBRAIN_", "FOK_")
 HOSTED = ("spread_recall", "fok_probe")
 
 
+# Which files a slow served call opened. A served call spends 80-94 pct of its
+# wall time off the CPU; the BM25 arm's 2,000 sqlite page reads (7.1 MB) cost only ~140 ms of CPU, and single cold
+# opens here take ~0.3 s under disk contention. An audit hook notes every open/listdir/scandir of the serving thread
+# during a call; a call slower than OPEN_LOG_MS writes its opens, by directory, with the longest gaps that followed
+# an open (a gap is the open plus whatever ran before the next one), to opens.jsonl.
+OPEN_LOG = os.path.join(STATE_DIR, "opens.jsonl")
+OPEN_LOG_MS = float(os.environ.get("SPREAD_SERVER_OPEN_LOG_MS", "2000" if os.name == "nt" else "0"))
+_TRACE = {"thr": None, "ops": None}
+
+
+def _audit(ev, args):
+    if _TRACE["thr"] is not None and ev in ("open", "os.listdir", "os.scandir") \
+            and threading.current_thread() is _TRACE["thr"]:
+        p = args[0] if args else None
+        if isinstance(p, (str, bytes)):
+            _TRACE["ops"].append((time.perf_counter(), p if isinstance(p, str) else p.decode("utf-8", "replace"), ev))
+
+
+if OPEN_LOG_MS > 0:
+    sys.addaudithook(_audit)
+
+
+def open_summary(ops, t_end):
+    dirs = {}
+    gaps = []
+    for i, (t, p, ev) in enumerate(ops):
+        d = os.path.dirname(p) if ev == "open" else p
+        dirs[d] = dirs.get(d, 0) + 1
+        nxt = ops[i + 1][0] if i + 1 < len(ops) else t_end
+        gaps.append((round((nxt - t) * 1000), os.path.basename(p) or p, ev))
+    gaps.sort(reverse=True)
+    return {"n": len(ops), "dirs": dict(sorted(dirs.items(), key=lambda kv: -kv[1])[:8]), "gaps": gaps[:8]}
+
+
 # The BM25 build window. After each index publish the new generation's postings sidecar takes tens of seconds to build,
 # and in that window BM25() unpickles the whole payload under the GIL (measured: 14.9 s of a 15.1 s served call). The
 # previous generation's sidecar is still on disk then (the sweep keeps the newest older one as the next build's base),
@@ -221,6 +255,32 @@ def install_df_memo(bm25):
     return True
 
 
+# Idle paging. Served calls of 2 s or more took a median 41,936 page faults
+# against 399 for calls under 1.5 s, and the faults follow the idle time before the call (over 60 s idle: ~46,500, every
+# call slow): with ~0.7 GB of RAM free Windows trims the idle server's ~390 MB working set and the next prompt pages its
+# state back in. A SOFT minimum (both hard
+# flags off) asks the memory manager to trim other working sets first; it can still trim this one under real pressure,
+# so nothing is pinned. Off with SPREAD_SERVER_WS_MIN_MB=0; posix unchanged.
+WS_MIN_MB = float(os.environ.get("SPREAD_SERVER_WS_MIN_MB", "0"))   # off: the ~46k-fault calls blamed on idle trimming were each the first call after a server restart; 320 and 560 MB soft floors changed nothing
+
+
+def ws_floor(min_mb):
+    if os.name != "nt":
+        return "not windows"
+    try:
+        import ctypes
+        from ctypes import wintypes
+        k = ctypes.WinDLL("kernel32", use_last_error=True)
+        k.GetCurrentProcess.restype = wintypes.HANDLE
+        k.SetProcessWorkingSetSizeEx.argtypes = [wintypes.HANDLE, ctypes.c_size_t, ctypes.c_size_t, wintypes.DWORD]
+        lo = int(min_mb * 1048576)
+        hi = max(lo * 2, int(RSS_CAP))
+        ok = k.SetProcessWorkingSetSizeEx(k.GetCurrentProcess(), lo, hi, 0x2 | 0x8)   # MIN_DISABLE | MAX_DISABLE: soft
+        return "soft min %d MB set" % min_mb if ok else "refused, error %d" % ctypes.get_last_error()
+    except Exception as e:
+        return "error %s: %s" % (type(e).__name__, e)
+
+
 def log(msg):
     try:
         os.makedirs(STATE_DIR, exist_ok=True)
@@ -234,8 +294,31 @@ def env_subset(env):
     return {k: v for k, v in env.items() if k.startswith(ENV_PREFIXES) and k != "SPREAD_SERVER_CHILD"}
 
 
-def rss_bytes():
-    if os.name == "nt":   # laptop port (5 Nov): the working set, from GetProcessMemoryInfo
+def avail_mb():
+    """Windows: physical RAM available to the machine, MB (GlobalMemoryStatusEx); None elsewhere or on error."""
+    if os.name != "nt":
+        return None
+    try:
+        import ctypes
+        from ctypes import wintypes
+
+        class MSX(ctypes.Structure):
+            _fields_ = [("dwLength", wintypes.DWORD), ("dwMemoryLoad", wintypes.DWORD),
+                        ("ullTotalPhys", ctypes.c_ulonglong), ("ullAvailPhys", ctypes.c_ulonglong),
+                        ("ullTotalPageFile", ctypes.c_ulonglong), ("ullAvailPageFile", ctypes.c_ulonglong),
+                        ("ullTotalVirtual", ctypes.c_ulonglong), ("ullAvailVirtual", ctypes.c_ulonglong),
+                        ("ullAvailExtendedVirtual", ctypes.c_ulonglong)]
+        m = MSX()
+        m.dwLength = ctypes.sizeof(MSX)
+        if ctypes.WinDLL("kernel32").GlobalMemoryStatusEx(ctypes.byref(m)):
+            return int(m.ullAvailPhys // 1048576)
+    except Exception:
+        pass
+    return None
+
+
+def rss_bytes(_faults=False):
+    if os.name == "nt":   # laptop port: the working set, from GetProcessMemoryInfo
         try:
             import ctypes
             from ctypes import wintypes
@@ -253,16 +336,109 @@ def rss_bytes():
             psapi = ctypes.WinDLL("psapi")
             psapi.GetProcessMemoryInfo.argtypes = [wintypes.HANDLE, ctypes.c_void_p, wintypes.DWORD]
             if psapi.GetProcessMemoryInfo(k.GetCurrentProcess(), ctypes.byref(c), c.cb):
-                return int(c.WorkingSetSize)
+                return (int(c.WorkingSetSize), int(c.PageFaultCount)) if _faults else int(c.WorkingSetSize)
         except Exception:
             pass
-        return 0
+        return (0, 0) if _faults else 0
     try:
         import resource
-        r = resource.getrusage(resource.RUSAGE_SELF).ru_maxrss
-        return r if sys.platform == "darwin" else r * 1024
+        u = resource.getrusage(resource.RUSAGE_SELF)
+        r = u.ru_maxrss if sys.platform == "darwin" else u.ru_maxrss * 1024
+        return (r, int(u.ru_majflt)) if _faults else r
     except Exception:
-        return 0
+        return (0, 0) if _faults else 0
+
+
+def call_cost():
+    """(process CPU s, page faults, working set MB) for one call's before/after: a
+    served call of 8-55 s with no load inside it was not waiting on the refresher (1 of 4 overlapped one, as often
+    as fast calls), so the log must say whether the time was CPU, paging, or waiting for a core. Windows counts soft
+    and hard faults together; posix gives major faults."""
+    ws, pf = rss_bytes(_faults=True)
+    return time.process_time(), pf, ws / 1048576.0, io_counts()
+
+
+# Where a call's page faults come from. About one served call in eight takes
+# ~44k faults (~175 MB) and ~2.2 s, yet its working set grows only 4-20 MB and free RAM is no lower than on fast calls:
+# something allocates and frees ~175 MB inside the call. A sampler thread reads the process fault count and private
+# bytes every FAULT_SAMPLE_MS during a call, charges each interval's faults to the serving thread's stack at its end
+# (the innermost frame from the dreaming folder, plus the innermost frame of all), and a call with at least
+# FAULT_LOG_MIN faults writes the top charges and its peak private-byte rise to faults.jsonl. Off: =0.
+FAULT_LOG = os.path.join(STATE_DIR, "faults.jsonl")
+FAULT_SAMPLE_MS = float(os.environ.get("SPREAD_SERVER_FAULT_SAMPLE_MS", "20" if os.name == "nt" else "0"))
+FAULT_LOG_MIN = int(os.environ.get("SPREAD_SERVER_FAULT_LOG_MIN", "20000"))
+# 5 Nov 22:0x: after the directory-read fix the slowest served calls take 0.6-1.2 s with ordinary fault counts; a call
+# at least this slow is logged too, and each top entry's sample count x FAULT_SAMPLE_MS is roughly its time.
+FAULT_LOG_MS = float(os.environ.get("SPREAD_SERVER_FAULT_LOG_MS", "800"))
+
+
+class FaultSampler(threading.Thread):
+    def __init__(self, target):
+        super().__init__(daemon=True)
+        self.tid = target.ident
+        self.done = threading.Event()
+        self.by = {}
+        self.n = 0
+        self.peak_priv = 0.0
+        import ctypes
+        from ctypes import wintypes
+
+        class PMC(ctypes.Structure):
+            _fields_ = [("cb", wintypes.DWORD), ("PageFaultCount", wintypes.DWORD),
+                        ("PeakWorkingSetSize", ctypes.c_size_t), ("WorkingSetSize", ctypes.c_size_t),
+                        ("QuotaPeakPagedPoolUsage", ctypes.c_size_t), ("QuotaPagedPoolUsage", ctypes.c_size_t),
+                        ("QuotaPeakNonPagedPoolUsage", ctypes.c_size_t), ("QuotaNonPagedPoolUsage", ctypes.c_size_t),
+                        ("PagefileUsage", ctypes.c_size_t), ("PeakPagefileUsage", ctypes.c_size_t)]
+        self.c = PMC()
+        self.c.cb = ctypes.sizeof(PMC)
+        k = ctypes.WinDLL("kernel32")
+        k.GetCurrentProcess.restype = wintypes.HANDLE
+        self.h = k.GetCurrentProcess()
+        self.f = ctypes.WinDLL("psapi").GetProcessMemoryInfo
+        self.f.argtypes = [wintypes.HANDLE, ctypes.c_void_p, wintypes.DWORD]
+        self.ref = ctypes.byref(self.c)
+        self.pf0, self.priv0 = self.read()
+
+    def read(self):
+        self.f(self.h, self.ref, self.c.cb)
+        return int(self.c.PageFaultCount), self.c.PagefileUsage / 1048576.0
+
+    @staticmethod
+    def key(fr):
+        # 5 Nov 22:2x: the dreaming part is the innermost THREE frames from the dreaming folder, joined by " < "
+        # (callee < caller), so a cost such as the memory-folder listing names the path that asked for it.
+        inner = None
+        ours = []
+        while fr is not None and len(ours) < 3:
+            co = fr.f_code
+            if inner is None:
+                inner = "%s:%s:%d" % (os.path.basename(co.co_filename), co.co_name, fr.f_lineno)
+            if "dreaming" in co.co_filename.replace("\\", "/"):
+                ours.append("%s:%s:%d" % (os.path.basename(co.co_filename), co.co_name, fr.f_lineno))
+            fr = fr.f_back
+        return "%s | %s" % (" < ".join(ours) or None, inner)
+
+    def run(self):
+        last = self.pf0
+        while not self.done.wait(FAULT_SAMPLE_MS / 1000.0):
+            try:
+                pf, priv = self.read()
+                fr = sys._current_frames().get(self.tid)
+                k = self.key(fr) if fr is not None else "?"
+                e = self.by.setdefault(k, [0, 0])
+                e[0] += pf - last
+                e[1] += 1
+                last = pf
+                self.n += 1
+                self.peak_priv = max(self.peak_priv, priv - self.priv0)
+            except Exception:
+                pass
+
+    def summary(self):
+        top = sorted(self.by.items(), key=lambda kv: -kv[1][0])[:8]
+        return {"samples": self.n, "peak_priv_mb": round(self.peak_priv, 1),
+                "top": [[k, v[0], v[1]] for k, v in top]}
+
 
 
 class DirWatch(threading.Thread):
@@ -348,6 +524,32 @@ class DirWatch(threading.Thread):
             self.ok = False
         finally:
             self.ready.set()
+
+
+def io_counts():
+    """(read ops, read MB, other ops) for this process on Windows, from GetProcessIoCounters; None elsewhere (5 Nov
+    20:1x): the first 28 costed calls spent 80-94 pct of their wall time off the CPU with few page
+    faults, so the wait is either file I/O (opens here cost ~0.3 s under contention) or a core run queue; read ops
+    during a call tell the two apart."""
+    if os.name != "nt":
+        return None
+    try:
+        import ctypes
+        from ctypes import wintypes
+
+        class IOC(ctypes.Structure):
+            _fields_ = [("ReadOperationCount", ctypes.c_ulonglong), ("WriteOperationCount", ctypes.c_ulonglong),
+                        ("OtherOperationCount", ctypes.c_ulonglong), ("ReadTransferCount", ctypes.c_ulonglong),
+                        ("WriteTransferCount", ctypes.c_ulonglong), ("OtherTransferCount", ctypes.c_ulonglong)]
+        c = IOC()
+        k = ctypes.WinDLL("kernel32")
+        k.GetCurrentProcess.restype = wintypes.HANDLE
+        k.GetProcessIoCounters.argtypes = [wintypes.HANDLE, ctypes.c_void_p]
+        if k.GetProcessIoCounters(k.GetCurrentProcess(), ctypes.byref(c)):
+            return (int(c.ReadOperationCount), c.ReadTransferCount / 1048576.0, int(c.OtherOperationCount))
+    except Exception:
+        pass
+    return None
 
 
 def st3(p):
@@ -724,8 +926,54 @@ def main():
                         stop.set()
                     else:
                         t = time.perf_counter()
-                        resp = {"ok": True, "out": warm.call(req.get("raw") or "{}", hook),
-                                "ms": round((time.perf_counter() - t) * 1000, 1)}
+                        s0 = STALE_BM25_USED[0]
+                        c0 = call_cost()
+                        if OPEN_LOG_MS > 0:
+                            _TRACE["ops"], _TRACE["thr"] = [], threading.current_thread()
+                        fs = None
+                        if FAULT_SAMPLE_MS > 0 and os.name == "nt":
+                            try:
+                                fs = FaultSampler(threading.current_thread())
+                                fs.start()
+                            except Exception:
+                                fs = None
+                        try:
+                            resp = {"ok": True, "out": warm.call(req.get("raw") or "{}", hook),
+                                    "ms": round((time.perf_counter() - t) * 1000, 1)}
+                        finally:
+                            _TRACE["thr"] = None
+                            if fs is not None:
+                                fs.done.set()
+                        c1 = call_cost()
+                        if fs is not None and (c1[1] - c0[1] >= FAULT_LOG_MIN or resp["ms"] >= FAULT_LOG_MS):
+                            try:
+                                fs.join(0.5)
+                                row = {"at": time.strftime("%Y-%m-%dT%H:%M:%S"), "hook": hook, "ms": resp["ms"],
+                                       "pf": c1[1] - c0[1]}
+                                row.update(fs.summary())
+                                with open(FAULT_LOG, "a", encoding="utf-8") as f:
+                                    f.write(json.dumps(row) + "\n")
+                            except Exception:
+                                pass
+                        if OPEN_LOG_MS > 0 and resp["ms"] >= OPEN_LOG_MS:
+                            try:
+                                row = {"at": time.strftime("%Y-%m-%dT%H:%M:%S"), "hook": hook, "ms": resp["ms"]}
+                                row.update(open_summary(_TRACE["ops"] or [], time.perf_counter()))
+                                with open(OPEN_LOG, "a", encoding="utf-8") as f:
+                                    f.write(json.dumps(row) + "\n")
+                            except Exception:
+                                pass
+                        # process CPU covers every thread, so a refresh running beside the call counts here too
+                        resp["cost"] = {"cpu_ms": round((c1[0] - c0[0]) * 1000), "pf": c1[1] - c0[1],
+                                        "ws_mb": round(c0[2]), "ws_in_mb": round(c1[2] - c0[2])}
+                        if c0[3] and c1[3]:   # Windows only: file reads and other I/O (opens, stats) in the call
+                            resp["cost"].update({"rd": c1[3][0] - c0[3][0], "rd_mb": round(c1[3][1] - c0[3][1], 1),
+                                                 "oth": c1[3][2] - c0[3][2]})
+                        if STALE_BM25_USED[0] != s0:   # the BM25 arm answered from the previous sidecar
+                            resp["cost"]["stale_bm"] = STALE_BM25_USED[0] - s0
+                        am = avail_mb()
+                        if am is not None:   # machine RAM free at the end of the call: judge paging at equal pressure
+                            resp["cost"]["avail_mb"] = am
                         try:
                             warm.save_keys()
                         except Exception:
@@ -748,7 +996,7 @@ def main():
                 with open(CALL_LOG, "a", encoding="utf-8") as f:
                     f.write(json.dumps({"at": time.strftime("%Y-%m-%dT%H:%M:%S"), "sid": sid, "hook": hook,
                                     "ok": resp.get("ok"),
-                                        "why": resp.get("why"), "ms": resp.get("ms"),
+                                        "why": resp.get("why"), "ms": resp.get("ms"), "cost": resp.get("cost"),
                                         "miss": list(warm.misses) if resp.get("ok") else None}) + "\n")
             except Exception:
                 pass
@@ -769,6 +1017,8 @@ def main():
                     t = time.perf_counter()
                     n = warm.prefill()
                     log("warm start: %d loader calls filled in %.2f s" % (n, time.perf_counter() - t))
+                    if WS_MIN_MB > 0:
+                        log("working-set floor: %s" % ws_floor(WS_MIN_MB))
                 except Exception as e:
                     log("warm start error %r" % (e,))
                 finally:
