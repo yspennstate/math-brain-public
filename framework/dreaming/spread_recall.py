@@ -1181,13 +1181,26 @@ def _fdesc_cache():
 
 
 def _fdesc_save():
+    """Merge this process's new entries into the file another hook may have rewritten since it was read, then swap
+    it in: hooks run side by side, and a plain dump of the copy read at start would drop what the others added."""
     if not _FDESC.get("dirty"):
         return
     import marshal
+    out = _FDESC["c"]
+    new = _FDESC.get("new")
+    if new:
+        try:
+            with open(DESC_CACHE, "rb") as fh:
+                cur = marshal.load(fh)
+            if isinstance(cur, dict):
+                cur.update(new)
+                out = cur
+        except Exception:
+            pass
     tmp = "%s.%d.tmp" % (DESC_CACHE, os.getpid())
     try:
         with open(tmp, "wb") as fh:
-            marshal.dump(_FDESC["c"], fh)
+            marshal.dump(out, fh)
         os.replace(tmp, DESC_CACHE)
         _FDESC["dirty"] = False
     except Exception:
@@ -1199,13 +1212,26 @@ def _fdesc_save():
 
 def _file_desc(slug):
     path = os.path.join(MEM, slug + ".md")
-    try:
-        st = os.stat(path)
-    except OSError:
-        return ""
+    # The stat comes from the prompt's one shared folder read when it ran (see _mem_names), else os.stat: on a large
+    # memory folder the per-file stat of 45-280 candidates was most of this lookup's cost. SPREAD_DESC_STATS=0 stats
+    # every file.
+    st = None
+    if _MEM_STATS is not None and os.environ.get("SPREAD_DESC_STATS", "1") != "0":
+        try:
+            got = _MEM_STATS.get(slug + ".md")
+            if got is not None:
+                st = (int(got[0]), int(got[1]))
+        except Exception:
+            st = None
+    if st is None:
+        try:
+            s = os.stat(path)
+        except OSError:
+            return ""
+        st = (s.st_size, s.st_mtime_ns)
     cache = _fdesc_cache()
     hit = cache.get(slug)
-    if hit is not None and hit[0] == st.st_size and hit[1] == st.st_mtime_ns:
+    if hit is not None and hit[0] == st[0] and hit[1] == st[1]:
         return hit[2]
     txt = ""
     try:
@@ -1217,7 +1243,8 @@ def _file_desc(slug):
     except Exception:
         return txt
     # the stat was taken before the read, so a file written in between leaves an entry no later stat matches
-    cache[slug] = (st.st_size, st.st_mtime_ns, txt[:200])
+    cache[slug] = (st[0], st[1], txt[:200])
+    _FDESC.setdefault("new", {})[slug] = cache[slug]
     _FDESC["dirty"] = True
     return txt
 
