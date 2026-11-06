@@ -110,6 +110,117 @@ def install_stale_bm25():
     cls.__init__ = __init__
 
 
+# Spell-correct df memo. After the held name list, the largest frames in slow served calls were the sidecar df's
+# prefetch: QueryNormalizer asks the sidecar's p(term, df) table for every edit-1 candidate of each rare prompt word
+# (about 55 x length candidates a word), and each served call builds a new BM25 and a new df reader, so every answer
+# was thrown away. The memo keeps them per sidecar FILE: the key is the database file the connection opened plus its
+# stat identity, so a new generation (a new file, or the same file rewritten) changes the key and the answers stay
+# exact. prefetch fills a local dict and publishes it in one update, so a concurrent caller never sees a half-filled
+# chunk. Off: SPREAD_SERVER_DF_MEMO=0.
+#
+# Carry. The sidecar is rebuilt every few minutes (one new memory is a new generation), and an empty memo per
+# generation left no live win. A new generation keeps every answer whose word is in no document that changed: the two
+# generations' fp tables (an 8-byte fingerprint per position) say which documents went or came, their fwd rows give
+# those documents' words, and only those words are dropped. Checked on a real rebuild (54 documents gone, 63 came,
+# 7,410 words): 0 of 20,000 present words and 0 of 30,000 edit-1 candidates outside that set changed df; 1,129 of
+# 5,000 inside it did. The retirer deletes a superseded sidecar within minutes, so the memo's generation is held open
+# read-only (bm25's sweep treats a held file as next sweep's work) and let go right after the carry. Cost about 210 ms
+# (the new fp table; the old one is kept) plus about 30 ms once per generation. No fp/fwd table, or any error: an
+# empty memo. Off: SPREAD_SERVER_DF_CARRY=0.
+DF_MEMO = {"key": None, "got": {}, "hold": None, "fp": None}
+DF_MEMO_MAX = 400000
+DF_CARRY = os.environ.get("SPREAD_SERVER_DF_CARRY", "1") != "0"
+DF_LOCK = threading.Lock()
+_bm25_mod = None
+
+
+def _ro_con(path):
+    import sqlite3
+    return sqlite3.connect("file:%s?mode=ro" % path.replace("\\", "/"), uri=True, check_same_thread=False)
+
+
+def _df_carry(old_con, old_fp, new_con, got):
+    """`got` minus the words of every document that differs between the two generations, plus the new fp map."""
+    fn = dict(new_con.execute("select pos, h from fp"))
+    fo = old_fp if old_fp is not None else dict(old_con.execute("select pos, h from fp"))
+    changed = set()
+    for p, h in fo.items():
+        if fn.get(p) != h:
+            changed.update(_bm25_mod._fwd_terms(old_con.execute("select terms from fwd where pos=?", (p,)).fetchone()[0]))
+    for p, h in fn.items():
+        if fo.get(p) != h:
+            changed.update(_bm25_mod._fwd_terms(new_con.execute("select terms from fwd where pos=?", (p,)).fetchone()[0]))
+    snap = dict(got)      # a copy first: other callers may be publishing into `got` meanwhile
+    return {k: v for k, v in snap.items() if k not in changed}, fn
+
+
+def _df_memo_for(con):
+    """The shared answer dict for the sidecar `con` reads, swapped (and carried) when the generation changed."""
+    f = [r[2] for r in con.execute("pragma database_list") if r[1] == "main"][0]
+    s = os.stat(f)
+    key = (os.path.normcase(f), s.st_size, s.st_mtime_ns, getattr(s, "st_birthtime_ns", s.st_ctime_ns), s.st_ino)
+    if DF_MEMO["key"] == key and len(DF_MEMO["got"]) <= DF_MEMO_MAX:
+        return DF_MEMO["got"]
+    with DF_LOCK:
+        if DF_MEMO["key"] != key or len(DF_MEMO["got"]) > DF_MEMO_MAX:
+            got, fp, hold = {}, None, DF_MEMO["hold"]
+            if (DF_CARRY and hold is not None and DF_MEMO["got"] and len(DF_MEMO["got"]) <= DF_MEMO_MAX
+                    and DF_MEMO["key"] and DF_MEMO["key"][0] != key[0] and hasattr(_bm25_mod, "_fwd_terms")):
+                try:
+                    got, fp = _df_carry(hold, DF_MEMO["fp"], con, DF_MEMO["got"])
+                except Exception:
+                    got, fp = {}, None
+            new_hold = None
+            if DF_CARRY:
+                try:
+                    new_hold = _ro_con(f)
+                except Exception:
+                    new_hold = None
+            DF_MEMO["key"], DF_MEMO["got"], DF_MEMO["fp"], DF_MEMO["hold"] = key, got, fp, new_hold
+            if hold is not None:
+                try:
+                    hold.close()
+                except Exception:
+                    pass
+        return DF_MEMO["got"]
+
+
+def install_df_memo(bm25):
+    """Replace bm25's sidecar df reader with one whose answers live in DF_MEMO; returns True when installed."""
+    global _bm25_mod
+    base = getattr(bm25, "_SidecarDf", None)
+    if base is None or getattr(base, "_df_memo", False) or os.environ.get("SPREAD_SERVER_DF_MEMO", "1") == "0":
+        return False
+    _bm25_mod = bm25
+
+    class _MemoDf(base):
+        _df_memo = True
+
+        def __init__(self, con):
+            base.__init__(self, con)
+            try:
+                self._c = _df_memo_for(con)
+            except Exception:
+                pass                      # keep the reader's own dict: no memo for this one
+
+        def prefetch(self, terms):
+            if self._full is not None:
+                return
+            got = self._c
+            need = [t for t in set(terms) if t not in got]
+            loc = {}
+            for i in range(0, len(need), 900):
+                part = need[i:i + 900]
+                loc.update(dict.fromkeys(part))
+                for term, df in self._con.execute("select term, df from p where term in (%s)" % ",".join("?" * len(part)),
+                                                  part):
+                    loc[term] = df
+            got.update(loc)
+
+    bm25._SidecarDf = _MemoDf
+    return True
+
+
 def log(msg):
     try:
         os.makedirs(STATE_DIR, exist_ok=True)
@@ -278,6 +389,12 @@ class Warm:
                 log("stale bm25 sidecar in the build window on (max age %.0f s)" % STALE_BM25_MAX_S)
             except Exception as e:
                 log("stale bm25 off: %s: %s" % (type(e).__name__, e))
+        try:
+            import bm25
+            if install_df_memo(bm25):
+                log("spell-correct df memo on (carry %s)" % ("on" if DF_CARRY else "off"))
+        except Exception as e:
+            log("df memo off: %s: %s" % (type(e).__name__, e))
         log("loaded in %.2f s, %d code files watched" % (time.perf_counter() - t, len(self.code_files)))
 
     def _code_files(self):
