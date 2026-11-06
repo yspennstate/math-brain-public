@@ -1637,6 +1637,31 @@ class Mesh:
                 "unacked_messages": unacked, "message_summary": message_summary,
                 "message_backlog": backlog}
 
+    def mark_delivered(self, agent_id: str, message_ids: Sequence[str]) -> int:
+        """Stamp delivered_at for messages the caller has already emitted.
+
+        A message is delivered when its text reached the recipient, not when it was fetched. Callers fetch
+        without stamping, print, then call this, so a crash between fetch and print leaves the message queued
+        and the next tick retries. Idempotent: COALESCE keeps the first stamp."""
+        ids = [m for m in dict.fromkeys(message_ids) if m]
+        if not ids:
+            return 0
+        marks = ",".join("?" for _ in ids)
+        with self.write_tx():
+            cur = self.conn.execute(
+                f"UPDATE messages SET delivered_at=COALESCE(delivered_at,?) "
+                f"WHERE message_id IN ({marks}) AND recipient=?",
+                (iso(), *ids, agent_id),
+            )
+        return cur.rowcount
+
+    def digest_with_ids(self, agent_id: str) -> tuple[str, list[str]]:
+        """The digest text and the pending message ids it rendered, without stamping delivery.
+        The caller prints the text first, then stamps with mark_delivered(ids)."""
+        text = self.digest(agent_id, mark_delivered=False)
+        pend = self.inbox(agent_id, mark_delivered=False, limit=8, pending_only=True)
+        return text, [m["message_id"] for m in pend]
+
     def digest(self, agent_id: str, mark_delivered: bool = True) -> str:
         me = self.require_agent(agent_id)
         board = self.board()
