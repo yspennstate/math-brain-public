@@ -175,10 +175,80 @@ def _write_column_totals(cache, rows, columns, totals):
         pass
 
 
+def _win_bulk_md_stats(mem_dir):
+    """{name: (st_size, st_mtime_ns)} for the regular .md files in mem_dir, read in 1 MiB buffers of
+    FILE_FULL_DIR_INFO (GetFileInformationByHandleEx) instead of a DirEntry and a stat_result per file. Every value
+    equal to scandir's on 52.8k files, three runs; CPU 500 -> 391 ms. A reparse point among the .md names, or any
+    error, gives None and the caller's scandir runs."""
+    try:
+        import ctypes
+        import struct
+        from ctypes import wintypes
+
+        k32 = ctypes.WinDLL("kernel32", use_last_error=True)
+        create = k32.CreateFileW
+        create.argtypes = [wintypes.LPCWSTR, wintypes.DWORD, wintypes.DWORD, ctypes.c_void_p, wintypes.DWORD,
+                           wintypes.DWORD, wintypes.HANDLE]
+        create.restype = wintypes.HANDLE
+        info = k32.GetFileInformationByHandleEx
+        info.argtypes = [wintypes.HANDLE, ctypes.c_int, ctypes.c_void_p, wintypes.DWORD]
+        info.restype = wintypes.BOOL
+        close = k32.CloseHandle
+        close.argtypes = [wintypes.HANDLE]
+        # FILE_LIST_DIRECTORY, share read/write/delete, OPEN_EXISTING, FILE_FLAG_BACKUP_SEMANTICS (needed for a dir)
+        handle = create(mem_dir, 0x1, 0x7, None, 3, 0x02000000, None)
+        if not handle or handle == ctypes.c_void_p(-1).value:
+            return None
+        size = 1 << 20
+        buf = ctypes.create_string_buffer(size)
+        # The buffer is read in place: `buf.raw` copied the whole 1 MiB after each of the ~157 kernel calls a
+        # 53k-entry listing takes, ~157 MB of fresh pages freed at once (43-45k page faults, 1.2-1.9 s a listing).
+        # In place: the same entries, 3-4k faults, 0.3-0.7 s.
+        raw = memoryview(buf).cast("B")
+        unpack = struct.unpack_from
+        epoch = 116444736000000000  # 1601 -> 1970 in 100 ns ticks, as os.stat converts
+        out, cls = {}, 15  # FileFullDirectoryRestartInfo first, then FileFullDirectoryInfo (14)
+        try:
+            while True:
+                if not info(handle, cls, buf, size):
+                    return out if ctypes.get_last_error() == 18 else None  # ERROR_NO_MORE_FILES ends the listing
+                cls = 14
+                off = 0
+                while True:
+                    nxt, _, _, _, write, _, eof, _, attr, nlen = unpack("<IIqqqqqqII", raw, off)
+                    name = str(raw[off + 68:off + 68 + nlen], "utf-16le")
+                    if name.endswith(".md"):
+                        if attr & 0x400:
+                            return None
+                        if not attr & 0x10:
+                            out[name] = (eof, (write - epoch) * 100)
+                    if not nxt:
+                        break
+                    off += nxt
+        finally:
+            raw.release()
+            close(handle)
+    except Exception:
+        return None
+
+
+# One-shot handoff: the prompt hook's seed arm already read the folder with _bulk_md_stats for its name scan; it
+# leaves (mem_dir, monotonic time, stats) here and the loader's next call for the same folder within 60 s takes it
+# instead of reading the folder a second time.
+_PREFETCH = None
+
+
 def _bulk_md_stats(mem_dir):
     """{name: (st_size, st_mtime_ns)} for the regular .md files in mem_dir from macOS getattrlistbulk, which returns
     a buffer of entries per call: 0.06 s for 29k files against 0.15 s for scandir plus a stat each (1 Nov 2026,
-    every value equal). A symlink is left out (its row then takes the hash check). None off macOS or on any error."""
+    every value equal). A symlink is left out (its row then takes the hash check). On Windows the same comes from
+    _win_bulk_md_stats. None elsewhere or on any error."""
+    global _PREFETCH
+    pf, _PREFETCH = _PREFETCH, None
+    if pf is not None and pf[0] == mem_dir and 0 <= time.monotonic() - pf[1] < 60:
+        return pf[2]
+    if os.name == "nt":
+        return _win_bulk_md_stats(mem_dir)
     if sys.platform != "darwin":
         return None
     try:
