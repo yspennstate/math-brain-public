@@ -4982,8 +4982,25 @@ def _main_body(data, out):
         # bank, only op_oddsource, op_pagemax and op_pagesum quote three or more long titles at all (473 items,
         # every one of which the brain answers), and no proof-audit item, no saw_* item, and nothing in either
         # half of the fresh bank does. A question with even ONE of its quoted titles in the pool still serves.
+        # THE QUOTES MUST BE WHAT THE PROMPT IS ABOUT (MATHBRAIN_ENUM_MIN_SHARE, default 0.15; 0 = the old rule).
+        # A long prompt that wraps its instructions in three quoted phrases was read here as three absent titles
+        # and went silent with its answer card in the store. An enumeration question is mostly its quoted names
+        # (share well above 0.3); in a prompt whose quotes are instructions they are a few percent of the words.
+        try:
+            _enum_share_min = float(os.environ.get("MATHBRAIN_ENUM_MIN_SHARE", "0.15") or 0)
+        except Exception:
+            _enum_share_min = 0.15
+        _enum_share = 1.0
+        if _enum_share_min > 0 and _quoted_n >= 3:
+            try:
+                _qwords = sum(len(" ".join(m.group(1).split()).split()) for m in _QUOTED_RE.finditer(prompt)
+                              if len(m.group(1).split()) >= 2)
+                _enum_share = _qwords / max(1, len(prompt.split()))
+            except Exception:
+                _enum_share = 1.0
         if (os.environ.get("MATHBRAIN_ENUM_ABSTAIN", "1") != "0"
-                and _quoted_n >= 3 and _named_entries == 0 and not pinned_ids):
+                and _quoted_n >= 3 and _named_entries == 0 and not pinned_ids
+                and _enum_share >= _enum_share_min):
             _silence_note(data, "enum_none_of_%d_titles_in_store" % _quoted_n)
             return
         # DEFINITIONS DO NOT DECIDE STEPS - AND DEMOTING THEM STILL LOSES (MATHBRAIN_DEFN_DEMOTE, default 0 = OFF;
