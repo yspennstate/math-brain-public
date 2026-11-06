@@ -26,7 +26,7 @@ is in `docs/EXERCISING.md`.
 | Graph recall and the live sidecar | `brain_graph/bin/graph_recall.py`, `live_sidecar.py`, `live_membrane.py`, `brain_graph/membrane.py` | `brain_graph/bin/test_sidecar_publication.py`, `test_run_graph_lock.py` |
 | Built edges (spread, keywords, series, orphans) | `dreaming/build_spread_edges.py`, `build_keyword_edges.py`, `build_series_edges.py`, `build_orphan_edges.py` | `dreaming/eval_keyword_edges.py`, `eval_series_edges.py`, `eval_orphan_edges.py` |
 | Keyword topic nodes | `dreaming/build_keyword_nodes.py`, `keyword_corpus_cache.py`, `docs/keyword-topic-nodes.md` | `python dreaming/test_keyword_corpus_cache.py` |
-| Spreading recall | `dreaming/spread.py`, `spread_recall.py`, `graph_lane.py` | `dreaming/measure_spread_reach.py` |
+| Spreading recall | `dreaming/spread.py`, `spread_recall.py`, `graph_lane.py` | `dreaming/measure_spread_reach.py`, `graph_lane_ties_selftest.py` |
 | The big association network | `network/` (`build_graph.py`, `fire.py`, `ppr_local.py`, `DESIGN.md`) | `network/test_network.py` |
 
 ## Recall speed
