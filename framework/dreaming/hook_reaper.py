@@ -89,6 +89,10 @@ foreach ($p in $all) {
 
 
 def census():
+    if os.name != "nt":
+        # Nothing to reap off Windows: an orphan here is re-parented to launchd/init and reaped when it exits, so the
+        # stranded-console-host population this tool exists for does not form. An empty census reaps nothing.
+        return []
     r = subprocess.run(["powershell", "-NoProfile", "-NonInteractive", "-Command", PS], capture_output=True, text=True,
                        encoding="utf-8", errors="replace", timeout=240, creationflags=(0x08000000 if os.name == "nt" else 0))
     rows = []

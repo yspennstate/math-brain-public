@@ -132,6 +132,16 @@ def table():
     t = faked()
     if t is not None:
         return t
+    if os.name != "nt":
+        # created = start epoch seconds from ps lstart: stable to the second, so (pid, created) stays an identity
+        try:
+            import sys
+            sys.path.insert(0, os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
+            import posix_proc
+            starts = posix_proc.start_times()
+            return {pid: (ppid, name, starts.get(pid, 0)) for pid, (ppid, name) in posix_proc.parent_map().items()}
+        except Exception:
+            return {}
     try:
         return _win_table()
     except Exception:
