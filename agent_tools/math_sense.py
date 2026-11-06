@@ -599,7 +599,7 @@ def _argument_shape(prompt):
 # WHAT IT IS FOR: the diagnosis found 11 real mathematical questions that never reach retrieval
 # because their phrasing carries no recognised anchor combination - martingale06/08/11/12 and
 # strictness03/07/08/09/10/11/12. The gate is a cost filter, and it was refusing mathematics
-# silently. [[the_math_gate_refuses_real_mathematics_and_never_says_so_2026_09_14]]
+# silently.
 # WHY IT IS OFF: a widening measured EARLIER TODAY (the derived-anchor list) looked good in
 # aggregate - silent 9 -> 5 - while the per-question diff showed one gain against three confident
 # wrong cards. Admission is not the outcome; the transition matrix is. This dial stays off until it
@@ -3330,8 +3330,8 @@ example define definition concept pdf""".split())
 def _name_tokens(prompt):
     """The prompt's own identity tokens - hyphenated proper names (Tracy-Widom, Hanson-Wright), plain capitalised
     words, acronyms (KKL, LYM) - minus grammar capitals and mathematical furniture. Read from the prompt alone, so
-    the signal is causal; the bank's stems are never consulted. Measured 2026-09-13 (memory
-    covering_the_questions_names_is_the_best_ranking_signal_measured_2026_09_13). 'pdf' is stopped because the
+    the signal is causal; the bank's stems are never consulted. Measured 2026-09-13: covering the
+    question's names is the best ranking signal of those tried. 'pdf' is stopped because the
     locate-bank boilerplate capitalises it on every question."""
     txt = unicodedata.normalize("NFKD", prompt or "")
     txt = "".join(c for c in txt if not unicodedata.combining(c))
@@ -4250,8 +4250,8 @@ def _reset_per_prompt_state():
 # (1) MATHBRAIN_RECALL_POINTER (default 1): the header names math_recall.py --id, which prints the card whole with every
 #     link (kind, direction, the other card's id and title, the link's stated reason), instead of math_note.py, which
 #     prints the note alone. Measured 11 Oct on 100 recall questions with Codex 6.1 agents: walking cards by id reached
-#     the same answers as whole-card search (82 against 83) on 24.6M against 186M input tokens
-#     (math_brain_recall_what_works_and_how_to_use_it_2026_10_11). 0 restores the math_note.py line.
+#     the same answers as whole-card search (82 against 83) on 24.6M against 186M input tokens.
+#     0 restores the math_note.py line.
 # (2) MATHBRAIN_MATCHED_TERMS (default 3; 0 = off): each card's hint line ends "matched: a, b, c" - the prompt terms the
 #     ranker matched on that card, strongest first, read from retrieve()'s own score trace. A lead that came in on
 #     "field, rows" reads as the coincidence it is; one that came in on "martingale, stopping, optional" reads as on

@@ -36,8 +36,8 @@ TOOL = os.path.join(HERE, "math_recall.py")
 
 def below_normal():
     """Below-normal priority, but out of Windows power throttling: a windowless below-normal job is throttled by default
-    and ran 4-10 times slower (memory the_power_throttle_optout_never_ran_ctypes_cut_the_handle_2026_10_11, whose
-    c_void_p handle this uses). Returns what the process reads back, for the state file."""
+    and ran 4-10 times slower. The opt-out passes the process handle as c_void_p: a default int return type cuts a
+    64-bit handle and the call silently does nothing. Returns what the process reads back, for the state file."""
     got = {}
     try:
         import psutil

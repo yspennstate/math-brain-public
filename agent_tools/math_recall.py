@@ -14,8 +14,8 @@ its first characters when they fit one card; link lines print exactly such a sho
 
 Why it exists. The math hook serves a selection only when a prompt reads as mathematics, and
 `python -m math_brain.cli recall` prints ids and titles only, so reading a card took one more call per card
-(math_note.py SOURCE_ID). Measured on 11 Oct 2026 with 100 recall questions about the store
-(primary_directive/test_brainrecall50/ARMS_FINDINGS_2026_10_11.md): the same retrieve() and top 8 answered 17 of 40
+(math_note.py SOURCE_ID). Measured on 11 Oct 2026 with 100 recall questions about the store:
+the same retrieve() and top 8 answered 17 of 40
 paraphrased questions when the tool printed titles and 700-character bodies without ids, and 38 of 40 when it printed
 ids, whole bodies and the linked cards' ids; the live hook was silent on 85 of the 100.
 
