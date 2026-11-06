@@ -1097,11 +1097,104 @@ def _log_capped(sess, slug, n, gap, need):
     without touching surfaced.tsv."""
     if not re.match(r"^[0-9a-f]{8}-", sess):
         return
+    row = "%.0f\t%s\t%s\t%d\t%.0f\t%d\n" % (time.time(), sess[:12], slug, n, gap, need)
+    if _fresh_async():
+        _FW.put(("cap", row))
+        return
+    _append_capped(row)
+
+
+def _append_capped(row):
     try:
         with io.open(os.path.join(DR, "spread_capped.tsv"), "a", encoding="utf-8") as f:
-            f.write("%.0f\t%s\t%s\t%d\t%.0f\t%d\n" % (time.time(), sess[:12], slug, n, gap, need))
+            f.write(row)
     except Exception:
         pass
+
+
+# Under the resident server the dedup state's write went on the
+# reply path, and on a contended disk the os.replace of this 9 KB file took 1-4 s (13 of 498 slow served calls,
+# 5-6 Nov, faults.jsonl). The server holds the state in process and one writer thread flushes it; see _fresh.
+import threading as _threading
+import queue as _queue
+_FW = _queue.Queue()
+_FS = {"st": None, "sig": None, "mine": {}, "thread": None}
+_FS_LOCK = _threading.Lock()
+
+
+def _fresh_async():
+    if os.environ.get("SPREAD_SERVER_CHILD") != "1" or os.environ.get("SPREAD_FRESH_ASYNC", "1") == "0":
+        return False
+    if _FS["thread"] is None or not _FS["thread"].is_alive():
+        if _FS["thread"] is None:
+            import atexit
+            atexit.register(_fresh_flush)     # the server exits between calls on a code change: land queued stamps
+        t = _threading.Thread(target=_fresh_writer, name="fresh-writer", daemon=True)
+        _FS["thread"] = t
+        t.start()
+    return True
+
+
+def _state_sig():
+    try:
+        x = os.stat(STATE)
+        return (x.st_mtime_ns, x.st_size)
+    except OSError:
+        return None
+
+
+def _write_state(st):
+    _tmp = STATE + ".%d.tmp" % os.getpid()
+    with io.open(_tmp, "w", encoding="utf-8") as _f:
+        json.dump(st, _f)
+    os.replace(_tmp, STATE)
+
+
+def _fresh_writer():
+    while True:
+        kind, val = _FW.get()
+        try:
+            if kind == "cap":
+                _append_capped(val)
+                continue
+            with _FS_LOCK:
+                if val is not _FS["st"]:
+                    continue          # a newer state is queued behind this one
+                snap = dict(val)
+            _write_state(snap)
+            with _FS_LOCK:
+                _FS["sig"] = _state_sig()
+                for k, v in snap.items():
+                    if _FS["mine"].get(k) == v:
+                        del _FS["mine"][k]
+        except Exception:
+            pass
+        finally:
+            _FW.task_done()
+
+
+def _fresh_flush(timeout=5.0):
+    """Tests and shutdown: wait until every queued write landed."""
+    import time as _t
+    end = _t.time() + timeout
+    while _FW.unfinished_tasks and _t.time() < end:
+        _t.sleep(0.01)
+    return not _FW.unfinished_tasks
+
+
+def _fresh_load_async():
+    with _FS_LOCK:
+        sig = _state_sig()
+        if _FS["st"] is None or sig != _FS["sig"]:
+            try:
+                st = json.load(io.open(STATE, encoding="utf-8")) if sig is not None else {}
+            except Exception:
+                st = {}
+            for k, v in _FS["mine"].items():
+                if v > st.get(k, 0):
+                    st[k] = v
+            _FS["st"], _FS["sig"] = st, sig
+        return dict(_FS["st"])
 
 
 def _fresh(sess, slug, capped=False):
@@ -1111,10 +1204,14 @@ def _fresh(sess, slug, capped=False):
     if not sess:
         return True
     now = time.time()
-    try:
-        st = json.load(io.open(STATE, encoding="utf-8")) if os.path.exists(STATE) else {}
-    except Exception:
-        st = {}
+    _async = _fresh_async()
+    if _async:
+        st = _fresh_load_async()
+    else:
+        try:
+            st = json.load(io.open(STATE, encoding="utf-8")) if os.path.exists(STATE) else {}
+        except Exception:
+            st = {}
     st = {k: v for k, v in st.items() if now - v < 86400}
     key = sess + "|" + slug
     if now - st.get(key, 0) < DEDUP_SECS:
@@ -1133,14 +1230,17 @@ def _fresh(sess, slug, capped=False):
     # only real (uuid-shaped) sessions persist: test/eval fixtures were leaking keys into this
     # live state file (the ledgers-polluted-by-own-gate class, caught by the 07-09 graph audit)
     if re.match(r"^[0-9a-f]{8}-", sess):
+        if _async:
+            with _FS_LOCK:
+                _FS["mine"][key] = now
+                _FS["st"] = st
+            _FW.put(("state", st))
+            return True
         try:
             # atomic replace (2026-09-02): a bare truncate-and-dump let a concurrent reader see a half-written
             # file, fall back to {} and write back only its own key - the race that wiped the reflex hook's
             # backoff state across 21 sessions; same shape here
-            _tmp = STATE + ".%d.tmp" % os.getpid()
-            with io.open(_tmp, "w", encoding="utf-8") as _f:
-                json.dump(st, _f)
-            os.replace(_tmp, STATE)
+            _write_state(st)
         except Exception:
             pass
     return True
