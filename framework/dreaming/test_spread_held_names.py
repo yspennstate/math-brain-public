@@ -11,6 +11,9 @@
 Windows only (ReadDirectoryChangesW); elsewhere the server lists every call and H1-H6 are skipped.
     python test_spread_held_names.py      (a few seconds; ALL PASS at the end)
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import os
 import sys
 import tempfile

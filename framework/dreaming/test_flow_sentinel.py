@@ -2,6 +2,9 @@
 whose script's log ends on a repeated failure is flagged with a short category and none of the log's own text, a
 success line clears earlier failures, a run older than three cadences is stale, a nonzero result on a running task is
 running status not failure, and a folder named by FLOW_SENTINEL_FORBIDDEN is never opened."""
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import json
 import os
 import shutil

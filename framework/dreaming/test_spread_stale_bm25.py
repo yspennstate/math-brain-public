@@ -9,6 +9,9 @@ inside the server answers from the newest finished older sidecar instead of unpi
 
 A stand-in bm25 module is used, so no index is built.    python test_spread_stale_bm25.py   (ALL PASS at the end)
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import os
 import sqlite3
 import sys

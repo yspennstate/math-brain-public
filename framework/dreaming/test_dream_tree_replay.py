@@ -1,6 +1,9 @@
 """test_dream_tree_replay.py - the dream's sync replay on throwaway git repos: a clean replay, a patch already
 upstream skipped, a memory-mirror conflict settled from the live file, a generated view taking the local side, a
 conflict whose working-tree copy equals the new base, and a conflict it must decline (exit 3)."""
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import os
 import shutil
 import subprocess

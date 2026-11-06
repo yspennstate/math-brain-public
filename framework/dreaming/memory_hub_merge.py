@@ -7,6 +7,9 @@ continuation lines. An item only the origin has goes in after the item that prec
 closed in the origin (`- [x]`) over the same open item here (`- [ ]`) takes the origin's version, because it was
 resolved on the other computer. A line the live file has is never dropped. Nothing is written without --apply.
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import datetime
 import difflib
 import os

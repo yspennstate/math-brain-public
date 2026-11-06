@@ -1,5 +1,8 @@
 """test_recall_overlap_restart.py - a wire-only edit leaves the code key alone and changes the wire key; two wire
 generations of one store hold two server locks; the keeper sees the change by content, not by mtime."""
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import os
 import shutil
 import tempfile

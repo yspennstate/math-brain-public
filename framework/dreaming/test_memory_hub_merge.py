@@ -1,6 +1,9 @@
 """test_memory_hub_merge.py - merging two computers' copies of a journal hub: origin-only items land after their
 predecessor, a closed checkbox from the origin replaces the open one here, no live line is ever dropped, continuation
 lines travel with their item, and --apply keeps CRLF and writes a backup under a temporary home."""
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import os
 import shutil
 import tempfile

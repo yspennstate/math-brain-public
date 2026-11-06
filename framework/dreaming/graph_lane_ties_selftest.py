@@ -8,6 +8,9 @@ must keep full precision and the live log four places.
     python graph_lane_ties_selftest.py [PATH_TO_graph_lane.py]      (default: the one beside this file)
 Exit 0 when every check passes.
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import json
 import os
 import subprocess

@@ -2,6 +2,9 @@
 mirror holds more of is pulled, a file both sides changed is merged without losing a line here, a file only here is
 listed for the push, generated nodes are left alone, a superseded_by line travels into the frontmatter, and --apply
 --no-push writes backups under a temporary home and never pushes."""
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import os
 import shutil
 import subprocess

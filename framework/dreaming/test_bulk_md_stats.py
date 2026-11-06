@@ -11,6 +11,9 @@
 Off Windows and macOS the reader gives None by design; B1-B2 are then skipped.
     python test_bulk_md_stats.py      (a few seconds; ALL PASS at the end)
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import os
 import sys
 import tempfile

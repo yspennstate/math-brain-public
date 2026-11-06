@@ -12,6 +12,9 @@ ranked again.
 
     python test_repeat_skip.py      (under a few seconds; ALL PASS at the end)
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import importlib
 import json
 import os

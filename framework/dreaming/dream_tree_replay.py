@@ -25,6 +25,9 @@ A conflicted path is settled only when the answer already exists byte for byte; 
   dream rebuilds from the memories, takes the local commit's side.
 Any other conflict declines.
 """
+if "-h" in __import__("sys").argv[1:] or "--help" in __import__("sys").argv[1:]:
+    print((__doc__ or "").strip() or "usage: python %s" % __import__("os").path.basename(__file__))
+    raise SystemExit(0)
 import json
 import os
 import subprocess
