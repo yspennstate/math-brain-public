@@ -122,6 +122,36 @@ def parse_iso(value: str) -> dt.datetime:
     return dt.datetime.fromisoformat(value.replace("Z", "+00:00"))
 
 
+IDLE_LAPSE_FILE = "idle_lapse.json"
+
+
+def load_idle_lapse(home: Path) -> dict[str, float]:
+    """{canonical resource: minutes} from <mesh home>/idle_lapse.json; {} when the file is absent or unreadable.
+
+    A pulse renews every live claim, so a claim taken for a one-minute write outlives the write for as long as its
+    agent keeps working. Over the week to 2026-09-23 the brain index (memory:brain/index) refused 364 claims; in 254
+    of them the holder had not taken or asserted the index for 15 minutes or more (160 for over an hour), and 26
+    agents were turned away. A resource named in this file is not renewed by a pulse once its holder has gone that
+    many minutes without taking or asserting it: the pulse ends the claim, and the holder claims again when it next
+    needs it. Claim, assert and release are unchanged, and with no file nothing changes."""
+    try:
+        raw = json.loads((Path(home) / IDLE_LAPSE_FILE).read_text(encoding="utf-8"))
+    except Exception:
+        return {}
+    out: dict[str, float] = {}
+    if not isinstance(raw, dict):
+        return out
+    for resource, minutes in raw.items():
+        try:
+            key = canonical_resource(str(resource))[0]
+            value = float(minutes)
+        except Exception:
+            continue
+        if value > 0:
+            out[key] = value
+    return out
+
+
 def duration_seconds(value: str | int | float) -> int:
     if isinstance(value, (int, float)):
         seconds = int(value)
@@ -800,11 +830,24 @@ class Mesh:
                 (task, task, status, iso(now), until, agent_id),
             )
             live_claims = self.conn.execute(
-                "SELECT claim_id,ttl_seconds FROM claims "
+                "SELECT claim_id,ttl_seconds,resource,canonical_resource,acquired_at FROM claims "
                 "WHERE agent_id=? AND released_at IS NULL AND expires_at>?",
                 (agent_id, iso(now)),
             ).fetchall()
+            lapse = load_idle_lapse(self.db_path.parent)
+            lapsed: list[str] = []
             for claim in live_claims:
+                cap = lapse.get(claim["canonical_resource"])
+                if cap:
+                    idle = now - self._last_claim_use(agent_id, claim)
+                    if idle >= dt.timedelta(minutes=cap):
+                        # the holder stopped using it: end the claim here instead of renewing it (load_idle_lapse)
+                        self.conn.execute("UPDATE claims SET expires_at=? WHERE claim_id=?",
+                                          (iso(now), claim["claim_id"]))
+                        self.event("claim_idle_lapse", agent_id, claim["resource"],
+                                   idle_minutes=round(idle.total_seconds() / 60.0, 1), cap_minutes=cap)
+                        lapsed.append(claim["resource"])
+                        continue
                 claim_deadline = min(
                     now + dt.timedelta(seconds=int(claim["ttl_seconds"])),
                     parse_iso(until),
@@ -815,7 +858,34 @@ class Mesh:
                     (iso(now), claim_until, claim["claim_id"]),
                 )
             self.event("pulse", agent_id, task, status=status)
-        return {"agent": agent_id, "status": status, "lease_until": until}
+        out = {"agent": agent_id, "status": status, "lease_until": until}
+        if lapsed:
+            out["lapsed_idle_claims"] = lapsed
+        return out
+
+    def _last_claim_use(self, agent_id: str, claim) -> dt.datetime:
+        """When the holder last took or asserted this claim's resource: its acquisition, or the newest claim /
+        claim_assert event of the agent naming the resource since then. A pulse does not count as a use."""
+        last = parse_iso(claim["acquired_at"])
+        rows = self.conn.execute(
+            "SELECT happened_at,detail_json FROM events WHERE happened_at>=? AND agent_id=? "
+            "AND event_type IN ('claim','claim_assert') ORDER BY happened_at DESC LIMIT 500",
+            (claim["acquired_at"], agent_id),
+        ).fetchall()
+        for row in rows:
+            try:
+                resources = json.loads(row["detail_json"] or "{}").get("resources") or []
+            except Exception:
+                continue
+            for resource in resources:
+                try:
+                    same = (resource == claim["resource"]
+                            or canonical_resource(str(resource))[0] == claim["canonical_resource"])
+                except Exception:
+                    same = False
+                if same:
+                    return max(last, parse_iso(row["happened_at"]))
+        return last
 
     def claim(
         self,
