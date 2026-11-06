@@ -1,6 +1,6 @@
 # FEI campaign in the brain
 
-Written by fei_brain_ingest.py (claude-51330238). Sources: brain_workers/FEI100_20261011 (the Codex fleet and the Opus stream leads of claude-2d8060eb) and fei_opus_2026_10_11 (the supplementary Opus workflow). Full FEI stays OPEN unless a complete proof passes the campaign's B18/B19 reviews and B20 synthesis; a status below is its author's own label until a referee confirms it.
+Written by fei_brain_ingest.py. Sources: brain_workers/FEI100_20261011 (the Codex fleet and the Opus stream leads of the coordinator) and fei_opus_2026_10_11 (the supplementary Opus workflow). Full FEI stays OPEN unless a complete proof passes the campaign's B18/B19 reviews and B20 synthesis; a status below is its author's own label until a referee confirms it.
 
 ## Counts
 

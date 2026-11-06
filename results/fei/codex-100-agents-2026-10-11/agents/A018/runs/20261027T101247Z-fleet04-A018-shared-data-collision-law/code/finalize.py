@@ -4,7 +4,7 @@ import hashlib,json,subprocess,sys
 
 run=Path(__file__).resolve().parents[1];base=run.parents[1]
 mesh=Path(r'~\<private-repo>\12_cognitive_architecture\agent_mesh\agent_mesh.py')
-subprocess.run([sys.executable,'-X','utf8',str(mesh),'assert','--agent','codex-01a17cd9','--resource',str(base)],check=True)
+subprocess.run([sys.executable,'-X','utf8',str(mesh),'assert','--agent','fleet-worker','--resource',str(base)],check=True)
 def read(p):return Path(p).read_text(encoding='utf-8')
 def write(p,s):Path(p).write_text(s,encoding='utf-8',newline='\n')
 def js(p,x):write(p,json.dumps(x,ensure_ascii=False,indent=2)+'\n')
