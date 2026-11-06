@@ -42,8 +42,11 @@ def package_dir():
     return Path(spec.origin).parent
 
 def code_files():
+    # fastrecall_delta.py decides answers too: the server runs its extend() on every store change, so a fix to it
+    # must restart the resident server like any other answer-deciding file.
     files = [HERE / name for name in ('candidate_manifest.json','baseline_math_recall.py','math_recall.py','fastrecall.py',
-                                     'math_strength.py','recall_protocol.py','recall_client.py','recall_server.py')]
+                                     'fastrecall_delta.py','math_strength.py','recall_protocol.py','recall_client.py',
+                                     'recall_server.py')]
     files += sorted(package_dir().glob('*.py'))
     files.append(HERE/'query_embed.py')
     return [path for path in files if path.exists()]   # an install without the eval candidates stamps what it has
