@@ -5320,7 +5320,19 @@ def _main_body(data, out):
         # ahead of the whole-question cards, three slots, pins untouched (a pinned prompt skips the split)
         _pre_subq_chosen = list(chosen or [])
         _split_used = False
-        if CLAUSE_SPLIT and prefilter_ids is not None and not pinned_ids:
+        # AN EMPTIED BLOCK IS REFILLED ONLY BY A SUB-QUERY THAT NAMES SOMETHING (MATHBRAIN_SUBQ_REFILL, default src).
+        # The sub-queries run after the on-topic gate and the answer attachment; when those have emptied the
+        # whole-question block, the merged block is made of sub-query cards alone. Replayed over 483 past prompts,
+        # that is how two junk blocks were served, both from QUOTED PHRASES the store holds no title for (a status
+        # report quoting 'near triple,' got a Steiner triple system card; formatting advice quoting 'see Theorem 1
+        # in Supplementary Material' got an unrelated theorem). The other sources are designed rescues of an empty
+        # block: the clause split serves each fact of a two-fact question, the named-result sub-queries serve the
+        # pivots of an argument, and quoted STORE titles serve the entries a question names. "src" refuses only
+        # the quoted phrases the store lacks; "arg" refills only on argument-shaped prompts; 1 everywhere; 0 never.
+        _subq_mode = os.environ.get("MATHBRAIN_SUBQ_REFILL", "src").strip().lower()
+        _subq_refill = (_subq_mode not in ("0", "off", "false", "", "arg")
+                        or (_subq_mode == "arg" and _argument_shape(prompt) is not None))
+        if CLAUSE_SPLIT and prefilter_ids is not None and not pinned_ids and (chosen or _subq_refill):
             try:
                 _subq_named = False
                 _subq_quoted = False
@@ -5363,6 +5375,8 @@ def _main_body(data, out):
                     # in the order they appear, so here they are simply used.
                     subs = _covered_titles or _quoted_subqueries(prompt, limit=4)
                     _subq_quoted = bool(subs)
+                if subs and not chosen and _subq_mode == "src" and _subq_quoted and not _covered_titles:
+                    subs = []
                 if subs and (time.time() - started) < 0.5 * TIME_BUDGET_S:
                     # A TIME GUARD INSIDE THE LOOP (MATHBRAIN_SUBQ_TIME_FRAC, default 0.6). Checked once before the first
                     # sub-query, a long argument on a loaded machine ran every sub-query past the budget, and past it the
