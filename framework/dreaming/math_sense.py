@@ -515,6 +515,20 @@ _CURATED_NAMED = [
     (re.compile(r"\bPlancherel\b"), "Plancherel theorem"),
     (re.compile(r"\bCauchy(?:--|[-‐-―])Schwarz\b"), "Cauchy-Schwarz inequality"),
 ]
+_CURATED_LABEL = [re.compile(_rx.pattern, re.IGNORECASE) for _rx, _ in _CURATED_NAMED]
+# AN AMBIGUOUS NAME IN A REFERENCE KEY (MATHBRAIN_LABEL_CONTEXT, default on). "Weyl" names seven results in the store and
+# stays off the list above; in a reference key ("lem:weyl") of a proof that writes singular values or eigenvalues it is Weyl's
+# inequality - a literal reading would take Weyl's LEMMA, the elliptic regularity result. (key pattern, context the proof must
+# carry, the name asked for); reference keys only, never running text.
+LABEL_CONTEXT = os.environ.get("MATHBRAIN_LABEL_CONTEXT", "1").strip() not in ("0", "off", "false", "")
+_LABEL_CONTEXT = [
+    (re.compile(r"\bweyl\b", re.IGNORECASE),
+     re.compile(r"\bs_\{?[a-z0-9]|\\sigma_|\\lambda_|\bsingular values?\b|\beigenvalues?\b", re.IGNORECASE),
+     "Weyl's inequality"),
+]
+CURATED_LABELS = os.environ.get("MATHBRAIN_CURATED_LABELS", "1").strip() not in ("0", "off", "false", "")
+CURATED_SUPERSEDE = os.environ.get("MATHBRAIN_CURATED_SUPERSEDE", "1").strip() not in ("0", "off", "false", "")
+_LABEL_KEY_RE = re.compile(r"\\(?:ref|cref|Cref|eqref|autoref)\{([^{}]{2,80})\}")
 # A DOUBLE-BARRELLED NAME AFTER A CITATION VERB ("apply Cauchy--Schwarz"). As a citation cue it is off by default
 # (MATHBRAIN_BARE_DOUBLE_CUE): the same form is usually an author pair in a pasted referee report ("from Higson--Prodan").
 SUBQ_BARE_DOUBLE = os.environ.get("MATHBRAIN_SUBQ_BARE_DOUBLE", "1").strip() not in ("0", "off", "false", "")
@@ -2648,14 +2662,28 @@ def _named_result_subqueries(prompt, limit=None):
         #   3 cards, limit 4: 57 / 83      3 cards, limit 2: see below      5 cards + 6,000 chars, limit 4: 60 / 96
         # against 60 / 85 for the narrower extractor at 3 cards.
         try:
-            limit = int(os.environ.get("MATHBRAIN_SUBQ_LIMIT", "4") or 4)
+            # 8 (was 4): with the fifth-slot rule below a fifth distinct named result can be served, and
+            # with four slots and no fifth-slot rule a higher limit measured neutral (107-108 of 310 at limits 6 and 8).
+            limit = int(os.environ.get("MATHBRAIN_SUBQ_LIMIT", "8") or 8)
         except Exception:
             limit = 4
     seen, out = set(), []
     _re = _NAMED_RESULT_RE_WIDE if os.environ.get("MATHBRAIN_SUBQ_WIDE", "0") == "1" else _NAMED_RESULT_RE
+    _leadstrip = os.environ.get("MATHBRAIN_SUBQ_LEADSTRIP", "1").strip() not in ("0", "off", "false", "")
     for m in _re.finditer(prompt):
         if m.group(1):
             name, kind = m.group(1), m.group(2)
+            # A SENTENCE WORD IS NOT PART OF THE NAME (MATHBRAIN_SUBQ_LEADSTRIP, default on; campaign mb10d, 25 Sep, arm
+            # cand42). An argument cites a result as "By Fatou's lemma", "By Fubini's theorem", "Then Holder's inequality";
+            # the capitalised run takes the sentence word in ("By Fatou's" + lemma), and the skip test below used to drop
+            # the whole match - matches do not overlap, so the name itself was never tried. On the 77 proof-audit items
+            # the store held a card for 58 results named in the argument that the block did not serve. Strip the
+            # leading skip and filler words and keep the name.
+            if _leadstrip:
+                _ws = name.split()
+                while _ws and (_ws[0].lower() in _NAMED_SKIP or _ws[0].lower() in _NAMED_FILLER):
+                    _ws = _ws[1:]
+                name = " ".join(_ws)
         elif m.group(4):
             name, kind = m.group(4), m.group(3)
         else:
@@ -2665,6 +2693,8 @@ def _named_result_subqueries(prompt, limit=None):
             name = " ".join(words)
         if not name:
             continue
+        if os.environ.get("MATHBRAIN_SUBQ_DASH", "1").strip() not in ("0", "off", "false", ""):
+            name = name.replace("--", "-")
         head = name.split()[0].lower()
         if head in _NAMED_SKIP or head in _NAMED_FILLER or len(name) < 4:
             continue
@@ -2686,9 +2716,61 @@ def _named_result_subqueries(prompt, limit=None):
         if os.environ.get("MATHBRAIN_SUBQ_RANK", "0") == "1":
             _proper = 2 if (m.group(1) or m.group(4)) else 0
             _cap = min(sum(1 for w in name.split() if w[:1].isupper()), 2)
-            out.append((-(_proper + _cap), len(out), q))
+            out.append((-(_proper + _cap), m.start(), q))
         else:
-            out.append((0, len(out), q))
+            out.append((0, m.start(), q))
+    # NAMES THE PATTERN CANNOT SEE (MATHBRAIN_SUBQ_CURATED, default on): a reviewed list, each
+    # entry a name a paper's proof uses without a kind word and a store card carries. It sits where it first appears in the text;
+    # a result the pattern already extracted ("Fubini's theorem") is not asked for twice.
+    # A DOUBLE-BARRELLED NAME AFTER A CITATION VERB (MATHBRAIN_SUBQ_BARE_DOUBLE, default on): "apply Cauchy--Schwarz in
+    # the law of X_I", "by Borel--Cantelli" - a proof's name for the result, with no kind word for the pattern above to see.
+    if SUBQ_BARE_DOUBLE:
+        for _m2 in _BARE_DOUBLE_RE.finditer(prompt):
+            _nm = _fold_dashes(_m2.group(1)).replace("--", "-")
+            if _nm.lower() in seen or any(_named_title_match(_nm, _q) for _, _, _q in out):
+                continue
+            seen.add(_nm.lower())
+            out.append((0, _m2.start(1), _nm))
+    if SUBQ_CURATED:
+        # a curated name in a LaTeX reference key counts where the reference sits (MATHBRAIN_CURATED_LABELS):
+        # \eqref{eq:plancherel} is the paper's own name for the step
+        _labels = [(m.start(), re.sub(r"[:_./-]+", " ", m.group(1))) for m in _LABEL_KEY_RE.finditer(prompt)] if CURATED_LABELS else []
+        for _i, (_rx, _canon) in enumerate(_CURATED_NAMED):
+            _mm = _rx.search(prompt)
+            _pos = _mm.start() if _mm else None
+            if _pos is None:
+                for _lp, _lk in _labels:
+                    if _CURATED_LABEL[_i].search(_lk):
+                        _pos = _lp
+                        break
+            if _pos is None or _canon.lower() in seen:
+                continue
+            # an extracted name that is PART of the curated one ("value decomposition", cut from "Singular-value
+            # decomposition") gives way to it in place (MATHBRAIN_CURATED_SUPERSEDE)
+            if CURATED_SUPERSEDE:
+                _sub = [j for j, (_, _, _q) in enumerate(out)
+                        if _named_title_match(_q, _canon) and not _named_title_match(_canon, _q)]
+                if _sub:
+                    _a, _b, _ = out[_sub[0]]
+                    out[_sub[0]] = (_a, _b, _canon)
+                    seen.add(_canon.lower())
+                    continue
+            if any(_named_title_match(_canon, _q) or _named_title_match(_q, _canon) for _, _, _q in out):
+                continue
+            seen.add(_canon.lower())
+            out.append((0, _pos, _canon))
+        # an AMBIGUOUS name in a reference key, resolved by the proof's own notation (MATHBRAIN_LABEL_CONTEXT)
+        if LABEL_CONTEXT:
+            for _krx, _ctx, _canon in _LABEL_CONTEXT:
+                if _canon.lower() in seen or not _ctx.search(prompt):
+                    continue
+                _pos = next((_lp for _lp, _lk in _labels if _krx.search(_lk)), None)
+                if _pos is None:
+                    continue
+                if any(_named_title_match(_canon, _q) or _named_title_match(_q, _canon) for _, _, _q in out):
+                    continue
+                seen.add(_canon.lower())
+                out.append((0, _pos, _canon))
     out.sort()
     return [q for _, _, q in out[:limit]]
 
@@ -4448,93 +4530,6 @@ def _session_math_context(session_id, prompt):
         return None
 
 
-# A REPEATED PROMPT WITH A KNOWN ANSWER (MATHBRAIN_REPEAT_SKIP, default on). Loop sessions
-# send the same tick prompt every 5-10 minutes. Measured on one day of mathbrain_silence.tsv: 682 of 1,259
-# silences were a prompt identical (same session, same fingerprint) to one that had already ended in a post-ranking
-# silence - 264 incoherent_weak_block, 418 all_dedup_suppressed - each after a full store load and ranking. Inside one
-# context (no compaction since) the same prompt meets the same store and the same shown-ids shard, so the verdict is
-# already known. The memo is per session, scoped to the newest compaction and to 2 h; a compaction, a new prompt, an
-# unreadable index or a harness session all fall through to the full run.
-REPEAT_SKIP = os.environ.get("MATHBRAIN_REPEAT_SKIP", "1").strip() not in ("0", "off", "false")
-REPEAT_SKIP_TTL_S = 7200.0
-_REPEAT_REASONS = ("incoherent_weak_block", "all_dedup_suppressed")
-
-
-def _repeat_fp(data):
-    p = str((data or {}).get("prompt") or "")
-    return hashlib.sha1(p.encode("utf-8", "replace")).hexdigest()[:16] if p else ""
-
-
-def _repeat_ctx(sid):
-    try:
-        import once_per_context as _opc
-        return float(_opc.last_compaction_at(sid) or 0.0)
-    except Exception:
-        return None
-
-
-def _repeat_path(sid):
-    return os.path.join(SESSION_DIR, "repeat_%s.json" % re.sub(r"[^0-9A-Za-z_-]", "", sid)[:64])
-
-
-def _repeat_known_silence(data):
-    """The reason this exact prompt already went silent in this session and context, or None."""
-    try:
-        sid = str((data or {}).get("session_id") or "")
-        if SHADOW or not re.match(r"^[0-9a-f]{8}-", sid):
-            return None
-        fp = _repeat_fp(data)
-        if not fp:
-            return None
-        with io.open(_repeat_path(sid), encoding="utf-8") as f:
-            e = (json.load(f) or {}).get(fp)
-        if not isinstance(e, dict) or time.time() - float(e.get("ts", 0) or 0) >= REPEAT_SKIP_TTL_S:
-            return None
-        ctx = _repeat_ctx(sid)
-        if ctx is None or ctx != float(e.get("ctx", -1.0)):
-            return None
-        return str(e.get("reason") or "")[:40] or None
-    except Exception:
-        return None
-
-
-def _repeat_record(data, reason):
-    try:
-        sid = str((data or {}).get("session_id") or "")
-        if SHADOW or not re.match(r"^[0-9a-f]{8}-", sid):
-            return
-        fp = _repeat_fp(data)
-        ctx = _repeat_ctx(sid)
-        if not fp or ctx is None:
-            return
-        path = _repeat_path(sid)
-        now = time.time()
-        try:
-            with io.open(path, encoding="utf-8") as f:
-                rec = json.load(f)
-            if not isinstance(rec, dict):
-                rec = {}
-        except Exception:
-            rec = {}
-        rec = {k: v for k, v in rec.items() if isinstance(v, dict) and now - float(v.get("ts", 0) or 0) < REPEAT_SKIP_TTL_S}
-        rec[fp] = {"reason": reason.split(":")[0], "ts": now, "ctx": ctx}
-        if len(rec) > 50:
-            rec = dict(sorted(rec.items(), key=lambda kv: -float(kv[1].get("ts", 0)))[:50])
-        os.makedirs(SESSION_DIR, exist_ok=True)
-        tmp = "%s.tmp.%d.%d" % (path, os.getpid(), int(now * 1000) % 1000000)
-        with io.open(tmp, "w", encoding="utf-8") as f:
-            json.dump(rec, f)
-        try:
-            os.replace(tmp, path)
-        except OSError:
-            try:
-                os.remove(tmp)
-            except OSError:
-                pass
-    except Exception:
-        pass
-
-
 def _main_body_guarded(data, out):
     try:
         _main_body(data, out)
@@ -4596,11 +4591,6 @@ def _main_body(data, out):
     _reset_cov_agree_state()
     prompt = data.get("prompt")
     prompt = (prompt if isinstance(prompt, str) else "")[:8000]
-    if REPEAT_SKIP:
-        _rk = _repeat_known_silence(data)
-        if _rk:
-            _silence_note(data, "skip_repeat_known:" + _rk)
-            return
     _use_begin(str(data.get("session_id") or data.get("thread_id") or ""))
     prompt = _typo_fix(prompt)
     prompt = _latex_accents(prompt)
@@ -5564,8 +5554,6 @@ def _silence_note(data, reason, harness_only=False):
             _fp = ""
         with io.open(os.path.join(HOME, ".claude", "dreaming", name), "a", encoding="utf-8") as h:
             h.write("%.0f\t%s\t%s\t%s\n" % (time.time(), sess[:12], reason, _fp))
-        if real and REPEAT_SKIP and str(reason).split(":")[0] in _REPEAT_REASONS:
-            _repeat_record(data, str(reason))
     except Exception:
         pass
 
