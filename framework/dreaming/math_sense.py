@@ -5813,6 +5813,18 @@ def cli_query(query):
         if not chosen:
             return
         chosen = _drop_title_twins(_drop_later_twins(chosen))
+        # SAME RESULT ON RECORD (MATHBRAIN_SAME_RESULT): an agent's query gets the line the hook gives, naming a card
+        # the store holds for the same result when that card is not itself among the ones printed.
+        twin_line = {}
+        if SAME_RESULT:
+            try:
+                ids = [h.node.id for h in chosen]
+                for cid, found in _pitfalls_for(ids).items():
+                    for lab, pid, title in found:
+                        if lab == "same result on record" and pid not in ids and cid not in twin_line:
+                            twin_line[cid] = "  same result on record: %s (%s)" % (title, pid)
+            except Exception:
+                twin_line = {}
         print("Full current note: python ~/.claude/dreaming/math_note.py SOURCE_ID")
         reads = _review_reads([h.node.id for h in chosen])
         parts = _claim_parts([h.node.id for h in chosen])
@@ -5832,6 +5844,8 @@ def cli_query(query):
             proof = str(meta.get("proof_text") or "").strip()
             if proof:
                 print("  proof sketch: %s" % (proof[:400] + ("..." if len(proof) > 400 else "")))
+            if node.id in twin_line:
+                print(twin_line[node.id])
     except Exception:
         return
 
