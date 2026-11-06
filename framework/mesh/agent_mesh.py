@@ -518,6 +518,30 @@ class Mesh:
             (PROTOCOL_VERSION,),
         )
 
+    def _schema_names(self, table: str) -> set:
+        return {
+            r["name"]
+            for r in self.conn.execute(
+                "SELECT name FROM sqlite_master WHERE tbl_name=? AND type IN ('index','trigger')", (table,)
+            )
+        }
+
+    def _claims_schema_current(self) -> bool:
+        """True when _repair_claims_schema would change nothing. Read-only: no write lock. With the partial unique
+        index present the database itself forbids two live rows for one agent and resource, so the duplicate sweep
+        has nothing to close."""
+        row = self.conn.execute(
+            "SELECT sql FROM sqlite_master WHERE type='table' AND name='claims'"
+        ).fetchone()
+        table_sql = (row["sql"] if row else "") or ""
+        if not table_sql or re.search(
+            r"UNIQUE\s*\(\s*agent_id\s*,\s*canonical_resource\s*,\s*released_at\s*\)", table_sql, re.I
+        ):
+            return False
+        if not {"idx_claims_one_live", "idx_claims_active"} <= self._schema_names("claims"):
+            return False
+        return self.conn.execute("SELECT 1 FROM messages WHERE recipient='all' LIMIT 1").fetchone() is None
+
     def _repair_claims_schema(self) -> None:
         """Migrate the v1 claims constraint and enforce exactly one live lease.
 
@@ -526,6 +550,8 @@ class Mesh:
         duplicate live rows nor allowed two releases in the same second.  A
         partial unique index expresses the intended invariant directly.
         """
+        if self._claims_schema_current():
+            return
         self.conn.execute("BEGIN IMMEDIATE")
         try:
             row = self.conn.execute(
