@@ -24,7 +24,7 @@ if __name__ == "__main__" and any(arg in ("-h", "--help") for arg in sys.argv[1:
     print(__doc__ or "No command-line options.")
     raise SystemExit(0)
 
-import io, json, os, secrets, socketserver, sys, threading, time
+import bisect, collections, io, json, os, secrets, socketserver, struct, sys, threading, time
 
 D = os.path.dirname(os.path.abspath(__file__))
 if D not in sys.path:
@@ -40,6 +40,7 @@ CALL_LOG = os.path.join(STATE_DIR, "calls.jsonl")   # one line a call: session p
 STATE_TTL = float(os.environ.get("SPREAD_SERVER_TTL", "300" if os.name == "nt" else "120"))
 IDLE_EXIT = float(os.environ.get("SPREAD_SERVER_IDLE_EXIT", "7200"))
 RSS_CAP = int(float(os.environ.get("SPREAD_SERVER_RSS_CAP_GB", "1.5")) * 1024 ** 3)
+NAMES_BG = os.environ.get("SPREAD_SERVER_NAMES_BG", "1") != "0"
 SERVE_STALE = os.environ.get("SPREAD_SERVER_STALE", "1" if os.name == "nt" else "0") == "1"
 RESTAT_AGE = float(os.environ.get("SPREAD_SERVER_RESTAT_AGE", "120"))
 ENV_PREFIXES = ("BRAIN_", "SPREAD_", "MATHBRAIN_", "FOK_")
@@ -151,6 +152,91 @@ def rss_bytes():
         return r if sys.platform == "darwin" else r * 1024
     except Exception:
         return 0
+
+
+class DirWatch(threading.Thread):
+    """Counts name changes (create, delete, rename) in one folder with ReadDirectoryChangesW; see Warm.held_names.
+    ok is False when the watch could not be armed or has failed: the caller then lists every time."""
+
+    def __init__(self, path):
+        super().__init__(daemon=True)
+        self.path = path
+        self.gen = 0
+        self.ok = False
+        self.armed_at = float("inf")
+        self.ready = threading.Event()
+        # (gen, "add"|"del"|"ovf", name) per change, so a hold can be patched instead of re-listed
+        self.log = collections.deque(maxlen=8192)
+        self.lock = threading.Lock()
+
+    def since(self, g0, g1):
+        """The changes of generations g0+1..g1 in order, or None when any is missing (evicted) or an overflow."""
+        with self.lock:
+            ev = [e for e in self.log if g0 < e[0] <= g1]
+            first = self.log[0][0] if self.log else None
+        if g1 > g0 and (first is None or first > g0 + 1):
+            return None
+        if any(e[1] == "ovf" for e in ev):
+            return None
+        return ev
+
+    def run(self):
+        try:
+            if os.name != "nt":
+                return
+            import ctypes
+            from ctypes import wintypes
+            k = ctypes.WinDLL("kernel32", use_last_error=True)
+            k.CreateFileW.restype = wintypes.HANDLE
+            k.CreateFileW.argtypes = [wintypes.LPCWSTR, wintypes.DWORD, wintypes.DWORD, ctypes.c_void_p,
+                                      wintypes.DWORD, wintypes.DWORD, wintypes.HANDLE]
+            k.ReadDirectoryChangesW.restype = wintypes.BOOL
+            k.ReadDirectoryChangesW.argtypes = [wintypes.HANDLE, ctypes.c_void_p, wintypes.DWORD, wintypes.BOOL,
+                                                wintypes.DWORD, ctypes.POINTER(wintypes.DWORD), ctypes.c_void_p,
+                                                ctypes.c_void_p]
+            # FILE_LIST_DIRECTORY, share read|write|delete, OPEN_EXISTING, FILE_FLAG_BACKUP_SEMANTICS
+            h = k.CreateFileW(self.path, 0x0001, 0x7, None, 3, 0x02000000, None)
+            if not h or h == ctypes.c_void_p(-1).value:
+                return
+            buf = ctypes.create_string_buffer(1 << 16)
+            n = wintypes.DWORD()
+            self.armed_at = time.time()
+            self.ok = True
+            self.ready.set()
+            while True:
+                # changes between two calls are buffered by the handle; an overflow returns success with 0 bytes
+                r = k.ReadDirectoryChangesW(h, buf, len(buf), False, 0x1, ctypes.byref(n), None, None)
+                g = self.gen + 1
+                ev = []
+                try:
+                    if not r or not n.value:
+                        ev.append((g, "ovf", None))
+                    else:
+                        raw, off = buf.raw[:n.value], 0
+                        while True:
+                            nxt, act, ln = struct.unpack_from("<III", raw, off)
+                            name = raw[off + 12: off + 12 + ln].decode("utf-16-le")
+                            # 1 added, 2 removed, 4 renamed-from, 5 renamed-to; 3 (modified) is not under this filter
+                            kind = "add" if act in (1, 5) else "del" if act in (2, 4) else None
+                            if kind:
+                                ev.append((g, kind, name))
+                            if not nxt:
+                                break
+                            off += nxt
+                        if not ev:
+                            ev.append((g, "nop", None))
+                except Exception:
+                    ev = [(g, "ovf", None)]
+                with self.lock:
+                    self.log.extend(ev)
+                    self.gen = g
+                if not r:
+                    self.ok = False
+                    return
+        except Exception:
+            self.ok = False
+        finally:
+            self.ready.set()
 
 
 def st3(p):
@@ -341,9 +427,120 @@ class Warm:
             return "rss cap"
         return None
 
+    # Held memory-folder listing. The sampler's caller frames put the
+    # remaining served-call listing cost (~13 samples, 260+ ms, 1.7k faults in a 2.5 s call) in spread_recall._mem_names,
+    # which lists the 53k-entry folder on every call with two long words; none of the server's memoized loaders covers
+    # it. The NAME SET changes only on create, delete or rename. The folder's own stat is NOT a usable key for that on
+    # one NTFS volume (measured: a create moved it, a delete never did, one rename did and the next did not), so
+    # the hold is keyed on DirWatch's generation: ReadDirectoryChangesW (FILE_NOTIFY_CHANGE_FILE_NAME) bumps it on any
+    # create, delete or rename and on a buffer overflow. The generation is read BEFORE the listing, so a change during it
+    # re-lists next call; a hold made before the watcher was armed is not trusted; STATE_TTL is the backstop; no watcher
+    # (another OS, an error) = list every call, as before. In-place edits rename nothing, so per-file stats are NOT
+    # served from the held read: _MEM_STATS is a names-only dict whose .get returns None, and _desc_from_file falls
+    # through to its own live os.stat. Iteration (the supersession arm's known-slug set) sees the held names.
+    # Off: SPREAD_SERVER_HOLD_NAMES=0.
+    class _NamesOnly(dict):
+        def get(self, k, d=None):
+            return None
+
+    def _names_bg_start(self, w, ea, path):
+        self.names_bg = ("run", None)
+
+        def run():
+            res = None
+            try:
+                with w.lock:
+                    sig0 = w.gen
+                t0 = time.time()
+                st = ea._win_bulk_md_stats(path)
+                if st is not None and w.ok:
+                    res = (sig0, t0, list(st), self._NamesOnly.fromkeys(st))
+            except Exception:
+                res = None
+            self.names_bg = ("done", res)
+
+        threading.Thread(target=run, daemon=True, name="names_bg").start()
+
+    def held_names(self):
+        sr = self.sr
+        ea = getattr(sr, "embedding_artifact", None)
+        if ea is None or not hasattr(ea, "_bulk_md_stats"):
+            return None
+        w = getattr(self, "names_watch", None)
+        if w is None or w.path != sr.MEM:
+            w = self.names_watch = DirWatch(sr.MEM)
+            w.start()
+            w.ready.wait(2.0)
+        sig = w.gen if w.ok else None
+        h = hold_was = getattr(self, "names_hold", None)
+        now = time.time()
+        # Background re-list: the TTL re-list ran inside a served call every ~5 min, and
+        # those calls were the slowest the server had (11 calls 00:41-01:29, median 1,316 ms, 9 over 1 s, against 438 ms
+        # for calls on the held list). From half the TTL a thread lists the folder and the next call adopts its result,
+        # patched from the watcher's events after the generation it read before listing (add and del are set operations,
+        # so an event the listing already saw is a no-op). The TTL re-list in a call stays as the fallback.
+        # Off: SPREAD_SERVER_NAMES_BG=0.
+        bg = getattr(self, "names_bg", None)
+        if bg is not None and bg[0] == "done":
+            self.names_bg = None
+            r = bg[1]
+            if r is not None and (h is None or r[1] > h[1]) and r[1] >= w.armed_at + 0.5:
+                h = self.names_hold = r
+                self.misses.append("held_names:bg")
+        if (NAMES_BG and os.name == "nt" and hasattr(ea, "_win_bulk_md_stats") and h is not None and sig is not None
+                and getattr(self, "names_bg", None) is None and STATE_TTL / 2 <= now - h[1] < STATE_TTL
+                and h[1] >= w.armed_at + 0.5):
+            self._names_bg_start(w, ea, sr.MEM)
+        # A generation change is patched from the watcher's own events: with ~1.7 new memories a minute,
+        # 7 of the first 27 served calls re-listed on a generation change, and the listing was the largest frame in
+        # each slow one (5-6 sampler hits, 0.7-1.2k faults). The folder lists in NTFS order, which for these names is
+        # sorted(key=str.upper) (checked on all 53,563), so an added name is slotted in at its place; add and del are
+        # applied as set operations, so an event the listing already saw is a no-op. An overflow, an evicted event, the
+        # TTL or an unarmed hold still re-list.
+        if (h is not None and sig is not None and h[0] != sig and now - h[1] < STATE_TTL
+                and h[1] >= w.armed_at + 0.5):
+            ev = w.since(h[0], sig)
+            if ev is not None:
+                names, have, n0 = list(h[2]), dict(h[3]), 0
+                for _g, kind, nm in ev:
+                    if not nm or not nm.endswith(".md"):
+                        continue
+                    if kind == "add" and nm not in have:
+                        bisect.insort(names, nm, key=str.upper)
+                        have[nm] = None
+                        n0 += 1
+                    elif kind == "del" and nm in have:
+                        names.remove(nm)
+                        del have[nm]
+                        n0 += 1
+                h = self.names_hold = (sig, h[1], names, self._NamesOnly(have))
+                self.misses.append("held_names:patch:%d" % n0)
+        if (h is None or sig is None or h[0] != sig or now - h[1] >= STATE_TTL
+                or h[1] < w.armed_at + 0.5):
+            # Clear the one-shot handoff first: _bulk_md_stats returns a _PREFETCH under 60 s old instead of reading,
+            # and in this process the memoized loader seldom takes it, so before 5 Nov 22:4x each call's _mem_names got
+            # the previous call's listing back and re-armed it with a fresh time - a frozen name list while calls kept
+            # coming within 60 s of each other.
+            if hasattr(ea, "_PREFETCH"):
+                ea._PREFETCH = None
+            st = ea._bulk_md_stats(sr.MEM)
+            if st is None:
+                return None
+            h = self.names_hold = (sig, now, list(st), self._NamesOnly.fromkeys(st))
+            if hasattr(ea, "_PREFETCH"):
+                ea._PREFETCH = (sr.MEM, time.monotonic(), st)
+            self.misses.append("held_names:list:%s" % (
+                "new" if hold_was is None else "nowatch" if sig is None else "gen" if hold_was[0] != sig
+                else "ttl" if now - hold_was[1] >= STATE_TTL else "arm"))
+        sr._MEM_STATS = h[3]
+        return h[2]
+
     def call(self, raw, hook="spread_recall"):
         if hook == "spread_recall":
             mod = self.sr
+            if os.environ.get("SPREAD_SERVER_HOLD_NAMES", "1") != "0":
+                mod.MEM_NAMES = self.held_names
+                mod._MEM_STATS = None
         else:
             # other prompt hooks whose module caches are all stat-keyed (checked 5 Nov: fok_probe, supersession, bm25)
             mod = self.mods.get(hook)
