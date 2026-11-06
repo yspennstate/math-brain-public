@@ -5377,6 +5377,10 @@ def _main_body(data, out):
                     _subq_quoted = bool(subs)
                 if subs and not chosen and _subq_mode == "src" and _subq_quoted and not _covered_titles:
                     subs = []
+                # MATHBRAIN_SUBQ_OFF=1 runs no sub-query at all, so the block is the whole-question selection alone;
+                # the arm that measures what the sub-query stage adds.
+                if os.environ.get("MATHBRAIN_SUBQ_OFF", "0") == "1":
+                    subs = []
                 if subs and (time.time() - started) < 0.5 * TIME_BUDGET_S:
                     # A TIME GUARD INSIDE THE LOOP (MATHBRAIN_SUBQ_TIME_FRAC, default 0.6). Checked once before the first
                     # sub-query, a long argument on a loaded machine ran every sub-query past the budget, and past it the
