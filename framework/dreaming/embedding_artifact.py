@@ -563,6 +563,9 @@ def load_verified_embeddings_lightweight(
         if not all_finite:
             return None
         loaded = LightweightVerifiedEmbeddings(active, matrix, bias, hashes_by_slug)
+        # {name.md: (size, mtime_ns)} as read above, for callers that would read the same folder again
+        # (spread_recall's name scan and supersession's known-slug set).
+        loaded.memory_stats = memory_stats
         # Same as load_verified_embeddings: keep the build's stat of each row so embedding_row_current answers a
         # later check of an unchanged file from one stat. Without it every spread_recall candidate was re-read and
         # re-hashed on each prompt (about 400 files, 0.2 s of a 0.65 s hook, 1 Nov).

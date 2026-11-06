@@ -249,8 +249,20 @@ def _distinctive_words(words, limit=12):
 def _load_superseded():
     """slug -> its correction. A superseded memory must never be surfaced when its correction is also
     in play (the Supersede/MemConflict stale-fact fix; eval_stale_fact shows relevance is stale-blind).
-    Built by schema_supersede.py; absent file -> empty map -> behaviour unchanged."""
-    return active_supersessions(MEM, index_path=os.path.join(DR, "superseded.tsv"))
+    Built by schema_supersede.py; absent file -> empty map -> behaviour unchanged.
+    In the hook the names come from the one shared folder read (see _mem_names), not from supersession's own
+    scandir (0.94 s on 53k files): this call takes no frontmatter, so only the set of .md file names is used, and
+    the shared read's names equal scandir's (53,098, same set). SPREAD_SHARED_LIST=0 lists as before."""
+    known = None
+    if _SHARE_LIST and os.environ.get("SPREAD_SHARED_LIST", "1") != "0":
+        if _MEM_STATS is None:
+            try:
+                _mem_names()
+            except Exception:
+                pass
+        if _MEM_STATS is not None:
+            known = {name[:-3] for name in _MEM_STATS}
+    return active_supersessions(MEM, index_path=os.path.join(DR, "superseded.tsv"), known_slugs=known)
 
 
 def _collapse_activations(act, parent, superseded):
@@ -522,7 +534,10 @@ def _load_embeddings():
     # the fail-closed boundary and would unexpectedly import NumPy on a damaged artifact.
     hot_loader = getattr(embedding_artifact, "load_verified_embeddings_lightweight", None)
     if hot_loader is not None:
-        return hot_loader(EMB, EMB_AUTHORITY, MEM, EXPECTED_EMB_MODEL)
+        global _MEM_STATS
+        loaded = hot_loader(EMB, EMB_AUTHORITY, MEM, EXPECTED_EMB_MODEL)
+        _MEM_STATS = getattr(loaded, "memory_stats", None)
+        return loaded
     return embedding_artifact.load_verified_embeddings(
         EMB, EMB_AUTHORITY, MEM, EXPECTED_EMB_MODEL
     )
@@ -797,9 +812,16 @@ def _index_lines():
 # resident listing), so the arm no longer lists the 50k-entry folder a second time - 2.2 s of a 6-8 s warm recall in
 # the server profile. Same names in the same order; None (the hook, any other caller, a failed listing) lists as before.
 MEM_NAMES = None
+# In the per-prompt hook (main() sets this) the name scan takes the embedding loader's bulk stat read instead of
+# os.listdir and hands it on, so the folder is read once a prompt, not twice. Same .md names in the same order as
+# listdir (53,077, checked); the scan only reads names ending in .md. SPREAD_SHARED_LIST=0 lists as before.
+_SHARE_LIST = False
+# {name.md: (size, mtime_ns)} from the last shared folder read in this process, or None.
+_MEM_STATS = None
 
 
 def _mem_names():
+    global _MEM_STATS
     if MEM_NAMES is not None:
         try:
             names = MEM_NAMES()
@@ -807,6 +829,16 @@ def _mem_names():
                 return names
         except Exception:
             pass
+    if (_SHARE_LIST and embedding_artifact is not None and os.environ.get("SPREAD_SHARED_LIST", "1") != "0"
+            and hasattr(embedding_artifact, "_PREFETCH")):
+        try:
+            st = embedding_artifact._bulk_md_stats(MEM)
+        except Exception:
+            st = None
+        if st is not None:
+            _MEM_STATS = st
+            embedding_artifact._PREFETCH = (MEM, time.monotonic(), st)
+            return list(st)
     return os.listdir(MEM)
 
 
@@ -1365,6 +1397,8 @@ def main():
         # exit before any work. See script_help_flag_can_execute_work.
         print(__doc__ or os.path.basename(__file__))
         return
+    global _SHARE_LIST
+    _SHARE_LIST = True
     try:
         # lstrip the UTF-8 BOM: a PowerShell 5.1 pipe (and any BOM-writing feeder) prepends
         # U+FEFF, json.loads refuses it, and the fail-safe would swallow the whole event -
