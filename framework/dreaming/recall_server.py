@@ -15,14 +15,18 @@ import socket
 import socketserver
 import sys
 import time
-from recall_protocol import HERE, CONTEXT_ENV, DEFAULT_STORE, DEFAULT_BUILD, canonical, code_key, code_stamp, env_key, requested_store, send_frame, receive_frame
+from recall_protocol import HERE, CONTEXT_ENV, DEFAULT_STORE, DEFAULT_BUILD, canonical, code_key, code_stamp, env_key, requested_store, send_frame, receive_frame, wire_key
 from runtime import policy
 from server_safety import resources, resident
 
 CAP = int(1.5*1024**3)
 
-def mutex(store):
+def mutex(store, generation=''):
     digest = hashlib.sha256(canonical(store).encode('utf-8')).hexdigest()
+    if generation:
+        # One server per store AND wire generation: the keeper's overlap restart loads the next generation beside the
+        # running one and stops the old after the new endpoint is written.
+        digest += '_' + generation[:16]
     if os.name != 'nt':
         # one server per store: an advisory lock the kernel drops when the process exits
         import fcntl
@@ -99,7 +103,8 @@ def main():
     probe = resources()
     if not probe['allowed']:
         return 4
-    handle = mutex(args.store)
+    wire = wire_key()
+    handle = mutex(args.store, wire)
     endpoint = HERE/'endpoint.json'
     stop = HERE/'SERVER_STOP'
     server = None
@@ -274,7 +279,7 @@ def main():
         server.peak=resident()
         metadata = dict(host='127.0.0.1',port=server.server_address[1],token=state['token'],
                         store=canonical(args.store),code=state['code'],stamp=state['stamp'],model_files=model_files,
-                        environment=state['environment'],pid=os.getpid())
+                        environment=state['environment'],pid=os.getpid(),wire=wire)
         temporary = HERE/'endpoint.tmp'
         temporary.write_text(json.dumps(metadata),encoding='utf-8')
         os.replace(temporary,endpoint)

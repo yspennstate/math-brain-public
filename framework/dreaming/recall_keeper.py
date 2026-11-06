@@ -90,6 +90,27 @@ def stamp_now(endpoint):
     return recall_protocol.code_stamp(endpoint.get('model_files', ()))
 
 
+def wire_changed(ep):
+    """True when the wire files (recall_protocol.WIRE_FILES) now differ in content from the ones the serving server
+    started with (its endpoint's 'wire'). Such an edit changes no answer, so the running server keeps serving while
+    its successor loads. False when unknown: a server without 'wire' is replaced by the stamp check instead."""
+    try:
+        import importlib, recall_protocol
+        importlib.reload(recall_protocol)
+        return bool(ep.get('wire')) and ep['wire'] != recall_protocol.wire_key()
+    except Exception:
+        return False
+
+
+def start_server(env):
+    out = open(HERE / 'recall_server_stdio.log', 'a', encoding='utf-8')
+    how = dict(creationflags=NO_WINDOW | BELOW_NORMAL) if WINDOWS else dict(start_new_session=True)
+    return subprocess.Popen([PYTHON, str(HERE / 'recall_server.py'), '--max-age', str(MAX_AGE)],
+                            cwd=str(HERE), env=env, stdout=out, stderr=out, stdin=subprocess.DEVNULL, **how)
+
+
+SUCCESSOR_MAX = 1800   # a successor not serving within 30 min is stopped; the old server keeps serving
+
 PROBE_EVERY, PROBE_SLOW, BACKOFF = 600, 45.0, 3600   # 45 s: under 99 pct commit a healthy server probes 10-16 s and the cold path is 31-32 s
 
 
@@ -99,6 +120,7 @@ def probe(ep):
     falls back - so a slow server makes every recall worse. Returns seconds, or None on failure."""
     import socket
     from recall_protocol import CONTEXT_ENV, env_key, send_frame, receive_frame
+    key0 = store_key()
     s = time.monotonic()
     try:
         with socket.create_connection(('127.0.0.1', int(ep['port'])), timeout=2) as sock:
@@ -113,11 +135,31 @@ def probe(ep):
             return None, why
         return time.monotonic() - s, None
     except Exception as e:
-        log('probe error after %.1f s: %s' % (time.monotonic() - s, type(e).__name__))
+        log('probe error after %.1f s: %s%s' % (time.monotonic() - s, type(e).__name__, moved_note(key0)))
         return None, type(e).__name__
 
 
+def store_key():
+    """The server's own store key (fastrecall._store_key), or None. Logging only: a probe that times out hides the
+    server's store_moved_during_call refusal, so the log says whether the store moved during the failed probe."""
+    try:
+        sys.path.insert(0, str(HERE))
+        import fastrecall
+        from recall_protocol import DEFAULT_STORE
+        return fastrecall._store_key(os.environ.get('MATHBRAIN_STORE', DEFAULT_STORE))
+    except Exception:
+        return None
+
+
+def moved_note(key0):
+    key1 = store_key()
+    if key0 is None or key1 is None:
+        return ' (store key unread)'
+    return ' (store moved during probe)' if key1 != key0 else ' (store still)'
+
+
 NOT_ADOPTED = set()
+STALE = set()   # (pid, port) of endpoints whose pid now belongs to another program
 NEUTRAL = ('store_moved_during_call',)   # the store was written during the probe: says nothing about speed
 
 
@@ -192,7 +234,8 @@ def main():
     _INSTANCE = single_instance()
     log('keeper up pid %d' % os.getpid())
     child, wait_until = None, 0
-    next_probe, slow = time.time() + 120, 0
+    nxt, nxt_started, wire_retry = None, 0, 0   # overlap restart: the next server loading beside child
+    next_probe, slow, fresh = time.time() + 120, 0, True
     # Keep the store and package the clients name; drop eval and control dials. Filtered in place, so the probe's
     # environment key is the one the server is started with.
     for k in list(os.environ):
@@ -206,13 +249,43 @@ def main():
     while not STOP.exists():
         try:
             ep = json.loads(ENDPOINT.read_text(encoding='utf-8')) if ENDPOINT.exists() else None
-            if ep and alive(ep.get('pid', 0)):
+            if nxt is not None:
+                if ep and ep.get('pid') == nxt.pid:
+                    old = child.pid if child is not None else 0
+                    if child is not None and child.poll() is None:
+                        child.terminate()
+                        child.wait(60)
+                    log('successor %d serving after %.0f s - stopped old server %d' % (nxt.pid, time.time() - nxt_started, old))
+                    child, nxt = nxt, None
+                    next_probe, slow, fresh = time.time() + 120, 0, True
+                    time.sleep(30)
+                    continue
+                if nxt.poll() is not None or time.time() - nxt_started > SUCCESSOR_MAX:
+                    if nxt.poll() is None:
+                        nxt.terminate()
+                        nxt.wait(60)
+                    log('successor %d gave up (rc %s) - the old server keeps serving; next try in 30 min' %
+                        (nxt.pid, nxt.returncode))
+                    nxt, wire_retry = None, time.time() + 1800
+                elif child is not None and child.poll() is None:
+                    time.sleep(15)      # the old server serves while the successor loads; no probes meanwhile
+                    continue
+                else:
+                    child, nxt = nxt, None   # the old server died: the successor is now the one we wait on
+                    log('old server gone while successor %d loads - waiting on it' % child.pid)
+                    continue
+            if ep and alive(ep.get('pid', 0)) and (ep.get('pid'), ep.get('port')) not in STALE:
                 if (child is None or child.pid != ep['pid']) and ep['pid'] not in NOT_ADOPTED:
                     try:
                         child = Adopted(ep['pid'])
-                        next_probe, slow = time.time() + 120, 0
+                        next_probe, slow, fresh = time.time() + 120, 0, True
                         log('adopted running server pid %d' % child.pid)
                     except OSError as e:
+                        if 'not a recall server' in str(e):
+                            # endpoint.json outlived its server and the pid went to another program: mark this
+                            # endpoint stale so the next pass starts a server instead of waiting on that program
+                            STALE.add((ep['pid'], ep.get('port')))
+                            continue
                         NOT_ADOPTED.add(ep['pid'])
                         log('cannot adopt server pid %s: %s' % (ep.get('pid'), e))
                 if child is not None and child.pid == ep['pid'] and ep.get('stamp') != stamp_now(ep):
@@ -220,6 +293,17 @@ def main():
                     child.terminate()
                     child.wait(60)
                     child = None
+                elif child is not None and child.pid == ep['pid'] and time.time() >= wire_retry \
+                        and wire_changed(ep):
+                    g = gate()
+                    if not g.get('allowed'):
+                        log('wire code changed but gate closed %s - old server keeps serving' % json.dumps(g))
+                        wire_retry = time.time() + 300
+                    else:
+                        nxt, nxt_started = start_server(env), time.time()
+                        log('wire code changed - successor %d loading beside server %d' % (nxt.pid, child.pid))
+                    time.sleep(30)
+                    continue
                 elif child is not None and child.pid == ep['pid'] and time.time() >= next_probe:
                     took, why = probe(ep)
                     v = verdict(took, why)
@@ -228,6 +312,17 @@ def main():
                         log('probe not counted (%s) - again in 120 s (slow streak %d)' % (why, slow))
                         time.sleep(60)
                         continue
+                    if v == 'slow' and fresh:
+                        # The first request a new or adopted server answers pays its warm-up, and a measured day had
+                        # first probes failing at more than twice the later rate, so a slow first probe is retried in
+                        # 120 s instead of starting a streak.
+                        fresh = False
+                        next_probe = time.time() + 120
+                        log('first probe after start slow (%s) - warm-up, again in 120 s' %
+                            ('fail ' + str(why) if took is None else '%.1f s' % took))
+                        time.sleep(60)
+                        continue
+                    fresh = False
                     next_probe = time.time() + PROBE_EVERY
                     slow = slow + 1 if v == 'slow' else 0
                     log('probe %s s (slow streak %d)' % ('fail ' + str(why) if took is None else '%.1f' % took, slow))
@@ -255,12 +350,9 @@ def main():
                 log('gate closed %s - waiting' % json.dumps(g))
                 wait_until = time.time() + 300
                 continue
-            out = open(HERE / 'recall_server_stdio.log', 'a', encoding='utf-8')
-            how = dict(creationflags=NO_WINDOW | BELOW_NORMAL) if WINDOWS else dict(start_new_session=True)
-            child = subprocess.Popen([PYTHON, str(HERE / 'recall_server.py'), '--max-age', str(MAX_AGE)],
-                                     cwd=str(HERE), env=env, stdout=out, stderr=out, stdin=subprocess.DEVNULL, **how)
+            child = start_server(env)
             log('started server pid %d' % child.pid)
-            next_probe, slow = time.time() + 120, 0
+            next_probe, slow, fresh = time.time() + 120, 0, True
             time.sleep(30)
         except Exception as e:
             log('error %s: %s' % (type(e).__name__, e))
