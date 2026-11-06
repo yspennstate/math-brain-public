@@ -30,7 +30,7 @@ HOME = os.path.expanduser("~")
 MEM = os.environ.get("BRAIN_MEMORY_DIR") or os.path.join(HOME, ".claude", "memory")
 OUT_DIR = os.path.join(HOME, ".claude", "brain_graph", "study", "doc_expansion")
 OUT = os.path.join(OUT_DIR, "expansions.jsonl")
-CLAUDE = os.path.join(HOME, ".local", "bin", "claude.exe")
+CLAUDE = os.path.join(HOME, ".local", "bin", "claude.exe" if os.name == "nt" else "claude")
 WORK = os.environ.get("DOC_EXPAND_WORK") or os.path.join(tempfile.gettempdir(), "doc_expand_work")
 NOWIN = 0x08000000 if os.name == "nt" else 0
 LOCK = threading.Lock()
