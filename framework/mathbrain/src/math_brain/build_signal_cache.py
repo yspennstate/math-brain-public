@@ -18,6 +18,11 @@ if __name__ == "__main__" and any(_a in ("-h", "--help") for _a in _sys.argv[1:]
     print((__doc__ or "").strip() or "usage: python " + _sys.argv[0])
     raise SystemExit(0)
 
+import sys
+if __name__ == "__main__" and any(arg in ("-h", "--help") for arg in sys.argv[1:]):
+    print(__doc__ or "No command-line options.")
+    raise SystemExit(0)
+
 import os
 import pickle
 import sys

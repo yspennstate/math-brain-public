@@ -125,42 +125,93 @@ def collect_memories(mem_dir=MEM_DEFAULT, limit=None, strict=True):
     raise last
 
 
+RECONCILE_ROUNDS = 8
+
+
 def _collect_memories_once(mem_dir=MEM_DEFAULT, limit=None, strict=True):
     """One snapshot attempt; see collect_memories for the retry contract."""
     rows = []
     names = sorted(os.listdir(mem_dir))
     eligible_names = [fn for fn in names if fn.endswith(".md") and fn[:-3] not in SKIP]
+    missing = set()
+    rows = _read_rows(mem_dir, eligible_names, limit, strict, missing)
+    if strict and limit is None:
+        # 3 Nov 2026: a membership change used to throw the whole pass away; read only what came or went. A file
+        # that vanished mid-read is settled the same way: gone if the listing agrees, read again if it is back.
+        have = [fn for fn in eligible_names if fn not in missing]
+        for _round in range(RECONCILE_ROUNDS):
+            after_names = sorted(
+                fn for fn in os.listdir(mem_dir) if fn.endswith(".md") and fn[:-3] not in SKIP
+            )
+            if after_names == have:
+                return rows
+            added = sorted(set(after_names) - set(have))
+            gone = {fn[:-3] for fn in set(have) - set(after_names)}
+            rows = [r for r in rows if r[0] not in gone]
+            missing = set()
+            rows.extend(_read_rows(mem_dir, added, None, strict, missing))
+            rows.sort(key=lambda r: r[0] + ".md")
+            have = [fn for fn in after_names if fn not in missing]
+        raise OSError("memory corpus membership changed while it was collected")
+    return rows
+
+
+_READ_CACHE = None   # {file name: (stat key, row or None)}; off unless a caller turns it on
+
+
+def enable_read_cache():
+    """Reuse a file's row while its full stat is unchanged. For callers that read the corpus more than once in one
+    process, or once outside memory_write.lock and again under it; the builder never turns it on."""
+    global _READ_CACHE
+    if _READ_CACHE is None:
+        _READ_CACHE = {}
+
+
+def _stat_key(st):
+    return (st.st_dev, st.st_ino, st.st_size, st.st_mtime_ns, st.st_ctime_ns)
+
+
+def _read_rows(mem_dir, eligible_names, limit, strict, missing):
+    rows = []
     for fn in eligible_names:
         if not fn.endswith(".md") or fn[:-3] in SKIP:
             continue
-        path = os.path.join(mem_dir, fn)
-        try:
-            before = os.stat(path)
-            body = io.open(path, encoding="utf-8", errors="replace").read()
-            after = os.stat(path)
-        except Exception as exc:
-            if strict:
-                raise OSError("could not read corpus memory %s: %s" % (fn, exc)) from exc
+        row = _read_row(os.path.join(mem_dir, fn), fn, strict, missing)
+        if row is None:
             continue
-        before_sig = (before.st_dev, before.st_ino, before.st_size, before.st_mtime_ns)
-        after_sig = (after.st_dev, after.st_ino, after.st_size, after.st_mtime_ns)
-        if before_sig != after_sig:
-            if strict:
-                raise OSError("corpus memory changed while read: %s" % fn)
-            continue
-        text = _text_for(body)
-        if len(text) < 40:
-            continue
-        rows.append((fn[:-3], text, text_sha256(text)))
+        rows.append(row)
         if limit and len(rows) >= limit:
             break
-    if strict and limit is None:
-        after_names = sorted(
-            fn for fn in os.listdir(mem_dir) if fn.endswith(".md") and fn[:-3] not in SKIP
-        )
-        if after_names != eligible_names:
-            raise OSError("memory corpus membership changed while it was collected")
     return rows
+
+
+def _read_row(path, fn, strict, missing):
+    try:
+        before = os.stat(path)
+        if _READ_CACHE is not None:
+            hit = _READ_CACHE.get(fn)
+            if hit is not None and hit[0] == _stat_key(before):
+                return hit[1]
+        body = io.open(path, encoding="utf-8", errors="replace").read()
+        after = os.stat(path)
+    except FileNotFoundError:
+        missing.add(fn)         # left the folder mid-read: the caller's listing decides
+        return None
+    except Exception as exc:
+        if strict:
+            raise OSError("could not read corpus memory %s: %s" % (fn, exc)) from exc
+        return None
+    before_sig = (before.st_dev, before.st_ino, before.st_size, before.st_mtime_ns)
+    after_sig = (after.st_dev, after.st_ino, after.st_size, after.st_mtime_ns)
+    if before_sig != after_sig:
+        if strict:
+            raise OSError("corpus memory changed while read: %s" % fn)
+        return None
+    text = _text_for(body)
+    row = (fn[:-3], text, text_sha256(text)) if len(text) >= 40 else None
+    if _READ_CACHE is not None and _stat_key(before) == _stat_key(after):
+        _READ_CACHE[fn] = (_stat_key(after), row)
+    return row
 
 
 def _scalar(z, name, default=None):
