@@ -3092,16 +3092,34 @@ def _attach_answers(chosen, pool_hits, edges, cap_extra=2):
         pool = {h.node.id: h for h in (pool_hits or [])}
         served = {h.node.id for h in chosen}
         out, added = [], 0
+        # THE ANSWER LEADS A QUESTION, NOT A STATED RESULT (MATHBRAIN_ANSWER_AFTER_RESULT, default on). The companion
+        # goes ahead of a card that asks something: an open question, a card some claim refutes, or a title with
+        # problem, question, conjecture or a question mark in it. A served card that is itself a proved, stated result
+        # keeps the lead and its proof ingredient follows it. Off (0) puts every companion first, as before.
+        _after = os.environ.get("MATHBRAIN_ANSWER_AFTER_RESULT", "1").strip() not in ("0", "off", "false", "")
+        _reft = {e.target_id for e in edges if e.kind is EdgeKind.REFUTES}
         for h in chosen:
+            _q = True
+            if _after:
+                _tt = str(getattr(h.node, "title", "") or "").strip().lower()
+                _tk = str(getattr(h.node, "kind", "") or "").lower()
+                _q = (_tk == "open_question" or h.node.id in _reft
+                      or any(_w in _tt for _w in ("problem", "question", "conjecture", "?")))
+            _comp = []
             for src in by_target.get(h.node.id, ()):
                 if added >= cap_extra or src in served or src in superseded or src not in pool:
                     continue
                 if str(getattr(pool[src].node, "kind", "") or "").lower() in _UNSERVED_KINDS:
                     continue
-                out.append(pool[src])
+                _comp.append(pool[src])
                 served.add(src)
                 added += 1
-            out.append(h)
+            if _q:
+                out.extend(_comp)
+                out.append(h)
+            else:
+                out.append(h)
+                out.extend(_comp)
         return out
     except Exception:
         return chosen
