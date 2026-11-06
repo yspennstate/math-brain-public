@@ -701,11 +701,13 @@ class Mesh:
         self.conn.execute("BEGIN IMMEDIATE")
         try:
             yield
-        except Exception:
-            self.conn.execute("ROLLBACK")
-            raise
-        else:
             self.conn.execute("COMMIT")
+        except BaseException:
+            # COMMIT can fail with SQLITE_BUSY while retaining the transaction.
+            # Roll back that transaction before a long-lived client retries.
+            if self.conn.in_transaction:
+                self.conn.execute("ROLLBACK")
+            raise
 
     def event(self, event_type: str, agent: str | None, subject: str = "", **detail) -> None:
         self.conn.execute(
@@ -1118,20 +1120,22 @@ class Mesh:
     def _pending_handoffs(
         self, agent_id: str, *, outgoing: bool = False, incoming: bool = False
     ) -> list[sqlite3.Row]:
-        directions: list[str] = []
+        # One rowid subquery per direction, so each side is answered from an index. A single query that OR-ed
+        # sender_agent and recipient was a full scan of messages, and release() and bye() run it inside BEGIN
+        # IMMEDIATE: on a large table out of the file cache that scan can hold the write lock for many minutes.
+        # Same rows, same order.
+        parts: list[str] = []
         args: list[str] = []
         if outgoing:
-            directions.append("sender_agent=?")
+            parts.append("SELECT rowid FROM messages WHERE kind='handoff' AND acked_at IS NULL AND sender_agent=?")
             args.append(agent_id)
         if incoming:
-            directions.append("recipient=?")
+            parts.append("SELECT rowid FROM messages WHERE kind='handoff' AND acked_at IS NULL AND recipient=?")
             args.append(agent_id)
-        if not directions:
+        if not parts:
             return []
         return self.conn.execute(
-            "SELECT * FROM messages WHERE kind='handoff' AND acked_at IS NULL AND ("
-            + " OR ".join(directions)
-            + ") ORDER BY rowid",
+            "SELECT * FROM messages WHERE rowid IN (" + " UNION ".join(parts) + ") ORDER BY rowid",
             args,
         ).fetchall()
 
