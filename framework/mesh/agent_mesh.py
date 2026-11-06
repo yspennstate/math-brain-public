@@ -510,13 +510,19 @@ class Mesh:
             CREATE INDEX IF NOT EXISTS idx_events_time ON events(happened_at);
             """
         )
+        # Every CLI call opens the mesh, and every open used to take the write lock three times (the two repairs below
+        # and this upsert) - in DELETE journal mode a write lock with a FULL-sync commit blocks every reader, and the
+        # claims repair held it through a scan of every claim row. When the schema is already current, a read-only
+        # check now skips the transaction.
         self._repair_claims_schema()
         self._repair_messages_schema()
-        self.conn.execute(
-            "INSERT INTO meta(key,value) VALUES('protocol_version',?) "
-            "ON CONFLICT(key) DO UPDATE SET value=excluded.value",
-            (PROTOCOL_VERSION,),
-        )
+        row = self.conn.execute("SELECT value FROM meta WHERE key='protocol_version'").fetchone()
+        if row is None or row["value"] != PROTOCOL_VERSION:
+            self.conn.execute(
+                "INSERT INTO meta(key,value) VALUES('protocol_version',?) "
+                "ON CONFLICT(key) DO UPDATE SET value=excluded.value",
+                (PROTOCOL_VERSION,),
+            )
 
     def _schema_names(self, table: str) -> set:
         return {
@@ -634,6 +640,11 @@ class Mesh:
         distinction from the existing kind exactly once during migration.
         Idempotency keys are opt-in, so every legacy row keeps a NULL key.
         """
+        columns = {row["name"] for row in self.conn.execute("PRAGMA table_info(messages)")}
+        if {"requires_ack", "idempotency_key"} <= columns and {
+            "idx_messages_idempotency", "idx_messages_pending", "idx_messages_open_handoffs", "messages_identity_fixed"
+        } <= self._schema_names("messages"):
+            return
         self.conn.execute("BEGIN IMMEDIATE")
         try:
             columns = {
@@ -661,6 +672,24 @@ class Mesh:
             self.conn.execute(
                 "CREATE INDEX IF NOT EXISTS idx_messages_pending "
                 "ON messages(recipient,requires_ack,acked_at,delivered_at,created_at)"
+            )
+            # A sender's open handoffs are found through this partial index instead of a scan of every message.
+            self.conn.execute(
+                "CREATE INDEX IF NOT EXISTS idx_messages_open_handoffs "
+                "ON messages(sender_agent, recipient) WHERE kind='handoff' AND acked_at IS NULL"
+            )
+            # ack(), handoff responses and receipts name a message by message_id alone,
+            # so the payload they speak for must not change under them. Nothing in this file rewrites a message's
+            # identity or body after insert; the database now enforces that too. Only lifecycle columns
+            # (delivered_at, acked_at, requires_ack) may change, and an UPDATE that leaves a fixed column as it was
+            # passes, so no current statement is affected.
+            self.conn.execute(
+                "CREATE TRIGGER IF NOT EXISTS messages_identity_fixed "
+                "BEFORE UPDATE OF message_id,sender_agent,recipient,topic,kind,body,created_at ON messages "
+                "WHEN NEW.message_id IS NOT OLD.message_id OR NEW.sender_agent IS NOT OLD.sender_agent "
+                "OR NEW.recipient IS NOT OLD.recipient OR NEW.topic IS NOT OLD.topic OR NEW.kind IS NOT OLD.kind "
+                "OR NEW.body IS NOT OLD.body OR NEW.created_at IS NOT OLD.created_at "
+                "BEGIN SELECT RAISE(ABORT, 'agent mesh: a message''s identity and body are fixed once it is sent'); END"
             )
             self.conn.execute("COMMIT")
         except Exception:
