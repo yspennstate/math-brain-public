@@ -1,7 +1,7 @@
 # Compute doctrine — how this fleet uses CPUs without hurting anyone
 
 *2026-07-10, from the owner's directive. This is the canonical statement; the memories
-`compute_doctrine_owner_first_2026_07_10` and `compute_governor_apparatus_2026_07_10` point here.*
+that describe the doctrine and the governor point here.*
 
 ## The three laws
 
