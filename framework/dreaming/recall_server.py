@@ -95,6 +95,29 @@ def timing_line(pid, requests, took, idle, reloaded, rc, catch_note, start, end)
         time.strftime('%Y-%m-%d %H:%M:%S'), pid, requests, took, idle, reloaded, rc, catch_note, cost)
 
 
+def prewarm_due(pw, last_end, held_key, key_of, now):
+    """The store key to rebuild for while idle, or None. Calls that came right after a store move took about five
+    times as long as the rest (26 s mean against 5 s in one afternoon), so the server rebuilds between calls the way
+    start-up warms. Only once the store has held still for a minute, the last call ended 30 s ago, a call came in
+    the last 30 min (no rebuilds for nobody overnight), and at most once per 5 min; the store key is read at most
+    every 5 s. pw holds seen/since/checked/last between calls."""
+    if now - pw['checked'] < 5:
+        return None
+    pw['checked'] = now
+    if last_end is None or now - last_end < 30 or now - last_end > 1800 or now - pw['last'] < 300:
+        return None
+    key = key_of()
+    if key == held_key:
+        return None
+    if key != pw['seen']:
+        pw.update(seen=key, since=now)
+        return None
+    if now - pw['since'] < 60:
+        return None
+    pw['last'] = now
+    return key
+
+
 def catch_up(held, fr, store, derive, new_key, now=time.monotonic):
     """Bring the held prepared state up to date in memory after the store changed.
 
@@ -348,6 +371,46 @@ def main():
                     except Exception:
                         pass
 
+        pw = dict(seen=None,since=0.0,checked=0.0,last=-1e9)
+        def prewarm():
+            now = time.monotonic()
+            key = prewarm_due(pw, state.get('last_end'), state['store_key'], lambda: fr._store_key(args.store), now)
+            if key is None:
+                return
+            outcome = 'ok'
+            try:
+                importlib.reload(ranking._semantic)
+                importlib.reload(ranking)
+                fr._MEMO.clear()
+                state['store_key'] = key
+                added = catch_up(held, fr, args.store, tool.derive_tool, key)
+                if added is not None:
+                    outcome = 'extended %d' % added
+                else:
+                    held['key']=None
+                    held['prepared']=None
+                    gc.collect()
+                    if fr.open_prepared(args.store,ranking,tool.derive_tool,tool.__file__) is None:
+                        held['key']=None   # a builder elsewhere: the next call opens it itself
+                        outcome = 'none'
+            except Exception as exc:
+                held['key']=None
+                held['prepared']=None
+                outcome = 'exception %s' % type(exc).__name__
+            memory = resident()
+            if max(memory.values()) >= CAP:
+                gc.collect()
+                memory = resident()
+                if max(memory.values()) >= CAP:
+                    server.must_stop=True
+                    outcome += ' cap'
+            try:
+                with open(HERE/'recall_server_timing.log','a',encoding='utf-8') as fh:
+                    fh.write('%s pid %d prewarm took %.1f %s\n' % (time.strftime('%Y-%m-%d %H:%M:%S'),os.getpid(),
+                                                                   time.monotonic()-now,outcome))
+            except Exception:
+                pass
+
         server = Server(('127.0.0.1',0),Handler)
         server.timeout=.1
         server.failures=0
@@ -367,6 +430,7 @@ def main():
             if args.max_age and time.monotonic()-started > args.max_age:
                 break
             server.handle_request()
+            prewarm()
         (HERE/'server_summary.json').write_text(json.dumps(dict(requests=state['requests'],failures=server.failures,
                 peak=server.peak,clean_stop=1))+'\n',encoding='utf-8')
         return 0
