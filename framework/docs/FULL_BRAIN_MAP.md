@@ -81,6 +81,7 @@ itself off and `agent_tools/math_recall.py` prints `fast path OFF` with the reas
 | Part | Files | Checked by |
 |---|---|---|
 | The dream (nightly consolidation) | `dreaming/dream.py`, `dream_prompt*.md`, `run_dream.ps1`, `dream_requests.py` | `dreaming/test_append_journal.py` |
+| Syncing the dream's commits onto a moved main without a worktree (`git merge-tree`; conflicts settled only from bytes that already exist) | `dreaming/dream_tree_replay.py` | `dreaming/test_dream_tree_replay.py` |
 | Compactions kept as nodes | `dreaming/compact_hooks.py`, `compact_nodes.py`, `compact_index.py`, `docs/COMPACTION.md` | `dreaming/test_compact_nodes_agent.py`, `test_codex_manual_compact.py` |
 | Closing out a job | `dreaming/job_cycle/` | |
 
