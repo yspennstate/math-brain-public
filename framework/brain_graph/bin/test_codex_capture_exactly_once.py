@@ -102,8 +102,8 @@ def place(f, d):
 def main():
     src = pick()
     if len(src) < 3:
-        print("FAIL - fewer than three suitable rollouts")
-        sys.exit(1)
+        print("SKIP - fewer than three suitable rollouts (a fresh install has none yet)")
+        sys.exit(0)
     T = tempfile.mkdtemp(prefix="codex_once_")
     full = os.path.join(T, "full", "2026", "09", "01")
     os.makedirs(full)

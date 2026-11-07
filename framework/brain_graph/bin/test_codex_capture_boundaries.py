@@ -220,9 +220,14 @@ class Receipts(unittest.TextTestResult):
 
 def main():
     ap = argparse.ArgumentParser()
-    ap.add_argument('--implementation', type=Path, required=True)
-    ap.add_argument('--run-dir', type=Path, required=True)
+    here = Path(__file__).resolve().parent
+    ap.add_argument('--implementation', type=Path, default=here / 'extract_codex_events.py')
+    ap.add_argument('--run-dir', type=Path, default=None,
+                    help='a new folder for fixtures and RESULTS.json (default: a fresh temp folder)')
     args = ap.parse_args()
+    if args.run_dir is None:
+        import tempfile
+        args.run_dir = Path(tempfile.mkdtemp(prefix='codex_boundaries_')) / 'run'
     args.run_dir.mkdir(parents=True, exist_ok=False)
     Boundaries.impl = load_capture(args.implementation, 'capture_under_test')
     Boundaries.run_dir = args.run_dir
