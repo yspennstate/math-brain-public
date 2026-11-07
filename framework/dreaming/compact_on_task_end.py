@@ -190,7 +190,11 @@ def hook():
     if sys.platform != "win32":  # the console injection is Win32 only
         return 0
     try:
-        data = json.loads(sys.stdin.buffer.read().decode("utf-8", "replace") or "{}")
+        raw = sys.stdin.buffer.read().decode("utf-8", "replace")
+    except AttributeError:  # in-process under hook_dispatch the stdin is a StringIO, already text
+        raw = sys.stdin.read()
+    try:
+        data = json.loads(raw or "{}")
     except ValueError:
         return 0
     sid, path = data.get("session_id") or "", data.get("transcript_path") or ""
