@@ -40,6 +40,7 @@ RSS_CAP = int(float(os.environ.get("BRS_RSS_CAP_GB", "2.5")) * 1024 ** 3)
 # Cap 1: rebuilds come about every 35 min (3 in 1 h 44 min in one measured stretch) and a fresh
 # server loads in 0.1 s, so exiting on the first one costs little and holds at most one dead generation (~157 MB).
 BM25_GEN_CAP = int(os.environ.get("BRS_BM25_GEN_CAP", "1"))
+BM25_STAY = int(os.environ.get("BRS_BM25_STAY", "12"))
 BM25_INDEX = os.path.join(D, "bm25_index.json.gz")
 
 
@@ -53,6 +54,23 @@ GROUP = {"_tiers": "tiers", "_archived_index_lines": "archive", "expansions": "s
 EXACT_GROUPS = frozenset() if os.environ.get("BRS_EXACT_NO_TTL", "1") == "0" else frozenset({"tiers", "archive"})
 MEMO_NAMES = ("_fc_get", "_load_superseded", "_memlist", "_fast_listing", "_archived_index_lines", "_tiers",
               "_fc_fresh_memories", "_fc_overlay", "_sup_rows")
+
+
+def _faults():
+    """(major, minor) page faults of this process so far, or None where getrusage is missing (Windows).
+    On a macOS under the film's memory pressure (6 Nov 2026) the idle server sat mostly compressed or swapped (762 MB
+    footprint, 42 MB resident), and a call after a gap paged its state back in; pf in the call row shows that."""
+    try:
+        import resource
+        ru = resource.getrusage(resource.RUSAGE_SELF)
+        return (ru.ru_majflt, ru.ru_minflt)
+    except Exception:
+        return None
+
+
+def _should_warm(env):
+    """Every fresh server warms itself before its first caller unless BRS_WARMUP=0 (successor or not)."""
+    return env.get("BRS_WARMUP", "1") != "0"
 
 
 def log(msg):
@@ -209,7 +227,16 @@ class Brain:
         # re-reads ~50k entries (parity 20/20 live, 2000-file burst and forced overflow equal, 10/10 ranked lists
         # equal in resident_ab.jsonl). BRS_RESIDENT_LISTING=0 turns it off; any failure leaves the memo path.
         self.resident = None
-        if os.environ.get("BRS_RESIDENT_LISTING", "1") != "0" and "_fast_listing" in self.g:
+        # macOS (6 Nov 2026): the same lever on FSEvents, for brain._bulk_listing (brain_resident_listing_mac.py has
+        # the parity: 46,233 of 46,233 entries, 45 of 45 scratch waves, live rounds; listing 99 -> 13 ms).
+        if os.environ.get("BRS_RESIDENT_LISTING", "1") != "0" and sys.platform == "darwin" and "_bulk_listing" in self.g:
+            try:
+                import brain_resident_listing_mac
+                self.resident = brain_resident_listing_mac.install(self)
+                log("resident listing (FSEvents) on")
+            except Exception as e:
+                log("resident listing (FSEvents) off: %s: %s" % (type(e).__name__, e))
+        elif os.environ.get("BRS_RESIDENT_LISTING", "1") != "0" and "_fast_listing" in self.g:
             try:
                 import brain_resident_listing
                 self.resident = brain_resident_listing.install(self)
@@ -262,6 +289,13 @@ class Brain:
             t = time.perf_counter()
             v = f(*a, **k)
             miss[attr] = miss.get(attr, 0.0) + time.perf_counter() - t
+            # _fc_overlay's None means "take the payload merge this time" (no sidecar yet, generation moved, ...).
+            # The postings sidecar lands 2 s to 5 min after its index and is not in the folder signature, so a kept
+            # None sent every later call down refresh_in_memory (~23k page faults, ~0.5 s, macOS 6 Nov 2026) until the
+            # next memory write. A None is not kept; each one is counted in the call row. BRS_OVL_NONE_MEMO=1 keeps it.
+            if v is None and attr == "_fc_overlay" and os.environ.get("BRS_OVL_NONE_MEMO", "0") != "1":
+                miss["_fc_overlay:none"] = miss.get("_fc_overlay:none", 0.0) + 1.0
+                return v
             store[key] = v
             return v
         if isinstance(holder, dict):
@@ -417,7 +451,12 @@ class Brain:
                 return hit[1]
             t = time.perf_counter()
             v = real(name, key)
-            miss["_fc_get"] = miss.get("_fc_get", 0.0) + time.perf_counter() - t
+            dt = time.perf_counter() - t
+            miss["_fc_get"] = miss.get("_fc_get", 0.0) + dt
+            # which entry the miss read (6 Nov 2026): on a macOS _fc_get missed on 46 of 107 folder drops, p50 0.11 s,
+            # and the total did not say which. Only the call row's miss_s carries it.
+            kk = "_fc_get:" + str(name)[:40]
+            miss[kk] = miss.get(kk, 0.0) + dt
             if v is not None:
                 try:
                     if st3(p) == s:
@@ -450,6 +489,18 @@ class Brain:
                 now = None
             if now != m:
                 return p
+        # A module imported after start joins the watch list when first seen (6 Nov 2026): modules brain.py imports
+        # inside a call were never in the start-time list, so an edit to one did not respawn the server. Its mtime is
+        # taken here, one call after its import, so an edit landing inside that one call is seen only at the next
+        # edit. BRS_LATE_IMPORT_WATCH=0 keeps the start-time list.
+        if os.environ.get("BRS_LATE_IMPORT_WATCH", "1") != "0":
+            for m in list(sys.modules.values()):
+                p = getattr(m, "__file__", None) or ""
+                if p and p not in self.code and p.endswith(".py") and os.path.abspath(p).lower().startswith(D.lower()):
+                    try:
+                        self.code[p] = os.stat(p).st_mtime_ns
+                    except OSError:
+                        self.code[p] = None
         return None
 
     def _state_sig(self, paths):
@@ -473,16 +524,19 @@ class Brain:
         for grp, paths in self.group_paths.items():
             sig = self._state_sig(paths)
             ttl_out = grp not in EXACT_GROUPS and now - self.filled.get(grp, 0) > STATE_TTL
-            if sig != self.sigs.get(grp) or ttl_out:
+            old_sig = self.sigs.get(grp)
+            if sig != old_sig or ttl_out:
                 for g, st in self.stores:
                     if g == grp:
                         st.clear()
                 self.sigs[grp] = sig
                 self.filled[grp] = now
-                dropped.append(grp)
+                # "folder~ttl" in the call row (6 Nov 2026): dropped on the TTL alone, its signature unchanged
+                dropped.append(grp if sig != old_sig else grp + "~ttl")
         return dropped
 
     def call(self, argv, env, cwd):
+        pf0 = _faults()
         dropped = self.refresh_state()
         self.miss.clear()
         saved_env = {}
@@ -507,6 +561,12 @@ class Brain:
         rc = 0
         old_argv = sys.argv
         sys.argv = [os.path.join(D, "brain.py")] + list(argv)
+        # slow-call stack samples (6 Nov 2026, macOS): a sampling thread, no tracing; rows only for calls of 500 ms+
+        try:
+            import brain_call_sampler
+            smp = brain_call_sampler.begin()
+        except Exception:
+            smp = None
         t0 = time.time()
         try:
             with contextlib.redirect_stdout(out), contextlib.redirect_stderr(err):
@@ -529,8 +589,19 @@ class Brain:
             except OSError:
                 pass
         self.calls += 1
+        pf1 = _faults()
+        if smp is not None:
+            try:
+                smp.stop()
+                smp.write(os.path.join(STATE_DIR, "slow_samples.jsonl"), int((time.time() - t0) * 1000),
+                          {"op": (argv or ["?"])[0], "dropped": dropped,
+                           "pf": [pf1[0] - pf0[0], pf1[1] - pf0[1]] if pf0 and pf1 else None,
+                           "miss_s": {k: round(v, 2) for k, v in self.miss.items() if v >= 0.05}})
+            except Exception:
+                pass
         return {"rc": rc, "out": out.getvalue(), "err": err.getvalue(), "ms": int((time.time() - t0) * 1000),
                 "dropped": dropped, "calls": self.calls,
+                "pf": [pf1[0] - pf0[0], pf1[1] - pf0[1]] if pf0 and pf1 else None,
                 "miss_s": {k: round(v, 2) for k, v in self.miss.items() if v >= 0.05}}
 
 
@@ -579,7 +650,8 @@ def main():
                                                          "op": (req.get("argv") or ["?"])[0], "ms": reply.get("ms"),
                                                          "sess": ((req.get("env") or {}).get("CLAUDE_CODE_SESSION_ID")
                                                                   or (req.get("env") or {}).get("CODEX_THREAD_ID") or "")[:8],
-                                                         "dropped": reply.get("dropped"), "miss_s": reply.get("miss_s")}) + "\n")
+                                                         "dropped": reply.get("dropped"), "miss_s": reply.get("miss_s"),
+                                                         "pf": reply.get("pf")}) + "\n")
                             except Exception:
                                 pass
                         if rss_bytes() > RSS_CAP:
@@ -589,9 +661,52 @@ def main():
                         if g != last["bm25"]:
                             last["bm25"], last["gens"] = g, last["gens"] + 1
                         if BM25_GEN_CAP and last["gens"] >= BM25_GEN_CAP:
-                            log("bm25 index replaced %d times; exiting so its deleted postings files are freed" % last["gens"])
-                            last["respawn"] = True
-                            stop.set()
+                            # 6 Nov 2026: stay up through a rebuild when nothing deleted is
+                            # still held. The exits below were 92 of 117 server starts in 24 h, and a fresh server's
+                            # first live call was p50 1.33 s. brain_bm25_release closes the old postings connections,
+                            # clears the once-per-process df/usage caches and lists any regular file of 1 MB+ still
+                            # open with no name on disk; a non-empty list exits as before so the disk comes back.
+                            # In-process A/B (ab_release v1-v3): a released warm server equalled a cold process on
+                            # every query of every rebuild. At most BRS_BM25_STAY rebuilds in a row (default 12),
+                            # then one exit, so a cache nobody has found cannot drift for long. BRS_BM25_RELEASE=0
+                            # restores the plain exit.
+                            rel = None
+                            if os.environ.get("BRS_BM25_RELEASE", "1") != "0" and last.get("stayed", 0) < BM25_STAY:
+                                try:
+                                    import brain_bm25_release
+                                    rel = brain_bm25_release.release(brain.g)
+                                    if rel.get("held_deleted"):
+                                        # a rebuild that landed mid-call leaves the old BM25 object (and its
+                                        # postings connection) in the folder store until the next call drops it;
+                                        # drop every store now (a full refill in a warm process, ~0.2 s next
+                                        # call) and look again
+                                        import gc
+                                        for _grp, st in brain.stores:
+                                            st.clear()
+                                        brain.sigs.clear()
+                                        brain.filled.clear()
+                                        gc.collect()
+                                        rel = brain_bm25_release.release(brain.g)
+                                        rel["cleared"] = True
+                                except Exception as e:
+                                    log("bm25 release failed: %s: %s" % (type(e).__name__, e))
+                                    rel = None
+                            if rel is not None and not rel.get("held_deleted"):
+                                last["stayed"] = last.get("stayed", 0) + 1
+                                log("bm25 index replaced; released the old generation, staying up (%d in a row)%s"
+                                    % (last["stayed"], (" (closed %d dead postings connections; held by %s%s)"
+                                                         % (rel["dead_closed"], ", ".join(rel.get("dead_holders") or []),
+                                                            "; stores cleared" if rel.get("cleared") else ""))
+                                                        if rel.get("dead_closed") else
+                                                        (" (stores cleared)" if rel.get("cleared") else "")))
+                                last["gens"] = 0
+                            else:
+                                held = (rel or {}).get("held_deleted") or []
+                                log("bm25 index replaced %d times; exiting so its deleted postings files are freed%s"
+                                    % (last["gens"], (" (held: %s)" % ", ".join(os.path.basename(h[2]) or str(h[0])
+                                                                             for h in held[:3])) if held else ""))
+                                last["respawn"] = True
+                                stop.set()
                 finally:
                     last["t"] = time.time()
                     lock.release()
@@ -617,10 +732,13 @@ def main():
     # 6 Nov 2026: a successor warms itself before its first caller. 98 of 115 server starts in
     # 24 h were bm25 replacements, and the first call a fresh server answered cost p50 1484 ms (70 calls, 117 of the
     # 170 s of live recall time). In-process, two warm-up recalls (1.4-2.3 s, log and refresh off) took the first real
-    # call to 136-228 ms against 680-1090 ms cold; one warm-up left it at 577-826. Only a successor does this: a server
-    # a client started has that client waiting on the lock. A caller arriving mid warm-up waits on the lock as usual.
+    # call to 136-228 ms against 680-1090 ms cold; one warm-up left it at 577-826. A caller arriving mid warm-up waits on
+    # the lock as usual. At first only a successor warmed, on the belief that a client-started server has its client
+    # waiting; it does not (brain_recall_client starts the server and runs that call cold). On macOS from 07:52 to
+    # 09:28 on 6 Nov the first live call on 4 warmed servers took 247-687 ms and on 5 unwarmed ones 897-2370 ms, so
+    # every fresh server warms now (_should_warm).
     # The per-call keys go in the env passed to call(): call() unsets any the env lacks. BRS_WARMUP=0 turns it off.
-    if os.environ.get("BRS_SUCCESSOR") == "1" and os.environ.get("BRS_WARMUP", "1") != "0":
+    if _should_warm(os.environ):
         def warm():
             if not lock.acquire(timeout=1):
                 return
@@ -639,6 +757,44 @@ def main():
             if time.time() - last["t"] > IDLE_EXIT:
                 log("idle exit")
                 break
+            # 6 Nov 2026: the resident listing's periodic full walk (FULL_EVERY, 600 s) ran inside
+            # whichever recall came after it fell due. Here it runs between calls, a tick or so early; a call that
+            # arrives meanwhile waits on the lock (~0.2 s). BRS_IDLE_FULL=0 turns it off.
+            rb = brain.resident
+            if (rb is not None and hasattr(rb, "refresh_if_due") and os.environ.get("BRS_IDLE_FULL", "1") != "0"
+                    and time.time() - last["t"] > 2 and lock.acquire(blocking=False)):
+                try:
+                    t = time.time()
+                    if rb.refresh_if_due(60):
+                        log("resident listing: periodic full walk between calls, %d ms" % ((time.time() - t) * 1000))
+                    # and the names other writers touched since the last call are patched in now, not inside the
+                    # next recall (brain_resident_listing_mac.patch_if_changed). BRS_IDLE_PATCH=0 turns it off.
+                    elif hasattr(rb, "patch_if_changed") and os.environ.get("BRS_IDLE_PATCH", "1") != "0":
+                        rb.patch_if_changed()
+                except Exception as e:
+                    log("idle full walk failed: %s: %s" % (type(e).__name__, e))
+                finally:
+                    lock.release()
+            # 6 Nov 2026 (macOS): the tail postings (brain._tail_postings: every compaction tail and long memory tail,
+            # packed) were rebuilt inside the first recall after each compaction: 17 of 46 slow calls sampled carried
+            # one, ~600 ms each. Here the rebuild runs between calls when the held index is no longer valid, with the
+            # same builder and the same validity test the call applies, so a call finds it current.
+            # BRS_IDLE_TPOST=0 turns it off.
+            g = brain.g
+            if (os.environ.get("BRS_IDLE_TPOST", "1") != "0" and os.environ.get("BRAIN_RECALL_CTAIL", "1") != "0"
+                    and "_tail_postings" in g and "_tpost_valid" in g and time.time() - last["t"] > 2
+                    and lock.acquire(blocking=False)):
+                try:
+                    import bm25 as _b
+                    ix = g["_TPOST"].get("ix")
+                    if ix is not None and not g["_tpost_valid"](ix, _b):
+                        t = time.time()
+                        g["_tail_postings"](_b)
+                        log("tail postings rebuilt between calls, %d ms" % ((time.time() - t) * 1000))
+                except Exception as e:
+                    log("idle tail postings failed: %s: %s" % (type(e).__name__, e))
+                finally:
+                    lock.release()
     finally:
         try:
             with open(ENDPOINT, encoding="utf-8") as f:

@@ -773,7 +773,7 @@ def _fc_sidecar_slugs(bm, path, sig):
                 pass
 
 
-# COMPACTION TAIL LANE (31 Oct 2026, Mac). A compaction's anchor memory carries an excerpt of its summary; the rest (68%
+# COMPACTION TAIL LANE (31 Oct 2026, macOS). A compaction's anchor memory carries an excerpt of its summary; the rest (68%
 # of the lines) lives only in ~/.claude/brain_graph/compactions, and no lane read it: a line found only there brought
 # its compaction into the top 10 for 1 of 20 questions. Here each anchor's tail - the summary lines the anchor does not
 # carry, capped at bm25.MAX_ATTACHMENT_TOKENS - is its own small bm25 document scored on the live index's n and df, and
@@ -788,9 +788,57 @@ _CTAIL = {}
 _CTAIL_FS = re.compile(r"^\s*full_summary:\s*(\S.*?)\s*$", re.M)
 
 
+# A resident process (the recall server) re-read the 9 MB tail cache on every new compaction, the file it had itself
+# written at the last one: marshal.load took 247 ms of a change call, and the 2.7 MB long-memory tail cache another
+# 73 ms. _marshal_memo keeps the last value loaded from or dumped to each cache file under
+# that file's identity (size, mtime_ns, inode, ctime_ns, taken from the open handle); a file replaced or rewritten
+# gets a new identity and is read again. BRAIN_MARSHAL_MEMO=0 turns it off.
+_MARSHAL_MEMO = {}
+
+
+def _marshal_ident(st):
+    return (st.st_size, st.st_mtime_ns, st.st_ino, st.st_ctime_ns)
+
+
+def _marshal_load_memo(path):
+    import marshal
+    with open(path, "rb") as fh:
+        if os.environ.get("BRAIN_MARSHAL_MEMO", "1") == "0":
+            return marshal.load(fh)
+        ident = _marshal_ident(os.fstat(fh.fileno()))
+        got = _MARSHAL_MEMO.get(path)
+        if got is not None and got[0] == ident:
+            return got[1]
+        v = marshal.load(fh)
+    _MARSHAL_MEMO[path] = (ident, v)
+    return v
+
+
+def _marshal_dump_memo(path, value):
+    """marshal.dump to path through a temp file and os.replace, then keep value under the new file's identity."""
+    import marshal
+    tmp = "%s.%d.tmp" % (path, os.getpid())
+    with open(tmp, "wb") as fh:
+        marshal.dump(value, fh)
+        fh.flush()
+        st = os.fstat(fh.fileno())
+        mine = (st.st_ino, st.st_size, st.st_mtime_ns)
+    os.replace(tmp, path)
+    if os.environ.get("BRAIN_MARSHAL_MEMO", "1") != "0":
+        # the rename moves the file's ctime, so the identity is taken after it; the inode, size and mtime must still be
+        # the temp file's, or another writer got in between and the next load reads the file
+        try:
+            st = os.stat(path)
+            if (st.st_ino, st.st_size, st.st_mtime_ns) == mine:
+                _MARSHAL_MEMO[path] = (_marshal_ident(st), value)
+            else:
+                _MARSHAL_MEMO.pop(path, None)
+        except OSError:
+            _MARSHAL_MEMO.pop(path, None)
+
+
 def _ctail_index(bm25mod):
     """(tails, tdf): anchor slug -> (term counts, length) of its summary's lines outside the anchor, and their df."""
-    import marshal
     key = _ctail_key()
     # The tails are read through anchors in bm25mod.MEM, so the cache belongs to that folder. One shared file let a
     # recall on another folder (BRAIN_MEM_DIR) reuse the live folder's tails, which then stood for anchors that folder
@@ -800,8 +848,7 @@ def _ctail_index(bm25mod):
         return _CTAIL["ix"]
     prev = {}
     try:
-        with open(cache, "rb") as fh:
-            got = marshal.load(fh)
+        got = _marshal_load_memo(cache)
         if len(got) == 3:
             prev = got[2]
         if tuple(tuple(x) for x in got[0]) == key:
@@ -869,10 +916,7 @@ def _ctail_index(bm25mod):
     ix = (tails, tdf)
     try:
         if not _mem_scope_throwaway(bm25mod):
-            tmp = "%s.%d.tmp" % (cache, os.getpid())
-            with open(tmp, "wb") as fh:
-                marshal.dump((key, ix, files), fh)
-            os.replace(tmp, cache)
+            _marshal_dump_memo(cache, (key, ix, files))
     except Exception:
         pass
     _CTAIL.update(key=key, mem=bm25mod.MEM, ix=ix)
@@ -1202,8 +1246,7 @@ def _mtail_cached(sigs, bm25mod=None):
     files = _MTAIL.get("files")
     if files is None:
         try:
-            with open(_mem_scoped(MTAIL_CACHE, bm25mod), "rb") as fh:
-                files = marshal.load(fh)[1]
+            files = _marshal_load_memo(_mem_scoped(MTAIL_CACHE, bm25mod))[1]
         except Exception:
             return None
     try:
@@ -1844,7 +1887,7 @@ def _memlist_close():
     _MEMLIST.clear()
 
 
-# THE LISTING WITH ITS STATS IN ONE WALK (30 Oct 2026, Mac). On macOS a DirEntry has no stat of its own: the readers of
+# THE LISTING WITH ITS STATS IN ONE WALK (30 Oct 2026, macOS). On macOS a DirEntry has no stat of its own: the readers of
 # the call's listing (supersession's key, the embedding row check, the fresh-memory scan) made one stat call per file,
 # 28k of them, about 0.2 CPU-s (mostly kernel) and 0.3-0.65 s wall at load 25. getattrlistbulk returns the names with
 # their size and times a few hundred at a time; the listing plus stats measured 0.09 CPU-s, and matched os.stat on all
@@ -2294,13 +2337,21 @@ def _sup_base(ss, rows):
         return None
 
 
-def _sup_quiet(ss, changed, cur, ptr, inv):
+def _sup_quiet(ss, changed, cur, ptr, inv, old=None):
     """True when no changed file can move the answer: it carried no pointer before, carries none now, and no pointer
     or index line names it. Then the routes are the same and the file only adds or drops a slug nothing resolves
-    through, so active_supersessions gives the same map."""
+    through, so active_supersessions gives the same map.
+    A file a route names matters through its existence alone (resolve and the prose-pointer gate ask only whether it
+    is there), so with `old` given, one that was there before and is still there, holding no pointer either time, is
+    quiet too. Until 6 Nov 2026 an in-place edit of such a memory sent the next recall to the full reader.
+    BRAIN_SUP_NAMED_EDIT=0 restores that."""
+    if os.environ.get("BRAIN_SUP_NAMED_EDIT", "1") == "0":
+        old = None
     nc = os.path.normcase
     for name in changed:
-        if name in ptr or nc(name[:-3]) in inv:
+        if name in ptr:
+            return False
+        if nc(name[:-3]) in inv and (old is None or name not in old or name not in cur):
             return False
         if name in cur:
             try:
@@ -2310,6 +2361,12 @@ def _sup_quiet(ss, changed, cur, ptr, inv):
             except Exception:
                 return False
     return True
+
+
+# The memo below outlives the call (6 Nov 2026, macOS): _fc_layer builds a new wrap for every recall, so a memo made
+# inside it was empty each time and the resident server rebuilt the 46k-row digest on every call (44 ms of 200, 12 of
+# 12 calls in a profile). Every entry is checked against its own key or rows before it is used.
+_FC_SUP_MEMO = {}
 
 
 def _fc_superseded_wrap(real):
@@ -2328,7 +2385,7 @@ def _fc_superseded_wrap(real):
     # (0.28 s) and re-read and re-dicted the stored listing (0.16 s). The digest is now joined from per-row repr
     # strings kept across calls (the same string, so the same digest), and the last stored listing is kept as a dict.
     # BRAIN_SUP_MEMO=0 turns it off.
-    memo = {}
+    memo = _FC_SUP_MEMO
 
     def _sig(rows):
         if os.environ.get("BRAIN_SUP_MEMO", "1") == "0":
@@ -2389,7 +2446,7 @@ def _fc_superseded_wrap(real):
                 cur = dict(rows)
                 changed = [n for n, k in rows if n in recent or old.get(n) != k]
                 changed += [n for n in old if n not in cur]
-                if len(changed) <= _SUP_DELTA_MAX and _sup_quiet(_ss, changed, cur, ptr, set(inv)):
+                if len(changed) <= _SUP_DELTA_MAX and _sup_quiet(_ss, changed, cur, ptr, set(inv), old):
                     if not recent and hsig != sig:
                         _fc_put("superseded_rows", (key, sig), rows, keep=2)
                         _fc_put("superseded_head", key, (sig, ans, ptr, inv), keep=2)
@@ -2405,6 +2462,14 @@ def _fc_superseded_wrap(real):
         return res
     _load_superseded._r02 = True
     return _load_superseded
+
+
+def _fc_att_row(r):
+    """A copy of one corpus row, either shape: (slug, dl, counts) from these node docs or (slug, tokens) from an older
+    node-docs module (6 Nov 2026): unpacking three on pair rows raised inside the store's try, so the memo never filled
+    there and every recall reloaded and re-verified every bundle. Stored as attcorpus4, so a brain.py from before this
+    fix never reads pair rows under the name it unpacks as triples."""
+    return tuple(dict(x) if isinstance(x, dict) else list(x) if isinstance(x, list) else x for x in r)
 
 
 def _fc_attach_corpus_wrap(nd, real):
@@ -2427,14 +2492,14 @@ def _fc_attach_corpus_wrap(nd, real):
             key = _key(mem)
         except Exception:
             return real(mem, failures)
-        v = _fc_get("attcorpus3", key)
+        v = _fc_get("attcorpus4", key)
         if isinstance(v, list):
-            return [(s, dl, dict(c)) for s, dl, c in v]
+            return [_fc_att_row(r) for r in v]
         n0 = len(failures) if failures is not None else 0
         res = real(mem, failures)
         try:
             if (failures is None or len(failures) == n0) and _key(mem) == key:
-                _fc_put("attcorpus3", key, [(s, dl, c) for s, dl, c in res])
+                _fc_put("attcorpus4", key, [_fc_att_row(r) for r in res])
         except Exception:
             pass
         return res
@@ -3014,7 +3079,7 @@ def _qemb_proc_send(text):
     process having encoded a query before. A process that runs many recalls pays the in-thread session build once and
     then encodes in about 20 ms a query, cheaper than a helper's ~1.5 s each, so only its first query goes out.
 
-    Unless this process cannot encode at all (30 Oct 2026): onnxruntime lives in the user site-packages on the Mac, so
+    Unless this process cannot encode at all (30 Oct 2026): onnxruntime lives in the user site-packages on macOS, so
     a process started with python -s (the hooks, most harnesses) has no in-thread encoder, query_embed.embed returns
     None, and every recall after the first ran with no query lane. 84 bank questions in one -s process: hit@5 74 -> 69,
     15 worse and 1 better, against one fresh process per question. Such a process keeps sending each query out."""
@@ -3024,7 +3089,7 @@ def _qemb_proc_send(text):
     if _qp in ("0", "off", "false", "no"):
         return None
     # Unset: encode in-thread when this interpreter can (laptop, 2 Nov: a helper start cost a median 6-7 s on a
-    # loaded box); the helper only when it cannot (the Mac under python -s, 30 Oct). BRAIN_QEMB_PROC=1: the
+    # loaded box); the helper only when it cannot (macOS under python -s, 30 Oct). BRAIN_QEMB_PROC=1: the
     # first query of a process goes out, as before.
     if (not first or _qp == "") and _inthread_encoder_ok():
         return None
@@ -3042,9 +3107,9 @@ def _qemb_proc_send(text):
                                 stderr=subprocess.DEVNULL, creationflags=getattr(subprocess, "CREATE_NO_WINDOW", 0))
         proc.stdin.write(data)
         proc.stdin.close()
-        # 30 Oct 2026 (Mac): POSIX communicate() flushes a non-None stdin first, and a closed one raises ValueError,
+        # 30 Oct 2026 (macOS): POSIX communicate() flushes a non-None stdin first, and a closed one raises ValueError,
         # which _qemb_proc_collect counted as "failed"; the in-thread fallback then ran under -s without onnxruntime,
-        # so every recall on the Mac ran with no query vector. Windows' communicate() never flushes.
+        # so every recall on macOS ran with no query vector. Windows' communicate() never flushes.
         proc.stdin = None
         return proc
     except Exception:
@@ -3410,13 +3475,20 @@ def _status_from_index(slug, idx):
     if v is None:
         m = _STATUS_RX.search(line)
         v = m.group(1).lower() if m else "legacy"
+        v = _STATUS_ALIAS.get(v, v)
         if len(_STATUS_MEMO) > 400000:
             _STATUS_MEMO.clear()
         _STATUS_MEMO[line] = v
     return v
 
 
-_STATUS_RX = re.compile(r"\)\s*-\s*\[(PROVISIONAL|VERIFIED|OWNER-STATED|RETRACTED)\]", re.I)
+# 6 Nov 2026: a tag may carry words after it ("[VERIFIED data node]", "[REFUTED 5 Nov 21:3x - ...]"). The exact
+# pattern read 4,773 of 45,979 index lines on macOS as untagged, 46 of them retracted or refuted claims that
+# recall then listed with no warning. A tag word followed by a space or punctuation and any text up to "]" now
+# counts, and REFUTED / WITHDRAWN read as retracted.
+_STATUS_RX = re.compile(r"\)\s*-\s*\[(PROVISIONAL|VERIFIED|OWNER-STATED|RETRACTED|REFUTED|WITHDRAWN)"
+                        r"(?:[\s,;:-][^\]\n]*)?\]", re.I)
+_STATUS_ALIAS = {"refuted": "retracted", "withdrawn": "retracted"}
 _STATUS_MEMO = {}
 
 
@@ -3477,7 +3549,7 @@ def _frontmatter_retracted(slug):
         if not fm:
             return False
         m = re.search(r"^\s*status:\s*(\S+)", fm.group(1), re.M)
-        return bool(m) and m.group(1).strip().strip("'\"").lower().startswith(("retracted", "withdrawn", "headline-retracted"))
+        return bool(m) and m.group(1).strip().strip("'\"").lower().startswith(("retracted", "withdrawn", "headline-retracted", "refuted"))
     except Exception:
         return False
 
@@ -4317,11 +4389,53 @@ def _recall_body(query, n=8):
         cand.sort(reverse=True)
         seeds = {slug: ov for ov, slug in cand[:25]}
 
+    # BARE-IDENTIFIER SEEDS (6 Nov 2026). The task-id seeds above close this gap for checklist ids only. A query that is
+    # just a serial, a short hash, a run id or a block height ('7KDP-2210', 'e1f2a3b', '604417') leaves sr._words with
+    # fewer than two letter-led words, every arm of the seeder comes back empty, and recall stopped at "no lexical
+    # foothold" although bm25.tokens keeps those digits. Here, after every other arm has had its turn, a query that still
+    # has no seed and carries a digit takes BM25's hits on the raw query, at the task-id seeds' strength. A query that
+    # seeded before is untouched, so its output is unchanged. BRAIN_RECALL_ID_SEEDS=0 turns it off.
+    # The query-meaning lane then buried the hit on macOS: the vector of a bare number lands on unrelated memories,
+    # which the fusion ranked above the one memory holding it (a block height's memory at row 16). A call seeded only
+    # here skips that lane, as BRAIN_RECALL_QUERY_EMBED=0 would; BRAIN_RECALL_ID_QSEM=1 keeps it.
+    _id_only = False
+    if not seeds and os.environ.get("BRAIN_RECALL_ID_SEEDS", "1") != "0" and re.search(r"\d", query or ""):
+        try:
+            import bm25 as _bm25id
+            _id_hits = [h for h in _bm25id.BM25().score(query, 5) if h[0] not in disabled]
+            if _id_hits:
+                _id_only = os.environ.get("BRAIN_RECALL_ID_QSEM", "0") != "1"
+                _id_max = _id_hits[0][1] or 1.0
+                for _slug, _s in _id_hits:
+                    seeds[_slug] = 1.5 + 1.5 * _s / _id_max
+                    lex = set(lex) | {_slug}
+        except Exception as _id_exc:
+            print("  [warn] identifier seeds skipped (%s: %s)" % (type(_id_exc).__name__, _id_exc))
+
+    # MEANING FOOTHOLD (6 Nov 2026). A query that shares no indexed word with any memory (a paraphrase: "the box we
+    # switched off last spring" for a note reading "retired the research server in April") had no seeds and returned
+    # at "no lexical foothold" below, before the query-meaning lane was ever read, although that lane exists for
+    # exactly this question. On six such paraphrase queries over fresh 105-138-memory brains, the lane alone ranked the
+    # right memory 2, 7, 27, 5, 9 and 2, while recall printed nothing for five of the six; with this block recall puts
+    # it in the top 10 for five of six. When every other arm has left no seed, the lane's top hits seed the call,
+    # scaled to 0..1 by the best cosine. A query with any lexical seed never reaches this block, so its result is
+    # unchanged (whole-question queries on the same brains: identical ranks). BRAIN_RECALL_QSEM_FOOTHOLD=0 turns it off.
+    if not seeds and not _id_only and query and os.environ.get("BRAIN_RECALL_QSEM_FOOTHOLD", "1") != "0":
+        try:
+            _qf = _query_semantic_scores(query)
+            _qtop = sorted(((s, v) for s, v in _qf.items() if s not in disabled and s not in sr.SKIP),
+                           key=lambda kv: -kv[1])[:max(n, 8)]
+            if _qtop and _qtop[0][1] > 0:
+                for _slug, _v in _qtop:
+                    seeds[_slug] = max(_v, 0.0) / _qtop[0][1]
+        except Exception as _qf_exc:
+            print("  [warn] meaning foothold skipped (%s: %s)" % (type(_qf_exc).__name__, _qf_exc))
+
     adj, deg = sr._load_graph()
     act = {}
     if seeds and adj:
         act, _parent = sr._spread(seeds, adj, deg)
-    # _semantic_scores waits for the sidecar the query worker is still loading (0.07-0.27 s on the Mac, 30 Oct), so it
+    # _semantic_scores waits for the sidecar the query worker is still loading (0.07-0.27 s on macOS, 30 Oct), so it
     # runs after the salience, tier and supersession reads below, which do not need it. BRAIN_RECALL_SEM_LATE=0 restores
     # the old order.
     sem_late = os.environ.get("BRAIN_RECALL_SEM_LATE", "1") != "0"
@@ -4569,7 +4683,7 @@ def _recall_body(query, n=8):
                         _q = _q + " " + " ".join(_joins)
                 except Exception:
                     pass
-            # KEEP THE WORD THE NORMALISER CHANGED (2026-11-02 laptop, RECALL-10X probe 22; on the Mac 4 Nov
+            # KEEP THE WORD THE NORMALISER CHANGED (2026-11-02 laptop, RECALL-10X probe 22; on macOS 4 Nov
             # 2026): the snap replaces a rare word with a common neighbour, but a memory that quotes him holds his typo and many
             # rare words are real. Each changed word is scored again and added (BM25 sums over terms, so this is exact).
             # Laptop, 496 stored questions with a changed word: top-1 280 -> 411, top-8 384 -> 487.
@@ -4748,8 +4862,8 @@ def _recall_body(query, n=8):
                         # note); only rows stated as his order by tag or by an order-kind slug jump on date.
                         _near = [t for t in _near if t[0] in _OWNER_STATED or _OWNER_ORDER_SLUG_RX.match(t[0])
                                  or t == _fh[0]]
-                    # q42: an order scoped to the Mac is his word for the Mac, not for this laptop: on Windows, unless
-                    # the question names the Mac, Mac-only rows leave the near band (the top row too) when another stays.
+                    # q42: an order scoped to macOS is his word for macOS, not for this laptop: on Windows, unless
+                    # the question names macOS, macOS-only rows leave the near band (the top row too) when another stays.
                     if (sys.platform == "win32" and os.environ.get("BRAIN_RECALL_PERMIT_SCOPE", "1") != "0"
                             and not re.search(r"\bmac\b", query, re.I)):
                         _nm = [t for t in _near if not (_MAC_SCOPE_RX.search(_fam.get(t[0], ""))
@@ -4986,7 +5100,7 @@ def _recall_body(query, n=8):
         # Without the instruction the lane alone finds 58 of the reworded answers in its top five, with it 73. The
         # end-to-end A/B, the held half and BRAINDEV are in improve_1012/fronts/R11/NOTES.md.
         if qsem is None:
-            qsem = _query_semantic_scores(query)
+            qsem = {} if _id_only else _query_semantic_scores(query)
         _qfuse = _qlane_fuse()
         if _qfuse == "z":
             if _QLANE.get("query") == query and _QLANE.get("cos") is not None:
@@ -6025,7 +6139,8 @@ _OWNER_FAMILY_RX2 = re.compile(r"[\s\"'\[\(\*_~#>|\u2600-\u27BF\u2B00-\u2BFF\U00
                                r"(?:OWNER|Owner)(?:'s)?\s+(?:HARD\s+|STANDING\s+|STANDARD\s+)?"
                                r"(?:RULE|LAW|ORDER|POLICY|CORRECTION|DIRECTIVE)", re.U)
 _OWNER_INDEX_LINE_RX = re.compile(r"-\s*\[([^\]]+?)\.md\]\([^)]*\)\s*[-\u2014]*\s*(.*)$")
-_OWNER_STATUS_TAG_RX = re.compile(r"\[(PROVISIONAL|VERIFIED|OWNER-STATED|RETRACTED)\]\s*")
+# 6 Nov 2026: words after the tag ("[VERIFIED 2026-08-04]") count, as in _STATUS_RX.
+_OWNER_STATUS_TAG_RX = re.compile(r"\[(PROVISIONAL|VERIFIED|OWNER-STATED|RETRACTED)(?:[\s,;:+-][^\]\n]*)?\]\s*")
 _OWNER_STATED = set()  # q40: slugs whose index line carries [OWNER-STATED], filled by _owner_family_texts
 _OWNER_ORDER_SLUG_RX = re.compile(r"owner_(order|law|rule|directive|allows)_")
 OWNER_ADVISORY_BUDGET_S = 1.5     # the join: what the filer waits at most, plus the OS's scheduling slack
@@ -6247,7 +6362,7 @@ def _secret_refusal(*parts):
 
 
 def _kick_fresh_vectors():
-    """Start the meaning-vector overlay refresh (fresh_vectors.py) in the background and return at once. The Mac has no
+    """Start the meaning-vector overlay refresh (fresh_vectors.py) in the background and return at once. The macOS has no
     15-minute task for it: on 30 Oct 26 memories went unencoded for an hour, invisible to the meaning lane. Single-flight
     inside fresh_vectors; BRAIN_REMEMBER_REFRESH=0 skips it like the BM25 step."""
     if os.environ.get("BRAIN_REMEMBER_REFRESH", "1") == "0" or os.name == "nt":   # Windows keeps its scheduled task
@@ -6471,7 +6586,7 @@ def remember(slug, mtype, desc, body, status="provisional", evidence="",
             print("link [[%s]] has no memory; did you mean [[%s]]?" % (_x, _real))
     except Exception:
         pass
-    # Name the real neighbour, not a fixed example (1000-ways D8 #45, 31 Oct): of 78 Mac filings since 16 Oct whose
+    # Name the real neighbour, not a fixed example (1000-ways D8 #45, 31 Oct): of 78 macOS filings since 16 Oct whose
     # nearest earlier memory scored >= 50, 44 did not link it, and 13 of 16 of those judged were follow-ups that
     # should have. This rule fires on 23 of 232 of those filings. Advisory only; never breaks a write.
     try:
