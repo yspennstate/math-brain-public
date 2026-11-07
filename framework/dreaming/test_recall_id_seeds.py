@@ -28,7 +28,7 @@ def main():
             idx.append("- [%s.md](%s.md) - %s" % (slug, slug, slug.replace("_", " ")))
         with open(os.path.join(mem, "MEMORY.md"), "w") as f:
             f.write("\n".join(idx) + "\n")
-        env = dict(os.environ, HOME=tmp, BRAIN_SLUG="t", BRAIN_BM25_INDEX=os.path.join(tmp, "bm25.json.gz"),
+        env = dict(os.environ, HOME=tmp, USERPROFILE=tmp, BRAIN_SLUG="t", BRAIN_BM25_INDEX=os.path.join(tmp, "bm25.json.gz"),
                    BRAIN_RECALL_LOG="0", BRAIN_RECALL_REFRESH="0", BRAIN_RECALL_QUERY_EMBED="0",
                    BRAIN_RECALL_SERVER="0")
         env.pop("BRAIN_MEM_DIR", None)

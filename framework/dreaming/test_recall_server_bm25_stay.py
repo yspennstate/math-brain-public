@@ -62,6 +62,11 @@ for i, q in enumerate((%r, %r)):
 
 
 def main():
+    if not os.path.isdir("/dev/fd"):
+        # held_deleted reads /dev/fd; where there is none (Windows) nothing can be observed, and an open file cannot
+        # be deleted there, so the hold this test guards cannot happen
+        print("SKIP no /dev/fd: an open postings file cannot be unlinked here")
+        return 0
     tmp = tempfile.mkdtemp(prefix="bm25stay_")
     fails = []
     try:
@@ -75,7 +80,7 @@ def main():
             idx.append("- [%s.md](%s.md) - %s" % (slug, slug, slug.replace("_", " ")))
         with open(os.path.join(mem, "MEMORY.md"), "w") as f:
             f.write("\n".join(idx) + "\n")
-        env = dict(os.environ, HOME=tmp, BRAIN_SLUG="t", BRAIN_BM25_INDEX=os.path.join(tmp, "bm25.json.gz"),
+        env = dict(os.environ, HOME=tmp, USERPROFILE=tmp, BRAIN_SLUG="t", BRAIN_BM25_INDEX=os.path.join(tmp, "bm25.json.gz"),
                    BRAIN_RECALL_LOG="0", BRAIN_RECALL_REFRESH="0", BRAIN_RECALL_QUERY_EMBED="0",
                    BRAIN_RECALL_SERVER="0")
         env.pop("BRAIN_MEM_DIR", None)
