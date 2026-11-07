@@ -9,7 +9,7 @@ or HOLD. The fire-log rows it writes are then given to graph_learn.main() on a t
 receiver behaviour in both arms, and the learner's state is compared. Nothing live is read or written.
  M1 SHOW, focal: the row names M, delivered, spent, and the index of the line that carried it
  M2 HOLD, focal: the row names M, not delivered, spent; held_fix names M
- M3 HOLD, total: the row names M, not delivered, not spent, and no held_fix (the case B08-048 found unrecorded)
+ M3 HOLD, total: the row names M, not delivered, not spent, and no held_fix
  M4 SHOW, total: delivered and spent
  M5 a failed save in HOLD: nothing served, the row names M as withheld, neither delivered nor spent
  M6 the candidate is never kept in the session state on disk
@@ -166,6 +166,7 @@ def learn(path, name, fires, events):
         gl.STATUS, gl.STATE, gl.LOGMD = (os.path.join(live, "LIVE_STATUS.json"), os.path.join(live, "learn_state.json"),
                                          os.path.join(live, "LEARNING_LOG.md"))
         gl.DIAL, gl.PROJECTS = dial, os.path.join(tmp, "projects")
+        gl.EMITTED = os.path.join(live, "emitted.jsonl")        # the hook's print receipts: none in this run
         real_time, argv = gl.time.time, sys.argv
         gl.time.time = lambda: close + 100
         sys.argv = ["graph_learn.py"]
@@ -274,8 +275,8 @@ def main():
                                                                                      1.0, 0.0)],
           "L3 a SHOW read within 30 min: edges %s, fix read %s; the control, a memory-channel line read: edges %s" % (
               r[3], r[0]["precision"]["fix"]["shown_read"], rc[3]))
-    old_row = {k: v for k, v in s_row.items() if k != "fix"}
-    o = learn(LEARN, "gl_l4", [old_row], [])
+    old_row = {k: v for k, v in s_row.items() if k not in ("fix", "eid")}   # older rows carry neither
+    o = learn(LEARN, "gl_l4", [old_row], [[NOW + 3600, sid8, "dir", "x"]])   # seen after: not censored
     check(sorted(x[1] for x in o[3]) == ["mem:" + M, "mem:" + M] and all(x[3] == 1.0 for x in o[3]),
           "L4 a row from before this change (no fix record) is read as before: edges %s" % (o[3],))
 
