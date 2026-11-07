@@ -59,6 +59,9 @@ strong = ("write a rule, the data relevant to this kind of brain activity and im
 
 # 0. the candidate function on its own
 t0 = time.time()
+if not os.path.exists(LM.SIDECAR):          # a fresh install: no graph built yet, nothing to read
+    print("SKIP - no graph sidecar yet (a fresh install builds it on the first graph build): %s" % LM.SIDECAR)
+    sys.exit(0)
 lv = LM.Live()
 cands = LM.word_candidates(__import__("extract_touch_events").words(strong, cap=40), set(), lv.db)
 ms = (time.time() - t0) * 1000
