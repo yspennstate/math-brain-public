@@ -65,6 +65,10 @@ _HERE = os.path.dirname(os.path.abspath(__file__))
 BUILD_SRC = os.environ.get(
     "MATHBRAIN_SRC", os.path.join(_HERE, "..", "mathbrain", "src")
 )
+# On the path at import, not only in main(): the helpers below import math_brain inside a try and answer False on any
+# error, so a helper called from a test or another module would otherwise get the "no" answer without a word.
+if os.path.isdir(BUILD_SRC) and BUILD_SRC not in sys.path:
+    sys.path.insert(0, BUILD_SRC)
 STORE_PATH = os.environ.get("MATHBRAIN_STORE", "")
 # 2026-09-11: 1400 held THREE clipped cards until 2026-09-08, when cards started going out whole (the 560-char clip
 # was a Codex finding); a whole card is ~600 chars and the hint header ~560, so 1400 held ONE card - measured on the
