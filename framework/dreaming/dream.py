@@ -288,6 +288,43 @@ assoc.sort(reverse=True)
 # 0.72 calibrated cosine once same-series slug-prefix pairs are dropped; the misses were exactly
 # the boilerplate the prefix filter now catches. Fail-safe: no sidecar / no numpy -> empty list,
 # agenda unchanged.
+def _top_sem_pairs(V, cut, pid, codes, keep=4000, block=1024):
+    """Pairs i < j with V[i].V[j] >= cut, best `keep` by dot, as arrays (I, J, D).
+
+    Row blocks over columns j >= i, so no full Gram is built (over ~50k rows it was 9.9 GB a copy plus 19.7 GB of
+    triu indices, and its MemoryError emptied the list every night). The filters run INSIDE the loop: pairs of one
+    series (equal pid) and pairs whose code i*n+j is in `codes` (sorted, unique: already linked, co-cited or
+    wiki-linked) are dropped before the top `keep` is taken. Keeping the top first and filtering after returned
+    only near-duplicates and already-linked pairs, and so no association at all. Ties go row-major."""
+    import numpy as _np
+    n = len(V)
+    I = _np.empty(0, _np.int64); J = _np.empty(0, _np.int64); D = _np.empty(0, V.dtype)
+    for s0 in range(0, n, block):
+        blk = V[s0:s0 + block] @ V[s0:].T
+        r, cc = _np.nonzero(blk >= cut)
+        m = cc > r
+        r, cc = r[m], cc[m]
+        gi, gj = s0 + r, s0 + cc
+        m = pid[gi] != pid[gj]
+        r, cc, gi, gj = r[m], cc[m], gi[m], gj[m]
+        if len(codes) and len(r):
+            # binary search is an exact membership test on a sorted unique array; np.isin re-sorts it per block
+            q = gi * n + gj
+            pos = _np.searchsorted(codes, q)
+            pos[pos == len(codes)] = 0
+            m = codes[pos] != q
+            r, cc = r[m], cc[m]
+        I = _np.concatenate([I, s0 + r]); J = _np.concatenate([J, s0 + cc])
+        D = _np.concatenate([D, blk[r, cc]])
+        if len(D) > 4 * keep:
+            kth = _np.partition(D, len(D) - keep)[len(D) - keep]
+            m = D >= kth
+            I, J, D = I[m], J[m], D[m]
+            cut = max(cut, kth)
+        del blk
+    return I, J, D
+
+
 sem_assoc = []
 try:
     import numpy as _np
@@ -343,20 +380,30 @@ try:
             # into the except below, so this list came back empty every night (found 3 Nov 2026).
             # Same pair set as the full matrix (float32 noise ~2e-6); ties go row-major.
             _cut = _np.float32(0.72 * (1.0 - _bias) + _bias)       # cal >= 0.72  <=>  dot >= _cut
-            _I = _np.empty(0, _np.int64); _J = _np.empty(0, _np.int64); _D = _np.empty(0, _V.dtype)
-            for _s in range(0, len(_keep), 1024):
-                _blk = _V[_s:_s + 1024] @ _V[_s:].T
-                _r, _cc = _np.nonzero(_blk >= _cut)
-                _m = _cc > _r
-                _r, _cc = _r[_m], _cc[_m]
-                _I = _np.concatenate([_I, _s + _r]); _J = _np.concatenate([_J, _s + _cc])
-                _D = _np.concatenate([_D, _blk[_r, _cc]])
-                if len(_D) > 16000:
-                    _kth = _np.partition(_D, len(_D) - 4000)[len(_D) - 4000]
-                    _m = _D >= _kth
-                    _I, _J, _D = _I[_m], _J[_m], _D[_m]
-                    _cut = max(_cut, _kth)
-                del _blk
+            # same-series = the 12-char prefix id; linked / co-cited / wiki-linked = sorted pair codes i*n+j
+            _n = len(_keep)
+            _names = [_slugs[k][:-3] for k in _keep]
+            _pos = {nm: q for q, nm in enumerate(_names)}
+            _pfx = {}
+            _pid = _np.array([_pfx.setdefault(nm[:12], len(_pfx)) if len(nm) >= 12 else -1 - q
+                              for q, nm in enumerate(_names)], dtype=_np.int64)
+            _codes = []
+
+            def _addpair(x, y):
+                qx, qy = _pos.get(x), _pos.get(y)
+                if qx is not None and qy is not None and qx != qy:
+                    _codes.append(min(qx, qy) * _n + max(qx, qy))
+            for _x, _y in _linked:
+                _addpair(_x, _y)
+            for _x, _y in cocited:
+                _addpair(_x, _y)
+            for _q, _k in enumerate(_keep):
+                for _l in mems[_slugs[_k]]["links"]:
+                    _t = resolve(_l)
+                    if _t:
+                        _addpair(_names[_q], _t)
+            _codes = _np.unique(_np.array(_codes, dtype=_np.int64))
+            _I, _J, _D = _top_sem_pairs(_V, _cut, _pid, _codes)
             _C = (_D - _bias) / (1.0 - _bias)
             for _k in _np.lexsort((_J, _I, -_C))[:4000]:
                 _i, _j = int(_I[_k]), int(_J[_k])
