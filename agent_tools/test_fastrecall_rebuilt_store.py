@@ -6,14 +6,16 @@ Builds a three-claim store in a temporary folder, runs math_recall.py once so th
 then deletes the store and builds a one-claim store with different text at the same path. The next call must not
 print a claim that is no longer in the store, and its output must match the call with the fast path off
 (MATH_RECALL_FAST=0). A second check covers the ordinary case: one claim appended to the store is found by the
-next call. HOME points into the temporary folder, so the prepared states never touch the real cache.
+next call. HOME and the prepared-state cache point into the temporary folder, so the prepared states never touch
+the real cache.
 Needs only the math_brain library and its dependency, cryptography. Takes about 20 seconds.
 """
 import os, shutil, subprocess, sys, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 UP = os.path.dirname(HERE)
-BUILD = next((p for p in (os.path.join(UP, "mathbrain", "src"), os.path.join(UP, "src"))
+BUILD = next((p for p in (os.path.join(UP, "framework", "mathbrain", "src"), os.path.join(UP, "mathbrain", "src"),
+                          os.path.join(UP, "src"))
               if os.path.isdir(os.path.join(p, "math_brain"))), None)
 if BUILD is None:
     print("SKIP: math_brain library not found beside this folder")
@@ -24,6 +26,7 @@ ENV = dict(os.environ, MATHBRAIN_BUILD_SRC=BUILD, MATHBRAIN_STORE=STORE, PYTHONP
            HOME=WORK, USERPROFILE=WORK, MATH_RECALL_SERVER_DISABLE="1")
 for k in [k for k in ENV if k.startswith("MATH_RECALL_") and k != "MATH_RECALL_SERVER_DISABLE"]:
     del ENV[k]
+ENV["MATH_RECALL_CACHE_DIR"] = os.path.join(WORK, "cache")   # the default cache sits beside math_recall.py
 OLD = ["Every finite group of prime order is cyclic.",
        "Every cyclic group of prime order is simple and abelian.",
        "A compact subset of a Hausdorff space is closed."]
