@@ -21,10 +21,10 @@ Usage:
 
 Exit codes: 0 pushed (or nothing to do), 2 scan not clean or scan errored, 3 git failure.
 Nothing is pushed unless the scan printed exactly "secret scan clean", and what is pushed is the scanned commit itself
-(pushed as SHA:refs/heads/BRANCH, then read back with ls-remote; 28 Sep, fleet02/B06 R24). The push holds the remote
+(pushed as SHA:refs/heads/BRANCH, then read back with ls-remote; 28 Sep). The push holds the remote
 to the scanned lower bound (--force-with-lease=refs/heads/BRANCH:BASE on a fast-forward): if the remote's branch is not
 exactly BASE when git updates it - moved on, or rewound after the fetch - git refuses, because a rewind would make
-reachable again commits this scan never covered (28 Sep, fleet02/B06 r63/r64).
+reachable again commits this scan never covered (28 Sep).
 """
 import argparse
 import os
@@ -84,7 +84,7 @@ def main():
             git("commit", "-q", "-m", a.message)
 
     # resolve BOTH endpoints once, before anything else can move them. The fetch must succeed: without it the lower
-    # bound is whatever the tracking ref last saw (28 Sep, fleet02/B06 R24).
+    # bound is whatever the tracking ref last saw (28 Sep).
     f = subprocess.run(["git", "fetch", a.remote, a.branch], capture_output=True, text=True)
     if f.returncode != 0:
         sys.stderr.write("fetch of %s/%s failed - refusing to push against a stale lower bound:\n%s\n"
@@ -113,7 +113,7 @@ def main():
         print("scan-only: %s..%s is clean; not pushing" % (base[:9], head[:9]))
         return 0
 
-    # PUBLISH EXACTLY WHAT WAS SCANNED (28 Sep, fleet02/B06 R24, R24-B06-SAFE-PUSH-SCANS-HEAD-BUT-PUSHES-BRANCH).
+    # PUBLISH EXACTLY WHAT WAS SCANNED (28 Sep).
     # `git push REMOTE BRANCH` sent the local branch ref, and on a detached HEAD, another branch or a worktree that is
     # not the commit scanned above. The push now names the scanned commit, and only a fast-forward of the scanned
     # lower bound is allowed.
