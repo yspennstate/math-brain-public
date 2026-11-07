@@ -60,3 +60,4 @@ for r in picked:
     check("stored rewrites find a source the question missed (%s)" % r["id"], rank is not None,
           "question alone rank %s, fused rank %s" % (r.get("base_rank"), rank))
 print("RESULT %d/%d" % (sum(results), len(results)))
+sys.exit(0 if all(results) else 1)
