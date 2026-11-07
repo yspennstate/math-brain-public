@@ -1,7 +1,7 @@
 """test_reseal_semantic_interlock.py - the re-seal writes only rows whose source decision passed.
 
 Every arm runs reseal_math_rows.py --apply on byte copies of the math store and of its earliest backup, made in WORK_DIR;
-the live store and its backups are only read. B07's acceptance test, and the cases it names:
+the live store and its backups are only read. The acceptance test, and the cases it names:
  A1, A2  the two wrong-at-creation fixtures (the concept row: in Lagrange's theorem |H| and |G| swapped; the lemma row:
          the covariance's sign flipped), written into the store copy AND the backup copy with the digest recomputed, so
          the structural plan proposes the row: the apply is refused and nothing is written
@@ -12,7 +12,7 @@ the live store and its backups are only read. B07's acceptance test, and the cas
          as they are while the passing rows are re-sealed
  A7      --apply with no decisions: refused
  P1      a clean copy with the bound decisions: exactly the rows the decisions pass are re-sealed, read back from the copy
- N1      the tool before this change (OLD) re-seals A1's victim on --apply: the defect B07 found (the check can fail)
+ N1      the tool before this change (OLD) re-seals A1's victim on --apply: the defect the review found (the check can fail)
  A8 a row whose decision
          failed given a second, passing decision after it, and the same two in the other order: both refused, nothing
          written; the dry run lists the row as unmatched
@@ -74,7 +74,7 @@ the live store and its backups are only read. B07's acceptance test, and the cas
          read after a checkpoint does (W3), in a rollback-journal store too (W5), under checkpoints running beside it
          (W6), leaves the store's main file and log byte-identical (W7), and records the store's own modes (W8). With
          --old-copy OLD8, the tool that copied the main file alone misses the trigger and the row (W2)
-B13's P1-P9 map onto these: P1 is P1, P2 A14, P3 A15, P4 A17, P5 A18 and A21 (the store has no trigger, and every foreign
+The review's P1-P9 map onto these: P1 is P1, P2 A14, P3 A15, P4 A17, P5 A18 and A21 (the store has no trigger, and every foreign
 key is NO ACTION with enforcement off on the tool's connection), P6 P6, P7 P7, P8 N4 (with --old-race), P9 P9.
 
     python test_reseal_semantic_interlock.py WORK_DIR [OLD_RESEAL.py] [--old-dup OLD2_RESEAL.py]
@@ -111,6 +111,9 @@ CONCEPT = ("claim_e80022f127cfaffb090173b1470e8c08573a8eb6a95e0032811284113cbb9a
            "then |H| is a divisor of |G|", "then |G| is a divisor of |H|")
 LEMMA = ("claim_c9d0bb8354ebd968a84d4a76d6a7cca77c1a4a6c227fdc38065b4f1527e45d6c",
          "= 2 Var(X) - 2 Cov(X, X^L)", "= 2 Var(X) + 2 Cov(X, X^L)")
+if not os.path.exists(os.path.join(POP, "brain.sqlite3")):   # a fresh install has no math store to copy
+    print("SKIP - no math store yet: %s" % os.path.join(POP, "brain.sqlite3"))
+    sys.exit(0)
 WORK = sys.argv[1]
 OLD = sys.argv[2] if len(sys.argv) > 2 and not sys.argv[2].startswith("--") else None
 OLD_DUP = sys.argv[sys.argv.index("--old-dup") + 1] if "--old-dup" in sys.argv else None
@@ -572,7 +575,7 @@ def main():
             st1 = json.loads(v1[0]).get("status") if v1 else None
             check(rc2 == 0 and v1 != v0 and st1 == "unverified",
                   "N1 the tool before this change re-seals the wrong-at-creation victim on --apply (rc %s, status now %s): "
-                  "the defect B07 found" % (rc2, st1))
+                  "the defect the review found" % (rc2, st1))
 
     # A3: a planned row with no decision
     d = arm("a3_missing")
@@ -647,7 +650,7 @@ def main():
                 after2 = digests(d2, [x_key])[x_key]
                 check(rc2 == 0 and after2 != before2,
                       "N2 the tool before this change re-seals the row a later passing decision overrode (rc %s, digest "
-                      "moved %s): the defect B07 found" % (rc2, after2 != before2))
+                      "moved %s): the defect the review found" % (rc2, after2 != before2))
 
     # A9-A12 / N3: a node-only plan (the node planned, its claim not)
     nid = sorted(k[1] for k in planned_ok if k[0] == "nodes" and ("claims", k[1]) in planned_ok)[0]
@@ -697,7 +700,7 @@ def main():
         rc12, _r12, moved12, _s12, _p12 = node_only_arm("n3_old_stale_claim", old_pass, OLD_CLAIM)
         check(rc9 == 0 and moved9 and rc12 == 0 and moved12,
               "N3 the tool before this change re-seals the node with no claim decision (rc %s, moved %s) and with a claim "
-              "decision made on other content (rc %s, moved %s): the defect B07 found" % (rc9, moved9, rc12, moved12))
+              "decision made on other content (rc %s, moved %s): the defect the review found" % (rc9, moved9, rc12, moved12))
 
     # A13: an edge whose endpoint does not pass
     check(bool(bad_end) and not (p1_moved & bad_end) and (good_end - late - bad_end) <= p1_moved,
@@ -723,7 +726,7 @@ def main():
         open(old_b, "w", encoding="utf-8").write(src.replace(anchor, hook + anchor))
         rc4, res4, kept4, moved4 = race_run(old_b, d, DEC, dsha, sorted(planned_ok))
         check(rc4 == 0 and not kept4, "N4 the tool before this change, given the same barrier, overwrites the other "
-              "process's change (rc %s, change kept %s): the defect B12 found" % (rc4, kept4))
+              "process's change (rc %s, change kept %s): the defect the review found" % (rc4, kept4))
 
     # A15 / N5: an edge the tool re-seals points
     # at a claim no decision covers; another process changes that claim between the validation and the write.
@@ -743,7 +746,7 @@ def main():
             d = arm("n5_old_dep_race")
             rc5, res5, kept5, moved5 = race_run(OLD_DEP, d, DEC, dsha, sorted(planned_ok), victim=("claims", claim_x))
             check(rc5 == 0 and ("edges", edge_e) in moved5, "N5 the tool before this change re-seals the edge while its "
-                  "endpoint changed under it (rc %s, edge re-sealed %s): the defect B07 found" % (
+                  "endpoint changed under it (rc %s, edge re-sealed %s): the defect the review found" % (
                       rc5, ("edges", edge_e) in moved5))
 
     # A16 / N6: a passing endpoint decision bound to other content than the endpoint's row now
@@ -769,7 +772,7 @@ def main():
             rc6, res6, _t6 = run(OLD_DEP, d, stale_path, sha(stale_path), apply=False)
             planned6 = {(c["table"], c["id"]) for c in res6.get("changed", [])}
             check(("edges", edge_e) in planned6, "N6 the tool before this change plans the edge on the stale endpoint "
-                  "decision (planned %s): the defect B07 found" % (("edges", edge_e) in planned6))
+                  "decision (planned %s): the defect the review found" % (("edges", edge_e) in planned6))
 
     # A17-A21 / N7-N8: triggers, the schema, and what the write itself changes
     if ext:
@@ -789,7 +792,7 @@ def main():
             rc7, _res7, moved7 = barrier_run(OLD_TRIG, d, DEC, dsha, sorted(planned_ok), install)
             check(rc7 == 0 and touched(d, claim_x) and moved7,
                   "N7 the tool before this change commits under the same trigger (rc %s) and the endpoint is rewritten "
-                  "%s: the defect B13 found" % (rc7, touched(d, claim_x)))
+                  "%s: the defect the review found" % (rc7, touched(d, claim_x)))
 
         def with_trigger(name):
             dd = arm(name)
@@ -811,7 +814,7 @@ def main():
             rc8, _res8, _t8 = run(OLD_TRIG, d, DEC, dsha)
             check(rc8 == 0 and touched(d, claim_x),
                   "N8 the tool before this change commits with the trigger present (rc %s) and the endpoint is rewritten "
-                  "%s: the defect B07 found" % (rc8, touched(d, claim_x)))
+                  "%s: the defect the review found" % (rc8, touched(d, claim_x)))
 
         # A21: the after-write checks alone, on a copy with the trigger refusal and the schema check switched off
         src = open(TOOL, encoding="utf-8").read()
@@ -860,7 +863,7 @@ def main():
         d2 = empty_arm("n10_old_noop", UNRELATED)
         rc2, res2, _t2 = run(OLD_NOOP, d2, apply=False)
         check(rc2 == 3 and bool(res2.get("triggers")) and "before" not in res2,
-              "N10 the tool before this change refuses the same dry run (rc %s) and gives no census: the defect B13 found"
+              "N10 the tool before this change refuses the same dry run (rc %s) and gives no census: the defect the review found"
               % rc2)
     empty_dec = os.path.join(WORK, "decisions_empty.json")
     json.dump({"decisions": []}, open(empty_dec, "w", encoding="utf-8"))
@@ -917,7 +920,7 @@ def main():
     if OLD_COPY:
         rc2, res2, _t2 = run(OLD_COPY, d, apply=False)
         check(not res2.get("apply_blocked_by_triggers") and not res2.get("triggers"),
-              "W2 the tool that copied the main file alone misses the trigger (rc %s, triggers %s): the defect B13 found"
+              "W2 the tool that copied the main file alone misses the trigger (rc %s, triggers %s): the defect the review found"
               % (rc2, [x["name"] for x in res2.get("triggers") or []]))
 
     # W6: checkpoints running beside the dry run, then a full one: each run sees one whole generation
