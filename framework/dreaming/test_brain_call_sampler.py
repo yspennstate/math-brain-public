@@ -31,7 +31,7 @@ def test_off_switch(monkeypatch):
 def test_a_slow_call_names_its_hot_function(monkeypatch, tmp_path):
     bcs = _sampler(monkeypatch, BRS_SAMPLE="1", BRS_SAMPLE_MS="2", BRS_SAMPLE_SLOW_MS="100")
     smp = bcs.begin()
-    _spin_here(0.3)
+    _spin_here(1.0)
     smp.stop()
     out = tmp_path / "slow.jsonl"
     smp.write(str(out), 300, {"op": "recall"})
