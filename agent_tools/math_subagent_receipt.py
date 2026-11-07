@@ -1,5 +1,4 @@
-"""math_subagent_receipt.py - what a research subagent actually received from the math hook (29 Sep 2026;
-finding MB-I01 of the interactive review MB-IMPROVEMENT-20260929-155540, job R70).
+"""math_subagent_receipt.py - what a research subagent actually received from the math hook (29 Sep 2026).
 
 math_subagent_adapter.py records a decision: whether it asked the harness to append the math store's cards to a child's
 task. A decision is not a receipt. This file records the evidence that comes after it, joined to the adapter's row by the

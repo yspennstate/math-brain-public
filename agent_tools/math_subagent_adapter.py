@@ -1,6 +1,4 @@
-"""math_subagent_adapter.py - the math store's cards reach research subagents too (29 Sep 2026, job R70; scheduled
-audits fleet04/B14 r7, fleet01/B14 r83 and fleet02/B05; the interactive review MB-IMPROVEMENT-20260929-155540,
-findings MB-I01 to MB-I03).
+"""math_subagent_adapter.py - the math store's cards reach research subagents too.
 
 The math hook runs on prompt events, and a subagent's task never is one: the parent writes it into an Agent tool call,
 and the child starts with that text as its first message. In the week to 29 Sep, 868 Agent calls went out and 113 of
@@ -19,13 +17,13 @@ answer gets its task untouched, and so does every child when anything here fails
                 run normally and served. The draw is a hash of the parent session's id, the description and the task:
                 a call repeated from the same session keeps its arm, and a reworded description, a changed task or
                 another session draws afresh. That cluster, not the call, is the unit of assignment, so repeated calls
-                are not independent samples; --summary counts invocations and clusters apart (MB-I03)
+                are not independent samples; --summary counts invocations and clusters apart
     ledger  ~/.claude/brain_graph/live/math_subagent_serves.jsonl: one row per eligible Agent call; ids and digests
             only, never the task text. A row is the adapter's decision, made before any child exists:
             injection_requested says it asked the harness to append the block. `delivered`, the field's only name
-            until 29 Sep, is kept with the same value and never meant that a child received anything (MB-I01): what
+            until 29 Sep, is kept with the same value and never meant that a child received anything: what
             the harness applied and what the child received are math_subagent_receipt.py's rows, joined by the call id
-    faults  a row that cannot be written is a known outcome, not a silent one (MB-I02). The card is withheld - the
+    faults  a row that cannot be written is a known outcome, not a silent one. The card is withheld - the
             child runs with its task untouched, so no card goes out that the ledger cannot account for - and the
             fault's category, never text, goes to ~/.claude/dreaming/logs/math_subagent_faults.jsonl, or to stderr
             when that fails too
@@ -34,8 +32,8 @@ The child's session id is uuid-shaped and derived from the parent's id and the t
 child as its own session and never as the parent. When the harness gives the tool call's id (tool_use_id, the same id
 its PostToolUse event carries), the child's session id takes it too and the ledger row records it: two calls of one task
 are two sessions and two rows a later event can be joined to, while the arm still comes from the cluster alone
-(fleet01/B05 r91, B05-R70-SUBAGENT-LEDGER-NO-TOOLUSE-JOIN-42). A math hook that exits with an error is never served,
-whatever it printed (fleet01/B14 r91, B14-R91-R70-NONZERO-HOOK-EXIT-STILL-INJECTS). The frame that opens a served
+A math hook that exits with an error is never served,
+whatever it printed. The frame that opens a served
 block carries the row's delivery id, "(delivery <id>)", so the child's own transcript can show that it got this block.
 
     python math_subagent_adapter.py --summary [--since HOURS]    invocations, clusters and receipt stages per arm
@@ -57,10 +55,9 @@ LEDGER = os.environ.get("MATHBRAIN_SUBAGENT_LEDGER") or os.path.join(
 RECEIPTS = os.environ.get("MATHBRAIN_SUBAGENT_RECEIPTS") or os.path.join(os.path.dirname(LEDGER),
                                                                          "math_subagent_receipts.jsonl")
 FAULTS = os.environ.get("MATHBRAIN_SUBAGENT_FAULTS") or os.path.join(HERE, "logs", "math_subagent_faults.jsonl")
-# SERVE BY DEFAULT (30 Sep 2026, the owner's 14:09 order to get relevant knowledge to agents as fast as
-# possible). Shadow saw 273 tasks, all film or helper work the math gate rightly refused, so it measured nothing. Replayed
-# in shadow, the 24 research-subagent tasks of 22-24 Sep (FEI, QFORM; 41 subagents that got no card then) would get a
-# block on 20, mostly on their subject: the LTF-FEI task gets the proven 14.22 bound, the monotone task the failed routes.
+# SERVE BY DEFAULT (30 Sep 2026). Shadow saw 273 tasks, all film or helper work the math gate rightly refused, so it measured nothing. Replayed
+# in shadow, the 24 research-subagent tasks of 22-24 Sep (41 subagents that got no card then) would get a
+# block on 20, mostly on their subject: a bound task gets its proven bound, the monotone task the failed routes.
 # A fifth of tasks stay held back as the control (MATHBRAIN_SUBAGENT_HOLD). MATHBRAIN_SUBAGENT_ADAPTER=shadow rolls back.
 MODE = os.environ.get("MATHBRAIN_SUBAGENT_ADAPTER", "serve").strip().lower()
 try:
@@ -231,7 +228,7 @@ def decide(data, mode=MODE, runner=run_math_hook, ledger=ledger_row, faults=reco
                "ids": sorted(set(CLAIM_ID.findall(block)))[:12], "seconds": round(seconds, 2), "error": error}
         requested = bool(block) and arm == "served"
         row["injection_requested"] = requested
-        row["delivered"] = requested      # the same decision under its name until 29 Sep; never a receipt (MB-I01)
+        row["delivered"] = requested      # the same decision under its name until 29 Sep; never a receipt
         status = ledger(row)
         ok, fault = status if isinstance(status, tuple) and len(status) == 2 else (False, "ledger:no_status")
         if not ok:
@@ -283,7 +280,7 @@ def merged_receipts(path=None):
 
 
 def summarize(since_hours=None, ledger=None, receipts=None, faults=None):
-    """{(mode, arm): counts}: invocations and clusters apart (MB-I03), the decision, and each receipt stage as
+    """{(mode, arm): counts}: invocations and clusters apart, the decision, and each receipt stage as
     true / false / unknown. Nothing here is a benefit: a graded outcome is a test's to give."""
     rows = read_rows(ledger or LEDGER)
     if since_hours:
