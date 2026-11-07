@@ -166,6 +166,64 @@ DF_MEMO_MAX = 400000
 DF_CARRY = os.environ.get("SPREAD_SERVER_DF_CARRY", "1") != "0"
 DF_LOCK = threading.Lock()
 _bm25_mod = None
+# Vocabulary filter. Nearly all of the edit-1 candidates prefetch asks the sidecar for are not words of the corpus (150
+# memory descriptions: 9,973 asked, 50 present), and each absent probe still reads a leaf page of p, whose postings sit
+# inline (about 0.7 ms a probe cold, about 310 ms a corrected word). The server holds, per generation, a sorted array of
+# the in-process hash() of every term (the keys of vocab['df'] are exactly p's terms) and asks sqlite only for
+# candidates whose hash is in it: an absent hash is an exact None, a collision only costs a query. Built off the call
+# path in a thread (about 0.7 s, about 80 MB transient); a new generation unions the carry's changed words into the old
+# array (a word in no changed document was in the old p), and a full rebuild every 6 h drops the stale words. While no
+# array matches the current file, prefetch asks for everything, as before. Off: SPREAD_SERVER_DF_VOCAB=0.
+DF_VOCAB = os.environ.get("SPREAD_SERVER_DF_VOCAB", "1") != "0"
+VOCAB = {"key": None, "h": None, "built": 0.0, "bg": None}
+VOCAB_REBUILD_S = 6 * 3600
+
+
+def _vocab_hashes(path):
+    import numpy as np, pickle, zlib
+    con = _ro_con(path)
+    try:
+        d = pickle.loads(zlib.decompress(con.execute("select blob from vocab where k='df'").fetchone()[0]))
+    finally:
+        con.close()
+    a = np.fromiter((hash(k) for k in d), dtype=np.int64, count=len(d))
+    del d
+    a.sort()
+    return a
+
+
+def _vocab_bg(path, key):
+    def run():
+        try:
+            a = _vocab_hashes(path)
+        except Exception:
+            a = None
+        with DF_LOCK:
+            if a is not None and DF_MEMO["key"] == key:
+                VOCAB["key"], VOCAB["h"], VOCAB["built"] = key, a, time.time()
+            VOCAB["bg"] = None
+    VOCAB["bg"] = key
+    threading.Thread(target=run, name="df-vocab", daemon=True).start()
+
+
+def _vocab_union(h, words):
+    import numpy as np
+    if not words:
+        return h
+    new = np.unique(np.fromiter((hash(w) for w in words), dtype=np.int64, count=len(words)))
+    i = np.searchsorted(h, new)
+    j = np.minimum(i, len(h) - 1)
+    keep = h[j] != new
+    return np.insert(h, i[keep], new[keep]) if keep.any() else h   # a sorted insert, no re-sort of the whole array
+
+
+def _vocab_absent(h, words):
+    """For each of `words`, True when its hash is not in the sorted array `h`: the word is exactly absent from p."""
+    import numpy as np
+    hs = np.fromiter((hash(x) for x in words), dtype=np.int64, count=len(words))
+    i = np.searchsorted(h, hs)
+    i[i >= len(h)] = 0
+    return (h[i] != hs).tolist()
 
 
 def _ro_con(path):
@@ -174,7 +232,8 @@ def _ro_con(path):
 
 
 def _df_carry(old_con, old_fp, new_con, got):
-    """`got` minus the words of every document that differs between the two generations, plus the new fp map."""
+    """`got` minus the words of every document that differs between the two generations, the new fp map, and the
+    changed words."""
     fn = dict(new_con.execute("select pos, h from fp"))
     fo = old_fp if old_fp is not None else dict(old_con.execute("select pos, h from fp"))
     changed = set()
@@ -185,38 +244,62 @@ def _df_carry(old_con, old_fp, new_con, got):
         if fo.get(p) != h:
             changed.update(_bm25_mod._fwd_terms(new_con.execute("select terms from fwd where pos=?", (p,)).fetchone()[0]))
     snap = dict(got)      # a copy first: other callers may be publishing into `got` meanwhile
-    return {k: v for k, v in snap.items() if k not in changed}, fn
+    return {k: v for k, v in snap.items() if k not in changed}, fn, changed
 
 
 def _df_memo_for(con):
     """The shared answer dict for the sidecar `con` reads, swapped (and carried) when the generation changed."""
+    return _df_memo_and_vocab(con)[0]
+
+
+def _df_memo_and_vocab(con):
+    """(the shared answer dict, the vocabulary hash array or None) for the sidecar `con` reads; the array is returned
+    only when it was built for this exact file and stat identity."""
     f = [r[2] for r in con.execute("pragma database_list") if r[1] == "main"][0]
     s = os.stat(f)
     key = (os.path.normcase(f), s.st_size, s.st_mtime_ns, getattr(s, "st_birthtime_ns", s.st_ctime_ns), s.st_ino)
-    if DF_MEMO["key"] == key and len(DF_MEMO["got"]) <= DF_MEMO_MAX:
-        return DF_MEMO["got"]
-    with DF_LOCK:
-        if DF_MEMO["key"] != key or len(DF_MEMO["got"]) > DF_MEMO_MAX:
-            got, fp, hold = {}, None, DF_MEMO["hold"]
-            if (DF_CARRY and hold is not None and DF_MEMO["got"] and len(DF_MEMO["got"]) <= DF_MEMO_MAX
-                    and DF_MEMO["key"] and DF_MEMO["key"][0] != key[0] and hasattr(_bm25_mod, "_fwd_terms")):
-                try:
-                    got, fp = _df_carry(hold, DF_MEMO["fp"], con, DF_MEMO["got"])
-                except Exception:
-                    got, fp = {}, None
-            new_hold = None
-            if DF_CARRY:
-                try:
-                    new_hold = _ro_con(f)
-                except Exception:
-                    new_hold = None
-            DF_MEMO["key"], DF_MEMO["got"], DF_MEMO["fp"], DF_MEMO["hold"] = key, got, fp, new_hold
-            if hold is not None:
-                try:
-                    hold.close()
-                except Exception:
-                    pass
-        return DF_MEMO["got"]
+    if DF_MEMO["key"] != key or len(DF_MEMO["got"]) > DF_MEMO_MAX:
+        with DF_LOCK:
+            if DF_MEMO["key"] != key or len(DF_MEMO["got"]) > DF_MEMO_MAX:
+                got, fp, hold, changed = {}, None, DF_MEMO["hold"], None
+                old_key = DF_MEMO["key"]
+                if (DF_CARRY and hold is not None and (DF_MEMO["got"] or (DF_VOCAB and VOCAB["h"] is not None))
+                        and len(DF_MEMO["got"]) <= DF_MEMO_MAX
+                        and DF_MEMO["key"] and DF_MEMO["key"][0] != key[0] and hasattr(_bm25_mod, "_fwd_terms")):
+                    try:
+                        got, fp, changed = _df_carry(hold, DF_MEMO["fp"], con, DF_MEMO["got"])
+                    except Exception:
+                        got, fp, changed = {}, None, None
+                new_hold = None
+                if DF_CARRY:
+                    try:
+                        new_hold = _ro_con(f)
+                    except Exception:
+                        new_hold = None
+                DF_MEMO["key"], DF_MEMO["got"], DF_MEMO["fp"], DF_MEMO["hold"] = key, got, fp, new_hold
+                if DF_VOCAB and VOCAB["key"] != key:
+                    h = None
+                    if (changed is not None and VOCAB["h"] is not None and VOCAB["key"] == old_key
+                            and time.time() - VOCAB["built"] < VOCAB_REBUILD_S):
+                        try:
+                            h = _vocab_union(VOCAB["h"], changed)
+                        except Exception:
+                            h = None
+                    VOCAB["key"], VOCAB["h"] = (key, h) if h is not None else (None, None)
+                if hold is not None:
+                    try:
+                        hold.close()
+                    except Exception:
+                        pass
+    got, vh = DF_MEMO["got"], None
+    if DF_VOCAB:
+        if VOCAB["key"] == key:
+            vh = VOCAB["h"]
+        elif VOCAB["bg"] is None:
+            with DF_LOCK:
+                if VOCAB["bg"] is None and VOCAB["key"] != key and DF_MEMO["key"] == key:
+                    _vocab_bg(f, key)
+    return got, vh
 
 
 def install_df_memo(bm25):
@@ -230,10 +313,12 @@ def install_df_memo(bm25):
     class _MemoDf(base):
         _df_memo = True
 
+        _vh = None
+
         def __init__(self, con):
             base.__init__(self, con)
             try:
-                self._c = _df_memo_for(con)
+                self._c, self._vh = _df_memo_and_vocab(con)
             except Exception:
                 pass                      # keep the reader's own dict: no memo for this one
 
@@ -243,6 +328,10 @@ def install_df_memo(bm25):
             got = self._c
             need = [t for t in set(terms) if t not in got]
             loc = {}
+            if self._vh is not None and need:
+                miss = _vocab_absent(self._vh, need)
+                loc.update(dict.fromkeys([t for t, m in zip(need, miss) if m]))
+                need = [t for t, m in zip(need, miss) if not m]
             for i in range(0, len(need), 900):
                 part = need[i:i + 900]
                 loc.update(dict.fromkeys(part))
