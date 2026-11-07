@@ -4431,7 +4431,7 @@ def _recall_body(query, n=8):
               "brain.py verify-attachments." % (len(attachment_failures),
                                          ", ".join("%s (%s)" % f for f in attachment_failures[:12])))
         # The seeds above were drawn before the bundles were verified, and spread_recall's BM25 arm reads the published
-        # index, which can still hold a failed bundle's text (B02-R23 below). A failed parent keeps only the seed its own
+        # index, which can still hold a failed bundle's text (below). A failed parent keeps only the seed its own
         # index line or file name earns, by spread_recall's overlap rule; a policy or pinned seed stays as it was given.
         _own_words = sr._distinctive_words(words) if len(words) >= 2 else []
         for _slug in sorted({s for s, _e in attachment_failures}):
