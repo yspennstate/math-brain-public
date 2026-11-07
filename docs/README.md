@@ -31,6 +31,7 @@ The pages in this folder, grouped by what you came to do.
 
 | page | what it covers |
 |---|---|
+| [setup-with-brain-framework.md](setup-with-brain-framework.md) | installing the brain framework and joining it to this store: the hook settings, the recall habit, writing back, the dream; questions asked during a setup are answered in [setup-questions-2026-11/](setup-questions-2026-11/) |
 | [../framework/hooks/README.md](../framework/hooks/README.md) | the hook templates, the wake ritual at session start and how the bootstrap installs them |
 | [../framework/docs/NOTES_ARE_HINTS.md](../framework/docs/NOTES_ARE_HINTS.md) | why a served note is a hint and not a verdict, and the one line of confidence each note carries |
 | [../framework/docs/mistake-first-recall.md](../framework/docs/mistake-first-recall.md) | ranking the records of past mistakes ahead of ordinary notes when a prompt comes near them |

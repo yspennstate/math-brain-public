@@ -39,6 +39,18 @@ Then, in this order:
 3. **Run the nightly dream** that files, links and consolidates the day's records: [framework/dreaming/README.md](framework/dreaming/README.md).
 4. **For a brain in another field**, start from [examples/field_brain_starter/](examples/field_brain_starter/) and follow [docs/brain-in-an-afternoon.md](docs/brain-in-an-afternoon.md).
 
+## Running it on the brain framework
+
+The memory, hooks, dream and coordination machinery this store runs on is published on its
+own at [brain-framework-public](https://github.com/yspennstate/brain-framework-public). The
+`framework/` folder here is a copy of it at the export date; install from the framework
+repository, which is kept current. [docs/setup-with-brain-framework.md](docs/setup-with-brain-framework.md)
+gives the steps that join the two: install the framework, build the store, set
+`MATHBRAIN_STORE` and `MATHBRAIN_BUILD_SRC` so the framework's math hook finds it, and teach
+the agent the recall workflow. The framework's `docs/MACOS_INSTALL.md` covers a Mac.
+Answers to questions people have asked while setting up are in
+[docs/setup-questions-2026-11/](docs/setup-questions-2026-11/).
+
 ## The tests
 
 There isn't one test behind this brain. The table has twelve paired agent tests, the largest asking 2,000 questions about files in git repositories, and there are more without agents on ranking, silence and speed. Some came out for the brain by a wide margin, some by a little, and two did not. When the answer has to be recalled, or the agent is on a clock, the brain wins by a lot. When an agent has the files, enough time and a question it can grep for, the lead is small. And a memory an agent doesn't call does nothing for it. Runs where the machine was over capacity and agents could not finish are left out, whichever way they went; [TESTS.md](TESTS.md) says which, and how the 2,000-question rounds were regraded.
