@@ -130,7 +130,15 @@ def ranked(query, allowed=None, lex_top=(), depth=200, d=None):
             S[g.id.get("mem:" + sl, g.mem_nodes[sl][0]), 0] += sc * share
     if S.sum() <= 0:
         return []
-    R = g.ppr(S)
+    # 16 walk steps, not the cache's 20 (residual 0.7^16 = 3e-3): the served recall answers were the same, word for
+    # word, on all 22 seed questions at 16 and at 14, the 200-deep graph list the same on 10 of 13 walks with the
+    # same memories on all 13; ppr median 175 -> 154 ms. Set here, never in the dial: the iteration count is part
+    # of the walk cache's name. BRAIN_PPR_ITERS=20 restores the old walk.
+    try:
+        iters = int(os.environ.get("BRAIN_PPR_ITERS", "16"))
+    except ValueError:
+        iters = 16
+    R = g.ppr(S, iters=iters)
     return g.ranked_memories(R, gamma=d["gamma"], allowed=allowed, depth=depth, with_scores=True)[0]
 
 
@@ -233,12 +241,44 @@ class _LazyLinks:
         self.db.close()
 
 
+# Lever 9: a long-lived process (brain_recall_server sets this on) keeps the neighbour lists the lazy walk has read,
+# keyed by the sidecar's generation (file id, size, write time, SQLite change counter). The key is taken AFTER this
+# call's read transaction holds its shared lock, so no writer can commit between the key and the reads (the
+# sidecar runs in rollback-journal mode); lists read under one key come from one version of the file. A rewrite
+# makes a new key and the walk starts empty again. Off by default: a one-shot process runs exactly the old code.
+LAZY_RESIDENT = False
+_LAZY_RES = {}
+
+
 def _link_ranked_lazy(lex_top, n_seeds, alpha, eps, depth):
     path = os.environ.get("BRAIN_GRAPH_SIDECAR", "").strip() or os.path.join(LIVE, "sidecar.sqlite")
     if not os.path.exists(path):
         return []
     g = _LazyLinks(path)
+    gen = None
+    if LAZY_RESIDENT:
+        try:
+            g.db.execute("SELECT rowid FROM link LIMIT 1").fetchall()  # take the shared lock first
+            gen = _generation(path)
+            if gen[4] is None:   # not a readable SQLite header: no safe key
+                gen = None
+            elif str(g.db.execute("PRAGMA journal_mode").fetchone()[0]).lower() == "wal":
+                gen = None       # in WAL mode commits move neither the counter nor the file: no safe key
+            elif gen in _LAZY_RES:
+                g.nbr, g.out = _LAZY_RES[gen]
+        except Exception:
+            gen = None
     try:
+        out = _walk_lazy(g, lex_top, n_seeds, alpha, eps, depth)
+        if gen is not None and gen not in _LAZY_RES:
+            _keep(_LAZY_RES, gen, (g.nbr, g.out), 1)
+        return out
+    finally:
+        g.close()
+
+
+def _walk_lazy(g, lex_top, n_seeds, alpha, eps, depth):
+    if True:
         g.prefetch([sl for sl, _ in list(lex_top)[:n_seeds]])
         seeds = {sl: max(sc, 0.0) for sl, sc in list(lex_top)[:n_seeds] if g.get(sl)}
         tot = sum(seeds.values())
@@ -267,8 +307,6 @@ def _link_ranked_lazy(lex_top, n_seeds, alpha, eps, depth):
                 if before <= eps * max(g.outw(v), 1.0) < r[v]:
                     todo.append(v)
         return sorted(p.items(), key=lambda kv: -kv[1])[:depth]
-    finally:
-        g.close()
 
 
 def link_ranked(lex_top, n_seeds=10, alpha=0.5, eps=1e-4, depth=200):
