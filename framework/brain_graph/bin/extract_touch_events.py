@@ -25,7 +25,7 @@ Classes follow brain_graph/NODE_CLASSES.md where the transcripts carry them:
   reflex    a_scar_slug                                          a reflex that fired (its scar memory)
   hook      unconscious, slow-sense, math-brain ...              a hook that spoke (its tag)
   state     commit_high, renders_not_pooled ...                  a machine state the slow-sense probe named
-  ask       T-20260926-005                                       one of his checklist asks, named in a command or hook
+  ask       T-YYYYMMDD-NNN                                       one of the partner's checklist asks, named in a command or hook
   err       Bash:git:exit128, Edit:not_found ...                 a tool call that failed, by class
   verdict   correction, praise, repeat                           his reaction, read from his prompt's words
   kw        word                                                 a word of his prompt

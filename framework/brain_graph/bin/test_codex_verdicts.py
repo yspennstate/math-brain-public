@@ -112,7 +112,7 @@ class CodexVerdicts(unittest.TestCase):
     def test_1_to_6(self):
         self.ledger([
             self.row("2026-09-20T13:55:11", "01a0be54-107"),
-            self.row("2026-09-20T14:00:00", "825b1305-b79", source="hook"),
+            self.row("2026-09-20T14:00:00", "5e550001-b79", source="hook"),
             self.row("2026-09-20T14:05:00", "01a0be55-107", origin="automation"),
             self.row("2026-09-20T14:10:00", "01a0be56-107", text=WRONG + " " + ("x" * 4000), source="backfill-codex"),
             self.row("2026-09-20T14:15:00", "01a0be57-107", text="open the report for me in chrome please"),
