@@ -25,7 +25,7 @@ You need Python 3.11 or newer; macOS ships 3.9 as `/usr/bin/python3`, so install
 
 On Windows the sparse checkout above works as it is. A full checkout does not: a few paths under `papers/` are longer than 260 characters and git stops with "Filename too long". Before `git sparse-checkout disable`, run `git config core.longpaths true` in the clone, or clone with `git clone -c core.longpaths=true ...`.
 
-The repository has a small brain of its own as well. [navigation/](navigation/) holds one card for every file outside `results/` and `papers/`, one for each directory and README section, and a few concept cards, about 1,700 in all, joined by about 3,400 links. It answers "where is X and what do I open to use it" without walking the tree:
+The repository has a small brain of its own as well. [navigation/](navigation/) holds one card for every file outside `results/` and `papers/`, one for each directory and README section, and a few concept cards, about 2,100 in all, joined by about 3,300 links. It answers "where is X and what do I open to use it" without walking the tree:
 
 ```bash
 python navigation/nav_query.py --entry
