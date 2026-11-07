@@ -75,9 +75,40 @@ PER_CALL_ENV = () if os.environ.get("BRS_PER_CALL_ENV", "1") == "0" else (
 CLIENT_ONLY_ENV = ("BRAIN_RECALL_SERVER",)   # read by brain_recall_client, never by brain.py
 
 
+# Decline only on BRAIN_ names some .py in the dreaming tree actually names. A variable a test harness sets and no
+# brain code reads used to send every call it rode on down the cold path for nothing (73 of 6,272 calls in two days
+# of live use). No brain code builds a BRAIN_ name at run time, so a literal scan is the whole read set. Read once
+# per server life; a code change restarts the server, so a new name is picked up with the code that reads it.
+# Comments are stripped before the scan, so a name mentioned only in a comment does not count.
+# BRS_ENV_READ_ONLY=0 restores the old rule (every BRAIN_ name counts).
+_READ_NAMES = None
+
+
+def _read_names():
+    global _READ_NAMES
+    if _READ_NAMES is None:
+        import re
+        names = set()
+        pat = re.compile(r"BRAIN_[A-Z0-9_]*[A-Z0-9]")
+        comment = re.compile(r"(?m)(^|\s)#.*$")
+        for root, dirs, files in os.walk(D):
+            dirs[:] = [d for d in dirs if not d.startswith((".", "__"))]
+            for fn in files:
+                if fn.endswith(".py"):
+                    try:
+                        with open(os.path.join(root, fn), encoding="utf-8", errors="replace") as fh:
+                            names.update(pat.findall(comment.sub("", fh.read())))
+                    except OSError:
+                        pass
+        _READ_NAMES = frozenset(names)
+    return _READ_NAMES
+
+
 def brain_env(env):
+    keep = None if os.environ.get("BRS_ENV_READ_ONLY", "1") == "0" else _read_names()
     return {k: v for k, v in env.items()
-            if k.startswith("BRAIN_") and k not in PER_CALL_ENV and k not in CLIENT_ONLY_ENV}
+            if k.startswith("BRAIN_") and k not in PER_CALL_ENV and k not in CLIENT_ONLY_ENV
+            and (keep is None or k in keep)}
 
 
 def rss_bytes():

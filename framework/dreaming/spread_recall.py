@@ -927,6 +927,7 @@ class _RunIndex:
 
 
 _RUNIDX = {"calls": 0}
+_SLUG_REUSE = {}
 _RUNIDX_LOCK = threading.Lock()
 
 
@@ -994,7 +995,17 @@ def _seeds_from_prompt(words, idx, skip_records=False):
         names = _mem_names() if len(long_words) >= 2 else ()
         pairs = None
         if names and _runindex_ok("names", long_words):
-            slugs = [fn[:-3] for fn in names if fn.endswith(".md")]
+            # The resident server hands back the SAME held list object while the folder is unchanged; new slug
+            # strings every call made RunIndex.sync compare ~53k strings by content against the held ones, paging
+            # them in (sync was 22% of slow-call samples). The slug list is reused while `names` is the same object
+            # (held here, so its id cannot be recycled); any other list, e.g. a fresh listing, builds as before.
+            # Off: BRAIN_SEED_SLUG_REUSE=0.
+            c = _SLUG_REUSE.get("v")
+            if c is not None and c[0] is names and os.environ.get("BRAIN_SEED_SLUG_REUSE", "1") != "0":
+                slugs = c[1]
+            else:
+                slugs = [fn[:-3] for fn in names if fn.endswith(".md")]
+                _SLUG_REUSE["v"] = (names, slugs)
             pairs = _runindex_hits("names", slugs, slugs, long_words)
         if pairs is not None:
             for slug, overlap in pairs:
