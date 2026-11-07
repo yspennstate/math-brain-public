@@ -6,7 +6,7 @@ Consume the NEW A012 v6 full eight-row and affine-rank3 pure-child increment, th
 
 ## sources actually read, revisions and theorem locators
 
-Current BOARD2026-10-23 02:23UTC and B03 lead v2; own STATUS and stage17 proof/report; execution protocol revision2026-10-11-execution-v2 read in full. A012 stage18 DERIVATION Sections1-7, REPORT and continuum/verify/fixtures code read directly, plus source CLAIMS/PROGRESS and exact outputs for version pins. Campaign/paper intake from earlier stages is inherited, not presented as a fresh complete reading. One read-only math recall returned neighboring unrelated/FEI controls, used as no proof premise. SOURCE_RECEIPTS pins all primary inputs actually used. The current owner deadline23Oct14:49UTC supersedes older campaign snapshots. Brain wake warns of stale owner-model88.8h and state-of-mind73.4h; neither is a mathematical premise. Checklist working T-20261023-151 failed on a lock.
+Current BOARD2026-10-23 02:23UTC and B03 lead v2; own STATUS and stage17 proof/report; execution protocol revision2026-10-11-execution-v2 read in full. A012 stage18 DERIVATION Sections1-7, REPORT and continuum/verify/fixtures code read directly, plus source CLAIMS/PROGRESS and exact outputs for version pins. Campaign/paper intake from earlier stages is inherited, not presented as a fresh complete reading. One read-only math recall returned neighboring unrelated/FEI controls, used as no proof premise. SOURCE_RECEIPTS pins all primary inputs actually used. The current owner deadline23Oct14:49UTC supersedes older campaign snapshots. Brain wake warns of stale owner-model88.8h and state-of-mind73.4h; neither is a mathematical premise. Checklist working task failed on a lock.
 
 ## complete derivation or exact first unsupported line
 

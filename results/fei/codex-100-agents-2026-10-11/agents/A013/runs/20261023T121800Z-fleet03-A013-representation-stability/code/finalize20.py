@@ -74,7 +74,7 @@ A012's half-profile transaction is independently reconstructed at checkpoint sco
 
 ## actual persistence receipts or precise save blocker
 
-All four protocol files, DERIVATION, three frozen specs, code, exact outputs, source snapshot and next-target data are saved ONLY in A013. STATUS has2 lines; WORKLOG/LEARNED append dated facts. FINAL_VALIDATION checks schema keys, statement hashes, identical progress/packet copies, artifact hashes and<20MB files. Supervisor/GitHub copy unobserved; campaign supervisor owns publication. Initial checklist working T-20261023-434 failed with shared lock held too long; final attempt receipt is recorded separately. Nothing was stopped to free resources. All our mathematical jobs end with their commands. Brain self-care remains degraded/unverified: model98.7h, state-of-mind83.3h and dream34h stale at wake; owner context is affected and is not a mathematical premise.
+All four protocol files, DERIVATION, three frozen specs, code, exact outputs, source snapshot and next-target data are saved ONLY in A013. STATUS has2 lines; WORKLOG/LEARNED append dated facts. FINAL_VALIDATION checks schema keys, statement hashes, identical progress/packet copies, artifact hashes and<20MB files. Supervisor/GitHub copy unobserved; campaign supervisor owns publication. Initial checklist working task failed with shared lock held too long; final attempt receipt is recorded separately. Nothing was stopped to free resources. All our mathematical jobs end with their commands. Brain self-care remains degraded/unverified: model98.7h, state-of-mind83.3h and dream34h stale at wake; owner context is affected and is not a mathematical premise.
 
 ## Universal bridge
 

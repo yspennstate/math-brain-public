@@ -18,10 +18,10 @@ s=s.replace('This is a scope audit, not a new refutation of A026@6.', 'The A026@
 s=s.replace("This extends, rather than repeats, A029's calibrated-carrier reduction by following the actual erasures and arbitrary physical interleavings.","The following identities refine A029's calibrated-carrier reduction by following the actual erasures and arbitrary physical interleavings.")
 s=s.replace('not just the examples below.', 'including the examples below.')
 p.write_text(s,encoding='utf-8',newline='\n')
-result=subprocess.run([sys.executable,'-X','utf8',r'task_checklist_hook.py','done','T-20261027-027',
+result=subprocess.run([sys.executable,'-X','utf8',r'task_checklist_hook.py','done','task',
  'A026 stage22 saved:89325 exact checks, calibrated-floor review and root-versus-hereditary carrier ledger; FEI OPEN.'],
  capture_output=True,text=True,encoding='utf-8',errors='replace',creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
-write(R/'out/CHECKLIST_RECEIPT.json',{'task_id':'T-20261027-027','exit_code':result.returncode,'stdout':result.stdout,'stderr':result.stderr,'scope':'Stage artifact complete; full FEI remains OPEN; seen flag untouched.'})
+write(R/'out/CHECKLIST_RECEIPT.json',{'task_id':'task','exit_code':result.returncode,'stdout':result.stdout,'stderr':result.stderr,'scope':'Stage artifact complete; full FEI remains OPEN; seen flag untouched.'})
 progress=read(R/'PROGRESS.json')
 progress['blockers']=[x for x in progress['blockers'] if not x.startswith('Lean and administrative')]
 progress['blockers'].append('Lean real-algebra check RUNTIME_UNVERIFIED after120.4s; no formal certification')

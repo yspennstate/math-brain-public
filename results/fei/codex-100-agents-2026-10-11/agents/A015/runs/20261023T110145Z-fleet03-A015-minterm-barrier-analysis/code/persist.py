@@ -38,7 +38,7 @@ progress={'protocol_revision':'2026-10-11-execution-v2','run_id':R.name,'stream'
  'claims_created_or_changed':[original['claim_id']+'@1: independent A015 review, statement unchanged',claim['claim_id']+'@1'],
  'source_artifacts':['REVIEW_A008.md','JOINT_DICTIONARY_CODE.md','FROZEN_SPEC.json','code/check.py','out/pilot.json','out/exact_checks.json','out/SOURCE_RECEIPTS.json','out/RECEIPTS.json'],
  'next_consumers':claim['next_consumers'],'next_action':next_action,'stagnant_substantive_attempts':0,
- 'blockers':['Universal joint-dictionary payment under physical overlap remains unsupported; full FEI OPEN','New bounded disjoint-code proof and prior supplied-reference transport await independent review; no unlimited-composition closure','Brain self-care degraded/unverified: owner-model97.5h, state-of-mind82.1h, dream32.8h stale; personal-context freshness affected','Supervisor owns copying and registry adoption; remote persistence unverified','Checklist T-20261023-356 done attempt exited1: shared checklist lock held too long; research artifacts are complete, workflow closure unverified'],'packet_ids':['A015']}
+ 'blockers':['Universal joint-dictionary payment under physical overlap remains unsupported; full FEI OPEN','New bounded disjoint-code proof and prior supplied-reference transport await independent review; no unlimited-composition closure','Brain self-care degraded/unverified: owner-model97.5h, state-of-mind82.1h, dream32.8h stale; personal-context freshness affected','Supervisor owns copying and registry adoption; remote persistence unverified','Checklist task done attempt exited1: shared checklist lock held too long; research artifacts are complete, workflow closure unverified'],'packet_ids':['A015']}
 dump(R/'PROGRESS.json',progress);dump(R/'PACKET_DELTA.json',progress)
 report=f'''# A015 stage9: pay the shared clause dictionary once
 
@@ -186,7 +186,7 @@ hash, helper hash, exact case counts, sizes and all saved receipt hashes.
 out/RECEIPTS.json excludes itself and covers all other stage files and
 rolling files. No save blocker. Supervisor-owned copying, mirror verification
 and downstream adoption remain unverified; no git/mail/brain writes.
-Checklist T-20261023-356 closure was attempted after artifact verification,
+Checklist task closure was attempted after artifact verification,
 but exited1 with shared checklist lock held too long. Its workflow status
 remains unverified; no lock was removed and no other agent was interrupted.
 Brain self-care is degraded/unverified: owner-model97.5h, state-of-mind82.1h

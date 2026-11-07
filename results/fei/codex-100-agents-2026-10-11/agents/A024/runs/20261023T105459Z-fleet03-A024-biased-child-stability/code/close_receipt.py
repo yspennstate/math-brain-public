@@ -6,8 +6,8 @@ def read(p):return p.read_bytes().decode('utf-8')
 def write(p,s):p.write_bytes(s.encode('utf-8'))
 def js(p,v):write(p,json.dumps(v,indent=2)+'\n')
 def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
-note=('Checklist closure blocked by shared lock: T-20261023-183 and '
-      'T-20261023-339 timed out; serial retry of current T-20261023-339 also '
+note=('Checklist closure blocked by shared lock: task and '
+      'task timed out; serial retry of current task also '
       'timed out. No shared lock altered.')
 stamp=datetime.datetime.now(datetime.timezone.utc).isoformat()
 # Inspect the actual text and exact insertion anchor before any mutation.
@@ -18,7 +18,7 @@ notes=json.loads(read(run/'out/EXECUTION_NOTES.json'))
 progress=json.loads(read(run/'PROGRESS.json'))
 assert progress==json.loads(read(run/'PACKET_DELTA.json'))
 notes['checklist_closure']={'status':'BLOCKED_SHARED_LOCK','attempts':3,
- 'current_task':'T-20261023-339','detail':note}
+ 'current_task':'task','detail':note}
 notes['local_receipt_recovery']='Inline mutation rejected before execution by verbatim-surgery acknowledgement gate; replaced by this file-based byte-preserving writer with checked anchor.'
 if note not in progress['blockers']:progress['blockers'].append(note)
 if 'Lifecycle receipt: '+note not in report:

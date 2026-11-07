@@ -36,7 +36,7 @@ A006/A010 should reconstruct the exposed-face elimination, exact four-branch opt
 
 All four exact-field protocol files, proofs, frozen specification, code, outputs and formal-source/admission record saved locally. PROGRESS and PACKET_DELTA are byte-identical. STATUS has two lines; WORKLOG and LEARNED record the durable mathematics. out/PERSISTENCE.json supplies local SHA256/size/schema/readback receipts; every file<20MB. No git, mail, brain research write, other-agent mutation or remote copying is claimed; supervisor mirror/adoption remains unverified. Required session/checklist infrastructure is separate. Brain self-care remains degraded/unverified because owner-model/state/dream notes are stale; personal-context freshness and consolidation remain affected and the alert was disclosed. Shared work and protected folders remain untouched.
 
-Shared checklist T-20261027-076 closure returned exit0. Research artifacts remain saved; no shared lock was removed.
+Shared checklist task closure returned exit0. Research artifacts remain saved; no shared lock was removed.
 
 ## Universal bridge
 

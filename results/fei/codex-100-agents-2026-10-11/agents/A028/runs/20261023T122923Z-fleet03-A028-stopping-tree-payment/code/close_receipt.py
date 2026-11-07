@@ -3,7 +3,7 @@ from pathlib import Path
 import json,hashlib,datetime
 R=Path(__file__).resolve().parents[1];A=R.parents[1]
 def dump(p,x):p.write_text(json.dumps(x,indent=2)+'\n',encoding='utf-8',newline='')
-msg='External completion checklist T-20261023-446 could not close: RuntimeError(checklist lock held too long). No shared lock was removed or modified; local research package is complete.'
+msg='External completion checklist task could not close: RuntimeError(checklist lock held too long). No shared lock was removed or modified; local research package is complete.'
 dump(R/'out/completion_receipt.json',dict(status='BLOCKED_EXTERNAL_CHECKLIST_LOCK',message=msg,mathematical_outputs='ALL_PASS',local_save='COMPLETE',left_running='none',timestamp_utc=datetime.datetime.now(datetime.timezone.utc).isoformat()))
 p=json.loads((R/'PROGRESS.json').read_text(encoding='utf-8'))
 if msg not in p['blockers']:p['blockers'].append(msg)

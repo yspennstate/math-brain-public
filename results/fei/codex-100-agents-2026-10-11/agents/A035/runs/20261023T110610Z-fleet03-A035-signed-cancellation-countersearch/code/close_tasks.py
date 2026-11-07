@@ -3,7 +3,7 @@ import sys,json,runpy,hashlib
 R=Path(__file__).resolve().parents[1];A=R.parents[1]
 state=Path('~/<private-repo>/12_cognitive_architecture/task_checklist/state.json')
 hook=Path('task_checklist_hook.py')
-requests=[('T-20261023-067','20261022T232027Z-fleet03-A035-signed-cancellation-countersearch','A035 second prescribed reset and source review saved; exact certificates complete; FEI open'),('T-20261023-207','20261023T041335Z-fleet03-A035-signed-cancellation-countersearch','A035 complete reference-cycle theorem and positive local Boolean charge saved; FEI open'),('T-20261023-360',R.name,'A035 all-query terminal-KL envelope, source review and exact controls saved;47868 main checks;1080 all-policy states; FEI open')]
+requests=[('task','20261022T232027Z-fleet03-A035-signed-cancellation-countersearch','A035 second prescribed reset and source review saved; exact certificates complete; FEI open'),('task','20261023T041335Z-fleet03-A035-signed-cancellation-countersearch','A035 complete reference-cycle theorem and positive local Boolean charge saved; FEI open'),('task',R.name,'A035 all-query terminal-KL envelope, source review and exact controls saved;47868 main checks;1080 all-policy states; FEI open')]
 def entries():return json.loads(state.read_text(encoding='utf-8'))['entries']
 receipt=[]
 for ident,run,result in requests:

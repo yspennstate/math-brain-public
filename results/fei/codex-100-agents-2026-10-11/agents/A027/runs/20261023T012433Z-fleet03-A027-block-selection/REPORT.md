@@ -62,7 +62,7 @@ Pay the first endpoint-band violation, where U_s becomes negative, from ONE docu
 
 ## actual persistence receipts or precise save blocker
 
-All four protocol products, full derivation, frozen specifications, code, exact outputs and formal-admission record are saved only inside A027. STATUS is exactly STATE/NEXT; WORKLOG and LEARNED append this stage. out/PERSISTENCE_RECEIPT checks exact claim/progress keys, statement SHA256s, byte-identical PROGRESS/PACKET_DELTA, all report fields and file sizes<20MB. Local persistence is verified; supervisor copying, canonical adoption and remote mirrors remain unobserved. Checklist T-20261023-127 is closed after final local validation.
+All four protocol products, full derivation, frozen specifications, code, exact outputs and formal-admission record are saved only inside A027. STATUS is exactly STATE/NEXT; WORKLOG and LEARNED append this stage. out/PERSISTENCE_RECEIPT checks exact claim/progress keys, statement SHA256s, byte-identical PROGRESS/PACKET_DELTA, all report fields and file sizes<20MB. Local persistence is verified; supervisor copying, canonical adoption and remote mirrors remain unobserved. Checklist task is closed after final local validation.
 
 ## Universal bridge
 

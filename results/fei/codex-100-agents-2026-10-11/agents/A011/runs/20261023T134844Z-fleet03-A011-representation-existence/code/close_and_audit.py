@@ -2,13 +2,13 @@ from pathlib import Path
 import json,hashlib,subprocess,datetime
 R=Path(__file__).resolve().parents[1]
 def save(p,x):p.write_text(json.dumps(x,indent=2)+'\n',encoding='utf-8',newline='')
-save(R/'out/CHECKLIST_INITIAL_FAILURE.json',{'action':'done T-20261023-514','exit_code':1,'error':"checklist: error: RuntimeError('checklist lock held too long')",'effect':'Protocol finalizer completed; original chained audit did not run; no shared lock or process touched.'})
-cmd=['python','-X','utf8','task_checklist_hook.py','done','T-20261023-514','A011 stage21 local proof/checks/artifacts complete: arbitrary physical policies in supplied-source finite-edit family;2576591 assertions PASS;independent review/full FEI open.']
+save(R/'out/CHECKLIST_INITIAL_FAILURE.json',{'action':'done task','exit_code':1,'error':"checklist: error: RuntimeError('checklist lock held too long')",'effect':'Protocol finalizer completed; original chained audit did not run; no shared lock or process touched.'})
+cmd=['python','-X','utf8','task_checklist_hook.py','done','task','A011 stage21 local proof/checks/artifacts complete: arbitrary physical policies in supplied-source finite-edit family;2576591 assertions PASS;independent review/full FEI open.']
 try:
  result=subprocess.run(cmd,capture_output=True,text=True,encoding='utf-8',timeout=65);code=result.returncode;stdout=result.stdout;stderr=result.stderr
 except subprocess.TimeoutExpired:
  code=-1;stdout='';stderr='Bounded checklist closure retry timed out; shared service not modified.'
-closure={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'entry':'T-20261023-514','status':'DONE' if code==0 else 'BLOCKED_SHARED_SERVICE','exit_code':code,'stdout':stdout,'stderr':stderr,'scope':'Only bookkeeping service status; all mathematical checks/local stage artifacts completed.'};save(R/'out/CHECKLIST_CLOSURE.json',closure)
+closure={'utc':datetime.datetime.now(datetime.timezone.utc).isoformat(),'entry':'task','status':'DONE' if code==0 else 'BLOCKED_SHARED_SERVICE','exit_code':code,'stdout':stdout,'stderr':stderr,'scope':'Only bookkeeping service status; all mathematical checks/local stage artifacts completed.'};save(R/'out/CHECKLIST_CLOSURE.json',closure)
 # Preserve all original receipt checks except two deliberate, named editorial changes.
 receiptpath=R/'out/ARTIFACT_RECEIPTS.json';receipt=json.loads(receiptpath.read_text(encoding='utf-8'));changed={'DERIVATION.md','code/audit.py'}
 for row in receipt['files']:

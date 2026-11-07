@@ -34,7 +34,7 @@ A013/A086/A094 reconstruct v8. At the saved third-shared-query frontier, transfe
 
 ## actual persistence receipts or precise save blocker
 
-All four protocol files, derivation, frozen specs, code and exact outputs are local in this run; rolling STATUS is two lines and WORKLOG/LEARNED receive dated entries. FINAL_VALIDATION checks exact schema keys, matching progress/packet copy, hashes and<20MB. Supervisor remote mirroring is UNOBSERVED and no git/brain write was performed. Checklist T-20261023-410 completion remains operationally BLOCKED: checklist: error: RuntimeError('checklist lock held too long'); local mathematical artifacts are complete. Exact command/output is in out/CHECKLIST_RECEIPT.json. Brain self-care is degraded/unverified: owner-model98.4h, state83.0h, latest dream33.7h stale at wake, affecting current owner context and personalization; not mathematical premises. All bounded math jobs have ended.
+All four protocol files, derivation, frozen specs, code and exact outputs are local in this run; rolling STATUS is two lines and WORKLOG/LEARNED receive dated entries. FINAL_VALIDATION checks exact schema keys, matching progress/packet copy, hashes and<20MB. Supervisor remote mirroring is UNOBSERVED and no git/brain write was performed. Checklist task completion remains operationally BLOCKED: checklist: error: RuntimeError('checklist lock held too long'); local mathematical artifacts are complete. Exact command/output is in out/CHECKLIST_RECEIPT.json. Brain self-care is degraded/unverified: owner-model98.4h, state83.0h, latest dream33.7h stale at wake, affecting current owner context and personalization; not mathematical premises. All bounded math jobs have ended.
 
 ## Universal bridge
 

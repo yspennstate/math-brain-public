@@ -30,7 +30,7 @@ Prove one both-private rank3 collision payment using genuinely unused inherited 
 
 ## actual persistence receipts or precise save blocker
 
-All four protocol files, DERIVATION, frozen specs, scripts and exact outputs are saved under this run; rolling STATUS/WORKLOG/LEARNED are updated only inside A012. SOURCE_RECEIPTS.json records file sizes and SHA256; local schema/coverage/hash checks are in FINAL_VALIDATION.json. No local file exceeds20MB. Supervisor copying is required by the packet workflow and has not been observed; no GitHub persistence is claimed. Checklist working T-20261023-121 failed with 'checklist lock held too long'; this does not block the local proof artifacts. Brain self-care remains degraded/unverified: owner-model87.6h and state-of-mind72.2h stale at wake, affecting personalization/current owner context; explicit current FEI task files were used. No new background job is left running and no existing work was stopped.
+All four protocol files, DERIVATION, frozen specs, scripts and exact outputs are saved under this run; rolling STATUS/WORKLOG/LEARNED are updated only inside A012. SOURCE_RECEIPTS.json records file sizes and SHA256; local schema/coverage/hash checks are in FINAL_VALIDATION.json. No local file exceeds20MB. Supervisor copying is required by the packet workflow and has not been observed; no GitHub persistence is claimed. Checklist working task failed with 'checklist lock held too long'; this does not block the local proof artifacts. Brain self-care remains degraded/unverified: owner-model87.6h and state-of-mind72.2h stale at wake, affecting personalization/current owner context; explicit current FEI task files were used. No new background job is left running and no existing work was stopped.
 
 ## Universal bridge
 

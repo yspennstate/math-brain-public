@@ -83,8 +83,8 @@ for c in read(RUN/'CLAIMS.json'):
 text=(RUN/'REPORT.md').read_text(encoding='utf-8')
 assert re.findall(r'^# (.+)$',text,re.M)==headings and text.strip().split('\n\n')[-1].startswith('**Universal bridge:**')
 assert len((ROOT/'STATUS.md').read_text(encoding='utf-8').splitlines())==2
-admin=subprocess.run([sys.executable,'-X','utf8',r'task_checklist_hook.py','done','T-20261023-378',f'A001 stage saved: same-bank quarter frontier retains>13Ig/32; {count} exact checks; SOURCE(C) iff FEI; new review pending, full FEI OPEN.'],capture_output=True,text=True,timeout=45,creationflags=subprocess.CREATE_NO_WINDOW)
-dump(RUN/'out/ADMIN_STATUS.json',{'task_id':'T-20261023-378','returncode':admin.returncode,'stdout':admin.stdout,'stderr':admin.stderr,'research_brain_write':False})
+admin=subprocess.run([sys.executable,'-X','utf8',r'task_checklist_hook.py','done','task',f'A001 stage saved: same-bank quarter frontier retains>13Ig/32; {count} exact checks; SOURCE(C) iff FEI; new review pending, full FEI OPEN.'],capture_output=True,text=True,timeout=45,creationflags=subprocess.CREATE_NO_WINDOW)
+dump(RUN/'out/ADMIN_STATUS.json',{'task_id':'task','returncode':admin.returncode,'stdout':admin.stdout,'stderr':admin.stderr,'research_brain_write':False})
 files=[]
 for p in sorted(RUN.rglob('*')):
  if not p.is_file() or p.name=='PERSISTENCE_RECEIPT.json':continue

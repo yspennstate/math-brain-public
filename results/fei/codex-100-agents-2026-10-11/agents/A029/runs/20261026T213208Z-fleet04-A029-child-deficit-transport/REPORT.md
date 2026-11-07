@@ -34,7 +34,7 @@ A028/A026/A094 reconstruct the KL chord, true-versus-reference calibration disti
 
 All four protocol files, full proof/reviews, three frozen specs, scripts, exact outputs and source receipts are saved only in A029's run. Rolling STATUS is two lines; WORKLOG/LEARNED append dated findings. This finalizer checks exact protocol fields, statement hash, PASS results, compatibility-copy equality and all file sizes<20MB, then saves out/PERSISTENCE.json with local hashes. Supervisor copying, remote mirroring, canonical adoption and independent review remain unverified. Brain wake was degraded and explicitly reported. No git, mail, brain research writes, other-agent changes, deletion or protected-path action occurred. Lifecycle tooling is administrative only; no shared lock was altered.
 
-Administrative closure addendum: the prescribed done call returned exit1, `checklist: no entry T-20261026-042`, despite the earlier working call exiting0. out/CHECKLIST_RECEIPT.json preserves that result. Local research completion is unaffected; shared task metadata remains unverified and no lock or ledger was altered.
+Administrative closure addendum: the prescribed done call returned exit1, `checklist: no entry task`, despite the earlier working call exiting0. out/CHECKLIST_RECEIPT.json preserves that result. Local research completion is unaffected; shared task metadata remains unverified and no lock or ledger was altered.
 
 ## Universal bridge
 

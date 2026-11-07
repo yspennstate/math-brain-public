@@ -89,7 +89,7 @@ Insert one actual point-controller exposure between the saved ancestor core refu
 
 ## actual persistence receipts or precise save blocker
 
-All four protocol products, derivation, frozen specs, code and outputs are saved only inside A027. STATUS has exactly STATE/NEXT; WORKLOG and LEARNED append this stage. out/PERSISTENCE_RECEIPT verifies the exact protocol keys, statement hashes, identical PROGRESS/PACKET_DELTA, report fields and file sizes. Local artifacts are complete. Supervisor copying, remote persistence and independent acceptance remain unverified. Checklist entry T-20261022-010 is closed only after this local validation.
+All four protocol products, derivation, frozen specs, code and outputs are saved only inside A027. STATUS has exactly STATE/NEXT; WORKLOG and LEARNED append this stage. out/PERSISTENCE_RECEIPT verifies the exact protocol keys, statement hashes, identical PROGRESS/PACKET_DELTA, report fields and file sizes. Local artifacts are complete. Supervisor copying, remote persistence and independent acceptance remain unverified. Checklist entry task is closed only after this local validation.
 
 ## Universal bridge
 

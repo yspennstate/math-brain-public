@@ -16,7 +16,7 @@ for c in claims:
  assert hashlib.sha256(c['exact_statement'].encode('utf-8')).hexdigest()==c['statement_sha256']
  assert sha(Path(c['proof_source']['path']))==c['proof_source']['sha256']
 receipts=[]
-for task,result in [('T-20261023-098','Stage18 saved and verified earlier: all-L nonfair third reset;7337+502 exact checks; full FEI open.'),('T-20261023-223','Stage19 saved and schema/hash verified: SAME original C2 spare>7/8; ALL adaptive private histories then retained-a/Fair_c leave>1/8;33385 checks; A035 scoped cycle review HOLDS; full FEI open.')]:
+for task,result in [('task','Stage18 saved and verified earlier: all-L nonfair third reset;7337+502 exact checks; full FEI open.'),('task','Stage19 saved and schema/hash verified: SAME original C2 spare>7/8; ALL adaptive private histories then retained-a/Fair_c leave>1/8;33385 checks; A035 scoped cycle review HOLDS; full FEI open.')]:
  try:
   done=subprocess.run([sys.executable,'-X','utf8','task_checklist_hook.py','done',task,result],capture_output=True,text=True,encoding='utf-8',errors='replace',timeout=55,creationflags=0x08000000)
   receipts.append({'task':task,'exit_code':done.returncode,'stdout':done.stdout[-4000:],'stderr':done.stderr[-4000:]})

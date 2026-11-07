@@ -2,7 +2,7 @@ from pathlib import Path
 import json, sys, runpy, datetime
 R=Path(__file__).resolve().parents[1]
 A=R.parents[1]
-identifier='T-20261023-417'
+identifier='task'
 statepath=Path('~/<private-repo>/12_cognitive_architecture/task_checklist/state.json')
 data=json.loads(statepath.read_text(encoding='utf-8-sig'))
 matches=[]

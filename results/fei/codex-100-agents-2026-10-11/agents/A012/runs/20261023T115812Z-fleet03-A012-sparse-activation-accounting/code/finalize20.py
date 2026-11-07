@@ -47,7 +47,7 @@ progress={
  'claim_versions_used':claim['proof_dependencies'],'claims_created_or_changed':[{'claim_id':claim['claim_id'],'version':8,'change':'same-packet refinement; pays prescribed conditional profile handoff and exposes next reference-independent bookkeeping floor'}],
  'source_artifacts':[str(SRC/'out/NEXT_TARGET.json'),str(A13/'REPORT.md'),str(A13/'DERIVATION.md'),str(R/'DERIVATION.md'),str(R/'out/PARTIAL.json'),str(R/'out/REPLAY.json')],
  'next_consumers':consumers,'next_action':next_action,'stagnant_substantive_attempts':0,
- 'blockers':['universal original-source booking transfer at the next physical query is not proved; arbitrary common quotient/cover existence and full FEI remain OPEN','new v8 independent-agent acceptance pending; supervisor mirror verification unobserved','checklist T-20261023-410 working update failed: checklist lock held too long; completion receipt will be recorded separately','brain self-care degraded/unverified: owner model98.4h, state83.0h, latest dream33.7h stale at wake; current owner context/personalization affected'],
+ 'blockers':['universal original-source booking transfer at the next physical query is not proved; arbitrary common quotient/cover existence and full FEI remain OPEN','new v8 independent-agent acceptance pending; supervisor mirror verification unobserved','checklist task working update failed: checklist lock held too long; completion receipt will be recorded separately','brain self-care degraded/unverified: owner model98.4h, state83.0h, latest dream33.7h stale at wake; current owner context/personalization affected'],
  'packet_ids':['A012']}
 write(R/'PROGRESS.json',progress);write(R/'PACKET_DELTA.json',progress)
 report=f'''# A012 stage20: paid partial-profile handoff
@@ -86,7 +86,7 @@ Consumes A013-SCOPED-REVIEW-A012-V7@1 at its stated NEW-increment scope and A013
 
 ## actual persistence receipts or precise save blocker
 
-All four protocol files, derivation, frozen specs, code and exact outputs are local in this run; rolling STATUS is two lines and WORKLOG/LEARNED receive dated entries. FINAL_VALIDATION checks exact schema keys, matching progress/packet copy, hashes and<20MB. Supervisor remote mirroring is UNOBSERVED and no git/brain write was performed. Checklist working T-20261023-410 failed with a shared lock; the final attempt receipt will be saved separately. Brain self-care is degraded/unverified: owner-model98.4h, state83.0h, latest dream33.7h stale at wake, affecting current owner context and personalization; not mathematical premises. All bounded math jobs have ended.
+All four protocol files, derivation, frozen specs, code and exact outputs are local in this run; rolling STATUS is two lines and WORKLOG/LEARNED receive dated entries. FINAL_VALIDATION checks exact schema keys, matching progress/packet copy, hashes and<20MB. Supervisor remote mirroring is UNOBSERVED and no git/brain write was performed. Checklist working task failed with a shared lock; the final attempt receipt will be saved separately. Brain self-care is degraded/unverified: owner-model98.4h, state83.0h, latest dream33.7h stale at wake, affecting current owner context and personalization; not mathematical premises. All bounded math jobs have ended.
 
 ## Universal bridge
 

@@ -34,7 +34,7 @@ A010/A008 should independently reconstruct the retuned full-law certificate, the
 
 Four exact-field protocol files, proofs, frozen specs, code and outputs saved locally. PROGRESS and PACKET_DELTA are byte-identical. STATUS has exactly two lines; WORKLOG and LEARNED updated. out/PERSISTENCE.json hashes all other stage artifacts and rolling files and records schema/readback checks. Every file<20MB. Research writes stay in A009. No git, mail, brain research write, external publish or supervisor-mirror receipt is claimed. Required wake/checklist infrastructure is separate from research output ownership. Wake reports stale personal model/state/dream notes; the conversational alert was delivered before reliance. Current compute was checked and other work left running; no resource-shedding action. No research job remains running after completion.
 
-Shared checklist closure T-20261026-038 was attempted and failed with `checklist lock held too long`. The research artifacts are saved; supervisor reconciliation of that administrative closure remains. No lock was removed.
+Shared checklist closure task was attempted and failed with `checklist lock held too long`. The research artifacts are saved; supervisor reconciliation of that administrative closure remains. No lock was removed.
 
 ## Universal bridge
 

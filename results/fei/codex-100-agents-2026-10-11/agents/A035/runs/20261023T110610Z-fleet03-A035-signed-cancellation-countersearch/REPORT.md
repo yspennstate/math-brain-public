@@ -28,7 +28,7 @@ Consume A033 all-finite-K fixed-supplier obstruction and A096/A097 zero-energy h
 
 All four protocol files, complete proof, review, frozen specs, exact outputs and controls are local. Rolling STATUS/WORKLOG/LEARNED are current. SHA256 receipts and FINAL_CHECK validate actual readback, protocol keysets and file limits. Supervisor copy/mirror remains pending; no git or research brain write used. Brain wake WARN: owner model97.5h, state of mind82.1h and latest dream32.8h stale; personalization/continuity are degraded/unverified, and these notes are not mathematical premises. Did: proof, exact checks and scoped review. Stopped: nothing. Left running: no detached work.
 
-Task-system readback: T-20261023-067: done, T-20261023-207: open, T-20261023-360: open. Two completion updates (T-20261023-207 and T-20261023-360) were refused because the shared checklist lock was held too long; T-20261023-067 is verified done. These receipts are separate from mathematical acceptance.
+Task-system readback: task: done, task: open, task: open. Two completion updates (task and task) were refused because the shared checklist lock was held too long; task is verified done. These receipts are separate from mathematical acceptance.
 
 ## Universal bridge
 

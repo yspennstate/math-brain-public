@@ -4,8 +4,8 @@ import subprocess,sys,json,time
 R=Path(__file__).resolve().parents[1]
 checklist='~/<private-repo>/12_cognitive_architecture/task_checklist/checklist.py'
 count=json.loads((R/'out/EXACT_RESULTS.json').read_text(encoding='utf-8'))['assertions_final_outputs_once']
-cmd=[sys.executable,'-X','utf8',checklist,'done','T-20261023-410',f'A012 stage20 saved: paid partial-profile second query with FULL conversion, >1/128 bit;{count} checks; third-query flat-booking floor<-1/16;FEI open']
-receipt={'task_id':'T-20261023-410','command':cmd,'working_update':'FAILED earlier: checklist lock held too long','remote_mirror':'UNOBSERVED'}
+cmd=[sys.executable,'-X','utf8',checklist,'done','task',f'A012 stage20 saved: paid partial-profile second query with FULL conversion, >1/128 bit;{count} checks; third-query flat-booking floor<-1/16;FEI open']
+receipt={'task_id':'task','command':cmd,'working_update':'FAILED earlier: checklist lock held too long','remote_mirror':'UNOBSERVED'}
 try:
  v=subprocess.run(cmd,capture_output=True,text=True,encoding='utf-8',errors='replace',timeout=45,creationflags=getattr(subprocess,'CREATE_NO_WINDOW',0))
  receipt.update(returncode=v.returncode,stdout=v.stdout,stderr=v.stderr)
@@ -14,13 +14,13 @@ except subprocess.TimeoutExpired as e:
 def write(p,x):p.write_bytes((json.dumps(x,indent=2,ensure_ascii=False)+'\n').encode('utf-8'))
 write(R/'out/CHECKLIST_RECEIPT.json',receipt)
 ok=receipt['returncode']==0
-line=('Checklist T-20261023-410 completion exited0; working update had failed with shared lock.' if ok else 'Checklist T-20261023-410 completion remains operationally BLOCKED: '+receipt['stderr'].strip()+'; local mathematical artifacts are complete.')
+line=('Checklist task completion exited0; working update had failed with shared lock.' if ok else 'Checklist task completion remains operationally BLOCKED: '+receipt['stderr'].strip()+'; local mathematical artifacts are complete.')
 report=R/'REPORT.md'
 with report.open('r',encoding='utf-8',newline='') as f:s=f.read()
-s=s.replace('Checklist working T-20261023-410 failed with a shared lock; the final attempt receipt will be saved separately.',line+' Exact command/output is in out/CHECKLIST_RECEIPT.json.')
+s=s.replace('Checklist working task failed with a shared lock; the final attempt receipt will be saved separately.',line+' Exact command/output is in out/CHECKLIST_RECEIPT.json.')
 with report.open('w',encoding='utf-8',newline='') as f:f.write(s)
 p=json.loads((R/'PROGRESS.json').read_text(encoding='utf-8'))
-p['blockers']=[x for x in p['blockers'] if not x.startswith('checklist T-20261023-410')]
+p['blockers']=[x for x in p['blockers'] if not x.startswith('checklist task')]
 if not ok:p['blockers'].append(line)
 write(R/'PROGRESS.json',p);write(R/'PACKET_DELTA.json',p)
 for name in ('WORKLOG.md','LEARNED.md'):

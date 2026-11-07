@@ -35,7 +35,7 @@ for n in range(4):
 write('out/FINAL_AUDIT.json',{'status':'PASS','prior_hashed_files_verified':len(old['files']),'direct_character_sources':sources,'independent_padded_normalizer_witnesses':len(ws),'claim_hashes_checked':len(claims),'report_fields_checked':7,'proof_rung':'AUTHOR_PROOF_EXACT_FINITE_CHECKS; FULL_THEOREM_NOT_LEAN_CERTIFIED; INDEPENDENT_V6_REVIEW_PENDING','hardest_unpaid_line':'ORIGINAL arbitrary-core O(I) source; all-local-floor accumulated query KL remains unpaid.'})
 commands={
  'VOICE_CHECK':[sys.executable,'-B','-X','utf8',r'~\<private-repo>\12_cognitive_architecture\his_voice\tools\voice.py','check',str(R/'REPORT.md')],
- 'CHECKLIST_CLOSURE':[sys.executable,'-B','-X','utf8',r'task_checklist_hook.py','done','T-20261027-024','A011 stage22 artifacts saved: v5 query-KL correction, inherited/vacuum-compatible v6 repair,659213 exact assertions; FEI OPEN.']}
+ 'CHECKLIST_CLOSURE':[sys.executable,'-B','-X','utf8',r'task_checklist_hook.py','done','task','A011 stage22 artifacts saved: v5 query-KL correction, inherited/vacuum-compatible v6 repair,659213 exact assertions; FEI OPEN.']}
 results={}
 for name,cmd in commands.items():
  rr=subprocess.run(cmd,capture_output=True,text=True,encoding='utf-8',creationflags=subprocess.CREATE_NO_WINDOW)

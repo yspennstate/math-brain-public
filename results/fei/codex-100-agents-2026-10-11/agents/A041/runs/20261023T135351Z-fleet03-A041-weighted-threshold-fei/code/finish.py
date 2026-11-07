@@ -20,7 +20,7 @@ validation={'status':'PASS','old_manifest_files_verified':len(old),'claims':len(
 dump(O/'FINAL_VALIDATION.json',validation)
 hook='task_checklist_hook.py'
 receipts=[]
-for task,result in [('T-20261023-523','A041 stage saved: sharp joint singleton envelope and exact carry tradeoff; A045 full scoped review HOLDS;41372 checks PASS;prime Jhi/FEI open.'),('T-20261023-387','Prior A041 stage completed and saved: adaptive complete-reference bounds and exact certificates; full FEI remained open; subsequent stages preserved.')]:
+for task,result in [('task','A041 stage saved: sharp joint singleton envelope and exact carry tradeoff; A045 full scoped review HOLDS;41372 checks PASS;prime Jhi/FEI open.'),('task','Prior A041 stage completed and saved: adaptive complete-reference bounds and exact certificates; full FEI remained open; subsequent stages preserved.')]:
  p=subprocess.run([sys.executable,'-X','utf8',hook,'done',task,result],stdout=subprocess.PIPE,stderr=subprocess.STDOUT,text=True,encoding='utf-8',check=False)
  receipts.append({'task_id':task,'action':'done','returncode':p.returncode,'output':p.stdout[-5000:]})
  dump(O/'TASK_CHECKLIST.json',receipts)

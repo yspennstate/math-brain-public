@@ -144,7 +144,7 @@ hash, helper hash, exact case counts, sizes and all saved receipt hashes.
 out/RECEIPTS.json excludes itself and covers all other stage files and
 rolling files. No save blocker. Supervisor-owned copying, mirror verification
 and downstream adoption remain unverified; no git/mail/brain writes.
-Checklist T-20261023-356 closure was attempted after artifact verification,
+Checklist task closure was attempted after artifact verification,
 but exited1 with shared checklist lock held too long. Its workflow status
 remains unverified; no lock was removed and no other agent was interrupted.
 Brain self-care is degraded/unverified: owner-model97.5h, state-of-mind82.1h

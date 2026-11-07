@@ -23,7 +23,7 @@ for field in protocol['required_per_run']['report_fields']:assert '## '+field in
 assert text.strip().split('\n\n')[-1].startswith('Universal bridge:')
 assert 'does not bound the sum of positive resets alone' in text and 'Full FEI OPEN' in text
 closure=rd(R/'out/CHECKLIST_CLOSURE.json');closed=closure['status']=='DONE'
-closing='Checklist entry T-20261023-514 closed for this completed local stage.' if closed else 'Checklist entry T-20261023-514 closure remains blocked by the shared checklist service; the exact error is preserved in out/CHECKLIST_CLOSURE.json.'
+closing='Checklist entry task closed for this completed local stage.' if closed else 'Checklist entry task closure remains blocked by the shared checklist service; the exact error is preserved in out/CHECKLIST_CLOSURE.json.'
 report.write_text(text.rstrip()+' '+closing+' Full FEI and independent v5 review remain open.\n',encoding='utf-8',newline='')
 status=A/'STATUS.md';lines=status.read_text(encoding='utf-8').splitlines();assert len(lines)==2
 assert lines[0].startswith('STATE:') and lines[1].startswith('NEXT:')
@@ -32,7 +32,7 @@ status.write_text('\n'.join(lines)+'\n',encoding='utf-8',newline='')
 if not closed:
  p['blockers'].append('Shared checklist closure failed; mathematical stage and local files complete. See CHECKLIST_CLOSURE.json.')
  (R/'PROGRESS.json').write_text(json.dumps(p,indent=2)+'\n',encoding='utf-8',newline='');(R/'PACKET_DELTA.json').write_bytes((R/'PROGRESS.json').read_bytes())
-with (A/'WORKLOG.md').open('a',encoding='utf-8',newline='') as f:f.write('\nChecklist T-20261023-514 closure status:'+closure['status']+'; initial lock failure preserved. NEXT retained: independent v5 reconstruction and cancellation-aware source admission. Clarified that the exact cubic tail is for the normalized geometric majorant, not equality for arbitrary-width S_M. Final schema/hash audit passed.\n')
+with (A/'WORKLOG.md').open('a',encoding='utf-8',newline='') as f:f.write('\nChecklist task closure status:'+closure['status']+'; initial lock failure preserved. NEXT retained: independent v5 reconstruction and cancellation-aware source admission. Clarified that the exact cubic tail is for the normalized geometric majorant, not equality for arbitrary-width S_M. Final schema/hash audit passed.\n')
 out={'status':'PASS','verified_prior_receipts':len(receipts['files']),'claim_version':5,'statement_sha256':claim['statement_sha256'],'protocol_fields_exact':True,'progress_delta_byte_identity':True,'validation_assertions':2576591,'external_review':'Pending, not created by author or this audit','remote_mirror':'Supervisor handoff unverified','left_running':'Nothing; all mathematical jobs completed','checklist':closure['status']}
 dest=R/'out/FINAL_AUDIT.json';dest.write_text(json.dumps(out,indent=2)+'\n',encoding='utf-8',newline='')
 rows=[]
