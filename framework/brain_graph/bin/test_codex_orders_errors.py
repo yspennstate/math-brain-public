@@ -83,6 +83,9 @@ def call_main(payload):
 # 1. the membrane raises
 sys.path.insert(0, Hk.BIN)
 import live_membrane as LM
+if not os.path.exists(LM.SIDECAR):
+    print("SKIP - no graph sidecar yet (a fresh install builds it on the first graph build)")
+    sys.exit(0)
 real_policy = LM.policy
 
 

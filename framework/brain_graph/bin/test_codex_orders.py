@@ -23,6 +23,9 @@ shutil.copy(MEMB, os.path.join(tmp, "live_membrane.py"))
 sys.path.insert(0, tmp)
 sys.path.insert(1, os.path.join(H, ".claude", "brain_graph", "bin"))
 import live_membrane as LM  # the copy under test
+if not os.path.exists(LM.SIDECAR):
+    print("SKIP - no graph sidecar yet (a fresh install builds it on the first graph build)")
+    sys.exit(0)
 real_policy = LM.policy
 LM.policy = lambda: dict(real_policy(), serve_orders_codex=True, orders_min=30.0, orders_stable=2, hold_every=0)
 spec = importlib.util.spec_from_file_location("coh", HOOK)
