@@ -794,6 +794,10 @@ _CTAIL_FS = re.compile(r"^\s*full_summary:\s*(\S.*?)\s*$", re.M)
 # that file's identity (size, mtime_ns, inode, ctime_ns, taken from the open handle); a file replaced or rewritten
 # gets a new identity and is read again. BRAIN_MARSHAL_MEMO=0 turns it off.
 _MARSHAL_MEMO = {}
+# A file's timestamp moves only at the clock tick (about 15 ms on NTFS, a jiffy on Linux), so a same-size rewrite inside
+# the tick a load saw keeps the identity. A load keeps its value only once the mtime is this old, so any later write
+# lands on a later tick (git's racy-clean rule). A file this fresh is read again, once.
+_MARSHAL_SETTLE_NS = 2_000_000_000
 
 
 def _marshal_ident(st):
@@ -810,7 +814,11 @@ def _marshal_load_memo(path):
         if got is not None and got[0] == ident:
             return got[1]
         v = marshal.load(fh)
-    _MARSHAL_MEMO[path] = (ident, v)
+    import time
+    if time.time_ns() - ident[1] >= _MARSHAL_SETTLE_NS:
+        _MARSHAL_MEMO[path] = (ident, v)
+    else:
+        _MARSHAL_MEMO.pop(path, None)
     return v
 
 
@@ -828,7 +836,11 @@ def _marshal_dump_memo(path, value):
         # the rename moves the file's ctime, so the identity is taken after it; the inode, size and mtime must still be
         # the temp file's, or another writer got in between and the next load reads the file
         try:
-            st = os.stat(path)
+            # from an open handle, as _marshal_load_memo reads it: on Windows os.stat and os.fstat report different
+            # st_ctime_ns for the same file (20 of 20 trials, Python 3.14, NTFS), so an identity taken with os.stat
+            # never matched a load and the dump was never kept
+            with open(path, "rb") as fh:
+                st = os.fstat(fh.fileno())
             if (st.st_ino, st.st_size, st.st_mtime_ns) == mine:
                 _MARSHAL_MEMO[path] = (_marshal_ident(st), value)
             else:
