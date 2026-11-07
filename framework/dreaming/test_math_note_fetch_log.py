@@ -35,7 +35,9 @@ def run():
         tool = os.path.join(tmp, 'tool')
         os.makedirs(tool)
         shutil.copy2(os.path.join(HERE, 'math_note.py'), tool)
-        env = dict(os.environ, HOME=os.path.join(tmp, 'home'), CLAUDE_CODE_SESSION_ID='sess-7KDP-2210')
+        # USERPROFILE too: on Windows Path.home() reads it, not HOME.
+        env = dict(os.environ, HOME=os.path.join(tmp, 'home'), USERPROFILE=os.path.join(tmp, 'home'),
+                   CLAUDE_CODE_SESSION_ID='sess-7KDP-2210')
         env.pop('CLAUDE_SESSION_ID', None)
         codes = []
         for sid in ('good-id', 'bad-id'):
