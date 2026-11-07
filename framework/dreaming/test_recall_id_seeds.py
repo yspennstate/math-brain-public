@@ -3,6 +3,10 @@ holds it, and a query that already seeded must print the same thing with the ide
 
 Builds a four-memory brain in a temporary HOME with its own shadow bm25 index, then runs the real brain.py recall.
 Run: python3 test_recall_id_seeds.py   (exit 0 = pass)"""
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import os, shutil, subprocess, sys, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))

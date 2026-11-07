@@ -13,6 +13,10 @@ resident lazy link walk (graph_lane.LAZY_RESIDENT).
     python test_walk_speedups.py      (a few seconds; ALL PASS at the end)
 Builds its graphs and sidecars in a temporary folder; nothing of the user's is read.
 """
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import os
 import shutil
 import sqlite3

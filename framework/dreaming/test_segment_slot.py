@@ -14,6 +14,10 @@ BRAIN_SEG_INDEX and BRAIN_SEGMENT_SLOT_LOG in a temp folder, so nothing touches 
 
     python test_segment_slot.py [BRAIN_PY]      (a few seconds; ALL PASS at the end)
 """
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import contextlib
 import importlib.machinery
 import importlib.util

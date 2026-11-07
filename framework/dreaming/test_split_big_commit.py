@@ -12,6 +12,10 @@ Works in a scratch git repository; touches nothing else.
  T4  a commit within the budget is left alone
  T5  a single blob over the budget is refused
 """
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import os
 import shutil
 import subprocess

@@ -10,6 +10,10 @@ quoted titles only when the quotes are what the prompt is about.
     python test_enum_min_share.py      (under a second; ALL PASS at the end)
 Runs the hook's own lines, cut from _main_body, against stubs; nothing of the user's is read or written.
 """
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import ast
 import io
 import os

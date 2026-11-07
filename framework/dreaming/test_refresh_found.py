@@ -7,6 +7,10 @@
 
     python test_refresh_found.py      (a second; ALL PASS at the end; temp folder only)
 """
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import os
 import shutil
 import sys

@@ -11,6 +11,10 @@
     python test_recall_server_read_names.py      (a second or two; ALL PASS at the end)
 Scans a temporary folder and runs the statements cut from _seeds_from_prompt; nothing of the user's is read.
 """
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import ast
 import io
 import os

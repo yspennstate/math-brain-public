@@ -9,6 +9,10 @@
     python test_fresh_async.py      (a second or two; ALL PASS at the end)
 Runs on a temporary state file, so nothing of the user's is read or written.
 """
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import importlib
 import io
 import json

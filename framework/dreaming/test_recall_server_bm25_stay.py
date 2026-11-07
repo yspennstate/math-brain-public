@@ -5,6 +5,10 @@ Builds a small brain in a temporary HOME, warms brain.py in one process, rebuild
 checks: the warm process held the old (now unlinked) postings file before release and holds nothing after; after
 release its recall of the new memory prints what a fresh process prints.
 Run: python3 test_recall_server_bm25_stay.py   (exit 0 = pass)"""
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import json, os, shutil, subprocess, sys, tempfile
 
 HERE = os.path.dirname(os.path.abspath(__file__))

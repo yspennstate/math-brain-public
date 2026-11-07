@@ -7,6 +7,10 @@
     python test_subq_off.py      (under a second; ALL PASS at the end)
 Runs the hook's own statement, cut from _main_body, against stubs.
 """
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import ast
 import io
 import os

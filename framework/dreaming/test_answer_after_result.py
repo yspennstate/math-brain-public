@@ -9,6 +9,10 @@
     python test_answer_after_result.py      (a second or two; ALL PASS at the end)
 Runs under a temporary home, so nothing of the user's is read or written.
 """
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import importlib
 import os
 import shutil
@@ -18,8 +22,10 @@ from types import SimpleNamespace as NS
 
 HERE = os.path.dirname(os.path.abspath(__file__))
 REPO_SRC = os.path.normpath(os.path.join(HERE, "..", "..", "src"))
-if os.path.isdir(os.path.join(REPO_SRC, "math_brain")):
-    sys.path.insert(0, REPO_SRC)
+for _src in (os.environ.get("MATHBRAIN_SRC", ""), os.path.join(HERE, "..", "mathbrain", "src"), REPO_SRC):
+    if _src and os.path.isdir(os.path.join(_src, "math_brain")):
+        sys.path.insert(0, _src)
+        break
 sys.path.insert(0, HERE)
 TMP = tempfile.mkdtemp(prefix="answer_after_")
 for k in ("HOME", "USERPROFILE"):

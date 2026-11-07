@@ -8,6 +8,10 @@
     python test_cover_eps.py      (under a second; ALL PASS at the end)
 Runs the statements cut from _select against stub hits.
 """
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import ast
 import io
 import os
