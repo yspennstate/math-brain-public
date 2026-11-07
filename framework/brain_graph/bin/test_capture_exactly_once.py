@@ -140,8 +140,8 @@ def same_as_ref(tag, d, ref):
 def main():
     src = pick_transcripts()
     if len(src) < 4:
-        print("FAIL - fewer than four suitable transcripts")
-        sys.exit(1)
+        print("SKIP - fewer than four suitable transcripts (a fresh install has none yet)")
+        sys.exit(0)
     T = tempfile.mkdtemp(prefix="capture_once_")
     proj = os.path.join(T, "proj")
     os.makedirs(proj)
