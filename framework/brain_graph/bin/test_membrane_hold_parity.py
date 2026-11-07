@@ -74,7 +74,8 @@ PLACE = [("dir:~/proj/results", 500.0, None, [(1.0, "file:~/proj/report.py"), (1
 
 
 def policy(m, max_lines):
-    pol = json.load(open(os.path.join(os.path.dirname(BIN), "live", "policy.json"), encoding="utf-8"))
+    pp = os.path.join(os.path.dirname(BIN), "live", "policy.json")
+    pol = json.load(open(pp, encoding="utf-8")) if os.path.exists(pp) else dict(m.DEFAULT_POLICY)   # a fresh install has none yet
     pol.update(max_lines=max_lines, max_fires_per_hour=6, serve_attr=False, serve_mem=False, serve_word=False,
                serve_verdict=False, serve_orders=False, serve_successor=False, serve_err=True, serve_place=True,
                err_hebb_min=1.0, place_hebb_min=1.0, err_skip=[], refractory_s=1800)
@@ -136,7 +137,8 @@ def fixmem_run(m, hold, estimand=None):
     """B08's acceptance fixture: one qualifying error whose fix memory is M, then M offered a minute later and again
     after the refractory, as evaluate() offers memories (never one the session has seen)."""
     pol = policy(m, 2)
-    pol.update(serve_mem=True, mem_size_min=1.0, mem_hebb_min=1e9, mem_reach_min=1e9, mem_max_sessions=2)
+    pol.update(serve_mem=True, mem_size_min=1.0, mem_hebb_min=1e9, mem_reach_min=1e9, mem_max_sessions=2,
+               hold_mem=False)          # the diffuse-line trial would hold M too; this fixture is about the focal line
     if estimand:
         pol["hold_estimand"] = estimand
     m = arms(m, hold)
