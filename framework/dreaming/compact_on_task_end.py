@@ -80,7 +80,7 @@ def is_prompt(r, notifications=True):
     (an attachment of type queued_command; tool results come back as lists). Task notifications wake a turn too."""
     if r.get("type") == "user" and isinstance((r.get("message") or {}).get("content"), str):
         # Stop-hook feedback and scheduled loop prompts are isMeta records: a turn boundary, but not him typing (the
-        # 00:02 10 Oct helper for 51330238 gave up 4 s in because the summary hook's feedback looked like his prompt)
+        # 00:02 10 Oct helper for 5e550009 gave up 4 s in because the summary hook's feedback looked like his prompt)
         return notifications or not r.get("isMeta")
     a = r.get("attachment") or {}
     if r.get("type") == "attachment" and a.get("type") == "queued_command":
@@ -159,7 +159,7 @@ def session_process():
 
 def is_claude(pid):
     """A live Claude Code process. A long-running session's binary is often renamed by an update while it runs
-    (claude.exe.old.<stamp>.<pid>; 322bc92e's was on 9 Oct), so the name only has to start with claude.exe."""
+    (claude.exe.old.<stamp>.<pid>; 5e55000a's was on 9 Oct), so the name only has to start with claude.exe."""
     return os.path.basename(process_image(pid)).startswith("claude.exe")
 
 

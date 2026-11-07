@@ -159,7 +159,7 @@ def emit(engine, payload, runtime, writer, *, base_output=None, budget=9000, now
         return False
     # A SUBAGENT'S TOOL STEP IS NOT THE SESSION'S (2026-09-23, round 6). A subagent's tool calls fire the parent's
     # PreToolUse hooks under the parent's session id, so each of them drained the next part of the PARENT's queue into
-    # the subagent. Measured on the 06:07 delivery of session 96cda5f6: of 24 parts the session itself received 10;
+    # the subagent. Measured on the 06:07 delivery of session 5e55000e: of 24 parts the session itself received 10;
     # its two test subagents took 11 and 3 - history the session never saw, pushed into a control arm that was meant to
     # have none. A tool step that names an agent (agent_id / agent_type, or a transcript under .../subagents/) is left
     # alone; the parent's next prompt or tool step takes the part instead.

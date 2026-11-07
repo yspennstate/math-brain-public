@@ -1611,7 +1611,7 @@ def main():
         # bare_open_reads_cp1252 off Windows (30 Oct): Python here decodes UTF-8, so the hazard is code that will also
         # run on Windows - the brain repos. Of 49 macOS fires to 11:0x none touched them (42 inline one-liners, 6 writes
         # elsewhere, 1 command that only ran a tool from brain-framework); judged on-domain 0 of 39.
-        # Ranked hits count too: one held below the cap came back through the backoff refill at 11:42 (a9b28e2d, a
+        # Ranked hits count too: one held below the cap came back through the backoff refill at 11:42 (5e55000d, a
         # scratch .py write, instinct_refills.tsv "shown"); a 'platform' suppression is what the refill skips.
         # python_rewrite_of_a_text_file_without_newline joins it (30 Oct 21:2x, 1000-ways D7 #20): its hazard is text
         # mode writing CRLF on Windows. 39 macOS fires in 45 h, 4 naming a file that ships there; judged on-domain 0 of 33.
