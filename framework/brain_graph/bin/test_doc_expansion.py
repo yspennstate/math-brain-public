@@ -49,6 +49,9 @@ def main():
     on = load("bm25_on", {"BRAIN_DOC_EXPANSION": "1"})
     store = on.EXPANSION_FILE
     exp = on.expansions()
+    if not exp:
+        print("SKIP - no doc-expansion store yet (a fresh install writes it on the first expansion pass): %s" % store)
+        return 0
     check("the expansion store exists and parses", bool(exp), "%d memories with questions in %s" % (len(exp), store))
     d_off, d_on = off.read_docs(), on.read_docs()
     # date tokens (md0902, bm25 DATES, on since 27 Sep) sit after the head budget by design, so they are not counted

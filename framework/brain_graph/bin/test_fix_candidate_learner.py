@@ -107,7 +107,8 @@ def membrane_row(path, name, hold, estimand="focal", fail_save=False, sid=None):
         open(lm.SIDECAR, "w").close()
         tp = os.path.join(tmp, "transcript.jsonl")
         open(tp, "w").write("{}\n")
-        pol = json.load(open(os.path.join(H, ".claude", "brain_graph", "live", "policy.json"), encoding="utf-8"))
+        pp = os.path.join(H, ".claude", "brain_graph", "live", "policy.json")
+        pol = json.load(open(pp, encoding="utf-8")) if os.path.exists(pp) else {}   # a fresh install has none yet
         pol.update(max_lines=2, max_fires_per_hour=6, serve_attr=False, serve_mem=False, serve_word=False,
                    serve_verdict=False, serve_orders=False, serve_successor=False, serve_err=True, serve_place=False,
                    err_hebb_min=1.0, err_skip=[], refractory_s=1800, hold_estimand=estimand)
