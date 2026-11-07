@@ -8,6 +8,10 @@ Nothing live is read or written.
 
     python test_graph_store_skip.py [GRAPH_STORE_PY]
 """
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import contextlib
 import importlib.util
 import io

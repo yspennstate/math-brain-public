@@ -12,6 +12,10 @@ a hook message, written into a temp ROOT/yyyy/mm/dd; nothing outside the temp fo
  N  (with OLD_CAPTURE_DIR) a capture that globs *.jsonl only, on Z's folder: no events (the check can fail)
 Needs the zstandard module; without it the test says so and exits 0.
 """
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import collections
 import json
 import os

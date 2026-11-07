@@ -8,6 +8,10 @@ carries no credential-shaped URL. Controls: every class counted once; the delete
 clean file never reported; no fake value (nor its first eight characters) appears in the output or the JSON. Nothing
 outside a temporary folder is read or written. Needs git on PATH.
 """
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import json
 import os
 import shutil

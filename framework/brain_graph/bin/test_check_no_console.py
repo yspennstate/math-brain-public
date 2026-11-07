@@ -9,6 +9,10 @@ a hidden launcher from a temporary folder, and runs the checker on each:
     can fail) - nothing is ever shown on screen
  M  a -Match that names no launcher: exit 1, "never seen"
 """
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import os
 import shutil
 import subprocess

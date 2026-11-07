@@ -12,6 +12,10 @@ targets that record their arguments and working folder; nothing outside it is re
  N  (with OLD_SIDECAR_LAUNCHER) a launcher that sets CurrentDirectory to a literal %USERPROFILE% path never reaches
     its target (the check can fail)
 """
+if __name__ == "__main__" and __import__("sys").argv[1:2] in (["-h"], ["--help"]):
+    print((__doc__ or "").strip() or "run with no arguments")
+    raise SystemExit(0)
+
 import json
 import os
 import re
