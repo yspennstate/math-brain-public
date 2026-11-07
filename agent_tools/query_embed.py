@@ -2,8 +2,9 @@
 
 The sidecar (memory_embeddings.npz) was built with sentence-transformers: CLS pooling, L2-normalised, max 512 tokens.
 Importing sentence-transformers costs ~55 s on this machine (measured 2026-09-13), which no deliberate recall can pay,
-so the same weights run here through onnxruntime + tokenizers (models/bge-small-en-v1.5, exported by
-campaign_2026-09-12_ultracode_mathbrain/lanes/m7_brain/export_bge_onnx.py; parity cosines 1.0 on five texts).
+so the same weights run here through onnxruntime + tokenizers (models/bge-small-en-v1.5). fetch_bge_onnx.py
+downloads the model's published ONNX export and tokenizer at a pinned revision and checks their hashes; against a
+local export of the same weights the cosines are 0.9999999 or better and the token ids identical.
 
     embed(text) -> numpy float32 vector of dim 384, unit norm, or None when anything is missing (fail-open: the
     caller carries on without a query vector, exactly as before this module existed).
@@ -21,11 +22,51 @@ def available():
     return os.path.exists(os.path.join(MODEL_DIR, "model.onnx")) and os.path.exists(os.path.join(MODEL_DIR, "tokenizer.json"))
 
 
+def _user_site():
+    try:
+        import site
+        us = site.getusersitepackages()
+    except Exception:
+        return ""
+    return us if us and os.path.isdir(us) else ""
+
+
+def runtime_reachable():
+    """Whether onnxruntime and tokenizers can be imported here, from sys.path or (python -s) the user site."""
+    import importlib.util
+    if importlib.util.find_spec("onnxruntime") and importlib.util.find_spec("tokenizers"):
+        return True
+    us = _user_site()
+    return bool(us) and all(os.path.isdir(os.path.join(us, m)) for m in ("onnxruntime", "tokenizers"))
+
+
+def _import_runtime():
+    """onnxruntime and tokenizers. On macOS both live in the user site-packages, which python -s (the hooks and most
+    harnesses) leaves off sys.path: embed() then returned None and a -s process lost its query lane after the first
+    recall (30 Oct 2026). The user site goes on sys.path for this import only, so -s keeps meaning -s for the rest."""
+    try:
+        import onnxruntime, tokenizers
+        return onnxruntime, tokenizers
+    except ImportError:
+        us = _user_site()
+        if not us or us in sys.path:
+            raise
+    sys.path.append(us)
+    try:
+        import onnxruntime, tokenizers
+    finally:
+        try:
+            sys.path.remove(us)
+        except ValueError:
+            pass
+    return onnxruntime, tokenizers
+
+
 def _session():
     if "sess" in _STATE:
         return _STATE["sess"], _STATE["tok"]
-    import onnxruntime as ort
-    from tokenizers import Tokenizer
+    ort, tokenizers = _import_runtime()
+    Tokenizer = tokenizers.Tokenizer
     so = ort.SessionOptions()
     so.intra_op_num_threads = 2          # a query is one short sequence; never grab the machine
     so.log_severity_level = 3
@@ -57,9 +98,9 @@ def embed(text):
 
 def _selftest():
     t0 = time.time()
-    a = embed("which theorem bounds the mixing time of the random transposition walk")
+    a = embed("which research box did we turn off and where did its stuff go")
     t1 = time.time()
-    b = embed("which theorem bounds the mixing time of the random transposition walk")
+    b = embed("which research box did we turn off and where did its stuff go")
     c = embed("what is the beta constant in the simulations")
     t2 = time.time()
     if a is None or b is None or c is None:
