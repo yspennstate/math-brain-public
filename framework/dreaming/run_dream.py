@@ -7,7 +7,7 @@ Same order and the same log markers the wake check reads ("generating dream agen
   code logged) -> "dream cycle complete".
 
 THE REM PHASE IS NOT HERE. On Windows run_dream.ps1 launched an unattended headless Claude session with permission
-checks disabled to consolidate memories. On this Mac that needs the owner's explicit decision (it is a standing
+checks disabled to consolidate memories. On this macOS that needs the owner's explicit decision (it is a standing
 permission bypass and spends his model quota); until he makes it, dreams are mechanical-only and the wake check will
 say the REM phase did not run. Also not ported: dream_git_sync (install step 12), the owner duration request.
 
@@ -18,7 +18,7 @@ from datetime import datetime
 
 HOME = os.path.expanduser("~")
 BASE = os.path.dirname(os.path.abspath(__file__))
-# project_memory reads the governor state at ~/.brain-framework by default; on this Mac the governor writes here
+# project_memory reads the governor state at ~/.brain-framework by default; on this macOS the governor writes here
 os.environ.setdefault("PROJECT_MEMORY_COMPUTE_STATE", os.path.join(HOME, ".claude", "compute", "compute_state.json"))
 LOGDIR = os.path.join(BASE, "logs")
 STAMP = datetime.now().strftime("%Y%m%d_%H%M%S")
@@ -37,7 +37,7 @@ DREAM_BUDGET_S = int(os.environ.get("DREAM_BUDGET_S", 8 * 3600 - 600))
 MIN_STEP_S = 120
 T_START = time.time()
 # 4 Nov 20:10: the 19:30 dream's embedding refresh loaded its model while a 13B film render made a clip, swap
-# went 2.6 -> 6.2 GB and the film's guard killed the clip (7 min lost). These steps now wait for the Mac's shared
+# went 2.6 -> 6.2 GB and the film's guard killed the clip (7 min lost). These steps now wait for macOS's shared
 # heavy_job.lock (the film releases it between clips) and hold it while they run. HEAVY_RUN="" turns this off.
 HEAVY_RUN = os.environ.get("HEAVY_RUN", os.path.join(HOME, "brain", "porting", "heavy_lock_run.sh"))
 # bm25 too (the same log): its full build ran 20:03:27-20:09:46 beside that clip, swap
@@ -49,7 +49,7 @@ EMB_REFRESH = ("embedding refresh", ["build_memory_embeddings.py", "--incrementa
 # run_dream.ps1's tail, in its order; Windows-only steps (the brain_improvement dashboard + its mesh claim) left out
 TAIL = [
     ("compact_index apply", ["compact_index.py", "apply"]),
-    # The Mac's ledger is partial, so a plain republish would replace Windows' rows (3,547 in October). Fetch the
+    # The macOS's ledger is partial, so a plain republish would replace Windows' rows (3,547 in October). Fetch the
     # shards from origin/main first (unmodified files only), then publish the UNION (29 Oct); --check stays strict.
     ("prompt shards fetch", ["fetch_prompt_shards.py"]),
     ("shard_prompt_archive union", ["shard_prompt_archive.py", "--union-existing"]),
@@ -57,10 +57,10 @@ TAIL = [
     ("growth view refresh", ["growth.py", MEM, VIEWS]),
     # the navigation views (BRAIN_INDEX, TOPICS, TIMELINE, GRAPH, RELATED, SEARCH, STATS) had no step here and stayed
     # at the install copy until 30 Oct. Built from the LIVE folder: the repo mirror is never refreshed on the
-    # Mac. A full build took ~80 min niced at load 50-60 (30 Oct), hence its own cap; the builder renames each view
+    # macOS. A full build took ~80 min niced at load 50-60 (30 Oct), hence its own cap; the builder renames each view
     # into place, so a capped run keeps the previous generation. Views under VIEWS_FRESH_H old are not rebuilt (a
     # deferral, see main): three dreams a day each redoing 80 min of work bought nothing.
-    # the builder lives in a framework checkout and reads the brain repo; both default to the Mac's layout
+    # the builder lives in a framework checkout and reads the brain repo; both default to macOS's layout
     ("navigation views", [os.path.join(os.environ.get("BRAIN_FRAMEWORK_DIR") or os.path.join(HOME, "brain", "brain-framework"),
                                        "manifests", "build_tools", "build_brain_architecture.py"),
                           os.environ.get("BRAIN_REPO_DIR") or os.path.join(HOME, "brain-repo"),
@@ -74,16 +74,16 @@ TAIL = [
     # queue is a review list, about 3 in 10 inline rows were truly stale on a 29 Oct hand read)
     ("supersession cascade", ["supersession_cascade.py", "--queue", os.path.join(BASE, "supersession_cascade_queue.tsv")]),
     # 31 Oct: run_dream.ps1 rebuilds superseded.tsv every cycle (schema_supersede.py --apply) and this port had no
-    # such step, so on the Mac the ledger spread_recall routes through grew only by hand: 22 of 557 frontmatter
+    # such step, so on macOS the ledger spread_recall routes through grew only by hand: 22 of 557 frontmatter
     # supersessions were missing from it and recall could serve those stale memories beside their corrections.
     # No --apply: the ledger is rebuilt before that flag is read, and stamping old memories' frontmatter would edit
-    # existing memories on the Mac, which waits on GIT_SYNC_APPROVED.
+    # existing memories on macOS, which waits on GIT_SYNC_APPROVED.
     ("supersession ledger", ["schema_supersede.py"]),
     # step 6c (owner-approved 29 Oct): build the signed project-memory hot cache. Exit 75 is a deliberate deferral
     # while the owner is active or the governor is stale, not a failure of the step.
     ("project-memory hourly", ["project_memory_cli.py", "hourly", "--config",
                                os.path.join(HOME, ".brain-framework", "private", "projects.json")]),
-    # the Windows box runs this every 15 minutes from Task Scheduler; the Mac has no such job (launchd persistence was
+    # the Windows box runs this every 15 minutes from Task Scheduler; macOS has no such job (launchd persistence was
     # refused 29-30 Oct), so new math results reach the store at least once a dream (installed 30 Oct)
     ("math transport", ["math_transport.py", "run"]),
     ("ern_learn", ["ern_learn.py"]),
@@ -138,6 +138,46 @@ def _views_fresh():
         return False
 
 
+# 6 Nov: launchd runs the same `project_memory_cli.py hourly` every hour (com.brain.project-memory-hourly, at :39), so
+# when that job finished clean within the hour the dream's run only picks up the few dozen prompts since (34-55 rows
+# for 400-640 s on 5-6 Nov) that the next hourly run takes anyway, and the 19:30 dream reaches the step at :38, a
+# minute before the launchd fire, which then dies on hourly_runner_already_active. An incomplete, failed or deferred
+# last run does not count: then the dream runs the step, as before.
+PM_FRESH_S = 3600
+PM_RUNNING_S = 2700
+
+
+def _pm_recent():
+    """Why the dream's project-memory step need not run (the hourly job's last run was clean and recent, or one is
+    running now), or ''. Reads runner_health read-only; any trouble reading it means run the step."""
+    import sqlite3
+    from datetime import timezone
+    db = os.environ.get("PROJECT_MEMORY_DB") or os.path.join(
+        os.environ.get("PROJECT_MEMORY_STATE") or os.path.join(HOME, ".brain-framework", "state", "project_memory"),
+        "project_memory.sqlite3")
+    try:
+        c = sqlite3.connect("file:%s?mode=ro" % db, uri=True, timeout=2)
+        try:
+            row = c.execute("SELECT status, attempt_started_at, completed_at FROM runner_health "
+                            "WHERE runner_id='hourly'").fetchone()
+        finally:
+            c.close()
+        if not row:
+            return ""
+        status, started, done = row
+        now = datetime.now(timezone.utc)
+        age = lambda t: (now - datetime.fromisoformat(t)).total_seconds() if t else None
+        if status == "ok" and age(done) is not None and 0 <= age(done) < PM_FRESH_S:
+            return "the hourly job finished clean %d min ago" % (age(done) // 60)
+        if status == "running" and age(started) is not None and 0 <= age(started) < PM_RUNNING_S:
+            return "the hourly job is running, started %d min ago" % (age(started) // 60)
+    except Exception:
+        return ""
+    return ""
+
+
+
+
 def _publish_without_refresh(name, failed):
     """Why the embedding publish should not run, or ''. A staged file left by a failed refresh is stale."""
     if name != "embedding publish" or EMB_REFRESH[0] not in failed:
@@ -147,7 +187,7 @@ def _publish_without_refresh(name, failed):
         age = "staged file from %s" % time.strftime("%Y-%m-%d %H:%M", time.localtime(os.path.getmtime(staged)))
     except OSError:
         age = "nothing staged"
-    return "the embedding refresh failed this run; %s" % age
+    return "the embedding refresh failed or did not run this run; %s" % age
 
 
 def _budget_cap(cap):
@@ -165,6 +205,25 @@ def _machine():
     except Exception:
         return "unknown"
 
+HEAVY_LOCK = os.environ.get("HEAVY_LOCK", os.path.join(HOME, ".claude", "compute", "heavy_job.lock"))
+HEAVY_WAIT_S = int(os.environ.get("DREAM_HEAVY_WAIT_S", "1800"))   # 0 = old behaviour (cap counts the wait)
+
+
+def _heavy_lock_line():
+    try:
+        with open(HEAVY_LOCK, encoding="utf-8", errors="replace") as fh:
+            return fh.read(200).strip()
+    except OSError:
+        return ""
+
+
+def _holds_heavy_lock(pid):
+    return _heavy_lock_line().split()[:1] == [str(pid)]
+
+
+def _heavy_holder():
+    return _heavy_lock_line()[:80] or "nobody (queue or calm wait)"
+
 
 def run_step(name, argv, cap=STEP_CAP):
     script = os.path.join(BASE, argv[0])
@@ -181,7 +240,31 @@ def run_step(name, argv, cap=STEP_CAP):
         # own process group, so a cap kills the lock waiter and its child together (the waiter's TERM trap frees the lock)
         p = subprocess.Popen(cmd, stdout=f, stderr=subprocess.STDOUT, cwd=BASE, start_new_session=True,
                              env=dict(os.environ, PYTHONUTF8="1", DREAM_RUNNER="run_dream.py"))
+        # A heavy step's cap starts when its waiter holds heavy_job.lock (the lock's first field is the waiter's pid,
+        # which is p.pid), not at launch (6 Nov 2026): the film holds the lock for hours, and the 5 Nov 19:30 and
+        # 6 Nov 11:30 embedding refreshes spent their whole 1800 s queued and were reported as failures. A step still
+        # queued after HEAVY_WAIT_S is stopped and reported deferred (exit 75), like any step that did not run.
         try:
+            if heavy and HEAVY_WAIT_S > 0:
+                waited = 0.0
+                while p.poll() is None and not _holds_heavy_lock(p.pid):
+                    if waited >= HEAVY_WAIT_S:
+                        try:
+                            os.killpg(p.pid, 15)
+                            p.wait(timeout=30)
+                        except Exception:
+                            try:
+                                os.killpg(p.pid, 9)
+                            except Exception:
+                                pass
+                            p.wait()
+                        log("STEP DEFERRED: %s never got heavy_job.lock in %ds (held by: %s)" % (
+                            name, HEAVY_WAIT_S, _heavy_holder()))
+                        return 75
+                    time.sleep(2)
+                    waited += 2
+                if p.poll() is None:
+                    log("step %s: got heavy_job.lock after %.0fs; cap %ds starts now" % (name, time.time() - t0, cap))
             rc = p.wait(timeout=cap)
         except subprocess.TimeoutExpired:
             try:
@@ -250,20 +333,23 @@ def main():
         if agenda_rc or not os.path.exists(agenda) or os.path.getmtime(agenda) == before:
             log("agenda not regenerated (rc %s) - counted as a failed step, mechanical tail still runs" % agenda_rc)
             failed.append("dream agenda")
-        log("REM phase not run: mechanical-only dream (the owner has not decided on unattended REM sessions on this Mac)")
+        log("REM phase not run: mechanical-only dream (the owner has not decided on unattended REM sessions on this macOS)")
         log("mechanical tail starting (%d steps)" % len(TAIL))
         for step in TAIL:
             name, argv = step[0], step[1]
             if os.path.exists(os.path.join(BASE, "STOP")):
                 log("STOP file present - tail stopped before %s; dream cycle STOPPED, not complete" % name)
                 return 3
-            stale = _publish_without_refresh(name, failed)
+            stale = _publish_without_refresh(name, failed + deferred)
             cap = _budget_cap(step[2] if len(step) > 2 else STEP_CAP)
             if not cap:
                 log("step deferred: %s (dream budget of %ds spent)" % (name, DREAM_BUDGET_S))
                 rc = 75
             elif name == "navigation views" and _views_fresh():
                 log("step deferred: navigation views (RELATED.md under %d h old)" % VIEWS_FRESH_H)
+                rc = 75
+            elif name == "project-memory hourly" and _pm_recent():
+                log("step deferred: project-memory hourly (%s)" % _pm_recent())
                 rc = 75
             elif stale:
                 # it would only be refused, after holding memory_write.lock against every remember for up to the cap
