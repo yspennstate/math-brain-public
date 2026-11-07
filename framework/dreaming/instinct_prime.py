@@ -373,12 +373,52 @@ def _damp_for(event, data, text):
         return {}
 
 
+# Reflexes about one Windows machine (its GPU, its drivers). Anywhere else they only nag: on a macOS machine,
+# heavy_compute_remote fired 30 times in the day to 30 Oct 07:50 and was judged off-domain on 14 of 14. Left out at
+# load, so neither the regex nor the graph path can fire them. bare_open_reads_cp1252 stays on macOS on purpose:
+# code written here for brain-framework runs on Windows too.
+WINDOWS_ONLY = frozenset(("heavy_compute_remote",))
+# Code files whose code also runs on Windows; off Windows, bare_open_reads_cp1252 fires only on a call that names one.
+# A bare repo name was not enough (30 Oct 12:5x): of 8 macOS fires it let through, 6 only read data there (the checklist
+# state.json, a gh api call, the ~/.brain-framework state folder) and none wrote code that runs on Windows.
+_SHIPS_TO_WINDOWS = re.compile(r"(?:brain-framework|brain-repo|vanilla-brain)/[^\s'\"]*"
+                               r"\.(?:py|ps1|psm1|vbs)\b")
+_SHIP_GATED = ("bare_open_reads_cp1252", "python_rewrite_of_a_text_file_without_newline")
+# Naming a shipped code file is not writing one (31 Oct, 1000-ways D5 #79): `python3 ~/brain/brain-framework/mesh/
+# agent_mesh.py ...` names one, and nearly every mesh command does. Replayed over all 111 macOS fires of the two reflexes:
+# naming kept 19, judged on-domain 8 of 8 and off-domain 11 of 90; writing (an Edit/Write target, or the file after a
+# redirect, sed -i, a cp/mv/tee destination, or open(..., 'w'/'a') / write_text in inline python) kept 7, on-domain
+# 8 of 8, off-domain 0 of 90. All 8 on-domain fires were harness probes writing zz_probe.py; no real macOS write of
+# shipped code with a bare open() was judged yet. ~/brain/porting/w08_checks/d5_79_shipgate.py.
+_SHIPS_WRITE = re.compile(
+    r"(?:>>?\s*['\"]?\S*%(p)s)|(?:sed\s+-i[^\n|;&]*?%(p)s)"
+    r"|(?:\b(?:cp|mv|tee|install|rsync)\b[^\n|;&]*?%(p)s\s*(?:$|[;&|\n]))"
+    r"|(?:open\([^)]*%(p)s[^)]*,\s*['\"][wa])|(?:%(p)s[^\n]{0,80}\.write_text)" % {"p": _SHIPS_TO_WINDOWS.pattern}, re.S)
+
+
+def _writes_shipped_code(tool_input):
+    """True when this call writes a code file that also runs on Windows (see _SHIPS_WRITE). Fail-open: True on error."""
+    try:
+        fp = str(tool_input.get("file_path") or tool_input.get("notebook_path") or "")
+        if fp:
+            return bool(_SHIPS_TO_WINDOWS.search(fp))
+        return bool(_SHIPS_WRITE.search(str(tool_input.get("command") or "")))
+    except Exception:
+        return True
+# Reflexes about how to answer the user's question: shown only on UserPromptSubmit. duration_question_needs_a_rate fired on
+# tool calls in 29 of 32 macOS fires (28-30 Oct: an agent's own "still running"/"keep alive" in a command), judged
+# on-domain 0 of 18 there; its compiled controls are all the user's sentences.
+_PROMPT_ONLY = frozenset(("duration_question_needs_a_rate",))
+
+
 def _load():
     out = []
     with io.open(TSV, "r", encoding="utf-8") as f:
         next(f, None)
         for ln in f:
             p = ln.rstrip("\n").split("\t")
+            if os.name != "nt" and p[0] in WINDOWS_ONLY:
+                continue
             if len(p) >= 7 and (p[1] in ("fire", "guide") or p[0] in AUTO_CARRY):
                 try:
                     charge = float(p[7]) if len(p) >= 8 else 0.6   # graded gut; older 7-col tsv -> mid
@@ -406,15 +446,60 @@ def _text_from(data):
     return ev, ""
 
 
+# 6 Nov 2026: exact_clauses.render is a pure function of the prompt text, but importing it compiles 38 regexes, 14 of
+# this hook's ~35 ms on a cold prompt. Loop prompts repeat, so the rendered line is kept per sha256(prompt), with the
+# stat of exact_clauses.py as the cache's identity (an edit there drops it). Stored only for a uuid session.
+# EXACT_CLAUSES_CACHE=0 turns it off (or names another file).
+_EC_CACHE = os.environ.get("EXACT_CLAUSES_CACHE") or os.path.join(
+    os.path.dirname(os.path.abspath(__file__)), "exact_clauses_render_cache.json")
+_EC_KEEP = 400
+_EC_UUID = re.compile(r"^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$")
+
+
+def _ec_ident():
+    try:
+        st = os.stat(os.path.join(os.path.dirname(os.path.abspath(__file__)), "exact_clauses.py"))
+        return [st.st_mtime_ns, st.st_size, st.st_ino]
+    except OSError:
+        return None
+
+
 def _exact_clause_context(event, text):
     """Intake-only exactness advisory, kept outside `fired` so no owner clause reaches FIRELOG."""
     if event != "UserPromptSubmit":
         return ""
+    use = _EC_CACHE != "0"
+    ident = _ec_ident() if use else None
+    key = hashlib.sha256(text.encode("utf-8", "surrogatepass")).hexdigest() if ident else None
+    data = None
+    if key:
+        try:
+            with io.open(_EC_CACHE, encoding="utf-8") as fh:
+                data = json.load(fh)
+            if data.get("ident") != ident:
+                data = None
+            elif key in data.get("v", {}):
+                return data["v"][key]
+        except Exception:
+            data = None
     try:
         import exact_clauses
-        return exact_clauses.render(text)
+        out = exact_clauses.render(text)
     except Exception:
         return ""
+    if key and _EC_UUID.match(str(_SLOW_EVENT.get("session") or "")) and _ec_ident() == ident:
+        try:
+            v = dict((data or {}).get("v", {}))
+            v[key] = out
+            if len(v) > _EC_KEEP:
+                v = dict(list(v.items())[-_EC_KEEP:])
+            tmp = "%s.%d.tmp" % (_EC_CACHE, os.getpid())
+            with io.open(tmp, "w", encoding="utf-8") as fh:
+                json.dump({"ident": ident, "v": v}, fh, separators=(",", ":"))
+            os.replace(tmp, _EC_CACHE)
+        except Exception:
+            pass
+    return out
 
 
 def _firelog_data(event, data, exact_ctx):
@@ -1264,7 +1349,7 @@ def _refill_after_backoff(session, fired, drop_act=False):
         if not session or len(fired) >= MAX_FIRE:
             return fired
         have = set(it.get("id") for it in fired)
-        tried = set(r for r, why in _SUPPRESSED if why in ("backoff", "precision", "mention", "prose"))
+        tried = set(r for r, why in _SUPPRESSED if why in ("backoff", "precision", "mention", "prose", "platform", "event"))
         hf = None
         if drop_act:
             sys.path.insert(0, GF_DIR)
@@ -1523,6 +1608,29 @@ def main():
                              if _hf.danger_surface(it.get("id")) != "act" or it.get("id") in _MENTION_NEVER]
         except Exception:
             pass
+        # bare_open_reads_cp1252 off Windows (30 Oct): Python here decodes UTF-8, so the hazard is code that will also
+        # run on Windows - the brain repos. Of 49 macOS fires to 11:0x none touched them (42 inline one-liners, 6 writes
+        # elsewhere, 1 command that only ran a tool from brain-framework); judged on-domain 0 of 39.
+        # Ranked hits count too: one held below the cap came back through the backoff refill at 11:42 (a9b28e2d, a
+        # scratch .py write, instinct_refills.tsv "shown"); a 'platform' suppression is what the refill skips.
+        # python_rewrite_of_a_text_file_without_newline joins it (30 Oct 21:2x, 1000-ways D7 #20): its hazard is text
+        # mode writing CRLF on Windows. 39 macOS fires in 45 h, 4 naming a file that ships there; judged on-domain 0 of 33.
+        try:
+            for _rid in _SHIP_GATED:
+                if os.name != "nt" and any(it.get("id") == _rid for it in list(fired) + list(_LAST_RANKED)):
+                    if not _writes_shipped_code(data.get("tool_input", {}) or {}):
+                        _suppress(_rid, "platform")
+                        fired = [it for it in fired if it.get("id") != _rid]
+        except Exception:
+            pass
+        try:
+            if ev != "UserPromptSubmit":
+                for rid in _PROMPT_ONLY:
+                    if any(it.get("id") == rid for it in list(fired) + list(_LAST_RANKED)):
+                        _suppress(rid, "event")
+                        fired = [it for it in fired if it.get("id") != rid]
+        except Exception:
+            pass
         # Refill after the mention/prose filters (2026-09-02): _fire capped the ranked hits at MAX_FIRE before
         # those filters ran, so an act-scar could take a slot and then be removed, leaving a claim reflex that
         # deserved the slot unshown (seen on a prose write: one fire where two were due). Pull the next
@@ -1531,7 +1639,7 @@ def main():
             if _drop_act and len(fired) < MAX_FIRE:
                 sys.path.insert(0, GF_DIR)
                 import habituation_filter as _hf2
-                have = set(it.get("id") for it in fired)
+                have = set(it.get("id") for it in fired) | set(r for r, why in _SUPPRESSED if why in ("platform", "event"))
                 for it in _LAST_RANKED:
                     if len(fired) >= MAX_FIRE:
                         break
