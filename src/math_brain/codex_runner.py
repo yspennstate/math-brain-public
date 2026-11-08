@@ -1511,8 +1511,7 @@ def _event_binding_reasons(
 # thread/tokenUsage/updated as codex-cli 0.157.1 defines it (`codex app-server generate-json-schema`,
 # v2/ThreadTokenUsageUpdatedNotification): threadId, turnId and tokenUsage {last, total, modelContextWindow?}, each
 # breakdown five required int64 counters and an optional cacheWriteInputTokens. Until 30 Sep only the ids were checked,
-# so a missing, scalar or extended payload kept the stream eligible (fleet04/B14,
-# B14-R79-TOKEN-USAGE-PAYLOAD-UNVALIDATED-20260929-01). An unknown key is refused, not read: a later protocol version
+# so a missing, scalar or extended payload kept the stream eligible. An unknown key is refused, not read: a later protocol version
 # that adds one makes the run ineligible until this schema is updated with it.
 _TOKEN_COUNTERS_REQUIRED = frozenset(
     {"cachedInputTokens", "inputTokens", "outputTokens", "reasoningOutputTokens", "totalTokens"}
@@ -1841,8 +1840,7 @@ def audit_app_server_messages(
             if trailing_method in SUPPRESSED_AMBIENT_EVENT_METHODS:
                 # A process-level status the loop above has already validated field by field. It is inert
                 # before the turn completes and stays inert after it: the answer is fixed at completion, and
-                # such a status carries no path to it (scheduled audit
-                # B05-R79-AMBIENT-EVENT-ORDER-SENSITIVE-ISOLATION-056). Items, tools and active thread
+                # such a status carries no path to it. Items, tools and active thread
                 # status after completion are still refused below.
                 continue
             if trailing_method not in {
