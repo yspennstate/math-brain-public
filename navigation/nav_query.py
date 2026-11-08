@@ -67,6 +67,9 @@ def stem(t):
     return t
 
 
+CODE_WORDS = set("code script function class module def import python py cli command source implementation".split())
+
+
 def query_tokens(text):
     """Query words without the common ones (what, is, and score points on every card that has them); a query of
     nothing but common words keeps them all."""
@@ -204,7 +207,8 @@ class Nav:
         return s
 
     def _prior(self, cid, names):
-        """A wording that names the file outright (import_store, nav_query.py) wins; a README is a folder's front door."""
+        """A wording that names the file outright (import_store, nav_query.py) wins; a README is a folder's front door;
+        a written page beats code unless the wording asks for code."""
         c = self.cards[cid]
         base = c["path"].rstrip("/").rsplit("/", 1)[-1].lower()
         mult = 1.0
@@ -212,6 +216,11 @@ class Nav:
             mult *= 3.0
         if c["kind"] == "file" and base in ("readme.md", "readme.txt", "readme"):
             mult *= 1.3
+        # A question in plain words is usually after an explanation, so a written page outranks code of equal
+        # score, unless the wording asks for code (1.6: first-place hits 4 -> 6 of 10 and 0 -> 3 of 10 on two
+        # outside banks, no loss in the top 5).
+        if c["kind"] == "file" and c["ext"].lstrip(".") in ("md", "txt") and not (names & CODE_WORDS):
+            mult *= 1.6
         return mult
 
     def search(self, wordings, k):
@@ -465,6 +474,10 @@ def selftest():
         check("loads 5 safe cards, skips the unsafe path, bad JSON and the mistyped record", len(nav.cards) == 5)
         check("skips the dangling edge, keeps 4", sum(len(v) for v in nav.out.values()) == 4)
         check("search 'nightly dream' ranks the dream README first", nav.search(["nightly dream"], 3)[:1] == [ids[1]])
+        check("a written page gets the plain-question prior, not when code is asked for",
+              abs(nav._prior(ids[1], {"agenda"}) - 1.3 * 1.6) < 1e-9 and abs(nav._prior(ids[1], {"agenda", "code"}) - 1.3) < 1e-9
+              and nav._prior(ids[2], {"agenda"}) == 1.0)
+        check("a question that asks for code gets the script ('agenda scanner code')", nav.search(["agenda scanner code"], 1) == [ids[2]])
         check("a second wording fuses in ('multi wording search')", ids[4] in nav.search(["dream agenda", "multi wording search"], 5))
         check("no match returns nothing", nav.search(["zzzz qqqq"], 5) == [])
         check("another form of a word reaches its card ('agendas scanned' -> dream.py)", nav.search(["agendas scanned"], 1) == [ids[2]])
