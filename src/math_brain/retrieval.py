@@ -1140,7 +1140,7 @@ _NUMBER_WORDS = {
 }
 _ORDINAL_RE = re.compile(r"(\d+)(?:st|nd|rd|th)")
 _PHRASE_STOP = frozenset("the a an of for and or in on at to by with from as is are be its this that".split())
-#: NO ARTICLE-LED TITLE PHRASES (MATHBRAIN_PHRASE_NO_ARTICLE; 19 Oct 2026, claude-5693aca3). A long sentence title such as
+#: NO ARTICLE-LED TITLE PHRASES (MATHBRAIN_PHRASE_NO_ARTICLE; 19 Oct 2026). A long sentence title such as
 #: "Aldous-Fill Open Problem 6.13 ... the maximal Kemeny constant of an n-vertex graph is ..." met the healthcheck's Turan
 #: question ("Maximum number of edges in an n-vertex graph with no complete subgraph ...") on "an n-vertex", "n-vertex graph"
 #: and the trigram "an n-vertex graph": three phrase units, +2.36, which lifted it over Turan's Theorem and out of the block.
@@ -1150,7 +1150,7 @@ _PHRASE_STOP = frozenset("the a an of for and or in on at to by with from as is 
 #: strict absent-target fires 17 -> 19 of 32 (ceiling 0.75); healthcheck 11 speak / 6 silent. Set it to 0 to compare.
 PHRASE_NO_ARTICLE: bool = os.environ.get("MATHBRAIN_PHRASE_NO_ARTICLE", "1").strip() not in ("0", "", "off", "false")
 _PHRASE_ARTICLES = frozenset(("a", "an", "the"))
-#: NO TITLE PHRASES THAT END ON A STOP WORD (MATHBRAIN_PHRASE_NO_TRAILING_STOP; 19 Oct 2026, claude-5693aca3). The bank's
+#: NO TITLE PHRASES THAT END ON A STOP WORD (MATHBRAIN_PHRASE_NO_TRAILING_STOP; 19 Oct 2026). The bank's
 #: Gaussian-concentration question ("... a tail bound for ...") met the harvested title "Theorem 3.8
 #: (Master Tail Bound for Independent Sum of Random Tensors)" on "bound for" and the trigram "tail bound for": +2.41, which
 #: put that card 0.095 under Gaussian Concentration for Lipschitz Functions and silenced the hook on the margin test. A
