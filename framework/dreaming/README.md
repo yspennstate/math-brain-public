@@ -43,7 +43,7 @@ On a new install `hook_liveness.py` prints a long list of files marked MISSING a
 is expected. Each MISSING line names the hook or dream step that writes the file, and the file appears once that
 hook has fired in a session or the first dream has run. The dream-commit lines read UNKNOWN until the brain
 folder is a git repository with a remote, and the dispatcher line names the command that signs its allowlist.
-A Stop-order failure is different: it means the hooks are not wired, and running `bootstrap/install.py` again
+A Stop-order failure is different: it means the hooks are not wired, and running `framework/bootstrap/install.py` again
 with `--merge-settings` added wires them. Run the check again after the first week; a file still
 MISSING then belongs to a part that has stopped firing.
 
