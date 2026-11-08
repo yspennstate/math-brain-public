@@ -35,7 +35,43 @@ TERM = re.compile(r"[a-z][a-z0-9_]+")
 STOP = set("""a an and are as at be by can do does for from how i if in is it its my of on or not the this to what
 where which who why with when into after before every any one than then them they there their these those run runs set
 file files find how does do repository repo order first also note says say make sure""".split())
+# Words a question is made of rather than about; search drops them (STOP above also holds content words such as
+# set, run and file, which the SCATTERED hint can ignore but a search for "set up" or "run a dream" needs).
+QSTOP = set("""what is are and the how do does i a an of to which who why where when was""".split())
 CONTROL = re.compile(r"[\x00-\x08\x0b-\x1f\x7f]")
+# A light stem: a query word missing from a card scores on its stem, so "private" meets "privacy", "published" meets
+# "publication" and "stores" meets "store". A plural ending first, then up to two derivational endings; a stem
+# keeps at least four letters, so short words stay whole.
+DERIVATIONS = sorted("""ication ically ical ation ition ion acy ately ated ate ity ment ishing ished ish ing ic ed""".split(),
+                     key=len, reverse=True)
+
+
+def stem(t):
+    if len(t) <= 4 or not t.isalpha():
+        return t
+    if t.endswith("ies") and len(t) > 5:
+        t = t[:-3] + "y"
+    elif t.endswith(("sses", "xes", "zes", "ches", "shes")):
+        t = t[:-2]
+    elif t.endswith("s") and not t.endswith(("ss", "us", "is")):
+        t = t[:-1]
+    for _ in range(2):
+        for s in DERIVATIONS:
+            if t.endswith(s) and len(t) - len(s) >= 4:
+                t = t[:-len(s)]
+                if s in ("ing", "ed") and t[-1] == t[-2] and t[-1] not in "aeioulsz":
+                    t = t[:-1]   # scanned, scanning -> scan; committed -> commit
+                break
+        else:
+            break
+    return t
+
+
+def query_tokens(text):
+    """Query words without the common ones (what, is, and score points on every card that has them); a query of
+    nothing but common words keeps them all."""
+    ts = TOKEN.findall(text.lower())
+    return [t for t in ts if t not in QSTOP] or ts
 
 
 def sha256_of(path):
@@ -133,24 +169,38 @@ class Nav:
                " ".join(map(str, c["keywords"])) * 2 + " " + c["summary"]
 
     def _index(self):
-        self.tf, self.df, self.dl = {}, {}, {}
+        # exact words (tf, df) and their stems (tfs, dfs); a query word scores on its exact form when the card has it
+        # and on its stem, at STEM_W, only when the card has another form of it and not this one
+        self.tf, self.df, self.tfs, self.dfs, self.dl = {}, {}, {}, {}, {}
         for cid, c in self.cards.items():
             toks = TOKEN.findall(self._fields(c).lower())
-            counts = {}
+            counts, scounts = {}, {}
             for t in toks:
                 counts[t] = counts.get(t, 0) + 1
-            self.tf[cid], self.dl[cid] = counts, len(toks) or 1
+                s = stem(t)
+                scounts[s] = scounts.get(s, 0) + 1
+            self.tf[cid], self.tfs[cid], self.dl[cid] = counts, scounts, len(toks) or 1
             for t in counts:
                 self.df[t] = self.df.get(t, 0) + 1
+            for s in scounts:
+                self.dfs[s] = self.dfs.get(s, 0) + 1
+        self.words = self.df   # every exact word on some card, for the absent-word hint
         self.avg = sum(self.dl.values()) / max(1, len(self.dl))
 
-    def score(self, cid, query_tokens):
-        n, s, tf = len(self.cards), 0.0, self.tf[cid]
+    STEM_W = 1.0
+
+    def score(self, cid, query_tokens, exact=False):
+        n, s, tf, tfs = len(self.cards), 0.0, self.tf[cid], self.tfs[cid]
+        norm = 1.2 * (0.25 + 0.75 * self.dl[cid] / self.avg)
         for t in query_tokens:
             if t in tf:
-                idf = math.log(1 + (n - self.df[t] + 0.5) / (self.df[t] + 0.5))
-                f = tf[t]
-                s += idf * f * 2.2 / (f + 1.2 * (0.25 + 0.75 * self.dl[cid] / self.avg))
+                f, df, w = tf[t], self.df[t], 1.0
+            else:
+                st = stem(t)
+                if exact or st not in tfs:
+                    continue
+                f, df, w = tfs[st], self.dfs[st], self.STEM_W
+            s += w * math.log(1 + (n - df + 0.5) / (df + 0.5)) * f * 2.2 / (f + norm)
         return s
 
     def _prior(self, cid, names):
@@ -167,7 +217,7 @@ class Nav:
     def search(self, wordings, k):
         fused = {}
         for w in wordings:
-            q = TOKEN.findall(w.lower())
+            q = query_tokens(w)
             names = set(re.findall(r"[\w.\-]+", w.lower()))
             ranked = sorted(((self.score(cid, q) * self._prior(cid, names), cid) for cid in self.cards), reverse=True)
             for rank, (sc, cid) in enumerate([r for r in ranked if r[0] > 0]):
@@ -225,7 +275,7 @@ class Nav:
         out, absent = [], []
         for w in wordings:
             for t in TOKEN.findall(w.lower()):
-                if len(t) > 3 and t not in self.df and t not in absent:
+                if len(t) > 3 and t not in self.words and t not in absent:
                     absent.append(t)
         if absent:
             out.append("words on no card (from the query): " + clean(", ".join(absent[:4]), 80))
@@ -242,7 +292,7 @@ class Nav:
             best = 0.0
             for w in wordings:
                 names = set(re.findall(r"[\w.\-]+", w.lower()))
-                best = max(best, self.score(hits[0], TOKEN.findall(w.lower())) * self._prior(hits[0], names))
+                best = max(best, self.score(hits[0], TOKEN.findall(w.lower()), exact=True) * self._prior(hits[0], names))
             if best < self.WEAK_FLOOR:
                 out.append("WEAK MATCH (best card scores %.1f, floor %.1f): reword with a file, function or folder "
                            "name, or the repository may not have it" % (best, self.WEAK_FLOOR))
@@ -275,7 +325,7 @@ class Nav:
             print("    ... %d more links (--id %s)" % (len(edges) - links, cid))
 
     def walk(self, start, toward, depth=3, k=8):
-        q = TOKEN.findall(toward.lower())
+        q = query_tokens(toward)
         seen, frontier, found = {start}, [start], []
         for _ in range(depth):
             nxt = []
@@ -417,6 +467,8 @@ def selftest():
         check("search 'nightly dream' ranks the dream README first", nav.search(["nightly dream"], 3)[:1] == [ids[1]])
         check("a second wording fuses in ('multi wording search')", ids[4] in nav.search(["dream agenda", "multi wording search"], 5))
         check("no match returns nothing", nav.search(["zzzz qqqq"], 5) == [])
+        check("another form of a word reaches its card ('agendas scanned' -> dream.py)", nav.search(["agendas scanned"], 1) == [ids[2]])
+        check("question words do not score ('what is the nightly dream' ranks the README first)", nav.search(["what is the nightly dream"], 1) == [ids[1]])
         check("id prefix resolves", nav.resolve(ids[2][:6]) == ids[2])
         hs = nav.hints(["kubernetes deployment"], nav.search(["kubernetes deployment"], 3))
         check("a word no card carries is named in a hint", any("kubernetes" in h for h in hs))
