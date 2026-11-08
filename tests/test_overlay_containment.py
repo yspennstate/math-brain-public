@@ -1,6 +1,6 @@
 """The content-addressed store never writes through a link.
 
-Scheduled audit fleet04/B19 (29 Sep 2026), B19-R69-OVERLAY-CONTAINMENT-PREMISE-20260929:
+29 Sep 2026:
 persist() created its directories with mkdir(parents=True), which follows a symbolic link or
 junction already on the way, so a store whose objects/ pointed elsewhere wrote there under
 correct-looking names. A Windows junction is used where symbolic links need privileges.

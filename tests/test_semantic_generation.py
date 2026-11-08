@@ -1,5 +1,4 @@
-"""The semantic channel reads its claim vectors again when the artifact file changes (scheduled audit fleet03/B11 r70,
-B11-R31-SEMTOP-CONTROL-MISSES-SEMANTIC-GENERATION-20260928).
+"""The semantic channel reads its claim vectors again when the artifact file changes.
 
 A module that stays imported across prompts must score against the file a fresh process would read: after a valid
 rebuild, the same top claim as a fresh import; while the file is malformed, nothing (the channel fails closed, as a
@@ -11,14 +10,11 @@ fresh import would); and after a good file is back, the good file's answer.
 With --old, the module before this change must keep the first file's answer after the rebuild (the check can fail).
 
 A rewrite that keeps the inode, the size and the mtime - through a hard link, with the old
-mtime put back - is read again too (fleet03/B01 r74,
-B01-R74-SEMANTIC-GENERATION-MTIME-ROLLBACK-HARDLINK-20260929). With --old-link, the module
+mtime put back - is read again too. With --old-link, the module
 before that change must keep the first file's answer there.
 
 So is one that also keeps every zip member's name, CRC-32 and size: four bytes elsewhere in the
-vectors solve for the old CRC (fleet03/B11 r90 and fleet04/B17 r74,
-B11-R77-SEMANTIC-GENERATION-CRC32-COLLISION-20260929-R90,
-B17-R74-CRC32-COLLISION-PRESERVES-SEMANTIC-CACHE-GENERATION-20260929). The generation is now the
+vectors solve for the old CRC. The generation is now the
 SHA-256 of the bytes read. With --old-crc, the module before that change must keep the first
 file's answer there while a fresh import reads the second. A manifest beside the file
 (claim_embeddings.npz.sha256) that does not name the bytes makes both refuse them.
@@ -347,7 +343,7 @@ def test_a_manifest_that_names_the_bytes_is_read_and_a_damaged_one_is_refused():
 
 
 def test_the_digest_and_the_vectors_come_from_one_read():
-    # fleet04/B17 r74, acceptance 4: the file changes between the read and the parse. The loader parses the bytes it
+    # The file changes between the read and the parse. The loader parses the bytes it
     # read, under their own digest, and the next call reads the new file.
     td = tempfile.mkdtemp(prefix="semgen_snapshot_")
     art = os.path.join(td, "claim_embeddings.npz")

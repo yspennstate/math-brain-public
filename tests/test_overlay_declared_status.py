@@ -1,5 +1,4 @@
-"""A revision's declared status is recorded, never taken as the claim's authority (fleet02/B11,
-B11-R79-OVERLAY-STATUS-CANNOT-APPEND-01, 29 Sep 2026).
+"""A revision's declared status is recorded, never taken as the claim's authority (29 Sep 2026).
 
 Until 30 Sep MathNodeRevision.to_claim passed the revision's status into the stored claim, and the store admits only
 an unverified claim, so a revision declaring any of the seven other statuses could not be appended at all. The claim

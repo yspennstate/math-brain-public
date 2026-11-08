@@ -1,6 +1,6 @@
 """A stored mistake or reflex is read back only when its payload still matches its row.
 
-The audit B15-R79-MISTAKE-REFLEX-PAYLOAD-DIGEST-NOT-ENFORCED-20260929-01 found that get_mistake and
+A review found that get_mistake and
 get_reflex rebuilt the record from payload_json and compared nothing: a payload changed under its
 old digest column read back as the changed record, and a reflex's payload could disagree with its
 reflex_sources rows. Each case below changes one thing in the database and expects the getter to

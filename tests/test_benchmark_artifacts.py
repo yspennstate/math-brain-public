@@ -61,7 +61,7 @@ def test_materializer_refuses_overwrite_and_invalid_windows(tmp_path: Path) -> N
         )
 
 
-# B17-R79-BENCHMARK-DIRECTORY-RENAME-NOT-DURABLE-20260929: the rename is atomic, the directory
+# The rename is atomic, the directory
 # entry is made durable where the platform allows, and a directory is verified jointly.
 
 
