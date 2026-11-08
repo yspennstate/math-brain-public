@@ -48,6 +48,8 @@ repository, which is kept current. [docs/setup-with-brain-framework.md](docs/set
 gives the steps that join the two: install the framework, build the store, set
 `MATHBRAIN_STORE` and `MATHBRAIN_BUILD_SRC` so the framework's math hook finds it, and teach
 the agent the recall workflow. The framework's `docs/MACOS_INSTALL.md` covers a Mac.
+Running `python -m pytest` here tests `tests/` only; the framework's own suites run by
+directory from `framework/`, as its README's "Verifying a copy" section shows.
 Answers to questions people have asked while setting up are in
 [docs/setup-questions-2026-11/](docs/setup-questions-2026-11/).
 
