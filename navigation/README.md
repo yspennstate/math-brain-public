@@ -15,6 +15,9 @@ It needs Python 3.9 or later and nothing else. It works offline and never runs a
     MANIFEST.json   the commit the map was built from, the counts, and the sha256 of the two data files
     nav_query.py    the loader and query tool
     build_nav.py    the builder that wrote the three data files
+    questions.tsv   plain questions a page answers, written by hand (path, tab, question); the builder adds their
+                    words to that page's card, so a question in your own words still finds the page. Add a line
+                    when a page is hard to find by its title.
 
 The map covers every tracked file outside `results/` and `papers/`, plus one summary card per top directory of those
 two trees. The result files themselves are reached through those cards and the indexes they point to.

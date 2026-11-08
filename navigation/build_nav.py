@@ -180,6 +180,16 @@ def main():
     core = sorted(f for f in files if not f.startswith(("results/", "papers/")) and f not in own)
     cards, edges, missing = {}, set(), []
     file_ids = {f: cid("file", f) for f in core}
+    # navigation/questions.tsv: plain questions a page answers, written by hand per page (path<TAB>question);
+    # their words join that page's keywords so a reader who asks in their own words still finds it
+    questions = {}
+    qp = os.path.join(src, "navigation", "questions.tsv")
+    if os.path.isfile(qp):
+        for l in io.open(qp, encoding="utf-8"):
+            if l.strip() and not l.startswith("#") and "\t" in l:
+                k, q = l.rstrip("\n").split("\t", 1)
+                if k in file_ids and q.strip():
+                    questions.setdefault(k, []).append(q.strip())
 
     def dir_card(d, summary="", count=None):
         i = cid("dir", d)
@@ -265,13 +275,14 @@ def main():
             first = next((l.strip() for l in text.splitlines() if l.strip()), "")
             summary = clip(first.lstrip("#-% ").strip())
         cons = concepts_in(" ".join([f, title, summary] + [h for _, h in heads]))
-        kw = []
+        qs = questions.get(f, [])
+        kw = list(qs)
         for k in list(kws) + cons:
             if k and k not in kw:
                 kw.append(k)
         fi = file_ids[f]
         cards[fi] = dict(id=fi, kind="file", path=f, anchor="", title=clip(title, 160), summary=summary, ext=e,
-                         lines=lines, keywords=kw[:12], entry=f in ENTRY)
+                         lines=lines, keywords=kw[:12 + len(qs)], entry=f in ENTRY)
         d = parent_dir(f)
         if d:
             edges.add((fi, dir_card(d), "in_dir", ""))
