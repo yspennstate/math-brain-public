@@ -5,6 +5,26 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Keep a list of dead ends. An agent that tried something and watched it fail will, a week later,
+  try it again unless the failure is written down somewhere it reads. One line per dead end is
+  enough: what was tried, what happened, and why it is not worth another go.
+
+  `when an approach does not work, add one line to DEAD_ENDS.md saying what you tried and why it
+  failed, and read that file before you pick an approach.`
+
+- Ask for a weekly digest. Per-round notes are good for the agent but too fine for you. Once a
+  week, have it boil them down to a few lines you can read with coffee.
+
+  `every Sunday, read this week's notes and write a short digest: what got done, what is stuck,
+  and what you plan next week. Put it at the top of DIGEST.md.`
+
+- Say what needs your OK. A loop that has to ask about everything stalls while you sleep; one that
+  asks about nothing can do something you did not want. Write down the few things it must ask
+  first, and let it decide the rest.
+
+  `you may decide everything about <the project> yourself except: spending money, deleting
+  anything, and publishing. For those, email me one short question and carry on with other work.`
+
 - Ask for a test with anything it builds. A small test that runs in seconds tells the next agent,
   or the next round, when something broke. Without one, a loop can undo its own earlier work and
   nobody notices.
