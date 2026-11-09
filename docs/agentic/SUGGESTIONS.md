@@ -5,6 +5,28 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Keep a file of open questions. Every project has things nobody knows yet: why a number moved,
+  whether a source can be trusted, which of two methods is right. Written in one place, they get
+  answered one by one; left in old chat sessions, they are forgotten.
+
+  `keep OPEN_QUESTIONS.md: one line per question we have not answered, with the date it came up.
+  when you answer one, move it to the bottom with the answer and where you found it.`
+
+- When one step is blocked, have it move to the next and say so. A loop that waits on a single
+  missing file or a password can sit idle all night. Tell it to note what is blocking, go on with
+  work that does not depend on it, and check the blocked step again later.
+
+  `if a step is blocked on something only I can do, write what you need from me at the top of
+  NEXT.md, carry on with the next task that does not depend on it, and retry the blocked one each
+  hour.`
+
+- Ask what it needs from you, in one list. Questions scattered through a long report are easy to
+  miss. One short list at the end, of things only you can give (a login, a decision, a file),
+  turns a stalled job into a few minutes of your time.
+
+  `end the report with a list headed "Needed from you" naming each thing only I can provide. if
+  there is nothing, leave the list out.`
+
 - Turn a routine you keep explaining into a skill. If you tell every new session the same five
   steps (where the notes are, how to search them, what to check before saving), write them once as
   a skill file. The agent loads it when the task comes up, and you stop repeating yourself.
