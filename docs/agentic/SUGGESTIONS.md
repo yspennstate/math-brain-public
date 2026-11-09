@@ -5,6 +5,21 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When you type fast, have the agent say back what it understood. A quick prompt full of typos is
+  fine, but a long job built on a wrong reading costs an hour. One sentence from the agent before
+  it starts, in plain words, lets you catch "the second film" read as "the second clip" while it
+  is still cheap to fix.
+
+  `before you start, tell me in one sentence what you think I am asking for, then go ahead unless
+  that sentence is wrong.`
+
+- Ask where every file it made ended up. "Saved it" tells you nothing a week later. With the
+  folder, the file name and, for anything online, the link, you or another agent can find the work
+  without a search. Have it list them at the end of the report, one per line.
+
+  `at the end of your report, list every file you made or changed, one per line, with the full
+  folder and name, and the web link for anything you uploaded.`
+
 - Look at a long video through its stills before you sit through it. An agent can take one frame
   from the middle of every clip and lay them out as a grid of small pictures with the clip names
   under them. A minute on that page shows a black clip, a wrong order or a repeated shot, and you
