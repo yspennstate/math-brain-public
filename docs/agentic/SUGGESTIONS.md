@@ -5,6 +5,30 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- If a program you just installed is "not recognized", open a new terminal. A terminal reads the
+  list of places to look for programs when it starts, so one opened before the install does not
+  know the new program exists. Closing it and opening a fresh one fixes this more often than
+  anything else. If it still fails, the agent can find where the program went and why the
+  terminal cannot see it.
+
+  `I installed it but the terminal says the command is not recognized. tell me whether opening a
+  new terminal will fix it, and if not, find where it was installed and fix the path.`
+
+- Make the terminal comfortable to read. Small grey text on a black window is tiring for an hour of
+  work. Every terminal lets you raise the font size and pick a theme with more contrast, and the
+  agent can tell you where the setting is on your computer.
+
+  `tell me how to make the text in my terminal larger and easier to read on this computer, step by
+  step.`
+
+- Ask what a setting called an environment variable is before you set one. Install guides often
+  say "set this variable" as if everyone knows how. It is a named value the computer hands to
+  programs when they start, and it can be set for one terminal or for good. Knowing which one you
+  set saves a confusing hour when it seems to vanish.
+
+  `the guide says to set an environment variable. explain in two sentences what that is, then set
+  it so it stays after I restart, and show me how to check it is there.`
+
 - Have it pack a folder before you send it to someone. Zipping a whole project folder by hand
   usually sweeps in things that should not travel: a file of keys, a cache of several gigabytes, a
   copy of your notes. The agent can make the zip, leave those out, and tell you what is inside.
