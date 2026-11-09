@@ -5,6 +5,28 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for a time limit and a retry on anything that goes over the network. A download or an API
+  call with no time limit can hang for hours and look like the agent is still working. A limit of a
+  minute or so, with two or three retries and a short wait between them, turns a silent hang into a
+  clear error.
+
+  `give every network call a timeout of 60 seconds and retry it up to three times with a growing
+  wait. if it still fails, stop and tell me which address failed.`
+
+- Have it draw charts that colour-blind readers can follow. Red against green is the most common
+  pair in a default chart and the one many people cannot tell apart. A palette made for colour
+  blindness, plus line styles or labels on the lines, costs nothing.
+
+  `use a colour-blind-safe palette in every chart, and label each line directly instead of relying
+  on colour alone.`
+
+- Ask for page numbers when it reads a long document. A summary of a sixty-page report is only as
+  good as your ability to check it. Page numbers next to each point let you open the original and
+  see the sentence for yourself.
+
+  `summarise this PDF section by section and put the page number after every point, so I can check
+  any of them against the original.`
+
 - Ask it to tag the versions that worked. A project goes through good states and broken ones, and
   finding the last good one in a long history is slow. A git tag on each version you were happy
   with gives you a name to go back to.
