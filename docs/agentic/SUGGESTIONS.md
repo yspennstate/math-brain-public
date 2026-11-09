@@ -5,6 +5,24 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Save a prompt you use often as a command. If you paste the same long loop prompt every few days,
+  ask the agent to turn it into a slash command or a skill, so next time you type one word.
+
+  `turn the prompt I just gave you into a command called /<name> that I can type in any session,
+  and show me it working once.`
+
+- Do one first, then the rest. Before an agent makes a hundred of something, have it make one and
+  show you. A mistake caught on the first costs one; caught on the hundredth it costs a hundred.
+
+  `make one <thing> first and show it to me. once I say it looks right, make the other <number> the
+  same way.`
+
+- Ask for the strongest case against a result. An agent asked whether it is right will usually say
+  yes. Asked to argue that it is wrong, it often finds the weak spot.
+
+  `write the strongest case that this result is wrong, and the one check that would settle it.
+  then run that check.`
+
 - Keep a restart list. When the computer restarts, every open loop is gone, and remembering ten
   prompts from memory is hard. Ask for one file that holds each running loop's prompt and end time,
   so a single request brings them all back.
