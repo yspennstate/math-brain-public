@@ -5,6 +5,25 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask why, not only what. The brain remembers decisions, and the reasons are often in there too.
+  Before you undo something that looks odd, ask the agent why it was done that way.
+
+  `before we change <the thing>, recall why it was set up like this. if the brain has a reason,
+  tell me what it was and whether it still holds.`
+
+- Keep a glossary of your own words. Every project grows its own names for things. A short file of
+  those names, each with one line on what it means, saves every new agent from guessing.
+
+  `keep a GLOSSARY.md for <the project>: each term we use, one line on what it means, and add to it
+  whenever a new term comes up.`
+
+- Let it read the error itself. When something fails, don't describe the failure in your own
+  words. Paste the message, or tell the agent to run the command and read the output. The exact
+  line usually names the problem.
+
+  `<the thing> fails when I run it. run it yourself, read the full error, and fix the cause rather
+  than the symptom.`
+
 - When two agents disagree, make them compare. If one agent says a result holds and another says
   it does not, don't pick one. Hand each the other's reasoning and ask where exactly they part.
 
