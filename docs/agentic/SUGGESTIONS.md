@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it to say which folder it is working in. With two copies of a project, or a terminal that
+  opened somewhere unexpected, an agent can edit the wrong one and report success. One line naming
+  the folder at the start of a task makes that mistake visible before it costs anything.
+
+  `at the start of each task, tell me which folder you are working in and which copy of the project
+  that is. stop and ask if it is not the one I meant.`
+
+- Have it write a version a colleague could follow. Notes written for the agent itself are full of
+  shorthand. When you want to pass work on, ask for a short page that someone who was not there
+  could pick up: what the goal is, what is done, how to run it and what is left.
+
+  `write HANDOVER.md for someone new to this project: the goal, what works now, the one command to
+  run it, and what is still to do. no shorthand.`
+
+- Keep each run's output in the same shape. If a weekly report comes back with different columns or
+  headings every time, comparing one week with the next turns into a puzzle. Ask the agent to fix the
+  layout once and keep to it.
+
+  `use the same headings and column order every time you write this report, so this week can be put
+  next to last week. if you need a new field, add it at the end.`
+
 - Ask whether a number makes sense before it is reported. A script can print a total ten times too
   big because a file was read twice, and the agent will pass it on as calmly as a correct one. One
   question about size and sign catches most of these before you see them.
