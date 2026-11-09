@@ -5,6 +5,25 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have it list the assumptions it made. Every piece of work rests on a few guesses about what you
+  meant: which file, which year, whether blanks count as zero. Written down at the end, they take
+  seconds to check, and a wrong one is caught before it spreads into the next step.
+
+  `at the end of your answer, list every assumption you made that I did not state, one per line.`
+
+- Ask it to read the whole function before changing a line. An edit made from a three-line window
+  can contradict something twenty lines further down, like a variable reused later or an early
+  return. Reading the whole thing first is cheap and prevents the change that looks right and is not.
+
+  `before you edit a function, read all of it and tell me in one sentence what it does, then make
+  the change.`
+
+- Have it say what period the data covers. A result from one month of data and the same result
+  from ten years mean very different things, and the dates are easy to leave out. One line with the
+  first and last date makes every number easier to judge.
+
+  `in every report on data, give the first and last date in the data and the number of rows used.`
+
 - Compare every result with a simple baseline. A model that predicts sales to within ten percent
   sounds good until you learn that "same as last week" does just as well. Ask the agent to put the
   plainest possible method beside its answer, so you can see what the clever part adds.
