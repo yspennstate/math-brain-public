@@ -5,6 +5,25 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- When two agents disagree, make them compare. If one agent says a result holds and another says
+  it does not, don't pick one. Hand each the other's reasoning and ask where exactly they part.
+
+  `here is what another agent concluded: <its answer>. find the exact step where you and it
+  differ, and run the check that decides which of you is right.`
+
+- Ask whether an old note is still true. The brain keeps what was true when it was written. A
+  path, a setting or a rule from last month may have changed since. Before acting on an old note,
+  have the agent check it.
+
+  `the brain says <the note>. check whether that is still true today before you rely on it, and
+  if it is not, mark the note as out of date.`
+
+- Ask for a handoff note when a job changes hands. When you move a job from one agent to another,
+  or from one computer to another, a short note saves the new agent an hour of reading.
+
+  `write a handoff note for whoever takes over <the job>: what it is, what is done, what is next,
+  where the files are and what to watch out for.`
+
 - Ask it to measure, not guess. "This should be faster" and "it is 3 seconds instead of 11" are
   different claims. When a result has a number in it, ask for the number and how it was measured.
 
