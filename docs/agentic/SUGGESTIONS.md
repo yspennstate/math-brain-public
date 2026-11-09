@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Show it one example of what good looks like. Describing the result you want takes a paragraph
+  and still leaves room to guess. Pointing at one file, page or email you liked takes a line and
+  leaves much less.
+
+  `here is an example of what I want: <file or link>. make <the new thing> in the same style and
+  at the same length, and tell me where yours differs from it.`
+
+- Ask for a rough cost before a big job. Before a loop runs for days, ask how long it expects
+  each piece to take and how much of your usage it will spend. A guess that is far off is worth
+  hearing before the work starts, not after.
+
+  `before you start, estimate how long each piece will take, how many pieces there are and roughly
+  how much of my usage it will need. if it looks too large, suggest a smaller version.`
+
+- Ask the agent to clean up after itself. Long jobs leave scratch files, half-finished copies and
+  programs still running in the background. One line at the end of a prompt keeps the computer
+  from filling up with them.
+
+  `when you finish, delete the temporary files you made, stop any background program you started,
+  and tell me what you removed and what you left on purpose.`
+
 - Save a prompt you use often as a command. If you paste the same long loop prompt every few days,
   ask the agent to turn it into a slash command or a skill, so next time you type one word.
 
