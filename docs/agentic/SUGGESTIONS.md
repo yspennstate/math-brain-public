@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it to match the style already in the project. A new script written in a different style from
+  the ones around it, with other naming, other indentation and another way of reading settings, makes
+  the whole project harder to follow. Have the agent read two or three existing files first.
+
+  `before you write new code here, read two of the existing scripts and follow the same naming,
+  layout and way of handling settings.`
+
+- Have long jobs print where they are. A job that runs for an hour in silence gives you no way to
+  tell a slow run from a stuck one. A line every few minutes with how far it has got and roughly how
+  long is left settles that at a glance.
+
+  `for anything that runs longer than a few minutes, print a progress line every so often: items
+  done, items left and a rough time remaining.`
+
+- Keep keys and passwords out of what it prints. Agents echo commands and settings while they work,
+  and a key that lands in a log file or a pasted report is as exposed as one written on a sticky note.
+  Ask it to hide them on the way out.
+
+  `never print a password, key or token, in output, logs or reports. if you need to show that one is
+  set, show only its last four characters.`
+
 - Ask it what it expects before it runs anything. If the agent writes down the result it expects
   before a test or a calculation, a surprise shows up straight away instead of being explained after
   the fact. Most real mistakes turn up as a result nobody predicted.
