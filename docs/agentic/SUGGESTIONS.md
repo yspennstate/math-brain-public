@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Watch a long job's log in a second terminal. While a job runs you can open another window and
+  follow its log as lines are added, without disturbing it. Ask the agent for the one command that
+  does this on your computer, and keep it handy.
+
+  `this job writes to run.log. give me the command that shows the log as it grows, for my system,
+  in a second terminal window, and how to stop watching without stopping the job.`
+
+- Ask how you could check the result yourself. Trusting a result is easier when you know one quick
+  way to test it without the agent: a number to compare, a file to open, a command to run. Ask for
+  that check along with every result that matters.
+
+  `along with the result, give me one check I can do myself in under a minute that would show if
+  it were wrong.`
+
+- Ask how to take something out again before it goes in. A tool, a background task or a startup
+  item is easy to add and easy to forget. Have the agent write down how to remove it at the time it
+  sets it up, while it still knows every piece.
+
+  `before you install or schedule anything, write in SETUP.md what you are adding and the exact
+  steps to remove it again.`
+
 - Have it interview you, one question at a time. When you are not sure what you want, a page of
   twelve questions is hard to answer. Ask the agent to ask one question, wait, and use your answer
   to choose the next, until it knows enough to start.
