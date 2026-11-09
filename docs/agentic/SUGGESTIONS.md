@@ -5,6 +5,29 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- If you write your own hooks, wire the failure event too. In Claude Code a tool call that fails is
+  sent to PostToolUseFailure, not to PostToolUse, so a hook that should react to errors and is wired
+  only to PostToolUse never sees a real failure. Test the hook once with a command you know will
+  fail.
+
+  `check my hook settings: is every hook that should see errors also wired to PostToolUseFailure?
+  run one failing command and show me the hook fired.`
+
+- On a math or logic claim, have it check every small case by computer. A statement about all
+  functions, graphs or numbers can usually be tested exhaustively for small sizes in a few seconds.
+  A clean pass is not a proof, but one counterexample saves days, and the largest value seen tells
+  you how tight the bound is.
+
+  `before we try to prove this, write a short script that checks it on every case up to size 4,
+  and on random cases up to size 7. report the worst case you found.`
+
+- Give a long loop a second job for when the first one is done. A loop set for ten days often
+  finishes its main work in two, and then spends the rest repeating the same check. Name a standing
+  second task (improve the docs, add tests, look for related work) so the time is not wasted.
+
+  `when the main job is finished, keep checking it each round, and spend the rest of the round on
+  this: <second task>. say in one line which one you worked on.`
+
 - When you ask whether an idea is already known, ask for the closest known result too. A plain "not
   found" tells you little: the search may have missed it, or the idea may sit one step from a paper
   everyone cites. The nearest published statement, and what separates it from yours, is what you
