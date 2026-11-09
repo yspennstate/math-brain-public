@@ -5,6 +5,26 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Give each loop one owner for each file. When two loops can both edit the same page, one will
+  sooner or later undo the other's work without noticing. Say in each prompt which folders that
+  loop writes to and which it only reads.
+
+  `you write only in docs/notes/ and results/. everything else you may read but not change; if a
+  fix is needed somewhere else, write it down in NEXT.md for me instead of making it.`
+
+- Ask for the reason a round did nothing. A quiet round can mean the work is finished, the agent is
+  waiting on something, or it is stuck and not saying so. One line on why tells you which.
+
+  `if a round makes no change, still write one dated line saying why: finished, waiting on what, or
+  stuck on what.`
+
+- Keep a short list of what you never want it to do. Some rules matter more than any task: never
+  delete without a copy, never post in public, never spend money. Put them in a file the loop reads
+  every round, so a long run does not forget them on day four.
+
+  `read RULES.md at the start of every round before anything else. if a step would break one of
+  those rules, skip the step and write in NEXT.md what you skipped and why.`
+
 - Keep the computer awake. A loop only runs while the machine does. Many laptops and small desktops
   go to sleep after a few minutes with nobody at the keyboard, and the loop simply pauses, often
   without any message saying so. Turn sleep off in the power settings while a long loop runs, or
