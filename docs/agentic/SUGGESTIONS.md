@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for paths that work on another computer. A script that opens a file by its full path from
+  your home folder breaks the moment someone else runs it, or you move the folder. Paths written relative to the
+  project folder travel with it.
+
+  `use paths relative to the project folder, never a full path that starts with my user name or
+  drive letter. if a path must be set per computer, read it from one settings file.`
+
+- Have it name files for what they hold. A folder of final.csv, final_v2.csv and final_really.csv
+  tells nobody which one to trust. A name that says what is inside and when it was made settles it
+  without opening anything.
+
+  `name every output file for what it contains, like prices_cleaned_2026-11-09.csv. never final,
+  new, v2 or copy in a file name.`
+
+- Ask it to check the licence before it copies code. Code found online is not always free to reuse,
+  and a pasted function can carry terms you never agreed to. A one-line check before copying is far
+  cheaper than finding out later.
+
+  `before you copy code from a website or another repository, tell me where it came from and what
+  licence it is under. if there is no licence, write it yourself instead.`
+
 - Ask it to point at the file and line. "The function already handles that" is easy to say and
   hard to check. When the agent makes a claim about code or notes, have it name the file and line
   number, so you can open it and see for yourself in seconds.
