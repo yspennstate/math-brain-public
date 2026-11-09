@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask every report to say which task it answers. With five terminals open you will not remember
+  which prompt a report belongs to. Put one line in your global instructions file:
+
+  `end every report with one line naming the task it answers, in my words, with the time I asked.`
+
+- When you are not watching, ask for questions by email. An agent that ends its report with a
+  question waits for an answer you never see. Tell it to decide what it can, carry on, and send
+  you one short email only for choices that are really yours.
+
+  `do what you can decide yourself and keep going. if something needs me, send me one short email
+  with the choice and what you recommend.`
+
+- Put the end time inside the loop prompt. Some schedulers drop a recurring job after a few days.
+  If the prompt itself says "until 19 November 03:15", the agent knows to set the schedule up again
+  when it lapses, and to stop and report when the time is reached.
+
 - Turn a habit into a hook. When you find yourself telling agents the same thing every day, ask
   for it to become a hook, so every new session gets it without you typing it.
 
