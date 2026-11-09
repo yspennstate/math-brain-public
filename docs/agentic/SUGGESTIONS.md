@@ -5,6 +5,26 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for a short summary in a fixed shape. When you come back to a terminal after hours away, a
+  long report is hard to read. Ask for two parts: what you asked for, in your words, and what has
+  been done so far.
+
+  `give me at most 8 short lines in two parts: what I told you to do, in my words with the times,
+  and what you have done so far. no tool names.`
+
+- Tell one agent to pass a message to all of them. When you change a rule, you do not have to
+  visit every terminal. Ask one agent to write it where every agent reads at the start of each
+  prompt (a shared inbox file or a hook), and to say which agents saw it.
+
+  `tell all the other agents: <the new rule>. put it where every session reads it, and tell me
+  which agents acknowledged it.`
+
+- Give the agent a rule for when space runs short. A loop that runs for days will sooner or later
+  meet a full disk or low memory, and then it sits and waits. Tell it in advance what to do.
+
+  `if the disk or memory gets low, don't stop. find files that already have a checked copy on
+  github, delete those, and carry on with the task.`
+
 - Ask every report to say which task it answers. With five terminals open you will not remember
   which prompt a report belongs to. Put one line in your global instructions file:
 

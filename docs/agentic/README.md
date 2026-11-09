@@ -18,6 +18,8 @@ Then:
 - [starter-prompts.md](starter-prompts.md): prompts to paste on day one, and prompts for using the
   brain well after that.
 - [struggling.md](struggling.md): what to check when the brain does not seem to do anything.
+- [faq.md](faq.md): short answers to the questions people ask first (cost, how long a loop runs,
+  what happens when the context fills up).
 - [SUGGESTIONS.md](SUGGESTIONS.md): a running list of ideas, newest first, for prompts, loops and
   uses of the brain. New entries are added as they come up.
 - [../../agent_tools/skills/](../../agent_tools/skills/): skills you can install so the agent itself
