@@ -5,6 +5,26 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it to point at the file and line. "The function already handles that" is easy to say and
+  hard to check. When the agent makes a claim about code or notes, have it name the file and line
+  number, so you can open it and see for yourself in seconds.
+
+  `when you tell me what some code does, give the file and line number you are reading from.`
+
+- Have it write the unit next to every number. A result of 0.4 could be a fraction, a percent, a
+  number of seconds or of gigabytes. Units cost a word and stop the kind of mix-up that is
+  invisible until much later.
+
+  `write the unit next to every number you report: seconds, percent, GB, dollars, rows. never a
+  bare number.`
+
+- Keep the original data untouched. An agent cleaning a file will sometimes write the cleaned
+  version over the original, and then there is nothing to compare against or start again from. Ask
+  it to treat the raw folder as read-only and write everything new elsewhere.
+
+  `treat everything under data/raw/ as read-only. write cleaned or processed files to data/work/
+  and never overwrite the originals.`
+
 - Ask what else would break before a change. A file or setting is often read by more than one
   script. Before the agent changes it, have it search for everything that uses it, so a fix in one
   place does not quietly break three others.
