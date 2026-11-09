@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for short functions that each do one job. A two-hundred-line function that reads, cleans,
+  computes and plots is hard to test and hard to change without breaking something. Small pieces
+  with plain names can be checked one at a time and reused later.
+
+  `keep each function to one job and under about forty lines. if one grows past that, split it and
+  tell me what the pieces are.`
+
+- Have it use the official download or API before scraping a page. A scraper breaks the day the
+  site changes its layout, and some sites forbid it. Most data sources have a proper download link
+  or API that is steadier and often faster.
+
+  `before you write code that scrapes a web page, check whether the site offers a download or an
+  API for the same data, and use that if it does.`
+
+- Ask it to open the output in the program you will use. A file can be written without errors and
+  still come out wrong in the place you need it: dates that turn into numbers in a spreadsheet,
+  columns that run together, a chart that is blank. One check in the real program catches that.
+
+  `after you write the file, open it the way I will (in a spreadsheet, a browser or a PDF viewer)
+  and tell me whether it looks right there.`
+
 - Ask for variable names that say what they hold. Code full of x, tmp, df2 and data_new reads fine
   on the day it is written and is a puzzle a week later, for you and for the next agent. A name
   like daily_prices or rows_after_cleaning explains itself.
