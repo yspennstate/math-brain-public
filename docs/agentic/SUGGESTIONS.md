@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Tell the agents what they share. Two computers on the same home internet line, two jobs on the
+  same disk: agents cannot see that from inside one job. A short note on what is shared lets them
+  explain a slowdown correctly and agree on who goes first.
+
+  `these two computers share one internet connection. if a download is slow, check what the other
+  computer is downloading before you blame the server.`
+
+- Keep keys out of logs and printouts. An agent that is given a login token for a service will
+  sometimes print it while debugging or write it into a log that later gets pushed. Say once that
+  the key is used but never shown, and where it lives.
+
+  `the access token is in the credentials file. use it, but never print it, put it in a log, a
+  commit or a message, and never copy it anywhere else.`
+
+- Have it listen to a sample, not just trust a score. An automatic check on audio, pictures or
+  text catches most problems and misses some. Ask the agent to list the few items its check was
+  least sure of, so you can look at those yourself.
+
+  `after the automatic check, give me the five items it was least sure about so I can look at them
+  myself.`
+
 - Ask it to say what it will not stop and why. When a computer is busy, an agent may be tempted to
   stop someone else's work to make room for its own. A standing rule that it reports instead of
   stopping, and says what would free the resource, keeps one loop from quietly killing another.
