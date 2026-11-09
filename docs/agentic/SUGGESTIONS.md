@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Let agents on different computers share one queue. If two machines can both do a job, a shared
+  list (a file in a GitHub repository works) where each one marks the item it took keeps them from
+  doing the same work twice, and either can pick up what the other left.
+
+  `before you start an item, check the shared queue file; if nobody has it, write your name and the
+  time next to it, push, and only then begin. when it is done, mark it done and push again.`
+
+- Let it take turns on a shared resource. When two jobs need the same graphics card or the same
+  disk, running them at once can make both slower than running them one after the other. Ask the
+  agent to use a simple lock so one waits while the other works.
+
+  `these two jobs both use the graphics card. make them take turns: one holds a lock file while it
+  runs, the other waits for the lock to clear.`
+
+- Ask for a second check by a different method. A result checked the same way twice can repeat the
+  same mistake twice. Recomputing it another way (different code, a different data path, a census by
+  hand on small cases) is what catches the error.
+
+  `after you get the number, check it a second way that does not reuse your first code, and tell me
+  whether the two agree.`
+
 - Let a slow download pick up where it stopped. Large files (models, data sets) often drop partway
   through. A script that starts the whole file again on every drop can run for hours without ever
   finishing. Ask the agent to resume from the last byte it has and to keep retrying with a pause,
