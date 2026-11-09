@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When a loop runs the same checks every round, have it save them as one small script. Typed out
+  fresh each time, five commands are five chances for a slip and a lot of reading. Saved once, the
+  round becomes one line, and the script can stop with a clear message the moment a result is not
+  what it expects.
+
+  `you have run the same checks in the last three rounds. put them in one script in this folder,
+  make it stop and say so when a result changes, and from now on run that script each round.`
+
+- Keep the newest note at the top of a notes file. A loop that adds its note at the bottom makes
+  every reader scroll past days of history to find where things stand. With the newest line first,
+  the next round, another agent or you can read one line and know what is done and what comes
+  next.
+
+  `keep NEXT.md newest first: after each round put one dated line at the very top saying what you
+  did and what comes next, and leave the older lines below it.`
+
 - On a laptop, have long jobs check the power and the heat. A render or a long build on battery can
   drain it flat halfway through, and a laptop that runs hot for hours slows itself down or shuts
   off. Ask the agent to start heavy work only when the machine is plugged in, and to rest between
