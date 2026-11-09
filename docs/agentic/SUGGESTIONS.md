@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it to say what it will not stop and why. When a computer is busy, an agent may be tempted to
+  stop someone else's work to make room for its own. A standing rule that it reports instead of
+  stopping, and says what would free the resource, keeps one loop from quietly killing another.
+
+  `never stop or pause another job to make room for yours. if the machine is too busy, tell me
+  which jobs are using it and what you would need, and carry on with what you can.`
+
+- Have it turn a fix into a rule other agents see. A lesson one agent learns at two in the morning
+  is lost by the next session unless it is written where the others read it. Ask for the rule as
+  one short line in a shared file, with the date and the reason.
+
+  `when you fix a problem that another agent could run into, add one dated line to RULES.md saying
+  what to do and why, so the next agent does not repeat it.`
+
+- Name the one thing that would make the job go faster. Agents often work around a slow step
+  without saying what would remove it: a login, a faster disk, a larger allowance. Ask for that
+  one thing, so you can decide whether to provide it.
+
+  `if something outside your control is slowing this job down, tell me the single change that
+  would help most and roughly how much faster it would be.`
+
 - Save the expensive part before the risky part. A long job often ends with a short step that can
   fail: decoding, writing a file, uploading. If the hours of work before it are only in memory, a
   failure at the end loses all of them. Ask the agent to write the costly intermediate result to
