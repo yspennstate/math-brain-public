@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Tell it how sure the answer needs to be. A quick estimate for a chat and a number that goes into
+  a paper need very different amounts of checking. Say which one you want, and the agent can spend
+  a minute or an hour accordingly.
+
+  `this is a rough estimate for my own planning, a few minutes of work is enough.` or `this number
+  goes into a paper: check it two independent ways before you give it to me.`
+
+- Have it reproduce a bug before fixing it. A fix written from a description often fixes something
+  nearby. Ask the agent to make the error happen first, then fix it, then show the same steps no
+  longer fail.
+
+  `before you change any code, reproduce the error with the smallest example you can. then fix
+  it, and run the same example again to show it is gone.`
+
+- Turn the questions you keep asking into a FAQ. If you ask an agent the same thing every week,
+  where a file lives or how to restart a job, the answer belongs on a page, not in your head. Ask
+  it to collect them.
+
+  `look through what I have asked you more than once and write FAQ.md with each question and a
+  short answer. add to it whenever I ask something again.`
+
 - Have it read a tool's own help before guessing. Agents remember options for most tools, and
   sometimes they remember an older version or a different tool. Running the tool's help first
   costs a second and saves the error that follows a made-up option.
