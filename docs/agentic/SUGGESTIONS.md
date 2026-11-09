@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have it pack a folder before you send it to someone. Zipping a whole project folder by hand
+  usually sweeps in things that should not travel: a file of keys, a cache of several gigabytes, a
+  copy of your notes. The agent can make the zip, leave those out, and tell you what is inside.
+
+  `make a zip of this project that I can send to a colleague. leave out keys, passwords, caches and
+  anything large we can rebuild, then list what went in and how big the zip is.`
+
+- If every line of a file shows as changed, suspect line endings. Windows and Mac end a line with
+  different invisible characters, and a file that passes between them can look entirely rewritten
+  to git even though only one word changed. Ask the agent to check before you trust the diff.
+
+  `git says every line of this file changed but I only edited one. check whether it is line endings
+  and set the project up so it does not happen again.`
+
+- Ask for results in a file you can open by double-clicking. A table printed in the terminal
+  scrolls away and is hard to send. A small web page or a spreadsheet file opens with a
+  double-click, keeps its layout, and can be shared or looked at again tomorrow.
+
+  `save these results as a file I can open with a double-click, a .csv or a simple .html page, and
+  tell me where you put it.`
+
 - Put quotes around paths with spaces. A folder called My Documents or Project Notes looks like two
   separate words to a terminal, and the command fails or, worse, acts on the wrong thing. Quoting
   the whole path fixes it. Ask the agent to do this always, so a space never surprises either of you.
