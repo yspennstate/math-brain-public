@@ -5,6 +5,26 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Keep the prompt next to what it made. A picture, a report or a summary is much easier to improve
+  when you can see the exact request that produced it. Ask the agent to save the prompt beside each
+  output, so the next attempt starts from what was asked rather than from memory.
+
+  `whenever you make an image, report or summary, save the prompt you used in a .txt file with the
+  same name next to it.`
+
+- Check that a scheduled job really ran. A job set to run every night can stop without a sound: a
+  password expires, a folder moves, the computer was asleep. Ask the agent to look at what the job
+  produced and when, not at whether it is scheduled.
+
+  `for each scheduled job in this project, find the newest file it wrote and tell me when that was.
+  flag any job whose newest output is older than it should be.`
+
+- Have it read the first error, not the last. When a long build or script fails, the last lines are
+  often a pile of errors caused by the one near the top. An agent fixing the last message can chase
+  symptoms for a while; the first one is usually the cause.
+
+  `when this fails, find the first error in the output, not the last one, and start from there.`
+
 - Have it ask before anything leaves your computer. Reading and writing files on your own machine
   is easy to undo. An email sent, a post published or a file uploaded to a shared folder is not. A
   rule that the agent stops and shows you the thing first costs one extra reply.
