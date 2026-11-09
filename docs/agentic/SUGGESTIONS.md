@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Say what is out of scope. An agent fixing one thing will happily tidy three others on the way,
+  and each extra change is one more thing to review. Naming what it should leave alone keeps the
+  work the size you asked for.
+
+  `fix the date parsing only. do not reformat, rename or reorganise anything else, even if it
+  looks wrong; list it at the end instead.`
+
+- Ask for the answer first and the reasoning after. A long explanation that ends in a conclusion
+  makes you read everything to find out what happened. One line with the answer, then the detail
+  for anyone who wants it, is faster to read and easier to check.
+
+  `start every report with one line that answers the question. put the reasoning and the details
+  underneath.`
+
+- Keep a list of the services a project uses, without the passwords. When a project touches a
+  cloud account, an email sender or an API, a new session has no idea those exist until something
+  breaks. A short file naming each one and what it is for fixes that.
+
+  `write SERVICES.md listing every outside service this project uses and what it is for. never put
+  a password or key in it; say where the key is kept instead.`
+
 - Ask for a short summary at the top of long notes. A note that grows over weeks gets read from
   the top by the next agent, and the conclusion is often buried at the bottom. Two or three lines
   at the head saying what it found and what is still open save every later reader the scroll.
