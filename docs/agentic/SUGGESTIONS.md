@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Keep a cheat sheet of the commands that worked. The command that finally started the server or
+  fixed the install is easy to lose in a long terminal history. A short file of working commands,
+  each with one line on what it does, saves the next session from finding it again by trial.
+
+  `whenever a command works that we will need again, add it to COMMANDS.md with one line saying
+  what it does and when to use it.`
+
+- When there is a real choice, ask for two options and a recommendation. An agent left alone picks
+  one way and builds it, and you only learn there was another way when the first one hurts. Asking
+  for two, with what each costs, takes a minute and keeps the decision with you.
+
+  `before you build this, give me two ways to do it, what each one costs in time and risk, and
+  which one you would pick and why.`
+
+- Ask for comparisons as a table. Three results described in three paragraphs are hard to hold in
+  your head. The same numbers in a small table, one row per option and one column per measure, show
+  at a glance which is best and where the differences are.
+
+  `put these results in a table: one row per run, columns for the setting, the time it took and
+  the score.`
+
 - When it says something failed, ask for the exact error. "The connection failed" or "the install
   did not work" hides the one line that says why: a refused key, a missing file, a wrong version.
   The exact text is what you search for, what you paste to a colleague, and usually what tells the
