@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have it reread your request before it says done. A long prompt with three questions in it often
+  gets two answered. Ask the agent to go back to your words, count what you asked for, and check
+  each part against its report.
+
+  `before you report, reread my message. list each thing I asked for and say done, not done, or
+  not done because, for every one.`
+
+- Tell it what you already tried. An agent starting on a problem you have been fighting will try
+  the obvious fixes first, the same ones you tried yesterday. Two lines on what failed save it an
+  hour.
+
+  `I already tried <the fixes> and they did not work. start from there, and do not repeat them
+  unless you have a reason to think something has changed.`
+
+- Paste a screenshot when words fail. An error dialog, a page that looks wrong or a chart with a
+  strange shape is often faster to show than to describe. Terminal agents can read an image file;
+  save it and give the agent the path.
+
+  `here is a screenshot of what I see: <path to the image>. tell me what is wrong in it and how to
+  fix it.`
+
 - Start a new agent read-only on anything that matters. The first hour with a new project is when
   an agent knows least about it. Let it read, map and propose for that hour, and only then let it
   change files.
