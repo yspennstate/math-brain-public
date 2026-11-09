@@ -5,6 +5,29 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- When it says something failed, ask for the exact error. "The connection failed" or "the install
+  did not work" hides the one line that says why: a refused key, a missing file, a wrong version.
+  The exact text is what you search for, what you paste to a colleague, and usually what tells the
+  agent its own fix.
+
+  `when something fails, show me the exact error message and the command that produced it, then
+  say what you think it means.`
+
+- To let agents use a second computer, have one set up SSH with a key and test it. A terminal on one
+  machine can run commands on another over SSH, which is how one agent uses a spare desktop or a
+  rented server for long jobs. The agent can make the key, tell you which half to copy to the other
+  machine, and then prove the link works with a harmless command.
+
+  `help me let you run commands on my other computer over SSH. make a key, tell me exactly what to
+  copy and where, then test it by printing that computer's name.`
+
+- Have it explain a command from the internet before running it. An install line copied from a web
+  page or a forum may download and run a script you have not read. Asking first costs a minute and
+  tells you what will change on your machine.
+
+  `before you run this command, explain in plain words what it downloads, what it changes, and
+  whether it needs administrator rights.`
+
 - If you write your own hooks, wire the failure event too. In Claude Code a tool call that fails is
   sent to PostToolUseFailure, not to PostToolUse, so a hook that should react to errors and is wired
   only to PostToolUse never sees a real failure. Test the hook once with a command you know will
