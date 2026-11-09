@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have it describe the data before it analyses it. How many rows, which dates, how many values are
+  missing: three facts that catch a truncated download or a wrong file before any chart is drawn
+  from it.
+
+  `before any analysis, tell me how many rows the file has, the first and last date in it, and how
+  many values are missing in each column.`
+
+- Ask for error messages that say what to do. "KeyError: 'price'" means something to the person who
+  wrote the script and nothing to anyone else. A message that names the problem and the fix saves
+  the next person, or the next session, a search.
+
+  `when your scripts fail, make the error say in plain words what went wrong and what to try next,
+  like "no price column in input.csv; check the file has a header row".`
+
+- Keep one small example that runs. A folder with a tiny input and the one command that uses it
+  shows a new reader, or a new agent, how the tool is meant to work faster than any page of
+  explanation, and it doubles as a quick check that nothing is broken.
+
+  `make an examples/ folder with one small input file and a short note giving the exact command to
+  run on it and what the output should look like.`
+
 - Ask for numbers rounded to what they mean. A result printed as 0.43829174 suggests a precision
   nobody measured, and the extra digits hide the part that matters. Two or three significant
   figures are usually honest and much easier to compare.
