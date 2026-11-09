@@ -5,6 +5,29 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Let a slow download pick up where it stopped. Large files (models, data sets) often drop partway
+  through. A script that starts the whole file again on every drop can run for hours without ever
+  finishing. Ask the agent to resume from the last byte it has and to keep retrying with a pause,
+  rather than giving up after a few tries.
+
+  `when you download anything large, resume from where a dropped download stopped instead of
+  starting over, wait a little between retries, and check the finished file against its size or
+  checksum.`
+
+- Have it test a fix on a small piece first. Before a change runs on the whole job, run it on one
+  file, one page or a few megabytes, and compare the result with what you get without the change.
+  A mistake then costs a minute instead of a night.
+
+  `before you run this fix on everything, run it on one small piece, compare the result with the
+  old way, and show me both before going further.`
+
+- Ask it to say how much is left. "Working on it" tells you nothing on day three. A count (40 of
+  100 done, about 6 hours to go at the current rate) tells you whether to wait, help or change the
+  plan.
+
+  `at the end of each round, write how many pieces are done out of the total and how long the rest
+  will take at this round's pace.`
+
 - Give each loop one owner for each file. When two loops can both edit the same page, one will
   sooner or later undo the other's work without noticing. Say in each prompt which folders that
   loop writes to and which it only reads.
