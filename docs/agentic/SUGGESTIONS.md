@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Keep the settings in one file. When a folder name, a threshold or a date range is typed into
+  five scripts, changing it means finding all five, and the one you miss gives a quietly different
+  answer. One small settings file that every script reads keeps them in step.
+
+  `move every setting that appears in more than one script (paths, dates, thresholds) into
+  settings.toml and have the scripts read it from there.`
+
+- Ask what it did with blank and missing values. Empty cells get dropped, filled with zero or
+  carried forward from the row above, and each choice changes the result. The agent will pick one
+  without saying so unless you ask.
+
+  `before you analyse this table, tell me how many values are missing in each column and what you
+  plan to do with them. do not fill or drop anything until I agree.`
+
+- Have it show what a search pattern matches before it changes anything. A find-and-replace across
+  many files can hit far more than intended: a short word inside longer ones, a name in a comment.
+  A list of the matches first costs a few seconds.
+
+  `before you replace anything, list every line the pattern matches, with file names, and wait for
+  me to say go.`
+
 - Ask for a time limit and a retry on anything that goes over the network. A download or an API
   call with no time limit can hang for hours and look like the agent is still working. A limit of a
   minute or so, with two or three retries and a short wait between them, turns a silent hang into a
