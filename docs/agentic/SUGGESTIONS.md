@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Tell it which copy is the real one. When the same file lives in two places (a working folder and
+  a GitHub repository, or two computers), an agent can edit the wrong one and then wonder why
+  nothing changed. Name the copy that counts and where the others come from.
+
+  `the file in <folder> is the one that counts; the copies elsewhere are made from it. edit only
+  that one, and if you find a copy that differs, tell me before you overwrite either.`
+
+- Have it read the clock instead of assuming the time. An agent that has been running for hours
+  can lose track of the date, and a loop with an end date depends on it. Ask it to check the
+  computer's clock whenever a deadline or a schedule is involved.
+
+  `whenever a step depends on the date or time, read it from the computer first and write it into
+  your note, instead of working it out from earlier messages.`
+
+- Group small changes into one save. Twenty commits of one line each make a history nobody can
+  read, and on repositories with automatic tests each push can start a run. Ask the agent to
+  collect related changes and save them together when a piece is finished.
+
+  `collect related small changes and commit them together once the piece is finished, with one
+  short message that says what changed.`
+
 - Ask it to correct its own numbers out loud. An agent that sends a warning and then finds it
   measured wrong should say so in a new message, with both numbers and the reason, rather than
   quietly changing course. Others may already be acting on the first one.
