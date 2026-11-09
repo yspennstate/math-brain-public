@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask what else would break before a change. A file or setting is often read by more than one
+  script. Before the agent changes it, have it search for everything that uses it, so a fix in one
+  place does not quietly break three others.
+
+  `before you change this function, find every place that calls it and tell me which of them the
+  change could affect.`
+
+- Have it try the awkward inputs. Code that works on a clean example often fails on an empty file,
+  a very large one, a name with an accent or a date in another format. Ask the agent to try a few
+  of those on purpose.
+
+  `after it works on the normal case, try it on an empty input, a very large one and one with odd
+  characters, and tell me what happened with each.`
+
+- Ask for a simple diagram of how the parts connect. Once a project has more than a handful of
+  scripts and folders, a picture of what feeds what is easier to hold in your head than any list.
+  A plain text diagram in the README is enough.
+
+  `draw a short text diagram in README.md showing which scripts read which files and what each one
+  produces.`
+
 - Say what is out of scope. An agent fixing one thing will happily tidy three others on the way,
   and each extra change is one more thing to review. Naming what it should leave alone keeps the
   work the size you asked for.
