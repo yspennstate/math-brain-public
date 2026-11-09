@@ -5,6 +5,26 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask the agent to say back what it understood before a long job. Ten days of work on a
+  misunderstanding is expensive. A short note in its own words, before it starts, catches the
+  mistake while it is cheap.
+
+  `before you start, write me three or four lines on what you understand I want and how you plan
+  to do it. then begin.`
+
+- Ask whether the machine is being used. A loop can sit on a computer that is half idle because
+  nothing told it to take more. One question finds out.
+
+  `is the processor, memory and graphics card on this computer being used fully right now? if
+  something sits idle, tell me what could use it.`
+
+- Run a loop whose only job is to find what got stuck. Long pipelines leave things behind: a file
+  made but never uploaded, a job that died halfway. A sweep that looks for those is cheap and
+  catches what the working loops miss.
+
+  `/loop fire this every 5 minutes for the next 10 days. make sure everything we made is finished
+  and in its place, that nothing got stuck halfway, and fix anything that did.`
+
 - Put a second computer to work. An old laptop or a desktop that sits idle can run its own agent
   with the same brain. Ask the first agent to check what the other one is doing and hand it a job
   when it is free.
