@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask whether a number makes sense before it is reported. A script can print a total ten times too
+  big because a file was read twice, and the agent will pass it on as calmly as a correct one. One
+  question about size and sign catches most of these before you see them.
+
+  `before you report a number, say whether its size and sign make sense against what you would
+  expect, and why. if it looks off, check it before telling me.`
+
+- Have it put the most important finding first. A review or audit that lists twelve points in the
+  order they were found makes you read all twelve to learn which one matters. Sorted by how much
+  each one matters, the first two lines are often enough.
+
+  `list your findings from most to least important. mark anything that would change a result or
+  lose data at the top.`
+
+- Ask what it would do with more time. When a job is finished but rough, the agent usually knows
+  where the weak spots are. Asking costs one line and gives you the next round of work in its own
+  words.
+
+  `when you finish, add a short list: what you would improve or check next if you had another hour,
+  most useful first.`
+
 - Ask it to match the style already in the project. A new script written in a different style from
   the ones around it, with other naming, other indentation and another way of reading settings, makes
   the whole project harder to follow. Have the agent read two or three existing files first.
