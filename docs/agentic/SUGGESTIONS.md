@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Keep every result next to the command that made it. A number in a report is only useful if
+  someone can make it again. Ask the agent to write the exact command and input files under each
+  result, so a later session can rerun it instead of trusting it.
+
+  `under every result you report, give the exact command and the input files that produced it, so
+  anyone can run it again and get the same answer.`
+
+- Prefer plain text formats. Notes in Markdown, tables in CSV and settings in a small text file can
+  be read by any agent, searched by any tool and compared line by line. Spreadsheets, word files
+  and binary formats hide their contents from all three.
+
+  `save notes as .md and tables as .csv unless I ask for something else, so other agents and tools
+  can read and search them.`
+
+- Ask what it would need to finish without you. An agent that stops every half hour for an answer
+  is usually missing one thing: a password it cannot have, a rule nobody wrote down, a choice only
+  you can make. Ask once and fix the cause.
+
+  `what would you need from me to finish this without asking me again? list it, and I will give
+  you what I can in one go.`
+
 - Ask it to explain each command in one line. If the terminal is new to you, the agent is also the
   best teacher you have. A short note beside each command it runs turns a month of watching into a
   working knowledge of the terminal.
