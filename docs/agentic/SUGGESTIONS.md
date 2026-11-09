@@ -5,6 +5,25 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have a second agent check a result before it goes public. The agent that produced a result is
+  the worst judge of it. A second agent that reruns the work without reading the first one's code
+  catches most of what slips through.
+
+  `before this goes public, start a second agent that has not seen your work. have it redo the
+  check on its own and tell me whether it agrees.`
+
+- Tell the loop what finished looks like. "Keep working on X" can run forever. If you know the
+  end state, say it, and say what to do when it is reached.
+
+  `/loop fire this every 5 minutes for the next 10 days. keep working on <the project> until <what
+  done means>. when it is done, check it once more, send me a short report and stop.`
+
+- Keep one dated line per round. A loop that writes one dated line each time it runs leaves a
+  diary you can read in a minute: what it did at 3 a.m., where it got stuck, when it finished.
+
+  `at the end of every round, add one dated line to <the log file> with what you did and what is
+  next.`
+
 - Ask the agent to say back what it understood before a long job. Ten days of work on a
   misunderstanding is expensive. A short note in its own words, before it starts, catches the
   mistake while it is cheap.
