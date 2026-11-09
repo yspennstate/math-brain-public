@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Let it make the small calls itself. An agent that stops to ask about every file name and folder
+  waits for you all night. Say which choices are its own and which are yours, and it keeps moving
+  on the first kind and saves the second kind for one message.
+
+  `decide small things yourself (names, folders, the order of steps) and tell me afterwards. ask
+  me only about money, deleting things that have no copy, or anything public.`
+
+- Have each round say only what changed. A loop that repeats the full status every five minutes
+  buries the one new line under fifty old ones. Ask it to report the difference from the last
+  round, and one short line when nothing moved.
+
+  `in each round, report only what changed since the last one. if nothing changed, write one line
+  saying so and what you are waiting for.`
+
+- Keep a few questions you already know the answer to. After you change how the brain stores or
+  finds notes, ask it the same five questions you asked before. If an answer it used to find is
+  now missing, the change broke something, and you know before you rely on it.
+
+  `here are five questions and the notes that should answer them. after any change to the brain,
+  ask all five and tell me which ones no longer find the right note.`
+
 - Tell it who will read the result. A summary for yourself, one for a colleague in another field
   and one for a referee need different words and different detail. One line naming the reader saves
   a rewrite afterwards.
