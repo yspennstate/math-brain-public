@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it to review changes before you accept them. When another person, or another agent, hands you
+  a batch of changes, a second agent reading them cold catches things the author stopped seeing: a
+  file deleted by accident, a test switched off, a number changed without a reason.
+
+  `read the changes in this branch as a reviewer. list anything deleted, any test removed or
+  skipped, and any number or setting changed, with the file and line for each.`
+
+- Check on your loops from your phone. You do not have to be at the computer to know a long job is
+  fine. If each loop sends a short email or writes its progress to a page you can open on your phone,
+  a glance on the bus tells you whether to worry.
+
+  `once an hour, email me three lines: what you finished, what you are on now, and anything that
+  needs me. keep it short enough to read on a phone.`
+
+- Give every script a --help. A script that only its author knows how to call is lost the moment
+  that session ends. A few lines of help, printed when the script is run with --help, tell the next
+  person or agent what it does and what it needs.
+
+  `add a --help option to every script you write here: one line on what it does, the arguments it
+  takes, and one example command.`
+
 - Keep a file of open questions. Every project has things nobody knows yet: why a number moved,
   whether a source can be trusted, which of two methods is right. Written in one place, they get
   answered one by one; left in old chat sessions, they are forgotten.
