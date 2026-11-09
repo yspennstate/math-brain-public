@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Show it an example of what you do not want. One bad example often teaches more than a page of
+  rules: the report that was too long, the paragraph that sounded like a brochure, the chart nobody
+  could read. Point at it and say what is wrong with it.
+
+  `here is an example of what I do not want: <file>. it is too long and buries the answer. keep
+  your report unlike this one.`
+
+- Ask it to send long output to a file. A command that prints ten thousand lines floods the
+  terminal and fills the agent's memory with noise. Have it write the output to a log and show you
+  only the last few lines, or the lines that matter.
+
+  `when a command prints a lot, send its output to a log file and show me only the last 20 lines
+  and any errors.`
+
+- Have it make shortcuts for what you type every day. If you start the same three things each
+  morning, or retype the same long command, the agent can turn it into one short command or a
+  small script with a clear name.
+
+  `look at the commands I run most often and make short scripts or aliases for the ones I type
+  every day. tell me their names.`
+
 - Give it a place to park ideas for later. A good agent notices ten things worth doing while it
   works on one, and chasing them is how a two-hour task becomes a lost afternoon. A short ideas
   file keeps them without derailing the job.
