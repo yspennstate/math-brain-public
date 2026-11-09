@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Give it a place to park ideas for later. A good agent notices ten things worth doing while it
+  works on one, and chasing them is how a two-hour task becomes a lost afternoon. A short ideas
+  file keeps them without derailing the job.
+
+  `if you notice something worth doing that is not part of this task, add one line to IDEAS.md and
+  carry on. we will go through the list when this is finished.`
+
+- Have it check that a library is alive before relying on it. Agents pick packages from memory,
+  and some of those were abandoned years ago. A quick look at when it was last updated and whether
+  people still use it saves a rewrite later.
+
+  `before you add a new package, check when it was last released and whether it is still
+  maintained. if it looks abandoned, suggest an alternative.`
+
+- Tell it which files are generated. Some files in a project are built by a script: an index, a
+  table, a page made from data. An agent that edits one by hand loses the change at the next build.
+  Say which files are made, and from what.
+
+  `INDEX.md and the tables under results/ are built by make_index.py. never edit them by hand;
+  change the script or its inputs and rebuild.`
+
 - Keep every result next to the command that made it. A number in a report is only useful if
   someone can make it again. Ask the agent to write the exact command and input files under each
   result, so a later session can rerun it instead of trusting it.
