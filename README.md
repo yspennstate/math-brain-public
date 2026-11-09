@@ -25,7 +25,7 @@ You need Python 3.11 or newer; macOS ships 3.9 as `/usr/bin/python3`, so install
 
 On Windows the sparse checkout above works as it is. A full checkout does not: a few paths under `papers/` are longer than 260 characters and git stops with "Filename too long". Before `git sparse-checkout disable`, run `git config core.longpaths true` in the clone, or clone with `git clone -c core.longpaths=true ...`.
 
-The repository has a small brain of its own as well. [navigation/](navigation/) holds one card for every file outside `results/` and `papers/`, one for each directory and README section, and a few concept cards, about 2,150 in all, joined by about 3,400 links. It answers "where is X and what do I open to use it" without walking the tree:
+The repository has a small brain of its own as well. [navigation/](navigation/) holds one card for every file outside `results/` and `papers/`, one for each directory and README section, and a few concept cards, about 2,170 in all, joined by about 4,050 links. It answers "where is X and what do I open to use it" without walking the tree:
 
 ```bash
 python navigation/nav_query.py --entry
@@ -38,6 +38,7 @@ Then, in this order:
 2. **Let the agent write back.** New results go in as packets of cards and links ([AGENTS_GUIDE.md](AGENTS_GUIDE.md) section 6, [docs/adding-cards.md](docs/adding-cards.md)).
 3. **Run the nightly dream** that files, links and consolidates the day's records: [framework/dreaming/README.md](framework/dreaming/README.md).
 4. **For a brain in another field**, start from [examples/field_brain_starter/](examples/field_brain_starter/) and follow [docs/brain-in-an-afternoon.md](docs/brain-in-an-afternoon.md).
+5. **Run agents on it for days.** [docs/agentic/](docs/agentic/README.md) covers terminals, loop and starter prompts, GitHub as storage and what to do when an agent stalls; [agent_tools/skills/](agent_tools/skills/) holds four skills (brain-orient, brain-loop, agent-kickoff, brain-github-storage) to copy into Claude Code or Codex.
 
 ## Running it on the brain framework
 
