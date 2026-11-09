@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Keep files small enough to read in one go. An agent that has to open a five-thousand-line file
+  reads part of it, guesses the rest, and pays for every line it does read. Ask it to split big
+  notes and scripts into pieces with clear names, and to keep an index at the top.
+
+  `when a notes file or script grows past about 500 lines, split it into smaller files by topic and
+  keep a short index file that says what is in each.`
+
+- Have it follow its own install steps in a fresh folder. Setup instructions written from memory
+  skip the step the writer did months ago. Ask the agent to start from an empty folder and follow
+  the page word for word, fixing the page wherever it gets stuck.
+
+  `make a new empty folder and follow the README's setup steps exactly as written. wherever you get
+  stuck or have to guess, fix the README so the next person does not.`
+
+- Ask for the simplest tool that works. Agents like to build: a database where a text file would
+  do, a web page where a printed table would do. Say that you prefer the plain option and want to
+  hear why before anything bigger gets built.
+
+  `use the simplest thing that does the job: a text file before a database, a script before a
+  service. if you think something bigger is needed, tell me why first.`
+
 - Have it reread your request before it says done. A long prompt with three questions in it often
   gets two answered. Ask the agent to go back to your words, count what you asked for, and check
   each part against its report.
