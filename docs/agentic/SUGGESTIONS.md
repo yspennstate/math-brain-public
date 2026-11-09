@@ -5,6 +5,25 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for a dry-run switch on anything that moves or deletes. A script that renames, moves or
+  removes files should be able to print what it would do without doing it. You read the list, and
+  only then run it for real.
+
+  `give this script a --dry-run option that prints every file it would move or delete and changes
+  nothing. run it that way first and show me the list.`
+
+- Have it compare files with diff instead of reading both. Two long versions of a file look the
+  same at a glance. A diff shows exactly which lines changed, and the agent can paste it so you can
+  check the change yourself.
+
+  `compare the old and new config with diff and show me only the lines that changed.`
+
+- Point it at a file instead of pasting a long text. A page of pasted data or notes gets cut, wrapped
+  or mixed up with your instructions. Save it to a file and give the agent the file name; the
+  instructions stay short and the data stays whole.
+
+  `the data is in notes/input.txt. read it from there; my instructions are only what I type here.`
+
 - Have it work on a branch for anything risky. A branch is a side copy of the project inside git.
   If the experiment works you merge it, and if it does not you throw the branch away and the main
   line never knew. It costs one command and makes a bold change cheap to try.
