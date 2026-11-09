@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask what it could not check. A report that sounds complete may rest on a step the agent could not
+  run: a page that would not load, a file it had no permission to open, a test that timed out. A short
+  list of what went unchecked tells you where the soft spots are.
+
+  `end your report with a list of anything you could not verify, and why: no access, too slow,
+  missing file. if there is nothing, say so.`
+
+- Ask which words it searched for. When an agent says the brain or a folder has nothing on a topic,
+  it often searched for one phrase that the notes happen to word differently. Seeing the search terms
+  lets you suggest the words you would have used.
+
+  `when you search the notes or the brain and find nothing, show me the exact words you searched for
+  and try two other ways of saying it before you give up.`
+
+- Keep other people's details out of anything you share. Notes and logs pick up names, email
+  addresses and phone numbers without anyone deciding to keep them. Before a file goes into a public
+  repository or to someone else, have the agent look for them.
+
+  `before this goes anywhere public, search it for names of people, email addresses, phone numbers
+  and home addresses, and list what you find so I can decide what to remove.`
+
 - Keep the prompt next to what it made. A picture, a report or a summary is much easier to improve
   when you can see the exact request that produced it. Ask the agent to save the prompt beside each
   output, so the next attempt starts from what was asked rather than from memory.
