@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Look at a long video through its stills before you sit through it. An agent can take one frame
+  from the middle of every clip and lay them out as a grid of small pictures with the clip names
+  under them. A minute on that page shows a black clip, a wrong order or a repeated shot, and you
+  watch the full video only once it looks right.
+
+  `take one still from the middle of every clip in this video, put them on one page in order with
+  each clip's name under it, and show me the page before I watch the video.`
+
+- When the next step waits on someone's reply, have the agent wait for the reply instead of asking
+  every few minutes. Checking a mailbox on a timer spends a round each time and still answers late.
+  Most agents can start a small waiter that sits until the message lands and then wakes them with
+  it. Ask it to say what it is waiting for, so you know why it is quiet.
+
+  `you are waiting on an answer from <the other agent>. start a waiter that wakes you when that
+  message arrives, tell me in one line what you are waiting for, and carry on with the rest.`
+
 - Paste the whole error, not your summary of it. "It says something about permissions" sends the
   agent guessing. The exact text names the file, the line and the program that complained, and
   the agent can often fix it from that alone. Copy everything from the first red line down, even if
