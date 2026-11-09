@@ -5,6 +5,28 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Give a loop a heartbeat file. From outside, a loop that is working and a loop that hung an hour
+  ago look the same: a quiet terminal. If every round writes the time to one small file, a glance at
+  that file tells you whether it is still going.
+
+  `at the end of every round, write the current time and one line on what you did to
+  HEARTBEAT.txt in the project folder, replacing what was there.`
+
+- Know when a scheduled loop runs out. Some agent tools let a recurring job run only a fixed number
+  of days before it lapses on its own, which is shorter than "for the next 10 days". Put the end
+  date in the loop prompt and have the agent renew the job before it lapses.
+
+  `/loop fire this every 5 minutes until 19 November 03:00. if the scheduler stops the job before
+  then, create it again with the same prompt, and after 19 November 03:00 stop it and send me a
+  final report.`
+
+- Have each round leave one dated line. A loop that only changes files gives you no story of what
+  it did overnight. One line per round in a progress file, newest at the top, reads in a minute
+  and shows where the night went.
+
+  `after each round, add one line at the top of PROGRESS.md: the date and time, what you finished,
+  and what you will do next.`
+
 - Ask it to say what it did not check. A report lists what passed, and the reader assumes that is
   everything. One line naming the parts it skipped, or could not test, tells you where the remaining
   doubt is before you rely on the result.
