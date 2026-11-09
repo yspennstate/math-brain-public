@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have it look for repeated rows. A file joined twice, an export run two days running or a copy
+  pasted by hand can leave the same record in the data more than once, and every total built on it
+  is then too high. A quick count of repeated rows and IDs catches it early.
+
+  `before any totals, check the data for repeated rows and repeated IDs, tell me how many there are
+  and show me two examples.`
+
+- Ask it to check that the parts add up to the whole. When a report splits a total by month, region
+  or category, the pieces should sum back to the total. If they do not, something was dropped or
+  counted twice, and it is far easier to find now than after the report has gone out.
+
+  `whenever you break a total into parts, add the parts back up and show me that they match the
+  total. if they do not, find out why before going on.`
+
+- Have it draft the message you need to send. Once the work is done there is often an email or a
+  note to write about it, and the agent already knows the details. A short draft in plain words
+  that you edit and send yourself saves the last half hour of the job.
+
+  `when you finish, draft a short email I could send to a colleague about the result: what we did,
+  what we found and what happens next. do not send it; leave it for me.`
+
 - Ask for one name per thing, everywhere. When the same column is price in one script, px in another
   and close in a third, every later change has to remember all three, and a search finds only one.
   Picking a single name and using it in code, files and notes keeps the project searchable.
