@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it to explain each command while you are learning the terminal. An agent can run twenty
+  commands in a minute, and you come away with a result but no idea how it got there. One short
+  line per command, saying what it does, turns every session into a small lesson.
+
+  `I am new to the terminal. before each command you run, tell me in one plain sentence what it
+  does and why you need it.`
+
+- Ask how many cases a result rests on. "This works better" can mean a thousand examples or three.
+  A finding built on a handful of cases can flip on the next one, and the agent will not always
+  say so unless asked.
+
+  `next to every finding, say how many examples or data points it is based on, and tell me if
+  that is too few to trust.`
+
+- Have it check a fix from a fresh start. A change can seem to work only because something is
+  still loaded from earlier: an old setting, a file in memory, a variable set by hand. Closing
+  everything and running it again from a new terminal shows whether it really works.
+
+  `once the fix works, open a new terminal, start from nothing and run it again exactly as a new
+  user would. tell me if anything differs.`
+
 - Ask for a dry run before anything that moves, deletes or sends in bulk. A command that renames
   four hundred files or emails a whole list does its damage in a second. Having the agent print
   what it would do first, and wait for your yes, turns a mistake into a line you read and reject.
