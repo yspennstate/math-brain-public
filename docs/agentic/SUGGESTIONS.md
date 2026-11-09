@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have it read a tool's own help before guessing. Agents remember options for most tools, and
+  sometimes they remember an older version or a different tool. Running the tool's help first
+  costs a second and saves the error that follows a made-up option.
+
+  `before you use a command-line tool you have not used in this project, run its --help and use
+  the options it actually lists.`
+
+- Ask it to link each new note to related ones. A brain is more than a pile of notes: what makes
+  recall work is the links between them. When the agent saves something, have it name two or
+  three earlier notes that bear on it.
+
+  `when you save a new note to the brain, add links to the two or three existing notes most
+  closely related to it, and say in a few words how they connect.`
+
+- Let long jobs run in the background. A build, a download or a big test run does not need the
+  agent to sit and watch it. Ask it to start the job in the background, carry on with something
+  else, and come back when it finishes.
+
+  `start the long job in the background and write its output to a log. while it runs, work on the
+  next item, and check the log when it is done.`
+
 - Show it an example of what you do not want. One bad example often teaches more than a page of
   rules: the report that was too long, the paragraph that sounded like a brochure, the chart nobody
   could read. Point at it and say what is wrong with it.
