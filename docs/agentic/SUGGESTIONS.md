@@ -5,6 +5,28 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Save the expensive part before the risky part. A long job often ends with a short step that can
+  fail: decoding, writing a file, uploading. If the hours of work before it are only in memory, a
+  failure at the end loses all of them. Ask the agent to write the costly intermediate result to
+  disk first, so a failed last step can be redone alone.
+
+  `write the result of the slow step to disk before you start the final step, and make the final
+  step something I can rerun from that file without redoing the rest.`
+
+- Let one agent point out what another is slowing down. When several jobs share a computer, one
+  can quietly starve another (of network, memory or disk). An agent that notices should say so to
+  the job's owner with the numbers, rather than stopping someone else's work on its own.
+
+  `if you see that another job on this machine is slowing yours, measure it, and leave a short note
+  for whoever runs that job with what you saw. do not stop it yourself.`
+
+- Give a memory limit along with the task. A job that fits on paper can still run out of memory at
+  its peak. Telling the agent how much it may use makes it plan for the peak instead of finding out
+  when the job dies.
+
+  `this computer has about 10 GB free. keep the job under 8 GB at its peak, and if it would need
+  more, process it in smaller pieces.`
+
 - Let agents on different computers share one queue. If two machines can both do a job, a shared
   list (a file in a GitHub repository works) where each one marks the item it took keeps them from
   doing the same work twice, and either can pick up what the other left.
