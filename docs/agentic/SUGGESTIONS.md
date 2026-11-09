@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Give a hard problem a time budget. An agent stuck on a bug will keep trying variations for as long
+  as you let it, and an hour can go by on the fifth version of the same idea. Saying how long it has,
+  and what to hand back when the time runs out, turns a dead end into a short report you can act on.
+
+  `spend at most twenty minutes on this. if it is not fixed by then, stop and tell me what you tried,
+  what you ruled out and what you would try next.`
+
+- Ask for a second source on any fact that matters. A date, a figure or a quote that one web page
+  gives can be a copying error passed along from page to page. Two independent sources that agree are
+  worth far more than one, and when they disagree you want to know.
+
+  `for every number or date that the conclusion rests on, find a second source that does not copy the
+  first. if the two disagree, show me both.`
+
+- Ask it to lay out the options before a choice you will live with. Picking a library, a file format
+  or a way to store data is cheap to change on day one and expensive a month later. Two or three
+  options with what each costs and gives up let you choose instead of inheriting its first idea.
+
+  `before you pick a database for this, give me two or three options, what each is good and bad at
+  for this project, and which one you would choose.`
+
 - Keep outputs in their own folder. When results land beside the scripts that made them, the code
   folder fills with files nobody can tell apart from source, and a clean-up can delete the wrong
   thing. One output folder can be emptied and rebuilt without touching the code.
