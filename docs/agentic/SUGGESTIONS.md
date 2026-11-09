@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it what it expects before it runs anything. If the agent writes down the result it expects
+  before a test or a calculation, a surprise shows up straight away instead of being explained after
+  the fact. Most real mistakes turn up as a result nobody predicted.
+
+  `before you run this, write one line saying what result you expect and why. afterwards, say whether
+  it matched and what you make of it if it did not.`
+
+- Have it put big numbers in terms you already know. 40,000 rows, 3 GB or 0.2 seconds mean little
+  on their own. Compared with something familiar, like a day of data or a film's size, you can tell
+  at a glance whether a number is fine or wrong.
+
+  `when you report a size, a count or a time, add a short comparison that tells me whether it is a
+  lot or a little for this project.`
+
+- Ask for the smallest version that works first. A full tool planned all at once takes longer and
+  hides its mistakes until the end. A rough version that does one thing end to end shows you early
+  whether the idea is right, and the rest can be built on it.
+
+  `build the smallest version that does the whole job once, roughly. show it to me before you add
+  options, polish or speed.`
+
 - Ask what it could not check. A report that sounds complete may rest on a step the agent could not
   run: a page that would not load, a file it had no permission to open, a test that timed out. A short
   list of what went unchecked tells you where the soft spots are.
