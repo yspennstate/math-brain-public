@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for one name per thing, everywhere. When the same column is price in one script, px in another
+  and close in a third, every later change has to remember all three, and a search finds only one.
+  Picking a single name and using it in code, files and notes keeps the project searchable.
+
+  `use one name for each thing across every script, file and note. if you find two names for the
+  same thing, list them and ask me which to keep.`
+
+- Have it check how big a file is before reading all of it. An agent that opens a two-gigabyte log
+  in one go can stall, run out of memory or fill its own working space with lines it does not need.
+  The size and the first few lines are usually enough to decide how to read the rest.
+
+  `before you read a file in full, check its size and line count. if it is large, read the first
+  and last few lines and search it instead of loading the whole thing.`
+
+- Ask it to use a date library rather than doing the arithmetic by hand. Adding thirty days, finding
+  the last business day of a month or counting the days between two dates goes wrong around month
+  ends, leap years and clock changes. A tested library already handles those.
+
+  `do date and time arithmetic with a proper date library, never by adding numbers to days or
+  months yourself, and show me one example around a month end.`
+
 - Ask for short functions that each do one job. A two-hundred-line function that reads, cleans,
   computes and plots is hard to test and hard to change without breaking something. Small pieces
   with plain names can be checked one at a time and reused later.
