@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have it search a big file before reading it. An agent that reads a whole log or data file to find
+  one line fills its memory with text it does not need and gets slower and vaguer for the rest of
+  the session. A search for the right words, then a read of just that part, keeps it sharp.
+
+  `for any file over a few hundred lines, search it for what you need first and read only the lines
+  around the match. never read a whole large file to find one thing.`
+
+- Ask it to read back what it saved. A save can fail quietly: a full disk, a wrong folder, a file
+  cut short. Reading the first and last lines back, or checking the size, takes a second and turns
+  "I saved it" into something you can trust.
+
+  `after you write an important file, read back its first and last few lines and its size, and tell
+  me if anything looks cut short.`
+
+- Keep one fact to a note. A note that covers five things gets found for one of them and then has
+  to be read in full every time. Short notes with one fact each, linked to each other, are easier
+  for an agent to find and to correct when one of them turns out wrong.
+
+  `when you add to the brain, write one fact per note, with a title that says the fact, and link it
+  to the notes it relates to.`
+
 - Ask it to say which folder it is working in. With two copies of a project, or a terminal that
   opened somewhere unexpected, an agent can edit the wrong one and report success. One line naming
   the folder at the start of a task makes that mistake visible before it costs anything.
