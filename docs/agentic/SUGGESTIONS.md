@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Write to it in whatever language you think in. Agents read most languages well, and a request
+  written in your own words is clearer than one translated in your head. Say which language you
+  want the notes and the code comments in, so the brain stays readable for everyone who uses it.
+
+  `I will write to you in Spanish. answer me in Spanish, but write the notes and code comments in
+  English so the others on the project can read them.`
+
+- Try a change to the brain on a copy first. A new way of storing or finding notes can lose things
+  in ways you only notice later. Run it on a copy, compare what the copy and the original find for
+  the same questions, and switch only when the copy does at least as well.
+
+  `make a copy of the brain folder, apply the change there, and run the same ten questions on both.
+  show me what each one found before we touch the real one.`
+
+- Let the loop read its instructions from a file. A loop started with a long prompt keeps that
+  prompt until you stop it. If the prompt only says to read a file and follow it, you can change
+  the plan by editing the file, and the next round picks it up.
+
+  `/loop fire this every 10 minutes for the next 7 days. read PLAN.md and do the next step it
+  lists. I will change PLAN.md when I want something different.`
+
 - Tell it when you need it by. "Make the slides" means one thing for tomorrow morning and another
   for next month. A deadline lets the agent choose how far to go, and tell you early if the job will
   not fit in the time.
