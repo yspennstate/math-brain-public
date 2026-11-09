@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have it make a small fake dataset to practise on. When the real data is private, huge or slow to
+  load, a hundred made-up rows with the same columns let the agent build and test the code freely.
+  Once it works, you point it at the real file.
+
+  `make a small fake version of this file with the same columns and about 100 made-up rows, save it
+  as data/sample_fake.csv, and build the script against that first.`
+
+- Ask for a one-line caption under every chart and picture. A chart pasted into notes means little
+  a week later without a word on what it shows. A caption saying what is plotted, from which data
+  and what to notice makes it readable on its own.
+
+  `under every chart or picture you make, add one line saying what it shows, which data it came from,
+  and the one thing to notice.`
+
+- Have it save a copy of a web page you depend on. Pages change or disappear, and a project built on
+  a rule or a table from one can lose its footing. Ask the agent to keep a dated copy in the project
+  so you can always see what it said.
+
+  `this page matters to the project. save a copy of its text in sources/ with today's date and the
+  address in the file name.`
+
 - Ask which account it is using before anything online. Many people have a personal and a work
   login for the same service, or two cloud projects. An agent that uploads, sends or creates
   something under the wrong one makes a mess that is slow to undo. One line naming the account first
