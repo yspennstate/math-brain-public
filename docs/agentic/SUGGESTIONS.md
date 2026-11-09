@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for numbers rounded to what they mean. A result printed as 0.43829174 suggests a precision
+  nobody measured, and the extra digits hide the part that matters. Two or three significant
+  figures are usually honest and much easier to compare.
+
+  `round the numbers in your reports to two or three significant figures unless I ask for more.
+  keep the full values in the data files.`
+
+- Keep one command that rebuilds everything. When a result comes from five scripts run in the
+  right order, nobody remembers the order a month later. A single script that goes from the raw
+  data to the final figures makes the work repeatable by you, a colleague or a new session.
+
+  `write run_all.sh (or run_all.py) that rebuilds every output from the raw data in the right
+  order, and keep it working whenever you add a step.`
+
+- Fix the random seed. Anything that shuffles, samples or trains gives a slightly different answer
+  each run, and then you cannot tell a real change from noise. A fixed seed makes the same run give
+  the same result.
+
+  `wherever the code uses randomness, set a fixed seed and write it in the output, so running it
+  again gives the same numbers.`
+
 - Ask for paths that work on another computer. A script that opens a file by its full path from
   your home folder breaks the moment someone else runs it, or you move the folder. Paths written relative to the
   project folder travel with it.
