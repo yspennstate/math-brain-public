@@ -5,6 +5,26 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Give the loop a fallback for when it runs out of something. A daily upload limit, a usage cap or
+  a credit balance will stop the main job partway through the day. Say what the loop should do
+  instead, so the rounds are not wasted.
+
+  `/loop fire this every 5 minutes for the next 10 days. keep making <the things>. when <the
+  limit> is used up for the day, finish what is in hand and spend the rounds on <the other job>
+  until it resets.`
+
+- Have every round read a shared inbox first. If you or another agent leave a note in one file,
+  each loop picks it up within five minutes without you visiting its window.
+
+  `at the start of every round, read <the inbox file>. act on anything new meant for you before
+  your own next step, and mark it as read.`
+
+- Ask for the bottleneck, not the next step. When a project feels slow, an agent can usually find
+  the one thing holding the rest up.
+
+  `find what is slowing <the project> down the most right now, fix that one thing, and tell me in
+  two lines what it was and what changed.`
+
 - Point a loop at a task list, not one task. If you keep a list of your top priorities in a file or
   a repository, one loop can work through it for days and pick up whatever you add.
 
