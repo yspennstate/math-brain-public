@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have it ask before anything leaves your computer. Reading and writing files on your own machine
+  is easy to undo. An email sent, a post published or a file uploaded to a shared folder is not. A
+  rule that the agent stops and shows you the thing first costs one extra reply.
+
+  `you may read and write files here freely, but before you send an email, post anything or upload a
+  file anywhere, show me exactly what will go and wait for me to say yes.`
+
+- Ask for charts whose axes do not mislead. A bar chart whose axis starts at 95 makes a two percent
+  difference look like a doubling, and an agent will pick whatever range the plotting library
+  chooses. Asking for honest axes, labelled with units, keeps the picture true to the numbers.
+
+  `start bar chart axes at zero, label both axes with their units, and if you zoom in on a small
+  range, say so in the caption.`
+
+- Test it on data it has not seen. Code tuned on one file will often work on that file and nothing
+  else, because the agent fixed each problem it met there. Keeping a second file aside and running
+  it only at the end shows whether the code works in general.
+
+  `build this using january's file only. when you think it is done, run it once on february's file
+  and tell me what broke, without changing anything first.`
+
 - Give a hard problem a time budget. An agent stuck on a bug will keep trying variations for as long
   as you let it, and an hour can go by on the fifth version of the same idea. Saying how long it has,
   and what to hand back when the time runs out, turns a dead end into a short report you can act on.
