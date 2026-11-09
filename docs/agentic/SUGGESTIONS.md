@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for a short summary at the top of long notes. A note that grows over weeks gets read from
+  the top by the next agent, and the conclusion is often buried at the bottom. Two or three lines
+  at the head saying what it found and what is still open save every later reader the scroll.
+
+  `keep a three-line summary at the top of each note you write: what it is about, what we found,
+  and what is still open. update it when the note changes.`
+
+- Give it a real sample of the input. A description of the data ("a CSV of prices") leaves the
+  agent guessing at column names, date formats and empty cells. Twenty real lines settle all of
+  that before it writes code that breaks on the first file.
+
+  `here are the first 20 lines of the real file. read them before writing the parser, and tell me
+  anything in them that surprises you.`
+
+- Have it date what it finds online. A version number, a price or a rule copied from a web page is
+  true on the day it was read. Ask the agent to write the date and the address next to each fact,
+  so a later session knows how old it is and where to check again.
+
+  `when you take a fact from a web page, write the date you read it and the page address next to
+  it in the note.`
+
 - Tell it how sure the answer needs to be. A quick estimate for a chat and a number that goes into
   a paper need very different amounts of checking. Say which one you want, and the agent can spend
   a minute or an hour accordingly.
