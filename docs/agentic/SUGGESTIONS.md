@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it to correct its own numbers out loud. An agent that sends a warning and then finds it
+  measured wrong should say so in a new message, with both numbers and the reason, rather than
+  quietly changing course. Others may already be acting on the first one.
+
+  `if you find that a number you reported earlier was wrong, send a short correction straight away:
+  the old number, the new one, and how you measured it the second time.`
+
+- Have agents reuse each other's finished work. When two computers both need the same slow result
+  (an index, a converted file, a computed table), one can publish it and the other can check it and
+  take it, instead of computing it again. Ask the agent to look for a published copy first.
+
+  `before you compute this from scratch, check whether another computer has already published it.
+  if so, check a sample of it against your own and use it if they match.`
+
+- Measure a falling resource twice before raising the alarm. A single reading of free disk or
+  memory can mislead: a temporary file, a different unit, a reading from a different tool. Two
+  readings with the same tool a few minutes apart show the real trend.
+
+  `before you warn anyone that disk space or memory is running out, take two readings with the same
+  tool five minutes apart and report the rate, not just one number.`
+
 - Ask for the result where you will see it. A finished result buried in a log file on another
   computer may as well not exist. Say where you look (an email, a page in your Downloads folder, a
   file in the repository's front page) and the agent will put it there.
