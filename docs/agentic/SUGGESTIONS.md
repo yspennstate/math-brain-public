@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask where each fact came from. An agent that writes "the library supports this" may be
+  remembering an older version, or guessing. A source next to each claim, a file, a page or a
+  command it ran, lets you check the one claim that matters without redoing the work.
+
+  `when you state a fact in a note or a report, put where it came from beside it: the file and
+  line, the link, or the command you ran.`
+
+- Give it a chores list for slow rounds. Some rounds the main task is waiting on something: a
+  download, a long test, you. A short list of small jobs (tidy a folder, fix a typo, update a
+  README) keeps those rounds useful instead of idle.
+
+  `if the main task is blocked this round, take the top item from CHORES.md instead, do it, and
+  cross it off. Never let a chore take more than one round.`
+
+- Let it learn from your old prompts. The things you keep asking for are the best guide to what
+  you care about. Point the agent at your past prompts or notes once, and ask it to write down the
+  patterns it sees, so later rounds work the way you would.
+
+  `read my last few hundred prompts in <the folder>, write down in ABOUT_ME.md the five things I
+  ask for most and how I like work reported, and read that file at the start of every round.`
+
 - Keep a list of dead ends. An agent that tried something and watched it fail will, a week later,
   try it again unless the failure is written down somewhere it reads. One line per dead end is
   enough: what was tried, what happened, and why it is not worth another go.
