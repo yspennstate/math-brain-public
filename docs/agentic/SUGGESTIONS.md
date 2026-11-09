@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Give a long loop a cheap check first and do the heavy work only when it finds a change. Most
+  rounds of a ten-day loop find the world as it was five minutes ago. A one-line test (has the
+  file changed, has the other repository moved, has a reply come) settles that in seconds, and the
+  slow part, a rebuild, a merge or an upload, runs only on the rounds that need it.
+
+  `each round, first check whether <the thing> has changed since last time. if it has not, write
+  one line saying so and stop. only when it has, do the full update.`
+
+- Have agents mark each message from another agent as handled. When agents talk through a shared
+  inbox, a note that was answered but never marked comes back every round, and each time the agent
+  rereads it and wonders whether it owes a reply. Ask it to answer what needs an answer and mark
+  everything else as seen, so the inbox shows only what is really open.
+
+  `when you read a message from another agent, either answer it or mark it handled the same round,
+  and say in one line which you did. never leave a message you have dealt with sitting as new.`
+
 - When a loop runs the same checks every round, have it save them as one small script. Typed out
   fresh each time, five commands are five chances for a slip and a lot of reading. Saved once, the
   round becomes one line, and the script can stop with a clear message the moment a result is not
