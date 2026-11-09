@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for tables sorted by what you care about. A table in whatever order the data happened to come
+  in makes you hunt for the row that matters. Sorted by the column you will act on, the answer is
+  usually in the first line or two.
+
+  `sort every table you give me by the column that matters most for the question, largest first,
+  and say which column you sorted by.`
+
+- Have it read the release notes before an upgrade. A newer version of a library or tool can rename
+  an option or change a default, and the failure shows up somewhere far from the upgrade. A short
+  read of what changed, before installing, tells you what to test.
+
+  `before you upgrade any package, read its release notes from my version to the new one and list
+  anything that could affect this project.`
+
+- Do not let it run things as administrator unless it must. An agent that hits a permission error
+  will sometimes reach for admin rights, which lets a mistake touch the whole computer instead of one
+  folder. Ask it to stop and explain why it needs them first.
+
+  `never run a command as administrator or with sudo without asking me first and saying exactly why
+  it needs it.`
+
 - Have it list the assumptions it made. Every piece of work rests on a few guesses about what you
   meant: which file, which year, whether blanks count as zero. Written down at the end, they take
   seconds to check, and a wrong one is caught before it spreads into the next step.
