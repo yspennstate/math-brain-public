@@ -5,6 +5,26 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it to number the steps it proposes. When an agent offers a plan, numbered steps let you
+  answer in a few words ("do 1 and 3, skip 2") instead of retyping what you want. It also makes the
+  report afterwards easy to check against the plan.
+
+  `when you propose a plan, number the steps. I will answer with the numbers I want you to do.`
+
+- Keep the commands that worked in one file. Agents rediscover the same install command or the same
+  fix for a stubborn error again and again. A file of commands that worked, one line each with a
+  note on what it is for, saves that search in every later session.
+
+  `when a command finally works after some trial and error, add it to COMMANDS.md with one line on
+  what it does. check that file before you try something new.`
+
+- Have it ask its questions as a choice, with its own pick marked. A loose question waits until you
+  have time to think. Two or three options with the agent's recommendation on top can be answered
+  from a phone in seconds, and the agent can carry on with the rest meanwhile.
+
+  `if you need a decision from me, give me two or three options, put the one you recommend first,
+  and keep working on anything that does not depend on my answer.`
+
 - Ask it to point out instructions that contradict each other. After a few weeks a project
   collects rules that pull in different directions, and an agent will quietly pick one. Have it
   stop and name the clash instead, so you decide which rule stands.
