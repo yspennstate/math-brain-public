@@ -5,6 +5,25 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Point a loop at a task list, not one task. If you keep a list of your top priorities in a file or
+  a repository, one loop can work through it for days and pick up whatever you add.
+
+  `/loop fire this every 5 minutes for the next 10 days. keep working on the top 10 highest
+  priority tasks in <the task list>. mark what you take and what you finish.`
+
+- Use a sweeping loop for things that pile up unfinished. Some work is never one job: results that
+  never got written up, files that were made but never uploaded. A sweep finds the next one each
+  round, finishes it, and moves on.
+
+  `/loop fire this every 5 minutes for the next 10 days. find the next result we have that is not
+  written up yet, write it up and publish it, then go to the next one.`
+
+- Chain one prompt onto another. A loop can wait for something else to be done first. Say what it
+  waits for, and what it does after.
+
+  `/loop fire this every 5 minutes for the next 10 days. once the tests described above are on the
+  task list, start building and running them.`
+
 - Ask for a short summary in a fixed shape. When you come back to a terminal after hours away, a
   long report is hard to read. Ask for two parts: what you asked for, in your words, and what has
   been done so far.
