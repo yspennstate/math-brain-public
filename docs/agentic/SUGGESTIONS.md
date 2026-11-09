@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it to point out instructions that contradict each other. After a few weeks a project
+  collects rules that pull in different directions, and an agent will quietly pick one. Have it
+  stop and name the clash instead, so you decide which rule stands.
+
+  `if two of my instructions disagree, do not choose between them silently. tell me which two,
+  quote both, and say which one you would follow and why.`
+
+- See what changed before it goes to GitHub. A push is easy to make and awkward to take back once
+  others have pulled it. Ask the agent to list the files it is about to send and show the changed
+  lines for anything you did not expect.
+
+  `before you push, list every file in the commit and show me the changed lines of any file I did
+  not ask you to touch.`
+
+- Give it a short list of words to keep out of public writing. Pages written by an agent drift
+  toward the same filler words and the same bold headings. A list of a dozen words to avoid, kept
+  in the project folder, does more than asking for a better style every time.
+
+  `before you publish a page, check it against STYLE.md in this folder. rewrite any sentence that
+  uses a word on the avoid list.`
+
 - Say what it may delete and what it never deletes. An agent cleaning up to save disk space will
   happily remove whatever looks old. Give it two short lists, and tell it to ask about anything on
   neither.
