@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for output in a fixed order. If a script prints its results in whatever order the computer
+  happens to find them, two runs that agree look different, and a real change hides among the
+  shuffled lines. Sorted output can be compared line by line.
+
+  `sort every list and table your scripts write, by name or date, so I can compare two runs with
+  a simple diff.`
+
+- Have it show a few rows of the result, not only the count. "Wrote 4,812 rows" says nothing about
+  whether the rows are right. Five real lines from the output let you spot a wrong column, a
+  shifted date or an empty field at a glance.
+
+  `after each step that writes a file, print the first five rows of it so I can see what it looks
+  like.`
+
+- Ask scripts to say so when they find nothing. A search that quietly prints nothing looks the same
+  as one that never ran. One line saying "no matches for ..." tells you the script worked and the
+  answer really is empty.
+
+  `when a script finds nothing, have it print a line saying what it searched for and that nothing
+  matched. never exit silently.`
+
 - Ask for a .gitignore before the first commit. Without one, an agent will happily commit caches,
   large data files and the odd file with a key in it, and getting those back out of the history
   is far harder than never putting them in.
