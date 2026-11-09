@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for a time zone on every date and time. A log line that says 14:00 means one thing on your
+  laptop, another on a server and a third in a spreadsheet someone opens abroad. Writing the zone,
+  or using UTC throughout, saves a confusing hour of mismatched records later.
+
+  `store and print every time with its time zone, or in UTC with a Z at the end. never a bare
+  clock time in a file.`
+
+- Have it tell you when the job turns out bigger than it looked. A small fix sometimes opens onto
+  a much larger problem, and an agent left alone will often keep digging for hours. A quick note
+  at that point lets you decide whether the bigger job is worth doing now.
+
+  `if this turns out to need more than about an hour, or changes to more than three files, stop
+  and tell me what you found before going further.`
+
+- Ask it to install things inside the project, not system-wide. A package installed for the whole
+  computer can break another project that needed a different version. A virtual environment or a
+  local folder keeps each project's tools to itself.
+
+  `install any packages this project needs into a virtual environment in the project folder. ask
+  me before installing anything for the whole computer.`
+
 - Have it describe the data before it analyses it. How many rows, which dates, how many values are
   missing: three facts that catch a truncated download or a wrong file before any chart is drawn
   from it.
