@@ -5,6 +5,26 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have the agent improve your prompt. A loop prompt written in a hurry leaves things out: an end
+  date, what done means, what to do when something runs out. Hand it to an agent before you start
+  the loop and ask what is missing.
+
+  `here is a loop prompt I am about to run: <the prompt>. tell me what is missing or unclear,
+  then give me a better version I can paste.`
+
+- Say who the result is for. A report for you, a page for strangers on GitHub and an email to a
+  colleague need different words. One line naming the reader saves a rewrite.
+
+  `write this for <the reader>: someone who <what they know and don't know>. keep it to what they
+  need.`
+
+- Ask for the pieces before the work. A big job described in one sentence is easy to start and
+  hard to finish. Ask the agent to break it into numbered pieces and put them in its NEXT file, so
+  each round takes the next one and you can see how far it has got.
+
+  `break <the job> into numbered pieces small enough to finish in one round each, write them into
+  NEXT.md, and then start on piece 1.`
+
 - Ask how to undo a change before it is made. When an agent is about to change something that
   already works, a setting, a script, a shared file, ask it first to save the old version and
   say how to put it back. Undoing then takes one line.
