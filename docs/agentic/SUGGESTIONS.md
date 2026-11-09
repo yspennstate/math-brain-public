@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it to tag the versions that worked. A project goes through good states and broken ones, and
+  finding the last good one in a long history is slow. A git tag on each version you were happy
+  with gives you a name to go back to.
+
+  `when a version works and I say so, tag it in git with a short name like v1-working and the date,
+  and tell me the tag.`
+
+- Have it count rows before and after every cleaning step. Removing duplicates, blanks or bad
+  dates can quietly throw away far more than expected. A count before and after each step shows
+  at once where data went missing.
+
+  `print how many rows there are before and after each cleaning step, and stop and tell me if any
+  step drops more than five percent.`
+
+- Ask for a proofread before anything goes public. A README, a post or an email written in a hurry
+  carries typos, a wrong name or a half-finished sentence. One pass by the agent before it leaves
+  your computer catches most of them.
+
+  `before this goes public, proofread it for spelling, grammar, names and numbers, and list what you
+  changed.`
+
 - Have it make a small fake dataset to practise on. When the real data is private, huge or slow to
   load, a hundred made-up rows with the same columns let the agent build and test the code freely.
   Once it works, you point it at the real file.
