@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Compare every result with a simple baseline. A model that predicts sales to within ten percent
+  sounds good until you learn that "same as last week" does just as well. Ask the agent to put the
+  plainest possible method beside its answer, so you can see what the clever part adds.
+
+  `next to every result, show what a simple baseline gets (the average, or the last value carried
+  forward), so I can see how much better the method really is.`
+
+- Ask it to check that a backup can be restored. A backup that has never been opened is a hope,
+  not a backup. Have the agent restore one file from it into a spare folder and compare it with the
+  original.
+
+  `after you set up the backup, restore one file from it into a temporary folder and confirm it is
+  identical to the original. tell me if anything differs.`
+
+- Have it read the formulas in a spreadsheet, not just the numbers. A total that looks right can
+  come from a formula that skips a row or points at the wrong sheet. Ask the agent to list the
+  formulas behind the key cells and check what each one covers.
+
+  `open the spreadsheet and list the formula behind every total and average, with the range it
+  covers. flag any that leave out rows or refer to another sheet.`
+
 - Keep the settings in one file. When a folder name, a threshold or a date range is typed into
   five scripts, changing it means finding all five, and the one you miss gives a quietly different
   answer. One small settings file that every script reads keeps them in step.
