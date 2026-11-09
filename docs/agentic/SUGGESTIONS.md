@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Tell it which computer and shell you are on. An agent that assumes a Mac will hand a Windows user
+  commands that fail on the first line, and the other way round. One sentence at the top of the
+  project notes stops a whole class of errors.
+
+  `I am on Windows 11 and the terminal is PowerShell. give me commands for that, and say so when a
+  step works differently on a Mac or Linux.`
+
+- Put the date at the front of file names. Reports, logs and results named report_final, report_new
+  and report_new2 stop meaning anything after a week. A name that starts with the date sorts itself
+  and tells you at a glance which one is newest.
+
+  `name every report, log and result file starting with the date, like 2026-11-09_backtest.md, so
+  they sort by day. never overwrite an older one.`
+
+- Have it write down the versions it installs. A setup that worked in March can break in June
+  because a package moved on. Ask the agent to keep a list of what it installed and at which
+  version, so the same setup can be rebuilt later or on another computer.
+
+  `whenever you install a package or tool, add its name and exact version to SETUP.md, with the
+  command you used.`
+
 - Keep files small enough to read in one go. An agent that has to open a five-thousand-line file
   reads part of it, guesses the rest, and pays for every line it does read. Ask it to split big
   notes and scripts into pieces with clear names, and to keep an index at the top.
