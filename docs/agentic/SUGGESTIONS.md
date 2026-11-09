@@ -5,6 +5,28 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Tell it who will read the result. A summary for yourself, one for a colleague in another field
+  and one for a referee need different words and different detail. One line naming the reader saves
+  a rewrite afterwards.
+
+  `this summary is for a colleague who knows statistics but not this project. keep it to one page
+  and explain any term from the project the first time it appears.`
+
+- Learn three keys before anything else in a terminal. The up arrow brings back the last command so
+  you can run it again or change it. Tab finishes a file or folder name for you. Ctrl+C stops what
+  is running. With those three, most of the fear of the terminal goes.
+
+  `I am new to the terminal. show me the up arrow, Tab and Ctrl+C on a harmless command, and tell
+  me how to copy text out of this window on my computer.`
+
+- Use a loop to follow new papers in your field. Keeping up with a busy subject takes an hour a day
+  by hand. A daily loop can search for new papers on your topics, write one line on each and keep
+  the ones that touch your work in the brain, so the reading list builds itself.
+
+  `/loop fire this every day for the next 30 days. search for new papers on <your topics> from
+  the last day, write one line on each in READING.md, and put the ones that bear on our work into
+  the brain with a note on why.`
+
 - Ask it to review changes before you accept them. When another person, or another agent, hands you
   a batch of changes, a second agent reading them cold catches things the author stopped seeing: a
   file deleted by accident, a test switched off, a number changed without a reason.
