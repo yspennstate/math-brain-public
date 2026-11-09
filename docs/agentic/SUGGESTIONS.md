@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Turn a routine you keep explaining into a skill. If you tell every new session the same five
+  steps (where the notes are, how to search them, what to check before saving), write them once as
+  a skill file. The agent loads it when the task comes up, and you stop repeating yourself.
+
+  `write a skill called brain-search that explains, step by step, how to search my notes and read
+  a result in full. keep it under a page and test it in a new session.`
+
+- Ask it to note which copy of the brain it is reading. With the brain on two computers, or a
+  laptop copy and the one on GitHub, an answer can come from the stale one. One line naming the
+  folder and the date of its last update makes that visible.
+
+  `before you answer from the brain, say which copy you read (the folder) and when it was last
+  updated. if it is more than a day old, pull the newest one first.`
+
+- Hand a new person a starter prompt, not a tour. Someone joining a project learns fastest when
+  their first session starts from a prompt that names the goal, the main folders and the rules.
+  Ask the agent to write that prompt from what it knows of the project.
+
+  `write a starter prompt a newcomer can paste into their first session: what this project is for,
+  where the notes and code live, the three rules that matter most, and a first small task.`
+
 - Give a loop a heartbeat file. From outside, a loop that is working and a loop that hung an hour
   ago look the same: a quiet terminal. If every round writes the time to one small file, a glance at
   that file tells you whether it is still going.
