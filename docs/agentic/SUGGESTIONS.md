@@ -5,6 +5,28 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- When you ask whether an idea is already known, ask for the closest known result too. A plain "not
+  found" tells you little: the search may have missed it, or the idea may sit one step from a paper
+  everyone cites. The nearest published statement, and what separates it from yours, is what you
+  need to judge whether the idea is new and how to describe it.
+
+  `is this already in the literature? if not, give me the closest published result, where it is,
+  and exactly what it would take to get from that result to mine.`
+
+- Ask it to list the sources it could not read. A paywall, a failed download or a page that came
+  back as binary is easy to skip over in a report, and then "no paper says this" quietly means "no
+  paper I managed to open says this". A short list of what was not read tells you where to look
+  next.
+
+  `at the end, list every source you meant to read but could not open, and why.`
+
+- Ask for the exact sentence when it says a source supports a claim. A summary of a paper can drift
+  from what the paper says, especially after a long session. Asking for the line itself, with the
+  section or page it comes from, lets you check it in seconds.
+
+  `when you say a paper or document says something, quote the sentence and give its section or
+  page number.`
+
 - Have it write dates as year-month-day. 03/04/2026 is March in one country and April in another,
   and files named that way sort in the wrong order. 2026-03-04 means one thing everywhere and sorts
   correctly as plain text, in file names, folder names and tables alike.
