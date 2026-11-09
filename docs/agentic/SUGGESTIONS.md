@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Keep outputs in their own folder. When results land beside the scripts that made them, the code
+  folder fills with files nobody can tell apart from source, and a clean-up can delete the wrong
+  thing. One output folder can be emptied and rebuilt without touching the code.
+
+  `write every generated file to out/ and nothing generated next to the scripts. I should be able
+  to delete out/ and get it all back by running the scripts again.`
+
+- Ask it to round only at the end. Rounding a number halfway through a calculation and then using
+  the rounded value again lets small errors pile up, and the final figure drifts. Keep full
+  precision inside the work and round once, for display.
+
+  `keep full precision in every intermediate step and round only the numbers you show me at the
+  end.`
+
+- Have it comment the surprising parts, not the obvious ones. A comment that says "add one to the
+  counter" helps nobody. A comment that says why a value is skipped or why a strange-looking step is
+  needed is the one a later reader, or a later agent, actually needs.
+
+  `add a short comment wherever the code does something a reader would not expect, saying why. do
+  not comment lines that already say what they do.`
+
 - Have it look for repeated rows. A file joined twice, an export run two days running or a copy
   pasted by hand can leave the same record in the data more than once, and every total built on it
   is then too high. A quick count of repeated rows and IDs catches it early.
