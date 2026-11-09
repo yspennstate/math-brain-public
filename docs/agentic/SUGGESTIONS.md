@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it to explain each command in one line. If the terminal is new to you, the agent is also the
+  best teacher you have. A short note beside each command it runs turns a month of watching into a
+  working knowledge of the terminal.
+
+  `while you work, put one plain line under each command you run saying what it does, so I can
+  learn the terminal as we go.`
+
+- Have it look for an existing script before writing a new one. In a project that has run for a
+  while, the tool it is about to write often already exists under another name. Ask it to search
+  first; a second copy of the same tool is how two versions drift apart.
+
+  `before you write a new script, search the project for one that already does this or nearly
+  does. if you find one, use it or extend it, and tell me which.`
+
+- Start a fresh session when it goes in circles. A very long conversation fills up with old
+  attempts, and the agent starts repeating fixes it already tried. When that happens, ask it to
+  write down where things stand, then open a new session with that note.
+
+  `we are going in circles. write NOTES.md with what works, what failed and the next step, and I
+  will start a fresh session from it.`
+
 - Tell it which computer and shell you are on. An agent that assumes a Mac will hand a Windows user
   commands that fail on the first line, and the other way round. One sentence at the top of the
   project notes stops a whole class of errors.
