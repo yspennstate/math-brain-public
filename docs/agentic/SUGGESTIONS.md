@@ -5,12 +5,25 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
-- Tell it who will read the result. A summary for you, one for a colleague in another field and
-  one for a funder are three different pieces of writing. One line naming the reader changes the
-  words, the length and what gets explained.
+- Have it pull tables out of a PDF into a spreadsheet. Numbers locked in a PDF report are slow to
+  copy by hand and easy to mistype. An agent can extract them into a CSV, but PDF tables break in
+  odd ways, so ask it to check a few rows against the page.
 
-  `this is for a colleague who knows statistics but has never seen this project. write it so they
-  can follow it without asking me anything.`
+  `extract the tables on pages 4 to 9 of this PDF into one CSV each. then pick five rows at random
+  and show me them next to the same rows read from the page.`
+
+- Ask it to turn a long log into a short timeline. A night of output from a loop is thousands of
+  lines. What you want in the morning is ten: when it started, what finished, what failed and when
+  it stopped.
+
+  `read last night's log and give me a timeline of at most ten lines, each with the time and what
+  happened. put any failure first.`
+
+- Ask which files it actually read. An agent can describe a project confidently after opening two
+  files out of forty. A short list of what it looked at tells you how far to trust the description.
+
+  `at the end of your answer, list the files you opened to get it. if you are guessing about any
+  part, say which.`
 
 - Ask it to check the key number a second way. A result that comes out of one script has only been
   computed once. Working it out again by a different route, even a rough one, catches the slips
@@ -102,13 +115,6 @@ paste. New ones are added as they come up.
 
   `for anything that runs longer than a few minutes, print a progress line every so often: items
   done, items left and a rough time remaining.`
-
-- Keep keys and passwords out of what it prints. Agents echo commands and settings while they work,
-  and a key that lands in a log file or a pasted report is as exposed as one written on a sticky note.
-  Ask it to hide them on the way out.
-
-  `never print a password, key or token, in output, logs or reports. if you need to show that one is
-  set, show only its last four characters.`
 
 - Ask it what it expects before it runs anything. If the agent writes down the result it expects
   before a test or a calculation, a surprise shows up straight away instead of being explained after
