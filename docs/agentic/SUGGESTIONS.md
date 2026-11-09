@@ -5,6 +5,26 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask how to undo a change before it is made. When an agent is about to change something that
+  already works, a setting, a script, a shared file, ask it first to save the old version and
+  say how to put it back. Undoing then takes one line.
+
+  `before you change <the thing>, keep a copy of how it is now and tell me the one step that puts
+  it back if the change goes wrong.`
+
+- Ask the agent what it would work on next. After a few days on a project the agent has read more
+  of it than you have. Asking it for the next three things worth doing often turns up work you had
+  not thought of.
+
+  `from what you have seen of <the project>, list the three things most worth doing next and why.
+  don't start them; I'll pick.`
+
+- Let it say "I don't know". An agent pressed for an answer will sometimes make one up. Saying in
+  the prompt that not knowing is an acceptable answer makes that less likely.
+
+  `if you are not sure, say so and say what would settle it. a plain "I don't know" is better than
+  a guess.`
+
 - Show it one example of what good looks like. Describing the result you want takes a paragraph
   and still leaves room to guess. Pointing at one file, page or email you liked takes a line and
   leaves much less.
