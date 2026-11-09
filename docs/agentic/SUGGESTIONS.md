@@ -5,6 +5,25 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Keep a restart list. When the computer restarts, every open loop is gone, and remembering ten
+  prompts from memory is hard. Ask for one file that holds each running loop's prompt and end time,
+  so a single request brings them all back.
+
+  `keep a file with every loop running on this computer: its prompt, which folder it works in and
+  when it ends. after a restart, read it and start each one again in its own terminal.`
+
+- Ask for proof before "done". An agent can report a step finished when the upload failed or the
+  file never got written. Asking it to check the result itself, every time, stops that.
+
+  `don't call a step done until you have checked it worked: read the file back, open the link,
+  or run the test, and say which check you did.`
+
+- Ask which loops are running and when each ends. After a few days you lose track of what is
+  still working for you. One question gives you the list.
+
+  `list every loop running on this computer, what each one works on, when it started and when it
+  ends, and which ones have stopped producing anything.`
+
 - Ask what the brain already knows before the agent starts. Agents tend to work out from scratch
   what an earlier session already found. Asking for a short recall first costs a minute and often
   saves an hour.
