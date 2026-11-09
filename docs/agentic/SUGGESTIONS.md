@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have it keep the original next to a translation. A translated page reads smoothly even where it
+  is wrong, and nobody can tell which sentence drifted. With each paragraph of the original above its
+  translation, a reader who knows a little of both languages can check the parts that matter.
+
+  `translate this document paragraph by paragraph, with each original paragraph directly above its
+  translation. mark any sentence you were unsure how to translate.`
+
+- Ask it to turn a recording into notes with times. A transcript of an hour-long call is too long to
+  reread, and a summary alone loses the exact words. Short notes with the minute each point was
+  made let you jump back to the recording when the wording matters.
+
+  `transcribe this recording, then write one-line notes of each decision and question with the
+  minute and second it was said. keep the full transcript in a separate file.`
+
+- Have it fill in a form and list what it left blank. An agent filling a form from your notes will
+  sometimes guess a missing date or number to make the form look complete. Asking for the gaps as
+  a list keeps every guess out of the form and in front of you.
+
+  `fill in this form from my notes. leave a field empty if the notes do not say it, and list every
+  empty field at the end instead of guessing.`
+
 - Have it pull tables out of a PDF into a spreadsheet. Numbers locked in a PDF report are slow to
   copy by hand and easy to mistype. An agent can extract them into a CSV, but PDF tables break in
   odd ways, so ask it to check a few rows against the page.
