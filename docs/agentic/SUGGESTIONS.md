@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have it interview you, one question at a time. When you are not sure what you want, a page of
+  twelve questions is hard to answer. Ask the agent to ask one question, wait, and use your answer
+  to choose the next, until it knows enough to start.
+
+  `I want <a rough idea>. ask me questions one at a time, each building on my last answer, until
+  you can write a one-paragraph plan. then show me the plan.`
+
+- Ask it to keep an eye on the computer's memory and disk. Several loops at once can fill the disk
+  or the memory without anyone noticing until everything slows down. One short check in each round
+  catches it early and says which job is using the most.
+
+  `at the start of each round, check free disk space and free memory. if either is low, tell me
+  which jobs are using the most before you start anything new.`
+
+- List the files it must never touch. Every project has a few things that must not change: a
+  signed copy, a published version, a settings file another program reads. Put their names in one
+  short file and ask every session to read it first.
+
+  `read NEVER_TOUCH.md before you start. never edit, move or delete anything it lists, even if a
+  task seems to need it; ask me instead.`
+
 - Write to it in whatever language you think in. Agents read most languages well, and a request
   written in your own words is clearer than one translated in your head. Say which language you
   want the notes and the code comments in, so the brain stays readable for everyone who uses it.
