@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for a .gitignore before the first commit. Without one, an agent will happily commit caches,
+  large data files and the odd file with a key in it, and getting those back out of the history
+  is far harder than never putting them in.
+
+  `before the first commit, write a .gitignore that leaves out caches, virtual environments, large
+  data files and anything holding a key or password. show it to me first.`
+
+- Have it write commit messages that say why. "Update script" tells nobody anything a month later.
+  One plain sentence about what changed and why makes the history useful when you are hunting for
+  the day something broke.
+
+  `write each commit message as one short sentence saying what changed and why, like "skip empty
+  rows so the totals stop coming out low".`
+
+- Ask for two lines at the top of every script. When a folder fills up with scripts, the quickest
+  way to know what each one does is a short note at the top saying what it is for and how to run
+  it. The agent writes it in seconds; you save minutes every time you come back.
+
+  `at the top of every script you write, add a two-line comment: what it does, and the exact
+  command to run it.`
+
 - Ask for a time zone on every date and time. A log line that says 14:00 means one thing on your
   laptop, another on a server and a third in a spreadsheet someone opens abroad. Writing the zone,
   or using UTC throughout, saves a confusing hour of mismatched records later.
