@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it to say the task back before it starts. A prompt typed in a hurry can be read two ways,
+  and the agent picks one without saying so. Three lines in its own words, before any work, show
+  you at once whether it understood, and cost far less than an hour spent on the wrong reading.
+
+  `before you start, tell me in three lines what you think I am asking for and what you will
+  produce. wait for my yes, then go.`
+
+- Save the heavy jobs for when you are away. A big download, a long test or a search over every
+  file slows the whole computer while it runs. Tell the agent which jobs are heavy and have a loop
+  start them in the evening, so the machine is quick when you sit down to use it.
+
+  `anything that will use most of the computer for more than ten minutes, queue it in HEAVY.md
+  and start it after 11 pm. during the day, do only light work.`
+
+- Give every project its own folder and its own notes. When two projects share a folder, an agent
+  working on one reads the other's notes and mixes them up. A folder per project, each with a short
+  README and a notes file, keeps every session on the right job.
+
+  `make a folder for <the project> with README.md saying what it is for and NOTES.md for what we
+  learn. keep all of its files inside it and nothing from other projects.`
+
 - Let it make the small calls itself. An agent that stops to ask about every file name and folder
   waits for you all night. Say which choices are its own and which are yours, and it keeps moving
   on the first kind and saves the second kind for one message.
