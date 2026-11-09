@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have it write dates as year-month-day. 03/04/2026 is March in one country and April in another,
+  and files named that way sort in the wrong order. 2026-03-04 means one thing everywhere and sorts
+  correctly as plain text, in file names, folder names and tables alike.
+
+  `write every date as YYYY-MM-DD, in file names, tables and notes. never 03/04/26 or 4 March.`
+
+- Be suspicious of a result that looks too good. A sudden large improvement is more often a bug than
+  a discovery: test data that leaked into training, a filter that dropped the hard cases, a number
+  divided by the wrong total. Ask the agent to try to break the result before either of you believes
+  it.
+
+  `this result is better than I expected. before we trust it, list the three most likely ways it
+  could be wrong and check each one.`
+
+- Test new code on a case where you already know the answer. If a calculation is right, it should
+  get a small example right that you can check on paper or that is printed in a textbook. Running
+  that first tells you whether to trust it on the cases you cannot check.
+
+  `before you run this on the real data, run it on a small example whose answer we already know,
+  and show me that it matches.`
+
 - Ask it to explain each command while you are learning the terminal. An agent can run twenty
   commands in a minute, and you come away with a result but no idea how it got there. One short
   line per command, saying what it does, turns every session into a small lesson.
