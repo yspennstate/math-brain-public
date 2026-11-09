@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Paste the whole error, not your summary of it. "It says something about permissions" sends the
+  agent guessing. The exact text names the file, the line and the program that complained, and
+  the agent can often fix it from that alone. Copy everything from the first red line down, even if
+  it looks like noise.
+
+  `here is the full error, copied as it appeared. tell me in one sentence what went wrong, then fix
+  it.`
+
+- Let a loop say "nothing to do" when there is nothing to do. A loop told to make progress every
+  round will sometimes invent work to look busy: a needless rewrite, a check that checks nothing.
+  Tell it that a round with nothing new is fine, as long as it says so in one line and says what
+  it is waiting for.
+
+  `/loop fire this every 10 minutes for the next 3 days. do the next step in NEXT.md. if nothing can
+  move this round, write one line saying what you are waiting on and stop, do not make up work.`
+
 - Put a big file in the cloud through the folder your computer already syncs. Upload tools that an
   agent calls often refuse anything over a few megabytes, and a long video is hundreds. If your
   cloud drive shows up as a folder on the computer, the agent can copy the file there and the sync
