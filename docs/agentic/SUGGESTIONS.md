@@ -5,6 +5,28 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Keep the computer awake. A loop only runs while the machine does. Many laptops and small desktops
+  go to sleep after a few minutes with nobody at the keyboard, and the loop simply pauses, often
+  without any message saying so. Turn sleep off in the power settings while a long loop runs, or
+  ask the agent to do it.
+
+  `before you start this loop, check whether this computer will go to sleep when I am away, and if
+  it will, tell me how to stop that for the next few days (or do it yourself if you can).`
+
+- Try a loop for an hour before you leave it for days. The first rounds show whether the prompt
+  says what you meant: whether the agent finds its NEXT file, saves where you expect, and stops
+  when it should. Fixing that at noon is easier than finding out on day three.
+
+  `run this every 5 minutes for the next hour only. at the end, tell me what went wrong or was
+  unclear in the prompt, and suggest a better version I can run for ten days.`
+
+- Have it merge notes that say the same thing. After weeks of work the brain collects near
+  copies: three notes on the same fix, written on different days. Recall then spends its room on
+  repeats. A weekly pass that merges them keeps answers short.
+
+  `once a week, look for notes in the brain that cover the same thing, merge each group into one
+  note that keeps every fact and date, and mark the old ones as replaced rather than deleting them.`
+
 - Ask where each fact came from. An agent that writes "the library supports this" may be
   remembering an older version, or guessing. A source next to each claim, a file, a page or a
   command it ran, lets you check the one claim that matters without redoing the work.
