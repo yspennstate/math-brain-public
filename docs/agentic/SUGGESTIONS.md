@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Say what it may delete and what it never deletes. An agent cleaning up to save disk space will
+  happily remove whatever looks old. Give it two short lists, and tell it to ask about anything on
+  neither.
+
+  `you may delete temporary files and copies that are already saved on GitHub. never delete <the
+  folders that matter>. if a file is on neither list, ask me first.`
+
+- Have it open a link before it sends you one. A link to a file that was never uploaded, or to the
+  wrong branch, wastes your time. Ask the agent to fetch every link it gives you and confirm it
+  shows what it should.
+
+  `before you give me a link, open it yourself and check that it shows the file you mean. if it
+  does not, fix it first.`
+
+- Ask for an estimate, then compare it with what happened. Before a long step, the agent says how
+  long it expects it to take; afterwards it writes down how long it really took. After a few rounds
+  its estimates get better, and you learn which jobs always run over.
+
+  `before each long step, write down how long you expect it to take. when it finishes, add how long
+  it actually took next to the estimate.`
+
 - Tell it which copy is the real one. When the same file lives in two places (a working folder and
   a GitHub repository, or two computers), an agent can edit the wrong one and then wonder why
   nothing changed. Name the copy that counts and where the others come from.
