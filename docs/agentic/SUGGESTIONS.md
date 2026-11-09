@@ -5,6 +5,26 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask what the brain already knows before the agent starts. Agents tend to work out from scratch
+  what an earlier session already found. Asking for a short recall first costs a minute and often
+  saves an hour.
+
+  `before you start, recall what the brain has on <the topic>: earlier attempts, mistakes, results.
+  give me five lines, then begin from there.`
+
+- Give a loop a stop file. Finding the right terminal among ten to stop one loop is tedious. If the
+  prompt says to look for a file, you can stop it from anywhere, even from another agent.
+
+  `/loop fire this every 5 minutes for the next 10 days. keep working on <the project>. at the start
+  of every round, if the file <folder>/STOP exists, finish nothing new, write a short report and
+  stop.`
+
+- Put a time limit on a hard question. An agent will dig at one problem for hours if nothing tells
+  it when to step back. A limit turns a stuck afternoon into a note you can act on.
+
+  `spend at most 30 minutes on <the problem>. if it is not solved by then, write down what you
+  tried, what you ruled out and what you would try next, and stop.`
+
 - Have a second agent check a result before it goes public. The agent that produced a result is
   the worst judge of it. A second agent that reruns the work without reading the first one's code
   catches most of what slips through.
