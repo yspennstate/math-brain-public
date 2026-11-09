@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have it work on a branch for anything risky. A branch is a side copy of the project inside git.
+  If the experiment works you merge it, and if it does not you throw the branch away and the main
+  line never knew. It costs one command and makes a bold change cheap to try.
+
+  `make a new git branch before you start this change. tell me its name, and do not merge it into
+  main until I have looked at the result.`
+
+- Keep the question with the answer. A results file read a month later often makes no sense,
+  because nobody remembers what it was trying to find out. One line at the top saying what was
+  asked, and when, turns a bare table into something a stranger can use.
+
+  `start every results file with one line saying the question it answers and the date. keep that
+  line when you update the file.`
+
+- Ask it to save text as UTF-8. Names with accents, quote marks and symbols turn into strange
+  characters when one program writes a file in one encoding and another reads it in a different
+  one. Saying the encoding once in the prompt avoids a slow, confusing hunt later.
+
+  `save every text, csv and json file you write as UTF-8, and read files as UTF-8 too. if a file
+  will not read that way, tell me instead of guessing.`
+
 - Ask for output in a fixed order. If a script prints its results in whatever order the computer
   happens to find them, two runs that agree look different, and a real change hides among the
   shuffled lines. Sorted output can be compared line by line.
