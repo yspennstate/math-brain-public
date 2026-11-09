@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Tell it who will read the result. A summary for you, one for a colleague in another field and
+  one for a funder are three different pieces of writing. One line naming the reader changes the
+  words, the length and what gets explained.
+
+  `this is for a colleague who knows statistics but has never seen this project. write it so they
+  can follow it without asking me anything.`
+
+- Ask it to check the key number a second way. A result that comes out of one script has only been
+  computed once. Working it out again by a different route, even a rough one, catches the slips
+  that rereading the same code never will.
+
+  `before you report the final figure, get it a second way (a different script, a hand calculation
+  or a smaller sample) and tell me whether the two agree.`
+
+- Have it read the whole function before changing one line. A fix made after reading three lines
+  often breaks something further down that depended on the old behaviour. Reading the full
+  function, and whatever it calls, takes a minute.
+
+  `before you edit a function, read all of it and the functions it calls, then tell me in one line
+  what else the change touches.`
+
 - Have it search a big file before reading it. An agent that reads a whole log or data file to find
   one line fills its memory with text it does not need and gets slower and vaguer for the rest of
   the session. A search for the right words, then a read of just that part, keeps it sharp.
