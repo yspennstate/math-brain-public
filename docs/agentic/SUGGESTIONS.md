@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Have it check that the links in your notes still open. Notes collect links to pages, files and
+  other notes, and some of them stop working as things move. A quick pass that tries each one and
+  lists the dead ones keeps the notes trustworthy.
+
+  `go through the links in NOTES.md and README.md, try each one, and list the ones that no longer
+  open, with a suggested replacement if you can find one.`
+
+- Ask how a number was worked out. A total, an average or a percentage in a report is only as good
+  as the steps behind it. Having the agent write the formula and the inputs next to it lets you
+  redo the sum yourself in a minute.
+
+  `for each number in your summary, show how you got it: the formula, the inputs, and the file they
+  came from.`
+
+- Ask it to read the documentation for the version you have. Tools change their options between
+  versions, and an agent working from memory may use a flag that no longer exists or means
+  something else now. Checking the installed version first avoids a confusing error.
+
+  `before you use this tool's options, check which version is installed and read its help for that
+  version, not what you remember.`
+
 - Ask for a dry-run switch on anything that moves or deletes. A script that renames, moves or
   removes files should be able to print what it would do without doing it. You read the list, and
   only then run it for real.
