@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for variable names that say what they hold. Code full of x, tmp, df2 and data_new reads fine
+  on the day it is written and is a puzzle a week later, for you and for the next agent. A name
+  like daily_prices or rows_after_cleaning explains itself.
+
+  `name variables for what they hold, like daily_prices or failed_files. no single letters outside
+  short loops, and no tmp, new or 2 in a name.`
+
+- Have it check file sizes before it commits. One large data file or video added by accident makes
+  every later clone slow, and it stays in the history even after it is deleted. A quick size check
+  before each commit catches it while it is still easy to undo.
+
+  `before every commit, list any file over 10 MB that is about to be added and ask me before
+  including it.`
+
+- Ask it to write files so an interruption cannot leave half of one. A script stopped in the middle
+  of writing leaves a truncated file that looks real and breaks the next step. Writing to a
+  temporary name and renaming at the end means the file is either the old one or the whole new one.
+
+  `when a script writes an output file, write it to a temporary name first and rename it only once
+  it is complete.`
+
 - Ask for tables sorted by what you care about. A table in whatever order the data happened to come
   in makes you hunt for the row that matters. Sorted by the column you will act on, the answer is
   usually in the first line or two.
