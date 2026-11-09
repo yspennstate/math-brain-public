@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Tell it when you need it by. "Make the slides" means one thing for tomorrow morning and another
+  for next month. A deadline lets the agent choose how far to go, and tell you early if the job will
+  not fit in the time.
+
+  `I need this by Thursday at noon. plan the work to fit, tell me now if it will not, and give me
+  a rough version by Wednesday evening.`
+
+- Have the computer make a sound when a long job ends. Waiting on a job you cannot see means
+  checking the window every few minutes. A short beep or a desktop notification at the end lets
+  you do something else until it is ready.
+
+  `when this job finishes, or fails, play a short sound and show a desktop notification with one
+  line saying which.`
+
+- Ask for short answers when you are busy. An agent will often explain everything it did when you
+  only wanted the result. Say how long the reply should be, and ask for the detail only when you
+  need it.
+
+  `keep your replies to three lines unless I ask for more. if there is a problem, say it in the
+  first line.`
+
 - Ask it to say the task back before it starts. A prompt typed in a hurry can be read two ways,
   and the agent picks one without saying so. Three lines in its own words, before any work, show
   you at once whether it understood, and cost far less than an hour spent on the wrong reading.
