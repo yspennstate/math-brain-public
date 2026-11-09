@@ -5,6 +5,25 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Put a second computer to work. An old laptop or a desktop that sits idle can run its own agent
+  with the same brain. Ask the first agent to check what the other one is doing and hand it a job
+  when it is free.
+
+  `check how busy <the other computer> is. if it has free memory and processors, give it <the
+  job>, and tell me what it is running.`
+
+- Tell agents to check before they start. With several loops running, two of them will sooner or
+  later pick the same piece of work. One sentence in the prompt prevents it.
+
+  `before you start a piece, check whether another agent already has it. if one does, take a
+  different piece and say which.`
+
+- Ask for one lesson per finished piece. A long loop learns things nobody writes down. Ask it to
+  save one line to the brain each time it finishes something, so the next agent starts from there.
+
+  `each time you finish a piece, save one line to the brain: what worked, what did not, and what
+  you would do differently.`
+
 - Give the loop a fallback for when it runs out of something. A daily upload limit, a usage cap or
   a credit balance will stop the main job partway through the day. Say what the loop should do
   instead, so the rounds are not wasted.
