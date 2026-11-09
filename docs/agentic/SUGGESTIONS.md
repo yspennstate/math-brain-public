@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Start a new agent read-only on anything that matters. The first hour with a new project is when
+  an agent knows least about it. Let it read, map and propose for that hour, and only then let it
+  change files.
+
+  `for the first hour, only read. do not edit, move or delete anything in this folder. at the end,
+  tell me what you found and what you would change first.`
+
+- Keep a changelog that a reader can follow. Commit messages are written for the people doing the
+  work. A short dated list of what changed, in plain words, tells everyone else what is new
+  without reading the history.
+
+  `each time you change something a reader would notice, add one dated line to CHANGES.md saying
+  what changed, in words someone new to the project would follow.`
+
+- Ask for a chart when the numbers pile up. A table of forty rows hides the one row that matters.
+  Asking for a small picture of the same numbers often shows the trend, the outlier or the broken
+  run at a glance.
+
+  `when a result has more than about ten numbers, also make a simple chart of them, save it next to
+  the table, and tell me what stands out in it.`
+
 - Set a size above which it asks before downloading. An agent that decides it needs a model or a
   data set will fetch tens of gigabytes without a second thought. One number in the prompt stops a
   full disk before it starts.
