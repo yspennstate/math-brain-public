@@ -5,6 +5,28 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it to walk you through new code before you rely on it. You do not need to read every line,
+  but you should know what the code does with your files and what it assumes about them. A short
+  walk-through in plain words often turns up an assumption that is wrong for your case.
+
+  `walk me through the script you just wrote in plain words: what it reads, what it changes, what
+  it writes, and anything it assumes about my data.`
+
+- When it fixes a bug, ask for a test that would have caught it. A bug fixed once tends to come
+  back when the code is changed later. A small test that fails on the old code and passes on the
+  new one keeps it fixed, and running the tests tells the next session at once if it returns.
+
+  `now that this is fixed, add a small test that fails on the old code and passes on the new one,
+  and run all the tests.`
+
+- Read a Python error from the bottom. The long block of text Python prints when something breaks
+  ends with the line that matters: the kind of error and the message. The lines just above it name
+  the file and line where it happened. Paste the whole block to the agent, but read the last line
+  yourself first.
+
+  `here is the full error. tell me in one sentence what the last line means, which line of our code
+  it points to, and what you will change.`
+
 - Keep a cheat sheet of the commands that worked. The command that finally started the server or
   fixed the install is easy to lose in a long terminal history. A short file of working commands,
   each with one line on what it does, saves the next session from finding it again by trial.
