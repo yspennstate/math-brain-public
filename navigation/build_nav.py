@@ -162,7 +162,9 @@ def py_parse(text):
              and not n.name.startswith("_")]
     first = doc.strip().splitlines()[0].strip() if doc.strip() else ""
     paras = re.split(r"\n\s*\n", doc.strip()) if doc.strip() else [""]
-    return first, clip(paras[0]), names
+    # the summary is the module docstring (first 400 chars), not its first paragraph: for most modules that
+    # paragraph is the title line again
+    return first, clip(doc, 400), names
 
 
 def concepts_in(s):
