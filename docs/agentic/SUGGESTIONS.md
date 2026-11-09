@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- On a laptop, have long jobs check the power and the heat. A render or a long build on battery can
+  drain it flat halfway through, and a laptop that runs hot for hours slows itself down or shuts
+  off. Ask the agent to start heavy work only when the machine is plugged in, and to rest between
+  pieces if it is getting hot.
+
+  `before each long piece of work on this laptop, check it is on mains power and not running hot.
+  if it is on battery, wait and tell me; if it is hot, pause a few minutes between pieces.`
+
+- When you lend an agent someone else's computer, set the limits first and keep them. Say what it
+  may use the machine for, how much disk must stay free, and what it must never touch or copy. Ask
+  it to check those limits before each job, not once at the start, because the owner keeps using
+  the machine and the free space moves.
+
+  `you may use <the other computer> only for <this job>. keep at least a fifth of its disk free,
+  check that before every job, never copy its keys or private files, and stop and tell me if a
+  job would break any of this.`
+
 - When you type fast, have the agent say back what it understood. A quick prompt full of typos is
   fine, but a long job built on a wrong reading costs an hour. One sentence from the agent before
   it starts, in plain words, lets you catch "the second film" read as "the second clip" while it
