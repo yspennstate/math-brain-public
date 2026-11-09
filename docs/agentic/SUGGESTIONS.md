@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for the result where you will see it. A finished result buried in a log file on another
+  computer may as well not exist. Say where you look (an email, a page in your Downloads folder, a
+  file in the repository's front page) and the agent will put it there.
+
+  `when this is finished, put a one-page summary in my Downloads folder and email me the link to
+  it. do not leave the result only in a log.`
+
+- Let a loop pause itself when it is waiting. Some rounds cannot do anything until another job
+  finishes. A loop that knows what it is waiting for can say so in one line and skip the rest of
+  the round, instead of starting new work that gets in the way.
+
+  `if the step you need is waiting on another job, write one line saying what you are waiting for
+  and end the round. pick it up again when that job is done.`
+
+- Ask which old notes it never uses. A brain grows faster than anyone reads it. Every so often,
+  ask the agent which notes it has not needed in months; some are stale, some are wrongly named and
+  should be easier to find.
+
+  `look at which notes in the brain have not been recalled in the last three months. for each, say
+  whether it is out of date, hard to find, or simply rarely needed.`
+
 - Tell the agents what they share. Two computers on the same home internet line, two jobs on the
   same disk: agents cannot see that from inside one job. A short note on what is shared lets them
   explain a slowdown correctly and agree on who goes first.
