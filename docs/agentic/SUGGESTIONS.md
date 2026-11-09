@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for a dry run before anything that moves, deletes or sends in bulk. A command that renames
+  four hundred files or emails a whole list does its damage in a second. Having the agent print
+  what it would do first, and wait for your yes, turns a mistake into a line you read and reject.
+
+  `before you move, delete or send anything in bulk, show me the list of what you would do and
+  how many items it covers. do nothing until I say go.`
+
+- Have it change one thing at a time when hunting a bug. Three fixes tried together may work, but
+  then nobody knows which one mattered, and the other two stay in the code for no reason. One
+  change, one test, then the next keeps the cause clear.
+
+  `while we look for this bug, change one thing at a time and run the test after each change.
+  undo any change that did not help before you try the next.`
+
+- Ask it to go gently on websites. An agent downloading many pages can send hundreds of requests a
+  minute, and a site will slow it down or block it, sometimes for the whole network. A pause
+  between requests and stopping when the site says too many is enough.
+
+  `when you download from a website, wait a second or two between requests, and stop and tell me
+  if the site answers "too many requests" instead of retrying straight away.`
+
 - Watch a long job's log in a second terminal. While a job runs you can open another window and
   follow its log as lines are added, without disturbing it. Ask the agent for the one command that
   does this on your computer, and keep it handy.
