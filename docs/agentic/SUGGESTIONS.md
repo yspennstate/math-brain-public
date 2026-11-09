@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Set a size above which it asks before downloading. An agent that decides it needs a model or a
+  data set will fetch tens of gigabytes without a second thought. One number in the prompt stops a
+  full disk before it starts.
+
+  `ask me before you download or install anything larger than 2 GB. say what it is, how big, and
+  why you need it.`
+
+- Tell it which job wins when two compete. With several loops on one computer, two jobs will want
+  the same thing at the same time: the processor, the disk, your attention. A short ranking in the
+  project folder lets each agent decide without waiting for you.
+
+  `PRIORITY.md lists my jobs in order. when two of them need the same thing, the one higher on the
+  list goes first and the other waits or does something smaller.`
+
+- Have names checked against a source, not memory. Agents misspell people, places and titles with
+  full confidence, and a wrong name in a published page or a film is the error readers notice
+  first. Ask for every proper name to be checked against a page it can open.
+
+  `before you publish, check the spelling of every person, place and title against a source you can
+  open, and list any you could not confirm.`
+
 - Ask it to number the steps it proposes. When an agent offers a plan, numbered steps let you
   answer in a few words ("do 1 and 3, skip 2") instead of retyping what you want. It also makes the
   report afterwards easy to check against the plan.
