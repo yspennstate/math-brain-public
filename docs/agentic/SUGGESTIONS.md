@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it to measure, not guess. "This should be faster" and "it is 3 seconds instead of 11" are
+  different claims. When a result has a number in it, ask for the number and how it was measured.
+
+  `don't tell me it got better; measure it before and after on the same input and give me both
+  numbers.`
+
+- Try it on a copy first. A change to something many things depend on, a shared script, a
+  settings file, a database, is safer made on a copy, tested there, and then moved over.
+
+  `make the change on a copy of <the thing>, test it there, show me the result, and only then
+  replace the original.`
+
+- End every report with what it is unsure of. An agent's report reads as equally confident from
+  top to bottom. One closing line on the shakiest part tells you where to look.
+
+  `end your report with one line on the part you are least sure of and why.`
+
 - Ask for a README for whatever it builds. A script or a folder made by an agent is clear today
   and a puzzle next month. A short README beside it, saying what it does and how to run it, is
   cheap to write while the agent still remembers.
