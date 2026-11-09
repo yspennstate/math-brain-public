@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Put quotes around paths with spaces. A folder called My Documents or Project Notes looks like two
+  separate words to a terminal, and the command fails or, worse, acts on the wrong thing. Quoting
+  the whole path fixes it. Ask the agent to do this always, so a space never surprises either of you.
+
+  `always put double quotes around file and folder paths in the commands you give me, even when
+  there is no space in them.`
+
+- Write down the package versions that worked. A project that runs today can break next month when
+  a library it uses releases a new version. A short list of the exact versions installed when
+  everything worked lets you, or another computer, rebuild the same setup.
+
+  `now that this works, save the exact versions of the packages it uses to requirements.txt, and
+  tell me the one command that installs them on another computer.`
+
+- Get everything it needs before you go offline. On a train or a plane the agent itself may still
+  work, but any step that downloads a model, a package or a page will fail. Ask it before you leave
+  what the next few hours of work will need from the internet, and fetch it while you still can.
+
+  `I will be offline for a few hours. list everything the next steps will need to download, get it
+  now, and tell me which steps will still need the internet.`
+
 - Ask it to walk you through new code before you rely on it. You do not need to read every line,
   but you should know what the code does with your files and what it assumes about them. A short
   walk-through in plain words often turns up an assumption that is wrong for your case.
