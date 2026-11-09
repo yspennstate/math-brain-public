@@ -5,6 +5,26 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for a README for whatever it builds. A script or a folder made by an agent is clear today
+  and a puzzle next month. A short README beside it, saying what it does and how to run it, is
+  cheap to write while the agent still remembers.
+
+  `write a short README next to <what you built>: what it does, how to run it, what it needs, and
+  what to check if it breaks.`
+
+- Keep a decisions file. Over a long project you and the agents settle many small questions:
+  which tool, which format, what to leave out. Writing each one down with its reason stops the
+  next agent from reopening it.
+
+  `whenever we settle a choice on <the project>, add one dated line to DECISIONS.md: what we chose
+  and why. read that file before suggesting a change.`
+
+- Ask it to explain as if you were new. When an agent's answer is full of terms you don't know,
+  ask again. It costs one prompt and you learn the project instead of nodding along.
+
+  `explain what you just did as if I had never seen this project: what the parts are, what you
+  changed and why it matters, in plain words.`
+
 - Type fast; don't fix your spelling. Agents read through typos and half sentences without
   trouble. A quick prompt sent now beats a careful one sent in ten minutes. Save the care for the
   parts that matter: names, numbers, dates and what done means.
