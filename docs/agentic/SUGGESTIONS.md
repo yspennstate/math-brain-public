@@ -5,6 +5,26 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask for a test with anything it builds. A small test that runs in seconds tells the next agent,
+  or the next round, when something broke. Without one, a loop can undo its own earlier work and
+  nobody notices.
+
+  `whenever you build or change <the thing>, add a short test that checks it still works, and run
+  all the tests before you call a step done.`
+
+- Ask it to say when it changes its mind. Over many rounds an agent learns things that contradict
+  what it said earlier. If it just carries on, the old conclusion stays in your notes as if it
+  were still true.
+
+  `if anything you find contradicts an earlier conclusion, say so plainly, name the old note, and
+  correct it rather than leaving both.`
+
+- Compare with last time. A number on its own means little. Ask the agent to put each new result
+  next to the previous one, so you see at a glance whether things got better or worse.
+
+  `each time you measure <the thing>, show the last result beside the new one and say in one line
+  what changed and why.`
+
 - Ask why, not only what. The brain remembers decisions, and the reasons are often in there too.
   Before you undo something that looks odd, ask the agent why it was done that way.
 
