@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Type fast; don't fix your spelling. Agents read through typos and half sentences without
+  trouble. A quick prompt sent now beats a careful one sent in ten minutes. Save the care for the
+  parts that matter: names, numbers, dates and what done means.
+
+- After a crash, ask it to pick up where it was. When the computer restarts or a window closes,
+  the job is not lost if it kept its notes. Start a new session in the same folder and point it
+  at them.
+
+  `the session working on <the job> was interrupted. read its ORDER.md and the first line of
+  NEXT.md, check what the brain saved about it, and carry on from the next undone step.`
+
+- Ask for two ways before it picks one. An agent usually takes the first approach that comes to
+  mind. Asking for two, with what each costs, shows you the choice it was about to make for you.
+
+  `give me two different ways to do <the task>, what each costs in time and risk, and which you
+  would pick. wait for my answer before starting.`
+
 - Keep passwords out of prompts. Whatever you type can end up in a log, a summary or a note the
   brain saves. Put a key in a file or your system's password store and tell the agent where it
   is, not what it is.
