@@ -5,6 +5,28 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask which account it is using before anything online. Many people have a personal and a work
+  login for the same service, or two cloud projects. An agent that uploads, sends or creates
+  something under the wrong one makes a mess that is slow to undo. One line naming the account first
+  catches it.
+
+  `before you upload, send or create anything online, tell me which account and project you are
+  logged into and wait for my yes.`
+
+- Have it take out its debugging lines when it is done. While chasing a problem an agent adds extra
+  print lines, test values and commented-out code. Left in, they clutter the output and confuse the
+  next reader. A last pass to remove them keeps the code clean.
+
+  `when the fix works, remove any print lines, test values and commented-out code you added while
+  debugging, and show me the final diff.`
+
+- Ask for commands you can paste exactly as written. A command with a placeholder like <your
+  folder> or a step that says "then run the usual thing" fails when you try it. Full commands, one
+  per line, ready to copy, save time and guessing.
+
+  `when you give me a command to run, write it in full with real paths and values, one per line, so
+  I can paste it as it is.`
+
 - Have it check that the links in your notes still open. Notes collect links to pages, files and
   other notes, and some of them stop working as things move. A quick pass that tries each one and
   lists the dead ones keeps the notes trustworthy.
