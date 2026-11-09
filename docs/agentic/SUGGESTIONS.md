@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Turn a habit into a hook. When you find yourself telling agents the same thing every day, ask
+  for it to become a hook, so every new session gets it without you typing it.
+
+  `I keep telling agents <the instruction>. make it a hook that reminds every session at the right
+  moment, show me the hook firing once, and save the reason in the brain.`
+
+- Your later words win. When you change your mind halfway through a long loop, just say the new
+  thing. Ask the agent to add your new words, dated, under the old ones in its ORDER file instead
+  of replacing them, so it can see how the request changed.
+
+- Ask for a page, not a wall of text. For a status check across many agents, ask for one page
+  that opens in your browser, with what each agent is doing and what is waiting on you.
+
+  `make me one page with every agent's current job, its last result and anything waiting on me,
+  and open it in my browser.`
+
 - Run two loops on one project from two angles. One loop builds ("keep working on X"), the other
   checks ("every 20 minutes, test what the first loop made and write down what is broken"). The
   checker's notes go into the brain, so the builder reads them on its next round.

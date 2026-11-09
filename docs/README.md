@@ -21,6 +21,8 @@ The pages in this folder, grouped by what you came to do.
 |---|---|
 | [../AGENTS_GUIDE.md](../AGENTS_GUIDE.md) | the recall tools, the configuration for Claude Code and Codex, and what each choice was worth in the tests |
 | [agency.md](agency.md) | the working habits that turn faster recall into finished work: a next-step note on disk, leases on shared state, an audit before each report, results written back |
+| [agentic/](agentic/README.md) | running the brain with terminal agents: installing a terminal, loop prompts that keep an agent working for days, starter prompts, GitHub as storage, troubleshooting, and a dated list of suggestions |
+| [../agent_tools/skills/](../agent_tools/skills/) | four skills an agent can load: running a loop with the brain, orienting before work, turning a broad goal into a running job, keeping the brain on GitHub |
 | [codex-hooks-quickstart.md](codex-hooks-quickstart.md) | the hook files that put the brain in front of an agent at the right moment, for Codex and Claude Code |
 | [brain-building/owner-words-reach-every-agent.md](brain-building/owner-words-reach-every-agent.md) | a hook that hands every session the person's own recent requests, repeated ones first, so an agent does not work from an out-of-date picture of what it was asked |
 | [brain-building/task-checklist.md](brain-building/task-checklist.md) | one shared, dated checklist every agent writes to: who took which request, when it was done, and a seen mark only the person sets |
