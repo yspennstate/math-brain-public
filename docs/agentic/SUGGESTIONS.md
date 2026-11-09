@@ -5,6 +5,27 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Ask it to say what it did not check. A report lists what passed, and the reader assumes that is
+  everything. One line naming the parts it skipped, or could not test, tells you where the remaining
+  doubt is before you rely on the result.
+
+  `end every report with a line starting "Not checked:" that names anything you skipped or could
+  not test. write "Not checked: nothing" only if that is true.`
+
+- Have it write a short description under each picture in public pages. Someone using a screen
+  reader, or reading on a slow connection, sees only the text. A sentence saying what the picture
+  shows costs nothing and makes the page readable for them.
+
+  `for every image in the docs, add alt text of one sentence saying what it shows, not just its
+  file name.`
+
+- Clean a log before you post it for help. A log pasted into a forum or an issue often carries your
+  user name, home folder, machine name or email address. Ask the agent to replace those with
+  placeholders first and show you the result before you share it.
+
+  `before I post this log, replace my user name, folder paths, machine name and any email address
+  with placeholders like <user> and <path>, then show me the cleaned version.`
+
 - Have it keep the original next to a translation. A translated page reads smoothly even where it
   is wrong, and nobody can tell which sentence drifted. With each paragraph of the original above its
   translation, a reader who knows a little of both languages can check the parts that matter.
