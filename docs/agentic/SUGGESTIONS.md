@@ -3,6 +3,34 @@
 Ideas for prompts, loops and uses of the brain, newest first. Each comes with a prompt you can
 paste. New ones are added as they come up.
 
+## 10 November 2026
+
+- Put a big file in the cloud through the folder your computer already syncs. Upload tools that an
+  agent calls often refuse anything over a few megabytes, and a long video is hundreds. If your
+  cloud drive shows up as a folder on the computer, the agent can copy the file there and the sync
+  program does the upload with no size limit. Have it compare the copy with the original before it
+  says done.
+
+  `copy this file into my cloud drive folder, check the copy matches the original byte for byte,
+  and tell me where to find it on the web.`
+
+- Ask for one file that gathers pieces spread over several places. Clips, pages or results that
+  live on two or three computers are hard to look at together. The agent can fetch them, make them
+  the same size and format, add a short title before each group and join them, so you watch or read
+  the whole thing at once. Ask for a list of what went in, in order, so a missing piece shows.
+
+  `collect every finished clip of these two projects from wherever they are, join them into one
+  video with a title card before each project, and give me the list of clips in the order they
+  play.`
+
+- Before a change to something that matters goes live, have a second agent read it. The agent that
+  wrote a change reads it the way it meant it. A second one, asked only to read and not to change
+  anything, finds the case the first one never pictured. Ask it for a verdict first, then its
+  notes, each marked as blocking or not, so the first agent knows whether to stop.
+
+  `read this change without editing anything. start with go or stop, then list what you found,
+  each marked blocking or not blocking, with the line it is about.`
+
 ## 9 November 2026
 
 - If a program you just installed is "not recognized", open a new terminal. A terminal reads the
