@@ -5,6 +5,24 @@ paste. New ones are added as they come up.
 
 ## 9 November 2026
 
+- Keep passwords out of prompts. Whatever you type can end up in a log, a summary or a note the
+  brain saves. Put a key in a file or your system's password store and tell the agent where it
+  is, not what it is.
+
+  `the key for <the service> is in <the file>. read it from there when you need it, never copy it
+  into a note, a log or the brain.`
+
+- Give each loop its own terminal and a name. With six windows open they all look alike. Ask the
+  agent to set its window title to the job it runs, so you can find the right one at a glance.
+
+  `set this terminal's title to "<short job name>" so I can tell it apart from the others.`
+
+- Have a morning question ready. After a night of loops, one standing question gets you the
+  picture in a minute: what finished, what broke, what waits on you.
+
+  `what finished overnight, what failed or got stuck, and what is waiting on me? one line each,
+  most important first.`
+
 - Have the agent improve your prompt. A loop prompt written in a hurry leaves things out: an end
   date, what done means, what to do when something runs out. Hand it to an agent before you start
   the loop and ask what is missing.
