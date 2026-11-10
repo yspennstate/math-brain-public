@@ -59,3 +59,25 @@ Once files have left the laptop, recall should still find them. The pattern is a
 the brain (path, repository, release, digest) and a fetch step: recall finds the catalogue entry,
 and the agent downloads the file only when it needs it. That keeps the laptop light and the brain
 complete.
+
+## One brain on several computers
+
+If you run agents on more than one computer, keep one brain for all of them in one private
+repository rather than a separate brain on each machine. The rule is short: pull before work,
+push after. An agent that starts on the second computer pulls first and sees what the first one
+learned an hour ago; when it finishes, it pushes what it learned so the next agent anywhere sees
+it too.
+
+Memories are small text files, one fact each, so two computers rarely edit the same lines and
+git merges them on its own. When it cannot, do not let the agent pick a side silently. Have it
+keep both versions, mark which is newer and which computer wrote each, and fix it by reading
+both.
+
+```
+before you start, pull the brain repository. when you finish, push what you saved. if the push
+is refused because the other computer pushed first, pull again, merge, and push. if a memory
+conflicts, keep both versions with the computer name and time on each, and tell me.
+```
+
+Give each computer a short name and have every saved memory say which computer wrote it. When
+something goes wrong a week later, that one line tells you where to look.
