@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Don't let a test hold up the real work. A small test of a new tool is worth running, but if it has
+  to wait for something (a free machine, a download, someone's reply) while the real job sits
+  queued behind it, the computers do nothing in the meantime. Once one item has run cleanly, it is
+  usually better to start the real job and judge the new tool on its first real results.
+
+  `don't wait for the test to finish before starting the real job. start the full run now, and
+  compare the first real results with the old ones when they come in.`
+
+- When several agents work together, ask who is waiting on whom. Agents are polite: one holds its
+  queue until another finishes a test, the other waits for a free machine, and both report that
+  they are waiting. Each report looks reasonable, and nothing moves. A one-line list of who waits on
+  whom, and for what, shows a circle like that at once.
+
+  `list every agent on this project, what each is waiting for and from whom. if anyone is waiting
+  in a circle, or waiting on something that no longer matters, tell me and unblock it.`
+
 - If your agents work on more than one computer, give each computer a few house rules in writing.
   What it is for, what must never be touched on it, how much disk must stay free, whether it may run
   on battery. A laptop you use every day, a spare desktop and a friend's machine you were lent need
