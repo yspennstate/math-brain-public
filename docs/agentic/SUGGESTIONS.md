@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- If your agents work on more than one computer, give each computer a few house rules in writing.
+  What it is for, what must never be touched on it, how much disk must stay free, whether it may run
+  on battery. A laptop you use every day, a spare desktop and a friend's machine you were lent need
+  very different care, and an agent juggling all three will mix them up unless the rules sit in a
+  file it reads before it does anything there.
+
+  `write a short rules file for each computer you work on: what it is for, what you must never touch
+  there, how much disk stays free, and anything else I have told you about it. read the right one
+  before you start work on a machine.`
+
+- Before an agent edits a script or config that already works, have it keep a dated copy next to it
+  and tell you the one command that puts the old version back. Most edits go fine, but when one
+  doesn't, the difference between a two-second undo and an hour of reconstruction is that copy.
+
+  `before you change this file, save a copy next to it with today's date in the name, and tell me
+  the exact command that would restore it if your change goes wrong.`
+
 - After a watcher passes its test on a dummy job, have the agent check that it also sees the real one.
   A watcher usually finds the job by its name or its command line, and the real job may be started a
   little differently from the dummy: from another folder, with a shorter path, under another name.
