@@ -30,6 +30,10 @@ paste. New ones are added as they come up.
   `I have several terminals open. give me a two- or three-word name for this one that says what
   it is working on, so I can label the tab.`
 
+  Many agents can also set the title themselves. Give each loop its own window and let it name it.
+
+  `set this terminal's title to "<short job name>" so I can tell it apart from the others.`
+
 - Plan for the moment your usage runs out. Most agent plans have a limit that resets every few
   hours or every week, and a loop that hits it simply stops answering, sometimes halfway through a
   change. Ask the agent to keep its notes current so the next round can pick up cold, and to put
@@ -2955,11 +2959,6 @@ paste. New ones are added as they come up.
 - Type fast; don't fix your spelling. Agents read through typos and half sentences without
   trouble. A quick prompt sent now beats a careful one sent in ten minutes. Save the care for the
   parts that matter: names, numbers, dates and what done means.
-
-- Give each loop its own terminal and a name. With six windows open they all look alike. Ask the
-  agent to set its window title to the job it runs, so you can find the right one at a glance.
-
-  `set this terminal's title to "<short job name>" so I can tell it apart from the others.`
 
 - Have a morning question ready. After a night of loops, one standing question gets you the
   picture in a minute: what finished, what broke, what waits on you.
