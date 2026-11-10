@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- An agent can open a new terminal for you, already set up. When you want a second agent on
+  another job, you do not have to open a window, find the folder and remember the right command and
+  model name. Ask the agent you are talking to; it knows the folder, the model and the settings you
+  use, and it can check that the new window actually started.
+
+  `open a new terminal for me in my home folder with <the model> running in it, and check that it
+  started.`
+
+- Watchers often stop on their own after a while. Many agent tools give a watch a time limit,
+  half an hour or so, and when it runs out nothing is watching any more, often with no message
+  you would notice. If you need the watch for longer, tell the agent to start it again each time it
+  ends, for as long as the thing it watches is still running.
+
+  `keep watching <the job> until it finishes. if your watcher stops before then, start it again
+  right away, and tell me if you ever had to stop watching.`
+
 - When a loop keeps reporting "unchanged", ask once what it compared against. A check that compares
   today's state with its own note from the last round will say "unchanged" forever, even after the
   real thing broke, because both sides of the comparison came from the agent. A good check reads the
