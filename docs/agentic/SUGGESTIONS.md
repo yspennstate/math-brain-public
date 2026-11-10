@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Keep a checklist file that every agent writes to. When you give several agents several jobs, it is
+  easy to forget who is doing what, and the agents don't know about each other. A plain list in one
+  file, where each agent adds what you asked it, marks it done when it finishes, and leaves a box for
+  you to tick once you have seen the result, answers "what did I ask for and where is it" in seconds.
+
+  `keep a checklist in <file>: add what I just asked you, with the date and my words, update it as
+  you go, and mark it done with one line on the result. don't tick the "seen" box, that one is mine.`
+
+- Once an agent has the context, a short answer is enough. After it lays out a plan, "ok do it" or "yes,
+  the second one" is a complete instruction, and you don't need to repeat the whole request. If it
+  asks you something you already answered, that's a sign it lost track, and pointing it back to your
+  earlier message works better than typing it all again.
+
+  `yes, do the second option. you have everything you need from my last message; only ask me again
+  if something new comes up.`
+
 - After a crash or a restart, tell the agent to pick up where it stopped, not start over. A fresh
   window doesn't know what the last one finished, and the easy path is to begin again from the top,
   which can redo hours of work or overwrite what was already done. Point it at the notes and files the
