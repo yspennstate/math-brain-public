@@ -5,6 +5,24 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- If an agent runs heavy work on a computer someone else also uses, ask it to make the work give way
+  to that person. A small watcher that pauses the job as soon as the keyboard or mouse moves, ends it
+  if they keep working or memory gets tight, and starts again only after they have been away for a
+  while, costs little and keeps the machine pleasant for its owner. Ask the agent to test it once
+  with a dummy job before trusting it.
+
+  `this computer is shared. before you run anything heavy on it, set up a watcher that pauses our
+  work when someone is using it and stops it if memory runs low, test it with a dummy job, and tell
+  me what it did.`
+
+- Before a large download, have the agent check the free space it will leave and verify the files
+  afterwards. Big model and data downloads fail half way, land in the wrong folder or fill the disk.
+  A one-line rule about how much space must stay free, plus a check of every file's size or hash
+  against the source when it finishes, turns "it downloaded" into something you can rely on.
+
+  `before you download this, tell me how much disk will be left, keep at least 20% free, and when it
+  is done check every file against the source and tell me the result.`
+
 - When one agent passes on your words to another, have the second one check them at the source. A
   request that reaches an agent through a colleague can be shortened, misread or out of date by the
   time it arrives. If your own prompts are kept somewhere both can read, the second agent can find
