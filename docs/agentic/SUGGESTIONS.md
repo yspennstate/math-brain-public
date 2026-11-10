@@ -5,6 +5,17 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Tell a long job which interruptions are normal, so it does not count them as failures. A job that
+  pauses while you use the computer, or loses its network for a minute, can see the step in hand
+  break and write it down as a failure. After two or three of those it may skip the step for good,
+  and you find the gap days later. Name the interruptions you expect, and ask for a pause to be
+  marked as a retry, not a failure.
+
+  `this job will be paused when I am using the computer and may lose the network now and then.
+  when a step breaks during a pause or a dropped connection, retry it and don't count it toward
+  giving up. only count a failure when the step breaks with nothing else going on, and tell me
+  which steps you skipped.`
+
 - When a job waits for a computer to be free, have it judge busy by what is running, not by what is
   open. A program left open in the background, an editor or a 3D tool sitting idle, can look like
   someone at work, and a job that waits for it to close may wait all night. Ask the agent to measure
@@ -490,7 +501,8 @@ paste. New ones are added as they come up.
   a ceiling you name, and to tell you when it is halfway there.
 
   `before you run this on anything that costs money, tell me roughly what it will cost. don't go
-  over <amount>. tell me when you reach half of it, and stop at the limit and ask me.`
+  over <amount>. tell me when you reach half of it, and stop at the limit and ask me. while you
+  wait for my answer, carry on with the parts that are free.`
 
 - Ask for one page you can open to see where everything stands. With several agents and loops
   running, reading each terminal is slow. An agent can keep a small status page or file, one line
@@ -762,13 +774,6 @@ paste. New ones are added as they come up.
 
   `before we commit to <tool>, run the same three examples through it and through <other tool>,
   put the results side by side, and tell me which you would pick and why.`
-
-- Ask what something costs before the agent spends money on it. Some steps call a paid service or
-  rent a machine, and an agent working on its own may not stop to ask. A rule that it states the
-  price and waits for your yes keeps the bill where you expect it, while the free work goes on.
-
-  `if any step costs money (a paid service, a rented machine, a subscription), stop before it, tell
-  me the price and what it buys, and carry on with the free parts while you wait for my answer.`
 
 - When an agent makes pictures, video or sound, have it look at the result before it uses it. A
   script can report success on a clip that is frozen, garbled or full of noise. A few frames laid
