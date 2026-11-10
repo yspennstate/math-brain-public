@@ -5,6 +5,15 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Put the terminal and the result side by side. Switching back and forth between the agent's window
+  and the page or picture it is changing hides half of every round. On Windows, drag one window to
+  the left edge of the screen and the other to the right (or press Windows key + left arrow, then
+  Windows key + right arrow); on a Mac, hold the green button at the top left of a window and pick
+  a side. Then you can watch each change land as the agent describes it.
+
+  `I have your terminal on the left and the page on the right. after each change, tell me what to
+  look for, and reload the page yourself if you can.`
+
 - Tell the agent how much you already know. The same answer can be pitched at someone who has
   never opened a terminal or at someone who writes code every day, and the agent cannot tell which
   you are. One sentence at the start saves you both a lecture you do not need and a shortcut you
@@ -578,6 +587,13 @@ paste. New ones are added as they come up.
 
   `open the finished <video / page / report> for me so I can look at it now. if there are several,
   open them all, in order.`
+
+  When you are away from the computer, say where you do look instead (an email, a page in your
+  Downloads folder, the repository's front page). A result buried in a log on another computer may
+  as well not exist.
+
+  `when this is finished, put a one-page summary in my Downloads folder and email me the link to
+  it. do not leave the result only in a log.`
 
 - Before you close a set of terminals, have each one write down what it was doing. A terminal you
   close takes its unsaved plans with it: the step it was on, what it was waiting for, what it
@@ -2583,13 +2599,6 @@ paste. New ones are added as they come up.
 
   `before you warn anyone that disk space or memory is running out, take two readings with the same
   tool five minutes apart and report the rate, not just one number.`
-
-- Ask for the result where you will see it. A finished result buried in a log file on another
-  computer may as well not exist. Say where you look (an email, a page in your Downloads folder, a
-  file in the repository's front page) and the agent will put it there.
-
-  `when this is finished, put a one-page summary in my Downloads folder and email me the link to
-  it. do not leave the result only in a log.`
 
 - Let a loop pause itself when it is waiting. Some rounds cannot do anything until another job
   finishes. A loop that knows what it is waiting for can say so in one line and skip the rest of
