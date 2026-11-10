@@ -539,6 +539,18 @@ paste. New ones are added as they come up.
   <the field>. remove any we have solved and any that do not deserve a place, with one line on why,
   and put a better problem in each empty spot. keep the list at <the number> entries.`
 
+  To start a new list from nothing, ask for the reasons and the sources along with the entries. A
+  bare list of two hundred titles is easy to write and hard to trust: you cannot tell which items the
+  agent knows well and which it filled in to reach the number. One line on why each item belongs, and
+  where it is stated, lets you check any entry in a minute, and lets the weeding loop above judge it
+  later. Have the agent build the list in passes, so the first rounds go to finding candidates and
+  the later ones to cutting and ordering.
+
+  `make a list of the top 200 open problems in <the field>. for each, one line on why it matters,
+  where it is stated (a paper, a survey, a talk) with a link, and whether anyone has solved part of
+  it. first collect more candidates than you need, then cut and order them. save it to one file and
+  mark any entry you are unsure of.`
+
 - When agents pass messages to each other, ask them to keep your words apart from theirs. A note from
   one agent to another often mixes what you asked for with that agent's own ideas, and the next agent
   can take a suggestion as your order. Have every relayed message quote your words exactly and mark
