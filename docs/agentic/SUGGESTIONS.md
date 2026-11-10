@@ -5,6 +5,14 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Keep spaces out of file and folder names. A name like "My Project Notes" has to be wrapped in
+  quotes every time it is typed in a terminal, and a command that forgets the quotes reads it as
+  three separate names. Short names joined with dashes or underscores save the agent, and you, a
+  steady trickle of small errors.
+
+  `name every new file and folder with lowercase words joined by dashes, no spaces. when you meet
+  an old name with spaces, quote it, and don't rename it without asking.`
+
 - Use the computer's own scheduler for a job that has to outlive the session. A /loop runs only
   while its terminal stays open, and many loops stop on their own after a week. A nightly backup or
   a weekly report belongs in the system's scheduler instead: Task Scheduler on Windows, cron or
@@ -265,6 +273,12 @@ paste. New ones are added as they come up.
 
   `before you start, tell me roughly how long this will take and what the slowest step is. if it is
   going much slower than that, stop and tell me why.`
+
+  Over many rounds, have it write the real time next to each estimate. Its guesses get better, and
+  you learn which jobs always run over.
+
+  `before each long step, write down how long you expect it to take. when it finishes, add how long
+  it actually took next to the estimate.`
 
 - When you hand an agent several things at once, say which one matters most. An agent with five asks
   and no order often starts with the easiest, and the one you cared about waits. One line fixes it:
@@ -2513,13 +2527,6 @@ paste. New ones are added as they come up.
 
   `before you give me a link, open it yourself and check that it shows the file you mean. if it
   does not, fix it first.`
-
-- Ask for an estimate, then compare it with what happened. Before a long step, the agent says how
-  long it expects it to take; afterwards it writes down how long it really took. After a few rounds
-  its estimates get better, and you learn which jobs always run over.
-
-  `before each long step, write down how long you expect it to take. when it finishes, add how long
-  it actually took next to the estimate.`
 
 - Tell it which copy is the real one. When the same file lives in two places (a working folder and
   a GitHub repository, or two computers), an agent can edit the wrong one and then wonder why
