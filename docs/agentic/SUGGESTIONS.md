@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When an agent tells you something can't be done, ask what it would take. "There is no room for
+  the model" or "the account is out of usage" is often the first obstacle it hit, not the last word.
+  The usual way through is ordinary: copy finished files somewhere safe and free the space, use a
+  second account, run the job on another computer. Ask for the steps and the cost of each, then let it
+  do the ones you agree with.
+
+  `you said this can't be done. list what it would take to make it possible, step by step, with what
+  each step costs or risks. do the safe ones now and ask me about the rest.`
+
+- Before you put time into a new tool or model, ask the agent for links to real work other people made
+  with it. A demo page shows the best case. A few ordinary examples from users (videos, papers, repos)
+  show what you will actually get, and they take a minute to look at.
+
+  `find three things real people made with <the tool> and posted publicly. give me the links, one line
+  on each, and say how close they are to what we want to make.`
+
 - You can ask a looping agent a quick side question, but tell it to go back to the loop afterwards.
   An agent that answers a one-off ("is anything due today?") can treat the answer as the end of the
   job and stop, and the loop you set up for the week goes quiet. One clause at the end of the side
