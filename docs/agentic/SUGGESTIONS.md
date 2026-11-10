@@ -721,6 +721,14 @@ paste. New ones are added as they come up.
   `make me one page with every agent's current job, its last result and anything waiting on me,
   and open it in my browser.`
 
+  An agent working on a hard problem for days is always busy, so "running" tells you nothing. Ask
+  its page what changed since you last looked: which ideas are new, which were tried and ruled
+  out, and how close the best one is to done, with the gap that remains named in one line.
+
+  `open a page in my browser showing what the agent on <the problem> has done since yesterday: new
+  ideas, ideas it dropped and why, and whether anything is close to a finished answer. if nothing
+  is close, say so.`
+
 - An agent can open a new terminal for you, already set up. When you want a second agent on
   another job, you do not have to open a window, find the folder and remember the right command and
   model name. Ask the agent you are talking to; it knows the folder, the model and the settings you
