@@ -5,6 +5,14 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Plan for the moment your usage runs out. Most agent plans have a limit that resets every few
+  hours or every week, and a loop that hits it simply stops answering, sometimes halfway through a
+  change. Ask the agent to keep its notes current so the next round can pick up cold, and to put
+  the heavy work early in the window rather than late.
+
+  `you may hit your usage limit before this is finished. after every step, write what is done and
+  the next step in NEXT.md, so a fresh session can carry on from that line alone.`
+
 - Keep the prompts that worked in one file. A loop prompt you tuned over a week, or the exact words
   that finally got a report in the shape you wanted, is easy to lose in a terminal's history. A
   plain PROMPTS.md with one heading per job lets you, or the next agent, start the same work again
@@ -1355,13 +1363,6 @@ paste. New ones are added as they come up.
   `I need this by Thursday at noon. plan the work to fit, tell me now if it will not, and give me
   a rough version by Wednesday evening.`
 
-- Have the computer make a sound when a long job ends. Waiting on a job you cannot see means
-  checking the window every few minutes. A short beep or a desktop notification at the end lets
-  you do something else until it is ready.
-
-  `when this job finishes, or fails, play a short sound and show a desktop notification with one
-  line saying which.`
-
 - Ask for short answers when you are busy. An agent will often explain everything it did when you
   only wanted the result. Say how long the reply should be, and ask for the detail only when you
   need it.
@@ -1447,6 +1448,12 @@ paste. New ones are added as they come up.
 
   `once an hour, email me three lines: what you finished, what you are on now, and anything that
   needs me. keep it short enough to read on a phone.`
+
+  When you are in the same room, a sound does the same job: a short beep or a desktop notification
+  at the end lets you do something else instead of checking the window every few minutes.
+
+  `when this job finishes, or fails, play a short sound and show a desktop notification with one
+  line saying which.`
 
 - Give every script a --help. A script that only its author knows how to call is lost the moment
   that session ends. A few lines of help, printed when the script is run with --help, tell the next
