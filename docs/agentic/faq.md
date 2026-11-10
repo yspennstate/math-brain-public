@@ -113,6 +113,21 @@ push what it learned after. Memories are small text files, so the two copies mer
 the time; when they do not, ask the agent to keep both lines and mark which is newer.
 [github-as-storage.md](github-as-storage.md)
 
+## How do I know it really did what it says?
+
+Mostly you don't, until you look. An agent can write "done" over a step that half worked, and a
+loop that runs for days will do it sooner or later. So ask every report to come with something you
+can open yourself: the link to the page or the commit, the path of the file, the line of test output
+that passed. A claim with nothing behind it is a draft. Once in a while open one of those links at
+random; if it does not show what the report said, tell the agent, and it will be more careful from
+then on, especially if you ask it to save that as a rule in the brain.
+
+```
+when you say something is done, give me the link, file or test output that shows it. check each
+result a second way before you report it, and if you could not check something, say so plainly
+instead of calling it done.
+```
+
 ## The brain does not seem to do anything. What now?
 
 Check that the hooks run (the agent should mention the brain at the start of a session), that you
