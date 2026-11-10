@@ -666,6 +666,15 @@ paste. New ones are added as they come up.
   `when this is finished, put a one-page summary in my Downloads folder and email me the link to
   it. do not leave the result only in a log.`
 
+  When the work comes out as many small pieces, such as a hundred short clips, a folder of
+  pictures or a page per chapter, opening them one by one tells you little about the whole. Ask
+  the agent to join them into one thing in their real order first: the clips into a single
+  video, the pictures onto one page, the chapters into one document. Problems that only show in
+  sequence (a voice that changes, a jump in style, a missing piece) are easy to spot that way.
+
+  `join all the <clips / pictures / sections> you have made so far into one <video / page /
+  document> in their proper order, mark any that are still missing, and open it for me.`
+
 - Before you close a set of terminals, have each one write down what it was doing. A terminal you
   close takes its unsaved plans with it: the step it was on, what it was waiting for, what it
   meant to do next. One prompt to each before you close it, or one agent that reads their
