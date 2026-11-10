@@ -930,6 +930,15 @@ paste. New ones are added as they come up.
   `before you delete this to free space, check whether it can be downloaded again exactly as it is,
   write the source and the command to restore it next to where it was, and only then delete it.`
 
+  For finished work that exists only on your machine (rendered clips, results, old outputs), the
+  safe order is copy, check, then delete. Push it to a repository or other storage you own, have
+  the agent compare the stored copy with the local one by size and checksum, and only then remove
+  the local file. Done as a routine, this keeps a busy computer from filling up.
+
+  `move every finished <file type> in <folder> to <the repository>. after each upload, check the
+  stored copy matches the local file by size and checksum, delete the local file only when it
+  does, and keep a list of what moved and where.`
+
 - Give every long job an off switch you can use without the agent. A small file that the job checks
   before each step (if it exists, the job finishes the current step and stops) lets you or any other
   agent stop it cleanly from anywhere, even when the session that started it is gone, and saves
