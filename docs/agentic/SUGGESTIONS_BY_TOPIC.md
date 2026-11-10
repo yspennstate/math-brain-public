@@ -264,8 +264,9 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Type fast; don't fix your spelling.
 - Turn a habit into a hook.
 
-## Memory, notes and the brain (45)
+## Memory, notes and the brain (46)
 
+- Ask which note an answer came from.
 - When you want to choose between two versions, ask to see them side by side.
 - When you reply "keep working", say on what.
 - Before a long batch, have the agent run and time one item first.

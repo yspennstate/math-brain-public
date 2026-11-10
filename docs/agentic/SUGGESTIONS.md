@@ -5,6 +5,15 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Ask which note an answer came from. When an agent tells you something about your own work, a
+  past result, a rule you set, a date, it usually read it in the brain, and the note it read may
+  be out of date or wrong. If you know which note it was, you can fix the note once and every
+  later answer improves. Without that, you correct the agent today and the same wrong answer
+  comes back next week from the same note.
+
+  `when your answer depends on something you read in the brain, name the note it came from. if a
+  note turns out to be wrong or out of date, fix it, or mark it as replaced, and tell me which.`
+
 - Ask for a weekly look back. After a week of loops there are hundreds of NEXT lines and new
   memories, and nobody reads them all, so a project that stalled on Tuesday can sit unnoticed until
   the next week. Once a week, give one round to reading the whole week and saying plainly what
