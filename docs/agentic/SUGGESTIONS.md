@@ -5,6 +5,14 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Tell the agent how much you already know. The same answer can be pitched at someone who has
+  never opened a terminal or at someone who writes code every day, and the agent cannot tell which
+  you are. One sentence at the start saves you both a lecture you do not need and a shortcut you
+  cannot follow.
+
+  `I am new to the terminal but comfortable with spreadsheets. explain new terms the first time you
+  use them, and give me commands I can paste exactly as written.`
+
 - Keep spaces out of file and folder names. A name like "My Project Notes" has to be wrapped in
   quotes every time it is typed in a terminal, and a command that forgets the quotes reads it as
   three separate names. Short names joined with dashes or underscores save the agent, and you, a
@@ -366,6 +374,12 @@ paste. New ones are added as they come up.
 
   `check each of my computers: how busy it is, free memory, free disk. for each idle one, say which
   of our jobs would fit on it and which would not, with the memory each needs. move the ones that fit.`
+
+  The same question works for the one computer in front of you: a loop can sit on a half-idle
+  machine because nothing told it to take more.
+
+  `is the processor, memory and graphics card on this computer being used fully right now? if
+  something sits idle, tell me what could use it.`
 
 - When you give feedback on something the agent made, say what to keep as well as what is wrong.
   "The pictures are great, the voice is in the wrong language, the mouths don't move" tells it to fix
@@ -3014,12 +3028,6 @@ paste. New ones are added as they come up.
 
   `/loop fire this every 5 minutes for the next 10 days. keep working on <the project> until <what
   done means>. when it is done, check it once more, send me a short report and stop.`
-
-- Ask whether the machine is being used. A loop can sit on a computer that is half idle because
-  nothing told it to take more. One question finds out.
-
-  `is the processor, memory and graphics card on this computer being used fully right now? if
-  something sits idle, tell me what could use it.`
 
 - Run a loop whose only job is to find what got stuck. Long pipelines leave things behind: a file
   made but never uploaded, a job that died halfway. A sweep that looks for those is cheap and
