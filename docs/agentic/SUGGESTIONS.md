@@ -717,6 +717,15 @@ paste. New ones are added as they come up.
   call on this account, and whether I can keep the others untouched. make one small test call and
   show me which balance changed before you run anything bigger.`
 
+  When you change plans or add an account, nobody can tell you in advance how far its allowance
+  goes for your kind of work: a plan's limits are written in hours or messages, and your jobs are
+  pictures, clips or pages. Measure it once. Note the usage meter, run a small batch of ordinary
+  jobs, read the meter again, and divide. The answer tells you what a day or a week of that plan
+  buys, and it is worth measuring again after the provider changes its terms.
+
+  `I just changed my plan. read the usage meter, make ten ordinary <pictures / clips / pages>,
+  read it again, and tell me how many of them a day and a week of this plan will cover.`
+
 - Ask for one page you can open to see where everything stands. With several agents and loops
   running, reading each terminal is slow. An agent can keep a small status page or file, one line
   per job with what it is doing, when it last moved and what it waits on, and refresh it as it
