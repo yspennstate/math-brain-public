@@ -3173,6 +3173,14 @@ paste. New ones are added as they come up.
   `I keep telling agents <the instruction>. make it a hook that reminds every session at the right
   moment, show me the hook firing once, and save the reason in the brain.`
 
+- When new terminals hang before the agent answers, time the hooks. Every hook runs before the first
+  reply, and after a few weeks of adding them one slow hook (a search over a large folder, a network
+  call, a file that grew) can hold every new session for a minute or more. The agent can run each one
+  alone and tell you which is slow and what it is reading.
+
+  `new terminals are slow to start. run each of my hooks on its own, time it, and list them slowest
+  first with what each one reads. fix the slowest so it does less, and time a fresh start again.`
+
 - Your later words win. When you change your mind halfway through a long loop, just say the new
   thing. Ask the agent to add your new words, dated, under the old ones in its ORDER file instead
   of replacing them, so it can see how the request changed.
