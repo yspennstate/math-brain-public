@@ -5,6 +5,14 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When a test fails only some of the time, have it run many times before anyone calls it fixed. A
+  test that fails one run in five will pass twice in a row by luck, and the agent will report the
+  fix as working. Twenty runs in a row, with the count of failures, tells you whether the problem is
+  gone or only hiding.
+
+  `this test fails now and then. before you say it is fixed, run it twenty times in a row and tell
+  me how many runs failed, before and after your change.`
+
 - When a shared disk runs low, ask how much of it is your work before anything is cleaned. On a
   computer you share with someone, the space may be going to their own files, and deleting yours
   will not fix it, while deleting theirs is not your call. A short count of what your jobs take,
@@ -1446,11 +1454,12 @@ paste. New ones are added as they come up.
   part, say which.`
 
 - Ask it to check the key number a second way. A result that comes out of one script has only been
-  computed once. Working it out again by a different route, even a rough one, catches the slips
-  that rereading the same code never will.
+  computed once, and checking it the same way twice can repeat the same mistake twice. Working it
+  out again by a different route, even a rough one, catches the slips that rereading the same code
+  never will.
 
-  `before you report the final figure, get it a second way (a different script, a hand calculation
-  or a smaller sample) and tell me whether the two agree.`
+  `before you report the final figure, get it a second way that does not reuse your first code (a
+  different script, a hand calculation or a smaller sample) and tell me whether the two agree.`
 
 - Ask it to read back what it saved. A save can fail quietly: a full disk, a wrong folder, a file
   cut short. Reading the first and last lines back, or checking the size, takes a second and turns
@@ -2592,13 +2601,6 @@ paste. New ones are added as they come up.
 
   `these two jobs both use the graphics card. make them take turns: one holds a lock file while it
   runs, the other waits for the lock to clear.`
-
-- Ask for a second check by a different method. A result checked the same way twice can repeat the
-  same mistake twice. Recomputing it another way (different code, a different data path, a census by
-  hand on small cases) is what catches the error.
-
-  `after you get the number, check it a second way that does not reuse your first code, and tell me
-  whether the two agree.`
 
 - Let a slow download pick up where it stopped. Large files (models, data sets) often drop partway
   through. A script that starts the whole file again on every drop can run for hours without ever
