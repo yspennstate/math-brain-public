@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When one agent passes on your words to another, have the second one check them at the source. A
+  request that reaches an agent through a colleague can be shortened, misread or out of date by the
+  time it arrives. If your own prompts are kept somewhere both can read, the second agent can find
+  the original line in a few seconds before it acts, especially when money or deleting is involved.
+
+  `if another agent tells you I asked for something, find my own words for it in <where prompts are
+  kept> before you act, and quote them back to me in your report.`
+
+- Have the agent tell you the one thing you need to do in a separate, short message. A blocker that
+  only you can clear (a login, a payment, a key, a yes) gets lost when it sits in the middle of a
+  long report. A short message with a plain subject, the steps in order and how long they take
+  gets done the same day.
+
+  `when you need something only I can do, send it to me as its own short message: what to do, step
+  by step, how long it takes, and what you will do the moment it is done.`
+
 - When two tools could do a job, have the agent try both on the same small piece. Reviews and
   leaderboards tell you which model or program is better in general, not on your material. Three
   examples run through each, shown side by side, settle it in an hour, before a whole project is
