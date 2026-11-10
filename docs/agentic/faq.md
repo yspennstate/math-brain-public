@@ -55,6 +55,18 @@ A loop uses your agent subscription or API allowance the way normal use does, ju
 Pushing to GitHub is free; repositories with automatic test runs can bill for those runs, so put
 `[skip ci]` in commit messages for documentation and data.
 
+## Which model should the agent use, and how hard should it think?
+
+Use the strongest model you have for work that needs judgment: proofs, debugging, writing, deciding
+what to do next. A loop that mostly watches something (a render, a mailbox, a listing) can run on a
+smaller, cheaper model, because each round is a quick look and a line in NEXT.md.
+
+Most terminal agents also let you set how long the model thinks before it answers (in Claude Code,
+`/model` picks the model and the effort setting; Codex has its own model and reasoning settings). A
+high setting is a good default for a long loop. The very highest uses your allowance much faster,
+and over ten days of rounds that adds up, so save it for the hard step that needs it. If you are not
+sure, run one real task both ways and compare what came back.
+
 ## Does the agent need the internet, and what does it send out?
 
 Yes. The model itself runs on the provider's servers, so the agent needs a connection, and
