@@ -34,6 +34,34 @@ Go down this list in order. Most problems are the first two.
 8. The computer is slow. Several loops and agents at once use real memory and CPU. Run fewer at a
    time, or start the heavy ones on another machine.
 
+9. The agent stops halfway and says it is done. Agents like to report early. A loop helps, and so
+   does writing the finish line into the prompt: what has to exist, and how the agent proves it.
+
+   ```
+   do not stop until <the result> exists and you have checked it yourself. if you are about to stop
+   for any other reason, write down what is left, then keep going on it.
+   ```
+
+10. Work stopped overnight. The computer went to sleep, and every loop and job on it paused. Ask the
+    agent to keep it awake while the work runs, and to check that the setting survives a restart.
+
+    ```
+    my jobs stopped while I was away, probably because the computer went to sleep. keep it awake
+    while our work is running, show me how you did it, and check it still holds after a restart.
+    ```
+
+11. Jobs fail with odd errors about writing files. The disk is full. Do not let the agent delete
+    to make room without a copy somewhere else first.
+
+    ```
+    check how much free disk this computer has. if it is low, list the biggest folders we made, move
+    finished results to <the backup place>, check the copies, and only then remove the local ones.
+    ```
+
+12. The agent says its usage ran out. Most plans have a limit per few hours or per week. If you
+    have a second account or another agent program, keep a terminal open on it as a fallback, and
+    keep the ORDER and NEXT files current so the other one can pick the work up mid-stride.
+
 Still stuck: paste this into the agent.
 
 ```
