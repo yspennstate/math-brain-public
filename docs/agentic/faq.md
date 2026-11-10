@@ -32,6 +32,17 @@ tell it to split the step or skip it.
 Days. The practical limit is the scheduler: some drop a recurring job after about a week. Put the
 end date inside the prompt so the agent knows to set the job up again when it lapses.
 
+## How do I stop a loop, or change what it is doing halfway?
+
+To change it, type the change into the same window, as you would to a person: "from now on, skip
+the tests and only write the docs". The agent treats your newest words as the ones that count. If
+the loop rereads an ORDER file every round, you can also edit that file, and the next round picks
+the change up even when you are not at that window.
+
+To stop it, say "stop the loop" in its window, or close the window: a loop lives inside its
+session. It also stops by itself at the end date you gave it. Before stopping a long loop, ask for
+a short report of where things stand, so the next loop can start from there.
+
 ## What happens when the agent's context fills up?
 
 It compacts: the conversation is summarised and the agent carries on from the summary. Anything
