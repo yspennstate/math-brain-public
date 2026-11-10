@@ -74,6 +74,18 @@ Go down this list in order. Most problems are the first two.
     (or email it), then keep working on whatever does not depend on the answer. never stop and wait.
     ```
 
+14. The agent says the job is done, but when you look, the file is not there, or the change never
+    reached GitHub. A report is easy to write and a step is easy to skip, especially near the end
+    of a long round. Ask for proof that you can check in ten seconds: the path of every file it
+    wrote and the commit hash of every push. Then check one of them yourself now and then. An
+    agent that knows its report gets checked tends to check its own work before writing it.
+
+    ```
+    end every report with the full path of each file you changed and the commit hash of each
+    push. before you write "done", open the file or run git log on the remote and confirm the
+    change is really there. if it is not, say so and fix it instead of reporting it as done.
+    ```
+
 Still stuck: paste this into the agent.
 
 ```
