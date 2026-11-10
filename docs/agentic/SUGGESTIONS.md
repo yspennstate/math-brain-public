@@ -5,6 +5,25 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- If the terminal asks before every command, allow the safe ones once. A new terminal agent asks
+  permission to read a folder, list files, run a search. Answering yes forty times an hour is how
+  people end up approving without reading. Most terminal agents let you allow a kind of command for
+  good (in Claude Code, the "don't ask again" choice or the permissions setting). Allow the
+  read-only ones, keep asking for anything that deletes, installs, pushes or spends money, and then
+  read the prompts that are left.
+
+  `which commands have you asked me about most today? list the read-only ones and set them so you
+  stop asking. keep asking me before anything that deletes, installs, publishes or costs money.`
+
+- When the connection drops in the middle of a job, ask what finished before you start again. A
+  dropped wifi, a closed laptop lid or a remote computer that went to sleep can cut a job halfway.
+  Starting the whole thing again repeats what already worked and can leave two copies of the same
+  output. Have the agent check what is on disk first and resume from there.
+
+  `the connection dropped while you were working on <the job>. before you redo anything, check
+  what finished, what is half written and what never started, then continue from the first
+  unfinished piece.`
+
 - Speak your prompts if typing slows you down. Windows has voice typing on Windows key + H and a
   Mac has dictation in its keyboard settings; both work in a terminal. A spoken request comes out
   longer and with more of the context the agent needs, and the agent reads through the odd misheard
