@@ -1548,6 +1548,12 @@ paste. New ones are added as they come up.
   `write a skill called brain-search that explains, step by step, how to search my notes and read
   a result in full. keep it under a page and test it in a new session.`
 
+  A long prompt you paste every few days, a loop prompt especially, can become a slash command the
+  same way, so next time you type one word.
+
+  `turn the prompt I just gave you into a command called /<name> that I can type in any session,
+  and show me it working once.`
+
 - Ask it to note which copy of the brain it is reading. With the brain on two computers, or a
   laptop copy and the one on GitHub, an answer can come from the stale one. One line naming the
   folder and the date of its last update makes that visible.
@@ -3017,12 +3023,6 @@ paste. New ones are added as they come up.
 
   `when you finish, delete the temporary files you made, stop any background program you started,
   and tell me what you removed and what you left on purpose.`
-
-- Save a prompt you use often as a command. If you paste the same long loop prompt every few days,
-  ask the agent to turn it into a slash command or a skill, so next time you type one word.
-
-  `turn the prompt I just gave you into a command called /<name> that I can type in any session,
-  and show me it working once.`
 
 - Ask for the strongest case against a result. An agent asked whether it is right will usually say
   yes. Asked to argue that it is wrong, it often finds the weak spot.
