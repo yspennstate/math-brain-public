@@ -5,6 +5,14 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When you want to choose between two versions, ask to see them side by side. Two separate files
+  make you remember the first while you watch the second, and small differences slip past. The same
+  scene or page from both versions, next to each other and labelled, shows at once which is sharper,
+  which moves more and where one breaks.
+
+  `put the old and the new version of the same piece next to each other in one picture or clip, label
+  each one, and tell me in a few lines where they differ and which you would keep.`
+
 - Ask how far along a long job is in numbers. "Still working on it" tells you nothing about when to
   come back. A count of pieces done and left, the time each one takes and a rough finish time tells
   you whether to wait, add a computer or cut the job down, and a count that stops moving is the
@@ -273,14 +281,6 @@ paste. New ones are added as they come up.
 
   `keep: <what works>. change: <what is wrong>, one line each. don't touch anything on the keep list,
   and tell me which items you changed when you send the new version.`
-
-- On a computer someone else is using, have heavy jobs step aside while that person is at it. A
-  long render or a big download can make their mouse and typing lag. Ask the agent to check whether
-  the person is active before each heavy step, and to pause or slow down while they are, then pick up
-  again when the machine is quiet.
-
-  `before each heavy step, check whether the person who owns this computer is using it. if they are,
-  or the machine feels slow, pause or use less, and carry on when it is quiet. log each pause.`
 
 - When an agent works on a hard research question, ask for its progress in research terms, with each
   claim marked by how sure it is. "Making good progress" tells you nothing. What you want is which
@@ -739,12 +739,13 @@ paste. New ones are added as they come up.
 - If an agent runs heavy work on a computer someone else also uses, ask it to make the work give way
   to that person. A small watcher that pauses the job as soon as the keyboard or mouse moves, ends it
   if they keep working or memory gets tight, and starts again only after they have been away for a
-  while, costs little and keeps the machine pleasant for its owner. Ask the agent to test it once
-  with a dummy job before trusting it.
+  while, costs little and keeps the machine pleasant for its owner: a long render or a big download
+  otherwise makes their mouse and typing lag. Ask the agent to test it once with a dummy job before
+  trusting it.
 
   `this computer is shared. before you run anything heavy on it, set up a watcher that pauses our
-  work when someone is using it and stops it if memory runs low, test it with a dummy job, and tell
-  me what it did.`
+  work when someone is using it and stops it if memory runs low, test it with a dummy job, log each
+  pause, and tell me what it did.`
 
 - Before a large download, have the agent check the free space it will leave and verify the files
   afterwards. Big model and data downloads fail half way, land in the wrong folder or fill the disk.
@@ -2054,13 +2055,6 @@ paste. New ones are added as they come up.
   `use paths relative to the project folder, never a full path that starts with my user name or
   drive letter. if a path must be set per computer, read it from one settings file.`
 
-- Have it name files for what they hold. A folder of final.csv, final_v2.csv and final_really.csv
-  tells nobody which one to trust. A name that says what is inside and when it was made settles it
-  without opening anything.
-
-  `name every output file for what it contains, like prices_cleaned_2026-11-09.csv. never final,
-  new, v2 or copy in a file name.`
-
 - Ask it to check the licence before it copies code. Code found online is not always free to reuse,
   and a pasted function can carry terms you never agreed to. A one-line check before copying is far
   cheaper than finding out later.
@@ -2284,12 +2278,14 @@ paste. New ones are added as they come up.
   `I am on Windows 11 and the terminal is PowerShell. give me commands for that, and say so when a
   step works differently on a Mac or Linux.`
 
-- Put the date at the front of file names. Reports, logs and results named report_final, report_new
-  and report_new2 stop meaning anything after a week. A name that starts with the date sorts itself
-  and tells you at a glance which one is newest.
+- Put the date at the front of file names, then say what the file holds. Reports, logs and results
+  named report_final, report_new and report_new2 stop meaning anything after a week. A name that
+  starts with the date sorts itself, and the words after it tell you which file to trust without
+  opening anything.
 
-  `name every report, log and result file starting with the date, like 2026-11-09_backtest.md, so
-  they sort by day. never overwrite an older one.`
+  `name every report, log and result file starting with the date and then what it contains, like
+  2026-11-09_prices_cleaned.csv, so they sort by day. never final, new, v2 or copy in a name, and
+  never overwrite an older one.`
 
 - Have it write down the versions it installs. A setup that worked in March can break in June
   because a package moved on. Ask the agent to keep a list of what it installed and at which
