@@ -15,6 +15,11 @@ This is the single biggest change in how much an agent gets done. Without a loop
 until it thinks it has answered you and then waits. With a loop it keeps picking up the next step
 for days, and the brain is what lets it pick up where it left off instead of starting cold.
 
+New to loops? Start with one small loop that runs for a day, as in the first-week plan in
+[starter-prompts.md](starter-prompts.md#the-rest-of-the-first-week), so you can read every round.
+Once you run more than one, give each its own terminal and folder
+([terminals.md](terminals.md#several-terminals-one-job-each)).
+
 ## The shape of a good loop prompt
 
 The loops that work best here share a shape. Most of them are one paragraph, written quickly, and
