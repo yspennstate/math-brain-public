@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- If a loop has to run longer than the scheduler allows, put the renewal date in the prompt itself.
+  Some schedulers drop a repeating job after a few days, so a ten-day loop quietly ends on day seven.
+  Write the date the job must be re-created, and the date it ends for good, into the loop prompt, so
+  every run reminds the agent.
+
+  `/loop fire this every 5 minutes for the next 10 days. the scheduler drops repeating jobs after 7
+  days: on day 6 re-create this job to run to <end date>, and after <end date> stop it and send me
+  a final report.`
+
+- Give every long job an off switch you can use without the agent. A small file that the job checks
+  before each step (if it exists, the job finishes the current step and stops) lets you or any other
+  agent stop it cleanly from anywhere, even when the session that started it is gone. Ask the agent
+  to tell you the file's name when it starts the job.
+
+  `give this job a stop file it checks before every step, so it can be stopped cleanly without you,
+  and tell me where the file goes.`
+
 - When one order covers several machines or several pieces, have the agents split it with one owner
   per piece and say who owns what. Two agents doing the same download or the same render waste hours
   and can overwrite each other; nobody doing the last piece is just as common. A short line on a
