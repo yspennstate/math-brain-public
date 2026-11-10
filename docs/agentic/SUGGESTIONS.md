@@ -5,6 +5,14 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Keep the prompts that worked in one file. A loop prompt you tuned over a week, or the exact words
+  that finally got a report in the shape you wanted, is easy to lose in a terminal's history. A
+  plain PROMPTS.md with one heading per job lets you, or the next agent, start the same work again
+  in a minute instead of rewriting it from memory.
+
+  `add the prompt I used for this job to PROMPTS.md under a heading with its name and today's date,
+  word for word, with one line on what it does and what to change before reusing it.`
+
 - Put the terminal and the result side by side. Switching back and forth between the agent's window
   and the page or picture it is changing hides half of every round. On Windows, drag one window to
   the left edge of the screen and the other to the right (or press Windows key + left arrow, then
@@ -667,6 +675,13 @@ paste. New ones are added as they come up.
 
   `you have said "unchanged" for a while. tell me exactly what you compared, where each side came
   from, and whether one of them is your own earlier note. if it is, check the real source now.`
+
+  It also helps to ask for the reason every quiet round. A round that changes nothing can mean the
+  work is finished, the agent is waiting on something, or it is stuck and not saying so; one line
+  on why tells you which.
+
+  `if a round makes no change, still write one dated line saying why: finished, waiting on what, or
+  stuck on what.`
 
 - When one agent tells another that something is done, have the second one check before it builds
   on it. Agents pass each other short reports, and "the model is installed" or "the files are
@@ -2716,12 +2731,6 @@ paste. New ones are added as they come up.
 
   `you write only in docs/notes/ and results/. everything else you may read but not change; if a
   fix is needed somewhere else, write it down in NEXT.md for me instead of making it.`
-
-- Ask for the reason a round did nothing. A quiet round can mean the work is finished, the agent is
-  waiting on something, or it is stuck and not saying so. One line on why tells you which.
-
-  `if a round makes no change, still write one dated line saying why: finished, waiting on what, or
-  stuck on what.`
 
 - Keep a short list of what you never want it to do. Some rules matter more than any task: never
   delete without a copy, never post in public, never spend money. Put them in a file the loop reads
