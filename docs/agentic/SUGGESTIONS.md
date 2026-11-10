@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- For a piece of writing that matters, ask the agent to think about the approach before it drafts.
+  A letter, a statement or an application has a reader, a purpose and a few points that decide how
+  it lands. Asking for a short plan first (who reads it, what they need to believe at the end, which
+  three points carry it, what to leave out) gives you something quick to correct, and the draft that
+  follows is usually close to right the first time.
+
+  `before you write anything, think about how to do this well. tell me in five lines who will read
+  it, what it has to achieve, the points that carry it and what you would leave out. then wait.`
+
+- When someone else is writing about you, such as a recommendation letter, have the agent give them
+  material rather than finished prose. A referee writes in their own voice and knows what they saw.
+  Two short paragraphs of plain facts they can check and reword (what you did, the result, why it
+  mattered) help them far more than a polished letter they would have to rewrite.
+
+  `my referee asked for help with their letter. write two short paragraphs of plain facts about this
+  work that they can check and put in their own words: what I did, what came of it, why it matters.`
+
 - A loop is a good way to keep a list growing: job openings, papers on a topic, grants, places to
   send your work. Ask the agent to keep the list in one file, check each new find against what is
   already there, and write down where and when it found each item. After a week you have a list you
