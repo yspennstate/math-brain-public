@@ -5,6 +5,21 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Speak your prompts if typing slows you down. Windows has voice typing on Windows key + H and a
+  Mac has dictation in its keyboard settings; both work in a terminal. A spoken request comes out
+  longer and with more of the context the agent needs, and the agent reads through the odd misheard
+  word. Read it once before you press Enter, mainly for names and numbers.
+
+  `I dictated this, so a few words may be wrong. if something does not make sense, ask me rather
+  than guessing: <your request>`
+
+- When you are new to something, ask the agent what you should be asking it. You may not know what a
+  good request looks like for a field you have never worked in. The agent can list the questions an
+  experienced person would ask first, and you pick the ones that matter to you.
+
+  `I am new to <the topic> and want to <the goal>. what are the five questions someone experienced
+  would ask before starting? answer the first one, then wait for me to pick the next.`
+
 - If you see it going the wrong way, stop it mid-turn and say so. In a terminal agent, pressing Esc
   stops the current step without closing the session; then type the correction. Waiting for it to
   finish a long turn in the wrong direction costs time and leaves work you then have to undo. Your
