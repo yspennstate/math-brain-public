@@ -5,6 +5,14 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Use the computer's own scheduler for a job that has to outlive the session. A /loop runs only
+  while its terminal stays open, and many loops stop on their own after a week. A nightly backup or
+  a weekly report belongs in the system's scheduler instead: Task Scheduler on Windows, cron or
+  launchd on a Mac or Linux machine. The agent can set it up and tell you how to switch it off.
+
+  `this job should run every night even when no terminal is open. set it up in the computer's own
+  scheduler, run it once now to show it works, and write in SETUP.md how to turn it off.`
+
 - Name the folders it must leave alone. An agent tidying up or searching for a file will walk
   through everything it can reach, including your photos, another project or a folder a second
   agent is working in. Say up front which places are off limits, and it will work around them
@@ -2012,13 +2020,6 @@ paste. New ones are added as they come up.
   `make a new git branch before you start this change. tell me its name, and do not merge it into
   main until I have looked at the result.`
 
-- Keep the question with the answer. A results file read a month later often makes no sense,
-  because nobody remembers what it was trying to find out. One line at the top saying what was
-  asked, and when, turns a bare table into something a stranger can use.
-
-  `start every results file with one line saying the question it answers and the date. keep that
-  line when you update the file.`
-
 - Ask it to save text as UTF-8. Names with accents, quote marks and symbols turn into strange
   characters when one program writes a file in one encoding and another reads it in a different
   one. Saying the encoding once in the prompt avoids a slow, confusing hunt later.
@@ -2312,12 +2313,16 @@ paste. New ones are added as they come up.
   `INDEX.md and the tables under results/ are built by make_index.py. never edit them by hand;
   change the script or its inputs and rebuild.`
 
-- Keep every result next to the command that made it. A number in a report is only useful if
-  someone can make it again. Ask the agent to write the exact command and input files under each
-  result, so a later session can rerun it instead of trusting it.
+- Keep every result next to the command that made it, and the question it answers. A number in a
+  report is only useful if someone can make it again, and a results file read a month later often
+  makes no sense because nobody remembers what it was trying to find out. The exact command under
+  each result, and one line at the top saying what was asked and when, fix both.
 
   `under every result you report, give the exact command and the input files that produced it, so
   anyone can run it again and get the same answer.`
+
+  `start every results file with one line saying the question it answers and the date. keep that
+  line when you update the file.`
 
 - Prefer plain text formats. Notes in Markdown, tables in CSV and settings in a small text file can
   be read by any agent, searched by any tool and compared line by line. Spreadsheets, word files
