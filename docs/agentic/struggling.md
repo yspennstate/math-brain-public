@@ -62,6 +62,18 @@ Go down this list in order. Most problems are the first two.
     have a second account or another agent program, keep a terminal open on it as a fallback, and
     keep the ORDER and NEXT files current so the other one can pick the work up mid-stride.
 
+13. The agent keeps stopping to ask you questions, and the loop waits for an answer while you are
+    away. Most of those questions have a sensible default, so tell it once to decide those itself.
+    Keep the real questions (money, deleting something that has no second copy, publishing) for
+    you, sent one way you will actually see, and let the work that does not depend on the answer
+    carry on.
+
+    ```
+    decide small things yourself and tell me what you chose in the report. if something really
+    needs me, write one short question with your recommendation at the top of <folder>/QUESTIONS.md
+    (or email it), then keep working on whatever does not depend on the answer. never stop and wait.
+    ```
+
 Still stuck: paste this into the agent.
 
 ```
