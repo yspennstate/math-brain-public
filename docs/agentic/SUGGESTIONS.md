@@ -3154,6 +3154,16 @@ paste. New ones are added as they come up.
   `before you start, recall what the brain has on <the topic>: earlier attempts, mistakes, results.
   give me five lines, then begin from there.`
 
+  This matters most when the computer is already full. With every core and the memory taken by
+  long jobs, each new command is slow, and an agent that rebuilds a result from scratch competes
+  with the work you care about. A recall reads a few small files and answers in seconds; a fix or
+  a number someone already found does not have to be found again on a machine that has no room
+  to spare.
+
+  `this computer is fully loaded. before you run anything heavy, recall whether we already have
+  this result or a fix for this error. only compute what the brain does not have, and tell me
+  which parts you could skip.`
+
 - Have a second agent check a result before it goes public. The agent that produced a result is
   the worst judge of it. A second agent that reruns the work without reading the first one's code
   catches most of what slips through.
