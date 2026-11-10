@@ -209,6 +209,25 @@ step on the export"). The loop does the work, the memories carry what each round
 skills keep every round doing it your way. [loop-prompts.md](loop-prompts.md),
 [skills.md](skills.md), [github-as-storage.md](github-as-storage.md)
 
+## How do I keep the agent and the brain up to date?
+
+Two things change under you: the terminal agent itself and the brain framework. Most terminal agents
+update themselves or with one command (`claude update` for Claude Code; Codex is updated through npm,
+`npm install -g @openai/codex@latest`). The framework updates the way any repository does, with a
+`git pull` in its folder. Your memories are your own files and an update does not touch them.
+
+A session that is already running keeps the version it started with, so a long loop is not cut off by
+an update; the next session you open gets the new one. The risk is the other way round: a new version
+can rename a command or change a default, and a loop that worked yesterday stops on the first round.
+Update between jobs rather than in the middle of one, and if a loop breaks right after an update, say
+so to the agent; it can read what changed and fix the prompt or the script.
+
+```
+check whether this terminal agent and the brain framework have updates. if they do, tell me what
+changed in a few lines, wait until no loop of mine is running, then update and check that one round
+of each loop still works.
+```
+
 ## What happens to my notes if I stop using it?
 
 Nothing. Every memory is an ordinary Markdown file in a folder on your computer, with a few lines
