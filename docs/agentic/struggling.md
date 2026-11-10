@@ -99,6 +99,18 @@ Go down this list in order. Most problems are the first two.
     me what and where instead of pushing. never publish anything from <private folder>.
     ```
 
+16. The loop keeps fixing the same thing over and over. The NEXT lines say "fixed X", then "X broke
+    again, fixed it", round after round. Usually two rounds are undoing each other (one tidies a
+    file the other one needs untidy), or a check can never pass and the agent keeps trying. Read
+    the last five or six NEXT lines yourself; the circle is easy to see there. Then give the loop
+    a way out.
+
+    ```
+    read the last ten lines of NEXT.md and tell me if you are going in a circle. from now on, if
+    the same thing fails twice, stop working on it: write what you tried and why it failed at the
+    top of NEXT.md under STUCK, and move on to the next step.
+    ```
+
 Still stuck: paste this into the agent.
 
 ```
