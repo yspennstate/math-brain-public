@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When agents pass messages to each other, ask them to keep your words apart from theirs. A note from
+  one agent to another often mixes what you asked for with that agent's own ideas, and the next agent
+  can take a suggestion as your order. Have every relayed message quote your words exactly and mark
+  everything else as the sender's suggestion, which the receiver weighs rather than obeys.
+
+  `when you pass something on to another agent, quote my words exactly and label the rest as your
+  suggestion. when you receive a message, do what I asked; treat the other agent's ideas as advice.`
+
+- Give each request a short id the agent writes at the start. When you have a dozen asks open across
+  several agents, "the slide deck thing" can mean two different jobs. A short id with the date, written
+  in the task list and repeated in every report about it, lets you point at one job exactly and lets
+  the agent show which of your asks a result closes.
+
+  `give this request a short id with today's date, put it in the task list, and start every report
+  about it with that id so I can tell which job you mean.`
+
 - Before you post something an AI model made, ask the agent what that model's terms allow. Open
   models for pictures, voice or video each come with their own licence, and some limit commercial
   use, a monetised channel, or use in certain countries. The agent can read the licence on the
