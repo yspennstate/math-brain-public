@@ -4,7 +4,7 @@ The same ideas as [SUGGESTIONS.md](SUGGESTIONS.md), grouped so you can find the 
 the first sentence of a suggestion; search for it in SUGGESTIONS.md to read the rest and the prompt that
 goes with it. A suggestion sits under the first topic it fits, so a few could live in two places.
 
-## Loops: starting them, keeping them going, ending them (52)
+## Loops: starting them, keeping them going, ending them (53)
 
 - Ask for the night plan before you go to bed.
 - When one loop carries several jobs, have each round say which job it worked on.
@@ -27,6 +27,7 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Check on your loops from your phone.
 - When one step is blocked, have it move to the next and say so.
 - Give a loop a heartbeat file.
+- Ask for a weekly look back.
 - Know when a scheduled loop runs out.
 - Have each round leave one dated line.
 - Ask it to turn a long log into a short timeline.
