@@ -5,6 +5,21 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When an agent works on a hard research question, ask for its progress in research terms, with each
+  claim marked by how sure it is. "Making good progress" tells you nothing. What you want is which
+  directions it opened, which it ruled out and why, and for each result whether it is checked, a
+  sketch with a gap, or only a hunch. That split keeps a promising idea from being read as a theorem.
+
+  `report on the problem: new directions you found, routes you ruled out and why, and for each
+  result say whether it is fully checked, a sketch with a named gap, or a guess. no summary words.`
+
+- Give the agent the next job before it finishes the current one. An agent that submits a form or
+  lands a change often stops and waits, and if you are away the hours go by with nothing happening.
+  A short list of what comes next, in order, lets it move straight on and report once at the end.
+
+  `when you have submitted this, don't wait for me. go on to the next items in this order: <one>,
+  <two>, <three>. send me one short report when the list is done or when something needs me.`
+
 - When a site will ask the agent to confirm many small steps, give it standing permission for those
   steps and name the ones that still need you. Submitting a paper or an application can take a dozen
   "are you sure" and "next" screens, and an agent that stops at each one turns a ten-minute job into an
