@@ -5,6 +5,16 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When a job waits for a computer to be free, have it judge busy by what is running, not by what is
+  open. A program left open in the background, an editor or a 3D tool sitting idle, can look like
+  someone at work, and a job that waits for it to close may wait all night. Ask the agent to measure
+  how hard each program is working, and to write down on every check the reason it is still waiting,
+  so a stalled job tells you why in one line.
+
+  `before the job starts each heavy step, check what is actually using the processor and memory, not
+  just which programs are open. if you decide to wait, write the reason in the log each time, and
+  tell me if the same reason has held you up for more than an hour.`
+
 - Drag a file into the terminal to hand the agent its path. Typing a long path by hand is where the
   typos come from. In most terminals, dropping a file or folder onto the window pastes its full path
   at the cursor, quoted if it has spaces. Then say what you want done with it.
