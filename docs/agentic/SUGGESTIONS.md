@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When you come back after a few hours away, ask for a catch-up from the time you left. Scrolling back
+  through a long terminal mixes the important lines with routine ones. Name the time, and ask for
+  what finished, what failed, and what is waiting on you, in that order. Ask it to keep the list short
+  and to point you to a file for the detail.
+
+  `I was away from about 11pm. since then: what finished, what failed or got stuck, and what is
+  waiting on me? a few lines each, newest last, and tell me where the details are.`
+
+- When the computer feels slow, ask the agent what is using it before anything gets closed. The cause
+  is often one job you forgot about, or several agents each starting the same heavy thing. Have it list
+  the busiest programs, say which ones it started and what each is for, and suggest what could wait.
+  Then you decide what to stop. Closing things blindly can throw away hours of work that was nearly done.
+
+  `the computer feels slow. list what is using the most memory and processor right now, mark the ones
+  you started and what each one is doing, and suggest what could wait. don't stop anything yet.`
+
 - When an agent opens a new terminal window for you, ask it to start the window clean. A window started
   from inside the agent's own shell can carry over that agent's settings, and the new session may then
   behave differently from one you opened yourself: history not saved, colours off, a different working
