@@ -133,3 +133,17 @@ A loop prompt is the job itself, sent again on a timer ("every 10 minutes until 
 step on the export"). The loop does the work, the memories carry what each round learned, and the
 skills keep every round doing it your way. [loop-prompts.md](loop-prompts.md),
 [skills.md](skills.md), [github-as-storage.md](github-as-storage.md)
+
+## What happens to my notes if I stop using it?
+
+Nothing. Every memory is an ordinary Markdown file in a folder on your computer, with a few lines
+at the top saying what kind of note it is and when it was written. Stop running the agents and the
+folder stays where it is; any text editor opens the files, and you can search them, print them or
+copy them anywhere. If you move to a different agent or tool, point it at the folder and ask it to
+read the notes. If you kept the brain on GitHub, a copy is there as well. To take it with you in
+one piece:
+
+```
+put a copy of every note in the brain into one zip file in my Downloads folder, with a short
+README that says what is in it and how the folders are arranged.
+```
