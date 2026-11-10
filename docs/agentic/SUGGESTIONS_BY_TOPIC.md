@@ -59,8 +59,13 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Use a loop to keep the disk free.
 - When a loop is not producing anything, read its NEXT line.
 
-## Terminals, setup and computers (75)
+## Terminals, setup and computers (79)
 
+- Drag a file into the terminal to hand the agent its path.
+- If the terminal asks before every command, allow the safe ones once.
+- When the connection drops in the middle of a job, ask what finished before you start again.
+- Speak your prompts if typing slows you down.
+- Ask it to teach you the one command, so next time you can do it yourself.
 - When the result is for someone else, ask for something you can forward as it is.
 - After a crash or a restart, tell the agent to pick up where it stopped, not start over.
 - If a newly released model doesn't show up in your terminal, the program usually needs updating.
@@ -95,7 +100,6 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Ask what a setting called an environment variable is before you set one.
 - Put quotes around paths with spaces.
 - Write down the package versions that worked.
-- Keep a cheat sheet of the commands that worked.
 - To let agents use a second computer, have one set up SSH with a key and test it.
 - Have it explain a command from the internet before running it.
 - On a math or logic claim, have it check every small case by computer.
@@ -137,8 +141,10 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Put a second computer to work.
 - Tell one agent to pass a message to all of them.
 
-## Checking results and catching mistakes (97)
+## Checking results and catching mistakes (99)
 
+- If you see it going the wrong way, stop it mid-turn and say so.
+- Ask the agent to check back once, later.
 - Keep a checklist file that every agent writes to.
 - When something breaks, paste the exact error, not your summary of it.
 - Say what finished looks like.
@@ -324,12 +330,12 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - A watcher that reports nothing is not the same as nothing happening.
 - Have the agent tell you the one thing you need to do in a separate, short message.
 - Ask it to list the sources it could not read.
-- Ask for a dry run before anything that moves, deletes or sends in bulk.
 - Ask what it needs from you, in one list.
 - Keep each run's output in the same shape.
 - Ask whether a number makes sense before it is reported.
 - Have it use the official download or API before scraping a page.
 - Ask how a number was worked out.
+- Ask for a dry-run switch on anything that moves, deletes or sends in bulk.
 - Keep a list of the services a project uses, without the passwords.
 - Ask it to link each new note to related ones.
 - Keep every result next to the command that made it.
@@ -342,7 +348,7 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - When you are not watching, ask for questions by email.
 - Ask for the summary of your own prompts.
 
-## Files, storage and GitHub (48)
+## Files, storage and GitHub (46)
 
 - Keep your best prompts in one file.
 - Ask the agent to follow the conventions of the place the work is going.
@@ -356,7 +362,6 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - List the files it must never touch.
 - Keep a file of open questions.
 - Ask which files it actually read.
-- Have it search a big file before reading it.
 - Ask it to say which folder it is working in.
 - Ask it to match the style already in the project.
 - Ask it to lay out the options before a choice you will live with.
@@ -365,7 +370,6 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Ask it to write files so an interruption cannot leave half of one.
 - Keep the settings in one file.
 - Have it show what a search pattern matches before it changes anything.
-- Ask for a dry-run switch on anything that moves or deletes.
 - Have it compare files with diff instead of reading both.
 - Point it at a file instead of pasting a long text.
 - Have it work on a branch for anything risky.
@@ -429,6 +433,7 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 
 ## Everything else (39)
 
+- When you are new to something, ask the agent what you should be asking it.
 - Once an agent has the context, a short answer is enough.
 - Ask how long a job will take before it starts, and have the agent write the answer down.
 - When you hand an agent several things at once, say which one matters most.
@@ -440,7 +445,6 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Have it interview you, one question at a time.
 - Ask for short answers when you are busy.
 - Give every script a --help.
-- Have it read the whole function before changing one line.
 - Have long jobs print where they are.
 - Ask for the smallest version that works first.
 - Have it comment the surprising parts, not the obvious ones.
