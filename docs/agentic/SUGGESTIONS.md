@@ -739,11 +739,16 @@ paste. New ones are added as they come up.
 
 - Give every long job an off switch you can use without the agent. A small file that the job checks
   before each step (if it exists, the job finishes the current step and stops) lets you or any other
-  agent stop it cleanly from anywhere, even when the session that started it is gone. Ask the agent
-  to tell you the file's name when it starts the job.
+  agent stop it cleanly from anywhere, even when the session that started it is gone, and saves
+  hunting for the right terminal among ten. Ask the agent to tell you the file's name when it starts
+  the job, or put the check in the loop prompt itself.
 
   `give this job a stop file it checks before every step, so it can be stopped cleanly without you,
   and tell me where the file goes.`
+
+  `/loop fire this every 5 minutes for the next 10 days. keep working on <the project>. at the start
+  of every round, if the file <folder>/STOP exists, finish nothing new, write a short report and
+  stop.`
 
 - When one order covers several machines or several pieces, have the agents split it with one owner
   per piece and say who owns what. Two agents doing the same download or the same render waste hours
@@ -2943,13 +2948,6 @@ paste. New ones are added as they come up.
 
   `before you start, recall what the brain has on <the topic>: earlier attempts, mistakes, results.
   give me five lines, then begin from there.`
-
-- Give a loop a stop file. Finding the right terminal among ten to stop one loop is tedious. If the
-  prompt says to look for a file, you can stop it from anywhere, even from another agent.
-
-  `/loop fire this every 5 minutes for the next 10 days. keep working on <the project>. at the start
-  of every round, if the file <folder>/STOP exists, finish nothing new, write a short report and
-  stop.`
 
 - Put a time limit on a hard question. An agent will dig at one problem for hours if nothing tells
   it when to step back. A limit turns a stuck afternoon into a note you can act on.

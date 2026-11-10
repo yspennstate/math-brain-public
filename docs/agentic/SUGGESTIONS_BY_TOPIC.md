@@ -4,15 +4,16 @@ The same ideas as [SUGGESTIONS.md](SUGGESTIONS.md), grouped so you can find the 
 the first sentence of a suggestion; search for it in SUGGESTIONS.md to read the rest and the prompt that
 goes with it. A suggestion sits under the first topic it fits, so a few could live in two places.
 
-## Loops: starting them, keeping them going, ending them (52)
+## Loops: starting them, keeping them going, ending them (50)
 
+- Give your loops different starting minutes.
 - Let the agent write the loop prompt for you.
 - Use a loop to watch a listing for you.
 - You can ask a looping agent a quick side question, but tell it to go back to the loop afterwards.
 - A loop is a good way to keep a list growing: job openings, papers on a topic, grants, places to send your work.
 - Ask for one page you can open to see where everything stands.
 - When a loop keeps reporting "unchanged", ask once what it compared against.
-- If a loop has to run longer than the scheduler allows, put the renewal date in the prompt itself.
+- Give every long job an off switch you can use without the agent.
 - Give a long loop a cheap check first and do the heavy work only when it finds a change.
 - When a loop runs the same checks every round, have it save them as one small script.
 - Let a loop say "nothing to do" when there is nothing to do.
@@ -41,9 +42,7 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Ask for the pieces before the work.
 - Ask the agent what it would work on next.
 - Ask which loops are running and when each ends.
-- Give a loop a stop file.
 - Tell the loop what finished looks like.
-- Keep one dated line per round.
 - Run a loop whose only job is to find what got stuck.
 - Ask for one lesson per finished piece.
 - Give the loop a fallback for when it runs out of something.
@@ -52,15 +51,18 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Use a sweeping loop for things that pile up unfinished.
 - Chain one prompt onto another.
 - Give the agent a rule for when space runs short.
-- Put the end time inside the loop prompt.
 - Your later words win.
 - Run two loops on one project from two angles.
 - Make a loop end with an email.
 - Use a loop to keep the disk free.
 - When a loop is not producing anything, read its NEXT line.
 
-## Terminals, setup and computers (79)
+## Terminals, setup and computers (82)
 
+- When a shared disk runs low, ask how much of it is your work before anything is cleaned.
+- Ask how far along a long job is in numbers.
+- Tell a long job which interruptions are normal, so it does not count them as failures.
+- When a job waits for a computer to be free, have it judge busy by what is running, not by what is open.
 - Drag a file into the terminal to hand the agent its path.
 - If the terminal asks before every command, allow the safe ones once.
 - When the connection drops in the middle of a job, ask what finished before you start again.
@@ -72,7 +74,6 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - On a computer you share, the owner's own background work counts as them using it.
 - When an agent tells you something can't be done, ask what it would take.
 - Ask the agent now and then which of your computers are sitting idle, and what they could take on.
-- On a computer someone else is using, have heavy jobs step aside while that person is at it.
 - If you use more than one computer, ask the agent for a roll call now and then.
 - When you have several copies of a document, tell the agent which one is current.
 - When you come back after a few hours away, ask for a catch-up from the time you left.
@@ -141,8 +142,9 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Put a second computer to work.
 - Tell one agent to pass a message to all of them.
 
-## Checking results and catching mistakes (99)
+## Checking results and catching mistakes (96)
 
+- When a test fails only some of the time, have it run many times before anyone calls it fixed.
 - If you see it going the wrong way, stop it mid-turn and say so.
 - Ask the agent to check back once, later.
 - Keep a checklist file that every agent writes to.
@@ -159,13 +161,11 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - After a watcher passes its test on a dummy job, have the agent check that it also sees the real one.
 - When a tool refuses to do something on a safety check, ask the agent what the check protects before it goes around it.
 - Have the agent stop a long-running script before it edits that script.
-- Give every long job an off switch you can use without the agent.
 - Before a large download, have the agent check the free space it will leave and verify the files afterwards.
 - When one agent passes on your words to another, have the second one check them at the source.
 - When two tools could do a job, have the agent try both on the same small piece.
 - When you type fast, have the agent say back what it understood.
 - When the next step waits on someone's reply, have the agent wait for the reply instead of asking every few minutes.
-- Paste the whole error, not your summary of it.
 - Ask it to walk you through new code before you rely on it.
 - When it fixes a bug, ask for a test that would have caught it.
 - Read a Python error from the bottom.
@@ -189,7 +189,6 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Have it put the most important finding first.
 - Ask it what it expects before it runs anything.
 - Have it put big numbers in terms you already know.
-- Ask what it could not check.
 - Check that a scheduled job really ran.
 - Have it read the first error, not the last.
 - Test it on data it has not seen.
@@ -227,9 +226,8 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Have names checked against a source, not memory.
 - Ask it to number the steps it proposes.
 - Ask it to correct its own numbers out loud.
-- Keep keys out of logs and printouts.
+- Keep keys and passwords out of prompts, logs and printouts.
 - Have it listen to a sample, not just trust a score.
-- Ask for a second check by a different method.
 - Have it test a fix on a small piece first.
 - Ask where each fact came from.
 - Give it a chores list for slow rounds.
@@ -243,9 +241,8 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Ask for a page, not a wall of text.
 - Let the brain test itself.
 
-## Several agents at once (20)
+## Several agents at once (19)
 
-- With several agents running, have every report end by naming the request it answers.
 - When you change something yourself, tell the agents.
 - When an agent works on a hard research question, ask for its progress in research terms, with each claim marked by how sure it is.
 - When agents pass messages to each other, ask them to keep your words apart from theirs.
@@ -268,6 +265,7 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 
 ## Memory, notes and the brain (47)
 
+- When you want to choose between two versions, ask to see them side by side.
 - When you reply "keep working", say on what.
 - Before a long batch, have the agent run and time one item first.
 - Keep the newest note at the top of a notes file.
@@ -309,14 +307,13 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Ask why, not only what.
 - Keep a glossary of your own words.
 - Ask for a README for whatever it builds.
-- Keep passwords out of prompts.
 - Say who the result is for.
 - Ask how to undo a change before it is made.
 - Save a prompt you use often as a command.
 - Ask what the brain already knows before the agent starts.
 - Turn a correction into a rule.
 
-## Reports, links and talking to the agent (29)
+## Reports, links and talking to the agent (28)
 
 - When the agent says it's done, ask for the link or the file path, not a description.
 - When a step is only acceptable under one condition, say what to do if the condition can't be met.
@@ -344,11 +341,10 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - End every report with what it is unsure of.
 - Show it one example of what good looks like.
 - Ask for a short summary in a fixed shape.
-- Ask every report to say which task it answers.
 - When you are not watching, ask for questions by email.
 - Ask for the summary of your own prompts.
 
-## Files, storage and GitHub (46)
+## Files, storage and GitHub (45)
 
 - Keep your best prompts in one file.
 - Ask the agent to follow the conventions of the place the work is going.
@@ -374,7 +370,6 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Point it at a file instead of pasting a long text.
 - Have it work on a branch for anything risky.
 - Ask for a .gitignore before the first commit.
-- Have it name files for what they hold.
 - Ask it to point at the file and line.
 - Keep the original data untouched.
 - Ask what else would break before a change.
@@ -384,7 +379,7 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Ask it to send long output to a file.
 - Give it a place to park ideas for later.
 - Tell it which files are generated.
-- Put the date at the front of file names.
+- Put the date at the front of file names, then say what the file holds.
 - Keep files small enough to read in one go.
 - Start a new agent read-only on anything that matters.
 - Keep the commands that worked in one file.
@@ -397,12 +392,11 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Give every long job a folder with ORDER.md and NEXT.md.
 - Start the agent in the right folder.
 
-## Money, usage and limits (15)
+## Money, usage and limits (14)
 
 - When a site will ask the agent to confirm many small steps, give it standing permission for those steps and name the ones that still need you.
 - When a job could cost money, ask for the price before it starts and set a ceiling.
 - Watchers often stop on their own after a while.
-- Ask what something costs before the agent spends money on it.
 - When there is a real choice, ask for two options and a recommendation.
 - Ask what it would do with more time.
 - Give a hard problem a time budget.
