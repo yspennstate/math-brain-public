@@ -5,6 +5,18 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Ask for a weekly look back. After a week of loops there are hundreds of NEXT lines and new
+  memories, and nobody reads them all, so a project that stalled on Tuesday can sit unnoticed until
+  the next week. Once a week, give one round to reading the whole week and saying plainly what
+  moved, what stalled and what is no longer worth the time.
+
+  `read every NEXT.md line and every memory written in the last seven days. write a short note:
+  what moved forward, what stalled and why, and what we should drop or change. put it at the top
+  of NEXT.md and save the useful parts to the brain.`
+
+  A loop can do this for you: add "every Sunday, before anything else, do the weekly look back" to
+  a long-running loop prompt.
+
 - With agents on more than one computer, have every report name its computer. Two reports that
   both say "the job finished, 40 GB free" can come from different machines, and mixing them up
   sends you to fix the wrong one. A first word such as "laptop:" or "mini 2:" settles it at a glance.
