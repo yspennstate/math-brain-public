@@ -1634,6 +1634,13 @@ paste. New ones are added as they come up.
   `fill in this form from my notes. leave a field empty if the notes do not say it, and list every
   empty field at the end instead of guessing.`
 
+  Some forms refuse to go through with a required field empty, and the agent will stop there and
+  wait for you. If the site is asking for something you do not want to give or do not have, tell it
+  what to write and to keep going.
+
+  `if a required field asks for something that is not in my notes, write N/A and go on to the next
+  one. list those fields for me at the end.`
+
 - Have it pull tables out of a PDF into a spreadsheet. Numbers locked in a PDF report are slow to
   copy by hand and easy to mistype. An agent can extract them into a CSV, but PDF tables break in
   odd ways, so ask it to check a few rows against the page.
