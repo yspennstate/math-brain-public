@@ -146,6 +146,35 @@ what I correct, what I repeat) and turn each habit into a skill or a suggestion 
 can use. keep a dated list of the suggestions.
 ```
 
+Lists that stay current
+
+```
+/loop fire this every 5 minutes for the next 10 days. search for new <openings / papers / grants>
+that fit me and add each one to <list file> with the deadline, the link and the date you found it.
+skip anything already there, drop anything whose deadline has passed, and tell me only what is new.
+```
+
+```
+/loop fire this every 10 minutes for the next 3 days. go through my list of top <200> problems in
+<field>. remove any that are solved or do not belong, with one line on why, and fill each gap with
+a better one, with a source.
+```
+
+Long jobs on more than one computer
+
+```
+/loop fire this every 5 minutes for the next 2 days. keep the <render / batch> running on every
+computer you can reach, splitting the work so no two machines do the same piece. each round, check
+each machine is still working, restart what stopped, collect finished pieces in one place, and
+tell me how many are done out of how many.
+```
+
+```
+/loop fire this every 10 minutes for the next 10 days. check that <the other computer> is awake,
+reachable and has free disk. if it went to sleep or filled up, fix it the safe way and write one
+line to a log saying what you did. if you cannot fix it, tell me what to type on it.
+```
+
 ## Why loops and the brain go together
 
 A loop without a brain repeats itself: each round the agent has only the last summary to go on, so
