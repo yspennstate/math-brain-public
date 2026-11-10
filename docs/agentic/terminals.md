@@ -83,3 +83,30 @@ folder. For a project, start it in the project folder; the brain's hooks still r
 
 Keep the window open while a loop runs. Loops live inside the session, and closing the window ends
 them.
+
+## Several terminals, one job each
+
+Once one agent works well, open a second terminal for a second job rather than giving the first
+agent two. Each terminal gets one task, its own folder and its own loop. Give each a short name in
+its first prompt, so its notes and its saved memories say which job they belong to. If two jobs
+touch the same files, have the agents claim a file before they edit it (the framework's mesh does
+this), or keep them in separate folders.
+
+```
+you are the <name> agent. your only job is <task>, in <folder>. keep your ORDER and NEXT files
+there. before you edit anything outside that folder, check that no other agent has claimed it.
+```
+
+## After a restart
+
+A restart closes every terminal, and every loop with it. The work itself is safe if the agents
+kept their ORDER and NEXT files current. Open one terminal per job again and paste:
+
+```
+the computer restarted. read <folder>/ORDER.md and the first line of <folder>/NEXT.md, check what
+actually finished before the restart, and carry on from there. start the loop again with the
+same end date as before.
+```
+
+If you run many terminals, keep a short list of them, one line each with the folder and the
+loop prompt, so reopening them after a restart takes minutes instead of an evening.
