@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- A loop is a good way to keep a list growing: job openings, papers on a topic, grants, places to
+  send your work. Ask the agent to keep the list in one file, check each new find against what is
+  already there, and write down where and when it found each item. After a week you have a list you
+  can trust, rather than a pile of repeats.
+
+  `/loop fire this every 5 minutes for the next 10 days. search for new openings that fit me and add
+  each one to jobs.md with the deadline, the link and the date you found it. skip anything already
+  in the file, and tell me only about new ones.`
+
+- When a task should go ahead only if something holds, say so as a firm condition, along with what
+  to do if it does not. "Apply, but they must ask me before contacting my referees" can be read as a
+  wish. "If the form lets them contact referees without asking me, stop and tell me, don't apply" is
+  a rule the agent can check and keep.
+
+  `go ahead only if <condition>. if you find that it doesn't hold, stop before submitting anything
+  and tell me what you saw.`
+
 - When agents pass messages to each other, ask them to keep your words apart from theirs. A note from
   one agent to another often mixes what you asked for with that agent's own ideas, and the next agent
   can take a suggestion as your order. Have every relayed message quote your words exactly and mark
