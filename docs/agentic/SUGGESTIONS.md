@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When you give feedback on something the agent made, say what to keep as well as what is wrong.
+  "The pictures are great, the voice is in the wrong language, the mouths don't move" tells it to fix
+  two things and leave the rest alone. A list of complaints alone often gets you a full redo, and the
+  part you liked can come back worse.
+
+  `keep: <what works>. change: <what is wrong>, one line each. don't touch anything on the keep list,
+  and tell me which items you changed when you send the new version.`
+
+- On a computer someone else is using, have heavy jobs step aside while that person is at it. A
+  long render or a big download can make their mouse and typing lag. Ask the agent to check whether
+  the person is active before each heavy step, and to pause or slow down while they are, then pick up
+  again when the machine is quiet.
+
+  `before each heavy step, check whether the person who owns this computer is using it. if they are,
+  or the machine feels slow, pause or use less, and carry on when it is quiet. log each pause.`
+
 - When an agent works on a hard research question, ask for its progress in research terms, with each
   claim marked by how sure it is. "Making good progress" tells you nothing. What you want is which
   directions it opened, which it ruled out and why, and for each result whether it is checked, a
