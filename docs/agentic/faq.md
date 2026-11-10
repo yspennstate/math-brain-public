@@ -188,6 +188,24 @@ result a second way before you report it, and if you could not check something, 
 instead of calling it done.
 ```
 
+## The agent broke something. How do I get back to how it was?
+
+If the folder is a git repository, which a brain folder normally is, nothing it committed is lost:
+every earlier version is still there, and the agent can show you the last few commits and undo the
+one that went wrong (`git revert` makes a new commit that reverses an old one, so nothing is
+rewritten). A change it had not yet committed can be thrown away with `git restore <file>`, but that
+one is gone for good, so look at it first. Files outside git have no history; for those, the habit
+that saves you is asking the agent to copy a file before a big change to it.
+
+Say what broke in plain words and let the agent find the change. Ask it to show you what it will undo
+before it does, and to write the mistake into the brain so the next round does not repeat it.
+
+```
+something broke after your last few changes: <what you see>. show me the commits since it last
+worked, tell me which one caused it, and undo only that one with git revert. show me the diff before
+you do it, and save what went wrong as a memory.
+```
+
 ## The brain does not seem to do anything. What now?
 
 Check that the hooks run (the agent should mention the brain at the start of a session), that you
