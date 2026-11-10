@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Ask the agent to open the result in front of you. A path in a report means you still have to find
+  the folder, pick the file and choose a program. The agent can open the video, the page or the
+  document itself, in the right program, so you only have to look. For several results, it can
+  open them all at once, in order.
+
+  `open the finished <video / page / report> for me so I can look at it now. if there are several,
+  open them all, in order.`
+
+- Before you close a set of terminals, have each one write down what it was doing. A terminal you
+  close takes its unsaved plans with it: the step it was on, what it was waiting for, what it
+  meant to do next. One prompt to each before you close it, or one agent that reads their
+  histories afterwards, keeps that work from being lost.
+
+  `I am about to close these terminals. before I do, write down in the project notes what you were
+  working on, what is finished, what is half done and what the next step was.`
+
 - When the agent cannot reach another computer, ask it what you need to type there. Connecting to a
   second machine often needs one step only the person sitting at it can do: turning on remote
   login, adding a key, allowing a connection. The agent cannot do that from where it is, but it
