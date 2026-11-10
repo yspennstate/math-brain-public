@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When a plan is set, ask what would make the agent change it. A plan made at the start rests on a
+  few guesses: that a model is fast enough, that a computer stays free, that a result comes out as
+  expected. Naming those guesses up front tells the agent what to keep an eye on, and it tells you
+  which surprise in the next report actually matters.
+
+  `you have a plan now. name the two or three things that would make you change it, and if one of
+  them happens, tell me right away instead of carrying on with the old plan.`
+
+- When the work runs on a computer you cannot see, ask for the first piece of output as soon as it
+  exists. The first clip, the first page or the first row of results is the earliest point where you
+  can tell whether it looks right. Waiting for the whole batch means finding a wrong setting only
+  after hours of work have gone into it.
+
+  `the moment the first piece is finished, send me where it is, or a copy, before the rest is done,
+  so I can check it looks right.`
+
 - When one message asks for several things, have the agent list them back before it starts. A long
   message typed quickly often holds four or five requests, and an agent tends to do the first two
   well and lose the last one, usually the small one at the end. A numbered list at the start, ticked
