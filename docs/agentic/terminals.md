@@ -97,6 +97,28 @@ you are the <name> agent. your only job is <task>, in <folder>. keep your ORDER 
 there. before you edit anything outside that folder, check that no other agent has claimed it.
 ```
 
+## Keeping a session alive when the window closes
+
+On macOS, Linux and WSL, a program called tmux keeps a terminal session running on its own, so the
+agent and its loop carry on when you close the window or when the connection to another computer
+drops. Start a named session, start the agent inside it, and step away from it when you like:
+
+```
+tmux new -s brain        # a new session called brain; start the agent in it
+                         # Ctrl+B, then D: step out and leave it running
+tmux attach -t brain     # come back to it later, from any terminal
+tmux ls                  # list the sessions that are running
+```
+
+This matters most on a second computer you reach over SSH: without tmux, a dropped connection ends
+the agent with it. tmux does not survive a restart of the computer itself; for that you still need
+the ORDER and NEXT files. If tmux is not installed, ask the agent:
+
+```
+install tmux on this computer, start a session called <name> and show me how to leave it running
+and come back to it. then check that a session keeps running after I close this window.
+```
+
 ## After a restart
 
 A restart closes every terminal, and every loop with it. The work itself is safe if the agents
