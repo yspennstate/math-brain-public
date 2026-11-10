@@ -100,6 +100,23 @@ days out does the rest. Before you leave, ask the agent to check that sleep is o
 runs, and to keep its NEXT line current so that you can read in the morning what it did.
 [struggling.md](struggling.md)
 
+## Can I check on it from my phone?
+
+Yes, and you do not need anything special for the simple way. Have each loop write its progress
+somewhere your phone already reaches: a short email when something finishes or goes wrong, or the
+NEXT file pushed to a private GitHub repository, which the GitHub app or any browser will show you.
+Reading one line a few times a day is usually enough to know a long job is fine.
+
+If you want to type to the agent itself from your phone, an SSH app can open a terminal on your
+computer, and tmux lets you join the very session the loop is running in
+([terminals.md](terminals.md) shows how). That takes some setting up; the email is enough for most
+people.
+
+```
+every few hours, and whenever something finishes or fails, send me a short email with what you
+did, what is next and whether anything needs me. keep it short enough to read on a phone.
+```
+
 ## Can it use more than one computer?
 
 Yes. If the agent can log in to the other machine over your own network, it can start jobs there,
