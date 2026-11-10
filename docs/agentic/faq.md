@@ -73,6 +73,20 @@ which the brain can work with but these pages do not cover.
 Yes. Give each one its own job folder, and have them claim files before they edit, so two agents
 do not overwrite each other. The framework's mesh does the claiming.
 
+## How many terminals can I run at once?
+
+The computer is rarely the limit; the model runs on the provider's side and a terminal costs
+almost nothing locally. The limits are your usage allowance, which every terminal draws on
+together, and your own attention, since each one writes reports you will want to read. Start with
+two or three, one job each (see [terminals.md](terminals.md)), and add another only when the ones
+you have run for a day without needing you. If you find yourself scrolling through windows to
+learn what is going on, you have more than you can follow; ask each for one line:
+
+```
+in one line: which job is this terminal on, what did the last round finish, and is anything
+waiting on me?
+```
+
 ## What should I use the brain for first?
 
 Something you already work on every day and keep explaining again: a research project, a codebase,
