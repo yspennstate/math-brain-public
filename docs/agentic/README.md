@@ -28,13 +28,15 @@ Then:
   results, several agents, setup, and so on).
 - [skills.md](skills.md): how to turn an instruction you keep repeating into a skill, step by step,
   with one worked example.
+- [worked-example.md](worked-example.md): one small project followed from the first sentence to the
+  final report: the ask, ORDER.md, the loop prompt, NEXT lines, a skill, the report.
 - [../../agent_tools/skills/](../../agent_tools/skills/): skills you can install so the agent itself
   knows how to orient in the brain, start a loop and keep one going.
 
 ## Where to start
 
 If you are new to all of this, read in this order: terminals.md, then starter-prompts.md (do day
-one), then loop-prompts.md (start one small loop), then skills.md once you catch yourself repeating an
+one), then loop-prompts.md (start one small loop), then worked-example.md to see the whole shape once, then skills.md once you catch yourself repeating an
 instruction. Keep struggling.md and faq.md for when something does not work. Read SUGGESTIONS.md last, a few entries at a time, once you have a loop running and
 want more ideas.
 
