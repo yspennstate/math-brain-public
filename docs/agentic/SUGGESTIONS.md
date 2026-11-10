@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When a job could cost money, ask for the price before it starts and set a ceiling. Cloud
+  computers, paid models and storage are all billed by use, and a loop that runs for days can spend
+  far more than one test suggested. Ask the agent to estimate the cost in plain numbers, to stop at
+  a ceiling you name, and to tell you when it is halfway there.
+
+  `before you run this on anything that costs money, tell me roughly what it will cost. don't go
+  over <amount>. tell me when you reach half of it, and stop at the limit and ask me.`
+
+- Ask for one page you can open to see where everything stands. With several agents and loops
+  running, reading each terminal is slow. An agent can keep a small status page or file, one line
+  per job with what it is doing, when it last moved and what it waits on, and refresh it as it
+  works. Then a glance tells you what is moving and what is stuck.
+
+  `keep one status page I can open: one line per job, what it is doing, when it last made
+  progress and what it is waiting on. update it every round.`
+
 - An agent can open a new terminal for you, already set up. When you want a second agent on
   another job, you do not have to open a window, find the folder and remember the right command and
   model name. Ask the agent you are talking to; it knows the folder, the model and the settings you
