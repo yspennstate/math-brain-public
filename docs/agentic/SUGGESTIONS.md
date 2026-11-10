@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Ask the agent to name the exact variant of a model or tool it used. One model name often covers
+  several things: a full release, a faster distilled one, a compressed copy that fits a smaller
+  computer. They can give quite different results, and a report that just says the name leaves you
+  comparing the wrong things later. Have it write the variant, the size and where it came from next
+  to every result.
+
+  `in every result you report, say exactly which variant of the model you ran (full, distilled,
+  compressed, and how big), where it was downloaded from, and the settings you used.`
+
+- When you give the same order to several agents, name one to bring the answers together. Otherwise
+  each agent reports its own piece in its own window, and you are left to work out whether the whole
+  job is done. One agent who collects the pieces and sends you a single short summary, with what is
+  still missing, saves you reading every terminal.
+
+  `you are the one who reports back on this. check with the other agents working on it, and when the
+  whole job is done, or stuck, send me one short summary: what is finished, what is missing, who has it.`
+
 - When a long job is too slow at full quality, ask for the whole thing at a lower setting first. A
   film rendered at a smaller size, a model trained on fewer steps or a report built from a sample
   finishes in a fraction of the time and shows you the shape of the result. You can then spend the
