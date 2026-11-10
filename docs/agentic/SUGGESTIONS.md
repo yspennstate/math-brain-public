@@ -5,6 +5,15 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Ask how far along a long job is in numbers. "Still working on it" tells you nothing about when to
+  come back. A count of pieces done and left, the time each one takes and a rough finish time tells
+  you whether to wait, add a computer or cut the job down, and a count that stops moving is the
+  first sign that something is stuck.
+
+  `when I ask how it is going, answer in numbers: how many pieces are done, how many are left, how
+  long each takes, and when you expect to finish. if the count has not moved since you last told
+  me, say so and say why.`
+
 - Tell a long job which interruptions are normal, so it does not count them as failures. A job that
   pauses while you use the computer, or loses its network for a minute, can see the step in hand
   break and write it down as a failure. After two or three of those it may skip the step for good,
@@ -122,14 +131,6 @@ paste. New ones are added as they come up.
 
   `keep working, on <the item> first. when that is done, go on with the next line of your list.`
 
-- With several agents running, have every report end by naming the request it answers. After a day
-  of asks in different windows, a report that says "done, all three files are updated" can belong to
-  any of them. One closing line in your own words, with the time you asked, tells you at a glance which
-  job just finished and which ones are still out.
-
-  `end every final report with one line saying which of my requests this was, in my words, with the
-  time I asked it.`
-
 - When the result is for someone else, ask for something you can forward as it is. A summary in a
   terminal is written for you and doesn't travel well. A short page, a document or an email draft
   with the context a stranger needs (what this is, what was found, where the files are) can go to a
@@ -164,7 +165,8 @@ paste. New ones are added as they come up.
 
 - When something breaks, paste the exact error, not your summary of it. "It didn't work" sends the
   agent guessing. The error text, the command that produced it, or a screenshot of the window usually
-  points straight at the cause, and the agent can often fix it in one step.
+  points straight at the cause, and the agent can often fix it in one step. Copy everything from the
+  first red line down, even if it looks like noise.
 
   `here is the exact error I got: <paste>. it came from <what I was doing>. find the cause, fix it,
   and run it again to show it works now.`
@@ -431,7 +433,8 @@ paste. New ones are added as they come up.
 - When several agents work for you at once, ask each report to end with one line naming which of your
   requests it answers and when you asked it. After a few hours of asks to five terminals, a report that
   says "done, all three files are updated" is hard to place. "This was your 9:40 ask to rewrite the
-  cover letter" tells you at a glance which job it closes.
+  cover letter" tells you at a glance which job it closes. Put the line in your global instructions
+  file, so every terminal does it without being told.
 
   `end every report with one line that names which of my requests it answers, in my words, with the
   time I asked. if it answers more than one, name each.`
@@ -870,14 +873,6 @@ paste. New ones are added as they come up.
 
   `you are waiting on an answer from <the other agent>. start a waiter that wakes you when that
   message arrives, tell me in one line what you are waiting for, and carry on with the rest.`
-
-- Paste the whole error, not your summary of it. "It says something about permissions" sends the
-  agent guessing. The exact text names the file, the line and the program that complained, and
-  the agent can often fix it from that alone. Copy everything from the first red line down, even if
-  it looks like noise.
-
-  `here is the full error, copied as it appeared. tell me in one sentence what went wrong, then fix
-  it.`
 
 - Let a loop say "nothing to do" when there is nothing to do. A loop told to make progress every
   round will sometimes invent work to look busy: a needless rewrite, a check that checks nothing.
@@ -1377,11 +1372,12 @@ paste. New ones are added as they come up.
   and what you will do next.`
 
 - Ask it to say what it did not check. A report lists what passed, and the reader assumes that is
-  everything. One line naming the parts it skipped, or could not test, tells you where the remaining
-  doubt is before you rely on the result.
+  everything. The result may rest on a step the agent could not run: a page that would not load, a
+  file it had no permission to open, a test that timed out. One line naming those parts tells you
+  where the remaining doubt is before you rely on the result.
 
   `end every report with a line starting "Not checked:" that names anything you skipped or could
-  not test. write "Not checked: nothing" only if that is true.`
+  not test, and why. write "Not checked: nothing" only if that is true.`
 
 - Have it write a short description under each picture in public pages. Someone using a screen
   reader, or reading on a slow connection, sees only the text. A sentence saying what the picture
@@ -1535,13 +1531,6 @@ paste. New ones are added as they come up.
 
   `build the smallest version that does the whole job once, roughly. show it to me before you add
   options, polish or speed.`
-
-- Ask what it could not check. A report that sounds complete may rest on a step the agent could not
-  run: a page that would not load, a file it had no permission to open, a test that timed out. A short
-  list of what went unchecked tells you where the soft spots are.
-
-  `end your report with a list of anything you could not verify, and why: no access, too slow,
-  missing file. if there is nothing, say so.`
 
 - Ask which words it searched for. When an agent says the brain or a folder has nothing on a topic,
   it often searched for one phrase that the notes happen to word differently. Seeing the search terms
@@ -3073,11 +3062,6 @@ paste. New ones are added as they come up.
 
   `if the disk or memory gets low, don't stop. find files that already have a checked copy on
   github, delete those, and carry on with the task.`
-
-- Ask every report to say which task it answers. With five terminals open you will not remember
-  which prompt a report belongs to. Put one line in your global instructions file:
-
-  `end every report with one line naming the task it answers, in my words, with the time I asked.`
 
 - When you are not watching, ask for questions by email. An agent that ends its report with a
   question waits for an answer you never see. Tell it to decide what it can, carry on, and send
