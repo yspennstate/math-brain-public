@@ -395,6 +395,9 @@ paste. New ones are added as they come up.
   `do <the step> only if <the condition>. if you can't confirm the condition, don't do it at all:
   stop, tell me what you found, and go on with the rest of the list.`
 
+  Phrase it as a rule, not a wish. "They must ask me first" can be read as a hope; "if the form
+  lets them skip asking me, stop" is something the agent can check.
+
 - On a computer you share, the owner's own background work counts as them using it. A person can be
   away from the keyboard while their renders, backups or builds are running, and a job of yours that
   starts then can push the machine into heavy swapping. Tell the agent to look for the owner's own
@@ -507,14 +510,6 @@ paste. New ones are added as they come up.
   `/loop fire this every 5 minutes for the next 10 days. search for new openings that fit me and add
   each one to jobs.md with the deadline, the link and the date you found it. skip anything already
   in the file, and tell me only about new ones.`
-
-- When a task should go ahead only if something holds, say so as a firm condition, along with what
-  to do if it does not. "Apply, but they must ask me before contacting my referees" can be read as a
-  wish. "If the form lets them contact referees without asking me, stop and tell me, don't apply" is
-  a rule the agent can check and keep.
-
-  `go ahead only if <condition>. if you find that it doesn't hold, stop before submitting anything
-  and tell me what you saw.`
 
 - When agents pass messages to each other, ask them to keep your words apart from theirs. A note from
   one agent to another often mixes what you asked for with that agent's own ideas, and the next agent
@@ -896,6 +891,12 @@ paste. New ones are added as they come up.
 
   `before you start the batch, run one item from start to finish, time it, show me the result, and
   tell me how long the full batch will take at that speed.`
+
+  A mistake caught on the first item costs one; caught on the hundredth it costs a hundred. When
+  the look matters more than the timing, make the approval explicit.
+
+  `make one <thing> first and show it to me. once I say it looks right, make the other <number> the
+  same way.`
 
 - Before an agent deletes something large to make room, ask whether it can be brought back and how.
   A model or dataset that is also published elsewhere can go safely if the agent first checks that
@@ -3022,12 +3023,6 @@ paste. New ones are added as they come up.
 
   `turn the prompt I just gave you into a command called /<name> that I can type in any session,
   and show me it working once.`
-
-- Do one first, then the rest. Before an agent makes a hundred of something, have it make one and
-  show you. A mistake caught on the first costs one; caught on the hundredth it costs a hundred.
-
-  `make one <thing> first and show it to me. once I say it looks right, make the other <number> the
-  same way.`
 
 - Ask for the strongest case against a result. An agent asked whether it is right will usually say
   yes. Asked to argue that it is wrong, it often finds the weak spot.
