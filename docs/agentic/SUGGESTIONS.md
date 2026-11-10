@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When a site will ask the agent to confirm many small steps, give it standing permission for those
+  steps and name the ones that still need you. Submitting a paper or an application can take a dozen
+  "are you sure" and "next" screens, and an agent that stops at each one turns a ten-minute job into an
+  hour of waiting for you. Say which kinds of screens it may accept on its own, and which it must
+  never pass without you, such as paying, signing or sending to another person.
+
+  `you can click yes and next on the ordinary confirmation screens without asking me. stop and ask
+  before anything that pays, signs an agreement in my name or sends something to another person.`
+
+- Ask the agent to follow the conventions of the place the work is going. A journal, a preprint
+  server and a job portal each have their own habits for titles, abstracts, author lists and file
+  names, and work that ignores them looks careless to the people who read it there. Have the agent
+  look at a few recent entries on the site and match them before it submits.
+
+  `before you submit, look at five recent entries on this site and make our title, abstract and file
+  names follow the same conventions: capitals, length, how authors are listed. show me what changed.`
+
 - For a piece of writing that matters, ask the agent to think about the approach before it drafts.
   A letter, a statement or an application has a reader, a purpose and a few points that decide how
   it lands. Asking for a short plan first (who reads it, what they need to believe at the end, which
