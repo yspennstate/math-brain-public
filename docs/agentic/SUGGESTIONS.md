@@ -5,6 +5,21 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Ask how long a job will take before it starts, and have the agent write the answer down. A render,
+  a download or a big search can run for minutes or for a day. With an estimate on record you know
+  when to look again, and the agent can tell you early if it is running far behind, instead of you
+  finding out the next morning.
+
+  `before you start, tell me roughly how long this will take and what the slowest step is. if it is
+  going much slower than that, stop and tell me why.`
+
+- When you hand an agent several things at once, say which one matters most. An agent with five asks
+  and no order often starts with the easiest, and the one you cared about waits. One line fixes it:
+  what comes first, and what can wait if time runs short.
+
+  `do these in this order: <most important>, then <next>, then the rest. if you can't finish all of
+  them, finish the first one properly and tell me where the others stand.`
+
 - Say what finished looks like. "Make the film" can end at a script, at a rough cut or at a video
   posted online, and an agent will often stop at the first point that looks like an answer. Name the
   last step you want to see: a file in a folder, a link that plays, a test that passes. Then it keeps
