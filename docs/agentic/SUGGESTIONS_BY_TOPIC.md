@@ -4,8 +4,10 @@ The same ideas as [SUGGESTIONS.md](SUGGESTIONS.md), grouped so you can find the 
 the first sentence of a suggestion; search for it in SUGGESTIONS.md to read the rest and the prompt that
 goes with it. A suggestion sits under the first topic it fits, so a few could live in two places.
 
-## Loops: starting them, keeping them going, ending them (50)
+## Loops: starting them, keeping them going, ending them (52)
 
+- When one loop carries several jobs, have each round say which job it worked on.
+- Have a long loop keep your request word for word in a file.
 - Give your loops different starting minutes.
 - Let the agent write the loop prompt for you.
 - Use a loop to watch a listing for you.
@@ -19,6 +21,7 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Let a loop say "nothing to do" when there is nothing to do.
 - Give a long loop a second job for when the first one is done.
 - Let the loop read its instructions from a file.
+- Ask it to say the task back before it starts.
 - Have each round say only what changed.
 - Use a loop to follow new papers in your field.
 - Check on your loops from your phone.
@@ -54,10 +57,9 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Your later words win.
 - Run two loops on one project from two angles.
 - Make a loop end with an email.
-- Use a loop to keep the disk free.
 - When a loop is not producing anything, read its NEXT line.
 
-## Terminals, setup and computers (82)
+## Terminals, setup and computers (81)
 
 - When a shared disk runs low, ask how much of it is your work before anything is cleaned.
 - Ask how far along a long job is in numbers.
@@ -120,7 +122,6 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Ask it to install things inside the project, not system-wide.
 - Ask for paths that work on another computer.
 - Turn the questions you keep asking into a FAQ.
-- Ask it to explain each command in one line.
 - Tell it which computer and shell you are on.
 - Have it write down the versions it installs.
 - Have it follow its own install steps in a fresh folder.
@@ -142,7 +143,7 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Put a second computer to work.
 - Tell one agent to pass a message to all of them.
 
-## Checking results and catching mistakes (96)
+## Checking results and catching mistakes (94)
 
 - When a test fails only some of the time, have it run many times before anyone calls it fixed.
 - If you see it going the wrong way, stop it mid-turn and say so.
@@ -177,7 +178,6 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Have it check a fix from a fresh start.
 - Have it change one thing at a time when hunting a bug.
 - Ask how you could check the result yourself.
-- Ask it to say the task back before it starts.
 - Ask it to review changes before you accept them.
 - Turn a routine you keep explaining into a skill.
 - Hand a new person a starter prompt, not a tour.
@@ -238,7 +238,6 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Ask for proof before "done".
 - Have a second agent check a result before it goes public.
 - Tell agents to check before they start.
-- Ask for a page, not a wall of text.
 - Let the brain test itself.
 
 ## Several agents at once (19)
@@ -344,8 +343,9 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - When you are not watching, ask for questions by email.
 - Ask for the summary of your own prompts.
 
-## Files, storage and GitHub (45)
+## Files, storage and GitHub (46)
 
+- Put big files on GitHub as release files, not in the repository itself.
 - Keep your best prompts in one file.
 - Ask the agent to follow the conventions of the place the work is going.
 - When an agent hits "database is locked" or "file in use", have it wait and try again rather than delete the lock or work on a copy.
@@ -425,8 +425,9 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Ask for a chart when the numbers pile up.
 - Give it a short list of words to keep out of public writing.
 
-## Everything else (39)
+## Everything else (37)
 
+- Tell the agent to ask before it signs you up for anything.
 - When you are new to something, ask the agent what you should be asking it.
 - Once an agent has the context, a short answer is enough.
 - Ask how long a job will take before it starts, and have the agent write the answer down.
@@ -435,7 +436,6 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Ask for comparisons as a table.
 - Ask how many cases a result rests on.
 - Ask it to go gently on websites.
-- Ask how to take something out again before it goes in.
 - Have it interview you, one question at a time.
 - Ask for short answers when you are busy.
 - Give every script a --help.
@@ -459,10 +459,8 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Keep a changelog that a reader can follow.
 - Ask it to point out instructions that contradict each other.
 - Ask for an estimate, then compare it with what happened.
-- Ask it to say how much is left.
 - Ask for the reason a round did nothing.
 - Keep a list of dead ends.
 - Compare with last time.
 - Let it say "I don't know".
-- Ask the agent to say back what it understood before a long job.
 - Ask for the bottleneck, not the next step.
