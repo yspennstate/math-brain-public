@@ -142,6 +142,23 @@ push what it learned after. Memories are small text files, so the two copies mer
 the time; when they do not, ask the agent to keep both lines and mark which is newer.
 [github-as-storage.md](github-as-storage.md)
 
+## Can a colleague or a small team use the same brain?
+
+Yes, the same way two computers do. Keep the brain in a private GitHub repository, add the others as
+collaborators, and have every agent pull before it starts and push when it finishes. Each person then
+starts their sessions with what everyone has learned.
+
+Three things keep it from turning into a mess. Each memory says who wrote it and when, so a reader
+knows whose judgment it carries. Personal notes go in a folder of their own, or in a separate brain,
+not in the shared one. And when several people run loops on one project, the agents write what they
+are working on to one shared task file before they start, so two of them do not do the same piece.
+
+```
+this brain is now shared with <names>. pull before every session and push after. put my name and
+the date on every memory you write, keep my personal notes in <folder>, and before you start a task
+check the shared task file and add yourself to it.
+```
+
 ## How do I know it really did what it says?
 
 Mostly you don't, until you look. An agent can write "done" over a step that half worked, and a
