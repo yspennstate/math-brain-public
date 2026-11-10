@@ -5,6 +5,14 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Have a long loop keep your request word for word in a file. A loop prompt is read again every
+  round, but the longer message that started the job (the details, the limits, the reasons) is
+  gone from the agent's memory after a day or two. A short file with your exact words, which the
+  loop reads at the start of each round, keeps day nine doing what you asked on day one.
+
+  `copy my request above, word for word, into ORDER.md in the project folder. at the start of every
+  round, read ORDER.md first, then my newest messages; where they differ, my newer words win.`
+
 - Put big files on GitHub as release files, not in the repository itself. GitHub refuses a single
   file over 100 MB in a normal push, and even smaller videos or data sets make every later download
   of the repository slow. A release can hold large files next to the code without weighing down its
@@ -55,6 +63,11 @@ paste. New ones are added as they come up.
   `when I ask how it is going, answer in numbers: how many pieces are done, how many are left, how
   long each takes, and when you expect to finish. if the count has not moved since you last told
   me, say so and say why.`
+
+  In a loop, have every round end with the count, so it is waiting for you when you look.
+
+  `at the end of each round, write how many pieces are done out of the total and how long the rest
+  will take at this round's pace.`
 
 - Tell a long job which interruptions are normal, so it does not count them as failures. A job that
   pauses while you use the computer, or loses its network for a minute, can see the step in hand
@@ -1262,7 +1275,8 @@ paste. New ones are added as they come up.
 
 - Ask it to say the task back before it starts. A prompt typed in a hurry can be read two ways,
   and the agent picks one without saying so. Three lines in its own words, before any work, show
-  you at once whether it understood, and cost far less than an hour spent on the wrong reading.
+  you at once whether it understood, and cost far less than an hour spent on the wrong reading,
+  let alone ten days of a loop.
 
   `before you start, tell me in three lines what you think I am asking for and what you will
   produce. wait for my yes, then go.`
@@ -2639,13 +2653,6 @@ paste. New ones are added as they come up.
   `before you run this fix on everything, run it on one small piece, compare the result with the
   old way, and show me both before going further.`
 
-- Ask it to say how much is left. "Working on it" tells you nothing on day three. A count (40 of
-  100 done, about 6 hours to go at the current rate) tells you whether to wait, help or change the
-  plan.
-
-  `at the end of each round, write how many pieces are done out of the total and how long the rest
-  will take at this round's pace.`
-
 - Give each loop one owner for each file. When two loops can both edit the same page, one will
   sooner or later undo the other's work without noticing. Say in each prompt which folders that
   loop writes to and which it only reads.
@@ -2975,13 +2982,6 @@ paste. New ones are added as they come up.
 
   `/loop fire this every 5 minutes for the next 10 days. keep working on <the project> until <what
   done means>. when it is done, check it once more, send me a short report and stop.`
-
-- Ask the agent to say back what it understood before a long job. Ten days of work on a
-  misunderstanding is expensive. A short note in its own words, before it starts, catches the
-  mistake while it is cheap.
-
-  `before you start, write me three or four lines on what you understand I want and how you plan
-  to do it. then begin.`
 
 - Ask whether the machine is being used. A loop can sit on a computer that is half idle because
   nothing told it to take more. One question finds out.
