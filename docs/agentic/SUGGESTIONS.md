@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When a tool refuses to do something on a safety check, ask the agent what the check protects before
+  it goes around it. Sometimes the check is too cautious and skipping it is fine; sometimes it is the
+  only thing standing between you and a frozen computer. An agent that names the risk, says what will
+  catch the problem if it goes wrong, and tries once while watching is very different from one that
+  just adds the flag that makes the error go away.
+
+  `that tool refused. before you work around it, tell me what the check is protecting against, what
+  will stop things if it goes wrong, and then try it once while you watch.`
+
+- Have the agent stop a long-running script before it edits that script. Some scripts, shell scripts
+  especially, are read a piece at a time while they run, so changing the file underneath a running
+  copy can make it do strange things later. Stop it, edit, check the edit, start it again, and look
+  at the first lines of its log to see that the new version is the one running.
+
+  `before you change a script that is running, stop it first. after the change, check it, start it
+  again, and show me the first lines of its log so I know the new version is running.`
+
 - When an agent tells you it will do something later, have it write that promise down. "I'll email
   you the comparison when the test finishes" lives only in the conversation, and a restart or a long
   session that gets summarised can drop it. A line in the task list or the NEXT file, with what was
