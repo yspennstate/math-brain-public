@@ -5,6 +5,13 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- With agents on more than one computer, have every report name its computer. Two reports that
+  both say "the job finished, 40 GB free" can come from different machines, and mixing them up
+  sends you to fix the wrong one. A first word such as "laptop:" or "mini 2:" settles it at a glance.
+
+  `start every report and every note you write with the name of the computer you are running on,
+  so I can tell your reports from the other machines'.`
+
 - Ask for the night plan before you go to bed. Loops left running overnight are where most of the
   hours go, and also where a job can stop at midnight and sit idle until morning. Two minutes before
   you leave, ask the agent to list what will run, when each part should finish, what could stop it,
@@ -1156,6 +1163,11 @@ paste. New ones are added as they come up.
   `now that this works, save the exact versions of the packages it uses to requirements.txt, and
   tell me the one command that installs them on another computer.`
 
+  Better still, have it keep the list as it goes, tools included, not only at the end.
+
+  `whenever you install a package or tool, add its name and exact version to SETUP.md, with the
+  command you used.`
+
 - Get everything it needs before you go offline. On a train or a plane the agent itself may still
   work, but any step that downloads a model, a package or a page will fail. Ask it before you leave
   what the next few hours of work will need from the internet, and fetch it while you still can.
@@ -1448,6 +1460,12 @@ paste. New ones are added as they come up.
 
   `this summary is for a colleague who knows statistics but not this project. keep it to one page
   and explain any term from the project the first time it appears.`
+
+  The same line works for anything you publish; a page for strangers on GitHub needs more context
+  than a note to yourself.
+
+  `write this for <the reader>: someone who <what they know and don't know>. keep it to what they
+  need.`
 
 - Learn three keys before anything else in a terminal. The up arrow brings back the last command so
   you can run it again or change it. Tab finishes a file or folder name for you. Ctrl+C stops what
@@ -2463,13 +2481,6 @@ paste. New ones are added as they come up.
   2026-11-09_prices_cleaned.csv, so they sort by day. never final, new, v2 or copy in a name, and
   never overwrite an older one.`
 
-- Have it write down the versions it installs. A setup that worked in March can break in June
-  because a package moved on. Ask the agent to keep a list of what it installed and at which
-  version, so the same setup can be rebuilt later or on another computer.
-
-  `whenever you install a package or tool, add its name and exact version to SETUP.md, with the
-  command you used.`
-
 - Keep files small enough to read in one go. An agent that has to open a five-thousand-line file
   reads part of it, guesses the rest, and pays for every line it does read. Ask it to split big
   notes and scripts into pieces with clear names, and to keep an index at the top.
@@ -2953,12 +2964,6 @@ paste. New ones are added as they come up.
 
   `here is a loop prompt I am about to run: <the prompt>. tell me what is missing or unclear,
   then give me a better version I can paste.`
-
-- Say who the result is for. A report for you, a page for strangers on GitHub and an email to a
-  colleague need different words. One line naming the reader saves a rewrite.
-
-  `write this for <the reader>: someone who <what they know and don't know>. keep it to what they
-  need.`
 
 - Ask for the pieces before the work. A big job described in one sentence is easy to start and
   hard to finish. Ask the agent to break it into numbered pieces and put them in its NEXT file, so
