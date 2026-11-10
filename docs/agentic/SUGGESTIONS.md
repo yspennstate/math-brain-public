@@ -5,6 +5,24 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When the agent cannot reach another computer, ask it what you need to type there. Connecting to a
+  second machine often needs one step only the person sitting at it can do: turning on remote
+  login, adding a key, allowing a connection. The agent cannot do that from where it is, but it
+  knows exactly what is missing. Ask for those steps as lines you can paste, then let it test the
+  connection again.
+
+  `if you cannot reach <the other computer>, tell me exactly what to type on it, as lines I can
+  paste, and test the connection again once I say it is done.`
+
+- When an action does nothing visible, have the agent check before it tries something else. A
+  window that should have opened, a program that should have started, a file that should have
+  appeared: sometimes nothing happens and no error appears. An agent that checks right away,
+  sees that nothing started and tries a second way saves you from waiting on something that is
+  not coming.
+
+  `after you start it, check that it really started. if nothing came up, say so and try another
+  way, and tell me which way worked.`
+
 - When a job could cost money, ask for the price before it starts and set a ceiling. Cloud
   computers, paid models and storage are all billed by use, and a loop that runs for days can spend
   far more than one test suggested. Ask the agent to estimate the cost in plain numbers, to stop at
