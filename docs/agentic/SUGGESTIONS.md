@@ -5,6 +5,21 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Say what finished looks like. "Make the film" can end at a script, at a rough cut or at a video
+  posted online, and an agent will often stop at the first point that looks like an answer. Name the
+  last step you want to see: a file in a folder, a link that plays, a test that passes. Then it keeps
+  going until that is true, or tells you exactly what stopped it.
+
+  `this is done when <the thing I can open or check>. don't stop before that. if something blocks
+  you, tell me what it is and what you tried.`
+
+- When the agent says it's done, ask for the link or the file path, not a description. "The video is
+  uploaded" and a link you can click are different claims, and only the second one can be checked in
+  a few seconds. If it can't give you the link, the step probably didn't finish.
+
+  `give me the link (or the full path) to what you made, and one line on how you checked that it
+  opens and is the right version.`
+
 - If a newly released model doesn't show up in your terminal, the program usually needs updating.
   A coding agent only lists the models its installed version knows about, and a window opened before
   the update keeps the old list. An agent can update the program, open a fresh window and check that
