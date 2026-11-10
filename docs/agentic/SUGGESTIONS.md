@@ -520,6 +520,14 @@ paste. New ones are added as they come up.
   each one to jobs.md with the deadline, the link and the date you found it. skip anything already
   in the file, and tell me only about new ones.`
 
+  A list that only grows goes stale. Closed deadlines, problems that someone has since solved and
+  entries that never really belonged stay in it and crowd out the good ones. The same loop can
+  weed as it adds, as long as it says why each entry left.
+
+  `/loop fire this every 5 minutes for the next 10 days. go through my list of top problems in
+  <the field>. remove any we have solved and any that do not deserve a place, with one line on why,
+  and put a better problem in each empty spot. keep the list at <the number> entries.`
+
 - When agents pass messages to each other, ask them to keep your words apart from theirs. A note from
   one agent to another often mixes what you asked for with that agent's own ideas, and the next agent
   can take a suggestion as your order. Have every relayed message quote your words exactly and mark
