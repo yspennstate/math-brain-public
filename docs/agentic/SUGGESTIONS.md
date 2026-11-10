@@ -5,6 +5,21 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- After a crash or a restart, tell the agent to pick up where it stopped, not start over. A fresh
+  window doesn't know what the last one finished, and the easy path is to begin again from the top,
+  which can redo hours of work or overwrite what was already done. Point it at the notes and files the
+  last run left and ask it to check them first.
+
+  `this terminal was reopened after a restart. read the notes and output folders from the last run,
+  tell me what was already finished, and continue from the first step that isn't done.`
+
+- When something breaks, paste the exact error, not your summary of it. "It didn't work" sends the
+  agent guessing. The error text, the command that produced it, or a screenshot of the window usually
+  points straight at the cause, and the agent can often fix it in one step.
+
+  `here is the exact error I got: <paste>. it came from <what I was doing>. find the cause, fix it,
+  and run it again to show it works now.`
+
 - Ask how long a job will take before it starts, and have the agent write the answer down. A render,
   a download or a big search can run for minutes or for a day. With an estimate on record you know
   when to look again, and the agent can tell you early if it is running far behind, instead of you
