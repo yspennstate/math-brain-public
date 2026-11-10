@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When an agent works in your web browser, have it use its own tab and tell you which one. You may be
+  reading or typing in another tab at the same time, and an agent that clicks in the wrong one can
+  lose what you were writing. Ask it to open a new tab for its work, name the page it is on, and stop
+  and tell you when it needs you to sign in or press a final button yourself.
+
+  `do this in a new tab in my browser, not in the ones I have open. tell me which tab it is, and stop
+  and ask me when you need me to sign in or press submit.`
+
+- When you have several copies of a document, tell the agent which one is current. A CV, a statement
+  or a report often exists as an old draft, an emailed version and a newer file on disk, and an agent
+  that finds the first one will happily polish the wrong copy. Name the one to use, or have the agent
+  list the copies with their dates and ask you before it starts.
+
+  `there are a few versions of my research statement around. list every copy you can find with its
+  date and length, tell me which you think is newest, and wait for me to confirm before editing.`
+
 - When you come back after a few hours away, ask for a catch-up from the time you left. Scrolling back
   through a long terminal mixes the important lines with routine ones. Name the time, and ask for
   what finished, what failed, and what is waiting on you, in that order. Ask it to keep the list short
