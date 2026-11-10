@@ -111,6 +111,17 @@ Go down this list in order. Most problems are the first two.
     top of NEXT.md under STUCK, and move on to the next step.
     ```
 
+17. The reports are too long to read. After every round the agent writes a page: what it read, what
+    it tried, the commands it ran, a table, a list of next steps. With three loops going you stop
+    reading them, and then you miss the one line that needed you. Ask for the same short shape
+    every time, and put it in the loop prompt so every round ends that way.
+
+    ```
+    from now on end every round with at most eight short lines, in two parts. what I asked you to
+    do, in my words. what is done, what is still running, and what is waiting on me. no command
+    output, no lists of files. if nothing changed this round, say so in one line.
+    ```
+
 Still stuck: paste this into the agent.
 
 ```
