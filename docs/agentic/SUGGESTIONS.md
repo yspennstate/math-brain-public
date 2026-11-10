@@ -966,6 +966,16 @@ paste. New ones are added as they come up.
   stored copy matches the local file by size and checksum, delete the local file only when it
   does, and keep a list of what moved and where.`
 
+  An agent that reports "there is no room for this" and stops has usually not looked. On most
+  machines that have been busy for a while, the space is sitting in finished outputs that are
+  already saved elsewhere, in old downloads and in caches. Tell it that a full disk is a step in
+  the job, not the end of it: find what can safely go, move or delete it by the order above, and
+  then carry on with the task it was doing.
+
+  `if you run out of disk space, do not stop and report it. list the largest folders, move what
+  is finished and already backed up, check the copies, free the space, and then continue the
+  job. tell me afterwards what you moved.`
+
 - Give every long job an off switch you can use without the agent. A small file that the job checks
   before each step (if it exists, the job finishes the current step and stops) lets you or any other
   agent stop it cleanly from anywhere, even when the session that started it is gone, and saves
