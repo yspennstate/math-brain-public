@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When an agent tells you it will do something later, have it write that promise down. "I'll email
+  you the comparison when the test finishes" lives only in the conversation, and a restart or a long
+  session that gets summarised can drop it. A line in the task list or the NEXT file, with what was
+  promised and to whom, survives both.
+
+  `whenever you tell me you will do something later, add it to your task list in one line: what you
+  promised, to whom, and what has to happen first. check that list before you say you are done.`
+
+- A watcher that reports nothing is not the same as nothing happening. A monitor can time out, lose
+  its connection or look for the wrong words in a log, and from outside that looks exactly like a
+  quiet, healthy job. When a watch has been silent for a while, ask the agent to look at the job
+  directly once before it trusts the silence.
+
+  `if your watcher has said nothing for half an hour, don't assume the job is fine. look at the job
+  itself, tell me what it is doing right now, and fix the watcher if it missed something.`
+
 - Before a long batch, have the agent run and time one item first. One clip, one page, one file run
   end to end tells you how long the whole batch will take, how much memory it needs and whether the
   output looks right, before hours go into it. Ask for the timing and the estimate in plain numbers.
