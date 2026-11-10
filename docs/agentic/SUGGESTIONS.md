@@ -682,6 +682,12 @@ paste. New ones are added as they come up.
   over <amount>. tell me when you reach half of it, and stop at the limit and ask me. while you
   wait for my answer, carry on with the parts that are free.`
 
+  Your own plan's usage is a cost too. Before a loop runs for days, a guess that is far off is
+  worth hearing before the work starts, not after.
+
+  `before you start, estimate how long each piece will take, how many pieces there are and roughly
+  how much of my usage it will need. if it looks too large, suggest a smaller version.`
+
 - Ask for one page you can open to see where everything stands. With several agents and loops
   running, reading each terminal is slow. An agent can keep a small status page or file, one line
   per job with what it is doing, when it last moved and what it waits on, and refresh it as it
@@ -1203,6 +1209,9 @@ paste. New ones are added as they come up.
 
   `before you build this, give me two ways to do it, what each one costs in time and risk, and
   which one you would pick and why.`
+
+  Add "wait for my answer before starting" when you want to make the call yourself; leave it out
+  and it will go ahead with its pick.
 
 - Ask for comparisons as a table. Three results described in three paragraphs are hard to hold in
   your head. The same numbers in a small table, one row per option and one column per measure, show
@@ -1798,6 +1807,9 @@ paste. New ones are added as they come up.
 
   `spend at most twenty minutes on this. if it is not fixed by then, stop and tell me what you tried,
   what you ruled out and what you would try next.`
+
+  The same works for a research question as for a bug; write the note to a file so the next try
+  starts from it.
 
 - Ask for a second source on any fact that matters. A date, a figure or a quote that one web page
   gives can be a copying error passed along from page to page. Two independent sources that agree are
@@ -2941,12 +2953,6 @@ paste. New ones are added as they come up.
   trouble. A quick prompt sent now beats a careful one sent in ten minutes. Save the care for the
   parts that matter: names, numbers, dates and what done means.
 
-- Ask for two ways before it picks one. An agent usually takes the first approach that comes to
-  mind. Asking for two, with what each costs, shows you the choice it was about to make for you.
-
-  `give me two different ways to do <the task>, what each costs in time and risk, and which you
-  would pick. wait for my answer before starting.`
-
 - Give each loop its own terminal and a name. With six windows open they all look alike. Ask the
   agent to set its window title to the job it runs, so you can find the right one at a glance.
 
@@ -3004,13 +3010,6 @@ paste. New ones are added as they come up.
   `here is an example of what I want: <file or link>. make <the new thing> in the same style and
   at the same length, and tell me where yours differs from it.`
 
-- Ask for a rough cost before a big job. Before a loop runs for days, ask how long it expects
-  each piece to take and how much of your usage it will spend. A guess that is far off is worth
-  hearing before the work starts, not after.
-
-  `before you start, estimate how long each piece will take, how many pieces there are and roughly
-  how much of my usage it will need. if it looks too large, suggest a smaller version.`
-
 - Ask the agent to clean up after itself. Long jobs leave scratch files, half-finished copies and
   programs still running in the background. One line at the end of a prompt keeps the computer
   from filling up with them.
@@ -3054,12 +3053,6 @@ paste. New ones are added as they come up.
 
   `before you start, recall what the brain has on <the topic>: earlier attempts, mistakes, results.
   give me five lines, then begin from there.`
-
-- Put a time limit on a hard question. An agent will dig at one problem for hours if nothing tells
-  it when to step back. A limit turns a stuck afternoon into a note you can act on.
-
-  `spend at most 30 minutes on <the problem>. if it is not solved by then, write down what you
-  tried, what you ruled out and what you would try next, and stop.`
 
 - Have a second agent check a result before it goes public. The agent that produced a result is
   the worst judge of it. A second agent that reruns the work without reading the first one's code
