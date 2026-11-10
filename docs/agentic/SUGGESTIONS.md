@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When a loop keeps reporting "unchanged", ask once what it compared against. A check that compares
+  today's state with its own note from the last round will say "unchanged" forever, even after the
+  real thing broke, because both sides of the comparison came from the agent. A good check reads the
+  real source each time: the file on the server, the version on GitHub, the job's own log.
+
+  `you have said "unchanged" for a while. tell me exactly what you compared, where each side came
+  from, and whether one of them is your own earlier note. if it is, check the real source now.`
+
+- When one agent tells another that something is done, have the second one check before it builds
+  on it. Agents pass each other short reports, and "the model is installed" or "the files are
+  pushed" is easy to write and easy to get wrong. One quick look, the file listed or the page
+  loaded, costs a minute and saves an afternoon built on a step that never happened.
+
+  `another agent says <the step> is done. before you rely on it, check it yourself in one command,
+  tell me what you saw, and only then carry on.`
+
 - When a plan is set, ask what would make the agent change it. A plan made at the start rests on a
   few guesses: that a model is fast enough, that a computer stays free, that a result comes out as
   expected. Naming those guesses up front tells the agent what to keep an eye on, and it tells you
