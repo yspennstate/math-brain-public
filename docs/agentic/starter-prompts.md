@@ -26,6 +26,32 @@ recall from the brain what we know about <topic>, with the scores. then tell me 
 notes you would trust and which you would check first.
 ```
 
+## The rest of the first week
+
+Day two, give it a first loop. Pick something small that runs for a day, so you can read every
+round:
+
+```
+/loop fire this every 10 minutes for the next 24 hours. work on <one small piece of my project>.
+each round, read the NEXT line in <folder>/NEXT.md, do one step, save it, and rewrite the NEXT
+line. save anything worth keeping to the brain.
+```
+
+Day three, turn something you keep repeating into a skill. By now you will have typed the same
+instruction more than once:
+
+```
+look at what I have told you in the last few days. find an instruction I keep repeating and turn
+it into a skill, so you follow it without being told. show me the skill and test it once.
+```
+
+At the end of the week, look back:
+
+```
+read everything we saved to the brain this week. tell me what helped, what you never used, and
+what is missing. then suggest the next loop I should start.
+```
+
 ## Getting an agent going fully
 
 The agents that get the most done are given a goal, permission to decide the small things
