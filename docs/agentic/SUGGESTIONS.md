@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When a step is only acceptable under one condition, say what to do if the condition can't be met.
+  "Apply, but make sure they don't contact my referees without asking me" leaves the agent guessing
+  when the form has no such option. Add the other half: "otherwise don't apply, and tell me". An agent
+  told what to do in both cases won't quietly go ahead on the riskier one.
+
+  `do <the step> only if <the condition>. if you can't confirm the condition, don't do it at all:
+  stop, tell me what you found, and go on with the rest of the list.`
+
+- On a computer you share, the owner's own background work counts as them using it. A person can be
+  away from the keyboard while their renders, backups or builds are running, and a job of yours that
+  starts then can push the machine into heavy swapping. Tell the agent to look for the owner's own
+  heavy processes, not just the mouse and keyboard, and to stay out while those run.
+
+  `on <their> computer, treat their own heavy programs (renders, builds, big downloads) the same as
+  them sitting at it: don't start our jobs while those run, and wait a while after they finish.`
+
 - When an agent tells you something can't be done, ask what it would take. "There is no room for
   the model" or "the account is out of usage" is often the first obstacle it hit, not the last word.
   The usual way through is ordinary: copy finished files somewhere safe and free the space, use a
