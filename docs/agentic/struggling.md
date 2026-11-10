@@ -122,6 +122,18 @@ Go down this list in order. Most problems are the first two.
     output, no lists of files. if nothing changed this round, say so in one line.
     ```
 
+18. The agent forgets what you told it yesterday. You said "always use the second account" or "never
+    email anyone without asking me", and today a new session does the opposite. What you type lives
+    in that one session; the next one starts with only what the brain hands it. So when you give an
+    instruction that should last, ask for it to be saved as a rule in the brain, in your words and
+    with the date, where the wake-up hook will show it to every session after this one.
+
+    ```
+    when I tell you something that should hold beyond today, save it to the brain as a rule, with
+    my words, the date and the reason. then start a new session and check that it sees the rule.
+    if I later say something different, mark the old rule as replaced instead of keeping both.
+    ```
+
 Still stuck: paste this into the agent.
 
 ```
