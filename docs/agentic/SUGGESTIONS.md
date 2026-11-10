@@ -5,6 +5,15 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Before a new project, ask what the brain already knows. A new piece of work often touches
+  something an earlier session already tried: a method that failed, a source that turned out to be
+  wrong, a person you wrote to, a rule you set months ago. An agent that starts from a blank page
+  will walk into the same walls. Give the first round to reading, and only then to planning.
+
+  `before you plan anything for <the project>, search the brain for it and for anything close to
+  it. tell me what we already tried, what worked, what failed and why, and any rule of mine that
+  applies. then write the plan, and say which of those notes changed it.`
+
 - Ask which note an answer came from. When an agent tells you something about your own work, a
   past result, a rule you set, a date, it usually read it in the brain, and the note it read may
   be out of date or wrong. If you know which note it was, you can fix the note once and every
