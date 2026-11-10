@@ -5,6 +5,24 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When a long job is too slow at full quality, ask for the whole thing at a lower setting first. A
+  film rendered at a smaller size, a model trained on fewer steps or a report built from a sample
+  finishes in a fraction of the time and shows you the shape of the result. You can then spend the
+  slow, expensive settings only on the parts that are worth it. Ask the agent to say what the lower
+  setting costs in quality, in one line, so the choice is yours.
+
+  `full quality will take too long. do the whole thing at a lower setting first, tell me in one line
+  what that costs, and list the parts you would redo at full quality.`
+
+- When you change plans, ask the agent what it stopped. A new order often means an older job should
+  end: a test, a queue, a watcher. Agents are good at starting the new thing and less good at
+  noticing the old one is still running, still holding a computer or still about to send an email.
+  One line on what was stopped, and what was left running on purpose, keeps the two plans from
+  overlapping.
+
+  `you have switched to the new plan. tell me what you stopped from the old one, and what is still
+  running from it and why.`
+
 - Don't let a test hold up the real work. A small test of a new tool is worth running, but if it has
   to wait for something (a free machine, a download, someone's reply) while the real job sits
   queued behind it, the computers do nothing in the meantime. Once one item has run cleanly, it is
