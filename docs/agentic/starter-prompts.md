@@ -47,6 +47,25 @@ it into a skill, so you follow it without being told. show me the skill and test
 
 [skills.md](skills.md) walks through what makes a good skill and how to test one.
 
+Day four, make the loop check its own work. Read a few of yesterday's rounds and pick the kind of
+mistake you saw most, then put the check for it into the loop:
+
+```
+from now on, before you save a round, check it: <run the tests / open the file and reread it /
+compare the numbers with the source>. if the check fails, fix it in the same round or write
+what failed into NEXT.md. end each round with the path of what you changed.
+```
+
+Day five, open a second terminal for a second project, with its own folder, ORDER.md and loop.
+Two loops on two separate things are easier to follow than one loop doing both, and you will see
+how much the brain carries between them:
+
+```
+this terminal is for <second project>. write my request into ORDER.md in this folder, recall
+what the brain already has on it, then start a loop: every 10 minutes for the next 2 days, one
+step a round, NEXT.md updated each time.
+```
+
 At the end of the week, look back:
 
 ```
