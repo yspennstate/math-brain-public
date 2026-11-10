@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When several agents work for you at once, ask each report to end with one line naming which of your
+  requests it answers and when you asked it. After a few hours of asks to five terminals, a report that
+  says "done, all three files are updated" is hard to place. "This was your 9:40 ask to rewrite the
+  cover letter" tells you at a glance which job it closes.
+
+  `end every report with one line that names which of my requests it answers, in my words, with the
+  time I asked. if it answers more than one, name each.`
+
+- When an agent hits "database is locked" or "file in use", have it wait and try again rather than
+  delete the lock or work on a copy. The message usually means another program, often another agent,
+  is writing at that moment. Removing the lock or editing a copy can lose that other writer's work.
+  A short pause and a second try almost always clears it; if it does not, ask the agent to find out
+  who holds it.
+
+  `if a file or database says it is locked, don't remove the lock or use a copy. wait thirty seconds
+  and try again, up to five times, and if it is still locked tell me which program is holding it.`
+
 - When an agent fills in a web form for you, ask which fields will make the site contact someone.
   An application form may email your referees the moment their addresses go in, a booking form may
   message a host, a sign-up may invite your contacts. Tell the agent what you do not want sent yet,
