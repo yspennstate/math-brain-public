@@ -447,6 +447,13 @@ paste. New ones are added as they come up.
   `is the processor, memory and graphics card on this computer being used fully right now? if
   something sits idle, tell me what could use it.`
 
+  Asked once, the answer is out of date within the hour: jobs finish and machines go quiet again. A
+  short loop can keep asking, and pass the free room to whichever job is waiting for it.
+
+  `/loop fire this every 1 minute for the next 10 days. check how busy each of my computers is. when
+  one has room, tell the agents with jobs waiting which machine is free and how much memory it has,
+  so the room gets used. never start anything on a computer that is short of memory.`
+
 - When you give feedback on something the agent made, say what to keep as well as what is wrong.
   "The pictures are great, the voice is in the wrong language, the mouths don't move" tells it to fix
   two things and leave the rest alone. A list of complaints alone often gets you a full redo, and the
