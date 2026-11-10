@@ -2755,6 +2755,17 @@ paste. New ones are added as they come up.
   `these two computers share one internet connection. if a download is slow, check what the other
   computer is downloading before you blame the server.`
 
+- When a second computer frees up halfway through a long list of jobs, give it the same list and
+  have it start from the other end. One machine works up from the first item, the other down from
+  the last, and they meet somewhere in the middle without anyone deciding in advance who takes
+  what. The one thing to add is a shared record of what is finished or in progress, refreshed
+  every few minutes, so that near the meeting point neither one starts an item the other has.
+
+  `<the second computer> is free. give it the same job list as <the first computer> and have it
+  work from the last item backwards. every few minutes, copy each machine's finished and current
+  items to the other as a skip list, and move finished results into one folder. tell me when they
+  meet.`
+
 - Keep keys and passwords out of prompts, logs and printouts. Whatever you type can end up in a log,
   a summary or a note the brain saves, and an agent given a login token will sometimes print it
   while debugging or write it into a log that later gets pushed. Put the key in a file or your
