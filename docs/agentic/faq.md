@@ -55,6 +55,26 @@ Something you already work on every day and keep explaining again: a research pr
 a writing project. The brain pays off when the same ground comes up a second time.
 [starter-prompts.md](starter-prompts.md)
 
+## Can it keep working while I sleep?
+
+Yes, if the computer stays on and awake and the terminal stays open. A loop with an end date a few
+days out does the rest. Before you leave, ask the agent to check that sleep is off while its work
+runs, and to keep its NEXT line current so that you can read in the morning what it did.
+[struggling.md](struggling.md)
+
+## Can it use more than one computer?
+
+Yes. If the agent can log in to the other machine over your own network, it can start jobs there,
+check on them and bring the results back. Ask it to split the work so no two machines do the same
+piece, and to collect finished pieces in one place. [loop-prompts.md](loop-prompts.md)
+
+## Can two computers share one brain?
+
+Yes. Keep the brain in a private GitHub repository and have each computer pull it before work and
+push what it learned after. Memories are small text files, so the two copies merge cleanly most of
+the time; when they do not, ask the agent to keep both lines and mark which is newer.
+[github-as-storage.md](github-as-storage.md)
+
 ## The brain does not seem to do anything. What now?
 
 Check that the hooks run (the agent should mention the brain at the start of a session), that you
