@@ -3290,6 +3290,17 @@ paste. New ones are added as they come up.
   `I keep telling agents <the instruction>. make it a hook that reminds every session at the right
   moment, show me the hook firing once, and save the reason in the brain.`
 
+  The most useful one fires when the agent is about to stop. Agents tend to stop early: one piece
+  works, they write a tidy summary, and the rest of the job waits for you to notice. A hook on the
+  stop event can ask three questions before the agent is allowed to finish: is every part of the
+  request done, has the result been checked a second way, and is there another approach worth
+  trying if this one was weak. If the honest answer to any of them is no, the agent keeps going
+  instead of reporting. Keep the questions short, so the agent reads them instead of skimming.
+
+  `add a hook that runs when you are about to stop. it should ask: is everything I asked for done,
+  did you check the result a second way, and is there a better approach you have not tried. if any
+  answer is no, keep working. show me it firing once on a half-finished task.`
+
 - When new terminals hang before the agent answers, time the hooks. Every hook runs before the first
   reply, and after a few weeks of adding them one slow hook (a search over a large folder, a network
   call, a file that grew) can hold every new session for a minute or more. The agent can run each one
