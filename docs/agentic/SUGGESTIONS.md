@@ -5,6 +5,14 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When one loop carries several jobs, have each round say which job it worked on. A loop told to
+  do four things tends to spend its rounds on the easiest one, and a night later the hard job has
+  not moved. A short line per round naming the job, and a rule to take the one that has waited
+  longest, keeps all four moving.
+
+  `this loop has four jobs. each round, pick the one that has gone longest without progress, work on
+  it, and start your progress line with its number.`
+
 - Tell the agent to ask before it signs you up for anything. An agent setting up a tool may meet a
   sign-up page, a trial that turns into a paid plan, or terms to accept, and click through to keep
   the job moving. Accounts and money are yours to decide. One line in the prompt makes it stop and
@@ -1217,13 +1225,6 @@ paste. New ones are added as they come up.
 
   `along with the result, give me one check I can do myself in under a minute that would show if
   it were wrong.`
-
-- Ask how to take something out again before it goes in. A tool, a background task or a startup
-  item is easy to add and easy to forget. Have the agent write down how to remove it at the time it
-  sets it up, while it still knows every piece.
-
-  `before you install or schedule anything, write in SETUP.md what you are adding and the exact
-  steps to remove it again.`
 
 - Have it interview you, one question at a time. When you are not sure what you want, a page of
   twelve questions is hard to answer. Ask the agent to ask one question, wait, and use your answer
@@ -2889,10 +2890,15 @@ paste. New ones are added as they come up.
 
 - Ask how to undo a change before it is made. When an agent is about to change something that
   already works, a setting, a script, a shared file, ask it first to save the old version and
-  say how to put it back. Undoing then takes one line.
+  say how to put it back. Undoing then takes one line. The same goes for anything it adds: a tool,
+  a background task or a startup item is easy to add and easy to forget, so have it write down how
+  to remove it at the time it sets it up, while it still knows every piece.
 
   `before you change <the thing>, keep a copy of how it is now and tell me the one step that puts
   it back if the change goes wrong.`
+
+  `before you install or schedule anything, write in SETUP.md what you are adding and the exact
+  steps to remove it again.`
 
 - Ask the agent what it would work on next. After a few days on a project the agent has read more
   of it than you have. Asking it for the next three things worth doing often turns up work you had
