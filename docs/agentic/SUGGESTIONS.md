@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- You can ask a looping agent a quick side question, but tell it to go back to the loop afterwards.
+  An agent that answers a one-off ("is anything due today?") can treat the answer as the end of the
+  job and stop, and the loop you set up for the week goes quiet. One clause at the end of the side
+  question keeps it going.
+
+  `check now whether <the thing> needs me today. if it does, email me the details. if it doesn't,
+  say so in one line and go straight back to the loop you were running.`
+
+- Ask the agent now and then which of your computers are sitting idle, and what they could take on.
+  A second laptop or a desktop in the corner often has free memory and cores all day. Have the agent
+  check each machine's free memory against what the job needs before it moves anything there, because
+  a large model that does not fit simply fails, and a report of what fits where is worth more than a
+  failed launch.
+
+  `check each of my computers: how busy it is, free memory, free disk. for each idle one, say which
+  of our jobs would fit on it and which would not, with the memory each needs. move the ones that fit.`
+
 - When you give feedback on something the agent made, say what to keep as well as what is wrong.
   "The pictures are great, the voice is in the wrong language, the mouths don't move" tells it to fix
   two things and leave the rest alone. A list of complaints alone often gets you a full redo, and the
