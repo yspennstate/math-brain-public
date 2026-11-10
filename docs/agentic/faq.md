@@ -55,6 +55,19 @@ A loop uses your agent subscription or API allowance the way normal use does, ju
 Pushing to GitHub is free; repositories with automatic test runs can bill for those runs, so put
 `[skip ci]` in commit messages for documentation and data.
 
+## Does the agent need the internet, and what does it send out?
+
+Yes. The model itself runs on the provider's servers, so the agent needs a connection, and
+everything it reads to answer you goes there: your prompts, and any file or command output it
+opens along the way. Files it never opens stay on your computer, and nothing reaches GitHub
+unless it pushes. The brain's memories live on your disk as plain files, but a memory the agent
+recalls is read like any other file, so it is sent too.
+
+So keep passwords, keys and anything you would not paste into a chat out of the folders the
+agent works in, and tell it which folders are off limits. Read the provider's data policy once
+to know how long they keep what is sent. A fully offline setup needs a model you run yourself,
+which the brain can work with but these pages do not cover.
+
 ## Can several agents work at once?
 
 Yes. Give each one its own job folder, and have them claim files before they edit, so two agents
