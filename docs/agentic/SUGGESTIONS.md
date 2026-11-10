@@ -1052,6 +1052,12 @@ paste. New ones are added as they come up.
   `before you start, tell me in one sentence what you think I am asking for, then go ahead unless
   that sentence is wrong.`
 
+  Before a loop that will run for days, make it wait for you. A wrong reading there costs far more
+  than an hour.
+
+  `before you start, tell me in three lines what you think I am asking for and what you will
+  produce. wait for my yes, then go.`
+
 - Ask where every file it made ended up. "Saved it" tells you nothing a week later. With the
   folder, the file name and, for anything online, the link, you or another agent can find the work
   without a search. Have it list them at the end of the report, one per line.
@@ -1420,14 +1426,6 @@ paste. New ones are added as they come up.
 
   `keep your replies to three lines unless I ask for more. if there is a problem, say it in the
   first line.`
-
-- Ask it to say the task back before it starts. A prompt typed in a hurry can be read two ways,
-  and the agent picks one without saying so. Three lines in its own words, before any work, show
-  you at once whether it understood, and cost far less than an hour spent on the wrong reading,
-  let alone ten days of a loop.
-
-  `before you start, tell me in three lines what you think I am asking for and what you will
-  produce. wait for my yes, then go.`
 
 - Save the heavy jobs for when you are away. A big download, a long test or a search over every
   file slows the whole computer while it runs. Tell the agent which jobs are heavy and have a loop
