@@ -5,6 +5,14 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Tell the agent to ask before it signs you up for anything. An agent setting up a tool may meet a
+  sign-up page, a trial that turns into a paid plan, or terms to accept, and click through to keep
+  the job moving. Accounts and money are yours to decide. One line in the prompt makes it stop and
+  ask instead.
+
+  `if any step needs a new account, a paid plan, a card number or accepting terms, stop there and
+  ask me first. carry on with the parts that need none of that.`
+
 - Have a long loop keep your request word for word in a file. A loop prompt is read again every
   round, but the longer message that started the job (the details, the limits, the reasons) is
   gone from the agent's memory after a day or two. A short file with your exact words, which the
@@ -561,6 +569,12 @@ paste. New ones are added as they come up.
 
   `keep one status page I can open: one line per job, what it is doing, when it last made
   progress and what it is waiting on. update it every round.`
+
+  For a one-off check across many agents, a page that opens in your browser reads faster than a
+  wall of text in the terminal.
+
+  `make me one page with every agent's current job, its last result and anything waiting on me,
+  and open it in my browser.`
 
 - An agent can open a new terminal for you, already set up. When you want a second agent on
   another job, you do not have to open a window, find the folder and remember the right command and
@@ -1156,7 +1170,8 @@ paste. New ones are added as they come up.
 
 - Ask it to explain each command while you are learning the terminal. An agent can run twenty
   commands in a minute, and you come away with a result but no idea how it got there. One short
-  line per command, saying what it does, turns every session into a small lesson.
+  line per command, saying what it does, turns every session into a small lesson, and a month of
+  watching into a working knowledge of the terminal.
 
   `I am new to the terminal. before each command you run, tell me in one plain sentence what it
   does and why you need it.`
@@ -2304,13 +2319,6 @@ paste. New ones are added as they come up.
   `what would you need from me to finish this without asking me again? list it, and I will give
   you what I can in one go.`
 
-- Ask it to explain each command in one line. If the terminal is new to you, the agent is also the
-  best teacher you have. A short note beside each command it runs turns a month of watching into a
-  working knowledge of the terminal.
-
-  `while you work, put one plain line under each command you run saying what it does, so I can
-  learn the terminal as we go.`
-
 - Have it look for an existing script before writing a new one. In a project that has run for a
   while, the tool it is about to write often already exists under another name. Ask it to search
   first; a second copy of the same tool is how two versions drift apart.
@@ -3095,12 +3103,6 @@ paste. New ones are added as they come up.
 - Your later words win. When you change your mind halfway through a long loop, just say the new
   thing. Ask the agent to add your new words, dated, under the old ones in its ORDER file instead
   of replacing them, so it can see how the request changed.
-
-- Ask for a page, not a wall of text. For a status check across many agents, ask for one page
-  that opens in your browser, with what each agent is doing and what is waiting on you.
-
-  `make me one page with every agent's current job, its last result and anything waiting on me,
-  and open it in my browser.`
 
 - Run two loops on one project from two angles. One loop builds ("keep working on X"), the other
   checks ("every 20 minutes, test what the first loop made and write down what is broken"). The
