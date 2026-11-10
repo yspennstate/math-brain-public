@@ -696,15 +696,6 @@ paste. New ones are added as they come up.
   `before you delete this to free space, check whether it can be downloaded again exactly as it is,
   write the source and the command to restore it next to where it was, and only then delete it.`
 
-- If a loop has to run longer than the scheduler allows, put the renewal date in the prompt itself.
-  Some schedulers drop a repeating job after a few days, so a ten-day loop quietly ends on day seven.
-  Write the date the job must be re-created, and the date it ends for good, into the loop prompt, so
-  every run reminds the agent.
-
-  `/loop fire this every 5 minutes for the next 10 days. the scheduler drops repeating jobs after 7
-  days: on day 6 re-create this job to run to <end date>, and after <end date> stop it and send me
-  a final report.`
-
 - Give every long job an off switch you can use without the agent. A small file that the job checks
   before each step (if it exists, the job finishes the current step and stops) lets you or any other
   agent stop it cleanly from anywhere, even when the session that started it is gone. Ask the agent
@@ -1365,8 +1356,9 @@ paste. New ones are added as they come up.
   HEARTBEAT.txt in the project folder, replacing what was there.`
 
 - Know when a scheduled loop runs out. Some agent tools let a recurring job run only a fixed number
-  of days before it lapses on its own, which is shorter than "for the next 10 days". Put the end
-  date in the loop prompt and have the agent renew the job before it lapses.
+  of days before it lapses on its own, so a ten-day loop can quietly end on day seven. Put the end
+  date, and the day the job must be re-created, in the loop prompt itself, so every run reminds the
+  agent to renew it before it lapses.
 
   `/loop fire this every 5 minutes until 19 November 03:00. if the scheduler stops the job before
   then, create it again with the same prompt, and after 19 November 03:00 stop it and send me a
