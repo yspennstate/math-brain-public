@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- If a newly released model doesn't show up in your terminal, the program usually needs updating.
+  A coding agent only lists the models its installed version knows about, and a window opened before
+  the update keeps the old list. An agent can update the program, open a fresh window and check that
+  the new model is there and answers, so you don't have to look for the right command.
+
+  `the new model <name> is out but I can't pick it here. update the agent program, open me a new
+  terminal with that model selected, and send it one test prompt to show it works.`
+
+- When you change something yourself, tell the agents. If you switch off a computer's sleep setting,
+  sign in to a site or free some disk space, an agent that last saw the old state will keep working
+  around a problem that is gone, or report it to you again. A one-line message, passed on to all of
+  them, brings everyone up to date.
+
+  `I just <what I changed> on <which computer>. tell every agent working with it, check that the
+  change took, and let me know if anything still needs me.`
+
 - When a step is only acceptable under one condition, say what to do if the condition can't be met.
   "Apply, but make sure they don't contact my referees without asking me" leaves the agent guessing
   when the form has no such option. Add the other half: "otherwise don't apply, and tell me". An agent
