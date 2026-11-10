@@ -5,6 +5,15 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Name each terminal window after its job. With five agents open, five tabs all called
+  "Terminal" or "PowerShell" means clicking through each one to find the right conversation. In
+  Windows Terminal, right-click the tab and choose Rename Tab; in the Mac Terminal, use Shell, then
+  Edit Title. A two-word name such as "guide loop" or "film render" saves a search every time you
+  come back.
+
+  `I have several terminals open. give me a two- or three-word name for this one that says what
+  it is working on, so I can label the tab.`
+
 - Plan for the moment your usage runs out. Most agent plans have a limit that resets every few
   hours or every week, and a loop that hits it simply stops answering, sometimes halfway through a
   change. Ask the agent to keep its notes current so the next round can pick up cold, and to put
@@ -290,6 +299,12 @@ paste. New ones are added as they come up.
 
   `this terminal was reopened after a restart. read the notes and output folders from the last run,
   tell me what was already finished, and continue from the first step that isn't done.`
+
+  If the job kept an order file and a NEXT line, name them; start the new session in the same
+  folder so it finds them.
+
+  `the session working on <the job> was interrupted. read its ORDER.md and the first line of
+  NEXT.md, check what the brain saved about it, and carry on from the next undone step.`
 
 - When something breaks, paste the exact error, not your summary of it. "It didn't work" sends the
   agent guessing. The error text, the command that produced it, or a screenshot of the window usually
@@ -2900,13 +2915,6 @@ paste. New ones are added as they come up.
 - Type fast; don't fix your spelling. Agents read through typos and half sentences without
   trouble. A quick prompt sent now beats a careful one sent in ten minutes. Save the care for the
   parts that matter: names, numbers, dates and what done means.
-
-- After a crash, ask it to pick up where it was. When the computer restarts or a window closes,
-  the job is not lost if it kept its notes. Start a new session in the same folder and point it
-  at them.
-
-  `the session working on <the job> was interrupted. read its ORDER.md and the first line of
-  NEXT.md, check what the brain saved about it, and carry on from the next undone step.`
 
 - Ask for two ways before it picks one. An agent usually takes the first approach that comes to
   mind. Asking for two, with what each costs, shows you the choice it was about to make for you.
