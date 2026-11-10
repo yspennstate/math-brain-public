@@ -3091,6 +3091,16 @@ paste. New ones are added as they come up.
   `/loop fire this every 5 minutes for the next 10 days. make sure everything we made is finished
   and in its place, that nothing got stuck halfway, and fix anything that did.`
 
+- Before a big push to improve something, have the agent read how it has actually been running. If
+  the brain or a tool runs on more than one computer, each one keeps its own logs, and a fault that
+  shows up only on the second machine never reaches the agent on the first. Reading every log and
+  every recent test first gives it a list of what works and what breaks, so the rounds after that
+  fix real problems instead of guessed ones.
+
+  `/loop fire this every 5 minutes for the next 10 hours. start by reading the logs and the recent
+  test results from every computer the brain runs on, and write down what is working and what is
+  failing. then fix the failures one by one, worst first, and test each fix before you move on.`
+
 - Put a second computer to work. An old laptop or a desktop that sits idle can run its own agent
   with the same brain. Ask the first agent to check what the other one is doing and hand it a job
   when it is free.
