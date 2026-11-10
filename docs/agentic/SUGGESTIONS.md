@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- With several agents running, have every report end by naming the request it answers. After a day
+  of asks in different windows, a report that says "done, all three files are updated" can belong to
+  any of them. One closing line in your own words, with the time you asked, tells you at a glance which
+  job just finished and which ones are still out.
+
+  `end every final report with one line saying which of my requests this was, in my words, with the
+  time I asked it.`
+
+- When the result is for someone else, ask for something you can forward as it is. A summary in a
+  terminal is written for you and doesn't travel well. A short page, a document or an email draft
+  with the context a stranger needs (what this is, what was found, where the files are) can go to a
+  colleague in one step, without you rewriting it.
+
+  `write this up so I can send it to <who> without editing: what it is, what we found, and the links.
+  put it in <a page / a doc / an email draft> and give me the link.`
+
 - Keep a checklist file that every agent writes to. When you give several agents several jobs, it is
   easy to forget who is doing what, and the agents don't know about each other. A plain list in one
   file, where each agent adds what you asked it, marks it done when it finishes, and leaves a box for
