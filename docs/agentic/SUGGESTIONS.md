@@ -3315,6 +3315,16 @@ paste. New ones are added as they come up.
   `read the last 50 prompts I gave agents, group them by project, and list what is done and what
   is not. put the open ones on the task list.`
 
+  The same thing works as a loop, and then it catches what slips. When you give many agents many
+  small asks, some are dropped because the agent that heard them closed or moved on. A loop that
+  rereads your newest prompts each round notices an ask nobody is working on, puts it on the list
+  and starts it. Keep it to your recent prompts, say thirty, so each round is quick, and have it
+  skip anything another agent has already taken.
+
+  `/loop fire this every 30 minutes for the next 3 days. read the last 30 prompts I gave any
+  agent, summarise them in a few lines, add every open ask to the task list, and start on the
+  ones no agent has taken. tell me which ones you picked up.`
+
 - Make a loop end with an email. A long loop is easier to trust if it reports. Add to the prompt:
   "when you finish a piece, send me a two-line email with what changed".
 
