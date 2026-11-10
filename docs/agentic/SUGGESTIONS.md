@@ -2942,6 +2942,15 @@ paste. New ones are added as they come up.
   starts by itself after a restart, checks every few minutes that sleep is still off, turns it
   back off if something changed it, and writes a line to a log each time it had to.`
 
+  Ask to see it work once. Have the agent restart the computer (or wait for the next restart),
+  then show you the watchdog running again and the sleep setting still off. A watchdog nobody has
+  tested is a guess. If the computer belongs to someone else, or someone else uses it during the
+  day, change nothing for good: most systems let a program hold the machine awake only while one
+  job runs, and the setting goes back to normal the moment the job ends.
+
+  `on <the shared computer>, do not change the power settings. keep it awake only while our job is
+  running, and let it sleep normally once the job finishes. tell me how you did it.`
+
 - Try a loop for an hour before you leave it for days. The first rounds show whether the prompt
   says what you meant: whether the agent finds its NEXT file, saves where you expect, and stops
   when it should. Fixing that at noon is easier than finding out on day three.
