@@ -73,6 +73,27 @@ your rounds are too big. from now on do one step a round that you can finish and
 few minutes, save it, and write it in NEXT.md before you start anything else.
 ```
 
+## How often a loop should fire
+
+Pick the interval from what the loop is doing, not from habit.
+
+- Steady work, where every round has a next step waiting (writing, fixing, testing, solving):
+  every 5 or 10 minutes. A short interval costs nothing here, because the next round only starts
+  when the agent is idle; if a round takes twenty minutes, the loop simply runs back to back.
+- Watching something that changes slowly (a job board, a mailbox, a long render, a repository other
+  people push to): as often as it actually changes. Hourly is plenty for a listing, every 15 or 30
+  minutes for a render that takes hours.
+- Every round reads the order, the NEXT line and whatever the hooks add, so it uses some of your plan
+  even when it finds nothing to do. A loop every 5 minutes for ten days is close to three thousand
+  rounds. If most NEXT lines say "checked, nothing new", the interval is too short for the job.
+
+Changing the interval does not need a new order:
+
+```
+most of your rounds find nothing to do. re-create this loop to fire every <30 minutes / hour>
+until the same end date, keep everything else the same, and write the change in NEXT.md.
+```
+
 ## Practical details
 
 - A loop lives inside its terminal session. Close the window and it stops. Leave the window open,
