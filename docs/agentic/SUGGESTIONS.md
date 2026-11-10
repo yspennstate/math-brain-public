@@ -5,6 +5,21 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When one message asks for several things, have the agent list them back before it starts. A long
+  message typed quickly often holds four or five requests, and an agent tends to do the first two
+  well and lose the last one, usually the small one at the end. A numbered list at the start, ticked
+  off in the final report, makes a dropped request easy to see.
+
+  `before you start, list every separate thing I asked for in that message, numbered. at the end,
+  go through the same list and say for each one: done, not done, or waiting on something.`
+
+- Ask to see a new check catch a known bad case. A check that has only ever passed may be passing
+  because it looks at nothing: the wrong folder, an empty file, a pattern that never matches. Feed it
+  one case you know is wrong and watch it complain. Then you know the green result means something.
+
+  `before you trust this check, give it one example you know is bad and show me that it fails. then
+  run it on the real data.`
+
 - Ask the agent to name the exact variant of a model or tool it used. One model name often covers
   several things: a full release, a faster distilled one, a compressed copy that fits a smaller
   computer. They can give quite different results, and a report that just says the name leaves you
