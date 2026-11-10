@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When one order covers several machines or several pieces, have the agents split it with one owner
+  per piece and say who owns what. Two agents doing the same download or the same render waste hours
+  and can overwrite each other; nobody doing the last piece is just as common. A short line on a
+  shared board ("A has machine 1 and 2, B has machine 3, C does the re-renders once both are done")
+  settles it.
+
+  `this order touches several machines. split it with the other agents, one owner per piece, write
+  the split where all of you can read it, and tell me who has what.`
+
+- Ask a job that waits to say what it is waiting for. A queue that sits quietly behind a condition
+  (the machine is busy, it is on battery, another job holds the lock) looks exactly like a job that
+  hung. One line in its log each time it starts waiting, and again when it resumes, saves you and the
+  next agent from killing a healthy job or trusting a dead one.
+
+  `when your job has to wait for something, write one line to its log saying what it is waiting for,
+  and another when it starts again.`
+
 - If an agent runs heavy work on a computer someone else also uses, ask it to make the work give way
   to that person. A small watcher that pauses the job as soon as the keyboard or mouse moves, ends it
   if they keep working or memory gets tight, and starts again only after they have been away for a
