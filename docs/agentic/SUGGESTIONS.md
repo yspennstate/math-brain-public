@@ -5,6 +5,14 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Put big files on GitHub as release files, not in the repository itself. GitHub refuses a single
+  file over 100 MB in a normal push, and even smaller videos or data sets make every later download
+  of the repository slow. A release can hold large files next to the code without weighing down its
+  history.
+
+  `this file is too big for the repository. attach it to a release instead, note the release link in
+  the README, and check that the uploaded size matches the file here.`
+
 - Give your loops different starting minutes. Five loops set to run every five minutes all fire at
   the same moment, so the computer sits idle, then everything starts at once and the slowest round
   holds up the rest. Starting each one a minute or two after the last spreads the load and keeps
@@ -3061,10 +3069,15 @@ paste. New ones are added as they come up.
   which agents acknowledged it.`
 
 - Give the agent a rule for when space runs short. A loop that runs for days will sooner or later
-  meet a full disk or low memory, and then it sits and waits. Tell it in advance what to do.
+  meet a full disk or low memory, and then it sits and waits. Tell it in advance what to do, or keep
+  the disk from filling at all with a small loop of its own that moves finished files off the
+  computer. The brain records where each file went.
 
   `if the disk or memory gets low, don't stop. find files that already have a checked copy on
   github, delete those, and carry on with the task.`
+
+  `/loop every 10 minutes, upload finished files to github, check each copy, then delete the local
+  one.`
 
 - When you are not watching, ask for questions by email. An agent that ends its report with a
   question waits for an answer you never see. Tell it to decide what it can, carry on, and send
@@ -3116,9 +3129,6 @@ paste. New ones are added as they come up.
 
 - Give every long job a folder with ORDER.md and NEXT.md. It costs nothing and means a crash, a
   closed window or a full context loses at most one step.
-
-- Use a loop to keep the disk free. "every 10 minutes, upload finished files to github, check
-  each copy, then delete the local one." The brain records where each file went.
 
 - Let the brain test itself. A brain that is never tested drifts. Once a week, run the same
   questions with and without the brain and keep the scores.
