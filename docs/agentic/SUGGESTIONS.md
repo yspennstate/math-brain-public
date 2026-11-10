@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When an agent fills in a web form for you, ask which fields will make the site contact someone.
+  An application form may email your referees the moment their addresses go in, a booking form may
+  message a host, a sign-up may invite your contacts. Tell the agent what you do not want sent yet,
+  and have it list those fields and leave them empty before it presses submit.
+
+  `before you submit this form, tell me which fields will make the site email or message anyone. leave
+  the referee details empty for now; we will add them later. show me the filled form before you send.`
+
+- When you turn down a draft, say what is wrong in a word or two and ask for a new version rather than
+  a patch. "Too casual", "too long", "reads like a list" tells the agent the direction; a fresh draft
+  in that direction usually reads better than the old one with words swapped. Ask it to say in one
+  line what it changed, so you can tell it heard you.
+
+  `this is too casual. write it again from the start in a formal, professional voice, keep the same
+  facts, and tell me in one line what you changed.`
+
 - Ask the agent to open the result in front of you. A path in a report means you still have to find
   the folder, pick the file and choose a program. The agent can open the video, the page or the
   document itself, in the right program, so you only have to look. For several results, it can
