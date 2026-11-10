@@ -5,6 +5,21 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Before a long batch, have the agent run and time one item first. One clip, one page, one file run
+  end to end tells you how long the whole batch will take, how much memory it needs and whether the
+  output looks right, before hours go into it. Ask for the timing and the estimate in plain numbers.
+
+  `before you start the batch, run one item from start to finish, time it, show me the result, and
+  tell me how long the full batch will take at that speed.`
+
+- Before an agent deletes something large to make room, ask whether it can be brought back and how.
+  A model or dataset that is also published elsewhere can go safely if the agent first checks that
+  your copy matches the published one and writes down where it came from and the one command that
+  fetches it again. Something that exists only on your machine needs a copy somewhere else first.
+
+  `before you delete this to free space, check whether it can be downloaded again exactly as it is,
+  write the source and the command to restore it next to where it was, and only then delete it.`
+
 - If a loop has to run longer than the scheduler allows, put the renewal date in the prompt itself.
   Some schedulers drop a repeating job after a few days, so a ten-day loop quietly ends on day seven.
   Write the date the job must be re-created, and the date it ends for good, into the loop prompt, so
