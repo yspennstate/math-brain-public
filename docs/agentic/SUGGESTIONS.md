@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Before you post something an AI model made, ask the agent what that model's terms allow. Open
+  models for pictures, voice or video each come with their own licence, and some limit commercial
+  use, a monetised channel, or use in certain countries. The agent can read the licence on the
+  model's page and tell you in two lines whether your plan fits, before the work is public rather
+  than after.
+
+  `before we post anything made with this model, read its licence and tell me in two lines whether
+  we may use it on a monetised channel where I live. quote the sentence that decides it.`
+
+- If you use more than one computer, ask the agent for a roll call now and then. Machines go to sleep,
+  lose their connection or fill up while nobody is looking, and a job quietly stops on one of them.
+  One prompt gets you each computer, whether the agent can reach it right now, what it is running and
+  how much room it has left.
+
+  `roll call: for each computer you can use, tell me whether you can reach it right now, what is
+  running on it, and how much free disk and memory it has. one line per computer.`
+
 - When an agent works in your web browser, have it use its own tab and tell you which one. You may be
   reading or typing in another tab at the same time, and an agent that clicks in the wrong one can
   lose what you were writing. Ask it to open a new tab for its work, name the page it is on, and stop
