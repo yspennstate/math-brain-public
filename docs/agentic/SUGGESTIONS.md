@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When an agent makes pictures, video or sound, have it look at the result before it uses it. A
+  script can report success on a clip that is frozen, garbled or full of noise. A few frames laid
+  side by side, or a short listen, catch most of that in seconds, before the bad piece is buried
+  inside something longer.
+
+  `after you make each picture or clip, look at a few frames of it (or listen to a few seconds) and
+  tell me in one line whether it looks right. set aside anything that does not.`
+
+- Tell a generating model what you do not want, as well as what you do. Image and video models fill
+  every gap with something. Ask for people "turning and breathing" and you may also get them
+  talking in a made-up language. Naming what must not happen (no talking, no text, no logos) is
+  often the difference between a usable result and a redo.
+
+  `when you write prompts for the image or video model, add a line saying what must not appear,
+  for example: no speech, no writing on screen, no extra people.`
+
 - Give a long loop a cheap check first and do the heavy work only when it finds a change. Most
   rounds of a ten-day loop find the world as it was five minutes ago. A one-line test (has the
   file changed, has the other repository moved, has a reply come) settles that in seconds, and the
