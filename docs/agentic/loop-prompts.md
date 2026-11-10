@@ -165,6 +165,13 @@ the way a person would want to read it: what it is, how to install it, one worke
 every command you write.
 ```
 
+```
+/loop fire this every 10 minutes for the next 5 days. keep improving my <CV / statement / report>.
+each round, read it the way <the reader> would, pick the one weakest part and make it better,
+using what the brain knows about me and my work. keep every version, never invent a fact, and
+tell me only what you changed and why.
+```
+
 Learning from what you do
 
 ```
