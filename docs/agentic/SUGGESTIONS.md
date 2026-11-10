@@ -2857,6 +2857,15 @@ paste. New ones are added as they come up.
   `before you start this loop, check whether this computer will go to sleep when I am away, and if
   it will, tell me how to stop that for the next few days (or do it yourself if you can).`
 
+  A setting can be undone without you noticing: an update, a restart or another program puts sleep
+  back on, and a second computer you reach over the network just drops off. For a machine that
+  has to stay up for days, ask for a small watchdog that starts by itself after a restart and
+  checks now and then that the computer is still set to stay awake.
+
+  `make sure <the computer> never goes to sleep while our jobs run. set up a small watchdog that
+  starts by itself after a restart, checks every few minutes that sleep is still off, turns it
+  back off if something changed it, and writes a line to a log each time it had to.`
+
 - Try a loop for an hour before you leave it for days. The first rounds show whether the prompt
   says what you meant: whether the agent finds its NEXT file, saves where you expect, and stops
   when it should. Fixing that at noon is easier than finding out on day three.
