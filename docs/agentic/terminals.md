@@ -110,3 +110,13 @@ same end date as before.
 
 If you run many terminals, keep a short list of them, one line each with the folder and the
 loop prompt, so reopening them after a restart takes minutes instead of an evening.
+
+Closing a single terminal window does the same thing on a small scale: a loop lives inside its
+session, so when the window closes the loop stops, even though the computer is still on. Leave
+loop windows open (minimise them instead), and turn off any setting that closes idle windows.
+
+You do not always have to start a fresh conversation. `claude --continue` reopens the last
+conversation in that folder, and `claude --resume` lets you pick an older one; Codex has
+`codex resume`. The agent then has the whole earlier conversation in front of it, not only the
+NEXT file. The loop's timer does not come back with it, so the first thing to type in a resumed
+session is the loop prompt again, with the original end date.
