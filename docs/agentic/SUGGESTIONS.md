@@ -5,6 +5,16 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When a shared disk runs low, ask how much of it is your work before anything is cleaned. On a
+  computer you share with someone, the space may be going to their own files, and deleting yours
+  will not fix it, while deleting theirs is not your call. A short count of what your jobs take,
+  next to what is free, tells you whether to clear your own files, stop adding new ones, or ask the
+  other person.
+
+  `the disk on <the computer> is getting full. tell me how much space our files take there, folder by
+  folder, and how much is free. don't delete anything that is not ours; if ours is not the problem,
+  stop adding to it and tell me.`
+
 - When you want to choose between two versions, ask to see them side by side. Two separate files
   make you remember the first while you watch the second, and small differences slip past. The same
   scene or page from both versions, next to each other and labelled, shows at once which is sharper,
@@ -2510,12 +2520,14 @@ paste. New ones are added as they come up.
   `these two computers share one internet connection. if a download is slow, check what the other
   computer is downloading before you blame the server.`
 
-- Keep keys out of logs and printouts. An agent that is given a login token for a service will
-  sometimes print it while debugging or write it into a log that later gets pushed. Say once that
-  the key is used but never shown, and where it lives.
+- Keep keys and passwords out of prompts, logs and printouts. Whatever you type can end up in a log,
+  a summary or a note the brain saves, and an agent given a login token will sometimes print it
+  while debugging or write it into a log that later gets pushed. Put the key in a file or your
+  system's password store, tell the agent where it is, not what it is, and say once that it is used
+  but never shown.
 
-  `the access token is in the credentials file. use it, but never print it, put it in a log, a
-  commit or a message, and never copy it anywhere else.`
+  `the key for <the service> is in <the file>. read it from there when you need it, but never print
+  it, put it in a log, a commit, a message or the brain, and never copy it anywhere else.`
 
 - Have it listen to a sample, not just trust a score. An automatic check on audio, pictures or
   text catches most problems and misses some. Ask the agent to list the few items its check was
@@ -2805,13 +2817,6 @@ paste. New ones are added as they come up.
 
   `give me two different ways to do <the task>, what each costs in time and risk, and which you
   would pick. wait for my answer before starting.`
-
-- Keep passwords out of prompts. Whatever you type can end up in a log, a summary or a note the
-  brain saves. Put a key in a file or your system's password store and tell the agent where it
-  is, not what it is.
-
-  `the key for <the service> is in <the file>. read it from there when you need it, never copy it
-  into a note, a log or the brain.`
 
 - Give each loop its own terminal and a name. With six windows open they all look alike. Ask the
   agent to set its window title to the job it runs, so you can find the right one at a glance.
