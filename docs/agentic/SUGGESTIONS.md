@@ -389,6 +389,17 @@ paste. New ones are added as they come up.
   `the new model <name> is out but I can't pick it here. update the agent program, open me a new
   terminal with that model selected, and send it one test prompt to show it works.`
 
+  Then give it the work the older agents could not finish. Most projects carry a few problems that
+  stalled: a bug nobody found, a proof that stopped halfway, a test that never passed. Those are the
+  best measure of whether the new model is really better, and the brain already holds what was
+  tried, so the new agent does not start from nothing. Tell it so, and ask it to say plainly where
+  it got further and where it did not.
+
+  `you are a newer model than the agents that worked here before. read the brain's notes on the
+  problems they left open or stuck, pick the three you have the best chance on, and work on them.
+  for each, tell me what the earlier attempts tried, what you did differently, and whether you got
+  further.`
+
 - When you change something yourself, tell the agents. If you switch off a computer's sleep setting,
   sign in to a site or free some disk space, an agent that last saw the old state will keep working
   around a problem that is gone, or report it to you again. A one-line message, passed on to all of
