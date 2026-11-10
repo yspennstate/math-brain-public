@@ -86,6 +86,19 @@ Go down this list in order. Most problems are the first two.
     change is really there. if it is not, say so and fix it instead of reporting it as done.
     ```
 
+15. Something private ended up in a public repo: a name, an email address, a folder path from your
+    computer, a password or a key. An agent that is asked to "push everything" will do exactly that.
+    Keep private notes in a folder that is never published, and make a scan part of every push. If
+    it has already happened, deleting the file is not enough, because git keeps every earlier
+    version: change any password or key that went out at once, then rewrite the history (or ask the
+    host's support to purge it), and assume someone may already have a copy.
+
+    ```
+    before every push to a public repo, scan each file you are adding or changing for names, email
+    addresses, paths from this computer, passwords, keys and tokens. if you find any, stop and tell
+    me what and where instead of pushing. never publish anything from <private folder>.
+    ```
+
 Still stuck: paste this into the agent.
 
 ```
