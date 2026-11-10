@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- If you see it going the wrong way, stop it mid-turn and say so. In a terminal agent, pressing Esc
+  stops the current step without closing the session; then type the correction. Waiting for it to
+  finish a long turn in the wrong direction costs time and leaves work you then have to undo. Your
+  correction lands sooner, and the agent keeps everything it learned up to that point.
+
+  `stop. you are editing the copy, not the live file. undo what you changed in the copy, then make
+  the same change in <the live file>.`
+
+- Ask it to teach you the one command, so next time you can do it yourself. Some jobs come back
+  every week: checking a log, restarting a stuck program, seeing what is using the disk. After the
+  agent does one, ask for the shortest way to do it by hand and what each part means. A small note
+  of these saves you a round trip when the fix takes ten seconds.
+
+  `show me the one command you used for that, explain each part in a line, and add it to <my notes
+  file> under a heading I will find later.`
+
 - Ask the agent to check back once, later. Not everything needs a loop. A download, an upload being
   processed, a reply you are expecting: one look in two hours is enough. Say when, what to look at, and
   what to do with each outcome, and the agent will come back to it on its own instead of you having to
