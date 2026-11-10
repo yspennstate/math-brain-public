@@ -997,13 +997,6 @@ paste. New ones are added as they come up.
   `here is the full error. tell me in one sentence what the last line means, which line of our code
   it points to, and what you will change.`
 
-- Keep a cheat sheet of the commands that worked. The command that finally started the server or
-  fixed the install is easy to lose in a long terminal history. A short file of working commands,
-  each with one line on what it does, saves the next session from finding it again by trial.
-
-  `whenever a command works that we will need again, add it to COMMANDS.md with one line saying
-  what it does and when to use it.`
-
 - When there is a real choice, ask for two options and a recommendation. An agent left alone picks
   one way and builds it, and you only learn there was another way when the first one hurts. Asking
   for two, with what each costs, takes a minute and keeps the decision with you.
@@ -1127,13 +1120,6 @@ paste. New ones are added as they come up.
 
   `once the fix works, open a new terminal, start from nothing and run it again exactly as a new
   user would. tell me if anything differs.`
-
-- Ask for a dry run before anything that moves, deletes or sends in bulk. A command that renames
-  four hundred files or emails a whole list does its damage in a second. Having the agent print
-  what it would do first, and wait for your yes, turns a mistake into a line you read and reject.
-
-  `before you move, delete or send anything in bulk, show me the list of what you would do and
-  how many items it covers. do nothing until I say go.`
 
 - Have it change one thing at a time when hunting a bug. Three fixes tried together may work, but
   then nobody knows which one mattered, and the other two stay in the code for no reason. One
@@ -1452,20 +1438,6 @@ paste. New ones are added as they come up.
   `before you report the final figure, get it a second way (a different script, a hand calculation
   or a smaller sample) and tell me whether the two agree.`
 
-- Have it read the whole function before changing one line. A fix made after reading three lines
-  often breaks something further down that depended on the old behaviour. Reading the full
-  function, and whatever it calls, takes a minute.
-
-  `before you edit a function, read all of it and the functions it calls, then tell me in one line
-  what else the change touches.`
-
-- Have it search a big file before reading it. An agent that reads a whole log or data file to find
-  one line fills its memory with text it does not need and gets slower and vaguer for the rest of
-  the session. A search for the right words, then a read of just that part, keeps it sharp.
-
-  `for any file over a few hundred lines, search it for what you need first and read only the lines
-  around the match. never read a whole large file to find one thing.`
-
 - Ask it to read back what it saved. A save can fail quietly: a full disk, a wrong folder, a file
   cut short. Reading the first and last lines back, or checking the size, takes a second and turns
   "I saved it" into something you can trust.
@@ -1776,8 +1748,8 @@ paste. New ones are added as they come up.
   can contradict something twenty lines further down, like a variable reused later or an early
   return. Reading the whole thing first is cheap and prevents the change that looks right and is not.
 
-  `before you edit a function, read all of it and tell me in one sentence what it does, then make
-  the change.`
+  `before you edit a function, read all of it and the functions it calls, tell me in one sentence
+  what it does and what else the change touches, then make the change.`
 
 - Have it say what period the data covers. A result from one month of data and the same result
   from ten years mean very different things, and the dates are easy to leave out. One line with the
@@ -1934,9 +1906,9 @@ paste. New ones are added as they come up.
   `before you use this tool's options, check which version is installed and read its help for that
   version, not what you remember.`
 
-- Ask for a dry-run switch on anything that moves or deletes. A script that renames, moves or
-  removes files should be able to print what it would do without doing it. You read the list, and
-  only then run it for real.
+- Ask for a dry-run switch on anything that moves, deletes or sends in bulk. A script that renames,
+  moves or removes files, or emails a whole list, should be able to print what it would do without
+  doing it. You read the list, and only then run it for real.
 
   `give this script a --dry-run option that prints every file it would move or delete and changes
   nothing. run it that way first and show me the list.`
