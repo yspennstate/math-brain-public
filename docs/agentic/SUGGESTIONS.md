@@ -398,14 +398,6 @@ paste. New ones are added as they come up.
   Phrase it as a rule, not a wish. "They must ask me first" can be read as a hope; "if the form
   lets them skip asking me, stop" is something the agent can check.
 
-- On a computer you share, the owner's own background work counts as them using it. A person can be
-  away from the keyboard while their renders, backups or builds are running, and a job of yours that
-  starts then can push the machine into heavy swapping. Tell the agent to look for the owner's own
-  heavy processes, not just the mouse and keyboard, and to stay out while those run.
-
-  `on <their> computer, treat their own heavy programs (renders, builds, big downloads) the same as
-  them sitting at it: don't start our jobs while those run, and wait a while after they finish.`
-
 - When an agent tells you something can't be done, ask what it would take. "There is no room for
   the model" or "the account is out of usage" is often the first obstacle it hit, not the last word.
   The usual way through is ordinary: copy finished files somewhere safe and free the space, use a
@@ -946,6 +938,12 @@ paste. New ones are added as they come up.
   `this computer is shared. before you run anything heavy on it, set up a watcher that pauses our
   work when someone is using it and stops it if memory runs low, test it with a dummy job, log each
   pause, and tell me what it did.`
+
+  The keyboard is not the only sign. A person can be away while their own renders, backups or
+  builds run, and a job of yours that starts then can push the machine into heavy swapping.
+
+  `on <their> computer, treat their own heavy programs (renders, builds, big downloads) the same as
+  them sitting at it: don't start our jobs while those run, and wait a while after they finish.`
 
 - Before a large download, have the agent check the free space it will leave and verify the files
   afterwards. Big model and data downloads fail half way, land in the wrong folder or fill the disk.
