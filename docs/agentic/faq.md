@@ -112,6 +112,20 @@ days out does the rest. Before you leave, ask the agent to check that sleep is o
 runs, and to keep its NEXT line current so that you can read in the morning what it did.
 [struggling.md](struggling.md)
 
+## Can a loop run on a laptop?
+
+Yes, with three things to watch. Closing the lid puts most laptops to sleep, and a sleeping laptop
+runs nothing: leave it open, or change the setting for what the lid does while plugged in. On
+battery, a long job can drain it flat halfway through, so keep it on the charger for anything that
+runs overnight. And a laptop that works hard for hours gets hot and slows itself down, so a big job
+may take longer than it would on a desktop. None of this needs the agent to guess: ask it to check.
+
+```
+before you start this long job, check that this laptop is plugged in and will not sleep while the
+work runs. if it is on battery or about to sleep, tell me instead of starting. write in NEXT.md
+when it started, so that if it stops halfway we can see where.
+```
+
 ## Can I check on it from my phone?
 
 Yes, and you do not need anything special for the simple way. Have each loop write its progress
