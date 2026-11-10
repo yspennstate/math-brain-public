@@ -45,6 +45,8 @@ look at what I have told you in the last few days. find an instruction I keep re
 it into a skill, so you follow it without being told. show me the skill and test it once.
 ```
 
+[skills.md](skills.md) walks through what makes a good skill and how to test one.
+
 At the end of the week, look back:
 
 ```
