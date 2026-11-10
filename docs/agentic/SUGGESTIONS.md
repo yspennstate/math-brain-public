@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When an agent opens a new terminal window for you, ask it to start the window clean. A window started
+  from inside the agent's own shell can carry over that agent's settings, and the new session may then
+  behave differently from one you opened yourself: history not saved, colours off, a different working
+  folder. Have the agent open it the same way you would, then check one thing that would show the
+  difference, such as whether the new session is being saved.
+
+  `open me a new terminal with a fresh session, started the way I would start it myself, not as a child
+  of your own shell. then check that the new session is saving its history and tell me.`
+
+- When an agent says it is waiting on someone, another agent or a person, ask who, since when, and what
+  it will do if no answer comes. "Waiting" with no deadline can last all night. A good answer names the
+  one it asked, the time it asked, a time it will ask again, and what it can get on with in the meantime
+  without the reply.
+
+  `you said you're waiting on another agent. who exactly, since what time, and when will you ask again?
+  what can you do now that doesn't need their answer? do that while you wait.`
+
 - When several agents work for you at once, ask each report to end with one line naming which of your
   requests it answers and when you asked it. After a few hours of asks to five terminals, a report that
   says "done, all three files are updated" is hard to place. "This was your 9:40 ask to rewrite the
