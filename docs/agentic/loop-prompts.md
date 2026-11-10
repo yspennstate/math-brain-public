@@ -51,6 +51,28 @@ Ask it to keep two small files, or install the skill in
 It also helps to tell the agent to write anything durable into the brain (`brain.py remember`), not
 only into the NEXT file, so other agents and later sessions can find it.
 
+## Sizing one round
+
+The prompt decides how much work one round does, and it is worth getting that roughly right. A
+good round is one step that can be finished, saved and checked in a few minutes: one more paper
+summarised, one test fixed, one section written.
+
+You can tell the size from the NEXT lines after an hour or so:
+
+- Rounds too big: the lines say "started X", "continued X", "still on X" and nothing is ever
+  finished. A crash loses a lot, and the report on any one round is vague.
+- Rounds too small: the lines say "checked, nothing to do" or rename and reformat the same file
+  over and over. The loop is busy but nothing moves.
+- About right: each line names one finished thing and the next one, and every line or two you can
+  open a file and see the change.
+
+Resizing does not need a new loop. Type it into the same window:
+
+```
+your rounds are too big. from now on do one step a round that you can finish and check in a
+few minutes, save it, and write it in NEXT.md before you start anything else.
+```
+
 ## Practical details
 
 - A loop lives inside its terminal session. Close the window and it stops. Leave the window open,
