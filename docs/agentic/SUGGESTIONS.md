@@ -5,6 +5,14 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Name the folders it must leave alone. An agent tidying up or searching for a file will walk
+  through everything it can reach, including your photos, another project or a folder a second
+  agent is working in. Say up front which places are off limits, and it will work around them
+  instead of asking or guessing.
+
+  `work only inside <project folder>. do not open, move or delete anything in <other folders>;
+  if you need something from there, ask me first.`
+
 - When one loop carries several jobs, have each round say which job it worked on. A loop told to
   do four things tends to spend its rounds on the easiest one, and a night later the hard job has
   not moved. A short line per round naming the job, and a rule to take the one that has waited
@@ -1128,10 +1136,15 @@ paste. New ones are added as they come up.
 
 - Give a long loop a second job for when the first one is done. A loop set for ten days often
   finishes its main work in two, and then spends the rest repeating the same check. Name a standing
-  second task (improve the docs, add tests, look for related work) so the time is not wasted.
+  second task (improve the docs, add tests, look for related work) so the time is not wasted. The
+  same holds for rounds where the main task is only waiting, on a download, a long test or you: a
+  short list of small chores keeps those rounds useful instead of idle.
 
   `when the main job is finished, keep checking it each round, and spend the rest of the round on
   this: <second task>. say in one line which one you worked on.`
+
+  `if the main task is blocked this round, take the top item from CHORES.md instead, do it, and
+  cross it off. never let a chore take more than one round.`
 
 - When you ask whether an idea is already known, ask for the closest known result too. A plain "not
   found" tells you little: the search may have missed it, or the idea may sit one step from a paper
@@ -2710,13 +2723,6 @@ paste. New ones are added as they come up.
 
   `when you state a fact in a note or a report, put where it came from beside it: the file and
   line, the link, or the command you ran.`
-
-- Give it a chores list for slow rounds. Some rounds the main task is waiting on something: a
-  download, a long test, you. A short list of small jobs (tidy a folder, fix a typo, update a
-  README) keeps those rounds useful instead of idle.
-
-  `if the main task is blocked this round, take the top item from CHORES.md instead, do it, and
-  cross it off. Never let a chore take more than one round.`
 
 - Let it learn from your old prompts. The things you keep asking for are the best guide to what
   you care about. Point the agent at your past prompts or notes once, and ask it to write down the
