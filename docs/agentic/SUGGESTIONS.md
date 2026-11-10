@@ -1776,6 +1776,15 @@ paste. New ones are added as they come up.
   `for anything that runs longer than a few minutes, print a progress line every so often: items
   done, items left and a rough time remaining.`
 
+- When new terminals hang as they open, ask an agent in a terminal that already works to find out
+  why. As you add memory, hooks and start-up checks, each new session has more to do before it can
+  answer, and one slow step (a large file read at start, a check that waits on the network, a
+  folder that has grown huge) can hold up every terminal you open. The agent can time each step
+  of the start-up and tell you which one is slow, instead of you restarting and hoping.
+
+  `new terminals are hanging when they open. time each step that runs when a session starts, tell
+  me which one is slow and why, fix it, then open a new terminal and check that it starts quickly.`
+
 - Ask it what it expects before it runs anything. If the agent writes down the result it expects
   before a test or a calculation, a surprise shows up straight away instead of being explained after
   the fact. Most real mistakes turn up as a result nobody predicted.
