@@ -5,6 +5,15 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Ask for the night plan before you go to bed. Loops left running overnight are where most of the
+  hours go, and also where a job can stop at midnight and sit idle until morning. Two minutes before
+  you leave, ask the agent to list what will run, when each part should finish, what could stop it,
+  and what it will do on its own if something does.
+
+  `I am going to bed. list what will run tonight, when each part should finish, what could stop it,
+  and what you will do yourself if one stops. leave the answer in NEXT.md so I can check it in the
+  morning.`
+
 - Name each terminal window after its job. With five agents open, five tabs all called
   "Terminal" or "PowerShell" means clicking through each one to find the right conversation. In
   Windows Terminal, right-click the tab and choose Rename Tab; in the Mac Terminal, use Shell, then
@@ -21,14 +30,6 @@ paste. New ones are added as they come up.
 
   `you may hit your usage limit before this is finished. after every step, write what is done and
   the next step in NEXT.md, so a fresh session can carry on from that line alone.`
-
-- Keep the prompts that worked in one file. A loop prompt you tuned over a week, or the exact words
-  that finally got a report in the shape you wanted, is easy to lose in a terminal's history. A
-  plain PROMPTS.md with one heading per job lets you, or the next agent, start the same work again
-  in a minute instead of rewriting it from memory.
-
-  `add the prompt I used for this job to PROMPTS.md under a heading with its name and today's date,
-  word for word, with one line on what it does and what to change before reusing it.`
 
 - Put the terminal and the result side by side. Switching back and forth between the agent's window
   and the page or picture it is changing hides half of every round. On Windows, drag one window to
@@ -245,6 +246,12 @@ paste. New ones are added as they come up.
   `read <my prompts file> before you start. these are the requests that have worked for me; follow
   the same style, and add any new one I give you that works well.`
 
+  A plain PROMPTS.md with one heading per job is enough. Keep each prompt word for word, with the
+  date and one line on what to change before reusing it.
+
+  `add the prompt I used for this job to PROMPTS.md under a heading with its name and today's date,
+  word for word, with one line on what it does and what to change before reusing it.`
+
 - Let the agent write the loop prompt for you. Describe the job in your own words, with how often and
   for how long, and ask it to turn that into a loop prompt: what to read first, what to do each round,
   where to save, when to stop and how to report. Read it once, fix what it got wrong, then start it.
@@ -305,6 +312,13 @@ paste. New ones are added as they come up.
 
   `the session working on <the job> was interrupted. read its ORDER.md and the first line of
   NEXT.md, check what the brain saved about it, and carry on from the next undone step.`
+
+  With several loops running, a restart takes all of them at once, and remembering ten prompts is
+  hard. One file holding each loop's prompt, folder and end time brings them all back with a single
+  request.
+
+  `keep a file with every loop running on this computer: its prompt, which folder it works in and
+  when it ends. after a restart, read it and start each one again in its own terminal.`
 
 - When something breaks, paste the exact error, not your summary of it. "It didn't work" sends the
   agent guessing. The error text, the command that produced it, or a screenshot of the window usually
@@ -3016,13 +3030,6 @@ paste. New ones are added as they come up.
 
   `write the strongest case that this result is wrong, and the one check that would settle it.
   then run that check.`
-
-- Keep a restart list. When the computer restarts, every open loop is gone, and remembering ten
-  prompts from memory is hard. Ask for one file that holds each running loop's prompt and end time,
-  so a single request brings them all back.
-
-  `keep a file with every loop running on this computer: its prompt, which folder it works in and
-  when it ends. after a restart, read it and start each one again in its own terminal.`
 
 - Ask for proof before "done". An agent can report a step finished when the upload failed or the
   file never got written. Asking it to check the result itself, every time, stops that.
