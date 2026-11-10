@@ -5,6 +5,21 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- When two tools could do a job, have the agent try both on the same small piece. Reviews and
+  leaderboards tell you which model or program is better in general, not on your material. Three
+  examples run through each, shown side by side, settle it in an hour, before a whole project is
+  built on the wrong one.
+
+  `before we commit to <tool>, run the same three examples through it and through <other tool>,
+  put the results side by side, and tell me which you would pick and why.`
+
+- Ask what something costs before the agent spends money on it. Some steps call a paid service or
+  rent a machine, and an agent working on its own may not stop to ask. A rule that it states the
+  price and waits for your yes keeps the bill where you expect it, while the free work goes on.
+
+  `if any step costs money (a paid service, a rented machine, a subscription), stop before it, tell
+  me the price and what it buys, and carry on with the free parts while you wait for my answer.`
+
 - When an agent makes pictures, video or sound, have it look at the result before it uses it. A
   script can report success on a clip that is frozen, garbled or full of noise. A few frames laid
   side by side, or a short listen, catch most of that in seconds, before the bad piece is buried
