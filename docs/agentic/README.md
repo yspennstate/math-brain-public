@@ -15,17 +15,26 @@ knowing what it did. That needs three things, and this folder covers each one.
 
 Then:
 
-- [starter-prompts.md](starter-prompts.md): prompts to paste on day one, and prompts for using the
-  brain well after that.
-- [struggling.md](struggling.md): what to check when the brain does not seem to do anything.
+- [starter-prompts.md](starter-prompts.md): prompts to paste on day one, a plan for the rest of
+  the first week (a first loop, a first skill, a look back), and prompts for using the brain well
+  after that.
+- [struggling.md](struggling.md): what to check when the brain does not seem to do anything, or
+  when work stalls: the agent stops early, the computer sleeps, the disk fills, the usage runs out.
 - [faq.md](faq.md): short answers to the questions people ask first (cost, how long a loop runs,
-  what happens when the context fills up).
+  what happens when the context fills up, working overnight, using more than one computer).
 - [SUGGESTIONS.md](SUGGESTIONS.md): a running list of ideas, newest first, for prompts, loops and
   uses of the brain. New entries are added as they come up.
 - [SUGGESTIONS_BY_TOPIC.md](SUGGESTIONS_BY_TOPIC.md): the same list grouped by topic (loops, checking
   results, several agents, setup, and so on).
 - [../../agent_tools/skills/](../../agent_tools/skills/): skills you can install so the agent itself
   knows how to orient in the brain, start a loop and keep one going.
+
+## Where to start
+
+If you are new to all of this, read in this order: terminals.md, then starter-prompts.md (do day
+one), then loop-prompts.md (start one small loop). Keep struggling.md and faq.md for when something
+does not work. Read SUGGESTIONS.md last, a few entries at a time, once you have a loop running and
+want more ideas.
 
 ## The short version
 
