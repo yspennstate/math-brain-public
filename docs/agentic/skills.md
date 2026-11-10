@@ -76,6 +76,24 @@ skill called next-line in ~/.claude/skills. keep it short, give the reason for e
 example. then open a fresh session in a scratch folder and test whether it gets used.
 ```
 
+## Sharing a skill, and using someone else's
+
+A skill is a folder, so sharing one is copying a folder. Put yours in a repository or send it as a
+zip; the other person drops it into their own skills folder (`~/.claude/skills/<name>/` for Claude
+Code) and starts a new session. The five in [../../agent_tools/skills/](../../agent_tools/skills/)
+are installed the same way.
+
+Read a skill before you install it. It is a set of instructions your agent will follow without
+asking you, and some skills come with scripts the agent will run. A skill from someone you trust is
+usually fine; one you found online deserves the same look you would give a script before running
+it. The agent can do the reading for you:
+
+```
+read the skill in <folder> before I install it. tell me in plain words what it makes you do, what
+commands or scripts it would run, and whether it sends anything off this computer or deletes
+anything. if it looks safe, install it and test it in a fresh session.
+```
+
 ## Keeping skills good
 
 - Keep each one short. If a skill grows past a page, it is probably two skills.
