@@ -14,6 +14,23 @@ agents on another computer. Keeping it in a git repository on GitHub fixes both.
 - Anything you want other people to use (the framework, worked examples, papers) goes in a
   separate public repository, after a check for private material.
 
+## Signing the agent in to GitHub
+
+Everything on this page assumes the agent can push to your GitHub account. You need a free account
+on github.com, and then one sign-in on each computer. The usual way is GitHub's own command-line
+tool, `gh`: run `gh auth login`, choose GitHub.com and the browser option, and approve the code it
+shows you in the browser. After that git on that computer can push without asking again.
+
+Do the sign-in yourself, in the browser. Never paste a password or an access token into the chat
+with the agent: whatever you type there is kept in the session's history, and the history may end
+up in the very repository you are setting up. The agent can do everything around it:
+
+```
+install the GitHub command-line tool if it is missing, then start the sign-in and tell me what
+to do in the browser. do not ask me for a password or a token. when I say it is done, create a
+private repository called <name> and push one test file to check that it works.
+```
+
 ## Saving, checking, then deleting
 
 The habit that keeps a laptop's disk free and nothing lost is: upload, check the copy on GitHub,
