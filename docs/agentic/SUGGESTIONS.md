@@ -3257,3 +3257,14 @@ paste. New ones are added as they come up.
 
 - When a loop is not producing anything, read its NEXT line. If the line has not changed in an
   hour, the loop is stuck on one step; tell it to split the step or skip it.
+
+- Put the habits you want into the loop prompt itself. A long loop drifts toward the easiest thing
+  that looks like progress: the same fix tried again, a result it never doubts, a routine it stops
+  questioning. A few words in the prompt, read again every round, keep it honest. Ask it to find
+  fault with its last round before it starts the next one, and to try a different approach when
+  the same one has failed twice.
+
+  `/loop fire this every 5 minutes for the next 10 days. keep working on <the project>. each round,
+  first look for what is wrong with what you did last round and fix it. if the same approach has
+  failed twice, try a different one, and say which you chose. be creative, and check your own
+  work before you call anything done.`
