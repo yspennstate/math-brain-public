@@ -1,0 +1,470 @@
+# Suggestions by topic
+
+The same ideas as [SUGGESTIONS.md](SUGGESTIONS.md), grouped so you can find the one you need. Each line is
+the first sentence of a suggestion; search for it in SUGGESTIONS.md to read the rest and the prompt that
+goes with it. A suggestion sits under the first topic it fits, so a few could live in two places.
+
+## Loops: starting them, keeping them going, ending them (52)
+
+- Let the agent write the loop prompt for you.
+- Use a loop to watch a listing for you.
+- You can ask a looping agent a quick side question, but tell it to go back to the loop afterwards.
+- A loop is a good way to keep a list growing: job openings, papers on a topic, grants, places to send your work.
+- Ask for one page you can open to see where everything stands.
+- When a loop keeps reporting "unchanged", ask once what it compared against.
+- If a loop has to run longer than the scheduler allows, put the renewal date in the prompt itself.
+- Give a long loop a cheap check first and do the heavy work only when it finds a change.
+- When a loop runs the same checks every round, have it save them as one small script.
+- Let a loop say "nothing to do" when there is nothing to do.
+- Give a long loop a second job for when the first one is done.
+- Let the loop read its instructions from a file.
+- Have each round say only what changed.
+- Use a loop to follow new papers in your field.
+- Check on your loops from your phone.
+- When one step is blocked, have it move to the next and say so.
+- Give a loop a heartbeat file.
+- Know when a scheduled loop runs out.
+- Have each round leave one dated line.
+- Ask it to turn a long log into a short timeline.
+- Ask for variable names that say what they hold.
+- Tell it which job wins when two compete.
+- Have it read the clock instead of assuming the time.
+- Let a loop pause itself when it is waiting.
+- Ask it to say what it will not stop and why.
+- Give each loop one owner for each file.
+- Keep a short list of what you never want it to do.
+- Try a loop for an hour before you leave it for days.
+- Say what needs your OK.
+- Give each loop its own terminal and a name.
+- Have a morning question ready.
+- Have the agent improve your prompt.
+- Ask for the pieces before the work.
+- Ask the agent what it would work on next.
+- Ask which loops are running and when each ends.
+- Give a loop a stop file.
+- Tell the loop what finished looks like.
+- Keep one dated line per round.
+- Run a loop whose only job is to find what got stuck.
+- Ask for one lesson per finished piece.
+- Give the loop a fallback for when it runs out of something.
+- Have every round read a shared inbox first.
+- Point a loop at a task list, not one task.
+- Use a sweeping loop for things that pile up unfinished.
+- Chain one prompt onto another.
+- Give the agent a rule for when space runs short.
+- Put the end time inside the loop prompt.
+- Your later words win.
+- Run two loops on one project from two angles.
+- Make a loop end with an email.
+- Use a loop to keep the disk free.
+- When a loop is not producing anything, read its NEXT line.
+
+## Terminals, setup and computers (75)
+
+- When the result is for someone else, ask for something you can forward as it is.
+- After a crash or a restart, tell the agent to pick up where it stopped, not start over.
+- If a newly released model doesn't show up in your terminal, the program usually needs updating.
+- On a computer you share, the owner's own background work counts as them using it.
+- When an agent tells you something can't be done, ask what it would take.
+- Ask the agent now and then which of your computers are sitting idle, and what they could take on.
+- On a computer someone else is using, have heavy jobs step aside while that person is at it.
+- If you use more than one computer, ask the agent for a roll call now and then.
+- When you have several copies of a document, tell the agent which one is current.
+- When you come back after a few hours away, ask for a catch-up from the time you left.
+- When the computer feels slow, ask the agent what is using it before anything gets closed.
+- When an agent opens a new terminal window for you, ask it to start the window clean.
+- Before you close a set of terminals, have each one write down what it was doing.
+- When the agent cannot reach another computer, ask it what you need to type there.
+- An agent can open a new terminal for you, already set up.
+- When a plan is set, ask what would make the agent change it.
+- When the work runs on a computer you cannot see, ask for the first piece of output as soon as it exists.
+- Ask the agent to name the exact variant of a model or tool it used.
+- When you change plans, ask the agent what it stopped.
+- If your agents work on more than one computer, give each computer a few house rules in writing.
+- When a job can only run part of the time, ask for the rate you will actually get, not the speed of one item.
+- When an agent tells you it will do something later, have it write that promise down.
+- Before an agent deletes something large to make room, ask whether it can be brought back and how.
+- When one order covers several machines or several pieces, have the agents split it with one owner per piece and say who owns what.
+- Ask a job that waits to say what it is waiting for.
+- If an agent runs heavy work on a computer someone else also uses, ask it to make the work give way to that person.
+- On a laptop, have long jobs check the power and the heat.
+- When you lend an agent someone else's computer, set the limits first and keep them.
+- Put a big file in the cloud through the folder your computer already syncs.
+- If a program you just installed is "not recognized", open a new terminal.
+- Make the terminal comfortable to read.
+- Ask what a setting called an environment variable is before you set one.
+- Put quotes around paths with spaces.
+- Write down the package versions that worked.
+- Keep a cheat sheet of the commands that worked.
+- To let agents use a second computer, have one set up SSH with a key and test it.
+- Have it explain a command from the internet before running it.
+- On a math or logic claim, have it check every small case by computer.
+- Ask it to explain each command while you are learning the terminal.
+- Watch a long job's log in a second terminal.
+- Ask it to keep an eye on the computer's memory and disk.
+- Have the computer make a sound when a long job ends.
+- Learn three keys before anything else in a terminal.
+- Clean a log before you post it for help.
+- Have it ask before anything leaves your computer.
+- Do not let it run things as administrator unless it must.
+- Ask it to read the whole function before changing a line.
+- Ask for a proofread before anything goes public.
+- Ask it to read the documentation for the version you have.
+- Ask for output in a fixed order.
+- Ask for a time zone on every date and time.
+- Ask it to install things inside the project, not system-wide.
+- Ask for paths that work on another computer.
+- Turn the questions you keep asking into a FAQ.
+- Ask it to explain each command in one line.
+- Tell it which computer and shell you are on.
+- Have it write down the versions it installs.
+- Have it follow its own install steps in a fresh folder.
+- Paste a screenshot when words fail.
+- Set a size above which it asks before downloading.
+- Say what it may delete and what it never deletes.
+- Measure a falling resource twice before raising the alarm.
+- Ask for the result where you will see it.
+- Name the one thing that would make the job go faster.
+- Let one agent point out what another is slowing down.
+- Let agents on different computers share one queue.
+- Let it take turns on a shared resource.
+- Keep the computer awake.
+- Ask for a handoff note when a job changes hands.
+- After a crash, ask it to pick up where it was.
+- Ask the agent to clean up after itself.
+- Keep a restart list.
+- Ask whether the machine is being used.
+- Put a second computer to work.
+- Tell one agent to pass a message to all of them.
+
+## Checking results and catching mistakes (97)
+
+- Keep a checklist file that every agent writes to.
+- When something breaks, paste the exact error, not your summary of it.
+- Say what finished looks like.
+- When you give feedback on something the agent made, say what to keep as well as what is wrong.
+- When a task should go ahead only if something holds, say so as a firm condition, along with what to do if it does not.
+- When an agent works in your web browser, have it use its own tab and tell you which one.
+- When you turn down a draft, say what is wrong in a word or two and ask for a new version rather than a patch.
+- When an action does nothing visible, have the agent check before it tries something else.
+- When one agent tells another that something is done, have the second one check before it builds on it.
+- Ask to see a new check catch a known bad case.
+- Don't let a test hold up the real work.
+- After a watcher passes its test on a dummy job, have the agent check that it also sees the real one.
+- When a tool refuses to do something on a safety check, ask the agent what the check protects before it goes around it.
+- Have the agent stop a long-running script before it edits that script.
+- Give every long job an off switch you can use without the agent.
+- Before a large download, have the agent check the free space it will leave and verify the files afterwards.
+- When one agent passes on your words to another, have the second one check them at the source.
+- When two tools could do a job, have the agent try both on the same small piece.
+- When you type fast, have the agent say back what it understood.
+- When the next step waits on someone's reply, have the agent wait for the reply instead of asking every few minutes.
+- Paste the whole error, not your summary of it.
+- Ask it to walk you through new code before you rely on it.
+- When it fixes a bug, ask for a test that would have caught it.
+- Read a Python error from the bottom.
+- When it says something failed, ask for the exact error.
+- If you write your own hooks, wire the failure event too.
+- Have it write dates as year-month-day.
+- Be suspicious of a result that looks too good.
+- Test new code on a case where you already know the answer.
+- Have it check a fix from a fresh start.
+- Have it change one thing at a time when hunting a bug.
+- Ask how you could check the result yourself.
+- Ask it to say the task back before it starts.
+- Ask it to review changes before you accept them.
+- Turn a routine you keep explaining into a skill.
+- Hand a new person a starter prompt, not a tour.
+- Ask it to say what it did not check.
+- Have it keep the original next to a translation.
+- Have it pull tables out of a PDF into a spreadsheet.
+- Ask it to check the key number a second way.
+- Keep one fact to a note.
+- Have it put the most important finding first.
+- Ask it what it expects before it runs anything.
+- Have it put big numbers in terms you already know.
+- Ask what it could not check.
+- Check that a scheduled job really ran.
+- Have it read the first error, not the last.
+- Test it on data it has not seen.
+- Ask for a second source on any fact that matters.
+- Ask it to round only at the end.
+- Ask it to check that the parts add up to the whole.
+- Have it check how big a file is before reading all of it.
+- Ask it to use a date library rather than doing the arithmetic by hand.
+- Ask for short functions that each do one job.
+- Ask it to open the output in the program you will use.
+- Have it check file sizes before it commits.
+- Have it list the assumptions it made.
+- Compare every result with a simple baseline.
+- Ask it to check that a backup can be restored.
+- Have it read the formulas in a spreadsheet, not just the numbers.
+- Ask for page numbers when it reads a long document.
+- Have it make a small fake dataset to practise on.
+- Ask which account it is using before anything online.
+- Have it take out its debugging lines when it is done.
+- Have it check that the links in your notes still open.
+- Have it show a few rows of the result, not only the count.
+- Have it describe the data before it analyses it.
+- Ask for error messages that say what to do.
+- Keep one small example that runs.
+- Ask it to check the licence before it copies code.
+- Ask for the answer first and the reasoning after.
+- Have it date what it finds online.
+- Tell it how sure the answer needs to be.
+- Have it reproduce a bug before fixing it.
+- Have it read a tool's own help before guessing.
+- Let long jobs run in the background.
+- Show it an example of what you do not want.
+- Have it check that a library is alive before relying on it.
+- Have it reread your request before it says done.
+- Have names checked against a source, not memory.
+- Ask it to number the steps it proposes.
+- Ask it to correct its own numbers out loud.
+- Keep keys out of logs and printouts.
+- Have it listen to a sample, not just trust a score.
+- Ask for a second check by a different method.
+- Have it test a fix on a small piece first.
+- Ask where each fact came from.
+- Give it a chores list for slow rounds.
+- Ask for a test with anything it builds.
+- Let it read the error itself.
+- Ask whether an old note is still true.
+- Ask for the strongest case against a result.
+- Ask for proof before "done".
+- Have a second agent check a result before it goes public.
+- Tell agents to check before they start.
+- Ask for a page, not a wall of text.
+- Let the brain test itself.
+
+## Several agents at once (20)
+
+- With several agents running, have every report end by naming the request it answers.
+- When you change something yourself, tell the agents.
+- When an agent works on a hard research question, ask for its progress in research terms, with each claim marked by how sure it is.
+- When agents pass messages to each other, ask them to keep your words apart from theirs.
+- Give each request a short id the agent writes at the start.
+- When an agent says it is waiting on someone, another agent or a person, ask who, since when, and what it will do if no answer comes.
+- When several agents work for you at once, ask each report to end with one line naming which of your requests it answers and when you asked it.
+- When you give the same order to several agents, name one to bring the answers together.
+- When several agents work together, ask who is waiting on whom.
+- Have agents mark each message from another agent as handled.
+- Ask for the exact sentence when it says a source supports a claim.
+- Write to it in whatever language you think in.
+- Ask for the simplest tool that works.
+- Have agents reuse each other's finished work.
+- Tell the agents what they share.
+- Have it turn a fix into a rule other agents see.
+- When two agents disagree, make them compare.
+- Ask it to measure, not guess.
+- Type fast; don't fix your spelling.
+- Turn a habit into a hook.
+
+## Memory, notes and the brain (47)
+
+- When you reply "keep working", say on what.
+- Before a long batch, have the agent run and time one item first.
+- Keep the newest note at the top of a notes file.
+- Before a change to something that matters goes live, have a second agent read it.
+- Try a change to the brain on a copy first.
+- Save the heavy jobs for when you are away.
+- Give every project its own folder and its own notes.
+- Let it make the small calls itself.
+- Keep a few questions you already know the answer to.
+- Tell it who will read the result.
+- Ask it to note which copy of the brain it is reading.
+- Ask it to turn a recording into notes with times.
+- Have it fill in a form and list what it left blank.
+- Ask it to read back what it saved.
+- Have it write a version a colleague could follow.
+- Ask which words it searched for.
+- Keep other people's details out of anything you share.
+- Keep the prompt next to what it made.
+- Have it draft the message you need to send.
+- Ask for one name per thing, everywhere.
+- Have it read the release notes before an upgrade.
+- Have it save a copy of a web page you depend on.
+- Ask for commands you can paste exactly as written.
+- Keep the question with the answer.
+- Ask it to save text as UTF-8.
+- Ask for two lines at the top of every script.
+- Keep one command that rebuilds everything.
+- Ask for a short summary at the top of long notes.
+- Prefer plain text formats.
+- Tell it what you already tried.
+- Group small changes into one save.
+- Ask which old notes it never uses.
+- Save the expensive part before the risky part.
+- Give a memory limit along with the task.
+- Have it merge notes that say the same thing.
+- Let it learn from your old prompts.
+- Ask for a weekly digest.
+- Ask it to say when it changes its mind.
+- Ask why, not only what.
+- Keep a glossary of your own words.
+- Ask for a README for whatever it builds.
+- Keep passwords out of prompts.
+- Say who the result is for.
+- Ask how to undo a change before it is made.
+- Save a prompt you use often as a command.
+- Ask what the brain already knows before the agent starts.
+- Turn a correction into a rule.
+
+## Reports, links and talking to the agent (29)
+
+- When the agent says it's done, ask for the link or the file path, not a description.
+- When a step is only acceptable under one condition, say what to do if the condition can't be met.
+- Before you put time into a new tool or model, ask the agent for links to real work other people made with it.
+- Give the agent the next job before it finishes the current one.
+- Before you post something an AI model made, ask the agent what that model's terms allow.
+- When an agent fills in a web form for you, ask which fields will make the site contact someone.
+- Ask the agent to open the result in front of you.
+- When one message asks for several things, have the agent list them back before it starts.
+- When a long job is too slow at full quality, ask for the whole thing at a lower setting first.
+- A watcher that reports nothing is not the same as nothing happening.
+- Have the agent tell you the one thing you need to do in a separate, short message.
+- Ask it to list the sources it could not read.
+- Ask for a dry run before anything that moves, deletes or sends in bulk.
+- Ask what it needs from you, in one list.
+- Keep each run's output in the same shape.
+- Ask whether a number makes sense before it is reported.
+- Have it use the official download or API before scraping a page.
+- Ask how a number was worked out.
+- Keep a list of the services a project uses, without the passwords.
+- Ask it to link each new note to related ones.
+- Keep every result next to the command that made it.
+- Have it ask its questions as a choice, with its own pick marked.
+- Have it open a link before it sends you one.
+- End every report with what it is unsure of.
+- Show it one example of what good looks like.
+- Ask for a short summary in a fixed shape.
+- Ask every report to say which task it answers.
+- When you are not watching, ask for questions by email.
+- Ask for the summary of your own prompts.
+
+## Files, storage and GitHub (48)
+
+- Keep your best prompts in one file.
+- Ask the agent to follow the conventions of the place the work is going.
+- When an agent hits "database is locked" or "file in use", have it wait and try again rather than delete the lock or work on a copy.
+- Before an agent edits a script or config that already works, have it keep a dated copy next to it and tell you the one command that puts the old version back.
+- Ask where every file it made ended up.
+- Ask for one file that gathers pieces spread over several places.
+- Have it pack a folder before you send it to someone.
+- If every line of a file shows as changed, suspect line endings.
+- Ask for results in a file you can open by double-clicking.
+- List the files it must never touch.
+- Keep a file of open questions.
+- Ask which files it actually read.
+- Have it search a big file before reading it.
+- Ask it to say which folder it is working in.
+- Ask it to match the style already in the project.
+- Ask it to lay out the options before a choice you will live with.
+- Keep outputs in their own folder.
+- Have it look for repeated rows.
+- Ask it to write files so an interruption cannot leave half of one.
+- Keep the settings in one file.
+- Have it show what a search pattern matches before it changes anything.
+- Ask for a dry-run switch on anything that moves or deletes.
+- Have it compare files with diff instead of reading both.
+- Point it at a file instead of pasting a long text.
+- Have it work on a branch for anything risky.
+- Ask for a .gitignore before the first commit.
+- Have it name files for what they hold.
+- Ask it to point at the file and line.
+- Keep the original data untouched.
+- Ask what else would break before a change.
+- Have it try the awkward inputs.
+- Ask for a simple diagram of how the parts connect.
+- Give it a real sample of the input.
+- Ask it to send long output to a file.
+- Give it a place to park ideas for later.
+- Tell it which files are generated.
+- Put the date at the front of file names.
+- Keep files small enough to read in one go.
+- Start a new agent read-only on anything that matters.
+- Keep the commands that worked in one file.
+- See what changed before it goes to GitHub.
+- Tell it which copy is the real one.
+- Let a slow download pick up where it stopped.
+- Try it on a copy first.
+- Keep a decisions file.
+- Keep a task list in a GitHub repository.
+- Give every long job a folder with ORDER.md and NEXT.md.
+- Start the agent in the right folder.
+
+## Money, usage and limits (15)
+
+- When a site will ask the agent to confirm many small steps, give it standing permission for those steps and name the ones that still need you.
+- When a job could cost money, ask for the price before it starts and set a ceiling.
+- Watchers often stop on their own after a while.
+- Ask what something costs before the agent spends money on it.
+- When there is a real choice, ask for two options and a recommendation.
+- Ask what it would do with more time.
+- Give a hard problem a time budget.
+- Ask for a time limit and a retry on anything that goes over the network.
+- Have it draw charts that colour-blind readers can follow.
+- Have it write the unit next to every number.
+- Ask it to explain as if you were new.
+- Ask for two ways before it picks one.
+- Ask for a rough cost before a big job.
+- Do one first, then the rest.
+- Put a time limit on a hard question.
+
+## Writing, pictures and films (13)
+
+- For a piece of writing that matters, ask the agent to think about the approach before it drafts.
+- When someone else is writing about you, such as a recommendation letter, have the agent give them material rather than finished prose.
+- When an agent makes pictures, video or sound, have it look at the result before it uses it.
+- Tell a generating model what you do not want, as well as what you do.
+- Look at a long video through its stills before you sit through it.
+- When you ask whether an idea is already known, ask for the closest known result too.
+- Tell it when you need it by.
+- Have it write a short description under each picture in public pages.
+- Ask for charts whose axes do not mislead.
+- Ask for a one-line caption under every chart and picture.
+- Have it look for an existing script before writing a new one.
+- Ask for a chart when the numbers pile up.
+- Give it a short list of words to keep out of public writing.
+
+## Everything else (39)
+
+- Once an agent has the context, a short answer is enough.
+- Ask how long a job will take before it starts, and have the agent write the answer down.
+- When you hand an agent several things at once, say which one matters most.
+- Get everything it needs before you go offline.
+- Ask for comparisons as a table.
+- Ask how many cases a result rests on.
+- Ask it to go gently on websites.
+- Ask how to take something out again before it goes in.
+- Have it interview you, one question at a time.
+- Ask for short answers when you are busy.
+- Give every script a --help.
+- Have it read the whole function before changing one line.
+- Have long jobs print where they are.
+- Ask for the smallest version that works first.
+- Have it comment the surprising parts, not the obvious ones.
+- Ask for tables sorted by what you care about.
+- Have it say what period the data covers.
+- Ask what it did with blank and missing values.
+- Ask it to tag the versions that worked.
+- Have it count rows before and after every cleaning step.
+- Ask scripts to say so when they find nothing.
+- Have it write commit messages that say why.
+- Have it tell you when the job turns out bigger than it looked.
+- Ask for numbers rounded to what they mean.
+- Fix the random seed.
+- Say what is out of scope.
+- Have it make shortcuts for what you type every day.
+- Ask what it would need to finish without you.
+- Start a fresh session when it goes in circles.
+- Keep a changelog that a reader can follow.
+- Ask it to point out instructions that contradict each other.
+- Ask for an estimate, then compare it with what happened.
+- Ask it to say how much is left.
+- Ask for the reason a round did nothing.
+- Keep a list of dead ends.
+- Compare with last time.
+- Let it say "I don't know".
+- Ask the agent to say back what it understood before a long job.
+- Ask for the bottleneck, not the next step.

@@ -22,6 +22,8 @@ Then:
   what happens when the context fills up).
 - [SUGGESTIONS.md](SUGGESTIONS.md): a running list of ideas, newest first, for prompts, loops and
   uses of the brain. New entries are added as they come up.
+- [SUGGESTIONS_BY_TOPIC.md](SUGGESTIONS_BY_TOPIC.md): the same list grouped by topic (loops, checking
+  results, several agents, setup, and so on).
 - [../../agent_tools/skills/](../../agent_tools/skills/): skills you can install so the agent itself
   knows how to orient in the brain, start a loop and keep one going.
 
