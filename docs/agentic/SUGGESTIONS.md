@@ -5,6 +5,21 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Ask the agent to check back once, later. Not everything needs a loop. A download, an upload being
+  processed, a reply you are expecting: one look in two hours is enough. Say when, what to look at, and
+  what to do with each outcome, and the agent will come back to it on its own instead of you having to
+  remember.
+
+  `check on <the thing> again in two hours. if it finished, <next step>; if it failed, tell me why;
+  if it is still running, look once more an hour after that.`
+
+- When something breaks, paste the whole error, not your summary of it. "It didn't work" or "it says
+  something about permissions" sends the agent guessing. The exact message, the command that produced
+  it and the line before it usually point straight at the fix, and they cost you one copy and paste.
+
+  `this is what I ran and the full error it gave: <paste>. find the cause before changing anything,
+  and tell me in one line what it was.`
+
 - Keep your best prompts in one file. After a few weeks you will have a handful of requests that
   always work: the loop that keeps a project moving, the way you ask for a report, the line that stops
   an agent from cutting corners. Paste them into a plain file as you find them. A new agent can read
