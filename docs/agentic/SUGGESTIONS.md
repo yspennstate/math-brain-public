@@ -42,6 +42,12 @@ paste. New ones are added as they come up.
   `you may hit your usage limit before this is finished. after every step, write what is done and
   the next step in NEXT.md, so a fresh session can carry on from that line alone.`
 
+  If you have a second account, keep a terminal signed in to it. When the first one runs dry, that
+  window can pick up from the same NEXT.md line and the work does not wait for the reset.
+
+  `the other account's usage has run out. you are on a different account: read NEXT.md, take over
+  that job from its first line, and keep the file current the same way.`
+
 - Put the terminal and the result side by side. Switching back and forth between the agent's window
   and the page or picture it is changing hides half of every round. On Windows, drag one window to
   the left edge of the screen and the other to the right (or press Windows key + left arrow, then
