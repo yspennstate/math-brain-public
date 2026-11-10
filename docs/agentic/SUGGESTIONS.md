@@ -707,6 +707,16 @@ paste. New ones are added as they come up.
   `before you start, estimate how long each piece will take, how many pieces there are and roughly
   how much of my usage it will need. if it looks too large, suggest a smaller version.`
 
+  If one cloud account carries several credits (a trial, a grant, a promotion), you often cannot
+  choose which one a job spends. The provider applies each credit to whatever its own terms cover,
+  so the credit you meant to keep can be the one that pays. Before the first billed call, have the
+  agent find out from the provider's own pages and the account's billing screen which credit will
+  pay for this kind of work, run one small call, and check which balance moved.
+
+  `I want this to use only <the credit>. find out which credit will actually pay for this kind of
+  call on this account, and whether I can keep the others untouched. make one small test call and
+  show me which balance changed before you run anything bigger.`
+
 - Ask for one page you can open to see where everything stands. With several agents and loops
   running, reading each terminal is slow. An agent can keep a small status page or file, one line
   per job with what it is doing, when it last moved and what it waits on, and refresh it as it
