@@ -1290,6 +1290,16 @@ paste. New ones are added as they come up.
   `help me let you run commands on my other computer over SSH. make a key, tell me exactly what to
   copy and where, then test it by printing that computer's name.`
 
+  This works out of the box only when both computers are on the same network. For a machine in
+  another house, such as a friend's computer lent to you for the evening, the two need a private
+  network that joins them across the internet; several free tools do this, and each side installs
+  one small program and signs in. The other person also has to agree, add your key and say when
+  the machine is theirs again, so put the steps for them in an email they can follow without you.
+
+  `<the other computer> is on a different network. pick a simple tool that joins the two machines,
+  write the steps for <its owner> as an email draft (install, sign in, add my key), and once they
+  say it is done, test the link and tell me how much memory, disk and processor it has free.`
+
 - Have it explain a command from the internet before running it. An install line copied from a web
   page or a forum may download and run a script you have not read. Asking first costs a minute and
   tells you what will change on your machine.
