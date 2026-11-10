@@ -5,6 +5,14 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Give your loops different starting minutes. Five loops set to run every five minutes all fire at
+  the same moment, so the computer sits idle, then everything starts at once and the slowest round
+  holds up the rest. Starting each one a minute or two after the last spreads the load and keeps
+  the machine responsive.
+
+  `I already have loops that fire on the five-minute mark. schedule this one every 5 minutes too,
+  but starting two minutes past, so it does not run at the same moment as the others.`
+
 - When a test fails only some of the time, have it run many times before anyone calls it fixed. A
   test that fails one run in five will pass twice in a row by luck, and the agent will report the
   fix as working. Twenty runs in a row, with the count of failures, tells you whether the problem is
@@ -1385,7 +1393,7 @@ paste. New ones are added as they come up.
 
 - Have each round leave one dated line. A loop that only changes files gives you no story of what
   it did overnight. One line per round in a progress file, newest at the top, reads in a minute
-  and shows where the night went.
+  and shows where the night went: what it did at 3 a.m., where it got stuck, when it finished.
 
   `after each round, add one line at the top of PROGRESS.md: the date and time, what you finished,
   and what you will do next.`
@@ -2962,12 +2970,6 @@ paste. New ones are added as they come up.
   `/loop fire this every 5 minutes for the next 10 days. keep working on <the project> until <what
   done means>. when it is done, check it once more, send me a short report and stop.`
 
-- Keep one dated line per round. A loop that writes one dated line each time it runs leaves a
-  diary you can read in a minute: what it did at 3 a.m., where it got stuck, when it finished.
-
-  `at the end of every round, add one dated line to <the log file> with what you did and what is
-  next.`
-
 - Ask the agent to say back what it understood before a long job. Ten days of work on a
   misunderstanding is expensive. A short note in its own words, before it starts, catches the
   mistake while it is cheap.
@@ -3072,10 +3074,6 @@ paste. New ones are added as they come up.
 
   `do what you can decide yourself and keep going. if something needs me, send me one short email
   with the choice and what you recommend.`
-
-- Put the end time inside the loop prompt. Some schedulers drop a recurring job after a few days.
-  If the prompt itself says "until 19 November 03:15", the agent knows to set the schedule up again
-  when it lapses, and to stop and report when the time is reached.
 
 - Turn a habit into a hook. When you find yourself telling agents the same thing every day, ask
   for it to become a hook, so every new session gets it without you typing it.
