@@ -5,6 +5,21 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Use a loop to watch a listing for you. Job boards, grant calls, calls for papers and conference
+  deadlines change every day, and checking them by hand is the kind of thing that slips. A loop can
+  read the listing each round, add anything new to one tracker file with its deadline and a line on
+  why it fits, skip what is already there, and tell you only when something is due soon.
+
+  `/loop fire this every hour for the next 10 days. check <the listing> for new entries that fit
+  <what I am looking for>, add each new one to <tracker file> with its deadline and one line on why
+  it fits, and email me only when something is due within three days.`
+
+- When you reply "keep working", say on what. After a long report, "keep working" leaves the agent
+  to pick the next step, and it may pick the easy one or start something you didn't want. Adding the
+  item you care about, or "the next line in your NEXT file", keeps it on the path you had in mind.
+
+  `keep working, on <the item> first. when that is done, go on with the next line of your list.`
+
 - With several agents running, have every report end by naming the request it answers. After a day
   of asks in different windows, a report that says "done, all three files are updated" can belong to
   any of them. One closing line in your own words, with the time you asked, tells you at a glance which
