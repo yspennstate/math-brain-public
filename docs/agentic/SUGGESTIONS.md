@@ -5,6 +5,23 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- After a watcher passes its test on a dummy job, have the agent check that it also sees the real one.
+  A watcher usually finds the job by its name or its command line, and the real job may be started a
+  little differently from the dummy: from another folder, with a shorter path, under another name.
+  Then the watcher reports that all is well while the job it was built for runs unwatched. Ask the
+  agent to show you the watcher picking out the real process once it is running.
+
+  `the real job is running now. show me that your watcher sees this exact process, by its id, and
+  that it would pause it. if it doesn't see it, fix the match and test again.`
+
+- When a job can only run part of the time, ask for the rate you will actually get, not the speed of
+  one item. A render that takes twenty minutes a clip, on a computer that is free only when its owner
+  steps away, may finish three clips an hour at night and none in the afternoon. The agent knows the
+  per-item time from its test; the waiting is what makes the plan, so have it say both.
+
+  `how long does one item take, and how many will actually finish per hour given when this computer
+  is free? give me a realistic finish time for the whole batch, not the best case.`
+
 - When a tool refuses to do something on a safety check, ask the agent what the check protects before
   it goes around it. Sometimes the check is too cautious and skipping it is fine; sometimes it is the
   only thing standing between you and a frozen computer. An agent that names the risk, says what will
