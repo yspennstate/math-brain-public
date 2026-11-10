@@ -96,6 +96,7 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | Two giant boxes in random allocations | [condensation-two-giant-boxes](https://github.com/yspennstate/condensation-two-giant-boxes) |
 | Uniform condensation windows for zero-radius random allocations | [uniform-condensation-windows](https://github.com/yspennstate/uniform-condensation-windows) |
 | The variation threshold, Kemeny's constant and stationary times of reversible Markov chains | [variation-threshold-stationary-times](https://github.com/yspennstate/variation-threshold-stationary-times) |
+| Conserved charges in linearly reinforced graph urns | [graph-urn-conserved-charges](https://github.com/yspennstate/graph-urn-conserved-charges) |
 
 Six more are kept here with their working files:
 
