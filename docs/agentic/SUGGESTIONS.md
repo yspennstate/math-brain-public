@@ -5,6 +5,22 @@ paste. New ones are added as they come up.
 
 ## 10 November 2026
 
+- Keep your best prompts in one file. After a few weeks you will have a handful of requests that
+  always work: the loop that keeps a project moving, the way you ask for a report, the line that stops
+  an agent from cutting corners. Paste them into a plain file as you find them. A new agent can read
+  that file on its first turn and start the way you like to work, instead of learning it again.
+
+  `read <my prompts file> before you start. these are the requests that have worked for me; follow
+  the same style, and add any new one I give you that works well.`
+
+- Let the agent write the loop prompt for you. Describe the job in your own words, with how often and
+  for how long, and ask it to turn that into a loop prompt: what to read first, what to do each round,
+  where to save, when to stop and how to report. Read it once, fix what it got wrong, then start it.
+
+  `I want an agent to <the job> every <interval> for the next <days>. write the loop prompt for that:
+  what it reads first, what it does each round, where it saves, and when it stops. show it to me
+  before you start it.`
+
 - Use a loop to watch a listing for you. Job boards, grant calls, calls for papers and conference
   deadlines change every day, and checking them by hand is the kind of thing that slips. A loop can
   read the listing each round, add anything new to one tracker file with its deadline and a line on
