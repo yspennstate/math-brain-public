@@ -629,6 +629,13 @@ paste. New ones are added as they come up.
   `this is too casual. write it again from the start in a formal, professional voice, keep the same
   facts, and tell me in one line what you changed.`
 
+  One thing gives machine writing away more than any word choice: sentences about the writing
+  itself. "In this statement I aim to", "a careful reading shows", "an earlier version said" are
+  about how the text was made, not about you or the work. A reader notices them at once.
+
+  `go through this line by line and cut every sentence whose subject is the document, the drafting
+  or the process of writing it. keep only what is about me and the work.`
+
 - Ask the agent to open the result in front of you. A path in a report means you still have to find
   the folder, pick the file and choose a program. The agent can open the video, the page or the
   document itself, in the right program, so you only have to look. For several results, it can
