@@ -59,7 +59,7 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - When a loop is not producing anything, read its NEXT line.
 - Put the habits you want into the loop prompt itself.
 
-## Terminals, setup and computers (83)
+## Terminals, setup and computers (84)
 
 - With agents on more than one computer, have every report name its computer.
 - Name each terminal window after its job.
@@ -144,6 +144,7 @@ goes with it. A suggestion sits under the first topic it fits, so a few could li
 - Put a second computer to work.
 - Tell one agent to pass a message to all of them.
 - When new terminals hang before the agent answers, time the hooks.
+- On a computer you borrow, the person who owns it comes first.
 
 ## Checking results and catching mistakes (92)
 

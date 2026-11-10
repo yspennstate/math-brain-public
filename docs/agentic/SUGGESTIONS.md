@@ -3425,3 +3425,13 @@ paste. New ones are added as they come up.
   first look for what is wrong with what you did last round and fix it. if the same approach has
   failed twice, try a different one, and say which you chose. be creative, and check your own
   work before you call anything done.`
+
+- On a computer you borrow, the person who owns it comes first. Long jobs on someone else's machine
+  are fine while they are away, but the moment they sit down at the keyboard the job should make
+  room: pause or slow down, hand back memory, and pick up again when they leave. Ask the agent to
+  set up a small watcher that does this by itself, so it does not depend on anyone remembering, and
+  to count the owner's own heavy programs as them using the machine even when nobody is typing.
+
+  `you may use <the other computer> while its owner is away. set up a watcher that checks every
+  minute whether they are at the keyboard or their own programs are busy, and if so pauses our job
+  and frees its memory until they stop. show me it working once before the long job starts.`
