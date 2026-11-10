@@ -84,5 +84,14 @@ your topic yet. [struggling.md](struggling.md)
 ## How do I teach the agent a habit once instead of every day?
 
 Ask it to turn the habit into a skill or a hook. A skill is a page of instructions the agent loads
-when the situation comes up; a hook runs on every prompt.
-[../../agent_tools/skills/](../../agent_tools/skills/)
+when the situation comes up; a hook runs on every prompt. [skills.md](skills.md) walks through
+writing one; ready-made ones are in [../../agent_tools/skills/](../../agent_tools/skills/).
+
+## What is the difference between a skill, a memory and a loop prompt?
+
+A memory is something that happened or was learned ("the export breaks on files over 2 GB"). A
+skill is how you want a kind of job done ("before publishing, scan every file and run the tests").
+A loop prompt is the job itself, sent again on a timer ("every 10 minutes until Friday, do the next
+step on the export"). The loop does the work, the memories carry what each round learned, and the
+skills keep every round doing it your way. [loop-prompts.md](loop-prompts.md),
+[skills.md](skills.md), [github-as-storage.md](github-as-storage.md)
