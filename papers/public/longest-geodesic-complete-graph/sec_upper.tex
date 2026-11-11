@@ -1,0 +1,47 @@
+\section{Proof of Theorem~\ref{thm:upper}}\label{sec:upper}
+
+From now on $a=\as$ in the tilting of Section~\ref{sec:profile}, and $\theta=\log\as$.
+
+\begin{lemma}\label{lem:finite}
+There is a constant $C$ such that for all $n\ge2$ and all integers $k\ge1$,
+\[
+\Prob(M_n\ge k)\le\E N_{n,k}\le C\,\frac{n^{1+\as}\,\as^{-k}}{\sqrt{\log n}} .
+\]
+\end{lemma}
+
+\begin{proof}
+The first inequality is Markov's. By Lemma~\ref{lem:first}, \eqref{eq:tilt} and~\eqref{eq:atom},
+\[
+\E N_{n,k}=\frac n2F_n(\as)\sum_{d\ge k}\as^{-d}\,\Prob(S_n=d)
+\le\frac n2F_n(\as)\,\frac{\as^{-k}}{1-1/\as}\,\frac{C_{\as}}{\sqrt{\log n}} ,
+\]
+and $\log F_n(\as)\le\as\sum_{j<n}1/j\le\as(1+\log n)$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:upper}]
+Let $n\ge3$, write $\ell=\log n$, and let $x\ge0$. Since $M_n$ is an integer, $M_n\ge b_n+x$ exactly when
+$M_n\ge k$ with $k=\lceil b_n+x\rceil\ge1$. By~\eqref{eq:alpha}, $1+\as-\as\theta=0$, so
+\[
+\frac{n^{1+\as}\,\as^{-b_n}}{\sqrt{\ell}}
+=\exp\Bigl((1+\as-\as\theta)\,\ell+\tfrac12\log\ell\Bigr)\,\ell^{-1/2}=1 ,
+\]
+and Lemma~\ref{lem:finite} gives $\Prob(M_n\ge b_n+x)\le C\as^{-(k-b_n)}\le C\as^{-x}$. For the expectation, with
+$m=\lceil b_n\rceil$,
+\[
+\E M_n\le m+\sum_{j\ge1}\Prob(M_n\ge m+j)\le b_n+1+C\sum_{j\ge1}\as^{-j} .
+\]
+The remaining statements follow by taking $x=w_n$ and $x=(\log\log n)/(2\theta)-A$.
+\end{proof}
+
+\begin{remark}
+The bound of~\cite{ABL} for the upper side of~\eqref{eq:ABL} uses the inequality
+$\Prob(\text{height}\ge x\log m)\le e^{x-1}m^{x-x\log x}$, $x>1$, of Devroye~\cite{Devroye}, which is the Chernoff bound for
+the sum in Lemma~\ref{lem:first}. Lemma~\ref{lem:finite} differs from it by the factor $(\log n)^{-1/2}$ of
+Lemma~\ref{lem:atom}, and this factor is the source of the term $-(\log\log n)/(2\theta)$. For the height $R_n$ of
+one tree and a fixed $\beta>e$, Chen and Ma~\cite[Proposition~3.1]{ChenMa} prove
+$\Prob(R_n\ge\beta\log n)\le Cn^{-\beta(\log\beta-1)}(\log n)^{-1/2}$, together with a lower bound of the same power
+of $n$. With $\beta=\as$ and a union bound over the roots their inequality gives
+$\Prob(M_n\ge\as\log n)=O((\log n)^{-1/2})$, which is the case $k=\lceil\as\log n\rceil$ of
+Lemma~\ref{lem:finite}. The second-order term requires the bound at the levels $k=\as\log n-O(\log\log n)$, with a
+constant that does not depend on the level, and this is what Lemma~\ref{lem:finite} provides.
+\end{remark}

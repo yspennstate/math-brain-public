@@ -1,0 +1,67 @@
+\section{Proof of Theorem~\ref{thm:first}}\label{sec:local}
+
+We keep $a=\as$. The first step is a local limit theorem for sums of independent Bernoulli variables. It is
+standard; we include the short argument because it is used for $S_n$ here and for two other families of sums in
+Section~\ref{sec:second}.
+
+\begin{lemma}\label{lem:local}
+For $m\ge1$ let $X_m$ be a sum of finitely many independent Bernoulli variables, with mean $\mu^{(m)}$ and variance
+$V^{(m)}$, and let $d_m$ be an integer. If $V^{(m)}\to\infty$ and $d_m-\mu^{(m)}=o\bigl(\sqrt{V^{(m)}}\bigr)$, then
+$\sqrt{V^{(m)}}\,\Prob(X_m=d_m)\to1/\sqrt{2\pi}$.
+\end{lemma}
+
+\begin{proof}
+Let $B$ be a Bernoulli variable with parameter $q$ and $v=q(1-q)$. The centred variable $B-q$ has variance $v$ and
+absolute third moment at most $v$, so for $|t|\le1$,
+\[
+\E e^{it(B-q)}=1-\tfrac12vt^2+O(v|t|^3),\qquad
+\log\E e^{it(B-q)}=-\tfrac12vt^2+O\bigl(v|t|^3\bigr),
+\]
+with absolute constants. Summing over the summands of $X_m$, we get
+$\log\E\exp(it(X_m-\mu^{(m)}))=-\frac12V^{(m)}t^2+O(V^{(m)}|t|^3)$ for $|t|\le1$, and hence
+$\E\exp(iu(X_m-\mu^{(m)})/\sqrt{V^{(m)}})\to e^{-u^2/2}$ for every real $u$. By Fourier inversion and the
+substitution $t=u/\sqrt{V^{(m)}}$,
+\[
+\sqrt{V^{(m)}}\,\Prob(X_m=d_m)=\frac1{2\pi}\int_{-\pi\sqrt{V^{(m)}}}^{\pi\sqrt{V^{(m)}}}
+\E e^{iu(X_m-\mu^{(m)})/\sqrt{V^{(m)}}}\;e^{-iu(d_m-\mu^{(m)})/\sqrt{V^{(m)}}}\,du .
+\]
+The integrand, set equal to zero outside the interval of integration, converges pointwise to $e^{-u^2/2}$ and, by~\eqref{eq:cf} and $\sin(|t|/2)\ge|t|/\pi$, its modulus is
+at most $e^{-2u^2/\pi^2}$. Dominated convergence gives the limit $(2\pi)^{-1}\int e^{-u^2/2}du=1/\sqrt{2\pi}$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:first}]
+Write $\ell=\log n$. By~\eqref{eq:muV}, $\mu_n=\as\ell+O(1)$ and $V_n=\as\ell+O(1)$, so for each fixed integer
+$r\ge0$ the point $k_n+r$ satisfies the hypothesis of Lemma~\ref{lem:local} and
+\[
+\sqrt{\ell}\;\Prob(S_n=k_n+r)\to\frac1{\sqrt{2\pi\as}} .
+\]
+The left side is bounded uniformly in $r$ and $n$ by~\eqref{eq:atom}, and $\sum_r\as^{-r}<\infty$, so by dominated
+convergence
+\[
+\sum_{r\ge0}\as^{-r}\,\Prob(S_n=k_n+r)=\frac{1+o(1)}{(1-1/\as)\sqrt{2\pi\as\,\ell}} .
+\]
+By~\eqref{eq:F} and Stirling's formula, $F_n(\as)=(1+o(1))\,n^{\as}/\Gamma(1+\as)$. Lemma~\ref{lem:first}
+and~\eqref{eq:tilt} now give
+\[
+\E N_{n,k_n}=\frac n2F_n(\as)\,\as^{-k_n}\sum_{r\ge0}\as^{-r}\,\Prob(S_n=k_n+r)
+=\frac{(1+o(1))\;n^{1+\as}\,\as^{-k_n}}{2\,\Gamma(1+\as)(1-1/\as)\sqrt{2\pi\as\,\ell}} ,
+\]
+and $n^{1+\as}\as^{-b_n}/\sqrt{\ell}=1$, as in the proof of Theorem~\ref{thm:upper}.
+\end{proof}
+
+\begin{remark}
+Theorem~\ref{thm:first} is a statement about sums of Stirling numbers of the first kind in the range where the
+second index is close to $\as$ times the logarithm of the first. Asymptotic expansions of these numbers go back to
+Moser and Wyman~\cite{MW}; the expansion of Hwang~\cite{Hwang} is uniform for a second index up to any fixed multiple
+of the logarithm of the first, and Theorem~\ref{thm:first} could also be derived from it.
+\end{remark}
+
+\begin{remark}
+The convergence in Theorem~\ref{thm:first} is slow. For $a=\as$ one has
+$\mu_n=\as\log n-\as\psi(1+\as)+o(1)$, where $\psi$ is the digamma function and $\as\psi(1+\as)\approx5.07$, so at
+$k=b_n+O(1)$ the Gaussian factor $\exp(-(k-\mu_n)^2/(2V_n))$ of the local limit theorem differs from one by a term
+of order $(\log\log n)^2/\log n$, and for moderate $n$ the constant $\as\psi(1+\as)$ is the larger part of
+$k-\mu_n$. At $k=\lceil b_n\rceil$ the ratio of $\E N_{n,k}$, computed exactly
+from~\eqref{eq:F}, to $C_*\as^{-(k-b_n)}$ is $0.388$, $0.458$, $0.614$ and $0.718$ for $n=10^2,10^3,10^4,10^5$; the
+Gaussian factor at the same points is $0.320$, $0.436$, $0.606$ and $0.714$.
+\end{remark}

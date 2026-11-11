@@ -1,0 +1,93 @@
+\section{The top of the range, and simulations}\label{sec:top}
+
+\begin{proof}[Proof of Proposition~\ref{prop:top}]
+The coefficient of $z^{n-1}$ in~\eqref{eq:F} is $1/(n-1)!$, so Lemma~\ref{lem:first} gives
+$\E N_{n,n-1}=n/(2\,(n-1)!)$. It remains to show that $N_{n,n-1}\le1$ almost surely. Suppose that the
+minimum-weight path between $i$ and $j$ has $n-1$ edges; it is then a Hamilton path $\gamma$. A subpath of a
+minimum-weight path is a minimum-weight path between its endpoints, since a lighter path between them would yield a
+lighter walk, and hence a lighter path, between $i$ and $j$. By uniqueness, the minimum-weight path between any two
+vertices is the piece of $\gamma$ between them, and it has $n-1$ edges only for the pair $\{i,j\}$. Therefore
+$N_{n,n-1}$ is the indicator of $\{M_n=n-1\}$.
+\end{proof}
+
+For $n=3$ the proposition gives the law of $M_3$: it equals $2$ with probability $3/4$ and $1$ with probability
+$1/4$. In general $\Prob(M_n=n-1)$ is the probability that for some vertex the tree of minimum-weight paths from it
+is a path with that vertex at one end, and the proof shows that this then happens for exactly two vertices.
+
+\subsection*{Finite checks and simulations}
+The identities of Sections~\ref{sec:profile} and~\ref{sec:second} were checked by machine in small cases. The
+enumeration of all recursive trees with at most $8$ vertices reproduces~\eqref{eq:F} and~\eqref{eq:coef} in exact
+arithmetic, and for $K_3,\dots,K_6$ the values of $\E N_{n,k}$ in Lemma~\ref{lem:first} and of $\Prob(M_n=n-1)$
+agree with estimates from $10^5$ sampled graphs within the sampling error (for $n=5$, $0.1050$ against $5/48=0.1042$).
+
+Table~\ref{tab:sim} reports simulations of $M_n$ for $n$ between $250$ and $4000$. Each graph was sampled with
+independent exponential weights and the minimum-weight paths were found by Dijkstra's algorithm from every vertex;
+$R_n$ denotes the largest hopcount from vertex~$1$, which is the height of a random recursive tree. For the
+comparison with the first moment let $k^*_n$ be the real number at which $\E N_{n,k}$, computed exactly
+from~\eqref{eq:F} and interpolated linearly in $\log\E N_{n,k}$ between consecutive integers, equals one. By
+Theorem~\ref{thm:first}, $b_n-k^*_n\to\log(1/C_*)/\theta=3.52$; for the values of $n$ in the table it lies between
+$3.41$ and $3.45$.
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{rrcccccccc}
+\hline
+$n$ & graphs & mean $M_n$ & s.e. & s.d. & range & mean $R_n$ & $b_n$ & $k^*_n$ & mean $M_n-k^*_n$ \\
+\hline
+$250$ & $8000$ & $14.03$ & $0.01$ & $1.24$ & $11$--$24$ & $10.62$ & $19.16$ & $15.75$ & $-1.72$ \\
+$500$ & $4000$ & $16.31$ & $0.02$ & $1.26$ & $13$--$22$ & $12.25$ & $21.60$ & $18.18$ & $-1.86$ \\
+$1000$ & $2000$ & $18.66$ & $0.03$ & $1.31$ & $15$--$25$ & $13.90$ & $24.05$ & $20.61$ & $-1.95$ \\
+$2000$ & $400$ & $20.95$ & $0.06$ & $1.27$ & $18$--$25$ & $15.74$ & $26.50$ & $23.06$ & $-2.11$ \\
+$4000$ & $120$ & $23.36$ & $0.10$ & $1.13$ & $21$--$28$ & $17.13$ & $28.96$ & $25.50$ & $-2.15$ \\
+\hline
+\end{tabular}
+\caption{Simulations of $M_n$ and of $R_n$, the largest hopcount from one vertex.}\label{tab:sim}
+\end{table}
+
+\begin{table}[ht]
+\centering
+\small
+\begin{tabular}{rccccccccc}
+\hline
+$n$ & $k$ & $\E N_{n,k}$ & freq. & $k$ & $\E N_{n,k}$ & freq. & $k$ & $\E N_{n,k}$ & freq. \\
+\hline
+$250$ & $16$ & $0.7074$ & $0.1128$ & $17$ & $0.1637$ & $0.0352$ & $18$ & $0.0353$ & $0.0083$ \\
+$500$ & $19$ & $0.3148$ & $0.0505$ & $20$ & $0.0726$ & $0.0143$ & $21$ & $0.0158$ & $0.0030$ \\
+$1000$ & $21$ & $0.5897$ & $0.0770$ & $22$ & $0.1429$ & $0.0290$ & $23$ & $0.0329$ & $0.0100$ \\
+$2000$ & $24$ & $0.2736$ & $0.0325$ & $25$ & $0.0658$ & $0.0075$ & $26$ & $0.0151$ & $0.0000$ \\
+$4000$ & $26$ & $0.5133$ & $0.0417$ & $27$ & $0.1279$ & $0.0083$ & $28$ & $0.0306$ & $0.0083$ \\
+\hline
+\end{tabular}
+\caption{The exact value of $\E N_{n,k}$ and the observed frequency of $\{M_n\ge k\}$ at the three integers $k$
+above $k^*_n$.}\label{tab:freq}
+\end{table}
+
+The mean of $M_n$ lies between $1.7$ and $2.2$ below $k^*_n$, and so between $5.1$ and $5.6$ below $b_n$. The
+distance from the mean to $b_n$ grows over the range of the table: it is larger at $n=4000$ than at $n=250$ by
+$0.47$, with standard error $0.10$, while $(\log\log n)/(2\theta)$ changes by $0.16$. The standard deviation of
+$M_n$ is between $1.1$ and $1.3$ for every $n$. Table~\ref{tab:freq} compares the frequency of $\{M_n\ge k\}$ with
+$\E N_{n,k}$, which bounds it from above. At the first integer above $k^*_n$ the frequency is $0.16$, $0.16$,
+$0.13$, $0.12$ and $0.08$ of $\E N_{n,k}$ for the five values of $n$, and at the other levels in the table it is at
+most $0.30$ of it. A ratio well below one is to be expected: a minimum-weight path with $k+j$ edges contains
+$(j+1)(j+2)/2$ minimum-weight paths with at least $k$ edges, so that the pairs counted by $N_{n,k}$ come in groups.
+The range of $n$ is too small to show whether $M_n-b_n$ is tight.
+
+One of the $8000$ graphs with $n=250$ has $M_n=24$, while $\Prob(M_{250}\ge24)\le\E N_{250,24}=9.3\cdot10^{-7}$, so
+that a sample of this size contains such a graph with probability at most $0.0075$. Its longest minimum-weight path
+was recomputed by the Bellman--Ford recursion over paths with a bounded number of edges (program
+\texttt{check\_rep.c}): the path has $24$ edges and weight $0.0415$, and every path with at most $23$ edges between
+its endpoints is heavier. No other graph with $n=250$ has $M_n>20$.
+
+For a single root the comparison with the first moment can be made exactly. In a random recursive tree with
+$n\ge2$ vertices the subtree of the second vertex has $K$ vertices, where $K$ is uniform on $\{1,\dots,n-1\}$ because
+the two sides of the tree grow as a P\'olya urn started with one ball of each colour, and, given $K$, this subtree
+and the rest of the tree are independent random recursive trees with $K$ and $n-K$ vertices. Hence
+$t_n(h)=\Prob(R_n>h)$ satisfies $t_n(-1)=1$, $t_1(h)=0$ for $h\ge0$ and
+\[
+t_n(h)=\frac1{n-1}\sum_{K=1}^{n-1}\Bigl(t_K(h-1)\bigl(1-t_{n-K}(h)\bigr)+t_{n-K}(h)\Bigr),\qquad n\ge2,\ h\ge0 .
+\]
+The means of $R_n$ computed from this recursion are $10.60$, $12.25$, $13.93$, $15.63$ and $17.34$ for the five
+values of $n$ in Table~\ref{tab:sim}, and the simulated means differ from them by at most $1.5$ standard errors. At $k=\lceil b_n\rceil$ the ratio of $\Prob(R_n\ge k)$ to the expected number
+$\sum_{d\ge k}f_{n,d}$ of vertices at depth at least $k$ is $0.62$, $0.56$, $0.51$, $0.49$ and $0.49$ for
+$n=250$, $1000$, $4000$, $16000$ and $32000$.

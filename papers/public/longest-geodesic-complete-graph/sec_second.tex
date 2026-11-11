@@ -1,0 +1,113 @@
+\section{The second moment at the first-moment threshold}\label{sec:second}
+
+Let $n\ge4$ and $k\ge1$, and let $Y$ be the number of vertices at depth at least $k$ in a random recursive tree with
+$n$ vertices. Expanding the square of $N_{n,k}$ as a sum over two pairs, which coincide, share one vertex or are
+disjoint, and using the exchangeability of the vertices,
+\begin{equation}\label{eq:square}
+\E\bigl[N_{n,k}^2\bigr]=\binom n2p+6\binom n3q_s+6\binom n4q_d ,
+\end{equation}
+where $p=\Prob(H_n(1,2)\ge k)$, $q_s=\Prob(H_n(1,2)\ge k,\ H_n(1,3)\ge k)$ and
+$q_d=\Prob(H_n(1,2)\ge k,\ H_n(3,4)\ge k)$. The first two probabilities are determined by the shortest-path tree of
+vertex $1$: the $n-1$ other vertices are exchangeable, so
+\[
+p=\frac{\E Y}{n-1},\qquad q_s=\frac{\E[Y(Y-1)]}{(n-1)(n-2)},\qquad 6\binom n3q_s=n\,\E[Y(Y-1)] .
+\]
+The probability $q_d$ involves two trees and is not determined by the law of one of them. We bound the middle term
+of~\eqref{eq:square} from below.
+
+For a random recursive tree $T_j$ with $j$ vertices let
+\[
+R_j(z,w)=\E\sum_{u\ne v}z^{\operatorname{depth}(u)}\,w^{\operatorname{depth}(v)},
+\]
+the sum being over ordered pairs of distinct vertices of $T_j$.
+
+\begin{lemma}\label{lem:pairs}
+For all $n\ge2$,
+\begin{equation}\label{eq:R}
+R_n(z,w)=\sum_{j=1}^{n-1}\frac{z+w}{j}\,F_j(zw)\prod_{l=j+1}^{n-1}\Bigl(1+\frac{z+w}{l}\Bigr).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+Write $P_j(z)=\sum_{u\in T_j}z^{\operatorname{depth}(u)}$. If vertex $j+1$ is attached to a vertex of depth $D$, the
+new ordered pairs contribute $z^{D+1}P_j(w)+w^{D+1}P_j(z)$. Given $T_j$, the parent is uniform, so the conditional
+mean of this is $j^{-1}(z+w)P_j(z)P_j(w)$, and $P_j(z)P_j(w)$ is the sum over ordered pairs of distinct vertices
+plus $P_j(zw)$. Hence
+\[
+R_{j+1}=\Bigl(1+\frac{z+w}{j}\Bigr)R_j+\frac{z+w}{j}\,F_j(zw),\qquad R_1=0,
+\]
+and~\eqref{eq:R} follows by induction.
+\end{proof}
+
+In the $j$th term of~\eqref{eq:R} the factor $F_j(zw)$ accounts for the common part of the two paths from the root,
+which ends at the parent of vertex $j+1$, and the remaining factors account for the two separate parts. It is this
+term, for $j$ a suitable power of $n$, that is large.
+
+\begin{proof}[Proof of Proposition~\ref{prop:second}]
+Let $k=k_n=\lceil b_n\rceil$ and $T=\log n$. Write $Q_{j,n}(t)=\prod_{l=j+1}^{n-1}(1+t/l)$ and
+$q_{j,h}=[t^h]Q_{j,n}(t)$. In the $j$th term of~\eqref{eq:R} the monomial $z^kw^k$ arises from the term $(zw)^d$ of
+$F_j(zw)$ and the term $z^sw^s$ of $(z+w)\,Q_{j,n}(z+w)$, where $s=k-d\ge1$; the latter has coefficient
+$\binom{2s}{s}q_{j,2s-1}$. Therefore
+\begin{equation}\label{eq:coef}
+[z^kw^k]R_n=\sum_{j=1}^{n-1}\frac1j\sum_{d<k}f_{j,d}\;q_{j,2(k-d)-1}\binom{2(k-d)}{k-d}.
+\end{equation}
+All terms are nonnegative. Let $D_j$ be the sum of independent Bernoulli variables with parameters $4/(l+4)$,
+$1\le l<j$, and $L_j$ the sum of independent Bernoulli variables with parameters $4/(l+4)$, $j<l<n$. As
+in~\eqref{eq:tilt},
+\[
+f_{j,d}=F_j(4)\,4^{-d}\,\Prob(D_j=d),\qquad q_{j,h}=Q_{j,n}(4)\,4^{-h}\,\Prob(L_j=h),
+\]
+and $F_j(4)\,Q_{j,n}(4)=F_n(4)/(1+4/j)$. With $s=k-d$, \eqref{eq:coef} becomes
+\begin{equation}\label{eq:coef2}
+[z^kw^k]R_n=F_n(4)\,4^{1-k}\sum_{j=1}^{n-1}\frac1{j+4}\sum_{d<k}\Prob(D_j=d)\,\Prob(L_j=2s-1)\,
+\binom{2s}{s}4^{-s}.
+\end{equation}
+
+Put $\rho=(\as-2)/2\in(0,1)$ and $N=\lfloor n^{\rho}\rfloor$. We keep in~\eqref{eq:coef2} only the indices
+$N\le j\le2N$ and, for each of them, the single value $d=d_j=\lfloor\E D_j\rfloor$. As in~\eqref{eq:muV}, uniformly
+in these $j$,
+\[
+\E D_j=4\log j+O(1)=4\rho T+O(1),\qquad \E L_j=4\log(n/j)+O(1)=4(1-\rho)T+O(1),
+\]
+and the variances of $D_j$ and $L_j$ satisfy the same estimates. Since $4\rho=2\as-4$ and
+$k_n=\as T+O(\log T)$, the number $s_j=k_n-d_j$ satisfies
+\[
+s_j=(4-\as)T+O(\log T),\qquad 2s_j-1-\E L_j=O(\log T),
+\]
+because $2(4-\as)=4(1-\rho)$. Thus $d_j$ and $2s_j-1$ are within $o(\sqrt T)$ of the means of $D_j$ and $L_j$, whose
+variances are of order $T$. By Lemma~\ref{lem:local}, applied along an arbitrary sequence of pairs $(n,j)$ with
+$n\to\infty$ and $N\le j\le2N$, there is $c>0$ such that for all large $n$ and all such $j$,
+\[
+\Prob(D_j=d_j)\ge\frac{c}{\sqrt T},\qquad\Prob(L_j=2s_j-1)\ge\frac{c}{\sqrt T} .
+\]
+Moreover $\binom{2s}{s}4^{-s}\ge1/(2\sqrt s)$ for $s\ge1$, so the last factor in~\eqref{eq:coef2} is at least
+$c/\sqrt T$; also $\sum_{j=N}^{2N}1/(j+4)\ge1/3$ for large $N$, and $F_n(4)=n(n+1)(n+2)(n+3)/24\ge n^4/24$. Hence
+\[
+[z^{k_n}w^{k_n}]R_n\ \ge\ c\,n^4\,4^{-k_n}\,T^{-3/2}.
+\]
+The left side is the expected number of ordered pairs of distinct vertices which are both at depth exactly $k_n$, and
+is at most $\E[Y(Y-1)]$. By~\eqref{eq:square} and the identities after it,
+\[
+\E\bigl[N_{n,k_n}^2\bigr]\ \ge\ n\,\E[Y(Y-1)]\ \ge\ c\,n^5\,4^{-k_n}\,T^{-3/2}
+\ \ge\ \frac c4\,n^{5-\as\log4}\,T^{\frac{\log4}{2\theta}-\frac32},
+\]
+where the last step uses $k_n\le b_n+1$ and $4^{-b_n}=n^{-\as\log4}\,T^{(\log4)/(2\theta)}$. Since $\as<3.5912$ and
+$\log4<1.3863$, we have $\as\log4<4.9785<5$. The right side therefore tends to infinity, while $\E N_{n,k_n}$ is
+bounded by Lemma~\ref{lem:finite}.
+\end{proof}
+
+\begin{remark}
+The proof shows which configurations are responsible. In the tree of a root $i$, the pairs kept in the proof are
+two vertices at depth $k_n$ whose paths from $i$ agree up to depth about $(2\as-4)\log n\approx3.18\log n$ and then
+continue separately for about $(4-\as)\log n\approx0.41\log n$ edges each. The tree of a given root reaches depth
+$k_n$ with probability at most $\E Y=O(1/n)$, by Lemma~\ref{lem:finite}, whereas
+$\E[Y(Y-1)]\ge c\,n^{4-\as\log4}(\log n)^{(\log4)/(2\theta)-3/2}$: a tree that reaches depth $k_n$ carries on average
+at least of order $n^{5-\as\log4}$ pairs of vertices at depth $k_n$, up to a power of $\log n$.
+\end{remark}
+
+\begin{remark}
+By the Cauchy--Schwarz inequality, $\Prob(M_n\ge k)\ge(\E N_{n,k})^2/\E[N_{n,k}^2]$. Proposition~\ref{prop:second}
+shows that this bound tends to zero at $k=\lceil b_n\rceil$, whatever the value of $q_d$. A second moment argument at
+this level would have to count a thinner family of paths, as in the truncated second moment arguments for the extremes
+of branching random walks~\cite{ABR,Aidekon} and in~\cite{ABL,ABF}.
+\end{remark}

@@ -101,6 +101,7 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | Dead branches in the trace-reinforced ant process | [trace-reinforced-ants-dead-branches](https://github.com/yspennstate/trace-reinforced-ants-dead-branches) |
 | The local limit of sublinear preferential attachment graphs with fixed out-degree | [sublinear-attachment-local-limit](https://github.com/yspennstate/sublinear-attachment-local-limit) |
 | The dimension of harmonic measure on Galton-Watson trees increases at small bias | [harmonic-dimension-small-bias](https://github.com/yspennstate/harmonic-dimension-small-bias) |
+| An upper bound to second order for the longest minimum-weight path in a complete graph | [longest-geodesic-complete-graph](https://github.com/yspennstate/longest-geodesic-complete-graph) |
 
 Six more are kept here with their working files:
 

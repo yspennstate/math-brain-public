@@ -1,0 +1,169 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Var}{\operatorname{Var}}
+\newcommand{\as}{\alpha}
+
+\title[The longest minimum-weight path in a complete graph]{An upper bound to second order for the longest
+minimum-weight path in a complete graph}
+\author{Yitzchak Shmalo}
+\date{November 2026}
+
+\begin{document}
+\begin{abstract}
+Give the edges of the complete graph on $n$ vertices independent exponential weights and let $M_n$ be the largest
+number of edges of a minimum-weight path between two vertices. Addario-Berry, Broutin and Lugosi proved that
+$M_n/\log n\to\as$ in probability, where $\as\approx3.5911$ solves $\as\log\as-\as=1$, with the bounds
+$\as\log n-L\log\log n\le M_n\le\as\log n+\omega(n)$. We prove that
+$\Prob(M_n\ge b_n+x)\le C\as^{-x}$ for all $x\ge0$, where $b_n=\as\log n-(\log\log n)/(2\log\as)$. Hence
+$M_n-\as\log n\to-\infty$ in probability and $\E M_n\le b_n+O(1)$. We also find the asymptotic value of the
+expected number of pairs of vertices joined by a minimum-weight path of at least $k$ edges when
+$k=\as\log n+O(\log\log n)$, show that at $k=\lceil b_n\rceil$ the second moment of this number tends to infinity
+although its mean stays bounded, and prove that
+$\Prob(M_n=n-1)=n/(2\,(n-1)!)$ for every $n\ge2$. The lower side of the question of van der Hofstad on the
+fluctuations of $M_n$ stays open.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+Let $K_n$ be the complete graph on the vertex set $[n]=\{1,\dots,n\}$ and give its edges independent weights with the
+exponential distribution of mean one. Almost surely no two distinct paths with the same endpoints have the same weight, so for $i\ne j$ there is a
+unique path of minimum weight from $i$ to $j$; we write $H_n(i,j)$ for its number of edges, the \emph{hopcount}
+between $i$ and $j$. This is first-passage percolation on the complete graph, also called the stochastic mean-field
+model of distance. The weights of the minimum-weight paths were described by Janson~\cite{Janson}: divided by
+$\log n/n$, the weight between two fixed vertices, the largest weight from a fixed vertex and the largest weight over
+all pairs converge in probability to $1$, $2$ and $3$; the fluctuations of the last quantity were found by Bhamidi and
+van der Hofstad~\cite{BvdH}. Hopcounts for other edge-weight distributions on the complete graph are studied
+in~\cite{EGHN1,EGHN2}. For exponential weights, the minimum-weight paths from a fixed vertex form a tree which, with
+its vertices listed in the order of their distance from the root, is a random recursive tree
+\cite{vdHHVM,SM}. Hence $H_n(1,2)$ is of order $\log n$, with Gaussian fluctuations of order
+$\sqrt{\log n}$~\cite{vdHHVM,HVM}, and
+\[
+R_n=\max_{j}H_n(1,j)
+\]
+has the law of the height of a random recursive tree with $n$ vertices, and $R_n/\log n\to e$ in probability by
+theorems of Devroye~\cite{Devroye} and Pittel~\cite{Pittel}.
+
+The subject of this paper is the largest hopcount over all pairs,
+\[
+M_n=\max_{1\le i<j\le n}H_n(i,j).
+\]
+Let $\as\approx3.5911$ be the solution in $(e,\infty)$ of
+\begin{equation}\label{eq:alpha}
+\as\log\as-\as=1 .
+\end{equation}
+Janson~\cite{Janson} observed that the tail bound of Devroye for the height of a random recursive tree and a union
+bound over the $n$ roots give $\Prob(M_n\ge\beta\log n)\to0$ for every $\beta>\as$, and asked whether $M_n/\log n$
+converges to a constant in $[e,\as]$. Addario-Berry, Broutin and Lugosi~\cite{ABL} proved that it converges to $\as$. More precisely,
+their Theorem~1 states that for some constant $L$ and every function $\omega(n)\to\infty$, with probability tending
+to one,
+\begin{equation}\label{eq:ABL}
+\as\log n-L\log\log n\le M_n\le\as\log n+\omega(n),
+\end{equation}
+and that $\as\log n-L\log\log n\le\E M_n\le\as\log n+L$. In his Saint-Flour lectures, van der
+Hofstad~\cite[Open Problem~3.1]{vdH} asks how the fluctuations of $R_n-e\log n$ and of $M_n-\as\log n$ behave. For
+the root the answer is known: Addario-Berry and Ford~\cite{ABF} proved that the height of a random recursive tree is
+$e\log n-\tfrac32\log\log n+O(1)$ in expectation, with exponential tails around the expectation, and finer results
+on this height are in~\cite{PS1,PS2,ChenMa}. For $M_n$ the bounds~\eqref{eq:ABL} are the best available.
+
+Our main result removes the gap between the upper bound in~\eqref{eq:ABL} and the scale $\log\log n$ of the lower
+bound. Throughout, $\theta=\log\as$ and, for $n\ge3$,
+\begin{equation}\label{eq:bn}
+b_n=\as\log n-\frac{\log\log n}{2\theta},\qquad \frac1{2\theta}\approx0.3911 .
+\end{equation}
+
+\begin{theorem}\label{thm:upper}
+There is a constant $C$ such that for all $n\ge3$ and all real $x\ge0$,
+\[
+\Prob\bigl(M_n\ge b_n+x\bigr)\le C\,\as^{-x}.
+\]
+Consequently $\E M_n\le b_n+O(1)$, and $\Prob(M_n\ge b_n+w_n)\to0$ whenever $w_n\to\infty$. In particular
+$M_n-\as\log n\to-\infty$ in probability.
+\end{theorem}
+
+Together with the lower bound in~\eqref{eq:ABL}, Theorem~\ref{thm:upper} shows that, with probability tending to
+one,
+\[
+-L\log\log n\ \le\ M_n-\as\log n\ \le\ -\frac{\log\log n}{2\theta}+w_n
+\]
+for every sequence $w_n\to\infty$.
+
+The proof is a first-moment computation in which the factor $(\log n)^{-1/2}$ of the local limit theorem is kept. For
+$k\ge1$ let
+\[
+N_{n,k}=\#\bigl\{\{i,j\}:\ i\ne j,\ H_n(i,j)\ge k\bigr\}
+\]
+be the number of pairs at hopcount at least $k$, so that $\{M_n\ge k\}=\{N_{n,k}\ge1\}$. The mean of $N_{n,k}$ is
+given exactly by the expected profile of the random recursive tree (Lemma~\ref{lem:first}), and its asymptotic
+behaviour near $b_n$ is as follows.
+
+\begin{theorem}\label{thm:first}
+Let $k_n$ be integers with $k_n-\as\log n=O(\log\log n)$. Then
+\[
+\E N_{n,k_n}=\bigl(C_*+o(1)\bigr)\,\as^{-(k_n-b_n)},\qquad
+C_*=\frac{1}{2\,\Gamma(1+\as)\,(1-1/\as)\sqrt{2\pi\as}}\approx0.01104 .
+\]
+\end{theorem}
+
+Thus $b_n$ is the threshold of the first moment: $\E N_{n,k}$ is of order one exactly when $k=b_n+O(1)$. Whether
+$M_n-b_n$ is tight is not known. For the root, the same computation puts the first-moment threshold of the height at
+$e\log n-\frac12\log\log n$, whereas the expected height is $e\log n-\frac32\log\log n+O(1)$ by~\cite{ABF}, as for the maximum
+of a branching random walk. The level $\as\log n$, however, lies in the large deviation range of the height of a
+single tree, where the probability of reaching a level and the expected number of vertices at it differ at most by a
+power of $\log n$~\cite{ChenMa}, so the comparison with the root does not predict the centring of $M_n$. What a
+second moment argument meets is made precise by the next statement: at the first-moment threshold the pairs at large
+hopcount come in clusters with a common endpoint, and the second moment of their number is unbounded.
+
+\begin{proposition}\label{prop:second}
+There is a constant $c>0$ such that, with $k_n=\lceil b_n\rceil$ and for all large $n$,
+\[
+\E\bigl[N_{n,k_n}^2\bigr]\ \ge\ c\,n^{\,5-\as\log4}\,(\log n)^{\frac{\log 4}{2\theta}-\frac32},
+\qquad 5-\as\log4\approx0.0216>0 .
+\]
+The pairs $\{i,j\}$, $\{i,j'\}$ with a common endpoint alone contribute this much. In particular
+$(\E N_{n,k_n})^2/\E[N_{n,k_n}^2]\to0$.
+\end{proposition}
+
+So the second moment method applied to $N_{n,k}$ itself gives nothing at $k=b_n+O(1)$; the lower bound
+in~\eqref{eq:ABL} is obtained in~\cite{ABL} by applying it to a restricted family of paths, which leads to the
+constant $L$. Proposition~\ref{prop:second} does not decide whether $\Prob(M_n\ge b_n-A)$ is bounded away from zero for
+large $A$.
+
+At the other end of the range the law of $M_n$ can be written down.
+
+\begin{proposition}\label{prop:top}
+For every $n\ge2$,
+\[
+\Prob(M_n=n-1)=\frac{n}{2\,(n-1)!}.
+\]
+\end{proposition}
+
+For $n=3,4,5,6$ this gives $3/4$, $1/3$, $5/48$ and $1/40$.
+
+The identity for $\E N_{n,k}$ and the tilting that leads to Theorems~\ref{thm:upper} and~\ref{thm:first} are in
+Section~\ref{sec:profile}, the two theorems are proved in Sections~\ref{sec:upper} and~\ref{sec:local},
+Proposition~\ref{prop:second} in Section~\ref{sec:second} and Proposition~\ref{prop:top} in Section~\ref{sec:top},
+which also reports simulations of $M_n$.
+
+\input{sec_profile}
+\input{sec_upper}
+\input{sec_local}
+\input{sec_second}
+\input{sec_top}
+
+\input{tail}
+
+\begin{thebibliography}{99}
+\input{bib_main}
+\input{bib_own}
+\end{thebibliography}
+\end{document}

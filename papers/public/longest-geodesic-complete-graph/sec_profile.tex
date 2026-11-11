@@ -1,0 +1,86 @@
+\section{The expected number of pairs at large hopcount}\label{sec:profile}
+
+Fix a root $r\in[n]$. The union of the minimum-weight paths from $r$ to the other vertices is a spanning tree, the
+shortest-path tree of $r$. Explore it by increasing distance from $r$. When $m$ vertices have been found, the
+memoryless property of the exponential distribution makes the residual weights of the $m(n-m)$ edges between found
+and unfound vertices, that is, the weight of each such edge less the time elapsed since its found endpoint was
+reached, independent exponential variables of mean one, so the next vertex is attached by an edge chosen
+uniformly among them, and its parent is uniform among the $m$ vertices found so far, independently of the past. The
+tree, with its vertices numbered in the order in which they are found, is therefore a random recursive tree: vertex
+$m+1$ is attached to a uniform vertex among $1,\dots,m$~\cite{vdHHVM,SM}. The hopcount $H_n(r,v)$ is the depth of $v$
+in this tree. The trees of different roots are dependent, and nothing below uses more than the law of one of them.
+
+Let $Z_{n,d}$ be the number of vertices at depth $d$ in a random recursive tree with $n$ vertices, and
+\[
+F_n(z)=\E\sum_{d\ge0}Z_{n,d}\,z^d,\qquad f_{n,d}=[z^d]F_n(z)=\E Z_{n,d}.
+\]
+A new vertex attached to a uniform vertex among $n$ has depth one more than its parent, so
+$F_{n+1}(z)=(1+z/n)F_n(z)$ and
+\begin{equation}\label{eq:F}
+F_n(z)=\prod_{j=1}^{n-1}\Bigl(1+\frac zj\Bigr)=\frac{\Gamma(n+z)}{\Gamma(n)\,\Gamma(1+z)} .
+\end{equation}
+Thus $(n-1)!\,f_{n,d}$ is the unsigned Stirling number of the first kind $\genfrac{[}{]}{0pt}{}{n}{d+1}$; this description of the expected profile is
+classical, see~\cite{SM}, \cite[Chapter~6]{Drmota} and~\cite{FHN}.
+
+\begin{lemma}\label{lem:first}
+For all $n\ge2$ and $k\ge1$,
+\[
+\E N_{n,k}=\frac n2\sum_{d\ge k}f_{n,d}.
+\]
+\end{lemma}
+
+\begin{proof}
+Each pair $\{i,j\}$ is counted once from the root $i$ and once from the root $j$, so
+$2N_{n,k}=\sum_{r}\#\{v\ne r:H_n(r,v)\ge k\}$. For each $r$ the inner number is the number of vertices at depth at
+least $k$ in the shortest-path tree of $r$, whose mean is $\sum_{d\ge k}f_{n,d}$.
+\end{proof}
+
+The sum in Lemma~\ref{lem:first} is over the whole profile. It should not be replaced by $n-1$ times the tail of the
+hopcount between two fixed vertices computed from $F_n(z)/n$: that function is the generating function of the depth
+of a uniform vertex with the root included, and the depth of a uniform vertex other than the root has generating
+function $(F_n(z)-1)/(n-1)$.
+
+\subsection*{Tilting}
+Let $a>0$. Let $B_1,\dots,B_{n-1}$ be independent Bernoulli variables with
+\[
+\Prob(B_j=1)=q_j=\frac{a}{j+a},\qquad S_n=\sum_{j=1}^{n-1}B_j .
+\]
+Since $(1+au/j)/(1+a/j)=1-q_j+q_ju$, we have $\E u^{S_n}=F_n(au)/F_n(a)$ and therefore
+\begin{equation}\label{eq:tilt}
+f_{n,d}=F_n(a)\,a^{-d}\,\Prob(S_n=d)\qquad(d\ge0).
+\end{equation}
+For $a=1$ this is the representation of the depth of a uniform vertex of the random recursive tree as a sum of
+independent indicators~\cite{Devroye88}.
+The mean and variance of $S_n$ are
+\[
+\mu_n=\sum_{j<n}\frac{a}{j+a},\qquad V_n=\sum_{j<n}\frac{aj}{(j+a)^2} .
+\]
+From $0\le a/j-a/(j+a)\le a^2/j^2$ and $|aj/(j+a)^2-a/j|\le 2a^2/j^2+a^3/j^3$,
+\begin{equation}\label{eq:muV}
+\mu_n=a\log n+O(1),\qquad V_n=a\log n+O(1),
+\end{equation}
+with constants depending on $a$ only. As $V_n>0$ for every $n\ge2$, there is $c_a>0$ with $V_n\ge c_a\log n$ for all
+$n\ge2$.
+
+\begin{lemma}\label{lem:atom}
+Let $X$ be a sum of finitely many independent Bernoulli variables, with variance $V>0$. Then for all real $t$,
+\begin{equation}\label{eq:cf}
+\bigl|\E e^{itX}\bigr|\le\exp\bigl(-2V\sin^2(t/2)\bigr),
+\end{equation}
+and $\sup_{d}\Prob(X=d)\le\sqrt{\pi/(8V)}$. In particular, for all $n\ge2$,
+\begin{equation}\label{eq:atom}
+\sup_{d}\Prob(S_n=d)\le\sqrt{\frac{\pi}{8V_n}}\le\frac{C_a}{\sqrt{\log n}} .
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For one Bernoulli variable with parameter $q$, $|1-q+qe^{it}|^2=1-4q(1-q)\sin^2(t/2)$, and
+$\sqrt{1-y}\le e^{-y/2}$ for $0\le y\le1$; multiplying over the summands gives~\eqref{eq:cf}. By Fourier inversion
+for an integer-valued variable,
+\[
+\Prob(X=d)=\frac1{2\pi}\int_{-\pi}^{\pi}\E e^{itX}\,e^{-itd}\,dt
+\le\frac1{2\pi}\int_{-\pi}^{\pi}\bigl|\E e^{itX}\bigr|\,dt
+\le\frac1{2\pi}\int_{-\infty}^{\infty}e^{-2Vt^2/\pi^2}\,dt=\sqrt{\frac{\pi}{8V}},
+\]
+where we used $\sin(|t|/2)\ge|t|/\pi$ for $|t|\le\pi$.
+\end{proof}
