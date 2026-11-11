@@ -17,6 +17,10 @@ For l >= 2 the edge uv lies on no geodesic and keeps a positive share of the wei
 For l = 1 the graph is the losange, the edge uv dies, and the theorem gives for the loop-erased rule the convergence
 proved by Kious, Mailler and Schapira for the uniform-geodesic rule.
 
+The forward-loop-erased ant process of Armfield and Mailler (The forward-loop-erased ants walk, arXiv:2610.18453), in
+which the ant reinforces the loop-erasure of its trajectory instead of that of the reversed trajectory, has the same
+law as the loop-erased process, so the statements above hold for it as well.
+
 ## Files
 
 - `code/sim_ants.c` simulates the process as it is defined (walk, reversal, chronological loop erasure, +1 on the

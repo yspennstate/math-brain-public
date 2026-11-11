@@ -32,7 +32,9 @@ $uv$, where $\rho$ is a non-degenerate random variable with values in $(0,1)$. F
 geodesic and keeps a positive share of the weight, so the conjecture fails on $G_\ell$, and the proportion of ants that
 reinforce a path which is not a geodesic has a positive limit. For $\ell=1$ the graph is the losange of Kious, Mailler
 and Schapira, the edge $uv$ dies, and the theorem gives for the loop-erased rule the convergence that they proved for
-the uniform-geodesic rule.
+the uniform-geodesic rule. The forward-loop-erased ant process of Armfield and Mailler, in which the ant reinforces the
+loop-erasure of its trajectory instead of that of the reversed trajectory, has the same law, so all of these statements
+hold for it as well.
 \end{abstract}
 \maketitle
 
@@ -63,7 +65,18 @@ uniform-geodesic rule~\cite[Theorem~1.4]{KMS}, and they write that for the loop-
 convergence on the losange, although they believe that the same result holds. The general case is the first open
 problem of the survey~\cite{Aletti}, where the conjecture is stated in the form that the only edges whose weight
 grows linearly are those lying on a geodesic between $N$ and $F$. A variant of the process with two nests is studied
-in~\cite{MV}, and the process in which every edge crossed by the walk is reinforced in~\cite{KMS2}.
+in~\cite{MV}. The process in which every edge crossed by the walk is reinforced is studied in~\cite{KMS2}, where it is
+shown that it does not always find the geodesics. Other reinforced walks that model the formation of paths by ants are
+studied in~\cite{LGR,EFR,GSGC}.
+
+Armfield and Mailler~\cite{AM} consider the \emph{forward-loop-erased} ant process, in which $\gamma_{n+1}$ is the
+loop-erasure of the trajectory $X$ itself and not of its reversal. They prove that if the distance from $N$ to $F$ is
+$2$ then, whatever the rest of the graph, $W_e(n)/n\to0$ almost surely for every edge $e$ that lies on no geodesic, and
+they conjecture that this holds on every finite graph. The two processes have the same law: the loop-erasure of $X$ is
+the first branch of Wilson's algorithm~\cite{Wilson} rooted at $F$, so it is distributed as the path between $N$ and
+$F$ in the same random spanning tree as the loop-erasure of the reversed trajectory (Lemma~\ref{lem:ust} and the
+paragraph that follows its proof). The theorem of~\cite{AM} therefore applies to the loop-erased process of~\cite{KMS}, and the
+results of the present paper apply to the forward-loop-erased process.
 
 \subsection{The result}
 For $\ell\ge1$ let $G_\ell$ be the graph with vertices $N,u,v,F$, $x_1,\dots,x_{\ell-1}$ and $y_1,\dots,y_{\ell-1}$,
@@ -106,6 +119,13 @@ Conjecture~\ref{conj}. The smallest graph of the family on which the conjecture 
 and seven edges. The half of the conjecture which says that the edges of the geodesics keep a positive share of the
 weight holds on every $G_\ell$.
 
+Since the two processes have the same law, Theorem~\ref{thm:main} and its corollaries hold for the
+forward-loop-erased process of~\cite{AM} as well. On the losange, where the distance from $N$ to $F$ is $2$, the limit $\chi_{uv}=0$ is a case
+of~\cite[Theorem~1.1]{AM}; the convergence of $W(n)/n$ under the assumptions of that theorem is stated in~\cite{AM} as
+an open problem, and Corollary~\ref{cor:losange} gives it for the losange. In $G_2$ the distance from $N$ to $F$ is
+$3$, so by Corollary~\ref{cor:fail} the conclusion of~\cite[Theorem~1.1]{AM} does not extend from distance $2$ to
+distance $3$.
+
 The proof rests on two facts. The first is classical: the reinforced path of an ant has the law of the path from $N$
 to $F$ in a random spanning tree of the weighted graph (Lemma~\ref{lem:ust}). On $G_\ell$ the spanning trees are easy
 to list, and this gives the law of $\gamma_{n+1}$ given $W(n)$ in closed form (Lemma~\ref{lem:law}). The legs enter
@@ -132,6 +152,15 @@ $\{x,p(x)\}$, $x\ne N$, form a spanning tree $T$ with the law in the statement. 
 $F,p(F),p(p(F)),\dots$, because the first-visit times decrease along this sequence, and these vertices and their
 first-entrance edges are determined by the walk up to time $K$. Hence this path is $\gamma$.
 \end{proof}
+
+The loop-erasure $\gamma'$ of $X$ itself, in which the loops are removed in the order in which the walk closes them,
+has the same law as $\gamma$ when both are regarded as sets of edges. Indeed, Wilson's algorithm~\cite{Wilson} (see
+also~\cite[Chapter~4]{LP}) with root $F$ and first starting vertex $N$ produces a spanning tree with the law of
+Lemma~\ref{lem:ust}, and the path between $N$ and $F$ in this tree is the loop-erasure of a weighted random walk
+started at $N$ and stopped when it reaches $F$. The process in which the $(n+1)$-st ant adds one to the weight of
+every edge of the loop-erasure of its own trajectory is the forward-loop-erased ant process of~\cite{AM}. It is
+therefore a Markov chain with the same initial state and the same transition probabilities as the loop-erased ant
+process, and every statement of this paper about $(W(n))_{n\ge0}$ holds for it.
 
 On $G_\ell$ there are four simple paths from $N$ to $F$,
 \begin{align*}
@@ -503,19 +532,28 @@ The paper is part of the Math Brain project, whose public repository is
 \emph{SIAM J. Discrete Math.} \textbf{3} (1990), 450--465.
 \bibitem{Aletti} G.~Aletti, A.~Collevecchio, I.~Crimaldi, M.~Deijfen, S.~Dereich, A.~Ghiglietti, R.~van der Hofstad,
 M.~Holmes, D.~Kious, V.~Kleptsyn, B.~Lodewijks, P.~M\"orters and B.~Schapira, Open problems in stochastic
-reinforcement models, report of the MATRIX--MFO Tandem Workshop \emph{Stochastic Reinforcement Processes and Graphs},
-March 2023.
+reinforcement models, in \emph{2023 MATRIX Annals}, MATRIX Book Series, Springer, 2025, 477--498 (report of the
+MATRIX--MFO Tandem Workshop \emph{Stochastic Reinforcement Processes and Graphs}, March 2023).
+\bibitem{AM} W.~Armfield and C.~Mailler, The forward-loop-erased ants walk, arXiv:2610.18453.
 \bibitem{Broder} A.~Broder, Generating random spanning trees, in \emph{30th Annual Symposium on Foundations of Computer
 Science}, IEEE, 1989, 442--447.
+\bibitem{EFR} D.~Erhard, T.~Franco and G.~Reis, The directed edge reinforced random walk: the ant mill phenomenon,
+\emph{J. Stat. Phys.} \textbf{190} (2023), no.~1, Paper No.~18.
+\bibitem{GSGC} S.~Garg, K.~Shiragur, D.~M.~Gordon and M.~Charikar, Distributed algorithms from arboreal ants for the
+shortest path problem, \emph{Proc. Natl. Acad. Sci. USA} \textbf{120} (2023), no.~6, e2207959120.
 \bibitem{KMS} D.~Kious, C.~Mailler and B.~Schapira, Finding geodesics on graphs using reinforcement learning,
-\emph{Ann. Appl. Probab.} \textbf{32} (2022), no.~5; arXiv:2010.04820.
+\emph{Ann. Appl. Probab.} \textbf{32} (2022), no.~5, 3889--3929; arXiv:2010.04820.
 \bibitem{KMS2} D.~Kious, C.~Mailler and B.~Schapira, The trace-reinforced ants process does not find shortest paths,
 \emph{J. \'Ec. polytech. Math.} \textbf{9} (2022), 505--536.
+\bibitem{LGR} L.~C.~Le~Goff and O.~Raimond, Vertex reinforced non-backtracking random walks: an example of path
+formation, \emph{Electron. J. Probab.} \textbf{23} (2018), Paper No.~39, 1--38.
 \bibitem{LP} R.~Lyons and Y.~Peres, \emph{Probability on Trees and Networks}, Cambridge University Press, 2016.
 \bibitem{MV} C.~Mailler and Z.~Varin, The two-nest ants process on triangle-series-parallel graphs,
 arXiv:2601.22855.
 \bibitem{RS} H.~Robbins and D.~Siegmund, A convergence theorem for non negative almost supermartingales and some
 applications, in \emph{Optimizing Methods in Statistics}, Academic Press, 1971, 233--257.
+\bibitem{Wilson} D.~B.~Wilson, Generating random spanning trees more quickly than the cover time, in \emph{Proceedings
+of the Twenty-eighth Annual ACM Symposium on the Theory of Computing}, ACM, 1996, 296--303.
 \bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
 \url{https://github.com/yspennstate/math-brain-public}.
 \bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
