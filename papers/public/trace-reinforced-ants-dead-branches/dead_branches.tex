@@ -1,0 +1,418 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newtheorem{example}[theorem]{Example}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\one}{\mathbf{1}}
+
+\title{Dead branches in the trace-reinforced ant process}
+\author{Yitzchak Shmalo}
+\date{November 2026}
+
+\begin{document}
+\begin{abstract}
+In the trace-reinforced ant process of Kious, Mailler and Schapira, ants walk one after another from a nest $N$ to a
+food source $F$ on a finite graph, and each ant adds one unit of weight to every edge it has crossed. It was conjectured
+that the normalised weights converge to a deterministic limit, and that this limit is positive on every edge as soon as
+$N$ and $F$ are at distance at least two. We show that the second statement fails. If a part of the graph hangs by a
+single edge from a neighbour of $F$, on the side away from $N$, then the normalised weights of all its edges tend to
+zero almost surely; this happens in $2$-connected graphs with $N$ and $F$ at distance two. We also show that the
+mean-field vector field has no equilibrium with all coordinates positive when some neighbour of $F$ is hidden from $N$
+by the other neighbours of $F$, so that on such graphs, some of which are $3$-connected, the normalised weights cannot
+converge to a positive limit. The equilibria are described through the voltage of the unit current from $N$ to $F$.
+A census of the $22{,}828$ cases on connected graphs with at most seven vertices supports a corrected form of the
+conjecture, in which the set of edges with limit zero is given by an explicit combinatorial rule. We also give the
+equilibrium on a graph made of any number of parallel paths.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+
+Let $G=(V,E)$ be a finite connected simple graph with two distinct marked vertices, the nest $N$ and the food $F$.
+The \emph{trace-reinforced ant process} on $(G,N,F)$ is the sequence of weight vectors $W(n)=(W_e(n))_{e\in E}$
+defined as follows. Set $W_e(0)=1$ for all $e$. Given $W(n)$, the $(n+1)$-st ant performs a random walk started at
+$N$ which jumps from a vertex $x$ to a neighbour $z$ with probability $W_{xz}(n)/W_x(n)$, where
+$W_x(n)=\sum_{z\sim x}W_{xz}(n)$, and stops when it first hits $F$. Then
+\[
+W_e(n+1)=W_e(n)+\one\{\text{the $(n+1)$-st ant crossed $e$}\}.
+\]
+The process was introduced by Kious, Mailler and Schapira \cite{KMS}, as a variant of the models of \cite{KMS0}, in
+which an ant reinforces only a part of its trace (its loop-erasure, or a shortest path inside it). These models
+are motivated by the trails with which ants mark the way to a food source \cite{Den,DS}, and belong to the family of
+reinforced random processes surveyed in \cite{Pem07}, which goes back to the edge-reinforced walk \cite{Dav}; a model with two nests is treated in \cite{MV}. Kious, Mailler
+and Schapira proved that $W(n)/n$ converges almost surely to an explicit
+deterministic limit on several families of graphs (tree-like graphs in which $N$ and $F$ are adjacent, the cone, two
+parallel paths, the lozenge), and stated the following.
+
+\begin{conjecture}[\cite{KMS}, Conjecture 1.1]\label{conj:kms}
+There exists a deterministic family $(\chi_e)_{e\in E}$ such that $W_e(n)/n\to\chi_e$ almost surely for all $e$.
+Furthermore, if in addition the distance between $N$ and $F$ is at least $2$, then $\chi_e>0$ for all $e\in E$.
+\end{conjecture}
+
+An edge with an endpoint outside the connected component of $N$ in $G-F$ is never crossed, so the second sentence is
+to be read for graphs in which $G-F$ is connected; we call such triples $(G,N,F)$ \emph{reduced}. The second sentence
+fails for reduced graphs.
+
+\begin{theorem}[Dead branches]\label{thm:dead}
+Let $u$ be a neighbour of $F$, and let $H\subset V\setminus\{N,F,u\}$ be a set of vertices such that exactly one edge
+$e=\{u,y\}$ joins $H$ to $V\setminus(H\cup\{F\})$. Then, almost surely,
+\[
+\frac{W_f(n)}{n}\longrightarrow 0\qquad\text{for every edge $f$ with an endpoint in $H$.}
+\]
+\end{theorem}
+
+In other words, $H$ is the far side of a bridge of $G-F$ attached at a neighbour of $F$; the vertices of $H$ may have
+any number of edges to $F$. The vertex $u$ may be $N$ itself. When $G-F$ is a tree and $u=N$ is adjacent to $F$ the
+theorem covers every edge other than $\{N,F\}$, which is the second half of Theorem 1.3 of \cite{KMS}. When $N$ is
+adjacent to $F$, Proposition 2.8 of \cite{KMS} shows that $W_{NF}(n)/n\to1$ and that the normalised weight of every
+other edge at $F$ tends to zero; Theorem~\ref{thm:dead} needs no such assumption.
+
+\begin{example}\label{ex:paw}
+Take a triangle $x,y,F$ and attach $N$ to $x$ by an edge. The distance from $N$ to $F$ is $2$, and
+Theorem~\ref{thm:dead} with $u=x$, $H=\{y\}$ gives $W_{xy}(n)/n\to0$ and $W_{yF}(n)/n\to0$. This case also follows
+from \cite[Theorem 1.3]{KMS} applied with nest $x$: every ant goes through $x$, and its excursions from $x$ to the
+pendant vertex $N$ do not change which of the other edges it crosses. The same reduction applies whenever a
+cut vertex separates $N$ from $F$, so the examples of interest are those without one.
+\end{example}
+
+\begin{example}\label{ex:c4}
+Take the $4$-cycle $N,a,F,b$ and add a vertex $y$ joined to $a$ and to $F$. The graph is $2$-connected, $N$ and $F$
+are at distance $2$, and every edge lies on a simple path from $N$ to $F$. Theorem~\ref{thm:dead} with $u=a$,
+$H=\{y\}$ gives $W_{ay}(n)/n\to0$ and $W_{yF}(n)/n\to0$: the detour $a,y,F$ dies next to the edge $\{a,F\}$.
+\end{example}
+
+The second result concerns the mean-field vector field. For a weight vector $w\in[0,\infty)^E$ whose support connects
+$N$ to $F$, let $p_e(w)$ be the probability that the $w$-weighted random walk started at $N$ crosses $e$ before
+hitting $F$. Then $\EE[W_e(n+1)-W_e(n)\mid\cF_n]=p_e(W(n))$, the map $p$ is homogeneous of degree $0$, and the process
+is a stochastic approximation of the flow $\dot w=p(w)-w$ in the sense of \cite{Ben,Pem90}. An \emph{equilibrium} is a solution of $p(w)=w$.
+
+\begin{theorem}[Shadowed neighbours of $F$]\label{thm:shadow}
+Let $(G,N,F)$ be reduced with $N$ not adjacent to $F$, let $N(F)$ be the set of neighbours of $F$, and let $I_0$ be
+the connected component of $N$ in $G-F-N(F)$. If some $x\in N(F)$ has no neighbour in $I_0$, then $p$ has no
+equilibrium with all coordinates positive. Consequently, on such a graph the event that $W(n)/n$ converges to a limit
+with all coordinates positive has probability zero.
+\end{theorem}
+
+So on these graphs the two sentences of Conjecture~\ref{conj:kms} cannot both hold: either $W(n)/n$ does not converge,
+or its limit has a zero coordinate. The hypothesis does not involve bridges or cut vertices. For instance, take
+the complete bipartite graph with parts $\{a,b,c\}$ and $\{N,F,x\}$ and add the edge $\{x,F\}$. This graph is
+$3$-connected, $N$ and $F$ are at distance $2$, $I_0=\{N\}$, and $x$ is a neighbour of $F$ with no neighbour in $I_0$.
+A smaller example is the $4$-cycle $N,a,F,b$ with a fifth vertex $c$ joined to $a$, $b$ and $F$. In the mean-field
+flow on this graph the edge $\{c,F\}$ dies while $\{a,c\}$ and $\{b,c\}$ keep the positive weight $0.3209$
+(Section~\ref{sec:census}).
+
+Section~\ref{sec:proof} contains the proof of Theorem~\ref{thm:dead}. Section~\ref{sec:eq} describes the equilibria
+through electrical voltages and proves Theorem~\ref{thm:shadow}. Section~\ref{sec:census} states a corrected form of
+the second sentence of Conjecture~\ref{conj:kms} and reports a census of small graphs. Section~\ref{sec:theta}
+computes an equilibrium on theta graphs with any number of paths.
+
+\section{Proof of Theorem~\ref{thm:dead}}\label{sec:proof}
+
+Write $a=\{u,F\}$, $X_n=W_e(n)$ and $A_n=W_a(n)$, and let $\cF_n$ be the $\sigma$-field generated by the first $n$
+ants.
+
+\medskip\noindent\textbf{Step 0.} \emph{For every edge $f$ with an endpoint in $H$ and every $n$, $W_f(n)\le X_n$.}
+An ant starts at $N\notin H$ and stops at $F$, and $e$ is the only edge from $H$ to $V\setminus(H\cup\{F\})$. Hence an
+ant that crosses $f$ has crossed $e$ earlier. Both weights start at $1$ and each increases by one when its edge is
+crossed.
+
+\medskip\noindent\textbf{Step 1.} \emph{One ant.} Fix $n$ and write $w=W(n)$, $X=X_n$, $A=A_n$, and $R$ for the
+total weight of the edges at $u$ other than $a$ and $e$. Let $h$ be the probability that the walk from $N$ hits $u$
+before $F$ ($h=1$ if $u=N$). The walk cannot enter $H$ before it visits $u$. After the first visit to $u$, decompose
+the walk into its successive departures from $u$. A departure is of one of four kinds:
+\begin{itemize}
+\item[(i)] the step $u\to F$, with probability $A/w_u$; the edge $a$ is crossed and the walk ends;
+\item[(ii)] the step $u\to y$, with probability $X/w_u$; the edge $e$ is crossed; afterwards the walk returns to $u$
+with some probability $\rho$ and is absorbed at $F$ from inside $H$ with probability $1-\rho$;
+\item[(iii)] a step along another edge, with probability $R/w_u$, after which the walk returns to $u$ before hitting
+$F$; this has conditional probability $\rho'$, say;
+\item[(iv)] a step along another edge after which the walk hits $F$ before returning to $u$.
+\end{itemize}
+An excursion of kind (iii) or (iv) does not meet $H$. Successive departures are independent. The edge $e$ is crossed
+if and only if the first departure that is not of kind (iii) is of kind (ii), and the edge $a$ is crossed if and only
+if the walk ends by a departure of kind (i). With $S=A+R(1-\rho')$ this gives
+\begin{equation}\label{eq:pe}
+p_e(w)=\frac{hX}{X+S},\qquad p_a(w)=\frac{hA}{S+X(1-\rho)} .
+\end{equation}
+Therefore
+\begin{equation}\label{eq:diff}
+\frac{p_a(w)}{A}-\frac{p_e(w)}{X}=\frac{hX\rho}{(S+X(1-\rho))(S+X)}\ \ge\ \frac{\rho\,p_e(w)}{S+X}.
+\end{equation}
+Now $S+X\le w_u\le\deg(u)\,(n+1)$, since every weight is at most $n+1$ at time $n$. Moreover $\rho$ is at least the
+probability that the first step from $y$ goes back to $u$, which is $X/w_y\ge1/\deg(y)$ by Step 0, all edges at $y$
+having an endpoint in $H$. With $c=1/(\deg(u)\deg(y))$ we obtain
+\begin{equation}\label{eq:drift}
+\frac{p_a(W(n))}{A_n}-\frac{p_e(W(n))}{X_n}\ \ge\ \frac{c\,p_e(W(n))}{n+1}.
+\end{equation}
+
+\medskip\noindent\textbf{Step 2.} \emph{The logarithm of the ratio.} Let $L_n=\log(X_n/A_n)$, and let $D_n$ and
+$D'_n$ be the indicators that the $(n+1)$-st ant crosses $e$ and $a$ respectively, so that
+\[
+L_{n+1}-L_n=D_n\log\Bigl(1+\frac1{X_n}\Bigr)-D'_n\log\Bigl(1+\frac1{A_n}\Bigr).
+\]
+Using $t-t^2/2\le\log(1+t)\le t$ and \eqref{eq:drift},
+\[
+\EE[L_{n+1}-L_n\mid\cF_n]\ \le\ \frac{p_e(W(n))}{X_n}-\frac{p_a(W(n))}{A_n}+\frac{p_a(W(n))}{2A_n^2}
+\ \le\ -\frac{c\,p_e(W(n))}{n+1}+\frac{p_a(W(n))}{2A_n^2}.
+\]
+Since $X$ increases by one each time $D_n=1$, we have $\sum_nD_n/X_n^2\le\sum_{k\ge1}k^{-2}$, and likewise for $A$.
+Hence $\sum_n\EE[(L_{n+1}-L_n)^2]\le2\sum_kk^{-2}<\infty$, so the martingale
+$M_n=\sum_{j<n}\bigl(L_{j+1}-L_j-\EE[L_{j+1}-L_j\mid\cF_j]\bigr)$ is bounded in $L^2$ and converges almost surely.
+Also $\EE\sum_np_a(W(n))/A_n^2=\EE\sum_nD'_n/A_n^2<\infty$, so $Q=\sum_np_a(W(n))/(2A_n^2)$ is almost surely finite.
+Altogether, for all $n$,
+\begin{equation}\label{eq:L}
+L_n\ \le\ M_n+Q-c\sum_{j<n}\frac{p_e(W(j))}{j+1}.
+\end{equation}
+
+\medskip\noindent\textbf{Step 3.} \emph{Conclusion.} The martingale $\sum_{j<n}(D_j-p_e(W(j)))/(j+1)$ has
+square-summable increments and converges almost surely. Hence, almost surely,
+\begin{equation}\label{eq:equiv}
+\sum_j\frac{p_e(W(j))}{j+1}=\infty\quad\Longleftrightarrow\quad\sum_j\frac{D_j}{j+1}=\infty .
+\end{equation}
+Summation by parts gives $\sum_{j<n}D_j/(j+1)=(X_n-1)/n+\sum_{j=1}^{n-1}(X_j-1)/(j(j+1))$. Suppose that
+$X_m\ge\delta m$ for infinitely many $m$, for some $\delta>0$. For such $m$ with $\delta m\ge2$, monotonicity gives
+$X_j-1\ge\delta m/2$ for $m\le j\le2m$, and $\sum_{j=m}^{2m}1/(j(j+1))\ge1/(2m)$, so the block $[m,2m]$ contributes at
+least $\delta/4$. Infinitely many disjoint blocks give $\sum_jD_j/(j+1)=\infty$. By \eqref{eq:equiv} and \eqref{eq:L},
+on the event $\{\limsup X_n/n>0\}$ we have $L_n\to-\infty$ almost surely, that is $X_n/A_n\to0$. But $A_n\le n+1$, so
+$X_n/n\to0$ on that event, which is a contradiction unless the event is null. Thus $X_n/n\to0$ almost surely, and
+Step~0 extends this to every edge with an endpoint in $H$. \qed
+
+\begin{remark}
+The bridge is essential. If the part hanging from $u$ is attached by two edges, say a triangle $u,y_1,y_2$, an ant
+can enter by one edge and leave by the other, and the same computation gives $p_{uy_1}(w)/w_{uy_1}>p_a(w)/w_a$ for
+small weights on the triangle. In the mean-field flow such a triangle keeps positive weight.
+\end{remark}
+
+\section{Equilibria and voltages}\label{sec:eq}
+
+Let $w\in[0,\infty)^E$ have a support that connects $N$ to $F$, and let $g(x)$ be the expected number of visits to
+$x$ by the $w$-walk from $N$ before it hits $F$. For a vertex $x\ne F$ with $w_x>0$ put $v(x)=g(x)/w_x$, and put
+$v(F)=0$. Then $v$ is the voltage of the unit current from $N$ to $F$ in the network $w$:
+\begin{equation}\label{eq:kirchhoff}
+\sum_{z\sim x}w_{xz}\,(v(x)-v(z))=\one\{x=N\}\qquad(x\ne F,\ w_x>0).
+\end{equation}
+
+\begin{lemma}\label{lem:cross}
+The expected number of crossings of $e=\{x,z\}$ by the walk is $w_e\,(v(x)+v(z))$. In particular
+$p_e(w)\le w_e(v(x)+v(z))$, and $p_{xF}(w)=w_{xF}\,v(x)$ for every neighbour $x$ of $F$.
+\end{lemma}
+\begin{proof}
+The expected number of steps from $x$ to $z$ is $g(x)\,w_e/w_x$. An edge at $F$ is crossed at most once.
+\end{proof}
+
+\begin{proposition}\label{prop:volt}
+Let $w$ be an equilibrium and let $V_1$ be the set of neighbours $x$ of $F$ with $w_{xF}>0$. Then
+\begin{itemize}
+\item[(a)] $v(x)=1$ for every $x\in V_1$;
+\item[(b)] $v(x)\ge1$ for every vertex $x\ne F$ visited by the walk;
+\item[(c)] if $N\notin V_1$, every $x\in V_1$ has a neighbour $z$ with $w_{xz}>0$ and $v(z)>1$, and every vertex
+with $v>1$ is joined to $N$ by a path of the support along which $v>1$;
+\item[(d)] if $N\in V_1$, then $w_{NF}=1$, $v\equiv1$ on the visited vertices, and $w_{xF}=0$ for every other
+neighbour $x$ of $F$.
+\end{itemize}
+\end{proposition}
+\begin{proof}
+(a) By Lemma~\ref{lem:cross}, $w_{xF}=p_{xF}(w)=w_{xF}v(x)$.
+(b) By \eqref{eq:kirchhoff}, at a visited vertex outside $V_1\cup\{F\}$ the value $v(x)$ is at least the weighted mean
+of $v$ over its neighbours in the support, none of which is $F$. If the minimum of $v$ over the visited vertices other
+than $F$ were attained outside $V_1$, it would be attained at all support neighbours, and, the support component of
+$N$ being connected and containing a vertex of $V_1$, also on $V_1$, where $v=1$.
+(c) For $x\in V_1$, $x\neq N$, \eqref{eq:kirchhoff} and (a) give $\sum_{z\ne F}w_{xz}(v(z)-1)=w_{xF}>0$, so some
+neighbour $z$ in the support has $v(z)>1$. Now let $v(z)=t>1$ and let $C$ be the set of vertices joined to $z$ by a
+path of the support along which $v\ge t$. Suppose $N\notin C$. By (a), $C$ does not meet $V_1$, so by
+\eqref{eq:kirchhoff} the value of $v$ at a vertex of $C$ is the weighted mean of $v$ over its neighbours in the
+support. A neighbour outside $C$ has $v<t$. Hence a vertex where $v$ is maximal on $C$ has all its support neighbours
+in $C$, and $v$ is maximal at each of them. Repeating, $C$ is a union of connected components of the support. But $z$
+is visited, so its component contains $N$, a contradiction.
+(d) If $N\in V_1$ then $v(N)=1$, and $v(N)$ is the maximum of $v$, so $v\equiv1$ on the visited vertices by (b).
+Then \eqref{eq:kirchhoff} at $N$ reads $w_{NF}=1$, and at another $x\in V_1$ it would read $w_{xF}=0$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:shadow}]
+Let $w$ be an equilibrium with all coordinates positive. Then $V_1=N(F)$, the support is $E$, and by
+Proposition~\ref{prop:volt}(a) the set $\{v>1\}$ does not meet $N(F)$. By (c), each $x\in N(F)$ has a neighbour $z$
+with $v(z)>1$, and $z$ is joined to $N$ by a path inside $\{v>1\}\subset V\setminus(N(F)\cup\{F\})$; thus $z\in I_0$.
+
+For the second statement, $W_e(n)-\sum_{j<n}p_e(W(j))$ is a martingale with increments bounded by $1$, so
+$n^{-1}\bigl(W_e(n)-\sum_{j<n}p_e(W(j))\bigr)\to0$ almost surely. On the event that $W(n)/n\to\chi$ with all
+$\chi_e>0$, homogeneity and the continuity of $p$ on $(0,\infty)^E$ give $p_e(W(j))\to p_e(\chi)$, hence
+$p(\chi)=\chi$, which has just been excluded.
+\end{proof}
+
+Lemma~\ref{lem:cross} also explains which zero edges can be stable. Let $w$ be an equilibrium and $e=\{x,z\}$ an
+edge with $w_e=0$. If a small weight $\varepsilon$ is put on $e$ alone, then $p_e=\varepsilon\,(v(x)+v(z))+o(\varepsilon)$
+when both endpoints are visited, and $p_e=\varepsilon\,v(x)+o(\varepsilon)$ when only $x$ is. By
+Proposition~\ref{prop:volt}(b) the first rate is at least $2$ unless $z=F$, so such an edge is repelled from zero. An
+edge to an unvisited vertex, or to $F$, is not repelled only when $v(x)=1$, and then the rate equals $1$ exactly:
+linear analysis is silent, the decay is of order $1/t$, and whether the edge dies is decided at second order, as in
+Theorem~\ref{thm:dead}.
+
+\section{A corrected conjecture and a census of small graphs}\label{sec:census}
+
+Let $(G,N,F)$ be reduced. If $N$ is adjacent to $F$ put $I_0=\emptyset$ and $A=\{N\}$; otherwise let $I_0$ be the
+component of $N$ in $G-F-N(F)$ and let $A$ be the set of neighbours of $F$ that have a neighbour in $I_0$. Call
+$V\setminus(I_0\cup\{F\})$ the \emph{shadow}. Let $\mathcal D(G,N,F)$ be the set of edges of the following two kinds:
+\begin{itemize}
+\item[(D1)] $\{x,F\}$ with $x\in N(F)\setminus A$;
+\item[(D2)] for every shadow vertex $u$ and every bridge $e=\{u,y\}$ of $G-F$ whose far side $H$ (the component of $y$
+in $G-F-e$) does not contain $N$: the edge $e$ and every edge with an endpoint in $H$.
+\end{itemize}
+
+\begin{conjecture}\label{conj:new}
+For every reduced $(G,N,F)$, $W(n)/n$ converges almost surely to a deterministic limit $\chi$, and $\chi_e=0$ if and
+only if $e\in\mathcal D(G,N,F)$.
+\end{conjecture}
+
+Theorem~\ref{thm:dead} proves $\chi_e=0$ for the edges of kind (D2) with $u\in N(F)$. When $N$ is adjacent to $F$,
+the edges of kind (D1) are covered by \cite[Proposition 2.8]{KMS}, and Proposition~\ref{prop:volt}(d) is the
+corresponding statement for equilibria. When $N$ is not adjacent to $F$, Theorem~\ref{thm:shadow} shows that
+$\mathcal D\neq\emptyset$ is forced as soon as (D1) is non-empty.
+
+We tested the mean-field form of Conjecture~\ref{conj:new} on every connected graph with $3$ to $7$ vertices and
+every ordered pair $(N,F)$ up to automorphism, $22{,}828$ cases in all, of which $20{,}092$ are reduced; in the others the
+never-crossed edges were removed first. For each case the flow $\dot w=p(w)-w$ was integrated from six initial
+conditions (uniform, log-uniform over six $e$-folds, and concentrated on a random path from $N$ to $F$); coordinates
+that decay were set to zero and the remaining ones were refined by Newton's method, with $p$ evaluated by one linear
+solve per edge.
+\begin{center}
+\begin{tabular}{lrrrrr}
+\toprule
+ & cases & one limit & zero set $=\mathcal D$ & reduced & reduced, $\mathcal D\neq\emptyset$\\
+\midrule
+$N$ adjacent to $F$ & 12{,}004 & 12{,}003 & 12{,}003 & 10{,}286 & 10{,}064\\
+distance at least $2$ & 10{,}824 & 10{,}824 & 10{,}824 & 9{,}806 & 4{,}118\\
+\bottomrule
+\end{tabular}
+\end{center}
+The six runs reached the same point in every case but one. In the remaining case, a graph with seven vertices in which
+$N$ is adjacent to $F$, an edge of $\mathcal D$ has a weight that decays like $1/t$ along the flow, and in one run it had
+not been set to zero by the end of the integration; with ten times the integration time the six runs agree and the
+zero set is $\mathcal D$. At the limits the largest real part of an eigenvalue of
+$Dp-I$ restricted to the support is $-0.015$, and the smallest positive coordinate is $0.0019$. Among the $9{,}806$
+reduced cases at distance at least $2$, Theorem~\ref{thm:dead} applies to $2{,}504$ and Theorem~\ref{thm:shadow} to
+$3{,}294$; $1{,}643$ of the $4{,}118$ cases with a dead edge are $2$-connected graphs, and $247$ are $3$-connected.
+
+The process itself was simulated with $10^7$ ants on four graphs. On the graph of Example~\ref{ex:c4} the values of
+$W_{ay}(n)/n$ at $n=10^3,10^4,\dots,10^7$ were $0.060$, $0.059$, $0.049$, $0.044$, $0.040$, and those of
+$W_{yF}(n)/n$ were $0.020$, $0.016$, $0.010$, $0.007$, $0.005$, while the four edges of the cycle were within $0.02$
+of their limits $2^{-1/2}$ and $1/2$ at $n=10^7$. On the two graphs described after Theorem~\ref{thm:shadow} the
+weight of the edge at $F$ that dies in the flow went from $0.123$ to $0.067$ and from $0.098$ to $0.044$ over the same
+range. The decay is slow. In Step~2 of the proof of Theorem~\ref{thm:dead} the logarithm of $X_n/A_n$ decreases in
+conditional mean by an amount of order $p_e/n$ per ant, and $p_e$ is itself of order $X_n/n$; this points to a rate of
+order $1/\log n$, which is compatible with these values.
+\section{Theta graphs}\label{sec:theta}
+
+Let $\Theta(L_1,\dots,L_k)$ consist of $k\ge2$ internally disjoint paths from $N$ to $F$, the $i$-th of which has
+$L_i\ge2$ edges. For $k=2$ the almost sure limit of $W(n)/n$ was found in \cite[Theorem 1.5]{KMS}: the $j$-th edge
+from $N$ of each path has limit $\alpha^j$, with a ratio $\alpha$ depending on the path. The same form gives an
+equilibrium for every $k$.
+
+\begin{proposition}\label{prop:theta}
+There is a unique $(\alpha_1,\dots,\alpha_k)\in(0,1)^k$ such that
+\begin{equation}\label{eq:theta}
+\sum_{i=1}^k\alpha_i^{L_i}=1\qquad\text{and}\qquad\frac{1-\alpha_i}{1-\alpha_i^{L_i}}\ \text{does not depend on }i,
+\end{equation}
+and the vector that gives weight $\alpha_i^{\,j}$ to the $j$-th edge from $N$ of the $i$-th path, $1\le j\le L_i$, is
+an equilibrium on $\Theta(L_1,\dots,L_k)$. If $L_1=\dots=L_k=L$ then $\alpha_i=k^{-1/L}$ for all $i$.
+\end{proposition}
+\begin{proof}
+Let the $j$-th edge of path $i$ have weight $\alpha_i^{\,j}$, with $\alpha_i\in(0,1)$ to be chosen. This edge is
+crossed exactly when the walk reaches the vertex at depth $j$ of path $i$. An excursion from $N$ enters path $i$ with
+probability proportional to $\alpha_i$, and then reaches depth $j$ before returning to $N$ with probability
+$\bigl(\sum_{m=0}^{j-1}\alpha_i^{-m}\bigr)^{-1}$, by the gambler's ruin formula for the path with resistances
+$\alpha_i^{-1},\dots,\alpha_i^{-j}$. So the excursions that reach depth $j$ of path $i$ occur at rate
+\[
+a_{i,j}=\frac{\alpha_i}{\sum_{m=0}^{j-1}\alpha_i^{-m}}=\frac{1-\alpha_i}{\alpha_i^{-j}-1},
+\]
+and those that reach $F$ along path $i$ at rate $c_i=a_{i,L_i}$. The walk ends at the first excursion that reaches
+$F$, so with $C=\sum_ic_i$,
+\[
+p_{i,j}=\frac{a_{i,j}}{a_{i,j}+C-c_i}.
+\]
+Since $a_{i,j}(1-\alpha_i^{\,j})=(1-\alpha_i)\alpha_i^{\,j}$, the equation $p_{i,j}=\alpha_i^{\,j}$ is equivalent to
+$1-\alpha_i=C-c_i$, for every $j$. As $c_i=(1-\alpha_i)\alpha_i^{L_i}/(1-\alpha_i^{L_i})$, this reads
+$(1-\alpha_i)/(1-\alpha_i^{L_i})=C$, and then $c_i=C\alpha_i^{L_i}$, so that $C=\sum_ic_i$ becomes
+$\sum_i\alpha_i^{L_i}=1$. This is \eqref{eq:theta}.
+
+The function $\alpha\mapsto(1-\alpha)/(1-\alpha^{L})=(1+\alpha+\dots+\alpha^{L-1})^{-1}$ decreases from $1$ to $1/L$
+on $(0,1)$. For $C\in(\max_i1/L_i,1)$ let $\alpha_i(C)$ be the solution of $(1-\alpha)/(1-\alpha^{L_i})=C$. Then
+$\sum_i\alpha_i(C)^{L_i}$ is continuous and decreasing in $C$, tends to $0$ as $C\to1$, and exceeds $1$ as
+$C\to\max_i1/L_i$, because one term tends to $1$ and the others stay positive. So \eqref{eq:theta} has exactly one
+solution. In the case of equal lengths the second condition gives equal $\alpha_i$ and the first gives
+$\alpha^L=1/k$.
+\end{proof}
+
+For $k=2$, \eqref{eq:theta} is the system of \cite[Theorem 1.5]{KMS}. In the flow, thirty random initial conditions
+converged to the equilibrium of Proposition~\ref{prop:theta} on each of $39$ theta graphs with $k\le8$ and
+$L_i\le8$.
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits program (credit
+530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics, and its
+results were developed with the Brain~\cite{BrainFramework} and Math Brain~\cite{MathBrainRepo}. In November 2026 a
+Claude Fable agent (Anthropic), connected to the Brain and working from the project's list of open problems in
+probability, found the statements of this paper and their proofs, wrote the programs, ran the census and the
+simulations, and prepared the manuscript. A second Claude agent independently checked part of the computations.
+These checks are not peer review. The author directed the work and is responsible for the content of the paper and for
+decisions concerning its dissemination.
+
+\section*{Code and data availability}
+Programs, census files and outputs:\\
+\url{https://github.com/yspennstate/trace-reinforced-ants-dead-branches}.
+
+The paper is part of the Math Brain project, whose public repository is
+\url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\begin{thebibliography}{99}
+\bibitem{Ben} M.~Bena\"im, Dynamics of stochastic approximation algorithms, in \emph{S\'eminaire de Probabilit\'es
+XXXIII}, Lecture Notes in Math. 1709, Springer, 1999, 1--68.
+\bibitem{Dav} B.~Davis, Reinforced random walk, \emph{Probab. Theory Related Fields} \textbf{84} (1990), 203--229.
+\bibitem{Den} J.-L.~Deneubourg, S.~Aron, S.~Goss and J.~M.~Pasteels, The self-organizing exploratory pattern of the
+Argentine ant, \emph{J. Insect Behav.} \textbf{3} (1990), 159--168.
+\bibitem{DS} M.~Dorigo and T.~St\"utzle, \emph{Ant Colony Optimization}, MIT Press, 2004.
+\bibitem{Pem90} R.~Pemantle, Nonconvergence to unstable points in urn models and stochastic approximations,
+\emph{Ann. Probab.} \textbf{18} (1990), 698--712.
+\bibitem{Pem07} R.~Pemantle, A survey of random processes with reinforcement, \emph{Probab. Surv.} \textbf{4}
+(2007), 1--79.
+\bibitem{KMS0} D.~Kious, C.~Mailler and B.~Schapira, Finding geodesics on graphs using reinforcement learning,
+arXiv:2010.04820.
+\bibitem{KMS} D.~Kious, C.~Mailler and B.~Schapira, The trace-reinforced ants process does not find shortest paths,
+\emph{J. \'Ec. polytech. Math.} \textbf{9} (2022), 505--536.
+\bibitem{MV} C.~Mailler and Z.~Varin, The two-nest ants process on triangle-series-parallel graphs,
+arXiv:2601.22855.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public}.
+\end{thebibliography}
+\end{document}

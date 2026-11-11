@@ -97,6 +97,8 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | Uniform condensation windows for zero-radius random allocations | [uniform-condensation-windows](https://github.com/yspennstate/uniform-condensation-windows) |
 | The variation threshold, Kemeny's constant and stationary times of reversible Markov chains | [variation-threshold-stationary-times](https://github.com/yspennstate/variation-threshold-stationary-times) |
 | Conserved charges in linearly reinforced graph urns | [graph-urn-conserved-charges](https://github.com/yspennstate/graph-urn-conserved-charges) |
+| A non-geodesic edge that survives in the loop-erased ant process | [loop-erased-ants-non-geodesic-edge](https://github.com/yspennstate/loop-erased-ants-non-geodesic-edge) |
+| Dead branches in the trace-reinforced ant process | [trace-reinforced-ants-dead-branches](https://github.com/yspennstate/trace-reinforced-ants-dead-branches) |
 
 Six more are kept here with their working files:
 

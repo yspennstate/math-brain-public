@@ -1,0 +1,526 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\PP}{\mathbb{P}}
+\newcommand{\EE}{\mathbb{E}}
+\newcommand{\cF}{\mathcal{F}}
+\newcommand{\one}{\mathbf{1}}
+\newcommand{\logit}{\operatorname{logit}}
+
+\title{A non-geodesic edge that survives in the loop-erased ant process}
+\author{Yitzchak Shmalo}
+\date{November 2026}
+
+\begin{document}
+\begin{abstract}
+In the loop-erased ant process of Kious, Mailler and Schapira, ants walk one after another from a nest $N$ to a food
+source $F$ on a finite graph, each ant stepping along an edge with probability proportional to its weight and then
+adding one to the weight of every edge of the loop-erasure of its time-reversed trajectory. It was conjectured that the
+weight of an edge grows linearly exactly when the edge lies on a geodesic from $N$ to $F$. Let $G_\ell$ be the graph
+made of a triangle $N,u,v$ and two paths of $\ell$ edges, one from $u$ to $F$ and one from $v$ to $F$. We prove that on
+$G_\ell$ the normalised weights converge almost surely. The limit is $\rho$ on the edges of the path
+$N,u,\dots,F$, it is $1-\rho$ on the edges of the path $N,v,\dots,F$, and it is $(1-1/\ell)\rho(1-\rho)$ on the edge
+$uv$, where $\rho$ is a non-degenerate random variable with values in $(0,1)$. For $\ell\ge2$ the edge $uv$ lies on no
+geodesic and keeps a positive share of the weight, so the conjecture fails on $G_\ell$, and the proportion of ants that
+reinforce a path which is not a geodesic has a positive limit. For $\ell=1$ the graph is the losange of Kious, Mailler
+and Schapira, the edge $uv$ dies, and the theorem gives for the loop-erased rule the convergence that they proved for
+the uniform-geodesic rule.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+
+\subsection{The process and the conjecture}
+Let $G=(V,E)$ be a finite connected graph with two distinct marked vertices $N$ (the nest) and $F$ (the food). The
+\emph{loop-erased ant process} of Kious, Mailler and Schapira~\cite{KMS} is a sequence of weight vectors
+$W(n)=(W_e(n))_{e\in E}$, $n\ge0$, defined as follows. Initially $W_e(0)=1$ for every edge. Given $W(n)$, the
+$(n+1)$-st ant performs a random walk $X=(X_0,\dots,X_K)$ on $G$ started at $X_0=N$ and stopped at the first time $K$
+at which it reaches $F$; from a vertex $x$ it moves to a neighbour $y$ with probability proportional to
+$W_{\{x,y\}}(n)$. Let $\bar X_j=X_{K-j}$ be the reversed trajectory, and let $\gamma_{n+1}$ be its loop-erasure: the
+path $\gamma(0),\gamma(1),\dots$ with $\gamma(i)=\bar X_{j_i}$, where $j_0=0$ and
+$j_{i+1}=1+\max\{j:\bar X_j=\bar X_{j_i}\}$, stopped when it reaches $N$. This is a simple path from $F$ to $N$, and
+\[
+W_e(n+1)=W_e(n)+\one\{e\in\gamma_{n+1}\},\qquad e\in E .
+\]
+
+\begin{conjecture}[{\cite[Conjecture~1.1(1)]{KMS}}]\label{conj}
+For the loop-erased ant process on any finite graph, almost surely $W_e(n)/n\to\chi_e$ for all $e\in E$, where
+$\chi_e\ne0$ almost surely if and only if the edge $e$ belongs to at least one of the geodesics from $N$ to $F$.
+\end{conjecture}
+
+Kious, Mailler and Schapira prove the conjecture for series-parallel graphs whose source and sink are $N$ and
+$F$~\cite[Theorem~1.3]{KMS}. For the simplest graph outside this class, the losange with vertices $N,u,v,F$ and edges
+$Nu$, $Nv$, $uv$, $uF$, $vF$, they prove the corresponding statement for a second reinforcement rule, the
+uniform-geodesic rule~\cite[Theorem~1.4]{KMS}, and they write that for the loop-erased rule they could not prove
+convergence on the losange, although they believe that the same result holds. The general case is the first open
+problem of the survey~\cite{Aletti}, where the conjecture is stated in the form that the only edges whose weight
+grows linearly are those lying on a geodesic between $N$ and $F$. A variant of the process with two nests is studied
+in~\cite{MV}, and the process in which every edge crossed by the walk is reinforced in~\cite{KMS2}.
+
+\subsection{The result}
+For $\ell\ge1$ let $G_\ell$ be the graph with vertices $N,u,v,F$, $x_1,\dots,x_{\ell-1}$ and $y_1,\dots,y_{\ell-1}$,
+whose edges are $Nu$, $Nv$, $uv$, the edges of the path $u=x_0,x_1,\dots,x_\ell=F$ (the \emph{$u$-leg}) and the edges
+of the path $v=y_0,y_1,\dots,y_\ell=F$ (the \emph{$v$-leg}). We call $uv$ the \emph{rung}. The graph $G_1$ is the
+losange. The distance from $N$ to $F$ is $\ell+1$, and there are two geodesics, $N,u,x_1,\dots,F$ and
+$N,v,y_1,\dots,F$. A path from $N$ to $F$ through the rung has $\ell+2$ edges, so the rung lies on no geodesic.
+
+\begin{theorem}\label{thm:main}
+Let $\ell\ge1$ and consider the loop-erased ant process on $G_\ell$. There is a random variable $\rho$ with values in
+$(0,1)$ such that, almost surely as $n\to\infty$,
+\[
+\frac{W_e(n)}{n}\longrightarrow
+\begin{cases}
+\rho & \text{if $e=Nu$ or $e$ is an edge of the $u$-leg,}\\
+1-\rho & \text{if $e=Nv$ or $e$ is an edge of the $v$-leg,}\\
+\bigl(1-\tfrac1\ell\bigr)\rho(1-\rho) & \text{if $e=uv$.}
+\end{cases}
+\]
+The variables $\rho$ and $1-\rho$ have the same law, and $\rho$ is not almost surely constant.
+\end{theorem}
+
+\begin{corollary}\label{cor:fail}
+Let $\ell\ge2$. On $G_\ell$ the rung lies on no geodesic from $N$ to $F$ and $\chi_{uv}=(1-1/\ell)\rho(1-\rho)>0$
+almost surely, so Conjecture~\ref{conj} fails on $G_\ell$. Moreover the proportion of the first $n$ ants whose
+reinforced path $\gamma_k$ is not a geodesic converges almost surely to $(1-1/\ell)\rho(1-\rho)$, and
+\[
+\PP(\gamma_n\text{ is not a geodesic})\longrightarrow\bigl(1-\tfrac1\ell\bigr)\,\EE[\rho(1-\rho)]>0 .
+\]
+\end{corollary}
+
+\begin{corollary}\label{cor:losange}
+For the loop-erased ant process on the losange, almost surely $W_e(n)/n\to\chi_e$ for every edge $e$, with
+$\chi_{Nu}=\chi_{uF}=1-\chi_{Nv}=1-\chi_{vF}\in(0,1)$ and $\chi_{uv}=0$.
+\end{corollary}
+
+Corollary~\ref{cor:losange} is the case $\ell=1$ of Theorem~\ref{thm:main}; it is the statement
+of~\cite[Theorem~1.4]{KMS} with the loop-erased rule in place of the uniform-geodesic rule, and it agrees with
+Conjecture~\ref{conj}. The smallest graph of the family on which the conjecture fails is $G_2$, which has six vertices
+and seven edges. The half of the conjecture which says that the edges of the geodesics keep a positive share of the
+weight holds on every $G_\ell$.
+
+The proof rests on two facts. The first is classical: the reinforced path of an ant has the law of the path from $N$
+to $F$ in a random spanning tree of the weighted graph (Lemma~\ref{lem:ust}). On $G_\ell$ the spanning trees are easy
+to list, and this gives the law of $\gamma_{n+1}$ given $W(n)$ in closed form (Lemma~\ref{lem:law}). The legs enter
+through the factor $\ell$, the number of places where a leg can be cut: the total weight of the trees whose path from
+$N$ to $F$ uses the rung carries this factor, while the weight of the trees that contain both legs does not, and for
+$\ell\ge2$ this is enough to keep the rung alive. The second fact is an exact martingale (Section~\ref{sec:mart}), which gives the
+convergence of one coordinate of the process and from which the rest follows by elementary arguments.
+
+\section{The law of the reinforced path}
+
+\begin{lemma}\label{lem:ust}
+Let $G$ be a finite connected graph with positive edge weights $(w_e)$ and let $N\ne F$ be two vertices. Let $X$ be
+the weighted random walk started at $N$ and stopped when it reaches $F$, and let $\gamma$ be the loop-erasure of the
+reversed trajectory. Then $\gamma$ has the law of the path between $F$ and $N$ in a random spanning tree $T$ of $G$
+with $\PP(T=t)$ proportional to $\prod_{e\in t}w_e$.
+\end{lemma}
+\begin{proof}
+For a vertex $x\ne N$ visited by the walk let $\sigma_x$ be the first time at which the walk is at $x$, and let
+$p(x)=X_{\sigma_x-1}$. In the reversed trajectory the last visit to a vertex $x$ takes place at time $K-\sigma_x$, and
+the next vertex is $X_{\sigma_x-1}=p(x)$. By the definition of the loop-erasure, $\gamma$ is therefore the path
+$F,p(F),p(p(F)),\dots$, followed until it reaches $N$. Now let the walk continue after time $K$ until it has visited
+every vertex. By the theorem of Aldous and Broder~\cite{Aldous,Broder} (see also~\cite[Chapter~4]{LP}), the edges
+$\{x,p(x)\}$, $x\ne N$, form a spanning tree $T$ with the law in the statement. The path from $F$ to $N$ in $T$ is
+$F,p(F),p(p(F)),\dots$, because the first-visit times decrease along this sequence, and these vertices and their
+first-entrance edges are determined by the walk up to time $K$. Hence this path is $\gamma$.
+\end{proof}
+
+On $G_\ell$ there are four simple paths from $N$ to $F$,
+\begin{align*}
+\pi_1&=(N,u,x_1,\dots,F), & \pi_3&=(N,u,v,y_1,\dots,F),\\
+\pi_2&=(N,v,y_1,\dots,F), & \pi_4&=(N,v,u,x_1,\dots,F).
+\end{align*}
+Each of them contains all the edges of one leg and no edge of the other. Hence in the ant process all the edges of the
+$u$-leg have the same weight at all times, and likewise for the $v$-leg. We write
+\[
+A_n=W_{Nu}(n),\quad B_n=W_{Nv}(n),\quad R_n=W_{uv}(n),
+\]
+and $C_n$, $D_n$ for the common weight of the edges of the $u$-leg and of the $v$-leg. Since every $\pi_i$ contains
+exactly one of $Nu$, $Nv$ and exactly one of the two legs,
+\begin{equation}\label{eq:sum}
+A_n+B_n=C_n+D_n=n+2=:S_n .
+\end{equation}
+
+\begin{lemma}\label{lem:law}
+Give weight $A$ to $Nu$, $B$ to $Nv$, $R$ to $uv$, $C$ to each edge of the $u$-leg and $D$ to each edge of the $v$-leg
+of $G_\ell$. The path from $N$ to $F$ in the random spanning tree of Lemma~\ref{lem:ust} equals $\pi_i$ with
+probability $q_i=m_i/(m_1+m_2+m_3+m_4)$, where
+\[
+m_1=AC(D+\ell B+\ell R),\qquad m_2=BD(C+\ell A+\ell R),\qquad m_3=\ell ARD,\qquad m_4=\ell BRC,
+\]
+and $m_1+m_2+m_3+m_4=CD(A+B)+\ell AB(C+D)+\ell R(A+B)(C+D)$.
+\end{lemma}
+\begin{proof}
+The graph $G_\ell$ consists of three internally disjoint paths between $u$ and $v$: the rung, the path $u,N,v$, and
+the path $u,x_1,\dots,F,\dots,y_1,v$ made of the two legs. It has $2\ell+2$ vertices and $2\ell+3$ edges, and its
+spanning trees are obtained by deleting one edge from each of two of the three paths; there are $2+6\ell$ of them. We
+list them with their weights divided by $C^{\ell-1}D^{\ell-1}$.
+
+Delete the rung and $Nu$: the path is $\pi_2$ and the weight is $BCD$. Delete the rung and $Nv$: $\pi_1$, weight $ACD$.
+Delete the rung and one of the $\ell$ edges of the $u$-leg: $\pi_2$, weight $ABD$ each. Delete the rung and an edge of
+the $v$-leg: $\pi_1$, weight $ABC$ each. Delete $Nu$ and an edge of the $u$-leg: $\pi_2$, weight $BRD$ each. Delete
+$Nu$ and an edge of the $v$-leg: $\pi_4$, weight $BRC$ each. Delete $Nv$ and an edge of the $u$-leg: $\pi_3$, weight
+$ARD$ each. Delete $Nv$ and an edge of the $v$-leg: $\pi_1$, weight $ARC$ each. Summing over the trees with a given
+path gives $m_1,\dots,m_4$.
+\end{proof}
+
+\section{The drift}
+
+Let $\cF_n$ be the $\sigma$-field generated by the first $n$ ants, and put
+\[
+a_n=\frac{A_n}{S_n},\quad b_n=\frac{B_n}{S_n}=1-a_n,\quad c_n=\frac{C_n}{S_n},\quad d_n=\frac{D_n}{S_n}=1-c_n,
+\quad h_n=\frac{R_n}{S_n} .
+\]
+By Lemmas~\ref{lem:ust} and~\ref{lem:law} and by~\eqref{eq:sum}, $\PP(\gamma_{n+1}=\pi_i\mid\cF_n)=q_i(n)$ with
+\begin{equation}\label{eq:q}
+q_1=\frac{ac(\ell b+d+\ell h)}{Q},\quad q_2=\frac{bd(\ell a+c+\ell h)}{Q},\quad q_3=\frac{\ell ahd}{Q},\quad
+q_4=\frac{\ell bhc}{Q},\qquad Q=\ell ab+cd+\ell h,
+\end{equation}
+where $a,b,c,d,h,Q$ are evaluated at time $n$. Note that $0<h_n<1$ and $ab,cd\le\frac14$, so
+\begin{equation}\label{eq:Qbound}
+\ell\,a_nb_n+c_nd_n\le Q_n\le\tfrac{5\ell+1}{4} .
+\end{equation}
+
+\begin{lemma}\label{lem:drift}
+With $g=ad+bc-ab-cd/\ell$,
+\begin{align*}
+\PP(Nu\in\gamma_{n+1}\mid\cF_n)&=q_1+q_3=a+\frac{\ell ab(c-a)}{Q}, &
+\PP(Nv\in\gamma_{n+1}\mid\cF_n)&=b-\frac{\ell ab(c-a)}{Q},\\
+\PP(ux_1\in\gamma_{n+1}\mid\cF_n)&=q_1+q_4=c+\frac{cd(a-c)}{Q}, &
+\PP(vy_1\in\gamma_{n+1}\mid\cF_n)&=d-\frac{cd(a-c)}{Q},\\
+\PP(uv\in\gamma_{n+1}\mid\cF_n)&=q_3+q_4=h+\frac{\ell h(g-h)}{Q}, &&
+\end{align*}
+all quantities on the right being evaluated at time $n$.
+\end{lemma}
+\begin{proof}
+Using $c+d=1$,
+$q_1+q_3-a=a\bigl(\ell bc+cd+\ell hc+\ell hd-\ell ab-cd-\ell h\bigr)/Q=\ell ab(c-a)/Q$. Using $a+b=1$,
+$q_1+q_4-c=c\bigl(\ell ab+ad+\ell ah+\ell bh-\ell ab-cd-\ell h\bigr)/Q=cd(a-c)/Q$. Finally
+$q_3+q_4-h=\ell h\bigl(ad+bc-ab-cd/\ell-h\bigr)/Q$. The two remaining identities follow because $\gamma_{n+1}$
+contains exactly one of $Nu$, $Nv$ and exactly one of the two legs.
+\end{proof}
+
+When $a=c=p$ one has $g=(1-1/\ell)p(1-p)$. The points $a=c=p$, $h=(1-1/\ell)p(1-p)$, $0<p<1$, are thus the zeros of
+the drift with $h>0$ when $\ell\ge2$, and Theorem~\ref{thm:main} says that the process converges to a random one of
+them. When $\ell=1$ one has $g=(a-c)^2$.
+
+\section{Proof of Theorem~\ref{thm:main}}
+
+For an integer $k\ge1$ let $\psi(k)=\sum_{j=1}^{k-1}1/j$, so that $\psi(k+1)-\psi(k)=1/k$. Comparing the sum with the
+integral of $1/x$,
+\begin{equation}\label{eq:psi}
+0\le\psi(k)-\log k\le1,\qquad k\ge1,
+\end{equation}
+and $\psi(k)-\log k$ is non-decreasing in $k$ and converges to Euler's constant. In particular, if $(k_n)$ is a
+non-decreasing sequence of positive integers, then $\psi(k_n)-\log k_n$ converges. We also use the following remark
+several times: if $(k_n)$ is a non-decreasing sequence of positive integers with $k_{n+1}-k_n\in\{0,1\}$, then
+\begin{equation}\label{eq:pi}
+\sum_{n\ge0}\frac{k_{n+1}-k_n}{k_n^2}\le\sum_{j\ge1}\frac1{j^2}=\frac{\pi^2}{6},
+\end{equation}
+because each integer is the value of $k_n$ at no more than one time $n$ with $k_{n+1}=k_n+1$.
+
+\subsection{A martingale}\label{sec:mart}
+Let
+\[
+M_n=\psi(A_n)-\psi(B_n)+\ell\bigl(\psi(C_n)-\psi(D_n)\bigr),\qquad
+r_n=\log\frac{A_n}{B_n}+\ell\log\frac{C_n}{D_n}=\logit a_n+\ell\,\logit c_n,
+\]
+where $\logit x=\log(x/(1-x))$.
+
+\begin{lemma}\label{lem:mart}
+$(M_n)$ is a martingale bounded in $L^2$. Consequently $M_n$ converges almost surely and in $L^2$, $r_n$ converges
+almost surely to a finite limit $r_\infty$, and $r^*:=\sup_n|r_n|<\infty$ almost surely.
+\end{lemma}
+\begin{proof}
+We have $\psi(A_{n+1})-\psi(A_n)=\one\{Nu\in\gamma_{n+1}\}/A_n$, and similarly for $B$, $C$, $D$. By
+Lemma~\ref{lem:drift}, with all quantities at time $n$,
+\begin{align*}
+\EE\bigl[\psi(A_{n+1})-\psi(A_n)\mid\cF_n\bigr]&=\frac{1}{aS}\Bigl(a+\frac{\ell ab(c-a)}{Q}\Bigr)
+=\frac1S\Bigl(1+\frac{\ell b(c-a)}{Q}\Bigr),\\
+\EE\bigl[\psi(B_{n+1})-\psi(B_n)\mid\cF_n\bigr]&=\frac1S\Bigl(1-\frac{\ell a(c-a)}{Q}\Bigr),\\
+\EE\bigl[\psi(C_{n+1})-\psi(C_n)\mid\cF_n\bigr]&=\frac1S\Bigl(1+\frac{d(a-c)}{Q}\Bigr),\\
+\EE\bigl[\psi(D_{n+1})-\psi(D_n)\mid\cF_n\bigr]&=\frac1S\Bigl(1-\frac{c(a-c)}{Q}\Bigr).
+\end{align*}
+Hence
+\[
+\EE[M_{n+1}-M_n\mid\cF_n]=\frac{1}{SQ}\Bigl(\ell(a+b)(c-a)+\ell(c+d)(a-c)\Bigr)=0 .
+\]
+Write $M_{n+1}-M_n=U_n+\ell V_n$, where $U_n$ equals $1/A_n$ or $-1/B_n$ according to whether $\gamma_{n+1}$ contains
+$Nu$ or $Nv$, and $V_n$ equals $1/C_n$ or $-1/D_n$ according to the leg. By~\eqref{eq:pi} applied to $A$, $B$, $C$ and
+$D$, $\sum_nU_n^2\le\pi^2/3$ and $\sum_nV_n^2\le\pi^2/3$, so that $\sum_n(M_{n+1}-M_n)^2\le2(1+\ell^2)\pi^2/3$ surely.
+Since $M_0=0$, it follows that $\EE[M_n^2]\le2(1+\ell^2)\pi^2/3$ for all $n$, and $M_n$ converges almost surely and in
+$L^2$.
+
+Next, $M_n-r_n$ is the sum of the four terms $\pm(\psi(A_n)-\log A_n)$, $\dots$, $\pm\ell(\psi(D_n)-\log D_n)$. Each
+of the sequences $A_n,B_n,C_n,D_n$ is non-decreasing, so each term converges, and by~\eqref{eq:psi}
+$|M_n-r_n|\le1+\ell$. Therefore $r_n$ converges almost surely to a finite limit and $\sup_n|r_n|<\infty$.
+\end{proof}
+
+\subsection{The process stays away from the boundary}
+
+\begin{lemma}\label{lem:away}
+Almost surely there is a (random) $\kappa_0>0$ such that $a_n,b_n,c_n,d_n\ge\kappa_0$ for all $n\ge0$.
+\end{lemma}
+\begin{proof}
+Let $\kappa=(1+e^{r^*/(1+\ell)})^{-1}$, so that $0<\kappa\le\frac12$. We first note that
+\begin{equation}\label{eq:impl}
+a_n<\kappa\quad\Longrightarrow\quad a_n\le c_n .
+\end{equation}
+Indeed, if $a_n>c_n$ then $\logit c_n<\logit a_n$, hence $-r^*\le r_n<(1+\ell)\logit a_n$, which gives $a_n>\kappa$.
+
+Let $Y_n=\psi(A_n)-\log S_n$. By~\eqref{eq:psi}, $Y_n-1\le\log a_n\le Y_n$. Let
+\[
+\Delta_n=\frac{\one\{Nu\in\gamma_{n+1}\}}{A_n}-\frac1{S_n}\Bigl(1+\frac{\ell b_n(c_n-a_n)}{Q_n}\Bigr),\qquad
+\mathcal N_n=\sum_{k<n}\Delta_k .
+\]
+By the first display in the proof of Lemma~\ref{lem:mart}, $(\mathcal N_n)$ is a martingale. Its increments satisfy
+$\EE[\Delta_n^2\mid\cF_n]\le\EE[\one\{Nu\in\gamma_{n+1}\}/A_n^2\mid\cF_n]$, and by~\eqref{eq:pi} the sum over $n$ of the
+expectations of the right-hand side is at most $\pi^2/6$. So $\mathcal N_n$ is bounded in $L^2$, it converges almost
+surely, and $\mathcal N^*:=\sup_n|\mathcal N_n|<\infty$ almost surely. Since $\log(1+1/S_n)\le1/S_n$,
+\begin{equation}\label{eq:Yinc}
+Y_{n+1}-Y_n=\frac{\one\{Nu\in\gamma_{n+1}\}}{A_n}-\log\Bigl(1+\frac1{S_n}\Bigr)
+\ge\Delta_n+\frac{\ell b_n(c_n-a_n)}{Q_nS_n} .
+\end{equation}
+
+Fix $n$ with $a_n<\kappa$, and let $m$ be the last time before $n$ with $a_m\ge\kappa$; it exists because
+$a_0=\frac12\ge\kappa$. For $m<k<n$ we have $a_k<\kappa$, so $a_k\le c_k$ by~\eqref{eq:impl} and the last term
+of~\eqref{eq:Yinc} is non-negative at time $k$. Summing~\eqref{eq:Yinc} over $m<k<n$ gives
+$Y_n\ge Y_{m+1}-2\mathcal N^*$. Moreover $Y_{m+1}\ge Y_m-\log(1+1/S_m)\ge Y_m-\log\frac32$ and
+$Y_m\ge\log a_m\ge\log\kappa$. Hence
+\[
+\log a_n\ge Y_n-1\ge\log\kappa-\log\tfrac32-1-2\mathcal N^* .
+\]
+The same bound holds trivially when $a_n\ge\kappa$. So $\inf_na_n>0$ almost surely.
+
+The map exchanging $u$ with $v$ and $x_i$ with $y_i$ is an automorphism of $G_\ell$ that fixes $N$ and $F$; it
+exchanges $a_n$ with $b_n$ and $c_n$ with $d_n$. Hence $\inf_nb_n>0$ almost surely as well. Finally
+$\ell\,\logit c_n=r_n-\logit a_n$ is bounded, so $c_n$ and $d_n$ are bounded away from $0$.
+\end{proof}
+
+\subsection{The two geodesics}
+
+\begin{lemma}\label{lem:delta}
+Almost surely $a_n-c_n\to0$, and $a_n\to\rho$, $c_n\to\rho$, where $\rho=(1+e^{-r_\infty/(1+\ell)})^{-1}\in(0,1)$.
+\end{lemma}
+\begin{proof}
+Let $\delta_n=a_n-c_n$ and $\xi_{n+1}=\one\{Nu\in\gamma_{n+1}\}-\one\{ux_1\in\gamma_{n+1}\}$. Since
+$a_{n+1}-a_n=(\one\{Nu\in\gamma_{n+1}\}-a_n)/(S_n+1)$ and similarly for $c_n$,
+\[
+\delta_{n+1}-\delta_n=\frac{\xi_{n+1}-\delta_n}{S_n+1},\qquad
+\EE[\xi_{n+1}-\delta_n\mid\cF_n]=-\lambda_n\delta_n,\qquad \lambda_n=\frac{\ell a_nb_n+c_nd_n}{Q_n},
+\]
+by Lemma~\ref{lem:drift}. As $|\xi_{n+1}-\delta_n|\le2$,
+\[
+\EE[\delta_{n+1}^2\mid\cF_n]\le\delta_n^2-\frac{2\lambda_n\delta_n^2}{S_n+1}+\frac{4}{(S_n+1)^2} .
+\]
+By the theorem of Robbins and Siegmund~\cite{RS}, $\delta_n^2$ converges almost surely and
+$\sum_n\lambda_n\delta_n^2/(S_n+1)<\infty$ almost surely. By Lemma~\ref{lem:away} and~\eqref{eq:Qbound},
+$\lambda_n\ge4(\ell+1)\kappa_0^2/(5\ell+1)>0$ for all $n$, and $\sum_n1/(S_n+1)=\infty$; so the limit of $\delta_n^2$
+is $0$.
+
+The numbers $a_n$ and $c_n$ stay in $[\kappa_0,1-\kappa_0]$, on which $\logit$ is uniformly continuous; hence
+$\logit a_n-\logit c_n\to0$, and with Lemma~\ref{lem:mart}, $(1+\ell)\logit a_n\to r_\infty$. This gives the limit
+of $a_n$, and $c_n=a_n-\delta_n$ has the same limit.
+\end{proof}
+
+\subsection{The rung}
+
+\begin{lemma}\label{lem:det}
+Let $(\beta_n)$ be positive numbers with $\beta_n\to0$ and $\sum_n\beta_n=\infty$, let $(g_n)$ be real numbers
+converging to $g^*\ge0$, and let $(\eta_n)$ be a convergent real sequence. Let $(u_n)$ satisfy
+\[
+u_{n+1}-u_n=\beta_n\bigl(g_n-e^{x_n}\bigr),\qquad x_n=u_n+\eta_n,
+\]
+and assume that $|g_n-e^{x_n}|\le2$ for all $n$. Then $e^{x_n}\to g^*$.
+\end{lemma}
+\begin{proof}
+Fix $\theta>g^*$ and $\varepsilon>0$, and choose $n_1$ such that for all $m,n\ge n_1$ we have $g_n\le(g^*+\theta)/2$,
+$2\beta_n\le\varepsilon$ and $|\eta_m-\eta_n|\le\varepsilon$. If $n\ge n_1$ and $x_n>\log\theta$, then
+$u_{n+1}-u_n\le-\beta_n(\theta-g^*)/2$. If this held for all large $n$, then $u_n\to-\infty$ and, $\eta_n$ being
+bounded, $x_n\to-\infty$, which is absurd. So there is $k\ge n_1$ with $x_k\le\log\theta$. Let $n>k$ with
+$x_n>\log\theta$ and let $m$ be the last time before $n$ with $x_m\le\log\theta$, so that $m\ge k$. For $m<j<n$ we
+have $u_{j+1}\le u_j$, hence $u_n\le u_{m+1}\le u_m+2\beta_m\le u_m+\varepsilon$ and
+$x_n\le x_m+2\varepsilon\le\log\theta+2\varepsilon$. Therefore $\limsup_nx_n\le\log\theta+2\varepsilon$, and since
+$\theta>g^*$ and $\varepsilon>0$ are arbitrary, $\limsup_ne^{x_n}\le g^*$. This proves the lemma when $g^*=0$.
+
+If $g^*>0$, fix $0<\theta<g^*$ and $\varepsilon>0$, and choose $n_1$ such that for all $m,n\ge n_1$ we have
+$g_n\ge(g^*+\theta)/2$, $2\beta_n\le\varepsilon$ and $|\eta_m-\eta_n|\le\varepsilon$. If $n\ge n_1$ and
+$x_n<\log\theta$, then $u_{n+1}-u_n\ge\beta_n(g^*-\theta)/2$; this cannot hold for all large $n$, since then
+$x_n\to+\infty$. The same last-exit argument, with the inequalities reversed, gives
+$\liminf_nx_n\ge\log\theta-2\varepsilon$, and so $\liminf_ne^{x_n}\ge g^*$.
+\end{proof}
+
+\begin{lemma}\label{lem:rung}
+Almost surely $h_n\to(1-1/\ell)\rho(1-\rho)$.
+\end{lemma}
+\begin{proof}
+Let $g_n=a_nd_n+b_nc_n-a_nb_n-c_nd_n/\ell$. By Lemma~\ref{lem:delta}, $g_n\to g^*:=(1-1/\ell)\rho(1-\rho)\ge0$.
+Let $Y'_n=\psi(R_n)-\log S_n$. By Lemma~\ref{lem:drift},
+\[
+\EE\bigl[\psi(R_{n+1})-\psi(R_n)\mid\cF_n\bigr]=\frac{1}{h_nS_n}\Bigl(h_n+\frac{\ell h_n(g_n-h_n)}{Q_n}\Bigr)
+=\frac1{S_n}+\beta_n(g_n-h_n),\qquad\beta_n=\frac{\ell}{Q_nS_n} .
+\]
+Let $\Delta'_n=\one\{uv\in\gamma_{n+1}\}/R_n-1/S_n-\beta_n(g_n-h_n)$ and $\mathcal N'_n=\sum_{k<n}\Delta'_k$. As in
+the proof of Lemma~\ref{lem:away}, $(\mathcal N'_n)$ is a martingale bounded in $L^2$, so it converges almost surely.
+With $e_n=1/S_n-\log(1+1/S_n)\in[0,1/(2S_n^2)]$ we get
+\[
+Y'_{n+1}-Y'_n=\Delta'_n+\beta_n(g_n-h_n)+e_n .
+\]
+Put $\varepsilon_n=\psi(R_n)-\log R_n$, which converges because $R_n$ is non-decreasing, and
+\[
+u_n=Y'_0+\sum_{k<n}\beta_k(g_k-h_k),\qquad\eta_n=\mathcal N'_n+\sum_{k<n}e_k-\varepsilon_n .
+\]
+Then $\eta_n$ converges almost surely, $\log h_n=Y'_n-\varepsilon_n=u_n+\eta_n$, and
+$u_{n+1}-u_n=\beta_n(g_n-e^{u_n+\eta_n})$. We have $-\frac12\le g_n\le1$ and $0<h_n<1$, so $|g_n-h_n|\le2$. By
+Lemma~\ref{lem:away} and~\eqref{eq:Qbound}, $(\ell+1)\kappa_0^2\le Q_n\le(5\ell+1)/4$, so $\beta_n\to0$ and
+$\sum_n\beta_n=\infty$. Lemma~\ref{lem:det} gives $h_n\to g^*$.
+\end{proof}
+
+\subsection{End of the proof}
+Since $S_n/n\to1$, Lemmas~\ref{lem:delta} and~\ref{lem:rung} give the limits in Theorem~\ref{thm:main}. The
+automorphism used in the proof of Lemma~\ref{lem:away} exchanges $\rho$ and $1-\rho$, so they have the same law. By
+Lemma~\ref{lem:away} the weights $A_n,B_n,C_n,D_n$ tend to infinity, so the four terms of $M_n-r_n$ in the proof of
+Lemma~\ref{lem:mart} tend to $\pm$ Euler's constant and $\pm\ell$ times Euler's constant and cancel; thus
+$r_\infty=\lim_nM_n$. As $M_n$ converges in $L^2$, $\EE[r_\infty]=0$ and
+$\EE[r_\infty^2]\ge\EE[(M_1-M_0)^2]>0$, since $M_1-M_0=1+\ell$ when $\gamma_1=\pi_1$. So $r_\infty$, and with it
+$\rho$, is not almost surely constant. This proves Theorem~\ref{thm:main}.
+
+\begin{proof}[Proof of Corollary~\ref{cor:fail}]
+The paths $\pi_3$ and $\pi_4$ are the simple paths from $N$ to $F$ that are not geodesics, and they are the ones that
+contain the rung. So the number of $k\le n$ for which $\gamma_k$ is not a geodesic is $R_n-1$, and
+$(R_n-1)/n\to(1-1/\ell)\rho(1-\rho)$ almost surely, which is positive when $\ell\ge2$. By Lemma~\ref{lem:drift},
+$\PP(\gamma_{n+1}\in\{\pi_3,\pi_4\}\mid\cF_n)=h_n+\ell h_n(g_n-h_n)/Q_n$, which converges almost surely to the same
+limit because $Q_n$ is bounded below; the last statement follows by bounded convergence.
+\end{proof}
+
+\section{Simulations}
+
+The program \texttt{sim\_ants.c} runs the process as defined in the introduction: it stores the walk of each ant,
+reverses it, erases the loops in chronological order and adds one to the weights of the edges of the resulting path.
+It makes no use of Lemma~\ref{lem:ust} or Lemma~\ref{lem:law}.
+
+With the weights held fixed, the frequencies of the four paths agree with Lemma~\ref{lem:law}. For $\ell=2$ and
+$(A,B,C,D,R)=(2,3,1,4,2)$, two million ants gave the frequencies $0.15544$, $0.60037$, $0.17762$ and $0.06657$ for
+$\pi_1,\dots,\pi_4$, and Lemma~\ref{lem:law} gives $0.15556$, $0.60000$, $0.17778$ and $0.06667$. For $\ell=3$ and
+the weights $(5,2,3,4,1)$ the frequencies were $0.44208$, $0.38081$, $0.13629$ and $0.04083$, and the lemma gives
+$0.44218$, $0.38095$, $0.13605$ and $0.04082$. The script
+\texttt{check\_path\_law.py} verifies Lemma~\ref{lem:law} symbolically for $\ell\le5$ by listing the spanning trees,
+and verifies the identities of Lemma~\ref{lem:drift}.
+
+Table~\ref{tab:runs} shows the state of the process after $10^8$ ants in independent runs. In every run $a_n$ and
+$c_n$ differ by less than $0.0003$, and for $\ell\ge2$ the value of $h_n$ is close to $(1-1/\ell)a_n(1-a_n)$.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rrcccc}
+\toprule
+$\ell$ & seed & $a_n$ & $c_n$ & $h_n$ & $(1-1/\ell)a_n(1-a_n)$\\
+\midrule
+2 & 1 & 0.38569 & 0.38574 & 0.12126 & 0.11847\\
+2 & 2 & 0.94939 & 0.94938 & 0.02419 & 0.02402\\
+2 & 3 & 0.14083 & 0.14079 & 0.06048 & 0.06050\\
+2 & 4 & 0.31259 & 0.31262 & 0.11194 & 0.10744\\
+2 & 5 & 0.53892 & 0.53897 & 0.12692 & 0.12424\\
+2 & 6 & 0.12526 & 0.12523 & 0.05685 & 0.05478\\
+3 & 1 & 0.64536 & 0.64537 & 0.15316 & 0.15258\\
+3 & 2 & 0.93299 & 0.93305 & 0.04243 & 0.04168\\
+5 & 1 & 0.53274 & 0.53295 & 0.19958 & 0.19914\\
+5 & 2 & 0.41410 & 0.41408 & 0.19433 & 0.19410\\
+10 & 1 & 0.35721 & 0.35711 & 0.20658 & 0.20665\\
+1 & 1 & 0.46134 & 0.46132 & 0.02736 & 0\\
+1 & 2 & 0.91163 & 0.91162 & 0.00766 & 0\\
+\bottomrule
+\end{tabular}
+\caption{The loop-erased ant process on $G_\ell$ after $n=10^8$ ants.}\label{tab:runs}
+\end{table}
+
+The convergence of $h_n$ is slow when $\ell$ is small. Linearising the drift of $h$ at the limit point gives the rate
+$-(1-1/\ell)/2$, which suggests that $h_n-(1-1/\ell)a_n(1-a_n)$ is of order $n^{-(1-1/\ell)/2}$, that is $n^{-1/4}$
+for $\ell=2$. In the run with $\ell=2$ and seed $1$ this difference was $0.0401$, $0.0187$, $0.0090$, $0.0050$,
+$0.0028$ at $n=10^4,\dots,10^8$; the last ratios are $0.56$, and $10^{-1/4}=0.562$. For $\ell=1$ the drift of $h$ is
+$h(\delta^2-h)/Q$ with $\delta=a-c$, so that $1/h_n$ should grow by about $\log10/Q_n$ per decade of $n$. In the run with $\ell=1$ and seed $1$, $h_n$ was
+$0.0519$, $0.0423$, $0.0357$, $0.0311$, $0.0274$ at $n=10^4,\dots,10^8$, so $1/h_n$ grew by between $4.1$ and $4.4$
+per decade, and $\log10/Q_n$ is close to $4.4$ there.
+
+\section{Remarks}
+
+\begin{remark}
+On $G_\ell$ the limit of the rung is a function of the limit $\rho$ of the two geodesics, and all edges of the
+geodesics survive. We do not know which edges survive on a general graph, nor whether the edges of the geodesics
+always do. By Lemma~\ref{lem:ust} the mean drift of the process on any graph is given by the laws of the paths
+between $N$ and $F$ in weighted random spanning trees, and on $G_\ell$ the rung survives because of the weight
+$CD(A+B)$ of the two trees that contain both legs, which is not multiplied by $\ell$ in Lemma~\ref{lem:law}: at
+$a=c=p$ and small $h$ the rung is reinforced at $2\ell/(\ell+1)$ times the rate $h$ at which it is diluted, and this
+ratio exceeds $1$ exactly when $\ell\ge2$.
+\end{remark}
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits program (credit
+530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics, and its
+results were developed with the Brain~\cite{BrainFramework} and Math Brain~\cite{MathBrainRepo}. In October 2026 an AI
+agent connected to the Brain, working from the project's list of open problems in probability, found the graph $G_2$
+and showed that on it the rung keeps a positive share of the weight with positive probability; a Codex agent (OpenAI)
+and a Claude agent (Anthropic) each checked that argument. In November 2026 a Claude Fable agent (Anthropic) found
+Theorem~\ref{thm:main} and its proof, wrote the programs, ran the simulations and prepared the manuscript. These
+checks are not peer review. The author directed the work and is responsible for the content of the paper and for
+decisions concerning its dissemination.
+
+\section*{Code and data availability}
+Programs and outputs:\\
+\url{https://github.com/yspennstate/loop-erased-ants-non-geodesic-edge}.
+
+The paper is part of the Math Brain project, whose public repository is
+\url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\begin{thebibliography}{99}
+\bibitem{Aldous} D.~J.~Aldous, The random walk construction of uniform spanning trees and uniform labelled trees,
+\emph{SIAM J. Discrete Math.} \textbf{3} (1990), 450--465.
+\bibitem{Aletti} G.~Aletti, A.~Collevecchio, I.~Crimaldi, M.~Deijfen, S.~Dereich, A.~Ghiglietti, R.~van der Hofstad,
+M.~Holmes, D.~Kious, V.~Kleptsyn, B.~Lodewijks, P.~M\"orters and B.~Schapira, Open problems in stochastic
+reinforcement models, report of the MATRIX--MFO Tandem Workshop \emph{Stochastic Reinforcement Processes and Graphs},
+March 2023.
+\bibitem{Broder} A.~Broder, Generating random spanning trees, in \emph{30th Annual Symposium on Foundations of Computer
+Science}, IEEE, 1989, 442--447.
+\bibitem{KMS} D.~Kious, C.~Mailler and B.~Schapira, Finding geodesics on graphs using reinforcement learning,
+\emph{Ann. Appl. Probab.} \textbf{32} (2022), no.~5; arXiv:2010.04820.
+\bibitem{KMS2} D.~Kious, C.~Mailler and B.~Schapira, The trace-reinforced ants process does not find shortest paths,
+\emph{J. \'Ec. polytech. Math.} \textbf{9} (2022), 505--536.
+\bibitem{LP} R.~Lyons and Y.~Peres, \emph{Probability on Trees and Networks}, Cambridge University Press, 2016.
+\bibitem{MV} C.~Mailler and Z.~Varin, The two-nest ants process on triangle-series-parallel graphs,
+arXiv:2601.22855.
+\bibitem{RS} H.~Robbins and D.~Siegmund, A convergence theorem for non negative almost supermartingales and some
+applications, in \emph{Optimizing Methods in Statistics}, Academic Press, 1971, 233--257.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public}.
+\end{thebibliography}
+\end{document}
