@@ -69,7 +69,23 @@ the harmonic ray, and with it a formula for $d_\lambda$, recalled in Section~\re
 $d_\lambda>d_0$ for every $\lambda\in(0,m)$, that $d_\lambda\to d_0$ as $\lambda\to0$ and that
 $d_\lambda\to\log m$ as $\lambda\to m$. The comparison of $d_\lambda$ and $d_{\lambda'}$ for
 $0<\lambda<\lambda'<m$ is left open in~\cite{Lin}, and the numerical computations of~\cite{Rousselin} support
-monotonicity.
+monotonicity. To our knowledge these are the only results on the dependence of $d_\lambda$ on $\lambda$.
+Lin~\cite{Lin} also observes that a neighbouring quantity, the mean number of children of the vertices along the
+trajectory of the walk, is not monotone in $\lambda$.
+
+The companion question for the speed of the walk, raised in~\cite{LPP96,LPP97}, is whether the speed on a
+Galton--Watson tree without leaves is nonincreasing in $\lambda$ on $[0,m)$. It has been answered for small
+$\lambda$. Ben Arous, Fribergh and Sidoravicius~\cite{BFS} proved monotonicity when the bias away from the root
+is large enough. A\"{\i}d\'ekon~\cite{Aidekon} gave an explicit formula for the speed, and with it the range was
+extended to $\lambda\le1/2$, a bound due to A\"{\i}d\'ekon and recorded in~\cite{SWX}, and then to
+$\lambda\le k_0/\bigl(1+\sqrt{1-1/k_0}\bigr)$ when $k_0\ge2$ by Song, Wang and Xiang~\cite{SWX}. Mehrdad, Sen and
+Zhu~\cite{MSZ} compare, for large bias, the speeds on two trees whose offspring distributions are stochastically
+ordered. The regularity of the speed in $\lambda$ has been studied as well: Ben Arous, Hu, Olla and
+Zeitouni~\cite{BHOZ} proved, under an exponential moment assumption, the Einstein relation, which gives the derivative of the speed at the critical
+bias $\lambda=m$ in terms of the diffusivity of the critical walk, and Bowditch and Tokushige~\cite{BT} proved that
+the speed is differentiable at every $\lambda$ for which the walk is ballistic and satisfies a central limit
+theorem. All of these monotonicity results concern $\lambda<k_0$, which is also the range of
+Theorem~\ref{thm:main} below.
 
 \begin{theorem}\label{thm:main}
 The function $\lambda\mapsto d_\lambda$ is continuously differentiable on $[0,k_0)$, with the one-sided
@@ -437,6 +453,14 @@ The paper is part of the Math Brain project, whose public repository is
 \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
 
 \begin{thebibliography}{99}
+\bibitem{Aidekon} E.~A\"{\i}d\'ekon, Speed of the biased random walk on a Galton--Watson tree,
+\emph{Probab. Theory Related Fields} \textbf{159} (2014), 597--617.
+\bibitem{BFS} G.~Ben Arous, A.~Fribergh and V.~Sidoravicius, Lyons--Pemantle--Peres monotonicity problem for high
+biases, \emph{Comm. Pure Appl. Math.} \textbf{67} (2014), 519--530.
+\bibitem{BHOZ} G.~Ben Arous, Y.~Hu, S.~Olla and O.~Zeitouni, Einstein relation for biased random walk on
+Galton--Watson trees, \emph{Ann. Inst. Henri Poincar\'e Probab. Stat.} \textbf{49} (2013), 698--721.
+\bibitem{BT} A.~Bowditch and Y.~Tokushige, Differentiability of the speed of biased random walks on
+Galton--Watson trees, \emph{ALEA Lat. Am. J. Probab. Math. Stat.} \textbf{17} (2020), 609--642.
 \bibitem{Lin} S.~Lin, Harmonic measure for biased random walk in a supercritical Galton--Watson tree,
 \emph{Bernoulli} \textbf{25} (2019), 3652--3672.
 \bibitem{Lyons90} R.~Lyons, Random walks and percolation on trees, \emph{Ann. Probab.} \textbf{18} (1990),
@@ -449,8 +473,13 @@ and dimension of harmonic measure, \emph{Ergodic Theory Dynam. Systems} \textbf{
 \emph{Classical and Modern Branching Processes}, IMA Vol. Math. Appl. \textbf{84}, Springer, 1997, 223--237.
 \bibitem{LyonsPeres} R.~Lyons and Y.~Peres, \emph{Probability on Trees and Networks}, Cambridge University Press,
 2016. Question numbers are those of the version on the first author's web page.
+\bibitem{MSZ} B.~Mehrdad, S.~Sen and L.~Zhu, The speed of a biased walk on a Galton--Watson tree without leaves is
+monotonic with respect to progeny distributions for high values of bias, \emph{Ann. Inst. Henri Poincar\'e
+Probab. Stat.} \textbf{51} (2015), 304--318.
 \bibitem{Rousselin} P.~Rousselin, Invariant measures, Hausdorff dimension and dimension drop of some harmonic
 measures on Galton--Watson trees, \emph{Electron. J. Probab.} \textbf{23} (2018), paper no.~46, 1--31.
+\bibitem{SWX} H.~Song, L.~Wang and K.~Xiang, The speed of a biased walk on a Galton--Watson tree without leaves is
+monotonic for low values of bias, \emph{J. Appl. Probab.} \textbf{62} (2025), 1044--1052.
 \bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
 \url{https://github.com/yspennstate/math-brain-public}.
 \bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
