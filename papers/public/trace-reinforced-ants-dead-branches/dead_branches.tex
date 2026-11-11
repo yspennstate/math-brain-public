@@ -59,6 +59,13 @@ There exists a deterministic family $(\chi_e)_{e\in E}$ such that $W_e(n)/n\to\c
 Furthermore, if in addition the distance between $N$ and $F$ is at least $2$, then $\chi_e>0$ for all $e\in E$.
 \end{conjecture}
 
+The first sentence of the conjecture is restated in the list of open problems~\cite[Section~2]{Aletti}. For the
+loop-erased rule of~\cite{KMS0} and for the forward-loop-erased rule of Armfield and Mailler~\cite{AM}, in which an
+ant reinforces the loop-erasure of its trajectory, the question is instead whether the edges which lie on no geodesic
+have normalised weight tending to zero. This is proved in~\cite{KMS0} for series-parallel graphs and in~\cite{AM}
+when $N$ and $F$ are at distance two, and it fails on a graph in which $N$ and $F$ are at distance
+three~\cite{ShmaloLE}.
+
 An edge with an endpoint outside the connected component of $N$ in $G-F$ is never crossed, so the second sentence is
 to be read for graphs in which $G-F$ is connected; we call such triples $(G,N,F)$ \emph{reduced}. The second sentence
 fails for reduced graphs.
@@ -280,7 +287,8 @@ $\mathcal D\neq\emptyset$ is forced as soon as (D1) is non-empty.
 
 We tested the mean-field form of Conjecture~\ref{conj:new} on every connected graph with $3$ to $7$ vertices and
 every ordered pair $(N,F)$ up to automorphism, $22{,}828$ cases in all, of which $20{,}092$ are reduced; in the others the
-never-crossed edges were removed first. For each case the flow $\dot w=p(w)-w$ was integrated from six initial
+never-crossed edges were removed first. The list of graphs is that of the atlas of Read and Wilson~\cite{Atlas}, as
+distributed with NetworkX~\cite{NetworkX}, and the computations use NumPy~\cite{NumPy}. For each case the flow $\dot w=p(w)-w$ was integrated from six initial
 conditions (uniform, log-uniform over six $e$-folds, and concentrated on a random path from $N$ to $F$); coordinates
 that decay were set to zero and the remaining ones were refined by Newton's method, with $p$ evaluated by one linear
 solve per edge.
@@ -392,6 +400,10 @@ The paper is part of the Math Brain project, whose public repository is
 \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
 
 \begin{thebibliography}{99}
+\bibitem{Aletti} G.~Aletti, A.~Collevecchio, I.~Crimaldi, M.~Deijfen, S.~Dereich, A.~Ghiglietti, R.~van der Hofstad,
+M.~Holmes, D.~Kious, V.~Kleptsyn, B.~Lodewijks, P.~M\"orters and B.~Schapira, Open problems in stochastic
+reinforcement models, in \emph{2023 MATRIX Annals}, MATRIX Book Series, Springer, 2025, 477--498.
+\bibitem{AM} W.~Armfield and C.~Mailler, The forward-loop-erased ants walk, arXiv:2610.18453.
 \bibitem{Ben} M.~Bena\"im, Dynamics of stochastic approximation algorithms, in \emph{S\'eminaire de Probabilit\'es
 XXXIII}, Lecture Notes in Math. 1709, Springer, 1999, 1--68.
 \bibitem{Dav} B.~Davis, Reinforced random walk, \emph{Probab. Theory Related Fields} \textbf{84} (1990), 203--229.
@@ -403,11 +415,18 @@ Argentine ant, \emph{J. Insect Behav.} \textbf{3} (1990), 159--168.
 \bibitem{Pem07} R.~Pemantle, A survey of random processes with reinforcement, \emph{Probab. Surv.} \textbf{4}
 (2007), 1--79.
 \bibitem{KMS0} D.~Kious, C.~Mailler and B.~Schapira, Finding geodesics on graphs using reinforcement learning,
-arXiv:2010.04820.
+\emph{Ann. Appl. Probab.} \textbf{32} (2022), no.~5, 3889--3929; arXiv:2010.04820.
 \bibitem{KMS} D.~Kious, C.~Mailler and B.~Schapira, The trace-reinforced ants process does not find shortest paths,
 \emph{J. \'Ec. polytech. Math.} \textbf{9} (2022), 505--536.
 \bibitem{MV} C.~Mailler and Z.~Varin, The two-nest ants process on triangle-series-parallel graphs,
 arXiv:2601.22855.
+\bibitem{NetworkX} A.~A.~Hagberg, D.~A.~Schult and P.~J.~Swart, Exploring network structure, dynamics, and function
+using NetworkX, in \emph{Proceedings of the 7th Python in Science Conference (SciPy 2008)}, 2008, 11--15.
+\bibitem{NumPy} C.~R.~Harris, K.~J.~Millman, S.~J.~van der Walt et al., Array programming with NumPy,
+\emph{Nature} \textbf{585} (2020), 357--362.
+\bibitem{Atlas} R.~C.~Read and R.~J.~Wilson, \emph{An Atlas of Graphs}, Oxford University Press, 1998.
+\bibitem{ShmaloLE} Y.~Shmalo, \emph{A non-geodesic edge that survives in the loop-erased ant process}, 2026,
+\url{https://github.com/yspennstate/loop-erased-ants-non-geodesic-edge}.
 \bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
 \url{https://github.com/yspennstate/math-brain-public}.
 \bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
