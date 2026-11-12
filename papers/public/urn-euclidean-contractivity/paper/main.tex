@@ -39,9 +39,9 @@ Let $R$ be the replacement matrix of a balanced $d$-colour generalized P\'olya u
 \section{Introduction}
 
 \subsection*{Setting}
-A $d$-colour generalized P\'olya urn is a Markov chain $U(n)=(U_0(n),\dots,U_{d-1}(n))\in\mathbb N^d$: at each step a ball is drawn uniformly at random and, if its colour is $i$, the row $R_i$ of an integer replacement matrix $R=(R_{ij})_{0\le i,j\le d-1}$ is added to the composition. We assume throughout that the urn is balanced, $\sum_j R_{ij}=\lambda$ for every $i$, with $\lambda\in\{1,2,\dots\}$, and that the off-diagonal entries of $R$ are nonnegative, as in the classical setting of Athreya and Karlin~\cite{AK} and Janson~\cite{Janson}; only diagonal entries may be negative, subject to the tenability condition of~\cite[p.~2]{NP}. We call $R$ irreducible if the directed graph with an edge $i\to j$ whenever $i\ne j$ and $R_{ij}>0$ is strongly connected. Vectors are row vectors, $T(n)=\sum_i U_i(n)$ is deterministic, and for a tenable urn with irreducible $R$ the normalised composition $\widehat U(n)=U(n)/T(n)$ converges almost surely to the left eigenvector $u$ of $R$ with eigenvalue $\lambda$ and coordinate sum $1$~\cite{AK,Janson}; see~\cite[Theorem~1.1]{NP}.
+A $d$-colour generalized P\'olya urn is a Markov chain $U(n)=(U_0(n),\dots,U_{d-1}(n))\in\mathbb N^d$: at each step a ball is drawn uniformly at random and, if its colour is $i$, the row $R_i$ of an integer replacement matrix $R=(R_{ij})_{0\le i,j\le d-1}$ is added to the composition. We assume throughout that the urn is balanced, $\sum_j R_{ij}=\lambda$ for every $i$, with $\lambda\in\{1,2,\dots\}$, and that the off-diagonal entries of $R$ are nonnegative, as in the classical setting of Athreya and Karlin~\cite{AK} and Janson~\cite{Janson}; only diagonal entries may be negative, subject to the tenability condition of~\cite[p.~2]{NP}. We call $R$ irreducible if the directed graph with an edge $i\to j$ whenever $i\ne j$ and $R_{ij}>0$ is strongly connected. Vectors are row vectors, $T(n)=\sum_i U_i(n)$ is deterministic, and for a tenable urn with irreducible $R$ the normalised composition $\widehat U(n)=U(n)/T(n)$ converges almost surely to the left eigenvector $u$ of $R$ with eigenvalue $\lambda$ and coordinate sum $1$~\cite{AK,Janson}; see~\cite[Theorem~1.1]{NP}. The model goes back to Eggenberger and P\'olya~\cite{EP} and, with a general replacement rule, to Friedman~\cite{Fri}; central limit theorems for generalized urns were proved by Smythe~\cite{Smy} and Bai and Hu~\cite{BH}.
 
-Neri and Pinto~\cite{NP} obtain explicit rates for this convergence, in $L^2$ and almost surely, by viewing the urn as a stochastic approximation scheme with mean field $F(x)=x(R-\lambda I)$. For a symmetric positive semidefinite $d\times d$ matrix $P$ write $\langle x,y\rangle_P=xPy^{\top}$ and $\|x\|_P^2=\langle x,x\rangle_P$. Their Theorem~3.2~\cite[p.~10]{NP} gives rates in $\|\cdot\|_P$ as soon as
+Neri and Pinto~\cite{NP} obtain explicit rates for this convergence, in $L^2$ and almost surely, by viewing the urn as a stochastic approximation scheme with mean field $F(x)=x(R-\lambda I)$; generalized urns were treated as stochastic approximation schemes earlier by Laruelle and Pag\`es~\cite{LP}, and Pemantle~\cite{Pem} and Mahmoud~\cite{Mah} survey urn models. For a symmetric positive semidefinite $d\times d$ matrix $P$ write $\langle x,y\rangle_P=xPy^{\top}$ and $\|x\|_P^2=\langle x,x\rangle_P$. Their Theorem~3.2~\cite[p.~10]{NP} gives rates in $\|\cdot\|_P$ as soon as
 \begin{equation}\label{eq:hyp}
 \big\langle F(\widehat U(n)),\,\widehat U(n)-u\big\rangle_P\le -A\,\|\widehat U(n)-u\|_P^2\qquad(n\ge 0)
 \end{equation}
@@ -318,6 +318,8 @@ Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
 the Israel Science Foundation (grant number 2258/19), and by the Israel
 Science Foundation (ISF Grant 4101/25).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -329,14 +331,29 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code is available at\\ \url{https://github.com/yspennstate/urn-euclidean-contractivity}.
 
-\begin{thebibliography}{9}
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\begin{thebibliography}{99}
 \bibitem{AK} K.~B.~Athreya and S.~Karlin, \emph{Embedding of urn schemes into continuous time Markov branching processes and related limit theorems}, Ann. Math. Statist. \textbf{39} (1968), 1801--1817.
+\bibitem{BH} Z.-D.~Bai and F.~Hu, \emph{Asymptotics in randomized urn models}, Ann. Appl. Probab. \textbf{15} (2005), 914--940.
+\bibitem{EP} F.~Eggenberger and G.~P\'olya, \emph{\"Uber die Statistik verketteter Vorg\"ange}, Z. Angew. Math. Mech. \textbf{3} (1923), 279--289.
+\bibitem{Fri} B.~Friedman, \emph{A simple urn model}, Comm. Pure Appl. Math. \textbf{2} (1949), 59--70.
 \bibitem{Gantmacher} F.~R.~Gantmacher, \emph{The Theory of Matrices}, Vol.~2, Chelsea, New York, 1959.
 \bibitem{HJ} R.~A.~Horn and C.~R.~Johnson, \emph{Matrix Analysis}, 2nd ed., Cambridge University Press, Cambridge, 2013.
 \bibitem{HJTopics} R.~A.~Horn and C.~R.~Johnson, \emph{Topics in Matrix Analysis}, Cambridge University Press, Cambridge, 1991.
 \bibitem{Janson} S.~Janson, \emph{Functional limit theorems for multitype branching processes and generalized P\'olya urns}, Stochastic Process. Appl. \textbf{110} (2004), 177--245.
+\bibitem{LP} S.~Laruelle and G.~Pag\`es, \emph{Randomized urn models revisited using stochastic approximation}, Ann. Appl. Probab. \textbf{23} (2013), 1409--1436.
+\bibitem{Mah} H.~M.~Mahmoud, \emph{P\'olya Urn Models}, CRC Press, Boca Raton, 2008.
 \bibitem{NP} M.~Neri and P.~Pinto, \emph{Quantitative limit theorems for generalized P\'olya urns with applications to random tree models}, arXiv:2607.07309 (2026).
+\bibitem{Smy} R.~T.~Smythe, \emph{Central limit theorems for urn models}, Stochastic Process. Appl. \textbf{65} (1996), 115--137.
 \bibitem{code} Y.~Shmalo, \emph{Code for this paper}, \url{https://github.com/yspennstate/urn-euclidean-contractivity}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
+\bibitem{Pem} R.~Pemantle, \emph{A survey of random processes with reinforcement}, Probab. Surv. \textbf{4} (2007), 1--79.
 \end{thebibliography}
 
 \end{document}

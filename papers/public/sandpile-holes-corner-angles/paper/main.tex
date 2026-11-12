@@ -41,7 +41,7 @@ Fix an integer $H\ge-2$. Place $n$ chips at the origin of $\Z^2$ and a hole of d
 In $\Z^2$, is the limiting shape of $S_{n,H}$ as $n\to\infty$ a regular $(4H+12)$-gon?
 \end{quote}
 
-For $H=-2$ the set $S_{n,-2}$ is a square for every $n$ \cite{FR} (see \cite[Theorem~6.1]{HLMPPW}), in agreement with $4H+12=4$. For $H>-2$ simulations indicate a regular $(4H+12)$-gon with some rounding at the corners; whether the rounded portions of the boundary become negligible in the limit was left open, and so was the existence of a limiting shape \cite[Section~6]{HLMPPW}. Levine and Peres \cite[Theorem~4.1]{LP} (see \cite[Theorem~6.3]{HLMPPW}) showed that $S_{n,H}$ contains a disc and, for $H\ge-1$, lies in a disc, both of radius of order $\sqrt n$ (Theorem~\ref{thm:lp} below); their proof of the outer bound covers $H\ge0$, and Fey, Levine and Peres \cite[Section~3.1]{FLP} supplied the case $H=-1$. For $H=0$, Pegden and Smart \cite{PS} proved that the rescaled odometer and sandpile converge, and Bou-Rabee \cite[Theorem~9.2]{BR} states the corresponding convergence for other constant backgrounds. Neither convergence result is used below. Even for $H=0$ it is not known whether the boundary of the limit is a circle or a polygon \cite[Section~1]{LP}, \cite[Section~1]{PS}.
+For $H=-2$ the set $S_{n,-2}$ is a square for every $n$ \cite{FR} (see \cite[Theorem~6.1]{HLMPPW}), in agreement with $4H+12=4$. For $H>-2$ simulations indicate a regular $(4H+12)$-gon with some rounding at the corners; whether the rounded portions of the boundary become negligible in the limit was left open, and so was the existence of a limiting shape \cite[Section~6]{HLMPPW}. The question is also posed in Levine's thesis \cite{Lev07}. The sandpile model is due to Bak, Tang and Wiesenfeld \cite{BTW87}; for the patterns in its scaling limit see Levine, Pegden and Smart \cite{LPS16}. Levine and Peres \cite[Theorem~4.1]{LP} (see \cite[Theorem~6.3]{HLMPPW}) showed that $S_{n,H}$ contains a disc and, for $H\ge-1$, lies in a disc, both of radius of order $\sqrt n$ (Theorem~\ref{thm:lp} below); their proof of the outer bound covers $H\ge0$, and Fey, Levine and Peres \cite[Section~3.1]{FLP} supplied the case $H=-1$. For $H=0$, Pegden and Smart \cite{PS} proved that the rescaled odometer and sandpile converge, and Bou-Rabee \cite[Theorem~9.2]{BR} states the corresponding convergence for other constant backgrounds. Neither convergence result is used below. Even for $H=0$ it is not known whether the boundary of the limit is a circle or a polygon \cite[Section~1]{LP}, \cite[Section~1]{PS}.
 
 A closed sector with vertex $p\in\R^2$ and opening $\alpha$ is a set $p+\{(t\cos\theta,t\sin\theta):t\ge0,\ |\theta-\theta_0|\le\alpha/2\}$, and $B(p,r)$ is the open disc of radius $r$ about $p$.
 
@@ -93,7 +93,7 @@ For $f\colon\Z^2\to\R$ let $\Delta f(x)=\sum_{y\sim x}(f(y)-f(x))$, where $y\sim
 \]
 A configuration is stable if $\eta\le3$. Firing a site $x$ replaces $\eta$ by $\eta+\Delta\delta_x$: the site loses four chips and each of its neighbours gains one. A firing is legal if $\eta(x)\ge4$ before it. In \cite{FLP} and \cite{LP} a firing is called a toppling.
 
-For $H\ge-2$ the background $-H\le2$ is robust in the sense of \cite{FLP}: for every $n$ some finite sequence of legal firings makes $\eta_0$ stable \cite{FR}, \cite[Section~1]{FLP}. By the abelian property \cite[Lemma~2.1]{FLP} every such sequence fires each site the same number of times, and this number $u(x)$ is the odometer of $\eta_0$ \cite[(2)]{FLP}. The final configuration is $\eta=\eta_0+\Delta u$, and the set of sites that fire is $S=S_{n,H}=\{u>0\}$. We use the following facts:
+For $H\ge-2$ the background $-H\le2$ is robust in the sense of \cite{FLP}: for every $n$ some finite sequence of legal firings makes $\eta_0$ stable \cite{FR}, \cite[Section~1]{FLP}. By the abelian property \cite{Dha90}, \cite[Lemma~2.1]{FLP} every such sequence fires each site the same number of times, and this number $u(x)$ is the odometer of $\eta_0$ \cite[(2)]{FLP}. The final configuration is $\eta=\eta_0+\Delta u$, and the set of sites that fire is $S=S_{n,H}=\{u>0\}$. We use the following facts:
 \begin{equation}\label{eq:heights}
 \eta\le3,\qquad\eta\ge0\ \text{on }S,\qquad\eta\ge-H\ \text{off }S,\qquad\sum_{x}(\eta(x)+H)=n.
 \end{equation}
@@ -278,6 +278,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -289,14 +291,20 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code and the Lean file are available at\\ \url{https://github.com/yspennstate/sandpile-holes-corner-angles}.
 
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \begin{thebibliography}{10}
 
 \bibitem{AS}
 N.~Aleksanyan and H.~Shahgholian, Discrete balayage and boundary sandpile, \emph{J. Anal. Math.} \textbf{138} (2019), 361--403.
 
+\bibitem{BTW87}
+P.~Bak, C.~Tang and K.~Wiesenfeld, Self-organized criticality: an explanation of the $1/f$ noise, \emph{Phys. Rev. Lett.} \textbf{59} (1987), 381--384.
 \bibitem{BR}
 A.~Bou-Rabee, Convergence of the random abelian sandpile, \emph{Ann. Probab.} \textbf{49} (2021), 3168--3196.
 
+\bibitem{Dha90}
+D.~Dhar, Self-organized critical state of sandpile automaton models, \emph{Phys. Rev. Lett.} \textbf{64} (1990), 1613--1616.
 \bibitem{FLP}
 A.~Fey, L.~Levine and Y.~Peres, Growth rates and explosions in sandpiles, \emph{J. Stat. Phys.} \textbf{138} (2010), 143--159.
 
@@ -306,9 +314,14 @@ A.~Fey-den Boer and F.~Redig, Limiting shapes for deterministic centrally seeded
 \bibitem{HLMPPW}
 A.~E.~Holroyd, L.~Levine, K.~M\'esz\'aros, Y.~Peres, J.~Propp and D.~B.~Wilson, Chip-firing and rotor-routing on directed graphs, in \emph{In and Out of Equilibrium~2}, Progr. Probab. \textbf{60}, Birkh\"auser, Basel, 2008, 331--364.
 
+\bibitem{Lev07}
+L.~Levine, \emph{Limit theorems for internal aggregation models}, Ph.D. thesis, University of California, Berkeley, 2007, arXiv:0712.4358.
+
 \bibitem{LBR}
 Y.~Le Borgne and D.~Rossin, On the identity of the sandpile group, \emph{Discrete Math.} \textbf{256} (2002), 775--790.
 
+\bibitem{LPS16}
+L.~Levine, W.~Pegden and C.~K.~Smart, Apollonian structure in the Abelian sandpile, \emph{Geom. Funct. Anal.} \textbf{26} (2016), 306--336.
 \bibitem{LP}
 L.~Levine and Y.~Peres, Strong spherical asymptotics for rotor-router aggregation and the divisible sandpile, \emph{Potential Anal.} \textbf{30} (2009), 1--27.
 
@@ -320,6 +333,12 @@ The mathlib Community, The Lean mathematical library, in \emph{Proceedings of th
 
 \bibitem{PS}
 W.~Pegden and C.~K.~Smart, Convergence of the Abelian sandpile, \emph{Duke Math. J.} \textbf{162} (2013), 627--642.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 \end{document}

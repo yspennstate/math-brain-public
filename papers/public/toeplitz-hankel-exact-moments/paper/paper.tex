@@ -27,6 +27,8 @@ Jerusalem, Givat Ram,}\\[-2pt]
 {\small Jerusalem, Israel}}
 \date{June 10, 2026}
 
+\usepackage{xurl}
+\setlength{\emergencystretch}{3em}
 \begin{document}
 \maketitle
 
@@ -64,10 +66,11 @@ and all moments finite. The random symmetric Toeplitz and Hankel matrices are
 T_n=\big(a_{|i-j|}\big)_{i,j=0}^{n-1},\qquad
 H_n=\big(a_{i+j}\big)_{i,j=0}^{n-1}.
 \]
-Bryc, Dembo and Jiang \cite{BDJ} and Hammond and Miller \cite{HM} proved that the
-empirical spectral distributions of $T_n/\sqrt n$ and $H_n/\sqrt n$ converge weakly,
+Answering a question of Bai \cite{Bai}, Bryc, Dembo and Jiang \cite{BDJ} and
+Hammond and Miller \cite{HM} proved that the empirical spectral distributions of $T_n/\sqrt n$ and $H_n/\sqrt n$ converge weakly,
 almost surely, to nonrandom symmetric probability measures $\gT$, $\gH$ that do not
-depend on the entry law. Both measures have unbounded support; $\gH$ is not unimodal
+depend on the entry law; Bose and Sen \cite{BoseSen} treat both ensembles by a
+unified moment method. Both measures have unbounded support; $\gH$ is not unimodal
 \cite{BDJ}; $\gT$ is absolutely continuous with bounded density \cite{SV1}; the spectral
 norm of $T_n$ obeys $\|T_n\|/\sqrt{2n\log n}\to 0.8288\ldots$ \cite{Meckes,SV2}.
 Identifying $\gT$ or $\gH$ in closed form is a recognized open problem: already the
@@ -79,7 +82,9 @@ formulas for dependent-entry generalizations that include the i.i.d.\ case
 \cite{BoseVish} --- without producing closed forms or explicit higher moments. The
 only explicitly published moment values are
 \[
-m_4(\gT)=\tfrac83,\quad m_6(\gT)=11,\quad m_8(\gT)\ \text{(see below)},\qquad
+m_4(\gT)=\tfrac83,\quad m_6(\gT)=11,\quad m_8(\gT)\ \text{(see below)},
+\]
+\[
 m_4(\gH)=2,\quad m_6(\gH)=\tfrac{11}2,\quad m_8(\gH)=\tfrac{281}{15}.
 \]
 
@@ -102,7 +107,8 @@ count behind the corrected value, in the format of \cite{HM}, together with the
 verifications.
 \item \textbf{A sharp structural theorem}
 (Theorem~\ref{thm:gap}): in both ensembles the polytope volume attached to a pair
-partition equals $1$ exactly when the pairing is non-crossing, and is at most $2/3$
+partition equals $1$ exactly when the pairing is non-crossing (the pairings behind the
+semicircle moments in Wigner's theorem \cite{Wigner}), and is at most $2/3$
 otherwise --- with $2/3$ attained (Toeplitz). This yields explicit upper bounds for
 \emph{all} moments (Corollary~\ref{cor:bound}) and explains the leading structure of
 the moment sequences.
@@ -483,7 +489,7 @@ crossing diagram with non-crossing material preserves its volume).
 \noindent\textbf{Toeplitz.}
 \begin{center}
 \small
-\begin{tabular}{c|l}
+\begin{tabular}{c|p{0.8\textwidth}}
 \toprule
 $2k$ & volume $\times$ number of pairings\\
 \midrule
@@ -505,7 +511,7 @@ Appendix~\ref{app:spectra}).
 \noindent\textbf{Hankel.}
 \begin{center}
 \small
-\begin{tabular}{c|l}
+\begin{tabular}{c|p{0.8\textwidth}}
 \toprule
 $2k$ & volume $\times$ number of pairings\\
 \midrule
@@ -557,7 +563,8 @@ Both decrease strictly from $k=2$ resp.\ $3$ on (consistent with
 Theorem~\ref{thm:gap}); the successive ratios $\delta_k/\delta_{k-1}$ are
 \[
 \text{Toeplitz ($k=2..7$): } .8889,\ .8250,\ .7861,\ .7617,\ .7461,\ .7357,
-\qquad
+\]
+\[
 \text{Hankel ($k=3..7$): } .9167,\ .8515,\ .8058,\ .7744,\ .7532 .
 \]
 
@@ -585,8 +592,8 @@ extrapolate to $\theta\approx0.63$--$0.65$, yielding the \emph{data-driven predi
 \lim_{n\to\infty}\frac{\|H_n\|}{\sqrt{2n\log n}}\ \approx\ 0.56\text{--}0.57 ,
 \]
 for the (open) Hankel norm constant. Direct simulation corroborates the range:
-$\|H_n\|/\sqrt{2n\log n}=0.655,0.657,0.627,0.617$ at $n=10^3,2\!\cdot\!10^3,
-4\!\cdot\!10^3,8\!\cdot\!10^3$, still decreasing --- and the same estimator at
+at $n=10^3$, $2\cdot10^3$, $4\cdot10^3$, $8\cdot10^3$ the ratio
+$\|H_n\|/\sqrt{2n\log n}$ is $0.655$, $0.657$, $0.627$, $0.617$, still decreasing --- and the same estimator at
 $n=4000$ overshoots the \emph{proven} Toeplitz constant by a comparable margin
 ($0.839$ vs.\ $0.8289$), as expected for $\sqrt{\log n}$-type convergence. The
 underlying heuristic --- polynomially many weakly dependent local maxima realize the
@@ -683,6 +690,12 @@ The research presented in this paper was supported by the European Research Coun
 Israel Science Foundation (grant number 2258/19) and by the Israel Science Foundation
 (ISF Grant 4101/25).
 
+\section*{Acknowledgments}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
+\section*{Code and data availability}
+The code and data for this paper are at \url{https://github.com/yspennstate/toeplitz-hankel-exact-moments}. The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \subsection*{Declaration of generative AI and AI-assisted technologies in the
 manuscript preparation process}
 During the preparation of this work the author used generative AI tools (large
@@ -743,7 +756,10 @@ crossing volume again $\tfrac23\times2002$): the full spectrum is machine-readab
 the repository (\texttt{results/volumes\_T14.json}); its sum is
 $m_{14}(\gT)=325719/10$.
 
-\begin{thebibliography}{9}
+\begin{thebibliography}{99}
+\bibitem{Bai} Z.~D.~Bai,
+\emph{Methodologies in spectral analysis of large dimensional random matrices, a review},
+Statist. Sinica \textbf{9} (1999), 611--677.
 \bibitem{BDJ} W.~Bryc, A.~Dembo, T.~Jiang,
 \emph{Spectral measure of large random Hankel, Markov and Toeplitz matrices},
 Ann. Probab. \textbf{34} (2006), 1--38.
@@ -769,6 +785,15 @@ distribution of the random Toeplitz matrix}, Electron. Comm. Probab. \textbf{16}
 matrix and the sine kernel}, Ann. Probab. \textbf{41} (2013), 4050--4079.
 \bibitem{ShmaloPR} Y.~Shmalo, \emph{Extreme least singular values of Gaussian row
 submatrices and a phase retrieval stability problem}, preprint (2026).
+\bibitem{Wigner} E.~P.~Wigner,
+\emph{On the distribution of the roots of certain symmetric matrices},
+Ann. of Math. (2) \textbf{67} (1958), 325--327.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
 \end{thebibliography}
 
 \end{document}

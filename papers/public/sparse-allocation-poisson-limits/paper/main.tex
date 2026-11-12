@@ -315,7 +315,7 @@ For (iv), if $h\ge h_0$ then $N_{[h,\infty)}(x)$ is a function of $F_{h_0}(x)$, 
 \]
 by \cite[Lemma~19.5]{J12}. Both bounds are uniform in $h$, which gives (iv) for every sequence $h(n)$.
 
-For (i), suppose that $n\Pp(\xi^{(n)}\ge h)\to\alpha$ along a subsequence, and let $p_h=\Pp(\xi^{(n)}\ge h)$. If $\alpha<\infty$, then $p_h\to0$, and Le Cam's inequality $\dtv(\Bin(n,p_h),\Po(np_h))\le np_h^2$ \cite{LeC60} shows that $N^\xi_{[h,\infty)}\to\Po(\alpha)$ in distribution; if $\alpha=\infty$, then $N^\xi_{[h,\infty)}\to\infty$ in probability by Chebyshev's inequality. In both cases $\dKt(N^\xi_{[h,\infty)},\Po(\alpha))\to0$ by \cite[Lemma~19.5]{J12}, and (iv) together with the triangle inequality gives $\dKt(N_{[h,\infty)},\Po(\alpha))\to0$, which is (i). The cases $\alpha=0$ and $\alpha=\infty$ of (i) give (ii) and (iii).
+For (i), suppose that $n\Pp(\xi^{(n)}\ge h)\to\alpha$ along a subsequence, and let $p_h=\Pp(\xi^{(n)}\ge h)$. If $\alpha<\infty$, then $p_h\to0$, and Le Cam's inequality $\dtv(\Bin(n,p_h),\Po(np_h))\le np_h^2$ \cite{LeC60} (see also \cite{BHJ92}) shows that $N^\xi_{[h,\infty)}\to\Po(\alpha)$ in distribution; if $\alpha=\infty$, then $N^\xi_{[h,\infty)}\to\infty$ in probability by Chebyshev's inequality. In both cases $\dKt(N^\xi_{[h,\infty)},\Po(\alpha))\to0$ by \cite[Lemma~19.5]{J12}, and (iv) together with the triangle inequality gives $\dKt(N_{[h,\infty)},\Po(\alpha))\to0$, which is (i). The cases $\alpha=0$ and $\alpha=\infty$ of (i) give (ii) and (iii).
 \end{proof}
 
 \begin{lemma}\label{lem:full}
@@ -470,6 +470,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -481,8 +483,12 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code is available at\\ \url{https://github.com/yspennstate/sparse-allocation-poisson-limits}.
 
-\begin{thebibliography}{12}
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
 
+\begin{thebibliography}{13}
+
+\bibitem{BHJ92}
+A.~D.~Barbour, L.~Holst and S.~Janson, \emph{Poisson Approximation}, Oxford University Press, Oxford, 1992.
 \bibitem{CF19}
 A.~Chuprunov and I.~Fazekas, Poisson limit theorems for the generalized allocation scheme, \emph{Annales Univ. Sci. Budapest., Sect. Comp.} \textbf{49} (2019), 77--96.
 
@@ -518,6 +524,12 @@ Y.~Shmalo, The largest box in a sparse random allocation, preprint, 2026, \url{h
 
 \bibitem{S26b}
 Y.~Shmalo, Rare observations under lattice-sum conditioning and joint allocation extremes, preprint, 2026, \url{https://github.com/yspennstate/joint-allocation-extremes}.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 \end{document}

@@ -24,6 +24,7 @@
 \date{September 18, 2026}
 \subjclass[2020]{60C05, 60J80, 05C05}
 \keywords{Random allocation, condensation, simply generated tree, zero-radius weights, largest degree}
+\usepackage{xurl}
 \begin{document}
 \begin{abstract}
 For any fixed nonnegative weight sequence with positive constant term and
@@ -45,14 +46,22 @@ for a universal subsequence-condensation statement.
 
 \section{Introduction}\label{sec:intro}
 Weighted random allocations provide a common framework for occupancy models
-and degree sequences of simply generated trees. The probability of an
+\cite{KSC} and degree sequences of simply generated trees. The probability of an
 allocation is proportional to the product of the weights of its box sizes.
 When the total number of balls is proportional to the number of boxes, a
 basic question is whether one box carries a macroscopic fraction of the
 mass. For irregular weights this question is sensitive to the sizes at
 which the model is observed. Janson's survey \cite{Janson} develops the
 allocation--tree correspondence and formulates several questions about
-such condensation.
+such condensation. When the radius of convergence is positive and the
+density exceeds the mean $\nu$ of the tilted distribution, a fraction
+$\lambda-\nu$ of the mass escapes to boxes of unbounded size
+\cite[Lemma~19.32]{Janson}.
+For weights with power-law decay it collects in a single box; see Jonsson
+and Stef\'ansson \cite{JS} and Kortchemski \cite{Kortchemski} for the
+corresponding nongeneric trees, and Grosskinsky, Sch\"utz and Spohn
+\cite{GSS} for the zero-range process, whose stationary measures are
+allocations of this type.
 
 We consider fixed weights $w_j\ge0$ with $w_0>0$ for which the formal
 generating function $\Phi(z)=\sum_{j\ge0}w_jz^j$ has radius zero. This is
@@ -883,6 +892,8 @@ Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
 the Israel Science Foundation (grant number 2258/19), and by the Israel
 Science Foundation (ISF Grant 4101/25).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -914,6 +925,8 @@ No external empirical dataset is required. The auxiliary computations verify
 finite identities and inequalities; they do not establish the asymptotic
 theorem by exhaustive testing.
 
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \begin{thebibliography}{9}
 \bibitem{Janson}
 S. Janson,
@@ -932,5 +945,29 @@ S. Janson, T. Jonsson and S. \"O. Stef\'ansson,
 \emph{Random trees with superexponential branching weights},
 Journal of Physics A: Mathematical and Theoretical \textbf{44} (2011), 485002.
 \href{https://arxiv.org/abs/1104.2810}{arXiv:1104.2810}.
+\bibitem{GSS}
+S. Grosskinsky, G. M. Sch\"utz and H. Spohn,
+\emph{Condensation in the zero range process: stationary and dynamical
+properties}, Journal of Statistical Physics \textbf{113} (2003), 389--410.
+\href{https://arxiv.org/abs/cond-mat/0302079}{arXiv:cond-mat/0302079}.
+\bibitem{JS}
+T. Jonsson and S. \"O. Stef\'ansson,
+\emph{Condensation in nongeneric trees},
+Journal of Statistical Physics \textbf{142} (2011), 277--313.
+\href{https://arxiv.org/abs/1009.1826}{arXiv:1009.1826}.
+\bibitem{KSC}
+V. F. Kolchin, B. A. Sevast'yanov and V. P. Chistyakov,
+\emph{Random allocations}, V. H. Winston \& Sons, Washington, D.C., 1978.
+\bibitem{Kortchemski}
+I. Kortchemski,
+\emph{Limit theorems for conditioned non-generic Galton--Watson trees},
+Annales de l'Institut Henri Poincar\'e Probabilit\'es et Statistiques
+\textbf{51} (2015), 489--511.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
 \end{thebibliography}
 \end{document}

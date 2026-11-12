@@ -42,11 +42,11 @@ Let $\lambda=(\lambda(t))_{t\in\R}$ be a stationary process with values in $\R$ 
 \[
 \E\varphi\bigl(X(t_1),\dots,X(t_n)\bigr)\le\E\varphi\bigl(Y(t_1),\dots,Y(t_n)\bigr)
 \]
-for all $n\ge1$, all $t_1,\dots,t_n\in\R$ and all supermodular $\varphi\colon\R^n\to\R$ for which both expectations exist; $\varphi$ is supermodular if $\varphi(x\vee y)+\varphi(x\wedge y)\ge\varphi(x)+\varphi(y)$ for all $x,y\in\R^n$. The property studied here is
+for all $n\ge1$, all $t_1,\dots,t_n\in\R$ and all supermodular $\varphi\colon\R^n\to\R$ for which both expectations exist; $\varphi$ is supermodular if $\varphi(x\vee y)+\varphi(x\wedge y)\ge\varphi(x)+\varphi(y)$ for all $x,y\in\R^n$; for the supermodular order see Shaked and Shanthikumar \cite{SS07}. The property studied here is
 \begin{equation}\label{eq:prop}
 c_1\le c_2\quad\Longrightarrow\quad\lambda_{c_1}\ge_\sm\lambda_{c_2}.
 \end{equation}
-Property \eqref{eq:prop} comes from queueing theory. Ross's second conjecture \cite{Ros} concerns a single-server queue whose arrivals form a Cox process with intensity $\lambda_c$ and whose service times are independent and identically distributed and independent of the arrivals; it asserts that the mean stationary workload $w(c)$ is nonincreasing in $c$. B\"auerle and Rolski \cite{BR} showed that \eqref{eq:prop} implies this monotonicity when $\lambda\ge0$, the service times have a finite second moment and the queue is stable. Finite-state chains for which $w(c)$ is not monotone are given in \cite{Shm}.
+Property \eqref{eq:prop} comes from queueing theory. Ross's second conjecture \cite{Ros} concerns a single-server queue whose arrivals form a Cox process with intensity $\lambda_c$ and whose service times are independent and identically distributed and independent of the arrivals; it asserts that the mean stationary workload $w(c)$ is nonincreasing in $c$. Ross \cite{Ros} proved it when the intensity is a two-state chain with one state equal to $0$, and Chang, Chao and Pinedo \cite{CCP} proved it for finite-state chains whose rate of jumping from $i$ to $j\ne i$ depends only on $i$. B\"auerle and Rolski \cite{BR} showed that \eqref{eq:prop} implies this monotonicity when $\lambda\ge0$, the service times have a finite second moment and the queue is stable. Finite-state chains for which $w(c)$ is not monotone are given in \cite{Shm}.
 
 A continuous-time Markov chain on a finite set of reals is \emph{stochastically monotone} if its transition kernel $P_t(x,\cdot)$ is nondecreasing in $x$ in the usual stochastic order for every $t\ge0$. B\"auerle and Rolski \cite{BR} proved \eqref{eq:prop} for every stationary finite-state chain such that both the chain and its time reversal are stochastically monotone. Leskel\"a \cite{Les} remarks that outside stochastically monotone chains little seems to be known, even on three states, and asks (\cite[Problem~3]{Les}; Problem~2 in arXiv:2204.11856):
 
@@ -308,6 +308,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -319,10 +321,15 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code and the Lean file are available at\\ \url{https://github.com/yspennstate/supermodular-speed-ordering}.
 
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \begin{thebibliography}{10}
 
 \bibitem{BR}
 N.~B\"auerle and T.~Rolski, A monotonicity result for the workload in Markov-modulated queues, \emph{J. Appl. Probab.} \textbf{35} (1998), 741--747.
+
+\bibitem{CCP}
+C.-S.~Chang, X.~Chao and M.~Pinedo, Monotonicity results for queues with doubly stochastic Poisson arrivals: Ross's conjecture, \emph{Adv. in Appl. Probab.} \textbf{23} (1991), 210--228.
 
 \bibitem{Dal}
 D.~J.~Daley, Stochastically monotone Markov chains, \emph{Z. Wahrscheinlichkeitstheorie verw. Gebiete} \textbf{10} (1968), 305--317.
@@ -351,11 +358,19 @@ The mathlib Community, The Lean mathematical library, in \emph{Proceedings of th
 \bibitem{Ros}
 S.~M.~Ross, Average delay in queues with non-stationary Poisson arrivals, \emph{J. Appl. Probab.} \textbf{15} (1978), 602--609.
 
+\bibitem{SS07}
+M.~Shaked and J.~G.~Shanthikumar, \emph{Stochastic Orders}, Springer Series in Statistics, Springer, New York, 2007.
 \bibitem{Shm}
 Y.~Shmalo, Finite-state counterexamples to Ross's second queueing conjecture, arXiv:2609.25084 (2026).
 
 \bibitem{Top}
 D.~M.~Topkis, Minimizing a submodular function on a lattice, \emph{Oper. Res.} \textbf{26} (1978), 305--321.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 

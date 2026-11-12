@@ -1,11 +1,9 @@
 # Fitting and choosing radiative-transfer emulators for the retrieval
 
-This folder holds the code, figures and data notes of [rt-emulators-for-retrieval](https://github.com/yspennstate/rt-emulators-for-retrieval). The manuscript and the run records are in that repository.
-
 Manuscript, code and run records for a study of emulators of radiative-transfer codes that are fitted on the code's
 outputs but used through an inverse, the retrieval of surface reflectance from top-of-atmosphere radiance.
 
-[Paper (PDF)](https://github.com/yspennstate/rt-emulators-for-retrieval/blob/main/paper/retrieval_training.pdf) · [LaTeX source](https://github.com/yspennstate/rt-emulators-for-retrieval/blob/main/paper/retrieval_training.tex)
+[Paper (PDF)](paper/retrieval_training.pdf) · [LaTeX source](paper/retrieval_training.tex)
 
 ## Findings
 
