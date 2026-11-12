@@ -60,7 +60,7 @@ We work with the class of two-layer networks of width $m$ with activation $\psi$
 \begin{equation}\label{eq:class}
 \NN_m \;=\;\Bigl\{\,f(x)=\sum_{k=1}^{m}a_k\,\psi(\inn{w_k}{x}+b_k)+\inn{v}{x}+c\;:\;a_k,b_k,c\in\R,\ w_k,v\in\R^d\,\Bigr\}
 \end{equation}
-in the sphere data model (S) of \cite{BLN,paper}: $\mu$ is the uniform probability measure on $\Sd$ with $d\ge3$, the domain is $D=\Sd$, the data $x_1,\dots,x_n$ are i.i.d.\ from $\mu$, and the labels $y_1,\dots,y_n$ are i.i.d.\ uniform on $\{-1,+1\}$, independent of the data --- the pure-noise case $\sigma^2=1$ of \cite{paper}. Unless stated otherwise $\psi=\relu$. Notation, as in \cite{paper}:
+in the sphere data model (S) of \cite{BLN,paper}: $\mu$ is the uniform probability measure on $\Sd$ with $d\ge3$, the domain is $D=\Sd$, the data $x_1,\dots,x_n$ are i.i.d.\ from $\mu$, and the labels $y_1,\dots,y_n$ are i.i.d.\ uniform on $\{-1,+1\}$, independent of the data --- the pure-noise case $\sigma^2=1$ of \cite{paper}. For networks whose weights are polynomially bounded, the conjecture of \cite{BLN} follows from the universal law of robustness of Bubeck and Sellke \cite{BS}; the class \eqref{eq:class} places no bound on the weights. Unless stated otherwise $\psi=\relu$. Notation, as in \cite{paper}:
 \begin{itemize}
 \item $\inn{\cdot}{\cdot}$ and $\|\cdot\|$ are the Euclidean inner product and norm on $\R^d$; $\mathbb S^{d-1}=\{x:\|x\|=1\}$; $B_R=\{x:\|x\|\le R\}$.
 \item $\Lip_D(f)=\sup_{x\ne x'\in D}|f(x)-f(x')|/\|x-x'\|$ is the Euclidean Lipschitz constant of $f$ on a set $D$.
@@ -326,22 +326,56 @@ that incoherence throttles the overlap gain of aimed caps to a constant multiple
 The incoherence hypothesis in Lemma~\ref{lem:stratiso} is necessary in a strong sense. For any pole separation $\rho\in(0,t^\ast)$, take two clusters at separation $\rho$ carrying the same $N=\lfloor t^\ast/(2\rho)\rfloor$ thresholds, evenly spaced in $[0,t^\ast]$, with weights $+\alpha_0$ in one cluster and $-\alpha_0$ in the other. The threshold spacing exceeds the argument gap $|\inn{u_1-u_2}x|\le\rho$, so the two crossing counts differ by at most one, and the gradient $\alpha_0(n_1u_1-n_2u_2)$ has norm at most $\alpha_0(n_2\rho+1)\le\tfrac32\alpha_0$: the network is $2\alpha_0$-Lipschitz. Yet each cluster's profile ramps to $N\alpha_0$, so $\mathrm{TV}(P_c)\ge\alpha_0t^{\ast2}/(4\rho)$: per-cluster rigidity degrades linearly in $1/\rho$, and no polylogarithmic bound can hold for coherent clusters. (Numerically the ratio doubles as $\rho$ halves, with the Lipschitz constant flat.) The remedy is structural rather than analytic: clusters below the coherence floor must be merged and their \emph{total} profile bounded --- the merged profile of this very example has total variation $\le\pi L$ by the argument of Lemma~\ref{lem:staticrig} --- and the isolation lemma then applies between the merged groups.
 \end{remark}
 
-\begin{thebibliography}{9}
+\section*{Acknowledgments and funding}
+The research was supported by the European Research Council under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, Heights Labs, Convex Nexus Capital, and the Israel Science Foundation (grants 2258/19 and 4101/25).
+
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital; both entities supported this work and are named above. These entities and the other sources of support had no role in the design of the study, its analysis, the preparation of the manuscript, or the decision to publish.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The author made substantial use of generative AI tools in this work. The arguments, the numerical checks in the accompanying repository and the drafting of this note were carried out by AI agents working under the author's direction, as described in the acknowledgments. The author set the problem and is responsible for the content of the note.
+
+\section*{Code and data availability}
+{\sloppy The code and data for this note are at \url{https://github.com/yspennstate/law-of-robustness-two-layer}. The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.\par}
+
+\begin{thebibliography}{99}
 
 \bibitem{BLN}
 S.~Bubeck, Y.~Li, and D.~M.~Nagaraj.
 \newblock A law of robustness for two-layers neural networks.
 \newblock In \emph{Proceedings of the 34th Conference on Learning Theory}, Proceedings of Machine Learning Research, vol.~134, pp.~804--820, PMLR, 2021. arXiv:2009.14444.
 
+\bibitem{BS}
+S.~Bubeck and M.~Sellke.
+\newblock A universal law of robustness via isoperimetry.
+\newblock \emph{J.~ACM} \textbf{70} (2023), no.~2, Art.~10. Conference version in \emph{Advances in Neural Information Processing Systems} 34 (2021). arXiv:2105.12806.
+
 \bibitem{paper}
 Y.~Shmalo.
 \newblock A law of robustness for two-layer neural networks with arbitrary weights.
-\newblock 2026. The main paper accompanying this note.
+\newblock Preprint, 2026. arXiv:2607.07778.
 
 \bibitem{Vershynin}
 R.~Vershynin.
 \newblock \emph{High-Dimensional Probability: An Introduction with Applications in Data Science}.
 \newblock Cambridge Series in Statistical and Probabilistic Mathematics, vol.~47, Cambridge University Press, Cambridge, 2018. DOI: 10.1017/9781108231596.
+
+\bibitem{MathBrainRepo}
+Y.~Shmalo.
+\newblock Math Brain: public snapshot, code and tests.
+\newblock 2026. \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper}
+Y.~Shmalo.
+\newblock Math Brain: shared, auditable memory for multi-agent mathematical research.
+\newblock October 2026. \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework}
+Y.~Shmalo.
+\newblock Brain Framework, public software repository.
+\newblock 2026. \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 

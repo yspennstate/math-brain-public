@@ -22,6 +22,7 @@
 \date{10 October 2026}
 \subjclass[2020]{Primary 60J10, 05C81; Secondary 05C35, 05C50}
 \keywords{Kemeny's constant, random walk, effective resistance, extremal graph, barbell graph, Tur\'an graph}
+\usepackage{xurl}
 \begin{document}
 \begin{abstract}
 For simple random walk on a connected simple graph with $n$ vertices, Kemeny's constant is at most $n^3/54+\frac{37}{8}n^{5/2}$. Balanced barbells show that the leading term is sharp, so the maximum of Kemeny's constant over such graphs is asymptotic to $n^3/54$. This proves the Kemeny-constant assertion of Aldous--Fill Open Problem~6.13. Since the relaxation time never exceeds Kemeny's constant, the same bound gives the relaxation-time assertion of that problem, which was proved by Aksoy, Chung, Tait and Tobin. The proof is elementary. It combines the effective-resistance formula for Kemeny's constant with a contraction of the neighbourhoods of high-degree vertices and a two-mass inequality on the edges of a spanning tree. The same argument shows that among $K_{r+1}$-free graphs, and among graphs of chromatic number at most $r$, both maxima equal $(1-1/r)n^3/54+O(n^{5/2})$. In particular the triangle-free and the bipartite constants are $1/108$.
@@ -247,6 +248,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -257,6 +260,8 @@ The argument of Section~\ref{sec:upper} in the case $\gamma=1$ and the lower bou
 
 \section*{Data availability}
 No data were used.
+
+The code and data for this paper are at \url{https://github.com/yspennstate/maximal-kemeny-constant}. The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
 
 \begin{thebibliography}{9}
 \bibitem{AF}
@@ -269,5 +274,11 @@ J.~Breen, S.~Butler, N.~Day, C.~DeArmond, K.~Lorenzen, H.~Qian and J.~Riesen, \e
 N.~Faught, M.~Kempton and A.~Knudson, \emph{A 1-separation formula for the graph Kemeny constant and Braess edges}, J. Math. Chem. \textbf{60} (2022), 49--69. \href{https://doi.org/10.1007/s10910-021-01294-8}{doi:10.1007/s10910-021-01294-8}.
 \bibitem{MS}
 T.~S.~Motzkin and E.~G.~Straus, \emph{Maxima for graphs and a new proof of a theorem of Tur\'an}, Canad. J. Math. \textbf{17} (1965), 533--540. \href{https://doi.org/10.4153/CJM-1965-053-6}{doi:10.4153/CJM-1965-053-6}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
 \end{thebibliography}
 \end{document}

@@ -39,7 +39,7 @@ Let $V$ be a two-sided semi-selfsimilar L\'evy process of index $\alpha\in(0,2)$
 \section{Introduction}
 
 \subsection*{Setting}
-We work in the one-dimensional setting of Shiozawa and Wang~\cite[Sections~4.1 and~5]{SW}. Let $V_+=\{V_+(x)\}_{x\ge0}$ be a real L\'evy process with $V_+(0)=0$, not identically zero, and suppose that there are $c>0$, $c\ne1$, and $\alpha\in(0,2)$ with
+We work in the one-dimensional setting of Shiozawa and Wang~\cite[Sections~4.1 and~5]{SW}; diffusions in a Brownian potential of this kind go back to Brox~\cite{Brox}, as a continuous analogue of Sinai's random walk in a random environment~\cite{Sinai}. Let $V_+=\{V_+(x)\}_{x\ge0}$ be a real L\'evy process with $V_+(0)=0$, not identically zero, and suppose that there are $c>0$, $c\ne1$, and $\alpha\in(0,2)$ with
 \begin{equation}\label{eq:ss}
 \{V_+(cx)\}_{x\ge0}\overset{d}{=}\{c^{1/\alpha}V_+(x)\}_{x\ge0}.
 \end{equation}
@@ -94,7 +94,7 @@ A compactly supported Lipschitz function $f$ lies in $\cF^u$: if $\rho_\epsilon$
 Since the supports are disjoint, $f_nf_m=0$ and $f_n'f_m'=0$ a.e.\ for $n\ne m$, so the $f_n$ are orthogonal both in $L^2(\mu^u)$ and for $\cE^u$. Fix $\varepsilon>0$ and $N$ with $\varepsilon_n<\varepsilon$ for $n\ge N$. Every $g\ne0$ in the span $S$ of $\{f_n\}_{n\ge N}$ satisfies $\cE^u(g,g)<\varepsilon\|g\|^2$. Let $P$ be the spectral projection of $-L^u$ for $[0,\varepsilon]$. If $P$ had finite rank, some $g\ne0$ in the infinite-dimensional space $S$ would be orthogonal to its range; the spectral measure of $g$ would live on $(\varepsilon,\infty)$, giving $\cE^u(g,g)\ge\varepsilon\|g\|^2$, a contradiction. So $P$ has infinite rank. If $\sigma_{\rm ess}(-L^u)\cap[0,\varepsilon]$ were empty, $\sigma(-L^u)\cap[0,\varepsilon]$ would consist of finitely many eigenvalues of finite multiplicity and $P$ would have finite rank. Hence $\essbot^u\le\varepsilon$ for every $\varepsilon>0$.
 \end{proof}
 
-In the rest of this section $X$ is a L\'evy process with $X(0)=0$, L\'evy measure $\nu$, and $\{X(cx)\}_{x\ge0}\overset d=\{c^{1/\alpha}X(x)\}_{x\ge0}$ for some $c\ne1$, $\alpha\in(0,2)$. Replacing $x$ by $x/c$ shows that the same relation holds with $c^{-1}$ in place of $c$, so we take $c>1$.
+In the rest of this section $X$ is a L\'evy process with $X(0)=0$, L\'evy measure $\nu$, and $\{X(cx)\}_{x\ge0}\overset d=\{c^{1/\alpha}X(x)\}_{x\ge0}$ for some $c\ne1$, $\alpha\in(0,2)$; such processes are semi-selfsimilar in the sense of Maejima and Sato~\cite{MS}. Replacing $x$ by $x/c$ shows that the same relation holds with $c^{-1}$ in place of $c$, so we take $c>1$.
 
 \begin{lemma}\label{lem:nu}
 \begin{enumerate}[label=\textup{(\alph*)}]
@@ -208,6 +208,8 @@ Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
 the Israel Science Foundation (grant number 2258/19), and by the Israel
 Science Foundation (ISF Grant 4101/25).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -219,10 +221,21 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code is available at\\ \url{https://github.com/yspennstate/levy-drift-noncompact}.
 
-\begin{thebibliography}{9}
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\begin{thebibliography}{99}
+\bibitem{Brox} T.~Brox, \emph{A one-dimensional diffusion process in a Wiener medium}, Ann.\ Probab.\ \textbf{14} (1986), 1206--1218.
+\bibitem{MS} M.~Maejima and K.~Sato, \emph{Semi-selfsimilar processes}, J.\ Theoret.\ Probab.\ \textbf{12} (1999), 347--373.
 \bibitem{Sato} K.~Sato, \emph{L\'evy Processes and Infinitely Divisible Distributions}, Cambridge Studies in Advanced Mathematics~68, Cambridge University Press, Cambridge, 1999.
 \bibitem{SW} Y.~Shiozawa and J.~Wang, \emph{Essential spectrum for Brox-type diffusion processes}, arXiv:2607.07410 (2026).
 \bibitem{code} Y.~Shmalo, \emph{Code for this paper}, \url{https://github.com/yspennstate/levy-drift-noncompact}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
+\bibitem{Sinai} Ya.~G.~Sinai, \emph{The limiting behavior of a one-dimensional random walk in a random medium}, Theory Probab.\ Appl.\ \textbf{27} (1982), 256--268.
 \end{thebibliography}
 
 \end{document}

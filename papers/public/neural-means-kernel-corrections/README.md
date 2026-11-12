@@ -1,15 +1,13 @@
 # Neural means and kernel corrections for operator learning
 
-This folder holds the code and figures of [neural-means-kernel-corrections](https://github.com/yspennstate/neural-means-kernel-corrections). The manuscript and the run records are in that repository.
-
 Code and paper for a study of neural predictors combined with exact kernel regression on structural mechanics and OCO-2 radiative-transfer emulation. The experiments compare residual kernel corrections, kernel readouts on frozen neural features, and validation-selected combinations. Ensemble identities and finite-design kernel bounds help interpret the measured results.
 
 ## Paper, supplement, and Overleaf sources
 
-- [Main paper](https://github.com/yspennstate/neural-means-kernel-corrections/blob/main/paper/main.pdf): the manuscript in the JMLR submission format, 33 pages.
-- [Supplement](https://github.com/yspennstate/neural-means-kernel-corrections/blob/main/paper/supplement.pdf): complete proofs and additional experiments, 49 pages. Each result with a deferred proof identifies its location here.
-- [Article Overleaf ZIP](https://github.com/yspennstate/neural-means-kernel-corrections/blob/main/releases/nmkc_main_jmlr_overleaf_20260907.zip): the self-contained article project.
-- [Paired Overleaf ZIP](https://github.com/yspennstate/neural-means-kernel-corrections/blob/main/releases/nmkc_overleaf_20260907.zip): the sectioned article sources with the supplement, figures, and both PDFs.
+- [Main paper](paper/main.pdf): the manuscript in the JMLR submission format, 33 pages.
+- [Supplement](paper/supplement.pdf): complete proofs and additional experiments, 49 pages. Each result with a deferred proof identifies its location here.
+- [Article Overleaf ZIP](releases/nmkc_main_jmlr_overleaf_20260907.zip): the self-contained article project.
+- [Paired Overleaf ZIP](releases/nmkc_overleaf_20260907.zip): the sectioned article sources with the supplement, figures, and both PDFs.
 
 Upload the paired ZIP to Overleaf, choose **pdfLaTeX**, and select **main.tex**. The supplied build configuration compiles the companion supplement and resolves references in both directions. Locally:
 
@@ -18,7 +16,7 @@ cd paper
 latexmk -pdf -interaction=nonstopmode -halt-on-error main.tex
 ```
 
-Select `supplement.tex` instead to display that document as the selected output. Keep `main.pdf` and `supplement.pdf` together under those filenames for links between PDFs. See [paper/README.md](https://github.com/yspennstate/neural-means-kernel-corrections/blob/main/paper/README.md) for build details and the figure sources.
+Select `supplement.tex` instead to display that document as the selected output. Keep `main.pdf` and `supplement.pdf` together under those filenames for links between PDFs. See [paper/README.md](paper/README.md) for build details and the figure sources.
 
 ## After-campaign checks
 

@@ -44,12 +44,12 @@ spanning forest measure) on $G$ is the probability measure
 where $Z_G(t)=\sum_F t^{|F|}$. It is the $q\to0$ limit of the random-cluster model with
 edge weight $p/(1-p)=qt$. Kahn \cite{Kahn}, Grimmett and Winkler \cite{GW} and
 Pemantle \cite{Pemantle} asked whether the uniform spanning forest ($t=1$) has
-negatively correlated edges, as uniform spanning trees do; for the arboreal gas at every
+negatively correlated edges, as uniform spanning trees do \cite{BP,FM}; for the arboreal gas at every
 $t>0$ this is Conjecture~1.8 of Bauerschmidt, Crawford, Helmuth and Swan \cite{BCHS}.
-The conjecture is open for general graphs.
+The conjecture is open for general graphs; for series--parallel graphs the uniform spanning forest satisfies the stronger Rayleigh property \cite{Erickson}.
 
 On complete graphs several cases are known. Gupta \cite{Gupta} proved negative
-correlation of distinct edges of the uniform random forest of $K_n$ for every $n$.
+correlation of distinct edges of the uniform random forest of $K_n$ for every $n$, and Cao and Fu \cite{CF} did the same for the complete bipartite graphs $K_{m,n}$. Tang and Zhang \cite{TZ2} proved it on $K_n$ for $n$ large for uniform spanning forests with a fixed number of components.
 Huang \cite{Huang} proved it for adjacent edges at sufficiently large $t$ on any fixed
 graph, and on $K_n$ for $n$ sufficiently large when $t$ is sufficiently small or
 sufficiently large. \c{C}i\c{c}eksiz and Ravichandran \cite{CR} proved negative edge
@@ -409,6 +409,8 @@ graphs, or to unequal edge weights, is not addressed here.
 
 This research was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 
 The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
@@ -424,16 +426,31 @@ that check Theorem~\ref{thm:main} by exhaustive enumeration for $n\le7$, are in 
 repository
 \url{https://github.com/yspennstate/kn-forest-negative-correlation}.
 
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \begin{thebibliography}{9}
 
 \bibitem{BCHS}
 R.~Bauerschmidt, N.~Crawford, T.~Helmuth and A.~Swan, Random spanning forests and
 hyperbolic symmetry, \emph{Comm. Math. Phys.} 381 (2021), 1223--1261.
 
+\bibitem{BP}
+R.~Burton and R.~Pemantle, Local characteristics, entropy and limit theorems for
+spanning trees and domino tilings via transfer-impedances, \emph{Ann. Probab.} 21
+(1993), 1329--1371.
+\bibitem{CF}
+Y.~Cao and H.~Fu, Negative edge correlation in complete bipartite graphs,
+arXiv:2610.36749, 2026.
 \bibitem{CR}
 R.~A.~\c{C}i\c{c}eksiz and M.~Ravichandran, Negative correlation for forests and the
 $q<1$ random-cluster model, arXiv:2610.00549, 2026.
 
+\bibitem{Erickson}
+A.~Erickson, Sums of squares and negative correlation for spanning forests of series
+parallel graphs, arXiv:1008.3660, 2010.
+\bibitem{FM}
+T.~Feder and M.~Mihail, Balanced matroids, in \emph{Proceedings of the 24th Annual ACM
+Symposium on Theory of Computing}, ACM, New York, 1992, 26--38.
 \bibitem{GW}
 G.~R.~Grimmett and S.~N.~Winkler, Negative association in uniform forests and connected
 graphs, \emph{Random Structures Algorithms} 24 (2004), 444--460.
@@ -456,6 +473,15 @@ R.~Pemantle, Towards a theory of negative dependence, \emph{J. Math. Phys.} 41 (
 P.~Tang and Z.~Zhang, Negative correlation for the random-cluster model below one on
 high-degree regular graphs, arXiv:2609.11578, 2026.
 
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
+\bibitem{TZ2}
+P.~Tang and Z.~Zhang, Pairwise negative correlation for uniform spanning subgraphs of
+the complete graph, arXiv:2603.10738, 2026.
 \end{thebibliography}
 
 \end{document}

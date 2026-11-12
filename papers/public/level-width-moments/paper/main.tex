@@ -41,7 +41,7 @@ Let $w=(w_j)_{j\ge0}$ be a sequence of nonnegative weights with $w_0>0$ and $w_j
 
 Let $\Phi(z)=\sum_j w_jz^j$, let $\rho$ be its radius of convergence, let $\Psi(t)=t\Phi'(t)/\Phi(t)$, and let $\nu=\lim_{t\uparrow\rho}\Psi(t)\le\infty$. We assume $\rho>0$, which is equivalent to $\nu>0$. If $\nu\ge1$ let $\tau\in(0,\rho]$ be the solution of $\Psi(\tau)=1$, and if $\nu<1$ let $\tau=\rho$. Then $\pi_j=\tau^jw_j/\Phi(\tau)$ is a probability distribution with mean $\min(\nu,1)$, and $T_n$ has the law of a Galton--Watson tree with offspring distribution $\pi$ conditioned to have $n$ vertices \cite[Section~4]{J12}. Let $\xi$ be a random variable with distribution $\pi$ and let $\sigma^2=\operatorname{Var}\xi\le\infty$. If $\nu>1$ then $\tau<\rho$ and $\xi$ has finite exponential moments; in particular $\sigma^2=\infty$ is possible only when $\nu\le1$.
 
-By \cite[Theorem~7.1]{J12}, $T_n$ converges in distribution, in the topology of local convergence, to an infinite random tree $\hT$. When $\nu\ge1$, the tree $\hT$ is the size-biased Galton--Watson tree of Kesten \cite{Kes86} (see also \cite{LPP95} and \cite[Section~5]{J12}): it has an infinite path from the root, the spine, whose vertices have offspring distribution $\Pp(\hat\xi=j)=j\pi_j$, one child of each spine vertex, chosen uniformly, being the next spine vertex, while all other vertices have offspring distribution $\pi$, everything independent. When $0<\nu<1$, the tree $\hT$ has a vertex of infinite degree.
+By \cite[Theorem~7.1]{J12}, $T_n$ converges in distribution, in the topology of local convergence, to an infinite random tree $\hT$. When $\nu\ge1$, the tree $\hT$ is the size-biased Galton--Watson tree of Kesten \cite{Kes86} (see also \cite{LPP95}, \cite[Section~5]{J12} and Abraham and Delmas \cite{AD14}): it has an infinite path from the root, the spine, whose vertices have offspring distribution $\Pp(\hat\xi=j)=j\pi_j$, one child of each spine vertex, chosen uniformly, being the next spine vertex, while all other vertices have offspring distribution $\pi$, everything independent. When $0<\nu<1$, the tree $\hT$ has a vertex of infinite degree.
 
 For a rooted tree $T$ let $l_k(T)$ be the number of vertices at distance $k$ from the root. Janson \cite[Section~21.1]{J12} showed that $l_k(T_n)\to l_k(\hT)$ in distribution for every $k$; when $\nu\ge1$ the limit is finite, and when $0<\nu<1$ the convergence holds in $[0,\infty]$ and $\Pp(l_k(\hT)<\infty)=\nu^k$. He also showed that $\E\, l_k(T_n)\to\E\, l_k(\hT)\le\infty$ for every $k$; for $\nu\ge1$ and $\sigma^2<\infty$ this rests on the uniform integrability of $l_k(T_n)$, $n\ge1$, see \cite[Section~10]{J06}, and for $\nu>1$ the convergence was shown earlier by Meir and Moon \cite{MM78}. For $r\ge1$, Fatou's lemma gives $\E\, l_k(T_n)^r\to\E\, l_k(\hT)^r=\infty$ when $0<\nu<1$ or $\E\xi^{r+1}=\infty$ \cite[Section~21.1]{J12}. If $r$ is an integer and $\E\xi^{r+1}<\infty$, the moments $\E\, l_k(T_n)^r$ are bounded uniformly in $n$ by \cite[Theorem~1.13]{J06}, so that $\E\, l_k(T_n)^r\to\E\, l_k(\hT)^r$ when $\E\xi^{r+2}<\infty$. Janson conjectured that the $(r+1)$-st moment suffices.\footnote{In the arXiv version of \cite{J12} the conjecture is Conjecture~20.1, and Lemma~15.9, used below, is Lemma~14.9.}
 
@@ -72,7 +72,7 @@ In the remaining case $\nu=1$, $\sigma^2=\infty$, $0<r<1$, $\E\xi^{r+1}<\infty$,
 The proof of Theorem~\ref{thm:main} rests on an explicit formula for the law of the first $k$ generations of $T_n$ (Lemma~\ref{lem:density}), which is a special case of \cite[Lemma~15.9]{J12}, a lemma that Janson uses in the proof of \cite[Theorem~7.1]{J12}. On trees with at least one vertex at distance $k$ from the root, this law has a density $W_n$ with respect to the law of the first $k$ generations of the unconditioned Galton--Watson tree, and $W_n$ converges to the number of vertices at distance $k$. The local limit theorem bounds $W_n$ by a constant times this number as long as the first $k$ generations contain at most half of the vertices, and the event that they contain more is controlled by the moment $\E\xi^{r+1}$.
 
 \begin{remark}\label{rem:adj}
-For integer $r$ the bound of \cite[Theorem~1.13]{J06} is uniform in $k$: if $\E\xi^{r+1}<\infty$ then $\E\, l_k(T_n)^r=O(k^r)$ uniformly in $k\ge1$ and $n\ge1$. Addario-Berry, Devroye and Janson conjectured that this holds for all real $r\ge1$ \cite[Section~1]{ADJ13}. Under its hypotheses, Theorem~\ref{thm:main} implies $\sup_n\E\, l_k(T_n)^r<\infty$ for each $k$ and real $r\ge1$, but the bound given by the proof grows faster than $k^r$, and that conjecture is not addressed here.
+For integer $r$ the bound of \cite[Theorem~1.13]{J06} is uniform in $k$: if $\E\xi^{r+1}<\infty$ then $\E\, l_k(T_n)^r=O(k^r)$ uniformly in $k\ge1$ and $n\ge1$. Addario-Berry, Devroye and Janson conjectured that this holds for all real $r\ge1$ \cite[Section~1]{ADJ13}. At levels $k$ of order $\sqrt n$ the widths $l_k(T_n)$ make up the profile of $T_n$, which after rescaling converges to the local time of a Brownian excursion, as conjectured by Aldous \cite{Ald91} and proved by Drmota and Gittenberger \cite{DG97}. Under its hypotheses, Theorem~\ref{thm:main} implies $\sup_n\E\, l_k(T_n)^r<\infty$ for each $k$ and real $r\ge1$, but the bound given by the proof grows faster than $k^r$, and that conjecture is not addressed here.
 \end{remark}
 
 \section{The first \texorpdfstring{$k$}{k} generations of \texorpdfstring{$T_n$}{Tn}}\label{sec:prelim}
@@ -219,6 +219,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -230,10 +232,21 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code is available at \url{https://github.com/yspennstate/level-width-moments}.
 
-\begin{thebibliography}{9}
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\begin{thebibliography}{99}
+
+\bibitem{AD14}
+R.~Abraham and J.-F.~Delmas, Local limits of conditioned Galton--Watson trees: the infinite spine case, \emph{Electron. J. Probab.} \textbf{19} (2014), no.~2, 1--19.
 
 \bibitem{ADJ13}
 L.~Addario-Berry, L.~Devroye and S.~Janson, Sub-Gaussian tail bounds for the width and height of conditioned Galton--Watson trees, \emph{Ann. Probab.} \textbf{41} (2013), no.~2, 1072--1087.
+
+\bibitem{Ald91}
+D.~Aldous, The continuum random tree. II. An overview, in \emph{Stochastic Analysis (Durham, 1990)}, London Math. Soc. Lecture Note Ser. \textbf{167}, Cambridge Univ. Press, Cambridge, 1991, 23--70.
+
+\bibitem{DG97}
+M.~Drmota and B.~Gittenberger, On the profile of random trees, \emph{Random Structures Algorithms} \textbf{10} (1997), no.~4, 421--451.
 
 \bibitem{Dwa69}
 M.~Dwass, The total progeny in a branching process and a related random walk, \emph{J. Appl. Probab.} \textbf{6} (1969), 682--686.
@@ -255,6 +268,12 @@ R.~Lyons, R.~Pemantle and Y.~Peres, Conceptual proofs of $L\log L$ criteria for 
 
 \bibitem{MM78}
 A.~Meir and J.~W. Moon, On the altitude of nodes in random trees, \emph{Canad. J. Math.} \textbf{30} (1978), 997--1015.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 \end{document}

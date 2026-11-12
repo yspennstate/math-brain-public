@@ -42,4 +42,6 @@ log log n; a matching lower bound is not obtained, and the question stays open o
 - `data/`: outputs of the programs above; `data/sim/` holds, for each run, the values of M_n and of the largest
   hopcount from vertex 1 for every sampled graph, and the histogram of hopcounts over all pairs.
 
+An archived copy of the paper is at https://doi.org/10.5281/zenodo.24143542.
+
 The paper is part of the Math Brain project: https://github.com/yspennstate/math-brain-public

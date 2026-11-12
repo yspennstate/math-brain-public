@@ -46,7 +46,7 @@ p(T,\cdot)=\sum_{|x|=1}\Theta_T(x)\,\delta_{T^x}.
 \]
 A probability measure $\mu$ is $\Theta$-\emph{stationary} if $\mu(A)=\int p(T,A)\,d\mu(T)$ for every Borel set $A$; a Borel set $A$ is \emph{invariant} if $p(T,A)=\one_A(T)$ for $\mu$-a.e.\ $T$; and the chain with initial distribution $\mu$ is \emph{ergodic} if every invariant set has $\mu$-measure $0$ or $1$. For stationary $\mu$ this is equivalent to the ergodicity of the shift on the space of paths of the chain \cite[Corollary~17.3]{LP}.
 
-Let $\GW$ be a Galton--Watson measure on $\T$ whose offspring distribution $(p_k)$ satisfies $p_0=0$ and $p_k<1$ for all $k$, the standing assumption of \cite[Chapter~17]{LP}; then $\GW$-a.e.\ tree is infinite. Proposition~17.17 of \cite{LP} (Proposition~5.2 of \cite{LPP}) states that if $\Theta_T(x)>0$ for $\GW$-a.e.\ $T$ and every $|x|=1$, then the chain with initial distribution $\GW$ is ergodic, and a $\Theta$-stationary measure that is absolutely continuous with respect to $\GW$ is equivalent to $\GW$ and gives an ergodic stationary chain. Lyons and Peres write that they do not know whether the first hypothesis is necessary for the final conclusion, and ask \cite[Question~17.18]{LP}, as in \cite[Section~10, Question~3]{LPP}:
+Let $\GW$ be a Galton--Watson measure on $\T$ whose offspring distribution $(p_k)$ satisfies $p_0=0$ and $p_k<1$ for all $k$, the standing assumption of \cite[Chapter~17]{LP}; then $\GW$-a.e.\ tree is infinite. Proposition~17.17 of \cite{LP} (Proposition~5.2 of \cite{LPP}) states that if $\Theta_T(x)>0$ for $\GW$-a.e.\ $T$ and every $|x|=1$, then the chain with initial distribution $\GW$ is ergodic, and a $\Theta$-stationary measure that is absolutely continuous with respect to $\GW$ is equivalent to $\GW$ and gives an ergodic stationary chain. Rousselin \cite{Ro18} constructs explicit stationary measures for a class of flow rules on Galton--Watson trees whose vertices carry i.i.d.\ marks, and uses them to compute the dimension of harmonic measures. Lyons and Peres write that they do not know whether the first hypothesis is necessary for the final conclusion, and ask \cite[Question~17.18]{LP}, as in \cite[Section~10, Question~3]{LPP}:
 
 \begin{quote}
 If a flow rule has a stationary measure equivalent to $\GW$, must the associated Markov chain be ergodic?
@@ -183,7 +183,7 @@ The proof uses only the following properties of $C$: it is an isomorphism-invari
 \end{remark}
 
 \begin{remark}\label{rem:jps}
-The colour of Lemma~\ref{lem:colour} is the interpretation of the AND/OR automaton that corresponds to its fixed point Bernoulli$(1/2)$, and it is unique up to $\GW$-null sets by \cite[Proposition~1.6]{JPS}. Its existence also follows from \cite[Theorem~1.7]{JPS}, which states that for two colours and an offspring distribution with finite logarithmic moment a fixed point has an interpretation if and only if the associated pivot tree, a multitype Galton--Watson tree, is subcritical or critical. There a vertex is pivotal if changing its colour, and recolouring the vertices above it by the automaton, changes the colour of the root, so that the pivotal children of a pivotal vertex are the children whose change of colour changes the colour of that vertex; for AND and OR such a child has the colour of its parent. Given that a vertex has colour $1$, it has two children of colour $1$, both pivotal, with probability $3/10$, and three children exactly one of which has colour $1$, which is then pivotal, with probability $3/10$; given colour $0$, it has two children of different colours, of which the one with colour $0$ is pivotal, with probability $3/5$, and three children of colour $0$, all pivotal, with probability $1/10$. The mean matrix of the pivot tree is therefore $\mathrm{diag}(9/10,9/10)$, and the tree is subcritical. The number $9/10$ is also the slope at $0$ of the recursion \eqref{eq:rec}. In the language of Aldous and Bandyopadhyay \cite{AB}, Lemma~\ref{lem:colour} says that Bernoulli$(1/2)$ is an endogenous solution of the recursive distributional equation $X\overset{d}{=}f_K(X_1,\dots,X_K)$, and the proof of Lemma~\ref{lem:q}(c) is an instance of their bivariate approach: a coupling of two Bernoulli$(1/2)$ variables is determined by the probability $d$ that they differ, and $d\mapsto d(3-d)^2/10$ has no fixed point in $(0,1]$.
+The colour of Lemma~\ref{lem:colour} is the interpretation of the AND/OR automaton that corresponds to its fixed point Bernoulli$(1/2)$, and it is unique up to $\GW$-null sets by \cite[Proposition~1.6]{JPS}. Its existence also follows from \cite[Theorem~1.7]{JPS}, which states that for two colours and an offspring distribution with finite logarithmic moment a fixed point has an interpretation if and only if the associated pivot tree, a multitype Galton--Watson tree, is subcritical or critical. There a vertex is pivotal if changing its colour, and recolouring the vertices above it by the automaton, changes the colour of the root, so that the pivotal children of a pivotal vertex are the children whose change of colour changes the colour of that vertex; for AND and OR such a child has the colour of its parent. Given that a vertex has colour $1$, it has two children of colour $1$, both pivotal, with probability $3/10$, and three children exactly one of which has colour $1$, which is then pivotal, with probability $3/10$; given colour $0$, it has two children of different colours, of which the one with colour $0$ is pivotal, with probability $3/5$, and three children of colour $0$, all pivotal, with probability $1/10$. The mean matrix of the pivot tree is therefore $\mathrm{diag}(9/10,9/10)$, and the tree is subcritical. The number $9/10$ is also the slope at $0$ of the recursion \eqref{eq:rec}. In the language of Aldous and Bandyopadhyay \cite{AB}, Lemma~\ref{lem:colour} says that Bernoulli$(1/2)$ is an endogenous solution of the recursive distributional equation $X\overset{d}{=}f_K(X_1,\dots,X_K)$, and the proof of Lemma~\ref{lem:q}(c) is an instance of their bivariate approach: a coupling of two Bernoulli$(1/2)$ variables is determined by the probability $d$ that they differ, and $d\mapsto d(3-d)^2/10$ has no fixed point in $(0,1]$. A recursion of the same kind on Galton--Watson trees, in which a position is a win if some child is a loss, is studied by Holroyd and Martin \cite{HM21}.
 \end{remark}
 
 \begin{remark}
@@ -205,6 +205,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -216,11 +218,15 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code and the Lean file are available at\\ \url{https://github.com/yspennstate/nonergodic-galton-watson-flow-rule}.
 
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \begin{thebibliography}{9}
 
 \bibitem{AB}
 D.~J.~Aldous and A.~Bandyopadhyay, A survey of max-type recursive distributional equations, \emph{Ann. Appl. Probab.} \textbf{15} (2005), 1047--1110.
 
+\bibitem{HM21}
+A.~E.~Holroyd and J.~B.~Martin, Galton--Watson games, \emph{Random Structures Algorithms} \textbf{59} (2021), 495--521.
 \bibitem{JPS}
 T.~Johnson, M.~Podder and F.~Skerman, Random tree recursions: which fixed points correspond to tangible sets of trees?, \emph{Random Structures Algorithms} \textbf{56} (2020), 796--837.
 
@@ -230,11 +236,20 @@ R.~Lyons and Y.~Peres, \emph{Probability on Trees and Networks}, Cambridge Serie
 \bibitem{LPP}
 R.~Lyons, R.~Pemantle and Y.~Peres, Ergodic theory on Galton--Watson trees: speed of random walk and dimension of harmonic measure, \emph{Ergodic Theory Dynam. Systems} \textbf{15} (1995), 593--619.
 
+\bibitem{Ro18}
+P.~Rousselin, Invariant measures, Hausdorff dimension and dimension drop of some harmonic measures on Galton--Watson trees, \emph{Electron. J. Probab.} \textbf{23} (2018), 1--31.
+
 \bibitem{MU21}
 L.~de~Moura and S.~Ullrich, The Lean~4 theorem prover and programming language, in \emph{Automated Deduction -- CADE~28}, Lecture Notes in Comput. Sci. \textbf{12699}, Springer, 2021, 625--635.
 
 \bibitem{Mathlib20}
 The mathlib Community, The Lean mathematical library, in \emph{Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (CPP 2020)}, ACM, 2020, 367--381.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 \end{document}

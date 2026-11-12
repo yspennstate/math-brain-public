@@ -37,7 +37,7 @@ Let $G$ be an infinite transitive graph, $\Gamma\le\Aut(G)$ a transitive group a
 
 \section{Introduction}
 
-Let $G=(V,E)$ be a connected, infinite, locally finite, simple graph that is transitive, and let $\Gamma\le\Aut(G)$ act transitively on $V$. For a subgroup $A\le\Gamma$, the \emph{simple quotient graph} $G_A$ has the $A$-orbits as vertices, two distinct orbits $Av$ and $Aw$ being adjacent when some $v'\in Av$ and $w'\in Aw$ are adjacent in $G$ \cite[Sect.~4.2]{GL}. When $A$ is normal in $\Gamma$, the group $\Gamma$ permutes the $A$-orbits and acts on $G_A$ by automorphisms, so $G_A$ is transitive; Grimmett and Li proved strict inequalities for connective constants of such quotients \cite[Thm.~4.2]{GL}, \cite{GL13}. The quotient $G_A$ is defined for non-normal $A$ as well, and Grimmett and Li ask for an example in which the non-normal case is essentially different from the normal one.
+Let $G=(V,E)$ be a connected, infinite, locally finite, simple graph that is transitive, and let $\Gamma\le\Aut(G)$ act transitively on $V$. For a subgroup $A\le\Gamma$, the \emph{simple quotient graph} $G_A$ has the $A$-orbits as vertices, two distinct orbits $Av$ and $Aw$ being adjacent when some $v'\in Av$ and $w'\in Aw$ are adjacent in $G$ \cite[Sect.~4.2]{GL}. When $A$ is normal in $\Gamma$, the group $\Gamma$ permutes the $A$-orbits and acts on $G_A$ by automorphisms, so $G_A$ is transitive; Grimmett and Li proved strict inequalities for connective constants (introduced by Hammersley and Morton \cite{HM54}) of such quotients \cite[Thm.~4.2]{GL}, \cite{GL13}. The quotient $G_A$ is defined for non-normal $A$ as well, and Grimmett and Li ask for an example in which the non-normal case is essentially different from the normal one.
 
 \begin{question}[{\cite[Question~4.5]{GL}}]\label{q:GL}
 Let $\Gamma$ be a subgroup of $\Aut(G)$ acting transitively on $G$. Can there exist a non-normal subgroup $A$ of $\Gamma$ such that: (i) the quotient graph $G_A$ is transitive, and (ii) there exists no normal subgroup $N$ of some transitively acting $\Gamma'$ such that $G_A$ is isomorphic to $G_N$? Might it be relevant to assume that $A$ acts freely on $V$?
@@ -58,7 +58,7 @@ With $\Gamma=\Aut(X)$ and $A=B$, Theorem~\ref{thm:main} gives a positive answer 
 
 The quotient $X_B$ is finite. The question does not ask for an infinite quotient, but in the setting of connective constants, where a finite quotient has connective constant $0$, the interesting version asks for $G_A$ infinite as well. That version is not settled here, and neither is Question~4.6 of \cite{GL}, which asks whether $\mu(G_A)<\mu(G)$ whenever $A$ is a non-trivial subgroup of $\Gamma$ acting freely with $G_A$ transitive.
 
-The construction has two ingredients. The first is the theorem of Leemann and de la Salle \cite{LdS} that a finitely generated group which is not virtually abelian has a Cayley graph of finite degree whose only automorphisms are the left translations; their proof starts from an arbitrary finite generating set and enlarges it, so prescribed edges can be kept. Once the automorphism group is the group itself, acting regularly, normal quotients of $X$ are Cayley graphs of quotient groups, and their number of vertices is an index of a normal subgroup. The second ingredient is a choice of group in which normal subgroups of small index do not exist while non-normal subgroups of index $m$ do: the free product of two copies of a finite group $F$ with a faithful transitive action on $m$ points and no nontrivial homomorphism to a group of order $m$.
+The construction has two ingredients. The first is the theorem of Leemann and de la Salle \cite{LdS} that a finitely generated group which is not virtually abelian has a Cayley graph of finite degree whose only automorphisms are the left translations; their proof starts from an arbitrary finite generating set and enlarges it, so prescribed edges can be kept. Graphical regular representations of free products were studied earlier by Watkins \cite{Wat}, and graphs and digraphs with a prescribed regular automorphism group for infinite groups by Babai \cite{Bab}; for finite groups, those with a graphical regular representation were determined by Godsil \cite{God81} and others. A graph with a group of automorphisms acting regularly on its vertices is a Cayley graph of that group, by Sabidussi \cite{Sab58}. Once the automorphism group is the group itself, acting regularly, normal quotients of $X$ are Cayley graphs of quotient groups, and their number of vertices is an index of a normal subgroup. The second ingredient is a choice of group in which normal subgroups of small index do not exist while non-normal subgroups of index $m$ do: the free product of two copies of a finite group $F$ with a faithful transitive action on $m$ points and no nontrivial homomorphism to a group of order $m$.
 
 \section{Preliminaries}
 
@@ -141,6 +141,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -152,11 +154,24 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code is available at\\ \url{https://github.com/yspennstate/nonnormal-orbit-quotients}.
 
-\begin{thebibliography}{9}
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\begin{thebibliography}{99}
+\bibitem{Bab} L.~Babai, \emph{Infinite digraphs with given regular automorphism groups}, J.\ Combin.\ Theory Ser.\ B \textbf{25} (1978), 26--46.
+\bibitem{God81} C.~D.~Godsil, \emph{GRRs for non-solvable groups}, in: Algebraic Methods in Graph Theory (Szeged, 1978), Colloq.\ Math.\ Soc.\ J\'anos Bolyai \textbf{25}, North-Holland, Amsterdam, 1981, 221--239.
 \bibitem{GL} G.~R.~Grimmett and Z.~Li, \emph{Self-avoiding walks and connective constants}, in: Sojourns in Probability Theory and Statistical Physics -- III, Springer Proc.\ Math.\ Stat.\ \textbf{300}, Springer, Singapore, 2019, pp.~215--241; arXiv:1704.05884v2.
 \bibitem{GL13} G.~R.~Grimmett and Z.~Li, \emph{Strict inequalities for connective constants of transitive graphs}, SIAM J.\ Discrete Math.\ \textbf{28} (2014), 1306--1333; arXiv:1301.3091.
+\bibitem{HM54} J.~M.~Hammersley and K.~W.~Morton, \emph{Poor man's Monte Carlo}, J.\ Roy.\ Statist.\ Soc.\ Ser.\ B \textbf{16} (1954), 23--38.
 \bibitem{LdS} P.-H.~Leemann and M.~de la Salle, \emph{Cayley graphs with few automorphisms: the case of infinite groups}, Ann.\ H.\ Lebesgue \textbf{5} (2022), 73--92; arXiv:2010.06020.
 \bibitem{code} Y.~Shmalo, \emph{Code for this paper}, \url{https://github.com/yspennstate/nonnormal-orbit-quotients}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
+\bibitem{Sab58} G.~Sabidussi, \emph{On a class of fixed-point-free graphs}, Proc.\ Amer.\ Math.\ Soc.\ \textbf{9} (1958), 800--804.
+\bibitem{Wat} M.~E.~Watkins, \emph{Graphical regular representations of free products of groups}, J.\ Combin.\ Theory Ser.\ B \textbf{21} (1976), 47--56.
 \end{thebibliography}
 
 \end{document}

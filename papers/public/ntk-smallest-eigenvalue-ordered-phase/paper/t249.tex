@@ -8,6 +8,7 @@
 \newcommand{\E}{\mathbb{E}}
 \title[The smallest NTK eigenvalue in the ordered phase]{The smallest eigenvalue of the neural tangent kernel of a deep tanh network in the ordered phase}
 \author{Yitzchak Shmalo}
+\usepackage{xurl}
 \begin{document}
 \begin{abstract}
 For a fully connected tanh network of depth $L$ in the infinite-width limit, with weight variance $\sigma_w^2$ and bias
@@ -26,12 +27,12 @@ rate cannot degenerate further.
 \section{Setting and main result}
 Let $\phi=\tanh$. A fully connected network of depth $L$ with weights of variance $\sigma_w^2/n_{\ell}$ and biases of
 variance $\sigma_b^2$ has, in the limit of infinite width, preactivations that are centred Gaussian processes with
-covariance given by the recursion
+covariance given by the recursion of Poole et al.~\cite{poole} and Schoenholz et al.~\cite{sgg}
 \[
 \Sigma_{\ell+1}(x,y)=\sigma_w^2\,\E\big[\phi(u)\phi(v)\big]+\sigma_b^2,\qquad
 (u,v)\sim N\!\Big(0,\begin{pmatrix}\Sigma_\ell(x,x)&\Sigma_\ell(x,y)\\ \Sigma_\ell(x,y)&\Sigma_\ell(y,y)\end{pmatrix}\Big),
 \]
-and the neural tangent kernel satisfies
+and the neural tangent kernel of Jacot, Gabriel and Hongler~\cite{jgh} satisfies
 \[
 \Theta_{\ell+1}(x,y)=\Sigma_{\ell+1}(x,y)+\dot\Sigma_{\ell+1}(x,y)\,\Theta_\ell(x,y),\qquad
 \dot\Sigma_{\ell+1}(x,y)=\sigma_w^2\,\E\big[\phi'(u)\phi'(v)\big].
@@ -70,7 +71,12 @@ rescaled by $L^{-1}\chi_1^{-L}$, converges and that the eigenvalues of $\Theta_L
 $O(L\chi_1^L)$. Theorem~\ref{thm:main} identifies the limit as $\kappa(-A)$ with $\kappa=q^*+BT^*/\chi_1$
 (Section~\ref{sec:ninput}), proves that $-A$ is positive definite on $\mathbf 1^\perp$, so that the order is attained by
 the smallest eigenvalue and not only bounded above (Section~\ref{sec:positive}), and extends the asymptotics to inputs of
-unequal norm (Section~\ref{sec:offnorm}).
+unequal norm (Section~\ref{sec:offnorm}). Hayou, Doucet and Rousseau~\cite{hdr} determined the rates at which the
+neural tangent kernel approaches its infinite-depth limit for general activations and initializations, and Nguyen,
+Mondelli and Mont\'ufar~\cite{nmm} gave tight bounds on its smallest eigenvalue for deep ReLU networks. Bombari,
+Amani and Mondelli~\cite{bam} gave a lower bound on the smallest eigenvalue for deep networks of finite width with
+roughly as many parameters as samples, and Karhadkar, Murray and Mont\'ufar~\cite{kmm} bound it for spherical data of
+any dimension in terms of a measure of the collinearity of the data.
 
 \section{The correlation map and the double root}\label{sec:double}
 Fix two inputs $x,y$ with $q_0(x)=q_0(y)=q^*$, so that $q_\ell=q^*$ at every layer, and write $c_\ell=c_\ell(x,y)$ and
@@ -357,6 +363,8 @@ numerical input.
 
 This research was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 
 The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
@@ -372,13 +380,38 @@ The paper is theoretical. The three scripts that produce the numerical checks of
 \texttt{github.com/yspennstate/ntk-smallest-eigenvalue-ordered-phase}.
 \]
 
-\begin{thebibliography}{9}
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\begin{thebibliography}{99}
+\bibitem{bam} S.~Bombari, M.~H.~Amani and M.~Mondelli, \emph{Memorization and optimization in deep neural networks
+with minimum over-parameterization}, Advances in Neural Information Processing Systems 35 (NeurIPS 2022),
+arXiv:2205.10217.
 \bibitem{cms} D.~Chen, V.~A.~Menegatto and X.~Sun, \emph{A necessary and sufficient condition for strictly positive
 definite functions on spheres}, Proc. Amer. Math. Soc. \textbf{131} (2003), 2733--2740.
+\bibitem{hdr} S.~Hayou, A.~Doucet and J.~Rousseau, \emph{Exact convergence rates of the neural tangent kernel in the
+large depth limit}, preprint, arXiv:1905.13654.
+\bibitem{jgh} A.~Jacot, F.~Gabriel and C.~Hongler, \emph{Neural tangent kernel: convergence and generalization in neural
+networks}, Advances in Neural Information Processing Systems 31 (NeurIPS 2018), 8571--8580, arXiv:1806.07572.
+\bibitem{kmm} K.~Karhadkar, M.~Murray and G.~Mont\'ufar, \emph{Bounds for the smallest eigenvalue of the NTK for
+arbitrary spherical data of arbitrary dimension}, Advances in Neural Information Processing Systems 37 (NeurIPS 2024),
+arXiv:2405.14630.
+\bibitem{nmm} Q.~Nguyen, M.~Mondelli and G.~Mont\'ufar, \emph{Tight bounds on the smallest eigenvalue of the neural
+tangent kernel for deep ReLU networks}, Proc. 38th Int. Conf. Machine Learning (ICML 2021), arXiv:2012.11654.
+\bibitem{poole} B.~Poole, S.~Lahiri, M.~Raghu, J.~Sohl-Dickstein and S.~Ganguli, \emph{Exponential expressivity in deep
+neural networks through transient chaos}, Advances in Neural Information Processing Systems 29 (NIPS 2016),
+arXiv:1606.05340.
+\bibitem{sgg} S.~S.~Schoenholz, J.~Gilmer, S.~Ganguli and J.~Sohl-Dickstein, \emph{Deep information propagation},
+International Conference on Learning Representations (ICLR 2017), arXiv:1611.01232.
 \bibitem{xps} L.~Xiao, J.~Pennington and S.~S.~Schoenholz, \emph{Disentangling trainability and generalization in deep
 neural networks}, Proc. 37th Int. Conf. Machine Learning (ICML 2020), arXiv:1912.13053.
 \bibitem{schoenberg} I.~J.~Schoenberg, \emph{Positive definite functions on spheres}, Duke Math. J. \textbf{9} (1942),
 96--108.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
 \end{thebibliography}
 
 

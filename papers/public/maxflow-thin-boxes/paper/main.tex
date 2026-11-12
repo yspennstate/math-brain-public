@@ -44,6 +44,8 @@ B(N,m)=\{0,\dots,N\}^{d-1}\times\{0,\dots,m\},
 \]
 with bottom face $F_0=\{x\in B(N,m):x_d=0\}$ and top face $F_1=\{x\in B(N,m):x_d=m\}$, and let $\Phi(N,m)$ be the maximal flow from $F_0$ to $F_1$ through the edges with both endpoints in $B(N,m)$, each edge $e$ carrying at most $t(e)$ in either direction. By the max-flow min-cut theorem, $\Phi(N,m)$ is the least total capacity of a set of edges of $B(N,m)$ meeting every path in $B(N,m)$ from $F_0$ to $F_1$. For $d=3$ and the boxes $[0,k]\times[0,l]\times[0,m]$, Kesten~\cite{Ke} proved that $\Phi/(kl)$ converges almost surely and in $L^1$ to a constant when $k\ge l\to\infty$, $m=m(k,l)\to\infty$ with $\log m(k,l)$ at most of order $k^{1-\delta}$ for some $\delta>0$, $G(\{0\})$ is small and $G$ has a finite exponential moment; Zhang~\cite{Zh} extended this to all $d\ge2$ with no restriction on $G(\{0\})$, still under an exponential moment; the limit is positive exactly when $G(\{0\})<1-p_c(d)$. This is Theorem~7.2 of the survey of Auffinger, Damron and Hanson~\cite{ADH}, whose Question~36 reads: \emph{Determine if the limit in (7.2) exists without the exponential moment assumption.}
 
+In dimension two the maximal flow through rectangles goes back to Grimmett and Kesten~\cite{GK84}, and Rossignol and Th\'eret~\cite{RT10b} showed that the limit for rectangles of any orientation depends on the asymptotic ratio of the height to the length of the base. Laws of large numbers for flows through general domains of $\mathbb{R}^d$ are due to Cerf and Th\'eret~\cite{CT11}, and lower large deviations of surface order in tall cylinders to Th\'eret~\cite{Th08}. Upper large deviations are of volume order, in straight and in tilted cylinders~\cite{Th07,Th14}, and Dembin and Th\'eret~\cite{DT21} prove a large deviation principle for maximal streams and the maximal flow through a domain.
+
 Two results bear on the question. For capacities with finite mean and boxes whose base is a fixed rectangle dilated by $N$, Rossignol and Th\'eret~\cite{RT10} proved convergence in $L^1$ for every height $h(N)\to\infty$ with $h(N)/N\to0$. Without any moment condition, assuming only $G(\{+\infty\})<p_c(d)$, Rossignol and Th\'eret~\cite{RT18} defined a finite flow constant $\nu_G$ and proved almost sure convergence of the normalized maximal flow to it for heights with $h(N)/\log N\to\infty$ and $h(N)/N\to0$ \cite[Theorem~2.4]{RT18}. The theorem below shows that the lower bound on the height cannot be dropped in that result, and that the limit in Kesten's theorem can fail once the exponential moment is removed with nothing in its place.
 
 \begin{theorem}\label{thm:main}
@@ -131,6 +133,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -142,13 +146,28 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code is available at\\ \url{https://github.com/yspennstate/maxflow-thin-boxes}.
 
-\begin{thebibliography}{9}
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\begin{thebibliography}{99}
 \bibitem{ADH} A.~Auffinger, M.~Damron and J.~Hanson, \emph{50 Years of First-Passage Percolation}, University Lecture Series~68, American Mathematical Society, Providence, RI, 2017; arXiv:1511.03262.
+\bibitem{CT11} R.~Cerf and M.~Th\'eret, \emph{Law of large numbers for the maximal flow through a domain of $\mathbb{R}^d$ in first passage percolation}, Trans.\ Amer.\ Math.\ Soc.\ \textbf{363} (2011), 3665--3702; arXiv:0907.5504.
+\bibitem{DT21} B.~Dembin and M.~Th\'eret, \emph{Large deviation principle for the streams and the maximal flow in first passage percolation}, arXiv:2010.05526, 2020.
+\bibitem{GK84} G.~Grimmett and H.~Kesten, \emph{First-passage percolation, network flows and electrical resistances}, Z.\ Wahrsch.\ Verw.\ Gebiete \textbf{66} (1984), 335--366.
 \bibitem{Ke} H.~Kesten, \emph{Surfaces with minimal random weights and maximal flows: a higher dimensional version of first-passage percolation}, Illinois J.\ Math.\ \textbf{31} (1987), 99--166.
 \bibitem{RT10} R.~Rossignol and M.~Th\'eret, \emph{Lower large deviations and laws of large numbers for maximal flows through a box in first passage percolation}, Ann.\ Inst.\ Henri Poincar\'e Probab.\ Stat.\ \textbf{46} (2010), 1093--1131; arXiv:0801.0967.
+\bibitem{RT10b} R.~Rossignol and M.~Th\'eret, \emph{Law of large numbers for the maximal flow through tilted cylinders in two-dimensional first passage percolation}, Stochastic Process.\ Appl.\ \textbf{120} (2010), 873--900; arXiv:0907.5112.
 \bibitem{RT18} R.~Rossignol and M.~Th\'eret, \emph{Existence and continuity of the flow constant in first passage percolation}, Electron.\ J.\ Probab.\ \textbf{23} (2018), paper no.~99; arXiv:1707.08766.
+\bibitem{Th07} M.~Th\'eret, \emph{Upper large deviations for the maximal flow in first-passage percolation}, Stochastic Process.\ Appl.\ \textbf{117} (2007), 1208--1233; arXiv:math/0607253.
+\bibitem{Th08} M.~Th\'eret, \emph{On the small maximal flows in first passage percolation}, Ann.\ Fac.\ Sci.\ Toulouse Math.\ (6) \textbf{17} (2008), 207--219; arXiv:math/0607252.
+\bibitem{Th14} M.~Th\'eret, \emph{Upper large deviations for maximal flows through a tilted cylinder}, ESAIM Probab.\ Stat.\ \textbf{18} (2014), 117--129; arXiv:0907.0614.
 \bibitem{Zh} Y.~Zhang, \emph{Limit theorems for maximum flows on a lattice}, Probab.\ Theory Related Fields \textbf{171} (2018), 149--202; arXiv:0710.4589.
 \bibitem{code} Y.~Shmalo, \emph{Code for this paper}, \url{https://github.com/yspennstate/maxflow-thin-boxes}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
 \end{thebibliography}
 
 \end{document}
