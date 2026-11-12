@@ -84,15 +84,27 @@ $S_N^M \neq \emptyset$. Krauth and M\'ezard \cite{krauth1989storage} analyzed
 the Bernoulli-disorder version with the replica method and predicted that $M_N/N$ converges in
 probability to an explicit constant $\alpha_\star \approx 0.83307860$,
 defined below. The prediction has been one of the standard test problems for
-making the cavity method rigorous ever since.
+making the cavity method rigorous ever since. The capacity problem for
+perceptrons goes back to Gardner \cite{gardner1988space} and Gardner and
+Derrida \cite{gardner1988optimal}; for binary couplings their
+replica-symmetric value $4/\pi$ exceeds the first-moment bound $1$, and the
+Krauth--M\'ezard constant is the one-step replica-symmetry-breaking
+correction.
 
-Rigorous progress converged on the constant from both sides. Ding and
+Rigorous progress converged on the constant from both sides. The first
+nontrivial rigorous bounds were obtained by Kim and Roche
+\cite{kim1998covering} and Talagrand \cite{talagrand1999intersecting}. Ding and
 Sun \cite{ding2018capacity} proved
 $\liminf_N \PP(M_N/N \ge \alpha) > 0$ for every $\alpha < \alpha_\star$;
 combined with the sharp-threshold theorem of Nakajima and Sun
 \cite{nakajima2023sharp}, this gives the lower bound with high probability.
 Their general-subgaussian result extends Xu's Bernoulli-model theorem
-\cite{xu2021sharp}; see also \cite{altschuler2024capacity}. Huang
+\cite{xu2021sharp}; see also \cite{altschuler2024capacity}. For the
+symmetric binary perceptron, where the second moment method applies directly,
+the capacity was identified by Aubin, Perkins and Zdeborov\'a
+\cite{aubin2019storage}, and the sharp threshold and frozen one-step
+replica-symmetry-breaking picture were established in
+\cite{perkins2021frozen,abbe2021contiguity}. Huang
 \cite{huang2024capacity} proved
 $\PP(M_N/N \ge \alpha) \to 0$ for every $\alpha > \alpha_\star$. Both
 results are conditional. The Ding--Sun theorem assumes their full
@@ -843,12 +855,19 @@ the interval machinery itself: Arb guarantees the arithmetic, not the
 formulas. All certificates reported here postdate both corrections.
 \end{remark}
 
-\section*{Funding and declarations}
+\section*{Acknowledgements and funding}
 The author acknowledges support from the European Research Council under the
 European Union's Horizon Europe programme (grant 101041711), the Simons
 Foundation, Heights Labs, and Israel Science Foundation grants 2258/19 and
 4101/25.
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
 Most of the work reported here was done by two AI systems: Fable~5
 (Anthropic) and Codex (OpenAI). Fable~5 developed the main mathematical
 architecture---the moment-coordinate reduction, the ray majorants and their
@@ -868,12 +887,54 @@ objective over extended unattended sessions, choosing approaches,
 implementing and running certificates, detecting and repairing errors through
 separate cross-checks, and iterating until the verifications closed. The
 author supervised the runs, reviewed the mathematics, and accepts
-responsibility for the final manuscript. This was not a generic application
-of the AI systems: it is part of a broader research project of the author
-developing methods for how AI systems can be used to resolve open problems
-in mathematics, and these methods will be released in due course.
+responsibility for the final manuscript. The work is part of Math Brain,
+the author's project on methods for using AI systems to resolve open problems
+in mathematics~\cite{MathBrainPaper}.
 
-\begin{thebibliography}{9}
+\section*{Data availability}
+No data were used. The verification programs, certificates and raw records
+are available at\\ \url{https://github.com/yspennstate/ising-perceptron-capacity}~\cite{repo}.
+
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\begin{thebibliography}{99}
+
+\bibitem{gardner1988space}
+E.~Gardner,
+The space of interactions in neural network models,
+J. Phys. A \textbf{21} (1988), 257--270.
+
+\bibitem{gardner1988optimal}
+E.~Gardner and B.~Derrida,
+Optimal storage properties of neural network models,
+J. Phys. A \textbf{21} (1988), 271--284.
+
+\bibitem{kim1998covering}
+J.~H.~Kim and J.~R.~Roche,
+Covering cubes by random half cubes, with applications to binary neural
+networks,
+J. Comput. System Sci. \textbf{56} (1998), 223--252.
+
+\bibitem{talagrand1999intersecting}
+M.~Talagrand,
+Intersecting random half cubes,
+Random Structures Algorithms \textbf{15} (1999), 436--449.
+
+\bibitem{aubin2019storage}
+B.~Aubin, W.~Perkins and L.~Zdeborov\'a,
+Storage capacity in symmetric binary perceptrons,
+J. Phys. A \textbf{52} (2019), 294003.
+
+\bibitem{perkins2021frozen}
+W.~Perkins and C.~Xu,
+Frozen 1-RSB structure of the symmetric Ising perceptron,
+STOC 2021; arXiv:2102.05163.
+
+\bibitem{abbe2021contiguity}
+E.~Abbe, S.~Li and A.~Sly,
+Proof of the contiguity conjecture and lognormal limit for the symmetric
+perceptron,
+FOCS 2021; arXiv:2102.13069.
 
 \bibitem{krauth1989storage}
 W.~Krauth and M.~M\'ezard,
@@ -911,6 +972,21 @@ arXiv:2401.15092.
 Y.~Shmalo,
 Verification programs, canonical certificates, and raw records for this paper,
 \url{https://github.com/yspennstate/ising-perceptron-capacity}, 2026.
+
+\bibitem{MathBrainRepo}
+Y.~Shmalo,
+Math Brain: public snapshot, code and tests, 2026,
+\url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper}
+Y.~Shmalo,
+Math Brain: shared, auditable memory for multi-agent mathematical research, 2026,
+\url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework}
+Y.~Shmalo,
+Brain Framework, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 
