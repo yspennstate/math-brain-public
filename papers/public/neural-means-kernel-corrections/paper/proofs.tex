@@ -1,0 +1,666 @@
+\subsection{Proof of Proposition~\ref{prop:sym}}
+\label{proof:prop:sym}
+
+By convexity of $\ell(\cdot,v)$,
+\[
+\ell\big(\widehat G_S(u),G(u)\big)\;\le\;\tfrac12\,\ell\big(\widehat
+G(u),G(u)\big)+\tfrac12\,\ell\big(T\widehat G(Su),G(u)\big).
+\]
+Since $T$ is an involution, the equivariance $G(Su)=TG(u)$ applied at $u$
+gives $TG(Su)=T^2G(u)=G(u)$, hence
+\[
+\ell\big(T\widehat G(Su),G(u)\big)=\ell\big(T\widehat G(Su),TG(Su)\big)
+=\ell\big(\widehat G(Su),G(Su)\big),
+\]
+using the $T$-invariance of the loss. Taking expectations and using the
+$S$-invariance of $\mu$ (so that $Su\sim\mu$ when $u\sim\mu$),
+\[
+\mathbb E\,\ell\big(\widehat G_S(u),G(u)\big)\le\tfrac12\,\mathbb
+E\,\ell\big(\widehat G(u),G(u)\big)+\tfrac12\,\mathbb E\,\ell\big(\widehat
+G(Su),G(Su)\big)=\mathbb E\,\ell\big(\widehat G(u),G(u)\big). \qed
+\]
+
+\subsection{Proof of Proposition~\ref{prop:kf}}
+\label{proof:prop:kf}
+
+Strict positive definiteness of the restricted kernel matrix makes $I_C$ the
+(unique) interpolant of the pairs indexed by $C$, so $I_C(z_j)=v_j$ for $j\in
+C$ and the terms of \eqref{eq:kf} indexed by $C$ vanish, which is the first
+claim. For the second, write
+\[
+e_2(\theta;C)\;=\;\sum_{i\in B\setminus C} g(C,i),\qquad
+g(C,i):=\|v_i-I_C(z_i)\|_2^2 .
+\]
+Conditionally on $C$, the sum has exactly $b/2$ terms, so
+$e_2(\theta;C)=\tfrac b2\,\mathbb E_{i\sim\mathrm{Unif}(B\setminus C)}[g(C,i)]$,
+and taking the expectation over $C$ proves the identity. The gradient claim
+follows from the differentiability assumptions: for fixed $(B,C)$,
+differentiable feature and kernel maps make
+$\theta\mapsto e_2(\theta;C)$ differentiable wherever the kernel matrix in
+$I_C$ remains positive definite. Under the stated local integrable
+domination, the derivative passes under the expectation, so
+$\mathbb E_{B,C}[\nabla_\theta e_2]=\nabla_\theta\,\mathbb E_{B,C}[e_2]$. \qed
+
+\subsection{Proof of Proposition~\ref{prop:stack}}
+\label{proof:prop:stack}
+
+(i) Since $\sum_m w_m=1$,
+$F_w(u)-G(u)=\sum_m w_m\,(f_m(u)-G(u))$, and the triangle inequality gives
+$\|F_w(u)-G(u)\|_2\le\sum_m w_m\|f_m(u)-G(u)\|_2$. Dividing by $\|G(u)\|_2$
+yields the pointwise claim; taking expectations gives the risk inequality, and
+bounding each $\ell(f_m(u),G(u))$ by $B$ gives $\ell(F_w(u),G(u))\le B$.
+
+(ii) For $M=1$ there is no weight selection and the asserted inequality
+is immediate. Suppose $M\ge2$ and write $\ell_u(w)=\ell(F_w(u),G(u))$. First, $\ell_u$ is Lipschitz on
+$\Delta$ for the $\ell^1$ norm: for $w,w'\in\Delta$, the reverse triangle
+inequality and the argument of (i) give
+\[
+|\ell_u(w)-\ell_u(w')|\;\le\;\frac{\big\|\sum_m (w_m-w'_m)(f_m(u)-G(u))\big\|_2}
+{\|G(u)\|_2}\;\le\;B\,\|w-w'\|_1 .
+\]
+Next, discretize the simplex. For $k\in\mathbb N$ let
+$\mathcal G_k=\{w\in\Delta:\,kw\in\mathbb Z^M\}$; its cardinality is the number
+of compositions of $k$ into $M$ nonnegative parts,
+$\binom{k+M-1}{M-1}\le (k+1)^{M-1}$. Given $w\in\Delta$, set
+$w'_i=\lfloor kw_i\rfloor/k$ for $i<M$ and $w'_M=1-\sum_{i<M}w'_i$; then
+$w'\in\mathcal G_k$ (the last coordinate is a multiple of $1/k$ and is
+$\ge w_M\ge0$ because the first $M-1$ coordinates only decreased), and
+\[
+\|w-w'\|_1=\sum_{i<M}(w_i-w'_i)+\big(w'_M-w_M\big)
+=2\sum_{i<M}(w_i-w'_i)\;\le\;\frac{2(M-1)}{k}.
+\]
+By (i) the per-sample loss lies in $[0,B]$, so for each fixed $w'$ Hoeffding's
+inequality gives
+$\mathbb P\big(|\widehat R(w')-R(w')|>t\big)\le2e^{-2mt^2/B^2}$, and a union
+bound over $\mathcal G_k$ shows that with probability at least $1-\delta$,
+\[
+\sup_{w'\in\mathcal G_k}\big|\widehat R(w')-R(w')\big|\;\le\;
+B\sqrt{\frac{\log\!\big(2|\mathcal G_k|/\delta\big)}{2m}} .
+\]
+On this event, for every $w\in\Delta$, approximating by its grid point and
+using the Lipschitz property for both $R$ and $\widehat R$,
+\[
+\big|\widehat R(w)-R(w)\big|\;\le\;
+B\sqrt{\frac{\log(2|\mathcal G_k|/\delta)}{2m}}+\frac{4B(M-1)}{k}.
+\]
+If $w^\star$ minimizes $R$ over $\Delta$, the empirical minimizer satisfies
+$R(F_{\widehat w})\le\widehat R(\widehat w)+\sup_\Delta|\widehat R-R|
+\le\widehat R(w^\star)+\sup_\Delta|\widehat R-R|
+\le R(F_{w^\star})+2\sup_\Delta|\widehat R-R|$. Choosing $k=m(M-1)$ and using
+$|\mathcal G_k|\le(m(M-1)+1)^{M-1}$ gives
+\[
+R(F_{\widehat w})\;\le\;\min_{w\in\Delta}R(F_w)+\frac{8B}{m}
++B\sqrt{\frac{2\big((M-1)\log(m(M-1)+1)+\log(2/\delta)\big)}{m}} ,
+\]
+which is the claim. \qed
+
+\subsection{Proof of Lemma~\ref{lem:select}}
+\label{proof:lem:select}
+
+For each $k$ the validation scores $\ell(g_k(\tilde u_i),G(\tilde u_i))$,
+$i\le m'$, are i.i.d., take values in $[0,B]$, and have mean $R(g_k)$; the
+maps $g_k$ are fixed relative to this sample, which is the only place the
+independence assumption enters. Hoeffding's inequality gives, for each $k$,
+\[
+\Pr\Big(\big|\widehat R(g_k)-R(g_k)\big|\ge t\Big)\;\le\;
+2\exp\!\big(-2m't^2/B^2\big),
+\]
+so with $t=B\sqrt{\log(2K/\delta)/(2m')}$ and a union bound over $k\le K$,
+all $K$ deviations are below $t$ simultaneously with probability at least
+$1-\delta$. On that event, if $k^\ast$ attains $\min_k R(g_k)$,
+\[
+R(g_{\widehat k})\;\le\;\widehat R(g_{\widehat k})+t\;\le\;
+\widehat R(g_{k^\ast})+t\;\le\;R(g_{k^\ast})+2t,
+\]
+and $2t=B\sqrt{2\log(2K/\delta)/m'}$. \qed
+
+\subsection{Proof of Proposition~\ref{prop:affine}}
+\label{proof:prop:affine}
+
+Fix a coordinate $j$ and abbreviate $\varphi=\varphi_j$, $Y(u)=G(u)_j$,
+$D=\sqrt{M+1}$. Each entry of $\varphi(u)$ is bounded by $b$ in absolute
+value (the members by assumption, the intercept entry by construction), so
+$\|\varphi(u)\|_2\le bD$, and for $\|w\|_2\le W$ Cauchy--Schwarz gives
+$|w^\top\varphi(u)|\le WbD$ and
+$|w^\top\varphi(u)-Y(u)|\le b(1+WD)$. The losses
+$\ell_w(u)=(w^\top\varphi(u)-Y(u))^2$ therefore take values in
+$[0,L_\infty]$ with $L_\infty=b^2(1+WD)^2$.
+
+\emph{Uniform deviation.} Consider the one-sided suprema
+$Z^{+}=\sup_{\|w\|_2\le W}\big(\widehat R_j(w)-R_j(w)\big)$ and
+$Z^{-}=\sup_{\|w\|_2\le W}\big(R_j(w)-\widehat R_j(w)\big)$ over the
+validation sample of size $m$. Changing one sample moves either supremum by
+at most $L_\infty/m$, so McDiarmid's inequality gives
+$Z^{\pm}\le\mathbb E Z^{\pm}+L_\infty\sqrt{\log(4q/\delta)/(2m)}$, each with
+probability at least $1-\delta/(2q)$. By
+symmetrization, $\mathbb E Z^{\pm}\le 2\,\mathfrak R_m(\mathcal L)$, the
+Rademacher complexity of the loss class. The loss is the composition of $t\mapsto t^2$,
+restricted to $|t|\le b(1+WD)$ where it is $2b(1+WD)$-Lipschitz, with the
+class $\{u\mapsto w^\top\varphi(u)-Y(u)\}$; translation by the fixed function
+$Y$ leaves the Rademacher average unchanged (the translated term does not
+involve $w$ and has zero mean), and for the linear class over the
+$\ell^2$ ball,
+\[
+\mathfrak R_m\;\le\;\frac{W}{m}\,
+\mathbb E\Big\|\sum_{i=1}^m\sigma_i\varphi(\tilde u_i)\Big\|_2\;\le\;
+\frac{W}{m}\Big(\sum_{i=1}^m\mathbb E\|\varphi(\tilde u_i)\|_2^2\Big)^{1/2}
+\;\le\;\frac{WbD}{\sqrt m},
+\]
+by Jensen's inequality. Talagrand's contraction lemma then gives
+$\mathfrak R_m(\mathcal L)\le 2b(1+WD)\cdot WbD/\sqrt m$, hence
+\[
+Z^{\pm}\;\le\;\frac{4Wb^2D(1+WD)}{\sqrt m}
++L_\infty\sqrt{\frac{\log(4q/\delta)}{2m}}
+\qquad\text{jointly with probability}\ge 1-\delta/q .
+\]
+
+\emph{Empirical risk minimization.} On this event, for any minimizer
+$w^\ast$ of $R_j$ over the ball,
+$R_j(\widehat w_j)\le\widehat R_j(\widehat w_j)+Z^{-}
+\le\widehat R_j(w^\ast)+Z^{-}\le R_j(w^\ast)+Z^{+}+Z^{-}$, and
+$Z^{+}+Z^{-}$ is bounded by the displayed excess. A union bound over the two
+tails of each of the $q$ coordinates makes all events
+hold simultaneously with probability at least $1-\delta$, and averaging over
+$j$ preserves the (coordinate-uniform) bound. This proves (i).
+
+For (ii), the ridge minimizer satisfies
+$\widehat R_j(\widehat w_j)+\lambda\|\widehat w_j\|_2^2\le
+\widehat R_j(w^\ast)+\lambda\|w^\ast\|_2^2$, so
+$\widehat R_j(\widehat w_j)\le\widehat R_j(w^\ast)+\lambda\|w^\ast\|_2^2
+\le\widehat R_j(w^\ast)+\lambda W^2$. Since by assumption
+$\|\widehat w_j\|_2\le W$, the uniform event of part (i) applies to
+$\widehat w_j$ and $w^\ast$ alike, and the preceding inequalities hold with the
+additional term $\lambda W^2$. \qed
+
+\subsection{Proof of Corollary~\ref{cor:floorpinch}}
+\label{proof:cor:floorpinch}
+
+The lower bound is Corollary~\ref{cor:floor}. For the upper bound, evaluate
+the quadratic form at the uniform weights $w_m=1/M$:
+\[
+\frac{1}{\bar e^{\,2}}\,w^\top Sw
+=\frac{1}{\bar e^{\,2}}\Big(\frac{1}{M^2}\sum_m S_{mm}
++\frac{1}{M^2}\sum_{m\neq k}S_{mk}\Big)
+\;\le\;\frac{1+\delta_e}{M}
++\frac{M-1}{M}\,\big(\bar\varrho+\delta_\varrho\big),
+\]
+using the entrywise upper bounds and the counts $M$ and $M(M-1)$ of the two
+sums. The right side equals
+$\bar\varrho+\delta_\varrho+\big(1+\delta_e-\bar\varrho-\delta_\varrho\big)/M$,
+and the minimum over the simplex is at most the value at any feasible point.
+\qed
+
+\subsection{Proof of Corollary~\ref{cor:certificate}}
+\label{proof:cor:certificate}
+
+Fix a coordinate $j$ and a grid point $\gamma$. Substituting the affine form
+of the correction,
+\[
+h_{w,\gamma}(u)_j=w_j^\top\widetilde\varphi_{j,\gamma}(u)+o_{j,\gamma}(u),
+\qquad
+\widetilde\varphi_{j,\gamma}(u)=\varphi_j(u)-\Phi_j^\top c_\gamma(u),\quad
+o_{j,\gamma}(u)=c_\gamma(u)^\top Y_j ,
+\]
+and neither $\widetilde\varphi_{j,\gamma}$ nor $o_{j,\gamma}$ depends on $w$
+or on the validation sample: $c_\gamma$ is built from the training design
+alone. Each component of $\Phi_j^\top c_\gamma(u)$ is a $c_\gamma$-weighted
+sum of member values bounded by $b$, so its absolute value is at most
+$b\,\|c_\gamma(u)\|_1\le b\kappa$, whence
+$\|\widetilde\varphi_{j,\gamma}(u)\|_2\le bD+bD\kappa=bD(1+\kappa)$ and
+$|o_{j,\gamma}(u)|\le b\kappa$. For $\|w\|_2\le W$ the prediction deviates
+from the target by at most
+$WbD(1+\kappa)+b\kappa+b\le b(1+WD)(1+\kappa)=:\tilde c$, so the squared
+losses lie in $[0,\tilde c^{\,2}]$ and are $2\tilde c$-Lipschitz in the
+prediction.
+
+By the argument of Proposition~\ref{prop:affine}, for the class
+indexed by $w$ in the $W$-ball and fixed $(j,\gamma)$, the
+Rademacher complexity of the affine part is at most
+$W\,bD(1+\kappa)/\sqrt m$, contraction multiplies it by $2\tilde c$,
+symmetrization doubles it, and McDiarmid at level $\delta/(2q|\Gamma|)$ adds
+$\tilde c^{\,2}\sqrt{\log(4q|\Gamma|/\delta)/(2m)}$. A union bound over the
+two tails of the $q|\Gamma|$ pairs makes, with probability at least
+$1-\delta$, each one-sided deviation $Z^{\pm}_{j,\gamma}$, defined as in the
+proof of Proposition~\ref{prop:affine},
+at most
+\[
+\frac{4W b^2D(1+WD)(1+\kappa)^2}{\sqrt m}
++b^2(1+WD)^2(1+\kappa)^2\sqrt{\frac{\log(4q|\Gamma|/\delta)}{2m}} .
+\]
+On that event, write $\bar R(\gamma)=\tfrac1q\sum_jR_j(h_{\widehat w,\gamma})$
+and $\widehat{\bar R}(\gamma)$ for its empirical version; averaging the
+$Z_{j,\gamma}$ over $j$ bounds
+$|\widehat{\bar R}(\gamma)-\bar R(\gamma)|$ by the same quantity for every
+$\gamma$ simultaneously, including at the data-dependent $\widehat w$,
+because the deviations are uniform over the ball. The selection chain
+$\bar R(\widehat\gamma)\le\widehat{\bar R}(\widehat\gamma)+Z\le
+\widehat{\bar R}(\gamma^\ast)+Z\le\bar R(\gamma^\ast)+2Z$ with
+$\gamma^\ast$ the aggregate oracle then gives the display, whose constant is
+$2Z$ in the factored form stated. When the $c_\gamma$ are kernel ridge
+weights, Lemma~\ref{lem:kappa} supplies the hypothesis with
+$\kappa=\kappa_{\mathrm{an}}$. \qed
+
+\subsection{Proof of Lemma~\ref{lem:kappa}}
+\label{proof:lem:kappa}
+
+Fix $u$ and write $k_u=k(X,u)$, $t=n\lambda$, $A=K+tI$ and $c=A^{-1}k_u$.
+Because $k$ is positive definite, the Gram matrix of the $n+1$ points
+$u_1,\dots,u_n,u$ is positive semidefinite, and by the generalized Schur
+complement this places $k_u$ in the range of $K$ with
+$k_u^\top K^{+}k_u\le k(u,u)$, $K^{+}$ the pseudo-inverse. Diagonalize
+$K=\sum_i\mu_iv_iv_i^\top$ and expand $k_u=\sum_i\beta_iv_i$ over the
+eigenvectors with $\mu_i>0$; the Schur condition reads
+$\sum_i\beta_i^2/\mu_i\le k(u,u)$. Then
+\[
+\|c\|_2^2=\sum_i\frac{\beta_i^2}{(\mu_i+t)^2}
+=\sum_i\frac{\beta_i^2}{\mu_i}\cdot\frac{\mu_i}{(\mu_i+t)^2}
+\;\le\;\frac{1}{4t}\sum_i\frac{\beta_i^2}{\mu_i}\;\le\;\frac{k(u,u)}{4t},
+\]
+because $(\mu+t)^2\ge4\mu t$ for all $\mu,t\ge0$. Cauchy--Schwarz gives
+$\|c\|_1\le\sqrt n\,\|c\|_2$, and combining,
+$\|c\|_1^2\le n\|c\|_2^2\le k(u,u)/(4\lambda)$.
+
+For the sharpness take $k(x,y)=\cos(x-y)$, a positive definite kernel on
+the line (its native space is spanned by $\cos$ and $\sin$), the two points
+$x_1=0$ and $x_2=\theta$ with $\theta\in(0,\pi)$ chosen so that
+$1-\cos\theta=2\lambda$, and $u=(\theta+\pi)/2$. Then
+$K=\begin{psmallmatrix}1&\cos\theta\\ \cos\theta&1\end{psmallmatrix}$ has
+the eigenvector $v=(1,-1)/\sqrt2$ with eigenvalue $\mu=1-\cos\theta=t$, and
+$k_u=(\cos u,\cos(u-\theta))=-\sin(\theta/2)\,(1,-1)$ is proportional to
+$v$, with $\beta^2/\mu=2\sin^2(\theta/2)/(1-\cos\theta)=1=k(u,u)$. Hence
+$c=A^{-1}k_u=k_u/(2t)$ has entries of equal magnitude,
+$\|c\|_2^2=\beta^2/(2t)^2=1/(4t)$, and
+$\|c\|_1=\sqrt2\,\|c\|_2=\sqrt n\,\|c\|_2=\tfrac12\lambda^{-1/2}$, so every
+inequality in the display is an equality.
+
+For the Mat\'ern kernel of Section~\ref{sec:method-kernel}, $k(u,u)=1$ and
+the smallest nugget on the grid is $10^{-6}$, so
+$\sup_{u,\gamma}\|c_\gamma(u)\|_1\le\tfrac12\max_\gamma\lambda_\gamma^{-1/2}=500$
+irrespective of the length scale and of the design. \qed
+
+\subsection{Proof of Corollary~\ref{cor:signed}}
+\label{proof:cor:signed}
+
+The objective is strictly convex on the hyperplane $\{\mathbf 1^\top w=1\}$,
+so its minimizer there is the unique stationary point of the Lagrangian
+$w^\top Sw-\nu(\mathbf 1^\top w-1)$, namely $w=\tfrac{\nu}{2}S^{-1}\mathbf 1$
+with $\nu$ fixed by the constraint: $w^\star=S^{-1}\mathbf 1/(\mathbf
+1^\top S^{-1}\mathbf 1)$, at which $w^{\star\top}Sw^\star=1/(\mathbf 1^\top
+S^{-1}\mathbf 1)$. The simplex is a subset of the hyperplane, so the convex
+minimum is at least this value, and by uniqueness of the minimizer the two
+agree exactly when $w^\star$ lies in the simplex, that is, has no negative
+coordinate. \qed
+
+\subsection{Proof of Proposition~\ref{prop:secmom}}
+\label{proof:prop:secmom}
+
+Since $\sum_m w_m=1$, the stack's normalized residual is
+$\rho_{f_w}(u)=\sum_m w_m\rho_{f_m}(u)$, hence
+\[
+\mathbb E\,\ell\big(f_w(u),G(u)\big)^2
+=\mathbb E\Big\|\sum_m w_m\rho_{f_m}(u)\Big\|_2^2
+=\sum_{m,k}w_mw_k\,\mathbb E\,\langle\rho_{f_m}(u),\rho_{f_k}(u)\rangle
+=w^\top Sw .
+\]
+For (i), parameterize $w=(1-t,t)$; $q(t)=w^\top Sw$ is a convex quadratic in
+$t$ with $q'(0)=2(\varrho e_1e_2-e_1^2)$, negative precisely when
+$\varrho<e_1/e_2$. In that case the unconstrained minimizer lies in $(0,1)$ and
+gives the stated interior value; otherwise $q'(0)\ge0$, the minimum over
+$[0,1]$ is at $t=0$ with value $e_1^2$, and the second member is dropped. For
+(ii), $S=e^2\big((1-\varrho)I+\varrho\,\mathbf1\mathbf1^\top\big)$, so
+$w^\top Sw=e^2\big((1-\varrho)\|w\|_2^2+\varrho\big)$ on the simplex, minimized
+by the uniform weights, where $\|w\|_2^2=1/M$. \qed
+
+\subsection{Proof of Corollary~\ref{cor:floor}}
+\label{proof:cor:floor}
+
+Convex weights are nonnegative, so each term of
+$w^\top Sw=\sum_{m}w_m^2S_{mm}+\sum_{m\neq k}w_mw_kS_{mk}$ can be bounded
+below entrywise:
+\[
+w^\top Sw\;\ge\;\bar e^{\,2}\sum_m w_m^2+\bar\varrho\,\bar
+e^{\,2}\sum_{m\neq k}w_mw_k
+=\bar e^{\,2}\Big(\|w\|_2^2+\bar\varrho\,(1-\|w\|_2^2)\Big),
+\]
+using $\sum_{m\neq k}w_mw_k=(\sum_m w_m)^2-\|w\|_2^2=1-\|w\|_2^2$. The bracket
+is a convex combination of $1$ and $\bar\varrho$, hence at least
+$\bar\varrho$. \qed
+
+\subsection{Proof of Theorem~\ref{thm:blockfloor}}
+\label{proof:thm:blockfloor}
+
+Write $W_a=\sum_kw_{a,k}$ for the total weight of architecture $a$, so that
+$\sum_aW_a=1$. Split the quadratic form into its diagonal terms, the terms
+between two seeds of one architecture and the terms between architectures,
+and bound each entry below by its hypothesis; the weights are nonnegative,
+so multiplying by the weights preserves these inequalities:
+\[
+w^\top Sw\;\ge\;\bar e^{\,2}\Big(\|w\|_2^2
++\varrho_w\big(\textstyle\sum_aW_a^2-\|w\|_2^2\big)
++\varrho_b\big(1-\sum_aW_a^2\big)\Big),
+\]
+using $\sum_{k\ne l}w_{a,k}w_{a,l}=W_a^2-\sum_kw_{a,k}^2$ within an
+architecture and $\sum_{a\ne b}W_aW_b=1-\sum_aW_a^2$ across them.
+Rearranged, the right side is
+$\bar e^{\,2}\big(\varrho_b+(\varrho_w-\varrho_b)\sum_aW_a^2
++(1-\varrho_w)\|w\|_2^2\big)$. Both coefficients are nonnegative by
+hypothesis; $\sum_aW_a^2\ge1/M$ by Cauchy--Schwarz, with equality at
+$W_a=1/M$; and $\|w\|_2^2\ge1/(MK)$ with equality at uniform weights, which
+also give $W_a=1/M$. So the minimum of the right side over the simplex is
+attained at uniform weights and equals the display. When the three
+hypotheses hold with equality,
+$S=\bar e^{\,2}\big((1-\varrho_w)I+(\varrho_w-\varrho_b)B
++\varrho_b\mathbf 1\mathbf 1^\top\big)$ with $B$ the indicator of a shared
+architecture, the first inequality is an identity for every $w$, and uniform
+weights attain the bound. The three limits follow by letting $K$, then $M$,
+grow. \qed
+
+\subsection{Proof of Proposition~\ref{prop:exchange}}
+\label{proof:prop:exchange}
+
+Proposition~\ref{prop:secmom}(i) gives $V=e_1^2e_2^2(1-\varrho^2)/(e_1^2+e_2^2
+-2\varrho e_1e_2)=e_1^2\,t^2(1-\varrho^2)/D$ with $D=1+t^2-2\varrho t$, valid
+whenever the unconstrained minimizer lies in the open simplex, which is the
+condition $\varrho<1/t$ for $t=e_2/e_1\ge1$. The strict derivative
+claims additionally assume $-1<\varrho$, as in the proposition. Differentiating,
+\[
+\begin{aligned}
+\frac{\partial V}{\partial t}
+&=\frac{e_1^2\big[2t(1-\varrho^2)D-t^2(1-\varrho^2)(2t-2\varrho)\big]}{D^2}\\
+&=\frac{2e_1^2\,t(1-\varrho^2)\big(D-t^2+\varrho t\big)}{D^2}\\
+&=\frac{2e_1^2\,t(1-\varrho^2)(1-\varrho t)}{D^2},
+\end{aligned}
+\]
+and
+\[
+\begin{aligned}
+\frac{\partial V}{\partial\varrho}
+&=\frac{e_1^2\big[-2\varrho t^2D+2t^3(1-\varrho^2)\big]}{D^2}\\
+&=\frac{2e_1^2\,t^2\big(t-\varrho-\varrho t^2+\varrho^2t\big)}{D^2}\\
+&=\frac{2e_1^2\,t^2(t-\varrho)(1-\varrho t)}{D^2}.
+\end{aligned}
+\]
+Both are positive for $-1<\varrho<1/t$, since $1-\varrho^2>0$,
+$t-\varrho>0$ and $1-\varrho t>0$ there. Setting
+$\mathrm dV=(\partial V/\partial t)\,\mathrm dt
++(\partial V/\partial\varrho)\,\mathrm d\varrho=0$ and cancelling the common
+factor $2e_1^2t(1-\varrho t)/D^2$ gives
+$(1-\varrho^2)\,\mathrm dt+t(t-\varrho)\,\mathrm d\varrho=0$, which is the
+stated rate; substituting $\mathrm dt=-\epsilon t$ gives the fractional
+form. \qed
+
+\subsection{Proof of Proposition~\ref{prop:percoord}}
+\label{proof:prop:percoord}
+
+The metric is diagonal, so the squared norm splits over coordinates and the
+$j$-th summand $w_j^2\,\mathbb E\big(\sum_m v_{mj}f_m(u)_j-G(u)_j\big)^2$
+depends on the weights only through the column $v_{\cdot j}$. Minimizing the
+sum is therefore $q$ independent minimizations, and the positive factor
+$w_j^2$ leaves every coordinate minimizer unchanged, so the optimizer is the same
+for every positive $w$. A combination with shared weights is the special
+case $v_{mj}=v_m$ for all $j$, a subset of the feasible set of each
+coordinate problem, which gives the domination. \qed
+
+\subsection{Proof of Corollary~\ref{cor:percoordw}}
+\label{proof:cor:percoordw}
+
+The integrand is nonnegative, so Tonelli's theorem permits exchanging the
+expectation with the coordinate sum:
+\[
+\mathbb E\Big[a(u)\sum_j w_j^2\big(f_v(u)_j-G(u)_j\big)^2\Big]
+=\sum_j w_j^2\,\mathbb E\Big[a(u)\big(f_v(u)_j-G(u)_j\big)^2\Big].
+\]
+The $j$-th summand depends on $v$ only through its $j$-th column
+$v_{\cdot j}$, exactly as in the proof of
+Proposition~\ref{prop:percoord}, so minimizing over $v$ splits into $q$
+independent problems; the factors $w_j^2$ rescale the summands without
+moving any per-coordinate minimizer, which gives the simultaneous optimality
+over all diagonal $w$. The choice $a(u)=\|G(u)\|_2^{-2}$, $w=\mathbf 1$
+identifies the objective with $\mathbb E\,\|\rho_{f_v}\|_2^2$, the mean
+squared relative error. Finally
+$\mathbb E\|\rho\|_2\le(\mathbb E\|\rho\|_2^2)^{1/2}$ is Jensen's
+inequality. \qed
+
+\subsection{Proof of Proposition~\ref{prop:selectcoord}}
+\label{proof:prop:selectcoord}
+
+Fix a coordinate $j$ and a member $m$. The validation scores
+$a(\tilde u_i)(f_m(\tilde u_i)_j-G(\tilde u_i)_j)^2$, $i\le m_v$, are i.i.d.,
+take values in $[0,L]$ by assumption, and have mean $R_j(m)$; the members and
+the weight are fixed relative to the validation sample. Hoeffding's
+inequality gives
+\[
+\Pr\Big(\big|\widehat R_j(m)-R_j(m)\big|\ge t\Big)\;\le\;
+2\exp\!\big(-2m_v t^2/L^2\big)
+\]
+for each of the $Mq$ pairs $(m,j)$. With
+$t=L\sqrt{\log(2Mq/\delta)/(2m_v)}$ and a union bound, all $Mq$ deviations
+are below $t$ simultaneously with probability at least $1-\delta$. On that
+event, for every $j$, writing $m^\ast(j)$ for a population minimizer,
+\[
+R_j\big(\widehat m(j)\big)\le\widehat R_j\big(\widehat m(j)\big)+t
+\le\widehat R_j\big(m^\ast(j)\big)+t\le R_j\big(m^\ast(j)\big)+2t .
+\]
+The metric statement follows by multiplying the coordinate-wise inequality
+by $w_j^2\ge0$ and summing; the selection $\widehat m(\cdot)$ does not
+depend on $w$, so one event serves every diagonal metric. \qed
+
+\subsection{Proof of Proposition~\ref{prop:pullback}}
+\label{proof:prop:pullback}
+
+Let $T:\mathcal H_k\to\mathbb R^{\mathcal X}$ be the composition map
+$Tf=f\circ\varphi$. For $x\in\mathcal X$ the reproducing property gives
+$(Tf)(x)=f(\varphi(x))=\langle f,k(\cdot,\varphi(x))\rangle_{\mathcal H_k}$,
+so evaluation of $Tf$ at $x$ is a bounded functional. The kernel of $T$ is
+the intersection of the kernels of these bounded evaluations and is closed.
+Its orthogonal complement therefore contains a unique minimum-norm preimage
+of every element in the image. Thus the image
+$\mathcal H_{k_\varphi}:=T(\mathcal H_k)$ carries the quotient norm
+$\|g\|_{\mathcal H_{k_\varphi}}=\min\{\|f\|_{\mathcal H_k}:Tf=g\}$, the minimum
+over the affine subspace $T^{-1}(g)$ (nonempty exactly when $g$ is a pullback).
+The quotient by this closed subspace is complete. It is an RKHS, with reproducing kernel
+$k_\varphi(x,x')=\langle k(\cdot,\varphi(x)),k(\cdot,\varphi(x'))\rangle_{\mathcal H_k}
+=k(\varphi(x),\varphi(x'))$, since the minimum-norm representer of evaluation
+at $x$ is $k(\cdot,\varphi(x))$. Taking $f=h$ in the minimum gives
+$\|h\circ\varphi\|_{\mathcal H_{k_\varphi}}\le\|h\|_{\mathcal H_k}$, and
+substituting this bound into Theorem~\ref{thm:or} applied with the kernel
+$k_\varphi$ replaces $\|G\|$ by $\|h\|_{\mathcal H_k}$. \qed
+
+\subsection{Proof of Proposition~\ref{prop:aniso}}
+\label{proof:prop:aniso}
+
+The truncated singular-value decomposition satisfies
+$\|A-A_r\|_{\mathrm{op}}=\sigma_{r+1}$. Consequently, for every
+$u\in\mathcal U$,
+\[
+\|G(u)-G_r(u)\|_2
+=\|g(Au)-g(A_ru)\|_2
+\le L\|(A-A_r)u\|_2
+\le LR\sigma_{r+1}=\varepsilon.
+\]
+Write $\delta(u)=G(u)-G_r(u)$, and form the kernel predictor of $G_r$
+using the same feature-space weights $c=c_\lambda(u)$. Theorem~\ref{thm:or}
+applied in feature space with zero mean gives
+\[
+\|G_r(u)-c^\top G_r(X)\|_2
+=\|h(\varphi_r(u))-c^\top h(Z)\|_2
+\le\|h\|_K\,\widetilde P_\lambda(u).
+\]
+The estimator in the proposition is trained on $G(X)$, so
+\[
+G(u)-c^\top G(X)
+=G_r(u)-c^\top G_r(X)+\delta(u)-\sum_i c_i\delta(u_i).
+\]
+Taking Euclidean norms and using $\|\delta(u_i)\|_2\le\varepsilon$
+yields the stated bound. The argument is deterministic and applies to any
+design and any stated nugget, including the pseudoinverse convention at zero.
+\qed
+
+\subsection{Proof of Theorem~\ref{thm:or}}
+\label{proof:thm:or}
+
+Fix $u$ and write $k_u=k(X,u)\in\mathbb R^n$.
+At $\lambda=0$, interpret the inverse as $K^+$ if $K$ is singular.
+For $z\in\ker K$, the RKHS function $h_z=\sum_i z_i k(u_i,\cdot)$
+has squared norm $z^\top Kz=0$. Hence
+$z^\top k_u=\langle h_z,k(u,\cdot)\rangle=0$, which places $k_u$ in
+$\operatorname{range}K$. In particular, $KK^+k_u=k_u$, so the algebra
+below also applies under the pseudoinverse convention.
+
+Put $A=K+n\lambda I$ and $w=A^{-1}k_u$.
+For each component $j$, membership $r_j\in\mathcal H_k$ and
+the reproducing property give
+\[
+r_j(u)-\widehat r_{\lambda,j}(u)
+= \Big\langle r_j,\; k(u,\cdot)-\sum_{i=1}^n w_i\,k(u_i,\cdot)\Big\rangle_{\mathcal H_k},
+\]
+because $\widehat r_{\lambda,j}(u)=k_u^\top A^{-1}r_j(X)=\sum_i w_i\,r_j(u_i)$
+and $r_j(u_i)=\langle r_j,k(u_i,\cdot)\rangle$. Cauchy--Schwarz yields
+\[
+\big|r_j(u)-\widehat r_{\lambda,j}(u)\big|\;\le\;\|r_j\|_{\mathcal H_k}\,
+\Big\| k(u,\cdot)-\sum_i w_i k(u_i,\cdot)\Big\|_{\mathcal H_k},
+\]
+and the second factor is independent of $j$; call it $\rho(u)$. Expanding,
+\[
+\rho(u)^2 = k(u,u) - 2\,w^\top k_u + w^\top K w
+= k(u,u) - k_u^\top A^{-1}\big(2A-K\big)A^{-1}k_u .
+\]
+Since $2A-K=A+n\lambda I$,
+\[
+\rho(u)^2 = k(u,u)-k_u^\top A^{-1}k_u - n\lambda\,\|A^{-1}k_u\|_2^2
+=\widetilde P_\lambda(u)^2\;\le\;P_\lambda(u)^2 .
+\]
+Summing the squared componentwise bounds,
+\[
+\big\|r(u)-\widehat r_\lambda(u)\big\|_2^2=\sum_j\big(r_j(u)-\widehat
+r_{\lambda,j}(u)\big)^2\le\rho(u)^2\sum_j\|r_j\|^2_{\mathcal H_k}
+=\widetilde P_\lambda(u)^2\,\|r\|_K^2 .
+\]
+For the sharpness, write $g_u=k(u,\cdot)-\sum_iw_ik(u_i,\cdot)$, so that
+$\|g_u\|_{\mathcal H_k}=\rho(u)=\widetilde P_\lambda(u)$. If
+$\widetilde P_\lambda(u)=0$ both sides of the bound vanish for every $r$.
+Otherwise take $r_1=(\|G-m\|_K/\rho(u))\,g_u$ and $r_j=0$ for $j\ge2$: this
+residual has norm $\|G-m\|_K$, and since the estimator is built from its own
+training values $r_1(X)=(\|G-m\|_K/\rho(u))g_u(X)$, the first display gives
+$r_1(u)-\widehat r_{\lambda,1}(u)=\langle r_1,g_u\rangle_{\mathcal
+H_k}=\|G-m\|_K\,\rho(u)$, equality in Cauchy--Schwarz. \qed
+
+The argument applies for every $\lambda\ge0$. The inequality between
+$\widetilde P_\lambda$ and $P_\lambda$ compares the two factors at the same
+ridge value; Theorem~\ref{thm:minimax} describes how that value affects the
+worst-case error.
+
+\subsection{Proof of Theorem~\ref{thm:minimax}}
+\label{proof:thm:minimax}
+
+Write $k_u=k(X,u)$ and let $g_u=k(u,\cdot)-\sum_i(K^{-1}k_u)_ik(u_i,\cdot)$
+be the function of the previous proof at $\lambda=0$. It vanishes on the
+design, since $g_u(u_j)=k(u,u_j)-k_u^\top K^{-1}Ke_j=0$, and
+$g_u(u)=\|g_u\|_{\mathcal H_k}^2=k(u,u)-k_u^\top K^{-1}k_u=P_0(u)^2$. If
+$P_0(u)=0$ the lower bound is trivial. Otherwise set
+$r^{\pm}=\pm(\rho/P_0(u))\,g_u\,e_1$, two residual operators of norm $\rho$
+whose training values are both zero, so that any $\Psi$ returns the same
+vector $\psi=\Psi(0)$ for both; their values at $u$ are $\pm\rho P_0(u)e_1$,
+hence
+$\max_\pm\|r^{\pm}(u)-\psi\|_2\ge\max_\pm|{\pm}\rho P_0(u)-\psi_1|\ge\rho
+P_0(u)$. This is the lower bound. Theorem~\ref{thm:or} with $\lambda=0$
+bounds the interpolant's error by $\|r\|_KP_0(u)\le\rho P_0(u)$ on the whole
+ball, so the interpolant attains it, and for $\lambda>0$ the same theorem
+together with its sharpness case gives the ridge correction's worst case
+as exactly $\rho\,\widetilde P_\lambda(u)$.
+
+For the identity, put $t=n\lambda$ and $A=K+tI$, which commutes with $K$.
+From the proof of Theorem~\ref{thm:or},
+$\widetilde P_\lambda(u)^2=k(u,u)-k_u^\top A^{-1}(2A-K)A^{-1}k_u$, while
+$P_0(u)^2=k(u,u)-k_u^\top K^{-1}k_u$, so
+\[
+\begin{aligned}
+\widetilde P_\lambda(u)^2-P_0(u)^2
+&=k_u^\top\big(K^{-1}-2A^{-1}+A^{-1}KA^{-1}\big)k_u\\
+&=k_u^\top A^{-2}K^{-1}\big(A^2-2AK+K^2\big)k_u\\
+&=k_u^\top A^{-2}K^{-1}(A-K)^2k_u ,
+\end{aligned}
+\]
+and $A-K=tI$. The right-hand side is nonnegative because $A^{-2}K^{-1}$ is
+positive definite, which gives $P_0\le\widetilde P_\lambda$; the upper
+inequality $\widetilde P_\lambda\le P_\lambda$ was shown above. Expanding
+$k_u$ in the eigenbasis of $K$ as in the proof of Lemma~\ref{lem:kappa},
+the difference equals $\sum_i(\beta_i^2/\mu_i)\,(t/(\mu_i+t))^2$, each term
+of which is bounded by $\beta_i^2/\mu_i$ and tends to zero with $t$, so the
+difference vanishes as $\lambda\to0$ by dominated convergence. \qed
+
+\subsection{Proof of Proposition~\ref{prop:conf}}
+\label{proof:prop:conf}
+
+Condition on the fixed fitted predictor, scale function and design. The
+calibration scores $s_1,\ldots,s_m$ and the new score $s^\star$ are
+exchangeable, and coverage is the event $s^\star\le Q$. If $k=m+1$ then
+$Q=+\infty$ and coverage is one. Suppose therefore that $k\le m$.
+
+Assign independent continuous random tie breakers to the $m+1$ scores and
+let $J$ be the rank of the new score in this augmented ordering. By
+exchangeability, $J$ is uniform on $\{1,\ldots,m+1\}$. The event $J\le k$
+implies $s^\star\le s_{(k)}$, including in the presence of ties, so
+\[
+\mathbb P(s^\star\le Q)\ge\mathbb P(J\le k)
+=\frac{k}{m+1}\ge1-\alpha.
+\]
+When the scores are almost surely distinct the two events coincide; their
+probability equals $k/(m+1)\le1-\alpha+1/(m+1)$. The same upper bound
+also includes the already handled case $k=m+1$. Averaging over any
+independent fitted objects preserves these statements. \qed
+
+\subsection{Proof of Corollary~\ref{cor:mp}}
+\label{proof:cor:mp}
+
+The nonzero eigenvalues of $K/n=XX^\top\!/n$ coincide with those of the
+sample covariance matrix $S=X^\top X/n\in\mathbb R^{p\times p}$, and zero
+eigenvalues contribute nothing to
+$d_{\mathrm{eff}}(\lambda)=\sum_i\lambda_i(K)/(\lambda_i(K)+n\lambda)$, so
+\[
+\frac{d_{\mathrm{eff}}(\lambda)}{n}
+=\frac{p}{n}\cdot\frac1p\sum_{j=1}^{p}\frac{\lambda_j(S)}{\lambda_j(S)+\lambda}
+=\frac{p}{n}\Big(1-\lambda\,\widehat m_S(-\lambda)\Big),
+\]
+by the computation of Lemma~\ref{lem:deff} applied to $S$, with
+$\widehat m_S$ the Stieltjes transform of the empirical spectral distribution
+of $S$. By the Mar\v{c}enko--Pastur theorem
+\citep{marchenko1967distribution}, this distribution converges weakly, almost
+surely, to the law with ratio $\gamma$ and scale $\sigma^2$, and since
+$x\mapsto(x+\lambda)^{-1}$ is bounded and continuous on $[0,\infty)$,
+$\widehat m_S(-\lambda)\to m(-\lambda)$. It remains to evaluate
+$m(-\lambda)$. The Stieltjes transform of the Mar\v{c}enko--Pastur law
+satisfies the self-consistent equation
+\[
+m(z)=\frac{1}{\sigma^2\big(1-\gamma-\gamma z\,m(z)\big)-z},
+\]
+i.e.\ $\gamma\sigma^2 z\,m^2+\big(z-\sigma^2(1-\gamma)\big)m+1=0$. At
+$z=-\lambda$ the discriminant is
+$\big(\lambda+\sigma^2(1-\gamma)\big)^2+4\gamma\sigma^2\lambda>0$, and of the
+two real roots
+\[
+m(-\lambda)=\frac{\sigma^2(1-\gamma)+\lambda\pm
+\sqrt{\big(\lambda+\sigma^2(1-\gamma)\big)^2+4\gamma\sigma^2\lambda}}
+{-2\gamma\sigma^2\lambda}
+\]
+only the one with the minus sign in the numerator is positive, as
+$m(-\lambda)=\int(x+\lambda)^{-1}dF(x)>0$ requires; rearranging gives the
+stated expression. \qed
+
+\subsection{Proof of Lemma~\ref{lem:deff}}
+\label{proof:lem:deff}
+
+Diagonalize $K$ with eigenvalues $\lambda_i$. Then
+\[
+\begin{aligned}
+\operatorname{tr}\big(K(K+n\lambda I)^{-1}\big)
+&=\sum_{i=1}^n\frac{\lambda_i}{\lambda_i+n\lambda}\\
+&=\sum_{i=1}^n\Big(1-\frac{n\lambda}{\lambda_i+n\lambda}\Big)\\
+&= n-\lambda\sum_{i=1}^n\frac{1}{\lambda_i/n+\lambda}\\
+&= n\big(1-\lambda\,\widehat m(-\lambda)\big),
+\end{aligned}
+\]
+using $\widehat m(-\lambda)=\tfrac1n\sum_i(\lambda_i/n+\lambda)^{-1}$. The
+limit statement follows from the weak convergence of the empirical spectral
+distribution together with the boundedness and continuity of
+$x\mapsto(x+\lambda)^{-1}$ on $[0,\infty)$ for fixed $\lambda>0$. \qed

@@ -1,0 +1,346 @@
+\subsection{Full-map symmetry averaging does not increase the risk}
+\label{sec:theory-sym}
+
+The elasticity problem behind the benchmark is invariant under the reflection
+$x_1\mapsto 1-x_1$: the domain, the boundary partition, and the constitutive
+model are all symmetric, the input distribution has a reflection-invariant
+covariance, and reflecting the load reflects the stress field. On the discrete
+grid this is expressed by two permutation matrices: $S\in\mathbb R^{p\times p}$
+reverses the load samples and $T\in\mathbb R^{q\times q}$ reverses the rows of
+the stress field. Both are orthogonal involutions. Supplement~\ref{sec:symcheck}
+examines the discrete equivariance relation $G(Su)=T\,G(u)$
+empirically. The following proposition assumes this relation exactly.
+
+\begin{proposition}[symmetrization]\label{prop:sym}
+Assume $G(Su)=TG(u)$ for $\mu$-a.e.\ $u$, that $\mu$ is invariant under $S$,
+and that $T$ is an orthogonal involution ($T^2=I$). For a measurable
+$\widehat G:\mathcal U\to\mathcal V$ define its symmetrization
+\[
+\widehat G_S(u)\;=\;\tfrac12\left(\widehat G(u)+T\,\widehat G(Su)\right).
+\]
+Then, for every loss $\ell(\cdot,v)$ that is convex in its first argument and
+satisfies $\ell(Tw,Tv)=\ell(w,v)$,
+\[
+\mathbb E_{u\sim\mu}\,\ell\big(\widehat G_S(u),G(u)\big)\;\le\;
+\mathbb E_{u\sim\mu}\,\ell\big(\widehat G(u),G(u)\big).
+\]
+\end{proposition}
+\noindent\emph{Proof.} See Supplement~\ref{proof:prop:sym}.
+
+
+The relative error satisfies both hypotheses when the target norm is
+nonzero. The proposition guarantees that test-time reflection averaging
+cannot increase population risk under exact equivariance and distributional
+invariance. For a finite training sample, Jensen's inequality also shows that
+the reflection-augmented empirical loss upper-bounds the empirical loss of
+the symmetrized predictor. The objectives are generally different, so the
+proposition does not guarantee that training with augmentation improves the
+fitted model. The near-reflection comparisons are consistent with symmetry of the
+distributed solver output. In the experiment, the averages improve twenty-nine of thirty members across the two MLP variants
+and the refiner, and worsen one by a thousandth of a point. For the refiner, equivariance of its conditioning field is a sufficient
+additional condition for this guarantee. The convexity
+argument is standard; \citet{lyle2020benefits} give a general account.
+
+\paragraph{A supplied conditioning field is an additional input.}
+For a fitted refiner $F(u,h)$ and a fixed kernel predictor $h(u)$, define
+$f(u)=F(u,h(u))$. The proposition concerns
+\[
+f_S(u)=\tfrac12\big(F(u,h(u))+T F(Su,h(Su))\big).
+\]
+The implementation instead uses $T h(u)$ as the second branch's conditioning
+field. Thus $h(Su)=T h(u)$ is a sufficient additional condition for identifying
+the implemented average with $f_S$. Equivariance of the target and invariance
+of the load distribution do not by themselves give this property to a fitted
+kernel predictor, and training the refiner with randomly reflected triples
+does not force exact equivariance; the non-increase guarantee for its
+averaging operation is conditional on that identity.
+
+The effect of this difference can be bounded. Write
+$b(u)=\tfrac12(F(u,h(u))+T F(Su,T h(u)))$ for the implemented average and
+$R(g)=\mathbb E\|g(u)-G(u)\|_2/\|G(u)\|_2$, assuming nonzero targets
+almost surely and finite quantities below. Under the proposition's exact
+symmetry assumptions,
+\begin{equation}\label{eq:refiner-defect}
+\begin{aligned}
+R(b)&\le R(f_S)+\frac12\mathbb E
+\frac{\|F(Su,T h(u))-F(Su,h(Su))\|_2}{\|G(u)\|_2}
+\\
+&\le R(f)+\frac12\mathbb E
+\frac{\|F(Su,T h(u))-F(Su,h(Su))\|_2}{\|G(u)\|_2}.
+\end{aligned}
+\end{equation}
+Indeed, the triangle inequality bounds the risk difference by
+$\mathbb E\|b-f_S\|_2/\|G\|_2$, and orthogonality of $T$ gives the
+displayed defect exactly; the second inequality is Proposition~\ref{prop:sym}.
+If $F(u,\cdot)$ is uniformly $L_h$-Lipschitz, the additional term is at most
+$(L_h/2)\mathbb E[\|T h(u)-h(Su)\|_2/\|G(u)\|_2]$.
+This defect and the Lipschitz constant are not measured in the experiments,
+so the inequality is not evaluated numerically.
+
+The two averages can have different risks even for an exactly symmetric target. Let the
+input take the values $+1$ and $-1$ with equal probability, let $S$ exchange
+them, and let $T$ swap two output coordinates. Set $G(u)=(1,1)$,
+$h(+1)=(1,1)$ and $h(-1)=(3,3)$. Define $F(+1,z)=z$ and
+$F(-1,z)=(4,4)-z$. The four evaluations are
+\[
+\begin{aligned}
+F(+1,h(+1))&=(1,1), & F(-1,T h(+1))&=(3,3),\\
+F(-1,h(-1))&=(1,1), & F(+1,T h(-1))&=(3,3).
+\end{aligned}
+\]
+Thus $f(u)=G(u)$ at both inputs, and the full-map average
+also has zero error. Averaging with $T h(u)$ instead gives $(2,2)$ at both
+inputs, with relative error one. This finite example disproves a general
+guarantee for the supplied-field operation and attains equality in
+\eqref{eq:refiner-defect} (here $L_h=1$).
+
+\subsection{The kernel-flow regularizer and leave-half-out error}
+\label{sec:theory-kf}
+
+The kernel-flow (KF) loss of Owhadi and Yoo \citep{owhadi2019kernel}, in the
+$\ell^2$ variant used by \citet{yoo2021deep} to regularize deep networks,
+defines the optional regularizer in the ablation study. Let $z_i=\phi_\theta(u_i)$ be the features of a batch
+$B=\{1,\dots,b\}$ ($b$ even), let $k$ be a positive definite kernel on feature
+space, and for $C\subset B$, $|C|=b/2$, let $I_C$ denote the $k$-interpolant
+of $\{(z_j,v_j):j\in C\}$. The batch KF loss is
+\begin{equation}\label{eq:kf}
+e_2(\theta;C)\;=\;\sum_{i\in B}\big\|v_i-I_C(z_i)\big\|_2^2 .
+\end{equation}
+
+\begin{proposition}[KF loss is a leave-half-out estimate]\label{prop:kf}
+Let $C$ be drawn uniformly among the subsets of $B$ of size $b/2$ and assume
+$k$ restricted to $\{z_i\}_{i\in B}$ is strictly positive definite. Then
+$e_2(\theta;C)=\sum_{i\in B\setminus C}\|v_i-I_C(z_i)\|_2^2$, and
+\[
+\mathbb E_C\big[e_2(\theta;C)\big]\;=\;\frac b2\;
+\mathbb E_{C,\,i\,\sim\,\mathrm{Unif}(B\setminus C)}
+\big[\big\|v_i-I_C(z_i)\big\|_2^2\big],
+\]
+i.e.\ $\tfrac2b\,e_2$ is an unbiased estimator, over the split randomness, of
+the expected squared error of the kernel predictor on a held-out point
+when trained on a random half of the batch. If the parameterized
+feature and kernel maps are differentiable and the derivative of
+$e_2(\theta;C)$ is bounded in a parameter neighborhood by a random variable
+integrable over $(B,C)$, then, when $(B,C)$
+are resampled at every step, the stochastic gradient
+$\nabla_\theta e_2(\theta;C)$ is unbiased for
+$\nabla_\theta\,\mathbb E_{B,C}[e_2(\theta;C)]$.
+\end{proposition}
+\noindent\emph{Proof.} See Supplement~\ref{proof:prop:kf}.
+
+
+The implemented ablation uses normalized targets and the mean squared loss
+over all $bq$ batch-output entries, with predictor
+$K_{BC}(K_{CC}+10^{-3}I)^{-1}Y_C$. Its errors on $C$ need not vanish:
+on those rows the residual is
+$10^{-3}(K_{CC}+10^{-3}I)^{-1}Y_C$. Consequently the exact leave-half-out
+identity above does not apply to the regularized loss. The learned Gaussian
+bandwidth multiplier is combined with a batch median distance computed
+under \texttt{no\_grad}; the resulting gradient also omits the dependence
+of that median on the features. This stop-gradient rule differs from
+the full derivative in Proposition~\ref{prop:kf}. Neither the ideal identity nor its regularized
+analogue estimates the population risk of the adaptively trained network.
+
+
+\subsection{Capacity of stacking with fixed members}
+\label{sec:theory-stack}
+
+Convexity bounds the loss of a convex combination by the corresponding
+weighted average of member losses. A separate uniform-deviation argument
+bounds the cost of fitting the weights when the candidate members are fixed
+independently of an i.i.d. validation sample and the losses have a population
+bound.
+
+\begin{proposition}[validation stacking]\label{prop:stack}
+Let $f_1,\dots,f_M:\mathcal U\to\mathcal V$ be fixed maps, let
+$\Delta=\{w\in\mathbb R^M:w_m\ge0,\sum_m w_m=1\}$, and for $w\in\Delta$ write
+$F_w=\sum_m w_m f_m$. Assume the members' per-sample relative errors are
+bounded: $\ell(f_m(u),G(u))\le B$ for $\mu$-a.e.\ $u$ and every $m$.
+\begin{enumerate}
+\item[(i)] For every $w\in\Delta$,
+$\ell(F_w(u),G(u))\le\sum_m w_m\,\ell(f_m(u),G(u))$ pointwise; in particular
+$R(F_w)\le\sum_m w_m R(f_m)\le\max_m R(f_m)$, and $\ell(F_w(u),G(u))\le B$.
+\item[(ii)] Let $\widehat w$ minimize the empirical risk
+$\widehat R(w)=\tfrac1m\sum_{i=1}^m\ell(F_w(\tilde u_i),G(\tilde u_i))$ over
+$\Delta$, computed on an i.i.d.\ validation sample
+$\tilde u_1,\dots,\tilde u_m\sim\mu$ independent of $f_1,\dots,f_M$. Then for
+every $\delta\in(0,1)$, with probability at least $1-\delta$,
+\[
+R(F_{\widehat w})\;\le\;\min_{w\in\Delta}R(F_w)\;+\;\frac{8B}{m}\;+\;
+B\sqrt{\frac{2\big((M-1)\log\!\big(m(M-1)+1\big)+\log(2/\delta)\big)}{m}} .
+\]
+\end{enumerate}
+\end{proposition}
+\noindent\emph{Proof.} See Supplement~\ref{proof:prop:stack}.
+
+
+With $M=5$, $m=1000$ and $\delta=0.05$, the excess term is about
+$0.28B$. Substituting $B=0.25$, the largest observed member error, gives
+roughly seven percentage points, if that value is a uniform population bound. This excess term is much larger than the measured selection effects. The result supplies the scaling $\sqrt{M\log m/m}$;
+the much smaller validation-to-test gaps are empirical measurements.
+
+The stack the pipeline deploys on the structural-mechanics benchmark is more general
+than a single convex vector: the weights are affine and vary per grid point,
+fitted by ridge on the validation split, and selection between the affine and global convex stacks uses a half-split
+comparison: each is fitted on one half, evaluated on the other, and the
+one with lower error is refitted on the full split. Proposition~\ref{prop:stack} does not cover that
+construction. The following two statements give conditional capacity bounds
+for related fixed-candidate selection and affine classes.
+
+\begin{lemma}[validated selection]\label{lem:select}
+Let $g_1,\dots,g_K$ be fixed maps from $\mathcal U$ to $\mathcal V$. Assume
+$\ell(g_k(u),G(u))\le B$ for $\mu$-a.e.\ $u$ and every $k$, and let
+$\widehat k$ minimize the empirical risk over an i.i.d.\ sample of size $m'$
+drawn from $\mu$ independently of everything used to build the $g_k$. Then,
+with probability at least $1-\delta$,
+\[
+R(g_{\widehat k})\;\le\;\min_{k\le K}R(g_k)\;+\;
+B\sqrt{\frac{2\log(2K/\delta)}{m'}} .
+\]
+\end{lemma}
+\noindent\emph{Proof.} See Supplement~\ref{proof:lem:select}.
+
+
+The half-split comparison uses $K=2$ and $m'=500$. The lemma applies
+only if both candidate stacks were constructed independently of the evaluation
+half. Refitting the selected stack changes the predictor. The following
+proposition treats affine fitting under independence and boundedness
+assumptions.
+
+\begin{proposition}[per-pixel affine stacking]\label{prop:affine}
+Fix members $f_1,\dots,f_M$, write $D=\sqrt{M+1}$, and for each output
+coordinate $j$ let $\varphi_j(u)=(f_1(u)_j,\dots,f_M(u)_j,b)\in\mathbb R^{M+1}$,
+where $b$ bounds all member and target values:
+$|G(u)_j|\le b$, $|f_m(u)_j|\le b$ for $\mu$-a.e.\ $u$ and all $j,m$. Consider
+the per-coordinate affine class
+$\{u\mapsto w^\top\varphi_j(u):\|w\|_2\le W\}$ and the coordinate risks
+$R_j(w)=\mathbb E\,(w^\top\varphi_j(u)-G(u)_j)^2$, estimated on an i.i.d.\
+validation sample of size $m$ independent of the members.
+\begin{enumerate}
+\item[(i)] If $\widehat w_j$ minimizes the empirical risk of coordinate $j$
+over the class, then with probability at least $1-\delta$,
+\[
+\begin{aligned}
+&\frac1q\sum_{j=1}^q\Big[R_j(\widehat w_j)-\min_{\|w\|_2\le W}R_j(w)\Big]\\
+&\qquad\le\frac{8\,W b^2 D\,(1+WD)+2\,b^2(1+WD)^2\sqrt{\tfrac12\log(4q/\delta)}}{\sqrt m}.
+\end{aligned}
+\]
+\item[(ii)] If instead $\widehat w_j$ minimizes the ridge objective
+$\widehat R_j(w)+\lambda\|w\|_2^2$ with $\lambda\ge0$ and satisfies $\|\widehat w_j\|_2\le W$,
+the same bound holds with an additional $\lambda W^2$ on the right.
+\end{enumerate}
+\end{proposition}
+\noindent\emph{Proof.} See Supplement~\ref{proof:prop:affine}.
+
+
+For fixed $M,b,W$, this is an $m^{-1/2}$ bound on coordinatewise
+mean-squared risk, with logarithmic dependence on the number of coordinates.
+It is not a relative-error bound. Its constants depend polynomially on $b$
+and $W$; substituting the measured values makes the bound exceed the realized
+excess by many orders of magnitude. Those substitutions are illustrative,
+since a finite observed maximum is not a population bound.
+
+A fixed grid of residual corrections gives a further composite class. For
+each configuration, correction of training residuals is affine in the stack
+weights, so the same uniform-deviation argument applies with a transformed
+feature map. The following result requires the training arrays, members and
+correction configurations to be fixed independently of validation.
+
+\begin{corollary}[capacity bound for a fixed composite correction class]
+\label{cor:certificate}
+Assume the setting of Proposition~\ref{prop:affine}, and let $\Gamma$ be a
+finite set of correction configurations, each defining weights
+$c_\gamma(u)\in\mathbb R^{n_{\mathrm{tr}}}$ with the corrected predictor
+\[
+h_{w,\gamma}(u)_j\;=\;w_j^\top\varphi_j(u)
++c_\gamma(u)^\top\big(Y_j-\Phi_j w_j\big),
+\]
+where $Y_j\in\mathbb R^{n_{\mathrm{tr}}}$ collects the training targets of
+coordinate $j$, and $\Phi_j\in\mathbb R^{n_{\mathrm{tr}}\times(M+1)}$
+has rows $\varphi_j(u_i)^\top$, including the final column of intercept
+features equal to $b$; $\gamma=0$
+(no correction, $c_0\equiv0$) is included in $\Gamma$. Suppose the correction
+weights are uniformly bounded, $\sup_{u,\gamma}\|c_\gamma(u)\|_1\le\kappa$.
+Assume that $Y_j$, $\Phi_j$, the members and all $c_\gamma$ are fixed
+independently of the validation sample, and that their training target and
+feature entries satisfy the same absolute bound $b$. For any
+validation-measurable choice
+$(\widehat w,\widehat\gamma)$ with $\|\widehat w_j\|_2\le W$ and
+$\widehat\gamma$ minimizing the empirical validation risk, aggregated over
+coordinates, among $\gamma\in\Gamma$ at the fitted $\widehat w$ (the grid
+choice is shared across coordinates), with
+probability at least $1-\delta$,
+\[
+\begin{aligned}
+\frac1q\sum_j R_j\big(h_{\widehat w,\widehat\gamma}\big)
+&\le \min_{\gamma\in\Gamma}\frac1q\sum_j R_j\big(h_{\widehat w,\gamma}\big)\\
+&\quad+\frac{2(1+\kappa)^2 b^2(1+WD)}{\sqrt m}
+\Bigg(4WD+(1+WD)\sqrt{\frac{\log(4q|\Gamma|/\delta)}{2}}\Bigg).
+\end{aligned}
+\]
+Since $\gamma=0$ is among the candidates, the oracle on the right is at most
+the fitted stack's risk, and combining with
+Proposition~\ref{prop:affine}(ii) bounds the composite risk against the best
+affine stack, provided the hypotheses of both results hold (with failure
+probabilities allocated between them). Here $b$ and $W$ must be population
+and class bounds; the observed values are
+diagnostics of them. For
+kernel ridge weights, $\kappa$ is supplied by the next lemma.
+\end{corollary}
+\noindent\emph{Proof.} See Supplement~\ref{proof:cor:certificate}.
+
+
+For kernel ridge regression, the correction-weight bound follows analytically. In
+the pipeline each $\gamma=(s,\lambda)$ is a length scale and a nugget, and
+the weights are those of kernel ridge regression,
+$c_\gamma(u)=(K_\gamma+n\lambda I)^{-1}k_\gamma(X,u)$, so that
+$\widehat r(u)=c_\gamma(u)^\top R$ in the notation of
+Section~\ref{sec:method-kernel}. Their $\ell^1$ norm is bounded uniformly in
+$u$ by the nugget alone.
+
+\begin{lemma}[uniform bound on kernel ridge weights]\label{lem:kappa}
+Let $k$ be a positive definite kernel with $k(u,u)\le k_{\max}$ for all $u$,
+let $X=(u_1,\dots,u_n)$ be any design with Gram matrix $K$, and let
+$\lambda>0$. The kernel ridge weights
+$c_\lambda(u)=(K+n\lambda I)^{-1}k(X,u)$ satisfy, for every $u$,
+\[
+\|c_\lambda(u)\|_1\;\le\;\sqrt n\,\|c_\lambda(u)\|_2\;\le\;
+\frac12\sqrt{\frac{k(u,u)}{\lambda}}\;\le\;\frac12\sqrt{\frac{k_{\max}}{\lambda}} ,
+\]
+and the constant $\tfrac12$ cannot be improved: for every $\lambda\in(0,1)$
+there are a kernel, a two-point design and a point $u$ at which the first
+and last members are equal. In particular, for the residual correction of
+Section~\ref{sec:method-kernel} --- a Mat\'ern kernel with $k(u,u)=1$ and
+the nugget grid $\lambda\in\{10^{-6},10^{-5},10^{-3}\}$ --- the hypothesis
+of Corollary~\ref{cor:certificate} holds, whatever the length scale and the
+design, with
+\[
+\kappa_{\mathrm{an}}\;:=\;\tfrac12\max_{\gamma\in\Gamma}\lambda_\gamma^{-1/2}\;=\;500.
+\]
+\end{lemma}
+\noindent\emph{Proof.} See Supplement~\ref{proof:lem:kappa}.
+
+
+Positive semidefiniteness of the Gram matrix of the design together with
+$u$ confines
+$k(X,u)$ to the range of $K$ with $k(X,u)^\top K^{+}k(X,u)\le k(u,u)$, and
+$\mu/(\mu+n\lambda)^2\le1/(4n\lambda)$ for every eigenvalue $\mu$.
+Thus $\kappa_{\mathrm{an}}$ is a uniform bound determined by the kernel
+diagonal and nugget grid. The excess term contains $(1+\kappa)^2$;
+with $\kappa_{\mathrm{an}}=500$, it exceeds the measured errors by many
+orders of magnitude. The realized weights have a smaller scale:
+on a test probe of five hundred points the largest $\ell^1$ norm over the
+grid averages $\kappaTen$ over the ten seeds
+(Section~\ref{app:verification}), about a fifteenth of
+$\kappa_{\mathrm{an}}$. Substituting that value would reduce the excess term
+by about a factor of 240, but a finite-probe maximum does not supply the
+required uniform bound.
+
+The corollary bounds coordinatewise mean-squared risk for candidates fixed
+independently of validation. The deployed estimator instead selects by
+mean relative $L^2$ error, tunes its kernel stages on an $8000$-row
+subsample, refits the selected kernel on all $19000$ rows, and reuses the
+validation split for checkpoint and member selection. These operations are
+outside the corollary's assumptions. Likewise, observed maxima do not
+establish the population bounds $B,b,L,W$ required by the preceding
+capacity results.

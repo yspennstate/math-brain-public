@@ -1,0 +1,233 @@
+\subsection{Transfer of component error into retrieval error}\label{sec:transfer}
+
+Section~\ref{sec:stability} controls the inverse where the denominator stays away from zero. The theorem below
+describes a whole evaluation distribution, with entries of vanishing transmission included, with the constant one,
+and shows that the resulting loss of rate is not an artefact of the argument. Let $P$ be the evaluation distribution
+over entries (a state, a band, and the surface reflectance when it is varied), in fixed physical units; expectations
+are conditional on the fitted emulator. Assume
+\begin{equation}\label{eq:transfer-hyp}
+0\le\rho\le R\le1,\qquad t>0,\qquad 0\le s\le S,\qquad RS<1 .
+\end{equation}
+The emulator predicts $(\widehat a,\widehat t,\widehat s)$. The \emph{constrained retrieval} replaces $\widehat t$ by
+$\max\{\widehat t,0\}$ and $\widehat s$ by its projection onto $[0,S]$, neither of which increases $|e_t|$ or
+$|e_s|$, and sets
+\begin{equation}\label{eq:rhobar}
+\bar\rho=\Pi_{[0,R]}\Bigl(\frac{L-\widehat a}{\widehat t+\widehat s\,(L-\widehat a)}\Bigr)
+\end{equation}
+when the denominator is positive, and otherwise returns a prescribed value in $[0,R]$ and records a failure. It is
+an estimator in its own right and is reported beside the unconstrained inverse and its failure counts, never in
+place of them. The \emph{retrieval-weighted component error}, computed after the projections, is
+\begin{equation}\label{eq:eR}
+e_R=|e_a|+R\,|e_t|+R^2\,t\,|e_s|,\qquad \varepsilon_R^2=\E_P[e_R^2],
+\end{equation}
+which is at most $e=|e_a|+|e_t|+t|e_s|$ since $R\le1$; $\varepsilon_R$ is not the mean relative radiance error of
+the tables. Put $F_t(\tau)=\Prob(t\le\tau)$.
+
+\begin{theorem}[error transfer with constant one]\label{thm:transfer}
+Under \eqref{eq:transfer-hyp}, for the constrained retrieval \eqref{eq:rhobar}:
+\begin{enumerate}
+\item $|\bar\rho-\rho|\le\min\{R,\;e_R/t\}\le\min\{R,\;e/t\}$ at every entry, and no universal constant below one
+is possible.
+\item For every $\tau>0$,
+\[
+\E_P|\bar\rho-\rho|^2\le\E_P\min\Bigl\{R^2,\frac{e_R^2}{t^2}\Bigr\}
+\le R^2F_t(\tau)+\E_P\Bigl[\frac{e_R^2}{t^2}\1\{t>\tau\}\Bigr]
+\le R^2F_t(\tau)+\frac{\varepsilon_R^2}{\tau^2}.
+\]
+\item If $F_t(u)\le Au^\beta$ for $0<u\le u_0$ with some $\beta>0$, then for
+$\varepsilon_R\le u_0^{(\beta+2)/2}$,
+$\E_P|\bar\rho-\rho|^2\le(R^2A+1)\,\varepsilon_R^{2\beta/(\beta+2)}$; a component-error bound
+$\varepsilon_{R,n}=O(n^{-r})$ yields $\|\bar\rho_n-\rho\|_{L^2(P)}=O(n^{-r\beta/(\beta+2)})$.
+\item If $t\ge t_0>0$ $P$-almost surely, then $\|\bar\rho-\rho\|_{L^2(P)}\le\varepsilon_R/t_0$.
+\end{enumerate}
+\end{theorem}
+
+\noindent\emph{Proof in Section~\ref{app:proofs}.}
+The middle expression in (ii) keeps the association between the errors and the transmission and is the one the
+tables evaluate; the last needs no power law. Both are computable on a finite test table; (iii) is a population
+statement whose tail hypothesis a finite table cannot establish down to $t=0$. The exponent in (iii) cannot be
+improved from its hypotheses. Item (i) holds entry by entry, so it passes to quantiles: on any set of entries, a
+single band for instance, every quantile of $|\bar\rho-\rho|$ is at most the same quantile of $\min\{R,e_R/t\}$,
+which depends only on the component errors and the true transmission. In Bayesian inversion the corresponding
+statements bound the Hellinger distance between the true posterior and one built on a Gaussian-process emulator by
+moments of the emulator's error \cite{stuartteckentrup}; here the inverse is deterministic and the weight of each
+entry, $1/t$, is explicit.
+
+\begin{proposition}[the exponent is attained]\label{prop:attained}
+For every $\beta>0$, every $0<c<r_0<R$ and every $\tau\in(0,1)$ there are an evaluation distribution and a predictor
+satisfying \eqref{eq:transfer-hyp} with $S=0$ and $F_t(u)=u^\beta$ on $(0,1)$, namely $\rho=r_0$, $a=s=0$,
+$\widehat t=t$, $\widehat s=0$ and $\widehat a=ct\,\1\{t\le\tau\}$, for which $\bar\rho=r_0-c\,\1\{t\le\tau\}$,
+\[
+\begin{aligned}
+\varepsilon_R^2&=\frac{c^2\beta}{\beta+2}\,\tau^{\beta+2},
+&\E_P|\bar\rho-\rho|^2&=c^2\tau^\beta,\\
+\E_P|\bar\rho-\rho|^2
+&=c^{4/(\beta+2)}\Bigl(\frac{\beta+2}{\beta}\Bigr)^{\beta/(\beta+2)}
+\varepsilon_R^{2\beta/(\beta+2)} .
+\end{aligned}
+\]
+\end{proposition}
+
+\noindent\emph{Proof in Section~\ref{app:proofs}.}
+This is sharpness of the transfer inequality for the physical inverse, not a minimax statement over retrieval
+algorithms. What decides the rate is where the errors sit relative to the transmission.
+
+\begin{theorem}[conditional error profile]\label{thm:profile}
+Under \eqref{eq:transfer-hyp}, suppose $\E_P[e_R^2\mid t]\le\sigma^2t^{2\nu}$ $P$-almost surely for some $0\le\nu\le1$. Then
+\[
+\E_P|\bar\rho-\rho|^2\le\E_P\min\{R^2,\;\sigma^2t^{-2(1-\nu)}\} .
+\]
+Under the tail hypothesis of Theorem~\ref{thm:transfer}(iii) and $\nu<1$, as $\sigma\to0$,
+\[
+\E_P|\bar\rho-\rho|^2=
+\begin{cases}
+O(\sigma^{\beta/(1-\nu)}), & \beta<2(1-\nu),\\
+O(\sigma^2\log(1/\sigma)), & \beta=2(1-\nu),\\
+O(\sigma^2), & \beta>2(1-\nu),
+\end{cases}
+\]
+and at $\nu=1$, $\E_P|\bar\rho-\rho|^2\le\sigma^2$ with no tail hypothesis. In the model of
+Proposition~\ref{prop:attained} the predictor $\widehat a=a+\min\{ct,\sigma t^\nu\}$ has $e_R\le\sigma t^\nu$ and
+$|\bar\rho-\rho|=\min\{c,\sigma t^{\nu-1}\}$, and attains each order.
+\end{theorem}
+
+\noindent\emph{Proof in Section~\ref{app:proofs}.}
+At $\nu=0$ the theorem recovers the uniform-error regimes under the weaker hypothesis of a bounded conditional
+second moment; at $\nu=1$ an emulator whose conditional root-mean-square error decreases proportionally to the
+transmission loses no rate. The central diagnostic is therefore the profile $t\mapsto\E[e_R^2\mid t]$ and not only
+the tail $t\mapsto F_t(t)$: the same overall error concentrated in the opaque entries gives the worst-case loss,
+and proportional to the transmission gives none.
+
+\subsection{The stacking objective}\label{sec:joint}
+
+\paragraph{Affine fitting predictions and projected retrieval.}
+Let $w$ denote simplex weights, with one simplex for each component being combined.
+Write $\widetilde a_w$, $\widetilde t_w$ and $\widetilde s_w$ for the affine combinations
+used in fitting, and $\widetilde e_a=\widetilde a_w-a$, $\widetilde e_t=\widetilde t_w-t$,
+$\widetilde e_s=\widetilde s_w-s$ for their errors. Retrieval uses
+$\widehat t_w=\max\{\widetilde t_w,0\}$ and
+$\widehat s_w=\Pi_{[0,S]}\widetilde s_w$, followed by \eqref{eq:rhobar}.
+Base predictions may instead be projected before combination, provided the values
+entering the fitting objective remain affine in $w$. In either case, projection during
+retrieval does not increase flux or albedo error under \eqref{eq:transfer-hyp}.
+
+For a fixed finite threshold $\tau>0$, the total-flux raw-error surrogate is
+\begin{equation}\label{eq:Jtau}
+J_\tau(w)=\E_P\!\left[
+\frac{\widetilde e_a^2+R^2\widetilde e_t^2+R^4t^2\widetilde e_s^2}
+     {(t\vee\tau)^2}\right].
+\end{equation}
+It is a convex quadratic: the errors are affine in the weights and the entry weights
+are nonnegative and independent of $w$. Its empirical version replaces the expectation
+by the validation average. Theorem~\ref{thm:transfer} and Cauchy--Schwarz imply
+\begin{equation}\label{eq:Jtau-bound}
+\E_P|\bar\rho_w-\rho|^2\le R^2F_t(\tau)+3J_\tau(w).
+\end{equation}
+Indeed, projection gives
+$e_R\le|\widetilde e_a|+R|\widetilde e_t|+R^2t|\widetilde e_s|$; split the
+expectation at $t=\tau$ and apply the three-term square bound on $\{t>\tau\}$.
+This inequality holds for every feasible $w$, not only an optimizer.
+
+\paragraph{A separable surrogate.}
+The stacks of Table~\ref{tab:v2-stacks} combine $Y_2$ and $Y_3$ with separate weight
+vectors. Each base albedo is projected onto $[0,S]$ before fitting, and the base fluxes are
+not projected. With
+$\widetilde e_j=\widetilde Y_j-Y_j$ for $j=2,3$, their finite-threshold fitting objective is
+\begin{equation}\label{eq:Jtau-sep}
+J'_\tau(w)=\E_P\!\left[
+\frac{\widetilde e_a^2+R^2\widetilde e_2^2+R^2\widetilde e_3^2
+      +R^4t^2\widetilde e_s^2}{(t\vee\tau)^2}\right].
+\end{equation}
+This is also a convex quadratic. It omits the cross term
+$2R^2\widetilde e_2\widetilde e_3$ present in $J_\tau$.
+The flux floor is applied after fitting, to the combined total flux when the retrieval is
+scored, and is not part of the fitted loss.
+Since $t\ge0$,
+\[
+|\max\{\widetilde Y_2+\widetilde Y_3,0\}-t|
+ \le|\widetilde e_2+\widetilde e_3|
+ \le|\widetilde e_2|+|\widetilde e_3|.
+\]
+The same argument now uses four squared terms and gives
+\begin{equation}\label{eq:Jtau-sep-bound}
+\E_P|\bar\rho_w-\rho|^2\le R^2F_t(\tau)+4J'_\tau(w).
+\end{equation}
+For the separable fit the factor is therefore four rather than three.
+Both statements require the physical hypotheses on the distribution being averaged;
+full-table statistics that include entries outside those hypotheses are not certificates
+of either bound.
+
+Putting projection \emph{inside} a squared fitting loss is a different problem and need
+not preserve convexity. On $0\le w\le1$, for example,
+$g(w)=(\max\{2w-1,0\}-1)^2$ satisfies
+$g(1/2)=1>(g(0)+g(1))/2=1/2$. The raw-error quadratic \eqref{eq:Jtau-sep} is not of
+this kind.
+
+\paragraph{Forward-optimal weights.}
+A stack fitted on a forward objective weights every band alike, while the retrieval divides the
+error at each entry by its transmission. The following example shows how far apart the two
+optima can be.
+
+\begin{proposition}[forward-optimal and retrieval-optimal weights]\label{prop:stackweights}
+Let $0<\rho<R\le1$. For a convex combination of heads with weights $w$, let $F(w)$ be the mean
+squared radiance error at $\rho$ and $E(w)$ the mean squared error of the constrained retrieval
+\eqref{eq:rhobar}, and let $w_f$ minimize $F$ and $w_r$ minimize $E$.
+\begin{enumerate}
+\item Take two equally weighted entries with $a=s=0$ and transmissions $t_1=1$,
+$t_2=\delta\in(0,1]$, and two heads that predict $t$ and $s$ exactly and the path radiance with
+errors $e^A=(0,c\delta)$ and $e^B=(b,0)$, where $0<b,c\le\min\{\rho,R-\rho\}$; $w$ is the weight on
+$A$. Then
+\[
+F(w)=\tfrac12\bigl[(1-w)^2b^2+w^2c^2\delta^2\bigr],\qquad
+E(w)=\tfrac12\bigl[(1-w)^2b^2+w^2c^2\bigr],
+\]
+$w_f=b^2/(b^2+c^2\delta^2)$, $w_r=b^2/(b^2+c^2)$, $F(w_f)\le F(w_r)$, and
+\[
+\frac{E(w_f)}{E(w_r)}=\frac{(b^2+c^2\delta^4)(b^2+c^2)}{(b^2+c^2\delta^2)^2},
+\]
+which tends to $1+c^2/b^2$ as $\delta\to0$ and equals $(1+\delta^2)^2/(4\delta^2)$ at
+$c=b/\delta$. For every $\tau\le\delta$ the transmission-weighted objective $J_\tau$ of
+\eqref{eq:Jtau} equals $E$.
+\item Suppose instead that $s=0$ at every entry, that every head predicts $t$ and $s$ exactly,
+and that the retrieval of every combination lies in $[0,R]$. Let $\mathcal L$ be the linear span of
+the heads' path-radiance errors, and let $\lambda_{\max}$ and $\lambda_{\min}$ be the supremum and the
+infimum of $\E_P[r^2/t^2]/\E_P[r^2]$ over $r\in\mathcal L$ with $\E_Pr^2>0$. Then
+\[
+E(w_f)\le\frac{\lambda_{\max}}{\lambda_{\min}}\,E(w_r),\qquad
+\frac{\lambda_{\max}}{\lambda_{\min}}\le\Bigl(\frac{t_{\max}}{t_{\min}}\Bigr)^2
+\ \text{ if }\ t_{\min}\le t\le t_{\max}\ P\text{-almost surely.}
+\]
+\end{enumerate}
+\end{proposition}
+
+\noindent\emph{Proof in Section~\ref{app:proofs}.}
+The weights that minimize the forward error put almost all their mass on the head whose error
+sits at the opaque entry, because there it costs little radiance; the retrieval divides that
+error by $\delta$ and pays for it in full. With $c/b$ large the forward-optimal stack is better
+than either head in radiance and worse than the retrieval-optimal stack by any factor in the
+inverse, which is the pattern of Table~\ref{tab:tails} in miniature. Item (ii) says when this can
+happen. The ratio $\lambda_{\max}/\lambda_{\min}$ measures how unequally the transmission weights
+the directions of error available to the combination: it equals one when every error in
+$\mathcal L$ has the same transmission profile, and it is large only when the heads put their
+errors at different transmissions, as the two heads of item (i) do. In that example it equals
+$\delta^{-2}$, and the ratio $E(w_f)/E(w_r)$ at $c=b/\delta$ comes within a factor of four of it.
+Without such structure the bound falls back on the squared dynamic range of the transmission.
+On the physical domain of the EMIT table the transmission itself spans about twenty-four decades,
+and thirteen above the floor $10^{-12}T_{\rm train}$ of Section~\ref{sec:tq-domain}, so the
+factor is of order $10^{48}$ and $10^{26}$. The bound \eqref{eq:Jtau-bound}
+for $J_\tau$ involves neither quantity.
+
+\paragraph{Numerical weights and threshold convention.}
+The weights are computed by nonnegative least squares with a heavily weighted row penalizing
+$\sum_h w_h-1$, and are then normalized to sum to one. This gives feasible
+simplex weights, though not an exact solution of the equality-constrained quadratic program,
+and the mean-relative-norm arm runs six iteratively reweighted least-squares sweeps from the
+squared-loss solution. The weights reported below are therefore approximate minimizers.
+
+A finite threshold is written $\tau=uT_{\rm train}$, where $T_{\rm train}>0$ is a flux scale of
+the training data, and Table~\ref{tab:v2-stacks} reports $u$. The unweighted fit is a plain
+squared-error baseline on the physical components, not the limit of \eqref{eq:Jtau-sep} as
+$\tau\to\infty$. The ladder of thresholds is a sensitivity analysis; a deployed threshold would
+be fixed in advance by a coverage rule. The stack weights here are fitted on validation rows
+that also serve the other model decisions, so Proposition~\ref{prop:selection} does not apply to
+them.

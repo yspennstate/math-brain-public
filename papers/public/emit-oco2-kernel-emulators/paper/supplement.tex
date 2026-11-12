@@ -1,0 +1,90 @@
+\documentclass[11pt]{article}
+\usepackage[margin=1.1in]{geometry}
+\usepackage{amsmath, amssymb, amsthm}
+\usepackage{graphicx}
+\newtheorem{proposition}{Proposition}[section]
+\newtheorem{theorem}[proposition]{Theorem}
+\newtheorem{corollary}[proposition]{Corollary}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\1}{\mathbf{1}}
+\usepackage{booktabs}
+\usepackage{array,longtable,pdflscape}
+\usepackage{microtype}
+\newcommand{\thead}[1]{\shortstack{#1}}
+\usepackage{xr-hyper}
+\usepackage[hidelinks]{hyperref}
+\hypersetup{pdftitle={Supplement to Learned representations and kernel corrections for radiative-transfer emulation},pdfauthor={Yitzchak Shmalo}}
+\graphicspath{{../figures/}}
+\externaldocument[][nocite]{emit_kernel_dnn}[https://github.com/yspennstate/emit-oco2-kernel-emulators/raw/main/paper/emit_kernel_dnn.pdf]
+
+% Sections, results, tables, figures and equations of this document carry the prefix S.
+\renewcommand{\thesection}{S\arabic{section}}
+\renewcommand{\thetable}{S\arabic{table}}
+\renewcommand{\thefigure}{S\arabic{figure}}
+\numberwithin{equation}{section}
+
+\title{Supplement to ``Learned representations and kernel corrections\\ for radiative-transfer emulation''}
+\author{Yitzchak Shmalo\thanks{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel.}}
+\date{September 2026}
+
+\begin{document}
+\maketitle
+
+\begin{abstract}
+This supplement contains the proofs of the results stated in the article, three further results on the
+sensitivity, selection and perturbation of learned corrections, and the experiments that support the article
+without being needed to follow it: further representation and combination studies on the EMIT table, a synthetic
+check of the transfer theorem, a matched correction-coefficient benchmark, full-data tuning and gradient-based
+metrics, a comparison on OCO-2, ten further emulation configurations and extended tables. Sections, results,
+tables and equations with the prefix S are in this document; numbers without it refer to the article.
+\end{abstract}
+
+\section{Sensitivity, selection and perturbation of learned corrections}\label{supp:sensitivity}
+
+\input{supp_sensitivity}
+
+\input{supp_results}
+
+\input{supp_retune}
+
+\input{supp_further}
+
+\input{supp_tables}
+
+\input{supp_proofs}
+
+\section*{Acknowledgements and funding}
+
+The research presented in this paper was supported by the European Research Council (ERC) under
+the European Union's Horizon Europe research and innovation programme (grant agreement
+No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and
+Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel
+Science Foundation (grant number 2258/19), by the Israel Science Foundation (ISF Grant
+4101/25), and by Google Cloud through its education credits program (credit 530550103).
+
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
+\section*{Declaration of competing interest}
+
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at
+Convex Nexus Capital; both entities supported this work and are named above. These entities and
+the public funders had no role in the study design, analysis, manuscript preparation, or
+decision to publish.
+
+\section*{AI-assisted contributions}
+
+Claude Code (Anthropic) and Codex (OpenAI) implemented the data pipeline and the model
+comparisons, ran the experiments, produced the figures and tables from the run records, and
+drafted the manuscript. ChatGPT (OpenAI) developed the residual-error and inversion-stability
+arguments, checked the identities and wrote the conditioning diagnostics and their tests. The
+author supplied the data, set the questions, and reviewed the results, the proofs and the text.
+
+\section*{Data and code availability}
+
+The code, the run records and this supplement are in the repository
+\url{https://github.com/yspennstate/emit-oco2-kernel-emulators}. The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\input{references_supplement}
+
+\end{document}

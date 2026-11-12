@@ -1,0 +1,469 @@
+The structural-mechanics experiments used CPU-only cloud instances,
+with single-precision network training and double-precision kernel solves
+and error computations. The second experiment of Section~\ref{sec:seeds} ran
+on one Intel Xeon E5-2698 v4 host (20 physical cores, 40 hardware threads).
+The distributed \texttt{StructuralMechanics} dataset contains 40000
+samples. Its inputs have an exact broadcast structure and are represented
+in $\mathbb R^{41}$. Samples 1--20000 form the training block and samples
+20001--40000 form the test block. In the high-data protocol, a fixed
+permutation assigns 1000 training-block samples to validation and 19000
+to fitting. The low-data protocol uses the first 1250 training-block
+samples, with the final 250 reserved for validation. Model selection uses
+the validation split.
+
+\paragraph{FNO.} The network has width 64, 14 modes per dimension, and
+4 spectral layers with pointwise linear skips and GELU activations. The
+input lift takes 3 channels (the broadcast load and two coordinates), and
+the output projection has dimensions $64\to128\to1$, giving 6.45M
+parameters in total. Training uses AdamW with learning rate
+$1.5\times10^{-3}$, weight decay $10^{-6}$, a cosine schedule ending at
+$10^{-6}$, and batch size 128. The first experiment scheduled 200 epochs
+and retained the best validation checkpoint reached before its time limit;
+the second completed a 100-epoch schedule.
+
+\paragraph{Transformer.} This architecture is excluded from the reported
+ensemble. Its encoder uses 41 tokens, each comprising the load value and
+10 sine/cosine pairs of the coordinate, with 5 pre-norm blocks, dimension
+192, 4 attention heads, and MLP ratio 4. The decoder forms 1681 grid
+queries from Fourier features of both coordinates and uses two
+cross-attention blocks followed by a pointwise $192\to192\to1$ head.
+The network has 3.16M parameters.
+
+\paragraph{UNet.} The network has three convolutional scales
+($41\to21\to11$ by average pooling with ceiling mode) and a $6\times6$
+bottleneck. Each block uses two $3\times3$ convolutions with GroupNorm(8)
+and SiLU, with widths $48/96/192/384$. Bilinear upsampling, skip
+concatenation, and a $1\times1$ output head complete the network, which
+has 4.38M parameters and the same input channels as the FNO. Training uses
+AdamW with learning rate $1.5\times10^{-3}$, weight decay $10^{-5}$, a
+cosine schedule ending at $10^{-6}$, and batch size 256. The second
+experiment uses 100 epochs.
+
+\paragraph{MSE variant.} The residual MLP uses mean squared error on
+standardized targets in place of the metric loss, with a 120-epoch schedule
+and otherwise the same training settings. It has the lowest error among the plain MLPs and introduces a second
+training loss into the ensemble.
+
+\paragraph{MLP.} The input layer has dimensions $41\to1024$, followed by
+three residual SiLU blocks of width 1024 and an output layer
+$1024\to1681$, for 4.91M parameters. Training uses AdamW with learning
+rate $10^{-3}$, weight decay $10^{-5}$, a cosine schedule, 400 epochs, and
+batch size 256. A wider variant has width 1536, five residual blocks and
+14.5M parameters, with the same training protocol. The low-data pipeline
+uses the width-1024 MLP for 400 epochs with batch size 64 on the fixed
+1000 fitting rows.
+
+\paragraph{Refiner.} The load is concatenated with its kernel stress
+prediction and passed through an input layer of dimensions
+$(41+1681)\to1024$ and the same residual trunk as the MLP. The resulting
+network has 6.64M parameters and uses the MLP training settings for 100
+epochs. Its conditioning channel consists of four-fold out-of-fold kernel
+predictions during training and full-data kernel predictions at evaluation.
+Reflection
+augmentation flips the load and permutes both the kernel channel and the target
+by the row-reversal index. Evaluation averages $F(u,h(u))$ with
+$T F(Su,T h(u))$; it does not recompute the kernel prediction at $Su$.
+The full-map guarantee and the additional
+condition on the kernel channel are distinguished in
+Supplement~\ref{sec:theory-sym}.
+
+\paragraph{Common training details.} Except for the MSE variant, the loss
+is the batch mean of $\|\hat v-v\|_2/\|v\|_2$ in original units. Targets
+are standardized by the per-pixel training mean and global standard
+deviation, and predictions are denormalized when evaluating the loss.
+Neural members use reflection augmentation with probability $1/2$ and
+reflection averaging at evaluation, with the supplied-field convention
+for the refiner described above. The kernel-only member uses neither
+operation. Validation error is evaluated every 10 epochs and the checkpoint
+with the lowest error is retained. Section~\ref{sec:seeds-arch} compares
+residual alignment within and between configurations in the sixty-predictor
+pool.
+
+\paragraph{Test-block use.} The structural-mechanics test block is the
+benchmark's fixed public split. It is used by the first structural-mechanics experiment, the
+six-member experiment, the ablations, the hard-case study, the learning curves,
+the sixty-predictor analysis, the conformal calibration (which draws its
+$1000$ calibration cases from it) and the additional controls. Predictor
+fitting and model-level selection use the fitting and validation splits.
+The test-block analyses additionally fit the hindsight ensemble optimum and choose calibration quantiles on a test subset.
+The same $2000$ public OCO-2 test states are reused across the ten-seed
+experiment, the readout control and the ensemble comparison.
+
+\paragraph{Training labels and target centering.}
+The pooled-centering runs use \texttt{krr\_oof.py} with
+\texttt{--target-centering} \texttt{pooled}; the fold-local variant uses
+\texttt{--target-centering} \texttt{fold-local}. Only the kernel channel uses foldwise fitted kernel weights. Its predictions use a pooled target mean over all 19000 fitting rows, so held-out fold targets enter that centering statistic. Neural training predictions are generated by the networks fitted on those rows, and the refiner uses its training kernel channel. The correction is therefore fitted to $Y-M_{\rm tr}$. At query time the mean uses full-data kernel predictions. Section~\ref{sec:theory-or} gives the explicit $m_{\rm full}(X)-M_{\rm tr}$ mismatch term. Supplement~\ref{supp:sensitivity} measures its propagation with the fitted mean and kernel fixed, and compares target-centering choices after repeating refiner training and downstream fitting.
+
+\paragraph{Seed protocol.} In the high-data experiment, one seed value enters the stochastic components: the permutation that draws the validation split from the training pool,
+each member's initialization and batch order, the half-split of the stacking
+comparison, the subsamples used to tune the kernel stages, and the conformal
+calibration draw; the pool/test boundary remains fixed. In the low-data protocol the first 1000 fitting and next 250 validation rows remain fixed across seeds. ClimSim provides no fixed test split,
+so its seed also draws the $20000$-row test block out of the full set
+(\texttt{campaign/climsim\_seeded.py}). ClimSim seed variation therefore includes test sampling, whereas the
+structural-mechanics and OCO-2 test blocks are fixed. Tables report the
+mean and standard deviation across seeds.
+
+\paragraph{Calibration and readout controls.} The conformal comparison
+uses the same calibration split for the constant-radius,
+disagreement-scaled and $P_\lambda$-scaled bands. Each seed's
+$P_\lambda$ is computed from its selected correction kernel
+(Section~\ref{sec:uq}). The OCO-2 readout control repeats network training
+at ten seeds per band and fits ridge and kernel readouts to the same
+frozen features within each repetition (Table~\ref{tab:oco2ridge}).
+The ClimSim kernel-budget comparison varies the number of fitting rows
+under the protocol of Supplement~\ref{supp:oco2}.
+
+\paragraph{Cost of individual kernel stages.} The parameter counts of
+Table~\ref{tab:members} are the networks' weights alone. A deployed
+structural-mechanics pipeline also stores the coefficient matrix of the
+kernel member and that of the residual correction, each $19000\times1681$,
+about $\costCoefM$ million numbers apiece ($255$\,MB each in double
+precision), and evaluates a kernel row against the $19000$ training loads
+for every query. At these dimensions, an eight-thread calculation on the same host uses
+synthetic values to time the arithmetic in each operation. Block-filled
+Gram construction takes $\costGramS$\,s, Cholesky factorization takes
+$\costCholS$\,s, and triangular solves with $1681$ right-hand sides take
+$\costSolveS$\,s. The peak resident memory is $\costPeakBlockGb$\,GiB against
+$\costPeakNaiveGb$\,GiB after full-matrix construction. The lower peak uses block-filled construction; the
+experimental correction implementation, \texttt{correct\_stack.py},
+uses full-size temporaries.
+At inference one kernel stage costs
+$\costQueryOneMs$\,ms for a single query and $\costQueryBatchMs$\,ms per
+query in batches of a thousand. These timings measure one kernel stage.
+The full six-member pipeline evaluates two such stages plus five neural
+members with reflection averaging; its total inference latency was not
+measured by this diagnostic.
+
+\paragraph{Experimental schedules.} The first structural-mechanics experiment
+used ten seeds on four CPU instances. Kernel ridge, the metric-loss MLP, the
+normalized-MSE MLP and the refiner completed their schedules at every seed.
+A 36-hour per-task limit interrupted all ten FNO schedules. The reported
+FNO predictions use the best observed validation checkpoint at each seed,
+selected between epochs 10 and 70 of the scheduled 200. Validation error
+increased after the selected checkpoint in every observed training curve;
+the incomplete schedules do not establish performance after full training.
+No UNet was trained in this experiment. Four- and five-member stacks, residual
+corrections, second-moment measurements and conformal calibrations were
+completed at every seed. Kernel-stage timings distinguish the standard and larger host classes
+(Table~\ref{tab:compute}); Section~\ref{sec:cost} compares the memory
+requirements of full-matrix and block-filled Gram construction.
+
+The second experiment used the same ten seeds on one host with 20 physical
+cores and 40 hardware threads. Repeated fits of kernel ridge and the three
+MLP-family members agree with the first experiment's test errors to within $6\times10^{-8}$ in the relative-error unit
+for the two MLPs and the kernel ridge and $6\times10^{-6}$ for the refiner.
+The FNO and UNet each use a completed 100-epoch cosine schedule. Validation
+selects the final checkpoint for nine FNO runs and all ten UNet runs, and
+the epoch-79 checkpoint for the remaining FNO run. Each cosine schedule is normalized to 100 epochs and ends at $10^{-6}$. The six-member analysis includes per-pixel and global convex stacking,
+residual correction, second moments and conformal calibration at every
+seed. The paired comparisons of Section~\ref{sec:members-seeds} repeat
+these analyses on the five members excluding the UNet; the half-split comparison selects global convex weights at one seed
+of the five-member experiment, giving a corrected global convex stack. Table~\ref{tab:memcost} gives the training costs of each member.
+
+The OCO-2 raw-input kernel size sweep uses ten seeds per band.
+The separate O2 learning curve in Section~\ref{sec:scaling} uses one seed;
+the ClimSim curves use five, three and three seeds at their respective
+training sizes. The low-data pipeline uses ten seeds. The OCO-2 head
+pipeline uses ten seeds on each of the three bands, giving thirty
+band-seeds at a matched $250$-epoch budget, with one additional run at $750$
+epochs to examine sensitivity to training duration. The combination rules, empirical floors and ensembles in
+Section~\ref{sec:oco2} use member predictions and per-sample errors
+from each band-seed. The readout control uses the same seeds and data-split protocol as
+Table~\ref{tab:oco2}; small differences in weighted-network errors
+reflect repeated training.
+Seven of the thirty band-seeds were also repeated on different hardware:
+six of the ten rows reproduce to the printed precision across the two runs,
+including the kernel rows, the flat-metric network, its feature head and the
+reported combination, while the weighted-loss networks
+and their kernel heads differ by up to $0.39$ percentage points in reduced
+error. Numerical reduction order can vary across hardware despite fixed
+initialization and data order. These differences are smaller than the
+corresponding between-seed standard deviations.
+
+\paragraph{Prediction precision.} Errors recomputed from the stored member
+predictions use the same metric and seed-specific validation partitions as
+the original evaluations. On the fixed test block, all forty comparisons
+with the original reflection-averaged errors agree to between $10^{-14}$
+and $6\times10^{-8}$, consistent with the storage precision.
+
+\paragraph{Residual data and rounding.} The residual and selection analyses
+of Sections~\ref{sec:diversity} and~\ref{sec:members-seeds} use
+$r_m=f_m-y$. For the first experiment, each of the ten seeds has one compressed NumPy archive,
+\texttt{sm\_residuals\_s$k$.npz}, containing the test-block residual of each of the
+five members and of the reported pipeline (per-pixel stack plus kernel
+correction) as a $20000\times1681$ array, the validation-split residual of each
+member as a $1000\times1681$ array, the target norms $\|y\|$ of every sample on
+both splits, and the index arrays of both splits; the residuals are stored in
+IEEE half precision (\texttt{float16}), the norms and indices at full width.
+Across all 110 arrays, the mean validation and test errors computed
+from the half-precision residuals differ from the original values by at most
+$5.4\times10^{-8}$ in relative-error units. The largest stored residual
+is $192$, compared with target norms of $3.7\times10^3$ to
+$1.7\times10^4$. The measured rounding effect on these mean errors is far
+below their seed spread. The archives occupy $384$\,MB per seed, $3.84$\,GB in all.
+The archive manifest specifies the member, seed, split, dimensions,
+precision, checksums and error summaries. The member errors in
+Table~\ref{tab:members} are sample means of $\|r_m\|/\|y\|$. The
+normalized validation residuals $r_m/\|y\|$ determine the second-moment
+matrix $S$ and simplex weights; the test risks are computed from
+$\|\sum_m w_m r_m\|/\|y\|$ using the sum-to-one identity. The same arrays
+supply the dispersion factor in Proposition~\ref{prop:secmom}, pairwise
+correlations, the equicorrelation summary, equal-weight and fitted
+ensemble errors, spatial error maps, and the hard-sample comparison in
+Section~\ref{sec:diversity}. Conformal scores use $\|r\|$ and the same
+seed-specific calibration subset of the test block. All these quantities
+inherit the half-precision rounding described above.
+The per-pixel affine refit and kernel correction require the dataset and
+member predictions on the relevant fitting splits. The kernel's posterior scale also requires its Gram matrix.
+The five-member archive
+does not contain the second experiment's completed FNO or added UNet.
+
+\paragraph{Runtime.} Table~\ref{tab:compute} reports wall times from
+the first experiment. Each task used six threads, with five tasks sharing an
+instance. Results are separated by host class: seeds 2, 4, 8 and 9 used the
+larger instance for the kernel stages. A factorization, solve and validation
+prediction at $n=19000$ took $20$--$35$\,s there, compared with
+$42$--$113$\,s on the standard instances. The FNO's incomplete schedules
+are summarized by seconds per epoch from cumulative ten-epoch timers.
+Uninterrupted intervals took $467$--$625$\,s per epoch on standard
+instances and $348$--$410$\,s on the larger instance. Intervals affected by
+shared-host contention or suspension reached $10^4$\,s per epoch; the table
+therefore reports both minimum and median rates. Selected checkpoints were
+reached after $1.3$--$8.0$\,h at five seeds with uninterrupted timers, and
+$9.0$--$16.9$\,h at the remaining five. Full-test inference latency and
+peak memory were not recorded. Per-seed timings are provided in \texttt{runs/timing\_harvest.json}.
+
+\begin{table}[t]
+\centering
+\caption{Wall times for the first structural-mechanics experiment
+(all stages on CPU, six threads per task,
+five tasks sharing each instance). Network rows: the trainer's elapsed
+minutes from the first epoch to the final evaluation, as the range over seeds,
+with the scheduled epochs and the selected checkpoint epoch (range over the
+ten seeds). The FNO row gives seconds per epoch from ten-epoch timing intervals, minimum and median over all intervals (count in parentheses), since
+no seed completed the schedule. Kernel rows: the complete stage (fifteen grid
+cells and the refit) and its individual factorization-and-solve operations, as ranges,
+with the number of timed cells or folds in parentheses. The two columns are
+the two instance classes of the experiment, with the number of seeds in parentheses.}
+\label{tab:compute}
+\small
+\setlength{\tabcolsep}{3.5pt}
+\resizebox{\textwidth}{!}{%
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llcc}
+\toprule
+Stage & Epochs: scheduled / selected & Standard instances (6 seeds) & Larger instance (4 seeds) \\
+\midrule
+Metric-loss MLP & 400 / 39--79 & 129--158 min & 26--35 min \\
+MSE MLP & 120 / 99--119 & 9.7--11.9 min & 6.6--11.1 min \\
+Refiner & 100 / 99 & 9.9--13.1 min & 7.9--33.7 min \\
+FNO, per epoch & 200 / 10--70 & 467 s min, 581 s median (88) & 348 s min, 437 s median (56) \\
+Kernel ridge, grid and refit & --- & 17.0--26.0 min & 6.1--7.4 min \\
+\ \ one factor-and-solve, $n=19000$ & --- & 42--113 s (90) & 20--35 s (60) \\
+\ \ out-of-fold fold, $n=14250$ & --- & 32--66 s (24) & 13--22 s (16) \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}}
+\end{table}
+
+\paragraph{Member costs.} Table~\ref{tab:memcost} gives training costs
+for the second experiment over ten seeds, with all schedules completed
+on one host. Thread counts differ across members because the
+host was shared with the rest of the experiment. We report thread-minutes,
+elapsed wall time multiplied by the configured thread count. This is allocated parallelism; CPU utilization was not measured, and the timings include contention on the shared host. The FNO uses about $7900$ thread-minutes
+against $54$ for the MSE MLP while improving single-member error by about
+$0.03$ percentage points. The UNet uses about $115$ times the MSE MLP's
+thread-minutes and has higher single-member error, although it improves the
+ensemble. Parameter counts alone do not explain these differences: the FNO
+has 6.45M parameters, the refiner 6.64M, and the UNet 4.38M. Convolution over
+the full field and dense prediction from the load vector have different
+computational costs; the table measures their implementations at the stated schedules.
+
+\begin{table}[t]
+\centering
+\caption{Training costs of the second experiment on a shared CPU host with 20 physical cores and 40 hardware threads,
+every member trained to the end of its schedule; ranges over the ten seeds.
+Wall minutes are elapsed training times; thread-minutes is wall clock
+times the thread count (10 for the convolutional members, 10 to 16 for the
+MLPs); the kernel stage does not record a
+thread count. Test errors use reflection averaging for the neural members,
+as in Table~\ref{tab:members}. Per-seed values are provided in
+\texttt{campaign/collected/dgx/runtime\_ledger.csv}.}
+\label{tab:memcost}
+\small
+\setlength{\tabcolsep}{4.5pt}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{lccccc}
+\toprule
+Member & Parameters & Epochs & Wall (min) & Thread-min & Test error (\%) \\
+\midrule
+Kernel ridge, grid and refit & --- & --- & 5.8--10.0 & --- & 5.193--5.200 \\
+Metric-loss MLP & 4.91M & 400 & 8.8--19.2 & 132--192 & 4.809--4.858 \\
+MSE MLP & 4.91M & 120 & 2.6--5.8 & 39--58 & 4.703--4.719 \\
+Refiner & 6.64M & 100 & 2.6--6.1 & 41--61 & 4.721--4.742 \\
+FNO & 6.45M & 100 & 662--836 & 6618--8355 & 4.665--4.697 \\
+UNet & 4.38M & 100 & 573--689 & 5734--6892 & 4.683--4.793 \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\paragraph{Stacking.} The five-member fitted-weight baseline uses
+least squares on flattened full-validation predictions, followed by clipping
+negative coefficients and normalizing the weights to sum to one
+(\texttt{campaign/ensemble\_seeded5.py}). The six-member fitted-weight
+baseline uses full-validation mean relative error and softmax weights:
+\texttt{stack\_correct.py} starts from uniform weights and takes 2000
+Gaussian proposals in logit space, with initial step $0.5$, decay factor
+$0.999$ and random seed 0. The separate global-weight fit used to judge
+per-pixel stacking uses half the validation set, 600 proposals, initial
+step $0.3$ and decay factor $0.997$. The
+simplex minimizer of the second-moment matrix $S$
+(Proposition~\ref{prop:secmom}) is used only in the pool analyses.
+Per-pixel stacking fits an affine combination of member predictions at
+each grid point, with ridge parameter $10^{-3}$. The weights are fitted
+on half the validation split and selected if their error on the other
+half is lower than that of global weights. The selected stack is then
+refitted on the full split.
+
+\paragraph{Kernel stages.} The kernels are Mat\'ern-$5/2$ functions of
+standardized inputs. The residual
+correction searches the scale grid
+$\{1,2,4\}\times$ the median pairwise distance (estimated on 2000
+fitting rows) and the nugget grid $\{10^{-6},10^{-5},10^{-3}\}$ (scaled by $n$); the
+low-data chain of Table~\ref{tab:lowdata} uses $\{0.5,1,2,4\}$ with nuggets
+$\{10^{-7},10^{-5},10^{-3}\}$, with the median computed on all 1000 fitting
+rows. Candidate fits use $\min(8000,n)$ fitting rows, where $n$ is the
+fitting-set size: 8000 rows in the high-data protocol and all 1000 rows in
+the low-data protocol. Hyperparameters are selected on validation, then
+refitted on all fitting rows in double precision. The pure kernel
+baseline (Table~\ref{tab:main}) uses the grid
+$\{0.5,0.75,1,1.5,2\}\times$median and nuggets $\{10^{-8},10^{-6},10^{-4}\}$
+directly at $n=19000$. The feature-space stage concatenates and
+standardizes penultimate activations, then uses the same kernel family
+and tuning protocol. These features are spatially averaged pre-projection
+channels for the FNO (128 coordinates), mean-pooled encoder tokens for the
+transformer (192), and the residual-trunk output for the MLP (1024).
+
+\paragraph{Low-data correction sequence.}
+The low-data sequence uses one trained MLP as its initial mean. The candidate predictors are the neural mean,
+the mean plus an input-space correction, that predictor plus a
+feature-space correction, and the resulting predictor plus a second
+input-space correction. Each correction is fitted to the remaining
+training residuals. The final predictor is the candidate with the lowest
+error on all 250 validation rows.
+
+\paragraph{Low-data multiscale kernel.}\label{supp:multiscale-lowdata}
+The kernel baseline in Table~\ref{tab:lowdata} uses the additive residual
+construction in \texttt{campaign/krr\_multiscale\_lowdata.py}. Inputs are
+standardized by the coordinatewise mean and standard deviation of the
+$n=1000$ fitting rows. Initialize $g_0(x)=\bar y$, the fitting-target mean.
+At stage $t$, each candidate fits the current residual matrix
+$R_t=Y-g_{t-1}(X)$ and proposes
+\[
+ g_t(x)=g_{t-1}(x)
+   +k_{\ell_t}(x,X)(K_{\ell_t}+n\lambda_t I)^{-1}R_t.
+\]
+The Mat\'ern-$5/2$ length scale is selected from
+$\{0.25,0.5,1,2,3\}d_{\rm med}$, with
+\[
+d_{\rm med}=\left(\operatorname{median}_{i<j}\|x_i-x_j\|_2^2\right)^{1/2}
+\]
+computed on the standardized fitting inputs. The nugget grid is
+$\{10^{-8},10^{-6},10^{-4}\}$. At each stage the candidate with the lowest
+mean relative-$L^2$ error on the fixed 250-row validation split is selected.
+Its increment is retained with coefficient one only if that error improves
+by more than $10^{-5}$ in relative-error units. Otherwise the procedure
+stops. At most four stages are retained, and all fits use the same 1000
+fitting rows. The procedure is deterministic for this fixed split.
+
+\paragraph{OCO-2 network and feature heads.}\label{supp:oco-network}
+The implementation in \texttt{campaign/jpl\_seeded.py} uses a width-384
+residual MLP. A linear input map and SiLU activation precede three
+residual layers $h\mapsto h+\operatorname{SiLU}(Wh+b)$ and a linear output
+map to the 40 standardized PCA coordinates. The final 384-dimensional
+hidden vector supplies the frozen features for the kernel and ridge
+readouts. Training uses AdamW with learning rate $10^{-3}$, weight decay
+$10^{-5}$, batch size 512 and a cosine schedule to $10^{-6}$ over 250
+epochs. Validation is evaluated every 25 epochs and at the final epoch;
+the checkpoint minimizing the corresponding training metric on validation
+is retained. The three losses are mean relative error in standardized PCA
+coordinates, mean relative error after diagonal scaling by the PCA
+coefficient scales, and mean relative error after the retained-PCA radiance
+reconstruction. The additional 750-epoch run uses the same architecture and
+optimizer, with the cosine schedule extended to that budget.
+
+For each OCO-2 kernel head, features are standardized by fitting-set
+moments. The Mat\'ern-$5/2$ scale grid is
+$\{0.5,1,2,4\}d_{\rm med}$ and the nugget grid is
+$\{10^{-8},10^{-6},10^{-4}\}$. A seeded 6000-row fitting subsample is used
+both to estimate $d_{\rm med}$ and to fit candidates, which are selected on
+the full validation split using the associated loss. The selected pair is
+refitted on all 18000 fitting rows. Raw-input kernels use the same grid,
+subsample size and refitting protocol. The ridge control includes an
+intercept and selects $\lambda$ from
+$\{10^{-10},10^{-8},10^{-6},10^{-4},10^{-2},1\}$ on validation, with
+normal equations regularized by $n\lambda I$.
+
+\paragraph{OCO-2 input sensitivity.}\label{supp:oco-input}
+Let $X_s$ contain the fitting inputs standardized by their coordinatewise
+fitting means and standard deviations, and let $Z$ contain the released
+standardized PCA targets. The sensitivity estimator in
+\texttt{campaign/jpl\_seeded.py} is the least-squares matrix
+\[
+ A=X_s^{\dagger}Z,\qquad
+ a_j=\|A_{j,:}\|_2,\qquad
+ w_j=\frac{a_j}{d^{-1}\sum_{k=1}^{d}a_k}.
+\]
+The adapted kernel uses distances between $\operatorname{diag}(w)x_s$.
+The weights are applied after standardization, so subsequent input
+normalization does not remove them. The estimator is refitted using only
+the available fitting rows at each training size. The rank summaries in
+\texttt{campaign/scaling\_seeded.py} instead use
+$B=X_{\rm tr}^{\dagger}Z$ on all 18000 fitting rows, where $X_{\rm tr}$
+contains the released input coordinates without the additional fitting-set
+centering and standardization. For the singular values $\sigma_j$ of $B$,
+the 99\% count is the smallest $r$ satisfying
+$\sum_{j\le r}\sigma_j^2\ge0.99\sum_j\sigma_j^2$, and the reported
+participation ratio is $(\sum_j\sigma_j)^2/\sum_j\sigma_j^2$.
+
+\paragraph{Separate O2 learned-metric experiment.}\label{supp:oco-learned-metric}
+The experiment in \path{learnable_kernel_gpu.py} compares an isotropic
+metric, a learned diagonal metric, and
+$M=L^\top L+\operatorname{diag}(\exp(2b))$, with $L\in\mathbb R^{6\times d}$.
+The diagonal model has $d$ metric parameters and the low-rank model $7d$.
+After a fixed seed-0 permutation, kernel fitting uses 6000 pool rows and
+validation uses the next 2000. Metric learning uses 400 Adam steps at
+learning rate $0.05$, with 256 fitting rows sampled with replacement per
+step. For a batch $b$ and its first half $c$, let $K_b$ and $K_c$ be the
+Mat\'ern Gram matrices and let $Z_b$ and $Z_c$ contain their reduced
+targets. The regularized kernel-flows objective is
+\[
+ \rho=\max\left\{10^{-6},\,
+ 1-\frac{\operatorname{tr}\!\left[Z_c^\top(K_c+\eta I)^{-1}Z_c\right]}
+ {\operatorname{tr}\!\left[Z_b^\top(K_b+\eta I)^{-1}Z_b\right]+10^{-30}}
+ \right\},\qquad \eta=\exp(\delta)+10^{-8}.
+\]
+This is the regularized half-batch criterion of
+\citet{owhadi2019kernel}, with the quadratic forms summed over outputs.
+The parameter $\delta$ is learned jointly with the metric.
+With the learned metric fixed, validation
+selects a multiplier of its feature map from
+$\{0.1,\allowbreak 0.25,\allowbreak 0.5,\allowbreak 1,\allowbreak 2,\allowbreak 4,\allowbreak 8\}$ and a nugget from
+$\{10^{-8},10^{-6},10^{-4},10^{-2}\}$. The final Mat\'ern-$5/2$ solve uses
+the same 6000 fitting rows.
+
+The raw-state experiment has $d=20$, so the low-rank term adds 120
+parameters. The feature experiment uses a separate width-256 MLP with two
+residual SiLU blocks, trained by standardized-target MSE for 600 epochs
+on the 20000-row pool before the kernel split. Its $d=256$ feature map gives
+1536 additional low-rank parameters. These experiments use different
+training budgets and representations from Table~\ref{tab:oco2}; in the
+feature experiment, the kernel-validation targets have already contributed
+to neural training. They provide a separate comparison of metric choices
+within those fitted representations.
+
+\paragraph{Uncertainty.} The posterior standard deviation in
+\eqref{eq:power} is computed by triangular solves using the Cholesky
+factor of $K+n\lambda I$.
+Conformal calibration uses a random 1000-sample subset of the public test block and evaluation uses the disjoint remainder. Model-fitting optimizers use training and validation. The marginal coverage guarantee of Proposition~\ref{prop:conf} requires the predictor and scale to be fixed independently of exchangeable calibration and evaluation observations. The exact Beta reference law additionally assumes i.i.d. continuous scores. The miscoverage levels $\alpha=0.10$ and $0.05$ have $k\le m$; for smaller miscoverage with $k=m+1$, the mathematical quantile is $+\infty$, not the largest finite calibration score.

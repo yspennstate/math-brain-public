@@ -1,0 +1,73 @@
+\subsection{Coverage under split-conformal assumptions}
+
+Split-conformal calibration rescales the positive function $P_\lambda$
+by a quantile of the normalized residuals. Write $\widehat G$ for the fitted predictor,
+$e(u)=G(u)-\widehat G(u)$, and let
+\begin{equation}\label{eq:conf}
+s_i=\frac{\|e(\tilde u_i)\|_2}{P_\lambda(\tilde u_i)},\qquad
+k=\lceil(1-\alpha)(m+1)\rceil,\qquad
+Q=\begin{cases}s_{(k)},&k\le m,\\+\infty,&k=m+1,\end{cases}
+\end{equation}
+where $s_{(k)}$ is the $k$-th order statistic of the $m$ calibration scores
+and $0<\alpha<1$. When the required index exceeds the calibration sample
+size the prediction set is the whole output space.
+
+\begin{proposition}[finite-sample coverage]\label{prop:conf}
+Fix the predictor $\widehat G$, design $X$ and positive scale function
+$P_\lambda$. Suppose the calibration and test inputs
+$\tilde u_1,\ldots,\tilde u_m,u^\star$ are exchangeable and independent of
+these fitted objects. Define $Q$ by \eqref{eq:conf} and
+\[
+C(u)=\{v:\|v-\widehat G(u)\|_2\le QP_\lambda(u)\}.
+\]
+Then $\mathbb P(G(u^\star)\in C(u^\star))\ge1-\alpha$. If the scores
+are almost surely distinct, their coverage is exactly $k/(m+1)$, and hence
+is at most $1-\alpha+1/(m+1)$. When $k=m+1$, the coverage is one,
+regardless of ties.
+\end{proposition}
+\noindent\emph{Proof.} See Supplement~\ref{proof:prop:conf}.
+
+
+\begin{remark}[conditional reference law for realized coverage]\label{rem:covlaw}
+Suppose, more strongly, that conditional on the fixed fitted predictor and
+scale function, calibration and future evaluation scores are i.i.d. from a
+continuous distribution $F$. If $1\le k\le m$, the coverage probability
+conditional on the calibration sample is $F(s_{(k)})$. The probability
+integral transform makes $F(s_i)$ i.i.d. uniform, so
+\[
+F(s_{(k)})\sim\mathrm{Beta}(k,m+1-k).
+\]
+This is the standard order-statistic law \citep{vovk2012conditional}.
+Conditional on the calibration sample, the count of covered cases in an
+independent evaluation set of size $N$ is binomial with success probability
+$F(s_{(k)})$; integrating gives a Beta--binomial count. For $k=m+1$ the
+conditional coverage is instead identically one and the count is $N$;
+there is no Beta distribution with a zero second parameter. Exchangeability
+alone is sufficient for Proposition~\ref{prop:conf}, but does not imply this
+stronger Beta--binomial law.
+\end{remark}
+
+The proposition follows from the usual split-conformal rank argument
+\citep{vovk2005algorithmic,lei2018distribution}. The score is a residual norm divided by a
+positive scale, and the resulting set is a Euclidean ball in output space
+with radius $QP_\lambda(u)$. The statistic \texttt{mean\_width} is the mean radius.
+The guarantee is marginal over a new input and concerns the output vector jointly; it does not give conditional coverage at each input or coordinatewise intervals. Constant-radius and
+other positive-scale scores satisfy the same proposition under the same
+independence assumptions, whether or not the scale ranks error well.
+
+The experiments apply this calculation to a
+$1000/19000$ partition of the public test block after fitting the models.
+The six-member coverage is
+$\uqPlamSix\pm\uqPlamSixSd\%$ at the nominal $\uqCoverNom\%$ level,
+with $P_\lambda$ rebuilt from each seed's correction kernel
+(\texttt{campaign/uq\_conformal\_plam.py}). Under the i.i.d.-continuous
+reference model, $m=1000$, $\alpha=0.1$ give
+$\mathrm{Beta}(901,100)$ conditional coverage, and the central $95\%$
+reference interval for the fraction on $N=19000$ cases is
+$[88.0\%,91.8\%]$; at the $95\%$ nominal level it is
+$[93.5\%,96.3\%]$. All ten seeds fall inside these intervals
+at both levels. The seeds share test cases and are not ten independent draws from this law.
+
+Under the proposition's sampling assumptions, coverage requires neither
+native-space membership nor a known residual norm, and remains valid when
+$P_\lambda$ ranks errors poorly.

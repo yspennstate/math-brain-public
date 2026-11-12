@@ -1,0 +1,34 @@
+\clearpage
+\section{Extended diagnostic tables}\label{app:diagnostics}
+
+This section collects the perturbation, ridge-path, synthetic and external-benchmark tables referred to in
+Sections~\ref{sec:results-representation}--\ref{sec:results-benchmarks}, and the record of the runs behind
+Section~\ref{sec:tq-policy} of the article.
+
+\begin{table}[h]
+\centering
+\input{table_tq_runs}
+\caption{The runs of the training-target experiment: for each split and width, the machine it ran on
+and the number of training states in each arm. Validation and test blocks are the same in the three
+arms. The admissible and matched arms have the same size by construction.}
+\label{tab:tq-runs}
+\end{table}
+
+\input{layout_v2_perturbation}
+\input{layout_v2_ridge}
+
+\clearpage
+\begin{table}[p]
+\centering
+\input{layout_v2_synthetic}
+\caption{Manufactured transfer families, seed zero, two million samples for each $\beta$. The
+first panel compares finite-ladder slopes with the analytic curve on the same ladder. The
+second reports the largest relative discrepancies between the Monte Carlo mean squared error and
+the analytic value (uniform family) or the quadrature value (profile family), and the total
+number of pointwise violations.}
+\label{tab:v2-synthetic}
+\end{table}
+\clearpage
+\input{layout_v2_pkanrtm}
+\input{layout_v2_oco2}
+\clearpage

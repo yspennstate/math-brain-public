@@ -1,0 +1,78 @@
+\subsection{Operator-learning comparisons}
+\label{sec:suite}
+A common training protocol was applied to the other
+problems of the operator-learning suite that \citet{batlle2024kernel}
+assembled from \citet{dehoop2022cost} and \citet{lu2022comprehensive}: a
+Mat\'ern kernel at the median length scale with the fit capped at 6000
+points, a residual MLP mean, outputs reduced by PCA, and the stage selected on
+validation. Table~\ref{tab:suite} lists the results next to the reference
+values collected in that study. These comparisons use different tuning
+budgets and, in some cases, different data configurations. The published
+methods were tuned separately for each problem. The present results are
+single runs except for Helmholtz and Navier--Stokes, which use three seeds,
+exact kernel solves on 19{,}000 training pairs, and output rank 400.
+Rank 40 gives PCA reconstruction errors of 1.7\% and 8.2\% on these two
+problems; rank 400 reduces both below 0.01\%, well below the prediction
+errors. Burgers and Darcy use 800 and 824 training pairs, respectively,
+slightly fewer than their baselines, and Darcy also uses a different grid.
+No result is reported for Advection~I.
+
+The kernel stage is selected on Helmholtz, Navier--Stokes, and Darcy.
+Its errors range from 1.2 times the tuned reference error on Helmholtz to
+2.3 times that on Navier--Stokes. This protocol does not use the
+reference kernels' Cholesky preconditioning of the input. On Burgers, the
+corrected mean has an error of 2.38\%, compared with 1.93\% for the
+published Fourier neural operator. On Helmholtz the
+per-coordinate selection improves on the kernel alone ($1.17\%$ against
+$1.22\%$) by assigning a small subset of the 400 output coordinates to the
+corrected mean; on Navier--Stokes it selects the kernel almost everywhere.
+
+\begin{table}[t]
+\centering
+\caption{Additional benchmark survey. Published
+reference mean relative $L^2$ test error on each problem (per-problem
+methods tuned by their authors), compared with the common training protocol on
+training splits and grids that differ from the baselines' in the cases noted
+in the text: single runs, except the two rows marked three seeds (mean
+$\pm$ standard deviation, exact solve on 19{,}000 pairs, output rank 400).}
+\label{tab:suite}
+\begin{adjustbox}{max width=\linewidth}
+\begin{tabular}{llcc}
+\toprule
+Problem & Map & Published reference & This work \\
+\midrule
+Burgers & initial condition $\to$ solution & 1.93\% (FNO) & 2.38\% \\
+Darcy flow & permeability $\to$ pressure & 2.32\% (POD-DeepONet) & 2.01\% \\
+Advection~I & smooth pulse $\to$ solution & $\approx0\%$ (kernel) & --- \\
+Advection~II & discontinuous pulse $\to$ solution & 11.28\% (linear kernel) & 11.29\% \\
+Helmholtz & wavespeed $\to$ field & 1.00\% (kernel) & 1.17\% $\pm$ 0.02 (three seeds) \\
+Navier--Stokes & vorticity $\to$ vorticity & 0.12\% (kernel) & 0.28\% $\pm$ 0.00 (three seeds) \\
+\bottomrule
+\end{tabular}
+\end{adjustbox}
+\end{table}
+
+\subsection{Empirical reflection symmetry}
+\label{sec:symcheck}
+The continuous problem is invariant under $x_1\mapsto1-x_1$: the domain and
+boundary partition are symmetric, and the input law has a symmetric
+covariance. On the grid, reflecting the load ($S$) should reflect the stress
+field along the first grid coordinate ($T$), i.e.\ $G(Su)=TG(u)$. For each of the first 200 samples we
+searched all 40000 loads for the nearest neighbor of the reflected load $Su_i$
+and compared the corresponding outputs. For the five best-matching pairs, the
+input mismatch $\|Su_i-u_j\|/\|u_j\|$ ranges over $0.27$--$0.32$, while the
+output mismatch $\|Tv_i-v_j\|/\|v_j\|$ ranges over $0.085$--$0.14$; reflecting
+along the second coordinate instead gives output mismatches of order one.
+The smaller mismatch along the first coordinate supports that choice of
+output reflection axis. The empirical mean and covariance of the training loads are
+invariant under reflection to within 1.1\% and 1.5\% respectively. These
+moment checks are consistent with, but do not establish, the exact input-law
+invariance assumed by Proposition~\ref{prop:sym}. Reflection
+averaging at test time improves twenty-nine of the thirty runs of the two
+MLP variants and the refiner across ten seeds
+(Section~\ref{sec:experiments}). For the full-map average,
+Proposition~\ref{prop:sym} controls expected loss under its exact assumptions;
+a finite test sample can show an increase.
+For the ten refiner runs, identifying the supplied-field average with the
+full-map average requires the channel-equivariance condition in
+Supplement~\ref{sec:theory-sym}.

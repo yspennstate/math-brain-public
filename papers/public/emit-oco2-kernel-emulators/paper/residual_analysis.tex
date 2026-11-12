@@ -1,0 +1,110 @@
+\section{Residual correction and error alignment}\label{sec:identity}
+
+Fix the training design, neural mean and selected kernel hyperparameters. The following
+identities hold without sampling assumptions. We first work with one output coordinate;
+the vector-valued statements follow coordinatewise.
+
+\subsection{A frozen regression operator}
+Fix a design $X_n=(x_1,\ldots,x_n)$, a positive-semidefinite kernel with Gram matrix $K$, and
+$\lambda>0$. Define
+\begin{equation}\label{eq:krr}
+ (Sg)(x)=k(x,X_n)(K+\lambda I)^{-1}g(X_n),\qquad R=I-S.
+\end{equation}
+Here $\lambda$ is the diagonal regularizer in the linear system. The experiments use
+$\lambda=n\gamma$, where $\gamma$ is the reported nugget; the distinction matters when the
+training size changes. Although a selected kernel can depend on the targets, $S$ is linear
+in the response only \emph{after that selection is frozen}.
+
+\begin{proposition}[Frozen residual correction]\label{prop:identity}
+Let $f$ be the target and $h$ any fitted mean, and set
+$\widehat f_c=h+S(f-h)$. Then:
+\begin{align}
+ f-\widehat f_c&=R(f-h),\label{eq:residual-exact}\\
+ (Rg)(X_n)&=\lambda(K+\lambda I)^{-1}g(X_n).\label{eq:design-residual}
+\end{align}
+If $K u_j=\mu_j u_j$, the design residual in direction $u_j$ is multiplied by
+$\lambda/(\mu_j+\lambda)\in(0,1]$. The factor is one when $\mu_j=0$ and strictly below one
+when $\mu_j>0$; this is shrinkage, not a hard spectral projection.
+
+Suppose, in addition, that $\mathcal S$ is a normed vector space containing $f$ and $h$ and
+that the following bound holds \emph{uniformly} on that space for the realized operator:
+\[
+ \|Rg\|_{L^2(P)}\le C_n\|g\|_{\mathcal S}\quad(g\in\mathcal S).
+\]
+Then
+\begin{equation}\label{eq:inherit}
+ \|f-\widehat f_c\|_{L^2(P)}\le C_n\|f-h\|_{\mathcal S}.
+\end{equation}
+Consequently, $\|f-h\|_{\mathcal S}<\|f\|_{\mathcal S}$ makes this displayed upper bound
+smaller than $C_n\|f\|_{\mathcal S}$ when $C_n>0$. It is neither a necessary nor a
+sufficient condition for the corrected predictor's actual error to be smaller than that of
+$Sf$.
+\end{proposition}
+\noindent\emph{Proof in Section~\ref{app:proofs}.}
+\paragraph{Why the bounds do not order the errors.}
+On a two-point design take $K=\operatorname{diag}(1,99)$ and $\lambda=1$, so
+$R=\operatorname{diag}(1/2,1/100)$ and $C_n=1/2$ is its Euclidean operator norm. With
+$f=(1,0)$ and $f-h=(0,2)$, the residual norm is twice the target norm, yet
+$\|R(f-h)\|=0.02<0.50=\|Rf\|$. Conversely, with $f=(0,1)$ and $f-h=(1/2,0)$, the
+residual norm is smaller, but $\|R(f-h)\|=0.25>0.01=\|Rf\|$. These examples also show why
+source-norm accuracy alone does not order corrected prediction errors.
+
+\subsection{An exact criterion for improvement}
+The relevant comparison can be made exactly in any Hilbert error metric. This includes a
+finite weighted squared error and $L^2(P)$, but not directly the mean of per-sample relative
+norms or the nonlinear radiance and reflectance metrics in Table~\ref{tab:results}.
+
+\begin{proposition}[Error alignment]\label{prop:alignment}
+For the same frozen operator $S$, put $a=Rf$ and $b=Rh$. Then
+\begin{equation}\label{eq:alignment}
+ \|f-\widehat f_c\|^2-\|f-Sf\|^2=\|b\|^2-2\langle a,b\rangle.
+\end{equation}
+Thus full correction improves on $Sf$ exactly when
+$2\langle a,b\rangle>\|b\|^2$. More generally, the interpolation
+$p_t=Sf+tRh$, $0\le t\le1$, has minimum squared error at
+\begin{equation}\label{eq:shrink-mean}
+ t_* = \min\{1,\max\{0,\langle a,b\rangle/\|b\|^2\}\}
+ \quad\text{if }b\ne0;
+\end{equation}
+if $b=0$, every $t$ is equivalent. If the direct fit uses $S_0$ and the correction uses
+$S_1$, \eqref{eq:alignment} instead holds with
+$a=(I-S_0)f$ and $b=(S_1-S_0)f+(I-S_1)h$.
+\end{proposition}
+\noindent\emph{Proof in Section~\ref{app:proofs}.}
+The criterion depends on the unknown target error. Replacing its inner
+products by validation errors gives a validation-optimal interpolation, not a guarantee on new
+data. The reported experiments use separately tuned direct and residual kernels, so their
+comparison must use the final, two-operator form with their actual selected operators.
+Neither the criterion nor the training-design contraction establishes that correction will
+beat both parents at every sample size.
+
+\subsection{What the principal-component implementation computes}
+The pipeline trains a network on all standardized bands but projects its predictions into
+the retained principal-component basis before correction. Thus its corrected predictor is
+based on the projected network mean. To state the implementation
+precisely, let $f$ and $h$ now denote the target and network output after the common fitted
+standardization and PCA centering. Let $\Pi$ be the orthogonal projection onto the retained
+spectral coordinates. In these centered coordinates, the implemented prediction is
+\[
+ \widehat f_{c,\Pi}=\Pi h+S\Pi(f-h).
+\]
+The output mean and diagonal band scaling are restored afterwards. Since the same scalar
+kernel operator acts on each retained output coordinate,
+\begin{equation}\label{eq:projected-residual}
+ f-\widehat f_{c,\Pi}=(I-\Pi)f+(I-S)\Pi(f-h).
+\end{equation}
+The terms on the right are orthogonal in the standardized spectral Euclidean norm at each
+query, hence their squared norms add there. They need not be orthogonal in physical units
+after unequal band rescaling. This decomposition separates truncation error from residual
+regression and explains why output rank is a genuine part of the model specification. It
+does not by itself prove the observed optimum near rank 32. Comparisons with the unprojected
+network include the effect of projection as well as residual fitting.
+
+\paragraph{Conditional rate bound.}
+Kernel learning-rate results impose source, spectral, sampling and regularization conditions
+\cite{cdv,sutherland,fs}. If a uniform residual bound holds with $C_n=O(n^{-\alpha})$
+and $\|f-h_n\|_{\mathcal S}=O(n^{-\beta})$, then \eqref{eq:inherit} gives
+$\|f-\widehat f_c\|_{L^2(P)}=O(n^{-(\alpha+\beta)})$. The source-norm bound and the
+uniformity required for a data-dependent residual are additional hypotheses. They do not
+follow from empirical network loss. The experiments measure finite-range error slopes,
+not these source norms or an asymptotic rate.

@@ -1,0 +1,73 @@
+\subsection{Finite-perturbation control of the inversion}\label{sec:stability}
+
+The derivatives in \eqref{eq:sens} describe local conditioning. The following elementary
+identities give a finite-error test and distinguish forward accuracy from inversion stability.
+For one sample and band, write $a=Y_1$, $t=Y_2+Y_3$, $s=Y_4$ and
+$L=a+\rho t/(1-\rho s)$. Set
+$e_a=\widehat a-a$, $e_t=\widehat t-t$, $e_s=\widehat s-s$.
+
+\begin{proposition}[Conditional radiance and reflectance stability]\label{prop:stability}
+Suppose $0\le\rho\le\rho_{\max}$, $t>0$ and $q=1-\rho s>0$. If also
+$\widehat q=1-\rho\widehat s>0$, the forward error satisfies the exact identity
+\begin{equation}\label{eq:forward-error}
+ \widehat L-L=e_a+\frac{\rho e_t}{\widehat q}
+                  +\frac{\rho^2 t e_s}{q\widehat q}.
+\end{equation}
+In particular, if $q,\widehat q\ge\kappa>0$,
+\[
+ |\widehat L-L|\le |e_a|+\rho_{\max}|e_t|/\kappa
+                         +\rho_{\max}^2|t e_s|/\kappa^2.
+\]
+For inversion at the true radiance, put
+$u=L-a=\rho t/q$, $D=t/q$, and
+$\widehat D=\widehat t+\widehat s(L-\widehat a)$. Whenever $\widehat D\ne0$,
+\begin{equation}\label{eq:inverse-error}
+ \widehat\rho-\rho=
+ -\frac{(1-\rho\widehat s)e_a+\rho e_t+\rho u e_s}{\widehat D},
+ \qquad
+ \widehat D-D=e_t+u e_s-\widehat s e_a.
+\end{equation}
+If
+$B=|e_t|+|u e_s|+|\widehat s e_a|\le\eta D$ for some $0\le\eta<1$, then
+$\widehat D\ge(1-\eta)D>0$ and
+\begin{equation}\label{eq:inverse-bound}
+ |\widehat\rho-\rho|\le
+ \frac{|1-\rho\widehat s|\,|e_a|+\rho|e_t|+\rho|u e_s|}{(1-\eta)D}.
+\end{equation}
+\end{proposition}
+\noindent\emph{Proof in Section~\ref{app:proofs}.}
+When $\widehat q\ne0$, the same calculation gives the exact forward--inverse link
+\begin{equation}\label{eq:forward-inverse-link}
+ \widehat\rho-\rho=-\frac{\widehat q}{\widehat D}(\widehat L-L).
+\end{equation}
+Consequently, on a common set where $|\widehat q|\le Q$ and
+$|\widehat D|\ge\delta>0$, the corresponding unweighted $L^2$ errors obey
+$\|\widehat\rho-\rho\|_2\le(Q/\delta)\|\widehat L-L\|_2$.
+Squaring the link gives $(\widehat L-L)^2=(\widehat D/\widehat q)^2(\widehat\rho-\rho)^2$ at every entry, so a mean
+squared radiance error is a mean squared reflectance error in which each entry carries the weight
+$(\widehat D/\widehat q)^2$, and this weight tends to $t^2/q^4$ as the component errors vanish. Relative to the
+retrieval, the forward metric discounts an entry by the square of its transmission, and two emulators whose
+reflectance errors sit at different transmissions can be ordered one way by radiance and the other way by
+reflectance.
+Without the denominator condition there is no uniform implication from small spectral
+relative radiance error to small reflectance error. For example, take two bands with
+$a=s=0$, $t=(1,\varepsilon)$ and $0<\rho<1$. A predictor with
+$\widehat t=t$, $\widehat s=0$ and $\widehat a=(0,c\varepsilon)$, where $0<c<\rho$,
+has relative spectral radiance error
+$c\varepsilon/(\rho\sqrt{1+\varepsilon^2})\to0$ but retrieves
+$(\rho,\rho-c)$, so its reflectance RMSE remains $c/\sqrt2$. Every denominator is
+positive for $\varepsilon>0$ and both retrieved reflectances remain physical. This example isolates the loss of inversion stability as the second-band flux vanishes.
+
+The forward bound need not deteriorate when $t$ tends to zero, whereas the inverse bound
+requires error control relative to $D=t/q$. Thus a small spectral radiance error does not
+certify stable reflectance recovery. At $t=0$, $L=a$ is independent of $\rho$ wherever the
+forward formula is defined, so reflectance is unidentifiable from this band. The identities
+are exact-arithmetic statements; floating-point cancellation in $L-a$ can further affect an
+implemented inverse.
+
+An empirical comparison should therefore fix its passband and conditioning threshold before
+the models are evaluated. The scorer used in Section~\ref{sec:domain} takes a positive flux
+scale from the training rows and a mask computed from the true components alone, common to all
+families, so that a failing model cannot change its own coverage; it reports the coverage, the
+non-finite inversions and the denominator failures separately from the error on the successful
+inversions.

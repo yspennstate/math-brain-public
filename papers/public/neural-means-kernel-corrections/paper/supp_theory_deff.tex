@@ -1,0 +1,70 @@
+\subsection{Spectral identities}
+\label{sec:theory-rmt}
+
+The nugget $\lambda$, selected by cross-validation, determines the
+effective dimension through the spectrum of the Gram matrix.
+
+\begin{lemma}[effective dimension and the empirical Stieltjes transform]
+\label{lem:deff}
+Let $K$ be a symmetric positive semidefinite $n\times n$ matrix with
+eigenvalues $\lambda_1,\dots,\lambda_n\ge0$, let
+$\widehat m(z)=\tfrac1n\sum_{i=1}^n(\lambda_i/n-z)^{-1}$ be the Stieltjes
+transform of the empirical spectral distribution of $K/n$. Then for every
+$\lambda>0$ the effective dimension of ridge regression with nugget $\lambda$
+satisfies
+\[
+d_{\mathrm{eff}}(\lambda)\;:=\;\operatorname{tr}\!\big(K(K+n\lambda I)^{-1}\big)
+\;=\;n\big(1-\lambda\,\widehat m(-\lambda)\big).
+\]
+In particular, if the empirical spectral distribution of $K/n$ converges
+weakly to a limit law $F$ as $n\to\infty$, then
+$d_{\mathrm{eff}}(\lambda)/n\to 1-\lambda\,m_F(-\lambda)$ with $m_F$ the
+Stieltjes transform of $F$.
+\end{lemma}
+\noindent\emph{Proof.} See Supplement~\ref{proof:lem:deff}.
+
+
+The identity holds for every positive semidefinite Gram matrix. For
+isotropic i.i.d. linear features, the limiting spectral law gives a closed form.
+
+\begin{corollary}[effective dimension under a Mar\v{c}enko--Pastur limit]
+\label{cor:mp}
+Let $K=XX^\top$, where $X\in\mathbb R^{n\times p}$ consists of the leading
+entries of an infinite array of i.i.d.\ real random variables with mean zero
+and finite variance $\sigma^2>0$. Let $p/n\to\gamma\in(0,1]$. For each fixed
+$\lambda>0$,
+\[
+\frac{d_{\mathrm{eff}}(\lambda)}{n}\;\longrightarrow\;
+\gamma\big(1-\lambda\,m(-\lambda)\big),
+\]
+where
+\[
+m(-\lambda)=\frac{\sqrt{\big(\lambda+\sigma^2(1-\gamma)\big)^2+4\gamma\sigma^2\lambda}
+-\big(\lambda+\sigma^2(1-\gamma)\big)}{2\gamma\sigma^2\lambda},
+\]
+almost surely, where $m$ is the Stieltjes transform of the
+Mar\v{c}enko--Pastur law with ratio $\gamma$ and scale $\sigma^2$.
+\end{corollary}
+\noindent\emph{Proof.} See Supplement~\ref{proof:cor:mp}.
+
+In one Gaussian realization with $n=3000$, $p=900$, and $\sigma^2=1.7$, the
+largest absolute difference between the limit formula and the empirical
+$d_{\mathrm{eff}}(\lambda)/n$ was $4.4\times10^{-5}$ over the five values
+$\lambda\in\{10^{-3},10^{-2},10^{-1},1,10\}$.
+
+The closed form is a reference for the stated i.i.d. linear-feature model.
+The learned neural features and nonlinear kernel matrices in the experiments
+lie outside those assumptions; the finite-matrix trace identity holds
+regardless. Supplement~\ref{sec:spectra} reports its application to a
+$6000$-row subsample of the structural-mechanics training design.
+
+The effective dimension also determines the sum of the training-point
+posterior variances. Writing $A=K+n\lambda I$, their sum is
+\[
+\sum_{i=1}^{n}P_\lambda(u_i)^2
+=\operatorname{tr}(K)-\operatorname{tr}(K A^{-1}K)
+=\operatorname{tr}\!\big(n\lambda\,KA^{-1}\big)
+=n\lambda\,d_{\mathrm{eff}}(\lambda),
+\]
+using $KA^{-1}K=K-n\lambda\,KA^{-1}$. This identity concerns the training
+design. The trace alone does not determine the power function at other inputs.
