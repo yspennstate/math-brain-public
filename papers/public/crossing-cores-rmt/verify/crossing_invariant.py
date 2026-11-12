@@ -1,9 +1,8 @@
-﻿import os
-"""Do the crossing number, the nesting number, or the pair determine the
+﻿"""Do the crossing number, the nesting number, or the pair determine the
 volume at order eight?"""
 import sys
 from itertools import combinations
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "engine"))
+sys.path.insert(0, r"~\crossing-cores-rmt\engine")
 import tk_core
 from exact_volume import pairing_volume_exact
 

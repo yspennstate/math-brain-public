@@ -48,7 +48,7 @@ Let $\Phi(t)=\sum_kw_kt^k$, let $\rho\in[0,\infty]$ be its radius of convergence
 Y_{(1)}&=(\lambda-\nu)n+o_p(n),\label{eq:Y1}\\
 Y_{(2)}&=o_p(n).\label{eq:Y2}
 \end{align}
-Jonsson and Stef\'ansson \cite{JS11} showed this for simply generated trees with weights $w_k\sim ck^{-\beta}$, $\beta>2$, and Janson \cite[Theorem~19.34]{J12} proved \eqref{eq:Y1}--\eqref{eq:Y2} for random allocations with such weights and every $\lambda>\nu$. Janson also gave examples, with weights supported on sparse sets of integers, in which the excess is shared by two or more boxes along suitable sequences of $(m,n)$ \cite[Examples~19.37 and 19.38]{J12}, and wrote that such behaviour is expected only for quite irregular weight sequences. He asked the following two questions.\footnote{In the arXiv version of \cite{J12} they are Problems~18.41 and 18.42.}
+Jonsson and Stef\'ansson \cite{JS11} showed this for simply generated trees with weights $w_k\sim ck^{-\beta}$, $\beta>2$ (see Kortchemski \cite{Kor15} for the fluctuations of the condensation vertex in such trees), and Janson \cite[Theorem~19.34]{J12} proved \eqref{eq:Y1}--\eqref{eq:Y2} for random allocations with such weights and every $\lambda>\nu$. Janson also gave examples, with weights supported on sparse sets of integers, in which the excess is shared by two or more boxes along suitable sequences of $(m,n)$ \cite[Examples~19.37 and 19.38]{J12}, and wrote that such behaviour is expected only for quite irregular weight sequences. In zero-range processes, whose stationary measures are allocations of this kind, Schwarzkopf, Evans and Mukamel \cite{SEM08} obtained several condensates sharing the excess from hopping rates that are not monotone in the occupation. Janson asked the following two questions.\footnote{In the arXiv version of \cite{J12} they are Problems~18.41 and 18.42.}
 
 \begin{problem*}[{Janson \cite[Problem~19.42]{J12}}]
 Suppose that $w_k\ge w_{k+1}$ for all (large) $k$. Does this imply that \eqref{eq:Y1}--\eqref{eq:Y2} hold when $\lambda>\nu$?
@@ -352,6 +352,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -362,6 +364,8 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 
 \section*{Data availability}
 No data were used. The code is available at\\ \url{https://github.com/yspennstate/condensation-two-giant-boxes}.
+
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
 
 \begin{thebibliography}{9}
 
@@ -377,8 +381,17 @@ S.~Janson, T.~Jonsson and S.~\"O. Stef\'ansson, Random trees with superexponenti
 \bibitem{JS11}
 T.~Jonsson and S.~\"O. Stef\'ansson, Condensation in nongeneric trees, \emph{J. Stat. Phys.} \textbf{142} (2011), no.~2, 277--313.
 
+\bibitem{Kor15}
+I.~Kortchemski, Limit theorems for conditioned non-generic Galton--Watson trees, \emph{Ann. Inst. Henri Poincar\'e Probab. Stat.} \textbf{51} (2015), no.~2, 489--511.
+
 \bibitem{SEM08}
 Y.~Schwarzkopf, M.~R. Evans and D.~Mukamel, Zero-range processes with multiple condensates: statics and dynamics, \emph{J. Phys. A} \textbf{41} (2008), 205001.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 \end{document}

@@ -24,6 +24,7 @@
 \subjclass[2020]{60H15, 60H10, 60J60, 60G44}
 \keywords{Stochastic Allen--Cahn equation, quadratic multiplicative noise, critical variational setting, maximal estimates, strict local martingales, Bessel processes}
 
+\usepackage{xurl}
 \begin{document}
 \begin{abstract}
 We consider the stochastic Allen--Cahn equation $du=(\Delta u+u-u^3)\,dt+\sqrt2\,u^2\,dW$ on the one-dimensional torus, driven by a single real Brownian motion. For every positive constant initial value and every $T>0$ the solution satisfies $\E\sup_{t\le T}\|u(t)\|_{L^2}^2=\infty$, although $\E\|u(t)\|_{L^2}^2$ is finite at each fixed time. The equation satisfies the hypotheses of the global well-posedness theorem in the critical variational setting of Agresti and Veraar, and $\sqrt2$ is the largest noise constant for which it does. The example therefore answers Problems~4 and~5 of their 2025 survey in the negative: the maximal second moment is not controlled by the initial data, and the solutions started at $1/n$ converge to zero in $L^p(\Omega;L^2(0,T;H^1)\cap C([0,T];L^2))$ for every $p<2$, while their norms in $L^2(\Omega;C([0,T];L^2))$ are infinite. The solution started from a constant is $e^t/\sqrt2$ times the reciprocal of a time-changed four-dimensional Bessel process. Its squared running maximum has two-sided tail bounds of order $1/y$ with explicit constants, its maximal moments are finite exactly below order two, and its fixed-time moments are finite exactly below order four.
@@ -32,7 +33,7 @@ We consider the stochastic Allen--Cahn equation $du=(\Delta u+u-u^3)\,dt+\sqrt2\
 
 \section{Introduction}\label{sec:intro}
 
-Agresti and Veraar \cite{AV24} developed a critical variational setting for stochastic evolution equations
+The variational approach to stochastic evolution equations goes back to Pardoux \cite{Par75} and Krylov and Rozovskii \cite{KR79}; see Liu and R\"ockner \cite{LR15} for an account. Agresti and Veraar \cite{AV24} developed a critical variational setting for stochastic evolution equations
 \begin{equation}\label{eq:abstract}
  du+Au\,dt=F(u)\,dt+\bigl(Bu+G(u)\bigr)\,dW,\qquad u(0)=u_0,
 \end{equation}
@@ -59,7 +60,7 @@ In the variational setting of Theorem~6.4 of \cite{AV25}, is there a constant $C
 Under the assumptions of Theorem~6.4 of \cite{AV25}, let $u_0^n\to u_0$ in $L^2(\Omega;H)$. Do the corresponding solutions satisfy $u^n\to u$ in $L^2(\Omega;L^2(0,T;V)\cap C([0,T];H))$?
 \end{problem}
 
-As a model case for Problem~4 the survey names the Allen--Cahn equation on the one-dimensional torus with quadratic noise, $du=(\Delta u+u-u^3)\,dt+\gamma u^2\,dW$. For $\gamma^2<2$ the maximal $L^2$ bound follows from a strengthened coercivity condition \cite[Section~6.3.1]{AV25}, and the authors write that for $\gamma^2=2$ they do not know whether it holds. At $\gamma^2=2$ the equation is still covered by Theorem~6.4, and the coercivity condition fails for every $\gamma^2>2$ (Remark~\ref{rem:threshold}); for the Allen--Cahn equation with Dirichlet boundary conditions, \cite[Remark~7.2]{AV25} allows noise coefficients bounded by $L(1+|y|)+\sqrt2\,|y|^2$ and notes that the factor $\sqrt2$ is optimal for the coercivity condition. We show that the bound fails at $\gamma^2=2$.
+As a model case for Problem~4 the survey names the Allen--Cahn equation \cite{AC79} on the one-dimensional torus with quadratic noise, $du=(\Delta u+u-u^3)\,dt+\gamma u^2\,dW$. For $\gamma^2<2$ the maximal $L^2$ bound follows from a strengthened coercivity condition \cite[Section~6.3.1]{AV25}, and the authors write that for $\gamma^2=2$ they do not know whether it holds. At $\gamma^2=2$ the equation is still covered by Theorem~6.4, and the coercivity condition fails for every $\gamma^2>2$ (Remark~\ref{rem:threshold}); for the Allen--Cahn equation with Dirichlet boundary conditions, \cite[Remark~7.2]{AV25} allows noise coefficients bounded by $L(1+|y|)+\sqrt2\,|y|^2$ and notes that the factor $\sqrt2$ is optimal for the coercivity condition. We show that the bound fails at $\gamma^2=2$.
 
 Throughout, $\T=\R/\mathbb Z$ has volume one, $W$ is a real standard Brownian motion, and stochastic differentials are It\^o differentials. Consider
 \begin{equation}\label{eq:spde}
@@ -320,6 +321,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -330,6 +333,8 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 
 \section*{Data availability}
 No data were used. The Lean verification is available at \url{https://github.com/yspennstate/critical-allen-cahn-noise}.
+
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
 
 \begin{thebibliography}{99}
 
@@ -345,6 +350,11 @@ A.~Agresti and M.~Veraar,
 NoDEA Nonlinear Differential Equations Appl. \textbf{32} (2025), Paper No.~123.
 \href{https://doi.org/10.1007/s00030-025-01090-2}{doi:10.1007/s00030-025-01090-2};
 \href{https://arxiv.org/abs/2501.18561}{arXiv:2501.18561}.
+
+\bibitem{AC79}
+S.~M.~Allen and J.~W.~Cahn,
+A microscopic theory for antiphase boundary motion and its application to antiphase domain coarsening,
+\emph{Acta Metall.} \textbf{27} (1979), 1085--1095.
 
 \bibitem{BL76}
 J.~Bergh and J.~L\"ofstr\"om,
@@ -376,11 +386,21 @@ G.~Johnson and L.~L.~Helms,
 Bull. Amer. Math. Soc. \textbf{69} (1963), 59--62.
 \href{https://doi.org/10.1090/S0002-9904-1963-10857-5}{doi:10.1090/S0002-9904-1963-10857-5}.
 
+\bibitem{KR79}
+N.~V.~Krylov and B.~L.~Rozovskii,
+Stochastic evolution equations,
+\emph{J. Soviet Math.} \textbf{16} (1981), 1233--1277; Russian original in \emph{Itogi Nauki i Tekhniki} \textbf{14} (1979).
+
 \bibitem{Lean}
 L.~de~Moura and S.~Ullrich,
 \emph{The Lean~4 theorem prover and programming language},
 in: Automated Deduction -- CADE~28, Lecture Notes in Comput. Sci. \textbf{12699}, Springer, Cham, 2021, 625--635.
 \href{https://doi.org/10.1007/978-3-030-79876-5_37}{doi:10.1007/978-3-030-79876-5\_37}.
+
+\bibitem{LR15}
+W.~Liu and M.~R\"ockner,
+\emph{Stochastic Partial Differential Equations: An Introduction},
+Universitext, Springer, Cham, 2015.
 
 \bibitem{Mathlib}
 The mathlib Community,
@@ -388,11 +408,22 @@ The mathlib Community,
 in: Proceedings of the 9th ACM SIGPLAN International Conference on Certified Programs and Proofs (CPP 2020), ACM, New York, 2020, 367--381.
 \href{https://doi.org/10.1145/3372885.3373824}{doi:10.1145/3372885.3373824}.
 
+\bibitem{Par75}
+\'E.~Pardoux,
+\emph{\'Equations aux d\'eriv\'ees partielles stochastiques non lin\'eaires monotones},
+Th\`ese, Universit\'e Paris XI, 1975.
+
 \bibitem{RY99}
 D.~Revuz and M.~Yor,
 \emph{Continuous Martingales and Brownian Motion}, third edition,
 Grundlehren der mathematischen Wissenschaften \textbf{293}, Springer, Berlin, 1999.
 \href{https://doi.org/10.1007/978-3-662-06400-9}{doi:10.1007/978-3-662-06400-9}.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 \end{document}

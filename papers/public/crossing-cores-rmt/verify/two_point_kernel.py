@@ -1,5 +1,4 @@
-﻿import os
-"""The missing ingredient for gluing is a two-point kernel: the section
+﻿"""The missing ingredient for gluing is a two-point kernel: the section
 volume with BOTH the base point x and an interior state u held fixed.
 For the square abab the walk visits x, u_1, u_2, u_2-u_1+x, so holding
 x and u = u_1 fixed and integrating u_2 gives
@@ -9,7 +8,7 @@ x and u = u_1 fixed and integrating u_2 gives
 Check: integrating out u must return the square's profile."""
 from fractions import Fraction as Fr
 import sys
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "engine"))
+sys.path.insert(0, r"~\crossing-cores-rmt\engine")
 import tk_core
 from exact_volume import volume_from_halfspaces
 

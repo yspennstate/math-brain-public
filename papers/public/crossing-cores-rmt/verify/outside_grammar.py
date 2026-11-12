@@ -2,10 +2,10 @@
 like?  Their structure names the operation the calculus is missing."""
 import json, os, sys
 from fractions import Fraction as Fr
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "verify"))
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "engine"))
+sys.path.insert(0, r"~\crossing-cores-rmt\verify")
+sys.path.insert(0, r"~\crossing-cores-rmt\engine")
 from grammar_max import pmul, pint01, cycle_poly, profiles
-HERE = os.path.dirname(os.path.abspath(__file__))
+HERE = r"~\crossing-cores-rmt\verify"
 
 memo = {}
 def gram(r):

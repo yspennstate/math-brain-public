@@ -45,7 +45,7 @@ and \emph{left $\mu$-quasiharmonic} if there is a constant $\ell(\phi)\in\C$ wit
 \begin{equation}\label{eq:qharm}
 \int_G \phi(sg)\,d\check\mu(s)=\phi(g)+\ell(\phi)\qquad(g\in G),
 \end{equation}
-in both cases for $\mu$-integrable $\phi$. Left translation commutes with right translation, so for a subgroup $H<G$ these equations make sense for functions on the space $G/H$ of left cosets, that is, for right $H$-invariant functions on $G$. Constant functions are harmonic, and harmonic functions are quasiharmonic with $\ell=0$.
+in both cases for $\mu$-integrable $\phi$. Left translation commutes with right translation, so for a subgroup $H<G$ these equations make sense for functions on the space $G/H$ of left cosets, that is, for right $H$-invariant functions on $G$. Constant functions are harmonic, and harmonic functions are quasiharmonic with $\ell=0$. Quasiharmonic functions are biharmonic, and biharmonic functions on groups were studied by Bj\"orklund and Hartnick \cite{BH} in connection with quasimorphisms along random walks; for bounded harmonic functions of random walks on groups and the Liouville property see Kaimanovich and Vershik \cite{KV} and the book of Woess \cite{Woe}.
 
 Bj\"orklund studies harmonic and quasiharmonic functions on homogeneous spaces in~\cite[Appendix~II]{Bj}. His Problem~2 in~\cite[Appendix~II, Section~7.1]{Bj} reads: construct a countable measured group $(G,\mu)$ and an infinite index subgroup $H<G$ such that $G/H$ admits no non-constant left (quasi-)$\mu$-harmonic functions whatsoever. The text before it remarks that for general quotient spaces there could well be simple counterexamples. The following theorem gives one.
 
@@ -53,7 +53,7 @@ Bj\"orklund studies harmonic and quasiharmonic functions on homogeneous spaces i
 Let $G=\Sym_{\mathrm{fin}}(\N_0)$ be the group of permutations of $\N_0$ that move only finitely many points, let $H=\Stab_G(0)$, and let $\mu$ be a probability measure on $G$ with $\mu((0\ n))=p_n>0$ for every $n\ge1$ and $\sum_{n\ge1}p_n=1$. Then $(G,\mu)$ is a measured group, $\mu$ is symmetric, $H$ has infinite index in $G$, and every left $\mu$-quasiharmonic function on $G/H$ is constant. In particular every left $\mu$-harmonic function on $G/H$ is constant.
 \end{theorem}
 
-A concrete choice is $p_n=2^{-n}$. The proof in Section~\ref{sec:proof} shows a little more: a function $u$ on $G/H$ satisfying the quasiharmonic equation is constant as soon as the one series defining its left side at the coset $H$ converges; absolute convergence is not needed (Theorem~\ref{thm:star}). The group $G$ is not finitely generated and $\mu$ has infinite support. Both features are used: the centre of the star has infinitely many neighbours, and this is what rules out a nonzero defect. The problem with $G$ finitely generated or $\mu$ finitely supported is not treated here.
+A concrete choice is $p_n=2^{-n}$. The proof in Section~\ref{sec:proof} shows a little more: a function $u$ on $G/H$ satisfying the quasiharmonic equation is constant as soon as the one series defining its left side at the coset $H$ converges; absolute convergence is not needed (Theorem~\ref{thm:star}). The group $G$ is not finitely generated and $\mu$ has infinite support. Both features are used: the centre of the star has infinitely many neighbours, and this is what rules out a nonzero defect. On $G$ itself the picture is different: every nontrivial element of $G$ has infinitely many conjugates, so by the theorem of Frisch, Hartman, Tamuz and Vahidi Ferdowsi~\cite{FHTV} some symmetric non-degenerate probability measure on $G$ of finite entropy has nonconstant bounded harmonic functions on $G$. The problem with $G$ finitely generated or $\mu$ finitely supported is not treated here.
 
 \section{The measured group and its quotient}
 
@@ -118,6 +118,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -129,9 +131,21 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code is available at\\ \url{https://github.com/yspennstate/bjorklund-star-quotient}.
 
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \begin{thebibliography}{9}
 \bibitem{Bj} M.~Bj\"orklund, \emph{Five remarks about random walks on groups}, preprint, 2014, arXiv:1406.0763v2.
 \bibitem{code} Y.~Shmalo, \emph{Code for this paper}, \url{https://github.com/yspennstate/bjorklund-star-quotient}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
+\bibitem{BH} M.~Bj\"orklund and T.~Hartnick, \emph{Biharmonic functions on groups and limit theorems for quasimorphisms along random walks}, Geom.\ Topol.\ \textbf{15} (2011), 123--143.
+\bibitem{FHTV} J.~Frisch, Y.~Hartman, O.~Tamuz and P.~Vahidi Ferdowsi, \emph{Choquet--Deny groups and the infinite conjugacy class property}, Ann.\ of Math.\ (2) \textbf{190} (2019), 307--320; arXiv:1802.00751.
+\bibitem{KV} V.~A.~Kaimanovich and A.~M.~Vershik, \emph{Random walks on discrete groups: boundary and entropy}, Ann.\ Probab.\ \textbf{11} (1983), 457--490.
+\bibitem{Woe} W.~Woess, \emph{Random Walks on Infinite Graphs and Groups}, Cambridge University Press, Cambridge, 2000.
 \end{thebibliography}
 
 \end{document}

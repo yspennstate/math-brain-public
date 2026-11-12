@@ -1,7 +1,40 @@
-% Sections 14-18 of "Crossing cores, Gorenstein moment polytopes, and sharp volume
-% gaps for random Toeplitz and Hankel laws": the supermultiplicativity lemma and its
-% corollaries, three exclusion lemmas, and two conjectures.  Section 14 itself is in
-% crossing_cores_section14_revised.tex and the declarations in crossing_cores_statements.tex.
+% =====================================================================
+% NEW SECTIONS FOR "Crossing cores, Gorenstein moment polytopes, and
+% sharp volume gaps for random Toeplitz and Hankel laws"
+%
+% HOW TO MERGE (one paper, not two):
+%   1. Paste this whole file into the manuscript immediately BEFORE the
+%      current Section 14 ("What is solved and what remains open"), so
+%      the new material becomes Sections 14-18 and the survey of open
+%      problems stays last.
+%   2. Replace the current Funding / Declaration of competing interest /
+%      Declaration on generative AI blocks with the versions in
+%      crossing_cores_statements.tex.
+%   3. Add to the references: A. Prekopa, On logarithmic concave measures
+%      and functions, Acta Sci. Math. 34 (1973), 335-343, used for the
+%      log-concavity of marginals of convex bodies.
+%   4. Replace Section 14 ("What is solved and what remains open") with
+%      crossing_cores_section14_revised.tex.  The current one predates
+%      the order-22 data and still calls m_16 the next undetermined
+%      target; it is determined and passes.  The items "global Toeplitz
+%      4/9 bound", "the rank-five 2/7 slab bound", "primitive mean-volume
+%      asymptotics" and "D-finiteness of the volume-weighted moment
+%      series" are all addressed below and restated there.
+%
+% Companion files, all in Downloads and in the repo under paper/:
+%   crossing_cores_statements.tex        funding / COI / AI declaration
+%   crossing_cores_section14_revised.tex replacement Section 14
+%   section_profiles_paper.pdf           the same material compiled
+%                                        standalone, if you prefer two
+%                                        papers after all
+%   REVIEW.md                            what was checked and what was
+%                                        found
+%
+% References of the form "Theorem 4.1", "Lemma 8.1", "Corollary 7.2" are
+% to the existing sections and can be turned into \ref's once labels are
+% available.  Requires \newtheorem environments for lemma, proposition,
+% conjecture and remark (the manuscript already defines the first two).
+% =====================================================================
 
 % New material for the crossing-cores paper: a proved supermultiplicativity
 % lemma with its corollaries, three exclusion lemmas, and two conjectures
@@ -521,7 +554,7 @@ r=7,8,\dots,18:\ \tfrac14 ,
 \]
 reproducing Corollary~9.3 at three pairs, Proposition~10.2 at five, the
 six-pair maximum, and then the $\eta_l$ value at every size up to
-eighteen.  One gap remains: the grammar contains no four-pair
+eighteen.  One honest gap: the grammar contains no four-pair
 parity-mixing word, so it misses the extremal $12314324$ of volume
 $11/30$; the class is rich enough to carry the asymptotic extremals but
 not every small one.

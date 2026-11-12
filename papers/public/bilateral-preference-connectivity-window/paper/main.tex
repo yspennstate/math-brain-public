@@ -43,7 +43,7 @@ Let $n\ge3$ and $1\le k\le n-1$. Put independent scores $W_e$, uniform on $[0,1]
 &LK(n,k)\text{ is connected}&\qquad&\text{if }k\ge\log n+t\log\log n\sqrt{\log n}\text{ with }t>\tfrac12,\\
 &LK(n,k)\text{ is disconnected}&&\text{if }k\le\log n+t\log\log n\sqrt{\log n}\text{ with }t<-\tfrac12,
 \end{alignat*}
-and among their open problems \cite[Section~1]{DS} they note that it is not known whether the graph is connected when $k$ lies between these two bounds, and suggest that sharper sufficient conditions could close the gap.
+and among their open problems \cite[Section~1]{DS} they note that it is not known whether the graph is connected when $k$ lies between these two bounds, and suggest that sharper sufficient conditions could close the gap. The answer below has the form of the connectivity threshold of Erd\H{o}s and R\'enyi \cite{ER}, where $G(n,(\log n+c)/n)$ is connected with probability tending to $\exp(-e^{-c})$ and isolated vertices are the last obstruction. Connectivity of the related random $k$-nearest-neighbour graphs, in which each point of a Poisson process is joined to its $k$ nearest neighbours, is studied by Balister, Bollob\'as, Sarkar and Walters \cite{BBSW}. In the same model on $K_n$ with independent edge scores, but with an edge kept when either of its endpoints prefers it, connectivity is studied by Cooper and Frieze \cite{CF}.
 
 Let $Z_n$ be the number of isolated vertices of $LK(n,k)$ and put $\lambda_n=ne^{-k}$.
 
@@ -322,6 +322,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -333,8 +335,16 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code is available at\\ \url{https://github.com/yspennstate/bilateral-preference-connectivity-window}.
 
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \begin{thebibliography}{10}
 
+\bibitem{BBSW}
+P.~Balister, B.~Bollob\'as, A.~Sarkar and M.~Walters, Connectivity of random $k$-nearest-neighbour graphs, \emph{Adv. in Appl. Probab.} \textbf{37} (2005), 1--24.
+\bibitem{CF}
+C.~Cooper and A.~Frieze, On the connectivity of random $k$-th nearest neighbour graphs, \emph{Combin. Probab. Comput.} \textbf{4} (1995), 343--362.
+\bibitem{ER}
+P.~Erd\H{o}s and A.~R\'enyi, On random graphs.~I, \emph{Publ. Math. Debrecen} \textbf{6} (1959), 290--297.
 \bibitem{Bil}
 P.~Billingsley, \emph{Probability and Measure}, 3rd ed., Wiley, New York, 1995.
 
@@ -349,6 +359,12 @@ R.~J.~La and M.~Kabkab, A new random graph model with self-optimizing nodes: con
 
 \bibitem{EWT}
 M.~Moharrami, V.~Subramanian, M.~Liu and R.~Sundaresan, The Erlang weighted tree, a new branching process, \emph{Random Structures Algorithms} \textbf{64} (2024), 537--624.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 

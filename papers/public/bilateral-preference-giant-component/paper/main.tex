@@ -1,0 +1,460 @@
+\documentclass[11pt]{amsart}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern,microtype,amsmath,amssymb,amsthm,mathtools,enumitem,booktabs}
+\usepackage[margin=1.1in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\usepackage{xurl}
+
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{proposition}[theorem]{Proposition}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\numberwithin{equation}{section}
+
+\newcommand{\E}{\mathbb E}
+\newcommand{\Pp}{\mathbb P}
+\newcommand{\1}{\mathbf 1}
+\newcommand{\Er}{\mathrm{Er}}
+
+\hypersetup{pdftitle={The giant component of bilateral preference graphs with random budgets},pdfauthor={Yitzchak Shmalo}}
+
+\title[The giant of bilateral preference graphs]{The giant component of bilateral preference graphs with random budgets}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\date{5 November 2026}
+\subjclass[2020]{05C80, 60J80, 60C05}
+\keywords{bilateral preference random graph, Erlang weighted tree, giant component, multitype branching process, sprinkling}
+
+\begin{document}
+\begin{abstract}
+Place independent and identically distributed continuous costs on the edges of $K_n$, give each vertex $i$ an independent budget $D_i$ with law $P$ on the positive integers, let $i$ prefer its $D_i$ cheapest incident edges, and keep an edge when both endpoints prefer it. Moharrami, Subramanian, Liu and Sundaresan showed that the local limit of this graph is the Erlang weighted tree, so that the fraction of vertices in the largest component is asymptotically at most the survival probability $\rho(P)$ of that tree, and asked whether the reverse inequality holds. We prove that it does whenever $P$ has a finite mean: the largest component contains $(\rho(P)+o(1))n$ vertices with probability tending to one. The same holds for deterministic budget arrays whose empirical laws converge weakly to $P$. The proof runs the graph in cost time, shows that every large component of the graph built from edges of cost at most $t$ contains many vertices that can still accept edges, and joins these components by the edges arriving shortly after $t$. It remains to show that the survival probability of the tree with its edges above cost $t$ removed tends to $\rho(P)$. This is done through a return process to a compact set of types, whose mean operator is self-adjoint in a weighted space.
+\end{abstract}
+\maketitle
+\enlargethispage{\baselineskip}
+
+\section{Introduction}\label{sec:intro}
+
+Let $P$ be a probability law on $\{1,2,\dots\}$. For $n\ge2$ put independent costs $C_e$ on the edges $e$ of the complete graph $K_n$ on $V=\{1,\dots,n\}$, exponential with rate $1/n$, and independent budgets $D_1,\dots,D_n$ with law $P$, independent of the costs. Vertex $i$ prefers the $\min(D_i,n-1)$ edges at $i$ of smallest cost, and the graph $G_n$ keeps an edge if and only if both of its endpoints prefer it. For a constant budget $k$ this is the bilateral preference graph of La and Kabkab \cite{LK}, whose connectivity threshold was found by Dabirian and Subramanian \cite{DS}. Since only the ranks of the costs at each vertex matter, any other continuous law common to all the costs gives the same graph in distribution (Remark~\ref{rem:costs}).
+
+Moharrami, Subramanian, Liu and Sundaresan \cite{EWT} proved that $G_n$ converges locally to a random tree, the Erlang weighted tree $\Er(P)$, and studied it as a multitype branching process. Write
+\[
+\rho(P)=\Pp\bigl(|\Er(P)|=\infty\bigr)
+\]
+for its survival probability and $L_1(G_n)$ for the number of vertices of a largest component of $G_n$. Local convergence gives the upper bound $L_1(G_n)\le(\rho(P)+o(1))n$ with probability tending to one \cite[Corollary~2.2]{EWT}. The local limit of $K_n$ with independent exponential edge costs is the Poisson weighted infinite tree of the objective method of Aldous and Steele \cite{AS}. Local convergence alone does not identify the giant; van der Hofstad \cite{vdH} gives an ``almost local'' criterion under which the giant fraction equals the survival probability of the limit, and his monograph \cite{vdHbook} treats local convergence of random graphs in general. Among the questions at the end of their paper \cite[Section~4, question~3]{EWT} they observe in simulation that the fraction of vertices in the giant component approaches $\rho(P)$ and note that the reverse inequality needs a separate proof. The following theorem supplies it.
+
+\begin{theorem}\label{thm:main}
+Let $P$ be a probability law on the positive integers with finite mean and $P(\{1\})<1$. Then
+\[
+\frac{L_1(G_n)}{n}\to\rho(P)\quad\text{in probability and in }L^1 .
+\]
+The same conclusion holds when the budgets are a deterministic array $(d_i^{(n)})_{i\le n}$ of positive integers with $d_i^{(n)}\le n-2$ whose empirical laws converge weakly to $P$.
+\end{theorem}
+
+When $P(\{1\})=1$ every vertex prefers one edge, $G_n$ is a matching and $\rho(P)=0$, so the statement holds trivially. No moment beyond the first is assumed, and no growth condition on the budgets is needed. The finite mean enters only through Sections~\ref{sec:return} and~\ref{sec:continuity}.
+
+Lower bounds for the giant of a locally tree-like graph usually come from sprinkling: the large components of the graph are joined by a few extra edges added independently at the end. Two features of $G_n$ prevent a direct use of this idea. An edge of $G_n$ is kept only if neither endpoint has used up its budget, so whether a new edge between two large components is accepted depends on the whole history at its endpoints, and lowering the cost of an edge is not a monotone operation on $G_n$. And the local limit is a branching process with infinitely many types, for which the survival probability of a truncation need not converge to that of the full process.
+
+We deal with the first difficulty by running the graph in cost time. Let $G_n(t)$ be the graph formed by the edges of cost at most $t$ that are accepted at both ends. It increases in $t$, and a vertex is \emph{active} at time $t$ if fewer than $D_i$ of its edges have arrived by then; an edge arriving at time $s$ is accepted exactly when both of its endpoints are active just before $s$. Section~\ref{sec:time} describes $G_n(t)$ and its local limit, which is the Erlang weighted tree with its edges of cost above $t$ removed. Section~\ref{sec:active} shows that an infinite component of that tree almost surely meets an active vertex, and turns this into a deterministic statement about finite graphs: every union of large components of $G_n(t)$ with at least $\eta n$ vertices contains at least $an$ active vertices, for a constant $a>0$. Section~\ref{sec:sprinkle} then uses the edges arriving in a short interval after $t$; between any two such unions the active vertices have $\Omega(n^2)$ unseen edges, each of which is accepted if it arrives first. This gives
+\[
+\liminf_{n\to\infty}\Pp\bigl(L_1(G_n)\ge(\rho_t-\varepsilon)n\bigr)=1
+\qquad\text{for every }t<\infty\text{ and }\varepsilon>0,
+\]
+where $\rho_t$ is the survival probability of the tree truncated at cost $t$.
+
+It remains to show that $\rho_t\to\rho(P)$ as $t\to\infty$, and this is the second difficulty. Section~\ref{sec:return} studies the process watched only on its visits to a compact set $K$ of types, chosen so that the expected potential leaving $K$ is less than one; the finite mean makes such a choice possible. Its mean operator becomes self-adjoint after a change of measure, which gives a positive eigenfunction and a sharp criterion for survival. Section~\ref{sec:continuity} uses it to find a surviving subprocess of bounded cost and to identify the limit of the truncated extinction probabilities. Section~\ref{sec:proof} collects the pieces, and Section~\ref{sec:upper} records a short proof of the upper bound together with a concentration estimate that holds for every deterministic budget array.
+
+\section{Cost time and the truncated tree}\label{sec:time}
+
+Throughout, $d_i=\min(D_i,n-1)$ in the random case and $d_i=d_i^{(n)}$ in the deterministic case. For a graph $H$ on $V$ and an integer $k\ge1$ put
+\[
+F_k(H)=\sum_{C}|C|\,\1\{|C|\ge k\},
+\]
+the sum running over the components $C$ of $H$, so that $F_k(H)/n$ is the fraction of vertices lying in components with at least $k$ vertices.
+
+\subsection{Cost time}
+Let $H_n(t)$ be the graph of edges of cost at most $t$; it is an Erd\H{o}s--R\'enyi graph with edge probability $p_n=1-e^{-t/n}$. Call a vertex $i$ \emph{active at time $t$} if $\deg_{H_n(t)}(i)<d_i$, and let $G_n(t)$ consist of the edges of $G_n$ of cost at most $t$. Since the costs are almost surely distinct, an edge $e=\{i,j\}$ of cost $s$ is among the $d_i$ cheapest at $i$ exactly when fewer than $d_i$ edges at $i$ have cost below $s$, that is, when $i$ is active just before time $s$. Hence an edge is in $G_n$ if and only if both its endpoints are active just before it arrives, $G_n(t)$ increases with $t$, and $G_n(\infty)=G_n$. Activity is defined through all edges that have arrived at a vertex, accepted or not, and cannot be read off from $G_n(t)$ alone. One consequence is used repeatedly: changing the budget of one vertex $v$ changes the status only of edges at $v$, because whether an edge at another vertex is accepted depends on arrivals and not on acceptances.
+
+\begin{remark}\label{rem:costs}
+Only the ranks of the costs at each vertex enter the definition of $G_n$. For independent costs with any other common continuous law, the probability integral transform followed by $u\mapsto-n\log(1-u)$ is increasing and turns the costs into independent exponentials of rate $1/n$, so the graph has the same law.
+\end{remark}
+
+\subsection{The local limit in cost time}
+The costs at a vertex, $n-1$ independent exponentials of rate $1/n$, converge to a Poisson process of rate one on $(0,\infty)$. For a fixed $t$ the rooted graph $H_n(t)$, marked with costs and budgets and rooted at a uniform vertex, converges locally in distribution to a Galton--Watson tree with $\mathrm{Poisson}(t)$ offspring, independent costs uniform on $[0,t]$ on its edges and independent budgets with law $P$. The proof is the usual exploration. The expected number of vertices within distance $r$ of the root is at most $\sum_{j\le r}(np_n)^j\le\sum_{j\le r}t^j$, so by Markov's inequality the exploration of radius $r$ uses at most $M$ vertices with probability at least $1-O(1/M)$. On that event a repeated vertex or an edge inside the explored set appears with probability $O(M^2/n)$, the number of fresh neighbours of an explored vertex is $\mathrm{Bin}(n-O(M),p_n)\to\mathrm{Poisson}(t)$, and the conditional density $e^{-x/n}/(np_n)$ of a cost on $(0,t)$ converges uniformly to $1/t$. The budgets of the explored vertices are independent with law $P$; for a deterministic array they are drawn without replacement from the array at finitely many uniform positions, and their joint law converges to independent copies of $P$ by the weak convergence of the empirical laws. Letting $n\to\infty$ and then $M\to\infty$ proves the claim. Unbounded budgets cause no difficulty, since only finitely many marks are inspected and their laws are tight.
+
+The ball of radius $r$ about the root in $G_n(t)$, together with the active labels of its vertices, is a function of the ball of radius $r+1$ in $H_n(t)$ with its marks, because the activity of a vertex at time $s\le t$ depends only on its incident edges of cost at most $s$. It therefore converges locally as well. The limit of the component of the root is the Erlang weighted tree of \cite{EWT} with its edges of cost larger than $t$ removed, which we denote by $T(t)$. We use the following description of $\Er(P)$, which is the backbone and pruning construction of \cite{EWT}. A non-root vertex with budget $D$ that is reached along an edge of cost $y$ sees its other incident costs as an independent Poisson process of rate one; it accepts the edge from its parent exactly when its $D$-th other cost exceeds $y$. This threshold has the law $\Gamma(D)$ of shape $D$, and given it the $D-1$ other costs below it are independent and uniform. So a non-root vertex has a \emph{type} $s=(m,x)$, where $m=D-1$ is its number of potential children and $x$ its threshold, and the types of fresh vertices have the law
+\[
+\mu(\{m\}\times dx)=P(\{m+1\})\,e^{-x}\frac{x^m}{m!}\,dx,\qquad m\ge0,\ x>0.
+\]
+Given a parent of type $(m,x)$, each of its $m$ slots carries an independent cost uniform on $[0,x]$ and an independent candidate child of type $(r,z)$ with law $\mu$; the child is kept when its threshold $z$ exceeds the cost, which has probability $h(x,z)=\min(x,z)/x$, and the subtrees of kept children are independent given their types. The root with budget $D$ has threshold $\Gamma(D+1)$ and $D$ slots. In $T(t)$ a slot is kept when, in addition, its cost is at most $t$, which has probability
+\[
+h_t(x,z)=\frac{\min(t,x,z)}{x}.
+\]
+Write
+\[
+\rho_t=\Pp\bigl(|T(t)|=\infty\bigr),\qquad p_{t,k}=\Pp\bigl(|T(t)|\ge k\bigr).
+\]
+Coupling the trees through their costs, $T(t)$ increases with $t$ and its union is $\Er(P)$, so $\rho_t$ is nondecreasing and $\rho_t\le\rho(P)$.
+
+\subsection{Concentration at a fixed cutoff}
+
+\begin{lemma}\label{lem:conc-t}
+For fixed $t$ and $k$, $F_k(G_n(t))/n\to p_{t,k}$ in probability, both for independent budgets with law $P$ and for deterministic arrays as in Theorem~\ref{thm:main}.
+\end{lemma}
+
+\begin{proof}
+First fix the budgets. Resampling the cost of one edge $e$ changes the preference lists of its two endpoints by at most two edges each and may change whether $e$ itself has cost at most $t$, so $G_n(t)$ changes in at most five edges. Adding or removing one edge changes $F_k$ by at most $2(k-1)$: a merger of components of sizes $a$ and $b$ changes $F_k$ by $0$ if both are at least $k$, by the size of the other one if exactly one is, and by $0$ or $a+b\le2(k-1)$ if neither is. If the old and the new cost of $e$ both exceed $t$, then $H_n(s)$ is unchanged for $s\le t$ and so is $G_n(t)$; this has probability at least $1-2t/n$. The Efron--Stein inequality \cite{ES,Steele}, in the form of \cite[Theorem~3.1]{BLM}, gives
+\[
+\operatorname{Var}\bigl(F_k(G_n(t))\mid d\bigr)\le\frac12\binom n2\,\bigl(10(k-1)\bigr)^2\,\frac{2t}{n}\le50\,t\,(k-1)^2\,n .
+\]
+For random budgets let $g(d)=\E\bigl(F_k(G_n(t))\mid d\bigr)$. Changing $d_v$ changes only edges at $v$, at most $\deg_{H_n(t)}(v)$ of them, so $|g(d)-g(d')|\le2(k-1)\E\deg_{H_n(t)}(v)\le2(k-1)t$ when $d$ and $d'$ differ at $v$ only. A second application of the Efron--Stein inequality and the law of total variance give
+\[
+\operatorname{Var}\Bigl(\frac{F_k(G_n(t))}{n}\Bigr)\le\frac{(k-1)^2(50t+2t^2)}{n}.
+\]
+For a deterministic array the second term is absent. Finally $\E F_k(G_n(t))/n$ is the probability that the component of a uniform vertex in $G_n(t)$ has at least $k$ vertices. This event is determined by the ball of radius $k-1$ in $G_n(t)$, so by the local convergence its probability tends to $p_{t,k}$.
+\end{proof}
+
+\section{Active vertices in large components}\label{sec:active}
+
+The local limit of Section~\ref{sec:time} carries the active labels: a vertex of the limit is active at time $t$ when fewer than its budget of its incident costs are at most $t$. These costs include the rejected ones, so the label is a property of the limit of $H_n(t)$ and not of $T(t)$ alone.
+
+\begin{lemma}\label{lem:active}
+Almost surely, if $T(t)$ is infinite then it contains a vertex that is active at time $t$.
+\end{lemma}
+
+\begin{proof}
+Put $a_t=P(\{2,3,\dots\})e^{-t}>0$. Explore $T(t)$ breadth first, testing the slots one at a time and only those whose cost $y$ is at most $t$; at each such test the budget, threshold and slot costs of the candidate child are fresh variables, independent of the history and of $y$. Consider the event that the child has budget $D\ge2$ and that all its other incident costs exceed $t$. In the description of Section~\ref{sec:time} this means that its threshold $z$ exceeds $t$ and so do its $D-1$ slot costs. Given $D=k\ge2$ it has probability
+\[
+\int_t^\infty e^{-z}\frac{z^{k-1}}{(k-1)!}\Bigl(1-\frac tz\Bigr)^{k-1}dz=\int_t^\infty e^{-z}\frac{(z-t)^{k-1}}{(k-1)!}\,dz=e^{-t},
+\]
+so the event has probability $a_t$ whatever the history. On it $z>t\ge y$, so the child is kept; only the edge from its parent has arrived at it by time $t$, so it is active because $k\ge2$. If $T(t)$ is infinite, infinitely many slots are tested, and whether a further test takes place is known before the variables of its child are examined. Conditioning successively, the probability that the first $N$ tests take place and none of them produces this event is at most $(1-a_t)^N$. Letting $N\to\infty$ proves the lemma.
+\end{proof}
+
+Fix integers $R,B\ge1$ and put $C_{R,B}=1+B+\dots+B^R$. Call a vertex $v$ \emph{covered} in $G_n(t)$ if there is a path of length at most $R$ in $G_n(t)$ from $v$ to a vertex active at time $t$, all of whose vertices have degree at most $B$ in $H_n(t)$. Such paths lie in the subgraph of $G_n(t)$ induced by the vertices of $H_n(t)$-degree at most $B$, whose maximum degree is at most $B$; hence an active vertex covers at most $C_{R,B}$ vertices. The same definition applies in the limit, and being covered is determined by the ball of radius $R+1$ in $H_n(t)$.
+
+\begin{lemma}\label{lem:cover}
+Let $t<\infty$ and $\eta,\zeta>0$. There are integers $R,B$ and $k_0$ such that for every $k\ge k_0$, with $a=\eta/(2C_{R,B})$, the following holds. Let $\mathcal A_{n,k}$ be the event that every union of components of $G_n(t)$ of size at least $k$ with at least $\eta n$ vertices contains at least $an$ active vertices. Then
+\[
+\limsup_{n\to\infty}\Pp\bigl(\mathcal A_{n,k}^c\bigr)\le\frac\zeta4 .
+\]
+\end{lemma}
+
+\begin{proof}
+Every vertex of the limit has finite degree in the limit of $H_n(t)$. By Lemma~\ref{lem:active}, on $\{|T(t)|=\infty\}$ the root is joined in $T(t)$ by a finite path to an active vertex, and the vertices of this path have bounded degree. Hence we may choose $R$ and $B$ with $\Pp(|T(t)|=\infty,\ \text{root not covered})<\eta\zeta/16$, and then $k_0$ with $\Pp(k_0\le|T(t)|<\infty)<\eta\zeta/16$. For $k\ge k_0$ we get $\Pp(|T(t)|\ge k,\ \text{root not covered})<\eta\zeta/8$. The events $\{|T(t)|\ge k\}$ and $\{\text{root not covered}\}$ are each determined by a ball of bounded radius, so by the local convergence the expected fraction of vertices of $G_n(t)$ that lie in components of size at least $k$ and are not covered tends to the same probability. By Markov's inequality the number of such vertices exceeds $\eta n/2$ with probability at most $\zeta/4+o(1)$.
+
+On the complementary event let $U$ be a union of components of size at least $k$ with $|U|\ge\eta n$. At least $\eta n/2$ vertices of $U$ are covered. A vertex is covered by an active vertex of its own component, hence of $U$, and an active vertex covers at most $C_{R,B}$ vertices. So $U$ contains at least $\eta n/(2C_{R,B})=an$ active vertices.
+\end{proof}
+
+The point of Lemma~\ref{lem:cover} is that it holds simultaneously for all unions of large components. It gives no bound on the density of active vertices in a single component with fewer than $\eta n$ vertices, and it does not need one.
+
+\section{Sprinkling in cost time}\label{sec:sprinkle}
+
+\begin{proposition}\label{prop:lower-t}
+For every $t<\infty$ and $\varepsilon>0$, $\Pp\bigl(L_1(G_n)\ge(\rho_t-\varepsilon)n\bigr)\to1$.
+\end{proposition}
+
+\begin{proof}
+Fix $\eta>0$ and $\zeta>0$, take $R$, $B$, $k_0$ and $a$ from Lemma~\ref{lem:cover}, put $\delta=a/4$, and choose $k\ge k_0$ so large that $\log2/k<\delta a^2/8$. Let $\mathcal F_t$ be the $\sigma$-field generated by the budgets and by the edges of cost at most $t$ with their costs. Given $\mathcal F_t$, the costs of the remaining edges exceed $t$, and by the memoryless property their excesses over $t$ are independent exponentials of rate $1/n$.
+
+\emph{Few arrivals.} Let $N_\delta$ be the number of edges with cost in $(t,t+\delta]$. Given $\mathcal F_t$ it is a sum of at most $n^2/2$ independent indicators with means at most $\delta/n$, so $\E\bigl(2^{N_\delta}\mid\mathcal F_t\bigr)\le(1+\delta/n)^{n^2/2}\le e^{\delta n/2}$, and by Markov's inequality
+\[
+\Pp\bigl(N_\delta>\delta n\mid\mathcal F_t\bigr)\le\exp\bigl(-\delta n(\log2-\tfrac12)\bigr).
+\]
+An arrival raises the $H_n$-degree of two vertices by one, so it ends the activity of at most two vertices. Hence, as long as at most $\delta n$ edges have arrived after $t$, a set of vertices containing at least $an$ vertices active at time $t$ still contains at least $an-2\delta n=an/2$ active vertices.
+
+\emph{One bipartition.} Let $\mathcal A=\mathcal A_{n,k}$ be the event of Lemma~\ref{lem:cover}; it is $\mathcal F_t$-measurable. Fix a partition of the components of $G_n(t)$ of size at least $k$ into two classes whose unions $A$ and $B$ have at least $\eta n$ vertices each. Run time from $t$ to $t+\delta$ and stop at the first accepted edge between $A$ and $B$, or at the arrival of the $(\lfloor\delta n\rfloor+1)$-th edge after $t$, whichever comes first. Before the stopping time, let $u\in A$ and $v\in B$ be active. The edge $uv$ has not arrived: had it arrived at some time $s$, both $u$ and $v$ would have been active just before $s$, since activity can only be lost, so $uv$ would have been accepted; for $s\le t$ this contradicts $u$ and $v$ lying in different components of $G_n(t)$, and for $s>t$ it contradicts the definition of the stopping time. On $\mathcal A$ there are at least $an/2$ active vertices in each of $A$ and $B$, hence at least $a^2n^2/4$ such unseen pairs, each arriving at rate $1/n$, and an arrival on any of them is an accepted edge between $A$ and $B$.
+
+To make this precise, observe that given $\mathcal F_t$ the list of edges that have arrived after $t$, in their order of arrival, evolves as a continuous-time Markov chain on a finite state space, in which each unseen edge arrives at rate $1/n$. The order of arrival is kept in the state because it, and not the set of arrived edges alone, determines which of them were accepted. Make absorbing the states in which an edge between $A$ and $B$ has been accepted or more than $\delta n$ edges have arrived. On $\mathcal A$, from every other state the total rate into the absorbing states is at least $a^2n/4$. If $q(u)$ is the conditional probability of not being absorbed by time $t+u$, the forward equations give $q'(u)\le-(a^2n/4)q(u)$ and $q(0)=1$. Therefore, on $\mathcal A$,
+\[
+\Pp\bigl(\text{no edge between }A\text{ and }B\text{ is accepted in }(t,t+\delta],\ N_\delta\le\delta n\ \big|\ \mathcal F_t\bigr)\le q(\delta)\le e^{-\delta a^2n/4}.
+\]
+
+\emph{All bipartitions.} There are at most $n/k$ components of size at least $k$, hence at most $2^{n/k}$ such partitions. By the choice of $k$, with probability at least $1-\Pp(\mathcal A^c)-e^{-\delta n(\log2-1/2)}-2^{n/k}e^{-\delta a^2n/4}$ the event $\mathcal A$ holds, $N_\delta\le\delta n$, and every admissible partition receives an accepted edge between its two sides during $(t,t+\delta]$. Call this event $\mathcal G$. The tail of $N_\delta$ is counted once, outside the union bound.
+
+\emph{A large component.} Let $S=F_k(G_n(t))$ and suppose that $\mathcal G$ holds. Each component of $G_n(t)$ lies inside one component of $G_n(t+\delta)$, so the components of $G_n(t+\delta)$ group the components of $G_n(t)$ of size at least $k$ into blocks; let the mass of a block be its number of vertices in such components. We claim that some block has mass at least $S-3\eta n$. This is trivial if $S<3\eta n$. Otherwise suppose no block has mass at least $S-\eta n$. If some block has mass between $\eta n$ and $S-\eta n$, take it as one side and all other blocks as the other. If every block has mass less than $\eta n$, add blocks one at a time until the total first reaches $\eta n$; it is then less than $2\eta n$, and the remaining blocks have mass more than $S-2\eta n\ge\eta n$. In both cases we obtain an admissible partition with no edge of $G_n(t+\delta)$ between its sides, contradicting $\mathcal G$. Hence $L_1(G_n)\ge L_1(G_n(t+\delta))\ge S-3\eta n$ on $\mathcal G$.
+
+By Lemma~\ref{lem:conc-t} and $p_{t,k}\ge\rho_t$ we have $S\ge(\rho_t-\eta)n$ with probability tending to one, and by Lemma~\ref{lem:cover} $\limsup_n\Pp(\mathcal A^c)\le\zeta/4$. Thus
+\[
+\limsup_{n\to\infty}\Pp\bigl(L_1(G_n)<(\rho_t-4\eta)n\bigr)\le\frac\zeta4 .
+\]
+Since $\zeta$ is arbitrary and the left side does not depend on it, the limit superior is zero. Taking $\eta=\varepsilon/4$ proves the proposition.
+\end{proof}
+
+The constants $a$, $\delta$ and $k$ produced by this argument depend on $t$ and $\eta$ in an inexplicit way, and the proof gives no rate.
+
+\section{The return process on a compact set of types}\label{sec:return}
+
+In this section and the next we work with the tree $\Er(P)$ through the description of Section~\ref{sec:time}. Call $m$ the \emph{potential} of a type $s=(m,x)$ and call $s$ \emph{fertile} if $m\ge1$. A vertex of potential $m$ has at most $m$ children. Since $P$ has finite mean,
+\[
+\int m\,\mu(dm,dx)=\sum_{m\ge0}m\,P(\{m+1\})=\E D-1<\infty .
+\]
+If $\rho(P)=0$ there is nothing to prove in this and the next section, so assume $\rho(P)>0$; then $P(\{m+1\})>0$ for some $m\ge1$.
+
+\subsection{The compact set}
+For an integer $M\ge1$ and $0<c_-<c_+<\infty$ let $S_M=\{1\le m\le M:P(\{m+1\})>0\}$ and
+\[
+K=S_M\times[c_-,c_+],\qquad \theta=\int_{K^c}m\,\mu(dm,dx).
+\]
+By dominated convergence $\theta\to0$ as $M\to\infty$, $c_-\to0$ and $c_+\to\infty$, so we may fix $M$, $c_\pm$ with $S_M\ne\emptyset$ and $\theta<1$. Let $\mu_K$ be the restriction of $\mu$ to $K$; it has a positive continuous density on each of the finitely many intervals of $K$.
+
+\begin{lemma}\label{lem:outside}
+Start a tree from a vertex of type $s=(m,x)\notin K$ and stop every line at its first vertex in $K$. The expected number of vertices of the stopped tree is at most $1+m/(1-\theta)$, so the stopped tree is finite almost surely.
+\end{lemma}
+
+\begin{proof}
+A vertex outside $K$ of type $(m',x')$ has children outside $K$ with expected total potential $m'\int_{K^c}r\,h(x',z)\,\mu(dr,dz)\le m'\theta$, because $h\le1$. By induction the expected total potential of the outside vertices in generation $j$ is at most $m\theta^j$, and the expected number of vertices in generation $j+1$, inside or outside $K$, is at most that potential. Summing over $j$ gives the bound.
+\end{proof}
+
+For a vertex in $K$, its \emph{return children} are its first strict descendants in $K$ along each line of descent: follow each line through vertices outside $K$ and stop at the first vertex in $K$. By Lemma~\ref{lem:outside} there are finitely many of them almost surely, and given their types their subtrees are independent and distributed as trees started from those types. This defines a multitype branching process on $K$, the \emph{return process}.
+
+\subsection{The mean kernel}
+The mean number of return children of $s=(m,x)\in K$ with type in $du$, $u=(r,z)\in K$, is $m\,Q(x,z)\,\mu_K(du)$, where $Q=\sum_{j\ge0}Q_j$, $Q_0(x,z)=h(x,z)$, and for $j\ge1$
+\[
+Q_j(x,z)=\int_{(K^c)^j}h(x,x_1)\prod_{i=1}^{j}r_i\,h(x_i,x_{i+1})\ \mu(ds_1)\cdots\mu(ds_j),\qquad s_i=(r_i,x_i),\ x_{j+1}=z .
+\]
+The term $Q_j$ counts return children reached through $j$ intermediate vertices outside $K$: the first slot of $s$ is kept with probability $h(x,x_1)$, the vertex $s_i$ has $r_i$ slots, and the last one is kept with probability $h(x_j,z)$. Integrating out one intermediate vertex at a time and using $h\le1$ gives $0\le Q_j\le\theta^j$, so
+\begin{equation}\label{eq:Qbounds}
+\frac{c_-}{c_+}\le h(x,z)\le Q(x,z)\le\frac1{1-\theta}\qquad(x,z\in[c_-,c_+]).
+\end{equation}
+For $x,x'\in[c_-,c_+]$ and any $y>0$ we have $|h(x,y)-h(x',y)|\le|x-x'|/c_-$. For $z,z'\in[c_-,c_+]$ and any $y>0$ we have $|h(y,z)-h(y,z')|\le|z-z'|/c_-$: if $y<c_-$ both values equal one, and otherwise $h(y,\cdot)$ is Lipschitz with constant $1/y\le1/c_-$. Hence $|Q_j(x,z)-Q_j(x',z')|\le\theta^{j}(|x-x'|+|z-z'|)/c_-$ for $j\ge1$, the same holds for $Q_0$ with $\theta^0$, and $Q$ is Lipschitz on $[c_-,c_+]^2$.
+
+\subsection{Symmetry}
+For a fertile type put $\alpha(s)=m/x$ and $\pi(ds)=\mu(ds)/\alpha(s)$. On $K$ the measure $\pi$ is finite, $\pi(K)\le c_+\mu(K)$, with a positive continuous density. Relative to $\pi$, the mean kernel of the return process is
+\[
+F(s,u)=m\,Q(x,z)\,\alpha(u)=\alpha(s)\alpha(u)\,\Phi(x,z),\qquad \Phi(x,z)=x\,Q(x,z),
+\]
+and the point is that $\Phi$ is symmetric. Indeed $m\,h(x,x_1)=\alpha(s)\min(x,x_1)$ and $r_i\,h(x_i,x_{i+1})=\alpha(s_i)\min(x_i,x_{i+1})$, so
+\[
+x\,Q_j(x,z)=\int_{(K^c)^j}\min(x,x_1)\min(x_1,x_2)\cdots\min(x_j,z)\prod_{i=1}^j\alpha(s_i)\,\mu(ds_i),
+\]
+with $\alpha(s_i)=0$ for intermediate types of potential zero, and $x\,Q_0(x,z)=\min(x,z)$. Reversing the order of the intermediate vertices shows that each $xQ_j(x,z)$ is symmetric in $(x,z)$, and so is the uniformly convergent sum. Let $A$ be the operator
+\[
+(Af)(s)=\int_KF(s,u)f(u)\,\pi(du)=\E_s\sum_{\text{return children }u}f(u)
+\]
+on $L^2(K,\pi)$. Its kernel is bounded and symmetric, so $A$ is a self-adjoint Hilbert--Schmidt operator, and by \eqref{eq:Qbounds} its kernel is bounded below by $F_{\min}=c_-/c_+^2>0$, since $F(s,u)\ge(m/x)(r/z)\,x\,(c_-/c_+)$ with $m,r\ge1$ and $z\le c_+$, and above by a constant.
+
+\begin{lemma}\label{lem:eigen}
+Let $\lambda=\|A\|$. There is a continuous function $v$ on $K$ with $Av=\lambda v$ and $0<v_{\min}\le v\le v_{\max}<\infty$.
+\end{lemma}
+
+\begin{proof}
+Since $F>0$, $\lambda>0$. For a compact self-adjoint operator $\sup_{\|f\|=1}|\langle Af,f\rangle|=\|A\|$ and the supremum is attained at an eigenvector $f$ with $Af=\pm\lambda f$. As $F\ge0$, $\langle A|f|,|f|\rangle\ge|\langle Af,f\rangle|=\lambda$, so $|f|$ also attains the supremum of $\langle Ag,g\rangle$ over unit vectors. Expanding $|f|$ in an orthonormal eigenbasis of $A$ shows that it lies in the eigenspace of $\lambda$, so $A|f|=\lambda|f|$. Put $v=\lambda^{-1}A|f|$. Then $v=|f|$ in $L^2(K,\pi)$, $v$ is continuous because $F$ is, $v\ge\lambda^{-1}F_{\min}\int_K|f|\,d\pi>0$ and $v\le\lambda^{-1}\sup F\int_K|f|\,d\pi$, and $Av=\lambda v$ holds everywhere.
+\end{proof}
+
+\subsection{Survival of the return process}
+Let $Z_j$ be the number of vertices in generation $j$ of the return process.
+
+\begin{lemma}\label{lem:return}
+\begin{enumerate}[label=\textup{(\alph*)},leftmargin=*]
+\item There is $q_0>0$ such that every vertex in $K$ has no return children with probability at least $q_0$.
+\item Almost surely on survival of the return process, $Z_j\to\infty$.
+\item If $\lambda\le1$, the return process started from any type in $K$ dies out almost surely.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(a) Put $\gamma=\mu\{(m,x):x\le c_-/2\}>0$. For a parent with threshold $x\ge c_-$, a slot has cost at least $c_-/2$ with probability at least $1/2$, and independently its candidate has threshold at most $c_-/2$ with probability $\gamma$, in which case the candidate is rejected. The slots are independent, so all $m\le M$ of them are rejected with probability at least $q_0=(\gamma/2)^M$, and then there are no children at all.
+
+(b) Fix $L$. Whenever $1\le Z_j\le L$, by (a) and the branching property the next generation is empty with conditional probability at least $q_0^L$. Applying this at the successive generations at which $Z_j\in\{1,\dots,L\}$, the probability of surviving through the first $q$ of them is at most $(1-q_0^L)^q$. Hence, on survival, $Z_j\in\{1,\dots,L\}$ for only finitely many $j$, almost surely. Take the intersection over $L$.
+
+(c) Starting from $s\in K$, $\E_s\sum_{u\in\text{gen }j}v(u)=\lambda^jv(s)\le v_{\max}$, so $\E_sZ_j\le v_{\max}/v_{\min}$ for every $j$. By Fatou's lemma $\E_s\liminf_jZ_j<\infty$, and by (b) the probability of survival is zero.
+\end{proof}
+
+\begin{corollary}\label{cor:lambda}
+If $\rho(P)>0$ then $\lambda>1$.
+\end{corollary}
+
+\begin{proof}
+The root of $\Er(P)$ has finitely many children, and by Lemma~\ref{lem:outside}, applied to each child outside $K$, the set of first vertices in $K$ below the root is finite almost surely; so is every stopped family below a vertex in $K$. There are countably many such families, so almost surely all of them are finite at once. On that event, the tree is infinite exactly when the return process started from one of the first vertices in $K$ survives. If $\rho(P)>0$, some return process survives with positive probability, and Lemma~\ref{lem:return}(c) gives $\lambda>1$.
+\end{proof}
+
+\section{Continuity of the truncated survival probability}\label{sec:continuity}
+
+We keep the assumption $\rho(P)>0$ and the set $K$, the constants $M,c_\pm,\theta$ and the eigenvalue $\lambda>1$ of Section~\ref{sec:return}.
+
+\subsection{A surviving subprocess of bounded cost}
+
+\begin{proposition}\label{prop:bounded}
+There is $t_0<\infty$ such that, for every $s\in K$, the tree started from a vertex of type $s$, with its edges of cost above $t_0$ removed, is infinite with positive probability.
+\end{proposition}
+
+\begin{proof}
+Let $L=S_{M'}\times[c_-',c_+']$ with $M'\ge M$, $c'_-\le c_-$ and $c'_+\ge c_+$, so that $K\subset L$, and put $\tau=\int_{L^c}m\,\mu(dm,dx)$; then $\tau\to0$ as $L$ increases. For an integer $N\ge0$ define the \emph{truncated return children} of a vertex in $K$ as its return children reached along lines whose intermediate vertices all have types in $L$ and number at most $N$. Their mean kernel relative to $\mu_K$ is $m\,Q_{L,N}(x,z)$, where $Q_{L,N}=Q_0+\sum_{j=1}^NQ_j^{L}$ and $Q_j^{L}$ is defined as $Q_j$ with the intermediate types restricted to $L\setminus K$. Paths with more than $N$ intermediate vertices contribute at most $\sum_{j>N}\theta^j$ to $Q$, and paths with $j\le N$ intermediate vertices, at least one of them outside $L$, contribute at most $j\theta^{j-1}\tau$, by the bound $\int_{L^c}r\,h\,d\mu\le\tau$ for the excluded vertex and $\theta$ for the others. Hence
+\[
+0\le Q-Q_{L,N}\le\varepsilon_{L,N}:=\frac{\theta^{N+1}}{1-\theta}+\frac{\tau}{(1-\theta)^2}.
+\]
+Let $A_{L,N}$ be the corresponding operator and $v$ the eigenfunction of Lemma~\ref{lem:eigen}. Since $\mu(K)\le1$ and $m\le M$,
+\[
+A_{L,N}v\ge Av-M\varepsilon_{L,N}v_{\max}\ge\Bigl(\lambda-\frac{M\varepsilon_{L,N}v_{\max}}{v_{\min}}\Bigr)v .
+\]
+Choose $L$ and $N$ with $M\varepsilon_{L,N}v_{\max}/v_{\min}\le(\lambda-1)/2$ and put $\lambda'=(\lambda+1)/2>1$. The kernel of $A_{L,N}$ relative to $\pi$ is $\alpha(s)\alpha(u)\,x\,Q_{L,N}(x,z)$, and reversing the intermediate vertices preserves both the restriction to $L\setminus K$ and their number, so $A_{L,N}$ is self-adjoint on $L^2(K,\pi)$. It is bounded below by $c_-/c_+^2$ through its $Q_0$ term and is Lipschitz by the argument of Section~\ref{sec:return}. From $\langle A_{L,N}v,v\rangle\ge\lambda'\|v\|^2$ we get $\lambda_{L,N}:=\|A_{L,N}\|\ge\lambda'>1$, and the proof of Lemma~\ref{lem:eigen} gives a continuous $w$ with $A_{L,N}w=\lambda_{L,N}w$ and $0<w_{\min}\le w\le w_{\max}$.
+
+In the truncated return process every vertex explores at most $N_0=\sum_{j=1}^{N+1}(M')^j$ vertices before its truncated return children are found, so it has at most $N_0$ of them. Let $X_j$ be the sum of $w$ over generation $j$, $\mathcal F_j$ the information up to generation $j$, and $Y_j=\lambda_{L,N}^{-j}X_j$, a nonnegative martingale. Given $\mathcal F_j$ the vertices of generation $j$ reproduce independently and each contributes a variance at most $(N_0w_{\max})^2$, so
+\[
+\operatorname{Var}(X_{j+1}\mid\mathcal F_j)\le Z_j(N_0w_{\max})^2\le\frac{(N_0w_{\max})^2}{w_{\min}}X_j,
+\qquad
+\E(Y_{j+1}-Y_j)^2\le\frac{(N_0w_{\max})^2}{w_{\min}}\,w(s)\,\lambda_{L,N}^{-j-2}.
+\]
+The right side is summable in $j$, so $Y_j$ converges in $L^2$ to a limit $Y_\infty$ with $\E_sY_\infty=w(s)>0$. Since $Y_\infty=0$ on extinction, the truncated return process survives with positive probability from every $s\in K$.
+
+Every vertex retained by this construction has a type in $L$, hence a threshold at most $c'_+$, and the cost of a kept edge is at most the threshold of its upper endpoint, because the slot costs of a vertex of type $(m,x)$ lie in $[0,x]$. Each truncated return edge stands for a finite path of the tree, and distinct return vertices are distinct vertices of the tree. So on survival the tree from $s$ contains infinitely many vertices joined to $s$ by edges of cost at most $t_0=c'_+$.
+\end{proof}
+
+\subsection{Convergence of the extinction probabilities}
+For a non-root type $s=(m,x)$ let $e_t(s)$ be the probability that the tree from a vertex of type $s$ with its edges of cost above $t$ removed is finite, and $e(s)$ the same for the full tree. Coupling through the costs, $e_t$ decreases in $t$ and $e_t\ge e$. Conditioning on the first generation,
+\begin{equation}\label{eq:gen}
+e_t(m,x)=\Bigl[1-\int h_t(x,z)\bigl(1-e_t(r,z)\bigr)\,\mu(dr,dz)\Bigr]^m,
+\end{equation}
+and $e$ satisfies the same equation with $h$ in place of $h_t$. Let $e_*=\lim_{t\to\infty}e_t\ge e$. Since $h_t\uparrow h$ and all integrands lie in $[0,1]$, dominated convergence shows that $e_*$ satisfies \eqref{eq:gen} with $h$.
+
+\begin{proposition}\label{prop:cont}
+$e_*=e$ on all non-root types, and $\rho_t\uparrow\rho(P)$ as $t\to\infty$.
+\end{proposition}
+
+\begin{proof}
+By Proposition~\ref{prop:bounded}, $e_*(s)\le e_{t_0}(s)<1$ for every $s\in K$, so $J=\int_K(1-e_*)\,d\mu>0$. For $s=(m,x)\in K$ we have $m\ge1$ and $h(x,z)\ge c_-/c_+$ for $z\in[c_-,c_+]$, so \eqref{eq:gen} gives
+\[
+e_*(s)\le1-\frac{c_-}{c_+}J=:1-c,\qquad c>0 .
+\]
+Equation \eqref{eq:gen} says that $e_*(s)=\E_s\prod_{u}e_*(u)$, the product running over the children $u$ of the starting vertex. Apply it again to every child outside $K$, and so on. After $\ell$ rounds $e_*(s)$ is the expectation of the product of $e_*$ over the vertices in $K$ found so far and the vertices outside $K$ at depth $\ell$. The family stopped at $K$ is finite almost surely by Lemma~\ref{lem:outside}, and all factors lie in $[0,1]$, so letting $\ell\to\infty$,
+\[
+e_*(s)=\E_s\prod_{u}e_*(u),
+\]
+where the product now runs over the return children of $s$ if $s\in K$, and over the first vertices in $K$ below $s$ otherwise; an empty product is one. Iterating over $j$ generations of the return process, for $s\in K$, $e_*(s)=\E_s\prod_{u\in\text{gen }j}e_*(u)$. On extinction of the return process the product is eventually one. On survival $Z_j\to\infty$ by Lemma~\ref{lem:return}(b), and the product is at most $(1-c)^{Z_j}\to0$. By bounded convergence $e_*(s)$ is the extinction probability of the return process from $s$, which is $e(s)$ by the argument in the proof of Corollary~\ref{cor:lambda}. For $s\notin K$ the identity over the first vertices in $K$ holds for both $e_*$ and $e$, so again $e_*(s)=e(s)$.
+
+For the root, with budget $D$ and threshold $y$ of law $\Gamma(D+1)$ given $D$,
+\[
+1-\rho_t=\E\Bigl[1-\int h_t(y,z)\bigl(1-e_t(u)\bigr)\,\mu(du)\Bigr]^D ,
+\]
+and the same identity holds for $1-\rho(P)$ with $h$ and $e$. As $t\to\infty$ the integrand converges to the one with $h$ and $e_*=e$, everything is bounded by one, and dominated convergence over $D$ and $y$ gives $\rho_t\to\rho(P)$; the convergence is monotone because $\rho_t$ is nondecreasing.
+\end{proof}
+
+This is the step where a branching process with infinitely many types could behave differently: in general the limit of the truncated extinction probabilities is some fixed point of the generating equation, not necessarily the smallest one. Here the finite mean gives a compact set outside which the process is subcritical, and the return process to that set has a positive eigenfunction and dies in one step with probability bounded below, which together show that the limit $e_*$ is $e$. The constant function one is always a fixed point, so the bound $e_*\le1-c$ on the compact set is what the argument turns on.
+
+\section{Proof of Theorem~\ref{thm:main}}\label{sec:proof}
+
+Let $u>0$. If $\rho(P)>0$, Proposition~\ref{prop:cont} gives $t$ with $\rho_t>\rho(P)-u/2$, and Proposition~\ref{prop:lower-t} with $\varepsilon=u/2$ gives $\Pp(L_1(G_n)\ge(\rho(P)-u)n)\to1$; if $\rho(P)=0$ this is trivial. Proposition~\ref{prop:upper} below gives $\Pp(L_1(G_n)\le(\rho(P)+u)n)\to1$. Hence $L_1(G_n)/n\to\rho(P)$ in probability, and since $0\le L_1(G_n)/n\le1$ also in $L^1$.
+
+For a deterministic array the same argument applies. Sections~\ref{sec:time}--\ref{sec:sprinkle} were written for both kinds of budgets, Sections~\ref{sec:return} and~\ref{sec:continuity} concern only the tree $\Er(P)$ and use only the finite mean of $P$, and Proposition~\ref{prop:upper} covers arrays. The empirical means of the array need not converge to $\E D$.
+
+\section{The upper bound and concentration}\label{sec:upper}
+
+For independent budgets the upper bound is \cite[Corollary~2.2]{EWT}. We include a proof that also covers deterministic arrays. It rests on a concentration estimate for $F_k(G_n)$ and on a comparison of $G_n$ with $G_n(t)$, and for arrays neither needs more than the weak convergence of the empirical laws.
+
+\begin{lemma}\label{lem:conc}
+For every fixed $k$, $F_k(G_n)/n-\E F_k(G_n)/n\to0$ in $L^2$, both for independent budgets with law $P$ of finite mean and for deterministic arrays as in Theorem~\ref{thm:main}.
+\end{lemma}
+
+\begin{proof}
+Fix the budgets $d$. Resampling the cost of one edge $\{i,j\}$ changes the list of preferred edges at $i$ by at most two edges, and likewise at $j$, and leaves all other lists unchanged; so $G_n$ changes in at most four edges and $F_k$ by at most $8(k-1)$, by the sensitivity bound in the proof of Lemma~\ref{lem:conc-t}. If $\{i,j\}$ is preferred by neither endpoint before and after the resampling, nothing changes. Each rank is uniform, so this fails with probability at most $2(d_i+d_j)/(n-1)$. The Efron--Stein inequality and $\sum_{i<j}(d_i+d_j)=(n-1)\sum_id_i$ give
+\[
+\operatorname{Var}\bigl(F_k(G_n)\mid d\bigr)\le\frac12\sum_{i<j}\bigl(8(k-1)\bigr)^2\,\frac{2(d_i+d_j)}{n-1}=64(k-1)^2\sum_id_i .
+\]
+For a deterministic array and any fixed $B$, $n^{-2}\sum_id_i\le B/n+n^{-1}\#\{i:d_i>B\}$, whose limit superior is at most $P(\{D>B\})$ by weak convergence; letting $B\to\infty$ shows that $\operatorname{Var}(F_k(G_n)/n)\to0$.
+
+For independent budgets the conditional variance has expectation at most $64(k-1)^2n\,\E D$. Let $g(D)=\E(F_k(G_n)\mid D)$. Replacing $D_i$ by an independent copy $D_i'$ changes the list at $i$ by at most $|D_i-D_i'|$ edges and no other list, so $|g(D)-g(D^{(i)})|\le\min(X,n)$ with $X=2(k-1)|D_i-D_i'|$. The Efron--Stein inequality and the law of total variance give
+\[
+\operatorname{Var}\Bigl(\frac{F_k(G_n)}n\Bigr)\le\frac{64(k-1)^2\,\E D}{n}+\frac{\E\min(X,n)^2}{2n}.
+\]
+Since $\min(X,n)^2/n\le X$, $\E X<\infty$ and $\min(X,n)^2/n\to0$ pointwise, the last term tends to zero by dominated convergence.
+\end{proof}
+
+\begin{lemma}\label{lem:mean}
+Put $p_k=\Pp(|\Er(P)|\ge k)$. For every fixed $k$, $\E F_k(G_n)/n\to p_k$, both for independent budgets with law $P$ of finite mean and for deterministic arrays as in Theorem~\ref{thm:main}.
+\end{lemma}
+
+\begin{proof}
+For independent budgets this follows from the local convergence of $G_n$ to $\Er(P)$ \cite[Theorem~2.1]{EWT}, because whether the component of a vertex has at least $k$ vertices is determined by its ball of radius $k-1$. The following argument covers both kinds of budgets and uses only Section~\ref{sec:time}.
+
+Fix $t<\infty$ and an integer $B\ge1$, fix the budgets $d$, and let $W=\{i:d_i>B\}$. Let $b$ be the number of edges of $G_n$ with exactly one endpoint in $W$, and let $E_1$ be the set of edges of $G_n$ of cost larger than $t$ with no endpoint in $W$. We claim that
+\begin{equation}\label{eq:sandwich}
+F_k(G_n(t))\le F_k(G_n)\le F_k(G_n(t))+|W|+(k-1)\,b+2(k-1)\,|E_1| .
+\end{equation}
+The first inequality holds because $G_n(t)\subseteq G_n$ and $F_k$ is nondecreasing in the edge set. For the second, let $G'$ be $G_n$ with all edges at vertices of $W$ removed. A vertex outside $W$ that is counted by $F_k(G_n)$ and not by $F_k(G')$ lies in a component of $G'$ with fewer than $k$ vertices that is joined in $G_n$ to a vertex of $W$; each such component contains an endpoint of one of the $b$ edges, and distinct components use distinct edges, so there are at most $(k-1)b$ such vertices and $F_k(G_n)\le F_k(G')+|W|+(k-1)b$. Next, $G'$ is the union of $E_1$ and a subgraph of $G_n(t)$, and adding one edge raises $F_k$ by at most $2(k-1)$, as in the proof of Lemma~\ref{lem:conc-t}; hence $F_k(G')\le F_k(G_n(t))+2(k-1)|E_1|$.
+
+Now take expectations over the costs. The $d_i$ cheapest edges at a vertex $i\notin W$ lead to a uniformly random set of $d_i\le B$ other vertices, so the expected number of them that lead into $W$ is at most $B|W|/(n-1)$, and $\E b\le nB|W|/(n-1)\le2B|W|$. An edge of $E_1$ at $i\notin W$ is one of the $d_i$ cheapest edges at $i$ and has cost larger than $t$, and there are at most $(B-\deg_{H_n(t)}(i))^+$ such edges at $i$; since $\deg_{H_n(t)}(i)$ has the law $\mathrm{Bin}(n-1,p_n)$, we get $\E|E_1|\le nB\,\Pp(\mathrm{Bin}(n-1,p_n)<B)$. Therefore, given the budgets,
+\[
+0\le\frac{\E F_k(G_n)}n-\frac{\E F_k(G_n(t))}n\le\bigl(1+2(k-1)B\bigr)\frac{|W|}n+2(k-1)B\,\Pp\bigl(\mathrm{Bin}(n-1,p_n)<B\bigr).
+\]
+For a deterministic array $|W|/n\to P(\{D>B\})$ by the weak convergence of the empirical laws, and for independent budgets $\E|W|/n=P(\{D>B\})$ as soon as $n>B+1$. By Lemma~\ref{lem:conc-t} and bounded convergence $\E F_k(G_n(t))/n\to p_{t,k}$, and the binomial law converges to the Poisson law of mean $t$. Hence
+\begin{align*}
+p_{t,k}\le\liminf_{n\to\infty}\frac{\E F_k(G_n)}n&\le\limsup_{n\to\infty}\frac{\E F_k(G_n)}n\\
+&\le p_{t,k}+\bigl(1+2(k-1)B\bigr)P(\{D>B\})+2(k-1)B\,\Pp\bigl(\mathrm{Poisson}(t)<B\bigr).
+\end{align*}
+A tree with at least $k$ vertices contains $k$ of them joined to the root by finitely many edges, all of which are in $T(t)$ once $t$ is large, so $p_{t,k}$ increases to $p_k$ as $t\to\infty$. Letting $t\to\infty$ and then $B\to\infty$, and using $B\,P(\{D>B\})\le\E\bigl(D;\,D>B\bigr)\to0$, which holds because the mean of $P$ is finite, we obtain $\E F_k(G_n)/n\to p_k$.
+\end{proof}
+
+\begin{proposition}\label{prop:upper}
+For every $u>0$, $\Pp\bigl(L_1(G_n)\le(\rho(P)+u)n\bigr)\to1$.
+\end{proposition}
+
+\begin{proof}
+The numbers $p_k$ decrease to $\rho(P)$. Lemma~\ref{lem:mean} gives $\E F_k(G_n)/n\to p_k$, and Lemma~\ref{lem:conc} gives $F_k(G_n)/n\to p_k$ in probability. Since $L_1(G_n)\le\max(k-1,F_k(G_n))$, choosing $k$ with $p_k<\rho(P)+u/2$ proves the claim.
+\end{proof}
+
+\section*{Acknowledgements and funding}
+The research presented in this paper was supported by the European Research
+Council (ERC) under the European Union's Horizon Europe research and
+innovation programme (grant agreement No.~101041711), by the Simons
+Foundation as part of the Collaboration on the Mathematical and Scientific
+Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
+the Israel Science Foundation (grant number 2258/19), and by the Israel
+Science Foundation (ISF Grant 4101/25). Computational resources were
+provided in part by Google Cloud through its education credits program
+(credit 530550103).
+
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and
+has a management role at Convex Nexus Capital. These entities are included
+in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics. In October 2026 OpenAI GPT models, running in the Codex command-line tool, proposed the proof of Theorem~\ref{thm:main} in cost time, the return process of Section~\ref{sec:return} and the continuity argument of Section~\ref{sec:continuity}, together with the computer checks of the repository~\cite{code}, and a separate GPT model audited that proof. In November 2026 Claude Opus~5.5 (Anthropic), working in Claude Code, checked every step of the proof and wrote the paper. The author directed the work and is responsible for the content of the paper and for decisions concerning its dissemination.
+
+\section*{Data availability}
+No data were used. The code is available at\\ \url{https://github.com/yspennstate/bilateral-preference-giant-component}.
+
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\begin{thebibliography}{10}
+
+\bibitem{code}
+Y.~Shmalo, Computations for ``The giant component of bilateral preference graphs with random budgets'', \url{https://github.com/yspennstate/bilateral-preference-giant-component}, 2026.
+
+\bibitem{AS}
+D.~Aldous and J.~M.~Steele, The objective method: probabilistic combinatorial optimization and local weak convergence, in \emph{Probability on Discrete Structures}, Encyclopaedia Math. Sci., Springer, Berlin, 2004, 1--72.
+
+\bibitem{BLM}
+S.~Boucheron, G.~Lugosi and P.~Massart, \emph{Concentration Inequalities: A Nonasymptotic Theory of Independence}, Oxford University Press, Oxford, 2013.
+
+\bibitem{DS}
+H.~Dabirian and V.~Subramanian, Connectivity of a family of bilateral preference random graphs, \emph{J. Appl. Probab.} \textbf{63} (2026), 552--579. Also arXiv:2209.05677.
+
+\bibitem{ES}
+B.~Efron and C.~Stein, The jackknife estimate of variance, \emph{Ann. Statist.} \textbf{9} (1981), 586--596.
+
+\bibitem{Steele}
+J.~M.~Steele, An Efron--Stein inequality for nonsymmetric statistics, \emph{Ann. Statist.} \textbf{14} (1986), 753--758.
+
+\bibitem{LK}
+R.~J.~La and M.~Kabkab, A new random graph model with self-optimizing nodes: connectivity and diameter, \emph{Internet Math.} \textbf{11} (2015), 528--554.
+
+\bibitem{EWT}
+M.~Moharrami, V.~Subramanian, M.~Liu and R.~Sundaresan, The Erlang weighted tree, a new branching process, \emph{Random Structures Algorithms} \textbf{64} (2024), 537--624. Also arXiv:2002.03993.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
+\bibitem{vdH}
+R.~van der Hofstad, The giant in random graphs is almost local, arXiv:2103.11733, 2021.
+\bibitem{vdHbook}
+R.~van der Hofstad, \emph{Random Graphs and Complex Networks}, Vol.~2, Cambridge University Press, Cambridge, 2024.
+\end{thebibliography}
+
+\end{document}

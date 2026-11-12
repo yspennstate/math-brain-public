@@ -154,7 +154,7 @@ and equal to k! p(inner) on single-pair nestings.
 
 The binomial transform c_k = sum_r C(2k,k-r) kappa_r / (2k-1)!! is
 boundary-local: with kappa_r ~ r! gamma^r the term ratio
-\[(k-r)/(k+r+1)\](r+1)gamma peaks at fixed distance ~2/gamma from r = k
+[(k-r)/(k+r+1)](r+1)gamma peaks at fixed distance ~2/gamma from r = k
 (the exact shares confirm this: the r = k term carries a stable ~21
 percent and the top two ~52 percent at k = 8).  Boundary-local dominance
 gives c_{k+1}/c_k -> gamma/2, so the mean-volume decay conjecture

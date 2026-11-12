@@ -28,6 +28,7 @@
 \address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
 \date{\today}
 
+\usepackage{xurl}
 \begin{document}
 
 \begin{abstract}
@@ -211,6 +212,9 @@ The research presented in this paper was supported by the European Research Coun
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
 
+\section*{Acknowledgments}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of generative AI and AI-assisted technologies}
 This paper is a product of an ongoing project on the use of AI systems for research mathematics, provisionally called Math Brain, which studies how to make such systems better at solving open problems; the project and its tooling will be released publicly in due course. The mathematics, the literature search, the computations, the Lean formalisation and the text were produced by AI systems (Codex with GPT-6 Astra, OpenAI; Claude Opus 5 and Claude Fable 5.1, Anthropic), working from the list of open problems in \cite{AF}; three independent adversarial reviews by Claude Fable 5.1 re-derived every claim. The arguments have not been refereed by a human mathematician. The author set the goals of the project, commissioned and directed the work and approved the release; the author did not carry out the mathematics, the verification, the computations or the writing, and takes responsibility for the decision to publish.
 
@@ -219,6 +223,8 @@ The numerical code, the Lean files with their build logs and axiom reports, and 
 \begin{center}
 \url{https://github.com/yspennstate/arc-transitive-graphs-that-mimic-the-cycle}
 \end{center}
+
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
 
 \begin{thebibliography}{9}
 
@@ -247,6 +253,12 @@ The numerical code, the Lean files with their build logs and axiom reports, and 
 \bibitem{Sabidussi64} G. Sabidussi, Vertex-transitive graphs, \emph{Monatsh. Math.} 68 (1964), 426--438.
 
 \bibitem{Sumner} D. P. Sumner, Point determination in graphs, \emph{Discrete Math.} 5 (1973), 179--187.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 

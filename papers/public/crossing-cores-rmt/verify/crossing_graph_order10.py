@@ -1,10 +1,9 @@
-﻿import os
-"""BREAK-TEST: does the crossing graph still determine the volume at
+﻿"""BREAK-TEST: does the crossing graph still determine the volume at
 order ten?  Order eight alone could be coincidence - 11 classes, 6
 volumes.  Order ten has 945 pairings and many more graph classes."""
 import sys, time
 from itertools import combinations, permutations
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "engine"))
+sys.path.insert(0, r"~\crossing-cores-rmt\engine")
 import tk_core
 from exact_volume import pairing_volume_exact
 

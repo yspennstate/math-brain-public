@@ -31,6 +31,7 @@
 \date{10 October 2026}
 \subjclass[2020]{Primary 46L54, 60E05; Secondary 60G52}
 \keywords{unimodality, strong unimodality, free additive convolution, subordination, stable distributions}
+\usepackage{xurl}
 \begin{document}
 \begin{abstract}
 A probability measure $\mu$ on $\R$ is freely strongly unimodal if $\mu\boxplus\nu$ is unimodal for every unimodal probability measure $\nu$. We prove that only point masses have this property. This answers Problem~3.11 of Hasebe and Ueda, who proved it for measures of finite variance. The witnesses are explicit and do not depend on $\mu$: if $\mu$ is not a point mass, then $\mu\boxplus\bigl(\frac1{100}\delta_0+\frac{99}{100}U[0,L]\bigr)$ is not unimodal for all large $L$. We also show that the classical half of their Conjecture~5.5 fails for one-sided stable kernels. If $0<\alpha<1$ and $S_t$ is the law at time $t$ of a positive strictly $\alpha$-stable process, then for every nonnegative Borel function $f$ there is a probability measure $\mu$ with $\int f\,d\mu<\infty$ such that $\mu\ast S_t$ is unimodal for no $t>0$. In particular, a finite moment of order $2+\alpha$, or of every order, does not give unimodality in large time.
@@ -58,7 +59,7 @@ Let $\mu$ be a Borel probability measure on $\R$ that is not a point mass. There
 
 No moment condition is imposed on $\mu$. After a dilation by $\varepsilon=1/L$, the measure $\mu$ becomes close to $\delta_0$ while $\nu_L$ becomes the fixed measure $\nu_1$. The subordination function of the convolution then moves the Cauchy transform of $\nu_1$ by an analytic function with values in the lower half-plane. By the Schwarz--Pick lemma, this function and all its derivatives are controlled near two chosen points by a single small parameter $t_\varepsilon$. A first-order expansion in $t_\varepsilon$ gives the sign of the derivative of the density at two points, and the two signs are incompatible with unimodality. The tails of $\mu$ enter only through $t_\varepsilon$, and the estimates are relative to $t_\varepsilon$.
 
-The second result concerns large-time unimodality. In \cite[Section~5.2]{HU}, Hasebe and Ueda consider the positive stable process of index $1/2$, whose law at time $t$ is the L\'evy distribution
+The second result concerns large-time unimodality. For classical L\'evy processes it can fail: Wolfe \cite{W78} gave a class of L\'evy processes whose marginal laws are not unimodal for large $t$. In the free setting Hasebe and Sakuma \cite{HS17} proved that every free L\'evy process whose L\'evy measure has bounded support is unimodal for all sufficiently large $t$, and that the boundedness cannot be dropped. In \cite[Section~5.2]{HU}, Hasebe and Ueda consider the positive stable process of index $1/2$, whose law at time $t$ is the L\'evy distribution
 \[
 L_t(dx)=\frac{t}{\sqrt{2\pi}}\,x^{-3/2}e^{-t^2/(2x)}\,\mathbf 1_{(0,\infty)}(x)\,dx .
 \]
@@ -361,6 +362,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -372,6 +375,8 @@ The arguments of Section~3 and of Proposition~\ref{prop:atoms} in the case of th
 \section*{Data availability}
 No data were used.
 
+The code and data for this paper are at \url{https://github.com/yspennstate/free-strong-unimodality}. The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \begin{thebibliography}{9}
 \bibitem{BB}
 S.~T.~Belinschi and H.~Bercovici, \emph{A new approach to subordination results in free probability}, J. Anal. Math. \textbf{101} (2007), 357--365. \href{https://doi.org/10.1007/s11854-007-0013-1}{doi:10.1007/s11854-007-0013-1}.
@@ -379,13 +384,23 @@ S.~T.~Belinschi and H.~Bercovici, \emph{A new approach to subordination results 
 H.~Bercovici and D.~Voiculescu, \emph{Free convolution of measures with unbounded support}, Indiana Univ. Math. J. \textbf{42} (1993), 733--773. \href{https://doi.org/10.1512/iumj.1993.42.42033}{doi:10.1512/iumj.1993.42.42033}.
 \bibitem{Biane}
 P.~Biane, \emph{Processes with free increments}, Math. Z. \textbf{227} (1998), 143--174. \href{https://doi.org/10.1007/PL00004363}{doi:10.1007/PL00004363}.
+\bibitem{HS17}
+T.~Hasebe and N.~Sakuma, \emph{Unimodality for free L\'evy processes}, Ann. Inst. Henri Poincar\'e Probab. Stat. \textbf{53} (2017), 916--936. \href{https://doi.org/10.1214/16-AIHP742}{doi:10.1214/16-AIHP742}.
 \bibitem{HU}
 T.~Hasebe and Y.~Ueda, \emph{Large time unimodality for classical and free Brownian motions with initial distributions}, ALEA Lat. Am. J. Probab. Math. Stat. \textbf{15} (2018), 353--374. \href{https://doi.org/10.30757/ALEA.v15-15}{doi:10.30757/ALEA.v15-15}.
 \bibitem{Ib}
 I.~A.~Ibragimov, \emph{On the composition of unimodal distributions}, Theory Probab. Appl. \textbf{1} (1956), 255--260. \href{https://doi.org/10.1137/1101021}{doi:10.1137/1101021}.
 \bibitem{Sato}
 K.~Sato, \emph{L\'evy Processes and Infinitely Divisible Distributions}, revised edition, Cambridge Studies in Advanced Mathematics \textbf{68}, Cambridge University Press, 2013.
+\bibitem{W78}
+S.~J.~Wolfe, \emph{On the unimodality of infinitely divisible distribution functions}, Z. Wahrsch. Verw. Gebiete \textbf{45} (1978), 329--335. \href{https://doi.org/10.1007/BF00537541}{doi:10.1007/BF00537541}.
 \bibitem{Yam}
 M.~Yamazato, \emph{Unimodality of infinitely divisible distribution functions of class $L$}, Ann. Probab. \textbf{6} (1978), 523--531. \href{https://doi.org/10.1214/aop/1176995474}{doi:10.1214/aop/1176995474}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
 \end{thebibliography}
 \end{document}

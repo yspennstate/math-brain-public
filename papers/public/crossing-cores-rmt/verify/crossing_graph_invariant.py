@@ -1,10 +1,9 @@
-﻿import os
-"""Does the chord-intersection graph G_x(pi) of Proposition 4.3 determine
+﻿"""Does the chord-intersection graph G_x(pi) of Proposition 4.3 determine
 the volume?  Group all 105 order-eight pairings by the ISOMORPHISM CLASS
 of their crossing graph and see whether the volume is constant."""
 import sys
 from itertools import combinations, permutations
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "engine"))
+sys.path.insert(0, r"~\crossing-cores-rmt\engine")
 import tk_core
 from exact_volume import pairing_volume_exact
 

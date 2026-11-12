@@ -32,7 +32,7 @@ The manuscript also counts the ordinary-integer subfamily: it comprises two thir
 | File | Contents |
 | --- | --- |
 | `main.tex` | Complete LaTeX source, using the AMS article class |
-| `paper.pdf` | Compiled seven-page manuscript |
+| `paper.pdf` | Compiled eight-page manuscript |
 | `verify_construction.py` | Self-contained Python exact-arithmetic verification |
 | `verification_results.json` | Executed verification results, including the script hash |
 | `SHA256SUMS.txt` | SHA-256 checksums of the package contents |

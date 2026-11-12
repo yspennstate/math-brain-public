@@ -1,5 +1,4 @@
-﻿import os
-"""Cross-check the profile calculus against Corollary 5.2/5.3: for a
+﻿"""Cross-check the profile calculus against Corollary 5.2/5.3: for a
 k-pair core the normalised volume (k+1)! p must be an integer, and by the
 parity refinement it must be EVEN.  Test every volume the grammar class
 produces up to twelve pairs - these are computed by polynomial integration,
@@ -8,7 +7,7 @@ independently derived calculus against a proved theorem."""
 import sys
 from fractions import Fraction as Fr
 from math import factorial
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "verify"))
+sys.path.insert(0, r"~\crossing-cores-rmt\verify")
 from grammar_max import pmul, pint01, cycle_poly, profiles
 
 memo = {}

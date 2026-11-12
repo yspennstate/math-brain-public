@@ -77,7 +77,7 @@ For every finite rooted binary tree $T$ with $n$ leaves, $2(n-1)\le\ell(T)\le S(
 where $D_n$ is the depth of a uniformly chosen leaf of $T_n$.
 \end{proposition}
 
-The first statement is part of Lemma~\ref{lem:det} below, $\E S(T_n)=n\E D_n$ holds by averaging over the leaves, and $\E D_n\sim(3/\pi^2)\log^2n$ is proved by Aldous and Pittel \cite{AP25} (see also \cite[Theorem 3]{AJ23}).
+The first statement is part of Lemma~\ref{lem:det} below, $\E S(T_n)=n\E D_n$ holds by averaging over the leaves, and $\E D_n\sim(3/\pi^2)\log^2n$ is proved by Aldous and Pittel \cite{AP25} (see also \cite[Theorem 3]{AJ23}; Kolesnik \cite{Kol25} gives a second proof of the central limit theorem for $D_n$, by contraction).
 
 The heuristic of \cite[(75)]{AJ23} starts from the expected number of clades of size $m$ in $T_n$, which is $(n/m)a(n,m)$, where $a(n,m)$ is the probability that a uniformly chosen leaf lies in a clade of exactly $m$ leaves; this identity is stated in \cite[Section 4.8]{AJ23}, and we prove it in Lemma~\ref{lem:clades}. The first line of (75) uses $n\,a(n,m)$ instead. The two counts differ in total: $\sum_{m=2}^n(n/m)a(n,m)=n-1$ is the number of internal vertices of $T_n$, while $\sum_{m=2}^n n\,a(n,m)=n\E D_n$. With the factor $1/m$ in place, the same computation leads to the convergent series of Theorem~\ref{thm:main}.
 
@@ -184,7 +184,7 @@ Since $h_{2^{k+1}-1}\le1+(k+1)\log2$, the numbers $\beta_{2^k}$ are of order $k^
 \begin{equation}\label{eq:tail}
  \sum_{m>2^K}a(n,m)f(m)\le\varepsilon_K\qquad\text{for all }n\text{ and }K.
 \end{equation}
-Each block sum in \eqref{eq:blockbound} has finitely many terms, so letting $n\to\infty$ and using $a(n,m)\to a(m)$ \cite[Theorem 18]{AJ23} gives $\sum_{b<m\le2b}a(m)f(m)\le\beta_b$, and hence $\sum_{m>2^K}a(m)f(m)\le\varepsilon_K$. In particular $\lambda=\sum_ma(m)f(m)<\infty$. By \eqref{eq:Lc} and \eqref{eq:tail},
+Each block sum in \eqref{eq:blockbound} has finitely many terms, so letting $n\to\infty$ and using $a(n,m)\to a(m)$ \cite[Theorem 18]{AJ23} (the fringe tree is studied further in \cite{AJ24}) gives $\sum_{b<m\le2b}a(m)f(m)\le\beta_b$, and hence $\sum_{m>2^K}a(m)f(m)\le\varepsilon_K$. In particular $\lambda=\sum_ma(m)f(m)<\infty$. By \eqref{eq:Lc} and \eqref{eq:tail},
 \[
  \Bigl|\frac{L_n}n-\lambda\Bigr|\le\sum_{m=2}^{2^K}|a(n,m)-a(m)|\,f(m)+2\varepsilon_K.
 \]
@@ -258,6 +258,8 @@ Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
 the Israel Science Foundation (grant number 2258/19), and by the Israel
 Science Foundation (ISF Grant 4101/25).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -268,6 +270,8 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 
 \section*{Data availability}
 No data were used. The code and the Lean file are available at \url{https://github.com/yspennstate/beta-splitting-drawn-length}.
+
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
 
 \begin{thebibliography}{99}
 
@@ -281,6 +285,11 @@ IMA Vol. Math. Appl. \textbf{76}, Springer, New York, 1996, pp.~1--18.
 D.~J.~Aldous and S.~Janson,
 The critical beta-splitting random tree II: overview and open problems,
 arXiv:2303.02529v3, 2025.
+
+\bibitem{AJ24}
+D.~J.~Aldous and S.~Janson,
+The critical beta-splitting random tree III: the exchangeable partition representation and the fringe tree,
+arXiv:2412.09655, 2024.
 
 \bibitem{AJL24}
 D.~J.~Aldous, S.~Janson and X.~Li,
@@ -297,6 +306,11 @@ A.~Brandenberger, B.~Chin and E.~Mossel,
 Asymptotics for the harmonic descent chain and applications to critical beta-splitting trees,
 arXiv:2505.24821v3.
 
+\bibitem{Kol25}
+B.~Kolesnik,
+Critical beta-splitting, via contraction,
+\emph{Electron. Commun. Probab.} \textbf{30} (2025), paper no.~10, 1--14.
+
 \bibitem{Ma26}
 H.~Ma,
 The height of discrete-time critical beta-splitting trees,
@@ -306,6 +320,12 @@ arXiv:2609.14329v2, 2026.
 H.~Song,
 Asymptotic transfer, variances and limit laws for Aldous's beta-splitting trees,
 preprint, 2026; verification code at \url{https://doi.org/10.5281/zenodo.23188439}.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 \end{document}

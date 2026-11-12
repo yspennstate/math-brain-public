@@ -35,6 +35,7 @@
 \subjclass[2020]{15B52, 60C05, 15A18}
 \keywords{Random sign matrix, Gaussian-integer spectrum, integral spectrum, block triangularization, exact enumeration}
 
+\usepackage{xurl}
 \begin{document}
 \begin{abstract}
 Let $M_n$ be an $n\times n$ matrix whose entries are independent uniform signs. For every $n\geq1$, we construct $2^{\lceil n^2/2\rceil}3^{\lfloor n/2\rfloor}$ distinct sign matrices whose eigenvalues lie in $\Z[i]$. Hence
@@ -84,7 +85,7 @@ satisfies $Q(A)^2=0$. The upper-left block recovers $A$, so these matrices form 
 \end{equation}
 Theorem~\ref{thm:main} improves the quadratic constant in \eqref{eq:square-zero-bound} from $3/4$ to $1/2$ and gives an exact count in both parities.
 
-Vu's Conjecture~9.4 concerns integer spectra in the symmetric sign ensemble. The present theorem concerns the iid ensemble and does not settle that question.
+Vu's Conjecture~9.4 concerns integer spectra in the symmetric sign ensemble. The present theorem concerns the iid ensemble and does not settle that question. Under the extended Riemann hypothesis, Ferber, Jain, Sah and Sawhney~\cite{FJSS23} proved that the characteristic polynomial of a random symmetric sign matrix is irreducible with high probability; since an integer spectrum forces reducibility for $n\geq2$, the probability of an integer spectrum in the symmetric ensemble tends to zero under that hypothesis.
 
 \section{Block shears and local sign counts}\label{sec:local}
 
@@ -406,7 +407,7 @@ A matching upper bound would be
 \end{equation}
 Together with Theorem~\ref{thm:main}, this would give $\lim_{n\to\infty}(-\log_2p_n)/n^2=1/2$. We leave open both the existence of the limit and its value. The same questions arise for $q_n$ in Corollary~\ref{cor:integer}.
 
-Under the extended Riemann hypothesis, Eberhard~\cite{Eberhard2022} proved that the characteristic polynomial of an iid random sign matrix is irreducible with high probability and that its Galois group contains the alternating group. For $n>2$, the event $E_n$ implies reducibility over $\Q$: every root in $\Z[i]$ has minimal polynomial of degree at most two. Eberhard's theorem therefore gives $p_n=o(1)$ under that hypothesis, but not the bound \eqref{eq:missing-upper}.
+Under the extended Riemann hypothesis, Eberhard~\cite{Eberhard2022} proved that the characteristic polynomial of an iid random sign matrix is irreducible with high probability and that its Galois group contains the alternating group. For $n>2$, the event $E_n$ implies reducibility over $\Q$: every root in $\Z[i]$ has minimal polynomial of degree at most two. Eberhard's theorem therefore gives $p_n=o(1)$ under that hypothesis, but not the bound \eqref{eq:missing-upper}. For fixed $n$ and entries uniform on $\{-k,\dots,k\}$, Martin and Wong~\cite{MW09} proved that the probability of a rational eigenvalue is $O(k^{-1+\varepsilon})$ for every $\varepsilon>0$.
 
 \appendix
 \section{Exact finite-dimensional verification}\label{sec:checks}
@@ -439,6 +440,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -451,6 +454,8 @@ This work is part of Math Brain, a project on the use of AI systems in research 
 The LaTeX source, verification script, and exact-arithmetic results are available at\par
 \noindent\url{https://github.com/yspennstate/gaussian-integer-spectra}.
 
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \begin{thebibliography}{9}
 
 \bibitem{Eberhard2022}
@@ -460,12 +465,32 @@ Combinatorica \textbf{42} (2022), 491--527.
 \href{https://doi.org/10.1007/s00493-020-4657-0}{doi:10.1007/s00493-020-4657-0}.
 \href{https://arxiv.org/abs/2008.01223}{arXiv:2008.01223}.
 
+\bibitem{FJSS23}
+A.~Ferber, V.~Jain, A.~Sah and M.~Sawhney,
+\emph{Random symmetric matrices: rank distribution and irreducibility of the characteristic polynomial},
+Math. Proc. Cambridge Philos. Soc. \textbf{174} (2023), no.~2, 233--246.
+\href{https://doi.org/10.1017/S0305004122000226}{doi:10.1017/S0305004122000226}.
+\href{https://arxiv.org/abs/2106.04049}{arXiv:2106.04049}.
+
+\bibitem{MW09}
+G.~Martin and E.~B.~Wong,
+\emph{Almost all integer matrices have no integer eigenvalues},
+Amer. Math. Monthly \textbf{116} (2009), no.~7, 588--597.
+\href{https://doi.org/10.1080/00029890.2009.11920976}{doi:10.1080/00029890.2009.11920976}.
+\href{https://arxiv.org/abs/0712.3060}{arXiv:0712.3060}.
+
 \bibitem{Vu2021}
 V.~H.~Vu,
 \emph{Recent progress in combinatorial random matrix theory},
 Probability Surveys \textbf{18} (2021), 179--200.
 \href{https://doi.org/10.1214/20-PS346}{doi:10.1214/20-PS346}.
 \href{https://arxiv.org/abs/2005.02797}{arXiv:2005.02797}.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 \end{document}

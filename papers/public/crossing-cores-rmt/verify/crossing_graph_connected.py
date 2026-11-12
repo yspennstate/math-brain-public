@@ -1,11 +1,10 @@
-﻿import os
-"""Refined test: is the volume determined by the crossing graph whenever
+﻿"""Refined test: is the volume determined by the crossing graph whenever
 that graph is CONNECTED?  A disconnected graph leaves the diagram free to
 nest one component inside another rather than juxtapose them, and that is
 the freedom the order-ten failure exploits."""
 import sys
 from itertools import combinations, permutations
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "engine"))
+sys.path.insert(0, r"~\crossing-cores-rmt\engine")
 import tk_core
 from exact_volume import pairing_volume_exact
 

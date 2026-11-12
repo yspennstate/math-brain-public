@@ -1,11 +1,10 @@
-﻿import os
-"""Does the connected-graph conjecture say anything Bouchet does not?
+﻿"""Does the connected-graph conjecture say anything Bouchet does not?
 If a connected class is realised by several inequivalent chord diagrams
 and they still share a volume, the statement has content.  Diagrams are
 counted up to the dihedral action on the 2n boundary points."""
 import sys
 from itertools import combinations, permutations
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "engine"))
+sys.path.insert(0, r"~\crossing-cores-rmt\engine")
 import tk_core
 from exact_volume import pairing_volume_exact
 

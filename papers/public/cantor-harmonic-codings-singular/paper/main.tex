@@ -40,7 +40,7 @@ Let $E$ be the middle-thirds Cantor set and, for an integer $b\ge 2$, let $\nu_b
 
 \section{Introduction}
 
-Let $E\subset[0,1]$ be the middle-thirds Cantor set. For an integer $b\ge2$, an interval $[kb^{-n},(k+1)b^{-n}]$ with integers $k,n$ is called $b$-adic of order $n$, and the \emph{coding tree} $T_{[b]}(E)$ has as its vertices the $b$-adic intervals contained in $[0,1]$ that meet $E$, with an edge between two such intervals when one is contained in the other and their orders differ by one; its root is $[0,1]$~\cite[p.~15]{LP}. Each end of $T_{[b]}(E)$, that is, each decreasing sequence $I_0\supset I_1\supset\cdots$ of intervals along a ray from the root, codes the point $\bigcap_nI_n$ of $E$. Simple random walk on $T_{[b]}(E)$ is transient (Lemma~\ref{lem:frostman} below), so it converges to an end, and the law $\mu_b$ of that end is the harmonic measure. Let $\nu_b$ be its image on $E$ under the coding map. As Lyons and Peres note, $\nu_3$ is the Cantor measure~\cite[p.~542]{LP}.
+Let $E\subset[0,1]$ be the middle-thirds Cantor set. For an integer $b\ge2$, an interval $[kb^{-n},(k+1)b^{-n}]$ with integers $k,n$ is called $b$-adic of order $n$, and the \emph{coding tree} $T_{[b]}(E)$ has as its vertices the $b$-adic intervals contained in $[0,1]$ that meet $E$, with an edge between two such intervals when one is contained in the other and their orders differ by one; its root is $[0,1]$. Such trees go back to Furstenberg~\cite{Furstenberg}; see~\cite[p.~15]{LP}. Each end of $T_{[b]}(E)$, that is, each decreasing sequence $I_0\supset I_1\supset\cdots$ of intervals along a ray from the root, codes the point $\bigcap_nI_n$ of $E$. Simple random walk on $T_{[b]}(E)$ is transient (Lemma~\ref{lem:frostman} below), so it converges to an end, and the law $\mu_b$ of that end is the harmonic measure. Let $\nu_b$ be its image on $E$ under the coding map. As Lyons and Peres note, $\nu_3$ is the Cantor measure~\cite[p.~542]{LP}.
 
 Lyons and Peres observe that the base used for coding $E$ does not affect transience of critical random walk, and they state the following question as open~\cite[Question~16.7, p.~542]{LP}: is $\nu_2\perp\nu_3$? We answer it.
 
@@ -53,7 +53,7 @@ The proof compares the conditional probabilities with which $\nu_2$ and $\nu_3$ 
 \section{Harmonic measure on coding trees}\label{sec:prelim}
 
 \subsection*{Networks}
-We use the electrical apparatus of~\cite[Chapter~2]{LP} with unit conductances. For a vertex $v$ of a locally finite rooted tree $T$ write $T^v$ for the subtree of descendants of $v$ (including $v$), and for $R\ge1$ let $\mathcal C_R(v)$ be the effective conductance in $T^v$ between $v$ and the set of descendants at distance $R$ from $v$, all identified to one vertex. By Rayleigh's monotonicity principle~\cite[p.~35]{LP}, $\mathcal C_R(v)$ is nonincreasing in $R$, and its limit $\mathcal C(v)$ is the effective conductance from $v$ to infinity in $T^v$~\cite[p.~27]{LP}. For a child $c$ of $v$, the branch consisting of the edge $(v,c)$ followed by $T^c$ has conductance
+We use the electrical apparatus of~\cite[Chapter~2]{LP} (see also Doyle and Snell~\cite{DS}) with unit conductances. For a vertex $v$ of a locally finite rooted tree $T$ write $T^v$ for the subtree of descendants of $v$ (including $v$), and for $R\ge1$ let $\mathcal C_R(v)$ be the effective conductance in $T^v$ between $v$ and the set of descendants at distance $R$ from $v$, all identified to one vertex. By Rayleigh's monotonicity principle~\cite[p.~35]{LP}, $\mathcal C_R(v)$ is nonincreasing in $R$, and its limit $\mathcal C(v)$ is the effective conductance from $v$ to infinity in $T^v$~\cite[p.~27]{LP}. For a child $c$ of $v$, the branch consisting of the edge $(v,c)$ followed by $T^c$ has conductance
 \[
 G(c)=\frac{\mathcal C(c)}{1+\mathcal C(c)}\qquad(G(c)=0\text{ if }\mathcal C(c)=0),
 \]
@@ -102,6 +102,8 @@ For $n\ge0$ let
 \[
 A_n=\sum_{v\in\cD_n}\sqrt{\mu(v)\nu(v)}.
 \]
+
+This is the Hellinger criterion on which Kakutani's dichotomy for infinite product measures rests~\cite{Kakutani}.
 
 \begin{lemma}\label{lem:hellinger}
 The sequence $(A_n)$ is nonincreasing, and $\mu\perp\nu$ if and only if $A_n\to0$.
@@ -243,7 +245,7 @@ using that $\alpha$ is irrational ($2^q=3^p$ has no solution in positive integer
 \[
 u_n(x)=\{2^na_{m_n}(x)\}\in[0,1).
 \]
-Thus $C_{m_n}(x)$ has length $r_n2^{-n}$, and its left endpoint lies at relative position $u_n(x)$ in the dyadic interval of order $n$ that contains $a_{m_n}(x)$.
+Thus $C_{m_n}(x)$ has length $r_n2^{-n}$, and its left endpoint lies at relative position $u_n(x)$ in the dyadic interval of order $n$ that contains $a_{m_n}(x)$. Lemma~\ref{lem:mixing} below is a statement about the distribution of $u_n$ for each large $n$. Its almost sure relative, that $\nu$-almost every point of $E$ is normal in base~$2$, is due to Cassels~\cite{Cassels} and Schmidt~\cite{Schmidt}, whose proofs also go through the Fourier transform of the Cantor measure, a product of cosines; Hochman and Shmerkin~\cite{HochmanShmerkin} extend it to every ergodic $\times3$-invariant measure of positive dimension.
 
 \begin{lemma}\label{lem:mixing}
 Let $\lambda$ be a probability measure on $E$ with $\lambda\ll\nu$, let $L\ge1$ and $s\in\{0,2\}^L$, and let $S_n=\{x\in E:(\xi_{m_n-L+1}(x),\dots,\xi_{m_n}(x))=s\}$. For every continuous $\phi$ on $\R/\Z$,
@@ -315,6 +317,8 @@ Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
 the Israel Science Foundation (grant number 2258/19), and by the Israel
 Science Foundation (ISF Grant 4101/25).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -326,13 +330,27 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code is available at\\ \url{https://github.com/yspennstate/cantor-harmonic-codings-singular}.
 
-\begin{thebibliography}{9}
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\begin{thebibliography}{99}
 \bibitem{ACY} D.~Allen, S.~Chow and H.~Yu, \emph{Dyadic approximation in the middle-third Cantor set}, Selecta Math. (N.S.) \textbf{29} (2023), Paper No.~11; arXiv:2005.09300.
 \bibitem{Bugeaud} Y.~Bugeaud, \emph{Distribution Modulo One and Diophantine Approximation}, Cambridge Tracts in Mathematics~193, Cambridge University Press, Cambridge, 2012.
 \bibitem{BCM} Y.~Bugeaud, M.~Cipu and M.~Mignotte, \emph{On the representation of Fibonacci and Lucas numbers in an integer base}, Ann. Math. Qu\'e. \textbf{37} (2013), 31--43.
+\bibitem{Cassels} J.~W.~S.~Cassels, \emph{On a problem of Steinhaus about normal numbers}, Colloq. Math. \textbf{7} (1959), 95--101.
+\bibitem{DS} P.~G.~Doyle and J.~L.~Snell, \emph{Random Walks and Electric Networks}, Carus Mathematical Monographs~22, Mathematical Association of America, Washington, DC, 1984.
+\bibitem{Furstenberg} H.~Furstenberg, \emph{Intersections of Cantor sets and transversality of semigroups}, in: Problems in Analysis (Sympos. Salomon Bochner, Princeton Univ., 1969), Princeton University Press, Princeton, NJ, 1970, 41--59.
+\bibitem{HochmanShmerkin} M.~Hochman and P.~Shmerkin, \emph{Equidistribution from fractal measures}, Invent. Math. \textbf{202} (2015), 427--479; arXiv:1302.5792.
+\bibitem{Kakutani} S.~Kakutani, \emph{On equivalence of infinite product measures}, Ann. of Math. (2) \textbf{49} (1948), 214--224.
 \bibitem{LP} R.~Lyons and Y.~Peres, \emph{Probability on Trees and Networks}, Cambridge Series in Statistical and Probabilistic Mathematics~42, Cambridge University Press, New York, 2016. Page numbers refer to the version of 19 August 2026 at \url{https://rdlyons.pages.iu.edu/prbtree/}.
+\bibitem{Schmidt} W.~M.~Schmidt, \emph{On normal numbers}, Pacific J. Math. \textbf{10} (1960), 661--672.
 \bibitem{Stewart} C.~L.~Stewart, \emph{On the representation of an integer in two different bases}, J. Reine Angew. Math. \textbf{319} (1980), 63--72.
 \bibitem{code} Y.~Shmalo, \emph{Code for this paper}, \url{https://github.com/yspennstate/cantor-harmonic-codings-singular}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
 \end{thebibliography}
 
 \end{document}

@@ -30,6 +30,7 @@
 \setlist{itemsep=3pt,topsep=5pt}
 \setlength{\emergencystretch}{1em}
 \raggedbottom
+\usepackage{xurl}
 \begin{document}
 \begin{abstract}
 Hasebe, Ueda and Wang proved that free multiplicative convolution with the free positive multiplicative Brownian motion $\sigma_t$ preserves log-unimodality of multiplicatively symmetric laws, and asked three questions about how far this extends. We answer all three. The free multiplicative convolution of two multiplicatively symmetric log-unimodal laws need not be log-unimodal: for $L\ge6$, the logarithm of the free multiplicative square of the log-uniform law on $[e^{-L},e^{L}]$ has a density with a strict local minimum at $0$. Compact support of $\nu$ does not make $\sigma_t\boxtimes\nu$ log-unimodal for large $t$, since for $\nu=(\delta_{1/10}+\delta_{10})/2$ it fails for every $t>0$; when $\nu$ is in addition log-unimodal and supported in $[\alpha,\beta]$, the convolution is log-unimodal for all $t\ge(\pi/2)(\beta/\alpha+\alpha/\beta)$. Finally, $\sigma_t$ is not $\boxtimes$-strongly log-unimodal for any $t>0$, which extends the small-time result of Hasebe, Ueda and Wang to all times. The numerical inequalities behind the first and third answers and the root count behind the second are verified in Lean~4 with Mathlib.
@@ -422,6 +423,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -432,6 +435,8 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 
 \section*{Data availability}
 No data were used. The scripts for the computations of Remarks~\ref{rem:numA} and~\ref{rem:numB} and the figures, an exact-arithmetic check of the rational inequalities, and the Lean verification are available at \url{https://github.com/yspennstate/free-multiplicative-log-unimodality}.
+
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
 
 \begin{thebibliography}{99}
 \bibitem{Aue26}
@@ -521,5 +526,11 @@ P.~Zhong,
 J. Theoret. Probab. \textbf{28} (2015), no.~4, 1354--1379.
 \href{https://doi.org/10.1007/s10959-014-0556-x}{doi:10.1007/s10959-014-0556-x}.
 \href{https://arxiv.org/abs/1211.3160}{arXiv:1211.3160}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
 \end{thebibliography}
 \end{document}

@@ -27,8 +27,9 @@
 \title[Sharp unimodality threshold for free Brownian motion]{The sharp diameter threshold for unimodality of free Brownian motion}
 \author{Yitzchak Shmalo}
 \address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
-\date{September 14, 2026}
+\date{\today}
 
+\usepackage{xurl}
 \begin{document}
 
 \begin{abstract}
@@ -43,7 +44,7 @@ A probability measure on $\R$ is \emph{unimodal} if it is of the form $c\,\delta
 \[
 S(0,t)(dx)=\frac{1}{2\pi t}\sqrt{4t-x^2}\,\mathbf 1_{[-2\sqrt t,2\sqrt t]}(x)\,dx
 \]
-of mean zero and variance $t$. Hasebe and Ueda \cite{HasebeUeda} studied when these laws become unimodal at large time. For the free case with compactly supported initial law they proved the following.
+of mean zero and variance $t$. Unimodality in free probability has been studied for freely selfdecomposable laws by Hasebe and Thorbj\o rnsen \cite{HasebeThorbjornsen} and for free L\'evy processes by Hasebe and Sakuma \cite{HasebeSakuma}. Hasebe and Ueda \cite{HasebeUeda} studied when these laws become unimodal at large time. For the free case with compactly supported initial law they proved the following.
 
 \begin{theorem}[{\cite[Theorem 3.2]{HasebeUeda}}]\label{thm:HU}
 Let $\mu$ be a compactly supported probability measure on $\R$ and let $D_\mu=\sup\{|x-y|: x,y\in\supp\mu\}$ be the diameter of its support. Then $\mu\bp S(0,t)$ is unimodal for every $t\ge 4D_\mu^2$.
@@ -409,6 +410,9 @@ The research presented in this paper was supported by the European Research Coun
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
 
+\section*{Acknowledgments}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of generative AI and AI-assisted technologies}
 This paper is a product of an ongoing project on the use of AI systems for research mathematics, provisionally called Math Brain, which studies how to make such systems better at solving open problems; the project and its tooling will be released publicly in due course. Every part of the mathematical and technical work reported here was carried out by AI systems, and the record of what each did is as follows.
 \begin{enumerate}
@@ -426,6 +430,8 @@ The numerical code, the Lean file with its build log and axiom report, and the \
 \url{https://github.com/yspennstate/free-brownian-unimodality-sharp-constant}
 \end{center}
 
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \begin{thebibliography}{99}
 
 \bibitem{Behboodian} J. Behboodian, On the modes of a mixture of two normal distributions, \emph{Technometrics} 12 (1970), 131--139.
@@ -433,6 +439,10 @@ The numerical code, the Lean file with its build log and axiom report, and the \
 \bibitem{Biane97} P. Biane, On the free convolution with a semi-circular distribution, \emph{Indiana Univ. Math. J.} 46 (1997), 705--718.
 
 \bibitem{Eisenberger} I. Eisenberger, Genesis of bimodal distributions, \emph{Technometrics} 6 (1964), 357--363.
+
+\bibitem{HasebeSakuma} T. Hasebe and N. Sakuma, Unimodality for free L\'evy processes, \emph{Ann. Inst. Henri Poincar\'e Probab. Stat.} 53 (2017), 916--936.
+
+\bibitem{HasebeThorbjornsen} T. Hasebe and S. Thorbj\o rnsen, Unimodality of the freely selfdecomposable probability laws, \emph{J. Theoret. Probab.} 29 (2016), 922--940.
 
 \bibitem{HasebeUeda} T. Hasebe and Y. Ueda, Large time unimodality for classical and free Brownian motions with initial distributions, \emph{ALEA Lat. Am. J. Probab. Math. Stat.} 15 (2018), 353--374. arXiv:1710.08240.
 
@@ -447,6 +457,12 @@ The numerical code, the Lean file with its build log and axiom report, and the \
 \bibitem{Voiculescu86} D. Voiculescu, Addition of certain non-commuting random variables, \emph{J. Funct. Anal.} 66 (1986), 323--346.
 
 \bibitem{Winkler} G. Winkler, Extreme points of moment sets, \emph{Math. Oper. Res.} 13 (1988), 581--587.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 

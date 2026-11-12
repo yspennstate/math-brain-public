@@ -1,11 +1,10 @@
-﻿import os
-"""Correct per-word localized computations (profiles are NOT dihedral
+﻿"""Correct per-word localized computations (profiles are NOT dihedral
 invariant - the earlier orbit-based t_k(x) were wrong from k=3 on).
 Recompute F_k(x) and t_k(x) = F_k(x)/Cat_k per-word for k <= 5 at
 x = 0, 1/4, 1/2; redo the Stieltjes minors; and the corrected integer
 sequence sum_pi k! f_pi(0)."""
 import sys, json
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "engine"))
+sys.path.insert(0, r"~\crossing-cores-rmt\engine")
 import tk_core
 from exact_volume import volume_from_halfspaces
 from fractions import Fraction as Fr

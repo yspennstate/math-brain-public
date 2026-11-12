@@ -45,6 +45,8 @@ The free part uses Biane's description of the free convolution with a semicircle
 The first program needs SymPy and mpmath, the second mpmath; each takes several minutes. The Lean file compiles
 inside any Lean 4 project with Mathlib (`lake env lean Algebra.lean`).
 
+An archived copy of the paper is at https://doi.org/10.5281/zenodo.24064373.
+
 ## License
 
 Paper: CC BY 4.0. Code: MIT.

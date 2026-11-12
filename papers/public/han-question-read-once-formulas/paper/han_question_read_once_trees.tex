@@ -13,6 +13,7 @@
 \title[A question of Han on Fourier coefficients]{Read-once formulas and a question of Han on the Fourier
 entropy-influence conjecture}
 \author{Yitzchak Shmalo}
+\usepackage{xurl}
 \begin{document}
 \begin{abstract}
 For a Boolean function $f$ and a coordinate $k$, let $Q_k(f)=\sum_{S\not\ni k}|\hf(S)\hf(S\cup\{k\})|/I_k(f)$,
@@ -41,11 +42,14 @@ and the Fourier entropy is $H(f)=\sum_S\hf(S)^2\log(1/\hf(S)^2)$. The Fourier en
 Friedgut and Kalai \cite{fk} asserts that $H(f)\le C\,I(f)$ for a universal constant $C$. It remains open in general;
 Kelman, Kindler, Lifshitz, Minzer and Safra \cite{kklms} proved related statements up to a logarithmic factor, and
 the conjecture is known for several classes, among them read-once formulas over gates of bounded arity, by the
-composition theorem of O'Donnell and Tan \cite{ot}. Recent work of Gonz\'alez, MacManus and Pereyra \cite{gmp} adds
-further classes.
+composition theorem of O'Donnell and Tan \cite{ot}, and symmetric functions and read-once decision trees, by
+O'Donnell, Wright and Zhou \cite{owz}. Wan, Wright and Wu \cite{www} relate the conjecture to decision trees and
+communication protocols, and the inequality holds for every linear threshold function \cite{shm}. Recent work of
+Gonz\'alez, MacManus and Pereyra \cite{gmp} adds further classes.
 
-Han \cite{han} proved that $H(f)=O\bigl(I(f)+\sum_k I_k(f)\log(1/I_k(f))\bigr)$; related results are discussed by
-Keller, Mossel and Schlank \cite{kms}. In the course of the proof he isolates
+Han \cite{han} proved that $H(f)=O\bigl(I(f)+\sum_k I_k(f)\log(1/I_k(f))\bigr)$; Li and Han \cite{lh} show that
+this bound holds with both constants equal to $1$ (with natural logarithms) for real-valued functions of unit $L^2$
+norm. Related results are discussed by Keller, Mossel and Schlank \cite{kms}. In the course of the proof he isolates
 a coordinate $k$ and the pairs of coefficients $\hf(S)$, $\hf(S\cup\{k\})$, and observes that the following inequality
 would lead to the conjecture by an inductive argument.
 
@@ -458,6 +462,8 @@ Section~\ref{sec:split}.
 
 This research was supported by the European Research Council (ERC) under the European Union's Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant 4101/25).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 
 The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital. These entities are included in the funding declaration above.
@@ -473,17 +479,35 @@ The checks of Section~\ref{sec:check} are produced by the scripts in the \texttt
 \texttt{github.com/yspennstate/han-question-read-once-formulas}.
 \]
 
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \begin{thebibliography}{9}
 \bibitem{fk} E.~Friedgut and G.~Kalai, \emph{Every monotone graph property has a sharp threshold}, Proc. Amer. Math.
 Soc. \textbf{124} (1996), 2993--3002.
 \bibitem{gmp} M.~J.~Gonz\'alez, P.~MacManus and M.~C.~Pereyra, \emph{Further evidence towards the Fourier
 entropy-influence conjecture}, arXiv:2606.00246, 2026.
-\bibitem{han} X.~Han, \emph{A new bound for the Fourier-entropy-influence conjecture}, arXiv:2312.08271v2, 2025.
+\bibitem{han} X.~Han, \emph{A new bound for the Fourier-entropy-influence conjecture}, Combinatorica \textbf{45}
+(2025), Paper No.~4; arXiv:2312.08271v2.
 \bibitem{kms} N.~Keller, E.~Mossel and T.~Schlank, \emph{A note on the entropy/influence conjecture}, Discrete Math.
 \textbf{312} (2012), 3364--3372.
 \bibitem{kklms} E.~Kelman, G.~Kindler, N.~Lifshitz, D.~Minzer and M.~Safra, \emph{Towards a proof of the
 Fourier-entropy conjecture?}, Geom. Funct. Anal. \textbf{30} (2020), 1097--1138.
+\bibitem{lh} P.~Li and G.~Han, \emph{Strengthening Han's Fourier entropy-influence inequality via an
+information-theoretic proof}, arXiv:2512.03117, 2025.
+\bibitem{owz} R.~O'Donnell, J.~Wright and Y.~Zhou, \emph{The Fourier entropy-influence conjecture for certain
+classes of Boolean functions}, in: Automata, Languages and Programming (ICALP 2011), Lecture Notes in Comput. Sci.
+6755, Springer, 2011, 330--341.
 \bibitem{ot} R.~O'Donnell and L.-Y.~Tan, \emph{A composition theorem for the Fourier entropy-influence conjecture},
 in: Automata, Languages, and Programming (ICALP 2013), Lecture Notes in Comput. Sci. 7965, Springer, 2013, 780--791.
+\bibitem{shm} Y.~Shmalo, \emph{Fourier entropy of threshold functions and their compositions}, arXiv:2610.16069,
+2026.
+\bibitem{www} A.~Wan, J.~Wright and C.~Wu, \emph{Decision trees, protocols and the entropy-influence conjecture},
+in: Proceedings of the 5th Conference on Innovations in Theoretical Computer Science (ITCS 2014), ACM, 2014, 67--80.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
 \end{thebibliography}
 \end{document}

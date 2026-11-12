@@ -1,14 +1,12 @@
 # Learned representations and kernel corrections for radiative-transfer emulation
 
-This folder holds the code and figures of [emit-oco2-kernel-emulators](https://github.com/yspennstate/emit-oco2-kernel-emulators). The manuscript and the run records are in that repository.
-
 Manuscript, code and run records for a comparison of neural networks, exact Matérn kernel regression and their
 combinations as emulators of a six-dimensional radiative-transfer table on the 285-band EMIT wavelength grid, and for
 an analysis of how their forward accuracy carries over to reflectance retrieval.
 
-[Paper (PDF)](https://github.com/yspennstate/emit-oco2-kernel-emulators/blob/main/paper/emit_kernel_dnn.pdf) · [Supplement (PDF)](https://github.com/yspennstate/emit-oco2-kernel-emulators/blob/main/paper/supplement.pdf) ·
-[LaTeX source](https://github.com/yspennstate/emit-oco2-kernel-emulators/blob/main/paper/emit_kernel_dnn.tex) ·
-[How each table is produced](https://github.com/yspennstate/emit-oco2-kernel-emulators/blob/main/docs/REPRODUCE.md)
+[Paper (PDF)](paper/emit_kernel_dnn.pdf) · [Supplement (PDF)](paper/supplement.pdf) ·
+[LaTeX source](paper/emit_kernel_dnn.tex) ·
+[How each table is produced](docs/REPRODUCE.md)
 
 ## Findings
 
@@ -80,7 +78,7 @@ latexmk -g -pdf -interaction=nonstopmode -halt-on-error -cd paper/supplement.tex
 ```
 
 These commands run the tests and regenerate every table of the paper from the records in `results/`, byte for byte;
-they do not retrain any model. [docs/REPRODUCE.md](https://github.com/yspennstate/emit-oco2-kernel-emulators/blob/main/docs/REPRODUCE.md) maps every table and figure to its records
+they do not retrain any model. [docs/REPRODUCE.md](docs/REPRODUCE.md) maps every table and figure to its records
 and scripts and gives the commands that redraw the figures and rerun the training.
 
 ## Data

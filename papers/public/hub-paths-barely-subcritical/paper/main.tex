@@ -46,7 +46,7 @@ Let $\mathbf d=(d_1,\dots,d_n)$ be a sequence of positive integers with even sum
 \]
 We write $L_1$ for the number of vertices of the largest component of $\CM_n(\mathbf d)$ and $\dmax=\max_i d_i$. The barely subcritical regime is $\eps_n\to0$ with $n\eps_n^3\to\infty$, that is, $\nu_n$ tends to one from below but stays outside the critical window.
 
-In his Saint-Flour lecture notes~\cite{vdH17}, van der Hofstad recalls Janson's theorem~\cite{Jan08} that for power-law degrees in the strictly subcritical regime the largest component has size $\dmax/(1-\nu)(1+o_\PP(1))$, and writes that one could expect this behaviour to persist when $\nu_n\to1$ sufficiently slowly and $\dmax$ is sufficiently large; ``we predict that the maximal cluster has size $\dmax/\eps_n(1+o_\PP(1))$'' when $\eps_n$ tends to zero sufficiently slowly. Close to the critical window one expects instead the Erd\H{o}s--R\'enyi order $\eps_n^{-2}\log(n\eps_n^3)$ (see \cite{Luc90} for the random graph). This led to~\cite[Open Problem~4.13]{vdH17}: under convergence in distribution of $D_n$ to a limit $D$ and convergence of the first two moments \cite[Condition~1.6(a)--(c)]{vdH17}, and $\E[D_n^3]\to\E[D^3]$, identify the size of the largest component in the barely subcritical regime and
+The configuration model goes back to Bollob\'as~\cite{Bol80}; Molloy and Reed~\cite{MR95} identified $\nu=1$ as the threshold for a giant component, and Hatami and Molloy~\cite{HM12} determined the critical scaling window, which Dhara, van der Hofstad, van Leeuwaarden and Sen~\cite{DHLS17} describe under a finite third moment. Riordan~\cite{Rio12} treats the configuration model with bounded degrees below, inside and above the scaling window, and van der Hofstad, Janson and Luczak~\cite{HJL19} treat the barely supercritical regime for degrees of bounded variance. In his Saint-Flour lecture notes~\cite{vdH17}, van der Hofstad recalls Janson's theorem~\cite{Jan08} that for power-law degrees in the strictly subcritical regime the largest component has size $\dmax/(1-\nu)(1+o_\PP(1))$, and writes that one could expect this behaviour to persist when $\nu_n\to1$ sufficiently slowly and $\dmax$ is sufficiently large; ``we predict that the maximal cluster has size $\dmax/\eps_n(1+o_\PP(1))$'' when $\eps_n$ tends to zero sufficiently slowly. Close to the critical window one expects instead the Erd\H{o}s--R\'enyi order $\eps_n^{-2}\log(n\eps_n^3)$ (see \cite{Luc90} for the random graph). This led to~\cite[Open Problem~4.13]{vdH17}: under convergence in distribution of $D_n$ to a limit $D$ and convergence of the first two moments \cite[Condition~1.6(a)--(c)]{vdH17}, and $\E[D_n^3]\to\E[D^3]$, identify the size of the largest component in the barely subcritical regime and
 \begin{quote}
 show that the largest connected component has a size of order
 \[
@@ -321,6 +321,8 @@ Foundations of Deep Learning, by Heights Labs, by Convex Nexus Capital, by
 the Israel Science Foundation (grant number 2258/19), and by the Israel
 Science Foundation (ISF Grant 4101/25).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -332,21 +334,38 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code is available at\\ \url{https://github.com/yspennstate/hub-paths-barely-subcritical}.
 
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \begin{thebibliography}{99}
 
 \bibitem{Azu67} K.~Azuma, Weighted sums of certain dependent random variables, \emph{T\^ohoku Math. J.} \textbf{19} (1967), 357--367.
 
+\bibitem{Bol80} B.~Bollob\'as, A probabilistic proof of an asymptotic formula for the number of labelled regular graphs, \emph{European J. Combin.} \textbf{1} (1980), 311--316.
 \bibitem{CP23} M.~Coulson and G.~Perarnau, Largest component of subcritical random graphs with given degree sequence, \emph{Electron. J. Probab.} \textbf{28} (2023), 1--28, doi:10.1214/23-EJP921.
 
+\bibitem{DHLS17} S.~Dhara, R.~van der Hofstad, J.~S.~H.~van Leeuwaarden and S.~Sen, Critical window for the configuration model: finite third moment degrees, \emph{Electron. J. Probab.} \textbf{22} (2017), 1--33, doi:10.1214/17-EJP29.
+
+\bibitem{HM12} H.~Hatami and M.~Molloy, The scaling window for a random graph with a given degree sequence, \emph{Random Structures Algorithms} \textbf{41} (2012), 99--123.
 \bibitem{Jan08} S.~Janson, The largest component in a subcritical random graph with a power law degree distribution, \emph{Ann. Appl. Probab.} \textbf{18} (2008), 1651--1668.
 
 \bibitem{Luc90} T.~{\L}uczak, Component behavior near the critical point of the random graph process, \emph{Random Structures Algorithms} \textbf{1} (1990), 287--310.
+
+\bibitem{MR95} M.~Molloy and B.~Reed, A critical point for random graphs with a given degree sequence, \emph{Random Structures Algorithms} \textbf{6} (1995), 161--179.
+\bibitem{Rio12} O.~Riordan, The phase transition in the configuration model, \emph{Combin. Probab. Comput.} \textbf{21} (2012), 265--299, doi:10.1017/S0963548311000666.
 
 \bibitem{vdH17} R.~van der Hofstad, \emph{Stochastic Processes on Random Graphs}, lecture notes for the 47th Summer School in Probability, Saint-Flour, 2017, version of 12 July 2017, \url{https://www.win.tue.nl/~rhofstad/SaintFlour_SPoRG.pdf}.
 
 \bibitem{vdH26} R.~van der Hofstad, \emph{Stochastic Processes on Random Graphs}, book draft of 4 August 2026, Section~8.8, \url{https://rhofstad.win.tue.nl/Saint_Flour_SPoRG_Grundlehre.pdf}.
 
+\bibitem{HJL19} R.~van der Hofstad, S.~Janson and M.~Luczak, Component structure of the configuration model: barely supercritical case, \emph{Random Structures Algorithms} \textbf{55} (2019), 3--55, doi:10.1002/rsa.20837.
+
 \bibitem{code} Y.~Shmalo, \texttt{checks.py} and its output, \url{https://github.com/yspennstate/hub-paths-barely-subcritical}.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 \end{document}

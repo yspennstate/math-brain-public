@@ -66,7 +66,7 @@ Suppose that $Z$ in \eqref{eq:concat} is a Brownian motion with respect to a fil
 
 The construction is the filling scheme of Chacon and Ornstein \cite{CO} and Rost \cite{Rost71a,Rost71b}, run on the unit time shift of two-sided Brownian motion. In Section~\ref{sec:filling} we state and prove the filling step for an arbitrary invertible measure-preserving map, with a necessary and sufficient condition (Theorem~\ref{thm:filling}), and in Section~\ref{sec:proof} we deduce Theorem~\ref{thm:main}. Section~\ref{sec:remarks} relates the result to the literature on random shifts and records two limits of the construction.
 
-Problem~7.5 of \cite{BS} is close to the questions on shift-coupling studied by Aldous and Thorisson \cite{AT} and Thorisson \cite{Th96,ThBook}, and to the embedding of path laws in Brownian motion by a random shift of origin studied by Pitman and Tang \cite{PT-patterns,PT-slepian}. In particular \cite[Section~3.5]{PT-patterns} uses Rost's filling scheme, in the form of \cite[Chapter~IX, nos.~63--74]{DM}, to embed laws on $C[0,1]$ that are absolutely continuous with respect to the law of a Brownian meander; Theorem~\ref{thm:main} applies the same idea to laws on the whole half-line.
+Problem~7.5 of \cite{BS} is close to the questions on shift-coupling studied by Aldous and Thorisson \cite{AT} and Thorisson \cite{Th96,ThBook}, to the extra-head schemes of Liggett \cite{Lig} and Holroyd and Peres \cite{HP}, and to the embedding of path laws in Brownian motion by a random shift of origin studied by Pitman and Tang \cite{PT-patterns,PT-slepian}. In particular \cite[Section~3.5]{PT-patterns} uses Rost's filling scheme, in the form of \cite[Chapter~IX, nos.~63--74]{DM}, to embed laws on $C[0,1]$ that are absolutely continuous with respect to the law of a Brownian meander; Theorem~\ref{thm:main} applies the same idea to laws on the whole half-line. Last, M\"orters and Thorisson \cite{LMT} characterise the random times $T$, measurable with respect to a two-sided Brownian motion $B$, for which $(B_{T+t}-B_T)_{t\in\R}$ is a Brownian motion independent of $B_T$, and for every probability law $\nu$ on $\R$ they construct such a stopping time $T\ge0$ with $B_T$ distributed as $\nu$.
 
 \section{The filling step}\label{sec:filling}
 
@@ -186,6 +186,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -197,6 +199,8 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code is available at\\ \url{https://github.com/yspennstate/brownian-prefix-filling}.
 
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \begin{thebibliography}{99}
 
 \bibitem{AT} D.~J. Aldous and H.~Thorisson, Shift-coupling, \emph{Stochastic Process. Appl.} \textbf{44} (1993), 1--14.
@@ -207,7 +211,11 @@ No data were used. The code is available at\\ \url{https://github.com/yspennstat
 
 \bibitem{DM} C.~Dellacherie and P.-A. Meyer, \emph{Probabilities and Potential C}, North-Holland Mathematics Studies 151, North-Holland, Amsterdam, 1988.
 
+\bibitem{HP} A.~E. Holroyd and Y.~Peres, Extra heads and invariant allocations, \emph{Ann. Probab.} \textbf{33} (2005), 31--52.
 \bibitem{Ka} O.~Kallenberg, \emph{Foundations of Modern Probability}, 2nd ed., Springer, New York, 2002.
+
+\bibitem{Lig} T.~M. Liggett, Tagged particle distributions or how to choose a head at random, in \emph{In and Out of Equilibrium}, Birkh\"auser, Boston, 2002, 133--162.
+\bibitem{LMT} G.~Last, P.~M\"orters and H.~Thorisson, Unbiased shifts of Brownian motion, \emph{Ann. Probab.} \textbf{42} (2014), 431--463.
 
 \bibitem{PT-patterns} J.~Pitman and W.~Tang, Patterns in random walks and Brownian motion, in \emph{S\'eminaire de Probabilit\'es XLVII}, Lecture Notes in Math. 2137, Springer, Cham, 2015, 49--88.
 
@@ -220,6 +228,12 @@ No data were used. The code is available at\\ \url{https://github.com/yspennstat
 \bibitem{Th96} H.~Thorisson, Transforming random elements and shifting random fields, \emph{Ann. Probab.} \textbf{24} (1996), 2057--2064.
 
 \bibitem{ThBook} H.~Thorisson, \emph{Coupling, Stationarity, and Regeneration}, Springer, New York, 2000.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 \end{document}

@@ -1,9 +1,8 @@
-﻿import os
-"""The single failing class at order ten: which words share the crossing
+﻿"""The single failing class at order ten: which words share the crossing
 graph {(0,1),(2,3)} on five chords yet differ in volume?"""
 import sys
 from itertools import combinations, permutations
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "engine"))
+sys.path.insert(0, r"~\crossing-cores-rmt\engine")
 import tk_core
 from exact_volume import pairing_volume_exact
 from fractions import Fraction as Fr

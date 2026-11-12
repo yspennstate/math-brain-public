@@ -1,6 +1,5 @@
-﻿import os
-import sys
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "engine"))
+﻿import sys
+sys.path.insert(0, r"~\crossing-cores-rmt\engine")
 from exact_volume import pairing_volume_exact
 from fractions import Fraction as Fr
 def wpm(w):

@@ -1,9 +1,8 @@
-﻿import os
-"""Does the Dyck path (height sequence of open chords) determine the
+﻿"""Does the Dyck path (height sequence of open chords) determine the
 volume?  Group all 105 order-eight pairings by height sequence and check
 whether the volume is constant on each group."""
 import sys
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "engine"))
+sys.path.insert(0, r"~\crossing-cores-rmt\engine")
 import tk_core
 from exact_volume import pairing_volume_exact
 from fractions import Fraction as Fr

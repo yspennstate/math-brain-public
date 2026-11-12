@@ -40,7 +40,7 @@ with $\sigma^2=2\zeta(3)/\zeta(2)^3$. Hence the correlation coefficient equals $
 
 \section{Introduction}\label{sec:intro}
 
-The critical beta-splitting tree is the case $\beta=-1$ of Aldous's beta-splitting model of phylogenetic trees. Its continuous-time version $\mathrm{CTCS}(n)$ has the following interval-splitting description \cite{AJ,AP}. An interval of $m\ge2$ leaves, labelled $1,\dots,m$ from left to right, is cut between $i$ and $i+1$ at rate
+The critical beta-splitting tree is the case $\beta=-1$ of Aldous's beta-splitting model of phylogenetic trees \cite{Ald96}. Its continuous-time version $\mathrm{CTCS}(n)$ has the following interval-splitting description \cite{AJ,AP}. An interval of $m\ge2$ leaves, labelled $1,\dots,m$ from left to right, is cut between $i$ and $i+1$ at rate
 \begin{equation}\label{eq:rate}
 \lambda_m(i)=\frac{m}{2i(m-i)},\qquad 1\le i\le m-1,
 \end{equation}
@@ -48,7 +48,7 @@ so that it waits an exponential time of rate $h_{m-1}=\sum_{i=1}^{m-1}\lambda_m(
 \[
 \sigma^2=\frac{2\zeta(3)}{\zeta(2)^3},
 \]
-see Aldous and Pittel \cite[Theorem~1.1]{AP}; the constant terms are found by Aldous and Janson \cite{AJ4}, and Kolesnik \cite{Kol} proves a central limit theorem.
+see Aldous and Pittel \cite[Theorem~1.1]{AP}; the constant terms are found by Aldous and Janson \cite{AJ4}, and Kolesnik \cite{Kol} proves a central limit theorem. Iksanov, Nikitin and Yakymiv \cite{INY} prove a joint central limit theorem for the heights of a uniformly random leaf in the discrete and continuous versions of the tree.
 
 Aldous and Janson \cite[Section~3.9]{AJ} ask how the heights of two leaves of one tree are related. They close the interval into a cycle and consider two leaves at distance $r_n$ on it. Concretely, let $J$ be uniform on $\{1,\dots,n\}$, let $J'\in\{1,\dots,n\}$ be congruent to $J+r$ modulo $n$, and put $D^{(1)}_n=H_J$, $D^{(2)}_n=H_{J'}$. Each of the two is distributed as $D_n$, and
 \[
@@ -317,6 +317,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -328,8 +330,12 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code and the Lean file are available at\\ \url{https://github.com/yspennstate/beta-splitting-leaf-correlation}.
 
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \begin{thebibliography}{9}
 
+\bibitem{Ald96}
+D.~Aldous, Probability distributions on cladograms, in \emph{Random Discrete Structures}, IMA Vol. Math. Appl., Springer, New York, 1996, 1--18.
 \bibitem{AJ}
 D.~J. Aldous and S.~Janson, The critical beta-splitting random tree II: overview and open problems, arXiv:2303.02529v3 (2025).
 
@@ -339,8 +345,17 @@ D.~J. Aldous and S.~Janson, The critical beta-splitting random tree IV: Mellin a
 \bibitem{AP}
 D.~J. Aldous and B.~Pittel, The critical beta-splitting random tree I: heights and related results, \emph{Ann. Appl. Probab.} \textbf{35} (2025), 158--195. Theorem~1.1 is cited in the numbering of arXiv:2302.05066v4.
 
+\bibitem{INY}
+A.~Iksanov, A.~Nikitin and R.~Yakymiv, Some central limit theorems for critical beta-splitting tree, arXiv:2510.17343 (2025).
+
 \bibitem{Kol}
 B.~Kolesnik, Critical beta-splitting, via contraction, \emph{Electron. Commun. Probab.} \textbf{30} (2025), Paper No.~10, 14~pp.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 \end{document}

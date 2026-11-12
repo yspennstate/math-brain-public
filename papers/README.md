@@ -104,6 +104,7 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | An upper bound to second order for the longest minimum-weight path in a complete graph | [longest-geodesic-complete-graph](https://github.com/yspennstate/longest-geodesic-complete-graph) |
 | Lumping and the mixing time of a reversible chain: the dependence on the number of states | [lumping-mixing-time](https://github.com/yspennstate/lumping-mixing-time) |
 | The mode of classical and free Brownian motion with an initial distribution at large time | [brownian-mode-location](https://github.com/yspennstate/brownian-mode-location) |
+| The giant component of bilateral preference graphs with random budgets | [bilateral-preference-giant-component](https://github.com/yspennstate/bilateral-preference-giant-component) |
 
 Six more are kept here with their working files:
 

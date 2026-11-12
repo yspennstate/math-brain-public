@@ -29,8 +29,8 @@
 \title{Finite-state counterexamples to Ross's second queueing conjecture}
 \runtitle{Counterexamples to Ross's second queueing conjecture}
 \begin{aug}
-\author[A]{\fnms{Yitzchak}~\snm{Shmalo}}
-\address[A]{Einstein Institute of Mathematics, The Hebrew University of Jerusalem}
+\author[A]{\fnms{Yitzchak}~\snm{Shmalo}\ead[label=e1]{}}
+\address[A]{Einstein Institute of Mathematics, The Hebrew University of Jerusalem\printead[presep={,\ }]{e1}}
 \end{aug}
 \begin{abstract}
 We construct finite-state Markov arrival-rate processes for which faster modulation increases the mean stationary workload of a stable single-server queue, disproving the universal ordering in Leskel\"a's formulation of Ross's second conjecture. A 64-state example has positive transition rates between every pair of states, independent service times uniform on $[0.99,1.01]$, and an explicit positive workload gap. A 128-state example additionally has strictly positive arrival-rate autocovariance at every lag. More generally, finite-state examples can exhibit any prescribed finite number of separated workload rises and falls. The proofs use a second-order expansion with a nonnegative, speed-uniform remainder under only a finite second service moment. We characterize the service distributions for which the second-order workload coefficient is nonincreasing for every bounded stationary environment: the function $s\mapsto\E(1-\cos(sB))/s^2$ must be nonincreasing. Mixtures of exponential service distributions satisfy this criterion. An exact Palm identity transfers the workload reversals to customer waiting times.
@@ -781,16 +781,18 @@ The source and checker are supplied with the manuscript and are also available i
 \url{https://github.com/yspennstate/Ross-s-second-queueing-conjecture}.
 \end{appendix}
 
-\begin{acks}[Acknowledgments]
+\section*{Acknowledgments and funding}
+The author acknowledges support from the European Research Council under the European Union's Horizon Europe programme (grant agreement No.~101041711), the Simons Foundation through the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, Heights Labs, Convex Nexus Capital, and Israel Science Foundation grants 2258/19 and 4101/25.
+
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+\section*{Declaration of competing interest}
+The author holds equity interests in Heights Labs and Convex Nexus Capital.
+\section*{Declaration of generative AI and AI-assisted technologies}
 AI systems developed the mathematical arguments, calculations, verification code and initial manuscript. The author initiated and organized the project. AI research agents developed the cyclic Markov construction and the uniform workload remainder estimate. A separate Claude-based analysis rederived the expansion and its error bound and obtained the averaged-environment variance formulation. ChatGPT developed the bounded-service and positive-transition-rate extensions; a separate ChatGPT analysis derived the 64-state construction and its endpoint estimate. The present synthesis checked that construction, extended the expansion to finite second service moments, and developed the positive-autocovariance example, the repeated-reversal family and the service-law characterization. It also checked the Palm comparison and prepared the manuscript, bibliography and exact arithmetic tests. This work is part of Math Brain, a project aimed at improving AI systems' ability to solve open problems in mathematics.
 
 The author has reviewed the manuscript and its proofs and accepts full responsibility for the mathematical arguments, proofs and conclusions, including any remaining errors.
-\end{acks}
-\begin{funding}
-The author acknowledges support from the European Research Council under the European Union's Horizon Europe programme (grant agreement No.~101041711), the Simons Foundation through the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, Heights Labs, Convex Nexus Capital, and Israel Science Foundation grants 2258/19 and 4101/25.
-\end{funding}
-\section*{Competing interests}
-The author holds equity interests in Heights Labs and Convex Nexus Capital.
+\section*{Code and data availability}
+The code and data for this paper are at \url{https://github.com/yspennstate/Ross-s-second-queueing-conjecture}. The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
 \begin{supplement}
 \stitle{Exact arithmetic and finite regression checks}
 \sdescription{The files \texttt{verify.py} and \texttt{checks.json} reproduce the rational comparisons and finite insertion tests. They accompany the manuscript as supplementary material; the proofs do not depend on external data or a live service.}
@@ -1075,5 +1077,19 @@ U.~Yechiali and P.~Naor (1971).
 Queuing problems with heterogeneous arrivals and service.
 Oper. Res. \textbf{19} 722--734.
 \href{https://doi.org/10.1287/opre.19.3.722}{doi:10.1287/opre.19.3.722}.
+\bibitem{MathBrainRepo}
+Y.~Shmalo (2026).
+Math Brain: public snapshot, code and tests.
+\url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper}
+Y.~Shmalo (2026).
+Math Brain: shared, auditable memory for multi-agent mathematical research.
+\url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework}
+Y.~Shmalo (2026).
+Brain Framework, public software repository.
+\url{https://github.com/yspennstate/brain-framework-public}.
 \end{thebibliography}
 \end{document}

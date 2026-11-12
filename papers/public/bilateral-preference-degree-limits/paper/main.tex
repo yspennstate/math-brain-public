@@ -40,7 +40,7 @@ In the bilateral preference random graph $LK(n,k)$ of La and Kabkab, independent
 
 \section{Introduction}\label{sec:intro}
 
-Let $n\ge3$ and $1\le k\le n-1$. Put independent scores $U_{ij}=U_{ji}$, uniform on $[0,1]$, on the edges of the complete graph $K_n$. Each vertex prefers the $k$ edges at it with the smallest scores, and the graph $LK(n,k)$ keeps an edge if and only if both of its endpoints prefer it. The model is due to La and Kabkab \cite{LK}, who studied its connectivity and diameter. Dabirian and Subramanian \cite{DS} let each vertex prefer its $k$ edges of largest score; the map $U\mapsto1-U$ turns one description into the other, so the two give the same law. Moharrami, Subramanian, Liu and Sundaresan \cite{EWT} study a finite model with independent exponential edge costs in which every vertex is willing to use its $d_i$ cheapest edges; when every $d_i$ equals $k$ this is again $LK(n,k)$, since only the order of the scores matters.
+Let $n\ge3$ and $1\le k\le n-1$. Put independent scores $U_{ij}=U_{ji}$, uniform on $[0,1]$, on the edges of the complete graph $K_n$. Each vertex prefers the $k$ edges at it with the smallest scores, and the graph $LK(n,k)$ keeps an edge if and only if both of its endpoints prefer it. The model is due to La and Kabkab \cite{LK}, who studied its connectivity and diameter. Keeping an edge when at least one endpoint prefers it gives instead the random $k$-th nearest neighbour graph of Cooper and Frieze \cite{CF95}, a weighted form of the random $k$-out graph of Fenner and Frieze \cite{FF82}. Dabirian and Subramanian \cite{DS} let each vertex prefer its $k$ edges of largest score; the map $U\mapsto1-U$ turns one description into the other, so the two give the same law. Moharrami, Subramanian, Liu and Sundaresan \cite{EWT} study a finite model with independent exponential edge costs in which every vertex is willing to use its $d_i$ cheapest edges; when every $d_i$ equals $k$ this is again $LK(n,k)$, since only the order of the scores matters.
 
 Fix a vertex $0$, the root, and let $D=D_{n,k}$ be its degree. The root keeps only edges it prefers, so $D\le k$. Dabirian and Subramanian show that
 \[
@@ -443,6 +443,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -454,17 +456,23 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code and the Lean file are available at\\ \url{https://github.com/yspennstate/bilateral-preference-degree-limits}.
 
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
 \begin{thebibliography}{10}
 
 \bibitem{Bil}
 P.~Billingsley, \emph{Probability and Measure}, 3rd ed., Wiley, New York, 1995.
 
+\bibitem{CF95}
+C.~Cooper and A.~Frieze, On the connectivity of random $k$-th nearest neighbour graphs, \emph{Combin. Probab. Comput.} \textbf{4} (1995), 343--362.
 \bibitem{DS}
 H.~Dabirian and V.~Subramanian, Connectivity of a family of bilateral preference random graphs, \emph{J. Appl. Probab.} \textbf{63} (2026), 552--579. Theorems~7 and~8 there are Theorems~6.1 and~6.2 of arXiv:2209.05677v3.
 
 \bibitem{MU21}
 L.~de~Moura and S.~Ullrich, The Lean~4 theorem prover and programming language, in \emph{Automated Deduction -- CADE~28}, Lecture Notes in Comput. Sci. \textbf{12699}, Springer, 2021, 625--635.
 
+\bibitem{FF82}
+T.~I.~Fenner and A.~M.~Frieze, On the connectivity of random $m$-orientable graphs and digraphs, \emph{Combinatorica} \textbf{2} (1982), 347--359.
 \bibitem{LK}
 R.~J.~La and M.~Kabkab, A new random graph model with self-optimizing nodes: connectivity and diameter, \emph{Internet Math.} \textbf{11} (2015), 528--554.
 
@@ -473,6 +481,12 @@ The mathlib Community, The Lean mathematical library, in \emph{Proceedings of th
 
 \bibitem{EWT}
 M.~Moharrami, V.~Subramanian, M.~Liu and R.~Sundaresan, The Erlang weighted tree, a new branching process, \emph{Random Structures Algorithms} \textbf{64} (2024), 537--624. Theorem numbers as in arXiv:2002.03993v5.
+
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
 
 \end{thebibliography}
 

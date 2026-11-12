@@ -1,9 +1,8 @@
-﻿import os
-"""Name the witness pair: two inequivalent diagrams, one interlacement
+﻿"""Name the witness pair: two inequivalent diagrams, one interlacement
 graph, one volume.  No volume recomputation needed to find them."""
 import sys
 from itertools import combinations, permutations
-sys.path.insert(0, os.path.join(os.path.dirname(os.path.abspath(__file__)), "..", "engine"))
+sys.path.insert(0, r"~\crossing-cores-rmt\engine")
 import tk_core
 from exact_volume import pairing_volume_exact
 

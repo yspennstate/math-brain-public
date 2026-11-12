@@ -60,7 +60,7 @@ The property that $r_{xy}$ is non-decreasing for every pair $x,y$ is now called 
 The graph $G$ is \emph{$1$-walk-regular} if for every $k\ge0$ the diagonal entries of $A^k$ are all equal and the entries $(A^k)_{xy}$ with $xy\in E$ are all equal.
 \end{definition}
 
-The notion is due to Dalf\'o, Fiol and Garriga~\cite{DFG}. A connected arc-transitive graph is vertex-transitive and edge-transitive, and an automorphism carries walks to walks, so it is $1$-walk-regular. A distance-regular graph is $1$-walk-regular, since $(A^k)_{xy}$ depends only on the distance between $x$ and $y$~\cite[Chapter~4]{BCN}.
+The notion is due to Dalf\'o, Fiol and Garriga~\cite{DFG}; it refines walk-regularity, introduced by Godsil and McKay~\cite{GM}. A connected arc-transitive graph (see \cite[Ch.~17]{Bi} and \cite[Ch.~4]{GR}) is vertex-transitive and edge-transitive, and an automorphism carries walks to walks, so it is $1$-walk-regular. A distance-regular graph is $1$-walk-regular, since $(A^k)_{xy}$ depends only on the distance between $x$ and $y$~\cite[Chapter~4]{BCN}.
 
 Let $\mu_x$ be the spectral measure of $L$ at $x$: if $L=\sum_\lambda \lambda E_\lambda$ is the spectral decomposition, $\mu_x$ puts mass $E_\lambda(x,x)$ at $\lambda$. It is a probability measure on $[0,2]$ with $\mu_x(\{0\})=1/n$, and $H_t(x,x)=\int e^{-t\lambda}\,d\mu_x(\lambda)$. Let $\nu_{x,t}$ be its exponential tilt, $d\nu_{x,t}(\lambda)=e^{-t\lambda}\,d\mu_x(\lambda)/H_t(x,x)$. Write $0=\lambda_1<\lambda_2\le\dots\le\lambda_n\le2$ for the eigenvalues of $L$.
 
@@ -188,6 +188,8 @@ Science Foundation (ISF Grant 4101/25). Computational resources were
 provided in part by Google Cloud through its education credits program
 (credit 530550103).
 
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results, coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework repository~\cite{BrainFramework}.
+
 \section*{Declaration of competing interest}
 The author holds equity in Heights Labs and in Convex Nexus Capital and
 has a management role at Convex Nexus Capital. These entities are included
@@ -199,16 +201,27 @@ The paper comes out of Math Brain, an ongoing project on the use of AI systems f
 \section*{Data availability}
 No data were used. The code is available at\\ \url{https://github.com/yspennstate/arc-transitive-edge-heat}.
 
-\begin{thebibliography}{9}
+The paper is part of the Math Brain project, whose public repository is \url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\begin{thebibliography}{99}
 \bibitem{AF} D.~Aldous and J.~A.~Fill, \emph{Reversible Markov Chains and Random Walks on Graphs}, unfinished monograph, 2002, recompiled 2014, \url{https://www.stat.berkeley.edu/~aldous/RWG/book.html}.
+\bibitem{Bi} N.~Biggs, \emph{Algebraic Graph Theory}, 2nd ed., Cambridge University Press, Cambridge, 1993.
 \bibitem{BCN} A.~E.~Brouwer, A.~M.~Cohen and A.~Neumaier, \emph{Distance-Regular Graphs}, Springer, Berlin, 1989.
 \bibitem{DFG} C.~Dalf\'o, M.~A.~Fiol and E.~Garriga, \emph{On $k$-walk-regular graphs}, Electron.\ J.\ Combin.\ \textbf{16} (2009), \#R47.
+\bibitem{GM} C.~D.~Godsil and B.~D.~McKay, \emph{Feasibility conditions for the existence of walk-regular graphs}, Linear Algebra Appl.\ \textbf{30} (1980), 51--61.
+\bibitem{GR} C.~Godsil and G.~Royle, \emph{Algebraic Graph Theory}, Graduate Texts in Mathematics \textbf{207}, Springer, New York, 2001.
 \bibitem{KN} T.~Kubo and R.~Namba, \emph{Monotonic normalized heat diffusion for regular bipartite graphs with four eigenvalues}, Graphs Combin.\ \textbf{38} (2022), paper no.~22.
 \bibitem{LZ} S.~Liu and H.~Zhang, \emph{Monotonic normalized heat diffusion for distance-regular graphs with classical parameters of diameter $3$}, arXiv:2505.04314.
 \bibitem{Ni} B.~Nica, \emph{A note on normalized heat diffusion for graphs}, Bull.\ Aust.\ Math.\ Soc.\ \textbf{102} (2020), 1--6.
 \bibitem{Pr} T.~M.~Price, \emph{An inequality for the heat kernel on an Abelian Cayley graph}, Electron.\ Commun.\ Probab.\ \textbf{22} (2017), paper no.~20.
 \bibitem{RS} O.~Regev and I.~Shinkar, \emph{A counterexample to monotonicity of relative mass in random walks}, Electron.\ Commun.\ Probab.\ \textbf{21} (2016), paper no.~11; arXiv:1506.08631.
 \bibitem{code} Y.~Shmalo, \emph{Code for this paper}, \url{https://github.com/yspennstate/arc-transitive-edge-heat}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026, \url{https://github.com/yspennstate/math-brain-public}.
+
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research}, October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026, \url{https://github.com/yspennstate/brain-framework-public}.
+
 \end{thebibliography}
 
 \end{document}

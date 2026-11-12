@@ -311,7 +311,7 @@ def build(d_in, d_out):
     return nn.Sequential(*layers)
 
 
-# EMA of the network weights: decay from EMIT_EMA (0 = off). At every validation
+# EMA of the network weights (owner 2026-09-03 queue item): decay from EMIT_EMA (0 = off). At every validation
 # the raw and the averaged weights are both scored and the better one is the checkpoint candidate.
 EMA_DECAY = float(args.ema) if float(getattr(args, "ema", 0.0) or 0.0) > 0 else float(os.environ.get("EMIT_EMA", "0") or 0)
 
