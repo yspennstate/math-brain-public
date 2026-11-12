@@ -1,0 +1,649 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage{hyperref}
+\newtheorem{theorem}{Theorem}
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{definition}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\Mcl}{M_{\mathrm{c}}}
+\newcommand{\Mfr}{M_{\mathrm{f}}}
+\newcommand{\Var}{\operatorname{Var}}
+
+\title[The mode of classical and free Brownian motion]{The mode of classical and free Brownian motion\\
+with an initial distribution at large time}
+\author{Yitzchak Shmalo}
+\date{November 2026}
+
+\begin{document}
+\begin{abstract}
+Let $\mu$ be a probability measure on the real line with mean $m$ and finite variance $v$. We show that the density
+of $\mu*N(0,t)$ has a unique global maximizer for $t\ge 600v$ and that the density of the free convolution
+$\mu\boxplus S(0,t)$ with the semicircle law of variance $t$ has a unique global maximizer for
+$t>7(7+4\sqrt2)v$. Both maximizers converge to $m$ as $t\to\infty$, with explicit bounds of order $t^{-1/2}$, and of
+order $t^{-1}$ when the third absolute moment is finite. If the seventh moment is finite, the maximizers are
+\[
+m-\frac{\mu_3}{2t}+\frac{\mu_5-6v\mu_3}{8t^2}+O(t^{-3})\qquad\text{and}\qquad
+m-\frac{3\mu_3}{t}+\frac{5\mu_5-22v\mu_3}{t^2}+O(t^{-3})
+\]
+respectively, where $\mu_k$ is the $k$th central moment of $\mu$. This gives an answer to a problem of Hasebe and
+Ueda on the position of the mode of classical and free Brownian motion with an initial distribution.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+
+Let $\mu$ be a probability measure on $\R$. The law at time $t$ of a Brownian motion with initial distribution $\mu$
+is the convolution $\mu*N(0,t)$, and the law at time $t$ of a free Brownian motion with initial distribution $\mu$
+is the free convolution $\mu\boxplus S(0,t)$, where $S(0,t)$ is the semicircle law with mean $0$ and variance $t$,
+whose density is $(2\pi t)^{-1}\sqrt{4t-x^2}$ on $[-2\sqrt t,2\sqrt t]$. Free convolution of arbitrary probability
+measures on $\R$ is defined by Bercovici and Voiculescu~\cite{BV}, and the measures $\mu\boxplus S(0,t)$ are
+described by Biane~\cite{Biane}: each of them has a continuous density.
+
+A probability measure on $\R$ is unimodal if, for some $a\in\R$, it is the sum of an atom at $a$ and a measure with
+a density that is non-decreasing on $(-\infty,a)$ and non-increasing on $(a,\infty)$; such a point $a$ is a mode.
+Hasebe and Ueda~\cite{HU} study the unimodality of $\mu*N(0,t)$ and $\mu\boxplus S(0,t)$ for large $t$. They prove
+that if
+\begin{equation}\label{eq:HU}
+\alpha:=\int_\R e^{\varepsilon x^2}\,d\mu(x)<\infty\qquad\text{for some }\varepsilon>0,
+\end{equation}
+then $\mu*N(0,t)$ is unimodal for all $t\ge 36\log(2\alpha)/\varepsilon$ \cite[Theorem~4.3]{HU}, and that if $\mu$
+has compact support of diameter $D$, then $\mu\boxplus S(0,t)$ is unimodal for all $t\ge 4D^2$
+\cite[Theorem~3.2]{HU}. Neither statement extends to all $\mu$: there are measures $\mu$ for which $\mu*N(0,t)$ is
+not unimodal for any $t>0$ \cite[Proposition~4.2]{HU}, and for every Borel function $f\colon\R\to[0,\infty)$ there
+is a measure $\mu$ with $\int f\,d\mu<\infty$ for which $\mu\boxplus S(0,t)$ is not unimodal for any $t>0$
+\cite[Proposition~3.4]{HU}. In particular, the condition \eqref{eq:HU} does not imply that $\mu\boxplus S(0,t)$ is
+eventually unimodal. For unimodal $\mu$ the law $\mu*N(0,t)$ is unimodal for every $t$, because the normal law is
+strongly unimodal in the sense of Ibragimov~\cite{Ibr}; the condition \eqref{eq:HU} does not require $\mu$ to be
+unimodal. Unimodality in free probability is studied for freely selfdecomposable laws by Hasebe and
+Thorbj\o rnsen~\cite{HT}, for free L\'evy processes by Hasebe and Sakuma~\cite{HS}, and, as log-unimodality, for
+free positive multiplicative Brownian motion by Hasebe, Ueda and Wang~\cite{HUW}. The paper~\cite{HU} closes its section on the classical case with the following problem.
+
+\medskip
+\noindent\textbf{Problem} (\cite[Problem~4.6]{HU})\textbf{.} \emph{Estimate the position of the mode of classical
+Brownian motion with initial distributions satisfying the assumption \eqref{eq:HU}. Our proof shows that for
+$t\ge 36\log(2\alpha)/\varepsilon$, the mode is located in the interval $[-\sqrt t/2,\sqrt t/2]$. How about free
+Brownian motion?}
+\medskip
+
+We consider the global maximizers of the two densities. For a unimodal law with a continuous density that has a
+unique global maximizer, this maximizer is the unique mode; for a law that is not unimodal it is still defined, and
+it is the natural object in the free case because of \cite[Proposition~3.4]{HU}. A finite variance is enough for
+the global maximizer to be unique at large times and to converge to the mean of $\mu$.
+
+Throughout, $X$ is a random variable with law $\mu$ and finite variance, and
+\[
+m=\E X,\qquad Y=X-m,\qquad v=\Var(X),\qquad \mu_k=\E Y^k,\qquad \beta_k=\E|Y|^k .
+\]
+If $v=0$, then $\mu*N(0,t)=N(m,t)$ and $\mu\boxplus S(0,t)$ is the semicircle law of variance $t$ centred at $m$, and
+both densities have the unique maximizer $m$ for every $t>0$. We therefore assume $v>0$.
+
+\begin{theorem}[classical Brownian motion]\label{thm:classical}
+Let $0<v<\infty$ and $t\ge 600v$. The density of $\mu*N(0,t)$ has a unique global maximizer $\Mcl(t)$. It satisfies
+\[
+|\Mcl(t)-m|\le \frac{\sqrt2\,v}{\sqrt t},
+\]
+and, if $\beta_3<\infty$,
+\[
+|\Mcl(t)-m|\le\frac{\beta_3}{t}.
+\]
+\end{theorem}
+
+\begin{theorem}[free Brownian motion]\label{thm:free}
+Let $0<v<\infty$, let $a=7+4\sqrt2$ and let $t>7av$. The density of $\mu\boxplus S(0,t)$ has a unique global
+maximizer $\Mfr(t)$. It satisfies
+\[
+|\Mfr(t)-m|\le \frac{4av}{\sqrt t},
+\]
+and, if $\beta_3<\infty$,
+\[
+|\Mfr(t)-m|\le\frac{26\bigl((2+\sqrt2)^3v^{3/2}+\beta_3\bigr)}{t}.
+\]
+\end{theorem}
+
+Since $v^{3/2}\le\beta_3$ and $(2+\sqrt2)^3=20+14\sqrt2$, the last bound is at most $1061\,\beta_3/t$. The numerical
+constants in the two theorems, and the thresholds $600v$ and $7av\approx 88.6\,v$, are not optimal.
+
+\begin{theorem}[expansions]\label{thm:expansion}
+Let $0<v<\infty$.
+\begin{enumerate}
+\item[(a)] If $\beta_3<\infty$, then, as $t\to\infty$,
+\[
+\Mcl(t)=m-\frac{\mu_3}{2t}+o(t^{-1}),\qquad \Mfr(t)=m-\frac{3\mu_3}{t}+o(t^{-1}).
+\]
+\item[(b)] If $\beta_7<\infty$, then, as $t\to\infty$,
+\begin{align}
+\Mcl(t)&=m-\frac{\mu_3}{2t}+\frac{\mu_5-6v\mu_3}{8t^2}+O(t^{-3}),\label{eq:exp-c}\\
+\Mfr(t)&=m-\frac{3\mu_3}{t}+\frac{5\mu_5-22v\mu_3}{t^2}+O(t^{-3}).\label{eq:exp-f}
+\end{align}
+\end{enumerate}
+\end{theorem}
+
+Thus, when $\beta_3<\infty$, both maximizers approach the mean at rate $t^{-1}$; this rate is exact whenever
+$\mu_3\ne0$, and then to leading order the displacement of the free maximizer from the mean is six times that of
+the classical one. If $\mu$ is
+symmetric about $m$, then both densities are symmetric about $m$, and the uniqueness in
+Theorems~\ref{thm:classical} and~\ref{thm:free} gives $\Mcl(t)=m$ for $t\ge600v$ and $\Mfr(t)=m$ for $t>7av$.
+
+The expansions take a simple form in terms of cumulants. Let $\kappa_n$ denote the cumulants of $\mu*N(0,t)$, so that
+$\kappa_2=t+v$, $\kappa_3=\mu_3$ and $\kappa_5=\mu_5-10v\mu_3$. Then \eqref{eq:exp-c} reads
+\begin{equation}\label{eq:cum-c}
+\Mcl(t)=m-\frac{\kappa_3}{2\kappa_2}+\frac{\kappa_5}{8\kappa_2^2}+O(t^{-3}).
+\end{equation}
+The first term is the classical relation between the mean, the mode and the third cumulant of a nearly normal
+distribution; see Haldane~\cite{Haldane} for distributions with given cumulants and Hall~\cite{Hall} for the mode
+of a sum of independent random variables. Free cumulants linearize free convolution in the same way as cumulants
+linearize convolution \cite[Lectures~11 and~12]{NS}. Let $r_n$ denote the free cumulants of $\mu\boxplus S(0,t)$, so
+that $r_2=t+v$, $r_3=\mu_3$ and $r_5=\mu_5-5v\mu_3$. Then \eqref{eq:exp-f} reads
+\begin{equation}\label{eq:cum-f}
+\Mfr(t)=m-\frac{3r_3}{r_2}+\frac{5r_5}{r_2^2}+O(t^{-3}).
+\end{equation}
+Asymptotic expansions in the free central limit theorem, for normalized sums of free identically distributed random
+variables, are due to Chistyakov and G\"otze~\cite{CG}. Here the setting is a fixed law perturbed by a semicircular
+variable of large variance, and \eqref{eq:exp-f} is derived directly from Biane's description of the density.
+
+Under the assumptions of~\cite{HU} the theorems give the following.
+
+\begin{corollary}\label{cor:HU}
+Let $\mu$ satisfy \eqref{eq:HU} and not be a point mass, and put
+\[
+L=\frac{\log\alpha}{\varepsilon},\qquad Q=8\alpha\Bigl(\frac{3}{2e\varepsilon}\Bigr)^{3/2}.
+\]
+Then $v\le L$, $|m|\le\sqrt L$ and $\beta_3\le Q$. Consequently:
+\begin{enumerate}
+\item[(i)] for $t\ge\max\{600L,\,36\log(2\alpha)/\varepsilon\}$, and also for $t\ge72\log(2\alpha^2)/\varepsilon$,
+the law $\mu*N(0,t)$ is unimodal, its mode is unique, and the mode lies in $[m-Q/t,\,m+Q/t]$;
+\item[(ii)] for $t>7(7+4\sqrt2)L$ the density of $\mu\boxplus S(0,t)$ has a unique global maximizer, which lies
+within $26\bigl((2+\sqrt2)^3L^{3/2}+Q\bigr)/t$ of $m$;
+\item[(iii)] the expansions \eqref{eq:exp-c} and \eqref{eq:exp-f} hold.
+\end{enumerate}
+\end{corollary}
+
+\begin{corollary}\label{cor:compact}
+Let $\mu$ have compact support of diameter $D>0$. For $t\ge 23D^2$ the law $\mu\boxplus S(0,t)$ is unimodal, its mode
+is unique and lies within $136\,D^3/t$ of $m$, and the mode satisfies \eqref{eq:exp-f}.
+\end{corollary}
+
+Theorem~\ref{thm:classical} is proved in Section~\ref{sec:classical} and Theorem~\ref{thm:free} in
+Section~\ref{sec:free}. Section~\ref{sec:expansion} contains the proof of Theorem~\ref{thm:expansion},
+Section~\ref{sec:cor} the proofs of the corollaries, and Section~\ref{sec:numerics} an example and numerical checks.
+
+\section{The classical case}\label{sec:classical}
+
+Replacing $X$ by $X-m$ translates both $\mu*N(0,t)$ and $\mu\boxplus S(0,t)$ by $-m$, so in the proofs of
+Theorems~\ref{thm:classical}, \ref{thm:free} and~\ref{thm:expansion} we assume $m=0$; then $Y=X$.
+
+The density of $\mu*N(0,t)$ at $h$ is $(2\pi t)^{-1/2}g(h)$ with
+\[
+g(h)=\E\exp\Bigl(-\frac{(Y-h)^2}{2t}\Bigr).
+\]
+The function $g$ is positive and continuously differentiable, and $g'(h)=H(h)/t$, where
+\[
+H(h)=\E\Bigl[(Y-h)\exp\Bigl(-\frac{(Y-h)^2}{2t}\Bigr)\Bigr].
+\]
+The function $H$ is continuously differentiable, with
+\begin{equation}\label{eq:Hprime}
+-H'(h)=\E\Bigl[\Bigl(1-\frac{(Y-h)^2}{t}\Bigr)\exp\Bigl(-\frac{(Y-h)^2}{2t}\Bigr)\Bigr];
+\end{equation}
+the differentiations under the expectation are justified because the integrands and their derivatives in $h$ are
+bounded.
+
+\begin{lemma}\label{lem:c-window}
+Let $t\ge600v$. Then $g(h)<g(0)$ for every $h$ with $|h|>\sqrt t/2$.
+\end{lemma}
+
+\begin{proof}
+By Jensen's inequality, $g(0)\ge\exp(-v/(2t))\ge e^{-1/1200}$. Let $|h|>\sqrt t/2$. On the event
+$\{|Y-h|\ge\sqrt t/4\}$ the exponential in the definition of $g(h)$ is at most $e^{-1/32}$. On the complementary
+event, $|Y|>|h|-\sqrt t/4>\sqrt t/4$, and by Chebyshev's inequality this has probability at most $16v/t\le 16/600$.
+Hence
+\[
+g(h)\le e^{-1/32}+\frac{16}{600}<0.9960<e^{-1/1200}\le g(0).\qedhere
+\]
+\end{proof}
+
+\begin{lemma}\label{lem:c-slope}
+Let $t\ge 600v$. Then $-H'(h)>1/2$ for every $h$ with $|h|\le\sqrt t/2$.
+\end{lemma}
+
+\begin{proof}
+For $z\ge0$ we have $(1-z)e^{-z/2}\ge1-3z/2$: if $z\le1$, this follows from $e^{-z/2}\ge1-z/2$ and
+$(1-z)(1-z/2)\ge1-3z/2$; if $z>1$, then $(1-z)e^{-z/2}\ge1-z\ge1-3z/2$. Applying this to $z=(Y-h)^2/t$
+in \eqref{eq:Hprime} and using $\E(Y-h)^2=v+h^2$ gives
+\[
+-H'(h)\ge1-\frac{3(v+h^2)}{2t}\ge1-\frac{3}{8}-\frac{3v}{2t}\ge\frac58-\frac1{400}>\frac12 .\qedhere
+\]
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:classical}]
+Since $g$ is continuous and $g(h)\to0$ as $|h|\to\infty$ by dominated convergence, $g$ attains its maximum. By
+Lemma~\ref{lem:c-window} every global maximizer lies in $[-\sqrt t/2,\sqrt t/2]$, and it is a zero of $H$. By
+Lemma~\ref{lem:c-slope}, $H$ is strictly decreasing on this interval, so it has at most one zero there. Hence the
+global maximizer is unique; denote it by $h_t$. By Lemma~\ref{lem:c-slope} and the mean value theorem,
+\begin{equation}\label{eq:c-mvt}
+|h_t|\le2\,|H(0)-H(h_t)|=2\,|H(0)|.
+\end{equation}
+Since $\E Y=0$ and $0\le1-e^{-z}\le\min\{1,z\}$ for $z\ge0$,
+\begin{equation}\label{eq:c-H0}
+|H(0)|=\Bigl|\E\Bigl[Y\Bigl(1-e^{-Y^2/(2t)}\Bigr)\Bigr]\Bigr|\le\E\Bigl[|Y|\min\Bigl\{1,\frac{Y^2}{2t}\Bigr\}\Bigr].
+\end{equation}
+The minimum is at most $|Y|/\sqrt{2t}$, which gives $|H(0)|\le v/\sqrt{2t}$ and $|h_t|\le\sqrt2\,v/\sqrt t$. It is
+also at most $Y^2/(2t)$, which gives $|H(0)|\le\beta_3/(2t)$ and $|h_t|\le\beta_3/t$.
+\end{proof}
+
+\section{The free case}\label{sec:free}
+
+We recall the description of $\mu\boxplus S(0,t)$ due to Biane~\cite{Biane}, in the form given
+in~\cite[Section~2.2]{HU}. For $u\in\R$ and $R>0$ let
+\[
+F(u,R)=\E\Bigl[\frac{1}{R+(u-X)^2}\Bigr],
+\]
+and let
+\[
+v_t(u)=\inf\Bigl\{w\ge0:\ \E\Bigl[\frac1{w^2+(u-X)^2}\Bigr]\le\frac1t\Bigr\}.
+\]
+The function $v_t$ is continuous on $\R$, and whenever $v_t(u)>0$ the number $R=v_t(u)^2$ is the unique positive
+solution of $F(u,R)=1/t$ \cite[(2.8)--(2.10)]{HU}. The map
+\[
+\psi_t(u)=u+t\,\E\Bigl[\frac{u-X}{(u-X)^2+v_t(u)^2}\Bigr]
+\]
+is a homeomorphism of $\R$ onto $\R$, the measure $\mu\boxplus S(0,t)$ has a continuous density $p_t$, and
+\begin{equation}\label{eq:biane}
+p_t(\psi_t(u))=\frac{v_t(u)}{\pi t},\qquad u\in\R
+\end{equation}
+\cite[(2.13) and (2.14)]{HU}. Consequently the global maximizers of $p_t$ are the images under $\psi_t$ of the global
+maximizers of $v_t$.
+
+For each $u$ the function $R\mapsto F(u,R)$ is continuous and strictly decreasing on $(0,\infty)$, and
+$F(u,R)\le1/R$. As in Section~\ref{sec:classical} we assume $m=0$, so that $Y=X$.
+
+\begin{lemma}\label{lem:f-max}
+Let $t>v$. The function $v_t$ attains its maximum, and $R^*:=\max_u v_t(u)^2$ satisfies $t-v\le R^*\le t$. The set of
+global maximizers of $v_t$ is $\{u\in\R:F(u,R^*)=1/t\}$, and $F(u,R^*)\le1/t$ for every $u\in\R$.
+\end{lemma}
+
+\begin{proof}
+The function $x\mapsto(R+x)^{-1}$ is convex on $[0,\infty)$, so Jensen's inequality gives
+$F(0,t-v)\ge(t-v+\E Y^2)^{-1}=1/t$. Hence $v_t(0)>0$, and since $F(0,\cdot)$ is decreasing, $v_t(0)^2\ge t-v$. For
+fixed $\delta>0$, dominated convergence gives $F(u,\delta^2)\to0$ as $|u|\to\infty$, so $v_t(u)\le\delta$ for all
+large $|u|$. Thus the continuous function $v_t$ tends to $0$ at infinity and is positive at $0$, and it attains its
+maximum, with $R^*\ge t-v$. At a maximizer $u^*$ we have $1/t=F(u^*,R^*)\le1/R^*$, so $R^*\le t$.
+
+Let $u\in\R$. If $v_t(u)>0$, then $v_t(u)^2\le R^*$ and $F(u,R^*)\le F(u,v_t(u)^2)=1/t$, with equality if and only if
+$v_t(u)^2=R^*$. If $v_t(u)=0$, then $F(u,w^2)\le1/t$ for every $w>0$, and $F(u,R^*)<1/t$ because $F(u,\cdot)$ is
+strictly decreasing. This proves the last two assertions.
+\end{proof}
+
+Let $B=(2+\sqrt2)\sqrt v$, so that $B^2+v=av$ with $a=7+4\sqrt2$.
+
+\begin{lemma}\label{lem:f-window}
+Let $t\ge4v$. Every global maximizer $u^*$ of $v_t$ satisfies $|u^*|\le B$.
+\end{lemma}
+
+\begin{proof}
+Since $F(u^*,R^*)=1/t$ and $R^*\ge t-v$,
+\begin{equation}\label{eq:f-mass}
+\E\Bigl[\frac{(u^*-Y)^2}{R^*+(u^*-Y)^2}\Bigr]=1-R^*F(u^*,R^*)=1-\frac{R^*}{t}\le\frac vt .
+\end{equation}
+By Chebyshev's inequality, $\Prob(|Y|\le\sqrt{2v})\ge1/2$. Suppose that $|u^*|>\sqrt{2v}$ and put
+$b=|u^*|-\sqrt{2v}$. On the event $\{|Y|\le\sqrt{2v}\}$ we have $|u^*-Y|\ge b$, and since $x\mapsto x/(R^*+x)$ is
+increasing and $R^*\le t$, the integrand in \eqref{eq:f-mass} is at least $b^2/(t+b^2)$ there. Hence
+$b^2/(2(t+b^2))\le v/t$, that is, $b^2(t-2v)\le2vt$. For $t\ge4v$ this gives $b^2\le4v$ and
+$|u^*|\le(2+\sqrt2)\sqrt v$.
+\end{proof}
+
+\begin{lemma}\label{lem:f-concave}
+Let $t>7av$. The function $u\mapsto F(u,R^*)$ is strictly concave on $[-B,B]$.
+\end{lemma}
+
+\begin{proof}
+For fixed $R>0$ the function $u\mapsto(R+(u-x)^2)^{-1}$ and its first two derivatives are bounded uniformly in $x$,
+so $F(\cdot,R)$ is twice continuously differentiable and
+\[
+\partial_u^2F(u,R)=-2\,\E\Bigl[\frac{R-3(u-Y)^2}{(R+(u-Y)^2)^3}\Bigr].
+\]
+For $z\ge0$,
+\[
+\frac{1-3z}{(1+z)^3}-(1-6z)=\frac{z^2(15+17z+6z^2)}{(1+z)^3}\ge0 .
+\]
+With $z=(u-Y)^2/R$ and $\E(u-Y)^2=v+u^2\le av$ for $|u|\le B$ this gives
+\[
+\E\Bigl[\frac{R-3(u-Y)^2}{(R+(u-Y)^2)^3}\Bigr]\ge\frac1{R^2}\Bigl(1-\frac{6av}{R}\Bigr).
+\]
+If $t>7av$, then $R^*\ge t-v>6av$ by Lemma~\ref{lem:f-max}, and $\partial_u^2F(u,R^*)<0$ for $|u|\le B$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:free}]
+Let $t>7av$. By Lemma~\ref{lem:f-max} the global maximizers of $v_t$ are the points at which $F(\cdot,R^*)$ attains
+its maximum value $1/t$; by Lemma~\ref{lem:f-window} they all lie in $[-B,B]$; and by Lemma~\ref{lem:f-concave} the
+function $F(\cdot,R^*)$ has at most one maximizer in this interval. Hence $v_t$ has a unique global maximizer $u^*$,
+and $p_t$ has the unique global maximizer $\Mfr(t)=\psi_t(u^*)$.
+
+Write $q=u^*-Y$. Since $u^*$ maximizes the differentiable function $F(\cdot,R^*)$, we have
+$\partial_uF(u^*,R^*)=0$, that is,
+\begin{equation}\label{eq:f-stat}
+\E\Bigl[\frac{q}{(1+q^2/R^*)^2}\Bigr]=0 .
+\end{equation}
+As $\E q=u^*$, this gives
+\begin{equation}\label{eq:f-u}
+u^*=\E\Bigl[q\Bigl(1-\frac1{(1+q^2/R^*)^2}\Bigr)\Bigr].
+\end{equation}
+Moreover, by the definition of $\psi_t$,
+\begin{equation}\label{eq:f-M}
+\Mfr(t)=u^*+\frac{t}{R^*}\,\E\Bigl[\frac{q}{1+q^2/R^*}\Bigr]
+=u^*+\frac{t}{R^*}\Bigl(u^*-\E\Bigl[\frac{q^3}{R^*+q^2}\Bigr]\Bigr).
+\end{equation}
+Since $v<t/7$, Lemma~\ref{lem:f-max} gives $R^*\ge6t/7$, and $\E q^2=v+(u^*)^2\le av$ by Lemma~\ref{lem:f-window}.
+
+For $z\ge0$ we have $0\le1-(1+z)^{-2}\le\min\{1,2z\}\le\sqrt{2z}$. Hence \eqref{eq:f-u} gives
+$|u^*|\le\sqrt2\,\E q^2/\sqrt{R^*}\le\sqrt2\,av/\sqrt{R^*}$. Since $R^*+q^2\ge2\sqrt{R^*}|q|$, we also have
+$|\E[q^3/(R^*+q^2)]|\le\E q^2/(2\sqrt{R^*})\le av/(2\sqrt{R^*})$. By \eqref{eq:f-M},
+\[
+|\Mfr(t)|\le\Bigl(1+\frac76\Bigr)\frac{\sqrt2\,av}{\sqrt{R^*}}+\frac76\cdot\frac{av}{2\sqrt{R^*}}
+\le\Bigl(\frac{13\sqrt2}{6}+\frac7{12}\Bigr)\sqrt{\frac76}\,\frac{av}{\sqrt t}<\frac{4av}{\sqrt t}.
+\]
+
+Let now $\beta_3<\infty$. From $|x-y|^3\le4(|x|^3+|y|^3)$ and $|u^*|\le B$ we get $\E|q|^3\le K:=4(B^3+\beta_3)$.
+Using $1-(1+z)^{-2}\le2z$ in \eqref{eq:f-u} gives
+\begin{equation}\label{eq:f-u3}
+|u^*|\le\frac{2K}{R^*},
+\end{equation}
+and $|\E[q^3/(R^*+q^2)]|\le K/R^*$. By \eqref{eq:f-M},
+\[
+|\Mfr(t)|\le\Bigl(1+\frac76\Bigr)\frac{2K}{R^*}+\frac76\cdot\frac{K}{R^*}=\frac{11K}{2R^*}\le\frac{77K}{12\,t}
+<\frac{26(B^3+\beta_3)}{t}.\qedhere
+\]
+\end{proof}
+
+\begin{remark}
+The proof shows that the global maximizer of $p_t$ is unique for $t>7av$ whether or not $\mu\boxplus S(0,t)$ is
+unimodal. The density may have further local maxima at such times; an example is given in
+Section~\ref{sec:numerics}.
+\end{remark}
+
+\section{Expansions}\label{sec:expansion}
+
+We keep the assumption $m=0$, assume $\beta_3<\infty$, as in both parts of Theorem~\ref{thm:expansion}, and write
+$s=1/t$. In this section $O(\cdot)$ and $o(\cdot)$ refer to $s\to0$, with
+constants depending on $\mu$.
+
+\subsection{The classical maximizer}
+Let $h=h_t$ be the maximizer of Section~\ref{sec:classical} and put $q=Y-h$. By Theorem~\ref{thm:classical},
+$|h|\le\beta_3s$, so $|q|\le|Y|+1$ for small $s$. Since $\E Y=0$,
+\begin{equation}\label{eq:c-moments}
+\E q=-h,\qquad \E q^3=\mu_3-3vh-h^3,\qquad \E q^5=\mu_5-5\mu_4h+10\mu_3h^2-10vh^3-h^5,
+\end{equation}
+where the last identity requires $\beta_5<\infty$. The equation $H(h)=0$ reads $\E[q\,e^{-sq^2/2}]=0$.
+
+\emph{Proof of {\rm(a)}.} For $x\ge0$ write $e^{-x}=1-x+\rho(x)$ with $0\le\rho(x)\le\min\{x,x^2/2\}$. Then
+\[
+0=-h-\frac s2\,\E q^3+\E\bigl[q\,\rho(sq^2/2)\bigr],\qquad
+\bigl|\E\bigl[q\,\rho(sq^2/2)\bigr]\bigr|\le s\,\E\Bigl[|q|^3\min\Bigl\{\frac12,\frac{sq^2}{8}\Bigr\}\Bigr].
+\]
+The last integrand is at most $(|Y|+1)^3/2$, which is integrable, and it tends to $0$ pointwise as $s\to0$; by
+dominated convergence the last expectation is $o(1)$. Since $\E q^3=\mu_3+O(s)$, we get $h=-\mu_3s/2+o(s)$.
+
+\emph{Proof of {\rm(b)}.} Let $\beta_7<\infty$. For $x\ge0$, $e^{-x}=1-x+x^2/2+\rho_3(x)$ with $|\rho_3(x)|\le x^3/6$.
+Since $\E|q|^7$ is bounded for small $s$, the equation $\E[q\,e^{-sq^2/2}]=0$ gives
+\[
+0=\E q-\frac s2\,\E q^3+\frac{s^2}8\,\E q^5+O(s^3).
+\]
+Inserting \eqref{eq:c-moments} and $h=O(s)$,
+\[
+h=-\frac s2\,(\mu_3-3vh)+\frac{s^2}{8}\,\mu_5+O(s^3).
+\]
+Hence $h=-\mu_3s/2+O(s^2)$, and substituting this into the right-hand side,
+\[
+h=-\frac{\mu_3}{2}\,s+\frac{\mu_5-6v\mu_3}{8}\,s^2+O(s^3),
+\]
+which is \eqref{eq:exp-c}.
+
+\subsection{The free maximizer}
+Let $t>7av$, let $u=u^*$ and $R^*$ be as in Section~\ref{sec:free}, and put $r=R^*/t$ and $q=u-Y$. By
+Lemma~\ref{lem:f-max}, $1-vs\le r\le1$, and by \eqref{eq:f-u3}, $u=O(s)$. Since $|q|\le|Y|+B$, the moments
+$\E|q|^k$ with $k\le7$ are bounded whenever $\beta_k<\infty$. Since $\E Y=0$,
+\begin{equation}\label{eq:f-moments}
+\E q=u,\quad \E q^2=v+u^2,\quad \E q^3=u^3+3vu-\mu_3,\quad \E q^5=u^5+10vu^3-10\mu_3u^2+5\mu_4u-\mu_5,
+\end{equation}
+where the last identity requires $\beta_5<\infty$, and $\E q^4=\mu_4+O(s)$ if $\beta_4<\infty$. In terms of $r$ and
+$s$, the equation $F(u,R^*)=1/t$, the stationarity
+condition \eqref{eq:f-stat} and the formula \eqref{eq:f-M} read
+\begin{equation}\label{eq:f-system}
+\E\Bigl[\frac1{r+sq^2}\Bigr]=1,\qquad \E\Bigl[\frac{q}{(r+sq^2)^2}\Bigr]=0,\qquad
+\Mfr(t)=u+\E\Bigl[\frac{q}{r+sq^2}\Bigr].
+\end{equation}
+We use the following expansions, valid for $z\ge0$:
+\begin{align}
+\frac1{1+z}&=1-z+\rho_1(z)=1-z+z^2+\sigma_1(z), & 0\le\rho_1(z)&\le\min\{z,z^2\}, & |\sigma_1(z)|&\le z^3,
+\label{eq:exp1}\\
+\frac1{(1+z)^2}&=1-2z+\rho_2(z)=1-2z+3z^2+\sigma_2(z), & 0\le\rho_2(z)&\le\min\{2z,3z^2\}, & |\sigma_2(z)|&\le4z^3.
+\label{eq:exp2}
+\end{align}
+Here $\rho_1(z)=z^2/(1+z)$ and $\sigma_1(z)=-z^3/(1+z)$; the bounds on $\rho_2$ and $\sigma_2$ follow from Taylor's
+formula, since the second and third derivatives of $(1+z)^{-2}$ are $6(1+z)^{-4}$ and $-24(1+z)^{-5}$, together with
+$(1+z)^{-2}\le1$. Throughout we take $z=sq^2/r$.
+
+\emph{Proof of {\rm(a)}.} Multiplying the second equation in \eqref{eq:f-system} by $r^2$ and
+using \eqref{eq:exp2},
+\[
+0=u-\frac{2s}{r}\,\E q^3+\E\bigl[q\,\rho_2(z)\bigr],\qquad
+\bigl|\E\bigl[q\,\rho_2(z)\bigr]\bigr|\le\frac sr\,\E\Bigl[|q|^3\min\Bigl\{2,\frac{3sq^2}{r}\Bigr\}\Bigr]=o(s),
+\]
+by dominated convergence as in the classical case. Since $\E q^3=-\mu_3+O(s)$ and $1/r=1+O(s)$, this gives
+$u=-2\mu_3s+o(s)$. In the same way, the third relation in \eqref{eq:f-system} and \eqref{eq:exp1} give
+\[
+\Mfr(t)=u+\frac1r\Bigl(u-\frac sr\,\E q^3+\E\bigl[q\,\rho_1(z)\bigr]\Bigr)=2u+\mu_3s+o(s)=-3\mu_3s+o(s).
+\]
+
+\emph{Proof of {\rm(b)}.} Let $\beta_7<\infty$. Multiplying the first equation in \eqref{eq:f-system} by $r$ and
+using \eqref{eq:exp1},
+\[
+r=1-\frac sr\,\E q^2+\frac{s^2}{r^2}\,\E q^4+O(s^3).
+\]
+With \eqref{eq:f-moments} this gives $r=1-vs+O(s^2)$ and then
+\[
+r=1-vs+(\mu_4-v^2)s^2+O(s^3),\qquad \frac1r=1+vs+O(s^2),\qquad \frac1{r^2}=1+2vs+O(s^2).
+\]
+Multiplying the second equation in \eqref{eq:f-system} by $r^2$ and using \eqref{eq:exp2},
+\[
+0=\E q-\frac{2s}{r}\,\E q^3+\frac{3s^2}{r^2}\,\E q^5+O(s^3)
+=u-6vsu+2\mu_3s+2v\mu_3s^2-3\mu_5s^2+O(s^3),
+\]
+where we inserted \eqref{eq:f-moments} and $u=O(s)$. Hence $u=-2\mu_3s+O(s^2)$ and then
+\[
+u=-2\mu_3s+(3\mu_5-14v\mu_3)s^2+O(s^3).
+\]
+Finally, by the third relation in \eqref{eq:f-system} and \eqref{eq:exp1},
+\begin{align*}
+\Mfr(t)&=u+\frac1r\,\E q-\frac{s}{r^2}\,\E q^3+\frac{s^2}{r^3}\,\E q^5+O(s^3)\\
+&=2u-2vsu+\mu_3s+(2v\mu_3-\mu_5)s^2+O(s^3)\\
+&=-3\mu_3s+(5\mu_5-22v\mu_3)s^2+O(s^3),
+\end{align*}
+which is \eqref{eq:exp-f}. This completes the proof of Theorem~\ref{thm:expansion}.
+
+The forms \eqref{eq:cum-c} and \eqref{eq:cum-f} follow by expanding $1/(t+v)$ and $1/(t+v)^2$ in powers of $s$: the
+coefficients of $s^2$ are $v\mu_3/2+(\mu_5-10v\mu_3)/8=(\mu_5-6v\mu_3)/8$ and
+$3v\mu_3+5(\mu_5-5v\mu_3)=5\mu_5-22v\mu_3$. The cumulants and free cumulants used there are those of a centred
+law: $\kappa_5=\mu_5-10\mu_2\mu_3$, and $r_5=\mu_5-5\mu_2\mu_3$ \cite[Lecture~11]{NS}; the normal law has no
+cumulants of order higher than two, and the semicircle law has no free cumulants of order higher than two.
+
+\section{Proofs of the corollaries}\label{sec:cor}
+
+\begin{proof}[Proof of Corollary~\ref{cor:HU}]
+By Jensen's inequality, $\exp(\varepsilon\,\E X^2)\le\alpha$, so $v\le\E X^2\le L$ and $m^2\le L$. For $k>0$ the
+function $x\mapsto x^ke^{-\varepsilon x^2}$ on $[0,\infty)$ has the maximum $(k/(2e\varepsilon))^{k/2}$, hence
+\[
+\E|X|^k\le\alpha\Bigl(\frac{k}{2e\varepsilon}\Bigr)^{k/2}.
+\]
+In particular all moments of $\mu$ are finite, and $\beta_3\le4(\E|X|^3+|m|^3)\le8\,\E|X|^3\le Q$. Since $\mu$ is
+not a point mass, $v>0$.
+
+(i) For $t\ge600L$, Theorem~\ref{thm:classical} applies and gives a unique global maximizer $\Mcl(t)$ of the density
+with $|\Mcl(t)-m|\le Q/t$. For $t\ge36\log(2\alpha)/\varepsilon$ the law $\mu*N(0,t)$ is unimodal
+by \cite[Theorem~4.3]{HU}. The density of a unimodal law is maximal at each of its modes, so the mode is unique and
+equal to $\Mcl(t)$.
+
+Now let $t\ge72\log(2\alpha^2)/\varepsilon$, and let $Y=X-m$. Since $Y^2\le2X^2+2m^2$ and
+$e^{\varepsilon m^2}\le\alpha$, we have $\E e^{\varepsilon Y^2/2}\le\alpha^2$, so the law of $Y$ satisfies
+\eqref{eq:HU} with $\varepsilon/2$ in place of $\varepsilon$ and a constant at most $\alpha^2$ in place of $\alpha$.
+By \cite[Theorem~4.3]{HU} and the statement on the mode in \cite[Problem~4.6]{HU}, applied to the law of $Y$, the law
+$\mu*N(0,t)$ is unimodal and each of its modes has the form $m+h$ with $|h|\le\sqrt t/2$. The density is maximal at
+each mode, so $H(h)=0$. Since $t\ge144L\ge36v$, the first inequality in the proof of Lemma~\ref{lem:c-slope} gives
+\[
+-H'(h)\ge1-\frac38-\frac{3v}{2t}\ge\frac7{12}\qquad(|h|\le\sqrt t/2),
+\]
+so $H$ has only one zero in $[-\sqrt t/2,\sqrt t/2]$ and the mode is unique. By the mean value theorem
+and \eqref{eq:c-H0}, $|h|\le\frac{12}7|H(0)|\le\frac{6}{7}\beta_3/t\le Q/t$.
+
+(ii) and (iii) follow from Theorems~\ref{thm:free} and~\ref{thm:expansion}, since $7av\le7aL$ and
+$v^{3/2}\le L^{3/2}$.
+\end{proof}
+
+\begin{proof}[Proof of Corollary~\ref{cor:compact}]
+Let $[c-D/2,c+D/2]$ be the smallest interval containing the support of $\mu$. Then $v\le\E(X-c)^2\le D^2/4$, and
+$|Y|\le D$ gives $\beta_3\le Dv\le D^3/4$. Hence $7av\le7aD^2/4<23D^2$, and for $t\ge23D^2$ Theorem~\ref{thm:free}
+gives a unique global maximizer $\Mfr(t)$ of $p_t$ with
+\[
+|\Mfr(t)-m|\le\frac{26}{t}\Bigl(\frac{(2+\sqrt2)^3}{8}+\frac14\Bigr)D^3<\frac{136\,D^3}{t}.
+\]
+For $t\ge4D^2$ the law $\mu\boxplus S(0,t)$ is unimodal by \cite[Theorem~3.2]{HU}, and as in the proof of
+Corollary~\ref{cor:HU} its mode is unique and equal to $\Mfr(t)$. All moments of $\mu$ are finite, so
+Theorem~\ref{thm:expansion} applies.
+\end{proof}
+
+\section{An example and numerical checks}\label{sec:numerics}
+
+Let $\mu=\frac23\delta_{-1}+\frac13\delta_{2}$. Then $m=0$, $v=2$, $\mu_3=2$ and $\mu_5=10$, and
+Theorem~\ref{thm:expansion} gives
+\[
+\Mcl(t)=-\frac1t-\frac{7}{4t^2}+O(t^{-3}),\qquad \Mfr(t)=-\frac6t-\frac{38}{t^2}+O(t^{-3}).
+\]
+Table~\ref{tab:example} compares these with the maximizers computed from the equations $H(h)=0$
+and \eqref{eq:f-system}.
+
+\begin{table}[ht]
+\centering
+\begin{tabular}{rllll}
+\toprule
+$t$ & $t\,\Mcl(t)$ & $-1-7/(4t)$ & $t\,\Mfr(t)$ & $-6-38/t$\\
+\midrule
+$10^4$ & $-1.00017502375$ & $-1.000175$ & $-6.00380137932$ & $-6.0038$\\
+$10^5$ & $-1.00001750024$ & $-1.0000175$ & $-6.00038001380$ & $-6.00038$\\
+$10^6$ & $-1.00000175000$ & $-1.00000175$ & $-6.00003800014$ & $-6.000038$\\
+\bottomrule
+\end{tabular}
+\caption{The global maximizers for $\mu=\frac23\delta_{-1}+\frac13\delta_2$ and their two-term
+expansions.}\label{tab:example}
+\end{table}
+
+The program \texttt{code/mode\_checks.py} in the repository of the paper derives the coefficients
+in \eqref{eq:exp-c}--\eqref{eq:cum-f} symbolically from the equations $H(h)=0$ and \eqref{eq:f-system}, using
+SymPy~\cite{sympy}. With mpmath~\cite{mpmath} it solves the equations $H(h)=0$ and \eqref{eq:f-system} near the mean for five laws
+with finitely many atoms, for $t$ between $10^3$ and $10^6$, and for a centred exponential law, for $t$ between
+$10^3$ and $10^5$; in each case the difference of the solution from the
+two-term expansion, multiplied by $t^3$, approaches a constant. For the five atomic laws it also evaluates the two
+densities on a grid at $t=600v$ and at a time just above $7av$, and confirms that the global maximizer is unique and
+satisfies the bounds of Theorems~\ref{thm:classical} and~\ref{thm:free}, together with the inequalities of
+Lemmas~\ref{lem:c-slope}, \ref{lem:f-max}, \ref{lem:f-window} and~\ref{lem:f-concave}. For the law
+$0.8\,\delta_0+0.199\,\delta_1+0.001\,\delta_{50}$, at a time just above $7av$, the free density has a second local
+maximum besides its global maximizer, so $\mu\boxplus S(0,t)$ is not unimodal at that time. A second program,
+\texttt{code/checks.py}, locates both global maximizers of four laws with finitely many atoms by a grid search
+followed by Newton's method at forty-digit precision and compares them with the expansions. The polynomial identity
+in the proof of Lemma~\ref{lem:f-concave} is also checked in Lean~4~\cite{Lean4} with Mathlib~\cite{mathlib}
+(\texttt{lean/Algebra.lean}).
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits program (credit
+530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+The paper comes out of Math Brain, an ongoing project on the use of AI systems for research mathematics, and its
+results were developed with the Brain~\cite{BrainFramework} and Math Brain~\cite{MathBrainRepo}. In October 2026 a
+Codex agent (OpenAI) connected to the Brain, working from the project's list of open problems in probability,
+obtained the expansions of Theorem~\ref{thm:expansion}{\rm(b)}, the uniqueness of the free maximizer and bounds of
+order $t^{-1}$ for both maximizers, together with numerical checks and the Lean file; further AI agents, among them
+Claude Opus~5.5 (Anthropic), checked that work and wrote the program \texttt{code/checks.py}. In November 2026 a Claude Fable
+agent (Anthropic) obtained Theorems~\ref{thm:classical}, \ref{thm:free} and~\ref{thm:expansion} and the two
+corollaries in their present form with their proofs, wrote and ran the programs and prepared the manuscript, and a further Codex agent, working from the manuscript
+alone with its own programs, checked the proofs and recomputed the coefficients and the example. These
+checks are not peer review. The author directed the work and is responsible for the content of the paper and for
+decisions concerning its dissemination.
+
+\section*{Code and data availability}
+Programs and outputs:\\
+\url{https://github.com/yspennstate/brownian-mode-location}.
+
+The paper is part of the Math Brain project, whose public repository is
+\url{https://github.com/yspennstate/math-brain-public}~\cite{MathBrainRepo}.
+
+\begin{thebibliography}{99}
+\bibitem{BV} H.~Bercovici and D.~Voiculescu, Free convolution of measures with unbounded support, \emph{Indiana Univ.
+Math. J.} \textbf{42} (1993), no.~3, 733--773.
+\href{https://doi.org/10.1512/iumj.1993.42.42033}{doi:10.1512/iumj.1993.42.42033}.
+\bibitem{Biane} P.~Biane, On the free convolution with a semi-circular distribution, \emph{Indiana Univ. Math. J.}
+\textbf{46} (1997), no.~3, 705--718.
+\href{https://doi.org/10.1512/iumj.1997.46.1467}{doi:10.1512/iumj.1997.46.1467}.
+\bibitem{CG} G.~P.~Chistyakov and F.~G\"otze, Asymptotic expansions in the CLT in free probability, \emph{Probab.
+Theory Related Fields} \textbf{157} (2013), 107--156.
+\href{https://doi.org/10.1007/s00440-012-0451-2}{doi:10.1007/s00440-012-0451-2}; arXiv:1109.4844.
+\bibitem{Haldane} J.~B.~S.~Haldane, The mode and median of a nearly normal distribution with given cumulants,
+\emph{Biometrika} \textbf{32} (1942), 294--299.
+\href{https://doi.org/10.1093/biomet/32.3-4.294}{doi:10.1093/biomet/32.3-4.294}.
+\bibitem{Hall} P.~Hall, On the limiting behaviour of the mode and median of a sum of independent random variables,
+\emph{Ann. Probab.} \textbf{8} (1980), 419--430.
+\href{https://doi.org/10.1214/aop/1176994717}{doi:10.1214/aop/1176994717}.
+\bibitem{HS} T.~Hasebe and N.~Sakuma, Unimodality for free L\'evy processes, \emph{Ann. Inst. Henri Poincar\'e
+Probab. Stat.} \textbf{53} (2017), no.~2, 916--936.
+\href{https://doi.org/10.1214/16-AIHP742}{doi:10.1214/16-AIHP742}.
+\bibitem{HT} T.~Hasebe and S.~Thorbj\o rnsen, Unimodality of the freely selfdecomposable probability laws, \emph{J.
+Theoret. Probab.} \textbf{29} (2016), no.~3, 922--940.
+\href{https://doi.org/10.1007/s10959-015-0595-y}{doi:10.1007/s10959-015-0595-y}.
+\bibitem{HU} T.~Hasebe and Y.~Ueda, Large time unimodality for classical and free Brownian motions with initial
+distributions, \emph{ALEA Lat. Am. J. Probab. Math. Stat.} \textbf{15} (2018), 353--374.
+\href{https://doi.org/10.30757/ALEA.v15-15}{doi:10.30757/ALEA.v15-15}; arXiv:1710.08240.
+\bibitem{HUW} T.~Hasebe, Y.~Ueda and J.-C.~Wang, Log-unimodality for free positive multiplicative Brownian motion,
+\emph{Colloq. Math.} \textbf{169} (2022), no.~2, 209--226.
+\href{https://doi.org/10.4064/cm8413-6-2021}{doi:10.4064/cm8413-6-2021}.
+\bibitem{Ibr} I.~A.~Ibragimov, On the composition of unimodal distributions, \emph{Theory Probab. Appl.} \textbf{1}
+(1956), no.~2, 255--260. \href{https://doi.org/10.1137/1101021}{doi:10.1137/1101021}.
+\bibitem{mathlib} The mathlib Community, The Lean mathematical library, in \emph{Proceedings of the 9th ACM SIGPLAN
+International Conference on Certified Programs and Proofs (CPP 2020)}, ACM, 2020, 367--381.
+\href{https://doi.org/10.1145/3372885.3373824}{doi:10.1145/3372885.3373824}.
+\bibitem{sympy} A.~Meurer, C.~P.~Smith, M.~Paprocki, et al., SymPy: symbolic computing in Python, \emph{PeerJ Comput.
+Sci.} \textbf{3} (2017), e103. \href{https://doi.org/10.7717/peerj-cs.103}{doi:10.7717/peerj-cs.103}.
+\bibitem{Lean4} L.~de~Moura and S.~Ullrich, The Lean 4 theorem prover and programming language, in \emph{Automated
+Deduction -- CADE 28}, Lecture Notes in Computer Science, Springer, Cham, 2021, 625--635.
+\href{https://doi.org/10.1007/978-3-030-79876-5_37}{doi:10.1007/978-3-030-79876-5\_37}.
+\bibitem{mpmath} The mpmath development team, \emph{mpmath: a Python library for arbitrary-precision floating-point
+arithmetic}, version 1.3.0, 2023, \url{https://mpmath.org/}.
+\bibitem{NS} A.~Nica and R.~Speicher, \emph{Lectures on the Combinatorics of Free Probability}, London Mathematical
+Society Lecture Note Series \textbf{335}, Cambridge University Press, Cambridge, 2006.
+\href{https://doi.org/10.1017/CBO9780511735127}{doi:10.1017/CBO9780511735127}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public}.
+\end{thebibliography}
+\end{document}
