@@ -4,7 +4,7 @@ and evaluate S_moment(a*, s0) with the exact dual (1,0):
   a* = (psi0(1-q0), q0),  s0 = sqrt(1-q0),  H(a*) = Phi(1,0) - a1*.
 Expect a small ball containing 0 (Huang's lem:value-at-1-0 at kappa != 0)."""
 import sys
-sys.path.insert(0, '.')
+sys.path.insert(0, '/srv/aiwork/perceptron-margin-claude')
 import certify_km_slab as C
 import huang_cert_grid as GK
 from flint import arb

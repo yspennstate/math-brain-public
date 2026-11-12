@@ -1452,12 +1452,12 @@ OK   band=[0.007, 0.0105, 3.572872643043929, 3.589872643043929] cells=2 worst=-0
 OK   band=[0.007, 0.0105, 3.589872643043929, 3.606872643043929] cells=2 worst=-0.21196082254003912 (643s)
 OK   band=[0.007, 0.0105, 3.606872643043929, 3.622872643043929] cells=2 worst=-0.42775494766585176 (791s)
 Traceback (most recent call last):
-  File "./pilot_2varfn.py", line 122, in <module>
+  File "/srv/aiwork/perceptron-20260716/pilot_2varfn.py", line 122, in <module>
     main()
-  File "./pilot_2varfn.py", line 93, in main
+  File "/srv/aiwork/perceptron-20260716/pilot_2varfn.py", line 93, in main
     nf = SUPP.run_supplement(
          ^^^^^^^^^^^^^^^^^^^^
-  File "./supplement_0p05.py", line 62, in run_supplement
+  File "/srv/aiwork/perceptron-20260716/supplement_0p05.py", line 62, in run_supplement
     parameters=__import__('huang_cert_grid').parameter_packet(R1mod.KTAG),
                ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 AttributeError: module 'huang_cert_grid' has no attribute 'parameter_packet'

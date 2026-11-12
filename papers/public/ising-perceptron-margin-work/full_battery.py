@@ -42,7 +42,7 @@ def run(name, args, cwd=REPO):
 
 
 # the battery is background verification: demote ourselves so the
-# machine never feels it (and the lean kernel checks stop
+# owner's machine never feels it (and the lean kernel checks stop
 # dying to memory pressure we ourselves aggravate)
 if sys.platform == 'win32':
     try:

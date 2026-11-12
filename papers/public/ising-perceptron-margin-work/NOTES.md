@@ -214,7 +214,7 @@ extends mechanically as far as batch time allows, while the positive
 wall stays projected near 0.12.  The [-0.45, -0.35], [-0.55, -0.45]
 and [-0.65, -0.55] batches passed 200/200 each on the corrected
 lambda certificate (below), the last two launched 2-wide by the
-adaptive batch runner.  The lambda
+adaptive batch runner with the owner active on the box.  The lambda
 margin thins to 0.0400 at -0.65; per-slab margins for the whole strip
 are in results/lambda_margin_by_kappa.csv (1580 slabs), and on the
 corrected-form support ([-0.65, -0.35] and [0.10, 0.16], 680 slabs) a
@@ -604,6 +604,11 @@ maps them to code.  The failure story, kept honest here:
   certified reach is exactly T_of_angle, no shrink; failed bands
   would cap their directions at their inner radius.  The stage-2
   manifest records the SHA-256 of the Region-I manifest it consumed.
+- Ops scar, twice earned: a pkill pattern that matches its own
+  wrapper kills the ssh channel and silently skips the promote step -
+  the relaunch ran STALE code for forty minutes and only the
+  identical failure signature exposed it.  Verify the code a process
+  LOADED (sha256 both copies before launch), not just that it runs.
 - Reproducibility scar: a sweep rerun without HUANG_GRID_N=3600
   reproduced the coarse-grid failure class - a manifest that does not
   record its grid depth can be "reproduced" at a different depth.
@@ -807,7 +812,7 @@ on top of the certified alpha* bounds, which are the rigorous
 objects.
 
 
-## 15. Proof verification pass (2026-07-16); DS-condition port sized
+## 15. Session 2026-07-16: proof verification pass; DS-condition port sized
 
 Adversarial verification of every analytic proof in the paper (four
 independent referee agents, each instructed to refute):

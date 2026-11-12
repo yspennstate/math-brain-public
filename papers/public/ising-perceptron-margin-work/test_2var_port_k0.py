@@ -1,6 +1,6 @@
 """Regression: the general-kappa port at kappa=0 vs the original huanggrid."""
 import sys
-sys.path.insert(0, '.')
+sys.path.insert(0, '/srv/aiwork/perceptron-margin-claude')
 import core
 import huanggrid as G0
 import huang_cert_grid as GK
