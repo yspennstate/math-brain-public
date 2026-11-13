@@ -40,15 +40,27 @@ before the session ends, and the closing line of each report names the entry it 
 
 ## Answering "what did I ask?"
 
-When the owner asks what the agents are doing, any session can answer from the checklist instead of guessing:
+When the owner wants to know what the agents are doing, any session can answer from the checklist instead of guessing:
 open entries first (who, doing what, since when), then done and not yet seen, with the result lines, then the
-seen ones. Every entry carries the owner's words and the date, so the answer is checkable.
+seen ones. Every entry carries the asker's words and the date, so the answer is checkable.
 
 ## Storage
 
 Three files are enough: an append-only ledger of every change (one JSON line each, never rewritten), a state file
 rebuilt from the ledger, and a Markdown view grouped into open, done and unseen, and seen, by day. The ledger is
 the record. If the state file is ever damaged, it is rebuilt from the ledger.
+
+## Installing it
+
+The full version ships in `framework/`: the hook (`framework/dreaming/task_checklist_hook.py`), the command line
+(`checklist.py`), and the `/checklist` and `/seen` commands. One install wires it into both Claude Code and Codex:
+
+```
+python framework/bootstrap/install.py --project-dir <dir> --apply --merge-settings --merge-codex
+```
+
+From then on every agent session registers the owner's requests and reminds the agent of its open entries without
+being told to. Install flags, storage and tests are in `framework/docs/TASK_CHECKLIST.md`.
 
 ## In the starter
 

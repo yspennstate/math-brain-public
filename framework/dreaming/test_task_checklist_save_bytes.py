@@ -5,7 +5,7 @@ byte for byte what json.dump wrote before (5 Nov 2026).
 
 The store is a throwaway folder (TASK_CHECKLIST_HOME). The state is about 1.6 MB with non-ASCII asks, like a real one.
  B1 with json.dump made to raise, save_state still writes state.json and its hourly copy
- B2 state.json is exactly json.dumps(state, ensure_ascii=False, indent=1, sort_keys=True) in UTF-8 (with the OS line ending text mode writes)
+ B2 state.json is exactly json.dumps(state, ensure_ascii=False, indent=1, sort_keys=True) in UTF-8
  B3 the hourly copy is exactly the compact json.dumps(state, ensure_ascii=False, sort_keys=True)
  B4 (printed, not asserted) median save time of this module, and of --old when given
 With --old, the module before this change must fail B1 (it still calls json.dump, so the check can fail).
@@ -74,8 +74,7 @@ def run(path, tag):
             out["B1"] = (False, repr(exc)[:80])
         finally:
             json.dump = real_dump
-        # text mode writes the OS line ending, before this change and after it; compare against those bytes
-        want = json.dumps(st, ensure_ascii=False, indent=1, sort_keys=True).replace("\n", os.linesep).encode("utf-8")
+        want = json.dumps(st, ensure_ascii=False, indent=1, sort_keys=True).encode("utf-8")
         got = open(m.STATE, "rb").read() if os.path.exists(m.STATE) else b""
         out["B2"] = (got == want, len(got), len(want))
         bak = m._backup_path()
