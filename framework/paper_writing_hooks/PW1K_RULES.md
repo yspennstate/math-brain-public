@@ -1,0 +1,1173 @@
+# pw1k: the thousand paper-writing rules
+
+His words, 12 Nov 2026: "i want another 1k hooks written about how to actually write papers ... i have been screaming about using multiple words for the same thing ever since a referee found that out and it is still happening".
+
+1101 rules. Check a paper: `python ~/.claude/dreaming/paper_writing_hooks/pw1k.py lint <file.tex>`.
+
+
+## terms (634)
+
+- P0001 one of: vertex / node
+- P0002 one of: edge / link
+- P0003 one of: neighbor / adjacent vertex
+- P0004 one of: degree / valency
+- P0005 one of: cycle / circuit
+- P0006 one of: clique / complete subgraph
+- P0007 one of: independent set / stable set / coclique
+- P0008 one of: leaf / terminal node / external node / pendant vertex
+- P0009 one of: internal node / internal vertex / branch point / interior vertex
+- P0010 one of: subtree / clade / fringe subtree / pendant subtree
+- P0011 one of: hypergraph / set system / family of sets
+- P0012 one of: bijection / one-to-one correspondence
+- P0013 one of: injective / one-to-one
+- P0014 one of: generating function / generating series
+- P0015 one of: directed graph / digraph
+- P0016 one of: giant component / giant cluster
+- P0017 one of: random graph / random network
+- P0018 one of: Erdős-Rényi graph / binomial random graph / Gilbert graph
+- P0019 one of: configuration model / random graph with given degrees
+- P0020 one of: recursion / recurrence / recursive relation
+- P0021 one of: inner product / scalar product / dot product
+- P0022 one of: operator norm / spectral norm / induced 2-norm
+- P0023 one of: Frobenius norm / Hilbert-Schmidt norm
+- P0024 one of: self-adjoint / Hermitian
+- P0025 one of: positive semidefinite / nonnegative definite
+- P0026 one of: null space / kernel of
+- P0027 one of: largest eigenvalue / top eigenvalue / leading eigenvalue / principal eigenvalue / maximal eigenvalue / dominant eigenvalue
+- P0028 one of: smallest eigenvalue / bottom eigenvalue / least eigenvalue / minimal eigenvalue
+- P0029 one of: top eigenvector / leading eigenvector / principal eigenvector / dominant eigenvector / first eigenvector
+- P0030 one of: spectral gap / eigengap / eigenvalue gap
+- P0031 one of: resolvent / Green's function
+- P0032 one of: matrix entry / matrix element / matrix coefficient
+- P0033 one of: low-rank perturbation / finite-rank perturbation / spiked perturbation
+- P0034 one of: stationary point / critical point
+- P0035 one of: minimizer / minimum point / optimal solution / optimizer / optimum
+- P0036 one of: initial condition / initial datum / initial value
+- P0037 one of: a priori estimate / a priori bound
+- P0038 one of: weak solution / distributional solution / generalized solution
+- P0039 one of: upper bound / upper estimate
+- P0040 one of: lower bound / lower estimate
+- P0041 one of: absolute constant / universal constant / numerical constant
+- P0042 one of: map / mapping
+- P0043 one of: limit point / accumulation point / cluster point
+- P0044 one of: neighborhood / vicinity
+- P0045 one of: indicator function / characteristic function
+- P0046 one of: pointwise / coordinatewise / entrywise / componentwise / elementwise
+- P0047 one of: Hadamard product / entrywise product / Schur product / elementwise product
+- P0048 one of: rate of convergence / convergence rate / speed of convergence
+- P0049 one of: nondecreasing / weakly increasing / monotone increasing
+- P0050 one of: nonincreasing / weakly decreasing / monotone decreasing
+- P0051 one of: closed form / explicit formula / explicit expression / analytic expression
+- P0052 one of: scaling limit / continuum limit
+- P0053 one of: thermodynamic limit / infinite-volume limit / large-system limit
+- P0054 one of: window / band
+- P0055 one of: expectation / expected value
+- P0056 one of: almost surely / with probability one / almost certainly
+- P0057 one of: converges in distribution / converges in law / converges weakly
+- P0058 one of: converges in probability / converges in measure
+- P0059 one of: distribution function / cumulative distribution function
+- P0060 one of: stationary distribution / invariant distribution / invariant measure / stationary measure / equilibrium distribution / steady-state distribution
+- P0061 one of: transition matrix / transition kernel / Markov kernel / transition probability matrix / stochastic matrix
+- P0062 one of: hitting time / first passage time / first hitting time / first entrance time
+- P0063 one of: stopping time / Markov time / optional time
+- P0064 one of: total variation distance / variation distance / TV distance
+- P0065 one of: Brownian motion / Wiener process
+- P0066 one of: normal distribution / Gaussian distribution
+- P0067 one of: concentration inequality / deviation inequality / tail inequality / tail bound
+- P0068 one of: union bound / Boole's inequality / Bonferroni inequality
+- P0069 one of: sample path / trajectory / realization
+- P0070 one of: occupation time / sojourn time
+- P0071 one of: holding time / waiting time / dwell time
+- P0072 one of: absorbing state / cemetery state / trap state
+- P0073 one of: branching process / Galton-Watson process
+- P0074 one of: offspring distribution / reproduction law / progeny distribution
+- P0075 one of: empirical measure / empirical distribution
+- P0076 one of: empirical spectral distribution / empirical spectral measure / spectral distribution / eigenvalue distribution / spectral density / density of states
+- P0077 one of: Stieltjes transform / Cauchy transform
+- P0078 one of: semicircle law / semicircular law / semicircle distribution / Wigner law
+- P0079 one of: Marchenko-Pastur law / Marchenko-Pastur distribution / MP law
+- P0080 one of: outlier eigenvalue / spiked eigenvalue / spike eigenvalue
+- P0081 one of: sample covariance matrix / empirical covariance matrix / Gram matrix / Wishart matrix
+- P0082 one of: heavy-tailed / fat-tailed / thick-tailed
+- P0083 one of: tail index / tail exponent / power-law exponent / stability index
+- P0084 one of: stable law / stable distribution
+- P0085 one of: exponential tilting / change of measure / Esscher transform / Cramér transform
+- P0086 one of: rate function / action functional / Cramér function
+- P0087 one of: jump chain / embedded chain / skeleton chain
+- P0088 one of: exchangeable / permutation-invariant
+- P0089 one of: uniformly integrable / equi-integrable
+- P0090 one of: stochastic domination / stochastic ordering / stochastic dominance
+- P0091 one of: hitting probability / visit probability / occupation probability
+- P0092 one of: adapted / non-anticipating
+- P0093 one of: predictable / previsible
+- P0094 one of: càdlàg / RCLL
+- P0095 one of: sigma-algebra / sigma-field
+- P0096 one of: loss function / objective function / cost function / criterion function
+- P0097 one of: training loss / empirical risk / training error / train loss
+- P0098 one of: test error / generalization error / out-of-sample error / test loss / population risk
+- P0099 one of: learning rate / step size
+- P0100 one of: batch size / minibatch size
+- P0101 one of: training step / training iteration / gradient step / update step / optimization step
+- P0102 one of: neural network / neural net / deep network / deep neural network
+- P0103 one of: neuron / hidden unit
+- P0104 one of: activation function / nonlinearity / transfer function
+- P0105 one of: pruning / sparsification
+- P0106 one of: sparsity level / pruning ratio / pruning rate / pruning fraction / compression ratio / fraction of pruned weights
+- P0107 one of: fine-tuning / retraining
+- P0108 one of: weight decay / L2 regularization / ridge penalty
+- P0109 one of: training set / training data / train set
+- P0110 one of: test set / held-out set / test data
+- P0111 one of: training example / training point / training instance
+- P0112 one of: covariate / predictor / regressor / explanatory variable / independent variable
+- P0113 one of: response variable / dependent variable / outcome variable
+- P0114 one of: ground truth / true function / target function
+- P0115 one of: kernel regime / lazy regime / NTK regime / linearized regime
+- P0116 one of: feature learning regime / rich regime / mean-field regime / active regime
+- P0117 one of: infinite-width limit / large-width limit / wide-network limit
+- P0118 one of: embedding / latent vector / feature vector / representation vector
+- P0119 one of: hidden layer / intermediate layer / internal layer
+- P0120 one of: last layer / final layer / output layer / top layer / readout layer
+- P0121 one of: first layer / input layer / bottom layer
+- P0122 one of: weight matrix / parameter matrix / layer matrix
+- P0123 one of: hyperparameter / tuning parameter / free parameter
+- P0124 one of: baseline / reference method / comparison method
+- P0125 one of: accuracy / success rate / solve rate / pass rate / hit rate
+- P0126 one of: question bank / benchmark / test suite / evaluation set
+- P0127 one of: arm / treatment group / experimental condition
+- P0128 one of: memory node / memory card / memory record / memory entry / memory note
+- P0129 one of: recall at k / hit rate
+- P0130 one of: memory store / knowledge base / memory bank / memory system
+- P0131 one of: context window / context length / context size
+- P0132 one of: hallucination / confabulation / fabrication
+- P0133 one of: tool call / function call / tool use / tool invocation
+- P0134 one of: compaction / summarization / context compression
+- P0135 one of: wall-clock time / elapsed time / running time / execution time
+- P0136 one of: expiry / expiration / maturity
+- P0137 one of: strike price / exercise price
+- P0138 one of: underlying / underlier
+- P0139 one of: realized volatility / historical volatility / realized vol
+- P0140 one of: maximum drawdown / max drawdown / peak-to-trough decline
+- P0141 one of: annualized return / compound annual growth rate / annual return / yearly return
+- P0142 one of: leverage / gearing
+- P0143 one of: delta-neutral / delta-hedged / market-neutral
+- P0144 one of: rebalancing / rehedging
+- P0145 one of: transaction cost / trading cost / execution cost
+- P0146 one of: bid-ask spread / bid-offer spread
+- P0147 one of: mid price / midpoint / midquote
+- P0148 one of: backtest / historical simulation / replay
+- P0149 one of: out-of-sample / holdout period / walk-forward / test period
+- P0150 one of: option premium / option price
+- P0151 one of: exchange-traded fund / exchange-traded product / exchange-traded note
+- P0152 one of: leveraged ETF / geared ETF
+- P0153 one of: volatility decay / volatility drag / beta slippage / variance drain
+- P0154 one of: roll yield / roll return / roll cost
+- P0155 one of: grid / ladder
+- P0156 one of: rung / grid level / grid line
+- P0157 one of: net liquidation value / account value / account equity / net asset value
+- P0158 one of: borrow fee / borrow cost / borrow rate / stock loan fee
+- P0159 one of: theta / time decay
+- P0160 one of: gamma scalping / gamma trading / gamma harvesting / volatility harvesting
+- P0161 one of: market impact / price impact
+- P0162 one of: risk-free rate / riskless rate
+- P0163 one of: trading day / trading session / business day
+- P0164 one of: closing price / closing print / last price
+- P0165 one of: address / wallet
+- P0166 one of: unspent transaction output / unspent output / coin
+- P0167 one of: mixer / tumbler / mixing service
+- P0168 one of: block height / block number
+- P0169 one of: address cluster / entity / wallet cluster
+- P0170 one of: haircut rule / pro rata rule / proportional rule
+- P0171 one of: miner fee / transaction fee / network fee
+- P0172 one of: change output / change address
+- P0173 one of: exchange / custodial service / virtual asset service provider
+- P0174 one of: this paper / this article / this note / this manuscript / this study / the present paper
+- P0175 one of: appendix / supplement / supplementary material / supplementary information
+- P0176 one of: panel / subfigure / subplot / subpanel
+- P0177 one of: numerical experiment / numerical simulation / numerical test / numerical study / computer experiment
+- P0178 one of: Assumption / Hypothesis / Condition
+- P0179 one of: main theorem / main result / principal result / central result / key result
+- P0180 one of: proof sketch / sketch of proof / outline of proof / proof outline / idea of proof / proof idea
+- P0181 one of: open problem / open question / unsolved problem / unresolved question
+- P0182 one of: sufficiently large / large enough
+- P0183 one of: sufficiently small / small enough
+- P0184 one of: note that / observe that / notice that / remark that
+- P0185 one of: right-hand side / RHS
+- P0186 one of: left-hand side / LHS
+- P0187 one of: such that / s.t.
+- P0188 one of: if and only if / iff
+- P0189 one of: without loss of generality / WLOG!
+- P0190 one of: with high probability / w.h.p.
+- P0191 one of: almost everywhere / a.e.
+- P0192 one of: almost surely / a.s.
+- P0193 one of: with respect to / w.r.t.
+- P0194 one of: respectively / resp.
+- P0195 one of: tends to infinity / goes to infinity / grows to infinity / diverges to infinity
+- P0196 one of: tends to zero / goes to zero / converges to zero
+- P0197 one of: prior work / previous work / earlier work / existing work / past work
+- P0198 one of: repository / repo
+- P0199 one of: refut / disprov
+- P0200 one of: data is / data are
+- P0201 one of: percent / per cent
+- P0202 one of: nonnegative / non-negative
+- P0203 one of: nonzero / non-zero
+- P0204 one of: nonempty / non-empty
+- P0205 one of: nontrivial / non-trivial
+- P0206 one of: nonlinear / non-linear
+- P0207 one of: nonconvex / non-convex
+- P0208 one of: nonsmooth / non-smooth
+- P0209 one of: nonuniform / non-uniform
+- P0210 one of: nonasymptotic / non-asymptotic
+- P0211 one of: nonparametric / non-parametric
+- P0212 one of: nonstationary / non-stationary
+- P0213 one of: noncommutative / non-commutative
+- P0214 one of: nondegenerate / non-degenerate
+- P0215 one of: nonsingular / non-singular
+- P0216 one of: nonrandom / non-random
+- P0217 one of: nonconstant / non-constant
+- P0218 one of: nonvanishing / non-vanishing
+- P0219 one of: nonuniqueness / non-uniqueness
+- P0220 one of: nonexistence / non-existence
+- P0221 one of: nonlocal / non-local
+- P0222 one of: nonintersecting / non-intersecting
+- P0223 one of: noncrossing / non-crossing
+- P0224 one of: nonbacktracking / non-backtracking
+- P0225 one of: noncompact / non-compact
+- P0226 one of: nonstandard / non-standard
+- P0227 one of: nonincreasing / non-increasing
+- P0228 one of: nondecreasing / non-decreasing
+- P0229 one of: nonadaptive / non-adaptive
+- P0230 one of: nonseparable / non-separable
+- P0231 one of: nonatomic / non-atomic
+- P0232 one of: semidefinite / semi-definite
+- P0233 one of: semigroup / semi-group
+- P0234 one of: semimartingale / semi-martingale
+- P0235 one of: semicircle / semi-circle
+- P0236 one of: semicontinuous / semi-continuous
+- P0237 one of: subexponential / sub-exponential
+- P0238 one of: subgaussian / sub-Gaussian
+- P0239 one of: submartingale / sub-martingale
+- P0240 one of: subgraph / sub-graph
+- P0241 one of: sublinear / sub-linear
+- P0242 one of: subadditive / sub-additive
+- P0243 one of: subcritical / sub-critical
+- P0244 one of: supercritical / super-critical
+- P0245 one of: superlinear / super-linear
+- P0246 one of: supermartingale / super-martingale
+- P0247 one of: preprocessing / pre-processing
+- P0248 one of: pretraining / pre-training
+- P0249 one of: precompute / pre-compute
+- P0250 one of: postprocessing / post-processing
+- P0251 one of: multiscale / multi-scale
+- P0252 one of: multilayer / multi-layer
+- P0253 one of: multidimensional / multi-dimensional
+- P0254 one of: multiclass / multi-class
+- P0255 one of: multitask / multi-task
+- P0256 one of: multivariate / multi-variate
+- P0257 one of: coprime / co-prime
+- P0258 one of: codomain / co-domain
+- P0259 one of: cofactor / co-factor
+- P0260 one of: reparameteriz+ / re-parameteriz+
+- P0261 one of: parameteriz / parametriz
+- P0262 one of: rescal / re-scal
+- P0263 one of: reweight / re-weight
+- P0264 one of: reindex / re-index
+- P0265 one of: renormaliz / re-normaliz
+- P0266 one of: resampl / re-sampl
+- P0267 one of: rebalanc / re-balanc
+- P0268 one of: well-defined / well defined
+- P0269 one of: well-posed / well posed
+- P0270 one of: crossover / cross-over
+- P0271 one of: cross-validation / cross validation
+- P0272 one of: cross-entropy / cross entropy
+- P0273 one of: overparameterized / over-parameterized
+- P0274 one of: overfit / over-fit
+- P0275 one of: underfit / under-fit
+- P0276 one of: underdetermined / under-determined
+- P0277 one of: pseudorandom / pseudo-random
+- P0278 one of: pseudoinverse / pseudo-inverse
+- P0279 one of: quasirandom / quasi-random
+- P0280 one of: quasiconvex / quasi-convex
+- P0281 one of: hyperparameter / hyper-parameter
+- P0282 one of: dataset / data set / data-set
+- P0283 one of: timestep / time step / time-step
+- P0284 one of: timestamp / time stamp / time-stamp
+- P0285 one of: runtime / run time / run-time
+- P0286 one of: lookup / look-up
+- P0287 one of: speedup / speed-up
+- P0288 one of: tradeoff / trade-off
+- P0289 one of: setup / set-up
+- P0290 one of: cutoff / cut-off
+- P0291 one of: backtest / back-test
+- P0292 one of: drawdown / draw-down
+- P0293 one of: checkpoint / check-point
+- P0294 one of: minibatch / mini-batch
+- P0295 one of: feedforward / feed-forward
+- P0296 one of: backpropagation / back-propagation
+- P0297 one of: eigenvalue / eigen-value
+- P0298 one of: eigenvector / eigen-vector
+- P0299 one of: eigendecomposition / eigen-decomposition
+- P0300 one of: high-dimensional / high dimensional
+- P0301 one of: low-rank / low rank
+- P0302 one of: full-rank / full rank
+- P0303 one of: closed-form / closed form
+- P0304 one of: worst-case / worst case
+- P0305 one of: large-scale / large scale
+- P0306 one of: real-valued / real valued
+- P0307 one of: positive-definite / positive definite
+- P0308 one of: first-order / first order
+- P0309 one of: second-order / second order
+- P0310 one of: long-range / long range
+- P0311 one of: mean-field / mean field / meanfield
+- P0312 one of: fixed point / fixed-point / fixpoint
+- P0313 one of: a priori / apriori / a-priori
+- P0314 one of: a posteriori / aposteriori / a-posteriori
+- P0315 one of: ad hoc / ad-hoc / adhoc
+- P0316 one of: iid / i.i.d. / IID
+- P0317 one of: counterexample / counter-example / counter example
+- P0318 one of: state of the art / state-of-the-art
+- P0319 one of: pseudocode / pseudo-code
+- P0320 one of: monotone / monotonic
+- P0321 one of: stop-loss / stop loss
+- P0322 one of: peel chain / peeling chain
+- P0323 one of: P&L / PnL / P/L / profit and loss
+- P0324 one of: rank-one / rank-1
+- P0325 one of: one-dimensional / 1-dimensional
+- P0326 one of: two-dimensional / 2-dimensional
+- P0327 one of: zero-mean / mean-zero
+- P0328 one of: Bitcoin / bitcoin
+- P0329 one of: Internet / internet
+- P0330 one of: email / e-mail
+- P0331 one of: online / on-line
+- P0332 one of: offline / off-line
+- P0333 one of: open-source / open source / opensource
+- P0334 one of: real-world / real world
+- P0335 one of: real-time / real time / realtime
+- P0336 one of: bandwidth / band-width
+- P0337 one of: bottleneck / bottle-neck
+- P0338 one of: blowup / blow-up
+- P0339 one of: breakdown / break-down
+- P0340 one of: buildup / build-up
+- P0341 one of: crosscheck / cross-check
+- P0342 one of: downstream / down-stream
+- P0343 one of: upstream / up-stream
+- P0344 one of: framework / frame-work
+- P0345 one of: groundtruth / ground truth / ground-truth
+- P0346 one of: hardcode / hard-code
+- P0347 one of: interarrival / inter-arrival
+- P0348 one of: lifetime / life-time
+- P0349 one of: nearest-neighbor / nearest neighbor
+- P0350 one of: piecewise / piece-wise
+- P0351 one of: pairwise / pair-wise
+- P0352 one of: stepwise / step-wise
+- P0353 one of: layerwise / layer-wise
+- P0354 one of: blockwise / block-wise
+- P0355 one of: rowwise / row-wise
+- P0356 one of: columnwise / column-wise
+- P0357 one of: workflow / work-flow
+- P0358 one of: zeroth / 0th / 0-th
+- P0359 one of: Chebyshev / Tchebycheff
+- P0360 one of: Marchenko / Marčenko
+- P0361 one of: Lévy / Levy
+- P0362 one of: Itô / Ito
+- P0363 one of: Skorokhod / Skorohod
+- P0364 one of: Schwarz inequality / Schwartz inequality
+- P0365 one of: Hölder / Holder
+- P0366 one of: Erdős / Erdos
+- P0367 one of: Rényi / Renyi
+- P0368 one of: Poincaré / Poincare
+- P0369 one of: Kolmogorov / Kolmogoroff
+- P0370 one of: Lyapunov / Liapunov
+- P0371 one of: Markov / Markoff
+- P0372 one of: Chernoff / Chernov
+- P0373 one of: Hoeffding / Höffding
+- P0374 one of: Khinchin / Khintchine
+- P0375 one of: Lindeberg / Lindberg
+- P0376 one of: Esseen / Esséen
+- P0377 one of: Fréchet / Frechet
+- P0378 one of: Gâteaux / Gateaux
+- P0379 one of: Stieltjes / Stieltjies
+- P0380 one of: Schrödinger / Schrodinger
+- P0381 one of: Kähler / Kahler
+- P0382 one of: Möbius / Mobius
+- P0383 one of: Gödel / Godel
+- P0384 one of: Pólya / Polya
+- P0385 one of: Szegő / Szego
+- P0386 one of: Szemerédi / Szemeredi
+- P0387 one of: Lovász / Lovasz
+- P0388 one of: Turán / Turan
+- P0389 one of: Bollobás / Bollobas
+- P0390 one of: Łojasiewicz / Lojasiewicz
+- P0391 one of: Carathéodory / Caratheodory
+- P0392 one of: Wiener / Weiner
+- P0393 one of: Riemann / Reimann
+- P0394 one of: Lebesgue / Lebesque
+- P0395 one of: Dirichlet / Dirichelet
+- P0396 one of: Nikodym / Nikodým
+- P0397 one of: Chervonenkis / Červonenkis
+- P0398 one of: Leibler / Liebler
+- P0399 one of: Wasserstein / Vasershtein
+- P0400 one of: Kantorovich / Kantorovitch
+- P0401 one of: Prokhorov / Prohorov
+- P0402 one of: Dobrushin / Dobrušin
+- P0403 one of: Girsanov / Girsanow
+- P0404 one of: Feynman-Kac / Feynman-Kač
+- P0405 one of: Uhlenbeck / Ulhenbeck
+- P0406 one of: Fokker-Planck / Fokker-Plank
+- P0407 one of: Black-Scholes / Black-Sholes
+- P0408 one of: Poisson / Poission
+- P0409 one of: Bernoulli / Bernouilli
+- P0410 one of: Rademacher / Radamacher
+- P0411 one of: Wishart / Wishert
+- P0412 one of: Frobenius / Frobenious
+- P0413 one of: Fischer / Fisher
+- P0414 one of: Péché / Peche
+- P0415 one of: Voiculescu / Voiculesku
+- P0416 one of: Talagrand / Talagrande
+- P0417 one of: Grönwall / Gronwall
+- P0418 one of: Minkowski / Minkowsky
+- P0419 one of: Jensen / Jenson
+- P0420 one of: Cramér / Cramer
+- P0421 one of: Varadhan / Varadan
+- P0422 one of: Donsker / Donskar
+- P0423 one of: Kesten / Kestin
+- P0424 one of: Aldous / Aldus
+- P0425 one of: Diaconis / Diakonis
+- P0426 one of: Janson / Jansson
+- P0427 one of: Łuczak / Luczak
+- P0428 one of: Ruciński / Rucinski
+- P0429 one of: Ramsey / Ramsay
+- P0430 one of: Füredi / Furedi
+- P0431 one of: Rödl / Rodl
+- P0432 one of: Komlós / Komlos
+- P0433 one of: Gyárfás / Gyarfas
+- P0434 one of: Nešetřil / Nesetril
+- P0435 one of: Chvátal / Chvatal
+- P0436 one of: Kőnig / Konig
+- P0437 one of: Dvoretzky / Dvoretsky
+- P0438 one of: Grothendieck / Grothendiek
+- P0439 one of: Brouwer / Brower
+- P0440 one of: Laguerre / Laguere
+- P0441 one of: Legendre / Legrendre
+- P0442 one of: Vandermonde / Van der Monde
+- P0443 one of: Cholesky / Choleski
+- P0444 one of: Gram-Schmidt / Gram-Schmitt
+- P0445 one of: Nyström / Nystrom
+- P0446 one of: Sobolev / Sobolew
+- P0447 one of: Calderón / Calderon
+- P0448 one of: Plancherel / Plancheral
+- P0449 one of: Parseval / Parceval
+- P0450 one of: Navier-Stokes / Navier-Stoke
+- P0451 one of: Boltzmann / Boltzman
+- P0452 one of: Kirchhoff / Kirchoff
+- P0453 one of: Noether / Nöther
+- P0454 one of: Schur / Shur
+- P0455 one of: Cayley / Caley
+- P0456 one of: Künneth / Kunneth
+- P0457 one of: Čech / Cech
+- P0458 one of: Teichmüller / Teichmuller
+- P0459 one of: Loewner / Löwner
+- P0460 one of: Mandelbrot / Mandlebrot
+- P0461 one of: Hausdorff / Hausdorf
+- P0462 one of: Smirnov / Smirnoff
+- P0463 one of: Wilcoxon / Wilcoxen
+- P0464 one of: Neyman / Neymann
+- P0465 one of: Gumbel / Gumble
+- P0466 one of: Weibull / Weibul
+- P0467 one of: Pareto / Paretto
+- P0468 one of: Markowitz / Markovitz
+- P0469 one of: Sharpe ratio / Sharp ratio
+- P0470 one of: Vasicek / Vasiček
+- P0471 one of: Merkle tree / Merkel tree
+- P0472 one of: Schnorr / Schnoor
+- P0473 one of: Diffie-Hellman / Diffie-Helman
+- P0474 one of: Shmalo / Schmalo
+- P0475 one of: Yitzchak / Yitzhak
+- P0476 one of: Lipschitz / Lipshitz
+- P0477 one of: Gaussian / Guassian
+- P0478 one of: Hermitian / Hermetian
+- P0479 one of: Laplacian / Lapacian
+- P0480 one of: Euclidean / Euclidian
+- P0481 one of: Noetherian / Noetherean
+- P0482 one of: Bayesian / Baysian
+- P0483 one of: Hessian / Hesian
+- P0484 one of: Jacobian / Jacobean
+- P0485 one of: Riemannian / Reimannian
+- P0486 one of: Hamiltonian / Hamiltonion
+- P0487 one of: Lagrangian / Lagrangean
+- P0488 one of: Cartesian / Cartesion
+- P0489 one of: Hermitian / Hermitean
+- P0490 one of: Newtonian / Newtonion
+- P0491 one of: stochastic gradient descent / SGD
+- P0492 one of: gradient descent / GD
+- P0493 one of: neural tangent kernel / NTK
+- P0494 one of: random matrix theory / RMT
+- P0495 one of: empirical spectral distribution / ESD
+- P0496 one of: central limit theorem / CLT
+- P0497 one of: law of large numbers / LLN
+- P0498 one of: large deviation principle / LDP
+- P0499 one of: signal-to-noise ratio / SNR
+- P0500 one of: singular value decomposition / SVD
+- P0501 one of: principal component analysis / PCA
+- P0502 one of: probability density function / pdf
+- P0503 one of: cumulative distribution function / cdf
+- P0504 one of: moment generating function / MGF
+- P0505 one of: independent and identically distributed / i.i.d.
+- P0506 one of: partial differential equation / PDE
+- P0507 one of: ordinary differential equation / ODE
+- P0508 one of: stochastic differential equation / SDE
+- P0509 one of: Gaussian orthogonal ensemble / GOE
+- P0510 one of: Gaussian unitary ensemble / GUE
+- P0511 one of: large language model / LLM
+- P0512 one of: multilayer perceptron / MLP
+- P0513 one of: convolutional neural network / CNN
+- P0514 one of: recurrent neural network / RNN
+- P0515 one of: rectified linear unit / ReLU
+- P0516 one of: mean squared error / MSE
+- P0517 one of: root mean square error / RMSE
+- P0518 one of: maximum likelihood estimator / MLE
+- P0519 one of: reproducing kernel Hilbert space / RKHS
+- P0520 one of: Markov chain Monte Carlo / MCMC
+- P0521 one of: directed acyclic graph / DAG
+- P0522 one of: breadth-first search / BFS
+- P0523 one of: depth-first search / DFS
+- P0524 one of: exchange-traded fund / ETF
+- P0525 one of: implied volatility / IV
+- P0526 one of: net asset value / NAV
+- P0527 one of: out-of-the-money / OTM
+- P0528 one of: in-the-money / ITM
+- P0529 one of: at-the-money / ATM
+- P0530 one of: days to expiry / DTE
+- P0531 one of: unspent transaction output / UTXO
+- P0532 one of: first-in-first-out / FIFO
+- P0533 one of: value at risk / VaR
+- P0534 one of: compound annual growth rate / CAGR
+- P0535 one of: total variation / TV
+- P0536 one of: Kullback-Leibler / KL
+- P0537 one of: batch normalization / BatchNorm
+- P0538 one of: natural language processing / NLP
+- P0539 one of: partially ordered set / poset
+- P0540 one of: probability mass function / pmf
+- P0541 one of: generalized linear model / GLM
+- P0542 one of: ordinary least squares / OLS
+- P0543 one of: expectation-maximization / EM
+- P0544 one of: proof of work / PoW
+- P0545 one of: net liquidation value / NLV
+- P0546 one of: open interest / OI
+- P0547 one of: color / colour
+- P0548 one of: neighbor / neighbour
+- P0549 one of: center / centre
+- P0550 one of: behavior / behaviour
+- P0551 one of: modeling / modelling
+- P0552 one of: labeled / labelled
+- P0553 one of: analyze! / analyse!
+- P0554 one of: normaliz / normalis
+- P0555 one of: generaliz / generalis
+- P0556 one of: optimiz / optimis
+- P0557 one of: minimiz / minimis
+- P0558 one of: maximiz / maximis
+- P0559 one of: regulariz / regularis
+- P0560 one of: initializ / initialis
+- P0561 one of: characteriz / characteris
+- P0562 one of: discretiz / discretis
+- P0563 one of: lineariz / linearis
+- P0564 one of: summariz / summaris
+- P0565 one of: emphasiz / emphasis
+- P0566 one of: recogniz / recognis
+- P0567 one of: utiliz / utilis
+- P0568 one of: organiz / organis
+- P0569 one of: realiz / realis
+- P0570 one of: factoriz / factoris
+- P0571 one of: diagonaliz / diagonalis
+- P0572 one of: symmetriz / symmetris
+- P0573 one of: randomiz / randomis
+- P0574 one of: standardiz / standardis
+- P0575 one of: penaliz / penalis
+- P0576 one of: visualiz / visualis
+- P0577 one of: localiz / localis
+- P0578 one of: formaliz / formalis
+- P0579 one of: specializ / specialis
+- P0580 one of: stabiliz / stabilis
+- P0581 one of: quantiz / quantis
+- P0582 one of: tokeniz / tokenis
+- P0583 one of: vectoriz / vectoris
+- P0584 one of: memoriz / memoris
+- P0585 one of: prioritiz / prioritis
+- P0586 one of: categoriz / categoris
+- P0587 one of: hypothesiz / hypothesis
+- P0588 one of: synthesiz / synthesis
+- P0589 one of: capitaliz / capitalis
+- P0590 one of: annualiz / annualis
+- P0591 one of: equaliz / equalis
+- P0592 one of: idealiz / idealis
+- P0593 one of: polariz / polaris
+- P0594 one of: centraliz / centralis
+- P0595 one of: favor / favour
+- P0596 one of: gray / grey
+- P0597 one of: program / programme
+- P0598 one of: catalog / catalogue
+- P0599 one of: analog / analogue
+- P0600 one of: defense / defence
+- P0601 one of: fulfill / fulfil!
+- P0602 one of: skeptic / sceptic
+- P0603 one of: math / maths
+- P0604 one of: toward / towards
+- P0605 one of: among / amongst
+- P0606 one of: while / whilst
+- P0607 one of: learned / learnt
+- P0608 one of: canceled / cancelled
+- P0609 one of: traveling / travelling
+- P0610 one of: focused / focussed
+- P0611 one of: judgment / judgement
+- P0612 one of: acknowledgment / acknowledgement
+- P0613 one of: artifact / artefact
+- P0614 one of: fiber / fibre
+- P0615 one of: rigor / rigour
+- P0616 one of: flavor / flavour
+- P0617 one of: signaling / signalling
+- P0618 one of: tunneling / tunnelling
+- P0619 one of: license / licence
+- P0620 one of: meter / metre
+- P0621 one of: aging / ageing
+- P0622 one of: dialog / dialogue
+- P0623 one of: parametriz+ / parametris+
+- P0624 one of: criticiz / criticis
+- P0625 one of: neutraliz / neutralis
+
+## notation (154)
+
+- P0626 one of: \epsilon / \varepsilon
+- P0627 one of: \phi / \varphi
+- P0628 one of: \theta / \vartheta
+- P0629 one of: \rho / \varrho
+- P0630 one of: \kappa / \varkappa
+- P0631 one of: \emptyset / \varnothing
+- P0632 one of: \leq / \leqslant
+- P0633 one of: \geq / \geqslant
+- P0634 one of: \to / \longrightarrow
+- P0635 one of: \mathbb{E} / \mathbf{E} / \mathrm{E}
+- P0636 one of: \mathbb{P} / \Pr / \mathbf{P} / \mathrm{P}
+- P0637 one of: \mathbb{R} / \mathbf{R}
+- P0638 one of: \mathbb{N} / \mathbf{N}
+- P0639 one of: \mathbb{Z} / \mathbf{Z}
+- P0640 one of: \mathbb{C} / \mathbf{C}
+- P0641 one of: \mathbb{1} / \mathbbm{1} / \mathds{1} / \mathbf{1}
+- P0642 one of: := / \coloneqq / \triangleq / \stackrel{\text{def}}{=}
+- P0643 one of: ^\top / ^T / ^\intercal / ^{\mathsf{T}} / ^{\mathrm{T}}
+- P0644 one of: \setminus / \backslash / \smallsetminus
+- P0645 one of: \subset / \subseteq
+- P0646 one of: \supset / \supseteq
+- P0647 one of: \log / \ln
+- P0648 one of: \bar / \overline
+- P0649 one of: \tilde / \widetilde
+- P0650 one of: \hat / \widehat
+- P0651 one of: \mathcal / \mathscr
+- P0652 one of: \mathbf / \bm / \boldsymbol / \pmb
+- P0653 one of: \mathbb{E}[ / \mathbb{E}( / \mathbb{E}\{
+- P0654 one of: \mathbb{P}[ / \mathbb{P}( / \mathbb{P}\{
+- P0655 one of: \operatorname{Var} / \operatorname{var} / \mathbb{V}
+- P0656 one of: \operatorname{Tr} / \operatorname{tr} / \operatorname{trace}
+- P0657 one of: \operatorname{Cov} / \operatorname{cov}
+- P0658 one of: \operatorname{diag} / \operatorname{Diag}
+- P0659 one of: \operatorname{rank} / \operatorname{rk} / \operatorname{Rank}
+- P0660 one of: \operatorname{supp} / \operatorname{Supp}
+- P0661 one of: \operatorname{sign} / \operatorname{sgn}
+- P0662 one of: \operatorname{argmin} / \arg\min
+- P0663 one of: \Re / \operatorname{Re}
+- P0664 one of: \Im / \operatorname{Im}
+- P0665 one of: ^c / ^\complement / ^{\mathsf{c}}
+- P0666 one of: [n] / \{1,\ldots,n\}
+- P0667 one of: \nabla / \operatorname{grad}
+- P0668 one of: \ell-2 / \ell^2
+- P0669 one of: L-2 / L^2
+- P0670 one of: \ell-1 / \ell^1
+- P0671 one of: L-1 / L^1
+- P0672 one of: \mathcal{O}( / O(
+- P0673 one of: \mathcal{N}( / N(0
+- P0674 one of: \mathbf{I} / \mathbb{I} / \mathrm{Id} / \mathrm{I}
+- P0675 one of: \Rightarrow / \implies
+- P0676 one of: \iff / \Leftrightarrow / \Longleftrightarrow
+- P0677 one of: \binom / \choose
+- P0678 one of: \langle / \left<
+- P0679 one of: \Vert / \lVert
+- P0680 one of: \mid / \vert
+- P0681 one of: \dots / \ldots
+- P0682 one of: \frac{1}{2} / \frac12
+- P0683 one of: \mathrm{d}x / \,dx
+- P0684 one of: \mathrm{e}^ / e^
+- P0685 one of: \mathrm{i} / \mathbf{i} / \sqrt{-1}
+- P0686 one of: \dagger / ^* / ^{\mathsf{H}}
+- P0687 one of: \eqref{ / (\ref{
+- P0688 one of: \emph{ / \textit{ / {\it
+- P0689 one of: \textbf{ / {\bf
+- P0690 one of: \cref{ / \ref{
+- P0691 one of: \[ / \begin{equation*}
+- P0692 one of: \begin{proof} / \noindent\textbf{Proof
+- P0693 one of: \qed / \hfill$\square$
+- P0694 one of: Section~\ref / Sec.~\ref / \S\ref / section~\ref
+- P0695 one of: Figure~\ref / Fig.~\ref / figure~\ref
+- P0696 one of: Equation~\eqref / Eq.~\eqref / equation~\eqref
+- P0697 one of: Theorem~\ref / Thm.~\ref / theorem~\ref
+- P0698 one of: Lemma~\ref / Lem.~\ref / lemma~\ref
+- P0699 one of: Table~\ref / Tab.~\ref / table~\ref
+- P0700 one of: Appendix~\ref / App.~\ref / appendix~\ref
+- P0701 one of: Proposition~\ref / Prop.~\ref / proposition~\ref
+- P0702 one of: Corollary~\ref / Cor.~\ref / corollary~\ref
+- P0703 one of: Definition~\ref / Def.~\ref / definition~\ref
+- P0704 one of: Remark~\ref / Rem.~\ref / remark~\ref
+- P0705 one of: Algorithm~\ref / Alg.~\ref / algorithm~\ref
+- P0706 \lesssim is used and no sentence says what the hidden constant may depend on
+- P0707 \asymp is used and never given a meaning (two-sided bound with which constants?)
+- P0708 \sim is used and no sentence says whether it means 'ratio tends to 1', 'has law' or 'same order'
+- P0709 \approx is used with no word on its sense (rounded value, heuristic, or an asymptotic statement)
+- P0710 \ll or \gg is used and never explained (Vinogradov bound, or 'much smaller'?)
+- P0711 little-o is used and no sentence says in which limit
+- P0712 big-O is used and no sentence says what the implied constant depends on
+- P0713 soft-O is used and no sentence says which factors it hides
+- P0714 \Omega( ) or \Theta( ) is used as an order symbol and never defined (the two communities read \Omega differently)
+- P0715 \otimes is used and never named (tensor, Kronecker or product measure)
+- P0716 \oplus is used and never named
+- P0717 \wedge or \vee is used and never named (minimum, exterior product, logical and?)
+- P0718 [n] is used and never defined as {1,...,n}
+- P0719 a decorated arrow is used and no sentence names the mode of convergence
+- P0720 an indicator symbol is used and never called an indicator
+- P0721 \# is used and never said to mean 'number of'
+- P0722 an order sign (\preceq, \succeq) is used and the order is never named
+- P0723 a star or dagger superscript is used and never named (adjoint, dual, optimiser?)
+- P0724 \perp is used and never named (independent or orthogonal)
+- P0725 \triangle is used and never named
+- P0726 \mathbb{N} is used and no sentence says whether it contains 0
+- P0727 a binary operation sign (\ast, \circ, \boxplus) is used and the operation is never named
+- P0728 A sentence starts with a formula; start it with a word ('The function $f$ is ...').
+- P0729 Two formulas separated only by a comma (eight or more times); put a word between them or make one formula.
+- P0730 A word used as a subscript is set in italics, as a product of letters; write _{\mathrm{max}} or define a macro.
+- P0731 A function name typed without its backslash (log, max, sup); it prints as italic letters.
+- P0732 A multi-letter operator typed as italic letters (Var, rank, supp); declare it with \DeclareMathOperator.
+- P0733 A plain-TeX $$ display; use \[ \] or an equation environment.
+- P0734 eqnarray spaces the relation sign wrongly; use align.
+- P0735 Three typed dots in a formula; use \dots.
+- P0736 Angle brackets typed as < and >; use \langle and \rangle.
+- P0737 Norm bars typed as ||; use \| or \lVert ... \rVert.
+- P0738 Dimensions typed with the letter x (3x3); write $3\times 3$.
+- P0739 An asterisk as a product sign; use \cdot, \times or nothing (keep * for convolution, and say so).
+- P0740 A word typed in math mode ('for all', 'if') prints as italic letters; put it in \text{...}.
+- P0741 \mbox in a formula does not scale in subscripts; use \text.
+- P0742 An old font switch ({\bf ...}); use \textbf, \mathbf, \mathcal, \emph.
+- P0743 Plain-TeX \over, \atop or \choose; use \frac, \binom, \substack.
+- P0744 \def overwrites silently; use \newcommand so a name clash is an error.
+- P0745 A label with a space or a bare number; name it by content, with a prefix (thm:, lem:, eq:, sec:, fig:, tab:).
+- P0746 A formula is referred to by position ('the above inequality'); number it and use \eqref.
+- P0747 A number typed by hand after Theorem, Lemma, Section, Figure; use \ref so it follows the numbering (a numbered result of another paper keeps its number, next to the citation).
+- P0748 An equation number typed by hand; use \eqref.
+- P0749 A plain space before \ref (three or more) lets the number fall onto the next line; write Theorem~\ref{...}.
+- P0750 A reference word in lower case before \ref; a numbered item takes a capital (Theorem~\ref{...}, Section~\ref{...}).
+- P0751 An equation cited with \ref prints a bare number; use \eqref.
+- P0752 Double parentheses: \eqref already prints them.
+- P0753 'Theorem' in front of a label that is not a theorem's. 4 Aug: 'Many of the Lemma and Cor are cited as theorems'.
+- P0754 'Lemma' in front of a label that is not a lemma's.
+- P0755 'Corollary' in front of a label that is not a corollary's.
+- P0756 'Proposition' in front of a label that is not a proposition's.
+- P0757 'Definition' or 'Remark' in front of a label of another kind.
+- P0758 'Section' or 'Appendix' in front of a label that is not a section's.
+- P0759 'Figure' or 'Table' in front of a label of another kind.
+- P0760 \ref to an equation prints a bare number; use \eqref.
+- P0761 \eqref on a label that is not an equation's prints the number in parentheses.
+- P0762 A plural reference word with one \ref.
+- P0763 A range of references joined by a hyphen; use an en dash (--).
+- P0764 An ordinal typed as $n$'th or $n^{th}$; write $n$th.
+- P0765 \left ... \right around a single letter adds space and no height; drop them.
+- P0766 A built fraction in an exponent or index sets too small; write it with a slash (x^{-1/2}).
+- P0767 \big( with no l or r opens no pair; use \bigl( ... \bigr).
+- P0768 Standing conventions are scattered (four or more 'throughout / from now on'); collect them in one notation paragraph and list them in the notation appendix.
+
+## statements and proofs (29)
+
+- P0769 A statement says 'we show'; a theorem states what holds, its proof shows it.
+- P0770 A statement leans on 'suitable conditions'; write the conditions out or name the numbered assumption.
+- P0771 'Sufficiently large' in a statement with no word on the threshold; say what it depends on, or give it.
+- P0772 A hedge inside a statement; a statement is exact, and the heuristic goes in a remark before it.
+- P0773 A statement points back with 'as above'; a statement is read alone, so name the object or \ref the definition.
+- P0774 'etc.' or 'and so on' leaves the list to the reader; finish the list or state the rule.
+- P0775 'For any' reads as 'for every' or as 'for some'; write the one meant.
+- P0776 A constant in a statement with no word on what it depends on.
+- P0777 A step is waved through ('a straightforward computation shows'). Write the computation. 1 Oct: 'details written out ... so that someone can sit down and read it'.
+- P0778 A 'standard argument' with no citation and no proof; cite a place where it is written out, or write it.
+- P0779 A proof or a step is omitted. A referee wrote 'the proof is too compressed for a journal submission' (10 Jun); give it, in an appendix if long.
+- P0780 Four or more steps are settled by 'similarly'; write the first of each kind in full and say what changes.
+- P0781 'It can be shown' with no proof and no reference; show it or cite it.
+- P0782 'Without loss of generality' with no reason; say in one clause why the general case follows.
+- P0783 A contraction; write the words out.
+- P0784 Spoken register ('a lot of', 'plug in', 'get rid of'); use the written word (many, substitute, remove).
+- P0785 A proof headed 'Proof of the theorem' with no number; write \begin{proof}[Proof of Theorem~\ref{...}].
+- P0786 Shorthand in running text (iff, s.t., w.r.t., resp.); write the words.
+- P0787 A relation sign typed in running text outside a formula; put the formula in math mode or use words.
+- P0788 A logic symbol standing in for a word ($\forall$, $\Rightarrow$); write 'for every', 'implies'.
+- P0789 The proof environment prints the end mark; 'This completes the proof' is needed only when the last step is far from the claim.
+- P0790 'Then the following holds' adds a line and no content; state the claim.
+- P0791 A result is cited by position ('by the previous lemma'); use \ref, which survives a reordering.
+- P0792 'We believe' with no conjecture, evidence or reason in the sentence; state a numbered conjecture or give the evidence.
+
+## structure (30)
+
+- P0793 A table of contents in the paper. 16 May: no table of contents in the main pdf.
+- P0794 An appendix typed as \section{Appendix ...}; use \appendix and then \section{...}, so it is lettered and reads 'Appendix A' (5 Oct: 'Rebuild the PDF so the appendices read Appendix').
+- P0795 A heading ends with a period or a colon.
+- P0796 A formula in a heading breaks bookmarks and running heads; name the object in words or use \texorpdfstring.
+- P0797 A heading of more than twelve words; a heading names the section.
+- P0798 First person in a heading.
+- P0799 Back matter (acknowledgements, declarations) set as a numbered section; use \section*.
+- P0800 A forced page break in the body; it goes stale as soon as the text changes.
+- P0801 Hand-set vertical space (three or more); let the class set it.
+- P0802 \noindent three or more times; a paragraph that must not indent is usually a continuation that needs no blank line.
+- P0803 A line break (\\) used to end a paragraph; leave a blank line.
+- P0804 A table or formula squeezed with \resizebox; its type no longer matches the text. Break the line or reshape the table.
+- P0805 Six or more bullet lists; a mathematics paper argues in paragraphs. Keep lists for parallel items (cases, hypotheses).
+- P0806 List items that open with a bold label and a colon read as a generated outline; write sentences.
+- P0807 Bold run-in headings typed by hand (three or more); use \subsection or \paragraph.
+- P0808 A section opens straight into a subsection; give it a sentence or two on what the section does.
+- P0809 Three levels of headings; two are enough for a paper of ordinary length.
+- P0810 Six or more footnotes; a footnote that matters belongs in the text.
+- P0811 A citation or a footnote inside a heading.
+- P0812 'As mentioned above' with no pointer; say where (Section~\ref{...}) or drop the clause.
+- P0813 A forward pointer with no target ('defined below'); give the \ref, or define it here.
+
+## abstract and title (20)
+
+- P0814 A \cite in the abstract; the abstract is read without the bibliography. Name author and year in words if needed.
+- P0815 A numbered reference in the abstract.
+- P0816 A displayed formula in the abstract.
+- P0817 A long formula in the abstract; say it in words and leave the formula to the introduction.
+- P0818 A footnote or a cross-reference in the abstract; it is lost where the abstract is shown alone.
+- P0819 The abstract has more than one paragraph.
+- P0820 An arXiv number or a link in the abstract. 17 Jul: 'remove the arxiv part from the abstract, just cite the paper'.
+- P0821 The abstract opens on how important the field is; open on the result.
+- P0822 An abbreviation in the abstract; write it out (the abstract is read alone).
+- P0823 A forced line break in the title.
+- P0824 The title ends with a period.
+- P0825 \date{\today} changes at every compile; a posted paper carries a fixed date.
+- P0826 An AI system in the author field; the authors are people, and the system is named only in the declaration when he asks for one.
+- P0827 An empty \address or \email.
+- P0828 The abstract promises discussion; it should state results.
+
+## citations (28)
+
+- P0829 Adjacent \cite commands print [3][7]; put the keys in one \cite{a,b}.
+- P0830 A sentence starts with a numeric citation; start with the authors ('Aldous and Janson \cite{AJ} show ...').
+- P0831 A citation used as a noun ('In [3] it is shown'); name the authors.
+- P0832 'et al' needs its period, and only there: et al.
+- P0833 A fact called folklore or classical with no reference; give one place where it is proved.
+- P0834 'Several authors' with no citation; name them.
+- P0835 'Recent work' with no citation in the sentence.
+- P0836 A reference number typed by hand ([12]); use \cite.
+- P0837 An author-year citation typed by hand; use \cite so the list and the text agree.
+- P0838 An arXiv entry with no identifier.
+- P0839 'et al.' in the bibliography; list every author.
+- P0840 A page range with a hyphen in the bibliography; use an en dash (--).
+- P0841 DOIs written two ways in one list (doi:10... and https://doi.org/10...); keep one.
+- P0842 Author names in two orders in the bibliography (D. Aldous and Aldous, D.); keep one.
+- P0843 A link to a repository root; cite a tagged release, a commit or the archived DOI, so the reader gets the code the paper used.
+- P0844 An empty \cite{}.
+- P0845 A locator on a \cite with two keys; split them, so the reader knows whose Theorem 2 it is.
+- P0846 Brackets typed around \cite; a numeric style already prints them.
+- P0847 A locator typed after \cite; put it inside: \cite[Theorem~2.1]{key}.
+- P0848 Wikipedia, a forum or a blog as a source; cite the paper or book the statement comes from (a MathOverflow answer is cited with author and date only when it is the one source).
+- P0849 ibid. or loc. cit.; repeat the \cite.
+- P0850 'To appear', 'submitted' or 'in preparation' with nothing the reader can open; give the arXiv number, or check whether it has appeared.
+- P0851 A private communication as a reference; say in the text who told you what, with permission, or find a source one can read.
+- P0852 Four or more 'see e.g.' or 'references therein'; say what each cited work proves (11 Nov: cite every earlier partial result).
+
+## voice (46)
+
+- P0853 Intensifiers (three or more: very, extremely, highly); give the size of the thing.
+- P0854 'In order to' three or more times; 'to' says it.
+- P0855 'The fact that'; rewrite with 'because', 'although' or a plain 'that'.
+- P0856 'It is worth noting that' and its cousins (three or more); say the thing.
+- P0857 A sentence adverb tells the reader how to feel (interestingly, fortunately, needless to say); state the fact.
+- P0858 A word of persuasion (arguably, undoubtedly, admittedly); a paper gives the argument.
+- P0859 Loose talk (roughly speaking, in some sense) three or more times; give the precise statement, with one informal sentence before it if that helps.
+- P0860 Inflated words (utilize, leverage, facilitate, aforementioned); use the plain one.
+- P0861 Promotional verbs (showcase, underscore, unlock, harness); a paper proves, computes, shows.
+- P0862 A stock image (paves the way, sheds light, bridges the gap); say what the result lets one prove next.
+- P0863 Words that mark machine-made prose (landscape, realm, plethora, intricate, multifaceted).
+- P0864 Sales words (cutting-edge, groundbreaking, unprecedented); compare with the earlier result by number.
+- P0865 The paper calls its own study comprehensive or rigorous; say what was done (which cases, how many runs).
+- P0866 Stacked hedges (four or more); a claim is proved, supported by a stated computation, or marked as a conjecture.
+- P0867 A computation is said to prove a statement; numbers support or agree with, proofs prove.
+- P0868 A bare 'This' as the subject (six or more); say this what (this bound, this identity).
+- P0869 'The former / the latter' three or more times; repeat the noun.
+- P0870 'and/or'; write 'A or B or both', or just 'or'.
+- P0871 An adjective of taste on a mathematical object (elegant proof, deep result, celebrated theorem); the citation carries the credit.
+- P0872 The reader addressed as 'you'; use 'we' or 'one'.
+- P0873 A question put to the reader in running text; state the problem, or number it as a Question if it is open.
+- P0874 A contributions list in the manner of a conference paper; a mathematics introduction states the theorems.
+- P0875 The text keeps saying what is crucial (four or more); the order of the paper and the proofs show what matters.
+- P0876 'Significant' with no number or test near it; give the size, or the test and its level.
+- P0877 'Dramatically' or 'substantially' with no number in the sentence; give the number.
+- P0878 A comparison with no number ('much better'); say by how much and against what.
+- P0879 A claim of beating earlier work with no citation or table in the sentence.
+- P0880 'Optimal' or 'sharp' with no matching bound, example or reference near it; say in what sense and where it is shown.
+- P0881 Time-bound words (currently, to date, so far) three or more times; a paper is read years later. Give the year or the citation.
+- P0882 A doubled word.
+- P0883 Doubled punctuation.
+- P0884 Straight double quotes; TeX wants `` and ''.
+- P0885 Eight or more phrases in quotation marks; a term is defined once, in italics, and then used without quotes.
+- P0886 A spaced hyphen used as a dash; use -- with spaces or recast the sentence.
+- P0887 A number range with a hyphen (pages 3-7, 2010-2015); use an en dash (--).
+- P0888 i.e. and e.g. followed by a comma in one place and not in another; keep one.
+- P0889 'a' where 'an' is needed, or the reverse.
+- P0890 A confusable word (principle/principal, discreet/discrete, loose/lose, then/than, dependant).
+- P0891 A misspelling. 9 Jul: 'every typo is fixed'.
+- P0892 A misspelled mathematical word. 9 Jul: 'every typo is fixed, every definition makes sense'.
+- P0893 A mass noun in the plural, or 'data is'; data are, software is, evidence is.
+- P0894 A usage slip (comprised of, different than, more optimal, very unique).
+- P0895 Firstly, secondly, last but not least; use first, second, finally, or number the steps.
+- P0896 'Novel'; say what is new by naming what was known, with the citation.
+- P0897 'For example ... etc.' says the same thing twice.
+- P0898 Legal or archaic words (herein, thereof, whilst).
+
+## numbers, tables, figures (39)
+
+- P0899 A caption starts 'Plot of'; a caption says what is plotted against what, for which parameters, and what the reader should see.
+- P0900 A \label before the \caption in a float; it then points at the section, not the figure.
+- P0901 A float forced with [h] or [H]; use [tbp] and let LaTeX place it.
+- P0902 A raster image; plots go in as vector PDF so lines and text stay sharp.
+- P0903 A figure file with a working name (final2, test, copy, a space). 9 May: 'they should be read like they are off the press, no history'.
+- P0904 An absolute or far-relative path in \includegraphics or \input; the source must compile from the repository.
+- P0905 \hline in a table; use booktabs (\toprule, \midrule, \bottomrule).
+- P0906 Vertical rules in a table; drop them.
+- P0907 A figure or table referred to by position; floats move. Use Figure~\ref{...}.
+- P0908 A number glued to its unit (10ms, 16GB); put a thin space (10\,ms).
+- P0909 Both % and 'percent' in the text; keep one.
+- P0910 A decimal with no leading zero (.5); write 0.5.
+- P0911 Numbers with seven or more decimals (three or more); round to what the method resolves, unless it is a constant quoted to its known digits.
+- P0912 Computer notation for a number (1e-5); write $10^{-5}$.
+- P0913 '10x' for a factor; write 'ten times' or 'a factor of 10'.
+- P0914 A tilde for 'approximately'; write 'about 10' or $\approx 10$.
+- P0915 +/- typed by hand; use $\pm$.
+- P0916 '10k' or '5 mio'; write 10,000 or $5\times 10^6$.
+- P0917 An average with no count and no spread; say over how many runs and give the standard error or an interval.
+- P0918 Error bars or a shaded band with no statement of what they are (standard error, one deviation, 95% interval, over how many runs).
+- P0919 A p-value or 'statistically significant' with no test named.
+- P0920 A correlation described by an adjective; give the coefficient and the sample size.
+- P0921 A 'representative run' with no word on the others; say how it was chosen and where all runs are. 2 Sep: all simulation results go in the paper.
+- P0922 A Sharpe or Sortino ratio with no risk-free rate, return frequency or annualisation stated (18 Aug audit: Sortino on the flattering denominator).
+- P0923 A benchmark with no word on dividends; say total return or price only (18 Aug audit: a price-only benchmark flatters the strategy).
+- P0924 A drawdown with no word on how it is measured (daily closes or intraday marks; realised, or a solved target).
+- P0925 A promise about returns (guaranteed, riskless, never loses); state the conditions and the measured worst case.
+- P0926 A caption identifies curves by colour alone; add line style or marker, since the page may be printed in grey.
+- P0927 'Three times smaller'; write 'a third of' or 'smaller by a factor of 3'.
+- P0928 'About' in front of a number given to several decimals; round it or drop 'about'.
+- P0929 'Between 3-5'; write 'between 3 and 5' or '3--5'.
+
+## latex (44)
+
+- P0930 An obsolete package (epsfig, subfigure, times, fullpage); use graphicx, subcaption, a current font package, geometry.
+- P0931 cleveref is loaded before hyperref; it must come after.
+- P0932 A drafting package is still loaded (showkeys, todonotes, lineno, changes, lipsum); remove it for the posted version.
+- P0933 Coloured text in the body; revision colour comes out before posting (9 Jul 'make any change in blue' was for his reading copy).
+- P0934 Struck-out, highlighted or change-tracked text is left in.
+- P0935 A margin note or todo is left in.
+- P0936 Hidden text (\iffalse); arXiv publishes the source, so delete what is not in the paper.
+- P0937 The draft class option is on.
+- P0938 Margins set by hand or under about an inch; a posted page should not be denser than the class.
+- P0939 Line spacing is changed by hand.
+- P0940 Page numbers are switched off; a referee cites pages.
+- P0941 A counter forced by hand in the body; numbering breaks when a section moves.
+- P0942 A colour macro for comments or revisions is defined in the preamble; remove it and its uses before posting.
+- P0943 An align with one line; use equation.
+- P0944 A trailing \\ before \end{align} makes an empty numbered line.
+- P0945 A blank line before a display starts a new paragraph and adds space; the display belongs to its sentence.
+- P0946 A blank line after a display, then 'where ...'; the continuation is set as a new, indented paragraph. Remove the blank line.
+- P0947 Curly quotes, a pasted dash or a Unicode minus from a word processor; type ``, '', --, --- or a math minus.
+- P0948 An invisible or ligature character (non-breaking space, zero-width space, soft hyphen, fi) pasted into the source.
+- P0949 Unicode mathematics pasted into the source; type the TeX command so every engine sets it.
+- P0950 A bare URL in the text; wrap it in \url{...} so it breaks and links.
+- P0951 A link labelled 'here'; a printed page loses it. Print the address or cite it.
+- P0952 A link to a moving branch (main/master); link a commit, a tag or the archived DOI.
+- P0953 A link to a private share or a shortener (Dropbox, Drive, Overleaf, bit.ly); use the repository, Zenodo or arXiv.
+- P0954 A path on someone's computer is in the source.
+- P0955 A localhost or private network address is in the source.
+- P0956 A footnote mark before the punctuation; it goes after (word.\footnote{...}).
+- P0957 Underlined words; emphasis in print is italic (\emph).
+- P0958 A proof or its end mark typed by hand; use the proof environment (\qedhere moves the mark onto a display).
+- P0959 A theorem heading typed by hand in bold; use a \newtheorem environment so it is numbered, labelled and cited by \ref (4 Aug: 'fix the latex setup so that this never happens again').
+- P0960 An equation number typed by hand (\tag{3}, \eqno); let LaTeX number it and use \label.
+- P0961 Labels with no prefix (three or more); use thm:, lem:, prop:, cor:, def:, eq:, sec:, fig:, tab:, app:, so a wrong reference word shows in the source.
+- P0962 \nocite{*} prints every entry of the .bib file, cited or not.
+- P0963 Horizontal space pushed by hand (\hspace, \!\!\!, ~~~); fix the cause.
+- P0964 Type size reduced by hand in the body; a table or formula that does not fit is reshaped.
+
+## repository and declarations (18)
+
+- P0965 The finished grant NSF OISE-2401227 is acknowledged; it is not named in new papers.
+- P0966 'Available on request'; put the code and data in the repository and give the address.
+- P0967 'Code will be released'; release it with the paper and cite the commit.
+- P0968 A link to a private repository in a public paper; the reader gets a 404. Point to the public repository of the paper.
+- P0969 An internal id of the workshop (agent, task, message, claim) is in the paper source.
+- P0970 An internal problem number (P0341) in the paper; cite the problem by its source and its number there.
+- P0971 Workshop vocabulary (mesh claim, scar card, audit pass, the owner) in a paper; the paper states mathematics.
+- P0972 A machine name of ours is in the source; say 'a desktop computer' with its processor and memory if the hardware matters.
+- P0973 A history word in a label or file name (migrated, _old, _v2, _final, round2). 9 May: 'in no paper use things like migratedfromMain-App.B, they should be read like they are off the press, no history'.
+- P0974 'Supplementary material' with no location; say which appendix or which file of the repository.
+- P0975 Code or data said to be available with no address in the sentence.
+- P0976 A draft marking (confidential, preliminary draft, work in progress) is in the source.
+- P0977 The text answers a referee ('as requested by the referee'); that belongs in the response letter. Referees are thanked once, in the acknowledgements.
+- P0978 The paper says something is proprietary or undisclosed; a result that rests on it cannot be checked. Publish what is needed, or do not claim the result.
+- P0979 His own repository in the references with no commit, release or DOI; a reference is a fixed object.
+
+## journal fit (10)
+
+- P0980 A section from a machine-learning conference template (Related Work, Contributions, Limitations, Broader Impact) in a mathematics paper; fold it into the introduction or drop it.
+- P0981 The abstract is shaped like a conference abstract (we propose ... experiments show); for a mathematics journal state the theorem.
+- P0982 The text calls itself preliminary or points to a future version; a submission is the version.
+- P0983 Three or more deferrals to future work; a referee reads them as the missing part of the paper. Keep the one that matters and state it as an open question.
+- P0984 Three or more appeals to 'the reader'; do the check in the paper or give the reference.
+- P0985 A companion or forthcoming paper with no citation; a referee cannot use a paper that cannot be read.
+- P0986 A cut justified by brevity or space; a journal paper has the space. Include it, or say where it can be found.
+- P0987 A proof sketch with no pointer to the full proof; a theorem needs its proof in the paper (an appendix is fine).
+- P0988 Workshop slang (toy model, sanity check, hand-waving); say 'a simplified model', 'as a check'.
+- P0989 The source names where the paper is under review; that goes stale and is not for the reader.
+
+## terms (634)
+
+- P0990 One symbol is called by different nouns. 5 Oct: 'Give Wdrv one name and replace "the sample"'
+- P0991 One compound is written two ways (hyphen, space or closed)
+- P0992 One term appears with and without capitals
+- P0993 An abbreviation is never written out
+- P0994 An abbreviation is written out more than once
+- P0995 An abbreviation is defined and then hardly used
+- P0996 A term is introduced twice
+- P0997 A term is used before the sentence that introduces it
+- P0998 Defined terms are marked in different ways (italic, bold, quotes); keep one
+
+## notation (154)
+
+- P0999 A symbol appears with nothing near its first use saying what it is. 1 Oct: 'there is an e_ell first appearing in the first displayed equations on page 2, what is it?'
+- P1000 No notation appendix (symbol, meaning, where it first appears)
+- P1001 The notation appendix and the text disagree
+- P1002 One symbol is introduced twice ('let X be ...' in two places)
+- P1003 A macro exists but the raw form is also typed
+- P1004 One letter is used in two fonts for what looks like one object
+- P1005 Symbols are introduced and never used again; say it in words
+- P1006 A letter is both a fixed object and a running index
+- P1007 Constants C, C', c, c_1 are used and no sentence says the convention (may C change from line to line?)
+- P1008 Displays end with no punctuation though the sentence ends or continues there
+- P1009 Numbered displays that are never referred to; number the ones that are cited
+
+## references (1)
+
+- P1010 The word before \ref does not match the thing the label is on. 4 Aug: 'Many of the Lemma and Cor are cited as theorems'
+
+## latex (44)
+
+- P1011 A \newtheorem environment prints another word than its name
+- P1012 Theorem-like environments run on separate counters (Theorem 2.1 next to Lemma 2.1)
+- P1013 A label is defined twice
+- P1014 Labels of statements, sections or floats that nothing refers to
+- P1015 Macros defined in the preamble and never used
+- P1016 A package is loaded twice
+- P1017 \newtheorem environments that the paper never uses
+- P1018 The log has overfull lines wider than 5pt (text in the margin)
+- P1019 The log reports multiply defined labels or a missing character
+
+## structure (30)
+
+- P1020 A definition is given in running text. 5 Oct: 'There is no numbered Definition and no reference'
+- P1021 The map of the paper. 5 Oct: 'Expand the roadmap into a real map of the paper ... more like a tree or table'
+- P1022 Acknowledgements and funding. 5 Oct: 'put the funding and acknowledgement before the appendix'
+- P1023 A section with exactly one subsection
+- P1024 Headings mix title case and sentence case
+- P1025 Two headings with the same words
+- P1026 The introduction states no theorem and points to none
+- P1027 An appendix that the main text never points to
+- P1028 Many one-sentence paragraphs; the text reads as notes
+
+## statements and proofs (29)
+
+- P1029 A long proof with no steps, claims or displayed milestones
+- P1030 A statement so long that definitions or discussion sit inside it
+- P1031 Theorems or lemmas with no label
+- P1032 A proof that does not follow its statement and does not say what it proves
+- P1033 Proofs end on a display with no \qedhere (the end mark drops to an empty line)
+
+## abstract and title (20)
+
+- P1034 The abstract is long. 21 Sep: 'make the abstract for this paper half as long ... abstracts should be shorter'
+- P1035 Title capitals. 10 Nov: 'change the title to lower case with capital first letters, the way papers look'
+- P1036 A number in the abstract does not appear in the body. 26 Apr: the abstract agrees with the later text
+- P1037 The abstract uses symbols it does not define
+- P1038 No subject classification or keywords
+
+## numbers, tables, figures (39)
+
+- P1039 A figure or table that the text never refers to
+- P1040 A figure or table with no caption or no label
+- P1041 A caption too short to be read alone
+- P1042 Some captions end with a period and some do not
+- P1043 Simulations are reported with no seeds or number of runs
+- P1044 Returns are reported with no word on gross or net (18 Aug audit: a path labelled net was gross)
+- P1045 A backtest with no statement of fills, commissions and borrow
+- P1046 Parameters are chosen and judged on the same data and the text does not say so
+
+## citations (28)
+
+- P1047 A bibliography entry with no year, or with nothing to find it by
+- P1048 One journal is named two ways in the bibliography
+- P1049 Titles in the bibliography mix title case and sentence case
+- P1050 Most references are to the author's own work
+
+## repository and declarations (18)
+
+- P1051 The funding paragraph is missing one of its standing parts (the author's standing list of funders)
+- P1052 The AI declaration reads as a diary. It is a short record of which system did what
+- P1053 Computations are reported and no sentence says where the code and output are
+
+## events (48)
+
+- P1054 One word for one thing. Before you add a paragraph, list the objects it names and use the names the paper already uses (python pw1k.py lint FILE --chapter terms).
+- P1055 5 Oct, from a referee's list: 'Give Wdrv one name and replace "the sample"'. A second noun for the same object reads as a second object.
+- P1056 A new symbol gets its meaning in the sentence where it first appears, and a row in the notation appendix (python pw1k.py notation FILE --write notation.tex).
+- P1057 1 Oct: 'details written out, and more details in the proof, the way a mathematical paper is SUPPOSED to be written, so that someone can sit down and read it'.
+- P1058 17 Aug: 'use the original latex code ... copy it, don't modify the original code'. Work on a copy of his source.
+- P1059 9 Jul: 'keep the large majority of its current structure'. Revise inside the structure; do not reorder sections unasked.
+- P1060 27 Jun: 'only using the notations in the papers i downloaded, my notation, so that all of that stays consistent'. Take symbols from his earlier papers on the subject.
+- P1061 12 May: 'DONT change the name of the paper ever'. The title stays unless he asks.
+- P1062 12 May: 'you removed the wrong figure'. Before deleting a float, name it by label and caption and check it is the one meant.
+- P1063 13 May: merge two tables so nothing is duplicated; one number is printed in one place.
+- P1064 1 Oct, for that paper: 'put the numerics first, the theory second, and put all proof in the appendix'. Ask which order this paper takes before moving sections.
+- P1065 21 Sep: abstracts should be shorter. State the result in three or four sentences.
+- P1066 16 Sep: cite the author's own earlier work and his advisors' where it is relevant.
+- P1067 15 Sep: 'write this like a professional math paper'. A sentence about the paper, the search or the drafting goes; a sentence about the mathematics stays.
+- P1068 The AI declaration is written only when he asks for one: a short record of which system did what.
+- P1069 5 Oct: a definition the paper relies on is a numbered Definition with a reference, not a paragraph.
+- P1070 5 Oct: the map of the paper is a tree or a table of what each section proves and what it uses, not one sentence per section.
+- P1071 A word chosen in the abstract is the word used in the theorem, the proof, the caption and the README.
+- P1072 When two papers of his treat the same object, the second uses the first's name and symbol for it, and cites it.
+- P1073 A remark that only repeats the theorem in other words is cut; a remark says what the theorem does not.
+- P1074 Every hypothesis of a theorem is used in its proof, and the proof says where.
+- P1075 A constant gets one letter per meaning; if C may change from line to line, the notation paragraph says so.
+- P1076 Read the introduction as a first reader would: PTRF declined a paper of his on the editing of its introduction (12 Nov).
+- P1077 A term defined once in italics is never set in quotes later, and never replaced by a near-synonym for variety.
+- P1078 Each new entry is checked against its DOI or arXiv record: authors, title, year, volume, pages, article number.
+- P1079 One form for every entry: names (initials first or last, not both), journal abbreviations, en dashes in page ranges, DOI form.
+- P1080 An arXiv preprint that has since appeared is cited in its published form, with the arXiv number kept.
+- P1081 Software and data used for a computation are references: NumPy, the solver, the data set, with version.
+- P1082 His own repository is cited by release, commit or DOI, never as a bare address.
+- P1083 A reference is something the reader can open; 'in preparation' and 'private communication' are not.
+- P1084 Read the log, not only the PDF: undefined references, multiply defined labels, overfull lines wider than 5pt, missing characters.
+- P1085 Compile twice and look at the page where each theorem is cited: the word before the number must be the word on the statement.
+- P1086 13 May: a broken cross-reference printed as raw label text. Search the PDF text for '??' and for label names.
+- P1087 Look at the pages, not only the text: an overline or a hat lost by a text extractor is still on the page, and a symbol missing from a font is not.
+- P1088 After compiling, run python pw1k.py notation FILE and compare its first-appearance column with the notation appendix.
+- P1089 16 May: no table of contents in the main pdf.
+- P1090 5 Oct: check that appendix headings read 'Appendix A', and that acknowledgements and funding come before the appendix.
+- P1091 The PDF title, author and running head agree with the title page.
+- P1092 arXiv and GitHub publish the source: delete commented-out text, \iffalse blocks, unused figures and old files before pushing.
+- P1093 The README title, the repository description and the paper's title are the same words.
+- P1094 9 May: file names, labels and commit messages read as off the press; no history words (old, final, v2, migrated, round).
+- P1095 A public paper links only public things: no private repository, no internal problem number, no machine or agent name.
+- P1096 The posted PDF is the one compiled from the pushed source; rebuild it after the last edit and compare the dates.
+- P1097 17 Jul: the declaration says the paper is part of a broader research project on AI proving problems; keep it to that and the list of systems.
+- P1098 The funding paragraph is the standing one; the finished grant NSF OISE-2401227 is not in it.
+- P1099 Run python pw1k.py lint FILE once more on the exact file being pushed; a rule of weight 7 or more is fixed before the push.
+- P1100 The abstract on the hosting page (GitHub, Zenodo, ResearchGate) is the abstract of the paper, with formulas written so that they read as plain text.
+- P1101 Check the code in the repository runs from a clean clone and prints the numbers in the paper.
