@@ -1,10 +1,8 @@
 # -*- coding: utf-8 -*-
 """Core of the paper-writing hooks W01..W50 (an agent, 12 Nov 2026).
 
-His words, 12 Nov 2026 05:59, after Probability Theory and Related Fields declined a paper of his with the opinion that
-it "does not appear to have undergone a thorough editing process": "i want 50 hoosk intorudeced for paper writting to
-make sure tha tthis doe snot happening again, more editing, more auditing, less self introspeciton, it is werid, better
-writting, i want more hoosk and relfexes to make sure that the papers we are wirtting are publishable as is".
+Written after a journal declined one of the author's papers as not thoroughly edited: fifty hooks that add editing
+and auditing at every stage, so that a paper is publishable as it stands.
 
 Two kinds of hook (the table is pw_hooks.py):
   text hooks   read the LaTeX that is being written, compiled or pushed and fire only on something found in it; the

@@ -1,6 +1,6 @@
 # pw1k: the thousand paper-writing rules
 
-His words, 12 Nov 2026: "i want another 1k hooks written about how to actually write papers ... i have been screaming about using multiple words for the same thing ever since a referee found that out and it is still happening".
+The fault these rules catch most often is one object called by several names.
 
 1101 rules. Check a paper: `python ~/.claude/dreaming/paper_writing_hooks/pw1k.py lint <file.tex>`.
 
@@ -163,7 +163,7 @@ His words, 12 Nov 2026: "i want another 1k hooks written about how to actually w
 - P0154 one of: roll yield / roll return / roll cost
 - P0155 one of: grid / ladder
 - P0156 one of: rung / grid level / grid line
-- P0157 one of: net liquidation value / account value / account equity / net asset value
+- P0157 one of: net asset value / fund value / fund equity
 - P0158 one of: borrow fee / borrow cost / borrow rate / stock loan fee
 - P0159 one of: theta / time decay
 - P0160 one of: gamma scalping / gamma trading / gamma harvesting / volatility harvesting
@@ -480,8 +480,8 @@ His words, 12 Nov 2026: "i want another 1k hooks written about how to actually w
 - P0471 one of: Merkle tree / Merkel tree
 - P0472 one of: Schnorr / Schnoor
 - P0473 one of: Diffie-Hellman / Diffie-Helman
-- P0474 one of: Shmalo / Schmalo
-- P0475 one of: Yitzchak / Yitzhak
+- P0474 one of: Ornstein / Ornstien
+- P0475 one of: Tsirelson / Tsirel'son
 - P0476 one of: Lipschitz / Lipshitz
 - P0477 one of: Gaussian / Guassian
 - P0478 one of: Hermitian / Hermetian
@@ -551,7 +551,7 @@ His words, 12 Nov 2026: "i want another 1k hooks written about how to actually w
 - P0542 one of: ordinary least squares / OLS
 - P0543 one of: expectation-maximization / EM
 - P0544 one of: proof of work / PoW
-- P0545 one of: net liquidation value / NLV
+- P0545 one of: net asset value / NAV
 - P0546 one of: open interest / OI
 - P0547 one of: color / colour
 - P0548 one of: neighbor / neighbour

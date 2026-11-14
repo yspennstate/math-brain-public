@@ -66,7 +66,7 @@ of $A$ over a net of $N$ directions and show that the rate changes from $N^{-1}$
 Let $A$ be an $n\times m$ matrix with independent standard Gaussian entries. Edelman \cite{edelman} computes the law of
 the least singular value when $n=m$. Rudelson and Vershynin \cite{rv} prove the bound $s_m(A)\ge c(\sqrt n-\sqrt{m-1})$
 with high probability for every $n\ge m$, but their argument does not give the limit law when $n-m$ stays bounded.
-We prove that law. The square case is treated in \cite{shmalo}, where the second moment involves one constraint; here it
+We prove that law. The square case is treated in \cite{prior}, where the second moment involves one constraint; here it
 involves $r+1$ constraints at once, and the estimate that replaces it is Lemma~\ref{lem:two}.
 \begin{theorem}\label{thm:main}
 Let $r\ge 0$ be fixed. Then the least singular value satisfies the limit law stated in \eqref{eq:law}.
@@ -79,7 +79,7 @@ $\sin^{m-2}\theta$.
 \begin{thebibliography}{9}
 \bibitem{edelman} A. Edelman, Eigenvalues and condition numbers of random matrices, SIAM J. Matrix Anal. Appl. 9 (1988).
 \bibitem{rv} M. Rudelson and R. Vershynin, Smallest singular value of a random rectangular matrix, CPAM 62 (2009).
-\bibitem{shmalo} Y. Shmalo, The square case, arXiv:2607.06249.
+\bibitem{prior} A. Author, The square case, preprint, 2026.
 \end{thebibliography}
 \end{document}
 """

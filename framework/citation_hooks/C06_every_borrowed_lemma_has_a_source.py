@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 """Citation hook C06: every borrowed lemma has a source.
 
-One of the sixteen citation hooks run by cite_hooks_run.py (an agent, 11 Nov 2026). His words, 11 Nov 2026 07:1x:
-"when we write and publish math paper, i think we need to be more carful to cite all relevent source,s ... make 10-20
-hooks ensureing that all agents that are about to submit a paper to github, researchgate o rzendono get a rptop telling
-them to check all citaztions mand make sure that all revlenet citatios were cited"
+One of the sixteen citation hooks run by cite_hooks_run.py (an agent, 11 Nov 2026). Written at the author's request.
 """
 
 HOOK = {'id': 'C06',

@@ -6,7 +6,7 @@ faults below. A clean lint is the floor. It is not a reading: on three rounds of
 in new words the checks caught 0 of 38, then 2 of 24, then 5 of 14. Only a reader who did not write
 the paper (`paper_audit.py run <tex>`) can say it is ready.
 
-Each rule is marked with where it comes from: **[his words]**, **[editor's letter]**, or
+Each rule is marked with where it comes from: **[the author's rule]**, **[editor's letter]**, or
 **[house style]** (ordinary practice he has not ruled on; these print as "should", never MUST).
 
 ## Why these exist
@@ -25,10 +25,7 @@ The referee called the result significant and still said no, for three reasons t
 An earlier referee (RMTA-D-26-00088) had said the same in other words: "generic and mechanical",
 wanted "a more author-driven presentation".
 
-## His words, with the document each was said about
-
-- 15 Sep 2026, about a shipped paper: "don't use AI self introspection stuff ... write this like a
-  professional math paper ... i want natural voices, human, stop with the self introspection."
+## Written at the author's request.
 - 4 Oct 00:14, about film transcripts and papers: transcripts are written "with my voice, which is
   human, in mind, so should papers and so on".
 - 2 Nov 00:32, about a proposal: "less wordy, it sounds ai written, stronger and more to the point".
@@ -55,7 +52,7 @@ wanted "a more author-driven presentation".
 
 ## The rules
 
-### The paper states mathematics. It never talks about itself. [his words]
+### The paper states mathematics. It never talks about itself. [the author's rule]
 - No sentence whose subject is the paper, the draft, the writing, the search, a check, an agent or
   an earlier version: "the present paper does not use", "these additions", "an earlier version",
   "was corrected", "we found no later paper", "re-derived line by line", "we verified numerically
@@ -75,7 +72,7 @@ wanted "a more author-driven presentation".
 A reader who knows the earlier case must finish page two knowing whether the extension is routine.
 When the earlier paper is his own, this is the first thing an editor checks.
 
-### One word per thing, and no name before its definition [his words; editor's letter]
+### One word per thing, and no name before its definition [the author's rule; editor's letter]
 - One object has one name in the text, the section titles and the appendix titles. A second word
   for the same thing is a fault, however natural it reads.
 - A term of art coined in the paper is defined where it first appears, or not used until it is.
@@ -89,14 +86,14 @@ When the earlier paper is his own, this is the first thing an editor checks.
 - `paper_lint.py <new.tex> --against <old.tex>` lists the sentences that stand word for word in
   the earlier paper; W21 does the same against the index of his posted papers.
 
-### Citations carry weight [his words]
+### Citations carry weight [the author's rule]
 - Every relevant source is cited, and every cited work gets a clause saying what it does. No
   brackets of seven numbers as "background".
 - The closest prior result is stated, not gestured at; who proved what, in which generality.
 - Every reference can be looked up (arXiv number, DOI, journal and year). The citation hooks
   (`citation_hooks/`) check the rest.
 
-### The people whose work carries the result get the credit [his words, 14 Nov 23:34]
+### The people whose work carries the result get the credit [the author's rule, 14 Nov 23:34]
 - The introduction, near its start, names the mathematicians whose work the result most depends
   on, by name and with citations: who posed the problem, who proved what we build on, whose method
   we follow.
@@ -114,7 +111,7 @@ When the earlier paper is his own, this is the first thing an editor checks.
   is written (development), when the abstract or introduction is edited (writing), when the
   acknowledgments or AI declaration are edited (credit), and before posting.
 
-### What every posted paper carries [his words, 2 Nov 04:57]
+### What every posted paper carries [the author's rule, 2 Nov 04:57]
 - The funding statement and the AI acknowledgment. His 2 Nov words name a paper without them as
   "not how we write paper". The 15 Sep text in CLAUDE.md speaks of the AI declaration "when he asks
   for one"; the later words are the stricter and are the ones the check (W51) follows. A paper he
@@ -124,7 +121,7 @@ When the earlier paper is his own, this is the first thing an editor checks.
 - His name and affiliation, and the data and code line with the repository that really holds
   them. [house style]
 
-### Plain strong prose [his words]
+### Plain strong prose [the author's rule]
 - Short declarative sentences; the mathematical content first. Less wordy, stronger, to the point.
   Cut "remarkably", "strikingly", "notably", "delve", "headline", "crucially", "it is worth noting".
 - No bold runs, no emoji, no exclamation marks, no defensive phrases ("clearly labelled").
@@ -139,7 +136,7 @@ When the earlier paper is his own, this is the first thing an editor checks.
 - Theorems are stated completely: hypotheses, quantifiers, constants and what they depend on.
 - No slogans where a statement belongs, no promise the text does not keep, no em-dash runs.
 
-### Before it leaves [his words, 12 Nov 05:59: "more editing, more auditing"]
+### Before it leaves [the author's rule, 12 Nov 05:59: "more editing, more auditing"]
 1. `paper_lint.py <folder>` with no MUST finding, and every "should" either fixed or judged.
 2. An audit by a reader that did not write it (`paper_audit.py run <tex>`): mathematics line by
    line, then the prose against this file, then the introduction read as an editor of the target

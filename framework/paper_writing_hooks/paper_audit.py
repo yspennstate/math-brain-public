@@ -156,7 +156,7 @@ editing process": the one paragraph that said what was new was a list of labels 
 defined, opened by a sentence about the paper itself. The author's order the next morning: more editing, more
 auditing, no self-introspection, every paper publishable as is.
 
-Read first: ~/.claude/dreaming/paper_writing_hooks/PAPER_RULES.md (his rules, in his words).
+Read first: ~/.claude/dreaming/paper_writing_hooks/PAPER_RULES.md (the author's rules).
 Then run, and treat its output as leads to judge and not as the audit:
   python -X utf8 ~/.claude/dreaming/paper_writing_hooks/paper_lint.py "{tex}"
 

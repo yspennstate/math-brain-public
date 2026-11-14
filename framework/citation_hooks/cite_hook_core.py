@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 """Core of the citation hooks C01..C26 (an agent, 11 Nov 2026; C17..C26 an agent, 14 Nov).
 
-His words, 11 Nov 2026 07:1x: "when we write and publish math paper, i think we need to be more carful to cite all
-relevent source,s tell that to the current aganet, and make 10-20 hooks ensureing that all agents that are about to
-submit a paper to github, researchgate o rzendono get a rptop telling them to check all citaztions mand make sure that
-all revlenet citatios were cited". Earlier, 21 Sep 15:20: "all relevant citation should be cited".
+Written at the author's request..
 
 Each hook is one file C01_*.py .. C16_*.py holding a HOOK dict (and optionally check(ctx)). cite_hooks_run.py loads them
 all and runs them on one hook payload. A call is sorted into CHANNELS:

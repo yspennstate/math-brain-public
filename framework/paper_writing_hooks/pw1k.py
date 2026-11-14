@@ -1,10 +1,7 @@
 # -*- coding: utf-8 -*-
 """pw1k: one thousand paper-writing rules, P0001..P1000 (an agent, 12 Nov 2026).
 
-His words, 12 Nov 2026 06:3x: "i want another 1k hooks written about how to actually write papers, based on all
-my prompts going back the whole year ... it would be nice if in the appendix of paper we put notations,
-definition and where the notation first appears ... i have been screaming about using multiple words for the
-same thing ever since a referee found that out and it is still happening".
+Written at the author's request..
 
 Beside pw_core.py / pw_hooks.py (W01..W50, an agent); nothing of theirs is imported or changed.
 Tables: pw1k_terms.py (word clusters, math-notation clusters), pw1k_rules.py (text rules, detectors, event lines).
@@ -909,9 +906,7 @@ def hook(raw, codex=False, now=None):
 def cmd_list(args):
     R = rules()
     L = ["# pw1k: the thousand paper-writing rules", "",
-         "His words, 12 Nov 2026: \"i want another 1k hooks written about how to actually write papers ... i have been "
-         "screaming about using multiple words for the same thing ever since a referee found that out and it is still "
-         "happening\".", "", "%d rules. Check a paper: `%s lint <file.tex>`." % (len(R), SELF), ""]
+         "The fault these rules catch most often is one object called by several names.", "", "%d rules. Check a paper: `%s lint <file.tex>`." % (len(R), SELF), ""]
     ch = None
     for r in R:
         if r["chapter"] != ch:
