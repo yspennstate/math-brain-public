@@ -1,0 +1,583 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\HH}{\mathbb{H}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\vol}{\operatorname{vol}}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\title[Variance of the typical hyperbolic Poisson--Voronoi cell]{The variance of the typical cell of a hyperbolic
+Poisson--Voronoi tessellation at low intensity}
+\author{Yitzchak Shmalo}
+\address{Yitzchak Shmalo, Tel Aviv University and Heights Labs}
+\email{yspennstate@gmail.com}
+\date{November 2026}
+\subjclass[2020]{60D05, 60G55, 52A55}
+\keywords{Poisson--Voronoi tessellation, hyperbolic space, ideal Poisson--Voronoi tessellation, typical cell, zero
+cell, size biasing}
+
+\raggedbottom
+\begin{document}
+\begin{abstract}
+Let $V_d(\lambda)$ be the variance of the volume of the typical cell of the Poisson--Voronoi tessellation of the
+hyperbolic space $\HH^d$ with intensity $\lambda$. D'Achille, Curien, Enriquez, Lyons and \"Unel asked whether
+$\lambda V_d(\lambda)$ has a finite limit as $\lambda\to0$, equal to the expected volume of
+$C_d\setminus T_d(R_1)$, where $C_d$ is the zero cell of the ideal Poisson--Voronoi tessellation and $T_d(R_1)$ the
+set coupled with it. We show that $\lambda V_d(\lambda)\to\infty$ for every $d\ge2$ and that the expected volume of
+$C_d\setminus T_d(R_1)$ is infinite, growing like $\theta_d\log U$ in the window $\{|u|<U\}$ of the upper half-space
+model, with $\theta_2=8/\pi$. The proof couples the typical cell inside the zero cell at positive intensity and passes
+to the limit with Fatou's lemma. In the plane, numerical values of $\lambda V_2(\lambda)$ down to $\lambda=10^{-5}$ fit
+$(8/\pi)\log(1/\lambda)-6.84$.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $X^{(\lambda)}$ be a Poisson point process of intensity $\lambda\vol$ on the hyperbolic space $\HH^d$ of constant
+curvature $-1$, $d\ge2$, and let $\mathrm{Vor}(X^{(\lambda)})$ be its Voronoi tessellation. Unlike the Euclidean case,
+these tessellations have a nontrivial limit in law as $\lambda\to0$, the ideal Poisson--Voronoi tessellation of
+D'Achille, Curien, Enriquez, Lyons and \"Unel~\cite{DCELU}. Low-intensity Poisson--Voronoi tessellations of hyperbolic
+surfaces were used by Budzinski, Curien and Petri~\cite{BCP} to bound Cheeger constants, and the ideal tessellation of
+higher-rank symmetric spaces by Fraczyk, Mellick and Wilkens~\cite{FMW} to prove fixed price. Mellick~\cite{Mellick}
+showed that the cells of the ideal tessellation on $\HH^d$ are indistinguishable, D'Achille~\cite{DA} constructed ideal
+tessellations beyond hyperbolic spaces, and D'Achille and Th\"ale~\cite{DT} computed face volume densities at positive
+and zero intensity; none of these concerns the variance of the typical cell. In dimension three Isokawa~\cite{Isokawa}
+computed mean values for the cells at positive intensity.
+
+The zero cell $C_d$ of the ideal tessellation, the cell containing a fixed origin $o$, has an explicit description~\cite[Theorem~1.4]{DCELU}: in the upper
+half-space model with the unique end of $C_d$ sent to $\infty$, $C_d$ is the complement of a Poisson cloud of open
+half-balls centred on the boundary, conditioned on not covering $o$ (Section~\ref{sec:setting}). Removing the
+condition gives a stationary random set $T_d(R_1)$ which describes $C_d$ far from $o$ and is contained in it.
+
+Let $V$ be the volume of the typical cell of $\mathrm{Vor}(X^{(\lambda)})$, so that $\E V=1/\lambda$, and let
+$V_d(\lambda)=\operatorname{Var}V$. The zero cell has the size-biased law of the typical cell, so its expected volume is
+$\E V^2/\E V=\lambda V_d(\lambda)+1/\lambda$, and $\lambda V_d(\lambda)$ is the difference between the expected volumes
+of the zero cell and of the typical cell. This led to the following question.
+
+\medskip\noindent\textbf{Question}~\cite[Question~7.7]{DCELU}. Does $\lambda V_d(\lambda)$ have a finite limit as
+$\lambda\to0$? Is the limit equal to the expected volume of $C_d\setminus T_d(R_1)$ in their natural coupling? If so,
+what is this value?
+\medskip
+
+\begin{theorem}\label{thm:main}
+For every $d\ge2$, $\lambda V_d(\lambda)\to\infty$ as $\lambda\to0$.
+\end{theorem}
+
+\begin{theorem}\label{thm:coupling}
+For every $d\ge2$, $\E\vol\bigl(C_d\setminus T_d(R_1)\bigr)=\infty$. More precisely, with $W_U=\{(u,v)\in\R^{d-1}\times
+(0,\infty):|u|<U\}$ in the upper half-space model of Section~\ref{sec:setting},
+\[
+\lim_{U\to\infty}\frac{\E\vol\bigl((C_d\setminus T_d(R_1))\cap W_U\bigr)}{\log U}=\theta_d:=
+\frac{2^{d+1}\pi^{(d-2)/2}\,\Gamma(d/2)}{(d-1)^2\,\Gamma\bigl(\tfrac{d-1}2\bigr)^2},
+\]
+so that $\theta_2=8/\pi$, $\theta_3=2\pi$ and $\theta_4=128/9$.
+\end{theorem}
+
+Theorem~\ref{thm:main} answers the first part of the question negatively, and Theorem~\ref{thm:coupling} shows that
+the proposed value is infinite. The heuristic behind the question survives in the following form. At positive
+intensity there is an exact coupling in which the typical cell is a subset of the zero cell and $\lambda V_d(\lambda)$
+is the expected volume of the difference (Lemma~\ref{lem:coupling}); as $\lambda\to0$ the probability that a given
+point lies in this difference converges to the corresponding probability for the natural coupling of $C_d$ and
+$T_d(R_1)$ (Lemma~\ref{lem:limits}), and Fatou's lemma gives
+\[
+\liminf_{\lambda\to0}\lambda V_d(\lambda)\ \ge\ \E\vol\bigl(C_d\setminus T_d(R_1)\bigr)=\infty.
+\]
+The divergence of the coupling volume comes from points far from the vertical axis through $o$. A point $w=(u,v)$ lies
+in $C_d\setminus T_d(R_1)$ only if it is covered by a half-ball containing $o$ and by none that misses $o$, and for $|u|$ large the
+integral of this probability over $v$ is of order $|u|^{1-d}$; summed over the window $W_U$ this gives $\theta_d\log U$.
+
+In the plane we computed $\lambda V_2(\lambda)$ numerically from an exact integral formula, with an independent Monte
+Carlo check (Section~\ref{sec:numerics}). The values increase by $(8/\pi)\log10$ per decade of $1/\lambda$ in the
+limit, the constant of Theorem~\ref{thm:coupling}.
+
+\begin{conjecture}\label{conj:rate}
+$\lambda V_2(\lambda)=\frac8\pi\log\frac1\lambda+C+o(1)$ as $\lambda\to0$, with $C\approx-6.84$.
+\end{conjecture}
+
+The two growth rates agree if the finite-intensity coupling matches the ideal one inside a window $W_U$ with $U$ of
+order $1/\lambda$ and the contribution from outside the window stays bounded. We have no numerics in dimension $d\ge3$
+and do not know the rate there.
+
+Some conventions. Part of~\cite{DCELU} parametrizes the intensity as $\lambda^{d-1}\vol$; Theorem~\ref{thm:main}
+holds with either normalization, since with intensity $\mu=\lambda^{d-1}$ one has $\lambda V_d(\mu)=\mu^{(2-d)/(d-1)}\,(\mu
+V_d(\mu))$ and $\mu^{(2-d)/(d-1)}\ge1$ for $\mu\le1$. Throughout, $|S^{k}|=2\pi^{(k+1)/2}/\Gamma(\frac{k+1}2)$ is the area of the
+unit sphere of $\R^{k+1}$, with $|S^0|=2$.
+
+Section~\ref{sec:setting} recalls the description of $C_d$ and writes the expected volume of $C_d\setminus T_d(R_1)$ as
+an integral. Section~\ref{sec:finite} gives the coupling at positive intensity, Section~\ref{sec:limit} its limit and
+the proof of Theorem~\ref{thm:main}, and Section~\ref{sec:coupling} the proof of Theorem~\ref{thm:coupling}.
+Section~\ref{sec:numerics} reports the planar computations, and Appendix~\ref{app:notation} lists the notation.
+
+\section{The ideal zero cell and its stationary companion}\label{sec:setting}
+
+We use the upper half-space model $\mathcal U_d=\R^{d-1}\times(0,\infty)$, points $w=(u,v)$, volume element
+$du\,dv/v^d$ and origin $o=(0,1)$. For $x\in\R^{d-1}$ and $\rho>0$ let $B(x,\rho)=\{w\in\mathcal U_d:|w-x|<\rho\}$
+be the open Euclidean half-ball centred at the boundary point $(x,0)$; here and below $|w-x|^2=|u-x|^2+v^2$. On
+$\R^{d-1}\times(0,\infty)$ let
+\[
+m(dx\,d\rho)=\rho^{1-2d}\,dx\,d\rho,\qquad A_w=\{(x,\rho):w\in B(x,\rho)\}=\{(x,\rho):\rho>|w-x|\}.
+\]
+Let
+\[
+c_d=\frac{2^{2-d}\pi^{d/2}}{\Gamma(d/2)}=2^{1-d}|S^{d-1}|,\qquad M=\frac{c_d}{2(d-1)}.
+\]
+
+\begin{lemma}\label{lem:measures}
+$m(A_w)=Mv^{1-d}$ for every $w=(u,v)$; in particular $m(A_o)=M$.
+\end{lemma}
+
+\begin{proof}
+Integrating out $\rho$, $m(A_w)=\frac1{2d-2}\int_{\R^{d-1}}(|u-x|^2+v^2)^{1-d}\,dx$, and the substitution $x=u+vy$ gives
+$v^{1-d}\frac1{2d-2}\int_{\R^{d-1}}(1+|y|^2)^{1-d}dy$. The last integral is $\pi^{(d-1)/2}\Gamma(\frac{d-1}2)/\Gamma(d-1)$,
+which equals $c_d$ by the duplication formula $\Gamma(d-1)=2^{d-2}\pi^{-1/2}\Gamma(\frac{d-1}2)\Gamma(\frac d2)$.
+\end{proof}
+
+By~\cite[Theorem~1.4 and its proof in Section~5.1]{DCELU}, $C_d$ can be realised as follows. Let $R_1$ be an
+$\mathrm{Exp}(1)$ random variable and, given $R_1=s$, let $N$ be a Poisson process on $\R^{d-1}\times(0,\infty)$ with
+intensity $\kappa\,m$, where
+\[
+\kappa=\frac{2(d-1)s}{c_d}=\frac sM .
+\]
+Then $C_d$ has the law of the complement of $\bigcup\{B(x,\rho):(x,\rho)\in N,\ \rho^2\le1+|x|^2\}$, the union of the
+half-balls of $N$ that do not contain $o$. In~\cite[Section~5.3]{DCELU}, $T_d(s)$ is the complement of the union of all
+the half-balls of $N$; in the natural coupling $C_d$ and $T_d(R_1)$ are built from the same $N$, so $T_d(R_1)\subset
+C_d$, and $T_d(R_1)$ uses the $\mathrm{Poisson}(\kappa m(A_o))=\mathrm{Poisson}(R_1)$ further half-balls that contain $o$.
+(The quantity $\kappa\rho^{1-2d}$ is the intensity $2(d-1)s\,c_d^{-1}\rho^{1-2d}$ of~\cite[(5.4)]{DCELU}; their $\varrho$
+is our $\rho$.)
+
+For $w\in\mathcal U_d$ put $I(w)=m(A_w\cap A_o)$. Since the boundaries of $A_w$ and $A_o$ are $m$-null,
+\begin{align*}
+\Prob\bigl(w\in C_d\setminus T_d(R_1)\bigm|R_1=s\bigr)&=\Prob\bigl(N(A_w\setminus A_o)=0\bigr)-\Prob\bigl(N(A_w)=0\bigr)\\
+&=e^{-\kappa(m(A_w)-I(w))}-e^{-\kappa m(A_w)} .
+\end{align*}
+With $\kappa m(A_w)=sv^{1-d}$, $\kappa I(w)=sI(w)/M$ and $\E e^{-aR_1}=1/(1+a)$, Fubini's theorem gives
+\begin{equation}\label{eq:coupling-integral}
+\E\vol\bigl((C_d\setminus T_d(R_1))\cap W\bigr)=\int_W\Bigl[\frac1{1+v^{1-d}-I(w)/M}-\frac1{1+v^{1-d}}\Bigr]
+\frac{du\,dv}{v^d}
+\end{equation}
+for every Borel set $W\subset\mathcal U_d$. The bracket is nonnegative because $0\le I(w)\le m(A_w)=Mv^{1-d}$.
+
+\section{A coupling at positive intensity}\label{sec:finite}
+
+Fix $\lambda>0$ and let $X=X^{(\lambda)}$. Let $X_1$ be the point of $X$ closest to $o$, $r=d(o,X_1)$, and $B_o=
+B_{\HH}(o,r)$ the open hyperbolic ball. Write $\mathcal V(\varrho)=|S^{d-1}|\int_0^\varrho\sinh^{d-1}t\,dt$ for the
+volume of a hyperbolic ball of radius $\varrho$.
+
+\begin{lemma}\label{lem:coupling}
+Let $\Pi_{\rm in}$ be, given $X$, a Poisson process of intensity $\lambda\vol$ on $B_o$, and $\Pi=(X\setminus\{X_1\})\cup
+\Pi_{\rm in}$. Let $C^\lambda$ be the cell of $X_1$ in $\mathrm{Vor}(X)$, that is the zero cell, and $T^\lambda$ the
+cell of $X_1$ in $\mathrm{Vor}(\{X_1\}\cup\Pi)$. Then
+\begin{enumerate}
+\item $T^\lambda\subset C^\lambda$;
+\item $\vol(T^\lambda)$ has the law of the volume of the typical cell of $\mathrm{Vor}(X^{(\lambda)})$;
+\item $\lambda V_d(\lambda)=\E\vol(C^\lambda\setminus T^\lambda)$;
+\item with $B_z=B_{\HH}(z,d(z,X_1))$,
+\[
+\Prob\bigl(z\in C^\lambda\setminus T^\lambda\bigm|X_1\bigr)=e^{-\lambda\vol(B_z\setminus B_o)}-e^{-\lambda\vol(B_z)}
+\quad\text{for every }z\in\HH^d .
+\]
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) Adding nuclei can only shrink the cell of $X_1$. (2) Given $X_1$, the process $X\setminus\{X_1\}$ is a Poisson
+process of intensity $\lambda\vol$ on $\HH^d\setminus\overline{B_o}$, and $\Pi_{\rm in}$ is an independent Poisson
+process of the same intensity on $B_o$. Hence, given $X_1$, $\Pi$ is a Poisson process of intensity $\lambda\vol$ on
+$\HH^d$; its conditional law does not depend on $X_1$, so $\Pi$ is independent of $X_1$. By the Mecke equation~\cite[Theorem~4.1]{LP}
+(Slivnyak's theorem), the typical cell is the cell of a fixed point $y$ in $\mathrm{Vor}(\{y\}\cup\Pi)$,
+and since the isometry group acts transitively on $\HH^d$ its volume has the same law for every $y$. Conditioning on
+$X_1$ gives (2). (3) For $x\in\HH^d$ let $\iota_x$ be the geodesic symmetry about the midpoint of $o$ and $x$, an
+isometry exchanging $o$ and $x$, and write $C_x(Y)$ for the cell of $x$ in $\mathrm{Vor}(Y)$. By the Mecke equation and
+the invariance of the law of $X$ under $\iota_x$,
+\begin{align*}
+\E\vol(C^\lambda)&=\E\sum_{x\in X}\vol(C_x(X))\mathbf 1\{o\in C_x(X)\}\\
+&=\lambda\int_{\HH^d}\E\bigl[\vol(C_o(X\cup\{o\}))\mathbf 1\{x\in C_o(X\cup\{o\})\}\bigr]dx=\lambda\,\E V^2,
+\end{align*}
+so the zero cell has the size-biased law of the typical cell, as in Euclidean space~\cite[Section~10.4]{SW}. Hence
+$\E\vol(C^\lambda)=\lambda V_d(\lambda)+1/\lambda$ in $[0,\infty]$, while $\E\vol(T^\lambda)=1/\lambda$ by (2), and (1)
+gives (3). (4) Up to null events, $z\in C^\lambda$ if and only if $X\setminus\{X_1\}$
+has no point in $B_z$, and $z\in T^\lambda$ if and only if $\Pi$ has no point in $B_z$. Given $X_1$ these events have
+probabilities $e^{-\lambda\vol(B_z\setminus B_o)}$ and $e^{-\lambda\vol(B_z)}$, and the second event is contained in the
+first.
+\end{proof}
+
+By (3), (4) and Tonelli's theorem,
+\[
+\lambda V_d(\lambda)=\int_{\HH^d}\E\bigl[e^{-\lambda\vol(B_z\setminus B_o)}-e^{-\lambda\vol(B_z)}\bigr]\,dz .
+\]
+The integrand depends on $X_1$ only through $r$ and the direction of $X_1$ seen from $o$; the direction is uniform and
+independent of $r$, and $S=\lambda\mathcal V(r)$ is $\mathrm{Exp}(1)$. By rotation invariance about $o$ we may fix the
+direction. Identify $\HH^d$ with $\mathcal U_d$ by an isometry that sends $o$ to $(0,1)$ and the ideal endpoint of that
+direction to $\infty$, so that $X_1=\xi_s:=(0,e^{r})$ with $\lambda\mathcal V(r)=s$. Writing $B_w$, $B_o$ for the balls
+above with $X_1=\xi_s$,
+\begin{equation}\label{eq:finite-integral}
+\lambda V_d(\lambda)=\int_0^\infty e^{-s}\,ds\int_{\mathcal U_d}g_\lambda(w,s)\,\frac{du\,dv}{v^d},\qquad
+g_\lambda(w,s)=e^{-\lambda\vol(B_w\setminus B_o)}-e^{-\lambda\vol(B_w)}\ \ge0 .
+\end{equation}
+Here $r=r(\lambda,s)\to\infty$ as $\lambda\to0$ for fixed $s$.
+
+\section{Passage to the limit}\label{sec:limit}
+
+We use two facts of hyperbolic geometry. First, $\mathcal V(\varrho)e^{-(d-1)\varrho}\to|S^{d-1}|2^{1-d}/(d-1)$ as
+$\varrho\to\infty$, so that
+\begin{equation}\label{eq:ratio}
+\frac{\mathcal V(\varrho)}{\mathcal V(\varrho')}\to e^{(d-1)\delta}\qquad\text{whenever }\varrho,\varrho'\to\infty,\
+\varrho-\varrho'\to\delta .
+\end{equation}
+Second, for a boundary point $\eta$ of $\mathcal U_d$ and a geodesic ray $t\mapsto c(t)$ from $o$ to $\eta$, the
+Busemann function $b_\eta(w)=\lim_{t\to\infty}\bigl(d(w,c(t))-t\bigr)$ exists, and in our coordinates
+\begin{equation}\label{eq:busemann}
+b_\infty(w)=-\log v,\qquad b_x(w)=\log\frac{|w-x|^2}{v\,(1+|x|^2)}\quad(x\in\R^{d-1}) .
+\end{equation}
+The first follows from $d((u,v),(0,e^t))=\operatorname{arccosh}\bigl(1+\frac{|u|^2+(v-e^t)^2}{2ve^t}\bigr)=t-\log
+v+o(1)$; the second follows from the first and an isometry of $\mathcal U_d$ fixing $o$ and sending $\infty$ to $x$,
+since horospheres centred at $x$ are the Euclidean spheres tangent to the boundary at $x$ (see~\cite[Section~4.6]{Rat}).
+The directions at $o$ correspond to boundary points: if $\omega$ is uniform on the unit sphere of $T_o\HH^d$, the
+endpoint $x(\omega)$ of the ray from $o$ in direction $\omega$ has density $c_d^{-1}(1+|x|^2)^{1-d}$ on $\R^{d-1}$
+\cite[Lemma~3.1]{DCELU}.
+
+\begin{lemma}\label{lem:limits}
+Fix $s>0$ and $w=(u,v)\in\mathcal U_d$. As $\lambda\to0$,
+\[
+\lambda\vol(B_w)\to sv^{1-d},\qquad\lambda\vol(B_w\cap B_o)\to\frac{s\,I(w)}M .
+\]
+Consequently $g_\lambda(w,s)\to e^{-s(v^{1-d}-I(w)/M)}-e^{-sv^{1-d}}$.
+\end{lemma}
+
+\begin{proof}
+Since $\lambda\mathcal V(r)=s$, $\lambda\vol(B_w)=s\,\mathcal V(d(w,\xi_s))/\mathcal V(r)$, and $d(w,\xi_s)-r\to
+b_\infty(w)=-\log v$ by~\eqref{eq:busemann}; \eqref{eq:ratio} gives the first limit.
+
+For the second, write a point of $B_o$ in geodesic polar coordinates about $o$ as $y=\exp_o(\varrho\omega)$ and put
+$t=\lambda\mathcal V(\varrho)\in(0,s)$. Then $\lambda\,dy=dt\,\sigma(d\omega)$ with $\sigma$ the uniform probability on
+directions, and
+\[
+\lambda\vol(B_w\cap B_o)=\int_0^s dt\int\sigma(d\omega)\,\mathbf 1\{d(w,y)<d(w,\xi_s)\} .
+\]
+For fixed $\omega$ and $t\in(0,s)$, $\varrho=\mathcal V^{-1}(t/\lambda)\to\infty$ and $\varrho-r\to\frac1{d-1}\log
+\frac ts$ by~\eqref{eq:ratio}, so
+\[
+d(w,y)-d(w,\xi_s)=\bigl(d(w,y)-\varrho\bigr)-\bigl(d(w,\xi_s)-r\bigr)+(\varrho-r)\ \to\ b_{x(\omega)}(w)+\log
+v+\frac1{d-1}\log\frac ts .
+\]
+For fixed $\omega$ the limit is strictly increasing in $t$, so it vanishes on a null set of $(t,\omega)$, and the
+indicators converge almost everywhere on the finite measure space $(0,s)\times S^{d-1}$. By dominated convergence and
+\eqref{eq:busemann},
+\[
+\lambda\vol(B_w\cap B_o)\to\int_0^s dt\int_{\R^{d-1}}\frac{dx}{c_d(1+|x|^2)^{d-1}}\,
+\mathbf 1\Bigl\{|w-x|^2<(1+|x|^2)\Bigl(\frac st\Bigr)^{1/(d-1)}\Bigr\} .
+\]
+Substitute $\rho=(1+|x|^2)^{1/2}(s/t)^{1/(2d-2)}$, which maps $t\in(0,s)$ onto $\rho>(1+|x|^2)^{1/2}$ with
+$dt=-2(d-1)s(1+|x|^2)^{d-1}\rho^{1-2d}d\rho$; the minus sign reverses the limits of integration. The limit becomes
+\[
+\frac{2(d-1)s}{c_d}\int_{\R^{d-1}}dx\int_{(1+|x|^2)^{1/2}}^\infty\mathbf 1\{\rho>|w-x|\}\,\rho^{1-2d}\,d\rho
+=\kappa\,m(A_w\cap A_o)=\frac{sI(w)}M .
+\]
+Finally $\vol(B_w\setminus B_o)=\vol(B_w)-\vol(B_w\cap B_o)$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+The integrand in~\eqref{eq:finite-integral} is nonnegative, so Fatou's lemma and Lemma~\ref{lem:limits} give
+\[
+\liminf_{\lambda\to0}\lambda V_d(\lambda)\ge\int_0^\infty e^{-s}ds\int_{\mathcal U_d}\Bigl(e^{-s(v^{1-d}-I(w)/M)}-
+e^{-sv^{1-d}}\Bigr)\frac{du\,dv}{v^d}=\E\vol\bigl(C_d\setminus T_d(R_1)\bigr),
+\]
+the last equality by~\eqref{eq:coupling-integral} with $W=\mathcal U_d$. The right side is infinite by
+Theorem~\ref{thm:coupling}.
+\end{proof}
+
+\section{The coupling volume}\label{sec:coupling}
+
+By rotation invariance about the vertical axis, $I(u,v)$ depends on $u$ only through $|u|$. Write
+\[
+J(u)=\int_0^\infty\Bigl[\frac1{a-\varepsilon}-\frac1a\Bigr]\frac{dv}{v^d},\qquad a=1+v^{1-d},\quad
+\varepsilon=\varepsilon(u,v)=\frac{I(u,v)}M\in[0,v^{1-d}],
+\]
+so that by~\eqref{eq:coupling-integral} $\E\vol((C_d\setminus T_d(R_1))\cap W_U)=\int_{|u|<U}J(u)\,du$. Since
+$A_w\cap A_o=\{(x,\rho):\rho>\max(|w-x|,(1+|x|^2)^{1/2})\}$,
+\begin{equation}\label{eq:I}
+I(u,v)=\frac1{2d-2}\int_{\R^{d-1}}\max\bigl(|u-x|^2+v^2,\ |x|^2+1\bigr)^{1-d}dx .
+\end{equation}
+
+\begin{lemma}\label{lem:I}
+\begin{enumerate}
+\item $J(u)\le1+\frac1{2d-2}$ for every $u$.
+\item $|u|^{d-1}I(u,v)\le K_d:=2^{d-1}|S^{d-2}|/(d-1)^2$ for every $u\ne0$ and $v>0$.
+\item For every $v>0$, $|u|^{d-1}I(u,v)\to L_d$ as $|u|\to\infty$, where
+\[
+L_d=\frac1{2d-2}\int_{\R^{d-1}}\max(|y-e|^2,|y|^2)^{1-d}dy=\frac{2^{d-1}\pi^{(d-2)/2}\,\Gamma(d/2)}{(d-1)^2\,\Gamma(d-1)}
+\]
+for any unit vector $e$.
+\end{enumerate}
+\end{lemma}
+
+\begin{proof}
+(1) We have $\varepsilon\le\min(1,v^{1-d})$, because $I\le m(A_o)=M$ and $I\le m(A_w)=Mv^{1-d}$. So $a-\varepsilon\ge
+\max(1,v^{1-d})$ and the bracket is $\varepsilon/(a(a-\varepsilon))$. For $v\le1$ it is at most $1/(a\,v^{1-d})\le
+v^{2d-2}$, and $v^{2d-2}v^{-d}\le1$. For $v>1$ it is at most $\varepsilon/a\le v^{1-d}$, and $\int_1^\infty v^{1-2d}dv=
+\frac1{2d-2}$.
+
+(2) Split $\R^{d-1}$ into $H_1=\{|x|\le|x-u|\}$ and $H_2=\{|x|>|x-u|\}$. On $H_1$, $|x-u|\ge|u|/2$ and the max in
+\eqref{eq:I} is at least $|x-u|^2$; on $H_2$, $|x|\ge|u|/2$ and it is at least $|x|^2$. Each part is at most
+$\int_{|y|\ge|u|/2}|y|^{2-2d}dy=|S^{d-2}|(|u|/2)^{1-d}/(d-1)$.
+
+(3) Substituting $x=|u|y$ and $u=|u|e$ in~\eqref{eq:I},
+\[
+|u|^{d-1}I(u,v)=\frac1{2d-2}\int_{\R^{d-1}}\max\Bigl(|y-e|^2+\frac{v^2}{|u|^2},\ |y|^2+\frac1{|u|^2}\Bigr)^{1-d}dy,
+\]
+which increases to $L_d$ by monotone convergence. On the half-space $\{y\cdot e\le\frac12\}$ the max is $|y-e|^2$,
+on the other half it is $|y|^2$, and the two halves are exchanged by $y\mapsto e-y$; so $L_d=\frac1{d-1}\int_{z\cdot e
+\ge1/2}|z|^{2-2d}dz$. Writing $z=(z_1,z')$ with $z_1=z\cdot e$ and $z'=z_1\zeta$,
+\[
+\int_{z_1\ge1/2}|z|^{2-2d}dz=\int_{1/2}^\infty z_1^{-d}dz_1\int_{\R^{d-2}}(1+|\zeta|^2)^{1-d}d\zeta
+=\frac{2^{d-1}}{d-1}\cdot\frac{\pi^{(d-2)/2}\Gamma(d/2)}{\Gamma(d-1)},
+\]
+where for $d=2$ the inner integral is $1$.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:coupling}]
+Fix $u$ with $|u|$ so large that $K_d|u|^{1-d}\le M/2$. Then $\varepsilon\le\frac12\le\frac a2$ by
+Lemma~\ref{lem:I}(2), so $a-\varepsilon\ge a/2$ and
+\[
+|u|^{d-1}\Bigl[\frac1{a-\varepsilon}-\frac1a\Bigr]v^{-d}=\frac{|u|^{d-1}\varepsilon}{a(a-\varepsilon)v^d}\le
+\frac{2K_d}M\,\frac{v^{-d}}{a^2}=\frac{2K_d}M\,\frac{v^{d-2}}{(1+v^{d-1})^2},
+\]
+which is integrable on $(0,\infty)$. As $|u|\to\infty$, $\varepsilon\to0$ and $|u|^{d-1}\varepsilon\to L_d/M$ for
+every $v$ by Lemma~\ref{lem:I}(3), so by dominated convergence
+\[
+|u|^{d-1}J(u)\to\frac{L_d}M\int_0^\infty\frac{v^{d-2}\,dv}{(1+v^{d-1})^2}=\frac{L_d}{(d-1)M}.
+\]
+Since $J$ is bounded (Lemma~\ref{lem:I}(1)) and radial,
+\[
+\int_{|u|<U}J(u)\,du=O(1)+|S^{d-2}|\int_1^U\rho^{d-2}J(\rho e)\,d\rho=\frac{|S^{d-2}|L_d}{(d-1)M}\log U+o(\log U).
+\]
+Inserting $|S^{d-2}|=2\pi^{(d-1)/2}/\Gamma(\frac{d-1}2)$, $M=\pi^{(d-1)/2}\Gamma(\frac{d-1}2)/(2(d-1)\Gamma(d-1))$ (Lemma
+\ref{lem:measures}) and $L_d$ from Lemma~\ref{lem:I}(3) gives $\theta_d$.
+\end{proof}
+
+\begin{remark}
+In the plane $I$ has a closed form. The two quadratics in~\eqref{eq:I} cross at $x_*=(u^2+v^2-1)/(2u)$ for $u>0$,
+and
+\[
+I(u,v)=\frac12\Bigl[\frac1v\Bigl(\arctan\frac{x_*-u}v+\frac\pi2\Bigr)+\frac\pi2-\arctan x_*\Bigr].
+\]
+Numerically, $\E\vol((C_2\setminus T_2(R_1))\cap W_U)-\frac8\pi\log U$ equals $0.8049$ at $U=10$, $0.6987$ at
+$U=10^2$ and $0.68556$ at $U=10^4$, and lies between $0.685422$ and $0.685437$ for $U$ from $10^5$ to $10^8$,
+consistent with a finite limit near $0.68542$.
+\end{remark}
+
+\section{Numerics in the plane}\label{sec:numerics}
+
+\subsection{An integral formula}
+Let $d=2$. By the Mecke equation, $\E\vol(C^\lambda)=\int_{\HH^2}\Prob(o\sim x)\,dx$, where $o\sim x$ means that $o$ and
+$x$ have the same nearest point of $X$, and
+\[
+\Prob(o\sim x)=\lambda\int_{\HH^2}e^{-\lambda\vol(B_\HH(o,|y|)\cup B_\HH(x,d(x,y)))}\,dy,\qquad
+\frac1\lambda=\int_{\HH^2}e^{-\lambda\vol(B_\HH(o,|x|))}\,dx ,
+\]
+$|y|=d(o,y)$. Change to the area variables $t=\lambda\mathcal V(|x|)$ and $s=\lambda\mathcal V(|y|)$, with
+$\mathcal V(\varrho)=2\pi(\cosh\varrho-1)$. The integrand depends on $x$ only through $|x|$, and
+\[
+\lambda^2V_2(\lambda)=\int_0^\infty\bigl(p(t)-e^{-t}\bigr)dt,\qquad p(t)=\frac1\pi\int_0^\infty ds\int_0^\pi
+e^{-\lambda(\mathcal V(a)+\mathcal V(b)-\ell)}\,d\phi ,
+\]
+where $a=|y|$, $\phi$ is the angle at $o$ between $x$ and $y$, $b=d(x,y)$ by the hyperbolic law of cosines, and $\ell$
+is the area of the lens $B_\HH(o,a)\cap B_\HH(x,b)$. The two circles meet at $y$ and at its mirror image, so by the
+Gauss--Bonnet formula $\ell=2\alpha\cosh a+2\beta\cosh b+2\gamma-2\pi$, with $\alpha,\beta,\gamma$ the angles of the
+triangle $oxy$ at $o,x,y$.
+
+\subsection{Quadrature}
+We integrated with Gauss--Legendre rules on geometric pieces of ratio $2$: $t$ from $10^{-4}\min(1,\lambda)$ to
+$\max(80,400/\lambda)$, $s$ from $10^{-4}\min(1,\lambda)$ to $80$, and $\phi$ from $10^{-4}\min(1,\sqrt\lambda)$ to
+$\pi$, with $12$ and with $18$ nodes per piece. The geometry is evaluated without cancellation: $\cosh b-1=2\sinh^2
+\frac{a-r}2+2\sinh a\sinh r\sin^2\frac\phi2$, with $r=|x|$, and the angles at $x$ and $y$ are computed with the two-argument
+arctangent from $\tan\beta=\sinh a\sin\phi/(\sinh(r-a)+2\cosh r\sinh a\sin^2\frac\phi2)$ and the same formula with $a$
+and $r$ exchanged. On $400$ random triangles with sides up to $24$ and angles down to $10^{-9}$, the area of
+$B_\HH(o,a)\cup B_\HH(x,b)$ computed this way agrees with a $60$-digit evaluation of the law of cosines to a relative
+error of $2\times10^{-15}$. The long range in $t$ is needed: two points at area distance $t$ share a
+cell when a point of $X$ lies near their midpoint and the two discs of radius about half their distance are empty,
+which costs about $2\sqrt{\pi\lambda t}$, so $p(t)$ has a tail out to $t$ of order $1/\lambda$. At $\lambda=10^{-4}$,
+$73\%$ of $\int p$ comes from $t>80$. Table~\ref{tab:values} lists the results with $18$ nodes. Changing $12$ to $18$
+nodes moves $\lambda^2V_2$ by at most $10^{-9}$, and by at most $4\times10^{-14}$ for $\lambda\le10^{-3}$.
+
+\begin{table}[tbp]
+\centering
+\begin{tabular}{rrrr}
+\toprule
+$\lambda$ & $\lambda^2V_2(\lambda)$ & $\lambda V_2(\lambda)$ & increase per decade \\
+\midrule
+$100$ & $0.2799004$ & $0.0027990$ & \\
+$10$ & $0.2774651$ & $0.0277465$ & \\
+$1$ & $0.2566712$ & $0.2566712$ & \\
+$10^{-1}$ & $0.1661182$ & $1.661182$ & $1.404$\\
+$10^{-2}$ & $0.05481331$ & $5.481331$ & $3.820$\\
+$10^{-3}$ & $0.01084602$ & $10.84602$ & $5.365$\\
+$10^{-4}$ & $0.001662624$ & $16.62624$ & $5.780$\\
+$10^{-5}$ & $0.0002247806$ & $22.47806$ & $5.852$\\
+\bottomrule
+\end{tabular}
+\caption{Quadrature values in $\HH^2$. The increments tend to $\frac8\pi\log10=5.8635$.}
+\label{tab:values}
+\end{table}
+
+The gaps between the increments and $\frac8\pi\log10$ are $0.499$, $0.083$ and $0.012$ for the last three decades,
+shrinking by factors of $6.0$ and $7.1$. The values of $\lambda V_2(\lambda)-\frac8\pi\log\frac1\lambda$ at
+$\lambda=10^{-4}$ and $10^{-5}$ are $-6.828$ and $-6.839$; if the gaps keep shrinking by a factor of at least $6$ per
+decade, the remaining decrease is at most $0.003$. This is the basis of Conjecture~\ref{conj:rate}.
+
+\subsection{Checks}
+As $\lambda\to\infty$ the tessellation is locally Euclidean and $\lambda^2V_2(\lambda)$ tends to the variance of the
+area of the typical cell of the planar Poisson--Voronoi tessellation of unit intensity, about $0.280$~\cite{Gilbert};
+the value at $\lambda=100$ is $0.27990$.
+
+For an independent check we sampled the typical cell directly. Ordering the points of $X$ by distance from $o$, the
+numbers $\lambda\mathcal V(|X_i|)$ form a Poisson process of unit rate on $(0,\infty)$, with independent uniform
+directions, so the nearest points can be generated in order. In the Beltrami--Klein model centred at $o$, the bisector
+of $o$ and a point at distance $a$ in direction $\phi$ is the chord $\{k:k\cdot e_\phi=\tanh(a/2)\}$, so the cell of $o$
+in $\{o\}\cup X$ is a Euclidean convex polygon, computed exactly by intersecting half-planes; points beyond the $K$-th do
+not affect it once every vertex has Klein norm below $\tanh(|X_K|/2)$. For the edge on the chord with parameters
+$(h,\phi)$, the hyperbolic area of the sector it subtends from $o$ is $\bigl[\arcsin\bigl(\sin\psi/\sqrt{1-h^2}\bigr)-
+\psi\bigr]$ between the polar angles $\psi$ of its endpoints, measured from the direction $\phi$. The sample means of the area agree with
+$1/\lambda$, the mean number of edges agrees with $6+3/(\pi\lambda)$ (Gauss--Bonnet for a tessellation with vertices of
+degree three), and the sample variances agree with Table~\ref{tab:values} (Table~\ref{tab:mc}). Each row of
+Table~\ref{tab:mc} is one run of independent cells from NumPy's default generator, with the seed recorded beside the
+output in the repository.
+
+\begin{table}[tbp]
+\centering
+\begin{tabular}{rrrr}
+\toprule
+$\lambda$ & cells & $\lambda V_2(\lambda)$, Monte Carlo & quadrature \\
+\midrule
+%MCROWS-BEGIN%
+$10^{-1}$ & $20000$ & $1.6619\pm0.0164$ & $1.6612$ \\
+$10^{-2}$ & $20000$ & $5.5331\pm0.0550$ & $5.4813$ \\
+%MCROWS-END%
+\bottomrule
+\end{tabular}
+\caption{Monte Carlo of the typical cell area, with one standard error computed from the fourth sample moment.}
+\label{tab:mc}
+\end{table}
+
+Finally, a Monte Carlo of $p(t)$ itself, with $20{,}000$ samples of the Poisson points near $o$ and $x$ for each of
+six pairs $(\lambda,t)$, agrees with the quadrature within $1.4$ standard errors (Table~\ref{tab:p}), including at
+$(10^{-2},30)$ and $(10^{-3},1)$, where $p(t)$ is far from $e^{-t}$. The limits of Lemma~\ref{lem:limits} were checked at
+$\lambda=10^{-6}$ for five pairs $(w,s)$ in $\HH^2$ with $200{,}000$ uniform points of $B_o$ each: $\lambda\vol(B_w)$
+equals $s/v$ to five digits, and $\lambda\vol(B_w\cap B_o)$ is within one standard error of $sI(w)/M$.
+
+\begin{table}[tbp]
+\centering
+\begin{tabular}{rrrrr}
+\toprule
+$\lambda$ & $t$ & $p(t)$, Monte Carlo & quadrature & $e^{-t}$ \\
+\midrule
+$1$ & $1$ & $0.3701\pm0.0034$ & $0.3700$ & $0.3679$\\
+$10^{-2}$ & $0.003$ & $0.8754\pm0.0023$ & $0.8726$ & $0.9970$\\
+$10^{-2}$ & $0.3$ & $0.2763\pm0.0032$ & $0.2778$ & $0.7408$\\
+$10^{-2}$ & $3$ & $0.0608\pm0.0017$ & $0.0626$ & $0.0498$\\
+$10^{-2}$ & $30$ & $0.0061\pm0.0006$ & $0.0053$ & $0.0000$\\
+$10^{-3}$ & $1$ & $0.0500\pm0.0015$ & $0.0514$ & $0.3679$\\
+\bottomrule
+\end{tabular}
+\caption{Monte Carlo of $p(t)$, with one standard error, against the quadrature.}
+\label{tab:p}
+\end{table}
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits programme (credit
+530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+Claude agents (Anthropic) proved Theorems~\ref{thm:main} and~\ref{thm:coupling}, carried out the computations of
+Section~\ref{sec:numerics} and prepared the manuscript; a Codex agent (OpenAI) refereed the proofs and the computations independently.
+The author directed the work and is responsible for the content of the paper and for decisions concerning its
+dissemination.
+
+\section*{Code availability}
+The scripts behind Section~\ref{sec:numerics} and the remark of Section~\ref{sec:coupling}, with their outputs, are in
+the repository
+\begin{center}\url{https://github.com/yspennstate/hyperbolic-voronoi-typical-cell-variance/tree/v1.0}.\end{center}
+
+\appendix
+\section{Notation}\label{app:notation}
+
+\begin{center}
+\begin{tabular}{p{3.2cm}p{8.0cm}p{3.0cm}}
+\toprule
+Symbol & Meaning & First appears\\
+\midrule
+$X^{(\lambda)}$, $V$, $V_d(\lambda)$ & Poisson process of intensity $\lambda\vol$, typical cell volume, its variance & Section~\ref{sec:intro}\\
+$C_d$, $T_d(R_1)$, $R_1$ & ideal zero cell, its stationary companion, the $\mathrm{Exp}(1)$ variable coupling them & Section~\ref{sec:intro}, \ref{sec:setting}\\
+$\mathcal U_d$, $w=(u,v)$, $o$ & upper half-space model, a point, the origin $(0,1)$ & Section~\ref{sec:setting}\\
+$B(x,\rho)$, $m$, $A_w$ & boundary half-ball, the measure $\rho^{1-2d}dx\,d\rho$, half-balls containing $w$ & Section~\ref{sec:setting}\\
+$c_d$, $M$, $\kappa$ & $2^{1-d}|S^{d-1}|$, $m(A_o)=c_d/(2d-2)$, $R_1/M$ & Section~\ref{sec:setting}\\
+$I(w)$ & $m(A_w\cap A_o)$ & \eqref{eq:coupling-integral}, \eqref{eq:I}\\
+$W_U$ & the window $\{|u|<U\}$ & Theorem~\ref{thm:coupling}\\
+$\theta_d$, $L_d$, $K_d$ & growth constant, limit and bound for $|u|^{d-1}I$ & Theorem~\ref{thm:coupling}, Lemma~\ref{lem:I}\\
+$X_1$, $r$, $B_o$, $B_z$ & nearest point to $o$, its distance, the balls of Lemma~\ref{lem:coupling} & Section~\ref{sec:finite}\\
+$C^\lambda$, $T^\lambda$, $\Pi_{\rm in}$ & zero cell, coupled typical cell, the added process & Lemma~\ref{lem:coupling}\\
+$\mathcal V(\varrho)$, $s$, $\xi_s$ & ball volume, $\lambda\mathcal V(r)$, the fixed position of $X_1$ & Section~\ref{sec:finite}\\
+$b_\eta$ & Busemann function & \eqref{eq:busemann}\\
+$J(u)$, $a$, $\varepsilon$ & inner integral of the coupling volume and its ingredients & Section~\ref{sec:coupling}\\
+$p(t)$, $\ell$ & $\Prob(o\sim x)$ at area distance $t$, lens area & Section~\ref{sec:numerics}\\
+\bottomrule
+\end{tabular}
+\end{center}
+
+\begin{thebibliography}{99}
+\bibitem{BCP} T.~Budzinski, N.~Curien and B.~Petri, \emph{On Cheeger constants of hyperbolic surfaces}, Invent.
+Math. \textbf{242} (2025), no.~2, 511--530, \doi{10.1007/s00222-025-01361-w}.
+\bibitem{DA} M.~D'Achille, \emph{Ideal Poisson--Voronoi tessellations beyond hyperbolic spaces}, Electron. Commun.
+Probab. \textbf{31} (2026), 1--12, \doi{10.1214/26-ECP815}.
+\bibitem{DCELU} M.~D'Achille, N.~Curien, N.~Enriquez, R.~Lyons and M.~\"Unel, \emph{Ideal Poisson--Voronoi tessellations
+on hyperbolic spaces}, Ann. Probab. \textbf{54} (2026), no.~2, 846--891, \doi{10.1214/25-AOP1781};
+\arxiv{2303.16831}.
+\bibitem{DT} M.~D'Achille and C.~Th\"ale, \emph{Face volume densities of positive-intensity and ideal Poisson--Voronoi
+tessellations in hyperbolic spaces}, \arxiv{2606.26049}, 2026.
+\bibitem{FMW} M.~Fraczyk, S.~Mellick and A.~Wilkens, \emph{Poisson--Voronoi tessellations and fixed price in higher rank},
+Ann. of Math., to appear, \arxiv{2307.01194}, 2023.
+\bibitem{Gilbert} E.~N.~Gilbert, \emph{Random subdivisions of space into crystals}, Ann. Math. Statist. \textbf{33}
+(1962), no.~3, 958--972, \doi{10.1214/aoms/1177704464}.
+\bibitem{Isokawa} Y.~Isokawa, \emph{Poisson--Voronoi tessellations in three-dimensional hyperbolic spaces}, Adv. in Appl.
+Probab. \textbf{32} (2000), no.~3, 648--662, \doi{10.1239/aap/1013540236}.
+\bibitem{LP} G.~Last and M.~Penrose, \emph{Lectures on the Poisson Process}, Cambridge University Press, 2018,
+\doi{10.1017/9781316104477}.
+\bibitem{Mellick} S.~Mellick, \emph{Indistinguishability of cells for the ideal Poisson Voronoi tessellation},
+Proc. Amer. Math. Soc. \textbf{154} (2026), no.~4, 1589--1596, \doi{10.1090/proc/17493}.
+\bibitem{Rat} J.~G.~Ratcliffe, \emph{Foundations of Hyperbolic Manifolds}, 3rd ed., Graduate Texts in Mathematics
+149, Springer, 2019, \doi{10.1007/978-3-030-31597-9}.
+\bibitem{SW} R.~Schneider and W.~Weil, \emph{Stochastic and Integral Geometry}, Springer, 2008,
+\doi{10.1007/978-3-540-78859-1}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public}.
+\end{thebibliography}
+\end{document}

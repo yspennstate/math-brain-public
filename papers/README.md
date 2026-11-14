@@ -105,6 +105,7 @@ Papers that came out of this work. Each has its own public repository; a copy of
 | Lumping and the mixing time of a reversible chain: the dependence on the number of states | [lumping-mixing-time](https://github.com/yspennstate/lumping-mixing-time) |
 | The mode of classical and free Brownian motion with an initial distribution at large time | [brownian-mode-location](https://github.com/yspennstate/brownian-mode-location) |
 | The giant component of bilateral preference graphs with random budgets | [bilateral-preference-giant-component](https://github.com/yspennstate/bilateral-preference-giant-component) |
+| The variance of the typical cell of a hyperbolic Poisson-Voronoi tessellation at low intensity | [hyperbolic-voronoi-typical-cell-variance](https://github.com/yspennstate/hyperbolic-voronoi-typical-cell-variance) |
 
 Six more are kept here with their working files:
 
