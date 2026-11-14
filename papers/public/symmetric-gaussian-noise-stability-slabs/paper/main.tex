@@ -1,0 +1,478 @@
+\documentclass[11pt]{amsart}
+\usepackage{amsmath,amssymb,amsthm,booktabs}
+\usepackage[margin=1.15in]{geometry}
+\usepackage[hidelinks]{hyperref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\newtheorem{conjecture}[theorem]{Conjecture}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\newcommand{\R}{\mathbb{R}}
+\newcommand{\E}{\mathbb{E}}
+\newcommand{\Prob}{\mathbb{P}}
+\newcommand{\Stab}{\operatorname{Stab}_\rho}
+\newcommand{\doi}[1]{\href{https://doi.org/#1}{doi:\nolinkurl{#1}}}
+\newcommand{\arxiv}[1]{\href{https://arxiv.org/abs/#1}{arXiv:\nolinkurl{#1}}}
+\setlength{\emergencystretch}{2.5em}
+
+\title[Slabs and balls in the symmetric Gaussian problem]{Slabs are more noise stable than balls at large Gaussian
+measure, for every correlation}
+\author{Yitzchak Shmalo}
+\address{Einstein Institute of Mathematics, The Hebrew University of Jerusalem, Jerusalem, Israel}
+\email{yspennstate@gmail.com}
+\date{November 2026}
+\subjclass[2020]{60E15, 60G15, 49Q20}
+\keywords{Gaussian noise stability, symmetric sets, symmetric Gaussian problem, Borell's theorem, cylinders}
+
+\raggedbottom
+\begin{document}
+\begin{abstract}
+Among symmetric subsets of $\R^n$ of prescribed Gaussian measure, which one maximizes the probability that two
+$\rho$-correlated standard Gaussian vectors both lie in the set? A centred ball or its complement was suggested, and
+Heilman showed that this fails in the plane to second order at $\rho=0$. We show that it fails for every
+$\rho\in(0,1)$ and every $n\ge2$: at measure close to $1$ the slab $\{|x_1|\le t\}$ is strictly more noise stable than
+every cylinder $B^k\times\R^{n-k}$ with $k\ge2$ and every cylinder complement, and at measure close to $0$ the
+complement of the slab wins. Computations in dimensions one, two and six are consistent with cylinders and their
+complements being the optimal sets.
+\end{abstract}
+\maketitle
+
+\section{Introduction}\label{sec:intro}
+
+Let $X$ and $Y$ be standard Gaussian vectors in $\R^n$ such that $(X,Y)$ is a centred Gaussian vector in $\R^{2n}$
+with $\E[X_iY_j]=\rho\,\delta_{ij}$, and for a measurable set
+$A\subseteq\R^n$ let
+\[
+\Stab(A)=\Prob(X\in A,\ Y\in A)
+\]
+be its noise stability. Borell's theorem~\cite{Borell} says that among all sets of fixed Gaussian measure a half
+space has the largest noise stability when $0<\rho<1$. Its proofs by heat flow and by stochastic calculus all use the
+fact that translates of half spaces are again half spaces, and this is lost when one asks the same question for
+symmetric sets, $A=-A$. The symmetric version arose in the lower bound of Chakrabarti and Regev~\cite{CR} for the
+Gap-Hamming-Distance problem, and O'Donnell listed it among the open problems in the analysis of Boolean
+functions~\cite{OD}: for $0<a,b<1$, minimize $\Prob(X\in A,\ Y\in B)$ over symmetric $A,B$ with $\gamma_n(A)=a$ and
+$\gamma_n(B)=b$, where $\gamma_n$ is the standard Gaussian measure. O'Donnell first imposes symmetry on $A$ only and
+remarks that requiring it of both sets gives an equivalent problem. The suggested answer, also implicit in
+Barthe's work on unconditional sets~\cite{Barthe}, is that $A$ is a centred ball and $B$ the complement of a centred
+ball, or the other way round.
+
+Heilman~\cite{H1} gave the first results. In dimension one he proved that the centred interval or its complement is
+optimal when $|\rho|$ is below an explicit, very small bound~\cite[Theorem~1.5]{H1}. In dimension two he showed that
+the conjecture is false: differentiating twice in $\rho$ at $\rho=0$ reduces the question to a functional of the
+second-degree Hermite coefficients, and for the measure $0.943865$ a slab and an ellipse do better than the ball and
+its complement. He noted that a slab doing best there agrees with the S-inequality of Latała and
+Oleszkiewicz~\cite{LO}, by which among symmetric convex subsets of the plane with the measure of a slab, the slab has
+the smallest measure after any dilation by a factor at least $1$. A second-variation computation~\cite[Theorem~1.7]{H1} shows that a ball or a ball complement of large
+radius is not even a local maximizer of that functional. He suggested that the optimal sets might be solid cylinders or their
+complements, whose boundaries are dilations of $S^k\times\R^{n-k-1}$. The limit $\rho\to1$ concerns Gaussian surface
+area. Heilman~\cite[Theorem~1.11]{H2} showed that a set minimizing Gaussian surface area among symmetric sets of its
+measure is a cylinder $B^k\times\R^{n-k}$ or the complement of one if the set or its complement is convex and a
+curvature-integral inequality holds, and~\cite[Theorem~2.4]{H3} gives the same conclusion under the assumption that
+$\Omega\times\R$ is minimizing, with one exceptional case of signs. Barchiesi and Julin~\cite{BJ} proved that the
+slab is the symmetric minimizer of Gaussian perimeter when the measure is close to $1$, and Milman~\cite{Milman}
+classified the planar symmetric minimizers as discs, strips and their complements. Barthe~\cite{Barthe} had shown
+that among unconditional sets slabs minimize a modified Gaussian perimeter. Fusco and La Manna~\cite{FLM} studied the
+Gaussian integral of the mean curvature under a Gaussian volume constraint, and showed that in the plane, among convex
+sets satisfying regularity and containment assumptions, the centred disc maximizes it for certain values of the
+measure.
+
+Heilman's counterexamples concern the second derivative at $\rho=0$, so they show that the conjecture fails for all
+sufficiently small $\rho>0$ at those measures. Here we show that it fails at every correlation.
+
+For $1\le k\le n$ and $s>0$ write
+\[
+C_k(s)=\{x\in\R^n:\ x_1^2+\dots+x_k^2\le s^2\},
+\]
+so that $C_1(s)$ is the slab $\{|x_1|\le s\}$ and $C_n(s)$ is the centred ball of radius $s$. All of these sets and
+their complements are symmetric.
+
+\begin{theorem}\label{thm:main}
+Let $n\ge2$ and $0<\rho<1$. There is $a_0=a_0(n,\rho)<1$ such that for every $a\in(a_0,1)$ the slab of Gaussian
+measure $a$ has strictly larger noise stability than every $C_k(s)$ with $2\le k\le n$ of measure $a$ and than every
+complement $C_k(s)^c$ with $1\le k\le n$ of measure $a$. More precisely, let $\varepsilon=1-a$, let $t$ and $r$ be
+defined by $\gamma_n(C_1(t))=\gamma_n(C_k(r))=a$, and write $J(A)=\Prob(X\notin A,\ Y\notin A)$. Then
+\begin{equation}\label{eq:rates}
+\frac{J(C_1(t))}{J(C_k(r))}\ \ge\ c\,t^{(k-1)(1-\rho)/(1+\rho)}\quad(2\le k\le n),\qquad
+J(C_k(s)^c)\le(1-\rho^2)^{-k/2}\varepsilon^2,
+\end{equation}
+for $\varepsilon$ small, with $c=c(k,\rho)>0$, while $J(C_1(t))\ge c'\,t^{-2\rho/(1+\rho)}\varepsilon^{2/(1+\rho)}$.
+\end{theorem}
+
+Since $\Stab(A^c)=1-2\gamma_n(A)+\Stab(A)$, a set of measure $a$ is optimal exactly when its complement is optimal
+among sets of measure $1-a$. Theorem~\ref{thm:main} therefore also says that the complement of the slab beats every
+other cylinder and cylinder complement when the measure is close to $0$.
+
+\begin{corollary}\label{cor:false}
+For every $n\ge2$ and every $\rho\in(0,1)$ there are $0<a_1<a_0<1$, depending on $n$ and $\rho$, such that for
+$a\in(0,a_1)\cup(a_0,1)$ neither the centred ball of measure $a$ nor the complement of a centred ball of measure $a$
+maximizes $\Stab$ among symmetric sets of measure $a$. In O'Donnell's formulation with $b=1-a$, the slab of measure $a$
+paired with its complement when $a>a_0$, and the complement of a slab of measure $a$ paired with the slab when
+$a<a_1$, give a smaller value of $\Prob(X\in A,\ Y\in B)$ than the pairs formed by a ball and a ball complement.
+\end{corollary}
+
+The second statement follows from the first because, for $B=A^c$, $\Prob(X\in A,\ Y\in B)=a-\Stab(A)$, and the
+conjectured pairs with $b=1-a$ are exactly $(A,A^c)$ with $A$ a centred ball or the complement of one.
+
+The mechanism is simple. For a set of measure close to $1$, the noise stability is $1-2\varepsilon+J(A)$, so only the
+probability $J(A)$ that both points leave $A$ matters. Write $S=X+Y$ and $D=X-Y$, which are independent. Both points
+leave the ball of radius $r$ in $\R^k$ mostly when $|S|$ is slightly larger than $2r$ and the component of $D$ along $S$
+is of order $1/r$; both points leave the slab of half-width $t$ when $S_1>2t+|D_1|$, and mostly when $|D_1|$ is of order
+$1/t$. The two probabilities decay like $e^{-r^2/(1+\rho)}$ and $e^{-t^2/(1+\rho)}$ up to powers of $r$ and $t$, and
+matching the measures gives $r^2=t^2+(2k-2)\log t+O(1)$, with $O(1)$ bounded as $t\to\infty$. The ball pays more in the
+factor $e^{-(r^2-t^2)/(1+\rho)}$ than it gains from its larger radius.
+
+In Section~\ref{sec:numerics} we report computations beyond the theorem. Baker~\cite[Section~3.4]{Baker} compared the
+four planar cylinders (ball, slab and their complements) at $\rho=0.9$ and found the slab best near measure $1$ and its
+complement best near measure $0$. We extend that comparison to $13$ correlations. In the plane the best of the four
+cylinders is never beaten by the sets returned by a search over symmetric sets; in dimension one the returned sets are
+the interval or its complement for all the correlations tested; and in $\R^n$ every $C_k$ or its complement is the
+best of the cylinders compared for some measure. This is consistent with Heilman's suggestion that the optimal
+symmetric sets are cylinders.
+
+\section{Gaussian tails and the sum and difference}\label{sec:lemmas}
+
+Write $\varphi$ and $\bar\Phi$ for the standard normal density and upper tail. Throughout, $c$ and $C$ denote positive
+constants that depend only on the dimension and on $\rho$; their values may change from line to line. We use Gordon's inequalities~\cite{Gordon}
+\begin{equation}\label{eq:mills}
+\frac{x}{1+x^2}\,\varphi(x)\le\bar\Phi(x)\le\frac{\varphi(x)}{x}\qquad(x>0).
+\end{equation}
+
+\begin{lemma}\label{lem:chi}
+Let $Q_m$ have the $\chi^2$ distribution with $m\ge1$ degrees of freedom, and let $\Gamma$ be Euler's gamma function.
+Then for $q>0$
+\[
+\Prob(Q_m>q)\le C_m(1+q)^{(m/2-1)_+}e^{-q/2},
+\]
+and if $m\ge2$,
+\[
+\Prob(Q_m>q)\ge\frac{(q/2)^{m/2-1}e^{-q/2}}{\Gamma(m/2)}.
+\]
+\end{lemma}
+
+\begin{proof}
+$\Prob(Q_m>q)=\Gamma(m/2,q/2)/\Gamma(m/2)$, where the upper incomplete gamma function is $\Gamma(\sigma,x)=e^{-x}\int_0^\infty(x+y)^{\sigma-1}e^{-y}\,dy$. If
+$\sigma\ge1$, then $x^{\sigma-1}\le(x+y)^{\sigma-1}\le2^{\sigma-1}(x^{\sigma-1}+y^{\sigma-1})$, which gives both bounds.
+If $\sigma=1/2$, then $(x+y)^{-1/2}\le y^{-1/2}$ and $\Gamma(1/2,x)\le e^{-x}\Gamma(1/2)$.
+\end{proof}
+
+\begin{lemma}\label{lem:decomp}
+Let $S=X+Y$ and $D=X-Y$. Then $S$ and $D$ are independent, $S\sim N(0,2(1+\rho)I_n)$ and $D\sim N(0,\sigma^2I_n)$ with
+$\sigma^2=2(1-\rho)$. Let $u=S/|S|$, $w=\langle D,u\rangle$ and $v=D-wu$. Then $|S|$, $w$ and $|v|$ are independent,
+$|S|^2/(2(1+\rho))$ is $\chi^2_n$, $w\sim N(0,\sigma^2)$ and $|v|^2/\sigma^2$ is $\chi^2_{n-1}$, and
+\begin{equation}\label{eq:min}
+4\min(|X|,|Y|)^2=(|S|-|w|)^2+|v|^2.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+$\E[SD^{\mathsf T}]=\E[XX^{\mathsf T}]-\E[YY^{\mathsf T}]=0$, so the jointly Gaussian vectors $S$ and $D$ are
+independent, with the stated covariances. Since $D$ is isotropic and independent of $S$, conditionally on $S$ the
+coordinates of $D$ in an orthonormal basis whose first vector is $u$ are independent $N(0,\sigma^2)$; this gives the
+laws and the independence. Finally $2X=S+D$ and $2Y=S-D$, so $4|X|^2$ and $4|Y|^2$ equal $|S|^2\pm2|S|w+w^2+|v|^2$,
+whose minimum is $(|S|-|w|)^2+|v|^2$.
+\end{proof}
+
+\section{The slab and the cylinders}\label{sec:proof}
+
+The noise stability of $C_k(s)$ in $\R^n$ is that of the ball of radius $s$ in $\R^k$, since the remaining coordinates
+play no role; the same holds for complements. So in the next two lemmas we work in $\R^k$.
+
+\begin{lemma}\label{lem:slab}
+For $k=1$ and $t\ge1$,
+\[
+J(C_1(t))=\Prob(|X_1|>t,\ |Y_1|>t)\ge c_1\,t^{-2}e^{-t^2/(1+\rho)},\qquad
+c_1=\frac{e^{-1/(4(1-\rho))-5/(4(1+\rho))}}{3\pi\sqrt{1-\rho}}.
+\]
+\end{lemma}
+
+\begin{proof}
+With $S_1=X_1+Y_1$ and $D_1=X_1-Y_1$ as in Lemma~\ref{lem:decomp}, $X_1>t$ and $Y_1>t$ if and only if
+$S_1>2t+|D_1|$. Hence
+\[
+\Prob(X_1>t,\ Y_1>t)\ge\Prob(|D_1|\le1/t)\,\Prob(S_1>2t+1/t).
+\]
+The density of $D_1$ is at least $(2\pi\sigma^2)^{-1/2}e^{-1/(2\sigma^2t^2)}$ on $[-1/t,1/t]$, so the first factor is at
+least $2t^{-1}(2\pi\sigma^2)^{-1/2}e^{-1/(4(1-\rho))}$. For the second, put $x=(2t+1/t)/\sqrt{2(1+\rho)}$. Then
+$1\le x\le3t/\sqrt2$ and $x^2/2=(4t^2+4+t^{-2})/(4(1+\rho))\le t^2/(1+\rho)+5/(4(1+\rho))$, so by~\eqref{eq:mills}
+$\bar\Phi(x)\ge\varphi(x)/(2x)\ge\frac{\sqrt2}{6t\sqrt{2\pi}}e^{-5/(4(1+\rho))}e^{-t^2/(1+\rho)}$. The events
+$\{X_1>t,Y_1>t\}$ and $\{X_1<-t,Y_1<-t\}$ are disjoint and have the same probability, which gives the factor $2$.
+\end{proof}
+
+\begin{lemma}\label{lem:ball}
+For $k\ge2$ there is $c_2=c_2(k,\rho)$ such that for $r\ge1$
+\[
+J(C_k(r))=\Prob(|X|>r,\ |Y|>r)\le c_2\,r^{k-3}e^{-r^2/(1+\rho)},
+\]
+where $X,Y$ are $\rho$-correlated standard Gaussian vectors in $\R^k$.
+\end{lemma}
+
+\begin{proof}
+By~\eqref{eq:min} the event is $E=\{(|S|-|w|)^2+|v|^2>4r^2\}$. Put $g=4/(1+\rho)$, so that $0<4-g=4\rho/(1+\rho)$.
+We split $E$ into three parts.
+
+(i) $|S|\le|w|$. Then $(|w|-|S|)^2\le w^2$, so $E$ forces $|D|^2=w^2+|v|^2>4r^2$. Since $|D|^2/\sigma^2$ is
+$\chi^2_k$, Lemma~\ref{lem:chi} bounds this probability by $C(1+r^2)^{k/2-1}e^{-r^2/(1-\rho)}$.
+
+(ii) $|v|^2>gr^2$. By Lemma~\ref{lem:chi} for $\chi^2_{k-1}$ this has probability at most
+$C(1+r^2)^{k}e^{-gr^2/(2\sigma^2)}=C(1+r^2)^ke^{-r^2/(1-\rho^2)}$.
+
+(iii) $|S|>|w|$ and $|v|^2\le gr^2$. Then $E$ forces $|S|>|w|+\sqrt{4r^2-|v|^2}$, hence
+\[
+|S|^2>s^2:=4r^2-|v|^2+2\sqrt{4-g}\,r|w|,
+\]
+because $4r^2-|v|^2\ge(4-g)r^2$. Conditionally on $(w,v)$, Lemma~\ref{lem:chi} gives
+$\Prob(|S|^2>s^2)\le C(1+s^2)^{k/2-1}e^{-s^2/(4(1+\rho))}$. On this part $s^2\le4r^2(1+|w|)$ for $r\ge1$, so
+$(1+s^2)^{k/2-1}\le(8r^2)^{k/2-1}(1+|w|)^{k/2-1}$, and therefore the probability of part (iii) is at most
+\[
+C\,r^{k-2}e^{-r^2/(1+\rho)}\ \E\bigl[e^{|v|^2/(4(1+\rho))}\bigr]\ \E\bigl[(1+|w|)^{k/2-1}e^{-\kappa r|w|}\bigr],
+\qquad\kappa=\frac{\sqrt{4-g}}{2(1+\rho)}=\frac{\sqrt\rho}{(1+\rho)^{3/2}},
+\]
+using the independence of $|v|$ and $w$. The first expectation equals $(1-(1-\rho)/(1+\rho))^{-(k-1)/2}=
+((1+\rho)/(2\rho))^{(k-1)/2}$, which is finite because $\rho>0$. The second is at most
+$2(2\pi\sigma^2)^{-1/2}\int_0^\infty(1+y)^{k/2-1}e^{-\kappa ry}\,dy\le C/r$ for $r\ge1$. So part (iii) is at most
+$C\,r^{k-3}e^{-r^2/(1+\rho)}$.
+
+Parts (i) and (ii) have exponential rates $1/(1-\rho)$ and $1/(1-\rho^2)$, both larger than $1/(1+\rho)$, so for
+$r\ge1$ they are bounded by a constant times $r^{k-3}e^{-r^2/(1+\rho)}$ as well.
+\end{proof}
+
+\begin{lemma}\label{lem:small}
+For $k\ge1$ and $s>0$, $\Stab(B^k(s))\le(1-\rho^2)^{-k/2}\gamma_k(B^k(s))^2$, where $B^k(s)$ is the centred ball of
+radius $s$ in $\R^k$.
+\end{lemma}
+
+\begin{proof}
+Write $Y=\rho X+\sqrt{1-\rho^2}\,Z$ with $Z$ standard Gaussian and independent of $X$. Conditionally on $X=x$, $Y$ is a
+centred Gaussian vector shifted by $\rho x$, and by Anderson's theorem~\cite{Anderson} the probability that it lies in
+the symmetric convex set $B^k(s)$ is at most $\Prob(\sqrt{1-\rho^2}\,|Z|\le s)=\gamma_k(B^k(\lambda s))$ with
+$\lambda=(1-\rho^2)^{-1/2}\ge1$. Since $\varphi_k(\lambda y)\le\varphi_k(y)$,
+$\gamma_k(B^k(\lambda s))=\lambda^k\int_{B^k(s)}\varphi_k(\lambda y)\,dy\le\lambda^k\gamma_k(B^k(s))$. Integrating over
+$x\in B^k(s)$ gives the claim.
+\end{proof}
+
+\begin{proof}[Proof of Theorem~\ref{thm:main}]
+Let $\varepsilon=1-a$ be small, so that $2\bar\Phi(t)=\varepsilon$ and $\Prob(Q_k>r^2)=\varepsilon$. Since
+$\Prob(Q_k>r^2)\ge\Prob(X_1^2>r^2)=2\bar\Phi(r)$, we have $r\ge t$. By~\eqref{eq:mills},
+$\varepsilon\le\sqrt{2/\pi}\,e^{-t^2/2}/t$, that is $e^{-t^2/2}\ge\sqrt{\pi/2}\,t\varepsilon$, and by
+Lemma~\ref{lem:chi}, $e^{-r^2/2}\le\Gamma(k/2)(r^2/2)^{1-k/2}\varepsilon$. We take $\varepsilon$ so small that $t\ge1$,
+and then $r\ge1$ as well.
+
+By Lemma~\ref{lem:slab},
+\[
+J(C_1(t))\ge c_1t^{-2}\bigl(e^{-t^2/2}\bigr)^{2/(1+\rho)}\ge c\,t^{-2}(t\varepsilon)^{2/(1+\rho)}
+=c\,t^{-2\rho/(1+\rho)}\varepsilon^{2/(1+\rho)},
+\]
+which is the last claim of the theorem, and by Lemma~\ref{lem:ball},
+\[
+J(C_k(r))\le c_2r^{k-3}\bigl(e^{-r^2/2}\bigr)^{2/(1+\rho)}\le C\,r^{k-3-2(k-2)/(1+\rho)}\varepsilon^{2/(1+\rho)}.
+\]
+The exponent of $r$ is
+$k-3-2(k-2)/(1+\rho)=-2\rho/(1+\rho)-(k-1)(1-\rho)/(1+\rho)<0$, so $r\ge t$ gives $r^{k-3-2(k-2)/(1+\rho)}\le
+t^{k-3-2(k-2)/(1+\rho)}$, and the ratio of the two bounds is at least $c\,t^{\beta}$ with
+\[
+\beta=-\frac{2\rho}{1+\rho}-(k-3)+\frac{2(k-2)}{1+\rho}=\frac{(k-1)(1-\rho)}{1+\rho}>0.
+\]
+This is the first bound in~\eqref{eq:rates}. The complement $C_k(s)^c$ of measure $a$ has $J(C_k(s)^c)=\Stab(C_k(s))$ with
+$\gamma_n(C_k(s))=\varepsilon$, and Lemma~\ref{lem:small} gives the second bound. Since $\varepsilon\le e^{-t^2/2}$ for
+$t\ge1$,
+\[
+\frac{\varepsilon^2}{J(C_1(t))}\le C\,t^{2\rho/(1+\rho)}\varepsilon^{2\rho/(1+\rho)}\le C\,t^{2\rho/(1+\rho)}
+e^{-\rho t^2/(1+\rho)}\to0 .
+\]
+Finally, for sets of measure $a$ we have $\Stab(A)=1-2\varepsilon+J(A)$, so differences of noise stability are
+differences of $J$. Taking $a_0$ larger than the thresholds for the finitely many cylinders and complements proves the
+theorem.
+\end{proof}
+
+\begin{remark}\label{rem:sharp}
+Laplace's method suggests that the bound $t^{(k-1)(1-\rho)/(1+\rho)}$ gives the true order of $J(C_1(t))/J(C_k(r))$. In
+the plane it predicts
+\[
+\frac{J(C_1(t))}{J(C_2(r))}\sim\frac{2r^2}{t^2}\,\frac{e^{(r^2-t^2)/(1+\rho)}}{r\sqrt{2\pi/\rho}}
+\]
+where $\sim$ means that the ratio of the two sides tends to $1$ (the factor $r\sqrt{2\pi/\rho}$ comes from the circle on which the ball's integrand is largest), and the quadrature of
+Section~\ref{sec:numerics} agrees with it to $12$, $3$ and $1$ per cent at $\varepsilon=10^{-2}$, $10^{-16}$ and
+$10^{-64}$ for $\rho=0.1$, with the same convergence at $\rho=0.5$ and $0.9$. The intermediate bounds in the
+proofs of Lemmas~\ref{lem:slab} and~\ref{lem:ball}, evaluated by quadrature rather than through their constants, are
+not far from the truth: for $n=2,3$, $\rho\in\{0.1,0.5,0.9\}$ and $10^{-32}\le\varepsilon\le10^{-2}$, the product
+bound $2\Prob(|D_1|\le1/t)\Prob(S_1>2t+1/t)$ is between $0.33$ and $0.55$ times $J(C_1(t))$, and the sum of the three
+parts of the ball bound is between $1.16$ and $3.2$ times $J(C_n(r))$. The constant of Lemma~\ref{lem:slab} is cruder:
+on the same range $c_1t^{-2}e^{-t^2/(1+\rho)}$ is between $0.006$ and $0.08$ times $J(C_1(t))$. Finally $J(C_1(t))/J(C_n(r))$ divided by $t^{(n-1)(1-\rho)/(1+\rho)}$ changes by
+at most $6$ per cent between $\varepsilon=10^{-16}$ and $10^{-32}$. The exponent tends to $0$ as $\rho\to1$,
+in line with the limit of surface area: at equal large measure the Gaussian perimeters of the slab and of the ball
+in $\R^2$ are $2\varphi(t)$, which is asymptotic to $t\varepsilon$, and $re^{-r^2/2}=r\varepsilon$, so their ratio tends to $1$.
+\end{remark}
+
+\section{Numerical evidence}\label{sec:numerics}
+
+All values below are computed by the scripts in the repository listed at the end. The noise stability of a cylinder is
+a one-dimensional integral: conditionally on $|X|=R$, the variable $|Y|^2/(1-\rho^2)$ has the noncentral $\chi^2_k$
+law with noncentrality $\rho^2R^2/(1-\rho^2)$.
+
+\subsection*{The four cylinders in the plane}
+For $13$ values of $\rho$ between $0.01$ and $0.99$ and $14$ measures between $0.02$ and $0.98$ we computed the noise
+stability of the ball, the slab and their complements. Table~\ref{tab:winners} shows the winner for six values of
+$\rho$; the row $\rho=0.9$ agrees with the planar comparison of Baker~\cite[Section~3.4]{Baker}. The slab wins at measure $0.9$ and above for every $\rho$ (from $0.8$ once $\rho\ge0.5$), the complement of the
+slab at $0.1$ and below, and the ball or its complement in between. The relative margins by which the slab beats the
+ball lie between $1.6\times10^{-7}$ (at $\rho=0.01$) and $1.8\times10^{-3}$, far above the quadrature error, which is
+below $10^{-12}$.
+
+\begin{table}[tbp]
+\centering
+\caption{The best of the four cylinders in $\R^2$: B ball, Bc ball complement, S slab, Sc slab complement. At
+$a=0.5$ the ball and its complement have the same noise stability and B is listed.}
+\label{tab:winners}
+\small
+\setlength{\tabcolsep}{2.6pt}
+\begin{tabular}{lcccccccccccccc}
+\toprule
+$\rho\ \backslash\ a$ & 0.02 & 0.05 & 0.1 & 0.2 & 0.3 & 0.4 & 0.5 & 0.6 & 0.7 & 0.8 & 0.9 & 0.94 & 0.95 & 0.98\\
+\midrule
+0.01 & Sc & Sc & Sc & Bc & Bc & Bc & B & B & B & B & S & S & S & S\\
+0.1 & Sc & Sc & Sc & Bc & Bc & Bc & B & B & B & B & S & S & S & S\\
+0.4 & Sc & Sc & Sc & Bc & Bc & Bc & B & B & B & B & S & S & S & S\\
+0.5 & Sc & Sc & Sc & Sc & Bc & Bc & B & B & B & S & S & S & S & S\\
+0.9 & Sc & Sc & Sc & Sc & Bc & Bc & B & B & B & S & S & S & S & S\\
+0.99 & Sc & Sc & Sc & Sc & Bc & Bc & B & B & B & S & S & S & S & S\\
+\bottomrule
+\end{tabular}
+\end{table}
+
+\subsection*{Search over symmetric sets in the plane}
+We cut $[-6.5,6.5]^2$ into a $256\times256$ grid and relax the problem: a symmetric set becomes a symmetric function
+$f$ on the cells with values in $[0,1]$, and we maximize $\sum f\,(KfK)$, where $K$ is the matrix of the
+one-dimensional transition kernel between cells. The Frank--Wolfe step takes the cells with the largest values of
+$(KfK)/w$, with $w$ the cell mass, up to total mass $a$, the last cell fractionally, and then symmetrizes. For an
+exactly positive semidefinite kernel the quadratic form is convex, and a full step from a feasible symmetric iterate
+never decreases it. For $\rho\in\{0.1,0.3,
+0.5,0.7,0.9\}$ and eleven measures between $0.05$ and $0.95$ we ran $128$ random symmetric starts each ($7{,}040$ starts
+in all, from random Fourier fields, angular fields, unions of ellipses and smoothed noise) and polished the best returned
+sets in double precision; in $28$ of the $55$ cases the best run stopped at the cap of $300$ iterations, so these are
+the best sets returned, not certified local maxima. In none of the $55$ cases does a returned set exceed the exact
+value of the best of the four cylinders: the difference lies between $-1.6\times10^{-4}$ and $-8.9\times10^{-8}$. Frank--Wolfe started from a
+ball complement often moves to a slab complement, in agreement with Heilman's second-variation result.
+
+At the measure where slab and ball tie (for $\rho=0.5$ this is $a=0.798026$, where both have noise stability
+$0.6632936549$), we compared shapes between the two on a $400\times400$ grid with a smoothed boundary, so that every
+shape has measure exactly $a$: ellipses $x_1^2/\sigma^2+\sigma^2x_2^2\le c^2$ with $0.2\le\sigma\le0.95$, slabs cut by a
+disc, and stadiums (points within distance $t$ of a segment). All fall below the better cylinder computed on the same
+grid, by $3\times10^{-6}$ to $8.6\times10^{-4}$ relative, and approach the slab as the shapes approach it, though not
+monotonically: at $\rho=0.5$ the stadium values first decrease and then rise, and the ellipses dip as well. The same holds at
+$\rho=0.2$ and $\rho=0.8$, except for the thinnest ellipse at $\rho=0.8$, which exceeds the gridded slab by
+$1.3\times10^{-7}$, two hundred times less than the grid error of the slab itself.
+
+\subsection*{Dimension one}
+Heilman's theorem~\cite[Theorem~1.5]{H1} covers $|\rho|$ below an explicit bound that is at most $e^{-40}/1000$. We
+cut $[0,7]$ into $1{,}400$ cells and ran the same Frank--Wolfe iteration from $300$ random symmetric starts with $2$
+to $40$ blocks, for $11$ values of $\rho$ from $0.05$ to $0.95$ and $13$ measures from $0.02$ to $0.98$. In all $143$
+cases the best returned set is the interval $[-t,t]$ or its complement, whichever has the larger noise stability, to
+ten digits, and the discretized values agree with the exact ones to $3.7\times10^{-6}$.
+
+\subsection*{Cylinders in higher dimension}
+In $\R^n$ we compared all $C_k$ and $C_k^c$, $1\le k\le n$, for $n=2,3,4,6$, eight values of $\rho$ between $0.05$ and
+$0.95$ and $13$ measures. Among these cylinders, for $a>1/2$ the winning $k$ decreases from $n$ (the ball, near $a=1/2$) to $1$ (the slab) as
+$a\to1$, and for $a<1/2$ the picture is reflected, with complements, as the identity $\Stab(A^c)=1-2a+\Stab(A)$
+requires. In $\R^6$ a cylinder with $1<k<6$ beats both the ball and the slab in $26$ of the $104$ cases, by up to
+$3.8\times10^{-3}$ relative, the largest at $\rho=0.7$, $a=0.3$, where the complement of $C_3$ wins. Larger $\rho$
+moves the winner towards smaller $k$. A Monte Carlo run with $4\times10^7$ pairs at $\rho=0.7$, $a=0.7$ gives
+$\Stab(C_3)-\max(\Stab(C_1),\Stab(C_6))=4.8\times10^{-4}$, against $6.1\times10^{-4}$ by quadrature. The binomial
+scale $\sqrt{2\cdot0.25/N}$, equal to $1.1\times10^{-4}$ to two figures at this $N$, ignores the positive correlation between the paired estimates and
+so overstates the standard error of the difference.
+
+These computations suggest the following refinement of the conjecture, which is Heilman's suggestion in the form of
+cylinders.
+
+\begin{conjecture}\label{conj:cyl}
+For $0<\rho<1$ and $0<a<1$, the noise stability among symmetric subsets of $\R^n$ of Gaussian measure $a$ is maximized
+by a cylinder $C_k(s)$ or the complement of one, for some $1\le k\le n$. In dimension one the maximizer is the centred
+interval or its complement for every $\rho\in(0,1)$.
+\end{conjecture}
+
+\section*{Notation}
+
+\begin{center}\begin{tabular}{@{}lp{0.62\textwidth}l@{}}\toprule
+Symbol & Meaning & First appears \\ \midrule
+$X$, $Y$, $\rho$ & $\rho$-correlated standard Gaussian vectors in $\R^n$, $0<\rho<1$ & Section~\ref{sec:intro} \\
+$\gamma_n$ & standard Gaussian measure on $\R^n$ & Section~\ref{sec:intro} \\
+$\Stab(A)$ & noise stability $\Prob(X\in A,\ Y\in A)$ & Section~\ref{sec:intro} \\
+$a$, $\varepsilon$ & Gaussian measure of the set, $\varepsilon=1-a$ & Section~\ref{sec:intro} \\
+$C_k(s)$ & solid cylinder $\{x_1^2+\dots+x_k^2\le s^2\}$; $C_1(s)$ slab, $C_n(s)$ ball & Section~\ref{sec:intro} \\
+$t$, $r$ & radii with $\gamma_n(C_1(t))=\gamma_n(C_k(r))=a$ & Theorem~\ref{thm:main} \\
+$J(A)$ & $\Prob(X\notin A,\ Y\notin A)$ & Theorem~\ref{thm:main} \\
+$\varphi$, $\bar\Phi$ & standard normal density and upper tail & Section~\ref{sec:lemmas} \\
+$Q_m$ & a $\chi^2$ variable with $m$ degrees of freedom & Lemma~\ref{lem:chi} \\
+$S$, $D$, $\sigma^2$ & $X+Y$, $X-Y$, and $2(1-\rho)$, the variance of each coordinate of $D$ & Section~\ref{sec:lemmas} \\
+$u$, $w$, $v$ & $S/|S|$, $\langle D,u\rangle$, $D-wu$ & Section~\ref{sec:lemmas} \\
+$c$, $C$ & positive constants depending on $n$ and $\rho$ only & Section~\ref{sec:lemmas} \\
+$f$, $K$ & relaxed symmetric set on the grid, matrix of the transition kernel & Section~\ref{sec:numerics} \\
+\bottomrule\end{tabular}\end{center}
+
+\section*{Acknowledgements and funding}
+This work was done by multiple AI agents, Claude (Anthropic) and Codex (OpenAI), connected to Math
+Brain~\cite{MathBrainRepo} and working together inside the Brain framework~\cite{BrainFramework}, a shared, persistent
+memory in which the agents record claims, proofs, failed attempts and methods, retrieve one another's results,
+coordinate who works on what, and audit each other's work. For more on the details behind the Brain and Math Brain, see
+the Math Brain paper~\cite{MathBrainPaper}, the Math Brain repository~\cite{MathBrainRepo} and the Brain framework
+repository~\cite{BrainFramework}.
+
+The research presented in this paper was supported by the European Research Council (ERC) under the European Union's
+Horizon Europe research and innovation programme (grant agreement No.~101041711), by the Simons Foundation as part of
+the Collaboration on the Mathematical and Scientific Foundations of Deep Learning, by Heights Labs, by Convex Nexus
+Capital, by the Israel Science Foundation (grant number 2258/19), and by the Israel Science Foundation (ISF Grant
+4101/25). Computational resources were provided in part by Google Cloud through its education credits programme (credit
+530550103).
+
+\section*{Declaration of competing interest}
+The author holds equity in Heights Labs and in Convex Nexus Capital and has a management role at Convex Nexus Capital.
+These entities are included in the funding declaration above.
+
+\section*{Declaration of generative AI and AI-assisted technologies}
+Claude agents (Anthropic) proved Theorem~\ref{thm:main}, carried out the computations of Section~\ref{sec:numerics} and
+prepared the manuscript; a Codex agent (OpenAI) refereed the proofs and the computations independently.
+The author directed the work and is responsible for the content of the paper and for decisions concerning its
+dissemination.
+
+\section*{Code availability}
+The scripts behind Section~\ref{sec:numerics} and Remark~\ref{rem:sharp}, with their outputs, are in the repository
+\begin{center}\url{https://github.com/yspennstate/symmetric-gaussian-noise-stability-slabs/tree/v1.0}.\end{center}
+
+\begin{thebibliography}{99}
+\bibitem{Anderson} T.~W.~Anderson, \emph{The integral of a symmetric unimodal function over a symmetric convex set and
+some probability inequalities}, Proc. Amer. Math. Soc. \textbf{6} (1955), no.~2, 170--176, \doi{10.2307/2032333}.
+\bibitem{Baker} G.~Baker, \emph{Symmetric Gaussian Rearrangement with Applications to Gaussian Noise Stability}, MSc
+thesis, Queen's University, 2018.
+\bibitem{BJ} M.~Barchiesi and V.~Julin, \emph{Symmetry of minimizers of a Gaussian isoperimetric problem}, Probab.
+Theory Related Fields \textbf{177} (2020), no.~1--2, 217--256, \doi{10.1007/s00440-019-00947-9}; \arxiv{1805.03161}.
+\bibitem{Barthe} F.~Barthe, \emph{An isoperimetric result for the Gaussian measure and unconditional sets}, Bull.
+London Math. Soc. \textbf{33} (2001), no.~4, 408--416, \doi{10.1017/S0024609301008141}.
+\bibitem{Borell} C.~Borell, \emph{Geometric bounds on the Ornstein--Uhlenbeck velocity process}, Z. Wahrsch. Verw.
+Gebiete \textbf{70} (1985), no.~1, 1--13, \doi{10.1007/BF00532234}.
+\bibitem{CR} A.~Chakrabarti and O.~Regev, \emph{An optimal lower bound on the communication complexity of
+Gap-Hamming-Distance}, SIAM J. Comput. \textbf{41} (2012), no.~5, 1299--1317, \doi{10.1137/120861072}.
+\bibitem{FLM} N.~Fusco and D.~A.~La Manna, \emph{A remark on a conjecture on the symmetric Gaussian problem}, Proc.
+Edinb. Math. Soc. \textbf{67} (2024), no.~2, 643--661, \doi{10.1017/S0013091524000221}; \arxiv{2306.04522}.
+\bibitem{Gordon} R.~D.~Gordon, \emph{Values of Mills' ratio of area to bounding ordinate and of the normal probability
+integral for large values of the argument}, Ann. Math. Statist. \textbf{12} (1941), no.~3, 364--366,
+\doi{10.1214/aoms/1177731721}.
+\bibitem{H1} S.~Heilman, \emph{Low correlation noise stability of symmetric sets}, J. Theoret. Probab. \textbf{34}
+(2021), no.~4, 2192--2240, \doi{10.1007/s10959-020-01031-y}; \arxiv{1511.00382}.
+\bibitem{H2} S.~Heilman, \emph{Symmetric convex sets with minimal Gaussian surface area}, Amer. J. Math. \textbf{143}
+(2021), no.~1, 53--94, \doi{10.1353/ajm.2021.0000}; \arxiv{1705.06643}.
+\bibitem{H3} S.~Heilman, \emph{Convex cylinders and the symmetric Gaussian isoperimetric problem}, preprint, 2022,
+\arxiv{2204.12003}.
+\bibitem{OD} R.~O'Donnell, \emph{Open problems in analysis of Boolean functions}, preprint, 2012, \arxiv{1204.6447}.
+\bibitem{LO} R.~Latała and K.~Oleszkiewicz, \emph{Gaussian measures of dilatations of convex symmetric sets}, Ann.
+Probab. \textbf{27} (1999), no.~4, 1922--1938, \doi{10.1214/aop/1022874821}.
+\bibitem{Milman} E.~Milman, \emph{The symmetric Gaussian isoperimetric problem in the plane}, preprint, 2026,
+\arxiv{2611.12456}.
+\bibitem{MathBrainRepo} Y.~Shmalo, \emph{Math Brain: public snapshot, code and tests}, 2026,
+\url{https://github.com/yspennstate/math-brain-public/tree/8c9a6bd478c4ec4082347151b7ae16db50c917dd}.
+\bibitem{MathBrainPaper} Y.~Shmalo, \emph{Math Brain: shared, auditable memory for multi-agent mathematical research},
+October 2026, \url{https://github.com/yspennstate/math-brain-public/tree/main/papers/math-brain-2026-10-24},
+\doi{10.5281/zenodo.24150837}.
+\bibitem{BrainFramework} Y.~Shmalo, \emph{Brain Framework}, public software repository, 2026,
+\url{https://github.com/yspennstate/brain-framework-public/tree/5629e644cdd510173ae97e9aa92642dabd22dc57}.
+\end{thebibliography}
+
+\end{document}
