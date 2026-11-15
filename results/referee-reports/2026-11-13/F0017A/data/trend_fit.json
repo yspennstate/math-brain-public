@@ -1,0 +1,42 @@
+{
+  "intercept": -1.7994334482664733,
+  "beta": 1.5443203651161164,
+  "log_rmse": 0.06015718672028709,
+  "discrete_peak_n": 21,
+  "formula": "log(median Z_n) = intercept + beta*n - 0.5*log(n!)",
+  "fit_n": [
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "baseline_beta_log4": 1.3862943611198906,
+  "beta_bootstrap95": [
+    1.531274615196399,
+    1.5558550576690025
+  ],
+  "bootstrap_repetitions": 300,
+  "warning": "Descriptive fit on n=12..24; no justified asymptotic extrapolation or probability-of-zero model.",
+  "stubbornness_logistic_fit": {
+    "formula": "logit P(stubborn at n) = intercept_at_n12 + slope*(n-12)",
+    "intercept_at_n12": -6.051701971464175,
+    "slope": -0.18715630296170954,
+    "slope_approx95": [
+      -0.29947247128934185,
+      -0.07484013463407721
+    ],
+    "predicted_p24": 0.0002490575171654743,
+    "hits": 31,
+    "samples": 12100,
+    "warning": "Finite-range descriptive binomial model; not a conjectured asymptotic law."
+  }
+}
