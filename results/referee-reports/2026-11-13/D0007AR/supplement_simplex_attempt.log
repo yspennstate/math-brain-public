@@ -1,0 +1,16 @@
+{"law": "quadratic", "n": 3, "B": 160, "columns": 12960, "lp": "excluded", "lp_l1": 0.3317664713541666, "lp_lower": 0.3317664713541666, "primal_residual": 2.220446049250313e-16, "pricing": "all admissible sorted triples enumerated"}
+Traceback (most recent call last):
+  File "~/agent_run/D0007AR/audit_supplement.py", line 32, in <module>
+    fit=linprog(np.r_[np.zeros(k),np.ones(2*B)],A_eq=A,b_eq=rhs,bounds=(0,None),
+                method='highs-ds',options={'threads':1,'primal_feasibility_tolerance':1e-9,
+                                          'dual_feasibility_tolerance':1e-9})
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/scipy/optimize/_linprog.py", line 660, in linprog
+    sol = _linprog_highs(lp, solver=highs_solvers[meth],
+                         **solver_options)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/scipy/optimize/_linprog_highs.py", line 355, in _linprog_highs
+    res = _highs_wrapper(c, A.indptr, A.indices, A.data, lhs, rhs,
+                         lb, ub, integrality.astype(np.uint8), options)
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/site-packages/scipy/optimize/_highspy/_highs_wrapper.py", line 269, in _highs_wrapper
+    marg_bnds[0, ii] = solution.col_dual[ii]
+    ~~~~~~~~~^^^^^^^
+KeyboardInterrupt

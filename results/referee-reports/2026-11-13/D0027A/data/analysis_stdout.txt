@@ -1,0 +1,182 @@
+{
+  "renewal, q=0.25": {
+    "status": "too few points",
+    "n_points": 0
+  },
+  "hmm, q=0.25": {
+    "status": "fit",
+    "observable": "infection indicator",
+    "fit_interval_requested": [
+      8,
+      60
+    ],
+    "times_used": [
+      8.0,
+      10.0,
+      12.0,
+      15.0,
+      18.0,
+      21.0,
+      24.0,
+      28.0,
+      32.0,
+      36.0,
+      40.0,
+      45.0,
+      50.0,
+      55.0,
+      60.0
+    ],
+    "n_points": 15,
+    "sign": -1.0,
+    "exp_rate": 0.0013782334489648054,
+    "exp_amplitude": 0.07906192696017349,
+    "rate_bootstrap_95_percentile": [
+      0.0009413516752649149,
+      0.0018430906345752664
+    ],
+    "bootstrap_successful": 400,
+    "log_fit_R2": 0.7004454227779624,
+    "free_beta_logfit": 1.75,
+    "free_beta_grid": [
+      0.25,
+      1.75
+    ],
+    "exp_log_RSS": 0.0032388154607524353,
+    "free_beta_log_RSS": 0.0019733255377093304,
+    "warning": "Finite time descriptive fits, correlated times, data-based 4-SE mask; no asymptotic conclusion."
+  },
+  "renewal, q=0.65": {
+    "status": "fit",
+    "observable": "infection indicator",
+    "fit_interval_requested": [
+      1,
+      12
+    ],
+    "times_used": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0,
+      8.0,
+      10.0,
+      12.0
+    ],
+    "n_points": 12,
+    "sign": -1.0,
+    "exp_rate": 0.18978383731867235,
+    "exp_amplitude": 0.3265293845367876,
+    "rate_bootstrap_95_percentile": [
+      0.18526568964590542,
+      0.19459969290206156
+    ],
+    "bootstrap_successful": 400,
+    "log_fit_R2": 0.9955867677370114,
+    "free_beta_logfit": 0.79,
+    "free_beta_grid": [
+      0.25,
+      1.75
+    ],
+    "exp_log_RSS": 0.021740369541232235,
+    "free_beta_log_RSS": 0.0028030310895045523,
+    "warning": "Finite time descriptive fits, correlated times, data-based 4-SE mask; no asymptotic conclusion."
+  },
+  "hmm, q=0.65": {
+    "status": "fit",
+    "observable": "infection indicator",
+    "fit_interval_requested": [
+      1,
+      12
+    ],
+    "times_used": [
+      1.0,
+      1.5,
+      2.0,
+      2.5,
+      3.0,
+      4.0,
+      5.0,
+      6.0,
+      7.0,
+      8.0,
+      10.0,
+      12.0
+    ],
+    "n_points": 12,
+    "sign": -1.0,
+    "exp_rate": 0.05399743882831689,
+    "exp_amplitude": 0.3791638544735365,
+    "rate_bootstrap_95_percentile": [
+      0.052664231371482836,
+      0.055592279992003994
+    ],
+    "bootstrap_successful": 400,
+    "log_fit_R2": 0.9803782782150715,
+    "free_beta_logfit": 0.5449999999999999,
+    "free_beta_grid": [
+      0.25,
+      1.75
+    ],
+    "exp_log_RSS": 0.00794621957858506,
+    "free_beta_log_RSS": 0.00022532357245588712,
+    "warning": "Finite time descriptive fits, correlated times, data-based 4-SE mask; no asymptotic conclusion."
+  }
+}
+Checks {
+  "0.25": {
+    "density": {
+      "max_abs_z": 2.0592889106860053,
+      "final_mean": 0.250453125,
+      "final_se": 0.0012687562547971675
+    },
+    "pair": {
+      "max_abs_z": 2.581243921831637,
+      "final_mean": 0.06269803921569501,
+      "final_se": 0.0008493571856354927
+    },
+    "origin": {
+      "max_abs_z": 3.0803734031261576,
+      "final_mean": 0.222,
+      "final_se": 0.01860441475825008
+    },
+    "origin_pair": {
+      "max_abs_z": 2.282951756942159,
+      "final_mean": 0.052,
+      "final_se": 0.009939294701251072
+    }
+  },
+  "0.65": {
+    "density": {
+      "max_abs_z": 2.2255122503020437,
+      "final_mean": 0.652078125,
+      "final_se": 0.0013920547945648158
+    },
+    "pair": {
+      "max_abs_z": 2.1321761965872725,
+      "final_mean": 0.42479215686275823,
+      "final_se": 0.0019208982303705571
+    },
+    "origin": {
+      "max_abs_z": 1.4712088615577046,
+      "final_mean": 0.668,
+      "final_se": 0.021081766571222862
+    },
+    "origin_pair": {
+      "max_abs_z": 3.005390851644449,
+      "final_mean": 0.448,
+      "final_se": 0.02226169729227014
+    }
+  },
+  "hmm_gap_matrix_spectral_radius": 0.9521590190708384,
+  "finite_boundary": {
+    "tmax": 60,
+    "buffer_steps": 384,
+    "path_bound_per_observed_site": 1.8295927780023156e-29,
+    "bound_union_256_sites": 4.683757511685928e-27
+  }
+}

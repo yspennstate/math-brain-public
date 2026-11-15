@@ -1,0 +1,20 @@
+# Referee audit log
+
+- 2026-11-13 13:11 +04: Started the requested independent referee review. Scope: this directory only; no paper edits, publication, pushes, uploads, or subagents. One sequential worker; no background workers. Global brain/mesh/checklist writes are outside the task's authorized directory and are not used.
+- First substantive read: `pdftotext -layout paper/main.pdf -`, all eleven pages in order, from the title through the references. No source text or TeX was read first.
+- Read the TeX afterward to establish stable source line numbers. Recorded the pages 1–3 theorem/novelty assessment in REFEREE.md before source verification. The initial recommendation is provisional.
+- `nice -n 10` reported `setpriority: Operation not permitted`; the PDF extraction nevertheless completed. No compute-intensive work has been launched. Priority enforcement will be investigated before any such work.
+- There is no Git repository at the task root (`git status` reported this); no Git operation changed anything.
+
+Task: “You are a referee for a probability journal.” Received/start clock: 2026-11-13 13:11 +04.
+
+- Read the whole supplied Sly note, the survey's model/Theorem 3/conjugacy/Problem 4/proof attribution, the notes' Theorem 9.5 and Lemma 9.11 with (9.40)–(9.44), and Bahadoran–Bodineau's hypotheses, Theorems 2.4/2.6/3.4, and the extension paragraph on printed p. 13. Saved the first six proof findings with TeX and source locations.
+- Verified the shell's inherited nice level directly with `os.getpriority`: 10. The initial `nice` diagnostic did not imply normal-priority execution. No heavy computation or additional worker was needed.
+- Read-only primary-site bibliography verification started. arXiv records for Sly, the survey and Bahadoran–Bodineau opened successfully. Direct DOI opens failed in the browser tool; publisher verification remains in progress. No content was published or uploaded.
+
+- 2026-11-13 13:16 +04: Confirmed metadata directly from the Crossref API for DOI 10.1214/18-EJP137 (two authors, exact title, EJP 23, 2018, pp. 1–44) and DOI 10.1214/aop/1022677266 (sole author, exact title, Ann. Probab. 27(1), 1999, pp. 361–415). The survey DOI returned 404 through Crossref but its publisher page opened and verifies its DOI, volume, issue, year and pp. 1–15. No bibliographic correction was indicated.
+- The Project Euclid pages encountered a bot-check iframe; no attempt was made to bypass it. Paper number 44 is corroborated by an IMS-hosted journal bibliography. A full original [2] text is not supplied; the report explicitly identifies the survey and Bahadoran–Bodineau as its mathematical attribution evidence.
+- Created and ran `audit_checks.py` at inherited nice 10, sequentially. Results saved in AUDIT_CHECKS.txt: 34,733 paths, 143 endpoints, 72 strip diamonds, 36 exact-rational addition identities, 18 binary laws. Runtime approximately 0.09 seconds. All assertions passed. Numerical/combinatorial checks are supplementary, not claimed as proofs.
+- Completed the analytic hydrodynamic normalization, inverse-shape, reciprocal-constant, flux-inequality, half-width and K=1 checks. Re-derived the supporting-plane constant independently from convex duality. Tried atom-free and super-thin lower-tail laws as well as rare-site binary laws and large finite K; no counterexample found.
+- Saved the full citation and proof audit and minor form corrections in REFEREE.md. Recommendation remains MINOR; final consistency and unchanged-paper checks remain.
+- 2026-11-13 13:21 +04: Final audit complete. REFEREE.md begins exactly MINOR and contains 31 findings, each with TeX line references and an explicit fix/no-fix decision. Corrected the report's own conditional-mean notation during its final read. All requested proof checkpoints, cited statements, metadata and end sections are covered. SHA256 checks confirm both paper/main.tex and paper/main.pdf unchanged. No unresolved mathematical defect was found. Outputs: REFEREE.md, LOG.md, audit_checks.py, AUDIT_CHECKS.txt. No publication, pushes or uploads occurred; no subagents or background compute were launched.

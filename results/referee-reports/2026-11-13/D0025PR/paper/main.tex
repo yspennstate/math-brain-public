@@ -1,0 +1,815 @@
+\documentclass[11pt]{amsart}
+\renewcommand{\bfdefault}{m}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage[letterpaper,textwidth=6in,textheight=8.5in,centering]{geometry}
+\usepackage{amsmath,amssymb,amsthm,mathtools}
+\usepackage[hidelinks]{hyperref}
+\usepackage[nameinlink,noabbrev]{cleveref}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{proposition}[theorem]{Proposition}
+\newtheorem{lemma}[theorem]{Lemma}
+\newtheorem{corollary}[theorem]{Corollary}
+\theoremstyle{remark}
+\newtheorem{remark}[theorem]{Remark}
+\crefname{theorem}{Theorem}{Theorems}
+\crefname{proposition}{Proposition}{Propositions}
+\crefname{lemma}{Lemma}{Lemmas}
+\crefname{corollary}{Corollary}{Corollaries}
+\crefname{remark}{Remark}{Remarks}
+\newcommand{\EE}{\mathbb E}
+\newcommand{\PP}{\mathbb P}
+\newcommand{\ZZ}{\mathbb Z}
+\newcommand{\RR}{\mathbb R}
+\DeclareMathOperator{\Exp}{Exp}
+\DeclareMathOperator{\Ber}{Bernoulli}
+\DeclareMathOperator*{\essinf}{ess\,inf}
+\numberwithin{equation}{section}
+\title{A flux plateau for site-disordered finite-capacity exclusion}
+\author{The author}
+\address{}
+
+\date{}
+\subjclass[2020]{60K35, 60K37, 82C22}
+\keywords{Exclusion process, site disorder, flux plateau, last-passage percolation}
+
+\begin{document}
+\begin{abstract}
+We consider totally asymmetric exclusion on the integer lattice with capacity
+$K$ at each site and independent, identically distributed site rates $\alpha_i$.
+For every finite $K$ and every nonconstant rate law with positive essential
+infimum $r$, the flux has a nondegenerate flat interval about density $K/2$.
+Its height is $rM_K$, where $M_K$ is the maximum homogeneous rate-one flux,
+and a guaranteed half-width is
+$(1/r-\EE[1/\alpha_0])rM_K$.
+The proof extends Sly's exponential-delay comparison to the three-step growth
+representation of finite-capacity exclusion. Homogeneous reflection symmetry
+provides the supporting plane, and long intervals of slow sites determine
+the maximal current.
+\end{abstract}
+\maketitle
+
+\section{Introduction}
+
+Consider a particle system on $\ZZ$ in which each site holds at most $K$
+particles, where $K$ is a fixed positive integer. A clock at site $i$ rings
+at rate $\alpha_i$. At a ring, one particle moves from $i$ to $i+1$ if the
+departure site is nonempty and the receiving site has fewer than $K$
+particles. The rates form an independent, identically distributed
+environment $\alpha=(\alpha_i)_{i\in\ZZ}$ with common law $Q$. We assume
+that $Q$ is supported on $[r,1]$, where
+\[
+ r=\essinf\alpha_0>0.
+\]
+There is one clock per departure site; its rate does not increase with the
+occupation of that site.
+
+Sepp\"al\"ainen introduces this model in equation (3.1) of
+\cite{SeppSurvey} and establishes a hydrodynamic limit with a deterministic
+concave flux $f_K$; see Theorem 3 there and \cite{SeppHydro}.
+Section 4, Problem 4 of \cite{SeppSurvey} asks whether $f_K$ has a flat
+segment on an interval about density $K/2$.
+
+Write $H_K$ for the flux of the same process with all rates equal to one.
+The homogeneous flux is positive on $(0,K)$, concave, and symmetric about
+$K/2$ \cite[Theorem 9.5]{SeppNotes}. Define
+\begin{equation}\label{eq:constants}
+ M_K=\max_{0\leq\rho\leq K}H_K(\rho)=H_K(K/2),\qquad
+ J_K=rM_K,\qquad
+ \mu=\frac1r-\EE\!\left[\frac1{\alpha_0}\right].
+\end{equation}
+Expectation in this formula is with respect to $Q$. The rate bound makes
+$\mu$ finite, and a nonconstant law has $\mu>0$.
+
+\begin{theorem}\label{thm:main}
+Let $K$ be a positive integer and let $Q$ be a nonconstant probability law
+on $[r,1]$ with essential infimum $r>0$. For the totally asymmetric
+$K$-exclusion process with independent site rates of law $Q$,
+\begin{equation}\label{eq:plateau}
+ f_K(\rho)=J_K
+ \quad\text{whenever}\quad
+ \left|\rho-\frac K2\right|\leq\mu J_K.
+\end{equation}
+Moreover, $\max_{0\leq\rho\leq K}f_K(\rho)=J_K$. The quantity $\mu J_K$
+is a guaranteed positive half-width of a central flat interval.
+\end{theorem}
+
+For $K=1$, the homogeneous flux is $H_1(\rho)=\rho(1-\rho)$ and
+$M_1=1/4$. In this case \cref{thm:main} is Sly's theorem
+\cite[Theorem 1]{Sly}. Sly adds independent exponential delays, conditionally
+on the environment, to couple disordered passage times to homogeneous
+passage times at rate $r$. Every path to a given column visits the
+intervening columns. The mean added delay along those columns creates a
+cusp in an upper bound for the passage shape. Flux--shape duality turns
+this cusp into a flat interval.
+
+Bahadoran and Bodineau prove a plateau theorem for TASEP with sufficiently
+dilute site disorder under their finite-box hypothesis (H), and obtain
+quantitative limits for its endpoints and flux
+\cite[Theorems 2.4 and 2.6]{BB}. Their discussion in Section 3.2, p.~13 of
+arXiv:1602.06718v4, following Theorem 3.4, states that their approach also
+applies to other growth models with columnar disorder, including
+$K$-exclusion. That paragraph does not state the all-laws finite-$K$
+interval \eqref{eq:plateau}.
+
+Let $\tau_\alpha$ denote the passage shape for the disordered process,
+and let $\tau_r$ denote its homogeneous rate-$r$ counterpart; their
+definitions are given below. For $K\geq2$, the comparison established here is
+\begin{equation}\label{eq:intro-comparison}
+ \tau_\alpha(x,y)
+ \leq \tau_r(x,y)-\mu|x|
+ \leq \frac{y+Kx/2}{rM_K}-\mu|x|,
+ \qquad y>\max\{0,-Kx\}.
+\end{equation}
+The finite-capacity growth graph has a vertical edge in addition to the
+two edges of the ordinary exclusion representation. This edge preserves
+the mandatory-column argument. Reflection symmetry supplies the second
+inequality in \eqref{eq:intro-comparison}, without an explicit expression
+for $H_K$ or a differentiability assumption on the homogeneous shape.
+
+The proof uses the height and growth framework of \cite{SeppHydro}, its
+disordered hydrodynamic formulation in \cite{SeppSurvey}, and the
+homogeneous statements and passage construction in \cite{SeppNotes}.
+We specify the normalization and inversion used from that framework in
+Section~\ref{sec:prelim}. Section~\ref{sec:comparison} proves the
+comparison. Section~\ref{sec:proof} determines the maximal current and
+deduces \cref{thm:main}. The exact endpoints of the flat segment are not
+identified by \eqref{eq:plateau}.
+
+\section{The process and its growth description}\label{sec:prelim}
+
+\subsection{Generator, heights, and flux}
+Let $\eta=(\eta_i)_{i\in\ZZ}$ be a configuration in
+$\{0,1,\ldots,K\}^{\ZZ}$. When $\eta_i>0$ and $\eta_{i+1}<K$, let
+$\eta^{i,i+1}$ be the configuration obtained by decreasing $\eta_i$ by
+one and increasing $\eta_{i+1}$ by one. Conditional on $\alpha$, the
+generator on local functions $F$ is
+\begin{equation}\label{eq:generator}
+ L^\alpha F(\eta)=\sum_{i\in\ZZ}\alpha_i
+ \mathrm{1}\{\eta_i>0,\ \eta_{i+1}<K\}
+ \bigl[F(\eta^{i,i+1})-F(\eta)\bigr].
+\end{equation}
+The indicator in \eqref{eq:generator} is the only occupation dependence
+in the rate. In particular, the rate is not multiplied by either the
+number of particles or the number of available places.
+
+Choose heights $h_i(t)$ with
+\begin{equation}\label{eq:height}
+ h_i(t)-h_{i-1}(t)=\eta_i(t).
+\end{equation}
+A jump from $i$ to $i+1$ decreases $h_i$ by one and changes no other
+height. If $N_i(t)$ is the number of such jumps up to time $t$, then
+\begin{equation}\label{eq:current-normalization}
+ h_i(t)=h_i(0)-N_i(t).
+\end{equation}
+Thus the macroscopic equation for a height profile $u$ is
+$u_t=-f_K(u_x)$, and its derivative is the conservation law
+$\rho_t+\partial_x f_K(\rho)=0$. The empty and full configurations have
+zero current, so this normalization gives $f_K(0)=f_K(K)=0$.
+
+For the wedge initial state, take
+\begin{equation}\label{eq:wedge}
+ \eta_i(0)=K\mathrm{1}\{i\leq0\},\qquad
+ h_i(0)=K\min\{i,0\}.
+\end{equation}
+The hydrodynamic height formula gives a deterministic convex function
+$k_\alpha:\RR\to[0,\infty)$ such that, for $t>0$,
+\begin{equation}\label{eq:wedge-limit}
+ -\frac1n h_{\lfloor nx\rfloor}(nt)
+ \longrightarrow G_x(t):=t k_\alpha(x/t)
+ \quad\text{in probability}.
+\end{equation}
+The subscript $\alpha$ indicates the disordered model; the limiting
+function depends on $Q$, not on the particular environment. Its dual
+relations are
+\begin{equation}\label{eq:duality}
+ k_\alpha(v)=\sup_{0\leq\rho\leq K}\{f_K(\rho)-v\rho\},\qquad
+ f_K(\rho)=\inf_{v\in\RR}\{k_\alpha(v)+v\rho\}.
+\end{equation}
+These formulas are the sign convention $k_\alpha=-f_K^*$ for the
+concave conjugate $f_K^*$ in \cite[equation (3.2)]{SeppSurvey}.
+In particular, if
+\begin{equation}\label{eq:boundary}
+ b(x)=\max\{0,-Kx\},
+\end{equation}
+then $k_\alpha(v)\geq b(v)$, and
+\begin{equation}\label{eq:central-duality}
+ k_\alpha(0)=\max_{0\leq\rho\leq K}f_K(\rho).
+\end{equation}
+
+The height normalization in \eqref{eq:wedge-limit} can also be read
+directly from the density hydrodynamics of
+\cite[Theorem 3]{SeppSurvey}. The rightmost occupied site in
+\eqref{eq:wedge} advances at rate at most one. For fixed $t$ and $L>t$,
+the site $\lfloor nL\rfloor$ therefore remains in the untouched empty
+region up to time $nt$ with probability tending to one. On this event,
+for $x<L$,
+\begin{equation}\label{eq:height-anchor}
+ h_{\lfloor nx\rfloor}(nt)
+ =-\sum_{i=\lfloor nx\rfloor+1}^{\lfloor nL\rfloor}\eta_i(nt).
+\end{equation}
+Bounded occupations permit interval indicators in the density limit by
+approximation with continuous test functions. Equation
+\eqref{eq:height-anchor} fixes the additive constant in the limiting
+height. The wedge specialization of the height variational formula is
+$t f_K^*(x/t)$, giving \eqref{eq:wedge-limit} and
+\eqref{eq:duality} with the integrated-current normalization
+\eqref{eq:current-normalization}.
+
+\subsection{The finite-capacity passage graph}
+Define the cone
+\begin{equation}\label{eq:cone}
+ C_K=\{(x,y)\in\RR^2:y\geq0,\ y+Kx\geq0\}.
+\end{equation}
+On its lattice points use directed steps
+\begin{equation}\label{eq:steps}
+ (0,1),\qquad (1,0),\qquad (-1,K).
+\end{equation}
+Conditional on $\alpha$, let $Y_{i,j}$ be independent exponential
+random variables of rate $\alpha_i$. For $(i,j)\in C_K\cap\ZZ^2$,
+let $\Gamma(i,j)$ be the set of paths from $(0,0)$ to $(i,j)$ using
+\eqref{eq:steps}, and set
+\begin{equation}\label{eq:passage}
+ T_Y(i,j)=\max_{\gamma\in\Gamma(i,j)}
+ \sum_{(a,c)\in\gamma\setminus\{(0,0)\}}Y_{a,c}.
+\end{equation}
+Every such endpoint is reachable. If $i\geq0$, use east and vertical
+steps; if $i<0$, use $-i$ northwest steps and then vertical steps.
+The grading $2j+Ki$ strictly increases on each edge, so the graph is
+acyclic. The bounds below also show that each path set is finite.
+
+To obtain this graph from the process, consider the time at which a
+height at site $i$ first reaches an integer level $\ell$. The required
+predecessor levels are $\ell+1$ at $i$, $\ell$ at $i-1$, and
+$\ell+K$ at $i+1$. Writing $\mathcal T(i,\ell)$ for the completion
+time and $W_{i,\ell}$ for the subsequent waiting time gives
+\begin{equation}\label{eq:recurrence}
+ \mathcal T(i,\ell)=W_{i,\ell}+
+ \max\{\mathcal T(i,\ell+1),\mathcal T(i-1,\ell),
+                         \mathcal T(i+1,\ell+K)\}.
+\end{equation}
+The construction of \eqref{eq:recurrence} follows
+\cite[Lemma 9.11 and equations (9.40)--(9.44), pp.~148--150]{SeppNotes}.
+The conditional independence needed for unequal site rates follows
+from the same predecessor ordering, as detailed next.
+
+\begin{lemma}\label{lem:services}
+Fix the environment. The waiting times $W_{i,\ell}$ of the eligible
+wedge growth cells are mutually independent, and $W_{i,\ell}$ has
+exponential rate $\alpha_i$.
+\end{lemma}
+
+\begin{proof}
+Order the cells so that every predecessor of a cell occurs before it.
+Such an ordering exists because the predecessor sets are finite and
+the graph is acyclic. Suppose a finite initial segment has already
+been considered, and let $(i,\ell)$ be the next cell. Let $S$ be the
+maximum of the three predecessor completion times in
+\eqref{eq:recurrence}, treating initially completed cells as having
+completion time zero. This is a stopping time for the family of
+Poisson clocks. At time $S$ the cell becomes eligible. Both neighboring
+heights can only decrease, so it remains eligible until the next ring
+at site $i$.
+
+Conditional on the fixed environment, the strong Markov property at
+$S$ gives independent restarted Poisson clocks with their original
+rates, independent of the information up to $S$. The next waiting
+time at $i$ is therefore exponential of rate $\alpha_i$, independent
+of the past and of all the other restarted clocks. The completion
+times in the preceding finite segment are measurable using that
+past and those other restarted clocks. Indeed, all cells there at
+site $i$ precede $(i,\ell)$ vertically and have already completed
+by $S$. No other cell in the segment can depend on the new cell,
+because the ordering puts all predecessors first. Its completion
+can thus be reconstructed without using any site-$i$ ring after $S$.
+Consequently the new waiting time is independent of all preceding
+completion times, and hence of their waiting times. Induction proves
+the assertion.
+\end{proof}
+
+The coordinate change $j=-\ell-1$ moves the first growth cell
+$(0,-1)$ to $(0,0)$ and gives precisely \eqref{eq:cone} and
+\eqref{eq:steps}. The completion time includes the waiting time at
+this first cell. Omitting it in \eqref{eq:passage} removes one
+integrable random variable common to every path. The vertical shift
+and this omission have no effect on a scaled limit.
+
+For $K=1$, a vertical step can be replaced by an east step followed by
+a northwest step. The replacement adds a nonnegative intermediate
+weight, so the vertical edge is redundant in the maximizing problem.
+For $K>1$, that two-step replacement increases height by $K$, and the
+vertical edge must be retained.
+
+\subsection{Shape limits and integrability}
+The passage formulation of the height limit is
+\begin{equation}\label{eq:shape}
+ \frac1n T_Y(\lfloor nx\rfloor,\lfloor ny\rfloor)
+ \longrightarrow\tau_\alpha(x,y)
+ \quad\text{in probability},\qquad y>b(x).
+\end{equation}
+All lattice approximations in this paper are taken inside $C_K$.
+The deterministic shape is finite, continuous in the interior, and
+homogeneous of degree one. The inverse relation at unit time is
+\begin{equation}\label{eq:inverse}
+ k_\alpha(v)=\inf\{y\geq b(v):\tau_\alpha(v,y)>1\},
+\end{equation}
+with boundary values interpreted by continuity from the interior.
+
+For completeness, the inversion uses no additional assertion about
+stationary measures. The function $G_x$ in \eqref{eq:wedge-limit} is
+convex in $t$, since it is the perspective of the convex function
+$k_\alpha$. It is nondecreasing, with $G_x(0)=b(x)$, because each
+microscopic height decreases. The bound on the site clock rates also
+gives $b(x)\leq G_x(t)\leq b(x)+t$, so this extension is continuous
+at $t=0$.
+
+The needed comparison with constant rate $r$ is a height comparison.
+Use rate-one Poisson clocks with independent uniform marks on $[0,1]$;
+the environment-$\alpha$ process accepts a mark at site $i$ when it
+is at most $\alpha_i$, while the rate-$r$ process accepts it when it
+is at most $r$. Start their heights from the same wedge. The faster
+process has lower heights under this coupling. To check preservation
+of this order, the only possible violation occurs when the upper
+height jumps at a site where the two heights are equal. Eligibility
+of the upper height, and the order of both neighboring heights, then
+imply eligibility of the lower height. Its clock also accepts the
+mark, so it jumps at the same time.
+
+It follows that $G_x(t)\geq G_x^{(r)}(t)$, where the superscript
+denotes the homogeneous model. Since $k_r$ is continuous and
+$k_r(0)=rM_K>0$, the expression $t k_r(x/t)$ tends to infinity with
+$t$. Thus $G_x(t)\to\infty$. Convexity now makes $G_x$
+strictly increasing wherever its value exceeds $b(x)$: if
+$G_x(s)>b(x)$ and $t>s>0$, then
+\[
+ G_x(t)\geq G_x(s)+\frac{t-s}{s}\bigl(G_x(s)-b(x)\bigr)>G_x(s).
+\]
+Thus every level $y>b(x)$ has a unique inverse time. Bracketing this
+time by two fixed times in \eqref{eq:wedge-limit} proves
+\eqref{eq:shape} and \eqref{eq:inverse}. Continuity of $k_\alpha$
+and strictness of the inverse give interior continuity of
+$\tau_\alpha$. The identity $G_{cx}(ct)=cG_x(t)$, for $c>0$, gives
+its degree-one homogeneity.
+
+We will pass to expectations in \eqref{eq:shape}. The following bound
+justifies this step for all the weight fields used below.
+
+\begin{lemma}\label{lem:tails}
+Suppose that, conditional on a rate field, the vertex weights are
+independent exponentials with rates at least $r$. On every fixed
+interior ray of $C_K$, the scaled passage times are uniformly
+integrable. Consequently, the limit in \eqref{eq:shape} also holds
+in expectation.
+\end{lemma}
+
+\begin{proof}
+For a path to $(i,j)$, let $a$, $c$, and $e$ count, respectively,
+vertical, northwest, and east steps. Then
+\[
+ j=a+Kc,\qquad i=e-c.
+\]
+Its length is at most $L=|i|+2j$, and the number of possible paths
+is at most $3^{L+1}$. No vertex is repeated. Conditional on the
+environment, the exponential moment at parameter $r/2$ of the weight
+on one path is at most $2^L$. A union bound gives, for $u\geq0$,
+\begin{equation}\label{eq:tail-bound}
+ \PP\{T_Y(i,j)>u\}\leq
+ 3\exp\{L\log6-ru/2\}.
+\end{equation}
+The bound is uniform in the environment and hence holds after averaging
+over it. Along a fixed ray, $L\leq Cn$ for a finite constant $C$.
+Putting $u=ns$ in \eqref{eq:tail-bound} gives an integrable exponential
+tail uniformly in $n$ once $s>2C\log6/r$. This proves uniform
+integrability. Convergence in probability to a constant then implies
+convergence in expectation.
+\end{proof}
+
+Write $\tau_1$ and $k_1$ for the homogeneous rate-one shapes, and
+$\tau_r$ and $k_r$ for the homogeneous rate-$r$ shapes. Scaling the
+waiting times gives $\tau_r=\tau_1/r$. At $x=0$, homogeneity and
+\eqref{eq:inverse} imply
+\begin{equation}\label{eq:reciprocal}
+ \tau_1(0,1)=\frac1{k_1(0)}=\frac1{M_K}.
+\end{equation}
+Here $k_1(0)=M_K$ follows from \eqref{eq:central-duality} and the
+homogeneous flux symmetry. Positivity and the upper bound on one site's
+clock rate give $0<M_K\leq1$; these properties also appear in
+\cite[Theorem 9.5]{SeppNotes}. We use the constant
+\begin{equation}\label{eq:A}
+ A=\frac{\tau_1(0,1)}r=\frac1{J_K}.
+\end{equation}
+
+\section{The comparison argument}\label{sec:comparison}
+
+\subsection{A supporting plane from homogeneous symmetry}
+The homogeneous shape is concave on the interior of $C_K$.
+One way to see the direction of this inequality is to concatenate two
+paths. The corresponding passage values are superadditive, with the
+common endpoint counted only once. Translation invariance and the
+expectation limits of \cref{lem:tails} give superadditivity of
+$\tau_1$. Together with degree-one homogeneity this is concavity.
+
+\begin{lemma}\label{lem:plane}
+For every $(x,y)$ in the interior of $C_K$,
+\begin{equation}\label{eq:plane}
+ \tau_r(x,y)\leq A(y+Kx/2).
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+The linear involution
+\[
+ S(x,y)=(-x,y+Kx)
+\]
+preserves the cone and its lattice. It fixes the vertical step and
+exchanges $(1,0)$ with $(-1,K)$. Homogeneous independent weights are
+invariant in law under $S$, whence
+$\tau_1(x,y)=\tau_1(-x,y+Kx)$. Applying concavity at the midpoint of
+these two arguments gives
+\[
+ \tau_1(x,y)\leq\tau_1(0,y+Kx/2)
+                 =(y+Kx/2)\tau_1(0,1).
+\]
+The second coordinate at this midpoint is positive in the interior of
+the cone. Divide by $r$ and use \eqref{eq:A}.
+\end{proof}
+
+\subsection{Adding exponential delays}
+All expectations from now on include both the environment and the
+waiting times, unless a conditioning is displayed. Given $\alpha$,
+take auxiliary variables independent of the entire field $Y$ and
+independent across vertices, with
+\begin{equation}\label{eq:auxiliary}
+ U_{i,j}=B_{i,j}E_{i,j},\qquad
+ B_{i,j}\sim\Ber(1-r/\alpha_i),\qquad
+ E_{i,j}\sim\Exp(r).
+\end{equation}
+Within each pair, $B_{i,j}$ and $E_{i,j}$ are also conditionally
+independent. Set $Z_{i,j}=Y_{i,j}+U_{i,j}$.
+
+\begin{lemma}\label{lem:addition}
+Conditional on $\alpha$, the field $Z$ consists of independent
+rate-$r$ exponential variables, with joint law independent of
+$\alpha$. Moreover,
+\begin{equation}\label{eq:delay-mean}
+ \EE[U_{i,j}\mid\alpha,Y]=d_i,
+ \qquad d_i:=\frac1r-\frac1{\alpha_i}\geq0,
+ \qquad \EE d_i=\mu.
+\end{equation}
+\end{lemma}
+
+\begin{proof}
+For $s\geq0$, conditional independence gives
+\begin{align*}
+ \EE[e^{-sZ_{i,j}}\mid\alpha]
+ &=\frac{\alpha_i}{\alpha_i+s}
+   \left[\frac r{\alpha_i}
+    +\left(1-\frac r{\alpha_i}\right)\frac r{r+s}\right]\\
+ &=\frac r{r+s}.
+\end{align*}
+This is the Laplace transform of $\Exp(r)$. The construction gives
+conditional independence across vertices, so the conditional joint law
+is a product that does not depend on the rates. It remains the same
+product law after averaging over the environment. Finally,
+\[
+ \EE[U_{i,j}\mid\alpha,Y]
+ =\left(1-\frac r{\alpha_i}\right)\frac1r=d_i,
+\]
+which proves \eqref{eq:delay-mean}.
+\end{proof}
+
+The fields $Y$ and $U$ share their column environment. Their
+independence is conditional on that environment; unconditional
+independence is neither asserted nor needed.
+
+\begin{proposition}\label{prop:comparison}
+For every interior point $(x,y)$ of $C_K$,
+\begin{equation}\label{eq:comparison}
+ \tau_\alpha(x,y)\leq\tau_r(x,y)-\mu|x|
+                       \leq A(y+Kx/2)-\mu|x|.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+Fix a lattice endpoint $(i,j)$. Choose a maximizing path
+$\gamma_Y\in\Gamma(i,j)$ for $T_Y(i,j)$, resolving any ties by a
+fixed deterministic order. This path is measurable with respect to
+$\sigma(\alpha,Y)$. With the starting vertex omitted from all sums,
+\begin{equation}\label{eq:path-subtract}
+ T_Y(i,j)=\sum_{\gamma_Y}Z-\sum_{\gamma_Y}U
+           \leq T_Z(i,j)-\sum_{\gamma_Y}U.
+\end{equation}
+Here $T_Z$ denotes the passage functional \eqref{eq:passage} with
+weights $Z$.
+
+Every step changes the column by $-1$, $0$, or $1$. If $i>0$,
+every path visits each column in $I_i=\{1,\ldots,i\}$; if $i<0$,
+it visits each column in $I_i=\{i,\ldots,-1\}$. Put $I_0=\varnothing$.
+Since all $d_a$ are nonnegative, \cref{lem:addition} implies the
+pointwise conditional bound
+\begin{equation}\label{eq:mandatory-columns}
+ \EE\!\left[\sum_{\gamma_Y}U\,\middle|\,\alpha,Y\right]
+     =\sum_{(a,c)\in\gamma_Y\setminus\{(0,0)\}}d_a
+     \geq\sum_{a\in I_i}d_a.
+\end{equation}
+The omitted starting vertex causes no loss, since $0\notin I_i$.
+Repeated visits to a column only increase the left side. Taking
+expectations yields
+\begin{equation}\label{eq:finite-comparison}
+ \EE T_Y(i,j)\leq\EE T_Z(i,j)-|i|\mu.
+\end{equation}
+The rightmost sum in \eqref{eq:mandatory-columns} uses fixed columns,
+so the path's dependence on the environment introduces no change to
+its mean.
+
+Apply \eqref{eq:finite-comparison} to lattice points approaching
+$(nx,ny)$ and divide by $n$. By \cref{lem:tails}, both passage terms
+converge in expectation to their shapes. By \cref{lem:addition}, the
+shape for $Z$ is $\tau_r$. This proves the first inequality in
+\eqref{eq:comparison}; \cref{lem:plane} proves the second.
+\end{proof}
+
+\section{The maximal current and the flat interval}\label{sec:proof}
+
+\subsection{Long intervals of slow sites}
+The comparison above supplies the lower bound on the flux near half
+filling. To identify its value, we first determine the passage shape
+in the vertical direction.
+
+\begin{lemma}\label{lem:slow-intervals}
+Fix an integer $m\geq1$ and $\varepsilon>0$. Almost surely there is an interval
+of $2m+1$ consecutive sites on which every rate is at most
+$r+\varepsilon$. The interval can be chosen as a measurable function
+of $\alpha$ alone.
+\end{lemma}
+
+\begin{proof}
+The definition of essential infimum gives
+$p_\varepsilon:=Q([r,r+\varepsilon])>0$.
+Take a deterministic sequence of disjoint intervals, each of length
+$2m+1$. Their all-slow events are independent, each of probability
+$p_\varepsilon^{2m+1}$. The probability that none of the first $N$
+intervals is all slow is
+$(1-p_\varepsilon^{2m+1})^N$, which tends to zero. Choosing the first
+all-slow interval in this sequence proves both assertions.
+\end{proof}
+
+\begin{proposition}\label{prop:capacity}
+The vertical passage shape and the maximal flux satisfy
+\begin{equation}\label{eq:capacity}
+ \tau_\alpha(0,1)=A,\qquad
+ k_\alpha(0)=\max_{0\leq\rho\leq K}f_K(\rho)=J_K.
+\end{equation}
+\end{proposition}
+
+\begin{proof}
+For the upper bound on passage times, use independent rate-one
+exponential variables $E'_{i,j}$, independent of $\alpha$, and write
+$Y_{i,j}=E'_{i,j}/\alpha_i$. Since $\alpha_i\geq r$,
+\begin{equation}\label{eq:capacity-upper}
+ \tau_\alpha(0,1)\leq\tau_r(0,1)=A.
+\end{equation}
+
+For the reverse bound, first fix $m$ and $\varepsilon$. Choose a slow
+interval $[a-m,a+m]\cap\ZZ$ as in \cref{lem:slow-intervals}.
+Consider all directed paths from $(a,b)$ to $(a,b+m)$, for an integer
+$b$ to be chosen. Any such path stays in the selected interval.
+Indeed, its northwest-step count is at most $m/K$, and its total
+east-step count is equal to its northwest-step count. Its horizontal
+displacement at any intermediate vertex therefore has absolute value
+at most $m$.
+
+Let $D_m(a,b)$ denote the union of the vertices of these paths.
+The waiting times in this set dominate $E'_{i,j}/(r+\varepsilon)$.
+Let $V_m$ be the homogeneous rate-one passage value from $(0,0)$ to
+$(0,m)$ with its starting weight omitted. On each translated set
+$D_m(a,b+\ell m)$, the rate-one field $E'$ therefore supplies a copy
+$V_m^{(\ell)}$ of $V_m$.
+
+These copies are independent. To verify this, note first that vertical
+coordinates never decrease along a path. Successive sets can intersect
+only on their common horizontal row. On its top row, the lower set
+has columns at most $a$: any remaining motion to its endpoint must
+be eastward. On its bottom row, the upper set has columns at least
+$a$: its initial motion on that row is eastward. Thus the only common
+vertex is $(a,b+(\ell+1)m)$. It is counted as the terminal vertex of
+the lower passage and omitted as the starting vertex of the upper
+passage. The weighted vertex sets are disjoint. Conditional on
+$\alpha$, translation invariance of $E'$ now gives independent,
+identically distributed values $V_m^{(\ell)}$.
+
+The strip may be far from the origin, but its position is fixed at
+this stage. Set
+\[
+ b=K\max\{-a,0\},\qquad d=K\max\{a,0\},\qquad C=b+d.
+\]
+There is a path from $(0,0)$ to $(a,b)$: use only east steps if
+$a\geq0$, and only northwest steps if $a<0$. From $(a,B)$ there is
+a path to $(0,B+d)$, by northwest steps if $a>0$ and east steps if
+$a\leq0$. These two connectors have fixed height cost $C$.
+
+For $n\geq C$, put $q=\lfloor(n-C)/m\rfloor$. Concatenate the first
+connector, $q$ maximizing strip passages, and the return connector,
+then fill the remaining height with vertical steps at column zero.
+Nonnegative connector weights give
+\begin{equation}\label{eq:strip-sum}
+ T_Y(0,n)\geq\frac1{r+\varepsilon}
+                    \sum_{\ell=0}^{q-1}V_m^{(\ell)}.
+\end{equation}
+The whole concatenated path is admissible in $C_K$: it is built from
+the steps \eqref{eq:steps} starting at the origin. The strip is
+chosen using only $\alpha$, so its selection does not bias the field
+$E'$.
+
+The conditional strong law and $q/n\to1/m$ show that, almost surely,
+\begin{equation}\label{eq:strip-liminf}
+ \liminf_{n\to\infty}\frac{T_Y(0,n)}n
+       \geq\frac{\EE V_m}{m(r+\varepsilon)}.
+\end{equation}
+Convergence in probability in \eqref{eq:shape} transfers this bound to
+the deterministic value $\tau_\alpha(0,1)$. For example, take an
+almost surely convergent subsequence and apply
+\eqref{eq:strip-liminf} along it. The homogeneous shape limit and
+\cref{lem:tails} give
+\[
+ \lim_{m\to\infty}\frac{\EE V_m}m=\tau_1(0,1).
+\]
+Taking integer $m\to\infty$ and then rational
+$\varepsilon\downarrow0$ proves
+$\tau_\alpha(0,1)\geq\tau_1(0,1)/r=A$.
+These are countable limits; the slow-interval and strong-law events
+can be intersected without changing their probability.
+
+Together with \eqref{eq:capacity-upper}, this gives the first equality
+in \eqref{eq:capacity}. At $x=0$, degree-one homogeneity and
+\eqref{eq:inverse} give $k_\alpha(0)=1/\tau_\alpha(0,1)=J_K$.
+Equation \eqref{eq:central-duality} gives the remaining assertion.
+\end{proof}
+
+The order of limits in this argument is essential to the bound: the
+strip width and its position are fixed before $n$ tends to infinity.
+Only after that limit is the width increased. No interval with length
+proportional to $n$ is required to have all of its rates near $r$.
+
+\subsection{From the passage bound to the flux}
+We isolate the geometric implication of the comparison to keep track
+of the boundary of the cone.
+
+\begin{lemma}\label{lem:line}
+Let $\rho\in[0,K]$ and $J>0$. Suppose that
+\[
+ \tau_\alpha(v,J-\rho v)\leq1
+ \quad\text{whenever }J-\rho v>b(v).
+\]
+Then $f_K(\rho)\geq J$.
+\end{lemma}
+
+\begin{proof}
+Fix $v\in\RR$ and put $y_0=J-\rho v$. If $y_0\leq b(v)$, then
+$k_\alpha(v)\geq b(v)\geq y_0$. If $y_0>b(v)$, passage times are
+nondecreasing in the vertical coordinate, since a path can be extended
+by vertical steps with nonnegative weights. The same is true of their
+limits. The assumed bound and \eqref{eq:inverse} therefore imply
+$k_\alpha(v)\geq y_0$. In both cases,
+\[
+ k_\alpha(v)+\rho v\geq J.
+\]
+Take the infimum over $v$ in \eqref{eq:duality}.
+\end{proof}
+
+\begin{proof}[Proof of \cref{thm:main}]
+First note that the proposed interval is contained in $[0,K]$.
+Indeed,
+\begin{equation}\label{eq:width-size}
+ \mu J_K=\left(1-r\EE\!\left[\frac1{\alpha_0}\right]\right)M_K
+             <M_K.
+\end{equation}
+For $K\geq2$ use $M_K\leq1\leq K/2$; for $K=1$ use $M_1=1/4$.
+
+Take $\rho$ with $|\rho-K/2|\leq\mu J_K=\mu/A$. At every interior
+point $(v,J_K-\rho v)$ of $C_K$, \cref{prop:comparison} gives
+\begin{align}
+ \tau_\alpha(v,J_K-\rho v)
+ &\leq A\bigl(J_K+(K/2-\rho)v\bigr)-\mu|v|\notag\\
+ &=1+A(K/2-\rho)v-\mu|v|\leq1.\label{eq:line-bound}
+\end{align}
+The last inequality follows from $A|K/2-\rho|\leq\mu$.
+By \cref{lem:line}, $f_K(\rho)\geq J_K$. By
+\cref{prop:capacity}, $f_K(\rho)\leq J_K$ at every density. This
+proves \eqref{eq:plateau} and the asserted maximum.
+
+Finally, nonconstancy and the essential-infimum condition imply
+$\PP\{\alpha_0>r\}>0$. The nonnegative random variable
+$1/r-1/\alpha_0$ is positive on this event, so $\mu>0$.
+Since $M_K>0$ and $r>0$, the half-width $\mu J_K$ is positive.
+\end{proof}
+
+\begin{corollary}\label{cor:binary}
+For $Q=p\delta_r+(1-p)\delta_s$ with $0<p<1$ and
+$0<r<s\leq1$, where $\delta_a$ denotes unit mass at $a$, the flux
+equals $rM_K$ throughout
+\[
+ \left|\rho-\frac K2\right|
+ \leq (1-p)\left(1-\frac rs\right)M_K.
+\]
+\end{corollary}
+
+\begin{proof}
+Substitution of $\EE[1/\alpha_0]=p/r+(1-p)/s$ into
+\eqref{eq:width-size} gives the bound.
+\end{proof}
+
+\section{Remarks}
+
+The theorem gives a subinterval of the set of maximizing densities.
+If
+\[
+ \rho_-:=\inf\{\rho\in[0,K]:f_K(\rho)=J_K\},\qquad
+ \rho_+:=\sup\{\rho\in[0,K]:f_K(\rho)=J_K\},
+\]
+then concavity makes this set an interval, and the conclusion is
+\[
+ \rho_-\leq K/2-\mu J_K,
+ \qquad \rho_+\geq K/2+\mu J_K.
+\]
+It does not give equality in these endpoint bounds. Determining the
+exact plateau width for general laws, and determining the homogeneous
+constant $M_K$ explicitly for $K\geq2$, require information beyond
+the supporting-plane comparison.
+
+The positive lower bound on the rates enters both the exponential
+addition identity and the passage-time integrability estimate. When
+the essential infimum is zero, the quantities $1/r$ and $\mu$ used
+here are unavailable. Dependent environments also need separate
+analysis: the proof of \cref{lem:slow-intervals} uses independent
+blocks, while \cref{prop:comparison} uses deterministic shape limits
+and a common mean for the mandatory columns. The present assumptions
+ensure both properties without additional conditions.
+
+The state-independent departure clock is part of the result's scope.
+If the rate is replaced by $\alpha_i g(\eta_i,\eta_{i+1})$ for a
+nonconstant function $g$ on pairs of occupations, the waiting time of
+an eligible growth cell can depend on neighboring events. The
+independent exponential service field in \eqref{eq:recurrence} then
+does not follow from the same construction. Whether central plateaus
+persist for such finite-capacity disorder models is a separate
+question. Rates attached to particle labels likewise define a
+different model from \eqref{eq:generator}.
+
+Finally, a flat hydrodynamic flux does not specify the location or
+uniqueness of a microscopic high-density region. The present result
+concerns the infinite-volume current--density relation. It does not
+determine interface fluctuations or the time required for a finite
+system to reach equilibrium.
+
+\section*{Funding}
+Computational resources were provided in part by Google Cloud through its
+education credits program (credit 530550103).
+
+\section*{Competing interests}
+The author declares no competing interests.
+
+\section*{Data availability}
+No data were generated or analysed for this paper.
+
+\section*{Declaration of AI use}
+This paper is part of a broader research project on AI-assisted proof. The proofs were produced and checked with the
+assistance of AI systems (OpenAI GPT-6.1 and Anthropic Claude).
+
+\begin{thebibliography}{9}
+
+\bibitem{BB}
+C.~Bahadoran and T.~Bodineau,
+\emph{Quantitative estimates for the flux of TASEP with dilute site disorder},
+Electron. J. Probab. \textup{23} (2018), paper no.~44, 1--44.
+\href{https://doi.org/10.1214/18-EJP137}{doi:10.1214/18-EJP137}.
+\href{https://arxiv.org/abs/1602.06718v4}{arXiv:1602.06718v4}.
+
+\bibitem{SeppHydro}
+T.~Sepp\"al\"ainen,
+\emph{Existence of hydrodynamics for the totally asymmetric simple
+$K$-exclusion process},
+Ann. Probab. \textup{27} (1999), no.~1, 361--415.
+\href{https://doi.org/10.1214/aop/1022677266}{doi:10.1214/aop/1022677266}.
+
+\bibitem{SeppSurvey}
+T.~Sepp\"al\"ainen,
+\emph{Recent results and open problems on the hydrodynamics of disordered
+asymmetric exclusion and zero-range processes},
+Resenhas Inst. Mat. Estat. Univ. S\~ao Paulo \textup{4} (1999), no.~1, 1--15.
+\href{https://doi.org/10.11606/resimeusp.v4i1.74889}{doi:10.11606/resimeusp.v4i1.74889}.
+\href{https://arxiv.org/abs/math/9906194}{arXiv:math/9906194}.
+
+\bibitem{SeppNotes}
+T.~Sepp\"al\"ainen,
+\emph{Translation invariant exclusion processes},
+unpublished book manuscript, December 11, 2008.
+\url{https://people.math.wisc.edu/~tseppalainen/excl-book/ajo.pdf}.
+
+\bibitem{Sly}
+A.~Sly,
+\emph{Note on the flux for TASEP with general disorder},
+preprint (2016), \href{https://arxiv.org/abs/1609.06589v1}{arXiv:1609.06589v1}.
+
+\end{thebibliography}
+\end{document}

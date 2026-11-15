@@ -1,0 +1,101 @@
+{
+  "lp_refinements": [
+    {
+      "law": "quadratic",
+      "n": 3,
+      "B": 80,
+      "columns": 3280,
+      "lp": "excluded",
+      "lp_l1": 0.32143385416666653,
+      "lp_lower": 0.3214338541666666,
+      "primal_residual": 2.220446049250313e-16,
+      "pricing": "all admissible sorted triples enumerated"
+    },
+    {
+      "law": "quadratic",
+      "n": 3,
+      "B": 160,
+      "columns": 12960,
+      "lp": "excluded",
+      "lp_l1": 0.3317664713541666,
+      "lp_lower": 0.33176647135416665,
+      "primal_residual": 3.469446951953614e-18,
+      "pricing": "all admissible sorted triples enumerated"
+    }
+  ],
+  "structured_quantile_controls": [
+    {
+      "n": 20,
+      "positive_uniform": [
+        0.0,
+        1.0
+      ],
+      "rows": 4000,
+      "max_sum_error": 0.0,
+      "max_quantile_marginal_error": 1.1102230246251565e-16
+    },
+    {
+      "n": 40,
+      "positive_uniform": [
+        0.0,
+        1.0
+      ],
+      "rows": 4000,
+      "max_sum_error": 0.0,
+      "max_quantile_marginal_error": 1.1102230246251565e-16
+    },
+    {
+      "n": 20,
+      "positive_uniform": [
+        0.9,
+        1.0
+      ],
+      "rows": 4000,
+      "max_sum_error": 0.0,
+      "max_quantile_marginal_error": 2.220446049250313e-16
+    }
+  ],
+  "edge_rearrangements": [
+    {
+      "law": "atom_uniform_01",
+      "n": 131,
+      "theorem2_N": 130,
+      "rms": 0.0008682777493395935,
+      "max_error": 0.002499999999992397,
+      "row_range": 0.0037499999999965894,
+      "sample_mean_bias": -2.7755575615628914e-17,
+      "sweeps": 6,
+      "rows": 4000
+    },
+    {
+      "law": "atom_uniform_007",
+      "n": 186,
+      "theorem2_N": 186,
+      "rms": 0.0011279722640957198,
+      "max_error": 0.002857142857126682,
+      "row_range": 0.005357142857137731,
+      "sample_mean_bias": 4.85722573273506e-17,
+      "sweeps": 5,
+      "rows": 4000
+    },
+    {
+      "law": "far_uniform",
+      "n": 1211,
+      "theorem2_N": 1210,
+      "rms": 0.00045166359159559124,
+      "max_error": 0.0005000000000023874,
+      "row_range": 0.0010000000000047748,
+      "sample_mean_bias": 0.0,
+      "sweeps": 2,
+      "rows": 1000
+    }
+  ],
+  "exact": {
+    "quadratic_middle_mass": "13/80",
+    "quadratic3_min_L1_from_middle_obstruction": "41/120",
+    "yin_N_for_alpha1_half": 4223,
+    "pair_disintegration_four_marginals_exact": "passed"
+  },
+  "seconds": 43.43791766700451,
+  "peak_rss_bytes": 143687680
+}

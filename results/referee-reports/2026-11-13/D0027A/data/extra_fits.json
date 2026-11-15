@@ -1,0 +1,77 @@
+{
+  "renewal_q025_early": {
+    "status": "fit",
+    "observable": "infection indicator",
+    "fit_interval_requested": [
+      0.25,
+      1.5
+    ],
+    "times_used": [
+      0.25,
+      0.5,
+      0.75,
+      1.0,
+      1.5
+    ],
+    "n_points": 5,
+    "sign": -1.0,
+    "exp_rate": 1.8323339761969848,
+    "exp_amplitude": 0.052390267473173095,
+    "rate_bootstrap_95_percentile": [
+      1.5553604792986553,
+      2.3139921142451625
+    ],
+    "bootstrap_successful": 400,
+    "log_fit_R2": 0.9993306673803516,
+    "free_beta_logfit": 1.095,
+    "free_beta_grid": [
+      0.25,
+      1.75
+    ],
+    "exp_log_RSS": 0.0020800979090432733,
+    "free_beta_log_RSS": 0.0003166752321661113,
+    "warning": "Finite time descriptive fits, correlated times, data-based 4-SE mask; no asymptotic conclusion.",
+    "selection": "Exploratory early window after the original t>=8 window had no resolved signal."
+  },
+  "hmm_q025_long": {
+    "status": "fit",
+    "observable": "infection indicator",
+    "fit_interval_requested": [
+      75,
+      600
+    ],
+    "times_used": [
+      75.0,
+      100.0,
+      125.0,
+      150.0,
+      200.0,
+      250.0,
+      300.0,
+      400.0,
+      500.0,
+      600.0
+    ],
+    "n_points": 10,
+    "sign": -1.0,
+    "exp_rate": 0.0035629533477266376,
+    "exp_amplitude": 0.08766474888910256,
+    "rate_bootstrap_95_percentile": [
+      0.0031955281374520185,
+      0.00397259746251489
+    ],
+    "bootstrap_successful": 400,
+    "log_fit_R2": 0.9963778679592407,
+    "free_beta_logfit": 1.01,
+    "free_beta_grid": [
+      0.25,
+      1.75
+    ],
+    "exp_log_RSS": 0.013256244780560117,
+    "free_beta_log_RSS": 0.01323444746885212,
+    "warning": "Finite time descriptive fits, correlated times, data-based 4-SE mask; no asymptotic conclusion.",
+    "selection": "Exploratory later window after observing nonmonotonic early relaxation."
+  },
+  "long_boundary_union_bound_log10": -337.29445896627124,
+  "analysis_peak_rss_bytes_macos": 86884352
+}
