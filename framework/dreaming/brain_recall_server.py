@@ -108,7 +108,7 @@ def log(msg):
 # linker, which sets BRAIN_RECALL_REFRESH=0. BRS_PER_CALL_ENV=0 restores the old decline.
 # 5 Nov 2026 (an agent, Mac): BRAIN_RECALL_LOG too. graph_lane.log_recall reads it on each call, and every test
 # bank sets BRAIN_RECALL_LOG=0, so all of them were declined and ran cold.
-# 5 Nov 2026 (an agent, math-ross20): BRAIN_HEADLESS_DIET too. Only hook_dispatch reads it, never recall, and it
+# 5 Nov 2026 (an agent): BRAIN_HEADLESS_DIET too. Only hook_dispatch reads it, never recall, and it
 # was the laptop's one remaining env decline (55 calls in 24 h).
 PER_CALL_ENV = () if os.environ.get("BRS_PER_CALL_ENV", "1") == "0" else (
     "BRAIN_RECALL_REFRESH", "BRAIN_RECALL_LOG", "BRAIN_HEADLESS_DIET")

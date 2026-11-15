@@ -1,19 +1,20 @@
-"""recall_rewrite.py - brain.py recall with a cheap rewrite first, for a question asked in everyday words.
+"""recall_rewrite.py - brain.py recall with a cheap rewrite first, for a question worded the way he asks.
 
-The brain's search is lexical, so a question in everyday words misses the note about half the time. On 300 reworded
-questions, three Haiku 4.5 rewrites, each in the words a note answering the question would use, plus the question
-itself put the source memory in the top five of one of the four searches for 132 of 300, against 104 for the question
-alone (+9 points; top twenty +14), at under a cent a question. This runs the same four searches and interleaves them -
-the first result of each, then the second of each, and so on - so its first twenty lines are the four top-fives when
-the lists share no memory; a memory two lists share is shown once (each list is searched ten deep at -n 20).
-Read at the same number of lines, the interleaved list is a wash against plain recall - 109 against 105 at five lines,
-150 against 149 at twenty - so it is a second look, not a better first search: after a plain recall missed, its
-twenty lines held the note 25 times in 151.
+The brain's search is lexical, so a question in the user's words misses the note about half the time. Measured 25-26 Sep
+(memory a_cheap_rewrite_before_recall_finds_the_note_far_more_often_2026_09_25): three Haiku 4.5 rewrites, each in the
+words a note answering the question would use, plus the question itself put the source memory in the top five of one
+of the four searches for 132 of 300 reworded questions, against 104 for the question alone (+9 points; top twenty +14),
+under a cent a question. This runs the same four searches and interleaves them - the first result of each, then the
+second of each, and so on - so its first twenty lines are the four top-fives the measurement counted when the lists
+share no memory; a memory two lists share is shown once, and the twenty lines then reach below a list's top five
+(each list is searched ten deep at -n 20; scheduled audit account02/B08 auto11, 27 Sep).
+Read at the same number of lines, though (27 Sep, brain_graph/results/REWRITE_FUSED_EQUAL_LINES_2026-09-27.json), the
+interleaved list is a wash against plain recall - 109 against 105 at five lines, 150 against 149 at twenty - so it is a
+second look, not a better first search: after a plain recall missed, its twenty lines held the note 25 times in 151.
 
-Cost: one headless Haiku call through the Claude Code CLI (--safe-mode, no tools, 5-10 s) and four recalls. Use it
-when a plain recall misses; brain.py recall itself is unchanged. Every use is logged to
-~/.claude/brain_graph/live/recall_rewrite_log.jsonl (RECALL_REWRITE_NO_LOG=1 skips it). Without the CLI, give your own
-rewrites with --rewrites, or --no-model for the plain search.
+Cost: one headless Haiku call on the subscription (--safe-mode, no tools, 5-10 s) and four recalls. Use it when a plain
+recall misses or the question is in his everyday words; brain.py recall itself is unchanged. Every use is logged to
+~/.claude/brain_graph/live/recall_rewrite_log.jsonl.
 
     python recall_rewrite.py "question" [-n 20] [--rewrites "a|b|c"] [--no-model]
 """
@@ -27,10 +28,9 @@ import sys
 import time
 
 HOME = os.path.expanduser("~")
-BRAIN = os.environ.get("BRAIN_CLI", os.path.join(os.path.dirname(os.path.abspath(__file__)), "brain.py"))
-# The Claude Code CLI: claude.exe on Windows, plain claude elsewhere; RECALL_REWRITE_CLAUDE names another path.
-CLAUDE = os.environ.get("RECALL_REWRITE_CLAUDE",
-                        os.path.join(HOME, ".local", "bin", "claude.exe" if os.name == "nt" else "claude"))
+BRAIN = os.path.join(HOME, ".claude", "dreaming", "brain.py")
+# Windows ships claude.exe; the Mac has plain claude (the .exe path made every rewrite fail there until 3 Nov)
+CLAUDE = os.path.join(HOME, ".local", "bin", "claude.exe" if os.name == "nt" else "claude")
 LOG = os.path.join(HOME, ".claude", "brain_graph", "live", "recall_rewrite_log.jsonl")
 WORK = os.path.join(HOME, ".claude", "brain_graph", "live", "recall_rewrite_work")
 ROW = re.compile(r"^\s+([0-9]*\.?[0-9]+)\s+\[([^\]]*)\]\s+(\S+)\s*$")
@@ -45,9 +45,12 @@ QUESTION: {q}"""
 
 
 def rewrite(q, timeout=120):
-    """Three rewrites from Haiku 4.5, exactly as the measurement made them; ([], error) when the call fails."""
+    """Three rewrites from Haiku 4.5, exactly as the measurement made them; ([], error) when the call fails.
+    Haiku 4.5 still answered on 2026-11-12; RECALL_REWRITE_MODEL=claude-haiku-5-5 tries the newer model, but its
+    hit rate has not been measured on the 25 Sep bank, so the measured model stays the default."""
     os.makedirs(WORK, exist_ok=True)
-    cmd = [CLAUDE, "-p", "--safe-mode", "--model", "claude-haiku-4-5-20251001", "--output-format", "json",
+    model = os.environ.get("RECALL_REWRITE_MODEL") or "claude-haiku-4-5-20251001"
+    cmd = [CLAUDE, "-p", "--safe-mode", "--model", model, "--output-format", "json",
            "--tools", "", "--strict-mcp-config", "--max-budget-usd", "0.2"]
     try:
         p = subprocess.run(cmd, input=PROMPT.format(q=q), cwd=WORK, capture_output=True, text=True, encoding="utf-8",
@@ -124,7 +127,6 @@ def main():
     if os.environ.get("RECALL_REWRITE_NO_LOG") == "1":     # evaluations: bank questions stay out of the live log
         return 0
     try:
-        os.makedirs(os.path.dirname(LOG), exist_ok=True)
         with open(LOG, "a", encoding="utf-8") as fh:
             fh.write(json.dumps({"t": round(time.time(), 1), "q": a.question[:300], "rewrites": rw, "error": err,
                                  "shown": [[s[0], j, r] for s, j, r in fused], "seconds": round(time.time() - t0, 1)},

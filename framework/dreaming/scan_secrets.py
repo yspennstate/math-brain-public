@@ -10,7 +10,8 @@ text, token prefixes, paths, revision arguments, Git diagnostics, or hashes.
   python scan_secrets.py FILE [FILE ...]
 
 ``--staged`` scans the complete index blobs and names that a commit would publish,
-excluding deletions. ``--range`` accepts only two matching-width lowercase full
+excluding deletions. ``--range`` takes BASE..TIP as refs (origin/main..HEAD, each
+side resolved once to its commit) or as two matching-width lowercase full
 object IDs and requires that width to match the repository's storage object format
 (40 for SHA-1 or 64 for SHA-256). It scans every newly reachable commit, tree,
 blob, and tag object, so an intermediate add-then-remove commit cannot evade the
@@ -49,38 +50,58 @@ PATTERNS = [
     # They are not keys, and the export is regenerated on every store change, so each refresh re-flagged the
     # same benign token and the gate had to be overridden by hand. A gate that is overridden routinely stops
     # being read. Excluded NARROWLY and only here, the way the 2FA rule below excludes git file modes: the
-    # exclusion fires only when everything after sk-/sk-ant- is TWO OR MORE hyphen-separated runs of
+    # exclusion fires only when everything after sk-/sk-ant- is THREE OR MORE hyphen-separated runs of
     # lowercase LETTERS with no digits and no uppercase, ending at a non-token character. Controlled both ways
     # before landing (2026-09-13): six real-shaped keys still caught, including an all-lowercase unhyphenated
     # one and a two-segment one carrying digits; four word slugs excluded. No real key has this shape.
+    # 3 Nov 2026: widened from three runs to TWO OR MORE - lemma labels such as lem:sk-<word>-<word> (21 hits in
+    # the export, all Sherrington-Kirkpatrick) stopped the export again. A single unhyphenated run, a digit, a
+    # capital or an underscore anywhere still flags; test_scan_secrets_sk_slugs.py holds the controls.
     ("OpenAI/Anthropic key",
-     # (widened 2026-11-03 from three words to two: labels for the Sherrington-Kirkpatrick model, sk- plus two
-     # lowercase words, stopped an export; test_scan_secrets_sk_slugs.py holds the controls)
      r"(?<![A-Za-z0-9])sk-(?:ant-)?(?![a-z]+(?:-[a-z]+){1,}(?![A-Za-z0-9_\-]))[A-Za-z0-9_\-]{20,}"),
     ("AWS access key id", r"AKIA[0-9A-Z]{16}"),
-    # A store source id written as <name>-YYYYMMDD:<slug> has this rule's shape. Excluded narrowly and only here:
-    # the digits follow a hyphen or colon AND are exactly a calendar date 20YYMMDD. A token after a quote, space,
-    # = or /, a 9-10 digit id after a colon, and digits after a hyphen that are not a date still flag.
+    # Store source ids of the 10 Oct Codex pool read "owner-w344-open-problems-20261010:<35-char slug>": a date stamp, a
+    # colon and a slug, this rule's exact shape. 216 findings in 24 places blocked the math-store export to main and 33
+    # bundles of the open-problem push were held (2026-10-10). Excluded NARROWLY and only on this rule: the digits must
+    # follow a hyphen or colon AND be exactly an 8-digit calendar date 20YYMMDD (URN locators "urn:owner-own-work:p0110:w381:
+    # 20261010:<slug>" too); a token after a quote, space, =, or / is untouched, a 9-10 digit id after : is untouched, and so
+    # is a hyphen followed by digits that are not a date. Controlled both ways before landing (an agent).
     ("Telegram bot token", r"\b(?!(?<=[-:])20\d{2}(?:0[1-9]|1[0-2])(?:0[1-9]|[12]\d|3[01])\b)\d{8,10}:[A-Za-z0-9_-]{30,60}\b"),
     ("Slack token", r"xox[baprs]-[A-Za-z0-9-]{10,}"),
     ("Google API key", r"AIza[0-9A-Za-z_\-]{35}"),
     ("RunPod/HF/Groq key", r"\b(?:rpa_|rpk_|hf_|gsk_)[A-Za-z0-9_\-]{16,}\b"),
     ("JWT", r"\beyJ[A-Za-z0-9_-]{5,}\.[A-Za-z0-9_-]{5,}\.[A-Za-z0-9_-]{8,}\b"),
     # An opaque bearer token has no prefix to key on, so no rule above saw one: an Authorization header carrying 32
-    # mixed characters passed clean while the same header carrying a JWT was caught. The word "bearer", then 20 or
-    # more token characters holding both a digit and a letter. A variable ($TOKEN), a template ({token}) or a
-    # placeholder (<token>) starts with a character outside that alphabet, prose ("Bearer tokens are ...") is too
-    # short, and a JWT is left to the JWT rule above. Measured before landing: no hit in this repository's 1,002
-    # tracked text files; no slower on 1 MB of adversarial text.
+    # mixed characters passed clean while the same header carrying a JWT was caught (scheduled audit account04/B17 r12,
+    # B17-R24-OPAQUE-BEARER-BLIND-SPOT-20260929). The word "bearer", then 20 or more token characters holding both a
+    # digit and a letter. A variable ($TOKEN), a template ({token}) or a placeholder (<token>) starts with a character
+    # outside that alphabet, prose ("Bearer tokens are ...") is too short, and a JWT is left to the JWT rule above.
+    # Measured before landing: in the brain repository's tracked files it matched real bearer credentials only, no
+    # prose and no placeholder; no slower on 1 MB of adversarial text.
     ("bearer token", r"(?i)\bbearer[ \t]+(?!eyJ)(?=[A-Za-z0-9._~+/\-]*\d)(?=[A-Za-z0-9._~+/\-]*[A-Za-z])"
                      r"[A-Za-z0-9._~+/\-]{20,}=*"),
-    # Two shapes in published paper text are excluded narrowly and only here. A file checksum written as SHA256 (or
-    # SHA) run straight into exactly 64 lowercase hex digits. And a LaTeX citation key or equation label: the token
-    # opens right after "{", "[", "eq:" or an escaped "\n" AND splits wholly into words (capitalised words, short
-    # capital runs, lowercase runs of three or more, a few two-letter words, digit runs of at most four). A random
-    # 40-64 character key almost never splits that way (0 of 5000 in each context), and a word-chain key anywhere
-    # else still flags. Controls in test_scan_secrets_citekeys.py.
-    ("long API key", r"(?<![/\w.])(?!SHA(?:256)?[0-9a-f]{64}(?![\w.]))"
+    # Proof-record cards in the public math-store export write a file checksum as the algorithm name run straight into
+    # its hex ("SHA256" + 64 lowercase hex): mixed case, a digit, 70 characters, this rule's exact shape. 39 of them
+    # (already public since the export's first commit) blocked every later change to nodes.jsonl and
+    # bundle_manifests.jsonl, because a range scan reads each changed file whole (2026-11-03). Excluded NARROWLY and only
+    # on this rule: the whole token must be the literal SHA256 and exactly 64 lowercase hex; one more character, an
+    # uppercase hex digit, another prefix or a shorter tail is still a finding. Controlled both ways before landing.
+    # Same export, same day: the cards quote paper text, and a LaTeX citation key or equation label is CamelCase words
+    # and a year run together ("\cite{BahouriCheminDanchin2011Fourier}", 40+ characters, this rule's shape again). 235
+    # such hits, 20 distinct tokens, all public, stopped the hourly export push. One card also writes the checksum as
+    # "SHA" + 64 hex. Excluded only when BOTH hold: the token opens right after "{", "[", "eq:" or an escaped "\n", AND
+    # the whole token is a chain of words (capitalised words, short capital runs, lowercase runs of three or more, a few
+    # two-letter words such as "On", digit runs of at most four). A random 40-64 character key almost never splits
+    # that way: 0 of 5000 missed in each of those contexts, and a word-chain key anywhere else still flags. The
+    # checksum exclusion now also takes the bare "SHA" prefix, still exactly 64 lowercase hex. Controls in
+    # test_scan_secrets_citekeys.py (2026-11-03).
+    # A token made ONLY of hex digits is a hash, not a key of this rule's kind (5 Nov 2026, an agent). A math
+    # referee report quoted two statement hashes written as "A" + hex; the leading capital gave the token both cases,
+    # the per-commit scan flagged it, and the nightly brain push stayed local from 27 Oct to 5 Nov. A random base62
+    # key of 40+ characters is all hex with odds about (22/62)^40, 1 in 10^18, and single-case hex never matched this
+    # rule (it needs both cases), so the only tokens this drops are mixed-case hex strings. One non-hex character
+    # anywhere in the token and it still flags. Controls in test_scan_secrets_hexonly.py.
+    ("long API key", r"(?<![/\w.])(?!SHA(?:256)?[0-9a-f]{64}(?![\w.]))(?![0-9A-Fa-f]{40,}+(?![\w.]))"
                      r"(?!(?:(?<=[{\[])|(?<=[Ee]q:)|(?<=\\)n)"
                      r"(?:[A-Z][a-z]{2,}+|(?:On|Of|In|To|An|At|By|De|Du|La|Le)(?![a-z])|[A-Z]{1,5}+|[a-z]{3,}+|\d{1,4}+(?!\d))++"
                      r"(?![\w.]))"
@@ -91,8 +112,13 @@ PATTERNS = [
     # false positive - the noise compounded on its own documentation. Excluded by value, and only
     # on this rule: the shared FAKE filter is applied to every pattern's matched text, so putting
     # these digits there could suppress a real key that merely contains them. (2026-08-20)
+    # Windows Task Scheduler reports a task's state as a six-digit status value, 267008 to 267015 (0x41300 to
+    # 0x41307: ready, running, disabled, has not run, no more runs, not scheduled, terminated, no valid triggers).
+    # A report listing scheduled tasks with "result code 267011" matched this rule and held the nightly brain push
+    # local on 12 Nov 2026. Excluded by value and only on this rule, like the file modes: eight values of a million,
+    # and the neighbours 267007 and 267016 still flag. Controls in test_scan_secrets_schedcodes.py (an agent).
     ("2FA code", r"(?i)\bcode\b(?:\s+(?:is|was))?\s*[:=]?\s*"
-                 r"(?!(?:100644|100755|100664|100600|040000|120000|160000)\b)\d{6,8}\b"),
+                 r"(?!(?:100644|100755|100664|100600|040000|120000|160000|2670(?:0[89]|1[0-5]))\b)\d{6,8}\b"),
     ("SSN", r"(?i)(?:\bssn\b|social security(?:\s+number)?)(?:\s+(?:is|was|#))?\s*[:=]?\s*\d{3}-?\d{2}-?\d{4}\b"),
     # .NET strong-name references read "PublicKeyToken=31bf3856ad364e35", which is the word "token",
     # an "=", and sixteen hex characters - this rule's exact shape. Every assembly reference on every
@@ -138,9 +164,9 @@ MAX_REPOSITORY_IDENTITY_FILE_BYTES = 256 * 1024 * 1024
 MAX_SHARED_INDEX_FILES = 64
 MAX_TOTAL_SHARED_INDEX_BYTES = 256 * 1024 * 1024
 GIT_TIMEOUT_SECONDS = 60
-# One non-batch git call (rev-parse, rev-list, diff). 60 s failed a memory sync's push twice in one day on a
-# machine at 95 pct commit that took ~35 s just to start a process; the same calls take 0.3-2.7 s on a
-# quiet box. A longer wait still fails closed with the same message.
+# One non-batch git call (rev-parse, rev-list, diff). 60 s failed the memory two-way sync's push twice on
+# 5 Nov (01:10, 07:11) while the laptop took ~35 s just to start a process at 95 pct commit; the same calls
+# take 0.3-2.7 s on a quiet box. A longer wait still fails closed with the same message.
 GIT_CALL_TIMEOUT_SECONDS = 180
 GIT_BATCH_IDLE_SECONDS = 60
 GIT_BATCH_SECONDS_PER_OBJECT = 0.5
@@ -1149,6 +1175,39 @@ def _valid_oid_range(value: str) -> bool:
     return _oid_range_width(value) is not None
 
 
+_REF_SIDE = re.compile(r"[A-Za-z0-9_][A-Za-z0-9_./@{}~^+-]*\Z")
+
+
+def _resolve_ref_range(
+    value: str, repository: RepositoryIdentity | None
+) -> tuple[str | None, str | None]:
+    """Turn BASE..TIP written as refs (origin/main..HEAD) into full commit IDs.
+
+    Each side is resolved once with rev-parse --verify <side>^{commit}; the
+    full-ID range then goes through the same checks as a range given by hand.
+    Three-dot ranges, empty sides and anything that looks like an option are
+    refused.
+    """
+    if value.count("..") != 1 or "..." in value:
+        return None, "--range requires BASE..TIP"
+    sides = value.split("..")
+    resolved = []
+    for side in sides:
+        if not side or not _REF_SIDE.fullmatch(side):
+            return None, "--range side is not a revision name"
+        raw, error = _run_git(
+            ["--no-lazy-fetch", "rev-parse", "--verify", "--quiet", "--end-of-options", side + "^{commit}"],
+            repository=repository,
+        )
+        if error or raw is None:
+            return None, "--range side %r does not name a commit" % side
+        oid = raw.strip()
+        if not _valid_oid(oid):
+            return None, "--range side %r did not resolve to a full object ID" % side
+        resolved.append(oid.decode("ascii"))
+    return "%s..%s" % (resolved[0], resolved[1]), None
+
+
 def _staged_oids(
     findings: list[tuple[str, str]],
     repository: RepositoryIdentity | None = None,
@@ -1222,6 +1281,20 @@ def _staged_oids(
 def _range_oids(
     spec: str, repository: RepositoryIdentity | None = None
 ) -> tuple[list[bytes] | None, str | None]:
+    # 2026-11-13: both ends must already be in this clone. In a partial clone a plain lookup of a commit the clone
+    # lacks asks the server for that one id, and the server sends every commit and tree of history again (about
+    # 100 MB a time in the brain clone); the new pack then changes the repository under this scan. Asking with
+    # --no-lazy-fetch refuses instead. The walk below stays as it was, so blobs a range needs are still fetched.
+    for side in spec.split(".."):
+        _present, side_error = _run_git(
+            ["--no-lazy-fetch", "cat-file", "-e", side + "^{commit}"],
+            repository=repository,
+        )
+        if side_error:
+            return None, (
+                "range end %s is not a commit in this clone (nothing was downloaded); "
+                "fetch it first, then scan again" % side[:12]
+            )
     raw, error = _run_git(
         ["rev-list", "--objects", "--no-object-names", spec, "--"],
         repository=repository,
@@ -1528,14 +1601,28 @@ def main(argv: list[str] | None = None) -> int:
             return 2
         spec = args[1]
         range_width = _oid_range_width(spec)
-        if range_width is None:
+        repository, error = _discover_repository()
+        if range_width is None and not error:
+            spec, resolve_error = _resolve_ref_range(spec, repository)
+            if resolve_error:
+                print("SECRET SCAN ERROR: %s" % resolve_error, file=sys.stderr)
+                return 2
+            range_width = _oid_range_width(spec)
+            if range_width is None:
+                print(
+                    "SECRET SCAN ERROR: --range requires matching-width lowercase "
+                    "full object IDs",
+                    file=sys.stderr,
+                )
+                return 2
+            print("secret scan: range resolved to %s" % spec, file=sys.stderr)
+        elif range_width is None:
             print(
                 "SECRET SCAN ERROR: --range requires matching-width lowercase "
                 "full object IDs",
                 file=sys.stderr,
             )
             return 2
-        repository, error = _discover_repository()
         if error:
             errors.append(error)
         else:

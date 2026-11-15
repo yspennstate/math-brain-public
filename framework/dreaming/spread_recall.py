@@ -23,15 +23,31 @@ Fail-safe silent on any error. Reads stdin (hook JSON), writes injection JSON to
 """
 import sys, os, io, json, re, time, bisect, threading
 
-# 5 Nov 2026: a resident spread_server.py keeps this hook's loaded state warm (median 415 -> 50 ms
-# in the memo harness, output byte-identical 8/8). Ask it first, before the heavy imports below; on None (no server,
-# busy, declined, any error) the hook runs cold exactly as before. SPREAD_SERVER=0 turns it off.
+# 5 Nov 2026 (an agent, laptop port of an agent's Mac server): a resident spread_server.py keeps this
+# hook's loaded state warm. Ask it first, before the heavy imports below; on None (no server, busy, declined, any
+# error) the hook runs cold exactly as before. SPREAD_SERVER=0 turns it off. Parity on this laptop, 5 Nov 18:1x:
+# 20/20 served outputs byte-identical to cold, median 15.0 s cold -> 0.75 s warm (box loaded).
+# Two laptop differences from the Mac block: stdin is read as BYTES and decoded utf-8 (a text read decodes cp1252
+# here - brain_switch's 2026-08-22 invariant), and the brain_switch gate runs BEFORE the server is asked, so a
+# session taken offline with /dont is never served.
 if __name__ == "__main__" and os.environ.get("SPREAD_SERVER", "1") != "0" and not os.environ.get("SPREAD_SERVER_CHILD"):
-    _raw = sys.stdin.read()
+    try:
+        _buf = getattr(sys.stdin, "buffer", None)
+        _raw = _buf.read().decode("utf-8", "surrogateescape") if _buf is not None else sys.stdin.read()
+    except Exception:
+        _raw = ""
+    sys.stdin = io.StringIO(_raw)
+    sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
+    try:
+        import brain_switch as _bsw0
+        _bsw0.gate()
+    except SystemExit:
+        raise
+    except Exception:
+        pass
     sys.stdin = io.StringIO(_raw)
     _served = None
     try:
-        sys.path.insert(0, os.path.dirname(os.path.abspath(__file__)))
         import spread_client as _spread_client
         _served = _spread_client.serve(_raw)
     except Exception:
@@ -39,37 +55,11 @@ if __name__ == "__main__" and os.environ.get("SPREAD_SERVER", "1") != "0" and no
     if _served is not None:
         sys.stdout.write(_served)
         raise SystemExit(0)
-
 from collections import defaultdict
 
 import keyword_artifacts
 import brain_node_documents as node_docs
 from supersession import active_supersessions
-
-
-def _brain_slug_resolve():
-    """The memory corpus this install belongs to.
-
-    Order matters. $BRAIN_SLUG wins so a caller can point one script at another corpus.
-    Then BRAIN_SLUG beside this file, which bootstrap/install.py writes with the slug of the
-    --project-dir it was given; without it an install whose project directory is not the home
-    directory builds a corpus nothing ever reads. The home-derived value stays last so a tree
-    that works today keeps working untouched.
-    """
-    env = os.environ.get("BRAIN_SLUG", "").strip()
-    if env:
-        return env
-    try:
-        marker = os.path.join(os.path.dirname(os.path.abspath(__file__)), "BRAIN_SLUG")
-        with open(marker, encoding="utf-8") as fh:
-            named = fh.read().strip()
-        if named:
-            return named
-    except OSError:
-        pass
-    home = os.path.expanduser("~")
-    return home.replace(":", "-").replace(chr(92), "-").replace("/", "-")
-
 
 try:
     import embedding_artifact
@@ -83,25 +73,17 @@ except Exception:
     pass
 
 HOME = os.path.expanduser("~")
-# Claude Code names a project directory after the home path, with ':' and the
-# separators replaced by '-'. Deriving it keeps this tree free of one machine's
-# username and correct on any other - and unlike a template token it is a real
-# value at import time.
-_BRAIN_SLUG = _brain_slug_resolve()
-MEM = os.path.join(HOME, ".claude", "projects", _BRAIN_SLUG, "memory")
+MEM = os.path.join(HOME, ".claude", "projects", os.environ.get("BRAIN_SLUG", "default"), "memory")
 DR = os.path.dirname(os.path.abspath(__file__))
 EDGES = os.path.join(DR, "spread_edges.tsv")
-# Links of memories written since the nightly build (build_spread_edges.py --fresh); merged while newer.
 EDGES_FRESH = os.path.join(DR, "spread_edges_fresh.tsv")
-GRAPH_CACHE = os.path.join(DR, ".spread_edges.parsed.pkl")   # _load_graph's parse, keyed on EDGES mtime+size
-HOOK_GRAPH_CACHE = os.path.join(DR, ".spread_edges.norec.pkl")  # _hook_graph's filtered parse, same key + pattern
 SAL = os.path.join(DR, "salience.tsv")
 STATE = os.path.join(DR, ".spread_fired.json")
 EMB = os.path.join(DR, "memory_embeddings.npz")   # optional semantic sidecar (build_memory_embeddings.py, box)
 EMB_AUTHORITY = os.path.join(DR, ".embedding_current.json")
 EXPECTED_EMB_MODEL = "BAAI/bge-small-en-v1.5"
 MW = os.path.join(DR, "mistake_weights.tsv")      # slug -> severity (build_mistake_weights.py)
-KW = os.path.join(DR, "keyword_nodes.tsv")        # user topic nodes (build_keyword_nodes.py)
+KW = os.path.join(DR, "keyword_nodes.tsv")        # owner topic nodes (build_keyword_nodes.py)
 KWG = os.path.join(DR, "keyword_graph_edges.tsv") # the full topic graph (offline/analysis view)
 KWREL = os.path.join(DR, "keyword_related.tsv")   # subject-to-subject only; the live path reads this
 
@@ -120,7 +102,7 @@ MARGIN = 1.175       # ...and beat the runner-up. Was 1.35 since 2026-07-08; hal
                      # 2026-07-25 by owner directive ("strengthen connections by 2x so that
                      # things trigger faster"): (1.35-1)/2 = 0.175 over parity. This knowingly
                      # supersedes the 07-09 shadow-eval verdict against a margin retune - that
-                     # verdict optimized precision under the old objective; the owner set a new
+                     # verdict optimized precision under the old objective; the author set a new
                      # one. Same-inputs receipt at the CONNECTION_GAIN note below.
 SAL_FLOOR = 45.0     # ...and be worth the look
 CAND_FLOOR = 0.10    # keep anything with a pulse as a candidate; the gate above decides what speaks
@@ -139,7 +121,7 @@ REDUNDANCY_MAX = 0.34  # drop a candidate whose description overlaps a lexical h
 # precise on a young graph, useful when it lands, silent on ~55% of prompts - and lifting the ceiling
 # needs a STABLE held-out eval plus body/embedding relevance, not another cheap graph signal fit to a
 # moving target. Left here so the next session neither re-runs the dead ends nor trusts a snapshot tune.
-DEDUP_SECS = 43200   # was 600; 141 of 198 Mac spread lines were repeats and none earned a use (30 Oct)
+DEDUP_SECS = 600
 # PER-SESSION RATE CAP (2026-09-22, F37 of the recall study). The per-slug dedup above stops one memory
 # repeating and does nothing about the total: over 30 days 4.7 pct of sessions took 65 pct of every
 # association delivered (one session took 195). Measured on the layer's own log (surfaced.tsv, 6,535 spread
@@ -185,28 +167,28 @@ MW_SEV_BIG = 0.8
 MW_MARGIN_BIG = 1.075   # big-scar standout margin; excess halved with MARGIN on 2026-07-25
 MW_HABIT_FLOOR = 0.9
 MW_SCORE_TILT = 0.10   # score x(1 + tilt*sev): a big scar wins ties, never floods
-# CONNECTION STRENGTH x2 (25 Jul 2026: connections strengthened 2x so that
-# things trigger faster). Two candidate mechanisms, both MEASURED on the 177-prompt replay:
+# CONNECTION STRENGTH x2 (owner, 2026-07-25 evening: "strengthen connections by 2x so that
+# things trigger faster"). Two candidate mechanisms, both MEASURED on the 177-prompt replay:
 #   (1) walk-conductance x2 (flow *= 2 per hop): REJECTED - it densifies the candidate pool
 #       (more runners-up clear CAND_FLOOR), the standout margin tightens, and baseline fires
 #       DROPPED 74 -> 65. Stronger connections, slower triggering - the opposite of the ask.
 #       (Doubling stored edge weights would cancel entirely: the walk is degree-normalized.)
 #   (2) trigger-threshold /2 (a fire needs half the arriving activation): measured a same-
 #       inputs DELTA OF ZERO (120 vs 120 fires over 177 prompts) - ACT_FLOOR does not bind
-#       at this corpus. Kept as the owner's 2x knob for the day floors bind again.
+#       at this corpus. Kept as the author's 2x knob for the day floors bind again.
 #   (3) standout-margin excess halved (MARGIN 1.35 -> 1.175, MW_MARGIN_BIG 1.15 -> 1.075):
 #       the margin IS the binding gate. Same-inputs receipt over 177 real prompts:
 #       120 -> 138 fires (+18, 11 of them mistake-class, 0 lost, 9 swaps that eyeball
 #       neutral-or-better). Combined with mistake-first surfacing, the session's total vs the
 #       morning baseline on the same prompts: 68 -> 138 fires = 2.03x triggering. SHIPPED.
 CONNECTION_GAIN = 2.0   # divides ACT_FLOOR at the speak gate; 1.0 restores pre-07-25 behaviour
-# USER TOPIC NODES x3: the words the user types about their work are nodes, and when a prompt
-# is on one of them the mistakes and information under it surface ~3x more. keyword_nodes.tsv
-# maps the user's vocabulary to member memories and maps reviewed misspellings to the corpus
-# spelling (recieve -> receive, from keyword_aliases.tsv), so the boost survives the user's
+# OWNER TOPIC NODES x3 (owner, 2026-07-25: the words he uses - "microsoft volume", "aws",
+# "levrage" - are nodes, and when he is on one of them the mistakes and information under it
+# should surface ~3x more). keyword_nodes.tsv maps his vocabulary to member memories and maps
+# his misspellings to the corpus spelling (levrage -> leverage), so the boost survives his
 # typing. The gain is differential, never global: only members of a topic the CURRENT text
 # names are lifted, which is the shape that worked for mistake severity and the opposite of
-# the uniform walk gain that measured WORSE. A broad topic (one had 372 members) is capped to
+# the uniform walk gain that measured WORSE. A broad topic (grid: 372 members) is capped to
 # its most salient TOPIC_TOP_K, so naming a big subject cannot light the whole corpus flat.
 KEYWORD_GAIN = 3.0        # a MISTAKE inside a named topic
 KEYWORD_INFO_GAIN = 1.7   # ordinary information inside a named topic
@@ -223,7 +205,7 @@ TOPIC_OVERLAY_MAX_EDGES = 120  # topic->member edges; adjacency entries are at m
 # TUNING RECEIPT (eval_mistake_surfacing.py, 176 real prompts, 2026-07-25). Journey: at
 # 0.75/0.25 single-winner, the change over-rotated - fire rate x1.53, ordinary fires 24->7,
 # ~10 good fires SILENCED (a boosted scar seized top-1 then died at a gate; one silenced case
-# was the owner-law memory an_owner_law_memory). 0.40/0.10 + the two-arm
+# was an author-law memory). 0.40/0.10 + the two-arm
 # arbitration below (baseline is a FLOOR; boost may add or swap, never silence; additions
 # must be sidecar-inspectable and at least corpus-typically similar) landed at: fires 62->97
 # (all 35 changes pure additions, 0 silenced, 0 swapped), sev>=0.8 mistake fires 34->65,
@@ -250,9 +232,10 @@ def _load_superseded():
     """slug -> its correction. A superseded memory must never be surfaced when its correction is also
     in play (the Supersede/MemConflict stale-fact fix; eval_stale_fact shows relevance is stale-blind).
     Built by schema_supersede.py; absent file -> empty map -> behaviour unchanged.
-    In the hook the names come from the one shared folder read (see _mem_names), not from supersession's own
-    scandir (0.94 s on 53k files): this call takes no frontmatter, so only the set of .md file names is used, and
-    the shared read's names equal scandir's (53,098, same set). SPREAD_SHARED_LIST=0 lists as before."""
+    5 Nov 2026 (RECALL-10X rank 3, an agent): in the hook the names come from the one shared folder read
+    (see _mem_names), not from supersession's own scandir (0.94 s): this call takes no frontmatter, so only the set
+    of .md file names is used, and the shared read's names equal scandir's (53,098, same set). SPREAD_SHARED_LIST=0
+    lists as before."""
     known = None
     if _SHARE_LIST and os.environ.get("SPREAD_SHARED_LIST", "1") != "0":
         if _MEM_STATS is None:
@@ -328,65 +311,37 @@ def _load_habituation():
             for slug, n in counts.items() if n >= HABIT_START and slug not in read}
 
 
-def _edge_paths():
-    """spread_edges.tsv, plus spread_edges_fresh.tsv while it is newer than the nightly build."""
-    paths = [EDGES]
-    try:
-        if os.path.getmtime(EDGES_FRESH) > os.path.getmtime(EDGES):
-            paths.append(EDGES_FRESH)
-    except OSError:
-        pass
-    return paths
-
-
-def _edges_key():
-    """(mtime_ns, size) of each edge file _load_graph reads; the graph pickles key on it, so a new fresh file
-    or a new nightly build both invalidate them."""
-    key = ()
-    for p in _edge_paths():
-        st = os.stat(p)
-        key += (st.st_mtime_ns, st.st_size)
-    return key
-
-
 def _load_graph(with_keywords=False, include_base=False):
     """Load the memory graph.
 
     The long-standing public helper returned ``(adj, deg)`` and brain.py plus five evaluation
     tools still consume that contract. The topic arm needs a third memory-only degree view, so
     internal callers opt into ``include_base=True``. Changing the default tuple shape broke the
-    owner's ``brain.py recall`` command outright.
+    the author's ``brain.py recall`` command outright.
     """
-    # Parsing spread_edges.tsv (95k lines) cost 0.74 s of a 4.4 s hook run on 30 Oct; a pickle of the parse loads in
-    # about a third of that. Keyed on the file's mtime and size, written atomically, any failure falls back to the parse.
-    try:
-        key = _edges_key()
-    except Exception:
-        key = None
-    if key is not None:
-        try:
-            import pickle
-            with io.open(GRAPH_CACHE, "rb") as f:
-                ck, adj, deg, deg_base = pickle.load(f)
-            if ck == key:
-                return (adj, deg, deg_base) if include_base else (adj, deg)
-        except Exception:
-            pass
     adj = defaultdict(list)      # slug -> [(neighbor, weight)]
     deg = defaultdict(float)     # slug -> total incident weight (fan-out normalizer)
     deg_base = defaultdict(float)  # ...the same, counting memory-to-memory edges only
     # keyword_graph_edges.tsv carries his vocabulary as `kw:<term>` NODES: term-to-memory and
     # term-to-term by shared membership, which would make a keyword an object the walk travels
     # THROUGH rather than a lookup beside it. MEASURED AND NOT ENABLED (2026-07-25): merging it
-    # gained 11 fires on 196 real prompts but SILENCED 10 good ones - including the owner-law
-    # memory an_owner_law_memory - while mistake fires stayed flat (128 -> 130).
+    # gained 11 fires on 196 real prompts but SILENCED 10 good ones - including the author-law
+    # an author-law memory - while mistake fires stayed flat (128 -> 130).
     # 87k keyword edges against an 8.2k memory-memory graph is a 10x rewiring, and kw nodes act
     # as high-degree shortcuts that reroute the walk rather than extend it. The artifact is
     # built and regrows nightly; enabling it needs the same no-silencing floor the mistake lane
     # got (baseline choice preserved unless the richer graph only ADDS), which costs a second
     # spread per event and deserves its own measured pass, not a late-night constant tweak.
     # Create graph_fire/KEYWORD_GRAPH_ENABLED to switch it on.
-    for path in _edge_paths():
+    # spread_edges_fresh.tsv: the wiki-links of memories written since the nightly build (build_spread_edges.py
+    # --fresh, 1 Nov); merged only while it is newer than spread_edges.tsv, so a night's rebuild retires it
+    paths = [EDGES]
+    try:
+        if os.path.getmtime(EDGES_FRESH) > os.path.getmtime(EDGES):
+            paths.append(EDGES_FRESH)
+    except OSError:
+        pass
+    for path in paths:
         try:
             with io.open(path, encoding="utf-8", errors="replace") as f:
                 next(f, None)
@@ -405,18 +360,6 @@ def _load_graph(with_keywords=False, include_base=False):
                         deg_base[a] += w; deg_base[b] += w
         except Exception:
             continue
-    if key is not None and adj:
-        try:
-            import pickle
-            tmp = "%s.%d.tmp" % (GRAPH_CACHE, os.getpid())
-            with io.open(tmp, "wb") as f:
-                pickle.dump((key, adj, deg, deg_base), f, protocol=pickle.HIGHEST_PROTOCOL)
-            os.replace(tmp, GRAPH_CACHE)
-        except Exception:
-            try:
-                os.remove(tmp)
-            except Exception:
-                pass
     return (adj, deg, deg_base) if include_base else (adj, deg)
 
 
@@ -446,43 +389,51 @@ def _without_session_records(adj, deg, deg_base):
     return adj2, deg2, deg_base2
 
 
+GRAPH_CACHE = os.path.join(DR, "spread_graph_cache", "hook_graph.pickle")
+
+
+def _edge_files_key():
+    out = []
+    for p in (EDGES, EDGES_FRESH):
+        try:
+            st = os.stat(p)
+            out.append((st.st_mtime_ns, st.st_size))
+        except OSError:
+            out.append(None)
+    return (1, tuple(out), SESSION_RECORD.pattern)
+
+
 def _hook_graph():
-    """_without_session_records(*_load_graph(include_base=True)), with the filtered graph kept in its own pickle.
-    The filter cost 0.2-0.27 s a prompt on 1 Nov (5.9k records in a 29k-node graph), more than loading the parse.
-    Keyed on EDGES mtime+size and the record pattern; used only while _load_graph is this module's own (a caller
-    that swaps it in gets its graph filtered as before); any failure falls back to filtering."""
-    if _load_graph is not _LOAD_GRAPH_OWN:
+    """The hook's graph, _without_session_records(*_load_graph(include_base=True)), from a pickle keyed on both edge
+    files (mtime_ns + size). 5 Nov 2026 (RECALL-10X, an agent): every prompt in every session paid a fresh
+    parse of the 26 MB spread_edges.tsv plus the record filter, 6-12 s under load; the pickle loads in 0.5-1.9 s and
+    is the same three dicts. The fresh-edges file changes about every 8 minutes, so the first hook after a change
+    parses and rewrites the cache for everyone. SPREAD_GRAPH_CACHE=0 parses every time, as before."""
+    if os.environ.get("SPREAD_GRAPH_CACHE", "1") == "0":
         return _without_session_records(*_load_graph(include_base=True))
-    try:
-        key = _edges_key() + (SESSION_RECORD.pattern,)
-    except Exception:
-        key = None
     import pickle
-    if key is not None:
+    key = _edge_files_key()
+    try:
+        with open(GRAPH_CACHE, "rb") as f:
+            k, g = pickle.load(f)
+        if k == key:
+            return g
+    except Exception:
+        pass
+    g = _without_session_records(*_load_graph(include_base=True))
+    if g[0] and _edge_files_key() == key:   # never file a graph under a key the files moved past mid-parse
         try:
-            with io.open(HOOK_GRAPH_CACHE, "rb") as f:
-                ck, adj, deg, deg_base = pickle.load(f)
-            if ck == key:
-                return adj, deg, deg_base
-        except Exception:
-            pass
-    adj, deg, deg_base = _without_session_records(*_load_graph(include_base=True))
-    if key is not None and adj:
-        tmp = "%s.%d.tmp" % (HOOK_GRAPH_CACHE, os.getpid())
-        try:
-            with io.open(tmp, "wb") as f:
-                pickle.dump((key, adj, deg, deg_base), f, protocol=pickle.HIGHEST_PROTOCOL)
-            os.replace(tmp, HOOK_GRAPH_CACHE)
+            os.makedirs(os.path.dirname(GRAPH_CACHE), exist_ok=True)
+            tmp = GRAPH_CACHE + ".%d.tmp" % os.getpid()
+            with open(tmp, "wb") as f:
+                pickle.dump((key, g), f, protocol=pickle.HIGHEST_PROTOCOL)
+            os.replace(tmp, GRAPH_CACHE)
         except Exception:
             try:
                 os.remove(tmp)
             except Exception:
                 pass
-    return adj, deg, deg_base
-
-
-_LOAD_GRAPH_OWN = _load_graph
-
+    return g
 
 class _MembersWithoutRecords(object):
     """The topic snapshot's members with the session records left out, filtered per subject on demand
@@ -706,8 +657,8 @@ def _topic_overlay(words, sal, members, aliases, hit, weights=None, related=None
 def _topic_slugs(words, sal):
     """The slugs under the topics this text names, capped per topic by salience.
 
-    Matching accepts the user's spelling through the alias map, so 'recieve' activates the
-    receive topic. Returns a set; membership in it is what earns the KEYWORD_GAIN in the walk."""
+    Matching accepts his spelling through the alias map, so 'levrage' activates the leverage
+    topic. Returns a set; membership in it is what earns the KEYWORD_GAIN in the walk."""
     members, aliases, hit, _weights, _related, _generation = _topic_context(words)
     if not members:
         return set()
@@ -752,7 +703,7 @@ def _topic_expand(hit, members, sal):
     return out
 
 
-# _load_salience is kept per (mtime, size) of salience.tsv (3 Nov 2026): the
+# _load_salience is kept per (mtime, size) of salience.tsv (3 Nov 2026, an agent, RECALL-10X rank 3): the
 # resident recall server called it twice a warm recall and parsed the 3.8 MB file each time, 0.49 s a call in the
 # profile. The file is rewritten about once a day; a changed stat re-reads it. Each caller gets its own copy.
 # BRAIN_SAL_CACHE=0 turns the cache off.
@@ -807,17 +758,16 @@ def _index_lines():
     return out
 
 
-# The filename arm's folder names (3 Nov 2026): brain.py's recall sets MEM_NAMES
+# The filename arm's folder names (3 Nov 2026, an agent, RECALL-10X rank 3): brain.py's recall sets MEM_NAMES
 # for the length of a call to a reader of the call's own listing (_memlist, which the recall server answers from its
 # resident listing), so the arm no longer lists the 50k-entry folder a second time - 2.2 s of a 6-8 s warm recall in
 # the server profile. Same names in the same order; None (the hook, any other caller, a failed listing) lists as before.
 MEM_NAMES = None
-# In the per-prompt hook (main() sets this) the name scan takes the embedding loader's bulk stat read instead of
-# os.listdir and hands it on, so the folder is read once a prompt, not twice. Same .md names in the same order as
-# listdir (53,077, checked); the scan only reads names ending in .md. SPREAD_SHARED_LIST=0 lists as before.
+# 5 Nov 2026 (RECALL-10X rank 3, an agent): in the per-prompt hook (main() sets this) the name scan takes the
+# embedding loader's bulk stat read instead of os.listdir and hands it on, so the folder is read once a prompt, not
+# twice. Same .md names in the same order as listdir (53,077, checked); the scan only reads names ending in .md.
+# SPREAD_SHARED_LIST=0 lists as before.
 _SHARE_LIST = False
-# {name.md: (size, mtime_ns)} from the last shared folder read in this process, or None.
-_MEM_STATS = None
 
 
 def _mem_names():
@@ -842,7 +792,7 @@ def _mem_names():
     return os.listdir(MEM)
 
 
-# --- RunIndex: the seed arms' overlap counts without the per-line scan (3 Nov 2026) ---
+# --- RunIndex: the seed arms' overlap counts without the per-line scan (3 Nov 2026, an agent, RECALL-10X rank 3) ---
 # The two lexical arms of _seeds_from_prompt count, for each index line (and each memory file name), how many query
 # words occur in it as substrings: 0.6-0.8 s of a warm served recall on 50k lines plus 50k names. Every query word is
 # [a-z_]+ (_words lowers the prompt and keeps [a-zA-Z][a-zA-Z_]{2,}), so `w in text.lower()` holds exactly when w sits
@@ -852,8 +802,42 @@ def _mem_names():
 # It is built from the SECOND call in a process (a one-shot CLI or the per-prompt hook never pays the ~1.7 s build),
 # kept while the lists are unchanged (two list compares in C), resynced key by key when they change, and off with
 # BRAIN_SEED_RUNINDEX=0. Any word outside [a-z_]+ or any failure falls back to the scan.
+# (12 Nov 2026, an agent) A one-name change in the folder cost a walk of every key (76k dict lookups a sync), a
+# new position table and the whole word memo, so the next hits found every word again in the vocabulary: 200-300 ms
+# for a served call that carried a name-list patch against 115 ms for a plain one, on 39 pct of the morning's walk
+# calls. Now sync finds the common head and tail of the old and new lists with list compares in C and walks only the
+# window between them; for a small change the word memo is kept and corrected key by key (a word's keys are exactly the
+# keys whose lowered text contains it); new vocabulary runs are appended to the blob. Same hits (checked against the
+# old class and a plain scan on 3,000 random steps). Any doubt (sizes that do not add up, a failure) takes the full
+# walk and drops the memo, as before. Off: BRAIN_RUNINDEX_WINDOW=0.
 _RUN_RE = re.compile(r"[a-z_]+")
 _RUN_WORD = re.compile(r"[a-z_]+\Z")
+_MEMO_KEEP_WORK = 200000      # changed keys x remembered words above which the memo is dropped instead of corrected
+
+
+def _same_head(a, b, lim):
+    """Largest p <= lim with a[:p] == b[:p]; the compares run in C, about two passes over the common part."""
+    lo, hi = 0, lim
+    while lo < hi:
+        mid = (lo + hi + 1) // 2
+        if a[lo:mid] == b[lo:mid]:
+            lo = mid
+        else:
+            hi = mid - 1
+    return lo
+
+
+def _same_tail(a, b, lim):
+    """Largest s <= lim with the last s items of a and b equal."""
+    na, nb = len(a), len(b)
+    lo, hi = 0, lim
+    while lo < hi:
+        mid = (lo + hi + 1) // 2
+        if a[na - mid:na - lo] == b[nb - mid:nb - lo]:
+            lo = mid
+        else:
+            hi = mid - 1
+    return lo
 
 
 class _RunIndex:
@@ -867,8 +851,14 @@ class _RunIndex:
         self.vblob = b""
         self.vstarts = [0]
         self.vdirty = False
+        self.vbuilt = 0       # vocabulary entries already in vblob; later ones are appended
+        self.gen = 0          # bumped by every postings change; the word memo below is valid for one generation
+        self.wmemo = {}
+        self.wsize = 0
+        self.wgen = -1
 
     def _add(self, key, text):
+        self.gen += 1
         for r in set(_RUN_RE.findall(text.lower())):
             s = self.post.get(r)
             if s is None:
@@ -878,17 +868,84 @@ class _RunIndex:
             s.add(key)
 
     def _drop(self, key, text):
+        self.gen += 1
         for r in set(_RUN_RE.findall(text.lower())):
             s = self.post.get(r)
             if s is not None:
                 s.discard(key)
 
+    def _memo_touch(self, key, old_text, new_text):
+        """Keep the word memo right across one key's change. The caller holds the lock and the memo's sets are held
+        nowhere else."""
+        memo = self.wmemo
+        if old_text is not None:
+            low = old_text.lower()
+            for w, got in memo.items():
+                if w in low and key in got:
+                    got.discard(key)
+                    self.wsize -= 1
+        if new_text is not None:
+            low = new_text.lower()
+            for w, got in memo.items():
+                if w in low and key not in got:
+                    got.add(key)
+                    self.wsize += 1
+
+    def _sync_window(self, keys, texts):
+        """Resync by the window between the common head and tail. True when done; False leaves a state the full walk
+        repairs (postings and self.text always agree)."""
+        ok, ot, old = self.keys, self.texts, self.text
+        n, m = len(keys), len(ok)
+        if len(texts) != n or len(ot) != m or len(old) != m:
+            return False
+        one = texts is keys and ot is ok
+        p = _same_head(keys, ok, min(n, m))
+        if not one:
+            p = _same_head(texts, ot, p)
+        s = _same_tail(keys, ok, min(n, m) - p)
+        if not one:
+            s = _same_tail(texts, ot, s)
+        new_k, new_t, old_k = keys[p:n - s], texts[p:n - s], ok[p:m - s]
+        live = set(new_k)
+        todo = []
+        for k, t in zip(new_k, new_t):
+            o = old.get(k)
+            if not (o is t or o == t):
+                todo.append((k, o, t))
+        for k in old_k:
+            if k not in live:
+                todo.append((k, old.get(k), None))
+        keep = bool(self.wmemo) and self.wgen == self.gen and len(todo) * len(self.wmemo) <= _MEMO_KEEP_WORK
+        for k, o, t in todo:
+            if o is not None:
+                self._drop(k, o)
+            if t is None:
+                old.pop(k, None)
+            else:
+                self._add(k, t)
+                old[k] = t
+            if keep:
+                self._memo_touch(k, o, t)
+        if len(old) != n:
+            return False
+        if keep:
+            self.wgen = self.gen
+        self.keys, self.texts = keys, texts
+        self.pos = dict(zip(keys, range(n)))
+        return True
+
     def sync(self, keys, texts):
-        # the same list objects as last call: skip the element-wise compare (about 1.2 ms a call at 50,000 keys)
         if keys is self.keys and texts is self.texts:
             return
         if keys == self.keys and texts == self.texts:
             return
+        if self.keys is not None and os.environ.get("BRAIN_RUNINDEX_WINDOW", "1") != "0":
+            try:
+                if self._sync_window(keys, texts):
+                    return
+            except Exception:
+                pass
+            self.gen += 1     # the window did not finish: the memo is dropped and the full walk below repairs the rest
         old = self.text
         live = set(keys)
         for k, t in zip(keys, texts):
@@ -907,22 +964,46 @@ class _RunIndex:
     def hits(self, words, need=2):
         """[(key, count)] with count >= need, in key order: count = number of words that occur in the key's text."""
         if self.vdirty:
-            self.vblob = "\x00".join(self.vocab).encode("ascii")
-            st = [0]
-            for r in self.vocab:
-                st.append(st[-1] + len(r) + 1)
-            self.vstarts = st
+            nv = len(self.vocab)
+            if 0 < self.vbuilt < nv and len(self.vstarts) == self.vbuilt + 1:
+                tail = self.vocab[self.vbuilt:]
+                self.vblob += b"\x00" + "\x00".join(tail).encode("ascii")
+                st = self.vstarts
+                for r in tail:
+                    st.append(st[-1] + len(r) + 1)
+            else:
+                self.vblob = "\x00".join(self.vocab).encode("ascii")
+                st = [0]
+                for r in self.vocab:
+                    st.append(st[-1] + len(r) + 1)
+                self.vstarts = st
+            self.vbuilt = nv
             self.vdirty = False
         blob, st, vocab, post = self.vblob, self.vstarts, self.vocab, self.post
+        # A word's keys only change when the postings do, and prompts repeat words (a loop prompt arrives verbatim
+        # every few minutes), so each word's key set is kept until the next postings change. The blob scan was the
+        # largest self-time of a warm served recall (11 Nov: 14,649 finds, ~16 ms a call); a remembered word costs one
+        # dict lookup. The sets are never mutated after they are stored.
+        # Bounded by the keys held, not the words: a short common word matches tens of thousands of names, and one
+        # million held keys is about 40 MB of the server's 1.5 GB cap.
+        if self.wgen != self.gen or self.wsize > 1000000:
+            self.wmemo = {}
+            self.wsize = 0
+            self.wgen = self.gen
+        memo = self.wmemo
         cnt = {}
         for w in words:
-            b = w.encode("ascii")
-            got = set()
-            p = blob.find(b)
-            while p != -1:
-                i = bisect.bisect_right(st, p) - 1
-                got |= post[vocab[i]]
-                p = blob.find(b, st[i + 1])
+            got = memo.get(w)
+            if got is None:
+                b = w.encode("ascii")
+                got = set()
+                p = blob.find(b)
+                while p != -1:
+                    i = bisect.bisect_right(st, p) - 1
+                    got |= post[vocab[i]]
+                    p = blob.find(b, st[i + 1])
+                memo[w] = got
+                self.wsize += len(got)
             for k in got:
                 cnt[k] = cnt.get(k, 0) + 1
         pos = self.pos
@@ -932,6 +1013,55 @@ class _RunIndex:
 _RUNIDX = {"calls": 0}
 _SLUG_REUSE = {}
 _RUNIDX_LOCK = threading.Lock()
+
+
+def _slugs_for(names):
+    """The names arm's slug list for this name list. (12 Nov 2026, an agent) The server hands back a NEW list
+    whenever the folder changed (39 pct of the morning's walk calls carried such a patch), and the old code then built
+    every slug again: 64k endswith calls and 64k new strings a call, which RunIndex.sync then compared by content
+    against the held ones. Now the common head and tail of the old and new name lists are found with list compares in
+    C and the held slug strings are reused outside the window between them, so sync sees the same objects there. The
+    reuse needs every old name and every name in the window to end in .md (the lists then line up index by index);
+    anything else builds as before. Same list, item for item. Off: BRAIN_SEED_SLUG_PATCH=0 (BRAIN_SEED_SLUG_REUSE=0
+    still turns all reuse off)."""
+    c = _SLUG_REUSE.get("v")
+    if c is not None and os.environ.get("BRAIN_SEED_SLUG_REUSE", "1") != "0":
+        if c[0] is names:
+            return c[1]
+        if os.environ.get("BRAIN_SEED_SLUG_PATCH", "1") != "0":
+            try:
+                old_names, old_slugs = c
+                n, m = len(names), len(old_names)
+                if m and len(old_slugs) == m:
+                    p = _same_head(names, old_names, min(n, m))
+                    s = _same_tail(names, old_names, min(n, m) - p)
+                    mid = names[p:n - s]
+                    mids = [fn[:-3] for fn in mid if fn.endswith(".md")]
+                    if len(mids) == len(mid):
+                        slugs = old_slugs[:p] + mids + old_slugs[m - s:]
+                        if len(slugs) == n:
+                            _SLUG_REUSE["v"] = (names, slugs)
+                            return slugs
+            except Exception:
+                pass
+    slugs = [fn[:-3] for fn in names if fn.endswith(".md")]
+    _SLUG_REUSE["v"] = (names, slugs)
+    return slugs
+
+
+ARM_MS = {}   # (12 Nov 2026, an agent) per-arm wall time for the current call: {"names": [ms, n, {path: n}]}.
+              # brain_recall_server clears it before a call and copies it into the call row ("arms"), so a question
+              # like "did the slug patch save 16 ms a call" is read from live rows, not from an offline replay.
+
+
+def _arm_add(arm, secs, path):
+    try:
+        e = ARM_MS.setdefault(arm, [0.0, 0, {}])
+        e[0] += secs * 1000.0
+        e[1] += 1
+        e[2][path] = e[2].get(path, 0) + 1
+    except Exception:
+        pass
 
 
 def _runindex_ok(tag, words):
@@ -990,33 +1120,34 @@ def _seeds_from_prompt(words, idx, skip_records=False):
                 seeds[slug] = float(overlap)
                 lex.add(slug)
     # also filenames across the whole store (memories not in the live index)
-    # (3 Nov 2026: the words of four letters or more are picked once and each name lowered once, not once
+    # (3 Nov 2026, RECALL-10X: the words of four letters or more are picked once and each name lowered once, not once
     # per word: 1.9 s of a 4 s warm recall on the 50k-entry folder. Fewer than two such words can never reach an
     # overlap of 2, so the folder is not listed at all then. Same seeds, same order.)
     long_words = [w for w in words if len(w) >= 4]
+    t_arm = time.perf_counter()   # names-arm timer, read by the recall server into its call row (ARM_MS)
+    arm_path = "none"
     try:
         names = _mem_names() if len(long_words) >= 2 else ()
         pairs = None
         if names and _runindex_ok("names", long_words):
-            # The resident server hands back the SAME held list object while the folder is unchanged; new slug
-            # strings every call made RunIndex.sync compare ~53k strings by content against the held ones, paging
-            # them in (sync was 22% of slow-call samples). The slug list is reused while `names` is the same object
-            # (held here, so its id cannot be recycled); any other list, e.g. a fresh listing, builds as before.
-            # Off: BRAIN_SEED_SLUG_REUSE=0.
-            c = _SLUG_REUSE.get("v")
-            if c is not None and c[0] is names and os.environ.get("BRAIN_SEED_SLUG_REUSE", "1") != "0":
-                slugs = c[1]
-            else:
-                slugs = [fn[:-3] for fn in names if fn.endswith(".md")]
-                _SLUG_REUSE["v"] = (names, slugs)
+            # (6 Nov 2026, an agent, RECALL-10X rank 3) The resident server hands back the SAME held list object
+            # while the folder is unchanged; new slug strings every call made RunIndex.sync compare ~53k strings by
+            # content against the held ones, paging them in (sync = 22% of slow-call samples, 34k faults in 60 calls).
+            # The slug list is now reused while `names` is the same object (held here, so its id cannot be recycled);
+            # any other list, e.g. a fresh listing, builds as before. Off: BRAIN_SEED_SLUG_REUSE=0.
+            # (12 Nov 2026) and patched from the held list when `names` is a new list that differs in a small window.
+            slugs = _slugs_for(names)
             pairs = _runindex_hits("names", slugs, slugs, long_words)
         if pairs is not None:
+            arm_path = "runidx"
             for slug, overlap in pairs:
                 if slug in SKIP or slug in seeds or (skip_records and SESSION_RECORD.match(slug)):
                     continue
                 seeds[slug] = float(overlap)
                 lex.add(slug)
         else:
+            if names:
+                arm_path = "scan"
             for fn in names:
                 if not fn.endswith(".md"):
                     continue
@@ -1029,7 +1160,8 @@ def _seeds_from_prompt(words, idx, skip_records=False):
                     seeds[slug] = float(overlap)
                     lex.add(slug)
     except Exception:
-        pass
+        arm_path = "error"
+    _arm_add("names", time.perf_counter() - t_arm, arm_path)
     _RUNIDX["calls"] += 1
     # BM25 full-text arm (2026-07-09): the index-line/filename match above cannot see memory CONTENT.
     # Gated before wiring on eval_prompt_recall (real first prompts -> the session's actual reads,
@@ -1038,12 +1170,13 @@ def _seeds_from_prompt(words, idx, skip_records=False):
     try:
         from bm25 import BM25, QueryNormalizer
         bm = BM25()
-        # spell-normalize OOV query tokens before scoring: the owner types heavy deliberate typos
+        # spell-normalize OOV query tokens before scoring: the author types heavy deliberate typos
         # ('memeory','mathmatically'), and exact-term BM25 surfaces nothing for them (the workflow-recall
         # gap). Correction touches only out-of-vocab tokens, so a clean prompt is unchanged (measured
         # 2026-07-09: prompt-recall hit@10 0.56->0.61, hit@20 0.75->0.81, hit@5=; MRR -0.006 noise, and
         # the seed set here is a POOL not a ranked list, so top-1 rank doesn't matter). edit1-only, ~0.7ms.
-        q = QueryNormalizer(bm.df).normalize(" ".join(words))
+        # df_view: the sidecar's per-term table instead of the 0.9-1.3 s vocabulary unpickle (5 Nov 2026, same counts)
+        q = QueryNormalizer(bm.df_view() if hasattr(bm, "df_view") else bm.df).normalize(" ".join(words))
         if skip_records:
             hits = [hit for hit in bm.score(q, BM25_RECORD_POOL) if not SESSION_RECORD.match(hit[0])][:5]
         else:
@@ -1059,14 +1192,21 @@ def _seeds_from_prompt(words, idx, skip_records=False):
     return seeds, lex
 
 
-def _spread(seeds, adj, deg, mw=None, kw=None, use_keywords=True, overlay=None):
+def _spread(seeds, adj, deg, mw=None, kw=None, use_keywords=True, overlay=None, want_parent=True):
     """Two-hop spreading activation, fan-out normalized. Track each node's strongest bridge
     (parent). mw grades a conductance boost INTO mistake-class nodes (the MW_BOOST note above);
-    the default None keeps external replay harnesses that call _spread positionally byte-compatible."""
+    the default None keeps external replay harnesses that call _spread positionally byte-compatible.
+    want_parent=False lets an option-free call skip the parent map and return {} for it (brain.py recall
+    never reads it)."""
     mw = mw or {}
     kw = kw or set()
     # the named subjects' edges, attached for this recall only (see _topic_overlay)
     overlay = overlay if (overlay and use_keywords) else {}
+    if not mw and not kw and not overlay and use_keywords:
+        # 13 Nov 2026 (an agent): brain.py recall's call passes no options, so gain is 1.0 on every edge and
+        # the degree has no overlay term; the loop below drops those per-edge lookups. Same act, values and insertion
+        # order, on 24 of 24 recall seeds (scratchpad spread_split.py); _spread 140 -> 92 ms p50 with parent=False.
+        return _spread_plain(seeds, adj, deg, want_parent)
     deg_ov = defaultdict(float)
     for node, pairs in overlay.items():
         for _nb, w in pairs:
@@ -1106,6 +1246,32 @@ def _spread(seeds, adj, deg, mw=None, kw=None, use_keywords=True, overlay=None):
     return act, parent
 
 
+def _spread_plain(seeds, adj, deg, want_parent=True):
+    """_spread with no mistake weights, keywords or overlay: the same flows in the same order (gain 1.0, degree
+    without an overlay term), without the per-edge lookups those options need."""
+    act = defaultdict(float)
+    parent = {}
+    for s, a0 in seeds.items():
+        act[s] += a0
+    frontier = dict(seeds)
+    for _hop in range(HOPS):
+        nxt = defaultdict(float)
+        for src, a in frontier.items():
+            d = deg.get(src, 0.0)
+            if d <= 0:
+                continue
+            for nb, w in adj.get(src, ()):
+                flow = a * (w / d) * DECAY
+                if flow <= 0:
+                    continue
+                nxt[nb] += flow
+                act[nb] += flow
+                if want_parent and flow > parent.get(nb, (None, 0.0))[1]:
+                    parent[nb] = (src, flow)
+        frontier = nxt
+    return act, parent
+
+
 def _log_capped(sess, slug, n, gap, need):
     """One row per held-back association (real sessions only), so the cap's effect stays measurable
     without touching surfaced.tsv."""
@@ -1126,7 +1292,7 @@ def _append_capped(row):
         pass
 
 
-# Under the resident server the dedup state's write went on the
+# 6 Nov 2026 (an agent, RECALL-10X rank 3): under the resident server the dedup state's write went on the
 # reply path, and on a contended disk the os.replace of this 9 KB file took 1-4 s (13 of 498 slow served calls,
 # 5-6 Nov, faults.jsonl). The server holds the state in process and one writer thread flushes it; see _fresh.
 import threading as _threading
@@ -1265,102 +1431,93 @@ def _desc(slug, idx):
     m = re.match(r"- \[[^\]]+\]\([^)]+\)\s*[-\u2014]*\s*(.*)$", line)  # strip hyphen or em-dash sep
     txt = (m.group(1) if m else "").strip()
     if not txt:
-        # fall back to the memory's description frontmatter / first prose line
-        txt = _file_desc(slug)
+        txt = _desc_from_file(slug)
     return txt[:200]
 
 
-# MEMORY.md keeps only the newest ~100 index lines, so _desc falls back to the file for nearly every candidate: ~310
-# reads a prompt, 0.1-0.33 s by disk state (1 Nov). DESC_CACHE keeps slug -> (size, mtime_ns, description[:200]),
-# answered while the file keeps that stat (the embedding loader's rule) and saved when a prompt added entries.
-DESC_CACHE = os.path.join(DR, ".spread_desc_cache.marshal")
-_FDESC = {}
+# Descriptions read from memory files whose MEMORY.md index line is gone (the index keeps only the newest lines), kept
+# across hook processes: {slug: [size, mtime_ns, desc]}, a hit only when the file's size and mtime are the ones
+# recorded at the read. The stat comes from the embedding loader's folder listing when it ran (no extra syscall),
+# else os.stat. 5 Nov 2026 (RECALL-10X, an agent): the hook opened 45-282 files a prompt for these, 0.5-3.9 s
+# under memory pressure. SPREAD_DESC_CACHE=0 reads every file, as before.
+DESC_CACHE = os.path.join(DR, "spread_graph_cache", "desc_cache.pickle")
+_MEM_STATS = None
+_DESC_DISK = None
+_DESC_NEW = {}
 
 
-def _fdesc_cache():
-    got = _FDESC.get("c")
-    if got is None:
-        import marshal
-        try:
-            with open(DESC_CACHE, "rb") as fh:
-                got = marshal.load(fh)
-            if not isinstance(got, dict):
-                got = {}
-        except Exception:
-            got = {}
-        _FDESC["c"] = got
-        import atexit
-        atexit.register(_fdesc_save)     # hook_dispatch runs hooks in-process and ends in sys.exit, so this runs
-    return got
-
-
-def _fdesc_save():
-    """Merge this process's new entries into the file another hook may have rewritten since it was read, then swap
-    it in: hooks run side by side, and a plain dump of the copy read at start would drop what the others added."""
-    if not _FDESC.get("dirty"):
-        return
-    import marshal
-    out = _FDESC["c"]
-    new = _FDESC.get("new")
-    if new:
-        try:
-            with open(DESC_CACHE, "rb") as fh:
-                cur = marshal.load(fh)
-            if isinstance(cur, dict):
-                cur.update(new)
-                out = cur
-        except Exception:
-            pass
-    tmp = "%s.%d.tmp" % (DESC_CACHE, os.getpid())
-    try:
-        with open(tmp, "wb") as fh:
-            marshal.dump(out, fh)
-        os.replace(tmp, DESC_CACHE)
-        _FDESC["dirty"] = False
-    except Exception:
-        try:
-            os.remove(tmp)
-        except OSError:
-            pass
-
-
-def _file_desc(slug):
-    path = os.path.join(MEM, slug + ".md")
-    # The stat comes from the prompt's one shared folder read when it ran (see _mem_names), else os.stat: on a large
-    # memory folder the per-file stat of 45-280 candidates was most of this lookup's cost. SPREAD_DESC_STATS=0 stats
-    # every file.
-    st = None
-    if _MEM_STATS is not None and os.environ.get("SPREAD_DESC_STATS", "1") != "0":
-        try:
-            got = _MEM_STATS.get(slug + ".md")
-            if got is not None:
-                st = (int(got[0]), int(got[1]))
-        except Exception:
-            st = None
-    if st is None:
-        try:
-            s = os.stat(path)
-        except OSError:
-            return ""
-        st = (s.st_size, s.st_mtime_ns)
-    cache = _fdesc_cache()
-    hit = cache.get(slug)
-    if hit is not None and hit[0] == st[0] and hit[1] == st[1]:
-        return hit[2]
+def _desc_read_file(slug):
     txt = ""
     try:
-        with io.open(path, encoding="utf-8", errors="replace") as handle:
+        with io.open(os.path.join(MEM, slug + ".md"), encoding="utf-8", errors="replace") as handle:
             body = handle.read()
         dm = re.search(r'description:\s*"?(.+?)"?\s*\n', body)
         if dm:
             txt = dm.group(1).strip()
     except Exception:
-        return txt
-    # the stat was taken before the read, so a file written in between leaves an entry no later stat matches
-    cache[slug] = (st[0], st[1], txt[:200])
-    _FDESC.setdefault("new", {})[slug] = cache[slug]
-    _FDESC["dirty"] = True
+        pass
     return txt
+
+
+def _desc_from_file(slug):
+    global _DESC_DISK
+    if os.environ.get("SPREAD_DESC_CACHE", "1") == "0":
+        return _desc_read_file(slug)
+    st = None
+    try:
+        if _MEM_STATS is not None:
+            st = _MEM_STATS.get(slug + ".md")
+        if st is None:
+            s = os.stat(os.path.join(MEM, slug + ".md"))
+            st = (s.st_size, s.st_mtime_ns)
+        st = (int(st[0]), int(st[1]))
+    except Exception:
+        st = None
+    if _DESC_DISK is None:
+        _DESC_DISK = {}
+        try:
+            import pickle
+            with open(DESC_CACHE, "rb") as handle:
+                got = pickle.load(handle)
+            if isinstance(got, dict):
+                _DESC_DISK = got
+        except Exception:
+            pass
+    ent = _DESC_DISK.get(slug) if st is not None else None
+    if ent is not None and len(ent) == 3 and ent[0] == st[0] and ent[1] == st[1]:
+        return ent[2]
+    txt = _desc_read_file(slug)
+    if st is not None:
+        if not _DESC_NEW:
+            import atexit
+            atexit.register(_desc_flush)
+        _DESC_NEW[slug] = [st[0], st[1], txt]
+        _DESC_DISK[slug] = _DESC_NEW[slug]
+    return txt
+
+
+def _desc_flush():
+    """Merge this process's new entries into the file another hook may have rewritten meanwhile, then swap it in."""
+    if not _DESC_NEW:
+        return
+    try:
+        import pickle
+        cur = {}
+        try:
+            with open(DESC_CACHE, "rb") as handle:
+                got = pickle.load(handle)
+            if isinstance(got, dict):
+                cur = got
+        except Exception:
+            pass
+        cur.update(_DESC_NEW)
+        os.makedirs(os.path.dirname(DESC_CACHE), exist_ok=True)
+        tmp = "%s.%d.tmp" % (DESC_CACHE, os.getpid())
+        with open(tmp, "wb") as handle:
+            pickle.dump(cur, handle, protocol=pickle.HIGHEST_PROTOCOL)
+        os.replace(tmp, DESC_CACHE)
+    except Exception:
+        pass
 
 
 def _status_hint(slug, desc):
@@ -1485,7 +1642,7 @@ def _status_hint_rest(slug, desc, status, mtype):
     if mtype == "reference":
         return "hint: a reference memory - a pointer to where something lives, not a verdict about it"
     if mtype == "user":
-        return "hint: a memory about the owner - stable, but read its date"
+        return "hint: a memory about the author - stable, but read its date"
     return "hint: status untagged - weigh it against what you see; a reminder is a lead, not a verdict"
 
 
@@ -1527,17 +1684,12 @@ def _attachment_context(slug, include_auto=False):
     except Exception as exc:
         return (
             "[BRAIN SELF-CARE ALERT] Attached documents for `%s` could not be verified (%s: %s). "
-            "Do not rely on this node as complete. Tell the owner in the first user-visible update."
+            "Do not rely on this node as complete. Tell the author in the first user-visible update."
             % (slug, type(exc).__name__, str(exc)[:300])
         )
 
 
 def main():
-    if any(a in ("-h", "--help") for a in sys.argv[1:]):
-        # Discovery is not execution: this script writes, so a help request must
-        # exit before any work. See script_help_flag_can_execute_work.
-        print(__doc__ or os.path.basename(__file__))
-        return
     global _SHARE_LIST
     _SHARE_LIST = True
     try:
@@ -1555,7 +1707,7 @@ def main():
         if ev == "UserPromptSubmit":
             prompt = data.get("prompt", "") or ""
             # 2026-09-07: a mathematical argument (a proof under audit) is not the territory of work memories -
-            # on the probability bank this lane served work and audit memories beside proofs, pure noise
+            # on the probability bank this lane served trading and audit memories beside proofs, pure noise
             # that cost the solver attention. The proof-audit lane (proof_sense.py) speaks there instead.
             try:
                 import exact_clauses as _ec
@@ -1573,7 +1725,7 @@ def main():
             seeds, lex = _seeds_from_prompt(words, idx, skip_records=True)
         elif ev == "PostToolUse" and data.get("tool_name") == "Read":
             fp = ((data.get("tool_input", {}) or {}).get("file_path", "") or "")
-            if not fp.replace("/", os.sep).lower().startswith(MEM.lower()):
+            if not fp.replace("/", "\\").lower().startswith(MEM.lower()):
                 return
             slug = os.path.basename(fp)[:-3] if fp.endswith(".md") else ""
             if not slug or slug in SKIP:
@@ -1588,7 +1740,7 @@ def main():
             # it is consuming the stale content right now, so the flag is unambiguous by construction.
             # (The prompt-path cousin was replay-evaled the same day and HELD: 8/10 of its fires were
             # weak-topical BM25 noise - eval_premise_check.py carries the verdict. Trace base rate for
-            # this path: 6/459 memory reads, 4 of them one memory that had since been corrected.) Emits
+            # this path: 6/459 memory reads, 4 of them the pre-correction levered-grid memory.) Emits
             # the correction pointer instead of a generic associate for this event - one output per hook.
             corr = _load_superseded().get(slug)
             if corr and _fresh(data.get("session_id") or "", "stale|" + slug):
@@ -1805,7 +1957,7 @@ def main():
                 elif sel_b is None and seed_centroid is not None:
                     # a PURE ADDITION must at least MEAN something related: recentred cosine >= 0
                     # is "no less similar than a random corpus pair" - the 07-25 replay's few noise
-                    # additions (a work scar on a novel-illustration prompt) all sat below it
+                    # additions (a trading scar on a novel-illustration prompt) all sat below it
                     try:
                         _cos = _semantic_cosine(sel_n)
                         if (_cos - emb_bias) / (1.0 - emb_bias) < 0.0:
@@ -1873,12 +2025,4 @@ if __name__ == "__main__":
         raise
     except Exception:
         pass
-    # The cyclic collector found nothing to free in a ~1 s hook, but once the graph is loaded each pass walked it:
-    # 0.737 -> 0.661 s CPU per prompt with it paused (1 Nov 2026, 5 of 5 pairs). Re-enabled after, since the
-    # dispatcher may run other hooks in this same process.
-    import gc as _gc
-    _gc.disable()
-    try:
-        main()
-    finally:
-        _gc.enable()
+    main()

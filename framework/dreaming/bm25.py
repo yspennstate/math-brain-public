@@ -21,8 +21,8 @@ Usage:  python bm25.py build            rebuild the index from the memory dir
         python bm25.py query "text"     top-10 sanity check
 
 WRITE-TIME LANE (2026-09-02). A memory written to the corpus was invisible to the bm25 arm - and so to
-deliberate recall, whose ranking is bm25-first - until the nightly rebuild. Measured that night: a rule about
-one machine filed at 01:2xZ did not surface for a question naming that machine until the index was rebuilt by hand.
+deliberate recall, whose ranking is bm25-first - until the nightly rebuild. Measured that night: a box-icing
+law filed at 01:2xZ did not surface for "can I restart the second box" until the index was rebuilt by hand.
 refresh() closes that gap incrementally: it adds or replaces the docs whose file mtime is newer than the
 index, drops docs whose file is gone, and rewrites the same payload format atomically under a lock, so the
 nightly build() stays the source of truth and every reader (hooks via the pickle sidecar, recall(), evals)
@@ -94,10 +94,10 @@ TOKEN2 = re.compile(r"[a-z0-9_]{2,}")
 _DOMAIN2_ON = os.environ.get("BRAIN_TOKENS_DOMAIN2") == "1"
 # V3 (2026-09-14, staged behind BRAIN_TOKENS_V3=1 for a shadow-index measurement): the author's short
 # alphanumeric names vanish from BOTH index and query under the {3,} floor - "v2-B" -> nothing, "gen-8" ->
-# "gen", "k=0.65" -> nothing, "box 4" -> "box" - four of fourteen owner-voice recall misses on 2026-09-11 could
-# not match their memory at all. V3 keeps the DOMAIN2 whitelist, keeps any token that carries a digit (v2, p100,
+# "gen", "x=0.65" -> nothing, "box 4" -> "box" - four of fourteen owner-voice recall misses on 2026-09-11 could
+# not match their memory at all. V3 keeps the DOMAIN2 whitelist, keeps any token that carries a digit (3c, p100,
 # 65, 24, 1s), and keeps an alphanumeric compound joined by '-' or '.' as ONE token as well as its parts
-# ("v2-b" -> v2_b, v2; "0.65" -> 0_65, 65; "host-box-03" -> host_box_03, host, box, 03).
+# ("v2-b" -> v2_b, v2; "0.65" -> 0_65, 65; "node-box-03" -> node_box_03, node, box, 03).
 # Single characters are still dropped (the "4" of "box 4" stays invisible - a lone digit is noise everywhere).
 # DEFAULT ON since 2026-09-14 01:1x (BRAIN_TOKENS_V3=0 opts out; the live index was rebuilt with it in the same
 # minute). Shadow A/B on the 56-question owner-voice bank, one corpus, one moment: hit@1 28 -> 28, hit@5 42 -> 43
@@ -107,13 +107,13 @@ _V3_COMPOUND = re.compile(r"[a-z0-9]+(?:[-.][a-z0-9]+)+")
 _DIGIT = re.compile(r"[0-9]")
 
 
-_ALNUM_ID = re.compile(r"^(?=.*[0-9])(?=.*[a-z])[a-z0-9_]+$")      # v2, p100, 1s, gen_8, v2_b, host_box_03
+_ALNUM_ID = re.compile(r"^(?=.*[0-9])(?=.*[a-z])[a-z0-9_]+$")      # 3c, p100, 1s, gen_8, 3c_d, research_box_03
 _WORDNUM_ON = os.environ.get("BRAIN_TOKENS_WORDNUM") == "1"      # staged 2026-09-14 02:0x for a shadow measurement
 _V3_WORDNUM = re.compile(r"\b([a-z]{3,}) ([0-9]{1,3})\b")
 _DECIMAL = re.compile(r"^[0-9]+_[0-9]+$")                             # 0_65, 0_24 - a decimal number, not a date
 # Decimals are 45 pct of V3's added vocabulary (36,675 of 81,038 terms measured 2026-09-14) and 62 pct of all the
-# added terms appear in exactly one memory. The author's rules are full of numbers typed back at the brain
-# (k=0.65, a threshold of 0.30, a step of 0.0048), so the lane is not obviously waste - it is measured, not assumed, below.
+# added terms appear in exactly one memory. His laws are full of numbers he types back at the brain (x=0.65,
+# k 0.30, WIDTH 0.0048), so the lane is not obviously waste - it is measured, not assumed, below.
 _V3_DECIMALS = os.environ.get("BRAIN_TOKENS_V3_DECIMAL", "1") != "0"
 # DATES (2026-09-27, an agent; staged OFF behind BRAIN_TOKENS_DATES=1 for a shadow end-to-end measurement): a
 # month and day however written - "september 2", "2 Sep", "2026-09-02", a slug's 2026_09_02 - gains one shared token

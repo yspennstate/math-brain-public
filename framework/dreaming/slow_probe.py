@@ -1,4 +1,3 @@
-import os
 """slow_probe.py - measure the things that make this laptop FEEL slow while CPU/RAM/disk read green.
 
 Writes ~/.claude/compute/slow_state.json every run (a 10-minute scheduled task, windowless), read by
@@ -16,27 +15,20 @@ the_slow_laptop_was_the_on_access_scanner_2026_09_15):
 """
 import ctypes, ctypes.wintypes as wt, json, os, random, socket, subprocess, sys, time
 
-if any(a in ("-h", "--help") for a in sys.argv[1:]):
-    # Discovery is not execution: this file does its work at module scope, so the
-    # guard must come before the first statement that runs.
-    print(__doc__ or os.path.basename(__file__))
-    raise SystemExit(0)
-
-
-OUT = os.path.expanduser(r"~/.claude/compute/slow_state.json")
+OUT = r"~\.claude\compute\slow_state.json"
 STATE_DIR = os.path.dirname(OUT)
 SCANNED_TREE = r"C:\Windows\WinSxS"
-CONTRACT_CACHE = os.path.expanduser(r"~/.brain-framework/state/project_memory/hot-contract-cache.json")
-EXCLUDED_TREE = os.path.expanduser(r"~/brain-repo")
-SCRATCH = os.path.join(os.environ.get("LOCALAPPDATA", os.path.expanduser(r"~/AppData/Local")), "Temp", "claude")
-CREATE_NO_WINDOW = (0x08000000 if os.name == "nt" else 0)
+CONTRACT_CACHE = r"~\.brain-framework\state\project_memory\hot-contract-cache.json"
+EXCLUDED_TREE = r"~\brain-repo"
+SCRATCH = os.path.join(os.environ.get("LOCALAPPDATA", r"~\AppData\Local"), "Temp", "claude")
+CREATE_NO_WINDOW = 0x08000000
 
 
 # MEASURED UNTHROTTLED (2026-09-25). This probe runs as a windowless scheduled task at BelowNormal, the profile Windows
 # power-throttles (EcoQoS) by default, so it was measuring its own throttle as much as the laptop. Same process, same
 # minute, condition order rotated over six rounds: cold opens read 2.82 ms (scanned) and 0.23 ms (excluded) at the
 # median throttled, with single rounds of 156.5 and 91.2 ms, against 0.04 and 0.04 ms opted out and 0.10 and 0.07 ms at
-# Normal. The owner's own programs run unthrottled, so the probe opts itself out
+# Normal (an agent, scratchpad probe_ab_rot.py). His own programs run unthrottled, so the probe opts itself out
 # (priority unchanged) and the PowerShell it starts; history rows from here on carry "unthrottled": true, and a reading
 # on either side of that line is not comparable with the other.
 def _no_power_throttle(handle=None):
@@ -204,6 +196,25 @@ def ps_start():
     return wall, cpu, False
 
 
+def ps_native_image_present():
+    """True when Windows PowerShell's own native image is on disk, False when it is not, None when the folder
+    cannot be read. The start-CPU number alone cannot tell a missing image from a busy box: on 2026-11-10, with
+    System.Management.Automation.ni.dll present and loaded by every start, 18 of 806 samples still read over
+    0.8 s (median 0.94 s) and each one named a missing image that was there."""
+    root = r"C:\Windows\assembly\NativeImages_v4.0.30319_64"
+    try:
+        for d in os.listdir(root):
+            if not d.lower().startswith("system.mana"):
+                continue
+            sub = os.path.join(root, d)
+            for v in os.listdir(sub):
+                if os.path.isfile(os.path.join(sub, v, "System.Management.Automation.ni.dll")):
+                    return True
+        return False
+    except OSError:
+        return None
+
+
 def cmd_start_ms():
     t = time.perf_counter()
     subprocess.run([r"C:\Windows\System32\cmd.exe", "/c", "exit"], creationflags=CREATE_NO_WINDOW, capture_output=True, timeout=60)
@@ -265,7 +276,7 @@ def commit_headroom():
 # every file walk on this box collapsed: 158,429 files in 3 seconds yesterday, a comparable 43,120-file
 # tree in 3,336 seconds tonight. That is the signature of a cold metadata cache and this service is the
 # only thing on the box with the op rate to keep one cold.
-# I CANNOT PROVE THE LINK without stopping the service, which is the owner's call (decision 7 in his
+# I CANNOT PROVE THE LINK without stopping the service, which is the author's call (decision 7 in his
 # disk memo). What I can do is stop guessing: log the rate beside open_ms_scanned every run, and after
 # a few hours slow_cycles can correlate them. A hypothesis that needs an experiment nobody will run is
 # worth less than one that answers itself overnight.
@@ -564,7 +575,7 @@ def dispatcher_health(here=None, settings=None):
     entries for each wired event, and settings.json really points those events at the dispatcher."""
     import py_compile
     here = here or os.path.dirname(os.path.abspath(__file__))          # overridable so the control can test a scratch copy
-    settings = settings or os.path.expanduser(r"~/.claude/settings.json")     # rather than break the live wiring to prove a branch
+    settings = settings or r"~\.claude\settings.json"     # rather than break the live wiring to prove a branch
     out = {"wired": [], "ok": True, "why": []}
     enabled = os.path.exists(os.path.join(here, "HOOK_DISPATCH_ENABLED"))
     disp = os.path.join(here, "hook_dispatch.py")
@@ -604,7 +615,7 @@ def dispatcher_health(here=None, settings=None):
 
 def hung_windows(rows):
     """Names of top-level visible windows that are not responding (IsHungAppWindow) - the governor's ui_freeze names none,
-    and on 09-15 the owner's own Settings window sat hung 20+ min while agents were blamed."""
+    and on 09-15 the author's own Settings window sat hung 20+ min while agents were blamed."""
     u = ctypes.windll.user32
     names = {pid: name for pid, _, name in rows}
     out = []
@@ -676,7 +687,7 @@ def orphans_and_pinned():
     return n, ep, basis
 
 
-PRODUCERS = {"python.exe", "pythonw.exe", "ffmpeg.exe", "dvisvgm.exe", "blender.exe"}
+PRODUCERS ={"python.exe", "pythonw.exe", "ffmpeg.exe", "dvisvgm.exe", "blender.exe"}
 
 
 def _produced_recently(pr, minutes=35):
@@ -732,8 +743,8 @@ def _waits_by_design(pr, psutil):
     holding a port for a client? (2026-09-25) Every producer this detector named at 22:36 that evening was: two
     publish retries (--not-before 16:20 --tries 24 --gap-min 60), the speeches publish chain (--start 10:30 --days 7),
     a one-shot job that sleeps until the YouTube quota resets on 26 Sep, and the channel-picture chooser serving
-    127.0.0.1:4213 for the owner's click. The advisory's DO line reads "produced nothing and nothing waits on it: kill it",
-    and all five had produced nothing, by design, with no parent - an agent following it would have killed the owner's
+    127.0.0.1:4213 for his click. The advisory's DO line reads "produced nothing and nothing waits on it: kill it",
+    and all five had produced nothing, by design, with no parent - an agent following it would have killed his
     publishing. Three narrow signals, each named in the note so a reader can judge it: a wait or schedule argument,
     a script named for a day not yet past, a listening socket. SUPPRESSOR ONLY, like _produced_recently: it moves a
     process from "hung" to "waiting" (both are recorded) and never raises a flag."""
@@ -746,7 +757,7 @@ def _waits_by_design(pr, psutil):
     m = re.search(_WAIT_ARG_RE, " ".join(args))
     if m:
         return "waits by its own arguments (--%s)" % m.group(1)
-    for a in args[1:8]:
+    for i, a in enumerate(args[1:8], 1):
         base = os.path.basename(a)
         if base.lower().endswith((".py", ".pyw")):
             for y, mo, d in re.findall(_DATE_RE, base):
@@ -754,6 +765,18 @@ def _waits_by_design(pr, psutil):
                     if datetime.date(int(y), int(mo), int(d)) >= datetime.date.today():
                         return "a one-shot job named for a day not yet past (%s)" % base
                 except ValueError:
+                    pass
+            # A WATCHER OF A LIVE PROCESS (2026-11-11). dream_unthrottle.py <root_pid> --max-hours 6 re-applies the
+            # power-throttle opt-out to another tree every few seconds and writes nothing while nothing changes;
+            # it was named hung all evening of 10 Nov while its target, a live PowerShell, was still running.
+            # The first positional argument after the script is an integer that is a running pid: the
+            # watcher waits on that process by design and stops when it goes.
+            nxt = args[i + 1] if i + 1 < len(args) else ""
+            if nxt.isdigit() and int(nxt) > 4:
+                try:
+                    if psutil.pid_exists(int(nxt)):
+                        return "watches live pid %s (%s)" % (nxt, base)
+                except Exception:
                     pass
             break
     try:
@@ -763,6 +786,28 @@ def _waits_by_design(pr, psutil):
     except Exception:
         pass
     return None
+
+
+_NEVER_STARTED = {"count": 0, "note": None}
+# CPU-seconds a subtree must add between two probes (about ten minutes) to count as computing. A python waiter
+# polling every 30 s adds well under a second in that time; a working numerical child adds hundreds.
+_CPU_IDLE_S = 5.0
+
+
+def _never_started(pr):
+    """True when this process was created and never ran: no CPU time at all and no handles (2026-11-12).
+
+    Windows creates a process with its first thread suspended; the creator resumes it. When the creator dies in
+    between, the process stays in the table for ever with one suspended thread, 0 ms of CPU, no modules and no
+    handles - and byte counters that are zero and never move, which is what hung_producers tests for. pid 27804
+    (the board publisher of 11 Nov 15:32, parent gone) was named hung for more than eight hours that way. A
+    process that has run even one instruction of its own has CPU time and holds handles, so both zeros together
+    cannot be a worker that is merely idle. Any error means False: a doubt never hides a real producer."""
+    try:
+        c = pr.cpu_times()
+        return (c.user + c.system) == 0.0 and pr.num_handles() == 0
+    except Exception:
+        return False
 
 
 def hung_producers(prev):
@@ -784,7 +829,7 @@ def hung_producers(prev):
 
     IT WAS WRONG A SECOND TIME, 2026-09-17, AND THE FIX IS THE SAME SHAPE. It judged a process by
     its OWN byte total, so every supervisor-with-workers read as hung: a parent that waits on
-    children moves no bytes by design. The victim was harvest_loop.py, the owner's YouTube harvest -
+    children moves no bytes by design. The victim was harvest_loop.py, the author's YouTube harvest -
     74 minutes old, 50 bytes written, orphaned because its windowless launcher exited - while its
     four children had moved 256 MB and yt_dlp was mid-download. The totals now include descendants,
     so the test finally means what the name says: this SUBTREE has produced nothing.
@@ -795,6 +840,7 @@ def hung_producers(prev):
     far were "idle is not dead" in different costumes; suspect that reading first.
     """
     watch = {}
+    _NEVER_STARTED["count"], _NEVER_STARTED["note"] = 0, None
     try:
         import psutil
     except Exception:
@@ -818,11 +864,29 @@ def hung_producers(prev):
             age = (now - ct) / 60.0
             if age < 30.0:
                 continue
+            # NEVER STARTED IS NOT HUNG (2026-11-12): counted on its own line of the state, not as a producer.
+            if _never_started(pr):
+                _NEVER_STARTED["count"] += 1
+                if _NEVER_STARTED["note"] is None:
+                    _NEVER_STARTED["note"] = ("pid %d, created %.0f min ago and never started (0 CPU, no handles, "
+                                              "launcher gone): holds nothing, does nothing" % (pid, age))
+                continue
             io = pr.io_counters()
             total = io.read_bytes + io.write_bytes
+            # COMPUTING IS NOT HUNG (2026-11-14). Bytes alone cannot see a subtree that is busy on the
+            # processor and writes only when it finishes. run_fv_tf.py (pid 15048) was named hung for five
+            # cycles while its four python children burned 28.7 CPU-seconds every 20 s with zero I/O - a
+            # numerical sweep mid-run. Subtree CPU time is now carried with the bytes; "still" grows only
+            # when both stand still (CPU moved under _CPU_IDLE_S between probes).
+            cpu = 0.0
+            try:
+                _c = pr.cpu_times()
+                cpu = _c.user + _c.system
+            except Exception:
+                pass
             # ROLL UP THE CHILDREN (2026-09-17). A SUPERVISOR'S OWN IO NEVER MOVES - it waits on
             # workers, so judging it alone means "this process is idle", not "this subtree is dead".
-            # This named the owner's YouTube harvest_loop.py as hung: 74 min old, 50 BYTES written,
+            # This named the author's YouTube harvest_loop.py as hung: 74 min old, 50 BYTES written,
             # orphaned because a windowless launcher exited - while its four children had moved
             # 256 MB and yt_dlp was mid-download, with frames landing 54 s earlier. Killing on that
             # verdict would have stopped work he explicitly asked for.
@@ -832,13 +896,22 @@ def hung_producers(prev):
                     total += _kio.read_bytes + _kio.write_bytes
                 except Exception:
                     pass
+                try:
+                    _kc = _kid.cpu_times()
+                    cpu += _kc.user + _kc.system
+                except Exception:
+                    pass
         except Exception:
             continue
         was = old.get(str(pid))
         still = 0
         if was and abs(was[0] - ct) < 1.0 and was[1] == total:
-            still = int(was[2]) + 1
-        watch[str(pid)] = [ct, total, still]
+            # an old 3-field row has no CPU: judge it on bytes, as before. A child that exits takes its CPU
+            # with it, so a drop in the total is not activity.
+            busy = len(was) > 3 and was[3] is not None and cpu - float(was[3]) >= _CPU_IDLE_S
+            if not busy:
+                still = int(was[2]) + 1
+        watch[str(pid)] = [ct, total, still, round(cpu, 2)]
         # STARVED IS NOT HUNG (2026-09-17). A BelowNormal worker on a saturated box looks identical
         # to a dead one under any io-delta test: both show no bytes for two probe cycles.
         # ai_fixedpoints pid 42444 was named here while its newest wav had been written 1.5 min
@@ -898,7 +971,7 @@ def starvation(st):
     and a PowerShell start that waits many seconds while using almost no processor. The 2026-09-15 case was
     starvation: an eight-core reservation nothing was using, TEN CORES IDLE while six ran flat out. The
     2026-09-16 02:5x case looked identical on those three signals and was the opposite - every usable core at
-    100 per cent with the owner away, which is what he asked for ("use the whole card and all the cores",
+    100 per cent with the author away, which is what he asked for ("use the whole card and all the cores",
     2026-09-09) and what the governor itself calls owner_away_open.
 
     The difference is IDLE CAPACITY sitting beside the saturation, and it costs one line to measure. Cores 14
@@ -950,7 +1023,7 @@ def renders_outside_batch():
 
     core_steer classifies a render by its command line and moves it to the batch cores; this is the standing
     check that the classification is still happening, because the failure is silent - a misrouted render still
-    renders, just on the owner's cores, and nothing reports it.
+    renders, just on the author's cores, and nothing reports it.
 
     ASK FOR THE NAME FIRST. The first version of this function called process_iter(["name","cmdline",...]),
     which fetches a command line for EVERY process on the box; measured 2026-09-16 that cost 16.8 s of
@@ -989,7 +1062,7 @@ def renders_outside_batch():
                 # an encoder is identified by its name alone, and costs no command line to find. Until
                 # 2026-09-16 this loop looked only at python-named processes, so a bare ffmpeg.exe was invisible
                 # to the check that exists to catch renders running outside their pool - and one was measured at
-                # 3.15 cores on the owner's interactive cores while this returned a clean zero.
+                # 3.15 cores on the author's interactive cores while this returned a clean zero.
                 found[pr.pid] = (pr.ppid(), pr.create_time(), pr)
                 continue
             if not name.startswith("python"):
@@ -1204,6 +1277,7 @@ def main():
     mark("sysreads", t0)
     t0 = time.perf_counter(); st["orphan_fragments"], st["exited_pinned"], st["orphan_basis"] = orphans_and_pinned(); mark("orphans", t0)
     t0 = time.perf_counter(); st["hung_producers"], st["hung_producer_note"], st["hung_watch"], st["waiting_producers"], st["waiting_note"] = hung_producers(prev); mark("hung", t0)
+    st["never_started_producers"], st["never_started_note"] = _NEVER_STARTED["count"], _NEVER_STARTED["note"]
     t0 = time.perf_counter()
     try:
         st["top"], st["counts"], st["cores_busy_sum"], st["top_ops"] = top_consumers()
@@ -1250,8 +1324,8 @@ def main():
     # fine: measured in the same minute by hand, a cold open cost 0.26 ms. A latency taken behind a full run queue
     # measures the queue, not the thing being timed. The tell is a PowerShell start that is slow in WALL time while
     # its own CPU time stays small: waiting, not working.
-    # A CPU RESERVATION IS NOW A STANDING ALARM, since 2026-09-15, so that the problem
-    # cannot quietly come back. One was applied on 2026-09-05, became effective at the 09-13 restart, and cost
+    # A CPU RESERVATION IS NOW A STANDING ALARM, by his order of 2026-09-15 20:2x ("fix this permanently so that this
+    # problem does not keep happening"). One was applied on 2026-09-05, became effective at the 09-13 restart, and cost
     # him half his machine for two days before anyone measured it - because nothing watched. Now something does: any
     # logical processor held out of the default scheduler is reported every ten minutes, whoever put it there.
     try:
@@ -1303,7 +1377,11 @@ def main():
     _cc = st.get("contract_cache_age_h")
     if _cc is not None and _cc > 3.0: v.append("reconciliation_not_completing")
     if not starved and st.get("msmpeng_pct", 0) > 20: v.append("scanner_hot")
-    if (st.get("ps_start_cpu_s") or 0) > 0.8: v.append("powershell_no_native_image")
+    # The image's absence is read from the disk; the CPU number only says the start was expensive. With the image
+    # present a costly sample is the busy box (the run-queue verdict below owns that), not a missing image.
+    if (st.get("ps_start_cpu_s") or 0) > 0.8:
+        st["ps_native_image"] = ps_native_image_present()
+        if st["ps_native_image"] is False: v.append("powershell_no_native_image")
     # A SLOW POWERSHELL START HAS TWO CAUSES TOO, and the same discriminator separates them. With capacity
     # sitting idle it is a fault worth chasing - on 2026-09-15 21:26 a start waited 77.9 s at 0.31 s of CPU
     # while cores were stranded by a reservation nothing used. With NOTHING idle it is simply the run queue

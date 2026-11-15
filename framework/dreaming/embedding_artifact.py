@@ -177,9 +177,9 @@ def _write_column_totals(cache, rows, columns, totals):
 
 def _win_bulk_md_stats(mem_dir):
     """{name: (st_size, st_mtime_ns)} for the regular .md files in mem_dir, read in 1 MiB buffers of
-    FILE_FULL_DIR_INFO (GetFileInformationByHandleEx) instead of a DirEntry and a stat_result per file. Every value
-    equal to scandir's on 52.8k files, three runs; CPU 500 -> 391 ms. A reparse point among the .md names, or any
-    error, gives None and the caller's scandir runs."""
+    FILE_FULL_DIR_INFO (GetFileInformationByHandleEx) instead of a DirEntry and a stat_result per file. 5 Nov 2026
+    (RECALL-10X, an agent): every value equal to scandir's on 52.8k files, three runs; CPU 500 -> 391 ms.
+    A reparse point among the .md names, or any error, gives None and the caller's scandir runs."""
     try:
         import ctypes
         import struct
@@ -201,9 +201,10 @@ def _win_bulk_md_stats(mem_dir):
             return None
         size = 1 << 20
         buf = ctypes.create_string_buffer(size)
-        # The buffer is read in place: `buf.raw` copied the whole 1 MiB after each of the ~157 kernel calls a
-        # 53k-entry listing takes, ~157 MB of fresh pages freed at once (43-45k page faults, 1.2-1.9 s a listing).
-        # In place: the same entries, 3-4k faults, 0.3-0.7 s.
+        # Read the buffer in place (5 Nov 2026 21:5x, an agent): `buf.raw` copied the whole 1 MiB after each of
+        # the ~157 kernel calls a 53k-entry listing takes, ~157 MB of fresh pages freed at once - 43-45k page faults
+        # and 1.2-1.9 s a listing, the signature of the one served recall call in eight that took ~2.2 s. In place:
+        # the same entries, 3-4k faults, 0.3-0.7 s.
         raw = memoryview(buf).cast("B")
         unpack = struct.unpack_from
         epoch = 116444736000000000  # 1601 -> 1970 in 100 ns ticks, as os.stat converts
@@ -232,17 +233,16 @@ def _win_bulk_md_stats(mem_dir):
         return None
 
 
-# One-shot handoff: the prompt hook's seed arm already read the folder with _bulk_md_stats for its name scan; it
-# leaves (mem_dir, monotonic time, stats) here and the loader's next call for the same folder within 60 s takes it
-# instead of reading the folder a second time.
+# One-shot handoff (5 Nov 2026, an agent, RECALL-10X rank 3): the prompt hook's seed arm already read the
+# folder with _bulk_md_stats for its name scan; it leaves (mem_dir, monotonic time, stats) here and the loader's next
+# call for the same folder within 60 s takes it instead of reading the 53k-entry folder a second time (0.8-1.7 s).
 _PREFETCH = None
 
 
 def _bulk_md_stats(mem_dir):
     """{name: (st_size, st_mtime_ns)} for the regular .md files in mem_dir from macOS getattrlistbulk, which returns
     a buffer of entries per call: 0.06 s for 29k files against 0.15 s for scandir plus a stat each (1 Nov 2026,
-    every value equal). A symlink is left out (its row then takes the hash check). On Windows the same comes from
-    _win_bulk_md_stats. None elsewhere or on any error."""
+    every value equal). A symlink is left out (its row then takes the hash check). None off macOS or on any error."""
     global _PREFETCH
     pf, _PREFETCH = _PREFETCH, None
     if pf is not None and pf[0] == mem_dir and 0 <= time.monotonic() - pf[1] < 60:
@@ -384,26 +384,6 @@ def _decode_npy_bool(descr, shape, raw):
     return values
 
 
-# The members grow with the corpus (about 2.2 KB a memory). At 64 MiB the cap sat near 30k memories, and past it
-# the hot reader refused every sidecar, so recall and the hooks ran semantic-off with nothing saying why (Mac,
-# 2 Nov 2026, the 31,126-row publish). 256 MiB holds about 120k memories and still stops a zip bomb, since the
-# check runs on a blob already matched to the pointer's sha256. Raise it again before the corpus gets there.
-_LIGHT_MEMBER_CAP = 256 * 1024 * 1024
-
-
-def _members_over_cap(path, cap):
-    """True when the zip at path declares uncompressed members totalling more than cap. Reads only the central
-    directory (a few KB), so the light loader can refuse an over-cap sidecar without reading and hashing all of it
-    (81 MB, 0.15-0.45 s, on every hook call since the sidecar passed the cap at about 29,850 rows). A refusal here
-    is the same refusal the full read reaches; any error returns False and the normal verified path decides."""
-    try:
-        import zipfile
-        with zipfile.ZipFile(path) as archive:
-            return sum(info.file_size for info in archive.infolist()) > cap
-    except Exception:
-        return False
-
-
 def load_verified_embeddings_lightweight(
         sidecar, authority_path, mem_dir=None, expected_model=None,
         verify_all_rows=False):
@@ -428,14 +408,11 @@ def load_verified_embeddings_lightweight(
         _utc(status.get("committed_at"))
         if expected_model and status.get("model") != expected_model:
             return None
-        # A hit stands for a full pass of the checks below on these exact bytes (see _meta_cache_read).
         meta = _meta_cache_read(actual_sidecar, expected_sha, expected_size, status)
         if meta is not None:
             (slugs, text_hashes, built_at, source_size, source_mtime, row_safe, vec_shape, vec_raw,
              actual_sha) = meta
         else:
-            if _LIGHT_MEMBER_CAP and _members_over_cap(actual_sidecar, _LIGHT_MEMBER_CAP):
-                return None
             blob, actual_sha, actual_size, _ = read_known_bytes(actual_sidecar, expected_sha)
             if actual_sha != expected_sha or actual_size != expected_size:
                 return None
@@ -450,7 +427,10 @@ def load_verified_embeddings_lightweight(
                 names = [info.filename for info in infos]
                 if len(names) != len(set(names)):
                     return None
-                if sum(info.file_size for info in infos) > _LIGHT_MEMBER_CAP:
+                # a bound on the uncompressed members, after the bytes matched the pointer sha256. 64 MiB held about 30k
+                # memories at ~2.2 KB a row; the 2 Nov sidecar (31,126 rows, 66.8 MiB) crossed it and every recall ran
+                # semantic-off (a52370f8). 256 MiB leaves room for about 120k.
+                if sum(info.file_size for info in infos) > 256 * 1024 * 1024:
                     return None
                 member_names = {name[:-4] for name in names if name.endswith(".npy")}
                 if required - member_names:
@@ -500,8 +480,14 @@ def load_verified_embeddings_lightweight(
                 return None
             # The same checks over the joined text, not one call per row (about 30 ms on 29k rows). With a "/" separator
             # basename(slug) != slug exactly when "/" is in slug; elsewhere keep the per-row form.
+            joined = "\0".join(slugs)
             if os.sep == "/" and not os.altsep:
-                joined = "\0".join(slugs)
+                if "" in slug_set or "/" in joined or "\\" in joined:
+                    return None
+            elif ":" not in joined:
+                # 5 Nov 2026 (RECALL-10X, an agent): ntpath.basename only splits on '/', '\\' and an 'X:' drive,
+                # so with no ':' in any slug the joined check is the per-row check below, without 52k basename calls
+                # (~0.3 s of every prompt hook on 52k rows)
                 if "" in slug_set or "/" in joined or "\\" in joined:
                     return None
             elif any(not slug or os.path.basename(slug) != slug or "/" in slug or "\\" in slug
@@ -573,8 +559,8 @@ def load_verified_embeddings_lightweight(
         if not all_finite:
             return None
         loaded = LightweightVerifiedEmbeddings(active, matrix, bias, hashes_by_slug)
-        # {name.md: (size, mtime_ns)} as read above, for callers that would read the same folder again
-        # (spread_recall's name scan and supersession's known-slug set).
+        # {name.md: (size, mtime_ns)} as read above, for callers that would stat the same files again
+        # (spread_recall's description cache, 5 Nov 2026).
         loaded.memory_stats = memory_stats
         # Same as load_verified_embeddings: keep the build's stat of each row so embedding_row_current answers a
         # later check of an unchanged file from one stat. Without it every spread_recall candidate was re-read and
@@ -597,12 +583,13 @@ def load_verified_embeddings_lightweight(
         return None
 
 
-# The light loader's checked, decoded metadata (slugs, text hashes, source stats, row mask) and the byte offset of the
-# vecs payload, for one sidecar. Valid only while the sidecar's stat signature equals the one read_known_bytes
-# recorded when those bytes hashed to the pointer's sha, the same trust rule that already skips the sha256. Written
-# only after every check of the full path passed. On a hit the loader reads the vecs slice instead of the whole file
-# and skips the zip, the UTF-32 decode and the checks (about 0.4-0.9 s of each prompt on 53k rows).
-# EMB_META_CACHE=0 always takes the full path.
+_SHA_STAT_CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".embedding_sha_stat.json")
+# 5 Nov 2026 (RECALL-10X rank 3, an agent): the lightweight loader's checked, decoded metadata (slugs, text
+# hashes, source stats, row mask) and the byte offset of the vecs payload, for one sidecar. Valid only while the
+# sidecar's stat signature equals the one read_known_bytes recorded when those bytes hashed to the pointer's sha,
+# the same trust rule that already skips the sha256. Written only after every check of the full path passed. On a
+# hit the prompt hook reads the 81.5 MB vecs slice instead of the 119 MB file and skips the zip, the UTF-32 decode
+# and the checks (about 0.4-0.9 s of each prompt on 53k rows). EMB_META_CACHE=0 always takes the full path.
 _META_CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".embedding_meta_cache.marshal")
 
 
@@ -672,7 +659,7 @@ def _meta_cache_write(path, expected_sha, status, blob, vinfo, vec_raw, vec_shap
         key = os.path.abspath(path)
         sig = _sha_stat_sig(key, expected_sha)
         # fstat, as read_known_bytes records it: on Windows os.stat's st_ctime_ns is the creation time and
-        # fstat's is the change time, so a stat-built signature would never match
+        # fstat's is the change time, so a stat-built signature never matches (seen on the first dev run)
         with open(path, "rb") as fh:
             st = os.fstat(fh.fileno())
         if (sig is None or [st.st_dev, st.st_ino, st.st_size, st.st_mtime_ns, st.st_ctime_ns] != sig
@@ -700,10 +687,6 @@ def _meta_cache_write(path, expected_sha, status, blob, vinfo, vec_raw, vec_shap
             os.remove("%s.%d.tmp" % (_META_CACHE, os.getpid()))
         except Exception:
             pass
-
-
-
-_SHA_STAT_CACHE = os.path.join(os.path.dirname(os.path.abspath(__file__)), ".embedding_sha_stat.json")
 
 
 def read_known_bytes(path, expected_sha):
@@ -1029,28 +1012,44 @@ def load_verified_embeddings(sidecar, authority_path, mem_dir=None, expected_mod
         if (vecs.dtype != np.float32 or vecs.ndim != 2 or vecs.shape[0] != len(slugs)
                 or vecs.shape[1] < 1 or len(text_hashes) != len(slugs)):
             return None
-        if len(slugs) != len(set(slugs)) or not np.isfinite(vecs).all():
-            return None
+        # The checks and maps below depend only on the parsed arrays. In resident mode the same read-only parse comes
+        # back call after call, so they are worked out once per parse (13 Nov 2026, an agent: about 200 ms of
+        # pure Python a warm served recall on 65,299 rows, run on the query-encoder thread beside seeds/lex, where it
+        # held the GIL). Every call still gets its own dict copies, so a caller that changes one changes only its own.
+        derived = _RES.get("derived")
+        if derived is None or derived[0] is not parsed:
+            if len(slugs) != len(set(slugs)) or not np.isfinite(vecs).all():
+                return None
+            _mean = vecs.mean(axis=0)
+            _b = float(_mean @ _mean)
+            derived = (parsed, {slug: i for i, slug in enumerate(slugs)}, dict(zip(slugs, text_hashes)),
+                       _b if math.isfinite(_b) and 0.0 <= _b < 0.95 else 0.0)
+            if RESIDENT and _RES.get("sidecar", (None, None))[1] is parsed:
+                _RES["derived"] = derived
         if (source_size.dtype != np.int64 or source_mtime.dtype != np.int64
                 or row_safe.dtype != np.bool_ or source_size.shape != (len(slugs),)
                 or source_mtime.shape != (len(slugs),) or row_safe.shape != (len(slugs),)):
             return None
-        hashes_by_slug = dict(zip(slugs, text_hashes))
-        probe = VerifiedEmbeddings(
-            {slug: i for i, slug in enumerate(slugs)}, vecs, 0.0, hashes_by_slug
-        )
+        hashes_by_slug = dict(derived[2])
+        probe = VerifiedEmbeddings(dict(derived[1]), vecs, 0.0, hashes_by_slug)
         if os.environ.get("BRAIN_EMB_LAZY") == "1" and not verify_all_rows:
             # rows are judged current by the caller, best first (embedding_row_current)
-            _mean = vecs.mean(axis=0)
-            _b = float(_mean @ _mean)
-            return VerifiedEmbeddings({slug: i for i, slug in enumerate(slugs)}, vecs,
-                                      _b if math.isfinite(_b) and 0.0 <= _b < 0.95 else 0.0, hashes_by_slug)
-        memory_stats = _md_stats_fast(mem_dir)
-        if memory_stats is None and memory_entries is not None:
+            lazy = VerifiedEmbeddings(dict(derived[1]), vecs, derived[3], hashes_by_slug)
+            # The build's stat of each row and the verify cache, as the eager path attaches them below: without
+            # them embedding_row_current re-read and re-hashed every candidate on every call (7 Nov: 544 files a
+            # warm served recall, about 3 s of it on the loaded laptop).
+            lazy.row_of, lazy.row_safe = probe.index, row_safe
+            lazy.source_size, lazy.source_mtime = source_size, source_mtime
+            lazy.verify_cache = _read_verify_cache(mem_dir, expected_sha)
+            lazy.verify_key, lazy.built_ns = (mem_dir, expected_sha), _built_ns(built_at)
+            return lazy
+        if memory_entries is not None:
             try:
                 memory_stats = {entry.name: entry.stat() for entry in memory_entries}
             except OSError:
                 return None
+        else:
+            memory_stats = _md_stats_fast(mem_dir)
         if memory_stats is None:
             try:
                 with os.scandir(mem_dir) as entries:
@@ -1136,22 +1135,52 @@ def load_verified_embeddings(sidecar, authority_path, mem_dir=None, expected_mod
 # folder it read: a git checkout of the same memories (BRAIN_MEM_DIR on the brain-repo clone, as the recall tests
 # set it) has other mtimes, so every row fell to an exact hash, 28k file reads and ~7.5 s a recall (3 Nov 2026). A
 # row hashed once is answered from its unchanged size and mtime, the loader's own rule for the build's stats.
+# 13 Nov 2026 (an agent): realpath of the memory folder once per process per spelling. In the recall server the
+# semantic lane runs on a side thread, and realpath gives up the interpreter lock for its syscall: getting it back
+# took 340 ms a time while the main thread scored (under 1 ms idle), four times a recall, about 1.3 s of the 1.7 s
+# stage:sem (scratchpad server_prof.py / rp_server.py). The folder's real path does not move under a running process.
+_REALPATH = {}
+
+
+def _real_mem_dir(mem_dir):
+    r = _REALPATH.get(mem_dir)
+    if r is None:
+        r = _REALPATH[mem_dir] = os.path.realpath(mem_dir)
+    return r
+
+
 def _verify_cache_path(mem_dir):
-    key = hashlib.sha256(os.path.realpath(mem_dir).encode("utf-8")).hexdigest()[:16]
+    key = hashlib.sha256(_real_mem_dir(mem_dir).encode("utf-8")).hexdigest()[:16]
     # derived and rebuildable, so outside the brain tree that is synced and never deleted
     base = os.environ.get("BRAIN_EMB_VERIFY_DIR") or os.path.expanduser(os.path.join("~", ".cache", "brain", "embedding_verify"))
     return os.path.join(base, key + ".json")
+
+
+# The last parse of the verify cache, keyed by the file's id, size and write time: a served recall re-read the whole
+# 9.5 MB file on every call (0.14-0.26 s on the loaded laptop, 7 Nov). Callers add rows to what they get, so each
+# gets its own shallow copy; a writer replaces the file by rename, which changes the key.
+_VC_MEMO = {}
 
 
 def _read_verify_cache(mem_dir, sidecar_sha):
     if os.environ.get("BRAIN_EMB_VERIFY_CACHE", "1") == "0":
         return {}
     try:
-        with io.open(_verify_cache_path(mem_dir), encoding="utf-8") as fh:
+        path = _verify_cache_path(mem_dir)
+        st = os.stat(path)
+        key = (path, st.st_ino, st.st_size, st.st_mtime_ns, sidecar_sha, _real_mem_dir(mem_dir))
+        hit = _VC_MEMO.get(key)
+        if hit is not None:
+            return dict(hit)
+        with io.open(path, encoding="utf-8") as fh:
             c = json.load(fh)
-        if c.get("sidecar_sha256") == sidecar_sha and c.get("mem_dir") == os.path.realpath(mem_dir):
+        if c.get("sidecar_sha256") == sidecar_sha and c.get("mem_dir") == _real_mem_dir(mem_dir):
             rows = c.get("rows")
-            return rows if isinstance(rows, dict) else {}
+            if isinstance(rows, dict):
+                _VC_MEMO.clear()
+                _VC_MEMO[key] = rows
+                return dict(rows)
+            return {}
     except (OSError, ValueError, AttributeError):
         pass
     return {}
@@ -1222,7 +1251,7 @@ def _write_verify_cache(mem_dir, sidecar_sha, rows):
         os.makedirs(os.path.dirname(path), exist_ok=True)
         fd, tmp = tempfile.mkstemp(prefix=".verify.", suffix=".tmp", dir=os.path.dirname(path))
         with os.fdopen(fd, "w", encoding="utf-8") as fh:
-            json.dump({"sidecar_sha256": sidecar_sha, "mem_dir": os.path.realpath(mem_dir), "rows": rows}, fh,
+            json.dump({"sidecar_sha256": sidecar_sha, "mem_dir": _real_mem_dir(mem_dir), "rows": rows}, fh,
                       separators=(",", ":"))
         os.replace(tmp, path)
     except OSError:

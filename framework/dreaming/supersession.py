@@ -19,7 +19,7 @@ FM_SUPERSEDED_RX = re.compile(r"^[ \t]*superseded_by:[ \t]*([A-Za-z0-9][A-Za-z0-
 # A pointer field is machine-read and the pattern above demands the value be ONE slug and nothing else, so a
 # declaration written as prose is dropped in silence and the stale memory keeps being served as current.
 # Measured on the live corpus 2026-09-22: of 425 declarations, 12 do not route - 7 of them prose, and 3 of
-# those 7 open with a real slug followed by a comment ("some_slug_... # only its THIRD section is wrong")
+# those 7 open with a real slug followed by a comment ("azure_drops_... # only its THIRD section is wrong")
 # or a second correction ("exit8_peak_..., beta_window_..."). This pattern recovers that leading slug. A
 # route from it is admitted ONLY when the named file exists (see _lenient_target), so it can recover a link
 # to a real memory and can never invent one: "VOID same evening - see correction block" yields the
@@ -71,7 +71,7 @@ def _lenient_candidate(body):
         return ""
     # A '#' COMMENT ON A POINTER NARROWS IT, so such a value is not a plain route. Measured on the live
     # corpus 2026-09-22, the split is clean: both commented pointers are PARTIAL supersessions - "only its
-    # THIRD section (the cloud-hash claim) is wrong; the sidecar-backlog findings stand", and "one feed-name part
+    # THIRD section (the Azure-hash claim) is wrong; the sidecar-backlog findings stand", and "fair_nlv part
     # only - it is a DOCUMENTED hub alias, not a dead feed" - while both comma-separated values are lists of
     # several full corrections. Admitting a partial as a full route would rewrite the whole memory to its
     # correction and throw away the sections its own author said still stand, which is worse than the
@@ -157,11 +157,11 @@ def frontmatter_block(path):
 
 # FILING STAMPS (2026-09-22, round 5 W4; F54). `created:` carries a DATE, so two orders filed the same day cannot
 # be put in order: all nine inverted verdicts of the 200-pair owner-order judge had this one cause (three 09-02
-# scheduling laws collided that way), and fifteen pairs were one order filed two to four times in a day.
+# rebalancer laws collided that way), and fifteen pairs were one order filed two to four times in a day.
 # `remember` now writes `created_at:` (local ISO time with its offset, to the second) beside `created:`; a reader
 # that ORDERS memories uses created_at when both sides carry it and the date otherwise, and says so when the date
 # cannot decide. `modified:` (the native memory tool's field) is deliberately NOT a filing stamp: it is the last
-# EDIT, in UTC - a memory filed on one day can read modified two days later.
+# EDIT, in UTC - rule_b_2026_08_22 was filed 08-22 and reads modified 08-24.
 FM_CREATED_AT_RX = re.compile(
     r"^[ \t]*created_at:[ \t]*[\"']?(\d{4}-\d{2}-\d{2}[T ]\d{2}:\d{2}(?::\d{2}(?:\.\d+)?)?"
     r"(?:Z|[+-]\d{2}:?\d{2})?)[\"']?[ \t]*$", re.M)
@@ -213,9 +213,9 @@ def order_stamps(a, b):
     return 0
 
 
-# PART SUPERSESSION (2026-09-22, round 5 W4; F56 item 3). `superseded_by` is per NODE: a two-part
-# law can be overtaken for one part and still be the law for the other, and a reader who follows the node stamp is
-# routed to the new law and loses the half that still stands. The recall collapse is right to substitute a wholly overtaken memory; the
+# PART SUPERSESSION (2026-09-22, round 5 W4; F56 item 3). `superseded_by` is per NODE: the rule-A
+# law of 08-22 is overtaken for f and still the law for gamma, and a reader who follows the node stamp is routed
+# to the f law and loses the gamma half. The recall collapse is right to substitute a wholly overtaken memory; the
 # 08-22 measurement (partial_supersession_makes_the_valid_half_unreachable_2026_08_22) showed what it costs when
 # the overtaking was partial - predecessor at lexical rank 1 in 16/16, returned by full recall in 1/22 - and
 # concluded that the repair belongs in the DATA, one memory at a time, not in a prose-reading collapse.
@@ -224,7 +224,7 @@ def order_stamps(a, b):
 # prints `partly superseded: <clause> -> <slug>`, the association hint says which clause moved and that the rest
 # stands, and a reflex compiled from it gets a hint line rather than a halved charge. One physical line, so every
 # line-anchored reader in this codebase (superseded_by / status / created regexes) is untouched by it; valid YAML.
-#     superseded_in_part: ["the weekly review day -> review_moves_to_thursdays_2026_01_01"]
+#     superseded_in_part: ["part A -> rule_b_2026_08_22"]
 # The corpus already holds the idea in two earlier spellings, both read here so they stop being invisible:
 # `superseded_in_part: "<prose>"` (3 memories, an in-place correction with no successor slug) and
 # `partially_superseded_by: <slug>  # <which part>` (2 memories). Neither is routed, as before.
@@ -418,7 +418,7 @@ def _default_index():
     return os.environ.get("BRAIN_SUPERSEDED_INDEX") or os.path.join(HERE, "superseded.tsv")
 
 
-def load_map(memory_dir, index_path=None, include_frontmatter=False):
+def load_map(memory_dir, index_path=None, include_frontmatter=False, entries=None, listed_ns=None):
     """Load old->correction routes.  Frontmatter, when requested, is authoritative."""
     routes = {}
     path = _default_index() if index_path is None else index_path
@@ -436,7 +436,7 @@ def load_map(memory_dir, index_path=None, include_frontmatter=False):
         pass
 
     if include_frontmatter:
-        for name, target in _frontmatter_targets(memory_dir).items():
+        for name, target in _frontmatter_targets(memory_dir, entries=entries, listed_ns=listed_ns).items():
             routes[name] = target
     return routes
 
@@ -453,7 +453,7 @@ _FM_CACHE_NAME = "supersession_frontmatter_cache.json"
 # (size, mtime_ns), so every unchanged file would keep serving the empty target the old parse recorded.
 # 3 (28 Sep): an entry holds the strict target and the prose pointer's candidate apart, and the candidate's target is
 # looked for in this call's own directory listing, never taken from the cache (IA-20260928-04).
-# 4 (29 Sep): an entry is keyed by size, mtime, ctime and birth time,
+# 4 (29 Sep, account03/B19 r75 and account02/B11 auto46): an entry is keyed by size, mtime, ctime and birth time,
 # so a file replaced by rename with its old size and mtime is read again (Windows gives the renamed file a new creation
 # time; POSIX changes ctime on any write or utime). The one case still read from the cache is an in-place write of the
 # same size whose mtime is then set back to the same 100 ns on Windows; no writer here does that. Targets resolve
@@ -464,8 +464,8 @@ _FM_CACHE_VERSION = 5   # 5 (4 Oct 2026): a qualified pointer no longer routes -
 
 def _md_files(memory_dir):
     """The folder's memory files: .md names that are FILES (a directory named *.md is not a memory; a file symlink is),
-    as DirEntry objects. One enumeration for every reader here, so the targets, the known slugs and the audit agree.
-    [] when the folder cannot be read."""
+    as DirEntry objects. One enumeration for every reader here, so the targets, the known slugs and the audit agree
+    (account03/B19 r75, B19-R64-DIRECTORY-MD-COUNTED-AS-KNOWN-MEMORY). [] when the folder cannot be read."""
     try:
         with os.scandir(memory_dir) as it:
             return [e for e in it if e.name.endswith(".md") and e.is_file()]
@@ -475,7 +475,17 @@ def _md_files(memory_dir):
 
 def _canonical_names(entries):
     """normcase(slug) -> the slug as the file is spelled. On Windows normcase folds case, so a pointer that names
-    Target_Correction reaches target_correction.md; on POSIX it is the identity."""
+    Target_Correction reaches target_correction.md; on POSIX it is the identity.
+    13 Nov 2026 (an agent): on Windows normcase is an invariant-locale lowercase after '/' -> '\\'; a file name
+    holds no '/', and for an ASCII name that lowercase is str.lower(), so ASCII names skip the API call (95 -> ~10 ms
+    for 65k names). Any other name still goes through normcase. BRAIN_SUP_FASTCASE=0 off."""
+    if os.name == "nt" and os.environ.get("BRAIN_SUP_FASTCASE", "1") != "0":
+        nc = os.path.normcase
+        out = {}
+        for e in entries:
+            s = e.name[:-3]
+            out[s.lower() if s.isascii() else nc(s)] = s
+        return out
     return {os.path.normcase(e.name[:-3]): e.name[:-3] for e in entries}
 
 
@@ -483,37 +493,71 @@ def _stat_key(st):
     return [st.st_size, st.st_mtime_ns, st.st_ctime_ns, getattr(st, "st_birthtime_ns", 0) or 0]
 
 
-def _fm_cache_path(memory_dir):
-    """One cache file per memory folder (29 Oct 2026). The single shared file held one folder at a time, so a recall
-    against the repo mirror's memory folder made the next live recall re-read all 28k files: 70-282 s on the loaded
-    Mac, and other agents' recalls queued 5-13 min behind it."""
+# One cache file per memory folder (lever 17, 4 Nov 2026). Until then every folder shared the one file: a call on any
+# other folder (a test's temp folder, a scratch copy) found memory_dir different, started empty and saved its own small
+# cache over the live one, so the next live recall re-read every memory file cold (measured on a copy: 3.0 s warm, 23.4 s
+# after one call on a 3-file folder; the served 16:32 recall on 4 Nov spent 47.7 s here). The live folder
+# (~/.claude/projects/<project>/memory) keeps the old file name; any other folder of at least _FM_OTHER_MIN files gets
+# its own file under supersession_fm_caches/, named by a hash of its path; a smaller folder is read uncached and writes
+# nothing (three files cost nothing to read, and test temp folders would otherwise leave a file each).
+_FM_OTHER_MIN = 2000
+_FM_OTHER_DIR = "supersession_fm_caches"
+
+
+def _fm_cache_path(memory_dir, n_entries):
+    """The cache file for this folder, or None when the folder is small and not the live one."""
+    d = os.path.normcase(os.path.abspath(memory_dir))
+    projects = os.path.normcase(os.path.abspath(os.path.expanduser(os.path.join("~", ".claude", "projects"))))
+    parent, leaf = os.path.split(d)
+    if leaf == "memory" and os.path.dirname(parent) == projects:
+        return os.path.join(HERE, _FM_CACHE_NAME)
+    if n_entries < _FM_OTHER_MIN:
+        return None
     import hashlib
-    tag = hashlib.sha256(os.path.normcase(os.path.abspath(memory_dir)).encode("utf-8")).hexdigest()[:12]
-    # BRAIN_SUPERSESSION_CACHE_DIR moves the cache out of the code folder (tests point it at a temp dir)
-    return os.path.join(os.environ.get("BRAIN_SUPERSESSION_CACHE_DIR") or HERE,
-                        "supersession_frontmatter_cache.%s.json" % tag)
+    h = hashlib.sha1(d.encode("utf-8", "surrogatepass")).hexdigest()[:12]
+    return os.path.join(HERE, _FM_OTHER_DIR, _FM_CACHE_NAME[:-5] + "." + h + ".json")
 
 
-# What the last _frontmatter_targets call read: memory_dir and pointers, file name -> (strict, candidate) for every file
-# that has either. brain.py's recall keeps it beside a cached map to tell whether a later folder state can change it.
-LAST_POINTERS = {}
+# 13 Nov 2026 (an agent): a long-lived process (the recall server) recomputes this on every folder change, four
+# served calls in five, and each time re-read the 65k-row cache file (102-566 ms json.load on the loaded laptop). The
+# parsed files dict is kept per cache file and reused while that file's (size, mtime_ns, inode) is unchanged; another
+# process's rewrite moves the key and the file is read again. Our own save stores what it wrote. The dict is only read.
+_FM_MEMO = {}
 
 
-def _frontmatter_targets(memory_dir):
+def _fm_file_key(path):
+    try:
+        st = os.stat(path)
+        return (st.st_size, st.st_mtime_ns, st.st_ino)
+    except Exception:
+        return None
+
+
+def _frontmatter_targets(memory_dir, entries=None, listed_ns=None):
     import json
-    cache_path = _fm_cache_path(memory_dir)
+    import time as _time
+    # a listing handed in is judged at the moment it was taken, as this function's own listing is
+    now_ns = listed_ns if (entries is not None and listed_ns is not None) else _time.time_ns()
+    if entries is None:
+        entries = _md_files(memory_dir)
+    cache_path = _fm_cache_path(memory_dir, len(entries))
     cached = {}
     try:
-        try:
-            fh = io.open(cache_path, encoding="utf-8")
-        except FileNotFoundError:   # first use: seed from the old shared file when it holds this folder
-            fh = io.open(os.path.join(HERE, _FM_CACHE_NAME), encoding="utf-8")
-        with fh:
-            data = json.load(fh)
+        if cache_path is None:
+            raise LookupError("small folder: read uncached")
+        fkey = _fm_file_key(cache_path)
+        memo = _FM_MEMO.get(cache_path)
+        if memo is not None and fkey is not None and memo[0] == fkey and memo[1] == os.path.abspath(memory_dir):
+            data = {"memory_dir": memo[1], "version": _FM_CACHE_VERSION, "files": memo[2]}
+        else:
+            with io.open(cache_path, encoding="utf-8") as fh:
+                data = json.load(fh)
         if isinstance(data, dict) and data.get("memory_dir") == os.path.abspath(memory_dir) \
                 and data.get("version") == _FM_CACHE_VERSION \
                 and isinstance(data.get("files"), dict):
             cached = data["files"]
+            if fkey is not None:
+                _FM_MEMO[cache_path] = (fkey, data["memory_dir"], cached)
         elif isinstance(data, dict) and data.get("memory_dir") == os.path.abspath(memory_dir) \
                 and data.get("version") == 4 and isinstance(data.get("files"), dict):
             # 4 -> 5 changed only the lenient candidate, so only entries that cached one are re-read (1 of 18,047 on
@@ -522,12 +566,7 @@ def _frontmatter_targets(memory_dir):
                       if not (isinstance(v, list) and len(v) == 6 and v[5])}
     except Exception:
         cached = {}
-    files, out, dirty, stale = {}, {}, False, 0
-    pointers = {}
-    LAST_POINTERS.clear()
-    import time as _time
-    now_ns = _time.time_ns()
-    entries = _md_files(memory_dir)
+    files, out, dirty = {}, {}, False
     canon = _canonical_names(entries)
     for entry in entries:
         name = entry.name
@@ -541,22 +580,13 @@ def _frontmatter_targets(memory_dir):
         recent = (now_ns - key[1]) < 5_000_000_000
         if not recent and isinstance(prev, list) and len(prev) == 6 and prev[:4] == key:
             strict, candidate = prev[4], prev[5]
+            files[name] = prev   # equal to key + [strict, candidate]; the rows are never mutated, so it is shared
         else:
             head = _read_frontmatter(entry.path)
             strict = _frontmatter_target(head)
             candidate = "" if strict else _lenient_candidate(head)
-            # A re-read that parses to what the cache already holds changed only its stamp. CONSCIENCE.md is
-            # rewritten by a Stop hook on every turn, so counting that as dirty rewrote this 3.4 MB cache on
-            # every recall (30 Oct). Such a file is re-read next call instead; the map returned is the same.
-            # A new file waits the same way: agents file a memory every few minutes, so writing on each one
-            # still rewrote the cache on most recalls (2.6 s of a 15 s recall at load 48).
-            if prev is None or (isinstance(prev, list) and len(prev) == 6 and prev[4:] == [strict, candidate]):
-                stale += 1
-            else:
-                dirty = True
-        files[name] = key + [strict, candidate]
-        if strict or candidate:
-            pointers[name] = (strict, candidate)
+            dirty = True
+            files[name] = key + [strict, candidate]
         # a prose pointer routes only while its target exists, judged against this listing on every call; a target is
         # spelled as its file is, so the resolver's exact-name check finds it
         if strict:
@@ -565,19 +595,26 @@ def _frontmatter_targets(memory_dir):
             target = canon.get(os.path.normcase(candidate), "") if candidate else ""
         if target and SLUG_RX.fullmatch(target):
             out[name[:-3]] = target
-    # a deleted file's leftover entry is never looked up, so removals alone do not force a write
-    if dirty or stale > 64 or (files and not cached):
+    if cache_path is not None and (dirty or len(files) != len(cached)):
         try:
+            os.makedirs(os.path.dirname(cache_path), exist_ok=True)
             tmp = cache_path + ".tmp.%d" % os.getpid()
             with io.open(tmp, "w", encoding="utf-8") as fh:
-                # dumps, not dump: json.dump streams through the pure-Python encoder; dumps takes the
-                # C encoder (about 4x faster on a 5 MB cache) and writes the same bytes
+                # dumps, not dump: json.dump streams through the pure-Python encoder (0.5-0.85 s for this 5 MB
+                # cache on 29 Oct); dumps takes the C encoder (0.14-0.23 s) and writes the same bytes
                 fh.write(json.dumps({"memory_dir": os.path.abspath(memory_dir),
                                      "version": _FM_CACHE_VERSION, "files": files}))
-            os.replace(tmp, cache_path)
+            fkey = _fm_file_key(tmp)   # taken before the rename, which keeps size, time and inode: a peer's
+            os.replace(tmp, cache_path)  # rewrite landing just after has another key and is read again
+            if fkey is not None:
+                _FM_MEMO[cache_path] = (fkey, os.path.abspath(memory_dir), files)
         except Exception:
-            pass
-    LAST_POINTERS.update(memory_dir=os.path.abspath(memory_dir), pointers=pointers)
+            # a failed write or rename (on Windows os.replace refuses while another process holds the cache open)
+            # used to leave its temp file behind: 246 of them, 818 MB, by 6 Nov
+            try:
+                os.remove(tmp)
+            except Exception:
+                pass
     return out
 
 
@@ -601,132 +638,37 @@ def resolve(slug, routes, known_slugs=None, max_hops=32):
     return original
 
 
-# 3 Nov 2026: fok_probe and spread_recall both call active_supersessions on every prompt, in the one
-# dispatcher process since the hooks went in-process, and each listed the whole memory folder: 0.45 s of a 0.72 s call
-# with 45k files. The slug set is kept per process and reused while the folder's inode, mtime and ctime are
-# unchanged. Creating, removing or renaming an entry moves the folder's mtime and ctime, so the set is right by
-# construction; the stat is read before the listing, so a change during the listing makes the next call list again.
-# Not covered: a *.md symlink whose target changes between file and directory, which the listing alone would notice.
-_KNOWN_SLUGS = {}
-
-
-def _known_slugs(memory_dir):
-    path = os.path.abspath(memory_dir)
-    try:
-        st = os.stat(path)
-        key = (st.st_ino, st.st_mtime_ns, st.st_ctime_ns)
-    except Exception:
-        key = None
-    hit = _KNOWN_SLUGS.get(path)
-    if key is not None and hit is not None and hit[0] == key:
-        return hit[1]
-    names = frozenset(entry.name[:-3] for entry in _md_files(memory_dir))
-    if key is not None:
-        _KNOWN_SLUGS[path] = (key, names)
-    return names
-
-
-# 5 Nov 2026: the per-process set above still costs every fresh process the whole listing (26 ms cold on a
-# 45,000-file memory folder), and fok_probe's call is the first in each prompt's dispatcher. active_supersessions only asks
-# about slugs that appear in a route (as source or target): it intersects the listing with the route keys and resolve()
-# tests membership of route targets only. So across processes it is enough to keep the known slugs among those route
-# names, under the same folder key (inode, mtime, ctime) taken before the listing. A hit needs the key unchanged and
-# every current route name inside the saved universe; anything else lists the folder as before. Same result by
-# construction; BRAIN_SUP_ROUTE_CACHE=0 turns it off.
-# One file for every folder, the newest ROUTE_KNOWN_MAX kept: a file per folder left one behind for each test's temp
-# memory folder (eight from one test run).
-ROUTE_KNOWN_MAX = 4
-
-
-def _route_known_path(memory_dir=None):
-    return os.path.join(os.path.dirname(os.path.abspath(__file__)), ".sup_route_known.json")
-
-
-def _route_known_all():
-    import json
-    try:
-        with io.open(_route_known_path(), encoding="utf-8") as fh:
-            data = json.load(fh)
-        return data if isinstance(data, dict) else {}
-    except Exception:
-        return {}
-
-
-def _dir_key(memory_dir):
-    try:
-        st = os.stat(os.path.abspath(memory_dir))
-        return [st.st_ino, st.st_mtime_ns, st.st_ctime_ns]
-    except Exception:
-        return None
-
-
-def _route_known(memory_dir, routes):
-    if os.environ.get("BRAIN_SUP_ROUTE_CACHE", "1") == "0":
-        return None
-    try:
-        import json
-        key = _dir_key(memory_dir)
-        hit = _KNOWN_SLUGS.get(os.path.abspath(memory_dir))
-        if key is None or (hit is not None and list(hit[0]) == key):
-            return None              # no key, or this process already holds the full set: use it
-        saved = _route_known_all().get(os.path.abspath(memory_dir)) or {}
-        if saved.get("key") != key:
-            return None
-        universe = set(saved.get("universe") or ())
-        if not (set(routes) <= universe and set(routes.values()) <= universe):
-            return None
-        return frozenset(saved.get("known") or ())
-    except Exception:
-        return None
-
-
-def _route_known_save(memory_dir, routes, known):
-    if os.environ.get("BRAIN_SUP_ROUTE_CACHE", "1") == "0":
-        return
-    try:
-        import json
-        hit = _KNOWN_SLUGS.get(os.path.abspath(memory_dir))
-        if hit is None or hit[1] is not known:
-            return                   # only a set _known_slugs keyed this call; its key was read before its listing
-        import tempfile
-        tmp_root = os.path.join(os.path.realpath(tempfile.gettempdir()), "")
-        if os.path.realpath(memory_dir).startswith(tmp_root):
-            return                   # test folders would push the live folder out of the cap
-        universe = set(routes) | set(routes.values())
-        data = _route_known_all()
-        data.pop(os.path.abspath(memory_dir), None)
-        data[os.path.abspath(memory_dir)] = {"key": list(hit[0]), "universe": sorted(universe),
-                                             "known": sorted(universe & known)}
-        while len(data) > ROUTE_KNOWN_MAX:
-            data.pop(next(iter(data)))          # oldest written first: json keeps insertion order
-        path = _route_known_path()
-        tmp = "%s.%d.tmp" % (path, os.getpid())
-        with io.open(tmp, "w", encoding="utf-8") as fh:
-            fh.write(json.dumps(data))
-        os.replace(tmp, path)
-    except Exception:
-        pass
-
-
 def active_supersessions(memory_dir, index_path=None, known_slugs=None,
                          include_frontmatter=False):
     """Return known historical slug -> existing terminal correction."""
-    routes = load_map(memory_dir, index_path=index_path,
-                      include_frontmatter=include_frontmatter)
     if known_slugs is None:
         # The prompt hook calls this in a fresh process on every turn.  ``listdir`` followed
         # by ``isfile`` paid one new path lookup for every memory (2,700+ on the live corpus,
         # roughly 100-180 ms on Windows).  ``scandir`` carries the directory-entry metadata
         # through the enumeration, while retaining the old contract: only real ``.md`` files
         # (including file symlinks) are eligible; a directory named ``*.md`` is not.
-        known_slugs = _route_known(memory_dir, routes)
-        if known_slugs is None:
-            known_slugs = _known_slugs(memory_dir)
-            _route_known_save(memory_dir, routes, known_slugs)
+        # 29 Oct 2026: the same listing feeds the frontmatter reader below, so a fresh process lists the 37.7k-file
+        # folder once, not twice (4.3 s a listing on the loaded laptop that morning)
+        import time as _time
+        listed_ns = _time.time_ns()
+        entries = _md_files(memory_dir)
+        known_slugs = {entry.name[:-3] for entry in entries}
     else:
+        entries = listed_ns = None
         known_slugs = set(known_slugs)
+    routes = load_map(memory_dir, index_path=index_path,
+                      include_frontmatter=include_frontmatter, entries=entries,
+                      listed_ns=listed_ns)
     active = {}
-    for slug in known_slugs.intersection(routes):   # resolve() returns a slug with no route unchanged
+    # 5 Nov 2026 (RECALL-10X, an agent): resolve() returns a slug with no route of its own unchanged on its
+    # first step, so only slugs that ARE routes can enter `active`. Walking those alone (626 of 52,727 on the live
+    # folder) gives the same dict, 0.37-0.69 s -> 0.002-0.023 s a call (scratchpad sup_split.py, copied to
+    # recall_10x_2026_10_29/served_profile_20261104/). BRAIN_SUP_ROUTED=0 walks every slug as before.
+    if os.environ.get("BRAIN_SUP_ROUTED", "1") != "0" and hasattr(routes, "keys"):
+        walk = known_slugs.intersection(routes.keys())
+    else:
+        walk = known_slugs
+    for slug in walk:
         endpoint = resolve(slug, routes, known_slugs=known_slugs)
         if endpoint != slug:
             active[slug] = endpoint
