@@ -37,11 +37,16 @@ with an exact CPU Dijkstra. These are Monte Carlo estimates, not proofs.
 2. **Why more samples at a = 0.6 cannot decide 0.6 against 2/3.** A cylinder of width W holds about n / W^(3/2)
    independent blocks, so below the threshold the skewness should decay like n^(-(1 - 3a/2)/2). At a = 0.6 that is a
    factor of 0.966 per doubling of n, which no feasible n can resolve.
-3. **Scaling collapse** (`fpp_cyl_c.py`, `collapse_agg.py`, table `collapse_table.txt`). If the transversal scale is
-   n^(2/3), then with W = c n^(2/3) the skewness should depend on c alone. At n = 512 and 1024 it does for c = 1
-   (-0.206 and -0.187) and c = 2 (-0.287 and -0.296), within one standard error, and it grows in magnitude with c:
-   about 0 at c = 0.25 and -0.5 at c = 4. At c = 0.5 the two values differ by about 2.4 se (-0.006 and -0.133). The
-   cells at n = 2048 and 4096 have too few samples to test the collapse. The c = 0.25 and c = 4 run ended early.
+3. **Scaling collapse** (`fpp_cyl_c.py`, `collapse_agg.py`, table `collapse_table.txt`, rows `fpp_rows_mac1_collapse*.jsonl`
+   and `fpp_rows_cuda_collapse_n4096.jsonl`). If the transversal scale is n^(2/3), then with W = c n^(2/3) the skewness
+   should depend on c alone. For n = 1024, 2048 and 4096 it reads -0.13, -0.08, -0.11 at c = 0.5 (se 0.03 to 0.05),
+   -0.19, -0.08, -0.18 at c = 1 (se 0.05 to 0.07) and -0.30, -0.27, -0.43 at c = 2 (se 0.07 to 0.10). Within each c the
+   values agree to about two standard errors and do not drift with n; across c they move from near zero toward -0.3 to
+   -0.4 (c = 4 has 20 to 64 samples and is only negative). The value off the pattern is c = 0.5 at n = 512 (-0.006).
+   This also accounts for item 1: at a = 0.6, c = n^(-1/15) falls only from 0.69 to 0.57 between n = 256 and 4096, so
+   those cells stay in the c = 0.5 to 1 band. The test has a limit: if the true scale were n^b, the effective c would
+   drift by 4^(2/3 - b) between n = 1024 and 4096, 10 percent for b = 0.6, which is too small to see here. The collapse
+   supports a scale near n^(2/3) but fixes the exponent only to about 0.6 to 0.73.
 
 The data are consistent with a threshold at 2/3 and with n^(2/3) as the transversal scale. They cannot separate 2/3
 from nearby exponents, because finite-size corrections are large at n <= 4096: the growth of the standard deviation

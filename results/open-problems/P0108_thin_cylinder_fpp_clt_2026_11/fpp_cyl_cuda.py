@@ -1,9 +1,10 @@
-"""P0108 numerics, CUDA port of fpp_cyl.py (an agent, 13 Nov 2026): first-passage percolation across a thin
+"""P0108 numerics, CUDA port of fpp_cyl.py (13 Nov 2026): first-passage percolation across a thin
 cylinder (Z_W x {0..n-1}), iid Exp(1) site weights, T = min over paths from column 0 to column n-1 of the summed site
 weights (both ends included). Same solver (Bellman-Ford to its fixed point, 64 sweeps between checks), same row format
 as the Mac (MLX) version plus "dev": "cuda", so fpp_agg.py combines both files. Monte Carlo only, no training.
 
   python fpp_cyl_cuda.py <rows.jsonl> <budget_s>      env FPP_NS, FPP_AS as in fpp_cyl.py; stops on ./STOP
+  FPP_CS=0.5,1,2 switches to widths W = c n^(2/3) (rows carry "c" instead of "a"), as fpp_cyl_c.py does on the Mac.
   python fpp_cyl_cuda.py --check                      small exact check against a CPU Dijkstra
 """
 import sys, os, json, time, heapq
@@ -12,7 +13,8 @@ import torch
 DEV = "cuda"
 NS = [int(x) for x in os.environ.get("FPP_NS", "256,512,1024,2048").split(",")]
 AS = [float(x) for x in os.environ.get("FPP_AS", "0.33,0.5,0.6,0.667,0.75,0.85,1.0").split(",")]
-ELEMS = 24 * 1024 * 1024
+CS = [float(x) for x in os.environ["FPP_CS"].split(",")] if os.environ.get("FPP_CS") else None
+ELEMS = int(os.environ.get("FPP_ELEMS", 24 * 1024 * 1024))
 INF = float("inf")
 
 
@@ -100,14 +102,30 @@ def wait_for_idle_gpu():
     return True
 
 
+def no_power_throttle():
+    # A hidden BelowNormal process on a busy Windows box is power-throttled (EcoQoS) by default and got 1.6 cpu-seconds
+    # in its first 7 minutes on 15 Nov. Opt out of the throttle; the priority stays as launched.
+    if os.name != "nt":
+        return
+    try:
+        import ctypes
+        class P(ctypes.Structure):
+            _fields_ = [("v", ctypes.c_ulong), ("mask", ctypes.c_ulong), ("state", ctypes.c_ulong)]
+        k = ctypes.windll.kernel32
+        k.SetProcessInformation(k.GetCurrentProcess(), 4, ctypes.byref(P(1, 1, 0)), ctypes.sizeof(P))
+    except Exception:
+        pass
+
+
 def main():
+    no_power_throttle()
     out, budget = sys.argv[1], float(sys.argv[2])
     if os.environ.get("FPP_WAIT_IDLE", "1") != "0" and not wait_for_idle_gpu():
         return 3
     configs = []
     for n in NS:
-        for a in AS:
-            W = max(3, int(round(n ** a)))
+        for a in (CS or AS):
+            W = max(3, int(round(a * n ** (2.0 / 3.0)))) if CS else max(3, int(round(n ** a)))
             configs.append((n, a, W, int(max(4, min(512, ELEMS // (W * n))))))
     t0 = time.time()
     seed = 500000 + int(time.time()) % 100000   # disjoint from the Mac runs' seed range (0..99999)
@@ -122,7 +140,7 @@ def main():
                 gen.manual_seed(seed * 1000003 + k)
                 s = time.time()
                 T, it, capped = one_batch(B, W, n, gen)
-                f.write(json.dumps({"n": n, "a": a, "W": W, "B": B, "iters": it, "capped": capped,
+                f.write(json.dumps({"n": n, ("c" if CS else "a"): a, "W": W, "B": B, "iters": it, "capped": capped,
                                     "secs": round(time.time() - s, 2), "seed": seed, "k": k, "dev": "cuda", "T": T}) + "\n")
                 f.flush()
 
