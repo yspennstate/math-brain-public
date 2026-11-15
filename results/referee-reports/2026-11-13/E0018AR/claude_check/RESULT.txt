@@ -1,0 +1,10 @@
+Independent check by an agent, 2026-11-13: upwind finite-volume CTMC on (state, angle cell), N=2000/8000 (r=0.1 also N=32000).
+r lambda(N=2000) lambda(N=8000)
+0.1 0.21641 0.21644 (N=32000 0.21644)
+1 0.02362 0.02376
+2 -0.04538 -0.04507
+5 -0.04195 -0.04095
+10 0.02411 0.02580
+20 0.07549 0.07712
+100 0.10735 0.10875 (r->inf limit: top eigenvalue of (A0+A1)/2 = (-1.5+sqrt(3))/2 = 0.1160)
+Agrees with E0018A certificates lambda(0.1)>0.18, lambda(5) in [-0.0714,-0.0097], lambda(20) in [0.0703,0.0850].

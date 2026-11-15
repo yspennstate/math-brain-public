@@ -1,0 +1,35 @@
+E0022 proof audit, 13 November 2026
+
+Status: PARTIAL; no general theorem or counterexample obtained.
+
+1. Recomputed the exponent sign from E exp(i z.X_t)=exp(-t psi).
+   Physical drift b contributes -i b.z. Removing a finite jump measure changes
+   canonical a by +integral of its small jumps, yielding the d_S used in the proof.
+2. Re-derived the covariance form from the full matrix, then checked 196
+   rational cases. Its eigenvalues are 4 and 4 epsilon. The exceptional line
+   has zero real exponent and nonzero linear imaginary exponent.
+3. Independently exhibited the Gaussian example's thin nonpolar hyperplane:
+   difference coordinate evolves deterministically, crossing it once.
+4. Differentiated the ray sector ratio to obtain its maximum. Re-derived the
+   angular singularity using half cot(delta), and verified the stable radial
+   maximum and alpha=1 boundary separately.
+5. Checked both energy-kernel denominator identities symbolically by expansion,
+   then in 80 exact-rational cases. Dominated convergence is applied only with
+   the ambient finite-energy majorant and the stated resolvent-density hypothesis.
+6. Audited the compound-Poisson argument at jump endpoints as well as on holding
+   intervals. Condition on J only; Y remains an independent Levy process.
+   Reverse transfer uses a no-jump event of positive probability.
+7. Audited the finite-off-subspace proof for Gaussian containment, drift removal,
+   correct state space on S, and the absence of any independence assumption on
+   the two observed projections. The independence used is justified by the
+   Levy-Ito split, not by the projection hypothesis.
+8. Matched Question 1 and Theorems 3.6, 3.7 and Remark 3.8 to the page-marked
+   source and an independent pdftotext extraction. The 2018 lemma omits both a
+   drift/complement condition and Gaussian containment; its literal repair by
+   only an extra projection hypothesis is contradicted by Example 3.5.
+9. Kept product-measure energy statements separate from the all-measures (H)
+   criterion. Did not assume general sum/product closure or closure under weak
+   convergence. Did not infer non-(H) from sector failure.
+10. All source artifacts are UTF-8 plain text; source PDF bytes existed only in
+    memory. Historical originals and the publisher's 2021 full survey were not
+    all accessible; limitations are explicit in REPORT.md.

@@ -1,0 +1,31 @@
+{
+  "start_utc": "2026-11-13T08:43:43.676625+00:00",
+  "priority": 10,
+  "threads": 1,
+  "requested_memory_limit_bytes": 4294967296,
+  "resource_limits": {
+    "RLIMIT_AS": {
+      "error": "current limit exceeds maximum limit",
+      "existing": [
+        9223372036854775807,
+        9223372036854775807
+      ]
+    },
+    "RLIMIT_RSS": {
+      "error": "current limit exceeds maximum limit",
+      "existing": [
+        9223372036854775807,
+        9223372036854775807
+      ]
+    }
+  },
+  "compute_status_at_start": "warn",
+  "compute_mode_at_start": "owner_away_open",
+  "command": [
+    "./code/arw",
+    "--simulate",
+    "data/runs.csv"
+  ],
+  "end_utc": "2026-11-13T08:44:08.892817+00:00",
+  "returncode": 0
+}
