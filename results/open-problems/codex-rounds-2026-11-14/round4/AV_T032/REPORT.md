@@ -1,0 +1,5 @@
+VERDICT: PARTIAL verified the deterministic single-replacement collision estimate underlying the earlier conditional insertion argument
+The earlier result survives independent rechecking. New: PROOF.md derives Lemma 6.3 for both bridge laws in the large-torus regime K>50, uniformly over deterministic regular opponents; no gap was found in this estimate.
+The bounded follow-up search found no new settlement. The October 5, 2026 positive-temperature manuscript still claims dilute hard-sphere constant-mode condensation; the documented Lean theorem concerns ground states, and this audit does not verify the full positive-temperature proof or the full row.
+Checks: nice -n 15 env OMP_NUM_THREADS=1 python3 prior_audit.py and python3 audit.py (the latter also run with that same nice/env prefix); both passed. No numerical simulation or Lean build was attempted. Next check Lemma 7.2's conditional law after exposure/allocation; thermal certificate and route encounter estimates also remain unchecked.
+Task: “Verify: has open problem T032 been settled by the OpenAI math release?” — report time 2026-11-15T04:22:47.861570+04:00 (request clock time not supplied).

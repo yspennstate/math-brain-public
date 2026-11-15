@@ -1,0 +1,25 @@
+All checks passed.
+scalar_recheck: {"exact_scalar_orbit_and_kernel_error": 2.220446049250313e-16, "normal_moment_product_error": 1.3322676295501878e-15, "scalar_limit_vs_matrix_profile_error": 1.822542117224657e-12}
+dense: {"max_numerical_kernel_error": 8.518963312553751e-12, "max_numerical_update_error": 6.827871601444713e-14, "numerical_kernel_partials": 432}
+rates: {"analytic_M_rate": [-0.11205629478894939, -0.05154037860477461, -0.05154037860477461, -0.056028147394474696], "max_rate_error": 2.3180769803676782e-10, "numerical_M_rate": [-0.11205629502075709, -0.05154037860477531, -0.05154037860477531, -0.056028147454867394], "one_layer_constant_kernel": true, "pair_sum": 15.767360802925927, "pair_sum_second_way": 15.767360802925927}
+explicit: {"B1": 1.0033333333333334, "B_polynomial_error": 0.0, "C2_22_at_depth_one": 0.0, "C2_22_at_depth_zero": 0.007999999999999985, "C2_22_formula_error": 1.9949319973733282e-17, "M1_numerical": [1.0033333333333334, 0.05008333333333326, 0.05008333333333326, 1.0066700000000495], "M1_polynomial": [1.0033333333333334, 0.050083333333333334, 0.050083333333333334, 1.00667], "commutator_entry_formula_error": 2.0752307207730358e-20, "endpoint_commutator": [0.00017999999999999982, -0.0028799999999999954, 2.0000000000000215e-06, -0.00017999999999999982], "eta": 0.2, "initial_M_rate": [0.0, 0.25000000000104167, 0.25000000000104167, 0.0], "polynomial_error": 4.951594689828198e-14}
+t      n       max full-state error
+0.5      32   0.005257971049
+0.5     128   0.002242808586
+0.5     512   0.0003583684793
+0.5    2048   0.0001325679896
+0.5    8192   3.534222484e-05
+1.0      32   0.01588113158
+1.0     128   0.003343502255
+1.0     512   0.0009280438499
+1.0    2048   0.0002138960677
+1.0    8192   5.609617701e-05
+2.0      32   0.03011930654
+2.0     128   0.01200030759
+2.0     512   0.003243333723
+2.0    2048   0.000749772108
+2.0    8192   0.0001883916879
+Profile quadrature refinement: [{"t": 0.5, "grid512_vs_2048": 1.8368587900718936e-11, "grid1024_vs_2048": 3.673717417513461e-12}, {"t": 1.0, "grid512_vs_2048": 1.3808421073235877e-10, "grid1024_vs_2048": 2.7618796138995094e-11}, {"t": 2.0, "grid512_vs_2048": 1.4922187929755637e-09, "grid1024_vs_2048": 2.9844349214158683e-10}]
+Gain-order checks: [{"n": 128, "max_order_difference": 6.514802253221319e-09}, {"n": 512, "max_order_difference": 4.8822723641706034e-11}, {"n": 2048, "max_order_difference": 3.872502318813531e-11}]
+Degenerate cases: stationary residuals and bias-only training passed.
+Resources: {"OMP_NUM_THREADS": "1", "peak_rss_bytes": 43991040, "priority": 20, "seconds": 1.7911947909742594}

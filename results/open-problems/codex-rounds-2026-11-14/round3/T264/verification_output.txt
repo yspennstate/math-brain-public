@@ -1,0 +1,15 @@
+PASS: earlier exact two-point risk, independent scalar integration
+theta=0.0001 tau=+1 Q=20000.4142115 theta^2*R2=0.999893179732 theta^2*oddR2=0.500000000417
+theta=0.0001 tau=-1 Q=20002.0000333 theta^2*R2=0.999968170753 theta^2*oddR2=0.499949999167
+theta=0.03 tau=+1 Q=67.0802804079 theta^2*R2=0.968901216614 theta^2*oddR2=0.500037501688
+theta=0.03 tau=-1 Q=68.6767802273 theta^2*R2=0.990612871233 theta^2*oddR2=0.484927865438
+theta=0.2 tau=+1 Q=10.4104600139 theta^2*R2=0.82528593652 theta^2*oddR2=0.501670005298
+theta=0.2 tau=-1 Q=12.0720000137 theta^2*R2=0.945071579021 theta^2*oddR2=0.397612198889
+theta=1 tau=+1 Q=2.39999834474 theta^2*R2=0.644720003979 theta^2*oddR2=0.543835662418
+theta=1 tau=-1 Q=4.51628413888 theta^2*R2=1.23851471236 theta^2*oddR2=0.127616946701
+PASS: interpolation, recovered multipliers, primal=dual, continuous pricing (max error 9.74e-13)
+PASS: independent circle risk vs closed and kernel formulas (max relative error 3.95e-10)
+PASS: S^2 direct surface integral 15.7513149432, formula 15.7511929854
+PASS: out-of-domain theta=1.2 candidate fails interpolation by 0.12928494679; restriction is necessary for this formula
+All assertions passed.
+Resources: {'elapsed_seconds': 2.3183023749734275, 'peak_rss_bytes': 15204352, 'nice': 20, 'OMP_NUM_THREADS': '1'}

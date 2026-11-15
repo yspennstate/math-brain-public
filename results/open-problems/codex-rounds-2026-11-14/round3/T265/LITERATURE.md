@@ -1,0 +1,13 @@
+# Bounded literature check, 15 November 2026
+
+Search and source opening finished within five minutes of the session's start. No verified solution of the GD/ReLU question was found. This is not a claim of literature completeness.
+
+Ichiro Hashimoto, *Directional Convergence, Benign Overfitting of Gradient Descent in leaky ReLU two-layer Neural Networks*, [arXiv:2505.16204v3](https://arxiv.org/html/2505.16204v3), revised 10 February 2026. Opened the abstract and full HTML, particularly Assumption 6.1 and Theorem 6.2. The probabilistic assumptions still contain tr(Sigma)>=C n ||Sigma||_F in case (a) and tr(Sigma)>=C n ||Sigma|| in case (b). The inequalities tr(Sigma)<=sqrt(d)||Sigma||_F and tr(Sigma)<=d||Sigma|| imply d>=C^2 n^2 and d>=C n for nonzero covariance, respectively. Thus these sufficient conditions do not cover n/d tending to infinity. This deduction does not restrict the deterministic theorem's scope.
+
+Kedar Karhadkar, Erin George, Michael Murray, Guido Montúfar, Deanna Needell, *Benign overfitting in leaky ReLU networks with moderate input dimension*, [arXiv:2403.06903v3](https://arxiv.org/abs/2403.06903), revised 2 October 2024. Opened the arXiv page: it states d=Omega(n) for leaky ReLU networks trained by hinge-loss GD. It does not establish the diverging n/d regime.
+
+Xingyu Xu, Yuantao Gu, *Benign overfitting of non-smooth neural networks beyond lazy training*, [AISTATS 2023 paper](https://proceedings.mlr.press/v206/xu23k/xu23k.pdf). Opened the full PDF. Although it covers ordinary ReLU, equation (6c) assumes input dimension p>=C(n||mu||^2+n^2 log(n/delta)). Thus this older result does not settle the target regime.
+
+Junhyung Park, Patrick Bloebaum, Shiva Prasad Kasiviswanathan (names as on arXiv), *A Classical View on Benign Overfitting: The Role of Sample Size*, [arXiv:2505.11621v1](https://arxiv.org/html/2505.11621v1), and *Benign Overfitting for Regression with Trained Two-Layer ReLU Networks*, [arXiv:2410.06191](https://arxiv.org/abs/2410.06191). Opened both abstracts and the newer full HTML. The newer paper studies almost benign overfitting for regression under gradient flow. The earlier worker's local concern persists: Lemma 17(2) displays lambda_min>=n/(5d), while the stated unit-sphere derivative kernel has diagonal 1/2, implying lambda_min<=1/2. The displayed lower bound cannot hold when n>5d/2. This local contradiction prevents using that lemma to verify a solution; it does not refute every conclusion of the paper.
+
+The construction in PROOF.md is a direct elementary argument. No novelty claim relative to all work on interpolating estimators is made. Its role here is to extend the earlier session's affine obstruction to a concrete nonlinear interpolation rule. It proves no result about GD.

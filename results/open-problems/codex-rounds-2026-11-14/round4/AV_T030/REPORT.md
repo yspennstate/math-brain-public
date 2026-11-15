@@ -1,0 +1,11 @@
+VERDICT: PROVED the epsilon-to-zero passage in prop:interior-reciprocal under the preprint's bounded-density and strict-contraction hypotheses, including the infinite diagonal
+
+New beyond round 3: PROOF.md proves uniform L2 convergence of the regularized Green sources and operator-norm convergence, with error at most epsilon*sqrt(3*A/(2*pi)) for each source and epsilon*sqrt(3*A*m/(2*pi)) for the operator. Both resolvents remain bounded by 1/(1-d); finite corrections converge even on the diagonal, while the full diagonal reciprocal is at most 2*pi*epsilon. A separate nonnegative-chain argument gives the same limit. This completes the interior reciprocal-inertia proposition from the earlier bounded-kernel result.
+
+Recheck: independently factored the finite block inverse and rederived the earlier quadrature estimate. Command: OMP_NUM_THREADS=1 nice -n 15 python3 ~/codex_op_1114r3/briefs/AV_T030/audit_resolvent.py; all 34 elimination orders and 18 perturbation checks passed again. Command: OMP_NUM_THREADS=1 nice -n 15 python3 check_singular_limit.py; exact moment recurrences, 28 high-precision regularization cases, four diagonal cases and 18 exact scalar correction checks passed. Both runs finished in under one second with peak RSS below 15 MB and inherited priority 20.
+
+What failed and what remains: atomic measures break the L2 source assertion, and the critical spectral threshold can make the inverse singular; both cases are excluded by the manuscript's hypotheses. No error was found in the checked passage. No later full strict convex-planar resolution was identified in the bounded literature search; VERIFY.md retains PARTIAL-CLAIMED for the exact T030 row because the relevant OpenAI theorem assumes smooth boundary. The remaining boundary and eigenfunction arguments are not certified here, and no new hot-spots domain class is proved.
+
+Next: check lem:bordered, first the radial Green limits at fixed compact support, then cutoff removal and the finiteness of the full boundary kernels without assuming individual Poisson sections belong to L2(q).
+
+Task: “Verify: has open problem T030 been settled by the OpenAI math release?” — 15 November 2026, about 04:14 Asia/Tbilisi.

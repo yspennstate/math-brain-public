@@ -1,0 +1,10 @@
+# Bounded literature check
+
+Search begun 14 November 2026 at 23:34 UTC and stopped by 23:35:52 UTC, within the five-minute limit. No verified new resolution of the requested nonlinear joint depth-width problem was found. This is not an exhaustive absence claim. The references below were actually opened with the web tool.
+
+- Jeffrey Pennington, Samuel S. Schoenholz, Surya Ganguli, *Resurrecting the sigmoid in deep learning through dynamical isometry: theory and practice*, [arXiv:1711.04735](https://arxiv.org/abs/1711.04735). Opened the arXiv page. It computes Jacobian spectra by free probability and studies sigmoid isometry with orthogonal initialization.
+- Benoît Collins, Tomohiro Hayase, *Asymptotic Freeness of Layerwise Jacobians Caused by Invariance of Multilayer Perceptron: The Haar Orthogonal Case*, [arXiv:2103.13466](https://arxiv.org/abs/2103.13466). Opened the page and [v4 PDF](https://arxiv.org/pdf/2103.13466). This provides the orthogonal asymptotic-freeness justification, not a verified uniform growing-depth estimate in this check.
+- Boris Hanin, Tianze Jiang, *Global Universality of Singular Values in Products of Many Large Random Matrices*, [arXiv:2503.07872](https://arxiv.org/abs/2503.07872). Opened the arXiv page. Its joint-limit theorem concerns independent matrices with i.i.d. entries. The earlier worker's reading of the PDF records the depth-root normalization. This does not cover the derivative-dependent orthogonal factors in the task.
+- Nathanaël Haas, François Gatine, Augustin M Cosse, Zied Bouraoui, *Why Deep Jacobian Spectra Separate: Depth-Induced Scaling and Singular-Vector Alignment*, [PMLR 306 (2026), 39127–39155](https://proceedings.mlr.press/v306/haas26a.html). Opened the proceedings page. The abstract treats fixed gates, Lyapunov exponents, finite-depth corrections and singular-vector alignment. No nonlinear joint-limit formula/isometry theorem was asserted there.
+
+The present one-layer identities use elementary finite-dimensional Haar invariance; no theorem from these papers is invoked in their proof. No novelty or priority claim is made for those identities.
