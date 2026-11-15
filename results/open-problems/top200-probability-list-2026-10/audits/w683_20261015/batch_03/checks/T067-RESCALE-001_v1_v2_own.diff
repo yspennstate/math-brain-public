@@ -1,0 +1,32 @@
+--- T067-RESCALE-001_v1.md
++++ T067-RESCALE-001_v2.md
+@@ -1,4 +1,4 @@
+-# T067-RESCALE-001 v1: moving Potts attenuation into a posterior law
++# T067-RESCALE-001 v2: moving Potts attenuation into a posterior law
+ 
+ Status: proof (unaudited). Elementary channel identity, no novelty assertion.
+ 
+@@ -15,7 +15,7 @@
+ 
+ For a tuple of d independent base observations, the component likelihood products therefore agree exactly under the coordinatewise map S_c. The product marginal measure mu^d is pushed to ((S_c)_*mu)^d. Their joint unconditional tuple density is sum_i product_j h_i(p_j)/q, and their posterior is the vector of those products divided by its sum. Both are identical under this map, proving (R). All denominators are positive since eta<1. Equivalently S_c is invertible on its image for c>0, so this is an observation relabeling of the same root experiment.
+ 
+-Since S_c(p)-u=c(p-u), homogeneous input moments of degree k scale by c^k. For example, use the q=3 two-child eta-prefix inequality in T067-TERNARY-MOMENTS-001 v1:
++Since S_c(p)-u=c(p-u), homogeneous input moments of degree k scale by c^k. For the following q=3 moment corollary only, fix eta=eta_ref=2887/5000 and assume mu is fully coordinate-permutation invariant. The identity (R) above remains valid for arbitrary 0<lambda<=eta<1. Use the two-child eta_ref-prefix inequality in T067-TERNARY-MOMENTS-001 v1:
+ 
+     U(B_eta^(2)(rho))<=2eta^4 U(rho)+(3/5)M(rho)^2,
+     M(rho)=E|3(p-u)|^2, U(rho)=E|3(p-u)|^4.
+@@ -26,3 +26,14 @@
+        <=2lambda^4 U(mu)+(3/5)(lambda/eta)^4 M(mu)^2.
+ 
+ For the original source inequality this corollary assumes full permutation symmetry, inherited by S_c; the identity (R) itself does not. The equality transfers any signed statistic as well as convex ones, but it does not say that a signed cubic moment is monotone under degradation. T067-DEGREE4-LOCAL-001 v1 uses this corollary at lambda=1/2.
++
++## Version2 correction and audit scope
++
++The unrestricted extra F1 corollary in v1 was false at arbitrary eta. This
++version restricts that corollary to the exact cited reference eta_ref=2887/5000
++and0<lambda<=eta_ref. Source section1 states "Set eta=2887/5000." and (F1)
++states "U(nu)<=2 eta^4 U(mu)+(3/5)M(mu)^2." Applying F1 to rho=(S_c)_*mu
++proves the corrected bound since U(rho)=c^4U(mu), M(rho)^2=c^4M(mu)^2.
++Identity(R), its general parameter range and its proof are unchanged.
++w683 and the lead retain PASS for(R), while the v1 proof file as a whole has
++a FIX for its extra corollary. This new exact version awaits review.

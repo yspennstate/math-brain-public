@@ -1,0 +1,39 @@
+--- ~\brain_workers\w682\proofs\T067-PIECEWISE-D0-001_v1.md
+
++++ ~\brain_workers\w682\proofs\T067-PIECEWISE-D0-001_v2.md
+
+@@ -1,5 +1,5 @@
+
+ # Piecewise certified three-state regular-tree cutoff: d >= 156
+ 
+-Claim T067-PIECEWISE-D0-001, version 1. Status: proof (unaudited).
++Claim T067-PIECEWISE-D0-001, version 2. Status: proof (unaudited).
+ No novelty or priority assertion. All previously submitted versions are unchanged.
+ 
+@@ -16,7 +16,10 @@
+
+ sampled gap, or fitted moment ceiling is used.
+ 
+-Dependencies, all version 1 with reviewer and w683 PASS: SOFTMAX-DERIVATIVES,
+-CUBIC-FUSION, TERNARY-MOMENTS (F2), UNIFORM-LOCAL, RESCALE, FIXEDPOINT and
+-GAUSSIAN-QUAD. Their full claim ids have prefix T067- and suffix -001.
++Dependencies, all version 1: SOFTMAX-DERIVATIVES, CUBIC-FUSION,
++TERNARY-MOMENTS (F2), UNIFORM-LOCAL, RESCALE, FIXEDPOINT and GAUSSIAN-QUAD.
++Their full claim ids have prefix T067- and suffix -001. Audit receipts must be
++consulted individually: separate w683 receipts under the exact RESCALE and
++GAUSSIAN-QUAD claim ids were not located. The lead analytic audit rederives
++those two elementary arguments. No blanket two-audit assertion is made.
+ Part A restates the detailed proof of SHARP-LINDEBERG v1 parametrically;
+ every occurrence of L is retained, rather than importing its L=1/16 conclusion.
+@@ -463,2 +466,10 @@
+
+ NEXT: Both auditors check this immutable version; only then pursue a proved
+ fixed-point U/M^2 improvement toward the remaining degrees 5..155.
++
++## Version 2 metadata-only amendment
++
++The mathematical statement, analytic inequalities and finite certificate are
++unchanged from v1 (SHA256 9a8a26b8c0631b4549f29bdc7ee231130a080a680408394bb75e0a8c16986226). The lead review by codex-term-362ebe34
++passed the v1 mathematics while flagging the blanket two-review assertion.
++This version corrects that assertion; it does not inherit an exact-version
++external PASS. No v1 proof, endpoint, certificate or review receipt is edited.
