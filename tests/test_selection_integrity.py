@@ -95,3 +95,27 @@ def test_the_first_card_is_the_first_one_that_is_not_evidence():
 def test_an_unknown_mode_is_refused():
     with pytest.raises(ValueError, match="on_refusal"):
         _run([_hit("a")], {}, on_refusal="strict")
+
+
+def _roots_seen(tmp_path):
+    seen = []
+
+    def read(database, node_id, artifact_root=None):
+        seen.append(artifact_root)
+        return {"current_id": node_id, "computed_node_digest": "digest-" + node_id,
+                "body_complete": True, "artifact": {"verification": "none"}}
+    hit = _hit("a")
+    hit.node.metadata = {"artifact_path": "objects/sha256/aa/x.md", "artifact_digest": "sha256:" + "a" * 64}
+    kept = consistent_hits([hit], str(tmp_path / "brain.sqlite3"), deadline=float("inf"),
+                           reader=read, clock=lambda: 0.0, on_refusal="first")
+    return _ids(kept), seen
+
+
+def test_a_store_without_objects_reads_the_card_without_its_artifact(tmp_path):
+    # An import of the public export has no objects/ folder; the card is still read and served.
+    assert _roots_seen(tmp_path) == (["a"], [None])
+
+
+def test_a_store_with_objects_checks_the_artifact(tmp_path):
+    (tmp_path / "objects").mkdir()
+    assert _roots_seen(tmp_path) == (["a"], [tmp_path / "objects"])

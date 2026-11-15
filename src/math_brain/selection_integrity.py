@@ -40,7 +40,11 @@ def consistent_hits(hits, database, *, deadline, reader=read_current_note,
             continue
         metadata=node.metadata or {}
         declared=any(k in metadata for k in ('artifact_path','artifact_digest'))
-        root=Path(database).parent/'objects' if declared else None
+        # A store imported from the public export has no objects/ folder: the artifacts are not shipped. Reading
+        # with that missing root raised FileNotFoundError on 81,654 of 89,410 public cards, and the hook served
+        # nothing. Without the folder the artifact cannot be checked; the node digest and claim binding still are.
+        objects=Path(database).parent/'objects'
+        root=objects if declared and objects.is_dir() else None
         try:
             full=reader(database,node.id,artifact_root=root)
         except NoteReadError as exc:
