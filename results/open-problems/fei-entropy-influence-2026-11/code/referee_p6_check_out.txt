@@ -1,0 +1,53 @@
+AND formula: E/Inf = 2(1-2^-k) + 2^k Phi((1-2^-k)^2, 4^-k)
+  k= 1 exact 2.0000000000 formula 2.0000000000 |r-2|=0.000e+00  bound 2^-k(2k+2)=2.000e+00 ok
+  k= 2 exact 2.6724889840 formula 2.6724889840 |r-2|=6.725e-01  bound 2^-k(2k+2)=1.500e+00 ok
+  k= 3 exact 2.6340033909 formula 2.6340033909 |r-2|=6.340e-01  bound 2^-k(2k+2)=1.000e+00 ok
+  k= 4 exact 2.4537298426 formula 2.4537298426 |r-2|=4.537e-01  bound 2^-k(2k+2)=6.250e-01 ok
+  k= 5 exact 2.2922449382 formula 2.2922449382 |r-2|=2.922e-01  bound 2^-k(2k+2)=3.750e-01 ok
+  k= 6 exact 2.1780849472 formula 2.1780849472 |r-2|=1.781e-01  bound 2^-k(2k+2)=2.188e-01 ok
+  k= 7 exact 2.1048446026 formula 2.1048446026 |r-2|=1.048e-01  bound 2^-k(2k+2)=1.250e-01 ok
+  k= 8 exact 2.0602789571 formula 2.0602789571 |r-2|=6.028e-02  bound 2^-k(2k+2)=7.031e-02 ok
+  k= 9 exact 2.0340567515 formula 2.0340567515 |r-2|=3.406e-02  bound 2^-k(2k+2)=3.906e-02 ok
+  k=10 exact 2.0189842545 formula 2.0189842545 |r-2|=1.898e-02  bound 2^-k(2k+2)=2.148e-02 ok
+  k=11 exact 2.0104693779 formula 2.0104693779 |r-2|=1.047e-02  bound 2^-k(2k+2)=1.172e-02 ok
+
+star table (centre i=0, other i=1)
+  D=2 w= 4 n= 7 Inf_c=0.2344 E/Inf_c=2.685 Inf_o=0.1094 E/Inf_o=2.909
+  D=2 w= 6 n=11 Inf_c=0.0615 E/Inf_c=2.450 Inf_o=0.0303 E/Inf_o=2.351
+  D=2 w= 8 n=15 Inf_c=0.0156 E/Inf_c=2.178 Inf_o=0.0078 E/Inf_o=2.118
+  D=2 w=10 n=19 Inf_c=0.0039 E/Inf_c=2.060 Inf_o=0.0019 E/Inf_o=2.037
+  D=3 w= 5 n=13 Inf_c=0.1760 E/Inf_c=2.692 Inf_o=0.0549 E/Inf_o=2.666
+  D=3 w= 7 n=19 Inf_c=0.0461 E/Inf_c=2.378 Inf_o=0.0151 E/Inf_o=2.225
+  D=4 w= 5 n=17 Inf_c=0.2275 E/Inf_c=2.690 Inf_o=0.0515 E/Inf_o=2.728
+
+rows and columns of an m x m array
+  m=3 ratio 2.6293 (coordinate 0, d=2)
+  m=4 ratio 3.2454 (coordinate 0, d=2)
+
+lemma / theorem / proposition checks
+  star D=2 w=4                 pairs  21  ratios 2.685..2.909  failures 0
+  star D=2 w=6                 pairs  55  ratios 2.351..2.450  failures 0
+  star D=3 w=5                 pairs  52  ratios 2.666..2.692  failures 0
+  star D=4 w=5                 pairs  68  ratios 2.689..2.728  failures 0
+  star D=2 w=8                 pairs 105  ratios 2.118..2.178  failures 0
+  grid m=3                     pairs  18  ratios 2.629..2.629  failures 0
+  grid m=4                     pairs  48  ratios 3.245..3.245  failures 0
+  rand n=15 w=4 D<=2 #t=5      pairs  36  ratios 3.024..3.394  failures 0
+  rand n=17 w=4 D<=3 #t=4      pairs  33  ratios 2.984..3.439  failures 0
+  rand n=15 w=5 D<=3 #t=6      pairs  60  ratios 3.118..3.118  failures 0
+  rand n=15 w=5 D<=2 #t=4      pairs  56  ratios 2.855..2.873  failures 0
+  rand n=15 w=5 D<=3 #t=6      pairs  60  ratios 3.118..3.118  failures 0
+  rand n=14 w=5 D<=4 #t=4      pairs  56  ratios 2.855..2.873  failures 0
+  rand n=16 w=4 D<=3 #t=8      pairs  48  ratios 2.712..3.598  failures 0
+  rand n=17 w=5 D<=4 #t=7      pairs  68  ratios 3.113..3.145  failures 0
+  rand n=16 w=5 D<=4 #t=6      pairs  64  ratios 2.996..3.120  failures 0
+  rand n=15 w=5 D<=3 #t=4      pairs  60  ratios 2.712..2.873  failures 0
+  rand n=15 w=5 D<=2 #t=6      pairs  60  ratios 3.118..3.118  failures 0
+  rand n=15 w=4 D<=4 #t=7      pairs  45  ratios 2.754..3.777  failures 0
+  rand n=16 w=5 D<=3 #t=5      pairs  64  ratios 2.909..2.994  failures 0
+  rand n=17 w=4 D<=4 #t=6      pairs  45  ratios 2.724..3.699  failures 0
+
+totals: {'pairs': 1122, 'lemA': 1122, 'lemh': 1122, 'lemN': 1122, 'lemN_na': 0, 'thm': 1077, 'thm_na': 45, 'prop': 1122, 'maxfrac': 0.1456145303248823}
+
+Theorem lin derivative: min over (0,1/4] = 2.8145 (paper's lower bound log2 17 - log2e*15/17 = 2.8145)
+  second piece log2e(1-2/(1+x^2)): min -1.4427 (at x->0), max -1.2730 (at x=1/4)
