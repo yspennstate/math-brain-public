@@ -1,0 +1,45 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "check": "independent_full_L5_spectrum",
+      "entries": 33554432,
+      "maximum_absolute_error": 0.0,
+      "parseval": 1.0
+    },
+    {
+      "check": "all_L5_influences_direct_flips",
+      "sites": 25,
+      "maximum_absolute_error": 0.0
+    },
+    {
+      "check": "all_L5_erasure_ratios_stable_log1p",
+      "sites": 25,
+      "maximum_absolute_error": 1.6431300764452317e-14
+    },
+    {
+      "check": "all_exact_witness_inequalities",
+      "passed": true,
+      "sites": 50
+    },
+    {
+      "check": "optimal_L5_symmetries",
+      "results": [
+        {
+          "symmetry": "transpose",
+          "maximum_error": 0.0
+        },
+        {
+          "symmetry": "half_turn",
+          "maximum_error": 0.0
+        }
+      ]
+    },
+    {
+      "check": "folder_size_bytes",
+      "value": 121275216
+    }
+  ],
+  "seconds": 33.6108820438385,
+  "peak_rss_bytes": 1902559232
+}

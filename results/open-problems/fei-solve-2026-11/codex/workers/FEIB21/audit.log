@@ -1,0 +1,220 @@
+{
+  "required_files": [
+    "BRIEF.md",
+    "STATUS.md",
+    "RESULTS.md",
+    "REPORT.md",
+    "PROOFS.md",
+    "BELIEF.md",
+    "LITERATURE.md",
+    "LEARNINGS.md",
+    "sources.json",
+    "tensor_validate.json",
+    "tensor_asymptotics.json",
+    "unbalanced.json",
+    "windows_scan.json",
+    "windows_validate.json",
+    "linear_audit.json",
+    "extra_checks.json",
+    "tree_estimates.json"
+  ],
+  "metrics": {
+    "exact_window_cases": 21,
+    "exact_window_coordinates": 101,
+    "max_truth_table_n": 22,
+    "brute_permutation_validations": 96,
+    "tensor_cases": 6,
+    "tensor_max_residual": 8.969713860551565e-12,
+    "linear_derivative_checks": 1212,
+    "linear_max_residual": 0.0,
+    "max_observed_optimized_L2": [
+      3.219502348680841,
+      "cyclic_run5_9"
+    ]
+  },
+  "scalar_checks": {
+    "trials": 20000,
+    "largest_scalar_discrepancy": 3.7875253303338425
+  },
+  "quadrature_validation": [
+    {
+      "L": 9,
+      "D": 8,
+      "direct": {
+        "L1": 6.416837231788081,
+        "L2": 3.1053512408463484,
+        "none": 0.16394833407370546,
+        "L3": 2.640647590022631
+      },
+      "quadrature24": {
+        "L1": 6.416822996237513,
+        "L2": 3.1053683221387804,
+        "none": 0.16394833407370546,
+        "L3": 2.6406717162915903
+      },
+      "quadrature48": {
+        "L1": 6.416822996237514,
+        "L2": 3.1053683221387858,
+        "none": 0.16394833407370546,
+        "L3": 2.64067133347523
+      },
+      "error24": 2.4126268959090424e-05,
+      "error48": 2.3743452598701253e-05
+    },
+    {
+      "L": 15,
+      "D": 55,
+      "direct": {
+        "L1": 9.153379694588958,
+        "L2": 3.0611265712334097,
+        "none": 0.023999015117093018,
+        "L3": 2.1926929102722497
+      },
+      "quadrature24": {
+        "L1": 9.153379373059924,
+        "L2": 3.061126959103029,
+        "none": 0.023999015117093018,
+        "L3": 2.1926929628428264
+      },
+      "quadrature48": {
+        "L1": 9.153379373059936,
+        "L2": 3.0611269591030283,
+        "none": 0.023999015117093018,
+        "L3": 2.192692949409958
+      },
+      "error24": 3.8786961908954254e-07,
+      "error48": 3.8786961864545333e-07
+    },
+    {
+      "L": 15,
+      "D": 181,
+      "direct": {
+        "L1": 10.18734939579273,
+        "L2": 7.170991033456494,
+        "none": 0.0043086418259701605,
+        "L3": 4.954864043217095
+      },
+      "quadrature24": {
+        "L1": 10.18734592376295,
+        "L2": 7.170995008586986,
+        "none": 0.0043086418259701605,
+        "L3": 4.954863875771621
+      },
+      "quadrature48": {
+        "L1": 10.18734592376294,
+        "L2": 7.170995008587008,
+        "none": 0.0043086418259701605,
+        "L3": 4.954863802036281
+      },
+      "error24": 3.975130491440382e-06,
+      "error48": 3.975130513644842e-06
+    },
+    {
+      "L": 23,
+      "D": 715,
+      "direct": {
+        "L1": 12.863817304881374,
+        "L2": 2.964363250043251,
+        "none": 0.0017251145041615441,
+        "L3": 2.084399915650151
+      },
+      "quadrature24": {
+        "L1": 12.863817303605122,
+        "L2": 2.964363251632311,
+        "none": 0.0017251145041615441,
+        "L3": 2.0843999153998096
+      },
+      "quadrature48": {
+        "L1": 12.863817303605174,
+        "L2": 2.9643632516323124,
+        "none": 0.0017251145041615441,
+        "L3": 2.084399915437307
+      },
+      "error24": 1.5890599946999373e-09,
+      "error48": 1.5890613269675669e-09
+    }
+  ],
+  "sources": [
+    {
+      "copy": "inputs/tree_dnf.py",
+      "sha256": "b596f840dd6a7f30af5cf20893009f9c6fac703a87f3c342464f4bcf6c33b62e",
+      "match": true
+    },
+    {
+      "copy": "inputs/mc_chain.py",
+      "sha256": "a85f83d0f2bcc68b3217c9f1f03298cc742bd758c2e089716bcf859d215cec8e",
+      "match": true
+    },
+    {
+      "copy": "inputs/experiment.py",
+      "sha256": "2ca6e46ed59ce179e27849e394a77e82c3b8dfa1c870fc4bda52d75df987fb0f",
+      "match": true
+    },
+    {
+      "copy": "inputs/pm_record_spectrum.npy",
+      "sha256": "3208d597b4e68694e21399c01a54e4669333f9752d818cc5120f3811a16be57a",
+      "match": true
+    },
+    {
+      "copy": "inputs/pm_prior.json",
+      "sha256": "d13d587783cbe06d7bdea5f276f60e17fbc0c088d80575538baff54072a5a6fb",
+      "match": true
+    },
+    {
+      "copy": "inputs/FLOW.md",
+      "sha256": "42e64d83cf3191c78818d10c6e9abb75673adbebfaae4e53d3e89ff7fb91eea4",
+      "match": true
+    }
+  ],
+  "runs": [
+    {
+      "file": "tensor_validate.json",
+      "maxrss_bytes": 30244864,
+      "nice": 10
+    },
+    {
+      "file": "audit.json",
+      "maxrss_bytes": 40697856,
+      "nice": 10
+    },
+    {
+      "file": "tensor_asymptotics.json",
+      "maxrss_bytes": 29999104,
+      "nice": 10
+    },
+    {
+      "file": "linear_audit.json",
+      "maxrss_bytes": 142082048,
+      "nice": 10
+    },
+    {
+      "file": "tree_estimates.json",
+      "maxrss_bytes": 371376128,
+      "nice": 10
+    },
+    {
+      "file": "unbalanced.json",
+      "maxrss_bytes": 28852224,
+      "nice": 10
+    },
+    {
+      "file": "extra_checks.json",
+      "maxrss_bytes": 222920704,
+      "nice": 10
+    },
+    {
+      "file": "windows_scan.json",
+      "maxrss_bytes": 1100627968,
+      "nice": 10
+    },
+    {
+      "file": "windows_validate.json",
+      "maxrss_bytes": 34488320,
+      "nice": 10
+    }
+  ],
+  "folder_bytes_at_audit": 3257076,
+  "seconds": 21.89714813232422,
+  "nice": 10,
+  "maxrss_bytes": 38633472
+}

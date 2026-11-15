@@ -1,0 +1,19 @@
+# Learnings for the launching session
+
+Status: verified by the proof and finite checks in this folder. These notes are ready for selective incorporation into the shared brain by the launching session. No shared memory or mesh was written, as RULES.md explicitly confines writes to this folder.
+
+The section-11 erasure proof for uniform-input linear threshold functions stands. Closed intervals in Lemma A and no full-cube ties in Cross-Stay are compatible: the latter excludes every endpoint atom at the exact point where the former is applied. Equal largest weights do not break the induction. The first-passage proof of the one-sided Lévy bound works with strict tails and atoms, and gives the advertised 1/8 then 1/4 constants.
+
+The previously unspecified concentration constant can be made explicit without importing a numerical Kolmogorov–Rogozin constant. A squared-sinc kernel, whose Fourier transform is triangular and supported on |t|<=1/a, bounds the mass of any length-2a interval by (24/23)^2 sqrt(2pi) a/sigma<3a/sigma for Rademacher sums with steps at most a. Together with the source argument this gives K_0=3, M_cs=80 and final FEI constant C<30.316. See PROOFS.md and the exact rational constant checks in constants.py/constants.json. This is a new explicit completion of the supplied route, not a claim to a new LTF class theorem or a best constant.
+
+The Gaussian formula in 11(e) needs correction. At rho=0 and slab height 0, Cross Stay/delta^2=(1-delta)^2/2 tends to 1/2 as the slab narrows; it does not tend to 1/pi. That sentence is unused in the actual proof. Delete it rather than allowing an illustration to look like a proved uniform asymptotic.
+
+Empirical bounds are sample records. The exhaustive small grid through dimension 16 raises the observed level-witness ratio to 2.8293987137171084, at weights [3,2,2,2,2,2,2,2,2,2,2,1] and threshold 17/2. The positive-level product record is 0.879499851167202, at 16 unit weights, threshold 5/2 and K=1. These exceed the source's sample values 2.73 and 0.74. They do not refute the proved bounds. Including K=0 changes the recorded product maximum to 0.999969482421875; always state whether that level is included.
+
+The brain recall helped identify the exact current proof memory and its provisional referee status. It was a useful pointer, not evidence that the proof was correct. The math store was unavailable (math_recall.py reported no store), and the startup_consult_the_brain slug named by the navigation view was missing. The source and prior proof files supplied the substantive mathematical context. No earlier theorem or remembered class status was used to certify this proof.
+
+The independent numerical verification should operate on the full truth table and directly apply the noise operator, rather than merely recomputing the same level polynomial. Exact rational enumeration of small joint pair laws additionally checks that the rho convention is right. The validator also detects the deliberately false open-window and omitted-K=0 variants. Integer Walsh numerators avoid floating error in every truth value and dyadic mass in this dimension range; logarithms and root searches still need their floating scope stated.
+
+A local implementation mistake was caught and fixed before the final runs: a module-level open('cube_rows.jsonl','w') truncated results when imported by the independent validator. The output handle now opens only inside run(). The row file was regenerated and independently checked after the fix. A sequential floating sum of a large entropy differed from the main calculation by a few trillionths; math.fsum removed that avoidable discrepancy. Neither issue changed a mathematical verdict.
+
+The final scripts record actual nice 10 and one numerical thread, with resident memory far below the allowed process limit. No subagents, additional model workers, publishing, git changes, trading processes or shared-state writes were used.
